@@ -1,0 +1,7515 @@
+(export
+	(version "E")
+	(design
+		(source "/Users/Cooper/pisxme-local-recovery-20260829/pisxme/PiSXMe.kicad_sch")
+		(date "2026-08-29T12:03:20")
+		(tool "Eeschema 10.0.5")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title "PiSXMe — CM5 + V100 SXM2 PCIe x1")
+				(company)
+				(rev)
+				(date)
+				(source "PiSXMe.kicad_sch")
+				(comment
+					(number "1")
+					(value "Component-resolved architecture; PCB placement only")
+				)
+				(comment
+					(number "2")
+					(value "Rev-A target PCIe Gen2 x1; no production routing")
+				)
+				(comment
+					(number "3")
+					(value "V100 endpoint behavior remains a hardware validation gate")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C1")
+			(value "220nF X7R 50V PCIe AC coupling")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "MPN") "GRM21BR71H224KA01#")
+				(field
+					(name "Role") "V100 PET0_P external coupling")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "MPN")
+				(value "GRM21BR71H224KA01#")
+			)
+			(property
+				(name "Role")
+				(value "V100 PET0_P external coupling")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "27115711-1447-4971-a5e0-d7abf5156968")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C2")
+			(value "220nF X7R 50V PCIe AC coupling")
+			(footprint "Capacitor_SMD:C_0805_2012Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "MPN") "GRM21BR71H224KA01#")
+				(field
+					(name "Role") "V100 PET0_N external coupling")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0805_2012Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "MPN")
+				(value "GRM21BR71H224KA01#")
+			)
+			(property
+				(name "Role")
+				(value "V100 PET0_N external coupling")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "07701056-6d1b-4432-937d-29add60610d5")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C3")
+			(value "10uF 50V X7R buck input capacitor 1")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "Manufacturer") "TDK")
+				(field
+					(name "MPN") "CGA6P1X7R1H106K250AC")
+				(field
+					(name "Role") "VIN1 close input capacitor")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "TDK")
+			)
+			(property
+				(name "MPN")
+				(value "CGA6P1X7R1H106K250AC")
+			)
+			(property
+				(name "Role")
+				(value "VIN1 close input capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "19625053-c52f-47b9-8d99-55f17e893681")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C4")
+			(value "10uF 50V X7R buck input capacitor 2")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "Manufacturer") "TDK")
+				(field
+					(name "MPN") "CGA6P1X7R1H106K250AC")
+				(field
+					(name "Role") "VIN2 close input capacitor")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "TDK")
+			)
+			(property
+				(name "MPN")
+				(value "CGA6P1X7R1H106K250AC")
+			)
+			(property
+				(name "Role")
+				(value "VIN2 close input capacitor")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "63cf4c23-0537-4019-8ee9-83e209d1ae36")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C5")
+			(value "1uF SERVICE VBUS input capacitor")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "MPN") "GRM32ER71E226ME15L")
+				(field
+					(name "Role") "recovery connector VBUS bypass")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "MPN")
+				(value "GRM32ER71E226ME15L")
+			)
+			(property
+				(name "Role")
+				(value "recovery connector VBUS bypass")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ba441bc1-67fc-4854-8d14-4800cbd31396" "1a29720c-ee94-489e-bd4a-e295f98e74a3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C6")
+			(value "22uF 25V X7R buck output capacitor 2")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "MPN") "GRM32ER71E226ME15L")
+				(field
+					(name "Role") "CM5_5V output; effective capacitance must be checked")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "MPN")
+				(value "GRM32ER71E226ME15L")
+			)
+			(property
+				(name "Role")
+				(value "CM5_5V output; effective capacitance must be checked")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "597b6b8b-25de-4f7e-b92c-7dd5934845e8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C7")
+			(value "100nF 50V X7R VLDOIN capacitor")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "MPN") "GRM188R71H104KA93D")
+				(field
+					(name "Role") "TPSM63606 VLDOIN local bypass")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "MPN")
+				(value "GRM188R71H104KA93D")
+			)
+			(property
+				(name "Role")
+				(value "TPSM63606 VLDOIN local bypass")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1aa59dbc-3c2c-4fd6-8c64-025868deba73")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C8")
+			(value "100nF 50V X7R LM74700 VCAP capacitor A")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "MPN") "GRM188R71H104KA93D")
+				(field
+					(name "Role") "LM74700 branch A VCAP bypass")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "MPN")
+				(value "GRM188R71H104KA93D")
+			)
+			(property
+				(name "Role")
+				(value "LM74700 branch A VCAP bypass")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "33d304e1-c1fb-4313-9fa7-32266fa61ab8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C9")
+			(value "100nF 50V X7R LM74700 VCAP capacitor B")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "MPN") "GRM188R71H104KA93D")
+				(field
+					(name "Role") "LM74700 branch B VCAP bypass")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "MPN")
+				(value "GRM188R71H104KA93D")
+			)
+			(property
+				(name "Role")
+				(value "LM74700 branch B VCAP bypass")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4a591ff0-f9d7-4199-bd28-440fd29f9d9c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C10")
+			(value "10uF 50V USB buck input capacitor 1")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "Manufacturer") "TDK")
+				(field
+					(name "MPN") "CGA6P1X7R1H106K250AC")
+				(field
+					(name "Role") "U16 VIN1 local input")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "TDK")
+			)
+			(property
+				(name "MPN")
+				(value "CGA6P1X7R1H106K250AC")
+			)
+			(property
+				(name "Role")
+				(value "U16 VIN1 local input")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "14d806a1-731c-41f4-9d07-6b07efa73679")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C11")
+			(value "10uF 50V USB buck input capacitor 2")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "Manufacturer") "TDK")
+				(field
+					(name "MPN") "CGA6P1X7R1H106K250AC")
+				(field
+					(name "Role") "U16 VIN2 local input")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "TDK")
+			)
+			(property
+				(name "MPN")
+				(value "CGA6P1X7R1H106K250AC")
+			)
+			(property
+				(name "Role")
+				(value "U16 VIN2 local input")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "facfe814-19cc-483d-aed0-ad16f425378f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C12")
+			(value "47uF 10V X7R USB buck output capacitor 1")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "MPN") "GRM32ER71E226ME15L")
+				(field
+					(name "Role") "U16 VOUT local bulk")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "MPN")
+				(value "GRM32ER71E226ME15L")
+			)
+			(property
+				(name "Role")
+				(value "U16 VOUT local bulk")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2c0b739c-fa15-48c1-98e3-36b46ca9ba46")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C13")
+			(value "47uF 10V X7R USB buck output capacitor 2")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "MPN") "GRM32ER71E226ME15L")
+				(field
+					(name "Role") "U16 VOUT local bulk")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "MPN")
+				(value "GRM32ER71E226ME15L")
+			)
+			(property
+				(name "Role")
+				(value "U16 VOUT local bulk")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e9eca592-2c2e-4bd3-b32f-d3e9ebfd31f0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C14")
+			(value "100nF VLDOIN bypass capacitor")
+			(footprint "Capacitor_SMD:C_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "MPN") "GRM188R71H104KA93D")
+				(field
+					(name "Role") "U16 VLDOIN bypass")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "MPN")
+				(value "GRM188R71H104KA93D")
+			)
+			(property
+				(name "Role")
+				(value "U16 VLDOIN bypass")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8b7b6cb5-bc55-4f0a-87df-731a1249b8e3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C15")
+			(value "100nF TPS2553 FAST-A input bypass")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "Manufacturer") "TDK")
+				(field
+					(name "MPN") "CGA6P1X7R1H106K250AC")
+				(field
+					(name "Role") "U4 local input bypass")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "TDK")
+			)
+			(property
+				(name "MPN")
+				(value "CGA6P1X7R1H106K250AC")
+			)
+			(property
+				(name "Role")
+				(value "U4 local input bypass")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a430544c-90f7-4029-8bd1-a48841d489c4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C16")
+			(value "100nF TPS2553 FAST-B input bypass")
+			(footprint "Capacitor_SMD:C_1206_3216Metric")
+			(fields
+				(field
+					(name "Manufacturer") "TDK")
+				(field
+					(name "MPN") "CGA6P1X7R1H106K250AC")
+				(field
+					(name "Role") "U8 local input bypass")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "TDK")
+			)
+			(property
+				(name "MPN")
+				(value "CGA6P1X7R1H106K250AC")
+			)
+			(property
+				(name "Role")
+				(value "U8 local input bypass")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ef8ffa0b-b05c-4575-b6f0-c6b14aedb27c")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C17")
+			(value "120uF USB FAST-A VBUS bulk")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "MPN") "GRM32ER71E226ME15L")
+				(field
+					(name "Role") "FAST-A port-side bulk; effective value to be verified")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "MPN")
+				(value "GRM32ER71E226ME15L")
+			)
+			(property
+				(name "Role")
+				(value "FAST-A port-side bulk; effective value to be verified")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "80d9009c-a2c9-4975-8790-cf596f14ab33")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C18")
+			(value "120uF USB FAST-B VBUS bulk")
+			(footprint "Capacitor_SMD:C_1210_3225Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Murata")
+				(field
+					(name "MPN") "GRM32ER71E226ME15L")
+				(field
+					(name "Role") "FAST-B port-side bulk; effective value to be verified")
+				(field
+					(name "Footprint") "Capacitor_SMD:C_1210_3225Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Murata")
+			)
+			(property
+				(name "MPN")
+				(value "GRM32ER71E226ME15L")
+			)
+			(property
+				(name "Role")
+				(value "FAST-B port-side bulk; effective value to be verified")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1cf01dee-2b3f-44da-b47d-c2423a5dcf0f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "F1")
+			(value "Littelfuse 178.6165.0001 + 0297015.U branch A")
+			(footprint "PiSXMe:ATO_FuseHolder")
+			(fields
+				(field
+					(name "Manufacturer") "Littelfuse")
+				(field
+					(name "MPN") "178.6165.0001 + 0297015.U")
+				(field
+					(name "Role") "15A fast branch fuse")
+				(field
+					(name "Footprint") "PiSXMe:ATO_FuseHolder")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "FUSE_BLOCK")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Littelfuse")
+			)
+			(property
+				(name "MPN")
+				(value "178.6165.0001 + 0297015.U")
+			)
+			(property
+				(name "Role")
+				(value "15A fast branch fuse")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "cfe9e518-0d4a-46c0-83f6-1e9405fc22ec")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "F2")
+			(value "Littelfuse 178.6165.0001 + 0297015.U branch B")
+			(footprint "PiSXMe:ATO_FuseHolder")
+			(fields
+				(field
+					(name "Manufacturer") "Littelfuse")
+				(field
+					(name "MPN") "178.6165.0001 + 0297015.U")
+				(field
+					(name "Role") "15A fast branch fuse")
+				(field
+					(name "Footprint") "PiSXMe:ATO_FuseHolder")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "FUSE_BLOCK")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Littelfuse")
+			)
+			(property
+				(name "MPN")
+				(value "178.6165.0001 + 0297015.U")
+			)
+			(property
+				(name "Role")
+				(value "15A fast branch fuse")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "af01bdce-7072-4e2a-ad12-3757cf32ef62")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J1")
+			(value "Amphenol 74221-101LF SXM2 receptacle")
+			(footprint "PiSXMe:SXM2_74221-101LF")
+			(fields
+				(field
+					(name "Manufacturer") "Amphenol")
+				(field
+					(name "MPN") "74221-101LF")
+				(field
+					(name "PinMap") "A2/A3 PER0, E7/F7 REFCLK, E18 PERST, G1/G2 PET0; K18/K19 auxiliary path intentionally omitted pending V100 validation")
+				(field
+					(name "Footprint") "PiSXMe:SXM2_74221-101LF")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "SXM2_74221_101LF")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Amphenol")
+			)
+			(property
+				(name "MPN")
+				(value "74221-101LF")
+			)
+			(property
+				(name "PinMap")
+				(value "A2/A3 PER0, E7/F7 REFCLK, E18 PERST, G1/G2 PET0; K18/K19 auxiliary path intentionally omitted pending V100 validation")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "27fc80ba-d72f-40f2-97a5-105c77c3eee9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "GND")
+						)
+						(pin
+							(num "PWR")
+						)
+						(pin
+							(num "G2")
+						)
+						(pin
+							(num "G1")
+						)
+						(pin
+							(num "E18")
+						)
+						(pin
+							(num "F7")
+						)
+						(pin
+							(num "E7")
+						)
+						(pin
+							(num "A3")
+						)
+						(pin
+							(num "A2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J2")
+			(value "2x Amphenol 10164227-1004A1RLF BergStak 4mm")
+			(footprint "PiSXMe:CM5_1004")
+			(fields
+				(field
+					(name "Manufacturer") "Amphenol")
+				(field
+					(name "MPN") "10164227-1004A1RLF x2")
+				(field
+					(name "PinMap") "Critical CM5 pins only; all 200 contacts audited before release")
+				(field
+					(name "Footprint") "PiSXMe:CM5_1004")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "CM5_B2B_100")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Amphenol")
+			)
+			(property
+				(name "MPN")
+				(value "10164227-1004A1RLF x2")
+			)
+			(property
+				(name "PinMap")
+				(value "Critical CM5 pins only; all 200 contacts audited before release")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f4ab5d2c-a6a2-4bbf-8910-351e03401304")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "FAN_TACH")
+						)
+						(pin
+							(num "FAN_PWM")
+						)
+						(pin
+							(num "UART_RX")
+						)
+						(pin
+							(num "UART_TX")
+						)
+						(pin
+							(num "GND")
+						)
+						(pin
+							(num "86")
+						)
+						(pin
+							(num "84")
+						)
+						(pin
+							(num "87")
+						)
+						(pin
+							(num "85")
+						)
+						(pin
+							(num "83")
+						)
+						(pin
+							(num "81")
+						)
+						(pin
+							(num "79")
+						)
+						(pin
+							(num "77")
+						)
+						(pin
+							(num "124")
+						)
+						(pin
+							(num "122")
+						)
+						(pin
+							(num "118")
+						)
+						(pin
+							(num "116")
+						)
+						(pin
+							(num "112")
+						)
+						(pin
+							(num "110")
+						)
+						(pin
+							(num "109")
+						)
+						(pin
+							(num "106")
+						)
+						(pin
+							(num "104")
+						)
+						(pin
+							(num "102")
+						)
+						(pin
+							(num "171")
+						)
+						(pin
+							(num "169")
+						)
+						(pin
+							(num "165")
+						)
+						(pin
+							(num "163")
+						)
+						(pin
+							(num "159")
+						)
+						(pin
+							(num "157")
+						)
+						(pin
+							(num "142")
+						)
+						(pin
+							(num "140")
+						)
+						(pin
+							(num "136")
+						)
+						(pin
+							(num "134")
+						)
+						(pin
+							(num "130")
+						)
+						(pin
+							(num "128")
+						)
+						(pin
+							(num "111")
+						)
+						(pin
+							(num "105")
+						)
+						(pin
+							(num "103")
+						)
+						(pin
+							(num "101")
+						)
+						(pin
+							(num "93")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J3")
+			(value "Molex 39301082 Mini-Fit Jr 8-circuit input A")
+			(footprint "PiSXMe:MiniFitJr_8_RA")
+			(fields
+				(field
+					(name "Manufacturer") "Molex")
+				(field
+					(name "MPN") "39301082")
+				(field
+					(name "Mating") "39012085")
+				(field
+					(name "Role") "4x +12V and 4x GND contacts; independent 15A branch")
+				(field
+					(name "Footprint") "PiSXMe:MiniFitJr_8_RA")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "POWER8")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Molex")
+			)
+			(property
+				(name "MPN")
+				(value "39301082")
+			)
+			(property
+				(name "Mating")
+				(value "39012085")
+			)
+			(property
+				(name "Role")
+				(value "4x +12V and 4x GND contacts; independent 15A branch")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "98d58e09-e459-4d83-a72a-2a15162993ff")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J4")
+			(value "Molex 39301082 Mini-Fit Jr 8-circuit input B")
+			(footprint "PiSXMe:MiniFitJr_8_RA")
+			(fields
+				(field
+					(name "Manufacturer") "Molex")
+				(field
+					(name "MPN") "39301082")
+				(field
+					(name "Mating") "39012085")
+				(field
+					(name "Role") "4x +12V and 4x GND contacts; independent 15A branch")
+				(field
+					(name "Footprint") "PiSXMe:MiniFitJr_8_RA")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "POWER8")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Molex")
+			)
+			(property
+				(name "MPN")
+				(value "39301082")
+			)
+			(property
+				(name "Mating")
+				(value "39012085")
+			)
+			(property
+				(name "Role")
+				(value "4x +12V and 4x GND contacts; independent 15A branch")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "0872ba04-c285-4181-b651-2c9d33ccc3a3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J5")
+			(value "Molex 22-23-2041 2.54mm PC PWM fan header 1")
+			(footprint "PiSXMe:Fan_2x2_2.54mm")
+			(fields
+				(field
+					(name "Manufacturer") "Molex")
+				(field
+					(name "MPN") "22-23-2041")
+				(field
+					(name "Footprint") "PiSXMe:Fan_2x2_2.54mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "FAN4")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Molex")
+			)
+			(property
+				(name "MPN")
+				(value "22-23-2041")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "cdb230a8-6629-4e98-8c4f-7589a29b6b1a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J6")
+			(value "Molex 22-23-2041 2.54mm PC PWM fan header 2")
+			(footprint "PiSXMe:Fan_2x2_2.54mm")
+			(fields
+				(field
+					(name "Manufacturer") "Molex")
+				(field
+					(name "MPN") "22-23-2041")
+				(field
+					(name "Footprint") "PiSXMe:Fan_2x2_2.54mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "FAN4")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Molex")
+			)
+			(property
+				(name "MPN")
+				(value "22-23-2041")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "828017d8-fced-4f4a-8c8f-0478a015bc76")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J7")
+			(value "Molex 22-23-2041 2.54mm pump/aux header")
+			(footprint "PiSXMe:Fan_2x2_2.54mm")
+			(fields
+				(field
+					(name "Manufacturer") "Molex")
+				(field
+					(name "MPN") "22-23-2041")
+				(field
+					(name "Role") "pump/auxiliary 12V, tach, PWM")
+				(field
+					(name "Footprint") "PiSXMe:Fan_2x2_2.54mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "FAN4")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Molex")
+			)
+			(property
+				(name "MPN")
+				(value "22-23-2041")
+			)
+			(property
+				(name "Role")
+				(value "pump/auxiliary 12V, tach, PWM")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1de121e7-b4c2-4529-aad8-2d633d15cd5e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J8")
+			(value "JST B4B-PH-K-S CM5 UART/debug")
+			(footprint "PiSXMe:JST_PH_4")
+			(fields
+				(field
+					(name "Manufacturer") "JST")
+				(field
+					(name "MPN") "B4B-PH-K-S")
+				(field
+					(name "Footprint") "PiSXMe:JST_PH_4")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "UART4")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "JST")
+			)
+			(property
+				(name "MPN")
+				(value "B4B-PH-K-S")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "84017b6e-9003-42de-bc02-cb24e1fd7ee3")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J9")
+			(value "Wuerth 692122030100 USB3 Type-A FAST A")
+			(footprint "PiSXMe:USB3_A_Wuerth_692122030100")
+			(datasheet "https://www.we-online.com/katalog/datasheet/692122030100.pdf")
+			(fields
+				(field
+					(name "Manufacturer") "Wurth Elektronik")
+				(field
+					(name "MPN") "692122030100")
+				(field
+					(name "Role") "USB3 Type-A fixed host port; no USB-PD")
+				(field
+					(name "Footprint") "PiSXMe:USB3_A_Wuerth_692122030100")
+				(field
+					(name "Datasheet") "https://www.we-online.com/katalog/datasheet/692122030100.pdf")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "USB_A_FAST")
+				(description "Fixed USB 3 Type-A host port; CM5IO-style direct routing")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Wurth Elektronik")
+			)
+			(property
+				(name "MPN")
+				(value "692122030100")
+			)
+			(property
+				(name "Role")
+				(value "USB3 Type-A fixed host port; no USB-PD")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2b6acce0-0a7c-4a7c-9bbc-d30bb0916fae")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "S")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J10")
+			(value "Wuerth 692122030100 USB3 Type-A FAST B")
+			(footprint "PiSXMe:USB3_A_Wuerth_692122030100")
+			(datasheet "https://www.we-online.com/katalog/datasheet/692122030100.pdf")
+			(fields
+				(field
+					(name "Manufacturer") "Wurth Elektronik")
+				(field
+					(name "MPN") "692122030100")
+				(field
+					(name "Role") "USB3 Type-A fixed host port; no USB-PD")
+				(field
+					(name "Footprint") "PiSXMe:USB3_A_Wuerth_692122030100")
+				(field
+					(name "Datasheet") "https://www.we-online.com/katalog/datasheet/692122030100.pdf")
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "USB_A_FAST")
+				(description "Fixed USB 3 Type-A host port; CM5IO-style direct routing")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Wurth Elektronik")
+			)
+			(property
+				(name "MPN")
+				(value "692122030100")
+			)
+			(property
+				(name "Role")
+				(value "USB3 Type-A fixed host port; no USB-PD")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "cf411faa-6a5c-407d-a833-50a6bc944c3e")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "S")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J11")
+			(value "Amphenol 10171746-00021LF USB-C USB2 SERVICE")
+			(footprint "PiSXMe:USB_C_SERVICE_10171746")
+			(fields
+				(field
+					(name "Manufacturer") "Amphenol")
+				(field
+					(name "MPN") "10171746-00021LF")
+				(field
+					(name "Role") "USB2 recovery UFP only; device mode with fixed Rd and no VBUS source")
+				(field
+					(name "Footprint") "PiSXMe:USB_C_SERVICE_10171746")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "USB_C_SERVICE")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Amphenol")
+			)
+			(property
+				(name "MPN")
+				(value "10171746-00021LF")
+			)
+			(property
+				(name "Role")
+				(value "USB2 recovery UFP only; device mode with fixed Rd and no VBUS source")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d98a96dc-b1e6-4097-8988-a67854af02b8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "SHIELD")
+						)
+						(pin
+							(num "SBU2")
+						)
+						(pin
+							(num "SBU1")
+						)
+						(pin
+							(num "D_N")
+						)
+						(pin
+							(num "D_P")
+						)
+						(pin
+							(num "CC2")
+						)
+						(pin
+							(num "CC1")
+						)
+						(pin
+							(num "GND")
+						)
+						(pin
+							(num "VBUS")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q1")
+			(value "CSD19536KCS 100V low-loss N-MOSFET branch A")
+			(footprint "Package_TO_SOT_THT:TO-220-3_Vertical")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "CSD19536KCS")
+				(field
+					(name "Role") "source=ANODE, drain=CATHODE per LM74700 topology")
+				(field
+					(name "Footprint") "Package_TO_SOT_THT:TO-220-3_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "MOSFET_3")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "CSD19536KCS")
+			)
+			(property
+				(name "Role")
+				(value "source=ANODE, drain=CATHODE per LM74700 topology")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d96e530f-bcdf-4237-8f5a-6e2c5ae2ed83")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "Q2")
+			(value "CSD19536KCS 100V low-loss N-MOSFET branch B")
+			(footprint "Package_TO_SOT_THT:TO-220-3_Vertical")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "CSD19536KCS")
+				(field
+					(name "Role") "source=ANODE, drain=CATHODE per LM74700 topology")
+				(field
+					(name "Footprint") "Package_TO_SOT_THT:TO-220-3_Vertical")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "MOSFET_3")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "CSD19536KCS")
+			)
+			(property
+				(name "Role")
+				(value "source=ANODE, drain=CATHODE per LM74700 topology")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b968eb75-e969-4c99-a636-1f4bd49cd198")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R1")
+			(value "0R POP CLKREQ always-requested clock strap")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "MPN") "RC0603FR-070RL")
+				(field
+					(name "Role") "CM5 PCIe_CLK_nREQ always-requested clock option")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "ZERO_R")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-070RL")
+			)
+			(property
+				(name "Role")
+				(value "CM5 PCIe_CLK_nREQ always-requested clock option")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5896914b-fb58-4706-b16f-78bb4caee787")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R2")
+			(value "40.2k 1% feedback upper resistor")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "MPN") "RC0603FR-0740K2L")
+				(field
+					(name "Role") "TPSM63606 5V feedback upper resistor")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-0740K2L")
+			)
+			(property
+				(name "Role")
+				(value "TPSM63606 5V feedback upper resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "90e8938b-6849-4609-af59-8cc7edb80dc2")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R3")
+			(value "10.0k 1% feedback lower resistor")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "MPN") "RC0603FR-0710KL")
+				(field
+					(name "Role") "TPSM63606 5V feedback lower resistor")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-0710KL")
+			)
+			(property
+				(name "Role")
+				(value "TPSM63606 5V feedback lower resistor")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b9b9e1cd-9c8c-4947-8a11-7e374f017618")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R4")
+			(value "5.1k USB-C Rd CC1")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "MPN") "RC0603FR-0713KL")
+				(field
+					(name "Role") "fixed UFP Rd")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-0713KL")
+			)
+			(property
+				(name "Role")
+				(value "fixed UFP Rd")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "bfd0eb68-bb8d-44d6-a5e2-00196a03dada" "b5737c60-b08a-44d1-892f-303ed18340c6"
+				"7f554826-8609-4134-a2d7-73a4ecd77453"
+			)
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R5")
+			(value "16.9k 1% TPS2553 ILIM FAST A")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "MPN") "RC0603FR-0716K9L")
+				(field
+					(name "Role") "TPS2553 ILIM resistor, approximately 1.5A FAST A")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-0716K9L")
+			)
+			(property
+				(name "Role")
+				(value "TPS2553 ILIM resistor, approximately 1.5A FAST A")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "c37af069-daa4-4996-93a6-4fbb0b25dc6f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R6")
+			(value "16.9k 1% TPS2553 ILIM FAST B")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "MPN") "RC0603FR-0716K9L")
+				(field
+					(name "Role") "TPS2553 ILIM resistor, approximately 1.5A FAST B")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-0716K9L")
+			)
+			(property
+				(name "Role")
+				(value "TPS2553 ILIM resistor, approximately 1.5A FAST B")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "7d8a23f9-0d84-4f38-b5d2-8e133d170e49")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R7")
+			(value "52.3k 1% TPS2553 0.5A current-limit resistor")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "MPN") "RC0603FR-0752K3L")
+				(field
+					(name "Role") "TPS2553 ILIM")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-0752K3L")
+			)
+			(property
+				(name "Role")
+				(value "TPS2553 ILIM")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a9f305c3-00a7-4e77-8a97-b1b74b8404de")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R8")
+			(value "40.2k 1% USB feedback upper resistor")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "MPN") "RC0603FR-0740K2L")
+				(field
+					(name "Role") "U16 feedback upper")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-0740K2L")
+			)
+			(property
+				(name "Role")
+				(value "U16 feedback upper")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "760f8bf4-0507-4124-8025-ca9bde558f4d")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R9")
+			(value "10.0k 1% USB feedback lower resistor")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "MPN") "RC0603FR-0710KL")
+				(field
+					(name "Role") "U16 feedback lower")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-0710KL")
+			)
+			(property
+				(name "Role")
+				(value "U16 feedback lower")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "cc9bf685-7c48-44b7-9deb-ad3a4daed54a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R10")
+			(value "13.0k USB RT frequency resistor")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "MPN") "RC0603FR-0713KL")
+				(field
+					(name "Role") "U16 RT setting")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-0713KL")
+			)
+			(property
+				(name "Role")
+				(value "U16 RT setting")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "ba80ac63-2349-41c1-8e7b-38226bb76fef")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R11")
+			(value "47k USB power-good pull-up")
+			(footprint "Resistor_SMD:R_0603_1608Metric")
+			(fields
+				(field
+					(name "Manufacturer") "Yageo")
+				(field
+					(name "MPN") "RC0603FR-0713KL")
+				(field
+					(name "Role") "U16 PG pull-up")
+				(field
+					(name "Footprint") "Resistor_SMD:R_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "PASSIVE_2")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Yageo")
+			)
+			(property
+				(name "MPN")
+				(value "RC0603FR-0713KL")
+			)
+			(property
+				(name "Role")
+				(value "U16 PG pull-up")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "20eaada7-da63-4df2-b69b-6e723c631609")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "TP3")
+			(value "CM5 nRPIBOOT / internal rpiboot test point")
+			(footprint "PiSXMe:TestPoint")
+			(fields
+				(field
+					(name "Manufacturer") "Keystone Electronics")
+				(field
+					(name "MPN") "5000")
+				(field
+					(name "Role") "Assert low only during documented CM5 recovery procedure; do not leave externally accessible")
+				(field
+					(name "Footprint") "PiSXMe:TestPoint")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "TESTPOINT_1")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Keystone Electronics")
+			)
+			(property
+				(name "MPN")
+				(value "5000")
+			)
+			(property
+				(name "Role")
+				(value "Assert low only during documented CM5 recovery procedure; do not leave externally accessible")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "2c4c5be6-bda8-47b1-bd50-0e25c4f344f4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U1")
+			(value "TPSM63606RDLR 6A 12V-to-5V module")
+			(footprint "PiSXMe:TPSM63606")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "TPSM63606RDLR")
+				(field
+					(name "Output") "5V / 6A maximum module rating")
+				(field
+					(name "Footprint") "PiSXMe:TPSM63606")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "TPSM63606")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "TPSM63606RDLR")
+			)
+			(property
+				(name "Output")
+				(value "5V / 6A maximum module rating")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8de7449b-7ef0-4349-b023-8d3db97963fb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U2")
+			(value "LM74700QDBVRQ1 branch A reverse-current controller")
+			(footprint "Package_TO_SOT_SMD:SOT-23")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "LM74700QDBVRQ1")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "LM74700")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "LM74700QDBVRQ1")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "f67c3346-c4f0-4dfd-a974-caa636825f48")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U3")
+			(value "LM74700QDBVRQ1 branch B reverse-current controller")
+			(footprint "Package_TO_SOT_SMD:SOT-23")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "LM74700QDBVRQ1")
+				(field
+					(name "Footprint") "Package_TO_SOT_SMD:SOT-23")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "LM74700")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "LM74700QDBVRQ1")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "b176f34d-c80a-45da-923e-7f184a3bfba8")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U4")
+			(value "TPS2553DBVR FAST A USB3 Type-A VBUS current limiter")
+			(footprint "PiSXMe:TPS2553_DBV")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "TPS2553DBVR")
+				(field
+					(name "Role") "USB3 Type-A host VBUS current limit, approximately 1.5A")
+				(field
+					(name "Footprint") "PiSXMe:TPS2553_DBV")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "TPS2553")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "TPS2553DBVR")
+			)
+			(property
+				(name "Role")
+				(value "USB3 Type-A host VBUS current limit, approximately 1.5A")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9a4db7b0-b34d-4494-847a-2be9b4bdbbac")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U6")
+			(value "TPD4EUSB30 FAST A SuperSpeed ESD array 1")
+			(footprint "PiSXMe:TPD4E05U06_DQA_TI_FLOWTHROUGH")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "TPD4EUSB30")
+				(field
+					(name "Footprint") "PiSXMe:TPD4E05U06_DQA_TI_FLOWTHROUGH")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "TPD4EUSB30")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "TPD4EUSB30")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "5eaffbc7-1f76-46bc-b6a9-5136f8b1aabc")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U8")
+			(value "TPS2553DBVR FAST B USB3 Type-A VBUS current limiter")
+			(footprint "PiSXMe:TPS2553_DBV")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "TPS2553DBVR")
+				(field
+					(name "Role") "USB3 Type-A host VBUS current limit, approximately 1.5A")
+				(field
+					(name "Footprint") "PiSXMe:TPS2553_DBV")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "TPS2553")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "TPS2553DBVR")
+			)
+			(property
+				(name "Role")
+				(value "USB3 Type-A host VBUS current limit, approximately 1.5A")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "8ea462a9-d2d3-4320-babf-5a5784d25f34")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U10")
+			(value "TPD4EUSB30 FAST B SuperSpeed ESD array 1")
+			(footprint "PiSXMe:TPD4E05U06_DQA_TI_FLOWTHROUGH")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "TPD4EUSB30")
+				(field
+					(name "Footprint") "PiSXMe:TPD4E05U06_DQA_TI_FLOWTHROUGH")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "TPD4EUSB30")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "TPD4EUSB30")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1719e9e3-c53e-4068-8c6d-4347c1ab04ff")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U15")
+			(value "TPD2EUSB30A SERVICE USB2 ESD array")
+			(footprint "PiSXMe:TPD2EUSB30A_DRT")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "TPD2EUSB30A")
+				(field
+					(name "Footprint") "PiSXMe:TPD2EUSB30A_DRT")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "USB2_ESD")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "TPD2EUSB30A")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "1e69f16e-a1f8-44dd-bc9f-64c9c235eef7")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U16")
+			(value "TPSM63606RDLR 6A dedicated USB peripheral 5V rail")
+			(footprint "PiSXMe:TPSM63606_USB")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "TPSM63606RDLR")
+				(field
+					(name "Output") "USB_5V_PERIPH / 6A maximum; not shared with CM5 rail")
+				(field
+					(name "Footprint") "PiSXMe:TPSM63606_USB")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "TPSM63606")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "TPSM63606RDLR")
+			)
+			(property
+				(name "Output")
+				(value "USB_5V_PERIPH / 6A maximum; not shared with CM5 rail")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4d1c40b9-2ef1-4fe7-99b1-ad21d17c3cc9")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "20")
+						)
+						(pin
+							(num "19")
+						)
+						(pin
+							(num "18")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "8")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U17")
+			(value "TPD2EUSB30A FAST A USB2 companion ESD array")
+			(footprint "PiSXMe:TPD2EUSB30A_DRT")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "TPD2EUSB30A")
+				(field
+					(name "Footprint") "PiSXMe:TPD2EUSB30A_DRT")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "USB2_ESD")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "TPD2EUSB30A")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "e4317d52-f8c1-4750-818e-0e0f0400436f")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U18")
+			(value "TPD2EUSB30A FAST B USB2 companion ESD array")
+			(footprint "PiSXMe:TPD2EUSB30A_DRT")
+			(fields
+				(field
+					(name "Manufacturer") "Texas Instruments")
+				(field
+					(name "MPN") "TPD2EUSB30A")
+				(field
+					(name "Footprint") "PiSXMe:TPD2EUSB30A_DRT")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMe")
+				(part "USB2_ESD")
+				(description "PiSXMe component-resolved architectural symbol")
+			)
+			(property
+				(name "Manufacturer")
+				(value "Texas Instruments")
+			)
+			(property
+				(name "MPN")
+				(value "TPD2EUSB30A")
+			)
+			(property
+				(name "Sheetname")
+				(value "PiSXMe")
+			)
+			(property
+				(name "Sheetfile")
+				(value "PiSXMe.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "fcb8546f-4bb5-4177-9f0b-8295877892d4")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "4")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "PiSXMe")
+			(part "CM5_B2B_100")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "CM5_B2B_100")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "77")
+					(name "CM5_5V")
+					(type "passive")
+				)
+				(pin
+					(num "79")
+					(name "CM5_5V")
+					(type "passive")
+				)
+				(pin
+					(num "81")
+					(name "CM5_5V")
+					(type "passive")
+				)
+				(pin
+					(num "83")
+					(name "CM5_5V")
+					(type "passive")
+				)
+				(pin
+					(num "84")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "85")
+					(name "CM5_5V")
+					(type "passive")
+				)
+				(pin
+					(num "86")
+					(name "3V3")
+					(type "passive")
+				)
+				(pin
+					(num "87")
+					(name "CM5_5V")
+					(type "passive")
+				)
+				(pin
+					(num "93")
+					(name "nRPIBOOT")
+					(type "passive")
+				)
+				(pin
+					(num "101")
+					(name "USB_OTG_ID")
+					(type "passive")
+				)
+				(pin
+					(num "102")
+					(name "PCIe_CLK_nREQ")
+					(type "passive")
+				)
+				(pin
+					(num "103")
+					(name "USB2_DM")
+					(type "passive")
+				)
+				(pin
+					(num "104")
+					(name "PCIE_nWAKE")
+					(type "passive")
+				)
+				(pin
+					(num "105")
+					(name "USB2_DP")
+					(type "passive")
+				)
+				(pin
+					(num "106")
+					(name "PCIE_PWR_EN")
+					(type "passive")
+				)
+				(pin
+					(num "109")
+					(name "PCIe_nRST")
+					(type "passive")
+				)
+				(pin
+					(num "110")
+					(name "PCIe_CLK_P")
+					(type "passive")
+				)
+				(pin
+					(num "111")
+					(name "VBUS_EN")
+					(type "passive")
+				)
+				(pin
+					(num "112")
+					(name "PCIe_CLK_N")
+					(type "passive")
+				)
+				(pin
+					(num "116")
+					(name "PCIe_RX_P")
+					(type "passive")
+				)
+				(pin
+					(num "118")
+					(name "PCIe_RX_N")
+					(type "passive")
+				)
+				(pin
+					(num "122")
+					(name "PCIe_TX_P")
+					(type "passive")
+				)
+				(pin
+					(num "124")
+					(name "PCIe_TX_N")
+					(type "passive")
+				)
+				(pin
+					(num "128")
+					(name "USB3_0_RX_N")
+					(type "passive")
+				)
+				(pin
+					(num "130")
+					(name "USB3_0_RX_P")
+					(type "passive")
+				)
+				(pin
+					(num "134")
+					(name "USB3_0_DP")
+					(type "passive")
+				)
+				(pin
+					(num "136")
+					(name "USB3_0_DM")
+					(type "passive")
+				)
+				(pin
+					(num "140")
+					(name "USB3_0_TX_N")
+					(type "passive")
+				)
+				(pin
+					(num "142")
+					(name "USB3_0_TX_P")
+					(type "passive")
+				)
+				(pin
+					(num "157")
+					(name "USB3_1_RX_N")
+					(type "passive")
+				)
+				(pin
+					(num "159")
+					(name "USB3_1_RX_P")
+					(type "passive")
+				)
+				(pin
+					(num "163")
+					(name "USB3_1_DP")
+					(type "passive")
+				)
+				(pin
+					(num "165")
+					(name "USB3_1_DM")
+					(type "passive")
+				)
+				(pin
+					(num "169")
+					(name "USB3_1_TX_N")
+					(type "passive")
+				)
+				(pin
+					(num "171")
+					(name "USB3_1_TX_P")
+					(type "passive")
+				)
+				(pin
+					(num "FAN_PWM")
+					(name "FAN_PWM")
+					(type "passive")
+				)
+				(pin
+					(num "FAN_TACH")
+					(name "FAN_TACH")
+					(type "passive")
+				)
+				(pin
+					(num "GND")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "UART_RX")
+					(name "UART_RX")
+					(type "passive")
+				)
+				(pin
+					(num "UART_TX")
+					(name "UART_TX")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "FAN4")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "FAN4")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "12V")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "TACH")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "PWM")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "FUSE_BLOCK")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "F")
+				(field
+					(name "Value") "FUSE_BLOCK")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "INPUT")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "OUTPUT")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "INVERTER")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "INVERTER")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "A")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "Y")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "VCC")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "NC")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "LM74700")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "LM74700")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "ANODE")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "CATHODE")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "GATE")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "EN")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "VCAP")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "MOSFET_3")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "Q")
+				(field
+					(name "Value") "MOSFET_3")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "GATE")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "SOURCE_ANODE")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "DRAIN_CATHODE")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "PASSIVE_2")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "PASSIVE_2")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "POWER8")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "POWER8")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "+12V")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "+12V")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "+12V")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "+12V")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "SXM2_74221_101LF")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "SXM2_74221_101LF")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "A2")
+					(name "PER0_P")
+					(type "passive")
+				)
+				(pin
+					(num "A3")
+					(name "PER0_N")
+					(type "passive")
+				)
+				(pin
+					(num "E7")
+					(name "REFCLK_P")
+					(type "passive")
+				)
+				(pin
+					(num "E18")
+					(name "PERST_N")
+					(type "passive")
+				)
+				(pin
+					(num "F7")
+					(name "REFCLK_N")
+					(type "passive")
+				)
+				(pin
+					(num "G1")
+					(name "PET0_P")
+					(type "passive")
+				)
+				(pin
+					(num "G2")
+					(name "PET0_N")
+					(type "passive")
+				)
+				(pin
+					(num "GND")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "PWR")
+					(name "VPROT_12V")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "TESTPOINT_1")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "TP")
+				(field
+					(name "Value") "TESTPOINT_1")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "TEST")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "TPD4EUSB30")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "TPD4EUSB30")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "D1_P")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "D1_N")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "D2_P")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "D2_N")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "D2_N")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "D2_P")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "D1_N")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "D1_P")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "TPS2553")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "TPS2553")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "IN")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "OUT")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "FLG")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "EN")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "ILIM")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "TPSM63606")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "TPSM63606")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "VIN1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "SW")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "VLDOIN")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "AGND")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "VCC")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "VOUT1")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "VOUT2")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "FB")
+					(type "passive")
+				)
+				(pin
+					(num "11")
+					(name "AGND")
+					(type "passive")
+				)
+				(pin
+					(num "12")
+					(name "RT")
+					(type "passive")
+				)
+				(pin
+					(num "13")
+					(name "PG")
+					(type "passive")
+				)
+				(pin
+					(num "14")
+					(name "EN/SYNC")
+					(type "passive")
+				)
+				(pin
+					(num "15")
+					(name "NC")
+					(type "passive")
+				)
+				(pin
+					(num "16")
+					(name "VIN2")
+					(type "passive")
+				)
+				(pin
+					(num "17")
+					(name "PGND")
+					(type "passive")
+				)
+				(pin
+					(num "18")
+					(name "PGND")
+					(type "passive")
+				)
+				(pin
+					(num "19")
+					(name "PGND")
+					(type "passive")
+				)
+				(pin
+					(num "20")
+					(name "PGND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "UART4")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "UART4")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "UART_TX")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "UART_RX")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "3V3")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "USB2_DRP")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "USB2_DRP")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "ADDR")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "CC1")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "CC2")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "VDD")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "VBUS_DET")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "PORT")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "ID")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "ORIENT")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "INT_N")
+					(type "passive")
+				)
+				(pin
+					(num "11")
+					(name "DRP")
+					(type "passive")
+				)
+				(pin
+					(num "12")
+					(name "VDDIO")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "USB2_ESD")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "USB2_ESD")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "D1_P")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "D1_N")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "NC")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "NC")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "NC")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "NC")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "NC")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "NC")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "USB_A_FAST")
+			(description "Fixed USB 3 Type-A host port; CM5IO-style direct routing")
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "USB_A_FAST")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Fixed USB 3 Type-A host port; CM5IO-style direct routing")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "VBUS")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "USB2_DM")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "USB2_DP")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "RX_N")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "RX_P")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "TX_N")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "TX_P")
+					(type "passive")
+				)
+				(pin
+					(num "S")
+					(name "SHIELD")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "USB_C_SERVICE")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "J")
+				(field
+					(name "Value") "USB_C_SERVICE")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "CC1")
+					(name "CC1")
+					(type "passive")
+				)
+				(pin
+					(num "CC2")
+					(name "CC2")
+					(type "passive")
+				)
+				(pin
+					(num "D_N")
+					(name "USB2_DM")
+					(type "passive")
+				)
+				(pin
+					(num "D_P")
+					(name "USB2_DP")
+					(type "passive")
+				)
+				(pin
+					(num "GND")
+					(name "GND")
+					(type "passive")
+				)
+				(pin
+					(num "SBU1")
+					(name "SBU1")
+					(type "passive")
+				)
+				(pin
+					(num "SBU2")
+					(name "SBU2")
+					(type "passive")
+				)
+				(pin
+					(num "SHIELD")
+					(name "SHIELD")
+					(type "passive")
+				)
+				(pin
+					(num "VBUS")
+					(name "VBUS")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMe")
+			(part "ZERO_R")
+			(description "PiSXMe component-resolved architectural symbol")
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "ZERO_R")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "PiSXMe component-resolved architectural symbol")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "1")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "2")
+					(type "passive")
+				)
+			)
+		)
+	)
+	(libraries)
+	(nets
+		(net
+			(code "1")
+			(name "/3V3")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "84")
+				(pinfunction "3V3_84")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "86")
+				(pinfunction "3V3_86")
+				(pintype "passive")
+			)
+			(node
+				(ref "J8")
+				(pin "4")
+				(pinfunction "3V3_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "2")
+			(name "/CM5_5V")
+			(class "Default")
+			(node
+				(ref "C5")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C6")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C7")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "77")
+				(pinfunction "CM5_5V_77")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "79")
+				(pinfunction "CM5_5V_79")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "81")
+				(pinfunction "CM5_5V_81")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "83")
+				(pinfunction "CM5_5V_83")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "85")
+				(pinfunction "CM5_5V_85")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "87")
+				(pinfunction "CM5_5V_87")
+				(pintype "passive")
+			)
+			(node
+				(ref "R2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "5")
+				(pinfunction "VLDOIN_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "8")
+				(pinfunction "VOUT1_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "9")
+				(pinfunction "VOUT2_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "3")
+			(name "/CM5_5V_FB")
+			(class "Default")
+			(node
+				(ref "R2")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "10")
+				(pinfunction "FB_10")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "/CM5_5V_PGOOD")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "13")
+				(pinfunction "PG_13")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "5")
+			(name "/CM5_CLKREQ_N")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "102")
+				(pinfunction "PCIe_CLK_nREQ_102")
+				(pintype "passive")
+			)
+			(node
+				(ref "R1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "6")
+			(name "/CM5_USB3_0_RX_N")
+			(class "USB3_90R_L1_L2")
+			(node
+				(ref "J2")
+				(pin "128")
+				(pinfunction "USB3_0_RX_N_128")
+				(pintype "passive")
+			)
+			(node
+				(ref "J9")
+				(pin "5")
+				(pinfunction "RX_N_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "5")
+				(pinfunction "D2_N_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "6")
+				(pinfunction "D2_N_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "9")
+				(pinfunction "D1_N_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "7")
+			(name "/CM5_USB3_0_RX_P")
+			(class "USB3_90R_L1_L2")
+			(node
+				(ref "J2")
+				(pin "130")
+				(pinfunction "USB3_0_RX_P_130")
+				(pintype "passive")
+			)
+			(node
+				(ref "J9")
+				(pin "6")
+				(pinfunction "RX_P_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "10")
+				(pinfunction "D1_P_10")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "4")
+				(pinfunction "D2_P_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "7")
+				(pinfunction "D2_P_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "/CM5_USB3_0_TX_N")
+			(class "USB3_90R_L1_L2")
+			(node
+				(ref "J2")
+				(pin "140")
+				(pinfunction "USB3_0_TX_N_140")
+				(pintype "passive")
+			)
+			(node
+				(ref "J9")
+				(pin "8")
+				(pinfunction "TX_N_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "2")
+				(pinfunction "D1_N_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "9")
+			(name "/CM5_USB3_0_TX_P")
+			(class "USB3_90R_L1_L2")
+			(node
+				(ref "J2")
+				(pin "142")
+				(pinfunction "USB3_0_TX_P_142")
+				(pintype "passive")
+			)
+			(node
+				(ref "J9")
+				(pin "9")
+				(pinfunction "TX_P_9")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "1")
+				(pinfunction "D1_P_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "10")
+			(name "/CM5_USB3_1_RX_N")
+			(class "USB3_90R_L1_L2")
+			(node
+				(ref "J10")
+				(pin "5")
+				(pinfunction "RX_N_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "157")
+				(pinfunction "USB3_1_RX_N_157")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "5")
+				(pinfunction "D2_N_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "6")
+				(pinfunction "D2_N_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "9")
+				(pinfunction "D1_N_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "11")
+			(name "/CM5_USB3_1_RX_P")
+			(class "USB3_90R_L1_L2")
+			(node
+				(ref "J10")
+				(pin "6")
+				(pinfunction "RX_P_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "159")
+				(pinfunction "USB3_1_RX_P_159")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "10")
+				(pinfunction "D1_P_10")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "4")
+				(pinfunction "D2_P_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "7")
+				(pinfunction "D2_P_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "12")
+			(name "/CM5_USB3_1_TX_N")
+			(class "USB3_90R_L1_L2")
+			(node
+				(ref "J10")
+				(pin "8")
+				(pinfunction "TX_N_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "169")
+				(pinfunction "USB3_1_TX_N_169")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "2")
+				(pinfunction "D1_N_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "13")
+			(name "/CM5_USB3_1_TX_P")
+			(class "USB3_90R_L1_L2")
+			(node
+				(ref "J10")
+				(pin "9")
+				(pinfunction "TX_P_9")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "171")
+				(pinfunction "USB3_1_TX_P_171")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "1")
+				(pinfunction "D1_P_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "14")
+			(name "/CM5_USB_OTG_ID")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "101")
+				(pinfunction "USB_OTG_ID_101")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "15")
+			(name "/CM5_VBUS_EN")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "111")
+				(pinfunction "VBUS_EN_111")
+				(pintype "passive")
+			)
+			(node
+				(ref "U4")
+				(pin "5")
+				(pinfunction "EN_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U8")
+				(pin "5")
+				(pinfunction "EN_5")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "16")
+			(name "/CM5_nRPIBOOT")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "93")
+				(pinfunction "nRPIBOOT_93")
+				(pintype "passive")
+			)
+			(node
+				(ref "TP3")
+				(pin "1")
+				(pinfunction "TEST_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "17")
+			(name "/FAN_PWM")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "FAN_PWM")
+				(pinfunction "FAN_PWM_FAN_PWM")
+				(pintype "passive")
+			)
+			(node
+				(ref "J5")
+				(pin "4")
+				(pinfunction "PWM_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J6")
+				(pin "4")
+				(pinfunction "PWM_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J7")
+				(pin "4")
+				(pinfunction "PWM_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "18")
+			(name "/FAN_TACH")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "FAN_TACH")
+				(pinfunction "FAN_TACH_FAN_TACH")
+				(pintype "passive")
+			)
+			(node
+				(ref "J5")
+				(pin "3")
+				(pinfunction "TACH_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "J6")
+				(pin "3")
+				(pinfunction "TACH_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "J7")
+				(pin "3")
+				(pinfunction "TACH_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "19")
+			(name "/FUSED_A_12V")
+			(class "Default")
+			(node
+				(ref "C8")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "F1")
+				(pin "2")
+				(pinfunction "OUTPUT_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "2")
+				(pinfunction "SOURCE_ANODE_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "1")
+				(pinfunction "ANODE_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "20")
+			(name "/FUSED_B_12V")
+			(class "Default")
+			(node
+				(ref "C9")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "F2")
+				(pin "2")
+				(pinfunction "OUTPUT_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q2")
+				(pin "2")
+				(pinfunction "SOURCE_ANODE_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "1")
+				(pinfunction "ANODE_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "21")
+			(name "/GATE_A")
+			(class "Default")
+			(node
+				(ref "Q1")
+				(pin "1")
+				(pinfunction "GATE_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "3")
+				(pinfunction "GATE_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "22")
+			(name "/GATE_B")
+			(class "Default")
+			(node
+				(ref "Q2")
+				(pin "1")
+				(pinfunction "GATE_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "3")
+				(pinfunction "GATE_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "23")
+			(name "/GND")
+			(class "Default")
+			(node
+				(ref "C10")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C12")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C13")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C14")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C15")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C16")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C17")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C18")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C5")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C6")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "C7")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "GND")
+				(pinfunction "GND_GND")
+				(pintype "passive")
+			)
+			(node
+				(ref "J10")
+				(pin "4")
+				(pinfunction "GND_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J10")
+				(pin "7")
+				(pinfunction "GND_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "J10")
+				(pin "S")
+				(pinfunction "SHIELD_S")
+				(pintype "passive")
+			)
+			(node
+				(ref "J11")
+				(pin "GND")
+				(pinfunction "GND_GND")
+				(pintype "passive")
+			)
+			(node
+				(ref "J11")
+				(pin "SHIELD")
+				(pinfunction "SHIELD_SHIELD")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "GND")
+				(pinfunction "GND_GND")
+				(pintype "passive")
+			)
+			(node
+				(ref "J3")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J3")
+				(pin "4")
+				(pinfunction "GND_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J3")
+				(pin "6")
+				(pinfunction "GND_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "J3")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "4")
+				(pinfunction "GND_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "6")
+				(pinfunction "GND_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "J5")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J6")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J7")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J8")
+				(pin "1")
+				(pinfunction "GND_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J9")
+				(pin "4")
+				(pinfunction "GND_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "J9")
+				(pin "7")
+				(pinfunction "GND_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "J9")
+				(pin "S")
+				(pinfunction "SHIELD_S")
+				(pintype "passive")
+			)
+			(node
+				(ref "R1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R10")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R3")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R4")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R5")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R6")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R7")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R9")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "11")
+				(pinfunction "AGND_11")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "17")
+				(pinfunction "PGND_17")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "18")
+				(pinfunction "PGND_18")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "19")
+				(pinfunction "PGND_19")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "20")
+				(pinfunction "PGND_20")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "6")
+				(pinfunction "AGND_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "3")
+				(pinfunction "GND_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U10")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U15")
+				(pin "3")
+				(pinfunction "GND_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U15")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "11")
+				(pinfunction "AGND_11")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "16")
+				(pinfunction "VIN2_16")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "17")
+				(pinfunction "PGND_17")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "18")
+				(pinfunction "PGND_18")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "5")
+				(pinfunction "VLDOIN_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "6")
+				(pinfunction "AGND_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U17")
+				(pin "3")
+				(pinfunction "GND_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U17")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U18")
+				(pin "3")
+				(pinfunction "GND_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U18")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "5")
+				(pinfunction "GND_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "5")
+				(pinfunction "GND_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U4")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "3")
+				(pinfunction "GND_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "8")
+				(pinfunction "GND_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U8")
+				(pin "2")
+				(pinfunction "GND_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "24")
+			(name "/NC")
+			(class "Default")
+			(node
+				(ref "J11")
+				(pin "SBU1")
+				(pinfunction "SBU1_SBU1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J11")
+				(pin "SBU2")
+				(pinfunction "SBU2_SBU2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "9")
+				(pinfunction "VOUT2_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "25")
+			(name "/PCIE_PWR_EN")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "106")
+				(pinfunction "PCIE_PWR_EN_106")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "14")
+				(pinfunction "EN/SYNC_14")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "10")
+				(pinfunction "FB_10")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "4")
+				(pinfunction "EN_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "4")
+				(pinfunction "EN_4")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "26")
+			(name "/PER0_N")
+			(class "PCIe_90R_L1_L2")
+			(node
+				(ref "J1")
+				(pin "A3")
+				(pinfunction "PER0_N_A3")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "124")
+				(pinfunction "PCIe_TX_N_124")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "27")
+			(name "/PER0_P")
+			(class "PCIe_90R_L1_L2")
+			(node
+				(ref "J1")
+				(pin "A2")
+				(pinfunction "PER0_P_A2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "122")
+				(pinfunction "PCIe_TX_P_122")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "28")
+			(name "/PERST_N")
+			(class "Default")
+			(node
+				(ref "J1")
+				(pin "E18")
+				(pinfunction "PERST_N_E18")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "109")
+				(pinfunction "PCIe_nRST_109")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "29")
+			(name "/PET0_N")
+			(class "PCIe_90R_L1_L2")
+			(node
+				(ref "C2")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "118")
+				(pinfunction "PCIe_RX_N_118")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "30")
+			(name "/PET0_N_RAW")
+			(class "PCIe_90R_L1_L2")
+			(node
+				(ref "C2")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "G2")
+				(pinfunction "PET0_N_G2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "31")
+			(name "/PET0_P")
+			(class "PCIe_90R_L1_L2")
+			(node
+				(ref "C1")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "116")
+				(pinfunction "PCIe_RX_P_116")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "32")
+			(name "/PET0_P_RAW")
+			(class "PCIe_90R_L1_L2")
+			(node
+				(ref "C1")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "G1")
+				(pinfunction "PET0_P_G1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "33")
+			(name "/RAW_A_12V")
+			(class "Default")
+			(node
+				(ref "F1")
+				(pin "1")
+				(pinfunction "INPUT_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J3")
+				(pin "1")
+				(pinfunction "+12V_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J3")
+				(pin "3")
+				(pinfunction "+12V_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "J3")
+				(pin "5")
+				(pinfunction "+12V_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "J3")
+				(pin "7")
+				(pinfunction "+12V_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "34")
+			(name "/RAW_B_12V")
+			(class "Default")
+			(node
+				(ref "F2")
+				(pin "1")
+				(pinfunction "INPUT_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "1")
+				(pinfunction "+12V_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "3")
+				(pinfunction "+12V_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "5")
+				(pinfunction "+12V_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "7")
+				(pinfunction "+12V_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "35")
+			(name "/REFCLK_N")
+			(class "PCIe_90R_L1_L2")
+			(node
+				(ref "J1")
+				(pin "F7")
+				(pinfunction "REFCLK_N_F7")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "112")
+				(pinfunction "PCIe_CLK_N_112")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "36")
+			(name "/REFCLK_P")
+			(class "PCIe_90R_L1_L2")
+			(node
+				(ref "J1")
+				(pin "E7")
+				(pinfunction "REFCLK_P_E7")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "110")
+				(pinfunction "PCIe_CLK_P_110")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "37")
+			(name "/RT_1MHZ")
+			(class "Default")
+			(node
+				(ref "R4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "12")
+				(pinfunction "RT_12")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "40")
+			(name "/SERVICE_ILIM")
+			(class "Default")
+			(node
+				(ref "R7")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "42")
+			(name "/SERVICE_VBUS")
+			(class "USB2_90R_L1_L2")
+			(node
+				(ref "C5")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J11")
+				(pin "VBUS")
+				(pinfunction "VBUS_VBUS")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "44")
+			(name "/SW_NODE_KEEP_OUT")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "2")
+				(pinfunction "SW_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "45")
+			(name "/UART_RX")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "UART_RX")
+				(pinfunction "UART_RX_UART_RX")
+				(pintype "passive")
+			)
+			(node
+				(ref "J8")
+				(pin "3")
+				(pinfunction "UART_RX_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "46")
+			(name "/UART_TX")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "UART_TX")
+				(pinfunction "UART_TX_UART_TX")
+				(pintype "passive")
+			)
+			(node
+				(ref "J8")
+				(pin "2")
+				(pinfunction "UART_TX_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "47")
+			(name "/USB_5V_PERIPH")
+			(class "Default")
+			(node
+				(ref "C12")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C13")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C14")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C15")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C16")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R11")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R8")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "15")
+				(pinfunction "NC_15")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "19")
+				(pinfunction "PGND_19")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "2")
+				(pinfunction "SW_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U4")
+				(pin "1")
+				(pinfunction "IN_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U8")
+				(pin "1")
+				(pinfunction "IN_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "48")
+			(name "/USB_5V_PERIPH_FB")
+			(class "Default")
+			(node
+				(ref "R8")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R9")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "14")
+				(pinfunction "EN/SYNC_14")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "49")
+			(name "/USB_5V_PGOOD")
+			(class "Default")
+			(node
+				(ref "R11")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "12")
+				(pinfunction "RT_12")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "50")
+			(name "/USB_FAST_A_DM")
+			(class "USB2_HOST_90R_L1_L2")
+			(node
+				(ref "J2")
+				(pin "136")
+				(pinfunction "USB3_0_DM_136")
+				(pintype "passive")
+			)
+			(node
+				(ref "J9")
+				(pin "2")
+				(pinfunction "USB2_DM_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U17")
+				(pin "2")
+				(pinfunction "D1_N_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "51")
+			(name "/USB_FAST_A_DP")
+			(class "USB2_HOST_90R_L1_L2")
+			(node
+				(ref "J2")
+				(pin "134")
+				(pinfunction "USB3_0_DP_134")
+				(pintype "passive")
+			)
+			(node
+				(ref "J9")
+				(pin "3")
+				(pinfunction "USB2_DP_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U17")
+				(pin "1")
+				(pinfunction "D1_P_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "52")
+			(name "/USB_FAST_A_ILIM")
+			(class "Default")
+			(node
+				(ref "R5")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U4")
+				(pin "6")
+				(pinfunction "ILIM_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "53")
+			(name "/USB_FAST_A_VBUS")
+			(class "Default")
+			(node
+				(ref "C17")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J9")
+				(pin "1")
+				(pinfunction "VBUS_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U4")
+				(pin "3")
+				(pinfunction "OUT_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "54")
+			(name "/USB_FAST_B_DM")
+			(class "USB2_HOST_90R_L1_L2")
+			(node
+				(ref "J10")
+				(pin "2")
+				(pinfunction "USB2_DM_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "165")
+				(pinfunction "USB3_1_DM_165")
+				(pintype "passive")
+			)
+			(node
+				(ref "U18")
+				(pin "2")
+				(pinfunction "D1_N_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "55")
+			(name "/USB_FAST_B_DP")
+			(class "USB2_HOST_90R_L1_L2")
+			(node
+				(ref "J10")
+				(pin "3")
+				(pinfunction "USB2_DP_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "163")
+				(pinfunction "USB3_1_DP_163")
+				(pintype "passive")
+			)
+			(node
+				(ref "U18")
+				(pin "1")
+				(pinfunction "D1_P_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "56")
+			(name "/USB_FAST_B_ILIM")
+			(class "Default")
+			(node
+				(ref "R6")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U8")
+				(pin "6")
+				(pinfunction "ILIM_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "57")
+			(name "/USB_FAST_B_VBUS")
+			(class "Default")
+			(node
+				(ref "C18")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J10")
+				(pin "1")
+				(pinfunction "VBUS_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U8")
+				(pin "3")
+				(pinfunction "OUT_3")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "58")
+			(name "/USB_RT_1MHZ")
+			(class "Default")
+			(node
+				(ref "R10")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "13")
+				(pinfunction "PG_13")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "59")
+			(name "/USB_SERVICE_CC1")
+			(class "USB2_90R_L1_L2")
+			(node
+				(ref "J11")
+				(pin "CC1")
+				(pinfunction "CC1_CC1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "60")
+			(name "/USB_SERVICE_CC2")
+			(class "USB2_90R_L1_L2")
+			(node
+				(ref "J11")
+				(pin "CC2")
+				(pinfunction "CC2_CC2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "61")
+			(name "/USB_SERVICE_DM")
+			(class "USB2_90R_L1_L2")
+			(node
+				(ref "J11")
+				(pin "D_N")
+				(pinfunction "USB2_DM_D_N")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "103")
+				(pinfunction "USB2_DM_103")
+				(pintype "passive")
+			)
+			(node
+				(ref "U15")
+				(pin "2")
+				(pinfunction "D1_N_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "62")
+			(name "/USB_SERVICE_DP")
+			(class "USB2_90R_L1_L2")
+			(node
+				(ref "J11")
+				(pin "D_P")
+				(pinfunction "USB2_DP_D_P")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "105")
+				(pinfunction "USB2_DP_105")
+				(pintype "passive")
+			)
+			(node
+				(ref "U15")
+				(pin "1")
+				(pinfunction "D1_P_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "65")
+			(name "/USB_SW_NODE_KEEP_OUT")
+			(class "Default")
+			(node
+				(ref "U16")
+				(pin "8")
+				(pinfunction "VOUT1_8")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "66")
+			(name "/VCAP_A")
+			(class "Default")
+			(node
+				(ref "C8")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "6")
+				(pinfunction "VCAP_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "67")
+			(name "/VCAP_B")
+			(class "Default")
+			(node
+				(ref "C9")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "6")
+				(pinfunction "VCAP_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "68")
+			(name "/VCC_INTERNAL_NC")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "7")
+				(pinfunction "VCC_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "1")
+				(pinfunction "VIN1_1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "69")
+			(name "/VPROT_12V")
+			(class "Default")
+			(node
+				(ref "C10")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C11")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C3")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "C4")
+				(pin "1")
+				(pinfunction "1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J1")
+				(pin "PWR")
+				(pinfunction "VPROT_12V_PWR")
+				(pintype "passive")
+			)
+			(node
+				(ref "J5")
+				(pin "1")
+				(pinfunction "12V_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J6")
+				(pin "1")
+				(pinfunction "12V_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J7")
+				(pin "1")
+				(pinfunction "12V_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q1")
+				(pin "3")
+				(pinfunction "DRAIN_CATHODE_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "Q2")
+				(pin "3")
+				(pinfunction "DRAIN_CATHODE_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "1")
+				(pinfunction "VIN1_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U1")
+				(pin "16")
+				(pinfunction "VIN2_16")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "20")
+				(pinfunction "PGND_20")
+				(pintype "passive")
+			)
+			(node
+				(ref "U16")
+				(pin "7")
+				(pinfunction "VCC_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "U2")
+				(pin "2")
+				(pinfunction "CATHODE_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U3")
+				(pin "2")
+				(pinfunction "CATHODE_2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "70")
+			(name "unconnected-(J2-PCIE_nWAKE-Pad104)")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "104")
+				(pinfunction "PCIE_nWAKE_104")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "71")
+			(name "unconnected-(U1-NC-Pad15)")
+			(class "Default")
+			(node
+				(ref "U1")
+				(pin "15")
+				(pinfunction "NC_15")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "72")
+			(name "unconnected-(U4-FLG-Pad4)")
+			(class "Default")
+			(node
+				(ref "U4")
+				(pin "4")
+				(pinfunction "FLG_4")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "73")
+			(name "unconnected-(U8-FLG-Pad4)")
+			(class "Default")
+			(node
+				(ref "U8")
+				(pin "4")
+				(pinfunction "FLG_4")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "74")
+			(name "unconnected-(U15-NC-Pad4)")
+			(class "Default")
+			(node
+				(ref "U15")
+				(pin "4")
+				(pinfunction "NC_4")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "75")
+			(name "unconnected-(U15-NC-Pad5)")
+			(class "Default")
+			(node
+				(ref "U15")
+				(pin "5")
+				(pinfunction "NC_5")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "76")
+			(name "unconnected-(U15-NC-Pad6)")
+			(class "Default")
+			(node
+				(ref "U15")
+				(pin "6")
+				(pinfunction "NC_6")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "77")
+			(name "unconnected-(U15-NC-Pad7)")
+			(class "Default")
+			(node
+				(ref "U15")
+				(pin "7")
+				(pinfunction "NC_7")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "78")
+			(name "unconnected-(U15-NC-Pad9)")
+			(class "Default")
+			(node
+				(ref "U15")
+				(pin "9")
+				(pinfunction "NC_9")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "79")
+			(name "unconnected-(U15-NC-Pad10)")
+			(class "Default")
+			(node
+				(ref "U15")
+				(pin "10")
+				(pinfunction "NC_10")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "80")
+			(name "unconnected-(U17-NC-Pad4)")
+			(class "Default")
+			(node
+				(ref "U17")
+				(pin "4")
+				(pinfunction "NC_4")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "81")
+			(name "unconnected-(U17-NC-Pad5)")
+			(class "Default")
+			(node
+				(ref "U17")
+				(pin "5")
+				(pinfunction "NC_5")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "82")
+			(name "unconnected-(U17-NC-Pad6)")
+			(class "Default")
+			(node
+				(ref "U17")
+				(pin "6")
+				(pinfunction "NC_6")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "83")
+			(name "unconnected-(U17-NC-Pad7)")
+			(class "Default")
+			(node
+				(ref "U17")
+				(pin "7")
+				(pinfunction "NC_7")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "84")
+			(name "unconnected-(U17-NC-Pad9)")
+			(class "Default")
+			(node
+				(ref "U17")
+				(pin "9")
+				(pinfunction "NC_9")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "85")
+			(name "unconnected-(U17-NC-Pad10)")
+			(class "Default")
+			(node
+				(ref "U17")
+				(pin "10")
+				(pinfunction "NC_10")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "86")
+			(name "unconnected-(U18-NC-Pad4)")
+			(class "Default")
+			(node
+				(ref "U18")
+				(pin "4")
+				(pinfunction "NC_4")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "87")
+			(name "unconnected-(U18-NC-Pad5)")
+			(class "Default")
+			(node
+				(ref "U18")
+				(pin "5")
+				(pinfunction "NC_5")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "88")
+			(name "unconnected-(U18-NC-Pad6)")
+			(class "Default")
+			(node
+				(ref "U18")
+				(pin "6")
+				(pinfunction "NC_6")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "89")
+			(name "unconnected-(U18-NC-Pad7)")
+			(class "Default")
+			(node
+				(ref "U18")
+				(pin "7")
+				(pinfunction "NC_7")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "90")
+			(name "unconnected-(U18-NC-Pad9)")
+			(class "Default")
+			(node
+				(ref "U18")
+				(pin "9")
+				(pinfunction "NC_9")
+				(pintype "passive+no_connect")
+			)
+		)
+		(net
+			(code "91")
+			(name "unconnected-(U18-NC-Pad10)")
+			(class "Default")
+			(node
+				(ref "U18")
+				(pin "10")
+				(pinfunction "NC_10")
+				(pintype "passive+no_connect")
+			)
+		)
+	)
+)

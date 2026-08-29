@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "KiCad")(type "Table")(uri "/Applications/KiCad/KiCad.app/Contents/SharedSupport/template/fp-lib-table")(options "")(descr "KiCad 10.0.5 default footprint libraries"))
+  (lib (name "PiSXMe")(type "KiCad")(uri "${KIPRJMOD}/footprints/PiSXMe.pretty")(options "")(descr "PiSXMe project-local placement footprints"))
+)

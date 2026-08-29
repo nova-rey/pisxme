@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "PiSXMe")(type "KiCad")(uri "${KIPRJMOD}/PiSXMe.kicad_sym")(options "")(descr "PiSXMe project-local architectural symbols"))
+)
