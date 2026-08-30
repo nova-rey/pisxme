@@ -27,13 +27,31 @@ quantity 25, USD 1.14 quantity 100, and full-reel MOQ 2,000 at about USD
 Sourcing risk is MEDIUM; TE `1-2199119-0` is the backup after a pad/height
 comparison and availability recheck.
 
-Footprint/3D: use JAE's series drawing and land-pattern dimensions. No JAE
-3D file was available in the local capture. The CM5IO STEP
+Exact-MPN drawing authority is the Mouser exact-MPN document link
+`https://www.mouser.com/catalog/specsheets/SM3%20drawing%204.1.pdf`; the
+one-page drawing identifies the `SM3ZS067U410` family and the exact 4.10 mm
+variant. Its captured text is recorded in the procurement matrix/source
+receipt because the distributor CDN did not permit a second local download.
+The local JAE series bulletin remains the manufacturer source for the
+ordering-code and key/height interpretation. Mouser exposes an ECAD model
+link, but a third-party model is not authority until dimension-checked.
+
+Footprint/3D: use the exact drawing and land-pattern dimensions. No JAE
+manufacturer 3D file was available in the local capture. The CM5IO STEP
+`../../cm5io-rev2/CM5IO.3dshapes/MTSSD03-67MSW337.STEP` is corroboration only.
 `../../cm5io-rev2/CM5IO.3dshapes/MTSSD03-67MSW337.STEP` is corroboration only.
 Assembly is ordinary SMT/reflow with a discrete 2280 screw/standoff
 retention feature.
 
-Decision: `CLOSED`. This closes the SATA-capable B-key 2280 socket authority;
-2242 is an optional retention study only. Phase 3 must generate the selected
-JAE footprint from the manufacturer drawing and never silently reuse the
-CM5IO M-key footprint.
+SATA-IO mapping authority is saved as
+`SATA-IO-TP053v11-M2-card-format.pdf`, SHA-256
+`9d419572e7fba7cf1c7b1207f38cae3c47c04210695293fb516c484b4fd09abf`. It
+defines Socket 2 as the B-key socket, B-key notch pins 12--19, and the SATA
+device-side pairs: SATA-B+/SATA-B- on pins 41/43 and SATA-A-/SATA-A+ on pins
+47/49. The clean design shall label the connector `SATA ONLY / NVMe NOT
+SUPPORTED` and shall not connect the PCIe or USB alternatives.
+
+Decision: `CLOSED`. This closes the SATA-capable B-key 2280 socket and its
+electrical mapping authority; 2242 is an optional retention study only. Phase
+3 must generate the selected JAE footprint from the exact drawing and never
+silently reuse the CM5IO M-key footprint.

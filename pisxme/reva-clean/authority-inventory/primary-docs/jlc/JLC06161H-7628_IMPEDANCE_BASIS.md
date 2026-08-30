@@ -25,8 +25,9 @@ substitute for the order's fab-returned coupon. The 100-ohm requests must be
 entered in the current JLC calculator/order flow before routing. Specify
 controlled impedance and request the coupon/field-solver result at fabrication.
 
-Sources saved locally: `impedance-calculator.html` from the current JLC
-calculator. Public sources are `https://jlcpcb.com/impedance`,
+Sources saved locally: `JLC06161H-7628_IMPEDANCE_INPUTS.md` records the
+current calculator fields and the public-source URLs are
+`https://jlcpcb.com/impedance`,
 `https://jlcpcb.com/help/article/user-guide-to-the-jlcpcb-impedance-calculator`,
 and `https://cart.jlcpcb.com/client/template/placeOrder/impedanceCalculation.html`.
 

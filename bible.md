@@ -1562,7 +1562,10 @@
   mechanics, Ethernet ESD, JMS578, and JLC calculator evidence.
 - Classified the proprietary V100 cooler/backplate envelope and unverified
   local SXM2 land-pattern transplant as explicit `REV_A_EMPIRICAL_RISK`.
-- Phase 2 remains `PHASE2_AUTHORITY_BLOCKED`: the bare JMS578 has only an
-  out-of-stock LCSC listing and no public firmware/configuration package or
-  device-specific Linux/UAS/TRIM/reset proof; ASM1153E did not provide a
-  materially better bare-chip path. No Phase 3 schematic or PCB was modified.
+- JMS578 was rejected after the out-of-stock LCSC listing and incomplete
+  firmware/Linux evidence failed the approved gate. TI `TUSB9261IPVP` is now
+  the selected replacement: active exact DigiKey/Mouser stock, TI firmware
+  resources and FlashBurner, implementation/EVM documentation, and explicit
+  USB/SATA/reset behavior. Phase 2 is closed; the TI firmware download receipt
+  records the export-gated binary resources and the remaining Phase 7 Linux
+  qualification tests. No Phase 3 schematic or PCB was modified.
