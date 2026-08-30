@@ -1,5 +1,11 @@
 # Append-only project bible
 
+## 2026-08-30 — Phase 14 service authority regression correction
+
+- Updated the Phase 8 audit to require the selected Amphenol
+  `10171746-00021LF` instead of the retired generic USB2 placeholder.
+
+
 ## 2026-08-30 — Ethernet MagJack authority replacement
 
 - Closed the former exact `TRJG0926HENL` procurement gap with EDAC
