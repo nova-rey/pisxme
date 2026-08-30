@@ -2005,7 +2005,7 @@
 - Added geometry sampling of the filled V100 protected-feed polygon and
   conservative 1 oz copper current-density/sheet-resistance calculations.
 - The candidate reports 99.5 mm sampled minimum span, 3.681 A/mm2 shared
-  branch density, 7.362 A/mm2 worst single-branch density, and 9.66 mV
+  branch density, 8.31 A/mm2 worst continuous single-branch density, and 10.89 mV
   conservative drop bound; connector-contact, thermal, and full-board DRC
   closure remain open.
 
@@ -2031,3 +2031,20 @@
   were removed; the candidate retains only the validated filled power/return
   zones and remains unrouted until a clearance-safe production placement is
   established.
+
+2026-08-30 — Phase 14 canonical power-budget correction
+
+- Rebased the Phase 14 geometry/contact/thermal analysis on the repository
+  `design/FINAL_POWER_BUDGET.json` authority: 28.5 A continuous and 34.3 A
+  peak across two 15 A branches.
+- Balanced continuous operation estimates 14.25 A/branch, 0.219 A/contact,
+  and 78.3 C FET junction at 40 C ambient. The 34.3 A single-branch case is
+  explicitly a fuse-clearing transient, not a sustained thermal pass.
+
+2026-08-30 — Phase 14 canonical-budget arithmetic corrected
+
+- Corrected the machine analysis to the exact 1 oz geometry arithmetic:
+  4.155 A/mm2 shared density, 8.309 A/mm2 continuous single-branch density,
+  10.91 mV sheet-drop bound, and 74.0 C shared FET junction at 40 C ambient.
+- The 236.9 C peak single-branch θJA result remains a fuse-clearing transient
+  requirement, not an accepted sustained operating condition.

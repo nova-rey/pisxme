@@ -14,13 +14,22 @@ INPUT = ROOT / "ACREAGE_CANDIDATE.kicad_pcb"
 OUTPUT = ROOT / "ACREAGE_POWER_PHASE14.kicad_pcb"
 
 
+def find_net(board, net_name):
+    # BOARD.FindNet performs fuzzy/legacy lookup in this KiCad Python ABI;
+    # exact dictionary lookup prevents a similarly named hierarchical net
+    # from being assigned to a power via or zone.
+    return next((net for key, net in board.GetNetsByName().items()
+                 if str(key) == net_name), None)
+
+
 def rectangle_zone(board, net_name, layer, x0, y0, x1, y1, name):
-    net = board.FindNet(net_name)
+    net = find_net(board, net_name)
     if net is None:
         raise SystemExit(f"missing required net: {net_name}")
     zone = pcbnew.ZONE(board)
     zone.SetLayer(layer)
     zone.SetNet(net)
+    zone.SetNetCode(net.GetNetCode())
     zone.SetIsRuleArea(False)
     zone.SetMinThickness(pcbnew.FromMM(0.25))
     zone.SetPadConnection(pcbnew.ZONE_CONNECTION_FULL)
