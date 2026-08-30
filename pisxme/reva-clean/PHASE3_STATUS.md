@@ -4,8 +4,9 @@ Current state: `ARCHITECTURE_SCAFFOLD_IN_PROGRESS`.
 
 Created: native root project shell, ten named child-sheet files, isolated
 `PiSXMeRevAClean` symbol/footprint tables, architecture contract, interface
-ledger, net-class ledger, and source-authority manifest. The generated shell
-contains no placement or routing and is not yet a production schematic.
+ledger, net-class ledger, source-authority manifest, and a deterministic
+extractor for approved CM5IO symbol definitions. The generated shell contains
+no placement or routing and is not yet a production schematic.
 
 Not yet passed: child-sheet hierarchical pins and real connectivity, selected
 symbol/footprint extraction, machine-readable pin/pad parity, and clean

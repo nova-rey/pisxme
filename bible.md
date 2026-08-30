@@ -14,6 +14,20 @@
   plus four 1.02 mm hole groups. Phase 3 must generate and parity-check the
   EDAC land pattern in the clean namespace.
 
+## 2026-08-30 — Phase 3 clean-library extraction checkpoint
+
+- Added a deterministic extractor for the approved CM5IO `ComputeModule5-CM5`
+  and Ethernet symbol definitions, rewriting them into the local
+  `PiSXMeRevAClean` namespace and removing donor footprint/model references.
+- Copied the approved CM5 carrier footprint/model into the project-local
+  library and added the EDAC MagJack footprint derived from the EDAC drawing;
+  the EDAC footprint keeps the exact EDAC hole groups and has no unvalidated
+  3D model attached.
+- Added a structural CM5 symbol-pin to footprint-pad parity check: 200 numeric
+  symbol pins equal 200 numeric footprint pads. Native KiCad PDF parse/export
+  for the root and all ten child sheets also passed; Phase 3 connectivity/ERC
+  remains open.
+
 ## 2026-08-28 — M2 right-edge outline expansion checkpoint
 
 - Expanded only the active board's congested right edge from 220 × 140 mm to 240 × 140 mm and moved J9/J10/J11 to x=230 mm so their bodies remain inside the new edge. CM5, PCIe, power, ESD-support placement, routing, zones, schematic, and manufacturing outputs were not changed.
