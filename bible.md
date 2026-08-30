@@ -2147,3 +2147,11 @@
   vias. Fresh native DRC reports no thermal-via diameter, drill, annular,
   mask, short, or dangling-via defect; VIN/VOUT and control routing remain
   open, so Phase 15 is not closed.
+
+2026-08-30 — Phase 15 pad-edge high-current escape checkpoint
+
+- Added module-scoped VIN/VOUT pad-edge escapes for U3/U4 and the U5 VIN
+  capacitor bank. The native focused regression passes with no shorting or
+  crossing items and reduces the regulator-base unrouted count from 296 to
+  280. Bootstrap, feedback, RT, PG, VCC_INTERNAL, and final thermal-margin
+  evidence remain open; Phase 15 is not closed.

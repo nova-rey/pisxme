@@ -25,6 +25,7 @@ def main():
         fp = board.FindFootprintByReference(ref)
         if fp is None:
             raise SystemExit(f"missing regulator {ref}")
+        fp.SetPosition(pcbnew.VECTOR2I_MM(cx, cy))
         # Keep the vias adjacent to, rather than on top of, the solder lands;
         # this preserves ordinary through-via assembly and a tentable mask.
         # The RDL0020 thermal lands are four narrow central PGND lands at

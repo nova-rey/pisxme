@@ -28,6 +28,16 @@ Evidence:
   the project-local `TPSM63606_SUPPORT_AUTHORITY.md` and corrected
   `TPSM63606RDLR_RDL0020.kicad_mod`.
 
+- `phase15_power_escape.py` now applies the same pad-edge escape to all three
+  VIN/VOUT islands that have output capacitors in the current schematic: U3
+  and U4 receive both VIN and VOUT escapes, while U5 receives its three VIN
+  escapes. U4 output capacitors are deliberately escaped from the left output
+  land to preserve clearance from U5 and the storage bridge.
+- The focused native regression reports no `shorting_items` or
+  `tracks_crossing` defects and reduces the base candidate from 296 to 280
+  unrouted items. The remaining unrouted regulator items are the required
+  bootstrap, feedback, RT, PG, VCC_INTERNAL, and control connections.
+
 This does not close Phase 15. Remaining required work is localized VIN and
 VOUT high-dI/dt routing, feedback/RT/PG routing, switch-node containment,
 effective-capacitance calculation, and reference-layout overlay evidence for
