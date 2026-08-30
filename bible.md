@@ -1924,6 +1924,16 @@
 - Strengthened the power audit so it requires package-pin evidence and the
   documented fuse/MOSFET support components before Phase 5 can pass.
 
+2026-08-30 — Phase 5 power implementation contract recorded
+
+- Added `PHASE5_POWER_NETWORK_SPEC.md` from the preserved LM74700-Q1 and
+  TPSM63606 datasheets, including exact pin maps, external FET/fuse/TVS
+  topology, regulator support requirements, and the pre-routing acceptance
+  gate.
+- Corrected the Molex authority receipt to record that its project-local
+  land pattern is now materialized; this does not close the separate circuit
+  completion gate.
+
 2026-08-30 — ROOT_HIERARCHY_ASSOCIATION continuation closed
 
 - The native KiCad fixture remained green, and the clean CM5 promotion was

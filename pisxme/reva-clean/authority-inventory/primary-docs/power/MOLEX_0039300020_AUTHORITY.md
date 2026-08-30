@@ -1,7 +1,8 @@
 # High-current 12 V input header authority — Molex 0039300020
 
 Checked: 2026-08-30. Status: `CLOSED` for the Rev-A input-header selection;
-the exact PCB land pattern remains a Phase 14 placement/materialization task.
+the exact project-local PCB land pattern is now materialized and checked in
+`PiSXMe_RevA_Clean.pretty/Molex_0039300020_5569_2P_RA.kicad_mod`.
 
 ## Candidates considered
 
