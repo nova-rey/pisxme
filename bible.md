@@ -2247,6 +2247,14 @@
   nominal derating screens; ±20% tolerance screens are 31.7/47.5/253.4 uF,
   so exact DC-bias/tolerance closure remains explicitly open.
 
+2026-08-30 — Phase 15 active-cap lifecycle and tolerance audit
+
+- Confirmed the active TDK MPN in the native regulator sheet and corrected the
+  Phase 15 receipt's stale 36-via wording to the validated 35-via result.
+- The COUT regression now reports both nominal 90% derating and the separate
+  ±20% tolerance screen, preventing the latter from being hidden by the
+  nominal pass.
+
 2026-08-30 — Phase 15 receipt and COUT regression correction
 
 - Corrected the regulator receipt's U4/U5/thermal-via count to the validated

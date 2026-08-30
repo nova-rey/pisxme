@@ -52,8 +52,8 @@ Evidence:
   U7. `phase15_u4_u5_controls.py` places the support parts in module-scoped
   rows, uses separated ordinary through-via trunks, and ties U4 C18 into the
   local VOUT bank. Native DRC reports zero `clearance`, `shorting_items`, and
-  `tracks_crossing` findings; `test_phase15_u4_u5_controls.py` verifies 36
-  35 control/thermal vias and 254 unrouted acreage items.
+  `tracks_crossing` findings; `test_phase15_u4_u5_controls.py` verifies 35
+  control/thermal vias and 254 unrouted acreage items.
 
 - `phase15_u5_vout_bank.py` adds a 4x4 bank of the sixteen schematic-authority
   output capacitors C26-C41. The first three rows are beside U5; the fourth
@@ -82,7 +82,8 @@ The reproducible COUT floor calculation is
 `validation/phase3/phase15_capacitance_check.py`; it verifies the schematic
 authority counts against the TI minimum effective values using the documented
 90% Rev-A nominal derating floor; the active TDK part's ±20% tolerance and
-exact DC-bias/temperature curve remain explicitly unresolved. The comparison against the TI qualitative placement
+exact DC-bias/temperature curve remain explicitly unresolved. The comparison
+against the TI qualitative placement
 authority is recorded in `PHASE15_TI_LAYOUT_OVERLAY.md`. That comparison is
 not a thermal simulation and does not claim exact geometric equivalence.
 
