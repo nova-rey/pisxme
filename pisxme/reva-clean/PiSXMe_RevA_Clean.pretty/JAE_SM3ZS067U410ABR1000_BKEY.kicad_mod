@@ -992,15 +992,3 @@
 		(solder_mask_margin 0.102)
 		(uuid "aef73218-bc2d-43fa-b3eb-23959e67d223")
 	)
-	(model "${KIPRJMOD}/CM5IO.3dshapes/MTSSD03-67MSW337.STEP"
-		(offset
-			(xyz 0 1.8 1.3)
-		)
-		(scale
-			(xyz 1 1 1)
-		)
-		(rotate
-			(xyz 90 -180 -90)
-		)
-	)
-)

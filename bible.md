@@ -1827,3 +1827,8 @@
 - Updated the M.2 authority receipt to reference the clean JAE B-key footprint
   and its 67-pad/12–19-void regression evidence. The overall routing gate
   remains open pending remaining connector patterns and complete pin-pad review.
+2026-08-30 — Phase 14 USB-C service connector authority closed
+
+- Promoted Amphenol `10171746-00021LF` as the exact USB2 SERVICE receptacle.
+- Added manufacturer-derived local footprint, exact MPN assignment, procurement
+  receipt, and regression test; native root ERC remains clean.

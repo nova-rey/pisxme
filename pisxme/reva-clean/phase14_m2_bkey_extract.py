@@ -40,6 +40,9 @@ def main() -> None:
     source = source.replace('(property "Value" "M.2 M Key socket"', '(property "Value" "JAE SM3ZS067U410ABR1000 B-key SATA socket"', 1)
     source = source.replace('(property "Footprint" "M.2 M Key socket"', '(property "Footprint" "PiSXMeRevAClean:JAE_SM3ZS067U410ABR1000_BKEY"', 1)
     source = source.replace('(layer "F.Cu")', '(layer "F.Cu")\n\t(property "Description" "Derived from JAE SM3ZS067U410 drawing; B-key void 12-19 per SATA-IO TP053")', 1)
+    model = source.find('\n\t(model ')
+    if model >= 0:
+        source = source[:model] + '\n'
     OUT.write_text(source)
     storage = ROOT / "STORAGE.kicad_sch"
     storage.write_text(storage.read_text().replace('property "Footprint" "PiSXMeRevAClean:SM3ZS067U410ABR1000"', 'property "Footprint" "PiSXMeRevAClean:JAE_SM3ZS067U410ABR1000_BKEY"'))
