@@ -1915,3 +1915,11 @@
   now materializes all 20 schematic components and 218 nets on six copper
   layers; the sole intentional unresolved contact mapping is SXM2 J1 PWR/GND,
   retained as the documented Rev-A empirical-risk item.
+
+2026-08-30 — ROOT_HIERARCHY_ASSOCIATION continuation closed
+
+- The native KiCad fixture remained green, and the clean CM5 promotion was
+  corrected to parse the authoritative two 100-pin units independently.
+- Clean-root KiCad 10 ERC is zero with J7 present; native netlist export and
+  pcbnew materialization now include the 200-pin CM5 footprint. Phase 3 status
+  records the generic authoring-path correction and regression test.

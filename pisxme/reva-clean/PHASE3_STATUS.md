@@ -25,6 +25,13 @@ generates real root wires to sheet pins. The regression
 `validation/phase3/test_native_hierarchy_authoring.py` reproduces the
 generation and native ERC check.
 
+The later `ROOT_HIERARCHY_ASSOCIATION` continuation experiment is also
+closed: a native KiCad-authority CM5 promotion now parses the source's two
+100-pin units separately, preserves all 200 pin numbers, and passes clean-root
+native ERC with zero errors. Regression coverage is in
+`validation/phase3/test_phase14_cm5_native_authority.py`; the clean candidate
+materializer consumes the resulting J7 netlist component.
+
 Exit evidence is recorded in `validation/phase3/PHASE3_EXIT_RECEIPT.md`.
 Phase 4 schematic-only work is complete and is recorded in
 `validation/phase3/PHASE4_V100_RECEIPT.md`. Placement and routing remain
