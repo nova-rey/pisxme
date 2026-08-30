@@ -1607,3 +1607,9 @@
   interfaces, and no production symbols, footprints, components, PCB,
   placement, routing, or parity fixture exists. The receipt records the open
   gate and required next work.
+
+2026-08-30 — removed disposable SKiDL probe logs
+
+- Removed the untracked `skidl.erc` and `skidl.log` files created by an
+  exploratory environment probe; they were not design evidence or project
+  outputs.
