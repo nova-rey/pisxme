@@ -547,7 +547,7 @@
 (label "CM5_GBE_TD2_N" (at 70 148.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid da000000-0000-0000-0000-000000000069))
 (label "CM5_GBE_TD3_P" (at 70 151.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid da000000-0000-0000-0000-00000000006a))
 (label "CM5_GBE_TD3_N" (at 70 153.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid da000000-0000-0000-0000-00000000006b))
-(symbol (lib_id "PiSXMeRevAClean:TPD4E004DRYR") (at 50 145 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid da000000-0000-0000-0000-000000000000) (property "Reference" "U_ETH_ESD" (at 50 132 0) (effects (font (size 1.1 1.1)))) (property "Value" "TPD4E004DRYR" (at 50 158 0) (effects (font (size 1.1 1.1)))) (property "MPN" "TPD4E004DRYR" (at 50 145 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "Package_DFN_QFN:WSON-6-1EP_1.5x1.5mm_P0.5mm_EP0.95x0.95mm" (at 50 145 0) (effects (font (size 1 1)) (hide yes))) (pin "1" (uuid da000000-0000-0000-0000-000000000000))
+(symbol (lib_id "PiSXMeRevAClean:TPD4E004DRYR") (at 50 145 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid da000000-0000-0000-0000-000000000000) (property "Reference" "U_ETH_ESD" (at 50 132 0) (effects (font (size 1.1 1.1)))) (property "Value" "TPD4E004DRYR" (at 50 158 0) (effects (font (size 1.1 1.1)))) (property "MPN" "TPD4E004DRYR" (at 50 145 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:TPD4E004DRYR_WSON6" (at 50 145 0) (effects (font (size 1 1)) (hide yes))) (pin "1" (uuid da000000-0000-0000-0000-000000000000))
 (pin "2" (uuid da000000-0000-0000-0000-000000000001))
 (pin "3" (uuid da000000-0000-0000-0000-000000000002))
 (pin "4" (uuid da000000-0000-0000-0000-000000000003))

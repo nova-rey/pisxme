@@ -1795,3 +1795,11 @@
 - The hierarchy generator is now exercised in a disposable copy while native
   ERC checks the live clean project. This prevents validation from erasing
   downstream island authoring and preserves the Phase 4 audit contract.
+
+2026-08-30 — Phase 14/15 footprint prerequisite started
+
+- Added a deterministic exact-MPN package-footprint assignment path for the
+  selected LM74700QDBVRQ1, TPSM63606RDLR, TUSB9261IPVP, and TPD4E004DRYR
+  instances, plus a machine-readable pad-count audit.
+- Kept Phase 14/15 open because connector/socket land patterns and complete
+  pin-to-pad authority are still required before real routed copper.

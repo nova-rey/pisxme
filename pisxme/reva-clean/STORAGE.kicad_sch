@@ -523,7 +523,7 @@
 (label "BRIDGE_1V1" (at 70 103.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid db000000-0000-0000-0000-00000000006d))
 (label "BRIDGE_RESET" (at 70 106.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid db000000-0000-0000-0000-00000000006e))
 (label "BRIDGE_CFG" (at 70 108.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid db000000-0000-0000-0000-00000000006f))
-(symbol (lib_id "PiSXMeRevAClean:TUSB9261IPVP_STORAGE") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid db000000-0000-0000-0000-000000000000) (property "Reference" "U_STORAGE_BRIDGE" (at 50 82 0) (effects (font (size 1.1 1.1)))) (property "Value" "TUSB9261IPVP" (at 50 108 0) (effects (font (size 1.1 1.1)))) (property "MPN" "TUSB9261IPVP" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:TUSB9261IPVP" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (pin "1" (uuid db000000-0000-0000-0000-000000000000))
+(symbol (lib_id "PiSXMeRevAClean:TUSB9261IPVP_STORAGE") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid db000000-0000-0000-0000-000000000000) (property "Reference" "U_STORAGE_BRIDGE" (at 50 82 0) (effects (font (size 1.1 1.1)))) (property "Value" "TUSB9261IPVP" (at 50 108 0) (effects (font (size 1.1 1.1)))) (property "MPN" "TUSB9261IPVP" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:TUSB9261IPVP_HTQFP64" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (pin "1" (uuid db000000-0000-0000-0000-000000000000))
 (pin "2" (uuid db000000-0000-0000-0000-000000000001))
 (pin "3" (uuid db000000-0000-0000-0000-000000000002))
 (pin "4" (uuid db000000-0000-0000-0000-000000000003))
