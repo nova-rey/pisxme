@@ -1762,3 +1762,20 @@
   SXM2, M.2, and cooler anchors; both contain zero routing.
 - Selected the underside-CM5 candidate for Phase 11 floorplanning, subject to
   later mating and assembly review.
+
+2026-08-30 — Phases 11/12 acreage floorplan closed
+
+- Added a native 300 x 180 mm no-routing acreage floorplan with central V100
+  reservation, edge power/service neighborhoods, Ethernet/storage zones, and
+  M.2 service envelope.
+- Corrected inherited CM5/M.2 conflicts and recorded the remaining SXM2/
+  cooler 2D courtyard overlap as intentional vertical stacking requiring
+  physical confirmation.
+
+2026-08-30 — Phases 11/12 acreage floorplan closed
+
+- Added a native 220 x 140 mm no-routing acreage floorplan with central V100
+  reservation, edge power/service neighborhoods, Ethernet/storage zones, and
+  M.2 service envelope.
+- Added the floorplan audit/receipt; hostile review records no routing
+  workaround and preserves all conservative mechanical keepouts.
