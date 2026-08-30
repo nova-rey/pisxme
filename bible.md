@@ -1,5 +1,14 @@
 # Append-only project bible
 
+## 2026-08-30 — High-current input connector authority selected
+
+- Selected two Molex `0039300020` / `39-30-0020` Mini-Fit Jr. 5569
+  right-angle 2-position headers for the independent 12 V inputs.
+- Recorded active-series, multi-distributor procurement evidence and the
+  through-hole assembly implication; exact land-pattern materialization remains
+  a required Phase 14 PCB step.
+
+
 ## 2026-08-30 — Phase 14 CM5 and MagJack pattern gates verified
 
 - Added machine checks for the clean CM5 200-pad footprint/model and EDAC
