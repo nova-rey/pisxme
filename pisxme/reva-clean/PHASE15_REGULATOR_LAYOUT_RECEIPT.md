@@ -55,6 +55,17 @@ Evidence:
   `tracks_crossing` findings; `test_phase15_u4_u5_controls.py` verifies 36
   control/thermal vias and 254 unrouted acreage items.
 
+- `phase15_u5_vout_bank.py` adds a 4x4 bank of the sixteen schematic-authority
+  output capacitors C26-C41. The bank is fed from U5 pad 9 via a short F.Cu
+  edge departure and an In2.Cu trunk, with one ordinary through-via per
+  capacitor. Native DRC and `test_phase15_u5_vout_bank.py` verify 53 total
+  vias, 18 output-net vias, 28 PGND vias, all sixteen capacitor pad-1 net
+  assignments, and zero route-specific clearance, shorting, or crossing
+  findings at 237
+  unconnected acreage items. Quantitative effective capacitance, ground-return
+  stitching, thermal margin, and reference-layout overlay evidence remain
+  open; this checkpoint does not close Phase 15.
+
 The native KiCad hierarchy association was corrected before this candidate was
 regenerated. `REGULATORS.kicad_sch` now places one global `12V_PROTECTED` and
 one global `POWER_GND` label at the child authority boundary, so native XML has

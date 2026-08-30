@@ -2195,3 +2195,15 @@
   clearance, shorting, or crossing findings; the focused regression verifies
   35 vias and 254 unrouted acreage items. U5 VOUT-bank routing, effective
   capacitance, thermal margin, and full Phase 15 closure remain open.
+
+2026-08-30 — Phase 15 U5 output-bank routing checkpoint
+
+- Added a deterministic 4x4 placement and In2.Cu feed for schematic-authority
+  capacitors C26-C41 on U5's 1.1 V output. The route leaves the true right
+  output land and avoids the existing FB control escape.
+- Native DRC and the focused regression pass with zero clearance, shorting, or
+  track-crossing findings; the candidate has 69 ordinary through vias, 18 on
+  the output net, 28 on the PGND return, and 237 baseline unconnected acreage
+  items. Effective
+  capacitance, ground-return stitching, thermal margin, and vendor-layout
+  overlay evidence remain open, so Phase 15 is not closed.
