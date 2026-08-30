@@ -1585,3 +1585,25 @@
   The clean schematic, PCB, project, and libraries remain absent; Phase 3 is
   not started until the strengthened authority checkpoint is independently
   re-audited.
+
+2026-08-30 — Phase 3 architecture scaffold started
+
+- After the strengthened Phase 2 checkpoint, created the native
+  `PiSXMe_RevA_Clean` project shell with exactly the ten plan-defined child
+  sheets, isolated `PiSXMeRevAClean` library tables, and architecture,
+  interface, net-class, and source-authority ledgers.
+- The scaffold is intentionally not a production schematic: child-sheet pins,
+  real block connectivity, selected local assets, pin/pad parity, and a
+  schematic-derived PCB fixture remain open. No placement or routing was
+  introduced, and the legacy donor remains immutable/reference-only.
+
+2026-08-30 — Phase 3 native scaffold receipt
+
+- Generated the native `PiSXMe_RevA_Clean` root plus exactly ten named child
+  sheets from a local deterministic scaffold generator. KiCad 10.0.5 plotting
+  and root parsing complete under Xvfb; namespace and machine-path scans are
+  clean outside frozen evidence.
+- This is not a Phase 3 pass: ERC reports 78 expected unconnected scaffold
+  interfaces, and no production symbols, footprints, components, PCB,
+  placement, routing, or parity fixture exists. The receipt records the open
+  gate and required next work.

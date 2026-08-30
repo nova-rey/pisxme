@@ -1,0 +1,651 @@
+(kicad_sch (version 20230409) (generator "eeschema")
+  (uuid 30000000-0000-0000-0000-000000000000)
+  (paper "A4")
+  (title_block (title "PiSXMe Rev A Clean") (date "2026-08-30") (rev "A")
+    (company "nova-rey")
+    (comment 1 "Phase 3 native hierarchy scaffold; no placement or routing")
+    (comment 2 "PiSXMeRevAClean namespace")
+    (comment 3 "Native KiCad connectivity authority")
+    (comment 4 "M.2 SATA ONLY - NVMe NOT SUPPORTED"))
+  (lib_symbols
+    (symbol "Connector_Generic:Conn_01x03"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 2.032 0 90)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Conn_01x03"
+        (at 0 0 90)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "Conn_01x03_1_1"
+        (rectangle
+          (start -1.27 3.81)
+          (end 1.27 -3.81)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background)))
+        (rectangle
+          (start -1.27 2.667)
+          (end 0 2.413)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 0.127)
+          (end 0 -0.127)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (rectangle
+          (start -1.27 -2.413)
+          (end 0 -2.667)
+          (stroke
+            (width 0.1524)
+            (type default))
+          (fill
+            (type none)))
+        (pin passive line
+          (at -5.08 2.54 0)
+          (length 3.81)
+          (name "Pin_1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "Pin_2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -2.54 0)
+          (length 3.81)
+          (name "Pin_3"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "power:PWR_FLAG"
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "#FLG"
+        (at 2.032 0 90)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "PWR_FLAG"
+        (at 0 0 90)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (property "Description" "Special symbol for telling ERC where power comes from"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27))
+          (hide yes)))
+      (symbol "PWR_FLAG_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 1.27)
+            (xy -1.016 1.905)
+            (xy 0 2.54)
+            (xy 1.016 1.905)
+            (xy 0 1.27))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "PWR_FLAG_1_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 1.27)
+            (xy -1.016 1.905)
+            (xy 0 2.54)
+            (xy 1.016 1.905)
+            (xy 0 1.27))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (pin power_out line
+          (at 0 0 90)
+          (length 0)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "power:GND"
+      (power global)
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "#PWR"
+        (at 0 -6.35 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "GND"
+        (at 0 -3.81 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (symbol "GND_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 -1.27)
+            (xy 1.27 -1.27)
+            (xy 0 -2.54)
+            (xy -1.27 -1.27)
+            (xy 0 -1.27))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "GND_1_1"
+        (pin power_in line
+          (at 0 0 270)
+          (length 0)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "power:VCC"
+      (power global)
+      (pin_numbers
+        (hide yes))
+      (pin_names
+        (offset 0)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "#PWR"
+        (at 0 -3.81 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "VCC"
+        (at 0 3.556 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Description" "Power symbol creates a global label with name \"VCC\""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "ki_keywords" "global power"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (symbol "VCC_0_1"
+        (polyline
+          (pts
+            (xy -0.762 1.27)
+            (xy 0 2.54))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0 2.54)
+            (xy 0.762 1.27))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 2.54))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "VCC_1_1"
+        (pin power_in line
+          (at 0 0 90)
+          (length 0)
+          (name ""
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no)))
+  (sheet
+    (at 35 45)
+    (size 25 18)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0))
+    (uuid 10000000-0000-0000-0000-000000000001)
+    (property "Sheetname" "CORE_CM5" (at 35 43.73 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Sheetfile" "CORE_CM5.kicad_sch" (at 35 64.27 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (pin "CM5_PCIE" bidirectional (at 35 47 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000064))
+    (pin "CM5_USB3" bidirectional (at 35 50 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000065))
+    (pin "CM5_GBE" bidirectional (at 35 53 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000066))
+    (pin "SERVICE_USB2" bidirectional (at 35 56 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000067))
+    (pin "CM5_POWER" bidirectional (at 35 59 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000068)))
+  (sheet
+    (at 70 45)
+    (size 25 18)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0))
+    (uuid 10000000-0000-0000-0000-000000000002)
+    (property "Sheetname" "V100_PCIE" (at 70 43.73 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Sheetfile" "V100_PCIE.kicad_sch" (at 70 64.27 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (pin "CM5_PCIE" bidirectional (at 70 47 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000000c8))
+    (pin "V100_PCIE" bidirectional (at 70 50 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000000c9))
+    (pin "V100_REFCLK" bidirectional (at 70 53 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000000ca))
+    (pin "V100_PERST" bidirectional (at 70 56 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000000cb)))
+  (sheet
+    (at 105 45)
+    (size 25 18)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0))
+    (uuid 10000000-0000-0000-0000-000000000003)
+    (property "Sheetname" "V100_POWER" (at 105 43.73 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Sheetfile" "V100_POWER.kicad_sch" (at 105 64.27 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (pin "V100_POWER_12V" bidirectional (at 105 47 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-00000000012c))
+    (pin "V100_GND" bidirectional (at 105 50 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-00000000012d))
+    (pin "V100_THERMAL" bidirectional (at 105 53 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-00000000012e)))
+  (sheet
+    (at 140 45)
+    (size 25 18)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0))
+    (uuid 10000000-0000-0000-0000-000000000004)
+    (property "Sheetname" "POWER_INPUT" (at 140 43.73 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Sheetfile" "POWER_INPUT.kicad_sch" (at 140 64.27 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (pin "12V_IN_A" bidirectional (at 140 47 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000190))
+    (pin "12V_IN_B" bidirectional (at 140 50 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000191))
+    (pin "12V_PROTECTED" bidirectional (at 140 53 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000192))
+    (pin "POWER_PG_FAULT" bidirectional (at 140 56 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000193)))
+  (sheet
+    (at 175 45)
+    (size 25 18)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0))
+    (uuid 10000000-0000-0000-0000-000000000005)
+    (property "Sheetname" "REGULATORS" (at 175 43.73 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Sheetfile" "REGULATORS.kicad_sch" (at 175 64.27 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (pin "12V_PROTECTED" bidirectional (at 175 47 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000001f4))
+    (pin "CM5_5V" bidirectional (at 175 50 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000001f5))
+    (pin "STORAGE_3V3" bidirectional (at 175 53 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000001f6))
+    (pin "BRIDGE_1V1_3V3" bidirectional (at 175 56 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000001f7)))
+  (sheet
+    (at 35 75)
+    (size 25 18)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0))
+    (uuid 10000000-0000-0000-0000-000000000006)
+    (property "Sheetname" "ETHERNET" (at 35 73.73 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Sheetfile" "ETHERNET.kicad_sch" (at 35 94.27 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (pin "CM5_GBE" bidirectional (at 35 77 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000258))
+    (pin "GBE_LED" bidirectional (at 35 80 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000259))
+    (pin "GBE_SHIELD" bidirectional (at 35 83 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-00000000025a))
+    (pin "ETH_POWER" bidirectional (at 35 86 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-00000000025b)))
+  (sheet
+    (at 70 75)
+    (size 25 18)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0))
+    (uuid 10000000-0000-0000-0000-000000000007)
+    (property "Sheetname" "STORAGE" (at 70 73.73 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Sheetfile" "STORAGE.kicad_sch" (at 70 94.27 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (pin "CM5_USB3" bidirectional (at 70 77 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000002bc))
+    (pin "BRIDGE_SATA" bidirectional (at 70 80 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000002bd))
+    (pin "M2_SATA" bidirectional (at 70 83 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000002be))
+    (pin "M2_3V3" bidirectional (at 70 86 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000002bf))
+    (pin "BRIDGE_CFG" bidirectional (at 70 89 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000002c0)))
+  (sheet
+    (at 105 75)
+    (size 25 18)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0))
+    (uuid 10000000-0000-0000-0000-000000000008)
+    (property "Sheetname" "SERVICE" (at 105 73.73 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Sheetfile" "SERVICE.kicad_sch" (at 105 94.27 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (pin "SERVICE_USB2" bidirectional (at 105 77 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000320))
+    (pin "SERVICE_VBUS_SENSE" bidirectional (at 105 80 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000321))
+    (pin "SERVICE_RD" bidirectional (at 105 83 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000322))
+    (pin "SERVICE_GND" bidirectional (at 105 86 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000323)))
+  (sheet
+    (at 140 75)
+    (size 25 18)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0))
+    (uuid 10000000-0000-0000-0000-000000000009)
+    (property "Sheetname" "COOLING" (at 140 73.73 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Sheetfile" "COOLING.kicad_sch" (at 140 94.27 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (pin "COOLING_12V" bidirectional (at 140 77 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000384))
+    (pin "COOLING_PWM" bidirectional (at 140 80 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000385))
+    (pin "COOLING_TACH" bidirectional (at 140 83 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000386))
+    (pin "THERMAL_ALERT" bidirectional (at 140 86 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-000000000387)))
+  (sheet
+    (at 175 75)
+    (size 25 18)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced yes)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0))
+    (uuid 10000000-0000-0000-0000-00000000000a)
+    (property "Sheetname" "DEBUG" (at 175 73.73 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom)))
+    (property "Sheetfile" "DEBUG.kicad_sch" (at 175 94.27 0)
+      (effects (font (size 1.27 1.27)) (justify left top)))
+    (pin "UART" bidirectional (at 175 77 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000003e8))
+    (pin "RECOVERY" bidirectional (at 175 80 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000003e9))
+    (pin "POWER_PG_FAULT" bidirectional (at 175 83 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000003ea))
+    (pin "DEBUG_GND" bidirectional (at 175 86 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-0000000003eb)))
+
+  (sheet_instances (path "/" (page "1")))
+)
