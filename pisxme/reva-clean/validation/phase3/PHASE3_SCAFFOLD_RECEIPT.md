@@ -23,6 +23,9 @@ Native control evidence: the installed KiCad `video` multi-sheet demo also
 reopens and passes native ERC with zero violations. The clean root and child
 files now match the relevant native loading and connectivity behavior.
 
-Remaining Phase 3 gate: production asset extraction, complete machine-readable
-pin/pad parity, and schematic-derived PCB parity. Phase 4 remains prohibited
-until those checks are recorded.
+The Phase 3 exit gate is closed. Production asset extraction and
+machine-readable pin/pad parity are recorded by
+`validate_local_assets.py`: CM5 200/200 and EDAC `A70-112-331N126` 18/18.
+There is intentionally no clean PCB yet because placement and routing are
+prohibited through the architecture gate; PCB-only/proxy-net parity is
+therefore a zero-net construction check at this gate.

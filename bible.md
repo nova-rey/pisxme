@@ -1690,3 +1690,14 @@
 - Regenerated the contract instances with deterministic per-sheet references
   (`X_CORE_CM5`, `X_V100_PCIE`, and so on); hierarchy regression and native ERC
   remain passing after the netlist-reference cleanup.
+
+2026-08-30 — Phase 3 architecture gate closed
+
+- Added a generic EDAC extraction rule that removes donor-only shield pins
+  19/20 because the selected A70-112-331N126 manufacturer layout defines
+  P1–P18 as electrical contacts and shield features as mechanical NPTH.
+- Added machine-readable parity evidence: CM5 200/200 and EDAC 18/18;
+  native reopen/ERC, non-empty KiCad XML netlist, clean namespace/path scan,
+  and zero PCB-only/proxy nets by construction all pass.
+- Recorded `PISXME_REVA_CLEAN_PHASE3_CLOSED` in the Phase 3 exit receipt.
+  No placement, routing, PCB, or Phase 4 work was introduced by this gate.

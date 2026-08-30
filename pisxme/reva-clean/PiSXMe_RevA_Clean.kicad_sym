@@ -5458,24 +5458,7 @@
 					)
 				)
 			)
-			(pin passive line
-				(at -21.59 7.62 0)
-				(length 3.81)
-				(name "SHIELD"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "19"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
+
 			(pin passive line
 				(at -21.59 66.04 0)
 				(length 3.81)
@@ -5494,24 +5477,7 @@
 					)
 				)
 			)
-			(pin passive line
-				(at -21.59 5.08 0)
-				(length 3.81)
-				(name "SHIELD"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "20"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
+
 			(pin passive line
 				(at -21.59 63.5 0)
 				(length 3.81)

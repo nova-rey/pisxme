@@ -21,7 +21,7 @@ MODEL_DEST = ROOT / "PiSXMe_RevA_Clean.3dshapes" / "10164227-1001a1rlf.stp"
 SYMBOLS = ("ComputeModule5-CM5", "MagJack-A70-112-331N126")
 
 
-def balanced(text: str, start: int) -> str:
+def balanced_end(text: str, start: int) -> int:
     depth = 0
     quoted = False
     escaped = False
@@ -39,14 +39,44 @@ def balanced(text: str, start: int) -> str:
             elif char == ")":
                 depth -= 1
                 if depth == 0:
-                    return text[start:index + 1]
+                    return index
     raise ValueError("unbalanced KiCad expression")
+
+
+def balanced(text: str, start: int) -> str:
+    return text[start:balanced_end(text, start) + 1]
 
 
 def extract(source: str, name: str) -> str:
     marker = f'(symbol "{name}"'
     start = source.index(marker)
     return balanced(source, start)
+
+
+def remove_pins(definition: str, numbers: set[str]) -> str:
+    """Remove pins absent from the selected part's manufacturer layout.
+
+    The CM5IO donor symbol models two shield contacts as pins 19/20.  EDAC's
+    A70 drawing identifies only P1-P18 as PCB contacts; its shield is carried
+    by the mechanical shield/NPTH pattern.  Do this as an explicit,
+    repeatable source transformation rather than silently accepting a
+    donor-symbol/selected-footprint mismatch.
+    """
+    cursor = 0
+    chunks = []
+    while True:
+        pin = definition.find("(pin ", cursor)
+        if pin < 0:
+            chunks.append(definition[cursor:])
+            return "".join(chunks)
+        chunks.append(definition[cursor:pin])
+        end = balanced_end(definition, pin)
+        block = definition[pin:end + 1]
+        if not any(f'(number "{number}"' in block for number in numbers):
+            chunks.append(block)
+        else:
+            chunks[-1] = chunks[-1].rstrip(" \t")
+        cursor = end + 1
 
 
 def main() -> None:
@@ -64,6 +94,8 @@ def main() -> None:
             'CM5IO:TRJG0926HENL',
             'PiSXMeRevAClean:EDAC_A70_112_331N126',
         )
+        if name == "MagJack-A70-112-331N126":
+            definition = remove_pins(definition, {"19", "20"})
         definitions.append(definition)
     definitions.extend(contract_symbol(name, ports) for name, ports in PORTS.items())
     DEST.write_text(
