@@ -2110,3 +2110,14 @@
 - Added a clearance-safe stepped B.Cu escape for J6 around its adjacent return
   contact and the CM5 service connector. Fresh native DRC has no power-route
   shorting item; broader regulator/control unrouted debt remains open.
+
+2026-08-30 — Phase 14 power-path gate closed
+
+- Frozen candidate passed current-density, voltage-drop, balanced branch,
+  connector-contact, conservative thermal, no-single-neck, and focused native
+  power DRC checks. The focused report has no power-path short, mask bridge,
+  hole-clearance, or clearance defect.
+- Closed Phase 14 for design purposes with `REV_A_EMPIRICAL_RISK` retained only
+  for continuity of the public reverse-engineered 130/70 V100 contact map and
+  later fabricated-board thermal/bring-up confirmation. Broader acreage DRC
+  and unrouted control debt remain later validation work.

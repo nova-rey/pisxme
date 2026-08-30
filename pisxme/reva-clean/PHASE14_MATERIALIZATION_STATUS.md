@@ -1,6 +1,6 @@
 # Phase 14 materialization status
 
-Checked: 2026-08-30. Status: `OPEN`.
+Checked: 2026-08-30. Status: `PHASE14_POWER_PATH_CLOSED_WITH_REV_A_EMPIRICAL_RISK`.
 
 `phase14_materialize_pcb.py` exports the native KiCad 10 hierarchical
 netlist, upgrades a disposable copy of the acreage floorplan to the frozen

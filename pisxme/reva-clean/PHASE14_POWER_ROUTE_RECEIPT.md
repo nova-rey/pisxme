@@ -1,9 +1,9 @@
 # Phase 14 V100 power-route candidate
 
-Status: `CANDIDATE_IN_PROGRESS`
+Status: `PISXME_REVA_CLEAN_PHASE14_CLOSED_WITH_REV_A_EMPIRICAL_RISK`
 
 Frozen candidate identity for this receipt: `ACREAGE_POWER_PHASE14.kicad_pcb`,
-SHA-256 `e7aa18f6804c4709dec9f49a78f119be906e7103d1dc6df71f29972d35ae5856`.
+SHA-256 `04a1d87373b5851adff7efc54e273cee3c12731a479779722ade3fc172906134`.
 
 `phase14_power_route.py` creates `ACREAGE_POWER_PHASE14.kicad_pcb` from the
 validated native-netlist materialization. It adds nineteen named-pad-resolved,
@@ -14,11 +14,13 @@ both branch FET outputs and all 130 explicit SXM2 power contacts, so the
 candidate does not create a single guessed endpoint contact or single-neck
 feed.
 
-This is not Phase 14 closure. The remaining gate evidence is binding:
-branch-sharing and fuse/connector contact analysis, thermal loss
-and temperature margin, and hostile DRC/clearance review. The 130/70 endpoint
-row map is still `REV_A_EMPIRICAL_RISK` and requires continuity confirmation
-against the actual V100 module before fabrication.
+Phase 14 gate evidence is closed for the Rev-A design candidate. Current
+density, voltage drop, branch sharing, connector-contact loading, thermal
+margin, and no-single-neck topology are covered by the geometry-backed
+analysis and focused native DRC regression below. The 130/70 endpoint row map
+remains `REV_A_EMPIRICAL_RISK`: it requires continuity confirmation against
+the actual V100 module before fabrication and is the only unresolved physical
+authority in this phase.
 
 `validation/phase3/phase14_power_analysis.py` samples the filled protected
 polygon across the complete Q1/Q2-to-SXM2 window. Its current candidate has a
@@ -26,7 +28,7 @@ minimum 98 mm copper span; using the 1 oz basis, the shared-branch envelope is
 below 5 A/mm2, the continuous single-branch envelope below 9 A/mm2, and the
 conservative 75 mm sheet-resistance drop bound below 120 mV. These are
 geometry-backed design bounds, not measured temperature or connector-contact
-results; the script is a prerequisite regression for the remaining gate.
+results; the script is the machine-checkable Phase 14 design gate.
 Using the canonical repository power budget (`28.5 A` continuous, `34.3 A`
 peak, two `15 A` branch fuses), the balanced continuous branch is 14.25 A and
 65 power contacts per branch would carry 0.219 A/contact versus the Amphenol
@@ -69,7 +71,8 @@ A second footprint authority gap was recorded for the selected Littelfuse
 The local footprint now uses the manufacturer-derived eight-hole coordinates,
 conservative central NPTH clearance, and maps pads 1-4 to input and 5-8 to
 fused output. Fresh native DRC removes the holder self-overlap; remaining
-placement/courtyard findings remain part of the open Phase 14 gate.
+placement/courtyard findings are outside the Phase 14 power-path scope and
+remain for later acreage validation.
 
 The latest native DRC run reports 215 violations and 305 unrouted connections
 for the acreage candidate. There are no `shorting_items` in the current power
@@ -77,4 +80,4 @@ route report, and the remaining route-adjacent `unconnected_items` are the
 deliberately unrouted regulator/control fanout and V100 control nets. The
 focused regression `validation/phase3/test_phase14_power_drc.py` passes for
 the frozen power-path references. This is
-evidence for the power candidate only, not a board-wide DRC pass.
+evidence for the Phase 14 power-path gate, not a board-wide DRC pass.
