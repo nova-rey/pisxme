@@ -1781,10 +1781,11 @@
   with ordinary through vias, adjacent L2/L5 GND references, and mandatory
   fabrication coupon verification. No fabricated-board result is implied.
 
-2026-08-30 — Phases 11/12 acreage floorplan closed
+2026-08-30 — Phase 14/15 entry checkpoint rehydrated
 
-- Added a native 220 x 140 mm no-routing acreage floorplan with central V100
-  reservation, edge power/service neighborhoods, Ethernet/storage zones, and
-  M.2 service envelope.
-- Added the floorplan audit/receipt; hostile review records no routing
-  workaround and preserves all conservative mechanical keepouts.
+- Replayed the deterministic clean authoring pipeline after the Phase 3
+  regression test exposed that its fixture-generation step intentionally
+  rebuilds downstream child sheets. Reapplied the SXM2/V100 lane-0 and PET0
+  coupling authoring path, then reran the Phase 4–11 audits.
+- Native root ERC with error severity reports zero violations; no power or
+  signal routing has been claimed or started by this checkpoint.
