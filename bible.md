@@ -1534,3 +1534,20 @@
 - Phase 1 gate is `PASS_WITH_EXPLICIT_FIX_QUEUE`; exact authority closure,
   independent clean-library validation, and undocumented V100 behavior remain
   later gates by design.
+
+2026-08-29 — clean Rev A Phase 2 authority inventory bounded
+
+- Materialized the official Raspberry Pi CM5IO Rev 2 archive under
+  `pisxme/reva-clean/authority-inventory/cm5io-rev2/` (30 files; source ZIP
+  SHA-256 `48b14a...b59496b`) and native-parsed its schematic under KiCad
+  10.0.5. The reference board parsed with 76 DRC violations and 0 unconnected
+  items; this is upstream observation only.
+- Materialized primary CM5IO, JMS578, TI power/protection/high-speed, and V100
+  documents with recorded hashes. JMS578’s primary brief confirms the bridge
+  family and UASP but does not close firmware, package procurement, or Linux
+  behavior.
+- Added `PHASE2_AUTHORITY_INVENTORY.md`. Phase 2 remains
+  `BLOCKED_PENDING_EXACT_AUTHORITIES` for the exact B-key socket, SXM2
+  land-pattern overlay, cooler/backplate, Ethernet ESD selection, selected
+  current JLC stackup, and remaining bridge/procurement evidence. No clean
+  schematic or PCB synthesis was started.
