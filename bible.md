@@ -1735,3 +1735,10 @@
   `A70-112-331N126` and TI `TPD4E004DRYR` connector-boundary ESD.
 - Added the Ethernet audit and receipt; native KiCad ERC passes with zero
   violations. No placement or routing was introduced.
+
+2026-08-30 — Phase 7 storage schematic gate closed
+
+- Added schematic-only CM5 USB3 to TI TUSB9261IPVP to SATA to JAE B-key M.2
+  storage connectivity, with dedicated bridge rails/reset/config contracts.
+- Added the storage audit and receipt; native KiCad ERC passes with zero
+  violations and NVMe/USB2 SERVICE paths are excluded.
