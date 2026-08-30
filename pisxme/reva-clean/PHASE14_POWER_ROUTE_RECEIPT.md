@@ -36,5 +36,8 @@ not a fabricated-board thermal measurement; copper spreading, airflow,
 package mounting, and sustained sharing remain explicit Rev-A validation
 items.
 
-The route uses the frozen six-layer `JLC06161H-7628` basis and ordinary
-through-via-compatible layer policy. No Phase 16+ high-speed routing is added.
+The candidate intentionally has no tracks: the acreage placement is not yet a
+production-routed placement, and provisional branch legs would cross adjacent
+fuse-holder/connector/CM5 pads. The frozen six-layer `JLC06161H-7628` basis
+and ordinary through-via-compatible layer policy remain in force; no Phase
+16+ high-speed routing is added.

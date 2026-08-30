@@ -2023,3 +2023,11 @@
   branch junction and 146.7 C single-branch fault junction, below 175 C; the
   result remains a test-board/design bound pending fabricated-board thermal
   and sustained-sharing measurements.
+
+2026-08-30 — Phase 14 provisional branch-track rejection
+
+- DRC caught provisional wide branch legs crossing adjacent fuse-holder,
+  connector, CM5, and regulator pads in the acreage placement. Those tracks
+  were removed; the candidate retains only the validated filled power/return
+  zones and remains unrouted until a clearance-safe production placement is
+  established.

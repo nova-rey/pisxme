@@ -27,6 +27,7 @@ assert q1 and q2 and j1
 assert any(p.GetNetname() == "12V_PROTECTED" for p in q1.Pads())
 assert any(p.GetNetname() == "12V_PROTECTED" for p in q2.Pads())
 assert sum(p.GetNetname() == "12V_PROTECTED" for p in j1.Pads()) == 130
+assert len(list(b.GetTracks())) == 0
 '''
     subprocess.run([PCBNEW_PY, "-c", probe], cwd=ROOT, check=True,
                     text=True, capture_output=True)
