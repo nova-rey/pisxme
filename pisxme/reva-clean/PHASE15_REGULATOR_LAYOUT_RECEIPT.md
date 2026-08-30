@@ -41,6 +41,11 @@ Evidence:
   of pad 9 at `(54.95, 80.00)` rather than the inward pad-8 tie. The regression
   now asserts that both U3 VOUT capacitor escapes terminate at that exact
   edge coordinate; U4 remains intentionally escaped from the left pad-8 edge.
+- `phase15_u3_controls.py` adds the U3 feedback, RT, and PG network using
+  eight deliberate 0.50/0.30 mm F.Cu-B.Cu transitions and separated B.Cu
+  corridors. Native DRC reports no route-specific clearance, short, or
+  crossing defect and the focused regression reduces unrouted items from 280
+  to 272. The same topology remains to be instantiated for U4 and U5.
 
 This does not close Phase 15. Remaining required work is localized VIN and
 VOUT high-dI/dt routing, feedback/RT/PG routing, switch-node containment,

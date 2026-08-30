@@ -2162,3 +2162,11 @@
   edge. Corrected the generator to select U3 pad 9 and compute the true pad
   edge from pad geometry; regression now asserts the two exact `(54.95,80.00)`
   edge starts and the native no-short/no-crossing result still passes.
+
+2026-08-30 — Phase 15 U3 quiet-control island checkpoint
+
+- Added U3 FB/RT/PG routing with eight deliberate ordinary through-via
+  transitions and separated B.Cu corridors. Native DRC has no route-specific
+  clearance, short, or crossing defect; the focused regression verifies 20
+  total vias and 272 unrouted items. U4/U5 control routing and full Phase 15
+  overlay/thermal closure remain open.
