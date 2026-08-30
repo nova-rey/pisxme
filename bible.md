@@ -1992,3 +1992,10 @@
 - Committed the generated `ACREAGE_POWER_PHASE14.kicad_pcb` alongside its
   deterministic generator and regression so the filled-zone candidate is
   reproducible from the validated materialized board.
+
+2026-08-30 — Phase 14 power-return continuity verified
+
+- Promoted the clean V100 return and dual 12 V input returns onto shared
+  global `POWER_GND`; native netlist and Phase 5 regression now require J1.GND,
+  both input headers, and both LM74700 grounds on that net.
+- Refreshed the Phase 14 filled candidate after the return-net correction.

@@ -60,6 +60,9 @@ def main():
         # logical pin onto the documented Rev-A empirical power rows.
         protected = next(nodes for nodes in nets.values() if ('J1', 'PWR') in nodes)
         assert {('J1', 'PWR'), ('Q1', '2'), ('Q2', '2')} <= protected
+        shared_ground = nets['POWER_GND']
+        assert {('J1', 'GND'), ('U1', '2'), ('U2', '2'),
+                ('J5', '2'), ('J6', '2')} <= shared_ground
         assert {('U3', '10'), ('R3', '2'), ('R4', '1')} <= nets['/REGULATORS/FB_CM5_5V']
         assert {('U4', '10'), ('R11', '2'), ('R12', '1')} <= nets['/REGULATORS/FB_BRIDGE_3V3']
         assert {('U5', '10'), ('R19', '2'), ('R20', '1')} <= nets['/REGULATORS/FB_BRIDGE_1V1']

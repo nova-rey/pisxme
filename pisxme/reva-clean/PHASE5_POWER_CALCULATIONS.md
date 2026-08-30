@@ -79,7 +79,9 @@ calculated.
 
 The schematic connectivity and 1.1-V divider/COUT implementation are now
 machine-checked by `validation/phase3/test_phase5_power_audit.py` and native
-ERC. The electrical Phase 5 gate is closed. Residual physical items—branch
+ERC. The V100 endpoint return is explicitly on the shared global
+`POWER_GND` net with the dual input-return pins before board routing. The
+electrical Phase 5 gate is closed. Residual physical items—branch
 sharing, connector/holder temperature, routed-copper drop, exact ceramic
 DC-bias at temperature, and vendor-layout thermal overlay—are explicit
 `REV_A_EMPIRICAL_RISK` and binding constraints for later routed-board and

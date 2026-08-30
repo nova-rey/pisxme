@@ -13237,7 +13237,7 @@
 	(zone
 		(net "12V_PROTECTED")
 		(layer "F.Cu")
-		(uuid "1e11ec84-4d20-4c98-ad79-f11d9e58f2d6")
+		(uuid "3a70adaf-ef98-4072-9e4a-64cf243c6fe4")
 		(name "V100_PROTECTED_FEED")
 		(hatch edge 0.5)
 		(connect_pads yes
@@ -14027,7 +14027,7 @@
 	(zone
 		(net "POWER_GND")
 		(layer "In1.Cu")
-		(uuid "7bfad17c-0e6d-4619-9d91-135032386215")
+		(uuid "862f1c55-79e0-4159-a71c-754029928c5a")
 		(name "V100_RETURN_PLANE_L2")
 		(hatch edge 0.5)
 		(connect_pads yes
@@ -14853,7 +14853,7 @@
 	(zone
 		(net "POWER_GND")
 		(layer "In4.Cu")
-		(uuid "3a85ff3f-5bb6-4ac6-a843-a56f9f4a136b")
+		(uuid "6c408568-9b19-4087-ac6d-3f913b0d22b2")
 		(name "V100_RETURN_PLANE_L5")
 		(hatch edge 0.5)
 		(connect_pads yes
