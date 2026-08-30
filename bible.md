@@ -1660,3 +1660,16 @@
 - Removed the untracked `skidl.erc` and `skidl.log` files created by an
   exploratory environment probe; they were not design evidence or project
   outputs.
+
+2026-08-30 — Phase 3 hierarchy gate blocked
+
+- Audited the clean root and ten child sheets with KiCad 10.0.5. Native ERC
+  remains at 40 root-only hierarchy violations while all child sheets load
+  without hierarchy errors.
+- Tested the documented root/sheet and child-symbol instance-path forms,
+  including project `instances` records; none produced a passing association.
+  The clean hierarchy is therefore blocked at the earliest Phase 3 gate and
+  no later phase, placement, routing, or PCB artifact was introduced.
+- Unblock requires a native KiCad-authored saved root/child association or a
+  reproducible installed KiCad authoring route. This is a blocker receipt, not
+  a validated checkpoint.
