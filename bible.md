@@ -1551,3 +1551,18 @@
   land-pattern overlay, cooler/backplate, Ethernet ESD selection, selected
   current JLC stackup, and remaining bridge/procurement evidence. No clean
   schematic or PCB synthesis was started.
+
+2026-08-29 — clean Rev A Phase 2 authority closure sprint disposition
+
+- Replaced the preliminary Phase 2 inventory with an authority-by-authority
+  disposition and added `PHASE2_PROCUREMENT_MATRIX.md`.
+- Closed the JAE B-key SATA M.2 socket authority, TI TPD4E004DRYR Ethernet ESD
+  choice, Amphenol 74221-101LF connector identity, and current JLC06161H-7628
+  six-layer/impedance basis. Added local source receipts for M.2, SXM2,
+  mechanics, Ethernet ESD, JMS578, and JLC calculator evidence.
+- Classified the proprietary V100 cooler/backplate envelope and unverified
+  local SXM2 land-pattern transplant as explicit `REV_A_EMPIRICAL_RISK`.
+- Phase 2 remains `PHASE2_AUTHORITY_BLOCKED`: the bare JMS578 has only an
+  out-of-stock LCSC listing and no public firmware/configuration package or
+  device-specific Linux/UAS/TRIM/reset proof; ASM1153E did not provide a
+  materially better bare-chip path. No Phase 3 schematic or PCB was modified.
