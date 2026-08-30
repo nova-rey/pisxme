@@ -47,6 +47,14 @@ Evidence:
   crossing defect and the focused regression reduces unrouted items from 272
   to 264. The same topology remains to be instantiated for U4 and U5.
 
+- U4/U5 were separated to `(200,105)` and `(225,105)` respectively after the
+  original 10 mm pitch produced native package-side corridor conflicts with
+  U7. `phase15_u4_u5_controls.py` places the support parts in module-scoped
+  rows, uses separated ordinary through-via trunks, and ties U4 C18 into the
+  local VOUT bank. Native DRC reports zero `clearance`, `shorting_items`, and
+  `tracks_crossing` findings; `test_phase15_u4_u5_controls.py` verifies 36
+  control/thermal vias and 254 unrouted acreage items.
+
 The native KiCad hierarchy association was corrected before this candidate was
 regenerated. `REGULATORS.kicad_sch` now places one global `12V_PROTECTED` and
 one global `POWER_GND` label at the child authority boundary, so native XML has

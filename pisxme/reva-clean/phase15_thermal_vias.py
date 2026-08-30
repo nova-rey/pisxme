@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent
 INPUT = ROOT / "ACREAGE_POWER_PHASE14.kicad_pcb"
 OUTPUT = ROOT / "ACREAGE_REGULATOR_PHASE15.kicad_pcb"
 VIA_POSITIONS = {
-    "U3": (52, 78), "U4": (225, 105), "U5": (235, 105),
+    "U3": (52, 78), "U4": (200, 105), "U5": (225, 105),
 }
 
 

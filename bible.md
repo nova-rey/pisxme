@@ -2184,3 +2184,14 @@
 - Regenerated Phase 14/15 candidates. Native hierarchy, net-authority,
   materialization, power-route, thermal-via, and focused regulator escape
   regressions pass; power continuity now reaches the actual root nets.
+
+2026-08-30 — Phase 15 separated U4/U5 control checkpoint
+
+- The original U4/U5 10 mm placement left no clean package-side control
+  corridor beside U7. A validated candidate separates the modules to
+  `(200,105)` and `(225,105)`, with module-scoped support rows and separated
+  ordinary through-via trunks.
+- U4/U5 FB/RT/PG routing and U4 C18-to-VOUT compensation produce zero native
+  clearance, shorting, or crossing findings; the focused regression verifies
+  35 vias and 254 unrouted acreage items. U5 VOUT-bank routing, effective
+  capacitance, thermal margin, and full Phase 15 closure remain open.
