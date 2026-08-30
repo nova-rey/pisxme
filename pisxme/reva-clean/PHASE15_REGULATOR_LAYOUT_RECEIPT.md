@@ -58,7 +58,7 @@ Evidence:
 - `phase15_u5_vout_bank.py` adds a 4x4 bank of the sixteen schematic-authority
   output capacitors C26-C41. The bank is fed from U5 pad 9 via a short F.Cu
   edge departure and an In2.Cu trunk, with one ordinary through-via per
-  capacitor. Native DRC and `test_phase15_u5_vout_bank.py` verify 53 total
+  capacitor. Native DRC and `test_phase15_u5_vout_bank.py` verify 69 total
   vias, 18 output-net vias, 28 PGND vias, all sixteen capacitor pad-1 net
   assignments, and zero route-specific clearance, shorting, or crossing
   findings at 237
@@ -83,7 +83,11 @@ authority counts against the TI minimum effective values using the documented
 authority is recorded in `PHASE15_TI_LAYOUT_OVERLAY.md`. That comparison is
 not a thermal simulation and does not claim exact geometric equivalence.
 
+`validation/phase3/phase15_thermal_screen.py` supplies the conservative
+design-envelope thermal screen: at 50 C ambient and 90% efficiency it leaves
+19.8 C, 50.7 C, and 71.0 C to TI's 125 C junction limit for U3/U4/U5. This
+uses TI's 33.1 C/W reference metric and is not a board-specific thermal proof.
+
 This does not close Phase 15. Remaining required work is localized VIN and
-VOUT high-dI/dt routing, feedback/RT/PG routing, switch-node containment,
-effective-capacitance calculation, and reference-layout overlay evidence for
-each rail.
+VOUT high-dI/dt routing, switch-node containment, exact-part DC-bias evidence,
+and board-specific thermal/overlay closure for each rail.

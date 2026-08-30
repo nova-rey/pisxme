@@ -2218,6 +2218,16 @@
 - Effective-capacitance, thermal-margin, and three-rail TI overlay evidence
   remain open; this is not Phase 15 closure.
 
+2026-08-30 — Phase 15 thermal screening checkpoint
+
+- Added `phase15_thermal_screen.py` using TI SLVSGB4B's conservative 33.1 C/W
+  metric, 50 C ambient, the 90% design-envelope efficiency assumption, and
+  the 125 C operating-junction limit. The calculated margins are 19.8/50.7/
+  71.0 C for U3/U4/U5.
+- This is a screening calculation against TI's reference thermal board, not
+  proof for the JLC six-layer copper stack or fabricated Rev-A hardware;
+  board-specific thermal closure remains empirical risk.
+
 2026-08-30 — Phase 15 capacitor and TI-overlay evidence checkpoint
 
 - Added `phase15_capacitance_check.py`, which machine-checks the native

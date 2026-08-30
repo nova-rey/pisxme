@@ -32,12 +32,16 @@ closed by `TPSM63606_SUPPORT_AUTHORITY.md` and the native footprint receipt.
 | FB components close to FB | routed island | routed island | routed island | `test_phase15_u4_u5_controls.py` and U3 control regression |
 | solid plane below module | POWER_GND plane | POWER_GND plane | POWER_GND plane | Phase 14 plane regression |
 | thermal-via array | 4 PGND vias | 4 PGND vias | 4 PGND vias | `test_phase15_thermal_vias.py` |
-| thermal margin to Tj <150 C | not calculated | not calculated | not calculated | OPEN |
+| thermal margin to Tj <125 C | 19.8 C screen | 50.7 C screen | 71.0 C screen | `phase15_thermal_screen.py`; board-specific proof OPEN |
 
 ## Closure boundary
 
 This document records the reproducible comparison and its limits. It does not
-claim geometric equivalence to TI's illustrative figure or thermal closure.
+claim geometric equivalence to TI's illustrative figure. The thermal screen
+uses 90% efficiency, 50 C ambient, and TI's conservative 33.1 C/W metric; the
+metric is specified for a different 2-oz reference board, so board-specific
+thermal closure remains `REV_A_EMPIRICAL_RISK` pending fabricated-board or
+equivalent thermal evidence.
 Phase 15 remains open until the final three-rail candidate has a measured
 geometry overlay, exact effective-capacitance evidence or an explicitly
 bounded `REV_A_EMPIRICAL_RISK`, and a calculated thermal margin for the
