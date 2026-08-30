@@ -5,6 +5,9 @@ Status: `IN_PROGRESS`
 The clean project now has a deterministic package-footprint assignment path for
 the selected electrical ICs. It creates project-local package footprints and
 assigns them by exact MPN, preserving the single clean-library namespace.
+Generated instances also pass through `phase14_annotation_normalize.py`, which
+keeps descriptive block names in Value/MPN while emitting legal unique KiCad
+references for native annotation and netlist export.
 
 The exact JAE M.2 B-key footprint sub-gate is now closed locally. It is derived from
 the dimensioned JAE drawing by moving the eight-position key void to positions

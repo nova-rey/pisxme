@@ -466,7 +466,7 @@
     (on_board no)
     (dnp no)
     (uuid 80000000-0000-0000-0000-000000000004)
-    (property "Reference" "X_POWER_INPUT"
+    (property "Reference" "X4"
       (at 25 5 0)
       (effects (font (size 1.27 1.27))))
     (property "Value" "POWER_INPUT_Contract"
@@ -484,23 +484,23 @@
     (pin "4" (uuid 90000000-0000-0000-0000-000000000193))
 
     (instances (project "PiSXMe_RevA_Clean"
-      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000004" (reference "X_POWER_INPUT" ) (unit 1))))
+      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000004" (reference "X4" ) (unit 1))))
   )
 (label "12V_IN_A" (at 70 90.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d3000000-0000-0000-0000-000000000064))
 (label "12V_PROTECTED" (at 70 93.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d3000000-0000-0000-0000-000000000065))
 (label "POWER_GND" (at 70 96.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d3000000-0000-0000-0000-000000000066))
 (label "POWER_PG_FAULT" (at 70 99.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d3000000-0000-0000-0000-000000000067))
-(symbol (lib_id "PiSXMeRevAClean:LM74700Q1") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid d3000000-0000-0000-0000-000000000000) (property "Reference" "U_PROTECT_A" (at 50 84 0) (effects (font (size 1.1 1.1)))) (property "Value" "LM74700QDBVRQ1" (at 50 106 0) (effects (font (size 1.1 1.1)))) (property "MPN" "LM74700QDBVRQ1" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:LM74700QDBVRQ1_SOT23_6") (pin "1" (uuid d3000000-0000-0000-0000-000000000000))
+(symbol (lib_id "PiSXMeRevAClean:LM74700Q1") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid d3000000-0000-0000-0000-000000000000) (property "Reference" "U1" (at 50 84 0) (effects (font (size 1.1 1.1)))) (property "Value" "LM74700QDBVRQ1" (at 50 106 0) (effects (font (size 1.1 1.1)))) (property "MPN" "LM74700QDBVRQ1" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:LM74700QDBVRQ1_SOT23_6") (pin "1" (uuid d3000000-0000-0000-0000-000000000000))
 (pin "2" (uuid d3000000-0000-0000-0000-000000000001))
 (pin "3" (uuid d3000000-0000-0000-0000-000000000002))
-(pin "4" (uuid d3000000-0000-0000-0000-000000000003)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "U_PROTECT_A") (unit 1)))) )
+(pin "4" (uuid d3000000-0000-0000-0000-000000000003)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "U1") (unit 1)))) )
 (label "12V_IN_B" (at 70 90.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d4000000-0000-0000-0000-000000000064))
 (label "12V_PROTECTED" (at 70 93.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d4000000-0000-0000-0000-000000000065))
 (label "POWER_GND" (at 70 96.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d4000000-0000-0000-0000-000000000066))
 (label "POWER_PG_FAULT" (at 70 99.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d4000000-0000-0000-0000-000000000067))
-(symbol (lib_id "PiSXMeRevAClean:LM74700Q2") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid d4000000-0000-0000-0000-000000000000) (property "Reference" "U_PROTECT_B" (at 50 84 0) (effects (font (size 1.1 1.1)))) (property "Value" "LM74700QDBVRQ1" (at 50 106 0) (effects (font (size 1.1 1.1)))) (property "MPN" "LM74700QDBVRQ1" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:LM74700QDBVRQ1_SOT23_6") (pin "1" (uuid d4000000-0000-0000-0000-000000000000))
+(symbol (lib_id "PiSXMeRevAClean:LM74700Q2") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid d4000000-0000-0000-0000-000000000000) (property "Reference" "U2" (at 50 84 0) (effects (font (size 1.1 1.1)))) (property "Value" "LM74700QDBVRQ1" (at 50 106 0) (effects (font (size 1.1 1.1)))) (property "MPN" "LM74700QDBVRQ1" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:LM74700QDBVRQ1_SOT23_6") (pin "1" (uuid d4000000-0000-0000-0000-000000000000))
 (pin "2" (uuid d4000000-0000-0000-0000-000000000001))
 (pin "3" (uuid d4000000-0000-0000-0000-000000000002))
-(pin "4" (uuid d4000000-0000-0000-0000-000000000003)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "U_PROTECT_B") (unit 1)))) )
+(pin "4" (uuid d4000000-0000-0000-0000-000000000003)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "U2") (unit 1)))) )
   (sheet_instances (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000004" (page "4")))
 )

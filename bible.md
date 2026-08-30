@@ -1,5 +1,22 @@
 # Append-only project bible
 
+## 2026-08-30 — Native netlist export gate closed
+
+- Reproduced and fixed underscore-bearing KiCad references generically.
+- Native KiCad 10.0.5 netlist export now completes without annotation warnings;
+  added an isolated regression test and receipt.
+- Corrected the service-authority rerun path so the USB-C footprint cannot be
+  assigned to the separate unresolved service ESD placeholder.
+
+
+## 2026-08-30 — KiCad annotation normalization path added
+
+- Identified underscore-bearing generated references as the cause of KiCad
+  native annotation/netlist-export warnings.
+- Added a generic normalization stage and regression test mapping them to legal
+  unique references while retaining descriptive Value/MPN fields.
+
+
 ## 2026-08-30 — High-current input connector authority selected
 
 - Selected two Molex `0039300020` / `39-30-0020` Mini-Fit Jr. 5569

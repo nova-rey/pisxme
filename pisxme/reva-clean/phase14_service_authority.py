@@ -1,6 +1,7 @@
 """Promote the selected Amphenol USB-C service connector into the clean tree."""
 from pathlib import Path
 import re
+import re
 
 ROOT = Path(__file__).resolve().parent
 DONOR = ROOT.parent / "footprints/PiSXMe.pretty/USB_C_SERVICE_10171746.kicad_mod"
@@ -21,6 +22,8 @@ def main() -> None:
                         'property "MPN" "10171746-00021LF"', 1)
     text = text.replace('property "Footprint" "" (at 50 95 0)',
                         'property "Footprint" "PiSXMeRevAClean:USB_C_SERVICE_10171746" (at 50 95 0)', 1)
+    text = re.sub(r'(property "MPN" "USB2 connector-boundary ESD".*?property "Footprint" )"[^"]*"',
+                  r'\1""', text, count=1)
     path.write_text(text)
     print("Phase 14 USB-C authority: Amphenol 10171746-00021LF; pads=18; footprint assigned")
 

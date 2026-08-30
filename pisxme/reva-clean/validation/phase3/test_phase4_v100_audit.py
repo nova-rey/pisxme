@@ -12,8 +12,8 @@ def main() -> None:
     text = SHEET.read_text()
     assert text.count('(lib_id "PiSXMeRevAClean:SXM2_74221_101LF")') == 1
     assert text.count('(lib_id "PiSXMeRevAClean:PCIe_AC_COUPLING_C")') == 2
-    refs = re.findall(r'property "Reference" "(C_PET0_[PN]|J_V100)"', text)
-    assert sorted(refs) == ["C_PET0_N", "C_PET0_P", "J_V100"]
+    refs = re.findall(r'property "Reference" "([A-Z]+\d+)"', text)
+    assert sorted(refs) == ["C1", "C2", "J1", "X2"]
     assert all(net in text for net in (
         "V100_PER0_P", "V100_PER0_N", "V100_PET0_P", "V100_PET0_N",
         "V100_REFCLK_P", "V100_REFCLK_N", "V100_PERST",
