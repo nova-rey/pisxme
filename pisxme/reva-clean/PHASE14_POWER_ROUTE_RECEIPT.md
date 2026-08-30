@@ -3,7 +3,7 @@
 Status: `PISXME_REVA_CLEAN_PHASE14_CLOSED_WITH_REV_A_EMPIRICAL_RISK`
 
 Frozen candidate identity for this receipt: `ACREAGE_POWER_PHASE14.kicad_pcb`,
-SHA-256 `04a1d87373b5851adff7efc54e273cee3c12731a479779722ade3fc172906134`.
+SHA-256 `49f976654f5fb92755093113adbd62af61ad29e799a52669e8b5ace356785692`.
 
 `phase14_power_route.py` creates `ACREAGE_POWER_PHASE14.kicad_pcb` from the
 validated native-netlist materialization. It adds nineteen named-pad-resolved,

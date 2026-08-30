@@ -2129,3 +2129,11 @@
 - Promoted the datasheet-derived 1-16 perimeter plus four central thermal-land
   geometry into the clean namespace and added regression coverage. Regulator
   routing remains unstarted until the vendor-layout overlay is implemented.
+
+2026-08-30 — Phase 15 first routing prototype rejected
+
+- A straight-line fanout prototype was tested on an isolated Phase 15 board.
+  Native DRC exposed real cross-net shorts from the long direct segments and
+  compact placement; the prototype was deleted and no DRC relaxation was made.
+- The Phase 14 artifact was regenerated against the corrected TPSM footprint;
+  Phase 15 must restart with layer-aware local loops and deliberate return vias.
