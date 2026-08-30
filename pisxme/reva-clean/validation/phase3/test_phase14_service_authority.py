@@ -13,6 +13,10 @@ def main() -> None:
     assert 'property "Footprint" "PiSXMeRevAClean:USB_C_SERVICE_10171746"' in sch
     assert 'property "MPN" "USB2 connector-boundary ESD"' not in sch
     assert 'property "MPN" "TPD2EUSB30DRTR"' in sch
+    assert (ROOT / "PiSXMe_RevA_Clean.pretty/Texas_DRT_3.kicad_mod").read_text().count('(pad "') == 3
+    assert 'PiSXMeRevAClean:Texas_DRT_3' in sch
+    assert 'PiSXMeRevAClean:USB_C_SERVICE_10171746' not in sch[sch.index('property "MPN" "TPD2EUSB30DRTR"'):]
+    assert sch.count('PiSXMeRevAClean:R_0402_1005Metric') == 2
     assert sch.count('(pin "3" (uuid de000000-0000-0000-0000-000000000002))') == 1
     assert 'SERVICE_VBUS_SENSE' not in sch[sch.index('property "MPN" "TPD2EUSB30DRTR"'):]
     assert 'property "MPN" "USB2_UFP_CONNECTOR"' not in sch

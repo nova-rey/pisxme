@@ -1885,3 +1885,12 @@
 - Promoted Amphenol `10171746-00021LF` as the exact USB2 SERVICE receptacle.
 - Added manufacturer-derived local footprint, exact MPN assignment, procurement
   receipt, and regression test; native root ERC remains clean.
+
+2026-08-30 — Phase 14 SERVICE ESD and passive footprint authority closed
+
+- Assigned TI `TPD2EUSB30DRTR` to the project-local Texas DRT-3 three-pad
+  footprint using the documented 1.0 x 0.8 mm / 0.7 mm-pitch package geometry.
+- Corrected the generic service authoring path so the old USB-C connector
+  footprint cannot leak onto the ESD or Rd resistors; both Rd parts now use a
+  separate project-local 0402 footprint.
+- Added exact-MPN regression coverage; the clean root native ERC remains zero.
