@@ -17,7 +17,11 @@ def main():
     b=pcbnew.LoadBoard(str(INPUT))
     refs=[f'C{i}' for i in range(26,42)]
     for i,r in enumerate(refs):
-        put(b,r,260+(i%4)*8,122+(i//4)*8)
+        # Keep the first three rows beside U5.  The fourth row clears the
+        # already-authoritative U5 PG support resistor at (245,140).
+        row = i // 4
+        x0 = 240 if row < 3 else 260
+        put(b,r,x0+(i%4)*8,115+row*8)
     out=pad(b,'U5','8').GetNet()
     # Leave the U5 left output land by the package edge, then use a broad
     # local trunk feeding each capacitor row.  Every endpoint is taken from
@@ -25,7 +29,7 @@ def main():
     # Use the right output land.  The left side is the compact VIN/EN escape
     # field; leaving from pad 9 avoids crossing that authoritative 12 V path.
     u5=pad(b,'U5','9'); edge=pcbnew.VECTOR2I(u5.GetPosition().x+int(u5.GetSize().x/2),u5.GetPosition().y)
-    trunk_x=258; root_x=234; trunk_top=mm(trunk_x,109); trunk_bottom=mm(trunk_x,148)
+    trunk_x=238; root_x=234; trunk_top=mm(trunk_x,109); trunk_bottom=mm(trunk_x,141)
     # Drop immediately at the right edge, below the FB vertical escape, then
     # move right.  Moving laterally at y=107 would cross that FB escape.
     drop=mm(228.15,111)
@@ -37,7 +41,7 @@ def main():
     tr(b,root,trunk_top,out,.60,pcbnew.In2_Cu)
     via(b,root,out); via(b,trunk_top,out); tr(b,trunk_top,trunk_bottom,out, .60, pcbnew.In2_Cu)
     for row in range(4):
-        row_y=122+row*8
+        row_y=115+row*8
         row_pad=[pad(b,r,'1') for r in refs[row*4:(row+1)*4]]
         for p in row_pad:
             anchor=pcbnew.VECTOR2I(p.GetPosition().x,pcbnew.FromMM(row_y+2))

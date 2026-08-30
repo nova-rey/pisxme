@@ -56,9 +56,11 @@ Evidence:
   control/thermal vias and 254 unrouted acreage items.
 
 - `phase15_u5_vout_bank.py` adds a 4x4 bank of the sixteen schematic-authority
-  output capacitors C26-C41. The bank is fed from U5 pad 9 via a short F.Cu
-  edge departure and an In2.Cu trunk, with one ordinary through-via per
-  capacitor. Native DRC and `test_phase15_u5_vout_bank.py` verify 69 total
+  output capacitors C26-C41. The first three rows are beside U5; the fourth
+  clears the existing PG support resistor. The bank is fed from U5 pad 9 via
+  a short F.Cu edge departure and an In2.Cu trunk, with one ordinary
+  through-via per capacitor. Native DRC and `test_phase15_u5_vout_bank.py`
+  verify 69 total
   vias, 18 output-net vias, 28 PGND vias, all sixteen capacitor pad-1 net
   assignments, and zero route-specific clearance, shorting, or crossing
   findings at 237

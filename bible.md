@@ -2218,6 +2218,15 @@
 - Effective-capacitance, thermal-margin, and three-rail TI overlay evidence
   remain open; this is not Phase 15 closure.
 
+2026-08-30 — Phase 15 compact U5 output-bank refinement
+
+- Moved the first three C26-C41 rows beside U5 and kept only the fourth row
+  offset to clear the authoritative U5 PG support resistor. Native DRC and
+  the focused regression pass with 69 vias, 237 baseline unrouted items, and
+  no route-specific clearance, shorting, or crossing findings.
+- The geometry is closer to TI's qualitative arrangement, but exact overlay,
+  DC-bias evidence, and board-specific thermal proof remain open.
+
 2026-08-30 — Phase 15 thermal screening checkpoint
 
 - Added `phase15_thermal_screen.py` using TI SLVSGB4B's conservative 33.1 C/W

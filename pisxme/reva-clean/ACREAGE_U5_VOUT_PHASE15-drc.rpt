@@ -1,5 +1,5 @@
 ** Drc report for ACREAGE_U5_VOUT_PHASE15.kicad_pcb **
-** Created on 2026-08-30T18:18:37 **
+** Created on 2026-08-30T18:24:31 **
 ** Report includes: Errors, Warnings **
 
 ** Found 297 DRC violations **
@@ -357,7 +357,7 @@
     @(269.2500 mm, 154.7250 mm): Pad 75 [<no net>] of J3 on F.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(258.0000 mm, 109.0000 mm): Via [/REGULATORS/BRIDGE_1V1] on F.Cu - B.Cu
+    @(238.0000 mm, 109.0000 mm): Via [/REGULATORS/BRIDGE_1V1] on F.Cu - B.Cu
 [silk_edge_clearance]: Silkscreen clipped by board edge
     Rule: board setup constraints silk; warning
     @(0.0000 mm, 0.0000 mm): Rectangle on Edge.Cuts
@@ -368,484 +368,484 @@
     @(271.5000 mm, 238.2500 mm): Segment of J3 on f.silkscreen
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(287.1500 mm, 146.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(287.1500 mm, 139.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)
     Rule: board setup constraints silk text height; warning
     @(234.0000 mm, 144.1000 mm): Reference field of R21
@@ -902,124 +902,108 @@
     @(252.5000 mm, 150.0000 mm): Pad 1 [/REGULATORS/FB_BRIDGE_1V1] of R20 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(276.0000 mm, 130.0000 mm): Reference field of C32
-    @(274.6500 mm, 130.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C32 on F.Cu
+    @(256.0000 mm, 123.0000 mm): Reference field of C32
+    @(257.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C32 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(276.0000 mm, 130.0000 mm): Reference field of C32
-    @(277.3500 mm, 130.0000 mm): Pad 2 [POWER_GND] of C32 on F.Cu
+    @(264.0000 mm, 123.0000 mm): Reference field of C33
+    @(262.6500 mm, 123.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C33 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(284.0000 mm, 130.0000 mm): Reference field of C33
-    @(282.6500 mm, 130.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C33 on F.Cu
+    @(264.0000 mm, 123.0000 mm): Reference field of C33
+    @(265.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C33 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(284.0000 mm, 130.0000 mm): Reference field of C33
-    @(285.3500 mm, 130.0000 mm): Pad 2 [POWER_GND] of C33 on F.Cu
+    @(264.0000 mm, 131.0000 mm): Reference field of C37
+    @(262.6500 mm, 131.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C37 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(284.0000 mm, 138.0000 mm): Reference field of C37
-    @(282.6500 mm, 138.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C37 on F.Cu
+    @(264.0000 mm, 131.0000 mm): Reference field of C37
+    @(265.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C37 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(284.0000 mm, 138.0000 mm): Reference field of C37
-    @(285.3500 mm, 138.0000 mm): Pad 2 [POWER_GND] of C37 on F.Cu
+    @(248.0000 mm, 131.0000 mm): Reference field of C35
+    @(246.6500 mm, 131.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C35 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(284.0000 mm, 122.0000 mm): Reference field of C29
-    @(282.6500 mm, 122.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C29 on F.Cu
+    @(248.0000 mm, 131.0000 mm): Reference field of C35
+    @(249.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C35 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(284.0000 mm, 122.0000 mm): Reference field of C29
-    @(285.3500 mm, 122.0000 mm): Pad 2 [POWER_GND] of C29 on F.Cu
+    @(256.0000 mm, 131.0000 mm): Reference field of C36
+    @(254.6500 mm, 131.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C36 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(276.0000 mm, 138.0000 mm): Reference field of C36
-    @(274.6500 mm, 138.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C36 on F.Cu
+    @(256.0000 mm, 131.0000 mm): Reference field of C36
+    @(257.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C36 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(276.0000 mm, 138.0000 mm): Reference field of C36
-    @(277.3500 mm, 138.0000 mm): Pad 2 [POWER_GND] of C36 on F.Cu
+    @(268.0000 mm, 139.0000 mm): Reference field of C39
+    @(269.3500 mm, 139.0000 mm): Pad 2 [POWER_GND] of C39 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(284.0000 mm, 146.0000 mm): Reference field of C41
-    @(282.6500 mm, 146.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C41 on F.Cu
+    @(268.0000 mm, 139.0000 mm): Reference field of C39
+    @(266.6500 mm, 139.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C39 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(284.0000 mm, 146.0000 mm): Reference field of C41
-    @(285.3500 mm, 146.0000 mm): Pad 2 [POWER_GND] of C41 on F.Cu
+    @(260.0000 mm, 139.0000 mm): Reference field of C38
+    @(261.3500 mm, 139.0000 mm): Pad 2 [POWER_GND] of C38 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(276.0000 mm, 122.0000 mm): Reference field of C28
-    @(274.6500 mm, 122.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C28 on F.Cu
+    @(260.0000 mm, 139.0000 mm): Reference field of C38
+    @(258.6500 mm, 139.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C38 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(276.0000 mm, 122.0000 mm): Reference field of C28
-    @(277.3500 mm, 122.0000 mm): Pad 2 [POWER_GND] of C28 on F.Cu
+    @(276.0000 mm, 139.0000 mm): Reference field of C40
+    @(274.6500 mm, 139.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C40 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(268.0000 mm, 130.0000 mm): Reference field of C31
-    @(266.6500 mm, 130.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C31 on F.Cu
+    @(276.0000 mm, 139.0000 mm): Reference field of C40
+    @(277.3500 mm, 139.0000 mm): Pad 2 [POWER_GND] of C40 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(268.0000 mm, 130.0000 mm): Reference field of C31
-    @(269.3500 mm, 130.0000 mm): Pad 2 [POWER_GND] of C31 on F.Cu
+    @(284.0000 mm, 139.0000 mm): Reference field of C41
+    @(282.6500 mm, 139.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C41 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(268.0000 mm, 122.0000 mm): Reference field of C27
-    @(266.6500 mm, 122.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C27 on F.Cu
+    @(284.0000 mm, 139.0000 mm): Reference field of C41
+    @(285.3500 mm, 139.0000 mm): Pad 2 [POWER_GND] of C41 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(268.0000 mm, 122.0000 mm): Reference field of C27
-    @(269.3500 mm, 122.0000 mm): Pad 2 [POWER_GND] of C27 on F.Cu
+    @(256.0000 mm, 115.0000 mm): Reference field of C28
+    @(254.6500 mm, 115.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C28 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(260.0000 mm, 130.0000 mm): Reference field of C30
-    @(261.3500 mm, 130.0000 mm): Pad 2 [POWER_GND] of C30 on F.Cu
+    @(256.0000 mm, 115.0000 mm): Reference field of C28
+    @(257.3500 mm, 115.0000 mm): Pad 2 [POWER_GND] of C28 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(260.0000 mm, 138.0000 mm): Reference field of C34
-    @(258.6500 mm, 138.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C34 on F.Cu
+    @(256.0000 mm, 123.0000 mm): Reference field of C32
+    @(254.6500 mm, 123.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C32 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(260.0000 mm, 138.0000 mm): Reference field of C34
-    @(261.3500 mm, 138.0000 mm): Pad 2 [POWER_GND] of C34 on F.Cu
+    @(248.0000 mm, 115.0000 mm): Reference field of C27
+    @(246.6500 mm, 115.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C27 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(268.0000 mm, 138.0000 mm): Reference field of C35
-    @(266.6500 mm, 138.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C35 on F.Cu
+    @(248.0000 mm, 115.0000 mm): Reference field of C27
+    @(249.3500 mm, 115.0000 mm): Pad 2 [POWER_GND] of C27 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(268.0000 mm, 138.0000 mm): Reference field of C35
-    @(269.3500 mm, 138.0000 mm): Pad 2 [POWER_GND] of C35 on F.Cu
+    @(264.0000 mm, 115.0000 mm): Reference field of C29
+    @(262.6500 mm, 115.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C29 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(260.0000 mm, 122.0000 mm): Reference field of C26
-    @(258.6500 mm, 122.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C26 on F.Cu
+    @(264.0000 mm, 115.0000 mm): Reference field of C29
+    @(265.3500 mm, 115.0000 mm): Pad 2 [POWER_GND] of C29 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(260.0000 mm, 122.0000 mm): Reference field of C26
-    @(261.3500 mm, 122.0000 mm): Pad 2 [POWER_GND] of C26 on F.Cu
+    @(248.0000 mm, 123.0000 mm): Reference field of C31
+    @(246.6500 mm, 123.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C31 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(268.0000 mm, 146.0000 mm): Reference field of C39
-    @(266.6500 mm, 146.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C39 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(260.0000 mm, 146.0000 mm): Reference field of C38
-    @(261.3500 mm, 146.0000 mm): Pad 2 [POWER_GND] of C38 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(268.0000 mm, 146.0000 mm): Reference field of C39
-    @(269.3500 mm, 146.0000 mm): Pad 2 [POWER_GND] of C39 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(276.0000 mm, 146.0000 mm): Reference field of C40
-    @(274.6500 mm, 146.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C40 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(276.0000 mm, 146.0000 mm): Reference field of C40
-    @(277.3500 mm, 146.0000 mm): Pad 2 [POWER_GND] of C40 on F.Cu
+    @(248.0000 mm, 123.0000 mm): Reference field of C31
+    @(249.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C31 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(11.0000 mm, 16.7000 mm): Rectangle of J5 on f.silkscreen
@@ -1094,22 +1078,6 @@
     @(186.9000 mm, 103.0000 mm): Pad 2 [POWER_GND] of C14 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(219.0000 mm, 112.0000 mm): Reference field of C23
-    @(217.9000 mm, 112.0000 mm): Pad 2 [POWER_GND] of C23 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(219.0000 mm, 112.0000 mm): Reference field of C23
-    @(220.1000 mm, 112.0000 mm): Pad 1 [12V_PROTECTED] of C23 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(219.0000 mm, 118.0000 mm): Reference field of C25
-    @(220.1000 mm, 118.0000 mm): Pad 1 [12V_PROTECTED] of C25 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(219.0000 mm, 118.0000 mm): Reference field of C25
-    @(217.9000 mm, 118.0000 mm): Pad 2 [POWER_GND] of C25 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
     @(188.0000 mm, 112.0000 mm): Reference field of C16
     @(189.3500 mm, 112.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C16 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
@@ -1146,12 +1114,44 @@
     @(189.3500 mm, 116.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C19 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(260.0000 mm, 130.0000 mm): Reference field of C30
-    @(258.6500 mm, 130.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C30 on F.Cu
+    @(240.0000 mm, 123.0000 mm): Reference field of C30
+    @(238.6500 mm, 123.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C30 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(260.0000 mm, 146.0000 mm): Reference field of C38
-    @(258.6500 mm, 146.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C38 on F.Cu
+    @(240.0000 mm, 123.0000 mm): Reference field of C30
+    @(241.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C30 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(240.0000 mm, 131.0000 mm): Reference field of C34
+    @(238.6500 mm, 131.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C34 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(240.0000 mm, 131.0000 mm): Reference field of C34
+    @(241.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C34 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(219.0000 mm, 112.0000 mm): Reference field of C23
+    @(217.9000 mm, 112.0000 mm): Pad 2 [POWER_GND] of C23 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(219.0000 mm, 112.0000 mm): Reference field of C23
+    @(220.1000 mm, 112.0000 mm): Pad 1 [12V_PROTECTED] of C23 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(219.0000 mm, 118.0000 mm): Reference field of C25
+    @(220.1000 mm, 118.0000 mm): Pad 1 [12V_PROTECTED] of C25 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(240.0000 mm, 115.0000 mm): Reference field of C26
+    @(241.3500 mm, 115.0000 mm): Pad 2 [POWER_GND] of C26 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(240.0000 mm, 115.0000 mm): Reference field of C26
+    @(238.6500 mm, 115.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C26 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(219.0000 mm, 118.0000 mm): Reference field of C25
+    @(217.9000 mm, 118.0000 mm): Pad 2 [POWER_GND] of C25 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(262.0500 mm, 34.3250 mm): Rectangle of J2 on f.silkscreen
@@ -1256,52 +1256,56 @@
     @(216.0000 mm, 64.0000 mm): Track [/REGULATORS/BRIDGE_3V3] on F.Cu, length 48.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(21.4500 mm, 73.5500 mm): Pad 2 [POWER_GND] of U1 on F.Cu
     @(21.4500 mm, 93.5500 mm): Pad 2 [POWER_GND] of U2 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
     @(21.4500 mm, 73.5500 mm): Pad 2 [POWER_GND] of U1 on F.Cu
-    @(45.9000 mm, 76.0000 mm): Pad 2 [POWER_GND] of C5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(45.9000 mm, 76.0000 mm): Pad 2 [POWER_GND] of C5 on F.Cu
+    @(21.4500 mm, 73.5500 mm): Pad 2 [POWER_GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
     @(45.9000 mm, 78.2500 mm): Pad 2 [POWER_GND] of C6 on F.Cu
+    @(45.9000 mm, 76.0000 mm): Pad 2 [POWER_GND] of C5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(45.9000 mm, 78.2500 mm): Pad 2 [POWER_GND] of C6 on F.Cu
     @(49.7500 mm, 78.7500 mm): Pad 6 [POWER_GND] of U3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(52.0000 mm, 76.8750 mm): Via [POWER_GND] on F.Cu - B.Cu
-    @(61.5000 mm, 66.0000 mm): Pad 2 [POWER_GND] of R5 on F.Cu
+    @(52.0000 mm, 78.6250 mm): Track [POWER_GND] on F.Cu, length 0.2500 mm
+    @(54.2500 mm, 78.7500 mm): Pad 11 [POWER_GND] of U3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(52.0000 mm, 78.6250 mm): Track [POWER_GND] on F.Cu, length 0.2500 mm
     @(49.7500 mm, 78.7500 mm): Pad 6 [POWER_GND] of U3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(54.2500 mm, 78.7500 mm): Pad 11 [POWER_GND] of U3 on F.Cu
-    @(52.0000 mm, 78.6250 mm): Track [POWER_GND] on F.Cu, length 0.2500 mm
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(54.2500 mm, 78.7500 mm): Pad 11 [POWER_GND] of U3 on F.Cu
     @(58.3500 mm, 81.5000 mm): Pad 2 [POWER_GND] of C7 on F.Cu
+    @(54.2500 mm, 78.7500 mm): Pad 11 [POWER_GND] of U3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(82.5000 mm, 62.0000 mm): Pad 2 [POWER_GND] of R4 on F.Cu
     @(61.5000 mm, 66.0000 mm): Pad 2 [POWER_GND] of R5 on F.Cu
+    @(52.0000 mm, 76.8750 mm): Via [POWER_GND] on F.Cu - B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(61.5000 mm, 66.0000 mm): Pad 2 [POWER_GND] of R5 on F.Cu
     @(82.5000 mm, 62.0000 mm): Pad 2 [POWER_GND] of R4 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
     @(112.0000 mm, 72.0000 mm): Pad 2 [POWER_GND] of D2 on F.Cu
+    @(126.5050 mm, 84.2850 mm): Pad A39 [POWER_GND] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(112.0000 mm, 72.0000 mm): Pad 2 [POWER_GND] of D2 on F.Cu
+    @(82.5000 mm, 62.0000 mm): Pad 2 [POWER_GND] of R4 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(112.0000 mm, 72.0000 mm): Pad 2 [POWER_GND] of D2 on F.Cu
     @(112.0000 mm, 32.0000 mm): Pad 2 [POWER_GND] of D1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(126.5050 mm, 84.2850 mm): Pad A39 [POWER_GND] of J1 on F.Cu
-    @(112.0000 mm, 72.0000 mm): Pad 2 [POWER_GND] of D2 on F.Cu
+    @(126.5050 mm, 85.5550 mm): Pad B39 [POWER_GND] of J1 on F.Cu
+    @(126.5050 mm, 86.8250 mm): Pad C39 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(126.5050 mm, 85.5550 mm): Pad B39 [POWER_GND] of J1 on F.Cu
@@ -1309,27 +1313,23 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(126.5050 mm, 86.8250 mm): Pad C39 [POWER_GND] of J1 on F.Cu
-    @(126.5050 mm, 85.5550 mm): Pad B39 [POWER_GND] of J1 on F.Cu
+    @(126.5050 mm, 88.0950 mm): Pad D39 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(126.5050 mm, 88.0950 mm): Pad D39 [POWER_GND] of J1 on F.Cu
     @(126.5050 mm, 89.3650 mm): Pad E39 [POWER_GND] of J1 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(126.5050 mm, 88.0950 mm): Pad D39 [POWER_GND] of J1 on F.Cu
-    @(126.5050 mm, 86.8250 mm): Pad C39 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(126.5050 mm, 89.3650 mm): Pad E39 [POWER_GND] of J1 on F.Cu
     @(126.5050 mm, 90.6350 mm): Pad F39 [POWER_GND] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(126.5050 mm, 90.6350 mm): Pad F39 [POWER_GND] of J1 on F.Cu
+    @(126.5050 mm, 91.9050 mm): Pad G39 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(126.5050 mm, 91.9050 mm): Pad G39 [POWER_GND] of J1 on F.Cu
-    @(126.5050 mm, 90.6350 mm): Pad F39 [POWER_GND] of J1 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
     @(126.5050 mm, 93.1750 mm): Pad H39 [POWER_GND] of J1 on F.Cu
-    @(126.5050 mm, 91.9050 mm): Pad G39 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(126.5050 mm, 94.4450 mm): Pad J39 [POWER_GND] of J1 on F.Cu
@@ -1344,16 +1344,12 @@
     @(130.3150 mm, 85.5550 mm): Pad B36 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(130.3150 mm, 84.2850 mm): Pad A36 [POWER_GND] of J1 on F.Cu
-    @(134.1250 mm, 84.2850 mm): Pad A33 [POWER_GND] of J1 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
+    @(130.3150 mm, 86.8250 mm): Pad C36 [POWER_GND] of J1 on F.Cu
     @(130.3150 mm, 85.5550 mm): Pad B36 [POWER_GND] of J1 on F.Cu
-    @(130.3150 mm, 86.8250 mm): Pad C36 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(130.3150 mm, 86.8250 mm): Pad C36 [POWER_GND] of J1 on F.Cu
     @(130.3150 mm, 88.0950 mm): Pad D36 [POWER_GND] of J1 on F.Cu
+    @(130.3150 mm, 86.8250 mm): Pad C36 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(130.3150 mm, 89.3650 mm): Pad E36 [POWER_GND] of J1 on F.Cu
@@ -1373,19 +1369,15 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(130.3150 mm, 94.4450 mm): Pad J36 [POWER_GND] of J1 on F.Cu
-    @(130.3150 mm, 95.7150 mm): Pad K36 [POWER_GND] of J1 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(130.3150 mm, 94.4450 mm): Pad J36 [POWER_GND] of J1 on F.Cu
     @(130.3150 mm, 93.1750 mm): Pad H36 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(130.3150 mm, 94.4450 mm): Pad J36 [POWER_GND] of J1 on F.Cu
+    @(126.5050 mm, 94.4450 mm): Pad J39 [POWER_GND] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
     @(130.3150 mm, 95.7150 mm): Pad K36 [POWER_GND] of J1 on F.Cu
-    @(126.5050 mm, 95.7150 mm): Pad K39 [POWER_GND] of J1 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(134.1250 mm, 84.2850 mm): Pad A33 [POWER_GND] of J1 on F.Cu
-    @(137.9350 mm, 84.2850 mm): Pad A30 [POWER_GND] of J1 on F.Cu
+    @(130.3150 mm, 94.4450 mm): Pad J36 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(134.1250 mm, 85.5550 mm): Pad B33 [POWER_GND] of J1 on F.Cu
@@ -1396,8 +1388,8 @@
     @(134.1250 mm, 85.5550 mm): Pad B33 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(134.1250 mm, 86.8250 mm): Pad C33 [POWER_GND] of J1 on F.Cu
     @(134.1250 mm, 88.0950 mm): Pad D33 [POWER_GND] of J1 on F.Cu
+    @(134.1250 mm, 86.8250 mm): Pad C33 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(134.1250 mm, 88.0950 mm): Pad D33 [POWER_GND] of J1 on F.Cu
@@ -1412,8 +1404,8 @@
     @(134.1250 mm, 90.6350 mm): Pad F33 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(134.1250 mm, 93.1750 mm): Pad H33 [POWER_GND] of J1 on F.Cu
-    @(134.1250 mm, 94.4450 mm): Pad J33 [POWER_GND] of J1 on F.Cu
+    @(134.1250 mm, 91.9050 mm): Pad G33 [POWER_GND] of J1 on F.Cu
+    @(130.3150 mm, 91.9050 mm): Pad G36 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(134.1250 mm, 93.1750 mm): Pad H33 [POWER_GND] of J1 on F.Cu
@@ -1421,27 +1413,31 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(134.1250 mm, 94.4450 mm): Pad J33 [POWER_GND] of J1 on F.Cu
+    @(134.1250 mm, 93.1750 mm): Pad H33 [POWER_GND] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
     @(134.1250 mm, 95.7150 mm): Pad K33 [POWER_GND] of J1 on F.Cu
+    @(134.1250 mm, 94.4450 mm): Pad J33 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(137.9350 mm, 84.2850 mm): Pad A30 [POWER_GND] of J1 on F.Cu
     @(137.9350 mm, 85.5550 mm): Pad B30 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(137.9350 mm, 84.2850 mm): Pad A30 [POWER_GND] of J1 on F.Cu
-    @(141.7450 mm, 84.2850 mm): Pad A27 [POWER_GND] of J1 on F.Cu
+    @(137.9350 mm, 85.5550 mm): Pad B30 [POWER_GND] of J1 on F.Cu
+    @(137.9350 mm, 86.8250 mm): Pad C30 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(137.9350 mm, 86.8250 mm): Pad C30 [POWER_GND] of J1 on F.Cu
-    @(137.9350 mm, 85.5550 mm): Pad B30 [POWER_GND] of J1 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
     @(137.9350 mm, 88.0950 mm): Pad D30 [POWER_GND] of J1 on F.Cu
-    @(137.9350 mm, 86.8250 mm): Pad C30 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(137.9350 mm, 89.3650 mm): Pad E30 [POWER_GND] of J1 on F.Cu
     @(137.9350 mm, 88.0950 mm): Pad D30 [POWER_GND] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(137.9350 mm, 90.6350 mm): Pad F30 [POWER_GND] of J1 on F.Cu
+    @(137.9350 mm, 91.9050 mm): Pad G30 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(137.9350 mm, 90.6350 mm): Pad F30 [POWER_GND] of J1 on F.Cu
@@ -1449,29 +1445,29 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(137.9350 mm, 91.9050 mm): Pad G30 [POWER_GND] of J1 on F.Cu
-    @(137.9350 mm, 90.6350 mm): Pad F30 [POWER_GND] of J1 on F.Cu
+    @(137.9350 mm, 93.1750 mm): Pad H30 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(137.9350 mm, 93.1750 mm): Pad H30 [POWER_GND] of J1 on F.Cu
-    @(137.9350 mm, 91.9050 mm): Pad G30 [POWER_GND] of J1 on F.Cu
+    @(137.9350 mm, 94.4450 mm): Pad J30 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(137.9350 mm, 94.4450 mm): Pad J30 [POWER_GND] of J1 on F.Cu
-    @(137.9350 mm, 93.1750 mm): Pad H30 [POWER_GND] of J1 on F.Cu
+    @(137.9350 mm, 95.7150 mm): Pad K30 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(137.9350 mm, 95.7150 mm): Pad K30 [POWER_GND] of J1 on F.Cu
-    @(137.9350 mm, 94.4450 mm): Pad J30 [POWER_GND] of J1 on F.Cu
+    @(134.1250 mm, 95.7150 mm): Pad K33 [POWER_GND] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(141.7450 mm, 85.5550 mm): Pad B27 [POWER_GND] of J1 on F.Cu
+    @(141.7450 mm, 86.8250 mm): Pad C27 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(141.7450 mm, 85.5550 mm): Pad B27 [POWER_GND] of J1 on F.Cu
     @(141.7450 mm, 84.2850 mm): Pad A27 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(141.7450 mm, 85.5550 mm): Pad B27 [POWER_GND] of J1 on F.Cu
-    @(141.7450 mm, 86.8250 mm): Pad C27 [POWER_GND] of J1 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
     @(141.7450 mm, 86.8250 mm): Pad C27 [POWER_GND] of J1 on F.Cu
     @(141.7450 mm, 88.0950 mm): Pad D27 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
@@ -1484,30 +1480,30 @@
     @(141.7450 mm, 90.6350 mm): Pad F27 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(141.7450 mm, 91.9050 mm): Pad G27 [POWER_GND] of J1 on F.Cu
     @(141.7450 mm, 90.6350 mm): Pad F27 [POWER_GND] of J1 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(141.7450 mm, 93.1750 mm): Pad H27 [POWER_GND] of J1 on F.Cu
     @(141.7450 mm, 91.9050 mm): Pad G27 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(141.7450 mm, 94.4450 mm): Pad J27 [POWER_GND] of J1 on F.Cu
+    @(141.7450 mm, 91.9050 mm): Pad G27 [POWER_GND] of J1 on F.Cu
     @(141.7450 mm, 93.1750 mm): Pad H27 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(141.7450 mm, 93.1750 mm): Pad H27 [POWER_GND] of J1 on F.Cu
     @(141.7450 mm, 94.4450 mm): Pad J27 [POWER_GND] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
     @(141.7450 mm, 95.7150 mm): Pad K27 [POWER_GND] of J1 on F.Cu
+    @(141.7450 mm, 94.4450 mm): Pad J27 [POWER_GND] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(141.7450 mm, 95.7150 mm): Pad K27 [POWER_GND] of J1 on F.Cu
+    @(137.9350 mm, 95.7150 mm): Pad K30 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(145.5550 mm, 85.5550 mm): Pad B24 [POWER_GND] of J1 on F.Cu
     @(145.5550 mm, 84.2850 mm): Pad A24 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(145.5550 mm, 85.5550 mm): Pad B24 [POWER_GND] of J1 on F.Cu
-    @(141.7450 mm, 85.5550 mm): Pad B27 [POWER_GND] of J1 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
     @(145.5550 mm, 86.8250 mm): Pad C24 [POWER_GND] of J1 on F.Cu
     @(145.5550 mm, 85.5550 mm): Pad B24 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
@@ -1516,8 +1512,8 @@
     @(145.5550 mm, 86.8250 mm): Pad C24 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(145.5550 mm, 88.0950 mm): Pad D24 [POWER_GND] of J1 on F.Cu
     @(145.5550 mm, 89.3650 mm): Pad E24 [POWER_GND] of J1 on F.Cu
+    @(145.5550 mm, 88.0950 mm): Pad D24 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(145.5550 mm, 89.3650 mm): Pad E24 [POWER_GND] of J1 on F.Cu
@@ -1541,55 +1537,63 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(145.5550 mm, 95.7150 mm): Pad K24 [POWER_GND] of J1 on F.Cu
-    @(149.3650 mm, 95.7150 mm): Pad K21 [POWER_GND] of J1 on F.Cu
+    @(141.7450 mm, 95.7150 mm): Pad K27 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(149.3650 mm, 85.5550 mm): Pad B21 [POWER_GND] of J1 on F.Cu
     @(149.3650 mm, 84.2850 mm): Pad A21 [POWER_GND] of J1 on F.Cu
-    @(149.3650 mm, 85.5550 mm): Pad B21 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(149.3650 mm, 85.5550 mm): Pad B21 [POWER_GND] of J1 on F.Cu
     @(149.3650 mm, 86.8250 mm): Pad C21 [POWER_GND] of J1 on F.Cu
+    @(149.3650 mm, 85.5550 mm): Pad B21 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(149.3650 mm, 88.0950 mm): Pad D21 [POWER_GND] of J1 on F.Cu
     @(149.3650 mm, 86.8250 mm): Pad C21 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(149.3650 mm, 89.3650 mm): Pad E21 [POWER_GND] of J1 on F.Cu
     @(149.3650 mm, 88.0950 mm): Pad D21 [POWER_GND] of J1 on F.Cu
-    @(149.3650 mm, 89.3650 mm): Pad E21 [POWER_GND] of J1 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(149.3650 mm, 89.3650 mm): Pad E21 [POWER_GND] of J1 on F.Cu
-    @(149.3650 mm, 90.6350 mm): Pad F21 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(149.3650 mm, 90.6350 mm): Pad F21 [POWER_GND] of J1 on F.Cu
-    @(149.3650 mm, 91.9050 mm): Pad G21 [POWER_GND] of J1 on F.Cu
+    @(149.3650 mm, 89.3650 mm): Pad E21 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(149.3650 mm, 91.9050 mm): Pad G21 [POWER_GND] of J1 on F.Cu
-    @(149.3650 mm, 93.1750 mm): Pad H21 [POWER_GND] of J1 on F.Cu
+    @(149.3650 mm, 90.6350 mm): Pad F21 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(149.3650 mm, 93.1750 mm): Pad H21 [POWER_GND] of J1 on F.Cu
-    @(149.3650 mm, 94.4450 mm): Pad J21 [POWER_GND] of J1 on F.Cu
+    @(149.3650 mm, 91.9050 mm): Pad G21 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(149.3650 mm, 94.4450 mm): Pad J21 [POWER_GND] of J1 on F.Cu
+    @(149.3650 mm, 93.1750 mm): Pad H21 [POWER_GND] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
     @(149.3650 mm, 95.7150 mm): Pad K21 [POWER_GND] of J1 on F.Cu
+    @(149.3650 mm, 94.4450 mm): Pad J21 [POWER_GND] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(149.3650 mm, 95.7150 mm): Pad K21 [POWER_GND] of J1 on F.Cu
+    @(145.5550 mm, 95.7150 mm): Pad K24 [POWER_GND] of J1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(186.6500 mm, 112.0000 mm): Pad 2 [POWER_GND] of C16 on F.Cu
     @(186.9000 mm, 105.2500 mm): Pad 2 [POWER_GND] of C15 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(186.9000 mm, 105.2500 mm): Pad 2 [POWER_GND] of C15 on F.Cu
     @(186.9000 mm, 103.0000 mm): Pad 2 [POWER_GND] of C14 on F.Cu
+    @(186.9000 mm, 105.2500 mm): Pad 2 [POWER_GND] of C15 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(186.9000 mm, 105.2500 mm): Pad 2 [POWER_GND] of C15 on F.Cu
     @(197.7500 mm, 105.7500 mm): Pad 6 [POWER_GND] of U4 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(196.5000 mm, 70.0000 mm): Pad 2 [POWER_GND] of R12 on F.Cu
+    @(212.5000 mm, 82.0000 mm): Pad 2 [POWER_GND] of R13 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(200.0000 mm, 105.6250 mm): Track [POWER_GND] on F.Cu, length 0.2500 mm
@@ -1601,15 +1605,15 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(212.5000 mm, 82.0000 mm): Pad 2 [POWER_GND] of R13 on F.Cu
-    @(196.5000 mm, 70.0000 mm): Pad 2 [POWER_GND] of R12 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(212.5000 mm, 82.0000 mm): Pad 2 [POWER_GND] of R13 on F.Cu
-    @(225.0000 mm, 103.8750 mm): Via [POWER_GND] on F.Cu - B.Cu
+    @(200.0000 mm, 103.8750 mm): Via [POWER_GND] on F.Cu - B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(217.9000 mm, 112.0000 mm): Pad 2 [POWER_GND] of C23 on F.Cu
     @(218.0500 mm, 115.0000 mm): Pad 2 [POWER_GND] of C24 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(217.9000 mm, 112.0000 mm): Pad 2 [POWER_GND] of C23 on F.Cu
+    @(222.7500 mm, 105.7500 mm): Pad 6 [POWER_GND] of U5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(217.9000 mm, 118.0000 mm): Pad 2 [POWER_GND] of C25 on F.Cu
@@ -1617,83 +1621,79 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(222.7500 mm, 105.7500 mm): Pad 6 [POWER_GND] of U5 on F.Cu
-    @(217.9000 mm, 112.0000 mm): Pad 2 [POWER_GND] of C23 on F.Cu
+    @(225.0000 mm, 105.6250 mm): Track [POWER_GND] on F.Cu, length 0.2500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(225.0000 mm, 105.6250 mm): Track [POWER_GND] on F.Cu, length 0.2500 mm
-    @(222.7500 mm, 105.7500 mm): Pad 6 [POWER_GND] of U5 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
     @(227.2500 mm, 105.7500 mm): Pad 11 [POWER_GND] of U5 on F.Cu
-    @(225.0000 mm, 105.6250 mm): Track [POWER_GND] on F.Cu, length 0.2500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(241.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C30 on F.Cu
+    @(241.3500 mm, 115.0000 mm): Pad 2 [POWER_GND] of C26 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(241.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C34 on F.Cu
+    @(241.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C30 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(241.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C34 on F.Cu
     @(234.5000 mm, 145.0000 mm): Pad 2 [POWER_GND] of R21 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(249.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C31 on F.Cu
+    @(257.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C32 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(249.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C35 on F.Cu
+    @(257.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C36 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(249.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C35 on F.Cu
+    @(241.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C34 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
     @(253.5000 mm, 150.0000 mm): Pad 2 [POWER_GND] of R20 on F.Cu
+    @(261.3500 mm, 139.0000 mm): Pad 2 [POWER_GND] of C38 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(261.3500 mm, 122.0000 mm): Pad 2 [POWER_GND] of C26 on F.Cu
-    @(261.3500 mm, 130.0000 mm): Pad 2 [POWER_GND] of C30 on F.Cu
+    @(257.3500 mm, 115.0000 mm): Pad 2 [POWER_GND] of C28 on F.Cu
+    @(249.3500 mm, 115.0000 mm): Pad 2 [POWER_GND] of C27 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(261.3500 mm, 138.0000 mm): Pad 2 [POWER_GND] of C34 on F.Cu
-    @(261.3500 mm, 146.0000 mm): Pad 2 [POWER_GND] of C38 on F.Cu
+    @(257.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C32 on F.Cu
+    @(265.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C33 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(261.3500 mm, 146.0000 mm): Pad 2 [POWER_GND] of C38 on F.Cu
-    @(253.5000 mm, 150.0000 mm): Pad 2 [POWER_GND] of R20 on F.Cu
+    @(257.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C32 on F.Cu
+    @(257.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C36 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(269.3500 mm, 122.0000 mm): Pad 2 [POWER_GND] of C27 on F.Cu
-    @(261.3500 mm, 122.0000 mm): Pad 2 [POWER_GND] of C26 on F.Cu
+    @(265.3500 mm, 115.0000 mm): Pad 2 [POWER_GND] of C29 on F.Cu
+    @(257.3500 mm, 115.0000 mm): Pad 2 [POWER_GND] of C28 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(269.3500 mm, 130.0000 mm): Pad 2 [POWER_GND] of C31 on F.Cu
-    @(261.3500 mm, 130.0000 mm): Pad 2 [POWER_GND] of C30 on F.Cu
+    @(265.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C33 on F.Cu
+    @(265.3500 mm, 115.0000 mm): Pad 2 [POWER_GND] of C29 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(269.3500 mm, 130.0000 mm): Pad 2 [POWER_GND] of C31 on F.Cu
-    @(277.3500 mm, 130.0000 mm): Pad 2 [POWER_GND] of C32 on F.Cu
+    @(265.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C37 on F.Cu
+    @(265.3500 mm, 123.0000 mm): Pad 2 [POWER_GND] of C33 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(269.3500 mm, 138.0000 mm): Pad 2 [POWER_GND] of C35 on F.Cu
-    @(269.3500 mm, 130.0000 mm): Pad 2 [POWER_GND] of C31 on F.Cu
+    @(269.3500 mm, 139.0000 mm): Pad 2 [POWER_GND] of C39 on F.Cu
+    @(261.3500 mm, 139.0000 mm): Pad 2 [POWER_GND] of C38 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(269.3500 mm, 138.0000 mm): Pad 2 [POWER_GND] of C35 on F.Cu
-    @(261.3500 mm, 138.0000 mm): Pad 2 [POWER_GND] of C34 on F.Cu
+    @(269.3500 mm, 139.0000 mm): Pad 2 [POWER_GND] of C39 on F.Cu
+    @(265.3500 mm, 131.0000 mm): Pad 2 [POWER_GND] of C37 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(269.3500 mm, 146.0000 mm): Pad 2 [POWER_GND] of C39 on F.Cu
-    @(261.3500 mm, 146.0000 mm): Pad 2 [POWER_GND] of C38 on F.Cu
+    @(277.3500 mm, 139.0000 mm): Pad 2 [POWER_GND] of C40 on F.Cu
+    @(285.3500 mm, 139.0000 mm): Pad 2 [POWER_GND] of C41 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(277.3500 mm, 122.0000 mm): Pad 2 [POWER_GND] of C28 on F.Cu
-    @(269.3500 mm, 122.0000 mm): Pad 2 [POWER_GND] of C27 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(277.3500 mm, 138.0000 mm): Pad 2 [POWER_GND] of C36 on F.Cu
-    @(277.3500 mm, 146.0000 mm): Pad 2 [POWER_GND] of C40 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(285.3500 mm, 122.0000 mm): Pad 2 [POWER_GND] of C29 on F.Cu
-    @(277.3500 mm, 122.0000 mm): Pad 2 [POWER_GND] of C28 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(285.3500 mm, 122.0000 mm): Pad 2 [POWER_GND] of C29 on F.Cu
-    @(285.3500 mm, 130.0000 mm): Pad 2 [POWER_GND] of C33 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(285.3500 mm, 130.0000 mm): Pad 2 [POWER_GND] of C33 on F.Cu
-    @(285.3500 mm, 138.0000 mm): Pad 2 [POWER_GND] of C37 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(285.3500 mm, 138.0000 mm): Pad 2 [POWER_GND] of C37 on F.Cu
-    @(277.3500 mm, 138.0000 mm): Pad 2 [POWER_GND] of C36 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(285.3500 mm, 146.0000 mm): Pad 2 [POWER_GND] of C41 on F.Cu
-    @(277.3500 mm, 146.0000 mm): Pad 2 [POWER_GND] of C40 on F.Cu
+    @(277.3500 mm, 139.0000 mm): Pad 2 [POWER_GND] of C40 on F.Cu
+    @(269.3500 mm, 139.0000 mm): Pad 2 [POWER_GND] of C39 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(23.7500 mm, 143.0000 mm): Pad A4 [/SERVICE/SERVICE_GND] of J4 on F.Cu
@@ -1781,10 +1781,10 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(244.5000 mm, 140.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R22 on F.Cu
-    @(244.5000 mm, 150.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R19 on F.Cu
+    @(238.0000 mm, 141.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on In2.PWR, length 44.6500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(258.0000 mm, 140.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on In2.PWR, length 16.6500 mm
+    @(244.5000 mm, 150.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R19 on F.Cu
     @(244.5000 mm, 140.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R22 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -1840,12 +1840,12 @@
     @(227.2500 mm, 103.7500 mm): Pad 15 [/REGULATORS/NC] of U5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(57.9000 mm, 41.2500 mm): PTH pad 6 [/POWER_INPUT/FUSED_12V_A] of F1
+    @(57.9000 mm, 38.7500 mm): Track [/POWER_INPUT/FUSED_12V_A] on B.Cu, length 2.5000 mm
     @(20.4500 mm, 76.4500 mm): Pad 6 [/POWER_INPUT/FUSED_12V_A] of U1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(108.0000 mm, 32.0000 mm): Pad 1 [/POWER_INPUT/FUSED_12V_A] of D1 on F.Cu
-    @(61.4000 mm, 38.7500 mm): PTH pad 7 [/POWER_INPUT/FUSED_12V_A] of F1
+    @(57.9000 mm, 38.7500 mm): Track [/POWER_INPUT/FUSED_12V_A] on B.Cu, length 3.5000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(19.5000 mm, 76.4500 mm): Pad 5 [/POWER_INPUT/GATE_A] of U1 on F.Cu
@@ -1853,18 +1853,18 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(20.4500 mm, 96.4500 mm): Pad 6 [/POWER_INPUT/FUSED_12V_B] of U2 on F.Cu
-    @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on B.Cu, length 162.5914 mm
+    @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on B.Cu, length 2.5000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(56.4000 mm, 118.7500 mm): PTH pad 7 [/POWER_INPUT/FUSED_12V_B] of F2
+    @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on B.Cu, length 3.5000 mm
     @(108.0000 mm, 72.0000 mm): Pad 1 [/POWER_INPUT/FUSED_12V_B] of D2 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(20.0000 mm, 90.0000 mm): Track [/POWER_INPUT/12V_IN_B] on B.Cu, length 25.0000 mm
+    @(20.0000 mm, 45.0000 mm): Track [/POWER_INPUT/12V_IN_B] on B.Cu, length 45.0000 mm
     @(21.4500 mm, 96.4500 mm): Pad 3 [/POWER_INPUT/12V_IN_B] of U2 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(45.0000 mm, 90.0000 mm): Track [/POWER_INPUT/12V_IN_B] on B.Cu, length 28.7841 mm
+    @(20.0000 mm, 90.0000 mm): Track [/POWER_INPUT/12V_IN_B] on B.Cu, length 25.0000 mm
     @(110.8000 mm, 95.0000 mm): Pad 2 [/POWER_INPUT/12V_IN_B] of C4 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error

@@ -26,7 +26,7 @@ closed by `TPSM63606_SUPPORT_AUTHORITY.md` and the native footprint receipt.
 | TI requirement | U3 CM5 5 V | U4 bridge 3.3 V | U5 bridge 1.1 V | Evidence/status |
 |---|---|---|---|---|
 | VIN close and edge-escaped | yes | yes | yes | `phase15_power_escape.py`; focused native DRC |
-| VOUT close and edge-escaped | yes | yes | yes | U5 bank in `phase15_u5_vout_bank.py`; U3/U4 escapes in same pipeline |
+| VOUT close and edge-escaped | yes | yes | first 12 close; row 4 offset | U5 bank in `phase15_u5_vout_bank.py`; U3/U4 escapes in same pipeline |
 | localized capacitor PGND return | thermal PGND array | thermal PGND array | 16 dedicated local return vias | Phase 15 board candidates; native regression |
 | lower-layer VOUT feed | pending final overlay audit | pending final overlay audit | In2.Cu trunk | route candidate, not final board closure |
 | FB components close to FB | routed island | routed island | routed island | `test_phase15_u4_u5_controls.py` and U3 control regression |
