@@ -1,0 +1,4 @@
+(version 1)
+(rule "USB3 fixed-host main-route width"
+  (constraint track_width (min 0.13208mm))
+  (condition "(A.hasNetclass('USB3_90R_L1_L2') || B.hasNetclass('USB3_90R_L1_L2')) && (A.Type == 'Track' || B.Type == 'Track')"))

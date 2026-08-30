@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="60 28 215 137">
+  <title>Conceptual zones on the bbenchoff SXM2-to-PCIe reference board</title>
+  <desc>Derived annotation over the KiCad board coordinate envelope. This image is not a modified KiCad source file and does not define a future CM5 layout.</desc>
+  <style>
+    .label { font: 2.7px sans-serif; fill: #111; }
+    .small { font: 2px sans-serif; fill: #222; }
+    .title { font: bold 4px sans-serif; fill: #111; }
+    .zone { stroke-width: .45; }
+    .dashed { stroke-dasharray: 2 1.4; }
+  </style>
+
+  <rect x="60" y="28" width="215" height="137" fill="#ffffff"/>
+  <text x="68" y="32" class="title">SXM2toPCIe reference — conceptual zones from live KiCad coordinates</text>
+  <text x="68" y="35" class="small">Upstream source is immutable. Annotation is derived only; no CM5 circuitry is designed here.</text>
+
+  <!-- Approximate Edge.Cuts outline from the live board. -->
+  <path d="M71.3,40.95 H241.3 V139.5 H214 V144.35 L212.6,149.35 H201.8 L201.3,148.85 V144.55 H198.55 L198.05,152.25 H127.85 L127.35,151.75 V144.8 H125.46 V151.74 L124.96,152.24 H114.76 L114.26,151.74 V141.35 H110.55 V147.8 H102.6 V139.55 H83.9 V147.8 H68.8 V43.45 Z" fill="#f7f7f7" stroke="#333" stroke-width=".55"/>
+
+  <!-- Major regions -->
+  <rect x="71.62" y="53.24" width="138.4" height="76.36" rx="1" fill="#d9ead3" fill-opacity=".75" stroke="#38761d" class="zone"/>
+  <text x="74" y="55.8" class="label">SXM2 mechanical / module zone</text>
+  <text x="74" y="58.6" class="small">SXMHardware1: 8 M3 standoff pads</text>
+
+  <rect x="94.52" y="58.82" width="26.69" height="65.25" fill="#cfe2f3" fill-opacity=".9" stroke="#1155cc" class="zone"/>
+  <text x="96" y="62" class="label">J2</text>
+  <text x="96" y="64.7" class="small">populated Amphenol</text>
+  <text x="96" y="67.1" class="small">74221-101LF</text>
+
+  <rect x="160.4" y="58.79" width="26.69" height="65.25" fill="#eeeeee" fill-opacity=".95" stroke="#777" class="zone dashed"/>
+  <text x="162" y="62" class="label">J3</text>
+  <text x="162" y="64.7" class="small">second Meg-Array</text>
+  <text x="162" y="67.1" class="small">all 400 pads NC</text>
+
+  <rect x="114.96" y="87.2" width="11.8" height="6.0" fill="#eadcf8" fill-opacity=".95" stroke="#674ea7" class="zone"/>
+  <text x="115.2" y="96" class="small">D2 / R1: K18/K19 auxiliary node</text>
+
+  <rect x="131.4" y="140.8" width="67.2" height="3.0" fill="#fce5cd" fill-opacity=".95" stroke="#e69138" class="zone"/>
+  <text x="132" y="139.4" class="label">32 × 220 nF AC-coupling capacitors</text>
+
+  <rect x="113.74" y="143.3" width="85.35" height="9.45" fill="#f4cccc" fill-opacity=".9" stroke="#990000" class="zone"/>
+  <text x="115" y="151.1" class="label">J1 PCIe x16 card-edge footprint</text>
+
+  <!-- Highlight the lane-0/card-edge evidence landmarks. -->
+  <line x1="129.91" y1="145.18" x2="129.91" y2="148.79" stroke="#cc0000" stroke-width=".8"/>
+  <line x1="130.91" y1="145.18" x2="130.91" y2="148.79" stroke="#cc0000" stroke-width=".8"/>
+  <line x1="131.93" y1="141.98" x2="131.93" y2="148.79" stroke="#ff8800" stroke-width=".65"/>
+  <line x1="132.91" y1="141.98" x2="132.91" y2="148.79" stroke="#ff8800" stroke-width=".65"/>
+  <text x="134.1" y="146.8" class="small">lane 0 partial copper landmarks</text>
+
+  <!-- This is deliberately a dashed concept-only region. -->
+  <rect x="202.5" y="140.5" width="35" height="10.5" fill="#d9d2e9" fill-opacity=".5" stroke="#674ea7" class="zone dashed"/>
+  <text x="204" y="143.2" class="label">CONCEPT ONLY</text>
+  <text x="204" y="146" class="small">future CM5-side</text>
+  <text x="204" y="148.3" class="small">interface / routing</text>
+
+  <rect x="70" y="157" width="3" height="3" fill="#d9ead3" stroke="#38761d" class="zone"/><text x="74" y="159.5" class="small">mechanical zone</text>
+  <rect x="91" y="157" width="3" height="3" fill="#cfe2f3" stroke="#1155cc" class="zone"/><text x="95" y="159.5" class="small">active SXM2 connector</text>
+  <rect x="123" y="157" width="3" height="3" fill="#fce5cd" stroke="#e69138" class="zone"/><text x="127" y="159.5" class="small">coupling row</text>
+  <rect x="145" y="157" width="3" height="3" fill="#f4cccc" stroke="#990000" class="zone"/><text x="149" y="159.5" class="small">PCIe edge</text>
+  <rect x="164" y="157" width="3" height="3" fill="#d9d2e9" stroke="#674ea7" class="zone dashed"/><text x="168" y="159.5" class="small">future concept only</text>
+</svg>

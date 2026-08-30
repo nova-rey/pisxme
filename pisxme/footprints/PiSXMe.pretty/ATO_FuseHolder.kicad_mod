@@ -1,0 +1,12 @@
+	(footprint "ATO_FuseHolder"
+		(layer "F.Cu")
+		(uuid "c9ee8034-7c00-4203-8527-98e2dc3aaed8")
+		(at 87 116)
+		(property "Reference" "F1" (at 0 -5.5 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
+		(property "Value" "Littelfuse 178.6165.0001 / 0297015.U 15A holder" (at 0 5.5 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1) (thickness 0.15))))
+		(attr through_hole)
+		(fp_rect (start -11 -4) (end 11 4) (stroke (width 0.25) (type default)) (fill none) (layer "Dwgs.User") (uuid "be283fbb-c49b-4f32-9d2b-33838994aa00"))
+		(fp_rect (start -11 -4) (end 11 4) (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (uuid "95a31062-21a7-4d4f-b83c-a8465839d765"))
+		(pad "1" thru_hole circle (at -7.62 0) (size 3.4 3.4) (drill 1.8) (layers "*.Cu" "*.Mask") (uuid "f8634a4e-d549-4924-a05a-c4df816e40b4"))
+		(pad "2" thru_hole circle (at 7.62 0) (size 3.4 3.4) (drill 1.8) (layers "*.Cu" "*.Mask") (uuid "55918bbe-7b0e-4ece-a1e8-2e64d49bd5ee"))
+	)

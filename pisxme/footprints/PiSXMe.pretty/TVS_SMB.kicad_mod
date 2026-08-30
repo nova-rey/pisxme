@@ -1,0 +1,12 @@
+	(footprint "TVS_SMB"
+		(layer "F.Cu")
+		(uuid "26d737bc-ec77-4943-9918-afc0d4234617")
+		(at 145 130)
+		(property "Reference" "D1" (at 0 -3.5 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
+		(property "Value" "SMBJ18A 600W TVS, provisional source protection" (at 0 3.5 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1) (thickness 0.15))))
+		(attr smd)
+		(fp_rect (start -3 -2) (end 3 2) (stroke (width 0.25) (type default)) (fill none) (layer "Dwgs.User") (uuid "a1d72206-ba4b-4fd7-bf3d-54b1f3a6e454"))
+		(fp_rect (start -3 -2) (end 3 2) (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (uuid "d914f963-1509-4387-9521-9f78bf7eec23"))
+		(pad "1" smd roundrect (at -2 0) (size 1.4 1.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (uuid "fc708024-d6d6-49e6-8f04-812fa46db3dc"))
+		(pad "2" smd roundrect (at 2 0) (size 1.4 1.2) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (uuid "190b7be4-58b9-42aa-9cc8-bed667988448"))
+	)

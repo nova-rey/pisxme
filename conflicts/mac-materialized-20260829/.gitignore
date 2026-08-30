@@ -1,0 +1,25 @@
+.venv/
+.venv311/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+test-fixtures/**/outputs/
+test-fixtures/**/.cache/
+test-fixtures/**/.history/
+test-fixtures/**/exports/
+test-fixtures/**/drc*.json
+test-fixtures/**/~*.lck
+test-fixtures/**/*_saved_as.kicad_pcb
+pisxme/*.kicad_prl
+pisxme/~*.lck
+
+# Large immutable upstream clone and disposable KiCad working copies.
+references/SXM2toPCIe/
+references/LiuXinyu12378-SXM2_to_PCIE_adapter/
+references/RaspberryPi-CM5IO-rev2/
+# Preserve nested upstream clone metadata locally without embedding a second
+# Git repository in the PiSXMe history. The source files themselves remain
+# tracked under references/cm5/.
+references/cm5/*/.upstream-git/
+work/

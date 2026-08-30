@@ -1,0 +1,22 @@
+ref,manufacturer,mpn,function,active_footprint,classification,evidence_or_release_note
+J1,Amphenol,74221-101LF,SXM2 receptacle,SXM2_74221-101LF_MANUFACTURER_VERIFIED,MANUFACTURER_VERIFIED,Amphenol drawing specification application specification
+J2A/J2B,Amphenol,10164227-1004A1RLF,CM5 board-to-board connectors,CM5_10164227-1004A1RLF_MANUFACTURER_DERIVED,MANUFACTURER_VERIFIED,official drawing and 0.4 mm land pattern
+J3/J4,Molex,39301082,dual 12 V input receptacles,MiniFitJr_8_RA,DATASHEET_DERIVED_AND_CHECKED,official product and drawing family; cable housing 39012085
+U1/TI,TPSM63606RDLR,CM5 5 V buck,TPSM63606,DATASHEET_DERIVED_AND_CHECKED,official RDL package and reference layout
+U16,TI,TPSM63606RDLR,USB peripheral 5 V buck,TPSM63606_USB,DATASHEET_DERIVED_AND_CHECKED,same RDL package basis as U1
+U2/U3,TI,LM74700QDBVRQ1,reverse-current controller,LM74700_DBV,DATASHEET_DERIVED_AND_CHECKED,official DBV package and pinout
+Q1/Q2,TI,CSD19536KCS,reverse-current MOSFET,CSD19536KCS_TO220,DATASHEET_DERIVED_AND_CHECKED,official TO-220 pinout and body
+F1/F2,Littelfuse,178.6165.0001 plus 0297015.U,branch fuse and holder,ATO_FuseHolder,DATASHEET_DERIVED_AND_CHECKED,official holder drawing and fuse package
+C1/C2,Murata,GRM21BR71H224KA01#,PCIe AC coupling capacitors,C_0805_2012Metric,DATASHEET_DERIVED_AND_CHECKED,Murata 0805 land-pattern class and selected MPN
+J5/J6/J7,Molex,22-23-2041,intelligent cooling fan headers,Fan_2x2_2.54mm,DATASHEET_DERIVED_AND_CHECKED,standard 2.54 mm PC PWM header intent
+J8,JST,B4B-PH-K-S,internal UART,JST_PH_4,DATASHEET_DERIVED_AND_CHECKED,official PH series pitch and 1x4 pattern
+J9/J10,Amphenol,10137064-00011LF,USB3 Type-C FAST A/B,USB_C_FAST_10137064,DATASHEET_DERIVED_AND_CHECKED,official product/drawing family; vendor CAD overlay before fabrication release
+J11,Amphenol,10171746-00021LF,USB2 Type-C SERVICE,USB_C_SERVICE_10171746,DATASHEET_DERIVED_AND_CHECKED,official product/drawing family; vendor CAD overlay before fabrication release
+U4/U8,TI,TPS25821DSSR,USB-C source and VBUS controller,TPS25821_DSS,DATASHEET_DERIVED_AND_CHECKED,official DSS package and pinout
+U5/U9,TI,HD3SS3212IRKSR,USB3 orientation mux,HD3SS3212_RKS,DATASHEET_DERIVED_AND_CHECKED,official RKS package and high-speed pinout
+U6/U7/U10/U11,TI,TPD4EUSB30,USB3 ESD protection,TPD4EUSB30_DQA,DATASHEET_DERIVED_AND_CHECKED,official DQA package and two orientation-branch arrays per reversible FAST port
+U17/U18,TI,TPD2EUSB30A,FAST USB2 companion ESD,TPD2EUSB30A_DQA,DATASHEET_DERIVED_AND_CHECKED,official package family and USB2 ESD placement guidance
+U12,TI,TUSB320LAIRWBR,USB-C SERVICE DRP controller,TUSB320LAI_RWB,DATASHEET_DERIVED_AND_CHECKED,official RWB package and role-control pinout
+U13,TI,TPS2553DBVR,SERVICE VBUS limiter,TPS2553_DBV,DATASHEET_DERIVED_AND_CHECKED,official DBV package and reverse-blocking/current-limit pinout
+U14,TI,SN74LVC1G04DCKR,SERVICE VBUS interlock inverter,SN74LVC1G04_DCK,DATASHEET_DERIVED_AND_CHECKED,official DCK package and logic pinout
+U15,TI,TPD2EUSB30A,USB2 SERVICE ESD,TPD2EUSB30A_DQA,DATASHEET_DERIVED_AND_CHECKED,official package family and USB2 ESD pinout

@@ -1,0 +1,180 @@
+** Drc report for PiSXMe_USB_A_VARIANT.kicad_pcb **
+** Created on 2026-08-27T08:20:43 **
+** Report includes: Errors, Warnings **
+
+** Found 28 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(55.5000 mm, 19.1000 mm): Track [USB_A_D_N] on F.Cu, length 32.5002 mm
+    @(50.4175 mm, 15.5000 mm): Track [USB_A_TX_P] on F.Cu, length 36.3620 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(50.4175 mm, 16.0000 mm): Track [USB_A_TX_N] on F.Cu, length 36.5780 mm
+    @(55.5000 mm, 19.1000 mm): Track [USB_A_D_N] on F.Cu, length 32.5002 mm
+[shorting_items]: Items shorting two nets (nets USB_B_TX_P and USB_B_VBUS)
+    Local override; error
+    @(86.4500 mm, 54.0000 mm): PTH pad A8 [USB_B_TX_P] of J_B
+    @(71.0000 mm, 46.0000 mm): Track [USB_B_VBUS] on B.Cu, length 19.4743 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1250 mm)
+    Local override; error
+    @(55.0000 mm, 53.5000 mm): Pad 3 [<no net>] of U2_B on F.Cu
+    @(54.5000 mm, 53.9000 mm): Track [USB_B_D_P] on F.Cu, length 1.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1250 mm)
+    Local override; error
+    @(55.0000 mm, 53.5000 mm): Pad 3 [<no net>] of U2_B on F.Cu
+    @(54.5000 mm, 53.1000 mm): Track [USB_B_D_N] on F.Cu, length 1.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(55.5000 mm, 53.1000 mm): Track [USB_B_D_N] on F.Cu, length 32.5002 mm
+    @(55.5000 mm, 53.9000 mm): Track [USB_B_D_P] on F.Cu, length 32.6291 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(55.5000 mm, 53.1000 mm): Track [USB_B_D_N] on F.Cu, length 32.5002 mm
+    @(50.4175 mm, 50.0000 mm): Track [USB_B_TX_N] on F.Cu, length 36.5780 mm
+[shorting_items]: Items shorting two nets (nets USB_B_TX_P and USB_B_TX_N)
+    Local override; error
+    @(15.0000 mm, 49.5000 mm): Pad 4 [USB_B_TX_P] of H_B on F.Cu
+    @(15.0000 mm, 49.5000 mm): Track [USB_B_TX_N] on F.Cu, length 34.5861 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(50.4175 mm, 49.5000 mm): Track [USB_B_TX_P] on F.Cu, length 36.3620 mm
+    @(55.5000 mm, 53.1000 mm): Track [USB_B_D_N] on F.Cu, length 32.5002 mm
+[shorting_items]: Items shorting two nets (nets  and USB_B_TX_P)
+    Local override; error
+    @(15.0000 mm, 49.0000 mm): Pad 3 [<no net>] of H_B on F.Cu
+    @(15.0000 mm, 49.0000 mm): Track [USB_B_TX_P] on F.Cu, length 34.5861 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1913 mm)
+    Local override; error
+    @(50.4175 mm, 49.0000 mm): Pad 8 [<no net>] of U_B on F.Cu
+    @(50.4175 mm, 48.5000 mm): Track [USB_B_RX_N] on F.Cu, length 36.1137 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1970 mm)
+    Local override; error
+    @(15.0000 mm, 15.0000 mm): Track [USB_A_TX_P] on F.Cu, length 34.5861 mm
+    @(49.5825 mm, 15.0000 mm): Pad 3 [<no net>] of U_A on F.Cu
+[shorting_items]: Items shorting two nets (nets USB_A_TX_P and USB_A_VBUS)
+    Local override; error
+    @(86.4500 mm, 20.0000 mm): PTH pad A8 [USB_A_TX_P] of J_A
+    @(71.0000 mm, 12.0000 mm): Track [USB_A_VBUS] on B.Cu, length 19.4743 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1250 mm)
+    Local override; error
+    @(54.5000 mm, 19.9000 mm): Track [USB_A_D_P] on F.Cu, length 1.0000 mm
+    @(55.0000 mm, 19.5000 mm): Pad 3 [<no net>] of U2_A on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1250 mm)
+    Local override; error
+    @(54.5000 mm, 19.1000 mm): Track [USB_A_D_N] on F.Cu, length 1.0000 mm
+    @(55.0000 mm, 19.5000 mm): Pad 3 [<no net>] of U2_A on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1913 mm)
+    Local override; error
+    @(50.4175 mm, 15.0000 mm): Pad 8 [<no net>] of U_A on F.Cu
+    @(50.4175 mm, 14.5000 mm): Track [USB_A_RX_N] on F.Cu, length 36.1137 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(55.5000 mm, 19.1000 mm): Track [USB_A_D_N] on F.Cu, length 32.5002 mm
+    @(55.5000 mm, 19.9000 mm): Track [USB_A_D_P] on F.Cu, length 32.6291 mm
+[shorting_items]: Items shorting two nets (nets USB_A_TX_N and USB_A_TX_P)
+    Local override; error
+    @(15.0000 mm, 15.5000 mm): Track [USB_A_TX_N] on F.Cu, length 34.5861 mm
+    @(15.0000 mm, 15.5000 mm): Pad 4 [USB_A_TX_P] of H_A on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(15.0000 mm, 15.0000 mm): Track [USB_A_TX_P] on F.Cu, length 34.5861 mm
+    @(15.0000 mm, 15.0000 mm): Pad 3 [<no net>] of H_A on F.Cu
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(71.0000 mm, 46.0000 mm): Track [USB_B_VBUS] on B.Cu, length 19.4743 mm
+    @(86.4500 mm, 54.0000 mm): PTH pad A8 [USB_B_TX_P] of J_B
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(15.0000 mm, 15.5000 mm): Track [USB_A_TX_N] on F.Cu, length 34.5861 mm
+    @(15.0000 mm, 15.5000 mm): Pad 4 [USB_A_TX_P] of H_A on F.Cu
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(71.0000 mm, 12.0000 mm): Track [USB_A_VBUS] on B.Cu, length 19.4743 mm
+    @(86.4500 mm, 20.0000 mm): PTH pad A8 [USB_A_TX_P] of J_A
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(15.0000 mm, 49.0000 mm): Track [USB_B_TX_P] on F.Cu, length 34.5861 mm
+    @(15.0000 mm, 49.0000 mm): Pad 3 [<no net>] of H_B on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(15.0000 mm, 49.5000 mm): Track [USB_B_TX_N] on F.Cu, length 34.5861 mm
+    @(15.0000 mm, 49.5000 mm): Pad 4 [USB_B_TX_P] of H_B on F.Cu
+[lib_footprint_issues]: The current configuration does not include the footprint library 'CM5IO'
+    Local override; warning
+    @(90.0000 mm, 18.0000 mm): Footprint J_A
+[lib_footprint_issues]: The current configuration does not include the footprint library 'CM5IO'
+    Local override; warning
+    @(90.0000 mm, 52.0000 mm): Footprint J_B
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(88.0000 mm, 52.0000 mm): Reference field of J_B
+    @(88.0000 mm, 53.0000 mm): PTH pad A2 [USB_B_D_N] of J_B
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(88.0000 mm, 18.0000 mm): Reference field of J_A
+    @(88.0000 mm, 19.0000 mm): PTH pad A2 [USB_A_D_N] of J_A
+
+** Found 13 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(50.4175 mm, 14.5000 mm): Track [USB_A_RX_N] on F.Cu, length 36.1137 mm
+    @(15.0000 mm, 14.5000 mm): Track [USB_A_RX_N] on F.Cu, length 34.5825 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(15.0000 mm, 14.0000 mm): Track [USB_A_RX_P] on F.Cu, length 34.5825 mm
+    @(50.4175 mm, 14.0000 mm): Track [USB_A_RX_P] on F.Cu, length 36.0825 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(15.0000 mm, 15.5000 mm): Track [USB_A_TX_N] on F.Cu, length 34.5861 mm
+    @(15.0000 mm, 16.0000 mm): Pad 5 [USB_A_TX_N] of H_A on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(50.4175 mm, 16.0000 mm): Track [USB_A_TX_N] on F.Cu, length 36.5780 mm
+    @(49.5825 mm, 16.0000 mm): Pad 5 [USB_A_TX_N] of U_A on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(15.0000 mm, 15.0000 mm): Track [USB_A_TX_P] on F.Cu, length 34.5861 mm
+    @(15.0000 mm, 15.5000 mm): Pad 4 [USB_A_TX_P] of H_A on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(50.4175 mm, 15.5000 mm): Track [USB_A_TX_P] on F.Cu, length 36.3620 mm
+    @(15.0000 mm, 15.0000 mm): Track [USB_A_TX_P] on F.Cu, length 34.5861 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(50.4175 mm, 48.5000 mm): Track [USB_B_RX_N] on F.Cu, length 36.1137 mm
+    @(49.5825 mm, 48.5000 mm): Pad 2 [USB_B_RX_N] of U_B on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(49.5825 mm, 48.0000 mm): Pad 1 [USB_B_RX_P] of U_B on F.Cu
+    @(50.4175 mm, 48.0000 mm): Pad 10 [USB_B_RX_P] of U_B on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(15.0000 mm, 49.5000 mm): Track [USB_B_TX_N] on F.Cu, length 34.5861 mm
+    @(15.0000 mm, 50.0000 mm): Pad 5 [USB_B_TX_N] of H_B on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(50.4175 mm, 50.0000 mm): Track [USB_B_TX_N] on F.Cu, length 36.5780 mm
+    @(49.5825 mm, 50.0000 mm): Pad 5 [USB_B_TX_N] of U_B on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(15.0000 mm, 49.0000 mm): Track [USB_B_TX_P] on F.Cu, length 34.5861 mm
+    @(15.0000 mm, 49.5000 mm): Pad 4 [USB_B_TX_P] of H_B on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(50.4175 mm, 49.5000 mm): Track [USB_B_TX_P] on F.Cu, length 36.3620 mm
+    @(49.5825 mm, 49.5000 mm): Pad 4 [USB_B_TX_P] of U_B on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(60.0000 mm, 12.0000 mm): Pad 1 [USB_5V] of PWR_A on F.Cu
+    @(60.0000 mm, 46.0000 mm): Track [USB_5V] on F.Cu, length 9.0000 mm
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

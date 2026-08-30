@@ -1,0 +1,51 @@
+reference,value,footprint,manufacturer,mpn,dnp
+C1,220nF X7R 50V PCIe AC coupling,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71H224KA01#,no
+C2,220nF X7R 50V PCIe AC coupling,Capacitor_SMD:C_0805_2012Metric,Murata,GRM21BR71H224KA01#,no
+C3,10uF 50V X7R buck input capacitor 1,Capacitor_SMD:C_1206_3216Metric,TDK,CGA6P1X7R1H106K250AC,no
+C4,10uF 50V X7R buck input capacitor 2,Capacitor_SMD:C_1206_3216Metric,TDK,CGA6P1X7R1H106K250AC,no
+C5,22uF 25V X7R buck output capacitor 1,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71E226ME15L,no
+C6,22uF 25V X7R buck output capacitor 2,Capacitor_SMD:C_1210_3225Metric,Murata,GRM32ER71E226ME15L,no
+C7,100nF 50V X7R VLDOIN capacitor,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71H104KA93D,no
+C8,100nF 50V X7R LM74700 VCAP capacitor A,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71H104KA93D,no
+C9,100nF 50V X7R LM74700 VCAP capacitor B,Capacitor_SMD:C_0603_1608Metric,Murata,GRM188R71H104KA93D,no
+F1,Littelfuse 178.6165.0001 + 0297015.U branch A,PiSXMe:ATO_FuseHolder,Littelfuse,178.6165.0001 + 0297015.U,no
+F2,Littelfuse 178.6165.0001 + 0297015.U branch B,PiSXMe:ATO_FuseHolder,Littelfuse,178.6165.0001 + 0297015.U,no
+J1,Amphenol 74221-101LF SXM2 receptacle,PiSXMe:SXM2_74221-101LF,Amphenol,74221-101LF,no
+J10,Amphenol 10137064-00011LF USB-C USB3 FAST B,PiSXMe:USB_C_FAST_10137064,Amphenol,10137064-00011LF,no
+J11,Amphenol 10171746-00021LF USB-C USB2 SERVICE,PiSXMe:USB_C_SERVICE_10171746,Amphenol,10171746-00021LF,no
+J2,2x Amphenol 10164227-1004A1RLF BergStak 4mm,PiSXMe:CM5_1004,Amphenol,10164227-1004A1RLF x2,no
+J3,Molex 39301082 Mini-Fit Jr 8-circuit input A,PiSXMe:MiniFitJr_8_RA,Molex,39301082,no
+J4,Molex 39301082 Mini-Fit Jr 8-circuit input B,PiSXMe:MiniFitJr_8_RA,Molex,39301082,no
+J5,Molex 22-23-2041 2.54mm PC PWM fan header 1,PiSXMe:Fan_2x2_2.54mm,Molex,22-23-2041,no
+J6,Molex 22-23-2041 2.54mm PC PWM fan header 2,PiSXMe:Fan_2x2_2.54mm,Molex,22-23-2041,no
+J7,Molex 22-23-2041 2.54mm pump/aux header,PiSXMe:Fan_2x2_2.54mm,Molex,22-23-2041,no
+J8,JST B4B-PH-K-S CM5 UART/debug,PiSXMe:JST_PH_4,JST,B4B-PH-K-S,no
+J9,Amphenol 10137064-00011LF USB-C USB3 FAST A,PiSXMe:USB_C_FAST_10137064,Amphenol,10137064-00011LF,no
+Q1,CSD19536KCS 100V low-loss N-MOSFET branch A,Package_TO_SOT_THT:TO-220-3_Vertical,Texas Instruments,CSD19536KCS,no
+Q2,CSD19536KCS 100V low-loss N-MOSFET branch B,Package_TO_SOT_THT:TO-220-3_Vertical,Texas Instruments,CSD19536KCS,no
+R1,0R POP CLKREQ always-requested clock strap,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-070RL,no
+R2,40.2k 1% feedback upper resistor,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0740K2L,no
+R3,10.0k 1% feedback lower resistor,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0710KL,no
+R4,13.0k RT frequency resistor,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0713KL,no
+R5,100k 0.5% TPS25821 REF resistor FAST A,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-07100KL,no
+R6,100k 0.5% TPS25821 REF resistor FAST B,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-07100KL,no
+R7,52.3k 1% TPS2553 0.5A current-limit resistor,Resistor_SMD:R_0603_1608Metric,Yageo,RC0603FR-0752K3L,no
+TP3,CM5 nRPIBOOT / internal rpiboot test point,PiSXMe:TestPoint,Keystone Electronics,5000,no
+U1,TPSM63606RDLR 6A 12V-to-5V module,PiSXMe:TPSM63606,Texas Instruments,TPSM63606RDLR,no
+U10,TPD4EUSB30 FAST B SuperSpeed ESD array 1,PiSXMe:TPD4EUSB30_DQA,Texas Instruments,TPD4EUSB30,no
+U11,TPD4EUSB30 FAST B SuperSpeed ESD array 2,PiSXMe:TPD4EUSB30_DQA,Texas Instruments,TPD4EUSB30,no
+U12,TUSB320LAIRWBR SERVICE USB-C DRP controller,PiSXMe:TUSB320LAI_RWB,Texas Instruments,TUSB320LAIRWBR,no
+U13,TPS2553DBVR SERVICE VBUS current limiter,PiSXMe:TPS2553_DBV,Texas Instruments,TPS2553DBVR,no
+U14,SN74LVC1G04DCKR SERVICE VBUS role inverter,PiSXMe:SN74LVC1G04_DCK,Texas Instruments,SN74LVC1G04DCKR,no
+U15,TPD2EUSB30A SERVICE USB2 ESD array,PiSXMe:TPD2EUSB30A_DQA,Texas Instruments,TPD2EUSB30A,no
+U16,TPSM63606RDLR 6A dedicated USB peripheral 5V rail,PiSXMe:TPSM63606_USB,Texas Instruments,TPSM63606RDLR,no
+U17,TPD2EUSB30A FAST A USB2 companion ESD array,PiSXMe:TPD2EUSB30A_DQA,Texas Instruments,TPD2EUSB30A,no
+U18,TPD2EUSB30A FAST B USB2 companion ESD array,PiSXMe:TPD2EUSB30A_DQA,Texas Instruments,TPD2EUSB30A,no
+U2,LM74700QDBVRQ1 branch A reverse-current controller,Package_TO_SOT_SMD:SOT-23,Texas Instruments,LM74700QDBVRQ1,no
+U3,LM74700QDBVRQ1 branch B reverse-current controller,Package_TO_SOT_SMD:SOT-23,Texas Instruments,LM74700QDBVRQ1,no
+U4,TPS25821DSSR FAST A Type-C source controller,PiSXMe:TPS25821_DSS,Texas Instruments,TPS25821DSSR,no
+U5,HD3SS3212IRKSR FAST A SuperSpeed orientation mux,PiSXMe:HD3SS3212_RKS,Texas Instruments,HD3SS3212IRKSR,no
+U6,TPD4EUSB30 FAST A SuperSpeed ESD array 1,PiSXMe:TPD4EUSB30_DQA,Texas Instruments,TPD4EUSB30,no
+U7,TPD4EUSB30 FAST A SuperSpeed ESD array 2,PiSXMe:TPD4EUSB30_DQA,Texas Instruments,TPD4EUSB30,no
+U8,TPS25821DSSR FAST B Type-C source controller,PiSXMe:TPS25821_DSS,Texas Instruments,TPS25821DSSR,no
+U9,HD3SS3212IRKSR FAST B SuperSpeed orientation mux,PiSXMe:HD3SS3212_RKS,Texas Instruments,HD3SS3212IRKSR,no

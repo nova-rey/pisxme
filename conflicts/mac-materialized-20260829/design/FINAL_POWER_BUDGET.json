@@ -1,0 +1,24 @@
+{
+  "status": "pre-routing design budget",
+  "input_voltage_v": 12.0,
+  "v100_nominal_w": 300.0,
+  "v100_peak_design_w": 330.0,
+  "cm5_output_w": 12.5,
+  "cm5_output_peak_w": 15.0,
+  "buck_efficiency_assumption": 0.90,
+  "fans_continuous_a": 0.6,
+  "fans_peak_a": 1.0,
+  "pump_peak_a": 2.0,
+  "control_peak_a": 0.4,
+  "startup_margin_a": 2.0,
+  "continuous_input_current_a": 28.5,
+  "peak_input_current_a": 34.3,
+  "branch_count": 2,
+  "branch_fuse_a": 15.0,
+  "recommended_psu_w": 500.0,
+  "notes": [
+    "The V100 values are a design allowance, not a measured module load.",
+    "Two input branches must be present and balanced; one branch is not a single-branch 300 W solution.",
+    "Final copper, connector, cable, and thermal derating remain routing/manufacturing gates."
+  ]
+}

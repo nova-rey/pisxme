@@ -1,0 +1,4 @@
+kicad-python==0.7.1
+kicad-sch-api==0.5.6
+mcp==1.29.0
+cryptography==44.0.3

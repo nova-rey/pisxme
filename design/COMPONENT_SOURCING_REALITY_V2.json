@@ -1,0 +1,20 @@
+{
+  "date": "2026-08-20",
+  "scope": "critical PiSXMe prototype components",
+  "items": [
+    {"mpn":"74221-101LF","status":"active_but_assembly_critical","confidence":"medium"},
+    {"mpn":"10164227-1004A1RLF","status":"active_family_source_check_required","confidence":"medium"},
+    {"mpn":"TPSM63606RDLR","status":"active_source_check_required","confidence":"medium"},
+    {"mpn":"LM74700QDBVRQ1","status":"sourceable_variant_check_required","confidence":"medium"},
+    {"mpn":"CSD19536KCS","status":"sourceable_secondary_assembly","confidence":"medium"},
+    {"mpn":"39301082","status":"sourceable_mating_set_check_required","confidence":"medium"},
+    {"mpn":"39012085","status":"sourceable_mating_set_check_required","confidence":"medium"},
+    {"mpn":"GRM21BR71H224KA01#","status":"common_mlcc_dc_bias_check_required","confidence":"medium"},
+    {"mpn":"0297015.U","status":"source_check_required","confidence":"medium"},
+    {"mpn":"178.6165.0001","status":"secondary_assembly_source_check_required","confidence":"medium"},
+    {"mpn":"fan_header","status":"mpn_unresolved","confidence":"low"},
+    {"mpn":"B4B-PH-K-S","status":"footprint_unresolved","confidence":"low"},
+    {"mpn":"ethernet_usb","status":"mpn_unresolved","confidence":"low"}
+  ],
+  "result":"major_power_parts_plausibly_sourceable;_critical_interconnect_and_io_footprints_not_released"
+}

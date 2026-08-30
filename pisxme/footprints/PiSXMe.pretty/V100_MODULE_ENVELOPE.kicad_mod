@@ -1,0 +1,10 @@
+	(footprint "V100_MODULE_ENVELOPE"
+		(layer "F.Cu")
+		(uuid "c10e2c98-46e1-43fe-af6e-c121fd2671a9")
+		(at 85 70)
+		(property "Reference" "MECH1" (at 0 -41.5 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
+		(property "Value" "V100/SXM2 module envelope only" (at 0 41.5 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1) (thickness 0.15))))
+		(attr smd)
+		(fp_rect (start -70 -40) (end 70 40) (stroke (width 0.25) (type default)) (fill none) (layer "Dwgs.User") (uuid "cb10315a-8c45-4936-a237-dde995b5dd34"))
+		(fp_rect (start -70 -40) (end 70 40) (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (uuid "38b818c7-6500-420d-8f72-91992d290f0e"))
+	)

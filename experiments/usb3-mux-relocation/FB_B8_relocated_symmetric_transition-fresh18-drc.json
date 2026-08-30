@@ -1,0 +1,771 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-23T12:57:16",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "key": "pth_inside_courtyard"
+        },
+        {
+            "description": "NPTH inside courtyard",
+            "key": "npth_inside_courtyard"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "schematic_parity": [],
+    "source": "FB_B8_relocated_symmetric_transition.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad S1 [/CHASSIS_GND] of J10 on F.Cu",
+                    "pos": {
+                        "x": 204.0,
+                        "y": 130.0
+                    },
+                    "uuid": "5b648ad1-3d17-4541-ad84-2a2f27552347"
+                },
+                {
+                    "description": "Pad S2 [/CHASSIS_GND] of J10 on F.Cu",
+                    "pos": {
+                        "x": 217.0,
+                        "y": 130.0
+                    },
+                    "uuid": "c1ab3b37-e279-439f-908a-31bb61f3058a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [/GND] of U9 on F.Cu",
+                    "pos": {
+                        "x": 186.35,
+                        "y": 118.25
+                    },
+                    "uuid": "5c0c06b6-a56d-49f7-a3fc-c9f14848c567"
+                },
+                {
+                    "description": "Pad 5 [/GND] of U9 on F.Cu",
+                    "pos": {
+                        "x": 186.35,
+                        "y": 119.75
+                    },
+                    "uuid": "d3b7fea6-0c87-46b0-a98b-078e44efb243"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 5 [/GND] of U9 on F.Cu",
+                    "pos": {
+                        "x": 186.35,
+                        "y": 119.75
+                    },
+                    "uuid": "d3b7fea6-0c87-46b0-a98b-078e44efb243"
+                },
+                {
+                    "description": "Pad 21 [/GND] of U9 on F.Cu",
+                    "pos": {
+                        "x": 187.5,
+                        "y": 120.0
+                    },
+                    "uuid": "5407b209-c304-4f8f-8549-96ff2b8319aa"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 21 [/GND] of U9 on F.Cu",
+                    "pos": {
+                        "x": 187.5,
+                        "y": 120.0
+                    },
+                    "uuid": "5407b209-c304-4f8f-8549-96ff2b8319aa"
+                },
+                {
+                    "description": "Pad 11 [/GND] of U9 on F.Cu",
+                    "pos": {
+                        "x": 187.75,
+                        "y": 122.15
+                    },
+                    "uuid": "c3a4ab8b-b225-4f8c-be99-5741095f2f95"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 20 [/GND] of U9 on F.Cu",
+                    "pos": {
+                        "x": 187.75,
+                        "y": 117.85
+                    },
+                    "uuid": "f4705816-1e28-4041-9969-13cd798f7c74"
+                },
+                {
+                    "description": "Pad 2 [/GND] of U9 on F.Cu",
+                    "pos": {
+                        "x": 186.35,
+                        "y": 118.25
+                    },
+                    "uuid": "5c0c06b6-a56d-49f7-a3fc-c9f14848c567"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 8 [/GND] of U10 on F.Cu",
+                    "pos": {
+                        "x": 200.5825,
+                        "y": 127.0
+                    },
+                    "uuid": "9f325b9d-bd0e-4e5c-a46a-a00463a1e22c"
+                },
+                {
+                    "description": "Pad 3 [/GND] of U10 on F.Cu",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 127.0
+                    },
+                    "uuid": "4e71702f-f256-474d-8f3f-3f9ff1447c2a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 8 [/GND] of U10 on F.Cu",
+                    "pos": {
+                        "x": 200.5825,
+                        "y": 127.0
+                    },
+                    "uuid": "9f325b9d-bd0e-4e5c-a46a-a00463a1e22c"
+                },
+                {
+                    "description": "Pad 11 [/GND] of U9 on F.Cu",
+                    "pos": {
+                        "x": 187.75,
+                        "y": 122.15
+                    },
+                    "uuid": "c3a4ab8b-b225-4f8c-be99-5741095f2f95"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 8 [/GND] of U11 on F.Cu",
+                    "pos": {
+                        "x": 200.5825,
+                        "y": 136.0
+                    },
+                    "uuid": "1ab73f49-f628-4ca5-ad60-f1663f5f9b88"
+                },
+                {
+                    "description": "Pad 3 [/GND] of U11 on F.Cu",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 136.0
+                    },
+                    "uuid": "aa30c46d-bff6-4b71-8f4f-c81dfb4c4764"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 3 [/GND] of U10 on F.Cu",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 127.0
+                    },
+                    "uuid": "4e71702f-f256-474d-8f3f-3f9ff1447c2a"
+                },
+                {
+                    "description": "Pad A1 [/GND] of J10 on F.Cu",
+                    "pos": {
+                        "x": 207.75,
+                        "y": 127.0
+                    },
+                    "uuid": "0a7aa15a-08d9-4c65-b1ba-5d78c8c35263"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad A1 [/GND] of J10 on F.Cu",
+                    "pos": {
+                        "x": 207.75,
+                        "y": 127.0
+                    },
+                    "uuid": "0a7aa15a-08d9-4c65-b1ba-5d78c8c35263"
+                },
+                {
+                    "description": "Pad A12 [/GND] of J10 on F.Cu",
+                    "pos": {
+                        "x": 213.25,
+                        "y": 127.0
+                    },
+                    "uuid": "87224865-b123-4dd3-aa74-866f97798143"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad A1 [/GND] of J10 on F.Cu",
+                    "pos": {
+                        "x": 207.75,
+                        "y": 127.0
+                    },
+                    "uuid": "0a7aa15a-08d9-4c65-b1ba-5d78c8c35263"
+                },
+                {
+                    "description": "Pad B12 [/GND] of J10 on F.Cu",
+                    "pos": {
+                        "x": 207.75,
+                        "y": 133.0
+                    },
+                    "uuid": "a71ce961-7354-4d1e-9ded-970b9b4c4136"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad B12 [/GND] of J10 on F.Cu",
+                    "pos": {
+                        "x": 207.75,
+                        "y": 133.0
+                    },
+                    "uuid": "a71ce961-7354-4d1e-9ded-970b9b4c4136"
+                },
+                {
+                    "description": "Pad B1 [/GND] of J10 on F.Cu",
+                    "pos": {
+                        "x": 213.25,
+                        "y": 133.0
+                    },
+                    "uuid": "c0a1712c-73ef-44e6-93b1-5af3f1136e55"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad B12 [/GND] of J10 on F.Cu",
+                    "pos": {
+                        "x": 207.75,
+                        "y": 133.0
+                    },
+                    "uuid": "a71ce961-7354-4d1e-9ded-970b9b4c4136"
+                },
+                {
+                    "description": "Pad 3 [/GND] of U11 on F.Cu",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 136.0
+                    },
+                    "uuid": "aa30c46d-bff6-4b71-8f4f-c81dfb4c4764"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad B7 [/USB_FAST_B_DM] of J10 on F.Cu",
+                    "pos": {
+                        "x": 210.25,
+                        "y": 133.0
+                    },
+                    "uuid": "bdf69228-cfd5-42f0-9350-de9885b87445"
+                },
+                {
+                    "description": "Pad A7 [/USB_FAST_B_DM] of J10 on F.Cu",
+                    "pos": {
+                        "x": 210.75,
+                        "y": 127.0
+                    },
+                    "uuid": "220aaafa-32db-4183-bce0-30677aa27f95"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad A6 [/USB_FAST_B_DP] of J10 on F.Cu",
+                    "pos": {
+                        "x": 210.25,
+                        "y": 127.0
+                    },
+                    "uuid": "33c6b7bf-b04a-4cef-ab5a-8ceedeea4bf1"
+                },
+                {
+                    "description": "Pad B6 [/USB_FAST_B_DP] of J10 on F.Cu",
+                    "pos": {
+                        "x": 210.75,
+                        "y": 133.0
+                    },
+                    "uuid": "63ffa62c-491e-4de5-9b9a-942f6383dd6b"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_FAST_B_RX1_N] on F.Cu, length 8.5825 mm",
+                    "pos": {
+                        "x": 192.0,
+                        "y": 127.5
+                    },
+                    "uuid": "5a4fc79f-6a19-4d86-b917-26e5972f2817"
+                },
+                {
+                    "description": "Track [/USB_FAST_B_RX1_N] on F.Cu, length 2.8000 mm",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 127.5
+                    },
+                    "uuid": "20ac3bc0-fd18-4bed-b997-b40489ad0b6d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_FAST_B_RX1_P] on F.Cu, length 7.5825 mm",
+                    "pos": {
+                        "x": 193.0,
+                        "y": 128.0
+                    },
+                    "uuid": "2dfde117-77cf-48b2-b547-93bfa6404d0a"
+                },
+                {
+                    "description": "Track [/USB_FAST_B_RX1_P] on F.Cu, length 3.6000 mm",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 128.0
+                    },
+                    "uuid": "23a96b0d-d52d-434b-8a64-756ac7976d9c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_FAST_B_RX2_N] on F.Cu, length 2.3825 mm",
+                    "pos": {
+                        "x": 198.2,
+                        "y": 136.5
+                    },
+                    "uuid": "ef44f2a2-f862-4ba0-95d5-2dbd321ef59a"
+                },
+                {
+                    "description": "Track [/USB_FAST_B_RX2_N] on F.Cu, length 0.8000 mm",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 136.5
+                    },
+                    "uuid": "baf37311-7e3e-4813-b69f-bc8b30af0c5a"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 10 [/USB_FAST_B_RX2_P] of U11 on F.Cu",
+                    "pos": {
+                        "x": 200.5825,
+                        "y": 137.0
+                    },
+                    "uuid": "e866c30e-daf1-4cc7-8115-58b01128cfe2"
+                },
+                {
+                    "description": "Track [/USB_FAST_B_RX2_P] on F.Cu, length 0.8000 mm",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 137.0
+                    },
+                    "uuid": "a6bfa904-b36d-4a5c-a6f8-318ec99ecbe5"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_FAST_B_TX1_N] on F.Cu, length 9.5825 mm",
+                    "pos": {
+                        "x": 191.0,
+                        "y": 126.5
+                    },
+                    "uuid": "32836807-eecd-42cf-b2f2-047f539da63c"
+                },
+                {
+                    "description": "Track [/USB_FAST_B_TX1_N] on F.Cu, length 1.8000 mm",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 126.5
+                    },
+                    "uuid": "7c127d9c-6fd4-47b2-b6a7-41d1497ebf40"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_FAST_B_TX1_P] on F.Cu, length 10.5825 mm",
+                    "pos": {
+                        "x": 190.0,
+                        "y": 126.0
+                    },
+                    "uuid": "4452fda6-ffa1-4335-a45b-0eb1cc6d955c"
+                },
+                {
+                    "description": "Track [/USB_FAST_B_TX1_P] on F.Cu, length 1.0000 mm",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 126.0
+                    },
+                    "uuid": "a025ecec-c13a-4968-a0bc-ca98e00afd1e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_FAST_B_TX2_N] on F.Cu, length 0.8000 mm",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 135.5
+                    },
+                    "uuid": "d841cc99-ab0b-45f1-b4e0-c4c04a33b6d2"
+                },
+                {
+                    "description": "Track [/USB_FAST_B_TX2_N] on F.Cu, length 2.9825 mm",
+                    "pos": {
+                        "x": 197.6,
+                        "y": 135.5
+                    },
+                    "uuid": "7f39d212-811e-4a96-b554-2f58620bd858"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_FAST_B_TX2_P] on F.Cu, length 3.5825 mm",
+                    "pos": {
+                        "x": 197.0,
+                        "y": 135.0
+                    },
+                    "uuid": "afcd5eac-4610-4b0c-af8a-a6075cbb37f6"
+                },
+                {
+                    "description": "Track [/USB_FAST_B_TX2_P] on F.Cu, length 0.8000 mm",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 135.0
+                    },
+                    "uuid": "818755e9-b2bc-4ba0-93e6-860043069b4e"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad A4 [/USB_FAST_B_VBUS] of J10 on F.Cu",
+                    "pos": {
+                        "x": 209.25,
+                        "y": 127.0
+                    },
+                    "uuid": "36558bb3-4994-4ff0-95fc-5086ddff226d"
+                },
+                {
+                    "description": "Pad B9 [/USB_FAST_B_VBUS] of J10 on F.Cu",
+                    "pos": {
+                        "x": 209.25,
+                        "y": 133.0
+                    },
+                    "uuid": "b3058cc3-122a-4ec3-9979-fa8b87be02df"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad B9 [/USB_FAST_B_VBUS] of J10 on F.Cu",
+                    "pos": {
+                        "x": 209.25,
+                        "y": 133.0
+                    },
+                    "uuid": "b3058cc3-122a-4ec3-9979-fa8b87be02df"
+                },
+                {
+                    "description": "Pad B4 [/USB_FAST_B_VBUS] of J10 on F.Cu",
+                    "pos": {
+                        "x": 211.75,
+                        "y": 133.0
+                    },
+                    "uuid": "12847d08-7ec4-453b-a8b6-2a8e54a171e5"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad A9 [/USB_FAST_B_VBUS] of J10 on F.Cu",
+                    "pos": {
+                        "x": 211.75,
+                        "y": 127.0
+                    },
+                    "uuid": "b1605a4e-2301-4473-a9be-1d7d83916eb7"
+                },
+                {
+                    "description": "Pad A4 [/USB_FAST_B_VBUS] of J10 on F.Cu",
+                    "pos": {
+                        "x": 209.25,
+                        "y": 127.0
+                    },
+                    "uuid": "36558bb3-4994-4ff0-95fc-5086ddff226d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Tracks crossing",
+            "items": [
+                {
+                    "description": "Track [/USB_FAST_B_RX2_P] on F.Cu, length 7.7825 mm",
+                    "pos": {
+                        "x": 202.2175,
+                        "y": 137.0
+                    },
+                    "uuid": "325b16c5-b0cd-4a5e-9e2a-83fb1b1c3f22"
+                },
+                {
+                    "description": "Track [/USB_FAST_B_RX2_N] on F.Cu, length 2.0000 mm",
+                    "pos": {
+                        "x": 206.0,
+                        "y": 136.5
+                    },
+                    "uuid": "c53b31dd-d579-436f-b764-5ab0d92d08ba"
+                }
+            ],
+            "severity": "error",
+            "type": "tracks_crossing"
+        },
+        {
+            "description": "Items shorting two nets (nets /USB_FAST_B_TX2_N and /USB_FAST_B_TX2_P)",
+            "items": [
+                {
+                    "description": "Via [/USB_FAST_B_TX2_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 203.5,
+                        "y": 133.5
+                    },
+                    "uuid": "9d72b304-aa42-4085-b3e2-f18997c288ed"
+                },
+                {
+                    "description": "Track [/USB_FAST_B_TX2_P] on B.Cu, length 6.2700 mm",
+                    "pos": {
+                        "x": 202.0,
+                        "y": 132.5
+                    },
+                    "uuid": "f183cb26-17e5-4f01-a822-56a8b89efb21"
+                }
+            ],
+            "severity": "error",
+            "type": "shorting_items"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Circle of U9 on F.Silkscreen",
+                    "pos": {
+                        "x": 187.25,
+                        "y": 117.85
+                    },
+                    "uuid": "e6c97111-8c10-41d2-a5e9-933d356231b1"
+                },
+                {
+                    "description": "Pad 1 [<no net>] of U9 on F.Cu",
+                    "pos": {
+                        "x": 187.25,
+                        "y": 117.85
+                    },
+                    "uuid": "8d8e8536-dcbe-4ab5-ba5f-03e565e29fd5"
+                }
+            ],
+            "severity": "error",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Circle of U10 on F.Silkscreen",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 128.0
+                    },
+                    "uuid": "00a11f6c-5da9-40d1-8ac0-40f67fb35f35"
+                },
+                {
+                    "description": "Pad 1 [/USB_FAST_B_RX1_P] of U10 on F.Cu",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 128.0
+                    },
+                    "uuid": "846d88aa-7317-41ba-9c11-425e4d5b5c19"
+                }
+            ],
+            "severity": "error",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "items": [
+                {
+                    "description": "Circle of U11 on F.Silkscreen",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 137.0
+                    },
+                    "uuid": "32561cbd-b6be-47c3-84a3-12daf78e4dcb"
+                },
+                {
+                    "description": "Pad 1 [/USB_FAST_B_RX2_P] of U11 on F.Cu",
+                    "pos": {
+                        "x": 201.4175,
+                        "y": 137.0
+                    },
+                    "uuid": "0e3bbfdb-1b58-49da-a523-cf389222c376"
+                }
+            ],
+            "severity": "error",
+            "type": "silk_over_copper"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'PiSXMe'",
+            "items": [
+                {
+                    "description": "Footprint J10",
+                    "pos": {
+                        "x": 210.5,
+                        "y": 130.0
+                    },
+                    "uuid": "facf3b6d-b5cd-4ec4-8533-67b0b232fa45"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        }
+    ]
+}

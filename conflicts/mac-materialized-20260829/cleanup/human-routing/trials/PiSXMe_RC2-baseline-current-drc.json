@@ -1,0 +1,2066 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-08-28T08:37:03",
+    "ignored_checks": [
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "key": "pth_inside_courtyard"
+        },
+        {
+            "description": "NPTH inside courtyard",
+            "key": "npth_inside_courtyard"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.5",
+    "schematic_parity": [],
+    "source": "PiSXMe.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_IN4_BCU_REFERENCE' [/GND] on In4.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "ead124db-9952-47e0-92ab-08c67c5522ed"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_IN4_BCU_REFERENCE' [/GND] on In4.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "ead124db-9952-47e0-92ab-08c67c5522ed"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Pad 2 [/GND] of J2 on F.Cu",
+                    "pos": {
+                        "x": 196.46,
+                        "y": 101.3
+                    },
+                    "uuid": "8b328c01-027b-40ad-a9b2-379f0876408f"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_IN4_BCU_REFERENCE' [/GND] on In4.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "ead124db-9952-47e0-92ab-08c67c5522ed"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_IN4_BCU_REFERENCE' [/GND] on In4.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "ead124db-9952-47e0-92ab-08c67c5522ed"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "PTH pad SH [/GND] of J9",
+                    "pos": {
+                        "x": 218.3,
+                        "y": 68.55
+                    },
+                    "uuid": "3189716f-f03d-4db5-ae43-d0276af547c2"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                },
+                {
+                    "description": "PTH pad SH [/GND] of J10",
+                    "pos": {
+                        "x": 218.3,
+                        "y": 106.55
+                    },
+                    "uuid": "0dc62eb8-a23b-4ceb-8d66-0634fa53861c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone 'FINAL_GND_IN4_BCU_REFERENCE' [/GND] on In4.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "ead124db-9952-47e0-92ab-08c67c5522ed"
+                },
+                {
+                    "description": "Zone 'FINAL_GND_TOP' [/GND] on F.Cu, priority 0",
+                    "pos": {
+                        "x": 1.0,
+                        "y": 1.0
+                    },
+                    "uuid": "f871b9e1-5620-43d7-9436-d6fec25ebc92"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 10 [/CM5_USB3_1_TX_P] of U10 on F.Cu",
+                    "pos": {
+                        "x": 203.4175,
+                        "y": 101.0
+                    },
+                    "uuid": "21223779-7e63-4375-b2ba-75de841f2490"
+                },
+                {
+                    "description": "Pad 1 [/CM5_USB3_1_TX_P] of U10 on F.Cu",
+                    "pos": {
+                        "x": 202.5825,
+                        "y": 101.0
+                    },
+                    "uuid": "ea0130ab-89af-4d79-8c1c-12b80a1351c0"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 2 [/CM5_USB3_1_TX_N] of U10 on F.Cu",
+                    "pos": {
+                        "x": 202.5825,
+                        "y": 101.5
+                    },
+                    "uuid": "2c90460b-3765-4043-9a44-53ce3595bcfd"
+                },
+                {
+                    "description": "Pad 9 [/CM5_USB3_1_TX_N] of U10 on F.Cu",
+                    "pos": {
+                        "x": 203.4175,
+                        "y": 101.5
+                    },
+                    "uuid": "11f7f973-c502-4302-82ba-90c14d56fa49"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 7 [/CM5_USB3_1_RX_P] of U10 on F.Cu",
+                    "pos": {
+                        "x": 203.4175,
+                        "y": 102.5
+                    },
+                    "uuid": "39f0e907-2f0c-4c95-8f72-1332eafb33ca"
+                },
+                {
+                    "description": "Pad 4 [/CM5_USB3_1_RX_P] of U10 on F.Cu",
+                    "pos": {
+                        "x": 202.5825,
+                        "y": 102.5
+                    },
+                    "uuid": "fb8d8204-8dc7-4da7-9e9c-b4911bad295d"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/CM5_USB3_1_RX_N] on F.Cu, length 0.7677 mm",
+                    "pos": {
+                        "x": 203.4175,
+                        "y": 103.0
+                    },
+                    "uuid": "5e81b1f1-0db5-4190-ab00-6a17b963169a"
+                },
+                {
+                    "description": "Track [/CM5_USB3_1_RX_N] on F.Cu, length 2.7348 mm",
+                    "pos": {
+                        "x": 200.0,
+                        "y": 103.9
+                    },
+                    "uuid": "b0092d33-ca1d-4d1b-9bd9-e4801cb0063c"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_FAST_A_DM] on F.Cu, length 0.7825 mm",
+                    "pos": {
+                        "x": 195.4175,
+                        "y": 61.5
+                    },
+                    "uuid": "7e830f6f-976f-4cf0-bc90-a2282ebce78f"
+                },
+                {
+                    "description": "Pad 2 [/USB_FAST_A_DM] of U17 on F.Cu",
+                    "pos": {
+                        "x": 194.5825,
+                        "y": 61.5
+                    },
+                    "uuid": "70cc7e8f-2607-4dcd-bd3d-169407681387"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/CM5_USB3_0_RX_N] on F.Cu, length 7.0825 mm",
+                    "pos": {
+                        "x": 203.4175,
+                        "y": 56.0
+                    },
+                    "uuid": "bfd105b7-75d2-4413-9283-82211439df9a"
+                },
+                {
+                    "description": "Pad 5 [/CM5_USB3_0_RX_N] of U6 on F.Cu",
+                    "pos": {
+                        "x": 202.5825,
+                        "y": 56.0
+                    },
+                    "uuid": "ae41f28b-0d44-4c8d-bc24-5f09bd9bdeb9"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/CM5_USB3_0_RX_P] on F.Cu, length 4.5825 mm",
+                    "pos": {
+                        "x": 203.4175,
+                        "y": 55.5
+                    },
+                    "uuid": "3cd0da21-7513-417b-8f78-789600852799"
+                },
+                {
+                    "description": "Pad 4 [/CM5_USB3_0_RX_P] of U6 on F.Cu",
+                    "pos": {
+                        "x": 202.5825,
+                        "y": 55.5
+                    },
+                    "uuid": "2175f3af-4ca5-4adc-9f75-4a5ffedcfd25"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 9 [/CM5_USB3_0_TX_N] of U6 on F.Cu",
+                    "pos": {
+                        "x": 203.4175,
+                        "y": 54.5
+                    },
+                    "uuid": "60753a21-fd82-4188-8ad5-3eeb838ea5ab"
+                },
+                {
+                    "description": "Pad 2 [/CM5_USB3_0_TX_N] of U6 on F.Cu",
+                    "pos": {
+                        "x": 202.5825,
+                        "y": 54.5
+                    },
+                    "uuid": "84a96e06-9f2f-4898-99a6-e4b0ae97fd89"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Pad 10 [/CM5_USB3_0_TX_P] of U6 on F.Cu",
+                    "pos": {
+                        "x": 203.4175,
+                        "y": 54.0
+                    },
+                    "uuid": "661f5950-a0af-4101-b070-a714e1cf777e"
+                },
+                {
+                    "description": "Pad 1 [/CM5_USB3_0_TX_P] of U6 on F.Cu",
+                    "pos": {
+                        "x": 202.5825,
+                        "y": 54.0
+                    },
+                    "uuid": "6221266e-d495-4476-9885-5cde1443bba5"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_FAST_B_DP] on F.Cu, length 4.8218 mm",
+                    "pos": {
+                        "x": 190.0,
+                        "y": 109.5
+                    },
+                    "uuid": "236606f8-f788-4116-a9a9-43d9b742e656"
+                },
+                {
+                    "description": "Track [/USB_FAST_B_DP] on F.Cu, length 0.9286 mm",
+                    "pos": {
+                        "x": 195.4175,
+                        "y": 111.0
+                    },
+                    "uuid": "f0c063fe-6566-4a8d-8c44-a45b71fda6a7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Track [/USB_FAST_B_DM] on F.Cu, length 1.5496 mm",
+                    "pos": {
+                        "x": 195.4175,
+                        "y": 111.5
+                    },
+                    "uuid": "c3434265-287e-4911-bdce-af58376322aa"
+                },
+                {
+                    "description": "Track [/USB_FAST_B_DM] on F.Cu, length 2.5825 mm",
+                    "pos": {
+                        "x": 192.0,
+                        "y": 111.5
+                    },
+                    "uuid": "6ee935f5-10bb-4167-a9b4-b9eb2d52fb1b"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C2",
+                    "pos": {
+                        "x": 121.5,
+                        "y": 73.0
+                    },
+                    "uuid": "0ca5156b-9a65-4354-89ed-d7b629e84cef"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U13",
+                    "pos": {
+                        "x": 184.0,
+                        "y": 138.0
+                    },
+                    "uuid": "152c101d-52c8-4d60-8a25-468a0594ee85"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J11",
+                    "pos": {
+                        "x": 210.5,
+                        "y": 40.0
+                    },
+                    "uuid": "17a47a20-89dd-48ab-8351-eb89449c16d6"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U10",
+                    "pos": {
+                        "x": 203.0,
+                        "y": 102.0
+                    },
+                    "uuid": "19231dda-3716-47c4-9af4-e30aa3652ecd"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint F2",
+                    "pos": {
+                        "x": 80.0,
+                        "y": 130.0
+                    },
+                    "uuid": "2176e601-e66e-40de-9af1-68d4c068edd9"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint Q1",
+                    "pos": {
+                        "x": 110.0,
+                        "y": 116.0
+                    },
+                    "uuid": "21df6537-dede-4849-bae2-535878514b88"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C4",
+                    "pos": {
+                        "x": 160.0,
+                        "y": 130.0
+                    },
+                    "uuid": "22c17653-c741-42ab-8693-1eaef2824ce5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U12",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 132.0
+                    },
+                    "uuid": "242f6ec0-e89f-49b4-8d82-69a7e34bb30b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C1",
+                    "pos": {
+                        "x": 121.5,
+                        "y": 70.8
+                    },
+                    "uuid": "24f5cdfe-40ff-4642-b088-3f82146d168a"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP3",
+                    "pos": {
+                        "x": 145.0,
+                        "y": 125.0
+                    },
+                    "uuid": "3196c95c-2da1-46db-98cb-a0af834dc027"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C9",
+                    "pos": {
+                        "x": 95.0,
+                        "y": 134.0
+                    },
+                    "uuid": "31d8670e-4338-4a1f-9a83-fedf2f5f1d67"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U16",
+                    "pos": {
+                        "x": 205.0,
+                        "y": 120.0
+                    },
+                    "uuid": "3ec38f53-beeb-4f17-a12b-5e59c6e82254"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J3",
+                    "pos": {
+                        "x": 30.0,
+                        "y": 130.0
+                    },
+                    "uuid": "3f46ee22-e4db-4c00-9d10-25d3ee9b2e98"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R7",
+                    "pos": {
+                        "x": 190.0,
+                        "y": 128.0
+                    },
+                    "uuid": "42664ffd-2f95-4eaa-87fa-adf233dda247"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U3",
+                    "pos": {
+                        "x": 95.0,
+                        "y": 130.0
+                    },
+                    "uuid": "4874f60c-0718-44cb-8dad-f724a915ee12"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U2",
+                    "pos": {
+                        "x": 95.0,
+                        "y": 116.0
+                    },
+                    "uuid": "4caf4d27-cf16-4c60-9216-4f9b45ea2a6b"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C5",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 128.0
+                    },
+                    "uuid": "4cf4e6ab-5713-4ea1-a929-8eca9b5f8d39"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U15",
+                    "pos": {
+                        "x": 196.0,
+                        "y": 40.0
+                    },
+                    "uuid": "4d23e473-8f23-4afc-8045-16b9021a0589"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J9",
+                    "pos": {
+                        "x": 211.5,
+                        "y": 72.0
+                    },
+                    "uuid": "8dcd25e0-514d-43a2-a64b-405c664c1fe9"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U17",
+                    "pos": {
+                        "x": 195.0,
+                        "y": 62.0
+                    },
+                    "uuid": "ec428349-2ddd-441d-b186-5be132219959"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J7",
+                    "pos": {
+                        "x": 205.0,
+                        "y": 28.0
+                    },
+                    "uuid": "614bf970-dce3-4ea0-a626-7ec2a1296b6f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J8",
+                    "pos": {
+                        "x": 214.0,
+                        "y": 81.0
+                    },
+                    "uuid": "6376825c-575d-4a8a-84f1-30e34f19b06f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U6",
+                    "pos": {
+                        "x": 203.0,
+                        "y": 55.0
+                    },
+                    "uuid": "6b04ee6d-dff4-47d3-b410-c1ebc8a3a150"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J4",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 130.0
+                    },
+                    "uuid": "817aa5af-41f6-48c5-8b16-1cf59098372e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R3",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 132.0
+                    },
+                    "uuid": "81a6d373-c6e5-4a85-bc43-0f640ced4a8e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U4",
+                    "pos": {
+                        "x": 190.0,
+                        "y": 48.0
+                    },
+                    "uuid": "880e9bcc-127d-4aad-bd7f-139289813c12"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP1",
+                    "pos": {
+                        "x": 160.0,
+                        "y": 120.0
+                    },
+                    "uuid": "8e593045-87ef-4446-b7e4-1ec90983b841"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C8",
+                    "pos": {
+                        "x": 95.0,
+                        "y": 114.0
+                    },
+                    "uuid": "96fd463f-572a-4d2f-8e4b-79207a5ecbdd"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J1",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 70.0
+                    },
+                    "uuid": "9f913786-1b2d-4baa-aeb7-5d34ee228a91"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C6",
+                    "pos": {
+                        "x": 176.0,
+                        "y": 136.0
+                    },
+                    "uuid": "9fe277c9-e7f0-4fe5-a9f2-3b4736b6854e"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U8",
+                    "pos": {
+                        "x": 190.0,
+                        "y": 115.0
+                    },
+                    "uuid": "31271418-0666-4e49-a6ab-47ae3b6dc8b1"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U1",
+                    "pos": {
+                        "x": 168.0,
+                        "y": 128.0
+                    },
+                    "uuid": "a8ab324c-44c3-4d6f-a04a-9ec2c1bffe69"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C7",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 124.0
+                    },
+                    "uuid": "aa2c7c1b-1807-480f-b3f7-d062cabfb6dc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint C3",
+                    "pos": {
+                        "x": 160.0,
+                        "y": 126.0
+                    },
+                    "uuid": "aab704f0-0bcd-49b1-b45c-e7a5c732b488"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R1",
+                    "pos": {
+                        "x": 204.0,
+                        "y": 92.0
+                    },
+                    "uuid": "b66b2615-49b5-4d7f-ab51-e08a67b6c05c"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J5",
+                    "pos": {
+                        "x": 205.0,
+                        "y": 12.0
+                    },
+                    "uuid": "bc400044-de6c-44d4-bcbd-dd3ea6b8d44d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint MECH1",
+                    "pos": {
+                        "x": 85.0,
+                        "y": 70.0
+                    },
+                    "uuid": "c10e2c98-46e1-43fe-af6e-c121fd2671a9"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint TP2",
+                    "pos": {
+                        "x": 154.0,
+                        "y": 126.0
+                    },
+                    "uuid": "c6bf7001-b60c-42c0-bd69-2ab15a34e8dc"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint F1",
+                    "pos": {
+                        "x": 80.0,
+                        "y": 116.0
+                    },
+                    "uuid": "c9ee8034-7c00-4203-8527-98e2dc3aaed8"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R5",
+                    "pos": {
+                        "x": 194.0,
+                        "y": 48.0
+                    },
+                    "uuid": "d8b40f5c-0453-4dc0-bcaa-14a90e6be172"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J2",
+                    "pos": {
+                        "x": 197.5,
+                        "y": 70.0
+                    },
+                    "uuid": "da7354e6-b8a5-44f7-9093-ef24f7b11b44"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint Q2",
+                    "pos": {
+                        "x": 110.0,
+                        "y": 130.0
+                    },
+                    "uuid": "e4fe7504-8efe-4e58-a98e-98ce605d80c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R4",
+                    "pos": {
+                        "x": 160.0,
+                        "y": 134.0
+                    },
+                    "uuid": "e5f6122c-f270-40ba-a1e9-55da69a96a62"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U18",
+                    "pos": {
+                        "x": 195.0,
+                        "y": 112.0
+                    },
+                    "uuid": "cfbcc3a8-d29d-49f4-b325-ca2fc67d7365"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint U14",
+                    "pos": {
+                        "x": 190.0,
+                        "y": 132.0
+                    },
+                    "uuid": "e7898ff1-678b-465a-88b2-7d657a1a3685"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J6",
+                    "pos": {
+                        "x": 205.0,
+                        "y": 20.0
+                    },
+                    "uuid": "f726763c-818e-42df-b037-c1c745e17bb0"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint J10",
+                    "pos": {
+                        "x": 211.5,
+                        "y": 110.0
+                    },
+                    "uuid": "99972f13-7ebe-4762-b6dc-cc04b392e41f"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R2",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 128.0
+                    },
+                    "uuid": "fe4edce7-4246-46a5-bc00-0faf27473692"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "The footprint library 'PiSXMe' is not enabled in the current configuration",
+            "items": [
+                {
+                    "description": "Footprint R6",
+                    "pos": {
+                        "x": 190.0,
+                        "y": 118.0
+                    },
+                    "uuid": "ffc116e4-1503-4a0d-808d-f22d323542ec"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        }
+    ]
+}

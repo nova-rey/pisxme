@@ -1,0 +1,14 @@
+[project]
+name = "kicad-codex-bridge"
+version = "0.1.0"
+description = "Local Codex MCP bridge for KiCad IPC, kicad-cli, and scoped project files"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "kicad-python==0.7.1",
+  "kicad-sch-api==0.5.6",
+  "mcp==1.29.0",
+  "cryptography==44.0.3",
+]
+
+[tool.ruff]
+line-length = 120

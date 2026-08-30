@@ -1,0 +1,14 @@
+item,mpn,local_footprint,local_observation,manufacturer_evidence,confidence,blocking
+SXM2 receptacle,74221-101LF,SXM2_74221-101LF,"400 pads; 40x10; 1.27 mm grid; 0.64 mm local pads","Official 400-position/4 mm/0.45 A data; exact land pattern not matched","UNRESOLVED",YES
+CM5 connectors,10164227-1004A1RLF,CM5_1004,"Two 100-position connector regions","Official CM5 datasheet confirms 4.0 mm stack and 2.5 mm underside clearance; drawing match pending","DATASHEET_DERIVED",YES
+12V headers,39301082,MiniFitJr_8_RA,"8 pads corrected to 4.20 mm two-row pitch","Official Molex page confirms 8 circuits, right-angle, polarized/shrouded, 4.20 mm pitch","DATASHEET_DERIVED",YES
+Cable housing,39012085,N/A,"No PCB footprint","Official Molex page confirms 8-circuit 4.20 mm mating pitch","DATASHEET_DERIVED",NO
+CM5 buck,TPSM63606RDLR,TPSM63606,"20-pad 0.5 mm local study footprint","TI datasheet/reference layout authority; final land/paste check pending","DATASHEET_DERIVED",YES
+Ideal diode,LM74700QDBVRQ1,LM74700_DBV,"6-pad DBV local footprint available","TI DBV drawing authority; final match pending","DATASHEET_DERIVED",YES
+MOSFET,CSD19536KCS,CSD19536KCS_TO220,"3-pad through-hole study footprint","TI package drawing authority; clearance pending","DATASHEET_DERIVED",YES
+Fuse holder,178.6165.0001,ATO_FuseHolder,"Generic two-pad study outline","Holder drawing not matched","UNRESOLVED",YES
+PCIe AC capacitors,GRM21BR71H224KA01#,C_0805_2012Metric,"0805 study footprint","Murata package/MPN recorded; final land check pending","DATASHEET_DERIVED",YES
+Buck capacitors,CGA6P1X7R1H106K250AC and GRM32ER71E226ME15L,C_1206_3216Metric/C_1210_3225Metric,"Package references corrected","Manufacturer package family still needs release check","DATASHEET_DERIVED",YES
+Fan headers,22-23-2041,Fan_2x2_2.54mm,"4-pin 2.54 mm study footprint","Exact Molex drawing/land pattern not matched","UNRESOLVED",YES
+UART,B4B-PH-K-S,JST_PH_4,"4-pin study footprint","JST drawing not matched","UNRESOLVED",YES
+Ethernet/USB,N/A,USB3_HOST,"Study connector; MPN not frozen","No manufacturer part selected","UNRESOLVED",YES

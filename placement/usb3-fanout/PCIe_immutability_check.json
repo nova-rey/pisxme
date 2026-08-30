@@ -1,0 +1,12 @@
+{
+  "baseline": "placement/usb3-fanout/PiSXMe-usb3-fanout-baseline.kicad_pcb",
+  "active": "pisxme/PiSXMe.kicad_pcb",
+  "segment_count_baseline": 149,
+  "segment_count_active": 149,
+  "via_count_baseline": 28,
+  "via_count_active": 28,
+  "segments_byte_identical": true,
+  "vias_byte_identical": true,
+  "production_usb3_routes_added": false,
+  "pci_e_touched": false
+}
