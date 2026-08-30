@@ -2076,3 +2076,12 @@
 - Corrected the local authority provenance to the exact MPN drawing
   `039300020_sd.pdf` / `55690002-SD` and forced the materializer to reload
   J5/J6 from the project-local footprint rather than stale donor geometry.
+
+2026-08-30 — Phase 14 Littelfuse holder land-pattern gap found
+
+- Native DRC exposed overlapping local geometry in the selected four-pin
+  `178.6165.0001` holder footprint at F1/F2. The electrical selection remains
+  valid, but the local pattern is reopened against Littelfuse `CVP-PE40-0006`.
+- The manufacturer drawing's 5.8 mm and 3.5 mm hole-pattern dimensions are
+  now recorded as the land-pattern authority; routing and release remain held
+  until the local footprint is regenerated and independently checked.

@@ -1,7 +1,8 @@
 # Branch fuse and holder authority
 
-Checked: 2026-08-30. Status: `CLOSED` for the selected component pair;
-electrical integration and copper/thermal validation remain Phase 5 gates.
+Checked: 2026-08-30. Status: `SELECTION_CLOSED; LAND_PATTERN_REVIEW_OPEN`;
+the electrical component pair is selected, but the local four-pin holder land
+pattern is not yet authoritative.
 
 ## Selected parts
 
@@ -28,7 +29,12 @@ USD 4.78 at quantity 1 and USD 2.32 at 5,000, with a 21-week factory lead
 for quantities above stock. Littelfuse's holder drawing identifies the
 `178.6165.0001` four-pin PCB holder and `178.6165.0002` as the alternate
 packaging variant. DigiKey CAD/model availability is recorded for the fuse;
-the holder drawing is the land-pattern authority.
+the holder drawing is the land-pattern authority. The current local pattern is
+not promoted: its 1.80 mm and 1.40 mm drills are placed at ±7.62/±5.08 mm
+with only 2.54 mm between paired holes, causing native DRC overlap/clearance
+violations. The exact drawing `CVP-PE40-0006 Rev A` gives the authoritative
+hole-pattern dimensions (5.8±0.05 mm and 3.5±0.07 mm callouts); the local
+pattern must be regenerated from that drawing before routing or release.
 
 Sourcing risk: `LOW` for quantity-1 fuse and holder availability; assembly
 risk `MEDIUM` because the holder is through-hole and serviceable. The holder
@@ -49,7 +55,9 @@ file is redistributed in this repository.
 ## Exact PiSXMe decision closed
 
 Each mandatory cold-plug 12 V branch reserves one `0297015.U` fuse in a
-`178.6165.0001` PCB holder ahead of its LM74700 reverse-current controller.
+`178.6165.0001` PCB holder ahead of its LM74700 reverse-current controller;
+the electrical selection is closed, while the exact local holder footprint
+remains `LAND_PATTERN_REVIEW_OPEN` pending the manufacturer hole-pattern fix.
 The 15 A rating is not yet a Phase 5 pass: current sharing, inrush, I²t,
 temperature rise, and protected-rail voltage drop must be signed off before
 routing.

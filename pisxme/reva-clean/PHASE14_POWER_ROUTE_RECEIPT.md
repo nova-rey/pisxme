@@ -56,3 +56,10 @@ at 0.00 mm, pad 2 at 5.50 mm, one 3.00 mm NPTH peg at -7.30 mm). Fresh native
 DRC has no J5/J6 hole-clearance or solder-mask-bridge violation. The remaining
 DRC and unconnected-item counts are broader pre-existing acreage-candidate
 debt and do not constitute Phase 14 closure.
+
+A second footprint authority gap is now recorded for the selected Littelfuse
+`178.6165.0001` holder. The local four-pin pattern has overlapping pad/hole
+geometry at F1/F2; native DRC reports those violations. Littelfuse drawing
+`CVP-PE40-0006 Rev A` is the authority, so the holder remains
+`LAND_PATTERN_REVIEW_OPEN` and power routing/release is held until its four
+holes are regenerated from the 5.8 mm/3.5 mm manufacturer layout.
