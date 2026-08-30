@@ -9,7 +9,7 @@ def main():
     result = subprocess.run([PCBNEW_PY, str(ROOT / "phase14_power_route.py")],
                             cwd=ROOT, check=True, text=True,
                             capture_output=True)
-    assert "sixteen B.Cu power links" in result.stdout
+    assert "nineteen B.Cu power segments" in result.stdout
     probe = r'''
 import pcbnew
 b = pcbnew.LoadBoard("ACREAGE_POWER_PHASE14.kicad_pcb")
@@ -28,7 +28,7 @@ assert any(p.GetNetname() == "12V_PROTECTED" for p in q1.Pads())
 assert any(p.GetNetname() == "12V_PROTECTED" for p in q2.Pads())
 assert sum(p.GetNetname() == "12V_PROTECTED" for p in j1.Pads()) == 130
 tracks = list(b.GetTracks())
-assert len(tracks) == 16
+assert len(tracks) == 19
 assert all(t.GetLayer() == pcbnew.B_Cu for t in tracks)
 assert all(t.GetWidth() == pcbnew.FromMM(2.0) for t in tracks)
 def pos(ref, number, net):
@@ -42,7 +42,12 @@ expected = {
     frozenset((pos("F1", "1", "/POWER_INPUT/12V_IN_A"), pos("F1", "2", "/POWER_INPUT/12V_IN_A"))),
     frozenset((pos("F1", "1", "/POWER_INPUT/12V_IN_A"), pos("F1", "3", "/POWER_INPUT/12V_IN_A"))),
     frozenset((pos("F1", "1", "/POWER_INPUT/12V_IN_A"), pos("F1", "4", "/POWER_INPUT/12V_IN_A"))),
-    frozenset((pos("J6", "1", "/POWER_INPUT/12V_IN_B"),
+    frozenset((pos("J6", "1", "/POWER_INPUT/12V_IN_B"), (pcbnew.VECTOR2I_MM(20, 45).x, pcbnew.VECTOR2I_MM(20, 45).y))),
+    frozenset(((pcbnew.VECTOR2I_MM(20, 45).x, pcbnew.VECTOR2I_MM(20, 45).y),
+               (pcbnew.VECTOR2I_MM(20, 90).x, pcbnew.VECTOR2I_MM(20, 90).y))),
+    frozenset(((pcbnew.VECTOR2I_MM(20, 90).x, pcbnew.VECTOR2I_MM(20, 90).y),
+               (pcbnew.VECTOR2I_MM(45, 90).x, pcbnew.VECTOR2I_MM(45, 90).y))),
+    frozenset(((pcbnew.VECTOR2I_MM(45, 90).x, pcbnew.VECTOR2I_MM(45, 90).y),
                pos("F2", "1", "/POWER_INPUT/12V_IN_B"))),
     frozenset((pos("F2", "1", "/POWER_INPUT/12V_IN_B"), pos("F2", "2", "/POWER_INPUT/12V_IN_B"))),
     frozenset((pos("F2", "1", "/POWER_INPUT/12V_IN_B"), pos("F2", "3", "/POWER_INPUT/12V_IN_B"))),

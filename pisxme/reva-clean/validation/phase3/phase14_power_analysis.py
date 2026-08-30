@@ -20,12 +20,12 @@ poly = z.GetFilledPolysList(pcbnew.F_Cu)
 # The minimum vertical span is the conservative cross-section for the
 # rectangular Q1/Q2-to-SXM2 corridor after pad clearances.
 spans = []
-for x in range(116, 190):
+for x in range(116, 245):
     ys = [y for y in (30 + i * 0.5 for i in range(201))
           if poly.PointInside(pcbnew.VECTOR2I_MM(x, y))]
     if ys:
         spans.append(max(ys) - min(ys))
-assert len(spans) == 74 and min(spans) >= 98.0
+assert len(spans) == 129 and min(spans) >= 98.0
 total_a = {budget["continuous_input_current_a"]}
 peak_a = {budget["peak_input_current_a"]}
 branch_a = total_a / {budget["branch_count"]}

@@ -14,6 +14,13 @@ INPUT = ROOT / "ACREAGE_CANDIDATE.kicad_pcb"
 OUTPUT = ROOT / "ACREAGE_POWER_PHASE14.kicad_pcb"
 POWER_TRACK_WIDTH_MM = 2.0
 
+# J6's through-hole return contact is immediately below its input contact, and
+# the CM5 service connector occupies the direct diagonal escape.  The input
+# escape rises above that connector before heading into the acreage.
+ROUTE_BENDS = {
+    ("J6", "1", "F2", "1"): ((20.0, 45.0), (20.0, 90.0), (45.0, 90.0)),
+}
+
 # Resolve the current placement through references and exact nets rather than
 # baking board coordinates into the routing prototype.
 POWER_CONTINUITY = (
@@ -80,16 +87,20 @@ def find_pad(board, reference, pad_number, net_name):
     return pads[0]
 
 
-def add_power_track(board, start, end, net_name):
+def add_power_track(board, start, end, net_name, bend=None):
     if str(start.GetNetname()) != net_name or str(end.GetNetname()) != net_name:
         raise SystemExit(f"power track endpoint net mismatch on {net_name}")
-    track = pcbnew.PCB_TRACK(board)
-    track.SetStart(start.GetPosition())
-    track.SetEnd(end.GetPosition())
-    track.SetLayer(pcbnew.B_Cu)
-    track.SetNetCode(start.GetNetCode())
-    track.SetWidth(pcbnew.FromMM(POWER_TRACK_WIDTH_MM))
-    board.Add(track)
+    points = [start.GetPosition()]
+    points.extend(pcbnew.VECTOR2I_MM(x, y) for x, y in (bend or ()))
+    points.append(end.GetPosition())
+    for first, last in zip(points, points[1:]):
+        track = pcbnew.PCB_TRACK(board)
+        track.SetStart(first)
+        track.SetEnd(last)
+        track.SetLayer(pcbnew.B_Cu)
+        track.SetNetCode(start.GetNetCode())
+        track.SetWidth(pcbnew.FromMM(POWER_TRACK_WIDTH_MM))
+        board.Add(track)
 
 
 def assert_protected_zone_connection(board, zone):
@@ -105,7 +116,7 @@ def main():
     # The protected copper feed is confined to the V100 power corridor and
     # stops well short of unrelated high-speed/storage neighborhoods.
     rectangle_zone(board, "12V_PROTECTED", pcbnew.F_Cu,
-                   115, 30, 190, 130, "V100_PROTECTED_FEED")
+                   115, 20, 245, 160, "V100_PROTECTED_FEED")
     # Keep both adjacent inner layers as solid return references, per the
     # frozen Phase 13 stack role.  The board edge is intentionally inset.
     for layer, name in ((pcbnew.In1_Cu, "V100_RETURN_PLANE_L2"),
@@ -117,6 +128,7 @@ def main():
             find_pad(board, start_ref, start_number, net_name),
             find_pad(board, end_ref, end_number, net_name),
             net_name,
+            ROUTE_BENDS.get((start_ref, start_number, end_ref, end_number)),
         )
     for start_ref, start_number, end_ref, end_number, net_name in DUPLICATE_CONTACTS:
         add_power_track(
@@ -132,7 +144,7 @@ def main():
     )
     assert_protected_zone_connection(board, protected_zone)
     board.Save(str(OUTPUT))
-    print("Phase 14 V100 power candidate: PASS; sixteen B.Cu power links and protected feed zone created")
+    print("Phase 14 V100 power candidate: PASS; nineteen B.Cu power segments and protected feed zone created")
 
 
 if __name__ == "__main__":

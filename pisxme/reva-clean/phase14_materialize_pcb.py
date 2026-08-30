@@ -26,7 +26,7 @@ POSITIONS = {
     # Keep the eight-hole FLR holders outside the conservative V100 cooler
     # reservation (x >= 75 mm), while retaining a short, direct branch into
     # each ideal-diode/FET island.
-    "F1": (55, 40), "F2": (55, 120), "Q1": (130, 40), "Q2": (130, 80),
+    "F1": (55, 40), "F2": (50, 120), "Q1": (215, 30), "Q2": (215, 150),
     "C3": (110, 55), "C4": (110, 95),
     "D1": (110, 32), "D2": (110, 72),
     "U3": (52, 78), "J5": (12, 25), "J6": (12, 45), "J7": (35, 130),

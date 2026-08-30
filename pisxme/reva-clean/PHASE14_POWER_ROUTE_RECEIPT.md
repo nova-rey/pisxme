@@ -2,8 +2,11 @@
 
 Status: `CANDIDATE_IN_PROGRESS`
 
+Frozen candidate identity for this receipt: `ACREAGE_POWER_PHASE14.kicad_pcb`,
+SHA-256 `e7aa18f6804c4709dec9f49a78f119be906e7103d1dc6df71f29972d35ae5856`.
+
 `phase14_power_route.py` creates `ACREAGE_POWER_PHASE14.kicad_pcb` from the
-validated native-netlist materialization. It adds sixteen named-pad-resolved,
+validated native-netlist materialization. It adds nineteen named-pad-resolved,
 2.0 mm B.Cu power links for J5/J6 input-to-fuse and fuse-to-Q1/Q2 continuity,
 one broad F.Cu `12V_PROTECTED` zone over the Q1/Q2-to-SXM2 corridor, and filled
 inner-layer return-reference zones on In1 and In4. The protected zone reaches
@@ -42,7 +45,7 @@ not a fabricated-board thermal measurement; copper spreading, airflow,
 package mounting, and sustained sharing remain explicit Rev-A validation
 items.
 
-The candidate intentionally has no high-speed tracks. The sixteen released power
+The candidate intentionally has no high-speed tracks. The nineteen released power
 links stay on B.Cu and resolve endpoints from the actual current placement;
 their 2.0 mm width preserves the 0.2 mm clearance around the 2.54 mm fuse
 holder pitch. A subsequent via/neck experiment also exposed incorrect
@@ -67,3 +70,11 @@ The local footprint now uses the manufacturer-derived eight-hole coordinates,
 conservative central NPTH clearance, and maps pads 1-4 to input and 5-8 to
 fused output. Fresh native DRC removes the holder self-overlap; remaining
 placement/courtyard findings remain part of the open Phase 14 gate.
+
+The latest native DRC run reports 215 violations and 305 unrouted connections
+for the acreage candidate. There are no `shorting_items` in the current power
+route report, and the remaining route-adjacent `unconnected_items` are the
+deliberately unrouted regulator/control fanout and V100 control nets. The
+focused regression `validation/phase3/test_phase14_power_drc.py` passes for
+the frozen power-path references. This is
+evidence for the power candidate only, not a board-wide DRC pass.

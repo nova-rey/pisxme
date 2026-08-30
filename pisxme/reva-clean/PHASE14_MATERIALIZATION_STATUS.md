@@ -5,8 +5,9 @@ Checked: 2026-08-30. Status: `OPEN`.
 `phase14_materialize_pcb.py` exports the native KiCad 10 hierarchical
 netlist, upgrades a disposable copy of the acreage floorplan to the frozen
 six-layer/1.6 mm board, loads every assigned project-local footprint, and
-assigns all directly name-matched pads. The current candidate contains 17
-components and 78 native nets and has zero tracks by design.
+assigns all directly name-matched pads. The current materialized acreage
+contains 70 components and 241 native nets; the separate Phase 14 route
+candidate adds nineteen power-only B.Cu segments and filled power/return zones.
 
 The selected 74221-101LF symbol uses abstract V100 power/ground pins. The
 materializer now expands those abstract pins onto the published

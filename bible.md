@@ -2102,3 +2102,11 @@
   conservative central NPTH clearance; materialization maps pads 1-4 to input
   and 5-8 to fused output. Phase 14 remains open pending broader DRC and power
   validation.
+
+2026-08-30 — Phase 14 power escape and mechanical correction
+
+- Moved both ideal-diode MOSFETs outside the conservative V100 cooler
+  reservation and kept the protected feed as a broad F.Cu corridor.
+- Added a clearance-safe stepped B.Cu escape for J6 around its adjacent return
+  contact and the CM5 service connector. Fresh native DRC has no power-route
+  shorting item; broader regulator/control unrouted debt remains open.
