@@ -17,6 +17,14 @@ def main():
     assert "shorting_items" not in report
     assert "tracks_crossing" not in report
     assert report.count("[unconnected_items]") == 280
+    probe = r'''
+import pcbnew
+b = pcbnew.LoadBoard("ACREAGE_REGULATOR_POWER_ESCAPE_PHASE15.kicad_pcb")
+tracks = [t for t in b.GetTracks() if t.GetNetname() == "/REGULATORS/CM5_5V"]
+edge = pcbnew.VECTOR2I_MM(54.95, 80.0)
+assert sum(t.GetStart() == edge or t.GetEnd() == edge for t in tracks) == 2
+'''
+    subprocess.run([PYTHON, "-c", probe], cwd=ROOT, check=True)
     print("Phase 15 power-escape regression: PASS; no shorts/crossings; 280 unrouted baseline items")
 
 

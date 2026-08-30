@@ -2155,3 +2155,10 @@
   crossing items and reduces the regulator-base unrouted count from 296 to
   280. Bootstrap, feedback, RT, PG, VCC_INTERNAL, and final thermal-margin
   evidence remain open; Phase 15 is not closed.
+
+2026-08-30 — Phase 15 pad-edge authority correction
+
+- Independent KiCad review found U3 VOUT was tied through the inward pad-8
+  edge. Corrected the generator to select U3 pad 9 and compute the true pad
+  edge from pad geometry; regression now asserts the two exact `(54.95,80.00)`
+  edge starts and the native no-short/no-crossing result still passes.

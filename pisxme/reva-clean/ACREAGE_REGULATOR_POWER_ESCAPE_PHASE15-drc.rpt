@@ -1,5 +1,5 @@
 ** Drc report for ACREAGE_REGULATOR_POWER_ESCAPE_PHASE15.kicad_pcb **
-** Created on 2026-08-30T17:00:29 **
+** Created on 2026-08-30T17:09:19 **
 ** Report includes: Errors, Warnings **
 
 ** Found 192 DRC violations **
@@ -161,10 +161,6 @@
     @(260.0000 mm, 162.2750 mm): Pad 38 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(250.7500 mm, 154.7250 mm): Pad 1 [/STORAGE/BRIDGE_3V3] of J3 on F.Cu
-    @(251.2500 mm, 154.7250 mm): Pad 3 [/STORAGE/BRIDGE_SATA_RX_N] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
     @(259.7500 mm, 154.7250 mm): Pad 37 [<no net>] of J3 on F.Cu
     @(260.2500 mm, 154.7250 mm): Pad 39 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
@@ -177,60 +173,80 @@
     @(260.7500 mm, 154.7250 mm): Pad 41 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(251.7500 mm, 154.7250 mm): Pad 5 [/STORAGE/BRIDGE_SATA_RX_N] of J3 on F.Cu
-    @(252.2500 mm, 154.7250 mm): Pad 7 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(252.0000 mm, 162.2750 mm): Pad 6 [/STORAGE/BRIDGE_SATA_RX_N] of J3 on F.Cu
-    @(252.5000 mm, 162.2750 mm): Pad 8 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(252.2500 mm, 154.7250 mm): Pad 7 [<no net>] of J3 on F.Cu
-    @(252.7500 mm, 154.7250 mm): Pad 9 [<no net>] of J3 on F.Cu
+    @(250.7500 mm, 154.7250 mm): Pad 1 [/STORAGE/BRIDGE_3V3] of J3 on F.Cu
+    @(251.2500 mm, 154.7250 mm): Pad 3 [/STORAGE/BRIDGE_SATA_RX_N] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(260.5000 mm, 162.2750 mm): Pad 40 [<no net>] of J3 on F.Cu
     @(261.0000 mm, 162.2750 mm): Pad 42 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(252.5000 mm, 162.2750 mm): Pad 8 [<no net>] of J3 on F.Cu
-    @(253.0000 mm, 162.2750 mm): Pad 10 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
     @(260.7500 mm, 154.7250 mm): Pad 41 [<no net>] of J3 on F.Cu
     @(261.2500 mm, 154.7250 mm): Pad 43 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(252.7500 mm, 154.7250 mm): Pad 9 [<no net>] of J3 on F.Cu
-    @(253.2500 mm, 154.7250 mm): Pad 11 [<no net>] of J3 on F.Cu
+    @(251.7500 mm, 154.7250 mm): Pad 5 [/STORAGE/BRIDGE_SATA_RX_N] of J3 on F.Cu
+    @(252.2500 mm, 154.7250 mm): Pad 7 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(261.0000 mm, 162.2750 mm): Pad 42 [<no net>] of J3 on F.Cu
     @(261.5000 mm, 162.2750 mm): Pad 44 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(253.0000 mm, 162.2750 mm): Pad 10 [<no net>] of J3 on F.Cu
-    @(253.5000 mm, 162.2750 mm): Pad 59 [<no net>] of J3 on F.Cu
+    @(252.0000 mm, 162.2750 mm): Pad 6 [/STORAGE/BRIDGE_SATA_RX_N] of J3 on F.Cu
+    @(252.5000 mm, 162.2750 mm): Pad 8 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(261.2500 mm, 154.7250 mm): Pad 43 [<no net>] of J3 on F.Cu
     @(261.7500 mm, 154.7250 mm): Pad 45 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(253.2500 mm, 154.7250 mm): Pad 11 [<no net>] of J3 on F.Cu
-    @(253.7500 mm, 154.7250 mm): Pad 60 [<no net>] of J3 on F.Cu
+    @(252.2500 mm, 154.7250 mm): Pad 7 [<no net>] of J3 on F.Cu
+    @(252.7500 mm, 154.7250 mm): Pad 9 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(255.5000 mm, 162.2750 mm): Pad 20 [<no net>] of J3 on F.Cu
-    @(255.0000 mm, 162.2750 mm): Pad 65 [<no net>] of J3 on F.Cu
+    @(252.5000 mm, 162.2750 mm): Pad 8 [<no net>] of J3 on F.Cu
+    @(253.0000 mm, 162.2750 mm): Pad 10 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(261.5000 mm, 162.2750 mm): Pad 44 [<no net>] of J3 on F.Cu
     @(262.0000 mm, 162.2750 mm): Pad 46 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
+    @(252.7500 mm, 154.7250 mm): Pad 9 [<no net>] of J3 on F.Cu
+    @(253.2500 mm, 154.7250 mm): Pad 11 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(261.7500 mm, 154.7250 mm): Pad 45 [<no net>] of J3 on F.Cu
+    @(262.2500 mm, 154.7250 mm): Pad 47 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(253.0000 mm, 162.2750 mm): Pad 10 [<no net>] of J3 on F.Cu
+    @(253.5000 mm, 162.2750 mm): Pad 59 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(262.0000 mm, 162.2750 mm): Pad 46 [<no net>] of J3 on F.Cu
+    @(262.5000 mm, 162.2750 mm): Pad 48 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(253.2500 mm, 154.7250 mm): Pad 11 [<no net>] of J3 on F.Cu
+    @(253.7500 mm, 154.7250 mm): Pad 60 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(262.2500 mm, 154.7250 mm): Pad 47 [<no net>] of J3 on F.Cu
+    @(262.7500 mm, 154.7250 mm): Pad 49 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(255.5000 mm, 162.2750 mm): Pad 20 [<no net>] of J3 on F.Cu
+    @(255.0000 mm, 162.2750 mm): Pad 65 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
     @(255.5000 mm, 162.2750 mm): Pad 20 [<no net>] of J3 on F.Cu
     @(256.0000 mm, 162.2750 mm): Pad 22 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(262.5000 mm, 162.2750 mm): Pad 48 [<no net>] of J3 on F.Cu
+    @(263.0000 mm, 162.2750 mm): Pad 50 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(255.7500 mm, 154.7250 mm): Pad 21 [<no net>] of J3 on F.Cu
@@ -241,52 +257,36 @@
     @(255.2500 mm, 154.7250 mm): Pad 66 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(261.7500 mm, 154.7250 mm): Pad 45 [<no net>] of J3 on F.Cu
-    @(262.2500 mm, 154.7250 mm): Pad 47 [<no net>] of J3 on F.Cu
+    @(262.7500 mm, 154.7250 mm): Pad 49 [<no net>] of J3 on F.Cu
+    @(263.2500 mm, 154.7250 mm): Pad 51 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(256.0000 mm, 162.2750 mm): Pad 22 [<no net>] of J3 on F.Cu
     @(256.5000 mm, 162.2750 mm): Pad 24 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(262.0000 mm, 162.2750 mm): Pad 46 [<no net>] of J3 on F.Cu
-    @(262.5000 mm, 162.2750 mm): Pad 48 [<no net>] of J3 on F.Cu
+    @(263.0000 mm, 162.2750 mm): Pad 50 [<no net>] of J3 on F.Cu
+    @(263.5000 mm, 162.2750 mm): Pad 52 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(256.2500 mm, 154.7250 mm): Pad 23 [<no net>] of J3 on F.Cu
     @(256.7500 mm, 154.7250 mm): Pad 25 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(262.2500 mm, 154.7250 mm): Pad 47 [<no net>] of J3 on F.Cu
-    @(262.7500 mm, 154.7250 mm): Pad 49 [<no net>] of J3 on F.Cu
+    @(263.2500 mm, 154.7250 mm): Pad 51 [<no net>] of J3 on F.Cu
+    @(263.7500 mm, 154.7250 mm): Pad 53 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(256.5000 mm, 162.2750 mm): Pad 24 [<no net>] of J3 on F.Cu
     @(257.0000 mm, 162.2750 mm): Pad 26 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(256.7500 mm, 154.7250 mm): Pad 25 [<no net>] of J3 on F.Cu
-    @(257.2500 mm, 154.7250 mm): Pad 27 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(262.5000 mm, 162.2750 mm): Pad 48 [<no net>] of J3 on F.Cu
-    @(263.0000 mm, 162.2750 mm): Pad 50 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(262.7500 mm, 154.7250 mm): Pad 49 [<no net>] of J3 on F.Cu
-    @(263.2500 mm, 154.7250 mm): Pad 51 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(263.0000 mm, 162.2750 mm): Pad 50 [<no net>] of J3 on F.Cu
-    @(263.5000 mm, 162.2750 mm): Pad 52 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(263.2500 mm, 154.7250 mm): Pad 51 [<no net>] of J3 on F.Cu
-    @(263.7500 mm, 154.7250 mm): Pad 53 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
     @(263.5000 mm, 162.2750 mm): Pad 52 [<no net>] of J3 on F.Cu
     @(264.0000 mm, 162.2750 mm): Pad 54 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(256.7500 mm, 154.7250 mm): Pad 25 [<no net>] of J3 on F.Cu
+    @(257.2500 mm, 154.7250 mm): Pad 27 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(263.7500 mm, 154.7250 mm): Pad 53 [<no net>] of J3 on F.Cu
@@ -376,9 +376,6 @@
     @(52.0000 mm, 76.8750 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(235.0000 mm, 103.8750 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
-[via_dangling]: Via is not connected or connected on only one layer
-    Local override; warning
     @(235.0000 mm, 106.1250 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
@@ -391,19 +388,22 @@
     @(235.0000 mm, 105.3750 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(52.0000 mm, 77.6250 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
-[via_dangling]: Via is not connected or connected on only one layer
-    Local override; warning
-    @(225.0000 mm, 105.3750 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
+    @(225.0000 mm, 103.8750 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
     @(225.0000 mm, 106.1250 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
+    @(235.0000 mm, 103.8750 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(52.0000 mm, 77.6250 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
     @(52.0000 mm, 79.1250 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(225.0000 mm, 103.8750 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
+    @(225.0000 mm, 105.3750 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
     @(52.0000 mm, 78.3750 mm): Via [/REGULATORS/POWER_GND] on F.Cu - B.Cu
@@ -982,11 +982,11 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(54.2500 mm, 80.0000 mm): Pad 9 [/REGULATORS/CM5_5V] of U3 on F.Cu
-    @(50.1500 mm, 80.0000 mm): Track [/REGULATORS/CM5_5V] on F.Cu, length 5.7009 mm
+    @(49.7500 mm, 80.0000 mm): Pad 8 [/REGULATORS/CM5_5V] of U3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(50.1500 mm, 80.0000 mm): Track [/REGULATORS/CM5_5V] on F.Cu, length 5.7009 mm
     @(69.5000 mm, 82.0000 mm): Pad 1 [/REGULATORS/CM5_5V] of R3 on F.Cu
+    @(54.9500 mm, 80.0000 mm): Track [/REGULATORS/CM5_5V] on F.Cu, length 1.6553 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(93.5000 mm, 82.0000 mm): Pad 1 [/REGULATORS/CM5_5V] of R6 on F.Cu
@@ -1034,30 +1034,30 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(54.2500 mm, 76.0000 mm): Pad 16 [/REGULATORS/12V_PROTECTED] of U3 on F.Cu
+    @(54.2500 mm, 77.2500 mm): Pad 14 [/REGULATORS/12V_PROTECTED] of U3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(54.2500 mm, 76.0000 mm): Pad 16 [/REGULATORS/12V_PROTECTED] of U3 on F.Cu
     @(49.7500 mm, 76.0000 mm): Pad 1 [/REGULATORS/12V_PROTECTED] of U3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(222.0500 mm, 103.0000 mm): Track [/REGULATORS/12V_PROTECTED] on F.Cu, length 1.9500 mm
     @(54.2500 mm, 77.2500 mm): Pad 14 [/REGULATORS/12V_PROTECTED] of U3 on F.Cu
-    @(54.2500 mm, 76.0000 mm): Pad 16 [/REGULATORS/12V_PROTECTED] of U3 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(54.2500 mm, 77.2500 mm): Pad 14 [/REGULATORS/12V_PROTECTED] of U3 on F.Cu
-    @(222.3500 mm, 103.0000 mm): Track [/REGULATORS/12V_PROTECTED] on F.Cu, length 2.2500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(222.7500 mm, 103.0000 mm): Pad 1 [/REGULATORS/12V_PROTECTED] of U4 on F.Cu
+    @(227.2500 mm, 103.0000 mm): Pad 16 [/REGULATORS/12V_PROTECTED] of U4 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
     @(222.7500 mm, 105.2500 mm): Pad 5 [/REGULATORS/12V_PROTECTED] of U4 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
     @(222.7500 mm, 103.0000 mm): Pad 1 [/REGULATORS/12V_PROTECTED] of U4 on F.Cu
-    @(227.2500 mm, 103.0000 mm): Pad 16 [/REGULATORS/12V_PROTECTED] of U4 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(227.2500 mm, 103.0000 mm): Pad 16 [/REGULATORS/12V_PROTECTED] of U4 on F.Cu
     @(227.2500 mm, 104.2500 mm): Pad 14 [/REGULATORS/12V_PROTECTED] of U4 on F.Cu
+    @(227.2500 mm, 103.0000 mm): Pad 16 [/REGULATORS/12V_PROTECTED] of U4 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(232.3500 mm, 105.2500 mm): Track [/REGULATORS/12V_PROTECTED] on F.Cu, length 2.3500 mm
+    @(230.0000 mm, 105.2500 mm): Track [/REGULATORS/12V_PROTECTED] on F.Cu, length 12.2500 mm
     @(227.2500 mm, 104.2500 mm): Pad 14 [/REGULATORS/12V_PROTECTED] of U4 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -1101,11 +1101,11 @@
     @(237.2500 mm, 103.7500 mm): Pad 15 [/REGULATORS/NC] of U5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(20.0000 mm, 45.0000 mm): Track [/POWER_INPUT/12V_IN_B] on B.Cu, length 45.0000 mm
+    @(20.0000 mm, 90.0000 mm): Track [/POWER_INPUT/12V_IN_B] on B.Cu, length 25.0000 mm
     @(21.4500 mm, 96.4500 mm): Pad 3 [/POWER_INPUT/12V_IN_B] of U2 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(20.0000 mm, 90.0000 mm): Track [/POWER_INPUT/12V_IN_B] on B.Cu, length 25.0000 mm
+    @(45.0000 mm, 90.0000 mm): Track [/POWER_INPUT/12V_IN_B] on B.Cu, length 28.7841 mm
     @(110.8000 mm, 95.0000 mm): Pad 2 [/POWER_INPUT/12V_IN_B] of C4 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -1410,10 +1410,10 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(20.4500 mm, 96.4500 mm): Pad 6 [/POWER_INPUT/FUSED_12V_B] of U2 on F.Cu
-    @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on B.Cu, length 4.3012 mm
+    @(52.9000 mm, 118.7500 mm): PTH pad 5 [/POWER_INPUT/FUSED_12V_B] of F2
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(56.4000 mm, 118.7500 mm): PTH pad 7 [/POWER_INPUT/FUSED_12V_B] of F2
+    @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on B.Cu, length 3.5000 mm
     @(108.0000 mm, 72.0000 mm): Pad 1 [/POWER_INPUT/FUSED_12V_B] of D2 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -1610,11 +1610,11 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(21.4500 mm, 76.4500 mm): Pad 3 [/POWER_INPUT/12V_IN_A] of U1 on F.Cu
-    @(48.6000 mm, 41.2500 mm): PTH pad 2 [/POWER_INPUT/12V_IN_A] of F1
+    @(48.6000 mm, 38.7500 mm): Track [/POWER_INPUT/12V_IN_A] on B.Cu, length 2.5000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(110.8000 mm, 55.0000 mm): Pad 2 [/POWER_INPUT/12V_IN_A] of C3 on F.Cu
-    @(52.1000 mm, 41.2500 mm): PTH pad 4 [/POWER_INPUT/12V_IN_A] of F1
+    @(48.6000 mm, 38.7500 mm): Track [/POWER_INPUT/12V_IN_A] on B.Cu, length 4.3012 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(19.5000 mm, 76.4500 mm): Pad 5 [/POWER_INPUT/GATE_A] of U1 on F.Cu

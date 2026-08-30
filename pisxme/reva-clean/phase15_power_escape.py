@@ -14,9 +14,9 @@ MODULES = {
                   "C16": (220, 112), "C17": (220, 114), "C19": (220, 116)}},
 }
 
-U5_VIN = (("C23", (229, 112), ("1",), ((232.35, 103), (230.75, 103), (230.75, 111.5), (230.1, 112))),
-          ("C24", (229, 115), ("5",), ((232.35, 105.25), (230.25, 105.25), (230.25, 114.5), (230.1, 115))),
-          ("C25", (229, 118), ("5",), ((232.35, 105.25), (230.0, 105.25), (230.0, 117.5), (230.1, 118))))
+U5_VIN = (("C23", (229, 112), ("1",), ((232.05, 103), (230.75, 103), (230.75, 111.5), (230.1, 112))),
+          ("C24", (229, 115), ("5",), ((232.30, 105.25), (230.25, 105.25), (230.25, 114.5), (230.1, 115))),
+          ("C25", (229, 118), ("5",), ((232.30, 105.25), (230.0, 105.25), (230.0, 117.5), (230.1, 118))))
 
 
 def add_track(board, start, end, net):
@@ -36,7 +36,8 @@ def main():
         u = b.FindFootprintByReference(uref)
         upads = {p.GetNumber(): p for p in u.Pads()}
         groups = ((spec["vin"], ("1", "5"), -1),
-                  (spec["vout"], ("8", "9"), -1 if uref == "U4" else 1))
+                  (spec["vout"], ("8",) if uref == "U4" else ("9",),
+                   -1 if uref == "U4" else 1))
         for refs, target_numbers, side in groups:
             for ref in refs:
                 fp = b.FindFootprintByReference(ref)
@@ -49,8 +50,9 @@ def main():
                 if not targets:
                     raise SystemExit(f"no target for {uref}:{ref} {active.GetNetname()}")
                 target = min(targets, key=lambda p: abs(p.GetPosition().y - active.GetPosition().y))
-                edge = pcbnew.VECTOR2I(target.GetPosition().x + pcbnew.FromMM(0.40 * side),
-                                       target.GetPosition().y)
+                edge = pcbnew.VECTOR2I(
+                    target.GetPosition().x + int(target.GetSize().x / 2) * side,
+                    target.GetPosition().y)
                 add_track(b, edge, active.GetPosition(), target.GetNet())
     # U5's three VIN capacitors escape down the left side of the package to
     # stay clear of U4's output island and the U7 storage bridge above it.

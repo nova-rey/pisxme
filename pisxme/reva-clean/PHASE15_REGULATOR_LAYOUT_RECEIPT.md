@@ -37,6 +37,10 @@ Evidence:
   `tracks_crossing` defects and reduces the base candidate from 296 to 280
   unrouted items. The remaining unrouted regulator items are the required
   bootstrap, feedback, RT, PG, VCC_INTERNAL, and control connections.
+- Independent KiCad review corrected the U3 VOUT escape to the true right edge
+  of pad 9 at `(54.95, 80.00)` rather than the inward pad-8 tie. The regression
+  now asserts that both U3 VOUT capacitor escapes terminate at that exact
+  edge coordinate; U4 remains intentionally escaped from the left pad-8 edge.
 
 This does not close Phase 15. Remaining required work is localized VIN and
 VOUT high-dI/dt routing, feedback/RT/PG routing, switch-node containment,
