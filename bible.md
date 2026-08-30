@@ -1521,3 +1521,16 @@
   Excellon drill file; outputs remain outside the repository.
 - No legacy design source was edited. Phase 0 is accepted on the private
   checkpoint branch pending the private push and recovery tag.
+
+2026-08-29 — clean Rev A Phase 1 donor extraction validated
+
+- Added `pisxme/reva-clean/donor-extraction/PHASE1_DONOR_MANIFEST.md` with
+  KEEP, FIX_WHILE_TRANSPLANTING, and DISCARD dispositions for PCIe/SXM2,
+  mechanics/cooling, CM5/I/O, storage/SERVICE, power/protection, regulators,
+  footprints, and rules.
+- Added `PHASE1_RECONCILIATION_RECEIPT.md` with the frozen legacy hashes,
+  current-source geometry census, and explicit treatment of stale via/count and
+  footprint-audit records. No legacy source or routed geometry was promoted.
+- Phase 1 gate is `PASS_WITH_EXPLICIT_FIX_QUEUE`; exact authority closure,
+  independent clean-library validation, and undocumented V100 behavior remain
+  later gates by design.
