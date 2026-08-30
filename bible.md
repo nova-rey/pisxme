@@ -1721,3 +1721,10 @@
 - Added the machine-readable Phase 4 audit and receipt. Native KiCad reopen
   and ERC pass with zero violations; no PER1+, x16, NVLink, switch, or
   redriver baggage exists. No placement or routing was introduced.
+
+2026-08-30 — Phase 5 power architecture gate closed
+
+- Added schematic-only dual LM74700 protected inputs, protected 12 V merge,
+  CM5 5 V, TUSB9261 3.3/1.1 V rail contracts, and the V100 power contract.
+- Added the machine-readable power audit and receipt; native KiCad ERC passes
+  with zero violations. No PCB placement or routing was introduced.
