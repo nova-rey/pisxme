@@ -1,6 +1,6 @@
 # PiSXMe Rev A Clean — Phase 2 authority inventory
 
-Date: 2026-08-29  
+Date: 2026-08-30
 Gate: `PHASE2_AUTHORITY_CLOSED`
 
 This is the final Phase 2 authority disposition for this sprint. No clean
@@ -30,15 +30,16 @@ reference-only.
 - JMicron brief: `primary-docs/JMS578.pdf`, SHA-256
   `3c59d77780a50314462e8967ec91e9fe532d1356becd31a7b9945b66410e1ae0`.
 - M.2: `primary-docs/m2-jse/M2_SOCKET_AUTHORITY.md`, SATA-IO TP053v11,
-  exact-MPN JAE/Mouser drawing URL, TE family drawing, and JAE series bulletin.
+  locally saved exact-MPN JAE drawing, TE family drawing, and JAE series
+  bulletin.
 - SXM2: `primary-docs/sxm2/SXM2_74221-101LF_AUTHORITY.md` and
   `primary-docs/sxm2/SXM2_SOURCE_RECEIPT.md`; the Rev-W manufacturer drawing
   remains the authority and the legacy geometry remains comparison-only.
 - Ethernet ESD: `primary-docs/ethernet-esd/TPD4E004.pdf` and
   `TPD4E004_AUTHORITY.md`.
-- Fabrication: `primary-docs/jlc/JLC06161H-7628_IMPEDANCE_BASIS.md` and
-  `JLC06161H-7628_IMPEDANCE_INPUTS.md`; the current public calculator and
-  guide URLs are recorded there.
+- Fabrication: `primary-docs/jlc/JLC06161H-7628_IMPEDANCE_BASIS.md`,
+  `JLC06161H-7628_IMPEDANCE_INPUTS.md`, and the saved current API response;
+  the current public calculator and guide URLs are recorded there.
 - Supporting CM5 component authority: `primary-docs/cm5io-component-authority.md`.
 - Mechanics: `primary-docs/mechanics/V100_COOLER_BACKPLATE_AUTHORITY.md`.
 - Bridge: `primary-docs/bridge/SATA_BRIDGE_AUTHORITY.md`,

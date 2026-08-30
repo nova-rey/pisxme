@@ -1569,3 +1569,19 @@
   USB/SATA/reset behavior. Phase 2 is closed; the TI firmware download receipt
   records the export-gated binary resources and the remaining Phase 7 Linux
   qualification tests. No Phase 3 schematic or PCB was modified.
+
+2026-08-30 — Phase 2 closure evidence strengthened and Phase 3 held
+
+- Added the locally captured exact JAE `SM3ZS067U410` drawing and current JLC
+  impedance-template API response for `JLC06161H-7628`, including hashes and
+  the exact API request fields. Reframed the JLC record correctly: Phase 2
+  closes the current stack/target basis; Phase 13 owns returned route geometry
+  and fabrication coupon evidence.
+- Added `PHASE2_CLOSURE_RECEIPT.md`, which explicitly classifies only the
+  cooler/backplate, SXM2 legacy land-pattern transplant, and unavailable exact
+  CM5IO MagJack as `REV_A_EMPIRICAL_RISK`; no obtainable drawing, calculator
+  source, or procurement question is hidden under that label.
+- Removed an unvalidated Phase 3 scaffold created before this evidence review.
+  The clean schematic, PCB, project, and libraries remain absent; Phase 3 is
+  not started until the strengthened authority checkpoint is independently
+  re-audited.

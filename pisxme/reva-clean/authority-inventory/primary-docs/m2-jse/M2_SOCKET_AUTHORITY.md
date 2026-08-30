@@ -27,11 +27,12 @@ quantity 25, USD 1.14 quantity 100, and full-reel MOQ 2,000 at about USD
 Sourcing risk is MEDIUM; TE `1-2199119-0` is the backup after a pad/height
 comparison and availability recheck.
 
-Exact-MPN drawing authority is the Mouser exact-MPN document link
-`https://www.mouser.com/catalog/specsheets/SM3%20drawing%204.1.pdf`; the
-one-page drawing identifies the `SM3ZS067U410` family and the exact 4.10 mm
-variant. Its captured text is recorded in the procurement matrix/source
-receipt because the distributor CDN did not permit a second local download.
+Exact-MPN drawing authority is saved locally as
+`JAE-SM3ZS067U410-drawing.pdf`, SHA-256
+`4b4ccf5359a38faf65b9b5eb9b1598d533dc3f57222727df58e573824480649b`, from
+DigiKey's manufacturer drawing record. The drawing identifies the
+`SM3ZS067U410` family and exact 4.10 mm variant. The Mouser exact-MPN page
+also links the same drawing family and ECAD model.
 The local JAE series bulletin remains the manufacturer source for the
 ordering-code and key/height interpretation. Mouser exposes an ECAD model
 link, but a third-party model is not authority until dimension-checked.
