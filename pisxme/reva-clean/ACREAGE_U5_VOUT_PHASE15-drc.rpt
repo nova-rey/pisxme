@@ -1,5 +1,5 @@
 ** Drc report for ACREAGE_U5_VOUT_PHASE15.kicad_pcb **
-** Created on 2026-08-30T18:16:49 **
+** Created on 2026-08-30T18:18:37 **
 ** Report includes: Errors, Warnings **
 
 ** Found 297 DRC violations **
@@ -1784,7 +1784,7 @@
     @(244.5000 mm, 150.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R19 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(258.0000 mm, 140.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on In2.PWR, length 0.6500 mm
+    @(258.0000 mm, 140.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on In2.PWR, length 16.6500 mm
     @(244.5000 mm, 140.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R22 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -1840,12 +1840,12 @@
     @(227.2500 mm, 103.7500 mm): Pad 15 [/REGULATORS/NC] of U5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(57.9000 mm, 38.7500 mm): Track [/POWER_INPUT/FUSED_12V_A] on B.Cu, length 2.5000 mm
+    @(57.9000 mm, 41.2500 mm): PTH pad 6 [/POWER_INPUT/FUSED_12V_A] of F1
     @(20.4500 mm, 76.4500 mm): Pad 6 [/POWER_INPUT/FUSED_12V_A] of U1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(108.0000 mm, 32.0000 mm): Pad 1 [/POWER_INPUT/FUSED_12V_A] of D1 on F.Cu
-    @(57.9000 mm, 38.7500 mm): Track [/POWER_INPUT/FUSED_12V_A] on B.Cu, length 3.5000 mm
+    @(61.4000 mm, 38.7500 mm): PTH pad 7 [/POWER_INPUT/FUSED_12V_A] of F1
 [unconnected_items]: Missing connection between items
     Local override; error
     @(19.5000 mm, 76.4500 mm): Pad 5 [/POWER_INPUT/GATE_A] of U1 on F.Cu
@@ -1853,10 +1853,10 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(20.4500 mm, 96.4500 mm): Pad 6 [/POWER_INPUT/FUSED_12V_B] of U2 on F.Cu
-    @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on B.Cu, length 2.5000 mm
+    @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on B.Cu, length 162.5914 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on B.Cu, length 3.5000 mm
+    @(56.4000 mm, 118.7500 mm): PTH pad 7 [/POWER_INPUT/FUSED_12V_B] of F2
     @(108.0000 mm, 72.0000 mm): Pad 1 [/POWER_INPUT/FUSED_12V_B] of D2 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error

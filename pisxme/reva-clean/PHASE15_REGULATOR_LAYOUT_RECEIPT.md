@@ -62,9 +62,11 @@ Evidence:
   vias, 18 output-net vias, 28 PGND vias, all sixteen capacitor pad-1 net
   assignments, and zero route-specific clearance, shorting, or crossing
   findings at 237
-  unconnected acreage items. Quantitative effective capacitance, ground-return
-  stitching, thermal margin, and reference-layout overlay evidence remain
-  open; this checkpoint does not close Phase 15.
+  unconnected acreage items. The 16 added PGND vias sit just outside the
+  capacitor lands, with short F.Cu links that avoid solder-mask bridging;
+  native DRC reports only the pre-existing board-wide mask/acreage findings.
+  Quantitative effective capacitance, thermal margin, and reference-layout
+  overlay evidence remain open; this checkpoint does not close Phase 15.
 
 The native KiCad hierarchy association was corrected before this candidate was
 regenerated. `REGULATORS.kicad_sch` now places one global `12V_PROTECTED` and

@@ -2207,3 +2207,13 @@
   items. Effective
   capacitance, ground-return stitching, thermal margin, and vendor-layout
   overlay evidence remain open, so Phase 15 is not closed.
+
+2026-08-30 — Phase 15 U5 output-return stitching checkpoint
+
+- Added sixteen local PGND return vias for C26-C41, each just outside the
+  authoritative capacitor ground land with a short F.Cu link to avoid native
+  solder-mask bridges. The focused native regression passes with 69 total
+  vias, 18 on VOUT, 28 on PGND, zero route-specific clearance/short/crossing
+  findings, and 237 baseline unconnected acreage items.
+- Effective-capacitance, thermal-margin, and three-rail TI overlay evidence
+  remain open; this is not Phase 15 closure.
