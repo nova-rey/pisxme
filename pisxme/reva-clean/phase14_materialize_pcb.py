@@ -94,6 +94,13 @@ def main() -> None:
             refs["J7"] = fp
     for ref, name in components.items():
         fp = refs.get(ref)
+        # J5/J6 may already exist in the acreage donor.  Always reload the
+        # project-local Molex authority so a corrected land pattern cannot be
+        # shadowed by the stale donor-era embedded footprint.
+        if ref in ("J5", "J6") and fp is not None:
+            board.Remove(fp)
+            refs.pop(ref, None)
+            fp = None
         if fp is None:
             fp = io.FootprintLoad(str(PRETTY), name)
             if fp is None:

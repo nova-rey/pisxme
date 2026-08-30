@@ -24,7 +24,13 @@ def main() -> None:
         ):
             if f'property "MPN" "{mpn}"' in text:
                 assert f'property "Footprint" "PiSXMeRevAClean:{fp}"' in text
-    print("Phase 14 footprint authority: PASS; package pads assigned; connector patterns remain gated")
+    molex = (PRETTY / "Molex_0039300020_5569_2P_RA.kicad_mod").read_text()
+    assert '(pad "1" thru_hole rect (at 0 0)' in molex
+    assert '(pad "2" thru_hole circle (at 0 5.5)' in molex
+    assert '(pad "MP1" np_thru_hole circle (at 0 -7.3)' in molex
+    assert 'pad "MP2"' not in molex
+    assert 'at 4.2 0' not in molex
+    print("Phase 14 footprint authority: PASS; package pads and Molex SD-5569-002 hole layout assigned")
 
 
 if __name__ == "__main__":

@@ -1,10 +1,8 @@
 # High-current 12 V input header authority — Molex 0039300020
 
-Checked: 2026-08-30. Status: `SELECTION_CLOSED; LAND_PATTERN_REVIEW_OPEN`.
-The electrical selection is closed, but the project-local PCB land pattern is
-not yet promoted: its current mounting-peg holes overlap the electrical pad
-clearance envelope in native DRC and require correction against the exact
-Molex drawing before production routing.
+Checked: 2026-08-30. Status: `CLOSED`.
+The electrical selection and project-local PCB land pattern now match the exact
+Molex SD-5569-002 recommended hole layout for 5569-02A2*-*.
 
 ## Candidates considered
 
@@ -56,9 +54,13 @@ with one connector per independent 12 V input. The later PCB authoring step must
 use the exact 5569-2-position drawing/ECAD pattern and keep both connectors
 outside the V100 cooler reservation.
 
-Additional Phase 14 finding: the current local pattern places 3.0 mm NPTH
-mounting holes 2.1 mm from 2.4 mm electrical holes, creating a native
-hole-clearance conflict. The official drawing is authoritative for the actual
-peg/hole pattern; this local geometry must not be used for routing or release
-until corrected. Source: Molex `039300040_sd.pdf` / `55690002-SD`, linked from
-the official 5569 series and part records.
+Resolved Phase 14 finding: the prior local pattern incorrectly used two
+horizontal 4.20 mm-spaced electrical holes and two 2.10 mm-offset mounting
+holes. The corrected local pattern uses pad 1 at (0,0), pad 2 at (0,5.50),
+and one NPTH retention hole at (0,-7.30), on the opposite side of pad 1 from
+pad 2: 5.50 mm between circuits 1 and 2, and 7.30 mm from circuit 1 to the
+peg. Electrical and retention drills are 1.80 mm and 3.00 mm respectively,
+matching the manufacturer's component-side drawing. A complete 180-degree
+rotation is equivalent; the sign must not be changed independently of the
+body orientation. Source: Molex `039300020_sd.pdf` / `55690002-SD`, sheet 1,
+recommended hole layout for 5569-02A2*-*.

@@ -48,8 +48,11 @@ rejected. The frozen six-layer `JLC06161H-7628` basis
 and ordinary through-via-compatible layer policy remain in force; no Phase
 16+ high-speed routing is added.
 
-The current Phase 14 DRC baseline also exposes a local Molex footprint defect:
-the generated 0039300020 pattern's mechanical holes overlap its electrical
-hole-clearance envelope. Electrical selection remains valid, but the local
-land pattern is now `LAND_PATTERN_REVIEW_OPEN` and is not a routing/release
-authority until regenerated from the official drawing.
+The previous Phase 14 DRC baseline exposed a local Molex footprint defect: the
+generated 0039300020 pattern's mechanical holes overlapped its electrical
+hole-clearance envelope. This is now corrected and closed as a footprint
+sub-gate: the local pattern follows Molex SD-5569-002 for 5569-02A2*-* (pad 1
+at 0.00 mm, pad 2 at 5.50 mm, one 3.00 mm NPTH peg at -7.30 mm). Fresh native
+DRC has no J5/J6 hole-clearance or solder-mask-bridge violation. The remaining
+DRC and unconnected-item counts are broader pre-existing acreage-candidate
+debt and do not constitute Phase 14 closure.

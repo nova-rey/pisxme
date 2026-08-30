@@ -2063,3 +2063,16 @@
   overlapping the 2.4 mm electrical-hole clearance envelope. The electrical
   MPN selection remains valid, but its local land pattern is reopened against
   the official Molex drawing and is excluded from routing/release authority.
+
+2026-08-30 — Phase 14 Molex land-pattern authority corrected
+
+- Replaced the incorrect horizontal 4.20 mm/two-peg local pattern with the
+  Molex SD-5569-002 2-circuit component-side layout: pad 1 at (0,0), pad 2
+  at (0,+5.50), and one NPTH retention peg at (0,-7.30); electrical and peg
+  drills are 1.80 mm and 3.00 mm.
+- Added a focused native DRC regression for J5/J6. Fresh materialization and
+  routing-candidate DRC no longer report Molex self-hole or solder-mask bridge
+  violations; the broader acreage candidate remains Phase 14-open.
+- Corrected the local authority provenance to the exact MPN drawing
+  `039300020_sd.pdf` / `55690002-SD` and forced the materializer to reload
+  J5/J6 from the project-local footprint rather than stale donor geometry.
