@@ -1701,3 +1701,9 @@
   and zero PCB-only/proxy nets by construction all pass.
 - Recorded `PISXME_REVA_CLEAN_PHASE3_CLOSED` in the Phase 3 exit receipt.
   No placement, routing, PCB, or Phase 4 work was introduced by this gate.
+
+2026-08-30 — strengthened Phase 3 parity evidence
+
+- Added a disposable native-format schematic-to-PCB parity fixture and
+  regression test proving PCB-only/proxy nets are rejected at the architecture
+  boundary while the clean project remains PCB-free.

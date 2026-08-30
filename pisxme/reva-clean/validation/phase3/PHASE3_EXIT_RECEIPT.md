@@ -10,7 +10,12 @@ Checked: 2026-08-30. Status: `PISXME_REVA_CLEAN_PHASE3_CLOSED`.
 | Clean namespace/path scan | PASS | zero `PiSXMe:` IDs and zero absolute model/source paths in clean KiCad source |
 | CM5 symbol/pad parity | PASS | 200 electrical symbol pins = 200 footprint pads |
 | EDAC symbol/pad parity | PASS | `A70-112-331N126`: P1–P18 = 18 pins/pads; shield is mechanical NPTH, not an electrical pad |
-| PCB-only/proxy nets | PASS by construction | no clean PCB exists at this architecture-only gate; no PCB net source can introduce one |
+| Schematic↔PCB parity fixture | PASS | `test_schematic_pcb_parity.py` parses the native-format disposable fixture and proves PCB-only/proxy nets = 0; native KiCad DRC reports 0 violations |
+
+The clean architecture has no production PCB yet, as required by the
+placement/routing boundary. The disposable native-format fixture supplies the
+missing positive parity test without introducing a clean PCB artifact or
+silently treating an empty set as sufficient evidence.
 
 The authoring regression regenerates the hierarchy, checks that the contract
 symbol is inside each child `lib_symbols` expression, checks native
