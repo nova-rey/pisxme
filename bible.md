@@ -1458,3 +1458,49 @@
 - This is a documentation/recovery publication only; no M6 implementation,
   PCB, schematic, manufacturing artifact, or Git history in the active checkout
   is being changed.
+
+2026-08-29 — Mac recovery material integrated on NYX
+
+- Verified all 208 entries in `/srv/pisxme-recovery/SHA256SUMS`, then copied the
+  recovered project-shaped tree additively into the NYX checkout on
+  `recovery/mac-import-20260829`. All 39 pre-existing tracked overlaps were
+  byte-identical, so no recovered file displaced differing repository content.
+- Restored the recovered bridge, tests, tooling, design and validation evidence,
+  active project rule file, and all 30 custom footprint files. The authoritative
+  schematic, PCB, project, and symbol-library bytes remain unchanged from the
+  handoff baseline.
+- Preserved `conflicts/mac-materialized-20260829/` as an archive rather than
+  promoting its variants. Two AppleDouble metadata blobs and one zero-byte
+  temporary file were quarantined under
+  `conflicts/mac-recovery-artifacts-20260829/`; the staging recovery remains
+  untouched.
+- The canonical `design/COMPONENT_SOURCING_REALITY_V2.md` recovered as zero
+  bytes, while a non-empty differing copy remains in the conflict archive. No
+  authority choice was inferred; deliberate provenance review is still required.
+- Native KiCad 10.0.5 parsed the recovered active schematic and board. Netlist
+  export succeeded; baseline validation reported 94 ERC violations, 803 DRC
+  violations, and 182 unconnected items, consistent with the documented open
+  design debt rather than a recovery parse failure.
+- A dedicated `/home/nyx/venvs/pisxme-bridge` Python 3.11 environment contains
+  the four pinned bridge dependencies and pytest. With the KiCad Flatpak Symbols
+  extension exposed through `KICAD_SYMBOL_DIR`, 11 of 12 recovered tests passed.
+  The remaining test is non-portable because it hard-codes the Mac path
+  `/Users/Cooper/Documents/ChatGPT/sxm2`; recovered source was not rewritten in
+  this import to conceal that defect.
+- The existing external disposable toolchain validator was rerun after import:
+  `pcbnew` load/save and source-defined pad-net mapping passed, native ERC and DRC
+  both reported zero violations, and KiCad generated 13 Gerbers plus one Excellon
+  drill file. Those outputs remain outside the repository under
+  `/home/nyx/pisxme-toolchain-environment/fixture/`.
+
+2026-08-29 — clean Rev A rebuild plan approved
+
+- Recorded the approved clean-rebuild program in
+  `Approved Plans/PiSXMe_RevA_Clean_Rebuild_Plan.md`.
+- The plan freezes the recovered `pisxme/PiSXMe.*` design as
+  `LEGACY_DONOR_REFERENCE` and establishes `pisxme/reva-clean/` as the only new
+  implementation path. It also requires the isolated `PiSXMeRevAClean` library
+  namespace, evidence-based CM5 orientation selection, acreage validation before
+  compression, and routing plus assembly-complexity rejection gates.
+- This checkpoint records planning authority only. No legacy schematic, PCB,
+  footprint, rule, routing, zone, or manufacturing source was modified.
