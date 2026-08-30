@@ -1986,3 +1986,9 @@
 - Kept Phase 14 open: filled-zone geometry, current density, voltage drop,
   branch sharing, contact current, thermal margin, and hostile DRC evidence
   remain required before routing closure.
+
+2026-08-30 — Phase 14 candidate artifact checkpoint
+
+- Committed the generated `ACREAGE_POWER_PHASE14.kicad_pcb` alongside its
+  deterministic generator and regression so the filled-zone candidate is
+  reproducible from the validated materialized board.
