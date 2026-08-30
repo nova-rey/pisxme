@@ -686,7 +686,7 @@
   (label "V100_REFCLK_P" (at 100.32 94.92 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid c0000000-0000-0000-0000-000000000004))
   (label "V100_REFCLK_N" (at 100.32 97.46 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid c0000000-0000-0000-0000-000000000005))
   (label "V100_PERST" (at 100.32 100.0 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid c0000000-0000-0000-0000-000000000006))
-  (label "V100_POWER_12V" (at 100.32 107.62 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid c0000000-0000-0000-0000-000000000007))
+  (global_label "12V_PROTECTED" (shape bidirectional) (at 100.32 107.62 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid c0000000-0000-0000-0000-000000000007))
   (label "V100_GND" (at 100.32 110.16 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid c0000000-0000-0000-0000-000000000008))
   (label "CM5_PET0_P" (at 20 125 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid e0000000-0000-0000-0000-000000000000))
   (label "V100_PET0_P" (at 50 125 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid e0000000-0000-0000-0000-000000000001))

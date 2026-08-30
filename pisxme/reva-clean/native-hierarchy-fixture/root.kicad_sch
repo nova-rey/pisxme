@@ -1,0 +1,79 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "eca05b56-1d11-44e9-8ed7-ff3f9f2270ea")
+	(paper "A4")
+	(title_block
+		(title "root")
+	)
+	(lib_symbols)
+	(sheet
+		(at 80 70)
+		(size 40 30)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "9fc91a23-ec01-4242-b217-73f3616cb01d")
+		(property "Sheetname" "CHILD"
+			(at 80 69.2884 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "child.kicad_sch"
+			(at 80 100.5846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "CHILD_SIG_A" output
+			(at 80 90 180)
+			(uuid "a21257ee-9d29-4572-b42a-482cde440857")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CHILD_SIG_B" output
+			(at 80 87 180)
+			(uuid "de2397ac-b888-4186-a4ad-01c3e2a8bc90")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project None
+				(path "/eca05b56-1d11-44e9-8ed7-ff3f9f2270ea"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

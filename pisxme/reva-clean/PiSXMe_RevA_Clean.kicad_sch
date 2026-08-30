@@ -420,7 +420,12 @@
       (uuid 40000000-0000-0000-0000-00000000006d))
     (pin "CM5_POWER" bidirectional (at 35 77 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 40000000-0000-0000-0000-00000000006e)))
+      (uuid 40000000-0000-0000-0000-00000000006e))
+    (instances
+      (project "PiSXMe_RevA_Clean"
+        (path "/30000000-0000-0000-0000-000000000000" (page "1"))
+      )
+    ))
   (sheet
     (at 70 45)
     (size 25 46)
@@ -477,7 +482,12 @@
       (uuid 40000000-0000-0000-0000-0000000000d4))
     (pin "V100_PERST" bidirectional (at 70 86 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 40000000-0000-0000-0000-0000000000d5)))
+      (uuid 40000000-0000-0000-0000-0000000000d5))
+    (instances
+      (project "PiSXMe_RevA_Clean"
+        (path "/30000000-0000-0000-0000-000000000000" (page "2"))
+      )
+    ))
   (sheet
     (at 105 45)
     (size 25 18)
@@ -501,7 +511,12 @@
       (uuid 40000000-0000-0000-0000-00000000012d))
     (pin "V100_THERMAL" bidirectional (at 105 53 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 40000000-0000-0000-0000-00000000012e)))
+      (uuid 40000000-0000-0000-0000-00000000012e))
+    (instances
+      (project "PiSXMe_RevA_Clean"
+        (path "/30000000-0000-0000-0000-000000000000" (page "3"))
+      )
+    ))
   (sheet
     (at 140 45)
     (size 25 18)
@@ -528,7 +543,12 @@
       (uuid 40000000-0000-0000-0000-000000000192))
     (pin "POWER_PG_FAULT" bidirectional (at 140 56 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 40000000-0000-0000-0000-000000000193)))
+      (uuid 40000000-0000-0000-0000-000000000193))
+    (instances
+      (project "PiSXMe_RevA_Clean"
+        (path "/30000000-0000-0000-0000-000000000000" (page "4"))
+      )
+    ))
   (sheet
     (at 175 45)
     (size 25 18)
@@ -555,7 +575,12 @@
       (uuid 40000000-0000-0000-0000-0000000001f6))
     (pin "BRIDGE_1V1_3V3" bidirectional (at 175 56 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 40000000-0000-0000-0000-0000000001f7)))
+      (uuid 40000000-0000-0000-0000-0000000001f7))
+    (instances
+      (project "PiSXMe_RevA_Clean"
+        (path "/30000000-0000-0000-0000-000000000000" (page "5"))
+      )
+    ))
   (sheet
     (at 35 75)
     (size 25 18)
@@ -582,7 +607,12 @@
       (uuid 40000000-0000-0000-0000-00000000025a))
     (pin "ETH_POWER" bidirectional (at 35 86 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 40000000-0000-0000-0000-00000000025b)))
+      (uuid 40000000-0000-0000-0000-00000000025b))
+    (instances
+      (project "PiSXMe_RevA_Clean"
+        (path "/30000000-0000-0000-0000-000000000000" (page "6"))
+      )
+    ))
   (sheet
     (at 70 75)
     (size 25 19)
@@ -612,7 +642,12 @@
       (uuid 40000000-0000-0000-0000-0000000002bf))
     (pin "BRIDGE_CFG" bidirectional (at 70 89 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 40000000-0000-0000-0000-0000000002c0)))
+      (uuid 40000000-0000-0000-0000-0000000002c0))
+    (instances
+      (project "PiSXMe_RevA_Clean"
+        (path "/30000000-0000-0000-0000-000000000000" (page "7"))
+      )
+    ))
   (sheet
     (at 105 75)
     (size 25 18)
@@ -639,7 +674,12 @@
       (uuid 40000000-0000-0000-0000-000000000322))
     (pin "SERVICE_GND" bidirectional (at 105 86 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 40000000-0000-0000-0000-000000000323)))
+      (uuid 40000000-0000-0000-0000-000000000323))
+    (instances
+      (project "PiSXMe_RevA_Clean"
+        (path "/30000000-0000-0000-0000-000000000000" (page "8"))
+      )
+    ))
   (sheet
     (at 140 75)
     (size 25 18)
@@ -666,7 +706,12 @@
       (uuid 40000000-0000-0000-0000-000000000386))
     (pin "THERMAL_ALERT" bidirectional (at 140 86 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 40000000-0000-0000-0000-000000000387)))
+      (uuid 40000000-0000-0000-0000-000000000387))
+    (instances
+      (project "PiSXMe_RevA_Clean"
+        (path "/30000000-0000-0000-0000-000000000000" (page "9"))
+      )
+    ))
   (sheet
     (at 175 75)
     (size 25 18)
@@ -693,7 +738,12 @@
       (uuid 40000000-0000-0000-0000-0000000003ea))
     (pin "DEBUG_GND" bidirectional (at 175 86 180)
       (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 40000000-0000-0000-0000-0000000003eb)))
+      (uuid 40000000-0000-0000-0000-0000000003eb))
+    (instances
+      (project "PiSXMe_RevA_Clean"
+        (path "/30000000-0000-0000-0000-000000000000" (page "10"))
+      )
+    ))
 
 
   (wire

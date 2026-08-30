@@ -1,6 +1,6 @@
 # Phase 5 power network implementation specification
 
-Status: `IMPLEMENTATION_REQUIRED`
+Status: `IMPLEMENTED; PHASE5_CLOSED_WITH_REV_A_EMPIRICAL_RISK`
 
 This specification is derived from the locally preserved TI datasheets
 `authority-inventory/primary-docs/LM74700-Q1.pdf` (revision G) and

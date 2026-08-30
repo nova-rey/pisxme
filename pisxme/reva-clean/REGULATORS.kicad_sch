@@ -1,373 +1,325 @@
-(kicad_sch (version 20230409) (generator "eeschema")
-  (uuid 20000000-0000-0000-0000-000000000005)
-  (paper "A4")
-  (lib_symbols
-    (symbol "Connector_Generic:Conn_01x03"
-      (pin_numbers
-        (hide yes))
-      (pin_names
-        (offset 0))
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "J"
-        (at 2.032 0 90)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Value" "Conn_01x03"
-        (at 0 0 90)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Footprint" ""
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27))
-          (hide yes)))
-      (property "Datasheet" "~"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27))
-          (hide yes)))
-      (property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27))
-          (hide yes)))
-      (symbol "Conn_01x03_1_1"
-        (rectangle
-          (start -1.27 3.81)
-          (end 1.27 -3.81)
-          (stroke
-            (width 0.254)
-            (type default))
-          (fill
-            (type background)))
-        (rectangle
-          (start -1.27 2.667)
-          (end 0 2.413)
-          (stroke
-            (width 0.1524)
-            (type default))
-          (fill
-            (type none)))
-        (rectangle
-          (start -1.27 0.127)
-          (end 0 -0.127)
-          (stroke
-            (width 0.1524)
-            (type default))
-          (fill
-            (type none)))
-        (rectangle
-          (start -1.27 -2.413)
-          (end 0 -2.667)
-          (stroke
-            (width 0.1524)
-            (type default))
-          (fill
-            (type none)))
-        (pin passive line
-          (at -5.08 2.54 0)
-          (length 3.81)
-          (name "Pin_1"
-            (effects
-              (font
-                (size 1.27 1.27))))
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)))))
-        (pin passive line
-          (at -5.08 0 0)
-          (length 3.81)
-          (name "Pin_2"
-            (effects
-              (font
-                (size 1.27 1.27))))
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)))))
-        (pin passive line
-          (at -5.08 -2.54 0)
-          (length 3.81)
-          (name "Pin_3"
-            (effects
-              (font
-                (size 1.27 1.27))))
-          (number "3"
-            (effects
-              (font
-                (size 1.27 1.27))))))
-      (embedded_fonts no))
-    (symbol "power:PWR_FLAG"
-      (pin_numbers
-        (hide yes))
-      (pin_names
-        (offset 0))
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "#FLG"
-        (at 2.032 0 90)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Value" "PWR_FLAG"
-        (at 0 0 90)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Footprint" ""
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27))
-          (hide yes)))
-      (property "Datasheet" "~"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27))
-          (hide yes)))
-      (property "Description" "Special symbol for telling ERC where power comes from"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27))
-          (hide yes)))
-      (symbol "PWR_FLAG_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 1.27)
-            (xy -1.016 1.905)
-            (xy 0 2.54)
-            (xy 1.016 1.905)
-            (xy 0 1.27))
-          (stroke
-            (width 0)
-            (type default))
-          (fill
-            (type none))))
-      (symbol "PWR_FLAG_1_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 1.27)
-            (xy -1.016 1.905)
-            (xy 0 2.54)
-            (xy 1.016 1.905)
-            (xy 0 1.27))
-          (stroke
-            (width 0)
-            (type default))
-          (fill
-            (type none)))
-        (pin power_out line
-          (at 0 0 90)
-          (length 0)
-          (name ""
-            (effects
-              (font
-                (size 1.27 1.27))))
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27))))))
-      (embedded_fonts no))
-    (symbol "power:GND"
-      (power global)
-      (pin_numbers
-        (hide yes))
-      (pin_names
-        (offset 0)
-        (hide yes))
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "#PWR"
-        (at 0 -6.35 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Value" "GND"
-        (at 0 -3.81 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Footprint" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Datasheet" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "ki_keywords" "global power"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (symbol "GND_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 -1.27)
-            (xy 1.27 -1.27)
-            (xy 0 -2.54)
-            (xy -1.27 -1.27)
-            (xy 0 -1.27))
-          (stroke
-            (width 0)
-            (type default))
-          (fill
-            (type none))))
-      (symbol "GND_1_1"
-        (pin power_in line
-          (at 0 0 270)
-          (length 0)
-          (name ""
-            (effects
-              (font
-                (size 1.27 1.27))))
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27))))))
-      (embedded_fonts no))
-    (symbol "power:VCC"
-      (power global)
-      (pin_numbers
-        (hide yes))
-      (pin_names
-        (offset 0)
-        (hide yes))
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (in_pos_files yes)
-      (duplicate_pin_numbers_are_jumpers no)
-      (property "Reference" "#PWR"
-        (at 0 -3.81 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Value" "VCC"
-        (at 0 3.556 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Footprint" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Datasheet" ""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Description" "Power symbol creates a global label with name \"VCC\""
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "ki_keywords" "global power"
-        (at 0 0 0)
-        (show_name no)
-        (do_not_autoplace no)
-        (hide yes)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (symbol "VCC_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54))
-          (stroke
-            (width 0)
-            (type default))
-          (fill
-            (type none)))
-        (polyline
-          (pts
-            (xy 0 2.54)
-            (xy 0.762 1.27))
-          (stroke
-            (width 0)
-            (type default))
-          (fill
-            (type none)))
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 2.54))
-          (stroke
-            (width 0)
-            (type default))
-          (fill
-            (type none))))
-      (symbol "VCC_1_1"
-        (pin power_in line
-          (at 0 0 90)
-          (length 0)
-          (name ""
-            (effects
-              (font
-                (size 1.27 1.27))))
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27))))))
-      (embedded_fonts no))
-    (symbol "PiSXMeRevAClean:REGULATORS_Contract"
+(kicad_sch
+	(version 20230409)
+	(generator "eeschema")
+	(uuid "20000000-0000-0000-0000-000000000005")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:C"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+(symbol "PiSXMeRevAClean:TPSM63606RDLR_5V" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+ (property "Reference" "U" (at 0 -24 0) (effects (font (size 1 1))))
+ (property "Value" "TPSM63606RDLR" (at 0 24 0) (effects (font (size 1 1))))
+ (property "Footprint" "PiSXMeRevAClean:TPSM63606RDLR_RDL0020" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+ (symbol "TPSM63606RDLR_5V_1_1" (rectangle (start -15 -22) (end 15 22) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 -20 180) (length 5) (name "VIN1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin passive line (at 20 -18 180) (length 5) (name "SW" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1))))) (pin passive line (at 20 -16 180) (length 5) (name "CBOOT" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1))))) (pin passive line (at 20 -14 180) (length 5) (name "RBOOT" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1))))) (pin passive line (at 20 -12 180) (length 5) (name "VLDOIN" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1))))) (pin passive line (at 20 -10 180) (length 5) (name "AGND" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1))))) (pin passive line (at 20 -8 180) (length 5) (name "VCC" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1))))) (pin passive line (at 20 -6 180) (length 5) (name "VOUT1" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1))))) (pin passive line (at 20 -4 180) (length 5) (name "VOUT2" (effects (font (size 1 1)))) (number "9" (effects (font (size 1 1))))) (pin passive line (at 20 -2 180) (length 5) (name "FB" (effects (font (size 1 1)))) (number "10" (effects (font (size 1 1))))) (pin passive line (at 20 0 180) (length 5) (name "AGND" (effects (font (size 1 1)))) (number "11" (effects (font (size 1 1))))) (pin passive line (at 20 2 180) (length 5) (name "RT" (effects (font (size 1 1)))) (number "12" (effects (font (size 1 1))))) (pin passive line (at 20 4 180) (length 5) (name "PG" (effects (font (size 1 1)))) (number "13" (effects (font (size 1 1))))) (pin passive line (at 20 6 180) (length 5) (name "EN/SYNC" (effects (font (size 1 1)))) (number "14" (effects (font (size 1 1))))) (pin passive line (at 20 8 180) (length 5) (name "NC" (effects (font (size 1 1)))) (number "15" (effects (font (size 1 1))))) (pin passive line (at 20 10 180) (length 5) (name "VIN2" (effects (font (size 1 1)))) (number "16" (effects (font (size 1 1))))) (pin passive line (at 20 12 180) (length 5) (name "PGND" (effects (font (size 1 1)))) (number "17" (effects (font (size 1 1))))) (pin passive line (at 20 14 180) (length 5) (name "PGND" (effects (font (size 1 1)))) (number "18" (effects (font (size 1 1))))) (pin passive line (at 20 16 180) (length 5) (name "PGND" (effects (font (size 1 1)))) (number "19" (effects (font (size 1 1))))) (pin passive line (at 20 18 180) (length 5) (name "PGND" (effects (font (size 1 1)))) (number "20" (effects (font (size 1 1)))))) (embedded_fonts no))
+(symbol "PiSXMeRevAClean:TPSM63606RDLR_3V3" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+ (property "Reference" "U" (at 0 -24 0) (effects (font (size 1 1))))
+ (property "Value" "TPSM63606RDLR" (at 0 24 0) (effects (font (size 1 1))))
+ (property "Footprint" "PiSXMeRevAClean:TPSM63606RDLR_RDL0020" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+ (symbol "TPSM63606RDLR_3V3_1_1" (rectangle (start -15 -22) (end 15 22) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 -20 180) (length 5) (name "VIN1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin passive line (at 20 -18 180) (length 5) (name "SW" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1))))) (pin passive line (at 20 -16 180) (length 5) (name "CBOOT" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1))))) (pin passive line (at 20 -14 180) (length 5) (name "RBOOT" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1))))) (pin passive line (at 20 -12 180) (length 5) (name "VLDOIN" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1))))) (pin passive line (at 20 -10 180) (length 5) (name "AGND" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1))))) (pin passive line (at 20 -8 180) (length 5) (name "VCC" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1))))) (pin passive line (at 20 -6 180) (length 5) (name "VOUT1" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1))))) (pin passive line (at 20 -4 180) (length 5) (name "VOUT2" (effects (font (size 1 1)))) (number "9" (effects (font (size 1 1))))) (pin passive line (at 20 -2 180) (length 5) (name "FB" (effects (font (size 1 1)))) (number "10" (effects (font (size 1 1))))) (pin passive line (at 20 0 180) (length 5) (name "AGND" (effects (font (size 1 1)))) (number "11" (effects (font (size 1 1))))) (pin passive line (at 20 2 180) (length 5) (name "RT" (effects (font (size 1 1)))) (number "12" (effects (font (size 1 1))))) (pin passive line (at 20 4 180) (length 5) (name "PG" (effects (font (size 1 1)))) (number "13" (effects (font (size 1 1))))) (pin passive line (at 20 6 180) (length 5) (name "EN/SYNC" (effects (font (size 1 1)))) (number "14" (effects (font (size 1 1))))) (pin passive line (at 20 8 180) (length 5) (name "NC" (effects (font (size 1 1)))) (number "15" (effects (font (size 1 1))))) (pin passive line (at 20 10 180) (length 5) (name "VIN2" (effects (font (size 1 1)))) (number "16" (effects (font (size 1 1))))) (pin passive line (at 20 12 180) (length 5) (name "PGND" (effects (font (size 1 1)))) (number "17" (effects (font (size 1 1))))) (pin passive line (at 20 14 180) (length 5) (name "PGND" (effects (font (size 1 1)))) (number "18" (effects (font (size 1 1))))) (pin passive line (at 20 16 180) (length 5) (name "PGND" (effects (font (size 1 1)))) (number "19" (effects (font (size 1 1))))) (pin passive line (at 20 18 180) (length 5) (name "PGND" (effects (font (size 1 1)))) (number "20" (effects (font (size 1 1)))))) (embedded_fonts no))
+(symbol "PiSXMeRevAClean:TPSM63606RDLR_1V1" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+ (property "Reference" "U" (at 0 -24 0) (effects (font (size 1 1))))
+ (property "Value" "TPSM63606RDLR" (at 0 24 0) (effects (font (size 1 1))))
+ (property "Footprint" "PiSXMeRevAClean:TPSM63606RDLR_RDL0020" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+ (symbol "TPSM63606RDLR_1V1_1_1" (rectangle (start -15 -22) (end 15 22) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 -20 180) (length 5) (name "VIN1" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin passive line (at 20 -18 180) (length 5) (name "SW" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1))))) (pin passive line (at 20 -16 180) (length 5) (name "CBOOT" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1))))) (pin passive line (at 20 -14 180) (length 5) (name "RBOOT" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1))))) (pin passive line (at 20 -12 180) (length 5) (name "VLDOIN" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1))))) (pin passive line (at 20 -10 180) (length 5) (name "AGND" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1))))) (pin passive line (at 20 -8 180) (length 5) (name "VCC" (effects (font (size 1 1)))) (number "7" (effects (font (size 1 1))))) (pin passive line (at 20 -6 180) (length 5) (name "VOUT1" (effects (font (size 1 1)))) (number "8" (effects (font (size 1 1))))) (pin passive line (at 20 -4 180) (length 5) (name "VOUT2" (effects (font (size 1 1)))) (number "9" (effects (font (size 1 1))))) (pin passive line (at 20 -2 180) (length 5) (name "FB" (effects (font (size 1 1)))) (number "10" (effects (font (size 1 1))))) (pin passive line (at 20 0 180) (length 5) (name "AGND" (effects (font (size 1 1)))) (number "11" (effects (font (size 1 1))))) (pin passive line (at 20 2 180) (length 5) (name "RT" (effects (font (size 1 1)))) (number "12" (effects (font (size 1 1))))) (pin passive line (at 20 4 180) (length 5) (name "PG" (effects (font (size 1 1)))) (number "13" (effects (font (size 1 1))))) (pin passive line (at 20 6 180) (length 5) (name "EN/SYNC" (effects (font (size 1 1)))) (number "14" (effects (font (size 1 1))))) (pin passive line (at 20 8 180) (length 5) (name "NC" (effects (font (size 1 1)))) (number "15" (effects (font (size 1 1))))) (pin passive line (at 20 10 180) (length 5) (name "VIN2" (effects (font (size 1 1)))) (number "16" (effects (font (size 1 1))))) (pin passive line (at 20 12 180) (length 5) (name "PGND" (effects (font (size 1 1)))) (number "17" (effects (font (size 1 1))))) (pin passive line (at 20 14 180) (length 5) (name "PGND" (effects (font (size 1 1)))) (number "18" (effects (font (size 1 1))))) (pin passive line (at 20 16 180) (length 5) (name "PGND" (effects (font (size 1 1)))) (number "19" (effects (font (size 1 1))))) (pin passive line (at 20 18 180) (length 5) (name "PGND" (effects (font (size 1 1)))) (number "20" (effects (font (size 1 1)))))) (embedded_fonts no))
+(symbol "PiSXMeRevAClean:VCAP_100NF" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+ (property "Reference" "U" (at 0 -8 0) (effects (font (size 1 1))))
+ (property "Value" "VCAP_100NF" (at 0 8 0) (effects (font (size 1 1))))
+ (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))
+ (symbol "VCAP_100NF_1_1" (rectangle (start -15 -6) (end 15 6) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at -12 0 0) (length 5) (name "VCAP" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1))))) (pin passive line (at 12 0 180) (length 5) (name "GND" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) (embedded_fonts no))
+(symbol "PiSXMeRevAClean:REGULATORS_Contract"
       (pin_names (offset 1.0))
       (exclude_from_sim no)
       (in_bom yes)
@@ -410,58 +362,8 @@
           (number "4" (effects (font (size 1.27 1.27)))))
       )
     )
-(symbol "PiSXMeRevAClean:TPSM63606RDLR_5V" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 -10 0) (effects (font (size 1 1)))) (property "Value" "TPSM63606RDLR_5V" (at 0 10 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "TPSM63606RDLR_5V_1_1" (rectangle (start -15 -8) (end 15 8) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 -4.5 180) (length 5) (name "IN" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))
-(pin passive line (at 20 -1.5 180) (length 5) (name "OUT" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))
-(pin passive line (at 20 1.5 180) (length 5) (name "GND" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1)))))
-(pin passive line (at 20 4.5 180) (length 5) (name "PG" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1)))))) (embedded_fonts no))
-(symbol "PiSXMeRevAClean:TPSM63606RDLR_3V3" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 -10 0) (effects (font (size 1 1)))) (property "Value" "TPSM63606RDLR_3V3" (at 0 10 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "TPSM63606RDLR_3V3_1_1" (rectangle (start -15 -8) (end 15 8) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 -4.5 180) (length 5) (name "IN" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))
-(pin passive line (at 20 -1.5 180) (length 5) (name "OUT" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))
-(pin passive line (at 20 1.5 180) (length 5) (name "GND" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1)))))
-(pin passive line (at 20 4.5 180) (length 5) (name "EN" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1)))))) (embedded_fonts no))
-(symbol "PiSXMeRevAClean:TPSM63606RDLR_1V1" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 -10 0) (effects (font (size 1 1)))) (property "Value" "TPSM63606RDLR_1V1" (at 0 10 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "TPSM63606RDLR_1V1_1_1" (rectangle (start -15 -8) (end 15 8) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 -4.5 180) (length 5) (name "IN" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))
-(pin passive line (at 20 -1.5 180) (length 5) (name "OUT" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))
-(pin passive line (at 20 1.5 180) (length 5) (name "GND" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1)))))
-(pin passive line (at 20 4.5 180) (length 5) (name "EN" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1)))))) (embedded_fonts no)))
-
-  (hierarchical_label "12V_PROTECTED"
-    (shape bidirectional)
-    (at 5 10 180)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 50000000-0000-0000-0000-0000000001f4))
-  (hierarchical_label "CM5_5V"
-    (shape bidirectional)
-    (at 5 13 180)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 50000000-0000-0000-0000-0000000001f5))
-  (hierarchical_label "STORAGE_3V3"
-    (shape bidirectional)
-    (at 5 16 180)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 50000000-0000-0000-0000-0000000001f6))
-  (hierarchical_label "BRIDGE_1V1_3V3"
-    (shape bidirectional)
-    (at 5 19 180)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 50000000-0000-0000-0000-0000000001f7))
-
-  (wire
-    (pts (xy 5 10) (xy 19.92 10))
-    (stroke (width 0) (type default))
-    (uuid a0000000-0000-0000-0000-0000000001f4))
-  (wire
-    (pts (xy 5 13) (xy 19.92 13))
-    (stroke (width 0) (type default))
-    (uuid a0000000-0000-0000-0000-0000000001f5))
-  (wire
-    (pts (xy 5 16) (xy 19.92 16))
-    (stroke (width 0) (type default))
-    (uuid a0000000-0000-0000-0000-0000000001f6))
-  (wire
-    (pts (xy 5 19) (xy 19.92 19))
-    (stroke (width 0) (type default))
-    (uuid a0000000-0000-0000-0000-0000000001f7))
-
-  (symbol
+)
+	(symbol
     (lib_id "PiSXMeRevAClean:REGULATORS_Contract")
     (at 25 10 0)
     (unit 1)
@@ -490,29 +392,5535 @@
     (instances (project "PiSXMe_RevA_Clean"
       (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005" (reference "X5" ) (unit 1))))
   )
-(label "12V_PROTECTED" (at 70 90.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d5000000-0000-0000-0000-000000000064))
-(label "CM5_5V" (at 70 93.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d5000000-0000-0000-0000-000000000065))
-(label "POWER_GND" (at 70 96.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d5000000-0000-0000-0000-000000000066))
-(label "POWER_PG_FAULT" (at 70 99.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d5000000-0000-0000-0000-000000000067))
-(symbol (lib_id "PiSXMeRevAClean:TPSM63606RDLR_5V") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid d5000000-0000-0000-0000-000000000000) (property "Reference" "U3" (at 50 84 0) (effects (font (size 1.1 1.1)))) (property "Value" "TPSM63606RDLR" (at 50 106 0) (effects (font (size 1.1 1.1)))) (property "MPN" "TPSM63606RDLR" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:TPSM63606RDLR_RDL0020") (pin "1" (uuid d5000000-0000-0000-0000-000000000000))
-(pin "2" (uuid d5000000-0000-0000-0000-000000000001))
-(pin "3" (uuid d5000000-0000-0000-0000-000000000002))
-(pin "4" (uuid d5000000-0000-0000-0000-000000000003)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "U3") (unit 1)))) )
-(label "12V_PROTECTED" (at 70 90.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d6000000-0000-0000-0000-000000000064))
-(label "BRIDGE_3V3" (at 70 93.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d6000000-0000-0000-0000-000000000065))
-(label "POWER_GND" (at 70 96.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d6000000-0000-0000-0000-000000000066))
-(label "BRIDGE_ENABLE" (at 70 99.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d6000000-0000-0000-0000-000000000067))
-(symbol (lib_id "PiSXMeRevAClean:TPSM63606RDLR_3V3") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid d6000000-0000-0000-0000-000000000000) (property "Reference" "U4" (at 50 84 0) (effects (font (size 1.1 1.1)))) (property "Value" "TPSM63606RDLR" (at 50 106 0) (effects (font (size 1.1 1.1)))) (property "MPN" "TPSM63606RDLR" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:TPSM63606RDLR_RDL0020") (pin "1" (uuid d6000000-0000-0000-0000-000000000000))
-(pin "2" (uuid d6000000-0000-0000-0000-000000000001))
-(pin "3" (uuid d6000000-0000-0000-0000-000000000002))
-(pin "4" (uuid d6000000-0000-0000-0000-000000000003)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "U4") (unit 1)))) )
-(label "12V_PROTECTED" (at 70 90.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d7000000-0000-0000-0000-000000000064))
-(label "BRIDGE_1V1" (at 70 93.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d7000000-0000-0000-0000-000000000065))
-(label "POWER_GND" (at 70 96.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d7000000-0000-0000-0000-000000000066))
-(label "BRIDGE_ENABLE" (at 70 99.5 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid d7000000-0000-0000-0000-000000000067))
-(symbol (lib_id "PiSXMeRevAClean:TPSM63606RDLR_1V1") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid d7000000-0000-0000-0000-000000000000) (property "Reference" "U5" (at 50 84 0) (effects (font (size 1.1 1.1)))) (property "Value" "TPSM63606RDLR" (at 50 106 0) (effects (font (size 1.1 1.1)))) (property "MPN" "TPSM63606RDLR" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:TPSM63606RDLR_RDL0020") (pin "1" (uuid d7000000-0000-0000-0000-000000000000))
-(pin "2" (uuid d7000000-0000-0000-0000-000000000001))
-(pin "3" (uuid d7000000-0000-0000-0000-000000000002))
-(pin "4" (uuid d7000000-0000-0000-0000-000000000003)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "U5") (unit 1)))) )
-  (sheet_instances (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005" (page "5")))
+	(symbol (lib_id "PiSXMeRevAClean:TPSM63606RDLR_5V") (at 50 95 0)
+ (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+ (uuid d5000000-0000-0000-0000-000000000000)
+ (property "Reference" "U3" (at 50 84 0) (effects (font (size 1.1 1.1))))
+ (property "Value" "TPSM63606RDLR" (at 50 106 0) (effects (font (size 1.1 1.1))))
+ (property "MPN" "TPSM63606RDLR" (at 50 95 0) (effects (font (size 1 1)) (hide yes)))
+ (property "Footprint" "PiSXMeRevAClean:TPSM63606RDLR_RDL0020")
+ (pin "1" (uuid d5000000-0000-0000-0000-000000000001))
+(pin "2" (uuid d5000000-0000-0000-0000-000000000002))
+(pin "3" (uuid d5000000-0000-0000-0000-000000000003))
+(pin "4" (uuid d5000000-0000-0000-0000-000000000004))
+(pin "5" (uuid d5000000-0000-0000-0000-000000000005))
+(pin "6" (uuid d5000000-0000-0000-0000-000000000006))
+(pin "7" (uuid d5000000-0000-0000-0000-000000000007))
+(pin "8" (uuid d5000000-0000-0000-0000-000000000008))
+(pin "9" (uuid d5000000-0000-0000-0000-000000000009))
+(pin "10" (uuid d5000000-0000-0000-0000-00000000000a))
+(pin "11" (uuid d5000000-0000-0000-0000-00000000000b))
+(pin "12" (uuid d5000000-0000-0000-0000-00000000000c))
+(pin "13" (uuid d5000000-0000-0000-0000-00000000000d))
+(pin "14" (uuid d5000000-0000-0000-0000-00000000000e))
+(pin "15" (uuid d5000000-0000-0000-0000-00000000000f))
+(pin "16" (uuid d5000000-0000-0000-0000-000000000010))
+(pin "17" (uuid d5000000-0000-0000-0000-000000000011))
+(pin "18" (uuid d5000000-0000-0000-0000-000000000012))
+(pin "19" (uuid d5000000-0000-0000-0000-000000000013))
+(pin "20" (uuid d5000000-0000-0000-0000-000000000014))
+ (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005" (reference "U3") (unit 1)))) )
+	(symbol (lib_id "PiSXMeRevAClean:TPSM63606RDLR_3V3") (at 50 145 0)
+ (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+ (uuid d6000000-0000-0000-0000-000000000000)
+ (property "Reference" "U4" (at 50 134 0) (effects (font (size 1.1 1.1))))
+ (property "Value" "TPSM63606RDLR" (at 50 156 0) (effects (font (size 1.1 1.1))))
+ (property "MPN" "TPSM63606RDLR" (at 50 145 0) (effects (font (size 1 1)) (hide yes)))
+ (property "Footprint" "PiSXMeRevAClean:TPSM63606RDLR_RDL0020")
+ (pin "1" (uuid d6000000-0000-0000-0000-000000000001))
+(pin "2" (uuid d6000000-0000-0000-0000-000000000002))
+(pin "3" (uuid d6000000-0000-0000-0000-000000000003))
+(pin "4" (uuid d6000000-0000-0000-0000-000000000004))
+(pin "5" (uuid d6000000-0000-0000-0000-000000000005))
+(pin "6" (uuid d6000000-0000-0000-0000-000000000006))
+(pin "7" (uuid d6000000-0000-0000-0000-000000000007))
+(pin "8" (uuid d6000000-0000-0000-0000-000000000008))
+(pin "9" (uuid d6000000-0000-0000-0000-000000000009))
+(pin "10" (uuid d6000000-0000-0000-0000-00000000000a))
+(pin "11" (uuid d6000000-0000-0000-0000-00000000000b))
+(pin "12" (uuid d6000000-0000-0000-0000-00000000000c))
+(pin "13" (uuid d6000000-0000-0000-0000-00000000000d))
+(pin "14" (uuid d6000000-0000-0000-0000-00000000000e))
+(pin "15" (uuid d6000000-0000-0000-0000-00000000000f))
+(pin "16" (uuid d6000000-0000-0000-0000-000000000010))
+(pin "17" (uuid d6000000-0000-0000-0000-000000000011))
+(pin "18" (uuid d6000000-0000-0000-0000-000000000012))
+(pin "19" (uuid d6000000-0000-0000-0000-000000000013))
+(pin "20" (uuid d6000000-0000-0000-0000-000000000014))
+ (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005" (reference "U4") (unit 1)))) )
+	(symbol (lib_id "PiSXMeRevAClean:TPSM63606RDLR_1V1") (at 50 195 0)
+ (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+ (uuid d7000000-0000-0000-0000-000000000000)
+ (property "Reference" "U5" (at 50 184 0) (effects (font (size 1.1 1.1))))
+ (property "Value" "TPSM63606RDLR" (at 50 206 0) (effects (font (size 1.1 1.1))))
+ (property "MPN" "TPSM63606RDLR" (at 50 195 0) (effects (font (size 1 1)) (hide yes)))
+ (property "Footprint" "PiSXMeRevAClean:TPSM63606RDLR_RDL0020")
+ (pin "1" (uuid d7000000-0000-0000-0000-000000000001))
+(pin "2" (uuid d7000000-0000-0000-0000-000000000002))
+(pin "3" (uuid d7000000-0000-0000-0000-000000000003))
+(pin "4" (uuid d7000000-0000-0000-0000-000000000004))
+(pin "5" (uuid d7000000-0000-0000-0000-000000000005))
+(pin "6" (uuid d7000000-0000-0000-0000-000000000006))
+(pin "7" (uuid d7000000-0000-0000-0000-000000000007))
+(pin "8" (uuid d7000000-0000-0000-0000-000000000008))
+(pin "9" (uuid d7000000-0000-0000-0000-000000000009))
+(pin "10" (uuid d7000000-0000-0000-0000-00000000000a))
+(pin "11" (uuid d7000000-0000-0000-0000-00000000000b))
+(pin "12" (uuid d7000000-0000-0000-0000-00000000000c))
+(pin "13" (uuid d7000000-0000-0000-0000-00000000000d))
+(pin "14" (uuid d7000000-0000-0000-0000-00000000000e))
+(pin "15" (uuid d7000000-0000-0000-0000-00000000000f))
+(pin "16" (uuid d7000000-0000-0000-0000-000000000010))
+(pin "17" (uuid d7000000-0000-0000-0000-000000000011))
+(pin "18" (uuid d7000000-0000-0000-0000-000000000012))
+(pin "19" (uuid d7000000-0000-0000-0000-000000000013))
+(pin "20" (uuid d7000000-0000-0000-0000-000000000014))
+ (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005" (reference "U5") (unit 1)))) )
+	(symbol
+		(lib_id "Device:C")
+		(at 115 75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000000")
+		(property "Reference" "C5"
+			(at 115 67 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "10uF 50V"
+			(at 115 83 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1206_3216Metric"
+			(at 115 75 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C3216X7R1H106K160AC"
+			(at 115 75 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000001")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000002")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 132 75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000020")
+		(property "Reference" "C6"
+			(at 132 67 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "10uF 50V"
+			(at 132 83 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1206_3216Metric"
+			(at 132 75 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C3216X7R1H106K160AC"
+			(at 132 75 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000021")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000022")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 149 75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000040")
+		(property "Reference" "C7"
+			(at 149 67 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 149 83 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 149 75 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 149 75 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000041")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000042")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 166 75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000060")
+		(property "Reference" "C8"
+			(at 166 67 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 166 83 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 166 75 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 166 75 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000061")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000062")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 183 75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000080")
+		(property "Reference" "C9"
+			(at 183 67 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22pF"
+			(at 183 83 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_0805_2012Metric"
+			(at 183 75 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GCM1555C1H220JA16"
+			(at 183 75 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000081")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000082")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 115 85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000000a0")
+		(property "Reference" "R3"
+			(at 115 77 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "40.2k"
+			(at 115 93 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric"
+			(at 115 85 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0740K2L"
+			(at 115 85 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000000a1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000000a2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 132 85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000000c0")
+		(property "Reference" "R4"
+			(at 132 77 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 132 93 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric"
+			(at 132 85 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
+			(at 132 85 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000000c1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000000c2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 149 85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000000e0")
+		(property "Reference" "R5"
+			(at 149 77 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "13k"
+			(at 149 93 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric"
+			(at 149 85 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0713KL"
+			(at 149 85 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000000e1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000000e2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 166 85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000100")
+		(property "Reference" "R6"
+			(at 166 77 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 166 93 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric"
+			(at 166 85 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-07100KL"
+			(at 166 85 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000101")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000102")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 115 110 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000120")
+		(property "Reference" "C14"
+			(at 115 102 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "10uF 50V"
+			(at 115 118 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1206_3216Metric"
+			(at 115 110 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C3216X7R1H106K160AC"
+			(at 115 110 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000121")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000122")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 132 110 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000140")
+		(property "Reference" "C15"
+			(at 132 102 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "10uF 50V"
+			(at 132 118 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1206_3216Metric"
+			(at 132 110 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C3216X7R1H106K160AC"
+			(at 132 110 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000141")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000142")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 149 110 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000160")
+		(property "Reference" "C16"
+			(at 149 102 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 149 118 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 149 110 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 149 110 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000161")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000162")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 166 110 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000180")
+		(property "Reference" "C17"
+			(at 166 102 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 166 118 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 166 110 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 166 110 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000181")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000182")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 183 110 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000001a0")
+		(property "Reference" "C18"
+			(at 183 102 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "47pF"
+			(at 183 118 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_0805_2012Metric"
+			(at 183 110 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GCM1555C1H220JA16"
+			(at 183 110 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000001a1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000001a2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 115 120 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000001c0")
+		(property "Reference" "R11"
+			(at 115 112 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "23.2k"
+			(at 115 128 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric"
+			(at 115 120 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0723K2L"
+			(at 115 120 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000001c1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000001c2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 132 120 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000001e0")
+		(property "Reference" "R12"
+			(at 132 112 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 132 128 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric"
+			(at 132 120 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
+			(at 132 120 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000001e1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000001e2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "R12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 149 120 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000200")
+		(property "Reference" "R13"
+			(at 149 112 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "27k"
+			(at 149 128 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric"
+			(at 149 120 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0727KL"
+			(at 149 120 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000201")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000202")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 166 120 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000220")
+		(property "Reference" "R14"
+			(at 166 112 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 166 128 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric"
+			(at 166 120 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-07100KL"
+			(at 166 120 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000221")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000222")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 200 85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000240")
+		(property "Reference" "C19"
+			(at 200 77 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 200 93 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 200 85 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 200 85 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000241")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000242")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 115 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000260")
+		(property "Reference" "C23"
+			(at 115 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "10uF 50V"
+			(at 115 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1206_3216Metric"
+			(at 115 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C3216X7R1H106K160AC"
+			(at 115 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000261")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000262")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 132 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000280")
+		(property "Reference" "C24"
+			(at 132 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "1uF"
+			(at 132 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_0805_2012Metric"
+			(at 132 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM188R71H104KA93D"
+			(at 132 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000281")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000282")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 149 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000002a0")
+		(property "Reference" "C25"
+			(at 149 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "10uF 50V"
+			(at 149 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1206_3216Metric"
+			(at 149 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "C3216X7R1H106K160AC"
+			(at 149 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000002a1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000002a2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 166 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000002c0")
+		(property "Reference" "R19"
+			(at 166 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "1k"
+			(at 166 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric"
+			(at 166 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
+			(at 166 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000002c1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000002c2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "R19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 183 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000002e0")
+		(property "Reference" "R20"
+			(at 183 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 183 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric"
+			(at 183 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-0710KL"
+			(at 183 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000002e1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000002e2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "R20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 200 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000300")
+		(property "Reference" "R21"
+			(at 200 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "2k"
+			(at 200 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric"
+			(at 200 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-072KL"
+			(at 200 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000301")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000302")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "R21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 217 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000320")
+		(property "Reference" "R22"
+			(at 217 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "100k"
+			(at 217 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric"
+			(at 217 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "RC0402FR-07100KL"
+			(at 217 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000321")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000322")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "R22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 234 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000340")
+		(property "Reference" "C26"
+			(at 234 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 234 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 234 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 234 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000341")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000342")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 251 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000360")
+		(property "Reference" "C27"
+			(at 251 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 251 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 251 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 251 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000361")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000362")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 268 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000380")
+		(property "Reference" "C28"
+			(at 268 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 268 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 268 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 268 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000381")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000382")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 285 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000003a0")
+		(property "Reference" "C29"
+			(at 285 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 285 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 285 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 285 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000003a1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000003a2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 302 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000003c0")
+		(property "Reference" "C30"
+			(at 302 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 302 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 302 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 302 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000003c1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000003c2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 319 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000003e0")
+		(property "Reference" "C31"
+			(at 319 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 319 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 319 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 319 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000003e1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000003e2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 336 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000400")
+		(property "Reference" "C32"
+			(at 336 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 336 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 336 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 336 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000401")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000402")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 353 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000420")
+		(property "Reference" "C33"
+			(at 353 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 353 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 353 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 353 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000421")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000422")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 370 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000440")
+		(property "Reference" "C34"
+			(at 370 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 370 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 370 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 370 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000441")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000442")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 387 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000460")
+		(property "Reference" "C35"
+			(at 387 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 387 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 387 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 387 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000461")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000462")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 404 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000480")
+		(property "Reference" "C36"
+			(at 404 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 404 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 404 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 404 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000481")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000482")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 421 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000004a0")
+		(property "Reference" "C37"
+			(at 421 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 421 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 421 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 421 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000004a1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000004a2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 438 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000004c0")
+		(property "Reference" "C38"
+			(at 438 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 438 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 438 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 438 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000004c1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000004c2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 455 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-0000000004e0")
+		(property "Reference" "C39"
+			(at 455 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 455 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 455 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 455 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-0000000004e1")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-0000000004e2")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 472 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000500")
+		(property "Reference" "C40"
+			(at 472 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 472 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 472 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 472 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000501")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000502")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 489 180 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "f8000000-0000-0000-0000-000000000520")
+		(property "Reference" "C41"
+			(at 489 172 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "22uF"
+			(at 489 188 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:C_1210_3225Metric"
+			(at 489 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(property "MPN" "GRM32ER71C226KEA8K"
+			(at 489 180 0)
+			(effects
+				(font
+					(size 1 1)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8000000-0000-0000-0000-000000000521")
+		)
+		(pin "2"
+			(uuid "f8000000-0000-0000-0000-000000000522")
+		)
+		(instances
+			(project "PiSXMe_RevA_Clean"
+				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+					(reference "C41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 5 10) (xy 19.92 10)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0000000-0000-0000-0000-0000000001f4")
+	)
+	(wire
+		(pts
+			(xy 5 13) (xy 19.92 13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0000000-0000-0000-0000-0000000001f5")
+	)
+	(wire
+		(pts
+			(xy 5 16) (xy 19.92 16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0000000-0000-0000-0000-0000000001f6")
+	)
+	(wire
+		(pts
+			(xy 5 19) (xy 19.92 19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0000000-0000-0000-0000-0000000001f7")
+	)
+	(wire
+		(pts
+			(xy 70 115) (xy 65 115)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000003d")
+	)
+	(wire
+		(pts
+			(xy 70 113) (xy 65 113)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000003e")
+	)
+	(wire
+		(pts
+			(xy 70 111) (xy 65 111)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000003f")
+	)
+	(wire
+		(pts
+			(xy 70 109) (xy 65 109)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000040")
+	)
+	(wire
+		(pts
+			(xy 70 107) (xy 65 107)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000041")
+	)
+	(wire
+		(pts
+			(xy 70 105) (xy 65 105)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000042")
+	)
+	(wire
+		(pts
+			(xy 70 103) (xy 65 103)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000043")
+	)
+	(wire
+		(pts
+			(xy 70 101) (xy 65 101)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000044")
+	)
+	(wire
+		(pts
+			(xy 70 99) (xy 65 99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000045")
+	)
+	(wire
+		(pts
+			(xy 70 97) (xy 65 97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000046")
+	)
+	(wire
+		(pts
+			(xy 70 95) (xy 65 95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000047")
+	)
+	(wire
+		(pts
+			(xy 70 93) (xy 65 93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000048")
+	)
+	(wire
+		(pts
+			(xy 70 91) (xy 65 91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000049")
+	)
+	(wire
+		(pts
+			(xy 70 89) (xy 65 89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000004a")
+	)
+	(wire
+		(pts
+			(xy 70 87) (xy 65 87)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000004b")
+	)
+	(wire
+		(pts
+			(xy 70 85) (xy 65 85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000004c")
+	)
+	(wire
+		(pts
+			(xy 70 83) (xy 65 83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000004d")
+	)
+	(wire
+		(pts
+			(xy 70 81) (xy 65 81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000004e")
+	)
+	(wire
+		(pts
+			(xy 70 79) (xy 65 79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000004f")
+	)
+	(wire
+		(pts
+			(xy 70 77) (xy 65 77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000050")
+	)
+	(wire
+		(pts
+			(xy 70 165) (xy 65 165)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000003d")
+	)
+	(wire
+		(pts
+			(xy 70 163) (xy 65 163)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000003e")
+	)
+	(wire
+		(pts
+			(xy 70 161) (xy 65 161)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000003f")
+	)
+	(wire
+		(pts
+			(xy 70 159) (xy 65 159)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000040")
+	)
+	(wire
+		(pts
+			(xy 70 157) (xy 65 157)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000041")
+	)
+	(wire
+		(pts
+			(xy 70 155) (xy 65 155)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000042")
+	)
+	(wire
+		(pts
+			(xy 70 153) (xy 65 153)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000043")
+	)
+	(wire
+		(pts
+			(xy 70 151) (xy 65 151)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000044")
+	)
+	(wire
+		(pts
+			(xy 70 149) (xy 65 149)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000045")
+	)
+	(wire
+		(pts
+			(xy 70 147) (xy 65 147)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000046")
+	)
+	(wire
+		(pts
+			(xy 70 145) (xy 65 145)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000047")
+	)
+	(wire
+		(pts
+			(xy 70 143) (xy 65 143)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000048")
+	)
+	(wire
+		(pts
+			(xy 70 141) (xy 65 141)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000049")
+	)
+	(wire
+		(pts
+			(xy 70 139) (xy 65 139)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000004a")
+	)
+	(wire
+		(pts
+			(xy 70 137) (xy 65 137)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000004b")
+	)
+	(wire
+		(pts
+			(xy 70 135) (xy 65 135)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000004c")
+	)
+	(wire
+		(pts
+			(xy 70 133) (xy 65 133)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000004d")
+	)
+	(wire
+		(pts
+			(xy 70 131) (xy 65 131)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000004e")
+	)
+	(wire
+		(pts
+			(xy 70 129) (xy 65 129)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000004f")
+	)
+	(wire
+		(pts
+			(xy 70 127) (xy 65 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000050")
+	)
+	(wire
+		(pts
+			(xy 70 215) (xy 65 215)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000003d")
+	)
+	(wire
+		(pts
+			(xy 70 213) (xy 65 213)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000003e")
+	)
+	(wire
+		(pts
+			(xy 70 211) (xy 65 211)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000003f")
+	)
+	(wire
+		(pts
+			(xy 70 209) (xy 65 209)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000040")
+	)
+	(wire
+		(pts
+			(xy 70 207) (xy 65 207)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000041")
+	)
+	(wire
+		(pts
+			(xy 70 205) (xy 65 205)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000042")
+	)
+	(wire
+		(pts
+			(xy 70 203) (xy 65 203)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000043")
+	)
+	(wire
+		(pts
+			(xy 70 201) (xy 65 201)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000044")
+	)
+	(wire
+		(pts
+			(xy 70 199) (xy 65 199)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000045")
+	)
+	(wire
+		(pts
+			(xy 70 197) (xy 65 197)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000046")
+	)
+	(wire
+		(pts
+			(xy 70 195) (xy 65 195)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000047")
+	)
+	(wire
+		(pts
+			(xy 70 193) (xy 65 193)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000048")
+	)
+	(wire
+		(pts
+			(xy 70 191) (xy 65 191)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000049")
+	)
+	(wire
+		(pts
+			(xy 70 189) (xy 65 189)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000004a")
+	)
+	(wire
+		(pts
+			(xy 70 187) (xy 65 187)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000004b")
+	)
+	(wire
+		(pts
+			(xy 70 185) (xy 65 185)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000004c")
+	)
+	(wire
+		(pts
+			(xy 70 183) (xy 65 183)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000004d")
+	)
+	(wire
+		(pts
+			(xy 70 181) (xy 65 181)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000004e")
+	)
+	(wire
+		(pts
+			(xy 70 179) (xy 65 179)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000004f")
+	)
+	(wire
+		(pts
+			(xy 70 177) (xy 65 177)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000050")
+	)
+	(wire
+		(pts
+			(xy 115 71.19) (xy 114 71.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000000c")
+	)
+	(wire
+		(pts
+			(xy 115 78.81) (xy 116 78.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000000d")
+	)
+	(wire
+		(pts
+			(xy 132 71.19) (xy 131 71.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000002c")
+	)
+	(wire
+		(pts
+			(xy 132 78.81) (xy 133 78.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000002d")
+	)
+	(wire
+		(pts
+			(xy 149 71.19) (xy 148 71.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000004c")
+	)
+	(wire
+		(pts
+			(xy 149 78.81) (xy 150 78.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000004d")
+	)
+	(wire
+		(pts
+			(xy 166 71.19) (xy 165 71.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000006c")
+	)
+	(wire
+		(pts
+			(xy 166 78.81) (xy 167 78.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000006d")
+	)
+	(wire
+		(pts
+			(xy 183 71.19) (xy 182 71.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000008c")
+	)
+	(wire
+		(pts
+			(xy 183 78.81) (xy 184 78.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000008d")
+	)
+	(wire
+		(pts
+			(xy 115 81.19) (xy 114 81.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000000ac")
+	)
+	(wire
+		(pts
+			(xy 115 88.81) (xy 116 88.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000000ad")
+	)
+	(wire
+		(pts
+			(xy 132 81.19) (xy 131 81.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000000cc")
+	)
+	(wire
+		(pts
+			(xy 132 88.81) (xy 133 88.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000000cd")
+	)
+	(wire
+		(pts
+			(xy 149 81.19) (xy 148 81.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000000ec")
+	)
+	(wire
+		(pts
+			(xy 149 88.81) (xy 150 88.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000000ed")
+	)
+	(wire
+		(pts
+			(xy 166 81.19) (xy 165 81.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000010c")
+	)
+	(wire
+		(pts
+			(xy 166 88.81) (xy 167 88.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000010d")
+	)
+	(wire
+		(pts
+			(xy 115 106.19) (xy 114 106.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000012c")
+	)
+	(wire
+		(pts
+			(xy 115 113.81) (xy 116 113.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000012d")
+	)
+	(wire
+		(pts
+			(xy 132 106.19) (xy 131 106.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000014c")
+	)
+	(wire
+		(pts
+			(xy 132 113.81) (xy 133 113.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000014d")
+	)
+	(wire
+		(pts
+			(xy 149 106.19) (xy 148 106.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000016c")
+	)
+	(wire
+		(pts
+			(xy 149 113.81) (xy 150 113.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000016d")
+	)
+	(wire
+		(pts
+			(xy 166 106.19) (xy 165 106.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000018c")
+	)
+	(wire
+		(pts
+			(xy 166 113.81) (xy 167 113.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000018d")
+	)
+	(wire
+		(pts
+			(xy 183 106.19) (xy 182 106.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000001ac")
+	)
+	(wire
+		(pts
+			(xy 183 113.81) (xy 184 113.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000001ad")
+	)
+	(wire
+		(pts
+			(xy 115 116.19) (xy 114 116.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000001cc")
+	)
+	(wire
+		(pts
+			(xy 115 123.81) (xy 116 123.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000001cd")
+	)
+	(wire
+		(pts
+			(xy 132 116.19) (xy 131 116.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000001ec")
+	)
+	(wire
+		(pts
+			(xy 132 123.81) (xy 133 123.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000001ed")
+	)
+	(wire
+		(pts
+			(xy 149 116.19) (xy 148 116.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000020c")
+	)
+	(wire
+		(pts
+			(xy 149 123.81) (xy 150 123.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000020d")
+	)
+	(wire
+		(pts
+			(xy 166 116.19) (xy 165 116.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000022c")
+	)
+	(wire
+		(pts
+			(xy 166 123.81) (xy 167 123.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000022d")
+	)
+	(wire
+		(pts
+			(xy 200 81.19) (xy 199 81.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000024c")
+	)
+	(wire
+		(pts
+			(xy 200 88.81) (xy 201 88.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000024d")
+	)
+	(wire
+		(pts
+			(xy 115 176.19) (xy 114 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000026c")
+	)
+	(wire
+		(pts
+			(xy 115 183.81) (xy 116 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000026d")
+	)
+	(wire
+		(pts
+			(xy 132 176.19) (xy 131 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000028c")
+	)
+	(wire
+		(pts
+			(xy 132 183.81) (xy 133 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000028d")
+	)
+	(wire
+		(pts
+			(xy 149 176.19) (xy 148 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000002ac")
+	)
+	(wire
+		(pts
+			(xy 149 183.81) (xy 150 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000002ad")
+	)
+	(wire
+		(pts
+			(xy 166 176.19) (xy 165 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000002cc")
+	)
+	(wire
+		(pts
+			(xy 166 183.81) (xy 167 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000002cd")
+	)
+	(wire
+		(pts
+			(xy 183 176.19) (xy 182 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000002ec")
+	)
+	(wire
+		(pts
+			(xy 183 183.81) (xy 184 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000002ed")
+	)
+	(wire
+		(pts
+			(xy 200 176.19) (xy 199 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000030c")
+	)
+	(wire
+		(pts
+			(xy 200 183.81) (xy 201 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000030d")
+	)
+	(wire
+		(pts
+			(xy 217 176.19) (xy 216 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000032c")
+	)
+	(wire
+		(pts
+			(xy 217 183.81) (xy 218 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000032d")
+	)
+	(wire
+		(pts
+			(xy 234 176.19) (xy 233 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000034c")
+	)
+	(wire
+		(pts
+			(xy 234 183.81) (xy 235 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000034d")
+	)
+	(wire
+		(pts
+			(xy 251 176.19) (xy 250 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000036c")
+	)
+	(wire
+		(pts
+			(xy 251 183.81) (xy 252 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000036d")
+	)
+	(wire
+		(pts
+			(xy 268 176.19) (xy 267 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000038c")
+	)
+	(wire
+		(pts
+			(xy 268 183.81) (xy 269 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000038d")
+	)
+	(wire
+		(pts
+			(xy 285 176.19) (xy 284 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000003ac")
+	)
+	(wire
+		(pts
+			(xy 285 183.81) (xy 286 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000003ad")
+	)
+	(wire
+		(pts
+			(xy 302 176.19) (xy 301 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000003cc")
+	)
+	(wire
+		(pts
+			(xy 302 183.81) (xy 303 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000003cd")
+	)
+	(wire
+		(pts
+			(xy 319 176.19) (xy 318 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000003ec")
+	)
+	(wire
+		(pts
+			(xy 319 183.81) (xy 320 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000003ed")
+	)
+	(wire
+		(pts
+			(xy 336 176.19) (xy 335 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000040c")
+	)
+	(wire
+		(pts
+			(xy 336 183.81) (xy 337 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000040d")
+	)
+	(wire
+		(pts
+			(xy 353 176.19) (xy 352 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000042c")
+	)
+	(wire
+		(pts
+			(xy 353 183.81) (xy 354 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000042d")
+	)
+	(wire
+		(pts
+			(xy 370 176.19) (xy 369 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000044c")
+	)
+	(wire
+		(pts
+			(xy 370 183.81) (xy 371 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000044d")
+	)
+	(wire
+		(pts
+			(xy 387 176.19) (xy 386 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000046c")
+	)
+	(wire
+		(pts
+			(xy 387 183.81) (xy 388 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000046d")
+	)
+	(wire
+		(pts
+			(xy 404 176.19) (xy 403 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000048c")
+	)
+	(wire
+		(pts
+			(xy 404 183.81) (xy 405 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000048d")
+	)
+	(wire
+		(pts
+			(xy 421 176.19) (xy 420 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000004ac")
+	)
+	(wire
+		(pts
+			(xy 421 183.81) (xy 422 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000004ad")
+	)
+	(wire
+		(pts
+			(xy 438 176.19) (xy 437 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000004cc")
+	)
+	(wire
+		(pts
+			(xy 438 183.81) (xy 439 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000004cd")
+	)
+	(wire
+		(pts
+			(xy 455 176.19) (xy 454 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000004ec")
+	)
+	(wire
+		(pts
+			(xy 455 183.81) (xy 456 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000004ed")
+	)
+	(wire
+		(pts
+			(xy 472 176.19) (xy 471 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000050c")
+	)
+	(wire
+		(pts
+			(xy 472 183.81) (xy 473 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000050d")
+	)
+	(wire
+		(pts
+			(xy 489 176.19) (xy 488 176.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000052c")
+	)
+	(wire
+		(pts
+			(xy 489 183.81) (xy 490 183.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000052d")
+	)
+	(label "12V_PROTECTED"
+		(at 70 115 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000001f")
+	)
+	(label "SW_CM5_5V"
+		(at 70 113 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000020")
+	)
+	(label "CBOOT_CM5_5V"
+		(at 70 111 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000021")
+	)
+	(label "RBOOT_CM5_5V"
+		(at 70 109 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000022")
+	)
+	(label "12V_PROTECTED"
+		(at 70 107 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000023")
+	)
+	(label "POWER_GND"
+		(at 70 105 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000024")
+	)
+	(label "VCC_INTERNAL"
+		(at 70 103 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000025")
+	)
+	(label "CM5_5V"
+		(at 70 101 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000026")
+	)
+	(label "CM5_5V"
+		(at 70 99 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000027")
+	)
+	(label "FB_CM5_5V"
+		(at 70 97 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000028")
+	)
+	(label "POWER_GND"
+		(at 70 95 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000029")
+	)
+	(label "RT_CM5_5V"
+		(at 70 93 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000002a")
+	)
+	(label "PG_CM5_5V"
+		(at 70 91 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000002b")
+	)
+	(label "12V_PROTECTED"
+		(at 70 89 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000002c")
+	)
+	(label "NC"
+		(at 70 87 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000002d")
+	)
+	(label "12V_PROTECTED"
+		(at 70 85 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000002e")
+	)
+	(label "POWER_GND"
+		(at 70 83 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-00000000002f")
+	)
+	(label "POWER_GND"
+		(at 70 81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000030")
+	)
+	(label "POWER_GND"
+		(at 70 79 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000031")
+	)
+	(label "POWER_GND"
+		(at 70 77 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5000000-0000-0000-0000-000000000032")
+	)
+	(label "12V_PROTECTED"
+		(at 70 165 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000001f")
+	)
+	(label "SW_BRIDGE_3V3"
+		(at 70 163 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000020")
+	)
+	(label "CBOOT_BRIDGE_3V3"
+		(at 70 161 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000021")
+	)
+	(label "RBOOT_BRIDGE_3V3"
+		(at 70 159 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000022")
+	)
+	(label "12V_PROTECTED"
+		(at 70 157 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000023")
+	)
+	(label "POWER_GND"
+		(at 70 155 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000024")
+	)
+	(label "VCC_INTERNAL"
+		(at 70 153 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000025")
+	)
+	(label "BRIDGE_3V3"
+		(at 70 151 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000026")
+	)
+	(label "BRIDGE_3V3"
+		(at 70 149 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000027")
+	)
+	(label "FB_BRIDGE_3V3"
+		(at 70 147 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000028")
+	)
+	(label "POWER_GND"
+		(at 70 145 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000029")
+	)
+	(label "RT_BRIDGE_3V3"
+		(at 70 143 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000002a")
+	)
+	(label "PG_BRIDGE_3V3"
+		(at 70 141 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000002b")
+	)
+	(label "12V_PROTECTED"
+		(at 70 139 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000002c")
+	)
+	(label "NC"
+		(at 70 137 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000002d")
+	)
+	(label "12V_PROTECTED"
+		(at 70 135 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000002e")
+	)
+	(label "POWER_GND"
+		(at 70 133 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-00000000002f")
+	)
+	(label "POWER_GND"
+		(at 70 131 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000030")
+	)
+	(label "POWER_GND"
+		(at 70 129 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000031")
+	)
+	(label "POWER_GND"
+		(at 70 127 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d6000000-0000-0000-0000-000000000032")
+	)
+	(label "12V_PROTECTED"
+		(at 70 215 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000001f")
+	)
+	(label "SW_BRIDGE_1V1"
+		(at 70 213 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000020")
+	)
+	(label "CBOOT_BRIDGE_1V1"
+		(at 70 211 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000021")
+	)
+	(label "RBOOT_BRIDGE_1V1"
+		(at 70 209 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000022")
+	)
+	(label "12V_PROTECTED"
+		(at 70 207 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000023")
+	)
+	(label "POWER_GND"
+		(at 70 205 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000024")
+	)
+	(label "VCC_INTERNAL"
+		(at 70 203 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000025")
+	)
+	(label "BRIDGE_1V1"
+		(at 70 201 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000026")
+	)
+	(label "BRIDGE_1V1"
+		(at 70 199 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000027")
+	)
+	(label "FB_BRIDGE_1V1"
+		(at 70 197 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000028")
+	)
+	(label "POWER_GND"
+		(at 70 195 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000029")
+	)
+	(label "RT_BRIDGE_1V1"
+		(at 70 193 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000002a")
+	)
+	(label "PG_BRIDGE_1V1"
+		(at 70 191 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000002b")
+	)
+	(label "12V_PROTECTED"
+		(at 70 189 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000002c")
+	)
+	(label "NC"
+		(at 70 187 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000002d")
+	)
+	(label "12V_PROTECTED"
+		(at 70 185 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000002e")
+	)
+	(label "POWER_GND"
+		(at 70 183 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-00000000002f")
+	)
+	(label "POWER_GND"
+		(at 70 181 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000030")
+	)
+	(label "POWER_GND"
+		(at 70 179 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000031")
+	)
+	(label "POWER_GND"
+		(at 70 177 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "d7000000-0000-0000-0000-000000000032")
+	)
+	(label "12V_PROTECTED"
+		(at 115 71.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000000a")
+	)
+	(label "POWER_GND"
+		(at 115 78.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000000b")
+	)
+	(label "12V_PROTECTED"
+		(at 132 71.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000002a")
+	)
+	(label "POWER_GND"
+		(at 132 78.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000002b")
+	)
+	(label "CM5_5V"
+		(at 149 71.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000004a")
+	)
+	(label "POWER_GND"
+		(at 149 78.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000004b")
+	)
+	(label "CM5_5V"
+		(at 166 71.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000006a")
+	)
+	(label "POWER_GND"
+		(at 166 78.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000006b")
+	)
+	(label "FB_CM5_5V"
+		(at 183 71.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000008a")
+	)
+	(label "CM5_5V"
+		(at 183 78.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000008b")
+	)
+	(label "CM5_5V"
+		(at 115 81.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000000aa")
+	)
+	(label "FB_CM5_5V"
+		(at 115 88.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000000ab")
+	)
+	(label "FB_CM5_5V"
+		(at 132 81.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000000ca")
+	)
+	(label "POWER_GND"
+		(at 132 88.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000000cb")
+	)
+	(label "RT_CM5_5V"
+		(at 149 81.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000000ea")
+	)
+	(label "POWER_GND"
+		(at 149 88.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000000eb")
+	)
+	(label "CM5_5V"
+		(at 166 81.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000010a")
+	)
+	(label "PG_CM5_5V"
+		(at 166 88.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000010b")
+	)
+	(label "12V_PROTECTED"
+		(at 115 106.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000012a")
+	)
+	(label "POWER_GND"
+		(at 115 113.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000012b")
+	)
+	(label "12V_PROTECTED"
+		(at 132 106.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000014a")
+	)
+	(label "POWER_GND"
+		(at 132 113.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000014b")
+	)
+	(label "BRIDGE_3V3"
+		(at 149 106.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000016a")
+	)
+	(label "POWER_GND"
+		(at 149 113.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000016b")
+	)
+	(label "BRIDGE_3V3"
+		(at 166 106.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000018a")
+	)
+	(label "POWER_GND"
+		(at 166 113.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000018b")
+	)
+	(label "FB_BRIDGE_3V3"
+		(at 183 106.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000001aa")
+	)
+	(label "BRIDGE_3V3"
+		(at 183 113.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000001ab")
+	)
+	(label "BRIDGE_3V3"
+		(at 115 116.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000001ca")
+	)
+	(label "FB_BRIDGE_3V3"
+		(at 115 123.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000001cb")
+	)
+	(label "FB_BRIDGE_3V3"
+		(at 132 116.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000001ea")
+	)
+	(label "POWER_GND"
+		(at 132 123.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000001eb")
+	)
+	(label "RT_BRIDGE_3V3"
+		(at 149 116.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000020a")
+	)
+	(label "POWER_GND"
+		(at 149 123.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000020b")
+	)
+	(label "BRIDGE_3V3"
+		(at 166 116.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000022a")
+	)
+	(label "PG_BRIDGE_3V3"
+		(at 166 123.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000022b")
+	)
+	(label "BRIDGE_3V3"
+		(at 200 81.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000024a")
+	)
+	(label "POWER_GND"
+		(at 200 88.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000024b")
+	)
+	(label "12V_PROTECTED"
+		(at 115 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000026a")
+	)
+	(label "POWER_GND"
+		(at 115 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000026b")
+	)
+	(label "12V_PROTECTED"
+		(at 132 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000028a")
+	)
+	(label "POWER_GND"
+		(at 132 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000028b")
+	)
+	(label "12V_PROTECTED"
+		(at 149 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000002aa")
+	)
+	(label "POWER_GND"
+		(at 149 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000002ab")
+	)
+	(label "BRIDGE_1V1"
+		(at 166 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000002ca")
+	)
+	(label "FB_BRIDGE_1V1"
+		(at 166 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000002cb")
+	)
+	(label "FB_BRIDGE_1V1"
+		(at 183 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000002ea")
+	)
+	(label "POWER_GND"
+		(at 183 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000002eb")
+	)
+	(label "RT_BRIDGE_1V1"
+		(at 200 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000030a")
+	)
+	(label "POWER_GND"
+		(at 200 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000030b")
+	)
+	(label "BRIDGE_1V1"
+		(at 217 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000032a")
+	)
+	(label "PG_BRIDGE_1V1"
+		(at 217 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000032b")
+	)
+	(label "BRIDGE_1V1"
+		(at 234 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000034a")
+	)
+	(label "POWER_GND"
+		(at 234 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000034b")
+	)
+	(label "BRIDGE_1V1"
+		(at 251 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000036a")
+	)
+	(label "POWER_GND"
+		(at 251 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000036b")
+	)
+	(label "BRIDGE_1V1"
+		(at 268 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000038a")
+	)
+	(label "POWER_GND"
+		(at 268 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000038b")
+	)
+	(label "BRIDGE_1V1"
+		(at 285 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000003aa")
+	)
+	(label "POWER_GND"
+		(at 285 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000003ab")
+	)
+	(label "BRIDGE_1V1"
+		(at 302 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000003ca")
+	)
+	(label "POWER_GND"
+		(at 302 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000003cb")
+	)
+	(label "BRIDGE_1V1"
+		(at 319 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000003ea")
+	)
+	(label "POWER_GND"
+		(at 319 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000003eb")
+	)
+	(label "BRIDGE_1V1"
+		(at 336 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000040a")
+	)
+	(label "POWER_GND"
+		(at 336 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000040b")
+	)
+	(label "BRIDGE_1V1"
+		(at 353 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000042a")
+	)
+	(label "POWER_GND"
+		(at 353 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000042b")
+	)
+	(label "BRIDGE_1V1"
+		(at 370 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000044a")
+	)
+	(label "POWER_GND"
+		(at 370 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000044b")
+	)
+	(label "BRIDGE_1V1"
+		(at 387 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000046a")
+	)
+	(label "POWER_GND"
+		(at 387 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000046b")
+	)
+	(label "BRIDGE_1V1"
+		(at 404 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000048a")
+	)
+	(label "POWER_GND"
+		(at 404 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000048b")
+	)
+	(label "BRIDGE_1V1"
+		(at 421 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000004aa")
+	)
+	(label "POWER_GND"
+		(at 421 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000004ab")
+	)
+	(label "BRIDGE_1V1"
+		(at 438 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000004ca")
+	)
+	(label "POWER_GND"
+		(at 438 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000004cb")
+	)
+	(label "BRIDGE_1V1"
+		(at 455 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000004ea")
+	)
+	(label "POWER_GND"
+		(at 455 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-0000000004eb")
+	)
+	(label "BRIDGE_1V1"
+		(at 472 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000050a")
+	)
+	(label "POWER_GND"
+		(at 472 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000050b")
+	)
+	(label "BRIDGE_1V1"
+		(at 489 176.19 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000052a")
+	)
+	(label "POWER_GND"
+		(at 489 183.81 0.0000)
+		(effects
+			(font
+				(size 1 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "f8000000-0000-0000-0000-00000000052b")
+	)
+	(hierarchical_label "12V_PROTECTED"
+		(shape input)
+		(at 5 10 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "50000000-0000-0000-0000-0000000001f4")
+	)
+	(hierarchical_label "CM5_5V"
+		(shape input)
+		(at 5 13 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "50000000-0000-0000-0000-0000000001f5")
+	)
+	(hierarchical_label "STORAGE_3V3"
+		(shape input)
+		(at 5 16 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "50000000-0000-0000-0000-0000000001f6")
+	)
+	(hierarchical_label "BRIDGE_1V1_3V3"
+		(shape input)
+		(at 5 19 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "50000000-0000-0000-0000-0000000001f7")
+	)
+	(sheet_instances
+		(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
+			(page "5")
+		)
+	)
 )

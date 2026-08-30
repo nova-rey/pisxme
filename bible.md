@@ -1949,3 +1949,17 @@
 - Clean-root KiCad 10 ERC is zero with J7 present; native netlist export and
   pcbnew materialization now include the 200-pin CM5 footprint. Phase 3 status
   records the generic authoring-path correction and regression test.
+
+2026-08-30 — Phase 5 power network and calculation gate closed
+
+- Completed the native dual-input LM74700/CSD19536KCS/SMBJ18A protection
+  networks and all three TPSM63606 support networks, including the 1.1 V
+  divider and sixteen 22-uF output capacitors. Native ERC and the XML netlist
+  audit pass with the protected rail handed to SXM2 J1.A3.
+- Added reproducible design-envelope calculations. Corrected the worksheet's
+  low-voltage input arithmetic to 2.10 A, making the total 25.25 A and equal
+  branch envelope 12.625 A; a single branch is explicitly over the 15 A fuse
+  envelope. Sharing, copper, thermal, and exact ceramic DC-bias confirmation
+  remain binding `REV_A_EMPIRICAL_RISK` constraints for later gates.
+- Added native bridge round-trip regression coverage and local project
+  footprints/support authority for the newly represented power components.

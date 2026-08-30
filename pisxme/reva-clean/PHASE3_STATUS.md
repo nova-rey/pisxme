@@ -36,4 +36,8 @@ Exit evidence is recorded in `validation/phase3/PHASE3_EXIT_RECEIPT.md`.
 Phase 4 schematic-only work is complete and is recorded in
 `validation/phase3/PHASE4_V100_RECEIPT.md`. Placement and routing remain
 prohibited by the approved plan; Phase 5 is the next permitted phase after
-the Phase 4 checkpoint.
+the Phase 4 checkpoint. Phase 5 is now closed with explicit
+`REV_A_EMPIRICAL_RISK` for routed-board and fabrication confirmation; Phases
+6–13 schematic/mechanical contracts audit green, and the next mutable work is
+the approved Phase 14/15 power-routing sequence. No Phase 16+ high-speed
+routing has started.
