@@ -37,11 +37,14 @@ The local JAE series bulletin remains the manufacturer source for the
 ordering-code and key/height interpretation. Mouser exposes an ECAD model
 link, but a third-party model is not authority until dimension-checked.
 
-Footprint/3D: use the exact drawing and land-pattern dimensions. No JAE
-manufacturer 3D file was available in the local capture. The CM5IO STEP
-`../../cm5io-rev2/CM5IO.3dshapes/MTSSD03-67MSW337.STEP` is corroboration only.
-`../../cm5io-rev2/CM5IO.3dshapes/MTSSD03-67MSW337.STEP` is corroboration only.
-Assembly is ordinary SMT/reflow with a discrete 2280 screw/standoff
+Footprint/3D: the clean project now contains
+`PiSXMe_RevA_Clean.pretty/JAE_SM3ZS067U410ABR1000_BKEY.kicad_mod`, derived
+from the exact drawing's 0.5 mm two-row geometry with the B-key void at
+positions 12–19 per SATA-IO TP053. Its extraction test proves 67 unique
+contact pads and the clean STORAGE instance references it. No JAE
+manufacturer 3D file was available in the local capture; the CM5IO STEP
+`../../cm5io-rev2/CM5IO.3dshapes/MTSSD03-67MSW337.STEP` remains corroboration
+only. Assembly is ordinary SMT/reflow with a discrete 2280 screw/standoff
 retention feature.
 
 SATA-IO mapping authority is saved as

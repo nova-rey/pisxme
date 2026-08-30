@@ -1812,3 +1812,9 @@
   project-local 67-contact pattern and the extraction regression passes.
 - This does not close the full routing gate; SXM2 and remaining connector
   land-pattern authority still require independent review.
+
+2026-08-30 — Phase 14 M.2 socket sub-gate closed
+
+- Updated the M.2 authority receipt to reference the clean JAE B-key footprint
+  and its 67-pad/12–19-void regression evidence. The overall routing gate
+  remains open pending remaining connector patterns and complete pin-pad review.
