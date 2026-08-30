@@ -1789,3 +1789,9 @@
   coupling authoring path, then reran the Phase 4–11 audits.
 - Native root ERC with error severity reports zero violations; no power or
   signal routing has been claimed or started by this checkpoint.
+
+2026-08-30 — Phase 3 regression harness isolation corrected
+
+- The hierarchy generator is now exercised in a disposable copy while native
+  ERC checks the live clean project. This prevents validation from erasing
+  downstream island authoring and preserves the Phase 4 audit contract.
