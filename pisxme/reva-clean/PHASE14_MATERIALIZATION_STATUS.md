@@ -8,13 +8,17 @@ six-layer/1.6 mm board, loads every assigned project-local footprint, and
 assigns all directly name-matched pads. The current candidate contains 17
 components and 78 native nets and has zero tracks by design.
 
-The only intentionally unresolved component-pad mapping is `J1.PWR` and
-`J1.GND`. The selected 74221-101LF symbol uses abstract V100 power/ground
-pins, while the manufacturer connector drawing and current local comparison
-do not establish which of the 400 contacts carry those functions. This is the
-existing SXM2 `REV_A_EMPIRICAL_RISK`; no arbitrary pad assignment is made.
-It must be closed by the approved pinout/land-pattern authority or remain the
-only explicitly classified Rev-A empirical risk before Phase 14 power routing.
+The selected 74221-101LF symbol uses abstract V100 power/ground pins. The
+materializer now expands those abstract pins onto the published
+reverse-engineered SXM2 rows: 12 V rows 22/23/25/26/28/29/31/32/34/35/37/38/40
+and ground rows 21/24/27/30/33/36/39, across all ten columns. This prevents a
+single guessed contact from becoming the distributed feed. The endpoint map
+is not NVIDIA/Amphenol authority and remains `REV_A_EMPIRICAL_RISK`; it must
+be continuity-checked against the actual V100 module before fabrication.
+
+Regression coverage is `validation/phase3/test_phase14_sxm2_power_aliases.py`:
+it requires 400 pads, exactly 130 protected-power and 70 ground contacts, no
+power-pad signal contamination, and exact lane-0/control pad net names.
 
 The first no-route candidate DRC is not a routing gate: the candidate has no
 copper routes and reports the expected unrouted/placement violations. Native

@@ -17,6 +17,16 @@ documented lane-0/control contacts plus power/ground placeholders. The local
 mask/paste/courtyard and K18/K19 auxiliary treatment remain
 `REV_A_EMPIRICAL_RISK` until manufacturer-overlay and physical assembly review.
 
+Native KiCad export regression: the symbol pin rows are authored with the
+connector-facing orientation, and the clean root sheet keeps V100 and STORAGE
+sheet-pin wires spatially disjoint. KiCad 10 netlist export therefore resolves
+A2/A3, E7/F7, G1/G2, and E18 to the table above; native ERC remains zero.
+The abstract J1.PWR/J1.GND pins are expanded during disposable PCB
+materialization to the published reverse-engineered endpoint rows (130 power,
+70 ground contacts). That endpoint row map is explicitly
+`REV_A_EMPIRICAL_RISK`, not NVIDIA/Amphenol authority, and is regression-tested
+for no stale signal-net assignment.
+
 Explicit exclusions: no PER1/PER2/PER3, no x4/x8/x16 expansion, no NVLink,
 no PCIe switch, no redriver, and no second AC-coupling pair. Endpoint
 enumeration, reset timing, and undocumented V100 power sequencing remain

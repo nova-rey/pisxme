@@ -55,8 +55,11 @@ def main():
         assert {('J6', '1'), ('F2', '1')} <= nets['/POWER_INPUT/12V_IN_B']
         assert {('Q1', '1'), ('U1', '6')} <= nets['/POWER_INPUT/FUSED_12V_A']
         assert {('Q2', '1'), ('U2', '6')} <= nets['/POWER_INPUT/FUSED_12V_B']
-        protected = next(nodes for nodes in nets.values() if ('J1', 'A3') in nodes)
-        assert {('J1', 'A3'), ('Q1', '2'), ('Q2', '2')} <= protected
+        # J1.A3 is the PCIe lane-negative signal.  The abstract connector's
+        # power authority is J1.PWR; the materializer expands that one
+        # logical pin onto the documented Rev-A empirical power rows.
+        protected = next(nodes for nodes in nets.values() if ('J1', 'PWR') in nodes)
+        assert {('J1', 'PWR'), ('Q1', '2'), ('Q2', '2')} <= protected
         assert {('U3', '10'), ('R3', '2'), ('R4', '1')} <= nets['/REGULATORS/FB_CM5_5V']
         assert {('U4', '10'), ('R11', '2'), ('R12', '1')} <= nets['/REGULATORS/FB_BRIDGE_3V3']
         assert {('U5', '10'), ('R19', '2'), ('R20', '1')} <= nets['/REGULATORS/FB_BRIDGE_1V1']

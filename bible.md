@@ -1963,3 +1963,14 @@
   remain binding `REV_A_EMPIRICAL_RISK` constraints for later gates.
 - Added native bridge round-trip regression coverage and local project
   footprints/support authority for the newly represented power components.
+
+2026-08-30 — Phase 3/SXM2 hierarchy and materialization correction
+
+- Corrected the native SXM2 symbol row orientation and separated overlapping
+  root V100/STORAGE sheet-pin wires; KiCad 10 netlist export now preserves the
+  intended A2/A3, E7/F7, G1/G2, and E18 mappings with zero native ERC errors.
+- Added the explicit, non-authoritative reverse-engineered SXM2 endpoint power
+  map to disposable PCB materialization: 130 protected-power and 70 ground
+  contacts, with stale donor pad nets cleared before assignment.
+- Added `test_phase14_sxm2_power_aliases.py` and updated the Phase 5 audit to
+  test logical J1.PWR rather than misidentifying signal contact A3 as power.

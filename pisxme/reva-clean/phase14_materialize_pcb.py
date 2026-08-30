@@ -40,6 +40,15 @@ POSITIONS = {
 }
 
 PAD_ALIASES = {
+    # Public hardware reverse-engineering map; not NVIDIA/Amphenol authority.
+    # It is retained as explicit Rev-A empirical risk so the feed is not
+    # collapsed onto one guessed SXM2 contact.
+    "J1": {
+        "PWR": tuple(f"{col}{row}" for row in (22, 23, 25, 26, 28, 29, 31, 32, 34, 35, 37, 38, 40)
+                      for col in "ABCDEFGHJK"),
+        "GND": tuple(f"{col}{row}" for row in (21, 24, 27, 30, 33, 36, 39)
+                     for col in "ABCDEFGHJK"),
+    },
     "J4": {
         "1": ("A6", "B6"), "2": ("A7", "B7"),
         "3": ("A4", "A9", "B4", "B9"), "4": ("A1", "A12", "B1", "B12"),
@@ -94,6 +103,15 @@ def main() -> None:
         fp.SetReference(ref)
         fp.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(POSITIONS[ref][0]),
                                        pcbnew.FromMM(POSITIONS[ref][1])))
+
+    # The acreage floorplan contains donor-era placeholder net assignments on
+    # some multi-pad footprints.  Clear them before applying the authoritative
+    # native netlist, otherwise an alias such as J1.PWR can be overwritten by
+    # a stale signal net on the same pad.
+    for ref in components:
+        for pad in refs[ref].Pads():
+            pad.SetNet(None)
+            pad.SetNetCode(0)
 
     nets = {}
     unresolved = []

@@ -22,3 +22,13 @@ coarse authority. Exact land-pattern/mask/paste/A1 fields are not independently
 reproducible locally because the manufacturer CDN rejects direct capture. The
 local pattern remains `REV_A_EMPIRICAL_RISK` for those fields and is not treated
 as a promoted manufacturer ECAD file.
+
+Endpoint power-map supplement: a public reverse-engineering report based on
+purchased-hardware continuity probing lists SXM2 rows 22/23/25/26/28/29/31/32/
+34/35/37/38/40 as 12 V and rows 21/24/27/30/33/36/39 as ground, across all ten
+columns. This is not NVIDIA or Amphenol authority and is retained only as
+`REV_A_EMPIRICAL_RISK` for distributed-feed planning. The clean materializer
+uses those rows for the abstract J1.PWR/J1.GND pins and still requires
+continuity confirmation against the actual V100 module before fabrication.
+Source: https://bbenchoff.com/pages/SXM2PCIe.html (CC-BY-SA-4.0 text; accessed
+2026-08-30).
