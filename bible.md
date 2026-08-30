@@ -2137,3 +2137,13 @@
   compact placement; the prototype was deleted and no DRC relaxation was made.
 - The Phase 14 artifact was regenerated against the corrected TPSM footprint;
   Phase 15 must restart with layer-aware local loops and deliberate return vias.
+
+2026-08-30 — Phase 15 thermal-via base checkpoint
+
+- Added four 0.50/0.30 mm ordinary through vias per TPSM63606, centered in
+  the four TI RDL0020 central PGND lands, with same-net F.Cu links across the
+  separate exposed lands.
+- Native save/reload regression passes for all 12 exact `/REGULATORS/POWER_GND`
+  vias. Fresh native DRC reports no thermal-via diameter, drill, annular,
+  mask, short, or dangling-via defect; VIN/VOUT and control routing remain
+  open, so Phase 15 is not closed.
