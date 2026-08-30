@@ -53,6 +53,15 @@ some distributor stock remains. It is not the Rev-A BOM authority.
 The detailed local TDK provenance receipt is
 `TDK_C3225X7R1C226M250AC_AUTHORITY.md`.
 
+TI's public EVM reference is preserved locally as
+`TPSM63606_EVM_User_Guide.pdf` and the original `SLVRBI7` design archive as
+`TPSM63606_EVM_Layout_Files_SLVRBI7.zip`. The EVM guide documents four 47-uF
+output capacitors with 110 uF effective at 5 V/25 C and provides the source
+layout/assembly figures used for the Phase 15 overlay review. The EVM is a
+2-oz four-layer reference, so its thermal and impedance results are not
+silently transferred to Rev A's JLC board.
+Archive SHA256: `7ddcb1b8754445c99459b9e2eed72d6c4b833b3c0a7efcd6ad98f764ecffeb0c`.
+
 The simplest always-on EN/SYNC policy is direct connection to VIN. PG is an
 open-drain output and needs a separate 20–100 kOhm pull-up; it must not be
 merged with EN. The internal 100-nF bootstrap capacitor and 100-ohm resistor

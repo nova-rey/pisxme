@@ -6,7 +6,11 @@ Status: `IN_PROGRESS`
 
 The authoritative layout guidance is TI `TPSM63606` revision B, SLVSGB4B,
 pages 31–32 (sections 11.1 and 11.2). The preserved PDF is
-`authority-inventory/primary-docs/TPSM63606.pdf`. It requires:
+`authority-inventory/primary-docs/TPSM63606.pdf`. The public EVM guide and
+original Altium layout archive are also preserved as
+`authority-inventory/primary-docs/power/TPSM63606_EVM_User_Guide.pdf` and
+`TPSM63606_EVM_Layout_Files_SLVRBI7.zip`. They provide the dimensioned
+reference board's copper, assembly, and stackup figures. TI requires:
 
 - symmetric VIN capacitor placement close to VIN1/VIN2;
 - localized top-side PGND return copper for VIN and VOUT capacitors;

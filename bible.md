@@ -2268,6 +2268,13 @@
   fields, dated multi-distributor stock evidence, manufacturer-sheet
   provenance, and the explicit graphical-curve limitation.
 
+2026-08-30 — Phase 15 TI EVM layout authority preserved
+
+- Saved TI's public `TPSM63606EVM` user guide and `SLVRBI7` Altium/gerber
+  archive locally under the power authority inventory, with SHA256 recorded
+  for the archive. The EVM's four-layer/2-oz basis and 110-uF effective
+  47-uF-capacitor example are explicitly kept separate from Rev-A claims.
+
 2026-08-30 — Phase 15 generator lifecycle correction
 
 - Updated `phase14_regulator_support_native.py` so native support-network
