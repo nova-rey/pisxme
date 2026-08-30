@@ -2227,6 +2227,14 @@
 - The geometry is closer to TI's qualitative arrangement, but exact overlay,
   DC-bias evidence, and board-specific thermal proof remain open.
 
+2026-08-30 — Phase 15 receipt and COUT regression correction
+
+- Corrected the regulator receipt's U4/U5/thermal-via count to the validated
+  35-via checkpoint.
+- Strengthened `phase15_capacitance_check.py` to require the exact native
+  schematic reference sets C7/C8, C16/C17/C19, and C26-C41 before applying
+  the derated effective-capacitance floor calculation.
+
 2026-08-30 — Phase 15 thermal screening checkpoint
 
 - Added `phase15_thermal_screen.py` using TI SLVSGB4B's conservative 33.1 C/W

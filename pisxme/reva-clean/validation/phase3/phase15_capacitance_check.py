@@ -5,15 +5,18 @@ ROOT = Path(__file__).resolve().parents[2]
 SHEET = ROOT / "REGULATORS.kicad_sch"
 
 RAIL_COUNTS = {
-    "CM5_5V": (2, 30.0),
-    "BRIDGE_3V3": (3, 50.0),
-    "BRIDGE_1V1": (16, 300.0),
+    "CM5_5V": (("C7", "C8"), 30.0),
+    "BRIDGE_3V3": (("C16", "C17", "C19"), 50.0),
+    "BRIDGE_1V1": (tuple(f"C{i}" for i in range(26, 42)), 300.0),
 }
 
 
 def main():
     text = SHEET.read_text()
-    for rail, (count, required) in RAIL_COUNTS.items():
+    for rail, (refs, required) in RAIL_COUNTS.items():
+        assert all(text.count(f'(property "Reference" "{ref}"') == 1
+                   for ref in refs), rail
+        count = len(refs)
         assert text.count('(property "Value" "22uF"') >= count, rail
         effective = count * 22.0 * 0.90
         assert effective >= required, (rail, effective, required)

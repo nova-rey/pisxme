@@ -53,7 +53,7 @@ Evidence:
   rows, uses separated ordinary through-via trunks, and ties U4 C18 into the
   local VOUT bank. Native DRC reports zero `clearance`, `shorting_items`, and
   `tracks_crossing` findings; `test_phase15_u4_u5_controls.py` verifies 36
-  control/thermal vias and 254 unrouted acreage items.
+  35 control/thermal vias and 254 unrouted acreage items.
 
 - `phase15_u5_vout_bank.py` adds a 4x4 bank of the sixteen schematic-authority
   output capacitors C26-C41. The first three rows are beside U5; the fourth
