@@ -9,6 +9,8 @@ itself.
 from pathlib import Path
 import shutil
 
+from phase3_scaffold import PORTS, contract_symbol
+
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / "authority-inventory" / "cm5io-rev2" / "CM5IO.kicad_sym"
 DEST = ROOT / "PiSXMe_RevA_Clean.kicad_sym"
@@ -63,6 +65,7 @@ def main() -> None:
             'PiSXMeRevAClean:EDAC_A70_112_331N126',
         )
         definitions.append(definition)
+    definitions.extend(contract_symbol(name, ports) for name, ports in PORTS.items())
     DEST.write_text(
         '(kicad_symbol_lib\n\t(version 20231120)\n'
         '\t(generator "PiSXMe Rev A Clean")\n'

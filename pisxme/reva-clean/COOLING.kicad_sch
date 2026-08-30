@@ -367,7 +367,50 @@
               (font
                 (size 1.27 1.27))))))
       (embedded_fonts no)))
-  
+    (symbol "PiSXMeRevAClean:COOLING_Contract"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 -7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "COOLING_Contract"
+        (at 0 7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "COOLING_Contract_1_1"
+        (rectangle (start -1.27 -5.77) (end 1.27 5.77)
+          (stroke (width 0.254) (type default)) (fill (type background)))
+
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "COOLING_12V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 3 0)
+          (length 3.81)
+          (name "COOLING_PWM" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 6 0)
+          (length 3.81)
+          (name "COOLING_TACH" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 9 0)
+          (length 3.81)
+          (name "THERMAL_ALERT" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+      )
+    )
+
   (hierarchical_label "COOLING_12V"
     (shape bidirectional)
     (at 5 10 0)
@@ -388,5 +431,52 @@
     (at 5 19 0)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 50000000-0000-0000-0000-000000000387))
-  (sheet_instances (path "/9" (page "9")))
+
+  (wire
+    (pts (xy 5 10) (xy 19.92 10))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-000000000384))
+  (wire
+    (pts (xy 5 13) (xy 19.92 13))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-000000000385))
+  (wire
+    (pts (xy 5 16) (xy 19.92 16))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-000000000386))
+  (wire
+    (pts (xy 5 19) (xy 19.92 19))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-000000000387))
+
+  (symbol
+    (lib_id "PiSXMeRevAClean:COOLING_Contract")
+    (at 25 10 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid 80000000-0000-0000-0000-000000000009)
+    (property "Reference" "XCO"
+      (at 25 5 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "COOLING_Contract"
+      (at 25 18 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 25 10 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~"
+      (at 25 10 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid 90000000-0000-0000-0000-000000000384))
+    (pin "2" (uuid 90000000-0000-0000-0000-000000000385))
+    (pin "3" (uuid 90000000-0000-0000-0000-000000000386))
+    (pin "4" (uuid 90000000-0000-0000-0000-000000000387))
+
+    (instances (project "PiSXMe_RevA_Clean"
+      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000009" (reference "XCO" ) (unit 1))))
+  )
+  (sheet_instances (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000009" (page "9")))
 )

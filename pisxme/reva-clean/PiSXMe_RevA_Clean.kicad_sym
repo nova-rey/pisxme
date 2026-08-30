@@ -5640,4 +5640,449 @@
 			)
 		)
 	)
+
+    (symbol "PiSXMeRevAClean:CORE_CM5_Contract"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 -8.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "CORE_CM5_Contract"
+        (at 0 8.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "CORE_CM5_Contract_1_1"
+        (rectangle (start -1.27 -7.27) (end 1.27 7.27)
+          (stroke (width 0.254) (type default)) (fill (type background)))
+
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "CM5_PCIE" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 3 0)
+          (length 3.81)
+          (name "CM5_USB3" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 6 0)
+          (length 3.81)
+          (name "CM5_GBE" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 9 0)
+          (length 3.81)
+          (name "SERVICE_USB2" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 12 0)
+          (length 3.81)
+          (name "CM5_POWER" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27)))))
+      )
+    )
+
+    (symbol "PiSXMeRevAClean:V100_PCIE_Contract"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 -7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "V100_PCIE_Contract"
+        (at 0 7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "V100_PCIE_Contract_1_1"
+        (rectangle (start -1.27 -5.77) (end 1.27 5.77)
+          (stroke (width 0.254) (type default)) (fill (type background)))
+
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "CM5_PCIE" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 3 0)
+          (length 3.81)
+          (name "V100_PCIE" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 6 0)
+          (length 3.81)
+          (name "V100_REFCLK" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 9 0)
+          (length 3.81)
+          (name "V100_PERST" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+      )
+    )
+
+    (symbol "PiSXMeRevAClean:V100_POWER_Contract"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 -5.539999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "V100_POWER_Contract"
+        (at 0 5.539999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "V100_POWER_Contract_1_1"
+        (rectangle (start -1.27 -4.27) (end 1.27 4.27)
+          (stroke (width 0.254) (type default)) (fill (type background)))
+
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "V100_POWER_12V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 3 0)
+          (length 3.81)
+          (name "V100_GND" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 6 0)
+          (length 3.81)
+          (name "V100_THERMAL" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+      )
+    )
+
+    (symbol "PiSXMeRevAClean:POWER_INPUT_Contract"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 -7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "POWER_INPUT_Contract"
+        (at 0 7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "POWER_INPUT_Contract_1_1"
+        (rectangle (start -1.27 -5.77) (end 1.27 5.77)
+          (stroke (width 0.254) (type default)) (fill (type background)))
+
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "12V_IN_A" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 3 0)
+          (length 3.81)
+          (name "12V_IN_B" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 6 0)
+          (length 3.81)
+          (name "12V_PROTECTED" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 9 0)
+          (length 3.81)
+          (name "POWER_PG_FAULT" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+      )
+    )
+
+    (symbol "PiSXMeRevAClean:REGULATORS_Contract"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 -7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "REGULATORS_Contract"
+        (at 0 7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "REGULATORS_Contract_1_1"
+        (rectangle (start -1.27 -5.77) (end 1.27 5.77)
+          (stroke (width 0.254) (type default)) (fill (type background)))
+
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "12V_PROTECTED" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 3 0)
+          (length 3.81)
+          (name "CM5_5V" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 6 0)
+          (length 3.81)
+          (name "STORAGE_3V3" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 9 0)
+          (length 3.81)
+          (name "BRIDGE_1V1_3V3" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+      )
+    )
+
+    (symbol "PiSXMeRevAClean:ETHERNET_Contract"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 -7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "ETHERNET_Contract"
+        (at 0 7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "ETHERNET_Contract_1_1"
+        (rectangle (start -1.27 -5.77) (end 1.27 5.77)
+          (stroke (width 0.254) (type default)) (fill (type background)))
+
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "CM5_GBE" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 3 0)
+          (length 3.81)
+          (name "GBE_LED" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 6 0)
+          (length 3.81)
+          (name "GBE_SHIELD" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 9 0)
+          (length 3.81)
+          (name "ETH_POWER" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+      )
+    )
+
+    (symbol "PiSXMeRevAClean:STORAGE_Contract"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 -8.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "STORAGE_Contract"
+        (at 0 8.54 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "STORAGE_Contract_1_1"
+        (rectangle (start -1.27 -7.27) (end 1.27 7.27)
+          (stroke (width 0.254) (type default)) (fill (type background)))
+
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "CM5_USB3" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 3 0)
+          (length 3.81)
+          (name "BRIDGE_SATA" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 6 0)
+          (length 3.81)
+          (name "M2_SATA" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 9 0)
+          (length 3.81)
+          (name "M2_3V3" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 12 0)
+          (length 3.81)
+          (name "BRIDGE_CFG" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27)))))
+      )
+    )
+
+    (symbol "PiSXMeRevAClean:SERVICE_Contract"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 -7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "SERVICE_Contract"
+        (at 0 7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "SERVICE_Contract_1_1"
+        (rectangle (start -1.27 -5.77) (end 1.27 5.77)
+          (stroke (width 0.254) (type default)) (fill (type background)))
+
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "SERVICE_USB2" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 3 0)
+          (length 3.81)
+          (name "SERVICE_VBUS_SENSE" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 6 0)
+          (length 3.81)
+          (name "SERVICE_RD" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 9 0)
+          (length 3.81)
+          (name "SERVICE_GND" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+      )
+    )
+
+    (symbol "PiSXMeRevAClean:COOLING_Contract"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 -7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "COOLING_Contract"
+        (at 0 7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "COOLING_Contract_1_1"
+        (rectangle (start -1.27 -5.77) (end 1.27 5.77)
+          (stroke (width 0.254) (type default)) (fill (type background)))
+
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "COOLING_12V" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 3 0)
+          (length 3.81)
+          (name "COOLING_PWM" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 6 0)
+          (length 3.81)
+          (name "COOLING_TACH" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 9 0)
+          (length 3.81)
+          (name "THERMAL_ALERT" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+      )
+    )
+
+    (symbol "PiSXMeRevAClean:DEBUG_Contract"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 -7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "DEBUG_Contract"
+        (at 0 7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "DEBUG_Contract_1_1"
+        (rectangle (start -1.27 -5.77) (end 1.27 5.77)
+          (stroke (width 0.254) (type default)) (fill (type background)))
+
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "UART" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 3 0)
+          (length 3.81)
+          (name "RECOVERY" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 6 0)
+          (length 3.81)
+          (name "POWER_PG_FAULT" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 9 0)
+          (length 3.81)
+          (name "DEBUG_GND" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+      )
+    )
 )

@@ -35,6 +35,18 @@
   guide holes. The clean generated footprint and its receipt already carry
   all eight holes; the authority narrative now matches the artifact.
 
+## 2026-08-30 — Phase 3 native contract connectivity
+
+- Added deterministic local contract symbols and native wire connectivity to
+  all ten clean child sheets. Every child interface label now terminates on a
+  real passive pin in the local `PiSXMeRevAClean` namespace.
+- Fresh KiCad 10.0.5 ERC reduced the scaffold from 78 to 40 violations; the
+  remaining records are root sheet-pin/child hierarchy association failures.
+  The Phase 3 receipt records this as an open technical gate rather than
+  suppressing ERC or treating the scaffold as production connectivity.
+- Added all ten contract definitions to the project-local symbol library and
+  kept the selected CM5/EDAC production assets separate from these fixtures.
+
 ## 2026-08-28 — M2 right-edge outline expansion checkpoint
 
 - Expanded only the active board's congested right edge from 220 × 140 mm to 240 × 140 mm and moved J9/J10/J11 to x=230 mm so their bodies remain inside the new edge. CM5, PCIe, power, ESD-support placement, routing, zones, schematic, and manufacturing outputs were not changed.

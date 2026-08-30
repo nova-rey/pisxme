@@ -367,7 +367,50 @@
               (font
                 (size 1.27 1.27))))))
       (embedded_fonts no)))
-  
+    (symbol "PiSXMeRevAClean:ETHERNET_Contract"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 -7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "ETHERNET_Contract"
+        (at 0 7.039999999999999 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "ETHERNET_Contract_1_1"
+        (rectangle (start -1.27 -5.77) (end 1.27 5.77)
+          (stroke (width 0.254) (type default)) (fill (type background)))
+
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "CM5_GBE" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 3 0)
+          (length 3.81)
+          (name "GBE_LED" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 6 0)
+          (length 3.81)
+          (name "GBE_SHIELD" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 9 0)
+          (length 3.81)
+          (name "ETH_POWER" (effects (font (size 1.27 1.27))))
+          (number "4" (effects (font (size 1.27 1.27)))))
+      )
+    )
+
   (hierarchical_label "CM5_GBE"
     (shape bidirectional)
     (at 5 10 0)
@@ -388,5 +431,52 @@
     (at 5 19 0)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 50000000-0000-0000-0000-00000000025b))
-  (sheet_instances (path "/6" (page "6")))
+
+  (wire
+    (pts (xy 5 10) (xy 19.92 10))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-000000000258))
+  (wire
+    (pts (xy 5 13) (xy 19.92 13))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-000000000259))
+  (wire
+    (pts (xy 5 16) (xy 19.92 16))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-00000000025a))
+  (wire
+    (pts (xy 5 19) (xy 19.92 19))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-00000000025b))
+
+  (symbol
+    (lib_id "PiSXMeRevAClean:ETHERNET_Contract")
+    (at 25 10 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid 80000000-0000-0000-0000-000000000006)
+    (property "Reference" "XET"
+      (at 25 5 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "ETHERNET_Contract"
+      (at 25 18 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 25 10 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~"
+      (at 25 10 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (pin "1" (uuid 90000000-0000-0000-0000-000000000258))
+    (pin "2" (uuid 90000000-0000-0000-0000-000000000259))
+    (pin "3" (uuid 90000000-0000-0000-0000-00000000025a))
+    (pin "4" (uuid 90000000-0000-0000-0000-00000000025b))
+
+    (instances (project "PiSXMe_RevA_Clean"
+      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000006" (reference "XET" ) (unit 1))))
+  )
+  (sheet_instances (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000006" (page "6")))
 )

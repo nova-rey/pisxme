@@ -11,6 +11,7 @@ from uuid import UUID
 
 ROOT = Path(__file__).resolve().parent
 TEMPLATE = Path(__file__).resolve().parents[2] / "work" / "skidl_spike" / "golden_hierarchy.kicad_sch"
+ROOT_UUID = str(UUID(int=0x30000000000000000000000000000000))
 SHEETS = (
     "CORE_CM5", "V100_PCIE", "V100_POWER", "POWER_INPUT", "REGULATORS",
     "ETHERNET", "STORAGE", "SERVICE", "COOLING", "DEBUG",
@@ -55,6 +56,42 @@ def make_uuid(number: int) -> str:
     return str(UUID(int=number))
 
 
+def contract_symbol(name: str, ports: tuple[str, ...]) -> str:
+    symbol_name = f"PiSXMeRevAClean:{name}_Contract"
+    pins = "".join(
+        f'''\n        (pin passive line
+          (at -5.08 {index * 3} 0)
+          (length 3.81)
+          (name "{port}" (effects (font (size 1.27 1.27))))
+          (number "{index + 1}" (effects (font (size 1.27 1.27)))))'''
+        for index, port in enumerate(ports)
+    )
+    height = max(2.54, (len(ports) - 1) * 3 + 2.54)
+    return f'''\n    (symbol "{symbol_name}"
+      (pin_names (offset 1.0))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "X"
+        (at 0 {-height / 2 - 1.27} 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Value" "{name}_Contract"
+        (at 0 {height / 2 + 1.27} 0)
+        (effects (font (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (hide yes)))
+      (symbol "{name}_Contract_1_1"
+        (rectangle (start -1.27 {-height / 2}) (end 1.27 {height / 2})
+          (stroke (width 0.254) (type default)) (fill (type background)))
+{pins}
+      )
+    )'''
+
+
 def sheet_block(name: str, number: int) -> str:
     uid = make_uuid(0x10000000000000000000000000000000 + number)
     x = 35 + ((number - 1) % 5) * 35
@@ -82,18 +119,58 @@ def sheet_block(name: str, number: int) -> str:
 
 
 def child(name: str, number: int, lib_symbols: str) -> str:
+    sheet_path = f"{ROOT_UUID}/{make_uuid(0x10000000000000000000000000000000 + number)}"
     labels = "".join(
         f'''\n  (hierarchical_label "{port}"\n    (shape bidirectional)\n    (at 5 {10 + index * 3} 0)\n    (effects (font (size 1.27 1.27)) (justify left))\n    (uuid {make_uuid(0x50000000000000000000000000000000 + number * 100 + index)}))'''
         for index, port in enumerate(PORTS[name])
     )
+    contract = contract_symbol(name, PORTS[name])
+    instance_pins = "".join(
+        f'    (pin "{index + 1}" (uuid {make_uuid(0x90000000000000000000000000000000 + number * 100 + index)}))\n'
+        for index, _port in enumerate(PORTS[name])
+    )
+    contract_instance = f'''\n  (symbol
+    (lib_id "PiSXMeRevAClean:{name}_Contract")
+    (at 25 10 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board no)
+    (dnp no)
+    (uuid {make_uuid(0x80000000000000000000000000000000 + number)})
+    (property "Reference" "X{name[:2]}"
+      (at 25 5 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Value" "{name}_Contract"
+      (at 25 18 0)
+      (effects (font (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 25 10 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+    (property "Datasheet" "~"
+      (at 25 10 0)
+      (effects (font (size 1.27 1.27)) (hide yes)))
+{instance_pins}
+    (instances (project "PiSXMe_RevA_Clean"
+      (path "/{sheet_path}" (reference "X{name[:2]}" ) (unit 1))))
+  )'''
+    contract_wires = "".join(
+        f'''\n  (wire
+    (pts (xy 5 {10 + index * 3}) (xy 19.92 {10 + index * 3}))
+    (stroke (width 0) (type default))
+    (uuid {make_uuid(0xa0000000000000000000000000000000 + number * 100 + index)}))'''
+        for index, _port in enumerate(PORTS[name])
+    )
     return f'''(kicad_sch (version 20230409) (generator "eeschema")
   (uuid {make_uuid(0x20000000000000000000000000000000 + number)})
   (paper "A4")
-  {lib_symbols}
+  {lib_symbols}{contract}
   {labels}
-  (sheet_instances (path "/{number}" (page "{number}")))
+  {contract_wires}
+  {contract_instance}
+  (sheet_instances (path "/{sheet_path}" (page "{number}")))
 )
-'''
+'''.replace("\n  \n", "\n\n")
 
 
 def main() -> None:
@@ -114,7 +191,7 @@ def main() -> None:
   (sheet_instances (path "/" (page "1")))
 )
 '''
-    (ROOT / "PiSXMe_RevA_Clean.kicad_sch").write_text(root)
+    (ROOT / "PiSXMe_RevA_Clean.kicad_sch").write_text(root.replace("\n  \n", "\n\n"))
     for index, name in enumerate(SHEETS, 1):
         (ROOT / f"{name}.kicad_sch").write_text(child(name, index, lib_symbols))
 
