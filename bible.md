@@ -1728,3 +1728,10 @@
   CM5 5 V, TUSB9261 3.3/1.1 V rail contracts, and the V100 power contract.
 - Added the machine-readable power audit and receipt; native KiCad ERC passes
   with zero violations. No PCB placement or routing was introduced.
+
+2026-08-30 — Phase 6 Ethernet schematic gate closed
+
+- Added the four-pair CM5IO-derived Ethernet island with EDAC
+  `A70-112-331N126` and TI `TPD4E004DRYR` connector-boundary ESD.
+- Added the Ethernet audit and receipt; native KiCad ERC passes with zero
+  violations. No placement or routing was introduced.
