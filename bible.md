@@ -1749,3 +1749,9 @@
   two 5.1 kOhm Rd resistors; source/DRP/SuperSpeed circuitry is excluded.
 - Added the SERVICE audit and receipt; native KiCad ERC passes with zero
   violations. No placement or routing was introduced.
+
+2026-08-30 — Phase 9 mechanical envelope gate closed
+
+- Added clean V100 cooler/backplate and M.2 2280 retention envelopes plus
+  SXM2 courtyard audit. Proprietary/uncaptured 3D remains explicitly
+  empirical risk; no donor model was promoted as exact authority.
