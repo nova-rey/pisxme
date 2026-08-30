@@ -1755,3 +1755,10 @@
 - Added clean V100 cooler/backplate and M.2 2280 retention envelopes plus
   SXM2 courtyard audit. Proprietary/uncaptured 3D remains explicitly
   empirical risk; no donor model was promoted as exact authority.
+
+2026-08-30 — Phase 10 orientation study closed
+
+- Added native topside and underside CM5 placement-study boards with V100,
+  SXM2, M.2, and cooler anchors; both contain zero routing.
+- Selected the underside-CM5 candidate for Phase 11 floorplanning, subject to
+  later mating and assembly review.
