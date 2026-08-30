@@ -1813,6 +1813,15 @@
 - This does not close the full routing gate; SXM2 and remaining connector
   land-pattern authority still require independent review.
 
+2026-08-30 — Phase 14 SXM2 authority comparison refreshed
+
+- Rechecked Amphenol's current product authority for `74221-101LF`: active,
+  400-position, 1.27 mm array, 4 mm height, and current distributor stock.
+- Compared the clean 400-pad/40 x 10/1.27 mm pattern to the released Rev-W
+  metadata. Mask, paste, and A1 details remain explicit empirical risk because
+  the manufacturer CDN blocks local drawing capture; no exact ECAD promotion or
+  routing was performed.
+
 2026-08-30 — Phase 14 M.2 socket sub-gate closed
 
 - Updated the M.2 authority receipt to reference the clean JAE B-key footprint
