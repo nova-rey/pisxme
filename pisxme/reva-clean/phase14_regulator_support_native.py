@@ -72,11 +72,11 @@ def main():
     uid=0xf8000000000000000000000000000000
     for row,(suffix,y,outnet,rfbt,rfmpn,cff,cffnet,c1,c2,c3,c4,c5,vals) in enumerate(specs):
         rail = 'CM5_5V' if suffix == '5V' else 'BRIDGE_3V3'
-        entries=[(c1,vals[0],'C3216X7R1H106K160AC','12V_PROTECTED','POWER_GND'),(c2,vals[1],'C3216X7R1H106K160AC','12V_PROTECTED','POWER_GND'),(c3,vals[2],'GRM32ER71C226KEA8K',outnet,'POWER_GND'),(c4,vals[3],'GRM32ER71C226KEA8K',outnet,'POWER_GND'),(c5,vals[4],'GCM1555C1H220JA16','FB_'+rail,outnet),(f'R{3 if suffix=="5V" else 11}',rfbt,rfmpn,outnet,'FB_'+rail),(f'R{4 if suffix=="5V" else 12}','10k','RC0402FR-0710KL','FB_'+rail,'POWER_GND'),(f'R{5 if suffix=="5V" else 13}','13k' if suffix=='5V' else '27k','RC0402FR-0713KL' if suffix=='5V' else 'RC0402FR-0727KL','RT_'+rail,'POWER_GND'),(f'R{6 if suffix=="5V" else 14}','100k','RC0402FR-07100KL',outnet,'PG_'+rail)]
+        entries=[(c1,vals[0],'C3216X7R1H106K160AC','12V_PROTECTED','POWER_GND'),(c2,vals[1],'C3216X7R1H106K160AC','12V_PROTECTED','POWER_GND'),(c3,vals[2],'C3225X7R1C226M250AC',outnet,'POWER_GND'),(c4,vals[3],'C3225X7R1C226M250AC',outnet,'POWER_GND'),(c5,vals[4],'GCM1555C1H220JA16','FB_'+rail,outnet),(f'R{3 if suffix=="5V" else 11}',rfbt,rfmpn,outnet,'FB_'+rail),(f'R{4 if suffix=="5V" else 12}','10k','RC0402FR-0710KL','FB_'+rail,'POWER_GND'),(f'R{5 if suffix=="5V" else 13}','13k' if suffix=='5V' else '27k','RC0402FR-0713KL' if suffix=='5V' else 'RC0402FR-0727KL','RT_'+rail,'POWER_GND'),(f'R{6 if suffix=="5V" else 14}','100k','RC0402FR-07100KL',outnet,'PG_'+rail)]
         for i,(ref,val,mpn,a,b) in enumerate(entries):
             out.append(part(ref,uid,val,mpn,115+(i%5)*17,75+row*35+(i//5)*10,a,b)); uid+=0x20
         if suffix == '3V3':
-            out.append(part('C19',uid,'22uF','GRM32ER71C226KEA8K',200,85,'BRIDGE_3V3','POWER_GND')); uid+=0x20
+            out.append(part('C19',uid,'22uF','C3225X7R1C226M250AC',200,85,'BRIDGE_3V3','POWER_GND')); uid+=0x20
     # The 1.1-V row is deliberately only a bias/enable/PG scaffold until its
     # non-table FB, RT and effective-COUT calculation is independently closed.
     for i,(ref,val,mpn,a,b) in enumerate((
@@ -87,7 +87,7 @@ def main():
         ('R20','10k','RC0402FR-0710KL','FB_BRIDGE_1V1','POWER_GND'),
         ('R21','2k','RC0402FR-072KL','RT_BRIDGE_1V1','POWER_GND'),
         ('R22','100k','RC0402FR-07100KL','BRIDGE_1V1','PG_BRIDGE_1V1'),
-        *[(f'C{n}','22uF','GRM32ER71C226KEA8K','BRIDGE_1V1','POWER_GND') for n in range(26, 42)],
+        *[(f'C{n}','22uF','C3225X7R1C226M250AC','BRIDGE_1V1','POWER_GND') for n in range(26, 42)],
     )):
         out.append(part(ref,uid,val,mpn,115+(i*17),180,a,b)); uid+=0x20
     out.append(end)

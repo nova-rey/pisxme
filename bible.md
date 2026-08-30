@@ -2268,6 +2268,14 @@
   fields, dated multi-distributor stock evidence, manufacturer-sheet
   provenance, and the explicit graphical-curve limitation.
 
+2026-08-30 — Phase 15 generator lifecycle correction
+
+- Updated `phase14_regulator_support_native.py` so native support-network
+  regeneration emits the active TDK output-capacitor MPN rather than the
+  rejected Murata candidate.
+- Extended the Phase 5 audit to fail if the obsolete MPN returns to either
+  the native regulator sheet or its authoring path.
+
 2026-08-30 — Phase 15 receipt and COUT regression correction
 
 - Corrected the regulator receipt's U4/U5/thermal-via count to the validated
