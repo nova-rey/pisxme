@@ -2262,6 +2262,12 @@
   5/3.3/1.1 V, so the selected part remains electrically suitable; no MPN or
   footprint change was required.
 
+2026-08-30 — Phase 15 local TDK authority receipt
+
+- Added `TDK_C3225X7R1C226M250AC_AUTHORITY.md` with exact voltage/package
+  fields, dated multi-distributor stock evidence, manufacturer-sheet
+  provenance, and the explicit graphical-curve limitation.
+
 2026-08-30 — Phase 15 receipt and COUT regression correction
 
 - Corrected the regulator receipt's U4/U5/thermal-via count to the validated

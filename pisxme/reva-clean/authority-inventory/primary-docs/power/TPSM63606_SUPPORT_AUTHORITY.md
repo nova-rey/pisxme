@@ -50,6 +50,9 @@ The earlier Murata `GRM32ER71C226KEA8K` candidate is rejected for lifecycle
 risk: Mouser currently flags it as scheduled for obsolescence/EOL even though
 some distributor stock remains. It is not the Rev-A BOM authority.
 
+The detailed local TDK provenance receipt is
+`TDK_C3225X7R1C226M250AC_AUTHORITY.md`.
+
 The simplest always-on EN/SYNC policy is direct connection to VIN. PG is an
 open-drain output and needs a separate 20–100 kOhm pull-up; it must not be
 merged with EN. The internal 100-nF bootstrap capacitor and 100-ohm resistor
