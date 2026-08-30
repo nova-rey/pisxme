@@ -1,0 +1,36 @@
+{
+  "captured_utc": "2026-08-30",
+  "source": "https://jlcpcb.com/pcb-impedance-calculator",
+  "api_base": "https://jlcpcb.com/api",
+  "stack_request": {
+    "boardType": 1,
+    "plateLayerNumber": 6,
+    "plateThickness": 1.6,
+    "innerCopperThickness": 0.5,
+    "cuprumThickness": 1,
+    "templateAccessId": "5d343944155443c1b0f1fb22886289c7"
+  },
+  "selected_template": "JLC06161H-7628",
+  "selected_template_label": "JLC06161H-7628(Finished thickness1.55mm±10%)",
+  "targets": [
+    {
+      "impedance_ohm": 90,
+      "pattern": "differential edge-coupled coated microstrip",
+      "returned_width_mil": 5.2,
+      "returned_pair_spacing_mil": 8.0,
+      "status": "accepted by current calculator inverse path"
+    },
+    {
+      "impedance_ohm": 100,
+      "pattern": "differential edge-coupled coated microstrip",
+      "returned_width_mil": 5.2,
+      "returned_pair_spacing_mil": 8.0,
+      "status": "accepted by current calculator inverse path"
+    }
+  ],
+  "notes": [
+    "The calculator's current public UI returned the width/spacing pair for the target impedance; it did not expose a separate solved-Z numeric field in the captured DOM.",
+    "Final fabrication coupon and fab-returned impedance remain authoritative for tolerance verification.",
+    "The 90-ohm result is cross-checked by the earlier saved solver record; the 100-ohm result is retained as the current JLC calculator release input for SATA/Ethernet routing."
+  ]
+}

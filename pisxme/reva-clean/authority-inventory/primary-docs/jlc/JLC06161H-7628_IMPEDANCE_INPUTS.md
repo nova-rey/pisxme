@@ -37,13 +37,12 @@ The prior project receipt contains a live 90-ohm solver result of width
 ohm and coated cross-check 90.14944 ohm. It is retained as starting geometry,
 not as a promise that every JLC stack tolerance produces that value.
 
-The Phase 2 deliverable is the current stack and target-impedance authority,
-not released route geometry. Before high-speed routing in Phase 13, enter these
-fields for both 90-ohm and 100-ohm targets, save the returned width/gap/
-impedance in the fabrication receipt, and order controlled impedance with a
-coupon. PCIe/USB3 use TI's 90-ohm guidance; SATA/Ethernet use 100-ohm
-guidance. Geometry is not released from this record until that Phase 13
-calculator/order receipt is attached.
+The Phase 13 calculator capture is now attached as
+`JLC06161H-7628-calculator-20260830.json` and
+`pisxme/reva-clean/PHASE13_STACK_RECEIPT.md`. It records the current inverse
+calculation result for both target classes. The eventual order must still
+specify controlled impedance and include a fabrication coupon; coupon data is
+not available before fabrication.
 
 Sources: `JLC06161H-7628_IMPEDANCE_BASIS.md`,
 https://jlcpcb.com/impedance, and

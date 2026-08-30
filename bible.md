@@ -1772,6 +1772,15 @@
   cooler 2D courtyard overlap as intentional vertical stacking requiring
   physical confirmation.
 
+2026-08-30 — Phase 13 current JLC stack finalized
+
+- Exercised the current public JLCPCB calculator with the exact six-layer
+  `JLC06161H-7628` template and saved the selected-template capture plus
+  inverse-calculation evidence for 90-ohm and 100-ohm differential targets.
+- Released 5.2 mil width / 8 mil pair spacing as the Rev-A starting constraint,
+  with ordinary through vias, adjacent L2/L5 GND references, and mandatory
+  fabrication coupon verification. No fabricated-board result is implied.
+
 2026-08-30 — Phases 11/12 acreage floorplan closed
 
 - Added a native 220 x 140 mm no-routing acreage floorplan with central V100
