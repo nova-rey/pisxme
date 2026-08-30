@@ -25,6 +25,21 @@ The TI figure is a qualitative placement authority, not a dimensioned CAD
 file. The package land pattern and four central PGND lands are independently
 closed by `TPSM63606_SUPPORT_AUTHORITY.md` and the native footprint receipt.
 
+The retained TI EVM package provides a useful quantitative sanity reference
+without being treated as a coordinate overlay.  In the imported native EVM
+board, U1 is at `(149.1401,102.862)` and its four VOUT capacitors C10--C13
+are the documented `GRM32EC81C476ME15L` parts.  Their maximum regulator-to-
+capacitor-center distance is 5.85 mm (the other three are 5.85, 3.42, and
+3.43 mm).  This measurement is derived from the official TI layout archive
+retained at `authority-inventory/primary-docs/power/TPSM63606_EVM_Layout_Files_SLVRBI7.zip`;
+the imported board is a disposable measurement aid and is not a project
+design artifact.
+Archive SHA-256 is
+`7ddcb1b8754445c99459b9e2eed72d6c4b833b3c0a7efcd6ad98f764ecffeb0c`.
+The four-capacitor value and EVM placement guidance are also stated in the
+official user guide retained as `TPSM63606_EVM_User_Guide.pdf`, including its
+Figure 5-11 effective-capacitance example.
+
 ## Rev-A comparison
 
 | TI requirement | U3 CM5 5 V | U4 bridge 3.3 V | U5 bridge 1.1 V | Evidence/status |
@@ -53,9 +68,12 @@ recorded by the script output and must remain attached to any later routing
 review; the U5 PG support island is offset left to preserve a compact output
 bank without violating its control-route clearance.
 
-Current measurements are U3 7.4 mm, U4 16.3 mm, and U5 51.7 mm. U5's larger
-envelope is a known Rev-A exception caused by the adjacent U7 pads and control
-island; it is not presented as equivalent to the TI illustration.
+Current measurements are U3 7.4 mm, U4 16.3 mm, and U5 51.7 mm, versus the
+5.85 mm maximum measured on the TI EVM reference. U5's larger envelope is a
+known Rev-A exception caused by the adjacent U7 pads and control island; it
+is not presented as equivalent to the TI illustration. U4 is also outside
+the EVM distance metric because its bank is offset to preserve the adjacent
+U5 and U7 corridors.
 Phase 15 remains open until the final three-rail candidate has a measured
 geometry overlay, exact effective-capacitance evidence or an explicitly
 bounded `REV_A_EMPIRICAL_RISK`, and a calculated thermal margin for the

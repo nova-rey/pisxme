@@ -2309,3 +2309,13 @@
 - Added `PHASE15_TI_LAYOUT_OVERLAY.md` to compare the three regulator
   candidates against TI SLVSGB4B pages 31-32. Thermal margin and exact
   geometric/DC-bias closure remain open; no Phase 15 pass is claimed.
+
+2026-08-30 — Phase 15 EVM scale-reference evidence
+
+- Recorded the measured TI EVM VOUT-capacitor reference (5.85 mm maximum
+  regulator-to-capacitor-center distance) and the SHA256 of the retained
+  official layout archive in the Phase 15 overlay and regulator receipt.
+- Kept the imported EVM board disposable: it is measurement evidence only,
+  not a Rev-A design artifact or a claim of geometric equivalence. The Rev-A
+  U4/U5 placement exceptions and board-specific thermal/DC-bias risks remain
+  open and explicit.

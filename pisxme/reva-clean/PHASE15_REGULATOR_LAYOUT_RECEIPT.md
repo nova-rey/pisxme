@@ -95,6 +95,11 @@ The current measured maximum center distances are 7.4 mm for U3, 16.3 mm for
 U4, and 51.7 mm for U5; the U5 value includes the four-row bank constrained by
 the neighboring U7 keepout and is retained as a documented Rev-A placement
 limitation.
+For scale, the official TI EVM archive's imported measurement aid gives a
+5.85 mm maximum for its four documented VOUT capacitors C10--C13. The EVM
+board is not committed as a design artifact; the archive and user guide are
+the retained authorities. U4/U5 therefore remain documented placement
+exceptions rather than claims of geometric equivalence.
 
 `validation/phase3/phase15_thermal_screen.py` supplies the conservative
 design-envelope thermal screen: at 50 C ambient and 90% efficiency it leaves
