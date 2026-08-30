@@ -20,7 +20,9 @@ def main():
         assert text.count('(property "Value" "22uF"') >= count, rail
         effective = count * 22.0 * 0.90
         assert effective >= required, (rail, effective, required)
-        print(f"{rail}: {count} x 22uF x 0.90 = {effective:.1f}uF >= {required:.1f}uF")
+        worst_tolerance = effective * 0.80
+        print(f"{rail}: nominal={effective:.1f}uF >= {required:.1f}uF; "
+              f"±20% screen={worst_tolerance:.1f}uF")
     print("Phase 15 COUT floor check: PASS; exact-part DC-bias/temperature remains empirical")
 
 

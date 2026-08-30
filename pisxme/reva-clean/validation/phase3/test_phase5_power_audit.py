@@ -16,7 +16,7 @@ def main():
     assert power.count('property "MPN" "LM74700QDBVRQ1"') == 2
     assert power.count('property "MPN" "0039300020"') == 2
     assert regs.count('property "MPN" "TPSM63606RDLR"') == 3
-    assert regs.count('property "MPN" "GRM32ER71C226KEA8K"') >= 16
+    assert regs.count('property "MPN" "C3225X7R1C226M250AC"') >= 16
     assert regs.count('property "MPN" "C3216X7R1H106K160AC"') >= 6
     assert 'property "Value" "10uF 50V"' in regs
     assert regs.count('property "Reference" "C19"') == 1

@@ -81,7 +81,8 @@ VCC pins are isolated as `VCC_U3_INTERNAL`, `VCC_U4_INTERNAL`, and
 The reproducible COUT floor calculation is
 `validation/phase3/phase15_capacitance_check.py`; it verifies the schematic
 authority counts against the TI minimum effective values using the documented
-90% Rev-A derating floor. The comparison against the TI qualitative placement
+90% Rev-A nominal derating floor; the active TDK part's ±20% tolerance and
+exact DC-bias/temperature curve remain explicitly unresolved. The comparison against the TI qualitative placement
 authority is recorded in `PHASE15_TI_LAYOUT_OVERLAY.md`. That comparison is
 not a thermal simulation and does not claim exact geometric equivalence.
 

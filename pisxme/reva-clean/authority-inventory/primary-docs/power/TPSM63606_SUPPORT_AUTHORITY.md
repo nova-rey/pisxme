@@ -36,12 +36,19 @@ For the 10-uF, 50-V input ceramic family, TI lists TDK
 backorder. It is therefore not selected as a single-source production
 dependency.
 
-For the 22-uF, 16-V X7R output ceramic listed by TI, Murata
-`GRM32ER71C226KEA8K` is the selected working candidate: 1210, 22 uF, 16 V,
-X7R, 10%, with an exact manufacturer datasheet and current DigiKey related-
-part evidence of approximately 1,404 pieces at about $0.79 each in cut tape;
-Mouser also lists the exact MPN. This is a candidate pending DC-bias/effective-
-capacitance confirmation at each rail voltage and the final quantity choice.
+For the 22-uF output ceramic listed by TI, TDK
+`C3225X7R1C226M250AC` is selected: 1210, 22 uF, 25 V, X7R, ±20%, with the
+same assembly geometry and an official TDK characteristic sheet. TDK's
+current product page reports 41,593 DigiKey pieces, 48,825 Mouser pieces,
+118,000 Avnet Abacus pieces, and 132,000 Arrow pieces in the current snapshot;
+DigiKey lists cut tape at approximately $0.73 quantity-1 and $0.31 at 1,000.
+Minimum order is one cut-tape part; reel packing is 1,000 pieces. DigiKey
+marks the part active and it supports reflow assembly and ordinary 1210
+placement.
+
+The earlier Murata `GRM32ER71C226KEA8K` candidate is rejected for lifecycle
+risk: Mouser currently flags it as scheduled for obsolescence/EOL even though
+some distributor stock remains. It is not the Rev-A BOM authority.
 
 The simplest always-on EN/SYNC policy is direct connection to VIN. PG is an
 open-drain output and needs a separate 20–100 kOhm pull-up; it must not be
@@ -59,10 +66,14 @@ procurement-friendly placeholder family, not yet a closed exact BOM choice.
 Sources checked for the current procurement snapshot:
 
 - TI primary datasheet: `https://www.ti.com/lit/ds/symlink/tpsm63606.pdf`
-- DigiKey exact/related Murata listing:
-  `https://www.digikey.com/en/products/detail/murata-electronics/GRM32ER71C226KEA8K/2548186`
-- Mouser exact Murata listing:
-  `https://www.mouser.com/en/ProductDetail/Murata-Electronics/GRM32ER71C226KEA8K`
+- TDK product page:
+  `https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3225X7R1C226M250AC`
+- TDK characteristic sheet:
+  `https://product.tdk.com/en/system/files/dam/doc/product/capacitor/ceramic/mlcc/charasheet/c3225x7r1c226m250ac.pdf`
+- DigiKey listing:
+  `https://www.digikey.com/en/products/detail/tdk/C3225X7R1C226M250AC/1587497`
+- Mouser listing:
+  `https://www.mouser.com/ProductDetail/TDK/C3225X7R1C226M250AC`
 
 ## Exact PiSXMe decision
 
@@ -75,6 +86,8 @@ adjacent ground plane. Exact rail values and DC-bias derating remain recorded
 Phase 5 design inputs; this receipt closes the package/layout authority needed
 for Phase 15 routing.
 
-License/provenance: TI material is retained for design-reference use under
-the TI datasheet terms; distributor pages are procurement evidence only. No
-third-party CAD or library asset is copied by this receipt.
+License/provenance: TI material is retained for design-reference use under the
+TI datasheet terms; TDK characteristic data is retained as manufacturer
+design-reference material; distributor pages are procurement evidence only.
+The TDK replacement uses the existing generic 1210 footprint and requires no
+third-party CAD asset.

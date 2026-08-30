@@ -2236,6 +2236,17 @@
   the fourth-row envelope as a Rev-A placement limitation. The PG support
   island is fixed at x=236 mm with a passing native route regression.
 
+2026-08-30 — Phase 15 output-capacitor lifecycle correction
+
+- Replaced the previous Murata output-capacitor MPN with active TDK
+  `C3225X7R1C226M250AC`, a TI-listed 1210/22-uF/25-V/X7R part. Mouser's EOL
+  flag for the Murata candidate made it unsuitable as Rev-A authority despite
+  remaining stock; TDK distributor stock and active status are recorded in
+  `TPSM63606_SUPPORT_AUTHORITY.md`.
+- Native Phase 5 power audit and COUT regression pass. The 90% values remain
+  nominal derating screens; ±20% tolerance screens are 31.7/47.5/253.4 uF,
+  so exact DC-bias/tolerance closure remains explicitly open.
+
 2026-08-30 — Phase 15 receipt and COUT regression correction
 
 - Corrected the regulator receipt's U4/U5/thermal-via count to the validated
