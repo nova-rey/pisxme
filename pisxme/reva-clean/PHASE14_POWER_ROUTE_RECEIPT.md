@@ -47,3 +47,9 @@ incorrect hierarchical-net assignment in the KiCad Python ABI and was
 rejected. The frozen six-layer `JLC06161H-7628` basis
 and ordinary through-via-compatible layer policy remain in force; no Phase
 16+ high-speed routing is added.
+
+The current Phase 14 DRC baseline also exposes a local Molex footprint defect:
+the generated 0039300020 pattern's mechanical holes overlap its electrical
+hole-clearance envelope. Electrical selection remains valid, but the local
+land pattern is now `LAND_PATTERN_REVIEW_OPEN` and is not a routing/release
+authority until regenerated from the official drawing.

@@ -2056,3 +2056,10 @@
   vias with the wrong hierarchical net. The canonical candidate is therefore
   zone-only with zero tracks/vias until a clearance-safe production placement
   and stable net-assignment path are available.
+
+2026-08-30 — Phase 14 Molex land-pattern defect found
+
+- Native DRC showed the local `0039300020` pattern's 3.0 mm mounting holes
+  overlapping the 2.4 mm electrical-hole clearance envelope. The electrical
+  MPN selection remains valid, but its local land pattern is reopened against
+  the official Molex drawing and is excluded from routing/release authority.

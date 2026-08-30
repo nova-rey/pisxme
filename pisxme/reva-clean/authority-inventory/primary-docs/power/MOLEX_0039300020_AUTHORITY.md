@@ -1,8 +1,10 @@
 # High-current 12 V input header authority — Molex 0039300020
 
-Checked: 2026-08-30. Status: `CLOSED` for the Rev-A input-header selection;
-the exact project-local PCB land pattern is now materialized and checked in
-`PiSXMe_RevA_Clean.pretty/Molex_0039300020_5569_2P_RA.kicad_mod`.
+Checked: 2026-08-30. Status: `SELECTION_CLOSED; LAND_PATTERN_REVIEW_OPEN`.
+The electrical selection is closed, but the project-local PCB land pattern is
+not yet promoted: its current mounting-peg holes overlap the electrical pad
+clearance envelope in native DRC and require correction against the exact
+Molex drawing before production routing.
 
 ## Candidates considered
 
@@ -53,3 +55,10 @@ The dual cold-plug input connector selection is Molex `0039300020`, two units,
 with one connector per independent 12 V input. The later PCB authoring step must
 use the exact 5569-2-position drawing/ECAD pattern and keep both connectors
 outside the V100 cooler reservation.
+
+Additional Phase 14 finding: the current local pattern places 3.0 mm NPTH
+mounting holes 2.1 mm from 2.4 mm electrical holes, creating a native
+hole-clearance conflict. The official drawing is authoritative for the actual
+peg/hole pattern; this local geometry must not be used for routing or release
+until corrected. Source: Molex `039300040_sd.pdf` / `55690002-SD`, linked from
+the official 5569 series and part records.
