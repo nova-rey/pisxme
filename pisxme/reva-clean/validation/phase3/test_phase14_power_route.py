@@ -9,7 +9,7 @@ def main():
     result = subprocess.run([PCBNEW_PY, str(ROOT / "phase14_power_route.py")],
                             cwd=ROOT, check=True, text=True,
                             capture_output=True)
-    assert "protected feed zone" in result.stdout
+    assert "sixteen B.Cu power links" in result.stdout
     probe = r'''
 import pcbnew
 b = pcbnew.LoadBoard("ACREAGE_POWER_PHASE14.kicad_pcb")
@@ -27,10 +27,56 @@ assert q1 and q2 and j1
 assert any(p.GetNetname() == "12V_PROTECTED" for p in q1.Pads())
 assert any(p.GetNetname() == "12V_PROTECTED" for p in q2.Pads())
 assert sum(p.GetNetname() == "12V_PROTECTED" for p in j1.Pads()) == 130
-assert len(list(b.GetTracks())) == 0
+tracks = list(b.GetTracks())
+assert len(tracks) == 16
+assert all(t.GetLayer() == pcbnew.B_Cu for t in tracks)
+assert all(t.GetWidth() == pcbnew.FromMM(2.0) for t in tracks)
+def pos(ref, number, net):
+    fp = b.FindFootprintByReference(ref)
+    pad = next(p for p in fp.Pads()
+               if str(p.GetNumber()) == number and p.GetNetname() == net)
+    return (pad.GetPosition().x, pad.GetPosition().y)
+expected = {
+    frozenset((pos("J5", "1", "/POWER_INPUT/12V_IN_A"),
+               pos("F1", "1", "/POWER_INPUT/12V_IN_A"))),
+    frozenset((pos("F1", "1", "/POWER_INPUT/12V_IN_A"), pos("F1", "2", "/POWER_INPUT/12V_IN_A"))),
+    frozenset((pos("F1", "1", "/POWER_INPUT/12V_IN_A"), pos("F1", "3", "/POWER_INPUT/12V_IN_A"))),
+    frozenset((pos("F1", "1", "/POWER_INPUT/12V_IN_A"), pos("F1", "4", "/POWER_INPUT/12V_IN_A"))),
+    frozenset((pos("J6", "1", "/POWER_INPUT/12V_IN_B"),
+               pos("F2", "1", "/POWER_INPUT/12V_IN_B"))),
+    frozenset((pos("F2", "1", "/POWER_INPUT/12V_IN_B"), pos("F2", "2", "/POWER_INPUT/12V_IN_B"))),
+    frozenset((pos("F2", "1", "/POWER_INPUT/12V_IN_B"), pos("F2", "3", "/POWER_INPUT/12V_IN_B"))),
+    frozenset((pos("F2", "1", "/POWER_INPUT/12V_IN_B"), pos("F2", "4", "/POWER_INPUT/12V_IN_B"))),
+    frozenset((pos("F1", "5", "/POWER_INPUT/FUSED_12V_A"), pos("F1", "6", "/POWER_INPUT/FUSED_12V_A"))),
+    frozenset((pos("F1", "5", "/POWER_INPUT/FUSED_12V_A"), pos("F1", "7", "/POWER_INPUT/FUSED_12V_A"))),
+    frozenset((pos("F1", "5", "/POWER_INPUT/FUSED_12V_A"), pos("F1", "8", "/POWER_INPUT/FUSED_12V_A"))),
+    frozenset((pos("F1", "5", "/POWER_INPUT/FUSED_12V_A"),
+               pos("Q1", "1", "/POWER_INPUT/FUSED_12V_A"))),
+    frozenset((pos("F2", "5", "/POWER_INPUT/FUSED_12V_B"), pos("F2", "6", "/POWER_INPUT/FUSED_12V_B"))),
+    frozenset((pos("F2", "5", "/POWER_INPUT/FUSED_12V_B"), pos("F2", "7", "/POWER_INPUT/FUSED_12V_B"))),
+    frozenset((pos("F2", "5", "/POWER_INPUT/FUSED_12V_B"), pos("F2", "8", "/POWER_INPUT/FUSED_12V_B"))),
+    frozenset((pos("F2", "5", "/POWER_INPUT/FUSED_12V_B"),
+               pos("Q2", "1", "/POWER_INPUT/FUSED_12V_B"))),
+}
+actual = set()
+for track in tracks:
+    assert track.GetNetname() in {
+        "/POWER_INPUT/12V_IN_A", "/POWER_INPUT/12V_IN_B",
+        "/POWER_INPUT/FUSED_12V_A", "/POWER_INPUT/FUSED_12V_B",
+    }
+    actual.add(frozenset((tuple((track.GetStart().x, track.GetStart().y)),
+                          tuple((track.GetEnd().x, track.GetEnd().y)))))
+assert actual == expected, (actual, expected)
+zone = zones["V100_PROTECTED_FEED"]
+filled = zone.GetFilledPolysList(pcbnew.F_Cu)
+for ref in ("Q1", "Q2"):
+    pad = b.FindFootprintByReference(ref).FindPadByNumber("2")
+    assert pad.GetNetname() == "12V_PROTECTED"
+    assert filled.PointInside(pad.GetPosition())
+assert all(track.GetNetname() != "12V_PROTECTED" for track in tracks)
 '''
     subprocess.run([PCBNEW_PY, "-c", probe], cwd=ROOT, check=True,
-                    text=True, capture_output=True)
+                    text=True)
     print("Phase 14 power-route candidate: PASS; protected zone and two return planes filled")
 
 

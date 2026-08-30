@@ -2085,3 +2085,20 @@
 - The manufacturer drawing's 5.8 mm and 3.5 mm hole-pattern dimensions are
   now recorded as the land-pattern authority; routing and release remain held
   until the local footprint is regenerated and independently checked.
+
+2026-08-30 — Phase 14 Littelfuse holder geometry corrected
+
+- Corrected the local `178.6165.0001` four-pin holder to the manufacturer
+  `CVP-PE40-0006 Rev A` 5.8 mm by 3.5 mm hole rectangle with 1.4 mm drills.
+- Materialization now assigns duplicated contacts 1/3 to each input net and
+  2/4 to each fused-output net. Native DRC removes the holder self-overlap;
+  external placement/courtyard interactions remain open.
+
+2026-08-30 — Phase 14 Littelfuse eight-hole authority correction
+
+- Independent exact-MPN review found that `178.6165.0001` is an eight-solder-hole
+  FLR holder with a central mechanical spigot, not a four-hole pattern.
+- Regenerated the local footprint at the manufacturer-derived coordinates with
+  conservative central NPTH clearance; materialization maps pads 1-4 to input
+  and 5-8 to fused output. Phase 14 remains open pending broader DRC and power
+  validation.

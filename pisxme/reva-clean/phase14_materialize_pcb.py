@@ -23,7 +23,10 @@ POSITIONS = {
     "U4": (225, 105), "U5": (235, 105), "J3": (260, 160),
     "J4": (25, 145), "U8": (42, 145), "R1": (55, 140),
     "R2": (55, 150), "U1": (20, 75), "U2": (20, 95),
-    "F1": (90, 40), "F2": (90, 80), "Q1": (130, 40), "Q2": (130, 80),
+    # Keep the eight-hole FLR holders outside the conservative V100 cooler
+    # reservation (x >= 75 mm), while retaining a short, direct branch into
+    # each ideal-diode/FET island.
+    "F1": (55, 40), "F2": (55, 120), "Q1": (130, 40), "Q2": (130, 80),
     "C3": (110, 55), "C4": (110, 95),
     "D1": (110, 32), "D2": (110, 72),
     "U3": (52, 78), "J5": (12, 25), "J6": (12, 45), "J7": (35, 130),
@@ -54,6 +57,11 @@ PAD_ALIASES = {
         "3": ("A4", "A9", "B4", "B9"), "4": ("A1", "A12", "B1", "B12"),
         "5": ("A5",), "6": ("B5",),
     },
+    # Littelfuse FLR has eight solder holes: 1-4 are the input contact and
+    # 5-8 are the output contact.  The schematic's two logical pins are
+    # projected onto representative physical pads 1 and 5 respectively.
+    "F1": {"1": ("1", "2", "3", "4"), "2": ("5", "6", "7", "8")},
+    "F2": {"1": ("1", "2", "3", "4"), "2": ("5", "6", "7", "8")},
 }
 
 
@@ -133,12 +141,15 @@ def main() -> None:
         for node in net.findall("node"):
             ref, pin = node.attrib.get("ref"), node.attrib.get("pin")
             if ref in refs:
-                pads = [candidate for candidate in refs[ref].Pads()
-                        if candidate.GetNumber() == pin]
-                if not pads and ref in PAD_ALIASES:
+                if ref in PAD_ALIASES:
                     aliases = PAD_ALIASES[ref].get(pin, ())
                     pads = [candidate for candidate in refs[ref].Pads()
-                            if candidate.GetNumber() in aliases]
+                            if candidate.GetNumber() in aliases] if aliases else [
+                                candidate for candidate in refs[ref].Pads()
+                                if candidate.GetNumber() == pin]
+                else:
+                    pads = [candidate for candidate in refs[ref].Pads()
+                            if candidate.GetNumber() == pin]
                 if not pads:
                     if ref == "J1" and pin in ("PWR", "GND"):
                         unresolved.append(f"{ref}.{pin}")

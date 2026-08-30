@@ -3,11 +3,13 @@
 Status: `CANDIDATE_IN_PROGRESS`
 
 `phase14_power_route.py` creates `ACREAGE_POWER_PHASE14.kicad_pcb` from the
-validated native-netlist materialization. It adds one broad F.Cu
-`12V_PROTECTED` zone over the Q1/Q2-to-SXM2 corridor and filled inner-layer
-return-reference zones on In1 and In4. The protected zone reaches both branch
-FET outputs and all 130 explicit SXM2 power contacts, so the candidate does
-not create a single guessed endpoint contact or single-neck feed.
+validated native-netlist materialization. It adds sixteen named-pad-resolved,
+2.0 mm B.Cu power links for J5/J6 input-to-fuse and fuse-to-Q1/Q2 continuity,
+one broad F.Cu `12V_PROTECTED` zone over the Q1/Q2-to-SXM2 corridor, and filled
+inner-layer return-reference zones on In1 and In4. The protected zone reaches
+both branch FET outputs and all 130 explicit SXM2 power contacts, so the
+candidate does not create a single guessed endpoint contact or single-neck
+feed.
 
 This is not Phase 14 closure. The remaining gate evidence is binding:
 branch-sharing and fuse/connector contact analysis, thermal loss
@@ -40,11 +42,12 @@ not a fabricated-board thermal measurement; copper spreading, airflow,
 package mounting, and sustained sharing remain explicit Rev-A validation
 items.
 
-The candidate intentionally has no tracks: the acreage placement is not yet a
-production-routed placement, and provisional branch legs would cross adjacent
-fuse-holder/connector/CM5 pads. A subsequent via/neck experiment also exposed
-incorrect hierarchical-net assignment in the KiCad Python ABI and was
-rejected. The frozen six-layer `JLC06161H-7628` basis
+The candidate intentionally has no high-speed tracks. The sixteen released power
+links stay on B.Cu and resolve endpoints from the actual current placement;
+their 2.0 mm width preserves the 0.2 mm clearance around the 2.54 mm fuse
+holder pitch. A subsequent via/neck experiment also exposed incorrect
+hierarchical-net assignment in the KiCad Python ABI and was rejected. The
+frozen six-layer `JLC06161H-7628` basis
 and ordinary through-via-compatible layer policy remain in force; no Phase
 16+ high-speed routing is added.
 
@@ -57,9 +60,10 @@ DRC has no J5/J6 hole-clearance or solder-mask-bridge violation. The remaining
 DRC and unconnected-item counts are broader pre-existing acreage-candidate
 debt and do not constitute Phase 14 closure.
 
-A second footprint authority gap is now recorded for the selected Littelfuse
-`178.6165.0001` holder. The local four-pin pattern has overlapping pad/hole
-geometry at F1/F2; native DRC reports those violations. Littelfuse drawing
-`CVP-PE40-0006 Rev A` is the authority, so the holder remains
-`LAND_PATTERN_REVIEW_OPEN` and power routing/release is held until its four
-holes are regenerated from the 5.8 mm/3.5 mm manufacturer layout.
+A second footprint authority gap was recorded for the selected Littelfuse
+`178.6165.0001` holder. Independent exact-MPN review of drawing
+`CVP-PE40-0006 Rev A` established eight solder holes plus a central spigot.
+The local footprint now uses the manufacturer-derived eight-hole coordinates,
+conservative central NPTH clearance, and maps pads 1-4 to input and 5-8 to
+fused output. Fresh native DRC removes the holder self-overlap; remaining
+placement/courtyard findings remain part of the open Phase 14 gate.

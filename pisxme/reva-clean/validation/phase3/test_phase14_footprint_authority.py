@@ -30,7 +30,15 @@ def main() -> None:
     assert '(pad "MP1" np_thru_hole circle (at 0 -7.3)' in molex
     assert 'pad "MP2"' not in molex
     assert 'at 4.2 0' not in molex
-    print("Phase 14 footprint authority: PASS; package pads and Molex SD-5569-002 hole layout assigned")
+    fuse = (PRETTY / "ATO_FuseHolder_17861650001.kicad_mod").read_text()
+    for number, coordinate in ((1, "-6.4 -1.25"), (2, "-6.4 1.25"),
+                               (3, "-2.9 -1.25"), (4, "-2.9 1.25"),
+                               (5, "2.9 -1.25"), (6, "2.9 1.25"),
+                               (7, "6.4 -1.25"), (8, "6.4 1.25")):
+        assert f'(pad "{number}"' in fuse and f'(at {coordinate})' in fuse
+    assert '(pad "MP1" np_thru_hole circle (at 0 0)' in fuse
+    assert 'at -7.62 0' not in fuse and 'at -5.08 0' not in fuse
+    print("Phase 14 footprint authority: PASS; Littelfuse eight-hole FLR pattern and Molex layout assigned")
 
 
 if __name__ == "__main__":

@@ -21,6 +21,15 @@ def main() -> None:
     assert board.count('"12V_PROTECTED"') >= 130
     assert board.count('"/V100_PCIE/V100_PER0_N"') >= 1
     assert '"POWER_GND"' in board
+    for ref, input_net, output_net in (
+        ("F1", "/POWER_INPUT/12V_IN_A", "/POWER_INPUT/FUSED_12V_A"),
+        ("F2", "/POWER_INPUT/12V_IN_B", "/POWER_INPUT/FUSED_12V_B"),
+    ):
+        start = board.index(f'(property "Reference" "{ref}"')
+        end = board.index('\n\t\t(footprint ', start + 1) if '\n\t\t(footprint ' in board[start + 1:] else len(board)
+        block = board[start:end]
+        assert block.count(f'"{input_net}"') >= 2
+        assert block.count(f'"{output_net}"') >= 2
     print("Phase 14 PCB materialization: PASS; six layers; assigned refs; routing still zero")
 
 if __name__ == "__main__":

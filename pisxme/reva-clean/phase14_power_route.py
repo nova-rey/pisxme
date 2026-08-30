@@ -12,6 +12,31 @@ import pcbnew
 ROOT = Path(__file__).resolve().parent
 INPUT = ROOT / "ACREAGE_CANDIDATE.kicad_pcb"
 OUTPUT = ROOT / "ACREAGE_POWER_PHASE14.kicad_pcb"
+POWER_TRACK_WIDTH_MM = 2.0
+
+# Resolve the current placement through references and exact nets rather than
+# baking board coordinates into the routing prototype.
+POWER_CONTINUITY = (
+    ("J5", "1", "F1", "1", "/POWER_INPUT/12V_IN_A"),
+    ("J6", "1", "F2", "1", "/POWER_INPUT/12V_IN_B"),
+    ("F1", "5", "Q1", "1", "/POWER_INPUT/FUSED_12V_A"),
+    ("F2", "5", "Q2", "1", "/POWER_INPUT/FUSED_12V_B"),
+)
+
+DUPLICATE_CONTACTS = (
+    ("F1", "1", "F1", "2", "/POWER_INPUT/12V_IN_A"),
+    ("F1", "1", "F1", "3", "/POWER_INPUT/12V_IN_A"),
+    ("F1", "1", "F1", "4", "/POWER_INPUT/12V_IN_A"),
+    ("F1", "5", "F1", "6", "/POWER_INPUT/FUSED_12V_A"),
+    ("F1", "5", "F1", "7", "/POWER_INPUT/FUSED_12V_A"),
+    ("F1", "5", "F1", "8", "/POWER_INPUT/FUSED_12V_A"),
+    ("F2", "1", "F2", "2", "/POWER_INPUT/12V_IN_B"),
+    ("F2", "1", "F2", "3", "/POWER_INPUT/12V_IN_B"),
+    ("F2", "1", "F2", "4", "/POWER_INPUT/12V_IN_B"),
+    ("F2", "5", "F2", "6", "/POWER_INPUT/FUSED_12V_B"),
+    ("F2", "5", "F2", "7", "/POWER_INPUT/FUSED_12V_B"),
+    ("F2", "5", "F2", "8", "/POWER_INPUT/FUSED_12V_B"),
+)
 
 
 def find_net(board, net_name):
@@ -41,6 +66,40 @@ def rectangle_zone(board, net_name, layer, x0, y0, x1, y1, name):
     board.Add(zone)
 
 
+def find_pad(board, reference, pad_number, net_name):
+    footprint = board.FindFootprintByReference(reference)
+    if footprint is None:
+        raise SystemExit(f"missing required footprint: {reference}")
+    pads = [pad for pad in footprint.Pads()
+            if str(pad.GetNumber()) == pad_number
+            and str(pad.GetNetname()) == net_name]
+    if len(pads) != 1:
+        raise SystemExit(
+            f"expected one {reference}.{pad_number} pad on {net_name}, found {len(pads)}"
+        )
+    return pads[0]
+
+
+def add_power_track(board, start, end, net_name):
+    if str(start.GetNetname()) != net_name or str(end.GetNetname()) != net_name:
+        raise SystemExit(f"power track endpoint net mismatch on {net_name}")
+    track = pcbnew.PCB_TRACK(board)
+    track.SetStart(start.GetPosition())
+    track.SetEnd(end.GetPosition())
+    track.SetLayer(pcbnew.B_Cu)
+    track.SetNetCode(start.GetNetCode())
+    track.SetWidth(pcbnew.FromMM(POWER_TRACK_WIDTH_MM))
+    board.Add(track)
+
+
+def assert_protected_zone_connection(board, zone):
+    filled = zone.GetFilledPolysList(pcbnew.F_Cu)
+    for reference in ("Q1", "Q2"):
+        pad = find_pad(board, reference, "2", "12V_PROTECTED")
+        if not filled.PointInside(pad.GetPosition()):
+            raise SystemExit(f"{reference}.2 is not connected to the filled protected zone")
+
+
 def main():
     board = pcbnew.LoadBoard(str(INPUT))
     # The protected copper feed is confined to the V100 power corridor and
@@ -52,9 +111,28 @@ def main():
     for layer, name in ((pcbnew.In1_Cu, "V100_RETURN_PLANE_L2"),
                         (pcbnew.In4_Cu, "V100_RETURN_PLANE_L5")):
         rectangle_zone(board, "POWER_GND", layer, 1, 1, 299, 179, name)
+    for start_ref, start_number, end_ref, end_number, net_name in POWER_CONTINUITY:
+        add_power_track(
+            board,
+            find_pad(board, start_ref, start_number, net_name),
+            find_pad(board, end_ref, end_number, net_name),
+            net_name,
+        )
+    for start_ref, start_number, end_ref, end_number, net_name in DUPLICATE_CONTACTS:
+        add_power_track(
+            board,
+            find_pad(board, start_ref, start_number, net_name),
+            find_pad(board, end_ref, end_number, net_name),
+            net_name,
+        )
     pcbnew.ZONE_FILLER(board).Fill(board.Zones())
+    protected_zone = next(
+        zone for zone in board.Zones()
+        if zone.GetZoneName() == "V100_PROTECTED_FEED"
+    )
+    assert_protected_zone_connection(board, protected_zone)
     board.Save(str(OUTPUT))
-    print("Phase 14 V100 power candidate: PASS; protected feed zone plus return references created")
+    print("Phase 14 V100 power candidate: PASS; sixteen B.Cu power links and protected feed zone created")
 
 
 if __name__ == "__main__":
