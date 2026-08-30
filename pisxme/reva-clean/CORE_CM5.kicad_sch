@@ -473,7 +473,7 @@
     (on_board no)
     (dnp no)
     (uuid 80000000-0000-0000-0000-000000000001)
-    (property "Reference" "XCO"
+    (property "Reference" "X_CORE_CM5"
       (at 25 5 0)
       (effects (font (size 1.27 1.27))))
     (property "Value" "CORE_CM5_Contract"
@@ -492,7 +492,7 @@
     (pin "5" (uuid 90000000-0000-0000-0000-000000000068))
 
     (instances (project "PiSXMe_RevA_Clean"
-      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000001" (reference "XCO" ) (unit 1))))
+      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000001" (reference "X_CORE_CM5" ) (unit 1))))
   )
   (sheet_instances (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000001" (page "1")))
 )

@@ -473,7 +473,7 @@
     (on_board no)
     (dnp no)
     (uuid 80000000-0000-0000-0000-000000000007)
-    (property "Reference" "XST"
+    (property "Reference" "X_STORAGE"
       (at 25 5 0)
       (effects (font (size 1.27 1.27))))
     (property "Value" "STORAGE_Contract"
@@ -492,7 +492,7 @@
     (pin "5" (uuid 90000000-0000-0000-0000-0000000002c0))
 
     (instances (project "PiSXMe_RevA_Clean"
-      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "XST" ) (unit 1))))
+      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "X_STORAGE" ) (unit 1))))
   )
   (sheet_instances (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (page "7")))
 )

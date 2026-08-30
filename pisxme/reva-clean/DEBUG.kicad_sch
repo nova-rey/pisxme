@@ -459,7 +459,7 @@
     (on_board no)
     (dnp no)
     (uuid 80000000-0000-0000-0000-00000000000a)
-    (property "Reference" "XDE"
+    (property "Reference" "X_DEBUG"
       (at 25 5 0)
       (effects (font (size 1.27 1.27))))
     (property "Value" "DEBUG_Contract"
@@ -477,7 +477,7 @@
     (pin "4" (uuid 90000000-0000-0000-0000-0000000003eb))
 
     (instances (project "PiSXMe_RevA_Clean"
-      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-00000000000a" (reference "XDE" ) (unit 1))))
+      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-00000000000a" (reference "X_DEBUG" ) (unit 1))))
   )
   (sheet_instances (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-00000000000a" (page "10")))
 )

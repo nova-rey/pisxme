@@ -459,7 +459,7 @@
     (on_board no)
     (dnp no)
     (uuid 80000000-0000-0000-0000-000000000004)
-    (property "Reference" "XPO"
+    (property "Reference" "X_POWER_INPUT"
       (at 25 5 0)
       (effects (font (size 1.27 1.27))))
     (property "Value" "POWER_INPUT_Contract"
@@ -477,7 +477,7 @@
     (pin "4" (uuid 90000000-0000-0000-0000-000000000193))
 
     (instances (project "PiSXMe_RevA_Clean"
-      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000004" (reference "XPO" ) (unit 1))))
+      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000004" (reference "X_POWER_INPUT" ) (unit 1))))
   )
   (sheet_instances (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000004" (page "4")))
 )

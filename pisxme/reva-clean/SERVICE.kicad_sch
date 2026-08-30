@@ -459,7 +459,7 @@
     (on_board no)
     (dnp no)
     (uuid 80000000-0000-0000-0000-000000000008)
-    (property "Reference" "XSE"
+    (property "Reference" "X_SERVICE"
       (at 25 5 0)
       (effects (font (size 1.27 1.27))))
     (property "Value" "SERVICE_Contract"
@@ -477,7 +477,7 @@
     (pin "4" (uuid 90000000-0000-0000-0000-000000000323))
 
     (instances (project "PiSXMe_RevA_Clean"
-      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000008" (reference "XSE" ) (unit 1))))
+      (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000008" (reference "X_SERVICE" ) (unit 1))))
   )
   (sheet_instances (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000008" (page "8")))
 )

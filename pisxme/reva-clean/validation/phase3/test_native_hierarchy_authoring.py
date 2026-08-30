@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import subprocess
 import tempfile
+import re
 from pathlib import Path
 
 
@@ -55,6 +56,7 @@ def main() -> None:
         assert lib_start < contract_start < lib_end, child.name
         assert '(sheet_instances' in text
         assert '(at -5.08 -' in text or '(at -5.08 0' in text
+        assert len(re.findall(r'property "Reference" "X_[A-Z0-9_]+"', text)) == 1
 
     with tempfile.TemporaryDirectory(
         prefix="pisxme-phase3-erc-", dir=Path.home()

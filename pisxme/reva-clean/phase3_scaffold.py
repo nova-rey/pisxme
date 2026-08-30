@@ -139,7 +139,7 @@ def child(name: str, number: int, lib_symbols: str) -> str:
     (on_board no)
     (dnp no)
     (uuid {make_uuid(0x80000000000000000000000000000000 + number)})
-    (property "Reference" "X{name[:2]}"
+    (property "Reference" "X_{name}"
       (at 25 5 0)
       (effects (font (size 1.27 1.27))))
     (property "Value" "{name}_Contract"
@@ -153,7 +153,7 @@ def child(name: str, number: int, lib_symbols: str) -> str:
       (effects (font (size 1.27 1.27)) (hide yes)))
 {instance_pins}
     (instances (project "PiSXMe_RevA_Clean"
-      (path "/{sheet_path}" (reference "X{name[:2]}" ) (unit 1))))
+      (path "/{sheet_path}" (reference "X_{name}" ) (unit 1))))
   )'''
     contract_wires = "".join(
         f'''\n  (wire

@@ -1687,3 +1687,6 @@
   children. Added `validation/phase3/test_native_hierarchy_authoring.py`;
   generation, serialization assertions, and native ERC all pass. No
   placement, routing, PCB, or Phase 4 work was introduced.
+- Regenerated the contract instances with deterministic per-sheet references
+  (`X_CORE_CM5`, `X_V100_PCIE`, and so on); hierarchy regression and native ERC
+  remain passing after the netlist-reference cleanup.
