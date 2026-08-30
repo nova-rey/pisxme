@@ -2048,3 +2048,11 @@
   10.91 mV sheet-drop bound, and 74.0 C shared FET junction at 40 C ambient.
 - The 236.9 C peak single-branch θJA result remains a fuse-clearing transient
   requirement, not an accepted sustained operating condition.
+
+2026-08-30 — Phase 14 routing candidate held fail-closed
+
+- A second B.Cu/ordinary-via routing experiment was rejected after native DRC
+  showed pad/hole crossings and the KiCad Python ABI serialized two protected
+  vias with the wrong hierarchical net. The canonical candidate is therefore
+  zone-only with zero tracks/vias until a clearance-safe production placement
+  and stable net-assignment path are available.
