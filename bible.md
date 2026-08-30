@@ -1,5 +1,12 @@
 # Append-only project bible
 
+## 2026-08-30 — Phase 14 CM5 and MagJack pattern gates verified
+
+- Added machine checks for the clean CM5 200-pad footprint/model and EDAC
+  18-pad MagJack footprint, including rejection of the legacy Trxcom pattern.
+- Kept SXM2 exact mask/paste/A1 and high-current input connector authority open.
+
+
 ## 2026-08-30 — Phase 14 service authority regression correction
 
 - Updated the Phase 8 audit to require the selected Amphenol
