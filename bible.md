@@ -2008,3 +2008,10 @@
   branch density, 7.362 A/mm2 worst single-branch density, and 9.66 mV
   conservative drop bound; connector-contact, thermal, and full-board DRC
   closure remain open.
+
+2026-08-30 — Phase 14 connector-contact bound added
+
+- Added the balanced-feed contact calculation: 12.625 A per branch across 65
+  empirical power contacts is 0.194 A/contact, below Amphenol's published
+  0.45 A/contact rating. Continuity and current-sharing measurements remain
+  required for final Phase 14 closure.

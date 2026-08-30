@@ -22,6 +22,11 @@ below 4 A/mm2, the worst single-branch envelope below 8 A/mm2, and the
 conservative 75 mm sheet-resistance drop bound below 120 mV. These are
 geometry-backed design bounds, not measured temperature or connector-contact
 results; the script is a prerequisite regression for the remaining gate.
+At the 12.625 A balanced branch envelope, 65 power contacts per branch would
+carry 0.194 A/contact versus the Amphenol published 0.45 A/contact rating.
+That calculation assumes the public reverse-engineered row classification and
+balanced sharing; both still require continuity/current measurements on the
+actual V100 assembly.
 
 The route uses the frozen six-layer `JLC06161H-7628` basis and ordinary
 through-via-compatible layer policy. No Phase 16+ high-speed routing is added.

@@ -33,8 +33,10 @@ length_mm = 75.0
 shared_j = branch_a / (t_mm * width_mm)
 worst_j = total_a / (t_mm * width_mm)
 drop_v = total_a * rho * length_mm / (t_mm * width_mm)
+contact_a = branch_a / 65.0
 assert shared_j < 4.0 and worst_j < 8.0 and drop_v < 0.12
-print(f"min_width_mm={min(spans):.1f} shared_J={shared_j:.3f}A/mm2 worst_J={worst_j:.3f}A/mm2 drop={drop_v:.5f}V")
+assert contact_a < 0.45  # Amphenol published contact-current authority
+print(f"min_width_mm={min(spans):.1f} shared_J={shared_j:.3f}A/mm2 worst_J={worst_j:.3f}A/mm2 drop={drop_v:.5f}V contact={contact_a:.4f}A")
 '''
     result = subprocess.run([PCBNEW_PY, "-c", probe], cwd=ROOT,
                             check=True, capture_output=True, text=True)
