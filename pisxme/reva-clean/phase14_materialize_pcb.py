@@ -23,7 +23,7 @@ POSITIONS = {
     "U4": (225, 105), "U5": (235, 105), "J3": (260, 160),
     "J4": (25, 145), "U8": (42, 145), "R1": (55, 140),
     "R2": (55, 150), "U1": (20, 75), "U2": (20, 95),
-    "U3": (52, 78),
+    "U3": (52, 78), "J5": (12, 25), "J6": (12, 45), "J7": (35, 130),
 }
 
 PAD_ALIASES = {
@@ -66,6 +66,10 @@ def main() -> None:
 
     io = pcbnew.PCB_IO_KICAD_SEXPR()
     refs = {fp.GetReference(): fp for fp in board.GetFootprints() if fp.GetReference()}
+    for fp in board.GetFootprints():
+        if fp.GetReference() == "REF**" and "Raspberry_Pi_5_Compute_Module" in str(fp.GetFPID().GetLibItemName()):
+            fp.SetReference("J7")
+            refs["J7"] = fp
     for ref, name in components.items():
         fp = refs.get(ref)
         if fp is None:

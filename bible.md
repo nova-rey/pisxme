@@ -1905,3 +1905,13 @@
   TUSB9261 placeholders to TPSM63606RDLR modules.
 - Native root ERC returned zero after both corrections. SXM2 abstract PWR/GND
   contact assignment remains explicitly open pending authoritative pinout.
+2026-08-30 — Native CM5 authority promoted and acreage materialization corrected
+
+- Promoted the authoritative Raspberry Pi CM5 two-unit, 200-pin symbol into
+  `CORE_CM5.kicad_sch`, preserving exact pin names/numbers and marking only
+  unmapped interface pins no-connect. Native KiCad 10 ERC is zero.
+- Added a regression fixture for the two-unit native CM5 authoring path and
+  corrected the pcbnew materializer for KiCad UTF8 identifiers. The candidate
+  now materializes all 20 schematic components and 218 nets on six copper
+  layers; the sole intentional unresolved contact mapping is SXM2 J1 PWR/GND,
+  retained as the documented Rev-A empirical-risk item.

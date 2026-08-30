@@ -16,6 +16,7 @@ REFERENCE_MAP = {
     "U_BRIDGE_3V3": "U4", "U_BRIDGE_1V1": "U5", "J_ETHERNET": "J2",
     "U_ETH_ESD": "U6", "U_ETH_ESD_A": "U6", "U_ETH_ESD_B": "U9", "J_STORAGE_M2": "J3",
     "J_SERVICE": "J4", "U_SERVICE_ESD": "U8", "R_RD_A": "R1", "R_RD_B": "R2",
+    "J_INPUT_A": "J5", "J_INPUT_B": "J6",
 }
 
 def main() -> None:

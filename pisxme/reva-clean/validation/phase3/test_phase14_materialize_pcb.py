@@ -4,15 +4,18 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[2]
 
 def main() -> None:
-    subprocess.run([
+    result = subprocess.run([
         "/home/nyx/pisxme-toolchain-environment/bin/pisxme-pcbnew-python",
         str(ROOT / "phase14_materialize_pcb.py"),
-    ], cwd=ROOT, check=True)
+    ], cwd=ROOT, check=True, text=True, capture_output=True)
+    assert result.stdout.count("abstract connector pins not assigned") == 1
+    assert "J1.PWR, J1.GND" in result.stdout
     board = (ROOT / "ACREAGE_CANDIDATE.kicad_pcb").read_text()
     assert '(thickness 1.6)' in board
     assert '"In1.Cu" signal "In1.GND"' in board and '"In4.Cu" signal "In4.GND"' in board
     refs = set(__import__('re').findall(r'\(property "Reference" "([A-Z][0-9]+)"', board))
-    required = {"J1", "J2", "J3", "J4", "U1", "U2", "U3", "U4", "U5", "U6", "U7", "U8", "R1", "R2", "C1", "C2"}
+    assert '"REF**"' not in board
+    required = {"J1", "J2", "J3", "J4", "J5", "J6", "J7", "U1", "U2", "U3", "U4", "U5", "U6", "U7", "U8", "U9", "R1", "R2", "C1", "C2"}
     assert required <= refs
     assert board.count('(segment ') == 0
     assert 'abstract connector pins not assigned' not in board
