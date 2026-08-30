@@ -23,7 +23,7 @@ sheet-pin wires spatially disjoint. KiCad 10 netlist export therefore resolves
 A2/A3, E7/F7, G1/G2, and E18 to the table above; native ERC remains zero.
 The abstract J1.PWR/J1.GND pins are expanded during disposable PCB
 materialization to the published reverse-engineered endpoint rows (130 power,
-70 ground contacts). That endpoint row map is explicitly
+70 ground contacts); J1.GND is on shared `POWER_GND`. That endpoint row map is explicitly
 `REV_A_EMPIRICAL_RISK`, not NVIDIA/Amphenol authority, and is regression-tested
 for no stale signal-net assignment.
 

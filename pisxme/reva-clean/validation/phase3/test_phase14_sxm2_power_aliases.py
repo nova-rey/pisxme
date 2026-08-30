@@ -25,7 +25,7 @@ def col(p):
 power = [p for p in f.Pads() if row(p) in power_rows and col(p) in cols]
 ground = [p for p in f.Pads() if row(p) in ground_rows and col(p) in cols]
 assert len(power) == 130 and all(p.GetNetname() == "12V_PROTECTED" for p in power)
-assert len(ground) == 70 and all(p.GetNetname() == "/V100_PCIE/V100_GND" for p in ground)
+assert len(ground) == 70 and all(p.GetNetname() == "POWER_GND" for p in ground)
 assert not any(p.GetNetname() == "/V100_PCIE/V100_PER0_N" for p in power)
 expected = {
  "A2": "/V100_PCIE/V100_PER0_P", "A3": "/V100_PCIE/V100_PER0_N",

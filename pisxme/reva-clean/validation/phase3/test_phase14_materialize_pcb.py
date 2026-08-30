@@ -20,7 +20,7 @@ def main() -> None:
     assert 'abstract connector pins not assigned' not in board
     assert board.count('"12V_PROTECTED"') >= 130
     assert board.count('"/V100_PCIE/V100_PER0_N"') >= 1
-    assert '"/V100_PCIE/V100_GND"' in board
+    assert '"POWER_GND"' in board
     print("Phase 14 PCB materialization: PASS; six layers; assigned refs; routing still zero")
 
 if __name__ == "__main__":

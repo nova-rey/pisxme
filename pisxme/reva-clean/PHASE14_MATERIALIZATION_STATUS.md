@@ -11,7 +11,9 @@ components and 78 native nets and has zero tracks by design.
 The selected 74221-101LF symbol uses abstract V100 power/ground pins. The
 materializer now expands those abstract pins onto the published
 reverse-engineered SXM2 rows: 12 V rows 22/23/25/26/28/29/31/32/34/35/37/38/40
-and ground rows 21/24/27/30/33/36/39, across all ten columns. This prevents a
+and ground rows 21/24/27/30/33/36/39, across all ten columns. The V100 return
+is now explicitly tied to the shared `POWER_GND` net before PCB materialization.
+This prevents a
 single guessed contact from becoming the distributed feed. The endpoint map
 is not NVIDIA/Amphenol authority and remains `REV_A_EMPIRICAL_RISK`; it must
 be continuity-checked against the actual V100 module before fabrication.

@@ -1974,3 +1974,15 @@
   contacts, with stale donor pad nets cleared before assignment.
 - Added `test_phase14_sxm2_power_aliases.py` and updated the Phase 5 audit to
   test logical J1.PWR rather than misidentifying signal contact A3 as power.
+
+2026-08-30 — Phase 14 power-route candidate and V100 return-net correction
+
+- Corrected the V100 endpoint return to the shared global `POWER_GND` net and
+  verified native KiCad ERC remains zero; the prior isolated V100 ground net
+  could not support a valid board return plane.
+- Added `phase14_power_route.py`, a disposable candidate generator with a
+  broad protected-feed zone and filled inner return-reference planes, plus a
+  machine-checkable Phase 14 candidate regression.
+- Kept Phase 14 open: filled-zone geometry, current density, voltage drop,
+  branch sharing, contact current, thermal margin, and hostile DRC evidence
+  remain required before routing closure.
