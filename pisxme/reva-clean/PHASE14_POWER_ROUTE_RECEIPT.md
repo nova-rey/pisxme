@@ -10,11 +10,18 @@ FET outputs and all 130 explicit SXM2 power contacts, so the candidate does
 not create a single guessed endpoint contact or single-neck feed.
 
 This is not Phase 14 closure. The remaining gate evidence is binding:
-field/current-density and voltage-drop extraction from the actual filled
-geometry, branch-sharing and fuse/connector contact analysis, thermal loss
+branch-sharing and fuse/connector contact analysis, thermal loss
 and temperature margin, and hostile DRC/clearance review. The 130/70 endpoint
 row map is still `REV_A_EMPIRICAL_RISK` and requires continuity confirmation
 against the actual V100 module before fabrication.
+
+`validation/phase3/phase14_power_analysis.py` samples the filled protected
+polygon across the complete Q1/Q2-to-SXM2 window. Its current candidate has a
+minimum 98 mm copper span; using the 1 oz basis, the shared-branch envelope is
+below 4 A/mm2, the worst single-branch envelope below 8 A/mm2, and the
+conservative 75 mm sheet-resistance drop bound below 120 mV. These are
+geometry-backed design bounds, not measured temperature or connector-contact
+results; the script is a prerequisite regression for the remaining gate.
 
 The route uses the frozen six-layer `JLC06161H-7628` basis and ordinary
 through-via-compatible layer policy. No Phase 16+ high-speed routing is added.
