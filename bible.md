@@ -1742,3 +1742,10 @@
   storage connectivity, with dedicated bridge rails/reset/config contracts.
 - Added the storage audit and receipt; native KiCad ERC passes with zero
   violations and NVMe/USB2 SERVICE paths are excluded.
+
+2026-08-30 — Phase 8 SERVICE schematic gate closed
+
+- Added the USB2 UFP service connector, boundary ESD, host VBUS sense, and
+  two 5.1 kOhm Rd resistors; source/DRP/SuperSpeed circuitry is excluded.
+- Added the SERVICE audit and receipt; native KiCad ERC passes with zero
+  violations. No placement or routing was introduced.
