@@ -4444,6 +4444,9 @@
 		)
 		(uuid "d5000000-0000-0000-0000-00000000001f")
 	)
+	(global_label "12V_PROTECTED" (shape bidirectional) (at 70 115 0)
+		(effects (font (size 1 1)) (justify left))
+		(uuid "d5000000-0000-0000-0000-000000000090"))
 	(label "SW_CM5_5V"
 		(at 70 113 0.0000)
 		(effects
@@ -4494,7 +4497,10 @@
 		)
 		(uuid "d5000000-0000-0000-0000-000000000024")
 	)
-	(label "VCC_INTERNAL"
+	(global_label "POWER_GND" (shape bidirectional) (at 70 105 0)
+		(effects (font (size 1 1)) (justify left))
+		(uuid "d5000000-0000-0000-0000-000000000091"))
+	(label "VCC_U3_INTERNAL"
 		(at 70 103 0.0000)
 		(effects
 			(font
@@ -4694,7 +4700,7 @@
 		)
 		(uuid "d6000000-0000-0000-0000-000000000024")
 	)
-	(label "VCC_INTERNAL"
+	(label "VCC_U4_INTERNAL"
 		(at 70 153 0.0000)
 		(effects
 			(font
@@ -4894,7 +4900,7 @@
 		)
 		(uuid "d7000000-0000-0000-0000-000000000024")
 	)
-	(label "VCC_INTERNAL"
+	(label "VCC_U5_INTERNAL"
 		(at 70 203 0.0000)
 		(effects
 			(font

@@ -16,7 +16,7 @@ def main():
     report = REPORT.read_text()
     assert "shorting_items" not in report
     assert "tracks_crossing" not in report
-    assert report.count("[unconnected_items]") == 280
+    assert report.count("[unconnected_items]") == 272
     probe = r'''
 import pcbnew
 b = pcbnew.LoadBoard("ACREAGE_REGULATOR_POWER_ESCAPE_PHASE15.kicad_pcb")
@@ -25,7 +25,7 @@ edge = pcbnew.VECTOR2I_MM(54.95, 80.0)
 assert sum(t.GetStart() == edge or t.GetEnd() == edge for t in tracks) == 2
 '''
     subprocess.run([PYTHON, "-c", probe], cwd=ROOT, check=True)
-    print("Phase 15 power-escape regression: PASS; no shorts/crossings; 280 unrouted baseline items")
+    print("Phase 15 power-escape regression: PASS; no shorts/crossings; 272 unrouted baseline items")
 
 
 if __name__ == "__main__":

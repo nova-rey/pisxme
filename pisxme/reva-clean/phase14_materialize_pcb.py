@@ -7,6 +7,7 @@ pcbnew for Phases 14/15; missing footprints or pads are hard failures.
 from pathlib import Path
 import subprocess
 import sys
+import os
 import xml.etree.ElementTree as ET
 
 import pcbnew
@@ -66,9 +67,23 @@ PAD_ALIASES = {
 
 
 def export_netlist() -> None:
+    if os.environ.get("PISXME_USE_EXISTING_NETLIST") == "1":
+        if not NETLIST.exists() or NETLIST.stat().st_size == 0:
+            raise SystemExit("PISXME_USE_EXISTING_NETLIST=1 but materialize.xml is absent/empty")
+        return
+    if Path('/.flatpak-info').exists():
+        raise SystemExit(
+            "Flatpak pcbnew cannot launch host Xvfb; export materialize.xml with "
+            "host KiCad under xvfb-run, then set PISXME_USE_EXISTING_NETLIST=1"
+        )
+    # KiCad 10's hierarchical resolver is deterministic only when it has a
+    # display backend.  The project validation path already uses Xvfb; keep
+    # materialization on that same native KiCad path so support symbols are
+    # not silently omitted in a headless shell.
     subprocess.run([
-        "kicad-cli", "sch", "export", "netlist", "--format", "kicadxml",
-        "--output=materialize.xml", "PiSXMe_RevA_Clean.kicad_sch",
+        "/usr/bin/xvfb-run", "-a", "kicad-cli", "sch", "export", "netlist",
+        "--format", "kicadxml", "--output=materialize.xml",
+        "PiSXMe_RevA_Clean.kicad_sch",
     ], cwd=ROOT, check=True)
 
 

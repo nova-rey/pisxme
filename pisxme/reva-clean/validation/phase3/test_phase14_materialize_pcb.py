@@ -4,10 +4,16 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[2]
 
 def main() -> None:
+    subprocess.run([
+        "xvfb-run", "-a", "kicad-cli", "sch", "export", "netlist",
+        "--format", "kicadxml", "--output=materialize.xml",
+        "PiSXMe_RevA_Clean.kicad_sch",
+    ], cwd=ROOT, check=True)
     result = subprocess.run([
         "/home/nyx/pisxme-toolchain-environment/bin/pisxme-pcbnew-python",
         str(ROOT / "phase14_materialize_pcb.py"),
-    ], cwd=ROOT, check=True, text=True, capture_output=True)
+    ], cwd=ROOT, check=True, text=True, capture_output=True,
+       env={**__import__('os').environ, "PISXME_USE_EXISTING_NETLIST": "1"})
     assert "abstract connector pins not assigned" not in result.stdout
     board = (ROOT / "ACREAGE_CANDIDATE.kicad_pcb").read_text()
     assert '(thickness 1.6)' in board

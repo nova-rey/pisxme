@@ -18,7 +18,7 @@ VIA_POSITIONS = {
 def main():
     board = pcbnew.LoadBoard(str(INPUT))
     ground = next((n for name, n in board.GetNetsByName().items()
-                   if str(name) == "/REGULATORS/POWER_GND"), None)
+                   if str(name) == "POWER_GND"), None)
     if ground is None:
         raise SystemExit("missing regulator ground net")
     for ref, (cx, cy) in VIA_POSITIONS.items():

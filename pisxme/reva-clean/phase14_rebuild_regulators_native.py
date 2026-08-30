@@ -26,7 +26,7 @@ def regulator(ref: str, lib: str, base: int, rail: str, x: float, y0: float) -> 
     nets = {
         1:"12V_PROTECTED", 2:f"SW_{rail}", 3:f"CBOOT_{rail}",
         4:f"RBOOT_{rail}", 5:"12V_PROTECTED", 6:"POWER_GND",
-        7:"VCC_INTERNAL", 8:rail, 9:rail, 10:f"FB_{rail}",
+        7:f"VCC_{ref}_INTERNAL", 8:rail, 9:rail, 10:f"FB_{rail}",
         11:"POWER_GND", 12:f"RT_{rail}", 13:f"PG_{rail}",
         14:"12V_PROTECTED", 15:"NC", 16:"12V_PROTECTED",
         17:"POWER_GND", 18:"POWER_GND", 19:"POWER_GND", 20:"POWER_GND",
@@ -43,7 +43,17 @@ def regulator(ref: str, lib: str, base: int, rail: str, x: float, y0: float) -> 
             f'(wire (pts (xy {x + 20} {y}) (xy {x + 15} {y})) '
             f'(stroke (width 0) (type default)) (uuid {make_uuid(base + 60 + n)}))')
     pins = "\n".join(f'(pin "{n}" (uuid {make_uuid(base+n)}))' for n in range(1, 21))
-    return "\n".join(labels) + f'''\n(symbol (lib_id "PiSXMeRevAClean:{lib}") (at {x} {y0} 0)
+    # Local labels keep every child connection explicit.  These two global
+    # labels are the authoritative cross-hierarchy bridges to the root's
+    # 12V_PROTECTED and POWER_GND nets; without them KiCad correctly prefixes
+    # the child-local names with /REGULATORS/ in the exported netlist.
+    bridges = "\n".join((
+        f'(global_label "12V_PROTECTED" (shape bidirectional) (at {x + 20} {y0 + 20} 0) '
+        f'(effects (font (size 1 1)) (justify left)) (uuid {make_uuid(base + 90)}))',
+        f'(global_label "POWER_GND" (shape bidirectional) (at {x + 20} {y0 + 10} 0) '
+        f'(effects (font (size 1 1)) (justify left)) (uuid {make_uuid(base + 91)}))',
+    ))
+    return "\n".join(labels) + "\n" + bridges + f'''\n(symbol (lib_id "PiSXMeRevAClean:{lib}") (at {x} {y0} 0)
  (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
  (uuid {make_uuid(base)})
  (property "Reference" "{ref}" (at {x} {y0 - 11} 0) (effects (font (size 1.1 1.1))))
@@ -54,26 +64,25 @@ def regulator(ref: str, lib: str, base: int, rail: str, x: float, y0: float) -> 
  (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005" (reference "{ref}") (unit 1)))) )'''
 
 def main() -> None:
-    source = TEMPLATE.read_text()
-    lib_start = source.index("(lib_symbols")
-    lib = add_defs(balanced(source, lib_start))
-    base = child("REGULATORS", 5, lib)
-    base = base.replace('(property "Reference" "X_REGULATORS"', '(property "Reference" "X5"')
-    base = base.replace('(reference "X_REGULATORS"', '(reference "X5"')
-    # Root export requires the complete root-to-child UUID path so local labels
-    # remain attributed to this child sheet.
-    base = base.replace(
-        '(sheet_instances (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005" (page "5")))',
-        '(sheet_instances (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005" (page "5")))')
-    marker = "  (sheet_instances "
-    at = base.index(marker)
-    data = "\n".join((
-        regulator("U3", "TPSM63606RDLR_5V", 0xd5000000000000000000000000000000, "CM5_5V", 50, 95),
-        regulator("U4", "TPSM63606RDLR_3V3", 0xd6000000000000000000000000000000, "BRIDGE_3V3", 50, 145),
-        regulator("U5", "TPSM63606RDLR_1V1", 0xd7000000000000000000000000000000, "BRIDGE_1V1", 50, 195),
-    ))
-    OUT.write_text(base[:at] + data + "\n" + base[at:])
-    print("native REGULATORS child rebuilt")
+    # Preserve the native KiCad child serialization.  Reconstructing it from
+    # the generic scaffold drops already-authoritative support instances and
+    # is not a valid authoring path for this sheet.  This repair is idempotent
+    # and only changes the association fields that the netlist audit proved
+    # wrong.
+    text = OUT.read_text()
+    if '(global_label "12V_PROTECTED"' not in text:
+        marker = '\t\t(uuid "d5000000-0000-0000-0000-00000000001f")\n\t)'
+        bridge = '\n\t(global_label "12V_PROTECTED" (shape bidirectional) (at 70 115 0)\n\t\t(effects (font (size 1 1)) (justify left))\n\t\t(uuid "d5000000-0000-0000-0000-000000000090"))'
+        text = text.replace(marker, marker + bridge, 1)
+    if '(global_label "POWER_GND"' not in text:
+        marker = '\t\t(uuid "d5000000-0000-0000-0000-000000000024")\n\t)'
+        bridge = '\n\t(global_label "POWER_GND" (shape bidirectional) (at 70 105 0)\n\t\t(effects (font (size 1 1)) (justify left))\n\t\t(uuid "d5000000-0000-0000-0000-000000000091"))'
+        text = text.replace(marker, marker + bridge, 1)
+    text = text.replace('(label "VCC_INTERNAL"', '(label "VCC_U3_INTERNAL"', 1)
+    text = text.replace('(label "VCC_INTERNAL"', '(label "VCC_U4_INTERNAL"', 1)
+    text = text.replace('(label "VCC_INTERNAL"', '(label "VCC_U5_INTERNAL"', 1)
+    OUT.write_text(text)
+    print("native REGULATORS authority associations repaired")
 
 if __name__ == "__main__":
     main()

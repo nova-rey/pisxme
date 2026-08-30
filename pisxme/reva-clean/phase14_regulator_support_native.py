@@ -37,6 +37,10 @@ def part(ref, uid, value, mpn, x, y, a, b):
     block=balanced(source,p)
     block=block.replace('C3',ref).replace('100nF VCAP A',value)
     block=block.replace('PiSXMeRevAClean:VCAP_100NF', 'Device:C' if ref.startswith('C') else 'Device:R')
+    # Match KiCad 10's native instance serialization.  In particular,
+    # fields_autoplaced/dnp are not cosmetic here: omitting them makes the
+    # headless resolver silently discard these child-sheet instances.
+    block=block.replace('(on_board yes) (dnp no) (uuid', '(on_board yes) (dnp no) (fields_autoplaced no) (uuid')
     block=block.replace('GRM188R71H104KA93D',mpn)
     block=block.replace('PiSXMeRevAClean:C_0603_1608Metric',f'PiSXMeRevAClean:{fp}')
     block=block.replace('(at 110 55 0)',f'(at {x} {y} 0)')

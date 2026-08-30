@@ -10,16 +10,16 @@ honored with 0.50 mm finished diameter and 0.30 mm drill; the 0.10 mm annulus
 is compatible with the current JLC six-layer ordinary-through-via basis.
 
 The four separate exposed PGND lands are joined by 0.25 mm same-net F.Cu
-links across their 0.25 mm inter-land gaps. Exact hierarchical net objects
+links across their 0.25 mm inter-land gaps. Exact native net objects
 are assigned through `SetNet`, avoiding the KiCad Python binding's incorrect
 nearest-pad reassignment observed when vias were placed over perimeter pads.
 
 Evidence:
 
 - `validation/phase3/test_phase15_thermal_vias.py` passes after native
-  save/reload and verifies all 12 vias are `/REGULATORS/POWER_GND`, span
+  save/reload and verifies all 12 vias are `POWER_GND`, span
   F.Cu-B.Cu, and are 0.50/0.30 mm.
-- Fresh native DRC of `ACREAGE_REGULATOR_PHASE15.kicad_pcb` reports 192
+- Fresh native DRC of `ACREAGE_REGULATOR_PHASE15.kicad_pcb` reports 180
   acreage violations and no new thermal-via diameter, drill, annular,
   solder-mask, short, or dangling-via defect. The baseline Phase 14 board
   reported 216 findings; the count is not used as a closure criterion because
@@ -34,9 +34,9 @@ Evidence:
   escapes. U4 output capacitors are deliberately escaped from the left output
   land to preserve clearance from U5 and the storage bridge.
 - The focused native regression reports no `shorting_items` or
-  `tracks_crossing` defects and reduces the base candidate from 296 to 280
+  `tracks_crossing` defects and reduces the base candidate from 296 to 272
   unrouted items. The remaining unrouted regulator items are the required
-  bootstrap, feedback, RT, PG, VCC_INTERNAL, and control connections.
+  bootstrap, feedback, RT, PG, isolated VCC, and control connections.
 - Independent KiCad review corrected the U3 VOUT escape to the true right edge
   of pad 9 at `(54.95, 80.00)` rather than the inward pad-8 tie. The regression
   now asserts that both U3 VOUT capacitor escapes terminate at that exact
@@ -44,8 +44,16 @@ Evidence:
 - `phase15_u3_controls.py` adds the U3 feedback, RT, and PG network using
   eight deliberate 0.50/0.30 mm F.Cu-B.Cu transitions and separated B.Cu
   corridors. Native DRC reports no route-specific clearance, short, or
-  crossing defect and the focused regression reduces unrouted items from 280
-  to 272. The same topology remains to be instantiated for U4 and U5.
+  crossing defect and the focused regression reduces unrouted items from 272
+  to 264. The same topology remains to be instantiated for U4 and U5.
+
+The native KiCad hierarchy association was corrected before this candidate was
+regenerated. `REGULATORS.kicad_sch` now places one global `12V_PROTECTED` and
+one global `POWER_GND` label at the child authority boundary, so native XML has
+one root power net rather than `/REGULATORS/...` aliases. The three internal
+VCC pins are isolated as `VCC_U3_INTERNAL`, `VCC_U4_INTERNAL`, and
+`VCC_U5_INTERNAL`; the regression is
+`validation/phase3/test_phase15_regulator_net_authority.py`.
 
 This does not close Phase 15. Remaining required work is localized VIN and
 VOUT high-dI/dt routing, feedback/RT/PG routing, switch-node containment,

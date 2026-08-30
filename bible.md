@@ -2170,3 +2170,17 @@
   clearance, short, or crossing defect; the focused regression verifies 20
   total vias and 272 unrouted items. U4/U5 control routing and full Phase 15
   overlay/thermal closure remain open.
+
+2026-08-30 — Phase 15 native regulator hierarchy association checkpoint
+
+- Native KiCad XML proved the regulator child had been split from root
+  `12V_PROTECTED`/`POWER_GND`, while all three internal VCC pins shared one
+  child-local net. Added authoritative child global labels for the two power
+  rails and isolated VCC as U3/U4/U5-specific internal nets.
+- Preserved the native child serialization; the scaffold rebuild path had
+  silently dropped support instances and was replaced with an idempotent
+  native-format association repair. Headless materialization now requires a
+  host-Xvfb native export before Flatpak pcbnew consumes the XML.
+- Regenerated Phase 14/15 candidates. Native hierarchy, net-authority,
+  materialization, power-route, thermal-via, and focused regulator escape
+  regressions pass; power continuity now reaches the actual root nets.

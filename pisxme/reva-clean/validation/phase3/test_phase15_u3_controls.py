@@ -18,17 +18,17 @@ def main():
     assert "shorting_items" not in report
     assert "tracks_crossing" not in report
     assert "[clearance]" not in report
-    assert report.count("[unconnected_items]") == 272
+    assert report.count("[unconnected_items]") == 264
     probe = r'''
 import pcbnew
 b = pcbnew.LoadBoard("ACREAGE_U3_CONTROLS_PHASE15.kicad_pcb")
 vias = [x for x in b.GetTracks() if x.Type() == pcbnew.PCB_VIA_T]
 assert len(vias) == 20
-assert {x.GetNetname() for x in vias if x.GetNetname() != "/REGULATORS/POWER_GND"} == {
+assert {x.GetNetname() for x in vias if x.GetNetname() != "POWER_GND"} == {
     "/REGULATORS/FB_CM5_5V", "/REGULATORS/RT_CM5_5V", "/REGULATORS/PG_CM5_5V"}
 '''
     subprocess.run([PYTHON, "-c", probe], cwd=ROOT, check=True)
-    print("Phase 15 U3-control regression: PASS; 20 vias; 272 unrouted items")
+    print("Phase 15 U3-control regression: PASS; 20 vias; 264 unrouted items")
 
 
 if __name__ == "__main__":

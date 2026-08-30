@@ -16,7 +16,7 @@ b = pcbnew.LoadBoard("ACREAGE_REGULATOR_PHASE15.kicad_pcb")
 vias = [x for x in b.GetTracks() if x.Type() == pcbnew.PCB_VIA_T]
 assert len(vias) == 12
 thermal = vias
-assert all(v.GetNetname() == "/REGULATORS/POWER_GND" for v in thermal)
+assert all(v.GetNetname() == "POWER_GND" for v in thermal)
 assert all(v.GetLayer() == pcbnew.F_Cu and
            v.GetLayerSet().Contains(pcbnew.In1_Cu) and
            v.GetLayerSet().Contains(pcbnew.B_Cu) for v in thermal)

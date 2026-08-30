@@ -44,7 +44,7 @@ def main():
                 fp.SetPosition(pcbnew.VECTOR2I_MM(*spec["xy"][ref]))
                 fp.SetOrientationDegrees(180 if (side < 0) else 0)
                 active = next(p for p in fp.Pads()
-                              if p.GetNetname() not in ("/REGULATORS/POWER_GND", ""))
+                              if p.GetNetname() not in ("POWER_GND", ""))
                 targets = [upads[n] for n in target_numbers
                            if upads[n].GetNetname() == active.GetNetname()]
                 if not targets:
@@ -61,7 +61,7 @@ def main():
     for ref, pos, target_nums, route in U5_VIN:
         fp = b.FindFootprintByReference(ref)
         fp.SetPosition(pcbnew.VECTOR2I_MM(*pos)); fp.SetOrientationDegrees(180)
-        active = next(p for p in fp.Pads() if p.GetNetname() not in ("/REGULATORS/POWER_GND", ""))
+        active = next(p for p in fp.Pads() if p.GetNetname() not in ("POWER_GND", ""))
         target = next(u5pads[n] for n in target_nums if u5pads[n].GetNetname() == active.GetNetname())
         add_polyline(b, route, target.GetNet())
     pcbnew.ZONE_FILLER(b).Fill(b.Zones())
