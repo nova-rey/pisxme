@@ -26,5 +26,7 @@ generates real root wires to sheet pins. The regression
 generation and native ERC check.
 
 Exit evidence is recorded in `validation/phase3/PHASE3_EXIT_RECEIPT.md`.
-Phase 4 is now the next permitted phase. Placement and routing remain
-prohibited by the approved plan.
+Phase 4 schematic-only work is complete and is recorded in
+`validation/phase3/PHASE4_V100_RECEIPT.md`. Placement and routing remain
+prohibited by the approved plan; Phase 5 is the next permitted phase after
+the Phase 4 checkpoint.

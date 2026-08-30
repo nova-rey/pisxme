@@ -1713,3 +1713,11 @@
 - Added a project-local SXM2 symbol/footprint extraction and a lane-0 mapping
   receipt for Amphenol `74221-101LF` Rev-W. The 400-pad land pattern remains
   explicitly `REV_A_EMPIRICAL_RISK`; no placement or routing was introduced.
+
+2026-08-30 — Phase 4 V100 lane-0 schematic gate closed
+
+- Added the schematic-only V100 island: lane 0 PER0/PET0, two transmitter-side
+  PET0 coupling capacitors, REFCLK, PERST, and the documented SXM2 contacts.
+- Added the machine-readable Phase 4 audit and receipt. Native KiCad reopen
+  and ERC pass with zero violations; no PER1+, x16, NVLink, switch, or
+  redriver baggage exists. No placement or routing was introduced.

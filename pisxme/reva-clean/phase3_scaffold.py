@@ -17,8 +17,8 @@ SHEETS = (
     "ETHERNET", "STORAGE", "SERVICE", "COOLING", "DEBUG",
 )
 PORTS = {
-    "CORE_CM5": ("CM5_PCIE", "CM5_USB3", "CM5_GBE", "SERVICE_USB2", "CM5_POWER"),
-    "V100_PCIE": ("CM5_PCIE", "V100_PCIE", "V100_REFCLK", "V100_PERST"),
+    "CORE_CM5": ("CM5_PER0_P", "CM5_PER0_N", "CM5_PET0_P", "CM5_PET0_N", "CM5_REFCLK_P", "CM5_REFCLK_N", "CM5_PERST", "CM5_USB3", "CM5_GBE", "SERVICE_USB2", "CM5_POWER"),
+    "V100_PCIE": ("CM5_PER0_P", "CM5_PER0_N", "CM5_PET0_P", "CM5_PET0_N", "CM5_REFCLK_P", "CM5_REFCLK_N", "CM5_PERST", "V100_PER0_P", "V100_PER0_N", "V100_PET0_P", "V100_PET0_N", "V100_REFCLK_P", "V100_REFCLK_N", "V100_PERST"),
     "V100_POWER": ("V100_POWER_12V", "V100_GND", "V100_THERMAL"),
     "POWER_INPUT": ("12V_IN_A", "12V_IN_B", "12V_PROTECTED", "POWER_PG_FAULT"),
     "REGULATORS": ("12V_PROTECTED", "CM5_5V", "STORAGE_3V3", "BRIDGE_1V1_3V3"),
@@ -96,13 +96,14 @@ def sheet_block(name: str, number: int) -> str:
     uid = make_uuid(0x10000000000000000000000000000000 + number)
     x = 35 + ((number - 1) % 5) * 35
     y = 45 + ((number - 1) // 5) * 30
+    sheet_height = max(18, len(PORTS[name]) * 3 + 4)
     pins = "".join(
         f'''\n    (pin "{port}" bidirectional (at {x} {y + 2 + (index * 3)} 180)\n      (effects (font (size 1.27 1.27)) (justify left))\n      (uuid {make_uuid(0x40000000000000000000000000000000 + number * 100 + index)}))'''
         for index, port in enumerate(PORTS[name])
     )
     return f'''  (sheet
     (at {x} {y})
-    (size 25 18)
+    (size 25 {sheet_height})
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
@@ -113,7 +114,7 @@ def sheet_block(name: str, number: int) -> str:
     (uuid {uid})
     (property "Sheetname" "{name}" (at {x} {y - 1.27} 0)
       (effects (font (size 1.27 1.27)) (justify left bottom)))
-    (property "Sheetfile" "{name}.kicad_sch" (at {x} {y + 19.27} 0)
+    (property "Sheetfile" "{name}.kicad_sch" (at {x} {y + sheet_height + 1.27} 0)
       (effects (font (size 1.27 1.27)) (justify left top))){pins})
 '''
 

@@ -373,10 +373,10 @@
       (in_bom yes)
       (on_board yes)
       (property "Reference" "X"
-        (at 0 -8.54 0)
+        (at 0 -17.54 0)
         (effects (font (size 1.27 1.27))))
       (property "Value" "CORE_CM5_Contract"
-        (at 0 8.54 0)
+        (at 0 17.54 0)
         (effects (font (size 1.27 1.27))))
       (property "Footprint" ""
         (at 0 0 0)
@@ -385,63 +385,123 @@
         (at 0 0 0)
         (effects (font (size 1.27 1.27)) (hide yes)))
       (symbol "CORE_CM5_Contract_1_1"
-        (rectangle (start -1.27 -7.27) (end 1.27 7.27)
+        (rectangle (start -1.27 -16.27) (end 1.27 16.27)
           (stroke (width 0.254) (type default)) (fill (type background)))
 
         (pin passive line
           (at -5.08 0 0)
           (length 3.81)
-          (name "CM5_PCIE" (effects (font (size 1.27 1.27))))
+          (name "CM5_PER0_P" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27)))))
         (pin passive line
           (at -5.08 -3 0)
           (length 3.81)
-          (name "CM5_USB3" (effects (font (size 1.27 1.27))))
+          (name "CM5_PER0_N" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27)))))
         (pin passive line
           (at -5.08 -6 0)
           (length 3.81)
-          (name "CM5_GBE" (effects (font (size 1.27 1.27))))
+          (name "CM5_PET0_P" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27)))))
         (pin passive line
           (at -5.08 -9 0)
           (length 3.81)
-          (name "SERVICE_USB2" (effects (font (size 1.27 1.27))))
+          (name "CM5_PET0_N" (effects (font (size 1.27 1.27))))
           (number "4" (effects (font (size 1.27 1.27)))))
         (pin passive line
           (at -5.08 -12 0)
           (length 3.81)
-          (name "CM5_POWER" (effects (font (size 1.27 1.27))))
+          (name "CM5_REFCLK_P" (effects (font (size 1.27 1.27))))
           (number "5" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -15 0)
+          (length 3.81)
+          (name "CM5_REFCLK_N" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -18 0)
+          (length 3.81)
+          (name "CM5_PERST" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -21 0)
+          (length 3.81)
+          (name "CM5_USB3" (effects (font (size 1.27 1.27))))
+          (number "8" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -24 0)
+          (length 3.81)
+          (name "CM5_GBE" (effects (font (size 1.27 1.27))))
+          (number "9" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -27 0)
+          (length 3.81)
+          (name "SERVICE_USB2" (effects (font (size 1.27 1.27))))
+          (number "10" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -30 0)
+          (length 3.81)
+          (name "CM5_POWER" (effects (font (size 1.27 1.27))))
+          (number "11" (effects (font (size 1.27 1.27)))))
       )
     )
   )
 
-  (hierarchical_label "CM5_PCIE"
+  (hierarchical_label "CM5_PER0_P"
     (shape bidirectional)
     (at 5 10 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000064))
-  (hierarchical_label "CM5_USB3"
+  (hierarchical_label "CM5_PER0_N"
     (shape bidirectional)
     (at 5 13 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000065))
-  (hierarchical_label "CM5_GBE"
+  (hierarchical_label "CM5_PET0_P"
     (shape bidirectional)
     (at 5 16 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000066))
-  (hierarchical_label "SERVICE_USB2"
+  (hierarchical_label "CM5_PET0_N"
     (shape bidirectional)
     (at 5 19 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000067))
-  (hierarchical_label "CM5_POWER"
+  (hierarchical_label "CM5_REFCLK_P"
     (shape bidirectional)
     (at 5 22 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000068))
+  (hierarchical_label "CM5_REFCLK_N"
+    (shape bidirectional)
+    (at 5 25 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 50000000-0000-0000-0000-000000000069))
+  (hierarchical_label "CM5_PERST"
+    (shape bidirectional)
+    (at 5 28 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 50000000-0000-0000-0000-00000000006a))
+  (hierarchical_label "CM5_USB3"
+    (shape bidirectional)
+    (at 5 31 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 50000000-0000-0000-0000-00000000006b))
+  (hierarchical_label "CM5_GBE"
+    (shape bidirectional)
+    (at 5 34 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 50000000-0000-0000-0000-00000000006c))
+  (hierarchical_label "SERVICE_USB2"
+    (shape bidirectional)
+    (at 5 37 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 50000000-0000-0000-0000-00000000006d))
+  (hierarchical_label "CM5_POWER"
+    (shape bidirectional)
+    (at 5 40 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 50000000-0000-0000-0000-00000000006e))
 
   (wire
     (pts (xy 5 10) (xy 19.92 10))
@@ -463,6 +523,30 @@
     (pts (xy 5 22) (xy 19.92 22))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-000000000068))
+  (wire
+    (pts (xy 5 25) (xy 19.92 25))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-000000000069))
+  (wire
+    (pts (xy 5 28) (xy 19.92 28))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-00000000006a))
+  (wire
+    (pts (xy 5 31) (xy 19.92 31))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-00000000006b))
+  (wire
+    (pts (xy 5 34) (xy 19.92 34))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-00000000006c))
+  (wire
+    (pts (xy 5 37) (xy 19.92 37))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-00000000006d))
+  (wire
+    (pts (xy 5 40) (xy 19.92 40))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-00000000006e))
 
   (symbol
     (lib_id "PiSXMeRevAClean:CORE_CM5_Contract")
@@ -490,6 +574,12 @@
     (pin "3" (uuid 90000000-0000-0000-0000-000000000066))
     (pin "4" (uuid 90000000-0000-0000-0000-000000000067))
     (pin "5" (uuid 90000000-0000-0000-0000-000000000068))
+    (pin "6" (uuid 90000000-0000-0000-0000-000000000069))
+    (pin "7" (uuid 90000000-0000-0000-0000-00000000006a))
+    (pin "8" (uuid 90000000-0000-0000-0000-00000000006b))
+    (pin "9" (uuid 90000000-0000-0000-0000-00000000006c))
+    (pin "10" (uuid 90000000-0000-0000-0000-00000000006d))
+    (pin "11" (uuid 90000000-0000-0000-0000-00000000006e))
 
     (instances (project "PiSXMe_RevA_Clean"
       (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000001" (reference "X_CORE_CM5" ) (unit 1))))
