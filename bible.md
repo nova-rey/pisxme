@@ -2255,6 +2255,13 @@
   ±20% tolerance screen, preventing the latter from being hidden by the
   nominal pass.
 
+2026-08-30 — Phase 15 TDK voltage-field correction
+
+- Corrected the active TDK `C3225X7R1C226M250AC` description from 25 V to its
+  manufacturer-sheet value of 16 V (`1C` voltage code). Rail requirements are
+  5/3.3/1.1 V, so the selected part remains electrically suitable; no MPN or
+  footprint change was required.
+
 2026-08-30 — Phase 15 receipt and COUT regression correction
 
 - Corrected the regulator receipt's U4/U5/thermal-via count to the validated

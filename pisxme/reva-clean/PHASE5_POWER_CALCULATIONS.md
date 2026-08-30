@@ -48,7 +48,7 @@ TI datasheet revision B, pages 3–4 and 17, is the calculation authority. The
 
 The datasheet requires minimum *effective* COUT of 30 uF at 5 V and 50 uF
 at 3.3 V, with 22 pF and 47 pF feed-forward capacitors respectively. The
-working implementation therefore starts with multiple 22-uF, 25-V X7R
+working implementation therefore starts with multiple 22-uF, 16-V X7R
 1210 capacitors, but the count is not closed until the manufacturer DC-bias
 curves demonstrate the effective values at each rail. The 1.1 V rail is within
 the datasheet's adjustable 1 V minimum. Using `VOUT = 1 V * (1 + RFBT/RFBB)`
@@ -57,7 +57,7 @@ Table 8-1 frequency row is 1.2 V: `RRT = 2 kOhm`, 400–600 kHz. Rev A uses
 that conservative 2-kOhm selection for the 1.1-V rail; switching frequency
 and transient behavior remain subject to the vendor-layout review. The conservative
 1 V table requirement of 300 uF effective is retained. Sixteen
-`C3225X7R1C226M250AC` 22-uF, 25-V 1210 capacitors are fitted; a documented
+`C3225X7R1C226M250AC` 22-uF, 16-V 1210 capacitors are fitted; a documented
 Rev-A nominal derating floor of 90% gives `16 * 22 uF * 0.90 = 316.8 uF`
 effective before the ±20% production tolerance.
 The final tolerance/DC-bias curve check remains `REV_A_EMPIRICAL_RISK`: the

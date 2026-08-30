@@ -37,7 +37,7 @@ backorder. It is therefore not selected as a single-source production
 dependency.
 
 For the 22-uF output ceramic listed by TI, TDK
-`C3225X7R1C226M250AC` is selected: 1210, 22 uF, 25 V, X7R, ±20%, with the
+`C3225X7R1C226M250AC` is selected: 1210, 22 uF, 16 V, X7R, ±20%, with the
 same assembly geometry and an official TDK characteristic sheet. TDK's
 current product page reports 41,593 DigiKey pieces, 48,825 Mouser pieces,
 118,000 Avnet Abacus pieces, and 132,000 Arrow pieces in the current snapshot;
