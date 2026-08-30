@@ -22,12 +22,12 @@ def main():
     path=ROOT/'SERVICE.kicad_sch'; text=path.read_text()
     if 'property "MPN" "10171746-00021LF"' in text: return
     defs=(symbol('USB2_UFP_CONNECTOR',('USB2_DP','USB2_DM','VBUS_SENSE','SERVICE_GND','CC1_RD','CC2_RD')),
-          symbol('USB2_ESD',('USB2_DP','USB2_DM','VBUS_SENSE','SERVICE_GND')),
+          symbol('USB2_ESD',('USB2_DP','USB2_DM','SERVICE_GND')),
           symbol('USB2_RD_5K1',('CC','SERVICE_GND')))
     s=text.index('(lib_symbols'); e=s+len(balanced(text,s))-1
     text=text[:e].rstrip()+'\n'+'\n'.join(defs)+text[e:]
     body=part('USB2_UFP_CONNECTOR','J_SERVICE','10171746-00021LF',('SERVICE_USB2_DP','SERVICE_USB2_DM','SERVICE_VBUS_SENSE','SERVICE_GND','SERVICE_RD_A','SERVICE_RD_B'),0xdd000000000000000000000000000000,'PiSXMeRevAClean:USB_C_SERVICE_10171746')
-    body+=part('USB2_ESD','U_SERVICE_ESD','USB2 connector-boundary ESD',('SERVICE_USB2_DP','SERVICE_USB2_DM','SERVICE_VBUS_SENSE','SERVICE_GND'),0xde000000000000000000000000000000)
+    body+=part('USB2_ESD','U_SERVICE_ESD','TPD2EUSB30DRTR',('SERVICE_USB2_DP','SERVICE_USB2_DM','SERVICE_GND'),0xde000000000000000000000000000000)
     body+=part('USB2_RD_5K1','R_RD_A','5.1k Rd',('SERVICE_RD_A','SERVICE_GND'),0xdf000000000000000000000000000000)
     body+=part('USB2_RD_5K1','R_RD_B','5.1k Rd',('SERVICE_RD_B','SERVICE_GND'),0xe000000000000000000000000000000)
     text=text.replace('  (sheet_instances ',body+'\n  (sheet_instances ',1)

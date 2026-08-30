@@ -13,5 +13,8 @@ converted underscore-bearing descriptive references to legal unique KiCad
 references. `test_phase3_netlist_export.py` repeats the export in an isolated
 temporary directory and checks representative references across the hierarchy.
 
-This closes the annotation/netlist prerequisite. It does not claim that the
-acreage PCB is populated or routed; those remain later plan phases.
+This closes the annotation/netlist prerequisite. The current SERVICE ESD
+selection is TI `TPD2EUSB30DRTR`; its exact DRT footprint is intentionally not
+included in this receipt until its package drawing is converted. It does not
+claim that the acreage PCB is populated or routed; those remain later plan
+phases.

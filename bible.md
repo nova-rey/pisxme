@@ -1,5 +1,19 @@
 # Append-only project bible
 
+## 2026-08-30 — SERVICE ESD procurement recorded
+
+- Added TI `TPD2EUSB30DRTR` current procurement evidence to the matrix and
+  kept its package-specific land-pattern gate explicit.
+
+
+## 2026-08-30 — SERVICE ESD electrical authority corrected
+
+- Replaced the four-pin USB2 ESD placeholder with TI `TPD2EUSB30DRTR`, using
+  the actual two-I/O-plus-ground interface and documented active procurement.
+- Explicitly kept its exact DRT land pattern gated; no generic SOT-23 pattern
+  is being treated as equivalent.
+
+
 ## 2026-08-30 — Native netlist export gate closed
 
 - Reproduced and fixed underscore-bearing KiCad references generically.

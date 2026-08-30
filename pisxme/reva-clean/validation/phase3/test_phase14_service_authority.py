@@ -11,7 +11,10 @@ def main() -> None:
     assert 'property "MPN" "10171746-00021LF"' in sch
     assert 'property "Value" "10171746-00021LF" (at 50 108 0)' in sch
     assert 'property "Footprint" "PiSXMeRevAClean:USB_C_SERVICE_10171746"' in sch
-    assert 'property "MPN" "USB2 connector-boundary ESD"' in sch
+    assert 'property "MPN" "USB2 connector-boundary ESD"' not in sch
+    assert 'property "MPN" "TPD2EUSB30DRTR"' in sch
+    assert sch.count('(pin "3" (uuid de000000-0000-0000-0000-000000000002))') == 1
+    assert 'SERVICE_VBUS_SENSE' not in sch[sch.index('property "MPN" "TPD2EUSB30DRTR"'):]
     assert 'property "MPN" "USB2_UFP_CONNECTOR"' not in sch
     print("Phase 14 USB-C service authority: PASS; contacts=16; shell=2; exact MPN assigned")
 
