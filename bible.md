@@ -1803,3 +1803,12 @@
   instances, plus a machine-readable pad-count audit.
 - Kept Phase 14/15 open because connector/socket land patterns and complete
   pin-to-pad authority are still required before real routed copper.
+
+2026-08-30 — Phase 14 JAE B-key socket pattern derived
+
+- Derived the selected JAE `SM3ZS067U410ABR1000` B-key footprint from the
+  dimensioned drawing and SATA-IO TP053 by placing the eight-position void at
+  physical positions 12–19. The clean STORAGE instance now references the
+  project-local 67-contact pattern and the extraction regression passes.
+- This does not close the full routing gate; SXM2 and remaining connector
+  land-pattern authority still require independent review.
