@@ -28,6 +28,13 @@
   for the root and all ten child sheets also passed; Phase 3 connectivity/ERC
   remains open.
 
+## 2026-08-30 — EDAC hole-group authority correction
+
+- Corrected the EDAC authority record to retain the complete manufacturer
+  mechanical pattern: two 3.25 mm holes, two 1.60 mm holes, and four 1.02 mm
+  guide holes. The clean generated footprint and its receipt already carry
+  all eight holes; the authority narrative now matches the artifact.
+
 ## 2026-08-28 — M2 right-edge outline expansion checkpoint
 
 - Expanded only the active board's congested right edge from 220 × 140 mm to 240 × 140 mm and moved J9/J10/J11 to x=230 mm so their bodies remain inside the new edge. CM5, PCIe, power, ESD-support placement, routing, zones, schematic, and manufacturing outputs were not changed.

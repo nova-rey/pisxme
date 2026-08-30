@@ -30,7 +30,9 @@ legacy `TRJG0926HENL` footprint.
 The EDAC drawing gives a 15.90 mm body width, 21.35 +/- 0.25 mm length,
 13.28 mm height, 11.43 mm contact pitch, 14 signal holes at 0.90 mm, two
 3.25 mm mounting holes, and four 1.02 mm guide/mounting holes. Its recommended
-layout identifies P1–P14 and LED/shield pins P15–P18.
+layout identifies P1–P14 and LED/shield pins P15–P18. The full mechanical
+pattern also includes two 1.60 mm holes in addition to the two 3.25 mm holes
+and four 1.02 mm guide holes.
 
 The preserved legacy `TRJG0926HENL.kicad_mod` has the same 14 signal-pad and
 four LED/shield-pad numbering pattern and matching 1.27/2.54/2.56/3.83/4.06/
@@ -75,4 +77,3 @@ The former `TRJG0926HENL` procurement gap is closed by selecting EDAC
 `A70-112-331N126` as the documented Rev-A replacement. Phase 3 must implement
 and parity-check a new `PiSXMeRevAClean` EDAC footprint; the legacy footprint
 may not be reused by visual similarity.
-
