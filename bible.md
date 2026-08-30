@@ -1916,6 +1916,14 @@
   layers; the sole intentional unresolved contact mapping is SXM2 J1 PWR/GND,
   retained as the documented Rev-A empirical-risk item.
 
+2026-08-30 — Phase 5 power gate made fail-closed
+
+- Corrected the Phase 5 receipt to `IN_PROGRESS`: native ERC and MPN presence
+  do not prove the required LM74700 external MOSFET/VCAP path or TPSM63606
+  20-pin support network.
+- Strengthened the power audit so it requires package-pin evidence and the
+  documented fuse/MOSFET support components before Phase 5 can pass.
+
 2026-08-30 — ROOT_HIERARCHY_ASSOCIATION continuation closed
 
 - The native KiCad fixture remained green, and the clean CM5 promotion was
