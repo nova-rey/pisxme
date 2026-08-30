@@ -2227,6 +2227,15 @@
 - The geometry is closer to TI's qualitative arrangement, but exact overlay,
   DC-bias evidence, and board-specific thermal proof remain open.
 
+2026-08-30 — Phase 15 measured overlay checkpoint
+
+- Added `phase15_overlay_measure.py` and measured native regulator-to-COUT
+  maximum center distances of 7.4 mm (U3), 16.3 mm (U4), and 51.7 mm (U5).
+- A tighter U5 vertical bank was rejected by native DRC because it entered U7
+  pads; the passing candidate keeps the first three rows near U5 and records
+  the fourth-row envelope as a Rev-A placement limitation. The PG support
+  island is fixed at x=236 mm with a passing native route regression.
+
 2026-08-30 — Phase 15 receipt and COUT regression correction
 
 - Corrected the regulator receipt's U4/U5/thermal-via count to the validated

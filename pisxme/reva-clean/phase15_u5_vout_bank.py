@@ -17,10 +17,9 @@ def main():
     b=pcbnew.LoadBoard(str(INPUT))
     refs=[f'C{i}' for i in range(26,42)]
     for i,r in enumerate(refs):
-        # Keep the first three rows beside U5.  The fourth row clears the
-        # already-authoritative U5 PG support resistor at (245,140).
+        # Keep all four rows beside U5; the PG support island is offset left.
         row = i // 4
-        x0 = 240 if row < 3 else 260
+        x0 = 240
         put(b,r,x0+(i%4)*8,115+row*8)
     out=pad(b,'U5','8').GetNet()
     # Leave the U5 left output land by the package edge, then use a broad

@@ -85,6 +85,15 @@ authority counts against the TI minimum effective values using the documented
 authority is recorded in `PHASE15_TI_LAYOUT_OVERLAY.md`. That comparison is
 not a thermal simulation and does not claim exact geometric equivalence.
 
+`validation/phase3/phase15_overlay_measure.py` measures the native final
+candidate's exact rail capacitor sets, regulator-to-bank distances, and
+minimum rail-via counts. It is an electrical/topological audit; it does not
+replace a dimensioned TI CAD overlay or board-specific thermal evidence.
+The current measured maximum center distances are 7.4 mm for U3, 16.3 mm for
+U4, and 51.7 mm for U5; the U5 value includes the four-row bank constrained by
+the neighboring U7 keepout and is retained as a documented Rev-A placement
+limitation.
+
 `validation/phase3/phase15_thermal_screen.py` supplies the conservative
 design-envelope thermal screen: at 50 C ambient and 90% efficiency it leaves
 19.8 C, 50.7 C, and 71.0 C to TI's 125 C junction limit for U3/U4/U5. This

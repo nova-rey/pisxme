@@ -25,6 +25,7 @@ import pcbnew
 b = pcbnew.LoadBoard("ACREAGE_U4_U5_CONTROLS_PHASE15.kicad_pcb")
 assert b.FindFootprintByReference("U4").GetPosition() == pcbnew.VECTOR2I_MM(200, 105)
 assert b.FindFootprintByReference("U5").GetPosition() == pcbnew.VECTOR2I_MM(225, 105)
+assert b.FindFootprintByReference("R22").GetPosition() == pcbnew.VECTOR2I_MM(236, 145)
 vias = [x for x in b.GetTracks() if x.Type() == pcbnew.PCB_VIA_T]
 assert len(vias) == 35
 for name in ("/REGULATORS/FB_BRIDGE_3V3", "/REGULATORS/RT_BRIDGE_3V3", "/REGULATORS/PG_BRIDGE_3V3", "/REGULATORS/FB_BRIDGE_1V1", "/REGULATORS/RT_BRIDGE_1V1", "/REGULATORS/PG_BRIDGE_1V1"):
