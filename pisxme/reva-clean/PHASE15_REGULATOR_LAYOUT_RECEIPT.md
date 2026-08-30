@@ -76,6 +76,13 @@ VCC pins are isolated as `VCC_U3_INTERNAL`, `VCC_U4_INTERNAL`, and
 `VCC_U5_INTERNAL`; the regression is
 `validation/phase3/test_phase15_regulator_net_authority.py`.
 
+The reproducible COUT floor calculation is
+`validation/phase3/phase15_capacitance_check.py`; it verifies the schematic
+authority counts against the TI minimum effective values using the documented
+90% Rev-A derating floor. The comparison against the TI qualitative placement
+authority is recorded in `PHASE15_TI_LAYOUT_OVERLAY.md`. That comparison is
+not a thermal simulation and does not claim exact geometric equivalence.
+
 This does not close Phase 15. Remaining required work is localized VIN and
 VOUT high-dI/dt routing, feedback/RT/PG routing, switch-node containment,
 effective-capacitance calculation, and reference-layout overlay evidence for

@@ -2217,3 +2217,12 @@
   findings, and 237 baseline unconnected acreage items.
 - Effective-capacitance, thermal-margin, and three-rail TI overlay evidence
   remain open; this is not Phase 15 closure.
+
+2026-08-30 — Phase 15 capacitor and TI-overlay evidence checkpoint
+
+- Added `phase15_capacitance_check.py`, which machine-checks the native
+  schematic's 2/3/16 output-capacitor counts and the documented 90% derated
+  floors of 39.6/59.4/316.8 uF against TI's 30/50/300 uF minimums.
+- Added `PHASE15_TI_LAYOUT_OVERLAY.md` to compare the three regulator
+  candidates against TI SLVSGB4B pages 31-32. Thermal margin and exact
+  geometric/DC-bias closure remain open; no Phase 15 pass is claimed.
