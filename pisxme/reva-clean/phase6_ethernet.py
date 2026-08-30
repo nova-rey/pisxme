@@ -24,13 +24,14 @@ def main():
     if 'property "MPN" "TPD4E004DRYR"' in text:
         return
     defs=(symbol('EDAC_A70_112_331N126_Ethernet',('TRD0+','TRD0-','TRD1+','TRD1-','TRD2+','TRD2-','TRD3+','TRD3-','VC1','VC2','VC3','VC4','LEDY_A','LEDY_K','LEDG_A','LEDG_K','SHIELD_A','SHIELD_B')),
-          symbol('TPD4E004DRYR',('MDI0_P','MDI0_N','MDI1_P','MDI1_N','MDI2_P','MDI2_N','MDI3_P','MDI3_N')))
+          symbol('TPD4E004DRYR',('MDI0_P','MDI0_N','MDI1_P','MDI1_N','VCC','GND')))
     s=text.index('(lib_symbols'); e=s+len(balanced(text,s))-1
     text=text[:e].rstrip()+'\n'+'\n'.join(defs)+text[e:]
     mag_nets=('CM5_GBE_TD0_P','CM5_GBE_TD0_N','CM5_GBE_TD1_P','CM5_GBE_TD1_N','CM5_GBE_TD2_P','CM5_GBE_TD2_N','CM5_GBE_TD3_P','CM5_GBE_TD3_N','ETH_CT1','ETH_CT2','ETH_CT3','ETH_CT4','GBE_LED_Y_A','GBE_LED_Y_K','GBE_LED_G_A','GBE_LED_G_K','GBE_SHIELD','GBE_SHIELD')
-    esd_nets=('CM5_GBE_TD0_P','CM5_GBE_TD0_N','CM5_GBE_TD1_P','CM5_GBE_TD1_N','CM5_GBE_TD2_P','CM5_GBE_TD2_N','CM5_GBE_TD3_P','CM5_GBE_TD3_N')
+    esd_nets=('CM5_GBE_TD0_P','CM5_GBE_TD0_N','CM5_GBE_TD1_P','CM5_GBE_TD1_N','ETH_POWER','ETH_GND')
     body=part('EDAC_A70_112_331N126_Ethernet','J_ETHERNET','A70-112-331N126',50,100,mag_nets,0xd9000000000000000000000000000000,'PiSXMeRevAClean:EDAC_A70_112_331N126')
-    body+=part('TPD4E004DRYR','U_ETH_ESD','TPD4E004DRYR',50,145,esd_nets,0xda000000000000000000000000000000,'Package_DFN_QFN:WSON-6-1EP_1.5x1.5mm_P0.5mm_EP0.95x0.95mm')
+    body+=part('TPD4E004DRYR','U_ETH_ESD_A','TPD4E004DRYR',50,145,('CM5_GBE_TD0_P','CM5_GBE_TD0_N','CM5_GBE_TD1_P','CM5_GBE_TD1_N','ETH_POWER','ETH_GND'),0xda000000000000000000000000000000,'Package_DFN_QFN:WSON-6-1EP_1.5x1.5mm_P0.5mm_EP0.95x0.95mm')
+    body+=part('TPD4E004DRYR','U_ETH_ESD_B','TPD4E004DRYR',50,165,('CM5_GBE_TD2_P','CM5_GBE_TD2_N','CM5_GBE_TD3_P','CM5_GBE_TD3_N','ETH_POWER','ETH_GND'),0xdb000000000000000000000000000000,'Package_DFN_QFN:WSON-6-1EP_1.5x1.5mm_P0.5mm_EP0.95x0.95mm')
     text=text.replace('  (sheet_instances ',body+'\n  (sheet_instances ',1)
     path.write_text(text)
     print('Phase 6 Ethernet island generated')

@@ -1894,3 +1894,14 @@
   footprint cannot leak onto the ESD or Rd resistors; both Rd parts now use a
   separate project-local 0402 footprint.
 - Added exact-MPN regression coverage; the clean root native ERC remains zero.
+
+2026-08-30 — Phase 14 materialization exposed two authoring defects
+
+- Added a native pcbnew materialization harness for a disposable six-layer
+  candidate; it imports 17 assigned components and 78 netlist nets without
+  mutating the floorplan.
+- Corrected Ethernet ESD to two six-pin TI TPD4E004DRYR devices, covering all
+  four MDI pairs, and corrected the two bridge supply rails from mistaken
+  TUSB9261 placeholders to TPSM63606RDLR modules.
+- Native root ERC returned zero after both corrections. SXM2 abstract PWR/GND
+  contact assignment remains explicitly open pending authoritative pinout.

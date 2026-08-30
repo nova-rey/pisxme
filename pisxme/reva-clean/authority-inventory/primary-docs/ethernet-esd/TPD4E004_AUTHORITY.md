@@ -3,7 +3,8 @@
 Date checked: 2026-08-29.
 
 Selected item: Texas Instruments `TPD4E004DRYR`, active four-channel 1.6 pF
-Ethernet ESD array, 5.5 V, 6-pin SON/DRY, tape and reel. Local TI datasheet
+Ethernet ESD array, 5.5 V, 6-pin SON/DRY, tape and reel. The six-pin contract
+is four protected MDI I/O pins plus VCC and GND. Local TI datasheet
 `TPD4E004.pdf` SHA-256:
 `5388f4694815b497d26249fe2b0cb5ca9196840e0265fc83e60781fd611d19f0`.
 

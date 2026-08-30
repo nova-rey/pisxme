@@ -12,8 +12,8 @@
 			(font
 				(size 1 1)
 				(thickness 0.15)
-			)
-		)
+	)
+)
 	)
 	(property "Value" "JAE SM3ZS067U410ABR1000 B-key SATA socket"
 		(at 2.54 -8.255 0)
@@ -992,3 +992,4 @@
 		(solder_mask_margin 0.102)
 		(uuid "aef73218-bc2d-43fa-b3eb-23959e67d223")
 	)
+)
