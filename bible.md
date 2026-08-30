@@ -1,5 +1,19 @@
 # Append-only project bible
 
+## 2026-08-30 — Ethernet MagJack authority replacement
+
+- Closed the former exact `TRJG0926HENL` procurement gap with EDAC
+  `A70-112-331N126`, backed by the EDAC manufacturer drawing and a current
+  exact Mouser record showing New Product lifecycle, MOQ 1, and immediate
+  stock. The original Trxcom part remains an immutable reference only.
+- Recorded the EDAC electrical/mechanical contract, procurement evidence,
+  `MEDIUM` sourcing risk, LINK-PP backup, URLs, and provenance under
+  `pisxme/reva-clean/authority-inventory/primary-docs/ethernet-magjack/`.
+- Explicitly rejected reuse of the legacy footprint: its two 3.20 mm plus two
+  1.70 mm non-plated holes do not reproduce the EDAC drawing's two 3.25 mm
+  plus four 1.02 mm hole groups. Phase 3 must generate and parity-check the
+  EDAC land pattern in the clean namespace.
+
 ## 2026-08-28 — M2 right-edge outline expansion checkpoint
 
 - Expanded only the active board's congested right edge from 220 × 140 mm to 240 × 140 mm and moved J9/J10/J11 to x=230 mm so their bodies remain inside the new edge. CM5, PCIe, power, ESD-support placement, routing, zones, schematic, and manufacturing outputs were not changed.

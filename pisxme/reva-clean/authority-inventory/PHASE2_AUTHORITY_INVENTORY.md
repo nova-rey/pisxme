@@ -21,7 +21,7 @@ reference-only.
 | ASM1153E evaluation | `REJECTED` | ASMedia `ASM1153E`, QFN-48 6 x 6 | No materially better bare-chip procurement/firmware path; module evidence documents no TRIM |
 | Current JLC six-layer stack | `CLOSED` | `JLC06161H-7628`, 1.6 mm class, 1 oz outer / 0.5 oz inner, ordinary through vias | Reproducible 90/100-ohm calculator basis saved locally |
 | CM5 carrier connector | `CLOSED` | Amphenol `10164227-1001A1RLF`, manufacturer page/drawing plus live DigiKey/Newark records | Do not substitute the old 1004 placeholder without drawing check |
-| Ethernet MagJack | `REV_A_EMPIRICAL_RISK` | CM5IO `TRJG0926HENL` is reference-only; JLC extended listing is currently unavailable and no authoritative manufacturer record was found | Phase 3 must select a fully documented mechanical/electrical replacement or obtain a manufacturer/sample authority |
+| Ethernet MagJack | `CLOSED` | EDAC `A70-112-331N126`, EDAC drawing plus exact Mouser record; original Trxcom `TRJG0926HENL` remains reference-only | Phase 3 must regenerate the EDAC manufacturer land pattern; legacy hole geometry may not be reused |
 
 ## Evidence index
 
@@ -55,13 +55,11 @@ utility; DigiKey and Mouser both show current exact-MPN stock. JMS578 remains
 rejected, not silently substituted. Phase 7 still owns actual Linux
 UAS/BOT/TRIM/suspend/reset testing against the selected firmware and SSD.
 
-The cooler, local SXM2 pattern, and exact legacy MagJack procurement are explicitly classified as
+The cooler and local SXM2 pattern remain explicitly classified as
 `REV_A_EMPIRICAL_RISK`, with the public-source reason and required physical or
-pad-by-pad/replacement verification recorded. The MagJack classification is
-not being used to excuse an obtainable datasheet: the exact manufacturer
-identity and lifecycle record were not publicly recoverable, and JLC reports
-the extended listing unavailable. No other datasheet or procurement question
-was hidden under that label.
+pad-by-pad verification recorded. The former MagJack risk is closed by an
+obtainable exact EDAC replacement with manufacturer drawing and exact
+distributor evidence; Phase 3 still has to regenerate and verify its footprint.
 
 ## Source URLs
 
