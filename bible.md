@@ -1504,3 +1504,20 @@
   compression, and routing plus assembly-complexity rejection gates.
 - This checkpoint records planning authority only. No legacy schematic, PCB,
   footprint, rule, routing, zone, or manufacturing source was modified.
+
+2026-08-29 — clean Rev A Phase 0 recovery checkpoint validated
+
+- Preserved the 172-file, checksum-verified recovery import in commit
+  `8e6d029` before any portability change; `/srv/pisxme-recovery/SHA256SUMS`
+  reports 208/208 entries OK, including the 30 custom footprint files.
+- Created the clean-rebuild branch from that import and made the bridge path
+  containment test portable with a temporary host-local root. The recovered
+  bridge/backend/integration suite is now 12/12 passing under Python 3.11 with
+  KiCad Flatpak symbols exposed.
+- KiCad 10.0.5 native legacy parse remains reproducible at 94 ERC violations,
+  803 DRC violations, and 182 unconnected items; these are frozen baseline
+  evidence, not clean-design acceptance. The disposable SKiDL/PCB fixture
+  generated a zero-violation native DRC report, 25 Gerber files, and one
+  Excellon drill file; outputs remain outside the repository.
+- No legacy design source was edited. Phase 0 is accepted on the private
+  checkpoint branch pending the private push and recovery tag.

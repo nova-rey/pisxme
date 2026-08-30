@@ -1,4 +1,5 @@
 import unittest
+from tempfile import TemporaryDirectory
 
 from bridge.core import ApiRegistry, FileScope, enum_name, enum_value
 from kipy.board_types import BoardLayer
@@ -6,9 +7,10 @@ from kipy.board_types import BoardLayer
 
 class BridgeUnitTests(unittest.TestCase):
     def test_scope_rejects_paths_outside_root(self):
-        scope = FileScope("/Users/Cooper/Documents/ChatGPT/sxm2")
-        with self.assertRaises(Exception):
-            scope.resolve("../../private-file")
+        with TemporaryDirectory() as root:
+            scope = FileScope(root)
+            with self.assertRaises(Exception):
+                scope.resolve("../../private-file")
 
     def test_registry_discovers_installed_ipc_messages(self):
         registry = ApiRegistry()
