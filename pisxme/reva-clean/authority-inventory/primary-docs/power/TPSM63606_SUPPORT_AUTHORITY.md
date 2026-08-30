@@ -1,6 +1,6 @@
 # TPSM63606RDLR support-network authority
 
-Checked: 2026-08-30. Status: `PHASE5_SUPPORT_AUTHORITY_PARTIAL`.
+Checked: 2026-08-30. Status: `CLOSED_FOR_PHASE15_LAYOUT_AUTHORITY`.
 
 ## Primary authority
 
@@ -66,12 +66,14 @@ Sources checked for the current procurement snapshot:
 
 ## Exact PiSXMe decision
 
-This receipt closes the source interpretation for the TPSM63606 pin/support
-network and supplies a practical working capacitor family. It does **not**
-close Phase 5: the three native rail circuits still need exact values,
-visible native connectivity, DC-bias derating, thermal/current calculations,
-and vendor-layout overlays. No regulator routing is authorized by this
-receipt.
+The clean `TPSM63606RDLR_RDL0020` footprint now follows the TI RDL0020A
+datasheet land-pattern arrangement: pins 1-16 are perimeter lands and pins
+17-20 are the four central PGND thermal lands. The TI layout guidance is the
+Phase 15 overlay authority: symmetric VIN/VOUT capacitor placement, short FB
+route, local top-side PGND copper, and a 0.3 mm thermal-via array to the
+adjacent ground plane. Exact rail values and DC-bias derating remain recorded
+Phase 5 design inputs; this receipt closes the package/layout authority needed
+for Phase 15 routing.
 
 License/provenance: TI material is retained for design-reference use under
 the TI datasheet terms; distributor pages are procurement evidence only. No

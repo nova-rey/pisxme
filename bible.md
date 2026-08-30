@@ -2121,3 +2121,11 @@
   for continuity of the public reverse-engineered 130/70 V100 contact map and
   later fabricated-board thermal/bring-up confirmation. Broader acreage DRC
   and unrouted control debt remain later validation work.
+
+2026-08-30 — Phase 15 TPSM63606 package authority corrected
+
+- TI RDL0020A layout review found the clean footprint had its PGND/thermal
+  lands on the perimeter instead of using the four central pads 17-20.
+- Promoted the datasheet-derived 1-16 perimeter plus four central thermal-land
+  geometry into the clean namespace and added regression coverage. Regulator
+  routing remains unstarted until the vendor-layout overlay is implemented.

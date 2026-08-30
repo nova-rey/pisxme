@@ -24,6 +24,12 @@ def main() -> None:
         ):
             if f'property "MPN" "{mpn}"' in text:
                 assert f'property "Footprint" "PiSXMeRevAClean:{fp}"' in text
+    regulator = (PRETTY / "TPSM63606RDLR_RDL0020.kicad_mod").read_text()
+    assert '(pad "1" smd roundrect (at -2.250 -2.000 0)' in regulator
+    assert '(pad "16" smd roundrect (at 2.250 -2.000 180)' in regulator
+    for number, coordinate in ((17, "0 -1.125"), (18, "0 -0.375"),
+                               (19, "0 0.375"), (20, "0 1.125")):
+        assert f'(pad "{number}" smd roundrect (at {coordinate})' in regulator
     molex = (PRETTY / "Molex_0039300020_5569_2P_RA.kicad_mod").read_text()
     assert '(pad "1" thru_hole rect (at 0 0)' in molex
     assert '(pad "2" thru_hole circle (at 0 5.5)' in molex
