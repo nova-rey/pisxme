@@ -1707,3 +1707,9 @@
 - Added a disposable native-format schematic-to-PCB parity fixture and
   regression test proving PCB-only/proxy nets are rejected at the architecture
   boundary while the clean project remains PCB-free.
+
+2026-08-30 — Phase 4 SXM2 authority isolation started
+
+- Added a project-local SXM2 symbol/footprint extraction and a lane-0 mapping
+  receipt for Amphenol `74221-101LF` Rev-W. The 400-pad land pattern remains
+  explicitly `REV_A_EMPIRICAL_RISK`; no placement or routing was introduced.
