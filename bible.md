@@ -1673,3 +1673,17 @@
 - Unblock requires a native KiCad-authored saved root/child association or a
   reproducible installed KiCad authoring route. This is a blocker receipt, not
   a validated checkpoint.
+
+2026-08-30 — Phase 3 native hierarchy association closed
+
+- Reproduced the root hierarchy failure with KiCad 10.0.5 and isolated the
+  cause: the generated contract symbol was appended after the child
+  `(lib_symbols)` section, making each child unloadable and presenting as root
+  `hier_label_mismatch` errors.
+- Corrected the generic authoring path by inserting each contract definition
+  inside `(lib_symbols)`, using KiCad's native inverted library Y coordinates,
+  and generating real root wires to every sheet pin.
+- Native KiCad 10.0.5 root ERC now reports zero violations across all ten
+  children. Added `validation/phase3/test_native_hierarchy_authoring.py`;
+  generation, serialization assertions, and native ERC all pass. No
+  placement, routing, PCB, or Phase 4 work was introduced.

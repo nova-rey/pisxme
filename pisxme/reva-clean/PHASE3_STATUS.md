@@ -1,6 +1,6 @@
 # Phase 3 status
 
-Current state: `PISXME_REVA_CLEAN_BLOCKED` at `ROOT_HIERARCHY_ASSOCIATION`.
+Current state: `PISXME_REVA_CLEAN_PHASE3_HIERARCHY_CLOSED`.
 
 Created: native root project shell, ten named child-sheet files, isolated
 `PiSXMeRevAClean` symbol/footprint tables, architecture contract, interface
@@ -17,15 +17,13 @@ exact CM5IO MagJack sourcing gap is closed by EDAC `A70-112-331N126`; Phase 3
 must still generate and parity-check the EDAC manufacturer land pattern rather
 than reuse the legacy Trxcom footprint.
 
-Blocker evidence: KiCad 10.0.5 loads all ten child files, but native ERC
-reports 40 root-only errors (`hier_label_mismatch` and `pin_not_connected`).
-The child sheets report no hierarchy errors. UUID paths, filenames, label
-names/directions, root and child `instances`, and documented path variants were
-tested without changing the result. The clean files are hand-serialized and
-cannot be promoted to production hierarchy authority without one native KiCad
-save/reopen association passing ERC.
+Closure evidence: KiCad 10.0.5 native ERC reports zero violations on the root
+and all ten children. The generic authoring defect was an embedded contract
+symbol appended outside the child `lib_symbols` section; the corrected path
+inserts it inside that section, negates library-pin row Y coordinates, and
+generates real root wires to sheet pins. The regression
+`validation/phase3/test_native_hierarchy_authoring.py` reproduces the
+generation and native ERC check.
 
-Unblock condition: obtain a native KiCad-authored root/child association
-serialization (or a reproducible installed KiCad authoring route), apply it to
-the clean hierarchy, and rerun the Phase 3 gate. No Phase 4 or PCB work may
-start before that evidence passes.
+Phase 3 continuation: complete production asset extraction and parity evidence.
+No placement or routing is authorized until the full exit gate below passes.

@@ -647,5 +647,211 @@
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid 40000000-0000-0000-0000-0000000003eb)))
 
+
+  (wire
+    (pts (xy 35 47)
+         (xy 45 47))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000064))
+  (wire
+    (pts (xy 35 50)
+         (xy 45 50))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000065))
+  (wire
+    (pts (xy 35 53)
+         (xy 45 53))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000066))
+  (wire
+    (pts (xy 35 56)
+         (xy 45 56))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000067))
+  (wire
+    (pts (xy 35 59)
+         (xy 45 59))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000068))
+  (wire
+    (pts (xy 70 47)
+         (xy 80 47))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000000c8))
+  (wire
+    (pts (xy 70 50)
+         (xy 80 50))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000000c9))
+  (wire
+    (pts (xy 70 53)
+         (xy 80 53))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000000ca))
+  (wire
+    (pts (xy 70 56)
+         (xy 80 56))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000000cb))
+  (wire
+    (pts (xy 105 47)
+         (xy 115 47))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-00000000012c))
+  (wire
+    (pts (xy 105 50)
+         (xy 115 50))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-00000000012d))
+  (wire
+    (pts (xy 105 53)
+         (xy 115 53))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-00000000012e))
+  (wire
+    (pts (xy 140 47)
+         (xy 150 47))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000190))
+  (wire
+    (pts (xy 140 50)
+         (xy 150 50))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000191))
+  (wire
+    (pts (xy 140 53)
+         (xy 150 53))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000192))
+  (wire
+    (pts (xy 140 56)
+         (xy 150 56))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000193))
+  (wire
+    (pts (xy 175 47)
+         (xy 185 47))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000001f4))
+  (wire
+    (pts (xy 175 50)
+         (xy 185 50))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000001f5))
+  (wire
+    (pts (xy 175 53)
+         (xy 185 53))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000001f6))
+  (wire
+    (pts (xy 175 56)
+         (xy 185 56))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000001f7))
+  (wire
+    (pts (xy 35 77)
+         (xy 45 77))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000258))
+  (wire
+    (pts (xy 35 80)
+         (xy 45 80))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000259))
+  (wire
+    (pts (xy 35 83)
+         (xy 45 83))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-00000000025a))
+  (wire
+    (pts (xy 35 86)
+         (xy 45 86))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-00000000025b))
+  (wire
+    (pts (xy 70 77)
+         (xy 80 77))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000002bc))
+  (wire
+    (pts (xy 70 80)
+         (xy 80 80))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000002bd))
+  (wire
+    (pts (xy 70 83)
+         (xy 80 83))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000002be))
+  (wire
+    (pts (xy 70 86)
+         (xy 80 86))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000002bf))
+  (wire
+    (pts (xy 70 89)
+         (xy 80 89))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000002c0))
+  (wire
+    (pts (xy 105 77)
+         (xy 115 77))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000320))
+  (wire
+    (pts (xy 105 80)
+         (xy 115 80))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000321))
+  (wire
+    (pts (xy 105 83)
+         (xy 115 83))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000322))
+  (wire
+    (pts (xy 105 86)
+         (xy 115 86))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000323))
+  (wire
+    (pts (xy 140 77)
+         (xy 150 77))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000384))
+  (wire
+    (pts (xy 140 80)
+         (xy 150 80))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000385))
+  (wire
+    (pts (xy 140 83)
+         (xy 150 83))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000386))
+  (wire
+    (pts (xy 140 86)
+         (xy 150 86))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-000000000387))
+  (wire
+    (pts (xy 175 77)
+         (xy 185 77))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000003e8))
+  (wire
+    (pts (xy 175 80)
+         (xy 185 80))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000003e9))
+  (wire
+    (pts (xy 175 83)
+         (xy 185 83))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000003ea))
+  (wire
+    (pts (xy 175 86)
+         (xy 185 86))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000003eb))
   (sheet_instances (path "/" (page "1")))
 )

@@ -366,7 +366,7 @@
             (effects
               (font
                 (size 1.27 1.27))))))
-      (embedded_fonts no)))
+      (embedded_fonts no))
     (symbol "PiSXMeRevAClean:V100_PCIE_Contract"
       (pin_names (offset 1.0))
       (exclude_from_sim no)
@@ -394,42 +394,43 @@
           (name "CM5_PCIE" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 3 0)
+          (at -5.08 -3 0)
           (length 3.81)
           (name "V100_PCIE" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 6 0)
+          (at -5.08 -6 0)
           (length 3.81)
           (name "V100_REFCLK" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 9 0)
+          (at -5.08 -9 0)
           (length 3.81)
           (name "V100_PERST" (effects (font (size 1.27 1.27))))
           (number "4" (effects (font (size 1.27 1.27)))))
       )
     )
+  )
 
   (hierarchical_label "CM5_PCIE"
     (shape bidirectional)
-    (at 5 10 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 10 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000000c8))
   (hierarchical_label "V100_PCIE"
     (shape bidirectional)
-    (at 5 13 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 13 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000000c9))
   (hierarchical_label "V100_REFCLK"
     (shape bidirectional)
-    (at 5 16 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 16 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000000ca))
   (hierarchical_label "V100_PERST"
     (shape bidirectional)
-    (at 5 19 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 19 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000000cb))
 
   (wire

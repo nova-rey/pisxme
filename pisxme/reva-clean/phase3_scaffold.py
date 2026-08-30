@@ -60,7 +60,7 @@ def contract_symbol(name: str, ports: tuple[str, ...]) -> str:
     symbol_name = f"PiSXMeRevAClean:{name}_Contract"
     pins = "".join(
         f'''\n        (pin passive line
-          (at -5.08 {index * 3} 0)
+          (at -5.08 {-index * 3} 0)
           (length 3.81)
           (name "{port}" (effects (font (size 1.27 1.27))))
           (number "{index + 1}" (effects (font (size 1.27 1.27)))))'''
@@ -121,10 +121,11 @@ def sheet_block(name: str, number: int) -> str:
 def child(name: str, number: int, lib_symbols: str) -> str:
     sheet_path = f"{ROOT_UUID}/{make_uuid(0x10000000000000000000000000000000 + number)}"
     labels = "".join(
-        f'''\n  (hierarchical_label "{port}"\n    (shape bidirectional)\n    (at 5 {10 + index * 3} 0)\n    (effects (font (size 1.27 1.27)) (justify left))\n    (uuid {make_uuid(0x50000000000000000000000000000000 + number * 100 + index)}))'''
+        f'''\n  (hierarchical_label "{port}"\n    (shape bidirectional)\n    (at 5 {10 + index * 3} 180)\n    (effects (font (size 1.27 1.27)) (justify right))\n    (uuid {make_uuid(0x50000000000000000000000000000000 + number * 100 + index)}))'''
         for index, port in enumerate(PORTS[name])
     )
     contract = contract_symbol(name, PORTS[name])
+    child_lib_symbols = lib_symbols[:-1] + contract + "\n  )"
     instance_pins = "".join(
         f'    (pin "{index + 1}" (uuid {make_uuid(0x90000000000000000000000000000000 + number * 100 + index)}))\n'
         for index, _port in enumerate(PORTS[name])
@@ -164,7 +165,7 @@ def child(name: str, number: int, lib_symbols: str) -> str:
     return f'''(kicad_sch (version 20230409) (generator "eeschema")
   (uuid {make_uuid(0x20000000000000000000000000000000 + number)})
   (paper "A4")
-  {lib_symbols}{contract}
+  {child_lib_symbols}
   {labels}
   {contract_wires}
   {contract_instance}
@@ -177,6 +178,15 @@ def main() -> None:
     source = TEMPLATE.read_text()
     start = source.index("(lib_symbols")
     lib_symbols = balanced(source, start)
+    root_wires = "".join(
+        f'''\n  (wire
+    (pts (xy {35 + ((number - 1) % 5) * 35} {45 + ((number - 1) // 5) * 30 + 2 + index * 3})
+         (xy {35 + ((number - 1) % 5) * 35 + 10} {45 + ((number - 1) // 5) * 30 + 2 + index * 3}))
+    (stroke (width 0) (type default))
+    (uuid {make_uuid(0xb0000000000000000000000000000000 + number * 100 + index)}))'''
+        for number, name in enumerate(SHEETS, 1)
+        for index, _port in enumerate(PORTS[name])
+    )
     root = f'''(kicad_sch (version 20230409) (generator "eeschema")
   (uuid {make_uuid(0x30000000000000000000000000000000)})
   (paper "A4")
@@ -188,6 +198,7 @@ def main() -> None:
     (comment 4 "M.2 SATA ONLY - NVMe NOT SUPPORTED"))
   {lib_symbols}
 {''.join(sheet_block(name, index) for index, name in enumerate(SHEETS, 1))}
+{root_wires}
   (sheet_instances (path "/" (page "1")))
 )
 '''

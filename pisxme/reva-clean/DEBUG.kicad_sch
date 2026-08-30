@@ -366,7 +366,7 @@
             (effects
               (font
                 (size 1.27 1.27))))))
-      (embedded_fonts no)))
+      (embedded_fonts no))
     (symbol "PiSXMeRevAClean:DEBUG_Contract"
       (pin_names (offset 1.0))
       (exclude_from_sim no)
@@ -394,42 +394,43 @@
           (name "UART" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 3 0)
+          (at -5.08 -3 0)
           (length 3.81)
           (name "RECOVERY" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 6 0)
+          (at -5.08 -6 0)
           (length 3.81)
           (name "POWER_PG_FAULT" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 9 0)
+          (at -5.08 -9 0)
           (length 3.81)
           (name "DEBUG_GND" (effects (font (size 1.27 1.27))))
           (number "4" (effects (font (size 1.27 1.27)))))
       )
     )
+  )
 
   (hierarchical_label "UART"
     (shape bidirectional)
-    (at 5 10 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 10 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000003e8))
   (hierarchical_label "RECOVERY"
     (shape bidirectional)
-    (at 5 13 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 13 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000003e9))
   (hierarchical_label "POWER_PG_FAULT"
     (shape bidirectional)
-    (at 5 16 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 16 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000003ea))
   (hierarchical_label "DEBUG_GND"
     (shape bidirectional)
-    (at 5 19 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 19 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000003eb))
 
   (wire

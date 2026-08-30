@@ -366,7 +366,7 @@
             (effects
               (font
                 (size 1.27 1.27))))))
-      (embedded_fonts no)))
+      (embedded_fonts no))
     (symbol "PiSXMeRevAClean:V100_POWER_Contract"
       (pin_names (offset 1.0))
       (exclude_from_sim no)
@@ -394,32 +394,33 @@
           (name "V100_POWER_12V" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 3 0)
+          (at -5.08 -3 0)
           (length 3.81)
           (name "V100_GND" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 6 0)
+          (at -5.08 -6 0)
           (length 3.81)
           (name "V100_THERMAL" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27)))))
       )
     )
+  )
 
   (hierarchical_label "V100_POWER_12V"
     (shape bidirectional)
-    (at 5 10 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 10 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-00000000012c))
   (hierarchical_label "V100_GND"
     (shape bidirectional)
-    (at 5 13 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 13 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-00000000012d))
   (hierarchical_label "V100_THERMAL"
     (shape bidirectional)
-    (at 5 16 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 16 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-00000000012e))
 
   (wire

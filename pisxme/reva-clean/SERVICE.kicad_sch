@@ -366,7 +366,7 @@
             (effects
               (font
                 (size 1.27 1.27))))))
-      (embedded_fonts no)))
+      (embedded_fonts no))
     (symbol "PiSXMeRevAClean:SERVICE_Contract"
       (pin_names (offset 1.0))
       (exclude_from_sim no)
@@ -394,42 +394,43 @@
           (name "SERVICE_USB2" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 3 0)
+          (at -5.08 -3 0)
           (length 3.81)
           (name "SERVICE_VBUS_SENSE" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 6 0)
+          (at -5.08 -6 0)
           (length 3.81)
           (name "SERVICE_RD" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 9 0)
+          (at -5.08 -9 0)
           (length 3.81)
           (name "SERVICE_GND" (effects (font (size 1.27 1.27))))
           (number "4" (effects (font (size 1.27 1.27)))))
       )
     )
+  )
 
   (hierarchical_label "SERVICE_USB2"
     (shape bidirectional)
-    (at 5 10 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 10 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000320))
   (hierarchical_label "SERVICE_VBUS_SENSE"
     (shape bidirectional)
-    (at 5 13 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 13 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000321))
   (hierarchical_label "SERVICE_RD"
     (shape bidirectional)
-    (at 5 16 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 16 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000322))
   (hierarchical_label "SERVICE_GND"
     (shape bidirectional)
-    (at 5 19 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 19 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000323))
 
   (wire

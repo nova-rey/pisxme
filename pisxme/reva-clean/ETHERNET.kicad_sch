@@ -366,7 +366,7 @@
             (effects
               (font
                 (size 1.27 1.27))))))
-      (embedded_fonts no)))
+      (embedded_fonts no))
     (symbol "PiSXMeRevAClean:ETHERNET_Contract"
       (pin_names (offset 1.0))
       (exclude_from_sim no)
@@ -394,42 +394,43 @@
           (name "CM5_GBE" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 3 0)
+          (at -5.08 -3 0)
           (length 3.81)
           (name "GBE_LED" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 6 0)
+          (at -5.08 -6 0)
           (length 3.81)
           (name "GBE_SHIELD" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27)))))
         (pin passive line
-          (at -5.08 9 0)
+          (at -5.08 -9 0)
           (length 3.81)
           (name "ETH_POWER" (effects (font (size 1.27 1.27))))
           (number "4" (effects (font (size 1.27 1.27)))))
       )
     )
+  )
 
   (hierarchical_label "CM5_GBE"
     (shape bidirectional)
-    (at 5 10 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 10 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000258))
   (hierarchical_label "GBE_LED"
     (shape bidirectional)
-    (at 5 13 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 13 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000259))
   (hierarchical_label "GBE_SHIELD"
     (shape bidirectional)
-    (at 5 16 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 16 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-00000000025a))
   (hierarchical_label "ETH_POWER"
     (shape bidirectional)
-    (at 5 19 0)
-    (effects (font (size 1.27 1.27)) (justify left))
+    (at 5 19 180)
+    (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-00000000025b))
 
   (wire
