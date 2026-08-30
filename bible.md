@@ -1934,6 +1934,14 @@
   land pattern is now materialized; this does not close the separate circuit
   completion gate.
 
+2026-08-30 — Phase 5 fuse authority gap closed
+
+- Added current Littelfuse authority and procurement evidence for the separate
+  `0297015.U` 15 A MINI blade fuse and `178.6165.0001` four-hole PCB holder.
+- Kept the electrical rating, I2t, derating, inrush, and holder land-pattern
+  integration explicitly open for the Phase 5 circuit gate; the parts are not
+  collapsed into a fictitious two-pad component.
+
 2026-08-30 — ROOT_HIERARCHY_ASSOCIATION continuation closed
 
 - The native KiCad fixture remained green, and the clean CM5 promotion was
