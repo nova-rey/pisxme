@@ -28,5 +28,13 @@ That calculation assumes the public reverse-engineered row classification and
 balanced sharing; both still require continuity/current measurements on the
 actual V100 assembly.
 
+The same analysis applies the CSD19536KCS datasheet maximum 62 C/W
+junction-to-ambient metric at a 40 C design ambient: the shared-branch FET
+estimate is 66.7 C junction and the one-branch fault estimate is 146.6 C,
+both below the 175 C absolute maximum. This is a datasheet/test-board bound,
+not a fabricated-board thermal measurement; copper spreading, airflow,
+package mounting, and sustained sharing remain explicit Rev-A validation
+items.
+
 The route uses the frozen six-layer `JLC06161H-7628` basis and ordinary
 through-via-compatible layer policy. No Phase 16+ high-speed routing is added.

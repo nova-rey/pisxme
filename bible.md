@@ -2015,3 +2015,11 @@
   empirical power contacts is 0.194 A/contact, below Amphenol's published
   0.45 A/contact rating. Continuity and current-sharing measurements remain
   required for final Phase 14 closure.
+
+2026-08-30 — Phase 14 thermal bound added
+
+- Added the CSD19536KCS datasheet 62 C/W junction-to-ambient bound to the
+  geometry-backed power analysis. At 40 C ambient it estimates 66.7 C shared
+  branch junction and 146.7 C single-branch fault junction, below 175 C; the
+  result remains a test-board/design bound pending fabricated-board thermal
+  and sustained-sharing measurements.
