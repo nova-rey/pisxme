@@ -22,6 +22,16 @@ def main():
         x0 = 240
         put(b,r,x0+(i%4)*8,115+row*8)
     out=pad(b,'U5','8').GetNet()
+    # Join both exposed U5 VOUT lands around the package perimeter.  The
+    # bank escape below uses the right land; this tie keeps the left land in
+    # the same low-impedance output copper without crossing the VIN/control
+    # corridors immediately beside the package.
+    # U5 pad 8's true left edge is x=222.05 mm; staying to the right of the
+    # VIN escape field permits a same-layer perimeter route without a
+    # via-in-pad or an inner-layer crossing of the control corridors.
+    tr(b,mm(222.05,107),mm(222.05,123),out,.30)
+    tr(b,mm(222.05,123),mm(228.15,123),out,.30)
+    tr(b,mm(228.15,123),mm(228.15,111),out,.30)
     # Leave the U5 left output land by the package edge, then use a broad
     # local trunk feeding each capacitor row.  Every endpoint is taken from
     # the loaded pad geometry rather than a hard-coded pad center.
@@ -38,6 +48,9 @@ def main():
     tr(b,drop,root_at_edge,out,.30)
     tr(b,root_at_edge,root,out,.30)
     tr(b,root,trunk_top,out,.60,pcbnew.In2_Cu)
+    # Keep the trunk-head transition connected on F.Cu as well as In2.Cu;
+    # otherwise native DRC reports the through-via as dangling.
+    tr(b,root,trunk_top,out,.30)
     via(b,root,out); via(b,trunk_top,out); tr(b,trunk_top,trunk_bottom,out, .60, pcbnew.In2_Cu)
     for row in range(4):
         row_y=115+row*8

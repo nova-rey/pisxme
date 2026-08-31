@@ -2319,3 +2319,14 @@
   not a Rev-A design artifact or a claim of geometric equivalence. The Rev-A
   U4/U5 placement exceptions and board-specific thermal/DC-bias risks remain
   open and explicit.
+
+2026-08-30 — Phase 15 VOUT-land and pull-up connectivity correction
+
+- Added explicit perimeter VOUT-land ties for U3, U4, and U5 after native
+  DRC identified that duplicate TPSM63606 VOUT lands were not all connected.
+- Connected the U4/U5 output pull-up returns to their local output copper and
+  kept the U5 trunk-head through-via connected on both F.Cu and In2.Cu.
+- Native final DRC now reports zero route crossings, shorts, dangling tracks,
+  and dangling vias; focused regressions cover both VOUT-land associations.
+  Phase 15 remains open only for switch-node, exact DC-bias, and
+  board-specific thermal/reference-overlay closure.

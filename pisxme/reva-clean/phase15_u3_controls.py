@@ -40,6 +40,13 @@ def main():
     pg = n(b, "/REGULATORS/PG_CM5_5V")
     out = n(b, "/REGULATORS/CM5_5V")
 
+    # Both exposed VOUT lands are the same authoritative rail.  Tie the
+    # left land around the package perimeter so the output bank is not
+    # accidentally connected to only the right land used for the escape.
+    track(b, (49.05, 80.0), (48.0, 87.0), out, width=0.30)
+    track(b, (48.0, 87.0), (54.95, 87.0), out, width=0.30)
+    track(b, (54.95, 87.0), (54.95, 80.0), out, width=0.30)
+
     # F.Cu package exits to three separated transition vias.
     track(b, (54.70, 79.25), (56.0, 79.25), fb)
     via(b, (56.0, 79.25), fb)

@@ -1,8 +1,8 @@
 ** Drc report for ACREAGE_U5_VOUT_PHASE15.kicad_pcb **
-** Created on 2026-08-30T18:33:57 **
+** Created on 2026-08-30T19:10:49 **
 ** Report includes: Errors, Warnings **
 
-** Found 297 DRC violations **
+** Found 296 DRC violations **
 [courtyards_overlap]: Courtyards overlap
     Rule: board setup constraints courtyard; error
     @(260.0000 mm, 160.0000 mm): Footprint J3
@@ -115,6 +115,10 @@
     Rule: board setup constraints courtyard; error
     @(188.0000 mm, 103.0000 mm): Footprint C14
     @(188.0000 mm, 105.2500 mm): Footprint C15
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(269.2500 mm, 154.7250 mm): Pad 75 [<no net>] of J3 on F.Cu
+    @(268.7500 mm, 154.7250 mm): Pad 73 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(250.7500 mm, 154.7250 mm): Pad 1 [/STORAGE/BRIDGE_3V3] of J3 on F.Cu
@@ -351,13 +355,6 @@
     Rule: board setup solder mask min width; error
     @(268.5000 mm, 162.2750 mm): Pad 72 [<no net>] of J3 on F.Cu
     @(269.0000 mm, 162.2750 mm): Pad 74 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(268.7500 mm, 154.7250 mm): Pad 73 [<no net>] of J3 on F.Cu
-    @(269.2500 mm, 154.7250 mm): Pad 75 [<no net>] of J3 on F.Cu
-[via_dangling]: Via is not connected or connected on only one layer
-    Local override; warning
-    @(238.0000 mm, 109.0000 mm): Via [/REGULATORS/BRIDGE_1V1] on F.Cu - B.Cu
 [silk_edge_clearance]: Silkscreen clipped by board edge
     Rule: board setup constraints silk; warning
     @(0.0000 mm, 0.0000 mm): Rectangle on Edge.Cuts
@@ -1177,7 +1174,7 @@
     @(262.0500 mm, 34.3250 mm): Rectangle of J2 on f.silkscreen
     @(261.8000 mm, 45.0000 mm): NPTH pad of J2
 
-** Found 237 unconnected pads **
+** Found 230 unconnected pads **
 [unconnected_items]: Missing connection between items
     Local override; error
     @(245.5000 mm, 102.0000 mm): Pad 4 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
@@ -1242,18 +1239,6 @@
     Local override; error
     @(250.2500 mm, 45.7500 mm): Pad 6 [/ETHERNET/CM5_GBE_TD0_P] of U6 on F.Cu
     @(276.6300 mm, 49.0600 mm): PTH pad 18 [/ETHERNET/CM5_GBE_TD0_P] of J2
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(180.9500 mm, 70.0000 mm): Track [/REGULATORS/BRIDGE_3V3] on F.Cu, length 6.0000 mm
-    @(187.5000 mm, 70.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of R11 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(197.7500 mm, 107.0000 mm): Pad 8 [/REGULATORS/BRIDGE_3V3] of U4 on F.Cu
-    @(202.2500 mm, 107.0000 mm): Pad 9 [/REGULATORS/BRIDGE_3V3] of U4 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(217.5000 mm, 76.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of R14 on F.Cu
-    @(216.0000 mm, 64.0000 mm): Track [/REGULATORS/BRIDGE_3V3] on F.Cu, length 48.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(21.4500 mm, 93.5500 mm): Pad 2 [POWER_GND] of U2 on F.Cu
@@ -1776,18 +1761,6 @@
     @(54.5000 mm, 140.0000 mm): Pad 1 [/SERVICE/SERVICE_GND] of R1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(227.2500 mm, 107.0000 mm): Pad 9 [/REGULATORS/BRIDGE_1V1] of U5 on F.Cu
-    @(222.7500 mm, 107.0000 mm): Pad 8 [/REGULATORS/BRIDGE_1V1] of U5 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(235.5000 mm, 145.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R22 on F.Cu
-    @(238.0000 mm, 141.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on In2.PWR, length 8.6500 mm
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(244.5000 mm, 150.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R19 on F.Cu
-    @(238.0000 mm, 141.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on In2.PWR, length 8.6500 mm
-[unconnected_items]: Missing connection between items
-    Local override; error
     @(21.4500 mm, 76.4500 mm): Pad 3 [/POWER_INPUT/12V_IN_A] of U1 on F.Cu
     @(48.6000 mm, 38.7500 mm): Track [/POWER_INPUT/12V_IN_A] on B.Cu, length 2.5000 mm
 [unconnected_items]: Missing connection between items
@@ -1796,16 +1769,12 @@
     @(48.6000 mm, 38.7500 mm): Track [/POWER_INPUT/12V_IN_A] on B.Cu, length 4.3012 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(54.2500 mm, 80.0000 mm): Pad 9 [/REGULATORS/CM5_5V] of U3 on F.Cu
-    @(49.7500 mm, 80.0000 mm): Pad 8 [/REGULATORS/CM5_5V] of U3 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
     @(18.5500 mm, 76.4500 mm): Pad 4 [12V_PROTECTED] of U1 on F.Cu
     @(18.5500 mm, 96.4500 mm): Pad 4 [12V_PROTECTED] of U2 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(18.5500 mm, 76.4500 mm): Pad 4 [12V_PROTECTED] of U1 on F.Cu
-    @(49.0500 mm, 76.0000 mm): Track [12V_PROTECTED] on F.Cu, length 0.9500 mm
+    @(48.1000 mm, 76.0000 mm): Pad 1 [12V_PROTECTED] of C5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(49.7500 mm, 76.0000 mm): Pad 1 [12V_PROTECTED] of U3 on F.Cu
@@ -1853,18 +1822,18 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(20.4500 mm, 96.4500 mm): Pad 6 [/POWER_INPUT/FUSED_12V_B] of U2 on F.Cu
-    @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on B.Cu, length 2.5000 mm
+    @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on B.Cu, length 162.5914 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on B.Cu, length 3.5000 mm
     @(108.0000 mm, 72.0000 mm): Pad 1 [/POWER_INPUT/FUSED_12V_B] of D2 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(20.0000 mm, 45.0000 mm): Track [/POWER_INPUT/12V_IN_B] on B.Cu, length 45.0000 mm
+    @(20.0000 mm, 90.0000 mm): Track [/POWER_INPUT/12V_IN_B] on B.Cu, length 25.0000 mm
     @(21.4500 mm, 96.4500 mm): Pad 3 [/POWER_INPUT/12V_IN_B] of U2 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(20.0000 mm, 90.0000 mm): Track [/POWER_INPUT/12V_IN_B] on B.Cu, length 25.0000 mm
+    @(45.0000 mm, 90.0000 mm): Track [/POWER_INPUT/12V_IN_B] on B.Cu, length 28.7841 mm
     @(110.8000 mm, 95.0000 mm): Pad 2 [/POWER_INPUT/12V_IN_B] of C4 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error

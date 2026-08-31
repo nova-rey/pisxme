@@ -19,7 +19,9 @@ def main():
     assert "[clearance]" not in report
     assert "[shorting_items]" not in report
     assert "[tracks_crossing]" not in report
-    assert report.count("[unconnected_items]") == 254
+    assert report.count("[unconnected_items]") == 249
+    assert "Pad 8 [/REGULATORS/BRIDGE_3V3] of U4" not in report
+    assert "Pad 9 [/REGULATORS/BRIDGE_3V3] of U4" not in report
     probe = r'''
 import pcbnew
 b = pcbnew.LoadBoard("ACREAGE_U4_U5_CONTROLS_PHASE15.kicad_pcb")
@@ -27,11 +29,11 @@ assert b.FindFootprintByReference("U4").GetPosition() == pcbnew.VECTOR2I_MM(200,
 assert b.FindFootprintByReference("U5").GetPosition() == pcbnew.VECTOR2I_MM(225, 105)
 assert b.FindFootprintByReference("R22").GetPosition() == pcbnew.VECTOR2I_MM(236, 145)
 vias = [x for x in b.GetTracks() if x.Type() == pcbnew.PCB_VIA_T]
-assert len(vias) == 35
+assert len(vias) == 38
 for name in ("/REGULATORS/FB_BRIDGE_3V3", "/REGULATORS/RT_BRIDGE_3V3", "/REGULATORS/PG_BRIDGE_3V3", "/REGULATORS/FB_BRIDGE_1V1", "/REGULATORS/RT_BRIDGE_1V1", "/REGULATORS/PG_BRIDGE_1V1"):
     assert any(x.GetNetname() == name for x in vias), name
 '''
     subprocess.run([PYTHON, "-c", probe], cwd=ROOT, check=True)
-    print("Phase 15 U4/U5-control regression: PASS; 35 vias; 254 unrouted items")
+    print("Phase 15 U4/U5-control regression: PASS; output lands tied; 38 vias; 249 unrouted items")
 
 if __name__ == "__main__": main()

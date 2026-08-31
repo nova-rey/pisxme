@@ -48,6 +48,18 @@ def island(board, reg, pin, root_xy, corridor_y, supports):
 
 def main():
     b=pcbnew.LoadBoard(str(INPUT))
+    # Join both exposed U4 VOUT lands around the package perimeter.  The
+    # left land already feeds the local bank; the right land must not remain
+    # an electrically isolated duplicate output.
+    u4out=net(b,"/REGULATORS/BRIDGE_3V3")
+    tr(b,v(197.05,107.0),v(196.5,109.5),u4out,width=.30)
+    tr(b,v(196.5,109.5),v(203.5,109.5),u4out,width=.30)
+    tr(b,v(203.5,109.5),v(202.95,107.0),u4out,width=.30)
+    # The FB divider and PG pull-up return to the local output copper too.
+    # These are separate from the FB/PG signal trunks and must be explicit
+    # connections rather than relying on the un-routed net label.
+    tr(b,v(187.5,70.0),v(187.5,64.0),u4out,width=.30)
+    tr(b,v(217.5,76.0),v(216.0,76.0),u4out,width=.30)
     # U4 at (200,105), controls above the module.
     for ref,xy,ang in (("C18",(180,70),0),("R11",(188,70),0),
                        ("R12",(196,70),0),("R13",(212,82),0),
@@ -63,6 +75,19 @@ def main():
     island(b,"U5","10",(229,110.0),150,(("R19","2"),("R20","1")))
     island(b,"U5","13",(230,101.0),145,(("R22","2"),))
     island(b,"U5","12",(232,103.0),140,(("R21","1"),))
+    u5out=net(b,"/REGULATORS/BRIDGE_1V1")
+    # Return the U5 FB-divider and PG pull-up to the In2.Cu output trunk.
+    # The transition points stay below the control island and avoid the
+    # adjacent ground pad of R22.
+    tr(b,v(244.5,150.0),v(244.5,148.0),u5out,width=.30)
+    via(b,v(244.5,148.0),u5out)
+    tr(b,v(244.5,148.0),v(238.0,148.0),u5out,pcbnew.B_Cu,width=.30)
+    tr(b,v(238.0,148.0),v(238.0,141.0),u5out,pcbnew.B_Cu,width=.30)
+    via(b,v(238.0,148.0),u5out)
+    via(b,v(238.0,141.0),u5out)
+    tr(b,v(235.5,145.0),v(235.5,147.0),u5out,width=.30)
+    tr(b,v(235.5,147.0),v(238.0,147.0),u5out,width=.30)
+    tr(b,v(238.0,147.0),v(238.0,148.0),u5out,width=.30)
     # C18 is the U4 feed-forward capacitor; its output side must land on the
     # same local VOUT copper as the C16/C17/C19 output bank.
     c18=getpad(b,"C18","2"); c16=getpad(b,"C16","1"); out=c16.GetNet()

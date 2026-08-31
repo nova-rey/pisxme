@@ -18,7 +18,9 @@ def main():
     assert "shorting_items" not in report
     assert "tracks_crossing" not in report
     assert "[clearance]" not in report
-    assert report.count("[unconnected_items]") == 264
+    assert report.count("[unconnected_items]") == 263
+    assert "Pad 8 [/REGULATORS/CM5_5V] of U3" not in report
+    assert "Pad 9 [/REGULATORS/CM5_5V] of U3" not in report
     probe = r'''
 import pcbnew
 b = pcbnew.LoadBoard("ACREAGE_U3_CONTROLS_PHASE15.kicad_pcb")
@@ -28,7 +30,7 @@ assert {x.GetNetname() for x in vias if x.GetNetname() != "POWER_GND"} == {
     "/REGULATORS/FB_CM5_5V", "/REGULATORS/RT_CM5_5V", "/REGULATORS/PG_CM5_5V"}
 '''
     subprocess.run([PYTHON, "-c", probe], cwd=ROOT, check=True)
-    print("Phase 15 U3-control regression: PASS; 20 vias; 264 unrouted items")
+    print("Phase 15 U3-control regression: PASS; both VOUT lands tied; 263 unrouted items")
 
 
 if __name__ == "__main__":

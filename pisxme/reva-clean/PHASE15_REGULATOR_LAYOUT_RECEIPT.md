@@ -43,30 +43,33 @@ Evidence:
   edge coordinate; U4 remains intentionally escaped from the left pad-8 edge.
 - `phase15_u3_controls.py` adds the U3 feedback, RT, and PG network using
   eight deliberate 0.50/0.30 mm F.Cu-B.Cu transitions and separated B.Cu
-  corridors. Native DRC reports no route-specific clearance, short, or
-  crossing defect and the focused regression reduces unrouted items from 272
-  to 264. The same topology remains to be instantiated for U4 and U5.
+  corridors. Both exposed U3 VOUT lands are tied around the package
+  perimeter. Native DRC reports no route-specific clearance, short, crossing,
+  or dangling-via defect and the focused regression reduces unrouted items
+  from 272 to 263.
 
 - U4/U5 were separated to `(200,105)` and `(225,105)` respectively after the
   original 10 mm pitch produced native package-side corridor conflicts with
   U7. `phase15_u4_u5_controls.py` places the support parts in module-scoped
   rows, uses separated ordinary through-via trunks, and ties U4 C18 into the
-  local VOUT bank. Native DRC reports zero `clearance`, `shorting_items`, and
-  `tracks_crossing` findings; `test_phase15_u4_u5_controls.py` verifies 35
-  control/thermal vias and 254 unrouted acreage items.
+  local VOUT bank. It also ties both U4 VOUT lands and the U4/U5 output
+  pull-up returns into their local rail copper. Native DRC reports zero
+  `clearance`, `shorting_items`, `tracks_crossing`, or dangling-via findings;
+  `test_phase15_u4_u5_controls.py` verifies 38 control/thermal/output-return
+  vias and 249 unrouted acreage items.
 
 - `phase15_u5_vout_bank.py` adds a 4x4 bank of the sixteen schematic-authority
   output capacitors C26-C41. The first three rows are beside U5; the fourth
   clears the existing PG support resistor. The bank is fed from U5 pad 9 via
   a short F.Cu edge departure and an In2.Cu trunk, with one ordinary
-  through-via per capacitor. Native DRC and `test_phase15_u5_vout_bank.py`
-  verify 69 total
-  vias, 18 output-net vias, 28 PGND vias, all sixteen capacitor pad-1 net
-  assignments, and zero route-specific clearance, shorting, or crossing
-  findings at 237
-  unconnected acreage items. The 16 added PGND vias sit just outside the
-  capacitor lands, with short F.Cu links that avoid solder-mask bridging;
-  native DRC reports only the pre-existing board-wide mask/acreage findings.
+  through-via per capacitor. Both exposed U5 VOUT lands are explicitly tied
+  around the package perimeter, and the U5 FB-divider/PG pull-up returns are
+  tied into the output trunk. Native DRC and `test_phase15_u5_vout_bank.py`
+  verify 72 total vias, 21 output-net vias, 28 PGND vias, all sixteen
+  capacitor pad-1 assignments, both U5 VOUT-land associations, and zero
+  route-specific clearance, shorting, crossing, or dangling-via findings at
+  230 unconnected acreage items. The 16 added PGND vias sit just outside the
+  capacitor lands, with short F.Cu links that avoid solder-mask bridging.
   Quantitative effective capacitance, thermal margin, and reference-layout
   overlay evidence remain open; this checkpoint does not close Phase 15.
 
@@ -106,6 +109,8 @@ design-envelope thermal screen: at 50 C ambient and 90% efficiency it leaves
 19.8 C, 50.7 C, and 71.0 C to TI's 125 C junction limit for U3/U4/U5. This
 uses TI's 33.1 C/W reference metric and is not a board-specific thermal proof.
 
-This does not close Phase 15. Remaining required work is localized VIN and
-VOUT high-dI/dt routing, switch-node containment, exact-part DC-bias evidence,
-and board-specific thermal/overlay closure for each rail.
+This does not close Phase 15. The localized VIN/VOUT escapes, both exposed
+VOUT-land ties, output pull-up returns, control islands, and thermal-via
+arrays are implemented and pass focused native route checks. Remaining
+required work is switch-node containment review, exact-part DC-bias evidence,
+and board-specific thermal/reference-overlay closure for each rail.
