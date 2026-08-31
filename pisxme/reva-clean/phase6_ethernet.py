@@ -4,11 +4,21 @@ from phase3_scaffold import balanced, make_uuid
 
 ROOT = Path(__file__).resolve().parent
 
+PIN_UUID_BASES = {
+    'EDAC_A70_112_331N126_Ethernet': 0x60000000000000000000000000000000,
+    'TPD4E004DRYR': 0x61000000000000000000000000000000,
+}
+
+def pin_uuid(name, index):
+    return make_uuid(PIN_UUID_BASES[name] + index)
+
 def symbol(name, pins):
     rows = []
     for i, pin in enumerate(pins):
-        y = (i - (len(pins)-1)/2) * 2.5
-        rows.append('(pin passive line (at 20 %g 180) (length 5) (name "%s" (effects (font (size 1 1)))) (number "%d" (effects (font (size 1 1)))))' % (y, pin, i+1))
+        # KiCad schematic Y grows downward; keep pin 1 at the upper boundary
+        # so the generated boundary labels and native pin numbers coincide.
+        y = ((len(pins)-1)/2 - i) * 2.5
+        rows.append('(pin passive line (at 20 %g 180) (length 5) (name "%s" (effects (font (size 1 1)))) (number "%d" (effects (font (size 1 1)))) (uuid %s))' % (y, pin, i+1, pin_uuid(name, i)))
     return '(symbol "PiSXMeRevAClean:%s" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 -12 0) (effects (font (size 1 1)))) (property "Value" "%s" (at 0 12 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "%s_1_1" (rectangle (start -15 -10) (end 15 10) (stroke (width 0.254) (type default)) (fill (type background))) %s) (embedded_fonts no))' % (name, name, name, '\n'.join(rows))
 
 def part(lib, ref, mpn, x, y, nets, uid, footprint=''):
@@ -16,7 +26,10 @@ def part(lib, ref, mpn, x, y, nets, uid, footprint=''):
     for i, net in enumerate(nets):
         py=y+(i-(len(nets)-1)/2)*2.5
         labels.append('(label "%s" (at %g %g 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid %s))' % (net,x+20,py,make_uuid(uid+100+i)))
-        refs.append('(pin "%d" (uuid %s))' % (i+1,make_uuid(uid+i)))
+        # Instance pin UUIDs must be unique within the symbol instance and
+        # must not collide with the instance UUID itself.  KiCad resolves the
+        # library pin by number; the UUID is instance identity only.
+        refs.append('(pin "%d" (uuid %s))' % (i+1,make_uuid(uid + 0x100 + i)))
     return '\n'.join(labels)+'\n(symbol (lib_id "PiSXMeRevAClean:%s") (at %s %s 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid %s) (property "Reference" "%s" (at %s %s 0) (effects (font (size 1.1 1.1)))) (property "Value" "%s" (at %s %s 0) (effects (font (size 1.1 1.1)))) (property "MPN" "%s" (at %s %s 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "%s" (at %s %s 0) (effects (font (size 1 1)) (hide yes))) %s (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "%s") (unit 1)))) )' % (lib,x,y,make_uuid(uid),ref,x,y-13,mpn,x,y+13,mpn,x,y,footprint,x,y,'\n'.join(refs),ref)
 
 def main():

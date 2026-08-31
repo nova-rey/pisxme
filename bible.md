@@ -10,6 +10,13 @@
   `REV_A_EMPIRICAL_RISK`; inherited acreage DRC debt is not conflated with
   this focused route gate.
 
+## 2026-08-30 — Phase 17 Ethernet authority checkpoint
+
+- Promoted the eight CM5 Ethernet MDI boundaries to native global named nets
+  and corrected the generated symbol pin-Y convention and instance UUID path.
+- Native ERC is zero and the XML netlist proves J7-to-ESD-to-MagJack mapping
+  for all eight pairs; PCB regeneration is required before routing.
+
 ## 2026-08-30 — SERVICE ESD procurement recorded
 
 - Added TI `TPD2EUSB30DRTR` current procurement evidence to the matrix and
