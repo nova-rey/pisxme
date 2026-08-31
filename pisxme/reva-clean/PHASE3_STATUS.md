@@ -1,7 +1,7 @@
 # Phase 3 status
 
-Current state: `PISXME_REVA_CLEAN_PHASE3_CLOSED`; Phase 16 PCIe net authority
-correction is closed and routing remains gated.
+Current state: `PISXME_REVA_CLEAN_PHASE16_CLOSED_WITH_REV_A_EMPIRICAL_RISK`;
+Phase 17 Ethernet routing is next.
 
 Created: native root project shell, ten named child-sheet files, isolated
 `PiSXMeRevAClean` symbol/footprint tables, architecture contract, interface
@@ -39,6 +39,8 @@ Phase 4 schematic-only work is complete and is recorded in
 prohibited by the approved plan; Phase 5 is the next permitted phase after
 the Phase 4 checkpoint. Phase 5 is now closed with explicit
 `REV_A_EMPIRICAL_RISK` for routed-board and fabrication confirmation; Phases
-6–13 schematic/mechanical contracts audit green, and the next mutable work is
-the approved Phase 14/15 power-routing sequence. No Phase 16+ high-speed
-routing has started.
+6–13 schematic/mechanical contracts audit green, and the approved Phase 14/15
+power-routing sequence is complete. Phase 16 PCIe routing is closed with
+`PHASE16_PCIE_ROUTING_RECEIPT.md`; its two named CM5 breakout clearances are
+explicit Rev-A empirical risk. Phase 17 is now the next permitted phase; no
+Phase 18+ routing has started.

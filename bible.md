@@ -1,5 +1,15 @@
 # Append-only project bible
 
+## 2026-08-30 — Phase 16 PCIe routing checkpoint
+
+- Added the native-loaded Phase 16 PCIe candidate and focused regression.
+- Preserved exact PER0/REFCLK/PERST/PET0 net graphs and the transmitter-side
+  AC-coupling split at 0.13208 mm track width with ordinary 0.50/0.30 mm vias.
+- Native DRC has zero target-net shorts, crossings, or dangling vias. Two
+  authoritative CM5 SMD breakout clearance findings remain explicitly marked
+  `REV_A_EMPIRICAL_RISK`; inherited acreage DRC debt is not conflated with
+  this focused route gate.
+
 ## 2026-08-30 — SERVICE ESD procurement recorded
 
 - Added TI `TPD2EUSB30DRTR` current procurement evidence to the matrix and
