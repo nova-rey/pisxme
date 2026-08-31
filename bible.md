@@ -2330,3 +2330,12 @@
   and dangling vias; focused regressions cover both VOUT-land associations.
   Phase 15 remains open only for switch-node, exact DC-bias, and
   board-specific thermal/reference-overlay closure.
+
+2026-08-30 — Phase 15 switch-node containment audit
+
+- Added a fail-closed board audit proving the TPSM63606 SW/CBOOT/RBOOT nets
+  have no external copper or component pads in the final regulator candidate,
+  consistent with TI's internal-bootstrap/default-slew guidance.
+- A native no-connect serialization experiment was discarded after KiCad
+  ERC did not associate the generated markers with the child pin endpoints;
+  no speculative schematic change was retained.

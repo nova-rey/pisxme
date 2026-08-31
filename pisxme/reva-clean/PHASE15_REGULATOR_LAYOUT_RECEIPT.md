@@ -112,5 +112,8 @@ uses TI's 33.1 C/W reference metric and is not a board-specific thermal proof.
 This does not close Phase 15. The localized VIN/VOUT escapes, both exposed
 VOUT-land ties, output pull-up returns, control islands, and thermal-via
 arrays are implemented and pass focused native route checks. Remaining
-required work is switch-node containment review, exact-part DC-bias evidence,
-and board-specific thermal/reference-overlay closure for each rail.
+switch-node containment is now covered by
+`validation/phase3/phase15_switch_containment_audit.py`, which proves that
+the TI-default SW/CBOOT/RBOOT nets have no external copper or component pads
+on the final candidate. Remaining required work is exact-part DC-bias
+evidence and board-specific thermal/reference-overlay closure for each rail.
