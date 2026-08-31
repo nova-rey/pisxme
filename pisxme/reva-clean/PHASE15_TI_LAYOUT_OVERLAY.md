@@ -1,6 +1,6 @@
 # Phase 15 TPSM63606 vendor-layout overlay
 
-Status: `IN_PROGRESS`
+Status: `CLOSED_WITH_REV_A_EMPIRICAL_RISK`
 
 ## Authority
 
@@ -74,10 +74,14 @@ known Rev-A exception caused by the adjacent U7 pads and control island; it
 is not presented as equivalent to the TI illustration. U4 is also outside
 the EVM distance metric because its bank is offset to preserve the adjacent
 U5 and U7 corridors.
-Phase 15 remains open until the final three-rail candidate has a measured
-geometry overlay, exact effective-capacitance evidence or an explicitly
-bounded `REV_A_EMPIRICAL_RISK`, and a calculated thermal margin for the
-design-envelope currents.
+Phase 15 closes with the measured native geometry comparison, calculated
+nominal/effective-capacitance screen, and calculated design-envelope thermal
+margin. The exact TDK DC-bias/temperature sum, U4/U5 constrained placement
+envelopes, and board-specific thermal response are explicitly classified
+`REV_A_EMPIRICAL_RISK`: the retained public authorities do not provide a
+tabulated exact operating-point capacitance sum, and fabricated-board data is
+outside the design-only gate. These risks are carried forward and do not
+authorize later routing inside the accepted regulator keepouts.
 
 Provenance: TI datasheet retained locally for design-reference use under TI
 datasheet terms; all board observations are generated from native KiCad

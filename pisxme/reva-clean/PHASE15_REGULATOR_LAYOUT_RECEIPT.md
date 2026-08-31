@@ -1,6 +1,6 @@
 # Phase 15 regulator layout receipt
 
-Status: `IN_PROGRESS`
+Status: `CLOSED_WITH_REV_A_EMPIRICAL_RISK`
 
 This checkpoint establishes the first vendor-layout-derived geometry for the
 three TPSM63606 modules. `phase15_thermal_vias.py` starts from the closed
@@ -109,11 +109,19 @@ design-envelope thermal screen: at 50 C ambient and 90% efficiency it leaves
 19.8 C, 50.7 C, and 71.0 C to TI's 125 C junction limit for U3/U4/U5. This
 uses TI's 33.1 C/W reference metric and is not a board-specific thermal proof.
 
-This does not close Phase 15. The localized VIN/VOUT escapes, both exposed
-VOUT-land ties, output pull-up returns, control islands, and thermal-via
-arrays are implemented and pass focused native route checks. Remaining
-switch-node containment is now covered by
+The localized VIN/VOUT escapes, both exposed VOUT-land ties, output pull-up
+returns, control islands, thermal-via arrays, and switch-node containment are
+implemented and pass focused native route checks. A final native DRC of
+`ACREAGE_U5_VOUT_PHASE15.kicad_pcb` reports 296 total findings, all in the
+pre-existing acreage/mechanical/silkscreen/unconnected classes; it reports
+zero route crossings, shorts, dangling tracks, or dangling vias. Remaining
+uncertainties are explicitly classified `REV_A_EMPIRICAL_RISK`: the exact
+TDK DC-bias/temperature capacitance sum is graphical rather than tabulated,
+the U4/U5 capacitor envelopes are constrained by the adjacent storage
+bridge/control island, and board-specific thermal behavior cannot be proven
+without fabricated hardware. Switch-node containment is covered by
 `validation/phase3/phase15_switch_containment_audit.py`, which proves that
 the TI-default SW/CBOOT/RBOOT nets have no external copper or component pads
-on the final candidate. Remaining required work is exact-part DC-bias
-evidence and board-specific thermal/reference-overlay closure for each rail.
+on the final candidate. These risks do not block the approved transition to
+the next routed-signal phase; later phases must preserve the accepted
+regulator keepouts and local copper.
