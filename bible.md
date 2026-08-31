@@ -2357,3 +2357,12 @@
 - Corrected Phase 4 instance pin UUID generation so pin identities cannot alias
   the containing symbol UUID. Native KiCad export and the Phase 16 regression
   prove J7-to-SXM2 identity and preserve the PET0 split.
+
+2026-08-30 — Phase 16 routing rejection and netlist regression hardening
+
+- Rejected the first PCIe PCB candidate after native DRC found 422 violations,
+  including signal crossings, pad-field shorts, and incorrect escape geometry.
+- Strengthened the schematic authority regression from partial membership checks
+  to exact direct-net node sets and exact PET0 capacitor-side separation.
+- No invalid Phase 16 PCB candidate was retained; routing remains open and
+  Phase 17 is not started.
