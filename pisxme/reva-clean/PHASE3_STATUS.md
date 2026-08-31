@@ -1,6 +1,7 @@
 # Phase 3 status
 
-Current state: `PISXME_REVA_CLEAN_PHASE3_CLOSED`.
+Current state: `PISXME_REVA_CLEAN_PHASE3_CLOSED`; Phase 16 PCIe net authority
+correction is closed and routing remains gated.
 
 Created: native root project shell, ten named child-sheet files, isolated
 `PiSXMeRevAClean` symbol/footprint tables, architecture contract, interface

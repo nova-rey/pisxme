@@ -29,6 +29,17 @@ PORTS = {
     "DEBUG": ("UART", "RECOVERY", "POWER_PG_FAULT", "DEBUG_GND"),
 }
 
+# Root-level electrical links for signals that traverse the CORE_CM5 sheet and
+# the V100 connector inside V100_PCIE.  PET0 is intentionally absent: its two
+# sides remain separate nets across the transmitter-side AC capacitors.
+PCIE_DIRECT_ROOT_LINKS = (
+    ((35, 47), (70, 47)),   # PER0_P
+    ((35, 50), (70, 50)),   # PER0_N
+    ((35, 59), (70, 59)),   # REFCLK_P
+    ((35, 62), (70, 62)),   # REFCLK_N
+    ((35, 65), (70, 65)),   # PERST
+)
+
 
 def balanced(text: str, start: int) -> str:
     depth = 0
@@ -188,6 +199,13 @@ def main() -> None:
         for number, name in enumerate(SHEETS, 1)
         for index, _port in enumerate(PORTS[name])
     )
+    direct_wires = "".join(
+        f'''\n  (wire
+    (pts {''.join(f'(xy {x} {y}) ' for x, y in points).rstrip()})
+    (stroke (width 0) (type default))
+    (uuid {make_uuid(0xc0000000000000000000000000000000 + index)}))'''
+        for index, points in enumerate(PCIE_DIRECT_ROOT_LINKS)
+    )
     root = f'''(kicad_sch (version 20230409) (generator "eeschema")
   (uuid {make_uuid(0x30000000000000000000000000000000)})
   (paper "A4")
@@ -199,7 +217,7 @@ def main() -> None:
     (comment 4 "M.2 SATA ONLY - NVMe NOT SUPPORTED"))
   {lib_symbols}
 {''.join(sheet_block(name, index) for index, name in enumerate(SHEETS, 1))}
-{root_wires}
+{root_wires}{direct_wires}
   (sheet_instances (path "/" (page "1")))
 )
 '''

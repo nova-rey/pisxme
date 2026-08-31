@@ -62,7 +62,9 @@ def cap_definition() -> str:
 
 def instance(lib_id: str, ref: str, value: str, x: float, y: float, pins: tuple[str, ...], uid: int, footprint: str = "") -> str:
     pin_lines = ''.join(
-        f'    (pin "{pin}" (uuid {make_uuid(uid + i)}))\n'
+        # Pin UUIDs must be distinct from the symbol instance UUID. KiCad's
+        # resolver uses these identities when exporting hierarchical nets.
+        f'    (pin "{pin}" (uuid {make_uuid(uid + 0x100 + i)}))\n'
         for i, pin in enumerate(pins)
     )
     return f'''  (symbol
@@ -94,10 +96,13 @@ def main() -> None:
     lib_end = lib_start + len(balanced(text, lib_start)) - 1
     text = text[:lib_end].rstrip() + '\n' + sxm + '\n' + cap_definition() + text[lib_end:]
     labels = {
-        'A2': 'V100_PER0_P', 'A3': 'V100_PER0_N',
+        # Direct receive/refclk/reset paths use the CM5-side canonical net
+        # names; the corresponding V100 sheet ports remain interface
+        # metadata, while PET0 remains explicitly split across C1/C2.
+        'A2': 'CM5_PER0_P', 'A3': 'CM5_PER0_N',
         'G1': 'V100_PET0_P', 'G2': 'V100_PET0_N',
-        'E7': 'V100_REFCLK_P', 'F7': 'V100_REFCLK_N',
-        'E18': 'V100_PERST', 'PWR': 'V100_POWER_12V', 'GND': 'V100_GND',
+        'E7': 'CM5_REFCLK_P', 'F7': 'CM5_REFCLK_N',
+        'E18': 'CM5_PERST', 'PWR': 'V100_POWER_12V', 'GND': 'V100_GND',
     }
     ys = {'A2': 89.84, 'A3': 92.38, 'E7': 94.92, 'F7': 97.46,
           'E18': 100.0, 'G1': 102.54, 'G2': 105.08, 'PWR': 107.62, 'GND': 110.16}

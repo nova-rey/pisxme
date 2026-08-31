@@ -2349,3 +2349,11 @@
   capacitance sum, constrained U4/U5 capacitor envelopes, and board-specific
   thermal response. No fabricated-hardware claim is made, and later routing
   must preserve the accepted regulator keepouts.
+
+2026-08-30 — Phase 16 PCIe net-authority correction
+
+- Added the generic five-link root authoring contract for direct PER0, REFCLK,
+  and PERST connectivity; PET0 remains split across its two coupling capacitors.
+- Corrected Phase 4 instance pin UUID generation so pin identities cannot alias
+  the containing symbol UUID. Native KiCad export and the Phase 16 regression
+  prove J7-to-SXM2 identity and preserve the PET0 split.

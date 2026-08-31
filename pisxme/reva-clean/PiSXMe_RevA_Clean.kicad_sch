@@ -1034,5 +1034,25 @@
          (xy 185 86))
     (stroke (width 0) (type default))
     (uuid b0000000-0000-0000-0000-0000000003eb))
+  (wire
+    (pts (xy 35 47) (xy 70 47))
+    (stroke (width 0) (type default))
+    (uuid c1000000-0000-0000-0000-000000000000))
+  (wire
+    (pts (xy 35 50) (xy 70 50))
+    (stroke (width 0) (type default))
+    (uuid c1000000-0000-0000-0000-000000000002))
+  (wire
+    (pts (xy 35 59) (xy 70 59))
+    (stroke (width 0) (type default))
+    (uuid c1000000-0000-0000-0000-000000000004))
+  (wire
+    (pts (xy 35 62) (xy 70 62))
+    (stroke (width 0) (type default))
+    (uuid c1000000-0000-0000-0000-000000000006))
+  (wire
+    (pts (xy 35 65) (xy 70 65))
+    (stroke (width 0) (type default))
+    (uuid c1000000-0000-0000-0000-000000000008))
   (sheet_instances (path "/" (page "1")))
 )

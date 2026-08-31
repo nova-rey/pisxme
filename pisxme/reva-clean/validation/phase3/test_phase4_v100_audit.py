@@ -20,9 +20,9 @@ def main() -> None:
     ))
     assert not re.search(r"PER[1-9]|PET[1-9]|NVLINK|X16|SWITCH|REDRIVER", text, re.I)
     mapping = {
-        "A2": "V100_PER0_P", "A3": "V100_PER0_N",
+        "A2": "CM5_PER0_P", "A3": "CM5_PER0_N",
         "G1": "V100_PET0_P", "G2": "V100_PET0_N",
-        "E7": "V100_REFCLK_P", "F7": "V100_REFCLK_N", "E18": "V100_PERST",
+        "E7": "CM5_REFCLK_P", "F7": "CM5_REFCLK_N", "E18": "CM5_PERST",
     }
     for contact, net in mapping.items():
         assert f'(label "{net}"' in text, (contact, net)
