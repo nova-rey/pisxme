@@ -63,6 +63,9 @@ PAD_ALIASES = {
     # projected onto representative physical pads 1 and 5 respectively.
     "F1": {"1": ("1", "2", "3", "4"), "2": ("5", "6", "7", "8")},
     "F2": {"1": ("1", "2", "3", "4"), "2": ("5", "6", "7", "8")},
+    # EDAC's physical MDI lands are numbered in reverse relative to the
+    # logical symbol pins: logical pin 1 (TRD0+) is physical pad 18.
+    "J2": {str(pin): (str(19 - pin),) for pin in range(1, 19)},
 }
 
 

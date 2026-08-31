@@ -2393,3 +2393,11 @@
   source/endpoint sides.
 - The attempted PCIe geometry remains rejected by native DRC; no Phase 16
   routing gate or later phase was claimed.
+
+2026-08-30 — Phase 17 EDAC MagJack land-number authority correction
+
+- Corrected the generic schematic-to-PCB materializer with the EDAC J2
+  logical-pin-to-physical-pad 19-minus-pin map for all 18 contacts.
+- Regenerated the Phase 16 baseline through the full required pipeline and
+  verified MDI pairs on physical pads 18..11 plus center taps, LEDs, and
+  shields with the native pcbnew ABI regression.
