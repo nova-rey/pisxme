@@ -2401,3 +2401,11 @@
 - Regenerated the Phase 16 baseline through the full required pipeline and
   verified MDI pairs on physical pads 18..11 plus center taps, LEDs, and
   shields with the native pcbnew ABI regression.
+
+2026-08-30 — Phase 17 Ethernet routing candidate rejection
+
+- Rejected perimeter and dogbone candidates under native DRC; the frozen
+  Ethernet placement creates source-order permutations, existing power and
+  regulator crossings, NPTH keepout conflicts, and ESD pad-field shorts.
+- Phase 17 remains open with the no-improvised-maze gate intact; no invalid
+  copper candidate was committed.

@@ -1,7 +1,12 @@
 # Phase 3 status
 
 Current state: `PISXME_REVA_CLEAN_PHASE16_CLOSED_WITH_REV_A_EMPIRICAL_RISK`;
-Phase 17 Ethernet routing is next.
+Phase 17 Ethernet routing is next. Its schematic/land-pattern authority is
+closed in commit `490ae22`; the EDAC logical pins are explicitly mapped to
+physical pads 18..1. Copper routing remains open because the frozen placement
+does not currently admit a no-maze two-layer route: native DRC candidates
+encounter existing acreage trunks, NPTH keepouts, and ESD pad-field crossings.
+No invalid Ethernet candidate is accepted.
 
 Created: native root project shell, ten named child-sheet files, isolated
 `PiSXMeRevAClean` symbol/footprint tables, architecture contract, interface
