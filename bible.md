@@ -2366,3 +2366,13 @@
   to exact direct-net node sets and exact PET0 capacitor-side separation.
 - No invalid Phase 16 PCB candidate was retained; routing remains open and
   Phase 17 is not started.
+
+2026-08-30 — Phase 16 PET0 source-side authority correction
+
+- Linked CM5 PET0 source-side ports across the root to the V100 child while
+  keeping C1/C2 as the only electrical breaks to the SXM2 endpoint.
+- Regenerated the Phase 14/15 materialized candidates from the corrected
+  netlist; exact netlist regression passes for all direct paths and both PET0
+  source/endpoint sides.
+- The attempted PCIe geometry remains rejected by native DRC; no Phase 16
+  routing gate or later phase was claimed.

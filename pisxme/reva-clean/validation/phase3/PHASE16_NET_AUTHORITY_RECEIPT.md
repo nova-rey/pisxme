@@ -4,12 +4,13 @@ Checked: 2026-08-30. Status: `CLOSED` for schematic net authority; PCB
 routing remains the active Phase 16 gate.
 
 The clean root authoring path now declares five direct cross-sheet links:
-PER0_P/N, REFCLK_P/N, and PERST. The links connect the `CORE_CM5` sheet pins
-to the corresponding `V100_PCIE` CM5-side sheet pins with one native root wire
-each. The V100 connector endpoints use the same canonical CM5 net names.
+PER0_P/N, REFCLK_P/N, and PERST. It also links the two CM5-side PET0 ports to
+the V100 child before C1/C2. The V100 connector endpoints use the same
+canonical CM5 net names for direct paths.
 
-PET0_P/N are intentionally excluded from the direct-link table. Their CM5 and
-V100 sides remain distinct and are connected only through C1 and C2.
+PET0_P/N are intentionally excluded from the direct-to-connector set. Their
+CM5/source and V100/endpoint sides remain distinct and are connected only
+through C1 and C2.
 
 The Phase 4 instance helper now assigns pin UUIDs distinct from the containing
 symbol UUID; this prevents KiCad netlist pin-identity aliasing. Native KiCad

@@ -747,6 +747,14 @@
 
 
   (wire
+    (pts (xy 35 53) (xy 70 53))
+    (stroke (width 0) (type default))
+    (uuid c1000000-0000-0000-0000-00000000000a))
+  (wire
+    (pts (xy 35 56) (xy 70 56))
+    (stroke (width 0) (type default))
+    (uuid c1000000-0000-0000-0000-00000000000b))
+  (wire
     (pts (xy 35 47)
          (xy 45 47))
     (stroke (width 0) (type default))

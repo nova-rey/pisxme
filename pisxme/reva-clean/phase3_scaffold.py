@@ -30,7 +30,7 @@ PORTS = {
 }
 
 # Root-level electrical links for signals that traverse the CORE_CM5 sheet and
-# the V100 connector inside V100_PCIE.  PET0 is intentionally absent: its two
+# the V100_PCIE child.  PET0 is linked only on its CM5/source side; its two
 # sides remain separate nets across the transmitter-side AC capacitors.
 PCIE_DIRECT_ROOT_LINKS = (
     ((35, 47), (70, 47)),   # PER0_P
@@ -38,6 +38,8 @@ PCIE_DIRECT_ROOT_LINKS = (
     ((35, 59), (70, 59)),   # REFCLK_P
     ((35, 62), (70, 62)),   # REFCLK_N
     ((35, 65), (70, 65)),   # PERST
+    ((35, 53), (70, 53)),   # PET0_P source side, before C1
+    ((35, 56), (70, 56)),   # PET0_N source side, before C2
 )
 
 

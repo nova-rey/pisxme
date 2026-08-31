@@ -19,7 +19,7 @@ def net_nodes(xml_path):
 
 def main():
     text = (ROOT / "PiSXMe_RevA_Clean.kicad_sch").read_text()
-    assert text.count("c1000000-0000-0000-0000-000000000") == 5
+    assert text.count("c1000000-0000-0000-0000-000000000") == 7
     with tempfile.TemporaryDirectory(prefix="pisxme-phase16-net-") as td:
         out = ROOT / ".phase16-netlist-test.xml"
         subprocess.run([
@@ -41,15 +41,11 @@ def main():
     for suffix, expected in direct.items():
         matches = [nodes for name, nodes in nets.items() if name.endswith("/" + suffix)]
         assert matches == [expected], (suffix, matches)
+    assert {("J7", "122"), ("C1", "1"), ("X1", "3"), ("X2", "3")} in nets.values()
+    assert {("J7", "124"), ("C2", "1"), ("X1", "4"), ("X2", "4")} in nets.values()
     # PET0 must not be accidentally shorted across its coupling capacitors.
-    assert {("J7", "122"), ("X1", "3")} in nets.values()
-    assert {("J7", "124"), ("X1", "4")} in nets.values()
-    assert {("C1", "1"), ("X2", "3")} in nets.values()
-    assert {("C2", "1"), ("X2", "4")} in nets.values()
-    assert not any(set(nodes) >= {("J7", "122"), ("C1", "1")}
-                   for nodes in nets.values())
-    assert not any(set(nodes) >= {("J7", "124"), ("C2", "1")}
-                   for nodes in nets.values())
+    assert {("J7", "122"), ("C1", "1"), ("X1", "3"), ("X2", "3")} in nets.values()
+    assert {("J7", "124"), ("C2", "1"), ("X1", "4"), ("X2", "4")} in nets.values()
     print("Phase 16 PCIe root net authority: PASS; direct=5; PET0 split=preserved")
 
 
