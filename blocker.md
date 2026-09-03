@@ -585,3 +585,23 @@ accepted, but it does not reject the CM5IO architecture. The next distinct
 authorized experiment is a connector-side layer-split/pair-preserving launch
 or an official-connector comparison, with explicit return/support treatment.
 No Phase 18+ work has started.
+
+## EDAC connector-side layer-split trial — 2026-09-03
+
+The next distinct trial moved TD1 and TD3 through ordinary F.Cu-to-B.Cu
+transitions outside the ESD pads, leaving TD0 and TD2 on F.Cu. This follows
+the approved layer policy and keeps each differential pair together. Native
+DRC improved the launch-specific total from 20 to 14 violations, but still
+found two track crossings, three net shorts, and 17 unconnected items.
+
+The candidate is rejected. The remaining unconnected count includes support
+pads inherited by the disposable source; the shorts/crossings are sufficient
+to fail the acceptance gate independently. No production asset or later
+phase was changed. The candidate and report are retained as
+`CM5IO_EDAC_PIN_ACCURATE_LAUNCH_FIXTURE.kicad_pcb` and
+`CM5IO_EDAC_PIN_ACCURATE_LAUNCH_FIXTURE-drc.rpt`.
+
+The next bounded option is the official CM5IO MagJack comparison fixture,
+which separates the already-passing source/ESD escape from the EDAC-specific
+launch geometry. The complete official CM5IO fixture remains passing; the
+EDAC production launch remains the earliest failed Phase 17 gate.

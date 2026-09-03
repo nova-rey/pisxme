@@ -8,10 +8,13 @@ OUT=ROOT/'CM5IO_EDAC_PIN_ACCURATE_LAUNCH_FIXTURE.kicad_pcb'
 
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def xy(p): return pcbnew.ToMM(p.x),pcbnew.ToMM(p.y)
-def addroute(b,pts,n):
+def addroute(b,pts,n,layer=pcbnew.F_Cu):
     for a,z in zip(pts,pts[1:]):
-        t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(pcbnew.F_Cu)
+        t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(layer)
         t.SetWidth(pcbnew.FromMM(.127)); t.SetNet(n); b.Add(t)
+def addvia(b,p,n):
+    q=pcbnew.PCB_VIA(b); q.SetPosition(V(*p)); q.SetWidth(pcbnew.FromMM(.45)); q.SetDrill(pcbnew.FromMM(.20))
+    q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(n); b.Add(q)
 
 def main():
     b=pcbnew.LoadBoard(str(BASE))
@@ -39,6 +42,15 @@ def main():
       'CM5_GBE_TD3_P':[(69.1,65.6),(70.0,64.2),(70.595,61.89)],
       'CM5_GBE_TD3_N':[(69.6,65.6),(68.5,64.2),(69.325,59.35)],
     }
-    for n,pts in paths.items(): addroute(b,pts,net[n])
+    # Connector-side layer-split trial: TD1 and TD3 leave the ESD package on
+    # ordinary through-vias and use B.Cu to pass beneath the F.Cu pair lanes.
+    split={'CM5_GBE_TD1_P':(74.7,66.8),'CM5_GBE_TD1_N':(76.2,66.8),
+           'CM5_GBE_TD3_P':(68.7,66.8),'CM5_GBE_TD3_N':(70.2,66.8)}
+    for n,p in split.items(): addvia(b,p,net[n])
+    for n,pts in paths.items():
+        if n in split:
+            addroute(b,[pts[0],split[n]],net[n])
+            addroute(b,[split[n],*pts[1:]],net[n],pcbnew.B_Cu)
+        else: addroute(b,pts,net[n])
     b.Save(str(OUT)); print('saved',OUT)
 if __name__=='__main__': main()

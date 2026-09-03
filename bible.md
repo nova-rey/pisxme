@@ -2762,3 +2762,12 @@
 - Rejected the trial at 20 violations and 17 unconnected items, including
   pair crossings/shorts; preserved the report and kept production and later
   phases gated.
+
+2026-09-03 — Phase 17 EDAC connector-side layer split trial
+
+- Tried ordinary F.Cu-to-B.Cu transitions for TD1 and TD3 while retaining
+  pair integrity and the approved layer contract.
+- Reduced the launch-specific DRC count from 20 to 14, but retained two
+  crossings, three net shorts, and 17 unconnected items; rejected the trial.
+- Kept the CM5IO source/ESD oracle and all production/later-phase assets
+  gated; the next experiment is the official MagJack comparison.
