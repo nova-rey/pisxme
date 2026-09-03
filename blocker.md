@@ -156,6 +156,10 @@ Evidence:
 - Initial full-board DRC result: 96 violations, 76 unconnected items.
 - Isolated-base rerun: 65 violations, 21 unconnected items after removing
   unrelated CM5 source pads from the disposable J7 copy.
+- Reoriented two-layer corridor experiment: 105 violations, 4 unconnected
+  items. This reduced dangling connectivity but introduced multiple true
+  same-layer shorts/crossings at the J2 launch and did not provide a valid
+  transition topology; it is rejected.
 - Material isolated-fixture failures are true pair crossings, connector-launch
   shorts to center-tap pads, and no ordinary via/F.Cu dogbone transitions for
   the B.Cu-assigned pairs. Therefore this is not a valid Phase 17 proof.

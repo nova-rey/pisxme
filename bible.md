@@ -2488,3 +2488,13 @@
 - The next repair remains bounded to the disposable fixture: reorient the
   launch, use exact J2 coordinates, add symmetric through-via/dogbone and GND
   return transitions, then rerun native DRC and route metrics.
+
+2026-09-03 — Phase 17 Ethernet reorientation experiment
+
+- Tried a distinct disposable placement with relocated J7/J2 and separated
+  F.Cu/B.Cu pair corridors. Native DRC recorded 105 violations and 4
+  unconnected pads, including true J2-launch shorts/crossings and invalid
+  transition geometry.
+- Rejected this corridor construction without relaxing clearance or layer
+  rules. SP3019 remains an open candidate; the clean board/schematic remain
+  unchanged.
