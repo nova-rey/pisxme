@@ -942,3 +942,16 @@ The corrected oracle is preserved as
 native report. This closes the hypothesis that the fixed J7 pad field is
 intrinsically unroutable; remaining Phase 17 work is complete-island
 integration and validation.
+
+## Current J7 launch receipt correction — 2026-09-03
+
+The controlling rerun after the final source-order-preserving offset change
+reports **32 total DRC violations / 63 expected non-MDI unconnected pads**:
+24 width-rule findings and 8 diagnostic dangling ends. It still reports zero
+tracks-crossing, zero shorting-items, zero clearance, and zero hole-clearance
+findings. The prior 34-total count is superseded by this receipt.
+
+The complete official CM5IO transplant was also rerun natively and reports 8
+silkscreen-only violations with zero unconnected items. It remains the
+complete-island authority baseline; the acreage copy is not accepted because
+its unrelated floorplan debt is still present.

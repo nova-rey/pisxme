@@ -2946,3 +2946,11 @@
   remain explicitly reported.
 - Closed the fixed-J7-launch hypothesis and retained Phase 17 for complete
   ESD/MagJack integration; Phase 18+ remains gated.
+
+2026-09-03 — Phase 17 current J7/transplant receipts
+
+- Corrected the controlling J7 launch receipt to 32 total DRC findings,
+  consisting only of width-rule/dangling diagnostics plus expected non-MDI
+  fixture omissions; zero crossings, shorts, clearance, and hole-clearance.
+- Reran the complete CM5IO transplant: 8 silkscreen-only findings and zero
+  unconnected items. Retained it as the full-island authority baseline.
