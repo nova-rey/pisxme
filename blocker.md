@@ -203,3 +203,17 @@ No frozen subsystem has been changed. No clean PCB/schematic has been changed.
 Phase 17 remains open pending a complete fixture with zero candidate-specific
 opens/shorts/crossings, complete connector launch, and documented 100-ohm
 geometry.
+
+## Correction to ESDS304 evidence — 2026-09-03
+
+The initial ESDS304 DRC result was not admissible as component evidence: the
+local footprint had the wrong pad-side distribution and overlapping pads.
+The footprint has now been corrected to the TI DBV0005A arrangement and the
+fixture was regenerated from scratch. The corrected rerun reports **100
+native DRC violations and 11 unconnected items**, including true ESD/source
+shorts, crossings, and incomplete launches. That candidate route is rejected,
+but the corrected result does not reject ESDS304 electrically. A further
+Ethernet-local escape construction remains required before Phase 17 can pass.
+
+The clean authority and production PCB remain unchanged. This is the current
+blocker record; Phase 18+ has not started.

@@ -2550,3 +2550,16 @@
   capacitance, and passive topology in the ESD replacement research note.
 - This is an alternative candidate only; no clean production asset was
   changed and no ESDS304 routing pass has been claimed.
+
+2026-09-03 — Phase 17 ESDS304 footprint-authority correction
+
+- Specialist review found the disposable ESDS304 footprint did not match TI
+  DBV0005A: its pads were distributed on the wrong sides and overlapped.
+- Corrected the local footprint to the TI-authoritative 5-pad arrangement,
+  dimensions, paste/mask, and expanded courtyard, then regenerated the
+  disposable fixture.
+- Fresh native DRC reports 100 violations and 11 unconnected items. Rejected
+  the route construction as failed, while retaining ESDS304 as an electrically
+  credible alternative. The result does not reject the part itself.
+- Updated `blocker.md` to distinguish invalid prior evidence from the
+  corrected negative routing result. Production assets remain untouched.

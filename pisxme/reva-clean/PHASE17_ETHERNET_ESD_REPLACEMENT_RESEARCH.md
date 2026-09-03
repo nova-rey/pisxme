@@ -75,3 +75,12 @@ row spacing), with explicit F.Paste, F.Mask, and F.CrtYd layers. It is a
 candidate artifact only: the clean schematic and production PCB have not been
 changed, and the ESDS304 fixture has not yet passed native DRC or procurement
 review.
+
+The initial ESDS304 escape was invalid evidence because the local footprint
+had the wrong pad-side distribution and overlapping pads. The footprint was
+corrected to the TI DBV0005A arrangement: pads 1/2/3 on one side, pads 5/4
+on the other, 2.6 mm row separation, 0.95 mm pitch, and 0.6 mm × 1.1 mm
+exposed metal. The corrected rerun still fails as a routing construction:
+native DRC reports 100 violations and 11 unconnected items. It is rejected
+for Phase 17, but ESDS304 itself remains an electrically credible active
+alternative pending a new escape construction.
