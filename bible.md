@@ -2823,3 +2823,13 @@
 - Rebuilt and natively checked the disposable transplant: 8 warning-only
   violations, 0 unconnected pads, and 0 footprint errors. Acreage Phase 17
   remains open and Phase 18+ remains gated.
+
+2026-09-03 — Phase 17 top-left Ethernet side-escape trial
+
+- Tested a distinct CM5IO-aligned top-left placement with J2 at (30,45) and
+  explicit left/right exits around the fixed J7 connector body.
+- Rejected the candidate at native DRC: 428 violations and 485 unconnected
+  items, including true TD2 pair short/crossing failures and EDAC support
+  overlap with the F1/input envelope.
+- Preserved the disposable PCB, generator, and DRC receipt; no frozen
+  subsystem or production PCB was promoted and Phase 18+ remains gated.

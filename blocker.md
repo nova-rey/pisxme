@@ -676,3 +676,25 @@ The corrected disposable transplant was regenerated and natively checked:
 is an authoring/fixture correction, not a Phase 17 acreage pass. The routed
 ancestor still has the placement-context failures documented above, so
 Phase 18+ remains gated.
+
+## Top-left side-escape placement trial — 2026-09-03
+
+After correcting the USON orientation/mapping, a distinct placement class was
+tested: the official connector/ESD-side geometry was translated to J2=(30,45)
+above and left of J7, with J7 pair groups exiting around the connector sides
+before rising to the ESD island. This avoids the regulator/C5-C8 corridor that
+invalidated the previous CM5IO-aligned placement.
+
+The candidate is rejected by native KiCad DRC: 428 violations and 485
+unconnected items. The Ethernet-local failures include pair crossings and a
+TD2_P/TD2_N short in the side escape. The translated EDAC LED/support lands
+also overlap the nearby F1/input-envelope region. The unconnected count is
+not used as an Ethernet-only metric because this candidate was built on the
+unrouted acreage ancestor; the true pair crossings/short are independently
+fatal. No frozen subsystem was moved and no production PCB was promoted.
+
+The experiment is retained as
+`ACREAGE_CM5IO_TOP_ISLAND_SIDE_ESCAPE_PHASE17.kicad_pcb` with its native DRC
+report and generator. It narrows the authorized placement search: a passing
+candidate needs both a J7 side escape that preserves pair order and a support
+placement clear of F1, while retaining the official CM5IO topology.
