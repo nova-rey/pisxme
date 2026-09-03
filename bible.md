@@ -2911,3 +2911,11 @@
 - Rejected native KiCad DRC at 364 violations/453 unconnected items because
   Ethernet-local crossings/launch-clearance failures remained. Preserved the
   candidate and DRC receipt; no production or frozen subsystem changed.
+
+2026-09-03 — Phase 17 layer-separated launch refinement
+
+- Split measured J7 source groups across F.Cu/B.Cu with ordinary through-vias
+  and increased via spacing from the failed 0.5 mm arrangement.
+- Native DRC improved to 163 violations/3 unconnected items but still found
+  B.Cu MDI crossings and connector/transition clearances; candidate rejected.
+- Preserved the refined fixture/report and kept Phase 17 as the earliest gate.

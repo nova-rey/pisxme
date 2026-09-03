@@ -35,7 +35,23 @@ monotonic, no-maze Ethernet route.
   violations.
 - Tested variants included perimeter routing, separated B.Cu corridors,
   via-in-pad transitions, and compact ESD placements. None passed the Phase 17
-  gate.
+gate.
+
+## Layer-separated 180-degree launch refinement — 2026-09-03
+
+The isolated 180-degree fixture was refined using measured failure data.
+TD2/TD0 and the right-side source groups were moved to B.Cu through ordinary
+through-vias; via centers were increased to approximately 0.8 mm separation
+where the previous trial had 0.5 mm clearance failures. No plane-layer
+signals or via-in-pad transitions were used.
+
+Native KiCad DRC improved from 192 to **163 violations**, with **3
+unconnected items**, but still rejects the fixture. Remaining failures
+include B.Cu tracks crossing other MDI routes, J2 through-hole/route
+collisions, and residual J7/ESD transition clearances. This is a bounded
+refinement, not Phase 17 closure. The updated fixture and report remain at
+`CM5IO_ROT180_WEST_FIXTURE.kicad_pcb` and
+`CM5IO_ROT180_LAYER_SPLIT_FIXTURE-drc.rpt`.
 - No rejected candidate was accepted as production routing.
 
 ## Authority status
