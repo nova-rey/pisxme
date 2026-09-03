@@ -173,6 +173,10 @@ Evidence:
   two external SP3019 GND return vias with a B.Cu GND spine. Connectivity and
   return continuity now pass, but true pair crossings/shorts remain, so the
   fixture is still rejected for Phase 17.
+- Source-fanout correction: 76 violations, 0 unconnected pads after moving the
+  source transitions onto separated external lanes and correcting the B.Cu
+  segment construction. This removes the prior dangling-net class, but true
+  pair crossings/shorts and connector clearances remain.
 - Material isolated-fixture failures are true pair crossings, connector-launch
   shorts to center-tap pads, and no ordinary via/F.Cu dogbone transitions for
   the B.Cu-assigned pairs. Therefore this is not a valid Phase 17 proof.

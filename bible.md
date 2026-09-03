@@ -2532,3 +2532,11 @@
 - Native DRC still reports 79 true pair crossings/shorts, so this remains a
   failed disposable experiment. SP3019 was not promoted and production files
   were not changed.
+
+2026-09-03 — Phase 17 Ethernet source-fanout correction
+
+- Moved the B.Cu source transitions onto separated external lanes and fixed
+  the B.Cu segment construction. Native DRC now reports 0 unconnected pads
+  and 76 remaining true crossings/shorts/clearance violations.
+- The fixture remains failed and disposable; SP3019 was not promoted and the
+  clean PCB/schematic remain unchanged.
