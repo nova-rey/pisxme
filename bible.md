@@ -2409,3 +2409,8 @@
   regulator crossings, NPTH keepout conflicts, and ESD pad-field shorts.
 - Phase 17 remains open with the no-improvised-maze gate intact; no invalid
   copper candidate was committed.
+
+2026-09-03 — Published Phase 17 blocker report
+
+- Added the readable repository-root `blocker.md` report and preserved the
+  current rejected-route evidence for private GitHub review.

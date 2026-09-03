@@ -264,7 +264,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "ACREAGE_PCIE_PHASE16.kicad_pro",
+    "filename": "ACREAGE_ETHERNET_PHASE17.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -285,6 +285,25 @@
         "track_width": 0.2,
         "tuning_profile": "",
         "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
+        "diff_pair_gap": 0.2032,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.13208,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "HS_GBE_100R",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": -1,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.13208,
+        "tuning_profile": "",
+        "via_diameter": 0.5,
         "via_drill": 0.3,
         "wire_width": 6
       },
@@ -345,6 +364,38 @@
       {
         "netclass": "HS_PCIE_90R",
         "pattern": "/V100_PCIE/V100_PET0_N"
+      },
+      {
+        "netclass": "HS_GBE_100R",
+        "pattern": "CM5_GBE_TD0_P"
+      },
+      {
+        "netclass": "HS_GBE_100R",
+        "pattern": "CM5_GBE_TD0_N"
+      },
+      {
+        "netclass": "HS_GBE_100R",
+        "pattern": "CM5_GBE_TD1_P"
+      },
+      {
+        "netclass": "HS_GBE_100R",
+        "pattern": "CM5_GBE_TD1_N"
+      },
+      {
+        "netclass": "HS_GBE_100R",
+        "pattern": "CM5_GBE_TD2_P"
+      },
+      {
+        "netclass": "HS_GBE_100R",
+        "pattern": "CM5_GBE_TD2_N"
+      },
+      {
+        "netclass": "HS_GBE_100R",
+        "pattern": "CM5_GBE_TD3_P"
+      },
+      {
+        "netclass": "HS_GBE_100R",
+        "pattern": "CM5_GBE_TD3_N"
       }
     ]
   },
