@@ -1,100 +1,28 @@
 ** Drc report for CM5IO_PISXME_ETHERNET_TRANSPLANT_FIXTURE.kicad_pcb **
-** Created on 2026-09-03T15:30:19 **
+** Created on 2026-09-03T15:35:45 **
 ** Report includes: Errors, Warnings **
 
-** Found 36 DRC violations **
+** Found 18 DRC violations **
+[shorting_items]: Items shorting two nets (nets GBE_SHIELD and ETH_CT_COMMON)
+    Local override; error
+    @(80.3750 mm, 56.0500 mm): PTH pad 19 [GBE_SHIELD] of J2
+    @(78.2150 mm, 56.8300 mm): Track [ETH_CT_COMMON] on B.Cu, length 4.7260 mm
 [hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
     Rule: board setup constraints hole; error
-    @(80.7000 mm, 53.0000 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_F_Cu' [ETH_GND] on F.Cu, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(80.7000 mm, 53.0000 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_B_Cu' [ETH_GND] on B.Cu, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(80.7000 mm, 53.0000 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_In1' [ETH_GND] on In1.GND, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(80.7000 mm, 42.2500 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_F_Cu' [ETH_GND] on F.Cu, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(80.7000 mm, 42.2500 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_B_Cu' [ETH_GND] on B.Cu, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(80.7000 mm, 42.2500 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_In1' [ETH_GND] on In1.GND, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
+    @(69.3250 mm, 55.5600 mm): Track [ETH_CT_COMMON] on B.Cu, length 13.8409 mm
     @(78.2150 mm, 53.0000 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_F_Cu' [ETH_GND] on F.Cu, priority 0
 [hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
     Rule: board setup constraints hole; error
+    @(75.6750 mm, 55.5600 mm): Track [ETH_CT_COMMON] on B.Cu, length 7.2580 mm
     @(78.2150 mm, 53.0000 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_B_Cu' [ETH_GND] on B.Cu, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(78.2150 mm, 53.0000 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_In1' [ETH_GND] on In1.GND, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(78.2150 mm, 53.0000 mm): NPTH pad of J2
-    @(52.0000 mm, 44.0000 mm): Zone 'ETH_CT_COMMON_In2' [ETH_CT_COMMON] on In2.PWR, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(66.7850 mm, 53.0000 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_F_Cu' [ETH_GND] on F.Cu, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(66.7850 mm, 53.0000 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_B_Cu' [ETH_GND] on B.Cu, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(66.7850 mm, 53.0000 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_In1' [ETH_GND] on In1.GND, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(66.7850 mm, 53.0000 mm): NPTH pad of J2
-    @(52.0000 mm, 44.0000 mm): Zone 'ETH_CT_COMMON_In2' [ETH_CT_COMMON] on In2.PWR, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(64.3000 mm, 53.0000 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_F_Cu' [ETH_GND] on F.Cu, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(64.3000 mm, 53.0000 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_B_Cu' [ETH_GND] on B.Cu, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(64.3000 mm, 53.0000 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_In1' [ETH_GND] on In1.GND, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(64.3000 mm, 42.2500 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_F_Cu' [ETH_GND] on F.Cu, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(64.3000 mm, 42.2500 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_B_Cu' [ETH_GND] on B.Cu, priority 0
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.1900 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(64.3000 mm, 42.2500 mm): NPTH pad of J2
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_In1' [ETH_GND] on In1.GND, priority 0
-[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0100 mm; actual 0.0000 mm)
-    Rule: board setup constraints edge; error
-    @(8.0000 mm, 35.0000 mm): Segment on Edge.Cuts
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_F_Cu' [ETH_GND] on F.Cu, priority 0
-[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0100 mm; actual 0.0000 mm)
-    Rule: board setup constraints edge; error
-    @(8.0000 mm, 35.0000 mm): Segment on Edge.Cuts
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_B_Cu' [ETH_GND] on B.Cu, priority 0
-[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0100 mm; actual 0.0000 mm)
-    Rule: board setup constraints edge; error
-    @(8.0000 mm, 35.0000 mm): Segment on Edge.Cuts
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_In1' [ETH_GND] on In1.GND, priority 0
+[tracks_crossing]: Tracks crossing
+    Rule: netclass 'Default'; error
+    @(95.0000 mm, 74.0000 mm): Track [ETH_GND] on B.Cu, length 24.0000 mm
+    @(80.3750 mm, 56.0500 mm): Track [GBE_SHIELD] on B.Cu, length 15.6250 mm
+[shorting_items]: Items shorting two nets (nets ETH_GND and CM5_GBE_TD2_N)
+    Local override; error
+    @(68.0000 mm, 68.0000 mm): Via [ETH_GND] on F.Cu - B.Cu
+    @(69.5213 mm, 68.1100 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 9.7000 mm
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; error
     @(80.4500 mm, 63.6750 mm): Rectangle of J2 on F.Silkscreen
@@ -119,21 +47,23 @@
     Local override; error
     @(80.4500 mm, 63.6750 mm): Rectangle of J2 on F.Silkscreen
     @(80.3750 mm, 56.0500 mm): PTH pad 19 [GBE_SHIELD] of J2
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(91.5200 mm, 48.0000 mm): Track [ETH_CT_COMMON] on B.Cu, length 2.4800 mm
 [isolated_copper]: Isolated copper fill
     Local override; warning
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_In1' [ETH_GND] on In1.GND, priority 0
+    @(68.0000 mm, 63.0000 mm): Zone 'ETH_GND_U6_F_Cu' [ETH_GND] on F.Cu, priority 0
 [isolated_copper]: Isolated copper fill
     Local override; warning
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_In1' [ETH_GND] on In1.GND, priority 0
-[isolated_copper]: Isolated copper fill
-    Local override; warning
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_B_Cu' [ETH_GND] on B.Cu, priority 0
-[isolated_copper]: Isolated copper fill
-    Local override; warning
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_B_Cu' [ETH_GND] on B.Cu, priority 0
-[isolated_copper]: Isolated copper fill
-    Local override; warning
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_B_Cu' [ETH_GND] on B.Cu, priority 0
+    @(68.0000 mm, 63.0000 mm): Zone 'ETH_GND_U6_F_Cu' [ETH_GND] on F.Cu, priority 0
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1250 mm; actual 0.0923 mm)
+    Rule: netclass 'Default'; warning
+    @(79.1300 mm, 48.9400 mm): PTH pad 15 [GBE_LED_Y_A] of J2
+    @(66.7850 mm, 56.8300 mm): Track [ETH_CT_COMMON] on B.Cu, length 17.3460 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1250 mm; actual 0.0965 mm)
+    Rule: netclass 'Default'; warning
+    @(68.0000 mm, 68.0000 mm): Via [ETH_GND] on F.Cu - B.Cu
+    @(68.8615 mm, 67.5900 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 9.2828 mm
 [lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'
     Local override; warning
     @(92.0000 mm, 48.0000 mm): Footprint C1
@@ -141,11 +71,7 @@
     Local override; warning
     @(83.7300 mm, 51.7300 mm): Footprint J9
 
-** Found 13 unconnected pads **
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(69.3250 mm, 55.5600 mm): PTH pad 13 [ETH_CT_COMMON] of J2
-    @(66.7850 mm, 56.8300 mm): PTH pad 14 [ETH_CT_COMMON] of J2
+** Found 7 unconnected pads **
 [unconnected_items]: Missing connection between items
     Local override; error
     @(73.1350 mm, 61.8900 mm): PTH pad 5 [ETH_CT_COMMON] of J2
@@ -153,47 +79,27 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(74.4050 mm, 59.3500 mm): PTH pad 4 [ETH_CT_COMMON] of J2
-    @(69.3250 mm, 55.5600 mm): PTH pad 13 [ETH_CT_COMMON] of J2
+    @(75.6750 mm, 55.5600 mm): Track [ETH_CT_COMMON] on B.Cu, length 7.2580 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(75.6750 mm, 55.5600 mm): PTH pad 12 [ETH_CT_COMMON] of J2
-    @(74.4050 mm, 59.3500 mm): PTH pad 4 [ETH_CT_COMMON] of J2
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(78.2150 mm, 56.8300 mm): PTH pad 11 [ETH_CT_COMMON] of J2
-    @(75.6750 mm, 55.5600 mm): PTH pad 12 [ETH_CT_COMMON] of J2
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(78.2150 mm, 56.8300 mm): PTH pad 11 [ETH_CT_COMMON] of J2
-    @(83.7300 mm, 54.2700 mm): PTH pad 3 [ETH_CT_COMMON] of J9
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(83.7300 mm, 51.7300 mm): PTH pad 1 [ETH_CT_COMMON] of J9
-    @(83.7300 mm, 54.2700 mm): PTH pad 3 [ETH_CT_COMMON] of J9
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(86.2700 mm, 51.7300 mm): PTH pad 2 [ETH_CT_COMMON] of J9
     @(91.5200 mm, 48.0000 mm): Pad 1 [ETH_CT_COMMON] of C1 on F.Cu
+    @(91.5200 mm, 48.0000 mm): Track [ETH_CT_COMMON] on B.Cu, length 2.4800 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(86.2700 mm, 54.2700 mm): PTH pad 4 [ETH_CT_COMMON] of J9
-    @(83.7300 mm, 54.2700 mm): PTH pad 3 [ETH_CT_COMMON] of J9
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(70.1000 mm, 64.8300 mm): Pad 8 [ETH_GND] of U6 on F.Cu
+    @(68.0000 mm, 68.0000 mm): Via [ETH_GND] on F.Cu - B.Cu
     @(70.1000 mm, 65.6000 mm): Pad 3 [ETH_GND] of U6 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(76.1000 mm, 64.8300 mm): Pad 8 [ETH_GND] of U9 on F.Cu
+    @(70.1000 mm, 65.6000 mm): Pad 3 [ETH_GND] of U6 on F.Cu
     @(70.1000 mm, 64.8300 mm): Pad 8 [ETH_GND] of U6 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(76.1000 mm, 64.8300 mm): Pad 8 [ETH_GND] of U9 on F.Cu
-    @(8.0000 mm, 35.0000 mm): Zone 'ETH_GND_F_Cu' [ETH_GND] on F.Cu, priority 0
+    @(76.1000 mm, 65.6000 mm): Pad 3 [ETH_GND] of U9 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(74.0000 mm, 63.0000 mm): Zone 'ETH_GND_U9_F_Cu' [ETH_GND] on F.Cu, priority 0
     @(76.1000 mm, 65.6000 mm): Pad 3 [ETH_GND] of U9 on F.Cu
-    @(76.1000 mm, 64.8300 mm): Pad 8 [ETH_GND] of U9 on F.Cu
 
 ** Found 0 Footprint errors **
 

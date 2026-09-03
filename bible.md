@@ -2719,3 +2719,14 @@
   13 unconnected support pads; the failed artifact is preserved as evidence.
 - Kept the official complete CM5IO fixture as the passing support oracle and
   left the clean production PCB/schematic and Phase 18+ work unpromoted.
+
+2026-09-03 — Phase 17 explicit support-fanout follow-up
+
+- Replaced broad detached support zones with explicit same-net B.Cu
+  center-tap fanout, compact GND islands, ordinary return vias, and an outer
+  shield route.
+- Reduced the adapted fixture to 18 native DRC violations and 7 unconnected
+  support pads, but rejected it because the remaining support connections are
+  not yet proven.
+- Preserved the passing MDI result and did not promote clean production or
+  Phase 18+ assets.

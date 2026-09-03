@@ -490,3 +490,20 @@ mechanical land pattern. Next continuation: copy/transform the official
 support zones and support footprints from the native oracle, then replace
 only the EDAC boundary pads with the explicitly authorized aliases. Do not
 promote the current failed support-zone experiment or begin Phase 18+.
+
+## Explicit support-fanout follow-up — 2026-09-03
+
+The broad detached zones were replaced with explicit same-net B.Cu
+center-tap fanout, compact local GND islands, ordinary return vias, and an
+outer shield route. This reduced native DRC from 82 to 18 violations and
+unconnected support pads from 13 to 7, while preserving the passing MDI
+geometry. It is still rejected: the remaining failures are two EDAC common
+center-tap lands, C1 common, four USON ground connections, and one shield /
+center-tap clearance interaction. No MDI pair crossing or MDI short was
+introduced.
+
+This remains an active recoverable Phase 17 support-adaptation blocker. The
+next bounded repair is to use the official support footprint/zone geometry as
+the donor for those exact return connections, rather than continuing to
+invent detached support copper. The clean production assets remain
+unpromoted and Phase 18+ remains gated.

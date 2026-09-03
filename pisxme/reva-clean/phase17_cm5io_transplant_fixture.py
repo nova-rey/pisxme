@@ -90,7 +90,17 @@ def main():
         # copper island connects all EDAC/J9 through-hole lands and the
         # relocated C1 pad through normal plated-hole access without routing
         # a support trace through the F.Cu MDI corridor.
-        rectangle_zone(b,nets["ETH_CT_COMMON"],pcbnew.In2_Cu,52,44,96,52,"ETH_CT_COMMON_In2")
+        # Same-net B.Cu fanout around the EDAC hole field. Keeping these
+        # segments explicit avoids a detached-zone fill across NPTH holes.
+        ct = nets["ETH_CT_COMMON"]
+        route(b,[(66.785,56.83),(69.325,55.56),(75.675,55.56),(78.215,56.83)],ct,pcbnew.B_Cu)
+        route(b,[(78.215,56.83),(82.0,54.0),(83.73,54.27)],ct,pcbnew.B_Cu)
+        route(b,[(75.675,55.56),(82.0,52.0),(86.27,51.73)],ct,pcbnew.B_Cu)
+        route(b,[(69.325,55.56),(82.0,50.0),(86.27,51.73)],ct,pcbnew.B_Cu)
+        route(b,[(66.785,56.83),(82.0,48.5),(83.73,51.73)],ct,pcbnew.B_Cu)
+        route(b,[(83.73,51.73),(86.27,51.73),(86.27,54.27),(83.73,54.27)],ct,pcbnew.B_Cu)
+        c1p=xy(c1.FindPadByNumber("1").GetPosition())
+        route(b,[c1p,(94,48),(94,46),(88,46),(86.27,51.73)],ct,pcbnew.B_Cu)
         # Shield return is kept as its declared GBE_SHIELD net until the
         # final schematic net-tie decision; both physical shield lands tie.
         s1=xy(j2.FindPadByNumber("19").GetPosition()); s2=xy(j2.FindPadByNumber("20").GetPosition())
@@ -98,9 +108,16 @@ def main():
         # ESD grounds are landed directly into the local F.Cu GND copper;
         # In1/B.Cu pours provide the reference/return planes without
         # introducing dogbones across the MDI pad fields.
-        rectangle_zone(b,nets["ETH_GND"],pcbnew.F_Cu,8,35,100,125,"ETH_GND_F_Cu")
-        rectangle_zone(b,nets["ETH_GND"],pcbnew.In1_Cu,8,35,100,125,"ETH_GND_In1")
-        rectangle_zone(b,nets["ETH_GND"],pcbnew.B_Cu,8,35,100,125,"ETH_GND_B_Cu")
+        # Compact pours terminate at ordinary return vias; they do not cover
+        # the EDAC NPTH field or board edge.
+        rectangle_zone(b,nets["ETH_GND"],pcbnew.F_Cu,68,63,72,68,"ETH_GND_U6_F_Cu")
+        rectangle_zone(b,nets["ETH_GND"],pcbnew.F_Cu,74,63,78,68,"ETH_GND_U9_F_Cu")
+        rectangle_zone(b,nets["ETH_GND"],pcbnew.F_Cu,90,46,95,50,"ETH_GND_C1_F_Cu")
+        rectangle_zone(b,nets["ETH_GND"],pcbnew.In1_Cu,68,63,78,68,"ETH_GND_In1")
+        for vp in ((68,68),(78,68),(95,50)):
+            q=pcbnew.PCB_VIA(b); q.SetPosition(V(*vp)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(nets["ETH_GND"]); b.Add(q)
+        route(b,[(68,68),(68,74),(78,74),(78,68)],nets["ETH_GND"],pcbnew.B_Cu)
+        route(b,[(78,74),(95,74),(95,50)],nets["ETH_GND"],pcbnew.B_Cu)
     outline(b,8,35,100,125)
     if os.environ.get("PISXME_OMIT_SUPPORT") != "1":
         pcbnew.ZONE_FILLER(b).Fill(b.Zones())
