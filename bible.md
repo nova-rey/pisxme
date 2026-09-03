@@ -2540,3 +2540,13 @@
   and 76 remaining true crossings/shorts/clearance violations.
 - The fixture remains failed and disposable; SP3019 was not promoted and the
   clean PCB/schematic remain unchanged.
+
+2026-09-03 — Phase 17 TI ESDS304 alternative authority
+
+- Added a project-local disposable `ESDS304DBVR` SOT-23 DBV footprint derived
+  from TI DBV0005A mechanical and land-pattern data, with explicit mask,
+  paste, and courtyard layers.
+- Recorded TI's active-production status, pin map, Ethernet 1G application,
+  capacitance, and passive topology in the ESD replacement research note.
+- This is an alternative candidate only; no clean production asset was
+  changed and no ESDS304 routing pass has been claimed.

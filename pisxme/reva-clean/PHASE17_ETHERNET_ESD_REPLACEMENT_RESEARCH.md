@@ -55,3 +55,23 @@ in the J7 source escape and right-column pair approach. Because this trial footp
 not imported from an authoritative CAD model and did not complete all
 connector-side/support routing, it is evidence for continued investigation
 only and is not a component or routing approval.
+## TI ESDS304DBVR alternative candidate (2026-09-03)
+
+TI’s official ESDS30x Rev. B datasheet identifies `ESDS304DBVR` as an active
+production 4-channel device in the 5-pin SOT-23 DBV package. The datasheet
+pin map is I/O1=1, GND=2, I/O2=3, I/O3=4, I/O4=5. It explicitly documents
+10/100/1000 Ethernet, 125 MHz 1000BASE-T operation, 2.3 pF typical line
+capacitance, ±30 kV IEC 61000-4-2 protection, and a passive no-supply
+topology. The package addendum lists a 3000-piece reel and active-production
+status.
+
+Source: TI ESDS30x datasheet Rev. B, January 2024, official URL:
+https://www.ti.com/lit/ds/symlink/esds304.pdf
+
+The project-local disposable footprint
+`PiSXMe_RevA_Clean.pretty/ESDS304DBVR_SOT23_5.kicad_mod` uses TI DBV0005A
+mechanical/land-pattern values (0.6 mm × 1.1 mm pads, 0.95 mm pitch, 1.9 mm
+row spacing), with explicit F.Paste, F.Mask, and F.CrtYd layers. It is a
+candidate artifact only: the clean schematic and production PCB have not been
+changed, and the ESDS304 fixture has not yet passed native DRC or procurement
+review.
