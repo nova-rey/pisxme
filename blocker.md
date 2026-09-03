@@ -626,3 +626,13 @@ island; its DRC is not an Ethernet-only gate. The next authorized action is
 to place the CM5IO-aligned island in genuinely free acreage, then run the
 Ethernet-specific native DRC/connectivity and full Phase 11/12 review. Phase
 17 remains open; Phase 18+ has not started.
+
+The corrected CM5IO-aligned acreage diagnostic was then regenerated from the
+native netlist and applied through a single-board geometry-snapshot path.
+The Ethernet mapping regression passed and all 189 official MDI segments were
+preserved at the corrected physical positions. Full-board native DRC still
+reports 539 violations and 477 unconnected items, with Ethernet pair shorts
+against neighboring power/keepout geometry. This is a placement/floorplan
+failure of the current acreage context, not a valid rejection of the now
+pin-correct CM5IO/EDAC island; the disposable oracle remains the clean
+reference. The current dirty legacy candidate was not overwritten.

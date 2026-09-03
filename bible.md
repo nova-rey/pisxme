@@ -2789,3 +2789,14 @@
   identifying a KiCad Python multi-board wrapper/net-assignment hazard. The
   full acreage candidate still contains unrelated floorplan DRC conflicts and
   remains unpromoted; Phase 18+ remains gated.
+
+2026-09-03 — Phase 17 corrected acreage application diagnostic
+
+- Applied all 189 CM5IO MDI vectors through a single-board geometry snapshot
+  path after confirming KiCad Python multi-board net wrappers could collapse
+  distinct nets.
+- Corrected mapping regression passed; full-board DRC remained contaminated by
+  the current floorplan, with 539 violations and 477 unconnected items,
+  including Ethernet shorts against neighboring power/keepout geometry.
+- Classified the remaining issue as a local Ethernet placement/floorplan
+  blocker, preserved the dirty candidate, and kept Phase 18+ gated.
