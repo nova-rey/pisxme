@@ -90,8 +90,9 @@ not a production PCB.
 
 This closes the authorized local placement-repair attempt for the current
 standard TPD4E004 two-layer topology. Phase 17 remains blocked; no Phase 18+
-work was started. The smallest practical continuation is an architectural
-Ethernet-local change: either provide a connector-compatible escape layer/
-via technology and revise the local fabrication rule, or replace the discrete
-ESD arrangement with an Ethernet protection/package whose land pattern permits
-an order-preserving two-layer breakout. Neither option is silently accepted.
+work was started. The smallest practical continuation is an Ethernet-local
+component change. The preferred candidate for the next disposable trial is
+Littelfuse `SP3019-04HTG`: its gullwing SOT-23-6L layout has I/O on 1/3/4/6,
+GND on 2, and NC on 5, avoiding the current TPD4E004 power/signal choke
+point. This is not yet promoted; it must first pass pin-accurate footprint,
+sourcing, native DRC, and complete Phase 17 validation.

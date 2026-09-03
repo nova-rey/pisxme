@@ -2424,3 +2424,13 @@
   boundary; it was rejected and no invalid copper was accepted.
 - Phase 17 remains the earliest failed gate. Phase 18+ work remains prohibited
   pending an Ethernet-local escape/package decision.
+
+2026-09-03 — Phase 17 Ethernet ESD package unblocker
+
+- Independent footprint review identified Littelfuse SP3019-04HTG as the
+  preferred next disposable candidate: active SOT-23-6L gullwing, four
+  separated signal pins, low published capacitance, and multi-distributor
+  availability.
+- Recorded manufacturer, lifecycle, package, and procurement evidence in
+  `PHASE17_ETHERNET_ESD_REPLACEMENT_RESEARCH.md`; no clean schematic or
+  production PCB promotion has occurred.
