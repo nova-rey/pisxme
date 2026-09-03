@@ -151,3 +151,18 @@ This closes the CM5IO-derived MDI geometry experiment, but does not yet close
 Phase 17 production routing. The next experiment is to transplant the
 official tap/return/LED support with explicit EDAC pad and net authority, then
 apply the same topology to the acreage board only after the full gate passes.
+
+## Complete EDAC support adaptation — 2026-09-03
+
+The support adaptation now uses explicit same-net B.Cu center-tap fanout, the
+official local USON GND escape geometry, ordinary through-vias, and an outer
+shield return. The fixture has a valid Edge.Cuts envelope and keeps ordinary
+MDI signals on F.Cu.
+
+Native KiCad DRC reports 0 unconnected pads, 0 footprint errors, and no
+shorting items, tracks-crossing items, hole-clearance errors, dangling vias,
+invalid outline, or silkscreen-over-copper errors. Five warnings remain:
+three low-clearance EDAC support warnings and two detached-library footprint
+mismatch warnings. The native DRC and MDI regressions both pass; this closes
+the disposable CM5IO-derived fixture gate, not yet the acreage-board Phase 17
+gate.

@@ -507,3 +507,18 @@ next bounded repair is to use the official support footprint/zone geometry as
 the donor for those exact return connections, rather than continuing to
 invent detached support copper. The clean production assets remain
 unpromoted and Phase 18+ remains gated.
+
+## Complete CM5IO-derived fixture — 2026-09-03
+
+The explicit support-fanout repair now passes the substantive disposable
+fixture gate. Native DRC reports 0 unconnected pads, 0 footprint errors, and
+no shorting, crossing, hole-clearance, dangling-via, invalid-outline, or
+silkscreen errors. Five warnings remain: three low-clearance EDAC support
+warnings and two detached-library footprint mismatches. The focused MDI
+regression and the warning-only DRC regression both pass.
+
+The passing artifact is still a disposable topology proof. The clean acreage
+board has not yet been updated because its authoritative schematic/footprint
+path still requires promotion from TPD4E004 to the CM5IO-authoritative
+`TPD4EUSB30DQAR` flow-through package and then a fresh Phase 11/12 placement
+and Phase 17 production-routing validation. Phase 18+ remains gated.

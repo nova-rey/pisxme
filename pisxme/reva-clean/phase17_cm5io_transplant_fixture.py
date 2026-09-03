@@ -60,7 +60,9 @@ def main():
     j2=addfp(b,"EDAC_A70_112_331N126","J2",72.5,53,180)
     oj9=oracle.FindFootprintByReference("J9"); oc1=oracle.FindFootprintByReference("C1")
     j9=copyfp(b,oj9,"J9",*T(*xy(oj9.GetPosition())),0)
-    c1=copyfp(b,oc1,"C1",92,48,0)
+    c1=copyfp(b,oc1,"C1",92,44,90)
+    for g in list(j2.GraphicalItems()):
+        if g.GetLayer() == pcbnew.F_SilkS: g.SetLayer(pcbnew.F_Fab)
     # Official 10-pin USON footprints and the CM5IO flow-through pin map.
     ou1=oracle.FindFootprintByReference("U1"); ou2=oracle.FindFootprintByReference("U2")
     u1=copyfp(b,ou1,"U6",*T(*xy(ou1.GetPosition())),90)
@@ -86,6 +88,21 @@ def main():
         a=xy(tr.GetStart()); z=xy(tr.GetEnd()); aa=T(*a); zz=T(*z)
         item=pcbnew.PCB_TRACK(b); item.SetStart(V(*aa)); item.SetEnd(V(*zz)); item.SetLayer(tr.GetLayer()); item.SetWidth(tr.GetWidth()); item.SetNet(nets[mapping[short]]); b.Add(item); count+=1
     if os.environ.get("PISXME_OMIT_SUPPORT") != "1":
+        # Reuse the official local USON GND escape as geometry authority.
+        # This is deliberately limited to the two ESD footprints' source
+        # neighborhood; it does not import unrelated board copper.
+        for tr in oracle.GetTracks():
+            if tr.GetNetname() != "GND": continue
+            a=xy(tr.GetStart()); z=xy(tr.GetEnd())
+            if not all(145 <= p[0] <= 160 and 136 <= p[1] <= 142 for p in (a,z)): continue
+            if a == z: continue
+            item=pcbnew.PCB_TRACK(b); item.SetStart(V(*T(*a))); item.SetEnd(V(*T(*z)))
+            item.SetLayer(tr.GetLayer()); item.SetWidth(tr.GetWidth()); item.SetNet(nets["ETH_GND"]); b.Add(item)
+        gvia=[]
+        for p in ((149.4,137.2),(151.6,137.8),(155.467559,137.292894),
+                  (155.4,139.4),(149.4,139.4),(153.0,137.8)):
+            vp=T(*p); gvia.append(vp)
+            q=pcbnew.PCB_VIA(b); q.SetPosition(V(*vp)); q.SetWidth(pcbnew.FromMM(.45)); q.SetDrill(pcbnew.FromMM(.20)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(nets["ETH_GND"]); b.Add(q)
         # The CM5IO support is a common center-tap island. A dedicated In2
         # copper island connects all EDAC/J9 through-hole lands and the
         # relocated C1 pad through normal plated-hole access without routing
@@ -94,30 +111,27 @@ def main():
         # segments explicit avoids a detached-zone fill across NPTH holes.
         ct = nets["ETH_CT_COMMON"]
         route(b,[(66.785,56.83),(69.325,55.56),(75.675,55.56),(78.215,56.83)],ct,pcbnew.B_Cu)
-        route(b,[(78.215,56.83),(82.0,54.0),(83.73,54.27)],ct,pcbnew.B_Cu)
-        route(b,[(75.675,55.56),(82.0,52.0),(86.27,51.73)],ct,pcbnew.B_Cu)
-        route(b,[(69.325,55.56),(82.0,50.0),(86.27,51.73)],ct,pcbnew.B_Cu)
+        route(b,[(74.405,59.35),(74.405,57.0),(75.675,55.56)],ct,pcbnew.B_Cu)
+        route(b,[(73.135,61.89),(73.135,60.5),(74.405,59.35)],ct,pcbnew.B_Cu)
+        route(b,[(78.215,56.83),(76.5,57.5),(76.0,51.0),(82.0,51.0),(83.73,54.27)],ct,pcbnew.B_Cu)
+        route(b,[(75.675,55.56),(75.675,48.0),(86.27,48.0),(86.27,51.73)],ct,pcbnew.B_Cu)
+        route(b,[(69.325,55.56),(69.325,50.5),(62.0,50.5),(62.0,46.5),(86.27,46.5),(86.27,51.73)],ct,pcbnew.B_Cu)
         route(b,[(66.785,56.83),(82.0,48.5),(83.73,51.73)],ct,pcbnew.B_Cu)
         route(b,[(83.73,51.73),(86.27,51.73),(86.27,54.27),(83.73,54.27)],ct,pcbnew.B_Cu)
         c1p=xy(c1.FindPadByNumber("1").GetPosition())
-        route(b,[c1p,(94,48),(94,46),(88,46),(86.27,51.73)],ct,pcbnew.B_Cu)
+        cv=pcbnew.PCB_VIA(b); cv.SetPosition(V(94,42)); cv.SetWidth(pcbnew.FromMM(.50)); cv.SetDrill(pcbnew.FromMM(.30)); cv.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); cv.SetNet(ct); b.Add(cv)
+        route(b,[c1p,(94,43),(94,42)],ct,pcbnew.F_Cu)
+        route(b,[(94,42),(88,42),(86.27,51.73)],ct,pcbnew.B_Cu)
         # Shield return is kept as its declared GBE_SHIELD net until the
         # final schematic net-tie decision; both physical shield lands tie.
         s1=xy(j2.FindPadByNumber("19").GetPosition()); s2=xy(j2.FindPadByNumber("20").GetPosition())
         route(b,[s1,(96,56.05),(96,38),(52,38),(52,56.05),s2],nets["GBE_SHIELD"],pcbnew.B_Cu)
-        # ESD grounds are landed directly into the local F.Cu GND copper;
-        # In1/B.Cu pours provide the reference/return planes without
-        # introducing dogbones across the MDI pad fields.
-        # Compact pours terminate at ordinary return vias; they do not cover
-        # the EDAC NPTH field or board edge.
-        rectangle_zone(b,nets["ETH_GND"],pcbnew.F_Cu,68,63,72,68,"ETH_GND_U6_F_Cu")
-        rectangle_zone(b,nets["ETH_GND"],pcbnew.F_Cu,74,63,78,68,"ETH_GND_U9_F_Cu")
-        rectangle_zone(b,nets["ETH_GND"],pcbnew.F_Cu,90,46,95,50,"ETH_GND_C1_F_Cu")
-        rectangle_zone(b,nets["ETH_GND"],pcbnew.In1_Cu,68,63,78,68,"ETH_GND_In1")
-        for vp in ((68,68),(78,68),(95,50)):
-            q=pcbnew.PCB_VIA(b); q.SetPosition(V(*vp)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(nets["ETH_GND"]); b.Add(q)
-        route(b,[(68,68),(68,74),(78,74),(78,68)],nets["ETH_GND"],pcbnew.B_Cu)
-        route(b,[(78,74),(95,74),(95,50)],nets["ETH_GND"],pcbnew.B_Cu)
+        # The detached fixture's C1 return joins the copied GND escape with
+        # ordinary through-via and B.Cu spine; no via is placed in a pad.
+        q=pcbnew.PCB_VIA(b); q.SetPosition(V(98,50)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(nets["ETH_GND"]); b.Add(q)
+        route(b,[xy(c1.FindPadByNumber("2").GetPosition()),(90,44.48),(90,50),(98,50)],nets["ETH_GND"])
+        route(b,[(98,50),(98,72),(70,72),(70.1,64.1)],nets["ETH_GND"],pcbnew.B_Cu)
+        route(b,[(70.1,64.1),(70.0324,66.2071),(72.5,65.7),(73.9,65.7),(76.1,66.3),(76.1,64.1)],nets["ETH_GND"],pcbnew.B_Cu)
     outline(b,8,35,100,125)
     if os.environ.get("PISXME_OMIT_SUPPORT") != "1":
         pcbnew.ZONE_FILLER(b).Fill(b.Zones())

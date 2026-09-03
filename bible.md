@@ -2730,3 +2730,14 @@
   not yet proven.
 - Preserved the passing MDI result and did not promote clean production or
   Phase 18+ assets.
+
+2026-09-03 — Phase 17 complete CM5IO-derived fixture
+
+- Repaired the EDAC support fanout with explicit B.Cu center-tap routing,
+  official local USON GND escape geometry, ordinary return vias, and an outer
+  shield return.
+- Native DRC reached 0 unconnected pads and no true short, crossing,
+  hole-clearance, dangling-via, outline, silkscreen, or footprint errors;
+  only documented warnings remain.
+- Closed the disposable fixture gate while keeping the clean acreage
+  promotion and Phase 18+ work gated pending production-path adaptation.
