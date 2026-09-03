@@ -1004,3 +1004,26 @@ Preserved evidence:
 and
 `pisxme/reva-clean/ACREAGE_CM5IO_MAPPED_CM5IO_PHASE17-current-drc.rpt`.
 Phase 17 remains the earliest failed gate; no Phase 18+ work has started.
+
+## Adapter-orientation correction — 2026-09-03
+
+The first acreage transplant was also found to contain an authoring defect:
+the adapter had both swapped U6/U9 placement ownership and a 90-degree
+USON orientation, while the validated CM5IO fixture uses U9 for TD3/TD2,
+U6 for TD1/TD0, and both protectors at -90 degrees. The adapter was corrected
+to preserve that exact reference orientation and ownership.
+
+The corrected controlled rerun improved the result from 539 to **435 native
+DRC findings / 453 unconnected items**, and reduced true shorting findings
+from 40 to **11**. It has no reported `tracks_crossing` or `via_dangling`
+category, but the remaining shorts include collisions with existing
+regulator/power copper and residual local ESD/connector geometry. It is
+rejected as an acreage candidate, while the complete disposable reference
+island remains valid. This is a corrected, narrower blocker—not evidence
+against the official CM5IO Ethernet architecture.
+
+The corrected report is
+`pisxme/reva-clean/ACREAGE_CM5IO_MAPPED_CM5IO_PHASE17-corrected-drc.rpt`.
+The next experiment remains a fresh local placement/escape adaptation that
+uses the corrected U6/U9 ownership and official -90-degree orientation, with
+the J7-to-ESD legs regenerated rather than coordinate-transplanted.

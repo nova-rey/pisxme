@@ -15,6 +15,11 @@ if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_SHELF':
     DX,DY=197.5,-33.0
 if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL':
     DX,DY=197.5,-33.0
+if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM':
+    # CM5IO-relative island below the frozen cooler reservation.  The
+    # official ESD-to-MagJack graph remains rigid; only the CM5-to-ESD legs
+    # are regenerated from PiSXMe's actual J7 anchors.
+    DX,DY=49.9,84.8
 if os.environ.get('PISXME_LANE_ORDER') == 'TD3_OUTER':
     OUT=ROOT/'ACREAGE_CM5IO_TOP_ISLAND_TD3_OUTER_PHASE17.kicad_pcb'
 if os.environ.get('PISXME_LANE_ORDER') == 'LEFT_EDGE':
@@ -23,6 +28,8 @@ if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_SHELF':
     OUT=ROOT/'ACREAGE_CM5IO_RIGHT_SHELF_PHASE17.kicad_pcb'
 if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL':
     OUT=ROOT/'ACREAGE_CM5IO_RIGHT_CHANNEL_PHASE17.kicad_pcb'
+if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM':
+    OUT=ROOT/'ACREAGE_CM5IO_LOCAL_BOTTOM_PHASE17.kicad_pcb'
 
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def add(b,n,pts,layer=pcbnew.F_Cu):
@@ -120,6 +127,20 @@ def main():
           'CM5_GBE_TD2_P':[(32.96,100.70),(31.5,100.70),(31.5,78.4),(62.5,78.4),(62.5,39.4),(267.178701,35.490)],
           'CM5_GBE_TD0_N':[(36.04,100.30),(38.5,100.30),(38.5,79.0),(68.0,79.0),(68.0,39.0),(274.160000,33.571298)],
           'CM5_GBE_TD0_P':[(36.04,100.70),(39.0,100.70),(39.0,79.4),(68.5,79.4),(68.5,39.4),(274.539999,33.728702)]}
+    if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM':
+        # Pair-preserving source lanes descend below J7, then run beneath
+        # the cooler reservation to the official ESD source-side lands.
+        # The right group is intentionally kept as a separate trial because
+        # its official ESD entry order differs from the CM5 source order.
+        paths={
+          'CM5_GBE_TD3_P':[(32.96,99.10),(25.0,99.10),(25.0,136.0),(70.0,140.0),(105.0,140.0),(118.604119,151.995)],
+          'CM5_GBE_TD3_N':[(32.96,99.50),(24.5,99.50),(24.5,136.5),(70.5,140.5),(105.5,140.5),(118.761524,152.375)],
+          'CM5_GBE_TD2_N':[(32.96,100.30),(24.0,100.30),(24.0,137.0),(71.0,141.0),(106.0,141.0),(119.421298,152.895)],
+          'CM5_GBE_TD2_P':[(32.96,100.70),(23.5,100.70),(23.5,137.5),(71.5,141.5),(106.5,141.5),(119.578701,153.275)],
+          'CM5_GBE_TD1_P':[(36.04,99.10),(45.0,99.10),(45.0,140.0),(90.0,140.0),(110.0,140.0),(125.060000,151.656297)],
+          'CM5_GBE_TD1_N':[(36.04,99.50),(45.5,99.50),(45.5,140.5),(90.5,140.5),(110.5,140.5),(125.440000,151.813702)],
+          'CM5_GBE_TD0_N':[(36.04,100.30),(46.0,100.30),(46.0,141.0),(91.0,141.0),(111.0,141.0),(126.560000,151.356297)],
+          'CM5_GBE_TD0_P':[(36.04,100.70),(46.5,100.70),(46.5,141.5),(91.5,141.5),(111.5,141.5),(126.940000,151.513702)]}
     bcu=os.environ.get('PISXME_BCU_ESCAPE')=='1'
     for name,pts in paths.items():
         end=(land[name][0]+DX,land[name][1]+DY)

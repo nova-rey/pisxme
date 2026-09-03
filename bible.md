@@ -2976,3 +2976,13 @@
   collisions.
 - Rejected the direct coordinate transplant, preserved both reports, and
   kept Phase 17 open while the local placement adaptation is repaired.
+
+2026-09-03 — Phase 17 adapter orientation correction
+
+- Corrected the acreage adapter to preserve official U9 TD3/TD2 and U6
+  TD1/TD0 ownership and -90-degree USON orientation.
+- Native DRC improved to 435 findings / 453 unconnected items and 11 true
+  shorts, with no tracks-crossing or via-dangling category; remaining local
+  power/clearance collisions reject the acreage candidate.
+- Preserved the corrected report and retained Phase 17 open for a fresh
+  local placement/escape adaptation.
