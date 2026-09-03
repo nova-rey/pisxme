@@ -136,3 +136,47 @@ trial.
 
 The 100 ohm field solution and final SP3019 promotion remain unresolved. No
 Phase 18+ work may begin until the complete Phase 17 gate passes.
+## Phase 17 SP3019 authoritative fixture update — 2026-09-03
+
+Status: `RECOVERABLE_FIXTURE_ROUTING_BLOCKER`
+
+The Littelfuse SP3019-04HTG candidate is not rejected on the basis of the
+earlier malformed trial. A new manufacturer-footprint trial was generated with
+the exact four-channel SOT23-6L pin assignment, explicit pin-2
+`/ETHERNET/ETH_GND`, pin-5 NC, and all eight CM5 Ethernet nets. The generator
+now uses KiCad's typed `FOOTPRINT` copy constructor and native
+`FindPadByNumber`, so both U6 and U9 are actually populated and saved.
+
+Evidence:
+
+- Fixture: `pisxme/reva-clean/SP3019_ETHERNET_DISPOSABLE_FIXTURE.kicad_pcb`
+- Generator: `pisxme/reva-clean/phase17_sp3019_trial.py`
+- Manufacturer footprint: `pisxme/reva-clean/PiSXMe_RevA_Clean.pretty/SP3019_04HTG_SOT23_6L.kicad_mod`
+- Native DRC: `pisxme/reva-clean/SP3019_ETHERNET_DISPOSABLE_FIXTURE-drc.rpt`
+- DRC result: 96 violations, 76 unconnected items
+- Material failures include true pair crossings, connector-launch shorts to
+  center-tap/unrelated CM5 pads, and no ordinary via/F.Cu dogbone transitions
+  for the B.Cu-assigned pairs. Therefore this is not a valid Phase 17 proof.
+
+The result does not prove SP3019 is geometrically impossible. It proves the
+current disposable route construction is not yet a valid fixture. SP3019 is
+not promoted and the clean board is unchanged.
+
+Bounded continuation options, all within the approved architecture:
+
+1. Recommended: build the fixture from a fresh minimal board containing only
+   the eight authoritative J7 source pads, the complete authoritative J2
+   Ethernet launch/support pads, two manufacturer SP3019 footprints, explicit
+   GND/return vias, and a large acreage outline. Solve the four pair corridors
+   there before reintegrating the full connector footprints.
+2. Reorient the EDAC launch and split the four pairs into monotonic top/bottom
+   corridors, adding symmetric ordinary through-via transitions outside the
+   SP3019 pads.
+3. If the corrected SP3019 fixture still fails, repeat the same minimal
+   experiment with the active TI `ESDS304DBVR` SOT23-5 Ethernet protector,
+   preserving the same approved layer and 100-ohm constraints.
+
+No frozen subsystem has been changed. No clean PCB/schematic has been changed.
+Phase 17 remains open pending a complete fixture with zero candidate-specific
+opens/shorts/crossings, complete connector launch, and documented 100-ohm
+geometry.

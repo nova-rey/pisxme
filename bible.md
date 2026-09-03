@@ -2452,3 +2452,16 @@
 - Updated `blocker.md` with the corrected bounded topology and the exact next
   experiment: authoritative land pattern, explicit ordinary vias, all eight
   pairs, 100 ohm stack calculation, and complete MagJack-side routing.
+
+2026-09-03 — Phase 17 SP3019 authoritative fixture experiment
+
+- Repaired the KiCad 10 Flatpak generator path to use native typed footprint
+  copies and `FindPadByNumber`; the corrected manufacturer-footprint fixture
+  now saves with both SP3019 instances and explicit pin-2 Ethernet ground.
+- Preserved a reproducible J7/J2 disposable-fixture extraction helper and ran
+  native DRC on the full eight-pair trial. The candidate remains open, with 96
+  violations and 76 unconnected items, including real launch crossings/shorts
+  and missing required via/dogbone transitions.
+- Published the exact evidence and bounded continuation options in
+  `blocker.md`. SP3019 was not promoted, the clean PCB/schematic was not
+  changed, and Phase 18+ remains gated.
