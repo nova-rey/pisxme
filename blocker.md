@@ -1093,3 +1093,21 @@ The corrected generator is preserved in
 `pisxme/reva-clean/phase17_top_island_side_escape.py`, with the native report
 at
 `pisxme/reva-clean/ACREAGE_CM5IO_RIGHT_CHANNEL_PHASE17-corrected-drc.rpt`.
+
+## Right-channel B.Cu trial — 2026-09-03
+
+The corrected right-channel candidate was rerun with its long source corridor
+on B.Cu and ordinary through-via transitions. This reduced source-channel
+crossings from 9 to **6**, but native DRC rejected the result at **467
+findings / 453 unconnected items**. The remaining failures include 22 true
+shorts, pair-via spacing violations at both ends, and overlapping B.Cu
+segments caused by a single shared fanout path. It is rejected; the layer
+policy itself remains valid.
+
+This result distinguishes a useful layer assignment from an invalid
+transition construction. The next experiment must stagger each pair's
+source and return vias by at least 0.8 mm and give each pair its own B.Cu
+lane; a single B.Cu bundle is not acceptable evidence.
+
+Preserved evidence:
+`pisxme/reva-clean/ACREAGE_CM5IO_RIGHT_CHANNEL_PHASE17-bcu-corrected-drc.rpt`.

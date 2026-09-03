@@ -3017,3 +3017,13 @@
   with frozen power/regulator copper and J7 fanout geometry.
 - Superseded prior right-channel placement conclusions and retained Phase 17
   for a valid source-layer/channel repair.
+
+2026-09-03 — Phase 17 right-channel B.Cu trial
+
+- Tested the corrected right-channel candidate with the long source corridor
+  on B.Cu and ordinary through-via transitions.
+- Native DRC rejected it at 467 findings / 453 unconnected items; source
+  crossings fell to 6, but pair-via spacing and shared B.Cu fanout overlap
+  introduced 22 true shorts.
+- Rejected the single-bundle construction and retained Phase 17 for
+  pair-specific staggered transitions with >=0.8 mm via spacing.
