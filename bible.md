@@ -2927,3 +2927,12 @@
 - Native DRC reported 27 candidate-local violations and 63 expected non-MDI
   unconnected pads; true MDI launch crossings/clearances remain.
 - Preserved the diagnostic fixture and kept Phase 17 open.
+
+2026-09-03 — Phase 17 J7 nested-lane refinement
+
+- Rejected a height-offset dogbone variant after it reintroduced a source
+  crossing, then restored the better nested-lane construction.
+- Current J7-only DRC has zero tracks-crossing, shorting, and hole-clearance
+  findings; two source-via clearances and expected non-MDI unconnected pads
+  remain.
+- Preserved the fixture/report and kept Phase 17 open.

@@ -693,6 +693,28 @@ is an authoring/fixture correction, not a Phase 17 acreage pass. The routed
 ancestor still has the placement-context failures documented above, so
 Phase 18+ remains gated.
 
+## J7 launch nested-lane refinement — 2026-09-03
+
+The J7-only oracle was refined again using the measured field geometry. The
+left source group remains on B.Cu; the right group transitions through
+ordinary vias and uses nested F.Cu lanes above the J7 body, with 2.0 mm via
+pitch and reverse-ordered bus x positions. This construction avoids the
+opposing pad field and the earlier same-y bus crossings.
+
+Native KiCad DRC reports **34 total violations / 63 unconnected non-MDI
+pads**. The 63 are expected because the full CM5 footprint is present without
+the rest of its circuit. Among candidate-local findings there are **zero
+tracks-crossing, zero shorting-items, and zero hole-clearance violations**;
+two adjacent source-via clearance violations remain, plus the fixture's
+track-width rule still reports the intentionally CM5IO-derived 0.127 mm
+width. This is not yet a Phase 17 pass, but it proves the J7 launch can be
+made crossing-free under a bounded two-layer construction.
+
+The failed height-offset variant was not promoted because it reintroduced a
+TD1_N/TD0_N crossing. The controlling fixture/report are
+`CM5IO_J7_LAUNCH_FIXTURE.kicad_pcb` and
+`CM5IO_J7_LAUNCH_FIXTURE-drc.rpt`.
+
 ## Top-left side-escape placement trial — 2026-09-03
 
 After correcting the USON orientation/mapping, a distinct placement class was
