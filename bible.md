@@ -2965,3 +2965,14 @@
   diagnostics and expected non-MDI omissions; no CM5_GBE item is unconnected.
 - Superseded the prior J7 receipt and retained Phase 17 open pending complete
   ESD/MagJack integration and acreage validation.
+
+2026-09-03 — Phase 17 official-island acreage adaptation
+
+- Revalidated the complete CM5IO-derived disposable island: native DRC has
+  0 unconnected items and only 8 non-electrical library/silkscreen findings.
+- Applied the transformed MDI geometry to the acreage candidate as a
+  controlled adaptation test; native DRC rejected it at 539 findings / 477
+  unconnected items, including 40 true shorts and local pad-field/copper
+  collisions.
+- Rejected the direct coordinate transplant, preserved both reports, and
+  kept Phase 17 open while the local placement adaptation is repaired.

@@ -1,0 +1,50 @@
+** Drc report for CM5IO_PISXME_ETHERNET_TRANSPLANT_FIXTURE.kicad_pcb **
+** Created on 2026-09-03T18:40:13 **
+** Report includes: Errors, Warnings **
+
+** Found 8 DRC violations **
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; error
+    @(72.9000 mm, 65.2333 mm): Reference field of U9
+    @(73.3000 mm, 65.2300 mm): Reference field of U6
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; error
+    @(72.9000 mm, 65.2333 mm): Reference field of U9
+    @(72.5000 mm, 64.4500 mm): Reference field of J2
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; error
+    @(73.3000 mm, 65.2300 mm): Reference field of U6
+    @(72.5000 mm, 64.4500 mm): Reference field of J2
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1250 mm; actual 0.0923 mm)
+    Rule: netclass 'Default'; warning
+    @(66.7850 mm, 56.8300 mm): Track [ETH_CT_COMMON] on B.Cu, length 17.3460 mm
+    @(79.1300 mm, 48.9400 mm): PTH pad 15 [GBE_LED_Y_A] of J2
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1250 mm; actual 0.0150 mm)
+    Rule: netclass 'Default'; warning
+    @(75.6750 mm, 55.5600 mm): Track [ETH_CT_COMMON] on B.Cu, length 7.5600 mm
+    @(76.5900 mm, 48.9400 mm): PTH pad 16 [GBE_LED_Y_K] of J2
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1250 mm; actual 0.0400 mm)
+    Rule: netclass 'Default'; warning
+    @(76.5900 mm, 48.9400 mm): PTH pad 16 [GBE_LED_Y_K] of J2
+    @(75.6750 mm, 48.0000 mm): Track [ETH_CT_COMMON] on B.Cu, length 10.5950 mm
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'
+    Local override; warning
+    @(92.0000 mm, 44.0000 mm): Footprint C1
+[lib_footprint_mismatch]: Footprint 'PinHeader_2x02_P2.54mm_Vertical' does not match copy in library 'Connector_PinHeader_2.54mm'
+    Local override; warning
+    @(83.7300 mm, 51.7300 mm): Footprint J9
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Thermal relief connection to zone incomplete
+    - Footprint has no courtyard defined
+    - Solder mask aperture bridges items with different nets
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Silkscreen clipped by board edge
+
+** End of Report **

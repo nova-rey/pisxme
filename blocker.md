@@ -981,3 +981,26 @@ under the trial geometry, but it is not a complete Ethernet or Phase 17
 pass. The next authorized step is to combine this corrected J7 launch with
 the official ESD/MagJack island and eliminate the remaining local
 clearance/width-rule diagnostics before acreage promotion.
+
+## Complete-island acreage adaptation rerun — 2026-09-03
+
+The official CM5IO-derived disposable island was regenerated and checked
+again. Native KiCad DRC reports **8 findings / 0 unconnected items** for
+`CM5IO_PISXME_ETHERNET_TRANSPLANT_FIXTURE.kicad_pcb`; the findings are
+library/silkscreen/known detached-fixture diagnostics, with no electrical
+short or open in the eight MDI pairs.
+
+The same transformed MDI geometry was then applied to the current acreage
+candidate as a controlled adaptation test. Native DRC reports **539
+findings / 477 unconnected items**, including **40 true shorting-items**, 42
+clearances, 4 hole-clearances, and 189 width-rule findings. The failures are
+at the local U6/U9 pad fields and collisions with existing acreage
+power/regulator copper; this candidate is rejected and is not a production
+PCB. The result confirms that the official topology is valid, but a direct
+coordinate transplant is not a valid PiSXMe placement adaptation.
+
+Preserved evidence:
+`pisxme/reva-clean/CM5IO_PISXME_ETHERNET_TRANSPLANT_FIXTURE-current3-drc.rpt`
+and
+`pisxme/reva-clean/ACREAGE_CM5IO_MAPPED_CM5IO_PHASE17-current-drc.rpt`.
+Phase 17 remains the earliest failed gate; no Phase 18+ work has started.
