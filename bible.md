@@ -2658,3 +2658,19 @@
 - Added independent specialist confirmation that only CM5IO-style 1:1 pair
   assignment is publicly authorized; recorded exact MOQ/LTB/LTS and authorized
   inventory evidence. No clean design asset changed.
+
+2026-09-03 — Phase 17 official CM5IO Rev 2 CAD oracle extraction
+
+- Downloaded the official Raspberry Pi “CM5 IO Board, revision 2, KiCAD
+  files” archive and recorded its SHA-256 in the authority inventory.
+- Inspected the native CM5IO schematic and PCB, extracting the exact U1/U2
+  `TPD4EUSB30`, EDAC `A70-112-331N126`, CM5 pin map, orientations, positions,
+  F.Cu 0.127 mm MDI routing, PoE tap support, LEDs, shields, and GND use.
+- Added a generator and receipt for a disposable official Ethernet fixture;
+  no production clean asset changed.
+- Native DRC of the official source and exact-copy fixture reports zero
+  unconnected items and no MDI crossing/short/dangling-via findings; warnings
+  are limited to official POE spacing and library-configuration overrides.
+- The initial isolated extractor hit a KiCad Flatpak SWIG track-container
+  lifetime defect and was replaced by an exact-copy oracle fixture; no
+  production asset changed.
