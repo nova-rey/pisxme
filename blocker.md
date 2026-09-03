@@ -217,3 +217,9 @@ Ethernet-local escape construction remains required before Phase 17 can pass.
 
 The clean authority and production PCB remain unchanged. This is the current
 blocker record; Phase 18+ has not started.
+
+The generator was then aligned to the corrected TI pad coordinates and rerun.
+That endpoint-corrected candidate reports **104 native DRC violations and 7
+unconnected items**. It is also rejected. The reduced dangling count confirms
+the footprint/endpoints are now being exercised, while the remaining defects
+are genuine route crossings/shorts and connector-launch geometry failures.

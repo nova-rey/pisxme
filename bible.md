@@ -2551,6 +2551,14 @@
 - This is an alternative candidate only; no clean production asset was
   changed and no ESDS304 routing pass has been claimed.
 
+2026-09-03 — Phase 17 ESDS304 endpoint alignment rerun
+
+- Aligned the disposable generator to the corrected TI DBV0005A pad
+  coordinates and regenerated the fixture.
+- Native DRC reports 104 violations and 7 unconnected items. Rejected this
+  route construction for true crossings/shorts and connector-launch defects.
+- Kept ESDS304 unpromoted and the clean production assets unchanged.
+
 2026-09-03 — Phase 17 ESDS304 footprint-authority correction
 
 - Specialist review found the disposable ESDS304 footprint did not match TI

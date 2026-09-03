@@ -76,6 +76,12 @@ candidate artifact only: the clean schematic and production PCB have not been
 changed, and the ESDS304 fixture has not yet passed native DRC or procurement
 review.
 
+The generator was subsequently aligned to the corrected pad coordinates and
+the fixture was regenerated again. This candidate has 7 unconnected items
+and 104 native DRC violations, so it is also rejected. The lower dangling
+count confirms the endpoint correction took effect, but the remaining
+crossings and shorts are still routing-topology defects.
+
 The initial ESDS304 escape was invalid evidence because the local footprint
 had the wrong pad-side distribution and overlapping pads. The footprint was
 corrected to the TI DBV0005A arrangement: pads 1/2/3 on one side, pads 5/4

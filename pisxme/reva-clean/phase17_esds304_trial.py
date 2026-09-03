@@ -29,28 +29,28 @@ def main():
         fp.FindPadByNumber('2').SetNet(net(b,'ETH_GND'))
     # Source-to-ESD proof: each pair is kept together; alternate pairs use B.Cu
     # with ordinary transitions outside the SOT-23 pads.
-    fpaths={'CM5_GBE_TD3_P':((97.96,129.10),(89.05,129.525),pcbnew.F_Cu),
-            'CM5_GBE_TD3_N':((97.96,129.50),(89.05,130.475),pcbnew.F_Cu),
-            'CM5_GBE_TD1_P':((101.04,129.10),(109.05,129.525),pcbnew.F_Cu),
-            'CM5_GBE_TD1_N':((101.04,129.50),(109.05,130.475),pcbnew.F_Cu)}
+    fpaths={'CM5_GBE_TD3_P':((97.96,129.10),(88.70,129.05),pcbnew.F_Cu),
+            'CM5_GBE_TD3_N':((97.96,129.50),(88.70,130.95),pcbnew.F_Cu),
+            'CM5_GBE_TD1_P':((101.04,129.10),(108.70,129.05),pcbnew.F_Cu),
+            'CM5_GBE_TD1_N':((101.04,129.50),(108.70,130.95),pcbnew.F_Cu)}
     for n,(a,z,l) in fpaths.items(): track(b,a,z,n,l)
-    bpaths={'CM5_GBE_TD2_P':((97.96,130.70),(89.05,129.05),(90.5,128.0)),
-            'CM5_GBE_TD2_N':((97.96,130.30),(89.05,130.95),(91.5,132.0)),
-            'CM5_GBE_TD0_P':((101.04,130.70),(109.05,130.95),(108.5,132.0)),
-            'CM5_GBE_TD0_N':((101.04,130.30),(109.05,129.05),(110.5,128.0))}
+    bpaths={'CM5_GBE_TD2_P':((97.96,130.70),(91.30,130.475),(93.0,128.0)),
+            'CM5_GBE_TD2_N':((97.96,130.30),(91.30,129.525),(94.0,132.0)),
+            'CM5_GBE_TD0_P':((101.04,130.70),(111.30,130.475),(107.0,132.0)),
+            'CM5_GBE_TD0_N':((101.04,130.30),(111.30,129.525),(106.0,128.0))}
     for n,(src,pad,vp) in bpaths.items():
         via(b,src,n); track(b,src,vp,n,pcbnew.B_Cu); via(b,vp,n); track(b,vp,pad,n,pcbnew.F_Cu)
     # Complete all eight ESD-to-MagJack paths on separated, conservative lanes.
-    outs={'CM5_GBE_TD3_N':((89.05,130.475),(84.285,76.17)),
-          'CM5_GBE_TD3_P':((89.05,129.525),(86.825,77.44)),
-          'CM5_GBE_TD2_N':((90.5,128.0),(93.175,77.44)),
-          'CM5_GBE_TD2_P':((90.5,129.05),(95.715,76.17)),
-          'CM5_GBE_TD1_N':((109.05,130.475),(93.37,84.06)),
-          'CM5_GBE_TD1_P':((109.05,129.525),(95.91,84.06)),
-          'CM5_GBE_TD0_N':((110.5,129.05),(104.09,84.06)),
-          'CM5_GBE_TD0_P':((108.5,130.95),(106.63,84.06))}
+    outs={'CM5_GBE_TD3_N':((88.70,130.95),(84.285,76.17)),
+          'CM5_GBE_TD3_P':((88.70,129.05),(86.825,77.44)),
+          'CM5_GBE_TD2_N':((94.0,132.0),(93.175,77.44)),
+          'CM5_GBE_TD2_P':((93.0,128.0),(95.715,76.17)),
+          'CM5_GBE_TD1_N':((108.70,130.95),(93.37,84.06)),
+          'CM5_GBE_TD1_P':((108.70,129.05),(95.91,84.06)),
+          'CM5_GBE_TD0_N':((106.0,128.0),(104.09,84.06)),
+          'CM5_GBE_TD0_P':((107.0,132.0),(106.63,84.06))}
     for n,(a,z) in outs.items(): track(b,a,(a[0],75),n,pcbnew.B_Cu if 'TD2' in n or 'TD0' in n else pcbnew.F_Cu); track(b,(a[0],75),z,n,pcbnew.B_Cu if 'TD2' in n or 'TD0' in n else pcbnew.F_Cu)
-    for p in [(89.05,130),(109.05,130)]: track(b,p,(p[0]-2.5,130),'ETH_GND'); via(b,(p[0]-2.5,130),'ETH_GND')
+    for p in [(88.70,130),(108.70,130)]: track(b,p,(p[0]-2.5,130),'ETH_GND'); via(b,(p[0]-2.5,130),'ETH_GND')
     track(b,(86.55,130),(106.55,140),'ETH_GND',pcbnew.B_Cu); track(b,(106.55,140),(106.55,130),'ETH_GND',pcbnew.B_Cu)
     out=ROOT/'ESDS304_ETHERNET_DISPOSABLE_FIXTURE.kicad_pcb'; b.Save(str(out)); print(out)
 if __name__=='__main__': main()
