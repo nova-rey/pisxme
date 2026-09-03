@@ -2919,3 +2919,11 @@
 - Native DRC improved to 163 violations/3 unconnected items but still found
   B.Cu MDI crossings and connector/transition clearances; candidate rejected.
 - Preserved the refined fixture/report and kept Phase 17 as the earliest gate.
+
+2026-09-03 — Phase 17 exact J7-launch-only oracle
+
+- Built a disposable fixture with the complete authoritative J7 instance,
+  opposing pad field, courtyards, valid outline, and separated boundary pads.
+- Native DRC reported 27 candidate-local violations and 63 expected non-MDI
+  unconnected pads; true MDI launch crossings/clearances remain.
+- Preserved the diagnostic fixture and kept Phase 17 open.

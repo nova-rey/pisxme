@@ -876,3 +876,25 @@ reorientation with both USON ESD footprints at 180 degrees, regenerated
 internal copper, and a monotonic four-lane fanout. This is still within the
 approved Ethernet architecture and requires no software installation or gate
 relaxation.
+
+## Exact J7-launch-only oracle — 2026-09-03
+
+The hardware-audit review required a fixture preserving the complete
+authoritative J7 instance, including its opposing pad field and courtyards,
+without inheriting acreage copper or unrelated footprints. That fixture now
+uses the exact J7 instance and pad metadata, a valid outline, and separated
+left/right external boundary pads.
+
+Native KiCad DRC reports **27 violations / 63 unconnected pads**. The 63 are
+non-MDI CM5 pads intentionally left without their surrounding CM5 circuit,
+so they are not treated as a launch pass/fail metric. The 27 candidate-local
+findings include real MDI launch crossings and clearance/hole issues and are
+independently fatal. The fixture is retained as
+`pisxme/reva-clean/CM5IO_J7_LAUNCH_FIXTURE.kicad_pcb` with
+`CM5IO_J7_LAUNCH_FIXTURE-drc.rpt` and
+`phase17_j7_launch_fixture.py`.
+
+This is stronger evidence than the prior contaminated full-board trials: the
+J7 launch is not yet proven routable under the current trial paths, but the
+official CM5IO Ethernet architecture remains valid. Phase 17 remains open;
+Phase 18+ remains gated.
