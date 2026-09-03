@@ -2640,3 +2640,15 @@
 - Recorded the legal trial table and evidence limits in
   `PHASE17_BCM54210PE_REMAP_AUTHORITY.md`.
 - No production asset was changed; Phase 17 routing remains open.
+
+2026-09-03 — Phase 17 BCM54210PE remap closure boundary
+
+- Verified the exact CM5 feature claim from Raspberry Pi: automatic MDI
+  crossover, pair-skew correction, and pair-polarity correction.
+- Compared it with the official CM5IO four-intact-pair, 1:1 MagJack wiring and
+  Broadcom's public BCM54210 authority.
+- Recorded that no exact-device public mapping table authorizes arbitrary
+  four-pair PCB permutation; polarity remains an intact-pair operation and
+  skew correction does not legalize copper crossings.
+- Added the fail-closed candidate matrix and updated the GitHub-readable
+  blocker report. No clean PCB/schematic or Phase 18+ artifact was changed.

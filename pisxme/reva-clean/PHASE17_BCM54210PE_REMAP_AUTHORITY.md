@@ -59,3 +59,17 @@ polarity, and it may permit complete-pair MDI/MDIX alternatives. It does not,
 on the currently public authoritative evidence, prove arbitrary pair
 permutation. The clean authority remains unchanged until a candidate passes
 native DRC, pair metrics, and a BCM54210PE-specific mapping proof.
+
+## Closure decision — 2026-09-03
+
+The requested lateral-thinking check is complete. The PHY feature summary is
+real, but it is not a public authorization for arbitrary PCB pair routing:
+MDI crossover concerns the supported MDI/MDIX relationship, polarity applies
+within an intact pair, and skew correction is timing compensation. The exact
+CM5IO reference still uses `TRD0..TRD3` intact and a 1:1 MagJack.
+
+The detailed candidate matrix is in
+`PHASE17_ETHERNET_REMAP_CANDIDATES.md`. No remapped fixture is promoted and
+no clean design asset was changed. A new empirical mapping risk would require
+either exact BCM54210PE documentation or an explicit user decision to accept
+link-validation risk beyond the approved authority gate.

@@ -136,6 +136,39 @@ trial.
 
 The 100 ohm field solution and final SP3019 promotion remain unresolved. No
 Phase 18+ work may begin until the complete Phase 17 gate passes.
+
+## Resumed Phase 17 remap investigation — 2026-09-03
+
+This is a recoverable Phase 17 authority-boundary report, not a new terminal
+design failure. The requested BCM54210PE lateral-thinking path was checked
+against the exact CM5 and CM5IO authorities.
+
+CM5 documentation explicitly lists automatic MDI crossover, pair-skew
+correction, and pair-polarity correction. Broadcom's public BCM54210 page
+confirms the active 10/100/1000BASE-T PHY and common wiring-problem
+correction. However, no public BCM54210PE-specific register/table or
+application schematic was found that authorizes arbitrary four-pair PCB
+permutation. The official CM5IO implementation remains four intact TRD0..3
+pairs into a standard 1:1 MagJack.
+
+The legal candidate matrix is preserved in
+`pisxme/reva-clean/PHASE17_ETHERNET_REMAP_CANDIDATES.md`:
+
+- authoritative baseline: intact TRD0..3, 1:1;
+- conditional disposable candidates: complete pair swaps 0↔1, 2↔3, or both;
+- conditional polarity: P/N inversion only within an intact pair;
+- rejected: arbitrary pair permutation and individual-conductor mixing.
+
+Because 1000BASE-T uses all four pairs bidirectionally, 10/100 TX/RX MDI-X
+language cannot be used to silently authorize an arbitrary four-pair router.
+Pair-skew correction also does not legalize copper crossings. No remapped
+fixture was promoted, and no clean PCB/schematic was modified.
+
+Current status: `RECOVERABLE_AUTHORITY_BOUNDARY`; Phase 17 remains open.
+The smallest authorized continuation is to obtain exact BCM54210PE mapping
+authority, or explicitly choose a different Ethernet connector/ESD/launch
+architecture under the existing layer contract. Accepting unproven remapping
+as Rev-A empirical risk would be a user-controlled gate decision.
 ## Phase 17 SP3019 authoritative fixture update — 2026-09-03
 
 Status: `RECOVERABLE_FIXTURE_ROUTING_BLOCKER`
