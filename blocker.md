@@ -96,3 +96,43 @@ Littelfuse `SP3019-04HTG`: its gullwing SOT-23-6L layout has I/O on 1/3/4/6,
 GND on 2, and NC on 5, avoiding the current TPD4E004 power/signal choke
 point. This is not yet promoted; it must first pass pin-accurate footprint,
 sourcing, native DRC, and complete Phase 17 validation.
+
+## Independent specialist correction — 2026-09-03
+
+The high-speed review determined that SP3019 is not geometrically impossible.
+The prior SP3019 trial is invalid as a feasibility proof because it has
+electrical construction defects:
+
+- B.Cu routes do not transition to the F.Cu-only SMD pads through vias.
+- `CM5_GBE_TD0_P` is declared by the generator but absent from the saved PCB.
+- The trial footprint lacks authoritative solder-mask, paste, courtyard, and
+  complete assembly data.
+- The trial mixes 0.10 mm and 0.13208 mm tracks without a documented impedance
+  basis; the latter was inherited from an approximately 90 ohm result, not a
+  verified 100 ohm solution.
+- SP3019 ground pads are floating in the trial because `ETH_GND` is not
+  assigned in its generated net table.
+- The trial does not contain the complete ESD-to-MagJack channel, center-tap
+  support, shield return, or connector launch.
+
+Therefore the 335-violation / 238-unconnected result is a rejected artifact,
+not evidence that SP3019 cannot work. The specialist’s bounded topology is:
+keep each pair together, assign one pair per device to F.Cu over L2, use
+ordinary through-vias outside J7 and the ESD pads for the alternate B.Cu pair,
+use short F.Cu dogbones at the ESD pads, and add verified GND stitching at
+reference transitions. This remains within the approved layer policy.
+
+## Exact current blocker
+
+Phase 17 is blocked because the current clean authority still specifies
+TPD4E004 and no valid SP3019-authoritative implementation has yet been built.
+The next bounded action is to construct a proper SP3019 disposable fixture
+with the manufacturer land pattern, explicit vias, all eight pair nets,
+documented 100 ohm JLC stack calculations, and complete J7 -> ESD -> EDAC
+routing. If that corrected fixture passes candidate-specific native DRC, the
+component replacement can be evaluated for promotion. If it fails, the failure
+will be attributable to a valid topology rather than the prior malformed
+trial.
+
+The 100 ohm field solution and final SP3019 promotion remain unresolved. No
+Phase 18+ work may begin until the complete Phase 17 gate passes.

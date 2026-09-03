@@ -2442,3 +2442,13 @@
   report so the rejected experiment is reproducible.
 - The SP3019 routing generator was refined to use pair-separated monotonic
   corridors; the resulting native trial still fails and remains disposable.
+
+2026-09-03 — Independent Phase 17 SP3019 blocker correction
+
+- Published the specialist finding that the prior SP3019 trial was malformed,
+  not a proof of geometric impossibility: it lacked required via transitions,
+  omitted TD0_P copper, floated ESD ground, and used an unverified impedance
+  width.
+- Updated `blocker.md` with the corrected bounded topology and the exact next
+  experiment: authoritative land pattern, explicit ordinary vias, all eight
+  pairs, 100 ohm stack calculation, and complete MagJack-side routing.
