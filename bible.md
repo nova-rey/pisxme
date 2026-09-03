@@ -2498,3 +2498,11 @@
 - Rejected this corridor construction without relaxing clearance or layer
   rules. SP3019 remains an open candidate; the clean board/schematic remain
   unchanged.
+
+2026-09-03 — Phase 17 Ethernet explicit-transition correction
+
+- Corrected the disposable through-via dimensions to the board's ordinary
+  minimum (0.50 mm diameter, 0.30 mm drill) and reran native DRC.
+- The resulting experiment recorded 86 violations and 4 unconnected pads.
+  True source/via fanout and J2 support-pad shorts/crossings remain, so this
+  route is rejected; no clearance or layer rule was weakened.

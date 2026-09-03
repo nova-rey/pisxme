@@ -160,6 +160,10 @@ Evidence:
   items. This reduced dangling connectivity but introduced multiple true
   same-layer shorts/crossings at the J2 launch and did not provide a valid
   transition topology; it is rejected.
+- Third explicit-transition corridor experiment: 86 violations, 4
+  unconnected items after correcting the ordinary via to the board minimum
+  0.50 mm diameter / 0.30 mm drill. It still has true source/via fanout and
+  J2 support-pad shorts/crossings, so it is also rejected.
 - Material isolated-fixture failures are true pair crossings, connector-launch
   shorts to center-tap pads, and no ordinary via/F.Cu dogbone transitions for
   the B.Cu-assigned pairs. Therefore this is not a valid Phase 17 proof.

@@ -17,7 +17,9 @@ def tr(b, a, z, name, layer, width=W):
     t = pcbnew.PCB_TRACK(b); t.SetStart(v(*a)); t.SetEnd(v(*z)); t.SetLayer(layer)
     t.SetWidth(width); t.SetNet(N(b, name)); b.Add(t)
 def via(b, p, name):
-    q = pcbnew.PCB_VIA(b); q.SetPosition(v(*p)); q.SetWidth(pcbnew.FromMM(.45)); q.SetDrill(pcbnew.FromMM(.25))
+    # Match the board's ordinary-through-via minimums; these are deliberately
+    # not placed in any SMD pad or pad courtyard.
+    q = pcbnew.PCB_VIA(b); q.SetPosition(v(*p)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30))
     q.SetLayerPair(pcbnew.F_Cu, pcbnew.B_Cu); q.SetNet(N(b, name)); b.Add(q)
 
 def sp3019(b, ref, x, y, nets, template=None):
@@ -55,8 +57,8 @@ def main():
     # once and duplicate the native object for the second instance. Pad
     # assignment below uses FindPadByNumber, which is safe on the duplicate.
     # The native FOOTPRINT copy constructor preserves pads and attributes.
-    sp3019(b, "U9", 90, 100, {"1":"CM5_GBE_TD3_P", "3":"CM5_GBE_TD3_N", "4":"CM5_GBE_TD2_P", "6":"CM5_GBE_TD2_N", "2":"ETH_GND"}, f9)
-    sp3019(b, "U6", 110, 100, {"1":"CM5_GBE_TD1_P", "3":"CM5_GBE_TD1_N", "4":"CM5_GBE_TD0_P", "6":"CM5_GBE_TD0_N", "2":"ETH_GND"}, f6)
+    sp3019(b, "U9", 90, 100, {"1":"CM5_GBE_TD3_P", "3":"CM5_GBE_TD3_N", "4":"CM5_GBE_TD2_N", "6":"CM5_GBE_TD2_P", "2":"ETH_GND"}, f9)
+    sp3019(b, "U6", 110, 100, {"1":"CM5_GBE_TD1_P", "3":"CM5_GBE_TD1_N", "4":"CM5_GBE_TD0_N", "6":"CM5_GBE_TD0_P", "2":"ETH_GND"}, f6)
     def nt(a,z,name,layer): tr(b,a,z,name,layer,W)
     # Pair-separated monotonic corridors. Pair 3/1 use F.Cu and pair 2/0
     # use B.Cu, so the two CM5 source columns never share a route layer.
@@ -66,20 +68,20 @@ def main():
       "CM5_GBE_TD1_P":(((101.04,99.10),(106,99.10),(106,99.05),(119.05,99.05)),pcbnew.F_Cu),
       "CM5_GBE_TD1_N":(((101.04,99.50),(107,99.50),(107,100.95),(119.05,100.95)),pcbnew.F_Cu),}
     bpaths = {
-      "CM5_GBE_TD2_N":(((97.96,100.30),(93,100.30),(93,98.0),(91.95,98.0),(91.95,99.05)),(90.95,99.05),(90.95,99.05)),
-      "CM5_GBE_TD2_P":(((97.96,100.70),(94,100.70),(94,102.0),(91.95,102.0),(91.95,100.95)),(90.95,100.95),(90.95,100.95)),
-      "CM5_GBE_TD0_N":(((101.04,100.30),(107,100.30),(107,98.0),(108.05,98.0),(108.05,99.05)),(109.05,99.05),(109.05,99.05)),
-      "CM5_GBE_TD0_P":(((101.04,100.70),(108,100.70),(108,102.0),(108.05,102.0),(108.05,100.95)),(109.05,100.95),(109.05,100.95)),}
+      "CM5_GBE_TD2_N":(((97.96,100.30),(95,100.30),(95,102),(92,102),(92,100.95)),(96,100.30),(92,100.95),(90.95,100.95)),
+      "CM5_GBE_TD2_P":(((97.96,100.70),(96,100.70),(96,103),(91,103),(91,99.05)),(96,100.70),(91,99.05),(90.95,99.05)),
+      "CM5_GBE_TD0_N":(((101.04,100.30),(105,100.30),(105,102),(108,102),(108,99.05)),(104,100.30),(108,99.05),(120.95,99.05)),
+      "CM5_GBE_TD0_P":(((101.04,100.70),(104,100.70),(104,103),(109,103),(109,100.95)),(104,100.70),(109,100.95),(120.95,100.95)),}
     for name,(pts,layer) in paths.items():
         for a,z in zip(pts,pts[1:]): nt(a,z,name,layer)
-    for name,(pts,src_via,esd_via) in bpaths.items():
+    for name,(pts,src_via,esd_via,pad) in bpaths.items():
         # F.Cu source breakout -> ordinary through-via -> B.Cu corridor.
         nt(pts[0],src_via,name,pcbnew.F_Cu)
         via(b,src_via,name)
         for a,z in zip([src_via]+list(pts[1:]),list(pts[1:])+[esd_via]):
             if a != z: nt(a,z,name,pcbnew.B_Cu)
         via(b,esd_via,name)
-        nt(esd_via, (90.95,99.05) if name.endswith("TD2_N") else (90.95,100.95) if name.endswith("TD2_P") else (120.95,99.05) if name.endswith("TD0_N") else (120.95,100.95), name, pcbnew.F_Cu)
+        nt(esd_via, pad, name, pcbnew.F_Cu)
     # ESD-to-MagJack corridors. These are intentionally long and separated so
     # the fixture tests topology and launch correctness before acreage packing.
     out_paths = {
@@ -87,10 +89,10 @@ def main():
       "CM5_GBE_TD3_N":(((89.05,100.95),(87,100.95),(87,45.715),(96.17,45.715)),pcbnew.F_Cu),
       "CM5_GBE_TD1_P":(((119.05,99.05),(112,99.05),(112,44.09),(104.06,44.09)),pcbnew.F_Cu),
       "CM5_GBE_TD1_N":(((119.05,100.95),(111,100.95),(111,46.63),(104.06,46.63)),pcbnew.F_Cu),
-      "CM5_GBE_TD2_N":(((90.95,99.05),(92,99.05),(92,36.825),(97.44,36.825)),pcbnew.B_Cu),
-      "CM5_GBE_TD2_P":(((90.95,100.95),(90.95,104),(98,104),(98,34.285),(96.17,34.285)),pcbnew.B_Cu),
-      "CM5_GBE_TD0_N":(((120.95,99.05),(118,99.05),(118,35.91),(104.06,35.91)),pcbnew.B_Cu),
-      "CM5_GBE_TD0_P":(((120.95,100.95),(120.95,104),(102,104),(102,33.37),(104.06,33.37)),pcbnew.B_Cu),
+      "CM5_GBE_TD2_P":(((91,99.05),(98,99.05),(98,34.285),(96.17,34.285)),pcbnew.B_Cu),
+      "CM5_GBE_TD2_N":(((92,100.95),(94,100.95),(94,36.825),(97.44,36.825)),pcbnew.B_Cu),
+      "CM5_GBE_TD0_P":(((109,100.95),(109,33.37),(104.06,33.37)),pcbnew.B_Cu),
+      "CM5_GBE_TD0_N":(((108,99.05),(107,99.05),(107,35.91),(104.06,35.91)),pcbnew.B_Cu),
     }
     for name,(pts,layer) in out_paths.items():
         for a,z in zip(pts,pts[1:]): nt(a,z,name,layer)
