@@ -2,7 +2,7 @@
 
 ## Final state
 
-`PISXME_REVA_CLEAN_BLOCKED`
+`PISXME_REVA_CLEAN_RECOVERABLE_PHASE17`
 
 ## Earliest failed gate
 
@@ -242,6 +242,35 @@ Evidence:
 The result does not prove SP3019 is geometrically impossible. It proves the
 current disposable route construction is not yet a valid fixture. SP3019 is
 not promoted and the clean board is unchanged.
+
+## Official CM5IO CAD oracle audit — 2026-09-03
+
+The official Raspberry Pi CM5IO Rev 2 KiCad archive was downloaded from the
+Raspberry Pi design-files page, SHA-256
+`48b14a6757b0edc0ac110331445f35a4212b5ce432bdcec6605c99431b59496b`, and
+inspected as native `CM5IO.kicad_sch` and `CM5IO.kicad_pcb` files. The archive,
+exact-copy fixture, and DRC receipts are privately pushed in commit `56f4b2d`.
+
+The native CM5IO Ethernet block is a valid reference implementation: intact
+TRD0..TRD3 pair order and polarity; two rotated `TPD4EUSB30` /
+`USON-10_2.5x1.0mm_P0.5mm` protectors; all eight MDI routes on F.Cu at
+0.127 mm; compact source -> ESD -> MagJack placement; and complete tap, LED,
+shield, GND, and support routing. Native source and exact-copy DRC found zero
+unconnected items and no MDI crossing, shorting, or dangling-via findings.
+
+The oracle cannot be copied blindly into PiSXMe: official U3 uses Trxcom
+`TRJG0926HENL`, while PiSXMe authority selected EDAC `A70-112-331N126`, and
+their mounting/shield-hole geometry differs. The official ESD value/BOM also
+conflicts with hidden sourcing and datasheet fields, so it does not establish
+one exact procurement MPN. PiSXMe currently uses TPD4E004 WSON6 devices and
+a remote MagJack, unlike the official compact topology.
+
+This is a recoverable transplant/authoring blocker, not evidence that CM5
+Ethernet is architecturally impossible. The next authorized experiment is a
+disposable CM5-adjacent PiSXMe fixture using separately authoritative
+PiSXMe footprints/MPNs and the proven pair-preserving topology under the
+six-layer/100-ohm/no-plane-signal contract. No clean PCB/schematic or Phase
+18+ artifact has been changed.
 
 Bounded continuation options, all within the approved architecture:
 

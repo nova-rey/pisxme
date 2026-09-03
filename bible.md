@@ -2685,3 +2685,11 @@
 - Recorded that the official CM5IO topology is closed as a routing oracle but
   PiSXMe adaptation remains open pending separately-authorized EDAC/ESD
   footprint parity. No clean PCB/schematic was modified.
+
+2026-09-03 — Published current Phase 17 oracle blocker report
+
+- Updated the GitHub-readable blocker report from terminal-blocked wording to
+  the recoverable official-oracle/transplant state.
+- Preserved exact CM5IO source, native DRC, ESD metadata conflict, and
+  MagJack land-pattern mismatch as the next bounded work boundary.
+- No clean PCB/schematic or Phase 18+ artifact was changed.
