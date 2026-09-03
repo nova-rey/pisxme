@@ -2524,3 +2524,11 @@
 - Native DRC remains 74 violations and 4 unconnected pads. This is preserved
   as failed fixture evidence only; no production promotion or later phase was
   started.
+
+2026-09-03 — Phase 17 Ethernet return-path correction
+
+- Joined the two external SP3019 ground-return vias with an ordinary B.Cu
+  GND spine and reran native DRC. The fixture now has zero unconnected pads.
+- Native DRC still reports 79 true pair crossings/shorts, so this remains a
+  failed disposable experiment. SP3019 was not promoted and production files
+  were not changed.

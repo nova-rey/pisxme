@@ -169,6 +169,10 @@ Evidence:
   F.Cu/B.Cu pair groups monotonic reduced the failure set further, but native
   DRC still reports genuine four-pair fanout/launch crossings and shorts. It
   is rejected; this is the current best bounded SP3019 trial.
+- Return-path correction: 79 violations, 0 unconnected pads after joining the
+  two external SP3019 GND return vias with a B.Cu GND spine. Connectivity and
+  return continuity now pass, but true pair crossings/shorts remain, so the
+  fixture is still rejected for Phase 17.
 - Material isolated-fixture failures are true pair crossings, connector-launch
   shorts to center-tap pads, and no ordinary via/F.Cu dogbone transitions for
   the B.Cu-assigned pairs. Therefore this is not a valid Phase 17 proof.

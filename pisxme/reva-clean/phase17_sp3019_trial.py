@@ -89,12 +89,21 @@ def main():
       "CM5_GBE_TD3_N":(((89.05,130.95),(87,130.95),(87,76.17),(94.285,76.17)),pcbnew.F_Cu),
       "CM5_GBE_TD1_P":(((119.05,129.05),(112,129.05),(112,84.06),(95.91,84.06)),pcbnew.F_Cu),
       "CM5_GBE_TD1_N":(((119.05,130.95),(111,130.95),(111,84.06),(93.37,84.06)),pcbnew.F_Cu),
-      "CM5_GBE_TD2_P":(((91,129.05),(98,129.05),(98,76.17),(95.715,76.17)),pcbnew.B_Cu),
-      "CM5_GBE_TD2_N":(((92,130.95),(94,130.95),(94,77.44),(93.175,77.44)),pcbnew.B_Cu),
+      "CM5_GBE_TD2_P":(((91,129.05),(98,129.05),(98,76.17),(105.715,76.17)),pcbnew.B_Cu),
+      "CM5_GBE_TD2_N":(((92,130.95),(94,130.95),(94,77.44),(103.175,77.44)),pcbnew.B_Cu),
       "CM5_GBE_TD0_P":(((109,129.05),(109,84.06),(106.63,84.06)),pcbnew.B_Cu),
       "CM5_GBE_TD0_N":(((108,130.95),(107,130.95),(107,84.06),(104.09,84.06)),pcbnew.B_Cu),
     }
     for name,(pts,layer) in out_paths.items():
         for a,z in zip(pts,pts[1:]): nt(a,z,name,layer)
+    # Complete the disposable return/connector support proof.  The ESD
+    # grounds leave their SMD pads on short F.Cu branches to ordinary GND
+    # stitching vias; the two authoritative shield pads are tied together.
+    for pad, vp in [((89.05,130.0),(86.5,130.0)), ((109.05,130.0),(106.5,130.0))]:
+        nt(pad,vp,'ETH_GND',pcbnew.F_Cu); via(b,vp,'ETH_GND')
+    nt((86.5,130.0),(86.5,140.0),'ETH_GND',pcbnew.B_Cu)
+    nt((86.5,140.0),(106.5,140.0),'ETH_GND',pcbnew.B_Cu)
+    nt((106.5,140.0),(106.5,130.0),'ETH_GND',pcbnew.B_Cu)
+    nt((94.285,71.11),(95.555,73.65),'GBE_SHIELD',pcbnew.F_Cu)
     out = ROOT / "SP3019_ETHERNET_DISPOSABLE_FIXTURE.kicad_pcb"; b.Save(str(out)); print(out)
 if __name__ == "__main__": main()
