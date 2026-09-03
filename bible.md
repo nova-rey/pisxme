@@ -2515,3 +2515,12 @@
 - Rejected the experiment because genuine four-pair fanout/launch crossings
   and shorts remain. The clean PCB/schematic remain unchanged and SP3019 is
   not promoted.
+
+2026-09-03 — Phase 17 current fixture audit checkpoint
+
+- Re-audited the saved disposable PCB after the separated-placement trial:
+  J7 has exactly eight Ethernet pads, U6/U9 have six pads each with explicit
+  ground and NC pin 5, and all eight CM5 Ethernet nets are present.
+- Native DRC remains 74 violations and 4 unconnected pads. This is preserved
+  as failed fixture evidence only; no production promotion or later phase was
+  started.
