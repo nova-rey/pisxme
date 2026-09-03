@@ -2954,3 +2954,14 @@
   fixture omissions; zero crossings, shorts, clearance, and hole-clearance.
 - Reran the complete CM5IO transplant: 8 silkscreen-only findings and zero
   unconnected items. Retained it as the full-island authority baseline.
+
+2026-09-03 — Phase 17 corrected J7 source transitions
+
+- Corrected the disposable J7 generator so F.Cu-only source pads begin on
+  F.Cu before ordinary through-via transitions; the right group returns to
+  F.Cu through a second ordinary via.
+- Native DRC now reports zero MDI crossings, shorts, via-dangling, and
+  hole-clearance findings. Remaining 38 findings are fixture width/clearance
+  diagnostics and expected non-MDI omissions; no CM5_GBE item is unconnected.
+- Superseded the prior J7 receipt and retained Phase 17 open pending complete
+  ESD/MagJack integration and acreage validation.

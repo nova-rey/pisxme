@@ -35,7 +35,7 @@ def main():
     if bf is None: raise RuntimeError('boundary footprint load failed')
     bf.SetReference('J7_BOUNDARY'); bf.SetPosition(V(0,0)); b.Add(bf)
     exits={}
-    left_ep={3:(10.0,90.0),5:(12.0,92.0),9:(14.0,94.0),11:(16.0,96.0)}
+    left_ep={3:(10.0,90.0),5:(8.0,92.0),9:(6.0,94.0),11:(4.0,96.0)}
     right_ep={4:(90.0,90.0),6:(92.0,92.0),10:(94.0,94.0),12:(96.0,96.0)}
     for index,(number,name) in enumerate(MDI.items()):
         jp=f.FindPadByNumber(str(number)); p=jp.GetPosition(); x,y=pcbnew.ToMM(p.x),pcbnew.ToMM(p.y)
@@ -46,9 +46,10 @@ def main():
     for number,name in MDI.items():
         x,y,ep=exits[name]; n=nets[name]
         if number in (3,5,9,11):
-            track(b,n,(x,y),ep,pcbnew.B_Cu)
+            vp={3:(30.0,y),5:(28.0,y),9:(26.0,y),11:(24.0,y)}[number]
+            track(b,n,(x,y),vp,pcbnew.F_Cu); via(b,n,vp); track(b,n,vp,ep,pcbnew.B_Cu)
         else:
-            idx={4:0,6:1,10:2,12:3}[number]; lane=40.0+2.0*idx; bus_y=72.0+0.5*idx; bus_x=80.0-1.5*idx; offset={4:-1.6,6:0.8,10:1.6,12:2.4}[number]; vp=(lane,y+offset); track(b,n,(x,y),vp,pcbnew.B_Cu); via(b,n,vp); track(b,n,vp,(lane,bus_y),pcbnew.F_Cu); track(b,n,(lane,bus_y),(bus_x,bus_y),pcbnew.F_Cu); track(b,n,(bus_x,bus_y),(bus_x,ep[1]),pcbnew.F_Cu); track(b,n,(bus_x,ep[1]),ep,pcbnew.F_Cu)
+            idx={4:0,6:1,10:2,12:3}[number]; lane=40.0+2.0*idx; bus_y=72.0+0.5*idx; bus_x=80.0-1.5*idx; offset={4:-1.6,6:0.8,10:1.6,12:2.4}[number]; vp=(lane,y+offset); vout=(lane,bus_y); track(b,n,(x,y),vp,pcbnew.F_Cu); via(b,n,vp); track(b,n,vp,vout,pcbnew.B_Cu); via(b,n,vout); track(b,n,vout,(bus_x,bus_y),pcbnew.F_Cu); track(b,n,(bus_x,bus_y),(bus_x,ep[1]),pcbnew.F_Cu); track(b,n,(bus_x,ep[1]),ep,pcbnew.F_Cu)
     d=b.GetDesignSettings(); d.m_TrackMinWidth=pcbnew.FromMM(.10); d.m_MinThroughDrill=pcbnew.FromMM(.25); d.m_ViasMinSize=pcbnew.FromMM(.45); d.m_CopperEdgeClearance=pcbnew.FromMM(.25)
     x0,y0,x1,y1=5,70,100,145
     for a,z in (((x0,y0),(x1,y0)),((x1,y0),(x1,y1)),((x1,y1),(x0,y1)),((x0,y1),(x0,y0))): edge(b,a,z)

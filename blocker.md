@@ -955,3 +955,29 @@ The complete official CM5IO transplant was also rerun natively and reports 8
 silkscreen-only violations with zero unconnected items. It remains the
 complete-island authority baseline; the acreage copy is not accepted because
 its unrelated floorplan debt is still present.
+
+## Corrected J7 transition rerun — 2026-09-03
+
+The prior receipt overstated the result because the right-side source
+dogbones were initially started on B.Cu even though the authoritative J7
+pads are F.Cu-only. The disposable generator was corrected so every J7
+source begins on F.Cu, transitions through an ordinary through-via, and then
+uses the intended permitted signal-layer corridor. The right group returns to
+F.Cu through a second ordinary through-via; no via-in-pad is used.
+
+The corrected native rerun reports **38 findings / 55 unconnected items**.
+The unconnected items are fixture omissions dominated by the unpopulated CM5
+power/ground pad field; no `CM5_GBE_*` item is reported as unconnected. There
+are zero `tracks_crossing`, zero `shorting_items`, zero `via_dangling`, and
+zero hole-clearance findings. Remaining findings are fixture diagnostics: 28
+width-rule findings because the detached fixture still carries a 0.200 mm
+default minimum instead of the CM5IO-authoritative 0.127 mm MDI width, eight
+J7-adjacent copper-clearance findings against the dense pad field, and one
+board-edge-clearance finding.
+
+This supersedes the immediately preceding 32-finding receipt. It proves the
+source-transition construction is electrically connected and crossing-free
+under the trial geometry, but it is not a complete Ethernet or Phase 17
+pass. The next authorized step is to combine this corrected J7 launch with
+the official ESD/MagJack island and eliminate the remaining local
+clearance/width-rule diagnostics before acreage promotion.
