@@ -2881,6 +2881,9 @@
   rejects the CM5IO-derived 0.127 mm width.
 - Preserved the fixture/report and closed the package-reorientation-only
   hypothesis without modifying production or frozen subsystems.
+- Rebuilt the disposable from only the authoritative four Ethernet footprints
+  after detecting inherited acreage context in the first fixture run; the
+  corrected isolated receipt is the controlling evidence.
 
 2026-09-03 — Phase 17 parametric right-channel trial
 
