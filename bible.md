@@ -2434,3 +2434,7 @@
 - Recorded manufacturer, lifecycle, package, and procurement evidence in
   `PHASE17_ETHERNET_ESD_REPLACEMENT_RESEARCH.md`; no clean schematic or
   production PCB promotion has occurred.
+- A disposable SP3019 geometry trial was run through native KiCad DRC; it
+  remains rejected with 346 violations and 240 unconnected items. Its
+  datasheet-derived trial footprint is explicitly non-authoritative and was
+  not promoted.
