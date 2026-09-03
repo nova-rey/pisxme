@@ -153,10 +153,12 @@ Evidence:
 - Generator: `pisxme/reva-clean/phase17_sp3019_trial.py`
 - Manufacturer footprint: `pisxme/reva-clean/PiSXMe_RevA_Clean.pretty/SP3019_04HTG_SOT23_6L.kicad_mod`
 - Native DRC: `pisxme/reva-clean/SP3019_ETHERNET_DISPOSABLE_FIXTURE-drc.rpt`
-- DRC result: 96 violations, 76 unconnected items
-- Material failures include true pair crossings, connector-launch shorts to
-  center-tap/unrelated CM5 pads, and no ordinary via/F.Cu dogbone transitions
-  for the B.Cu-assigned pairs. Therefore this is not a valid Phase 17 proof.
+- Initial full-board DRC result: 96 violations, 76 unconnected items.
+- Isolated-base rerun: 65 violations, 21 unconnected items after removing
+  unrelated CM5 source pads from the disposable J7 copy.
+- Material isolated-fixture failures are true pair crossings, connector-launch
+  shorts to center-tap pads, and no ordinary via/F.Cu dogbone transitions for
+  the B.Cu-assigned pairs. Therefore this is not a valid Phase 17 proof.
 
 The result does not prove SP3019 is geometrically impossible. It proves the
 current disposable route construction is not yet a valid fixture. SP3019 is
@@ -164,8 +166,8 @@ not promoted and the clean board is unchanged.
 
 Bounded continuation options, all within the approved architecture:
 
-1. Recommended: build the fixture from a fresh minimal board containing only
-   the eight authoritative J7 source pads, the complete authoritative J2
+1. Recommended next: continue from the now-created minimal base containing
+   only the eight authoritative J7 source pads, the complete authoritative J2
    Ethernet launch/support pads, two manufacturer SP3019 footprints, explicit
    GND/return vias, and a large acreage outline. Solve the four pair corridors
    there before reintegrating the full connector footprints.

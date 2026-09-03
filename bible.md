@@ -2465,3 +2465,14 @@
 - Published the exact evidence and bounded continuation options in
   `blocker.md`. SP3019 was not promoted, the clean PCB/schematic was not
   changed, and Phase 18+ remains gated.
+
+2026-09-03 — Phase 17 minimal Ethernet fixture isolation
+
+- Added a reproducible disposable base extractor that preserves the
+  authoritative J7 Ethernet pad coordinates and J2 launch while removing
+  unrelated CM5 pads and prior acreage routing from the fixture.
+- Re-ran the corrected SP3019 fixture against the isolated base. Native DRC
+  narrowed the result to 65 violations and 21 unconnected items; the
+  remaining failures are Ethernet-local routing/topology defects, not the
+  prior malformed-footprint or unrelated-connector evidence.
+- Kept SP3019 unpromoted and the clean PCB/schematic unchanged.
