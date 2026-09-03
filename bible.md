@@ -2870,3 +2870,13 @@
   error; the focused Ethernet hierarchy/netlist regression passes.
 - Corrected the stale zero-total-ERC statement in `PHASE3_STATUS.md` and
   preserved the full current report for final-gate review.
+
+2026-09-03 — Phase 17 TD3-outer physical-order trial
+
+- Rechecked the official CM5IO source before experimenting; retained its
+  authoritative 1:1 pair mapping and F.Cu MDI routing philosophy.
+- Tested a new left-source physical order with TD3 outer/left and TD2
+  inner/right to remove the reversal identified in the prior monotonic trial.
+- Rejected native KiCad DRC at 364 violations/453 unconnected items because
+  Ethernet-local crossings/launch-clearance failures remained. Preserved the
+  candidate and DRC receipt; no production or frozen subsystem changed.

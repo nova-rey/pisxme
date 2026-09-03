@@ -757,3 +757,38 @@ hierarchy-authority regression and current XML netlist mapping pass, but the
 historical Phase 3 receipt's claim of zero total ERC findings is no longer
 current and has been corrected in `PHASE3_STATUS.md`. The complete current
 ERC report is `pisxme/reva-clean/PHASE17_NATIVE_ROOT_ERC_CURRENT.rpt`.
+
+## TD3-outer physical-order trial — 2026-09-03
+
+The official CM5IO source was rechecked before another Ethernet experiment.
+Its working implementation remains the authoritative 1:1 mapping: the left
+CM5 source group is TD3 then TD2, the right group is TD1 then TD0, both ESD
+devices are TPD4EUSB30 in the official USON-10 footprint, and the MDI copper
+is F.Cu-only. No arbitrary PHY pair permutation was introduced.
+
+The next disposable trial changed the physical order of the left source
+escape so TD3 occupies the outer/left lane and TD2 the inner/right lane. This
+tests the source-order reversal identified in the monotonic trial while
+retaining the official translated ESD/MagJack graph, ordinary through-via
+policy, and no plane-layer signal routing.
+
+Native KiCad DRC still reports **364 violations / 453 unconnected items**.
+The candidate is rejected: Ethernet-local source/launch crossing and
+clearance failures remain. The inherited unconnected count is not used as
+the sole conclusion because this disposable is based on the unrouted acreage
+ancestor; the true Ethernet crossings/clearance failures are independently
+fatal. The candidate and native report are preserved as
+`pisxme/reva-clean/ACREAGE_CM5IO_TOP_ISLAND_TD3_OUTER_PHASE17.kicad_pcb` and
+`pisxme/reva-clean/ACREAGE_CM5IO_TOP_ISLAND_TD3_OUTER_PHASE17-drc.rpt`.
+
+### Exact current blocker
+
+The official CM5IO topology reproduces cleanly in the disposable fixture,
+but no tested CM5-adjacent acreage adaptation has yet produced a legal
+connector-to-ESD launch around fixed J7 while keeping the official
+ESD/MagJack geometry and support acreage clear. Phase 17 remains open and
+Phase 18+ is gated. The authorized next continuation is a fresh physical
+placement class: move the complete official Ethernet island to an open board
+edge or below/left of J7 and regenerate all source-to-island vectors, then run
+native DRC. No new software, architecture change, or validation relaxation
+is required.

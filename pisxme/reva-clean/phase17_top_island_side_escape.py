@@ -9,6 +9,8 @@ BASE=ROOT/'ACREAGE_EDAC_CORRECTED_PHASE17.kicad_pcb'
 GEOM=ROOT/'cm5io_mdi_geometry.json'
 OUT=ROOT/'ACREAGE_CM5IO_TOP_ISLAND_SIDE_ESCAPE_PHASE17.kicad_pcb'
 DX,DY=-42.5,-8.0
+if os.environ.get('PISXME_LANE_ORDER') == 'TD3_OUTER':
+    OUT=ROOT/'ACREAGE_CM5IO_TOP_ISLAND_TD3_OUTER_PHASE17.kicad_pcb'
 
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def add(b,n,pts,layer=pcbnew.F_Cu):
@@ -58,6 +60,15 @@ def main():
       'CM5_GBE_TD1_N':[(36.04,99.50),(40.5,99.50),(40.5,71.5),(33.039999,59.028702)],
       'CM5_GBE_TD0_N':[(36.04,100.30),(43.0,100.30),(43.0,70.0),(34.16,58.571298)],
       'CM5_GBE_TD0_P':[(36.04,100.70),(43.5,100.70),(43.5,69.5),(34.539999,58.728702)]}
+    # On the left side of J7, the CM5IO source order is TD3P, TD3N,
+    # TD2N, TD2P from top to bottom.  The prior monotonic trial inverted
+    # the two pair lanes (TD2 outside TD3), creating the documented source
+    # crossings.  This variant keeps TD3 outer/left and TD2 inner/right.
+    if os.environ.get('PISXME_LANE_ORDER') == 'TD3_OUTER':
+        paths['CM5_GBE_TD3_P'][1:3]=[(24.0,99.10),(24.0,69.5)]
+        paths['CM5_GBE_TD3_N'][1:3]=[(24.5,99.50),(24.5,70.0)]
+        paths['CM5_GBE_TD2_N'][1:3]=[(27.0,100.30),(27.0,70.5)]
+        paths['CM5_GBE_TD2_P'][1:3]=[(27.5,100.70),(27.5,71.0)]
     bcu=os.environ.get('PISXME_BCU_ESCAPE')=='1'
     for name,pts in paths.items():
         end=(land[name][0]+DX,land[name][1]+DY)
