@@ -1,0 +1,412 @@
+** Drc report for ESDS304_ETHERNET_CLEAN_DISPOSABLE_FIXTURE.kicad_pcb **
+** Created on 2026-09-03T11:48:21 **
+** Report includes: Errors, Warnings **
+
+** Found 92 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(86.0000 mm, 130.3000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 25.3000 mm
+    @(88.0000 mm, 115.0000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 4.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(86.0000 mm, 105.0000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 3.0000 mm
+    @(84.0000 mm, 110.4750 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 32.4750 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD3_P and CM5_GBE_TD3_N)
+    Local override; error
+    @(76.0000 mm, 52.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 18.7545 mm
+    @(94.2850 mm, 56.1700 mm): PTH pad 11 [CM5_GBE_TD3_N] of J2
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD2_P and CM5_GBE_TD2_N)
+    Local override; error
+    @(97.9600 mm, 130.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+    @(97.9600 mm, 130.3000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD2_P and /ETHERNET/ETH_CT3)
+    Local override; error
+    @(103.0000 mm, 52.0000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 4.3635 mm
+    @(103.1750 mm, 53.6500 mm): PTH pad 8 [/ETHERNET/ETH_CT3] of J2
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(102.0000 mm, 68.0000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 4.4600 mm
+    @(103.0000 mm, 78.0000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 26.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(84.0000 mm, 110.4750 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 32.4750 mm
+    @(83.0000 mm, 80.0000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 24.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(99.0000 mm, 84.0000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 16.0000 mm
+    @(84.0000 mm, 78.0000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 19.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(106.0000 mm, 106.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 12.7000 mm
+    @(115.0000 mm, 110.9500 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 38.9500 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD0_N and CM5_GBE_TD1_P)
+    Local override; error
+    @(121.3000 mm, 109.5250 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 4.3000 mm
+    @(78.7000 mm, 109.0500 mm): Pad 1 [CM5_GBE_TD3_P] of U9 on F.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(107.0000 mm, 80.0000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 28.0000 mm
+    @(105.7150 mm, 60.0000 mm): NPTH pad of J2
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0552 mm)
+    Local override; error
+    @(105.7150 mm, 53.6500 mm): PTH pad 10 [/ETHERNET/ETH_CT1] of J2
+    @(107.0000 mm, 52.0000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 5.5897 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(118.0000 mm, 86.0000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 16.0000 mm
+    @(117.0000 mm, 109.5250 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 25.5250 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD0_P and CM5_GBE_TD0_N)
+    Local override; error
+    @(102.0000 mm, 68.0000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 4.4600 mm
+    @(104.0900 mm, 64.0600 mm): PTH pad 17 [CM5_GBE_TD0_N] of J2
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD1_N and CM5_GBE_TD0_P)
+    Local override; error
+    @(78.7000 mm, 110.9500 mm): Pad 3 [CM5_GBE_TD3_N] of U9 on F.Cu
+    @(121.3000 mm, 110.4750 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 3.3000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0840 mm)
+    Local override; error
+    @(97.9600 mm, 130.3000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 11.9600 mm
+    @(97.9600 mm, 130.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0840 mm)
+    Local override; error
+    @(101.0400 mm, 130.3000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 12.9600 mm
+    @(101.0400 mm, 130.7000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD0_P and CM5_GBE_TD0_N)
+    Local override; error
+    @(101.0400 mm, 130.7000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+    @(101.0400 mm, 130.3000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(117.0000 mm, 109.5250 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+    @(118.7000 mm, 110.0000 mm): Track [/ETHERNET/ETH_GND] on F.Cu, length 3.0000 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD0_P and CM5_GBE_TD0_N)
+    Local override; error
+    @(101.0400 mm, 130.7000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+    @(101.0400 mm, 130.3000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(117.0000 mm, 84.0000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 18.0000 mm
+    @(102.0000 mm, 86.0000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 18.0000 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD0_P and CM5_GBE_TD0_N)
+    Local override; error
+    @(101.0400 mm, 130.7000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+    @(101.0400 mm, 130.3000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(116.0000 mm, 70.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 20.9497 mm
+    @(115.0000 mm, 72.0000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 18.3561 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD0_P and CM5_GBE_TD0_N)
+    Local override; error
+    @(101.0400 mm, 130.7000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+    @(101.0400 mm, 130.3000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD0_P and CM5_GBE_TD0_N)
+    Local override; error
+    @(101.0400 mm, 130.7000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+    @(101.0400 mm, 130.3000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD0_P and CM5_GBE_TD0_N)
+    Local override; error
+    @(101.0400 mm, 130.7000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+    @(101.0400 mm, 130.3000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(118.7000 mm, 110.9500 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 3.7000 mm
+    @(118.0000 mm, 110.4750 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(118.7000 mm, 109.0500 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 2.7000 mm
+    @(117.0000 mm, 109.5250 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(118.7000 mm, 110.0000 mm): Track [/ETHERNET/ETH_GND] on F.Cu, length 3.0000 mm
+    @(118.0000 mm, 110.4750 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(76.0000 mm, 52.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 18.7545 mm
+    @(75.0000 mm, 50.0000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 23.0583 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(97.9600 mm, 130.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+    @(97.9600 mm, 130.3000 mm): Pad 9 [CM5_GBE_TD2_N] of J7 on F.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD2_P and CM5_GBE_TD2_N)
+    Local override; error
+    @(97.9600 mm, 130.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+    @(97.9600 mm, 130.3000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD2_P and CM5_GBE_TD2_N)
+    Local override; error
+    @(97.9600 mm, 130.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+    @(97.9600 mm, 130.3000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD2_P and CM5_GBE_TD2_N)
+    Local override; error
+    @(97.9600 mm, 130.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+    @(97.9600 mm, 130.3000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD2_P and CM5_GBE_TD2_N)
+    Local override; error
+    @(97.9600 mm, 130.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+    @(97.9600 mm, 130.3000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD2_P and CM5_GBE_TD2_N)
+    Local override; error
+    @(97.9600 mm, 130.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+    @(97.9600 mm, 130.3000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(101.0400 mm, 130.3000 mm): Pad 10 [CM5_GBE_TD0_N] of J7 on F.Cu
+    @(101.0400 mm, 130.7000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD3_P and /ETHERNET/ETH_GND)
+    Local override; error
+    @(78.7000 mm, 109.0500 mm): Pad 1 [CM5_GBE_TD3_P] of U9 on F.Cu
+    @(78.7000 mm, 110.0000 mm): Pad 2 [/ETHERNET/ETH_GND] of U9 on F.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD1_P and /ETHERNET/ETH_GND)
+    Local override; error
+    @(78.7000 mm, 109.0500 mm): Pad 1 [CM5_GBE_TD3_P] of U9 on F.Cu
+    @(78.7000 mm, 110.0000 mm): Pad 2 [/ETHERNET/ETH_GND] of U9 on F.Cu
+[shorting_items]: Items shorting two nets (nets /ETHERNET/ETH_GND and CM5_GBE_TD3_N)
+    Local override; error
+    @(78.7000 mm, 110.0000 mm): Pad 2 [/ETHERNET/ETH_GND] of U9 on F.Cu
+    @(78.7000 mm, 110.9500 mm): Pad 3 [CM5_GBE_TD3_N] of U9 on F.Cu
+[shorting_items]: Items shorting two nets (nets /ETHERNET/ETH_GND and CM5_GBE_TD1_N)
+    Local override; error
+    @(78.7000 mm, 110.0000 mm): Pad 2 [/ETHERNET/ETH_GND] of U9 on F.Cu
+    @(78.7000 mm, 110.9500 mm): Pad 3 [CM5_GBE_TD3_N] of U9 on F.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD2_P and CM5_GBE_TD2_N)
+    Local override; error
+    @(81.3000 mm, 110.4750 mm): Pad 4 [CM5_GBE_TD2_P] of U9 on F.Cu
+    @(81.3000 mm, 109.5250 mm): Pad 5 [CM5_GBE_TD2_N] of U9 on F.Cu
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD0_P and CM5_GBE_TD0_N)
+    Local override; error
+    @(81.3000 mm, 110.4750 mm): Pad 4 [CM5_GBE_TD2_P] of U9 on F.Cu
+    @(81.3000 mm, 109.5250 mm): Pad 5 [CM5_GBE_TD2_N] of U9 on F.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(97.9600 mm, 130.3000 mm): Pad 9 [CM5_GBE_TD2_N] of J7 on F.Cu
+    @(97.9600 mm, 130.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(101.0400 mm, 130.3000 mm): Pad 10 [CM5_GBE_TD0_N] of J7 on F.Cu
+    @(101.0400 mm, 130.7000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(97.9600 mm, 130.7000 mm): Pad 11 [CM5_GBE_TD2_P] of J7 on F.Cu
+    @(97.9600 mm, 130.3000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(101.0400 mm, 130.7000 mm): Pad 12 [CM5_GBE_TD0_P] of J7 on F.Cu
+    @(101.0400 mm, 130.3000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(75.0000 mm, 50.0000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 23.0583 mm
+    @(96.8250 mm, 57.4400 mm): PTH pad 12 [CM5_GBE_TD3_P] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(107.0000 mm, 52.0000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 5.5897 mm
+    @(105.7150 mm, 56.1700 mm): PTH pad 14 [CM5_GBE_TD2_P] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(103.0000 mm, 78.0000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 26.0000 mm
+    @(103.1750 mm, 57.4400 mm): PTH pad 13 [CM5_GBE_TD2_N] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(107.0000 mm, 80.0000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 28.0000 mm
+    @(106.6300 mm, 64.0600 mm): PTH pad 18 [CM5_GBE_TD0_P] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(103.0000 mm, 52.0000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 4.3635 mm
+    @(103.1750 mm, 53.6500 mm): PTH pad 8 [/ETHERNET/ETH_CT3] of J2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(121.3000 mm, 110.4750 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 3.3000 mm
+    @(78.7000 mm, 110.0000 mm): Pad 2 [/ETHERNET/ETH_GND] of U9 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(81.3000 mm, 109.5250 mm): Pad 5 [CM5_GBE_TD2_N] of U9 on F.Cu
+    @(81.3000 mm, 110.4750 mm): Pad 4 [CM5_GBE_TD2_P] of U9 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(121.3000 mm, 110.4750 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 3.3000 mm
+    @(78.7000 mm, 110.9500 mm): Pad 3 [CM5_GBE_TD3_N] of U9 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(121.3000 mm, 109.5250 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 4.3000 mm
+    @(78.7000 mm, 109.0500 mm): Pad 1 [CM5_GBE_TD3_P] of U9 on F.Cu
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(102.0000 mm, 68.0000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 4.4600 mm
+    @(104.0900 mm, 64.0600 mm): PTH pad 17 [CM5_GBE_TD0_N] of J2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(76.0000 mm, 52.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 18.7545 mm
+    @(94.2850 mm, 56.1700 mm): PTH pad 11 [CM5_GBE_TD3_N] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(103.0000 mm, 78.0000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 26.0000 mm
+    @(103.1750 mm, 53.6500 mm): PTH pad 8 [/ETHERNET/ETH_CT3] of J2
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(78.7000 mm, 109.0500 mm): Pad 1 [CM5_GBE_TD3_P] of U9 on F.Cu
+    @(78.7000 mm, 110.0000 mm): Pad 2 [/ETHERNET/ETH_GND] of U9 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(78.7000 mm, 109.0500 mm): Pad 1 [CM5_GBE_TD3_P] of U9 on F.Cu
+    @(78.7000 mm, 110.0000 mm): Pad 2 [/ETHERNET/ETH_GND] of U9 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(78.7000 mm, 110.0000 mm): Pad 2 [/ETHERNET/ETH_GND] of U9 on F.Cu
+    @(78.7000 mm, 110.9500 mm): Pad 3 [CM5_GBE_TD3_N] of U9 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(121.3000 mm, 109.5250 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 4.3000 mm
+    @(78.7000 mm, 110.0000 mm): Pad 2 [/ETHERNET/ETH_GND] of U9 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(78.7000 mm, 110.0000 mm): Pad 2 [/ETHERNET/ETH_GND] of U9 on F.Cu
+    @(78.7000 mm, 110.9500 mm): Pad 3 [CM5_GBE_TD3_N] of U9 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(81.3000 mm, 110.4750 mm): Pad 4 [CM5_GBE_TD2_P] of U9 on F.Cu
+    @(81.3000 mm, 109.5250 mm): Pad 5 [CM5_GBE_TD2_N] of U9 on F.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(107.0000 mm, 52.0000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 5.5897 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(103.0000 mm, 52.0000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 4.3635 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(115.0000 mm, 72.0000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 18.3561 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(99.0000 mm, 68.0000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 4.6932 mm
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(75.7000 mm, 110.0000 mm): Via [/ETHERNET/ETH_GND] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(115.7000 mm, 110.0000 mm): Via [/ETHERNET/ETH_GND] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.1000 mm)
+    Rule: board setup constraints; warning
+    @(97.9600 mm, 130.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+    @(97.9600 mm, 130.3000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.1000 mm)
+    Rule: board setup constraints; warning
+    @(101.0400 mm, 130.7000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+    @(101.0400 mm, 130.3000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.6500 mm, 109.1500 mm): Rectangle of U9 on f.silkscreen
+    @(78.7000 mm, 109.0500 mm): Pad 1 [CM5_GBE_TD3_P] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.6500 mm, 109.1500 mm): Rectangle of U9 on f.silkscreen
+    @(81.3000 mm, 109.5250 mm): Pad 5 [CM5_GBE_TD2_N] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.6500 mm, 109.1500 mm): Rectangle of U9 on f.silkscreen
+    @(81.3000 mm, 110.4750 mm): Pad 4 [CM5_GBE_TD2_P] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.6500 mm, 109.1500 mm): Rectangle of U9 on f.silkscreen
+    @(78.7000 mm, 110.9500 mm): Pad 3 [CM5_GBE_TD3_N] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.6500 mm, 109.1500 mm): Rectangle of U9 on f.silkscreen
+    @(78.7000 mm, 110.0000 mm): Pad 2 [/ETHERNET/ETH_GND] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.5000 mm, 109.0500 mm): Circle of U9 on f.silkscreen
+    @(78.7000 mm, 109.0500 mm): Pad 1 [CM5_GBE_TD3_P] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.6500 mm, 109.1500 mm): Rectangle of U9 on f.silkscreen
+    @(78.7000 mm, 109.0500 mm): Pad 1 [CM5_GBE_TD3_P] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.6500 mm, 109.1500 mm): Rectangle of U9 on f.silkscreen
+    @(81.3000 mm, 109.5250 mm): Pad 5 [CM5_GBE_TD2_N] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.6500 mm, 109.1500 mm): Rectangle of U9 on f.silkscreen
+    @(81.3000 mm, 110.4750 mm): Pad 4 [CM5_GBE_TD2_P] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.6500 mm, 109.1500 mm): Rectangle of U9 on f.silkscreen
+    @(78.7000 mm, 110.9500 mm): Pad 3 [CM5_GBE_TD3_N] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.6500 mm, 109.1500 mm): Rectangle of U9 on f.silkscreen
+    @(78.7000 mm, 110.0000 mm): Pad 2 [/ETHERNET/ETH_GND] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.5000 mm, 109.0500 mm): Circle of U9 on f.silkscreen
+    @(78.7000 mm, 109.0500 mm): Pad 1 [CM5_GBE_TD3_P] of U9 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(92.0500 mm, 49.3250 mm): Rectangle of J2 on f.silkscreen
+    @(91.8000 mm, 70.7500 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(92.0500 mm, 49.3250 mm): Rectangle of J2 on f.silkscreen
+    @(108.2000 mm, 70.7500 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(92.0500 mm, 49.3250 mm): Rectangle of J2 on f.silkscreen
+    @(92.1250 mm, 56.9500 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(92.0500 mm, 49.3250 mm): Rectangle of J2 on f.silkscreen
+    @(91.8000 mm, 60.0000 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(92.0500 mm, 49.3250 mm): Rectangle of J2 on f.silkscreen
+    @(107.8750 mm, 56.9500 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(92.0500 mm, 49.3250 mm): Rectangle of J2 on f.silkscreen
+    @(108.2000 mm, 60.0000 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(133.0000 mm, 108.5000 mm): Segment of J7 on f.silkscreen
+    @(78.7000 mm, 109.0500 mm): Pad 1 [CM5_GBE_TD3_P] of U9 on F.Cu
+
+** Found 8 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(78.7000 mm, 110.0000 mm): Track [/ETHERNET/ETH_GND] on F.Cu, length 3.0000 mm
+    @(115.7000 mm, 110.0000 mm): Via [/ETHERNET/ETH_GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(115.0000 mm, 72.0000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 18.3561 mm
+    @(93.3700 mm, 64.0600 mm): PTH pad 15 [CM5_GBE_TD1_N] of J2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(106.6300 mm, 64.0600 mm): PTH pad 18 [CM5_GBE_TD0_P] of J2
+    @(102.0000 mm, 68.0000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 4.4600 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(104.0900 mm, 64.0600 mm): PTH pad 17 [CM5_GBE_TD0_N] of J2
+    @(99.0000 mm, 68.0000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 4.6932 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(96.8250 mm, 57.4400 mm): PTH pad 12 [CM5_GBE_TD3_P] of J2
+    @(76.0000 mm, 52.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 18.7545 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(105.7150 mm, 56.1700 mm): PTH pad 14 [CM5_GBE_TD2_P] of J2
+    @(103.0000 mm, 52.0000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 4.3635 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(107.0000 mm, 52.0000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 5.5897 mm
+    @(103.1750 mm, 57.4400 mm): PTH pad 13 [CM5_GBE_TD2_N] of J2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.2850 mm, 51.1100 mm): PTH pad 1 [/ETHERNET/GBE_SHIELD] of J2
+    @(95.5550 mm, 53.6500 mm): PTH pad 2 [/ETHERNET/GBE_SHIELD] of J2
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

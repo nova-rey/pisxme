@@ -218,6 +218,26 @@ Ethernet-local escape construction remains required before Phase 17 can pass.
 The clean authority and production PCB remain unchanged. This is the current
 blocker record; Phase 18+ has not started.
 
+## ESDS304 large-acreage escape experiment — 2026-09-03
+
+A fresh large-acreage fixture was built with the corrected TI-authoritative
+ESDS304 footprint, U9/U6 placed away from J7, separate F.Cu/B.Cu corridors,
+ordinary transitions, local ground returns, and J2 moved to a dedicated
+connector launch zone. Native KiCad DRC reports **92 violations and 8
+unconnected items**. The failure set includes B.Cu shelf crossings, direct
+source/ESD interactions, connector launch shorts/clearance failures, and
+incomplete connectivity. This candidate is rejected; no production asset was
+changed.
+
+Reproducible artifacts:
+
+- `pisxme/reva-clean/phase17_esds304_clean_trial.py`
+- `pisxme/reva-clean/ESDS304_ETHERNET_CLEAN_DISPOSABLE_FIXTURE.kicad_pcb`
+- `pisxme/reva-clean/ESDS304_ETHERNET_CLEAN_DISPOSABLE_FIXTURE-drc.rpt`
+
+The blocker remains recoverable within the approved Ethernet-local placement
+repair. Phase 18+ has not started.
+
 The generator was then aligned to the corrected TI pad coordinates and rerun.
 That endpoint-corrected candidate reports **104 native DRC violations and 7
 unconnected items**. It is also rejected. The reduced dangling count confirms

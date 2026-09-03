@@ -2559,6 +2559,17 @@
   route construction for true crossings/shorts and connector-launch defects.
 - Kept ESDS304 unpromoted and the clean production assets unchanged.
 
+2026-09-03 — Phase 17 ESDS304 large-acreage escape experiment
+
+- Built a new disposable fixture with corrected TI DBV0005A geometry, remote
+  ESD placement, separate F.Cu/B.Cu channels, ordinary transitions, local
+  ground returns, and a dedicated J2 launch zone.
+- Native DRC reports 92 violations and 8 unconnected items, including real
+  shelf crossings, source/ESD interactions, connector-launch failures, and
+  incomplete connectivity.
+- Rejected the candidate and preserved the generator, PCB, and DRC report as
+  evidence. No clean production asset was changed.
+
 2026-09-03 — Phase 17 ESDS304 footprint-authority correction
 
 - Specialist review found the disposable ESDS304 footprint did not match TI

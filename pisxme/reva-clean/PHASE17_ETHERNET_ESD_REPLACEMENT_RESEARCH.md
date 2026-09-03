@@ -82,6 +82,11 @@ and 104 native DRC violations, so it is also rejected. The lower dangling
 count confirms the endpoint correction took effect, but the remaining
 crossings and shorts are still routing-topology defects.
 
+A second, large-acreage ESDS304 escape was then constructed with remote U9/U6
+placement and separated upper/lower connector shelves. Native DRC reports 92
+violations and 8 unconnected items. It is rejected for crossings, connector
+launch collisions, and incomplete connectivity; the part remains unpromoted.
+
 The initial ESDS304 escape was invalid evidence because the local footprint
 had the wrong pad-side distribution and overlapping pads. The footprint was
 corrected to the TI DBV0005A arrangement: pads 1/2/3 on one side, pads 5/4
