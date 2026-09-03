@@ -605,3 +605,24 @@ The next bounded option is the official CM5IO MagJack comparison fixture,
 which separates the already-passing source/ESD escape from the EDAC-specific
 launch geometry. The complete official CM5IO fixture remains passing; the
 EDAC production launch remains the earliest failed Phase 17 gate.
+
+## CM5IO/EDAC mapping correction — 2026-09-03
+
+The official CM5IO PCB and EDAC drawing were rechecked together. The prior
+EDAC-launch blocker used the wrong interpretation of the footprint: the
+authoritative MDI pads are `1,2,3,6,7,8,9,10`, exactly matching the official
+CM5IO launch; pads `11..14` are center taps. The failed sequential-pad and
+asymmetric layer-split trials are therefore withdrawn as geometry evidence.
+
+The clean authoring path now uses the production grouping `U6 = TD0/TD1`
+and `U9 = TD2/TD3`, with the physical references swapped to the official
+right/left CM5IO locations. Native netlist export and the corrected PCB
+mapping regression pass. The regenerated official transplant fixture still
+passes native DRC with zero unconnected pads and no MDI crossings/shorts.
+
+A fresh acreage placement diagnostic remains failed because the current
+floorplan contains unrelated copper/keepout conflicts around the transplanted
+island; its DRC is not an Ethernet-only gate. The next authorized action is
+to place the CM5IO-aligned island in genuinely free acreage, then run the
+Ethernet-specific native DRC/connectivity and full Phase 11/12 review. Phase
+17 remains open; Phase 18+ has not started.

@@ -754,6 +754,50 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (label "CM5_GBE_TD0_P" (at 70 128.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid dc000000-0000-0000-0000-000000000064))
 (label "CM5_GBE_TD0_N" (at 70 131.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid dc000000-0000-0000-0000-000000000065))
 (label "ETH_GND" (at 70 133.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid dc000000-0000-0000-0000-000000000066))

@@ -13,12 +13,12 @@ EXPECTED = {
     # terminate on the two numbered 1.60 mm shield lands 19/20.
     "J2": {
         "1": "CM5_GBE_TD0_P", "2": "CM5_GBE_TD0_N",
-        "3": "CM5_GBE_TD1_P", "4": "CM5_GBE_TD1_N",
-        "5": "CM5_GBE_TD2_P", "6": "CM5_GBE_TD2_N",
-        "7": "CM5_GBE_TD3_P", "8": "CM5_GBE_TD3_N",
-        "9": "ETH_CT1", "10": "ETH_CT2", "11": "ETH_CT3", "12": "ETH_CT4",
-        "13": "GBE_LED_Y_A", "14": "GBE_LED_Y_K",
-        "15": "GBE_LED_G_A", "16": "GBE_LED_G_K",
+        "3": "CM5_GBE_TD1_P", "6": "CM5_GBE_TD1_N",
+        "7": "CM5_GBE_TD2_P", "8": "CM5_GBE_TD2_N",
+        "9": "CM5_GBE_TD3_P", "10": "CM5_GBE_TD3_N",
+        "11": "ETH_CT1", "12": "ETH_CT2", "13": "ETH_CT3", "14": "ETH_CT4",
+        "15": "GBE_LED_Y_A", "16": "GBE_LED_Y_K",
+        "17": "GBE_LED_G_A", "18": "GBE_LED_G_K",
         "19": "GBE_SHIELD", "20": "GBE_SHIELD",
     },
 }

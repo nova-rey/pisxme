@@ -13,8 +13,8 @@ import xml.etree.ElementTree as ET
 import pcbnew
 
 ROOT = Path(__file__).resolve().parent
-BOARD_IN = ROOT / "ACREAGE_FLOORPLAN.kicad_pcb"
-BOARD_OUT = ROOT / "ACREAGE_CANDIDATE.kicad_pcb"
+BOARD_IN = Path(os.environ.get("PISXME_BOARD_IN", ROOT / "ACREAGE_FLOORPLAN.kicad_pcb"))
+BOARD_OUT = Path(os.environ.get("PISXME_BOARD_OUT", ROOT / "ACREAGE_CANDIDATE.kicad_pcb"))
 NETLIST = Path(os.environ.get("PISXME_NETLIST", ROOT / "materialize.xml"))
 PRETTY = ROOT / "PiSXMe_RevA_Clean.pretty"
 
@@ -63,13 +63,15 @@ PAD_ALIASES = {
     # projected onto representative physical pads 1 and 5 respectively.
     "F1": {"1": ("1", "2", "3", "4"), "2": ("5", "6", "7", "8")},
     "F2": {"1": ("1", "2", "3", "4"), "2": ("5", "6", "7", "8")},
-    # EDAC's recommended layout has physical pads 1..14 for MDI/taps,
-    # physical pads 15..18 for LEDs, and two 1.60 mm shield holes.  The
-    # symbol exposes the two shield contacts as logical pins 17/18; map those
-    # explicitly to the numbered shield lands 19/20.  The former reverse map
-    # put MDI nets on LED/tap rows and left the shield holes electrically
-    # anonymous.
-    "J2": {**{str(pin): (str(pin),) for pin in range(1, 17)}, "17": ("19",), "18": ("20",)},
+    # EDAC/CM5IO authority is non-ordinal: logical MDI pins 1..8 land on
+    # physical 1,2,3,6,7,8,9,10; logical center taps 9..12 land on 11..14;
+    # LEDs remain 15..18 and logical shields 17/18 land on numbered shield
+    # lands 19/20.  This matches the official CM5IO U3 launch geometry.
+    "J2": {"1": ("1",), "2": ("2",), "3": ("3",), "4": ("6",),
+           "5": ("7",), "6": ("8",), "7": ("9",), "8": ("10",),
+           "9": ("11",), "10": ("12",), "11": ("13",), "12": ("14",),
+           "13": ("15",), "14": ("16",), "15": ("17",), "16": ("18",),
+           "17": ("19",), "18": ("20",)},
 }
 
 

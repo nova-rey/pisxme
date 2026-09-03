@@ -65,8 +65,12 @@ def main():
         if g.GetLayer() == pcbnew.F_SilkS: g.SetLayer(pcbnew.F_Fab)
     # Official 10-pin USON footprints and the CM5IO flow-through pin map.
     ou1=oracle.FindFootprintByReference("U1"); ou2=oracle.FindFootprintByReference("U2")
-    u1=copyfp(b,ou1,"U6",*T(*xy(ou1.GetPosition())),90)
-    u2=copyfp(b,ou2,"U9",*T(*xy(ou2.GetPosition())),90)
+    # Official U1 carries TD3/TD2 and lands at the left position; production
+    # U9 owns that pair group. Official U2 carries TD1/TD0 and lands at the
+    # right position; production U6 owns that group. Swap references so the
+    # native production symbol mapping and official copper endpoints agree.
+    u1=copyfp(b,ou1,"U9",*T(*xy(ou1.GetPosition())),90)
+    u2=copyfp(b,ou2,"U6",*T(*xy(ou2.GetPosition())),90)
     assign(j7,{3:"CM5_GBE_TD3_P",4:"CM5_GBE_TD1_P",5:"CM5_GBE_TD3_N",6:"CM5_GBE_TD1_N",9:"CM5_GBE_TD2_N",10:"CM5_GBE_TD0_N",11:"CM5_GBE_TD2_P",12:"CM5_GBE_TD0_P"},nets)
     assign(u1,{1:"CM5_GBE_TD3_P",2:"CM5_GBE_TD3_N",3:"ETH_GND",4:"CM5_GBE_TD2_N",5:"CM5_GBE_TD2_P",6:"CM5_GBE_TD2_P",7:"CM5_GBE_TD2_N",8:"ETH_GND",9:"CM5_GBE_TD3_N",10:"CM5_GBE_TD3_P"},nets)
     assign(u2,{1:"CM5_GBE_TD1_P",2:"CM5_GBE_TD1_N",3:"ETH_GND",4:"CM5_GBE_TD0_N",5:"CM5_GBE_TD0_P",6:"CM5_GBE_TD0_P",7:"CM5_GBE_TD0_N",8:"ETH_GND",9:"CM5_GBE_TD1_N",10:"CM5_GBE_TD1_P"},nets)

@@ -2771,3 +2771,21 @@
   crossings, three net shorts, and 17 unconnected items; rejected the trial.
 - Kept the CM5IO source/ESD oracle and all production/later-phase assets
   gated; the next experiment is the official MagJack comparison.
+
+2026-09-03 — Phase 17 CM5IO/EDAC authority-alignment correction
+
+- Rechecked the official CM5IO PCB U1/U2/U3 placement against the EDAC
+  manufacturer land pattern and found that the official MDI pads are
+  1,2,3,6,7,8,9,10, with center taps on 11..14.
+- Corrected the clean alias map and aligned production references as U6
+  carrying TD0/TD1 at the official right protector position and U9 carrying
+  TD2/TD3 at the official left position.
+- Regenerated the native schematic netlist and acreage footprint map; the
+  Ethernet pin-mapping regression passed.
+- Regenerated the CM5IO-derived fixture using the reference-aligned refs;
+  native DRC and focused MDI regression passed again with zero unconnected
+  pads and no MDI crossings/shorts.
+- Isolated official MDI geometry into a serialized data snapshot after
+  identifying a KiCad Python multi-board wrapper/net-assignment hazard. The
+  full acreage candidate still contains unrelated floorplan DRC conflicts and
+  remains unpromoted; Phase 18+ remains gated.
