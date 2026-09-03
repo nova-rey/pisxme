@@ -2709,3 +2709,13 @@
 - Rejected the first mixed support overlay because its improvised GND/CT/
   shield paths crossed MDI geometry. No production acreage asset or Phase 18+
   artifact was promoted.
+
+2026-09-03 — Phase 17 official-support adaptation experiment
+
+- Tested a common center-tap In2 island, local GND copper return islands,
+  outer B.Cu shield return, and valid fixture outline around the passing MDI
+  transplant.
+- Native DRC rejected the detached-zone construction with 82 violations and
+  13 unconnected support pads; the failed artifact is preserved as evidence.
+- Kept the official complete CM5IO fixture as the passing support oracle and
+  left the clean production PCB/schematic and Phase 18+ work unpromoted.

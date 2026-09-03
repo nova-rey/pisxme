@@ -469,3 +469,24 @@ official support topology, explicit EDAC pad aliases, a valid fixture outline,
 and deliberate GND/shield return, then rerun native DRC and the acreage gate.
 Phase 18+ remains gated. This is a recoverable implementation blocker, not a
 terminal design rejection.
+
+## Support-zone repair experiment — 2026-09-03
+
+The next bounded experiment used the passing official MDI transplant as an
+immutable base and attempted to close the remaining support nets with a
+common `ETH_CT_COMMON` In2 island, local F.Cu/In1/B.Cu `ETH_GND` return
+islands, an outer B.Cu `GBE_SHIELD` return, and a valid Edge.Cuts rectangle.
+
+Native DRC result: 82 violations and 13 unconnected support pads. The
+experiment is rejected. The errors are fixture-authoring issues—detached
+zone connectivity, hole-clearance against the large zone, and support/return
+placement—not MDI crossings in the transplanted pair routes. The official
+CM5IO complete fixture still independently proves the support topology with
+0 unconnected pads and no MDI crossings or shorts.
+
+The blocker therefore remains recoverable and specifically localized to
+transplanting the official support copper/return structure across the EDAC
+mechanical land pattern. Next continuation: copy/transform the official
+support zones and support footprints from the native oracle, then replace
+only the EDAC boundary pads with the explicitly authorized aliases. Do not
+promote the current failed support-zone experiment or begin Phase 18+.
