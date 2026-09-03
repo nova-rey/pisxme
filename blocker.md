@@ -730,3 +730,14 @@ TD2, and TD3 pair shorts/crossings. These are valid rejections of the
 hand-authored escape paths; the official CM5IO connector/ESD-side geometry
 remains clean. The corrected candidate files and reports are preserved for
 comparison, and no production or frozen subsystem was changed.
+
+## Current native root ERC revalidation — 2026-09-03
+
+After the generic MDI-label correction, native KiCad 10 ERC was rerun from
+the current root project. It reports 644 warning-only findings, dominated by
+the existing scaffold's off-grid/unconnected endpoints and library metadata;
+no root hierarchy-association error was found. The focused Ethernet
+hierarchy-authority regression and current XML netlist mapping pass, but the
+historical Phase 3 receipt's claim of zero total ERC findings is no longer
+current and has been corrected in `PHASE3_STATUS.md`. The complete current
+ERC report is `pisxme/reva-clean/PHASE17_NATIVE_ROOT_ERC_CURRENT.rpt`.

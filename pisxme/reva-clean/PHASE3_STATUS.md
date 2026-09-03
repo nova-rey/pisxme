@@ -28,13 +28,22 @@ mechanical/non-plated holes per its manufacturer layout; donor-only shield
 pins 19/20 are explicitly removed by the extractor rather than counted as
 electrical pads.
 
-Closure evidence: KiCad 10.0.5 native ERC reports zero violations on the root
-and all ten children. The generic authoring defect was an embedded contract
+Historical closure evidence: KiCad 10.0.5 native ERC reported zero violations
+on the root and all ten children before the current Phase 17 CM5IO label
+regeneration. The generic authoring defect was an embedded contract
 symbol appended outside the child `lib_symbols` section; the corrected path
 inserts it inside that section, negates library-pin row Y coordinates, and
 generates real root wires to sheet pins. The regression
 `validation/phase3/test_native_hierarchy_authoring.py` reproduces the
 generation and native ERC check.
+
+The current-source revalidation after the Phase 17 global-MDI-label correction
+reports 644 warning-only ERC findings on the root, dominated by pre-existing
+off-grid/unconnected scaffold endpoints and library metadata warnings; no
+root hierarchy-association error is present. The focused Ethernet hierarchy
+authority regression and native netlist mapping pass. This current warning
+baseline is recorded in `PHASE17_NATIVE_ROOT_ERC_CURRENT.rpt` and must be
+resolved or explicitly reviewed before final Phase 24 closure.
 
 The later `ROOT_HIERARCHY_ASSOCIATION` continuation experiment is also
 closed: a native KiCad-authority CM5 promotion now parses the source's two

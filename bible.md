@@ -2852,3 +2852,11 @@
 - Rejected the corrected B.Cu transition escape at 448 violations/453
   unconnected, including true TD0/1, TD2, and TD3 shorts/crossings.
 - Preserved both candidates and reports; Phase 18+ remains gated.
+
+2026-09-03 — Phase 3 current-source ERC audit
+
+- Reran native KiCad root ERC after the generic global-MDI-label correction.
+- Recorded 644 warning-only findings, with no root hierarchy-association
+  error; the focused Ethernet hierarchy/netlist regression passes.
+- Corrected the stale zero-total-ERC statement in `PHASE3_STATUS.md` and
+  preserved the full current report for final-gate review.
