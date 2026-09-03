@@ -1,0 +1,77 @@
+** Drc report for CM5IO_PISXME_ETHERNET_TRANSPLANT_FIXTURE.kicad_pcb **
+** Created on 2026-09-03T15:03:34 **
+** Report includes: Errors, Warnings **
+
+** Found 10 DRC violations **
+[invalid_outline]: Board has malformed outline (no edges found on Edge.Cuts layer)
+    Local override; error
+    @(0.0000 mm, 0.0000 mm): PCB
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; error
+    @(80.4500 mm, 63.6750 mm): Rectangle of J2 on F.Silkscreen
+    @(64.3000 mm, 53.0000 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; error
+    @(80.4500 mm, 63.6750 mm): Rectangle of J2 on F.Silkscreen
+    @(64.3000 mm, 42.2500 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; error
+    @(80.4500 mm, 63.6750 mm): Rectangle of J2 on F.Silkscreen
+    @(64.6250 mm, 56.0500 mm): PTH pad 20 [GBE_SHIELD] of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; error
+    @(80.4500 mm, 63.6750 mm): Rectangle of J2 on F.Silkscreen
+    @(80.7000 mm, 42.2500 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; error
+    @(80.4500 mm, 63.6750 mm): Rectangle of J2 on F.Silkscreen
+    @(80.7000 mm, 53.0000 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; error
+    @(80.4500 mm, 63.6750 mm): Rectangle of J2 on F.Silkscreen
+    @(80.3750 mm, 56.0500 mm): PTH pad 19 [GBE_SHIELD] of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; error
+    @(72.5000 mm, 64.4500 mm): Reference field of J2
+    @(73.2000 mm, 64.7200 mm): Pad 1 [ETH_CT_COMMON] of C1 on F.Cu
+[lib_footprint_mismatch]: Footprint 'C_0402_1005Metric' does not match copy in library 'Capacitor_SMD'
+    Local override; warning
+    @(73.2000 mm, 65.2000 mm): Footprint C1
+[lib_footprint_mismatch]: Footprint 'PinHeader_2x02_P2.54mm_Vertical' does not match copy in library 'Connector_PinHeader_2.54mm'
+    Local override; warning
+    @(83.7300 mm, 51.7300 mm): Footprint J9
+
+** Found 5 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.1000 mm, 64.8300 mm): Pad 8 [ETH_GND] of U6 on F.Cu
+    @(70.1000 mm, 65.6000 mm): Pad 3 [ETH_GND] of U6 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.1000 mm, 65.6000 mm): Pad 3 [ETH_GND] of U6 on F.Cu
+    @(73.2000 mm, 65.6800 mm): Pad 2 [ETH_GND] of C1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(73.2000 mm, 65.6800 mm): Pad 2 [ETH_GND] of C1 on F.Cu
+    @(76.1000 mm, 65.6000 mm): Pad 3 [ETH_GND] of U9 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.1000 mm, 65.6000 mm): Pad 3 [ETH_GND] of U9 on F.Cu
+    @(76.1000 mm, 64.8300 mm): Pad 8 [ETH_GND] of U9 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(64.6250 mm, 56.0500 mm): PTH pad 20 [GBE_SHIELD] of J2
+    @(80.3750 mm, 56.0500 mm): PTH pad 19 [GBE_SHIELD] of J2
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Thermal relief connection to zone incomplete
+    - Footprint has no courtyard defined
+    - Solder mask aperture bridges items with different nets
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Silkscreen clipped by board edge
+
+** End of Report **

@@ -15,7 +15,7 @@ import pcbnew
 ROOT = Path(__file__).resolve().parent
 BOARD_IN = ROOT / "ACREAGE_FLOORPLAN.kicad_pcb"
 BOARD_OUT = ROOT / "ACREAGE_CANDIDATE.kicad_pcb"
-NETLIST = ROOT / "materialize.xml"
+NETLIST = Path(os.environ.get("PISXME_NETLIST", ROOT / "materialize.xml"))
 PRETTY = ROOT / "PiSXMe_RevA_Clean.pretty"
 
 POSITIONS = {
@@ -63,9 +63,13 @@ PAD_ALIASES = {
     # projected onto representative physical pads 1 and 5 respectively.
     "F1": {"1": ("1", "2", "3", "4"), "2": ("5", "6", "7", "8")},
     "F2": {"1": ("1", "2", "3", "4"), "2": ("5", "6", "7", "8")},
-    # EDAC's physical MDI lands are numbered in reverse relative to the
-    # logical symbol pins: logical pin 1 (TRD0+) is physical pad 18.
-    "J2": {str(pin): (str(19 - pin),) for pin in range(1, 19)},
+    # EDAC's recommended layout has physical pads 1..14 for MDI/taps,
+    # physical pads 15..18 for LEDs, and two 1.60 mm shield holes.  The
+    # symbol exposes the two shield contacts as logical pins 17/18; map those
+    # explicitly to the numbered shield lands 19/20.  The former reverse map
+    # put MDI nets on LED/tap rows and left the shield holes electrically
+    # anonymous.
+    "J2": {**{str(pin): (str(pin),) for pin in range(1, 17)}, "17": ("19",), "18": ("20",)},
 }
 
 

@@ -2693,3 +2693,19 @@
 - Preserved exact CM5IO source, native DRC, ESD metadata conflict, and
   MagJack land-pattern mismatch as the next bounded work boundary.
 - No clean PCB/schematic or Phase 18+ artifact was changed.
+
+2026-09-03 — Phase 17 CM5IO MDI transplant experiment
+
+- Resolved the official CM5IO ESD value ambiguity to active TI
+  `TPD4EUSB30DQAR` using current TI product/package authority and major
+  distributor evidence; saved the Rev-G datasheet and SHA-256.
+- Corrected the clean TPD4E004 symbol/net mapping to TI's actual 6-pin
+  pinout and corrected the EDAC shield-pad representation in the authoring
+  path; regenerated the disposable mapping candidate and passed native
+  mapping parity.
+- Rigidly transformed 189 official CM5IO MDI segments onto the PiSXMe CM5
+  and EDAC physical contact coordinates. Focused regression passed; native
+  DRC found no MDI crossings, shorts, dangling vias, or footprint errors.
+- Rejected the first mixed support overlay because its improvised GND/CT/
+  shield paths crossed MDI geometry. No production acreage asset or Phase 18+
+  artifact was promoted.

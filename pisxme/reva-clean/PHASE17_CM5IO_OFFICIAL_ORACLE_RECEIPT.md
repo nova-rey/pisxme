@@ -98,12 +98,13 @@ footprint is not the selected EDAC production land pattern:
 - Therefore the official footprint is a topology/placement oracle only; it is
   not silently promoted as the PiSXMe J2 footprint.
 
-The official source also has an ESD identity metadata conflict: the placed
+The official source has an ESD identity metadata conflict: the placed
 value/BOM says `TPD4EUSB30`, while hidden sourcing metadata names Bourns
-`CDDFN10-3324P-13` and the datasheet field points to TI. This is recorded as
-an authority conflict rather than resolved by guessing an MPN. PiSXMe's
-selected ESD remains governed by its own manufacturer authority until a
-manufacturer-exact footprint and procurement record are established.
+`CDDFN10-3324P-13` and the datasheet field points to TI. TI's current product
+authority resolves the exact orderable TI identity as `TPD4EUSB30DQAR`
+(`ACTIVE`, DQA/USON-10); the Bourns hidden field is not treated as a second
+source for the official board. Procurement and package evidence is captured
+in `authority-inventory/primary-docs/ethernet-esd/TPD4EUSB30DQAR_CM5IO_AUTHORITY.md`.
 
 The clean EDAC footprint currently has the EDAC signal/tap/LED coordinate
 families but its logical-to-physical reverse alias is not validated by the
@@ -124,3 +125,29 @@ not identical to the official source, and the existing clean U6/U9 package
 and placement differ materially. The next bounded experiment must adapt the
 official pair-preserving topology with separately-authorized PiSXMe parts;
 the official source has ruled out arbitrary PHY remapping as the needed fix.
+
+## Adapted MDI transplant result — 2026-09-03
+
+TI's current product authority resolves the official value to orderable
+`TPD4EUSB30DQAR`; its exact package and procurement record are captured in
+`authority-inventory/primary-docs/ethernet-esd/TPD4EUSB30DQAR_CM5IO_AUTHORITY.md`.
+The disposable transplant uses that official 10-pin footprint, the
+PiSXMe CM5 J7 footprint, and the selected EDAC footprint at the same physical
+MDI coordinate families. It rigidly transforms all 189 official MDI segments
+onto the PiSXMe source/connector geometry; it does not synthesize a new pair
+ordering.
+
+Focused regression and native DRC evidence:
+
+- `validation/phase17/test_cm5io_transplant_fixture.py`: PASS; all eight MDI
+  nets have authoritative J7 -> USON -> EDAC pad mapping, 0.127 mm F.Cu
+  geometry, and pair skew below 2 mm.
+- `CM5IO_PISXME_ETHERNET_TRANSPLANT_FIXTURE-drc.rpt`: zero MDI crossing,
+  shorting, or dangling-via findings and zero footprint errors. The focused
+  fixture intentionally omits the improvised support-return overlay; the
+  exact official fixture remains the complete support oracle.
+
+This closes the CM5IO-derived MDI geometry experiment, but does not yet close
+Phase 17 production routing. The next experiment is to transplant the
+official tap/return/LED support with explicit EDAC pad and net authority, then
+apply the same topology to the acreage board only after the full gate passes.

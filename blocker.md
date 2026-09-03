@@ -260,10 +260,11 @@ unconnected items and no MDI crossing, shorting, or dangling-via findings.
 
 The oracle cannot be copied blindly into PiSXMe: official U3 uses Trxcom
 `TRJG0926HENL`, while PiSXMe authority selected EDAC `A70-112-331N126`, and
-their mounting/shield-hole geometry differs. The official ESD value/BOM also
-conflicts with hidden sourcing and datasheet fields, so it does not establish
-one exact procurement MPN. PiSXMe currently uses TPD4E004 WSON6 devices and
-a remote MagJack, unlike the official compact topology.
+their mounting/shield-hole geometry differs. The official ESD value/BOM had a
+hidden metadata conflict, now resolved by TI's current authority as exact
+orderable `TPD4EUSB30DQAR` (active DQA/USON-10). PiSXMe previously used
+TPD4E004 WSON6 devices and a remote MagJack, unlike the official compact
+topology.
 
 This is a recoverable transplant/authoring blocker, not evidence that CM5
 Ethernet is architecturally impossible. The next authorized experiment is a
@@ -271,6 +272,32 @@ disposable CM5-adjacent PiSXMe fixture using separately authoritative
 PiSXMe footprints/MPNs and the proven pair-preserving topology under the
 six-layer/100-ohm/no-plane-signal contract. No clean PCB/schematic or Phase
 18+ artifact has been changed.
+
+## CM5IO-derived MDI transplant — 2026-09-03
+
+The official 189-segment MDI geometry was rigidly transformed onto the
+PiSXMe J7 and EDAC physical contact coordinates in disposable fixture
+`pisxme/reva-clean/CM5IO_PISXME_ETHERNET_TRANSPLANT_FIXTURE.kicad_pcb`.
+The fixture uses the official TI `TPD4EUSB30DQAR` USON-10 footprint and the
+CM5IO flow-through pin map.
+
+Evidence:
+
+- `validation/phase17/test_cm5io_transplant_fixture.py` passes all eight
+  J7 -> ESD -> EDAC MDI mappings, 0.127 mm F.Cu width, and pair skew below
+  2 mm.
+- Native DRC reports zero MDI crossings, shorts, dangling vias, and footprint
+  errors. The DRC file is
+  `pisxme/reva-clean/CM5IO_PISXME_ETHERNET_TRANSPLANT_FIXTURE-drc.rpt`.
+- The exact official fixture remains the complete support/tap/shield oracle;
+  the adapted fixture's separately routed support overlay still fails and is
+  rejected. No clean acreage asset has been promoted.
+
+Current state remains `PISXME_REVA_CLEAN_RECOVERABLE_PHASE17`: the proven MDI
+geometry is closed as an experiment, but full connector support/return and
+acreage placement/routing still require a valid complete fixture before Phase
+17 can close. The next work is bounded support adaptation, not another ESD
+component safari.
 
 Bounded continuation options, all within the approved architecture:
 
@@ -416,3 +443,29 @@ That endpoint-corrected candidate reports **104 native DRC violations and 7
 unconnected items**. It is also rejected. The reduced dangling count confirms
 the footprint/endpoints are now being exercised, while the remaining defects
 are genuine route crossings/shorts and connector-launch geometry failures.
+
+## Official CM5IO oracle and current support-adaptation boundary — 2026-09-03
+
+The official Raspberry Pi CM5 IO Board Rev 2 native KiCad source was
+downloaded, extracted, and inspected. Its complete disposable copy passes
+native connectivity with 0 unconnected pads and no MDI crossing, shorting, or
+dangling-via findings. The official implementation uses intact TRD0..TRD3
+pairs, rotated flow-through TPD4EUSB30 USON-10 protection, and a compact
+MagJack launch; it does not require arbitrary PHY pair remapping.
+
+The PiSXMe CM5IO-derived MDI transplant separately passes its focused
+regression: all eight MDI nets map J7 -> USON -> EDAC, use the authoritative
+0.127 mm F.Cu geometry, and meet the recorded pair-skew limit. It is not yet
+a Phase 17 pass because its support overlay is incomplete. Native DRC reports
+five unconnected support/return pads and an invalid disposable outline; the
+first full overlay also showed real center-tap, shield, and ESD-ground
+crossings/shorts. These are support-adaptation construction defects, not a
+failure of the official Ethernet architecture. No clean PCB or schematic has
+been promoted from this experiment.
+
+Current status: `PISXME_REVA_CLEAN_RECOVERABLE_PHASE17_SUPPORT_ADAPTATION`.
+The next authorized action is to repair the EDAC support fanout using the
+official support topology, explicit EDAC pad aliases, a valid fixture outline,
+and deliberate GND/shield return, then rerun native DRC and the acreage gate.
+Phase 18+ remains gated. This is a recoverable implementation blocker, not a
+terminal design rejection.
