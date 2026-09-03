@@ -50,8 +50,8 @@ gates. No claim of 1000BASE-T compliance is made from capacitance alone.
 
 `phase17_sp3019_trial.py` generated a board-only exploratory candidate using
 the published SOT-23-6L dimensions and pin topology. Native KiCad DRC reported
-346 violations and 240 unconnected items. Candidate-specific failures remain
-in the J7 source escape and package approach. Because this trial footprint was
+335 violations and 238 unconnected items. Candidate-specific failures remain
+in the J7 source escape and right-column pair approach. Because this trial footprint was
 not imported from an authoritative CAD model and did not complete all
 connector-side/support routing, it is evidence for continued investigation
 only and is not a component or routing approval.

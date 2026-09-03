@@ -39,21 +39,19 @@ def main():
     b = pcbnew.LoadBoard(str(INPUT))
     sp3019(b, "U9", 25, 100, {"1":"CM5_GBE_TD3_P", "3":"CM5_GBE_TD3_N", "4":"CM5_GBE_TD2_P", "6":"CM5_GBE_TD2_N", "2":"ETH_GND"})
     sp3019(b, "U6", 29, 106, {"1":"CM5_GBE_TD1_P", "3":"CM5_GBE_TD1_N", "4":"CM5_GBE_TD0_P", "6":"CM5_GBE_TD0_N", "2":"ETH_GND"})
-    # Source escapes are deliberately short and split by signal layer.
-    left = {
-      "CM5_GBE_TD3_P":((32.96,99.10),(31.6,99.10),(24.05,99.05)),
-      "CM5_GBE_TD3_N":((32.96,99.50),(31.2,99.50),(24.05,100.95)),
-      "CM5_GBE_TD2_N":((32.96,100.30),(30.8,100.30),(25.95,99.05)),
-      "CM5_GBE_TD2_P":((32.96,100.70),(30.4,100.70),(25.95,100.95)),}
-    for i,(name, pts) in enumerate(left.items()):
-        for a,z in zip(pts,pts[1:]): tr(b,a,z,name,pcbnew.F_Cu if i<2 else pcbnew.B_Cu)
-        if i>=2: via(b,pts[-1],name)
-    right = {
-      "CM5_GBE_TD1_P":((36.04,99.10),(35.4,99.10),(27.05,105.05)),
-      "CM5_GBE_TD1_N":((36.04,99.50),(34.9,99.50),(27.05,106.95)),
-      "CM5_GBE_TD0_N":((36.04,100.30),(34.4,100.30),(29.95,105.05)),
-      "CM5_GBE_TD0_P":((36.04,100.70),(33.9,100.70),(29.95,106.95)),}
-    for name,pts in right.items():
-        for a,z in zip(pts,pts[1:]): tr(b,a,z,name,pcbnew.B_Cu)
+    def nt(a,z,name,layer): tr(b,a,z,name,layer,pcbnew.FromMM(.10) if a[0] > 32 else W)
+    # Pair-separated monotonic corridors. Pair 3/1 use F.Cu and pair 2/0
+    # use B.Cu, so the two CM5 source columns never share a route layer.
+    paths = {
+      "CM5_GBE_TD3_P":(((32.96,99.10),(31.8,99.10),(31.8,98.4),(24.05,98.4),(24.05,99.05)),pcbnew.F_Cu),
+      "CM5_GBE_TD3_N":(((32.96,99.50),(31.4,99.50),(31.4,101.6),(24.05,101.6),(24.05,100.95)),pcbnew.F_Cu),
+      "CM5_GBE_TD2_N":(((32.96,100.30),(31.0,100.30),(31.0,98.0),(25.95,98.0),(25.95,99.05)),pcbnew.B_Cu),
+      "CM5_GBE_TD2_P":(((32.96,100.70),(30.6,100.70),(30.6,102.0),(25.95,102.0),(25.95,100.95)),pcbnew.B_Cu),
+      "CM5_GBE_TD1_P":(((36.04,99.10),(35.4,99.10),(35.4,103.8),(28.05,103.8),(28.05,105.05)),pcbnew.F_Cu),
+      "CM5_GBE_TD1_N":(((36.04,99.50),(34.8,99.50),(34.8,107.8),(28.05,107.8),(28.05,106.95)),pcbnew.F_Cu),
+      "CM5_GBE_TD0_N":(((36.04,100.30),(34.2,100.30),(34.2,103.2),(29.95,103.2),(29.95,105.05)),pcbnew.B_Cu),
+      "CM5_GBE_TD0_P":(((36.04,100.70),(33.6,100.70),(33.6,108.6),(29.95,108.6),(29.95,106.95)),pcbnew.B_Cu),}
+    for name,(pts,layer) in paths.items():
+        for a,z in zip(pts,pts[1:]): nt(a,z,name,layer)
     out = ROOT / "ACREAGE_ETHERNET_TRIAL_SP3019.kicad_pcb"; b.Save(str(out)); print(out)
 if __name__ == "__main__": main()
