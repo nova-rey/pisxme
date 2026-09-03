@@ -2579,6 +2579,12 @@
 - Kept routing open because the latest candidate still fails native DRC. No
   production asset was changed.
 
+2026-09-03 — Phase 17 ESDS304 authority-note correction
+
+- Corrected the research note's DBV0005A row-separation typo from 1.9 mm to
+  the TI-authoritative 2.6 mm value. The machine-check and footprint already
+  used the corrected geometry.
+
 2026-09-03 — Phase 17 ESDS304 footprint-authority correction
 
 - Specialist review found the disposable ESDS304 footprint did not match TI

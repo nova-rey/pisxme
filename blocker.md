@@ -248,6 +248,10 @@ eight MDI nets, and explicit ETH_GND are verified. This closes the package
 authority sub-question. It does not close Ethernet routing; the latest route
 fixture still fails native DRC and remains unpromoted.
 
+The written research note was also corrected to state TI's 2.6 mm DBV0005A
+row separation (rather than the earlier 1.9 mm typo). The machine-check and
+footprint now agree.
+
 The generator was then aligned to the corrected TI pad coordinates and rerun.
 That endpoint-corrected candidate reports **104 native DRC violations and 7
 unconnected items**. It is also rejected. The reduced dangling count confirms

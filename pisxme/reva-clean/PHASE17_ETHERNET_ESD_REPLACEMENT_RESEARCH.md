@@ -70,8 +70,8 @@ https://www.ti.com/lit/ds/symlink/esds304.pdf
 
 The project-local disposable footprint
 `PiSXMe_RevA_Clean.pretty/ESDS304DBVR_SOT23_5.kicad_mod` uses TI DBV0005A
-mechanical/land-pattern values (0.6 mm × 1.1 mm pads, 0.95 mm pitch, 1.9 mm
-row spacing), with explicit F.Paste, F.Mask, and F.CrtYd layers. It is a
+mechanical/land-pattern values (0.6 mm × 1.1 mm pads, 0.95 mm pitch, 2.6 mm
+row separation), with explicit F.Paste, F.Mask, and F.CrtYd layers. It is a
 candidate artifact only: the clean schematic and production PCB have not been
 changed, and the ESDS304 fixture has not yet passed native DRC or procurement
 review.
