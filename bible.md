@@ -2570,6 +2570,15 @@
 - Rejected the candidate and preserved the generator, PCB, and DRC report as
   evidence. No clean production asset was changed.
 
+2026-09-03 — Phase 17 ESDS304 authority-only proof
+
+- Added and ran a native KiCad machine-check for the corrected TI DBV0005A
+  footprint and disposable U9/U6 mapping.
+- Verified package pad positions/sizes, mask/paste layers, courtyard, all
+  eight MDI nets, and explicit ETH_GND; the authority check passes.
+- Kept routing open because the latest candidate still fails native DRC. No
+  production asset was changed.
+
 2026-09-03 — Phase 17 ESDS304 footprint-authority correction
 
 - Specialist review found the disposable ESDS304 footprint did not match TI

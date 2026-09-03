@@ -238,6 +238,16 @@ Reproducible artifacts:
 The blocker remains recoverable within the approved Ethernet-local placement
 repair. Phase 18+ has not started.
 
+## ESDS304 authority-only proof — 2026-09-03
+
+The corrected TI DBV0005A footprint and disposable mapping now pass the
+machine-check in `pisxme/reva-clean/PHASE17_ESDS304_AUTHORITY_CHECK.md`:
+pad positions, 0.6 mm × 1.1 mm exposed metal, 1/2/3-left and 5/4-right
+arrangement, F.Cu/F.Paste/F.Mask layers, courtyard, U9/U6 pin mapping, all
+eight MDI nets, and explicit ETH_GND are verified. This closes the package
+authority sub-question. It does not close Ethernet routing; the latest route
+fixture still fails native DRC and remains unpromoted.
+
 The generator was then aligned to the corrected TI pad coordinates and rerun.
 That endpoint-corrected candidate reports **104 native DRC violations and 7
 unconnected items**. It is also rejected. The reduced dangling count confirms
