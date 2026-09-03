@@ -563,3 +563,25 @@ authorized options are:
 Recommended next step: option 1. No software installation, frozen-subsystem
 move, layer-contract change, or validation relaxation is required. Phase 17
 and all later phases remain gated.
+
+## Pin-accurate EDAC launch trial — 2026-09-03
+
+A second, narrower disposable experiment was built from the passing CM5IO
+transplant. It retained the CM5-to-ESD portion, cut the oracle connector-side
+tracks, assigned the production EDAC MDI pads 1..8, and regenerated the
+EDAC-side launch to the actual EDAC pad coordinates at 0.127 mm F.Cu width.
+This is the first trial that exercises the production EDAC MDI numbering
+without copying the fixture's temporary common-tap alias.
+
+It is rejected by native KiCad DRC: 20 violations, 17 unconnected items,
+including pair crossings and shorts between TD1/TD0/TD2 and the retained
+ESD-side geometry. The support footprints are intentionally retained in this
+fixture, so the unconnected count includes support pads; the candidate is not
+a production-board change. The complete report is
+`pisxme/reva-clean/CM5IO_EDAC_PIN_ACCURATE_LAUNCH_FIXTURE-drc.rpt`.
+
+This result is useful: it proves that a naive straight EDAC launch cannot be
+accepted, but it does not reject the CM5IO architecture. The next distinct
+authorized experiment is a connector-side layer-split/pair-preserving launch
+or an official-connector comparison, with explicit return/support treatment.
+No Phase 18+ work has started.

@@ -2752,3 +2752,13 @@
 - Preserved the 628-violation diagnostic DRC and published the exact,
   recoverable EDAC-side launch adaptation boundary in `blocker.md`.
 - Did not promote the clean acreage PCB or begin Phase 18+.
+
+2026-09-03 — Phase 17 pin-accurate EDAC launch trial
+
+- Built a narrower disposable fixture retaining the passing CM5IO
+  CM5-to-ESD geometry while using the production EDAC MDI pad groups 1..8.
+- Regenerated the connector-side 0.127 mm F.Cu launch at the actual EDAC pad
+  coordinates and ran native KiCad DRC.
+- Rejected the trial at 20 violations and 17 unconnected items, including
+  pair crossings/shorts; preserved the report and kept production and later
+  phases gated.
