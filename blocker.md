@@ -169,6 +169,14 @@ The smallest authorized continuation is to obtain exact BCM54210PE mapping
 authority, or explicitly choose a different Ethernet connector/ESD/launch
 architecture under the existing layer contract. Accepting unproven remapping
 as Rev-A empirical risk would be a user-controlled gate decision.
+
+Additional exact-part check: Broadcom's public product page is family-level
+and reports BCM54210 as active, but the CM5 variant `BCM54210PEB1KMLG` is
+identified in a Broadcom EOL notice as obsolete (last-time-buy 2023-04-26,
+last-time-ship 2024-04-25). This is lifecycle evidence about the embedded CM5
+PHY, not a reason to alter CM5 hardware; it does mean generic BCM54210-family
+collateral cannot substitute for an exact BCM54210PE register or permutation
+document.
 ## Phase 17 SP3019 authoritative fixture update — 2026-09-03
 
 Status: `RECOVERABLE_FIXTURE_ROUTING_BLOCKER`

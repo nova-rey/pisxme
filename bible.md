@@ -2652,3 +2652,6 @@
   skew correction does not legalize copper crossings.
 - Added the fail-closed candidate matrix and updated the GitHub-readable
   blocker report. No clean PCB/schematic or Phase 18+ artifact was changed.
+- Distinguished Broadcom family-level lifecycle claims from the exact CM5
+  `BCM54210PEB1KMLG` variant; captured the distributor-hosted EOL notice and
+  retained the exact-device remap question as unresolved.

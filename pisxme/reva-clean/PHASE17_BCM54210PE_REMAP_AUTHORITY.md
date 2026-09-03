@@ -73,3 +73,20 @@ The detailed candidate matrix is in
 no clean design asset was changed. A new empirical mapping risk would require
 either exact BCM54210PE documentation or an explicit user decision to accept
 link-validation risk beyond the approved authority gate.
+
+## Exact-part lifecycle note
+
+The Broadcom product page is family-level authority and reports the BCM54210
+family as active. It must not be read as lifecycle evidence for the exact
+CM5-marked variant. A distributor-hosted Broadcom end-of-life notice identifies
+`BCM54210PEB1KMLG` as obsolete, with last-time-buy on 2023-04-26 and last-time-
+ship on 2024-04-25, and recommends `BCM54210PEB1IMLG`. DigiKey likewise lists
+the related `BCM54210B0KMLG` as obsolete. This does not change the PHY already
+present inside CM5, but it does make third-party family collateral unsuitable
+as exact-device register authority.
+
+Lifecycle evidence:
+
+- Broadcom family page: <https://www.broadcom.com/products/ethernet-connectivity/phy-and-poe/copper/gigabit/bcm54210>
+- Broadcom EOL notice mirror for `BCM54210PEB1KMLG`: <https://www.ic-components.cz/files/6f/BCM54210PEB1KMLG.pdf>
+- DigiKey exact-family listing showing obsolete status for `BCM54210B0KMLG`: <https://www.digikey.at/en/products/detail/broadcom-limited/BCM54210B0KMLG/6146592>
