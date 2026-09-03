@@ -1027,3 +1027,25 @@ The corrected report is
 The next experiment remains a fresh local placement/escape adaptation that
 uses the corrected U6/U9 ownership and official -90-degree orientation, with
 the J7-to-ESD legs regenerated rather than coordinate-transplanted.
+
+## Local-bottom island trial — 2026-09-03
+
+A fresh acreage trial placed the CM5IO-derived island below the cooler
+reservation (`U9/U6` near `(120,150)`, EDAC near `(122,138)`) and generated
+new J7 source legs. The first all-F.Cu version was rejected at **441 native
+DRC findings / 485 unconnected items**, including 18 crossings and 13
+shorting findings. A split F.Cu/B.Cu variant was then run and rejected at
+**540 findings / 453 unconnected items**, including 9 crossings, 30 shorts,
+and 6 dangling vias.
+
+The discriminating cause is now identified: the official -90-degree ESD
+orientation expects the CM5 source to approach the lower side of the package
+as on CM5IO. Moving that rigid island below J7 without rotating the complete
+island reverses the approach side; the trial landing points then collide with
+the official internal ESD escape. The split-layer trial also reused the
+incorrect lane heights for both pair groups. Both candidates are rejected.
+
+This is not evidence against the CM5IO design. The next bounded experiment is
+to rotate the complete official island geometry and footprints as a rigid
+180-degree local block, then regenerate the J7-to-ESD transitions from the
+actual source pads. No Phase 18+ work has started.

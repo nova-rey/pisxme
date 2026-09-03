@@ -20,6 +20,8 @@ if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM':
     # official ESD-to-MagJack graph remains rigid; only the CM5-to-ESD legs
     # are regenerated from PiSXMe's actual J7 anchors.
     DX,DY=49.9,84.8
+if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM_SPLIT':
+    DX,DY=49.9,84.8
 if os.environ.get('PISXME_LANE_ORDER') == 'TD3_OUTER':
     OUT=ROOT/'ACREAGE_CM5IO_TOP_ISLAND_TD3_OUTER_PHASE17.kicad_pcb'
 if os.environ.get('PISXME_LANE_ORDER') == 'LEFT_EDGE':
@@ -30,6 +32,8 @@ if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL':
     OUT=ROOT/'ACREAGE_CM5IO_RIGHT_CHANNEL_PHASE17.kicad_pcb'
 if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM':
     OUT=ROOT/'ACREAGE_CM5IO_LOCAL_BOTTOM_PHASE17.kicad_pcb'
+if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM_SPLIT':
+    OUT=ROOT/'ACREAGE_CM5IO_LOCAL_BOTTOM_SPLIT_PHASE17.kicad_pcb'
 
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def add(b,n,pts,layer=pcbnew.F_Cu):
@@ -47,7 +51,12 @@ def main():
     # DX=-42.5 places the official island at U9=(27.6,57.215),
     # U6=(33.6,57.215), and J2=(30,45); keep the footprints and translated
     # connector-side vectors on the same rigid transform.
-    for ref,pos,rot in (('U6',(33.6,57.215),270),('U9',(27.6,57.215),270),('J2',(30,45),180)):
+    if os.environ.get('PISXME_LANE_ORDER') in ('LOCAL_BOTTOM','LOCAL_BOTTOM_SPLIT'):
+        island_positions=(('U9',(70.1+DX,65.215+DY),270),('U6',(76.1+DX,65.215+DY),270),
+                          ('J2',(72.5+DX,53+DY),180))
+    else:
+        island_positions=(('U6',(33.6,57.215),270),('U9',(27.6,57.215),270),('J2',(30,45),180))
+    for ref,pos,rot in island_positions:
         f=b.FindFootprintByReference(ref)
         if f is None: raise RuntimeError(ref)
         f.SetPosition(V(*pos)); f.SetOrientationDegrees(rot)
@@ -141,6 +150,39 @@ def main():
           'CM5_GBE_TD1_N':[(36.04,99.50),(45.5,99.50),(45.5,140.5),(90.5,140.5),(110.5,140.5),(125.440000,151.813702)],
           'CM5_GBE_TD0_N':[(36.04,100.30),(46.0,100.30),(46.0,141.0),(91.0,141.0),(111.0,141.0),(126.560000,151.356297)],
           'CM5_GBE_TD0_P':[(36.04,100.70),(46.5,100.70),(46.5,141.5),(91.5,141.5),(111.5,141.5),(126.940000,151.513702)]}
+    if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM_SPLIT':
+        paths={
+          'CM5_GBE_TD3_P':[(32.96,99.10),(25.0,99.10),(25.0,136.0),(70.0,140.0),(105.0,140.0),(118.604119,151.995)],
+          'CM5_GBE_TD3_N':[(32.96,99.50),(24.5,99.50),(24.5,136.5),(70.5,140.5),(105.5,140.5),(118.761524,152.375)],
+          'CM5_GBE_TD2_N':[(32.96,100.30),(24.0,100.30),(24.0,137.0),(71.0,141.0),(106.0,141.0),(119.421298,152.895)],
+          'CM5_GBE_TD2_P':[(32.96,100.70),(23.5,100.70),(23.5,137.5),(71.5,141.5),(106.5,141.5),(119.578701,153.275)],
+          'CM5_GBE_TD1_P':[(36.04,99.10),(45.0,99.10),(45.0,136.0),(90.0,140.0),(110.0,140.0),(125.060000,151.656297)],
+          'CM5_GBE_TD1_N':[(36.04,99.50),(45.5,99.50),(45.5,136.5),(90.5,140.5),(110.5,140.5),(125.440000,151.813702)],
+          'CM5_GBE_TD0_N':[(36.04,100.30),(46.0,100.30),(46.0,137.0),(91.0,141.0),(111.0,141.0),(126.560000,151.356297)],
+          'CM5_GBE_TD0_P':[(36.04,100.70),(46.5,100.70),(46.5,137.5),(91.5,141.5),(111.5,141.5),(126.940000,151.513702)]}
+    split=os.environ.get('PISXME_LANE_ORDER')=='LOCAL_BOTTOM_SPLIT'
+    if split:
+        # Immediate source transitions keep long Ethernet legs off the
+        # frozen F.Cu power/regulator copper.  Left TD3/TD2 and right TD0
+        # use B.Cu corridors; right TD1 returns to F.Cu for the official
+        # ESD landing corridor.  Every transition is outside a pad.
+        for name,pts in paths.items():
+            end=(land[name][0]+DX,land[name][1]+DY)
+            x,y=pts[0]; source_v=pts[1]; entry=pts[2]
+            add(b,nets[name],[(x,y),source_v])
+            via(b,nets[name],source_v)
+            is_fcu=name in ('CM5_GBE_TD1_P','CM5_GBE_TD1_N')
+            add(b,nets[name],[source_v,entry],pcbnew.B_Cu)
+            via(b,nets[name],entry)
+            if is_fcu:
+                add(b,nets[name],[entry,pts[3],pts[4],end],pcbnew.F_Cu)
+            else:
+                add(b,nets[name],[entry,pts[3],pts[4]],pcbnew.B_Cu)
+                vend=(end[0]-1.5,end[1]-0.6)
+                add(b,nets[name],[pts[4],vend],pcbnew.B_Cu)
+                via(b,nets[name],vend)
+                add(b,nets[name],[vend,end],pcbnew.F_Cu)
+        b.Save(str(OUT)); print('saved',OUT); return
     bcu=os.environ.get('PISXME_BCU_ESCAPE')=='1'
     for name,pts in paths.items():
         end=(land[name][0]+DX,land[name][1]+DY)

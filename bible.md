@@ -2986,3 +2986,14 @@
   power/clearance collisions reject the acreage candidate.
 - Preserved the corrected report and retained Phase 17 open for a fresh
   local placement/escape adaptation.
+
+2026-09-03 — Phase 17 local-bottom island trial
+
+- Tested a CM5IO-derived island below the cooler with regenerated J7 source
+  legs; all-F.Cu and split-layer variants were rejected by native DRC.
+- The key failure was identified as approach-side inversion: the rigid
+  official -90-degree island was moved below J7 without rotating its complete
+  geometry, causing ESD landing collisions. Split-layer lanes also reused
+  overlapping heights.
+- Preserved the rejected candidates and retained Phase 17 for a rigid
+  180-degree island rotation experiment.
