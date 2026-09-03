@@ -522,3 +522,44 @@ board has not yet been updated because its authoritative schematic/footprint
 path still requires promotion from TPD4E004 to the CM5IO-authoritative
 `TPD4EUSB30DQAR` flow-through package and then a fresh Phase 11/12 placement
 and Phase 17 production-routing validation. Phase 18+ remains gated.
+
+## Acreage application attempt — 2026-09-03
+
+The clean schematic authoring path has now been promoted to the active TI
+`TPD4EUSB30DQAR` USON-10 package. Its native netlist contains the expected
+eight CM5 MDI nets and the focused PCB pin-mapping regression passes.
+
+The first acreage application script was rejected before promotion. The
+CM5IO-derived disposable fixture uses a temporary common center-tap alias and
+an oracle-specific EDAC assignment: its route reaches fixture J2 pads 1/2,
+3/6, 7/8, and 9/10, while the production EDAC A70-112-331N126 authority uses
+MDI groups 1/2, 3/4, 5/6, and 7/8, with center taps on 9..12. Copying those
+tracks onto the production footprint would therefore silently change the
+magnetics pin mapping. That is a real integration mismatch, not evidence
+against the CM5IO Ethernet topology.
+
+A disposable acreage attempt that retained the production EDAC footprint and
+the unmodified oracle tracks was run only as a diagnostic. Native DRC found
+628 violations and 482 unconnected items, including the expected connector
+launch/support mismatch plus unrelated pre-existing acreage courtyard and
+hole-clearance violations. It is rejected and was not promoted. The report is
+`pisxme/reva-clean/ACREAGE_CM5IO_ETHERNET_PHASE17-drc.rpt`.
+
+Current status:
+`PISXME_REVA_CLEAN_RECOVERABLE_PHASE17_EDAC_LAUNCH_ADAPTATION`
+
+Exact blocker: adapt the passing CM5IO source-to-ESD geometry to the
+manufacturer-authoritative EDAC MDI pad groups, then regenerate only the
+EDAC-side pair launches and center-tap/support connections. The remaining
+authorized options are:
+
+1. preserve the CM5IO source/ESD island and author a pin-accurate EDAC launch;
+2. use the official CM5IO MagJack as a disposable comparison fixture to
+   isolate the connector-specific delta; or
+3. if EDAC geometry remains incompatible after a pin-accurate launch trial,
+   evaluate the official CM5IO MagJack as the production connector candidate
+   with a new procurement/mechanical authority review.
+
+Recommended next step: option 1. No software installation, frozen-subsystem
+move, layer-contract change, or validation relaxation is required. Phase 17
+and all later phases remain gated.

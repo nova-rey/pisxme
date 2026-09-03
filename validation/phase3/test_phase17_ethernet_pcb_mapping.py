@@ -5,10 +5,10 @@ import pcbnew
 
 BOARD = Path(os.environ.get("PISXME_BOARD", Path(__file__).resolve().parents[2] / "pisxme" / "reva-clean" / "ACREAGE_PCIE_PHASE16.kicad_pcb"))
 EXPECTED = {
-    # TI TPD4E004DRYR pin authority: IO1/IO2 = 1/2, GND = 3,
-    # IO3/IO4 = 4/5, VCC = 6.
-    "U6": {"1": "CM5_GBE_TD0_P", "2": "CM5_GBE_TD0_N", "3": "ETH_GND", "4": "CM5_GBE_TD1_P", "5": "CM5_GBE_TD1_N", "6": "ETH_POWER"},
-    "U9": {"1": "CM5_GBE_TD2_P", "2": "CM5_GBE_TD2_N", "3": "ETH_GND", "4": "CM5_GBE_TD3_P", "5": "CM5_GBE_TD3_N", "6": "ETH_POWER"},
+    # TI TPD4EUSB30DQAR flow-through authority: 1/10 and 2/9 are
+    # channels 1/2, 3/8 are GND, and 4/7 and 5/6 are channels 3/4.
+    "U6": {"1": "CM5_GBE_TD0_P", "2": "CM5_GBE_TD0_N", "3": "ETH_GND", "4": "CM5_GBE_TD1_N", "5": "CM5_GBE_TD1_P", "6": "CM5_GBE_TD1_P", "7": "CM5_GBE_TD1_N", "8": "ETH_GND", "9": "CM5_GBE_TD0_N", "10": "CM5_GBE_TD0_P"},
+    "U9": {"1": "CM5_GBE_TD2_P", "2": "CM5_GBE_TD2_N", "3": "ETH_GND", "4": "CM5_GBE_TD3_N", "5": "CM5_GBE_TD3_P", "6": "CM5_GBE_TD3_P", "7": "CM5_GBE_TD3_N", "8": "ETH_GND", "9": "CM5_GBE_TD2_N", "10": "CM5_GBE_TD2_P"},
     # EDAC physical MDI/tap/LED pads are direct; logical shield pins 17/18
     # terminate on the two numbered 1.60 mm shield lands 19/20.
     "J2": {

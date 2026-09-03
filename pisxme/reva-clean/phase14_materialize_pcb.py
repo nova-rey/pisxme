@@ -102,6 +102,8 @@ def main() -> None:
         fp = comp.findtext("footprint", "")
         if fp.startswith("PiSXMeRevAClean:"):
             components[comp.attrib["ref"]] = fp.split(":", 1)[1]
+        elif fp == "Package_SON:USON-10_2.5x1.0mm_P0.5mm":
+            components[comp.attrib["ref"]] = "USON-10_2.5x1.0mm_P0.5mm"
         elif fp.startswith("Capacitor_SMD:"):
             components[comp.attrib["ref"]] = "C_0805_2012Metric"
     missing_positions = sorted(set(components) - set(POSITIONS))
@@ -131,6 +133,14 @@ def main() -> None:
             board.Remove(fp)
             refs.pop(ref, None)
             fp = None
+        if ref in ("U6", "U9") and fp is not None and name.startswith("USON-10"):
+            # The acreage floorplan may contain the donor-era WSON6 shell at
+            # these references.  Reload the promoted CM5IO-authoritative
+            # USON-10 land pattern instead of retaining that stale footprint.
+            if str(fp.GetFPID().GetLibItemName()) != name:
+                board.Remove(fp)
+                refs.pop(ref, None)
+                fp = None
         if fp is None:
             fp = io.FootprintLoad(str(PRETTY), name)
             if fp is None:

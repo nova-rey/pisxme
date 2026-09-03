@@ -2741,3 +2741,14 @@
   only documented warnings remain.
 - Closed the disposable fixture gate while keeping the clean acreage
   promotion and Phase 18+ work gated pending production-path adaptation.
+
+2026-09-03 — Phase 17 acreage EDAC-launch blocker
+
+- Promoted the clean Ethernet ESD authoring path to active TI
+  `TPD4EUSB30DQAR`; native netlist and focused pin mapping passed.
+- Rejected blind application of the CM5IO disposable connector launch because
+  its temporary common-tap/EDAC assignment does not match the authoritative
+  EDAC A70-112-331N126 MDI groups and center-tap pads.
+- Preserved the 628-violation diagnostic DRC and published the exact,
+  recoverable EDAC-side launch adaptation boundary in `blocker.md`.
+- Did not promote the clean acreage PCB or begin Phase 18+.
