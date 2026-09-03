@@ -13,12 +13,16 @@ if os.environ.get('PISXME_LANE_ORDER') == 'LEFT_EDGE':
     DX,DY=-62.5,62.0
 if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_SHELF':
     DX,DY=197.5,-33.0
+if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL':
+    DX,DY=197.5,-33.0
 if os.environ.get('PISXME_LANE_ORDER') == 'TD3_OUTER':
     OUT=ROOT/'ACREAGE_CM5IO_TOP_ISLAND_TD3_OUTER_PHASE17.kicad_pcb'
 if os.environ.get('PISXME_LANE_ORDER') == 'LEFT_EDGE':
     OUT=ROOT/'ACREAGE_CM5IO_LEFT_EDGE_PHASE17.kicad_pcb'
 if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_SHELF':
     OUT=ROOT/'ACREAGE_CM5IO_RIGHT_SHELF_PHASE17.kicad_pcb'
+if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL':
+    OUT=ROOT/'ACREAGE_CM5IO_RIGHT_CHANNEL_PHASE17.kicad_pcb'
 
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def add(b,n,pts,layer=pcbnew.F_Cu):
@@ -103,6 +107,19 @@ def main():
           'CM5_GBE_TD1_N':[(36.04,99.50),(74.5,99.50),(74.5,38.5),(273.039999,34.028702)],
           'CM5_GBE_TD0_N':[(36.04,100.30),(75.0,100.30),(75.0,39.0),(274.160000,33.571298)],
           'CM5_GBE_TD0_P':[(36.04,100.70),(75.5,100.70),(75.5,39.5),(274.539999,33.728702)]}
+    if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL':
+        # Parametric source breakout: unique pad dogbones first, then ordered
+        # parallel lanes, then an upper corridor. This avoids the prior
+        # hand-fan diagonals and preserves pair/group order.
+        paths={
+          'CM5_GBE_TD3_P':[(32.96,99.10),(30.0,99.10),(30.0,75.0),(60.0,75.0),(60.0,38.0),(266.204119,34.210)],
+          'CM5_GBE_TD3_N':[(32.96,99.50),(30.5,99.50),(30.5,75.4),(60.5,75.4),(60.5,38.4),(266.361524,34.590)],
+          'CM5_GBE_TD1_P':[(36.04,99.10),(37.5,99.10),(37.5,76.0),(66.0,76.0),(66.0,38.0),(272.660000,33.871297)],
+          'CM5_GBE_TD1_N':[(36.04,99.50),(38.0,99.50),(38.0,76.4),(66.5,76.4),(66.5,38.4),(273.039999,34.028702)],
+          'CM5_GBE_TD2_N':[(32.96,100.30),(31.0,100.30),(31.0,78.0),(62.0,78.0),(62.0,39.0),(267.021298,35.110)],
+          'CM5_GBE_TD2_P':[(32.96,100.70),(31.5,100.70),(31.5,78.4),(62.5,78.4),(62.5,39.4),(267.178701,35.490)],
+          'CM5_GBE_TD0_N':[(36.04,100.30),(38.5,100.30),(38.5,79.0),(68.0,79.0),(68.0,39.0),(274.160000,33.571298)],
+          'CM5_GBE_TD0_P':[(36.04,100.70),(39.0,100.70),(39.0,79.4),(68.5,79.4),(68.5,39.4),(274.539999,33.728702)]}
     bcu=os.environ.get('PISXME_BCU_ESCAPE')=='1'
     for name,pts in paths.items():
         end=(land[name][0]+DX,land[name][1]+DY)

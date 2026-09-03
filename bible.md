@@ -2871,6 +2871,15 @@
 - Corrected the stale zero-total-ERC statement in `PHASE3_STATUS.md` and
   preserved the full current report for final-gate review.
 
+2026-09-03 — Phase 17 parametric right-channel trial
+
+- Rebuilt the right-shelf breakout as unique J7 dogbones, ordered parallel
+  lanes, and an upper corridor into the official CM5IO island.
+- Rejected native DRC at 447 violations/485 unconnected items because true
+  Ethernet-local crossings/clearances remained.
+- Preserved the candidate and report; the next experiment is a regenerated
+  180-degree USON reorientation, with Phase 18+ still gated.
+
 2026-09-03 — Phase 17 right-shelf complete-island trials
 
 - Used the official CM5IO-relative Ethernet placement on the open right shelf

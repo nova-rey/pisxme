@@ -813,3 +813,23 @@ promotion. They are preserved as
 The official CM5IO fixture remains clean; the remaining failure is the
 generated J7 breakout geometry, not the reference Ethernet architecture.
 Phase 17 is still the earliest failed gate and Phase 18+ remains gated.
+
+## Parametric right-channel trial — 2026-09-03
+
+The right-shelf source fanout was rebuilt as a constrained channel from the
+actual J7 Ethernet pad anchors: unique short dogbones, ordered parallel
+lanes, and an upper corridor into the translated official island. This
+removed the prior hand-fan diagonals while preserving intact PHY pairs,
+F.Cu signal routing, and the approved layer contract.
+
+Native KiCad DRC rejected the candidate at **447 violations / 485
+unconnected items**. The candidate remains invalid because Ethernet-local
+crossings/clearances persist; it was not promoted. It is preserved as
+`pisxme/reva-clean/ACREAGE_CM5IO_RIGHT_CHANNEL_PHASE17.kicad_pcb` and
+`pisxme/reva-clean/ACREAGE_CM5IO_RIGHT_CHANNEL_PHASE17-drc.rpt`.
+
+The next high-information experiment is a complete CM5IO-derived island
+reorientation with both USON ESD footprints at 180 degrees, regenerated
+internal copper, and a monotonic four-lane fanout. This is still within the
+approved Ethernet architecture and requires no software installation or gate
+relaxation.
