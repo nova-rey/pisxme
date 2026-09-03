@@ -2833,3 +2833,12 @@
   overlap with the F1/input envelope.
 - Preserved the disposable PCB, generator, and DRC receipt; no frozen
   subsystem or production PCB was promoted and Phase 18+ remains gated.
+
+2026-09-03 — Phase 17 top-left B.Cu escape trial
+
+- Tested ordinary through-vias outside J7 with B.Cu pair corridors and F.Cu
+  dogbones into the translated official CM5IO ESD graph.
+- Rejected the candidate at native DRC: 495 violations and 485 unconnected
+  items, including true pair shorts/crossings at the transition lanes.
+- Preserved the candidate and report; the official all-F.Cu CM5IO topology
+  remains authoritative and Phase 18+ remains gated.

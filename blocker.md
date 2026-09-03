@@ -698,3 +698,19 @@ The experiment is retained as
 report and generator. It narrows the authorized placement search: a passing
 candidate needs both a J7 side escape that preserves pair order and a support
 placement clear of F1, while retaining the official CM5IO topology.
+
+## Top-left B.Cu escape trial — 2026-09-03
+
+The same top-left island was tested with ordinary through-vias immediately
+outside the J7 body, B.Cu pair corridors, and F.Cu dogbones into the official
+ESD-side graph. This stays within the approved layer contract and does not
+use via-in-pad or plane-layer signals.
+
+The candidate is rejected by native KiCad DRC: 495 violations and 485
+unconnected items. The focused Ethernet failures include TD2/TD3 and TD0/TD1
+pair shorts/crossings at the hand-placed transition lanes. The remaining
+unconnected count again includes the unrouted acreage ancestor and is not
+used as an Ethernet-only conclusion. The variant is retained as
+`ACREAGE_CM5IO_TOP_ISLAND_BCU_ESCAPE_PHASE17.kicad_pcb` with its native DRC
+report. The official CM5IO all-F.Cu topology remains the reference; this
+local B.Cu trial does not supersede it.

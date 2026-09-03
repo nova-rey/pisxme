@@ -1,6 +1,7 @@
 """Disposable Phase 17 trial: official CM5IO island with side escapes at J7."""
 from pathlib import Path
 import json
+import os
 import pcbnew
 
 ROOT=Path(__file__).resolve().parent
@@ -10,10 +11,12 @@ OUT=ROOT/'ACREAGE_CM5IO_TOP_ISLAND_SIDE_ESCAPE_PHASE17.kicad_pcb'
 DX,DY=-42.5,-8.0
 
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
-def add(b,n,pts):
+def add(b,n,pts,layer=pcbnew.F_Cu):
     for a,z in zip(pts,pts[1:]):
         t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z));
-        t.SetLayer(pcbnew.F_Cu); t.SetWidth(pcbnew.FromMM(.127)); t.SetNetCode(n.GetNetCode()); b.Add(t)
+        t.SetLayer(layer); t.SetWidth(pcbnew.FromMM(.127)); t.SetNetCode(n.GetNetCode()); b.Add(t)
+def via(b,n,p):
+    q=pcbnew.PCB_VIA(b); q.SetPosition(V(*p)); q.SetWidth(pcbnew.FromMM(.45)); q.SetDrill(pcbnew.FromMM(.20)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(n); b.Add(q)
 
 def main():
     rows=json.loads(GEOM.read_text()); b=pcbnew.LoadBoard(str(BASE))
@@ -52,8 +55,22 @@ def main():
       'CM5_GBE_TD1_N':[(36.04,99.50),(40.5,99.50),(39.5,97.5),(39.5,71.5),(33.039999,59.028702)],
       'CM5_GBE_TD0_N':[(36.04,100.30),(41.0,100.30),(40.0,98.0),(40.0,71.0),(34.16,58.571298)],
       'CM5_GBE_TD0_P':[(36.04,100.70),(41.5,100.70),(40.5,98.5),(40.5,70.5),(34.539999,58.728702)]}
+    bcu=os.environ.get('PISXME_BCU_ESCAPE')=='1'
     for name,pts in paths.items():
         end=(land[name][0]+DX,land[name][1]+DY)
-        add(b,nets[name],pts[:-1]+[end])
+        if not bcu:
+            add(b,nets[name],pts[:-1]+[end])
+            continue
+        # Keep only the pad breakout on F.Cu, then use a pair-preserving
+        # B.Cu corridor around the fixed J7 body. Both transitions are
+        # outside pads; the endpoint via lands on the short official USON
+        # graph rather than placing via-in-pad.
+        start=pts[2]
+        add(b,nets[name],pts[:3])
+        via(b,nets[name],start)
+        via_end=(end[0],end[1]+0.75)
+        add(b,nets[name],[start,via_end],pcbnew.B_Cu)
+        via(b,nets[name],via_end)
+        add(b,nets[name],[via_end,end])
     b.Save(str(OUT)); print('saved',OUT)
 if __name__=='__main__': main()
