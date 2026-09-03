@@ -2506,3 +2506,12 @@
 - The resulting experiment recorded 86 violations and 4 unconnected pads.
   True source/via fanout and J2 support-pad shorts/crossings remain, so this
   route is rejected; no clearance or layer rule was weakened.
+
+2026-09-03 — Phase 17 separated Ethernet placement experiment
+
+- Tried a further disposable placement with J7/J2 separated on a large
+  fixture, monotonic F.Cu/B.Cu pair groups, and explicit transitions. Native
+  DRC improved to 74 violations and 4 unconnected pads.
+- Rejected the experiment because genuine four-pair fanout/launch crossings
+  and shorts remain. The clean PCB/schematic remain unchanged and SP3019 is
+  not promoted.

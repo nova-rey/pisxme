@@ -164,6 +164,11 @@ Evidence:
   unconnected items after correcting the ordinary via to the board minimum
   0.50 mm diameter / 0.30 mm drill. It still has true source/via fanout and
   J2 support-pad shorts/crossings, so it is also rejected.
+- Separated-placement corridor experiment: 74 violations, 4 unconnected
+  items. Moving the disposable J7/J2 anchors farther apart and keeping the
+  F.Cu/B.Cu pair groups monotonic reduced the failure set further, but native
+  DRC still reports genuine four-pair fanout/launch crossings and shorts. It
+  is rejected; this is the current best bounded SP3019 trial.
 - Material isolated-fixture failures are true pair crossings, connector-launch
   shorts to center-tap pads, and no ordinary via/F.Cu dogbone transitions for
   the B.Cu-assigned pairs. Therefore this is not a valid Phase 17 proof.

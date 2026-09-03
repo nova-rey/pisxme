@@ -49,29 +49,29 @@ def main():
     # Keep the source board's authoritative J7/J2 footprints and board setup;
     # candidate-specific evidence is separated from the acreage DRC baseline.
     j7 = b.FindFootprintByReference("J7")
-    j7.SetPosition(v(100, 130))
+    j7.SetPosition(v(100, 160))
     j2 = b.FindFootprintByReference("J2")
-    j2.SetPosition(v(100, 40))
-    j2.SetOrientationDegrees(90)
+    j2.SetPosition(v(100, 80))
+    j2.SetOrientationDegrees(0)
     # FootprintLoad is process-global in this KiCad 10 Flatpak ABI, so load
     # once and duplicate the native object for the second instance. Pad
     # assignment below uses FindPadByNumber, which is safe on the duplicate.
     # The native FOOTPRINT copy constructor preserves pads and attributes.
-    sp3019(b, "U9", 90, 100, {"1":"CM5_GBE_TD3_P", "3":"CM5_GBE_TD3_N", "4":"CM5_GBE_TD2_N", "6":"CM5_GBE_TD2_P", "2":"ETH_GND"}, f9)
-    sp3019(b, "U6", 110, 100, {"1":"CM5_GBE_TD1_P", "3":"CM5_GBE_TD1_N", "4":"CM5_GBE_TD0_N", "6":"CM5_GBE_TD0_P", "2":"ETH_GND"}, f6)
+    sp3019(b, "U9", 90, 130, {"1":"CM5_GBE_TD3_P", "3":"CM5_GBE_TD3_N", "4":"CM5_GBE_TD2_N", "6":"CM5_GBE_TD2_P", "2":"ETH_GND"}, f9)
+    sp3019(b, "U6", 110, 130, {"1":"CM5_GBE_TD1_P", "3":"CM5_GBE_TD1_N", "4":"CM5_GBE_TD0_N", "6":"CM5_GBE_TD0_P", "2":"ETH_GND"}, f6)
     def nt(a,z,name,layer): tr(b,a,z,name,layer,W)
     # Pair-separated monotonic corridors. Pair 3/1 use F.Cu and pair 2/0
     # use B.Cu, so the two CM5 source columns never share a route layer.
     paths = {
-      "CM5_GBE_TD3_P":(((97.96,99.10),(93,99.10),(93,99.05),(89.05,99.05)),pcbnew.F_Cu),
-      "CM5_GBE_TD3_N":(((97.96,99.50),(94,99.50),(94,100.95),(89.05,100.95)),pcbnew.F_Cu),
-      "CM5_GBE_TD1_P":(((101.04,99.10),(106,99.10),(106,99.05),(119.05,99.05)),pcbnew.F_Cu),
-      "CM5_GBE_TD1_N":(((101.04,99.50),(107,99.50),(107,100.95),(119.05,100.95)),pcbnew.F_Cu),}
+      "CM5_GBE_TD3_P":(((97.96,129.10),(93,129.10),(93,129.05),(89.05,129.05)),pcbnew.F_Cu),
+      "CM5_GBE_TD3_N":(((97.96,129.50),(94,129.50),(94,130.95),(89.05,130.95)),pcbnew.F_Cu),
+      "CM5_GBE_TD1_P":(((101.04,129.10),(106,129.10),(106,129.05),(119.05,129.05)),pcbnew.F_Cu),
+      "CM5_GBE_TD1_N":(((101.04,129.50),(107,129.50),(107,130.95),(119.05,130.95)),pcbnew.F_Cu),}
     bpaths = {
-      "CM5_GBE_TD2_N":(((97.96,100.30),(95,100.30),(95,102),(92,102),(92,100.95)),(96,100.30),(92,100.95),(90.95,100.95)),
-      "CM5_GBE_TD2_P":(((97.96,100.70),(96,100.70),(96,103),(91,103),(91,99.05)),(96,100.70),(91,99.05),(90.95,99.05)),
-      "CM5_GBE_TD0_N":(((101.04,100.30),(105,100.30),(105,102),(108,102),(108,99.05)),(104,100.30),(108,99.05),(120.95,99.05)),
-      "CM5_GBE_TD0_P":(((101.04,100.70),(104,100.70),(104,103),(109,103),(109,100.95)),(104,100.70),(109,100.95),(120.95,100.95)),}
+      "CM5_GBE_TD2_N":(((97.96,130.30),(95,130.30),(95,132),(92,132),(92,130.95)),(96,130.30),(92,130.95),(90.95,130.95)),
+      "CM5_GBE_TD2_P":(((97.96,130.70),(96,130.70),(96,133),(91,133),(91,129.05)),(97,130.70),(91,129.05),(90.95,129.05)),
+      "CM5_GBE_TD0_N":(((101.04,130.30),(105,130.30),(105,132),(108,132),(108,130.95)),(104,130.30),(108,130.95),(120.95,130.95)),
+      "CM5_GBE_TD0_P":(((101.04,130.70),(104,130.70),(104,133),(109,133),(109,129.05)),(103,130.70),(109,129.05),(120.95,129.05)),}
     for name,(pts,layer) in paths.items():
         for a,z in zip(pts,pts[1:]): nt(a,z,name,layer)
     for name,(pts,src_via,esd_via,pad) in bpaths.items():
@@ -85,14 +85,14 @@ def main():
     # ESD-to-MagJack corridors. These are intentionally long and separated so
     # the fixture tests topology and launch correctness before acreage packing.
     out_paths = {
-      "CM5_GBE_TD3_P":(((89.05,99.05),(88,99.05),(88,43.175),(97.44,43.175)),pcbnew.F_Cu),
-      "CM5_GBE_TD3_N":(((89.05,100.95),(87,100.95),(87,45.715),(96.17,45.715)),pcbnew.F_Cu),
-      "CM5_GBE_TD1_P":(((119.05,99.05),(112,99.05),(112,44.09),(104.06,44.09)),pcbnew.F_Cu),
-      "CM5_GBE_TD1_N":(((119.05,100.95),(111,100.95),(111,46.63),(104.06,46.63)),pcbnew.F_Cu),
-      "CM5_GBE_TD2_P":(((91,99.05),(98,99.05),(98,34.285),(96.17,34.285)),pcbnew.B_Cu),
-      "CM5_GBE_TD2_N":(((92,100.95),(94,100.95),(94,36.825),(97.44,36.825)),pcbnew.B_Cu),
-      "CM5_GBE_TD0_P":(((109,100.95),(109,33.37),(104.06,33.37)),pcbnew.B_Cu),
-      "CM5_GBE_TD0_N":(((108,99.05),(107,99.05),(107,35.91),(104.06,35.91)),pcbnew.B_Cu),
+      "CM5_GBE_TD3_P":(((89.05,129.05),(88,129.05),(88,77.44),(96.825,77.44)),pcbnew.F_Cu),
+      "CM5_GBE_TD3_N":(((89.05,130.95),(87,130.95),(87,76.17),(94.285,76.17)),pcbnew.F_Cu),
+      "CM5_GBE_TD1_P":(((119.05,129.05),(112,129.05),(112,84.06),(95.91,84.06)),pcbnew.F_Cu),
+      "CM5_GBE_TD1_N":(((119.05,130.95),(111,130.95),(111,84.06),(93.37,84.06)),pcbnew.F_Cu),
+      "CM5_GBE_TD2_P":(((91,129.05),(98,129.05),(98,76.17),(95.715,76.17)),pcbnew.B_Cu),
+      "CM5_GBE_TD2_N":(((92,130.95),(94,130.95),(94,77.44),(93.175,77.44)),pcbnew.B_Cu),
+      "CM5_GBE_TD0_P":(((109,129.05),(109,84.06),(106.63,84.06)),pcbnew.B_Cu),
+      "CM5_GBE_TD0_N":(((108,130.95),(107,130.95),(107,84.06),(104.09,84.06)),pcbnew.B_Cu),
     }
     for name,(pts,layer) in out_paths.items():
         for a,z in zip(pts,pts[1:]): nt(a,z,name,layer)
