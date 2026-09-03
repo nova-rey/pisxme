@@ -2800,3 +2800,14 @@
   including Ethernet shorts against neighboring power/keepout geometry.
 - Classified the remaining issue as a local Ethernet placement/floorplan
   blocker, preserved the dirty candidate, and kept Phase 18+ gated.
+
+2026-09-03 — Phase 17 routed-ancestor restore boundary
+
+- Exported 320 routed Phase 16 copper items by stable net name and restored
+  them onto the corrected clean materialization before applying the official
+  CM5IO Ethernet vectors.
+- Native DRC remained invalid at 835 violations and 460 unconnected items;
+  the evidence includes inherited Phase 16/acreage debt and Ethernet
+  collisions with neighboring power/keepout geometry.
+- Preserved the snapshot/export/restore scripts and kept Phase 17 open; no
+  Phase 18+ work started.

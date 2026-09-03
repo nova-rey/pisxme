@@ -636,3 +636,18 @@ against neighboring power/keepout geometry. This is a placement/floorplan
 failure of the current acreage context, not a valid rejection of the now
 pin-correct CM5IO/EDAC island; the disposable oracle remains the clean
 reference. The current dirty legacy candidate was not overwritten.
+
+## Phase 16 routed-ancestor restore — 2026-09-03
+
+To avoid drawing conclusions from the unrouted floorplan, Phase 16 copper was
+exported by stable net name into `phase16_copper_snapshot.json` and restored
+onto a corrected clean materialization. The snapshot contains 320 routed
+copper items; the Ethernet MDI vectors were then applied through a separate
+single-board path. The corrected Ethernet footprint mapping regression passes.
+
+The restored routed-ancestor DRC reports 835 total violations and 460
+unconnected items. The report includes existing Phase 16/acreage debt, but it
+also shows the relocated Ethernet vectors colliding with neighboring power
+routes/keepouts. Therefore this is not a Phase 17 pass and the candidate was
+not promoted. The snapshot/export/restore scripts preserve a reproducible
+boundary for the next Ethernet-local placement experiment.
