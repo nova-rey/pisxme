@@ -2440,3 +2440,5 @@
   not promoted.
 - The disposable trial project shell was checkpointed with its PCB and DRC
   report so the rejected experiment is reproducible.
+- The SP3019 routing generator was refined to use pair-separated monotonic
+  corridors; the resulting native trial still fails and remains disposable.
