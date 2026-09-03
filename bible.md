@@ -2617,3 +2617,15 @@
 - Native DRC still reports 212 violations and 24 unconnected items. Rejected
   the fixture as a route construction; ESDS311 was not promoted and the clean
   board/schematic remained untouched.
+
+2026-09-03 — Phase 17 final bounded disposition
+
+- Completed the authorized disposable alternatives: SP3019, corrected
+  ESDS304, and ESDS311, including separated placements and ordinary-via
+  transition repairs.
+- No candidate passed native DRC and complete connectivity. The common
+  failure is the CM5/J7 to ESD to EDAC launch geometry under the frozen
+  F.Cu/B.Cu-only contract, not missing package authority.
+- Recorded three bounded user-controlled continuation options and the
+  recommendation in `blocker.md`.
+- No production asset was changed; Phase 18+ remains unopened.

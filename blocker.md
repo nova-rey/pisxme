@@ -282,6 +282,33 @@ The written research note was also corrected to state TI's 2.6 mm DBV0005A
 row separation (rather than the earlier 1.9 mm typo). The machine-check and
 footprint now agree.
 
+## Final Phase 17 disposition — 2026-09-03
+
+The authorized repair space has been exhausted without a passing candidate:
+
+- SP3019-04HTG: best corrected native result still had 76 violations.
+- ESDS304DBVR: best corrected native result had 92 violations and 8
+  unconnected items.
+- ESDS311DYFR: corrected eight-device fixture had 212 violations and 24
+  unconnected items.
+
+The repeated common failure is the CM5/J7 to ESD to EDAC launch geometry under
+the frozen F.Cu/B.Cu-only signal-layer contract, ordinary-via rule, and fixed
+connector fields. The remaining choices require a user-controlled
+architectural decision:
+
+1. Select a different authoritative Ethernet connector/ESD land-pattern
+   arrangement and reopen the corresponding authority and placement gates.
+2. Permit an additional signal-routing layer or changed layer contract, then
+   redo stack/impedance and affected routing validation.
+3. Retain the current contract and defer until a physically different
+   authoritative connector/ESD combination is selected.
+
+Recommendation: option 1, preserving the six-layer board while addressing the
+connector-boundary launch choke point. Final state:
+`PISXME_REVA_CLEAN_BLOCKED`; earliest failed gate: Phase 17 Ethernet routing.
+Production files remain untouched.
+
 The generator was then aligned to the corrected TI pad coordinates and rerun.
 That endpoint-corrected candidate reports **104 native DRC violations and 7
 unconnected items**. It is also rejected. The reduced dangling count confirms
