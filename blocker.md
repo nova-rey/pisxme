@@ -920,3 +920,25 @@ This is stronger evidence than the prior contaminated full-board trials: the
 J7 launch is not yet proven routable under the current trial paths, but the
 official CM5IO Ethernet architecture remains valid. Phase 17 remains open;
 Phase 18+ remains gated.
+
+## J7 launch sub-gate closure — 2026-09-03
+
+The final J7-only source-order-preserving transition trial uses the exact J7
+instance, opposing pad field, separated boundary exits, ordinary
+through-vias, and nested F.Cu lanes above the body. Right-group via heights
+preserve the measured source order: TD1_P, TD1_N, TD0_N, TD0_P.
+
+Native KiCad DRC reports **zero tracks-crossing, zero shorting-items, zero
+clearance violations, and zero hole-clearance violations**. Remaining DRC
+categories are 24 track-width findings because the isolated board's default
+netclass says 0.200 mm while the CM5IO-authoritative launch uses 0.127 mm,
+plus 8 diagnostic dangling ends and 63 expected non-MDI unconnected J7 pads.
+Those findings are explicit; the launch-specific geometric gate is closed,
+while full Ethernet still requires ESD/MagJack integration, width-rule
+reproduction, and complete connectivity.
+
+The corrected oracle is preserved as
+`pisxme/reva-clean/CM5IO_J7_LAUNCH_FIXTURE.kicad_pcb` with its generator and
+native report. This closes the hypothesis that the fixed J7 pad field is
+intrinsically unroutable; remaining Phase 17 work is complete-island
+integration and validation.

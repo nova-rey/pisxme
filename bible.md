@@ -2936,3 +2936,13 @@
   findings; two source-via clearances and expected non-MDI unconnected pads
   remain.
 - Preserved the fixture/report and kept Phase 17 open.
+
+2026-09-03 — Phase 17 J7 launch sub-gate closure
+
+- Completed the source-order-preserving J7 transition trial with exact
+  footprint/pad-field authority and ordinary through-vias.
+- Native DRC has zero tracks-crossing, shorting, clearance, and hole-clearance
+  findings; width-rule, dangling diagnostic, and non-MDI fixture omissions
+  remain explicitly reported.
+- Closed the fixed-J7-launch hypothesis and retained Phase 17 for complete
+  ESD/MagJack integration; Phase 18+ remains gated.
