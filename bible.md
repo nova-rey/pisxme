@@ -2843,6 +2843,16 @@
 - Preserved the candidate and report; the official all-F.Cu CM5IO topology
   remains authoritative and Phase 18+ remains gated.
 
+2026-09-03 — Phase 17 monotonic-lane Ethernet trial
+
+- Rebuilt the top-left source escape with ordered left/right lanes and
+  consistent translated U6/U9/J2 coordinates.
+- Rejected native DRC at 364 violations/453 unconnected, with four true
+  source-side pair crossings and dense ESD/connector launch clearance
+  failures; inherited unrouted-ancestor debt was not used as the sole basis.
+- Preserved the candidate/report and kept the official CM5IO topology and
+  Phase 18+ gate unchanged.
+
 2026-09-03 — Phase 17 coordinate-corrected top-left trials
 
 - Corrected the top-left disposable script so its translated footprints and

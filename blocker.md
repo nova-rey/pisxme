@@ -731,6 +731,22 @@ hand-authored escape paths; the official CM5IO connector/ESD-side geometry
 remains clean. The corrected candidate files and reports are preserved for
 comparison, and no production or frozen subsystem was changed.
 
+## Monotonic-lane Ethernet trial — 2026-09-03
+
+The side-escape generator was corrected again to keep the left J7 group in
+ordered lanes (TD3 at approximately x=27, TD2 at x=24) and the right group
+in ordered lanes (TD1 at x=40, TD0 at x=43), with the translated island now
+at the consistent coordinates U9=(27.6,57.215), U6=(33.6,57.215), J2=(30,45).
+
+This reduced the candidate to 364 native DRC violations and 453 unconnected
+items. The unconnected count is inherited from the unrouted acreage ancestor;
+the Ethernet-specific failure is four true pair crossings at the source-side
+fan-in, plus clearance violations at the dense ESD/connector launch. The
+candidate is rejected. The result shows that the remaining obstacle is the
+relative source-to-ESD pair order, not the regulator or F1 placement alone.
+The candidate and DRC report are retained as
+`ACREAGE_CM5IO_TOP_ISLAND_MONOTONIC_FCU_PHASE17.*`.
+
 ## Current native root ERC revalidation — 2026-09-03
 
 After the generic MDI-label correction, native KiCad 10 ERC was rerun from
