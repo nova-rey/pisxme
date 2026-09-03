@@ -2875,8 +2875,10 @@
 
 - Built a fresh disposable fixture from actual local U6/U9/J2 pad geometry,
   with both ESD footprints rotated 180 degrees and intact CM5IO pair nets.
-- Rejected native KiCad DRC at 266 violations/457 unconnected items; true
-  MDI crossings and shorts remained at the fixed J7 launch.
+- Rebuilt the fixture without inherited acreage context; isolated native DRC
+  reports 94 violations/4 unconnected items. True MDI crossings and shorts
+  remained at the fixed J7 launch, and the default 0.200 mm width rule also
+  rejects the CM5IO-derived 0.127 mm width.
 - Preserved the fixture/report and closed the package-reorientation-only
   hypothesis without modifying production or frozen subsystems.
 

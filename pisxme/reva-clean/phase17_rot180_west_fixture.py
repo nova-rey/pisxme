@@ -3,7 +3,6 @@ from pathlib import Path
 import pcbnew
 
 ROOT=Path(__file__).resolve().parent
-BASE=ROOT/'ACREAGE_EDAC_CORRECTED_PHASE17.kicad_pcb'
 OUT=ROOT/'CM5IO_ROT180_WEST_FIXTURE.kicad_pcb'
 NETS=['CM5_GBE_TD0_P','CM5_GBE_TD0_N','CM5_GBE_TD1_P','CM5_GBE_TD1_N',
       'CM5_GBE_TD2_P','CM5_GBE_TD2_N','CM5_GBE_TD3_P','CM5_GBE_TD3_N']
@@ -13,14 +12,21 @@ def add(b,n,pts):
         t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z));
         t.SetLayer(pcbnew.F_Cu); t.SetWidth(pcbnew.FromMM(.127)); t.SetNet(n); b.Add(t)
 def main():
-    b=pcbnew.LoadBoard(str(BASE))
-    for t in list(b.Tracks()): b.Remove(t)
-    for z in list(b.Zones()): b.Remove(z)
-    nets={name:b.FindNet(name) for name in NETS}
-    for name,n in nets.items():
-        if n is None: raise RuntimeError('missing net '+name)
-    j7=b.FindFootprintByReference('J7'); u9=b.FindFootprintByReference('U9')
-    u6=b.FindFootprintByReference('U6'); j2=b.FindFootprintByReference('J2')
+    b=pcbnew.NewBoard('')
+    b.SetCopperLayerCount(6)
+    for layer,name in ((pcbnew.F_Cu,'F.Cu'),(pcbnew.In1_Cu,'In1.GND'),(pcbnew.In2_Cu,'In2.PWR'),(pcbnew.In3_Cu,'In3.PWR12V'),(pcbnew.In4_Cu,'In4.GND'),(pcbnew.B_Cu,'B.Cu')): b.SetLayerName(layer,name)
+    nets={}
+    for name in NETS:
+        nets[name]=pcbnew.NETINFO_ITEM(b,name); b.Add(nets[name])
+    lib=ROOT/'PiSXMe_RevA_Clean.pretty'
+    def load(name,ref):
+        f=pcbnew.PCB_IO_KICAD_SEXPR().FootprintLoad(str(lib),name)
+        if f is None: raise RuntimeError('missing footprint '+name)
+        f.SetReference(ref); b.Add(f); return f
+    j7=load('PiSXMeRevAClean_Raspberry_Pi_5_Compute_Module','J7')
+    u9=load('USON-10_2.5x1.0mm_P0.5mm','U9')
+    u6=load('USON-10_2.5x1.0mm_P0.5mm','U6')
+    j2=load('EDAC_A70_112_331N126','J2')
     for f,p,r in ((j7,(35,130),0),(u9,(24,68),180),(u6,(30,68),180),(j2,(24,45),180)):
         f.SetPosition(V(*p)); f.SetOrientationDegrees(r)
     j7map={'3':'CM5_GBE_TD3_P','4':'CM5_GBE_TD1_P','5':'CM5_GBE_TD3_N','6':'CM5_GBE_TD1_N',

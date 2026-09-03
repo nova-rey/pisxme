@@ -823,10 +823,14 @@ degrees. MDI copper was regenerated from actual local pad coordinates rather
 than copied from the stale translated graph. Pair identities and polarity
 were preserved; no arbitrary PHY remap was used.
 
-Native KiCad DRC rejected the fixture at **266 violations / 457 unconnected
-items**. Ethernet-specific failures include true tracks-crossing and
-shorting items at the J7 launch, including MDI-to-MDI and MDI-to-J7-pad
-conflicts. The fixture is therefore not a passing proof and was not promoted.
+The first run was found to have inherited unrelated acreage context and is
+superseded. The fixture was rebuilt as a genuinely disposable board using
+only the authoritative J7, USON, and MagJack footprints. The isolated native
+KiCad DRC reports **94 violations / 4 unconnected items**. Ethernet-specific
+failures include true tracks-crossing and shorting items at the J7 launch,
+including MDI-to-MDI and MDI-to-J7-pad conflicts, plus the fixture's default
+0.200 mm minimum-width rule rejecting the CM5IO-derived 0.127 mm width. The
+fixture is therefore not a passing proof and was not promoted.
 It is preserved as
 `pisxme/reva-clean/CM5IO_ROT180_WEST_FIXTURE.kicad_pcb` with
 `CM5IO_ROT180_WEST_FIXTURE-drc.rpt` and its generator.
