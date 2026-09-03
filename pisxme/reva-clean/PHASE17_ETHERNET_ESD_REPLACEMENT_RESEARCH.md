@@ -95,3 +95,27 @@ exposed metal. The corrected rerun still fails as a routing construction:
 native DRC reports 100 violations and 11 unconnected items. It is rejected
 for Phase 17, but ESDS304 itself remains an electrically credible active
 alternative pending a new escape construction.
+
+## Next fallback solution class: TI ESDS311DYFR (2026-09-03)
+
+TI lists `ESDS311` as an active one-channel unidirectional protector in the
+ordinary SOD-323 package. TI explicitly identifies Ethernet 10/100/1000 Mbps
+as an application, specifies 4.5 pF typical line capacitance, ±30 kV IEC
+61000-4-2 protection, and a 3.6 V working standoff. Its two-terminal shunt
+topology is physically simple: one pad is the protected line and the other is
+a short local return to GND. Eight devices would protect all eight MDI
+conductors without an interleaved multi-channel escape.
+
+Authority: TI ESDS31x product page and Rev. C datasheet. Regional distributor
+evidence captured 2026-09-03 shows Mouser `ESDS311DYFR` with 4,510 in stock
+and Digi-Key with 2,745 in stock. Stock must be refreshed before release.
+
+Sources:
+
+- https://www.ti.com/product/ESDS311
+- https://www.ti.com/lit/ds/symlink/esds314.pdf
+- https://www.mouser.com/ProductDetail/Texas-Instruments/ESDS311DYFR
+- https://www.digikey.jp/en/products/detail/texas-instruments/ESDS311DYFR/22462690
+
+Decision: fallback candidate only. Its higher capacitance and eight-placement
+assembly burden make it inferior to SP3019 and ESDS304 pending a fixture.

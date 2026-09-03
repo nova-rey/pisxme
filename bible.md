@@ -2597,3 +2597,12 @@
   credible alternative. The result does not reject the part itself.
 - Updated `blocker.md` to distinguish invalid prior evidence from the
   corrected negative routing result. Production assets remain untouched.
+
+2026-09-03 — Phase 17 fallback ESD solution class
+
+- Researched TI ESDS311DYFR as the next authorized alternative: active
+  single-channel SOD-323, explicitly Ethernet 10/100/1000 capable, with a
+  simple shunt topology and captured Mouser/Digi-Key availability.
+- Recorded its higher 4.5 pF capacitance and eight-device assembly cost as
+  reasons it remains fallback-only pending a disposable fixture.
+- No production asset was changed.

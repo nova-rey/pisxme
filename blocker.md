@@ -238,6 +238,17 @@ Reproducible artifacts:
 The blocker remains recoverable within the approved Ethernet-local placement
 repair. Phase 18+ has not started.
 
+## Additional fallback candidate — TI ESDS311DYFR
+
+The next practical solution class has been identified but not yet promoted:
+eight active TI `ESDS311DYFR` single-channel SOD-323 shunt protectors. TI
+explicitly rates ESDS311 for 10/100/1000 Ethernet and lists the active device
+with a simple two-pad topology. Regional distributor evidence captured
+Mouser stock of 4,510 and Digi-Key stock of 2,745. Its 4.5 pF typical
+capacitance and eight-device assembly burden make it a fallback behind
+SP3019/ESDS304. A proper disposable fixture and native validation are still
+required; no production asset has changed.
+
 ## ESDS304 authority-only proof — 2026-09-03
 
 The corrected TI DBV0005A footprint and disposable mapping now pass the
