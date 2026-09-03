@@ -792,3 +792,24 @@ placement class: move the complete official Ethernet island to an open board
 edge or below/left of J7 and regenerate all source-to-island vectors, then run
 native DRC. No new software, architecture change, or validation relaxation
 is required.
+
+## Right-shelf complete-island trials — 2026-09-03
+
+Following the sidecar review, the complete CM5IO island was moved to the open
+right shelf below the cooler reservation: J2 `(270,20)`, U9 `(267.6,32.215)`,
+and U6 `(273.6,32.215)`, all with the authoritative orientations. The source
+breakout was regenerated from the actual J7 pad anchors, with the left group
+using a west corridor and the right group using a right corridor before
+turning above the cooler.
+
+The all-F.Cu trial was rejected by native DRC at **431 violations / 484
+unconnected items**. A second ordinary-through-via layer-separated trial was
+also rejected at **499 violations / 484 unconnected items**. Both contain
+true Ethernet crossings/shorts/clearance failures and are not candidates for
+promotion. They are preserved as
+`ACREAGE_CM5IO_RIGHT_SHELF_PHASE17.*` and
+`ACREAGE_CM5IO_RIGHT_SHELF_BCU_PHASE17.*`.
+
+The official CM5IO fixture remains clean; the remaining failure is the
+generated J7 breakout geometry, not the reference Ethernet architecture.
+Phase 17 is still the earliest failed gate and Phase 18+ remains gated.

@@ -9,8 +9,16 @@ BASE=ROOT/'ACREAGE_EDAC_CORRECTED_PHASE17.kicad_pcb'
 GEOM=ROOT/'cm5io_mdi_geometry.json'
 OUT=ROOT/'ACREAGE_CM5IO_TOP_ISLAND_SIDE_ESCAPE_PHASE17.kicad_pcb'
 DX,DY=-42.5,-8.0
+if os.environ.get('PISXME_LANE_ORDER') == 'LEFT_EDGE':
+    DX,DY=-62.5,62.0
+if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_SHELF':
+    DX,DY=197.5,-33.0
 if os.environ.get('PISXME_LANE_ORDER') == 'TD3_OUTER':
     OUT=ROOT/'ACREAGE_CM5IO_TOP_ISLAND_TD3_OUTER_PHASE17.kicad_pcb'
+if os.environ.get('PISXME_LANE_ORDER') == 'LEFT_EDGE':
+    OUT=ROOT/'ACREAGE_CM5IO_LEFT_EDGE_PHASE17.kicad_pcb'
+if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_SHELF':
+    OUT=ROOT/'ACREAGE_CM5IO_RIGHT_SHELF_PHASE17.kicad_pcb'
 
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def add(b,n,pts,layer=pcbnew.F_Cu):
@@ -69,6 +77,32 @@ def main():
         paths['CM5_GBE_TD3_N'][1:3]=[(24.5,99.50),(24.5,70.0)]
         paths['CM5_GBE_TD2_N'][1:3]=[(27.0,100.30),(27.0,70.5)]
         paths['CM5_GBE_TD2_P'][1:3]=[(27.5,100.70),(27.5,71.0)]
+    if os.environ.get('PISXME_LANE_ORDER') == 'LEFT_EDGE':
+        # Complete island at the open left/bottom acreage edge.  Left J7
+        # pairs descend on the west side; right J7 pairs use a lower return
+        # corridor, avoiding the regulator/PCIe/cooler reservations.
+        paths={
+          'CM5_GBE_TD3_P':[(32.96,99.10),(24.0,99.10),(24.0,115.0),(5.204119,129.210)],
+          'CM5_GBE_TD3_N':[(32.96,99.50),(23.5,99.50),(23.5,115.5),(5.361524,129.590)],
+          'CM5_GBE_TD2_N':[(32.96,100.30),(22.0,100.30),(22.0,116.0),(7.021298,130.110)],
+          'CM5_GBE_TD2_P':[(32.96,100.70),(21.5,100.70),(21.5,116.5),(7.178701,130.490)],
+          'CM5_GBE_TD1_P':[(36.04,99.10),(43.0,99.10),(43.0,145.0),(12.660000,128.871297)],
+          'CM5_GBE_TD1_N':[(36.04,99.50),(43.5,99.50),(43.5,145.5),(13.039999,129.028702)],
+          'CM5_GBE_TD0_N':[(36.04,100.30),(44.0,100.30),(44.0,146.0),(14.160000,128.571298)],
+          'CM5_GBE_TD0_P':[(36.04,100.70),(44.5,100.70),(44.5,146.5),(14.539999,128.728702)]}
+    if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_SHELF':
+        # CM5IO-relative connector-side island on the open right shelf.
+        # The two source groups leave J7 on opposite sides, rise above the
+        # cooler reservation, then enter the translated official graph.
+        paths={
+          'CM5_GBE_TD3_P':[(32.96,99.10),(24.0,99.10),(24.0,38.0),(266.204119,34.210)],
+          'CM5_GBE_TD3_N':[(32.96,99.50),(24.5,99.50),(24.5,38.5),(266.361524,34.590)],
+          'CM5_GBE_TD2_N':[(32.96,100.30),(25.0,100.30),(25.0,39.0),(267.021298,35.110)],
+          'CM5_GBE_TD2_P':[(32.96,100.70),(25.5,100.70),(25.5,39.5),(267.178701,35.490)],
+          'CM5_GBE_TD1_P':[(36.04,99.10),(74.0,99.10),(74.0,38.0),(272.660000,33.871297)],
+          'CM5_GBE_TD1_N':[(36.04,99.50),(74.5,99.50),(74.5,38.5),(273.039999,34.028702)],
+          'CM5_GBE_TD0_N':[(36.04,100.30),(75.0,100.30),(75.0,39.0),(274.160000,33.571298)],
+          'CM5_GBE_TD0_P':[(36.04,100.70),(75.5,100.70),(75.5,39.5),(274.539999,33.728702)]}
     bcu=os.environ.get('PISXME_BCU_ESCAPE')=='1'
     for name,pts in paths.items():
         end=(land[name][0]+DX,land[name][1]+DY)

@@ -2871,6 +2871,14 @@
 - Corrected the stale zero-total-ERC statement in `PHASE3_STATUS.md` and
   preserved the full current report for final-gate review.
 
+2026-09-03 — Phase 17 right-shelf complete-island trials
+
+- Used the official CM5IO-relative Ethernet placement on the open right shelf
+  below the cooler, with source breakout generated from actual J7 pads.
+- Rejected all-F.Cu native DRC at 431 violations/484 unconnected items.
+- Rejected the ordinary-through-via layer-separated variant at 499/484,
+  preserving both candidates and reports; Phase 18+ remains gated.
+
 2026-09-03 — Phase 17 TD3-outer physical-order trial
 
 - Rechecked the official CM5IO source before experimenting; retained its
