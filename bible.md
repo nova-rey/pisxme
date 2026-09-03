@@ -2842,3 +2842,13 @@
   items, including true pair shorts/crossings at the transition lanes.
 - Preserved the candidate and report; the official all-F.Cu CM5IO topology
   remains authoritative and Phase 18+ remains gated.
+
+2026-09-03 — Phase 17 coordinate-corrected top-left trials
+
+- Corrected the top-left disposable script so its translated footprints and
+  official MDI vectors agree: U9=(27.6,57.215), U6=(33.6,57.215), J2=(30,45).
+- Rejected the corrected F.Cu side escape at 383 violations/453 unconnected,
+  including true TD2 shorts and source-side crossings.
+- Rejected the corrected B.Cu transition escape at 448 violations/453
+  unconnected, including true TD0/1, TD2, and TD3 shorts/crossings.
+- Preserved both candidates and reports; Phase 18+ remains gated.

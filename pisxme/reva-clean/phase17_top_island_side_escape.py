@@ -23,7 +23,10 @@ def main():
     nets={n:b.FindNet(n) for n in set(r['net'] for r in rows)}
     for n in nets.values():
         if n is None: raise RuntimeError('missing MDI net')
-    for ref,pos,rot in (('U6',(45.6,57.215),270),('U9',(39.6,57.215),270),('J2',(42,45),180)):
+    # DX=-42.5 places the official island at U9=(27.6,57.215),
+    # U6=(33.6,57.215), and J2=(30,45); keep the footprints and translated
+    # connector-side vectors on the same rigid transform.
+    for ref,pos,rot in (('U6',(33.6,57.215),270),('U9',(27.6,57.215),270),('J2',(30,45),180)):
         f=b.FindFootprintByReference(ref)
         if f is None: raise RuntimeError(ref)
         f.SetPosition(V(*pos)); f.SetOrientationDegrees(rot)

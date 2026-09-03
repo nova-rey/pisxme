@@ -714,3 +714,19 @@ used as an Ethernet-only conclusion. The variant is retained as
 `ACREAGE_CM5IO_TOP_ISLAND_BCU_ESCAPE_PHASE17.kicad_pcb` with its native DRC
 report. The official CM5IO all-F.Cu topology remains the reference; this
 local B.Cu trial does not supersede it.
+
+## Coordinate-corrected top-left trials — 2026-09-03
+
+The prior top-left report was itself internally inconsistent: its translation
+constant moved the route, but the script left U6/U9/J2 at the old coordinates.
+That was corrected so the rigid island is U9=(27.6,57.215),
+U6=(33.6,57.215), and J2=(30,45), matching the translated official vectors.
+
+The corrected all-F.Cu side-escape candidate still fails native DRC at 383
+violations and 453 unconnected items, including true TD2 pair shorts and
+multiple source-side crossings. The corrected B.Cu transition candidate
+fails at 448 violations and 453 unconnected items, including true TD0/1,
+TD2, and TD3 pair shorts/crossings. These are valid rejections of the
+hand-authored escape paths; the official CM5IO connector/ESD-side geometry
+remains clean. The corrected candidate files and reports are preserved for
+comparison, and no production or frozen subsystem was changed.
