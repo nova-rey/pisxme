@@ -2438,3 +2438,5 @@
   remains rejected with 346 violations and 240 unconnected items. Its
   datasheet-derived trial footprint is explicitly non-authoritative and was
   not promoted.
+- The disposable trial project shell was checkpointed with its PCB and DRC
+  report so the rejected experiment is reproducible.
