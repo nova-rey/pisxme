@@ -67,13 +67,15 @@ def main():
     ou1=oracle.FindFootprintByReference("U1"); ou2=oracle.FindFootprintByReference("U2")
     # Official U1 carries TD3/TD2 and lands at the left position; production
     # U9 owns that pair group. Official U2 carries TD1/TD0 and lands at the
-    # right position; production U6 owns that group. Swap references so the
-    # native production symbol mapping and official copper endpoints agree.
-    u1=copyfp(b,ou1,"U9",*T(*xy(ou1.GetPosition())),90)
-    u2=copyfp(b,ou2,"U6",*T(*xy(ou2.GetPosition())),90)
+    # right position; production U6 owns that group. The 180-degree board
+    # transform changes the physical escape side, so use 270 degrees with
+    # the clean schematic's native pad mapping rather than swapping net
+    # labels onto a 90-degree footprint.
+    u1=copyfp(b,ou1,"U9",*T(*xy(ou1.GetPosition())),270)
+    u2=copyfp(b,ou2,"U6",*T(*xy(ou2.GetPosition())),270)
     assign(j7,{3:"CM5_GBE_TD3_P",4:"CM5_GBE_TD1_P",5:"CM5_GBE_TD3_N",6:"CM5_GBE_TD1_N",9:"CM5_GBE_TD2_N",10:"CM5_GBE_TD0_N",11:"CM5_GBE_TD2_P",12:"CM5_GBE_TD0_P"},nets)
-    assign(u1,{1:"CM5_GBE_TD3_P",2:"CM5_GBE_TD3_N",3:"ETH_GND",4:"CM5_GBE_TD2_N",5:"CM5_GBE_TD2_P",6:"CM5_GBE_TD2_P",7:"CM5_GBE_TD2_N",8:"ETH_GND",9:"CM5_GBE_TD3_N",10:"CM5_GBE_TD3_P"},nets)
-    assign(u2,{1:"CM5_GBE_TD1_P",2:"CM5_GBE_TD1_N",3:"ETH_GND",4:"CM5_GBE_TD0_N",5:"CM5_GBE_TD0_P",6:"CM5_GBE_TD0_P",7:"CM5_GBE_TD0_N",8:"ETH_GND",9:"CM5_GBE_TD1_N",10:"CM5_GBE_TD1_P"},nets)
+    assign(u1,{1:"CM5_GBE_TD2_P",2:"CM5_GBE_TD2_N",3:"ETH_GND",4:"CM5_GBE_TD3_N",5:"CM5_GBE_TD3_P",6:"CM5_GBE_TD3_P",7:"CM5_GBE_TD3_N",8:"ETH_GND",9:"CM5_GBE_TD2_N",10:"CM5_GBE_TD2_P"},nets)
+    assign(u2,{1:"CM5_GBE_TD0_P",2:"CM5_GBE_TD0_N",3:"ETH_GND",4:"CM5_GBE_TD1_N",5:"CM5_GBE_TD1_P",6:"CM5_GBE_TD1_P",7:"CM5_GBE_TD1_N",8:"ETH_GND",9:"CM5_GBE_TD0_N",10:"CM5_GBE_TD0_P"},nets)
     # The production magnetics support is a common center-tap node. Keep the
     # four physical tap lands explicit in the footprint, but make their
     # fixture net authority the one common node so the support bus cannot

@@ -20,8 +20,8 @@ def main():
     assert all(tracks.values()), tracks
     for fref, mapping in {
         "J7": {3:"CM5_GBE_TD3_P",4:"CM5_GBE_TD1_P",5:"CM5_GBE_TD3_N",6:"CM5_GBE_TD1_N",9:"CM5_GBE_TD2_N",10:"CM5_GBE_TD0_N",11:"CM5_GBE_TD2_P",12:"CM5_GBE_TD0_P"},
-        "U6": {1:"CM5_GBE_TD1_P",2:"CM5_GBE_TD1_N",4:"CM5_GBE_TD0_N",5:"CM5_GBE_TD0_P",6:"CM5_GBE_TD0_P",7:"CM5_GBE_TD0_N",9:"CM5_GBE_TD1_N",10:"CM5_GBE_TD1_P"},
-        "U9": {1:"CM5_GBE_TD3_P",2:"CM5_GBE_TD3_N",4:"CM5_GBE_TD2_N",5:"CM5_GBE_TD2_P",6:"CM5_GBE_TD2_P",7:"CM5_GBE_TD2_N",9:"CM5_GBE_TD3_N",10:"CM5_GBE_TD3_P"},
+        "U6": {1:"CM5_GBE_TD0_P",2:"CM5_GBE_TD0_N",4:"CM5_GBE_TD1_N",5:"CM5_GBE_TD1_P",6:"CM5_GBE_TD1_P",7:"CM5_GBE_TD1_N",9:"CM5_GBE_TD0_N",10:"CM5_GBE_TD0_P"},
+        "U9": {1:"CM5_GBE_TD2_P",2:"CM5_GBE_TD2_N",4:"CM5_GBE_TD3_N",5:"CM5_GBE_TD3_P",6:"CM5_GBE_TD3_P",7:"CM5_GBE_TD3_N",9:"CM5_GBE_TD2_N",10:"CM5_GBE_TD2_P"},
         "J2": {1:"CM5_GBE_TD0_P",2:"CM5_GBE_TD0_N",3:"CM5_GBE_TD1_P",6:"CM5_GBE_TD1_N",7:"CM5_GBE_TD2_P",8:"CM5_GBE_TD2_N",9:"CM5_GBE_TD3_P",10:"CM5_GBE_TD3_N"},
     }.items():
         f=b.FindFootprintByReference(fref); assert f is not None, fref

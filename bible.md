@@ -2811,3 +2811,15 @@
   collisions with neighboring power/keepout geometry.
 - Preserved the snapshot/export/restore scripts and kept Phase 17 open; no
   Phase 18+ work started.
+
+2026-09-03 — Phase 17 CM5IO transplant authoring correction
+
+- Corrected the generic transplant path to use 270-degree local USON
+  orientation with the clean U6/U9 pad mapping; removed the stale swapped-net
+  90-degree assumption.
+- Changed generated MDI boundary labels to global labels and regenerated the
+  child schematic/netlist; the complete duplicated flow-through pad mapping
+  now passes the current hierarchy-authority regression.
+- Rebuilt and natively checked the disposable transplant: 8 warning-only
+  violations, 0 unconnected pads, and 0 footprint errors. Acreage Phase 17
+  remains open and Phase 18+ remains gated.

@@ -651,3 +651,28 @@ also shows the relocated Ethernet vectors colliding with neighboring power
 routes/keepouts. Therefore this is not a Phase 17 pass and the candidate was
 not promoted. The snapshot/export/restore scripts preserve a reproducible
 boundary for the next Ethernet-local placement experiment.
+
+## Authoring-path correction — 2026-09-03
+
+The current-source audit found two stale assumptions in the earlier Phase 17
+evidence. The transplant generator had been using a 90° USON with swapped net
+labels, while the clean schematic authority maps U6 pads 1/2/9/10 to TD0 and
+U9 pads 1/2/9/10 to TD2. The generic transplant path now uses 270° local
+USON orientation with the clean pad mapping, preserving the official copper
+geometry without relabeling pads.
+
+The schematic generator also emitted ordinary local labels for the generated
+MDI symbol instances. Those are now emitted as global labels for the eight
+MDI nets; the correction is generic in `phase17_promote_cm5io_ethernet.py`
+and was applied idempotently to `ETHERNET.kicad_sch`. The regenerated native
+netlist contains the complete duplicated flow-through pads:
+
+`U6:1,10` / `U6:2,9` / `U6:4,7` / `U6:5,6` and the corresponding U9 pairs,
+plus J7 and J2, with no local MDI labels remaining. The hierarchy-authority
+regression now passes from current files.
+
+The corrected disposable transplant was regenerated and natively checked:
+8 warning-only violations, 0 unconnected pads, and 0 footprint errors. This
+is an authoring/fixture correction, not a Phase 17 acreage pass. The routed
+ancestor still has the placement-context failures documented above, so
+Phase 18+ remains gated.

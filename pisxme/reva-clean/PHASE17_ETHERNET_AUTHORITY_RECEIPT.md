@@ -47,3 +47,21 @@ center taps are `11..14`, LEDs `15..18`, and shields `19/20`.
 This supersedes the earlier disposable-only interpretation that treated the
 temporary fixture assignment as a production alias. The corrected native
 netlist, local EDAC alias map, and regenerated mapping regression now agree.
+
+## Current-source authoring correction — 2026-09-03
+
+The regenerated transplant fixture now preserves the clean production
+mapping at the physical footprint as well as in the native XML netlist. The
+official 180-degree transform reaches the opposite side of each local USON;
+therefore U6 and U9 use 270-degree local footprint orientation with their
+native clean mappings, rather than a 90-degree footprint with swapped pad
+net labels. The generic correction is implemented in
+`phase17_cm5io_transplant_fixture.py` and
+`phase17_apply_cm5io_mdi_from_geometry.py`.
+
+The generated MDI boundary labels are global labels, not ordinary local
+labels. Current native netlist export and
+`validation/phase3/test_phase17_ethernet_authority.py` pass with all
+duplicated flow-through pads represented: U6 1/10, 2/9, 4/7, 5/6 and the
+corresponding U9 groups. This corrects stale fixture evidence; it does not
+close the acreage routing gate.

@@ -161,8 +161,8 @@ MDI signals on F.Cu.
 
 Native KiCad DRC reports 0 unconnected pads, 0 footprint errors, and no
 shorting items, tracks-crossing items, hole-clearance errors, dangling vias,
-invalid outline, or silkscreen-over-copper errors. Five warnings remain:
-three low-clearance EDAC support warnings and two detached-library footprint
-mismatch warnings. The native DRC and MDI regressions both pass; this closes
-the disposable CM5IO-derived fixture gate, not yet the acreage-board Phase 17
-gate.
+invalid outline, or silkscreen-over-copper errors. Eight warning-only items
+remain: EDAC support/clearance and detached-library warnings plus the
+fixture's reference-field silkscreen warnings. The native DRC and MDI
+regressions both pass; this closes the disposable CM5IO-derived fixture gate,
+not yet the acreage-board Phase 17 gate.

@@ -17,14 +17,14 @@ def main():
     nets = ET.parse(netlist).getroot().findall(".//net")
     by_name = {n.attrib["name"]: {(x.attrib["ref"], x.attrib["pin"]) for x in n.findall("node")} for n in nets}
     expected = {
-        "CM5_GBE_TD0_P": {("J7", "12"), ("U6", "1"), ("J2", "1")},
-        "CM5_GBE_TD0_N": {("J7", "10"), ("U6", "2"), ("J2", "2")},
-        "CM5_GBE_TD1_P": {("J7", "4"), ("U6", "3"), ("J2", "3")},
-        "CM5_GBE_TD1_N": {("J7", "6"), ("U6", "4"), ("J2", "4")},
-        "CM5_GBE_TD2_P": {("J7", "11"), ("U9", "1"), ("J2", "5")},
-        "CM5_GBE_TD2_N": {("J7", "9"), ("U9", "2"), ("J2", "6")},
-        "CM5_GBE_TD3_P": {("J7", "3"), ("U9", "3"), ("J2", "7")},
-        "CM5_GBE_TD3_N": {("J7", "5"), ("U9", "4"), ("J2", "8")},
+        "CM5_GBE_TD0_P": {("J7", "12"), ("U6", "1"), ("U6", "10"), ("J2", "1")},
+        "CM5_GBE_TD0_N": {("J7", "10"), ("U6", "2"), ("U6", "9"), ("J2", "2")},
+        "CM5_GBE_TD1_P": {("J7", "4"), ("U6", "5"), ("U6", "6"), ("J2", "3")},
+        "CM5_GBE_TD1_N": {("J7", "6"), ("U6", "4"), ("U6", "7"), ("J2", "4")},
+        "CM5_GBE_TD2_P": {("J7", "11"), ("U9", "1"), ("U9", "10"), ("J2", "5")},
+        "CM5_GBE_TD2_N": {("J7", "9"), ("U9", "2"), ("U9", "9"), ("J2", "6")},
+        "CM5_GBE_TD3_P": {("J7", "3"), ("U9", "5"), ("U9", "6"), ("J2", "7")},
+        "CM5_GBE_TD3_N": {("J7", "5"), ("U9", "4"), ("U9", "7"), ("J2", "8")},
     }
     for name, nodes in expected.items():
         assert by_name.get(name) == nodes, (name, by_name.get(name))

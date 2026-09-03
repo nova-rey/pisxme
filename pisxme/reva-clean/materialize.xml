@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/nyx/PiSXMe/pisxme/reva-clean/PiSXMe_RevA_Clean.kicad_sch</source>
-    <date>2026-08-30T20:48:01</date>
+    <date>2026-09-03T17:14:22</date>
     <tool>Eeschema 10.0.5</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1946,20 +1946,20 @@
       </units>
     </comp>
     <comp ref="U6">
-      <value>TPD4E004DRYR</value>
-      <footprint>PiSXMeRevAClean:TPD4E004DRYR_WSON6</footprint>
+      <value>TPD4EUSB30DQAR</value>
+      <footprint>PiSXMeRevAClean:USON-10_2.5x1.0mm_P0.5mm</footprint>
       <fields>
-        <field name="MPN">TPD4E004DRYR</field>
-        <field name="Footprint">PiSXMeRevAClean:TPD4E004DRYR_WSON6</field>
+        <field name="MPN">TPD4EUSB30DQAR</field>
+        <field name="Footprint">PiSXMeRevAClean:USON-10_2.5x1.0mm_P0.5mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="PiSXMeRevAClean" part="TPD4E004DRYR" description=""/>
-      <property name="MPN" value="TPD4E004DRYR"/>
+      <libsource lib="PiSXMeRevAClean" part="TPD4EUSB30DQAR" description=""/>
+      <property name="MPN" value="TPD4EUSB30DQAR"/>
       <property name="Sheetname" value="ETHERNET"/>
       <property name="Sheetfile" value="ETHERNET.kicad_sch"/>
       <sheetpath names="/ETHERNET/" tstamps="/10000000-0000-0000-0000-000000000006/"/>
-      <tstamps>da000000-0000-0000-0000-000000000000</tstamps>
+      <tstamps>dc000000-0000-0000-0000-000000000000</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1969,25 +1969,29 @@
             <pin num="4"/>
             <pin num="5"/>
             <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
           </pins>
         </unit>
       </units>
     </comp>
     <comp ref="U9">
-      <value>TPD4E004DRYR</value>
-      <footprint>PiSXMeRevAClean:TPD4E004DRYR_WSON6</footprint>
+      <value>TPD4EUSB30DQAR</value>
+      <footprint>PiSXMeRevAClean:USON-10_2.5x1.0mm_P0.5mm</footprint>
       <fields>
-        <field name="MPN">TPD4E004DRYR</field>
-        <field name="Footprint">PiSXMeRevAClean:TPD4E004DRYR_WSON6</field>
+        <field name="MPN">TPD4EUSB30DQAR</field>
+        <field name="Footprint">PiSXMeRevAClean:USON-10_2.5x1.0mm_P0.5mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
-      <libsource lib="PiSXMeRevAClean" part="TPD4E004DRYR" description=""/>
-      <property name="MPN" value="TPD4E004DRYR"/>
+      <libsource lib="PiSXMeRevAClean" part="TPD4EUSB30DQAR" description=""/>
+      <property name="MPN" value="TPD4EUSB30DQAR"/>
       <property name="Sheetname" value="ETHERNET"/>
       <property name="Sheetfile" value="ETHERNET.kicad_sch"/>
       <sheetpath names="/ETHERNET/" tstamps="/10000000-0000-0000-0000-000000000006/"/>
-      <tstamps>db000000-0000-0000-0000-000000000000</tstamps>
+      <tstamps>dd000000-0000-0000-0000-000000000000</tstamps>
       <units>
         <unit name="A">
           <pins>
@@ -1997,6 +2001,10 @@
             <pin num="4"/>
             <pin num="5"/>
             <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
           </pins>
         </unit>
       </units>
@@ -3093,21 +3101,25 @@
         <pin num="PWR" name="VPROT_12V" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="PiSXMeRevAClean" part="TPD4E004DRYR">
+    <libpart lib="PiSXMeRevAClean" part="TPD4EUSB30DQAR">
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">TPD4E004DRYR</field>
-        <field name="Footprint"/>
+        <field name="Value">TPD4EUSB30DQAR</field>
+        <field name="Footprint">PiSXMeRevAClean:USON-10_2.5x1.0mm_P0.5mm</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <pins>
-        <pin num="1" name="MDI0_P" type="passive"/>
-        <pin num="2" name="MDI0_N" type="passive"/>
-        <pin num="3" name="MDI1_P" type="passive"/>
-        <pin num="4" name="MDI1_N" type="passive"/>
-        <pin num="5" name="VCC" type="passive"/>
-        <pin num="6" name="GND" type="passive"/>
+        <pin num="1" name="IO1_A" type="passive"/>
+        <pin num="2" name="IO2_A" type="passive"/>
+        <pin num="3" name="GND_A" type="passive"/>
+        <pin num="4" name="IO3_A" type="passive"/>
+        <pin num="5" name="IO4_A" type="passive"/>
+        <pin num="6" name="IO4_B" type="passive"/>
+        <pin num="7" name="IO3_B" type="passive"/>
+        <pin num="8" name="GND_B" type="passive"/>
+        <pin num="9" name="IO2_B" type="passive"/>
+        <pin num="10" name="IO1_B" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="PiSXMeRevAClean" part="TPSM63606RDLR_1V1">
@@ -3497,12 +3509,12 @@
       <node ref="J2" pin="12" pinfunction="VC4_12" pintype="passive"/>
     </net>
     <net code="29" name="/ETHERNET/ETH_GND" class="Default">
-      <node ref="U6" pin="6" pinfunction="GND_6" pintype="passive"/>
-      <node ref="U9" pin="6" pinfunction="GND_6" pintype="passive"/>
+      <node ref="U6" pin="3" pinfunction="GND_A_3" pintype="passive"/>
+      <node ref="U6" pin="8" pinfunction="GND_B_8" pintype="passive"/>
+      <node ref="U9" pin="3" pinfunction="GND_A_3" pintype="passive"/>
+      <node ref="U9" pin="8" pinfunction="GND_B_8" pintype="passive"/>
     </net>
     <net code="30" name="/ETHERNET/ETH_POWER" class="Default">
-      <node ref="U6" pin="5" pinfunction="VCC_5" pintype="passive"/>
-      <node ref="U9" pin="5" pinfunction="VCC_5" pintype="passive"/>
       <node ref="X6" pin="4" pinfunction="ETH_POWER_4" pintype="passive"/>
     </net>
     <net code="31" name="/ETHERNET/GBE_LED" class="Default">
@@ -3822,42 +3834,50 @@
     <net code="94" name="CM5_GBE_TD0_N" class="Default">
       <node ref="J2" pin="2" pinfunction="TRD0-_2" pintype="passive"/>
       <node ref="J7" pin="10" pinfunction="Ethernet_Pair0_N_10" pintype="passive"/>
-      <node ref="U6" pin="2" pinfunction="MDI0_N_2" pintype="passive"/>
+      <node ref="U6" pin="2" pinfunction="IO2_A_2" pintype="passive"/>
+      <node ref="U6" pin="9" pinfunction="IO2_B_9" pintype="passive"/>
     </net>
     <net code="95" name="CM5_GBE_TD0_P" class="Default">
       <node ref="J2" pin="1" pinfunction="TRD0+_1" pintype="passive"/>
       <node ref="J7" pin="12" pinfunction="Ethernet_Pair0_P_12" pintype="passive"/>
-      <node ref="U6" pin="1" pinfunction="MDI0_P_1" pintype="passive"/>
+      <node ref="U6" pin="1" pinfunction="IO1_A_1" pintype="passive"/>
+      <node ref="U6" pin="10" pinfunction="IO1_B_10" pintype="passive"/>
     </net>
     <net code="96" name="CM5_GBE_TD1_N" class="Default">
       <node ref="J2" pin="4" pinfunction="TRD1-_4" pintype="passive"/>
       <node ref="J7" pin="6" pinfunction="Ethernet_Pair1_N_6" pintype="passive"/>
-      <node ref="U6" pin="4" pinfunction="MDI1_N_4" pintype="passive"/>
+      <node ref="U6" pin="4" pinfunction="IO3_A_4" pintype="passive"/>
+      <node ref="U6" pin="7" pinfunction="IO3_B_7" pintype="passive"/>
     </net>
     <net code="97" name="CM5_GBE_TD1_P" class="Default">
       <node ref="J2" pin="3" pinfunction="TRD1+_3" pintype="passive"/>
       <node ref="J7" pin="4" pinfunction="Ethernet_Pair1_P_4" pintype="passive"/>
-      <node ref="U6" pin="3" pinfunction="MDI1_P_3" pintype="passive"/>
+      <node ref="U6" pin="5" pinfunction="IO4_A_5" pintype="passive"/>
+      <node ref="U6" pin="6" pinfunction="IO4_B_6" pintype="passive"/>
     </net>
     <net code="98" name="CM5_GBE_TD2_N" class="Default">
       <node ref="J2" pin="6" pinfunction="TRD2-_6" pintype="passive"/>
       <node ref="J7" pin="9" pinfunction="Ethernet_Pair2_N_9" pintype="passive"/>
-      <node ref="U9" pin="2" pinfunction="MDI0_N_2" pintype="passive"/>
+      <node ref="U9" pin="2" pinfunction="IO2_A_2" pintype="passive"/>
+      <node ref="U9" pin="9" pinfunction="IO2_B_9" pintype="passive"/>
     </net>
     <net code="99" name="CM5_GBE_TD2_P" class="Default">
       <node ref="J2" pin="5" pinfunction="TRD2+_5" pintype="passive"/>
       <node ref="J7" pin="11" pinfunction="Ethernet_Pair2_P_11" pintype="passive"/>
-      <node ref="U9" pin="1" pinfunction="MDI0_P_1" pintype="passive"/>
+      <node ref="U9" pin="1" pinfunction="IO1_A_1" pintype="passive"/>
+      <node ref="U9" pin="10" pinfunction="IO1_B_10" pintype="passive"/>
     </net>
     <net code="100" name="CM5_GBE_TD3_N" class="Default">
       <node ref="J2" pin="8" pinfunction="TRD3-_8" pintype="passive"/>
       <node ref="J7" pin="5" pinfunction="Ethernet_Pair3_N_5" pintype="passive"/>
-      <node ref="U9" pin="4" pinfunction="MDI1_N_4" pintype="passive"/>
+      <node ref="U9" pin="4" pinfunction="IO3_A_4" pintype="passive"/>
+      <node ref="U9" pin="7" pinfunction="IO3_B_7" pintype="passive"/>
     </net>
     <net code="101" name="CM5_GBE_TD3_P" class="Default">
       <node ref="J2" pin="7" pinfunction="TRD3+_7" pintype="passive"/>
       <node ref="J7" pin="3" pinfunction="Ethernet_Pair3_P_3" pintype="passive"/>
-      <node ref="U9" pin="3" pinfunction="MDI1_P_3" pintype="passive"/>
+      <node ref="U9" pin="5" pinfunction="IO4_A_5" pintype="passive"/>
+      <node ref="U9" pin="6" pinfunction="IO4_B_6" pintype="passive"/>
     </net>
     <net code="102" name="POWER_GND" class="Default">
       <node ref="C14" pin="2" pintype="passive"/>

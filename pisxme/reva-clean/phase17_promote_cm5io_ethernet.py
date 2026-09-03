@@ -26,7 +26,12 @@ def instance(ref, nets, uid, x, y):
     labels=[]; pins=[]
     for i, net in enumerate(nets):
         py=y+(i-(len(nets)-1)/2)*2.5
-        labels.append('(label "%s" (at %g %g 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid %s))' % (net,x+20,py,make_uuid(uid+100+i)))
+        # MDI boundaries are deliberately global in the clean hierarchy.
+        # A local label here silently reintroduces the root/child ambiguity
+        # that Phase 3 is meant to reject; non-MDI support nets retain the
+        # ordinary local-label behavior.
+        kind = 'global_label' if net.startswith('CM5_GBE_TD') else 'label'
+        labels.append('(%s "%s" (shape bidirectional) (at %g %g 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid %s))' % (kind,net,x+20,py,make_uuid(uid+100+i)) if kind == 'global_label' else '(label "%s" (at %g %g 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid %s))' % (net,x+20,py,make_uuid(uid+100+i)))
         pins.append('(pin "%d" (uuid %s))' % (i+1,make_uuid(uid+0x100+i)))
     return '\n'.join(labels)+'\n(symbol (lib_id "PiSXMeRevAClean:TPD4EUSB30DQAR") (at %s %s 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid %s) (property "Reference" "%s" (at %s %s 0) (effects (font (size 1.1 1.1)))) (property "Value" "TPD4EUSB30DQAR" (at %s %s 0) (effects (font (size 1.1 1.1)))) (property "MPN" "TPD4EUSB30DQAR" (at %s %s 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:USON-10_2.5x1.0mm_P0.5mm" (at %s %s 0) (effects (font (size 1 1)) (hide yes))) %s (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "%s") (unit 1)))) )' % (x,y,make_uuid(uid),ref,x,y-13,x,y+13,x,y,x,y,'\n'.join(pins),ref)
 
