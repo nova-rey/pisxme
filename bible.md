@@ -2476,3 +2476,15 @@
   remaining failures are Ethernet-local routing/topology defects, not the
   prior malformed-footprint or unrelated-connector evidence.
 - Kept SP3019 unpromoted and the clean PCB/schematic unchanged.
+
+2026-09-03 — Phase 17 Ethernet fixture routing audit
+
+- The isolated base was independently checked: the regenerated disposable J7
+  copy contains exactly eight Ethernet source pads. This removes the stale
+  unrelated-pad contamination from the earlier report.
+- Independent high-speed review confirms the remaining failure is local
+  topology: the trial has no ordinary F.Cu/B.Cu transitions, uses incorrect
+  J2 upper-launch coordinates, and retains pair crossings/center-tap shorts.
+- The next repair remains bounded to the disposable fixture: reorient the
+  launch, use exact J2 coordinates, add symmetric through-via/dogbone and GND
+  return transitions, then rerun native DRC and route metrics.
