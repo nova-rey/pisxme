@@ -6,7 +6,12 @@ closed in commit `490ae22`; the EDAC logical pins are explicitly mapped to
 physical pads 18..1. Copper routing remains open because the frozen placement
 does not currently admit a no-maze two-layer route: native DRC candidates
 encounter existing acreage trunks, NPTH keepouts, and ESD pad-field crossings.
-No invalid Ethernet candidate is accepted.
+No invalid Ethernet candidate is accepted. The 2026-09-03 Ethernet-only
+Phase 11/12 reopening tested nine compact CM5-adjacent placements and a
+complete west-edge island. The best ordered candidate remains rejected by
+native DRC because the J7 breakout, TPD4E004 WSON pad fields, and EDAC/J2
+NPTH/PTH field cannot be connected without true crossings/shorts under the
+frozen ordinary F.Cu/B.Cu signal-layer contract. No Phase 18+ work started.
 
 Created: native root project shell, ten named child-sheet files, isolated
 `PiSXMeRevAClean` symbol/footprint tables, architecture contract, interface

@@ -69,3 +69,29 @@ downstream phases before retrying Phase 17.
 
 Routing Ethernet on power/ground plane layers or accepting the current maze
 would violate the approved plan and is rejected.
+
+## 2026-09-03 placement-repair sprint evidence
+
+The authorized Phase 11/12 Ethernet-only reopening was attempted with nine
+compact CM5-adjacent candidates plus a complete west-edge island trial. The
+most promising topology placed U9 at (25,100), U6 at (29,106), and the EDAC
+MagJack at (12,119), with U9 and U6 rotated 180 degrees so the CM5 source
+ordering is monotonic at each ESD package. The complete trial is preserved as
+`pisxme/reva-clean/ACREAGE_ETHERNET_TRIAL_ORDERED_WEST.kicad_pcb` and its
+native report as
+`pisxme/reva-clean/ACREAGE_ETHERNET_TRIAL_ORDERED_WEST-drc.rpt`.
+
+That candidate still has true Ethernet failures: same-layer crossings and
+shorts in the CM5-to-ESD escape, WSON power/ground pad-field interference,
+right-column escape collisions, and MDI corridor collisions with the J2 NPTH
+and PTH pad field. It reports 390 total native DRC violations, including the
+known acreage baseline debt, and 237 unconnected items. It is rejected and is
+not a production PCB.
+
+This closes the authorized local placement-repair attempt for the current
+standard TPD4E004 two-layer topology. Phase 17 remains blocked; no Phase 18+
+work was started. The smallest practical continuation is an architectural
+Ethernet-local change: either provide a connector-compatible escape layer/
+via technology and revise the local fabrication rule, or replace the discrete
+ESD arrangement with an Ethernet protection/package whose land pattern permits
+an order-preserving two-layer breakout. Neither option is silently accepted.

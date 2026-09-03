@@ -2414,3 +2414,13 @@
 
 - Added the readable repository-root `blocker.md` report and preserved the
   current rejected-route evidence for private GitHub review.
+
+2026-09-03 — Phase 17 Ethernet placement-repair sprint
+
+- Reopened Phase 11/12 only for Ethernet as authorized and tested nine compact
+  CM5-adjacent arrangements plus a complete west-edge MagJack island.
+- The best order-preserving U9/U6/J2 candidate still has native DRC-confirmed
+  crossings/shorts at the J7 breakout, TPD4E004 pad fields, and J2 connector
+  boundary; it was rejected and no invalid copper was accepted.
+- Phase 17 remains the earliest failed gate. Phase 18+ work remains prohibited
+  pending an Ethernet-local escape/package decision.
