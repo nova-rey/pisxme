@@ -1049,3 +1049,27 @@ This is not evidence against the CM5IO design. The next bounded experiment is
 to rotate the complete official island geometry and footprints as a rigid
 180-degree local block, then regenerate the J7-to-ESD transitions from the
 actual source pads. No Phase 18+ work has started.
+
+## Rigid-rotation local-island trial — 2026-09-03
+
+The complete official ESD/MagJack island was rotated 180 degrees as one
+block, including the internal MDI graph, footprints, and connector
+orientation. The CM5/J7 remained fixed. J7-to-ESD routes were regenerated
+with immediate ordinary through-via transitions and no plane-layer signals.
+
+Native KiCad DRC rejected the candidate at **491 findings / 453 unconnected
+items**, including 12 crossings, 14 shorts, and 4 dangling vias. The
+dominant newly isolated cause is insufficient separation of several pair
+transition vias (0.4–0.5 mm) and overlap between same-layer lane segments
+near the rotated ESD landing. The candidate is not promoted and does not
+weaken the official CM5IO result.
+
+This experiment closes the prior approach-side hypothesis: the official
+island can be rotated as a coherent mechanical/electrical block. Remaining
+work is a legal via-offset and lane-order repair. The next bounded trial will
+use at least 0.8 mm center spacing for every adjacent transition-via pair and
+will keep each pair's final ESD landing on one layer where possible.
+
+Preserved evidence:
+`pisxme/reva-clean/ACREAGE_CM5IO_ROTATED_LOCAL_PHASE17.kicad_pcb` and
+`pisxme/reva-clean/ACREAGE_CM5IO_ROTATED_LOCAL_PHASE17-drc.rpt`.

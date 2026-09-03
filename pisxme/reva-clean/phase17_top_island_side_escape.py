@@ -22,6 +22,11 @@ if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM':
     DX,DY=49.9,84.8
 if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM_SPLIT':
     DX,DY=49.9,84.8
+if os.environ.get('PISXME_LANE_ORDER') == 'ROTATED_LOCAL':
+    # Rigidly rotate the complete official ESD/MagJack island 180 degrees
+    # about the source-facing reference transform.  The CM5/J7 remains
+    # frozen; only the Ethernet-local island and its internal MDI graph move.
+    DX,DY=0.0,0.0
 if os.environ.get('PISXME_LANE_ORDER') == 'TD3_OUTER':
     OUT=ROOT/'ACREAGE_CM5IO_TOP_ISLAND_TD3_OUTER_PHASE17.kicad_pcb'
 if os.environ.get('PISXME_LANE_ORDER') == 'LEFT_EDGE':
@@ -34,6 +39,8 @@ if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM':
     OUT=ROOT/'ACREAGE_CM5IO_LOCAL_BOTTOM_PHASE17.kicad_pcb'
 if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM_SPLIT':
     OUT=ROOT/'ACREAGE_CM5IO_LOCAL_BOTTOM_SPLIT_PHASE17.kicad_pcb'
+if os.environ.get('PISXME_LANE_ORDER') == 'ROTATED_LOCAL':
+    OUT=ROOT/'ACREAGE_CM5IO_ROTATED_LOCAL_PHASE17.kicad_pcb'
 
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def add(b,n,pts,layer=pcbnew.F_Cu):
@@ -54,6 +61,9 @@ def main():
     if os.environ.get('PISXME_LANE_ORDER') in ('LOCAL_BOTTOM','LOCAL_BOTTOM_SPLIT'):
         island_positions=(('U9',(70.1+DX,65.215+DY),270),('U6',(76.1+DX,65.215+DY),270),
                           ('J2',(72.5+DX,53+DY),180))
+    elif os.environ.get('PISXME_LANE_ORDER') == 'ROTATED_LOCAL':
+        island_positions=(('U9',(124.4,149.785),90),('U6',(118.4,149.785),90),
+                          ('J2',(122.0,162.0),0))
     else:
         island_positions=(('U6',(33.6,57.215),270),('U9',(27.6,57.215),270),('J2',(30,45),180))
     for ref,pos,rot in island_positions:
@@ -69,7 +79,11 @@ def main():
     for r in rows:
         a,z=r['a'],r['z']; length=((a[0]-z[0])**2+(a[1]-z[1])**2)**.5
         if max(a[1],z[1]) >= 70 or length >= 5: continue
-        t=pcbnew.PCB_TRACK(b); t.SetStart(V(a[0]+DX,a[1]+DY)); t.SetEnd(V(z[0]+DX,z[1]+DY))
+        if os.environ.get('PISXME_LANE_ORDER') == 'ROTATED_LOCAL':
+            aa=(194.5-a[0],215.0-a[1]); zz=(194.5-z[0],215.0-z[1])
+        else:
+            aa=(a[0]+DX,a[1]+DY); zz=(z[0]+DX,z[1]+DY)
+        t=pcbnew.PCB_TRACK(b); t.SetStart(V(*aa)); t.SetEnd(V(*zz))
         t.SetLayer(r['layer']); t.SetWidth(pcbnew.FromMM(r['width'])); t.SetNetCode(nets[r['net']].GetNetCode()); b.Add(t)
     # Landing points are the ESD-side endpoints of the omitted official legs.
     land={
@@ -77,6 +91,8 @@ def main():
       'CM5_GBE_TD2_N':(69.521298,68.110), 'CM5_GBE_TD2_P':(69.678701,68.490),
       'CM5_GBE_TD1_P':(75.16,66.871297), 'CM5_GBE_TD1_N':(75.539999,67.028702),
       'CM5_GBE_TD0_N':(76.66,66.571298), 'CM5_GBE_TD0_P':(77.039999,66.728702)}
+    if os.environ.get('PISXME_LANE_ORDER') == 'ROTATED_LOCAL':
+        land={name:(194.5-x,215.0-y) for name,(x,y) in land.items()}
     # Exit left/right of J7 before rising above its NPTH field.  Pair order
     # is monotonic on each side; no signal uses a plane layer or via-in-pad.
     paths={
@@ -160,7 +176,17 @@ def main():
           'CM5_GBE_TD1_N':[(36.04,99.50),(45.5,99.50),(45.5,136.5),(90.5,140.5),(110.5,140.5),(125.440000,151.813702)],
           'CM5_GBE_TD0_N':[(36.04,100.30),(46.0,100.30),(46.0,137.0),(91.0,141.0),(111.0,141.0),(126.560000,151.356297)],
           'CM5_GBE_TD0_P':[(36.04,100.70),(46.5,100.70),(46.5,137.5),(91.5,141.5),(111.5,141.5),(126.940000,151.513702)]}
-    split=os.environ.get('PISXME_LANE_ORDER')=='LOCAL_BOTTOM_SPLIT'
+    if os.environ.get('PISXME_LANE_ORDER') == 'ROTATED_LOCAL':
+        paths={
+          'CM5_GBE_TD3_P':[(32.96,99.10),(24.0,99.10),(24.0,136.0),(75.0,140.0),(105.0,140.0),land['CM5_GBE_TD3_P']],
+          'CM5_GBE_TD3_N':[(32.96,99.50),(24.5,99.50),(24.5,136.5),(75.5,140.5),(105.5,140.5),land['CM5_GBE_TD3_N']],
+          'CM5_GBE_TD2_N':[(32.96,100.30),(25.0,100.30),(25.0,137.0),(76.0,141.0),(106.0,141.0),land['CM5_GBE_TD2_N']],
+          'CM5_GBE_TD2_P':[(32.96,100.70),(25.5,100.70),(25.5,137.5),(76.5,141.5),(106.5,141.5),land['CM5_GBE_TD2_P']],
+          'CM5_GBE_TD1_P':[(36.04,99.10),(45.0,99.10),(45.0,136.0),(85.0,145.0),(105.0,145.0),land['CM5_GBE_TD1_P']],
+          'CM5_GBE_TD1_N':[(36.04,99.50),(45.5,99.50),(45.5,136.5),(85.5,145.5),(105.5,145.5),land['CM5_GBE_TD1_N']],
+          'CM5_GBE_TD0_N':[(36.04,100.30),(46.0,100.30),(46.0,137.0),(86.0,146.0),(106.0,146.0),land['CM5_GBE_TD0_N']],
+          'CM5_GBE_TD0_P':[(36.04,100.70),(46.5,100.70),(46.5,137.5),(86.5,146.5),(106.5,146.5),land['CM5_GBE_TD0_P']]}
+    split=os.environ.get('PISXME_LANE_ORDER') in ('LOCAL_BOTTOM_SPLIT','ROTATED_LOCAL')
     if split:
         # Immediate source transitions keep long Ethernet legs off the
         # frozen F.Cu power/regulator copper.  Left TD3/TD2 and right TD0
@@ -171,7 +197,7 @@ def main():
             x,y=pts[0]; source_v=pts[1]; entry=pts[2]
             add(b,nets[name],[(x,y),source_v])
             via(b,nets[name],source_v)
-            is_fcu=name in ('CM5_GBE_TD1_P','CM5_GBE_TD1_N')
+            is_fcu=name in ('CM5_GBE_TD1_P','CM5_GBE_TD1_N','CM5_GBE_TD0_P','CM5_GBE_TD0_N') if os.environ.get('PISXME_LANE_ORDER') == 'ROTATED_LOCAL' else name in ('CM5_GBE_TD1_P','CM5_GBE_TD1_N')
             add(b,nets[name],[source_v,entry],pcbnew.B_Cu)
             via(b,nets[name],entry)
             if is_fcu:

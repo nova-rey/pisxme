@@ -2997,3 +2997,13 @@
   overlapping heights.
 - Preserved the rejected candidates and retained Phase 17 for a rigid
   180-degree island rotation experiment.
+
+2026-09-03 — Phase 17 rigid-rotation local-island trial
+
+- Rotated the complete official CM5IO ESD/MagJack island as one block while
+  keeping CM5/J7 fixed and regenerating the source transitions.
+- Native DRC rejected the candidate at 491 findings / 453 unconnected items;
+  dominant local causes were 0.4–0.5 mm transition-via spacing and
+  same-layer lane overlap near the rotated ESD landing.
+- Preserved the candidate and retained Phase 17 for a >=0.8 mm via-offset
+  and final-lane-order repair.
