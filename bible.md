@@ -2655,3 +2655,6 @@
 - Distinguished Broadcom family-level lifecycle claims from the exact CM5
   `BCM54210PEB1KMLG` variant; captured the distributor-hosted EOL notice and
   retained the exact-device remap question as unresolved.
+- Added independent specialist confirmation that only CM5IO-style 1:1 pair
+  assignment is publicly authorized; recorded exact MOQ/LTB/LTS and authorized
+  inventory evidence. No clean design asset changed.

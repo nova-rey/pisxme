@@ -90,3 +90,27 @@ Lifecycle evidence:
 - Broadcom family page: <https://www.broadcom.com/products/ethernet-connectivity/phy-and-poe/copper/gigabit/bcm54210>
 - Broadcom EOL notice mirror for `BCM54210PEB1KMLG`: <https://www.ic-components.cz/files/6f/BCM54210PEB1KMLG.pdf>
 - DigiKey exact-family listing showing obsolete status for `BCM54210B0KMLG`: <https://www.digikey.at/en/products/detail/broadcom-limited/BCM54210B0KMLG/6146592>
+
+## Independent specialist confirmation
+
+The independent high-speed/documentation review reached the same fail-closed
+conclusion:
+
+- CM5 documentation is exact-device evidence for automatic MDI crossover,
+  pair-polarity correction, and the 0.15 mm intra-pair / 50 mm inter-pair
+  guidance.
+- It does not establish arbitrary `TRD0↔TRD2`, cyclic, or wholesale four-pair
+  reassignment for `BCM54210PEB1KMLG`.
+- TrustedParts' authorized-channel snapshot identifies the exact ordering code
+  as out of stock; broker listings are not equivalent procurement assurance.
+- The public EOL notice gives MOQ 32,760 and already-passed LTB/LTS dates.
+
+The specialist therefore authorizes only the CM5IO-style 1:1 baseline plus
+normal intact-pair polarity tolerance. Pair-swapped fixtures would require
+confidential Broadcom documentation or controlled hardware validation across
+link partners and speeds, which is outside the current approved gate.
+
+Additional evidence:
+
+- TrustedParts authorized inventory: <https://www.trustedparts.com/en/search/BCM54210>
+- Raspberry Pi engineering discussion of pair ordering: <https://forums.raspberrypi.com/viewtopic.php?sid=415c6ed58744f840f5e568b35a079ba&t=338323>

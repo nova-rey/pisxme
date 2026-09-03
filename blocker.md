@@ -177,6 +177,23 @@ last-time-ship 2024-04-25). This is lifecycle evidence about the embedded CM5
 PHY, not a reason to alter CM5 hardware; it does mean generic BCM54210-family
 collateral cannot substitute for an exact BCM54210PE register or permutation
 document.
+
+## Independent specialist confirmation — 2026-09-03
+
+The independent high-speed/documentation review confirms that the CM5
+datasheet is exact-device evidence for MDI crossover, polarity correction,
+pair-skew guidance, and the 1:1 MagJack topology, but not for arbitrary
+four-pair reassignment. It specifically rejects treating `TRD0↔TRD2`, cyclic
+rotation, or wholesale reversal as guaranteed BCM54210PE behavior.
+
+The review also records the exact lifecycle/procurement boundary: public
+EOL-254829 lists `BCM54210PEB1KMLG` with MOQ 32,760 and passed LTB/LTS dates;
+TrustedParts' authorized-channel snapshot reports no stock. Broker or
+marketplace listings do not close that procurement gap.
+
+Final disposition remains `PISXME_REVA_CLEAN_BLOCKED`, earliest failed gate
+Phase 17 Ethernet routing. The complete remap evidence is in
+`PHASE17_BCM54210PE_REMAP_AUTHORITY.md`; no clean design asset changed.
 ## Phase 17 SP3019 authoritative fixture update — 2026-09-03
 
 Status: `RECOVERABLE_FIXTURE_ROUTING_BLOCKER`
