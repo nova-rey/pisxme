@@ -3007,3 +3007,13 @@
   same-layer lane overlap near the rotated ESD landing.
 - Preserved the candidate and retained Phase 17 for a >=0.8 mm via-offset
   and final-lane-order repair.
+
+2026-09-03 — Phase 17 mode-coordinate authoring correction
+
+- Corrected the generic right-shelf/channel generator so mode-specific
+  translations move U9, U6, and J2 together with the official MDI route graph.
+- Valid right-channel rerun reports 425 findings / 453 unconnected items,
+  including 13 shorts and 9 crossings; the long F.Cu channel still collides
+  with frozen power/regulator copper and J7 fanout geometry.
+- Superseded prior right-channel placement conclusions and retained Phase 17
+  for a valid source-layer/channel repair.

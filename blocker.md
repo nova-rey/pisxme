@@ -1073,3 +1073,23 @@ will keep each pair's final ESD landing on one layer where possible.
 Preserved evidence:
 `pisxme/reva-clean/ACREAGE_CM5IO_ROTATED_LOCAL_PHASE17.kicad_pcb` and
 `pisxme/reva-clean/ACREAGE_CM5IO_ROTATED_LOCAL_PHASE17-drc.rpt`.
+
+## Mode-coordinate authoring correction — 2026-09-03
+
+The earlier right-shelf/channel placement trials also contained a generator
+defect: mode-specific `DX/DY` translations were applied to the MDI tracks but
+not to U6/U9/J2 footprint positions. The generic mode path was corrected to
+place U9 at the TD3/TD2 island location, U6 at TD1/TD0, and J2 at the same
+translated CM5IO-relative location before DRC.
+
+The corrected right-channel rerun reports **425 findings / 453 unconnected
+items**, including 13 shorting findings and 9 crossings. It is rejected, but
+the result is now valid evidence: the long F.Cu channel crosses frozen
+power/regulator copper and the current source-lane fanout still crosses at
+J7. The prior right-channel reports are superseded for placement conclusions
+because their footprints were not co-located with their route graph.
+
+The corrected generator is preserved in
+`pisxme/reva-clean/phase17_top_island_side_escape.py`, with the native report
+at
+`pisxme/reva-clean/ACREAGE_CM5IO_RIGHT_CHANNEL_PHASE17-corrected-drc.rpt`.

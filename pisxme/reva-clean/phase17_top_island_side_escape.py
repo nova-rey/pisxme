@@ -58,7 +58,7 @@ def main():
     # DX=-42.5 places the official island at U9=(27.6,57.215),
     # U6=(33.6,57.215), and J2=(30,45); keep the footprints and translated
     # connector-side vectors on the same rigid transform.
-    if os.environ.get('PISXME_LANE_ORDER') in ('LOCAL_BOTTOM','LOCAL_BOTTOM_SPLIT'):
+    if os.environ.get('PISXME_LANE_ORDER') in ('LOCAL_BOTTOM','LOCAL_BOTTOM_SPLIT','LEFT_EDGE','RIGHT_SHELF','RIGHT_CHANNEL'):
         island_positions=(('U9',(70.1+DX,65.215+DY),270),('U6',(76.1+DX,65.215+DY),270),
                           ('J2',(72.5+DX,53+DY),180))
     elif os.environ.get('PISXME_LANE_ORDER') == 'ROTATED_LOCAL':
