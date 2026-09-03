@@ -309,6 +309,21 @@ connector-boundary launch choke point. Final state:
 `PISXME_REVA_CLEAN_BLOCKED`; earliest failed gate: Phase 17 Ethernet routing.
 Production files remain untouched.
 
+## BCM54210PE remap investigation — 2026-09-03
+
+The requested PHY-capability unblocker was investigated. Broadcom's public
+BCM54210 authority confirms active 10/100/1000BASE-T operation and correction
+of common wiring problems; Raspberry Pi's official CM5IO Rev 2 authority
+preserves four intact TRD differential pairs. No public BCM54210PE-specific
+register/table was found that authorizes arbitrary four-pair permutation.
+
+The legal trial boundary is therefore: intact pairs only; conditional
+complete-pair MDI/MDIX variants; conditional P/N inversion per intact pair;
+no individual-conductor mixing and no unproven arbitrary permutation. The
+full evidence and remap table are in
+`pisxme/reva-clean/PHASE17_BCM54210PE_REMAP_AUTHORITY.md`. This investigation
+does not yet close Phase 17 routing.
+
 The generator was then aligned to the corrected TI pad coordinates and rerun.
 That endpoint-corrected candidate reports **104 native DRC violations and 7
 unconnected items**. It is also rejected. The reduced dangling count confirms

@@ -2629,3 +2629,14 @@
 - Recorded three bounded user-controlled continuation options and the
   recommendation in `blocker.md`.
 - No production asset was changed; Phase 18+ remains unopened.
+
+2026-09-03 — Phase 17 BCM54210PE remap authority investigation
+
+- Checked Broadcom BCM54210 public authority and official Raspberry Pi CM5IO
+  Rev 2 wiring evidence before changing Ethernet mapping.
+- Established a fail-closed remap boundary: intact differential pairs only,
+  conditional complete-pair MDI/MDIX variants, conditional P/N inversion,
+  and no individual-conductor mixing or unproven arbitrary permutation.
+- Recorded the legal trial table and evidence limits in
+  `PHASE17_BCM54210PE_REMAP_AUTHORITY.md`.
+- No production asset was changed; Phase 17 routing remains open.
