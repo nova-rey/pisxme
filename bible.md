@@ -2674,3 +2674,14 @@
 - The initial isolated extractor hit a KiCad Flatpak SWIG track-container
   lifetime defect and was replaced by an exact-copy oracle fixture; no
   production asset changed.
+
+2026-09-03 — Phase 17 official-oracle transplant boundary
+
+- Independent native-CAD audit confirmed the official MagJack footprint is
+  `TRJG0926HENL`, not the selected EDAC `A70-112-331N126`; mounting/shield
+  hole dimensions differ and the donor footprint remains reference-only.
+- Confirmed the official ESD value/BOM versus hidden sourcing/datasheet fields
+  contain a material identity conflict; no guessed ESD promotion was made.
+- Recorded that the official CM5IO topology is closed as a routing oracle but
+  PiSXMe adaptation remains open pending separately-authorized EDAC/ESD
+  footprint parity. No clean PCB/schematic was modified.

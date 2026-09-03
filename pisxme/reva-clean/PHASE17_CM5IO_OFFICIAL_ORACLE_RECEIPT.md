@@ -86,3 +86,41 @@ preserves the oracle without that transformation. This receipt does not claim
 that the PiSXMe acreage route has passed.
 
 Source: <https://pip.raspberrypi.com/categories/1098-design-files>
+
+## Independent source audit and transplant boundary
+
+The native source audit additionally confirms that the official MagJack
+footprint is not the selected EDAC production land pattern:
+
+- Official U3 is `CM5IO:TRJG0926HENL`, with bundled `TRJG0926HENL .stp`.
+- Its two 3.2 mm mounting holes and two 1.7 mm shield holes differ from the
+  EDAC drawing's 3.25 mm and 1.60 mm mechanical features.
+- Therefore the official footprint is a topology/placement oracle only; it is
+  not silently promoted as the PiSXMe J2 footprint.
+
+The official source also has an ESD identity metadata conflict: the placed
+value/BOM says `TPD4EUSB30`, while hidden sourcing metadata names Bourns
+`CDDFN10-3324P-13` and the datasheet field points to TI. This is recorded as
+an authority conflict rather than resolved by guessing an MPN. PiSXMe's
+selected ESD remains governed by its own manufacturer authority until a
+manufacturer-exact footprint and procurement record are established.
+
+The clean EDAC footprint currently has the EDAC signal/tap/LED coordinate
+families but its logical-to-physical reverse alias is not validated by the
+EDAC drawing; the official CAD proves only the CM5IO logical topology. A
+production EDAC footprint correction therefore remains a separate authority
+item and was not applied to the clean PCB in this oracle pass.
+
+## Current decision
+
+`CM5IO_OFFICIAL_ETHERNET_ORACLE = CLOSED`: the published native design is a
+working, inspectable implementation with intact pair order, connector launch,
+compact ESD placement, F.Cu MDI routing, support/tap handling, and zero
+unconnected items in native PCB inspection.
+
+`PISXME_PHASE17_ADAPTATION = OPEN`: direct transplant is not yet a valid
+clean-board pass because the selected EDAC footprint and ESD authority are
+not identical to the official source, and the existing clean U6/U9 package
+and placement differ materially. The next bounded experiment must adapt the
+official pair-preserving topology with separately-authorized PiSXMe parts;
+the official source has ruled out arbitrary PHY remapping as the needed fix.
