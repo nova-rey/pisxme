@@ -814,6 +814,29 @@ The official CM5IO fixture remains clean; the remaining failure is the
 generated J7 breakout geometry, not the reference Ethernet architecture.
 Phase 17 is still the earliest failed gate and Phase 18+ remains gated.
 
+## 180-degree ESD reorientation fixture — 2026-09-03
+
+The recommended high-information experiment was implemented as a fresh
+disposable fixture. U9 (TD2/TD3) was placed at `(24,68)` and U6 (TD0/TD1) at
+`(30,68)`, both at 180 degrees, with the EDAC MagJack at `(24,45)` at 180
+degrees. MDI copper was regenerated from actual local pad coordinates rather
+than copied from the stale translated graph. Pair identities and polarity
+were preserved; no arbitrary PHY remap was used.
+
+Native KiCad DRC rejected the fixture at **266 violations / 457 unconnected
+items**. Ethernet-specific failures include true tracks-crossing and
+shorting items at the J7 launch, including MDI-to-MDI and MDI-to-J7-pad
+conflicts. The fixture is therefore not a passing proof and was not promoted.
+It is preserved as
+`pisxme/reva-clean/CM5IO_ROT180_WEST_FIXTURE.kicad_pcb` with
+`CM5IO_ROT180_WEST_FIXTURE-drc.rpt` and its generator.
+
+This experiment closes the hypothesis that package reorientation alone
+removes the blocker. The official CM5IO block remains valid; the unresolved
+item is a legal, mechanically clear escape from the fixed PiSXMe J7 pad
+field into an Ethernet island. Phase 17 remains open and Phase 18+ remains
+gated.
+
 ## Parametric right-channel trial — 2026-09-03
 
 The right-shelf source fanout was rebuilt as a constrained channel from the

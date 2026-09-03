@@ -2871,6 +2871,15 @@
 - Corrected the stale zero-total-ERC statement in `PHASE3_STATUS.md` and
   preserved the full current report for final-gate review.
 
+2026-09-03 — Phase 17 180-degree ESD reorientation fixture
+
+- Built a fresh disposable fixture from actual local U6/U9/J2 pad geometry,
+  with both ESD footprints rotated 180 degrees and intact CM5IO pair nets.
+- Rejected native KiCad DRC at 266 violations/457 unconnected items; true
+  MDI crossings and shorts remained at the fixed J7 launch.
+- Preserved the fixture/report and closed the package-reorientation-only
+  hypothesis without modifying production or frozen subsystems.
+
 2026-09-03 — Phase 17 parametric right-channel trial
 
 - Rebuilt the right-shelf breakout as unique J7 dogbones, ordered parallel
