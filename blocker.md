@@ -249,6 +249,25 @@ capacitance and eight-device assembly burden make it a fallback behind
 SP3019/ESDS304. A proper disposable fixture and native validation are still
 required; no production asset has changed.
 
+## ESDS311 disposable fixture — 2026-09-03
+
+The authorized single-line fallback was instantiated with eight TI ESDS311DYFR
+SOD-323 footprints, explicit signal/ground pad mapping, ordinary source and
+ESD transition vias, and the EDAC launch. The first run exposed a malformed
+SMD-to-B.Cu termination; that was corrected with a local F.Cu dogbone and
+ordinary via at every protector line pad. The corrected native KiCad run still
+reports **212 DRC violations and 24 unconnected items**, including B.Cu
+crossings, source-lane interactions, connector-launch conflicts, and residual
+connectivity defects. The fixture is rejected and ESDS311 is not promoted.
+
+Artifacts: `pisxme/reva-clean/phase17_esds311_trial.py`,
+`pisxme/reva-clean/ESDS311_ETHERNET_DISPOSABLE_FIXTURE.kicad_pcb`, and
+`pisxme/reva-clean/ESDS311_ETHERNET_DISPOSABLE_FIXTURE-drc.rpt`.
+
+This is a further routing-construction failure, not a new authority or
+software-installation blocker. No clean production asset changed; Phase 18+
+remains unopened.
+
 ## ESDS304 authority-only proof — 2026-09-03
 
 The corrected TI DBV0005A footprint and disposable mapping now pass the

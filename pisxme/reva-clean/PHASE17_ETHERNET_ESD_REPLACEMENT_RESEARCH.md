@@ -119,3 +119,8 @@ Sources:
 
 Decision: fallback candidate only. Its higher capacitance and eight-placement
 assembly burden make it inferior to SP3019 and ESDS304 pending a fixture.
+
+The disposable eight-device fixture was built and the SMD transition error
+was corrected with local dogbones and ordinary vias. Native DRC still reports
+212 violations and 24 unconnected items, so this candidate is rejected as a
+routing construction. ESDS311 remains fallback-only and is not promoted.

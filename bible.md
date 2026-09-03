@@ -2606,3 +2606,14 @@
 - Recorded its higher 4.5 pF capacitance and eight-device assembly cost as
   reasons it remains fallback-only pending a disposable fixture.
 - No production asset was changed.
+
+2026-09-03 — Phase 17 ESDS311 disposable fixture
+
+- Built the authorized eight-device TI ESDS311DYFR SOD-323 fallback fixture
+  with explicit Ethernet nets, ground returns, ordinary transitions, and the
+  EDAC connector launch.
+- Corrected the initial SMD-to-B.Cu termination to use local F.Cu dogbones
+  and ordinary vias at each line pad.
+- Native DRC still reports 212 violations and 24 unconnected items. Rejected
+  the fixture as a route construction; ESDS311 was not promoted and the clean
+  board/schematic remained untouched.
