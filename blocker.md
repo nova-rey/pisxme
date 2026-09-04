@@ -118,6 +118,18 @@ four-net support implementation from the clean schematic and EDAC authority,
 or document the required schematic support addition before acreage promotion.
 No Phase 18+ work has started.
 
+### Best exact EDAC RC corridor — 2026-09-03
+
+The B.Cu-local branch fixture was refined with an off-pad CT2 transition and
+an isolated shield transition. Native KiCad 10.0.5 DRC now reports **244
+findings, 0 unconnected items, and 0 shorts**, with exactly **1 remaining
+support-track crossing**. The PCB pin-mapping regression still passes.
+
+The remaining crossing is between the CT2 final approach and the CT1 branch
+escape; it is localized and has not involved the official F.Cu MDI graph. The
+candidate is not promoted until that crossing is removed and the complete
+fixture/acreage checks pass.
+
 ### Best B.Cu-local EDAC RC island — 2026-09-03
 
 The branch footprints were flipped onto B.Cu, keeping the four authoritative

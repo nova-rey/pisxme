@@ -169,7 +169,12 @@ def main():
                     path=[a,(90.0,52.0),(90.0,68.0),(65.0,68.0),z]
                 else:
                     path=[a,z]
-                route(b,path,nets[source],pcbnew.B_Cu,shift=False)
+                if source == "ETH_CT2":
+                    sv=(78.0,58.0); via_actual(*sv,nets[source])
+                    route(b,[a,sv],nets[source],pcbnew.F_Cu,shift=False)
+                    route(b,[sv,(72.0,58.0),(72.0,68.0),(72.0,45.0),z],nets[source],pcbnew.B_Cu,shift=False)
+                else:
+                    route(b,path,nets[source],pcbnew.B_Cu,shift=False)
                 ca=actual(cap,2); rb=actual(res,1)
                 route(b,[ca,(ca[0],42+i*.5),(rb[0],42+i*.5),rb],nets[f"ETH_CT_BRANCH_{source[-1]}"],pcbnew.B_Cu,shift=False)
                 rr=actual(res,2); route(b,[rr,(rr[0],37),(75,37)],nets["ETH_CT_COMMON"],pcbnew.B_Cu,shift=False)

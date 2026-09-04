@@ -3206,3 +3206,10 @@
   detours while preserving the official F.Cu MDI graph.
 - Improved the disposable fixture to 238 findings, zero unconnected items,
   and zero shorts; four support crossings remain and Phase 17 stays open.
+
+2026-09-03 — Phase 17 best exact EDAC RC corridor
+
+- Added the off-pad CT2 transition and isolated shield transition to the
+  B.Cu-local manufacturer RC support island.
+- Native DRC reached 244 findings, zero unconnected items, zero shorts, and
+  one remaining support crossing; mapping regression remained passing.
