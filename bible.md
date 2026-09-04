@@ -3821,3 +3821,14 @@ Direct KiCad `pcbnew` verification confirms the exact J7/J2 MDI and CT pad
 maps on the co-located fixture. The production scoped test was not claimed as
 a pass because the disposable fixture uses local support net names instead of
 the production hierarchical spellings.
+
+2026-09-04 — Phase 17 generic acreage integration retry
+
+- Corrected the generic integration path to support a reusable-footprint mode
+  for KiCad 10 SWIG stability (`PISXME_KEEP_FOOTPRINTS=1`).
+- Generated `ACREAGE_PHASE17_COLOCATED_CT4_SPLIT.kicad_pcb` from the validated
+  Phase 16 Ethernet ancestor plus the CT4-split fixture copper.
+- Scoped Ethernet regression and route metrics passed; native DRC contained
+  zero shorting items and zero track crossings, with the inherited acreage
+  unrouted baseline explicitly retained (427 unconnected items).
+- Phase 17 remains open; no clean-board promotion or Phase 18 work occurred.

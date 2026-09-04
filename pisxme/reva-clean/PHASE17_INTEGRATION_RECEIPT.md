@@ -143,3 +143,18 @@ The ESD return is now authoritative `POWER_GND`, matching the official CM5IO
 ESD/shield grounding. The transplant retains the source fixture's `ETH_GND`
 name only as an input alias and maps it to `POWER_GND`; no isolated Ethernet
 ground net is emitted.
+## 2026-09-04 — generic co-located integration authoring retry
+
+- `phase17_apply_exact_ethernet_to_phase16.py` was exercised against
+  `ACREAGE_PHASE17_F1RIGHT40_ETH_GROUND_FIXED.kicad_pcb` with the corrected
+  CT4 split fixture.
+- KiCad 10 native SWIG footprint-copy replacement remains a tooling issue;
+  the candidate was generated using the generic `PISXME_KEEP_FOOTPRINTS=1`
+  mode, reusing the already-authoritative acreage Ethernet footprints and
+  transplanting only fixture copper.
+- Candidate native DRC: 0 `[shorting_items]`, 0 `[tracks_crossing]`; the
+  full-board inherited unrouted baseline is 427 `[unconnected_items]`.
+- Phase 17 scoped electrical regression: PASS. Route metrics: PASS; pair
+  skews 0.547, 0.681, 0.688, and 0.829 mm.
+- Phase 17 remains OPEN pending candidate-specific DRC isolation, mechanical
+  review, and final acreage gate. No Phase 18 work started.

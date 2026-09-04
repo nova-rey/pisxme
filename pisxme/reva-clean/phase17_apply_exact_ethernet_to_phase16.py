@@ -17,6 +17,7 @@ CT1_LAYER_OVERRIDE = os.environ.get("PISXME_CT1_LAYER", "F.Cu")
 CT2_LAYER_OVERRIDE = os.environ.get("PISXME_CT2_LAYER", "")
 SAFE_CT_LAUNCH = os.environ.get("PISXME_SAFE_CT_LAUNCH", "") == "1"
 SAFE_CT_CLEAR = os.environ.get("PISXME_SAFE_CT_CLEAR", "1") == "1"
+KEEP_FOOTPRINTS = os.environ.get("PISXME_KEEP_FOOTPRINTS", "0") == "1"
 ETH_DX = float(os.environ.get("PISXME_ETH_DX", "0"))
 ETH_DY = float(os.environ.get("PISXME_ETH_DY", "0"))
 ETH_REFS = {"J2", "U6", "U9", "CCT", "CCT1", "CCT2", "CCT3", "CCT4",
@@ -65,11 +66,18 @@ def target_net(board, name):
 
 
 def main():
+    # Load the destination first; KiCad 10's plugin state is sensitive to
+    # loading a source board before the destination board.
+    board = pcbnew.LoadBoard(str(BASE))
     source = pcbnew.LoadBoard(str(FIXTURE))
-    footprints = []
+    footprint_pad_names = {}
     for fp in source.GetFootprints():
         if fp.GetReference() in ETH_REFS:
-            footprints.append(pcbnew.FOOTPRINT(fp))
+            # Capture scalar pad identity before copying. In KiCad 10 the
+            # SWIG Pads() container on a detached FOOTPRINT copy is not
+            # reliably iterable after it is added to another board.
+            footprint_pad_names[fp.GetReference()] = [
+                (str(p.GetNumber()), short(p.GetNetname())) for p in fp.Pads()]
     tracks = []
     for item in source.GetTracks():
         if short(item.GetNetname()).startswith(PREFIXES):
@@ -83,25 +91,34 @@ def main():
                 tracks.append(("track", item.GetStart(), item.GetEnd(),
                                item.GetLayer(), item.GetWidth(), item.GetNetname()))
 
-    board = pcbnew.LoadBoard(str(BASE))
     for item in list(board.GetTracks()):
         if short(item.GetNetname()).startswith(PREFIXES):
             board.Remove(item)
-    for ref in ETH_REFS:
-        old = board.FindFootprintByReference(ref)
-        if old is not None:
-            board.Remove(old)
+    if not KEEP_FOOTPRINTS:
+        for ref in ETH_REFS:
+            old = board.FindFootprintByReference(ref)
+            if old is not None:
+                board.Remove(old)
 
-    for fp in footprints:
-        ref = fp.GetReference()
+    for ref in () if KEEP_FOOTPRINTS else sorted(ETH_REFS):
+        source_fp = source.FindFootprintByReference(ref)
+        if source_fp is None:
+            raise RuntimeError(f"missing source footprint {ref}")
+        # Copy, attach, and remap one footprint at a time. This is the
+        # KiCad-10-safe ownership pattern used by the validated island helper.
+        fp = pcbnew.FOOTPRINT(source_fp)
+        fp.SetReference(ref)
         if ETH_DX or ETH_DY:
             fp.SetPosition(V(xy(fp.GetPosition())[0] + ETH_DX,
                              xy(fp.GetPosition())[1] + ETH_DY))
-        board.Add(fp)
-        for pad in fp.Pads():
-            pname = short(pad.GetNetname())
+        for number, pname in footprint_pad_names.get(ref, ()):
             if pname:
-                pad.SetNet(target_net(board, pname))
+                pad = next((p for p in fp.Pads()
+                            if str(p.GetNumber()) == number), None)
+                if pad is None:
+                    raise RuntimeError(f"missing copied pad {ref}.{number}")
+                pad.SetNetCode(target_net(board, pname).GetNetCode())
+        board.Add(fp)
 
     for record in tracks:
         kind = record[0]
