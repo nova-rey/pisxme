@@ -31,11 +31,12 @@ def main():
  for ref in ('C30','C31','C32','C33'):
   if ref in donor_caps: b.Remove(donor_caps[ref])
  uy=float(os.environ.get('P19_U7_Y','110'))
+ ux=float(os.environ.get('P19_U7_X','120'))
  cap_xy={
-  'C30':(130,uy-8.0),'C31':(130,uy-4.0),
+  'C30':(ux+10.0,uy-8.0),'C31':(ux+10.0,uy-4.0),
   # Separate RX capacitors vertically so the TX socket launch cannot pass
   # through the opposite pair's bridge-side pad field.
-  'C32':(134,uy-12.0),'C33':(134,uy),
+  'C32':(ux+14.0,uy-12.0),'C33':(ux+14.0,uy),
  }
  for i,ref in enumerate(('C30','C31','C32','C33')):
   cap=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'C_0402_1005Metric')
@@ -101,7 +102,13 @@ def main():
    T(b,n,first,second,pcbnew.B_Cu)
   X(b,n,second)
   landing=(110.0,d[1])
-  if name == 'CM5_USB3_RX_N':
+  if os.environ.get('P19_USB_DIRECT_FINAL','0') == '1' and d[0] <= second[0]+3.0:
+   # When U7 is returned to the validated Phase-18 neighborhood, its USB
+   # pads are west of the extension corridor.  Preserve the native ancestor's
+   # short direct landings instead of routing east and doubling back through
+   # the adjacent pad field.
+   T(b,n,second,d,pcbnew.F_Cu)
+  elif name == 'CM5_USB3_RX_N':
    # Transition back to F.Cu at the right edge of the source corridor, then
    # descend left of the frozen B.Cu PCIe trunk. TX_P remains on B.Cu below,
    # so this vertical landing cannot cross its F.Cu diagonal.
@@ -110,6 +117,21 @@ def main():
    # Keep the lower TX_P corridor on B.Cu and return at a single via outside
    # the moved-U7 pad field.
    T(b,n,second,landing,pcbnew.B_Cu); X(b,n,landing); T(b,n,landing,d,pcbnew.F_Cu)
+  elif name == 'CM5_USB3_TX_N' and os.environ.get('P19_TXN_B','0') == '1':
+   # Optional layer-separated final dogleg for placement experiments.  The
+   # source corridor is already on B.Cu at `second`; remain on B.Cu until a
+   # clearance-safe landing west of the U7 pad row, then return to F.Cu.
+   bx=float(os.environ.get('P19_TXN_BX','110.0'))
+   T(b,n,second,(bx,second[1]),pcbnew.B_Cu)
+   T(b,n,(bx,second[1]),(bx,d[1]),pcbnew.B_Cu)
+   landing=(bx,d[1]); X(b,n,landing); T(b,n,landing,d,pcbnew.F_Cu)
+  elif name == 'CM5_USB3_TX_N' and os.environ.get('P19_TXN_FDOG','0') == '1':
+   # F.Cu dogleg variant: move the final vertical leg east of the RX_N
+   # horizontal landing so the two same-layer segments are monotonic.
+   fx=float(os.environ.get('P19_TXN_FX','120.0'))
+   T(b,n,second,(fx,second[1]),pcbnew.F_Cu)
+   T(b,n,(fx,second[1]),(fx,d[1]),pcbnew.F_Cu)
+   T(b,n,(fx,d[1]),d,pcbnew.F_Cu)
   else:
    T(b,n,second,landing,pcbnew.F_Cu); T(b,n,landing,d,pcbnew.F_Cu)
  # SATA corridor is derived from the actual moved pad coordinates.  The two
@@ -120,7 +142,27 @@ def main():
    cp=cap_pos[cref]; cp1=cp['1']; cp2=cp['2']
    n=b.FindNet('/STORAGE/'+name); socket=storage_nets['/STORAGE/'+name.replace('BRIDGE_SATA_','SATA_M2_')]
    s=up[un];d=jp[jn];a=cp2;z=cp1; x0,y0=s; x1,y1=d
-   if jrot == 0:
+   if jrot == 0 and os.environ.get('P19_SATA_ORTHO','0') == '1':
+    # Explicit monotonic rot-0 M.2 launch for the Phase-18 U7 neighborhood.
+    # TX remains on F.Cu; RX crosses to B.Cu beside (never in) the 0402 pads,
+    # then returns with ordinary through-vias before the connector pads.
+    if name == 'BRIDGE_SATA_TX_P':
+     T(b,n,s,(s[0],97.0),pcbnew.F_Cu); T(b,n,(s[0],97.0),a,pcbnew.F_Cu)
+    elif name == 'BRIDGE_SATA_TX_N':
+     T(b,n,s,(s[0],101.0),pcbnew.F_Cu); T(b,n,(s[0],101.0),a,pcbnew.F_Cu)
+    elif name == 'BRIDGE_SATA_RX_P':
+     e=(s[0],93.0); v=(a[0]-0.5,93.0); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,v,pcbnew.B_Cu); X(b,n,v); T(b,n,v,a,pcbnew.F_Cu)
+    else:
+     e=(s[0],105.0); v=(a[0]-0.5,105.0); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,v,pcbnew.B_Cu); X(b,n,v); T(b,n,v,a,pcbnew.F_Cu)
+    if name == 'BRIDGE_SATA_TX_P':
+     q=(130.0,97.0); T(b,socket,z,q,pcbnew.F_Cu); T(b,socket,q,d,pcbnew.F_Cu)
+    elif name == 'BRIDGE_SATA_TX_N':
+     q=(130.0,101.0); T(b,socket,z,q,pcbnew.F_Cu); T(b,socket,q,d,pcbnew.F_Cu)
+    elif name == 'BRIDGE_SATA_RX_P':
+     e=(126.0,93.0); v=(126.0,93.0); q=(138.0,104.725); T(b,socket,z,e,pcbnew.F_Cu); X(b,socket,e); T(b,socket,e,q,pcbnew.B_Cu); X(b,socket,q); T(b,socket,q,d,pcbnew.F_Cu)
+    else:
+     e=(126.0,105.0); q=(138.0,112.275); T(b,socket,z,e,pcbnew.F_Cu); X(b,socket,e); T(b,socket,e,q,pcbnew.B_Cu); X(b,socket,q); T(b,socket,q,d,pcbnew.F_Cu)
+   elif jrot == 0:
     escape=(x0,y0-2) if name in ('BRIDGE_SATA_TX_P','BRIDGE_SATA_RX_P') else (x0,y0+2); layer=pcbnew.F_Cu if name in ('BRIDGE_SATA_TX_P','BRIDGE_SATA_TX_N') else pcbnew.B_Cu; T(b,n,s,escape,pcbnew.F_Cu); X(b,n,escape); T(b,n,escape,a,layer); X(b,n,a); T(b,n,a,cp2,pcbnew.F_Cu); T(b,socket,z,(z[0],d[1]),pcbnew.F_Cu); T(b,socket,(z[0],d[1]),d,pcbnew.F_Cu)
    else:
     # Co-located acreage island: TX bridge escapes remain on F.Cu and RX

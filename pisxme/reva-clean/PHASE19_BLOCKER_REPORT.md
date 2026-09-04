@@ -37,6 +37,31 @@ Date: 2026-09-04
 
 Status: `PISXME_REVA_CLEAN_PHASE19_SATA_ROUTING_IN_PROGRESS`
 
+## 2026-09-04 coordinated-island continuation
+
+The authoring harness was corrected so C30-C33 follow the requested U7
+coordinate instead of retaining the former fixed x positions. A second
+correction adds an opt-in direct USB3 landing mode for the validated
+Phase-18 U7 neighborhood. With U7 `(110,105)` and USB3-only generation,
+native DRC reports zero USB3 `tracks_crossing` and zero USB3 `shorting_items`;
+the one remaining crossing/short category is inherited CM5/PERST or frozen
+PCIe geometry outside the USB3 island.
+
+The first complete orthogonal SATA launch experiment at U7 `(110,105)` and
+J3 `(150,110)` rotation 0 was rejected. Native DRC identified concrete local
+failures: RX_N crossing the frozen PCIe B.Cu corridor, connector-pad launch
+shorts caused by the trial's J3 approach points, and one RX via near an
+existing power-input pad. This is evidence against that exact trial, not
+against the CM5-to-SATA architecture. No PCIe or Phase-18 ancestor copper was
+modified.
+
+The active blocker therefore remains a recoverable coordinated storage-island
+placement/routing problem. The next bounded experiment must move the complete
+island into genuinely open acreage or adjust the J3 orientation/edge while
+retaining the direct USB3 landing mode, then derive all SATA launch points
+from the actual connector pad and courtyard geometry. Phase 19 remains open;
+Phase 20+ has not started.
+
 ## Current evidence
 
 ### 2026-09-04 continuation: SATA coupling network implemented
