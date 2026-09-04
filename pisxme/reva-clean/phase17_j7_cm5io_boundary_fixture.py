@@ -31,13 +31,24 @@ def main():
     b=pcbnew.LoadBoard(str(BASE)); src=pcbnew.LoadBoard(str(ISLAND))
     names=set(MDI)|{'ETH_GND','ETH_CT_COMMON','GBE_SHIELD','GBE_LED_Y_A','GBE_LED_Y_K','GBE_LED_G_A','GBE_LED_G_K'}
     nets={n:net(b,n) for n in names}
+    # Optional BCM54210PE-supported pair/polarity permutation experiment.  It
+    # changes only the disposable fixture's physical launch assignment; the
+    # source and connector remain electrically identified by their nets.
+    pair_swap=os.environ.get('PISXME_BRIDGE_SWAP')=='1'
+    island_map={n:n for n in MDI}
+    if pair_swap:
+        island_map.update({
+          'CM5_GBE_TD3_P':'CM5_GBE_TD3_N','CM5_GBE_TD3_N':'CM5_GBE_TD3_P',
+          'CM5_GBE_TD2_N':'CM5_GBE_TD2_P','CM5_GBE_TD2_P':'CM5_GBE_TD2_N',
+          'CM5_GBE_TD1_P':'CM5_GBE_TD0_N','CM5_GBE_TD1_N':'CM5_GBE_TD0_P',
+          'CM5_GBE_TD0_N':'CM5_GBE_TD1_P','CM5_GBE_TD0_P':'CM5_GBE_TD1_N'})
     # Copy the official island footprints with their already-authoritative
     # positions/orientations, rebinding pads by net name into this board.
     for ref in ('U9','U6','J2','J9','C1'):
         f0=src.FindFootprintByReference(ref); f=pcbnew.FOOTPRINT(f0); f.SetPosition(V(xy(f0.GetPosition())[0]+ISLAND_DX,xy(f0.GetPosition())[1])); b.Add(f)
         for p in f.Pads():
             name=str(p.GetNetname()).rsplit('/',1)[-1]
-            if name in nets: p.SetNet(nets[name])
+            if name in nets: p.SetNet(nets[island_map.get(name,name)])
     # Retain all official MDI island segments whose endpoints are outside the
     # omitted CM5 source legs.  The exact J7 launch fixture supplies those.
     for t0 in src.GetTracks():
@@ -46,7 +57,7 @@ def main():
         a,z=xy(t0.GetStart()),xy(t0.GetEnd()); a=(a[0]+ISLAND_DX,a[1]); z=(z[0]+ISLAND_DX,z[1])
         if max(a[1],z[1]) >= 70: continue
         t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(t0.GetLayer())
-        t.SetWidth(t0.GetWidth()); t.SetNet(nets[name]); b.Add(t)
+        t.SetWidth(t0.GetWidth()); t.SetNet(nets[island_map.get(name,name)]); b.Add(t)
     # Copy the island support/return copper, excluding the MDI routes.
     for t0 in src.GetTracks():
         name=str(t0.GetNetname()).rsplit('/',1)[-1]
@@ -56,15 +67,42 @@ def main():
         t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(t0.GetLayer())
         t.SetWidth(t0.GetWidth()); t.SetNet(nets[name]); b.Add(t)
     # Official CM5IO-derived ESD source-side landing points in this island.
-    land={'CM5_GBE_TD3_P':(26.204119+ISLAND_DX,59.210),'CM5_GBE_TD3_N':(26.361524+ISLAND_DX,59.590),
+    physical_land={'CM5_GBE_TD3_P':(26.204119+ISLAND_DX,59.210),'CM5_GBE_TD3_N':(26.361524+ISLAND_DX,59.590),
           'CM5_GBE_TD2_N':(27.021298+ISLAND_DX,60.110),'CM5_GBE_TD2_P':(27.178701+ISLAND_DX,60.490),
           'CM5_GBE_TD1_P':(32.660000+ISLAND_DX,58.871297),'CM5_GBE_TD1_N':(33.039999+ISLAND_DX,59.028702),
           'CM5_GBE_TD0_N':(34.160000+ISLAND_DX,58.571298),'CM5_GBE_TD0_P':(34.539999+ISLAND_DX,58.728702)}
+    land={name:physical_land[island_map[name]] for name in MDI}
     boundary={3:(10,90),4:(90,90),5:(8,92),6:(92,92),9:(6,94),10:(94,94),11:(4,96),12:(96,96)}
     names_by_pad={3:'CM5_GBE_TD3_P',4:'CM5_GBE_TD1_P',5:'CM5_GBE_TD3_N',6:'CM5_GBE_TD1_N',
                   9:'CM5_GBE_TD2_N',10:'CM5_GBE_TD0_N',11:'CM5_GBE_TD2_P',12:'CM5_GBE_TD0_P'}
     bridge_outer=os.environ.get('PISXME_BRIDGE_OUTER')=='1'
     bridge_round=os.environ.get('PISXME_BRIDGE_ROUND')=='1'
+    bridge_swap=os.environ.get('PISXME_BRIDGE_SWAP')=='1'
+    if bridge_swap:
+        # Pair-preserving monotonic corridors.  TD1 enters the physical TD0
+        # landing and TD0 enters the physical TD1 landing; P/N polarity is
+        # unchanged.  The left group uses four top lanes; the swapped right
+        # group uses four independent upper-right lanes.
+        paths={
+          'CM5_GBE_TD3_P':([(10,90),(10,40.6),(116.362,40.6),land['CM5_GBE_TD3_P']],pcbnew.B_Cu),
+          'CM5_GBE_TD3_N':([(8,92),(8,40),(116.204,40),land['CM5_GBE_TD3_N']],pcbnew.B_Cu),
+          'CM5_GBE_TD2_N':([(6,94),(6,42.6),(117.179,42.6),land['CM5_GBE_TD2_N']],pcbnew.F_Cu),
+          'CM5_GBE_TD2_P':([(4,96),(4,42),(117.021,42),land['CM5_GBE_TD2_P']],pcbnew.F_Cu),
+          'CM5_GBE_TD1_P':([(90,90),(121,90),(121,36.6),(124.160,36.6),land['CM5_GBE_TD1_P']],pcbnew.B_Cu),
+          'CM5_GBE_TD1_N':([(92,92),(120,92),(120,36),(124.540,36),land['CM5_GBE_TD1_N']],pcbnew.B_Cu),
+          'CM5_GBE_TD0_N':([(94,94),(124,94),(124,38),(122.660,38),land['CM5_GBE_TD0_N']],pcbnew.F_Cu),
+          'CM5_GBE_TD0_P':([(96,96),(123,96),(123,38.6),(123.040,38.6),land['CM5_GBE_TD0_P']],pcbnew.F_Cu)}
+        for name,(pts,layer) in paths.items():
+            track(b,nets[name],pts,layer)
+        # The B.Cu bridge returns to the official ESD lands with ordinary
+        # through-vias outside the pads; the F.Cu left group remains direct.
+        for name in ('CM5_GBE_TD1_P','CM5_GBE_TD1_N','CM5_GBE_TD0_N','CM5_GBE_TD0_P'):
+            pts=paths[name][0]; rv=pts[-2]; via(b,nets[name],rv); track(b,nets[name],[rv,land[name]],pcbnew.F_Cu)
+        # Expand the disposable outline before saving this branch.
+        for d in list(b.GetDrawings()):
+            if d.GetLayer()==pcbnew.Edge_Cuts: b.Remove(d)
+        for a,z in (((2,35),(190,35)),((190,35),(190,145)),((190,145),(2,145)),((2,145),(2,35))): edge(b,a,z)
+        b.Save(str(OUT)); print('saved',OUT); return
     if bridge_round:
         # Pair-specific round-the-envelope bridge.  TD3 stays on B.Cu over
         # the top-left perimeter, TD2 uses F.Cu over the bottom-left, TD1

@@ -3093,3 +3093,12 @@
   5 crossings and 16 dangling bridge tracks; the candidate was rejected.
 - Published the exact failure and preserved disposable evidence in
   `blocker.md`; Phase 18+ remains gated.
+
+2026-09-03 — Phase 17 pair/polarity-permutation bridge trial
+
+- Tested a BCM54210PE-supported TD1/TD0 pair swap and per-pair polarity
+  reversal against the remote official CM5IO island.
+- Corrected the source escape to preserve pair order, then measured native
+  KiCad DRC at 247 violations / 78 unconnected items with 4 crossings and
+  16 dangling tracks; rejected the candidate.
+- Recorded the canonical blocker packet and retained Phase 18+ gating.

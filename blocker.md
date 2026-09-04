@@ -26,9 +26,11 @@ monotonic, no-maze Ethernet route.
 
 ## Evidence
 
-- Latest native KiCad DRC candidate: `pisxme/reva-clean/ACREAGE_ETHERNET_PHASE17-drc10.rpt`
-- Latest candidate report: 319 total violations, including existing acreage
-  debt.
+- Latest native KiCad DRC candidate: `pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-swap5-drc.rpt`
+- Latest disposable bridge report: 247 total violations, including 4
+  track crossings, 78 unconnected items, 16 dangling tracks, and 2 dangling
+  vias. This is the current remote-island permutation trial; it does not
+  replace the independent official-fixture or J7-launch evidence.
 - Representative Ethernet failures include CM5 pair crossings at J7,
   pair shorts near U6/U9, crossings against existing power/regulator tracks,
   NPTH hole-clearance violations at J7/F2/J2, and ESD pad-field clearance
@@ -1219,6 +1221,43 @@ return approach, not footprint placement. The next construction is a
 round-the-envelope bridge with pair-specific monotonic lanes, using the
 remote island as the fixed endpoint and retaining the exact J7 launch as the
 source endpoint.
+
+## Pair/polarity-permutation bridge trial — 2026-09-03
+
+The next disposable experiment deliberately used the BCM54210PE-supported
+physical pair swap and per-pair polarity reversal while preserving P/N pair
+integrity. TD1/TD0 were exchanged at the official island and the left-group
+polarity order was corrected to match the measured J7 pad order. Each pair
+was assigned to an ordinary F.Cu or B.Cu corridor; no plane-layer signal or
+via-in-pad was used.
+
+The first generator construction still had source dogleg crossings. The
+corrected planar escape reduced the crossing count to **4**, but native KiCad
+10.0.5 DRC still reports **247 violations / 78 unconnected items**, 16
+dangling tracks, and 2 dangling vias. The candidate is rejected. The
+remaining crossing locations are exact source/return approach intersections
+and do not prove that the PHY remap or official Ethernet island is invalid.
+
+The authoritative fixture and J7 launch remain separately valid. The
+current blocker is therefore still a recoverable Ethernet bridge geometry
+failure. The next implementation should use a genuinely layer-separated
+pair escape (with explicit transition points) rather than further lane
+coordinate tuning on this same two-layer construction.
+
+Preserved evidence:
+`pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-swap5-drc.rpt` and
+`pisxme/reva-clean/phase17_j7_cm5io_boundary_fixture.py`.
+
+### Canonical continuation packet
+
+- `BLOCKER_ID`: `PHASE17_ETHERNET_REMOTE_BRIDGE_GEOMETRY`
+- `SOLUTION_CLASS`: algorithm/design change — two-signal-layer bridge escape
+- `ATTEMPTS_IN_CLASS`: round-envelope bridge; pair/polarity permutation;
+  planar pair escape
+- `AUTHORITATIVE_ORACLE`: official Raspberry Pi CM5IO KiCad source; its
+  complete Ethernet fixture passes focused connectivity/DRC checks
+- `UNBLOCK_CONDITION`: a complete acreage-adapted bridge with zero true
+  crossings/shorts/opens, valid references and native DRC evidence
 
 ## Round-the-envelope bridge trial — 2026-09-03
 
