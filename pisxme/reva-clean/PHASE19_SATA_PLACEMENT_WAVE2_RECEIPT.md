@@ -42,3 +42,14 @@ F.Cu/B.Cu corridors with ordinary through-vias only.
 Scripts and disposable boards are retained beside this receipt for reproducible
 review. The consultant unblocker session timed out and was not treated as an
 engineering result; a separate high-speed PCB review was dispatched.
+
+## Wave 3 continuation
+
+The open mid-acreage placement `(U7 120,140; J3 145,125, rotation 90)` removes
+the frozen PCIe/CM5 corridor and mechanical collisions. A SATA-only routing
+trial using pair-layer separation reduced the new failure to local launch
+crossings/clearance at the U7 and connector pad fields (`205` total DRC
+violations, `430` unconnected inherited/placement records). It is not yet a
+pass because the SATA source and connector dogbones still need a non-crossing
+ordering. The next experiment keeps this placement, reorders the orthogonal
+pair exits, and then regenerates USB3 around the same island before promotion.
