@@ -65,20 +65,26 @@ def main():
     oj9=oracle.FindFootprintByReference("J9"); oc1=oracle.FindFootprintByReference("C1")
     j9=None
     ties=[]
+    branch_caps=[]
+    branch_res=[]
     cct=None
     if os.environ.get("PISXME_OMIT_SUPPORT") != "1" and not CT_TIES:
         j9=copyfp(b,oj9,"J9",*T(*xy(oj9.GetPosition())),0)
     if os.environ.get("PISXME_OMIT_SUPPORT") != "1" and CT_TIES:
-        # Explicitly model the only defensible adaptation from the official
-        # CM5IO common-CT support to the clean EDAC's four exposed CT nets:
-        # one ordinary zero-ohm/net-tie per winding, then the CM5IO 100 nF
-        # shunt from the common support node to ETH_GND.
+        # EDAC's manufacturer circuit: four separate 22 nF/100 V plus 75 ohm
+        # series branches from VC1..VC4 to a common termination node, then a
+        # 1 nF/2 kV shield return. These are disposable support footprints.
         for ref, x, netname in (("RCT4",52,"ETH_CT4"),("RCT3",57,"ETH_CT3"),
                                 ("RCT2",62,"ETH_CT2"),("RCT1",67,"ETH_CT1")):
-            f=addfp(b,"R_0402_1005Metric",ref,x + DIRECT_SHIFT,45,0)
-            assign(f,{1:netname,2:"ETH_CT_COMMON"},nets); ties.append(f)
-        cct=addfp(b,"C_0603_1608Metric","CCT",72 + DIRECT_SHIFT,45,0)
-        assign(cct,{1:"ETH_CT_COMMON",2:"ETH_GND"},nets)
+            cap=addfp(b,"C_0603_1608Metric",ref.replace("R","C") ,x + DIRECT_SHIFT,45,0)
+            res=addfp(b,"R_0402_1005Metric",ref,x + DIRECT_SHIFT,40,0)
+            branch=f"ETH_CT_BRANCH_{netname[-1]}"
+            names_for_branch=nets.get(branch) or N(b,branch); nets[branch]=names_for_branch
+            assign(cap,{1:netname,2:branch},nets)
+            assign(res,{1:branch,2:"ETH_CT_COMMON"},nets)
+            branch_caps.append(cap); branch_res.append(res)
+        cct=addfp(b,"C_0603_1608Metric","CCT",72 + DIRECT_SHIFT,40,0)
+        assign(cct,{1:"ETH_CT_COMMON",2:"GBE_SHIELD"},nets)
     # C1 is an official CM5IO-local support part, but the clean Ethernet
     # authority has no corresponding capacitor or common CT net.  Do not
     # invent that topology in this exact EDAC fixture.
@@ -148,27 +154,21 @@ def main():
             def via_actual(x,y,net):
                 q=pcbnew.PCB_VIA(b); q.SetPosition(V(x,y)); q.SetWidth(pcbnew.FromMM(.45)); q.SetDrill(pcbnew.FromMM(.20)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(net); b.Add(q)
             def S(x,y): return (x-DIRECT_SHIFT,y)
-            # Pair-specific escapes leave the EDAC hole field before changing
-            # layer.  No via is placed in an SMT pad; the F.Cu dogbones are
-            # intentionally short and the B.Cu trunks use separate lanes.
-            a4=srcxy(j2,14); z4=srcxy(ties[0],1); via_actual(70.5,58,nets["ETH_CT4"]); via_actual(55.0,47,nets["ETH_CT4"])
-            route(b,[a4,S(70.5,58)],nets["ETH_CT4"],pcbnew.B_Cu,shift=False); route(b,[S(70.5,58),S(55.0,47)],nets["ETH_CT4"],pcbnew.B_Cu,shift=False); route(b,[S(55.0,47),z4],nets["ETH_CT4"],pcbnew.F_Cu,shift=False)
-            a2=srcxy(j2,12); z2=srcxy(ties[2],1); via_actual(82.0,54.5,nets["ETH_CT2"]); via_actual(65.0,47,nets["ETH_CT2"])
-            route(b,[a2,S(82.0,54.5)],nets["ETH_CT2"],pcbnew.B_Cu,shift=False); route(b,[S(82.0,54.5),S(65.0,47)],nets["ETH_CT2"],pcbnew.B_Cu,shift=False); route(b,[S(65.0,47),z2],nets["ETH_CT2"],pcbnew.F_Cu,shift=False)
-            a3=srcxy(j2,13); z3=srcxy(ties[1],1); route(b,[a3,S(73.0,53),S(61.5,53),z3],nets["ETH_CT3"],pcbnew.F_Cu,shift=False)
-            a1=srcxy(j2,11); z1=srcxy(ties[3],1); route(b,[a1,S(85.0,61),S(71.5,61),z1],nets["ETH_CT1"],pcbnew.F_Cu,shift=False)
-            # Common CT bus: each net-tie pad gets a non-pad via dogbone, then
-            # a single B.Cu bus feeds the CM5IO-style 100 nF shunt.
-            for f in ties:
-                c=srcxy(f,2); via_actual(c[0]+DIRECT_SHIFT-.8,c[1]+.8,nets["ETH_CT_COMMON"])
-                route(b,[c,(c[0]-.8,c[1]+.8)],nets["ETH_CT_COMMON"],pcbnew.F_Cu,shift=False)
-                route(b,[(c[0]-.8,c[1]+.8),(c[0]-.8,42)],nets["ETH_CT_COMMON"],pcbnew.B_Cu,shift=False)
-            c1=srcxy(cct,1); via_actual(c1[0]+DIRECT_SHIFT-.8,c1[1]+.8,nets["ETH_CT_COMMON"])
-            route(b,[c1,(c1[0]-.8,c1[1]+.8)],nets["ETH_CT_COMMON"],pcbnew.F_Cu,shift=False)
-            route(b,[(51,42),(75,42)],nets["ETH_CT_COMMON"],pcbnew.B_Cu)
-            c2=srcxy(cct,2); via_actual(c2[0]+DIRECT_SHIFT+.8,c2[1]+.8,nets["ETH_GND"])
-            route(b,[c2,(c2[0]+.8,c2[1]+.8)],nets["ETH_GND"],pcbnew.F_Cu,shift=False)
-            route(b,[(c2[0]+.8,c2[1]+.8),(c2[0]+.8,42),(98,42),(98,50)],nets["ETH_GND"],pcbnew.B_Cu,shift=False)
+            # Four pair-specific escapes into the manufacturer RC branches.
+            # The long source-to-branch trunks use B.Cu; each SMT capacitor
+            # is reached through an off-pad via and a short F.Cu dogbone.
+            for i,(source,cap,res,srcpad) in enumerate(zip(
+                    ("ETH_CT4","ETH_CT3","ETH_CT2","ETH_CT1"),
+                    branch_caps,branch_res,(14,13,12,11))):
+                a=srcxy(j2,srcpad); z=srcxy(cap,1)
+                vx=z[0]-.8; vy=z[1]+1.0; via_actual(vx+DIRECT_SHIFT,vy,nets[source])
+                route(b,[a,S(vx,vy)],nets[source],pcbnew.B_Cu)
+                route(b,[S(vx,vy),z],nets[source],pcbnew.F_Cu)
+                ca=srcxy(cap,2); rb=srcxy(res,1)
+                route(b,[ca,(ca[0],42+i*.5),(rb[0],42+i*.5),rb],nets[f"ETH_CT_BRANCH_{source[-1]}"],pcbnew.F_Cu)
+                rr=srcxy(res,2); route(b,[rr,(rr[0],38),(75,38)],nets["ETH_CT_COMMON"],pcbnew.F_Cu)
+            c1=srcxy(cct,1); route(b,[c1,(c1[0],38),(75,38)],nets["ETH_CT_COMMON"],pcbnew.F_Cu)
+            c2=srcxy(cct,2); route(b,[c2,(c2[0],37),(96,37),(96,56.05)],nets["GBE_SHIELD"],pcbnew.F_Cu)
         else:
             route(b,[(66.785,56.83),(83.73,51.73)],nets["ETH_CT4"],pcbnew.F_Cu)
             route(b,[(75.675,55.56),(75.675,59.0),(82.5,59.0),(82.5,50.5),(86.27,50.5),(86.27,51.73)],nets["ETH_CT2"],pcbnew.F_Cu)
@@ -178,7 +178,7 @@ def main():
         # final schematic net-tie decision; both physical shield lands tie.
         s1=xy(j2.FindPadByNumber("19").GetPosition()); s2=xy(j2.FindPadByNumber("20").GetPosition())
         s1=(s1[0]-DIRECT_SHIFT,s1[1]); s2=(s2[0]-DIRECT_SHIFT,s2[1])
-        route(b,[s1,(96,56.05),(96,38),(52,38),(52,56.05),s2],nets["GBE_SHIELD"],pcbnew.B_Cu)
+        route(b,[s1,(96,56.05),(96,38),(52,38),(52,56.05),s2],nets["GBE_SHIELD"],pcbnew.F_Cu)
         # The detached fixture's C1 return joins the copied GND escape with
         # ordinary through-via and B.Cu spine; no via is placed in a pad.
         q=pcbnew.PCB_VIA(b); q.SetPosition(V(98 + DIRECT_SHIFT,50)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(nets["ETH_GND"]); b.Add(q)

@@ -118,6 +118,21 @@ four-net support implementation from the clean schematic and EDAC authority,
 or document the required schematic support addition before acreage promotion.
 No Phase 18+ work has started.
 
+### EDAC manufacturer RC termination authority — 2026-09-03
+
+The EDAC A70-series electrical drawing resolves the previously missing CT
+support authority. `VC1 P11` through `VC4 P14` each feed an independent
+`22 nF / 100 V` series capacitor and `75 ohm` resistor into a common
+termination node; that node returns to shield through `1 nF / 2 kV`. The
+clean design must preserve the four CT nets through their individual branches.
+This supersedes both the common-net and zero-ohm experiments.
+
+The first disposable fixture using this exact RC network was rejected by
+native KiCad DRC (**262 findings / 8 unconnected items**, with CT branch
+shorts and crossings). The MDI graph was not changed and no production file
+was modified. The remaining blocker is the physical branch escape, not the
+electrical authority.
+
 ### Explicit four-net net-tie experiment — 2026-09-03
 
 The next bounded experiment modeled four ordinary 0402 zero-ohm/net-ties

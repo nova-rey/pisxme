@@ -3184,3 +3184,10 @@
   with a 1 nF/2 kV return from that node to shield.
 - Recorded the authoritative source URLs in the EDAC authority receipt and
   rejected the earlier zero-ohm/common-node fixture topology.
+
+2026-09-03 — Phase 17 EDAC RC support fixture rejection
+
+- Implemented the authoritative four independent 22 nF/100 V plus 75 ohm
+  branches and 1 nF/2 kV shield return in the disposable fixture.
+- Native DRC rejected the first physical escape at 262 findings / 8
+  unconnected items; retained the authority and kept production unchanged.
