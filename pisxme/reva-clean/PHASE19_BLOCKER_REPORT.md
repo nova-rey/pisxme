@@ -120,3 +120,10 @@ on the existing V3 SATA board. The resulting candidate measured 242 native DRC
 violations / 426 unconnected and retained four USB3 short/crossing findings
 against preserved V3 copper. Simple overlay reuse is rejected; a fresh
 coordinated route remains required.
+
+Transform audit: the unblocker-recommended U7 `(120,140)` `90°` candidate
+was serialized and inspected. KiCad 10 actually places its USB row at
+`y=135.5` and SATA row at `x=124.5`; the earlier predicted transform was
+mirrored. The bottom-approach branch therefore entered the U7 body and
+measured 219 USB-only DRC violations / 430 unconnected. It is rejected;
+subsequent routing must use serialized pad coordinates directly.

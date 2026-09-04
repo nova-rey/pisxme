@@ -175,3 +175,9 @@ reauthored only USB3 on the existing V3 SATA board. Native DRC measured 242
 violations / 426 unconnected with four USB3 short/crossing findings against
 preserved V3 copper. Simple overlay reuse was rejected; Phase 19 remains
 active.
+
+Phase 19 transform-audit update (2026-09-04): serialized U7 `(120,140)` at
+`90°` places the USB row at `y=135.5` and SATA row at `x=124.5`, contrary to
+the earlier predicted transform. The bottom-approach trial measured 219
+USB-only DRC violations / 430 unconnected and was rejected for entering the
+U7 body. Future routes use serialized coordinates.
