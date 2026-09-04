@@ -1204,3 +1204,18 @@ The latest preserved report is
 `pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-island-right-drc.rpt`.
 No production acreage board was modified or promoted, and Phase 18+ remains
 gated.
+
+## Remote-island bridge rerun — 2026-09-03
+
+The complete official island was moved 90 mm east of the J7 launch envelope
+and all copied island geometry was translated together. This reduced the
+ordinary bridge fixture to **254 findings / 78 unconnected items** with 11
+crossings and 3 shorts. A pair-layer outer-detour variant measured **266 / 78**
+with 16 crossings and 4 shorts. Neither passes, but both are materially
+better than the overlapping placement and have no production-board impact.
+
+The remaining crossings are now attributable to the bridge path ordering and
+return approach, not footprint placement. The next construction is a
+round-the-envelope bridge with pair-specific monotonic lanes, using the
+remote island as the fixed endpoint and retaining the exact J7 launch as the
+source endpoint.

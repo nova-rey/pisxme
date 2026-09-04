@@ -3076,3 +3076,11 @@
   and shorts and were rejected.
 - Confirmed island overlap as a real contributor and retained Phase 17 for
   pair-order repair on the remote-island basis.
+
+2026-09-03 — Phase 17 remote-island bridge rerun
+
+- Re-ran the official island 90 mm east of the J7 launch envelope with all
+  island geometry translated together.
+- Ordinary bridge measured 254 / 78 with 11 crossings and 3 shorts; the
+  outer-layer variant measured 266 / 78 with 16 crossings and 4 shorts.
+- Retained Phase 17 for a round-the-envelope, monotonic pair-lane bridge.
