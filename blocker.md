@@ -1919,3 +1919,25 @@ CM5 power fanout footprint/escape geometry must be made authoritative) before
 the lower island can be promoted. No frozen PCIe, V100/SXM2, stack, power
 topology, or Ethernet electrical architecture was changed; no Phase 18+
 work began.
+
+## Phase 17 authoritative CM5 fanout and lower-island reauthoring — 2026-09-04
+
+The official CM5IO Rev 2 PCB was inspected directly. Its module footprint
+uses the same 0.2 x 0.7 mm lands on 0.4 mm pitch as PiSXMe, and its +5 V
+fanout uses 0.20 mm F.Cu traces. The PiSXMe launch was corrected to match
+that width, escape through a 0.50/0.30 mm ordinary via outside the pad, and
+use B.Cu only while passing the CM5 body/connector region.
+
+The resulting disposable candidate is
+`ACREAGE_PHASE17_TI_U3_F1_ETH_60_165AC_CT1F.kicad_pcb`. Native DRC reports
+443 total findings, of which 428 are inherited/unconnected acreage scaffold
+records. It has no `shorting_items` and no `tracks_crossing` records. The
+remaining errors are existing Ethernet launch/center-tap hole and clearance
+findings plus inherited mechanical/scaffold debt; the local CM5 power launch
+itself no longer produces a net short.
+
+The U3 output island was also reauthored with a protected VLDOIN-to-VOUT
+connection avoiding U3 PGND pads, direct local VOUT escapes, a via-transitioned
+support-capacitor return corridor, and explicit connections to the CM5 5 V
+support pads. This is a valid integration ancestor, not a Phase 17 pass. The
+clean release PCB remains untouched and Phase 18+ remains unopened.

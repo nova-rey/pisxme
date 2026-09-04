@@ -3443,6 +3443,21 @@
   lower `(60,165)` U3/F1 plus CT1-transition baseline; no release promotion or
   Phase 18+ work occurred.
 
+2026-09-04 — Phase 17 authoritative CM5 fanout and lower-island reauthoring
+
+- Inspected the official CM5IO Rev 2 PCB directly and matched its 0.20 mm
+  +5 V fanout width for the PiSXMe J7 power launch. The corrected disposable
+  path uses an ordinary 0.50/0.30 mm via outside the pad and B.Cu only through
+  the module-body escape region.
+- Reauthored the lower U3 output island: VLDOIN/VOUT is routed around the U3
+  PGND pad field, support-capacitor returns use a separate via-transitioned
+  corridor, and CM5 output support pads are explicitly tied.
+- Native DRC for the best integrated disposable candidate reports 443 total
+  findings, 428 inherited/unconnected acreage records, and zero
+  `shorting_items` or `tracks_crossing` records. Remaining findings are
+  Ethernet launch/mechanical and inherited scaffold debt, so Phase 17 remains
+  open and no Phase 18+ or clean-release promotion occurred.
+
 2026-09-04 — Phase 17 power-entry floorplan reopening
 
 - Tested coherent F2 translations at `(100,120)` and `(140,120)` against the

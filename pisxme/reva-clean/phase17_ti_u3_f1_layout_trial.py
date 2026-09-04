@@ -75,7 +75,7 @@ def main():
     for ref in tuple(f"C{n}" for n in range(26, 42)):
         f = b.FindFootprintByReference(ref); p0 = xy(f.GetPosition())
         f.SetPosition(V(p0[0], p0[1] + BRIDGE_DY))
-    for ref, p0, angle in (("C5",(47,76),180),("C6",(47,78.25),180),
+    for ref, p0, angle in (("C5",(44,76),180),("C6",(44,78.25),180),
                            ("C7",(57,81.5),0),("C8",(57,83.5),0),
                            ("C9",(73,62),0),("R3",(78,62),180),
                            ("R4",(82,62),0),("R5",(61,66),0),
@@ -99,14 +99,30 @@ def main():
             T(b, vin, a, target, pcbnew.F_Cu, .30)
     # Output perimeter and corrected VLDOIN tie.
     c71, c81, c92 = pad(b,"C7","1"), pad(b,"C8","1"), pad(b,"C9","2")
-    P(b, outn, [u["8"], (U3_TARGET[0]-6,U3_TARGET[1]+2),
-                (U3_TARGET[0]-6,U3_TARGET[1]+8), (c71[0],U3_TARGET[1]+8), c71], width=.25)
-    P(b, outn, [u["9"], (U3_TARGET[0]+5,U3_TARGET[1]+2),
-                (U3_TARGET[0]+5,U3_TARGET[1]+10), c81], width=.25)
+    # Keep both VOUT pad escapes inside the package's south perimeter.  The
+    # former long rectangular loops crossed the relocated PG/FB corridors and
+    # were not part of the TI local escape geometry.
+    P(b, outn, [u["5"], (u["5"][0],165.25), (54.5,165.25),
+                (54.5,168.0), (u["8"][0],168.0), u["8"]],
+      pcbnew.F_Cu, .25)
+    P(b, outn, [u["8"], (u["8"][0], c71[1]), c71], width=.25)
+    P(b, outn, [u["9"], (u["9"][0], c81[1]), c81], width=.25)
     P(b, outn, [c71, c81], width=.25)
     # Keep the output-capacitor tie on the local F.Cu perimeter.  The earlier
     # B.Cu tie occupied the same quiet return corridor as translated FB/PG.
-    P(b, outn, [c81, (c81[0]+4,c81[1]), (c92[0]+4,c92[1]), c92], pcbnew.F_Cu, .25)
+    # C8's ground pad is immediately to its east; leave C8 to the west,
+    # transition with ordinary vias, and use the quiet corridor below the
+    # translated FB/PG rows before returning to the feedback capacitor.
+    ct_a, ct_b = (60.0, 180.0), (78.0, 180.0)
+    P(b, outn, [c81, ct_a], pcbnew.F_Cu, .25)
+    via(b, outn, ct_a); via(b, outn, ct_b)
+    P(b, outn, [ct_a, ct_b], pcbnew.B_Cu, .25)
+    P(b, outn, [ct_b, (81.5,180.0), (81.5,171.0)], pcbnew.F_Cu, .25)
+    P(b, outn, [c92, (83.0,164.0), (83.0,180.0), ct_b],
+      pcbnew.F_Cu, .25)
+    # Approach R3 pad 1 from the east so the adjacent FB pad 2 is not crossed.
+    P(b, outn, [c92, (81.95,166.0), (86.5,166.0), (86.5,164.0)],
+      pcbnew.F_Cu, .25)
 
     fb, rt, pg = (N(b,x) for x in ("/REGULATORS/FB_CM5_5V",
                                    "/REGULATORS/RT_CM5_5V",
@@ -137,8 +153,17 @@ def main():
     # Escape to the narrow east-side edge of the CM5 power column, then use
     # the outer corridor beside (not through) the F2 holder.  The west escape
     # hit J7 pad 75 and the J4 shell; the former x=50 trunk hit quiet controls.
-    P(b, cm5, [j5[0], jvia, (40,155), (53,168.5), c71],
-      pcbnew.F_Cu, .25)
+    # Raspberry Pi's official CM5IO fanout uses 0.20 mm traces on this
+    # 0.4 mm-pitch power row.  The earlier 0.25 mm launch cannot meet the
+    # neighboring-pad clearance even though its centerline is correct.
+    # Stop before the opposite J7 pad column; x=35.3 leaves the official
+    # 0.20 mm trace plus 0.20 mm clearance to pad 78, then escapes below the
+    # connector body before turning toward the power island.
+    P(b, cm5, [j5[0], (35.2, j5[0][1])], pcbnew.F_Cu, .20)
+    via(b, cm5, (35.2, j5[0][1]))
+    P(b, cm5, [(35.2, j5[0][1]), (40,120), (40,155)], pcbnew.B_Cu, .20)
+    via(b, cm5, (40,155))
+    P(b, cm5, [(40,155), (40,168.5), c71], pcbnew.F_Cu, .20)
     pcbnew.ZONE_FILLER(b).Fill(b.Zones()); b.Save(str(OUT)); print(f"saved {OUT}; F1={F1_TARGET}; F2={F2_TARGET}; U3={U3_TARGET}")
 
 if __name__ == "__main__": main()
