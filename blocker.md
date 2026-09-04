@@ -1562,3 +1562,29 @@ candidate is retained as negative evidence only; the next authorized action
 is to select the last valid Phase 16 acreage checkpoint, then apply the exact
 CM5IO MDI plus EDAC RC support island there and rerun the Phase 11/12 and
 Phase 17 gates.
+
+## Frozen-boundary conflict after official-oracle promotion — 2026-09-03
+
+The correct Phase 16 ancestor was tested with the passing CM5IO-derived
+Ethernet geometry at the shared J7 datum. The electrical fixture remains
+closed, but the acreage overlay is rejected because the frozen regulator and
+power copper occupies the official compact Ethernet corridor. Representative
+native DRC evidence includes `FB_CM5_5V` crossing the EDAC MDI launch and
+`FUSED_12V_A` crossing the CT support island; the overlay reports 906 total
+findings and 263 unconnected items. This is a placement-boundary conflict,
+not an Ethernet architecture failure.
+
+The smallest bounded choices are:
+
+1. Reopen Phase 11/12 for a local regulator-island translation sufficient to
+   clear the official Ethernet corridor, then rerun the affected Phase 15/16
+   checks.
+2. Reopen Phase 11/12 for a larger Ethernet-local bridge/island adaptation,
+   accepting another complete routing proof attempt; prior bridge classes
+   have already failed, so this is higher risk.
+3. Keep the frozen placement and accept that Phase 17 cannot close under the
+   current plan constraints.
+
+No production PCB/schematic has been promoted. The first option is the
+recommended smallest architectural change, but it moves frozen non-Ethernet
+regulator geometry and therefore requires explicit user authorization.

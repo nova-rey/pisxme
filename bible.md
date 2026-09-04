@@ -3223,6 +3223,16 @@
   EDAC support fixture remains electrically closed; the next step is to use
   the valid Phase 16 acreage checkpoint for integration.
 
+2026-09-03 — Phase 17 official Ethernet acreage boundary conflict
+
+- Applied the electrically closed CM5IO/EDAC fixture to the valid Phase 16
+  routed ancestor. The overlay is rejected at 906 findings / 263 unconnected
+  items because frozen `FB_CM5_5V` and `FUSED_12V_A` copper occupy the
+  authoritative compact Ethernet corridor and CT support island.
+- Preserved the rejected evidence and production state. A regulator-island
+  translation is the smallest next change but crosses the plan's frozen
+  non-Ethernet boundary; Phase 17 remains open and Phase 18+ gated.
+
 2026-09-03 — Phase 17 exact EDAC RC support closure experiment
 
 - Reordered the disposable B.Cu support island so CT2 routes directly to its
