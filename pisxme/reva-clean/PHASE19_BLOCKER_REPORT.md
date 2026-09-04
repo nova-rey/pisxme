@@ -62,6 +62,32 @@ retaining the direct USB3 landing mode, then derive all SATA launch points
 from the actual connector pad and courtyard geometry. Phase 19 remains open;
 Phase 20+ has not started.
 
+## Independent high-speed review and V3-cap continuation
+
+An independent PCB review confirmed the prior crossing diagnosis: the named
+`(95,140)` marker is the RX_N landing segment, and its actual conflict is the
+F.Cu TX_N diagonal, not TX_P. The review also identified that the direct
+RX_N patch must account for the adjacent U7 pad field and that the live
+candidate is not SI-closed until length/skew and transition-return evidence
+are measured.
+
+The generator now has an opt-in `P19_RXN_DIRECT` branch that preserves the
+source corridor and uses a short ordinary-via return beside the serialized
+RX_N pad. A V3-cap candidate using U7 `(120,140)` rotation 180 and J3
+`(145,125)` rotation 90, with C30-C33 placed inline in the proven V3 lanes,
+was generated and reloaded by KiCad 10. Native DRC measured 316 total
+violations, zero `shorting_items`, and one `tracks_crossing`. The sole
+crossing is RX_N on B.Cu against the frozen PCIe B.Cu trunk; SATA itself has
+zero crossing/short records in this candidate. It is therefore rejected but
+is the best current decomposition of the remaining problem.
+
+The next experiment must move that one RX_N transition off the PCIe trunk or
+select a nearby U7/J3 placement with the same V3 SATA lane ordering. It must
+also include the independent review's required USB3 pair-length/skew audit
+and local GND return-via review. A separate review noted U7 clock pads 52/53
+remain unassigned in the current inherited materialization; this is retained
+as a Phase 7/19 authority item and is not silently waived.
+
 ## Current evidence
 
 ### 2026-09-04 continuation: SATA coupling network implemented

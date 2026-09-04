@@ -38,6 +38,11 @@ def main():
   # through the opposite pair's bridge-side pad field.
   'C32':(ux+14.0,uy-12.0),'C33':(ux+14.0,uy),
  }
+ if os.environ.get('P19_SATA_V3','0') == '1':
+  # Reuse the proven V3 monotonic corridor, but materialize the required
+  # split coupling capacitors in-line instead of overlaying them afterward.
+  cap_xy={'C30':(127.0,130.0),'C31':(135.0,110.0),
+          'C32':(127.0,120.0),'C33':(127.0,118.0)}
  for i,ref in enumerate(('C30','C31','C32','C33')):
   cap=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'C_0402_1005Metric')
   if cap is None: raise RuntimeError('cannot load C_0402_1005Metric')
@@ -102,12 +107,31 @@ def main():
    T(b,n,first,second,pcbnew.B_Cu)
   X(b,n,second)
   landing=(110.0,d[1])
-  if os.environ.get('P19_USB_DIRECT_FINAL','0') == '1' and d[0] <= second[0]+3.0:
+  if name == 'CM5_USB3_RX_N' and os.environ.get('P19_RXN_DIRECT','0') == '1':
+   # For the synchronized V3 placement, the serialized RX_N pad is reached
+   # directly from the existing source-corridor via.  This is the narrow
+   # crossing repair identified by the independent PCB review; it avoids the
+   # former x=95 vertical detour and does not touch PCIe copper.
+   v=(d[0]-2.5,d[1]); T(b,n,second,v,pcbnew.B_Cu); X(b,n,v); T(b,n,v,d,pcbnew.F_Cu)
+  elif name == 'CM5_USB3_RX_P' and os.environ.get('P19_RXP_B','0') == '1':
+   # Complementary pad-field escape experiment: remain on B.Cu from the
+   # existing source via and return beside the serialized RX_P pad.
+   v=(d[0]-2.5,d[1]); T(b,n,second,v,pcbnew.B_Cu); X(b,n,v); T(b,n,v,d,pcbnew.F_Cu)
+  elif name == 'CM5_USB3_RX_P' and os.environ.get('P19_RXP_STAGGER','0') == '1':
+   # Leave the source fanout on F.Cu, then use a short B.Cu final escape to
+   # separate the two adjacent U7 RX pads without entering the PCIe trunk.
+   v=(d[0]-2.5,130.0); q=(d[0]-2.5,d[1]); T(b,n,second,v,pcbnew.F_Cu); X(b,n,v); T(b,n,v,q,pcbnew.B_Cu); X(b,n,q); T(b,n,q,d,pcbnew.F_Cu)
+  elif os.environ.get('P19_USB_DIRECT_FINAL','0') == '1' and d[0] <= second[0]+3.0:
    # When U7 is returned to the validated Phase-18 neighborhood, its USB
    # pads are west of the extension corridor.  Preserve the native ancestor's
    # short direct landings instead of routing east and doubling back through
    # the adjacent pad field.
    T(b,n,second,d,pcbnew.F_Cu)
+  elif name == 'CM5_USB3_RX_N' and os.environ.get('P19_RXN_FX'):
+   # Alternate F.Cu return column for the synchronized storage placement.
+   # This keeps RX_N off the PCIe B.Cu trunk while routing around TX_N.
+   fx=float(os.environ.get('P19_RXN_FX'))
+   T(b,n,second,(fx,second[1]),pcbnew.F_Cu); T(b,n,(fx,second[1]),(fx,d[1]),pcbnew.F_Cu); T(b,n,(fx,d[1]),d,pcbnew.F_Cu)
   elif name == 'CM5_USB3_RX_N':
    # Transition back to F.Cu at the right edge of the source corridor, then
    # descend left of the frozen B.Cu PCIe trunk. TX_P remains on B.Cu below,
@@ -142,7 +166,23 @@ def main():
    cp=cap_pos[cref]; cp1=cp['1']; cp2=cp['2']
    n=b.FindNet('/STORAGE/'+name); socket=storage_nets['/STORAGE/'+name.replace('BRIDGE_SATA_','SATA_M2_')]
    s=up[un];d=jp[jn];a=cp2;z=cp1; x0,y0=s; x1,y1=d
-   if jrot == 0 and os.environ.get('P19_SATA_ORTHO','0') == '1':
+   if os.environ.get('P19_SATA_V3','0') == '1' and jrot == 90:
+    # V3 routes: TX_P uses the lower B.Cu corridor, TX_N the upper F.Cu
+    # corridor, and the RX pair use separated B.Cu lanes.  Each cap is
+    # traversed from pad 2 to pad 1 with a short F.Cu link; no via is placed
+    # on an SMD pad.
+    if name == 'BRIDGE_SATA_TX_P':
+     e=(s[0],133.0); v=(a[0]-0.5,130.0); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,v,pcbnew.B_Cu); X(b,n,v); T(b,n,v,a,pcbnew.F_Cu)
+     e=(137.0,130.0); q=(139.0,134.25); T(b,socket,z,e,pcbnew.F_Cu); X(b,socket,e); T(b,socket,e,q,pcbnew.B_Cu); X(b,socket,q); T(b,socket,q,d,pcbnew.F_Cu)
+    elif name == 'BRIDGE_SATA_TX_N':
+     T(b,n,s,(121.0,110.0),pcbnew.F_Cu); T(b,n,(121.0,110.0),a,pcbnew.F_Cu); e=(150.0,134.0); q=(147.5,134.0); T(b,socket,z,(150.0,110.0),pcbnew.F_Cu); T(b,socket,(150.0,110.0),e,pcbnew.F_Cu); X(b,socket,e); T(b,socket,e,q,pcbnew.B_Cu); X(b,socket,q); T(b,socket,q,d,pcbnew.F_Cu)
+    elif name == 'BRIDGE_SATA_RX_P':
+     e=(119.0,120.0); v=(a[0]-0.5,120.0); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,v,pcbnew.B_Cu); X(b,n,v); T(b,n,v,a,pcbnew.F_Cu)
+     q=(136.0,120.0); r=(136.0,133.75); T(b,socket,z,q,pcbnew.F_Cu); X(b,socket,q); T(b,socket,q,r,pcbnew.B_Cu); X(b,socket,r); T(b,socket,r,d,pcbnew.F_Cu)
+    else:
+     e=(119.5,118.0); v=(a[0]-0.5,118.0); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,v,pcbnew.B_Cu); X(b,n,v); T(b,n,v,a,pcbnew.F_Cu)
+     T(b,socket,z,(144.0,118.0),pcbnew.F_Cu); X(b,socket,(144.0,118.0)); T(b,socket,(144.0,118.0),(144.0,133.5),pcbnew.B_Cu); X(b,socket,(144.0,133.5)); T(b,socket,(144.0,133.5),d,pcbnew.F_Cu)
+   elif jrot == 0 and os.environ.get('P19_SATA_ORTHO','0') == '1':
     # Explicit monotonic rot-0 M.2 launch for the Phase-18 U7 neighborhood.
     # TX remains on F.Cu; RX crosses to B.Cu beside (never in) the 0402 pads,
     # then returns with ordinary through-vias before the connector pads.
