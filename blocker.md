@@ -1970,3 +1970,19 @@ connection avoiding U3 PGND pads, direct local VOUT escapes, a via-transitioned
 support-capacitor return corridor, and explicit connections to the CM5 5 V
 support pads. This is a valid integration ancestor, not a Phase 17 pass. The
 clean release PCB remains untouched and Phase 18+ remains unopened.
+## Phase 17 fresh regeneration and CT1 discriminator — 2026-09-04
+
+The current authoring path was regenerated from the Phase 16 ancestor rather
+than relying on a stale disposable board. The unmodified CM5IO center-tap
+overlay produced one native `tracks_crossing` record: the CT1 and CT2 B.Cu
+trunks cross in the acreage context. Re-running with only CT1 transitioned to
+F.Cu removes that crossing while preserving the authoritative endpoints,
+nets, MagJack mapping, and all eight MDI paths. The scoped Ethernet regression
+passes on `ACREAGE_PHASE17_CURRENT_ETH_CT1F.kicad_pcb`.
+
+A separate attempt to dogleg CT2/CT3 around the EDAC mounting holes was
+rejected. It introduced real shorts to shield/MDI pads and did not constitute
+a valid mechanical repair. The experiment was reverted from the authoring
+path. The remaining Phase 17 boundary is therefore the connector-local
+center-tap launch/mechanical envelope plus inherited acreage DRC debt; no
+Phase 18+ work or clean-board promotion has occurred.

@@ -40,3 +40,12 @@ reconciliation. Source Phase 3 and Phase 15 regressions pass.
 cleanup. Do not promote the clean PCB and do not begin Phase 18 until full
 native Phase 17 evidence closes the remaining mechanical/clearance and
 acreage validation requirements.
+
+## Fresh regeneration discriminator
+
+The current scripts were rerun from the Phase 16 ancestor. The unmodified
+center-tap overlay exposed a CT1/CT2 B.Cu crossing. A CT1-only F.Cu transition
+removed that crossing and passed the scoped Ethernet regression. CT2/CT3
+dogleg experiments were rejected after native DRC found true shorts at the
+EDAC connector boundary. These are disposable results; the gate remains open
+pending a mechanically clean connector-local implementation.

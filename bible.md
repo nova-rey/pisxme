@@ -3514,3 +3514,13 @@
   regression pass. Full native DRC remains open on inherited acreage debt and
   Ethernet mechanical/clearance/rule reconciliation; no clean PCB promotion
   or Phase 18+ work occurred.
+
+2026-09-04 — Phase 17 fresh regeneration and CT1 discriminator
+
+- Regenerated the current disposable acreage candidate from the Phase 16
+  ancestor. The unmodified CM5IO center-tap overlay exposed a native CT1/CT2
+  B.Cu crossing; the CT1-only F.Cu transition removed that crossing and the
+  scoped Ethernet regression passed.
+- Rejected CT2/CT3 doglegs after native DRC found true EDAC shield/MDI shorts.
+  The experiment was reverted from the authoring path. Phase 17 remains open;
+  no clean-board promotion or Phase 18+ work occurred.
