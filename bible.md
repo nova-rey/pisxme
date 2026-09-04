@@ -3485,3 +3485,11 @@
   `shorting_items` and `tracks_crossing`; it still has inherited unconnected
   acreage records and known Ethernet launch/mechanical findings. Phase 17
   remains open, with no clean-release or Phase 18+ work started.
+
+2026-09-04 — Phase 17 status synchronization after CM5IO fanout proof
+
+- Synchronized `PHASE3_STATUS.md` with the current `fe8add3` checkpoint.
+- Confirmed the best lower-island integration ancestor has zero native true
+  short/crossing categories for the CM5 power handoff, while the Phase 17
+  Ethernet launch/mechanical and inherited acreage findings remain open.
+- No clean PCB promotion or Phase 18+ work occurred.

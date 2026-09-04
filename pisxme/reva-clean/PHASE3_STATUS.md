@@ -74,3 +74,13 @@ boundary and coherent F1/U3 placement harness were added. The first
 regulator escape geometry and an inherited bridge-capacitor/CM5_PERST
 placement conflict. The proven Ethernet island remains electrically closed;
 Phase 17 remains open and no Phase 18+ work has started.
+
+Phase 17 continuation update (2026-09-04, commit `fe8add3`): the official
+CM5IO Rev 2 PCB was inspected directly. Its Module1 +5 V fanout uses the same
+0.2 x 0.7 mm lands on 0.4 mm pitch and 0.20 mm F.Cu traces used by the clean
+J7 authority. The lower U3/F1 candidate now uses that fanout width, an
+ordinary 0.50/0.30 mm CM5 power transition, and a dedicated B.Cu corridor.
+The best integrated disposable ancestor has zero native `shorting_items` and
+zero `tracks_crossing` findings, but still has inherited unconnected acreage
+records and Ethernet launch/center-tap mechanical findings. Phase 17 remains
+open; the clean PCB is not promoted and no Phase 18+ work has started.
