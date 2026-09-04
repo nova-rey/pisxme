@@ -3372,6 +3372,16 @@
 - Kept the exact Ethernet fixture and Phase 16 PCIe evidence valid, but did
   not promote a PCB-only correction or begin Phase 18+.
 
+2026-09-04 — TPSM63606 VLDOIN authority closure
+
+- Corrected U3/U4/U5 pin-5 source labels to their output rails and preserved
+  pin 14 as the protected-rail EN/SYNC input.
+- Native netlist export, Phase 15 regulator-net authority regression, and
+  regenerated PCB materialization all pass. U3 pin 5 now maps to
+  `/REGULATORS/CM5_5V`; pins 1/14/16 remain `12V_PROTECTED`.
+- Source authority is closed; physical U3 island re-authoring and Phase 17
+  integration remain pending.
+
 2026-09-04 — Correct TPSM63606 U3 source mapping
 
 - Corrected the native `REGULATORS.kicad_sch` U3 pin-5 label from

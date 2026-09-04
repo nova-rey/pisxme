@@ -1810,3 +1810,17 @@ This is now the earliest failed gate for the proposed U3 repair. The exact
 CM5IO Ethernet authority and Phase 16 PCIe focused checks remain valid, but
 Phase 17 cannot close against contradictory regulator authority. No clean
 schematic or production PCB was changed in this step.
+
+## TPSM63606 authority correction verified — 2026-09-04
+
+The source-level correction is now committed in `47f1bae`. U3, U4, and U5
+pin-5 labels now bias `VLDOIN` from their respective output rails; pin 14
+remains the defined `EN/SYNC` input on the protected rail. The native netlist
+export passes, the Phase 15 regulator-net authority regression passes, and
+regenerated materialization confirms U3 pin 5 is `/REGULATORS/CM5_5V` while
+pins 1/14/16 remain `12V_PROTECTED`.
+
+This specific authority inconsistency is closed. The next active work is the
+complete U3 physical island re-authoring and boundary-routing experiment;
+Phase 17 remains open until that candidate and the proven Ethernet island
+pass native integration checks.
