@@ -3037,3 +3037,12 @@
   J7 dogbones, final F.Cu returns, and first transitions.
 - Preserved the rejected candidate and retained Phase 17 for reuse of the
   proven J7 launch dogbone construction.
+
+2026-09-03 — Phase 17 continuation checkpoint
+
+- Confirmed the official CM5IO chain and corrected J7 launch remain valid
+  independent authorities; only acreage integration remains open.
+- Rejected the latest west/east source-group trial and preserved its native
+  DRC evidence.
+- Kept Phase 18+ gated and selected reuse of the proven J7 launch boundary as
+  the next authorized Ethernet integration step.

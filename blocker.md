@@ -1130,3 +1130,20 @@ Preserved evidence:
 `pisxme/reva-clean/ACREAGE_CM5IO_RIGHT_CHANNEL_WEST_SPLIT_PHASE17.kicad_pcb`
 and
 `pisxme/reva-clean/ACREAGE_CM5IO_RIGHT_CHANNEL_WEST_SPLIT_PHASE17-drc.rpt`.
+
+## Current continuation state — 2026-09-03
+
+Phase 17 is **not closed**. The authoritative reference chain is still
+validated independently: the extracted Raspberry Pi CM5IO Ethernet CAD
+fixture has zero unconnected MDI nets, and the corrected J7 launch fixture
+has no MDI crossings, shorts, dangling vias, or hole-clearance findings.
+
+The remaining failure is the acreage integration geometry. The latest valid
+candidate is the west/east source-group trial above; it is rejected. No
+Phase 18+ work has started, and no clean production PCB/schematic has been
+modified or promoted by these disposable experiments.
+
+Next authorized action: reuse the exact J7-launch-only dogbone/transition
+construction as the source boundary, then connect that proven boundary to a
+freshly placed official CM5IO island with pair-specific lanes and native DRC
+before any acreage promotion.
