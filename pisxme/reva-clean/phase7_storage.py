@@ -20,7 +20,9 @@ def part(lib,ref,mpn,nets,uid,footprint=''):
         pins.append('(pin "%d" (uuid %s))'%(i+1,make_uuid(uid+i)))
     return '\n'.join(labels)+'\n(symbol (lib_id "PiSXMeRevAClean:%s") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid %s) (property "Reference" "%s" (at 50 82 0) (effects (font (size 1.1 1.1)))) (property "Value" "%s" (at 50 108 0) (effects (font (size 1.1 1.1)))) (property "MPN" "%s" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "%s" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) %s (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "%s") (unit 1)))) )'%(lib,make_uuid(uid),ref,mpn,mpn,footprint,'\n'.join(pins),ref)
 
-TUSB_PIN_NUMBERS=(43,42,46,45,57,56,60,59,24,41,4,21)
+# CM5 is the USB host side of the TUSB9261 device link: CM5 RX receives the
+# bridge's SSTX, while CM5 TX drives the bridge's SSRX.
+TUSB_PIN_NUMBERS=(46,45,43,42,57,56,60,59,24,41,4,21)
 
 def _renumber_block(block, numbers):
     i=0

@@ -11,10 +11,10 @@ def test_tusb9261_usb3_uses_authoritative_physical_pins():
     assert netlist.exists(), "run kicad-cli sch export netlist in reva-clean first"
     root = ET.parse(netlist).getroot()
     expected = {
-        "CM5_USB3_RX_N": ("J7", "128", "45"),
-        "CM5_USB3_RX_P": ("J7", "130", "46"),
-        "CM5_USB3_TX_N": ("J7", "140", "42"),
-        "CM5_USB3_TX_P": ("J7", "142", "43"),
+        "CM5_USB3_RX_N": ("J7", "128", "42"),
+        "CM5_USB3_RX_P": ("J7", "130", "43"),
+        "CM5_USB3_TX_N": ("J7", "140", "45"),
+        "CM5_USB3_TX_P": ("J7", "142", "46"),
         "BRIDGE_SATA_RX_N": ("J3", "4", "59"),
         "BRIDGE_SATA_RX_P": ("J3", "3", "60"),
         "BRIDGE_SATA_TX_N": ("J3", "2", "56"),

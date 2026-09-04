@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/nyx/PiSXMe/pisxme/reva-clean/PiSXMe_RevA_Clean.kicad_sch</source>
-    <date>2026-09-04T13:25:31</date>
+    <date>2026-09-04T13:29:17</date>
     <tool>Eeschema 10.0.5</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -2080,10 +2080,10 @@
       <units>
         <unit name="A">
           <pins>
-            <pin num="43"/>
-            <pin num="42"/>
             <pin num="46"/>
             <pin num="45"/>
+            <pin num="43"/>
+            <pin num="42"/>
             <pin num="57"/>
             <pin num="56"/>
             <pin num="60"/>
@@ -3228,10 +3228,10 @@
         <pin num="21" name="SPI_CFG" type="passive"/>
         <pin num="24" name="BRIDGE_3V3" type="passive"/>
         <pin num="41" name="BRIDGE_1V1" type="passive"/>
-        <pin num="42" name="USB3_TX_N" type="passive"/>
-        <pin num="43" name="USB3_TX_P" type="passive"/>
-        <pin num="45" name="USB3_RX_N" type="passive"/>
-        <pin num="46" name="USB3_RX_P" type="passive"/>
+        <pin num="42" name="USB3_RX_N" type="passive"/>
+        <pin num="43" name="USB3_RX_P" type="passive"/>
+        <pin num="45" name="USB3_TX_N" type="passive"/>
+        <pin num="46" name="USB3_TX_P" type="passive"/>
         <pin num="56" name="SATA_TX_N" type="passive"/>
         <pin num="57" name="SATA_TX_P" type="passive"/>
         <pin num="59" name="SATA_RX_N" type="passive"/>
@@ -3871,19 +3871,19 @@
     </net>
     <net code="103" name="CM5_USB3_RX_N" class="Default">
       <node ref="J7" pin="128" pinfunction="USB3-0-RX_N_128" pintype="input"/>
-      <node ref="U7" pin="45" pinfunction="USB3_RX_N_45" pintype="passive"/>
+      <node ref="U7" pin="42" pinfunction="USB3_RX_N_42" pintype="passive"/>
     </net>
     <net code="104" name="CM5_USB3_RX_P" class="Default">
       <node ref="J7" pin="130" pinfunction="USB3-0-RX_P_130" pintype="input"/>
-      <node ref="U7" pin="46" pinfunction="USB3_RX_P_46" pintype="passive"/>
+      <node ref="U7" pin="43" pinfunction="USB3_RX_P_43" pintype="passive"/>
     </net>
     <net code="105" name="CM5_USB3_TX_N" class="Default">
       <node ref="J7" pin="140" pinfunction="USB3-0-TX_N_140" pintype="output"/>
-      <node ref="U7" pin="42" pinfunction="USB3_TX_N_42" pintype="passive"/>
+      <node ref="U7" pin="45" pinfunction="USB3_TX_N_45" pintype="passive"/>
     </net>
     <net code="106" name="CM5_USB3_TX_P" class="Default">
       <node ref="J7" pin="142" pinfunction="USB3-0-TX_P_142" pintype="output"/>
-      <node ref="U7" pin="43" pinfunction="USB3_TX_P_43" pintype="passive"/>
+      <node ref="U7" pin="46" pinfunction="USB3_TX_P_46" pintype="passive"/>
     </net>
     <net code="107" name="POWER_GND" class="Default">
       <node ref="C14" pin="2" pintype="passive"/>
