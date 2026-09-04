@@ -4,7 +4,7 @@ import pcbnew
 import os
 
 ROOT = Path(__file__).resolve().parent
-BASE = ROOT / "ACREAGE_PCIE_PHASE16.kicad_pcb"
+BASE = Path(os.environ.get("PISXME_BASE", ROOT / "ACREAGE_PCIE_PHASE16.kicad_pcb"))
 OUT = Path(os.environ.get("PISXME_OUT", ROOT / "ACREAGE_PHASE17_U3_DOWN30.kicad_pcb"))
 DX = float(os.environ.get("PISXME_U3_DX", "0"))
 DY = float(os.environ.get("PISXME_U3_DY", "30"))

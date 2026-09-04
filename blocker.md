@@ -1682,3 +1682,30 @@ Smallest practical continuation options:
 `phase17_move_f1_trial.py` and the three disposable board/report artifacts
 are retained as reproducible negative evidence. No clean PCB/schematic was
 modified or promoted.
+
+## Follow-up combined repair evidence — 2026-09-04
+
+To test whether the F1 relocation could be combined with the previously
+authorized U3-local reopening, four disposable combined variants were run:
+
+- F1 at (20,40) mm plus U3 translated down 50 mm: rejected for real track
+  crossings and missing connections.
+- F1 at (20,40) mm plus U3 translated right 60 mm: rejected for regulator/
+  core-PCIe shorts and track crossings.
+- F1 at (20,40) mm plus U3 translated right 80 mm: rejected for
+  `POWER_GND`/core-PCIe shorts and track crossings.
+- F1 at (20,40) mm plus U3 translated right 60 mm/down 30 mm: rejected for
+  power-ground, protected-input, and feedback-net shorts plus crossings.
+
+These are diagnostic footprint/copper translations, not production
+promotions. They show that the next valid experiment must move the complete
+U3 island as a re-authored electrical block: regulator, all local passives,
+all vendor-reference local copper, and explicit boundary reconnections for
+`12V_PROTECTED`, `POWER_GND`, `CM5_5V`, feedback, PG, and RT. A footprint-only
+translation cannot satisfy the Phase 15/17 gates. PCIe, CM5, V100/SXM2,
+Ethernet topology, stack, and layer contract remain unchanged.
+
+The goal is therefore still recoverable within the user-authorized local
+reopening, but Phase 17 is not closed. The recommended next experiment is a
+complete U3 island re-authoring on the F1-cleared ancestor, followed by native
+DRC and Phase 15/16 regression before Ethernet promotion.

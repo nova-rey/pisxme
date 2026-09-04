@@ -3301,4 +3301,15 @@
   removed, but the fixed Ethernet launch still produced genuine shorts with
   adjacent U3 CM5_5V/FB_CM5_5V support geometry and retained connectivity debt.
 - Preserved disposable boards and native DRC reports as negative evidence.
-  Phase 17 remains open; no production promotion or Phase 18 work began.
+ Phase 17 remains open; no production promotion or Phase 18 work began.
+
+2026-09-04 — Phase 17 combined F1/U3 diagnostic wave
+
+- Combined the F1 relocation with four bounded U3 translations: down 50 mm,
+  right 60 mm, right 80 mm, and right 60 mm/down 30 mm.
+- Rejected every diagnostic variant for native crossings, missing
+  connections, or real shorts involving core-PCIe, POWER_GND, protected-input,
+  or regulator feedback nets.
+- Evidence confirms that the next trial must re-author the complete U3
+  regulator island and its explicit boundary copper; footprint-only movement
+  is insufficient. Phase 17 remains open and Phase 18+ remains gated.
