@@ -3241,6 +3241,17 @@
   overlay's 906-finding / 263-unconnected result, confirming the failure is
   introduced by the Ethernet integration geometry.
 
+2026-09-04 — Phase 17 authorized local placement repair trials
+
+- Tested coherent U3 island translations down 30 mm and left 30 mm, plus an
+  Ethernet-local CT support translation with staggered source escapes. All
+  were rejected by native DRC; the best U3-left trial remained at 896
+  findings / 262 unconnected items and the shifted-support fixture retained
+  CT launch shorts/crossings.
+- Restored and revalidated the exact CM5IO/EDAC fixture: 237 findings, zero
+  unconnected pads, zero shorts, and zero crossings, with mapping regressions
+  passing. Production and the Phase 16 ancestor remain unchanged.
+
 2026-09-03 — Phase 17 exact EDAC RC support closure experiment
 
 - Reordered the disposable B.Cu support island so CT2 routes directly to its

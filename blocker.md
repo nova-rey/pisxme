@@ -1563,6 +1563,26 @@ is to select the last valid Phase 16 acreage checkpoint, then apply the exact
 CM5IO MDI plus EDAC RC support island there and rerun the Phase 11/12 and
 Phase 17 gates.
 
+## Authorized local reopening experiments — 2026-09-04
+
+Three disposable in-scope trials were run from `ACREAGE_PCIE_PHASE16`:
+
+- coherent U3 regulator-island translation down 30 mm: rejected at 918
+  findings / 265 unconnected items;
+- coherent U3 regulator-island translation left 30 mm with its local copper:
+  rejected at 896 findings / 262 unconnected items;
+- Ethernet-local CT support translation right 40 mm with staggered source
+  escapes: rejected by CT source-launch shorts/crossings in the fixture.
+
+The exact fixture was then regenerated without experiment variables and
+revalidated at 237 findings, zero unconnected pads, zero shorts, and zero
+track crossings; mapping and fixture regressions pass. These results show
+that the proven Ethernet island remains sound and that a single local
+translation does not clear the combined corridor. The next escalation is a
+coherent local regulator/support-area move with complete Phase 15 copper
+re-authoring, followed by Phase 15/16 revalidation; no production promotion
+has occurred.
+
 ## Frozen-boundary conflict after official-oracle promotion — 2026-09-03
 
 The correct Phase 16 ancestor was tested with the passing CM5IO-derived

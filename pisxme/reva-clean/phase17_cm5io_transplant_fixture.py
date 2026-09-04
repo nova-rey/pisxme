@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parent
 ORACLE = ROOT / "authority-inventory/cm5io-rev2/CM5IO.kicad_pcb"
 PRETTY = ROOT / "PiSXMe_RevA_Clean.pretty"
 DIRECT_SHIFT = 5.0 if os.environ.get("PISXME_DIRECT_J7") == "1" else 0.0
+SUP_DX = float(os.environ.get("PISXME_SUPPORT_DX", "0"))
 CT_TIES = os.environ.get("PISXME_CT_TIES") == "1"
 OUT = ROOT / ("CM5IO_DIRECT_J7_ETHERNET_FIXTURE.kicad_pcb" if DIRECT_SHIFT else "CM5IO_PISXME_ETHERNET_TRANSPLANT_FIXTURE.kicad_pcb")
 
@@ -74,10 +75,11 @@ def main():
         # EDAC's manufacturer circuit: four separate 22 nF/100 V plus 75 ohm
         # series branches from VC1..VC4 to a common termination node, then a
         # 1 nF/2 kV shield return. These are disposable support footprints.
+        ct2_x = 62 if SUP_DX else 88
         for ref, x, netname in (("RCT4",52,"ETH_CT4"),("RCT3",57,"ETH_CT3"),
-                                ("RCT2",88,"ETH_CT2"),("RCT1",67,"ETH_CT1")):
-            cap=addfp(b,"C_0603_1608Metric",ref.replace("R","C") ,x + DIRECT_SHIFT,45,0)
-            res=addfp(b,"R_0402_1005Metric",ref,x + DIRECT_SHIFT,40,0)
+                                ("RCT2",ct2_x,"ETH_CT2"),("RCT1",67,"ETH_CT1")):
+            cap=addfp(b,"C_0603_1608Metric",ref.replace("R","C") ,x + DIRECT_SHIFT + SUP_DX,45,0)
+            res=addfp(b,"R_0402_1005Metric",ref,x + DIRECT_SHIFT + SUP_DX,40,0)
             cap.SetLayerAndFlip(pcbnew.B_Cu)
             res.SetLayerAndFlip(pcbnew.B_Cu)
             branch=f"ETH_CT_BRANCH_{netname[-1]}"
@@ -85,7 +87,7 @@ def main():
             assign(cap,{1:netname,2:branch},nets)
             assign(res,{1:branch,2:"ETH_CT_COMMON"},nets)
             branch_caps.append(cap); branch_res.append(res)
-        cct=addfp(b,"C_0603_1608Metric","CCT",72 + DIRECT_SHIFT,40,0)
+        cct=addfp(b,"C_0603_1608Metric","CCT",72 + DIRECT_SHIFT + SUP_DX,40,0)
         cct.SetLayerAndFlip(pcbnew.B_Cu)
         assign(cct,{1:"ETH_CT_COMMON",2:"GBE_SHIELD"},nets)
     # C1 is an official CM5IO-local support part, but the clean Ethernet
@@ -163,18 +165,29 @@ def main():
                     ("ETH_CT4","ETH_CT3","ETH_CT2","ETH_CT1"),
                     branch_caps,branch_res,(14,13,12,11))):
                 a=actual(j2,srcpad); z=actual(cap,1)
-                if source == "ETH_CT4":
-                    path=[a,(68.0,60.0),(58.0,60.0),z]
+                path=[a,(68.0,60.0),(58.0,60.0),z] if source == "ETH_CT4" else [a,z]
+                if SUP_DX:
+                    # When the low-speed RC island is moved away from the
+                    # fuse, give the through-hole CT lands explicit staggered
+                    # escapes before entering the remote support row.
+                    escape = {"ETH_CT4": (68.0, 60.0),
+                              "ETH_CT2": (84.0, 62.0),
+                              "ETH_CT1": (88.0, 62.0)}.get(source)
+                    if escape:
+                        via_actual(*escape, nets[source])
+                        route(b,[a,escape],nets[source],pcbnew.F_Cu,shift=False)
+                        route(b,[escape,(escape[0],50.0),z],nets[source],pcbnew.B_Cu,shift=False)
+                    else:
+                        route(b,path,nets[source],pcbnew.B_Cu,shift=False)
                 else:
-                    path=[a,z]
-                route(b,path,nets[source],pcbnew.B_Cu,shift=False)
+                    route(b,path,nets[source],pcbnew.B_Cu,shift=False)
                 ca=actual(cap,2); rb=actual(res,1)
                 route(b,[ca,(ca[0],42+i*.5),(rb[0],42+i*.5),rb],nets[f"ETH_CT_BRANCH_{source[-1]}"],pcbnew.B_Cu,shift=False)
                 rr=actual(res,2); route(b,[rr,(rr[0],37),(75,37)],nets["ETH_CT_COMMON"],pcbnew.B_Cu,shift=False)
             c1=actual(cct,1); route(b,[c1,(c1[0],37),(75,37)],nets["ETH_CT_COMMON"],pcbnew.B_Cu,shift=False)
             c2=actual(cct,2); sv=(c2[0]-.8,c2[1]+.8); via_actual(*sv,nets["GBE_SHIELD"])
             route(b,[c2,sv],nets["GBE_SHIELD"],pcbnew.B_Cu,shift=False)
-            route(b,[sv,(96,36),(96,56.05)],nets["GBE_SHIELD"],pcbnew.F_Cu,shift=False)
+            route(b,[sv,(96 + SUP_DX,36),(96 + SUP_DX,56.05),(96,56.05)],nets["GBE_SHIELD"],pcbnew.F_Cu,shift=False)
         else:
             route(b,[(66.785,56.83),(83.73,51.73)],nets["ETH_CT4"],pcbnew.F_Cu)
             route(b,[(75.675,55.56),(75.675,59.0),(82.5,59.0),(82.5,50.5),(86.27,50.5),(86.27,51.73)],nets["ETH_CT2"],pcbnew.F_Cu)
