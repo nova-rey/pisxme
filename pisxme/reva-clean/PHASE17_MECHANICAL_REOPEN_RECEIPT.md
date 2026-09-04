@@ -34,6 +34,11 @@ four remaining courtyard overlaps, with no `MECH_V100` courtyard entries.
 The remaining DRC/unconnected items are inherited acreage scaffold debt and
 are not treated as proof of an Ethernet collision.
 
+The scoped checks were rerun on the saved trial: Ethernet regression PASS;
+route metrics PASS; pair skew was 0.547, 0.681, 0.688, and 0.829 mm for
+TD2, TD0, TD3, and TD1 respectively.  The MDI paths remain F.Cu-only in this
+candidate and no forbidden plane-layer signal was introduced.
+
 ## Next authorized experiment
 
 Re-author the complete source-to-ESD fanout with the ESD/support island near

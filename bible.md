@@ -3638,3 +3638,13 @@ power-related short/crossing/hole findings, and plane-layer compliance.
 - Consultant Crosscheck recommended the next bounded experiment: CM5-adjacent
   ESD/support with an outboard MagJack, followed by native mechanical and
   scoped routing validation. Phase 17 remains open.
+
+2026-09-04 — Phase 17 soft-envelope candidate validation
+
+- Reclassified the embedded `MECH_V100` courtyard graphic using native KiCad
+  10 layer IDs in the disposable authoring path; saved
+  `ACREAGE_PHASE17_COOLER_AIRFLOW_F1_ETH_SOFT.kicad_pcb`.
+- Scoped Ethernet regression and native route metrics pass; all four pair
+  skews remain below 1 mm and the candidate has no true Ethernet crossing or
+  short. The full acreage DRC remains inherited scaffold debt, so Phase 17 is
+  not yet closed.
