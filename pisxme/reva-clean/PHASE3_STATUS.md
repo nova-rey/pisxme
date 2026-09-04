@@ -113,3 +113,11 @@ coherent U7/J3 storage island. A fresh coordinated candidate at U7 `(120,140)`
 DRC violations / 426 unconnected items; it is rejected for local USB3 landing
 crossings and PERST interaction, while the PCIe ancestor remained unchanged.
 Phase 19 is active again; Phase 20+ has not started.
+
+Phase 19 coordinated placement sweep update (2026-09-04): open-acreage
+candidates at U7/J3 `(140,140)/(170,125)` and related placements were tested
+with native KiCad DRC. The best pre-refinement candidate measured 224
+violations / 426 unconnected but retained real USB3/PERST and pair crossings.
+A coordinate-derived SATA lane refinement measured 229 / 426 and was rejected
+for new local SATA lane crossings. No PCIe geometry changed; Phase 19 remains
+active.

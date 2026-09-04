@@ -53,3 +53,9 @@ experiment, but demonstrates that the remaining failure is local USB3 landing
 geometry rather than a reason to preserve the former U7 coordinate. Phase 19
 remains active; further co-located island candidates will keep the PCIe
 ancestor unchanged.
+
+Placement-sweep continuation: U7/J3 `(140,140)/(170,125)` was the best
+tested open-acreage class at 224 violations / 426 unconnected, but retained
+real USB3/PERST and pair crossings. A coordinate-derived SATA-lane refinement
+measured 229 / 426 and introduced local SATA lane crossings/shorts; it is
+rejected. No PCIe geometry changed.

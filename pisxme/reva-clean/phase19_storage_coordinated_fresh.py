@@ -1,7 +1,8 @@
 """Fresh coordinated storage island: exact CM5 escape, moved U7/J3, USB3+SATA."""
 from pathlib import Path
+import os
 import pcbnew
-R=Path(__file__).resolve().parent; BASE=R/'ACREAGE_PHASE18_USB3_LOCAL.kicad_pcb'; OUT=R/'ACREAGE_PHASE19_STORAGE_COORDINATED_FRESH.kicad_pcb'; W=pcbnew.FromMM(.13208)
+R=Path(__file__).resolve().parent; BASE=R/'ACREAGE_PHASE18_USB3_LOCAL.kicad_pcb'; OUT=R/(os.environ.get('P19_OUT','ACREAGE_PHASE19_STORAGE_COORDINATED_FRESH.kicad_pcb')); W=pcbnew.FromMM(.13208)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def xy(p): return pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y)
 def P(f,n): return next(p for p in list(f.Pads()) if str(p.GetNumber())==str(n))
@@ -11,7 +12,7 @@ def X(b,n,p):
  q=pcbnew.PCB_VIA(b);q.SetPosition(V(*p));q.SetWidth(pcbnew.FromMM(.5));q.SetDrill(pcbnew.FromMM(.3));q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu);q.SetNet(n);b.Add(q)
 def main():
  b=pcbnew.LoadBoard(str(BASE));u=b.FindFootprintByReference('U7');j=b.FindFootprintByReference('J3');src=b.FindFootprintByReference('J7')
- u.SetPosition(V(120,140));u.SetOrientationDegrees(180);j.SetPosition(V(145,125));j.SetOrientationDegrees(90)
+ u.SetPosition(V(float(os.environ.get('P19_U7_X','120')),float(os.environ.get('P19_U7_Y','140'))));u.SetOrientationDegrees(int(os.environ.get('P19_U7_ROT','180')));j.SetPosition(V(float(os.environ.get('P19_J3_X','145')),float(os.environ.get('P19_J3_Y','125'))));j.SetOrientationDegrees(int(os.environ.get('P19_J3_ROT','90')))
  sp={str(p.GetNumber()):xy(p) for p in list(src.Pads())};up={str(p.GetNumber()):xy(p) for p in list(u.Pads())};jp={str(p.GetNumber()):xy(p) for p in list(j.Pads())};upad={str(p.GetNumber()):p for p in list(u.Pads())};jpad={str(p.GetNumber()):p for p in list(j.Pads())}
  for t in list(b.GetTracks()):
   if 'USB3' in t.GetNetname(): b.Remove(t)
@@ -32,16 +33,12 @@ def main():
    for z in landing:T(b,n,a,z,pcbnew.F_Cu);a=z
    T(b,n,a,d,pcbnew.F_Cu)
  n=b.FindNet('/CORE_CM5/CM5_USB3_TX_P');s=sp['142'];d=up['46'];T(b,n,s,(71.2,106.7),pcbnew.F_Cu);T(b,n,(71.2,106.7),(71,109),pcbnew.F_Cu);X(b,n,(71,109));T(b,n,(71,109),(82,112),pcbnew.B_Cu);X(b,n,(82,112));T(b,n,(82,112),(82,150),pcbnew.B_Cu);T(b,n,(82,150),(114,150),pcbnew.B_Cu);X(b,n,(114,150));T(b,n,(114,150),d,pcbnew.F_Cu)
- # SATA V3 corridor on the same moved island.
- for name,un,jn,pts in (('BRIDGE_SATA_TX_P','57','1',[(120.5,130),(132,130),(132,134.25)]),('BRIDGE_SATA_TX_N','56','2',[(121,110),(150,110),(150,134)]),('BRIDGE_SATA_RX_P','60','3',[(119,120),(136,120),(136,133.75)]),('BRIDGE_SATA_RX_N','59','4',[(119.5,118),(144,118),(142,133.5)])):
-  n=b.FindNet('/STORAGE/'+name);upad[un].SetNet(n);jpad[jn].SetNet(n);a=up[un]
-  for i,z in enumerate(pts):
-   T(b,n,a,z,pcbnew.F_Cu if name=='BRIDGE_SATA_TX_N' else (pcbnew.B_Cu if i else pcbnew.F_Cu));
-   if name=='BRIDGE_SATA_TX_P' and i==0:X(b,n,z)
-   if name in ('BRIDGE_SATA_RX_P','BRIDGE_SATA_RX_N') and i==0:X(b,n,z)
-   a=z
-  if name=='BRIDGE_SATA_TX_P': X(b,n,pts[-1]);T(b,n,pts[-1],jp[jn],pcbnew.F_Cu)
-  elif name=='BRIDGE_SATA_TX_N': T(b,n,pts[-1],jp[jn],pcbnew.F_Cu)
-  else: X(b,n,pts[-1]);T(b,n,pts[-1],jp[jn],pcbnew.F_Cu)
+ # SATA corridor is derived from the actual moved pad coordinates.  The two
+ # pairs use separate permitted layers and monotonic lanes; vias are outside
+ # both SMD pad fields and each M.2 launch returns to F.Cu before the pad.
+ for name,un,jn,lane,layer in (('BRIDGE_SATA_TX_P','57','1',5,pcbnew.F_Cu),('BRIDGE_SATA_TX_N','56','2',7,pcbnew.B_Cu),('BRIDGE_SATA_RX_P','60','3',-3,pcbnew.F_Cu),('BRIDGE_SATA_RX_N','59','4',-5,pcbnew.B_Cu)):
+  n=b.FindNet('/STORAGE/'+name);upad[un].SetNet(n);jpad[jn].SetNet(n)
+  s=up[un];d=jp[jn]; x0,y0=s; x1,y1=d; turn=(x0+10,y0+lane); end=(x1-4,y1+lane)
+  T(b,n,s,turn,pcbnew.F_Cu); X(b,n,turn); T(b,n,turn,end,layer); X(b,n,end); T(b,n,end,d,pcbnew.F_Cu)
  b.BuildListOfNets();b.Save(str(OUT));print(OUT)
 if __name__=='__main__':main()
