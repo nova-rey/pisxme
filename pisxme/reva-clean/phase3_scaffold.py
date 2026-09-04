@@ -108,7 +108,10 @@ def contract_symbol(name: str, ports: tuple[str, ...]) -> str:
 def sheet_block(name: str, number: int) -> str:
     uid = make_uuid(0x10000000000000000000000000000000 + number)
     x = 35 + ((number - 1) % 5) * 35
-    y = 45 + ((number - 1) // 5) * 30
+    # Keep the second row clear of the tall PCIe/core sheets.  The old 30 mm
+    # pitch caused root-sheet graphics (and therefore native connectivity) to
+    # overlap when the first-row sheets had many ports.
+    y = 45 + ((number - 1) // 5) * 65
     sheet_height = max(18, len(PORTS[name]) * 3 + 4)
     pins = "".join(
         f'''\n    (pin "{port}" bidirectional (at {x} {y + 2 + (index * 3)} 180)\n      (effects (font (size 1.27 1.27)) (justify left))\n      (uuid {make_uuid(0x40000000000000000000000000000000 + number * 100 + index)}))'''
