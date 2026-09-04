@@ -1637,3 +1637,48 @@ fuse corridor or inventing another long Ethernet bridge. The latter has
 already failed as a solution class. The exact CM5IO/EDAC fixture remains the
 selected electrical authority; no production promotion or Phase 18 work has
 started.
+
+## Current blocker — F1-only power-entry reopening exhausted — 2026-09-04
+
+The first authorized power-entry repair was executed from the validated
+`ACREAGE_PCIE_PHASE16.kicad_pcb` ancestor. A disposable harness moved only
+the coherent F1 fuse footprint and its directly attached high-current copper,
+preserving the dual-12-V concept, both fuse nets, the protected-load trunk,
+and the proven CM5IO Ethernet island. Three targets were tested:
+
+| Trial | F1 target | Native DRC disposition |
+| --- | ---: | --- |
+| `ACREAGE_PHASE17_F1_left_ETHERNET` | (20,40) mm | REJECTED: genuine Ethernet/U3 shorts and unconnected items |
+| `ACREAGE_PHASE17_F1_leftlow_ETHERNET` | (20,60) mm | REJECTED: same U3/CM5-5V feedback collision class |
+| `ACREAGE_PHASE17_F1_upper_ETHERNET` | (100,20) mm | REJECTED: same U3/CM5-5V feedback collision class |
+
+Moving F1 removes the original `FUSED_12V_A`/CT-support body overlap, but does
+not remove the dominant obstruction: the fixed Ethernet MDI launch and
+return-via field still intersects adjacent U3 `CM5_5V`/`FB_CM5_5V` support
+geometry. Native DRC reports real shorts involving `CM5_GBE_TD0_N`,
+`CM5_GBE_TD1_P`, `CM5_GBE_TD3_N`, `/REGULATORS/FB_CM5_5V`, and `POWER_GND`,
+plus connectivity debt. This is not stale zone fill; the isolated exact
+CM5IO/EDAC fixture still passes its zero-short/zero-crossing/zero-open
+subgate.
+
+The consultant unblocker was invoked as required but did not return within
+bounded 10-second and 60-second waits. Consultant availability is not being
+used as an engineering conclusion. Local evidence identifies the remaining
+blocker: the F1-only repair class is insufficient. Phase 17 remains open and
+Phase 18+ remains gated.
+
+Smallest practical continuation options:
+
+1. Re-author and move the complete U3 regulator island together with the
+   relocated F1/protection corridor, including all local copper, then rerun
+   Phase 15/16 and the full Phase 17 gate. Recommended; this requires a
+   complete regulator-copper proof, not a footprint-only translation.
+2. Move the complete proven Ethernet island to open acreage and re-prove the
+   J7-to-island launch under the same stack/layer contract.
+3. If neither coherent path clears the collision, request a decision on the
+   smallest major floorplan change. No architecture, layer, stack, PCIe,
+   CM5, V100/SXM2, or Ethernet electrical change has been made.
+
+`phase17_move_f1_trial.py` and the three disposable board/report artifacts
+are retained as reproducible negative evidence. No clean PCB/schematic was
+modified or promoted.

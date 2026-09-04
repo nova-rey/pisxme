@@ -3288,5 +3288,17 @@
   EDAC launch field.
 - Native KiCad 10.0.5 DRC reports 235 findings but zero unconnected pads and
   no track-crossing, shorting, or unconnected-item categories. Ethernet
-  mapping, authority, and fixture regressions pass. Production promotion and
-  the full acreage Phase 17 gate remain pending.
+ mapping, authority, and fixture regressions pass. Production promotion and
+ the full acreage Phase 17 gate remain pending.
+
+2026-09-04 — Phase 17 authorized power-entry reopening disposition
+
+- Built a disposable F1-only relocation harness from the validated Phase 16
+  ancestor, preserving both 12-V input/fused nets and the downstream power
+  trunk while moving the fuse as a coherent power-entry element.
+- Tested F1 targets (20,40), (20,60), and (100,20) mm with the exact proven
+  CM5IO/EDAC Ethernet overlay. All three were rejected: F1-body overlap was
+  removed, but the fixed Ethernet launch still produced genuine shorts with
+  adjacent U3 CM5_5V/FB_CM5_5V support geometry and retained connectivity debt.
+- Preserved disposable boards and native DRC reports as negative evidence.
+  Phase 17 remains open; no production promotion or Phase 18 work began.
