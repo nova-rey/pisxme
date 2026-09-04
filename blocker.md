@@ -1629,3 +1629,11 @@ connectivity debt to 291 unconnected items and was rejected. A support-island
 translation to the left also retained CT launch shorts/crossings. The exact
 compact CM5IO fixture was restored and revalidated at 237 findings with zero
 unconnected pads, shorts, or crossings.
+
+The authorized widened trials are now complete for this repair wave. The
+right-70 mm U3 move and left/right Ethernet-support alternatives do not clear
+the combined obstruction without either reauthoring the adjacent power-input
+fuse corridor or inventing another long Ethernet bridge. The latter has
+already failed as a solution class. The exact CM5IO/EDAC fixture remains the
+selected electrical authority; no production promotion or Phase 18 work has
+started.

@@ -3271,6 +3271,16 @@
 - Rejected both candidates and restored the compact exact CM5IO fixture,
   which revalidated with zero unconnected pads, shorts, and crossings.
 
+2026-09-04 — Phase 17 local repair wave disposition
+
+- Completed the authorized U3-island and Ethernet-support translation wave,
+  including the refilled-zone checks. No candidate cleared the combined
+  power-input/frozen-corridor obstruction without new route conflicts or
+  connectivity debt.
+- Kept the exact CM5IO/EDAC fixture as the electrical authority and preserved
+  all disposable candidates as evidence. Phase 17 remains open; Phase 18+
+  remains gated.
+
 2026-09-03 — Phase 17 exact EDAC RC support closure experiment
 
 - Reordered the disposable B.Cu support island so CT2 routes directly to its
