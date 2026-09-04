@@ -3472,3 +3472,16 @@
 - Preserved all disposable boards/reports, kept the lower `(60,165)` U3/F1
   placement as the working ancestor, and left Phase 17 open. No Phase 18+
   work or clean release promotion occurred.
+
+2026-09-04 — Phase 17 consultant unblocker and CM5IO launch discriminator
+
+- Consultant review classified the CM5 +5 V issue as corridor/launch geometry,
+  not a malformed CM5 footprint, and recommended a pad-complete fixture with
+  neighboring pads retained plus an ordinary-via escape outside the field.
+- Executed the discriminator using the official CM5IO 0.20 mm fanout width,
+  an ordinary 0.50/0.30 mm B.Cu transition, and a dedicated return corridor
+  into the lower U3 island.
+- The best integrated disposable ancestor has zero native DRC
+  `shorting_items` and `tracks_crossing`; it still has inherited unconnected
+  acreage records and known Ethernet launch/mechanical findings. Phase 17
+  remains open, with no clean-release or Phase 18+ work started.

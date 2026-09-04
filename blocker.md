@@ -1920,6 +1920,25 @@ the lower island can be promoted. No frozen PCIe, V100/SXM2, stack, power
 topology, or Ethernet electrical architecture was changed; no Phase 18+
 work began.
 
+## Phase 17 consultant unblocker review — 2026-09-04
+
+The consultant review independently classified the CM5 power issue as a
+corridor/launch problem, not a malformed footprint: the official CM5IO CAD
+uses the same 0.2 x 0.7 mm, 0.4 mm-pitch module lands and 0.20 mm fanout
+traces. Its recommended discriminator is a pad-complete disposable J7 fixture
+with every neighboring pad retained, followed by an ordinary-via transition
+outside the connector field; the six +5 V lands must merge only after the
+neighboring field is cleared.
+
+That discriminator was executed in the lower-island harness. The CM5 launch
+now leaves J7 at 0.20 mm, transitions to B.Cu outside the pad, passes the
+module/connector region, and returns to the U3 output island on F.Cu. The best
+candidate `ACREAGE_PHASE17_TI_U3_F1_ETH_60_165AC_CT1F.kicad_pcb` has zero
+native DRC `shorting_items` and zero `tracks_crossing` records. Its remaining
+findings are inherited acreage unconnected records and the already-known
+Ethernet center-tap/launch and mechanical clearances, so this is evidence for
+the next local Ethernet cleanup rather than a Phase 17 close.
+
 ## Phase 17 authoritative CM5 fanout and lower-island reauthoring — 2026-09-04
 
 The official CM5IO Rev 2 PCB was inspected directly. Its module footprint

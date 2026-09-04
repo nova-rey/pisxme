@@ -15,6 +15,7 @@ OUT = Path(os.environ.get("PISXME_OUT", ROOT / "ACREAGE_PHASE17_CM5IO_EDAC_RC.ki
 PREFIXES = ("CM5_GBE_TD", "ETH_", "GBE_")
 CT1_LAYER_OVERRIDE = os.environ.get("PISXME_CT1_LAYER", "")
 CT2_LAYER_OVERRIDE = os.environ.get("PISXME_CT2_LAYER", "")
+SAFE_CT_LAUNCH = os.environ.get("PISXME_SAFE_CT_LAUNCH", "") == "1"
 ETH_REFS = {"J2", "U6", "U9", "CCT", "CCT1", "CCT2", "CCT3", "CCT4",
             "RCT1", "RCT2", "RCT3", "RCT4"}
 
@@ -92,6 +93,26 @@ def main():
             q.SetNet(n)
         else:
             _, start, end, layer, width, _ = record
+            pname0 = pname
+            if SAFE_CT_LAUNCH and layer == pcbnew.B_Cu and pname0 in {"ETH_CT2", "ETH_CT3"}:
+                s = (pcbnew.ToMM(start.x), pcbnew.ToMM(start.y))
+                e = (pcbnew.ToMM(end.x), pcbnew.ToMM(end.y))
+                # The source CT launches are electrically correct but the
+                # straight integrated copies graze the EDAC mounting holes.
+                # Preserve the official pad/support endpoints and add only a
+                # local B.Cu dogleg around the authoritative hole envelope.
+                launch = {
+                    "ETH_CT1": ((86.0,58.5),),
+                    "ETH_CT2": ((84.5,57.0),),
+                    "ETH_CT3": ((68.0,58.0),),
+                    "ETH_CT4": ((69.0,58.5),),
+                }.get(pname0, ())
+                if launch and min(s[0], e[0]) > 60 and max(s[1], e[1]) > 50:
+                    pts = (s,) + launch + (e,)
+                    for a0, z0 in zip(pts, pts[1:]):
+                        q = pcbnew.PCB_TRACK(board); q.SetStart(V(*a0)); q.SetEnd(V(*z0))
+                        q.SetLayer(pcbnew.B_Cu); q.SetWidth(width); q.SetNet(n); board.Add(q)
+                    continue
             # The CM5IO center-tap branches are low-speed support copper.  A
             # caller may move only CT1 to the opposite permitted signal layer
             # to remove a board-context crossing; all MDI geometry remains an
