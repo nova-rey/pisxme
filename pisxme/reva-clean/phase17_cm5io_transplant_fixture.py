@@ -62,8 +62,12 @@ def main():
     j7=addfp(b,"PiSXMeRevAClean_Raspberry_Pi_5_Compute_Module","J7",30 + DIRECT_SHIFT,130,0)
     j2=addfp(b,"EDAC_A70_112_331N126","J2",72.5 + DIRECT_SHIFT,53,180)
     oj9=oracle.FindFootprintByReference("J9"); oc1=oracle.FindFootprintByReference("C1")
-    j9=copyfp(b,oj9,"J9",*T(*xy(oj9.GetPosition())),0)
-    c1=copyfp(b,oc1,"C1",92 + DIRECT_SHIFT,44,90)
+    j9=None
+    if os.environ.get("PISXME_OMIT_SUPPORT") != "1":
+        j9=copyfp(b,oj9,"J9",*T(*xy(oj9.GetPosition())),0)
+    # C1 is an official CM5IO-local support part, but the clean Ethernet
+    # authority has no corresponding capacitor or common CT net.  Do not
+    # invent that topology in this exact EDAC fixture.
     for g in list(j2.GraphicalItems()):
         if g.GetLayer() == pcbnew.F_SilkS: g.SetLayer(pcbnew.F_Fab)
     # Official 10-pin USON footprints and the CM5IO flow-through pin map.
@@ -87,8 +91,10 @@ def main():
     # center-tap contacts and must retain the clean schematic's distinct
     # ETH_CT1..ETH_CT4 authority; the common support node is not a pad net.
     assign(j2,{1:"CM5_GBE_TD0_P",2:"CM5_GBE_TD0_N",3:"CM5_GBE_TD1_P",6:"CM5_GBE_TD1_N",7:"CM5_GBE_TD2_P",8:"CM5_GBE_TD2_N",9:"CM5_GBE_TD3_P",10:"CM5_GBE_TD3_N",11:"ETH_CT1",12:"ETH_CT2",13:"ETH_CT3",14:"ETH_CT4",15:"GBE_LED_Y_A",16:"GBE_LED_Y_K",17:"GBE_LED_G_A",18:"GBE_LED_G_K",19:"GBE_SHIELD",20:"GBE_SHIELD"},nets)
-    assign(j9,{1:"ETH_CT_COMMON",2:"ETH_CT_COMMON",3:"ETH_CT_COMMON",4:"ETH_CT_COMMON"},nets)
-    assign(c1,{1:"ETH_CT_COMMON",2:"ETH_GND"},nets)
+    if j9 is not None:
+        # J9 is retained only as a disposable, individually-labelled CT
+        # witness. Its ordering follows the physical escape experiment.
+        assign(j9,{1:"ETH_CT4",2:"ETH_CT2",3:"ETH_CT3",4:"ETH_CT1"},nets)
     # Copy only official TRD0..TRD3 tracks. Their endpoints align with the
     # transformed J7/U6/U9/J2 pads exactly; no synthetic route is introduced.
     mapping={f"TRD{i}_{p}":f"CM5_GBE_TD{i}_{p}" for i in range(4) for p in "PN"}
@@ -115,26 +121,16 @@ def main():
                   (155.4,139.4),(149.4,139.4),(153.0,137.8)):
             vp=T(*p); gvia.append(vp)
             q=pcbnew.PCB_VIA(b); q.SetPosition(V(*vp)); q.SetWidth(pcbnew.FromMM(.45)); q.SetDrill(pcbnew.FromMM(.20)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(nets["ETH_GND"]); b.Add(q)
-        # The CM5IO support is a common center-tap island. A dedicated In2
-        # copper island connects all EDAC/J9 through-hole lands and the
-        # relocated C1 pad through normal plated-hole access without routing
-        # a support trace through the F.Cu MDI corridor.
-        # Same-net B.Cu fanout around the EDAC hole field. Keeping these
-        # segments explicit avoids a detached-zone fill across NPTH holes.
-        ct = nets["ETH_CT_COMMON"]
-        route(b,[(66.785,56.83),(69.325,55.56),(75.675,55.56),(78.215,56.83)],ct,pcbnew.B_Cu)
-        route(b,[(74.405,59.35),(74.405,57.0),(75.675,55.56)],ct,pcbnew.B_Cu)
-        route(b,[(73.135,61.89),(73.135,60.5),(74.405,59.35)],ct,pcbnew.B_Cu)
-        route(b,[(78.215,56.83),(76.5,57.5),(76.0,51.0),(82.0,51.0),(83.73,54.27)],ct,pcbnew.B_Cu)
-        route(b,[(75.675,55.56),(75.675,48.0),(86.27,48.0),(86.27,51.73)],ct,pcbnew.B_Cu)
-        route(b,[(69.325,55.56),(69.325,50.5),(62.0,50.5),(62.0,46.5),(86.27,46.5),(86.27,51.73)],ct,pcbnew.B_Cu)
-        route(b,[(66.785,56.83),(82.0,48.5),(83.73,51.73)],ct,pcbnew.B_Cu)
-        route(b,[(83.73,51.73),(86.27,51.73),(86.27,54.27),(83.73,54.27)],ct,pcbnew.B_Cu)
-        c1p=xy(c1.FindPadByNumber("1").GetPosition())
-        cv=pcbnew.PCB_VIA(b); cv.SetPosition(V(94 + DIRECT_SHIFT,42)); cv.SetWidth(pcbnew.FromMM(.50)); cv.SetDrill(pcbnew.FromMM(.30)); cv.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); cv.SetNet(ct); b.Add(cv)
-        c1p=(c1p[0]-DIRECT_SHIFT,c1p[1])
-        route(b,[c1p,(94,43),(94,42)],ct,pcbnew.F_Cu)
-        route(b,[(94,42),(88,42),(86.27,51.73)],ct,pcbnew.B_Cu)
+        # The clean EDAC authority exposes four distinct center-tap nets.
+        # Route each to the disposable support header without a common-node
+        # shortcut; all segments are ordinary B.Cu traces.
+        # The two pairs of support traces occupy opposite permitted copper
+        # layers.  This is a normal through-via-equivalent escape at the
+        # through-hole parts, and avoids inventing a common CT bus.
+        route(b,[(66.785,56.83),(83.73,51.73)],nets["ETH_CT4"],pcbnew.F_Cu)
+        route(b,[(75.675,55.56),(75.675,59.0),(82.5,59.0),(82.5,50.5),(86.27,50.5),(86.27,51.73)],nets["ETH_CT2"],pcbnew.F_Cu)
+        route(b,[(69.325,55.56),(83.73,54.27)],nets["ETH_CT3"],pcbnew.B_Cu)
+        route(b,[(78.215,56.83),(79.0,59.5),(84.0,59.5),(84.0,53.5),(86.27,53.5),(86.27,54.27)],nets["ETH_CT1"],pcbnew.F_Cu)
         # Shield return is kept as its declared GBE_SHIELD net until the
         # final schematic net-tie decision; both physical shield lands tie.
         s1=xy(j2.FindPadByNumber("19").GetPosition()); s2=xy(j2.FindPadByNumber("20").GetPosition())
@@ -143,8 +139,6 @@ def main():
         # The detached fixture's C1 return joins the copied GND escape with
         # ordinary through-via and B.Cu spine; no via is placed in a pad.
         q=pcbnew.PCB_VIA(b); q.SetPosition(V(98 + DIRECT_SHIFT,50)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(nets["ETH_GND"]); b.Add(q)
-        c1p2=xy(c1.FindPadByNumber("2").GetPosition()); c1p2=(c1p2[0]-DIRECT_SHIFT,c1p2[1])
-        route(b,[c1p2,(90,44.48),(90,50),(98,50)],nets["ETH_GND"])
         route(b,[(98,50),(98,72),(70,72),(70.1,64.1)],nets["ETH_GND"],pcbnew.B_Cu)
         route(b,[(70.1,64.1),(70.0324,66.2071),(72.5,65.7),(73.9,65.7),(76.1,66.3),(76.1,64.1)],nets["ETH_GND"],pcbnew.B_Cu)
     outline(b,8,35,100,125)

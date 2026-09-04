@@ -88,6 +88,36 @@ downstream phases before retrying Phase 17.
 Routing Ethernet on power/ground plane layers or accepting the current maze
 would violate the approved plan and is rejected.
 
+## Current exact-EDAC CM5IO transplant result — 2026-09-03
+
+The official Raspberry Pi CM5IO MDI graph was regenerated against the exact
+PiSXMe EDAC authority. J2 pads 11..14 now carry distinct `ETH_CT1` through
+`ETH_CT4`; pads 4 and 5 remain NC. The PCB mapping regression passes:
+
+`phase17 Ethernet PCB pin mapping: PASS; ESD/MagJack pin authority preserved`
+
+The prior common-center-tap construction was rejected as an invented net
+collapse. A disposable individually-routed J9 experiment connected all four
+tap nets, but native DRC rejected that support geometry because its routes
+collided with the EDAC through-hole launch field and shield return. It is not
+promoted and is preserved as negative evidence in
+`pisxme/reva-clean/CM5IO_DIRECT_J7_ETHERNET_FIXTURE-exactct-individual-drc.rpt`.
+
+The valid focused MDI fixture is regenerated with support omitted solely to
+isolate the proven signal path. Native KiCad 10.0.5 DRC reports no MDI track
+crossings or shorts; the four remaining unconnected items are deliberately
+omitted ESD ground/shield support connections. This is a subgate, not Phase
+17 closure. The direct official MDI transplant remains the selected topology;
+exact clean center-tap/support integration is the current recoverable blocker.
+
+The CM5IO reference design closes the MDI routing architecture, but cannot by
+itself close PiSXMe's EDAC support mapping: the clean Ethernet schematic
+exposes four distinct CT nets and does not contain the CM5IO common CT
+capacitor/header network. The next bounded continuation is to derive a real
+four-net support implementation from the clean schematic and EDAC authority,
+or document the required schematic support addition before acreage promotion.
+No Phase 18+ work has started.
+
 ## 2026-09-03 placement-repair sprint evidence
 
 The authorized Phase 11/12 Ethernet-only reopening was attempted with nine

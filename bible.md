@@ -3153,3 +3153,12 @@
 - Native PCB mapping regression passed; focused DRC retained zero MDI opens,
   shorts, and crossings with support intentionally omitted.
 - Kept Phase 17 open for individually routed center-tap/support closure.
+
+2026-09-03 — Phase 17 exact EDAC support experiment
+
+- Rejected the prior artificial common-center-tap collapse and assigned EDAC
+  pads 11..14 to distinct ETH_CT1..4 nets; mapping regression passed.
+- Tested individually routed disposable support-header escapes; native DRC
+  rejected their collisions with the through-hole launch field and shield.
+- Preserved the official CM5IO MDI transplant as the selected topology and
+  kept Phase 17 gated pending an authoritative four-net support implementation.
