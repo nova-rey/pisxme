@@ -3430,3 +3430,6 @@
 - Candidate still fails the broader gate on connector-field clearances,
   inherited unconnected scaffold debt, and the pre-existing CM5_PERST /
   bridge-capacitor conflict. Phase 17 remains open; no Phase 18+ work began.
+- The complementary CT2 opposite-layer transition was compared and rejected
+  as one additional launch-clearance finding worse than the retained CT1
+  variant; no release artifact was promoted.

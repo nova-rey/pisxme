@@ -14,6 +14,7 @@ FIXTURE = ROOT / "CM5IO_DIRECT_J7_ETHERNET_FIXTURE.kicad_pcb"
 OUT = Path(os.environ.get("PISXME_OUT", ROOT / "ACREAGE_PHASE17_CM5IO_EDAC_RC.kicad_pcb"))
 PREFIXES = ("CM5_GBE_TD", "ETH_", "GBE_")
 CT1_LAYER_OVERRIDE = os.environ.get("PISXME_CT1_LAYER", "")
+CT2_LAYER_OVERRIDE = os.environ.get("PISXME_CT2_LAYER", "")
 ETH_REFS = {"J2", "U6", "U9", "CCT", "CCT1", "CCT2", "CCT3", "CCT4",
             "RCT1", "RCT2", "RCT3", "RCT4"}
 
@@ -95,8 +96,9 @@ def main():
             # caller may move only CT1 to the opposite permitted signal layer
             # to remove a board-context crossing; all MDI geometry remains an
             # exact CM5IO transplant.
-            if pname == "ETH_CT1" and CT1_LAYER_OVERRIDE:
-                layer = {"F.Cu": pcbnew.F_Cu, "B.Cu": pcbnew.B_Cu}.get(CT1_LAYER_OVERRIDE, layer)
+            override = CT1_LAYER_OVERRIDE if pname == "ETH_CT1" else CT2_LAYER_OVERRIDE if pname == "ETH_CT2" else ""
+            if override:
+                layer = {"F.Cu": pcbnew.F_Cu, "B.Cu": pcbnew.B_Cu}.get(override, layer)
                 if layer == pcbnew.F_Cu:
                     # Keep the through-hole/SMD endpoint launches on their
                     # original B.Cu side and put only the crossing middle
@@ -105,8 +107,12 @@ def main():
                     # Move the transition away from the neighboring EDAC CT2
                     # through-hole launch; the first offset was too close to
                     # J2 pad 12 in the acreage context.
-                    va = (pcbnew.ToMM(start.x) + 1.5, pcbnew.ToMM(start.y) + 1.5)
-                    vz = (pcbnew.ToMM(end.x) + 0.8, pcbnew.ToMM(end.y) - 0.8)
+                    if pname == "ETH_CT1":
+                        va = (pcbnew.ToMM(start.x) + 1.5, pcbnew.ToMM(start.y) + 1.5)
+                        vz = (pcbnew.ToMM(end.x) + 0.8, pcbnew.ToMM(end.y) - 0.8)
+                    else:
+                        va = (pcbnew.ToMM(start.x) - 1.5, pcbnew.ToMM(start.y) + 1.5)
+                        vz = (pcbnew.ToMM(end.x) + 0.8, pcbnew.ToMM(end.y) - 0.8)
                     for p0 in (va, vz):
                         v = pcbnew.PCB_VIA(board); v.SetPosition(V(*p0))
                         v.SetWidth(pcbnew.FromMM(.50)); v.SetDrill(pcbnew.FromMM(.30))

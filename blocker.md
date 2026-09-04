@@ -1877,3 +1877,9 @@ connector/launch clearance records; the only remaining electrical short is
 the pre-existing CM5_PERST/bridge-capacitor placement conflict. This is a
 useful Ethernet-local repair but is not yet a Phase 17 pass because the
 connector-field clearance and inherited board debt still require resolution.
+
+The complementary CT2-to-F.Cu transition was also tested. It removes the
+CT1/CT2 crossing, but native DRC retains an additional CT2-to-CT1 clearance
+finding at the EDAC launch and a hole-clearance finding at the connector.
+CT1-to-F.Cu is therefore the retained local variant; neither is promoted
+until the connector launch is re-authored with manufacturable clearances.
