@@ -78,12 +78,15 @@ def main():
                                 ("RCT2",62,"ETH_CT2"),("RCT1",67,"ETH_CT1")):
             cap=addfp(b,"C_0603_1608Metric",ref.replace("R","C") ,x + DIRECT_SHIFT,45,0)
             res=addfp(b,"R_0402_1005Metric",ref,x + DIRECT_SHIFT,40,0)
+            cap.SetLayerAndFlip(pcbnew.B_Cu)
+            res.SetLayerAndFlip(pcbnew.B_Cu)
             branch=f"ETH_CT_BRANCH_{netname[-1]}"
             names_for_branch=nets.get(branch) or N(b,branch); nets[branch]=names_for_branch
             assign(cap,{1:netname,2:branch},nets)
             assign(res,{1:branch,2:"ETH_CT_COMMON"},nets)
             branch_caps.append(cap); branch_res.append(res)
         cct=addfp(b,"C_0603_1608Metric","CCT",72 + DIRECT_SHIFT,40,0)
+        cct.SetLayerAndFlip(pcbnew.B_Cu)
         assign(cct,{1:"ETH_CT_COMMON",2:"GBE_SHIELD"},nets)
     # C1 is an official CM5IO-local support part, but the clean Ethernet
     # authority has no corresponding capacitor or common CT net.  Do not
@@ -152,30 +155,28 @@ def main():
                 return xy(f.FindPadByNumber(str(number)).GetPosition())
             def via_actual(x,y,net):
                 q=pcbnew.PCB_VIA(b); q.SetPosition(V(x,y)); q.SetWidth(pcbnew.FromMM(.45)); q.SetDrill(pcbnew.FromMM(.20)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(net); b.Add(q)
-            # Four pair-specific escapes into the manufacturer RC branches.
-            # The long source-to-branch trunks use B.Cu; each SMT capacitor
-            # is reached through an off-pad via and a short F.Cu dogbone.
+            # Four pair-specific B.Cu escapes into the manufacturer RC
+            # branches. The branch footprints are on B.Cu, so no via is
+            # required at an SMT pad and the official F.Cu MDI graph remains
+            # isolated from this low-speed support network.
             for i,(source,cap,res,srcpad) in enumerate(zip(
                     ("ETH_CT4","ETH_CT3","ETH_CT2","ETH_CT1"),
                     branch_caps,branch_res,(14,13,12,11))):
                 a=actual(j2,srcpad); z=actual(cap,1)
-                sv=((70.0,58.0),(73.0,53.5),(82.0,53.5),(85.0,58.0))[i]
-                tv=(z[0]-.8,z[1]+1.0)
-                via_actual(*sv,nets[source]); via_actual(*tv,nets[source])
-                route(b,[a,sv],nets[source],pcbnew.F_Cu,shift=False)
-                route(b,[sv,tv],nets[source],pcbnew.B_Cu,shift=False)
-                route(b,[tv,z],nets[source],pcbnew.F_Cu,shift=False)
+                if source == "ETH_CT4":
+                    path=[a,(68.0,60.0),(58.0,60.0),z]
+                elif source == "ETH_CT2":
+                    path=[a,(90.0,52.0),(90.0,68.0),(65.0,68.0),z]
+                else:
+                    path=[a,z]
+                route(b,path,nets[source],pcbnew.B_Cu,shift=False)
                 ca=actual(cap,2); rb=actual(res,1)
-                route(b,[ca,(ca[0],42+i*.5),(rb[0],42+i*.5),rb],nets[f"ETH_CT_BRANCH_{source[-1]}"],pcbnew.F_Cu,shift=False)
-                rr=actual(res,2); via_actual(rr[0]-.8,rr[1]+.8,nets["ETH_CT_COMMON"])
-                route(b,[rr,(rr[0]-.8,rr[1]+.8)],nets["ETH_CT_COMMON"],pcbnew.F_Cu,shift=False)
-                route(b,[(rr[0]-.8,rr[1]+.8),(rr[0]-.8,37)],nets["ETH_CT_COMMON"],pcbnew.B_Cu,shift=False)
-            c1=actual(cct,1); via_actual(c1[0]-.8,c1[1]+.8,nets["ETH_CT_COMMON"])
-            route(b,[c1,(c1[0]-.8,c1[1]+.8)],nets["ETH_CT_COMMON"],pcbnew.F_Cu,shift=False)
-            route(b,[(51,37),(75,37)],nets["ETH_CT_COMMON"],pcbnew.B_Cu)
-            c2=actual(cct,2); via_actual(c2[0]+.8,c2[1]+.8,nets["GBE_SHIELD"])
-            route(b,[c2,(c2[0]+.8,c2[1]+.8)],nets["GBE_SHIELD"],pcbnew.F_Cu,shift=False)
-            route(b,[(c2[0]+.8,c2[1]+.8),(c2[0]+.8,36),(96,36),(96,56.05)],nets["GBE_SHIELD"],pcbnew.B_Cu,shift=False)
+                route(b,[ca,(ca[0],42+i*.5),(rb[0],42+i*.5),rb],nets[f"ETH_CT_BRANCH_{source[-1]}"],pcbnew.B_Cu,shift=False)
+                rr=actual(res,2); route(b,[rr,(rr[0],37),(75,37)],nets["ETH_CT_COMMON"],pcbnew.B_Cu,shift=False)
+            c1=actual(cct,1); route(b,[c1,(c1[0],37),(75,37)],nets["ETH_CT_COMMON"],pcbnew.B_Cu,shift=False)
+            c2=actual(cct,2); sv=(c2[0]-.8,c2[1]+.8); via_actual(*sv,nets["GBE_SHIELD"])
+            route(b,[c2,sv],nets["GBE_SHIELD"],pcbnew.B_Cu,shift=False)
+            route(b,[sv,(96,36),(96,56.05)],nets["GBE_SHIELD"],pcbnew.F_Cu,shift=False)
         else:
             route(b,[(66.785,56.83),(83.73,51.73)],nets["ETH_CT4"],pcbnew.F_Cu)
             route(b,[(75.675,55.56),(75.675,59.0),(82.5,59.0),(82.5,50.5),(86.27,50.5),(86.27,51.73)],nets["ETH_CT2"],pcbnew.F_Cu)

@@ -118,6 +118,19 @@ four-net support implementation from the clean schematic and EDAC authority,
 or document the required schematic support addition before acreage promotion.
 No Phase 18+ work has started.
 
+### Best B.Cu-local EDAC RC island — 2026-09-03
+
+The branch footprints were flipped onto B.Cu, keeping the four authoritative
+RC branches and the shield return on the support side opposite the official
+F.Cu MDI graph. Pair-specific source detours were added for CT4 and CT2, and
+the shield path was isolated with an ordinary transition.
+
+Native KiCad 10.0.5 DRC now reports **238 findings, 0 unconnected items, and
+0 shorts**. Four localized support-track crossings remain, so this is not a
+Phase 17 pass. A subsequent single-CT layer swap regressed to 251 findings
+with many MDI/support crossings and was rejected. The best candidate is
+preserved in `CM5IO_DIRECT_J7_ETHERNET_FIXTURE-edac-rc-bcu-best4-drc.rpt`.
+
 ### EDAC manufacturer RC termination authority — 2026-09-03
 
 The EDAC A70-series electrical drawing resolves the previously missing CT

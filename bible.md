@@ -3199,3 +3199,10 @@
   branches and 1 nF/2 kV shield return in the disposable fixture.
 - Native DRC rejected the first physical escape at 262 findings / 8
   unconnected items; retained the authority and kept production unchanged.
+
+2026-09-03 — Phase 17 B.Cu-local EDAC RC island
+
+- Flipped the support footprints to B.Cu and added targeted CT4/CT2 source
+  detours while preserving the official F.Cu MDI graph.
+- Improved the disposable fixture to 238 findings, zero unconnected items,
+  and zero shorts; four support crossings remain and Phase 17 stays open.
