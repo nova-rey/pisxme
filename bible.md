@@ -3849,3 +3849,4 @@ final Phase 17 closure remains pending the complete board gate.
   integration path per the Rev-A underside mechanical contract.
 - Phase 17 is closed; the co-located candidate is the Phase 18 ancestor. No
   Phase 18 routing has started in this checkpoint.
+2026-09-04 — Phase 18 storage authoring repair: native KiCad netlist now proves CM5 USB3 J7 pins 128/130/140/142 map to TI TUSB9261IPVP physical pins 45/46/42/43. The repair path uses authoritative TI pin numbers, separates the M.2 schematic instance, and adds a regression test. SATA/M.2 serialization remains gated pending a separate native-authoring correction; no USB3 routing or Phase 19 work began.
