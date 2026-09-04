@@ -201,3 +201,9 @@ reports zero unconnected items, zero `shorting_items`, and zero
 `tracks_crossing` findings on the complete disposable fixture. Remaining
 findings are inherited/clearance-class records around the compact authority
 fixture and must be reviewed before acreage promotion.
+
+Direct native `pcbnew` verification confirms the exact J7 and J2 MDI/CT pad
+maps on this fixture. The existing production scoped regression was not used
+as a false pass because its required hierarchical net spelling differs from
+this intentionally local disposable namespace; the native DRC and direct
+pad-map checks are the applicable evidence for this fixture.

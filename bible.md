@@ -3816,3 +3816,8 @@ power-related short/crossing/hole findings, and plane-layer compliance.
   clearance-class/inherited compact-fixture records requiring review.
 - The co-located fixture remains the best Phase 17 ancestor; no production
   promotion or Phase 18 work occurred.
+
+Direct KiCad `pcbnew` verification confirms the exact J7/J2 MDI and CT pad
+maps on the co-located fixture. The production scoped test was not claimed as
+a pass because the disposable fixture uses local support net names instead of
+the production hierarchical spellings.
