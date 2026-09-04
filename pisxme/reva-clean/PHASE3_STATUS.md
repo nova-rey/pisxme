@@ -91,3 +91,11 @@ separately identified. Evidence is in
 `PHASE19_SATA_PLACEMENT_WAVE2_RECEIPT.md`. Phase 19 remains in progress and
 Phase 20+ has not started. A coordinated U7/J3/USB3 storage-island move is the
 next authorized experiment.
+
+Phase 19 continuation update (2026-09-04): the coordinated moved-U7 wave and
+the smaller J3-only wave were rejected by native KiCad DRC for candidate
+endpoint/pad-field geometry. The Phase 18 U7/USB3 ancestor remains the valid
+frozen reference. A mid-acreage SATA V3 escape has no new short/crossing
+category against its inherited baseline, but cannot close Phase 19 while its
+moved U7 leaves USB3 stale. Evidence and the next bounded M.2 endpoint search
+are recorded in `PHASE19_BLOCKER_REPORT.md`; Phase 20+ remains gated.
