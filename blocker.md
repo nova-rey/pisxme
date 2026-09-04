@@ -1147,3 +1147,25 @@ Next authorized action: reuse the exact J7-launch-only dogbone/transition
 construction as the source boundary, then connect that proven boundary to a
 freshly placed official CM5IO island with pair-specific lanes and native DRC
 before any acreage promotion.
+
+## J7-boundary to official-island fixture — 2026-09-03
+
+The exact J7 launch fixture was joined to the complete official CM5IO-derived
+U9/U6/EDAC/J9/C1 island. The original J7-to-boundary construction was kept
+unchanged; only boundary-to-ESD bridge routes were added. Support copper and
+the official internal MDI island graph were retained.
+
+Native KiCad DRC rejected the first bridge layout at **277 findings / 68
+unconnected items**, including 16 crossings, one electrical short, and 26
+dangling tracks. The failures are confined to the newly authored boundary
+bridges: the simple left/right paths intersect the existing J7 launch
+geometry and the connector-side ESD approach. The exact J7 launch and exact
+CM5IO island remain independently valid; this bridge candidate is rejected.
+
+Preserved evidence:
+`pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE.kicad_pcb`,
+`pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-drc.rpt`, and
+`pisxme/reva-clean/phase17_j7_cm5io_boundary_fixture.py`.
+
+The next experiment will route the bridge as four pair-specific corridors
+with explicit layer separation and no reuse of the existing launch corridor.
