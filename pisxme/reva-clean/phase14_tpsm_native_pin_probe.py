@@ -35,7 +35,7 @@ def main():
     start=s.index('  (sheet_instances ')
     labels=[]
     for i,(ref,y,rail) in enumerate((('U3',95,'CM5_5V'),('U4',95,'BRIDGE_3V3'),('U5',95,'BRIDGE_1V1'))):
-        nets={1:'12V_PROTECTED',2:f'SW_{rail}',3:f'CBOOT_{rail}',4:f'RBOOT_{rail}',5:'12V_PROTECTED',6:'POWER_GND',7:'VCC_INTERNAL',8:rail,9:rail,10:f'FB_{rail}',11:'POWER_GND',12:f'RT_{rail}',13:f'PG_{rail}',14:f'ENABLE_{rail}',15:'NC',16:'12V_PROTECTED',17:'POWER_GND',18:'POWER_GND',19:'POWER_GND',20:'POWER_GND'}
+        nets={1:'12V_PROTECTED',2:f'SW_{rail}',3:f'CBOOT_{rail}',4:f'RBOOT_{rail}',5:rail,6:'POWER_GND',7:'VCC_INTERNAL',8:rail,9:rail,10:f'FB_{rail}',11:'POWER_GND',12:f'RT_{rail}',13:f'PG_{rail}',14:'12V_PROTECTED',15:'NC',16:'12V_PROTECTED',17:'POWER_GND',18:'POWER_GND',19:'POWER_GND',20:'POWER_GND'}
         for n in range(1,21):
             py=y-(-20+(n-1)*2)
             labels.append(f'(label "{nets[n]}" (at 70 {py} 0) (effects (font (size 1.0 1.0)) (justify left)) (uuid 0a000000-0000-{i:04x}-0000-{n:012x}))\n')

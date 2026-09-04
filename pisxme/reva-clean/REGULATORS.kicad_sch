@@ -4680,7 +4680,7 @@
 		)
 		(uuid "d6000000-0000-0000-0000-000000000022")
 	)
-	(label "12V_PROTECTED"
+	(label "BRIDGE_3V3"
 		(at 70 157 0.0000)
 		(effects
 			(font
@@ -4880,7 +4880,7 @@
 		)
 		(uuid "d7000000-0000-0000-0000-000000000022")
 	)
-	(label "12V_PROTECTED"
+	(label "BRIDGE_1V1"
 		(at 70 207 0.0000)
 		(effects
 			(font

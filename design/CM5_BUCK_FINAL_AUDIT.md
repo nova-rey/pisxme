@@ -25,11 +25,12 @@ The prior custom symbol incorrectly represented several of these pins and omitte
 ## Current clean-source correction
 
 The native `REGULATORS.kicad_sch` source was audited against TI datasheet Rev.
-B. Its U3 pin-5 local label was corrected from `12V_PROTECTED` to `CM5_5V`,
-which uses the 5 V output as the VLDOIN bias point. Pin 14 remains the
-separately defined `EN/SYNC` input on the intended enable policy. PCB
-materialization must be regenerated from this corrected schematic; no PCB-only
-net swap is authoritative.
+B. The U3/U4/U5 pin-5 local labels were corrected from `12V_PROTECTED` to
+their respective output rails (`CM5_5V`, `BRIDGE_3V3`, `BRIDGE_1V1`), using
+the output as the VLDOIN bias point. Pin 14 remains the separately defined
+`EN/SYNC` input on the intended 12 V enable policy. PCB materialization must
+be regenerated from this corrected schematic; no PCB-only net swap is
+authoritative.
 
 ## Rev A operating point
 
