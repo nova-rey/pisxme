@@ -2012,3 +2012,8 @@ The disposable lower-island generator now instantiates the frozen solid GND
 planes on In1 and In4 before refill. This is layer-contract infrastructure,
 not a gate waiver; remaining unconnected scaffold records require the later
 return/via and low-speed routing phases.
+## Phase 17 Ethernet route metrics — 2026-09-04
+
+The new native metrics regression passes on the current candidate: all four
+MDI pairs remain F.Cu-only, J2 pad mapping matches EDAC authority, and
+intra-pair skew measures 0.547–0.829 mm against a 1.0 mm Rev-A bound.

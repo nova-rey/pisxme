@@ -77,6 +77,12 @@ The remaining 219 native DRC findings are inherited acreage scaffold
 connectivity/mechanical records, including the conservative V100 envelope;
 they still require final-board review before Phase 17 can close.
 
+The native metrics regression
+`validation/phase3/test_phase17_ethernet_metrics.py` passes on the current
+candidate: all four MDI pairs are F.Cu-only, J2 pad mapping is authoritative,
+and measured pair skew is 0.547–0.829 mm (bounded at 1.0 mm for this Rev-A
+acreage candidate).
+
 The disposable lower-island generator now instantiates the frozen solid GND
 planes on In1 and In4 before refill. This removes one scaffold ground open;
 the remaining unconnected records are expected to persist until the later

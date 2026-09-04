@@ -3556,6 +3556,14 @@
   transition vias remain. Full Phase 17 stays open for inherited acreage and
   conservative mechanical-envelope review.
 
+2026-09-04 — Phase 17 Ethernet route metrics regression
+
+- Added `validation/phase3/test_phase17_ethernet_metrics.py`. Native KiCad
+  measurement passes for all four F.Cu-only MDI pairs, exact EDAC J2 pad
+  mapping, and 0.547–0.829 mm intra-pair skew against a 1.0 mm Rev-A bound.
+- This is additive evidence; inherited acreage DRC and final mechanical
+  review remain open, and no Phase 18+ work occurred.
+
 2026-09-04 — Phase 17 disposable plane instantiation
 
 - Added the frozen solid POWER_GND planes on In1 and In4 to the disposable
