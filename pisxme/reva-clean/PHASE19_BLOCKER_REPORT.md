@@ -18,10 +18,16 @@ Native KiCad 10 DRC receipts:
 | --- | ---: | --- |
 | `ACREAGE_PHASE19_STORAGE_MIDACREAGE_COORDINATED.kicad_pcb` | 232 violations / 426 unconnected | USB3/SATA endpoint crossings and pad-field shorts; inherited baseline separate |
 | `ACREAGE_PHASE19_SATA_J3_ONLY.kicad_pcb` | 234 violations / 426 unconnected | J3 launch/endpoint crossings and shorts; inherited baseline separate |
+| `ACREAGE_PHASE19_SATA_OUTBOARD_MONOTONIC.kicad_pcb` | 246 violations / 426 unconnected | fixed-board PCIe/reference intersections plus M.2 launch crossings; inherited baseline separate |
 | `ACREAGE_PHASE19_STORAGE_MIDACREAGE_SATA_LAUNCH_V3.kicad_pcb` | 198 violations / 430 unconnected | no new short/crossing category; SATA-only proof, not coordinated-board closure |
 
 The V3 result is useful evidence for a local SATA corridor, but is not
 promoted because its moved U7 leaves the already-closed USB3 route stale.
+
+The outboard trial kept U7 and USB3 unchanged and moved J3 to `(180,125)` at
+rotation 0°. It still introduced crossings against the fixed reference field
+and connector launch geometry, so it is rejected rather than treated as a
+passing long detour.
 
 ## Next authorized continuation
 
