@@ -3696,6 +3696,14 @@ power-related short/crossing/hole findings, and plane-layer compliance.
   eight hole-clearance findings. The result is preserved as negative evidence;
   the next pass requires an explicit no-go constrained router.
 
+2026-09-04 — Phase 17 top-edge transition-via correction
+
+- Corrected the top-edge generator's artificial defect where four B.Cu
+  connector transitions shared `(90,45)`. Distinct 2 mm lanes reduced native
+  DRC shorts from 53 to 36 and crossings from 48 to 44.
+- The candidate remains rejected on real endpoint-order and corridor
+  conflicts; no Phase 17 or Phase 18 gate was bypassed.
+
 2026-09-04 — Phase 17 underside-contract native fixture retry
 
 - Reran the native rotated Ethernet fixture after removing the hypothetical

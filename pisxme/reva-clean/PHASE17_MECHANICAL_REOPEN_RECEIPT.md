@@ -109,3 +109,11 @@ shorts but still failed native DRC with 350 total violations, 48 crossings,
 53 shorts, and 8 hole-clearance findings. It was also rejected; the next
 iteration must use a constrained router/no-go mask for the actual frozen
 power and PCIe copper rather than hand-selected corridor lines.
+
+The follow-up audit identified a separate authoring error: the first top-edge
+generator placed all four B.Cu connector-side transitions at `(90,45)`,
+creating artificial stacked-via shorts. The corrected generator gives each
+transition a distinct 2 mm lane. Native DRC improved to 319 violations, 44
+crossings, 36 shorts, and 8 hole-clearance findings, but the candidate remains
+rejected because real pair endpoint ordering and board-corridor conflicts
+remain.

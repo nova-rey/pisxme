@@ -1,10 +1,12 @@
 """Disposable Phase-17 top-edge Ethernet island with regenerated copper."""
 from pathlib import Path
+import os
 import pcbnew
 
 ROOT = Path(__file__).resolve().parent
 BASE = ROOT / "ACREAGE_PHASE17_F1RIGHT40_ETH_GROUND_FIXED.kicad_pcb"
-OUT = ROOT / "ACREAGE_PHASE17_TOP_EDGE_REGENERATED.kicad_pcb"
+BASE = Path(os.environ.get("PISXME_BASE", str(BASE)))
+OUT = Path(os.environ.get("PISXME_OUT", str(ROOT / "ACREAGE_PHASE17_TOP_EDGE_REGENERATED.kicad_pcb")))
 W = pcbnew.FromMM(.13208)
 
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
@@ -76,9 +78,14 @@ for n,pts in bpaths.items():
 # Connector-side pair corridors rise to the top edge in monotonic pair order.
 for n in ("CM5_GBE_TD3_P","CM5_GBE_TD3_N","CM5_GBE_TD1_P","CM5_GBE_TD1_N"):
     R(b,N(b,n),[esd[n],(esd[n][0],70),(70,70),(70,45),dst[n]],pcbnew.F_Cu)
-for n in ("CM5_GBE_TD2_P","CM5_GBE_TD2_N","CM5_GBE_TD0_P","CM5_GBE_TD0_N"):
+for lane,n in enumerate(("CM5_GBE_TD2_P","CM5_GBE_TD2_N","CM5_GBE_TD0_P","CM5_GBE_TD0_N")):
     q=N(b,n); v=(esd[n][0]+(2 if esd[n][0]<30 else -2),70); via(b,q,v)
-    R(b,q,[esd[n],v,(90,70),(90,45),dst[n]],pcbnew.B_Cu); via(b,q,(90,45)); T(b,q,(90,45),dst[n])
+    # Keep each pair's connector-side transition distinct.  The previous
+    # disposable trial accidentally stacked all four vias at (90,45), which
+    # made its shorts a generator defect rather than routing evidence.
+    end_via=(90 + lane*2.0, 45)
+    R(b,q,[esd[n],v,(90+lane*2.0,70),end_via],pcbnew.B_Cu)
+    via(b,q,end_via); T(b,q,end_via,dst[n])
 
 # Rebuild complete CT/termination/shield support around the relocated J2.
 for i in range(1,5):
