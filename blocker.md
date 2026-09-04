@@ -1999,3 +1999,11 @@ current JLC 100-ohm basis. KiCad native DRC still evaluates them against the
 ancestor board's embedded 0.2000 mm minimum-width rule; adding a disposable
 project netclass did not override the board constraint. This is recorded as a
 rule-authority reconciliation item, not suppressed.
+## Phase 17 JLC rule-floor and return-artifact cleanup — 2026-09-04
+
+The JLC rule-floor disposable candidate now has no Ethernet-specific native
+crossing, short, hole-clearance, width, drill, or unconnected findings. The
+remaining report is 219 inherited acreage findings, including conservative
+V100/J7 mechanical-envelope records and scaffold connectivity debt. The
+unused ETH_GND B.Cu tail from the source transplant was removed; connected
+ESD/shield return vias and copper remain.

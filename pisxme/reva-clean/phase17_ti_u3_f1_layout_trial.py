@@ -40,6 +40,18 @@ def pad(b, ref, num):
 
 def main():
     b = pcbnew.LoadBoard(str(BASE))
+    # Current JLC multilayer capability supports 0.15 mm trace/space.  The
+    # Phase-17 disposable candidate therefore carries the fabrication-rule
+    # floor used by the current 100-ohm Ethernet basis instead of inheriting
+    # the older 0.20 mm scaffold minimum.
+    ds = b.GetDesignSettings()
+    ds.m_TrackMinWidth = pcbnew.FromMM(0.13208)
+    ds.m_MinClearance = pcbnew.FromMM(0.15)
+    default_nc = ds.m_NetSettings.GetDefaultNetclass()
+    default_nc.SetTrackWidth(pcbnew.FromMM(0.13208))
+    default_nc.SetClearance(pcbnew.FromMM(0.15))
+    default_nc.SetViaDiameter(pcbnew.FromMM(0.50))
+    default_nc.SetViaDrill(pcbnew.FromMM(0.30))
     local = {"12V_PROTECTED", "POWER_GND", "/REGULATORS/CM5_5V",
              "/CORE_CM5/CM5_5V", "/REGULATORS/FB_CM5_5V",
              "/REGULATORS/RT_CM5_5V", "/REGULATORS/PG_CM5_5V"}

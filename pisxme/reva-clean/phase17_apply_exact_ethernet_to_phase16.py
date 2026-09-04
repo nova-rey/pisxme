@@ -86,20 +86,39 @@ def main():
         n = target_net(board, pname)
         if kind == "via":
             _, position, width, drill, _ = record
+            if pname == "ETH_GND" and abs(pcbnew.ToMM(position.x) - 103.0) < 0.01 and abs(pcbnew.ToMM(position.y) - 50.0) < 0.01:
+                # CM5IO source artifact: this via has no B.Cu copper and is
+                # flagged dangling when transplanted.  The connected ESD
+                # return/stitching vias remain authoritative in the fixture.
+                continue
+            if pname.startswith(("ETH_", "GBE_")):
+                drill = pcbnew.FromMM(0.30)
             q = pcbnew.PCB_VIA(board)
             q.SetPosition(position)
-            q.SetWidth(width)
+            q.SetWidth(max(width, pcbnew.FromMM(0.50)))
             q.SetDrill(drill)
             q.SetLayerPair(pcbnew.F_Cu, pcbnew.B_Cu)
             q.SetNet(n)
         else:
             _, start, end, layer, width, _ = record
             pname0 = pname
+            if start == end:
+                # Do not reproduce a zero-length source artifact; it is not
+                # a physical connection and native DRC correctly flags it as
+                # dangling in the integrated board.
+                continue
+            if pname == "ETH_GND" and layer == pcbnew.B_Cu and any(
+                    pcbnew.ToMM(p.y) >= 70.0 for p in (start, end)):
+                # Paired with the source-artifact via above; this isolated
+                # B.Cu tail has no second copper endpoint in the transplant.
+                continue
             if pname0.startswith("CM5_GBE_TD"):
                 # The CM5IO source uses 0.127 mm copper.  PiSXMe's current
                 # JLC six-layer 100-ohm basis is 5.2 mil = 0.13208 mm; retain
                 # the source topology but emit the PiSXMe fabrication target
                 # for the disposable integrated candidate.
+                width = pcbnew.FromMM(0.13208)
+            if pname0.startswith(("ETH_", "GBE_")):
                 width = pcbnew.FromMM(0.13208)
             if SAFE_CT_CLEAR and layer == pcbnew.B_Cu and pname0 in {"ETH_CT2", "ETH_CT3"}:
                 s = (pcbnew.ToMM(start.x), pcbnew.ToMM(start.y))

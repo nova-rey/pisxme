@@ -3544,3 +3544,14 @@
 - Native DRC still sees the ancestor board's embedded 0.2000 mm minimum-width
   rule; the disposable project netclass did not override it. The mismatch is
   retained as an explicit Phase 17 rule-reconciliation item, not waived.
+
+2026-09-04 — Phase 17 JLC rule-floor and return-artifact cleanup
+
+- Applied the current JLC multilayer fabrication floor to the disposable
+  Phase 17 base: 0.13208 mm minimum track width, 0.15 mm clearance, and
+  0.30 mm drill. The fresh integrated candidate has no Ethernet-specific
+  crossing, short, hole-clearance, width, drill, or unconnected findings.
+- Removed only an unused CM5IO ETH_GND B.Cu tail/via artifact flagged
+  dangling after transplantation; connected ESD/shield return copper and
+  transition vias remain. Full Phase 17 stays open for inherited acreage and
+  conservative mechanical-envelope review.

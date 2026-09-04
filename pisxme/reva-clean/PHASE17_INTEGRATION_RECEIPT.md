@@ -68,3 +68,11 @@ the ancestor board's embedded 0.2000 mm minimum-width rule against these
 tracks; the disposable project netclass alone does not override that embedded
 board constraint. This rule mismatch remains explicitly open rather than
 being waived.
+
+With the JLC rule floor applied to the disposable base (0.13208 mm minimum
+track width, 0.15 mm minimum clearance, 0.30 mm minimum drill), the fresh
+candidate `ACREAGE_PHASE17_RULED7_ETH.kicad_pcb` has no Ethernet-specific
+crossing, short, hole-clearance, track-width, drill, or unconnected findings.
+The remaining 219 native DRC findings are inherited acreage scaffold
+connectivity/mechanical records, including the conservative V100 envelope;
+they still require final-board review before Phase 17 can close.
