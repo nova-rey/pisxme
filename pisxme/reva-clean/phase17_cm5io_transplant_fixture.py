@@ -29,7 +29,9 @@ def assign(f, mapping, nets):
         p=f.FindPadByNumber(str(number))
         if p is None: raise RuntimeError(f"{f.GetReference()}.{number}")
         p.SetNet(nets[name])
-def route(b, points, n, layer=pcbnew.F_Cu):
+def route(b, points, n, layer=pcbnew.F_Cu, shift=True):
+    if DIRECT_SHIFT and shift:
+        points=[(x+DIRECT_SHIFT,y) for x,y in points]
     for a,z in zip(points,points[1:]):
         item=pcbnew.PCB_TRACK(b); item.SetStart(V(*a)); item.SetEnd(V(*z)); item.SetLayer(layer); item.SetWidth(pcbnew.FromMM(.30) if layer != pcbnew.F_Cu else pcbnew.FromMM(.127)); item.SetNet(n); b.Add(item)
 def xy(p): return (pcbnew.ToMM(p.x), pcbnew.ToMM(p.y))
@@ -61,7 +63,7 @@ def main():
     j2=addfp(b,"EDAC_A70_112_331N126","J2",72.5 + DIRECT_SHIFT,53,180)
     oj9=oracle.FindFootprintByReference("J9"); oc1=oracle.FindFootprintByReference("C1")
     j9=copyfp(b,oj9,"J9",*T(*xy(oj9.GetPosition())),0)
-    c1=copyfp(b,oc1,"C1",92,44,90)
+    c1=copyfp(b,oc1,"C1",92 + DIRECT_SHIFT,44,90)
     for g in list(j2.GraphicalItems()):
         if g.GetLayer() == pcbnew.F_SilkS: g.SetLayer(pcbnew.F_Fab)
     # Official 10-pin USON footprints and the CM5IO flow-through pin map.
@@ -126,17 +128,20 @@ def main():
         route(b,[(66.785,56.83),(82.0,48.5),(83.73,51.73)],ct,pcbnew.B_Cu)
         route(b,[(83.73,51.73),(86.27,51.73),(86.27,54.27),(83.73,54.27)],ct,pcbnew.B_Cu)
         c1p=xy(c1.FindPadByNumber("1").GetPosition())
-        cv=pcbnew.PCB_VIA(b); cv.SetPosition(V(94,42)); cv.SetWidth(pcbnew.FromMM(.50)); cv.SetDrill(pcbnew.FromMM(.30)); cv.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); cv.SetNet(ct); b.Add(cv)
+        cv=pcbnew.PCB_VIA(b); cv.SetPosition(V(94 + DIRECT_SHIFT,42)); cv.SetWidth(pcbnew.FromMM(.50)); cv.SetDrill(pcbnew.FromMM(.30)); cv.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); cv.SetNet(ct); b.Add(cv)
+        c1p=(c1p[0]-DIRECT_SHIFT,c1p[1])
         route(b,[c1p,(94,43),(94,42)],ct,pcbnew.F_Cu)
         route(b,[(94,42),(88,42),(86.27,51.73)],ct,pcbnew.B_Cu)
         # Shield return is kept as its declared GBE_SHIELD net until the
         # final schematic net-tie decision; both physical shield lands tie.
         s1=xy(j2.FindPadByNumber("19").GetPosition()); s2=xy(j2.FindPadByNumber("20").GetPosition())
+        s1=(s1[0]-DIRECT_SHIFT,s1[1]); s2=(s2[0]-DIRECT_SHIFT,s2[1])
         route(b,[s1,(96,56.05),(96,38),(52,38),(52,56.05),s2],nets["GBE_SHIELD"],pcbnew.B_Cu)
         # The detached fixture's C1 return joins the copied GND escape with
         # ordinary through-via and B.Cu spine; no via is placed in a pad.
-        q=pcbnew.PCB_VIA(b); q.SetPosition(V(98,50)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(nets["ETH_GND"]); b.Add(q)
-        route(b,[xy(c1.FindPadByNumber("2").GetPosition()),(90,44.48),(90,50),(98,50)],nets["ETH_GND"])
+        q=pcbnew.PCB_VIA(b); q.SetPosition(V(98 + DIRECT_SHIFT,50)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(nets["ETH_GND"]); b.Add(q)
+        c1p2=xy(c1.FindPadByNumber("2").GetPosition()); c1p2=(c1p2[0]-DIRECT_SHIFT,c1p2[1])
+        route(b,[c1p2,(90,44.48),(90,50),(98,50)],nets["ETH_GND"])
         route(b,[(98,50),(98,72),(70,72),(70.1,64.1)],nets["ETH_GND"],pcbnew.B_Cu)
         route(b,[(70.1,64.1),(70.0324,66.2071),(72.5,65.7),(73.9,65.7),(76.1,66.3),(76.1,64.1)],nets["ETH_GND"],pcbnew.B_Cu)
     outline(b,8,35,100,125)

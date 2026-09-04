@@ -3136,3 +3136,12 @@
 - Focused native DRC showed zero MDI unconnected items, crossings, or shorts;
   15 remaining findings were intentionally omitted support circuitry.
 - Recorded this as a focused MDI/source-leg subgate and kept Phase 17 open.
+
+2026-09-03 — Phase 17 full direct CM5IO support transplant
+
+- Applied the +5 mm native CM5IO transform with complete ESD, EDAC, center-
+  tap, shield, LED, and ground support enabled.
+- Native KiCad DRC reported zero unconnected items, shorts, and crossings;
+  retained the remaining width/edge/mechanical findings as open closure work.
+- Established direct CM5IO-to-J7 transplantation as the preferred Phase 17
+  topology and kept acreage promotion gated.

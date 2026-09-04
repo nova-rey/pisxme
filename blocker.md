@@ -1337,6 +1337,33 @@ Next authorized action: apply the same +5 mm transform to the complete
 support network, retain the exact CM5IO center-tap/ground/shield strategy,
 and rerun the full disposable fixture before any acreage promotion.
 
+## Full direct CM5IO support transplant — 2026-09-03
+
+The +5 mm direct alignment was applied with the complete existing support
+network enabled. The fixture contains the authoritative J7, both official
+TPD4EUSB30 ESD footprints, EDAC A70-112-331N126, center-tap bus, shield
+return, LED support, and 189 official MDI segments.
+
+Native KiCad 10.0.5 DRC reports **0 unconnected items, 0 shorting items, and
+0 track crossings**. It reports 229 total findings, dominated by the
+fixture's inherited 0.200 mm minimum-width rule versus the official 0.127 mm
+Ethernet geometry, plus footprint/edge/mechanical checks. This closes the
+complete direct-transplant connectivity subgate but is not yet a Phase 17
+production pass: controlled-impedance rule reconciliation, exact clean
+center-tap net mapping (`ETH_CT1..4` rather than the fixture's common support
+node), and the acreage mechanical/DRC review remain open.
+
+This result materially changes the blocker: the official CM5IO routing can be
+transplanted directly onto PiSXMe's J7 with no artificial boundary bridge.
+The next authorized step is to preserve this direct topology, normalize its
+support-net authority, and validate the resulting Ethernet island against the
+acreage board.
+
+Preserved evidence:
+`pisxme/reva-clean/CM5IO_DIRECT_J7_ETHERNET_FIXTURE-full-drc.rpt`,
+`pisxme/reva-clean/CM5IO_DIRECT_J7_ETHERNET_FIXTURE.kicad_pcb`, and
+`pisxme/reva-clean/phase17_cm5io_transplant_fixture.py`.
+
 ## Separated-fanout bridge trial — 2026-09-03
 
 The direct-via failure was addressed with separated 1 mm fanout pairs before
