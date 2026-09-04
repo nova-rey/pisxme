@@ -3084,3 +3084,12 @@
 - Ordinary bridge measured 254 / 78 with 11 crossings and 3 shorts; the
   outer-layer variant measured 266 / 78 with 16 crossings and 4 shorts.
 - Retained Phase 17 for a round-the-envelope, monotonic pair-lane bridge.
+
+2026-09-03 — Phase 17 round-the-envelope bridge trial
+
+- Tested a round-the-envelope bridge from the exact J7 launch boundary to the
+  translated official CM5IO Ethernet island.
+- Native KiCad DRC measured 248 violations / 78 unconnected items, including
+  5 crossings and 16 dangling bridge tracks; the candidate was rejected.
+- Published the exact failure and preserved disposable evidence in
+  `blocker.md`; Phase 18+ remains gated.

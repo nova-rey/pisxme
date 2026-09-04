@@ -1219,3 +1219,32 @@ return approach, not footprint placement. The next construction is a
 round-the-envelope bridge with pair-specific monotonic lanes, using the
 remote island as the fixed endpoint and retaining the exact J7 launch as the
 source endpoint.
+
+## Round-the-envelope bridge trial — 2026-09-03
+
+The proposed round-the-envelope bridge was implemented and run under native
+KiCad 10.0.5 DRC. It reduced the prior remote-island result to **248
+violations / 78 unconnected items**, but still contains **5 track crossings**,
+**16 dangling bridge tracks**, and 10 board-edge-clearance violations. The
+crossings are in the long boundary-to-island corridors; the unconnected and
+dangling items show that the bridge endpoints do not form a complete
+electrical path. This is rejected as a production candidate.
+
+The fixture remains useful evidence: the official CM5IO-derived ESD,
+MagJack, support network, and internal island were not the source of the new
+failures. The failure is confined to the newly authored bridge construction
+between the proven J7 launch boundary and the remote island. The negative
+result is therefore a recoverable placement/escape blocker, not a reason to
+reject the CM5IO Ethernet architecture.
+
+Preserved evidence:
+`pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE.kicad_pcb`,
+`pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-round-drc.rpt`, and
+`pisxme/reva-clean/phase17_j7_cm5io_boundary_fixture.py`.
+
+Current state: **PISXME_REVA_CLEAN_BLOCKED** at Phase 17 Ethernet routing;
+Phase 18+ remains gated. The next practical continuation is a fresh
+pair-specific bridge generated from the actual launch-boundary endpoint
+coordinates, with a legal expanded fixture outline and per-pair lanes that
+are checked for crossings before native DRC. No clean production
+PCB/schematic has been promoted.

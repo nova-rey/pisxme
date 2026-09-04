@@ -64,6 +64,29 @@ def main():
     names_by_pad={3:'CM5_GBE_TD3_P',4:'CM5_GBE_TD1_P',5:'CM5_GBE_TD3_N',6:'CM5_GBE_TD1_N',
                   9:'CM5_GBE_TD2_N',10:'CM5_GBE_TD0_N',11:'CM5_GBE_TD2_P',12:'CM5_GBE_TD0_P'}
     bridge_outer=os.environ.get('PISXME_BRIDGE_OUTER')=='1'
+    bridge_round=os.environ.get('PISXME_BRIDGE_ROUND')=='1'
+    if bridge_round:
+        # Pair-specific round-the-envelope bridge.  TD3 stays on B.Cu over
+        # the top-left perimeter, TD2 uses F.Cu over the bottom-left, TD1
+        # uses F.Cu on the separated right approach, and TD0 uses B.Cu on
+        # the bottom-right.  This keeps same-layer corridors disjoint while
+        # preserving the exact official ESD landing coordinates.
+        paths={
+          'CM5_GBE_TD3_P':([(10,90),(0,90),(0,50),(110,50),(113,50),(113,57.5),land['CM5_GBE_TD3_P']],pcbnew.B_Cu),
+          'CM5_GBE_TD3_N':([(8,92),(-1,92),(-1,51),(111,51),(114,51),(114,58.5),land['CM5_GBE_TD3_N']],pcbnew.B_Cu),
+          'CM5_GBE_TD2_N':([(6,94),(-2,94),(-2,135),(112,135),(112,62),land['CM5_GBE_TD2_N']],pcbnew.F_Cu),
+          'CM5_GBE_TD2_P':([(4,96),(-3,96),(-3,136),(113,136),(113,63),land['CM5_GBE_TD2_P']],pcbnew.F_Cu),
+          'CM5_GBE_TD1_P':([(90,90),(103,90),(103,45),(120,45),(120,57),land['CM5_GBE_TD1_P']],pcbnew.F_Cu),
+          'CM5_GBE_TD1_N':([(92,92),(92,140),(124,140),(124,62),land['CM5_GBE_TD1_N']],pcbnew.F_Cu),
+          'CM5_GBE_TD0_N':([(94,94),(94,138),(125,138),(125,61),(125,61),land['CM5_GBE_TD0_N']],pcbnew.B_Cu),
+          'CM5_GBE_TD0_P':([(96,96),(96,139),(126,139),(126,62),(126,62),land['CM5_GBE_TD0_P']],pcbnew.B_Cu)}
+        for name,(pts,layer) in paths.items():
+            n=nets[name]; end=pts[-1]
+            if layer==pcbnew.F_Cu:
+                track(b,n,pts,pcbnew.F_Cu)
+            else:
+                rv=pts[-2]; track(b,n,pts[:-2]+[rv],pcbnew.B_Cu); via(b,n,rv); track(b,n,[rv,end],pcbnew.F_Cu)
+        b.Save(str(OUT)); print('saved',OUT); return
     if bridge_outer:
         # Each pair owns one signal layer for the bridge.  Through-hole
         # boundary pads permit the layer choice without a source via; return
