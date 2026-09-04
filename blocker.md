@@ -1287,6 +1287,28 @@ authorized construction must route to these measured handoff endpoints with
 the two approved signal layers and explicit per-pair transitions; no further
 experiment may use the stale ESD-side endpoint table.
 
+## Real-handoff layer-transition trial — 2026-09-03
+
+The next bridge construction retained the measured official island-side
+handoff segments, changed every long bridge corridor to B.Cu, and added
+ordinary through-vias at the handoff/source boundaries. Native KiCad DRC
+reduced the disconnected count further to **70**, but rejected the candidate
+at **297 violations**, including **17 shorts, 7 crossings, 8 hole/colocation
+findings, and 70 unconnected items**.
+
+The new shorting evidence is decisive for the next construction: the official
+handoff P/N centers are only about 0.38 mm apart, so 0.50 mm through-vias
+cannot be placed directly on both handoff endpoints. A legal transition must
+put each pair's ordinary vias in a separated fanout field before the tight
+F.Cu handoff, then use short F.Cu dogbones into the retained official graph.
+The long B.Cu bridge itself also must be kept clear of the copied F.Cu island
+routes. This is a concrete mechanical/routing constraint, not a reason to
+reject the official topology.
+
+Preserved evidence:
+`pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-layerbridge-drc.rpt`.
+Phase 17 remains open and Phase 18+ remains gated.
+
 ## Round-the-envelope bridge trial — 2026-09-03
 
 The proposed round-the-envelope bridge was implemented and run under native

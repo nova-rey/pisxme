@@ -87,20 +87,22 @@ def main():
         # unchanged.  The left group uses four top lanes; the swapped right
         # group uses four independent upper-right lanes.
         paths={
-          'CM5_GBE_TD3_P':([(10,90),(10,40.5),(149.579,40.5),land['CM5_GBE_TD3_P']],pcbnew.B_Cu),
+          'CM5_GBE_TD3_P':([(10,90),(10,93),(7,93),(7,40.5),(149.579,40.5),land['CM5_GBE_TD3_P']],pcbnew.B_Cu),
           'CM5_GBE_TD3_N':([(8,92),(8,41.4),(149.421,41.4),land['CM5_GBE_TD3_N']],pcbnew.B_Cu),
-          'CM5_GBE_TD2_N':([(6,94),(6,43.0),(149.979,43.0),land['CM5_GBE_TD2_N']],pcbnew.F_Cu),
-          'CM5_GBE_TD2_P':([(4,96),(4,42.5),(149.821,42.5),land['CM5_GBE_TD2_P']],pcbnew.F_Cu),
-          'CM5_GBE_TD1_P':([(90,90),(120,70),(120,35),(150.821,35),land['CM5_GBE_TD1_P']],pcbnew.B_Cu),
-          'CM5_GBE_TD1_N':([(92,92),(121,70),(121,35.6),(150.979,35.6),land['CM5_GBE_TD1_N']],pcbnew.B_Cu),
-          'CM5_GBE_TD0_N':([(94,94),(122,70),(122,37),(150.321,37),land['CM5_GBE_TD0_N']],pcbnew.F_Cu),
-          'CM5_GBE_TD0_P':([(96,96),(123,70),(123,37.6),(150.479,37.6),land['CM5_GBE_TD0_P']],pcbnew.F_Cu)}
+          'CM5_GBE_TD2_N':([(6,94),(6,42.0),(149.979,42.0),land['CM5_GBE_TD2_N']],pcbnew.B_Cu),
+          'CM5_GBE_TD2_P':([(4,96),(4,97),(3,97),(3,42.5),(149.821,42.5),land['CM5_GBE_TD2_P']],pcbnew.B_Cu),
+          'CM5_GBE_TD1_P':([(90,90),(160,70),(160,35),(150.821,35),land['CM5_GBE_TD1_P']],pcbnew.B_Cu),
+          'CM5_GBE_TD1_N':([(92,92),(161,70),(161,35.6),(150.979,35.6),land['CM5_GBE_TD1_N']],pcbnew.B_Cu),
+          'CM5_GBE_TD0_N':([(94,94),(162,70),(162,37),(150.321,37),land['CM5_GBE_TD0_N']],pcbnew.B_Cu),
+          'CM5_GBE_TD0_P':([(96,96),(163,70),(163,37.6),(150.479,37.6),land['CM5_GBE_TD0_P']],pcbnew.B_Cu)}
         for name,(pts,layer) in paths.items():
             track(b,nets[name],pts,layer)
-        # The B.Cu bridge returns to the official ESD lands with ordinary
-        # through-vias outside the pads; the F.Cu left group remains direct.
-        for name in ('CM5_GBE_TD1_P','CM5_GBE_TD1_N','CM5_GBE_TD0_N','CM5_GBE_TD0_P'):
-            pts=paths[name][0]; rv=pts[-2]; via(b,nets[name],rv); track(b,nets[name],[rv,land[name]],pcbnew.F_Cu)
+        # Transition the right-side F.Cu source launch at the boundary, then
+        # use B.Cu for every long bridge corridor.  At the remote island the
+        # through-via lands directly on the retained official F.Cu handoff.
+        for number,name in names_by_pad.items():
+            if number in (4,6,10,12): via(b,nets[name],boundary[number])
+        for name in paths: via(b,nets[name],land[name])
         # Expand the disposable outline before saving this branch.
         for d in list(b.GetDrawings()):
             if d.GetLayer()==pcbnew.Edge_Cuts: b.Remove(d)

@@ -3111,3 +3111,12 @@
 - Native KiCad DRC measured 274 violations / 72 unconnected items, including
   17 crossings, one short, and 12 dangling tracks; rejected the candidate.
 - Recorded the diagnostic improvement and retained Phase 18+ gating.
+
+2026-09-03 — Phase 17 real-handoff layer-transition trial
+
+- Retained the measured official island-side handoff graph and moved all long
+  bridge corridors to B.Cu with ordinary source/handoff transitions.
+- Native KiCad DRC measured 297 violations / 70 unconnected items, including
+  17 shorts and 7 crossings; rejected the candidate.
+- Confirmed the official handoff pair spacing is too tight for direct 0.50 mm
+  vias and recorded the required separated-via plus short-F.Cu-dogbone rule.
