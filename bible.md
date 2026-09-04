@@ -3590,3 +3590,10 @@ mechanical, return-path, and impedance closure; Phase 18+ did not start.
 - Preserved the existing `ETH_GND` schematic contract after rejecting an
   unproven net-collapse shortcut; Phase 17 remains open for formal return,
   mechanical, impedance, and inherited-acreage closure.
+
+2026-09-04 — Phase 6 Ethernet regression authority refresh
+
+- Updated the Phase 6 audit and receipt from the superseded TPD4E004DRYR
+  assertion to the selected authoritative TI TPD4EUSB30DQAR used by the
+  clean schematic and CM5IO-derived Ethernet implementation.
+- No PCB, topology, or legacy artifact was changed.
