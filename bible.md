@@ -3176,3 +3176,11 @@
   disposable fixture.
 - Native DRC rejected the source-side escape at 312 findings / 22
   unconnected items; rejected the candidate and kept production unchanged.
+
+2026-09-03 — Phase 17 EDAC manufacturer CT termination authority
+
+- Verified the EDAC A70-series electrical circuit: four independent
+  22 nF/100 V plus 75 ohm series branches from VC1..VC4 to a common node,
+  with a 1 nF/2 kV return from that node to shield.
+- Recorded the authoritative source URLs in the EDAC authority receipt and
+  rejected the earlier zero-ohm/common-node fixture topology.

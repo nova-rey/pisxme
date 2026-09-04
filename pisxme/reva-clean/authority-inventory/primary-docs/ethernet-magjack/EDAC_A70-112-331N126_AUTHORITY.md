@@ -77,3 +77,26 @@ The former `TRJG0926HENL` procurement gap is closed by selecting EDAC
 `A70-112-331N126` as the documented Rev-A replacement. Phase 3 must implement
 and parity-check a new `PiSXMeRevAClean` EDAC footprint; the legacy footprint
 may not be reused by visual similarity.
+
+## Manufacturer center-tap termination authority
+
+The current EDAC A70-series electrical-circuit drawing identifies the four
+center-tap pins as `VC1 P11`, `VC2 P12`, `VC3 P13`, and `VC4 P14`. Its
+recommended PoE/EMI termination is four independent series branches:
+
+`VC1..VC4 -> 22 nF / 100 V -> 75 ohm -> common termination node`
+
+The common node returns to the connector shield through `1 nF / 2 kV`
+(`CAP 1000 pF / 2 kV`). The four CT nets remain distinct up to their
+individual capacitor/resistor branches; they are not directly shorted.
+
+Source evidence:
+
+- EDAC A70-series drawing hosted by Mouser:
+  `https://www.mouser.com/catalog/specsheets/Edac_12-03-2025_A70_series.pdf`
+- Matching manufacturer-family electrical drawing, sheet 3:
+  `https://www.es.co.th/Schemetic/PDF/2337992-8_R1.PDF`
+
+This closes the previously missing electrical support authority. Physical
+placement and routing of the eight branch components remain a Phase 17
+fixture task; this record alone does not promote production files.
