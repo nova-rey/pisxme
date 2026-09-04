@@ -134,6 +134,12 @@ native DRC violations / 426 unconnected and introduced new SATA/USB3 local
 interactions. It was rejected; the next experiment changes island
 orientation/relative placement rather than repeating the same rail geometry.
 
+Phase 19 coordinated-base update (2026-09-04): reused the SATA V3 candidate
+as a base and regenerated USB3 with synchronized moved-pad coordinates. Native
+DRC measured 226 violations / 426 unconnected, with SATA/USB3 crossings and
+pad-field interactions; the combination was rejected. Phase 19 remains
+active.
+
 Phase 19 orientation sweep update (2026-09-04): rotated storage-island
 variants measured 277/415 and 265/408 native DRC violations and were
 rejected. Phase 19 remains active; the next repair targets coupled U7

@@ -82,6 +82,13 @@ unconnected and reported new SATA/USB3 pair interactions; rejected. The next
 continuation changes island orientation/relative placement rather than adding
 another same-geometry rail variant.
 
+Cross-class coordinated trial: used the SATA V3 candidate as the input board
+and regenerated USB3 after the native pad-coordinate synchronization fix.
+`ACREAGE_PHASE19_STORAGE_V3_USB_REGEN.kicad_pcb` measured 226 native DRC
+violations / 426 unconnected, with SATA/USB3 crossings and pad-field
+interactions. Rejected; the SATA V3 geometry cannot simply be combined with
+the regenerated USB3 path.
+
 Orientation sweep continuation: U7/J3 rotations at `(150,140)/(190,140)`
 and `(145,135)/(190,135)` measured 277/415 and 265/408 native DRC
 violations respectively. Rotation-only classes are rejected; the coupled

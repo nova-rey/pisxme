@@ -2,7 +2,7 @@
 from pathlib import Path
 import os
 import pcbnew
-R=Path(__file__).resolve().parent; BASE=R/'ACREAGE_PHASE18_USB3_LOCAL.kicad_pcb'; OUT=R/(os.environ.get('P19_OUT','ACREAGE_PHASE19_STORAGE_COORDINATED_FRESH.kicad_pcb')); W=pcbnew.FromMM(.13208)
+R=Path(__file__).resolve().parent; BASE=R/os.environ.get('P19_BASE','ACREAGE_PHASE18_USB3_LOCAL.kicad_pcb'); OUT=R/(os.environ.get('P19_OUT','ACREAGE_PHASE19_STORAGE_COORDINATED_FRESH.kicad_pcb')); W=pcbnew.FromMM(.13208)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def xy(p): return pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y)
 def P(f,n): return next(p for p in list(f.Pads()) if str(p.GetNumber())==str(n))
@@ -29,8 +29,8 @@ def main():
    T(b,n,first,(82,108),pcbnew.B_Cu);X(b,n,(82,108));T(b,n,(82,108),(102,108),pcbnew.B_Cu);T(b,n,(102,108),second,pcbnew.B_Cu);X(b,n,second)
   else:
    T(b,n,first,(103,first[1]),pcbnew.B_Cu);X(b,n,(103,first[1]));T(b,n,(103,first[1]),second,pcbnew.B_Cu);X(b,n,second)
-  xrail={'CM5_USB3_RX_N':128,'CM5_USB3_RX_P':129,'CM5_USB3_TX_N':130}[name]; mid=(125,second[1]); rail=(xrail,second[1]); landing=(xrail,d[1]); T(b,n,second,mid,pcbnew.B_Cu); X(b,n,mid); T(b,n,mid,rail,pcbnew.F_Cu); X(b,n,rail); T(b,n,rail,landing,pcbnew.B_Cu); X(b,n,landing); T(b,n,landing,d,pcbnew.F_Cu)
- n=b.FindNet('/CORE_CM5/CM5_USB3_TX_P');s=sp['142'];d=up['46'];T(b,n,s,(71.2,106.7),pcbnew.F_Cu);T(b,n,(71.2,106.7),(71,109),pcbnew.F_Cu);X(b,n,(71,109));T(b,n,(71,109),(82,112),pcbnew.B_Cu);X(b,n,(82,112));T(b,n,(82,112),(125,112),pcbnew.B_Cu);X(b,n,(125,112));T(b,n,(125,112),(131,112),pcbnew.F_Cu);X(b,n,(131,112));T(b,n,(131,112),(131,d[1]),pcbnew.B_Cu);X(b,n,(131,d[1]));T(b,n,(131,d[1]),d,pcbnew.F_Cu)
+  T(b,n,second,d,pcbnew.F_Cu)
+ n=b.FindNet('/CORE_CM5/CM5_USB3_TX_P');s=sp['142'];d=up['46'];T(b,n,s,(71.2,106.7),pcbnew.F_Cu);T(b,n,(71.2,106.7),(71,109),pcbnew.F_Cu);X(b,n,(71,109));T(b,n,(71,109),(82,112),pcbnew.B_Cu);X(b,n,(82,112));T(b,n,(82,112),d,pcbnew.F_Cu)
  # SATA corridor is derived from the actual moved pad coordinates.  The two
  # pairs use separate permitted layers and monotonic lanes; vias are outside
  # both SMD pad fields and each M.2 launch returns to F.Cu before the pad.
