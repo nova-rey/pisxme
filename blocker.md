@@ -1654,6 +1654,15 @@ already failed as a solution class. The exact CM5IO/EDAC fixture remains the
 selected electrical authority; no production promotion or Phase 18 work has
 started.
 
+## Phase 17 ground-authority regeneration — 2026-09-04
+
+`ACREAGE_PHASE17_F1RIGHT40_ETH_GROUND_FIXED.kicad_pcb` now emits clean
+`POWER_GND` for the ESD return and MagJack shield, mapping the official
+CM5IO source alias `ETH_GND` without adding an unverified net-tie. Native DRC
+remains free of Ethernet crossings and shorts; scoped Ethernet, pair-metric,
+power-entry, Phase 6, and netlist checks pass. Phase 17 remains open for
+inherited acreage debt, conservative mechanics, and impedance closure.
+
 ## Current blocker — F1-only power-entry reopening exhausted — 2026-09-04
 
 The first authorized power-entry repair was executed from the validated
@@ -2018,12 +2027,11 @@ The new native metrics regression passes on the current candidate: all four
 MDI pairs remain F.Cu-only, J2 pad mapping matches EDAC authority, and
 intra-pair skew measures 0.547–0.829 mm against a 1.0 mm Rev-A bound.
 
-The follow-up ETH_GND-to-POWER_GND experiment was rejected as a shortcut. The
-official CM5IO uses ordinary GND, but the clean Phase 6 audit explicitly
-retains the ETH_GND contract. Collapsing the PCB net without a formally
-authoritative schematic net-tie would create schematic/PCB parity drift. The
-current candidate therefore preserves ETH_GND and records formal grounding
-closure as open work.
+The Ethernet return mapping is now corrected consistently: official CM5IO ESD
+and MagJack shield use ordinary GND, so clean `POWER_GND` is the authority.
+The transplant accepts the source fixture's `ETH_GND` alias and maps it to
+`POWER_GND`; the clean Ethernet child emits global `POWER_GND` labels. This
+removes the isolated return island without adding an unverified net-tie.
 
 ## Phase 17 bounded power-entry reopening — 2026-09-04
 

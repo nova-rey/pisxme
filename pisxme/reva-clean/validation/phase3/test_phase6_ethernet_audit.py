@@ -9,6 +9,7 @@ def main():
     assert text.count('property "MPN" "TPD4EUSB30DQAR"')==2
     for net in ('CM5_GBE_TD0_P','CM5_GBE_TD0_N','CM5_GBE_TD1_P','CM5_GBE_TD1_N','CM5_GBE_TD2_P','CM5_GBE_TD2_N','CM5_GBE_TD3_P','CM5_GBE_TD3_N','GBE_SHIELD'):
         assert net in text
+    assert 'POWER_GND' in text
     assert text.count('EDAC_A70_112_331N126_Ethernet')>=2
     assert text.count('TPD4EUSB30DQAR')>=2
     print('Phase 6 Ethernet audit: PASS; MDI pairs=4; two TPD4EUSB30DQAR arrays; shield=explicit')

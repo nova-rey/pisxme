@@ -99,6 +99,11 @@ without changing its electrical topology.
 
 Candidate: `ACREAGE_PHASE17_F1RIGHT40_ETH3.kicad_pcb`.
 
+The follow-up ground-authority regeneration is
+`ACREAGE_PHASE17_F1RIGHT40_ETH_GROUND_FIXED.kicad_pcb`; it retains the same
+power-entry and Ethernet geometry while mapping the CM5IO `ETH_GND` source
+alias to clean `POWER_GND`.
+
 Native KiCad DRC reports 216 total findings and 427 inherited unconnected
 items. There are zero `tracks_crossing` and zero `shorting_items` records.
 The scoped Ethernet regression passes, and native route metrics pass: all
@@ -112,3 +117,8 @@ The focused regression `validation/phase3/test_phase17_power_entry_candidate.py`
 records the local power-path acceptance contract: F1 placement, F1/Q1 net
 authority, absence of power-related short/crossing/hole findings, and no power
 signals on In1/In4.
+
+The ESD return is now authoritative `POWER_GND`, matching the official CM5IO
+ESD/shield grounding. The transplant retains the source fixture's `ETH_GND`
+name only as an input alias and maps it to `POWER_GND`; no isolated Ethernet
+ground net is emitted.

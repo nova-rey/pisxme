@@ -18,6 +18,7 @@ required = {
     "CM5_GBE_TD2_P", "CM5_GBE_TD2_N", "CM5_GBE_TD3_P", "CM5_GBE_TD3_N",
     "/ETHERNET/ETH_CT1", "/ETHERNET/ETH_CT2", "/ETHERNET/ETH_CT3",
     "/ETHERNET/ETH_CT4", "ETH_CT_COMMON", "/ETHERNET/GBE_SHIELD",
+    "POWER_GND",
 }
 missing = sorted(net for net in required if net not in text)
 assert not missing, f"missing Ethernet nets: {missing}"

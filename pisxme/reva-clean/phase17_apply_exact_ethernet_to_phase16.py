@@ -35,6 +35,12 @@ def V(x, y):
 
 def target_net(board, name):
     name = short(name)
+    # The official CM5IO ESD ground is board GND.  Map the fixture's legacy
+    # source label to the clean hierarchy's POWER_GND authority.
+    if name == "ETH_GND":
+        n = board.FindNet("POWER_GND") or board.FindNet("/POWER_GND")
+        if n is not None:
+            return n
     for candidate in (name, "/ETHERNET/" + name, "/" + name):
         n = board.FindNet(candidate)
         if n is not None:

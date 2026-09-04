@@ -3597,3 +3597,18 @@ mechanical, return-path, and impedance closure; Phase 18+ did not start.
   assertion to the selected authoritative TI TPD4EUSB30DQAR used by the
   clean schematic and CM5IO-derived Ethernet implementation.
 - No PCB, topology, or legacy artifact was changed.
+
+2026-09-04 — Phase 17 Ethernet return authority correction
+
+- Mapped the CM5IO fixture's source `ETH_GND` alias to clean `POWER_GND`,
+  matching the official ESD and MagJack shield ground implementation.
+- Updated the clean Ethernet child and focused regressions so the emitted
+  PCB has no isolated Ethernet return net. Native regeneration remains
+  required before Phase 17 closure.
+
+2026-09-04 — Phase 17 ground-authority regeneration
+
+- Regenerated `ACREAGE_PHASE17_F1RIGHT40_ETH_GROUND_FIXED.kicad_pcb` with
+  the CM5IO `ETH_GND` source alias mapped to clean `POWER_GND`.
+- Native DRC remained free of `tracks_crossing` and `shorting_items`; scoped
+  Ethernet, route-metrics, power-entry, Phase 6, and netlist checks pass.
