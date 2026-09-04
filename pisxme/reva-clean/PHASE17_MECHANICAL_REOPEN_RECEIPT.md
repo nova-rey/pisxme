@@ -102,3 +102,10 @@ support. Native DRC rejected the result with 351 violations, 38 crossings,
 65 shorts, 8 hole-clearance findings, and 461 unconnected items. The manual
 lanes intersect existing power/PCIe and connector fields; this candidate is
 rejected and no clean-board authority was promoted.
+
+A second top-edge iteration moved the ESD pair to `(50,110)` / `(60,115)` to
+clear the J7 pad field and regenerated the local lanes again. It reduced some
+shorts but still failed native DRC with 350 total violations, 48 crossings,
+53 shorts, and 8 hole-clearance findings. It was also rejected; the next
+iteration must use a constrained router/no-go mask for the actual frozen
+power and PCIe copper rather than hand-selected corridor lines.

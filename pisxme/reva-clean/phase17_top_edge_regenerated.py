@@ -29,7 +29,7 @@ def via(b,n,p):
 b=pcbnew.LoadBoard(str(BASE))
 # Stagger the two authoritative ESD packages beside the fixed J7 launch and
 # put the tall connector on the open top edge. Support remains local to J2.
-move(b,"U9",(24,97),180); move(b,"U6",(28,103),180); move(b,"J2",(150,12.5),180)
+move(b,"U9",(50,110),180); move(b,"U6",(60,115),180); move(b,"J2",(150,12.5),180)
 for ref,pos in (("CCT",(150,28)),("CCT1",(140,25)),("CCT2",(160,25)),
                 ("CCT3",(140,35)),("CCT4",(160,35)),("RCT1",(140,30)),
                 ("RCT2",(160,30)),("RCT3",(140,40)),("RCT4",(160,40))): move(b,ref,pos,180)
@@ -60,16 +60,16 @@ for item in list(b.GetTracks()):
 # Local J7 escape: TD3/TD1 on F.Cu; interleaved TD2/TD0 on B.Cu with
 # ordinary transitions away from both the J7 and ESD pads.
 fpaths={
- "CM5_GBE_TD3_P":[src["CM5_GBE_TD3_P"],(30,98),(27,98),esd["CM5_GBE_TD3_P"]],
- "CM5_GBE_TD3_N":[src["CM5_GBE_TD3_N"],(29,99),(26,99),esd["CM5_GBE_TD3_N"]],
- "CM5_GBE_TD1_P":[src["CM5_GBE_TD1_P"],(40,102),(34,102),esd["CM5_GBE_TD1_P"]],
- "CM5_GBE_TD1_N":[src["CM5_GBE_TD1_N"],(41,103),(35,103),esd["CM5_GBE_TD1_N"]]}
+ "CM5_GBE_TD3_P":[src["CM5_GBE_TD3_P"],(43,98),(43,108),esd["CM5_GBE_TD3_P"]],
+ "CM5_GBE_TD3_N":[src["CM5_GBE_TD3_N"],(44,99),(44,109),esd["CM5_GBE_TD3_N"]],
+ "CM5_GBE_TD1_P":[src["CM5_GBE_TD1_P"],(48,102),(55,113),esd["CM5_GBE_TD1_P"]],
+ "CM5_GBE_TD1_N":[src["CM5_GBE_TD1_N"],(49,103),(56,114),esd["CM5_GBE_TD1_N"]]}
 for n,pts in fpaths.items(): R(b,N(b,n),pts)
 bpaths={
- "CM5_GBE_TD2_N":[src["CM5_GBE_TD2_N"],(22,100.3),(22,92),(24,90),esd["CM5_GBE_TD2_N"]],
- "CM5_GBE_TD2_P":[src["CM5_GBE_TD2_P"],(21,100.7),(21,91),(23,90),esd["CM5_GBE_TD2_P"]],
- "CM5_GBE_TD0_N":[src["CM5_GBE_TD0_N"],(44,100.3),(44,94),(30,94),esd["CM5_GBE_TD0_N"]],
- "CM5_GBE_TD0_P":[src["CM5_GBE_TD0_P"],(45,100.7),(45,95),(31,95),esd["CM5_GBE_TD0_P"]]}
+ "CM5_GBE_TD2_N":[src["CM5_GBE_TD2_N"],(28,100.3),(28,108),(48,108),esd["CM5_GBE_TD2_N"]],
+ "CM5_GBE_TD2_P":[src["CM5_GBE_TD2_P"],(30,100.7),(30,109),(49,109),esd["CM5_GBE_TD2_P"]],
+ "CM5_GBE_TD0_N":[src["CM5_GBE_TD0_N"],(40,100.3),(40,112),(58,112),esd["CM5_GBE_TD0_N"]],
+ "CM5_GBE_TD0_P":[src["CM5_GBE_TD0_P"],(42,100.7),(42,113),(59,113),esd["CM5_GBE_TD0_P"]]}
 for n,pts in bpaths.items():
     q=N(b,n); via(b,q,pts[1]); R(b,q,[pts[1]]+pts[2:],pcbnew.B_Cu); via(b,q,pts[-1]); T(b,q,pts[-1],esd[n])
 

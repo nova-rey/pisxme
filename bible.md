@@ -3688,6 +3688,14 @@ power-related short/crossing/hole findings, and plane-layer compliance.
   fixture, followed by staggered local escapes if needed. Phase 17 remains
   open.
 
+2026-09-04 — Phase 17 top-edge staggered-ESD retry
+
+- Moved the regenerated top-edge ESD pair farther from the J7 pad field and
+  reran the complete MDI/CT/shield authoring path.
+- Native DRC still rejected the candidate with 48 crossings, 53 shorts, and
+  eight hole-clearance findings. The result is preserved as negative evidence;
+  the next pass requires an explicit no-go constrained router.
+
 2026-09-04 — Phase 17 underside-contract native fixture retry
 
 - Reran the native rotated Ethernet fixture after removing the hypothetical
@@ -3713,3 +3721,11 @@ power-related short/crossing/hole findings, and plane-layer compliance.
 - Native DRC rejected the manual lane set with 38 crossings, 65 shorts, eight
   hole-clearance findings, and 461 unconnected items. The candidate was not
   promoted; the next pass requires explicit native-routing no-go masks.
+
+2026-09-04 — Phase 17 top-edge staggered-ESD retry
+
+- Moved the regenerated top-edge ESD pair farther from the J7 pad field and
+  reran the complete MDI/CT/shield authoring path.
+- Native DRC still rejected the candidate with 48 crossings, 53 shorts, and
+  eight hole-clearance findings. The result is preserved as negative evidence;
+  the next pass requires an explicit no-go constrained router.
