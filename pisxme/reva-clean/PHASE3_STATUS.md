@@ -169,3 +169,9 @@ recommended U7/J3 `(170,140)/(205,120)` at `90°` with a horizontal USB pad-row
 escape. Native DRC measured 378 violations / 426 unconnected; rejected for
 remaining coordinated SATA/USB3 and local support interactions. Phase 19
 remains active.
+
+Phase 19 SATA-V3 reuse update (2026-09-04): disabled SATA regeneration and
+reauthored only USB3 on the existing V3 SATA board. Native DRC measured 242
+violations / 426 unconnected with four USB3 short/crossing findings against
+preserved V3 copper. Simple overlay reuse was rejected; Phase 19 remains
+active.

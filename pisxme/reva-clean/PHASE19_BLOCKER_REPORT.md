@@ -114,3 +114,9 @@ horizontal USB pad-row escape. Native DRC measured 378 violations / 426
 unconnected and was rejected. The recommendation remains useful: its
 placement clears the C19/PERST area, but the current SATA launch and remaining
 local support interactions require another coordinated route.
+
+Valid reuse check: SATA regeneration was disabled and only USB3 was reauthored
+on the existing V3 SATA board. The resulting candidate measured 242 native DRC
+violations / 426 unconnected and retained four USB3 short/crossing findings
+against preserved V3 copper. Simple overlay reuse is rejected; a fresh
+coordinated route remains required.
