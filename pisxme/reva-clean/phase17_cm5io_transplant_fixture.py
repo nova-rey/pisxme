@@ -6,7 +6,8 @@ import pcbnew
 ROOT = Path(__file__).resolve().parent
 ORACLE = ROOT / "authority-inventory/cm5io-rev2/CM5IO.kicad_pcb"
 PRETTY = ROOT / "PiSXMe_RevA_Clean.pretty"
-OUT = ROOT / "CM5IO_PISXME_ETHERNET_TRANSPLANT_FIXTURE.kicad_pcb"
+DIRECT_SHIFT = 5.0 if os.environ.get("PISXME_DIRECT_J7") == "1" else 0.0
+OUT = ROOT / ("CM5IO_DIRECT_J7_ETHERNET_FIXTURE.kicad_pcb" if DIRECT_SHIFT else "CM5IO_PISXME_ETHERNET_TRANSPLANT_FIXTURE.kicad_pcb")
 
 def V(x, y): return pcbnew.VECTOR2I_MM(x, y)
 def N(b, name):
@@ -16,7 +17,7 @@ def N(b, name):
 def T(x, y):
     # 180-degree rigid transform aligning official Module1 Ethernet pads to
     # the PiSXMe J7 source at (30,100), while preserving all official vectors.
-    return (225.5 - x, 203.5 - y)
+    return (225.5 + DIRECT_SHIFT - x, 203.5 - y)
 def addfp(b, name, ref, x, y, rot=0):
     f = pcbnew.PCB_IO_KICAD_SEXPR().FootprintLoad(str(PRETTY), name)
     if f is None: raise RuntimeError(name)
@@ -56,8 +57,8 @@ def main():
     nets={n:N(b,n) for n in names}
     # The local CM5 footprint origin is 30 mm below the Ethernet contact row;
     # this places its physical contacts at the transformed oracle coordinates.
-    j7=addfp(b,"PiSXMeRevAClean_Raspberry_Pi_5_Compute_Module","J7",30,130,0)
-    j2=addfp(b,"EDAC_A70_112_331N126","J2",72.5,53,180)
+    j7=addfp(b,"PiSXMeRevAClean_Raspberry_Pi_5_Compute_Module","J7",30 + DIRECT_SHIFT,130,0)
+    j2=addfp(b,"EDAC_A70_112_331N126","J2",72.5 + DIRECT_SHIFT,53,180)
     oj9=oracle.FindFootprintByReference("J9"); oc1=oracle.FindFootprintByReference("C1")
     j9=copyfp(b,oj9,"J9",*T(*xy(oj9.GetPosition())),0)
     c1=copyfp(b,oc1,"C1",92,44,90)

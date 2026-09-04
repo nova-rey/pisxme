@@ -1309,6 +1309,34 @@ Preserved evidence:
 `pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-layerbridge-drc.rpt`.
 Phase 17 remains open and Phase 18+ remains gated.
 
+## Direct +5 mm CM5IO alignment fixture — 2026-09-03
+
+The official CM5IO transplant generator was given a direct-alignment mode.
+Its complete 189-segment official MDI graph and CM5IO ESD/MagJack geometry
+were translated +5 mm, matching the authoritative PiSXMe J7 pad coordinates
+without an artificial boundary bridge. This is the first experiment that
+tests the native official source legs directly against the production J7
+launch.
+
+With support routing deliberately omitted to isolate MDI, native KiCad DRC
+reported **202 total violations / 15 unconnected items**, but **zero
+`CM5_GBE_*` unconnected items, zero MDI crossings, and zero MDI shorts**.
+The remaining unconnected findings are the intentionally omitted center-tap
+and ESD-GND support network; 189 official MDI segments are present. The
+candidate is therefore a passing focused MDI/source-leg subgate, not a
+complete Phase 17 fixture. The existing PCB mapping regression also exposes
+the known fixture-only CT-common-versus-ETH_CT1..4 net-authority mismatch,
+which must be resolved before promotion.
+
+Preserved evidence:
+`pisxme/reva-clean/CM5IO_DIRECT_J7_ETHERNET_FIXTURE-mdi2-drc.rpt`,
+`pisxme/reva-clean/CM5IO_DIRECT_J7_ETHERNET_FIXTURE.kicad_pcb`, and
+`pisxme/reva-clean/phase17_cm5io_transplant_fixture.py`.
+
+Next authorized action: apply the same +5 mm transform to the complete
+support network, retain the exact CM5IO center-tap/ground/shield strategy,
+and rerun the full disposable fixture before any acreage promotion.
+
 ## Separated-fanout bridge trial — 2026-09-03
 
 The direct-via failure was addressed with separated 1 mm fanout pairs before

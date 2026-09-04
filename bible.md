@@ -3128,3 +3128,11 @@
 - Native KiCad DRC measured 288 violations / 70 unconnected items, including
   23 crossings and 10 shorts; rejected the candidate.
 - Retained the separated-fanout rule and continued Phase 17 only.
+
+2026-09-03 — Phase 17 direct +5 mm CM5IO alignment fixture
+
+- Added a direct-alignment mode to the native CM5IO transplant generator so
+  all 189 official MDI segments land on the authoritative PiSXMe J7 pads.
+- Focused native DRC showed zero MDI unconnected items, crossings, or shorts;
+  15 remaining findings were intentionally omitted support circuitry.
+- Recorded this as a focused MDI/source-leg subgate and kept Phase 17 open.
