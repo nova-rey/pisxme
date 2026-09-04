@@ -19,6 +19,7 @@ Native KiCad 10 DRC receipts:
 | `ACREAGE_PHASE19_STORAGE_MIDACREAGE_COORDINATED.kicad_pcb` | 232 violations / 426 unconnected | USB3/SATA endpoint crossings and pad-field shorts; inherited baseline separate |
 | `ACREAGE_PHASE19_SATA_J3_ONLY.kicad_pcb` | 234 violations / 426 unconnected | J3 launch/endpoint crossings and shorts; inherited baseline separate |
 | `ACREAGE_PHASE19_SATA_OUTBOARD_MONOTONIC.kicad_pcb` | 246 violations / 426 unconnected | fixed-board PCIe/reference intersections plus M.2 launch crossings; inherited baseline separate |
+| `ACREAGE_PHASE19_SATA_UNDERSIDE_ENDPOINT.kicad_pcb` | 243 violations / 430 unconnected | TX source/connector crossings, one frozen PCIe B.Cu intersection, and connector-hole clearance; inherited baseline separate |
 | `ACREAGE_PHASE19_STORAGE_MIDACREAGE_SATA_LAUNCH_V3.kicad_pcb` | 198 violations / 430 unconnected | no new short/crossing category; SATA-only proof, not coordinated-board closure |
 
 The V3 result is useful evidence for a local SATA corridor, but is not
@@ -28,6 +29,11 @@ The outboard trial kept U7 and USB3 unchanged and moved J3 to `(180,125)` at
 rotation 0°. It still introduced crossings against the fixed reference field
 and connector launch geometry, so it is rejected rather than treated as a
 passing long detour.
+
+The underside trial kept the same U7/USB3 ancestor and placed J3 on B.Cu at
+`(180,125)`, rotation 0°. It reduced the top-side obstruction but its current
+split-layer source/connector escape still crosses the frozen B.Cu field and
+violates connector-hole clearance, so it is also rejected.
 
 ## Next authorized continuation
 
