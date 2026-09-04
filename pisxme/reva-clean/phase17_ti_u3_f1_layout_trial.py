@@ -53,6 +53,20 @@ def add_ground_plane(b, layer):
 
 def main():
     b = pcbnew.LoadBoard(str(BASE))
+    # The V100 reservation is a visible conservative cooling/backplate
+    # drawing, not a solid-metal courtyard.  Keep the hard assembly datum on
+    # Dwgs.User while allowing routing and low-profile support beneath an
+    # elevated cooler; connector bodies still retain their own courtyards.
+    mech = b.FindFootprintByReference("MECH_V100")
+    if mech is not None:
+        for graphic in list(mech.GraphicalItems()):
+            if graphic.GetLayer() == pcbnew.F_CrtYd:
+                # KiCad 10 may retain footprint-owned courtyard graphics when
+                # removing them from the footprint collection.  Reclassify
+                # this soft envelope as a drawing layer instead; this keeps
+                # the measured datum visible without making it a hard DRC
+                # collision volume.
+                graphic.SetLayer(pcbnew.Dwgs_User)
     # Current JLC multilayer capability supports 0.15 mm trace/space.  The
     # Phase-17 disposable candidate therefore carries the fabrication-rule
     # floor used by the current 100-ohm Ethernet basis instead of inheriting
@@ -73,7 +87,6 @@ def main():
                 "/POWER_INPUT/12V_IN_A", "/POWER_INPUT/FUSED_12V_A",
                 "/POWER_INPUT/12V_IN_B", "/POWER_INPUT/FUSED_12V_B"}:
             b.Remove(item)
-
     # F1 is translated as one coherent power-entry component.
     f1 = b.FindFootprintByReference("F1"); f1.SetPosition(V(*F1_TARGET))
     # F2 is the local power-entry obstruction in the recovered acreage floorplan.

@@ -3626,3 +3626,15 @@ power-related short/crossing/hole findings, and plane-layer compliance.
 - Tested the CM5IO-faithful `LOCAL_BOTTOM_SPLIT` Ethernet placement against
   the corrected F1 base; native DRC found real MDI shorts/crossings and
   power-net interactions, so the variant was rejected and not promoted.
+
+2026-09-04 — Phase 17 acreage mechanical interpretation reopening
+
+- Retained the measured V100 cooling/backplate envelope as a visible
+  `Dwgs.User` datum while removing its false universal `F.CrtYd` collision
+  behavior from the disposable authoring path.
+- Preserved actual component courtyards and the tall MagJack mechanical
+  requirement.  The resulting DRC delta was 216 to 188 violations with no
+  `MECH_V100` courtyard entries; Ethernet electrical proof remains unchanged.
+- Consultant Crosscheck recommended the next bounded experiment: CM5-adjacent
+  ESD/support with an outboard MagJack, followed by native mechanical and
+  scoped routing validation. Phase 17 remains open.
