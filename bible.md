@@ -3555,3 +3555,10 @@
   dangling after transplantation; connected ESD/shield return copper and
   transition vias remain. Full Phase 17 stays open for inherited acreage and
   conservative mechanical-envelope review.
+
+2026-09-04 — Phase 17 disposable plane instantiation
+
+- Added the frozen solid POWER_GND planes on In1 and In4 to the disposable
+  lower-island generator before native refill. One scaffold ground open was
+  removed; remaining opens belong to later return/via and low-speed routing
+  work and are not Ethernet connectivity failures.

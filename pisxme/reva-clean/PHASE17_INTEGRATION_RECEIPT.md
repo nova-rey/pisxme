@@ -76,3 +76,9 @@ crossing, short, hole-clearance, track-width, drill, or unconnected findings.
 The remaining 219 native DRC findings are inherited acreage scaffold
 connectivity/mechanical records, including the conservative V100 envelope;
 they still require final-board review before Phase 17 can close.
+
+The disposable lower-island generator now instantiates the frozen solid GND
+planes on In1 and In4 before refill. This removes one scaffold ground open;
+the remaining unconnected records are expected to persist until the later
+return/via and low-speed routing phases and are not counted as Ethernet
+connectivity failures.

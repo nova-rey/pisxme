@@ -38,6 +38,19 @@ def pad(b, ref, num):
         if p.GetNumber() == str(num): return xy(p.GetPosition())
     raise RuntimeError(f"missing {ref}.{num}")
 
+def add_ground_plane(b, layer):
+    z = pcbnew.ZONE(b)
+    z.SetLayer(layer)
+    z.SetNet(N(b, "POWER_GND"))
+    z.SetMinThickness(pcbnew.FromMM(.035))
+    z.SetLocalClearance(pcbnew.FromMM(.15))
+    outline = pcbnew.SHAPE_LINE_CHAIN()
+    for point in ((1, 1), (299, 1), (299, 179), (1, 179)):
+        outline.Append(V(*point))
+    outline.SetClosed(True)
+    z.Outline().AddOutline(outline)
+    b.Add(z)
+
 def main():
     b = pcbnew.LoadBoard(str(BASE))
     # Current JLC multilayer capability supports 0.15 mm trace/space.  The
@@ -176,6 +189,12 @@ def main():
     P(b, cm5, [(35.2, j5[0][1]), (40,120), (40,155)], pcbnew.B_Cu, .20)
     via(b, cm5, (40,155))
     P(b, cm5, [(40,155), (40,168.5), c71], pcbnew.F_Cu, .20)
+    # The Phase-16 boundary is intentionally a copper/placement ancestor;
+    # instantiate the frozen solid GND planes here so native connectivity
+    # validation does not misclassify every ground pad as a scaffold open.
+    if not list(b.Zones()):
+        add_ground_plane(b, pcbnew.In1_Cu)
+        add_ground_plane(b, pcbnew.In4_Cu)
     pcbnew.ZONE_FILLER(b).Fill(b.Zones()); b.Save(str(OUT)); print(f"saved {OUT}; F1={F1_TARGET}; F2={F2_TARGET}; U3={U3_TARGET}")
 
 if __name__ == "__main__": main()

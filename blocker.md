@@ -2007,3 +2007,8 @@ remaining report is 219 inherited acreage findings, including conservative
 V100/J7 mechanical-envelope records and scaffold connectivity debt. The
 unused ETH_GND B.Cu tail from the source transplant was removed; connected
 ESD/shield return vias and copper remain.
+
+The disposable lower-island generator now instantiates the frozen solid GND
+planes on In1 and In4 before refill. This is layer-contract infrastructure,
+not a gate waiver; remaining unconnected scaffold records require the later
+return/via and low-speed routing phases.
