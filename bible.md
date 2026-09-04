@@ -3580,4 +3580,13 @@
 - Native DRC on `ACREAGE_PHASE17_F1RIGHT40_ETH3.kicad_pcb` has zero
   `tracks_crossing` and zero `shorting_items`; scoped Ethernet and native
   route-metrics regressions pass. Phase 17 remains open for inherited DRC,
-  mechanical, return-path, and impedance closure; Phase 18+ did not start.
+mechanical, return-path, and impedance closure; Phase 18+ did not start.
+
+2026-09-04 — Phase 17 power-entry focused regression
+
+- Added `validation/phase3/test_phase17_power_entry_candidate.py` to verify
+  the F1 `(240,40)` coherent move, F1/Q1 power-net authority, absence of
+  power-related short/crossing/hole findings, and plane-layer compliance.
+- Preserved the existing `ETH_GND` schematic contract after rejecting an
+  unproven net-collapse shortcut; Phase 17 remains open for formal return,
+  mechanical, impedance, and inherited-acreage closure.

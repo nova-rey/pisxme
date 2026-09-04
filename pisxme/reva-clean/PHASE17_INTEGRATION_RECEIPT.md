@@ -107,3 +107,8 @@ four MDI pairs are F.Cu-only, EDAC J2 mapping is exact, and pair skew is
 is not yet a Phase 17 close: inherited scaffold debt, conservative
 V100-envelope courtyard findings, and independent return/impedance/mechanical
 evidence still require closure.
+
+The focused regression `validation/phase3/test_phase17_power_entry_candidate.py`
+records the local power-path acceptance contract: F1 placement, F1/Q1 net
+authority, absence of power-related short/crossing/hole findings, and no power
+signals on In1/In4.
