@@ -1728,6 +1728,23 @@ handoff in the acreage apply path. No architecture or frozen major subsystem
 has been changed. The next credible in-scope trial is this complete boundary
 re-authoring, followed by native DRC and Phase 15/16 regression.
 
+## Consultant unblocker synthesis — 2026-09-04
+
+The required read-only consultant review confirms that the accepted U3 block
+is `U3 + C5-C9 + R3-R6`, including thermal PGND vias, VOUT-land tie, VIN/
+VOUT edge escapes, and FB/RT/PG copper. Its required explicit boundaries are
+`12V_PROTECTED`, `POWER_GND`, `CM5_5V`, `FB_CM5_5V`, `RT_CM5_5V`, and
+`PG_CM5_5V`; `VCC_U3_INTERNAL` must remain isolated. The consultant’s
+recommended path is complete U3 re-authoring from Phase 15 authority, not
+another translation, with exact net-object assignment and explicit boundary
+ports, followed by Phase 15/16 and Phase 17 validation.
+
+That recommendation is accepted as the next implementation path. The
+consultant returned `PROPOSED_UNBLOCK`; it did not authorize relaxing any
+gate or changing the architecture. A second read-only KiCad review was
+invoked but returned no result before the bounded run ended; no conclusion is
+attributed to it.
+
 ## Ethernet overlay serialization fix and rerun — 2026-09-04
 
 The acreage apply script contained a generic KiCad 10 Python/SWIG defect: its

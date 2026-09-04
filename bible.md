@@ -3325,6 +3325,14 @@
   re-author U3 external boundaries and repair the J7 Ethernet handoff before
   any Phase 17 promotion.
 
+2026-09-04 — Phase 17 consultant unblocker synthesis
+
+- Accepted the consultant recommendation to re-author the complete U3 island
+  from Phase 15 authority with explicit `12V_PROTECTED`, `POWER_GND`,
+  `CM5_5V`, feedback, RT, PG, and isolated internal-VCC boundaries.
+- Preserved the required architecture and validation gates. No production
+  promotion or later-phase work began.
+
 2026-09-04 — Phase 17 generic Ethernet overlay-copy repair
 
 - Corrected the KiCad 10 Python/SWIG `PCB_TRACK(item)` copy defect in the
