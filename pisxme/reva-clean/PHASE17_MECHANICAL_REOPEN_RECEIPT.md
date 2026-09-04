@@ -155,3 +155,17 @@ generated source corridors crossing the existing F2/power-entry geometry, the
 package-aware ESD breakout, and the connector-boundary support pads. The
 placement class itself is retained for refinement; the trial is not promoted
 and Phase 17 remains open.
+
+## West-perimeter launch trial
+
+The next outboard class placed U9/U6 at `(220,25)` / `(230,25)` with the EDAC
+MagJack at `(282.5,25)` and routed the source through the west/top perimeter,
+keeping F2 and the central PCIe/power corridors outside the intended launch.
+The trial used actual ESD source/destination pads and separate monotonic
+lanes, without plane-layer signals.
+
+Native KiCad DRC rejected the trial with 272 violations and 449 unconnected
+items. Pair crossings and shorts remain in the package-aware ESD fanout and
+at the board-edge launch. This class is rejected as a hand-authored lane
+implementation; it does not change the CM5IO/EDAC electrical authority or
+the Rev-A underside contract.

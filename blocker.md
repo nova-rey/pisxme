@@ -24,6 +24,13 @@ existing F2/power-entry corridor and the ESD package breakout. It remains
 recoverable evidence, not terminal `BLOCKED`; the next attempt uses an
 outboard edge launch with explicit no-go geometry.
 
+The subsequent west-perimeter launch trial placed U9/U6 at `(220,25)` /
+`(230,25)` and J2 at `(282.5,25)`, routing around the board perimeter. Native
+KiCad DRC reported 272 violations and 449 unconnected items, including
+Ethernet pair crossings/shorts in the ESD fanout and edge launch. This third
+class is rejected as manual lane geometry; Phase 17 remains active and the
+CM5IO-derived architecture remains authoritative.
+
 The prior uniform-cooler-courtyard assumption has been removed from the
 disposable Phase 17 authoring path. `MECH_V100` remains a visible measured
 cooling/backplate datum, but is no longer a universal hard collision volume.

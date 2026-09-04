@@ -3752,6 +3752,17 @@ power-related short/crossing/hole findings, and plane-layer compliance.
 - Preserved the trial as negative evidence. Phase 17 remains open and no
   Phase 18 work or validation-gate relaxation occurred.
 
+2026-09-04 — Phase 17 west-perimeter launch trial
+
+- Placed U9/U6 at `(220,25)` / `(230,25)` and J2 at `(282.5,25)` and routed
+  the source around the west/top perimeter to avoid F2 and central frozen
+  power/PCIe corridors.
+- Native KiCad DRC rejected the trial with 272 violations and 449 unconnected
+  items, including Ethernet pair crossings/shorts in the ESD fanout and edge
+  launch.
+- Preserved the trial as negative evidence; Phase 17 remains open and no
+  Phase 18 work or validation-gate relaxation occurred.
+
 2026-09-04 — Phase 17 top-edge regenerated-island trial
 
 - Built the specialist-recommended top-edge candidate with staggered ESD
