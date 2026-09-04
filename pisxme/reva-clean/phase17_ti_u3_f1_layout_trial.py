@@ -83,7 +83,13 @@ def main():
     f2 = b.FindFootprintByReference("F2"); f2.SetPosition(V(*F2_TARGET))
     ni, no = N(b, "/POWER_INPUT/12V_IN_A"), N(b, "/POWER_INPUT/FUSED_12V_A")
     P(b, ni, [(F1_TARGET[0]-6.4, F1_TARGET[1]-1.25), (12,25)], pcbnew.B_Cu, 2.0)
-    P(b, no, [(F1_TARGET[0]+2.9, F1_TARGET[1]-1.25), (212.46,30)], pcbnew.B_Cu, 2.0)
+    # Exit the fuse pad toward the board edge before turning toward Q1.  The
+    # previous straight centerline crossed F1's mechanical bore and made the
+    # moved power block look electrically invalid in native DRC.
+    P(b, no, [(F1_TARGET[0]+2.9, F1_TARGET[1]-1.25),
+              (F1_TARGET[0]+9.0, F1_TARGET[1]-1.25),
+              (F1_TARGET[0]+9.0, 25), (220,25), (212.46,25),
+              (212.46,30)], pcbnew.B_Cu, 2.0)
 
     # Move U3 and its complete TI support island.  The support coordinates are
     # the Phase-15 vendor-style escape rows, translated below the PERST lane.

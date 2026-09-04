@@ -3570,3 +3570,14 @@
   lower-island generator before native refill. One scaffold ground open was
   removed; remaining opens belong to later return/via and low-speed routing
   work and are not Ethernet connectivity failures.
+
+2026-09-04 — Phase 17 bounded power-entry reopening
+
+- Added parameterized base selection to the disposable Ethernet placement
+  trial and corrected the coherent F1 move path in the lower-island generator.
+- The F1 `(240,40)` candidate exits the fuse bore and approaches Q1 pad 1
+  without crossing Q1 pad 2, while preserving the approved power topology.
+- Native DRC on `ACREAGE_PHASE17_F1RIGHT40_ETH3.kicad_pcb` has zero
+  `tracks_crossing` and zero `shorting_items`; scoped Ethernet and native
+  route-metrics regressions pass. Phase 17 remains open for inherited DRC,
+  mechanical, return-path, and impedance closure; Phase 18+ did not start.

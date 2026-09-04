@@ -2017,3 +2017,22 @@ return/via and low-speed routing phases.
 The new native metrics regression passes on the current candidate: all four
 MDI pairs remain F.Cu-only, J2 pad mapping matches EDAC authority, and
 intra-pair skew measures 0.547–0.829 mm against a 1.0 mm Rev-A bound.
+
+## Phase 17 bounded power-entry reopening — 2026-09-04
+
+The smallest coherent local power-entry move translated F1 to `(240,40)` and
+kept the dual-input, fuse, LM74700, and protection architecture unchanged.
+Its local copper was corrected to leave the fuse bore and approach Q1 pad 1
+without crossing Q1 pad 2. The exact CM5IO-derived Ethernet island was then
+reintegrated unchanged.
+
+`ACREAGE_PHASE17_F1RIGHT40_ETH3.kicad_pcb` is the best current local repair.
+Native DRC reports 216 total findings and 427 inherited unconnected items,
+but zero `tracks_crossing` and zero `shorting_items` records. The scoped
+Ethernet regression and native route-metrics regression pass; all four pairs
+are F.Cu-only, EDAC J2 mapping is exact, and pair skew is 0.547–0.829 mm.
+
+Phase 17 remains open. Remaining closure work is inherited acreage scaffold
+DRC/connectivity debt plus explicit V100 conservative-envelope, return-path,
+controlled-impedance, and final mechanical evidence. Phase 18+ has not
+started.

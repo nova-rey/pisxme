@@ -5,7 +5,7 @@ import os
 import pcbnew
 
 ROOT=Path(__file__).resolve().parent
-BASE=ROOT/'ACREAGE_EDAC_CORRECTED_PHASE17.kicad_pcb'
+BASE=Path(os.environ.get('PISXME_BASE', ROOT/'ACREAGE_EDAC_CORRECTED_PHASE17.kicad_pcb'))
 GEOM=ROOT/'cm5io_mdi_geometry.json'
 OUT=ROOT/'ACREAGE_CM5IO_TOP_ISLAND_SIDE_ESCAPE_PHASE17.kicad_pcb'
 DX,DY=-42.5,-8.0

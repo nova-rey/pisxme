@@ -88,3 +88,22 @@ planes on In1 and In4 before refill. This removes one scaffold ground open;
 the remaining unconnected records are expected to persist until the later
 return/via and low-speed routing phases and are not counted as Ethernet
 connectivity failures.
+
+## Phase 17 bounded power-entry reopening — 2026-09-04
+
+The smallest coherent power-entry experiment moved F1 to `(240,40)` while
+preserving the dual-input/fuse/LM74700 architecture, and reauthored the local
+F1-to-Q1 copper so it exits the fuse bore and approaches Q1 pad 1 without
+crossing Q1 pad 2. The exact CM5IO-derived Ethernet overlay was then applied
+without changing its electrical topology.
+
+Candidate: `ACREAGE_PHASE17_F1RIGHT40_ETH3.kicad_pcb`.
+
+Native KiCad DRC reports 216 total findings and 427 inherited unconnected
+items. There are zero `tracks_crossing` and zero `shorting_items` records.
+The scoped Ethernet regression passes, and native route metrics pass: all
+four MDI pairs are F.Cu-only, EDAC J2 mapping is exact, and pair skew is
+0.547–0.829 mm. This is the best current local power-entry variant, but it
+is not yet a Phase 17 close: inherited scaffold debt, conservative
+V100-envelope courtyard findings, and independent return/impedance/mechanical
+evidence still require closure.
