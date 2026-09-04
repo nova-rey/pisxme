@@ -1654,6 +1654,12 @@ already failed as a solution class. The exact CM5IO/EDAC fixture remains the
 selected electrical authority; no production promotion or Phase 18 work has
 started.
 
+The authorized bottom-edge placement variant was tested against the corrected
+F1 base. `LOCAL_BOTTOM_SPLIT` is rejected by native DRC because its translated
+source corridors create real MDI pair shorts/crossings and power-net
+interactions. Placement moves therefore require deliberate source-fanout
+regeneration; rigid translation of the proven CM5IO graph is invalid.
+
 ## Phase 17 ground-authority regeneration — 2026-09-04
 
 `ACREAGE_PHASE17_F1RIGHT40_ETH_GROUND_FIXED.kicad_pcb` now emits clean

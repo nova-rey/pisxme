@@ -118,6 +118,12 @@ records the local power-path acceptance contract: F1 placement, F1/Q1 net
 authority, absence of power-related short/crossing/hole findings, and no power
 signals on In1/In4.
 
+A CM5IO-faithful `LOCAL_BOTTOM_SPLIT` transplant was tested on the corrected
+F1 base to place J2 below the conservative V100 envelope. It is rejected:
+native DRC reports real MDI pair shorts/crossings and power-net interactions.
+The known-good F1/ground candidate remains the Phase 17 integration ancestor;
+this failed translation is not promoted.
+
 The ESD return is now authoritative `POWER_GND`, matching the official CM5IO
 ESD/shield grounding. The transplant retains the source fixture's `ETH_GND`
 name only as an input alias and maps it to `POWER_GND`; no isolated Ethernet

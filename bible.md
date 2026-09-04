@@ -3612,3 +3612,9 @@ mechanical, return-path, and impedance closure; Phase 18+ did not start.
   the CM5IO `ETH_GND` source alias mapped to clean `POWER_GND`.
 - Native DRC remained free of `tracks_crossing` and `shorting_items`; scoped
   Ethernet, route-metrics, power-entry, Phase 6, and netlist checks pass.
+
+2026-09-04 — Phase 17 bottom-edge placement experiment
+
+- Tested the CM5IO-faithful `LOCAL_BOTTOM_SPLIT` Ethernet placement against
+  the corrected F1 base; native DRC found real MDI shorts/crossings and
+  power-net interactions, so the variant was rejected and not promoted.
