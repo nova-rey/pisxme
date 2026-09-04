@@ -1709,3 +1709,21 @@ The goal is therefore still recoverable within the user-authorized local
 reopening, but Phase 17 is not closed. The recommended next experiment is a
 complete U3 island re-authoring on the F1-cleared ancestor, followed by native
 DRC and Phase 15/16 regression before Ethernet promotion.
+
+## Complete-island translation diagnostic — 2026-09-04
+
+A further disposable trial translated the complete U3 footprint set and all
+local regulator-net copper by (+48,+82) mm, placing the island near (100,160)
+mm, below the V100 mechanical envelope and away from the Ethernet launch. In
+combination with F1 at (20,40) mm, native DRC found no `shorting_items`,
+confirming that a complete coherent island move can remove the former
+U3/Ethernet short class. The candidate still failed with two
+`tracks_crossing` findings and 271 unconnected pads, including Ethernet J7,
+ESD, and MagJack handoff opens. It is diagnostic only, not a Phase 17 pass.
+
+This narrows the remaining implementation work to proper boundary
+re-authoring: preserve the transformed U3 vendor-layout island, explicitly
+reconnect every external power/control boundary, and repair the exact J7
+handoff in the acreage apply path. No architecture or frozen major subsystem
+has been changed. The next credible in-scope trial is this complete boundary
+re-authoring, followed by native DRC and Phase 15/16 regression.

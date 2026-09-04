@@ -3313,3 +3313,14 @@
 - Evidence confirms that the next trial must re-author the complete U3
   regulator island and its explicit boundary copper; footprint-only movement
   is insufficient. Phase 17 remains open and Phase 18+ remains gated.
+
+2026-09-04 — Phase 17 complete U3-island translation diagnostic
+
+- Translated the complete U3 regulator footprint set and local regulator-net
+  copper by (+48,+82) mm, combined with the F1 relocation at (20,40) mm.
+- Native DRC showed no `shorting_items`, proving the coherent island move can
+  remove the prior U3/Ethernet short class, but retained two crossings and
+  271 unconnected pads including the Ethernet acreage handoff.
+- Kept the candidate diagnostic-only. The next trial must explicitly
+  re-author U3 external boundaries and repair the J7 Ethernet handoff before
+  any Phase 17 promotion.
