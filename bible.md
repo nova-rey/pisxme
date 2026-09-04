@@ -3704,3 +3704,12 @@ power-related short/crossing/hole findings, and plane-layer compliance.
   it with 21 crossings, eight shorts, and 449 unconnected items.
 - The historical west-split route remains rejected; Phase 17 continues toward
   a freshly authored top-edge/source-proximate solution.
+
+2026-09-04 — Phase 17 top-edge regenerated-island trial
+
+- Built the specialist-recommended top-edge candidate with staggered ESD
+  beside J7, a top-edge EDAC MagJack, and regenerated MDI plus CT/shield
+  support from actual pad centers.
+- Native DRC rejected the manual lane set with 38 crossings, 65 shorts, eight
+  hole-clearance findings, and 461 unconnected items. The candidate was not
+  promoted; the next pass requires explicit native-routing no-go masks.

@@ -92,3 +92,13 @@ still negative (163 violations, 6 crossings, 10 shorts, 3 unconnected), so
 removing the hypothetical underside reservation does not by itself solve the
 source/ESD escape. It remains a disposable rejected fixture, not an authority
 change or a Phase 17 pass.
+
+## Top-edge regenerated-island trial
+
+Following the specialist recommendation, `phase17_top_edge_regenerated.py`
+placed U9/U6 beside J7 at `(24,97)` and `(28,103)`, placed J2 at the top edge
+`(150,12.5,180°)`, and regenerated all eight MDI paths plus CT/common/shield
+support. Native DRC rejected the result with 351 violations, 38 crossings,
+65 shorts, 8 hole-clearance findings, and 461 unconnected items. The manual
+lanes intersect existing power/PCIe and connector fields; this candidate is
+rejected and no clean-board authority was promoted.
