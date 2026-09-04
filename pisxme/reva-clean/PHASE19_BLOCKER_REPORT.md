@@ -127,3 +127,10 @@ was serialized and inspected. KiCad 10 actually places its USB row at
 mirrored. The bottom-approach branch therefore entered the U7 body and
 measured 219 USB-only DRC violations / 430 unconnected. It is rejected;
 subsequent routing must use serialized pad coordinates directly.
+
+Regulator-support reopening: translating only C18/C19 to `(100,145)/(108,145)`
+on the U7 `(140,130)` USB3 isolation candidate removed the three prior
+`BRIDGE_3V3` shorts. Native DRC remained 202 violations / 430 unconnected,
+matching the Phase 18 baseline class apart from one local clearance. This
+confirms the authorized coherent support move is electrically safe in the
+disposable proof; complete Phase 19 remains gated by SATA launch geometry.

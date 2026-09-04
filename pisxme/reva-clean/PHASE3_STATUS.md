@@ -181,3 +181,9 @@ Phase 19 transform-audit update (2026-09-04): serialized U7 `(120,140)` at
 the earlier predicted transform. The bottom-approach trial measured 219
 USB-only DRC violations / 430 unconnected and was rejected for entering the
 U7 body. Future routes use serialized coordinates.
+
+Phase 19 regulator-support update (2026-09-04): translating only C18/C19 to
+`(100,145)/(108,145)` removed the three USB3 `BRIDGE_3V3` shorts. The USB3
+isolation candidate measured 202 native DRC violations / 430 unconnected,
+matching the Phase 18 baseline class apart from one local clearance. Complete
+Phase 19 remains gated by SATA launch geometry.
