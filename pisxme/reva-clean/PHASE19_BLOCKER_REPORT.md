@@ -1,5 +1,21 @@
 # Phase 19 SATA routing blocker (active, non-terminal)
 
+## 2026-09-04 coordinated storage authoring repair
+
+The coordinated-island generator was corrected after a KiCad 10 serialization
+audit. The Phase 18 donor reuses C30-C33 for unrelated regulator capacitors;
+the generator now removes those donor footprints and loads the project-local
+0402 footprints. It also assigns explicit net codes and attaches the new
+socket-side nets before synchronization reload, preserving the intended
+C30-C33/J3 split mapping.
+
+Disposable candidate U7 `(150,140)` / J3 `(180,125)` completed generation and
+serialized the expected four SATA socket nets, but native DRC measured 262
+violations. Candidate-introduced SATA launch crossings/shorts and inherited
+CM5/PERST interactions remain, so this candidate is rejected. Evidence is in
+`PHASE19_COORDINATED_STORAGE_REPAIR_RECEIPT.md`; Phase 19 remains active and
+no Phase 20+ work has started.
+
 Date: 2026-09-04
 
 Status: `PISXME_REVA_CLEAN_PHASE19_SATA_ROUTING_IN_PROGRESS`
