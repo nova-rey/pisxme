@@ -81,3 +81,13 @@ zero `tracks_crossing` findings, but still has inherited unconnected acreage
 records and Ethernet launch/center-tap mechanical findings. Phase 17 remains
 closed; the clean PCB is not promoted. Phase 18 storage authority repair is
 the current gate; no USB3 routing or Phase 19+ work has started.
+
+Phase 19 placement wave 2 update (2026-09-04): Phase 18 storage authority and
+USB3 routing remain valid, but the first four local SATA corridor variants and
+two acreage relocations were rejected by native DRC. The failures are
+candidate-introduced U7 escape, frozen CM5/PCIe/reference, connector-body, or
+coordinated-USB3 placement interactions; the inherited acreage DRC baseline is
+separately identified. Evidence is in
+`PHASE19_SATA_PLACEMENT_WAVE2_RECEIPT.md`. Phase 19 remains in progress and
+Phase 20+ has not started. A coordinated U7/J3/USB3 storage-island move is the
+next authorized experiment.
