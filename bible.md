@@ -3169,3 +3169,10 @@
   F.Cu/B.Cu layers and connected all disposable support pads.
 - Native DRC rejected support-net shorts/crossings at the EDAC launch field;
   retained the direct CM5IO MDI topology and kept Phase 17 open.
+
+2026-09-03 — Phase 17 four-net net-tie experiment
+
+- Tested four explicit 0402 zero-ohm CT ties plus a 100 nF ground shunt in a
+  disposable fixture.
+- Native DRC rejected the source-side escape at 312 findings / 22
+  unconnected items; rejected the candidate and kept production unchanged.

@@ -118,6 +118,20 @@ four-net support implementation from the clean schematic and EDAC authority,
 or document the required schematic support addition before acreage promotion.
 No Phase 18+ work has started.
 
+### Explicit four-net net-tie experiment — 2026-09-03
+
+The next bounded experiment modeled four ordinary 0402 zero-ohm/net-ties
+(`RCT1..RCT4`) from `ETH_CT1..4` into a local common CT node, with a 0603
+100 nF shunt to `ETH_GND`. Source-side transitions were kept off the SMT
+lands and used only ordinary through-vias on the permitted signal layers.
+
+Native KiCad 10.0.5 DRC rejected the disposable fixture at **312 findings / 22
+unconnected items**, including support-net shorts and crossings at the EDAC
+launch field and dangling dogbones. This candidate is rejected. It confirms
+that the missing piece is not solved by adding an unverified net-tie row; a
+schematic-authoritative support topology and a physically legal local escape
+are still required. No production PCB or schematic was modified.
+
 ### Follow-up support escape trial
 
 A second exact-EDAC support escape used separate `ETH_CT1..4` routes on the
