@@ -3324,3 +3324,16 @@
 - Kept the candidate diagnostic-only. The next trial must explicitly
   re-author U3 external boundaries and repair the J7 Ethernet handoff before
   any Phase 17 promotion.
+
+2026-09-04 — Phase 17 generic Ethernet overlay-copy repair
+
+- Corrected the KiCad 10 Python/SWIG `PCB_TRACK(item)` copy defect in the
+  acreage Ethernet overlay by explicitly serializing and reconstructing
+  scalar track/via geometry.
+- Corrected rerun contained 576 real tracks and 26 `CM5_GBE_TD2_P` segments,
+  reducing unconnected debt from 271 to 222 and removing the prior
+  U3/Ethernet short class in the complete-U3 diagnostic.
+- Rejected the candidate for genuine CT1/CT2 crossings, J7 launch and F1
+  clearance violations, two relocated CM5_5V/CM5_PERST crossings, and
+  remaining baseline connectivity debt. Isolated CM5IO fixture remains the
+  electrical authority; Phase 17 and all later phases remain gated.

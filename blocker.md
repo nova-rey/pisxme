@@ -1727,3 +1727,26 @@ reconnect every external power/control boundary, and repair the exact J7
 handoff in the acreage apply path. No architecture or frozen major subsystem
 has been changed. The next credible in-scope trial is this complete boundary
 re-authoring, followed by native DRC and Phase 15/16 regression.
+
+## Ethernet overlay serialization fix and rerun — 2026-09-04
+
+The acreage apply script contained a generic KiCad 10 Python/SWIG defect: its
+`PCB_TRACK(item)` copy constructor produced zeroed segment geometry when
+copying the exact Ethernet fixture into another board. This was corrected by
+recording scalar segment/via geometry and explicitly reconstructing each
+destination item. The fix is generic and does not hand-edit PiSXMe.
+
+Rerunning the F1-cleared, complete-U3-bottom diagnostic with the corrected
+authoring path produced 576 real tracks, including 26 `CM5_GBE_TD2_P`
+segments, and reduced DRC unconnected debt from 271 to 222. The former
+U3/Ethernet short class is absent. The candidate nevertheless remains
+rejected: native DRC reports real Ethernet CT1/CT2 crossings, J7 launch
+clearance violations, power-entry/fuse hole-clearance violations, two
+CM5_5V/CM5_PERST crossings at the relocated island, and the remaining
+baseline board connectivity debt. The isolated CM5IO fixture still passes at
+237 findings with no crossing, shorting, or unconnected-item categories.
+
+This closes the malformed-overlay hypothesis but not Phase 17. The next
+authorized trial must correct the complete acreage boundary/placement path,
+including CT support launch and the F1 service-clearance location, while
+preserving the exact CM5IO electrical topology and the Phase 16 ancestor.

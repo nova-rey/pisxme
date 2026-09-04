@@ -49,8 +49,15 @@ def main():
     tracks = []
     for item in source.GetTracks():
         if short(item.GetNetname()).startswith(PREFIXES):
-            tracks.append(pcbnew.PCB_VIA(item) if isinstance(item, pcbnew.PCB_VIA)
-                          else pcbnew.PCB_TRACK(item))
+            # Do not use the SWIG copy constructor here: KiCad 10 can retain
+            # zeroed geometry in a copied PCB_TRACK.  Store scalar geometry
+            # and recreate each item on the destination board explicitly.
+            if isinstance(item, pcbnew.PCB_VIA):
+                tracks.append(("via", item.GetPosition(), item.GetWidth(pcbnew.F_Cu),
+                               item.GetDrill(), item.GetNetname()))
+            else:
+                tracks.append(("track", item.GetStart(), item.GetEnd(),
+                               item.GetLayer(), item.GetWidth(), item.GetNetname()))
 
     board = pcbnew.LoadBoard(str(BASE))
     for item in list(board.GetTracks()):
@@ -69,22 +76,25 @@ def main():
             if pname:
                 pad.SetNet(target_net(board, pname))
 
-    for item in tracks:
-        pname = short(item.GetNetname())
+    for record in tracks:
+        kind = record[0]
+        pname = short(record[-1])
         n = target_net(board, pname)
-        if isinstance(item, pcbnew.PCB_VIA):
+        if kind == "via":
+            _, position, width, drill, _ = record
             q = pcbnew.PCB_VIA(board)
-            q.SetPosition(item.GetPosition())
-            q.SetWidth(item.GetWidth())
-            q.SetDrill(item.GetDrill())
+            q.SetPosition(position)
+            q.SetWidth(width)
+            q.SetDrill(drill)
             q.SetLayerPair(pcbnew.F_Cu, pcbnew.B_Cu)
             q.SetNet(n)
         else:
+            _, start, end, layer, width, _ = record
             q = pcbnew.PCB_TRACK(board)
-            q.SetStart(item.GetStart())
-            q.SetEnd(item.GetEnd())
-            q.SetLayer(item.GetLayer())
-            q.SetWidth(item.GetWidth())
+            q.SetStart(start)
+            q.SetEnd(end)
+            q.SetLayer(layer)
+            q.SetWidth(width)
             q.SetNet(n)
         board.Add(q)
     # The Phase 16 ancestor carries filled GND zones.  Refill after replacing
