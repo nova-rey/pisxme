@@ -47,3 +47,18 @@ the CM5IO topology, EDAC mapping, 100-ohm route basis, ground return, and
 Phase 16 PCIe geometry.  Do not promote this receipt as Phase 17 closure until
 the outboard MagJack candidate passes its mechanical, connectivity, native
 DRC-scoped, and routing checks.
+
+## Outboard translation trials
+
+The generic transplant path was extended to translate only the Ethernet island
+geometry while retaining J7 fixed. Two disposable acreage sweeps were run:
+
+| Candidate | Placement | Native result | Decision |
+|---|---|---|---|
+| `ACREAGE_PHASE17_SPLIT_OUTBOARD_ETH_SOFT` | island +180,+40 mm | 336 violations, 13 crossings, 18 shorts | REJECTED |
+| `ACREAGE_PHASE17_SPLIT_OUTBOARD_BOTTOM_SOFT` | island +180,+100 mm | 499 violations, 20 crossings, 26 shorts | REJECTED |
+
+These failures are route-geometry failures of translated copper, not evidence
+against the CM5IO electrical topology. The next trial must regenerate the
+source-to-ESD fanout and connector launch for the selected placement rather
+than translating finished copper blindly.

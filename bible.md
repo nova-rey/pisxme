@@ -3656,3 +3656,13 @@ power-related short/crossing/hole findings, and plane-layer compliance.
 - Published commit `f3fbaa7` privately so the current evidence is readable
   outside the interactive UI; Phase 17 remains open and Phase 18 remains
   gated.
+
+2026-09-04 — Phase 17 outboard island translation trials
+
+- Added a generic disposable island-translation mode that leaves J7 fixed and
+  moves the CM5IO ESD/MagJack/support geometry as a unit.
+- Tested +180,+40 mm and +180,+100 mm outboard candidates. Native DRC found
+  13/20 crossings and 18/26 shorts respectively; both were rejected.
+- The failures identify blind translation of completed copper as the bad
+  solution class. Phase 17 remains active for regenerated fanout/launch,
+  consistent with the consultant recommendation.

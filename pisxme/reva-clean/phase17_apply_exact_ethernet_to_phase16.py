@@ -17,6 +17,8 @@ CT1_LAYER_OVERRIDE = os.environ.get("PISXME_CT1_LAYER", "F.Cu")
 CT2_LAYER_OVERRIDE = os.environ.get("PISXME_CT2_LAYER", "")
 SAFE_CT_LAUNCH = os.environ.get("PISXME_SAFE_CT_LAUNCH", "") == "1"
 SAFE_CT_CLEAR = os.environ.get("PISXME_SAFE_CT_CLEAR", "1") == "1"
+ETH_DX = float(os.environ.get("PISXME_ETH_DX", "0"))
+ETH_DY = float(os.environ.get("PISXME_ETH_DY", "0"))
 ETH_REFS = {"J2", "U6", "U9", "CCT", "CCT1", "CCT2", "CCT3", "CCT4",
             "RCT1", "RCT2", "RCT3", "RCT4"}
 
@@ -31,6 +33,18 @@ def xy(p):
 
 def V(x, y):
     return pcbnew.VECTOR2I_MM(x, y)
+
+
+def island_point(point):
+    """Translate fixture geometry once it leaves the fixed J7 source."""
+    x, y = xy(point)
+    if ETH_DX or ETH_DY:
+        # CM5IO fixture geometry uses x>60 for the ESD/MagJack island.  A
+        # segment crossing the boundary therefore retains its J7 endpoint
+        # and moves only its island endpoint.
+        if x > 60.0:
+            return V(x + ETH_DX, y + ETH_DY)
+    return point
 
 
 def target_net(board, name):
@@ -80,6 +94,9 @@ def main():
 
     for fp in footprints:
         ref = fp.GetReference()
+        if ETH_DX or ETH_DY:
+            fp.SetPosition(V(xy(fp.GetPosition())[0] + ETH_DX,
+                             xy(fp.GetPosition())[1] + ETH_DY))
         board.Add(fp)
         for pad in fp.Pads():
             pname = short(pad.GetNetname())
@@ -92,6 +109,7 @@ def main():
         n = target_net(board, pname)
         if kind == "via":
             _, position, width, drill, _ = record
+            position = island_point(position)
             if pname == "ETH_GND" and abs(pcbnew.ToMM(position.x) - 103.0) < 0.01 and abs(pcbnew.ToMM(position.y) - 50.0) < 0.01:
                 # CM5IO source artifact: this via has no B.Cu copper and is
                 # flagged dangling when transplanted.  The connected ESD
@@ -107,6 +125,7 @@ def main():
             q.SetNet(n)
         else:
             _, start, end, layer, width, _ = record
+            start, end = island_point(start), island_point(end)
             pname0 = pname
             if start == end:
                 # Do not reproduce a zero-length source artifact; it is not
