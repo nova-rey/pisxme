@@ -3,9 +3,10 @@
 Current state: `PISXME_REVA_CLEAN_PHASE19_SATA_ROUTING_IN_PROGRESS`;
 Phases 17–18 are closed with inherited-baseline qualifications. Phase 18
 native netlist and USB3 route proofs pass. Phase 19 storage authority is
-closed, but two SATA routing candidates are rejected by native DRC for
-pad-field and frozen-PCIe-trunk interactions. The next experiment moves the
-M.2 corridor beyond the PCIe trunk endpoint; no Phase 20+ work has started.
+closed, but three SATA routing classes are rejected by native DRC for
+pad-field, frozen-trunk, or long-corridor interactions. The next experiment
+must keep the SATA corridor local to open acreage; no Phase 20+ work has
+started.
 
 Created: native root project shell, ten named child-sheet files, isolated
 `PiSXMeRevAClean` symbol/footprint tables, architecture contract, interface
