@@ -3797,3 +3797,12 @@ power-related short/crossing/hole findings, and plane-layer compliance.
   unconnected items; package/edge crossings and power-copper interactions
   remain.
 - Preserved the retry as negative evidence; Phase 17 remains open.
+
+2026-09-04 — Phase 17 co-located complete-island support witness
+
+- Regenerated the official CM5IO MDI graph with the EDAC manufacturer
+  four-branch CT support network enabled in the co-located island fixture.
+- Native KiCad DRC found zero unconnected items, zero shorts, and zero MDI
+  crossings; one localized CT3/CT4 B.Cu support crossing remains.
+- Selected this as the best current Phase 17 ancestor for refinement. No
+  production promotion or Phase 18 work occurred.

@@ -168,7 +168,15 @@ def main():
                     ("ETH_CT4","ETH_CT3","ETH_CT2","ETH_CT1"),
                     branch_caps,branch_res,(14,13,12,11))):
                 a=actual(j2,srcpad); z=actual(cap,1)
-                path=[a,(68.0,60.0),(58.0,60.0),z] if source == "ETH_CT4" else [a,z]
+                # Keep the compact CM5IO witness but dogleg CT3 left and
+                # CT2 right before descending, clearing the EDAC NPTH holes
+                # without entering the MDI launch field.
+                path={
+                    "ETH_CT4": [a,(68.0,60.0),(58.0,60.0),z],
+                    "ETH_CT3": [a,(77.0,a[1]),(77.0,58.0),(66.0,58.0),(66.0,50.0),z],
+                    "ETH_CT2": [a,(a[0],58.0),(90.0,58.0),(90.0,50.0),z],
+                    "ETH_CT1": [a,z],
+                }[source]
                 if SUP_DX:
                     # When the low-speed RC island is moved away from the
                     # fuse, give the through-hole CT lands explicit staggered

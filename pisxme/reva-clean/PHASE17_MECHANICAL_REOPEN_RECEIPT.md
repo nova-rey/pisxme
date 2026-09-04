@@ -177,6 +177,17 @@ failures to the interleaved J7 fanout and the long ESD-to-MagJack corridors.
 This correction is preserved as another rejected generator iteration, not a
 Phase 17 promotion.
 
+## Co-located complete-island support witness
+
+The specialist-recommended co-located CM5IO transplant was regenerated from
+the official CM5IO MDI graph with the EDAC manufacturer four-branch CT support
+network enabled (`PISXME_DIRECT_J7=1 PISXME_CT_TIES=1`). Native KiCad DRC
+reported zero unconnected items, zero shorts, and zero MDI crossings. The
+remaining findings were narrowed to one CT3/CT4 B.Cu support-track crossing
+and ordinary inherited fixture clearances; the compact island is therefore
+the current best Phase 17 ancestor, but is not yet promoted until support and
+mechanical checks pass.
+
 The follow-up source-column split transitions the right J7 column immediately
 to B.Cu through ordinary vias and keeps the left column on F.Cu. Native DRC
 still rejected the candidate with 286 violations and 453 unconnected items;

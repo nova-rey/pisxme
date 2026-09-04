@@ -2138,3 +2138,10 @@ The package-aware source-column layer split was also tested: the right J7
 column transitions immediately to B.Cu while the left column remains on
 F.Cu. Native KiCad DRC still reports 286 violations and 453 unconnected
 items, so the candidate is rejected and Phase 17 remains open.
+
+The current best path is now the co-located complete CM5IO island rather than
+the perimeter variants. With the authoritative EDAC four-branch CT network
+enabled, the disposable fixture has zero unconnected items, zero shorts, and
+zero MDI crossings. One CT3/CT4 B.Cu support crossing remains, so Phase 17 is
+still open; this is a localized support-routing refinement, not a terminal
+architecture blocker.
