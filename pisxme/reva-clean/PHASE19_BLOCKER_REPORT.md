@@ -95,10 +95,10 @@ retaining the V3 split-cap SATA geometry. The generated/reloaded candidate is
 `PHASE19_COORDINATED_PASS_CANDIDATE3.kicad_pcb` with U7 `(120,140)` rotation
 180 and J3 `(145,125)` rotation 90. Native DRC reports 189 total violations,
 418 unconnected items, zero `tracks_crossing`, zero `shorting_items`, and the
-same three inherited clearance plus two inherited hole-clearance records as
-the accepted Phase-18 acreage baseline. The only additional native warning is
-not a true open/short: the candidate has one more valid transition warning in
-the generated high-speed corridor than the old ancestor.
+three inherited clearance plus two inherited hole-clearance records, with the
+same five inherited dangling-via records as the accepted Phase-18 acreage
+baseline. No candidate-introduced true clearance, short, or crossing remains
+in the high-speed routing categories.
 
 The candidate also removes the inherited duplicate U7 pad-net records on
 pads 5-12 in the serialized output. The authoritative mapped pads remain:
