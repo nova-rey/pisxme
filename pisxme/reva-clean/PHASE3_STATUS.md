@@ -1,17 +1,14 @@
 # Phase 3 status
 
-Current state: `PISXME_REVA_CLEAN_PHASE17_CLOSED_WITH_REV_A_EMPIRICAL_RISK`;
-Phase 17 Ethernet routing is closed. Its schematic/land-pattern authority is
-closed in commit `490ae22`; the EDAC logical pins are explicitly mapped to
-physical pads 18..1. Copper routing remains open because the frozen placement
-does not currently admit a no-maze two-layer route: native DRC candidates
-encounter existing acreage trunks, NPTH keepouts, and ESD pad-field crossings.
-No invalid Ethernet candidate is accepted. The 2026-09-03 Ethernet-only
-Phase 11/12 reopening tested nine compact CM5-adjacent placements and a
-complete west-edge island. The best ordered candidate remains rejected by
-native DRC because the J7 breakout, TPD4E004 WSON pad fields, and EDAC/J2
-NPTH/PTH field cannot be connected without true crossings/shorts under the
-frozen ordinary F.Cu/B.Cu signal-layer contract. No Phase 18+ work started.
+Current state: `PISXME_REVA_CLEAN_PHASE18_STORAGE_AUTHORITY_REPAIRED`;
+Phase 17 Ethernet routing is closed. Phase 18 storage authority repair is
+active and routing is still gated. Native KiCad netlist export now proves
+CM5/J7 USB3 pins 128/130/140/142 to TUSB9261IPVP pins 45/46/42/43, SATA
+connector pins 1/2/3/4 to bridge pins 57/56/60/59, and M2_3V3 to J3/X7
+without the earlier cooling/PCIe contamination. Root second-row sheet
+geometry was separated and the generator repair is byte-stable on repeat.
+The current native ERC report still contains the scaffold warning baseline,
+so Phase 18 USB3 routing has not started and no Phase 19+ work has started.
 
 Created: native root project shell, ten named child-sheet files, isolated
 `PiSXMeRevAClean` symbol/footprint tables, architecture contract, interface
@@ -84,4 +81,5 @@ ordinary 0.50/0.30 mm CM5 power transition, and a dedicated B.Cu corridor.
 The best integrated disposable ancestor has zero native `shorting_items` and
 zero `tracks_crossing` findings, but still has inherited unconnected acreage
 records and Ethernet launch/center-tap mechanical findings. Phase 17 remains
-open; the clean PCB is not promoted and no Phase 18+ work has started.
+closed; the clean PCB is not promoted. Phase 18 storage authority repair is
+the current gate; no USB3 routing or Phase 19+ work has started.
