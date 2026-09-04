@@ -1986,3 +1986,10 @@ a valid mechanical repair. The experiment was reverted from the authoring
 path. The remaining Phase 17 boundary is therefore the connector-local
 center-tap launch/mechanical envelope plus inherited acreage DRC debt; no
 Phase 18+ work or clean-board promotion has occurred.
+a validated connector-local repair is now available: CT1 uses the permitted
+F.Cu transition, CT2/CT3 leave the MagJack pad and hole rows on outer B.Cu
+doglegs, and CT2 enters CCT2 vertically to avoid its adjacent support branch.
+Fresh native DRC for `ACREAGE_PHASE17_CURRENT_ETH_REAUTH.kicad_pcb` reports no
+`tracks_crossing` or `shorting_items`; the scoped Ethernet regression passes.
+This is not yet a Phase 17 close because board-wide inherited DRC debt,
+impedance/rule reconciliation, and final mechanical review remain.

@@ -3524,3 +3524,13 @@
 - Rejected CT2/CT3 doglegs after native DRC found true EDAC shield/MDI shorts.
   The experiment was reverted from the authoring path. Phase 17 remains open;
   no clean-board promotion or Phase 18+ work occurred.
+
+2026-09-04 — Phase 17 connector-local center-tap reauthoring
+
+- Tested outer B.Cu doglegs for CT2/CT3 around the authoritative EDAC
+  mounting-hole and MagJack pad rows, with CT2 entering its CCT2 pad
+  vertically. The fresh integrated candidate has no native crossing or true
+  short categories, and the scoped Ethernet regression passes.
+- Promoted this bounded repair to the disposable authoring path defaults;
+  full Phase 17 remains open for inherited board DRC debt, impedance/rule
+  reconciliation, and final mechanical review. No Phase 18+ work occurred.

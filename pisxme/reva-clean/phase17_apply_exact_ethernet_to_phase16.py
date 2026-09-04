@@ -13,9 +13,10 @@ BASE = Path(os.environ.get("PISXME_BASE", ROOT / "ACREAGE_PCIE_PHASE16.kicad_pcb
 FIXTURE = ROOT / "CM5IO_DIRECT_J7_ETHERNET_FIXTURE.kicad_pcb"
 OUT = Path(os.environ.get("PISXME_OUT", ROOT / "ACREAGE_PHASE17_CM5IO_EDAC_RC.kicad_pcb"))
 PREFIXES = ("CM5_GBE_TD", "ETH_", "GBE_")
-CT1_LAYER_OVERRIDE = os.environ.get("PISXME_CT1_LAYER", "")
+CT1_LAYER_OVERRIDE = os.environ.get("PISXME_CT1_LAYER", "F.Cu")
 CT2_LAYER_OVERRIDE = os.environ.get("PISXME_CT2_LAYER", "")
 SAFE_CT_LAUNCH = os.environ.get("PISXME_SAFE_CT_LAUNCH", "") == "1"
+SAFE_CT_CLEAR = os.environ.get("PISXME_SAFE_CT_CLEAR", "1") == "1"
 ETH_REFS = {"J2", "U6", "U9", "CCT", "CCT1", "CCT2", "CCT3", "CCT4",
             "RCT1", "RCT2", "RCT3", "RCT4"}
 
@@ -94,6 +95,17 @@ def main():
         else:
             _, start, end, layer, width, _ = record
             pname0 = pname
+            if SAFE_CT_CLEAR and layer == pcbnew.B_Cu and pname0 in {"ETH_CT2", "ETH_CT3"}:
+                s = (pcbnew.ToMM(start.x), pcbnew.ToMM(start.y))
+                e = (pcbnew.ToMM(end.x), pcbnew.ToMM(end.y))
+                doglegs = {
+                    "ETH_CT2": (s, (78.0, 55.56), (78.0, 50.8), (93.8, 50.8), (93.8, 46.0), e),
+                    "ETH_CT3": (s, (74.325, 50.8), (66.0, 50.8), (66.0, 46.0), e),
+                }
+                for a0, z0 in zip(doglegs[pname0], doglegs[pname0][1:]):
+                    q = pcbnew.PCB_TRACK(board); q.SetStart(V(*a0)); q.SetEnd(V(*z0))
+                    q.SetLayer(pcbnew.B_Cu); q.SetWidth(width); q.SetNet(n); board.Add(q)
+                continue
             if SAFE_CT_LAUNCH and layer == pcbnew.B_Cu and pname0 in {"ETH_CT2", "ETH_CT3"}:
                 s = (pcbnew.ToMM(start.x), pcbnew.ToMM(start.y))
                 e = (pcbnew.ToMM(end.x), pcbnew.ToMM(end.y))

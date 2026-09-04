@@ -49,3 +49,15 @@ removed that crossing and passed the scoped Ethernet regression. CT2/CT3
 dogleg experiments were rejected after native DRC found true shorts at the
 EDAC connector boundary. These are disposable results; the gate remains open
 pending a mechanically clean connector-local implementation.
+
+## Current default reauthoring path
+
+The connector-local center-tap authoring path now defaults to the validated
+local repair: CT1 uses the permitted F.Cu transition, while CT2 and CT3 use
+outer B.Cu doglegs that leave the MagJack pad field and mounting-hole row
+before returning to their authoritative support pads. CT2 enters CCT2
+vertically to avoid its adjacent branch pad. Fresh native DRC for
+`ACREAGE_PHASE17_CURRENT_ETH_REAUTH.kicad_pcb` reports no
+`tracks_crossing` or `shorting_items`, and the scoped Ethernet regression
+passes. Full Phase 17 remains open for board-wide inherited DRC debt,
+controlled-impedance/rule reconciliation, and final mechanical review.
