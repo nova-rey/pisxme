@@ -3408,3 +3408,14 @@
   CM5IO Ethernet fixture remained electrically closed.
 - Preserved rejected artifacts, kept Phase 17 open, and began no Phase 18+
   work or clean release promotion.
+
+2026-09-04 — Phase 17 lower U3/F1 TI-style placement variant
+
+- Moved F1 to `(100,20)` and placed U3 at `(60,165)`, below the preserved
+  CM5_PERST lane; shifted the adjacent U5 input-support row coherently.
+- Rebuilt U3 VIN/VLDOIN/VOUT and FB/RT/PG copper from translated Phase-15
+  geometry. U3-only DRC dropped to the inherited 236-finding baseline with
+  no new U3 crossing category after the corrected C6 dogleg.
+- Exact CM5IO Ethernet integration remains rejected at 436 findings due to
+  CT1/CT2 and connector-field geometry; preserved the candidate and kept
+  Phase 17 open. No Phase 18+ work or release promotion occurred.

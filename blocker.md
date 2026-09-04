@@ -1843,3 +1843,21 @@ violations. The Ethernet fixture remains electrically closed, but this is not
 a Phase 17 promotion. No clean release PCB changed and no Phase 18+ work
 began. The blocker is recoverable; the next trial is a proper boundary
 reauthoring with the canonical net and validated PCIe copper.
+
+## Phase 17 TI-style lower-island trial — 2026-09-04
+
+A second bounded local variant moved F1 to `(100,20)`, moved U3 to `(60,165)`
+below the preserved CM5_PERST lane, shifted the adjacent U5 input-support row
+as a coherent block, and rebuilt the U3 control corridors from the Phase-15
+TI-style geometry. The U3-only native DRC result is materially better: 236
+inherited/scaffold violations, with no new U3 `tracks_crossing` category and
+only the pre-existing CM5_PERST/bridge-capacitor short remaining. The prior
+corrected C6 escape defect was removed by the local dogleg.
+
+Applying the exact CM5IO Ethernet island to that candidate is still rejected:
+native DRC reports 436 total violations and adds a real CT1/CT2 crossing plus
+connector-field clearance/hole findings. The Ethernet fixture remains the
+electrical oracle, but this integrated candidate is not promoted. The next
+bounded repair is to preserve this lower U3/F1 placement and correct the
+Ethernet center-tap launch/return geometry at the integration boundary; no
+Phase 18+ work began.
