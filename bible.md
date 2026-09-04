@@ -3779,3 +3779,12 @@ power-related short/crossing/hole findings, and plane-layer compliance.
 - Native DRC still rejected the candidate with 48 crossings, 53 shorts, and
   eight hole-clearance findings. The result is preserved as negative evidence;
   the next pass requires an explicit no-go constrained router.
+
+2026-09-04 — Phase 17 package-row dogbone correction
+
+- Staggered shared ESD source/destination dogbones in the west-perimeter
+  launch generator so each USON package row has an independent approach.
+- Native KiCad DRC still rejected the candidate with 289 violations and 453
+  unconnected items; crossings/shorts remain at the interleaved J7 fanout and
+  ESD launch.
+- Preserved the result as negative generator evidence. Phase 17 remains open.

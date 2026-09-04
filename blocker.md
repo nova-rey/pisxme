@@ -31,6 +31,12 @@ Ethernet pair crossings/shorts in the ESD fanout and edge launch. This third
 class is rejected as manual lane geometry; Phase 17 remains active and the
 CM5IO-derived architecture remains authoritative.
 
+The package-row dogbone correction reduced neither the acceptance risk nor
+the gate failure: native DRC now reports 289 violations and 453 unconnected
+items, with crossings/shorts at the interleaved J7 fanout and ESD launch. The
+result is preserved in the same west-perimeter candidate and remains
+recoverable; no Phase 18 work has begun.
+
 The prior uniform-cooler-courtyard assumption has been removed from the
 disposable Phase 17 authoring path. `MECH_V100` remains a visible measured
 cooling/backplate datum, but is no longer a universal hard collision volume.

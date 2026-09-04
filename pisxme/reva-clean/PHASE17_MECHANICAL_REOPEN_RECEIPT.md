@@ -169,3 +169,10 @@ items. Pair crossings and shorts remain in the package-aware ESD fanout and
 at the board-edge launch. This class is rejected as a hand-authored lane
 implementation; it does not change the CM5IO/EDAC electrical authority or
 the Rev-A underside contract.
+
+The west-perimeter generator was then corrected to stagger the shared ESD
+source and destination dogbones by package row. Native DRC remained negative
+(289 violations, 453 unconnected items); the report localizes the remaining
+failures to the interleaved J7 fanout and the long ESD-to-MagJack corridors.
+This correction is preserved as another rejected generator iteration, not a
+Phase 17 promotion.
