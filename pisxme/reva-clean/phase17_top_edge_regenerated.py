@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parent
 BASE = ROOT / "ACREAGE_PHASE17_F1RIGHT40_ETH_GROUND_FIXED.kicad_pcb"
 BASE = Path(os.environ.get("PISXME_BASE", str(BASE)))
 OUT = Path(os.environ.get("PISXME_OUT", str(ROOT / "ACREAGE_PHASE17_TOP_EDGE_REGENERATED.kicad_pcb")))
+ESD_ANGLE = int(os.environ.get("PISXME_ESD_ANGLE", "180"))
 W = pcbnew.FromMM(.13208)
 
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
@@ -31,7 +32,7 @@ def via(b,n,p):
 b=pcbnew.LoadBoard(str(BASE))
 # Stagger the two authoritative ESD packages beside the fixed J7 launch and
 # put the tall connector on the open top edge. Support remains local to J2.
-move(b,"U9",(50,110),180); move(b,"U6",(60,115),180); move(b,"J2",(150,12.5),180)
+move(b,"U9",(50,110),ESD_ANGLE); move(b,"U6",(60,115),ESD_ANGLE); move(b,"J2",(150,12.5),180)
 for ref,pos in (("CCT",(150,28)),("CCT1",(140,25)),("CCT2",(160,25)),
                 ("CCT3",(140,35)),("CCT4",(160,35)),("RCT1",(140,30)),
                 ("RCT2",(160,30)),("RCT3",(140,40)),("RCT4",(160,40))): move(b,ref,pos,180)

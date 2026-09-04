@@ -3696,6 +3696,14 @@ power-related short/crossing/hole findings, and plane-layer compliance.
   eight hole-clearance findings. The result is preserved as negative evidence;
   the next pass requires an explicit no-go constrained router.
 
+2026-09-04 — Phase 17 ESD orientation retry
+
+- Tested the top-edge regenerated Ethernet candidate with both ESD packages
+  rotated to 0 degrees while preserving the authoritative nets and J2.
+- Native DRC rejected it with 55 crossings, 35 shorts, and eight
+  hole-clearance findings. Orientation alone is insufficient; pair-specific
+  launch ordering remains the next routing target.
+
 2026-09-04 — Phase 17 top-edge transition-via correction
 
 - Corrected the top-edge generator's artificial defect where four B.Cu

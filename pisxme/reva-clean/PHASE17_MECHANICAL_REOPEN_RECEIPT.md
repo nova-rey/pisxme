@@ -110,6 +110,11 @@ shorts but still failed native DRC with 350 total violations, 48 crossings,
 iteration must use a constrained router/no-go mask for the actual frozen
 power and PCIe copper rather than hand-selected corridor lines.
 
+An ESD-orientation variant was also tested at 0° with the same top-edge J2
+placement. Native DRC reported 338 violations, 55 crossings, 35 shorts, 8
+hole-clearance findings, and 461 unconnected items. It was rejected; rotation
+alone does not resolve the pair-specific launch ordering.
+
 The follow-up audit identified a separate authoring error: the first top-edge
 generator placed all four B.Cu connector-side transitions at `(90,45)`,
 creating artificial stacked-via shorts. The corrected generator gives each
