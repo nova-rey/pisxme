@@ -93,3 +93,10 @@ Orientation sweep continuation: U7/J3 rotations at `(150,140)/(190,140)`
 and `(145,135)/(190,135)` measured 277/415 and 265/408 native DRC
 violations respectively. Rotation-only classes are rejected; the coupled
 U7 pad-field escape remains the active engineering issue.
+
+Direct-F.Cu USB3 isolation trial: with SATA tracks removed from the corrected
+U7 `(140,130)` candidate, native DRC measured 211 violations / 430
+unconnected. Three candidate-introduced failures were shorts against the
+regulator support island and one crossing against the frozen PCIe B.Cu field.
+This identifies the next local repair target; no PCIe architecture change is
+implied.

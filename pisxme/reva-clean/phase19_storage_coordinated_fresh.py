@@ -26,11 +26,10 @@ def main():
  for name,spn,upn,first,second in (('CM5_USB3_RX_N','128','42',(72,103.9),(103,103)),('CM5_USB3_RX_P','130','43',(72,104.8),(103,105)),('CM5_USB3_TX_N','140','45',(72,108),(103,107))):
   n=b.FindNet('/CORE_CM5/'+name);s=sp[spn];d=up[upn];launch=(71.2,s[1]);T(b,n,s,launch,pcbnew.F_Cu);T(b,n,launch,first,pcbnew.F_Cu);X(b,n,first)
   if name == 'CM5_USB3_TX_N':
-   T(b,n,first,(82,108),pcbnew.B_Cu);X(b,n,(82,108));T(b,n,(82,108),(102,108),pcbnew.B_Cu);T(b,n,(102,108),second,pcbnew.B_Cu);X(b,n,second)
+   T(b,n,first,(82,108),pcbnew.F_Cu);T(b,n,(82,108),d,pcbnew.F_Cu)
   else:
-   T(b,n,first,(103,first[1]),pcbnew.B_Cu);X(b,n,(103,first[1]));T(b,n,(103,first[1]),second,pcbnew.B_Cu);X(b,n,second)
-  T(b,n,second,d,pcbnew.F_Cu)
- n=b.FindNet('/CORE_CM5/CM5_USB3_TX_P');s=sp['142'];d=up['46'];T(b,n,s,(71.2,106.7),pcbnew.F_Cu);T(b,n,(71.2,106.7),(71,109),pcbnew.F_Cu);X(b,n,(71,109));T(b,n,(71,109),(82,112),pcbnew.B_Cu);X(b,n,(82,112));T(b,n,(82,112),d,pcbnew.F_Cu)
+   T(b,n,first,d,pcbnew.F_Cu)
+ n=b.FindNet('/CORE_CM5/CM5_USB3_TX_P');s=sp['142'];d=up['46'];T(b,n,s,(71.2,106.7),pcbnew.F_Cu);T(b,n,(71.2,106.7),(71,109),pcbnew.F_Cu);X(b,n,(71,109));T(b,n,(71,109),(82,112),pcbnew.B_Cu);X(b,n,(82,112));T(b,n,(82,112),(120,112),pcbnew.B_Cu);X(b,n,(120,112));T(b,n,(120,112),(128,112),pcbnew.F_Cu);X(b,n,(128,112));T(b,n,(128,112),(128,d[1]),pcbnew.B_Cu);X(b,n,(128,d[1]));T(b,n,(128,d[1]),d,pcbnew.F_Cu)
  # SATA corridor is derived from the actual moved pad coordinates.  The two
  # pairs use separate permitted layers and monotonic lanes; vias are outside
  # both SMD pad fields and each M.2 launch returns to F.Cu before the pad.

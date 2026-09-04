@@ -151,3 +151,9 @@ coordinates, removing the stale-pad-coordinate defect. Corrected candidates
 at U7 `(140,130)` / J3 `(180,115)` measured 227 and 229 native DRC
 violations / 426 unconnected across two SATA escape variants; both were
 rejected for remaining local crossings. Phase 19 remains active.
+
+Phase 19 USB3 isolation update (2026-09-04): removing SATA tracks from the
+corrected U7 `(140,130)` candidate measured 211 native DRC violations / 430
+unconnected. Three candidate-introduced shorts remain against regulator
+support geometry and one crossing remains against the frozen PCIe B.Cu field;
+the next local repair targets those corridors. Phase 19 remains active.
