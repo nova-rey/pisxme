@@ -6,6 +6,25 @@ Status: `PISXME_REVA_CLEAN_PHASE19_SATA_ROUTING_IN_PROGRESS`
 
 ## Current evidence
 
+### 2026-09-04 continuation: SATA coupling network implemented
+
+The earlier missing-implementation finding has been corrected generically in
+`phase7_storage.py` and checkpointed at `db574ab`. Native KiCad 10 child-netlist
+export now proves four separate paths:
+
+| Bridge-side | Part | Socket-side |
+| --- | --- | --- |
+| `BRIDGE_SATA_TX_P` | C30 `GRM155R71C104KA88D`, 100 nF, 0402 | `SATA_M2_TX_P` → J3 pad 1 |
+| `BRIDGE_SATA_TX_N` | C31 `GRM155R71C104KA88D`, 100 nF, 0402 | `SATA_M2_TX_N` → J3 pad 2 |
+| `BRIDGE_SATA_RX_P` | C32 `GRM155R71C104KA88D`, 100 nF, 0402 | `SATA_M2_RX_P` → J3 pad 3 |
+| `BRIDGE_SATA_RX_N` | C33 `GRM155R71C104KA88D`, 100 nF, 0402 | `SATA_M2_RX_N` → J3 pad 4 |
+
+The PCB materializer loads four matching footprints and native DRC confirms
+they are represented as physical pads. This closes the schematic/netlist
+implementation gap, but not the Phase 19 routing gate: the coordinated PCB
+generator still needs to route both sides of every capacitor and then prove
+the full U7→C30-C33→J3 channel.
+
 The closed Phase 18 CM5-to-U7 USB3 route remains valid at U7 `(110,105)`.
 The coordinated moved-U7 experiment was rejected because regenerated USB3
 escapes crossed the frozen PCIe field and U7 support pads. The J3-only trial
