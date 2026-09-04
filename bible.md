@@ -3806,3 +3806,13 @@ power-related short/crossing/hole findings, and plane-layer compliance.
   crossings; one localized CT3/CT4 B.Cu support crossing remains.
 - Selected this as the best current Phase 17 ancestor for refinement. No
   production promotion or Phase 18 work occurred.
+
+2026-09-04 — Phase 17 CT4 layer-separated support retry
+
+- Added two ordinary CT4 support transitions so the CT4/CT3 branch escape is
+  separated by layer while retaining the authoritative four-net CT network.
+- Native KiCad DRC reports zero unconnected items, zero shorts, and zero track
+  crossings on the complete disposable fixture. Remaining findings are
+  clearance-class/inherited compact-fixture records requiring review.
+- The co-located fixture remains the best Phase 17 ancestor; no production
+  promotion or Phase 18 work occurred.

@@ -196,7 +196,18 @@ def main():
                     # moved-support experiment above has its own escapes;
                     # keep the default output identical to its known-good
                     # compact geometry.
-                    route(b,path,nets[source],pcbnew.B_Cu,shift=False)
+                    if source == "ETH_CT4":
+                        # The CT4/CT3 branch crossing is removed by a short
+                        # layer-separated jog. Both transitions are ordinary
+                        # through-vias outside the EDAC and SMT pads.
+                        mid1=(68.0,60.0); mid2=(58.0,60.0)
+                        via_actual(*mid1,nets[source])
+                        via_actual(*mid2,nets[source])
+                        route(b,[a,mid1],nets[source],pcbnew.F_Cu,shift=False)
+                        route(b,[mid1,mid2],nets[source],pcbnew.F_Cu,shift=False)
+                        route(b,[mid2,z],nets[source],pcbnew.B_Cu,shift=False)
+                    else:
+                        route(b,path,nets[source],pcbnew.B_Cu,shift=False)
                 ca=actual(cap,2); rb=actual(res,1)
                 route(b,[ca,(ca[0],42+i*.5),(rb[0],42+i*.5),rb],nets[f"ETH_CT_BRANCH_{source[-1]}"],pcbnew.B_Cu,shift=False)
                 rr=actual(res,2); route(b,[rr,(rr[0],37),(75,37)],nets["ETH_CT_COMMON"],pcbnew.B_Cu,shift=False)

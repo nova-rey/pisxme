@@ -193,3 +193,11 @@ to B.Cu through ordinary vias and keeps the left column on F.Cu. Native DRC
 still rejected the candidate with 286 violations and 453 unconnected items;
 package/edge crossings and power-copper interactions remain. It is preserved
 as negative evidence and does not close Phase 17.
+
+The CT4 branch was then moved through two ordinary layer transitions: its
+entry dogleg is F.Cu, the crossover is F.Cu-separated from the B.Cu CT3
+branch, and the final support leg returns to B.Cu. Native KiCad DRC now
+reports zero unconnected items, zero `shorting_items`, and zero
+`tracks_crossing` findings on the complete disposable fixture. Remaining
+findings are inherited/clearance-class records around the compact authority
+fixture and must be reviewed before acreage promotion.
