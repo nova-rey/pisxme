@@ -3741,6 +3741,17 @@ power-related short/crossing/hole findings, and plane-layer compliance.
 - The historical west-split route remains rejected; Phase 17 continues toward
   a freshly authored top-edge/source-proximate solution.
 
+2026-09-04 — Phase 17 fresh open-acreage island trial
+
+- Moved U9/U6 to `(205,140)` / `(215,140)` and the EDAC MagJack to
+  `(282.5,140)` at 180 degrees, then regenerated all eight MDI nets with
+  ordinary F.Cu/B.Cu transitions.
+- Native KiCad DRC rejected the trial with 285 violations and 445 unconnected
+  items. The fresh placement removed the historical island collision, but the
+  generated source lanes crossed F2/power-entry geometry and the ESD breakout.
+- Preserved the trial as negative evidence. Phase 17 remains open and no
+  Phase 18 work or validation-gate relaxation occurred.
+
 2026-09-04 — Phase 17 top-edge regenerated-island trial
 
 - Built the specialist-recommended top-edge candidate with staggered ESD

@@ -140,3 +140,18 @@ promoted, and the CM5IO electrical authority remains unchanged. The next
 credible class is a genuinely fresh source-to-ESD island authoring pass in an
 open acreage region, with a constrained no-go mask for frozen PCIe and power
 copper rather than adding long manual lanes to the existing copper field.
+
+## Fresh open-acreage island trial
+
+The complete ESD pair was moved to `(205,140)` / `(215,140)` and the EDAC
+MagJack to `(282.5,140)` at 180 degrees, using the newly available underside
+contract and lower-right acreage. All eight MDI nets were regenerated from
+actual J7, ESD, and MagJack pad centers, with TD2/TD0 using ordinary F.Cu to
+B.Cu transitions and no internal-plane signals.
+
+Native KiCad DRC rejected this first fresh-island authoring pass with 285
+violations and 445 unconnected items. The failures are now localized to the
+generated source corridors crossing the existing F2/power-entry geometry, the
+package-aware ESD breakout, and the connector-boundary support pads. The
+placement class itself is retained for refinement; the trial is not promoted
+and Phase 17 remains open.

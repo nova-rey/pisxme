@@ -16,6 +16,14 @@ with an explicit no-go mask for frozen PCIe and power copper.
 Evidence is pushed in commit `1cd2a44` and in
 [`PHASE17_MECHANICAL_REOPEN_RECEIPT.md`](pisxme/reva-clean/PHASE17_MECHANICAL_REOPEN_RECEIPT.md).
 
+The subsequent fresh open-acreage island trial moved U9/U6 to `(205,140)` /
+`(215,140)` and J2 to `(282.5,140)`. Native KiCad DRC reported 285 violations
+and 445 unconnected items. This removed the historical island-placement
+collision but rejected the generated source lanes because they crossed the
+existing F2/power-entry corridor and the ESD package breakout. It remains
+recoverable evidence, not terminal `BLOCKED`; the next attempt uses an
+outboard edge launch with explicit no-go geometry.
+
 The prior uniform-cooler-courtyard assumption has been removed from the
 disposable Phase 17 authoring path. `MECH_V100` remains a visible measured
 cooling/backplate datum, but is no longer a universal hard collision volume.
