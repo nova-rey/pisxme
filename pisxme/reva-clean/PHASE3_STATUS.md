@@ -99,3 +99,12 @@ frozen reference. A mid-acreage SATA V3 escape has no new short/crossing
 category against its inherited baseline, but cannot close Phase 19 while its
 moved U7 leaves USB3 stale. Evidence and the next bounded M.2 endpoint search
 are recorded in `PHASE19_BLOCKER_REPORT.md`; Phase 20+ remains gated.
+
+Phase 19 local-placement exhaustion update (2026-09-04): a local underside
+M.2 candidate at `(115,125)` with U7 and Phase 18 USB3 preserved produced
+244 native DRC violations / 430 unconnected items. The new failures are U7
+pad-field conflicts, two SATA B.Cu crossings, and M.2 courtyard/clearance
+interactions. Combined with the coordinated, J3-only, outboard, and prior
+mid-acreage waves, the remaining repair requires reopening the frozen U7/PCIe
+corridor and regenerating an affected high-speed ancestor. Phase 19 is
+blocked at this boundary; Phase 20+ has not started.

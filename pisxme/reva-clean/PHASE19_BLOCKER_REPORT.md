@@ -2,7 +2,7 @@
 
 Date: 2026-09-04
 
-Status: `PISXME_REVA_CLEAN_PHASE19_SATA_ROUTING_IN_PROGRESS`
+Status: `PISXME_REVA_CLEAN_BLOCKED`
 
 ## Current evidence
 
@@ -20,6 +20,7 @@ Native KiCad 10 DRC receipts:
 | `ACREAGE_PHASE19_SATA_J3_ONLY.kicad_pcb` | 234 violations / 426 unconnected | J3 launch/endpoint crossings and shorts; inherited baseline separate |
 | `ACREAGE_PHASE19_SATA_OUTBOARD_MONOTONIC.kicad_pcb` | 246 violations / 426 unconnected | fixed-board PCIe/reference intersections plus M.2 launch crossings; inherited baseline separate |
 | `ACREAGE_PHASE19_SATA_UNDERSIDE_ENDPOINT.kicad_pcb` | 243 violations / 430 unconnected | TX source/connector crossings, one frozen PCIe B.Cu intersection, and connector-hole clearance; inherited baseline separate |
+| `ACREAGE_PHASE19_SATA_LOCAL_UNDERSIDE.kicad_pcb` | 244 violations / 430 unconnected | U7 pad-field conflicts, two local B.Cu pair crossings, and M.2 courtyard/clearance interactions; inherited baseline separate |
 | `ACREAGE_PHASE19_STORAGE_MIDACREAGE_SATA_LAUNCH_V3.kicad_pcb` | 198 violations / 430 unconnected | no new short/crossing category; SATA-only proof, not coordinated-board closure |
 
 The V3 result is useful evidence for a local SATA corridor, but is not
@@ -43,5 +44,8 @@ starting geometry. Candidates must pass focused native DRC for all four SATA
 nets, preserve 100-ohm ordinary F.Cu/B.Cu routing, and avoid plane-layer
 signals, stubs, shorts, crossings, and connector/mechanical conflicts.
 
-This is a recoverable progress packet, not terminal `BLOCKED`; Phase 20+ has
-not started.
+Phase 20+ has not started. The authorized local endpoint/underside classes are now
+exhausted. The remaining practical choices are to reopen the frozen U7/PCIe
+placement corridor and regenerate the affected high-speed routes, or to accept
+a material Phase 18/19 architectural change. Neither is silently accepted in
+this packet.
