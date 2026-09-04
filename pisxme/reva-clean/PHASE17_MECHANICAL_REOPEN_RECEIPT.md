@@ -71,3 +71,18 @@ using ordinary through-vias for TD2/TD0. The resulting
 415 violations, including 22 `tracks_crossing`, 44 `shorting_items`, and six
 hole-clearance findings. This rejects the lane implementation, not the CM5IO
 topology; Phase 17 remains open.
+
+## Revised underside contract
+
+The Rev-A contract was subsequently narrowed: a cooler/backplate mounted to
+the V100 SXM2 module is outside the carrier-board mechanical envelope. No
+generic underside keepout or carrier mounting holes are reserved. The native
+Phase 9 and Phase 11/12 audits pass with the floorplan label
+`V100 MODULE / TOP COOLING DATUM`; underside Ethernet routing is therefore
+permitted except at verified board hardware and connector/access geometry.
+
+The rotated native-tool fixture was rerun under this contract. Its result was
+still negative (163 violations, 6 crossings, 10 shorts, 3 unconnected), so
+removing the hypothetical underside reservation does not by itself solve the
+source/ESD escape. It remains a disposable rejected fixture, not an authority
+change or a Phase 17 pass.

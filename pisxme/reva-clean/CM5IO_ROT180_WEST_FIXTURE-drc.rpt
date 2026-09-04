@@ -1,353 +1,581 @@
 ** Drc report for CM5IO_ROT180_WEST_FIXTURE.kicad_pcb **
-** Created on 2026-09-03T17:58:34 **
+** Created on 2026-09-04T11:39:54 **
 ** Report includes: Errors, Warnings **
 
-** Found 94 DRC violations **
+** Found 163 DRC violations **
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(32.0000 mm, 52.5000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 3.7364 mm
-    @(32.5000 mm, 51.5000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 3.6699 mm
-[shorting_items]: Items shorting two nets (nets  and CM5_GBE_TD0_N)
-    Local override; error
-    @(66.9600 mm, 100.3000 mm): Pad 109 [<no net>] of J7 on F.Cu
-    @(36.0400 mm, 100.3000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 37.9600 mm
-[shorting_items]: Items shorting two nets (nets  and CM5_GBE_TD0_P)
-    Local override; error
-    @(70.0400 mm, 100.7000 mm): Pad 112 [<no net>] of J7 on F.Cu
-    @(36.0400 mm, 100.7000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 38.4600 mm
+    @(29.4850 mm, 69.0000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 3.0150 mm
+    @(38.0000 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on B.Cu, length 32.7515 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(74.0000 mm, 68.5000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 44.3850 mm
-    @(32.5000 mm, 69.0000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 17.5000 mm
+    @(16.0000 mm, 54.5000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 22.2052 mm
+    @(16.5000 mm, 67.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 14.0000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(74.0000 mm, 100.3000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 31.8000 mm
-    @(74.5000 mm, 69.0000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 44.8850 mm
+    @(23.6150 mm, 67.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 7.6150 mm
+    @(16.5000 mm, 67.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 14.0000 mm
+[shorting_items]: Items shorting two nets (nets  and CM5_GBE_TD3_N)
+    Local override; error
+    @(27.1750 mm, 42.4400 mm): PTH pad 13 [<no net>] of J2
+    @(16.5000 mm, 53.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 19.8786 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD3_P and CM5_GBE_TD2_N)
+    Local override; error
+    @(30.0000 mm, 99.1000 mm): Via [CM5_GBE_TD3_P] on F.Cu - B.Cu
+    @(30.0000 mm, 100.3000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 32.1907 mm
+[shorting_items]: Items shorting two nets (nets  and CM5_GBE_TD2_N)
+    Local override; error
+    @(19.9100 mm, 49.0600 mm): PTH pad 16 [<no net>] of J2
+    @(17.0000 mm, 52.5000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 17.1858 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD3_N and CM5_GBE_TD2_P)
+    Local override; error
+    @(30.5000 mm, 99.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
+    @(30.8000 mm, 100.7000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 32.0919 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(73.5000 mm, 67.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 43.8850 mm
-    @(73.0000 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 32.1000 mm
+    @(17.5000 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 17.5000 mm
+    @(22.7150 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 5.7150 mm
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1265 mm)
+    Rule: board setup constraints hole; error
+    @(16.5000 mm, 67.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 14.0000 mm
+    @(15.8000 mm, 55.7500 mm): NPTH pad of J2
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1115 mm)
+    Local override; error
+    @(36.0400 mm, 100.7000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 4.3600 mm
+    @(39.6000 mm, 100.3000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(22.7150 mm, 68.5000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+    @(22.7150 mm, 69.0000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1250 mm)
+    Local override; error
+    @(29.6150 mm, 69.0000 mm): Pad 10 [CM5_GBE_TD0_P] of U6 on F.Cu
+    @(29.4850 mm, 68.5000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(22.7150 mm, 68.5000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+    @(22.7150 mm, 69.0000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(22.7150 mm, 68.5000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+    @(22.7150 mm, 69.0000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1903 mm)
+    Local override; error
+    @(30.5000 mm, 99.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
+    @(30.0000 mm, 99.1000 mm): Via [CM5_GBE_TD3_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(22.7150 mm, 68.5000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+    @(22.7150 mm, 69.0000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(22.7150 mm, 68.5000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+    @(22.7150 mm, 69.0000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1903 mm)
+    Local override; error
+    @(30.5000 mm, 99.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
+    @(30.0000 mm, 99.1000 mm): Via [CM5_GBE_TD3_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1903 mm)
+    Local override; error
+    @(30.5000 mm, 99.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
+    @(30.0000 mm, 99.1000 mm): Via [CM5_GBE_TD3_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(22.7150 mm, 68.5000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+    @(22.7150 mm, 69.0000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (pad clearance 1.7000 mm; actual 0.0000 mm)
+    Local override; error
+    @(38.8000 mm, 99.5000 mm): Track [CM5_GBE_TD1_N] on B.Cu, length 32.6535 mm
+    @(35.0000 mm, 82.0000 mm): NPTH pad of J7
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1903 mm)
+    Local override; error
+    @(30.5000 mm, 99.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
+    @(30.0000 mm, 99.1000 mm): Via [CM5_GBE_TD3_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1903 mm)
+    Local override; error
+    @(30.5000 mm, 99.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
+    @(30.0000 mm, 99.1000 mm): Via [CM5_GBE_TD3_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1903 mm)
+    Local override; error
+    @(30.5000 mm, 99.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
+    @(30.0000 mm, 99.1000 mm): Via [CM5_GBE_TD3_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1635 mm)
+    Local override; error
+    @(24.0000 mm, 67.0000 mm): Via [CM5_GBE_TD3_P] on F.Cu - B.Cu
+    @(24.3850 mm, 67.5000 mm): Pad 4 [CM5_GBE_TD3_N] of U9 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1115 mm)
+    Local override; error
+    @(30.5000 mm, 99.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
+    @(32.9600 mm, 99.1000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 2.9600 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0186 mm)
+    Local override; error
+    @(25.0000 mm, 68.5000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+    @(30.5000 mm, 99.5000 mm): Track [CM5_GBE_TD3_N] on B.Cu, length 32.5576 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD1_N and )
+    Local override; error
+    @(31.5000 mm, 53.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 16.3600 mm
+    @(27.1750 mm, 42.4400 mm): PTH pad 13 [<no net>] of J2
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1265 mm)
+    Rule: board setup constraints hole; error
+    @(31.5000 mm, 67.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 14.0000 mm
+    @(32.2000 mm, 55.7500 mm): NPTH pad of J2
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1115 mm)
+    Local override; error
+    @(38.0000 mm, 99.1000 mm): Via [CM5_GBE_TD1_P] on F.Cu - B.Cu
+    @(36.0400 mm, 99.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 2.7600 mm
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(16.0000 mm, 67.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 12.5000 mm
+    @(15.8000 mm, 55.7500 mm): NPTH pad of J2
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD1_P and )
+    Local override; error
+    @(31.0000 mm, 54.5000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 21.0172 mm
+    @(22.0950 mm, 38.6500 mm): PTH pad 4 [<no net>] of J2
+[hole_clearance]: Hole clearance violation (pad clearance 1.7000 mm; actual 0.0000 mm)
+    Local override; error
+    @(38.0000 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on B.Cu, length 32.7515 mm
+    @(35.0000 mm, 82.0000 mm): NPTH pad of J7
 [tracks_crossing]: Tracks crossing
     Local override; error
     @(31.5000 mm, 67.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 14.0000 mm
-    @(73.0000 mm, 67.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 43.3850 mm
+    @(31.5000 mm, 67.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 1.8850 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD1_N and CM5_GBE_TD1_P)
+    Local override; error
+    @(31.5000 mm, 67.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 14.0000 mm
+    @(31.5000 mm, 67.0000 mm): Via [CM5_GBE_TD1_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0654 mm)
+    Local override; error
+    @(38.0000 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on B.Cu, length 32.7515 mm
+    @(32.0000 mm, 68.5000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 16.0000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(74.0000 mm, 68.5000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 44.3850 mm
-    @(73.0000 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 32.1000 mm
-[shorting_items]: Items shorting two nets (nets CM5_GBE_TD0_P and CM5_GBE_TD1_P)
+    @(38.0000 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on B.Cu, length 32.7515 mm
+    @(29.4850 mm, 68.5000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 2.5150 mm
+[hole_clearance]: Hole clearance violation (pad clearance 1.7000 mm; actual 0.0000 mm)
     Local override; error
-    @(29.7150 mm, 53.8900 mm): PTH pad 1 [CM5_GBE_TD0_P] of J2
-    @(31.0000 mm, 54.5000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 3.8733 mm
-[tracks_crossing]: Tracks crossing
+    @(39.6000 mm, 100.3000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 32.4575 mm
+    @(35.0000 mm, 82.0000 mm): NPTH pad of J7
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0621 mm)
     Local override; error
-    @(73.0000 mm, 67.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 43.3850 mm
-    @(32.0000 mm, 68.5000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 16.0000 mm
-[shorting_items]: Items shorting two nets (nets  and CM5_GBE_TD1_P)
+    @(17.0000 mm, 52.5000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 17.1858 mm
+    @(17.5000 mm, 51.5000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 17.5356 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD0_N and )
     Local override; error
-    @(66.9600 mm, 99.1000 mm): Pad 103 [<no net>] of J7 on F.Cu
-    @(36.0400 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 36.9600 mm
-[shorting_items]: Items shorting two nets (nets  and CM5_GBE_TD1_N)
+    @(32.0000 mm, 52.5000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 18.6199 mm
+    @(28.0900 mm, 49.0600 mm): PTH pad 17 [<no net>] of J2
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1115 mm)
     Local override; error
-    @(25.9050 mm, 51.3500 mm): PTH pad 4 [<no net>] of J2
-    @(31.5000 mm, 53.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 8.4143 mm
-[shorting_items]: Items shorting two nets (nets  and CM5_GBE_TD1_N)
+    @(30.8000 mm, 100.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+    @(32.9600 mm, 100.3000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 2.9600 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD1_N and CM5_GBE_TD0_P)
     Local override; error
-    @(66.9600 mm, 99.5000 mm): Pad 105 [<no net>] of J7 on F.Cu
-    @(36.0400 mm, 99.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 37.4600 mm
-[shorting_items]: Items shorting two nets (nets CM5_GBE_TD2_P and CM5_GBE_TD3_N)
+    @(32.3000 mm, 67.5000 mm): Via [CM5_GBE_TD1_N] on F.Cu - B.Cu
+    @(32.5000 mm, 69.0000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 17.5000 mm
+[shorting_items]: Items shorting two nets (nets CM5_GBE_TD0_P and CM5_GBE_TD0_N)
     Local override; error
-    @(17.5000 mm, 51.5000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 5.1794 mm
-    @(18.2850 mm, 51.3500 mm): PTH pad 10 [CM5_GBE_TD3_N] of J2
-[tracks_crossing]: Tracks crossing
+    @(32.5000 mm, 51.5000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 20.9504 mm
+    @(19.5550 mm, 38.6500 mm): PTH pad 2 [CM5_GBE_TD0_N] of J2
+[hole_clearance]: Hole clearance violation (pad clearance 1.7000 mm; actual 0.1202 mm)
     Local override; error
-    @(27.5000 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 3.1150 mm
-    @(27.0000 mm, 100.3000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 31.8000 mm
-[tracks_crossing]: Tracks crossing
+    @(40.4000 mm, 100.7000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 32.3595 mm
+    @(35.0000 mm, 82.0000 mm): NPTH pad of J7
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1250 mm)
     Local override; error
-    @(32.9600 mm, 99.1000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 6.9600 mm
-    @(27.0000 mm, 100.3000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 31.8000 mm
-[tracks_crossing]: Tracks crossing
+    @(29.6150 mm, 68.5000 mm): Pad 9 [CM5_GBE_TD0_N] of U6 on F.Cu
+    @(29.4850 mm, 69.0000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
     Local override; error
-    @(27.5000 mm, 100.7000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 31.7000 mm
-    @(32.9600 mm, 99.1000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 6.9600 mm
-[tracks_crossing]: Tracks crossing
+    @(29.4850 mm, 69.0000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+    @(29.4850 mm, 68.5000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
     Local override; error
-    @(16.0000 mm, 54.5000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 3.6070 mm
-    @(16.5000 mm, 67.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 14.0000 mm
-[tracks_crossing]: Tracks crossing
+    @(29.4850 mm, 69.0000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+    @(29.4850 mm, 68.5000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
     Local override; error
-    @(23.6150 mm, 67.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 7.6150 mm
-    @(16.5000 mm, 67.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 14.0000 mm
-[tracks_crossing]: Tracks crossing
+    @(29.4850 mm, 69.0000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+    @(29.4850 mm, 68.5000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
     Local override; error
-    @(32.9600 mm, 99.1000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 6.9600 mm
-    @(26.5000 mm, 99.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 32.0000 mm
-[tracks_crossing]: Tracks crossing
+    @(29.4850 mm, 69.0000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+    @(29.4850 mm, 68.5000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
     Local override; error
-    @(26.0000 mm, 99.1000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 32.1000 mm
-    @(26.5000 mm, 67.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 2.1150 mm
-[tracks_crossing]: Tracks crossing
+    @(29.4850 mm, 69.0000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+    @(29.4850 mm, 68.5000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1111 mm)
     Local override; error
-    @(23.6150 mm, 67.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 7.6150 mm
-    @(17.0000 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 16.0000 mm
-[tracks_crossing]: Tracks crossing
+    @(24.5000 mm, 67.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
+    @(30.0000 mm, 99.1000 mm): Track [CM5_GBE_TD3_P] on B.Cu, length 32.6559 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1250 mm)
     Local override; error
-    @(23.6150 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 6.6150 mm
-    @(17.5000 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 17.5000 mm
-[shorting_items]: Items shorting two nets (nets CM5_GBE_TD2_N and CM5_GBE_TD3_N)
-    Local override; error
-    @(17.0000 mm, 52.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 3.9941 mm
-    @(18.2850 mm, 51.3500 mm): PTH pad 10 [CM5_GBE_TD3_N] of J2
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(27.0000 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 2.6150 mm
-    @(26.0000 mm, 99.1000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 32.1000 mm
+    @(24.3850 mm, 67.0000 mm): Pad 5 [CM5_GBE_TD3_P] of U9 on F.Cu
+    @(24.5000 mm, 67.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(40.4000 mm, 100.7000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(33.9000 mm, 69.0000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(29.4850 mm, 69.0000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(33.1000 mm, 68.5000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(29.4850 mm, 68.5000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(39.6000 mm, 100.3000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(38.0000 mm, 99.1000 mm): Via [CM5_GBE_TD1_P] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(31.5000 mm, 67.0000 mm): Via [CM5_GBE_TD1_P] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(38.8000 mm, 99.5000 mm): Via [CM5_GBE_TD1_N] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(32.3000 mm, 67.5000 mm): Via [CM5_GBE_TD1_N] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(22.7150 mm, 69.0000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(30.8000 mm, 100.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(25.8000 mm, 69.0000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(22.7150 mm, 68.5000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(30.0000 mm, 100.3000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(25.0000 mm, 68.5000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(24.0000 mm, 67.0000 mm): Via [CM5_GBE_TD3_P] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(30.0000 mm, 99.1000 mm): Via [CM5_GBE_TD3_P] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(24.5000 mm, 67.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
+[drill_out_of_range]: Hole size out of range (board setup constraints min hole 0.3000 mm; actual 0.2000 mm)
+    Rule: netclass 'Default'; error
+    @(30.5000 mm, 99.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
 [invalid_outline]: Board has malformed outline (no edges found on Edge.Cuts layer)
     Local override; error
     @(0.0000 mm, 0.0000 mm): PCB
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(74.5000 mm, 100.7000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 31.7000 mm
+    @(36.0400 mm, 100.7000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 4.3600 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(29.6150 mm, 69.0000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 2.8850 mm
+    @(30.3850 mm, 69.0000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 0.9000 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(36.0400 mm, 100.7000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 38.4600 mm
+    @(33.9000 mm, 69.0000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 4.2850 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(32.5000 mm, 69.0000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 17.5000 mm
+    @(29.4850 mm, 69.0000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 3.0150 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(32.5000 mm, 51.5000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 3.6699 mm
+    @(40.4000 mm, 100.7000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 32.3595 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(74.5000 mm, 69.0000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 44.8850 mm
+    @(32.5000 mm, 51.5000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 20.9504 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(29.6150 mm, 68.5000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 2.3850 mm
+    @(32.5000 mm, 69.0000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 17.5000 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(74.0000 mm, 68.5000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 44.3850 mm
+    @(30.3850 mm, 68.5000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 0.9000 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(36.0400 mm, 100.3000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 37.9600 mm
+    @(33.1000 mm, 68.5000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 3.4850 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(32.0000 mm, 52.5000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 3.7364 mm
+    @(36.0400 mm, 100.3000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 3.5600 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(74.0000 mm, 100.3000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 31.8000 mm
+    @(32.0000 mm, 52.5000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 18.6199 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(32.0000 mm, 68.5000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 16.0000 mm
+    @(39.6000 mm, 100.3000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 32.4575 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(29.4850 mm, 68.5000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 2.5150 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(32.0000 mm, 68.5000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 16.0000 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
     @(31.0000 mm, 67.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 12.5000 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
+    @(31.0000 mm, 54.5000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 21.0172 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(31.5000 mm, 67.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 1.8850 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(36.0400 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 1.9600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
+    Rule: netclass 'Default' (diff pair); error
     @(29.6150 mm, 67.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 1.3850 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(73.0000 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 32.1000 mm
-[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
-    Rule: netclass 'Default' (diff pair); error
-    @(36.0400 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 36.9600 mm
-[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
-    Rule: netclass 'Default' (diff pair); error
-    @(73.0000 mm, 67.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 43.3850 mm
-[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
-    Rule: netclass 'Default' (diff pair); error
-    @(31.0000 mm, 54.5000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 3.8733 mm
-[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
-    Rule: netclass 'Default' (diff pair); error
-    @(73.5000 mm, 67.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 43.8850 mm
+    @(38.0000 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on B.Cu, length 32.7515 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
     @(31.5000 mm, 67.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 14.0000 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(73.5000 mm, 99.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 32.0000 mm
+    @(31.5000 mm, 53.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 16.3600 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(31.5000 mm, 53.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 8.4143 mm
+    @(36.0400 mm, 99.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 2.7600 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
     @(29.6150 mm, 67.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 1.8850 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(36.0400 mm, 99.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 37.4600 mm
+    @(32.3000 mm, 67.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 2.6850 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(17.5000 mm, 51.5000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 5.1794 mm
+    @(38.8000 mm, 99.5000 mm): Track [CM5_GBE_TD1_N] on B.Cu, length 32.6535 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(27.5000 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 3.1150 mm
+    @(23.6150 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 0.9000 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(27.5000 mm, 100.7000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 31.7000 mm
+    @(32.9600 mm, 100.7000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 2.1600 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(17.5000 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 17.5000 mm
+    @(25.8000 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 1.4150 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(23.6150 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 6.1150 mm
+    @(17.5000 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 17.5000 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(32.9600 mm, 100.7000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 5.4600 mm
+    @(17.5000 mm, 51.5000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 17.5356 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(27.0000 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 2.6150 mm
+    @(22.7150 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 5.2150 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(32.9600 mm, 100.3000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 5.9600 mm
+    @(30.8000 mm, 100.7000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 32.0919 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(23.6150 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 6.6150 mm
+    @(25.0000 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 0.6150 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(27.0000 mm, 100.3000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 31.8000 mm
+    @(23.6150 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 0.9000 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(17.0000 mm, 52.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 3.9941 mm
+    @(32.9600 mm, 100.3000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 2.9600 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(17.0000 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 16.0000 mm
+    @(17.0000 mm, 52.5000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 17.1858 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(26.0000 mm, 67.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 1.6150 mm
+    @(22.7150 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 5.7150 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(26.0000 mm, 99.1000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 32.1000 mm
+    @(17.0000 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 16.0000 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(32.9600 mm, 99.1000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 6.9600 mm
+    @(30.0000 mm, 100.3000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 32.1907 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
     @(23.6150 mm, 67.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 7.6150 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(16.0000 mm, 54.5000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 22.2052 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(32.9600 mm, 99.1000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 2.9600 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
     @(16.0000 mm, 67.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 12.5000 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(16.0000 mm, 54.5000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 3.6070 mm
+    @(24.0000 mm, 67.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 0.3850 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(32.9600 mm, 99.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 6.4600 mm
+    @(30.0000 mm, 99.1000 mm): Track [CM5_GBE_TD3_P] on B.Cu, length 32.6559 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(26.5000 mm, 67.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 2.1150 mm
-[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
-    Rule: netclass 'Default' (diff pair); error
-    @(16.5000 mm, 53.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 2.7944 mm
+    @(32.9600 mm, 99.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 2.4600 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
     @(23.6150 mm, 67.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 7.1150 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
-    @(26.5000 mm, 99.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 32.0000 mm
+    @(24.5000 mm, 67.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 0.1150 mm
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
     Rule: netclass 'Default' (diff pair); error
     @(16.5000 mm, 67.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 14.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(16.5000 mm, 53.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 19.8786 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1270 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(30.5000 mm, 99.5000 mm): Track [CM5_GBE_TD3_N] on B.Cu, length 32.5576 mm
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(40.4000 mm, 100.7000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(33.9000 mm, 69.0000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(29.4850 mm, 69.0000 mm): Via [CM5_GBE_TD0_P] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(33.1000 mm, 68.5000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(29.4850 mm, 68.5000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(39.6000 mm, 100.3000 mm): Via [CM5_GBE_TD0_N] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(38.0000 mm, 99.1000 mm): Via [CM5_GBE_TD1_P] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(31.5000 mm, 67.0000 mm): Via [CM5_GBE_TD1_P] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(38.8000 mm, 99.5000 mm): Via [CM5_GBE_TD1_N] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(32.3000 mm, 67.5000 mm): Via [CM5_GBE_TD1_N] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(22.7150 mm, 69.0000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(30.8000 mm, 100.7000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(25.8000 mm, 69.0000 mm): Via [CM5_GBE_TD2_P] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(22.7150 mm, 68.5000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(30.0000 mm, 100.3000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(25.0000 mm, 68.5000 mm): Via [CM5_GBE_TD2_N] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(24.0000 mm, 67.0000 mm): Via [CM5_GBE_TD3_P] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(30.0000 mm, 99.1000 mm): Via [CM5_GBE_TD3_P] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(24.5000 mm, 67.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.4500 mm)
+    Rule: netclass 'Default'; error
+    @(30.5000 mm, 99.5000 mm): Via [CM5_GBE_TD3_N] on F.Cu - B.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(17.5000 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 17.5000 mm
-    @(18.2850 mm, 51.3500 mm): PTH pad 10 [CM5_GBE_TD3_N] of J2
+    @(31.5000 mm, 53.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 16.3600 mm
+    @(27.1750 mm, 42.4400 mm): PTH pad 13 [<no net>] of J2
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(17.0000 mm, 52.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 3.9941 mm
-    @(18.2850 mm, 51.3500 mm): PTH pad 10 [CM5_GBE_TD3_N] of J2
+    @(16.0000 mm, 54.5000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 22.2052 mm
+    @(19.9100 mm, 49.0600 mm): PTH pad 16 [<no net>] of J2
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(36.0400 mm, 100.7000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 38.4600 mm
-    @(66.9600 mm, 100.7000 mm): Pad 111 [<no net>] of J7 on F.Cu
+    @(16.0000 mm, 54.5000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 22.2052 mm
+    @(27.1750 mm, 38.6500 mm): PTH pad 8 [CM5_GBE_TD2_N] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(32.5000 mm, 51.5000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 20.9504 mm
+    @(19.5550 mm, 38.6500 mm): PTH pad 2 [CM5_GBE_TD0_N] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(32.5000 mm, 51.5000 mm): Track [CM5_GBE_TD0_P] on B.Cu, length 20.9504 mm
+    @(30.6300 mm, 49.0600 mm): PTH pad 18 [<no net>] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(32.0000 mm, 52.5000 mm): Track [CM5_GBE_TD0_N] on B.Cu, length 18.6199 mm
+    @(28.0900 mm, 49.0600 mm): PTH pad 17 [<no net>] of J2
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(36.0400 mm, 100.7000 mm): Track [CM5_GBE_TD0_P] on F.Cu, length 38.4600 mm
-    @(70.0400 mm, 100.7000 mm): Pad 112 [<no net>] of J7 on F.Cu
+    @(31.0000 mm, 54.5000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 21.0172 mm
+    @(22.0950 mm, 38.6500 mm): PTH pad 4 [<no net>] of J2
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(36.0400 mm, 100.3000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 37.9600 mm
-    @(70.0400 mm, 100.3000 mm): Pad 110 [<no net>] of J7 on F.Cu
+    @(31.0000 mm, 54.5000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 21.0172 mm
+    @(28.0900 mm, 49.0600 mm): PTH pad 17 [<no net>] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(17.5000 mm, 51.5000 mm): Track [CM5_GBE_TD2_P] on B.Cu, length 17.5356 mm
+    @(24.6350 mm, 38.6500 mm): PTH pad 6 [CM5_GBE_TD1_N] of J2
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(36.0400 mm, 100.3000 mm): Track [CM5_GBE_TD0_N] on F.Cu, length 37.9600 mm
-    @(66.9600 mm, 100.3000 mm): Pad 109 [<no net>] of J7 on F.Cu
+    @(16.5000 mm, 53.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 19.8786 mm
+    @(19.9100 mm, 49.0600 mm): PTH pad 16 [<no net>] of J2
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(36.0400 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 36.9600 mm
-    @(70.0400 mm, 99.1000 mm): Pad 104 [<no net>] of J7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    @(16.5000 mm, 53.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 19.8786 mm
+    @(27.1750 mm, 42.4400 mm): PTH pad 13 [<no net>] of J2
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(36.0400 mm, 99.1000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 36.9600 mm
-    @(66.9600 mm, 99.1000 mm): Pad 103 [<no net>] of J7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(31.0000 mm, 54.5000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 3.8733 mm
-    @(29.7150 mm, 53.8900 mm): PTH pad 1 [CM5_GBE_TD0_P] of J2
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(31.5000 mm, 53.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 8.4143 mm
-    @(29.7150 mm, 53.8900 mm): PTH pad 1 [CM5_GBE_TD0_P] of J2
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(31.5000 mm, 53.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 8.4143 mm
-    @(25.9050 mm, 51.3500 mm): PTH pad 4 [<no net>] of J2
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(36.0400 mm, 99.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 37.4600 mm
-    @(70.0400 mm, 99.5000 mm): Pad 106 [<no net>] of J7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(36.0400 mm, 99.5000 mm): Track [CM5_GBE_TD1_N] on F.Cu, length 37.4600 mm
-    @(66.9600 mm, 99.5000 mm): Pad 105 [<no net>] of J7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(17.5000 mm, 51.5000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 5.1794 mm
-    @(18.2850 mm, 51.3500 mm): PTH pad 10 [CM5_GBE_TD3_N] of J2
+    @(17.0000 mm, 52.5000 mm): Track [CM5_GBE_TD2_N] on B.Cu, length 17.1858 mm
+    @(19.9100 mm, 49.0600 mm): PTH pad 16 [<no net>] of J2
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(31.9500 mm, 55.6750 mm): Rectangle of J2 on F.Silkscreen
-    @(16.1250 mm, 48.0500 mm): PTH pad 20 [<no net>] of J2
+    @(16.0500 mm, 34.3250 mm): Rectangle of J2 on F.Silkscreen
+    @(32.2000 mm, 55.7500 mm): NPTH pad of J2
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(31.9500 mm, 55.6750 mm): Rectangle of J2 on F.Silkscreen
-    @(15.8000 mm, 45.0000 mm): NPTH pad of J2
+    @(16.0500 mm, 34.3250 mm): Rectangle of J2 on F.Silkscreen
+    @(31.8750 mm, 41.9500 mm): PTH pad 20 [<no net>] of J2
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(31.9500 mm, 55.6750 mm): Rectangle of J2 on F.Silkscreen
-    @(15.8000 mm, 34.2500 mm): NPTH pad of J2
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(31.9500 mm, 55.6750 mm): Rectangle of J2 on F.Silkscreen
-    @(32.2000 mm, 34.2500 mm): NPTH pad of J2
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(31.9500 mm, 55.6750 mm): Rectangle of J2 on F.Silkscreen
+    @(16.0500 mm, 34.3250 mm): Rectangle of J2 on F.Silkscreen
     @(32.2000 mm, 45.0000 mm): NPTH pad of J2
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(31.9500 mm, 55.6750 mm): Rectangle of J2 on F.Silkscreen
-    @(31.8750 mm, 48.0500 mm): PTH pad 19 [<no net>] of J2
+    @(16.0500 mm, 34.3250 mm): Rectangle of J2 on F.Silkscreen
+    @(15.8000 mm, 55.7500 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(16.0500 mm, 34.3250 mm): Rectangle of J2 on F.Silkscreen
+    @(16.1250 mm, 41.9500 mm): PTH pad 19 [<no net>] of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(16.0500 mm, 34.3250 mm): Rectangle of J2 on F.Silkscreen
+    @(15.8000 mm, 45.0000 mm): NPTH pad of J2
 
-** Found 4 unconnected pads **
+** Found 3 unconnected pads **
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(27.5000 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 3.1150 mm
-    @(23.6150 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 6.1150 mm
+    @(25.8000 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 1.4150 mm
+    @(23.6150 mm, 69.0000 mm): Track [CM5_GBE_TD2_P] on F.Cu, length 0.9000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(27.0000 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 2.6150 mm
-    @(23.6150 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 6.6150 mm
+    @(24.3850 mm, 68.5000 mm): Pad 2 [CM5_GBE_TD2_N] of U9 on F.Cu
+    @(23.6150 mm, 68.5000 mm): Track [CM5_GBE_TD2_N] on F.Cu, length 0.9000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(26.5000 mm, 67.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 2.1150 mm
+    @(24.3850 mm, 67.5000 mm): Pad 4 [CM5_GBE_TD3_N] of U9 on F.Cu
     @(23.6150 mm, 67.5000 mm): Track [CM5_GBE_TD3_N] on F.Cu, length 7.1150 mm
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(26.0000 mm, 67.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 1.6150 mm
-    @(23.6150 mm, 67.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 7.6150 mm
 
 ** Found 0 Footprint errors **
 

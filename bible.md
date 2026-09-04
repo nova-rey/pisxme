@@ -3687,3 +3687,12 @@ power-related short/crossing/hole findings, and plane-layer compliance.
 - Consultant unblocker recommended the next native-tool constrained Ethernet
   fixture, followed by staggered local escapes if needed. Phase 17 remains
   open.
+
+2026-09-04 — Phase 17 underside-contract native fixture retry
+
+- Reran the native rotated Ethernet fixture after removing the hypothetical
+  carrier cooler/backplate underside reservation. It remained rejected with
+  163 violations, six crossings, ten shorts, and three unconnected items.
+- This separates the mechanical contract from the remaining source/ESD escape
+  problem; no generic underside constraint is being used to explain the
+  failure.
