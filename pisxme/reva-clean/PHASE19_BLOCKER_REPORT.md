@@ -272,3 +272,26 @@ on the U7 `(140,130)` USB3 isolation candidate removed the three prior
 matching the Phase 18 baseline class apart from one local clearance. This
 confirms the authorized coherent support move is electrically safe in the
 disposable proof; complete Phase 19 remains gated by SATA launch geometry.
+
+## 2026-09-04 clock-pin authority audit
+
+The independent review's reference to U7 pads 52/53 was checked against the
+local TI implementation-guide and Rev-I datasheet records. The exact PVP
+pinout is: pin 52 `XI`, pin 54 `XO`, and pin 53 `VSSOSC`; these are not an
+unassigned SATA or USB pair. TI's implementation guide requires a 40 MHz
+reference, either a crystal between XI/XO or an external clock on XI with XO
+left open, and a local VSSOSC return. The current abstract twelve-pin storage
+symbol and clean schematic expose neither the oscillator network nor these
+three pins. This is a genuine pre-release storage-authority gap discovered
+during Phase 19, not a reason to waive the routing gate. It must be corrected
+in the storage authoring path and then included in the coordinated PCB/SI
+revalidation before Phase 19 can close.
+
+The stable V3-cap generator branch was cleaned of the rejected tuned-cap
+variant and re-run at U7 `(120,140)` / J3 `(145,125)`, U7 rotation 180° and
+J3 rotation 90°. Native KiCad DRC again measured 189 total violations / 413
+unconnected items, with zero `tracks_crossing` and zero `shorting_items`.
+The candidate is retained as the best geometric baseline, but remains
+`REJECTED_EXPERIMENT` because USB3 and SATA full-path length balance,
+transition-return evidence, and the newly confirmed 40 MHz clock network are
+not closed.
