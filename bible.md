@@ -3666,3 +3666,11 @@ power-related short/crossing/hole findings, and plane-layer compliance.
 - The failures identify blind translation of completed copper as the bad
   solution class. Phase 17 remains active for regenerated fanout/launch,
   consistent with the consultant recommendation.
+
+2026-09-04 — Phase 17 regenerated split-fanout trial
+
+- Added a disposable authoring path that removes translated source-side MDI
+  copper and regenerates explicit J7-to-ESD lanes with ordinary through-vias.
+- Native DRC rejected the +180,+40 mm trial with 22 crossings, 44 shorts, and
+  six hole-clearance findings. This rejects the lane implementation, not the
+  CM5IO topology; Phase 17 remains active.

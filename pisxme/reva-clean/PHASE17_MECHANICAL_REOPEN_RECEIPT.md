@@ -62,3 +62,13 @@ These failures are route-geometry failures of translated copper, not evidence
 against the CM5IO electrical topology. The next trial must regenerate the
 source-to-ESD fanout and connector launch for the selected placement rather
 than translating finished copper blindly.
+
+## Regenerated fanout trial
+
+`phase17_regenerated_split_fanout.py` removes only the source-side MDI copper
+from the +180,+40 mm island candidate and writes explicit J7-to-ESD lanes,
+using ordinary through-vias for TD2/TD0. The resulting
+`ACREAGE_PHASE17_REGENERATED_SPLIT_SOFT.kicad_pcb` was rejected by native DRC:
+415 violations, including 22 `tracks_crossing`, 44 `shorting_items`, and six
+hole-clearance findings. This rejects the lane implementation, not the CM5IO
+topology; Phase 17 remains open.
