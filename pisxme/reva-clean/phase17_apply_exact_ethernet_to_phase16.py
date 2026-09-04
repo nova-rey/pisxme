@@ -87,6 +87,10 @@ def main():
             q.SetWidth(item.GetWidth())
             q.SetNet(n)
         board.Add(q)
+    # The Phase 16 ancestor carries filled GND zones.  Refill after replacing
+    # the Ethernet through-hole launch; otherwise stale copper is reported as
+    # false signal/plane collisions at the new J2/CT geometry.
+    pcbnew.ZONE_FILLER(board).Fill(board.Zones())
     board.Save(str(OUT))
     print(f"saved {OUT}; copied {len(footprints)} Ethernet footprints and {len(tracks)} copper items")
 

@@ -1615,3 +1615,10 @@ The Phase 16 ancestor independently passes
 906 findings plus 263 unconnected pads and introduces Ethernet-related
 shorts/copper conflicts. This confirms the overlay failure is an integration
 delta, not a regression of the Phase 16 PCIe gate.
+
+The acreage apply path was also corrected to refill GND zones after replacing
+through-hole Ethernet footprints. A fresh Phase 16 overlay with refilled
+zones still fails at 820 findings / 271 unconnected items, confirming that
+zone staleness was not the root cause. A coherent U3-left-30 mm trial with
+refill improved to 778 findings / 270 unconnected items but retained power
+and Ethernet conflicts, so it is rejected as insufficient.

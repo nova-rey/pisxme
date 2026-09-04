@@ -75,6 +75,9 @@ def main():
         # EDAC's manufacturer circuit: four separate 22 nF/100 V plus 75 ohm
         # series branches from VC1..VC4 to a common termination node, then a
         # 1 nF/2 kV shield return. These are disposable support footprints.
+        # The default fixture retains the validated compact support witness;
+        # the optional moved-support experiment restores source-order spacing
+        # before applying its separate escape routes.
         ct2_x = 62 if SUP_DX else 88
         for ref, x, netname in (("RCT4",52,"ETH_CT4"),("RCT3",57,"ETH_CT3"),
                                 ("RCT2",ct2_x,"ETH_CT2"),("RCT1",67,"ETH_CT1")):
@@ -170,16 +173,21 @@ def main():
                     # When the low-speed RC island is moved away from the
                     # fuse, give the through-hole CT lands explicit staggered
                     # escapes before entering the remote support row.
-                    escape = {"ETH_CT4": (68.0, 60.0),
-                              "ETH_CT2": (84.0, 62.0),
-                              "ETH_CT1": (88.0, 62.0)}.get(source)
+                    escape = {"ETH_CT4": (68.0, 52.0),
+                              "ETH_CT3": (76.0, 50.0),
+                              "ETH_CT2": (84.0, 50.0),
+                              "ETH_CT1": (88.0, 52.0)}.get(source)
                     if escape:
                         via_actual(*escape, nets[source])
                         route(b,[a,escape],nets[source],pcbnew.F_Cu,shift=False)
-                        route(b,[escape,(escape[0],50.0),z],nets[source],pcbnew.B_Cu,shift=False)
+                        route(b,[escape,z],nets[source],pcbnew.B_Cu,shift=False)
                     else:
                         route(b,path,nets[source],pcbnew.B_Cu,shift=False)
                 else:
+                    # This is the validated compact witness path.  The
+                    # moved-support experiment above has its own escapes;
+                    # keep the default output identical to its known-good
+                    # compact geometry.
                     route(b,path,nets[source],pcbnew.B_Cu,shift=False)
                 ca=actual(cap,2); rb=actual(res,1)
                 route(b,[ca,(ca[0],42+i*.5),(rb[0],42+i*.5),rb],nets[f"ETH_CT_BRANCH_{source[-1]}"],pcbnew.B_Cu,shift=False)

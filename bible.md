@@ -3252,6 +3252,17 @@
   unconnected pads, zero shorts, and zero crossings, with mapping regressions
   passing. Production and the Phase 16 ancestor remain unchanged.
 
+2026-09-04 — Phase 17 integration-path zone refill audit
+
+- Corrected the disposable acreage overlay path to refill GND zones after
+  replacing the Ethernet through-hole launch. The refilled Phase 16 overlay
+  still failed at 820 findings / 271 unconnected items, proving stale zone
+  fill was not the root cause.
+- A coherent U3-left-30 mm trial with refilled zones improved to 778 findings
+  / 270 unconnected items but retained power/Ethernet conflicts and was
+  rejected. The default exact Ethernet fixture was restored and revalidated
+  at 236 findings, zero unconnected pads, zero shorts, and zero crossings.
+
 2026-09-03 — Phase 17 exact EDAC RC support closure experiment
 
 - Reordered the disposable B.Cu support island so CT2 routes directly to its
