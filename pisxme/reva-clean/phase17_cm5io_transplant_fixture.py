@@ -83,7 +83,10 @@ def main():
     # four physical tap lands explicit in the footprint, but make their
     # fixture net authority the one common node so the support bus cannot
     # manufacture artificial crossings between equivalent taps.
-    assign(j2,{1:"CM5_GBE_TD0_P",2:"CM5_GBE_TD0_N",3:"CM5_GBE_TD1_P",4:"ETH_CT_COMMON",5:"ETH_CT_COMMON",6:"CM5_GBE_TD1_N",7:"CM5_GBE_TD2_P",8:"CM5_GBE_TD2_N",9:"CM5_GBE_TD3_P",10:"CM5_GBE_TD3_N",11:"ETH_CT_COMMON",12:"ETH_CT_COMMON",13:"ETH_CT_COMMON",14:"ETH_CT_COMMON",15:"GBE_LED_Y_A",16:"GBE_LED_Y_K",17:"GBE_LED_G_A",18:"GBE_LED_G_K",19:"GBE_SHIELD",20:"GBE_SHIELD"},nets)
+    # EDAC pads 4 and 5 are NC.  Pads 11..14 are the four manufacturer
+    # center-tap contacts and must retain the clean schematic's distinct
+    # ETH_CT1..ETH_CT4 authority; the common support node is not a pad net.
+    assign(j2,{1:"CM5_GBE_TD0_P",2:"CM5_GBE_TD0_N",3:"CM5_GBE_TD1_P",6:"CM5_GBE_TD1_N",7:"CM5_GBE_TD2_P",8:"CM5_GBE_TD2_N",9:"CM5_GBE_TD3_P",10:"CM5_GBE_TD3_N",11:"ETH_CT1",12:"ETH_CT2",13:"ETH_CT3",14:"ETH_CT4",15:"GBE_LED_Y_A",16:"GBE_LED_Y_K",17:"GBE_LED_G_A",18:"GBE_LED_G_K",19:"GBE_SHIELD",20:"GBE_SHIELD"},nets)
     assign(j9,{1:"ETH_CT_COMMON",2:"ETH_CT_COMMON",3:"ETH_CT_COMMON",4:"ETH_CT_COMMON"},nets)
     assign(c1,{1:"ETH_CT_COMMON",2:"ETH_GND"},nets)
     # Copy only official TRD0..TRD3 tracks. Their endpoints align with the

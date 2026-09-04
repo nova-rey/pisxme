@@ -1337,6 +1337,25 @@ Next authorized action: apply the same +5 mm transform to the complete
 support network, retain the exact CM5IO center-tap/ground/shield strategy,
 and rerun the full disposable fixture before any acreage promotion.
 
+## Exact EDAC center-tap mapping subgate — 2026-09-03
+
+The direct transplant was rerun with the manufacturer/clean-footprint EDAC
+mapping corrected: pads 4 and 5 are NC, and pads 11, 12, 13, and 14 are
+`ETH_CT1`, `ETH_CT2`, `ETH_CT3`, and `ETH_CT4`. The native
+`test_phase17_ethernet_pcb_mapping.py` regression now passes on the direct
+fixture.
+
+With support routing omitted to isolate mapping and MDI, native KiCad DRC
+reports **202 violations / 9 unconnected items**, with no MDI crossings,
+shorts, or width-independent MDI opens. The nine remaining findings are
+support-only (J9/C1/ESD-GND/shield) and are expected from the intentionally
+omitted support routes. This closes the exact EDAC pad-mapping subgate but
+does not close complete Ethernet support or Phase 17.
+
+The next action is to replace the obsolete common-node support construction
+with four individually named center-tap routes/terminations while retaining
+the now-passing direct CM5IO MDI topology.
+
 ## Full direct CM5IO support transplant — 2026-09-03
 
 The +5 mm direct alignment was applied with the complete existing support

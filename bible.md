@@ -3145,3 +3145,11 @@
   retained the remaining width/edge/mechanical findings as open closure work.
 - Established direct CM5IO-to-J7 transplantation as the preferred Phase 17
   topology and kept acreage promotion gated.
+
+2026-09-03 — Phase 17 exact EDAC center-tap mapping subgate
+
+- Corrected EDAC pads 4/5 to NC and pads 11..14 to the clean ETH_CT1..4
+  authority in the direct transplant fixture.
+- Native PCB mapping regression passed; focused DRC retained zero MDI opens,
+  shorts, and crossings with support intentionally omitted.
+- Kept Phase 17 open for individually routed center-tap/support closure.
