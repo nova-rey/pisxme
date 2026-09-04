@@ -43,21 +43,11 @@ def _flip_pin_rows(block):
 
 def _normalize_j3_rows(block):
     rows=list(re.finditer(r'\(pin passive line \(at 20 ([^ ]+) 180\)', block))
-    if rows and float(rows[0].group(1)) > 0:
+    if rows and float(rows[0].group(1)) < 0:
         ys=[m.group(1) for m in rows][::-1]
         for m,y in reversed(list(zip(rows,ys))):
             block=block[:m.start(1)]+y+block[m.end(1):]
     return block
-
-def _fix_instance_pin_uuids(block):
-    i=0
-    def repl(match):
-        nonlocal i
-        pin,old=match.group(1),match.group(2)
-        prefix=old[:-12]
-        value=prefix+('%012x' % (0x100+i)); i+=1
-        return '(pin "%s" (uuid %s))' % (pin,value)
-    return re.sub(r'\(pin "([0-9]+)" \(uuid ([0-9a-f-]+)\)\)', repl, block)
 
 def repair_authority(text):
     """Repair the legacy generated island using TI physical pin numbers.
@@ -88,11 +78,23 @@ def repair_authority(text):
     block=_normalize_j3_rows(text[start:end])
     text=text[:start]+block+text[end:]
 
+    # Normalize the U7 labels independently from the J3 labels.  A previous
+    # broad replacement moved U7's SATA labels while trying to move J3.
+    for name, y in (
+        ('BRIDGE_SATA_TX_P', '91.25'), ('BRIDGE_SATA_TX_N', '93.75'),
+        ('BRIDGE_SATA_RX_P', '96.25'), ('BRIDGE_SATA_RX_N', '98.75')):
+        text=text.replace('(label "%s" (at 130 %s ' % (name, y),
+                          '(label "%s" (at 70 %s ' % (name, y), 1)
     # Keep the M.2 connector outboard in the schematic and make its labels
     # follow it, avoiding accidental connectivity from coincident graphics.
+    j3_start=text.index('(symbol (lib_id "PiSXMeRevAClean:JAE_SM3ZS067U410ABR1000")')
+    label_start=text.index('(label "BRIDGE_SATA_TX_P"', text.index('(symbol (lib_id "PiSXMeRevAClean:TUSB9261IPVP_STORAGE")'))
+    label_end=j3_start
+    labels=text[label_start:label_end]
     for name in ('BRIDGE_SATA_TX_P','BRIDGE_SATA_TX_N','BRIDGE_SATA_RX_P','BRIDGE_SATA_RX_N','M2_3V3','M2_GND'):
-        text=text.replace('(label "%s" (at 70 ' % name,
-                          '(label "%s" (at 130 ' % name, 1)
+        labels=labels.replace('(label "%s" (at 70 ' % name,
+                              '(label "%s" (at 130 ' % name, 1)
+    text=text[:label_start]+labels+text[label_end:]
     for name in ('CM5_USB3_TX_P','CM5_USB3_TX_N','CM5_USB3_RX_P','CM5_USB3_RX_N'):
         text=text.replace('(label "%s" ' % name, '(global_label "%s" (shape bidirectional) ' % name, 1)
     start=text.index('(symbol (lib_id "PiSXMeRevAClean:JAE_SM3ZS067U410ABR1000")')
