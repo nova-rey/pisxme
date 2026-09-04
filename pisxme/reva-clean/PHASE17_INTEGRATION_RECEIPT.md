@@ -61,3 +61,10 @@ vertically to avoid its adjacent branch pad. Fresh native DRC for
 `tracks_crossing` or `shorting_items`, and the scoped Ethernet regression
 passes. Full Phase 17 remains open for board-wide inherited DRC debt,
 controlled-impedance/rule reconciliation, and final mechanical review.
+
+The integrated emitter now uses 0.13208 mm (5.2 mil) for CM5 MDI copper,
+matching the current PiSXMe/JLC 100-ohm width basis. Native DRC still reports
+the ancestor board's embedded 0.2000 mm minimum-width rule against these
+tracks; the disposable project netclass alone does not override that embedded
+board constraint. This rule mismatch remains explicitly open rather than
+being waived.

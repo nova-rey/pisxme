@@ -3534,3 +3534,13 @@
 - Promoted this bounded repair to the disposable authoring path defaults;
   full Phase 17 remains open for inherited board DRC debt, impedance/rule
   reconciliation, and final mechanical review. No Phase 18+ work occurred.
+
+2026-09-04 — Phase 17 JLC 100-ohm width emission
+
+- Updated the disposable Ethernet integration emitter to use 0.13208 mm
+  (5.2 mil) CM5 MDI copper, matching the current JLC 100-ohm basis while
+  preserving the CM5IO topology. Connectivity and scoped Ethernet regression
+  remain passing.
+- Native DRC still sees the ancestor board's embedded 0.2000 mm minimum-width
+  rule; the disposable project netclass did not override it. The mismatch is
+  retained as an explicit Phase 17 rule-reconciliation item, not waived.

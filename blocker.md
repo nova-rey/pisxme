@@ -1993,3 +1993,9 @@ Fresh native DRC for `ACREAGE_PHASE17_CURRENT_ETH_REAUTH.kicad_pcb` reports no
 `tracks_crossing` or `shorting_items`; the scoped Ethernet regression passes.
 This is not yet a Phase 17 close because board-wide inherited DRC debt,
 impedance/rule reconciliation, and final mechanical review remain.
+
+The integrated emitter now emits 0.13208 mm (5.2 mil) CM5 MDI tracks for the
+current JLC 100-ohm basis. KiCad native DRC still evaluates them against the
+ancestor board's embedded 0.2000 mm minimum-width rule; adding a disposable
+project netclass did not override the board constraint. This is recorded as a
+rule-authority reconciliation item, not suppressed.

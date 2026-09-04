@@ -95,6 +95,12 @@ def main():
         else:
             _, start, end, layer, width, _ = record
             pname0 = pname
+            if pname0.startswith("CM5_GBE_TD"):
+                # The CM5IO source uses 0.127 mm copper.  PiSXMe's current
+                # JLC six-layer 100-ohm basis is 5.2 mil = 0.13208 mm; retain
+                # the source topology but emit the PiSXMe fabrication target
+                # for the disposable integrated candidate.
+                width = pcbnew.FromMM(0.13208)
             if SAFE_CT_CLEAR and layer == pcbnew.B_Cu and pname0 in {"ETH_CT2", "ETH_CT3"}:
                 s = (pcbnew.ToMM(start.x), pcbnew.ToMM(start.y))
                 e = (pcbnew.ToMM(end.x), pcbnew.ToMM(end.y))
