@@ -124,6 +124,21 @@ native DRC reports real MDI pair shorts/crossings and power-net interactions.
 The known-good F1/ground candidate remains the Phase 17 integration ancestor;
 this failed translation is not promoted.
 
+## Phase 17 mechanical closure boundary — 2026-09-04
+
+The repository authority search found no additional V100 cooler/backplate CAD,
+measurement, or mating-stack evidence beyond the conservative `150 x 95 mm`
+reservation. The valid F1/ground Ethernet candidate still places J2/U6/U9
+within that declared reservation. This is not an Ethernet electrical failure,
+but it prevents a clean mechanical Phase 17 pass. Further movement trials
+(`LOCAL_BOTTOM_SPLIT`, left-edge, top-edge, and right-shelf) introduced real
+MDI/power crossings and were rejected by native DRC.
+
+The remaining closure choices are bounded: obtain physical V100/cooler/
+backplate measurements and revise the envelope, or explicitly accept this
+additional Rev-A empirical mechanical risk. No Phase 18 work is authorized
+until one of those choices is resolved.
+
 The ESD return is now authoritative `POWER_GND`, matching the official CM5IO
 ESD/shield grounding. The transplant retains the source fixture's `ETH_GND`
 name only as an input alias and maps it to `POWER_GND`; no isolated Ethernet

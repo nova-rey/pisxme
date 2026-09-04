@@ -3586,7 +3586,15 @@ mechanical, return-path, and impedance closure; Phase 18+ did not start.
 
 - Added `validation/phase3/test_phase17_power_entry_candidate.py` to verify
   the F1 `(240,40)` coherent move, F1/Q1 power-net authority, absence of
-  power-related short/crossing/hole findings, and plane-layer compliance.
+power-related short/crossing/hole findings, and plane-layer compliance.
+
+2026-09-04 — Phase 17 mechanical authority boundary
+
+- Exhausted the repository search for additional V100 cooler/backplate CAD or
+  mating-stack measurements; none beyond the conservative envelope exists.
+- The earliest failed gate and three bounded unblock options are published in
+  `blocker.md`; Phase 18+ remains closed pending measurement or an explicit
+  user decision to accept new Rev-A mechanical empirical risk.
 - Preserved the existing `ETH_GND` schematic contract after rejecting an
   unproven net-collapse shortcut; Phase 17 remains open for formal return,
   mechanical, impedance, and inherited-acreage closure.

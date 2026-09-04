@@ -1654,6 +1654,28 @@ already failed as a solution class. The exact CM5IO/EDAC fixture remains the
 selected electrical authority; no production promotion or Phase 18 work has
 started.
 
+## PHASE17_MECHANICAL_AUTHORITY_BLOCKER — 2026-09-04
+
+The current best candidate is electrically valid, but J2/U6/U9 overlap the
+declared conservative V100 reservation (`x=75..225`, `y=42.5..137.5`). A
+fresh repository search found no cooler/backplate CAD or measured mating-stack
+data that can close this fact. The official CM5IO source does not provide the
+V100 assembly authority.
+
+Already-tested alternatives: F1 translation to `(240,40)` (best electrical
+repair), left-edge/top-edge Ethernet translations, right-shelf relocation,
+and bottom-edge relocation. The latter four produced native MDI/power
+crossings or shorts; long-detour routing is rejected. The best candidate has
+zero Ethernet crossings/shorts, passing pair metrics, passing power-entry
+checks, and 216 inherited non-Ethernet DRC findings with 427 scaffold opens.
+
+Remaining bounded options are: obtain physical V100/cooler/backplate
+measurements and revise the envelope; explicitly approve this additional
+bounded Rev-A empirical mechanical risk; or defer the mechanical decision
+while keeping Phase 18 closed. Recommendation: obtain measurements.
+
+This is the earliest failed gate; Phase 18+ has not started.
+
 The authorized bottom-edge placement variant was tested against the corrected
 F1 base. `LOCAL_BOTTOM_SPLIT` is rejected by native DRC because its translated
 source corridors create real MDI pair shorts/crossings and power-net
