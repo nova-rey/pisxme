@@ -1551,3 +1551,14 @@ remaining gate is acreage adaptation: promote this proven support geometry,
 rerun affected Phase 11/12 review, complete production Ethernet routing, and
 re-run the full Phase 17 evidence set. Phase 18+ remains gated and no clean
 production PCB/schematic has been promoted in this experiment.
+
+## Rejected acreage integration trial — 2026-09-03
+
+Applying the validated MDI island to the current `ACREAGE_EDAC_CORRECTED_PHASE17`
+base was rejected: native KiCad DRC reported 435 findings and 453
+unconnected items. This is an invalid/incomplete acreage integration base,
+not evidence against the passing disposable Ethernet fixture. The generated
+candidate is retained as negative evidence only; the next authorized action
+is to select the last valid Phase 16 acreage checkpoint, then apply the exact
+CM5IO MDI plus EDAC RC support island there and rerun the Phase 11/12 and
+Phase 17 gates.

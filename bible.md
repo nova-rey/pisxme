@@ -3214,6 +3214,15 @@
 - Native DRC reached 244 findings, zero unconnected items, zero shorts, and
   one remaining support crossing; mapping regression remained passing.
 
+2026-09-03 — Phase 17 acreage integration trial rejected
+
+- Applying the passing Ethernet island to the current acreage candidate
+  produced 435 DRC findings and 453 unconnected items; this base is not a
+  valid promotion target.
+- Rejected the generated candidate and kept production unchanged. The exact
+  EDAC support fixture remains electrically closed; the next step is to use
+  the valid Phase 16 acreage checkpoint for integration.
+
 2026-09-03 — Phase 17 exact EDAC RC support closure experiment
 
 - Reordered the disposable B.Cu support island so CT2 routes directly to its
