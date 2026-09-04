@@ -45,3 +45,12 @@ parts, split-net SATA routes, and separate F.Cu/B.Cu pair corridors. Native
 DRC measured 206 violations. The candidate still has one stale J3 auxiliary
 pad short and two local/PCIe corridor crossings, so it is rejected and not
 promoted.
+
+## Best current synchronized corridor
+
+The refined USB3 TX_P lower-corridor escape and separated SATA cap lanes
+produced `PHASE19_LIVE3.kicad_pcb`. Native DRC measured 207 violations, with
+zero `shorting_items` records and one remaining `tracks_crossing` record in
+the USB3 source/landing corridor; inherited clearance, hole, and
+unconnected-acreage debt remains. It is not promoted because Phase 19
+requires zero true crossings and clean connector/mechanical clearance.

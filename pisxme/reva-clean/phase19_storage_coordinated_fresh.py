@@ -102,9 +102,14 @@ def main():
   X(b,n,second)
   landing=(110.0,d[1])
   if name == 'CM5_USB3_RX_N':
-   # Drop left of the inherited PCIe trunk before descending on B.Cu; this
-   # keeps RX_N from crossing TX_P's F.Cu diagonal and avoids the trunk.
-   landing=(95.0,d[1]); T(b,n,second,(95.0,second[1]),pcbnew.B_Cu); T(b,n,(95.0,second[1]),landing,pcbnew.B_Cu); X(b,n,landing); T(b,n,landing,d,pcbnew.F_Cu)
+   # Transition back to F.Cu at the right edge of the source corridor, then
+   # descend left of the frozen B.Cu PCIe trunk. TX_P remains on B.Cu below,
+   # so this vertical landing cannot cross its F.Cu diagonal.
+   landing=(95.0,d[1]); T(b,n,second,(95.0,second[1]),pcbnew.F_Cu); T(b,n,(95.0,second[1]),landing,pcbnew.F_Cu); T(b,n,landing,d,pcbnew.F_Cu)
+  elif name == 'CM5_USB3_TX_P':
+   # Keep the lower TX_P corridor on B.Cu and return at a single via outside
+   # the moved-U7 pad field.
+   T(b,n,second,landing,pcbnew.B_Cu); X(b,n,landing); T(b,n,landing,d,pcbnew.F_Cu)
   else:
    T(b,n,second,landing,pcbnew.F_Cu); T(b,n,landing,d,pcbnew.F_Cu)
  # SATA corridor is derived from the actual moved pad coordinates.  The two

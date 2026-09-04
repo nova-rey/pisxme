@@ -15,6 +15,11 @@ crossings remaining; it was rejected and Phase 19 remains active.
 The coordinated V3 corridor refinement measured 206 native DRC violations,
 with one J3 auxiliary-pad short and two remaining corridor crossings; it was
 rejected and Phase 19 remains active.
+
+The latest synchronized corridor refinement (`PHASE19_LIVE3`) measured 207
+native DRC violations with zero shorting items but one remaining USB3 crossing
+plus inherited clearance/hole/unconnected debt; it was rejected and Phase 19
+remains active.
 Phases 17–18 are closed with inherited-baseline qualifications. Phase 18
 native netlist and USB3 route proofs pass. Phase 19 storage authority is
 closed, but three SATA routing classes are rejected by native DRC for

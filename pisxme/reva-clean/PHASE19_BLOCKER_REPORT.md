@@ -27,6 +27,12 @@ The best current coordinated V3 run (`PHASE19_BEST.kicad_pcb`, U7 `(120,140)`
 It retains one J3 auxiliary-pad short and two USB3/PCIe or local corridor
 crossings, so it is rejected. The cap-net serialization failures remain fixed.
 
+The refined synchronized candidate `PHASE19_LIVE3.kicad_pcb` is the current
+best local result: native DRC measured 207 violations with zero shorting-item
+records and one remaining USB3 source/landing crossing. It also retains
+inherited clearance/hole/unconnected debt, so Phase 19 remains open and the
+candidate is rejected.
+
 Date: 2026-09-04
 
 Status: `PISXME_REVA_CLEAN_PHASE19_SATA_ROUTING_IN_PROGRESS`
