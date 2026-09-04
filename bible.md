@@ -3066,3 +3066,13 @@
   to the island/launch-envelope overlap and connector-side returns.
 - Rejected the candidate and retained Phase 17 for moving the disposable
   island outside the launch envelope before bridging.
+
+2026-09-03 — Phase 17 island-outside-launch-envelope trial
+
+- Translated the complete official Ethernet island 90 mm east of the exact
+  J7 launch fixture and bridged from the unchanged boundary.
+- Native DRC improved to 254 findings / 78 unconnected items for the ordinary
+  bridge and 266 / 78 for the outer-layer variant; both retained crossings
+  and shorts and were rejected.
+- Confirmed island overlap as a real contributor and retained Phase 17 for
+  pair-order repair on the remote-island basis.

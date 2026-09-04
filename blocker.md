@@ -1187,3 +1187,20 @@ overlapping placement.
 
 Preserved evidence:
 `pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-outer-drc.rpt`.
+
+## Island-outside-launch-envelope trial — 2026-09-03
+
+The complete official island was translated 90 mm east of the J7 launch
+envelope, with all copied footprints and internal MDI tracks translated
+together. The unchanged J7 launch boundary was then bridged to that remote
+island. Native DRC improved to **254 findings / 78 unconnected items** for
+the ordinary bridge and **266 findings / 78 unconnected items** for the
+outer-layer bridge. The ordinary version has 11 crossings and 3 shorts; the
+outer-layer version has 16 crossings and 4 shorts. Both are rejected, but
+this confirms that island overlap was a real contributor and that the remote
+island placement is a valid basis for the next pair-order repair.
+
+The latest preserved report is
+`pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-island-right-drc.rpt`.
+No production acreage board was modified or promoted, and Phase 18+ remains
+gated.

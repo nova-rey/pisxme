@@ -7,6 +7,7 @@ ROOT=Path(__file__).resolve().parent
 BASE=ROOT/'CM5IO_J7_LAUNCH_FIXTURE.kicad_pcb'
 ISLAND=ROOT/'CM5IO_PISXME_ETHERNET_TRANSPLANT_FIXTURE.kicad_pcb'
 OUT=ROOT/'CM5IO_J7_CM5IO_BOUNDARY_FIXTURE.kicad_pcb'
+ISLAND_DX=90.0 if os.environ.get('PISXME_ISLAND_RIGHT')=='1' else 0.0
 MDI=tuple(f'CM5_GBE_TD{i}_{p}' for i in range(4) for p in 'PN')
 
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
@@ -33,7 +34,7 @@ def main():
     # Copy the official island footprints with their already-authoritative
     # positions/orientations, rebinding pads by net name into this board.
     for ref in ('U9','U6','J2','J9','C1'):
-        f0=src.FindFootprintByReference(ref); f=pcbnew.FOOTPRINT(f0); b.Add(f)
+        f0=src.FindFootprintByReference(ref); f=pcbnew.FOOTPRINT(f0); f.SetPosition(V(xy(f0.GetPosition())[0]+ISLAND_DX,xy(f0.GetPosition())[1])); b.Add(f)
         for p in f.Pads():
             name=str(p.GetNetname()).rsplit('/',1)[-1]
             if name in nets: p.SetNet(nets[name])
@@ -42,7 +43,7 @@ def main():
     for t0 in src.GetTracks():
         name=str(t0.GetNetname()).rsplit('/',1)[-1]
         if name not in MDI: continue
-        a,z=xy(t0.GetStart()),xy(t0.GetEnd())
+        a,z=xy(t0.GetStart()),xy(t0.GetEnd()); a=(a[0]+ISLAND_DX,a[1]); z=(z[0]+ISLAND_DX,z[1])
         if max(a[1],z[1]) >= 70: continue
         t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(t0.GetLayer())
         t.SetWidth(t0.GetWidth()); t.SetNet(nets[name]); b.Add(t)
@@ -50,15 +51,15 @@ def main():
     for t0 in src.GetTracks():
         name=str(t0.GetNetname()).rsplit('/',1)[-1]
         if name in MDI or name not in nets: continue
-        a,z=xy(t0.GetStart()),xy(t0.GetEnd())
+        a,z=xy(t0.GetStart()),xy(t0.GetEnd()); a=(a[0]+ISLAND_DX,a[1]); z=(z[0]+ISLAND_DX,z[1])
         if not (0 <= a[0] <= 100 and 35 <= a[1] <= 75 and 0 <= z[0] <= 100 and 35 <= z[1] <= 75): continue
         t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(t0.GetLayer())
         t.SetWidth(t0.GetWidth()); t.SetNet(nets[name]); b.Add(t)
     # Official CM5IO-derived ESD source-side landing points in this island.
-    land={'CM5_GBE_TD3_P':(26.204119,59.210),'CM5_GBE_TD3_N':(26.361524,59.590),
-          'CM5_GBE_TD2_N':(27.021298,60.110),'CM5_GBE_TD2_P':(27.178701,60.490),
-          'CM5_GBE_TD1_P':(32.660000,58.871297),'CM5_GBE_TD1_N':(33.039999,59.028702),
-          'CM5_GBE_TD0_N':(34.160000,58.571298),'CM5_GBE_TD0_P':(34.539999,58.728702)}
+    land={'CM5_GBE_TD3_P':(26.204119+ISLAND_DX,59.210),'CM5_GBE_TD3_N':(26.361524+ISLAND_DX,59.590),
+          'CM5_GBE_TD2_N':(27.021298+ISLAND_DX,60.110),'CM5_GBE_TD2_P':(27.178701+ISLAND_DX,60.490),
+          'CM5_GBE_TD1_P':(32.660000+ISLAND_DX,58.871297),'CM5_GBE_TD1_N':(33.039999+ISLAND_DX,59.028702),
+          'CM5_GBE_TD0_N':(34.160000+ISLAND_DX,58.571298),'CM5_GBE_TD0_P':(34.539999+ISLAND_DX,58.728702)}
     boundary={3:(10,90),4:(90,90),5:(8,92),6:(92,92),9:(6,94),10:(94,94),11:(4,96),12:(96,96)}
     names_by_pad={3:'CM5_GBE_TD3_P',4:'CM5_GBE_TD1_P',5:'CM5_GBE_TD3_N',6:'CM5_GBE_TD1_N',
                   9:'CM5_GBE_TD2_N',10:'CM5_GBE_TD0_N',11:'CM5_GBE_TD2_P',12:'CM5_GBE_TD0_P'}
@@ -99,6 +100,7 @@ def main():
     # Expand the disposable outline to contain both the launch and island.
     for d in list(b.GetDrawings()):
         if d.GetLayer()==pcbnew.Edge_Cuts: b.Remove(d)
-    for a,z in (((2,35),(100,35)),((100,35),(100,145)),((100,145),(2,145)),((2,145),(2,35))): edge(b,a,z)
+    x1=190 if ISLAND_DX else 100
+    for a,z in (((2,35),(x1,35)),((x1,35),(x1,145)),((x1,145),(2,145)),((2,145),(2,35))): edge(b,a,z)
     b.Save(str(OUT)); print('saved',OUT)
 if __name__=='__main__': main()
