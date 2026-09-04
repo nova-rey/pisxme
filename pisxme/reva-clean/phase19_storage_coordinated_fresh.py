@@ -13,6 +13,7 @@ def X(b,n,p):
 def main():
  b=pcbnew.LoadBoard(str(BASE));u=b.FindFootprintByReference('U7');j=b.FindFootprintByReference('J3');src=b.FindFootprintByReference('J7')
  u.SetPosition(V(float(os.environ.get('P19_U7_X','140')),float(os.environ.get('P19_U7_Y','110'))));u.SetOrientationDegrees(int(os.environ.get('P19_U7_ROT','180')));j.SetPosition(V(float(os.environ.get('P19_J3_X','180')),float(os.environ.get('P19_J3_Y','95'))));j.SetOrientationDegrees(int(os.environ.get('P19_J3_ROT','90')))
+ urot=int(os.environ.get('P19_U7_ROT','180'))
  # KiCad 10 refreshes transformed pad coordinates on serialization. Reload
  # after the placement edit so every generated route uses the saved geometry,
  # not stale pre-move pad positions.
@@ -26,19 +27,28 @@ def main():
  for name,spn,upn,first,second in (('CM5_USB3_RX_N','128','42',(72,103.9),(103,103)),('CM5_USB3_RX_P','130','43',(72,104.8),(103,105)),('CM5_USB3_TX_N','140','45',(72,108),(103,107))):
   n=b.FindNet('/CORE_CM5/'+name);s=sp[spn];d=up[upn];launch=(71.2,s[1]);T(b,n,s,launch,pcbnew.F_Cu);T(b,n,launch,first,pcbnew.F_Cu);X(b,n,first)
   if name == 'CM5_USB3_TX_N':
-   T(b,n,first,(82,108),pcbnew.F_Cu);T(b,n,(82,108),d,pcbnew.F_Cu)
+   T(b,n,first,(82,108),pcbnew.B_Cu);X(b,n,(82,108));T(b,n,(82,108),(102,108),pcbnew.B_Cu);T(b,n,(102,108),second,pcbnew.B_Cu);X(b,n,second)
   else:
-   T(b,n,first,d,pcbnew.F_Cu)
- n=b.FindNet('/CORE_CM5/CM5_USB3_TX_P');s=sp['142'];d=up['46'];T(b,n,s,(71.2,106.7),pcbnew.F_Cu);T(b,n,(71.2,106.7),(71,109),pcbnew.F_Cu);X(b,n,(71,109));T(b,n,(71,109),(82,112),pcbnew.B_Cu);X(b,n,(82,112));T(b,n,(82,112),(120,112),pcbnew.B_Cu);X(b,n,(120,112));T(b,n,(120,112),(128,112),pcbnew.F_Cu);X(b,n,(128,112));T(b,n,(128,112),(128,d[1]),pcbnew.B_Cu);X(b,n,(128,d[1]));T(b,n,(128,d[1]),d,pcbnew.F_Cu)
+   T(b,n,first,second,pcbnew.B_Cu);X(b,n,second)
+  landing={'CM5_USB3_RX_N':(115,112),'CM5_USB3_RX_P':(115,113),'CM5_USB3_TX_N':(115,114)}[name]
+  T(b,n,second,landing,pcbnew.F_Cu); T(b,n,landing,d,pcbnew.F_Cu)
+ n=b.FindNet('/CORE_CM5/CM5_USB3_TX_P');s=sp['142'];d=up['46'];T(b,n,s,(71.2,106.7),pcbnew.F_Cu);T(b,n,(71.2,106.7),(71,109),pcbnew.F_Cu);X(b,n,(71,109));T(b,n,(71,109),(82,112),pcbnew.B_Cu);X(b,n,(82,112));T(b,n,(82,112),(115,116),pcbnew.F_Cu);T(b,n,(115,116),d,pcbnew.F_Cu)
+ if urot == 90:
+  # Rotation-90 U7 has a horizontal USB pad row. Rebuild its landing from
+  # the validated CM5 source escapes using isolated staged rails.
+  for name,spn,upn,first,second,xrail in (('CM5_USB3_RX_N','128','42',(72,103.9),(103,103),164),('CM5_USB3_RX_P','130','43',(72,104.8),(103,105),165),('CM5_USB3_TX_N','140','45',(72,108),(103,107),166)):
+   n=b.FindNet('/CORE_CM5/'+name);s=sp[spn];d=up[upn];launch=(71.2,s[1]);T(b,n,s,launch,pcbnew.F_Cu);T(b,n,launch,first,pcbnew.F_Cu);X(b,n,first)
+   if name == 'CM5_USB3_TX_N': T(b,n,first,(82,108),pcbnew.B_Cu);X(b,n,(82,108));T(b,n,(82,108),(102,108),pcbnew.B_Cu);T(b,n,(102,108),second,pcbnew.B_Cu);X(b,n,second)
+   else: T(b,n,first,second,pcbnew.B_Cu);X(b,n,second)
+   T(b,n,second,(160,second[1]),pcbnew.B_Cu);X(b,n,(160,second[1]));T(b,n,(160,second[1]),(xrail,second[1]),pcbnew.F_Cu);X(b,n,(xrail,second[1]));T(b,n,(xrail,second[1]),(xrail,d[1]),pcbnew.B_Cu);X(b,n,(xrail,d[1]));T(b,n,(xrail,d[1]),d,pcbnew.F_Cu)
+  n=b.FindNet('/CORE_CM5/CM5_USB3_TX_P');s=sp['142'];d=up['46'];T(b,n,s,(71.2,106.7),pcbnew.F_Cu);T(b,n,(71.2,106.7),(71,109),pcbnew.F_Cu);X(b,n,(71,109));T(b,n,(71,109),(82,112),pcbnew.B_Cu);X(b,n,(82,112));T(b,n,(82,112),(160,112),pcbnew.B_Cu);X(b,n,(160,112));T(b,n,(160,112),(167,112),pcbnew.F_Cu);X(b,n,(167,112));T(b,n,(167,112),(167,d[1]),pcbnew.B_Cu);X(b,n,(167,d[1]));T(b,n,(167,d[1]),d,pcbnew.F_Cu)
  # SATA corridor is derived from the actual moved pad coordinates.  The two
  # pairs use separate permitted layers and monotonic lanes; vias are outside
  # both SMD pad fields and each M.2 launch returns to F.Cu before the pad.
- for name,un,jn,lane,layer in (('BRIDGE_SATA_TX_P','57','1',1,pcbnew.B_Cu),('BRIDGE_SATA_TX_N','56','2',-1,pcbnew.B_Cu),('BRIDGE_SATA_RX_P','60','3',-3,pcbnew.B_Cu),('BRIDGE_SATA_RX_N','59','4',-5,pcbnew.B_Cu)):
+ for name,un,jn,lane in (('BRIDGE_SATA_TX_P','57','1',1),('BRIDGE_SATA_TX_N','56','2',3),('BRIDGE_SATA_RX_P','60','3',-3),('BRIDGE_SATA_RX_N','59','4',-1)):
   n=b.FindNet('/STORAGE/'+name);upad[un].SetNet(n);jpad[jn].SetNet(n)
   s=up[un];d=jp[jn]; x0,y0=s; x1,y1=d
   escape=(x0-3,y0+lane) if x0 < 140 else (x0+3,y0+lane)
-  xrail={'BRIDGE_SATA_RX_N':128,'BRIDGE_SATA_RX_P':129,'BRIDGE_SATA_TX_N':130,'BRIDGE_SATA_TX_P':131}.get(name,130)
-  mid=(125,escape[1]); rail=(xrail,escape[1]); landing=(xrail,d[1])
-  T(b,n,s,escape,pcbnew.F_Cu); X(b,n,escape); T(b,n,escape,mid,pcbnew.B_Cu); X(b,n,mid); T(b,n,mid,rail,pcbnew.F_Cu); X(b,n,rail); T(b,n,rail,landing,pcbnew.B_Cu); X(b,n,landing); T(b,n,landing,d,pcbnew.F_Cu)
+  T(b,n,s,escape,pcbnew.F_Cu); X(b,n,escape); T(b,n,escape,(220,lane),pcbnew.B_Cu); X(b,n,(220,lane)); T(b,n,(220,lane),(x1-8,lane),pcbnew.B_Cu); X(b,n,(x1-8,lane)); T(b,n,(x1-8,lane),d,pcbnew.F_Cu)
  b.BuildListOfNets();b.Save(str(OUT));print(OUT)
 if __name__=='__main__':main()

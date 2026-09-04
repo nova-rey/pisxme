@@ -157,3 +157,9 @@ corrected U7 `(140,130)` candidate measured 211 native DRC violations / 430
 unconnected. Three candidate-introduced shorts remain against regulator
 support geometry and one crossing remains against the frozen PCIe B.Cu field;
 the next local repair targets those corridors. Phase 19 remains active.
+
+Phase 19 orientation-aware update (2026-09-04): implemented the specialist
+recommended U7/J3 `(170,140)/(205,120)` at `90°` with a horizontal USB pad-row
+escape. Native DRC measured 378 violations / 426 unconnected; rejected for
+remaining coordinated SATA/USB3 and local support interactions. Phase 19
+remains active.

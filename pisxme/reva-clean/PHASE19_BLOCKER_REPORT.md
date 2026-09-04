@@ -100,3 +100,10 @@ unconnected. Three candidate-introduced failures were shorts against the
 regulator support island and one crossing against the frozen PCIe B.Cu field.
 This identifies the next local repair target; no PCIe architecture change is
 implied.
+
+Specialist-recommended orientation trial: U7 `(170,140)`, rotation `90°`,
+with J3 `(205,120)`, rotation `90°`, was implemented with an orientation-aware
+horizontal USB pad-row escape. Native DRC measured 378 violations / 426
+unconnected and was rejected. The recommendation remains useful: its
+placement clears the C19/PERST area, but the current SATA launch and remaining
+local support interactions require another coordinated route.
