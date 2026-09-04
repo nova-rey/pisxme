@@ -3027,3 +3027,13 @@
   introduced 22 true shorts.
 - Rejected the single-bundle construction and retained Phase 17 for
   pair-specific staggered transitions with >=0.8 mm via spacing.
+
+2026-09-03 — Phase 17 west/east source-group trial
+
+- Separated TD3/TD2 and TD1/TD0 into independent west/east B.Cu approaches
+  with separated top corridors.
+- Native DRC rejected the candidate at 455 findings / 453 unconnected items,
+  including 18 crossings and 7 shorts; the remaining failures localized to
+  J7 dogbones, final F.Cu returns, and first transitions.
+- Preserved the rejected candidate and retained Phase 17 for reuse of the
+  proven J7 launch dogbone construction.

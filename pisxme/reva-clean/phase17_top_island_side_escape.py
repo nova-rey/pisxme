@@ -15,6 +15,10 @@ if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_SHELF':
     DX,DY=197.5,-33.0
 if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL':
     DX,DY=197.5,-33.0
+if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL_STAGGERED':
+    DX,DY=197.5,-33.0
+if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL_WEST_SPLIT':
+    DX,DY=197.5,-33.0
 if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM':
     # CM5IO-relative island below the frozen cooler reservation.  The
     # official ESD-to-MagJack graph remains rigid; only the CM5-to-ESD legs
@@ -35,6 +39,10 @@ if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_SHELF':
     OUT=ROOT/'ACREAGE_CM5IO_RIGHT_SHELF_PHASE17.kicad_pcb'
 if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL':
     OUT=ROOT/'ACREAGE_CM5IO_RIGHT_CHANNEL_PHASE17.kicad_pcb'
+if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL_STAGGERED':
+    OUT=ROOT/'ACREAGE_CM5IO_RIGHT_CHANNEL_STAGGERED_PHASE17.kicad_pcb'
+if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL_WEST_SPLIT':
+    OUT=ROOT/'ACREAGE_CM5IO_RIGHT_CHANNEL_WEST_SPLIT_PHASE17.kicad_pcb'
 if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM':
     OUT=ROOT/'ACREAGE_CM5IO_LOCAL_BOTTOM_PHASE17.kicad_pcb'
 if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM_SPLIT':
@@ -58,7 +66,7 @@ def main():
     # DX=-42.5 places the official island at U9=(27.6,57.215),
     # U6=(33.6,57.215), and J2=(30,45); keep the footprints and translated
     # connector-side vectors on the same rigid transform.
-    if os.environ.get('PISXME_LANE_ORDER') in ('LOCAL_BOTTOM','LOCAL_BOTTOM_SPLIT','LEFT_EDGE','RIGHT_SHELF','RIGHT_CHANNEL'):
+    if os.environ.get('PISXME_LANE_ORDER') in ('LOCAL_BOTTOM','LOCAL_BOTTOM_SPLIT','LEFT_EDGE','RIGHT_SHELF','RIGHT_CHANNEL','RIGHT_CHANNEL_STAGGERED','RIGHT_CHANNEL_WEST_SPLIT'):
         island_positions=(('U9',(70.1+DX,65.215+DY),270),('U6',(76.1+DX,65.215+DY),270),
                           ('J2',(72.5+DX,53+DY),180))
     elif os.environ.get('PISXME_LANE_ORDER') == 'ROTATED_LOCAL':
@@ -152,6 +160,33 @@ def main():
           'CM5_GBE_TD2_P':[(32.96,100.70),(31.5,100.70),(31.5,78.4),(62.5,78.4),(62.5,39.4),(267.178701,35.490)],
           'CM5_GBE_TD0_N':[(36.04,100.30),(38.5,100.30),(38.5,79.0),(68.0,79.0),(68.0,39.0),(274.160000,33.571298)],
           'CM5_GBE_TD0_P':[(36.04,100.70),(39.0,100.70),(39.0,79.4),(68.5,79.4),(68.5,39.4),(274.539999,33.728702)]}
+    if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL_STAGGERED':
+        # Pair-specific source vias and independent B.Cu lanes.  The return
+        # vias are deliberately spread well beyond the 0.8 mm minimum before
+        # the short F.Cu dogbones into the official ESD landing points.
+        paths={
+          'CM5_GBE_TD3_P':[(32.96,99.10),(28.0,98.0),(28.0,75.0),(60.0,75.0),(60.0,38.0),land['CM5_GBE_TD3_P']],
+          'CM5_GBE_TD3_N':[(32.96,99.50),(27.0,99.5),(27.0,75.4),(60.5,75.4),(60.5,38.4),land['CM5_GBE_TD3_N']],
+          'CM5_GBE_TD2_N':[(32.96,100.30),(26.0,101.5),(26.0,76.0),(62.0,76.0),(62.0,39.0),land['CM5_GBE_TD2_N']],
+          'CM5_GBE_TD2_P':[(32.96,100.70),(25.0,103.0),(25.0,76.4),(62.5,76.4),(62.5,39.4),land['CM5_GBE_TD2_P']],
+          'CM5_GBE_TD1_P':[(36.04,99.10),(41.0,98.0),(41.0,78.0),(66.0,78.0),(66.0,38.0),land['CM5_GBE_TD1_P']],
+          'CM5_GBE_TD1_N':[(36.04,99.50),(42.0,99.5),(42.0,78.4),(66.5,78.4),(66.5,38.4),land['CM5_GBE_TD1_N']],
+          'CM5_GBE_TD0_N':[(36.04,100.30),(43.0,101.5),(43.0,79.0),(68.0,79.0),(68.0,39.0),land['CM5_GBE_TD0_N']],
+          'CM5_GBE_TD0_P':[(36.04,100.70),(44.0,103.0),(44.0,79.4),(68.5,79.4),(68.5,39.4),land['CM5_GBE_TD0_P']]}
+    if os.environ.get('PISXME_LANE_ORDER') == 'RIGHT_CHANNEL_WEST_SPLIT':
+        # Keep the left and right source groups on independent B.Cu
+        # approaches.  Their horizontal lanes do not pierce the other
+        # group's vertical escape; both groups only share the separated top
+        # corridor above the frozen power/cooler region.
+        paths={
+          'CM5_GBE_TD3_P':[(32.96,99.10),(28.0,98.0),(28.0,75.0),(15.0,75.0),(15.0,30.0),(260.0,30.0),land['CM5_GBE_TD3_P']],
+          'CM5_GBE_TD3_N':[(32.96,99.50),(27.0,99.5),(27.0,75.4),(15.0,75.4),(15.0,30.5),(260.0,30.5),land['CM5_GBE_TD3_N']],
+          'CM5_GBE_TD2_N':[(32.96,100.30),(26.0,101.5),(26.0,76.0),(15.0,76.0),(15.0,31.0),(260.0,31.0),land['CM5_GBE_TD2_N']],
+          'CM5_GBE_TD2_P':[(32.96,100.70),(25.0,103.0),(25.0,76.4),(15.0,76.4),(15.0,31.5),(260.0,31.5),land['CM5_GBE_TD2_P']],
+          'CM5_GBE_TD1_P':[(36.04,99.10),(41.0,98.0),(41.0,78.0),(60.0,78.0),(60.0,32.0),(270.0,32.0),land['CM5_GBE_TD1_P']],
+          'CM5_GBE_TD1_N':[(36.04,99.50),(42.0,99.5),(42.0,78.4),(60.0,78.4),(60.0,32.5),(270.0,32.5),land['CM5_GBE_TD1_N']],
+          'CM5_GBE_TD0_N':[(36.04,100.30),(43.0,101.5),(43.0,79.0),(60.0,79.0),(60.0,33.0),(270.0,33.0),land['CM5_GBE_TD0_N']],
+          'CM5_GBE_TD0_P':[(36.04,100.70),(44.0,103.0),(44.0,79.4),(60.0,79.4),(60.0,33.5),(270.0,33.5),land['CM5_GBE_TD0_P']]}
     if os.environ.get('PISXME_LANE_ORDER') == 'LOCAL_BOTTOM':
         # Pair-preserving source lanes descend below J7, then run beneath
         # the cooler reservation to the official ESD source-side lands.
@@ -186,6 +221,28 @@ def main():
           'CM5_GBE_TD1_N':[(36.04,99.50),(45.5,99.50),(45.5,136.5),(85.5,145.5),(105.5,145.5),land['CM5_GBE_TD1_N']],
           'CM5_GBE_TD0_N':[(36.04,100.30),(46.0,100.30),(46.0,137.0),(86.0,146.0),(106.0,146.0),land['CM5_GBE_TD0_N']],
           'CM5_GBE_TD0_P':[(36.04,100.70),(46.5,100.70),(46.5,137.5),(86.5,146.5),(106.5,146.5),land['CM5_GBE_TD0_P']]}
+    staggered=os.environ.get('PISXME_LANE_ORDER')=='RIGHT_CHANNEL_STAGGERED'
+    west_split=os.environ.get('PISXME_LANE_ORDER')=='RIGHT_CHANNEL_WEST_SPLIT'
+    if staggered or west_split:
+        return_v={
+          'CM5_GBE_TD3_P':(260.0,33.0),'CM5_GBE_TD3_N':(260.0,34.5),
+          'CM5_GBE_TD2_N':(260.0,36.0),'CM5_GBE_TD2_P':(260.0,37.5),
+          'CM5_GBE_TD1_P':(270.0,33.0),'CM5_GBE_TD1_N':(270.0,34.5),
+          'CM5_GBE_TD0_N':(270.0,36.0),'CM5_GBE_TD0_P':(270.0,37.5)}
+        for name,pts in paths.items():
+            end=(land[name][0]+DX,land[name][1]+DY)
+            source_v=pts[1]
+            add(b,nets[name],[pts[0],source_v],pcbnew.F_Cu)
+            via(b,nets[name],source_v)
+            rv=return_v[name]
+            if west_split:
+                add(b,nets[name],[source_v,*pts[2:6],rv],pcbnew.B_Cu)
+            else:
+                entry,lane,corridor=pts[2:5]
+                add(b,nets[name],[source_v,entry,lane,corridor,rv],pcbnew.B_Cu)
+            via(b,nets[name],rv)
+            add(b,nets[name],[rv,end],pcbnew.F_Cu)
+        b.Save(str(OUT)); print('saved',OUT); return
     split=os.environ.get('PISXME_LANE_ORDER') in ('LOCAL_BOTTOM_SPLIT','ROTATED_LOCAL')
     if split:
         # Immediate source transitions keep long Ethernet legs off the

@@ -1111,3 +1111,22 @@ lane; a single B.Cu bundle is not acceptable evidence.
 
 Preserved evidence:
 `pisxme/reva-clean/ACREAGE_CM5IO_RIGHT_CHANNEL_PHASE17-bcu-corrected-drc.rpt`.
+
+## Independent west/east source-group trial — 2026-09-03
+
+The B.Cu construction was changed again so the TD3/TD2 group exits west and
+the TD1/TD0 group exits east, with separate vertical rises and separated top
+corridors. This removed the single shared source fanout and retained
+ordinary through-vias only.
+
+Native KiCad DRC rejected the candidate at **455 findings / 453 unconnected
+items**, including 18 crossings and 7 shorts. The remaining findings are
+localized to the dense J7 dogbones, the connector-side final F.Cu return
+segments, and the first pair-lane transitions. The trial is rejected, but it
+confirms that source-group separation is necessary and that the remaining
+problem is the pad-field escape construction—not the long top corridor.
+
+Preserved evidence:
+`pisxme/reva-clean/ACREAGE_CM5IO_RIGHT_CHANNEL_WEST_SPLIT_PHASE17.kicad_pcb`
+and
+`pisxme/reva-clean/ACREAGE_CM5IO_RIGHT_CHANNEL_WEST_SPLIT_PHASE17-drc.rpt`.
