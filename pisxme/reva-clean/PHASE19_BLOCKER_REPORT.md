@@ -66,3 +66,11 @@ tested open-acreage class at 224 violations / 426 unconnected, but retained
 real USB3/PERST and pair crossings. A coordinate-derived SATA-lane refinement
 measured 229 / 426 and introduced local SATA lane crossings/shorts; it is
 rejected. No PCIe geometry changed.
+
+Native synchronization correction: after moving U7/J3, the generator now
+serializes and reloads the board before reading transformed pad coordinates.
+The corrected U7 `(140,130)` / J3 `(180,115)` candidate measured 227 native
+DRC violations / 426 unconnected before SATA escape refinement; the next
+escape refinement measured 229 / 426 and reintroduced SATA/USB3 crossings.
+Both are rejected experiments. This closes the stale-pad-coordinate defect
+in the experiment harness, not Phase 19.
