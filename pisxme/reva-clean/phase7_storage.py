@@ -5,12 +5,12 @@ from phase3_scaffold import balanced, make_uuid
 
 ROOT=Path(__file__).resolve().parent
 
-def symbol(name,pins):
+def symbol(name,pins,reference='U'):
     rows=[]
     for i,p in enumerate(pins):
         y=(i-(len(pins)-1)/2)*2.5
         rows.append('(pin passive line (at 20 %g 180) (length 5) (name "%s" (effects (font (size 1 1)))) (number "%d" (effects (font (size 1 1)))))'%(y,p,i+1))
-    return '(symbol "PiSXMeRevAClean:%s" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 -12 0) (effects (font (size 1 1)))) (property "Value" "%s" (at 0 12 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "%s_1_1" (rectangle (start -15 -10) (end 15 10) (stroke (width 0.254) (type default)) (fill (type background))) %s) (embedded_fonts no))'%(name,name,name,'\n'.join(rows))
+    return '(symbol "PiSXMeRevAClean:%s" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "%s" (at 0 -12 0) (effects (font (size 1 1)))) (property "Value" "%s" (at 0 12 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "%s_1_1" (rectangle (start -15 -10) (end 15 10) (stroke (width 0.254) (type default)) (fill (type background))) %s) (embedded_fonts no))'%(name,reference,name,name,'\n'.join(rows))
 
 def part(lib,ref,mpn,nets,uid,footprint=''):
     labels=[]; pins=[]
@@ -19,6 +19,25 @@ def part(lib,ref,mpn,nets,uid,footprint=''):
         labels.append('(label "%s" (at 70 %g 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid %s))'%(net,y,make_uuid(uid+100+i)))
         pins.append('(pin "%d" (uuid %s))'%(i+1,make_uuid(uid+i)))
     return '\n'.join(labels)+'\n(symbol (lib_id "PiSXMeRevAClean:%s") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid %s) (property "Reference" "%s" (at 50 82 0) (effects (font (size 1.1 1.1)))) (property "Value" "%s" (at 50 108 0) (effects (font (size 1.1 1.1)))) (property "MPN" "%s" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "%s" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) %s (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "%s") (unit 1)))) )'%(lib,make_uuid(uid),ref,mpn,mpn,footprint,'\n'.join(pins),ref)
+
+def inline_cap_part(ref,mpn,net_in,net_out,uid,x=50,y=95):
+    """Place a two-pin SATA coupling capacitor with distinct net sides."""
+    labels=(
+        '(label "%s" (at %g %g 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid %s))' % (net_in,x+20,y-1.25,make_uuid(uid+100)),
+        '(label "%s" (at %g %g 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid %s))' % (net_out,x+20,y+1.25,make_uuid(uid+101)),
+    )
+    pins=( '(pin "1" (uuid %s))' % make_uuid(uid),
+           '(pin "2" (uuid %s))' % make_uuid(uid+1) )
+    body=f'''(symbol (lib_id "PiSXMeRevAClean:SATA_AC_CAP") (at {x:g} {y:g} 0)
+ (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
+ (uuid {make_uuid(uid+2)})
+ (property "Reference" "{ref}" (at {x:g} {y-13:g} 0) (effects (font (size 1.1 1.1))))
+ (property "Value" "100nF" (at {x:g} {y+13:g} 0) (effects (font (size 1.1 1.1))))
+ (property "MPN" "{mpn}" (at {x:g} {y:g} 0) (effects (font (size 1 1)) (hide yes)))
+ (property "Footprint" "PiSXMeRevAClean:C_0402_1005Metric" (at {x:g} {y:g} 0) (effects (font (size 1 1)) (hide yes)))
+ {' '.join(pins)}
+ (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "{ref}") (unit 1)))) )'''
+    return '\n'.join(labels)+'\n'+body
 
 # CM5 is the USB host side of the TUSB9261 device link: CM5 RX receives the
 # bridge's SSTX, while CM5 TX drives the bridge's SSRX.
@@ -51,6 +70,49 @@ def _normalize_j3_rows(block):
             block=block[:m.start(1)]+y+block[m.end(1):]
     return block
 
+def ensure_sata_coupling_caps(text):
+    """Add four distinct-net inline SATA coupling capacitors idempotently."""
+    if '(symbol "PiSXMeRevAClean:SATA_AC_CAP"' not in text:
+        cap_def=symbol('SATA_AC_CAP',('SATA_IN','SATA_OUT'),'C')
+        s=text.index('(lib_symbols'); e=s+len(balanced(text,s))-1
+        text=text[:e].rstrip()+'\n'+cap_def+text[e:]
+    caps=(
+        ('C30','BRIDGE_SATA_TX_P','SATA_M2_TX_P',0xee000000000000000000000000000000),
+        ('C31','BRIDGE_SATA_TX_N','SATA_M2_TX_N',0xee000000000000000000000000000000+16),
+        ('C32','BRIDGE_SATA_RX_P','SATA_M2_RX_P',0xee000000000000000000000000000000+32),
+        ('C33','BRIDGE_SATA_RX_N','SATA_M2_RX_N',0xee000000000000000000000000000000+48),
+    )
+    instances='\n'.join(inline_cap_part(ref,'GRM155R71C104KA88D',src,dst,uid,80+i*12,120)
+                         for i,(ref,src,dst,uid) in enumerate(caps))
+    j3_start=text.index('(symbol (lib_id "PiSXMeRevAClean:JAE_SM3ZS067U410ABR1000")')
+    j3_end=j3_start+len(balanced(text,j3_start))
+    sheet=text.index('\n  (sheet_instances ',j3_end)
+    text=text[:j3_end]+'\n'+instances+text[sheet:]
+    # The connector terminates on the capacitor output side.
+    start=text.index('(symbol (lib_id "PiSXMeRevAClean:JAE_SM3ZS067U410ABR1000")')
+    j3_end=start+len(balanced(text,start))
+    block=text[start:j3_end]
+    for old,new in (
+        ('BRIDGE_SATA_TX_P','SATA_M2_TX_P'),('BRIDGE_SATA_TX_N','SATA_M2_TX_N'),
+        ('BRIDGE_SATA_RX_P','SATA_M2_RX_P'),('BRIDGE_SATA_RX_N','SATA_M2_RX_N')):
+        block=block.replace('"%s"' % old,'"%s"' % new)
+    # The six labels feeding J3 are outside its symbol block.  Rename only
+    # that interconnect region; U7 labels remain on the bridge-side nets.
+    label_start=text.rfind('(label "BRIDGE_SATA_TX_P"',0,start)
+    if label_start >= 0:
+        old_labels=text[label_start:start]
+        labels=old_labels
+        for old,new in (
+            ('BRIDGE_SATA_TX_P','SATA_M2_TX_P'),('BRIDGE_SATA_TX_N','SATA_M2_TX_N'),
+            ('BRIDGE_SATA_RX_P','SATA_M2_RX_P'),('BRIDGE_SATA_RX_N','SATA_M2_RX_N')):
+            labels=labels.replace('(label "%s" (at 130 ' % old,
+                                  '(label "%s" (at 130 ' % new)
+        delta=len(labels)-len(old_labels)
+        text=text[:label_start]+labels+text[start:]
+        start += delta
+        j3_end += delta
+    return text[:start]+block+text[j3_end:]
+
 def repair_authority(text):
     """Repair the legacy generated island using TI physical pin numbers.
 
@@ -79,6 +141,7 @@ def repair_authority(text):
     end=text.index('\n  (hierarchical_label ', start)
     block=_normalize_j3_rows(text[start:end])
     text=text[:start]+block+text[end:]
+    text=ensure_sata_coupling_caps(text)
 
     # Normalize the U7 labels independently from the J3 labels.  A previous
     # broad replacement moved U7's SATA labels while trying to move J3.
@@ -103,6 +166,17 @@ def repair_authority(text):
     block=text[start:]
     block=block.replace('(at 50 95 0)', '(at 110 95 0)', 1)
     text=text[:start]+block
+    # Restore the bridge-side U7 labels explicitly after any prior malformed
+    # run; only the connector-side labels use SATA_M2_* names.
+    for old,new in (
+        ('SATA_M2_TX_P','BRIDGE_SATA_TX_P'),('SATA_M2_TX_N','BRIDGE_SATA_TX_N'),
+        ('SATA_M2_RX_P','BRIDGE_SATA_RX_P'),('SATA_M2_RX_N','BRIDGE_SATA_RX_N')):
+        text=text.replace('(label "%s" (at 70 ' % old,
+                          '(label "%s" (at 70 ' % new, 1)
+    # The legacy repair path above has historically performed broad suffix
+    # rewrites. Re-run the idempotent storage-side normalization last so a
+    # rerun can never leave duplicate J3 instances or stale cap-side labels.
+    text=ensure_sata_coupling_caps(text)
     return text
 
 def main():

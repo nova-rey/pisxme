@@ -1,7 +1,7 @@
 # Phase 19 SATA AC-coupling implementation receipt
 
 Date: 2026-09-04  
-Status: `OPEN_IMPLEMENTATION_GAP`
+Status: `SCHEMATIC_IMPLEMENTED_PCB_PENDING`
 
 ## Authority
 
@@ -9,9 +9,11 @@ The checked-in TI TUSB9261 implementation guide (`authority-inventory/primary-do
 
 ## Current clean-design finding
 
-`STORAGE.kicad_sch` currently exposes the four bridge SATA nets directly from
-U7 to J3 and contains no four-cap inline network. The current PCB experiments
-therefore cannot close Phase 19, even when their copper is geometrically clean.
+The generic Phase 7 storage authoring path now emits C30-C33. Each is
+`GRM155R71C104KA88D`, 100 nF X7R, `PiSXMeRevAClean:C_0402_1005Metric`, with
+distinct bridge-side and socket-side net labels. Native child-netlist export
+shows the four split paths; the clean PCB materializer now has the matching
+0402 footprint and deterministic M.2-launch positions.
 
 ## Required correction
 
@@ -24,12 +26,14 @@ Add four ordinary 0402 capacitors, one in each of:
 | SATA RX+ | U7 `BRIDGE_SATA_RX_P` → capacitor → J3 pad 3 |
 | SATA RX− | U7 `BRIDGE_SATA_RX_N` → capacitor → J3 pad 4 |
 
-The selected MPNs, footprints, values, reference designators, schematic
-connectivity, placement, and native netlist must be recorded before the
-SATA routing gate can be re-evaluated. No C-pack substitution is permitted.
+The selected MPN, footprint, values, reference designators, schematic
+connectivity, placement, and native netlist must be recorded before the SATA
+routing gate can be re-evaluated. No C-pack substitution is permitted. The
+PCB routing generator still must be updated to route each bridge-side net to
+the correct capacitor pad and each socket-side net from the other pad.
 
 ## Decision
 
-Phase 19 remains active. This is an obtainable manufacturer implementation
-requirement, not `REV_A_EMPIRICAL_RISK` and not a reason to relax the routing
-gate.
+Phase 19 remains active pending PCB-side routing/materialization and full
+native DRC. This is an obtainable manufacturer implementation requirement,
+not `REV_A_EMPIRICAL_RISK` and not a reason to relax the routing gate.

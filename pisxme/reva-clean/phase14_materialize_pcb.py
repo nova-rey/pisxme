@@ -27,6 +27,7 @@ POSITIONS = {
     # Keep the eight-hole FLR holders outside the conservative V100 cooler
     # reservation (x >= 75 mm), while retaining a short, direct branch into
     # each ideal-diode/FET island.
+    "C30": (244, 126), "C31": (244, 128), "C32": (244, 132), "C33": (244, 134),
     "F1": (55, 40), "F2": (50, 120), "Q1": (215, 30), "Q2": (215, 150),
     "C3": (110, 55), "C4": (110, 95),
     "D1": (110, 32), "D2": (110, 72),
@@ -42,6 +43,12 @@ POSITIONS = {
     "R19": (94, 170), "R20": (102, 170), "R21": (110, 170), "R22": (118, 170),
     **{f"C{n}": (150 + ((n - 26) % 8) * 8, 150 + ((n - 26) // 8) * 8) for n in range(26, 42)},
 }
+# Keep the four SATA coupling parts at the M.2 launch; the generated range
+# above is reserved for the unrelated bridge regulator capacitor bank.
+POSITIONS.update({
+    "C30": (250, 150), "C31": (250, 152),
+    "C32": (250, 156), "C33": (250, 158),
+})
 
 PAD_ALIASES = {
     # Public hardware reverse-engineering map; not NVIDIA/Amphenol authority.
@@ -126,30 +133,39 @@ def main() -> None:
         if fp.GetReference() == "REF**" and "Raspberry_Pi_5_Compute_Module" in str(fp.GetFPID().GetLibItemName()):
             fp.SetReference("J7")
             refs["J7"] = fp
+    # Remove donor-era footprints that must be replaced before any new
+    # footprints are loaded.  Removing a footprint invalidates SWIG wrappers
+    # for the donor board in KiCad 10, so doing this in the component loop can
+    # leave the next FindFootprintByReference result unusable.
+    replace_refs = {ref for ref in components if ref in ("J5", "J6", "U6", "U9")}
+    for ref in replace_refs:
+        fp = board.FindFootprintByReference(ref)
+        if fp is not None:
+            board.Remove(fp)
+    refs = {item.GetReference(): item for item in board.GetFootprints() if item.GetReference()}
+
     for ref, name in components.items():
-        fp = refs.get(ref)
+        # Always query the live board.  pcbnew invalidates cached SWIG
+        # footprint wrappers after Remove(), so the dictionary is only a
+        # convenience snapshot and must not be treated as authoritative.
+        fp = board.FindFootprintByReference(ref)
         # J5/J6 may already exist in the acreage donor.  Always reload the
         # project-local Molex authority so a corrected land pattern cannot be
         # shadowed by the stale donor-era embedded footprint.
-        if ref in ("J5", "J6") and fp is not None:
-            board.Remove(fp)
-            refs.pop(ref, None)
+        if ref in replace_refs:
             fp = None
-        if ref in ("U6", "U9") and fp is not None and name.startswith("USON-10"):
-            # The acreage floorplan may contain the donor-era WSON6 shell at
-            # these references.  Reload the promoted CM5IO-authoritative
-            # USON-10 land pattern instead of retaining that stale footprint.
-            if str(fp.GetFPID().GetLibItemName()) != name:
-                board.Remove(fp)
-                refs.pop(ref, None)
-                fp = None
         if fp is None:
             fp = io.FootprintLoad(str(PRETTY), name)
             if fp is None:
                 raise SystemExit(f"footprint load failed: {name} for {ref}")
+            # Set the reference while the IO-owned footprint wrapper is still
+            # live.  KiCad 10 can return an invalid SWIG proxy after Add() when
+            # the donor board has had footprints removed earlier in this loop.
+            fp.SetReference(ref)
             board.Add(fp)
             refs[ref] = fp
-        fp.SetReference(ref)
+        else:
+            fp.SetReference(ref)
         fp.SetPosition(pcbnew.VECTOR2I(pcbnew.FromMM(POSITIONS[ref][0]),
                                        pcbnew.FromMM(POSITIONS[ref][1])))
 
