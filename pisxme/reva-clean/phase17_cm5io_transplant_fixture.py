@@ -202,9 +202,8 @@ def main():
                         # through-vias outside the EDAC and SMT pads.
                         mid1=(68.0,60.0); mid2=(58.0,60.0)
                         via_actual(*mid1,nets[source])
-                        via_actual(*mid2,nets[source])
                         route(b,[a,mid1],nets[source],pcbnew.F_Cu,shift=False)
-                        route(b,[mid1,mid2],nets[source],pcbnew.F_Cu,shift=False)
+                        route(b,[mid1,mid2],nets[source],pcbnew.B_Cu,shift=False)
                         route(b,[mid2,z],nets[source],pcbnew.B_Cu,shift=False)
                     else:
                         route(b,path,nets[source],pcbnew.B_Cu,shift=False)
@@ -227,7 +226,6 @@ def main():
         route(b,[s1,(96,56.05),(96,38),(52,38),(52,56.05),s2],nets["GBE_SHIELD"],pcbnew.F_Cu)
         # The detached fixture's C1 return joins the copied GND escape with
         # ordinary through-via and B.Cu spine; no via is placed in a pad.
-        q=pcbnew.PCB_VIA(b); q.SetPosition(V(98 + DIRECT_SHIFT,50)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(nets["ETH_GND"]); b.Add(q)
         route(b,[(98,50),(98,72),(70,72),(70.1,64.1)],nets["ETH_GND"],pcbnew.B_Cu)
         route(b,[(70.1,64.1),(70.0324,66.2071),(72.5,65.7),(73.9,65.7),(76.1,66.3),(76.1,64.1)],nets["ETH_GND"],pcbnew.B_Cu)
     outline(b,8,35,100,125)

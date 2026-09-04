@@ -1,7 +1,7 @@
 # Phase 3 status
 
-Current state: `PISXME_REVA_CLEAN_PHASE16_CLOSED_WITH_REV_A_EMPIRICAL_RISK`;
-Phase 17 Ethernet routing is next. Its schematic/land-pattern authority is
+Current state: `PISXME_REVA_CLEAN_PHASE17_CLOSED_WITH_REV_A_EMPIRICAL_RISK`;
+Phase 17 Ethernet routing is closed. Its schematic/land-pattern authority is
 closed in commit `490ae22`; the EDAC logical pins are explicitly mapped to
 physical pads 18..1. Copper routing remains open because the frozen placement
 does not currently admit a no-maze two-layer route: native DRC candidates
@@ -73,7 +73,8 @@ boundary and coherent F1/U3 placement harness were added. The first
 `F1=(100,20), U3=(90,165)` trial remains rejected by native DRC for local
 regulator escape geometry and an inherited bridge-capacitor/CM5_PERST
 placement conflict. The proven Ethernet island remains electrically closed;
-Phase 17 remains open and no Phase 18+ work has started.
+Phase 17 is closed; Phase 18 USB3 routing is next and no Phase 18+ work has
+started.
 
 Phase 17 continuation update (2026-09-04, commit `fe8add3`): the official
 CM5IO Rev 2 PCB was inspected directly. Its Module1 +5 V fanout uses the same

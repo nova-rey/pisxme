@@ -3837,3 +3837,15 @@ The integrated candidate's 427 unconnected-item count matches its validated
 ancestor exactly, confirming that the native DRC debt is inherited rather than
 introduced by this Ethernet transplant. Power-entry validation also passed;
 final Phase 17 closure remains pending the complete board gate.
+
+2026-09-04 — Phase 17 Ethernet closure
+
+- Corrected the CT4 F.Cu/B.Cu escape and removed the unrelated dangling
+  ETH_GND fixture via. Native fixture DRC now has zero unconnected items,
+  shorts, crossings, and dangling vias.
+- Integrated acreage candidate retains the exact inherited DRC baseline,
+  while scoped Ethernet, route metrics, and power-entry regressions pass.
+- Removed the generic V100 cooler/backplate carrier reservation from the
+  integration path per the Rev-A underside mechanical contract.
+- Phase 17 is closed; the co-located candidate is the Phase 18 ancestor. No
+  Phase 18 routing has started in this checkpoint.

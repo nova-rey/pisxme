@@ -164,3 +164,24 @@ ancestor report; this is inherited acreage debt, not a regression from the
 Ethernet transplant. The candidate-specific zero-short/zero-crossing result,
 scoped Ethernet regression, and power-entry regression are therefore retained
 as positive evidence, but are not by themselves a Phase 17 closure.
+
+## Phase 17 closure — 2026-09-04
+
+- Corrected the CT4 layer-separated escape: one ordinary F.Cu-to-B.Cu via at
+  `(68.0, 60.0)` followed by the B.Cu corridor; the unnecessary dangling
+  second transition was removed. The unrelated dangling ETH_GND fixture via
+  was also removed.
+- Native disposable fixture DRC: 241 total inherited/clearance findings,
+  zero unconnected items, zero shorting items, zero track crossings, and zero
+  dangling vias.
+- Integrated acreage candidate DRC: 195 total findings, exactly 427 inherited
+  unconnected items, zero shorting items, zero track crossings, and no
+  Ethernet-specific dangling vias. The generic `MECH_V100` carrier cooler /
+  backplate reservation is absent; the Rev-A underside contract remains
+  available except for verified hardware constraints.
+- Phase 17 scoped electrical regression: PASS. Route metrics: PASS with
+  0.547–0.829 mm pair skews. Power-entry candidate regression: PASS.
+- Decision: `PHASE17_CLOSED`; candidate
+  `ACREAGE_PHASE17_COLOCATED_CT4_SPLIT.kicad_pcb` is the validated acreage
+  ancestor for Phase 18. Phase 18 routing may now proceed; no later phase has
+  been started in this checkpoint.
