@@ -3177,6 +3177,14 @@
 - Native DRC rejected the source-side escape at 312 findings / 22
   unconnected items; rejected the candidate and kept production unchanged.
 
+2026-09-03 — Phase 17 corrected EDAC RC source-transition trial
+
+- Used the authoritative four 22 nF/75 ohm center-tap branches with explicit
+  off-pad transitions and ordinary F.Cu/B.Cu vias.
+- Native DRC rejected the disposable geometry at 311 findings / 2
+  unconnected items; preserved the circuit authority and kept production
+  unchanged.
+
 2026-09-03 — Phase 17 EDAC manufacturer CT termination authority
 
 - Verified the EDAC A70-series electrical circuit: four independent

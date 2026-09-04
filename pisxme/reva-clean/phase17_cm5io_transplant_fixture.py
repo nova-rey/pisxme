@@ -148,27 +148,34 @@ def main():
         # layers.  This is a normal through-via-equivalent escape at the
         # through-hole parts, and avoids inventing a common CT bus.
         if CT_TIES:
-            def srcxy(f, number):
-                p=xy(f.FindPadByNumber(str(number)).GetPosition())
-                return (p[0]-DIRECT_SHIFT,p[1])
+            def actual(f, number):
+                return xy(f.FindPadByNumber(str(number)).GetPosition())
             def via_actual(x,y,net):
                 q=pcbnew.PCB_VIA(b); q.SetPosition(V(x,y)); q.SetWidth(pcbnew.FromMM(.45)); q.SetDrill(pcbnew.FromMM(.20)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(net); b.Add(q)
-            def S(x,y): return (x-DIRECT_SHIFT,y)
             # Four pair-specific escapes into the manufacturer RC branches.
             # The long source-to-branch trunks use B.Cu; each SMT capacitor
             # is reached through an off-pad via and a short F.Cu dogbone.
             for i,(source,cap,res,srcpad) in enumerate(zip(
                     ("ETH_CT4","ETH_CT3","ETH_CT2","ETH_CT1"),
                     branch_caps,branch_res,(14,13,12,11))):
-                a=srcxy(j2,srcpad); z=srcxy(cap,1)
-                vx=z[0]-.8; vy=z[1]+1.0; via_actual(vx+DIRECT_SHIFT,vy,nets[source])
-                route(b,[a,S(vx,vy)],nets[source],pcbnew.B_Cu)
-                route(b,[S(vx,vy),z],nets[source],pcbnew.F_Cu)
-                ca=srcxy(cap,2); rb=srcxy(res,1)
-                route(b,[ca,(ca[0],42+i*.5),(rb[0],42+i*.5),rb],nets[f"ETH_CT_BRANCH_{source[-1]}"],pcbnew.F_Cu)
-                rr=srcxy(res,2); route(b,[rr,(rr[0],38),(75,38)],nets["ETH_CT_COMMON"],pcbnew.F_Cu)
-            c1=srcxy(cct,1); route(b,[c1,(c1[0],38),(75,38)],nets["ETH_CT_COMMON"],pcbnew.F_Cu)
-            c2=srcxy(cct,2); route(b,[c2,(c2[0],37),(96,37),(96,56.05)],nets["GBE_SHIELD"],pcbnew.F_Cu)
+                a=actual(j2,srcpad); z=actual(cap,1)
+                sv=((70.0,58.0),(73.0,53.5),(82.0,53.5),(85.0,58.0))[i]
+                tv=(z[0]-.8,z[1]+1.0)
+                via_actual(*sv,nets[source]); via_actual(*tv,nets[source])
+                route(b,[a,sv],nets[source],pcbnew.F_Cu,shift=False)
+                route(b,[sv,tv],nets[source],pcbnew.B_Cu,shift=False)
+                route(b,[tv,z],nets[source],pcbnew.F_Cu,shift=False)
+                ca=actual(cap,2); rb=actual(res,1)
+                route(b,[ca,(ca[0],42+i*.5),(rb[0],42+i*.5),rb],nets[f"ETH_CT_BRANCH_{source[-1]}"],pcbnew.F_Cu,shift=False)
+                rr=actual(res,2); via_actual(rr[0]-.8,rr[1]+.8,nets["ETH_CT_COMMON"])
+                route(b,[rr,(rr[0]-.8,rr[1]+.8)],nets["ETH_CT_COMMON"],pcbnew.F_Cu,shift=False)
+                route(b,[(rr[0]-.8,rr[1]+.8),(rr[0]-.8,37)],nets["ETH_CT_COMMON"],pcbnew.B_Cu,shift=False)
+            c1=actual(cct,1); via_actual(c1[0]-.8,c1[1]+.8,nets["ETH_CT_COMMON"])
+            route(b,[c1,(c1[0]-.8,c1[1]+.8)],nets["ETH_CT_COMMON"],pcbnew.F_Cu,shift=False)
+            route(b,[(51,37),(75,37)],nets["ETH_CT_COMMON"],pcbnew.B_Cu)
+            c2=actual(cct,2); via_actual(c2[0]+.8,c2[1]+.8,nets["GBE_SHIELD"])
+            route(b,[c2,(c2[0]+.8,c2[1]+.8)],nets["GBE_SHIELD"],pcbnew.F_Cu,shift=False)
+            route(b,[(c2[0]+.8,c2[1]+.8),(c2[0]+.8,36),(96,36),(96,56.05)],nets["GBE_SHIELD"],pcbnew.B_Cu,shift=False)
         else:
             route(b,[(66.785,56.83),(83.73,51.73)],nets["ETH_CT4"],pcbnew.F_Cu)
             route(b,[(75.675,55.56),(75.675,59.0),(82.5,59.0),(82.5,50.5),(86.27,50.5),(86.27,51.73)],nets["ETH_CT2"],pcbnew.F_Cu)

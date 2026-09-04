@@ -1502,3 +1502,12 @@ pair-specific bridge generated from the actual launch-boundary endpoint
 coordinates, with a legal expanded fixture outline and per-pair lanes that
 are checked for crossings before native DRC. No clean production
 PCB/schematic has been promoted.
+
+## Corrected source-transition RC trial — 2026-09-03
+
+The latest disposable fixture used the manufacturer-authoritative four
+`22 nF + 75 ohm` center-tap branches, explicit off-pad source/capacitor vias,
+and ordinary F.Cu/B.Cu transitions. Native KiCad DRC rejected it at **311
+findings / 2 unconnected items**, with CT branch shorts/crossings and a
+shield-return discontinuity. This candidate is rejected; the EDAC electrical
+authority remains valid and production remains unchanged.
