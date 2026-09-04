@@ -1405,6 +1405,22 @@ Preserved evidence:
 `pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-layerbridge-drc.rpt`.
 Phase 17 remains open and Phase 18+ remains gated.
 
+## Current continuation state — complete U3 boundary re-authoring — 2026-09-04
+
+The corrected overlay path was rerun against the F1-cleared, complete-U3
+bottom diagnostic after fixing explicit track/via reconstruction. It contains
+the real Ethernet geometry and the Phase 16 focused PCIe check remains PASS.
+The candidate is still rejected by native DRC: CT1/CT2 support crossings,
+J7-launch clearance findings, and two CM5_5V/CM5_PERST crossings remain;
+unconnected board debt is 222. The isolated CM5IO fixture remains closed.
+
+The required consultant review returned `PROPOSED_UNBLOCK` and identified the
+exact next implementation contract: re-author `U3 + C5-C9 + R3-R6`, thermal
+PGND vias, VOUT-land tie, VIN/VOUT escapes, FB/RT/PG copper, and explicit
+`12V_PROTECTED`, `POWER_GND`, `CM5_5V`, `FB_CM5_5V`, `RT_CM5_5V`, and
+`PG_CM5_5V` boundaries while keeping `VCC_U3_INTERNAL` isolated. This is the
+active authorized repair. No later phase has started.
+
 ## Direct +5 mm CM5IO alignment fixture — 2026-09-03
 
 The official CM5IO transplant generator was given a direct-alignment mode.

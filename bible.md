@@ -3346,6 +3346,15 @@
   remaining baseline connectivity debt. Isolated CM5IO fixture remains the
   electrical authority; Phase 17 and all later phases remain gated.
 
+2026-09-04 — Phase 17 continuation contract
+
+- Accepted consultant `PROPOSED_UNBLOCK`: re-author the complete U3 island
+  from Phase 15 authority with explicit power/control boundaries and isolated
+  internal VCC, rather than applying another footprint-only translation.
+- Corrected overlay candidates retain a PASS on the Phase 16 focused PCIe
+  check, but Phase 17 remains open because native DRC still reports Ethernet
+  CT/launch and local power-boundary conflicts.
+
 2026-09-04 — Phase 17 overlay serialization regression guard
 
 - Extended the Ethernet fixture regression to require real nonzero MDI track
