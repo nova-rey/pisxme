@@ -3788,3 +3788,12 @@ power-related short/crossing/hole findings, and plane-layer compliance.
   unconnected items; crossings/shorts remain at the interleaved J7 fanout and
   ESD launch.
 - Preserved the result as negative generator evidence. Phase 17 remains open.
+
+2026-09-04 — Phase 17 source-column layer split retry
+
+- Transitioned the right J7 Ethernet column immediately to B.Cu with
+  ordinary vias while retaining the left column on F.Cu.
+- Native KiCad DRC rejected the candidate with 286 violations and 453
+  unconnected items; package/edge crossings and power-copper interactions
+  remain.
+- Preserved the retry as negative evidence; Phase 17 remains open.

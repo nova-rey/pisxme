@@ -32,12 +32,24 @@ for t in list(b.GetTracks()):
 source_order=('CM5_GBE_TD2_P','CM5_GBE_TD2_N','CM5_GBE_TD3_N','CM5_GBE_TD3_P',
               'CM5_GBE_TD0_P','CM5_GBE_TD0_N','CM5_GBE_TD1_N','CM5_GBE_TD1_P')
 for i,n in enumerate(source_order):
-    q=N(b,n); s,e=ep[n][0],ep[n][1]; x=2.0+i*2.0; y=12.0+i*1.1
+    q=N(b,n); s,e=ep[n][0],ep[n][1]
+    # Keep the two J7 source columns on independent initial escapes.  The
+    # right column must not use the short x=2..10 offsets: those horizontals
+    # would pass through the left-column pads at the shared row y values.
+    if i < 4:
+        x=4.0+i*2.0; y=12.0+i*1.1; tx=219.0-i*0.25
+        A(b,q,[s,(x,s[1]),(x,y),(tx,y),(tx,e[1]),e])
+    else:
+        x=38.0+(i-4)*2.0; y=16.0+(i-4)*1.1; tx=229.0-(i-4)*0.25
+        # The right J7 column is transitioned immediately and kept on B.Cu
+        # for the west/top perimeter run. This prevents its source fanout
+        # from crossing the left J7 column or the U9 package escape.
+        v=(x,s[1]); A(b,q,[s,v],pcbnew.F_Cu); via(b,q,v)
+        vend=(tx,e[1]); A(b,q,[v,(x,y),(tx,y),vend],pcbnew.B_Cu); via(b,q,vend)
+        A(b,q,[vend,e],pcbnew.F_Cu)
     # The USON source lands share an x coordinate.  Stagger the final
     # approach x positions in reverse row order so no later vertical can
     # pierce an earlier horizontal dogbone.
-    tx=219.0-i*0.25
-    A(b,q,[s,(x,s[1]),(x,y),(tx,y),(tx,e[1]),e])
 
 # The right-side ESD lands launch into monotonic lanes; through-hole J2 pads
 # are reached by short vertical dogbones at their actual centers.
@@ -47,5 +59,13 @@ for i,n in enumerate(dest_order):
     q=N(b,n); s,d=ep[n][2],ep[n][3]; y=38.0+i*1.1; x=s[0]+(1.5 if s[0]<225 else -1.5)
     # Give each shared USON destination row its own outward dogbone x.
     x=s[0]+1.5+i*0.25
-    A(b,q,[s,(x,s[1]),(x,y),(d[0],y),d])
+    if i >= 4:
+        # Keep the U6-to-MagJack corridors on B.Cu so they cannot intersect
+        # the U9 package escape or the U9 F.Cu lanes. The transition is
+        # outside the package pad; the PTH MagJack pad is the legal B.Cu
+        # landing.
+        v=(x,s[1]); A(b,q,[s,v],pcbnew.F_Cu); via(b,q,v)
+        A(b,q,[v,(x,y),(d[0],y),d],pcbnew.B_Cu)
+    else:
+        A(b,q,[s,(x,s[1]),(x,y),(d[0],y),d])
 pcbnew.ZONE_FILLER(b).Fill(b.Zones()); b.Save(str(OUT)); print('saved',OUT)

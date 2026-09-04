@@ -176,3 +176,9 @@ source and destination dogbones by package row. Native DRC remained negative
 failures to the interleaved J7 fanout and the long ESD-to-MagJack corridors.
 This correction is preserved as another rejected generator iteration, not a
 Phase 17 promotion.
+
+The follow-up source-column split transitions the right J7 column immediately
+to B.Cu through ordinary vias and keeps the left column on F.Cu. Native DRC
+still rejected the candidate with 286 violations and 453 unconnected items;
+package/edge crossings and power-copper interactions remain. It is preserved
+as negative evidence and does not close Phase 17.

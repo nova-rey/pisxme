@@ -2133,3 +2133,8 @@ Phase 17 remains open. Remaining closure work is inherited acreage scaffold
 DRC/connectivity debt plus explicit V100 conservative-envelope, return-path,
 controlled-impedance, and final mechanical evidence. Phase 18+ has not
 started.
+
+The package-aware source-column layer split was also tested: the right J7
+column transitions immediately to B.Cu while the left column remains on
+F.Cu. Native KiCad DRC still reports 286 violations and 453 unconnected
+items, so the candidate is rejected and Phase 17 remains open.
