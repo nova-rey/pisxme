@@ -3419,3 +3419,14 @@
 - Exact CM5IO Ethernet integration remains rejected at 436 findings due to
   CT1/CT2 and connector-field geometry; preserved the candidate and kept
   Phase 17 open. No Phase 18+ work or release promotion occurred.
+
+2026-09-04 — Phase 17 CT1 opposite-layer transition trial
+
+- Tested the proven Ethernet island with CT1 retained on B.Cu at its
+  endpoints and moved to F.Cu only through an ordinary via-transitioned
+  middle corridor.
+- Rejected the first transition offset at EDAC pad 12; the second offset
+  removed the CT1/CT2 integrated crossing and Ethernet short category.
+- Candidate still fails the broader gate on connector-field clearances,
+  inherited unconnected scaffold debt, and the pre-existing CM5_PERST /
+  bridge-capacitor conflict. Phase 17 remains open; no Phase 18+ work began.

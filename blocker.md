@@ -1861,3 +1861,19 @@ electrical oracle, but this integrated candidate is not promoted. The next
 bounded repair is to preserve this lower U3/F1 placement and correct the
 Ethernet center-tap launch/return geometry at the integration boundary; no
 Phase 18+ work began.
+
+## Phase 17 CT1 opposite-layer boundary trial — 2026-09-04
+
+The lower U3/F1 candidate was rerun with CT1 kept on B.Cu at both connector
+and support endpoints, transitioned through two ordinary 0.50/0.30 mm vias,
+and carried across the crossing middle corridor on F.Cu. The first offset
+was rejected because its transition landed too close to EDAC pad 12; moving
+that transition to `(84.715,58.33)` removes the CT1/CT2 short and all
+`tracks_crossing` findings from the integrated report.
+
+The corrected disposable overlay now reports 435 total findings, with 435
+unconnected records inherited from the acreage scaffold and ordinary
+connector/launch clearance records; the only remaining electrical short is
+the pre-existing CM5_PERST/bridge-capacitor placement conflict. This is a
+useful Ethernet-local repair but is not yet a Phase 17 pass because the
+connector-field clearance and inherited board debt still require resolution.
