@@ -28,3 +28,12 @@ Native evidence:
 
 The candidate is rejected and is not promoted to the clean acreage board. The
 corrected generic authoring path is retained for the next experiment.
+
+## Follow-up escape refinement
+
+The generator was then changed to derive the USB3 landing from serialized U7
+coordinates and to avoid routing through the vertical QFN pad field. The
+USB-only V3 disposable run completed and reduced the report to 200 native DRC
+violations, but retained inherited CM5/PCIe source-corridor crossings and one
+candidate USB transition interaction. It is also rejected; the PCIe ancestor
+remains unchanged.

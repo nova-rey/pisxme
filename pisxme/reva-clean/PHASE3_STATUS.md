@@ -7,6 +7,10 @@ generic KiCad 10 generator to replace donor C30-C33 footprints and preserve
 explicit socket-side SATA net codes across serialization. A fresh U7/J3
 coordinated candidate serialized the correct split mapping but measured 262
 native DRC violations and was rejected; Phase 19 remains active.
+
+The subsequent coordinate-derived USB3 escape refinement measured 200 native
+DRC violations in USB-only V3 testing, with inherited CM5/PCIe corridor
+crossings remaining; it was rejected and Phase 19 remains active.
 Phases 17–18 are closed with inherited-baseline qualifications. Phase 18
 native netlist and USB3 route proofs pass. Phase 19 storage authority is
 closed, but three SATA routing classes are rejected by native DRC for

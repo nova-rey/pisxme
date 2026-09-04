@@ -16,6 +16,12 @@ CM5/PERST interactions remain, so this candidate is rejected. Evidence is in
 `PHASE19_COORDINATED_STORAGE_REPAIR_RECEIPT.md`; Phase 19 remains active and
 no Phase 20+ work has started.
 
+Follow-up USB3 escape refinement reduced the USB-only V3 disposable report to
+200 native DRC violations by approaching the moved U7 row horizontally, but
+it still crosses inherited CM5/PCIe source-corridor geometry and is rejected.
+This remains a coordinated storage-island routing experiment, not a Phase 19
+closure claim.
+
 Date: 2026-09-04
 
 Status: `PISXME_REVA_CLEAN_PHASE19_SATA_ROUTING_IN_PROGRESS`

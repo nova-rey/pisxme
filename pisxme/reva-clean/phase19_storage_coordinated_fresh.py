@@ -75,27 +75,22 @@ def main():
   # high-speed buses. Remove only those routed nets; PCIe and unrelated
   # power/support copper remain inherited and untouched.
   if 'USB3' in t.GetNetname() or 'BRIDGE_SATA_' in t.GetNetname() or 'SATA_M2_' in t.GetNetname(): b.Remove(t)
- # Exact Phase 18 CM5 escape geometry, extended monotonically to the moved
- # U7 row. U7 is deliberately placed at y=110 so the four source orderings
- # and the 0.5 mm USB pad pitch remain ordered at the landing.
- for name,spn,upn,first,second in (('CM5_USB3_RX_N','128','42',(72,103.9),(103,103)),('CM5_USB3_RX_P','130','43',(72,104.8),(103,105)),('CM5_USB3_TX_N','140','45',(72,108),(103,107))):
-  n=b.FindNet('/CORE_CM5/'+name);s=sp[spn];d=up[upn];launch=(71.2,s[1]);T(b,n,s,launch,pcbnew.F_Cu);T(b,n,launch,first,pcbnew.F_Cu);X(b,n,first)
-  if name == 'CM5_USB3_TX_N':
-   T(b,n,first,(82,108),pcbnew.B_Cu);X(b,n,(82,108));T(b,n,(82,108),(102,108),pcbnew.B_Cu);T(b,n,(102,108),second,pcbnew.B_Cu);X(b,n,second)
-  else:
-   T(b,n,first,second,pcbnew.B_Cu);X(b,n,second)
-  landing={'CM5_USB3_RX_N':(115,112),'CM5_USB3_RX_P':(115,113),'CM5_USB3_TX_N':(115,114)}[name]
-  T(b,n,second,landing,pcbnew.F_Cu); T(b,n,landing,d,pcbnew.F_Cu)
- n=b.FindNet('/CORE_CM5/CM5_USB3_TX_P');s=sp['142'];d=up['46'];T(b,n,s,(71.2,106.7),pcbnew.F_Cu);T(b,n,(71.2,106.7),(71,109),pcbnew.F_Cu);X(b,n,(71,109));T(b,n,(71,109),(82,112),pcbnew.B_Cu);X(b,n,(82,112));T(b,n,(82,112),(115,116),pcbnew.F_Cu);T(b,n,(115,116),d,pcbnew.F_Cu)
- if urot == 90:
-  # Rotation-90 U7 has a horizontal USB pad row. Rebuild its landing from
-  # the validated CM5 source escapes using isolated staged rails.
-  for name,spn,upn,first,second,xrail in (('CM5_USB3_RX_N','128','42',(72,103.9),(103,103),100),('CM5_USB3_RX_P','130','43',(72,104.8),(103,105),102),('CM5_USB3_TX_N','140','45',(72,108),(103,107),104)):
-   n=b.FindNet('/CORE_CM5/'+name);s=sp[spn];d=up[upn];launch=(71.2,s[1]);T(b,n,s,launch,pcbnew.F_Cu);T(b,n,launch,first,pcbnew.F_Cu);X(b,n,first)
-   if name == 'CM5_USB3_TX_N': T(b,n,first,(82,108),pcbnew.B_Cu);X(b,n,(82,108));T(b,n,(82,108),(102,108),pcbnew.B_Cu);T(b,n,(102,108),second,pcbnew.B_Cu);X(b,n,second)
-   else: T(b,n,first,second,pcbnew.B_Cu);X(b,n,second)
-   T(b,n,second,(xrail,110),pcbnew.F_Cu);T(b,n,(xrail,110),(xrail,146),pcbnew.F_Cu);T(b,n,(xrail,146),d,pcbnew.F_Cu)
-  n=b.FindNet('/CORE_CM5/CM5_USB3_TX_P');s=sp['142'];d=up['46'];T(b,n,s,(71.2,106.7),pcbnew.F_Cu);T(b,n,(71.2,106.7),(71,109),pcbnew.F_Cu);X(b,n,(71,109));T(b,n,(71,109),(82,112),pcbnew.B_Cu);X(b,n,(82,112));T(b,n,(82,112),(106,116),pcbnew.F_Cu);T(b,n,(106,116),(106,146),pcbnew.F_Cu);T(b,n,(106,146),d,pcbnew.F_Cu)
+ # Coordinate-derived USB3 escape. The CM5 source ordering reverses the TX
+ # pair relative to U7's vertical pad row, so TX_N and TX_P use separate
+ # outer layers rather than crossing. Every landing approaches the QFN pad
+ # horizontally, never through a neighboring pad field.
+ usb_rows=(('CM5_USB3_RX_N','128','42',103.9,140.0,pcbnew.F_Cu),
+           ('CM5_USB3_RX_P','130','43',104.8,140.5,pcbnew.F_Cu),
+           ('CM5_USB3_TX_N','140','45',106.3,141.5,pcbnew.B_Cu),
+           ('CM5_USB3_TX_P','142','46',106.7,142.0,pcbnew.F_Cu))
+ for name,spn,upn,sy,dy,layer in usb_rows:
+  n=b.FindNet('/CORE_CM5/'+name); s=sp[spn]; d=up[upn]
+  a=(90.0,sy); z=(112.0,dy)
+  T(b,n,s,a,pcbnew.F_Cu)
+  if layer == pcbnew.B_Cu: X(b,n,a)
+  T(b,n,a,z,layer)
+  if layer == pcbnew.B_Cu: X(b,n,z)
+  T(b,n,z,d,pcbnew.F_Cu)
  # SATA corridor is derived from the actual moved pad coordinates.  The two
  # pairs use separate permitted layers and monotonic lanes; vias are outside
  # both SMD pad fields and each M.2 launch returns to F.Cu before the pad.
