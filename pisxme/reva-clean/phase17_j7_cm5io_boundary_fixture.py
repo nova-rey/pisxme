@@ -55,7 +55,10 @@ def main():
         name=str(t0.GetNetname()).rsplit('/',1)[-1]
         if name not in MDI: continue
         a,z=xy(t0.GetStart()),xy(t0.GetEnd()); a=(a[0]+ISLAND_DX,a[1]); z=(z[0]+ISLAND_DX,z[1])
-        if max(a[1],z[1]) >= 70: continue
+        # Retain the official island-side graph, including its source handoff
+        # segments.  The transplant's omitted CM5 source legs are the
+        # segments whose original x range reaches back below 59 mm.
+        if min(a[0],z[0]) < 59.0: continue
         t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(t0.GetLayer())
         t.SetWidth(t0.GetWidth()); t.SetNet(nets[island_map.get(name,name)]); b.Add(t)
     # Copy the island support/return copper, excluding the MDI routes.
@@ -67,10 +70,10 @@ def main():
         t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(t0.GetLayer())
         t.SetWidth(t0.GetWidth()); t.SetNet(nets[name]); b.Add(t)
     # Official CM5IO-derived ESD source-side landing points in this island.
-    physical_land={'CM5_GBE_TD3_P':(26.204119+ISLAND_DX,59.210),'CM5_GBE_TD3_N':(26.361524+ISLAND_DX,59.590),
-          'CM5_GBE_TD2_N':(27.021298+ISLAND_DX,60.110),'CM5_GBE_TD2_P':(27.178701+ISLAND_DX,60.490),
-          'CM5_GBE_TD1_P':(32.660000+ISLAND_DX,58.871297),'CM5_GBE_TD1_N':(33.039999+ISLAND_DX,59.028702),
-          'CM5_GBE_TD0_N':(34.160000+ISLAND_DX,58.571298),'CM5_GBE_TD0_P':(34.539999+ISLAND_DX,58.728702)}
+    physical_land={'CM5_GBE_TD3_P':(59.4213+ISLAND_DX,67.210),'CM5_GBE_TD3_N':(59.5787+ISLAND_DX,67.590),
+          'CM5_GBE_TD2_N':(59.8213+ISLAND_DX,68.110),'CM5_GBE_TD2_P':(59.9787+ISLAND_DX,68.490),
+          'CM5_GBE_TD1_P':(60.3213+ISLAND_DX,69.010),'CM5_GBE_TD1_N':(60.4787+ISLAND_DX,69.390),
+          'CM5_GBE_TD0_N':(60.8213+ISLAND_DX,69.910),'CM5_GBE_TD0_P':(60.9787+ISLAND_DX,70.290)}
     land={name:physical_land[island_map[name]] for name in MDI}
     boundary={3:(10,90),4:(90,90),5:(8,92),6:(92,92),9:(6,94),10:(94,94),11:(4,96),12:(96,96)}
     names_by_pad={3:'CM5_GBE_TD3_P',4:'CM5_GBE_TD1_P',5:'CM5_GBE_TD3_N',6:'CM5_GBE_TD1_N',
@@ -84,14 +87,14 @@ def main():
         # unchanged.  The left group uses four top lanes; the swapped right
         # group uses four independent upper-right lanes.
         paths={
-          'CM5_GBE_TD3_P':([(10,90),(10,40.6),(116.362,40.6),land['CM5_GBE_TD3_P']],pcbnew.B_Cu),
-          'CM5_GBE_TD3_N':([(8,92),(8,40),(116.204,40),land['CM5_GBE_TD3_N']],pcbnew.B_Cu),
-          'CM5_GBE_TD2_N':([(6,94),(6,42.6),(117.179,42.6),land['CM5_GBE_TD2_N']],pcbnew.F_Cu),
-          'CM5_GBE_TD2_P':([(4,96),(4,42),(117.021,42),land['CM5_GBE_TD2_P']],pcbnew.F_Cu),
-          'CM5_GBE_TD1_P':([(90,90),(121,90),(121,36.6),(124.160,36.6),land['CM5_GBE_TD1_P']],pcbnew.B_Cu),
-          'CM5_GBE_TD1_N':([(92,92),(120,92),(120,36),(124.540,36),land['CM5_GBE_TD1_N']],pcbnew.B_Cu),
-          'CM5_GBE_TD0_N':([(94,94),(124,94),(124,38),(122.660,38),land['CM5_GBE_TD0_N']],pcbnew.F_Cu),
-          'CM5_GBE_TD0_P':([(96,96),(123,96),(123,38.6),(123.040,38.6),land['CM5_GBE_TD0_P']],pcbnew.F_Cu)}
+          'CM5_GBE_TD3_P':([(10,90),(10,40.5),(149.579,40.5),land['CM5_GBE_TD3_P']],pcbnew.B_Cu),
+          'CM5_GBE_TD3_N':([(8,92),(8,41.4),(149.421,41.4),land['CM5_GBE_TD3_N']],pcbnew.B_Cu),
+          'CM5_GBE_TD2_N':([(6,94),(6,43.0),(149.979,43.0),land['CM5_GBE_TD2_N']],pcbnew.F_Cu),
+          'CM5_GBE_TD2_P':([(4,96),(4,42.5),(149.821,42.5),land['CM5_GBE_TD2_P']],pcbnew.F_Cu),
+          'CM5_GBE_TD1_P':([(90,90),(120,70),(120,35),(150.821,35),land['CM5_GBE_TD1_P']],pcbnew.B_Cu),
+          'CM5_GBE_TD1_N':([(92,92),(121,70),(121,35.6),(150.979,35.6),land['CM5_GBE_TD1_N']],pcbnew.B_Cu),
+          'CM5_GBE_TD0_N':([(94,94),(122,70),(122,37),(150.321,37),land['CM5_GBE_TD0_N']],pcbnew.F_Cu),
+          'CM5_GBE_TD0_P':([(96,96),(123,70),(123,37.6),(150.479,37.6),land['CM5_GBE_TD0_P']],pcbnew.F_Cu)}
         for name,(pts,layer) in paths.items():
             track(b,nets[name],pts,layer)
         # The B.Cu bridge returns to the official ESD lands with ordinary

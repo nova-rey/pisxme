@@ -3102,3 +3102,12 @@
   KiCad DRC at 247 violations / 78 unconnected items with 4 crossings and
   16 dangling tracks; rejected the candidate.
 - Recorded the canonical blocker packet and retained Phase 18+ gating.
+
+2026-09-03 — Phase 17 corrected copied-island handoff trial
+
+- Corrected the disposable bridge generator to retain the official island-side
+  handoff segments and target their measured translated coordinates near
+  x=149–151 rather than stale ESD-side coordinates.
+- Native KiCad DRC measured 274 violations / 72 unconnected items, including
+  17 crossings, one short, and 12 dangling tracks; rejected the candidate.
+- Recorded the diagnostic improvement and retained Phase 18+ gating.

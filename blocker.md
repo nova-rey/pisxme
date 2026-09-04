@@ -1259,6 +1259,34 @@ Preserved evidence:
 - `UNBLOCK_CONDITION`: a complete acreage-adapted bridge with zero true
   crossings/shorts/opens, valid references and native DRC evidence
 
+## Corrected copied-island handoff trial — 2026-09-03
+
+Read-only review of the preceding bridge found that its `land` table pointed
+to the ESD-side coordinates near x=116–125, while the copied official island
+graph actually hands off at the omitted-CM5-source boundary near x=149–151
+after the 90 mm translation. The MDI-copy filter also discarded the official
+island-side handoff segments at the y=70 boundary. Both generator defects
+were corrected in the disposable bridge path.
+
+The corrected run reduced the unconnected count from 78 to **72**, confirming
+that the stale handoff coordinates were a real failure cause. Native KiCad
+10.0.5 DRC still rejected the candidate at **274 violations / 72 unconnected
+items**, including **17 crossings, 1 short, 12 dangling tracks, and 2
+dangling vias**. The bridge is rejected; the reduction is diagnostic, not a
+Phase 17 pass. The remaining failure is the still-unrouted bridge geometry
+to the real handoffs, with ordinary 0.127 mm fixture tracks also conflicting
+with the board's 0.200 mm minimum-width rule.
+
+Preserved evidence:
+`pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-corrected-handoff-drc.rpt`,
+`pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE.kicad_pcb`, and
+`pisxme/reva-clean/phase17_j7_cm5io_boundary_fixture.py`.
+
+The goal remains active and recoverable. Phase 18+ remains gated. The next
+authorized construction must route to these measured handoff endpoints with
+the two approved signal layers and explicit per-pair transitions; no further
+experiment may use the stale ESD-side endpoint table.
+
 ## Round-the-envelope bridge trial — 2026-09-03
 
 The proposed round-the-envelope bridge was implemented and run under native
