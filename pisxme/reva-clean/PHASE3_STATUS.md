@@ -106,5 +106,10 @@ M.2 candidate at `(115,125)` with U7 and Phase 18 USB3 preserved produced
 pad-field conflicts, two SATA B.Cu crossings, and M.2 courtyard/clearance
 interactions. Combined with the coordinated, J3-only, outboard, and prior
 mid-acreage waves, the remaining repair requires reopening the frozen U7/PCIe
-corridor and regenerating an affected high-speed ancestor. Phase 19 is
-blocked at this boundary; Phase 20+ has not started.
+corridor and regenerating an affected high-speed ancestor. Phase 19 was
+previously blocked at this boundary, but the user has explicitly reopened the
+coherent U7/J3 storage island. A fresh coordinated candidate at U7 `(120,140)`
+/ J3 `(145,125)` regenerated USB3 and SATA together and produced 208 native
+DRC violations / 426 unconnected items; it is rejected for local USB3 landing
+crossings and PERST interaction, while the PCIe ancestor remained unchanged.
+Phase 19 is active again; Phase 20+ has not started.

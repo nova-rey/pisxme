@@ -2,7 +2,7 @@
 
 Date: 2026-09-04
 
-Status: `PISXME_REVA_CLEAN_BLOCKED`
+Status: `PISXME_REVA_CLEAN_PHASE19_SATA_ROUTING_IN_PROGRESS`
 
 ## Current evidence
 
@@ -22,6 +22,7 @@ Native KiCad 10 DRC receipts:
 | `ACREAGE_PHASE19_SATA_UNDERSIDE_ENDPOINT.kicad_pcb` | 243 violations / 430 unconnected | TX source/connector crossings, one frozen PCIe B.Cu intersection, and connector-hole clearance; inherited baseline separate |
 | `ACREAGE_PHASE19_SATA_LOCAL_UNDERSIDE.kicad_pcb` | 244 violations / 430 unconnected | U7 pad-field conflicts, two local B.Cu pair crossings, and M.2 courtyard/clearance interactions; inherited baseline separate |
 | `ACREAGE_PHASE19_STORAGE_MIDACREAGE_SATA_LAUNCH_V3.kicad_pcb` | 198 violations / 430 unconnected | no new short/crossing category; SATA-only proof, not coordinated-board closure |
+| `ACREAGE_PHASE19_STORAGE_COORDINATED_FRESH.kicad_pcb` | 208 violations / 426 unconnected | regenerated USB3 source/landing crossings and local PERST/USB3 interactions; SATA V3 corridor retained |
 
 The V3 result is useful evidence for a local SATA corridor, but is not
 promoted because its moved U7 leaves the already-closed USB3 route stale.
@@ -44,8 +45,11 @@ starting geometry. Candidates must pass focused native DRC for all four SATA
 nets, preserve 100-ohm ordinary F.Cu/B.Cu routing, and avoid plane-layer
 signals, stubs, shorts, crossings, and connector/mechanical conflicts.
 
-Phase 20+ has not started. The authorized local endpoint/underside classes are now
-exhausted. The remaining practical choices are to reopen the frozen U7/PCIe
-placement corridor and regenerate the affected high-speed routes, or to accept
-a material Phase 18/19 architectural change. Neither is silently accepted in
-this packet.
+Phase 20+ has not started. The authorized local endpoint/underside classes are
+now exhausted. The user has explicitly authorized reopening the coherent U7/J3
+storage island, including regeneration of both USB3 and SATA routing. The fresh
+coordinated candidate at U7 `(120,140)` / J3 `(145,125)` is rejected as an
+experiment, but demonstrates that the remaining failure is local USB3 landing
+geometry rather than a reason to preserve the former U7 coordinate. Phase 19
+remains active; further co-located island candidates will keep the PCIe
+ancestor unchanged.
