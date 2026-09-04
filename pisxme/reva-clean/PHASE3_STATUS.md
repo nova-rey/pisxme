@@ -63,3 +63,14 @@ power-routing sequence is complete. Phase 16 PCIe routing is closed with
 `PHASE16_PCIE_ROUTING_RECEIPT.md`; its two named CM5 breakout clearances are
 explicit Rev-A empirical risk. Phase 17 is now the next permitted phase; no
 Phase 18+ routing has started.
+
+Phase 17 continuation update (2026-09-04): native source audit found that
+`CORE_CM5` exposed `CM5_POWER` but not `CM5_5V`. The missing child port and
+root-to-regulator wire are now present. KiCad netlist export proves U3 pins
+5/8/9 and J7 pads 77/79/81/83/85/87 share `/CORE_CM5/CM5_5V`; the Phase 15
+authority and Phase 3 netlist regressions pass. A disposable no-copper/PCIe
+boundary and coherent F1/U3 placement harness were added. The first
+`F1=(100,20), U3=(90,165)` trial remains rejected by native DRC for local
+regulator escape geometry and an inherited bridge-capacitor/CM5_PERST
+placement conflict. The proven Ethernet island remains electrically closed;
+Phase 17 remains open and no Phase 18+ work has started.

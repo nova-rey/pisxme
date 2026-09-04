@@ -421,6 +421,9 @@
     (pin "CM5_POWER" bidirectional (at 35 77 180)
       (effects (font (size 1.27 1.27)) (justify left))
       (uuid 40000000-0000-0000-0000-00000000006e))
+    (pin "CM5_5V" bidirectional (at 35 80 180)
+      (effects (font (size 1.27 1.27)) (justify left))
+      (uuid 40000000-0000-0000-0000-00000000006f))
     (instances
       (project "PiSXMe_RevA_Clean"
         (path "/30000000-0000-0000-0000-000000000000" (page "1"))
@@ -927,6 +930,31 @@
          (xy 185 50))
     (stroke (width 0) (type default))
     (uuid b0000000-0000-0000-0000-0000000001f5))
+  (wire
+    (pts (xy 35 80)
+         (xy 25 80))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000001f6))
+  (wire
+    (pts (xy 25 80)
+         (xy 25 100))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000001f7))
+  (wire
+    (pts (xy 25 100)
+         (xy 190 100))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000001f8))
+  (wire
+    (pts (xy 190 100)
+         (xy 190 50))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000001f9))
+  (wire
+    (pts (xy 190 50)
+         (xy 185 50))
+    (stroke (width 0) (type default))
+    (uuid b0000000-0000-0000-0000-0000000001fa))
   (wire
     (pts (xy 175 53)
          (xy 185 53))

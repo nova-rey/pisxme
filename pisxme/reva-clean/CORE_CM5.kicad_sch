@@ -4325,6 +4325,11 @@
     (at 5 40 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-00000000006e))
+  (hierarchical_label "CM5_5V"
+    (shape bidirectional)
+    (at 5 43 180)
+    (effects (font (size 1.27 1.27)) (justify right))
+    (uuid 50000000-0000-0000-0000-00000000006f))
 
   (wire
     (pts (xy 5 10) (xy 19.92 10))
@@ -4370,6 +4375,10 @@
     (pts (xy 5 40) (xy 19.92 40))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-00000000006e))
+  (wire
+    (pts (xy 5 43) (xy 19.92 43))
+    (stroke (width 0) (type default))
+    (uuid a0000000-0000-0000-0000-00000000006f))
 
   (symbol
     (lib_id "PiSXMeRevAClean:CORE_CM5_Contract")

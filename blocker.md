@@ -1824,3 +1824,22 @@ This specific authority inconsistency is closed. The next active work is the
 complete U3 physical island re-authoring and boundary-routing experiment;
 Phase 17 remains open until that candidate and the proven Ethernet island
 pass native integration checks.
+
+## Phase 17 source-boundary correction and local power-entry trial — 2026-09-04
+
+Native netlist audit found a concrete source boundary defect: `CORE_CM5`
+exposed `CM5_POWER` but not `CM5_5V`, leaving CM5 J7 5 V pads separate from
+the regulator output. The clean source now exposes and wires that port to the
+`REGULATORS` `CM5_5V` sheet pin. KiCad export proves one canonical net with
+U3 pins 5/8/9, J7 pads 77/79/81/83/85/87, and output support; Phase 15 and
+Phase 3 regressions pass.
+
+A disposable footprint/zone-only boundary then restored reusable Phase 16
+signal copper, moved F1 to `(100,20)`, and reauthored U3 at `(90,165)`. It is
+rejected: native DRC reports 251 violations, including local U3 escape
+crossings/shorts and a bridge-capacitor/CM5_PERST placement conflict. After
+the exact CM5IO Ethernet overlay, the combined candidate reports 452
+violations. The Ethernet fixture remains electrically closed, but this is not
+a Phase 17 promotion. No clean release PCB changed and no Phase 18+ work
+began. The blocker is recoverable; the next trial is a proper boundary
+reauthoring with the canonical net and validated PCIe copper.

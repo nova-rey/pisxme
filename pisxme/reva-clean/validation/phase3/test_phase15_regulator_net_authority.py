@@ -34,11 +34,16 @@ def main() -> None:
                        for node in named["12V_PROTECTED"].findall("node"))
             assert any(node.attrib.get("ref") == ref and node.attrib.get("pin") == "17"
                        for node in named["POWER_GND"].findall("node"))
-        for ref, net_name in (("U3", "/REGULATORS/CM5_5V"),
+        for ref, net_name in (("U3", "/CORE_CM5/CM5_5V"),
                               ("U4", "/REGULATORS/BRIDGE_3V3"),
                               ("U5", "/REGULATORS/BRIDGE_1V1")):
             assert any(node.attrib.get("ref") == ref and node.attrib.get("pin") == "5"
                        for node in named[net_name].findall("node"))
+        cm5_nodes = {(n.attrib.get("ref"), n.attrib.get("pin"))
+                     for n in named["/CORE_CM5/CM5_5V"].findall("node")}
+        assert {("U3", "5"), ("U3", "8"), ("U3", "9"),
+                ("J7", "77"), ("J7", "79"), ("J7", "81"),
+                ("J7", "83"), ("J7", "85"), ("J7", "87")} <= cm5_nodes
         for ref, net_name in (("U3", "/REGULATORS/VCC_U3_INTERNAL"),
                               ("U4", "/REGULATORS/VCC_U4_INTERNAL"),
                               ("U5", "/REGULATORS/VCC_U5_INTERNAL")):

@@ -3389,3 +3389,22 @@
 - Preserved pin 14 as the separate `EN/SYNC` function and required
   source-level regeneration before any PCB promotion. No PCB-only net swap
   was accepted.
+
+2026-09-04 — Phase 17 CM5 5 V hierarchy boundary correction
+
+- Native netlist audit found `CORE_CM5` lacked its `CM5_5V` sheet port,
+  isolating CM5 J7 5 V from the regulator output.
+- Added the missing child port and root wire; KiCad export proves U3 pins
+  5/8/9 and J7 pads 77/79/81/83/85/87 share `/CORE_CM5/CM5_5V`.
+- Phase 15 authority and Phase 3 netlist regressions pass; this is a
+  source-authority correction, not a PCB-only alias.
+
+2026-09-04 — Phase 17 coherent F1/U3 repair harness
+
+- Created a disposable no-copper boundary, restored reusable Phase 16 signal
+  copper, moved F1 coherently, and reauthored U3 at `(90,165)`.
+- Rejected the first trial after native DRC found local regulator escape
+  crossings/shorts and a bridge-capacitor/CM5_PERST conflict; the exact
+  CM5IO Ethernet fixture remained electrically closed.
+- Preserved rejected artifacts, kept Phase 17 open, and began no Phase 18+
+  work or clean release promotion.
