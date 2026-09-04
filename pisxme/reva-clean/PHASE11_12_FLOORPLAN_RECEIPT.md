@@ -9,8 +9,12 @@ the lower-left; Ethernet and storage bridge occupy the right edge; and the
 M.2 2280 service envelope is kept at the lower-right outside the V100
 reservation. The CM5 underside candidate remains the selected orientation.
 
-The study deliberately uses drawing-layer neighborhoods and conservative
-keepouts, not fabricated fit claims. Phase 12 hostile review found no
+The study deliberately uses drawing-layer neighborhoods and verified
+mechanical constraints, not fabricated fit claims. The former generic
+underside cooler/backplate keepout has been removed: Rev A assumes the cooler
+mounts to the SXM2 module itself, so underside acreage remains available
+except at actual holes, standoffs, CM5/M.2, enclosure, and connector bodies.
+Phase 12 hostile review found no
 intentional crossing corridor, no board-edge violation in the named zones,
 and no routing workaround. Native DRC reports one intentional vertical-stack
 courtyard overlap where the SXM2 connector sits inside the cooler reservation;

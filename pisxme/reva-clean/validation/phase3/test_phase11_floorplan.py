@@ -3,7 +3,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
 def main():
     t=(ROOT/'ACREAGE_FLOORPLAN.kicad_pcb').read_text()
-    for z in ('POWER INPUT','REGULATORS','SERVICE / DEBUG','V100 COOLER + BACKPLATE KEEPout','ETHERNET','STORAGE BRIDGE','M.2 2280 SERVICE'):
+    for z in ('POWER INPUT','REGULATORS','SERVICE / DEBUG','V100 MODULE / TOP COOLING DATUM','ETHERNET','STORAGE BRIDGE','M.2 2280 SERVICE'):
         assert z in t
     assert '(segment ' not in t and '(via ' not in t and 'NO ROUTING' in t
     assert '(gr_rect (start 0 0) (end 300 180)' in t
