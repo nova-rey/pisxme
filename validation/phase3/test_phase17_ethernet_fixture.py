@@ -14,6 +14,16 @@ def main():
     names = {n for n in (p.GetNetname().removeprefix("/") for p in board.GetNetsByName().values()) if n}
     missing = REQUIRED - names
     assert not missing, f"missing fixture nets: {sorted(missing)}"
+    # Guard the generic KiCad overlay authoring path against the KiCad 10
+    # SWIG copy-constructor failure that can serialize zero-length tracks.
+    real_signal_tracks = 0
+    for item in board.GetTracks():
+        if item.GetNetname().removeprefix("/").split("/")[-1].startswith("CM5_GBE_TD"):
+            if isinstance(item, pcbnew.PCB_VIA):
+                continue
+            assert item.GetStart() != item.GetEnd(), "zero-length Ethernet track"
+            real_signal_tracks += 1
+    assert real_signal_tracks >= 8, "fixture lacks real MDI track geometry"
     report = REPORT.read_text(encoding="utf-8")
     for category in ("tracks_crossing", "shorting_items", "unconnected_items"):
         assert f"[{category}]" not in report, f"electrical DRC category remains: {category}"

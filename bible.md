@@ -3337,3 +3337,9 @@
   clearance violations, two relocated CM5_5V/CM5_PERST crossings, and
   remaining baseline connectivity debt. Isolated CM5IO fixture remains the
   electrical authority; Phase 17 and all later phases remain gated.
+
+2026-09-04 — Phase 17 overlay serialization regression guard
+
+- Extended the Ethernet fixture regression to require real nonzero MDI track
+  geometry, guarding against the KiCad 10 SWIG copy-constructor defect found
+  in the acreage overlay path.
