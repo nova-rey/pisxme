@@ -2,6 +2,20 @@
 
 ## Current update — 2026-09-04
 
+The latest bounded trial moved the authoritative EDAC MagJack to the open
+right edge at `(282.5,53)` while retaining the accepted CM5IO-derived ESD
+island. `phase17_right_edge_mdi_trial.py` regenerated all eight MDI nets with
+distinct ordinary through-via lanes on F.Cu/B.Cu. Native KiCad DRC rejected
+the trial with 332 violations and 447 unconnected items, including
+Ethernet-specific pair crossings/shorts at the existing acreage copper and
+ESD escape. This is a rejected routing-generator result, not evidence that
+the right-edge placement or CM5IO topology is impossible. The next
+authorized class is a genuinely fresh source-to-ESD island in open acreage
+with an explicit no-go mask for frozen PCIe and power copper.
+
+Evidence is pushed in commit `1cd2a44` and in
+[`PHASE17_MECHANICAL_REOPEN_RECEIPT.md`](pisxme/reva-clean/PHASE17_MECHANICAL_REOPEN_RECEIPT.md).
+
 The prior uniform-cooler-courtyard assumption has been removed from the
 disposable Phase 17 authoring path. `MECH_V100` remains a visible measured
 cooling/backplate datum, but is no longer a universal hard collision volume.
