@@ -75,7 +75,7 @@ def main():
         # series branches from VC1..VC4 to a common termination node, then a
         # 1 nF/2 kV shield return. These are disposable support footprints.
         for ref, x, netname in (("RCT4",52,"ETH_CT4"),("RCT3",57,"ETH_CT3"),
-                                ("RCT2",62,"ETH_CT2"),("RCT1",67,"ETH_CT1")):
+                                ("RCT2",88,"ETH_CT2"),("RCT1",67,"ETH_CT1")):
             cap=addfp(b,"C_0603_1608Metric",ref.replace("R","C") ,x + DIRECT_SHIFT,45,0)
             res=addfp(b,"R_0402_1005Metric",ref,x + DIRECT_SHIFT,40,0)
             cap.SetLayerAndFlip(pcbnew.B_Cu)
@@ -165,16 +165,9 @@ def main():
                 a=actual(j2,srcpad); z=actual(cap,1)
                 if source == "ETH_CT4":
                     path=[a,(68.0,60.0),(58.0,60.0),z]
-                elif source == "ETH_CT2":
-                    path=[a,(90.0,52.0),(90.0,68.0),(65.0,68.0),z]
                 else:
                     path=[a,z]
-                if source == "ETH_CT2":
-                    sv=(78.0,58.0); via_actual(*sv,nets[source])
-                    route(b,[a,sv],nets[source],pcbnew.F_Cu,shift=False)
-                    route(b,[sv,(72.0,58.0),(72.0,68.0),(72.0,45.0),z],nets[source],pcbnew.B_Cu,shift=False)
-                else:
-                    route(b,path,nets[source],pcbnew.B_Cu,shift=False)
+                route(b,path,nets[source],pcbnew.B_Cu,shift=False)
                 ca=actual(cap,2); rb=actual(res,1)
                 route(b,[ca,(ca[0],42+i*.5),(rb[0],42+i*.5),rb],nets[f"ETH_CT_BRANCH_{source[-1]}"],pcbnew.B_Cu,shift=False)
                 rr=actual(res,2); route(b,[rr,(rr[0],37),(75,37)],nets["ETH_CT_COMMON"],pcbnew.B_Cu,shift=False)

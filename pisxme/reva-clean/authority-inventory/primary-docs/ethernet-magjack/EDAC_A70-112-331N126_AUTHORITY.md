@@ -97,6 +97,14 @@ Source evidence:
 - Matching manufacturer-family electrical drawing, sheet 3:
   `https://www.es.co.th/Schemetic/PDF/2337992-8_R1.PDF`
 
-This closes the previously missing electrical support authority. Physical
+This closes the previously missing electrical support authority.
+
+The disposable CM5IO-derived fixture implements this exact topology with
+distinct `ETH_CT1..4` source nets, four separate `22 nF` plus `75 ohm`
+branches, and the `1 nF / 2 kV` shield return. Native KiCad 10.0.5 DRC for
+the corrected reordered support island reports 0 unconnected pads and no
+`tracks_crossing`, `shorting_items`, or `unconnected_items` categories. The
+inherited official 0.127 mm MDI width versus the fixture's generic 0.200 mm
+rule remains a documented fabrication-rule reconciliation item. Physical
 placement and routing of the eight branch components remain a Phase 17
 fixture task; this record alone does not promote production files.

@@ -3213,3 +3213,13 @@
   B.Cu-local manufacturer RC support island.
 - Native DRC reached 244 findings, zero unconnected items, zero shorts, and
   one remaining support crossing; mapping regression remained passing.
+
+2026-09-03 — Phase 17 exact EDAC RC support closure experiment
+
+- Reordered the disposable B.Cu support island so CT2 routes directly to its
+  own manufacturer-authoritative branch instead of detouring through the
+  EDAC launch field.
+- Native KiCad 10.0.5 DRC reports 235 findings but zero unconnected pads and
+  no track-crossing, shorting, or unconnected-item categories. Ethernet
+  mapping, authority, and fixture regressions pass. Production promotion and
+  the full acreage Phase 17 gate remain pending.

@@ -1536,3 +1536,18 @@ and ordinary F.Cu/B.Cu transitions. Native KiCad DRC rejected it at **311
 findings / 2 unconnected items**, with CT branch shorts/crossings and a
 shield-return discontinuity. This candidate is rejected; the EDAC electrical
 authority remains valid and production remains unchanged.
+
+## Current Phase 17 status — 2026-09-03
+
+The corrected reordered EDAC support-island fixture is no longer electrically
+blocked. It implements the authoritative `ETH_CT1..4 -> 22 nF -> 75 ohm ->
+common -> 1 nF/2 kV -> shield` topology. Native KiCad 10.0.5 DRC reports 235
+findings, zero unconnected pads, and no `tracks_crossing`, `shorting_items`,
+or `unconnected_items` categories. The mapping, hierarchy-authority, and new
+fixture regression tests pass.
+
+This closes the disposable exact-support subgate, not Phase 17 itself. The
+remaining gate is acreage adaptation: promote this proven support geometry,
+rerun affected Phase 11/12 review, complete production Ethernet routing, and
+re-run the full Phase 17 evidence set. Phase 18+ remains gated and no clean
+production PCB/schematic has been promoted in this experiment.
