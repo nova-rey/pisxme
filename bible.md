@@ -3056,3 +3056,13 @@
   confined to the new boundary bridge paths.
 - Preserved the fixture and retained Phase 17 for pair-specific layer-
   separated bridge corridors.
+
+2026-09-03 — Phase 17 outer-edge bridge-layer trial
+
+- Tested pair-specific F.Cu/B.Cu boundary bridges with 2 mm-separated return
+  vias and outer-edge detours.
+- Native DRC rejected the candidate at 303 findings / 68 unconnected items,
+  including 16 crossings, 6 shorts, and 4 dangling vias; failures were due
+  to the island/launch-envelope overlap and connector-side returns.
+- Rejected the candidate and retained Phase 17 for moving the disposable
+  island outside the launch envelope before bridging.

@@ -1,5 +1,6 @@
 """Join the proven J7 launch boundary to the official CM5IO island."""
 from pathlib import Path
+import os
 import pcbnew
 
 ROOT=Path(__file__).resolve().parent
@@ -61,6 +62,27 @@ def main():
     boundary={3:(10,90),4:(90,90),5:(8,92),6:(92,92),9:(6,94),10:(94,94),11:(4,96),12:(96,96)}
     names_by_pad={3:'CM5_GBE_TD3_P',4:'CM5_GBE_TD1_P',5:'CM5_GBE_TD3_N',6:'CM5_GBE_TD1_N',
                   9:'CM5_GBE_TD2_N',10:'CM5_GBE_TD0_N',11:'CM5_GBE_TD2_P',12:'CM5_GBE_TD0_P'}
+    bridge_outer=os.environ.get('PISXME_BRIDGE_OUTER')=='1'
+    if bridge_outer:
+        # Each pair owns one signal layer for the bridge.  Through-hole
+        # boundary pads permit the layer choice without a source via; return
+        # vias are staggered well beyond the pair-clearance requirement.
+        rv={'CM5_GBE_TD3_P':(23.0,58.0),'CM5_GBE_TD3_N':(23.0,60.0),
+            'CM5_GBE_TD2_N':(24.0,59.0),'CM5_GBE_TD2_P':(24.0,61.0),
+            'CM5_GBE_TD1_P':(30.0,57.8),'CM5_GBE_TD1_N':(30.0,59.8),
+            'CM5_GBE_TD0_N':(32.0,58.8),'CM5_GBE_TD0_P':(32.0,60.8)}
+        layer={'CM5_GBE_TD3_P':pcbnew.F_Cu,'CM5_GBE_TD3_N':pcbnew.F_Cu,
+               'CM5_GBE_TD2_N':pcbnew.B_Cu,'CM5_GBE_TD2_P':pcbnew.B_Cu,
+               'CM5_GBE_TD1_P':pcbnew.F_Cu,'CM5_GBE_TD1_N':pcbnew.F_Cu,
+               'CM5_GBE_TD0_N':pcbnew.B_Cu,'CM5_GBE_TD0_P':pcbnew.B_Cu}
+        lane={'CM5_GBE_TD3_P':50.0,'CM5_GBE_TD3_N':51.0,'CM5_GBE_TD2_N':52.0,'CM5_GBE_TD2_P':53.0,
+              'CM5_GBE_TD1_P':54.0,'CM5_GBE_TD1_N':55.0,'CM5_GBE_TD0_N':56.0,'CM5_GBE_TD0_P':57.0}
+        for number,name in names_by_pad.items():
+            start=boundary[number]; end=land[name]; n=nets[name]; xedge=1.0 if start[0]<50 else 101.0
+            p=rv[name]
+            track(b,n,[start,(xedge,start[1]),(xedge,lane[name]),(p[0],lane[name]),p],layer[name])
+            via(b,n,p); track(b,n,[p,end],pcbnew.F_Cu)
+        b.Save(str(OUT)); print('saved',OUT); return
     # Each group has a monotonic independent F.Cu approach. TD0 uses B.Cu
     # for the group-order correction, with widely separated return vias.
     for number,name in names_by_pad.items():

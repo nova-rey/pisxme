@@ -1169,3 +1169,21 @@ Preserved evidence:
 
 The next experiment will route the bridge as four pair-specific corridors
 with explicit layer separation and no reuse of the existing launch corridor.
+
+## Outer-edge bridge-layer trial — 2026-09-03
+
+The boundary bridge was rebuilt with pair-specific layer ownership: TD3/TD1
+on F.Cu and TD2/TD0 on B.Cu, outer-edge detours, and 2 mm-separated return
+vias before the official ESD lands. Native KiCad DRC rejected it at **303
+findings / 68 unconnected items**, including 16 crossings, 6 shorts, and 4
+dangling vias. The exact J7 launch remains valid independently; the failure
+comes from the island still occupying the launch fixture's reserved bridge
+envelope and from connector-side return-via/ESD approach collisions.
+
+This candidate is rejected. The next authorized experiment will place the
+official island outside the launch envelope first, then bridge it with
+pair-specific routes; no further routing-only changes will be applied to the
+overlapping placement.
+
+Preserved evidence:
+`pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-outer-drc.rpt`.
