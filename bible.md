@@ -3504,3 +3504,13 @@
   short/crossing categories for the CM5 power handoff, while the Phase 17
   Ethernet launch/mechanical and inherited acreage findings remain open.
 - No clean PCB promotion or Phase 18+ work occurred.
+
+2026-09-04 — Phase 17 integration receipt checkpoint
+
+- Added `PHASE17_INTEGRATION_RECEIPT.md` with the current disposable ancestor,
+  official CM5IO fanout authority, scoped Ethernet regression, native DRC
+  evidence, and explicit `PHASE17_OPEN` gate decision.
+- Confirmed source Phase 3/15 regressions and the scoped Ethernet electrical
+  regression pass. Full native DRC remains open on inherited acreage debt and
+  Ethernet mechanical/clearance/rule reconciliation; no clean PCB promotion
+  or Phase 18+ work occurred.
