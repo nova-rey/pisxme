@@ -22,6 +22,15 @@ Selected module: TI `TPSM63606RDLR`, 6 A, 3–36 V input, 1–16 V output, no sp
 
 The prior custom symbol incorrectly represented several of these pins and omitted the required RT/VLDOIN semantics. It is not a production-ready buck symbol until corrected.
 
+## Current clean-source correction
+
+The native `REGULATORS.kicad_sch` source was audited against TI datasheet Rev.
+B. Its U3 pin-5 local label was corrected from `12V_PROTECTED` to `CM5_5V`,
+which uses the 5 V output as the VLDOIN bias point. Pin 14 remains the
+separately defined `EN/SYNC` input on the intended enable policy. PCB
+materialization must be regenerated from this corrected schematic; no PCB-only
+net swap is authoritative.
+
 ## Rev A operating point
 
 - Input: protected regulated 12 V.
@@ -35,4 +44,3 @@ The prior custom symbol incorrectly represented several of these pins and omitte
 ## Placement and thermal gate
 
 The module must sit in a dedicated CM5 buck zone, with a solid PGND/thermal copper region, thermal vias as permitted by the package/assembly process, and the shortest VIN/SW/VOUT loops shown in TI's recommended layout. The SW node is a hard keepout from the PCIe L1/L2 corridor. Thermal dissipation and load transient validation remain required on the prototype.
-

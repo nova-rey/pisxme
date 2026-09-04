@@ -3371,3 +3371,11 @@
   promotion.
 - Kept the exact Ethernet fixture and Phase 16 PCIe evidence valid, but did
   not promote a PCB-only correction or begin Phase 18+.
+
+2026-09-04 — Correct TPSM63606 U3 source mapping
+
+- Corrected the native `REGULATORS.kicad_sch` U3 pin-5 label from
+  `12V_PROTECTED` to `CM5_5V` per TI's Rev. B datasheet `VLDOIN` contract.
+- Preserved pin 14 as the separate `EN/SYNC` function and required
+  source-level regeneration before any PCB promotion. No PCB-only net swap
+  was accepted.

@@ -4477,7 +4477,7 @@
 		)
 		(uuid "d5000000-0000-0000-0000-000000000022")
 	)
-	(label "12V_PROTECTED"
+	(label "CM5_5V"
 		(at 70 107 0.0000)
 		(effects
 			(font
