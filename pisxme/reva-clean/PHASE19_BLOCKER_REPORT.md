@@ -54,6 +54,13 @@ geometry rather than a reason to preserve the former U7 coordinate. Phase 19
 remains active; further co-located island candidates will keep the PCIe
 ancestor unchanged.
 
+Generator-correction experiment: the USB3 source-side escapes were restored
+to the validated Phase 18 geometry and the moved-U7 landing was made
+coordinate-derived. An above-PCIe placement at U7 `(140,100)` / J3 `(180,90)`
+was rejected by native DRC at 410 violations / 426 unconnected, including
+PCIe interactions and local SATA shorts. This class is not promoted; the next
+search remains in open acreage beside/below the validated PCIe corridor.
+
 Placement-sweep continuation: U7/J3 `(140,140)/(170,125)` was the best
 tested open-acreage class at 224 violations / 426 unconnected, but retained
 real USB3/PERST and pair crossings. A coordinate-derived SATA-lane refinement

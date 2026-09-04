@@ -114,6 +114,12 @@ DRC violations / 426 unconnected items; it is rejected for local USB3 landing
 crossings and PERST interaction, while the PCIe ancestor remained unchanged.
 Phase 19 is active again; Phase 20+ has not started.
 
+Phase 19 generator-correction update (2026-09-04): restored validated CM5
+USB3 source escapes and made moved-U7 landings coordinate-derived. An
+above-PCIe candidate at U7 `(140,100)` / J3 `(180,90)` measured 410 native DRC
+violations / 426 unconnected, including PCIe interactions and local SATA
+shorts, and was rejected. Phase 19 remains active.
+
 Phase 19 coordinated placement sweep update (2026-09-04): open-acreage
 candidates at U7/J3 `(140,140)/(170,125)` and related placements were tested
 with native KiCad DRC. The best pre-refinement candidate measured 224
