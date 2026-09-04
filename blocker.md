@@ -1,5 +1,24 @@
 # PiSXMe Rev A Clean — Blocker Report
 
+## Current update — 2026-09-04
+
+The prior uniform-cooler-courtyard assumption has been removed from the
+disposable Phase 17 authoring path. `MECH_V100` remains a visible measured
+cooling/backplate datum, but is no longer a universal hard collision volume.
+The corrected trial reduced native DRC from 216 to 188 and removed all
+`MECH_V100` courtyard collisions. Ethernet scoped regression and route
+metrics still pass: zero Ethernet crossings/shorts and 0.547–0.829 mm pair
+skews.
+
+This is a recoverable Phase 17 placement blocker, not a terminal design
+failure. The next authorized experiment is a split island: keep ESD/source
+support near CM5, place the tall MagJack at an open board edge, and validate
+the regenerated connector launch against real body, latch, and service
+clearance. Phase 18 remains correctly gated.
+
+Evidence and implementation are in commit `f3fbaa7` and
+[`PHASE17_MECHANICAL_REOPEN_RECEIPT.md`](pisxme/reva-clean/PHASE17_MECHANICAL_REOPEN_RECEIPT.md).
+
 ## Final state
 
 `PISXME_REVA_CLEAN_RECOVERABLE_PHASE17`

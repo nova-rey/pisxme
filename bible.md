@@ -3648,3 +3648,11 @@ power-related short/crossing/hole findings, and plane-layer compliance.
   skews remain below 1 mm and the candidate has no true Ethernet crossing or
   short. The full acreage DRC remains inherited scaffold debt, so Phase 17 is
   not yet closed.
+
+2026-09-04 — Published recoverable Phase 17 placement update
+
+- Updated the root blocker report to distinguish the cleared false cooler
+  courtyard constraint from the remaining tall-MagJack placement work.
+- Published commit `f3fbaa7` privately so the current evidence is readable
+  outside the interactive UI; Phase 17 remains open and Phase 18 remains
+  gated.
