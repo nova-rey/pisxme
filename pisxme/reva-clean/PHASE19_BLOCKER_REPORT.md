@@ -74,3 +74,10 @@ DRC violations / 426 unconnected before SATA escape refinement; the next
 escape refinement measured 229 / 426 and reintroduced SATA/USB3 crossings.
 Both are rejected experiments. This closes the stale-pad-coordinate defect
 in the experiment harness, not Phase 19.
+
+Staged USB3 rail experiment: kept the synchronized U7 `(140,130)` / J3
+`(180,115)` placement and moved each final vertical transition onto B.Cu
+after an F.Cu staging hop. Native DRC remained 229 violations / 426
+unconnected and reported new SATA/USB3 pair interactions; rejected. The next
+continuation changes island orientation/relative placement rather than adding
+another same-geometry rail variant.

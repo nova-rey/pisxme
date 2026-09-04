@@ -128,6 +128,12 @@ A coordinate-derived SATA lane refinement measured 229 / 426 and was rejected
 for new local SATA lane crossings. No PCIe geometry changed; Phase 19 remains
 active.
 
+Phase 19 staged-rail update (2026-09-04): a synchronized U7/J3 candidate with
+final USB3 vertical transitions isolated by F.Cu staging hops remained at 229
+native DRC violations / 426 unconnected and introduced new SATA/USB3 local
+interactions. It was rejected; the next experiment changes island
+orientation/relative placement rather than repeating the same rail geometry.
+
 Phase 19 native synchronization update (2026-09-04): the coordinated
 generator now serializes/reloads after U7/J3 movement before reading pad
 coordinates, removing the stale-pad-coordinate defect. Corrected candidates
