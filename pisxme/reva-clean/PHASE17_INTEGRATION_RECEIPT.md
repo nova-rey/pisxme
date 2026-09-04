@@ -158,3 +158,9 @@ ground net is emitted.
   skews 0.547, 0.681, 0.688, and 0.829 mm.
 - Phase 17 remains OPEN pending candidate-specific DRC isolation, mechanical
   review, and final acreage gate. No Phase 18 work started.
+
+The candidate's 427 unconnected-item count exactly matches the validated
+ancestor report; this is inherited acreage debt, not a regression from the
+Ethernet transplant. The candidate-specific zero-short/zero-crossing result,
+scoped Ethernet regression, and power-entry regression are therefore retained
+as positive evidence, but are not by themselves a Phase 17 closure.

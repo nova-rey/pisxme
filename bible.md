@@ -3832,3 +3832,8 @@ the production hierarchical spellings.
   zero shorting items and zero track crossings, with the inherited acreage
   unrouted baseline explicitly retained (427 unconnected items).
 - Phase 17 remains open; no clean-board promotion or Phase 18 work occurred.
+
+The integrated candidate's 427 unconnected-item count matches its validated
+ancestor exactly, confirming that the native DRC debt is inherited rather than
+introduced by this Ethernet transplant. Power-entry validation also passed;
+final Phase 17 closure remains pending the complete board gate.
