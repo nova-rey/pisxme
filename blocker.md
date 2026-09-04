@@ -1939,6 +1939,16 @@ findings are inherited acreage unconnected records and the already-known
 Ethernet center-tap/launch and mechanical clearances, so this is evidence for
 the next local Ethernet cleanup rather than a Phase 17 close.
 
+## Phase 17 scoped electrical regression — 2026-09-04
+
+Added `validation/phase3/test_phase17_ethernet_scoped_electrical.py`. Against
+`ACREAGE_PHASE17_TI_U3_F1_ETH_60_165AC_CT1F` it proves the eight MDI nets,
+center-tap/common/shield nets, absence of native DRC short and crossing
+categories, absence of Ethernet-specific unconnected records, and no
+In1/In4 Ethernet signal routing. The regression passes. This is intentionally
+scoped evidence; it does not waive the full-board DRC, mechanical findings,
+or inherited acreage scaffold debt.
+
 ## Phase 17 authoritative CM5 fanout and lower-island reauthoring — 2026-09-04
 
 The official CM5IO Rev 2 PCB was inspected directly. Its module footprint

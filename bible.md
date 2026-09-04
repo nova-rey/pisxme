@@ -3486,6 +3486,17 @@
   acreage records and known Ethernet launch/mechanical findings. Phase 17
   remains open, with no clean-release or Phase 18+ work started.
 
+2026-09-04 — Phase 17 scoped Ethernet electrical regression
+
+- Added `validation/phase3/test_phase17_ethernet_scoped_electrical.py` to
+  separate Ethernet evidence from inherited acreage scaffold findings.
+- The regression passes against the best disposable ancestor: all eight MDI,
+  center-tap/common, and shield nets are present; native DRC has no true
+  short/crossing category or Ethernet-specific unconnected record; and no
+  Ethernet signal is placed on In1/In4.
+- This does not waive full-board DRC, mechanical findings, or scaffold debt;
+  Phase 17 remains open and no Phase 18+ work started.
+
 2026-09-04 — Phase 17 status synchronization after CM5IO fanout proof
 
 - Synchronized `PHASE3_STATUS.md` with the current `fe8add3` checkpoint.
