@@ -81,3 +81,8 @@ after an F.Cu staging hop. Native DRC remained 229 violations / 426
 unconnected and reported new SATA/USB3 pair interactions; rejected. The next
 continuation changes island orientation/relative placement rather than adding
 another same-geometry rail variant.
+
+Orientation sweep continuation: U7/J3 rotations at `(150,140)/(190,140)`
+and `(145,135)/(190,135)` measured 277/415 and 265/408 native DRC
+violations respectively. Rotation-only classes are rejected; the coupled
+U7 pad-field escape remains the active engineering issue.

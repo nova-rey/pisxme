@@ -134,6 +134,11 @@ native DRC violations / 426 unconnected and introduced new SATA/USB3 local
 interactions. It was rejected; the next experiment changes island
 orientation/relative placement rather than repeating the same rail geometry.
 
+Phase 19 orientation sweep update (2026-09-04): rotated storage-island
+variants measured 277/415 and 265/408 native DRC violations and were
+rejected. Phase 19 remains active; the next repair targets coupled U7
+pad-field escape geometry.
+
 Phase 19 native synchronization update (2026-09-04): the coordinated
 generator now serializes/reloads after U7/J3 movement before reading pad
 coordinates, removing the stale-pad-coordinate defect. Corrected candidates
