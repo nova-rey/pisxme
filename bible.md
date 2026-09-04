@@ -3360,3 +3360,14 @@
 - Extended the Ethernet fixture regression to require real nonzero MDI track
   geometry, guarding against the KiCad 10 SWIG copy-constructor defect found
   in the acreage overlay path.
+
+2026-09-04 — TPSM63606 U3 manufacturer-authority audit
+
+- Verified against TI TPSM63606 datasheet Rev. B that pin 5 is `VLDOIN` and
+  pin 14 is `EN/SYNC`; neither is a generic VIN duplicate.
+- Found the current generated U3 netlist/PCB assigns pins 1, 5, 14, and 16
+  to `12V_PROTECTED`. This is a real schematic/materialization authority
+  inconsistency and must be corrected before U3 re-authoring or Phase 17
+  promotion.
+- Kept the exact Ethernet fixture and Phase 16 PCIe evidence valid, but did
+  not promote a PCB-only correction or begin Phase 18+.

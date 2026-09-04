@@ -1783,3 +1783,30 @@ This closes the malformed-overlay hypothesis but not Phase 17. The next
 authorized trial must correct the complete acreage boundary/placement path,
 including CT support launch and the F1 service-clearance location, while
 preserving the exact CM5IO electrical topology and the Phase 16 ancestor.
+
+## Newly confirmed power-authority blocker — TPSM63606 U3 pin contract — 2026-09-04
+
+The manufacturer datasheet check found a contradiction that must be resolved
+before safe U3 re-authoring. TI's production datasheet, Rev. B, Table 6-1
+defines pin 5 as `VLDOIN` (input bias; for a 5 V design it should be biased
+from an appropriate output point, with an optional local 0.1-1 uF capacitor)
+and pin 14 as `EN/SYNC` (defined enable/UVLO or synchronization input). TI
+does not define either pin as a generic duplicate VIN pin.
+
+The current materialization netlist at `pisxme/reva-clean/materialize.new.xml`
+assigns U3 pins 1, 5, 14, and 16 all to `12V_PROTECTED`. The Phase 16 PCB
+reproduces that assignment. The local audit `design/CM5_BUCK_FINAL_AUDIT.md`
+independently records the same manufacturer contract, so this is a confirmed
+generated-design authority inconsistency, not an unverified suspicion.
+
+The clean schematic/netlist must be corrected and regenerated before the
+complete U3 island can be accepted. The minimum correction is to preserve
+pins 1/16 on `12V_PROTECTED`, define pin 14's enable policy, and connect pin 5
+according to TI's VLDOIN recommendation, with required local support if the
+final application uses it. A PCB-only net swap would violate the one-authority
+rule and is rejected.
+
+This is now the earliest failed gate for the proposed U3 repair. The exact
+CM5IO Ethernet authority and Phase 16 PCIe focused checks remain valid, but
+Phase 17 cannot close against contradictory regulator authority. No clean
+schematic or production PCB was changed in this step.
