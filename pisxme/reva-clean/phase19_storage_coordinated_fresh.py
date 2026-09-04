@@ -30,14 +30,17 @@ def main():
  donor_caps={f.GetReference():f for f in b.GetFootprints() if f.GetReference() in ('C30','C31','C32','C33')}
  for ref in ('C30','C31','C32','C33'):
   if ref in donor_caps: b.Remove(donor_caps[ref])
+ uy=float(os.environ.get('P19_U7_Y','110'))
  cap_xy={
-  'C30':(130,132.0),'C31':(130,136.0),
-  'C32':(134,132.0),'C33':(134,136.0),
+  'C30':(130,uy-8.0),'C31':(130,uy-4.0),
+  # Separate RX capacitors vertically so the TX socket launch cannot pass
+  # through the opposite pair's bridge-side pad field.
+  'C32':(134,uy-12.0),'C33':(134,uy),
  }
  for i,ref in enumerate(('C30','C31','C32','C33')):
   cap=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'C_0402_1005Metric')
   if cap is None: raise RuntimeError('cannot load C_0402_1005Metric')
-  cap.SetReference(ref); b.Add(cap)
+  cap.SetReference(ref); cap.SetOrientationDegrees(180); b.Add(cap)
   cap.SetPosition(V(*cap_xy[ref]))
  storage_nets={}
  for name in ('SATA_M2_TX_P','SATA_M2_TX_N','SATA_M2_RX_P','SATA_M2_RX_N'):
@@ -75,22 +78,35 @@ def main():
   # high-speed buses. Remove only those routed nets; PCIe and unrelated
   # power/support copper remain inherited and untouched.
   if 'USB3' in t.GetNetname() or 'BRIDGE_SATA_' in t.GetNetname() or 'SATA_M2_' in t.GetNetname(): b.Remove(t)
- # Coordinate-derived USB3 escape. The CM5 source ordering reverses the TX
- # pair relative to U7's vertical pad row, so TX_N and TX_P use separate
- # outer layers rather than crossing. Every landing approaches the QFN pad
- # horizontally, never through a neighboring pad field.
- usb_rows=(('CM5_USB3_RX_N','128','42',103.9,140.0,pcbnew.F_Cu),
-           ('CM5_USB3_RX_P','130','43',104.8,140.5,pcbnew.F_Cu),
-           ('CM5_USB3_TX_N','140','45',106.3,141.5,pcbnew.B_Cu),
-           ('CM5_USB3_TX_P','142','46',106.7,142.0,pcbnew.F_Cu))
- for name,spn,upn,sy,dy,layer in usb_rows:
+ # Preserve the validated CM5 source escapes from Phase 18 and extend only
+ # their final landing to the serialized moved-U7 pad row. The final
+ # horizontal dogbone approaches each QFN pad from the west, avoiding the
+ # neighboring pad field; TX polarity/order is handled by the established
+ # two-corridor source escape.
+ usb_rows=(('CM5_USB3_RX_N','128','42',(72.0,103.9),(103.0,103.0)),
+           ('CM5_USB3_RX_P','130','43',(72.0,104.8),(103.0,105.0)),
+           ('CM5_USB3_TX_N','140','45',(72.0,108.0),(103.0,107.0)),
+           ('CM5_USB3_TX_P','142','46',(71.0,109.0),(82.0,112.0)))
+ for name,spn,upn,first,second in usb_rows:
   n=b.FindNet('/CORE_CM5/'+name); s=sp[spn]; d=up[upn]
-  a=(90.0,sy); z=(112.0,dy)
-  T(b,n,s,a,pcbnew.F_Cu)
-  if layer == pcbnew.B_Cu: X(b,n,a)
-  T(b,n,a,z,layer)
-  if layer == pcbnew.B_Cu: X(b,n,z)
-  T(b,n,z,d,pcbnew.F_Cu)
+  launch=(71.2,s[1])
+  T(b,n,s,launch,pcbnew.F_Cu)
+  T(b,n,launch,first,pcbnew.F_Cu); X(b,n,first)
+  if name == 'CM5_USB3_TX_N':
+   T(b,n,first,(80.0,108.0),pcbnew.B_Cu); T(b,n,(80.0,108.0),(102.0,108.0),pcbnew.B_Cu)
+   T(b,n,(102.0,108.0),second,pcbnew.B_Cu)
+  elif name == 'CM5_USB3_TX_P':
+   T(b,n,first,(82.0,112.0),pcbnew.B_Cu)
+  else:
+   T(b,n,first,second,pcbnew.B_Cu)
+  X(b,n,second)
+  landing=(110.0,d[1])
+  if name == 'CM5_USB3_RX_N':
+   # Drop left of the inherited PCIe trunk before descending on B.Cu; this
+   # keeps RX_N from crossing TX_P's F.Cu diagonal and avoids the trunk.
+   landing=(95.0,d[1]); T(b,n,second,(95.0,second[1]),pcbnew.B_Cu); T(b,n,(95.0,second[1]),landing,pcbnew.B_Cu); X(b,n,landing); T(b,n,landing,d,pcbnew.F_Cu)
+  else:
+   T(b,n,second,landing,pcbnew.F_Cu); T(b,n,landing,d,pcbnew.F_Cu)
  # SATA corridor is derived from the actual moved pad coordinates.  The two
  # pairs use separate permitted layers and monotonic lanes; vias are outside
  # both SMD pad fields and each M.2 launch returns to F.Cu before the pad.
@@ -102,15 +118,25 @@ def main():
    if jrot == 0:
     escape=(x0,y0-2) if name in ('BRIDGE_SATA_TX_P','BRIDGE_SATA_RX_P') else (x0,y0+2); layer=pcbnew.F_Cu if name in ('BRIDGE_SATA_TX_P','BRIDGE_SATA_TX_N') else pcbnew.B_Cu; T(b,n,s,escape,pcbnew.F_Cu); X(b,n,escape); T(b,n,escape,a,layer); X(b,n,a); T(b,n,a,cp2,pcbnew.F_Cu); T(b,socket,z,(z[0],d[1]),pcbnew.F_Cu); T(b,socket,(z[0],d[1]),d,pcbnew.F_Cu)
    else:
-    # Co-located acreage island: escape each U7 pad to a distinct rail,
-    # keep TX/RX pairs on separate permitted copper layers, then launch the
-    # socket-side cap pads monotonically into the rotated J3 footprint.
-    rails={'C30':(x0,128.0,pcbnew.F_Cu),'C31':(x0,142.0,pcbnew.B_Cu),
-           'C32':(x0-2.0,126.0,pcbnew.F_Cu),'C33':(x0+2.0,144.0,pcbnew.B_Cu)}
-    rx,ry,layer=rails[cref]; escape=(rx,ry)
-    T(b,n,s,escape,pcbnew.F_Cu); X(b,n,escape); T(b,n,escape,a,layer); X(b,n,a)
-    launch=(z[0]+(2.0 if jn in ('2','4') else -2.0),z[1])
-    T(b,socket,z,launch,pcbnew.F_Cu); X(b,socket,launch); T(b,socket,launch,(launch[0],ry),layer); T(b,socket,(launch[0],ry),(d[0],ry),layer); T(b,socket,(d[0],ry),d,layer)
+    # Co-located acreage island: TX bridge escapes remain on F.Cu and RX
+    # bridge escapes use B.Cu, so the four adjacent U7 pads never weave on a
+    # common layer. Socket-side RX launches similarly use a separated B.Cu
+    # corridor before short final returns to the J3 pads.
+    if name == 'BRIDGE_SATA_TX_P':
+     escape=(x0-2.5,132.0); T(b,n,s,escape,pcbnew.F_Cu); T(b,n,escape,(a[0],132.0),pcbnew.F_Cu); T(b,n,(a[0],132.0),a,pcbnew.F_Cu)
+    elif name == 'BRIDGE_SATA_TX_N':
+     escape=(x0+2.0,136.0); T(b,n,s,escape,pcbnew.F_Cu); T(b,n,escape,(a[0],136.0),pcbnew.F_Cu); T(b,n,(a[0],136.0),a,pcbnew.F_Cu)
+    elif name == 'BRIDGE_SATA_RX_P':
+     escape=(x0-3.0,138.0); T(b,n,s,escape,pcbnew.F_Cu); X(b,n,escape); T(b,n,escape,(a[0]-2.0,126.0),pcbnew.B_Cu); X(b,n,(a[0]-2.0,126.0)); T(b,n,(a[0]-2.0,126.0),a,pcbnew.F_Cu)
+    else:
+     escape=(x0-3.0,144.0); T(b,n,s,escape,pcbnew.F_Cu); X(b,n,escape); T(b,n,escape,(a[0]-2.0,146.0),pcbnew.B_Cu); X(b,n,(a[0]-2.0,146.0)); T(b,n,(a[0]-2.0,146.0),a,pcbnew.F_Cu)
+    if name.startswith('BRIDGE_SATA_TX_'):
+     launch=(z[0]+(6.0 if jn=='2' else 2.0), z[1])
+     T(b,socket,z,launch,pcbnew.F_Cu); T(b,socket,launch,d,pcbnew.F_Cu)
+    elif name == 'BRIDGE_SATA_RX_P':
+     via1=(z[0],130.0); via2=(d[0]+2.7,d[1]); T(b,socket,z,via1,pcbnew.F_Cu); X(b,socket,via1); T(b,socket,via1,via2,pcbnew.B_Cu); X(b,socket,via2); T(b,socket,via2,d,pcbnew.F_Cu)
+    else:
+     via1=(z[0],138.0); via2=(d[0]+2.7,d[1]); T(b,socket,z,via1,pcbnew.F_Cu); X(b,socket,via1); T(b,socket,via1,via2,pcbnew.B_Cu); X(b,socket,via2); T(b,socket,via2,d,pcbnew.F_Cu)
  # Do not rebuild the net table here: KiCad 10's BuildListOfNets() drops
  # intentionally sparse project-local socket-side nets before serialization.
  b.Save(str(OUT));print(OUT)

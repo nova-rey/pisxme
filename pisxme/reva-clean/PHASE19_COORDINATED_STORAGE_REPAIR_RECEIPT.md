@@ -37,3 +37,11 @@ USB-only V3 disposable run completed and reduced the report to 200 native DRC
 violations, but retained inherited CM5/PCIe source-corridor crossings and one
 candidate USB transition interaction. It is also rejected; the PCIe ancestor
 remains unchanged.
+
+## Coordinated corridor refinement
+
+The next V3 run used the corrected USB3 escape, four rotated 0402 coupling
+parts, split-net SATA routes, and separate F.Cu/B.Cu pair corridors. Native
+DRC measured 206 violations. The candidate still has one stale J3 auxiliary
+pad short and two local/PCIe corridor crossings, so it is rejected and not
+promoted.

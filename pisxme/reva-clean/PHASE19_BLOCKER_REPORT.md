@@ -22,6 +22,11 @@ it still crosses inherited CM5/PCIe source-corridor geometry and is rejected.
 This remains a coordinated storage-island routing experiment, not a Phase 19
 closure claim.
 
+The best current coordinated V3 run (`PHASE19_BEST.kicad_pcb`, U7 `(120,140)`
+180 degrees, J3 `(145,125)` 90 degrees) measured 206 native DRC violations.
+It retains one J3 auxiliary-pad short and two USB3/PCIe or local corridor
+crossings, so it is rejected. The cap-net serialization failures remain fixed.
+
 Date: 2026-09-04
 
 Status: `PISXME_REVA_CLEAN_PHASE19_SATA_ROUTING_IN_PROGRESS`
