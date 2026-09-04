@@ -187,3 +187,8 @@ Phase 19 regulator-support update (2026-09-04): translating only C18/C19 to
 isolation candidate measured 202 native DRC violations / 430 unconnected,
 matching the Phase 18 baseline class apart from one local clearance. Complete
 Phase 19 remains gated by SATA launch geometry.
+
+Phase 19 AC-coupling update (2026-09-04): the TI implementation guide
+requires four inline <=0402 capacitors, one per SATA conductor, symmetrically
+near J3, while the clean storage schematic currently contains none. Evidence
+is recorded in `PHASE19_SATA_AC_CAP_RECEIPT.md`; Phase 19 remains active.

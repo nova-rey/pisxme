@@ -121,6 +121,12 @@ violations / 426 unconnected and retained four USB3 short/crossing findings
 against preserved V3 copper. Simple overlay reuse is rejected; a fresh
 coordinated route remains required.
 
+The TI implementation-guide review also found an open implementation gap:
+four inline SATA AC-coupling capacitors (one per conductor, 0402 or smaller,
+symmetrically close to J3; no C-pack) are absent from `STORAGE.kicad_sch`.
+This is recorded in `PHASE19_SATA_AC_CAP_RECEIPT.md`. Phase 19 cannot close
+until the authoritative schematic/netlist and routed capacitor network exist.
+
 Transform audit: the unblocker-recommended U7 `(120,140)` `90°` candidate
 was serialized and inspected. KiCad 10 actually places its USB row at
 `y=135.5` and SATA row at `x=124.5`; the earlier predicted transform was
