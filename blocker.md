@@ -1622,3 +1622,10 @@ zones still fails at 820 findings / 271 unconnected items, confirming that
 zone staleness was not the root cause. A coherent U3-left-30 mm trial with
 refill improved to 778 findings / 270 unconnected items but retained power
 and Ethernet conflicts, so it is rejected as insufficient.
+
+An additional coherent U3-right-70 mm trial was tested after the refill-path
+correction. It reduced the report to 869 findings but increased the ancestor
+connectivity debt to 291 unconnected items and was rejected. A support-island
+translation to the left also retained CT launch shorts/crossings. The exact
+compact CM5IO fixture was restored and revalidated at 237 findings with zero
+unconnected pads, shorts, or crossings.

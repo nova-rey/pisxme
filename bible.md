@@ -3263,6 +3263,14 @@
   rejected. The default exact Ethernet fixture was restored and revalidated
   at 236 findings, zero unconnected pads, zero shorts, and zero crossings.
 
+2026-09-04 — Phase 17 widened local repair trial
+
+- Tested a coherent U3-right-70 mm translation and an Ethernet-support
+  translation to the left. The former reduced total DRC count but increased
+  unconnected debt to 291; the latter retained CT launch shorts/crossings.
+- Rejected both candidates and restored the compact exact CM5IO fixture,
+  which revalidated with zero unconnected pads, shorts, and crossings.
+
 2026-09-03 — Phase 17 exact EDAC RC support closure experiment
 
 - Reordered the disposable B.Cu support island so CT2 routes directly to its
