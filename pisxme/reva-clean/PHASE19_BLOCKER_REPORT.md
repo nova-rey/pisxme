@@ -101,6 +101,13 @@ regulator support island and one crossing against the frozen PCIe B.Cu field.
 This identifies the next local repair target; no PCIe architecture change is
 implied.
 
+Exact-source USB3 follow-up: preserving the Phase 18 CM5 escape layering and
+using a direct local F.Cu detour to U7 `(140,130)` reduced the isolated USB3
+candidate to 202 violations / 430 unconnected, with no new USB3 short or
+crossing category. The complete east-edge SATA trial at J3 `(240,140)` was
+then rejected at 228 violations / 426 unconnected because its SATA launch
+still crosses/shorts at the connector and U7 field. Phase 19 remains active.
+
 Specialist-recommended orientation trial: U7 `(170,140)`, rotation `90°`,
 with J3 `(205,120)`, rotation `90°`, was implemented with an orientation-aware
 horizontal USB pad-row escape. Native DRC measured 378 violations / 426

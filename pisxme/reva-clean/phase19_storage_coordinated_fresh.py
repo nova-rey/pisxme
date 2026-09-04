@@ -18,6 +18,7 @@ def main():
  # after the placement edit so every generated route uses the saved geometry,
  # not stale pre-move pad positions.
  sync=R/'.phase19_storage_sync.kicad_pcb'; b.Save(str(sync)); b=pcbnew.LoadBoard(str(sync));u=b.FindFootprintByReference('U7');j=b.FindFootprintByReference('J3');src=b.FindFootprintByReference('J7')
+ jrot=int(os.environ.get('P19_J3_ROT','90'))
  sp={str(p.GetNumber()):xy(p) for p in list(src.Pads())};up={str(p.GetNumber()):xy(p) for p in list(u.Pads())};jp={str(p.GetNumber()):xy(p) for p in list(j.Pads())};upad={str(p.GetNumber()):p for p in list(u.Pads())};jpad={str(p.GetNumber()):p for p in list(j.Pads())}
  for t in list(b.GetTracks()):
   if 'USB3' in t.GetNetname(): b.Remove(t)
@@ -48,7 +49,9 @@ def main():
  for name,un,jn,lane in (('BRIDGE_SATA_TX_P','57','1',1),('BRIDGE_SATA_TX_N','56','2',3),('BRIDGE_SATA_RX_P','60','3',-3),('BRIDGE_SATA_RX_N','59','4',-1)):
   n=b.FindNet('/STORAGE/'+name);upad[un].SetNet(n);jpad[jn].SetNet(n)
   s=up[un];d=jp[jn]; x0,y0=s; x1,y1=d
-  escape=(x0-3,y0+lane) if x0 < 140 else (x0+3,y0+lane)
-  T(b,n,s,escape,pcbnew.F_Cu); X(b,n,escape); T(b,n,escape,(220,lane),pcbnew.B_Cu); X(b,n,(220,lane)); T(b,n,(220,lane),(x1-8,lane),pcbnew.B_Cu); X(b,n,(x1-8,lane)); T(b,n,(x1-8,lane),d,pcbnew.F_Cu)
+  if jrot == 0:
+   escape=(x0,y0-2) if name in ('BRIDGE_SATA_TX_P','BRIDGE_SATA_RX_P') else (x0,y0+2); layer=pcbnew.F_Cu if name in ('BRIDGE_SATA_TX_P','BRIDGE_SATA_TX_N') else pcbnew.B_Cu; target=(x1-4,d[1]); T(b,n,s,escape,pcbnew.F_Cu); X(b,n,escape); T(b,n,escape,target,layer); X(b,n,target); T(b,n,target,d,pcbnew.F_Cu)
+  else:
+   escape=(x0-3,y0+lane) if x0 < 140 else (x0+3,y0+lane); T(b,n,s,escape,pcbnew.F_Cu); X(b,n,escape); T(b,n,escape,(220,lane),pcbnew.B_Cu); X(b,n,(220,lane)); T(b,n,(220,lane),(x1-8,lane),pcbnew.B_Cu); X(b,n,(x1-8,lane)); T(b,n,(x1-8,lane),d,pcbnew.F_Cu)
  b.BuildListOfNets();b.Save(str(OUT));print(OUT)
 if __name__=='__main__':main()

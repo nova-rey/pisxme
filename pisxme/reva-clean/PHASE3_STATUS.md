@@ -158,6 +158,12 @@ unconnected. Three candidate-introduced shorts remain against regulator
 support geometry and one crossing remains against the frozen PCIe B.Cu field;
 the next local repair targets those corridors. Phase 19 remains active.
 
+Phase 19 exact-source follow-up (2026-09-04): synchronized direct-F.Cu USB3
+detour geometry reduced the isolated USB3 candidate to 202 native DRC
+violations / 430 unconnected with no new USB3 shorts/crossings. The complete
+east-edge J3 `(240,140)` SATA trial measured 228 / 426 and was rejected for
+SATA connector/U7-field interactions. Phase 19 remains active.
+
 Phase 19 orientation-aware update (2026-09-04): implemented the specialist
 recommended U7/J3 `(170,140)/(205,120)` at `90°` with a horizontal USB pad-row
 escape. Native DRC measured 378 violations / 426 unconnected; rejected for
