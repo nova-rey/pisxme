@@ -1,14 +1,11 @@
 # Phase 3 status
 
-Current state: `PISXME_REVA_CLEAN_PHASE18_STORAGE_AUTHORITY_REPAIRED`;
-Phase 17 Ethernet routing is closed. Phase 18 storage authority repair is
-active and routing is still gated. Native KiCad netlist export now proves
-CM5/J7 USB3 pins 128/130/140/142 to TUSB9261IPVP pins 45/46/42/43, SATA
-connector pins 1/2/3/4 to bridge pins 57/56/60/59, and M2_3V3 to J3/X7
-without the earlier cooling/PCIe contamination. Root second-row sheet
-geometry was separated and the generator repair is byte-stable on repeat.
-The current native ERC report still contains the scaffold warning baseline,
-so Phase 18 USB3 routing has not started and no Phase 19+ work has started.
+Current state: `PISXME_REVA_CLEAN_PHASE19_SATA_ROUTING_IN_PROGRESS`;
+Phases 17–18 are closed with inherited-baseline qualifications. Phase 18
+native netlist and USB3 route proofs pass. Phase 19 storage authority is
+closed, but two SATA routing candidates are rejected by native DRC for
+pad-field and frozen-PCIe-trunk interactions. The next experiment moves the
+M.2 corridor beyond the PCIe trunk endpoint; no Phase 20+ work has started.
 
 Created: native root project shell, ten named child-sheet files, isolated
 `PiSXMeRevAClean` symbol/footprint tables, architecture contract, interface
