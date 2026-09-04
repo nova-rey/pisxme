@@ -3674,3 +3674,16 @@ power-related short/crossing/hole findings, and plane-layer compliance.
 - Native DRC rejected the +180,+40 mm trial with 22 crossings, 44 shorts, and
   six hole-clearance findings. This rejects the lane implementation, not the
   CM5IO topology; Phase 17 remains active.
+
+2026-09-04 — Rev-A underside mechanical contract correction
+
+- Removed the generic carrier-board cooler/backplate wording from the Phase 11
+  floorplan and mechanical authority. Rev A assumes a standard cooler mounted
+  to the SXM2 module itself; no generic underside exclusion or cooler-mounting
+  holes are reserved.
+- Retained only verified SXM2, board mounting, CM5/M.2, enclosure, and
+  connector-access constraints. The underside is now available for Ethernet
+  support/routing subject to those real constraints.
+- Consultant unblocker recommended the next native-tool constrained Ethernet
+  fixture, followed by staggered local escapes if needed. Phase 17 remains
+  open.

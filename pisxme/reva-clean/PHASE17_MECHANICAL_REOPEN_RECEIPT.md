@@ -6,9 +6,8 @@ Status: IN PROGRESS — recoverable placement repair
 ## Decision
 
 The project-authored `MECH_V100` rectangle is retained as a visible measured
-cooling/backplate datum on `Dwgs.User`; it is not treated as a universal hard
-courtyard.  The authoritative mechanical note already classifies the public
-cooler CAD gap as `REV_A_EMPIRICAL_RISK`.  Actual component courtyards,
+top-side cooling datum on `Dwgs.User`; it is not treated as a universal hard
+courtyard or underside keepout. Rev A assumes module-mounted cooling. Actual component courtyards,
 connector bodies, mounting holes, and access constraints remain enforced.
 
 This implements the user-authorized acreage interpretation: copper and
