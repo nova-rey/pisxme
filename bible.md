@@ -3162,3 +3162,10 @@
   rejected their collisions with the through-hole launch field and shield.
 - Preserved the official CM5IO MDI transplant as the selected topology and
   kept Phase 17 gated pending an authoritative four-net support implementation.
+
+2026-09-03 — Phase 17 exact EDAC support escape rejection
+
+- Ran a second individually routed ETH_CT1..4 support escape on permitted
+  F.Cu/B.Cu layers and connected all disposable support pads.
+- Native DRC rejected support-net shorts/crossings at the EDAC launch field;
+  retained the direct CM5IO MDI topology and kept Phase 17 open.

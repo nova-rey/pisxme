@@ -118,6 +118,18 @@ four-net support implementation from the clean schematic and EDAC authority,
 or document the required schematic support addition before acreage promotion.
 No Phase 18+ work has started.
 
+### Follow-up support escape trial
+
+A second exact-EDAC support escape used separate `ETH_CT1..4` routes on the
+permitted F.Cu/B.Cu signal layers and connected all four disposable J9 pads.
+Native DRC found **0 unconnected items**, but rejected the geometry with
+support-net shorts/crossings at the EDAC shield/MDI launch field. This confirms
+that simply splitting the routes across the two signal layers is insufficient;
+the next experiment must use local off-pad transitions and/or a support
+topology that is explicitly represented by the clean schematic. The result is
+preserved in
+`CM5IO_DIRECT_J7_ETHERNET_FIXTURE-exactct-individual-drc.rpt`.
+
 ## 2026-09-03 placement-repair sprint evidence
 
 The authorized Phase 11/12 Ethernet-only reopening was attempted with nine
