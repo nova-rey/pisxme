@@ -3696,6 +3696,18 @@ power-related short/crossing/hole findings, and plane-layer compliance.
   eight hole-clearance findings. The result is preserved as negative evidence;
   the next pass requires an explicit no-go constrained router.
 
+2026-09-04 — Phase 17 right-edge MagJack discriminator
+
+- Tested the authorized local placement class with the EDAC MagJack moved to
+  `(282.5,53)` at 180 degrees and the CM5IO-derived ESD island retained near
+  CM5.
+- Regenerated the eight MDI nets with separate ordinary through-via lanes on
+  F.Cu/B.Cu. Native KiCad DRC rejected the candidate with 332 violations and
+  447 unconnected items, including Ethernet pair crossings/shorts against
+  existing acreage copper and the ESD escape.
+- Preserved the candidate and authoring script as negative evidence. Phase 17
+  remains open; no Phase 18 work or validation-gate relaxation occurred.
+
 2026-09-04 — Phase 17 ESD orientation retry
 
 - Tested the top-edge regenerated Ethernet candidate with both ESD packages

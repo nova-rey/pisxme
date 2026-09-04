@@ -122,3 +122,21 @@ transition a distinct 2 mm lane. Native DRC improved to 319 violations, 44
 crossings, 36 shorts, and 8 hole-clearance findings, but the candidate remains
 rejected because real pair endpoint ordering and board-corridor conflicts
 remain.
+
+## Right-edge MagJack discriminator
+
+The next bounded placement class moved only the EDAC MagJack to the open right
+edge at `(282.5,53)` with its authoritative 180-degree orientation, while
+retaining the accepted CM5IO-derived U9/U6 ESD island. The authoring path was
+implemented in `phase17_right_edge_mdi_trial.py`; it captures actual pad
+centers, regenerates the eight MDI nets, uses distinct ordinary through-via
+lanes for TD2/TD0, and keeps all signals on F.Cu/B.Cu.
+
+Native KiCad DRC rejected the first right-edge discriminator with 332
+violations and 447 unconnected items. The Ethernet-specific failures include
+pair crossings and shorts at the existing acreage copper/ESD escape. This is
+rejected as a routing-generator trial: the right-edge placement has not been
+promoted, and the CM5IO electrical authority remains unchanged. The next
+credible class is a genuinely fresh source-to-ESD island authoring pass in an
+open acreage region, with a constrained no-go mask for frozen PCIe and power
+copper rather than adding long manual lanes to the existing copper field.
