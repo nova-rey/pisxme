@@ -1588,3 +1588,10 @@ The smallest bounded choices are:
 No production PCB/schematic has been promoted. The first option is the
 recommended smallest architectural change, but it moves frozen non-Ethernet
 regulator geometry and therefore requires explicit user authorization.
+
+The Phase 16 ancestor independently passes
+`validation/phase3/test_phase16_pcie_route.py`. Its recorded DRC baseline is
+92 findings plus 241 expected unconnected pads; the Ethernet overlay rises to
+906 findings plus 263 unconnected pads and introduces Ethernet-related
+shorts/copper conflicts. This confirms the overlay failure is an integration
+delta, not a regression of the Phase 16 PCIe gate.

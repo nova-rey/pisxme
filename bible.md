@@ -3233,6 +3233,14 @@
   translation is the smallest next change but crosses the plan's frozen
   non-Ethernet boundary; Phase 17 remains open and Phase 18+ gated.
 
+2026-09-03 — Phase 17 Phase 16 ancestor baseline recheck
+
+- Fresh `validation/phase3/test_phase16_pcie_route.py` passes on
+  `ACREAGE_PCIE_PHASE16.kicad_pcb`.
+- Its 92-finding / 241-unconnected baseline is distinct from the Ethernet
+  overlay's 906-finding / 263-unconnected result, confirming the failure is
+  introduced by the Ethernet integration geometry.
+
 2026-09-03 — Phase 17 exact EDAC RC support closure experiment
 
 - Reordered the disposable B.Cu support island so CT2 routes directly to its
