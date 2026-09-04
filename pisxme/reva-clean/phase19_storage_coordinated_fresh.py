@@ -1,6 +1,7 @@
 """Fresh coordinated storage island: exact CM5 escape, moved U7/J3, USB3+SATA."""
 from pathlib import Path
 import os
+import re
 import pcbnew
 R=Path(__file__).resolve().parent; BASE=R/os.environ.get('P19_BASE','ACREAGE_PHASE18_USB3_LOCAL.kicad_pcb'); OUT=R/(os.environ.get('P19_OUT','ACREAGE_PHASE19_STORAGE_COORDINATED_FRESH.kicad_pcb')); W=pcbnew.FromMM(.13208)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
@@ -105,9 +106,26 @@ def main():
    T(b,n,first,(82.0,112.0),pcbnew.B_Cu)
   else:
    T(b,n,first,second,pcbnew.B_Cu)
-  X(b,n,second)
+  # TX_P remains on B.Cu through this point in the validated lower corridor;
+  # it does not need a return via at `second`.  The other three branches
+  # transition there in at least one coordinated experiment.
+  if name != 'CM5_USB3_TX_P': X(b,n,second)
   landing=(110.0,d[1])
-  if name == 'CM5_USB3_RX_N' and os.environ.get('P19_RXN_DIRECT','0') == '1':
+  if os.environ.get('P19_USB_REPATH','0') == '1':
+   # Coordinated V3 repath: keep the RX_N return left of the F.Cu pair
+   # field, move RX_P to B.Cu before the lower landing, and move TX_N to a
+   # B.Cu vertical below the frozen PCIe trunk.  The four branches are
+   # intentionally authored together so a local fix cannot create a pair
+   # crossing in another branch.
+   if name == 'CM5_USB3_RX_N':
+    T(b,n,second,(90.0,second[1]),pcbnew.F_Cu); T(b,n,(90.0,second[1]),(90.0,d[1]),pcbnew.F_Cu); T(b,n,(90.0,d[1]),d,pcbnew.F_Cu)
+   elif name == 'CM5_USB3_RX_P':
+    vx=float(os.environ.get('P19_RXP_FX','102.0')); v=(vx,130.0); q=(113.0,130.0); r=(113.0,d[1]); T(b,n,second,(vx,second[1]),pcbnew.F_Cu); T(b,n,(vx,second[1]),v,pcbnew.F_Cu); X(b,n,v); T(b,n,v,q,pcbnew.B_Cu); T(b,n,q,r,pcbnew.B_Cu); X(b,n,r); T(b,n,r,d,pcbnew.F_Cu)
+   elif name == 'CM5_USB3_TX_N':
+    v=(115.0,107.0); q=(115.0,130.0); r=(115.0,d[1]); T(b,n,second,v,pcbnew.F_Cu); T(b,n,v,q,pcbnew.F_Cu); X(b,n,q); T(b,n,q,r,pcbnew.B_Cu); X(b,n,r); T(b,n,r,d,pcbnew.F_Cu)
+   else:
+    T(b,n,second,landing,pcbnew.B_Cu); X(b,n,landing); T(b,n,landing,d,pcbnew.F_Cu)
+  elif name == 'CM5_USB3_RX_N' and os.environ.get('P19_RXN_DIRECT','0') == '1':
    # For the synchronized V3 placement, the serialized RX_N pad is reached
    # directly from the existing source-corridor via.  This is the narrow
    # crossing repair identified by the independent PCB review; it avoids the
@@ -173,15 +191,15 @@ def main():
     # on an SMD pad.
     if name == 'BRIDGE_SATA_TX_P':
      e=(s[0],133.0); v=(a[0]-0.5,130.0); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,v,pcbnew.B_Cu); X(b,n,v); T(b,n,v,a,pcbnew.F_Cu)
-     e=(137.0,130.0); q=(139.0,134.25); T(b,socket,z,e,pcbnew.F_Cu); X(b,socket,e); T(b,socket,e,q,pcbnew.B_Cu); X(b,socket,q); T(b,socket,q,d,pcbnew.F_Cu)
+     e=(137.0,130.0); q=(138.0,134.25); T(b,socket,z,e,pcbnew.F_Cu); X(b,socket,e); T(b,socket,e,q,pcbnew.B_Cu); X(b,socket,q); T(b,socket,q,d,pcbnew.F_Cu)
     elif name == 'BRIDGE_SATA_TX_N':
-     T(b,n,s,(121.0,110.0),pcbnew.F_Cu); T(b,n,(121.0,110.0),a,pcbnew.F_Cu); e=(150.0,134.0); q=(147.5,134.0); T(b,socket,z,(150.0,110.0),pcbnew.F_Cu); T(b,socket,(150.0,110.0),e,pcbnew.F_Cu); X(b,socket,e); T(b,socket,e,q,pcbnew.B_Cu); X(b,socket,q); T(b,socket,q,d,pcbnew.F_Cu)
+     T(b,n,s,(121.0,110.0),pcbnew.F_Cu); T(b,n,(121.0,110.0),a,pcbnew.F_Cu); e=(150.0,134.0); q=(148.5,134.0); T(b,socket,z,(150.0,110.0),pcbnew.F_Cu); T(b,socket,(150.0,110.0),e,pcbnew.F_Cu); X(b,socket,e); T(b,socket,e,q,pcbnew.B_Cu); X(b,socket,q); T(b,socket,q,d,pcbnew.F_Cu)
     elif name == 'BRIDGE_SATA_RX_P':
      e=(119.0,120.0); v=(a[0]-0.5,120.0); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,v,pcbnew.B_Cu); X(b,n,v); T(b,n,v,a,pcbnew.F_Cu)
      q=(136.0,120.0); r=(136.0,133.75); T(b,socket,z,q,pcbnew.F_Cu); X(b,socket,q); T(b,socket,q,r,pcbnew.B_Cu); X(b,socket,r); T(b,socket,r,d,pcbnew.F_Cu)
     else:
      e=(119.5,118.0); v=(a[0]-0.5,118.0); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,v,pcbnew.B_Cu); X(b,n,v); T(b,n,v,a,pcbnew.F_Cu)
-     T(b,socket,z,(144.0,118.0),pcbnew.F_Cu); X(b,socket,(144.0,118.0)); T(b,socket,(144.0,118.0),(144.0,133.5),pcbnew.B_Cu); X(b,socket,(144.0,133.5)); T(b,socket,(144.0,133.5),d,pcbnew.F_Cu)
+     e=(128.5,118.0); q=(144.0,118.0); r=(144.0,133.5); T(b,socket,z,e,pcbnew.F_Cu); X(b,socket,e); T(b,socket,e,q,pcbnew.B_Cu); T(b,socket,q,r,pcbnew.B_Cu); X(b,socket,r); T(b,socket,r,d,pcbnew.F_Cu)
    elif jrot == 0 and os.environ.get('P19_SATA_ORTHO','0') == '1':
     # Explicit monotonic rot-0 M.2 launch for the Phase-18 U7 neighborhood.
     # TX remains on F.Cu; RX crosses to B.Cu beside (never in) the 0402 pads,
@@ -226,5 +244,26 @@ def main():
      via1=(z[0],138.0); via2=(d[0]+2.7,d[1]); T(b,socket,z,via1,pcbnew.F_Cu); X(b,socket,via1); T(b,socket,via1,via2,pcbnew.B_Cu); X(b,socket,via2); T(b,socket,via2,d,pcbnew.F_Cu)
  # Do not rebuild the net table here: KiCad 10's BuildListOfNets() drops
  # intentionally sparse project-local socket-side nets before serialization.
- b.Save(str(OUT));print(OUT)
+ # Refill the inherited reference planes after adding all ordinary through
+ # vias.  Native DRC otherwise evaluates stale zone geometry as a collision
+ # at every new F.Cu/B.Cu transition.
+ pcbnew.ZONE_FILLER(b).Fill(b.Zones())
+ b.Save(str(OUT))
+ # The donor PCB carries stale duplicate net fields on U7 pads 5-12.  SWIG
+ # crashes when those pad objects are nulled after the net synchronization,
+ # so remove only those serialized fields in the scoped U7 footprint.  This
+ # preserves the authoritative physical mappings on pads 42/43/45/46 and
+ # 57/56/60/59 while keeping the operation deterministic and reloadable.
+ text=Path(OUT).read_text()
+ us=text.index('(footprint "TUSB9261IPVP_HTQFP64"')
+ ue=text.index('\n\t(footprint ',us+1)
+ utext=text[us:ue]
+ for pn in range(5,13):
+  m=re.search(r'(?ms)(\n\t\t\(pad "'+str(pn)+r'".*?)(?=\n\t\t\(pad |\n\t\))',utext)
+  if m:
+   block=re.sub(r'\n\t\t\t\(net "[^"]*"\)', '', m.group(1))
+   utext=utext[:m.start(1)]+block+utext[m.end(1):]
+ text=text[:us]+utext+text[ue:]
+ Path(OUT).write_text(text)
+ print(OUT)
 if __name__=='__main__':main()

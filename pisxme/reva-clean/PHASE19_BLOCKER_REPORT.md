@@ -88,6 +88,35 @@ and local GND return-via review. A separate review noted U7 clock pads 52/53
 remain unassigned in the current inherited materialization; this is retained
 as a Phase 7/19 authority item and is not silently waived.
 
+## 2026-09-04 coordinated repath baseline
+
+The coordinated USB3 repath was extended across all four branches while
+retaining the V3 split-cap SATA geometry. The generated/reloaded candidate is
+`PHASE19_COORDINATED_PASS_CANDIDATE3.kicad_pcb` with U7 `(120,140)` rotation
+180 and J3 `(145,125)` rotation 90. Native DRC reports 189 total violations,
+418 unconnected items, zero `tracks_crossing`, zero `shorting_items`, and the
+same three inherited clearance plus two inherited hole-clearance records as
+the accepted Phase-18 acreage baseline. The only additional native warning is
+not a true open/short: the candidate has one more valid transition warning in
+the generated high-speed corridor than the old ancestor.
+
+The candidate also removes the inherited duplicate U7 pad-net records on
+pads 5-12 in the serialized output. The authoritative mapped pads remain:
+USB3 42/43/45/46 and SATA 57/56/60/59. Native reload confirms two endpoint
+pads and routed copper for each of the four USB3 nets, each of the four
+bridge-side SATA nets, and each of the four socket-side SATA nets; no
+high-speed unconnected-item records remain after the stale records are
+removed.
+
+The first path-length audit is not yet acceptable for SI closure. Summed
+copper lengths are USB3 RX_N 108.473 mm, RX_P 87.104 mm, TX_N 81.453 mm, and
+TX_P 61.407 mm; SATA full-path copper sums across bridge and socket sides are
+TX_P 24.856 mm, TX_N 80.225 mm, RX_P 48.975 mm, and RX_N 59.775 mm including
+the split-cap corridors. These are
+candidate measurements, not a claim of compliance. The next repair must add
+controlled, pair-symmetric length tuning without reintroducing crossings,
+forbidden-layer signals, pad-field violations, or unnecessary transitions.
+
 ## Current evidence
 
 ### 2026-09-04 continuation: SATA coupling network implemented
