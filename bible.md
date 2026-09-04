@@ -3695,4 +3695,12 @@ power-related short/crossing/hole findings, and plane-layer compliance.
   163 violations, six crossings, ten shorts, and three unconnected items.
 - This separates the mechanical contract from the remaining source/ESD escape
   problem; no generic underside constraint is being used to explain the
-  failure.
+ failure.
+
+2026-09-04 — Phase 17 west-split underside retry
+
+- Reran the existing right-channel west-split Ethernet authoring class after
+  removing the hypothetical underside cooler exclusion. Native DRC rejected
+  it with 21 crossings, eight shorts, and 449 unconnected items.
+- The historical west-split route remains rejected; Phase 17 continues toward
+  a freshly authored top-edge/source-proximate solution.

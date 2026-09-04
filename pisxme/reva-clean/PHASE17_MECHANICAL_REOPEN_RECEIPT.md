@@ -72,6 +72,12 @@ using ordinary through-vias for TD2/TD0. The resulting
 hole-clearance findings. This rejects the lane implementation, not the CM5IO
 topology; Phase 17 remains open.
 
+The existing right-channel west-split authoring class was rerun against the
+Phase 16 ancestor with the revised underside contract. Native DRC reported
+458 violations, including 21 crossings, 8 shorts, and 449 unconnected items;
+it was rejected. This confirms that simply enabling underside space does not
+make the historical west-split route valid.
+
 ## Revised underside contract
 
 The Rev-A contract was subsequently narrowed: a cooler/backplate mounted to
