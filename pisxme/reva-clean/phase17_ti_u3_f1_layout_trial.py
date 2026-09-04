@@ -11,8 +11,10 @@ ROOT = Path(__file__).resolve().parent
 BASE = Path(os.environ.get("PISXME_BASE", ROOT / "ACREAGE_PHASE16_PCIE_ONLY_BOUNDARY2.kicad_pcb"))
 OUT = Path(os.environ.get("PISXME_OUT", ROOT / "ACREAGE_PHASE17_TI_U3_F1_LAYOUT.kicad_pcb"))
 F1_TARGET = tuple(float(x) for x in os.environ.get("PISXME_F1_TARGET", "100,20").split(","))
+F2_TARGET = tuple(float(x) for x in os.environ.get("PISXME_F2_TARGET", "50,120").split(","))
 U3_TARGET = tuple(float(x) for x in os.environ.get("PISXME_U3_TARGET", "60,165").split(","))
 AUX_DX = float(os.environ.get("PISXME_AUX_DX", "50"))
+BRIDGE_DY = float(os.environ.get("PISXME_BRIDGE_DY", "10"))
 OLD_U3 = (52.0, 78.0)
 OLD_F1 = (55.0, 40.0)
 
@@ -43,11 +45,17 @@ def main():
              "/REGULATORS/RT_CM5_5V", "/REGULATORS/PG_CM5_5V"}
     for item in list(b.GetTracks()):
         if item.GetNetname() in local or item.GetNetname() in {
-                "/POWER_INPUT/12V_IN_A", "/POWER_INPUT/FUSED_12V_A"}:
+                "/POWER_INPUT/12V_IN_A", "/POWER_INPUT/FUSED_12V_A",
+                "/POWER_INPUT/12V_IN_B", "/POWER_INPUT/FUSED_12V_B"}:
             b.Remove(item)
 
     # F1 is translated as one coherent power-entry component.
     f1 = b.FindFootprintByReference("F1"); f1.SetPosition(V(*F1_TARGET))
+    # F2 is the local power-entry obstruction in the recovered acreage floorplan.
+    # Move the complete holder only when explicitly requested; this keeps the
+    # default comparable to the lower-island baseline and makes the experiment
+    # reproducible without changing the electrical topology.
+    f2 = b.FindFootprintByReference("F2"); f2.SetPosition(V(*F2_TARGET))
     ni, no = N(b, "/POWER_INPUT/12V_IN_A"), N(b, "/POWER_INPUT/FUSED_12V_A")
     P(b, ni, [(F1_TARGET[0]-6.4, F1_TARGET[1]-1.25), (12,25)], pcbnew.B_Cu, 2.0)
     P(b, no, [(F1_TARGET[0]+2.9, F1_TARGET[1]-1.25), (212.46,30)], pcbnew.B_Cu, 2.0)
@@ -61,6 +69,12 @@ def main():
     for ref in ("C23", "C24", "C25", "R19", "R20", "R21", "R22"):
         f = b.FindFootprintByReference(ref); p0 = xy(f.GetPosition())
         f.SetPosition(V(p0[0] + AUX_DX, p0[1]))
+    # The complete bridge-output capacitor acreage is the remaining object
+    # at the CM5_PERST terminus.  Translate it coherently, preserving the
+    # regulator topology while clearing that frozen PCIe corridor.
+    for ref in tuple(f"C{n}" for n in range(26, 42)):
+        f = b.FindFootprintByReference(ref); p0 = xy(f.GetPosition())
+        f.SetPosition(V(p0[0], p0[1] + BRIDGE_DY))
     for ref, p0, angle in (("C5",(47,76),180),("C6",(47,78.25),180),
                            ("C7",(57,81.5),0),("C8",(57,83.5),0),
                            ("C9",(73,62),0),("R3",(78,62),180),
@@ -89,8 +103,10 @@ def main():
                 (U3_TARGET[0]-6,U3_TARGET[1]+8), (c71[0],U3_TARGET[1]+8), c71], width=.25)
     P(b, outn, [u["9"], (U3_TARGET[0]+5,U3_TARGET[1]+2),
                 (U3_TARGET[0]+5,U3_TARGET[1]+10), c81], width=.25)
-    P(b, outn, [c71, (c71[0],c71[1]+3), (c81[0],c81[1]+1), c81], width=.25)
-    P(b, outn, [c81, (c81[0]+4,c81[1]), (c92[0]+4,c92[1]), c92], pcbnew.B_Cu, .25)
+    P(b, outn, [c71, c81], width=.25)
+    # Keep the output-capacitor tie on the local F.Cu perimeter.  The earlier
+    # B.Cu tie occupied the same quiet return corridor as translated FB/PG.
+    P(b, outn, [c81, (c81[0]+4,c81[1]), (c92[0]+4,c92[1]), c92], pcbnew.F_Cu, .25)
 
     fb, rt, pg = (N(b,x) for x in ("/REGULATORS/FB_CM5_5V",
                                    "/REGULATORS/RT_CM5_5V",
@@ -106,6 +122,23 @@ def main():
     via(b,rt,tr((58,78.25))); via(b,rt,tr((60.5,65)))
     for a,z in [((54.7,77.75),(55.5,77.75)),((55.5,77.75),(62,77.75)),((62,77.75),(62,69)),((62,69),(72.5,70))]: T(b,pg,tr(a),tr(z),pcbnew.B_Cu if a[1]!=77.75 or z[1]!=77.75 else pcbnew.F_Cu,.20)
     via(b,pg,tr((62,77.75))); via(b,pg,tr((72.5,70)))
-    pcbnew.ZONE_FILLER(b).Fill(b.Zones()); b.Save(str(OUT)); print(f"saved {OUT}; F1={F1_TARGET}; U3={U3_TARGET}")
+    # Explicit CM5 +5 V boundary: bus all six J7 input lands, then use one
+    # ordinary-via B.Cu trunk to the relocated output capacitor.  This keeps
+    # the high-current/CM5 handoff visible and avoids plane-layer signal
+    # routing or relying on a zone to bridge hierarchy boundaries.
+    cm5 = N(b, "/CORE_CM5/CM5_5V")
+    j7 = b.FindFootprintByReference("J7")
+    j5 = [xy(p.GetPosition()) for p in j7.Pads() if p.GetNumber() in {"77","79","81","83","85","87"}]
+    j5.sort(key=lambda p:p[1])
+    for a,z in zip(j5,j5[1:]): T(b, cm5, a, z, pcbnew.F_Cu, .20)
+    # Launch from the uppermost +5 V land toward the free side of the CM5
+    # footprint; launching below pad 87 collides with adjacent WiFi land 89.
+    jvia = (j5[0][0]+4.0, j5[0][1])
+    # Escape to the narrow east-side edge of the CM5 power column, then use
+    # the outer corridor beside (not through) the F2 holder.  The west escape
+    # hit J7 pad 75 and the J4 shell; the former x=50 trunk hit quiet controls.
+    P(b, cm5, [j5[0], jvia, (40,155), (53,168.5), c71],
+      pcbnew.F_Cu, .25)
+    pcbnew.ZONE_FILLER(b).Fill(b.Zones()); b.Save(str(OUT)); print(f"saved {OUT}; F1={F1_TARGET}; F2={F2_TARGET}; U3={U3_TARGET}")
 
 if __name__ == "__main__": main()

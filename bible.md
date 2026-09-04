@@ -3433,3 +3433,27 @@
 - The complementary CT2 opposite-layer transition was compared and rejected
   as one additional launch-clearance finding worse than the retained CT1
   variant; no release artifact was promoted.
+
+2026-09-04 — Phase 17 explicit CM5 +5 V boundary trials
+
+- Connected all six CM5 J7 +5 V lands to the canonical relocated U3 output in
+  disposable variants. The B.Cu trunk crossed FB/PG quiet corridors; the
+  left F.Cu trunk crossed fixed F2/CM5 keepouts and lower-island escapes.
+- Rejected both routes and preserved their native DRC reports. Retained the
+  lower `(60,165)` U3/F1 plus CT1-transition baseline; no release promotion or
+  Phase 18+ work occurred.
+
+2026-09-04 — Phase 17 power-entry floorplan reopening
+
+- Tested coherent F2 translations at `(100,120)` and `(140,120)` against the
+  validated lower U3/F1 island. Both were rejected because the moved holder
+  overlapped the fixed bridge-capacitor/support island and created native
+  power-net shorts.
+- Tested outer CM5 +5 V handoff corridors with F2 retained. The best west-side
+  trial reduced the integrated DRC to 439 findings and eliminated the
+  `tracks_crossing` category, but the CM5 connector launch still shorted its
+  tightly interleaved neighboring pad field and the acreage scaffold retained
+  unconnected debt.
+- Preserved all disposable boards/reports, kept the lower `(60,165)` U3/F1
+  placement as the working ancestor, and left Phase 17 open. No Phase 18+
+  work or clean release promotion occurred.

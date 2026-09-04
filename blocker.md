@@ -1878,8 +1878,44 @@ the pre-existing CM5_PERST/bridge-capacitor placement conflict. This is a
 useful Ethernet-local repair but is not yet a Phase 17 pass because the
 connector-field clearance and inherited board debt still require resolution.
 
+## Phase 17 explicit CM5 +5 V boundary trials — 2026-09-04
+
+The relocated regulator output was then connected to all six native CM5 J7
+`CM5_5V` lands (77/79/81/83/85/87), rather than leaving the hierarchy-correct
+net as an abstract island. Two bounded routes were rejected. The B.Cu trunk
+crossed the relocated FB/PG quiet corridors; the left F.Cu trunk avoided those
+quiet corridors but crossed fixed F2/CM5 keepouts and lower-island escapes.
+These failures are physical corridor evidence, not a source-net ambiguity.
+The retained baseline remains the lower `(60,165)` U3/F1 placement with CT1
+opposite-layer transition; the next repair must reserve a dedicated CM5 power
+handoff corridor while preserving the PCIe lane and regulator islands.
+
 The complementary CT2-to-F.Cu transition was also tested. It removes the
 CT1/CT2 crossing, but native DRC retains an additional CT2-to-CT1 clearance
 finding at the EDAC launch and a hole-clearance finding at the connector.
 CT1-to-F.Cu is therefore the retained local variant; neither is promoted
 until the connector launch is re-authored with manufacturable clearances.
+
+## Phase 17 power-entry reopening — 2026-09-04
+
+The authorized F2 floorplan reopening was tested against the lower U3/F1
+candidate. Translating F2 as a whole to `(100,120)` or `(140,120)` clears the
+original CM5 corridor, but collides with the fixed bridge-capacitor/support
+island; the resulting native DRC reports real power-net shorts and is rejected.
+The original F2 position remains the least-regressive power placement.
+
+With F2 retained, the CM5 +5 V handoff was changed from the rejected x=50
+trunk to an outer local corridor. The west escape hits J4 shell geometry; the
+east escape is constrained by the interleaved J7 pad field and the lower
+island. The best disposable result reduced the integrated report to 439
+findings with no `tracks_crossing` category, but still has an unavoidable
+J7-pad launch short and inherited unconnected scaffold debt. A simplified
+local output-capacitor tie was also tested; it moved the remaining conflict
+to the U3 quiet-control region and was rejected.
+
+This does not close Phase 17. It establishes the exact next repair boundary:
+the CM5 +5 V launch must be re-authored at the connector boundary (or the
+CM5 power fanout footprint/escape geometry must be made authoritative) before
+the lower island can be promoted. No frozen PCIe, V100/SXM2, stack, power
+topology, or Ethernet electrical architecture was changed; no Phase 18+
+work began.
