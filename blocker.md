@@ -1309,6 +1309,26 @@ Preserved evidence:
 `pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-layerbridge-drc.rpt`.
 Phase 17 remains open and Phase 18+ remains gated.
 
+## Separated-fanout bridge trial — 2026-09-03
+
+The direct-via failure was addressed with separated 1 mm fanout pairs before
+the tight official handoffs. Long bridge corridors were split between F.Cu
+and B.Cu, with ordinary source-boundary transitions and short F.Cu dogbones
+from the fanout field into the retained CM5IO graph.
+
+Native KiCad 10.0.5 DRC still rejected the candidate at **288 violations / 70
+unconnected items**, including **23 crossings, 10 shorts, 8 co-located-hole
+findings, 6 solder-mask bridges, 8 dangling tracks, and 4 dangling vias**.
+The fanout spacing removed the prior direct-handoff via-short class, but the
+two-layer bridge still intersects itself and the copied official F.Cu graph.
+This candidate is rejected.
+
+Preserved evidence:
+`pisxme/reva-clean/CM5IO_J7_CM5IO_BOUNDARY_FIXTURE-fanout-drc.rpt`.
+The next experiment must retain separated fanout vias while making the
+F.Cu dogbones pair-specific and monotonic at the island boundary; no direct
+via placement on the 0.38 mm official pair centers is permitted.
+
 ## Round-the-envelope bridge trial — 2026-09-03
 
 The proposed round-the-envelope bridge was implemented and run under native

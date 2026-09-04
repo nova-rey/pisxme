@@ -3120,3 +3120,11 @@
   17 shorts and 7 crossings; rejected the candidate.
 - Confirmed the official handoff pair spacing is too tight for direct 0.50 mm
   vias and recorded the required separated-via plus short-F.Cu-dogbone rule.
+
+2026-09-03 — Phase 17 separated-fanout bridge trial
+
+- Tested separated 1 mm fanout via pairs with split F.Cu/B.Cu long corridors
+  and short F.Cu dogbones into the official handoff graph.
+- Native KiCad DRC measured 288 violations / 70 unconnected items, including
+  23 crossings and 10 shorts; rejected the candidate.
+- Retained the separated-fanout rule and continued Phase 17 only.
