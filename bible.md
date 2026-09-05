@@ -4068,6 +4068,7 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: removed nine PCB-only Ethernet CCT/RCT aliases; filtered candidate now matches all 78 schematic refs plus 13 expected mechanical/test markers with no new shorts/crossings.
 2026-09-05 Phase24: added a machine-checkable filtered reference-set audit for the clean 78-reference PCB candidate.
 2026-09-05 Phase24: revalidated filtered 78-reference candidate with no native shorts/crossings; 201 DRC violations and 406 unconnected pads remain.
+2026-09-05 Phase24: added and passed a clean reference-authority regression test rejecting legacy CCT/RCT aliases.
 2026-09-05 Phase24: rejected U5 source-launch refinement; native DRC remained 197 violations with one crossing and no shorts, so a layer-separated launch is still required.
 2026-09-05 Phase24: rejected U5 left-side source detour; native DRC remained 197 violations with one crossing and 392 unconnected pads.
 2026-09-05 Phase24: U5 layer-owned source/return fixture passed targeted native DRC with zero shorts/crossings; acreage integration remains open.
