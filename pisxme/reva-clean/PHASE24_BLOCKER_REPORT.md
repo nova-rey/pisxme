@@ -1112,6 +1112,17 @@ fails on the prior baseline, specifically catching U7.30/U7.31/U7.52/U7.53/
 U7.54 no-net serialization. Routing is still required after this mapping
 gate; no synthetic graph connectivity is used.
 
+## Whole-board macro-floorplan selection — 2026-09-05
+
+Consultant dispatch was attempted and unavailable because the collaboration
+service is at its thread limit; this is not treated as an engineering blocker.
+The local native-geometry review selects `PHASE24_MACRO_ETH_WEST_LOCAL_STORAGE`
+for the next controlled experiment. Ethernet support stays outside the CM5
+body beside the actual GBE launch with the MagJack on the west edge; the
+complete U7/J3/clock island moves to the USB3-side acreage; PCIe J1 and SERVICE
+J4 remain unchanged. Existing copper is invalid until affected routes are
+regenerated and validated by native DRC/connectivity and geometry checks.
+
 ## Current discriminator: whole-board macro-floorplan review — 2026-09-05
 
 The clock/SATA blocker is not being attacked locally while macro-placement is

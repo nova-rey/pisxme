@@ -68,6 +68,7 @@ These are disposable placement candidates, not accepted routing. Candidate selec
 | `STORAGE_LOCAL` | (77.8,59.6) | (121.4,123.5) | (45.0,100.0) | 59.2 | 54.5 |
 | `SWAP_ETH_STORAGE` | (28.0,121.5) | (119.7,122.8) | (45.0,100.0) | 22.5 | 52.6 |
 | `CM5_NEIGHBORHOODS` | (30.6,103.2) | (117.0,125.1) | (84.0,100.0) | 5.1 | 51.0 |
+| `ETH_WEST_LOCAL_STORAGE` | (17.7,101.2) | (117.0,125.1) | (45.0,100.0) | 16.9 | 51.0 |
 
 ## Whole-board interpretation
 

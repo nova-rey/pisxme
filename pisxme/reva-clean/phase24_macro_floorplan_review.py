@@ -65,11 +65,12 @@ candidate('ETH_SOUTH',{'J2':(75,160,180),'U6':(42,88,-90),'U9':(48,88,-90)})
 candidate('STORAGE_LOCAL',{'U7':(95,120,180),'J3':(145,125,90)})
 candidate('SWAP_ETH_STORAGE',{'J2':(15,145,180),'U6':(42,88,-90),'U9':(48,88,-90),'U7':(95,120,180),'J3':(145,125,90),'Y1':(82,120,0),'R23':(76,120,0),'C42':(76,116,0),'C43':(76,124,0)})
 candidate('CM5_NEIGHBORHOODS',{'J2':(18,102,180),'U6':(44,102,-90),'U9':(50,102,-90),'U7':(96,124,180),'J3':(138,124,90),'Y1':(88,136,0),'R23':(82,136,0),'C42':(82,132,0),'C43':(82,140,0),'J4':(84,100,90)})
+candidate('ETH_WEST_LOCAL_STORAGE',{'J2':(12,100,180),'U6':(25,94,-90),'U9':(25,106,-90),'U7':(96,124,180),'J3':(138,124,90),'Y1':(88,136,0),'R23':(82,136,0),'C42':(82,132,0),'C43':(82,140,0)})
 print(R/'PHASE24_MACRO_FLOORPLAN_REVIEW.md')
 
 # Placement-only quantitative comparison; moved copper is deliberately not
 # counted as valid routing evidence.
-candidate_names=['CURRENT','ETH_WEST','ETH_WEST_OUTBOARD','ETH_EAST_ESD_WEST_JACK','ETH_SOUTH','STORAGE_LOCAL','SWAP_ETH_STORAGE','CM5_NEIGHBORHOODS']
+candidate_names=['CURRENT','ETH_WEST','ETH_WEST_OUTBOARD','ETH_EAST_ESD_WEST_JACK','ETH_SOUTH','STORAGE_LOCAL','SWAP_ETH_STORAGE','CM5_NEIGHBORHOODS','ETH_WEST_LOCAL_STORAGE']
 out=(R/'PHASE24_MACRO_FLOORPLAN_REVIEW.md').read_text().splitlines()
 out += ['', '## Candidate centroid comparison', '', '| candidate | Ethernet island centroid | Storage island centroid | SERVICE centroid | Ethernet source distance (mm) | USB3 source distance (mm) |', '|---|---:|---:|---:|---:|---:|']
 for name in candidate_names:

@@ -939,3 +939,13 @@ candidate boards are placement topology probes only; no island has been
 promoted and no downstream routing has been regenerated yet. The next gate
 is consultant/reviewer selection of a coherent macro-floorplan, followed by
 fresh routing and full affected-subsystem validation.
+
+Consultant dispatch was attempted but the collaboration service reported its
+thread limit; this is not treated as an engineering blocker. The selected
+placement-only candidate is `PHASE24_MACRO_ETH_WEST_LOCAL_STORAGE`: Ethernet
+ESD/support stays outside the native J7 body envelope beside the GBE launch,
+the MagJack is on the west edge, the complete U7/J3/clock island moves to the
+USB3-side acreage, and PCIe J1 plus SERVICE J4 remain unchanged. This is not
+a routing pass; affected Ethernet and USB3/SATA/clock copper must be
+regenerated together and then closed by native DRC/connectivity and geometry
+checks.
