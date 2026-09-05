@@ -4143,3 +4143,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Corrected the ETH_WEST study for native CM5 body clearance by generating an outboard U6/U9 placement at (20,104)/(26,104); retained it as a disposable candidate pending complete regenerated routing.
 2026-09-05: Rejected the first west-outboard live-pad route at 458 violations, 137 unconnected records, 5 shorts, and 4 crossings; retained the mechanically valid placement and isolated ESD/connector fanout for refinement.
 2026-09-05: Closed the west-outboard hand-route orientation sweep without promotion: ESD rotations 0/180 yielded 468/141/5/8 and 456/143/7/4; next continuation requires obstacle-aware or reference-derived pad escape.
+2026-09-05: Recorded independent west-outboard review: 2D placement is plausible, but the next route must be all-F.Cu with no USON signal vias, a dedicated EDAC no-go launch envelope, and an explicitly resolved 0.13208 mm versus 0.200 mm rule basis.

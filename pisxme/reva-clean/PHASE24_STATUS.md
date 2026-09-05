@@ -788,3 +788,13 @@ and 456/143/7/4 (total DRC/unconnected/shorts/crossings). Neither passes;
 the remaining defects are concentrated in the ESD pad-field and MagJack
 launch. This class is closed for now in favor of an obstacle-aware/reference
 pad-escape authoring method.
+
+Independent PCB review confirms the west-outboard native body placement is
+mechanically plausible in 2D: U6 `(16.075,103.040)–(21.750,104.935)`, U9
+`(24.475,103.040)–(29.925,104.935)`, and J2
+`(6.025,133.740)–(23.975,157.298)` do not intersect J7. The recommended
+implementation is all-F.Cu MDI from J7 through flow-through U6/U9 to the J2
+PTH pads, with no signal vias at the USON fields and an explicit J2 no-go
+envelope around CT, LED, shield, and NPTH features. The review also identifies
+the trial width mismatch (0.13208 mm versus the native 0.200 mm minimum rule)
+as an unresolved rule/impedance materialization issue.

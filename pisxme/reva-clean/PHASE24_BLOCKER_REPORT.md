@@ -989,3 +989,10 @@ The ESD-orientation sweep did not close the gate. Native results were
 fields ordered total DRC/unconnected/shorts/crossings. Further hand-routed
 coordinate tweaks are rejected as same-class thrashing; the next continuation
 must use an obstacle-aware or reference-derived pad escape.
+
+Independent review confirms the placement is 2D-mechanically plausible, but
+the hand-routed copper is not. It recommends all-F.Cu MDI, no U6/U9 signal
+vias, and a dedicated connector launch excluding EDAC CT/LED/shield/NPTH
+fields. It also flags the native rule mismatch between the trial's 0.13208 mm
+Ethernet width and the 0.200 mm minimum rule. This is the specification for
+the next authoring pass.
