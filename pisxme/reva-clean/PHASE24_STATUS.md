@@ -880,3 +880,9 @@ The U7 `BRIDGE_3V3` pad-field dogleg is accepted. Native connectivity joins
 U7.24/U7.30/U7.31 to TP5.1 while bypassing the intervening no-connect pads;
 native DRC remains `201` total violations with zero shorts/crossings, and
 unconnected records fall `396` to `394`.
+
+The new `phase24_u7_pad_net_authority_audit.py` passes on the corrected U7
+candidate for all 17 schematic-owned U7 endpoints and fails on the prior
+integrated baseline for the five omitted clock/3V3 pads. This is now a
+regression gate for subsequent support routing; it derives assertions from
+serialized pad net identity and supplies no connectivity edges.

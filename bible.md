@@ -4156,3 +4156,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Corrected U7 clock pad ownership from native netlist authority: U7.52/53/54 now serialize XI/VSSOSC/XO on the RX-N-improved basis; native DRC has zero shorts/crossings, with clock copper still open.
 2026-09-05: Extended U7 native net ownership correction to pins 24/30/31 as BRIDGE_3V3; five newly visible unrouted U7 support endpoints leave native DRC at 201/396 with zero shorts/crossings, so complete support routing remains open.
 2026-09-05: Accepted U7 BRIDGE_3V3 pad-field dogleg: U7.24/30/31 connect to TP5.1 around no-connect pads, reducing opens 396 to 394 with zero new shorts/crossings.
+2026-09-05: Added U7 pad-net authority regression: corrected candidate passes all 17 schematic-owned U7 endpoint assignments and the prior baseline fails on five omitted pads; no synthetic connectivity edges are used.

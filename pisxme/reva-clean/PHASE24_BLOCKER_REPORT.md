@@ -1081,3 +1081,8 @@ The U7 `BRIDGE_3V3` repair is accepted as bounded progress: a native-pad
 derived F.Cu dogleg connects U7.24/U7.30/U7.31 to TP5.1 around no-connect
 pads, with no short or crossing. The full candidate is now `201` DRC
 violations and `394` opens.
+
+The U7 pad-net authority regression now passes on the corrected candidate and
+fails on the prior baseline, specifically catching U7.30/U7.31/U7.52/U7.53/
+U7.54 no-net serialization. Routing is still required after this mapping
+gate; no synthetic graph connectivity is used.
