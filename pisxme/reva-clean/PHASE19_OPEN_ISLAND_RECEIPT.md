@@ -39,3 +39,10 @@ unconnected items before routing. The coordinated generator produced `322`
 violations / `70` unconnected items after routing; candidate SATA/clock
 crossings remain. This fixture is rejected and does not establish Phase 19
 closure.
+
+Corrected USB3-only diagnostic: with explicit `--P19_SKIP_SATA=1
+--P19_SKIP_CLOCK=1`, live J7/U7 pad assignment, 0.200 mm tracks, and a
+complete source fanout, native DRC measured `80` violations / `75`
+unconnected pads. No USB3 source-side crossings or shorts remained; two
+U7-final-escape clearances remained at 0.150 mm. The diagnostic is retained
+as authoring-path evidence and is not a Phase 19 pass.

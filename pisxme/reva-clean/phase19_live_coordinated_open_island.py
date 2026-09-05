@@ -5,13 +5,19 @@ copper is retained; the source CM5 pads, bridge, socket, split caps, and
 40-MHz clock are regenerated as one coordinated island.
 """
 from pathlib import Path
-import re, pcbnew
+import os, re, pcbnew
 R=Path(__file__).resolve().parent
-BASE=R/__import__('os').environ.get('P19_BASE','ACREAGE_CLOCK_CANDIDATE5.kicad_pcb')
+ARGS={}
+for _arg in __import__('sys').argv[1:]:
+ if _arg.startswith('--') and '=' in _arg:
+  _k,_v=_arg[2:].split('=',1); ARGS[_k]=_v
+BASE=R/ARGS.get('P19_BASE',os.environ.get('P19_BASE','ACREAGE_CLOCK_CANDIDATE5.kicad_pcb'))
 SYNC=R/'.phase19_open_island_sync.kicad_pcb'
 OUT=R/'PHASE19_OPEN_ISLAND_LIVE.kicad_pcb'
-PREP=__import__('os').environ.get('P19_PREP','0')=='1'
-W=pcbnew.FromMM(.13208)
+PREP=ARGS.get('P19_PREP',os.environ.get('P19_PREP','0'))=='1'
+SKIP_SATA=ARGS.get('P19_SKIP_SATA',os.environ.get('P19_SKIP_SATA','0'))=='1'
+SKIP_CLOCK=ARGS.get('P19_SKIP_CLOCK',os.environ.get('P19_SKIP_CLOCK','0'))=='1'
+W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def pos(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
 def pad(f,n): return next(p for p in f.Pads() if str(p.GetNumber())==str(n))
@@ -63,16 +69,17 @@ def main():
   N[name]=net(b,name)
  # USB3: source fanout drops to parallel B.Cu corridors below the PCIe bbox,
  # then climbs only in the open x>190 region and returns on F.Cu at U7.
- usb=(('CM5_USB3_RX_N','128','42',(72,114),(200,114)),('CM5_USB3_RX_P','130','43',(74,116),(204,116)),
-      ('CM5_USB3_TX_N','140','45',(76,118),(208,118)),('CM5_USB3_TX_P','142','46',(78,120),(212,120)))
+ usb=(('CM5_USB3_RX_N','128','42',(78,114),(200,114)),('CM5_USB3_RX_P','130','43',(76,116),(204,116)),
+      ('CM5_USB3_TX_N','140','45',(74,118),(208,118)),('CM5_USB3_TX_P','142','46',(72,120),(212,120)))
  for suffix,sp,up,start,far in usb:
   n=N['/CORE_CM5/'+suffix]; s=S[sp]; d=U[up]
-  seg(b,n,s,(start[0],s[1])); via(b,n,start); seg(b,n,start,far,pcbnew.B_Cu)
+  setpad(pad(src,sp),n); setpad(pad(u,up),n)
+  seg(b,n,s,(start[0],s[1])); seg(b,n,(start[0],s[1]),start); via(b,n,start); seg(b,n,start,far,pcbnew.B_Cu)
   # The rotated U7 USB pads share a continuous bottom row.  Do not run a
   # same-layer horizontal track through that row; use a distinct B.Cu lane
   # and one ordinary via directly below each live destination pad.
-  landing=(d[0],113.0 + 2.0*(['CM5_USB3_RX_N','CM5_USB3_RX_P','CM5_USB3_TX_N','CM5_USB3_TX_P'].index(suffix)))
-  via(b,n,far); seg(b,n,far,landing,pcbnew.B_Cu); via(b,n,landing); seg(b,n,landing,d,pcbnew.F_Cu)
+  landing=(d[0],112.0 + 2.5*(['CM5_USB3_RX_N','CM5_USB3_RX_P','CM5_USB3_TX_N','CM5_USB3_TX_P'].index(suffix)))
+  seg(b,n,far,landing,pcbnew.B_Cu); via(b,n,landing); seg(b,n,landing,d,pcbnew.F_Cu)
  # SATA split capacitors.  Pair lanes are layer-separated after live pad
  # escapes; each transition is outside an SMD pad field.
  sata=(('BRIDGE_SATA_TX_P','57','1','C30',pcbnew.F_Cu,(224,96)),
@@ -83,6 +90,8 @@ def main():
   bridge=N['/STORAGE/'+bn]; socket=N['/STORAGE/'+bn.replace('BRIDGE_SATA_','SATA_M2_')]
   cp={str(p.GetNumber()):pos(p) for p in caps[cr].Pads()}; a=U[upn]; z=J[jn]
   setpad(pad(caps[cr],'1'),socket); setpad(pad(caps[cr],'2'),bridge); setpad(pad(j,jn),socket)
+  if SKIP_SATA:
+   continue
   if u.GetOrientationDegrees() == -90.0 and j.GetOrientationDegrees() == 90.0:
    # Rot270 U7 exposes SATA on a single west-facing row.  Use live pad
    # coordinates and a pair-per-layer monotonic launch to the left-column
@@ -113,6 +122,8 @@ def main():
    e2=(232,cp['1'][1]); via(b,socket,e2); seg(b,socket,cp['1'],e2,pcbnew.F_Cu); seg(b,socket,e2,(232,z[1]),pcbnew.B_Cu); via(b,socket,(232,z[1])); seg(b,socket,(232,z[1]),z)
  # Clock net assignments and live endpoint routes.  VSSOSC is a private
  # return with ordinary through-vias beside the low-profile support parts.
+ if SKIP_CLOCK:
+  b.Save(str(OUT)); print(OUT); return
  maps={'Y1':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_VSSOSC','3':'/STORAGE/BRIDGE_XO','4':'/STORAGE/BRIDGE_VSSOSC'},
        'R23':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_XO'},'C42':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_VSSOSC'},'C43':{'1':'/STORAGE/BRIDGE_XO','2':'/STORAGE/BRIDGE_VSSOSC'}}
  for ref,m in maps.items():

@@ -950,3 +950,18 @@ clock crossings/shorts. This proves the present authoring topology itself is
 not yet valid; it is not an acreage integration pass. The fixture and its
 S-expression preparation script are retained as a regression/debug oracle.
 Phase 19 remains open and Phase 20+ remains untouched.
+
+## 2026-09-05 corrected USB3-only authoring diagnostic
+
+The previous USB3/clock-only result was discarded because SATA suppression
+was not actually wired into the command-line path. The harness now parses
+`--P19_SKIP_SATA=1` and `--P19_SKIP_CLOCK=1` explicitly, assigns the live
+J7/U7 USB3 pads before routing, uses 0.200 mm tracks, and adds the missing
+source-to-via fanout segment. Native KiCad DRC on the storage-only fixture
+then reported `80` violations / `75` unconnected pads, with zero USB3
+source-side crossings and zero USB3 short records. The remaining two
+candidate USB3 errors are U7 final-escape clearances (0.150 mm actual versus
+0.200 mm required); the other violations are the fixture's intentionally
+unrouted M.2/clock baseline.
+This discriminating result is retained as evidence, not closure. Phase 19
+remains open and Phase 20+ remains untouched.
