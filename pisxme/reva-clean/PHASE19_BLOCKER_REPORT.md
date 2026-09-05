@@ -734,3 +734,17 @@ The candidate remains rejected because the transformed clock support still
 crosses inherited USB3/low-speed corridors and the board-wide connectivity
 gate is open. The result is retained as a valid generator/sweep data point;
 PCIe, stack, layer contract, and storage architecture remain unchanged.
+
+## 2026-09-04 west-shifted clock transform follow-up
+
+The passing minimal clock graph was regenerated with native 270-degree support
+footprint orientation and a westward support shift on the generalized
+rot270-SATA candidate. Native KiCad DRC measured `371` violations and `420`
+unconnected items. The prior Y1-field short class is absent; remaining new
+records are west clock-trunk intersections with inherited USB3/low-speed
+copper and board-wide inherited connectivity debt.
+
+This remains a recoverable local routing blocker. The next authorized class is
+to move the clock transition farther from the USB3 source corridor or assign a
+clock-aware USB3 final landing during the same U7/J3 regeneration. No PCIe,
+stack, layer, or storage-architecture change is required or authorized.
