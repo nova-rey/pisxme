@@ -77,6 +77,18 @@ not merely translate the same fanout.
 
 ## U5 capacitor-island topology pass
 
+## U5 input-power field stitch (accepted targeted evidence)
+
+The disposable `PHASE24_U5_INPUT_POWER_STITCH.kicad_pcb` candidate adds the
+missing same-net U5 12V_PROTECTED and POWER_GND exposed-pad joins from actual
+serialized pad coordinates. The NC pad 15 is avoided with an outer dogbone.
+Native DRC improved the inherited unconnected count from 397 to 390 without
+introducing any `shorting_items` or `tracks_crossing`; the candidate has no
+remaining U5 12V_PROTECTED or POWER_GND unconnected record. It is retained as
+targeted evidence, but cannot be promoted as the board solution while the
+remaining native records include 12V_PROTECTED, POWER_GND, CM5 ground,
+input/fused 12V, low-voltage, and clock/storage connectivity gaps.
+
 After removing the stale bridge-1V1 source segments and moving the island to
 an open acreage shelf, `PHASE24_U5_CAPS_ISLAND-far4-drc.rpt` reports `214`
 inherited/disposable violations and `391` unrelated unconnected items, but

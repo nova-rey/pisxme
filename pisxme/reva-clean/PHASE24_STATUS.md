@@ -276,3 +276,16 @@ violations, zero `shorting_items`, zero `tracks_crossing`, and 392
 unconnected pads versus 397 before the repair. No `BRIDGE_SATA_RX_N`
 unconnected record remains. This is targeted storage evidence; full-board
 parity remains open.
+
+## U5 input-power field stitch experiment
+
+`phase24_u5_input_power_stitch.py` tested the serialized U5 exposed-pad field
+using only same-net F.Cu tracks. The 12V_PROTECTED chain joins U5 pads 1, 16,
+and 14; its pad-14 leg doglegs around the explicit NC pad 15. The POWER_GND
+chain joins the central exposed row and side pads. Native KiCad 10.0.5 DRC
+reports 201 violations and 390 unconnected items, compared with 201 and 397
+for the integrated-layered baseline; there are zero `shorting_items` and zero
+`tracks_crossing`, and no remaining U5 12V_PROTECTED or POWER_GND unconnected
+record. This is a valid targeted physical repair, not full Phase 24 closure:
+the remaining missing connections are dominated by board-wide protected-12V,
+global/CM5 ground, input/fused-12V, low-voltage, and clock/storage groups.
