@@ -16,11 +16,9 @@ def main():
  via(b,rda,40,100.75); via(b,rda,60,145.5)
  seg(b,rda,pcbnew.F_Cu,[(43,100.75),(40,100.75)])
  seg(b,rda,pcbnew.B_Cu,[(40,100.75),(40,107),(45.5,107),(45.5,145.5),(60,145.5)])
- seg(b,rda,pcbnew.F_Cu,[(60,145.5),(60,145.5)])
  # B5 -> R2.1: right-side neck and a distinct B.Cu corridor.
  via(b,rdb,52,99.25); via(b,rdb,80,145.5)
  seg(b,rdb,pcbnew.F_Cu,[(47,99.25),(52,99.25)])
  seg(b,rdb,pcbnew.B_Cu,[(52,99.25),(52,114),(80,114),(80,145.5)])
- seg(b,rdb,pcbnew.F_Cu,[(80,145.5),(80,145.5)])
  b.Save(str(OUT)); print(OUT)
 if __name__=='__main__': main()

@@ -72,11 +72,12 @@ VBUS endpoint, both Rd resistor endpoints, and the canonical board
 `POWER_GND` return. It uses F.Cu/B.Cu ordinary routing and no plane-layer
 signals.
 
-Native KiCad DRC: 194 violations and 405 unconnected items, compared with
+Native KiCad DRC: 190 violations and 405 unconnected items, compared with
 190 and 415 in `PHASE20_SERVICE_AUTHORITY_BASE-drc.rpt`. The candidate adds
 no `shorting_items`, `tracks_crossing`, `track_width`, or clearance entries;
 the three clearance and five via-dangling entries are inherited baseline
 debt. The ten-item unconnected reduction is the expected SERVICE endpoint
-closure. This is a complete electrical candidate, not yet a Phase 20
-promotion; the remaining work is the explicit native mechanical/return
-review and production-side application.
+closure. The dedicated routing regression passes endpoint, F.Cu/B.Cu-only,
+focused-DRC, and inherited mechanical-delta checks. This closes the Phase 20
+disposable electrical gate; production-side application remains the next
+controlled step.

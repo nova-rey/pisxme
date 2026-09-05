@@ -43,9 +43,11 @@ correctly and carries the service nets to J7 in the native export.
 The complete disposable service-island candidate is
 `PHASE20_SERVICE_RD_OUTER_REFILLED.kicad_pcb`. It connects both USB2 data
 duplicate pad rows, VBUS aliases, both Rd resistors, and canonical
-`POWER_GND`. Native DRC reports 194 violations / 405 unconnected items versus
+`POWER_GND`. Native DRC reports 190 violations / 405 unconnected items versus
 190 / 415 in the inherited base: the delta contains no new clearance,
 shorting, or crossing class; the remaining three clearance and five
 via-dangling warnings are inherited. The candidate is electrically complete
-for the service nets, but Phase 20 is not promoted until the local/native
-mechanical and return review is recorded.
+for the service nets. The dedicated regression
+`validation/phase3/test_phase20_service_routing.py` passes its endpoint,
+layer, focused-DRC, and inherited-mechanical-delta checks. The Phase 20
+disposable electrical gate is closed; production-side application is next.

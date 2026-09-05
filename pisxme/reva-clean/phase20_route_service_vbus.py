@@ -17,9 +17,8 @@ def main():
  seg(b,n,pcbnew.F_Cu,[(43,101.25),(39.5,101.25)])
  seg(b,n,pcbnew.F_Cu,[(47,101.25),(51,101.25)])
  # Leave the A-side pads on F.Cu, then use an outer B.Cu perimeter.  The
- # transition at x=39.5 is left of the data alias fields and avoids the
- # primary DM vertical escape.
- seg(b,n,pcbnew.F_Cu,[(42,98.75),(39.5,98.75),(39.5,101.25),(42,101.25)])
+ # transitions at x=39.5/51 are left/right of the data alias fields and
+ # avoid the primary DM vertical escape.
  seg(b,n,pcbnew.B_Cu,[(39.5,98.75),(39.5,95),(51,95),(51,98.75)])
  seg(b,n,pcbnew.B_Cu,[(39.5,101.25),(39.5,98.75)])
  seg(b,n,pcbnew.B_Cu,[(51,101.25),(51,98.75)])

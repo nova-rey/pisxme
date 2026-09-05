@@ -1,8 +1,12 @@
 ** Drc report for PHASE20_SERVICE_RD_OUTER_REFILLED.kicad_pcb **
-** Created on 2026-09-05T04:08:20 **
+** Created on 2026-09-05T04:12:28 **
 ** Report includes: Errors, Warnings **
 
-** Found 192 DRC violations **
+** Found 190 DRC violations **
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0382 mm)
+    Local override; error
+    @(71.2000 mm, 106.3000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 1.8788 mm
+    @(71.2000 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 2.3087 mm
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1473 mm)
     Local override; error
     @(70.0400 mm, 100.3000 mm): Pad 110 [/CORE_CM5/CM5_REFCLK_P] of J7 on F.Cu
@@ -11,10 +15,6 @@
     Local override; error
     @(70.0400 mm, 100.3000 mm): Track [/CORE_CM5/CM5_REFCLK_P] on F.Cu, length 2.3400 mm
     @(70.0400 mm, 99.9000 mm): Pad 108 [/CORE_CM5/POWER_GND] of J7 on F.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0382 mm)
-    Local override; error
-    @(71.2000 mm, 106.3000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 1.8788 mm
-    @(70.0400 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 1.1600 mm
 [hole_clearance]: Hole clearance violation (pad clearance 1.7000 mm; actual 0.7783 mm)
     Local override; error
     @(69.5000 mm, 132.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of R11 on F.Cu
@@ -141,16 +141,16 @@
     @(147.2750 mm, 128.0000 mm): Pad 26 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
+    @(139.7250 mm, 128.2500 mm): Pad 25 [<no net>] of J3 on F.Cu
+    @(139.7250 mm, 127.7500 mm): Pad 27 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
     @(68.0000 mm, 130.0000 mm): NPTH pad of J7
     @(69.5000 mm, 132.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of R11 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(68.0000 mm, 130.0000 mm): NPTH pad of J7
     @(70.5000 mm, 132.0000 mm): Pad 2 [/REGULATORS/FB_BRIDGE_3V3] of R11 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(139.7250 mm, 128.2500 mm): Pad 25 [<no net>] of J3 on F.Cu
-    @(139.7250 mm, 127.7500 mm): Pad 27 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(147.2750 mm, 128.0000 mm): Pad 26 [<no net>] of J3 on F.Cu
@@ -354,12 +354,6 @@
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
     @(68.5000 mm, 162.0000 mm): Via [/REGULATORS/RT_CM5_5V] on F.Cu - B.Cu
-[track_dangling]: Track has unconnected end
-    Local override; warning
-    @(42.0000 mm, 98.7500 mm): Track [/SERVICE/SERVICE_VBUS_SENSE] on F.Cu, length 2.5000 mm
-[track_dangling]: Track has unconnected end
-    Local override; warning
-    @(39.5000 mm, 101.2500 mm): Track [/SERVICE/SERVICE_VBUS_SENSE] on F.Cu, length 2.5000 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
     @(82.9500 mm, 106.0000 mm): Track [/V100_PCIE/V100_PET0_P] on F.Cu, length 1.0500 mm
@@ -1329,11 +1323,11 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(62.2500 mm, 164.2500 mm): Pad 14 [12V_PROTECTED] of U3 on F.Cu
-    @(62.2500 mm, 163.0000 mm): Pad 16 [12V_PROTECTED] of U3 on F.Cu
+    @(62.2500 mm, 162.0000 mm): Track [12V_PROTECTED] on F.Cu, length 1.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(68.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C14 on F.Cu
-    @(62.2500 mm, 162.0000 mm): Track [12V_PROTECTED] on F.Cu, length 1.0000 mm
+    @(53.1000 mm, 162.0000 mm): Track [12V_PROTECTED] on F.Cu, length 9.1500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(76.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C15 on F.Cu
@@ -2136,7 +2130,7 @@
     @(109.2000 mm, 55.0000 mm): Pad 1 [/POWER_INPUT/VCAP_A] of C3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(170.0000 mm, 85.0000 mm): Track [/V100_PCIE/V100_PET0_P] on B.Cu, length 5.4000 mm
+    @(175.4000 mm, 85.0000 mm): Track [/V100_PCIE/V100_PET0_P] on B.Cu, length 7.5400 mm
     @(235.9500 mm, 54.0000 mm): Pad 2 [/V100_PCIE/V100_PET0_P] of C1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
