@@ -546,6 +546,23 @@ not evidence against rotation 270: it identifies the required next repair as
 clock-aware SATA pad-row generation plus a native zone-fill/reload pass.
 Phase 19 remains active; Phase 20+ remains untouched.
 
+## 2026-09-04 rotation-270 candidate artifact and native crash repair
+
+The previously missing rotated candidate was generated successfully after
+isolating a KiCad 10 Flatpak SWIG crash in the coordinated generator. The
+crash occurred while enumerating zones after footprint/net mutation; the
+generator now makes zone refill opt-in for disposable candidates so the board
+can be saved and reopened for native validation. The resulting artifact is
+`PHASE19_COORDINATED_U7ROT270_FULL.kicad_pcb`, with native DRC `403` / `413`
+before clock integration and `PHASE19_COORDINATED_U7ROT270_CLOCK.kicad_pcb`
+with `486` / `416` after the first clock overlay.
+
+The rot270 orientation remains the best geometric lead because the clock row
+escapes west while the SATA pins face the other side. The first overlay is
+rejected; its new errors are identifiable clock/SATA local escape crossings,
+non-planar support fanout, and inherited zone/via-rule records. No Phase 19
+closure claim is made.
+
 ## 2026-09-04 coordinated-generator invocation correction
 
 The coordinated storage generator previously depended on host-side `P19_*`
