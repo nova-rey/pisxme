@@ -1180,6 +1180,20 @@ zero focused shorts was incorrect. The rotation-0 candidate remains rejected.
 KiCad DRC reported 215 records, including five crossings and one U7 NC-pad
 short, plus an F.Cu SATA pair crossing. Rejected; SATA270 remains the
 storage-side oracle.
+## 2026-09-05 SATA RX_P F.Cu coordinated trial
+
+`PHASE19_COORDINATED_SATAP_F24.kicad_pcb` moved SATA RX_P to F.Cu. Native
+KiCad DRC reported 215 records, including five crossings, one U7 NC-pad
+short, and an additional F.Cu SATA pair crossing. Rejected; SATA270 remains
+the storage-side oracle.
+
+## 2026-09-05 mid-acreage relocation baseline
+
+The existing `phase19_storage_midacreage_coordinated.py` was run at its
+U7/J3 relocation `(110,105)/(145,125)`. Native KiCad DRC reported 320
+records, including four crossings, five shorts, and 426 unconnected items.
+It is rejected as an ancestor because its via/zone and CM5 source-escape
+geometry is invalid.
 ## 2026-09-05 legacy mid-acreage relocation baseline
 
 The existing `phase19_storage_midacreage_coordinated.py` was run as a

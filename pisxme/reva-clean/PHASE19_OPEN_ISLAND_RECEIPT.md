@@ -168,6 +168,12 @@ Rejected as a full SATA pass.
 - `PHASE19_COORDINATED_SATAP_F24-drc.rpt`: 215 total records, 5 crossings,
   1 U7 NC-pad short, and an additional F.Cu SATA crossing; rejected.
 - SATA270 remains the storage-side oracle.
+### 2026-09-05 — relocation baselines
+
+- SATA RX_P F.Cu trial: 215 records, 5 crossings, 1 U7 NC-pad short, plus an
+  F.Cu SATA crossing; rejected.
+- Mid-acreage coordinated author: 320 records, 4 crossings, 5 shorts, 426
+  unconnected; rejected as an ancestor.
 ### 2026-09-05 — legacy mid-acreage relocation baseline
 
 - `PHASE19_MIDACREAGE_COORDINATED-drc.rpt`: 320 total records, 4 crossings,
