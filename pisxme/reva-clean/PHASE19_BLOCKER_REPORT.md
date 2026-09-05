@@ -528,6 +528,22 @@ high-speed envelope before descending, and preserve the passing
 minimal-fixture topology. Phase 19 remains active; Phase 20+ remains
 untouched.
 
+## 2026-09-04 ordered B.Cu clock-trunk trial
+
+The next trial used three ordered B.Cu trunk lanes after short U7 escapes,
+with XI/XO/VSSOSC assigned monotonically before the south support island.
+Native KiCad DRC measured `391` violations and `466` unconnected items. This
+was an improvement over the prior `417`-violation trial, but it still produced
+new clock errors because the U7-side transition was itself inside the active
+SATA pad/launch field and the Y1 return dogbones were not planar with the
+adjacent XI/XO pads.
+
+The candidate is rejected. This closes the class of clock-only overlays on
+the existing coordinated storage copper. The next in-scope repair must
+regenerate the U7/J3 USB3/SATA island with clock-aware pad escapes as one
+coherent candidate; the validated PCIe ancestor, layer contract, stack, and
+storage architecture remain frozen.
+
 ## 2026-09-04 pre-field B.Cu trunk trial
 
 A third south-corridor experiment moved the long XI/XO/VSSOSC trunks onto
