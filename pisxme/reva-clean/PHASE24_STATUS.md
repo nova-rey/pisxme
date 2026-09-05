@@ -648,6 +648,13 @@ right-column pads (y=102.3–105.9) yields `PHASE24_CM5_GROUND_RIGHT_COLUMN_EXPA
 at 209 violations, 130 unconnected records, zero shorts, and zero crossings.
 No upper Ethernet-row copper or new via field was introduced.
 
+The lower x=70.04 right-column group was then collected on an outer x=71.50
+F.Cu rail for y=110.7–117.9. `PHASE24_CM5_GROUND_RIGHT_OUTER_V4` remains at
+209 violations, reduces unconnected records from 130 to 124, and introduces
+zero shorts or crossings. This lower collector is accepted; the remaining
+J7 findings are the upper interleaved rows and the unconnected connector
+attachment.
+
 The upper same-row-only J7 ground bridges are rejected: fresh native DRC
 reports 216 violations, 124 unconnected records, one short, and six
 crossings. This confirms that the live Ethernet launch segments must be

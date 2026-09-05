@@ -764,6 +764,11 @@ zero shorts/crossings, and 136 then 130 unconnected records. The upper
 Ethernet-interleaved rows remain the only J7 portion not covered by this
 collector class.
 
+The lower x=70.04 J7 group was added to a separate x=71.50 outer F.Cu rail.
+Fresh DRC reports 209 violations, 124 unconnected records, zero shorts, and
+zero crossings. The remaining J7 work is confined to upper interleaved rows
+and connector-plane attachment.
+
 The cumulative PCB was missing serialized net identity on U7 clock pads
 52/53/54. That was corrected in a disposable candidate using the schematic's
 XI/VSSOSC/XO mapping. Native DRC remains at 201 violations with zero
