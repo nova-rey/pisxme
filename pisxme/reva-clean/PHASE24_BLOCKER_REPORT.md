@@ -16,6 +16,13 @@ corrected ordinary via at the accepted outer collector plus a distinct
 The via/zone was not promoted; the 209/122/0/0 same-row collector remains the
 working basis.
 
+The upper outer-escape candidate is rejected at 215 native violations, 118
+unconnected records, two shorts, and three crossings. The failure is a real
+upper Ethernet-launch collision, not a parser or severity issue. Specialist
+geometry review measured the preserved lane spacing as below the clearance
+needed by an ordinary 0.50/0.30 mm via, so further same-class upper F.Cu
+collector variants are not justified.
+
 # PiSXMe Rev A Clean — Phase 24 blocker report
 
 Status: `PHASE24_IN_PROGRESS` (recoverable implementation blocker)

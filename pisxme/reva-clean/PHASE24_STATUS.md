@@ -684,3 +684,10 @@ to the accepted outer collector and correcting the drill to the board minimum,
 fresh native DRC still reports 210 violations and 122 unconnected records,
 with zero shorts/crossings but no connectivity improvement. The zone/via
 trial is not promoted and the 209/122/0/0 same-row basis remains authoritative.
+
+An upper J7-ground outer-escape trial was also rejected. It escaped the three
+upper rows to separate outer F.Cu columns without pad-field bridges, but fresh
+native DRC reports 215 violations, 118 unconnected records, two shorts, and
+three crossings. A specialist review confirms that the preserved upper
+Ethernet lanes do not provide enough clearance for ordinary 0.50/0.30 mm
+through-via transitions; no upper escape is promoted.
