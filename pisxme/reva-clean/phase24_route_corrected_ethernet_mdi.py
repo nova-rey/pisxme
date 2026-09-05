@@ -7,11 +7,12 @@ authority or inserts synthetic connectivity.
 from pathlib import Path
 from heapq import heappush, heappop
 import math
+import sys
 import pcbnew
 
 ROOT = Path(__file__).resolve().parent
-BASE = ROOT / "PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb"
-OUT = ROOT / "PHASE24_CORRECTED_ETHERNET_MDI_ROUTE.kicad_pcb"
+BASE = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb")
+OUT = ROOT / (sys.argv[2] if len(sys.argv) > 2 else "PHASE24_CORRECTED_ETHERNET_MDI_ROUTE.kicad_pcb")
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 STEP, WIDTH = 0.25, 0.127
 VIA_W, VIA_D = 0.45, 0.20

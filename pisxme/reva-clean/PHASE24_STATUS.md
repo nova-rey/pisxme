@@ -1,5 +1,18 @@
 # Phase 24 acreage validation status
 
+## Ethernet launch-orientation experiment — 2026-09-05
+
+The corrected-basis router was run against disposable J2 rotations 90 and 270
+(`PHASE24_ETH_J2_ROT90_PLACEMENT.kicad_pcb` and
+`PHASE24_ETH_J2_ROT270_PLACEMENT.kicad_pcb`). Both failed before saving a
+complete route: the native-pad search could not find the second-stage
+ESD-to-MagJack path after the first pair set occupied the local corridors.
+This is a repeated `ROUTE IMPLEMENTATION FAILURE` in the current sequential
+search/escape model, not a floorplan comparison and not permission to relax
+pad clearance. The next class will use explicit alternating launch layers
+and a pad-field-aware multi-pair escape/rip-up order on the same corrected
+placement.
+
 ## Corrected-basis Ethernet routing development — 2026-09-05
 
 The first complete eight-pair search candidate from
