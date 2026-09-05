@@ -37,6 +37,14 @@ better. This bounded negative result confirms that moving clock support within
 the existing U7/J3 placement cannot clear SATA occupancy. The next credible
 step is one regenerated storage island with a dedicated clock corridor.
 
+An outboard coordinated storage-room experiment moved U7 to `(180,140)` and
+J3 to `(250,100)` while retaining the V3 SATA authoring branch, then applied
+the corrected live-U7 clock transform with a `-20 mm` support shift. Native
+DRC reported `417` unconnected items and 29 crossing/short records. The
+candidate is rejected: the outboard J3 move alone does not repair the stale
+USB3/SATA route construction or provide a valid integrated clock corridor.
+No PCIe or architecture change was made.
+
 ## 2026-09-04 local underside clock-island follow-up
 
 The next authorized class was implemented as a parameterized authoring path in
