@@ -310,6 +310,19 @@ items fall from 397 to 391. The candidate is retained as targeted input
 geometry evidence, but the F2 fields still need named connections to J6/U2/Q2
 and the rest of the protected distribution.
 
+## J1 protected-12V field bus experiment
+
+The first J1 B.Cu-only bus was rejected because the saved connector pads are
+surface pads and native DRC worsened to 214 violations. The corrected
+`phase24_j1_protected_bus.py` derives all 13 protected-pad columns from the
+serialized J1 footprint, joins each column on F.Cu, transfers each column
+through one ordinary offset via below the final row, and joins the B.Cu bus.
+Native DRC returns to the inherited 201 violations with zero shorts and zero
+crossings; unconnected items fall from 397 to 268. This is strong targeted
+evidence for the J1 protected field, but named attachment to the rest of the
+protected distribution and the remaining ground/CM5/rail groups are still
+required.
+
 The analogous F1 A-side pad-field trial joins its raw and fused four-pad
 groups independently. Native DRC remains at 201 violations with zero shorts
 and zero crossings; unconnected items fall from 397 to 392. This is retained

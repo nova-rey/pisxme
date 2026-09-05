@@ -605,6 +605,14 @@ accepted targeted evidence only; it does not falsely bridge raw-to-fused
 power, and the named J6/F2/U2/Q2 branch and board-wide distribution remain
 open.
 
+The initial J1 protected bus was rejected: B.Cu copper did not physically
+contact the serialized surface pads and native DRC rose to 214 violations.
+The corrected F.Cu-column plus offset-via/B.Cu-bus candidate passes its local
+native gate with 201 inherited violations, zero shorts/crossings, and 268
+unconnected records versus 397. It is retained as the next promoted physical
+power-field evidence, while full named distribution and all remaining native
+connection classes remain open.
+
 The F1 A-side pad-field trial likewise passed as local evidence: 201 native
 DRC violations, zero shorts/crossings, and five fewer unconnected records
 (397 to 392). Raw and fused nets remain separate. Full Phase 24 still awaits
