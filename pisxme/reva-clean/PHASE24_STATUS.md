@@ -831,6 +831,12 @@ open. A fresh J7-derived CM5-ground launch/plane experiment was rejected:
 `264` violations, `397` unconnected records, four shorts, and one crossing.
 No severity or connection was waived.
 
+The next adjacent-row probe, C14.2 to C15.2, was rejected by native DRC:
+although it reduced the raw unconnected census to `395`, the straight join
+shorted `POWER_GND` to the neighboring `12V_PROTECTED` C15.1 pad and raised
+total violations to `203`. It is not promoted; capacitor orientation and
+neighboring power pads must be included in the next return-island route.
+
 The next single-pair POWER_GND repair was derived from the saved candidate's
 actual C5/C6 pad centers. Native DRC reduced the unconnected census from
 `397` to `396` with no new shorts, crossings, or total-violation increase;

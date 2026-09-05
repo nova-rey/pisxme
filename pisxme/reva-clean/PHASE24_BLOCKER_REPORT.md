@@ -1028,6 +1028,11 @@ The experiment is not promoted; the next repair class must be a
 clearance-mapped, layer-owned return strategy or a schematic-authorized
 support change.
 
+The C14/C15 adjacent-row probe is rejected. Its direct native-pad-center
+POWER_GND join created a real POWER_GND/12V_PROTECTED short at C15.1 and
+raised native DRC to `203` violations despite fewer unconnected records.
+The accepted C5/C6-only candidate remains the working step.
+
 ## Incremental return repair — 2026-09-05
 
 `phase24_power_gnd_current_local.py` adds only the native-pad-center C5.2 to
