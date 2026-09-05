@@ -1007,6 +1007,29 @@ anchors remain unchanged. No moved copper was accepted. Phase 24 remains open
 for coherent affected-neighborhood regeneration; detailed open repair resumes
 only after that regeneration is validated.
 
+## Immutable-parent and clean-neighborhood discriminator — 2026-09-05
+
+Following independent review, the exact selected macro parent was snapshotted
+as `PHASE24_SELECTED_MACRO_PARENT_20260905.kicad_pcb`, SHA-256
+`da8c9012ddedf5feac774d96c8110e0e0ab7fba2b8ae04e0423727be613f8701`.
+Inherited-only native refill/DRC on that immutable parent reported 450 total
+violations, 22 shorting items, 0 track crossings, and 449 unconnected items.
+
+The disposable `phase24_clean_eth_overlay.py` then removed only invalidated
+Ethernet, USB3/storage, and clock copper, moved the Ethernet endpoint set to
+the exact CM5IO oracle geometry, and transplanted the unmodified oracle MDI
+tracks. Native refill/DRC reported 387 total violations, 2 shorting items, 0
+track crossings, and 416 unconnected items. Both shorts are the inherited
+U7/C17 `POWER_GND` versus `BRIDGE_SATA_RX_N/RX_P` pad-field defect; no Ethernet
+short or crossing was found in this controlled overlay.
+
+This establishes the next repair boundary: use immutable parent hashes for
+every comparison, clear affected functional-neighborhood copper coherently,
+and regenerate from native pads. The prior transformed Ethernet reports are
+not comparable unless their exact parent is recorded. Phase 24 remains open;
+the overlay is not an acreage pass because support circuitry and board-wide
+connectivity are still incomplete.
+
 The subsequent Ethernet regeneration probes were also preserved as disposable
 evidence. A naive rigid translation into north-west acreage reported 448 total
 violations, 2 shorts, 8 crossings, and 433 unconnected items; the crossings
