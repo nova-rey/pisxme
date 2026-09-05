@@ -106,6 +106,10 @@ The remaining U7 configuration pad pair is now natively joined on the current
 ancestor. DRC reports zero shorts/crossings and 136 unconnected records; no
 validation severity or storage topology was changed.
 
+The C5/C6 direct ground join was tested and rejected at one native short,
+despite reducing unconnected records to 140. This confirms that the remaining
+global-ground field requires layer-aware escape geometry.
+
 ## Native DRC evidence correction
 
 Fresh KiCad DRC on the exact current ancestor reports 235 violations, 136

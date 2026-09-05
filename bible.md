@@ -4120,3 +4120,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Corrected Phase 24 DRC evidence after an independent fresh native rerun found 235 violations, 4 shorts, and 7 crossings; earlier zero short/crossing parser claims are superseded, and the J7 top-row trial was rejected at 8 shorts and 10 crossings.
 2026-09-05: Reconciled Phase 24 candidates with full-report native DRC counting; the clean working basis is the 205/145/0-short/0-crossing bridge-1V1 capacitor chain, while later composite joins are rejected pending regeneration.
 2026-09-05: Revalidated the clean Phase 24 repair sequence with full-report DRC: R19 and the regenerated 3V3 capacitor field reach 208 violations, 141 unconnected records, zero shorts, and zero crossings; contaminated later joins remain rejected.
+2026-09-05: Rejected the C5/C6 direct POWER_GND join after fresh DRC found one native short; retained the 208/141/0-short/0-crossing clean repair basis.

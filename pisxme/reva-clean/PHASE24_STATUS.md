@@ -589,6 +589,11 @@ remains at zero shorting/crossing classes and the unconnected census falls
 from 137 to 136. This closes the one remaining U7 configuration connectivity
 record without changing the storage architecture.
 
+The C5.2-to-C6.2 direct POWER_GND trial is rejected: fresh DRC reports 209
+violations, 140 unconnected records, and one short. The one-record reduction
+does not justify the introduced short; the clean 3V3-cap-chain ancestor is
+retained.
+
 ## Fresh native DRC reconciliation
 
 An independent auditor reran KiCad DRC on the exact serialized
