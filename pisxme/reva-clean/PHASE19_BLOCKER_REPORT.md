@@ -369,3 +369,27 @@ mode or against the open-side placement; it identifies the next necessary
 experiment as a pad-row escape/rotation change with one net per corridor,
 followed by a fresh coordinated USB3/SATA candidate. No Phase 19 gate was
 relaxed and no Phase 20 work started.
+
+## 2026-09-04 consultant review and perpendicular-first follow-up
+
+The independent consultant reviewed the three rejected clock classes and the
+current materialized geometry. It identified a common topology defect rather
+than a placement or architecture defect: each prior trial ran at least one
+clock track along the 0.5 mm-pitch U7 pad row before turning away. The exact
+U7 row is 52/XI `(247.0,109.5)`, 53/VSSOSC `(247.5,109.5)`, 54/XO
+`(248.0,109.5)`, with adjacent no-net pads 51 and 55. It also found that the
+trial helper used 0.15 mm traces against a 0.20 mm board minimum.
+
+The consultant recommended retaining the open east-side support placement,
+escaping each clock pad perpendicular to the row before any lateral turn, and
+using separated corridors for the subsequent crystal branches. This is an
+in-scope authoring/routing correction. It does not require changing the
+TUSB9261 clock architecture, layer contract, or PCIe corridor.
+
+The follow-up applied the perpendicular-first breakout and raised the trial
+trace width to 0.20 mm. Native KiCad DRC improved to 225 violations / 474
+unconnected items, but the trial still generated clock-only crossings and
+shorts in the downstream same-layer XI/XO/VSSOSC branches. It is rejected;
+the result confirms the U7-row defect was real but that the crystal-side
+branch topology must also be changed. Phase 19 remains active and Phase 20+
+remain untouched.
