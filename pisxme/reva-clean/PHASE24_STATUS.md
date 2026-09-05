@@ -127,3 +127,9 @@ Layer-separated passive dogbones with offset through-vias were also rejected
 by native DRC (306 violations: 14 shorts and 6 crossings); four outboard
 variants had no conservative path. A fresh coordinated clock graph is now
 required for support integration.
+The coordinated layer-owned disposable fixture now proves the complete
+Y1/R23/C42/C43 clock-support graph: XI is carried on B.Cu, XO on F.Cu, and
+VSSOSC on a separate B.Cu perimeter. Native DRC reports no clock crossings,
+shorts, footprint errors, or clock unconnected records. Its eight remaining
+unconnected records are deliberately isolated non-clock U7 pads in the
+stripped fixture; acreage transplant and full Phase 24 parity remain open.

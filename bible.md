@@ -4059,3 +4059,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: rejected five-position passive-island sweep; four placements had no conservative rail path and the best generated board had 322 native DRC violations.
 2026-09-05 Phase24: rejected multi-net graph-anchor sweep; all six branches were found but native DRC reported 10 shorts and 4 crossings, requiring layer-separated passive dogbones.
 2026-09-05 Phase24: rejected layer-separated passive dogbones and four outboard variants; best native DRC was 306 violations with 14 shorts and 6 crossings.
+2026-09-05 Phase24: coordinated layer-owned clock graph passed native clock-specific DRC with zero crossings, shorts, and footprint errors; acreage transplant remains open.

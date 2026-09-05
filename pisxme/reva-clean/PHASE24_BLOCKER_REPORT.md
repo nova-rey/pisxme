@@ -395,3 +395,17 @@ reported 306 violations, including 14 shorts and 6 crossings. Four further
 outboard placement variants had no conservative route to a clock graph point.
 This class is rejected; the inherited clock oracle cannot accept passive
 fanout incrementally.
+## Coordinated layer-owned clock graph (source proof)
+
+`phase24_clock_coordinated_layers.py` now emits the complete Y1/R23/C42/C43
+## Coordinated layer-owned clock graph (source proof)
+
+`phase24_clock_coordinated_layers.py` now emits the complete Y1/R23/C42/C43
+graph with XI on B.Cu, XO on F.Cu, and VSSOSC on a separate B.Cu perimeter.
+The latest native DRC report `PHASE24_CLOCK_COORDINATED_LAYERS-drc.rpt`
+contains no `tracks_crossing`, no `shorting_items`, and no footprint errors.
+The only DRC warning is R23 silkscreen text height; the eight reported
+unconnected items are unrelated non-clock U7 pads intentionally left isolated
+by the disposable fixture. All clock source and support pads are connected.
+This is the first complete clock/support topology proof; it is not yet an
+acreage promotion.
