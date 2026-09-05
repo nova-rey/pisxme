@@ -619,6 +619,13 @@ DRC violations, zero shorts/crossings, and five fewer unconnected records
 complete named input-branch, protected-12V, ground, low-voltage, and
 clock/storage connectivity.
 
+The bridge low-voltage field trial initially shorted the intervening U4/U5
+POWER_GND pad and was rejected. The corrected perimeter escape passes native
+DRC with 201 inherited violations, zero shorts/crossings, and reduces the
+plane-based candidate from 265 to 261 unconnected records. It is retained as
+targeted evidence; full bridge rail/capacitor/control connectivity remains
+open.
+
 The protected-12V plane was tested on the corrected J1 field bus. It remains
 native-clean relative to the candidate (201 DRC violations, zero
 shorts/crossings) and reduces unconnected records from 268 to 265. This

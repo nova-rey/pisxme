@@ -337,6 +337,17 @@ violations. All variants are rejected. CM5 ground must not be copper-bridged
 to global POWER_GND; an obstacle-aware escape or authority correction is
 required.
 
+## Bridge low-voltage pad-field experiment
+
+The first direct U4/U5 low-voltage joins crossed the intervening POWER_GND
+pad and were rejected with two shorts. The corrected
+`phase24_bridge_lv_padfields.py` exits each pad field around that ground pad,
+then joins the bridge rail pads on F.Cu. Native DRC is 201 inherited
+violations with zero shorts and zero crossings; the plane-based candidate's
+unconnected count falls from 265 to 261. This is accepted targeted evidence;
+remaining bridge capacitor distribution and control/clock connectivity still
+require complete named routing.
+
 ## J1 protected-12V field bus experiment
 
 The first J1 B.Cu-only bus was rejected because the saved connector pads are
