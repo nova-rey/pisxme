@@ -14,11 +14,16 @@ DX,DY=((int(os.environ.get('CLOCK_DX','150')),int(os.environ.get('CLOCK_DY','5')
 MIRROR=os.environ.get('CLOCK_MIRROR')=='1'
 ROT=int(os.environ.get('CLOCK_ROTATE','0'))
 TX=float(os.environ.get('CLOCK_TARGET_X','140')); TY=float(os.environ.get('CLOCK_TARGET_Y','130'))
+SUPPORT_SHIFT=float(os.environ.get('CLOCK_SUPPORT_SHIFT','0'))
 def TF(p):
-    if ROT==90: return (TX-(p[1]-100), TY+(p[0]-100))
+    if ROT==90:
+        q=(TX-(p[1]-100), TY+(p[0]-100))
+        return (q[0]+(SUPPORT_SHIFT if p[1]>=115 else 0),q[1])
     return ((240-p[0],210-p[1]) if MIRROR else (p[0]+DX,p[1]+DY))
 def LOCAL(p):
-    if ROT==90: return (100+(p[1]-TY), 100-(p[0]-TX))
+    if ROT==90:
+        x=p[0]-(SUPPORT_SHIFT if p[0] < TX-5 else 0)
+        return (100+(p[1]-TY), 100-(x-TX))
     return (TF(p) if MIRROR else (p[0]-DX,p[1]-DY))
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def T(b,n,a,z,l):
@@ -41,7 +46,9 @@ def main():
         for ref,lib in (('Y1','Crystal_3225_4Pad'),('R23','R_0402_1005Metric'),('C42','C_0402_1005Metric'),('C43','C_0402_1005Metric')):
             if b.FindFootprintByReference(ref) is None:
                 f=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),lib); f.SetReference(ref); b.Add(f)
-    _support_rot = 90 if ROT==90 else 0
+    # KiCad's native footprint-positive rotation is clockwise in board
+    # coordinates; the graph transform above is mathematical CCW.
+    _support_rot = 270 if ROT==90 else 0
     placements={'Y1':(TF((100,115)),_support_rot),'R23':(TF((100,125)),_support_rot),'C42':(TF((94,125)),_support_rot),'C43':(TF((106,125)),_support_rot)}
     maps={'Y1':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_VSSOSC','3':'/STORAGE/BRIDGE_XO','4':'/STORAGE/BRIDGE_VSSOSC'},'R23':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_XO'},'C42':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_VSSOSC'},'C43':{'1':'/STORAGE/BRIDGE_XO','2':'/STORAGE/BRIDGE_VSSOSC'}}
     nets={x:b.FindNet(x) for x in ('/STORAGE/BRIDGE_XI','/STORAGE/BRIDGE_XO','/STORAGE/BRIDGE_VSSOSC')}
