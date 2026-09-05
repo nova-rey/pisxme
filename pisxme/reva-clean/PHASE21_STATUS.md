@@ -14,5 +14,12 @@ or Phase 20 SERVICE geometry:
 
 Phase 21 routing must keep these nets local, use only F.Cu/B.Cu ordinary
 routing, avoid high-speed/regulator switch-node exposure, and preserve the
-validated PCIe, USB3, SATA, Ethernet, and SERVICE artifacts. No Phase 21
-closure is claimed yet.
+validated PCIe, USB3, SATA, Ethernet, and SERVICE artifacts.
+
+The current coordinated candidate is
+`PHASE21_CONTROLS_VCAP.kicad_pcb`. It contains passing local repairs for the
+U7 reset tie, bridge 3V3 PG, bridge 1V1 PG, CM5 5V PG, and both LM74700 VCAP
+connections. Native DRC reports 189 violations with no new focused
+short/crossing/width/clearance class. Gate/VCAP and remaining regulator
+FB/RT/control routes still require completion; no Phase 21 closure is
+claimed yet.

@@ -19,3 +19,9 @@ Generated from `PHASE20_SERVICE_RD_OUTER_REFILLED.kicad_pcb` with KiCad pcbnew.
 | `/REGULATORS/RT_BRIDGE_3V3` | R13.1, U4.12 | 0 |
 | `/REGULATORS/RT_CM5_5V` | R5.1, U3.12 | 3 |
 | `/STORAGE/BRIDGE_RESET` | U7.2, U7.4 | 0 |
+
+## Progress
+
+The reset tie, three PG nets, and both VCAP nets are now routed in
+`PHASE21_CONTROLS_VCAP.kicad_pcb`. The remaining zero-track control classes
+are the two power-input gate nets and the bridge FB/RT nets.
