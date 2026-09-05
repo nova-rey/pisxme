@@ -859,3 +859,27 @@ This remains a recoverable local routing blocker. The next authorized class is
 to move the clock transition farther from the USB3 source corridor or assign a
 clock-aware USB3 final landing during the same U7/J3 regeneration. No PCIe,
 stack, layer, or storage-architecture change is required or authorized.
+
+## 2026-09-04 open-acreage live-endpoint coordinated trial
+
+The next solution class moved the complete storage island into open acreage:
+U7 at `(260,105)` rotation `270` and J3 at `(290,105)` rotation `0`. The
+candidate uses the clock-bearing donor `ACREAGE_CLOCK_CANDIDATE5`, removes its
+high-speed copper, and regenerates USB3, four split-cap SATA paths, and the
+40-MHz clock in one authoring pass. The USB3 destinations, U7/J3 pads, and
+support-pad endpoints are read after the placement snapshot is serialized;
+the independent native DRC then reloads the generated board.
+
+The first live-endpoint pass exposed a malformed M.2 output topology: lanes
+were routed through the U7 pad-field or converged on common via columns. The
+authoring harness was repaired to use a rotated-U7 bottom-row escape, separate
+F.Cu/B.Cu SATA pair corridors, and below/above-U7 connector approaches. The
+latest native DRC is `311` violations and `478` unconnected items. It still
+contains candidate-introduced crossings/shorts, so it is rejected and not
+promoted. This is useful evidence that the open-acreage region clears the
+former Phase-18 PCIe corridor, but the live SATA/clock local escape still needs
+one coherent routing repair. Phase 19 remains open; Phase 20+ has not started.
+
+Artifact: `PHASE19_OPEN_ISLAND_LIVE.kicad_pcb`; DRC receipt:
+`PHASE19_OPEN_ISLAND_LIVE-drc.rpt`; authoring path:
+`phase19_live_coordinated_open_island.py`.
