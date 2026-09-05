@@ -225,3 +225,13 @@ oscillator pad escape and inherited SATA-TX launch. The mixed-layer choice did
 not remove that local pad-field obstruction. Consultant/unblocker dispatch was
 retried but remains unavailable because the agent thread limit is exhausted;
 local analysis continues and this is not treated as an architectural block.
+
+## Surgical SATA-launch reroute trial (rejected)
+
+The next bounded class removed only the inherited U7-to-AC-capacitor TX_N/TX_P
+launch tracks and regenerated them with ordinary F.Cu/B.Cu vias, leaving the
+post-cap SATA paths and all unrelated high-speed routes inherited. Native DRC
+reported 252 violations, including new TX_N/TX_P crossings, clock/SATA
+crossings, and a PCIe interaction. The candidate is rejected. It does not
+invalidate the storage architecture; it shows that the two SATA launches and
+the three oscillator exits require one coordinated pad-field escape graph.

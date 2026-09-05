@@ -8,6 +8,8 @@ Corrected the disposable clock sweep output-path bug; the fresh ordered layer-sp
 
 Rejected mixed-layer ordered clock escape trial; local U7 oscillator/SATA pad-field obstruction remains and Phase24 stays active.
 
+Rejected surgical SATA-launch reroute trial; regenerated TX_N/TX_P doglegs still crossed clock/PCIe corridors, so a coordinated U7 pad-field graph is required.
+
 ## 2026-08-30 — Phase 16 PCIe routing checkpoint
 
 - Added the native-loaded Phase 16 PCIe candidate and focused regression.

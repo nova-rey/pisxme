@@ -16,6 +16,7 @@ def main():
             nets[k]=b.FindNet(name)
             if nets[k] is None:
                 nets[k]=pcbnew.NETINFO_ITEM(b,name); nets[k].SetNetCode(b.GetNetCount()+1); b.Add(nets[k])
+        nets['TN']=b.FindNet('/STORAGE/BRIDGE_SATA_TX_N'); nets['TP']=b.FindNet('/STORAGE/BRIDGE_SATA_TX_P')
         u=b.FindFootprintByReference('U7'); u.SetOrientationDegrees(180)
         for num,k in [('52','XI'),('53','VS'),('54','XO')]:
             p=P(u,num); p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode())
@@ -30,6 +31,18 @@ def main():
             t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(l); t.SetWidth(pcbnew.FromMM(.1321)); t.SetNet(nets[k]); b.Add(t)
         def X(k,p):
             v=pcbnew.PCB_VIA(b); v.SetPosition(V(*p)); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(nets[k]); b.Add(v)
+        if tag=='nearwest':
+            # Reopen only the short U7-to-AC-cap launch; post-cap SATA and
+            # every other Phase23 corridor remain inherited.
+            for t in list(b.GetTracks()):
+                if t.GetNetname() in ['/STORAGE/BRIDGE_SATA_TX_N','/STORAGE/BRIDGE_SATA_TX_P']:
+                    b.RemoveNative(t)
+            def RS(k,a,z,l=pcbnew.F_Cu):
+                t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(l); t.SetWidth(pcbnew.FromMM(.1321)); t.SetNet(nets[k]); b.Add(t)
+            def RX(k,p):
+                v=pcbnew.PCB_VIA(b); v.SetPosition(V(*p)); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(nets[k]); b.Add(v)
+            RS('TN',(121,135.5),(121,134.5)); RS('TN',(121,134.5),(118,134.5)); RX('TN',(118,134.5)); RS('TN',(118,134.5),(118,112),pcbnew.B_Cu); RS('TN',(118,112),(134,112),pcbnew.B_Cu); RS('TN',(134,112),(134,110),pcbnew.B_Cu); RX('TN',(134,110)); RS('TN',(134,110),(134.5,110))
+            RS('TP',(120.5,135.5),(119.5,134.5)); RX('TP',(119.5,134.5)); RS('TP',(119.5,134.5),(116,134.5),pcbnew.B_Cu); RS('TP',(116,134.5),(116,132),pcbnew.B_Cu); RS('TP',(116,132),(126.5,132),pcbnew.B_Cu); RS('TP',(126.5,132),(126.5,131),pcbnew.B_Cu); RX('TP',(126.5,131)); RS('TP',(126.5,131),(126.5,130))
         pads={k:xy(P(y,n)) for k,n in [('XI','1'),('VS','2'),('XO','3')]}
         xi,vs,xo=(xy(P(u,n)) for n in ('52','53','54'))
         # proven rot180 exits, then short orthogonal B.Cu corridors to the crystal.
