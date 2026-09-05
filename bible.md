@@ -4150,3 +4150,5 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Accepted one bounded native return repair: C5.2-C6.2 reduced unconnected records 397 to 396 with no new shorts/crossings; U5 connectivity, negative control, and authoritative-part audits remain passing.
 2026-09-05: Rejected the C14.2-C15.2 adjacent return probe after native DRC found a real C15.1 12V_PROTECTED short and 203 total violations; retained the C5/C6-only repair.
 2026-09-05: Corrected stale-base U5 pair sweep: C44/C45 and C46/C47 pair joins were DRC-clean but reduced no native opens, so they were not promoted; the real remaining defect is island-to-return attachment.
+2026-09-05: Corrected stale-base U5 pair sweep: C44/C45 and C46/C47 pair joins were DRC-clean but reduced no native opens, so they were not promoted; the real remaining defect is island-to-return attachment.
+2026-09-05: Rejected three U7 BRIDGE_CFG local escapes: direct F.Cu short, B.Cu SATA crossings, and an early-via route adding six DRC violations without closing an open; no CFG copper promoted.

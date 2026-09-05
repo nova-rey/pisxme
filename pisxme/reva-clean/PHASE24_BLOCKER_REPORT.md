@@ -1046,3 +1046,9 @@ integrated U5 audit plus its real-trace negative control and the
 authoritative-part audit remain passing. The candidate is the new bounded
 working step; broader ground collectors remain rejected until clearance and
 reference access are mapped per island.
+
+The U7 `BRIDGE_CFG` local routing class is rejected after three native
+discriminators: direct F.Cu shorting, B.Cu SATA crossings, and a no-crossing
+early-via route that added six DRC violations without closing an open. The
+next valid storage repair must regenerate the CFG/support neighborhood with
+the U7 pad field and existing SATA corridor reserved together.

@@ -848,3 +848,9 @@ actual C5/C6 pad centers. Native DRC reduced the unconnected census from
 `397` to `396` with no new shorts, crossings, or total-violation increase;
 the U5 native audit and its trace-removal negative control still pass. This
 is accepted incremental progress, not full-board closure.
+
+The U7 `BRIDGE_CFG` discriminator was rejected. A direct F.Cu escape shorted
+U7's no-connect/power pad field; two ordinary-via B.Cu variants removed
+shorts but created SATA crossings, and a local early-via variant removed
+crossings but raised native DRC from `201` to `207` without reducing the
+`396` open census. No CFG copper was promoted.
