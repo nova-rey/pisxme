@@ -23,6 +23,7 @@ SATA270=ARGS.get('P19_SATA270',os.environ.get('P19_SATA270','0'))=='1'
 USB_EAST=ARGS.get('P19_USB_EAST',os.environ.get('P19_USB_EAST','0'))=='1'
 USB_TOP_EAST=ARGS.get('P19_USB_TOP_EAST',os.environ.get('P19_USB_TOP_EAST','0'))=='1'
 USB_PAIR_SPLIT=ARGS.get('P19_USB_PAIR_SPLIT',os.environ.get('P19_USB_PAIR_SPLIT','0'))=='1'
+USB_VERTICAL=ARGS.get('P19_USB_VERTICAL',os.environ.get('P19_USB_VERTICAL','0'))=='1'
 W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def pos(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
@@ -121,6 +122,28 @@ def main():
    seg(b,n,first,(first[0],top[1]),layer); seg(b,n,(first[0],top[1]),(260.0,top[1]),layer)
    seg(b,n,(260.0,top[1]),(outx,top[1]),layer); seg(b,n,(outx,top[1]),(outx,landing[1]),layer); seg(b,n,(outx,landing[1]),landing,layer)
    if suffix.startswith('CM5_USB3_RX_'): via(b,n,landing)
+   seg(b,n,landing,d,pcbnew.F_Cu)
+   continue
+  if USB_VERTICAL:
+   # Pair-aware vertical-entry experiment: RX approaches the left side of
+   # U7 from above on B.Cu, while TX approaches the right side from below
+   # on F.Cu.  The long pair corridors are therefore disjoint from the
+   # SATA island and from each other.
+   first={'CM5_USB3_RX_N':(85.0,103.9),'CM5_USB3_RX_P':(88.0,104.3),
+          'CM5_USB3_TX_N':(90.0,106.3),'CM5_USB3_TX_P':(93.0,106.7)}[suffix]
+   lane_y={'CM5_USB3_RX_N':80.0,'CM5_USB3_RX_P':82.0,
+           'CM5_USB3_TX_N':152.0,'CM5_USB3_TX_P':150.0}[suffix]
+   outx={'CM5_USB3_RX_N':295.0,'CM5_USB3_RX_P':296.0,
+         'CM5_USB3_TX_N':297.0,'CM5_USB3_TX_P':298.0}[suffix]
+   landing={'CM5_USB3_RX_N':(285.0,104.0),'CM5_USB3_RX_P':(286.0,105.0),
+            'CM5_USB3_TX_N':(287.0,115.0),'CM5_USB3_TX_P':(288.0,116.0)}[suffix]
+   launch=(71.2,s[1]); seg(b,n,s,launch); seg(b,n,launch,first)
+   is_rx=suffix.startswith('CM5_USB3_RX_')
+   if is_rx: via(b,n,first)
+   layer=pcbnew.B_Cu if is_rx else pcbnew.F_Cu
+   seg(b,n,first,(first[0],lane_y),layer); seg(b,n,(first[0],lane_y),(outx,lane_y),layer)
+   seg(b,n,(outx,lane_y),(outx,landing[1]),layer); seg(b,n,(outx,landing[1]),landing,layer)
+   if is_rx: via(b,n,landing)
    seg(b,n,landing,d,pcbnew.F_Cu)
    continue
   seg(b,n,s,(start[0],s[1])); seg(b,n,(start[0],s[1]),start); via(b,n,start); seg(b,n,start,far,pcbnew.B_Cu)

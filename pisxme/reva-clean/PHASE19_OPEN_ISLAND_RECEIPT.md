@@ -125,3 +125,9 @@ Rejected as a full SATA pass.
   shorts, 413 unconnected; rejected.
 - The lower placement did not provide a usable coordinated ancestor because
   inherited zones and launch geometry became materially entangled.
+### 2026-09-05 — pair-aware vertical U7-entry trial
+
+- `PHASE19_COORDINATED_SATA270_USB_VERTICAL1-drc.rpt`: 94 total records,
+  four crossings, two shorts; rejected.
+- RX/TX pair corridors were separated, but U7’s single-row USB fan-in and
+  the bottom corridor/J3 mechanical-hole interaction remained.

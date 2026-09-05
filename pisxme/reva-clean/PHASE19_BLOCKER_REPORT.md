@@ -1103,3 +1103,13 @@ unconnected items. The candidate is rejected: the inherited power-zone and
 launch geometry are materially entangled, so this is not a viable placement
 ancestor. The next placement class is a pair-aware vertical U7 entry (RX
 from above, TX from below) around the existing clean SATA oracle.
+## 2026-09-05 pair-aware vertical U7-entry trial
+
+`PHASE19_COORDINATED_SATA270_USB_VERTICAL1.kicad_pcb` kept RX and TX as
+separate pair corridors, entering the relocated U7 from above and below
+around the clean SATA270 oracle. Native KiCad DRC measured 94 records,
+including four crossings and two shorts. The failures are U7 final RX/TX
+dogbone fan-in, one RX launch into a neighboring U7 pad, and a bottom F.Cu
+source corridor intersecting the J3 mechanical hole. This candidate is
+rejected. The repeated U7 single-row fan-in is now the discriminating evidence
+for the next orientation search; no SATA short/crossing was reintroduced.
