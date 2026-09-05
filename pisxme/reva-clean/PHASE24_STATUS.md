@@ -386,3 +386,21 @@ at 201 inherited violations with zero shorts and zero crossings; the prior
 bridge candidate's unconnected count falls from 261 to 258. This is accepted
 targeted regulator-return evidence; full ground-plane attachment remains
 open.
+
+The combined U4/U5 ground-field trial was rejected for two crossings against
+the existing U4 PG_BRIDGE_3V3 corridor. A bounded U5-only follow-up retains
+the clean U3 ground result and adds the U5 perimeter field: native DRC is 201
+inherited violations with zero shorts/crossings and 255 unconnected items.
+U4 remains intentionally excluded from this promoted local candidate until
+its control corridor is regenerated.
+
+## Global POWER_GND launch cluster
+
+Following the independent PI review, `phase24_pgnd_launch_cluster.py` adds
+short F.Cu dogbones and ordinary through-vias for U1.2, U2.2, J4's four
+POWER_GND pads, and U8.3, feeding the existing In1/In4 planes. The first J4
+bottom-left launch was rejected because its via hit the existing USB2 B.Cu
+track; moving that one via to `(40.5,103.0)` corrected the collision. The
+final native DRC candidate reports 201 inherited violations, zero shorts,
+zero crossings, and 188 unconnected items versus 195 before the cluster.
+CM5 `/CORE_CM5/POWER_GND` remains separate and untouched.

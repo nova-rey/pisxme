@@ -664,3 +664,16 @@ The U3 POWER_GND field now has a clean targeted perimeter escape: 201
 inherited native DRC violations, zero shorts/crossings, and 258 unconnected
 records versus 261. The remaining board-wide ground distribution and CM5
 ground authority are still unresolved.
+
+The combined U4/U5 ground-field experiment was rejected after two native
+crossings at U4's PG_BRIDGE_3V3 corridor. The U5-only follow-up passes with
+201 inherited DRC violations, zero shorts/crossings, and 255 unconnected
+records, and is retained as targeted evidence. U4 control/power routing and
+board-wide ground distribution remain open.
+
+The consultant-recommended global POWER_GND launch cluster was validated
+after correcting one J4 via that intersected an existing USB2 B.Cu track.
+The final candidate has 201 inherited native DRC violations, zero
+shorts/crossings, and 188 unconnected records versus 195. It targets only
+U1/U2/J4/U8 global returns; CM5 ground was not bridged and remains a separate
+authority issue.
