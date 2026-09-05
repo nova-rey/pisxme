@@ -677,3 +677,10 @@ The final candidate has 201 inherited native DRC violations, zero
 shorts/crossings, and 188 unconnected records versus 195. It targets only
 U1/U2/J4/U8 global returns; CM5 ground was not bridged and remains a separate
 authority issue.
+
+The first cumulative local-repair composition was rejected for three native
+12V-to-ground crossings at U3/U5/U4 field routes. The corrected composition
+preserves the clean J1/global-return/bridge/input repairs while omitting the
+overlapping regulator ground traces. It passes native DRC at 201 inherited
+violations with zero shorts/crossings and 168 unconnected records. This is
+the current best power/rail integration candidate, not Phase 24 closure.

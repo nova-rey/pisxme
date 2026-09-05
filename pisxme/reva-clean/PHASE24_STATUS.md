@@ -404,3 +404,16 @@ track; moving that one via to `(40.5,103.0)` corrected the collision. The
 final native DRC candidate reports 201 inherited violations, zero shorts,
 zero crossings, and 188 unconnected items versus 195 before the cluster.
 CM5 `/CORE_CM5/POWER_GND` remains separate and untouched.
+
+## Cumulative local-repair composition
+
+`phase24_integrate_local_repairs.py` composes the validated J1 protected bus
+and In3 plane, J1 ground columns, global U1/U2/J4/U8 returns, bridge
+low-voltage perimeter escapes, U3/U5 protected-field escapes, U4's perimeter
+protected escape, and separate F1/F2 raw/fused pad fields. The first
+composition also added U3/U4/U5 ground-field copper and was rejected for
+three native crossings between 12V and ground field routes. Removing those
+overlapping ground additions yields a clean cumulative candidate: native DRC
+201 inherited violations, zero shorts, zero crossings, and 168 unconnected
+items. Ground-field additions remain separately validated and must be
+reintegrated only with obstacle-aware layer separation.
