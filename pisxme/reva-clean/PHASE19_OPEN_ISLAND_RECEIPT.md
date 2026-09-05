@@ -119,3 +119,9 @@ Rejected as a full SATA pass.
   five USB3 crossings; rejected.
 - RX and TX were kept as separate differential-pair layer assignments, but
   source and U7 fan-in geometry still failed. SATA oracle remained clean.
+### 2026-09-05 — lower-acreage U7/J3 placement trial
+
+- `PHASE19_U240J200_LOWER1-drc.rpt`: 444 total records, 12 crossings, four
+  shorts, 413 unconnected; rejected.
+- The lower placement did not provide a usable coordinated ancestor because
+  inherited zones and launch geometry became materially entangled.

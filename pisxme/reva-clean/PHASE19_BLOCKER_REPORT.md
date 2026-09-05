@@ -1093,3 +1093,13 @@ at the outboard U7 launch, and final pad-field clearance. This is rejected;
 the SATA-only oracle remains zero-short/zero-crossing. The next search must
 change the coherent U7/J3 placement or U7 orientation rather than continue
 translating the same four U7-row dogbones.
+## 2026-09-05 lower-acreage U7/J3 placement trial
+
+`PHASE19_U240J200_LOWER1.kicad_pcb` relocated U7 to `(240,145)` rotation
+270 and J3 to `(200,170)` rotation 270, with the coordinated generator
+deriving USB3 and SATA from serialized pad coordinates. Native KiCad DRC
+measured 444 records, including 12 crossings and four shorts with 413
+unconnected items. The candidate is rejected: the inherited power-zone and
+launch geometry are materially entangled, so this is not a viable placement
+ancestor. The next placement class is a pair-aware vertical U7 entry (RX
+from above, TX from below) around the existing clean SATA oracle.
