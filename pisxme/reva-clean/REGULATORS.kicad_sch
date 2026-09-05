@@ -2256,7 +2256,7 @@
 		(dnp no)
 		(fields_autoplaced no)
 		(uuid "f8000000-0000-0000-0000-0000000003c0")
-		(property "Reference" "C30"
+		(property "Reference" "C44"
 			(at 302 172 0)
 			(effects
 				(font
@@ -2315,7 +2315,7 @@
 		(dnp no)
 		(fields_autoplaced no)
 		(uuid "f8000000-0000-0000-0000-0000000003e0")
-		(property "Reference" "C31"
+		(property "Reference" "C45"
 			(at 319 172 0)
 			(effects
 				(font
@@ -2374,7 +2374,7 @@
 		(dnp no)
 		(fields_autoplaced no)
 		(uuid "f8000000-0000-0000-0000-000000000400")
-		(property "Reference" "C32"
+		(property "Reference" "C46"
 			(at 336 172 0)
 			(effects
 				(font
@@ -2433,7 +2433,7 @@
 		(dnp no)
 		(fields_autoplaced no)
 		(uuid "f8000000-0000-0000-0000-000000000420")
-		(property "Reference" "C33"
+		(property "Reference" "C47"
 			(at 353 172 0)
 			(effects
 				(font

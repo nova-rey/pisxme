@@ -1,4 +1,4 @@
 (sym_lib_table
 	(version 7)
-	(lib (name "PiSXMeRevAClean")(type "KiCad")(uri "${KIPRJMOD}/PiSXMe_RevA_Clean.kicad_sym")(options "")(descr "PiSXMe Rev A Clean isolated project symbols"))
+	(lib (name "PiSXMeRevAClean")(type "KiCad")(uri "${KIPRJMOD}/PiSXMe_RevA_Clean_complete.kicad_sym")(options "")(descr "PiSXMe Rev A Clean assembled project symbols"))
 )
