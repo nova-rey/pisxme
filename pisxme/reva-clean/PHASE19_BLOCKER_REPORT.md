@@ -449,3 +449,20 @@ the clean minimal topology. The next experiment must relocate the complete
 clock support island into a corridor clear of the already-routed USB3/SATA
 fields, then regenerate the coordinated candidate. Phase 19 remains active;
 Phase 20+ remain untouched.
+
+## 2026-09-04 rotated north-corridor transplant rejection
+
+The clean minimal clock route was reflected for the coordinated U7 rotation
+and moved the support island north/outboard of U7, with the clock-net tracks
+removed before regeneration. The coordinated candidate's live copper map
+shows SATA launch and USB3/PCIe corridors in the apparently open north region;
+native KiCad DRC measured 509 violations / 471 unconnected items, including
+new clock-to-storage/power crossings and shorts. This candidate is rejected.
+
+The result closes the fixed-offset transplant class: a clean isolated clock
+fixture cannot be promoted by geometric reflection alone when the coordinated
+candidate contains active high-speed copper. The next candidate must use a
+live-copper occupancy map to place the clock island in a genuinely empty
+acreage corridor, then route the short clock loop before full SI review. No
+architecture, layer, or PCIe gate was relaxed; Phase 19 remains active and
+Phase 20+ remain untouched.

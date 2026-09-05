@@ -7,11 +7,14 @@ R=Path(__file__).resolve().parent; KEEP_BOARD=os.environ.get('CLOCK_ACREAGE')=='
 BASE=R/os.environ.get('CLOCK_BASE','ACREAGE_CLOCK_CANDIDATE5.kicad_pcb')
 OUT=R/os.environ.get('CLOCK_OUT',('PHASE19_CLOCK_ACREAGE_RELATIVE.kicad_pcb' if KEEP_BOARD else 'PHASE19_CLOCK_MINIMAL_FIXTURE.kicad_pcb'))
 DX,DY=((int(os.environ.get('CLOCK_DX','150')),int(os.environ.get('CLOCK_DY','5'))) if KEEP_BOARD else (0,0))
+MIRROR=os.environ.get('CLOCK_MIRROR')=='1'
+def TF(p): return ((240-p[0],210-p[1]) if MIRROR else (p[0]+DX,p[1]+DY))
+def LOCAL(p): return (TF(p) if MIRROR else (p[0]-DX,p[1]-DY))
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def T(b,n,a,z,l):
-    t=pcbnew.PCB_TRACK(b); t.SetStart(V(a[0]+DX,a[1]+DY)); t.SetEnd(V(z[0]+DX,z[1]+DY)); t.SetLayer(l); t.SetWidth(pcbnew.FromMM(.2)); t.SetNet(n); b.Add(t)
+    t=pcbnew.PCB_TRACK(b); t.SetStart(V(*TF(a))); t.SetEnd(V(*TF(z))); t.SetLayer(l); t.SetWidth(pcbnew.FromMM(.2)); t.SetNet(n); b.Add(t)
 def X(b,n,p):
-    v=pcbnew.PCB_VIA(b); v.SetPosition(V(p[0]+DX,p[1]+DY)); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(n); b.Add(v)
+    v=pcbnew.PCB_VIA(b); v.SetPosition(V(*TF(p))); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(n); b.Add(v)
 def xy(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
 def main():
     b=pcbnew.LoadBoard(str(BASE)); keep={'U7','Y1','R23','C42','C43'}
@@ -23,7 +26,7 @@ def main():
         for z in zones: b.Remove(z)
     u=b.FindFootprintByReference('U7')
     if not KEEP_BOARD: u.SetPosition(V(100,100)); u.SetOrientationDegrees(0)
-    placements={'Y1':((100+DX,115+DY),0),'R23':((100+DX,125+DY),0),'C42':((94+DX,125+DY),0),'C43':((106+DX,125+DY),0)}
+    placements={'Y1':(TF((100,115)),0),'R23':(TF((100,125)),0),'C42':(TF((94,125)),0),'C43':(TF((106,125)),0)}
     maps={'Y1':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_VSSOSC','3':'/STORAGE/BRIDGE_XO','4':'/STORAGE/BRIDGE_VSSOSC'},'R23':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_XO'},'C42':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_VSSOSC'},'C43':{'1':'/STORAGE/BRIDGE_XO','2':'/STORAGE/BRIDGE_VSSOSC'}}
     nets={x:b.FindNet(x) for x in ('/STORAGE/BRIDGE_XI','/STORAGE/BRIDGE_XO','/STORAGE/BRIDGE_VSSOSC')}
     if KEEP_BOARD:
@@ -50,9 +53,9 @@ def main():
         T(b,vs,p,(p[0],128),pcbnew.B_Cu)
     # Short top-side dogbones from the B.Cu VSSOSC corridor to each pad.
     f=b.FindFootprintByReference('Y1'); yp={str(q.GetNumber()):xy(q) for q in f.Pads()}
-    T(b,vs,(99.5,117.0),(yp['2'][0]-DX,yp['2'][1]-DY),pcbnew.F_Cu); T(b,vs,(103.5,116.5),(yp['4'][0]-DX,yp['4'][1]-DY),pcbnew.F_Cu)
-    f=b.FindFootprintByReference('C42'); cp={str(q.GetNumber()):xy(q) for q in f.Pads()}; T(b,vs,(94.5,126.2),(cp['2'][0]-DX,cp['2'][1]-DY),pcbnew.F_Cu)
-    f=b.FindFootprintByReference('C43'); cp={str(q.GetNumber()):xy(q) for q in f.Pads()}; T(b,vs,(106.5,126.2),(cp['2'][0]-DX,cp['2'][1]-DY),pcbnew.F_Cu)
+    T(b,vs,(99.5,117.0),LOCAL(yp['2']),pcbnew.F_Cu); T(b,vs,(103.5,116.5),LOCAL(yp['4']),pcbnew.F_Cu)
+    f=b.FindFootprintByReference('C42'); cp={str(q.GetNumber()):xy(q) for q in f.Pads()}; T(b,vs,(94.5,126.2),LOCAL(cp['2']),pcbnew.F_Cu)
+    f=b.FindFootprintByReference('C43'); cp={str(q.GetNumber()):xy(q) for q in f.Pads()}; T(b,vs,(106.5,126.2),LOCAL(cp['2']),pcbnew.F_Cu)
     # FREQSEL0/FREQSEL1 are both high in the authoritative 40 MHz mode.
     v33=b.FindNet('/STORAGE/BRIDGE_3V3')
     p30=next(q for q in u.Pads() if str(q.GetNumber())=='30'); p31=next(q for q in u.Pads() if str(q.GetNumber())=='31'); p24=next(q for q in u.Pads() if str(q.GetNumber())=='24')
