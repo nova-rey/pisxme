@@ -161,3 +161,8 @@ V2 trial reduced the new problem to one localized rail/return crossing with
 no new shorting record, but still has unconnected/inherited failures and is
 not promoted. The next U5 repair must separate the source and return lanes by
 layer or use a mapped return launch.
+The latest U5 V2 source-escape refinement was rerun after moving the rail
+launch around the regulator feedback corridor. Native DRC remains at 197
+violations and 392 unconnected pads, with one source/return crossing and no
+shorting record. It is retained as a rejected disposable result; the
+ground-aware U5 island still needs a layer-separated source/return launch.

@@ -14,7 +14,7 @@ def main():
   f=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'C_1210_3225Metric');f.SetReference(ref);f.SetPosition(V(*pos));f.SetOrientationDegrees(90);b.Add(f);fs[ref]=f;P(f,'1').SetNet(rail);P(f,'1').SetNetCode(rail.GetNetCode());P(f,'2').SetNet(gnd);P(f,'2').SetNetCode(gnd.GetNetCode())
  # Existing 1V1 node at U5's validated rail endpoint; side-separated trunks
  # keep the return path out of every capacitor rail branch.
- T(b,rail,(237.25,107),(239,107));T(b,rail,(239,107),(239,120));T(b,rail,(239,120),(264,120));T(b,rail,(264,120),(264,136.65))
+ T(b,rail,(237.25,107),(235,107));T(b,rail,(235,107),(235,120));T(b,rail,(235,120),(264,120));T(b,rail,(264,120),(264,136.65))
  T(b,gnd,(246.5,118),(246.5,119));T(b,gnd,(246.5,119),(244,119));T(b,gnd,(244,119),(244,139.35))
  for f in fs.values():
   p1,p2=xy(P(f,'1')),xy(P(f,'2'));T(b,rail,(264,p1[1]),p1);T(b,gnd,(244,p2[1]),p2)

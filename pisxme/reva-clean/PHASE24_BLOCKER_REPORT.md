@@ -460,3 +460,10 @@ reported 197 violations and 392 unconnected pads, with one localized rail/
 return crossing and no shorting record. It is rejected as incomplete, but is
 the best U5 placement class so far; the next trial must separate its source
 and return lanes by layer or use a mapped return launch.
+## U5 source-launch refinement (rejected)
+
+The U5 V2 source launch was moved around the feedback corridor and rerun with
+the same ground-aware capacitor placement. Native DRC remained at 197
+violations and 392 unconnected pads; one source/return crossing remained and
+no shorting record was present. This is not promoted. The remaining repair
+class is a genuinely layer-separated source/return launch.

@@ -1,31 +1,31 @@
 ** Drc report for PHASE24_U5_CAPS_GROUND_AWARE_V2.kicad_pcb **
-** Created on 2026-09-05T09:02:00 **
+** Created on 2026-09-05T09:06:35 **
 ** Report includes: Errors, Warnings, Exclusions **
 
 ** Found 197 DRC violations **
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1473 mm)
-    Local override; error
-    @(70.0400 mm, 100.3000 mm): Pad 110 [/CORE_CM5/CM5_REFCLK_P] of J7 on F.Cu
-    @(70.0400 mm, 100.7000 mm): Track [/CORE_CM5/CM5_REFCLK_N] on F.Cu, length 2.2171 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0763 mm)
-    Local override; error
-    @(70.0400 mm, 100.3000 mm): Track [/CORE_CM5/CM5_REFCLK_P] on F.Cu, length 2.3400 mm
-    @(70.0400 mm, 99.9000 mm): Pad 108 [/CORE_CM5/POWER_GND] of J7 on F.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1440 mm)
-    Local override; error
-    @(227.2500 mm, 104.7500 mm): Track [/REGULATORS/PG_BRIDGE_3V3] on F.Cu, length 1.2500 mm
-    @(225.0000 mm, 104.6250 mm): Pad 18 [POWER_GND] of U4 on F.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0382 mm)
-    Local override; error
-    @(71.2000 mm, 106.3000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 1.8788 mm
-    @(70.0400 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 1.1600 mm
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1100 mm)
     Local override; error
     @(226.0000 mm, 104.7500 mm): Track [/REGULATORS/PG_BRIDGE_3V3] on F.Cu, length 2.7500 mm
     @(225.0000 mm, 103.8750 mm): Pad 17 [POWER_GND] of U4 on F.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1473 mm)
+    Local override; error
+    @(70.0400 mm, 100.3000 mm): Pad 110 [/CORE_CM5/CM5_REFCLK_P] of J7 on F.Cu
+    @(70.0400 mm, 100.7000 mm): Track [/CORE_CM5/CM5_REFCLK_N] on F.Cu, length 2.2171 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1440 mm)
+    Local override; error
+    @(227.2500 mm, 104.7500 mm): Track [/REGULATORS/PG_BRIDGE_3V3] on F.Cu, length 1.2500 mm
+    @(225.0000 mm, 104.6250 mm): Pad 18 [POWER_GND] of U4 on F.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0763 mm)
+    Local override; error
+    @(70.0400 mm, 100.3000 mm): Track [/CORE_CM5/CM5_REFCLK_P] on F.Cu, length 2.3400 mm
+    @(70.0400 mm, 99.9000 mm): Pad 108 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0382 mm)
+    Local override; error
+    @(71.2000 mm, 106.3000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 1.8788 mm
+    @(70.0400 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 1.1600 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(239.0000 mm, 120.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on F.Cu, length 25.0000 mm
+    @(235.0000 mm, 120.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on F.Cu, length 29.0000 mm
     @(244.0000 mm, 119.0000 mm): Track [POWER_GND] on F.Cu, length 20.3500 mm
 [courtyards_overlap]: Courtyards overlap
     Rule: board setup constraints courtyard; error
@@ -462,28 +462,28 @@
     @(93.0000 mm, 39.1000 mm): Reference field of RCT2
 [silk_overlap]: Silkscreen clearance
     Rule: board setup constraints silk; warning
-    @(70.0000 mm, 120.0000 mm): Reference field of C14
-    @(67.0600 mm, 119.9000 mm): Segment of J7 on f.silkscreen
+    @(77.9000 mm, 65.2333 mm): Reference field of U9
+    @(78.3000 mm, 65.2300 mm): Reference field of U6
 [silk_overlap]: Silkscreen clearance
     Rule: board setup constraints silk; warning
-    @(70.0000 mm, 120.0000 mm): Reference field of C14
-    @(69.9400 mm, 119.9000 mm): Segment of J7 on f.silkscreen
+    @(77.9000 mm, 65.2333 mm): Reference field of U9
+    @(77.5000 mm, 64.4500 mm): Reference field of J2
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(77.5000 mm, 64.4500 mm): Reference field of J2
+    @(78.3000 mm, 65.2300 mm): Reference field of U6
 [silk_overlap]: Silkscreen clearance
     Rule: board setup constraints silk; warning
     @(70.0000 mm, 120.0000 mm): Reference field of C14
     @(71.5000 mm, 130.0000 mm): Segment of J7 on f.silkscreen
 [silk_overlap]: Silkscreen clearance
     Rule: board setup constraints silk; warning
-    @(77.9000 mm, 65.2333 mm): Reference field of U9
-    @(78.3000 mm, 65.2300 mm): Reference field of U6
+    @(70.0000 mm, 120.0000 mm): Reference field of C14
+    @(67.0600 mm, 119.9000 mm): Segment of J7 on f.silkscreen
 [silk_overlap]: Silkscreen clearance
     Rule: board setup constraints silk; warning
-    @(77.9000 mm, 65.2333 mm): Reference field of U9
-    @(77.5000 mm, 64.4500 mm): Reference field of J2
-[silk_overlap]: Silkscreen clearance
-    Rule: board setup constraints silk; warning
-    @(77.5000 mm, 64.4500 mm): Reference field of J2
-    @(78.3000 mm, 65.2300 mm): Reference field of U6
+    @(70.0000 mm, 120.0000 mm): Reference field of C14
+    @(69.9400 mm, 119.9000 mm): Segment of J7 on f.silkscreen
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(182.0000 mm, 168.0000 mm): Reference field of C38
@@ -515,19 +515,7 @@
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(120.0000 mm, 170.0000 mm): Reference field of C23
-    @(118.9000 mm, 170.0000 mm): Pad 1 [12V_PROTECTED] of C23 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(120.0000 mm, 170.0000 mm): Reference field of C23
     @(121.1000 mm, 170.0000 mm): Pad 2 [POWER_GND] of C23 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(127.4500 mm, 130.4000 mm): Segment of C30 on f.silkscreen
-    @(127.5000 mm, 130.0000 mm): Pad 1 [/STORAGE/SATA_M2_TX_P] of C30 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(65.0000 mm, 170.5000 mm): Reference field of C8
-    @(66.3500 mm, 170.5000 mm): Pad 2 [POWER_GND] of C8 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(150.0000 mm, 168.0000 mm): Reference field of C34
@@ -582,24 +570,32 @@
     @(135.5000 mm, 110.0000 mm): Pad 1 [/STORAGE/SATA_M2_TX_N] of C31 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(127.4500 mm, 118.4000 mm): Segment of C33 on f.silkscreen
-    @(127.5000 mm, 118.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_N] of C33 on F.Cu
+    @(127.4500 mm, 130.4000 mm): Segment of C30 on f.silkscreen
+    @(127.5000 mm, 130.0000 mm): Pad 1 [/STORAGE/SATA_M2_TX_P] of C30 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(127.4500 mm, 120.4000 mm): Segment of C32 on f.silkscreen
-    @(127.5000 mm, 120.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_P] of C32 on F.Cu
+    @(94.0000 mm, 120.0000 mm): Reference field of C17
+    @(92.6500 mm, 120.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C17 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(110.0000 mm, 120.0000 mm): Reference field of C19
-    @(111.3500 mm, 120.0000 mm): Pad 2 [POWER_GND] of C19 on F.Cu
+    @(70.0000 mm, 120.0000 mm): Reference field of C14
+    @(71.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C14 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(110.0000 mm, 120.0000 mm): Reference field of C19
-    @(108.6500 mm, 120.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C19 on F.Cu
+    @(71.5000 mm, 130.0000 mm): Segment of J7 on f.silkscreen
+    @(71.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C14 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(94.0000 mm, 120.0000 mm): Reference field of C17
+    @(95.3500 mm, 120.0000 mm): Pad 2 [POWER_GND] of C17 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(86.0000 mm, 120.0000 mm): Reference field of C16
     @(87.3500 mm, 120.0000 mm): Pad 2 [POWER_GND] of C16 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(70.0000 mm, 120.0000 mm): Reference field of C14
+    @(68.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C14 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(86.0000 mm, 120.0000 mm): Reference field of C16
@@ -614,88 +610,32 @@
     @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
+    @(120.0000 mm, 170.0000 mm): Reference field of C23
+    @(118.9000 mm, 170.0000 mm): Pad 1 [12V_PROTECTED] of C23 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(127.4500 mm, 120.4000 mm): Segment of C32 on f.silkscreen
+    @(127.5000 mm, 120.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_P] of C32 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(65.0000 mm, 170.5000 mm): Reference field of C8
+    @(66.3500 mm, 170.5000 mm): Pad 2 [POWER_GND] of C8 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.0000 mm, 120.0000 mm): Reference field of C19
+    @(111.3500 mm, 120.0000 mm): Pad 2 [POWER_GND] of C19 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.0000 mm, 120.0000 mm): Reference field of C19
+    @(108.6500 mm, 120.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C19 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
     @(67.0600 mm, 119.9000 mm): Segment of J7 on f.silkscreen
     @(68.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C14 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(71.5000 mm, 130.0000 mm): Segment of J7 on f.silkscreen
-    @(71.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C14 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(182.0000 mm, 168.0000 mm): Reference field of C38
-    @(183.3500 mm, 168.0000 mm): Pad 2 [POWER_GND] of C38 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(190.0000 mm, 168.0000 mm): Reference field of C39
-    @(188.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C39 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(198.0000 mm, 168.0000 mm): Reference field of C40
-    @(199.3500 mm, 168.0000 mm): Pad 2 [POWER_GND] of C40 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(198.0000 mm, 168.0000 mm): Reference field of C40
-    @(196.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C40 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(190.0000 mm, 168.0000 mm): Reference field of C39
-    @(191.3500 mm, 168.0000 mm): Pad 2 [POWER_GND] of C39 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(258.0000 mm, 128.0000 mm): Reference field of C45
-    @(258.0000 mm, 126.6500 mm): Pad 2 [POWER_GND] of C45 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(258.0000 mm, 128.0000 mm): Reference field of C45
-    @(258.0000 mm, 129.3500 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C45 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(258.0000 mm, 138.0000 mm): Reference field of C47
-    @(258.0000 mm, 139.3500 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C47 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(258.0000 mm, 138.0000 mm): Reference field of C47
-    @(258.0000 mm, 136.6500 mm): Pad 2 [POWER_GND] of C47 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(250.0000 mm, 128.0000 mm): Reference field of C44
-    @(250.0000 mm, 129.3500 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C44 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(250.0000 mm, 128.0000 mm): Reference field of C44
-    @(250.0000 mm, 126.6500 mm): Pad 2 [POWER_GND] of C44 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(250.0000 mm, 138.0000 mm): Reference field of C46
-    @(250.0000 mm, 139.3500 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C46 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(250.0000 mm, 138.0000 mm): Reference field of C46
-    @(250.0000 mm, 136.6500 mm): Pad 2 [POWER_GND] of C46 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(206.0000 mm, 168.0000 mm): Reference field of C41
-    @(204.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C41 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(206.0000 mm, 168.0000 mm): Reference field of C41
-    @(207.3500 mm, 168.0000 mm): Pad 2 [POWER_GND] of C41 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(94.0000 mm, 120.0000 mm): Reference field of C17
-    @(92.6500 mm, 120.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C17 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(70.0000 mm, 120.0000 mm): Reference field of C14
-    @(71.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C14 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(94.0000 mm, 120.0000 mm): Reference field of C17
-    @(95.3500 mm, 120.0000 mm): Pad 2 [POWER_GND] of C17 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(70.0000 mm, 120.0000 mm): Reference field of C14
-    @(68.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C14 on F.Cu
+    @(127.4500 mm, 118.4000 mm): Segment of C33 on f.silkscreen
+    @(127.5000 mm, 118.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_N] of C33 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(11.0000 mm, 36.7000 mm): Rectangle of J6 on f.silkscreen
@@ -752,6 +692,66 @@
     Local override; warning
     @(52.0000 mm, 165.2500 mm): Reference field of C6
     @(53.1000 mm, 165.2500 mm): Pad 1 [12V_PROTECTED] of C6 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(182.0000 mm, 168.0000 mm): Reference field of C38
+    @(183.3500 mm, 168.0000 mm): Pad 2 [POWER_GND] of C38 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(190.0000 mm, 168.0000 mm): Reference field of C39
+    @(188.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C39 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(198.0000 mm, 168.0000 mm): Reference field of C40
+    @(199.3500 mm, 168.0000 mm): Pad 2 [POWER_GND] of C40 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(198.0000 mm, 168.0000 mm): Reference field of C40
+    @(196.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C40 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(190.0000 mm, 168.0000 mm): Reference field of C39
+    @(191.3500 mm, 168.0000 mm): Pad 2 [POWER_GND] of C39 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(250.0000 mm, 138.0000 mm): Reference field of C46
+    @(250.0000 mm, 136.6500 mm): Pad 2 [POWER_GND] of C46 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(258.0000 mm, 138.0000 mm): Reference field of C47
+    @(258.0000 mm, 139.3500 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C47 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(258.0000 mm, 138.0000 mm): Reference field of C47
+    @(258.0000 mm, 136.6500 mm): Pad 2 [POWER_GND] of C47 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(258.0000 mm, 128.0000 mm): Reference field of C45
+    @(258.0000 mm, 129.3500 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C45 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(258.0000 mm, 128.0000 mm): Reference field of C45
+    @(258.0000 mm, 126.6500 mm): Pad 2 [POWER_GND] of C45 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(250.0000 mm, 128.0000 mm): Reference field of C44
+    @(250.0000 mm, 129.3500 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C44 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(250.0000 mm, 128.0000 mm): Reference field of C44
+    @(250.0000 mm, 126.6500 mm): Pad 2 [POWER_GND] of C44 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(250.0000 mm, 138.0000 mm): Reference field of C46
+    @(250.0000 mm, 139.3500 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C46 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(206.0000 mm, 168.0000 mm): Reference field of C41
+    @(204.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C41 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(206.0000 mm, 168.0000 mm): Reference field of C41
+    @(207.3500 mm, 168.0000 mm): Pad 2 [POWER_GND] of C41 on F.Cu
 [copper_sliver]: Copper sliver (F.Cu)
     Local override; warning
 
@@ -1274,16 +1274,20 @@
     @(235.0000 mm, 103.8750 mm): Pad 17 [POWER_GND] of U5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(63.6500 mm, 170.5000 mm): Track [/CORE_CM5/CM5_5V] on F.Cu, length 10.1771 mm
+    @(60.0000 mm, 180.0000 mm): Track [/CORE_CM5/CM5_5V] on B.Cu, length 18.0000 mm
     @(62.7000 mm, 176.2500 mm): Track [/CORE_CM5/CM5_5V] on F.Cu, length 1.3000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(148.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C34 on F.Cu
+    @(156.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C35 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(156.6500 mm, 160.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C27 on F.Cu
+    @(164.6500 mm, 160.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C28 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(156.6500 mm, 160.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C27 on F.Cu
     @(148.6500 mm, 160.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C26 on F.Cu
-    @(148.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C34 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(148.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C34 on F.Cu
-    @(156.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C35 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(156.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C35 on F.Cu
@@ -1291,19 +1295,15 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(164.6500 mm, 160.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C28 on F.Cu
-    @(172.6500 mm, 160.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C29 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(164.6500 mm, 160.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C28 on F.Cu
-    @(156.6500 mm, 160.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C27 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
     @(164.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C36 on F.Cu
-    @(164.6500 mm, 160.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C28 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(172.6500 mm, 160.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C29 on F.Cu
+    @(164.6500 mm, 160.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C28 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
     @(172.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C37 on F.Cu
+    @(172.6500 mm, 160.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C29 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(172.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C37 on F.Cu
@@ -1330,16 +1330,16 @@
     @(232.7500 mm, 107.0000 mm): Pad 8 [/REGULATORS/BRIDGE_1V1] of U5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(237.2500 mm, 107.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on F.Cu, length 1.7500 mm
+    @(237.2500 mm, 107.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on F.Cu, length 2.2500 mm
     @(232.7500 mm, 107.0000 mm): Pad 8 [/REGULATORS/BRIDGE_1V1] of U5 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(235.0000 mm, 107.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on F.Cu, length 13.0000 mm
+    @(239.5000 mm, 115.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R22 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(239.5000 mm, 115.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R22 on F.Cu
     @(242.0000 mm, 118.5000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R19 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(242.0000 mm, 118.5000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R19 on F.Cu
-    @(239.0000 mm, 120.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on F.Cu, length 25.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(264.0000 mm, 139.3500 mm): Track [/REGULATORS/BRIDGE_1V1] on F.Cu, length 14.0000 mm
@@ -2018,7 +2018,7 @@
     @(56.4000 mm, 118.7500 mm): PTH pad 7 [/POWER_INPUT/FUSED_12V_B] of F2
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(233.6000 mm, 38.7500 mm): Track [/POWER_INPUT/12V_IN_A] on B.Cu, length 222.0262 mm
+    @(12.0000 mm, 25.0000 mm): PTH pad 1 [/POWER_INPUT/12V_IN_A] of J5
     @(15.8000 mm, 70.0000 mm): Pad 2 [/POWER_INPUT/12V_IN_A] of C3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -2070,7 +2070,7 @@
     @(85.5000 mm, 164.0000 mm): Pad 2 [/REGULATORS/FB_CM5_5V] of R3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(70.0000 mm, 166.0000 mm): Track [/REGULATORS/PG_CM5_5V] on B.Cu, length 10.5475 mm
+    @(70.0000 mm, 174.7500 mm): Track [/REGULATORS/PG_CM5_5V] on B.Cu, length 8.7500 mm
     @(64.0000 mm, 164.7500 mm): Track [/REGULATORS/PG_CM5_5V] on F.Cu, length 4.7500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -2083,7 +2083,7 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(124.5000 mm, 140.5000 mm): Pad 9 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
-    @(119.5000 mm, 135.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 17.5000 mm
+    @(119.5000 mm, 135.5000 mm): Pad 59 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(124.5000 mm, 141.0000 mm): Pad 8 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
@@ -2102,15 +2102,15 @@
     @(124.5000 mm, 142.5000 mm): Pad 5 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(66.0000 mm, 163.0000 mm): Track [/REGULATORS/RT_CM5_5V] on B.Cu, length 2.6926 mm
+    @(66.0000 mm, 175.2500 mm): Track [/REGULATORS/RT_CM5_5V] on B.Cu, length 12.2500 mm
     @(62.2500 mm, 165.2500 mm): Pad 12 [/REGULATORS/RT_CM5_5V] of U3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(66.0000 mm, 163.0000 mm): Track [/REGULATORS/RT_CM5_5V] on B.Cu, length 2.6926 mm
+    @(66.0000 mm, 175.2500 mm): Track [/REGULATORS/RT_CM5_5V] on B.Cu, length 12.2500 mm
     @(68.5000 mm, 168.0000 mm): Pad 1 [/REGULATORS/RT_CM5_5V] of R5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(170.0000 mm, 85.0000 mm): Track [/V100_PCIE/V100_PET0_P] on B.Cu, length 5.4000 mm
+    @(175.4000 mm, 85.0000 mm): Track [/V100_PCIE/V100_PET0_P] on B.Cu, length 7.5400 mm
     @(235.9500 mm, 54.0000 mm): Pad 2 [/V100_PCIE/V100_PET0_P] of C1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
