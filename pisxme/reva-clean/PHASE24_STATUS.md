@@ -45,3 +45,10 @@ U5-side bulk-cap graft entered existing regulator pad/return geometry.  This
 establishes that the missing support must be integrated by regenerating the
 coordinated storage/regulator local routes, not by overlaying support copper
 onto the Phase 23 ancestor.
+
+The `PHASE19_RELOC_U270J190_COORD49_FULL` storage-only donor was then tested
+as a coordinated transplant.  It contains USB3, SATA, and clock copper, but
+its relocated USB3 corridor crosses the frozen V5 PCIe corridor after merge.
+It was rejected.  The valid next class is to retain V5's proven U7/J3
+high-speed placement and add an obstacle-aware clock route locally, followed
+by a separately coordinated U5 bulk-cap island.
