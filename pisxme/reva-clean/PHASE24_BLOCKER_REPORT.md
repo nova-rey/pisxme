@@ -266,3 +266,15 @@ conservative around pad fields and existing tracks, this rejects the current
 search model/candidate only; it does not claim that the shelf is physically
 impossible. The next implementation must seed an explicit legal dogbone graph
 and search from its first free grid cell.
+
+## Coordinated storage relocation, expanded acreage (rejected)
+
+The approved option-2 experiment moved the complete coordinated storage donor
+by +80 mm in Y and expanded the disposable outline to 300 x 280 mm. Native
+DRC reported 283 violations. The relocation removed the prior donor clock
+crossings against the preserved PCIe band, but shifted donor copper no longer
+connected to the fixed CM5 USB3 launch; U7 reset/rail and storage-side
+connections also remained incomplete. The candidate is rejected. Relocation
+must regenerate the CM5-to-U7 USB3 corridor separately from the relocated
+bridge/SATA/clock island; blind rigid translation is not a valid integration
+method.

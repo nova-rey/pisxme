@@ -4044,3 +4044,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: compact clock-position sweep preserved; nearwest underside candidate reduced the remaining clock defect to a localized U7 B.Cu lane crossing, not yet promoted.
 2026-09-05 Phase24: refined the disposable solver to seed proven rot180 source-via exits; it still found no XI corridor through the inherited SATA/pad field, so no candidate was promoted.
 2026-09-05 Phase24: tested an adjacent U7/J3 clock shelf with the seeded solver; conservative search returned no XI path before board generation, so the candidate and search model remain unpromoted.
+2026-09-05 Phase24: rejected expanded-acreage coordinated storage transplant; rigid donor shift removed PCIe clock crossings but disconnected CM5 USB3 and left storage support incomplete.
