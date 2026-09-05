@@ -546,6 +546,23 @@ not evidence against rotation 270: it identifies the required next repair as
 clock-aware SATA pad-row generation plus a native zone-fill/reload pass.
 Phase 19 remains active; Phase 20+ remains untouched.
 
+## 2026-09-04 U7 rotation-270 pad-field discriminating fixture
+
+To distinguish a local U7 package impossibility from a coordinated-route
+problem, a minimal native fixture retained only U7 in the rotation-270
+orientation and assigned the three clock nets plus all four bridge-side SATA
+nets. Clock pads 52/53/54 escaped west on F.Cu; SATA pads 56/57/59/60 escaped
+east, with alternating permitted layers.
+
+Native KiCad DRC reported `7` warnings and `5` unconnected items, with zero
+`tracks_crossing` and zero `shorting_items` records. The warnings are the
+intentional dangling ends of the isolated escapes; the five unconnected items
+are unrelated inherited U7 support-pin pairs plus the two SATA B.Cu escapes
+without connector endpoints. This fixture therefore proves that the rot270
+U7 clock/SATA pad-field escape is geometrically legal. The remaining failure
+is the coordinated SATA launch authoring, which must be regenerated around
+the proven clock escape. Phase 19 remains active.
+
 ## 2026-09-04 rotation-270 candidate artifact and native crash repair
 
 The previously missing rotated candidate was generated successfully after
