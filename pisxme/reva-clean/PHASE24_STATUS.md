@@ -1265,3 +1265,37 @@ CM5 LED mappings: J7 pad 15 through R31 and J7 pad 17 through R30. Native ERC
 
 Decision: `PHASE24_ETHERNET_SUPPORT_AUTHORITY = CLOSED`. PCB-side materialization,
 component parity, and routed acreage closure remain open downstream.
+
+## Fresh whole-board macro-floorplan discriminator — 2026-09-05
+
+Because the earlier review was anchored to the pre-correction baseline, a
+fresh placement-only discriminator was run from the native-loaded
+`PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb`. It maps the actual transformed
+J7 carrier-mating pad groups and reviews Ethernet, PCIe/V100, complete
+USB3→U7→SATA→J3 plus clock support, SERVICE USB2, power/protection, and
+regulator regions. The detailed evidence is
+`PHASE24_WHOLE_BOARD_MACRO_REVIEW_20260905.md` and the reproducible generator
+is `phase24_whole_board_macro_review_v2.py`.
+
+The current corrected basis has source-to-island centroid distances of
+Ethernet `32.7 mm`, USB3/storage `58.5 mm`, PCIe `81.2 mm`, and SERVICE
+`22.0 mm`. Its topology-only straight source-to-first-endpoint screen found
+12 apparent Ethernet crossings and no USB3 first-endpoint crossings. It does
+not use existing copper or mature-board DRC for ranking.
+
+The review generated five disposable macro candidates, including an explicit
+Ethernet/storage swap, a separated south Ethernet/north storage arrangement,
+and a PCIe exchange test. The CM5-neighborhood candidate reduced Ethernet to
+`5.1 mm` and storage to `51.0 mm`, but native-transformed body screening found
+9 external overlaps including J7/J4/regulator conflicts and its apparent
+Ethernet crossing count rose to 23. The outboard and swap candidates also
+retain external conflicts. The PCIe exchange increases the PCIe distance to
+`119.0 mm` without a compensating global win.
+
+Decision: `MACRO_FLOORPLAN_DISCRIMINATOR = COMPLETE` and
+`SELECTED_TOPOLOGY = CURRENT_CORRECTED`. This is a topology decision, not a
+routing pass. Existing failed routes remain classified as
+`ROUTE IMPLEMENTATION FAILURE`; no candidate is rejected merely because a
+first-pass generated route has immature DRC. Detailed Phase 24 repair may
+resume only as coherent functional-neighborhood regeneration from this
+selected basis. Phase 25/26 remain unopened.
