@@ -38,3 +38,10 @@ first disposable clock graft was rejected because its historical hard-coded
 U7 clock-row coordinates produced true shorts; it is retained only as failed
 evidence.  Phase 24 stays open until a coordinate-derived, native-DRC-clean
 materialization and parity check are complete.
+
+The next coordinate-derived candidate, `PHASE24_SUPPORT_MATERIALIZED`, was
+also rejected.  Its clock corridors crossed inherited SATA/USB copper and its
+U5-side bulk-cap graft entered existing regulator pad/return geometry.  This
+establishes that the missing support must be integrated by regenerating the
+coordinated storage/regulator local routes, not by overlaying support copper
+onto the Phase 23 ancestor.
