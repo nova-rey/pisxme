@@ -295,3 +295,33 @@ The candidate is retained as the best geometric baseline, but remains
 `REJECTED_EXPERIMENT` because USB3 and SATA full-path length balance,
 transition-return evidence, and the newly confirmed 40 MHz clock network are
 not closed.
+
+## 2026-09-04 hierarchy/materialization correction and clock-network proof
+
+The storage authoring path was corrected generically. The failure was not a
+missing KiCad project-instance path: the newly added clock library symbols had
+been emitted after the STORAGE library closure and were therefore malformed
+top-level symbols. The repair now places them inside the child `lib_symbols`
+section and rebuilds their instances idempotently. Native KiCad 10 root export
+now includes U7, J3, Y1, R23, C42, and C43.
+
+The root netlist proof now shows:
+
+* U7.30 and U7.31 on `/STORAGE/BRIDGE_3V3`;
+* U7.52/XI, Y1.1, R23.1, and C42.1 on `/STORAGE/BRIDGE_XI`;
+* U7.54/XO, Y1.3, R23.2, and C43.1 on `/STORAGE/BRIDGE_XO`;
+* U7.53/VSSOSC, Y1.2/Y1.4, C42.2, and C43.2 on the distinct
+  `/STORAGE/BRIDGE_VSSOSC` net.
+
+The corrected materializer reload proof assigns those exact nets to the
+physical U7 and clock-support pads and materializes 74 components, 238 nets,
+and six copper layers. The clock island follows U7 in the coordinated
+candidate; Y1 has its two electrical pads plus two VSSOSC return pads, with no
+via-in-pad. This removes the prior SATA/VSSOSC alias and is now a valid
+authoring/materialization baseline.
+
+Phase 19 is still active. The coordinated routed candidate has not yet been
+promoted: it still requires the short physical XI/XO/VSSOSC copper loop,
+clock-to-high-speed clearance review, and the outstanding USB3/SATA
+length/reference/return-via acceptance evidence. The candidate remains
+`REJECTED_EXPERIMENT` pending those checks; no Phase 20 work has started.

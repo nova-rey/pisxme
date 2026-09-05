@@ -19,6 +19,12 @@ def main():
  # after the placement edit so every generated route uses the saved geometry,
  # not stale pre-move pad positions.
  sync=R/'.phase19_storage_sync.kicad_pcb'; b.Save(str(sync)); b=pcbnew.LoadBoard(str(sync));u=b.FindFootprintByReference('U7');j=b.FindFootprintByReference('J3');src=b.FindFootprintByReference('J7')
+ ux=float(os.environ.get('P19_U7_X','140')); uy=float(os.environ.get('P19_U7_Y','110'))
+ # Carry the authoritative oscillator island with the moved bridge.
+ for ref,dx,dy in (('Y1',8.0,-5.0),('R23',8.0,0.0),('C42',8.0,5.0),('C43',12.0,5.0)):
+  f=b.FindFootprintByReference(ref)
+  if f is not None: f.SetPosition(V(ux+dx,uy+dy))
+ b.Save(str(sync)); b=pcbnew.LoadBoard(str(sync));u=b.FindFootprintByReference('U7');j=b.FindFootprintByReference('J3');src=b.FindFootprintByReference('J7')
  jrot=int(os.environ.get('P19_J3_ROT','90'))
  skip_sata=os.environ.get('P19_SKIP_SATA','0')=='1'
  # The live Phase 18 ancestor may already contain materialized C30-C33.

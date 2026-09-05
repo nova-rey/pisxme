@@ -17,6 +17,11 @@ BOARD_IN = Path(os.environ.get("PISXME_BOARD_IN", ROOT / "ACREAGE_FLOORPLAN.kica
 BOARD_OUT = Path(os.environ.get("PISXME_BOARD_OUT", ROOT / "ACREAGE_CANDIDATE.kicad_pcb"))
 NETLIST = Path(os.environ.get("PISXME_NETLIST", ROOT / "materialize.xml"))
 PRETTY = ROOT / "PiSXMe_RevA_Clean.pretty"
+NET_ALIASES = {
+    # The child schematic's local GND label resolves to the board-wide power
+    # ground plane in the inherited acreage floorplan.
+    "/STORAGE/GND": "POWER_GND",
+}
 
 POSITIONS = {
     "J1": (150, 90), "J2": (270, 45), "U6": (250, 45), "U9": (250, 58),
@@ -28,6 +33,9 @@ POSITIONS = {
     # reservation (x >= 75 mm), while retaining a short, direct branch into
     # each ideal-diode/FET island.
     "C30": (244, 126), "C31": (244, 128), "C32": (244, 132), "C33": (244, 134),
+    # TUSB9261 reference-clock island; kept local to U7 and clear of the SATA
+    # launch so the bridge clock is materialized as a real PCB network.
+    "Y1": (238, 112), "R23": (242, 112), "C42": (238, 116), "C43": (242, 116),
     "F1": (55, 40), "F2": (50, 120), "Q1": (215, 30), "Q2": (215, 150),
     "C3": (110, 55), "C4": (110, 95),
     "D1": (110, 32), "D2": (110, 72),
@@ -184,9 +192,9 @@ def main() -> None:
         name = net.attrib.get("name", "")
         if not name:
             continue
-        nets[name] = board.FindNet(name)
+        nets[name] = board.FindNet(NET_ALIASES.get(name, name))
         if nets[name] is None:
-            nets[name] = pcbnew.NETINFO_ITEM(board, name)
+            nets[name] = pcbnew.NETINFO_ITEM(board, NET_ALIASES.get(name, name))
             board.Add(nets[name])
         for node in net.findall("node"):
             ref, pin = node.attrib.get("ref"), node.attrib.get("pin")
@@ -207,6 +215,10 @@ def main() -> None:
                     raise SystemExit(f"netlist pad missing: {ref}.{pin} on {name}")
                 for pad in pads:
                     pad.SetNet(nets[name])
+                    # KiCad 10 can retain the object pointer transiently but
+                    # serialize a stale net code on adjacent pads unless the
+                    # authoritative code is written explicitly as well.
+                    pad.SetNetCode(nets[name].GetNetCode())
 
     for ref, fp in refs.items():
         if ref in components and len(fp.Pads()) == 0:

@@ -426,15 +426,46 @@
 (pin passive line (at 20 -6.25 180) (length 5) (name "BRIDGE_3V3" (effects (font (size 1 1)))) (number "24" (effects (font (size 1 1)))))
 (pin passive line (at 20 -8.75 180) (length 5) (name "BRIDGE_1V1" (effects (font (size 1 1)))) (number "41" (effects (font (size 1 1)))))
 (pin passive line (at 20 -11.25 180) (length 5) (name "RESET" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1)))))
-(pin passive line (at 20 -13.75 180) (length 5) (name "SPI_CFG" (effects (font (size 1 1)))) (number "21" (effects (font (size 1 1)))))) (embedded_fonts no))
+(pin passive line (at 20 -13.75 180) (length 5) (name "SPI_CFG" (effects (font (size 1 1)))) (number "21" (effects (font (size 1 1)))))
+(pin passive line (at 20 -16.25 180) (length 5) (name "FREQSEL0" (effects (font (size 1 1)))) (number "30" (effects (font (size 1 1)))))
+(pin passive line (at 20 -18.75 180) (length 5) (name "FREQSEL1" (effects (font (size 1 1)))) (number "31" (effects (font (size 1 1)))))
+(pin passive line (at 20 -21.25 180) (length 5) (name "XI" (effects (font (size 1 1)))) (number "52" (effects (font (size 1 1)))))
+(pin passive line (at 20 -23.75 180) (length 5) (name "VSSOSC" (effects (font (size 1 1)))) (number "53" (effects (font (size 1 1)))))
+(pin passive line (at 20 -26.25 180) (length 5) (name "XO" (effects (font (size 1 1)))) (number "54" (effects (font (size 1 1)))))) (embedded_fonts no))
 (symbol "PiSXMeRevAClean:JAE_SM3ZS067U410ABR1000" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "U" (at 0 -12 0) (effects (font (size 1 1)))) (property "Value" "JAE_SM3ZS067U410ABR1000" (at 0 12 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "JAE_SM3ZS067U410ABR1000_1_1" (rectangle (start -15 -10) (end 15 10) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 6.25 180) (length 5) (name "SATA_TX_P" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))
 (pin passive line (at 20 3.75 180) (length 5) (name "SATA_TX_N" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))
 (pin passive line (at 20 1.25 180) (length 5) (name "SATA_RX_P" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1)))))
 (pin passive line (at 20 -1.25 180) (length 5) (name "SATA_RX_N" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1)))))
 (pin passive line (at 20 -3.75 180) (length 5) (name "M2_3V3" (effects (font (size 1 1)))) (number "5" (effects (font (size 1 1)))))
 (pin passive line (at 20 -6.25 180) (length 5) (name "M2_GND" (effects (font (size 1 1)))) (number "6" (effects (font (size 1 1)))))) (embedded_fonts no))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(symbol "PiSXMeRevAClean:CLOCK_XTAL_4P" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "Y" (at 0 -12 0) (effects (font (size 1 1)))) (property "Value" "CLOCK_XTAL_4P" (at 0 12 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "CLOCK_XTAL_4P_1_1" (rectangle (start -15 -10) (end 15 10) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 -3.75 180) (length 5) (name "XI" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))
+(pin passive line (at 20 -1.25 180) (length 5) (name "GND" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))
+(pin passive line (at 20 1.25 180) (length 5) (name "XO" (effects (font (size 1 1)))) (number "3" (effects (font (size 1 1)))))
+(pin passive line (at 20 3.75 180) (length 5) (name "NC" (effects (font (size 1 1)))) (number "4" (effects (font (size 1 1)))))) (embedded_fonts no))
+(symbol "PiSXMeRevAClean:CLOCK_R" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "R" (at 0 -12 0) (effects (font (size 1 1)))) (property "Value" "CLOCK_R" (at 0 12 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "CLOCK_R_1_1" (rectangle (start -15 -10) (end 15 10) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 -1.25 180) (length 5) (name "XI" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))
+(pin passive line (at 20 1.25 180) (length 5) (name "XO" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) (embedded_fonts no))
+(symbol "PiSXMeRevAClean:CLOCK_C" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "C" (at 0 -12 0) (effects (font (size 1 1)))) (property "Value" "CLOCK_C" (at 0 12 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "CLOCK_C_1_1" (rectangle (start -15 -10) (end 15 10) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 -1.25 180) (length 5) (name "CLOCK" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))
+(pin passive line (at 20 1.25 180) (length 5) (name "GND" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) (embedded_fonts no))
 (symbol "PiSXMeRevAClean:SATA_AC_CAP" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "C" (at 0 -12 0) (effects (font (size 1 1)))) (property "Value" "SATA_AC_CAP" (at 0 12 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "SATA_AC_CAP_1_1" (rectangle (start -15 -10) (end 15 10) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 -1.25 180) (length 5) (name "SATA_IN" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))
 (pin passive line (at 20 1.25 180) (length 5) (name "SATA_OUT" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) (embedded_fonts no)))
+
+
+
 
   (hierarchical_label "CM5_USB3"
     (shape bidirectional)
@@ -525,6 +556,11 @@
 (label "BRIDGE_1V1" (at 70 103.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid db000000-0000-0000-0000-00000000006d))
 (label "BRIDGE_RESET" (at 70 106.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid db000000-0000-0000-0000-00000000006e))
 (label "BRIDGE_CFG" (at 70 108.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid db000000-0000-0000-0000-00000000006f))
+(label "BRIDGE_3V3" (at 70 111.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid db000000-0000-0000-0000-000000000170))
+(label "BRIDGE_3V3" (at 70 113.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid db000000-0000-0000-0000-000000000171))
+(label "BRIDGE_XI" (at 70 116.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid db000000-0000-0000-0000-000000000172))
+(label "BRIDGE_VSSOSC" (at 70 118.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid db000000-0000-0000-0000-000000000173))
+(label "BRIDGE_XO" (at 70 121.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid db000000-0000-0000-0000-000000000174))
 (symbol (lib_id "PiSXMeRevAClean:TUSB9261IPVP_STORAGE") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid db000000-0000-0000-0000-000000000000) (property "Reference" "U7" (at 50 82 0) (effects (font (size 1.1 1.1)))) (property "Value" "TUSB9261IPVP" (at 50 108 0) (effects (font (size 1.1 1.1)))) (property "MPN" "TUSB9261IPVP" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:TUSB9261IPVP_HTQFP64" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (pin "46" (uuid db000000-0000-0000-0000-000000000100))
 (pin "45" (uuid db000000-0000-0000-0000-000000000101))
 (pin "43" (uuid db000000-0000-0000-0000-000000000102))
@@ -536,7 +572,12 @@
 (pin "24" (uuid db000000-0000-0000-0000-000000000108))
 (pin "41" (uuid db000000-0000-0000-0000-000000000109))
 (pin "4" (uuid db000000-0000-0000-0000-00000000010a))
-(pin "21" (uuid db000000-0000-0000-0000-00000000010b)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "U7") (unit 1)))) )
+(pin "21" (uuid db000000-0000-0000-0000-00000000010b))
+(pin "30" (uuid db000000-0000-0000-0000-00000000010c))
+(pin "31" (uuid db000000-0000-0000-0000-00000000010d))
+(pin "52" (uuid db000000-0000-0000-0000-00000000010e))
+(pin "53" (uuid db000000-0000-0000-0000-00000000010f))
+(pin "54" (uuid db000000-0000-0000-0000-000000000110)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "U7") (unit 1)))) )
 (label "SATA_M2_TX_P" (at 130 88.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid dc000000-0000-0000-0000-000000000064))
 (label "SATA_M2_TX_N" (at 130 91.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid dc000000-0000-0000-0000-000000000065))
 (label "SATA_M2_RX_P" (at 130 93.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid dc000000-0000-0000-0000-000000000066))
@@ -548,7 +589,7 @@
 (pin "3" (uuid dc000000-0000-0000-0000-000000000102))
 (pin "4" (uuid dc000000-0000-0000-0000-000000000103))
 (pin "5" (uuid dc000000-0000-0000-0000-000000000104))
-(pin "6" (uuid dc000000-0000-0000-0000-000000000105)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "J3") (unit 1)))) )
+(pin "6" (uuid dc000000-0000-0000-0000-000000000105)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "J3") (unit 1)))) )
 (label "BRIDGE_SATA_TX_P" (at 100 118.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ee000000-0000-0000-0000-000000000064))
 (label "SATA_M2_TX_P" (at 100 121.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ee000000-0000-0000-0000-000000000065))
 (symbol (lib_id "PiSXMeRevAClean:SATA_AC_CAP") (at 80 120 0)
@@ -559,7 +600,7 @@
  (property "MPN" "GRM155R71C104KA88D" (at 80 120 0) (effects (font (size 1 1)) (hide yes)))
  (property "Footprint" "PiSXMeRevAClean:C_0402_1005Metric" (at 80 120 0) (effects (font (size 1 1)) (hide yes)))
  (pin "1" (uuid ee000000-0000-0000-0000-000000000000)) (pin "2" (uuid ee000000-0000-0000-0000-000000000001))
- (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "C30") (unit 1)))) )
+ (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "C30") (unit 1)))) )
 (label "BRIDGE_SATA_TX_N" (at 112 118.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ee000000-0000-0000-0000-000000000074))
 (label "SATA_M2_TX_N" (at 112 121.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ee000000-0000-0000-0000-000000000075))
 (symbol (lib_id "PiSXMeRevAClean:SATA_AC_CAP") (at 92 120 0)
@@ -570,7 +611,7 @@
  (property "MPN" "GRM155R71C104KA88D" (at 92 120 0) (effects (font (size 1 1)) (hide yes)))
  (property "Footprint" "PiSXMeRevAClean:C_0402_1005Metric" (at 92 120 0) (effects (font (size 1 1)) (hide yes)))
  (pin "1" (uuid ee000000-0000-0000-0000-000000000010)) (pin "2" (uuid ee000000-0000-0000-0000-000000000011))
- (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "C31") (unit 1)))) )
+ (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "C31") (unit 1)))) )
 (label "BRIDGE_SATA_RX_P" (at 124 118.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ee000000-0000-0000-0000-000000000084))
 (label "SATA_M2_RX_P" (at 124 121.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ee000000-0000-0000-0000-000000000085))
 (symbol (lib_id "PiSXMeRevAClean:SATA_AC_CAP") (at 104 120 0)
@@ -581,7 +622,7 @@
  (property "MPN" "GRM155R71C104KA88D" (at 104 120 0) (effects (font (size 1 1)) (hide yes)))
  (property "Footprint" "PiSXMeRevAClean:C_0402_1005Metric" (at 104 120 0) (effects (font (size 1 1)) (hide yes)))
  (pin "1" (uuid ee000000-0000-0000-0000-000000000020)) (pin "2" (uuid ee000000-0000-0000-0000-000000000021))
- (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "C32") (unit 1)))) )
+ (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "C32") (unit 1)))) )
 (label "BRIDGE_SATA_RX_N" (at 136 118.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ee000000-0000-0000-0000-000000000094))
 (label "SATA_M2_RX_N" (at 136 121.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ee000000-0000-0000-0000-000000000095))
 (symbol (lib_id "PiSXMeRevAClean:SATA_AC_CAP") (at 116 120 0)
@@ -592,6 +633,26 @@
  (property "MPN" "GRM155R71C104KA88D" (at 116 120 0) (effects (font (size 1 1)) (hide yes)))
  (property "Footprint" "PiSXMeRevAClean:C_0402_1005Metric" (at 116 120 0) (effects (font (size 1 1)) (hide yes)))
  (pin "1" (uuid ee000000-0000-0000-0000-000000000030)) (pin "2" (uuid ee000000-0000-0000-0000-000000000031))
- (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000" (reference "C33") (unit 1)))) )
-  (sheet_instances (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (page "7")))
+ (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "C33") (unit 1)))) )
+(label "BRIDGE_XI" (at 170 133.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ef000000-0000-0000-0000-000000000064))
+(label "BRIDGE_VSSOSC" (at 170 131.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ef000000-0000-0000-0000-000000000065))
+(label "BRIDGE_XO" (at 170 128.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ef000000-0000-0000-0000-000000000066))
+(label "BRIDGE_VSSOSC" (at 170 126.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ef000000-0000-0000-0000-000000000067))
+(symbol (lib_id "PiSXMeRevAClean:CLOCK_XTAL_4P") (at 150 130 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid ef000000-0000-0000-0000-000000000032) (property "Reference" "Y1" (at 150 117 0) (effects (font (size 1.1 1.1)))) (property "Value" "ECS-400-18-33-JGN-TR3" (at 150 143 0) (effects (font (size 1.1 1.1)))) (property "MPN" "ECS-400-18-33-JGN-TR3" (at 150 130 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:Crystal_3225_4Pad" (at 150 130 0) (effects (font (size 1 1)) (hide yes))) (pin "1" (uuid ef000000-0000-0000-0000-000000000000))
+(pin "2" (uuid ef000000-0000-0000-0000-000000000001))
+(pin "3" (uuid ef000000-0000-0000-0000-000000000002))
+(pin "4" (uuid ef000000-0000-0000-0000-000000000003)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "Y1") (unit 1)))) )
+(label "BRIDGE_XI" (at 170 141.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ef000000-0000-0000-0000-000000000074))
+(label "BRIDGE_XO" (at 170 138.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ef000000-0000-0000-0000-000000000075))
+(symbol (lib_id "PiSXMeRevAClean:CLOCK_R") (at 150 140 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid ef000000-0000-0000-0000-000000000042) (property "Reference" "R23" (at 150 127 0) (effects (font (size 1.1 1.1)))) (property "Value" "1M" (at 150 153 0) (effects (font (size 1.1 1.1)))) (property "MPN" "1M" (at 150 140 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:R_0402_1005Metric" (at 150 140 0) (effects (font (size 1 1)) (hide yes))) (pin "1" (uuid ef000000-0000-0000-0000-000000000010))
+(pin "2" (uuid ef000000-0000-0000-0000-000000000011)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "R23") (unit 1)))) )
+(label "BRIDGE_XI" (at 200 131.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ef000000-0000-0000-0000-000000000084))
+(label "BRIDGE_VSSOSC" (at 200 128.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ef000000-0000-0000-0000-000000000085))
+(symbol (lib_id "PiSXMeRevAClean:CLOCK_C") (at 180 130 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid ef000000-0000-0000-0000-000000000052) (property "Reference" "C42" (at 180 117 0) (effects (font (size 1.1 1.1)))) (property "Value" "18pF" (at 180 143 0) (effects (font (size 1.1 1.1)))) (property "MPN" "18pF" (at 180 130 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:C_0402_1005Metric" (at 180 130 0) (effects (font (size 1 1)) (hide yes))) (pin "1" (uuid ef000000-0000-0000-0000-000000000020))
+(pin "2" (uuid ef000000-0000-0000-0000-000000000021)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "C42") (unit 1)))) )
+(label "BRIDGE_XO" (at 200 141.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ef000000-0000-0000-0000-000000000094))
+(label "BRIDGE_VSSOSC" (at 200 138.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid ef000000-0000-0000-0000-000000000095))
+(symbol (lib_id "PiSXMeRevAClean:CLOCK_C") (at 180 140 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid ef000000-0000-0000-0000-000000000062) (property "Reference" "C43" (at 180 127 0) (effects (font (size 1.1 1.1)))) (property "Value" "18pF" (at 180 153 0) (effects (font (size 1.1 1.1)))) (property "MPN" "18pF" (at 180 140 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:C_0402_1005Metric" (at 180 140 0) (effects (font (size 1 1)) (hide yes))) (pin "1" (uuid ef000000-0000-0000-0000-000000000030))
+(pin "2" (uuid ef000000-0000-0000-0000-000000000031)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "C43") (unit 1)))) )
+  (sheet_instances (path "/" (page "7")))
 )
