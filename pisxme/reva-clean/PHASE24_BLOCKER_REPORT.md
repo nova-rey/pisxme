@@ -523,3 +523,12 @@ C44-C47 rail/return pads. Native DRC reports zero shorting and zero
 track-crossing records; the board report is 201 violations and 397
 unconnected pads. This is validated local U5 integration, not full Phase 24
 closure. Full-board routed schematic-to-PCB parity remains open.
+
+## Rejected clock-oracle overlay
+
+The proven rotated-U7 clock copper was overlaid on the U5-integrated acreage
+candidate using existing authoritative clock footprints. Native DRC found 288
+violations, 400 unconnected pads, track crossings, and clock-to-SATA/bridge
+shorts. This is a rejected coordinate-overlay experiment, not evidence that
+the clock architecture is invalid; the clock island must be regenerated in a
+free local corridor or the surrounding storage copper must be coordinated.

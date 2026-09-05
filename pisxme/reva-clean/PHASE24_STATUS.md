@@ -208,3 +208,15 @@ R20.2 joins C44-C47.2. Native DRC reports 201 violations and 397 unconnected
 pads, with zero `shorting_items` and zero `tracks_crossing`. This closes the
 integrated U5 topology discriminator only; full Phase 24 routed parity remains
 open.
+
+## Rejected clock-oracle acreage transplant
+
+`phase24_integrate_clock_oracle.py` attempted to transplant the proven
+rotated-U7 clock copper from `PHASE19_PASS_CLOCK_ROT180_S20.kicad_pcb` onto
+the integrated acreage candidate while reusing the existing Y1/R23/C42/C43
+authoritative footprints. Native DRC rejected the overlay: 288 violations,
+400 unconnected pads, multiple track crossings, and shorts between clock
+nets and existing SATA/bridge copper. The standalone oracle remains valid;
+its unmodified coordinate context cannot be overlaid onto this already-routed
+acreage candidate. The experiment is retained as negative evidence, and its
+KiCad via-width API call was corrected for reproducible reruns.
