@@ -167,6 +167,17 @@ The endpoint-authoring defect is fixed, but this shelf routing graph remains
 rejected. The proven rot90 topology and U5-cap topology remain the valid
 local oracles for the next integration attempt.
 
+## Underside open-shelf source attempt (rejected)
+
+The shelf candidate was revised so Y1/R23/C42/C43 use B.Cu pads and the
+three source lanes terminate directly on the serialized underside Y1 pads.
+This removes the prior F.Cu crystal-launch crossing, but the long lanes still
+intersect inherited SATA copper. Native DRC reported `224` violations with
+clock/SATA crossings and shorts. The underside placement remains mechanically
+permitted, but this corridor is rejected; a successful acreage candidate
+must choose a route corridor that avoids the inherited SATA field as well as
+the PCIe corridor.
+
 ## Rot180 source-escape oracle
 
 `phase24_rot180_source_escape.py` now derives U7 pins 52/53/54 after setting

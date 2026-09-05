@@ -21,7 +21,7 @@ def main():
  fs={}
  for ref,pos in {'Y1':(210,140),'R23':(210,153),'C42':(204,153),'C43':(216,153)}.items():
   f=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),LIB[ref]); f.SetReference(ref); f.SetPosition(V(*pos)); b.Add(f); fs[ref]=f
-  for p in f.Pads(): p.SetNet(nets[MAP[ref][str(p.GetNumber())]]); p.SetNetCode(nets[MAP[ref][str(p.GetNumber())]].GetNetCode())
+  for p in f.Pads(): p.SetNet(nets[MAP[ref][str(p.GetNumber())]]); p.SetNetCode(nets[MAP[ref][str(p.GetNumber())]].GetNetCode()); p.SetLayer(pcbnew.B_Cu)
  def S(name,a,z,l=pcbnew.F_Cu,w=.1321):
   t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(l); t.SetWidth(pcbnew.FromMM(w)); t.SetNet(nets[name]); b.Add(t)
  def X(name,p):
@@ -31,9 +31,14 @@ def main():
  # body before going outboard.
  XI,VS,XO=('/STORAGE/BRIDGE_XI','/STORAGE/BRIDGE_VSSOSC','/STORAGE/BRIDGE_XO')
  xi0,vs0,xo0=(xy(P(u,n)) for n in ('52','53','54'))
- S(XI,xi0,(xi0[0],145)); X(XI,(xi0[0],145)); S(XI,(xi0[0],145),(210,145),pcbnew.B_Cu); X(XI,(210,145)); S(XI,(210,145),xy(P(fs['Y1'],'1')))
- S(VS,vs0,(vs0[0],147)); X(VS,(vs0[0],147)); S(VS,(vs0[0],147),(209,147),pcbnew.B_Cu); X(VS,(209,147)); S(VS,(209,147),xy(P(fs['Y1'],'2')))
- S(XO,xo0,(xo0[0],149)); X(XO,(xo0[0],149)); S(XO,(xo0[0],149),(208,149),pcbnew.B_Cu); X(XO,(208,149)); S(XO,(208,149),xy(P(fs['Y1'],'3')))
+ # Use the proven asymmetric rot180 escape before entering three separated
+ # shelf lanes. All endpoints are derived from the serialized U7/Y1 pads.
+ S(XI,xi0,(123.5,134.5)); S(XI,(123.5,134.5),(126.5,134.5)); X(XI,(126.5,134.5)); S(XI,(126.5,134.5),(126.5,145),pcbnew.B_Cu); S(XI,(126.5,145),(210,145),pcbnew.B_Cu); S(XI,(210,145),(210,138.9),pcbnew.B_Cu); S(XI,(210,138.9),xy(P(fs['Y1'],'1')),pcbnew.B_Cu)
+ S(VS,vs0,(vs0[0],133)); X(VS,(vs0[0],133)); S(VS,(vs0[0],133),(122.5,147),pcbnew.B_Cu); S(VS,(122.5,147),(209,147),pcbnew.B_Cu); S(VS,(209,147),(209,138.9),pcbnew.B_Cu); S(VS,(209,138.9),xy(P(fs['Y1'],'2')),pcbnew.B_Cu)
+ S(XO,xo0,(121,134)); S(XO,(121,134),(113,134)); X(XO,(113,134)); S(XO,(113,134),(113,149),pcbnew.B_Cu); S(XO,(113,149),(208,149),pcbnew.B_Cu); S(XO,(208,149),(208,141.1),pcbnew.B_Cu); S(XO,(208,141.1),xy(P(fs['Y1'],'3')),pcbnew.B_Cu)
+ # Source-to-Y1 discriminator ends here; passive fanout is reintroduced only
+ # after this launch has passed native DRC.
+ b.Save(str(OUT)); print(OUT); return
  # Common VSSOSC exits the crystal on the opposite side and returns to C42/C43.
  S(VS,xy(P(fs['Y1'],'2')),(207,140),pcbnew.B_Cu); X(VS,(207,140)); S(VS,(207,140),xy(P(fs['Y1'],'4')),pcbnew.F_Cu)
  # Local passive fanout uses distinct B.Cu lanes and offset vias at SMD pads.
