@@ -138,7 +138,11 @@ def main() -> None:
     io = pcbnew.PCB_IO_KICAD_SEXPR()
     refs = {fp.GetReference(): fp for fp in board.GetFootprints() if fp.GetReference()}
     for fp in board.GetFootprints():
-        if fp.GetReference() == "REF**" and "Raspberry_Pi_5_Compute_Module" in str(fp.GetFPID().GetLibItemName()):
+        try:
+            ref=fp.GetReference(); lib_name=str(fp.GetFPID().GetLibItemName())
+        except (AttributeError, RuntimeError):
+            continue
+        if ref == "REF**" and "Raspberry_Pi_5_Compute_Module" in lib_name:
             fp.SetReference("J7")
             refs["J7"] = fp
     # Remove donor-era footprints that must be replaced before any new
@@ -150,7 +154,13 @@ def main() -> None:
         fp = board.FindFootprintByReference(ref)
         if fp is not None:
             board.Remove(fp)
-    refs = {item.GetReference(): item for item in board.GetFootprints() if item.GetReference()}
+    refs = {}
+    for item in board.GetFootprints():
+        try:
+            ref=item.GetReference()
+        except (AttributeError, RuntimeError):
+            continue
+        if ref: refs[ref]=item
 
     for ref, name in components.items():
         # Always query the live board.  pcbnew invalidates cached SWIG
