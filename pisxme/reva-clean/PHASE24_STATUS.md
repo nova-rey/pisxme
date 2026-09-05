@@ -1030,6 +1030,15 @@ not comparable unless their exact parent is recorded. Phase 24 remains open;
 the overlay is not an acreage pass because support circuitry and board-wide
 connectivity are still incomplete.
 
+For the same immutable parent, the existing CM5IO-adapted selected-placement
+route was regenerated fresh. Native DRC reported 384 total violations, 15
+shorting items, 13 crossings, and 425 unconnected items, versus the parent's
+22 shorts and 0 crossings. It is rejected. The new findings are localized to
+the hard-coded local escape/endpoint lanes, SERVICE-via interference, and
+MagJack pad-field ordering; the comparison is now valid because parent hash
+and output artifact are recorded. Consultant review therefore closes the
+report-integrity ambiguity but does not close Ethernet routing.
+
 The subsequent Ethernet regeneration probes were also preserved as disposable
 evidence. A naive rigid translation into north-west acreage reported 448 total
 violations, 2 shorts, 8 crossings, and 433 unconnected items; the crossings
