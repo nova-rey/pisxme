@@ -976,3 +976,10 @@ records show the hand-routed east fanout colliding with existing SERVICE and
 reference geometry as well as crossing at the ESD pad field. This is a
 rejected placement/routing experiment, not a reason to waive Phase 24; the
 next bounded class is the west-outboard ESD candidate with isolated corridors.
+
+The west-outboard live-pad route with J2 at rotation 0 was tested and
+rejected: native DRC found 458 total violations, 137 unconnected records,
+five shorts, and four crossings. The remaining focused defects are local
+ESD pad-field fanout and connector launch/support approach geometry. The
+placement remains mechanically credible; the next refinement changes ESD
+orientation and connector-side fanout rather than abandoning the island.

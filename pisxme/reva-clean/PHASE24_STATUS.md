@@ -774,3 +774,10 @@ Native DRC reported 569 violations, 131 unconnected records, 34 shorts, and
 geometry, pair crossings at the east-side ESD escape, and crossing/shorting
 via fanout. It is rejected; the west-outboard ESD candidate is the next
 dedicated-corridor experiment.
+
+The first west-outboard live-pad route was run with J2 rotated to zero so its
+MDI row faces the incoming corridor. Native DRC reports 458 violations, 137
+unconnected records, five shorts, and four crossings. Focused failures are
+local U6/U9 pad-field fanout and MagJack support-pad approach geometry. The
+route is rejected, while the mechanically valid placement remains the basis
+for an orientation/escape refinement.
