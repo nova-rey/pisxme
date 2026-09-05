@@ -99,3 +99,7 @@ The first strict complete-fixture implementation was rejected by native DRC
 (24 violations: 5 crossings, 4 shorts, 8 disconnected pads). It is retained
 as evidence that the next implementation must derive and reserve the actual
 Y1 pad field rather than assume a generic three-bus geometry.
+
+The subsequent launch-height refinement remained invalid (9 native DRC
+violations, including 8 crossings). It is rejected; the next candidate must
+use an obstacle-mapped proven support template.

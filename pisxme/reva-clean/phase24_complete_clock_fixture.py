@@ -52,19 +52,28 @@ def main():
     n = {"XI":nets["/STORAGE/BRIDGE_XI"], "VS":nets["/STORAGE/BRIDGE_VSSOSC"], "XO":nets["/STORAGE/BRIDGE_XO"]}
     for k, p in sources.items(): p.SetNet(n[k]); p.SetNetCode(n[k].GetNetCode())
     # Per-net F.Cu launch, via, and separated B.Cu buses.
-    exits = {"XI":(94,105), "VS":(90,108), "XO":(106,105)}
+    exits = {"XI":(94,109), "VS":(90,111), "XO":(106,113)}
     buses = {"XI":(92,122), "VS":(90,130), "XO":(108,128)}
     for k, p in sources.items():
-        a = xy(p); e = exits[k]; seg(b,n[k],a,e,pcbnew.F_Cu); via(b,n[k],e); path(b,n[k],[e,buses[k]])
+        a = xy(p); e = exits[k]; mid=(a[0], e[1]); seg(b,n[k],a,mid,pcbnew.F_Cu); seg(b,n[k],mid,e,pcbnew.F_Cu); via(b,n[k],e); path(b,n[k],[e,buses[k]])
     targets = {k:[] for k in n}
     for ref, f in fs.items():
         for p in f.Pads(): targets[{'/STORAGE/BRIDGE_XI':'XI','/STORAGE/BRIDGE_XO':'XO','/STORAGE/BRIDGE_VSSOSC':'VS'}[MAP[ref][str(p.GetNumber())]]].append(xy(p))
-    # Each support pad reaches its own bus with no pad-field crossing.
-    for k, pads in targets.items():
-        bx, by = buses[k]
-        for p in pads:
-            if k == "VS": path(b,n[k],[p,(90,p[1]),(90,130)])
-            else: path(b,n[k],[p,(p[0],by),(bx,by)])
+    # Approach the crystal on its natural perimeter: XI from the upper-left,
+    # XO from the lower-right, and VSSOSC around the outside of both rows.
+    y = {str(p.GetNumber()): xy(p) for p in fs["Y1"].Pads()}
+    path(b,n["XI"],[(y["1"]),(97.5,114.15),(97.5,122),(92,122)])
+    path(b,n["XO"],[(y["3"]),(104.5,115.85),(104.5,128),(108,128)])
+    path(b,n["VS"],[(y["2"]),(97.0,115.85),(97.0,130),(90,130)])
+    path(b,n["VS"],[(y["4"]),(103.0,114.15),(103.0,130),(90,130)])
+    # Each passive pad reaches its matching perimeter bus without entering the
+    # crystal field a second time.
+    for p in (P(fs["R23"],"1"), P(fs["C42"],"1")):
+        q=xy(p); path(b,n["XI"],[q,(q[0],122),(92,122)])
+    for p in (P(fs["R23"],"2"), P(fs["C43"],"1")):
+        q=xy(p); path(b,n["XO"],[q,(104.5,q[1]),(104.5,128),(108,128)])
+    for p in (P(fs["C42"],"2"), P(fs["C43"],"2")):
+        q=xy(p); path(b,n["VS"],[q,(q[0],130),(90,130)])
     b.Save(str(OUT)); print(OUT)
 
 if __name__ == "__main__": main()

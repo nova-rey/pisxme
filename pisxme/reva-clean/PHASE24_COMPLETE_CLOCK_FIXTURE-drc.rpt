@@ -1,100 +1,40 @@
 ** Drc report for PHASE24_COMPLETE_CLOCK_FIXTURE.kicad_pcb **
-** Created on 2026-09-05T08:23:36 **
+** Created on 2026-09-05T08:25:44 **
 ** Report includes: Errors, Warnings, Exclusions **
 
-** Found 24 DRC violations **
+** Found 9 DRC violations **
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(98.9000 mm, 114.1500 mm): Track [/STORAGE/BRIDGE_XI] on B.Cu, length 7.8500 mm
-    @(98.9000 mm, 115.8500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 8.9000 mm
+    @(97.0000 mm, 115.8500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 14.1500 mm
+    @(99.5000 mm, 122.0000 mm): Track [/STORAGE/BRIDGE_XI] on B.Cu, length 7.5000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(101.1000 mm, 114.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 11.1000 mm
-    @(98.9000 mm, 114.1500 mm): Track [/STORAGE/BRIDGE_XI] on B.Cu, length 7.8500 mm
+    @(103.0000 mm, 114.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 15.8500 mm
+    @(101.1000 mm, 115.8500 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 3.4000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(106.5000 mm, 125.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 16.5000 mm
-    @(101.1000 mm, 115.8500 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 12.1500 mm
+    @(106.5000 mm, 125.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 5.0000 mm
+    @(104.5000 mm, 128.0000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 3.5000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(106.5000 mm, 125.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 16.5000 mm
-    @(100.5000 mm, 125.0000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 3.0000 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0114 mm)
-    Local override; error
-    @(97.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 3.0414 mm
-    @(97.5000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 8.2765 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_VSSOSC and /STORAGE/BRIDGE_XI)
-    Local override; error
-    @(106.5000 mm, 125.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 16.5000 mm
-    @(93.5000 mm, 125.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of C42 on B.Cu
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_VSSOSC and /STORAGE/BRIDGE_XI)
-    Local override; error
-    @(98.9000 mm, 115.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
-    @(98.9000 mm, 114.1500 mm): Track [/STORAGE/BRIDGE_XI] on B.Cu, length 7.8500 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XI and )
-    Local override; error
-    @(97.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 3.0414 mm
-    @(95.5000 mm, 104.5000 mm): Pad 49 [<no net>] of U7 on F.Cu
+    @(106.5000 mm, 125.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 5.0000 mm
+    @(104.5000 mm, 128.0000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 3.5000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(106.5000 mm, 125.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 16.5000 mm
-    @(105.5000 mm, 125.0000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 3.0000 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0565 mm)
+    @(100.5000 mm, 125.0000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 4.0000 mm
+    @(103.0000 mm, 114.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 15.8500 mm
+[tracks_crossing]: Tracks crossing
     Local override; error
-    @(98.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 8.0156 mm
-    @(103.0000 mm, 104.5000 mm): Pad 64 [<no net>] of U7 on F.Cu
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_VSSOSC and /STORAGE/BRIDGE_XI)
+    @(104.5000 mm, 128.0000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 3.5000 mm
+    @(106.5000 mm, 125.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 5.0000 mm
+[tracks_crossing]: Tracks crossing
     Local override; error
-    @(94.5000 mm, 125.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 4.5000 mm
-    @(93.5000 mm, 125.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of C42 on B.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(98.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 8.0156 mm
-    @(98.5000 mm, 104.5000 mm): Pad 55 [<no net>] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(98.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 8.0156 mm
-    @(99.0000 mm, 104.5000 mm): Pad 56 [/STORAGE/BRIDGE_SATA_TX_N] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(98.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 8.0156 mm
-    @(99.5000 mm, 104.5000 mm): Pad 57 [/STORAGE/BRIDGE_SATA_TX_P] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(98.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 8.0156 mm
-    @(100.0000 mm, 104.5000 mm): Pad 58 [<no net>] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(98.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 8.0156 mm
-    @(100.5000 mm, 104.5000 mm): Pad 59 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(98.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 8.0156 mm
-    @(101.0000 mm, 104.5000 mm): Pad 60 [/STORAGE/BRIDGE_SATA_RX_P] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(98.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 8.0156 mm
-    @(101.5000 mm, 104.5000 mm): Pad 61 [<no net>] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(98.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 8.0156 mm
-    @(102.0000 mm, 104.5000 mm): Pad 62 [<no net>] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(97.5000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 8.2765 mm
-    @(97.0000 mm, 104.5000 mm): Pad 52 [/STORAGE/BRIDGE_XI] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(97.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 3.0414 mm
-    @(95.5000 mm, 104.5000 mm): Pad 49 [<no net>] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(97.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 3.0414 mm
-    @(96.0000 mm, 104.5000 mm): Pad 50 [<no net>] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(97.0000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 3.0414 mm
-    @(96.5000 mm, 104.5000 mm): Pad 51 [<no net>] of U7 on F.Cu
+    @(98.9000 mm, 115.8500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 1.9000 mm
+    @(97.5000 mm, 114.1500 mm): Track [/STORAGE/BRIDGE_XI] on B.Cu, length 7.8500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(97.0000 mm, 115.8500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 14.1500 mm
+    @(97.5000 mm, 122.0000 mm): Track [/STORAGE/BRIDGE_XI] on B.Cu, length 5.5000 mm
 [text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)
     Rule: board setup constraints silk text height; warning
     @(100.0000 mm, 124.1000 mm): Reference field of R23

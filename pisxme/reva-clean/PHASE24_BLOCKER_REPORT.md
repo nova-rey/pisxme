@@ -342,3 +342,9 @@ participate in the routed graph. Its first generic three-bus layout reported
 pads. The failure is retained as a valid rejection; the next implementation
 must derive branch escape points from the serialized pad field and reserve
 that field explicitly.
+
+The launch-height refinement was also rejected: native DRC reported 9
+violations, including 8 B.Cu perimeter crossings and 8 isolated non-clock
+U7 pads. It improved the prior shorts but did not produce a valid complete
+fixture. The next credible class is an obstacle-mapped transplant of a proven
+routed support template, not further generic Manhattan bus tuning.
