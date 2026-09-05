@@ -1180,6 +1180,14 @@ zero focused shorts was incorrect. The rotation-0 candidate remains rejected.
 KiCad DRC reported 215 records, including five crossings and one U7 NC-pad
 short, plus an F.Cu SATA pair crossing. Rejected; SATA270 remains the
 storage-side oracle.
+## 2026-09-05 parameterized relocation study U7/J3
+
+The coordinated author was parameterized for coherent U7/J3 placement. A
+USB-only study at U7 `(240,105)` and J3 `(160,140)` produced
+`PHASE19_RELOC_U240J160_USB.kicad_pcb`; native DRC measured 250 records,
+three crossings, and four shorts. It is rejected as an initial placement
+baseline, but the parameterized path is retained for the next relocation
+iteration.
 ## 2026-09-05 high/low RX-F TX-B trial
 
 `PHASE19_COORDINATED_SPLIT2.kicad_pcb` moved the RX F.Cu corridors above the

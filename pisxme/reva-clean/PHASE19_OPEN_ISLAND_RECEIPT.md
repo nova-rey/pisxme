@@ -168,6 +168,12 @@ Rejected as a full SATA pass.
 - `PHASE19_COORDINATED_SATAP_F24-drc.rpt`: 215 total records, 5 crossings,
   1 U7 NC-pad short, and an additional F.Cu SATA crossing; rejected.
 - SATA270 remains the storage-side oracle.
+### 2026-09-05 — parameterized relocation study
+
+- U7 `(240,105)`, J3 `(160,140)`, USB-only artifact
+  `PHASE19_RELOC_U240J160_USB-drc.rpt`: 250 records, 3 crossings, 4 shorts;
+  rejected.
+- Generator now accepts coherent U7/J3 placement arguments.
 ### 2026-09-05 — high/low RX-F TX-B trial
 
 - `PHASE19_COORDINATED_SPLIT2-drc.rpt`: 212 total records, 4 crossings, and

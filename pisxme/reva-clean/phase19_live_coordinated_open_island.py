@@ -27,6 +27,11 @@ USB_VERTICAL=ARGS.get('P19_USB_VERTICAL',os.environ.get('P19_USB_VERTICAL','0'))
 USB_ORDERED=ARGS.get('P19_USB_ORDERED',os.environ.get('P19_USB_ORDERED','0'))=='1'
 USB_SPLIT=ARGS.get('P19_USB_SPLIT',os.environ.get('P19_USB_SPLIT','0'))=='1'
 U7ROT=int(ARGS.get('P19_U7_ROT',os.environ.get('P19_U7_ROT','270')))
+U7X=float(ARGS.get('P19_U7_X',os.environ.get('P19_U7_X','280')))
+U7Y=float(ARGS.get('P19_U7_Y',os.environ.get('P19_U7_Y','105')))
+J3X=float(ARGS.get('P19_J3_X',os.environ.get('P19_J3_X','200')))
+J3Y=float(ARGS.get('P19_J3_Y',os.environ.get('P19_J3_Y','140')))
+RELOCATED=abs(U7X-280.0)>0.01 or abs(U7Y-105.0)>0.01 or abs(J3X-200.0)>0.01 or abs(J3Y-140.0)>0.01
 W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def pos(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
@@ -55,12 +60,12 @@ def main():
   b=pcbnew.LoadBoard(str(BASE))
   u=b.FindFootprintByReference('U7'); j=b.FindFootprintByReference('J3')
   # Open region to the right of the PCIe/CM5 source corridors.
-  u.SetPosition(V(280,105)); u.SetOrientationDegrees(U7ROT)
-  j.SetPosition(V(200,140)); j.SetOrientationDegrees(270 if SATA270 else 90)
+  u.SetPosition(V(U7X,U7Y)); u.SetOrientationDegrees(U7ROT)
+  j.SetPosition(V(J3X,J3Y)); j.SetOrientationDegrees(270 if SATA270 else 90)
   old_mech=b.FindFootprintByReference('MECH_M2_2280')
   if old_mech is not None: b.Remove(old_mech)
   # This donor already carries clean C30-C33 clock-candidate objects.
-  _caps={'C30':(240,110),'C31':(240,108),'C32':(240,114),'C33':(240,112)} if SATA270 else {'C30':(265,96),'C31':(265,100),'C32':(265,108),'C33':(265,112)}
+  _caps=({'C30':(U7X-40,U7Y+5),'C31':(U7X-40,U7Y+3),'C32':(U7X-40,U7Y+9),'C33':(U7X-40,U7Y+7)} if SATA270 else {'C30':(U7X-15,U7Y-9),'C31':(U7X-15,U7Y-5),'C32':(U7X-15,U7Y+3),'C33':(U7X-15,U7Y+7)})
   for ref,(x,y) in _caps.items():
    f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(0 if SATA270 else 180)
   for ref,xyv in {'Y1':(268,98),'R23':(272,98),'C42':(272,94),'C43':(276,98)}.items():
@@ -100,12 +105,13 @@ def main():
              'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':92.0} if USB_SPLIT else
             {'CM5_USB3_RX_N':70.0,'CM5_USB3_RX_P':72.0,
              'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':92.0})[suffix]
-    target_x={'CM5_USB3_RX_N':280.0,'CM5_USB3_RX_P':280.5,
-              'CM5_USB3_TX_N':281.5,'CM5_USB3_TX_P':282.0}[suffix]
+    ox=U7X-280.0
+    target_x={'CM5_USB3_RX_N':280.0+ox,'CM5_USB3_RX_P':280.5+ox,
+              'CM5_USB3_TX_N':281.5+ox,'CM5_USB3_TX_P':282.0+ox}[suffix]
     landing_y={'CM5_USB3_RX_N':102.0,'CM5_USB3_RX_P':104.0,
                'CM5_USB3_TX_N':106.0,'CM5_USB3_TX_P':108.0}[suffix]
-    trunk_x={'CM5_USB3_RX_N':290.0,'CM5_USB3_RX_P':292.0,
-             'CM5_USB3_TX_N':294.0,'CM5_USB3_TX_P':296.0}[suffix]
+    trunk_x={'CM5_USB3_RX_N':290.0+ox,'CM5_USB3_RX_P':292.0+ox,
+             'CM5_USB3_TX_N':294.0+ox,'CM5_USB3_TX_P':296.0+ox}[suffix]
     launch_x={'CM5_USB3_RX_N':71.2,'CM5_USB3_RX_P':72.2,
               'CM5_USB3_TX_N':71.2,'CM5_USB3_TX_P':72.2}[suffix]
     launch=(launch_x,s[1]); seg(b,n,s,launch)
