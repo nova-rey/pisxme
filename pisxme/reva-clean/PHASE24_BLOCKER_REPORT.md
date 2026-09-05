@@ -996,3 +996,9 @@ vias, and a dedicated connector launch excluding EDAC CT/LED/shield/NPTH
 fields. It also flags the native rule mismatch between the trial's 0.13208 mm
 Ethernet width and the 0.200 mm minimum rule. This is the specification for
 the next authoring pass.
+
+The monotonic-order west candidate was rejected by native DRC at 497 total
+violations, 135 unconnected records, 15 shorts, and 17 crossings. It proves
+that merely reversing U6/U9 and J2 ordering is insufficient. The next
+authorized method is direct CM5IO serialized pad-escape reuse with
+board-context obstacle handling.

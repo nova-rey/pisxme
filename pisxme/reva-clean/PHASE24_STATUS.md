@@ -798,3 +798,10 @@ PTH pads, with no signal vias at the USON fields and an explicit J2 no-go
 envelope around CT, LED, shield, and NPTH features. The review also identifies
 the trial width mismatch (0.13208 mm versus the native 0.200 mm minimum rule)
 as an unresolved rule/impedance materialization issue.
+
+The monotonic-order candidate was tested with U9 (TD3/TD2) left, U6
+(TD1/TD0) right, both outside J7, and J2 rotated 180 degrees. Native DRC
+reported 497 violations, 135 unconnected records, 15 shorts, and 17
+crossings. It is rejected; endpoint ordering alone does not solve the USON
+output fanout or EDAC launch. The next class is direct reuse of the CM5IO
+serialized pad-escape geometry with board-context corridors re-authored.
