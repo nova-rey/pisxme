@@ -166,3 +166,7 @@ launch around the regulator feedback corridor. Native DRC remains at 197
 violations and 392 unconnected pads, with one source/return crossing and no
 shorting record. It is retained as a rejected disposable result; the
 ground-aware U5 island still needs a layer-separated source/return launch.
+The current U5 V2 rerun uses a left-side source detour to avoid the feedback
+segment, but native DRC still reports one crossing at the separate return
+trunk and 392 unconnected pads. It remains a disposable negative result; no
+production geometry has changed.

@@ -467,3 +467,9 @@ the same ground-aware capacitor placement. Native DRC remained at 197
 violations and 392 unconnected pads; one source/return crossing remained and
 no shorting record was present. This is not promoted. The remaining repair
 class is a genuinely layer-separated source/return launch.
+## U5 left-side source detour (rejected)
+
+The latest V2 rerun moved the 1V1 source detour left of the regulator
+feedback segment. Native DRC still reports 197 violations, including one
+source/return crossing and 392 unconnected pads. This remains a negative
+disposable result and does not alter the accepted power architecture.
