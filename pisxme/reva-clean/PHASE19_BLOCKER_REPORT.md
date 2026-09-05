@@ -1083,3 +1083,13 @@ lift interleaving and U7 final dogbone crossings; the SATA-only oracle remains
 clean. This candidate is rejected. A valid next candidate must route the
 complete USB3 differential pairs as pair-aware corridors during storage-island
 co-placement rather than translating four independent global lanes.
+## 2026-09-05 pair-preserving split-layer USB3 trial
+
+`PHASE19_COORDINATED_SATA270_USB_PAIR_SPLIT2.kicad_pcb` assigned the RX pair
+to B.Cu and the TX pair to F.Cu, with separate upper corridors and outboard
+U7 landings. Native KiCad DRC measured 92 records, including five USB3
+crossings. The remaining failures are source-pad escape ordering, pair fan-in
+at the outboard U7 launch, and final pad-field clearance. This is rejected;
+the SATA-only oracle remains zero-short/zero-crossing. The next search must
+change the coherent U7/J3 placement or U7 orientation rather than continue
+translating the same four U7-row dogbones.

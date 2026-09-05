@@ -22,6 +22,7 @@ CLOCK_ONLY=ARGS.get('P19_CLOCK_ONLY',os.environ.get('P19_CLOCK_ONLY','0'))=='1'
 SATA270=ARGS.get('P19_SATA270',os.environ.get('P19_SATA270','0'))=='1'
 USB_EAST=ARGS.get('P19_USB_EAST',os.environ.get('P19_USB_EAST','0'))=='1'
 USB_TOP_EAST=ARGS.get('P19_USB_TOP_EAST',os.environ.get('P19_USB_TOP_EAST','0'))=='1'
+USB_PAIR_SPLIT=ARGS.get('P19_USB_PAIR_SPLIT',os.environ.get('P19_USB_PAIR_SPLIT','0'))=='1'
 W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def pos(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
@@ -99,6 +100,28 @@ def main():
    launch=(71.2,s[1]); seg(b,n,s,launch); seg(b,n,launch,first); via(b,n,first)
    seg(b,n,first,top,pcbnew.B_Cu); seg(b,n,top,(outx,top[1]),pcbnew.B_Cu); seg(b,n,(outx,top[1]),(outx,landing[1]),pcbnew.B_Cu); seg(b,n,(outx,landing[1]),landing,pcbnew.B_Cu); via(b,n,landing)
    dog=(d[0],landing[1]-1.0); seg(b,n,landing,dog,pcbnew.F_Cu); seg(b,n,dog,d,pcbnew.F_Cu)
+   continue
+  if USB_PAIR_SPLIT:
+   # Pair-preserving alternative: RX is one B.Cu pair and TX one F.Cu
+   # pair.  The two pairs therefore cannot cross in the long corridor;
+   # their U7 pad dogbones are kept in separate upper/lower launch bands.
+   first={'CM5_USB3_RX_N':(72.0,103.9),'CM5_USB3_RX_P':(74.0,104.3),
+          'CM5_USB3_TX_N':(78.0,106.3),'CM5_USB3_TX_P':(76.0,106.7)}[suffix]
+   top={'CM5_USB3_RX_N':(72.0,82.0),'CM5_USB3_RX_P':(74.0,80.0),
+        'CM5_USB3_TX_N':(78.0,86.0),'CM5_USB3_TX_P':(76.0,84.0)}[suffix]
+   outx={'CM5_USB3_RX_N':295.0,'CM5_USB3_RX_P':296.0,
+         'CM5_USB3_TX_N':297.0,'CM5_USB3_TX_P':298.0}[suffix]
+   landing={'CM5_USB3_RX_N':(288.0,110.0),'CM5_USB3_RX_P':(289.0,112.0),
+            'CM5_USB3_TX_N':(290.0,116.0),'CM5_USB3_TX_P':(291.0,118.0)}[suffix]
+   launch=(71.2,s[1]); seg(b,n,s,launch); seg(b,n,launch,first)
+   if suffix.startswith('CM5_USB3_RX_'):
+    via(b,n,first); layer=pcbnew.B_Cu
+   else:
+    layer=pcbnew.F_Cu
+   seg(b,n,first,(first[0],top[1]),layer); seg(b,n,(first[0],top[1]),(260.0,top[1]),layer)
+   seg(b,n,(260.0,top[1]),(outx,top[1]),layer); seg(b,n,(outx,top[1]),(outx,landing[1]),layer); seg(b,n,(outx,landing[1]),landing,layer)
+   if suffix.startswith('CM5_USB3_RX_'): via(b,n,landing)
+   seg(b,n,landing,d,pcbnew.F_Cu)
    continue
   seg(b,n,s,(start[0],s[1])); seg(b,n,(start[0],s[1]),start); via(b,n,start); seg(b,n,start,far,pcbnew.B_Cu)
   # The rotated U7 USB pads share a continuous bottom row.  Do not run a

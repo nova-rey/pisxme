@@ -113,3 +113,9 @@ Rejected as a full SATA pass.
 - The CM5 source breakout was retained, but the source-to-upper-corridor lifts
   interleaved and the U7 landing dogbones crossed. No SATA-only failure was
   introduced.
+### 2026-09-05 — pair-preserving split-layer USB3 trial
+
+- `PHASE19_COORDINATED_SATA270_USB_PAIR_SPLIT2-drc.rpt`: 92 total records,
+  five USB3 crossings; rejected.
+- RX and TX were kept as separate differential-pair layer assignments, but
+  source and U7 fan-in geometry still failed. SATA oracle remained clean.
