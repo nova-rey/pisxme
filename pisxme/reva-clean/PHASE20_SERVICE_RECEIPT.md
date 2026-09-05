@@ -54,3 +54,10 @@ not promoted: the VBUS/Rd/GND support network is not yet complete and the
 unfilled inherited ground zones still produce native DRC debt. The subsequent
 `PHASE20_SERVICE_SUPPORT_CANDIDATE` overlay is rejected because its support
 routes cross the data escape and connector/shield clearances.
+
+The revised VBUS-only candidate `PHASE20_SERVICE_VBUS_REFILLED.kicad_pcb`
+uses connector pad necks plus an outer B.Cu perimeter. Native refill reports
+199 violations / 407 unconnected items and zero `shorting_items` or
+`tracks_crossing` entries. It remains partial because Rd_A/Rd_B and the full
+support review are not included. The first Rd overlay is rejected for
+via-field conflicts with VBUS/data transitions.
