@@ -989,3 +989,10 @@ F.Cu source corridors, west-edge MagJack approach lanes enter adjacent
 through-hole pads, and one existing SERVICE route crosses a new B.Cu lane.
 The official topology is therefore directionally useful but its coordinates
 must be regenerated against the live board's actual pad/obstacle geometry.
+
+The existing reviewer threads were polled twice without completed responses;
+local native evidence remains authoritative and this orchestration condition
+is not a design blocker. The next bounded class is Ethernet-local endpoint
+repositioning that retains the official split-layer topology but changes the
+MagJack/ESD spacing relative to the J7 and power-entry pad fields before
+rerouting.

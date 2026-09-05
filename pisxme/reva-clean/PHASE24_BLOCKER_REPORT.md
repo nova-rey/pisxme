@@ -1179,3 +1179,9 @@ coordinates collide with live J7 exits, adjacent MagJack through-hole pads,
 and one SERVICE corridor. The architecture and mapping remain valid; the
 next attempt must preserve the split-layer topology while solving exact live
 pad-field and obstacle clearance.
+
+Reviewer polling did not return a completed response. This is an orchestration
+condition, not an engineering blocker; the native DRC evidence is sufficient
+to select the next in-scope experiment. The Ethernet architecture remains
+accepted conditionally, and the next route class is local endpoint
+repositioning with the same split-layer topology.
