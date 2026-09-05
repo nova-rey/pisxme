@@ -163,6 +163,11 @@ Rejected as a full SATA pass.
   4 shorts; rejected.
 - Pair-layer separation introduced CM5 support-pad and U7 NC-pad collisions;
   complete storage-island relocation remains the next class.
+### 2026-09-05 — SATA RX_P F.Cu coordinated trial
+
+- `PHASE19_COORDINATED_SATAP_F24-drc.rpt`: 215 total records, 5 crossings,
+  1 U7 NC-pad short, and an additional F.Cu SATA crossing; rejected.
+- SATA270 remains the storage-side oracle.
 ### 2026-09-05 — U7 rotation-180 USB3 diagnostic
 
 - `PHASE19_U7ROT180_USB_VERTICAL1-drc.rpt`: 223 total records, two
