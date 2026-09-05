@@ -638,3 +638,8 @@ violations, 121 unconnected records, three shorts, and nine crossings. The
 failure occurs in the live Ethernet launch rows, so the lower-comb candidate
 remains the accepted basis and the next experiment must regenerate those
 signal launches rather than extend the ground comb through them.
+
+The same-row-only upper J7 ground bridges are also rejected: fresh native DRC
+reports 216 violations, 124 unconnected records, one short, and six
+crossings. Upper-row CM5-ground collection therefore requires regeneration of
+the existing Ethernet pad escapes; no further comb-only variant is promoted.

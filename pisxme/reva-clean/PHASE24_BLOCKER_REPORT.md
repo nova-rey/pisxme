@@ -107,6 +107,10 @@ crossings despite reducing unconnected records to 121. The live Ethernet
 fanout must be locally regenerated before upper-row CM5-ground collection can
 be attempted.
 
+The horizontal-only upper bridges were separately tested and rejected at one
+short and six crossings. This exhausts comb-only upper-row variants; the next
+authorized class is Ethernet-launch regeneration.
+
 ## CM5 lower comb accepted
 
 The lower J7 ground bank now has an explicit outer-column F.Cu comb. It passes
