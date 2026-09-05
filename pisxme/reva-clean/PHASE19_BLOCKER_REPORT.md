@@ -340,3 +340,12 @@ The valid retained state is the schematic/netlist/materialization baseline,
 not this routed experiment. Further work must use an ordinary-via,
 layer-separated short clock escape with the exact pad coordinates, then
 re-run focused native DRC and return/reference checks before promotion.
+
+A second disposable class placed Y1/R23/C42/C43 on the underside and used
+ordinary F.Cu-to-B.Cu transitions from the U7 clock pads. It was also rejected:
+native KiCad DRC measured 249 violations and 428 unconnected items, with new
+clock/high-speed `tracks_crossing` and `shorting_items` records. The underside
+is permitted by the Rev-A mechanical contract, but this particular transition
+geometry is not acceptable. The next experiment must change the local U7 clock
+escape/placement relationship, not relax the layer policy or reuse either
+failed clock route.
