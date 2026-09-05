@@ -23,3 +23,8 @@ connections. Native DRC reports 189 violations with no new focused
 short/crossing/width/clearance class. Gate/VCAP and remaining regulator
 FB/RT/control routes still require completion; no Phase 21 closure is
 claimed yet.
+
+The separate gate-corridor experiment `PHASE21_CONTROLS_VCAP_GATES.kicad_pcb`
+is rejected: its long B.Cu routes intersect existing protected-12-V copper
+and create true shorts/crossings. The gate controls remain open for a local
+power-entry island repair; no layer or power-topology relaxation is made.
