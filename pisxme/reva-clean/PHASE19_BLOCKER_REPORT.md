@@ -450,6 +450,26 @@ clock support island into a corridor clear of the already-routed USB3/SATA
 fields, then regenerate the coordinated candidate. Phase 19 remains active;
 Phase 20+ remain untouched.
 
+## 2026-09-04 coordinated live-copper occupancy map
+
+The coordinated candidate was inspected with native `pcbnew` geometry rather
+than relying on footprint courtyards alone. Around U7 `(140,110)`, rotation
+180 degrees, the clock row is top-facing: 52/XI `(143.0,105.5)`, 53/VSSOSC
+`(142.5,105.5)`, and 54/XO `(142.0,105.5)`. The active F.Cu storage field
+contains the SATA bridge launches at x=`139.0..141.0`, the SATA socket
+approaches at x=`134.5..136.5`, and the USB3/PCIe source corridors extend
+through the same local field. B.Cu contains the SATA RX continuation near
+y=`130..138`, leaving only a narrow upper/left B.Cu window for a clock
+transition and local support island.
+
+This map explains both fixed-offset transplant failures: the nominal north
+and east locations were not free once live copper and pad fields were
+considered. The next disposable candidate will use a deliberate
+perpendicular F.Cu escape from the top-facing U7 clock row, transition only
+after the row is clear, and place the low-profile clock support in the mapped
+B.Cu window. No validated USB3/SATA/PCIe copper will be overwritten, and no
+Phase 19 closure claim is made yet.
+
 ## 2026-09-04 rotated north-corridor transplant rejection
 
 The clean minimal clock route was reflected for the coordinated U7 rotation
