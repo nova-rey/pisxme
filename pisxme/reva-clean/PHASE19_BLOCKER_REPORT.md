@@ -1329,3 +1329,14 @@ reproducible baseline; Phase 19 remains open. The next credible solution is a
 new pair-preserving U7 entry/layer schedule or a coordinated storage-island
 placement generated from a donor whose local power geometry is also moved
 coherently.
+
+## 2026-09-05 pair-preserving split experiment
+
+`PHASE19_TEST_PAIRSPLIT.kicad_pcb` assigned the USB3 RX and TX pairs to
+separate long corridors. The measured pair skews improved to approximately
+8.1 mm (RX) and 8.6 mm (TX), substantially better than the COORD49 baseline.
+The experiment is rejected for integration: native DRC found source-fanout
+crossings, crossings against the live clock bus, and four U7 launch/pad-field
+shorts. This proves the useful solution class is pair-preserving and
+layer-separated, but the current endpoint schedule is not legal. Phase 19
+remains open.
