@@ -1027,3 +1027,13 @@ combined candidate remains rejected because the existing SATA/USB geometry
 still contains crossings and shorts; no new clock-crossing class was
 introduced by the transplant. This establishes the clock-oracle staging path
 for the next corrected SATA authoring pass, not Phase 19 closure.
+
+## 2026-09-05 rotated-270-degree SATA launch trial
+
+The disposable SATA path was regenerated with J3 rotation `270`, a monotonic
+coupling-cap row, TXP/RXP on F.Cu, TXN/RXN on B.Cu, and ordinary socket-side
+transition vias. Native KiCad DRC measured `101` violations / `75`
+unconnected items, improving over the earlier `105` result but retaining
+candidate short/clearance records at the U7 RX escape, capacitor transitions,
+and the M.2-side dogbones. The trial is rejected; the rotated launch and
+monotonic cap-row geometry remain useful inputs for the next correction.

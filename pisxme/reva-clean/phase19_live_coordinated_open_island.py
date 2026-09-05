@@ -19,6 +19,7 @@ SKIP_SATA=ARGS.get('P19_SKIP_SATA',os.environ.get('P19_SKIP_SATA','0'))=='1'
 SKIP_CLOCK=ARGS.get('P19_SKIP_CLOCK',os.environ.get('P19_SKIP_CLOCK','0'))=='1'
 SKIP_USB=ARGS.get('P19_SKIP_USB',os.environ.get('P19_SKIP_USB','0'))=='1'
 CLOCK_ONLY=ARGS.get('P19_CLOCK_ONLY',os.environ.get('P19_CLOCK_ONLY','0'))=='1'
+SATA270=ARGS.get('P19_SATA270',os.environ.get('P19_SATA270','0'))=='1'
 W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def pos(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
@@ -46,12 +47,13 @@ def main():
   u=b.FindFootprintByReference('U7'); j=b.FindFootprintByReference('J3')
   # Open region to the right of the PCIe/CM5 source corridors.
   u.SetPosition(V(280,105)); u.SetOrientationDegrees(270)
-  j.SetPosition(V(200,140)); j.SetOrientationDegrees(90)
+  j.SetPosition(V(200,140)); j.SetOrientationDegrees(270 if SATA270 else 90)
   old_mech=b.FindFootprintByReference('MECH_M2_2280')
   if old_mech is not None: b.Remove(old_mech)
   # This donor already carries clean C30-C33 clock-candidate objects.
-  for ref,(x,y) in {'C30':(265,96),'C31':(265,100),'C32':(265,108),'C33':(265,112)}.items():
-   f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(180)
+  _caps={'C30':(240,108),'C31':(240,110),'C32':(240,112),'C33':(240,114)} if SATA270 else {'C30':(265,96),'C31':(265,100),'C32':(265,108),'C33':(265,112)}
+  for ref,(x,y) in _caps.items():
+   f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(0 if SATA270 else 180)
   for ref,xyv in {'Y1':(268,98),'R23':(272,98),'C42':(272,94),'C43':(276,98)}.items():
    f=b.FindFootprintByReference(ref)
    if f is None: raise RuntimeError('clock donor missing '+ref)
@@ -97,7 +99,18 @@ def main():
    continue
   bridge=N['/STORAGE/'+bn]; socket=N['/STORAGE/'+bn.replace('BRIDGE_SATA_','SATA_M2_')]
   cp={str(p.GetNumber()):pos(p) for p in caps[cr].Pads()}; a=U[upn]; z=J[jn]
-  setpad(pad(caps[cr],'1'),socket); setpad(pad(caps[cr],'2'),bridge); setpad(pad(j,jn),socket)
+  setpad(pad(caps[cr],'1'),socket); setpad(pad(caps[cr],'2'),bridge); setpad(pad(j,jn),socket); setpad(pad(u,upn),bridge)
+  if SATA270:
+   if bn in ('BRIDGE_SATA_TX_P','BRIDGE_SATA_RX_P'):
+    seg(b,bridge,a,cp['2'],pcbnew.F_Cu)
+   else:
+    e=(a[0]-3.0,a[1]-1.0) if bn=='BRIDGE_SATA_TX_N' else (a[0]+2.5,a[1]+2.5); seg(b,bridge,a,e,pcbnew.F_Cu); via(b,bridge,e); seg(b,bridge,e,cp['2'],pcbnew.B_Cu)
+   if bn=='BRIDGE_SATA_TX_P': seg(b,socket,cp['1'],z,pcbnew.F_Cu)
+   elif bn=='BRIDGE_SATA_RX_P':
+    q0=(239.5,113.5); seg(b,socket,cp['1'],q0,pcbnew.F_Cu); via(b,socket,q0); q=(207.0,132.5); seg(b,socket,q0,q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
+   elif bn=='BRIDGE_SATA_TX_N': q=(197.0,127.0); seg(b,socket,cp['1'],q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
+   else: q=(207.0,134.0); seg(b,socket,cp['1'],q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
+   continue
   if u.GetOrientationDegrees() == -90.0 and j.GetOrientationDegrees() == 90.0:
    # Rot270 U7 exposes SATA on a single west-facing row.  Use live pad
    # coordinates and a pair-per-layer monotonic launch to the left-column
