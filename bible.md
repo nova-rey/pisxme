@@ -4125,3 +4125,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Rejected the upper J7 CM5-ground comb extension after fresh DRC found three shorts and nine crossings; retained the lower-comb basis and localized the next task to Ethernet-launch regeneration.
 2026-09-05: Rejected the same-row-only upper J7 ground bridges after fresh DRC found one short and six crossings; upper-row closure requires Ethernet-launch regeneration.
 2026-09-05: Rejected same-row-only upper J7 ground bridges after fresh DRC found one short and six crossings; upper-row closure now requires Ethernet-launch regeneration.
+2026-09-05: Accepted the KiCad-recommended three-pad CM5-ground discriminator; fresh DRC reports 209 violations, 139 unconnected records, zero shorts, and zero crossings.

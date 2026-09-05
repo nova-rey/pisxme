@@ -520,6 +520,11 @@ and 406 unconnected pads, but no `shorting_items` or `tracks_crossing`
 records. This proves component/net authority, while routing and full parity
 remain open.
 
+The recommended three-pad CM5-ground discriminator passes full native DRC at
+209 violations and 139 unconnected records with zero shorts/crossings. It
+closes only the tested lower-right subcluster; the upper interleaved Ethernet
+rows remain unresolved.
+
 The horizontal-only upper J7 bridges were tested independently and rejected
 at one native short and six crossings. The lower comb remains the accepted
 basis; upper-row closure requires Ethernet-launch regeneration.
