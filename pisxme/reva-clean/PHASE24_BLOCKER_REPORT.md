@@ -100,6 +100,13 @@ and the board-wide 12V/ground distribution remain open and need
 obstacle-aware launches; no severity was changed and no connection was
 waived.
 
+## CM5 lower comb accepted
+
+The lower J7 ground bank now has an explicit outer-column F.Cu comb. It passes
+full-report native DRC at 208 violations and 127 unconnected records with no
+shorts or crossings. Upper Ethernet-row grounds remain intentionally
+untouched pending a separate fanout/collector solution.
+
 ## U7 BRIDGE_CFG accepted
 
 The remaining U7 configuration pad pair is now natively joined on the current

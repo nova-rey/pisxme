@@ -622,3 +622,13 @@ that basis, `PHASE24_BRIDGE_3V3_CAP_CHAIN_V2.kicad_pcb` is also clean of
 shorting/crossing classes at 208 violations and 141 unconnected records. These
 are the current accepted working sequence; the R22, 3V3 support, C3, and CFG
 joins are not promoted from contaminated ancestors.
+
+## CM5 lower-bank ground comb
+
+`phase24_cm5_ground_lower_comb.py` connects the J7 CM5-ground pads from
+y=102.7 through y=117.9 using two outer F.Cu comb rails and same-row bridges.
+The active upper Ethernet fanout rows y=98.7 through y=101.1 are deliberately
+untouched. Fresh native DRC reports 208 violations, 127 unconnected records,
+zero shorts, and zero crossings. This is accepted targeted progress; the
+upper high-speed rows and the separate connector-to-plane CM5-ground launch
+remain open.
