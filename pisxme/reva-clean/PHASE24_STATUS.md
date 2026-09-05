@@ -80,3 +80,10 @@ The latest bounded sweep (`phase24_clock_position_sweep.py`) improved the
 clock-support search to a compact near-west underside candidate, but it still
 has one localized B.Cu clock-lane crossing at the U7 escape. It remains an
 unpromoted experiment; Phase 24 is still open.
+
+The subsequent side-separated A* clock oracle reached zero clock-specific
+crossing/shorting records in native DRC. A follow-on support materialization
+was rejected at 240 native violations because the added Y1 passive branches
+entered the crystal pad field and the C44--C47 placement overlapped existing
+regulator support. The clock oracle is retained as evidence; support networks
+must be placed and routed as independently bounded islands.
