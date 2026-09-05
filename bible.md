@@ -4106,3 +4106,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Corrected the Phase 24 U5 audit to use KiCad native saved-board connectivity and added a disposable trace-removal regression; native baseline and negative-control tests pass.
 2026-09-05: Replaced the stale coordinate-based U5 negative-control selector with a native connected-component-derived disposable trace removal; the required control now fails the audit as intended.
 2026-09-05: Repaired the Phase 24 native-authority regression test to use the installed kicad-cli directly when xvfb-run is absent; direct native ERC reports zero violations and the authority test passes.
+2026-09-05: Recorded the Phase 24 clock placement sweep; near-west is the best rejected class at zero clock shorts and one crossing, while the complete isolated fixture still needs four crossing repairs.
