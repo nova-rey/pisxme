@@ -197,3 +197,14 @@ the 78-reference audit still passes, and native DRC reports no shorting or
 track-crossing records. It retains 201 DRC violations and 406 unconnected
 pads, so it remains a parity/source candidate rather than a routed production
 artifact.
+
+## Integrated U5 layered launch
+
+`phase24_u5_integrate_layered.py` applies the reviewed source/return topology
+to the filtered acreage candidate using the existing authoritative C44-C47
+footprints, ordinary through-vias, and refilled In1/In4 ground zones.
+`phase24_u5_layer_connectivity_audit.py` passes: U5.9 joins C44-C47.1 and
+R20.2 joins C44-C47.2. Native DRC reports 201 violations and 397 unconnected
+pads, with zero `shorting_items` and zero `tracks_crossing`. This closes the
+integrated U5 topology discriminator only; full Phase 24 routed parity remains
+open.

@@ -1,7 +1,7 @@
 """Graph-audit every target U5 fixture pad through native copper geometry."""
 from pathlib import Path
 import pcbnew
-R=Path(__file__).resolve().parent; BOARD=R/'PHASE24_U5_LAYER_FIXTURE.kicad_pcb'
+R=Path(__file__).resolve().parent; BOARD=R/'PHASE24_U5_INTEGRATED_LAYERED.kicad_pcb'
 TARGET={'/REGULATORS/BRIDGE_1V1':['U5.9','C44.1','C45.1','C46.1','C47.1'],'POWER_GND':['R20.2','C44.2','C45.2','C46.2','C47.2']}
 def q(p):return (round(pcbnew.ToMM(p.x),2),round(pcbnew.ToMM(p.y),2))
 def V(x,y):return pcbnew.VECTOR2I_MM(float(x),float(y))
@@ -18,7 +18,7 @@ for t in b.GetTracks():
  else: join(q(t.GetStart()),q(t.GetEnd()))
 # KiCad's Python binding exposes via connectivity as separate layer objects;
 # explicitly join the serialized via center to its two copper launches.
-for a,z in [((237.25,107),(239,110)),((239,110),(264,110)),((264,110),(264,129.35)),((264,129.35),(250,129.35)),((264,129.35),(258,129.35)),((264,129.35),(264,139.35)),((264,139.35),(250,139.35)),((264,139.35),(258,139.35)),((246.5,118),(247,114)),((247,114),(244,114)),((244,114),(244,126.65)),((244,126.65),(250,126.65)),((244,126.65),(258,126.65)),((244,126.65),(244,136.65)),((244,136.65),(250,136.65)),((244,136.65),(258,136.65))]: join(q(V(*a)),q(V(*z)))
+for a,z in [((237.25,107),(239,110)),((239,110),(239,116)),((239,116),(264,116)),((264,116),(264,129.35)),((264,129.35),(251.2,129.35)),((264,129.35),(259.2,129.35)),((264,116),(264,139.35)),((264,139.35),(251.2,139.35)),((264,139.35),(259.2,139.35)),((246.5,118),(247,114)),((247,114),(268,114)),((268,114),(268,145)),((268,145),(248.8,145)),((248.8,145),(248.8,126.65)),((248.8,126.65),(256.8,126.65)),((248.8,145),(248.8,136.65)),((248.8,136.65),(256.8,136.65))]: join(q(V(*a)),q(V(*z)))
 for net,items in TARGET.items():
  pts=[]
  for token in items:

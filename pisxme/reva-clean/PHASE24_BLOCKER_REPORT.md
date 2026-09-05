@@ -513,3 +513,13 @@ native DRC. The audit remains PASS for 78 schematic references plus 13
 mechanical/test markers; native DRC reports no `shorting_items` or
 `tracks_crossing` records. The report still contains 201 violations and 406
 unconnected pads, therefore the routed Phase 24 gate remains open.
+
+## Latest bounded U5 integration result
+
+The corrected real-pad layered integration reuses the authoritative C44-C47
+footprints, refills the ground planes, and routes the ground branches below
+the separated B.Cu rail trunk. The integrated graph audit passes for all
+C44-C47 rail/return pads. Native DRC reports zero shorting and zero
+track-crossing records; the board report is 201 violations and 397
+unconnected pads. This is validated local U5 integration, not full Phase 24
+closure. Full-board routed schematic-to-PCB parity remains open.
