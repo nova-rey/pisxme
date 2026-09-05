@@ -1373,6 +1373,15 @@ shorts. This proves the useful solution class is pair-preserving and
 layer-separated, but the current endpoint schedule is not legal. Phase 19
 remains open.
 
+## 2026-09-05 U7 orientation sweep
+
+The pair-separated corridor was evaluated with U7 rotations 0, 90, 180, and
+270 degrees. Rotations 0/90/180 introduced immediate SATA/clock-pad-field
+shorts or crossings in the regenerated support network. Rotation 270 remains
+the only orientation that preserves the clean SATA endpoint geometry; its
+remaining failures are confined to USB3 source/fan-in serialization. No
+orientation change is promoted.
+
 ## 2026-09-05 source fanout spread experiment
 
 The CM5-side fanout was spread to 4--10 mm-separated transition columns
