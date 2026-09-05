@@ -1163,3 +1163,11 @@ and collisions with remaining board copper. This is a rejected routing
 experiment, not evidence against the selected macro placement. The next
 generator must preserve the capacitor boundary while using obstacle-aware
 lanes and exact J3 clearance.
+
+The selected-macro Ethernet-only regeneration was also rejected by native
+refilled DRC (`409` violations; `55` shorting items; `22` crossings; `433`
+unconnected items). It used the authoritative CM5IO pin mapping but its
+hand-authored J7/ESD and west-edge launch segments collided with adjacent pad
+fields and existing power/storage copper. This is a rejected route class, not
+a macro-placement verdict. Further work should adapt the official CM5IO
+escape geometry or use obstacle-aware routing with actual pad/zone clearance.

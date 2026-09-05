@@ -971,3 +971,11 @@ and M.2-side `SATA_M2_*` nets begin on pad 1. It still fails as a route trial
 unconnected items), primarily from unplanned lane crossings, J3 NPTH/launch
 clearance, and inherited non-storage copper near the new corridor. It is
 rejected, but the net-authority diagnosis is retained for the next generator.
+
+The selected-macro Ethernet regeneration was separately tested from native
+J7/U6/U9/J2 pad centers using the CM5IO mapping, then rejected by refilled
+native DRC (`409` violations, `55` shorting items, `22` crossings, `433`
+unconnected items). Adjacent J7/ESD pad-field escapes and west-edge launch
+lanes collided with neighboring power/storage copper. This hand-authored
+compact route is rejected; the next Ethernet attempt must adapt the official
+CM5IO escape topology or use obstacle-aware routing.
