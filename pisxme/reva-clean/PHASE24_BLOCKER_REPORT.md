@@ -135,6 +135,18 @@ placement transform only; it does not invalidate the passing local clock
 topology. The next integration candidate must select a genuinely open
 acreage support shelf and preserve the existing PCIe/SATA corridors.
 
+## Open-shelf clock candidate (rejected)
+
+`phase24_open_shelf_clock.py` tested a shelf at approximately x204-218,
+y140-155, immediately left of the M.2 mechanical envelope, with U7 held at
+the validated rot180 placement. Native DRC reported `271` violations,
+including new clock tracks crossing and shorting at the U7/source and
+crystal fanout. The shelf itself is not the obstruction; the candidate used
+hand-authored rot180 source coordinates and failed pad-field attachment.
+It is rejected. The next candidate must derive every rot180 U7 clock endpoint
+and source dogbone from the serialized footprint, reusing the proven local
+clock graph rather than absolute hand coordinates.
+
 ## Combined integration attempt
 
 The existing rot180 acreage clock generator and a rigid transform of the
