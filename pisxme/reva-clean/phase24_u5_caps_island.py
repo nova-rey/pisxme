@@ -19,17 +19,21 @@ def via(b,n,p):
  v=pcbnew.PCB_VIA(b); v.SetPosition(V(*p)); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(n); b.Add(v)
 def main():
  b=pcbnew.LoadBoard(str(BASE)); io=pcbnew.PCB_IO_KICAD_SEXPR(); rail=net(b,'/REGULATORS/BRIDGE_1V1'); gnd=net(b,'POWER_GND'); u5=b.FindFootprintByReference('U5')
- positions={'C44':(245,112),'C45':(251,112),'C46':(245,118),'C47':(251,118)}; fs={}
+ # This candidate regenerates the affected bridge-1V1 corridor, so remove
+ # only the old rail copper before authoring the new route.
+ for t in list(b.GetTracks()):
+  if t.GetNetCode()==rail.GetNetCode(): b.RemoveNative(t)
+ positions={'C44':(250,130),'C45':(256,130),'C46':(250,136),'C47':(256,136)}; fs={}
  for ref,pos in positions.items():
   f=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'C_1210_3225Metric'); f.SetReference(ref); f.SetPosition(V(*pos)); f.SetLayer(pcbnew.B_Cu); b.Add(f); fs[ref]=f
   pad(f,'1').SetNet(rail); pad(f,'1').SetNetCode(rail.GetNetCode()); pad(f,'2').SetNet(gnd); pad(f,'2').SetNetCode(gnd.GetNetCode())
  # Use U5 pad 9 as the shortest bridge-1V1 source; fan out on B.Cu.
- source=(237.25,107.0); via(b,rail,(239,109)); track(b,rail,source,(239,109),pcbnew.F_Cu)
+ source=(237.25,107.0); via(b,rail,(239,120)); track(b,rail,source,(239,120),pcbnew.F_Cu)
  rail_targets=[]
  for ref,f in fs.items():
   p1=xy(pad(f,'1')); q=(p1[0],p1[1]-1.0); via(b,rail,q); track(b,rail,p1,q,pcbnew.F_Cu); rail_targets.append((ref,q))
  for ref,q in rail_targets:
-  track(b,rail,(239,109),q,pcbnew.B_Cu)
+  track(b,rail,(239,120),q,pcbnew.B_Cu)
  # Each capacitor gets an offset GND via; the existing In4 POWER_GND zone
  # supplies the common return after refill.
  for f in fs.values():

@@ -75,6 +75,18 @@ rejected. The component parity gap remains real, and the next attempt must
 select a clear rail/return corridor relative to actual U5/feedback/PG pads,
 not merely translate the same fanout.
 
+## U5 capacitor-island topology pass
+
+After removing the stale bridge-1V1 source segments and moving the island to
+an open acreage shelf, `PHASE24_U5_CAPS_ISLAND-far4-drc.rpt` reports `214`
+inherited/disposable violations and `391` unrelated unconnected items, but
+zero `shorting_items`, zero `tracks_crossing`, zero `track_width`, and zero
+footprint errors. C44-C47 and the `/REGULATORS/BRIDGE_1V1`/`POWER_GND`
+support group do not appear in the unconnected-items section. This closes the
+local capacitor topology proof only; the final combined candidate must still
+replace the affected acreage rail corridor and preserve all other power
+connectivity.
+
 ## Full clock-support discriminator (still open)
 
 The subsequent no-via-in-pad revision uses rule-width tracks and offset
