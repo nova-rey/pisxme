@@ -73,8 +73,8 @@ def main():
         parts.append(passive("C", f"C{47+i}", "22nF 100V", "GRM188R72A223KAC4J", "PiSXMeRevAClean:C_0603_1608Metric", x, 50, net, f"ETH_CT_BRANCH_{i}"))
         parts.append(passive("R", f"R{25+i}", "75R", "CRCW040275R0FKEDC", "PiSXMeRevAClean:R_0402_1005Metric", x, 60, f"ETH_CT_BRANCH_{i}", "ETH_CT_COMMON"))
     parts.append(passive("C", "C52", "1nF 2kV", "1206GC102KAT2A", "PiSXMeRevAClean:C_1206_3216Metric", 108, 75, "ETH_CT_COMMON", "GBE_SHIELD", False, True))
-    parts.append(passive("R", "R30", "470R", "RK73G1ETTP4700D", "PiSXMeRevAClean:R_0402_1005Metric", 145, 50, "CM5_ETH_LED2", "GBE_LED_Y_K", True, False))
-    parts.append(passive("R", "R31", "470R", "RK73G1ETTP4700D", "PiSXMeRevAClean:R_0402_1005Metric", 155, 50, "CM5_ETH_LED3", "GBE_LED_G_K", True, False))
+    parts.append(passive("R", "R30", "470R", "RK73G1ETTP4700D", "PiSXMeRevAClean:R_0402_1005Metric", 145, 50, "ETH_LEDY", "GBE_LED_Y_K", True, False))
+    parts.append(passive("R", "R31", "470R", "RK73G1ETTP4700D", "PiSXMeRevAClean:R_0402_1005Metric", 155, 50, "ETH_LEDG", "GBE_LED_G_K", True, False))
     sheet = text.index("(sheet_instances")
     text = text[:sheet] + "\n" + "\n".join(parts) + "\n" + text[sheet:]
     OUTPUT.write_text(text)

@@ -1,7 +1,17 @@
 # Phase 24 acreage validation status
 
-Status: IN PROGRESS — native ERC and netlist pass; schematic↔PCB component
-parity remains open.
+Status: IN PROGRESS — native ERC/netlist and Ethernet support authority pass;
+schematic↔PCB component parity and routed acreage closure remain open.
+
+## Ethernet support authority closure
+
+The production `ETHERNET.kicad_sch` now owns C48–C52 and R26–R31 with the
+selected sourced MPNs and footprints. The opaque `GBE_LED` sheet pin was
+removed. `ETH_LEDY` and `ETH_LEDG` are attached to the native CM5 endpoints
+for J7 pads 17 and 15 respectively, matching the CM5IO source mapping.
+Native KiCad 10.0.5 export is `phase24-production.xml`; native ERC is
+`PHASE24_PRODUCTION_AFTER_ETHERNET_SUPPORT-erc.rpt` with `Errors 0`.
+Regression: `validation/phase24/test_ethernet_support_production.py`.
 
 ## Protected 12 V plane experiment
 
