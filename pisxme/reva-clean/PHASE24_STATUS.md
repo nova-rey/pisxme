@@ -1,5 +1,33 @@
 # Phase 24 acreage validation status
 
+## Whole-board macro-floorplan review — 2026-09-05
+
+Detailed net-by-net routing experiments are paused pending this discriminator.
+The native-loaded integrated baseline is `PHASE24_U7_3V3_CURRENT_LOCAL.kicad_pcb`
+(SHA-256 `48840a9e353249f43853547a891c5588cdc5254fd771ac7ddfdb21efaddd058e`).
+The placement-only review in `PHASE24_WHOLE_BOARD_FLOORPLAN_REVIEW.md` and
+`phase24_whole_board_floorplan_discriminator.py` maps the transformed J7
+carrier-mating pads and compares multiple disposable coherent-island moves.
+It deliberately excludes existing copper and raw DRC counts from floorplan
+ranking, separating floorplan topology from immature route implementation.
+
+The native launch centroids are Ethernet `(34.50,99.90)`, PCIe `(69.60,101.50)`,
+USB3/storage `(70.04,105.30)`, and SERVICE USB2 `(66.96,99.30)` mm. The current
+same-net ratsnest sums are 443.9, 490.8, 231.2, and 40.0 mm respectively for
+Ethernet, PCIe/V100, USB3/storage, and SERVICE. The selected
+`ETH_WEST_LOCAL_STORAGE` candidate reduces Ethernet to 88.7 mm and storage to
+116.5 mm while leaving PCIe and SERVICE unchanged. `CM5_NEIGHBORHOODS` gives
+the shortest Ethernet centroid but displaces the already-natural SERVICE
+endpoint; `SWAP_ETH_STORAGE` improves both high-speed neighborhoods but is
+weaker than the selected joint migration.
+
+`MACRO_FLOORPLAN_REVIEW = COMPLETE`: retain `ETH_WEST_LOCAL_STORAGE` as the
+working topology, preserve PCIe and SERVICE anchors, and regenerate affected
+Ethernet/storage/clock neighborhoods coherently. Any early copper failure is
+`ROUTE IMPLEMENTATION FAILURE`, not `MACRO-PLACEMENT FAILURE`, until the
+selected placement receives a fair native-pad obstacle-aware routing cycle.
+Phase 24 remains open.
+
 Status: IN PROGRESS — native ERC/netlist and Ethernet support authority pass;
 schematic↔PCB component parity and routed acreage closure remain open.
 
