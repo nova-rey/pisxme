@@ -245,14 +245,15 @@ blind copper overlay.
 
 ## U5 physical-audit correction and negative controls
 
-`phase24_u5_layer_connectivity_audit.py` was corrected to derive edges only
-from serialized net-aware layer geometry: track endpoints and intersections,
-ordinary through-via F.Cu/B.Cu transitions, actual pad layer sets, and filled
-zone contact. It no longer hard-codes graph edges or uses XY-only nodes.
+`phase24_u5_layer_connectivity_audit.py` was corrected to invoke KiCad's
+native connectivity rebuild over serialized pads, tracks, vias, layers, nets,
+and filled zones. Expected target membership is assertion-only; no synthetic
+edges or XY-only nodes are used.
 Against `PHASE24_U5_INTEGRATED_LAYERED.kicad_pcb` it passes for U5.9 to
 C44-C47.1 and R20.2 to C44-C47.2. The disposable negative-control harness
-removes the required C44 rail dogbone trace and, separately, its required
-through-via; both controls correctly make the audit fail. Native DRC has no
+removes an actually required C44 rail dogbone trace in a copied board; the
+control correctly makes the audit fail. This native component has no
+necessary via, so no via-removal claim is made. Native DRC has no
 target C44-C47 unconnected finding, while the remaining 397 unconnected pads
 are outside this local proof and keep full Phase 24 open.
 

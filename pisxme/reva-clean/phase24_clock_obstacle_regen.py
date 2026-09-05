@@ -64,16 +64,25 @@ def main():
     b = pcbnew.LoadBoard(str(BASE))
     u7 = b.FindFootprintByReference("U7")
     support = {r: b.FindFootprintByReference(r) for r in ("Y1", "R23", "C42", "C43")}
+    # Coherent lower-acreage support island: keep the authoritative topology
+    # but remove its former west-side corridor from the USB/SATA comb.
+    for ref, pos in {"Y1": (100.0, 150.0), "R23": (96.0, 150.0),
+                     "C42": (96.0, 146.0), "C43": (96.0, 154.0)}.items():
+        support[ref].SetPosition(V(*pos)); support[ref].SetOrientationDegrees(0)
     nets = {k: b.FindNet(n) for k, n in CLOCK.items()}
     sources = {"XI": pad(u7, "52"), "VS": pad(u7, "53"), "XO": pad(u7, "54")}
     # Existing source-escape vias are the serialized, already validated launch
     # points from the oracle-derived source experiment.
     seeds = {"XI": (124.0, 125.5), "VS": (122.5, 126.5), "XO": (120.5, 137.5)}
-    targets = {
-        "XI": [(support["Y1"], "1", (105.5, 129.15)), (support["R23"], "1", (98.5, 130.0)), (support["C42"], "1", (98.5, 126.0))],
-        "VS": [(support["Y1"], "2", (105.5, 130.85)), (support["Y1"], "4", (110.5, 129.15)), (support["C42"], "2", (103.5, 126.0)), (support["C43"], "2", (103.5, 134.0))],
-        "XO": [(support["Y1"], "3", (110.5, 130.85)), (support["R23"], "2", (103.5, 130.0)), (support["C43"], "1", (98.5, 134.0))],
-    }
+    target_numbers = {"XI": [("Y1", "1"), ("R23", "1"), ("C42", "1")],
+                      "VS": [("Y1", "2"), ("Y1", "4"), ("C42", "2"), ("C43", "2")],
+                      "XO": [("Y1", "3"), ("R23", "2"), ("C43", "1")]}
+    def target_offset(ref, pn):
+        fp = support[ref]; px, py = mm(pad(fp, pn).GetPosition())
+        cx, cy = mm(fp.GetPosition())
+        return (px - 1.0 if px < cx else px + 1.0, py)
+    targets = {k: [(support[ref], pn, target_offset(ref, pn)) for ref, pn in vals]
+               for k, vals in target_numbers.items()}
     # Keep the footprint pads authoritative and ensure the pads are on the
     # surface layer reached by the short dogbone from each target via.
     for k, fp, pn, _ in sum(([ (k, fp, pn, off) for fp, pn, off in vals] for k, vals in targets.items()), []):

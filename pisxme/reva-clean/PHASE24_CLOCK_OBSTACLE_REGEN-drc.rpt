@@ -1,56 +1,168 @@
 ** Drc report for PHASE24_CLOCK_OBSTACLE_REGEN.kicad_pcb **
-** Created on 2026-09-05T11:10:45 **
+** Created on 2026-09-05T11:18:54 **
 ** Report includes: Errors, Warnings, Exclusions **
 
-** Found 219 DRC violations **
-[tracks_crossing]: Tracks crossing
+** Found 247 DRC violations **
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_VSSOSC and /STORAGE/BRIDGE_XI)
     Local override; error
-    @(106.0000 mm, 107.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 34.5000 mm
-    @(105.5000 mm, 130.7500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 1.4036 mm
+    @(98.2500 mm, 149.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(98.9000 mm, 149.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_VSSOSC and /STORAGE/BRIDGE_XI)
+    Local override; error
+    @(98.2500 mm, 148.7500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(98.9000 mm, 149.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on B.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0825 mm)
+    Local override; error
+    @(97.0000 mm, 149.5000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+    @(96.5000 mm, 150.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0763 mm)
     Local override; error
     @(70.0400 mm, 100.3000 mm): Track [/CORE_CM5/CM5_REFCLK_P] on F.Cu, length 2.3400 mm
     @(70.0400 mm, 99.9000 mm): Pad 108 [/CORE_CM5/POWER_GND] of J7 on F.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1440 mm)
-    Local override; error
-    @(227.2500 mm, 104.7500 mm): Track [/REGULATORS/PG_BRIDGE_3V3] on F.Cu, length 1.2500 mm
-    @(225.0000 mm, 104.6250 mm): Pad 18 [POWER_GND] of U4 on F.Cu
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1100 mm)
     Local override; error
     @(226.0000 mm, 104.7500 mm): Track [/REGULATORS/PG_BRIDGE_3V3] on F.Cu, length 2.7500 mm
     @(225.0000 mm, 103.8750 mm): Pad 17 [POWER_GND] of U4 on F.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1473 mm)
+    Local override; error
+    @(70.0400 mm, 100.3000 mm): Pad 110 [/CORE_CM5/CM5_REFCLK_P] of J7 on F.Cu
+    @(70.0400 mm, 100.7000 mm): Track [/CORE_CM5/CM5_REFCLK_N] on F.Cu, length 2.2171 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
+    Local override; error
+    @(98.2500 mm, 151.0000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+    @(98.9000 mm, 150.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
+    Local override; error
+    @(98.0000 mm, 151.0000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+    @(98.9000 mm, 150.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
+    Local override; error
+    @(98.2500 mm, 150.7500 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+    @(98.9000 mm, 150.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
+    Local override; error
+    @(98.2500 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+    @(98.9000 mm, 150.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
+    Local override; error
+    @(98.2500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_XO] on F.Cu - B.Cu
+    @(98.9000 mm, 150.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(98.2500 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 1.8200 mm
+    @(64.0000 mm, 150.0000 mm): Track [/CORE_CM5/CM5_PERST] on F.Cu, length 88.5400 mm
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0382 mm)
     Local override; error
     @(71.2000 mm, 106.3000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 1.8788 mm
     @(71.2000 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 2.3087 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(110.5000 mm, 129.2500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 1.4036 mm
-    @(110.0000 mm, 105.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 35.5000 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
+    @(98.0000 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+    @(97.7500 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1179 mm)
     Local override; error
-    @(103.5000 mm, 130.0000 mm): Via [/STORAGE/BRIDGE_XO] on F.Cu - B.Cu
-    @(103.5000 mm, 129.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 0.2500 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
-    Local override; error
-    @(103.5000 mm, 130.0000 mm): Via [/STORAGE/BRIDGE_XO] on F.Cu - B.Cu
-    @(103.5000 mm, 129.7500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 0.2500 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
-    Local override; error
-    @(103.5000 mm, 130.0000 mm): Via [/STORAGE/BRIDGE_XO] on F.Cu - B.Cu
-    @(103.5000 mm, 130.2500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 0.2500 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_VSSOSC and /STORAGE/BRIDGE_XO)
-    Local override; error
-    @(103.5000 mm, 130.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 0.2500 mm
-    @(103.5000 mm, 130.0000 mm): Via [/STORAGE/BRIDGE_XO] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1473 mm)
-    Local override; error
-    @(70.0400 mm, 100.3000 mm): Pad 110 [/CORE_CM5/CM5_REFCLK_P] of J7 on F.Cu
-    @(70.0400 mm, 100.7000 mm): Track [/CORE_CM5/CM5_REFCLK_N] on F.Cu, length 2.2171 mm
+    @(102.2500 mm, 150.2500 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+    @(102.2500 mm, 150.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(106.0000 mm, 107.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 34.5000 mm
-    @(105.5000 mm, 129.2500 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 1.4036 mm
+    @(97.7500 mm, 150.2500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(98.0000 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1340 mm)
+    Local override; error
+    @(97.0000 mm, 150.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(96.5000 mm, 150.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1415 mm)
+    Local override; error
+    @(97.0000 mm, 150.2500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(96.5000 mm, 150.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1415 mm)
+    Local override; error
+    @(97.0000 mm, 149.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(96.5000 mm, 150.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1340 mm)
+    Local override; error
+    @(97.0000 mm, 149.7500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(96.5000 mm, 150.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0181 mm)
+    Local override; error
+    @(98.2500 mm, 148.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(98.9000 mm, 149.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on B.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1179 mm)
+    Local override; error
+    @(102.2500 mm, 149.7500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(102.2500 mm, 150.0000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1440 mm)
+    Local override; error
+    @(227.2500 mm, 104.7500 mm): Track [/REGULATORS/PG_BRIDGE_3V3] on F.Cu, length 1.2500 mm
+    @(225.0000 mm, 104.6250 mm): Pad 18 [POWER_GND] of U4 on F.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1179 mm)
+    Local override; error
+    @(97.7500 mm, 150.2500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(98.0000 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1179 mm)
+    Local override; error
+    @(101.7500 mm, 150.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(102.2500 mm, 150.0000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1179 mm)
+    Local override; error
+    @(97.7500 mm, 150.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(98.0000 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1179 mm)
+    Local override; error
+    @(102.2500 mm, 150.2500 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+    @(102.0000 mm, 150.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_VSSOSC and /STORAGE/BRIDGE_XI)
+    Local override; error
+    @(98.2500 mm, 149.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(98.9000 mm, 149.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_VSSOSC and /STORAGE/BRIDGE_XI)
+    Local override; error
+    @(98.2500 mm, 149.2500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 0.2500 mm
+    @(98.9000 mm, 149.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
+    Local override; error
+    @(98.2500 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 1.8200 mm
+    @(97.7500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_VSSOSC and /STORAGE/BRIDGE_XO)
+    Local override; error
+    @(97.7500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+    @(98.0000 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
+    Local override; error
+    @(98.2500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_XO] on F.Cu - B.Cu
+    @(97.7500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0053 mm)
+    Local override; error
+    @(98.2500 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 1.8200 mm
+    @(97.7500 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 1.2021 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
+    Local override; error
+    @(98.2500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_XO] on F.Cu - B.Cu
+    @(97.7500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
+    Local override; error
+    @(98.2500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_XO] on F.Cu - B.Cu
+    @(97.7500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
+    Local override; error
+    @(98.2500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_XO] on F.Cu - B.Cu
+    @(97.7500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_PERST and /STORAGE/BRIDGE_XI)
+    Local override; error
+    @(64.0000 mm, 150.0000 mm): Track [/CORE_CM5/CM5_PERST] on F.Cu, length 88.5400 mm
+    @(94.5000 mm, 150.0000 mm): Via [/STORAGE/BRIDGE_XI] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(64.0000 mm, 150.0000 mm): Track [/CORE_CM5/CM5_PERST] on F.Cu, length 88.5400 mm
+    @(94.5000 mm, 150.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 1.0000 mm
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(98.9000 mm, 150.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+    @(98.2500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_XO] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1825 mm)
+    Rule: board setup constraints hole; error
+    @(96.5000 mm, 150.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
+    @(97.0000 mm, 149.5000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
 [courtyards_overlap]: Courtyards overlap
     Rule: board setup constraints courtyard; error
     @(65.0000 mm, 168.5000 mm): Footprint C7
@@ -373,40 +485,37 @@
     @(80.5000 mm, 167.0000 mm): Via [/REGULATORS/PG_CM5_5V] on F.Cu - B.Cu
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(105.5000 mm, 129.2500 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 1.4036 mm
+    @(97.7500 mm, 149.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 1.1597 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(98.5000 mm, 130.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 2.0000 mm
+    @(94.5000 mm, 146.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 1.0000 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(98.5000 mm, 126.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 2.0000 mm
+    @(94.5000 mm, 150.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 1.0000 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(103.5000 mm, 126.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.0000 mm
+    @(97.7500 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 1.2021 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(110.5000 mm, 129.2500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 1.4036 mm
+    @(97.5000 mm, 154.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 1.0000 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(103.5000 mm, 134.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.0000 mm
+    @(97.2500 mm, 146.2500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 0.7906 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(105.5000 mm, 130.7500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 1.4036 mm
-[via_dangling]: Via is not connected or connected on only one layer
-    Local override; warning
-    @(103.5000 mm, 134.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+    @(102.2500 mm, 149.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 1.2021 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
     @(71.2000 mm, 103.9000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 0.0000 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(110.5000 mm, 130.7500 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 1.4036 mm
+    @(94.5000 mm, 154.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 1.0000 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(103.5000 mm, 130.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 2.0000 mm
-[track_dangling]: Track has unconnected end
+    @(102.2500 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 1.2021 mm
+[via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(98.5000 mm, 134.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 2.0000 mm
+    @(94.5000 mm, 154.0000 mm): Via [/STORAGE/BRIDGE_XO] on F.Cu - B.Cu
 [track_dangling]: Track has unconnected end
     Local override; warning
     @(62.7000 mm, 175.2500 mm): Track [/REGULATORS/RT_CM5_5V] on F.Cu, length 3.3000 mm
@@ -503,6 +612,10 @@
     Local override; warning
     @(81.1000 mm, 66.3000 mm): Via [POWER_GND] on F.Cu - B.Cu
     @(81.1000 mm, 66.3000 mm): Via [POWER_GND] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.2000 mm)
+    Rule: board setup constraints; warning
+    @(98.2500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_XO] on F.Cu - B.Cu
+    @(97.7500 mm, 150.5000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
 [holes_co_located]: Drilled holes co-located
     Local override; warning
     @(12.5400 mm, 108.0000 mm): Via [/POWER_INPUT/GATE_B] on F.Cu - B.Cu
@@ -552,7 +665,7 @@
     @(220.0000 mm, 114.1000 mm): Reference field of R14
 [text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)
     Rule: board setup constraints silk text height; warning
-    @(101.0000 mm, 129.1000 mm): Reference field of R23
+    @(96.0000 mm, 149.1000 mm): Reference field of R23
 [text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)
     Rule: board setup constraints silk text height; warning
     @(90.0000 mm, 163.1000 mm): Reference field of R4
@@ -698,44 +811,24 @@
     @(71.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C14 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(94.0000 mm, 120.0000 mm): Reference field of C17
-    @(95.3500 mm, 120.0000 mm): Pad 2 [POWER_GND] of C17 on F.Cu
+    @(65.0000 mm, 168.5000 mm): Reference field of C7
+    @(63.6500 mm, 168.5000 mm): Pad 1 [/CORE_CM5/CM5_5V] of C7 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(86.0000 mm, 120.0000 mm): Reference field of C16
-    @(87.3500 mm, 120.0000 mm): Pad 2 [POWER_GND] of C16 on F.Cu
+    @(65.0000 mm, 168.5000 mm): Reference field of C7
+    @(66.3500 mm, 168.5000 mm): Pad 2 [POWER_GND] of C7 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(70.0000 mm, 120.0000 mm): Reference field of C14
-    @(68.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C14 on F.Cu
+    @(65.0000 mm, 170.5000 mm): Reference field of C8
+    @(63.6500 mm, 170.5000 mm): Pad 1 [/CORE_CM5/CM5_5V] of C8 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(86.0000 mm, 120.0000 mm): Reference field of C16
-    @(84.6500 mm, 120.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C16 on F.Cu
+    @(65.0000 mm, 170.5000 mm): Reference field of C8
+    @(66.3500 mm, 170.5000 mm): Pad 2 [POWER_GND] of C8 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(78.0000 mm, 120.0000 mm): Reference field of C15
-    @(76.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C15 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(78.0000 mm, 120.0000 mm): Reference field of C15
-    @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(127.4500 mm, 120.4000 mm): Segment of C32 on f.silkscreen
-    @(127.5000 mm, 120.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_P] of C32 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(110.0000 mm, 120.0000 mm): Reference field of C19
-    @(108.6500 mm, 120.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C19 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(110.0000 mm, 120.0000 mm): Reference field of C19
-    @(111.3500 mm, 120.0000 mm): Pad 2 [POWER_GND] of C19 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(127.4500 mm, 118.4000 mm): Segment of C33 on f.silkscreen
-    @(127.5000 mm, 118.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_N] of C33 on F.Cu
+    @(120.0000 mm, 170.0000 mm): Reference field of C23
+    @(118.9000 mm, 170.0000 mm): Pad 1 [12V_PROTECTED] of C23 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(11.0000 mm, 36.7000 mm): Rectangle of J6 on f.silkscreen
@@ -766,20 +859,28 @@
     @(12.0000 mm, 30.5000 mm): PTH pad 2 [POWER_GND] of J5
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(65.0000 mm, 168.5000 mm): Reference field of C7
-    @(63.6500 mm, 168.5000 mm): Pad 1 [/CORE_CM5/CM5_5V] of C7 on F.Cu
+    @(94.0000 mm, 120.0000 mm): Reference field of C17
+    @(95.3500 mm, 120.0000 mm): Pad 2 [POWER_GND] of C17 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(65.0000 mm, 168.5000 mm): Reference field of C7
-    @(66.3500 mm, 168.5000 mm): Pad 2 [POWER_GND] of C7 on F.Cu
+    @(70.0000 mm, 120.0000 mm): Reference field of C14
+    @(68.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C14 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(65.0000 mm, 170.5000 mm): Reference field of C8
-    @(63.6500 mm, 170.5000 mm): Pad 1 [/CORE_CM5/CM5_5V] of C8 on F.Cu
+    @(78.0000 mm, 120.0000 mm): Reference field of C15
+    @(76.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C15 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(65.0000 mm, 170.5000 mm): Reference field of C8
-    @(66.3500 mm, 170.5000 mm): Pad 2 [POWER_GND] of C8 on F.Cu
+    @(86.0000 mm, 120.0000 mm): Reference field of C16
+    @(84.6500 mm, 120.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C16 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(86.0000 mm, 120.0000 mm): Reference field of C16
+    @(87.3500 mm, 120.0000 mm): Pad 2 [POWER_GND] of C16 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(78.0000 mm, 120.0000 mm): Reference field of C15
+    @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(52.0000 mm, 163.0000 mm): Reference field of C5
@@ -798,8 +899,20 @@
     @(53.1000 mm, 165.2500 mm): Pad 1 [12V_PROTECTED] of C6 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(120.0000 mm, 170.0000 mm): Reference field of C23
-    @(118.9000 mm, 170.0000 mm): Pad 1 [12V_PROTECTED] of C23 on F.Cu
+    @(127.4500 mm, 120.4000 mm): Segment of C32 on f.silkscreen
+    @(127.5000 mm, 120.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_P] of C32 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.0000 mm, 120.0000 mm): Reference field of C19
+    @(111.3500 mm, 120.0000 mm): Pad 2 [POWER_GND] of C19 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.0000 mm, 120.0000 mm): Reference field of C19
+    @(108.6500 mm, 120.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C19 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(127.4500 mm, 118.4000 mm): Segment of C33 on f.silkscreen
+    @(127.5000 mm, 118.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_N] of C33 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(135.4500 mm, 110.4000 mm): Segment of C31 on f.silkscreen
@@ -819,7 +932,7 @@
 [copper_sliver]: Copper sliver (F.Cu)
     Local override; warning
 
-** Found 164 unconnected pads **
+** Found 166 unconnected pads **
 [unconnected_items]: Missing connection between items
     Local override; error
     @(50.9000 mm, 163.0000 mm): Pad 2 [POWER_GND] of C5 on F.Cu
@@ -1026,7 +1139,7 @@
     @(247.0000 mm, 114.0000 mm): Via [POWER_GND] on F.Cu - B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(63.6500 mm, 170.5000 mm): Track [/CORE_CM5/CM5_5V] on F.Cu, length 10.1771 mm
+    @(60.0000 mm, 180.0000 mm): Track [/CORE_CM5/CM5_5V] on B.Cu, length 18.0000 mm
     @(62.7000 mm, 176.2500 mm): Track [/CORE_CM5/CM5_5V] on F.Cu, length 1.3000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -1082,7 +1195,7 @@
     @(239.0000 mm, 116.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on B.Cu, length 25.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(250.0000 mm, 139.3500 mm): Track [/REGULATORS/BRIDGE_1V1] on F.Cu, length 1.2000 mm
+    @(250.0000 mm, 139.3500 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C46 on F.Cu
     @(204.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C41 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -1091,7 +1204,7 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(68.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C14 on F.Cu
-    @(62.2500 mm, 162.0000 mm): Track [12V_PROTECTED] on F.Cu, length 1.0000 mm
+    @(53.1000 mm, 162.0000 mm): Track [12V_PROTECTED] on F.Cu, length 9.1500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(76.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C15 on F.Cu
@@ -1115,7 +1228,7 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(125.2350 mm, 97.0000 mm): Track [12V_PROTECTED] on B.Cu, length 22.8600 mm
-    @(221.5000 mm, 100.5000 mm): Track [12V_PROTECTED] on F.Cu, length 9.0000 mm
+    @(221.5000 mm, 103.0000 mm): Track [12V_PROTECTED] on F.Cu, length 2.5000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(230.5000 mm, 100.5000 mm): Track [12V_PROTECTED] on F.Cu, length 2.5000 mm
@@ -1171,7 +1284,7 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(20.4500 mm, 96.4500 mm): Pad 6 [/POWER_INPUT/FUSED_12V_B] of U2 on F.Cu
-    @(52.9000 mm, 118.7500 mm): PTH pad 5 [/POWER_INPUT/FUSED_12V_B] of F2
+    @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on F.Cu, length 3.5000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(52.9000 mm, 118.7500 mm): Track [/POWER_INPUT/FUSED_12V_B] on F.Cu, length 3.5000 mm
@@ -1211,31 +1324,35 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(70.0000 mm, 174.7500 mm): Track [/REGULATORS/PG_CM5_5V] on B.Cu, length 8.7500 mm
-    @(62.2500 mm, 164.7500 mm): Track [/REGULATORS/PG_CM5_5V] on F.Cu, length 1.7500 mm
+    @(64.0000 mm, 164.7500 mm): Track [/REGULATORS/PG_CM5_5V] on F.Cu, length 4.7500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(98.5000 mm, 126.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 2.0000 mm
-    @(100.5000 mm, 126.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of C42 on B.Cu
+    @(95.5000 mm, 146.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of C42 on B.Cu
+    @(94.5000 mm, 146.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 1.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(98.5000 mm, 130.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 2.0000 mm
-    @(100.5000 mm, 130.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of R23 on B.Cu
+    @(94.5000 mm, 150.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 1.0000 mm
+    @(95.5000 mm, 150.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of R23 on B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(105.5000 mm, 129.2500 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 1.4036 mm
-    @(106.9000 mm, 129.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on B.Cu
+    @(98.9000 mm, 149.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on B.Cu
+    @(97.7500 mm, 149.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 1.1597 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(103.5000 mm, 126.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.0000 mm
-    @(101.5000 mm, 126.0000 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of C42 on B.Cu
+    @(96.5000 mm, 146.0000 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of C42 on B.Cu
+    @(97.2500 mm, 146.2500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 0.7906 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(103.5000 mm, 134.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.0000 mm
-    @(101.5000 mm, 134.0000 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of C43 on B.Cu
+    @(96.5000 mm, 154.0000 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of C43 on B.Cu
+    @(97.5000 mm, 154.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 1.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(105.5000 mm, 130.7500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 1.4036 mm
-    @(106.9000 mm, 130.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+    @(98.9000 mm, 150.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+    @(97.7500 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 1.2021 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.1000 mm, 149.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+    @(102.2500 mm, 149.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 1.2021 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(117.5000 mm, 144.5000 mm): Pad 21 [/STORAGE/BRIDGE_CFG] of U7 on F.Cu
@@ -1246,19 +1363,23 @@
     @(124.5000 mm, 143.5000 mm): Pad 3 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(98.5000 mm, 134.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 2.0000 mm
-    @(100.5000 mm, 134.0000 mm): Pad 1 [/STORAGE/BRIDGE_XO] of C43 on B.Cu
+    @(95.5000 mm, 154.0000 mm): Pad 1 [/STORAGE/BRIDGE_XO] of C43 on B.Cu
+    @(94.5000 mm, 154.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 1.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(103.5000 mm, 130.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 2.0000 mm
-    @(101.5000 mm, 130.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
+    @(98.2500 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 1.8200 mm
+    @(96.5000 mm, 150.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(66.0000 mm, 163.0000 mm): Track [/REGULATORS/RT_CM5_5V] on B.Cu, length 2.6926 mm
+    @(101.1000 mm, 150.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on B.Cu
+    @(102.2500 mm, 150.5000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 1.2021 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.0000 mm, 175.2500 mm): Track [/REGULATORS/RT_CM5_5V] on B.Cu, length 12.2500 mm
     @(62.2500 mm, 165.2500 mm): Pad 12 [/REGULATORS/RT_CM5_5V] of U3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(66.0000 mm, 163.0000 mm): Track [/REGULATORS/RT_CM5_5V] on B.Cu, length 2.6926 mm
+    @(66.0000 mm, 175.2500 mm): Track [/REGULATORS/RT_CM5_5V] on B.Cu, length 12.2500 mm
     @(68.5000 mm, 168.0000 mm): Pad 1 [/REGULATORS/RT_CM5_5V] of R5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error

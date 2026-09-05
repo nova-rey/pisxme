@@ -4104,3 +4104,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: rejected isolated clock passive launches after native DRC found 17 crossings and three shorts; narrowed next implementation to obstacle-aware layer-separated routing.
 2026-09-05: Phase 24 compared the exact rotated-U7 clock oracle transplant; native DRC rejected the fixed acreage coordinate context while preserving the oracle topology as the basis for obstacle-aware regeneration.
 2026-09-05: Corrected the Phase 24 U5 audit to use KiCad native saved-board connectivity and added a disposable trace-removal regression; native baseline and negative-control tests pass.
+2026-09-05: Replaced the stale coordinate-based U5 negative-control selector with a native connected-component-derived disposable trace removal; the required control now fails the audit as intended.
