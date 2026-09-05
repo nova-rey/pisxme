@@ -26,6 +26,15 @@ corridor, not a missing TUSB9261 clock authority. The passing isolated clock
 fixture remains the electrical reference. PCIe, USB3/SATA architecture,
 stack, and Phase 18 ancestor are unchanged.
 
+The required independent Consultant unblocker review was invoked with the
+current Phase 18 ancestor, Phase 19 report, exact U7/J3 coordinates, and the
+failed underside trials. The session exceeded the bounded response window
+and was cancelled; this is recorded as orchestration latency, not evidence of
+an engineering hard block. The selected continuation remains in-scope:
+author a planar oscillator perimeter with explicit live pad coordinates,
+co-locate it during the rotated U7/J3 generation, and validate the clock delta
+against the SATA-only ancestor before any promotion.
+
 ## 2026-09-04 coordinated storage authoring repair
 
 The coordinated-island generator was corrected after a KiCad 10 serialization
