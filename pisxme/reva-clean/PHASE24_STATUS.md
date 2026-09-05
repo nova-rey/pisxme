@@ -1006,3 +1006,18 @@ joint basis: Ethernet and storage become less remote while PCIe and SERVICE
 anchors remain unchanged. No moved copper was accepted. Phase 24 remains open
 for coherent affected-neighborhood regeneration; detailed open repair resumes
 only after that regeneration is validated.
+
+The subsequent Ethernet regeneration probes were also preserved as disposable
+evidence. A naive rigid translation into north-west acreage reported 448 total
+violations, 2 shorts, 8 crossings, and 433 unconnected items; the crossings
+were caused by moving the CM5IO branch geometry independently of the J7 launch.
+A branch-preserving transform reduced the result to 434 violations, 2 shorts,
+6 crossings, and 425 unconnected items, but still failed on real Ethernet
+pair crossings. Rigid rotations of the complete oracle likewise failed the
+integrated occupancy test (`+30°`: 578 violations/34 shorts/10 crossings;
+`+45°`: 615/62/11; `-30°`: 547/28; the `-45°` report was not completed).
+These are rejected routing probes, not evidence against the CM5IO electrical
+architecture or against the macro review. The next implementation must clear
+invalidated Ethernet/storage copper as a coherent neighborhood and regenerate
+against the selected placement, rather than transform the oracle through live
+obstacles.
