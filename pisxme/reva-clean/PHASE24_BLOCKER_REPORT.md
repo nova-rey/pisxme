@@ -156,3 +156,13 @@ the rigid transform produced true PCIe/SATA shorts and crossings. These are
 rejected integration candidates. The local clock and U5 capacitor topology
 proofs remain valid and are retained as the authoritative sub-fixtures for
 the next open-shelf integration pass.
+
+## Generic rot180 endpoint rerun (rejected)
+
+The open-shelf generator was corrected to derive U7 pins 52/53/54 from the
+serialized post-rotation footprint. The rerun exited successfully, but
+`PHASE24_OPEN_SHELF_CLOCK-derived-drc.rpt` still reports `271` violations,
+including clock shorting and crossing records in the local branch topology.
+The endpoint-authoring defect is fixed, but this shelf routing graph remains
+rejected. The proven rot90 topology and U5-cap topology remain the valid
+local oracles for the next integration attempt.

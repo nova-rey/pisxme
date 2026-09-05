@@ -26,12 +26,14 @@ def main():
   t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(l); t.SetWidth(pcbnew.FromMM(w)); t.SetNet(nets[name]); b.Add(t)
  def X(name,p):
   v=pcbnew.PCB_VIA(b); v.SetPosition(V(*p)); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(nets[name]); b.Add(v)
- # Rot180 U7 clock pads are 52=(123,135.5), 53=(122.5,135.5),
- # 54=(122,135.5).  Escape below the J3 body before going outboard.
+ # Derive the rot180 clock endpoints from the serialized footprint rather
+ # than relying on historical absolute coordinates. Escape below the J3
+ # body before going outboard.
  XI,VS,XO=('/STORAGE/BRIDGE_XI','/STORAGE/BRIDGE_VSSOSC','/STORAGE/BRIDGE_XO')
- S(XI,(123,135.5),(123,145)); X(XI,(123,145)); S(XI,(123,145),(210,145),pcbnew.B_Cu); X(XI,(210,145)); S(XI,(210,145),xy(P(fs['Y1'],'1')))
- S(VS,(122.5,135.5),(122.5,147)); X(VS,(122.5,147)); S(VS,(122.5,147),(209,147),pcbnew.B_Cu); X(VS,(209,147)); S(VS,(209,147),xy(P(fs['Y1'],'2')))
- S(XO,(122,135.5),(122,149)); X(XO,(122,149)); S(XO,(122,149),(208,149),pcbnew.B_Cu); X(XO,(208,149)); S(XO,(208,149),xy(P(fs['Y1'],'3')))
+ xi0,vs0,xo0=(xy(P(u,n)) for n in ('52','53','54'))
+ S(XI,xi0,(xi0[0],145)); X(XI,(xi0[0],145)); S(XI,(xi0[0],145),(210,145),pcbnew.B_Cu); X(XI,(210,145)); S(XI,(210,145),xy(P(fs['Y1'],'1')))
+ S(VS,vs0,(vs0[0],147)); X(VS,(vs0[0],147)); S(VS,(vs0[0],147),(209,147),pcbnew.B_Cu); X(VS,(209,147)); S(VS,(209,147),xy(P(fs['Y1'],'2')))
+ S(XO,xo0,(xo0[0],149)); X(XO,(xo0[0],149)); S(XO,(xo0[0],149),(208,149),pcbnew.B_Cu); X(XO,(208,149)); S(XO,(208,149),xy(P(fs['Y1'],'3')))
  # Common VSSOSC exits the crystal on the opposite side and returns to C42/C43.
  S(VS,xy(P(fs['Y1'],'2')),(207,140),pcbnew.B_Cu); X(VS,(207,140)); S(VS,(207,140),xy(P(fs['Y1'],'4')),pcbnew.F_Cu)
  # Local passive fanout uses distinct B.Cu lanes and offset vias at SMD pads.
