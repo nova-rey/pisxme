@@ -604,3 +604,10 @@ the existing PG_BRIDGE_3V3 and U4 ground geometry, so it is rejected. U3/U5
 remain clean targeted field repairs; U4 requires layer-separated or locally
 regenerated routing, and the board-wide native connection census remains the
 active Phase 24 gate.
+
+The corrected U4 perimeter variant moves the protected-12V escape above the
+nearby PG via/feedback corridor. Native DRC returns to the inherited 201
+violations with zero shorts and zero crossings; the earlier layer-separated
+variant was rejected for two feedback crossings and one short. This closes
+only the U4 local geometry discriminator and does not close the board-wide
+native connection gate (390 unconnected records remain).

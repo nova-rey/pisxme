@@ -306,3 +306,10 @@ short class, but native DRC found four F.Cu crossings against the existing
 PG_BRIDGE_3V3 corridor and U4 ground escape, leaving 390 unconnected items.
 U4 therefore needs a layer-separated or locally regenerated corridor rather
 than another same-layer coordinate tweak.
+
+A later U4 perimeter reroute was also tested. The initial layer-separated
+trial crossed the existing B.Cu feedback trunk; the corrected perimeter
+variant moved the escape to y=100.5 mm and avoids that trunk. Native DRC is
+back to the inherited 201 violations with zero shorts and zero crossings. It
+is retained as a clean U4 local geometry experiment, but the remaining 390
+native unconnected items are board-wide and still prevent Phase 24 closure.
