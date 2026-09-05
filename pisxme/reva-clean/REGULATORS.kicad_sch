@@ -2299,7 +2299,7 @@
 		(instances
 			(project "PiSXMe_RevA_Clean"
 				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
-					(reference "C30")
+					(reference "C44")
 					(unit 1)
 				)
 			)
@@ -2358,7 +2358,7 @@
 		(instances
 			(project "PiSXMe_RevA_Clean"
 				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
-					(reference "C31")
+					(reference "C45")
 					(unit 1)
 				)
 			)
@@ -2417,7 +2417,7 @@
 		(instances
 			(project "PiSXMe_RevA_Clean"
 				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
-					(reference "C32")
+					(reference "C46")
 					(unit 1)
 				)
 			)
@@ -2476,7 +2476,7 @@
 		(instances
 			(project "PiSXMe_RevA_Clean"
 				(path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005"
-					(reference "C33")
+					(reference "C47")
 					(unit 1)
 				)
 			)

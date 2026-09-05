@@ -1,7 +1,7 @@
 # Phase 24 acreage validation status
 
-Status: IN PROGRESS — native ERC authority repaired; netlist annotation
-warning remains under audit.
+Status: IN PROGRESS — native ERC and netlist pass; schematic↔PCB component
+parity remains open.
 
 ## Closed in this checkpoint
 
@@ -17,13 +17,24 @@ warning remains under audit.
 - Native KiCad 10.0.5 ERC with `--severity-error` reports `Found 0 violations`.
 - `validation/phase3/test_phase24_native_final_authority.py` passes.
 
-## Remaining gate
+## Netlist closure
 
-Native netlist export writes a non-empty artifact but emits:
-`Warning: schematic has annotation errors, please use the schematic editor to
-fix them`.  The remaining investigation is to identify the exporter’s
-annotation source and prove a warning-free export without weakening schematic
-or PCB parity.  Phase 24 is not marked closed until that evidence is resolved.
+The warning was caused by four regulator 22 uF capacitors retaining stale
+`(instances)` references C30–C33 after their symbol properties were renumbered.
+`phase24_repair_duplicate_refs.py` updates both serialized representations to
+C44–C47.  KiCad 10.0.5 now exports a non-empty netlist with no annotation
+warning.
 
-Artifacts: `PHASE24_NATIVE_ERC_FINAL2.rpt`,
-`PHASE24_NETLIST_FINAL3.xml`, and the Phase 24 native-authority regression.
+Artifacts: `PHASE24_NATIVE_ERC_FINAL2.rpt`, `PHASE24_NETLIST_FINAL5.xml`, and
+the Phase 24 native-authority regression.
+
+## Remaining parity repair
+
+Fresh comparison of `PHASE24_NETLIST_FINAL5.xml` against
+`PHASE23_TEST_DEBUG_PADS_V5.kicad_pcb` found schematic components with no PCB
+footprint: `Y1`, `R23`, `C42`, `C43`, and `C44`–`C47`.  These are real storage
+clock and regulator support components, not optional debug artifacts.  The
+first disposable clock graft was rejected because its historical hard-coded
+U7 clock-row coordinates produced true shorts; it is retained only as failed
+evidence.  Phase 24 stays open until a coordinate-derived, native-DRC-clean
+materialization and parity check are complete.

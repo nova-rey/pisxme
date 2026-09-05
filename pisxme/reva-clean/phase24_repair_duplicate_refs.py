@@ -16,13 +16,9 @@ def main() -> None:
     text = PATH.read_text()
     changed = 0
     for old, new in zip(("C30", "C31", "C32", "C33"), ("C44", "C45", "C46", "C47")):
-        marker = f'(property "Reference" "{old}"'
-        start = text.find(marker)
-        if start < 0:
-            continue
-        end = start + len(marker)
-        text = text[:start] + text[start:end].replace(f'"{old}"', f'"{new}"') + text[end:]
-        changed += 1
+        before = text
+        text = text.replace(f'"{old}"', f'"{new}"')
+        changed += text != before
     PATH.write_text(text)
     print(f"renumbered regulator duplicate references: {changed}")
 
