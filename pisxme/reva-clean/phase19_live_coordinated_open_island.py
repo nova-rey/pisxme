@@ -96,8 +96,10 @@ def main():
     # breakout, then use separated pair corridors and serialized U7 pad x.
     first={'CM5_USB3_RX_N':(74.0,103.9),'CM5_USB3_RX_P':(82.0,104.3),
            'CM5_USB3_TX_N':(90.0,118.0),'CM5_USB3_TX_P':(98.0,120.0)}[suffix]
-    lane_y={'CM5_USB3_RX_N':70.0,'CM5_USB3_RX_P':72.0,
-            'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':92.0}[suffix]
+    lane_y=({'CM5_USB3_RX_N':50.0,'CM5_USB3_RX_P':52.0,
+             'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':92.0} if USB_SPLIT else
+            {'CM5_USB3_RX_N':70.0,'CM5_USB3_RX_P':72.0,
+             'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':92.0})[suffix]
     target_x={'CM5_USB3_RX_N':280.0,'CM5_USB3_RX_P':280.5,
               'CM5_USB3_TX_N':281.5,'CM5_USB3_TX_P':282.0}[suffix]
     landing_y={'CM5_USB3_RX_N':102.0,'CM5_USB3_RX_P':104.0,

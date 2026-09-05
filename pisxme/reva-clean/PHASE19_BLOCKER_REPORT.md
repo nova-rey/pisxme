@@ -1180,6 +1180,13 @@ zero focused shorts was incorrect. The rotation-0 candidate remains rejected.
 KiCad DRC reported 215 records, including five crossings and one U7 NC-pad
 short, plus an F.Cu SATA pair crossing. Rejected; SATA270 remains the
 storage-side oracle.
+## 2026-09-05 high/low RX-F TX-B trial
+
+`PHASE19_COORDINATED_SPLIT2.kicad_pcb` moved the RX F.Cu corridors above the
+CM5 support field while retaining TX on B.Cu. Native KiCad DRC reported 212
+records, four crossings, and three shorts. Failures were CM5 5 V support-pad
+interference plus the SATA RX_P bypass junction. Rejected; layer allocation
+alone is exhausted for the current U7/J3 placement.
 ## 2026-09-05 SATA RX_P lower-side bypass trial
 
 `PHASE19_COORDINATED_SATA_RXP_BYPASS25.kicad_pcb` routed SATA RX_P around
