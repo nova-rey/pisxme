@@ -28,14 +28,21 @@ PoE header rather than a local EDAC termination network. The EDAC authority
 specifies four `22 nF / 100 V` to `75 ohm` series branches into a common node,
 with a `1 nF / 2 kV` shield/ground termination capacitor.
 
+The hierarchy adds a second authority mismatch: the child exposes one bundled
+`GBE_LED` port, while its four connector LED labels are local and the root has
+no four-net LED contract. The support repair must resolve that interface
+explicitly; it must not invent four CM5 LED nets or silently leave the LED
+pins floating.
+
 ## Decision
 
 `PHASE24_ETHERNET_SUPPORT_AUTHORITY = OPEN_SCHEMATIC_REPAIR_REQUIRED`
 
 The next implementation must add real native schematic symbols, values,
 footprints, MPN/provenance fields, and net ownership for the EDAC CT network,
-LED current limiting, and shield return. After native ERC/netlist/parity
-validation, the PCB support island may be regenerated from those saved nets.
+LED current limiting, and shield return, while reconciling the bundled LED
+hierarchical contract. After native ERC/netlist/parity validation, the PCB
+support island may be regenerated from those saved nets.
 No historical PCB-only `ETH_CT_BRANCH_*`, `ETH_CT_COMMON`, `CCT*`, or `RCT*`
 objects are promoted as production authority.
 

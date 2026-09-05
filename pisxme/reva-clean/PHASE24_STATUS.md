@@ -1080,3 +1080,8 @@ This is a schematic-authority gap, not a macro-placement failure or Ethernet
 architecture failure. PCB-only historical support aliases remain excluded;
 the next step is native schematic repair, ERC/netlist/parity validation, then
 coordinate-derived PCB support regeneration.
+
+The audit also found that the child/root hierarchy exposes one bundled
+`GBE_LED` contract while the connector has four local LED nets. That interface
+must be resolved in the same schematic repair; no four-net CM5 LED mapping is
+being inferred from the donor.
