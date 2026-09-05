@@ -207,16 +207,19 @@ def main():
    # Pair-preserving alternative: RX is one B.Cu pair and TX one F.Cu
    # pair.  The two pairs therefore cannot cross in the long corridor;
    # their U7 pad dogbones are kept in separate upper/lower launch bands.
-   first={'CM5_USB3_RX_N':(72.0,103.9),'CM5_USB3_RX_P':(74.0,104.3),
-          'CM5_USB3_TX_N':(76.0,106.3),'CM5_USB3_TX_P':(78.0,106.7)}[suffix]
-   top={'CM5_USB3_RX_N':(72.0,80.0),'CM5_USB3_RX_P':(74.0,82.0),
-        'CM5_USB3_TX_N':(76.0,84.0),'CM5_USB3_TX_P':(78.0,86.0)}[suffix]
+   # Spread the serialized source fanout before the first transition.  The
+   # increasing x/y order keeps each vertical escape outside the next
+   # source segment instead of placing vias in the adjacent pad launch.
+   first={'CM5_USB3_RX_N':(74.0,101.0),'CM5_USB3_RX_P':(84.0,105.0),
+          'CM5_USB3_TX_N':(94.0,110.0),'CM5_USB3_TX_P':(104.0,115.0)}[suffix]
+   top={'CM5_USB3_RX_N':(74.0,80.0),'CM5_USB3_RX_P':(84.0,82.0),
+        'CM5_USB3_TX_N':(94.0,84.0),'CM5_USB3_TX_P':(104.0,86.0)}[suffix]
    # Higher source lane exits use the nearer outboard column so the
    # vertical drops cannot cut across a lower lane's horizontal run.
    outx={'CM5_USB3_RX_N':298.0,'CM5_USB3_RX_P':297.0,
          'CM5_USB3_TX_N':296.0,'CM5_USB3_TX_P':295.0}[suffix]
-   landing={'CM5_USB3_RX_N':(288.0,110.0),'CM5_USB3_RX_P':(289.0,112.0),
-            'CM5_USB3_TX_N':(290.0,116.0),'CM5_USB3_TX_P':(291.0,118.0)}[suffix]
+   landing={'CM5_USB3_RX_N':(300.0,110.0),'CM5_USB3_RX_P':(301.0,112.0),
+            'CM5_USB3_TX_N':(302.0,116.0),'CM5_USB3_TX_P':(303.0,118.0)}[suffix]
    launch=(71.2,s[1]); seg(b,n,s,launch); seg(b,n,launch,first)
    via(b,n,first); layer=pcbnew.B_Cu
    seg(b,n,first,(first[0],top[1]),layer); seg(b,n,(first[0],top[1]),(260.0,top[1]),layer)
@@ -225,8 +228,8 @@ def main():
    # underside transition, then use only a short F.Cu dogbone into the
    # live SMD pad.  The long layer-separated corridors cannot cut the
    # clock bus or one another.
-   via_pos={'CM5_USB3_RX_N':(274.0,114.0),'CM5_USB3_RX_P':(278.0,116.0),
-            'CM5_USB3_TX_N':(282.0,118.0),'CM5_USB3_TX_P':(286.0,120.0)}[suffix]
+   via_pos={'CM5_USB3_RX_N':(270.0,120.0),'CM5_USB3_RX_P':(270.5,122.0),
+            'CM5_USB3_TX_N':(271.5,124.0),'CM5_USB3_TX_P':(272.0,126.0)}[suffix]
    seg(b,n,landing,via_pos,pcbnew.B_Cu); via(b,n,via_pos)
    seg(b,n,via_pos,d,pcbnew.F_Cu)
    continue

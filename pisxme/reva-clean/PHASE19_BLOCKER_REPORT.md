@@ -1046,6 +1046,18 @@ removed. Remaining candidate errors are concentrated at the dense J3 launch
 and its mechanical/NC-pad field. The candidate remains rejected and Phase 19
 remains open.
 
+## 2026-09-05 all-B.Cu pair corridor experiment
+
+The next pair-preserving candidate kept all four long CM5-to-U7 corridors on
+B.Cu, spread the source transitions before the first via, reversed the
+outboard exit ordering, and separated the U7-side transition columns. The
+measured skews were approximately 4.27 mm RX and 7.22 mm TX, and the clock
+bus was no longer crossed. Native DRC still found two B.Cu corridor
+crossings, one TX pair short in the final fan-in, and localized source/U7
+clearance violations. It is rejected, but it is the best current geometry
+class: the remaining problem is endpoint serialization, not excessive pair
+length or the storage architecture.
+
 ## 2026-09-05 pair split endpoint-spacing follow-up
 
 The follow-up kept all four long USB3 corridors on B.Cu, reversed the
