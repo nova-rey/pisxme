@@ -532,3 +532,11 @@ violations, 400 unconnected pads, track crossings, and clock-to-SATA/bridge
 shorts. This is a rejected coordinate-overlay experiment, not evidence that
 the clock architecture is invalid; the clock island must be regenerated in a
 free local corridor or the surrounding storage copper must be coordinated.
+
+## Corrected transform rerun
+
+The fixture-to-acreage mapping was corrected using the serialized U7 pad frame
+(`(97,104.5)` to `(123,135.5)`). The consistent rerun still fails promotion:
+native DRC reports 227 violations, 393 unconnected pads, crossings, and
+clock-to-SATA shorts. The remaining work is local clock-corridor regeneration;
+the clock architecture itself remains supported by the standalone fixture.

@@ -4077,3 +4077,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: materialized all eight missing Phase24 component references; exact pad-net audit passed and native DRC had no shorts or crossings, while routed parity remains open.
 2026-09-05 Phase24: integrated the U5 layer-separated source/return launch with real C44-C47 pad-to-via dogbones; targeted graph audit passed and refilled native DRC had zero shorts/crossings, while full routed parity remains open.
 2026-09-05 Phase24: rejected direct rotated-U7 clock-oracle overlay on the routed acreage candidate after native DRC found 288 violations, clock/SATA bridge shorts, and crossings; preserved the standalone oracle and corrected via-width API use.
+2026-09-05 Phase24: corrected the clock-fixture U7 pad-frame transform and reran it; native DRC still rejected the overlay with 227 violations, SATA/clock shorts, crossings, and 393 unconnected pads, so local clock regeneration remains required.

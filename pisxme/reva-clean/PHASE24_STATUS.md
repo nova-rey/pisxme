@@ -220,3 +220,15 @@ nets and existing SATA/bridge copper. The standalone oracle remains valid;
 its unmodified coordinate context cannot be overlaid onto this already-routed
 acreage candidate. The experiment is retained as negative evidence, and its
 KiCad via-width API call was corrected for reproducible reruns.
+
+## Corrected clock-fixture transform rerun
+
+The coordinate transform was corrected from the footprint-origin frame to the
+serialized U7 pad frame: fixture U7.52 `(97,104.5)` maps to acreage U7.52
+`(123,135.5)` under `x'=220-x, y'=240-y`. The rerun places the reused clock
+footprints consistently and reproduces the fixture copper. It is still
+rejected for acreage promotion: native DRC reports 227 violations, 393
+unconnected pads, multiple crossings, and shorts between the clock return/XI
+nets and existing SATA copper. This establishes that the proven clock topology
+needs a locally regenerated corridor around the existing storage routes, not a
+blind copper overlay.
