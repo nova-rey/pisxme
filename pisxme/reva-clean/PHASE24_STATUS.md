@@ -473,3 +473,23 @@ candidate with 17 crossings and three shorts, including long XI/XO corridors
 through existing SATA/USB copper and an XO approach into an unassigned U7
 pad. The next valid class must use obstacle-aware layer-separated routing
 from the serialized U7 pad field.
+
+## Exact clock-oracle transplant comparison (rejected)
+
+`phase24_clock_oracle_coordinated.py` moved the existing Y1/R23/C42/C43
+footprints into the proven rotated-U7 oracle coordinates and copied only the
+oracle's XI/XO/VSSOSC tracks and ordinary vias. The transplant is valid as a
+reference comparison but is rejected on the cumulative acreage board: native
+KiCad DRC reports 288 violations, including clock/SATA crossings and
+clock-to-J3 shorts/clearances. This confirms the oracle topology is sound but
+its fixed coordinate context must be locally regenerated around the current
+storage launch.
+## Exact coordinated oracle transplant — rejected
+
+`phase24_clock_oracle_coordinated.py` moved Y1/R23/C42/C43 to the exact
+rotated-U7 oracle positions/orientations and copied only clock-net tracks and
+ordinary vias onto the current U7 authority candidate. Native KiCad DRC
+reported 288 violations and 166 unconnected items, including clock/SATA
+crossings, clock/J3 interactions, and shorts/clearance failures. Rejected for
+acreage integration; the oracle topology remains valid and must be regenerated
+around the current serialized U7/storage geometry.

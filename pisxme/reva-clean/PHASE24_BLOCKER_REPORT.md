@@ -719,3 +719,19 @@ crossing inherited SATA/USB routes and an XO segment touching an unassigned
 U7 pad. This evidence does not change the storage architecture; it narrows
 the required next implementation to an obstacle-aware layer-separated clock
 route.
+
+The exact rotated-U7 clock oracle was transplanted for comparison and
+rejected by native DRC at 288 violations, with clock/SATA crossings and
+clock/J3 interactions. This is coordinate-context evidence, not an
+architectural rejection; the next implementation must regenerate the clock
+corridor locally from the serialized U7 pads.
+## Exact coordinated oracle transplant — rejected
+
+The disposable `phase24_clock_oracle_coordinated.py` experiment copied the
+complete rotated-U7 clock support placement and clock-net copper from
+`PHASE19_PASS_CLOCK_ROT180_S20.kicad_pcb` onto the current U7 authority
+candidate. Native KiCad DRC reported 288 violations and 166 unconnected
+items, including clock/SATA crossings, clock/J3 interactions, and
+shorts/clearance failures. This rejects the fixed-coordinate transplant only;
+the oracle topology remains valid and requires obstacle-aware local
+regeneration around the current U7/storage launch.
