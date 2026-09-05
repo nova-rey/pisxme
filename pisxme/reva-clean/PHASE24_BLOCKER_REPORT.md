@@ -550,3 +550,11 @@ zones. Positive proof passes on the integrated U5 board. Disposable missing
 trace and missing via controls both fail as required. This closes the audit
 method defect, but not full-board Phase 24 routed parity; native DRC still
 reports 397 non-target unconnected pads.
+
+## Native connection census
+
+The committed census parses all 397 native missing-connection records. The
+largest unresolved classes are `12V_PROTECTED` (146), `POWER_GND` (128), and
+`/CORE_CM5/POWER_GND` (50), followed by regulator rails, power-entry rails,
+SATA RX-N, and bridge clock nets. No records were waived; the table is
+diagnostic evidence for sequencing the remaining physical repairs.

@@ -245,3 +245,13 @@ removes the required C44 rail dogbone trace and, separately, its required
 through-via; both controls correctly make the audit fail. Native DRC has no
 target C44-C47 unconnected finding, while the remaining 397 unconnected pads
 are outside this local proof and keep full Phase 24 open.
+
+## Native unconnected census
+
+`phase24_native_unconnected_census.py` parses the native DRC report without
+changing severity or filtering the gate. The 397 records are dominated by
+146 `12V_PROTECTED`, 128 `POWER_GND`, and 50 `/CORE_CM5/POWER_GND` records;
+smaller groups include bridge 1V1/3V3, input/fused 12 V, SATA RX-N, and the
+clock nets. The complete table is in
+`PHASE24_NATIVE_UNCONNECTED_CENSUS.md`. This identifies the next repair
+classes while retaining every native connection as mandatory.
