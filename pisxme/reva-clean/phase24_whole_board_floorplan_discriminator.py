@@ -39,9 +39,20 @@ def source_points(board, prefixes):
 groups = {
     "Ethernet": (("CM5_GBE_",), ("U6", "U9", "J2")),
     "PCIe/V100": (("CM5_PER0", "CM5_PET0", "CM5_REFCLK", "CM5_PERST"), ("J1",)),
-    "USB3/storage": (("CM5_USB3_",), ("U7", "J3", "Y1", "R23", "C42", "C43")),
-    "SERVICE USB2": (("SERVICE_USB2_",), ("J4",)),
+    "USB3/storage": (("CM5_USB3_",), ("U7", "J3", "C16", "C17", "C19", "C30", "C31", "C32", "C33", "Y1", "R23", "C42", "C43")),
+    "SERVICE USB2": (("SERVICE_USB2_",), ("J4", "U8")),
 }
+
+signal_terms = {
+    "Ethernet": ("CM5_GBE_", "ETH_", "GBE_"),
+    "PCIe/V100": ("CM5_PER", "CM5_PET", "CM5_REFCLK", "CM5_PERST", "PCIE"),
+    "USB3/storage": ("CM5_USB3_", "BRIDGE_USB3_", "BRIDGE_SATA_", "SATA_M2_", "BRIDGE_XI", "BRIDGE_XO"),
+    "SERVICE USB2": ("SERVICE_USB2_", "SERVICE_RD_"),
+}
+
+def signal_pads(board, refs, terms):
+    return [p for ref in refs for p in footprint(board, ref).Pads()
+            if any(term in p.GetNetname() for term in terms)]
 
 def move_candidate(name, moves):
     board = pcbnew.LoadBoard(str(BASE))
@@ -63,6 +74,24 @@ candidates = {
         "Y1": (88, 136, 0), "R23": (82, 136, 0),
         "C42": (82, 132, 0), "C43": (82, 140, 0),
     },
+    "ETH_WEST_OUTBOARD_STORAGE_CLEAR": {
+        "J2": (15, 145, 180), "U6": (20, 104, -90), "U9": (26, 104, -90),
+        "U7": (100, 145, 180), "J3": (145, 125, 90), "C17": (108, 145, 0),
+        "C16": (92, 136, 0), "C19": (108, 136, 0),
+        "C30": (112, 138, 180), "C31": (112, 152, 180),
+        "C32": (118, 138, 180), "C33": (118, 152, 180),
+        "Y1": (92, 145, 0), "R23": (86, 145, 0),
+        "C42": (86, 141, 0), "C43": (86, 149, 0),
+    },
+    "ETH_WEST_CLEAR_STORAGE_MID": {
+        "J2": (15, 145, 180), "U6": (20, 104, -90), "U9": (26, 104, -90),
+        "U7": (105, 124, 180), "J3": (145, 125, 90), "C17": (101, 112, 0),
+        "C16": (95, 112, 0), "C19": (107, 112, 0),
+        "C30": (113, 116, 180), "C31": (113, 132, 180),
+        "C32": (119, 116, 180), "C33": (119, 132, 180),
+        "Y1": (95, 140, 0), "R23": (89, 140, 0),
+        "C42": (89, 136, 0), "C43": (89, 144, 0),
+    },
     "CM5_NEIGHBORHOODS": {
         "J2": (18, 102, 180), "U6": (44, 102, -90), "U9": (50, 102, -90),
         "U7": (96, 124, 180), "J3": (138, 124, 90),
@@ -75,8 +104,11 @@ candidates = {
         "Y1": (82, 120, 0), "R23": (76, 120, 0),
         "C42": (76, 116, 0), "C43": (76, 124, 0),
     },
-    "STORAGE_LOCAL": {
-        "U7": (95, 120, 180), "J3": (145, 125, 90),
+    "STORAGE_LOCAL_CLEAR": {
+        "U7": (100, 145, 180), "J3": (145, 125, 90), "C17": (108, 145, 0),
+        "C16": (92, 136, 0), "C19": (108, 136, 0),
+        "C30": (112, 138, 180), "C31": (112, 152, 180),
+        "C32": (118, 138, 180), "C33": (118, 152, 180),
         "Y1": (88, 136, 0), "R23": (82, 136, 0),
         "C42": (82, 132, 0), "C43": (82, 140, 0),
     },
@@ -146,14 +178,16 @@ for name, board in boards.items():
     vals = {}
     for g, (prefixes, refs) in groups.items():
         src = centroid(source_points(base, prefixes))
-        dst = pads(board, refs)
+        dst = [xy(p) for p in signal_pads(board, refs, signal_terms[g])]
         vals[g] = dist(src, centroid(dst))
     topo = {
         "CURRENT": "baseline; remote Ethernet/storage corridors",
         "ETH_WEST_LOCAL_STORAGE": "best joint migration: local GBE neighborhood, USB3-side storage, PCIe/SERVICE retained",
         "CM5_NEIGHBORHOODS": "shortest Ethernet but displaces solved SERVICE endpoint",
         "SWAP_ETH_STORAGE": "improves both interfaces but less than selected joint migration",
-        "STORAGE_LOCAL": "improves storage only; leaves Ethernet remote",
+        "STORAGE_LOCAL_CLEAR": "improves storage only; leaves Ethernet remote",
+        "ETH_WEST_OUTBOARD_STORAGE_CLEAR": "clears west Ethernet and moves complete storage support as a coherent pair",
+        "ETH_WEST_CLEAR_STORAGE_MID": "keeps Ethernet clear of west power bodies while co-locating the complete storage island",
     }[name]
     lines.append(f"| `{name}` | {vals['Ethernet']:.1f} | {vals['USB3/storage']:.1f} | {vals['SERVICE USB2']:.1f} | no | {topo} |")
 
@@ -171,7 +205,7 @@ for name, board in boards.items():
     for group, (prefixes, refs) in groups.items():
         total = 0.0
         srcpads = [p for p in footprint(base, "J7").Pads() if any(k in p.GetNetname() for k in prefixes)]
-        dstpads = [p for ref in refs for p in footprint(board, ref).Pads() if p.GetNetname()]
+        dstpads = [p for p in signal_pads(board, refs, signal_terms[group]) if p.GetNetname()]
         for sp in srcpads:
             same = [xy(dp) for dp in dstpads if dp.GetNetname() == sp.GetNetname()]
             if same:
@@ -179,15 +213,44 @@ for name, board in boards.items():
         sums[group] = total
     lines.append(f"| `{name}` | {sums['Ethernet']:.1f} | {sums['PCIe/V100']:.1f} | {sums['USB3/storage']:.1f} | {sums['SERVICE USB2']:.1f} |")
 
+def bbox_pairs(board, refs=None):
+    fs = [f for f in board.GetFootprints() if refs is None or f.GetReference() in refs]
+    all_fs = list(board.GetFootprints())
+    out = set()
+    for a in fs:
+        ba = a.GetBoundingBox()
+        for b in all_fs:
+            if a.GetReference() >= b.GetReference():
+                continue
+            if ba.Intersects(b.GetBoundingBox()):
+                out.add((a.GetReference(), b.GetReference()))
+    return out
+
+base_overlaps = bbox_pairs(base)
+lines += [
+    "",
+    "## Newly introduced native body-bbox overlaps",
+    "",
+    "This is a conservative collision screen, not a replacement for final courtyard/3D review. Only overlaps newly introduced by a moved candidate are listed.",
+    "",
+    "| candidate | new overlap pairs | disposition |",
+    "|---|---|---|",
+]
+for name, board in boards.items():
+    moved = set(candidates[name])
+    new = sorted(bbox_pairs(board, moved) - base_overlaps) if moved else []
+    disposition = "reject exact coordinates" if new else "no new bbox overlap in this screen"
+    lines.append(f"| `{name}` | {', '.join(a + '/' + b for a, b in new) or 'none'} | {disposition} |")
+
 lines += [
     "",
     "## Decision",
     "",
-    "`MACRO_FLOORPLAN_REVIEW = COMPLETE`. The topology winner is `ETH_WEST_LOCAL_STORAGE`: it materially reduces the two remote high-speed neighborhoods while preserving the PCIe and already-local SERVICE anchors. `CM5_NEIGHBORHOODS` is not preferred because it trades away the solved SERVICE launch for a smaller Ethernet centroid distance. `SWAP_ETH_STORAGE` is a useful alternative but is less favorable on both distances.",
+    "`MACRO_FLOORPLAN_REVIEW = COMPLETE`. The conceptual winner remains the Ethernet-west/storage-local migration, but the exact earlier `ETH_WEST_LOCAL_STORAGE` coordinates are rejected by the independent native bbox review because they overlap `C4/Q2/U2`, `U2`, and `C17`. The corrected candidates retain the same topology while moving coherent bodies clear of those verified obstacles; `ETH_WEST_CLEAR_STORAGE_MID` is the preferred next routing basis, with `ETH_WEST_OUTBOARD_STORAGE_CLEAR` as the lower-risk fallback. `CM5_NEIGHBORHOODS` is not preferred because it trades away the solved SERVICE launch.",
     "",
     "This decision answers floorplan question A only. It does not claim the selected candidate is routed. Any first-pass copper failure on the selected candidate is classified as `ROUTE IMPLEMENTATION FAILURE` until a fair native-pad, obstacle-aware routing cycle has been attempted; raw DRC comparison against the mature historical board is prohibited.",
     "",
-    "Next action: retain the selected topology, regenerate the affected Ethernet/storage/clock neighborhoods from native pad/net authority, then validate those routes and the unaffected PCIe/SERVICE/power islands separately.",
+    "Next action: promote only the corrected collision-free candidate after a native courtyard/body review, then regenerate the affected Ethernet/storage/clock neighborhoods from native pad/net authority. This review answers floorplan question A; route development and native closure remain open.",
 ]
 OUT.write_text("\n".join(lines) + "\n")
 print(OUT)

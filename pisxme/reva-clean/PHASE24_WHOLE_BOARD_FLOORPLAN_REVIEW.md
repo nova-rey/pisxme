@@ -18,8 +18,8 @@ This is a placement/ratsnest topology comparison. Existing copper and DRC counts
 |---|---|---:|---:|---:|---|
 | Ethernet | U6, U9, J2 | (77.76, 59.56) | 59.15 | 50.70 | J2 is remote from GBE launch; west/power/SERVICE corridors intervene. |
 | PCIe/V100 | J1 | (150.00, 90.00) | 81.22 | 55.39 | J1 is the sensitive validated anchor; retain unless global evidence forces bounded regeneration. |
-| USB3/storage | U7, J3, Y1, R23, C42, C43 | (132.11, 132.11) | 67.61 | 36.06 | U7/J3/clock are remote from USB3 launch and compete with SATA/PCIe/power corridors. |
-| SERVICE USB2 | J4 | (45.00, 100.00) | 21.97 | 19.96 | J4 is already the natural local endpoint for the right-side USB2 launch. |
+| USB3/storage | U7, J3, C16, C17, C19, C30, C31, C32, C33, Y1, R23, C42, C43 | (130.65, 131.04) | 65.85 | 19.76 | U7/J3/clock are remote from USB3 launch and compete with SATA/PCIe/power corridors. |
+| SERVICE USB2 | J4, U8 | (46.88, 100.00) | 20.09 | 8.54 | J4 is already the natural local endpoint for the right-side USB2 launch. |
 
 ### Non-signal islands
 
@@ -33,11 +33,13 @@ This is a placement/ratsnest topology comparison. Existing copper and DRC counts
 
 | candidate | Ethernet distance (mm) | storage distance (mm) | SERVICE distance (mm) | PCIe changed? | expected topology |
 |---|---:|---:|---:|---|---|
-| `CURRENT` | 59.2 | 67.6 | 22.0 | no | baseline; remote Ethernet/storage corridors |
-| `ETH_WEST_LOCAL_STORAGE` | 16.9 | 51.0 | 22.0 | no | best joint migration: local GBE neighborhood, USB3-side storage, PCIe/SERVICE retained |
-| `CM5_NEIGHBORHOODS` | 5.1 | 51.0 | 17.1 | no | shortest Ethernet but displaces solved SERVICE endpoint |
-| `SWAP_ETH_STORAGE` | 22.5 | 52.6 | 22.0 | no | improves both interfaces but less than selected joint migration |
-| `STORAGE_LOCAL` | 59.2 | 53.4 | 22.0 | no | improves storage only; leaves Ethernet remote |
+| `CURRENT` | 58.4 | 59.1 | 18.6 | no | baseline; remote Ethernet/storage corridors |
+| `ETH_WEST_LOCAL_STORAGE` | 16.6 | 37.3 | 18.6 | no | best joint migration: local GBE neighborhood, USB3-side storage, PCIe/SERVICE retained |
+| `ETH_WEST_OUTBOARD_STORAGE_CLEAR` | 31.9 | 52.8 | 18.6 | no | clears west Ethernet and moves complete storage support as a coherent pair |
+| `ETH_WEST_CLEAR_STORAGE_MID` | 31.9 | 45.6 | 18.6 | no | keeps Ethernet clear of west power bodies while co-locating the complete storage island |
+| `CM5_NEIGHBORHOODS` | 4.9 | 41.6 | 10.7 | no | shortest Ethernet but displaces solved SERVICE endpoint |
+| `SWAP_ETH_STORAGE` | 20.9 | 39.0 | 18.6 | no | improves both interfaces but less than selected joint migration |
+| `STORAGE_LOCAL_CLEAR` | 58.4 | 51.3 | 18.6 | no | improves storage only; leaves Ethernet remote |
 
 ## Same-net ratsnest topology metric
 
@@ -45,16 +47,32 @@ For each source pad, the metric connects it to the nearest same-net pad in the l
 
 | candidate | Ethernet same-net sum (mm) | PCIe/V100 same-net sum (mm) | USB3/storage same-net sum (mm) | SERVICE same-net sum (mm) |
 |---|---:|---:|---:|---:|
-| `CURRENT` | 443.9 | 490.8 | 231.2 | 40.0 |
-| `ETH_WEST_LOCAL_STORAGE` | 88.7 | 490.8 | 116.5 | 40.0 |
-| `CM5_NEIGHBORHOODS` | 101.3 | 490.8 | 116.5 | 30.1 |
-| `SWAP_ETH_STORAGE` | 127.7 | 490.8 | 103.2 | 40.0 |
-| `STORAGE_LOCAL` | 443.9 | 490.8 | 103.2 | 40.0 |
+| `CURRENT` | 443.9 | 490.8 | 231.2 | 17.1 |
+| `ETH_WEST_LOCAL_STORAGE` | 88.7 | 490.8 | 116.5 | 17.1 |
+| `ETH_WEST_OUTBOARD_STORAGE_CLEAR` | 97.4 | 490.8 | 192.0 | 17.1 |
+| `ETH_WEST_CLEAR_STORAGE_MID` | 97.4 | 490.8 | 145.1 | 17.1 |
+| `CM5_NEIGHBORHOODS` | 101.3 | 490.8 | 116.5 | 17.1 |
+| `SWAP_ETH_STORAGE` | 127.7 | 490.8 | 103.2 | 17.1 |
+| `STORAGE_LOCAL_CLEAR` | 443.9 | 490.8 | 192.0 | 17.1 |
+
+## Newly introduced native body-bbox overlaps
+
+This is a conservative collision screen, not a replacement for final courtyard/3D review. Only overlaps newly introduced by a moved candidate are listed.
+
+| candidate | new overlap pairs | disposition |
+|---|---|---|
+| `CURRENT` | none | no new bbox overlap in this screen |
+| `ETH_WEST_LOCAL_STORAGE` | J2/Q2, J2/U2 | reject exact coordinates |
+| `ETH_WEST_OUTBOARD_STORAGE_CLEAR` | none | no new bbox overlap in this screen |
+| `ETH_WEST_CLEAR_STORAGE_MID` | none | no new bbox overlap in this screen |
+| `CM5_NEIGHBORHOODS` | J2/Q2, J2/U2 | reject exact coordinates |
+| `SWAP_ETH_STORAGE` | none | no new bbox overlap in this screen |
+| `STORAGE_LOCAL_CLEAR` | none | no new bbox overlap in this screen |
 
 ## Decision
 
-`MACRO_FLOORPLAN_REVIEW = COMPLETE`. The topology winner is `ETH_WEST_LOCAL_STORAGE`: it materially reduces the two remote high-speed neighborhoods while preserving the PCIe and already-local SERVICE anchors. `CM5_NEIGHBORHOODS` is not preferred because it trades away the solved SERVICE launch for a smaller Ethernet centroid distance. `SWAP_ETH_STORAGE` is a useful alternative but is less favorable on both distances.
+`MACRO_FLOORPLAN_REVIEW = COMPLETE`. The conceptual winner remains the Ethernet-west/storage-local migration, but the exact earlier `ETH_WEST_LOCAL_STORAGE` coordinates are rejected by the independent native bbox review because they overlap `C4/Q2/U2`, `U2`, and `C17`. The corrected candidates retain the same topology while moving coherent bodies clear of those verified obstacles; `ETH_WEST_CLEAR_STORAGE_MID` is the preferred next routing basis, with `ETH_WEST_OUTBOARD_STORAGE_CLEAR` as the lower-risk fallback. `CM5_NEIGHBORHOODS` is not preferred because it trades away the solved SERVICE launch.
 
 This decision answers floorplan question A only. It does not claim the selected candidate is routed. Any first-pass copper failure on the selected candidate is classified as `ROUTE IMPLEMENTATION FAILURE` until a fair native-pad, obstacle-aware routing cycle has been attempted; raw DRC comparison against the mature historical board is prohibited.
 
-Next action: retain the selected topology, regenerate the affected Ethernet/storage/clock neighborhoods from native pad/net authority, then validate those routes and the unaffected PCIe/SERVICE/power islands separately.
+Next action: promote only the corrected collision-free candidate after a native courtyard/body review, then regenerate the affected Ethernet/storage/clock neighborhoods from native pad/net authority. This review answers floorplan question A; route development and native closure remain open.

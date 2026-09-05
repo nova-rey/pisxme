@@ -1,5 +1,33 @@
 # Phase 24 acreage validation status
 
+## Macro review correction and corrected routing basis — 2026-09-05
+
+The independent consultant review found that the earlier exact
+`ETH_WEST_LOCAL_STORAGE` coordinates were not promotable: native body checks
+showed new J2/C4, J2/Q2, J2/U2, U6/U2, and U7/C17 conflicts (the exact list
+depends on whether pad/body or courtyard geometry is used). It also found
+that the previous metrics omitted U8 from SERVICE and C16/C17/C19 from the
+complete storage island. Those omissions are corrected in
+`phase24_whole_board_floorplan_discriminator.py`.
+
+The corrected review uses signal-oriented same-net pad/ratsnest metrics and
+includes U8 and the complete bridge support cluster. The exact old placement
+is rejected as a placement candidate, not as a topology. The new
+`ETH_WEST_CLEAR_STORAGE_MID` placement clears the moved-body screen and the
+native DRC courtyard count remains at the baseline inherited count of three.
+`PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb` is the disposable routing basis;
+337/380 affected track items were removed from the two generator passes as
+the selected affected-net set was expanded to include bridge power support.
+The board is not yet routed or promoted as a Phase 24 pass.
+
+`MACRO_FLOORPLAN_REVIEW = COMPLETE`, with the exact candidate corrected and
+the placement decision now evidence-backed. The current implementation class
+is `ROUTE DEVELOPMENT PENDING`; raw DRC on an unrouted/stale-copper
+placement-only candidate is not a floorplan comparison. Next action is
+native-pad, obstacle-aware regeneration of Ethernet/storage/clock on the
+corrected macro basis, followed by separate revalidation of unaffected PCIe,
+SERVICE, and power islands.
+
 ## Whole-board macro-floorplan review — 2026-09-05
 
 Detailed net-by-net routing experiments are paused pending this discriminator.
