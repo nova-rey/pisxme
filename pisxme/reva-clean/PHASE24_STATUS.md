@@ -52,3 +52,15 @@ its relocated USB3 corridor crosses the frozen V5 PCIe corridor after merge.
 It was rejected.  The valid next class is to retain V5's proven U7/J3
 high-speed placement and add an obstacle-aware clock route locally, followed
 by a separately coordinated U5 bulk-cap island.
+
+## Latest bounded experiment
+
+`phase24_materialize_support_v2.py` generated `PHASE24_SUPPORT_V2.kicad_pcb`
+from actual U7 pad coordinates, with the clock parts in open acreage and the
+four schematic-authoritative U5 capacitors materialized. It was rejected by
+native DRC (`234` violations, `409` unconnected items): the attempted common
+B.Cu clock surface still crossed inherited SATA copper, crossed between clock
+branches, and produced U7 pad-field shorts. This is not evidence against the
+storage architecture. The next valid class is layer-separated clock fanout
+with vias outside the U7 pad field, then an independent coherent U5
+rail/return island. See `PHASE24_BLOCKER_REPORT.md`.
