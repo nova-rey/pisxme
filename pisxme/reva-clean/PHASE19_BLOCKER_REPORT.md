@@ -652,6 +652,19 @@ silkscreen/text/copper-sliver checks. This reconfirms that the authoritative
 the unresolved issue is only integration into the fully routed acreage
 candidate.
 
+## 2026-09-04 rotation-aware SATA launch result
+
+The generator now has an opt-in `P19_SATA_ROT270` branch. It places the
+coupling capacitors for U7 rotation 270 and derives all bridge/socket launch
+coordinates from reloaded transformed pads. The corrected SATA-only artifact
+`PHASE19_COORDINATED_U7ROT270_SATAFIX.kicad_pcb` reports `340` native DRC
+violations / `418` unconnected items, improving the prior rot270 artifact's
+`403` / `413` result.
+
+This is not a Phase 19 pass: the clock network has not yet been regenerated
+against this corrected SATA ancestor, and the unconnected count remains open.
+It is now the required ancestor for the next integrated clock trial.
+
 ## 2026-09-04 rotation-aware SATA launch generation
 
 The coordinated generator was corrected so the `P19_SATA_V3` geometry is no
