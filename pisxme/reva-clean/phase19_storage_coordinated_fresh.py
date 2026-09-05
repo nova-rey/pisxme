@@ -58,6 +58,12 @@ def main():
   # split coupling capacitors in-line instead of overlaying them afterward.
   cap_xy={'C30':(127.0,130.0),'C31':(135.0,110.0),
           'C32':(127.0,120.0),'C33':(127.0,118.0)}
+ if urot == 270 and jrot == 90 and os.environ.get('P19_SATA_ROT270','0') == '1':
+  # Rotation-aware bridge-side capacitor island.  The older V3 branch was
+  # authored for U7 rotation 180 and placed these capacitors into the new
+  # clock/SATA pad field when reused at rotation 270.
+  cap_xy={'C30':(150.0,122.0),'C31':(150.0,126.0),
+          'C32':(150.0,118.0),'C33':(150.0,130.0)}
  for i,ref in enumerate(('C30','C31','C32','C33')):
   cap=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'C_0402_1005Metric')
   if cap is None: raise RuntimeError('cannot load C_0402_1005Metric')
@@ -198,7 +204,23 @@ def main():
    cp=cap_pos[cref]; cp1=cp['1']; cp2=cp['2']
    n=b.FindNet('/STORAGE/'+name); socket=storage_nets['/STORAGE/'+name.replace('BRIDGE_SATA_','SATA_M2_')]
    s=up[un];d=jp[jn];a=cp2;z=cp1; x0,y0=s; x1,y1=d
-   if os.environ.get('P19_SATA_V3','0') == '1' and jrot == 90:
+   if urot == 270 and jrot == 90 and os.environ.get('P19_SATA_ROT270','0') == '1':
+    # U7 rotation-270: clock escapes west, SATA bridge pads escape east.
+    # Keep the four bridge-side legs in distinct local lanes and launch the
+    # socket-side nets monotonically toward the rotated J3 pad columns.
+    if name == 'BRIDGE_SATA_TX_P':
+     e=(146.0,129.5); T(b,n,s,e,pcbnew.F_Cu); T(b,n,e,a,pcbnew.F_Cu)
+     q=(160.0,122.0); T(b,socket,z,q,pcbnew.F_Cu); T(b,socket,q,d,pcbnew.F_Cu)
+    elif name == 'BRIDGE_SATA_TX_N':
+     e=(146.0,129.0); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,a,pcbnew.B_Cu)
+     q=(160.0,126.0); T(b,socket,z,q,pcbnew.B_Cu); T(b,socket,q,d,pcbnew.B_Cu)
+    elif name == 'BRIDGE_SATA_RX_P':
+     e=(146.0,131.0); T(b,n,s,e,pcbnew.F_Cu); T(b,n,e,a,pcbnew.F_Cu)
+     q=(160.0,118.0); T(b,socket,z,q,pcbnew.F_Cu); T(b,socket,q,d,pcbnew.F_Cu)
+    else:
+     e=(146.0,130.5); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,a,pcbnew.B_Cu)
+     q=(160.0,130.0); T(b,socket,z,q,pcbnew.B_Cu); T(b,socket,q,d,pcbnew.B_Cu)
+   elif os.environ.get('P19_SATA_V3','0') == '1' and jrot == 90:
     # V3 routes: TX_P uses the lower B.Cu corridor, TX_N the upper F.Cu
     # corridor, and the RX pair use separated B.Cu lanes.  Each cap is
     # traversed from pad 2 to pad 1 with a short F.Cu link; no via is placed

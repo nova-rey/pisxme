@@ -1,10 +1,15 @@
 """Add the authoritative TUSB9261 clock network to the rot270 storage trial."""
 from pathlib import Path
+import os
+import sys
 import pcbnew
 
 R = Path(__file__).resolve().parent
-BASE = R / 'PHASE19_COORDINATED_U7ROT270_FULL.kicad_pcb'
-OUT = R / 'PHASE19_COORDINATED_U7ROT270_CLOCK.kicad_pcb'
+for _arg in sys.argv[1:]:
+ if _arg.startswith('--') and '=' in _arg:
+  _key,_value=_arg[2:].split('=',1); os.environ[_key.replace('-','_')]=_value
+BASE = R / os.environ.get('P19_CLOCK_BASE','PHASE19_COORDINATED_U7ROT270_FULL.kicad_pcb')
+OUT = R / os.environ.get('P19_CLOCK_OUT','PHASE19_COORDINATED_U7ROT270_CLOCK.kicad_pcb')
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def T(b,n,a,z,l=pcbnew.F_Cu):
  t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(l); t.SetWidth(pcbnew.FromMM(.2)); t.SetNet(n); b.Add(t)

@@ -651,3 +651,18 @@ silkscreen/text/copper-sliver checks. This reconfirms that the authoritative
 40 MHz XI/XO/VSSOSC topology and perpendicular-first escape are implementable;
 the unresolved issue is only integration into the fully routed acreage
 candidate.
+
+## 2026-09-04 rotation-aware SATA launch generation
+
+The coordinated generator was corrected so the `P19_SATA_V3` geometry is no
+longer reused at U7 rotation 270. With U7 `(140,130)` rotation `270` and J3
+`(180,115)` rotation `90`, the new opt-in `P19_SATA_ROT270` branch places the
+four bridge-side coupling capacitors in an outboard local island and derives
+all bridge/socket endpoints from reloaded transformed pads.
+
+The corrected SATA-only coordinated artifact measured `340` native DRC
+violations and `418` unconnected items, versus `403` and `413` for the prior
+rot270 full candidate. The reduction confirms the former V3 coordinates were
+an authoring defect, not a physical conclusion. The candidate is not
+promoted: clock support has not yet been regenerated against the new
+capacitor island, and the full USB3/SATA connectivity gate remains open.
