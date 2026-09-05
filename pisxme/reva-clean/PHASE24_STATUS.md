@@ -573,3 +573,10 @@ B.Cu chain. R11.1 was joined directly to C18.2, and R14.1 was routed by a
 right-side F.Cu dogleg into the existing U4 output island. Sequential native
 DRC checks remain at zero shorting/crossing classes; the cumulative
 unconnected census falls from 142 to 138.
+
+## Power-input 12V_A bypass
+
+`phase24_12va_c3_join.py` adds a short F.Cu dogleg from the isolated C3.2
+bypass pad to U1.3 on `/POWER_INPUT/12V_IN_A`. Native DRC remains free of
+shorting and crossing classes; the cumulative unconnected census falls from
+138 to 137. The input topology and fuse/protection architecture are unchanged.

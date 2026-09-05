@@ -100,6 +100,12 @@ and the board-wide 12V/ground distribution remain open and need
 obstacle-aware launches; no severity was changed and no connection was
 waived.
 
+## 12V input bypass accepted
+
+C3.2 was joined to the existing `/POWER_INPUT/12V_IN_A` component with a
+short F.Cu dogleg. Native DRC reports zero shorts/crossings and 137 remaining
+unconnected records. No power topology or validation severity was changed.
+
 After removing the stale bridge-1V1 source segments and moving the island to
 an open acreage shelf, `PHASE24_U5_CAPS_ISLAND-far4-drc.rpt` reports `214`
 inherited/disposable violations and `391` unrelated unconnected items, but
