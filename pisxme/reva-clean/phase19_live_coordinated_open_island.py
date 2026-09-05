@@ -370,16 +370,16 @@ def main():
  xi,xo,vs=N['/STORAGE/BRIDGE_XI'],N['/STORAGE/BRIDGE_XO'],N['/STORAGE/BRIDGE_VSSOSC']
  # Keep the oscillator island above the relocated SATA launch.  Each net
  # uses a disjoint monotonic F.Cu corridor; no via-in-pad is introduced.
- seg(b,xi,U['52'],C(260,103)); seg(b,xi,C(260,103),C(260,98)); seg(b,xi,C(260,98),R23['1'])
- seg(b,xi,Y['1'],C(260,98)); seg(b,xi,C42['1'],C(260,94)); seg(b,xi,C(260,94),C(260,98))
- seg(b,xo,U['54'],C(264,103)); seg(b,xo,C(264,103),C(264,98)); seg(b,xo,C(264,98),R23['2'])
- seg(b,xo,Y['3'],C(264,98)); seg(b,xo,C43['1'],C(264,98))
- seg(b,vs,U['53'],C(256,103)); seg(b,vs,C(256,103),C(256,92)); seg(b,vs,C(256,92),C42['2'])
- seg(b,vs,Y['2'],C(256,92)); seg(b,vs,Y['4'],C(256,92)); seg(b,vs,C43['2'],C(268,92)); seg(b,vs,C(268,92),C(256,92))
+ seg(b,xi,U['52'],C(270,103)); seg(b,xi,C(270,103),C(270,98)); seg(b,xi,C(270,98),R23['1'])
+ seg(b,xi,Y['1'],C(270,98)); seg(b,xi,C42['1'],C(270,94)); seg(b,xi,C(270,94),C(270,98))
+ seg(b,xo,U['54'],C(274,103)); seg(b,xo,C(274,103),C(274,98)); seg(b,xo,C(274,98),R23['2'])
+ seg(b,xo,Y['3'],C(274,98)); seg(b,xo,C43['1'],C(274,98))
+ seg(b,vs,U['53'],C(266,103)); seg(b,vs,C(266,103),C(266,92)); seg(b,vs,C(266,92),C42['2'])
+ seg(b,vs,Y['2'],C(266,92)); seg(b,vs,Y['4'],C(266,92)); seg(b,vs,C43['2'],C(278,92)); seg(b,vs,C(278,92),C(266,92))
  # FREQSEL0/1 and VDDIO high on the local 3V3 net; local short fanout.
  v33=b.FindNet('/STORAGE/BRIDGE_3V3')
  for pn in ('24','30','31'): setpad(pad(u,pn),v33)
- seg(b,v33,U['24'],C(287,106)); seg(b,v33,C(287,106),U['30']); seg(b,v33,C(287,106),U['31'])
+ seg(b,v33,U['24'],C(297,106)); seg(b,v33,C(297,106),U['30']); seg(b,v33,C(297,106),U['31'])
  b.Save(str(OUT))
  # Remove only known donor duplicate net fields from U7 pads 5-12 in the
  # serialized footprint; this is the same deterministic cleanup used by the

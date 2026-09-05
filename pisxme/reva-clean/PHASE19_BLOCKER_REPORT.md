@@ -1255,3 +1255,13 @@ is rejected for now: its regenerated oscillator island has six shorts and
 six crossings against the relocated U7/SATA launch. This is a local support
 routing defect, not evidence against moving U7/J3 or the USB3/SATA
 architecture. Phase 19 remains open pending a clean full-support candidate.
+
+## 2026-09-05 oscillator-support follow-up
+
+`PHASE19_RELOC_U270J190_COORD22_FULL.kicad_pcb` corrected the first clock
+relocation coordinate error but still reports six shorts and three crossings
+in the oscillator/support island. The USB3+SATA focused geometry remains at
+zero shorts and zero crossings. The remaining work is therefore confined to
+cleanly escaping U7 clock pins and its local support network after the
+authorized U7 relocation; no storage architecture or PCIe reopening is
+indicated.
