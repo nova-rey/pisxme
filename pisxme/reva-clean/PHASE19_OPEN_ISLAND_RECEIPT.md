@@ -61,3 +61,9 @@ Live-endpoint clock regeneration trial: native DRC measured `96` / `67` with
 fewer errors than the relocation trial, but clock crossings, support/via
 clearances, and one return-via collision with the shared SATA coupling bank
 remain. Rejected pending a corrected isolated return corridor.
+
+Separated-clock-bus trial: XO uses a dedicated B.Cu bus and VSSOSC uses a
+separate B.Cu return corridor. Clock crossings and clock net-to-net shorts
+were eliminated; native DRC measured `92` / `62`. Three U7 pad-field
+clearances and one shared-fixture return-via collision remain. Rejected as a
+full pass, retained as the current best clock topology.

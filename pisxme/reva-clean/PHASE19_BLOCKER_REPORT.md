@@ -995,3 +995,14 @@ disposable SATA coupling footprint because that footprint remains present in
 the shared fixture. The trial is rejected; the live-endpoint method remains
 the selected direction for the next corrected fixture. Phase 19 remains open
 and Phase 20+ remains untouched.
+
+## 2026-09-05 separated-clock-bus trial
+
+The next live-endpoint clock candidate separated XO onto a B.Cu bus at a
+dedicated corridor and placed the VSSOSC return on a distinct B.Cu corridor.
+The clock-only fixture then had zero clock crossings and zero clock
+signal-to-signal shorts. Native DRC measured `92` violations / `62`
+unconnected items. Residual candidate errors are three U7 pad-field
+clearances and one return-via collision with an intentionally retained SATA
+coupling footprint; the remaining findings are fixture baseline warnings.
+This is the best current clock topology but is not a Phase 19 pass.

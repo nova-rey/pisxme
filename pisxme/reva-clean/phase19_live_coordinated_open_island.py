@@ -142,18 +142,18 @@ def main():
  # nets cannot cross in the dense support-pad region.
  seg(b,xi,U['52'],(273.5,100.5)); seg(b,xi,(273.5,100.5),R23['1'])
  seg(b,xi,R23['1'],Y['1']); seg(b,xi,R23['1'],C42['1'])
- for p,q in ((U['54'],(277.0,103.0)),(Y['3'],(268.0,100.5)),(R23['2'],(272.5,99.5)),(C43['1'],(275.5,96.5))):
+ for p,q in ((U['54'],(278.0,103.0)),(Y['3'],(269.5,100.5)),(R23['2'],(273.5,99.5)),(C43['1'],(275.5,96.5))):
   seg(b,xo,p,q); via(b,xo,q)
- seg(b,xo,(277.0,103.0),(275.5,96.5),pcbnew.B_Cu)
- seg(b,xo,(268.0,100.5),(272.5,99.5),pcbnew.B_Cu)
- seg(b,xo,(272.5,99.5),(275.5,96.5),pcbnew.B_Cu)
+ for q in ((278.0,103.0),(269.5,100.5),(273.5,99.5),(275.5,96.5)):
+  seg(b,xo,q,(q[0],90.0),pcbnew.B_Cu)
+ seg(b,xo,(269.5,90.0),(278.0,90.0),pcbnew.B_Cu)
  # Return vias are deliberately offset from every SMD pad (no via-in-pad).
- for p,q in ((U['53'],(274.0,104.5)),(Y['2'],(265.5,100.0)),(Y['4'],(270.5,96.0)),(C42['2'],(273.5,92.5)),(C43['2'],(278.0,98.0))):
+ for p,q in ((U['53'],(274.0,104.5)),(Y['2'],(264.0,100.0)),(Y['4'],(270.5,96.0)),(C42['2'],(274.5,92.5)),(C43['2'],(279.5,98.0))):
   seg(b,vs,p,q); via(b,vs,q)
  # Private oscillator return is joined on B.Cu outside the signal stubs.
- for q in ((274.0,104.5),(265.5,100.0),(270.5,96.0),(273.5,92.5),(278.0,98.0)):
+ for q in ((274.0,104.5),(264.0,100.0),(270.5,96.0),(274.5,92.5),(279.5,98.0)):
   seg(b,vs,q,(q[0],106.0),pcbnew.B_Cu)
- seg(b,vs,(265.5,106.0),(278.0,106.0),pcbnew.B_Cu)
+ seg(b,vs,(264.0,106.0),(279.5,106.0),pcbnew.B_Cu)
  # FREQSEL0/1 and VDDIO high on the local 3V3 net; local short fanout.
  v33=b.FindNet('/STORAGE/BRIDGE_3V3')
  for pn in ('24','30','31'): setpad(pad(u,pn),v33)
