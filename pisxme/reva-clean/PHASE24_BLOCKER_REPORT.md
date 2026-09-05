@@ -701,3 +701,9 @@ The U7 `BRIDGE_CFG` repeated-pad join was tested and rejected: the direct
 link hit pad 24 on `BRIDGE_3V3`, while the perimeter reroute produced two
 shorts and one crossing. No severity was relaxed; the control escape remains
 an open pad-frame routing task.
+
+The initial oracle-derived XO escape crossed the inherited SATA-TX corridor
+and was rejected. Moving only XO below that corridor yields a disposable
+source escape with zero native shorts/crossings (204 total DRC violations,
+166 unconnected records). This is source-side clock evidence, not complete
+clock closure; the passive island still needs obstacle-aware branches.

@@ -444,3 +444,13 @@ The direct CFG pad join crossed U7 pad 24 (`BRIDGE_3V3`) and was rejected.
 The attempted perimeter reroute around the pad field still introduced two
 shorts and one crossing in native DRC. The CFG control net remains open and
 must use a layer-separated, pad-frame-derived escape.
+
+## U7 oracle-derived clock source escape
+
+`phase24_u7_clock_source_escape.py` adds the rotated-U7 oracle's XI and
+VSSOSC escapes plus a corrected XO dogleg below the SATA-TX corridor. The
+first XO path was rejected for one crossing; the corrected disposable
+candidate has zero shorts and zero crossings. Native DRC reports 204 total
+inherited/placement violations and 166 unconnected items. This closes the
+source-escape discriminator only; support-passive branches and end-to-end
+clock connectivity remain open.
