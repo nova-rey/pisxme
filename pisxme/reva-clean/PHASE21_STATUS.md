@@ -17,12 +17,13 @@ routing, avoid high-speed/regulator switch-node exposure, and preserve the
 validated PCIe, USB3, SATA, Ethernet, and SERVICE artifacts.
 
 The current coordinated candidate is
-`PHASE21_CONTROLS_VCAP.kicad_pcb`. It contains passing local repairs for the
+`PHASE21_CONTROLS_FB3V3_REFILLED.kicad_pcb`. It contains passing local repairs for the
 U7 reset tie, bridge 3V3 PG, bridge 1V1 PG, CM5 5V PG, and both LM74700 VCAP
-connections. Native DRC reports 189 violations with no new focused
+connections, plus the bridge-3V3 FB island. Native DRC reports 183 violations
+with no new focused
 short/crossing/width/clearance class. Gate/VCAP and remaining regulator
-FB/RT/control routes still require completion; no Phase 21 closure is
-claimed yet.
+FB/RT/control routes still require completion; no Phase 21 closure is claimed
+yet.
 
 The separate gate-corridor experiment `PHASE21_CONTROLS_VCAP_GATES.kicad_pcb`
 is rejected: its long B.Cu routes intersect existing protected-12-V copper

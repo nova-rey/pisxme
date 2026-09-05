@@ -22,6 +22,7 @@ Generated from `PHASE20_SERVICE_RD_OUTER_REFILLED.kicad_pcb` with KiCad pcbnew.
 
 ## Progress
 
-The reset tie, three PG nets, and both VCAP nets are now routed in
-`PHASE21_CONTROLS_VCAP.kicad_pcb`. The remaining zero-track control classes
-are the two power-input gate nets and the bridge FB/RT nets.
+The reset tie, three PG nets, both VCAP nets, and bridge 3V3 FB island are now
+routed in `PHASE21_CONTROLS_FB3V3_REFILLED.kicad_pcb`. The remaining
+zero-track control classes are the two power-input gate nets and the bridge
+1V1 FB/RT plus bridge 3V3 RT nets.
