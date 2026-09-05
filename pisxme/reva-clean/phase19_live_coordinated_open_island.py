@@ -37,14 +37,14 @@ def main():
   b=pcbnew.LoadBoard(str(BASE))
   u=b.FindFootprintByReference('U7'); j=b.FindFootprintByReference('J3')
   # Open region to the right of the PCIe/CM5 source corridors.
-  u.SetPosition(V(240,105)); u.SetOrientationDegrees(270)
-  j.SetPosition(V(270,145)); j.SetOrientationDegrees(90)
+  u.SetPosition(V(260,105)); u.SetOrientationDegrees(270)
+  j.SetPosition(V(200,140)); j.SetOrientationDegrees(90)
   old_mech=b.FindFootprintByReference('MECH_M2_2280')
   if old_mech is not None: b.Remove(old_mech)
   # This donor already carries clean C30-C33 clock-candidate objects.
-  for ref,(x,y) in {'C30':(225,96),'C31':(225,100),'C32':(225,108),'C33':(225,112)}.items():
+  for ref,(x,y) in {'C30':(245,96),'C31':(245,100),'C32':(245,108),'C33':(245,112)}.items():
    f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(180)
-  for ref,xyv in {'Y1':(205,75),'R23':(210,75),'C42':(205,80),'C43':(210,80)}.items():
+  for ref,xyv in {'Y1':(280,75),'R23':(285,75),'C42':(280,80),'C43':(285,80)}.items():
    f=b.FindFootprintByReference(ref)
    if f is None: raise RuntimeError('clock donor missing '+ref)
    f.SetPosition(V(*xyv)); f.SetOrientationDegrees(0)
@@ -98,13 +98,13 @@ def main():
    # Legal horizontal M.2 orientation: independent live lanes approach the
    # rotated socket from four disjoint corridors around U7.
    if bn == 'BRIDGE_SATA_TX_P':
-    q=(245.0,96.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); r=(260.0,96.0); seg(b,socket,q,r,pcbnew.F_Cu); seg(b,socket,r,d)
+    q=(235.0,96.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); r=(215.0,96.0); seg(b,socket,q,r,pcbnew.F_Cu); seg(b,socket,r,(r[0],d[1]),pcbnew.F_Cu); seg(b,socket,(r[0],d[1]),d)
    elif bn == 'BRIDGE_SATA_TX_N':
-    q=(230.0,120.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(265.0,120.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,d)
+    q=(235.0,100.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(210.0,100.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,(r[0],d[1]+6),pcbnew.B_Cu); via(b,socket,(r[0],d[1]+6)); seg(b,socket,(r[0],d[1]+6),d)
    elif bn == 'BRIDGE_SATA_RX_P':
-    q=(230.0,90.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(255.0,90.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,(255.0,d[1])); seg(b,socket,(255.0,d[1]),d)
+    q=(235.0,108.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(205.0,108.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,(r[0],d[1]-5),pcbnew.B_Cu); via(b,socket,(r[0],d[1]-5)); seg(b,socket,(r[0],d[1]-5),d)
    else:
-    q=(232.0,160.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(270.0,160.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,(270.0,d[1])); seg(b,socket,(270.0,d[1]),d)
+    q=(235.0,112.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(215.0,112.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,(r[0],d[1]+10),pcbnew.B_Cu); via(b,socket,(r[0],d[1]+10)); seg(b,socket,(r[0],d[1]+10),d)
   elif layer==pcbnew.F_Cu:
    seg(b,bridge,a,(a[0]-2,a[1])); seg(b,bridge,(a[0]-2,a[1]),cp['2'])
    seg(b,socket,cp['1'],(230,cp['1'][1])); seg(b,socket,(230,cp['1'][1]),(230,z[1])); seg(b,socket,(230,z[1]),z)
@@ -120,12 +120,12 @@ def main():
  for pn,nm in (('52','/STORAGE/BRIDGE_XI'),('53','/STORAGE/BRIDGE_VSSOSC'),('54','/STORAGE/BRIDGE_XO')): setpad(pad(u,pn),N[nm])
  Y={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('Y1').Pads()}; R23={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('R23').Pads()}; C42={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('C42').Pads()}; C43={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('C43').Pads()}
  xi,xo,vs=N['/STORAGE/BRIDGE_XI'],N['/STORAGE/BRIDGE_XO'],N['/STORAGE/BRIDGE_VSSOSC']
- seg(b,xi,U['52'],(232,102)); seg(b,xi,(232,102),(232,88)); seg(b,xi,(232,88),Y['1'])
- seg(b,xo,U['54'],(234,103)); via(b,xo,(234,103)); seg(b,xo,(234,103),(234,89),pcbnew.B_Cu); seg(b,xo,(234,89),Y['3'],pcbnew.B_Cu); via(b,xo,(234,89)); seg(b,xo,(234,89),Y['3'])
+ seg(b,xi,U['52'],(250,102)); seg(b,xi,(250,102),(250,88)); seg(b,xi,(250,88),Y['1'])
+ seg(b,xo,U['54'],(252,103)); via(b,xo,(252,103)); seg(b,xo,(252,103),(252,89),pcbnew.B_Cu); seg(b,xo,(252,89),Y['3'],pcbnew.B_Cu); via(b,xo,(252,89)); seg(b,xo,(252,89),Y['3'])
  seg(b,xi,Y['1'],R23['1']); seg(b,xo,Y['3'],R23['2'])
  seg(b,xi,C42['1'],Y['1']); seg(b,xo,C43['1'],Y['3'])
  # Return vias are deliberately offset from every SMD pad (no via-in-pad).
- for p,q in ((U['53'],(233.5,102.5)),(Y['2'],(203.9,78.0)),(Y['4'],(206.1,78.0)),(C42['2'],(203.9,82.0)),(C43['2'],(208.8,82.0))):
+ for p,q in ((U['53'],(251.5,102.5)),(Y['2'],(278.9,78.0)),(Y['4'],(281.1,78.0)),(C42['2'],(278.9,82.0)),(C43['2'],(283.8,82.0))):
   seg(b,vs,p,q); via(b,vs,q)
  # FREQSEL0/1 and VDDIO high on the local 3V3 net; local short fanout.
  v33=b.FindNet('/STORAGE/BRIDGE_3V3')

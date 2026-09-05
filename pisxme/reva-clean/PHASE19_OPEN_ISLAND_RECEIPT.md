@@ -21,3 +21,9 @@ inherited production copper. No clean-board artifact was modified or promoted.
 The authoring path records placement, serializes a synchronization snapshot,
 and uses native-reloaded endpoint coordinates for route generation. Ordinary
 through-vias are used; no plane-layer signal routing or via-in-pad is authored.
+
+Follow-up opposite-side placement: U7 `(260,105)` rotation `270`, C30-C33
+west of U7, J3 `(200,140)` rotation `90`. Native DRC: `377` violations and
+`476` unconnected items. Rejected because live SATA launch and clock fanout
+still cross the U7/regulator pad field. This is evidence only; it is not a
+Phase 19 closure claim.

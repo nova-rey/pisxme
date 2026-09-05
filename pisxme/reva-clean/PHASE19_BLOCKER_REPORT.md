@@ -639,6 +639,22 @@ high-speed envelope before descending, and preserve the passing
 minimal-fixture topology. Phase 19 remains active; Phase 20+ remains
 untouched.
 
+## 2026-09-05 opposite-side coupling/socket trial
+
+Following the consultant recommendation, the disposable moved U7 to
+`(260,105)` rotation `270`, placed C30-C33 on its west side, and moved J3 to
+`(200,140)` rotation `90`, putting the coupling-to-socket travel on the side
+opposite the bridge package. The stale M.2 mechanical donor keepout was
+removed, and USB3, SATA, and the 40-MHz clock were regenerated together from
+the prepared KiCad board.
+
+Native DRC measured `377` violations and `476` unconnected items. This is the
+best raw result of the consultant-directed placement class, but it is still
+rejected: the live SATA launch remains entangled with the U7/regulator pad
+field and the clock fanout still has layer crossings. No production clean
+artifact, PCIe route, or architecture was changed. Phase 19 remains open;
+Phase 20+ has not started.
+
 ## 2026-09-04 coordinated U7 rotation-270 trial
 
 The generator invocation path was corrected and used to produce a distinct
