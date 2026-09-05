@@ -1062,3 +1062,21 @@ architecture or against the macro review. The next implementation must clear
 invalidated Ethernet/storage copper as a coherent neighborhood and regenerate
 against the selected placement, rather than transform the oracle through live
 obstacles.
+
+## Ethernet support-authority audit — 2026-09-05
+
+`phase24_ethernet_support_authority_audit.py` confirms that the clean
+`ETHERNET.kicad_sch` has no schematic-owned `CCT*`/`RCT*` support references.
+`ETH_CT1..4`, the four LED nets, and `GBE_SHIELD` are dead-end labels at the
+current connector-side authority. The official CM5IO child provides real
+`470R` LED resistors but exposes center taps to its PoE header; the EDAC
+authority supplies the PiSXMe termination requirement of four `22 nF / 100 V`
+to `75 ohm` series branches and a `1 nF / 2 kV` shield/ground termination.
+
+Receipt: `PHASE24_ETHERNET_SUPPORT_AUTHORITY_RECEIPT.md`.
+
+Decision: `PHASE24_ETHERNET_SUPPORT_AUTHORITY = OPEN_SCHEMATIC_REPAIR_REQUIRED`.
+This is a schematic-authority gap, not a macro-placement failure or Ethernet
+architecture failure. PCB-only historical support aliases remain excluded;
+the next step is native schematic repair, ERC/netlist/parity validation, then
+coordinate-derived PCB support regeneration.
