@@ -486,3 +486,19 @@ live-copper occupancy map to place the clock island in a genuinely empty
 acreage corridor, then route the short clock loop before full SI review. No
 architecture, layer, or PCIe gate was relaxed; Phase 19 remains active and
 Phase 20+ remain untouched.
+## 2026-09-04 mapped B.Cu clock-island rejection
+
+The live-copper map was used to build a disposable coordinated candidate with
+U7's top-facing clock row escaping on F.Cu and Y1/R23/C42/C43 placed on B.Cu
+in the measured west window. The clock-net copper was removed before the
+trial, all clock pads were assigned explicitly, and the U7 FREQSEL pins were
+tied to the bridge 3.3 V rail. Native KiCad DRC measured 386 violations / 477
+unconnected items, including new clock-to-live-storage crossings and shorts.
+
+The mapped window is rejected as insufficient once the complete candidate's
+pad fields and B.Cu storage transitions are included. The clean minimal clock
+fixture remains electrically closed; this is a placement/corridor failure.
+The next experiment must move the low-profile clock support farther from the
+U7/SATA pad field and route the three clock nets with a local layer-separated
+escape, using the live occupancy map at each proposed coordinate. Phase 19
+remains active; Phase 20+ remain untouched.
