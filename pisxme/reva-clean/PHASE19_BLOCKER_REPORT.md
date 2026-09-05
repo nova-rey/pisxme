@@ -1451,3 +1451,9 @@ minimums (0.50 mm diameter / 0.30 mm drill). Regenerating at the original
 U7/J3 coordinates against the current SATA/clock island introduced five
 storage/USB crossings and power-pad shorts. It cannot be promoted or copied
 without reauthoring the endpoint graph under the current fabrication rules.
+
+The ordered branch was also regenerated directly at U7 `(280,105)` / J3
+`(200,140)` with current 0.50/0.30 mm vias. Native DRC still found four
+USB/storage corridor crossings and a U7 support clearance; USB3 skew was
+approximately 0.10 mm RX and 44.70 mm TX. This confirms the old artifact is
+not a current-rule transplant oracle.
