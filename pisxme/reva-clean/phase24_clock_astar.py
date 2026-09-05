@@ -17,6 +17,7 @@ def main():
  for p in y.Pads():
   k={'1':'XI','2':'VS','3':'XO','4':'VS'}[str(p.GetNumber())]; p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode()); p.SetLayer(pcbnew.B_Cu if k!='VS' else pcbnew.F_Cu)
  sources={'XI':pad(u,'52'),'VS':pad(u,'53'),'XO':pad(u,'54')}; targets={'XI':pad(y,'1'),'VS':pad(y,'4'),'XO':pad(y,'3')}
+ seeds={'XI':(126.5,134.5),'VS':(122.5,133.0),'XO':(113.0,134.0)}
  # Grid chosen fine enough for the package field; coarse enough to keep the
  # search bounded. Existing item bboxes are conservatively inflated.
  step=.25; xmin,xmax,ymin,ymax=95,140,120,150
@@ -38,8 +39,8 @@ def main():
  def blocked(g,layer,skip):
   return g in occ[layer]
  def route(k):
-  start=cell(sources[k]); goal=cell(targets[k]); goal_layer=pcbnew.B_Cu if k!='VS' else pcbnew.F_Cu
-  skips=[(u,sources[k]),(y,targets[k])]; start_state=(start[0],start[1],pcbnew.F_Cu); goal_state=(goal[0],goal[1],goal_layer); q=[(0,start_state)]; prev={start_state:None}; cost={start_state:0}
+  start=cell(sources[k]); goal=cell(targets[k]); seed=cell_point=tuple(round(v/step) for v in seeds[k]); goal_layer=pcbnew.B_Cu if k!='VS' else pcbnew.F_Cu
+  skips=[(u,sources[k]),(y,targets[k])]; start_state=(seed[0],seed[1],pcbnew.B_Cu); goal_state=(goal[0],goal[1],goal_layer); q=[(0,start_state)]; prev={start_state:None}; cost={start_state:0}
   while q:
    _,cur=heappop(q)
    if cur==goal_state: break
@@ -48,7 +49,7 @@ def main():
    for nx,ny,nl in moves:
     if not (int(xmin/step)<=nx<=int(xmax/step) and int(ymin/step)<=ny<=int(ymax/step)): continue
     if nl!=l and (nx,ny) in (start,goal): continue
-    if nl==l and blocked((nx,ny),nl,skips): continue
+    if nl==l and (nx,ny)!=goal and blocked((nx,ny),nl,skips): continue
     nc=cost[cur]+(8 if nl!=l else 1); ns=(nx,ny,nl)
     if nc<cost.get(ns,10**9):
      cost[ns]=nc; prev[ns]=cur; heappush(q,(nc+abs(nx-goal[0])+abs(ny-goal[1]),ns))
@@ -63,7 +64,16 @@ def main():
     v=pcbnew.PCB_VIA(b); v.SetPosition(V(a[0]*step,a[1]*step)); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(net); b.Add(v)
    else:
     t=pcbnew.PCB_TRACK(b); t.SetStart(V(a[0]*step,a[1]*step)); t.SetEnd(V(z[0]*step,z[1]*step)); t.SetLayer(a[2]); t.SetWidth(pcbnew.FromMM(.1321)); t.SetNet(net); b.Add(t)
+ def seedpath(k):
+  net=nets[k]; src=xy(sources[k]); dst=seeds[k]
+  bends={'XI':[(src[0],134.5),(123.5,134.5),dst],
+         'VS':[(src[0],133.0),dst],
+         'XO':[(122.0,134.0),dst]}[k]
+  a=src
+  for z in bends:
+   t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(pcbnew.F_Cu); t.SetWidth(pcbnew.FromMM(.1321)); t.SetNet(net); b.Add(t); a=z
+  v=pcbnew.PCB_VIA(b); v.SetPosition(V(*dst)); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(net); b.Add(v)
  for k in ('XI','VS','XO'):
-  path=route(k); print(k,len(path),path[0],path[-1]); addpath(k,path)
+  path=route(k); print(k,len(path),path[0],path[-1]); seedpath(k); addpath(k,path)
  b.Save(str(OUT)); print(OUT)
 if __name__=='__main__': main()

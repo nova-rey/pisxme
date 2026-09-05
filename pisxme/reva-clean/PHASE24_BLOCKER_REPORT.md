@@ -245,3 +245,10 @@ reported 252 violations, including new TX_N/TX_P crossings, clock/SATA
 crossings, and a PCIe interaction. The candidate is rejected. It does not
 invalidate the storage architecture; it shows that the two SATA launches and
 the three oscillator exits require one coordinated pad-field escape graph.
+
+The seeded follow-up used the proven rot180 source-via exits before invoking
+the downstream search. It still found no XI route once the inherited SATA
+launch and U7 pad field were treated as obstacles. No board was generated or
+promoted. This narrows the next experiment to a single coordinated escape
+graph containing the package-edge dogbones and adjacent SATA launch; it does
+not justify a terminal architecture blocker.

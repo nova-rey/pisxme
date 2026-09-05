@@ -12,6 +12,8 @@ Rejected surgical SATA-launch reroute trial; regenerated TX_N/TX_P doglegs still
 
 Recorded the initial obstacle-aware clock route-search diagnostic; conservative source seeding found no XI path and requires explicit package-edge dogbone modeling.
 
+Recorded seeded-exit search result; inherited SATA launch still blocks downstream XI search, so clock and SATA must be solved as one coordinated escape graph.
+
 ## 2026-08-30 — Phase 16 PCIe routing checkpoint
 
 - Added the native-loaded Phase 16 PCIe candidate and focused regression.
