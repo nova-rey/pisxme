@@ -698,3 +698,9 @@ records, three shorts, and two crossings. Narrowing the trial to adjacent
 C14-to-C15 still produced 212 violations, 121 unconnected records, and two
 shorts. Neither return-row candidate is promoted; the clean same-row CM5
 ground basis remains 209/122/0/0.
+
+The earlier accepted J1 ground-column geometry was composed onto the current
+cumulative basis as a disposable test. It does not transplant cleanly:
+fresh native DRC reports 217 violations, 122 unconnected records, one short,
+and two crossings. The current 209/122/0/0 same-row CM5-ground candidate is
+retained; no J1 column geometry is promoted.

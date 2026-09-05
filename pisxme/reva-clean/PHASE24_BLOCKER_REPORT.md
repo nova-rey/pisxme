@@ -5,6 +5,11 @@ produced three shorts and two crossings; narrowing the experiment to adjacent
 C14–C15 still produced two native shorts. Neither candidate changes the
 active design or validation severity.
 
+The earlier J1 ground-column candidate was tested against the current
+cumulative basis and rejected at 217 native violations, 122 unconnected
+records, one short, and two crossings. This is a composition-coordinate
+failure, not evidence against the earlier isolated J1 result.
+
 # Phase 24 same-row collector continuation
 
 `PHASE24_CM5_GROUND_RIGHT_SAME_ROWS.kicad_pcb` was regenerated from the
