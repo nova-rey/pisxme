@@ -45,6 +45,17 @@ candidate is rejected: the outboard J3 move alone does not repair the stale
 USB3/SATA route construction or provide a valid integrated clock corridor.
 No PCIe or architecture change was made.
 
+An occupancy-aware routing experiment was then added as a bounded diagnostic.
+It derives the live U7 clock pads, places the oscillator island in open
+acreage, and routes each clock net on B.Cu while treating inherited copper and
+previously emitted nets as obstacles. The source-to-crystal search exposes a
+closed inherited B.Cu corridor at the proposed support field before a complete
+passive branch can be emitted. The experiment is retained as rejected
+evidence; it does not weaken the layer contract or validate a partial clock
+network. The next credible implementation must move the complete U7/J3
+storage island, not just the support footprints, so the clock and SATA
+corridors are planned together.
+
 ## 2026-09-04 local underside clock-island follow-up
 
 The next authorized class was implemented as a parameterized authoring path in
