@@ -1382,6 +1382,16 @@ the only orientation that preserves the clean SATA endpoint geometry; its
 remaining failures are confined to USB3 source/fan-in serialization. No
 orientation change is promoted.
 
+## 2026-09-05 pre-clock TX layer-transition experiment
+
+The next legal-topology trial kept RX on B.Cu and ran TX on F.Cu only until
+x=250 mm, then transitioned TX into a separate B.Cu corridor. It was
+rejected: native DRC found corridor crossings, multiple CM5/J7 power-pad
+shorts, clock-bus crossings, and a U7-side clearance failure. Pair skew also
+degraded to approximately 9.59 mm RX and 8.63 mm TX. The prior all-B.Cu
+pair-corridor result remains the better baseline; no Phase 19 promotion or
+Phase 20 work has started.
+
 ## 2026-09-05 source fanout spread experiment
 
 The CM5-side fanout was spread to 4--10 mm-separated transition columns
