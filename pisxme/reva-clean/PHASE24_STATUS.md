@@ -13,6 +13,17 @@ Native KiCad 10.0.5 export is `phase24-production.xml`; native ERC is
 `PHASE24_PRODUCTION_AFTER_ETHERNET_SUPPORT-erc.rpt` with `Errors 0`.
 Regression: `validation/phase24/test_ethernet_support_production.py`.
 
+## Ethernet PCB support materialization
+
+`PHASE24_ETHERNET_SUPPORT_MATERIALIZED.kicad_pcb` is a disposable materialized
+baseline from the immutable selected-macro parent. `phase24_ethernet_support_pcb_parity.py`
+passes against `phase24-production.xml`: all 11 schematic-authoritative
+support footprints and every pad net match. Native DRC reports 695 total
+violations, 463 unconnected pads, 0 footprint errors, and no track-crossing
+records; the added unconnected pads are expected until the local support
+network is routed. This is `PCB_SUPPORT_MATERIALIZATION = PASS_WITH_ROUTING_OPEN`,
+not full Phase 24 closure.
+
 ## Protected 12 V plane experiment
 
 The candidate stack defines `In3.Cu` as `In3.PROTECTED_12V`, but the current
