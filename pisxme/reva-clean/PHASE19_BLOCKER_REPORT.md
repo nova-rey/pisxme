@@ -1,5 +1,16 @@
 # Phase 19 SATA routing blocker (active, non-terminal)
 
+## 2026-09-05 orthogonal coordinated-generator sweep
+
+A direct-generator class evaluated U7 rotation 180 with explicit orthogonal
+J3 launches at `(140,110)/(180,95)`, `(170,110)/(230,95)`, and
+`(190,100)/(250,95)`. Native DRC measured `434`, `377`, and `416` violations;
+each retained `413` unconnected items and `17`, `21`, and `24` crossing/short
+records. Coordinate-only movement does not repair the stale route construction.
+The next implementation must replace the bridge/socket route topology from
+live pad coordinates while co-generating the clock network. No sweep candidate
+is promoted.
+
 ## 2026-09-04 local underside clock-island follow-up
 
 The next authorized class was implemented as a parameterized authoring path in
