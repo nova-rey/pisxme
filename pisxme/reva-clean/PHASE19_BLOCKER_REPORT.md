@@ -527,3 +527,14 @@ for every support endpoint, put all long clock lanes outside the live
 high-speed envelope before descending, and preserve the passing
 minimal-fixture topology. Phase 19 remains active; Phase 20+ remains
 untouched.
+
+## 2026-09-04 clock control-fixture rerun
+
+The native minimal TUSB9261 clock fixture was regenerated and checked again
+after the south-corridor rejection. KiCad 10 DRC reports `12` warnings and
+`0` unconnected pads; the report contains no `shorting_items` or
+`tracks_crossing` records. The remaining warnings are non-electrical
+silkscreen/text/copper-sliver checks. This reconfirms that the authoritative
+40 MHz XI/XO/VSSOSC topology and perpendicular-first escape are implementable;
+the unresolved issue is only integration into the fully routed acreage
+candidate.
