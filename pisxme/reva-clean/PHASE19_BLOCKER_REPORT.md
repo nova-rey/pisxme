@@ -35,6 +35,16 @@ author a planar oscillator perimeter with explicit live pad coordinates,
 co-locate it during the rotated U7/J3 generation, and validate the clock delta
 against the SATA-only ancestor before any promotion.
 
+A second placement sweep moved the underside support island to upper-right and
+lower-edge acreage (`Y1` at `(200,100)`, `(220,100)`, `(250,90)`, and
+`(260,160)`). Native DRC remained in the `364--375` violation range with
+`429` unconnected items; clock-local support-field crossings/shorts remained,
+and some placements additionally intersected inherited CM5/PCIe/connector
+copper. No placement was promoted. The next authoring change must use the
+known passing isolated-clock graph as the local support template and
+regenerate its three U7 source corridors together, rather than applying
+another support-coordinate-only overlay.
+
 ## 2026-09-04 coordinated storage authoring repair
 
 The coordinated-island generator was corrected after a KiCad 10 serialization
