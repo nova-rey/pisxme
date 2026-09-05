@@ -526,3 +526,15 @@ The subsequent passive-field B.Cu search could not find a path from the
 serialized Y1.1 launch to R23.1 within the current local bounds, so no
 candidate was emitted. This further localizes the open work to coordinated
 passive-field routing/placement.
+
+## Complete clock composed on cumulative repairs
+
+`phase24_apply_complete_clock.py` composed the complete native-clean clock
+source (`PHASE24_CLOCK_COMPLETE_ASTAR_V2.kicad_pcb`) onto
+`PHASE24_LOCAL_REPAIRS_U7_RXN.kicad_pcb`. Native pad-component checks pass for
+XI (Y1.1/R23.1/C42.1), XO (Y1.3/R23.2/C43.1), and VSSOSC
+(Y1.2/Y1.4/C42.2/C43.2). Native DRC reports 205 violations and 156
+unconnected records, with zero `[shorting_items]` and zero
+`[tracks_crossing]`. The clock is therefore promoted into the cumulative
+ancestor; Phase 24 remains open for the unrelated board-wide connectivity
+census.

@@ -759,3 +759,12 @@ XI and XO source-to-crystal discriminators pass without native short or
 crossing findings. The first VSSOSC perimeter is rejected: native DRC reports
 two short and two crossing classes at the SATA/clock corridor. The failure is
 localized to VSSOSC layer ownership and does not invalidate the XI/XO routes.
+
+## Complete clock promoted
+
+The corrected V2 complete-clock candidate passes native component checks for
+all XI/XO/VSSOSC passive and crystal pads. Composing it onto the cumulative
+local-repair board yields 205 DRC violations and 156 unconnected records, but
+zero native shorting or track-crossing classes. The complete clock source is
+accepted as the Phase 24 ancestor; the remaining blocker is the unrelated
+board-wide connectivity/DRC census, not clock topology.
