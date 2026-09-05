@@ -46,3 +46,8 @@ complete source fanout, native DRC measured `80` violations / `75`
 unconnected pads. No USB3 source-side crossings or shorts remained; two
 U7-final-escape clearances remained at 0.150 mm. The diagnostic is retained
 as authoring-path evidence and is not a Phase 19 pass.
+
+U7 escape follow-up: transition vias were moved farther from the live pad
+field. Native DRC measured `78` / `75`; USB3 had zero crossings, shorts,
+dangling vias, and source fanout opens. The result remains fixture evidence,
+not a Phase 19 pass.

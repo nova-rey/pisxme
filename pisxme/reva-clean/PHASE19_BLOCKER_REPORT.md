@@ -965,3 +965,10 @@ candidate USB3 errors are U7 final-escape clearances (0.150 mm actual versus
 unrouted M.2/clock baseline.
 This discriminating result is retained as evidence, not closure. Phase 19
 remains open and Phase 20+ remains untouched.
+
+The follow-up U7 escape variant offset all four transition vias away from the
+adjacent pad-field corridors. Native DRC measured `78` violations / `75`
+unconnected pads, with zero USB3 crossings, shorts, dangling vias, or source
+fanout opens. The two prior U7 final-escape clearance errors were eliminated;
+remaining violations belong to the deliberately unrouted M.2/clock fixture
+baseline. This is still an isolated sub-gate result, not Phase 19 closure.

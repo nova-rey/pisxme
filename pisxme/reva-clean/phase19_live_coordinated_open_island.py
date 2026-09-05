@@ -78,8 +78,10 @@ def main():
   # The rotated U7 USB pads share a continuous bottom row.  Do not run a
   # same-layer horizontal track through that row; use a distinct B.Cu lane
   # and one ordinary via directly below each live destination pad.
-  landing=(d[0],112.0 + 2.5*(['CM5_USB3_RX_N','CM5_USB3_RX_P','CM5_USB3_TX_N','CM5_USB3_TX_P'].index(suffix)))
-  seg(b,n,far,landing,pcbnew.B_Cu); via(b,n,landing); seg(b,n,landing,d,pcbnew.F_Cu)
+  _i=['CM5_USB3_RX_N','CM5_USB3_RX_P','CM5_USB3_TX_N','CM5_USB3_TX_P'].index(suffix)
+  landing=([(276.0,112.0),(277.5,114.5),(280.0,117.0),(285.5,119.5)][_i])
+  seg(b,n,far,landing,pcbnew.B_Cu); via(b,n,landing)
+  dog=(d[0],landing[1]-1.0); seg(b,n,landing,dog,pcbnew.F_Cu); seg(b,n,dog,d,pcbnew.F_Cu)
  # SATA split capacitors.  Pair lanes are layer-separated after live pad
  # escapes; each transition is outside an SMD pad field.
  sata=(('BRIDGE_SATA_TX_P','57','1','C30',pcbnew.F_Cu,(224,96)),
