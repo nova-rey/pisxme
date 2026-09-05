@@ -473,3 +473,11 @@ The latest V2 rerun moved the 1V1 source detour left of the regulator
 feedback segment. Native DRC still reports 197 violations, including one
 source/return crossing and 392 unconnected pads. This remains a negative
 disposable result and does not alter the accepted power architecture.
+## U5 layer-owned source/return fixture (targeted proof)
+
+`phase24_u5_layer_fixture.py` strips unrelated copper/zones and proves the
+C44-C47 source/return geometry with explicit F.Cu launches, ordinary
+through-vias, and separate B.Cu rail/return corridors. Native DRC reports zero
+shorting and zero crossing records. The 499 unconnected pads belong to
+deliberately unconnected non-target U5/fixture pads. This closes the U5
+topology discriminator only; acreage integration remains open.

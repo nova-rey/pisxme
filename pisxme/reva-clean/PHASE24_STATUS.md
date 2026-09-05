@@ -170,3 +170,8 @@ The current U5 V2 rerun uses a left-side source detour to avoid the feedback
 segment, but native DRC still reports one crossing at the separate return
 trunk and 392 unconnected pads. It remains a disposable negative result; no
 production geometry has changed.
+The stripped U5 layer fixture now proves the C44-C47 source/return topology:
+ordinary through-vias launch 1V1 and POWER_GND, with separate B.Cu rail and
+return corridors. Native DRC reports zero `shorting_items` and zero
+`tracks_crossing`; its 499 unconnected records are deliberate non-target
+fixture/U5 pads. This is a reusable topology oracle, not an acreage promotion.
