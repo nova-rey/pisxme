@@ -9,7 +9,7 @@ def pad(f,n): return next(p for p in f.Pads() if str(p.GetNumber())==str(n))
 def xy(p): return pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y)
 def seg(n,a,z,l=pcbnew.B_Cu):
  if a!=z:
-  t=pcbnew.PCB_TRACK(b);t.SetStart(V(*a));t.SetEnd(V(*z));t.SetLayer(l);t.SetWidth(MM(.20));t.SetNet(n);b.Add(t)
+  t=pcbnew.PCB_TRACK(b);t.SetStart(V(*a));t.SetEnd(V(*z));t.SetLayer(l);t.SetWidth(MM(.13208));t.SetNet(n);b.Add(t)
 def via(n,p):
  v=pcbnew.PCB_VIA(b);v.SetPosition(V(*p));v.SetWidth(MM(.50));v.SetDrill(MM(.30));v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu);v.SetNet(n);b.Add(v)
 j,u=fp('J7'),fp('U7')

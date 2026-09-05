@@ -227,3 +227,14 @@ measured 313 native DRC violations / 413 unconnected items, including 63
 clearance and 66 hole-clearance findings from the generated via/connector
 launch. It was rejected; the source-preserving V3 USB3 schedule remains the
 best moved-U7 ancestor and Phase 19 remains active.
+
+Phase 19 closure update (2026-09-05): the successful moved-U7 V3 USB3 route
+was combined with four authoritative inline 0402 SATA capacitors and local
+RX_P/TX_P length matching. The final candidate measured 190 native DRC
+violations / 418 unconnected items versus the inherited V3 198 / 430, with
+zero focused crossings/shorts, no new clearance classes, unchanged PCIe
+geometry, USB3 maximum pair skew 3.083 mm, and end-to-end SATA maximum pair
+skew 1.200 mm. Relevant Phase 16/18/19 authority tests pass. Phase 19 is
+closed with inherited-baseline qualification; the accepted acreage artifact
+is `PHASE19_V3_USB_PROVEN_SPLIT_SATA_TX_MATCH_REFILL.kicad_pcb`. Phase 20 is
+the next gate and has not yet started.

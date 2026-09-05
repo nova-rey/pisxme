@@ -8,7 +8,10 @@ ROOT = Path(__file__).resolve().parents[2]
 def main():
     text = (ROOT / 'STORAGE.kicad_sch').read_text()
     assert text.count('(symbol (lib_id "PiSXMeRevAClean:SATA_AC_CAP")') == 4
-    assert text.count('property "Footprint" "PiSXMeRevAClean:C_0402_1005Metric"') == 4
+    # C42/C43 are unrelated clock capacitors that intentionally share the
+    # 0402 footprint; count the SATA-specific MPN instead of the global
+    # package footprint census.
+    assert text.count('property "Footprint" "PiSXMeRevAClean:C_0402_1005Metric"') >= 4
     assert text.count('property "MPN" "GRM155R71C104KA88D"') == 4
     for bridge, socket in (
         ('BRIDGE_SATA_TX_P', 'SATA_M2_TX_P'),

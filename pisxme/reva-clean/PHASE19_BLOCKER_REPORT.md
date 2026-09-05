@@ -1603,3 +1603,35 @@ materialize the four authoritative inline capacitors without recreating
 inherited vias, and use a cap/connector launch schedule with no via in or
 near the M.2 alternating pad field. Phase 19 remains active; Phase 20+ has
 not started.
+## 2026-09-05 coordinated storage-island candidate clears Phase 19
+
+The successful moved-U7 V3 USB3 schedule was combined with the authoritative
+four inline `C_0402_1005Metric` SATA coupling capacitors, then locally
+length-matched. Final disposable artifact:
+`PHASE19_V3_USB_PROVEN_SPLIT_SATA_TX_MATCH_REFILL.kicad_pcb`.
+
+Placement is U7 `(120,140)` at 180 degrees and J3 `(145,125)` at 90 degrees;
+C30/C31/C32/C33 are at `(127,130)`, `(135,110)`, `(127,120)`, and `(127,118)`.
+Each capacitor has the correct bridge-side/socket-side split net. All eight
+USB3/SATA endpoint graphs are single-component between the intended pads.
+
+Native KiCad evidence: DRC `190` violations / `418` unconnected items, versus
+the inherited V3 baseline `198` / `430`; focused high-speed deltas are zero
+`tracks_crossing`, zero `shorting_items`, and zero new clearance or
+hole-clearance classes. The three inherited clearance and two inherited hole
+clearance records remain unchanged, as do five inherited dangling-via records.
+PCIe remains unchanged at 18 routed items with geometry signature
+`24c0899b8d11fb67`.
+
+Measured widths are uniformly `0.13208 mm` on all twelve high-speed nets.
+USB3 lengths are RX_N `82.473 mm`, RX_P `81.461 mm`, TX_N `81.453 mm`, TX_P
+`78.370 mm`; maximum USB pair skew is `3.083 mm`. End-to-end SATA lengths
+(bridge segment plus socket segment) are RX_P `60.975 mm`, RX_N `59.775 mm`,
+TX_P `80.091 mm`, TX_N `80.225 mm`; maximum SATA pair skew is `1.200 mm`.
+No plane-layer signal tracks are present. The focused capacitor-authority,
+USB3-authority, and PCIe-authority regression tests pass.
+
+This closes the Phase 19 electrical/routing blocker with the plan's inherited-
+baseline qualification. The accepted artifact is still a Rev-A acreage
+validation checkpoint, not fabricated-hardware proof. No Phase 20 routing has
+been started in this receipt.

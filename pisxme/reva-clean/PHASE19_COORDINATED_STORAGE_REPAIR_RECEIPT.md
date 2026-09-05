@@ -29,6 +29,20 @@ Native evidence:
 The candidate is rejected and is not promoted to the clean acreage board. The
 corrected generic authoring path is retained for the next experiment.
 
+## Accepted coordinated V3 continuation (2026-09-05)
+
+The moved-U7 V3 USB3 route was retained and combined with the four
+manufacturer-selected inline 0402 SATA coupling capacitors. A local TX_P and
+RX_P length-match correction produced
+`PHASE19_V3_USB_PROVEN_SPLIT_SATA_TX_MATCH_REFILL.kicad_pcb`.
+
+Native DRC is 190 / 418 versus the inherited V3 198 / 430, with zero focused
+crossings or shorts and unchanged PCIe geometry. End-to-end SATA pair skew is
+1.200 mm RX and 0.134 mm TX; USB3 maximum pair skew is 3.083 mm. All twelve
+high-speed nets use the 0.13208-mm routed width and only F.Cu/B.Cu signal
+layers. C30-C33 and J3 serialize the intended split-net path. This is the
+accepted Phase 19 acreage checkpoint under inherited-baseline qualification.
+
 ## Follow-up escape refinement
 
 The generator was then changed to derive the USB3 landing from serialized U7
