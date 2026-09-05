@@ -67,3 +67,7 @@ separate B.Cu return corridor. Clock crossings and clock net-to-net shorts
 were eliminated; native DRC measured `92` / `62`. Three U7 pad-field
 clearances and one shared-fixture return-via collision remain. Rejected as a
 full pass, retained as the current best clock topology.
+
+Follow-up U7 escape adjustment: native DRC measured `93` / `62` and
+reintroduced a clock crossing. Rejected; the preceding `92` / `62`
+separated-clock-bus candidate remains preferred.

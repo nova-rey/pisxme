@@ -1006,3 +1006,8 @@ unconnected items. Residual candidate errors are three U7 pad-field
 clearances and one return-via collision with an intentionally retained SATA
 coupling footprint; the remaining findings are fixture baseline warnings.
 This is the best current clock topology but is not a Phase 19 pass.
+
+The subsequent local U7 escape adjustment was rejected. Native DRC measured
+`93` violations / `62` unconnected items and reintroduced one clock crossing
+while retaining U7 pad-field and return clearances. The preceding separated
+clock-bus candidate at `92` / `62` remains the best known result.
