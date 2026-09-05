@@ -1,5 +1,9 @@
 # Append-only project bible
 
+## 2026-09-05 — Phase 24 clock orientation trial rejected
+
+Rejected the 90-degree near-west crystal trial; explicit ordered three-lane escape remains required.
+
 ## 2026-08-30 — Phase 16 PCIe routing checkpoint
 
 - Added the native-loaded Phase 16 PCIe candidate and focused regression.

@@ -202,3 +202,9 @@ PCIe, SATA, or M.2 geometry. This is evidence that the open-acreage class is
 viable, but the candidate is not promoted: the next experiment must rotate or
 reorder the crystal footprint and make the three clock lanes monotonic before
 full support fanout is restored.
+
+The follow-up 90-degree crystal-orientation trial was rejected: native DRC
+remained at 214 violations and added several short B.Cu crossings at the Y1
+pad field. Orientation alone is insufficient; the next candidate must author
+an explicit ordered three-lane escape rather than use the generic Manhattan
+fanout.

@@ -9,8 +9,8 @@ def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def P(f,n): return next(p for p in f.Pads() if str(p.GetNumber())==str(n))
 def xy(p): return pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y)
 def main():
-    candidates={'west':(100,140),'nearwest':(108,130),'south':(120,160),'east':(270,100),'north':(120,105),'farwest':(70,120)}
-    for tag,(cx,cy) in candidates.items():
+    candidates={'west':(100,140,0),'nearwest':(108,130,90),'south':(120,160,0),'east':(270,100,0),'north':(120,105,0),'farwest':(70,120,0)}
+    for tag,(cx,cy,rot) in candidates.items():
         b=pcbnew.LoadBoard(str(BASE)); nets={}
         for k,name in N.items():
             nets[k]=b.FindNet(name)
@@ -21,7 +21,7 @@ def main():
             p=P(u,num); p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode())
         for t in list(b.GetTracks()):
             if t.GetNetname() in N.values(): b.RemoveNative(t)
-        y=IO.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'Crystal_3225_4Pad'); y.SetReference('Y1'); y.SetPosition(V(cx,cy)); y.SetOrientationDegrees(0); b.Add(y)
+        y=IO.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'Crystal_3225_4Pad'); y.SetReference('Y1'); y.SetPosition(V(cx,cy)); y.SetOrientationDegrees(rot); b.Add(y)
         for p in y.Pads():
             k={'1':'XI','2':'VS','3':'XO','4':'VS'}[str(p.GetNumber())]; p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode()); p.SetLayer(pcbnew.B_Cu)
         def S(k,a,z,l=pcbnew.B_Cu):
