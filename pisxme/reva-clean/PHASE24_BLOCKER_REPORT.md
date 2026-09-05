@@ -789,3 +789,10 @@ Sequential R19.1 and R22.1 local joins pass native DRC with zero shorts and
 crossings, reducing the cumulative unconnected census to 142. The identified
 BRIDGE_1V1 endpoint cluster is closed; remaining Phase 24 findings are other
 net classes.
+
+## Bridge 3V3 class accepted
+
+The 3V3 capacitor field, R11/C18 support join, and R14-to-U4 output dogleg
+were validated sequentially. Native DRC reports zero shorts and crossings;
+the cumulative unconnected census is 138. No severity or connection was
+waived.

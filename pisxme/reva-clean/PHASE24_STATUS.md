@@ -565,3 +565,11 @@ sequentially from the accepted field/output ancestor. Both pass native DRC
 without shorting or crossing classes; the cumulative unconnected census falls
 from 144 to 142. The BRIDGE_1V1 rail is now natively continuous for the
 identified endpoints.
+
+## Bridge 3V3 continuation
+
+The C16/C17/C19 rail field was joined with ordinary pad-adjacent vias and a
+B.Cu chain. R11.1 was joined directly to C18.2, and R14.1 was routed by a
+right-side F.Cu dogleg into the existing U4 output island. Sequential native
+DRC checks remain at zero shorting/crossing classes; the cumulative
+unconnected census falls from 142 to 138.
