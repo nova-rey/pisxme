@@ -744,3 +744,11 @@ only; pads, tracks, vias, layers, nets, and filled zones supply the evidence.
 The saved U5 board passes native connectivity, while a disposable removal of
 an actually connected U5.9 trace fails the audit. This removes the false-pass
 risk without waiving any remaining board connection.
+
+## Clock fixture V2 evidence
+
+The split-layer V2 clock fixture passes native clock connectivity and has no
+clock short or crossing. Transforming it into the current acreage frame is
+rejected by native DRC at 226 violations, including seven clock shorts and 16
+crossings. This is integration-coordinate evidence; the proven isolated
+topology remains available for a new obstacle-aware acreage placement.

@@ -503,3 +503,12 @@ connected-item components. It no longer creates graph edges from expected
 connectivity. The saved U5 board passes, and the regression negative control
 removes an actually connected U5.9 trace in a disposable board object; the
 audit then fails as required. No validation severity was changed.
+
+## Clock fixture V2 and acreage transform
+
+`phase24_complete_clock_fixture_v2.py` produces a complete clock-specific
+fixture with XI/XO on B.Cu and VSSOSC on an F.Cu perimeter. Its native
+connectivity and clock-short/crossing regression passes. The transformed
+acreage experiment is rejected at 226 DRC violations, including seven clock
+shorts and 16 crossings; the fixture topology is retained, but the fixed
+transform is not promoted.
