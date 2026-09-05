@@ -15,7 +15,9 @@ NETS = {
     "DP": "/CORE_CM5/SERVICE_USB2_DP",
     "DM": "/CORE_CM5/SERVICE_USB2_DM",
     "VBUS": "/SERVICE/SERVICE_VBUS_SENSE",
-    "GND": "/SERVICE/SERVICE_GND",
+    # SERVICE_GND is the child-sheet logical name; the acreage board's
+    # canonical plane net is POWER_GND, matching the existing storage alias.
+    "GND": "POWER_GND",
     "RDA": "/SERVICE/SERVICE_RD_A",
     "RDB": "/SERVICE/SERVICE_RD_B",
 }

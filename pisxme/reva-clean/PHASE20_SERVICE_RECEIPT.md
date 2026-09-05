@@ -35,6 +35,15 @@ connections, and deliberate GND return. Native schematic ERC remains
 non-clean because of broader inherited scaffold unconnected-sheet-pin debt;
 that is not claimed as passed.
 
+The board materializer now canonicalizes logical `SERVICE_GND` to the existing
+board-wide `POWER_GND` plane net, consistent with the storage ground alias.
+After refill, the separate SERVICE ground island no longer appears as a
+service-local unconnected cluster.
+
+The first VBUS perimeter experiment is rejected: its B.Cu segments crossed
+the existing data-transition corridors. VBUS still requires a separated local
+support route before the candidate can be promoted.
+
 ## Latest bounded experiment
 
 `PHASE20_SERVICE_ALIAS_FINAL_CANDIDATE.kicad_pcb` joined all four USB-C DP/DM
