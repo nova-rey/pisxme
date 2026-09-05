@@ -1073,7 +1073,7 @@ invalidated Ethernet/storage copper as a coherent neighborhood and regenerate
 against the selected placement, rather than transform the oracle through live
 obstacles.
 
-## Ethernet support-authority audit — 2026-09-05
+## Ethernet support-authority audit — 2026-09-05 (superseded by closure below)
 
 `phase24_ethernet_support_authority_audit.py` confirms that the clean
 `ETHERNET.kicad_sch` has no schematic-owned `CCT*`/`RCT*` support references.
@@ -1085,7 +1085,7 @@ to `75 ohm` series branches and a `1 nF / 2 kV` shield/ground termination.
 
 Receipt: `PHASE24_ETHERNET_SUPPORT_AUTHORITY_RECEIPT.md`.
 
-Decision: `PHASE24_ETHERNET_SUPPORT_AUTHORITY = OPEN_SCHEMATIC_REPAIR_REQUIRED`.
+Historical decision: `PHASE24_ETHERNET_SUPPORT_AUTHORITY = OPEN_SCHEMATIC_REPAIR_REQUIRED`.
 This is a schematic-authority gap, not a macro-placement failure or Ethernet
 architecture failure. PCB-only historical support aliases remain excluded;
 the next step is native schematic repair, ERC/netlist/parity validation, then
@@ -1100,4 +1100,15 @@ The disposable native support fixture now passes root ERC with zero errors and
 the saved netlist contains the complete EDAC CT branch/common/shield topology
 and 470 ohm LED series elements. The fixture now uses selected commodity MPNs
 for the 0603/0402/1206 parts; passive authority is recorded separately, while
-production hierarchy mapping and parity remain open.
+production hierarchy mapping and parity remain open at the time of this audit.
+
+## Ethernet support-authority closure — 2026-09-05
+
+The historical omission and bundled LED mismatch are now repaired in the
+production hierarchy. Native netlist `phase24-production.xml` contains C48–C52
+and R26–R31, all four CT branches, the shield capacitor, and the two official
+CM5 LED mappings: J7 pad 15 through R31 and J7 pad 17 through R30. Native ERC
+`PHASE24_PRODUCTION_AFTER_ETHERNET_SUPPORT-erc.rpt` reports `Errors 0`.
+
+Decision: `PHASE24_ETHERNET_SUPPORT_AUTHORITY = CLOSED`. PCB-side materialization,
+component parity, and routed acreage closure remain open downstream.
