@@ -1063,3 +1063,13 @@ the SATA-only short/crossing class does not return. This candidate is rejected
 for Phase 19 integration, but the SATA island topology is retained as the
 current storage-side oracle. USB3 corridor placement remains the next
 bounded experiment; Phase 19 is not closed.
+## 2026-09-05 coordinated SATA270 plus east USB3 trial
+
+`PHASE19_COORDINATED_SATA270_USB_EAST1.kicad_pcb` was generated from the
+SATA-only oracle with USB3 source lanes moved to an east-side corridor and
+U7 landing dogbones moved outside the SATA island. Native KiCad DRC measured
+91 records, including one USB3 short and nine crossings. The failures include
+source fanout ordering and U7 landing crossings, so this placement is
+rejected. The experiment confirms that moving only the USB3 corridors is not
+enough; the next candidate must co-place the complete U7/J3 island and
+regenerate the source breakout as one monotonic graph. Phase 19 remains open.

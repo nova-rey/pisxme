@@ -20,6 +20,7 @@ SKIP_CLOCK=ARGS.get('P19_SKIP_CLOCK',os.environ.get('P19_SKIP_CLOCK','0'))=='1'
 SKIP_USB=ARGS.get('P19_SKIP_USB',os.environ.get('P19_SKIP_USB','0'))=='1'
 CLOCK_ONLY=ARGS.get('P19_CLOCK_ONLY',os.environ.get('P19_CLOCK_ONLY','0'))=='1'
 SATA270=ARGS.get('P19_SATA270',os.environ.get('P19_SATA270','0'))=='1'
+USB_EAST=ARGS.get('P19_USB_EAST',os.environ.get('P19_USB_EAST','0'))=='1'
 W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def pos(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
@@ -73,7 +74,8 @@ def main():
   N[name]=net(b,name)
  # USB3: source fanout drops to parallel B.Cu corridors below the PCIe bbox,
  # then climbs only in the open x>190 region and returns on F.Cu at U7.
- usb=(('CM5_USB3_RX_N','128','42',(78,114),(200,114)),('CM5_USB3_RX_P','130','43',(76,116),(204,116)),
+ usb=(('CM5_USB3_RX_N','128','42',(78,90),(260,90)),('CM5_USB3_RX_P','130','43',(76,92),(265,92)),
+      ('CM5_USB3_TX_N','140','45',(74,94),(270,94)),('CM5_USB3_TX_P','142','46',(72,96),(275,96))) if USB_EAST else (('CM5_USB3_RX_N','128','42',(78,114),(200,114)),('CM5_USB3_RX_P','130','43',(76,116),(204,116)),
       ('CM5_USB3_TX_N','140','45',(74,118),(208,118)),('CM5_USB3_TX_P','142','46',(72,120),(212,120)))
  for suffix,sp,up,start,far in usb:
   if SKIP_USB:
@@ -85,7 +87,7 @@ def main():
   # same-layer horizontal track through that row; use a distinct B.Cu lane
   # and one ordinary via directly below each live destination pad.
   _i=['CM5_USB3_RX_N','CM5_USB3_RX_P','CM5_USB3_TX_N','CM5_USB3_TX_P'].index(suffix)
-  landing=([(276.0,112.0),(277.5,114.5),(280.0,117.0),(285.5,119.5)][_i])
+  landing=([(286.0,112.0),(287.5,114.5),(289.0,117.0),(290.5,119.5)][_i] if USB_EAST else [(276.0,112.0),(277.5,114.5),(280.0,117.0),(285.5,119.5)][_i])
   seg(b,n,far,landing,pcbnew.B_Cu); via(b,n,landing)
   dog=(d[0],landing[1]-1.0); seg(b,n,landing,dog,pcbnew.F_Cu); seg(b,n,dog,d,pcbnew.F_Cu)
  # SATA split capacitors.  Pair lanes are layer-separated after live pad

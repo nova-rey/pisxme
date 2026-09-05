@@ -100,3 +100,9 @@ Rejected as a full SATA pass.
   order. No via-in-pad or plane-layer signal was introduced.
 - Decision: retain the rotated SATA island as the storage-side oracle;
   reject coordinated candidate until USB3 corridors are regenerated around it.
+### 2026-09-05 — coordinated east USB3 trial
+
+- `PHASE19_COORDINATED_SATA270_USB_EAST1-drc.rpt`: 91 total records, one
+  short and nine crossings; rejected.
+- Failure class: altered source breakout and U7 landing dogbones crossed;
+  SATA oracle was not the source of the failure.
