@@ -512,3 +512,12 @@ connectivity and clock-short/crossing regression passes. The transformed
 acreage experiment is rejected at 226 DRC violations, including seven clock
 shorts and 16 crossings; the fixture topology is retained, but the fixed
 transform is not promoted.
+
+## Incremental XI/XO/VSSOSC probes
+
+The XI-only and XI+XO probes each have zero native short/crossing classes and
+reduce the unconnected census from 166 to 165 and 164 respectively. The first
+VSSOSC addition is rejected at 163 unconnected records because its F.Cu path
+crosses the inherited SATA-TX-N corridor and shorts the XI launch and a
+POWER_GND pad. The next repair is a layer-separated VSSOSC obstacle crossing;
+XI/XO are retained unchanged.

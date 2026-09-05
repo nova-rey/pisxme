@@ -752,3 +752,10 @@ clock short or crossing. Transforming it into the current acreage frame is
 rejected by native DRC at 226 violations, including seven clock shorts and 16
 crossings. This is integration-coordinate evidence; the proven isolated
 topology remains available for a new obstacle-aware acreage placement.
+
+## Incremental clock evidence
+
+XI and XO source-to-crystal discriminators pass without native short or
+crossing findings. The first VSSOSC perimeter is rejected: native DRC reports
+two short and two crossing classes at the SATA/clock corridor. The failure is
+localized to VSSOSC layer ownership and does not invalidate the XI/XO routes.
