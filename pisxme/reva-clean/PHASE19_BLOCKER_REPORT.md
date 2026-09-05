@@ -665,6 +665,20 @@ This is not a Phase 19 pass: the clock network has not yet been regenerated
 against this corrected SATA ancestor, and the unconnected count remains open.
 It is now the required ancestor for the next integrated clock trial.
 
+## 2026-09-04 rotated minimal-topology transplant rejection
+
+The passing minimal clock graph was rotated 90 degrees into the U7 rotation
+270 coordinate system and applied to the corrected SATA ancestor. The support
+footprints were rotated with the graph and the clock nets were created and
+reloaded through the native authoring path. Native KiCad DRC measured `416`
+violations and `424` unconnected items, including new local clock crossings
+and XI/XO/VSSOSC shorts.
+
+This rejects the transformed-support placement class, not the isolated clock
+topology or the U7 rotation. The corrected SATA ancestor remains retained;
+the next attempt must author a direct target-coordinate clock fanout around
+the actual U7/J3/SATA fields rather than rely on a rigidly transformed graph.
+
 ## 2026-09-04 corrected-SATA clock-west integration trial
 
 The authoritative clock network was rerun on the corrected
