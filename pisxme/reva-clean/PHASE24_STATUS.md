@@ -186,3 +186,9 @@ via/track coordinate joins: all four C44-C47 rail pads connect to U5.9 and
 all four return pads connect to R20.2. Native DRC remains zero shorts and zero
 crossings for the fixture. This strengthens the topology proof only; acreage
 integration and full-board parity remain open.
+The PCB-only Ethernet alias filter removed CCT/CCT1-CCT4 and RCT1-RCT4 from
+the materialized parity candidate. The candidate now contains all 78 native
+schematic references plus only MECH_M2_2280 and TP1-TP13; the exact reference
+set audit passes. Native DRC introduces no shorting or crossing records.
+Electrical Ethernet return/support routing must still be reconciled before
+this candidate can be promoted.

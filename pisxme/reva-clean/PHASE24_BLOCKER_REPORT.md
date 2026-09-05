@@ -497,3 +497,12 @@ join R20.2. The audit explicitly accounts for KiCad's serialized via/track
 layer representation. Native DRC still reports zero shorts and crossings for
 the fixture. This is a regression/topology receipt, not integrated acreage
 closure.
+## PCB-only Ethernet alias removal
+
+`phase24_filter_legacy_ethernet_aliases.py` removes the nine PCB-only
+`CCT/RCT` electrical aliases whose nets are absent from the clean schematic.
+The filtered candidate has all 78 schematic references and only the expected
+13 mechanical/test markers. Native DRC adds no shorting or crossing records.
+This is a parity-source correction, not routed Ethernet closure; the clean
+schematic's Ethernet return/support implementation still requires its own
+validated routing evidence.
