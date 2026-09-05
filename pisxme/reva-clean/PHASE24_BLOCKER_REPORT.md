@@ -87,3 +87,14 @@ unconnected items because all inherited acreage copper is intentionally
 removed; therefore this closes only the local clock-support topology proof.
 Next work is to transplant this generated support into a coordinated acreage
 candidate and materialize C44-C47 against the actual U5 rail pads.
+
+## Corrected reproducible rerun
+
+The latest authoring script was rerun from the V5 input with native KiCad
+10.0.5 DRC output `PHASE24_STORAGE_ROT90_PROBE-final-drc.rpt`.
+The script exited successfully. DRC reports `164` disposable/inherited
+violations, zero `tracks_crossing`, zero `shorting_items`, zero
+`track_width`, and zero footprint errors; the unconnected-items section has
+no XI/XO/VSSOSC entries. This is the clean local topology proof. It is not
+yet an acreage proof because the discriminator intentionally removes
+unrelated ancestor copper and has not materialized the U5 C44-C47 island.
