@@ -528,6 +528,21 @@ high-speed envelope before descending, and preserve the passing
 minimal-fixture topology. Phase 19 remains active; Phase 20+ remains
 untouched.
 
+## 2026-09-04 pre-field B.Cu trunk trial
+
+A third south-corridor experiment moved the long XI/XO/VSSOSC trunks onto
+separated ordinary-via B.Cu lanes before the J1/J3 fields. Native DRC measured
+`391` violations and `466` unconnected items. This reduced the prior
+F.Cu-through-field class, but the trial still introduced local clock
+crossings: the three trunk lanes were not ordered monotonically through the
+transition region, and the Y1 dogbones were still on the wrong side of the
+adjacent return pads. It is rejected as a routing-topology experiment.
+
+The result is still useful: the south support acreage does not itself collide
+with the board's live copper. The remaining work is a planar, ordered B.Cu
+escape plus exact local pad dogbones; no new component, architecture change,
+PCIe reopening, or validation relaxation is indicated.
+
 ## 2026-09-04 corrected south-island clock trial
 
 The south trial was corrected to use the exact serialized support-pad

@@ -51,14 +51,20 @@ def main():
     # 53=(142.5,105.5), 54=(142,105.5).  Escape perpendicular to the row,
     # then use separate monotonic lanes around the existing SATA field.
     xi, xo, vs, v33 = (nets[n] for n in names)
-    T(b, xi, (143,105.5), (143,100)); T(b, xi, (143,100), (190,95))
-    T(b, xi, (190,95), (190,140)); T(b, xi, (190,140), (248.9,149.15))
-    T(b, xo, (142,105.5), (142,99)); T(b, xo, (142,99), (195,94))
-    T(b, xo, (195,94), (195,145)); T(b, xo, (195,145), (251.1,150.85))
-    T(b, vs, (142.5,105.5), (142.5,98)); T(b, vs, (142.5,98), (200,92))
+    T(b, xi, (143,105.5), (143,101)); T(b, xi, (143,101), (110,101))
     X = lambda n, p: (lambda v: (v.SetPosition(V(*p)), v.SetWidth(pcbnew.FromMM(.5)), v.SetDrill(pcbnew.FromMM(.3)), v.SetLayerPair(pcbnew.F_Cu, pcbnew.B_Cu), v.SetNet(n), b.Add(v))[-1])(pcbnew.PCB_VIA(b))
-    X(vs, (200,92)); T(b, vs, (200,92), (200,165), pcbnew.B_Cu)
-
+    X(xi, (110,101)); T(b, xi, (110,101), (190,101), pcbnew.B_Cu)
+    X(xi, (190,101)); T(b, xi, (190,101), (190,140), pcbnew.B_Cu)
+    T(b, xi, (190,140), (248,145), pcbnew.B_Cu); X(xi, (248,145))
+    T(b, xi, (248,145), (248.9,149.15))
+    T(b, xo, (142,105.5), (142,99)); T(b, xo, (142,99), (108,99))
+    X(xo, (108,99)); T(b, xo, (108,99), (195,99), pcbnew.B_Cu)
+    X(xo, (195,99)); T(b, xo, (195,99), (195,145), pcbnew.B_Cu)
+    T(b, xo, (195,145), (252,146), pcbnew.B_Cu); X(xo, (252,146))
+    T(b, xo, (252,146), (251.1,150.85))
+    T(b, vs, (142.5,105.5), (142.5,97)); T(b, vs, (142.5,97), (106,97))
+    X(vs, (106,97)); T(b, vs, (106,97), (200,97), pcbnew.B_Cu)
+    X(vs, (200,97)); T(b, vs, (200,97), (200,165), pcbnew.B_Cu)
     # Local branches are separated by net/lane, with no via required in this
     # open corridor.  Pad coordinates are explicit for the selected 3225 and
     # 0402 footprints.
