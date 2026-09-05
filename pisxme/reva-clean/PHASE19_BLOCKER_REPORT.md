@@ -349,3 +349,23 @@ is permitted by the Rev-A mechanical contract, but this particular transition
 geometry is not acceptable. The next experiment must change the local U7 clock
 escape/placement relationship, not relax the layer policy or reuse either
 failed clock route.
+
+## 2026-09-04 open-side clock corridor experiment
+
+The next disposable class used the materialized U7 at `(250,105)` and moved
+the existing authoritative Y1/R23/C42/C43 footprints into the genuinely open
+east-side acreage around `(255..261,112..118)`. The experiment used native
+KiCad-reported transformed pad coordinates rather than assumed footprint-local
+coordinates, assigned the exact XI/XO/VSSOSC nets, and kept VSSOSC distinct
+from board GND. It measured 271 native DRC violations / 475 unconnected items,
+versus 206 / 484 for its inherited materialization baseline.
+
+This class is rejected. The new records are concrete clock-fanout failures:
+the three adjacent U7 clock pads need a monotonic escape before they can branch
+to the crystal and load capacitors; the attempted same-side branches crossed
+one another and the VSSOSC return. The FREQSEL fanout also approached an
+unassigned neighboring pad. This is not evidence against the required crystal
+mode or against the open-side placement; it identifies the next necessary
+experiment as a pad-row escape/rotation change with one net per corridor,
+followed by a fresh coordinated USB3/SATA candidate. No Phase 19 gate was
+relaxed and no Phase 20 work started.
