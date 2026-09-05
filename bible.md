@@ -4101,3 +4101,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: materialized schematic-authoritative U7 XI/VSSOSC/XO net identities on pads 52/53/54; native DRC held at 201 violations with zero shorts/crossings, and source pads entered the unconnected census.
 2026-09-05 Phase24: corrected oracle-derived U7 XO source escape below SATA-TX corridor; native DRC has zero shorts/crossings and 166 unconnected records, with passive clock branches still open.
 2026-09-05 Phase24: rejected complete B.Cu clock passive branches after native DRC found three shorts and ten crossings; retained isolated-pad-launch/layer-separated-bus requirement.
+2026-09-05 Phase24: rejected isolated clock passive launches after native DRC found 17 crossings and three shorts; narrowed next implementation to obstacle-aware layer-separated routing.

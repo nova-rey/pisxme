@@ -464,3 +464,12 @@ crossings where the branches entered adjacent passive pads and existing
 storage copper. It is rejected; the useful result is that clock closure needs
 isolated pad launches and layer-separated buses, not direct B.Cu pad-field
 approaches.
+
+## Isolated clock-launch trial (rejected)
+
+`phase24_clock_isolated_launches.py` added offset through-vias at every
+clock-support passive pad and separate F.Cu buses. Native DRC rejected the
+candidate with 17 crossings and three shorts, including long XI/XO corridors
+through existing SATA/USB copper and an XO approach into an unassigned U7
+pad. The next valid class must use obstacle-aware layer-separated routing
+from the serialized U7 pad field.

@@ -712,3 +712,10 @@ The first complete passive clock-branch attempt was rejected despite reducing
 unconnected records to 156: native DRC reported three shorts and ten
 crossings in the B.Cu passive-pad approaches. No gate was relaxed. The next
 clock class is isolated pad launches with layer-separated buses.
+
+The isolated passive-launch clock candidate was rejected: native DRC found 17
+crossings and three shorts. The primary failures were F.Cu source corridors
+crossing inherited SATA/USB routes and an XO segment touching an unassigned
+U7 pad. This evidence does not change the storage architecture; it narrows
+the required next implementation to an obstacle-aware layer-separated clock
+route.
