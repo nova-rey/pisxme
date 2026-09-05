@@ -181,3 +181,7 @@ Rejected as a full SATA pass.
   `tracks_crossing`, one `shorting_items` (`CM5_USB3_TX_P` to `POWER_GND`),
   and 481 unconnected items because SATA/clock were suppressed.
 - Decision: rejected; no promotion or Phase 19 closure.
+### 2026-09-05 — SATA RX_P F.Cu coordinated trial
+
+- `PHASE19_COORDINATED_SATAP_F24-drc.rpt`: 215 total records, 5 crossings,
+  1 U7 NC-pad short, and an F.Cu SATA pair crossing; rejected.

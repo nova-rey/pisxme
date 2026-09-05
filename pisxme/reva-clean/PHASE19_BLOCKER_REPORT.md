@@ -1174,6 +1174,12 @@ TX lane colliding with existing support geometry. The candidate is rejected.
 The native report for `PHASE19_U7ROT0_USB_VERTICAL10.kicad_pcb` contains two
 `shorting_items` as well as two crossings; the earlier receipt wording saying
 zero focused shorts was incorrect. The rotation-0 candidate remains rejected.
+## 2026-09-05 SATA RX_P F.Cu coordinated trial
+
+`PHASE19_COORDINATED_SATAP_F24.kicad_pcb` moved SATA RX_P to F.Cu. Native
+KiCad DRC reported 215 records, including five crossings and one U7 NC-pad
+short, plus an F.Cu SATA pair crossing. Rejected; SATA270 remains the
+storage-side oracle.
 ## 2026-09-05 U7 rotation-90 USB3 diagnostic
 
 `PHASE19_U7ROT90_USB_VERTICAL1.kicad_pcb` tested U7 at `(280,105)` rotation
