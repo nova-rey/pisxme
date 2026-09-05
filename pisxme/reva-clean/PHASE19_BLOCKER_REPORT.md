@@ -1555,3 +1555,32 @@ resolved, but TX intra-pair imbalance remains approximately `85.70 mm`, so
 this is not a Phase 18/19 pass. The result is retained as a clean endpoint
 ancestor for a placement-level co-resynthesis that gives TX_N a shorter
 parallel corridor; no acreage promotion or Phase 20 work is claimed.
+## 2026-09-05 V3 coordinated USB3 regeneration with native source preservation
+
+The best SATA V3 placement (U7 `(120,140)`, rotation 180°; J3 `(145,125)`,
+rotation 90°) was regenerated as one coordinated storage island. The first
+USB regeneration was invalid because it omitted the native CM5-side source
+breakout and recreated vias, producing 275 DRC violations. The authoring path
+was corrected to preserve the validated Phase 18 source segments/vias and
+remove only the four obsolete U7 tails; reference planes were then refilled
+before serialization.
+
+The corrected disposable board is
+`ACREAGE_PHASE19_STORAGE_V3_USB_REGEN_V4.kicad_pcb`. Native DRC reports 194
+violations / 426 unconnected items versus the V3 inherited baseline of 198 /
+430. Focused high-speed findings are zero `tracks_crossing`, zero
+`shorting_items`, and no new clearance or hole-clearance class. PCIe track
+count and geometry signature remain unchanged (`18`, SHA-256 prefix
+`24c0899b8d11fb67`). USB3 endpoint graphs are single-component for all four
+pairs, with copper lengths RX_N `82.473 mm`, RX_P `81.461 mm`, TX_N
+`81.453 mm`, TX_P `78.370 mm`; maximum measured pair skew is `3.083 mm`.
+
+This is the first coordinated moved-U7 candidate that removes the prior USB3
+crossing class while preserving the PCIe ancestor. It is not yet promoted or
+closed: the inherited clean board still lacks the intended inline SATA
+coupling-capacitor pad/net authority (C30-C33 currently serialize as regulator
+decouplers), and the V3 direct U7-to-J3 SATA copper therefore does not prove
+the complete schematic storage path. The next bounded action is to restore
+the authoritative four inline <=0402 SATA capacitors in this same V3 island,
+route each bridge-side and socket-side net, then rerun native DRC and the
+complete USB3/SATA endpoint graph. No Phase 20 work has started.

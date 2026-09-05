@@ -211,3 +211,12 @@ Phase 19 AC-coupling update (2026-09-04): the TI implementation guide
 requires four inline <=0402 capacitors, one per SATA conductor, symmetrically
 near J3, while the clean storage schematic currently contains none. Evidence
 is recorded in `PHASE19_SATA_AC_CAP_RECEIPT.md`; Phase 19 remains active.
+
+Phase 19 coordinated V3 USB3 update (2026-09-05): the native Phase 18
+CM5-side USB3 breakout/vias were preserved while only the obsolete U7 tails
+were replaced for the moved U7/J3 island. The resulting disposable board
+measured 194 native DRC violations / 426 unconnected items versus 198 / 430
+inherited V3, with zero focused USB3 crossings or shorts and unchanged PCIe
+geometry. USB3 pair skew is bounded at 3.083 mm. The candidate remains gated
+because C30-C33 are not serialized as the required four inline SATA coupling
+capacitors; no Phase 20+ work has started.
