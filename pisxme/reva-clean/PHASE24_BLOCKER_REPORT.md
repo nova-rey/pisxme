@@ -1002,3 +1002,11 @@ violations, 135 unconnected records, 15 shorts, and 17 crossings. It proves
 that merely reversing U6/U9 and J2 ordering is insufficient. The next
 authorized method is direct CM5IO serialized pad-escape reuse with
 board-context obstacle handling.
+
+The serialized CM5IO MDI candidate now has independent focused evidence:
+native route metrics pass all pair-skew bounds, and
+`phase24_ethernet_native_connectivity_audit.py --negative-controls` passes for
+all eight J7/U6/U9/J2 paths and correctly fails after removal of a necessary
+track. Full-board DRC remains non-passing at 449/122/0/1 (total DRC,
+unconnected, crossings, shorts); the sole short is unrelated
+POWER_GND/BRIDGE_1V1. This is a conditional MDI basis, not Phase 24 closure.

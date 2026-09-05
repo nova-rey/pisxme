@@ -805,3 +805,13 @@ reported 497 violations, 135 unconnected records, 15 shorts, and 17
 crossings. It is rejected; endpoint ordering alone does not solve the USON
 output fanout or EDAC launch. The next class is direct reuse of the CM5IO
 serialized pad-escape geometry with board-context corridors re-authored.
+
+The serialized CM5IO MDI transplant was run on a disposable Phase 24 copy.
+Focused native metrics pass all four pair-skew bounds (0.547–0.829 mm), and
+the new native connectivity audit passes J7 → U6/U9 → J2 for all eight nets;
+its negative control removes J7.12's necessary track and fails as required.
+Native full-board DRC reports 449 violations, 122 unconnected records, zero
+track crossings, and one unrelated POWER_GND/BRIDGE_1V1 short. Therefore the
+MDI geometry is conditionally retained, but the board candidate is not
+promoted until the unrelated inherited debt, support nets, impedance rule,
+and complete mechanical checks are closed.

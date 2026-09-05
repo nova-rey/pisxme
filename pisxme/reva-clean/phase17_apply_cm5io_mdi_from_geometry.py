@@ -15,6 +15,9 @@ def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def main():
     rows=json.loads(GEOM.read_text())
     b=pcbnew.LoadBoard(str(BASE))
+    # Resolve net codes before footprint transforms; KiCad 10's SWIG binding
+    # can expose FindNet results as opaque wrappers after footprint edits.
+    netcodes={name:b.FindNet(name).GetNetCode() for name in MDI}
     # The clean schematic/footprint authority maps U6=TD0/TD1 and
     # U9=TD2/TD3.  The official CM5IO escape reaches the opposite USON
     # channel side after the 180-degree board transform, so the local
@@ -28,10 +31,9 @@ def main():
     for item in list(b.GetTracks()):
         if str(item.GetNetname()).rsplit('/',1)[-1] in MDI: b.Remove(item)
     for row in rows:
-        n=b.FindNet(row['net'])
-        if n is None: raise RuntimeError(row['net'])
+        if row['net'] not in netcodes: raise RuntimeError(row['net'])
         q=pcbnew.PCB_TRACK(b); q.SetStart(V(row['a'][0]+DX,row['a'][1]+DY)); q.SetEnd(V(row['z'][0]+DX,row['z'][1]+DY))
-        q.SetLayer(row['layer']); q.SetWidth(pcbnew.FromMM(row['width'])); q.SetNetCode(n.GetNetCode()); b.Add(q)
+        q.SetLayer(row['layer']); q.SetWidth(pcbnew.FromMM(row['width'])); q.SetNetCode(netcodes[row['net']]); b.Add(q)
     # When the official corridor is translated vertically to clear the
     # regulator island, bridge its source-side endpoints to the fixed J7
     # contacts with short, same-net F.Cu dogbones.  The source endpoint is
@@ -53,6 +55,6 @@ def main():
         if not points: raise RuntimeError('no source endpoint '+name)
         point=min(points,key=lambda p:(p[0]-target[0])**2+(p[1]-target[1])**2)
         q=pcbnew.PCB_TRACK(b); q.SetStart(V(*pad)); q.SetEnd(V(point[0]+DX,point[1]+DY))
-        q.SetLayer(pcbnew.F_Cu); q.SetWidth(pcbnew.FromMM(.127)); q.SetNetCode(n.GetNetCode()); b.Add(q)
+        q.SetLayer(pcbnew.F_Cu); q.SetWidth(pcbnew.FromMM(.127)); q.SetNetCode(netcodes[name]); b.Add(q)
     b.Save(str(OUT)); print('saved',OUT)
 if __name__=='__main__': main()
