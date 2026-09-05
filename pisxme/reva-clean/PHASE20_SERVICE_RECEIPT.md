@@ -34,3 +34,14 @@ Complete J4 A/B duplicate USB2 pads, VBUS aliases, RD_A/RD_B resistor
 connections, and deliberate GND return. Native schematic ERC remains
 non-clean because of broader inherited scaffold unconnected-sheet-pin debt;
 that is not claimed as passed.
+
+## Latest bounded experiment
+
+`PHASE20_SERVICE_ALIAS_FINAL_CANDIDATE.kicad_pcb` joined all four USB-C DP/DM
+duplicate pads and retained zero native `shorting_items` and
+`tracks_crossing` entries for the USB2 data topology. Its two ordinary data
+alias transitions are outside the connector pad field, but the candidate is
+not promoted: the VBUS/Rd/GND support network is not yet complete and the
+unfilled inherited ground zones still produce native DRC debt. The subsequent
+`PHASE20_SERVICE_SUPPORT_CANDIDATE` overlay is rejected because its support
+routes cross the data escape and connector/shield clearances.
