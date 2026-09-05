@@ -1069,6 +1069,12 @@ leaves no legal bounded XI path from U7.52 to R23.1. This is a placement/
 corridor result, not permission to retain impossible pad layers or use a
 maze route.
 
+The moved outboard clock-island trial is rejected. Native refill reports nine
+F.Cu crossings, including the SATA_TX_N vertical launch and clock-lane
+intersections, despite reducing opens to `384`. This confirms that moving the
+passives alone is insufficient; the next candidate requires an explicit
+layer-separated island and reserved SATA corridor.
+
 ## Accepted SATA pad-field repair — 2026-09-05
 
 The native U7 RX-N stitch is accepted as bounded progress. It connects U7.5

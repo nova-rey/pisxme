@@ -907,3 +907,9 @@ pad-authority audit with native DRC reporting no shorts/crossings. With the
 real pad obstacles preserved, bounded A* finds no legal XI path to R23.1;
 this route is not promoted and the next clock island must move or use a
 separately reserved corridor.
+
+The first moved outboard clock-island trial was rejected after native CLI
+refill: it reduced the open census to `384`, but introduced nine real F.Cu
+crossings between clock lanes and the existing `BRIDGE_SATA_TX_N` launch.
+The placement is not promoted; the next candidate must reserve the SATA
+corridor and separate clock layers before routing.
