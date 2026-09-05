@@ -8,7 +8,7 @@ def xy(p): return pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y)
 def pad(f,n): return next(p for p in f.Pads() if str(p.GetNumber())==str(n))
 def main():
  b=pcbnew.LoadBoard(str(BASE)); u=b.FindFootprintByReference('U7'); u.SetOrientationDegrees(180)
- io=pcbnew.PCB_IO_KICAD_SEXPR(); y=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'Crystal_3225_4Pad'); y.SetReference('Y1'); y.SetPosition(V(108,130)); b.Add(y)
+ io=pcbnew.PCB_IO_KICAD_SEXPR(); y=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'Crystal_3225_4Pad'); y.SetReference('Y1'); y.SetPosition(V(130,145)); b.Add(y)
  names={'XI':'/STORAGE/BRIDGE_XI','VS':'/STORAGE/BRIDGE_VSSOSC','XO':'/STORAGE/BRIDGE_XO'}; nets={}
  for k,v in names.items():
   nets[k]=b.FindNet(v)
@@ -20,7 +20,7 @@ def main():
  seeds={'XI':(126.5,134.5),'VS':(122.5,133.0),'XO':(113.0,134.0)}
  # Grid chosen fine enough for the package field; coarse enough to keep the
  # search bounded. Existing item bboxes are conservatively inflated.
- step=.25; xmin,xmax,ymin,ymax=95,140,120,150
+ step=.25; xmin,xmax,ymin,ymax=105,145,125,160
  def cell(p): return (round(xy(p)[0]/step),round(xy(p)[1]/step))
  occ={pcbnew.F_Cu:set(),pcbnew.B_Cu:set()}
  def mark(layer,ax,bx,ay,by):

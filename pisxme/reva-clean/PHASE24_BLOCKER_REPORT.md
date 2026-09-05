@@ -258,3 +258,11 @@ ordinary-via exits and then search downstream corridors. The conservative
 search still returns `no route XI` against the inherited SATA/pad field, so no
 candidate is promoted. This remains a geometry discriminator; it does not
 replace native KiCad proof or establish an architectural block.
+
+The seeded search was then widened to a genuinely adjacent shelf (`Y1` near
+130/145 mm, between U7 and the lower J3 boundary). It still returned `no
+route XI` before producing a board. Because the search is intentionally
+conservative around pad fields and existing tracks, this rejects the current
+search model/candidate only; it does not claim that the shelf is physically
+impossible. The next implementation must seed an explicit legal dogbone graph
+and search from its first free grid cell.
