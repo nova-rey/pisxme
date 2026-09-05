@@ -26,6 +26,12 @@ def pad(board, ref, number):
     if p is None: raise RuntimeError(f"missing {ref}.{number}")
     return p
 def pos(p): return mm(p.GetPosition())
+def pad_layer(p, preferred=F):
+    """Return a real copper layer from the saved pad layer set."""
+    if p.GetLayerSet().Contains(preferred): return preferred
+    if p.GetLayerSet().Contains(F): return F
+    if p.GetLayerSet().Contains(B): return B
+    raise RuntimeError(f"pad {p.GetNumber()} has no F.Cu/B.Cu copper layer")
 
 def mark_line(occ, layer, a, z, inflate=0.15):
     ax, ay = grid(*a); zx, zy = grid(*z)
@@ -131,8 +137,9 @@ for ref in ('J7','U6','U9','J2'):
 for name,j7,esd,ep,jack,jp,return_layer in mapping:
     net=board.FindNet(name)
     if net is None: raise RuntimeError(f"missing net {name}")
-    src=pos(pad(board,'J7',j7)); mid=pos(pad(board,esd,ep)); dst=pos(pad(board,jack,jp))
-    p1=route_path(occ,src,mid,B,F);emit(board,net,p1,occ)
+    src_pad=pad(board,'J7',j7); esd_pad=pad(board,esd,ep); jack_pad=pad(board,jack,jp)
+    src=pos(src_pad); mid=pos(esd_pad); dst=pos(jack_pad)
+    p1=route_path(occ,src,mid,pad_layer(src_pad),pad_layer(esd_pad));emit(board,net,p1,occ)
     # Connect duplicate same-net ESD pads from the selected pad with local
     # native-pad-aware paths, then continue to the connector.
     for other in board.FindFootprintByReference(esd).Pads():
@@ -141,13 +148,13 @@ for name,j7,esd,ep,jack,jp,return_layer in mapping:
             # The duplicated same-net ESD pads are adjacent package pads;
             # connect them with a native short surface segment rather than
             # asking the global router to treat the pad field as open space.
-            t=pcbnew.PCB_TRACK(board);t.SetStart(V(*mid));t.SetEnd(V(*po));t.SetLayer(F);t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(net);board.Add(t);mark_line(occ,F,mid,po,.14);mid=po
+            t=pcbnew.PCB_TRACK(board);t.SetStart(V(*mid));t.SetEnd(V(*po));t.SetLayer(pad_layer(esd_pad));t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(net);board.Add(t);mark_line(occ,pad_layer(esd_pad),mid,po,.14);mid=po
     # Through-hole MagJack signal pads form a dense two-row field.  Route to
     # an explicit outside-of-field entry point, then use a short native-pad
     # dogbone; routing directly to the pad center made the search model weave
     # through neighboring barrels.
     entry=(dst[0], dst[1] + (1.0 if dst[1] > 152.0 else -1.0))
-    p2=route_path(occ,mid,entry,F,return_layer);emit(board,net,p2,occ)
+    p2=route_path(occ,mid,entry,pad_layer(esd_pad),return_layer);emit(board,net,p2,occ)
     t=pcbnew.PCB_TRACK(board);t.SetStart(V(*entry));t.SetEnd(V(*dst));t.SetLayer(return_layer);t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(net);board.Add(t);mark_line(occ,return_layer,entry,dst,.14)
     print(name,'source',src,'esd',esd,ep,'jack',dst,'segments',len(p1)+len(p2))
 board.BuildListOfNets();board.Save(str(OUT));print(OUT)

@@ -1,5 +1,23 @@
 # Phase 24 acreage validation status
 
+## Native pad-layer correction and Ethernet V3 — 2026-09-05
+
+The independent geometry review identified a real authoring assumption error:
+the saved J7 Ethernet signal pads are F.Cu-only despite the footprint header
+being on B.Cu. `phase24_route_corrected_ethernet_mdi.py` now derives every
+source, ESD, and connector layer from the native pad layer set; it does not
+hard-code J7 to B.Cu. The same review also identified a separate clock
+footprint-side authority issue (U7 clock pads F.Cu versus B.Cu-only clock
+passive pads), which remains gated before clock routing.
+
+The corrected V3 Ethernet candidate completes all eight pair authoring paths,
+but native DRC rejects it with 827 violations and 431 unconnected items,
+including genuine pair-to-pair and pair-to-ground shorts plus via-dangling
+findings. It is preserved as `ROUTE IMPLEMENTATION FAILURE`; no severity or
+layer contract was relaxed. The next Ethernet class must use explicit
+non-crossing reference corridors/rip-up around the J2 field. Phase 24 remains
+open.
+
 ## Layered Ethernet escape V2 — 2026-09-05
 
 The multipair layered search was rerun after fixing two authoring defects:
