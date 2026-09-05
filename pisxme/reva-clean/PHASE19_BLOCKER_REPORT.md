@@ -1,5 +1,31 @@
 # Phase 19 SATA routing blocker (active, non-terminal)
 
+## 2026-09-04 local underside clock-island follow-up
+
+The next authorized class was implemented as a parameterized authoring path in
+`phase19_clock_local_bcu.py`. It keeps the authoritative U7 XI/VSSOSC/XO
+escape perpendicular at the live rot270 pad row, transitions with ordinary
+through-vias, and places the low-profile Y1/R23/C42/C43 support island on
+B.Cu. This removes the earlier F.Cu clock trunk through the inherited USB3
+and low-speed corridors.
+
+The first corrected run exposed two further facts. The inherited coordinated
+candidate contains substantial pre-existing connectivity/clearance debt, and
+the underside support graph must be routed as a planar perimeter rather than
+as a three-net star. The near-support run (`Y1` at `(145,125)`) measured 365
+native DRC violations / 429 unconnected items and still has clock-local
+XI/XO/VSSOSC crossings at the support field. A south-acreage run (`Y1` at
+`(140,160)`) measured 366 / 429 and has the same local support-field class.
+The experiments are rejected; no Phase 19 gate is claimed closed.
+
+The U7-side failure is now correctly separated from the previous error: the
+first version routed vertically through adjacent no-connect QFN pads 50/51;
+the generic path was corrected to leave the 0.5 mm pitch row laterally first.
+The remaining blocker is the support-island topology and available copper
+corridor, not a missing TUSB9261 clock authority. The passing isolated clock
+fixture remains the electrical reference. PCIe, USB3/SATA architecture,
+stack, and Phase 18 ancestor are unchanged.
+
 ## 2026-09-04 coordinated storage authoring repair
 
 The coordinated-island generator was corrected after a KiCad 10 serialization
