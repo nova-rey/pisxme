@@ -323,13 +323,13 @@ existing regulator feedback/support geometry. This candidate is rejected;
 the clean clock escape remains useful, but support parts must be placed and
 routed as independently bounded islands before integration.
 
-## Complete local support fixture discriminator
+## Native-orientation clock discriminator
 
 The existing parameterized `phase19_clock_minimal_fixture.py` was rerun as a
 disposable native fixture with its native U7 orientation. The resulting
-`PHASE24_CLOCK_MINIMAL_ROT0.kicad_pcb` has zero unconnected items, zero
-shorting records, zero track crossings, and zero footprint errors in native
-KiCad DRC. Its 12 remaining warnings are silkscreen/text/copper-sliver
-presentation findings only. This closes the complete Y1/R23/C42/C43 topology
-proof in isolation; the rot180 acreage transformation and the independent
-C44--C47 island remain open.
+`PHASE24_CLOCK_MINIMAL_ROT0.kicad_pcb` has zero reported unconnected items,
+zero shorting records, zero track crossings, and zero footprint errors in
+native KiCad DRC. However, inspection shows that this legacy fixture does not
+route every passive branch to R23/C42/C43, so it is only a source-escape and
+footprint discriminator, not complete support-topology closure. A genuinely
+complete support fixture and the rot180 acreage transformation remain open.

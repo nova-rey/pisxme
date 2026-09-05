@@ -88,8 +88,9 @@ entered the crystal pad field and the C44--C47 placement overlapped existing
 regulator support. The clock oracle is retained as evidence; support networks
 must be placed and routed as independently bounded islands.
 
-The complete clock-support topology also passes in the native-orientation
-disposable fixture: `PHASE24_CLOCK_MINIMAL_ROT0-drc.rpt` reports zero
-unconnected items, shorts, crossings, and footprint errors. This is an
-isolation proof, not acreage closure; the remaining work is the rot180
-coordinate transplant plus a separate U5 capacitor island.
+The native-orientation disposable fixture reports zero unconnected items,
+shorts, crossings, and footprint errors, but it is not a complete support
+topology: inspection shows that all passive branches are not routed to
+R23/C42/C43. It remains a source-escape/footprint discriminator only. The
+remaining work is a genuinely complete rot180 coordinate transplant plus a
+separate U5 capacitor island.
