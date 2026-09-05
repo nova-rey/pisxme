@@ -949,3 +949,25 @@ USB3-side acreage, and PCIe J1 plus SERVICE J4 remain unchanged. This is not
 a routing pass; affected Ethernet and USB3/SATA/clock copper must be
 regenerated together and then closed by native DRC/connectivity and geometry
 checks.
+
+## Selected-macro storage regeneration rejected — 2026-09-05
+
+The first coordinated selected-macro USB3/SATA trial was built from native
+pad coordinates and rejected by refilled native DRC: `363` total violations,
+`43` true shorting-item findings, `7` track crossings, and `444` unconnected
+items. The principal SATA failure is an authority/generator mismatch exposed
+by the saved board: U7 pads 56/57/59/60 serialize as
+`BRIDGE_SATA_TX_N/TX_P/RX_N/RX_P`, while J3 pads 1/2/3/4 serialize as distinct
+`SATA_M2_TX_P/TX_N/RX_P/RX_N` nets. The trial connected across those identities,
+so it is invalid and is not promoted. The selected placement remains the
+working macro basis; next action is to resolve the schematic/native net
+authority or explicit connection boundary, then regenerate SATA and USB3 with
+correct net identity. No validation severity was changed.
+
+The follow-on retry corrected the conceptual SATA boundary by routing through
+C30/C31/C32/C33: bridge-side `BRIDGE_SATA_*` nets terminate on capacitor pad 2
+and M.2-side `SATA_M2_*` nets begin on pad 1. It still fails as a route trial
+(`347` native refilled violations, `46` shorting items, `5` crossings, `437`
+unconnected items), primarily from unplanned lane crossings, J3 NPTH/launch
+clearance, and inherited non-storage copper near the new corridor. It is
+rejected, but the net-authority diagnosis is retained for the next generator.

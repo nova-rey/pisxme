@@ -1142,3 +1142,24 @@ and current copper/via census are in
 `PHASE24_MACRO_FLOORPLAN_REVIEW.md`. Before any further detailed clock/SATA
 repair, choose a coherent island arrangement and regenerate every affected
 route from native pad authority.
+
+## Selected-macro storage trial rejection — 2026-09-05
+
+The first USB3/SATA regeneration on `PHASE24_SELECTED_MACRO_PLACEMENT` was
+rejected by native refilled DRC (`363` violations; `43` shorting items;
+`7` crossings; `444` unconnected items). This is not a placement verdict.
+The saved board's actual net identities show the generator attempted to join
+U7 SATA nets `BRIDGE_SATA_*` directly to J3 nets `SATA_M2_*`, which are distinct
+serialized nets. The route therefore violates native net authority. The next
+repair must resolve that boundary from the authoritative schematic/native
+connectivity, then rerun the selected macro with correct SATA net ownership;
+no severity waiver or synthetic connectivity edge is allowed.
+
+The boundary-corrected retry did route through C30/C31/C32/C33 rather than
+shorting bridge nets directly to the M.2 endpoint nets. Native refilled DRC
+still rejected it (`347` violations, `46` shorting items, `5` crossings,
+`437` unconnected items), due to lane crossings, J3 launch/NPTH clearance,
+and collisions with remaining board copper. This is a rejected routing
+experiment, not evidence against the selected macro placement. The next
+generator must preserve the capacitor boundary while using obstacle-aware
+lanes and exact J3 clearance.
