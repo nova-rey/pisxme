@@ -506,3 +506,10 @@ The filtered candidate has all 78 schematic references and only the expected
 This is a parity-source correction, not routed Ethernet closure; the clean
 schematic's Ethernet return/support implementation still requires its own
 validated routing evidence.
+## Filtered candidate revalidation
+
+The filtered candidate was rerun through the exact reference-set audit and
+native DRC. The audit remains PASS for 78 schematic references plus 13
+mechanical/test markers; native DRC reports no `shorting_items` or
+`tracks_crossing` records. The report still contains 201 violations and 406
+unconnected pads, therefore the routed Phase 24 gate remains open.

@@ -1,20 +1,16 @@
 ** Drc report for PHASE24_NO_LEGACY_CT_ALIASES.kicad_pcb **
-** Created on 2026-09-05T09:26:39 **
+** Created on 2026-09-05T09:28:22 **
 ** Report includes: Errors, Warnings, Exclusions **
 
 ** Found 201 DRC violations **
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1100 mm)
-    Local override; error
-    @(226.0000 mm, 104.7500 mm): Track [/REGULATORS/PG_BRIDGE_3V3] on F.Cu, length 2.7500 mm
-    @(225.0000 mm, 103.8750 mm): Pad 17 [POWER_GND] of U4 on F.Cu
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1440 mm)
     Local override; error
     @(227.2500 mm, 104.7500 mm): Track [/REGULATORS/PG_BRIDGE_3V3] on F.Cu, length 1.2500 mm
     @(225.0000 mm, 104.6250 mm): Pad 18 [POWER_GND] of U4 on F.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1473 mm)
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1100 mm)
     Local override; error
-    @(70.0400 mm, 100.3000 mm): Pad 110 [/CORE_CM5/CM5_REFCLK_P] of J7 on F.Cu
-    @(70.0400 mm, 100.7000 mm): Track [/CORE_CM5/CM5_REFCLK_N] on F.Cu, length 2.2171 mm
+    @(226.0000 mm, 104.7500 mm): Track [/REGULATORS/PG_BRIDGE_3V3] on F.Cu, length 2.7500 mm
+    @(225.0000 mm, 103.8750 mm): Pad 17 [POWER_GND] of U4 on F.Cu
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0763 mm)
     Local override; error
     @(70.0400 mm, 100.3000 mm): Track [/CORE_CM5/CM5_REFCLK_P] on F.Cu, length 2.3400 mm
@@ -23,6 +19,10 @@
     Local override; error
     @(71.2000 mm, 106.3000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 1.8788 mm
     @(70.0400 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 1.1600 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1473 mm)
+    Local override; error
+    @(70.0400 mm, 100.3000 mm): Pad 110 [/CORE_CM5/CM5_REFCLK_P] of J7 on F.Cu
+    @(70.0400 mm, 100.7000 mm): Track [/CORE_CM5/CM5_REFCLK_N] on F.Cu, length 2.2171 mm
 [courtyards_overlap]: Courtyards overlap
     Rule: board setup constraints courtyard; error
     @(65.0000 mm, 168.5000 mm): Footprint C7
@@ -1381,7 +1381,7 @@
     @(18.5500 mm, 96.4500 mm): Pad 4 [12V_PROTECTED] of U2 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(18.5500 mm, 76.4500 mm): Pad 4 [12V_PROTECTED] of U1 on F.Cu
+    @(18.5500 mm, 76.4500 mm): Track [12V_PROTECTED] on F.Cu, length 3.5500 mm
     @(18.5500 mm, 96.4500 mm): Pad 4 [12V_PROTECTED] of U2 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -1390,7 +1390,7 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(30.0000 mm, 78.0000 mm): PTH pad 2 [12V_PROTECTED] of Q1
-    @(18.5500 mm, 76.4500 mm): Pad 4 [12V_PROTECTED] of U1 on F.Cu
+    @(18.5500 mm, 76.4500 mm): Track [12V_PROTECTED] on F.Cu, length 3.5500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(62.2500 mm, 162.0000 mm): Track [12V_PROTECTED] on F.Cu, length 1.0000 mm
@@ -2101,8 +2101,8 @@
     @(85.5000 mm, 164.0000 mm): Pad 2 [/REGULATORS/FB_CM5_5V] of R3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(70.0000 mm, 174.7500 mm): Track [/REGULATORS/PG_CM5_5V] on B.Cu, length 8.7500 mm
-    @(62.2500 mm, 164.7500 mm): Track [/REGULATORS/PG_CM5_5V] on F.Cu, length 1.7500 mm
+    @(70.0000 mm, 166.0000 mm): Track [/REGULATORS/PG_CM5_5V] on B.Cu, length 10.5475 mm
+    @(64.0000 mm, 164.7500 mm): Track [/REGULATORS/PG_CM5_5V] on F.Cu, length 4.7500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(100.5000 mm, 126.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of C42 on B.Cu
@@ -2169,7 +2169,7 @@
     @(101.5000 mm, 130.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(175.4000 mm, 85.0000 mm): Track [/V100_PCIE/V100_PET0_P] on B.Cu, length 7.5400 mm
+    @(170.0000 mm, 85.0000 mm): Track [/V100_PCIE/V100_PET0_P] on B.Cu, length 5.4000 mm
     @(235.9500 mm, 54.0000 mm): Pad 2 [/V100_PCIE/V100_PET0_P] of C1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error

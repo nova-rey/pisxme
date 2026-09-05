@@ -192,3 +192,8 @@ schematic references plus only MECH_M2_2280 and TP1-TP13; the exact reference
 set audit passes. Native DRC introduces no shorting or crossing records.
 Electrical Ethernet return/support routing must still be reconciled before
 this candidate can be promoted.
+The filtered clean-reference candidate was revalidated after the alias removal:
+the 78-reference audit still passes, and native DRC reports no shorting or
+track-crossing records. It retains 201 DRC violations and 406 unconnected
+pads, so it remains a parity/source candidate rather than a routed production
+artifact.
