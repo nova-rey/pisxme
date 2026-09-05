@@ -1,6 +1,6 @@
 # Phase 23 status — test/debug access
 
-Status: IN PROGRESS
+Status: CLOSED
 
 The Phase 22 ancestor remains the active clean baseline. The first disposable
 probe implementation was rejected, not promoted: large underside SMD test
@@ -14,8 +14,14 @@ shorting/crossing and hole-clearance errors where the selected dogbones entered
 the U1/U2/U4/U5 pad fields and existing control-via corridor. It is retained
 only as disposable evidence and is not a production ancestor.
 
-Remaining work is to add physically accessible, net-connected probe pads with
-short low-speed dogbones and ordinary-via transitions, while adding the
-missing schematic-authority path for recovery/UART if those signals are
-required by the final debug contract. No high-speed net will be stubbed and no
-rejected Phase 23 board is used as a production ancestor.
+The accepted candidate is `PHASE23_TEST_DEBUG_PADS_V5.kicad_pcb`. It uses
+small through-hole probe pads in open acreage, with short low-speed dogbones
+and ordinary vias where required. It covers raw/fused/protected 12 V, CM5 5 V,
+storage 3.3 V, both bridge PG nets, CM5 PERST, POWER_GND, and the
+schematic-authorized `/DEBUG/UART`, `/DEBUG/RECOVERY`,
+`/DEBUG/POWER_PG_FAULT`, and `/DEBUG/DEBUG_GND` pads. Native DRC reports 193
+inherited-class violations and 391 unconnected items, with zero shorting,
+crossing, hole-clearance, width, or footprint-courtyard errors attributable to
+the probe implementation. No high-speed net was stubbed and no signal was
+placed on a plane layer. The regression test
+`validation/phase3/test_phase23_test_debug_pads.py` passes.
