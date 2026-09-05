@@ -114,14 +114,13 @@ an unresolved macro-placement question. Phase 24 remains open; next action is
 coordinated native-pad regeneration of Ethernet/storage/clock neighborhoods,
 then native DRC/connectivity and affected-subsystem revalidation.
 
-Subsequent immutable-parent evidence refines that decision locally: the
-Ethernet sub-island is promoted to the CM5IO top-oracle geometry in
-`PHASE24_CLEAN_ETH_OVERLAY.kicad_pcb`. This is a bounded Ethernet migration
-within the reviewed acreage; the storage/clock sub-island remains at the
-selected-local position. The top-oracle candidate has zero Ethernet shorts and
-crossings after invalidated neighborhood copper is cleared, while the selected
-local Ethernet route has 15 shorts and 13 crossings. Full support and board
-integration remain unvalidated.
+Subsequent immutable-parent evidence does not change the macro ranking. The
+CM5IO top-oracle geometry in `PHASE24_CLEAN_ETH_OVERLAY.kicad_pcb` is retained
+as a routing-development candidate only. Its zero Ethernet shorts/crossings
+after copper clearing is routing evidence; the selected-local route's 15
+shorts/13 crossings are an implementation failure, not a floorplan verdict.
+The selected macro must receive a fair obstacle-aware routing cycle before any
+macro reconsideration. Full support and board integration remain unvalidated.
 
 The north-west oracle is only a routing discriminator: native refill reported
 `453` total violations, `12` shorting items, `0` track crossings, and `433`

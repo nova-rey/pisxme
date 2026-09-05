@@ -43,15 +43,18 @@ Track metrics from the saved board:
 
 ## Decision
 
-Promote the top-oracle geometry as the current Ethernet sub-island candidate.
-It is the first integrated-neighborhood trial with zero Ethernet crossings or
-shorts after invalidated copper was removed. This does not close Ethernet:
+Retain `ETH_WEST_LOCAL_STORAGE` as the macro-floorplan selection based on
+placement/ratsnest topology, not on historical or immature DRC counts. The
+top-oracle geometry is a separate routing-development candidate because its
+clean-neighborhood trial has zero Ethernet crossings or shorts after
+invalidated copper was removed. This does not close Ethernet:
 center-tap, LED, shield/return, ESD support, full-board connectivity, and
 mechanical/service checks remain required. Storage and clock remain on their
 own selected-local island and must be regenerated independently.
 
-The prior `ETH_WEST_LOCAL_STORAGE` Ethernet endpoint placement is rejected for
-this sub-island because its fresh native comparison produced 15 shorts and 13
-crossings against the same immutable parent. The top-oracle move is therefore
-a targeted macro correction supported by native evidence, not preservation of
-historical coordinates.
+The prior selected-local Ethernet route is a `ROUTE IMPLEMENTATION FAILURE`
+with 15 shorts and 13 crossings against the same immutable parent; it is not a
+`MACRO-PLACEMENT FAILURE`. The top-oracle move is therefore an authorized
+routing-development experiment, not evidence that the historical or selected
+macro placement is inferior. Any floorplan change requires a placement/ratsnest
+or structural-corridor argument independent of immature routing quality.

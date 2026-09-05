@@ -1030,15 +1030,14 @@ not comparable unless their exact parent is recorded. Phase 24 remains open;
 the overlay is not an acreage pass because support circuitry and board-wide
 connectivity are still incomplete.
 
-The clean overlay now promotes the Ethernet sub-island to the CM5IO top-oracle
-geometry. Its saved-board native evidence has 0 Ethernet crossings, 0 Ethernet
+The clean overlay is retained as a CM5IO top-oracle Ethernet routing-development
+candidate. Its saved-board native evidence has 0 Ethernet crossings, 0 Ethernet
 shorts, and pair skew below 0.83 mm; the only two shorting items are inherited
-U7/C17 storage pad debt. This promotion is recorded in
-`PHASE24_ETH_TOP_ORACLE_RECEIPT.md`. It does not close Ethernet because the
-center-tap/LED/shield/return support and mechanical review remain open. Storage
-and clock remain separate selected-local neighborhoods. The next action is to
-build the complete Ethernet support around this proven MDI candidate, then
-regenerate storage/clock from the same immutable-parent discipline.
+U7/C17 storage pad debt. This is not a macro-floorplan ranking: the selected
+`ETH_WEST_LOCAL_STORAGE` floorplan remains the placement-metric choice, and its
+15-short/13-crossing result is classified as route implementation failure until
+it receives a fair obstacle-aware development cycle. Ethernet center-tap/LED/
+shield/return support and mechanical review remain open.
 
 For the same immutable parent, the existing CM5IO-adapted selected-placement
 route was regenerated fresh. Native DRC reported 384 total violations, 15
