@@ -489,3 +489,11 @@ the actual rotated C44-C47 pad rows. Native DRC reports zero
 non-target U5/fixture unconnected pads. A first graph-audit implementation
 was found to have a coordinate-join defect and is excluded from the evidence.
 This remains a topology discriminator, not acreage closure.
+## U5 fixture connectivity regression audit
+
+`phase24_u5_layer_connectivity_audit.py` now passes against the corrected
+fixture, proving the four C44-C47 rail pads join U5.9 and the four return pads
+join R20.2. The audit explicitly accounts for KiCad's serialized via/track
+layer representation. Native DRC still reports zero shorts and crossings for
+the fixture. This is a regression/topology receipt, not integrated acreage
+closure.

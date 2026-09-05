@@ -181,3 +181,8 @@ shorting and zero crossing records; 499 unconnected pads are deliberate
 non-target fixture/U5 pads. The separate graph-audit script exposed a
 coordinate-join defect and is not used as closure evidence; acreage U5
 integration remains open.
+The U5 fixture regression audit now passes after correcting its serialized
+via/track coordinate joins: all four C44-C47 rail pads connect to U5.9 and
+all four return pads connect to R20.2. Native DRC remains zero shorts and zero
+crossings for the fixture. This strengthens the topology proof only; acreage
+integration and full-board parity remain open.

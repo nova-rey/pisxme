@@ -4069,4 +4069,5 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: rejected U5 left-side source detour; native DRC remained 197 violations with one crossing and 392 unconnected pads.
 2026-09-05 Phase24: U5 layer-owned source/return fixture passed targeted native DRC with zero shorts/crossings; acreage integration remains open.
 2026-09-05 Phase24: corrected U5 layer fixture reached the rotated capacitor pads and again passed targeted native DRC with zero shorts/crossings; graph-audit defect excluded, acreage integration remains open.
+2026-09-05 Phase24: U5 fixture connectivity regression audit passed; all C44-C47 rail/return pads join their intended sources, with zero native shorts/crossings.
 2026-09-05 Phase24: materialized all eight missing Phase24 component references; exact pad-net audit passed and native DRC had no shorts or crossings, while routed parity remains open.
