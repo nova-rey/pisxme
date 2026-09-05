@@ -641,6 +641,13 @@ unconnected records, zero shorts, and zero crossings. This is accepted
 targeted CM5-ground progress; the remaining upper rows and plane attachment
 are still open.
 
+The accepted right-column collector was expanded incrementally from the
+three-pad discriminator. The first expansion remains at 209 violations, 136
+unconnected records, zero shorts, and zero crossings; adding the next four
+right-column pads (y=102.3–105.9) yields `PHASE24_CM5_GROUND_RIGHT_COLUMN_EXPAND_V3`
+at 209 violations, 130 unconnected records, zero shorts, and zero crossings.
+No upper Ethernet-row copper or new via field was introduced.
+
 The upper same-row-only J7 ground bridges are rejected: fresh native DRC
 reports 216 violations, 124 unconnected records, one short, and six
 crossings. This confirms that the live Ethernet launch segments must be

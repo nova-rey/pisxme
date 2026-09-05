@@ -18,6 +18,8 @@ serialized Phase 24 candidates, counting report sections globally.
 | `PHASE24_CM5_GROUND_UPPER_COMB` | 223 | 121 | 3 | 9 | rejected |
 | `PHASE24_CM5_GROUND_UPPER_BRIDGES_ONLY` | 216 | 124 | 1 | 6 | rejected |
 | `PHASE24_CM5_GROUND_THREE_PAD` | 209 | 139 | 0 | 0 | accepted discriminator |
+| `PHASE24_CM5_GROUND_RIGHT_COLUMN_EXPAND` | 209 | 136 | 0 | 0 | accepted continuation |
+| `PHASE24_CM5_GROUND_RIGHT_COLUMN_EXPAND_V3` | 209 | 130 | 0 | 0 | accepted continuation |
 | `PHASE24_CM5_GROUND_UPPER_BRIDGES_ONLY` | 216 | 124 | 1 | 6 | rejected |
 
 The clean working basis for subsequent repairs is therefore

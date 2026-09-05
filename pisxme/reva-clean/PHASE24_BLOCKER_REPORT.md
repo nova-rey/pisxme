@@ -758,6 +758,12 @@ shorts/crossings and reduces unconnected records from 168 to 163. This
 storage repair composes cleanly; clock and remaining SATA/control records
 remain unresolved.
 
+The right-column CM5-ground collector expanded cleanly from the accepted
+three-pad discriminator: the V2 and V3 trials report 209 DRC violations,
+zero shorts/crossings, and 136 then 130 unconnected records. The upper
+Ethernet-interleaved rows remain the only J7 portion not covered by this
+collector class.
+
 The cumulative PCB was missing serialized net identity on U7 clock pads
 52/53/54. That was corrected in a disposable candidate using the schematic's
 XI/VSSOSC/XO mapping. Native DRC remains at 201 violations with zero
