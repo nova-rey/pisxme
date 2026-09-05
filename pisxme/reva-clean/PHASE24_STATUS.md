@@ -888,6 +888,12 @@ violations and raised total violations to `217`; shorts/crossings were zero.
 The route is not promoted. Clock transitions must next be explicitly
 zone/antipad-aware or remain on a validated F.Cu corridor.
 
+Native CLI `--refill-zones --save-board` rechecked the same XI graph. On a
+like-for-like refilled comparison it reduces opens `394` to `392` and keeps
+shorts/crossings at zero, but raises total DRC `429` to `434` through five
+real transition-via/clearance and dangling-track findings. The earlier
+non-refilled `217` report is stale-zone evidence and is not promotion proof.
+
 The new `phase24_u7_pad_net_authority_audit.py` passes on the corrected U7
 candidate for all 17 schematic-owned U7 endpoints and fails on the prior
 integrated baseline for the five omitted clock/3V3 pads. This is now a

@@ -1088,6 +1088,12 @@ clearance and raise native DRC to `217`. The generator's source-layer and
 pad-obstacle fixes are retained, but the next clock route must account for
 the actual plane-zone transition rules.
 
+Native CLI refill confirms rejection: the XI graph reduces two opens and
+keeps shorts/crossings at zero, but adds five refill-clean
+clearance/dangling-track findings (`429` to `434` total violations). The
+non-refilled result is stale-zone evidence; the next generator must emit
+refill-clean source-layer transitions.
+
 The U7 pad-net authority regression now passes on the corrected candidate and
 fails on the prior baseline, specifically catching U7.30/U7.31/U7.52/U7.53/
 U7.54 no-net serialization. Routing is still required after this mapping
