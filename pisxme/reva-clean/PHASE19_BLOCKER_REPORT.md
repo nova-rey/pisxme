@@ -1046,6 +1046,15 @@ removed. Remaining candidate errors are concentrated at the dense J3 launch
 and its mechanical/NC-pad field. The candidate remains rejected and Phase 19
 remains open.
 
+## 2026-09-05 alternating-quadrant U7 fan-in experiment
+
+An attempt to approach the 270-degree U7 USB pad row from alternating upper
+and lower outer quadrants was rejected. Native DRC introduced additional
+clock/corridor crossings, CM5/J7 power-pad shorts, and U7 pad clearances; the
+measured USB3 skews degraded to approximately 14.97 mm RX and 7.70 mm TX.
+The generator was restored to the prior separated-column baseline. No
+architecture, PCIe ancestor, or Phase 20 state was changed.
+
 ## 2026-09-05 all-B.Cu pair corridor experiment
 
 The next pair-preserving candidate kept all four long CM5-to-U7 corridors on
