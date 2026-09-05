@@ -1124,6 +1124,17 @@ suppressed SATA/clock fixture nets. The remaining crossings/clearances are
 the U7 side-row fan-in and are not evidence against the orientation itself.
 The candidate is not yet promoted; SATA must be regenerated against the same
 orientation and the final side-row dogbones must pass.
+## 2026-09-05 source-order USB3 and coordinated storage trials
+
+The source-order staircase authoring class was added to the disposable
+generator. Its isolated USB3 artifact `PHASE19_U7ROT270_USB_ORDERED12.kicad_pcb`
+has zero native `tracks_crossing` and zero `shorting_items` (remaining DRC
+records are inherited board/mechanical and suppressed-net connectivity
+records). Coordinated regeneration is still open: the latest
+`PHASE19_COORDINATED_ORDERED19.kicad_pcb` is short-free but has two B.Cu
+crossings between the USB3 corridors and the SATA RX_P launch. It is rejected
+as an integrated Phase 19 ancestor; the next experiment must relocate the
+local USB/SATA corridor relationship, not change connectivity authority.
 ## 2026-09-05 U7 rotation-180 USB3 diagnostic
 
 `PHASE19_U7ROT180_USB_VERTICAL1.kicad_pcb` tested the mirrored side-row

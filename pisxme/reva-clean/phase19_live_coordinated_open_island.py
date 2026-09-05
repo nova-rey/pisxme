@@ -24,6 +24,7 @@ USB_EAST=ARGS.get('P19_USB_EAST',os.environ.get('P19_USB_EAST','0'))=='1'
 USB_TOP_EAST=ARGS.get('P19_USB_TOP_EAST',os.environ.get('P19_USB_TOP_EAST','0'))=='1'
 USB_PAIR_SPLIT=ARGS.get('P19_USB_PAIR_SPLIT',os.environ.get('P19_USB_PAIR_SPLIT','0'))=='1'
 USB_VERTICAL=ARGS.get('P19_USB_VERTICAL',os.environ.get('P19_USB_VERTICAL','0'))=='1'
+USB_ORDERED=ARGS.get('P19_USB_ORDERED',os.environ.get('P19_USB_ORDERED','0'))=='1'
 U7ROT=int(ARGS.get('P19_U7_ROT',os.environ.get('P19_U7_ROT','270')))
 W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
@@ -40,6 +41,8 @@ def seg(b,n,a,z,layer=pcbnew.F_Cu,width=W):
  t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(layer); t.SetWidth(width); t.SetNet(n); b.Add(t)
 def via(b,n,p):
  q=pcbnew.PCB_VIA(b); q.SetPosition(V(*p)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(n); b.Add(q)
+def via_sig(b,n,p):
+ q=pcbnew.PCB_VIA(b); q.SetPosition(V(*p)); q.SetWidth(pcbnew.FromMM(.40)); q.SetDrill(pcbnew.FromMM(.20)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(n); b.Add(q)
 def strip_old(b):
  for t in list(b.GetTracks()):
   n=t.GetNetname()
@@ -86,6 +89,37 @@ def main():
    continue
   n=N['/CORE_CM5/'+suffix]; s=S[sp]; d=U[up]
   setpad(pad(src,sp),n); setpad(pad(u,up),n)
+  if USB_ORDERED and U7ROT == 270:
+    # Source-order monotonic escape: J7 pads serialize RX_N, RX_P, TX_N,
+    # TX_P from low to high y.  Preserve that order through the initial
+    # breakout, then use separated pair corridors and serialized U7 pad x.
+    first={'CM5_USB3_RX_N':(74.0,103.9),'CM5_USB3_RX_P':(82.0,104.3),
+           'CM5_USB3_TX_N':(90.0,118.0),'CM5_USB3_TX_P':(98.0,120.0)}[suffix]
+    lane_y={'CM5_USB3_RX_N':70.0,'CM5_USB3_RX_P':72.0,
+            'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':92.0}[suffix]
+    target_x={'CM5_USB3_RX_N':280.0,'CM5_USB3_RX_P':280.5,
+              'CM5_USB3_TX_N':281.5,'CM5_USB3_TX_P':282.0}[suffix]
+    landing_y={'CM5_USB3_RX_N':108.0,'CM5_USB3_RX_P':106.0,
+               'CM5_USB3_TX_N':112.0,'CM5_USB3_TX_P':102.0}[suffix]
+    trunk_x={'CM5_USB3_RX_N':286.0,'CM5_USB3_RX_P':60.0,
+             'CM5_USB3_TX_N':64.0,'CM5_USB3_TX_P':284.0}[suffix]
+    launch_x={'CM5_USB3_RX_N':71.2,'CM5_USB3_RX_P':72.2,
+              'CM5_USB3_TX_N':71.2,'CM5_USB3_TX_P':72.2}[suffix]
+    launch=(launch_x,s[1]); seg(b,n,s,launch)
+    # Staircase source escape: each pre-via x is outside the preceding
+    # vertical drop, so the serialized J7 fanout cannot self-cross.
+    prex={'CM5_USB3_RX_N':74.0,'CM5_USB3_RX_P':84.0,
+          'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':68.0}[suffix]
+    is_rx=suffix.startswith('CM5_USB3_RX_')
+    seg(b,n,launch,(prex,s[1]),pcbnew.F_Cu)
+    seg(b,n,(prex,s[1]),(prex,lane_y),pcbnew.F_Cu)
+    if is_rx: via_sig(b,n,(prex,lane_y))
+    layer=pcbnew.B_Cu
+    seg(b,n,(prex,lane_y),(trunk_x,lane_y),layer)
+    seg(b,n,(trunk_x,lane_y),(trunk_x,landing_y),layer); seg(b,n,(trunk_x,landing_y),(target_x,landing_y),layer)
+    via_sig(b,n,(target_x,landing_y))
+    seg(b,n,(target_x,landing_y),d,pcbnew.F_Cu)
+    continue
   if USB_TOP_EAST:
    # Preserve the serialized CM5 source escape, then use four ordered
    # top-side B.Cu corridors and an outboard x>290 approach to U7.  This

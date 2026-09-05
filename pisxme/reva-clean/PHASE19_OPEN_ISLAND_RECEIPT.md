@@ -137,6 +137,14 @@ Rejected as a full SATA pass.
   crossings, zero focused shorting records; rejected pending side-row
   dogbone repair and SATA regeneration.
 - This is a new orientation class, not a promotion or Phase 19 closure.
+### 2026-09-05 — source-order USB3 staircase and coordinated trials
+
+- Isolated `PHASE19_U7ROT270_USB_ORDERED12.kicad_pcb`: native DRC focused
+  result zero crossings and zero shorts.
+- Latest coordinated `PHASE19_COORDINATED_ORDERED19.kicad_pcb`: zero shorts,
+  two B.Cu crossings against SATA RX_P; rejected as an integrated ancestor.
+- Generator change: source-order staircase fanout with ordinary signal vias;
+  no architecture, stack, PCIe, or CM5 change.
 ### 2026-09-05 — U7 rotation-180 USB3 diagnostic
 
 - `PHASE19_U7ROT180_USB_VERTICAL1-drc.rpt`: 223 total records, two
