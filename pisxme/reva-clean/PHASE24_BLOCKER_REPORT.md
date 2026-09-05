@@ -1027,3 +1027,13 @@ shorts, one crossing), versus `201`/`397`/zero/zero on the current candidate.
 The experiment is not promoted; the next repair class must be a
 clearance-mapped, layer-owned return strategy or a schematic-authorized
 support change.
+
+## Incremental return repair — 2026-09-05
+
+`phase24_power_gnd_current_local.py` adds only the native-pad-center C5.2 to
+C6.2 same-net join on a disposable copy. Native DRC reports `201` total
+violations and `396` unconnected records, with no shorts or crossings. The
+integrated U5 audit plus its real-trace negative control and the
+authoritative-part audit remain passing. The candidate is the new bounded
+working step; broader ground collectors remain rejected until clearance and
+reference access are mapped per island.

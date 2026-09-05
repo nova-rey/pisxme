@@ -830,3 +830,9 @@ violations and `397` unconnected records, so full-board closure is still
 open. A fresh J7-derived CM5-ground launch/plane experiment was rejected:
 `264` violations, `397` unconnected records, four shorts, and one crossing.
 No severity or connection was waived.
+
+The next single-pair POWER_GND repair was derived from the saved candidate's
+actual C5/C6 pad centers. Native DRC reduced the unconnected census from
+`397` to `396` with no new shorts, crossings, or total-violation increase;
+the U5 native audit and its trace-removal negative control still pass. This
+is accepted incremental progress, not full-board closure.
