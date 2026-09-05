@@ -391,23 +391,28 @@
         (pin passive line
           (at -5.08 0 0)
           (length 3.81)
-          (name "SERVICE_USB2" (effects (font (size 1.27 1.27))))
+          (name "SERVICE_USB2_DP" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27)))))
         (pin passive line
           (at -5.08 -3 0)
           (length 3.81)
-          (name "SERVICE_VBUS_SENSE" (effects (font (size 1.27 1.27))))
+          (name "SERVICE_USB2_DM" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27)))))
         (pin passive line
           (at -5.08 -6 0)
           (length 3.81)
-          (name "SERVICE_RD" (effects (font (size 1.27 1.27))))
+          (name "SERVICE_VBUS_SENSE" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27)))))
         (pin passive line
           (at -5.08 -9 0)
           (length 3.81)
-          (name "SERVICE_GND" (effects (font (size 1.27 1.27))))
+          (name "SERVICE_RD" (effects (font (size 1.27 1.27))))
           (number "4" (effects (font (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -12 0)
+          (length 3.81)
+          (name "SERVICE_GND" (effects (font (size 1.27 1.27))))
+          (number "5" (effects (font (size 1.27 1.27)))))
       )
     )
 (symbol "PiSXMeRevAClean:USB2_UFP_CONNECTOR" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "J" (at 0 -12 0) (effects (font (size 1 1)))) (property "Value" "10171746-00021LF" (at 0 12 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "USB2_UFP_CONNECTOR_1_1" (rectangle (start -15 -10) (end 15 10) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 -6.25 180) (length 5) (name "USB2_DP" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))
@@ -422,44 +427,16 @@
 (symbol "PiSXMeRevAClean:USB2_RD_5K1" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes) (property "Reference" "J" (at 0 -12 0) (effects (font (size 1 1)))) (property "Value" "USB2_RD_5K1" (at 0 12 0) (effects (font (size 1 1)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes))) (symbol "USB2_RD_5K1_1_1" (rectangle (start -15 -10) (end 15 10) (stroke (width 0.254) (type default)) (fill (type background))) (pin passive line (at 20 -1.25 180) (length 5) (name "CC" (effects (font (size 1 1)))) (number "1" (effects (font (size 1 1)))))
 (pin passive line (at 20 1.25 180) (length 5) (name "SERVICE_GND" (effects (font (size 1 1)))) (number "2" (effects (font (size 1 1)))))) (embedded_fonts no)))
 
-  (hierarchical_label "SERVICE_USB2"
-    (shape bidirectional)
-    (at 5 10 180)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 50000000-0000-0000-0000-000000000320))
-  (hierarchical_label "SERVICE_VBUS_SENSE"
-    (shape bidirectional)
-    (at 5 13 180)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 50000000-0000-0000-0000-000000000321))
-  (hierarchical_label "SERVICE_RD"
-    (shape bidirectional)
-    (at 5 16 180)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 50000000-0000-0000-0000-000000000322))
-  (hierarchical_label "SERVICE_GND"
-    (shape bidirectional)
-    (at 5 19 180)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid 50000000-0000-0000-0000-000000000323))
-
-  (wire
-    (pts (xy 5 10) (xy 19.92 10))
-    (stroke (width 0) (type default))
-    (uuid a0000000-0000-0000-0000-000000000320))
-  (wire
-    (pts (xy 5 13) (xy 19.92 13))
-    (stroke (width 0) (type default))
-    (uuid a0000000-0000-0000-0000-000000000321))
-  (wire
-    (pts (xy 5 16) (xy 19.92 16))
-    (stroke (width 0) (type default))
-    (uuid a0000000-0000-0000-0000-000000000322))
-  (wire
-    (pts (xy 5 19) (xy 19.92 19))
-    (stroke (width 0) (type default))
-    (uuid a0000000-0000-0000-0000-000000000323))
-
+  (hierarchical_label "SERVICE_USB2_DP" (shape bidirectional) (at 5 10 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid 50000000-0000-0000-0000-000000000320))
+  (hierarchical_label "SERVICE_USB2_DM" (shape bidirectional) (at 5 13 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid 50000000-0000-0000-0000-000000000324))
+  (hierarchical_label "SERVICE_VBUS_SENSE" (shape bidirectional) (at 5 16 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid 50000000-0000-0000-0000-000000000321))
+  (hierarchical_label "SERVICE_RD" (shape bidirectional) (at 5 19 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid 50000000-0000-0000-0000-000000000322))
+  (hierarchical_label "SERVICE_GND" (shape bidirectional) (at 5 22 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid 50000000-0000-0000-0000-000000000323))
+  (wire (pts (xy 5 10) (xy 19.92 10)) (stroke (width 0) (type default)) (uuid a0000000-0000-0000-0000-000000000320))
+  (wire (pts (xy 5 13) (xy 19.92 13)) (stroke (width 0) (type default)) (uuid a0000000-0000-0000-0000-000000000324))
+  (wire (pts (xy 5 16) (xy 19.92 16)) (stroke (width 0) (type default)) (uuid a0000000-0000-0000-0000-000000000321))
+  (wire (pts (xy 5 19) (xy 19.92 19)) (stroke (width 0) (type default)) (uuid a0000000-0000-0000-0000-000000000322))
+  (wire (pts (xy 5 22) (xy 19.92 22)) (stroke (width 0) (type default)) (uuid a0000000-0000-0000-0000-000000000323))
   (symbol
     (lib_id "PiSXMeRevAClean:SERVICE_Contract")
     (at 25 10 0)
@@ -482,9 +459,10 @@
       (at 25 10 0)
       (effects (font (size 1.27 1.27)) (hide yes)))
     (pin "1" (uuid 90000000-0000-0000-0000-000000000320))
-    (pin "2" (uuid 90000000-0000-0000-0000-000000000321))
-    (pin "3" (uuid 90000000-0000-0000-0000-000000000322))
-    (pin "4" (uuid 90000000-0000-0000-0000-000000000323))
+    (pin "2" (uuid 90000000-0000-0000-0000-000000000324))
+    (pin "3" (uuid 90000000-0000-0000-0000-000000000321))
+    (pin "4" (uuid 90000000-0000-0000-0000-000000000322))
+    (pin "5" (uuid 90000000-0000-0000-0000-000000000323))
 
     (instances (project "PiSXMe_RevA_Clean"
       (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000008" (reference "X8" ) (unit 1))))

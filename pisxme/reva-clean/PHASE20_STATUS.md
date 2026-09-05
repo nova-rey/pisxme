@@ -1,7 +1,7 @@
 # Phase 20 status — SERVICE USB2
 
 Date: 2026-09-05
-Status: IN PROGRESS — authoring-path repair required
+Status: IN PROGRESS — hierarchy repaired; board-side SERVICE routing remains open
 
 Phase 19 remains accepted at commit `42d3654` with the moved-U7 coordinated
 storage artifact. Phase 20 has not passed.
@@ -13,8 +13,8 @@ the corrected SERVICE island mapping:
 
 | Net | Native endpoints |
 |---|---|
-| `/SERVICE/SERVICE_USB2_DP` | J4.1, U8.1 |
-| `/SERVICE/SERVICE_USB2_DM` | J4.2, U8.2 |
+| `/CORE_CM5/SERVICE_USB2_DP` | J4.1, J7.105, U8.1 |
+| `/CORE_CM5/SERVICE_USB2_DM` | J4.2, J7.103, U8.2 |
 | `/SERVICE/SERVICE_VBUS_SENSE` | J4.3 |
 | `/SERVICE/SERVICE_RD_A` | J4.5, R1.1 |
 | `/SERVICE/SERVICE_RD_B` | J4.6, R2.1 |
@@ -23,7 +23,7 @@ the corrected SERVICE island mapping:
 The board-side materialization script applies the manufacturer footprint alias
 map to J4 and assigns J7.103 = USB2_DM and J7.105 = USB2_DP. The mapping is
 reproducible in `phase20_apply_service_authority.py` and the corrected native
-export is `phase20-materialize.xml`.
+export is `phase20-production.net`.
 
 ## Current failed proof
 
@@ -34,16 +34,16 @@ contains the inherited acreage debt and the first routing trials add
 source/pad-field crossings. Those trials are rejected and are not Phase 20
 evidence.
 
-Native schematic ERC also reports root-side hierarchical sheet-pin and
-dangling-wire errors. The root contains separate `CORE_CM5` and `SERVICE`
-hierarchical pins but no valid parent wiring that joins the SERVICE contract;
-the native netlist consequently does not carry the service net to J7. This is
-the next authoring-path defect to fix before another acreage route is promoted.
+Native schematic ERC still reports inherited root-side and unconnected-sheet
+pin debt, but the specific SERVICE hierarchy association is now represented
+correctly and carries the service nets to J7 in the native export.
 
 ## Next bounded continuation
 
-Repair the root hierarchy generically so the CORE_CM5 `SERVICE_USB2` contract
-and SERVICE sheet `SERVICE_USB2` pin are connected in native KiCad, then export
-again and require the J7 103/105 mapping to be represented by the normal
-materialization path. Only after that proof will a short open-acreage USB2
-route be attempted. No PCIe, storage, stack, or validation gate is relaxed.
+Complete the board-side SERVICE island from the corrected hierarchy. The
+current best primary escape is
+`PHASE20_SERVICE_PADFIELD_DETOUR.kicad_pcb`: it has no SERVICE USB2
+`shorting_items` or `tracks_crossing` entries in the primary escape, but the
+USB-C duplicate A/B pads, VBUS aliases, RD resistors, and GND return still
+need explicit completion. No PCIe, storage, stack, or validation gate is
+relaxed.
