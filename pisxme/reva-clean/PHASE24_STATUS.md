@@ -979,3 +979,13 @@ unconnected items). Adjacent J7/ESD pad-field escapes and west-edge launch
 lanes collided with neighboring power/storage copper. This hand-authored
 compact route is rejected; the next Ethernet attempt must adapt the official
 CM5IO escape topology or use obstacle-aware routing.
+
+The next Ethernet experiment adapted the validated rotated-west CM5IO escape
+(`phase24_regen_selected_ethernet_cm5io.py`) to the selected macro placement.
+It improved the native refilled result to `384` violations, `18` shorting
+items, `10` crossings, and `425` unconnected items, but is still rejected.
+The remaining failures are concrete: copied J7 exit vias intersect the other
+F.Cu source corridors, west-edge MagJack approach lanes enter adjacent
+through-hole pads, and one existing SERVICE route crosses a new B.Cu lane.
+The official topology is therefore directionally useful but its coordinates
+must be regenerated against the live board's actual pad/obstacle geometry.

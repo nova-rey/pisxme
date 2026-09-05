@@ -1171,3 +1171,11 @@ hand-authored J7/ESD and west-edge launch segments collided with adjacent pad
 fields and existing power/storage copper. This is a rejected route class, not
 a macro-placement verdict. Further work should adapt the official CM5IO
 escape geometry or use obstacle-aware routing with actual pad/zone clearance.
+
+The CM5IO-derived rotated-west transplant improved the Ethernet result but
+did not pass native refilled DRC (`384` violations; `18` shorting items; `10`
+crossings; `425` unconnected items). It is rejected because fixed oracle lane
+coordinates collide with live J7 exits, adjacent MagJack through-hole pads,
+and one SERVICE corridor. The architecture and mapping remain valid; the
+next attempt must preserve the split-layer topology while solving exact live
+pad-field and obstacle clearance.
