@@ -1037,6 +1037,15 @@ The corrected U5 pair sweep found no additional promoting pair join. C44/C45
 and C46/C47 are individually DRC-clean but leave the native open census at
 `396`; the remaining U5 issue is a clearance-safe island-to-return launch.
 
+## U7 clock pad ownership correction — 2026-09-05
+
+Native netlist authority assigns U7.52/U7.53/U7.54 to XI/VSSOSC/XO, while
+the prior PCB serialized those pads as no-net. The corrected disposable
+candidate records those exact net identities and passes native DRC with
+`394` unconnected records and zero shorts/crossings. This closes the mapping
+defect only; the clock-support copper still requires a complete routed,
+native-validated graph.
+
 ## Incremental return repair — 2026-09-05
 
 `phase24_power_gnd_current_local.py` adds only the native-pad-center C5.2 to

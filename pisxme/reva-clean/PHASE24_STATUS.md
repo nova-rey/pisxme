@@ -855,6 +855,12 @@ shorts but created SATA crossings, and a local early-via variant removed
 crossings but raised native DRC from `201` to `207` without reducing the
 `396` open census. No CFG copper was promoted.
 
+The next source-authority correction assigns U7 pads 52/53/54 from the
+native schematic netlist to `BRIDGE_XI`, `BRIDGE_VSSOSC`, and `BRIDGE_XO`.
+Native DRC on the RX-N-improved basis reports `394` unconnected records with
+zero shorts/crossings. This is a required pad-ownership correction; clock
+routes are still absent and the candidate is not yet promoted to closure.
+
 The current storage repair class is the native U7 SATA RX-N pad-field stitch.
 All five repeated U7 RX-N pads now connect through the saved PCB's actual
 tracks/vias to U7.59/C33.2. Native DRC reports `201` total violations and
