@@ -43,6 +43,23 @@ footprints, MPN/provenance fields, and net ownership for the EDAC CT network,
 LED current limiting, and shield return, while reconciling the bundled LED
 hierarchical contract. After native ERC/netlist/parity validation, the PCB
 support island may be regenerated from those saved nets.
+
+## Disposable native schematic proof
+
+`phase24_ethernet_support_fixture.py` creates a disposable child/root pair
+without editing production sources. The fixture uses ordinary `C48-C52` and
+`R26-R31` references and explicitly marks its MPN fields
+`PROVISIONAL_NOT_PROCUREMENT_AUTHORITY`; it proves topology only.
+
+Native KiCad 10.0.5 root ERC reports `Errors 0`. The exported netlist proves
+all four J2 center taps reach their own capacitor, each capacitor reaches its
+own 75 ohm resistor, all four resistors meet at `ETH_CT_COMMON`, C52 reaches
+the J2 shield net, and both LED cathodes have 470 ohm series resistors. The
+regression is `validation/phase24/test_ethernet_support_schematic_fixture.py`.
+
+This fixture closes the authoring/topology discriminator only. The LED source
+nets still require production hierarchy mapping to the authoritative CM5
+Ethernet LED pads 15 and 17; no PCB promotion is implied by this fixture.
 No historical PCB-only `ETH_CT_BRANCH_*`, `ETH_CT_COMMON`, `CCT*`, or `RCT*`
 objects are promoted as production authority.
 

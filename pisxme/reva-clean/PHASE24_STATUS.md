@@ -1085,3 +1085,9 @@ The audit also found that the child/root hierarchy exposes one bundled
 `GBE_LED` contract while the connector has four local LED nets. That interface
 must be resolved in the same schematic repair; no four-net CM5 LED mapping is
 being inferred from the donor.
+
+The disposable native support fixture now passes root ERC with zero errors and
+the saved netlist contains the complete EDAC CT branch/common/shield topology
+and 470 ohm LED series elements. It deliberately uses provisional MPN fields
+and is topology evidence only; production hierarchy mapping and procurement
+authority remain open.
