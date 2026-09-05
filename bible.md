@@ -4142,3 +4142,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Rejected the live-pad east-ESD/west-J2 Ethernet routing discriminator at 569 violations, 131 unconnected records, 34 shorts, and 28 crossings; retained west-outboard ESD with isolated corridors as the next experiment.
 2026-09-05: Corrected the ETH_WEST study for native CM5 body clearance by generating an outboard U6/U9 placement at (20,104)/(26,104); retained it as a disposable candidate pending complete regenerated routing.
 2026-09-05: Rejected the first west-outboard live-pad route at 458 violations, 137 unconnected records, 5 shorts, and 4 crossings; retained the mechanically valid placement and isolated ESD/connector fanout for refinement.
+2026-09-05: Closed the west-outboard hand-route orientation sweep without promotion: ESD rotations 0/180 yielded 468/141/5/8 and 456/143/7/4; next continuation requires obstacle-aware or reference-derived pad escape.

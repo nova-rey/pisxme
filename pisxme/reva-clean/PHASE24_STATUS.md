@@ -781,3 +781,10 @@ unconnected records, five shorts, and four crossings. Focused failures are
 local U6/U9 pad-field fanout and MagJack support-pad approach geometry. The
 route is rejected, while the mechanically valid placement remains the basis
 for an orientation/escape refinement.
+
+An orientation sweep of the same west-outboard hand-routed class was also
+run. ESD rotations 0 and 180 with J2 rotation 0 produced respectively 468/141/5/8
+and 456/143/7/4 (total DRC/unconnected/shorts/crossings). Neither passes;
+the remaining defects are concentrated in the ESD pad-field and MagJack
+launch. This class is closed for now in favor of an obstacle-aware/reference
+pad-escape authoring method.

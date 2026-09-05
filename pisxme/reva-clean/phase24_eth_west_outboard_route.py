@@ -14,7 +14,7 @@ def route(b,n,pts,l):
 def via(b,n,p):
  q=pcbnew.PCB_VIA(b); q.SetPosition(V(*p)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(n); b.Add(q)
 b=pcbnew.LoadBoard(str(BASE))
-for r,p,o in [('U9',(26,104),-90),('U6',(20,104),-90),('J2',(15,145),0)]:
+for r,p,o in [('U9',(26,104),180),('U6',(20,104),180),('J2',(15,145),0)]:
  f=b.FindFootprintByReference(r); f.SetPosition(V(*p)); f.SetOrientationDegrees(o)
 M={'TD3_P':('J7','3','U9','5','J2','9'),'TD3_N':('J7','5','U9','4','J2','10'),
    'TD2_N':('J7','9','U9','2','J2','8'),'TD2_P':('J7','11','U9','1','J2','7'),

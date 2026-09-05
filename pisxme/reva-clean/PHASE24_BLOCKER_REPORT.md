@@ -983,3 +983,9 @@ five shorts, and four crossings. The remaining focused defects are local
 ESD pad-field fanout and connector launch/support approach geometry. The
 placement remains mechanically credible; the next refinement changes ESD
 orientation and connector-side fanout rather than abandoning the island.
+
+The ESD-orientation sweep did not close the gate. Native results were
+468/141/5/8 for ESD rotation 0 and 456/143/7/4 for ESD rotation 180, with
+fields ordered total DRC/unconnected/shorts/crossings. Further hand-routed
+coordinate tweaks are rejected as same-class thrashing; the next continuation
+must use an obstacle-aware or reference-derived pad escape.
