@@ -22,7 +22,8 @@ Generated from `PHASE20_SERVICE_RD_OUTER_REFILLED.kicad_pcb` with KiCad pcbnew.
 
 ## Progress
 
-The reset tie, three PG nets, both VCAP nets, and bridge 3V3 FB island are now
-routed in `PHASE21_CONTROLS_FB3V3_REFILLED.kicad_pcb`. The remaining
-zero-track control classes are the two power-input gate nets and the bridge
-1V1 FB/RT plus bridge 3V3 RT nets.
+The complete control set is routed in
+`PHASE21_CONTROLS_REGULATOR_CONTROLS_GATES.kicad_pcb`; the zero-track counts
+above describe the inherited Phase 20 source inventory, not the promoted
+candidate. The candidate completes the two power-input gates and bridge 1V1
+FB/RT plus bridge 3V3 RT while retaining the prior reset/PG/VCAP/FB repairs.

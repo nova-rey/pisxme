@@ -16,14 +16,18 @@ Phase 21 routing must keep these nets local, use only F.Cu/B.Cu ordinary
 routing, avoid high-speed/regulator switch-node exposure, and preserve the
 validated PCIe, USB3, SATA, Ethernet, and SERVICE artifacts.
 
-The current coordinated candidate is
-`PHASE21_CONTROLS_FB3V3_REFILLED.kicad_pcb`. It contains passing local repairs for the
-U7 reset tie, bridge 3V3 PG, bridge 1V1 PG, CM5 5V PG, and both LM74700 VCAP
-connections, plus the bridge-3V3 FB island. Native DRC reports 183 violations
-with no new focused
-short/crossing/width/clearance class. Gate/VCAP and remaining regulator
-FB/RT/control routes still require completion; no Phase 21 closure is claimed
-yet.
+The accepted coordinated candidate is
+`PHASE21_CONTROLS_REGULATOR_CONTROLS_GATES.kicad_pcb`. It carries forward the
+accepted reset, PG, VCAP, and bridge-3V3 FB repairs, then completes bridge
+3V3/1V1 RT and FB controls and both LM74700 gate nets. The gate FETs were
+relocated as coherent local control blocks; their electrical nets and power
+topology are unchanged. Native KiCad DRC reports 187 violations, with zero
+`shorting_items`, `tracks_crossing`, `track_width`, or `pth_inside_courtyard`.
+The focused delta is inherited mechanical and warning residue only. The
+regression test `validation/phase3/test_phase21_control_candidate.py` checks
+all required control endpoints and the focused DRC census.
+
+Phase 21 is CLOSED for progression to Phase 22.
 
 The separate gate-corridor experiment `PHASE21_CONTROLS_VCAP_GATES.kicad_pcb`
 is rejected: its long B.Cu routes intersect existing protected-12-V copper
