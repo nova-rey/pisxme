@@ -1256,6 +1256,22 @@ six crossings against the relocated U7/SATA launch. This is a local support
 routing defect, not evidence against moving U7/J3 or the USB3/SATA
 architecture. Phase 19 remains open pending a clean full-support candidate.
 
+## 2026-09-05 consultant-reviewed clock-bus transplant
+
+The consultant review identified the clock failure as a generic authoring
+defect: direct row-parallel U7 escapes and shared support waypoints do not
+preserve the 52/53/54 pin order or pad clearance. A separated-clock-bus
+transplant was attempted on the clean focused U7/J3 relocation. The first
+implementation used distinct B.Cu trunks but those trunks crossed at their
+support return corridor; a second implementation with static native
+coordinates reduced the class but still measured three shorts and seven
+crossings in `PHASE19_RELOC_U270J190_COORD23_FULL.kicad_pcb`.
+
+This candidate is rejected. The focused USB3+SATA result remains valid at
+zero shorts and zero crossings. No Phase 18 PCIe ancestor or storage
+architecture was changed; the next iteration must use a genuinely separated
+clock support placement/layer schedule, not another shared waypoint.
+
 ## 2026-09-05 oscillator-support follow-up
 
 `PHASE19_RELOC_U270J190_COORD22_FULL.kicad_pcb` corrected the first clock

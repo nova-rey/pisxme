@@ -313,7 +313,7 @@ def main():
     if bn == 'BRIDGE_SATA_RX_N':
      seg(b,bridge,a,cp['2'],pcbnew.F_Cu)
     else:
-     e=(a[0]-3.0,a[1]-1.0)
+     e=(a[0]-3.0,a[1])
      seg(b,bridge,a,e,pcbnew.F_Cu); via(b,bridge,e); seg(b,bridge,e,cap_via,pcbnew.B_Cu); via(b,bridge,cap_via); seg(b,bridge,cap_via,cp['2'],pcbnew.F_Cu)
    # Keep each SATA pair on one signal layer.  The positive lane uses the
    # right-hand corridor and the negative lane the left-hand corridor; the
@@ -368,18 +368,21 @@ def main():
  for pn,nm in (('52','/STORAGE/BRIDGE_XI'),('53','/STORAGE/BRIDGE_VSSOSC'),('54','/STORAGE/BRIDGE_XO')): setpad(pad(u,pn),N[nm])
  Y={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('Y1').Pads()}; R23={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('R23').Pads()}; C42={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('C42').Pads()}; C43={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('C43').Pads()}
  xi,xo,vs=N['/STORAGE/BRIDGE_XI'],N['/STORAGE/BRIDGE_XO'],N['/STORAGE/BRIDGE_VSSOSC']
- # Keep the oscillator island above the relocated SATA launch.  Each net
- # uses a disjoint monotonic F.Cu corridor; no via-in-pad is introduced.
- seg(b,xi,U['52'],C(270,103)); seg(b,xi,C(270,103),C(270,98)); seg(b,xi,C(270,98),R23['1'])
- seg(b,xi,Y['1'],C(270,98)); seg(b,xi,C42['1'],C(270,94)); seg(b,xi,C(270,94),C(270,98))
- seg(b,xo,U['54'],C(274,103)); seg(b,xo,C(274,103),C(274,98)); seg(b,xo,C(274,98),R23['2'])
- seg(b,xo,Y['3'],C(274,98)); seg(b,xo,C43['1'],C(274,98))
- seg(b,vs,U['53'],C(266,103)); seg(b,vs,C(266,103),C(266,92)); seg(b,vs,C(266,92),C42['2'])
- seg(b,vs,Y['2'],C(266,92)); seg(b,vs,Y['4'],C(266,92)); seg(b,vs,C43['2'],C(278,92)); seg(b,vs,C(278,92),C(266,92))
+ # Clock island: escape the live U7 row to distinct B.Cu corridors, then
+ # use short F.Cu dogbones into the support pads. Coordinates are the
+ # native serialized locations for the selected U7/J3 relocation.
+ seg(b,xi,U['52'],(263,102)); via_sig(b,xi,(263,102)); seg(b,xi,(263,102),(263,70),pcbnew.B_Cu); seg(b,xi,(263,70),(261,70),pcbnew.B_Cu); via_sig(b,xi,(261,70)); seg(b,xi,(261,70),R23['1'],pcbnew.F_Cu)
+ seg(b,xi,C42['1'],(261,62)); via_sig(b,xi,(261,62)); seg(b,xi,(261,62),(261,70),pcbnew.B_Cu)
+ seg(b,xi,Y['1'],(255,67)); seg(b,xi,(255,67),(261,70),pcbnew.F_Cu)
+ seg(b,xo,U['54'],(260,103)); via_sig(b,xo,(260,103)); seg(b,xo,(260,103),(260,72),pcbnew.B_Cu); seg(b,xo,(260,72),(266,72),pcbnew.B_Cu); via_sig(b,xo,(266,72)); seg(b,xo,(266,72),C43['1'],pcbnew.F_Cu); seg(b,xo,C43['1'],R23['2'],pcbnew.F_Cu); seg(b,xo,Y['3'],R23['2'],pcbnew.F_Cu)
+ seg(b,vs,U['53'],(258,102.5)); via_sig(b,vs,(258,102.5)); seg(b,vs,(258,102.5),(258,74),pcbnew.B_Cu); seg(b,vs,(258,74),(268,74),pcbnew.B_Cu); via_sig(b,vs,(268,74)); seg(b,vs,(268,74),C43['2'],pcbnew.F_Cu)
+ seg(b,vs,Y['2'],(255,74)); via_sig(b,vs,(255,74)); seg(b,vs,(255,74),(258,74),pcbnew.B_Cu)
+ seg(b,vs,Y['4'],(259,74)); via_sig(b,vs,(259,74)); seg(b,vs,(259,74),(258,74),pcbnew.B_Cu)
+ seg(b,vs,C42['2'],(262.5,62)); via_sig(b,vs,(262.5,62)); seg(b,vs,(262.5,62),(258,74),pcbnew.B_Cu)
  # FREQSEL0/1 and VDDIO high on the local 3V3 net; local short fanout.
  v33=b.FindNet('/STORAGE/BRIDGE_3V3')
  for pn in ('24','30','31'): setpad(pad(u,pn),v33)
- seg(b,v33,U['24'],C(297,106)); seg(b,v33,C(297,106),U['30']); seg(b,v33,C(297,106),U['31'])
+ seg(b,v33,U['24'],(287,106)); seg(b,v33,(287,106),U['30']); seg(b,v33,(287,106),U['31'])
  b.Save(str(OUT))
  # Remove only known donor duplicate net fields from U7 pads 5-12 in the
  # serialized footprint; this is the same deterministic cleanup used by the
