@@ -39,6 +39,10 @@ def main():
         exits={'XI':((123,134.5),(124,131.5)),
                'VS':((122.5,133.5),(122.5,130.5)),
                'XO':((122,132.5),(122,129.5))}
+        if tag=='nearwest':
+            exits={'XI':((123,134.5),(128,134.5)),
+                   'VS':((122.5,133.5),(122.5,130.5)),
+                   'XO':((122,134.0),(119,132.5))}
         for k in ('XI','VS','XO'):
             if tag=='nearwest' and k=='VS':
                 continue
@@ -51,7 +55,7 @@ def main():
             # The two ground/oscillator branches are on separate lanes and
             # terminate on opposite crystal pads, avoiding a shared corner.
             pads={'XI':xy(P(y,'1')),'VS':xy(P(y,'4')),'XO':xy(P(y,'3'))}
-            ordered={'XI':(124,126.0),'VS':(122.5,128.0),'XO':(122,131.5)}
+            ordered={'XI':(128,126.0),'VS':(122.5,128.0),'XO':(119,131.5)}
             for k in ('XI','XO'):
                 ex=exits[k][1]; lane=ordered[k]; end=pads[k]
                 S(k,ex,(lane[0],lane[1])); S(k,(lane[0],lane[1]),(end[0],lane[1])); S(k,(end[0],lane[1]),end)

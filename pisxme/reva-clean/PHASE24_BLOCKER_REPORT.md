@@ -215,3 +215,13 @@ near-west 0-degree/layer-split artifact reports 215 native DRC violations;
 remaining new defects are the U7-to-crystal source corridor and one inherited
 CM5 USB3 overlap. The prior 214 count is discarded. No acreage promotion or
 parity closure is claimed.
+
+## Mixed-layer ordered escape trial (rejected)
+
+The next class separated XI/XO onto B.Cu and kept VSSOSC on F.Cu, with an
+explicit ordered lane set and an underside Y1. The corrected artifact still
+reports 224 native DRC violations. Failures remain concentrated at the U7
+oscillator pad escape and inherited SATA-TX launch. The mixed-layer choice did
+not remove that local pad-field obstruction. Consultant/unblocker dispatch was
+retried but remains unavailable because the agent thread limit is exhausted;
+local analysis continues and this is not treated as an architectural block.

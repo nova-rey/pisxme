@@ -6,6 +6,8 @@ Rejected the 90-degree near-west crystal trial; explicit ordered three-lane esca
 
 Corrected the disposable clock sweep output-path bug; the fresh ordered layer-split rerun reports 215 DRC violations and remains rejected.
 
+Rejected mixed-layer ordered clock escape trial; local U7 oscillator/SATA pad-field obstruction remains and Phase24 stays active.
+
 ## 2026-08-30 — Phase 16 PCIe routing checkpoint
 
 - Added the native-loaded Phase 16 PCIe candidate and focused regression.
