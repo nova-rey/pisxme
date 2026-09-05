@@ -4057,3 +4057,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: rejected obstacle-aware passive router; all six paths were found but native DRC reported 29 shorts and 13 crossings, requiring branch-aware clock regeneration.
 2026-09-05 Phase24: rejected branch-to-existing-rail variant; native DRC reported 12 shorts and 9 crossings, requiring one coordinated clock graph.
 2026-09-05 Phase24: rejected five-position passive-island sweep; four placements had no conservative rail path and the best generated board had 322 native DRC violations.
+2026-09-05 Phase24: rejected multi-net graph-anchor sweep; all six branches were found but native DRC reported 10 shorts and 4 crossings, requiring layer-separated passive dogbones.

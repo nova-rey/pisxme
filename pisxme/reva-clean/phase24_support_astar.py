@@ -31,9 +31,9 @@ def main():
         for p,k in zip(f.Pads(),maps[ref]):
             p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode()); ls=pcbnew.LSET(); ls.AddLayer(pcbnew.B_Cu); p.SetLayerSet(ls)
     y=b.FindFootprintByReference('Y1')
-    # Attach branches to open points on the already validated B.Cu rails,
-    # not to the crystal pads. This keeps all passive fanout outside the
-    # four-pad Y1 field and makes the branch topology explicit.
+    # Attach branches to reachable points on the already validated B.Cu
+    # graphs, not to one guessed rail coordinate or directly to Y1 pads.
+    # Candidate selection below makes this a coordinated graph problem.
     targets={'XI':(104.0,127.75),'XO':(112.0,128.25),'VS':(118.0,135.0)}
     # Build a conservative B.Cu obstacle grid. Same-net copper is passable;
     # every other-net pad/track is forbidden, with the two endpoints exempted.
@@ -50,6 +50,13 @@ def main():
             if p.GetLayerSet().Contains(pcbnew.B_Cu) and p.GetNetCode() not in {n.GetNetCode() for n in nets.values()}:
                 q=xy(p); s=p.GetSize(); mark(q[0]-pcbnew.ToMM(s.x)/2-.18,q[0]+pcbnew.ToMM(s.x)/2+.18,q[1]-pcbnew.ToMM(s.y)/2-.18,q[1]+pcbnew.ToMM(s.y)/2+.18)
     reserved=set()
+    options={k:{targets[k]} for k in targets}
+    for t in b.GetTracks():
+        if t.GetLayer()!=pcbnew.B_Cu: continue
+        for k,n in nets.items():
+            if t.GetNetCode()==n.GetNetCode():
+                options[k].add((pcbnew.ToMM(t.GetStart().x),pcbnew.ToMM(t.GetStart().y)))
+                options[k].add((pcbnew.ToMM(t.GetEnd().x),pcbnew.ToMM(t.GetEnd().y)))
     def cell(q): return (round(q[0]/STEP),round(q[1]/STEP))
     def route(a,z):
         st=cell(a); goal=cell(z); q=[(0,st)]; prev={st:None}; cost={st:0}
@@ -67,7 +74,13 @@ def main():
         return list(reversed(path))
     for ref,f in fs.items():
         for p,k in zip(f.Pads(),maps[ref]):
-            a=xy(p); z=targets[k]; path=route(a,z); print(ref,p.GetNumber(),k,len(path))
+            a=xy(p); choices=[]
+            for z in options[k]:
+                try: choices.append((len(route(a,z)),z))
+                except RuntimeError: pass
+            if not choices: raise RuntimeError(f'no route {a} to any {k} graph point')
+            _,z=min(choices)
+            path=route(a,z); print(ref,p.GetNumber(),k,len(path),z)
             for u,v in zip(path,path[1:]):
                 seg(b,nets[k],(u[0]*STEP,u[1]*STEP),(v[0]*STEP,v[1]*STEP)); reserved.add(v)
     b.Save(str(OUT)); print(OUT)

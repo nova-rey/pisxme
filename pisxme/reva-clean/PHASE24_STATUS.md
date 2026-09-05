@@ -109,6 +109,11 @@ rejected by native DRC (380 violations: 29 shorts and 13 crossings). The
 remaining repair must regenerate the clock topology with branch reservations
 before adding passive fanout.
 
+The multi-net graph-anchor sweep found all six branch paths but was rejected
+by native DRC (271 violations: 10 shorts and 4 crossings). The next repair
+class is layer-separated passive dogbones with offset vias and short rail
+joins.
+
 A five-position coordinated-island sweep was also rejected: four placements
 had no conservative route to a rail anchor and the best generated board had
 322 native DRC violations. No candidate was promoted.

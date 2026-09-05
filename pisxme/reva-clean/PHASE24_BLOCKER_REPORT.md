@@ -368,6 +368,16 @@ crossings. This class is rejected. The next candidate must generate the
 complete clock island as one coordinated graph, including passive branches,
 before emitting any copper.
 
+## Multi-net graph-anchor sweep (rejected)
+
+The branch solver was upgraded to evaluate all existing same-net B.Cu graph
+points and reserve each selected path before the next branch. It found six
+candidate paths, but native DRC reported 271 violations including 10 shorts
+and 4 crossings; the selected anchors still lie inside the inherited
+crystal-field corridor. This class is rejected. The next implementation will
+use F.Cu passive dogbones and offset through-vias followed by short B.Cu rail
+joins, so branch copper does not enter the crystal pad field.
+
 ## Coordinated-island placement sweep (rejected)
 
 The branch router was parameterized and swept across five acreage placements
