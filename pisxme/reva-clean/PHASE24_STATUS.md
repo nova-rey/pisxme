@@ -1,5 +1,24 @@
 # Phase 24 acreage validation status
 
+## Corrected-basis Ethernet routing development — 2026-09-05
+
+The first complete eight-pair search candidate from
+`phase24_route_corrected_ethernet_mdi.py` is rejected. Its native DRC report
+(`PHASE24_CORRECTED_ETHERNET_MDI_ROUTE-drc.rpt`) found 925 violations and 438
+unconnected items, including real MDI-to-CT/LED/GND pad-field shorts. The
+initial false completion was caused by exempting all pads in endpoint
+footprints; the generator now models only the active source/target as a
+terminal and preserves every other endpoint pad as a copper obstacle.
+
+With that correction, the same routing class fails to find a legal path for
+the next pair after the first four pairs are placed. This is a
+`ROUTE IMPLEMENTATION FAILURE`, not a macro-placement verdict: the search
+model is conservative around the dense MagJack field and needs an explicit
+connector-orientation/escape topology. No severity was changed, no crossing
+was waived, and no rejected copper was promoted. The next experiment will
+retain the corrected macro basis and test the connector launch orientation
+and native pad-field escape before any full-board claim.
+
 ## Corrected macro basis native screen — 2026-09-05
 
 `PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb` is the current disposable
