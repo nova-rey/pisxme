@@ -4054,3 +4054,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: corrected the clock-fixture receipt: native DRC is clean for the checked source graph, but the legacy fixture omits some passive branch routing and is not support-topology closure.
 2026-09-05 Phase24: rejected strict complete clock fixture; generic three-bus geometry produced 5 crossings, 4 shorts, and 8 disconnected pads, requiring serialized pad-field routing.
 2026-09-05 Phase24: rejected launch-height refinement; native DRC still found 8 B.Cu crossings, so the next class is an obstacle-mapped proven support transplant.
+2026-09-05 Phase24: rejected obstacle-aware passive router; all six paths were found but native DRC reported 29 shorts and 13 crossings, requiring branch-aware clock regeneration.

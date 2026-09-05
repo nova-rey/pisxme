@@ -103,3 +103,8 @@ Y1 pad field rather than assume a generic three-bus geometry.
 The subsequent launch-height refinement remained invalid (9 native DRC
 violations, including 8 crossings). It is rejected; the next candidate must
 use an obstacle-mapped proven support template.
+
+The first obstacle-aware passive router found all six passive paths but was
+rejected by native DRC (380 violations: 29 shorts and 13 crossings). The
+remaining repair must regenerate the clock topology with branch reservations
+before adding passive fanout.

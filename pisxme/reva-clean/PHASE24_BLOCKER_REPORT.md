@@ -348,3 +348,12 @@ violations, including 8 B.Cu perimeter crossings and 8 isolated non-clock
 U7 pads. It improved the prior shorts but did not produce a valid complete
 fixture. The next credible class is an obstacle-mapped transplant of a proven
 routed support template, not further generic Manhattan bus tuning.
+
+## Obstacle-aware passive-router attempt (rejected)
+
+`phase24_support_astar.py` routed each R23/C42/C43 pad toward its matching
+serialized Y1 endpoint while treating other-net copper as an obstacle. The
+router found all six paths, but native DRC reported 380 violations, including
+29 shorts and 13 crossings. The candidate is rejected: endpoint targeting at
+the dense Y1 field is insufficient without a branch-aware regenerated clock
+topology.
