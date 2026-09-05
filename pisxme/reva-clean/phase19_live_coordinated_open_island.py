@@ -25,7 +25,10 @@ USB_TOP_EAST=ARGS.get('P19_USB_TOP_EAST',os.environ.get('P19_USB_TOP_EAST','0'))
 USB_PAIR_SPLIT=ARGS.get('P19_USB_PAIR_SPLIT',os.environ.get('P19_USB_PAIR_SPLIT','0'))=='1'
 USB_VERTICAL=ARGS.get('P19_USB_VERTICAL',os.environ.get('P19_USB_VERTICAL','0'))=='1'
 USB_ORDERED=ARGS.get('P19_USB_ORDERED',os.environ.get('P19_USB_ORDERED','0'))=='1'
+USB_ORDERED_ORACLE=ARGS.get('P19_USB_ORDERED_ORACLE',os.environ.get('P19_USB_ORDERED_ORACLE','0'))=='1'
+USB_WIDE=ARGS.get('P19_USB_WIDE',os.environ.get('P19_USB_WIDE','0'))=='1'
 USB_SPLIT=ARGS.get('P19_USB_SPLIT',os.environ.get('P19_USB_SPLIT','0'))=='1'
+KEEP_STORAGE=ARGS.get('P19_KEEP_STORAGE',os.environ.get('P19_KEEP_STORAGE','0'))=='1'
 U7ROT=int(ARGS.get('P19_U7_ROT',os.environ.get('P19_U7_ROT','270')))
 U7X=float(ARGS.get('P19_U7_X',os.environ.get('P19_U7_X','280')))
 U7Y=float(ARGS.get('P19_U7_Y',os.environ.get('P19_U7_Y','105')))
@@ -57,14 +60,9 @@ def via_sig(b,n,p):
 def strip_old(b):
  for t in list(b.GetTracks()):
   n=t.GetNetname()
-  if any(x in n for x in ('CM5_USB3','BRIDGE_SATA','SATA_M2','BRIDGE_XI','BRIDGE_XO','BRIDGE_VSSOSC','BRIDGE_3V3')):
+  targets=('CM5_USB3',) if KEEP_STORAGE else ('CM5_USB3','BRIDGE_SATA','SATA_M2','BRIDGE_XI','BRIDGE_XO','BRIDGE_VSSOSC','BRIDGE_3V3')
+  if any(x in n for x in targets):
    b.Remove(t)
- for v in list(b.Tracks()):
-  if not isinstance(v,pcbnew.PCB_VIA):
-   continue
-  n=v.GetNetname()
-  if any(x in n for x in ('CM5_USB3','BRIDGE_SATA','SATA_M2','BRIDGE_XI','BRIDGE_XO','BRIDGE_VSSOSC','BRIDGE_3V3')):
-   b.Remove(v)
 def setpad(p,n): p.SetNet(n); p.SetNetCode(n.GetNetCode())
 def main():
  if PREP:
@@ -74,17 +72,19 @@ def main():
   u.SetPosition(V(U7X,U7Y)); u.SetOrientationDegrees(U7ROT)
   j.SetPosition(V(J3X,J3Y)); j.SetOrientationDegrees(270 if SATA270 else 90)
   old_mech=b.FindFootprintByReference('MECH_M2_2280')
-  if old_mech is not None: b.Remove(old_mech)
+  if old_mech is not None and not KEEP_STORAGE: b.Remove(old_mech)
   # This donor already carries clean C30-C33 clock-candidate objects.
   _caps=({'C30':(U7X-40,U7Y+5),'C31':(U7X-40,U7Y+3),'C32':(U7X-40,U7Y+9),'C33':(U7X-40,U7Y+7)} if SATA270 else {'C30':(U7X-15,U7Y-9),'C31':(U7X-15,U7Y-5),'C32':(U7X-15,U7Y+3),'C33':(U7X-15,U7Y+7)})
-  for ref,(x,y) in _caps.items():
-   f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(0 if SATA270 else 180)
+  if not KEEP_STORAGE:
+   for ref,(x,y) in _caps.items():
+    f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(0 if SATA270 else 180)
   # Put the low-profile clock island in open south acreage, clear of the
   # relocated U7/SATA launch.  The placement remains relative to U7/J3.
-  for ref,xyv in {'Y1':(U7X-120,U7Y-45),'R23':(U7X-116,U7Y-45),'C42':(U7X-116,U7Y-49),'C43':(U7X-112,U7Y-45)}.items():
-   f=b.FindFootprintByReference(ref)
-   if f is None: raise RuntimeError('clock donor missing '+ref)
-   f.SetPosition(V(*xyv)); f.SetOrientationDegrees(0)
+  if not KEEP_STORAGE:
+   for ref,xyv in {'Y1':(U7X-120,U7Y-45),'R23':(U7X-116,U7Y-45),'C42':(U7X-116,U7Y-49),'C43':(U7X-112,U7Y-45)}.items():
+    f=b.FindFootprintByReference(ref)
+    if f is None: raise RuntimeError('clock donor missing '+ref)
+    f.SetPosition(V(*xyv)); f.SetOrientationDegrees(0)
   strip_old(b); b.Save(str(SYNC)); print(SYNC); return
  b=pcbnew.LoadBoard(str(SYNC))
  caps={ref:b.FindFootprintByReference(ref) for ref in ('C30','C31','C32','C33')}
@@ -112,6 +112,54 @@ def main():
     # Source-order monotonic escape: J7 pads serialize RX_N, RX_P, TX_N,
     # TX_P from low to high y.  Preserve that order through the initial
     # breakout, then use separated pair corridors and serialized U7 pad x.
+    if USB_WIDE:
+     # Wide-acreage split: keep the RX pair on an upper B.Cu lane and TX on
+     # a lower F.Cu lane.  Both pairs approach the U7 USB edge from outside
+     # the SATA launch, so the USB/SATA pad fields do not share a corridor.
+     wide={
+      'CM5_USB3_RX_N':((74.0,70.0),(276.0,70.0),(276.0,108.0),(276.0,108.0)),
+      'CM5_USB3_RX_P':((84.0,72.0),(278.0,72.0),(278.0,106.0),(278.0,106.0)),
+      'CM5_USB3_TX_N':((90.0,150.0),(280.0,150.0),(280.0,104.0),(280.0,104.0)),
+      'CM5_USB3_TX_P':((86.0,152.0),(282.0,152.0),(282.0,102.0),(282.0,102.0))}
+     launch=(71.2,s[1]); seg(b,n,s,launch)
+     first={'CM5_USB3_RX_N':(74.0,103.9),'CM5_USB3_RX_P':(84.0,104.3),
+            'CM5_USB3_TX_N':(90.0,106.3),'CM5_USB3_TX_P':(86.0,106.7)}[suffix]
+     seg(b,n,launch,first,pcbnew.F_Cu); seg(b,n,first,wide[suffix][0],pcbnew.F_Cu)
+     if suffix.startswith('CM5_USB3_RX_'):
+      via(b,n,wide[suffix][0]); layer=pcbnew.B_Cu
+     else: layer=pcbnew.F_Cu
+     seg(b,n,wide[suffix][0],wide[suffix][1],layer)
+     seg(b,n,wide[suffix][1],wide[suffix][2],layer)
+     if suffix.startswith('CM5_USB3_RX_'):
+      via(b,n,wide[suffix][3]); seg(b,n,wide[suffix][3],d,pcbnew.F_Cu)
+     else: seg(b,n,wide[suffix][3],d,pcbnew.F_Cu)
+     continue
+    if USB_ORDERED_ORACLE:
+     # Transplant the proven ordered12 escape: preserve the CM5/J7-side
+     # serialization exactly, translate only the U7-side x coordinates from
+     # the old U7=(280,105) to the live U7=(270,105), and widen the two
+     # final F.Cu dogbones around the ordinary 0.50/0.30-mm vias.
+     oracle={
+      'CM5_USB3_RX_N':([(74.0,80.0),(266.0,80.0),(266.0,108.0),(266.5,108.0)],(266.5,108.0)),
+      'CM5_USB3_RX_P':([(84.0,82.0),(264.0,82.0),(264.0,106.0),(271.5,106.0)],(271.5,106.0)),
+      'CM5_USB3_TX_N':([(90.0,118.0),(260.0,118.0),(260.0,104.0),(270.5,104.0)],(270.5,104.0)),
+      'CM5_USB3_TX_P':([(86.0,120.0),(80.0,120.0),(80.0,102.0),(273.0,102.0)],(273.0,102.0))}
+     launch=(71.2,s[1]); seg(b,n,s,launch)
+     first={'CM5_USB3_RX_N':(74.0,103.9),'CM5_USB3_RX_P':(84.0,104.3),
+            'CM5_USB3_TX_N':(90.0,106.3),'CM5_USB3_TX_P':(86.0,106.7)}[suffix]
+     pre=first
+     seg(b,n,launch,pre,pcbnew.F_Cu)
+     if suffix in ('CM5_USB3_RX_N','CM5_USB3_RX_P','CM5_USB3_TX_N','CM5_USB3_TX_P'):
+      if suffix == 'CM5_USB3_RX_N': seg(b,n,pre,(74.0,80.0),pcbnew.F_Cu)
+      elif suffix == 'CM5_USB3_RX_P': seg(b,n,pre,(84.0,82.0),pcbnew.F_Cu)
+      elif suffix == 'CM5_USB3_TX_N': seg(b,n,pre,(90.0,118.0),pcbnew.F_Cu)
+      else: seg(b,n,pre,(86.0,120.0),pcbnew.F_Cu)
+      via(b,n,oracle[suffix][0][0])
+      pts=oracle[suffix][0]
+      for a,z in zip(pts,pts[1:]): seg(b,n,a,z,pcbnew.B_Cu)
+      via(b,n,oracle[suffix][1])
+      seg(b,n,oracle[suffix][1],d,pcbnew.F_Cu)
+     continue
     first={'CM5_USB3_RX_N':(74.0,103.9),'CM5_USB3_RX_P':(82.0,104.3),
            'CM5_USB3_TX_N':(90.0,118.0),'CM5_USB3_TX_P':(98.0,120.0)}[suffix]
     lane_y=({'CM5_USB3_RX_N':80.0,'CM5_USB3_RX_P':82.0,

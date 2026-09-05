@@ -1457,3 +1457,27 @@ The ordered branch was also regenerated directly at U7 `(280,105)` / J3
 USB/storage corridor crossings and a U7 support clearance; USB3 skew was
 approximately 0.10 mm RX and 44.70 mm TX. This confirms the old artifact is
 not a current-rule transplant oracle.
+
+## 2026-09-05 current-rule ordered transplant and wide-acreage split
+
+The authoring path was corrected so its cleanup routine iterates KiCad 10's
+native `GetTracks()` collection for both tracks and vias. This was a generic
+generator defect exposed before candidate validation, not a design result.
+
+The ordered12 USB3 escape was then transplanted into the clean coordinated
+U7/J3 SATA oracle while preserving the live SATA and clock copper. The first
+transplant retained the CM5/J7 source serialization and translated only the
+U7-side coordinates from `(280,105)` to `(270,105)`, upgrading all vias to the
+current ordinary-through-via rule of 0.50 mm finished diameter / 0.30 mm drill.
+Native DRC found no inherited-baseline target errors, but the transplant added
+USB/SATA crossings and a U7 local pad-field interaction. It is rejected as a
+complete island, although it confirms the ordered source escape itself is
+reproducible under current via rules.
+
+A second disposable candidate used an acreage split: RX on an upper B.Cu
+corridor and TX on a lower F.Cu corridor, with outboard U7 approaches. Native
+DRC rejected it with an RX lane crossing, a lower-lane collision with the J3
+mechanical body/anchor region, and U7-side no-connect/3V3 pad-field conflicts.
+The result is not evidence against the U7/J3 architecture; it rejects this
+specific layer/coordinate schedule. No Phase 18 or Phase 19 gate is claimed
+closed, and no Phase 20 work has started.
