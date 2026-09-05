@@ -10,6 +10,12 @@ cumulative basis and rejected at 217 native violations, 122 unconnected
 records, one short, and two crossings. This is a composition-coordinate
 failure, not evidence against the earlier isolated J1 result.
 
+The U5 exposed-ground stitch was rejected on the cumulative board. The full
+field candidate reports 210 violations, 117 unconnected records, and one
+native `POWER_GND`/`BRIDGE_1V1` short. Single-segment discriminators reproduce
+the same short class, so this is not a missing-U5-audit issue; the corrected
+audit and its negative control remain passing on their dedicated fixture.
+
 # Phase 24 same-row collector continuation
 
 `PHASE24_CM5_GROUND_RIGHT_SAME_ROWS.kicad_pcb` was regenerated from the

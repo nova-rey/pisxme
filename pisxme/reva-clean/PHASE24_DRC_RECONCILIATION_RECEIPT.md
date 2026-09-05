@@ -27,6 +27,10 @@ serialized Phase 24 candidates, counting report sections globally.
 | `PHASE24_POWER_GND_C14_C19_CHAIN` | 219 | 118 | 3 | 2 | rejected: outboard return-row collisions |
 | `PHASE24_POWER_GND_C14_C15_PAIR` | 212 | 121 | 2 | 0 | rejected: native shorts |
 | `PHASE24_J1_GROUND_COLUMNS_CURRENT` | 217 | 122 | 1 | 2 | rejected: current-basis collision |
+| `PHASE24_U5_GROUND_FIELD_CURRENT` | 210 | 117 | 1 | 0 | rejected: native POWER_GND/BRIDGE_1V1 short |
+| `PHASE24_U5_GROUND_FIELD_V1` | 210 | 119 | 1 | 0 | rejected discriminator |
+| `PHASE24_U5_GROUND_FIELD_V2` | 211 | 122 | 1 | 0 | rejected discriminator |
+| `PHASE24_U5_GROUND_FIELD_V3` | 211 | 122 | 1 | 0 | rejected discriminator |
 | `PHASE24_CM5_GROUND_UPPER_BRIDGES_ONLY` | 216 | 124 | 1 | 6 | rejected |
 
 The clean working basis for subsequent repairs is therefore

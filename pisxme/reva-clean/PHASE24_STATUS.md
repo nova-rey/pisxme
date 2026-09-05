@@ -704,3 +704,10 @@ cumulative basis as a disposable test. It does not transplant cleanly:
 fresh native DRC reports 217 violations, 122 unconnected records, one short,
 and two crossings. The current 209/122/0/0 same-row CM5-ground candidate is
 retained; no J1 column geometry is promoted.
+
+The cumulative U5 exposed-ground field stitch was tested from the accepted
+same-row basis and rejected: native DRC reports 210 violations, 117
+unconnected records, and one `POWER_GND`/`BRIDGE_1V1` short. Three
+single-segment discriminators reproduce the same short class (210/119/1/0,
+211/122/1/0, and 211/122/1/0). The corrected U5 native-connectivity audit
+still passes independently; no U5 field copper is promoted.
