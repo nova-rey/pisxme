@@ -1082,6 +1082,12 @@ derived F.Cu dogleg connects U7.24/U7.30/U7.31 to TP5.1 around no-connect
 pads, with no short or crossing. The full candidate is now `201` DRC
 violations and `394` opens.
 
+The corrected A* clock attempt is rejected despite zero shorts/crossings:
+its ordinary transition vias violate the integrated board's ground-zone
+clearance and raise native DRC to `217`. The generator's source-layer and
+pad-obstacle fixes are retained, but the next clock route must account for
+the actual plane-zone transition rules.
+
 The U7 pad-net authority regression now passes on the corrected candidate and
 fails on the prior baseline, specifically catching U7.30/U7.31/U7.52/U7.53/
 U7.54 no-net serialization. Routing is still required after this mapping

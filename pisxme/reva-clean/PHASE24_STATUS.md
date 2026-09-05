@@ -881,6 +881,13 @@ U7.24/U7.30/U7.31 to TP5.1 while bypassing the intervening no-connect pads;
 native DRC remains `201` total violations with zero shorts/crossings, and
 unconnected records fall `396` to `394`.
 
+The corrected-layer A* clock discriminator was rejected on the integrated
+candidate. Its tightened source/pad obstacle model removed the prior XO
+no-net-pad crossings, but native DRC found signal-via/ground-zone clearance
+violations and raised total violations to `217`; shorts/crossings were zero.
+The route is not promoted. Clock transitions must next be explicitly
+zone/antipad-aware or remain on a validated F.Cu corridor.
+
 The new `phase24_u7_pad_net_authority_audit.py` passes on the corrected U7
 candidate for all 17 schematic-owned U7 endpoints and fails on the prior
 integrated baseline for the five omitted clock/3V3 pads. This is now a
