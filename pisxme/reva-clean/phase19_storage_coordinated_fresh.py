@@ -2,7 +2,15 @@
 from pathlib import Path
 import os
 import re
+import sys
 import pcbnew
+# KiCad's Flatpak launcher does not consistently preserve host-side environment
+# overrides.  Accept the same P19_* names as explicit --NAME=value arguments
+# so every disposable candidate is reproducible inside the native tool.
+for _arg in sys.argv[1:]:
+ if _arg.startswith('--') and '=' in _arg:
+  _key, _value = _arg[2:].split('=', 1)
+  os.environ[_key.replace('-', '_')] = _value
 R=Path(__file__).resolve().parent; BASE=R/os.environ.get('P19_BASE','ACREAGE_PHASE18_USB3_LOCAL.kicad_pcb'); OUT=R/(os.environ.get('P19_OUT','ACREAGE_PHASE19_STORAGE_COORDINATED_FRESH.kicad_pcb')); W=pcbnew.FromMM(.13208)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def xy(p): return pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y)

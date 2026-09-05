@@ -528,6 +528,19 @@ high-speed envelope before descending, and preserve the passing
 minimal-fixture topology. Phase 19 remains active; Phase 20+ remains
 untouched.
 
+## 2026-09-04 coordinated-generator invocation correction
+
+The coordinated storage generator previously depended on host-side `P19_*`
+environment overrides. Under the installed KiCad Flatpak those overrides were
+not reliably visible, so a requested rotated-U7 candidate could not be
+verified as a distinct artifact. The authoring path now accepts explicit
+`--P19_NAME=value` arguments before importing `pcbnew`, preserving the same
+parameter names while making native candidate generation deterministic.
+
+No rotated-U7 candidate is promoted from the failed invocation. Phase 19
+remains active pending a separately identified generated board and its native
+USB3/SATA/clock validation.
+
 ## 2026-09-04 ordered B.Cu clock-trunk trial
 
 The next trial used three ordered B.Cu trunk lanes after short U7 escapes,
