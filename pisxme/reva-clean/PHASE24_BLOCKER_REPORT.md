@@ -333,3 +333,12 @@ native KiCad DRC. However, inspection shows that this legacy fixture does not
 route every passive branch to R23/C42/C43, so it is only a source-escape and
 footprint discriminator, not complete support-topology closure. A genuinely
 complete support fixture and the rot180 acreage transformation remain open.
+
+## Strict complete-fixture attempt (rejected)
+
+`phase24_complete_clock_fixture.py` required every Y1/R23/C42/C43 pad to
+participate in the routed graph. Its first generic three-bus layout reported
+24 native DRC violations: 5 track crossings, 4 shorts, and 8 disconnected
+pads. The failure is retained as a valid rejection; the next implementation
+must derive branch escape points from the serialized pad field and reserve
+that field explicitly.

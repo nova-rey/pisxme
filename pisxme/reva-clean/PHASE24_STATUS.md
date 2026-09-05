@@ -94,3 +94,8 @@ topology: inspection shows that all passive branches are not routed to
 R23/C42/C43. It remains a source-escape/footprint discriminator only. The
 remaining work is a genuinely complete rot180 coordinate transplant plus a
 separate U5 capacitor island.
+
+The first strict complete-fixture implementation was rejected by native DRC
+(24 violations: 5 crossings, 4 shorts, 8 disconnected pads). It is retained
+as evidence that the next implementation must derive and reserve the actual
+Y1 pad field rather than assume a generic three-bus geometry.
