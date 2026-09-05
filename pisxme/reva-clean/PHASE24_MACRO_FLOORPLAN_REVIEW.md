@@ -69,6 +69,7 @@ These are disposable placement candidates, not accepted routing. Candidate selec
 | `SWAP_ETH_STORAGE` | (28.0,121.5) | (119.7,122.8) | (45.0,100.0) | 22.5 | 52.6 |
 | `CM5_NEIGHBORHOODS` | (30.6,103.2) | (117.0,125.1) | (84.0,100.0) | 5.1 | 51.0 |
 | `ETH_WEST_LOCAL_STORAGE` | (17.7,101.2) | (117.0,125.1) | (45.0,100.0) | 16.9 | 51.0 |
+| `ETH_NW_ORACLE_STORAGE` | (55.3,56.5) | (117.0,125.1) | (45.0,100.0) | 48.1 | 51.0 |
 
 ## Whole-board interpretation
 
@@ -76,3 +77,44 @@ These are disposable placement candidates, not accepted routing. Candidate selec
 - PCIe `J1` is the closest high-speed endpoint to its CM5 launch and remains the anchor; moving it would spend the most sensitive validated geometry for little gain.
 - SERVICE `J4` is the only currently local interface. Ethernet and storage are both materially remote; the current top Ethernet island and mid-board storage island occupy corridors that compete with PCIe/power and expose the clock/SATA congestion.
 - The migration/swap candidates are topology probes only. They intentionally invalidate affected copper and require complete regeneration before any promotion.
+
+## Required whole-board discriminator — completed 2026-09-05
+
+This review uses native-loaded `PHASE24_U7_3V3_CURRENT_LOCAL.kicad_pcb` and transformed J7 mating-view pad coordinates, not schematic drawing order, the prior pinout image, or historical routes.
+
+| island | CM5 launch | endpoint/centroid | distance | interaction |
+|---|---|---|---:|---|
+| Ethernet | J7 left `(34.50,99.90)` | U6/U9/J2 `(77.76,59.56)` | 59.15 mm | nonlocal; competes with west power-entry/SERVICE acreage |
+| PCIe/V100 | J7 right `(69.60,101.50)` | J1 `(150.00,90.00)` | 81.22 mm | longest path, but validated 4-via corridor; retain anchor |
+| USB3/storage | J7 right `(70.04,105.30)` | U7/J3/clock `(132.11,132.11)` | 67.61 mm | remote; competes with SATA, PCIe, and power corridors |
+| SERVICE USB2 | J7 right `(66.96,99.30)` | J4 `(45.00,100.00)` | 21.97 mm | already natural; moving it for Ethernet trades a solved island |
+| power/protection | J5/J6 and F1/F2/Q1/Q2 | distributed fields | n/a | real high-current/assembly obstacle, especially Q2/F2 |
+| regulators/load | U1/U2/U3/U4/U5 | distributed islands | n/a | preserve vendor geometry and returns; not empty acreage |
+
+### Candidate and island-swap comparison
+
+`phase24_macro_floorplan_review.py` generated disposable `ETH_WEST`,
+`ETH_WEST_OUTBOARD`, `ETH_EAST_ESD_WEST_JACK`, `ETH_SOUTH`, `STORAGE_LOCAL`,
+`SWAP_ETH_STORAGE`, `CM5_NEIGHBORHOODS`, `ETH_WEST_LOCAL_STORAGE`, and
+`ETH_NW_ORACLE_STORAGE` boards. Moved copper is invalid until regenerated.
+
+`CM5_NEIGHBORHOODS` gives Ethernet `5.1 mm` and storage `51.0 mm`, but moves
+SERVICE out of its natural launch neighborhood. `SWAP_ETH_STORAGE` gives
+Ethernet `22.5 mm` and storage `52.6 mm`. `ETH_WEST_LOCAL_STORAGE` gives
+Ethernet `16.9 mm` and storage `51.0 mm` while preserving PCIe and SERVICE,
+so it remains the best joint topology. `ETH_NW_ORACLE_STORAGE` is open acreage
+but Ethernet is `48.1 mm`; it is a routing oracle, not a better placement.
+No candidate justifies moving PCIe, SERVICE, or the power/regulator architecture.
+
+### Review decision
+
+`MACRO_FLOORPLAN_REVIEW = COMPLETE`. Retain `ETH_WEST_LOCAL_STORAGE` as the
+working macro basis. The remaining issue is coherent copper regeneration, not
+an unresolved macro-placement question. Phase 24 remains open; next action is
+coordinated native-pad regeneration of Ethernet/storage/clock neighborhoods,
+then native DRC/connectivity and affected-subsystem revalidation.
+
+The north-west oracle is only a routing discriminator: native refill reported
+`453` total violations, `12` shorting items, `0` track crossings, and `433`
+unconnected items. Its shorts are contaminated by stale power-entry/storage
+copper, so it is not a board pass or evidence the placement is impossible.

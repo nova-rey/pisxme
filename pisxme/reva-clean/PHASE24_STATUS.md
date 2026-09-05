@@ -996,3 +996,13 @@ is not a design blocker. The next bounded class is Ethernet-local endpoint
 repositioning that retains the official split-layer topology but changes the
 MagJack/ESD spacing relative to the J7 and power-entry pad fields before
 rerouting.
+
+The required whole-board functional-island floorplan discriminator is complete.
+Native transformed J7 launch coordinates were compared with Ethernet,
+PCIe/V100, complete USB3-to-SATA storage, SERVICE USB2, power-entry, and
+regulator islands. Large translations and the Ethernet/storage swap were tested
+as disposable placement candidates. `ETH_WEST_LOCAL_STORAGE` remains the best
+joint basis: Ethernet and storage become less remote while PCIe and SERVICE
+anchors remain unchanged. No moved copper was accepted. Phase 24 remains open
+for coherent affected-neighborhood regeneration; detailed open repair resumes
+only after that regeneration is validated.
