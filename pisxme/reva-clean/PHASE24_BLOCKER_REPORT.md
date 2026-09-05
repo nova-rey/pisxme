@@ -9,6 +9,13 @@ report is counted. The candidate is accepted as the current working basis;
 the remaining Phase 24 census is still open and no validation severity was
 changed.
 
+The dedicated In1 CM5-ground plane-attachment experiment is rejected. A
+corrected ordinary via at the accepted outer collector plus a distinct
+`/CORE_CM5/POWER_GND` inner-layer zone produced 210 native violations and
+122 unconnected records, with zero shorts/crossings and no connectivity gain.
+The via/zone was not promoted; the 209/122/0/0 same-row collector remains the
+working basis.
+
 # PiSXMe Rev A Clean — Phase 24 blocker report
 
 Status: `PHASE24_IN_PROGRESS` (recoverable implementation blocker)

@@ -677,3 +677,10 @@ The serialized `PHASE24_CM5_GROUND_RIGHT_SAME_ROWS` candidate passes the full
 native DRC classes relevant to this repair at 209 violations, 122 unconnected
 records, zero shorts, and zero crossings. It is promoted as the current clean
 CM5-ground working basis; no native finding or severity was waived.
+
+A dedicated In1 `/CORE_CM5/POWER_GND` plane-attachment trial was rejected.
+The first via location was correctly identified as dangling; after moving it
+to the accepted outer collector and correcting the drill to the board minimum,
+fresh native DRC still reports 210 violations and 122 unconnected records,
+with zero shorts/crossings but no connectivity improvement. The zone/via
+trial is not promoted and the 209/122/0/0 same-row basis remains authoritative.
