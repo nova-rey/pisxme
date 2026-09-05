@@ -831,6 +831,12 @@ open. A fresh J7-derived CM5-ground launch/plane experiment was rejected:
 `264` violations, `397` unconnected records, four shorts, and one crossing.
 No severity or connection was waived.
 
+The corrected U5 pair sweep tested C44.2-C45.2 and C46.2-C47.2 independently
+from the accepted C5/C6 base. Both produced native DRC `201` violations and
+`396` unconnected records with no shorts or crossings, but neither reduced
+the census: the missing relationship is the capacitor island to its regulator
+return, not pair-to-pair continuity. They are not promoted.
+
 The next adjacent-row probe, C14.2 to C15.2, was rejected by native DRC:
 although it reduced the raw unconnected census to `395`, the straight join
 shorted `POWER_GND` to the neighboring `12V_PROTECTED` C15.1 pad and raised

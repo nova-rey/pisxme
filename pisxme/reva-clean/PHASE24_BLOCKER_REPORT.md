@@ -1033,6 +1033,10 @@ POWER_GND join created a real POWER_GND/12V_PROTECTED short at C15.1 and
 raised native DRC to `203` violations despite fewer unconnected records.
 The accepted C5/C6-only candidate remains the working step.
 
+The corrected U5 pair sweep found no additional promoting pair join. C44/C45
+and C46/C47 are individually DRC-clean but leave the native open census at
+`396`; the remaining U5 issue is a clearance-safe island-to-return launch.
+
 ## Incremental return repair — 2026-09-05
 
 `phase24_power_gnd_current_local.py` adds only the native-pad-center C5.2 to
