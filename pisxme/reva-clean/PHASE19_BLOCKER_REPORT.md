@@ -1055,6 +1055,16 @@ still reports long-corridor crossings plus source-via clearances and U7-side
 dogbone clearance/crossing violations. This stronger discriminating result
 is rejected and not promoted. The next correction must serialize the complete
 source-to-U7 graph including the layer-transition columns.
+
+## 2026-09-05 serialized-exit ordering follow-up
+
+The corrected pair-split generator was rerun after applying the outboard
+column ordering to the intended branch. It measured 3.55 mm RX skew and
+3.47 mm TX skew. This corrected measurement supersedes the preliminary
+0.45/0.53 mm estimate. Native DRC still reports four long-corridor
+crossings, source-via clearance failures, and U7-side dogbone clearance
+failures. The candidate is rejected; no acreage promotion or Phase 20 work
+has started.
 ## 2026-09-05 rotated-270 SATA transition/capacitor oracle refinement
 
 The disposable authoring path was corrected so every capacitor-to-B.Cu SATA
