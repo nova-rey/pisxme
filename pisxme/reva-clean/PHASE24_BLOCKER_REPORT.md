@@ -1076,3 +1076,8 @@ authority correction now covers U7.24/U7.30/U7.31 and U7.52/U7.53/U7.54.
 Native DRC reports `396` opens and zero shorts/crossings; the increase from
 the RX-N-only basis is expected because five previously hidden endpoint
 relationships are now visible. Complete U7 support routing remains required.
+
+The U7 `BRIDGE_3V3` repair is accepted as bounded progress: a native-pad
+derived F.Cu dogleg connects U7.24/U7.30/U7.31 to TP5.1 around no-connect
+pads, with no short or crossing. The full candidate is now `201` DRC
+violations and `394` opens.

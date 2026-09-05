@@ -875,3 +875,8 @@ real unrouted endpoint relationships: native DRC is `201` violations and
 `396` unconnected records with zero shorts/crossings. This is not a pass; it
 changes the next routing task from guessed CFG/clock geometry to complete
 U7 power/clock support routing.
+
+The U7 `BRIDGE_3V3` pad-field dogleg is accepted. Native connectivity joins
+U7.24/U7.30/U7.31 to TP5.1 while bypassing the intervening no-connect pads;
+native DRC remains `201` total violations with zero shorts/crossings, and
+unconnected records fall `396` to `394`.
