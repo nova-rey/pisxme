@@ -175,3 +175,9 @@ ordinary through-vias launch 1V1 and POWER_GND, with separate B.Cu rail and
 return corridors. Native DRC reports zero `shorting_items` and zero
 `tracks_crossing`; its 499 unconnected records are deliberate non-target
 fixture/U5 pads. This is a reusable topology oracle, not an acreage promotion.
+The corrected U5 layer fixture was rerun after extending both layer-owned
+trunks to the rotated capacitor pad rows. Native DRC still reports zero
+shorting and zero crossing records; 499 unconnected pads are deliberate
+non-target fixture/U5 pads. The separate graph-audit script exposed a
+coordinate-join defect and is not used as closure evidence; acreage U5
+integration remains open.

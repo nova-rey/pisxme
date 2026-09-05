@@ -481,3 +481,11 @@ through-vias, and separate B.Cu rail/return corridors. Native DRC reports zero
 shorting and zero crossing records. The 499 unconnected pads belong to
 deliberately unconnected non-target U5/fixture pads. This closes the U5
 topology discriminator only; acreage integration remains open.
+## Corrected U5 layer fixture rerun
+
+The U5 layer fixture was corrected so the B.Cu rail and return trunks reach
+the actual rotated C44-C47 pad rows. Native DRC reports zero
+`shorting_items` and zero `tracks_crossing` records, with 499 deliberate
+non-target U5/fixture unconnected pads. A first graph-audit implementation
+was found to have a coordinate-join defect and is excluded from the evidence.
+This remains a topology discriminator, not acreage closure.

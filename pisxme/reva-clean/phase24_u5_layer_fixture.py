@@ -19,8 +19,8 @@ def main():
   f=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'C_1210_3225Metric');f.SetReference(ref);f.SetPosition(V(*pos));f.SetOrientationDegrees(90);b.Add(f);fs[ref]=f
   P(f,'1').SetNet(rail);P(f,'1').SetNetCode(rail.GetNetCode());P(f,'2').SetNet(gnd);P(f,'2').SetNetCode(gnd.GetNetCode())
  p9=P(u,'9');p2=P(r,'2');p9.SetNet(rail);p9.SetNetCode(rail.GetNetCode());p2.SetNet(gnd);p2.SetNetCode(gnd.GetNetCode())
- X(b,rail,(239,110));T(b,rail,xy(p9),(239,110),pcbnew.F_Cu);T(b,rail,(239,110),(264,110),pcbnew.B_Cu);T(b,rail,(264,110),(264,136.65),pcbnew.B_Cu)
- X(b,gnd,(247,114));T(b,gnd,xy(p2),(247,114),pcbnew.F_Cu);T(b,gnd,(247,114),(244,114),pcbnew.B_Cu);T(b,gnd,(244,114),(244,139.35),pcbnew.B_Cu)
+ X(b,rail,(239,110));T(b,rail,xy(p9),(239,110),pcbnew.F_Cu);T(b,rail,(239,110),(264,110),pcbnew.B_Cu);T(b,rail,(264,110),(264,139.35),pcbnew.B_Cu)
+ X(b,gnd,(247,114));T(b,gnd,xy(p2),(247,114),pcbnew.F_Cu);T(b,gnd,(247,114),(244,114),pcbnew.B_Cu);T(b,gnd,(244,114),(244,136.65),pcbnew.B_Cu)
  for f in fs.values():
   p1,p2=xy(P(f,'1')),xy(P(f,'2'));T(b,rail,(264,p1[1]),p1,pcbnew.B_Cu);T(b,gnd,(244,p2[1]),p2,pcbnew.B_Cu)
  b.Save(str(OUT));print(OUT)
