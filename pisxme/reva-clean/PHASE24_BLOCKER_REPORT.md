@@ -625,6 +625,13 @@ shorts/crossings) and reduces unconnected records from 268 to 265. This
 confirms the In3 distribution layer can be used with the J1 field, while
 explicit surface launches remain required elsewhere.
 
+The initial J1 ground-column launch location was rejected because six
+through-vias intersected the protected B.Cu bus. Relocating the seven ground
+launches below that bus produces a native-clean targeted candidate: 201
+inherited DRC violations, zero shorts/crossings, and 195 unconnected records.
+The separate `/CORE_CM5/POWER_GND` net was not bridged; remaining local and
+board-wide ground distribution is still required.
+
 An U4-specific left-side dogbone trial was run after the all-regulator trial.
 It removed the U4 short class but introduced four native F.Cu crossings at
 the existing PG_BRIDGE_3V3 and U4 ground geometry, so it is rejected. U3/U5

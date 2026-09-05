@@ -317,6 +317,15 @@ plane is therefore electrically compatible with the validated connector bus,
 but does not replace explicit surface launches for the remaining regulators,
 capacitors, input branches, and SXM2/ground populations.
 
+The J1 POWER_GND field was then connected as seven serialized vertical F.Cu
+columns, each entering the existing In1/In4 ground planes through an ordinary
+via below the protected B.Cu bus. The first y=96.5 mm launch trial was
+rejected for six native POWER_GND-to-12V_PROTECTED shorts at the bus. Moving
+only those launches to y=98.0 mm removes the shorts: native DRC returns to 201
+inherited violations with zero shorts/crossings and 195 unconnected items.
+This is accepted J1 ground-field evidence; local ground launches elsewhere
+and the separate CM5 ground net remain open.
+
 ## J1 protected-12V field bus experiment
 
 The first J1 B.Cu-only bus was rejected because the saved connector pads are
