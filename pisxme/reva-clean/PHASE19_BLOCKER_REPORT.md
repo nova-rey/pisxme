@@ -1493,3 +1493,20 @@ and SATA support, and connector-body/anchor clearance conflicts. The probe is
 rejected. It does not invalidate the clean translated-island concept; it shows
 that the USB3 escape must be regenerated as a full endpoint schedule after the
 storage translation, rather than copied as independent legacy segments.
+
+## 2026-09-05 U7 rotation-90 USB endpoint diagnostic
+
+U7's serialized pad map was rechecked directly from the footprint. At 90°,
+USB pads 42/43/45/46 form the top row `(270.0,100.5)`, `(269.5,100.5)`,
+`(268.5,100.5)`, `(268.0,100.5)`, while SATA pads 57/56/60/59 form the right
+side row. A corrected USB-only disposable fixture therefore used RX on upper
+B.Cu corridors and TX on separate F.Cu corridors, with ordinary 0.50/0.30-mm
+through-vias.
+
+Native DRC rejected the first valid schedule for two reasons: the two pair
+approaches still converged incorrectly at the tightly pitched U7 top row, and
+the exploratory F.Cu TX corridor intersected existing clock/support objects.
+This is a real endpoint-schedule failure, not evidence against the rotation-90
+co-located island. The next candidate must use mixed-layer per-signal QFN
+escapes or move the clock/support graph out of those approach lanes before
+adding the SATA endpoint.
