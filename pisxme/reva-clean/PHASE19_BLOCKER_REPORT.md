@@ -502,3 +502,28 @@ The next experiment must move the low-profile clock support farther from the
 U7/SATA pad field and route the three clock nets with a local layer-separated
 escape, using the live occupancy map at each proposed coordinate. Phase 19
 remains active; Phase 20+ remain untouched.
+
+## 2026-09-04 south-acreage clock corridor audit
+
+The live coordinated candidate was re-audited against the explicit Rev-A
+mechanical contract. The board outline is approximately `300 x 180 mm`; live
+storage copper is concentrated above about `y=140 mm`, and the prior generic
+V100 cooler/backplate exclusion is not a Rev-A constraint. This leaves a real
+south-acreage corridor for low-profile bridge-clock support. No PCIe, CM5,
+SXM2, connector, standoff, M.2, or enclosure-floor authority currently blocks
+that region.
+
+A disposable south-corridor transplant placed Y1/R23/C42/C43 at `(220,150)`,
+`(230,150)`, `(220,160)`, and `(230,160)`. Native KiCad DRC reported `407`
+violations and `466` unconnected items. Inspection found that the new clock
+errors were caused by the experiment authoring itself: support branches were
+serialized to non-pad coordinates, the VSSOSC lane intersected an existing
+power pad near `(159.35,150)`, and local XO/VSSOSC branches crossed at the Y1
+field. Existing SATA/USB3 errors were also present.
+
+This candidate is rejected as invalid proof, not evidence against the south
+corridor. The corrected continuation must use exact reloaded pad coordinates
+for every support endpoint, put all long clock lanes outside the live
+high-speed envelope before descending, and preserve the passing
+minimal-fixture topology. Phase 19 remains active; Phase 20+ remains
+untouched.
