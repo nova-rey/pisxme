@@ -690,3 +690,8 @@ candidate. Native DRC remains at 201 inherited violations with zero
 shorts/crossings and reduces unconnected records from 168 to 163. This
 storage repair composes cleanly; clock and remaining SATA/control records
 remain unresolved.
+
+The U7 `BRIDGE_CFG` repeated-pad join was tested and rejected: the direct
+link hit pad 24 on `BRIDGE_3V3`, while the perimeter reroute produced two
+shorts and one crossing. No severity was relaxed; the control escape remains
+an open pad-frame routing task.

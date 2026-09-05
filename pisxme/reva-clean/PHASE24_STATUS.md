@@ -426,3 +426,10 @@ Native DRC remains at 201 inherited violations with zero shorts and zero
 crossings; unconnected items fall from 168 to 163. The storage correction
 therefore composes cleanly with the accepted power/rail repairs. Clock and
 the remaining SATA/control groups remain open.
+
+## U7 BRIDGE_CFG join experiment (rejected)
+
+The direct CFG pad join crossed U7 pad 24 (`BRIDGE_3V3`) and was rejected.
+The attempted perimeter reroute around the pad field still introduced two
+shorts and one crossing in native DRC. The CFG control net remains open and
+must use a layer-separated, pad-frame-derived escape.
