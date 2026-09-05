@@ -1,0 +1,84 @@
+** Drc report for PHASE19_CLOCK_MINIMAL_FIXTURE.kicad_pcb **
+** Created on 2026-09-04T20:05:49 **
+** Report includes: Errors, Warnings **
+
+** Found 15 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(97.5000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 9.0000 mm
+    @(97.0000 mm, 112.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 2.8692 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1735 mm)
+    Local override; error
+    @(100.5000 mm, 117.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+    @(101.1000 mm, 115.8500 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 9.1697 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(103.5000 mm, 116.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 3.3589 mm
+    @(102.0000 mm, 111.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 4.8500 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(92.0000 mm, 128.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on B.Cu, length 16.0000 mm
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(100.0000 mm, 124.1000 mm): Reference field of R23
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(100.0000 mm, 115.0000 mm): Reference field of Y1
+    @(98.9000 mm, 114.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(100.0000 mm, 115.0000 mm): Reference field of Y1
+    @(101.1000 mm, 114.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(98.4000 mm, 113.7500 mm): Rectangle of Y1 on f.silkscreen
+    @(98.9000 mm, 114.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(98.4000 mm, 113.7500 mm): Rectangle of Y1 on f.silkscreen
+    @(101.1000 mm, 114.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(98.4000 mm, 113.7500 mm): Rectangle of Y1 on f.silkscreen
+    @(101.1000 mm, 115.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(98.4000 mm, 113.7500 mm): Rectangle of Y1 on f.silkscreen
+    @(98.9000 mm, 115.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(100.0000 mm, 115.0000 mm): Reference field of Y1
+    @(98.9000 mm, 115.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(100.0000 mm, 115.0000 mm): Reference field of Y1
+    @(101.1000 mm, 115.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(93.5500 mm, 124.6000 mm): Segment of C42 on f.silkscreen
+    @(93.5000 mm, 125.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of C42 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(105.5500 mm, 124.6000 mm): Segment of C43 on f.silkscreen
+    @(105.5000 mm, 125.0000 mm): Pad 1 [/STORAGE/BRIDGE_XO] of C43 on F.Cu
+
+** Found 2 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(97.5000 mm, 95.5000 mm): Pad 31 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
+    @(98.0000 mm, 95.5000 mm): Pad 30 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(98.0000 mm, 95.5000 mm): Pad 30 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
+    @(101.0000 mm, 95.5000 mm): Pad 24 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

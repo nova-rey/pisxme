@@ -393,3 +393,22 @@ shorts in the downstream same-layer XI/XO/VSSOSC branches. It is rejected;
 the result confirms the U7-row defect was real but that the crystal-side
 branch topology must also be changed. Phase 19 remains active and Phase 20+
 remain untouched.
+
+## 2026-09-04 minimal clock fixture continuation
+
+To separate clock topology from the inherited acreage debt, a disposable native
+KiCad fixture retained the real TUSB9261 footprint and Y1/R23/C42/C43 while
+removing unrelated footprints, copper, and zones. The fixture used a
+perpendicular-first U7 escape, an ordinary through-via VSSOSC return, and
+separate F.Cu/B.Cu corridors. Native KiCad DRC measured 15 violations / 2
+unconnected items, with no `shorting_items` records. The remaining clock
+records are two same-side escape crossings, one local clearance violation,
+and one dangling VSSOSC bus endpoint; the two unconnected items are the
+fixture's intentionally isolated U7.30/U7.31/BRIDGE_3V3 tie.
+
+This is the best current clock topology experiment but is not yet closed: the
+two escape crossings must be removed and the 3V3 frequency-select tie must be
+made explicit in the fixture before applying the clock route to the complete
+coordinated storage island. The result confirms that the clock network is
+implementable with the approved architecture and layers; Phase 19 remains
+active and Phase 20+ remain untouched.
