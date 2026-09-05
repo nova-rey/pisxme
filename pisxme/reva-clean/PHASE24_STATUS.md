@@ -867,3 +867,11 @@ tracks/vias to U7.59/C33.2. Native DRC reports `201` total violations and
 `391` unconnected records, with zero shorts/crossings; the five dangling-via
 warnings are inherited and unchanged. U5 connectivity, its negative control,
 and the authoritative-part audit remain passing.
+
+The U7 endpoint audit then found pins 30 and 31 also omitted from the PCB net
+ownership. Assigning U7.24/U7.30/U7.31 to `BRIDGE_3V3` and retaining the
+XI/VSSOSC/XO assignments is source-authority-correct, but it exposes five
+real unrouted endpoint relationships: native DRC is `201` violations and
+`396` unconnected records with zero shorts/crossings. This is not a pass; it
+changes the next routing task from guessed CFG/clock geometry to complete
+U7 power/clock support routing.

@@ -1069,3 +1069,10 @@ through U7.9 to U7.59/C33.2, reducing native unconnected records from `396`
 to `391` without adding shorts or crossings. Native DRC remains `201` total
 violations; all five dangling-via warnings are inherited. CFG, clock support,
 and the remaining power/return opens are still unclosed.
+
+The corrected U7 audit found two additional missing PCB net assignments:
+schematic pins 30 and 31 are `BRIDGE_3V3` but were serialized no-net. The
+authority correction now covers U7.24/U7.30/U7.31 and U7.52/U7.53/U7.54.
+Native DRC reports `396` opens and zero shorts/crossings; the increase from
+the RX-N-only basis is expected because five previously hidden endpoint
+relationships are now visible. Complete U7 support routing remains required.
