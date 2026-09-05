@@ -37,12 +37,12 @@ def main():
   b=pcbnew.LoadBoard(str(BASE))
   u=b.FindFootprintByReference('U7'); j=b.FindFootprintByReference('J3')
   # Open region to the right of the PCIe/CM5 source corridors.
-  u.SetPosition(V(260,105)); u.SetOrientationDegrees(270)
+  u.SetPosition(V(280,105)); u.SetOrientationDegrees(270)
   j.SetPosition(V(200,140)); j.SetOrientationDegrees(90)
   old_mech=b.FindFootprintByReference('MECH_M2_2280')
   if old_mech is not None: b.Remove(old_mech)
   # This donor already carries clean C30-C33 clock-candidate objects.
-  for ref,(x,y) in {'C30':(245,96),'C31':(245,100),'C32':(245,108),'C33':(245,112)}.items():
+  for ref,(x,y) in {'C30':(265,96),'C31':(265,100),'C32':(265,108),'C33':(265,112)}.items():
    f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(180)
   for ref,xyv in {'Y1':(280,75),'R23':(285,75),'C42':(280,80),'C43':(285,80)}.items():
    f=b.FindFootprintByReference(ref)
@@ -130,7 +130,7 @@ def main():
  # FREQSEL0/1 and VDDIO high on the local 3V3 net; local short fanout.
  v33=b.FindNet('/STORAGE/BRIDGE_3V3')
  for pn in ('24','30','31'): setpad(pad(u,pn),v33)
- seg(b,v33,U['24'],(247,106)); seg(b,v33,(247,106),U['30']); seg(b,v33,(247,106),U['31'])
+ seg(b,v33,U['24'],(287,106)); seg(b,v33,(287,106),U['30']); seg(b,v33,(287,106),U['31'])
  b.Save(str(OUT))
  # Remove only known donor duplicate net fields from U7 pads 5-12 in the
  # serialized footprint; this is the same deterministic cleanup used by the

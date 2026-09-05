@@ -1,508 +1,500 @@
 ** Drc report for PHASE19_OPEN_ISLAND_LIVE.kicad_pcb **
-** Created on 2026-09-04T21:58:55 **
+** Created on 2026-09-04T22:00:59 **
 ** Report includes: Errors, Warnings **
 
-** Found 377 DRC violations **
+** Found 384 DRC violations **
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(210.0000 mm, 100.0000 mm): Track [/STORAGE/SATA_M2_TX_N] on B.Cu, length 15.5000 mm
-    @(200.0000 mm, 114.0000 mm): Track [CM5_USB3_RX_N] on B.Cu, length 60.0083 mm
-[tracks_crossing]: Tracks crossing
+    @(250.0000 mm, 102.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 14.0000 mm
+    @(265.5000 mm, 100.0000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 30.5000 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_N and /STORAGE/BRIDGE_SATA_TX_N)
     Local override; error
-    @(210.0000 mm, 100.0000 mm): Track [/STORAGE/SATA_M2_TX_N] on B.Cu, length 15.5000 mm
-    @(235.0000 mm, 108.0000 mm): Track [/STORAGE/SATA_M2_RX_P] on B.Cu, length 30.0000 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_TX_N and /STORAGE/BRIDGE_XO)
+    @(265.5000 mm, 100.0000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 30.5000 mm
+    @(264.5000 mm, 100.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_TX_N] of C31 on F.Cu
+[shorting_items]: Items shorting two nets (nets /REGULATORS/VCC_U5_INTERNAL and /STORAGE/SATA_M2_RX_P)
     Local override; error
-    @(253.5000 mm, 103.0000 mm): Via [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu - B.Cu
-    @(255.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 3.5000 mm
+    @(232.7500 mm, 106.2500 mm): Pad 7 [/REGULATORS/VCC_U5_INTERNAL] of U5 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0608 mm)
+    Local override; error
+    @(225.0000 mm, 105.3750 mm): Pad 19 [POWER_GND] of U4 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
 [shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_RX_N and /STORAGE/SATA_M2_RX_N)
     Local override; error
-    @(244.5000 mm, 112.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_N] of C33 on F.Cu
-    @(245.5000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 10.5000 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_TX_N and /STORAGE/BRIDGE_VSSOSC)
+    @(264.5000 mm, 112.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_N] of C33 on F.Cu
+    @(265.5000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 30.5000 mm
+[shorting_items]: Items shorting two nets (nets POWER_GND and /STORAGE/SATA_M2_RX_P)
     Local override; error
-    @(253.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.4868 mm
-    @(251.5000 mm, 102.5000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0427 mm)
+    @(222.7500 mm, 105.7500 mm): Pad 6 [POWER_GND] of U4 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[shorting_items]: Items shorting two nets (nets POWER_GND and /STORAGE/SATA_M2_RX_P)
     Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(260.0000 mm, 113.0000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 3.5000 mm
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(255.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 3.5000 mm
-    @(253.5000 mm, 103.0000 mm): Via [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu - B.Cu
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(253.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.4868 mm
-    @(251.5000 mm, 102.5000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0794 mm)
+    @(225.0000 mm, 106.1250 mm): Pad 20 [POWER_GND] of U4 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1407 mm)
     Local override; error
-    @(260.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
+    @(279.5000 mm, 109.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0870 mm)
+    Local override; error
+    @(227.2500 mm, 106.2500 mm): Pad 10 [/REGULATORS/FB_BRIDGE_3V3] of U4 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[shorting_items]: Items shorting two nets (nets POWER_GND and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(227.2500 mm, 105.7500 mm): Pad 11 [POWER_GND] of U4 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(255.5000 mm, 105.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 5.6569 mm
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-[tracks_crossing]: Tracks crossing
+    @(275.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 23.5000 mm
+    @(275.5000 mm, 104.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu, length 2.2361 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1002 mm)
     Local override; error
-    @(255.5000 mm, 104.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu, length 2.2361 mm
-    @(255.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 3.5000 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_N and )
-    Local override; error
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
-    @(261.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_P and /STORAGE/BRIDGE_SATA_RX_P)
-    Local override; error
-    @(245.5000 mm, 108.0000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 10.5000 mm
-    @(244.5000 mm, 108.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_P] of C32 on F.Cu
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_N and CM5_USB3_TX_N)
-    Local override; error
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
-    @(261.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(252.0000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 14.0000 mm
-    @(253.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.4868 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_N and CM5_USB3_TX_P)
-    Local override; error
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
-    @(262.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
-    @(260.0000 mm, 113.0000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 3.5000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(252.0000 mm, 89.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 31.9333 mm
-    @(278.9000 mm, 75.8500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.1500 mm
+    @(275.5000 mm, 105.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 5.6569 mm
+    @(275.5000 mm, 106.0000 mm): Pad 60 [/STORAGE/BRIDGE_SATA_RX_P] of U7 on F.Cu
 [shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_XI)
     Local override; error
     @(281.1000 mm, 75.8500 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 4.4814 mm
     @(284.5000 mm, 75.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of R23 on F.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0669 mm)
+    Local override; error
+    @(280.0000 mm, 109.5000 mm): Pad 42 [CM5_USB3_RX_N] of U7 on F.Cu
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_SATA_TX_N)
+    Local override; error
+    @(275.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 23.5000 mm
+    @(273.5000 mm, 103.0000 mm): Via [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu - B.Cu
 [tracks_crossing]: Tracks crossing
     Local override; error
+    @(275.5000 mm, 105.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 5.6569 mm
+    @(275.5000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on F.Cu, length 5.3852 mm
+[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_P and /STORAGE/SATA_M2_RX_N)
+    Local override; error
+    @(280.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(278.9000 mm, 75.8500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.1500 mm
     @(252.0000 mm, 89.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 31.9333 mm
-    @(281.1000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 3.8500 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0375 mm)
+    Local override; error
+    @(278.0000 mm, 109.5000 mm): Pad 38 [<no net>] of U7 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(252.5000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 11.6726 mm
-    @(255.5000 mm, 102.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.5000 mm
+    @(275.5000 mm, 105.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 5.6569 mm
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_RX_N)
+    Local override; error
+    @(281.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(275.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 23.5000 mm
+    @(273.5000 mm, 103.0000 mm): Via [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu - B.Cu
 [shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XO and /STORAGE/BRIDGE_VSSOSC)
     Local override; error
     @(281.1000 mm, 75.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on F.Cu
     @(281.1000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 3.8500 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(252.5000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 11.6726 mm
-    @(250.0000 mm, 102.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 14.0000 mm
+    @(272.5000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 11.6726 mm
+    @(275.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 23.5000 mm
+[shorting_items]: Items shorting two nets (nets CM5_USB3_TX_N and /STORAGE/SATA_M2_RX_N)
+    Local override; error
+    @(281.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(272.5000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 11.6726 mm
+    @(275.5000 mm, 102.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 24.0000 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0051 mm)
+    Local override; error
+    @(278.5000 mm, 109.5000 mm): Pad 39 [<no net>] of U7 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
     @(281.1000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 3.8500 mm
-    @(281.1000 mm, 75.8500 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 4.4814 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(255.5000 mm, 105.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 5.6569 mm
-    @(255.5000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on F.Cu, length 5.3852 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(284.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 5.3649 mm
-    @(281.1000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 3.8500 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
     @(252.0000 mm, 89.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 31.9333 mm
-    @(279.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.8807 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XI and /STORAGE/BRIDGE_VSSOSC)
+[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_RX_P)
     Local override; error
-    @(278.9000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.6641 mm
+    @(279.0000 mm, 109.5000 mm): Pad 40 [<no net>] of U7 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(272.5000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 11.6726 mm
+    @(275.5000 mm, 102.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 25.5000 mm
+[shorting_items]: Items shorting two nets (nets CM5_USB3_TX_P and /STORAGE/SATA_M2_RX_N)
+    Local override; error
+    @(282.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_VSSOSC and /STORAGE/BRIDGE_XI)
+    Local override; error
     @(281.1000 mm, 74.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1239 mm)
+    @(278.9000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.6641 mm
+[tracks_crossing]: Tracks crossing
     Local override; error
+    @(281.1000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 3.8500 mm
+    @(284.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 5.3649 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_1V1 and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(279.5000 mm, 109.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(281.1000 mm, 75.8500 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 4.4814 mm
+    @(281.1000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 3.8500 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1411 mm)
+    Local override; error
+    @(212.0000 mm, 120.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 70.0071 mm
     @(215.0000 mm, 119.5000 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
-    @(212.0000 mm, 120.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 50.0100 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_RX_N and /STORAGE/SATA_M2_RX_N)
+    Local override; error
+    @(264.5000 mm, 112.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_N] of C33 on F.Cu
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(208.0000 mm, 118.0000 mm): Track [CM5_USB3_TX_N] on B.Cu, length 53.5093 mm
+    @(208.0000 mm, 118.0000 mm): Track [CM5_USB3_TX_N] on B.Cu, length 73.5068 mm
     @(215.0000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on B.Cu, length 7.5000 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0414 mm)
-    Local override; error
-    @(279.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.8807 mm
-    @(278.9000 mm, 75.8500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.1500 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0500 mm)
-    Local override; error
-    @(76.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C15 on F.Cu
-    @(78.0000 mm, 120.0000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(262.0000 mm, 119.0000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 9.5000 mm
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
+    @(281.1000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 3.8500 mm
+    @(278.9000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.6641 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1347 mm)
+    Local override; error
+    @(276.5000 mm, 109.5000 mm): Pad 35 [<no net>] of U7 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(282.0000 mm, 119.0000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 9.5000 mm
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(282.0000 mm, 119.0000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 9.5000 mm
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1023 mm)
+    Local override; error
+    @(277.0000 mm, 109.5000 mm): Pad 36 [<no net>] of U7 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(215.0000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on B.Cu, length 7.5000 mm
+    @(204.0000 mm, 116.0000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 76.5065 mm
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0576 mm)
     Local override; error
-    @(278.9000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.6641 mm
     @(281.1000 mm, 75.8500 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 4.4814 mm
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2239 mm)
-    Rule: board setup constraints hole; error
-    @(212.0000 mm, 120.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 50.0100 mm
-    @(215.0000 mm, 119.5000 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1002 mm)
-    Local override; error
-    @(255.5000 mm, 105.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 5.6569 mm
-    @(255.5000 mm, 106.0000 mm): Pad 60 [/STORAGE/BRIDGE_SATA_RX_P] of U7 on F.Cu
-[tracks_crossing]: Tracks crossing
-    Local override; error
     @(278.9000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.6641 mm
-    @(281.1000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 3.8500 mm
-[tracks_crossing]: Tracks crossing
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0699 mm)
     Local override; error
-    @(262.0000 mm, 119.0000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 9.5000 mm
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0768 mm)
+    @(277.5000 mm, 109.5000 mm): Pad 37 [<no net>] of U7 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0500 mm)
     Local override; error
-    @(278.9000 mm, 78.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
-    @(279.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.8807 mm
-[tracks_crossing]: Tracks crossing
+    @(78.0000 mm, 120.0000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
+    @(76.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C15 on F.Cu
+[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_N and /STORAGE/SATA_M2_RX_P)
     Local override; error
-    @(215.0000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on B.Cu, length 7.5000 mm
-    @(204.0000 mm, 116.0000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 56.5088 mm
+    @(280.0000 mm, 109.5000 mm): Pad 42 [CM5_USB3_RX_N] of U7 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
 [hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
     Rule: board setup constraints hole; error
     @(76.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C15 on F.Cu
     @(78.0000 mm, 120.0000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
-[shorting_items]: Items shorting two nets (nets CM5_USB3_TX_N and /STORAGE/SATA_M2_RX_P)
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_P and CM5_USB3_TX_N)
     Local override; error
-    @(261.5000 mm, 117.0000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 7.5000 mm
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(281.5000 mm, 117.0000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 7.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(200.0000 mm, 114.0000 mm): Track [CM5_USB3_RX_N] on B.Cu, length 80.0062 mm
+    @(215.0000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on B.Cu, length 7.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+    @(281.5000 mm, 117.0000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 7.5000 mm
+[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(280.5000 mm, 115.0000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 5.5000 mm
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0768 mm)
+    Local override; error
+    @(279.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.8807 mm
+    @(278.9000 mm, 78.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(280.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2411 mm)
+    Rule: board setup constraints hole; error
+    @(212.0000 mm, 120.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 70.0071 mm
+    @(215.0000 mm, 119.5000 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
 [hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1768 mm)
     Rule: board setup constraints hole; error
     @(279.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.8807 mm
     @(278.9000 mm, 78.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_N and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(280.0000 mm, 113.0000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 3.5000 mm
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
-    @(261.5000 mm, 117.0000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 7.5000 mm
+    @(250.0000 mm, 102.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 14.0000 mm
+    @(265.5000 mm, 96.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 30.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(279.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.8807 mm
+    @(252.0000 mm, 89.0000 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 31.9333 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(280.0000 mm, 113.0000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 3.5000 mm
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(281.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
 [shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_XI and /STORAGE/BRIDGE_VSSOSC)
     Local override; error
     @(279.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.8807 mm
     @(278.9000 mm, 75.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
-[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_P and /STORAGE/SATA_M2_RX_P)
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_TX_P and /STORAGE/SATA_M2_TX_P)
     Local override; error
-    @(260.5000 mm, 115.0000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 5.5000 mm
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
+    @(264.5000 mm, 96.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_TX_P] of C30 on F.Cu
+    @(265.5000 mm, 96.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 30.5000 mm
+[shorting_items]: Items shorting two nets (nets CM5_USB3_TX_N and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(281.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(260.5000 mm, 115.0000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 5.5000 mm
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
+    @(272.5000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 11.6726 mm
+    @(265.5000 mm, 96.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 30.5000 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0673 mm)
+    Local override; error
+    @(284.5000 mm, 103.5000 mm): Pad 29 [<no net>] of U7 on F.Cu
+    @(287.0000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_3V3] on F.Cu, length 3.9051 mm
+[shorting_items]: Items shorting two nets (nets CM5_USB3_TX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(282.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
+    Local override; error
+    @(278.0000 mm, 109.5000 mm): Pad 38 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0500 mm)
     Local override; error
     @(78.0000 mm, 120.0000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
     @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_TX_P and /STORAGE/SATA_M2_TX_P)
+[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
     Local override; error
-    @(244.5000 mm, 96.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_TX_P] of C30 on F.Cu
-    @(245.5000 mm, 96.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 10.5000 mm
-[tracks_crossing]: Tracks crossing
+    @(278.5000 mm, 109.5000 mm): Pad 39 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0414 mm)
     Local override; error
-    @(252.5000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 11.6726 mm
-    @(245.5000 mm, 96.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 10.5000 mm
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
-    Rule: board setup constraints hole; error
-    @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
-    @(78.0000 mm, 120.0000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(215.0000 mm, 96.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 13.5000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(245.5000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 10.5000 mm
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(261.5000 mm, 117.0000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 7.5000 mm
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(215.0000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on B.Cu, length 7.5000 mm
-    @(200.0000 mm, 114.0000 mm): Track [CM5_USB3_RX_N] on B.Cu, length 60.0083 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0777 mm)
+    @(279.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.8807 mm
+    @(278.9000 mm, 75.8500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.1500 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1055 mm)
     Local override; error
     @(210.0000 mm, 115.5000 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
-    @(204.0000 mm, 116.0000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 56.5088 mm
+    @(204.0000 mm, 116.0000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 76.5065 mm
+[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
+    Local override; error
+    @(279.0000 mm, 109.5000 mm): Pad 40 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(255.5000 mm, 105.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 5.6569 mm
-    @(264.5000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_3V3] on F.Cu, length 17.5000 mm
-[tracks_crossing]: Tracks crossing
+    @(280.5000 mm, 115.0000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 5.5000 mm
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_RX_P and /STORAGE/SATA_M2_RX_P)
     Local override; error
-    @(255.5000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on F.Cu, length 5.3852 mm
-    @(264.5000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_3V3] on F.Cu, length 17.5000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(262.0000 mm, 119.0000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 9.5000 mm
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(261.5000 mm, 117.0000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 7.5000 mm
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(262.0000 mm, 119.0000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 9.5000 mm
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1777 mm)
+    @(264.5000 mm, 108.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_P] of C32 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2055 mm)
     Rule: board setup constraints hole; error
-    @(204.0000 mm, 116.0000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 56.5088 mm
+    @(204.0000 mm, 116.0000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 76.5065 mm
     @(210.0000 mm, 115.5000 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
-[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_P and /STORAGE/SATA_M2_TX_P)
-    Local override; error
-    @(260.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_P and /STORAGE/SATA_M2_TX_N)
-    Local override; error
-    @(260.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0622 mm)
-    Local override; error
-    @(255.5000 mm, 104.0000 mm): Pad 56 [/STORAGE/BRIDGE_SATA_TX_N] of U7 on F.Cu
-    @(247.0000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_3V3] on F.Cu, length 17.8466 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_3V3 and /STORAGE/BRIDGE_SATA_TX_P)
-    Local override; error
-    @(247.0000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_3V3] on F.Cu, length 17.7553 mm
-    @(255.5000 mm, 104.5000 mm): Pad 57 [/STORAGE/BRIDGE_SATA_TX_P] of U7 on F.Cu
-[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
-    Local override; error
-    @(261.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_N)
-    Local override; error
-    @(261.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_3V3 and /STORAGE/BRIDGE_SATA_RX_P)
-    Local override; error
-    @(264.5000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_3V3] on F.Cu, length 17.5000 mm
-    @(255.5000 mm, 106.0000 mm): Pad 60 [/STORAGE/BRIDGE_SATA_RX_P] of U7 on F.Cu
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_3V3 and /STORAGE/BRIDGE_SATA_TX_P)
-    Local override; error
-    @(247.0000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_3V3] on F.Cu, length 17.7553 mm
-    @(255.5000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 3.0000 mm
-[shorting_items]: Items shorting two nets (nets CM5_USB3_TX_N and /STORAGE/SATA_M2_TX_P)
-    Local override; error
-    @(261.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[shorting_items]: Items shorting two nets (nets CM5_USB3_TX_N and /STORAGE/SATA_M2_TX_N)
-    Local override; error
-    @(261.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[shorting_items]: Items shorting two nets (nets CM5_USB3_TX_P and /STORAGE/SATA_M2_TX_P)
-    Local override; error
-    @(262.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_3V3 and /STORAGE/BRIDGE_SATA_TX_P)
-    Local override; error
-    @(247.0000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_3V3] on F.Cu, length 17.8466 mm
-    @(255.5000 mm, 104.5000 mm): Pad 57 [/STORAGE/BRIDGE_SATA_TX_P] of U7 on F.Cu
-[shorting_items]: Items shorting two nets (nets CM5_USB3_TX_P and /STORAGE/SATA_M2_TX_N)
-    Local override; error
-    @(262.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(247.0000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_3V3] on F.Cu, length 17.8466 mm
-    @(255.5000 mm, 104.5000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 3.0000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(260.0000 mm, 113.0000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 3.5000 mm
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(260.5000 mm, 115.0000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 5.5000 mm
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(260.0000 mm, 113.0000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 3.5000 mm
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(260.5000 mm, 115.0000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 5.5000 mm
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_N and /STORAGE/SATA_M2_TX_P)
-    Local override; error
-    @(260.0000 mm, 109.5000 mm): Pad 42 [CM5_USB3_RX_N] of U7 on F.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
-    Local override; error
-    @(257.0000 mm, 109.5000 mm): Pad 36 [<no net>] of U7 on F.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and )
-    Local override; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(257.5000 mm, 109.5000 mm): Pad 37 [<no net>] of U7 on F.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0035 mm)
-    Local override; error
-    @(260.0000 mm, 109.5000 mm): Pad 42 [CM5_USB3_RX_N] of U7 on F.Cu
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
-    Local override; error
-    @(258.0000 mm, 109.5000 mm): Pad 38 [<no net>] of U7 on F.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
-    Local override; error
-    @(258.5000 mm, 109.5000 mm): Pad 39 [<no net>] of U7 on F.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and )
-    Local override; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(259.0000 mm, 109.5000 mm): Pad 40 [<no net>] of U7 on F.Cu
 [shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_1V1 and /STORAGE/SATA_M2_TX_P)
     Local override; error
-    @(259.5000 mm, 109.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
+    @(279.5000 mm, 109.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_RX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(264.5000 mm, 108.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_P] of C32 on F.Cu
+    @(265.5000 mm, 108.0000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 30.5000 mm
 [shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
     Local override; error
-    @(255.5000 mm, 109.5000 mm): Pad 33 [<no net>] of U7 on F.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1181 mm)
-    Local override; error
-    @(259.0000 mm, 109.5000 mm): Pad 40 [<no net>] of U7 on F.Cu
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
-    Local override; error
-    @(256.0000 mm, 109.5000 mm): Pad 34 [<no net>] of U7 on F.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
-    Local override; error
-    @(256.5000 mm, 109.5000 mm): Pad 35 [<no net>] of U7 on F.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(255.5000 mm, 105.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 5.6569 mm
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0608 mm)
-    Local override; error
-    @(259.5000 mm, 109.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_RX_N and /STORAGE/SATA_M2_TX_P)
-    Local override; error
-    @(251.5000 mm, 109.5000 mm): Via [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu - B.Cu
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
-    Rule: board setup constraints hole; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(251.5000 mm, 109.5000 mm): Via [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0673 mm)
-    Local override; error
-    @(244.5000 mm, 112.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_N] of C33 on F.Cu
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_TX_N and /STORAGE/SATA_M2_TX_N)
-    Local override; error
-    @(244.5000 mm, 100.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_TX_N] of C31 on F.Cu
-    @(245.5000 mm, 100.0000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 10.5000 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0791 mm)
-    Local override; error
-    @(222.7500 mm, 105.7500 mm): Pad 6 [POWER_GND] of U4 on F.Cu
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_P and /REGULATORS/VCC_U4_INTERNAL)
-    Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(222.7500 mm, 106.2500 mm): Pad 7 [/REGULATORS/VCC_U4_INTERNAL] of U4 on F.Cu
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_P and /REGULATORS/BRIDGE_1V1)
-    Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(237.2500 mm, 107.0000 mm): Pad 9 [/REGULATORS/BRIDGE_1V1] of U5 on F.Cu
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_P and /REGULATORS/BRIDGE_1V1)
-    Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(232.7500 mm, 107.0000 mm): Pad 8 [/REGULATORS/BRIDGE_1V1] of U5 on F.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0305 mm)
-    Local override; error
-    @(227.2500 mm, 107.0000 mm): Pad 9 [/REGULATORS/BRIDGE_3V3] of U4 on F.Cu
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_P and /REGULATORS/FB_BRIDGE_3V3)
-    Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(227.2500 mm, 106.2500 mm): Pad 10 [/REGULATORS/FB_BRIDGE_3V3] of U4 on F.Cu
-[shorting_items]: Items shorting two nets (nets POWER_GND and /STORAGE/SATA_M2_RX_P)
-    Local override; error
-    @(225.0000 mm, 106.1250 mm): Pad 20 [POWER_GND] of U4 on F.Cu
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_P and /STORAGE/SATA_M2_RX_P)
-    Local override; error
-    @(260.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_P and )
-    Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(261.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_P and CM5_USB3_TX_N)
-    Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(261.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_P and CM5_USB3_TX_P)
-    Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(262.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
-[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_N and /STORAGE/SATA_M2_RX_P)
-    Local override; error
-    @(260.0000 mm, 109.5000 mm): Pad 42 [CM5_USB3_RX_N] of U7 on F.Cu
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1260 mm)
-    Local override; error
-    @(258.0000 mm, 109.5000 mm): Pad 38 [<no net>] of U7 on F.Cu
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0823 mm)
-    Local override; error
-    @(258.5000 mm, 109.5000 mm): Pad 39 [<no net>] of U7 on F.Cu
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0386 mm)
-    Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(259.0000 mm, 109.5000 mm): Pad 40 [<no net>] of U7 on F.Cu
-[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_1V1 and /STORAGE/SATA_M2_RX_P)
-    Local override; error
-    @(259.5000 mm, 109.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_P and /STORAGE/BRIDGE_SATA_RX_P)
-    Local override; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(244.5000 mm, 108.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_P] of C32 on F.Cu
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
-    Rule: board setup constraints hole; error
-    @(76.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C15 on F.Cu
-    @(78.0000 mm, 120.0000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
-[hole_clearance]: Hole clearance violation (pad clearance 1.7000 mm; actual 0.0000 mm)
-    Local override; error
-    @(69.5000 mm, 82.0000 mm): Pad 1 [/CORE_CM5/CM5_5V] of R3 on F.Cu
-    @(68.0000 mm, 82.0000 mm): NPTH pad of J7
+    @(275.5000 mm, 109.5000 mm): Pad 33 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
 [hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
     Rule: board setup constraints hole; error
     @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
     @(78.0000 mm, 120.0000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
-[hole_clearance]: Hole clearance violation (pad clearance 1.7000 mm; actual 0.8500 mm)
+[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
     Local override; error
-    @(70.5000 mm, 82.0000 mm): Pad 2 [/REGULATORS/FB_CM5_5V] of R3 on F.Cu
-    @(68.0000 mm, 82.0000 mm): NPTH pad of J7
+    @(276.0000 mm, 109.5000 mm): Pad 34 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[shorting_items]: Items shorting two nets (nets /REGULATORS/BRIDGE_1V1 and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(237.2500 mm, 107.0000 mm): Pad 9 [/REGULATORS/BRIDGE_1V1] of U5 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
+    Local override; error
+    @(276.5000 mm, 109.5000 mm): Pad 35 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1090 mm)
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(278.0000 mm, 109.5000 mm): Pad 38 [<no net>] of U7 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
+    Local override; error
+    @(277.0000 mm, 109.5000 mm): Pad 36 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
+    Local override; error
+    @(277.5000 mm, 109.5000 mm): Pad 37 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1258 mm)
+    Local override; error
+    @(237.2500 mm, 106.2500 mm): Pad 10 [/REGULATORS/FB_BRIDGE_1V1] of U5 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0675 mm)
+    Local override; error
+    @(278.5000 mm, 109.5000 mm): Pad 39 [<no net>] of U7 on F.Cu
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+[shorting_items]: Items shorting two nets (nets POWER_GND and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(235.0000 mm, 106.1250 mm): Pad 20 [POWER_GND] of U5 on F.Cu
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(281.5000 mm, 117.0000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 7.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(282.0000 mm, 119.0000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 9.5000 mm
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(280.5000 mm, 115.0000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 5.5000 mm
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0259 mm)
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(279.0000 mm, 109.5000 mm): Pad 40 [<no net>] of U7 on F.Cu
+[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_N and /STORAGE/SATA_M2_TX_P)
+    Local override; error
+    @(280.0000 mm, 109.5000 mm): Pad 42 [CM5_USB3_RX_N] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_N and /STORAGE/BRIDGE_1V1)
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(279.5000 mm, 109.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
+[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_P and /STORAGE/SATA_M2_TX_P)
+    Local override; error
+    @(280.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[shorting_items]: Items shorting two nets (nets  and /STORAGE/SATA_M2_TX_P)
+    Local override; error
+    @(281.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(281.5000 mm, 117.0000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 7.5000 mm
+[shorting_items]: Items shorting two nets (nets CM5_USB3_TX_N and /STORAGE/SATA_M2_TX_P)
+    Local override; error
+    @(281.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(282.0000 mm, 119.0000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 9.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(280.5000 mm, 115.0000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 5.5000 mm
+[shorting_items]: Items shorting two nets (nets CM5_USB3_TX_P and /STORAGE/SATA_M2_TX_P)
+    Local override; error
+    @(282.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_N and /STORAGE/SATA_M2_TX_N)
+    Local override; error
+    @(280.0000 mm, 109.5000 mm): Pad 42 [CM5_USB3_RX_N] of U7 on F.Cu
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(280.0000 mm, 113.0000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 3.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(275.5000 mm, 105.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 5.6569 mm
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[shorting_items]: Items shorting two nets (nets CM5_USB3_RX_P and /STORAGE/SATA_M2_TX_N)
+    Local override; error
+    @(280.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_RX_N and /STORAGE/SATA_M2_TX_P)
+    Local override; error
+    @(271.5000 mm, 109.5000 mm): Via [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu - B.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_N and )
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(281.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_N and CM5_USB3_TX_N)
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(281.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(271.5000 mm, 109.5000 mm): Via [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_N and CM5_USB3_TX_P)
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(282.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(280.0000 mm, 113.0000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 3.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(265.5000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 30.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(215.0000 mm, 96.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 13.5000 mm
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(235.0000 mm, 108.0000 mm): Track [/STORAGE/SATA_M2_RX_P] on B.Cu, length 30.0000 mm
+    @(210.0000 mm, 100.0000 mm): Track [/STORAGE/SATA_M2_TX_N] on B.Cu, length 15.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(200.0000 mm, 114.0000 mm): Track [CM5_USB3_RX_N] on B.Cu, length 80.0062 mm
+    @(210.0000 mm, 100.0000 mm): Track [/STORAGE/SATA_M2_TX_N] on B.Cu, length 15.5000 mm
 [hole_clearance]: Hole clearance violation (pad clearance 1.7000 mm; actual 0.7783 mm)
     Local override; error
     @(69.5000 mm, 132.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of R11 on F.Cu
@@ -511,6 +503,22 @@
     Local override; error
     @(70.5000 mm, 132.0000 mm): Pad 2 [/REGULATORS/FB_BRIDGE_3V3] of R11 on F.Cu
     @(68.0000 mm, 130.0000 mm): NPTH pad of J7
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(76.9000 mm, 120.0000 mm): Pad 1 [12V_PROTECTED] of C15 on F.Cu
+    @(78.0000 mm, 120.0000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
+    @(78.0000 mm, 120.0000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (pad clearance 1.7000 mm; actual 0.0000 mm)
+    Local override; error
+    @(69.5000 mm, 82.0000 mm): Pad 1 [/CORE_CM5/CM5_5V] of R3 on F.Cu
+    @(68.0000 mm, 82.0000 mm): NPTH pad of J7
+[hole_clearance]: Hole clearance violation (pad clearance 1.7000 mm; actual 0.8500 mm)
+    Local override; error
+    @(70.5000 mm, 82.0000 mm): Pad 2 [/REGULATORS/FB_CM5_5V] of R3 on F.Cu
+    @(68.0000 mm, 82.0000 mm): NPTH pad of J7
 [courtyards_overlap]: Courtyards overlap
     Rule: board setup constraints courtyard; error
     @(102.0000 mm, 120.0000 mm): Footprint C18
@@ -597,100 +605,96 @@
     @(70.0000 mm, 120.0000 mm): Footprint C14
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(245.5000 mm, 100.0000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 10.5000 mm
-    @(244.5000 mm, 100.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_TX_N] of C31 on F.Cu
+    @(265.5000 mm, 100.0000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 30.5000 mm
+    @(264.5000 mm, 100.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_TX_N] of C31 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(279.5000 mm, 109.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(280.0000 mm, 109.5000 mm): Pad 42 [CM5_USB3_RX_N] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(280.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(281.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(281.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 72.2496 mm
+    @(282.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(194.7250 mm, 130.7500 mm): Pad 75 [<no net>] of J3 on F.Cu
     @(194.7250 mm, 131.2500 mm): Pad 73 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-    @(260.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(275.5000 mm, 109.5000 mm): Pad 33 [<no net>] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-    @(261.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(276.0000 mm, 109.5000 mm): Pad 34 [<no net>] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-    @(261.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(276.5000 mm, 109.5000 mm): Pad 35 [<no net>] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(210.0000 mm, 115.5000 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 52.3450 mm
-    @(262.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(277.0000 mm, 109.5000 mm): Pad 36 [<no net>] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(255.5000 mm, 109.5000 mm): Pad 33 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(277.5000 mm, 109.5000 mm): Pad 37 [<no net>] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(256.0000 mm, 109.5000 mm): Pad 34 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(278.0000 mm, 109.5000 mm): Pad 38 [<no net>] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(256.5000 mm, 109.5000 mm): Pad 35 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(278.5000 mm, 109.5000 mm): Pad 39 [<no net>] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(257.0000 mm, 109.5000 mm): Pad 36 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(279.0000 mm, 109.5000 mm): Pad 40 [<no net>] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(257.5000 mm, 109.5000 mm): Pad 37 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(279.5000 mm, 109.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(258.0000 mm, 109.5000 mm): Pad 38 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(280.0000 mm, 109.5000 mm): Pad 42 [CM5_USB3_RX_N] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(258.5000 mm, 109.5000 mm): Pad 39 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(280.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(259.0000 mm, 109.5000 mm): Pad 40 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(281.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(259.5000 mm, 109.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(281.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(260.0000 mm, 109.5000 mm): Pad 42 [CM5_USB3_RX_N] of U7 on F.Cu
+    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 67.0000 mm
+    @(282.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(260.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(261.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(261.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(215.0000 mm, 109.5000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 47.0000 mm
-    @(262.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(245.5000 mm, 96.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 10.5000 mm
-    @(244.5000 mm, 96.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_TX_P] of C30 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(264.5000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_3V3] on F.Cu, length 17.5000 mm
-    @(255.5000 mm, 106.0000 mm): Pad 60 [/STORAGE/BRIDGE_SATA_RX_P] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(247.0000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_3V3] on F.Cu, length 17.7553 mm
-    @(255.5000 mm, 104.5000 mm): Pad 57 [/STORAGE/BRIDGE_SATA_TX_P] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(247.0000 mm, 106.0000 mm): Track [/STORAGE/BRIDGE_3V3] on F.Cu, length 17.8466 mm
-    @(255.5000 mm, 104.5000 mm): Pad 57 [/STORAGE/BRIDGE_SATA_TX_P] of U7 on F.Cu
+    @(265.5000 mm, 96.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 30.5000 mm
+    @(264.5000 mm, 96.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_TX_P] of C30 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(194.7250 mm, 149.2500 mm): Pad 1 [/STORAGE/SATA_M2_TX_P] of J3 on F.Cu
@@ -717,8 +721,16 @@
     @(202.2750 mm, 147.5000 mm): Pad 8 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
+    @(279.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.8807 mm
+    @(278.9000 mm, 75.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
     @(194.7250 mm, 147.7500 mm): Pad 7 [<no net>] of J3 on F.Cu
     @(194.7250 mm, 147.2500 mm): Pad 9 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(278.9000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.6641 mm
+    @(281.1000 mm, 74.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(202.2750 mm, 147.5000 mm): Pad 8 [<no net>] of J3 on F.Cu
@@ -729,12 +741,28 @@
     @(194.7250 mm, 146.7500 mm): Pad 11 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(279.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.8807 mm
-    @(278.9000 mm, 75.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+    @(281.1000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 3.8500 mm
+    @(281.1000 mm, 75.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(278.9000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_XI] on F.Cu, length 5.6641 mm
-    @(281.1000 mm, 74.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+    @(202.2750 mm, 147.0000 mm): Pad 10 [<no net>] of J3 on F.Cu
+    @(202.2750 mm, 146.5000 mm): Pad 59 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(194.7250 mm, 146.7500 mm): Pad 11 [<no net>] of J3 on F.Cu
+    @(194.7250 mm, 146.2500 mm): Pad 60 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(281.1000 mm, 75.8500 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 4.4814 mm
+    @(284.5000 mm, 75.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of R23 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(202.2750 mm, 144.5000 mm): Pad 20 [<no net>] of J3 on F.Cu
+    @(202.2750 mm, 144.0000 mm): Pad 22 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(202.2750 mm, 144.5000 mm): Pad 20 [<no net>] of J3 on F.Cu
+    @(202.2750 mm, 145.0000 mm): Pad 65 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(68.0000 mm, 82.0000 mm): NPTH pad of J7
@@ -749,28 +777,8 @@
     @(69.5000 mm, 132.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of R11 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(202.2750 mm, 147.0000 mm): Pad 10 [<no net>] of J3 on F.Cu
-    @(202.2750 mm, 146.5000 mm): Pad 59 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
     @(68.0000 mm, 130.0000 mm): NPTH pad of J7
     @(70.5000 mm, 132.0000 mm): Pad 2 [/REGULATORS/FB_BRIDGE_3V3] of R11 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(194.7250 mm, 146.7500 mm): Pad 11 [<no net>] of J3 on F.Cu
-    @(194.7250 mm, 146.2500 mm): Pad 60 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(281.1000 mm, 74.1500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 3.8500 mm
-    @(281.1000 mm, 75.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(202.2750 mm, 144.5000 mm): Pad 20 [<no net>] of J3 on F.Cu
-    @(202.2750 mm, 144.0000 mm): Pad 22 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(202.2750 mm, 144.5000 mm): Pad 20 [<no net>] of J3 on F.Cu
-    @(202.2750 mm, 145.0000 mm): Pad 65 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(194.7250 mm, 144.2500 mm): Pad 21 [<no net>] of J3 on F.Cu
@@ -789,10 +797,6 @@
     @(194.7250 mm, 143.2500 mm): Pad 25 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(281.1000 mm, 75.8500 mm): Track [/STORAGE/BRIDGE_XO] on F.Cu, length 4.4814 mm
-    @(284.5000 mm, 75.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of R23 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
     @(202.2750 mm, 143.5000 mm): Pad 24 [<no net>] of J3 on F.Cu
     @(202.2750 mm, 143.0000 mm): Pad 26 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
@@ -809,88 +813,108 @@
     @(194.7250 mm, 142.2500 mm): Pad 29 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(279.0000 mm, 109.5000 mm): Pad 40 [<no net>] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(279.5000 mm, 109.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(280.0000 mm, 109.5000 mm): Pad 42 [CM5_USB3_RX_N] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(280.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
     @(202.2750 mm, 142.5000 mm): Pad 28 [<no net>] of J3 on F.Cu
     @(202.2750 mm, 142.0000 mm): Pad 30 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(281.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(281.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(282.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(264.5000 mm, 108.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_P] of C32 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(237.2500 mm, 107.0000 mm): Pad 9 [/REGULATORS/BRIDGE_1V1] of U5 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(235.0000 mm, 106.1250 mm): Pad 20 [POWER_GND] of U5 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(232.7500 mm, 106.2500 mm): Pad 7 [/REGULATORS/VCC_U5_INTERNAL] of U5 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(222.7500 mm, 105.7500 mm): Pad 6 [POWER_GND] of U4 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(225.0000 mm, 106.1250 mm): Pad 20 [POWER_GND] of U4 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 77.1622 mm
+    @(227.2500 mm, 105.7500 mm): Pad 11 [POWER_GND] of U4 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(265.5000 mm, 108.0000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 30.5000 mm
+    @(264.5000 mm, 108.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_P] of C32 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(194.7250 mm, 142.2500 mm): Pad 29 [<no net>] of J3 on F.Cu
     @(194.7250 mm, 141.7500 mm): Pad 31 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(245.5000 mm, 108.0000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 10.5000 mm
-    @(244.5000 mm, 108.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_P] of C32 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
     @(202.2750 mm, 142.0000 mm): Pad 30 [<no net>] of J3 on F.Cu
     @(202.2750 mm, 141.5000 mm): Pad 32 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(259.5000 mm, 109.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+    @(280.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(260.0000 mm, 109.5000 mm): Pad 42 [CM5_USB3_RX_N] of U7 on F.Cu
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+    @(281.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(260.5000 mm, 109.5000 mm): Pad 43 [CM5_USB3_RX_P] of U7 on F.Cu
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+    @(281.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(261.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+    @(282.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(261.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(262.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(237.2500 mm, 107.0000 mm): Pad 9 [/REGULATORS/BRIDGE_1V1] of U5 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(244.5000 mm, 108.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_P] of C32 on F.Cu
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
+    @(264.5000 mm, 112.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_N] of C33 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(194.7250 mm, 141.7500 mm): Pad 31 [<no net>] of J3 on F.Cu
     @(194.7250 mm, 141.2500 mm): Pad 33 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(232.7500 mm, 107.0000 mm): Pad 8 [/REGULATORS/BRIDGE_1V1] of U5 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(222.7500 mm, 106.2500 mm): Pad 7 [/REGULATORS/VCC_U4_INTERNAL] of U4 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(225.0000 mm, 106.1250 mm): Pad 20 [POWER_GND] of U4 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(205.0000 mm, 104.5000 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 57.2189 mm
-    @(227.2500 mm, 106.2500 mm): Pad 10 [/REGULATORS/FB_BRIDGE_3V3] of U4 on F.Cu
+    @(265.5000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 30.5000 mm
+    @(264.5000 mm, 112.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_N] of C33 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(202.2750 mm, 141.5000 mm): Pad 32 [<no net>] of J3 on F.Cu
     @(202.2750 mm, 141.0000 mm): Pad 34 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
-    @(261.0000 mm, 109.5000 mm): Pad 44 [<no net>] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
-    @(261.5000 mm, 109.5000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 48.0521 mm
-    @(262.0000 mm, 109.5000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(194.7250 mm, 141.2500 mm): Pad 33 [<no net>] of J3 on F.Cu
@@ -899,10 +923,6 @@
     Rule: board setup solder mask min width; error
     @(202.2750 mm, 141.0000 mm): Pad 34 [<no net>] of J3 on F.Cu
     @(202.2750 mm, 140.5000 mm): Pad 36 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(245.5000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 10.5000 mm
-    @(244.5000 mm, 112.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_N] of C33 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(194.7250 mm, 140.7500 mm): Pad 35 [<no net>] of J3 on F.Cu
@@ -1047,10 +1067,10 @@
     @(70.0400 mm, 103.9000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 1.9600 mm
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(72.0000 mm, 114.0000 mm): Via [CM5_USB3_RX_N] on F.Cu - B.Cu
+    @(200.0000 mm, 114.0000 mm): Via [CM5_USB3_RX_N] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(200.0000 mm, 114.0000 mm): Via [CM5_USB3_RX_N] on F.Cu - B.Cu
+    @(72.0000 mm, 114.0000 mm): Via [CM5_USB3_RX_N] on F.Cu - B.Cu
 [track_dangling]: Track has unconnected end
     Local override; warning
     @(70.0400 mm, 104.3000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 3.9600 mm
@@ -1074,34 +1094,37 @@
     @(70.0400 mm, 106.7000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 7.9600 mm
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(212.0000 mm, 120.0000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
-[via_dangling]: Via is not connected or connected on only one layer
-    Local override; warning
     @(78.0000 mm, 120.0000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(278.9000 mm, 78.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
-[via_dangling]: Via is not connected or connected on only one layer
-    Local override; warning
-    @(281.1000 mm, 78.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+    @(212.0000 mm, 120.0000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
     @(283.8000 mm, 82.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
+    @(281.1000 mm, 78.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
     @(278.9000 mm, 82.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(278.9000 mm, 78.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(251.5000 mm, 102.5000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
 [track_dangling]: Track has unconnected end
     Local override; warning
     @(252.0000 mm, 89.0000 mm): Track [/STORAGE/BRIDGE_XO] on B.Cu, length 31.9333 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(253.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.4868 mm
+    @(273.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.4868 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(251.5000 mm, 109.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on B.Cu, length 7.4330 mm
+    @(271.5000 mm, 109.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on B.Cu, length 7.4330 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(250.5000 mm, 108.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on B.Cu, length 6.0000 mm
+    @(270.5000 mm, 108.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on B.Cu, length 6.0000 mm
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
     @(205.0000 mm, 108.0000 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
@@ -1315,60 +1338,52 @@
     @(207.3500 mm, 158.0000 mm): Pad 2 [POWER_GND] of C41 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(245.4500 mm, 100.4000 mm): Segment of C31 on f.silkscreen
-    @(245.5000 mm, 100.0000 mm): Pad 1 [/STORAGE/SATA_M2_TX_N] of C31 on F.Cu
+    @(265.4500 mm, 100.4000 mm): Segment of C31 on f.silkscreen
+    @(265.5000 mm, 100.0000 mm): Pad 1 [/STORAGE/SATA_M2_TX_N] of C31 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(245.4500 mm, 96.4000 mm): Segment of C30 on f.silkscreen
-    @(245.5000 mm, 96.0000 mm): Pad 1 [/STORAGE/SATA_M2_TX_P] of C30 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(245.4500 mm, 112.4000 mm): Segment of C33 on f.silkscreen
-    @(245.5000 mm, 112.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_N] of C33 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(245.4500 mm, 108.4000 mm): Segment of C32 on f.silkscreen
-    @(245.5000 mm, 108.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_P] of C32 on F.Cu
+    @(265.4500 mm, 96.4000 mm): Segment of C30 on f.silkscreen
+    @(265.5000 mm, 96.0000 mm): Pad 1 [/STORAGE/SATA_M2_TX_P] of C30 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(279.5500 mm, 79.6000 mm): Segment of C42 on f.silkscreen
     @(279.5000 mm, 80.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of C42 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
-    @(280.0000 mm, 75.0000 mm): Reference field of Y1
-    @(278.9000 mm, 74.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(280.0000 mm, 75.0000 mm): Reference field of Y1
-    @(281.1000 mm, 74.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(278.4000 mm, 73.7500 mm): Rectangle of Y1 on f.silkscreen
-    @(278.9000 mm, 74.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(278.4000 mm, 73.7500 mm): Rectangle of Y1 on f.silkscreen
-    @(281.1000 mm, 74.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(278.4000 mm, 73.7500 mm): Rectangle of Y1 on f.silkscreen
-    @(281.1000 mm, 75.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(278.4000 mm, 73.7500 mm): Rectangle of Y1 on f.silkscreen
-    @(278.9000 mm, 75.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(280.0000 mm, 75.0000 mm): Reference field of Y1
-    @(278.9000 mm, 75.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
-    @(280.0000 mm, 75.0000 mm): Reference field of Y1
-    @(281.1000 mm, 75.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on F.Cu
-[silk_over_copper]: Silkscreen clipped by solder mask
-    Local override; warning
     @(284.5500 mm, 79.6000 mm): Segment of C43 on f.silkscreen
     @(284.5000 mm, 80.0000 mm): Pad 1 [/STORAGE/BRIDGE_XO] of C43 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(280.0000 mm, 75.0000 mm): Reference field of Y1
+    @(278.9000 mm, 74.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(280.0000 mm, 75.0000 mm): Reference field of Y1
+    @(281.1000 mm, 74.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(278.4000 mm, 73.7500 mm): Rectangle of Y1 on f.silkscreen
+    @(278.9000 mm, 74.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(278.4000 mm, 73.7500 mm): Rectangle of Y1 on f.silkscreen
+    @(281.1000 mm, 74.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(278.4000 mm, 73.7500 mm): Rectangle of Y1 on f.silkscreen
+    @(281.1000 mm, 75.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(278.4000 mm, 73.7500 mm): Rectangle of Y1 on f.silkscreen
+    @(278.9000 mm, 75.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(280.0000 mm, 75.0000 mm): Reference field of Y1
+    @(278.9000 mm, 75.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(280.0000 mm, 75.0000 mm): Reference field of Y1
+    @(281.1000 mm, 75.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(262.0500 mm, 34.3250 mm): Rectangle of J2 on f.silkscreen
@@ -1393,6 +1408,14 @@
     Local override; warning
     @(262.0500 mm, 34.3250 mm): Rectangle of J2 on f.silkscreen
     @(262.1250 mm, 41.9500 mm): PTH pad 19 [/ETHERNET/GBE_SHIELD] of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(265.4500 mm, 112.4000 mm): Segment of C33 on f.silkscreen
+    @(265.5000 mm, 112.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_N] of C33 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(265.4500 mm, 108.4000 mm): Segment of C32 on f.silkscreen
+    @(265.5000 mm, 108.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_P] of C32 on F.Cu
 [silk_over_copper]: Silkscreen clipped by solder mask
     Local override; warning
     @(94.0000 mm, 70.0000 mm): Reference field of C8
@@ -1473,6 +1496,8 @@
     Local override; warning
     @(70.0000 mm, 70.0000 mm): Reference field of C5
     @(71.1000 mm, 70.0000 mm): Pad 2 [POWER_GND] of C5 on F.Cu
+[copper_sliver]: Copper sliver (F.Cu)
+    Local override; warning
 
 ** Found 476 unconnected pads **
 [unconnected_items]: Missing connection between items
@@ -2885,12 +2910,12 @@
     @(202.2750 mm, 149.0000 mm): Pad 2 [/STORAGE/SATA_M2_TX_N] of J3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(244.5000 mm, 100.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_TX_N] of C31 on F.Cu
-    @(253.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.4868 mm
+    @(264.5000 mm, 100.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_TX_N] of C31 on F.Cu
+    @(273.5000 mm, 103.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.4868 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(215.0000 mm, 96.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 13.5000 mm
     @(194.7250 mm, 149.2500 mm): Pad 1 [/STORAGE/SATA_M2_TX_P] of J3 on F.Cu
+    @(215.0000 mm, 96.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 13.5000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(18.5500 mm, 93.5500 mm): Pad 1 [/POWER_INPUT/VCAP_B] of U2 on F.Cu
@@ -2934,43 +2959,43 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(70.0400 mm, 106.3000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 5.9600 mm
-    @(76.0000 mm, 118.0000 mm): Via [CM5_USB3_TX_N] on F.Cu - B.Cu
+    @(76.0000 mm, 118.0000 mm): Track [CM5_USB3_TX_N] on B.Cu, length 132.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(70.0400 mm, 106.7000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 7.9600 mm
     @(78.0000 mm, 120.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 134.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(255.5000 mm, 102.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 4.0000 mm
-    @(280.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.5612 mm
+    @(278.9000 mm, 82.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+    @(275.5000 mm, 102.5000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 24.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(280.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.5612 mm
     @(281.1000 mm, 78.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(281.1000 mm, 78.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
-    @(278.9000 mm, 78.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(283.8000 mm, 82.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
     @(280.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.5612 mm
+    @(285.5000 mm, 80.0000 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.6249 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(244.5000 mm, 112.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_N] of C33 on F.Cu
-    @(251.5000 mm, 109.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on B.Cu, length 7.4330 mm
+    @(281.1000 mm, 78.0000 mm): Via [/STORAGE/BRIDGE_VSSOSC] on F.Cu - B.Cu
+    @(278.9000 mm, 75.8500 mm): Track [/STORAGE/BRIDGE_VSSOSC] on F.Cu, length 2.1500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(244.5000 mm, 108.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_P] of C32 on F.Cu
-    @(250.5000 mm, 108.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on B.Cu, length 6.0000 mm
+    @(264.5000 mm, 112.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_N] of C33 on F.Cu
+    @(271.5000 mm, 109.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on B.Cu, length 7.4330 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(235.0000 mm, 108.0000 mm): Track [/STORAGE/SATA_M2_RX_P] on B.Cu, length 30.0000 mm
+    @(264.5000 mm, 108.0000 mm): Pad 2 [/STORAGE/BRIDGE_SATA_RX_P] of C32 on F.Cu
+    @(270.5000 mm, 108.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on B.Cu, length 6.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(205.0000 mm, 108.0000 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
     @(194.7250 mm, 148.7500 mm): Pad 3 [/STORAGE/SATA_M2_RX_P] of J3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(215.0000 mm, 119.5000 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 67.7422 mm
     @(202.2750 mm, 148.5000 mm): Pad 4 [/STORAGE/SATA_M2_RX_N] of J3 on F.Cu
-    @(215.0000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on B.Cu, length 7.5000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(109.5000 mm, 170.0000 mm): Pad 1 [/REGULATORS/RT_BRIDGE_1V1] of R21 on F.Cu

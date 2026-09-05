@@ -924,3 +924,15 @@ unconnected items. It is rejected: local U7-side SATA/clock escapes still
 cross existing regulator geometry. No PCIe, storage architecture, or clean
 production artifact was changed; Phase 19 remains open and Phase 20+ remains
 untouched.
+
+## 2026-09-05 farther-outboard bridge trial
+
+To remove the U4/U5 collision identified in the preceding trial, the
+disposable moved U7 to `(280,105)` rotation `270`, retained J3 at `(200,140)`
+rotation `90`, and moved C30-C33 between bridge and socket. USB3, SATA, and
+the clock were regenerated together. Native DRC measured `384` violations
+and `476` unconnected items. The candidate is rejected: the U7-side
+clock/SATA escape still has crossings and the disposable donor retains
+unrelated regulator connectivity debt. No clean production artifact, PCIe
+ancestor, or architecture was changed; Phase 19 remains open and Phase 20+
+remains untouched.

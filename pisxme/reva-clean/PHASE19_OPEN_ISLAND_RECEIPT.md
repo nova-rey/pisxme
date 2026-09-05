@@ -27,3 +27,8 @@ west of U7, J3 `(200,140)` rotation `90`. Native DRC: `377` violations and
 `476` unconnected items. Rejected because live SATA launch and clock fanout
 still cross the U7/regulator pad field. This is evidence only; it is not a
 Phase 19 closure claim.
+
+Follow-up farther-outboard bridge: U7 `(280,105)` rotation `270`, J3
+`(200,140)` rotation `90`, with C30-C33 between bridge and socket. Native DRC
+measured `384` violations and `476` unconnected items. Rejected; clock/SATA
+local escape crossings remain.
