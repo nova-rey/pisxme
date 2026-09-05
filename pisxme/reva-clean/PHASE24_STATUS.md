@@ -300,3 +300,9 @@ without U4. It reports the inherited 201 DRC violations, zero shorts, zero
 crossings, and 384 unconnected items (down from 397). This promotes only the
 U3/U5 local field evidence; U4 requires an obstacle-aware escape and the
 board-wide power/ground distribution is still unresolved.
+
+The U4-specific left-side dogbone was rejected as well. It removed the U4
+short class, but native DRC found four F.Cu crossings against the existing
+PG_BRIDGE_3V3 corridor and U4 ground escape, leaving 390 unconnected items.
+U4 therefore needs a layer-separated or locally regenerated corridor rather
+than another same-layer coordinate tweak.
