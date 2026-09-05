@@ -62,8 +62,8 @@ def main():
   # Rotation-aware bridge-side capacitor island.  The older V3 branch was
   # authored for U7 rotation 180 and placed these capacitors into the new
   # clock/SATA pad field when reused at rotation 270.
-  cap_xy={'C30':(150.0,122.0),'C31':(150.0,126.0),
-          'C32':(150.0,118.0),'C33':(150.0,130.0)}
+  cap_xy={'C30':(ux+10.0,uy-8.0),'C31':(ux+10.0,uy-4.0),
+          'C32':(ux+10.0,uy-12.0),'C33':(ux+10.0,uy)}
  for i,ref in enumerate(('C30','C31','C32','C33')):
   cap=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'C_0402_1005Metric')
   if cap is None: raise RuntimeError('cannot load C_0402_1005Metric')
@@ -209,17 +209,17 @@ def main():
     # Keep the four bridge-side legs in distinct local lanes and launch the
     # socket-side nets monotonically toward the rotated J3 pad columns.
     if name == 'BRIDGE_SATA_TX_P':
-     e=(146.0,129.5); T(b,n,s,e,pcbnew.F_Cu); T(b,n,e,a,pcbnew.F_Cu)
-     q=(160.0,122.0); T(b,socket,z,q,pcbnew.F_Cu); T(b,socket,q,d,pcbnew.F_Cu)
+     e=(s[0]+6.0,s[1]); T(b,n,s,e,pcbnew.F_Cu); T(b,n,e,a,pcbnew.F_Cu)
+     q=(z[0]+8.0,z[1]); T(b,socket,z,q,pcbnew.F_Cu); T(b,socket,q,d,pcbnew.F_Cu)
     elif name == 'BRIDGE_SATA_TX_N':
-     e=(146.0,129.0); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,a,pcbnew.B_Cu)
-     q=(160.0,126.0); T(b,socket,z,q,pcbnew.B_Cu); T(b,socket,q,d,pcbnew.B_Cu)
+     e=(s[0]+6.0,s[1]); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,a,pcbnew.B_Cu)
+     q=(z[0]+8.0,z[1]); T(b,socket,z,q,pcbnew.B_Cu); T(b,socket,q,d,pcbnew.B_Cu)
     elif name == 'BRIDGE_SATA_RX_P':
-     e=(146.0,131.0); T(b,n,s,e,pcbnew.F_Cu); T(b,n,e,a,pcbnew.F_Cu)
-     q=(160.0,118.0); T(b,socket,z,q,pcbnew.F_Cu); T(b,socket,q,d,pcbnew.F_Cu)
+     e=(s[0]+6.0,s[1]); T(b,n,s,e,pcbnew.F_Cu); T(b,n,e,a,pcbnew.F_Cu)
+     q=(z[0]+8.0,z[1]); T(b,socket,z,q,pcbnew.F_Cu); T(b,socket,q,d,pcbnew.F_Cu)
     else:
-     e=(146.0,130.5); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,a,pcbnew.B_Cu)
-     q=(160.0,130.0); T(b,socket,z,q,pcbnew.B_Cu); T(b,socket,q,d,pcbnew.B_Cu)
+     e=(s[0]+6.0,s[1]); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,a,pcbnew.B_Cu)
+     q=(z[0]+8.0,z[1]); T(b,socket,z,q,pcbnew.B_Cu); T(b,socket,q,d,pcbnew.B_Cu)
    elif os.environ.get('P19_SATA_V3','0') == '1' and jrot == 90:
     # V3 routes: TX_P uses the lower B.Cu corridor, TX_N the upper F.Cu
     # corridor, and the RX pair use separated B.Cu lanes.  Each cap is

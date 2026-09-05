@@ -719,3 +719,18 @@ rot270 full candidate. The reduction confirms the former V3 coordinates were
 an authoring defect, not a physical conclusion. The candidate is not
 promoted: clock support has not yet been regenerated against the new
 capacitor island, and the full USB3/SATA connectivity gate remains open.
+
+## 2026-09-04 generalized rot270 storage-island trial
+
+The rot270 SATA authoring branch was generalized to derive capacitor and launch
+coordinates from the requested U7/J3 placement rather than absolute coordinates
+from the first rot270 trial. A new coherent placement, U7 `(160,140)` rotation
+`270` and J3 `(230,120)` rotation `90`, produced a SATA-only candidate at
+`325` DRC violations / `418` unconnected items. Adding the transformed clock
+network measured `371` / `420`, improving the prior rot270 integrated result
+of `388` / `420`.
+
+The candidate remains rejected because the transformed clock support still
+crosses inherited USB3/low-speed corridors and the board-wide connectivity
+gate is open. The result is retained as a valid generator/sweep data point;
+PCIe, stack, layer contract, and storage architecture remain unchanged.
