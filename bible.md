@@ -4042,3 +4042,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 — Phase 24 underside open-shelf source attempt rejected: underside SMD pads removed the crystal-launch crossing, but the long source lanes still intersected inherited SATA copper; corridor selection remains open.
 2026-09-05 — Phase 24 rot180 source-escape oracle passed: serialized U7 pins 52/53/54 support asymmetric XI-right, VSSOSC-up, XO-left escape with zero native DRC shorts, crossings, width violations, footprint errors, or target clock unconnected records.
 2026-09-05 Phase24: compact clock-position sweep preserved; nearwest underside candidate reduced the remaining clock defect to a localized U7 B.Cu lane crossing, not yet promoted.
+2026-09-05 Phase24: refined the disposable solver to seed proven rot180 source-via exits; it still found no XI corridor through the inherited SATA/pad field, so no candidate was promoted.

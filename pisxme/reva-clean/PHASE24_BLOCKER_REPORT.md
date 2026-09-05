@@ -252,3 +252,9 @@ launch and U7 pad field were treated as obstacles. No board was generated or
 promoted. This narrows the next experiment to a single coordinated escape
 graph containing the package-edge dogbones and adjacent SATA launch; it does
 not justify a terminal architecture blocker.
+
+The route-search diagnostic was refined to seed the exact proven rot180
+ordinary-via exits and then search downstream corridors. The conservative
+search still returns `no route XI` against the inherited SATA/pad field, so no
+candidate is promoted. This remains a geometry discriminator; it does not
+replace native KiCad proof or establish an architectural block.
