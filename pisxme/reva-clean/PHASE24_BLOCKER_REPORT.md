@@ -43,3 +43,11 @@ native DRC correctly found mismatches at unrelated U7 pads. This does not
 invalidate U7 rotation as an in-scope option. A valid next experiment must
 derive both the rotated U7 clock pads and every support pad from the serialized
 post-rotation footprints before generating copper.
+
+## New source-escape oracle
+
+The corrected rotated-U7 source-escape discriminator in
+`phase24_storage_rot90_probe.py` derives post-rotation U7 endpoints before
+authoring copper. Its native DRC report records zero `shorting_items` and zero
+`tracks_crossing` for the clock escape. It remains disposable because the
+support-passive branches and U5 C44-C47 island are not yet complete.

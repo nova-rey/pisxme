@@ -70,3 +70,8 @@ it changed U7 orientation but used a pre-rotation hard-coded clock endpoint
 graph, producing pad mismatches. It is not a valid architecture failure. Any
 next rotated-U7 experiment must query the post-rotation footprint and support
 pad coordinates before creating tracks or vias.
+
+The corrected rotated-U7 source-escape discriminator now derives post-rotation
+U7 endpoints and produces zero native DRC `shorting_items` and
+`tracks_crossing` records for the clock escape. It remains a disposable oracle
+because the Y1/R23/C42/C43 branches and U5 C44-C47 island are not yet complete.
