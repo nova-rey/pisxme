@@ -1372,3 +1372,11 @@ crossings, crossings against the live clock bus, and four U7 launch/pad-field
 shorts. This proves the useful solution class is pair-preserving and
 layer-separated, but the current endpoint schedule is not legal. Phase 19
 remains open.
+
+## 2026-09-05 mixed-layer fan-in experiment
+
+Moving only the TX final fan-in from B.Cu to F.Cu did not resolve the
+endpoint problem. Native DRC still reported three crossings, including the
+TX pair itself and an RX/TX corridor interaction, plus source/U7 clearances.
+The mixed-layer change was rejected and the all-B.Cu pair-corridor generator
+was restored. Phase 19 remains open.
