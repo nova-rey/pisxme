@@ -100,6 +100,13 @@ and the board-wide 12V/ground distribution remain open and need
 obstacle-aware launches; no severity was changed and no connection was
 waived.
 
+## CM5 upper comb rejected
+
+The upper J7 ground-comb extension is rejected at three shorts and nine
+crossings despite reducing unconnected records to 121. The live Ethernet
+fanout must be locally regenerated before upper-row CM5-ground collection can
+be attempted.
+
 ## CM5 lower comb accepted
 
 The lower J7 ground bank now has an explicit outer-column F.Cu comb. It passes

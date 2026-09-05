@@ -632,3 +632,9 @@ untouched. Fresh native DRC reports 208 violations, 127 unconnected records,
 zero shorts, and zero crossings. This is accepted targeted progress; the
 upper high-speed rows and the separate connector-to-plane CM5-ground launch
 remain open.
+
+The upper-row comb extension is rejected: fresh native DRC reports 223
+violations, 121 unconnected records, three shorts, and nine crossings. The
+failure occurs in the live Ethernet launch rows, so the lower-comb candidate
+remains the accepted basis and the next experiment must regenerate those
+signal launches rather than extend the ground comb through them.
