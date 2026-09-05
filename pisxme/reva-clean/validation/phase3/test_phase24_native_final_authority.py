@@ -22,7 +22,7 @@ def main() -> None:
     with tempfile.TemporaryDirectory(prefix="pisxme-phase24-erc-"):
         report = ROOT / ".phase24-test-erc.rpt"
         result = subprocess.run(
-            ["xvfb-run", "-a", "kicad-cli", "sch", "erc", "--severity-error",
+            ["kicad-cli", "sch", "erc", "--severity-error",
              "--output", report.name, str(ROOT / "PiSXMe_RevA_Clean.kicad_sch")],
             cwd=ROOT, check=False,
         )
