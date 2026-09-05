@@ -62,3 +62,14 @@ remained free of `shorting_items`; the failure is confined to the newly added
 passive branch geometry. The experiment is rejected and is not production
 authority. Next repair remains layer-separated passive fanout with explicit
 via/layer ownership, followed by the missing U5 C44-C47 island.
+
+## Full clock-support discriminator (still open)
+
+The subsequent no-via-in-pad revision uses rule-width tracks and offset
+ordinary vias at all six passive SMD endpoints. Native DRC reports `168`
+violations and `499` unconnected items on the stripped ancestor, with zero
+`tracks_crossing`, zero `shorting_items`, zero `track_width`, and zero
+footprint errors. The target XI/XO/VSSOSC groups still appear in the native
+unconnected report, so this is not yet connectivity proof. The remaining
+issue is authoring/connectivity attachment through the generated layer
+transitions; no production board or Phase 24 gate has been promoted.

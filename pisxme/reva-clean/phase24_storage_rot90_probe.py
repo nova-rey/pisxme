@@ -12,7 +12,7 @@ def N(b,s):
  n=b.FindNet(s)
  if n is None: n=pcbnew.NETINFO_ITEM(b,s); n.SetNetCode(b.GetNetCount()+1); b.Add(n)
  return n
-def S(b,n,a,z,l=pcbnew.F_Cu,w=.08):
+def S(b,n,a,z,l=pcbnew.F_Cu,w=.1321):
  t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(l); t.SetWidth(pcbnew.FromMM(w)); t.SetNet(n); b.Add(t)
 def X(b,n,p):
  v=pcbnew.PCB_VIA(b); v.SetPosition(V(*p)); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(n); b.Add(v)
@@ -25,17 +25,17 @@ def main():
  u_pads={str(q.GetNumber()):q for q in list(u.Pads())}
  names=set(v for m in MAP.values() for v in m.values()); ns={s:N(b,s) for s in names}
  io=pcbnew.PCB_IO_KICAD_SEXPR(); fs={}
- for ref,(x,y) in {'Y1':(140,145),'R23':(155,165),'C42':(125,165),'C43':(180,165)}.items():
+ for ref,(x,y) in {'Y1':(140,145),'R23':(155,165),'C42':(125,165),'C43':(210,165)}.items():
   f=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),LIB[ref]); f.SetReference(ref); f.SetPosition(V(x,y)); f.SetLayer(pcbnew.B_Cu); f.SetOrientationDegrees(270 if ref=='Y1' else 0); b.Add(f); fs[ref]=f
   for q in f.Pads(): q.SetNet(ns[MAP[ref][str(q.GetNumber())]]); q.SetNetCode(ns[MAP[ref][str(q.GetNumber())]].GetNetCode())
  ps={r:{str(q.GetNumber()):xy(q) for q in list(f.Pads())} for r,f in fs.items()}
  # Rotate U7's storage side only; all old storage signal copper is obsolete.
  # Footprints are loaded before deletion because KiCad's SWIG wrapper can
  # invalidate a PCB_IO loader during board-owned item removal.
- kill=('/STORAGE/','/CORE_CM5/CM5_USB3_')
- kill_codes={n.GetNetCode() for n in b.GetNetsByName().values() if any(str(n.GetNetname()).startswith(x) for x in kill)}
+ # Remove all inherited copper.  This discriminator must contain only the
+ # post-rotation U7 clock/support topology authored below.
  for t in list(b.GetTracks()):
-  if t.GetNetCode() in kill_codes: b.Remove(t)
+  b.Remove(t)
  # This discriminator isolates the clock geometry; full-board plane and
  # return validation is performed only after a clean local route exists.
  for z in list(b.Zones()): b.Remove(z)
@@ -45,22 +45,16 @@ def main():
  # 53=(124.5,142.5), 54=(124.5,142).  The three F.Cu dogbones leave the
  # lead field first, then transition to independent B.Cu lanes.
  XI,VS,XO=(ns[s] for s in ('/STORAGE/BRIDGE_XI','/STORAGE/BRIDGE_VSSOSC','/STORAGE/BRIDGE_XO'))
- # Post-rotation Y1 targets are XO=3 at left/bottom, VSSOSC=2 at
- # left/top, VSSOSC=4 at right/bottom, and XI=1 at right/top.  Keep all
- # three source lanes at distinct heights, with the VSSOSC bridge outside
- # the crystal body.
- S(b,XO,(124.5,142),(127,140)); S(b,XO,(127,140),(134,140)); X(b,XO,(134,140)); S(b,XO,(134,140),(136,140),pcbnew.F_Cu); S(b,XO,(136,140),(136,146.1),pcbnew.F_Cu); S(b,XO,(136,146.1),(137,146.1),pcbnew.F_Cu); X(b,XO,(137,146.1)); S(b,XO,(137,146.1),(139.15,146.1),pcbnew.B_Cu)
- S(b,VS,(124.5,142.5),(128,142.5)); X(b,VS,(128,142.5)); S(b,VS,(128,142.5),(132,142.5),pcbnew.B_Cu); S(b,VS,(132,142.5),(132,143.9),pcbnew.B_Cu); S(b,VS,(132,143.9),ps['Y1']['2'],pcbnew.B_Cu)
- S(b,XI,(124.5,143),(127,145.5)); S(b,XI,(127,145.5),(130,145.5),pcbnew.B_Cu); X(b,XI,(130,145.5)); S(b,XI,(130,145.5),(126,145.5),pcbnew.B_Cu); S(b,XI,(126,145.5),(126,145),pcbnew.B_Cu); S(b,XI,(126,145),(140.85,145),pcbnew.B_Cu); S(b,XI,(140.85,145),ps['Y1']['1'],pcbnew.B_Cu)
- S(b,VS,ps['Y1']['2'],(139.15,142.8),pcbnew.B_Cu); S(b,VS,(139.15,142.8),(143,142.8),pcbnew.B_Cu); S(b,VS,(143,142.8),(143,147),pcbnew.B_Cu); S(b,VS,(143,147),(140.85,147),pcbnew.B_Cu); S(b,VS,(140.85,147),ps['Y1']['4'],pcbnew.B_Cu)
- # Complete the crystal support network in an acreage layout.  The passive
- # island is spread below Y1 so every net has a monotonic B.Cu corridor;
- # this is a geometry discriminator, not a proposed compact placement.
- w=.1321
- S(b,XI,ps['Y1']['1'],(150,145),pcbnew.B_Cu,w); S(b,XI,(150,145),(150,165),pcbnew.B_Cu,w); S(b,XI,(150,165),ps['R23']['1'],pcbnew.B_Cu,w); S(b,XI,(150,160),(125,160),pcbnew.B_Cu,w); S(b,XI,(125,160),ps['C42']['1'],pcbnew.B_Cu,w)
- S(b,XO,ps['Y1']['3'],(135,146.1),pcbnew.B_Cu,w); S(b,XO,(135,146.1),(135,158),pcbnew.B_Cu,w); S(b,XO,(135,158),(155,158),pcbnew.B_Cu,w); S(b,XO,(155,158),ps['R23']['2'],pcbnew.B_Cu,w); S(b,XO,(155,158),(180,158),pcbnew.B_Cu,w); S(b,XO,(180,158),ps['C43']['1'],pcbnew.B_Cu,w)
- S(b,VS,ps['Y1']['2'],(120,143),pcbnew.B_Cu,w); S(b,VS,(120,143),(120,165),pcbnew.B_Cu,w); S(b,VS,(120,165),ps['C42']['2'],pcbnew.B_Cu,w)
- S(b,VS,ps['Y1']['4'],(190,142),pcbnew.B_Cu,w); S(b,VS,(190,142),(190,165),pcbnew.B_Cu,w); S(b,VS,(190,165),ps['C43']['2'],pcbnew.B_Cu,w)
+ # Complete the spread support network with explicit planar corridors.
+ # U7-to-Y1 source legs are derived from the post-rotation pad positions and
+ # leave the U7 lead field before changing layers.
+ S(b,XO,(124.5,142),(127,140)); S(b,XO,(127,140),(134,140)); X(b,XO,(134,140)); S(b,XO,(134,140),(136,140),pcbnew.F_Cu); S(b,XO,(136,140),(136,146.1),pcbnew.F_Cu); X(b,XO,(136,146.1)); S(b,XO,(136,146.1),(137,146.1),pcbnew.B_Cu); X(b,XO,(137,146.1)); S(b,XO,(137,146.1),ps['Y1']['3'],pcbnew.F_Cu)
+ S(b,VS,(124.5,142.5),(128,142.5)); X(b,VS,(128,142.5)); S(b,VS,(128,142.5),(132,142.5),pcbnew.B_Cu); S(b,VS,(132,142.5),(132,143.9),pcbnew.B_Cu); S(b,VS,(132,143.9),(139.15,143.9),pcbnew.B_Cu); X(b,VS,(139.15,143.9)); S(b,VS,(139.15,143.9),ps['Y1']['2'],pcbnew.F_Cu)
+ S(b,XI,(124.5,143),(127,145.5)); X(b,XI,(130,145.5)); S(b,XI,(127,145.5),(130,145.5),pcbnew.B_Cu); S(b,XI,(130,145.5),(126,145.5),pcbnew.B_Cu); S(b,XI,(126,145.5),(126,145),pcbnew.B_Cu); S(b,XI,(126,145),(140.85,145),pcbnew.B_Cu); X(b,XI,(140.85,145)); S(b,XI,(140.85,145),ps['Y1']['1'],pcbnew.F_Cu)
+ S(b,XO,(137,146.1),(137,158),pcbnew.B_Cu); X(b,XO,(137,158)); S(b,XO,(137,158),(155,158),pcbnew.F_Cu); X(b,XO,(155,158)); S(b,XO,(155,158),(156,165),pcbnew.B_Cu); X(b,XO,(156,165)); S(b,XO,(156,165),ps['R23']['2'],pcbnew.F_Cu); S(b,XO,(155,158),(210,158),pcbnew.F_Cu); X(b,XO,(210,158)); S(b,XO,(210,158),(209,164.5),pcbnew.B_Cu); X(b,XO,(209,164.5)); S(b,XO,(209,164.5),ps['C43']['1'],pcbnew.F_Cu)
+ S(b,VS,(132,143.9),(115,143.9),pcbnew.B_Cu); S(b,VS,(115,143.9),(115,170),pcbnew.B_Cu); S(b,VS,(115,170),(126,170),pcbnew.B_Cu); X(b,VS,(126,170)); S(b,VS,(126,170),ps['C42']['2'],pcbnew.F_Cu)
+ S(b,VS,ps['Y1']['4'],(145,146.1)); X(b,VS,(145,146.1)); S(b,VS,(145,146.1),(145,140),pcbnew.B_Cu); S(b,VS,(145,140),(195,140),pcbnew.B_Cu); S(b,VS,(195,140),(195,170),pcbnew.B_Cu); S(b,VS,(195,170),(212.5,170),pcbnew.B_Cu); X(b,VS,(212.5,170)); S(b,VS,(212.5,170),(212.5,165),pcbnew.F_Cu); S(b,VS,(212.5,165),ps['C43']['2'],pcbnew.F_Cu)
+ S(b,XI,ps['Y1']['1'],(150,145)); X(b,XI,(150,145)); S(b,XI,(150,145),(150,165),pcbnew.B_Cu); S(b,XI,(150,165),(154,165),pcbnew.B_Cu); X(b,XI,(154,165)); S(b,XI,(154,165),ps['R23']['1'],pcbnew.F_Cu); S(b,XI,(150,160),(124,160),pcbnew.B_Cu); S(b,XI,(124,160),(124,164.5),pcbnew.B_Cu); X(b,XI,(124,164.5)); S(b,XI,(124,164.5),ps['C42']['1'],pcbnew.F_Cu)
  # Regulator capacitor materialization is intentionally a separate experiment.
  if b.Zones(): pcbnew.ZONE_FILLER(b).Fill(b.Zones())
  b.Save(str(OUT)); print(OUT)
