@@ -3,6 +3,16 @@
 Status: IN PROGRESS — native ERC and netlist pass; schematic↔PCB component
 parity remains open.
 
+## Protected 12 V plane experiment
+
+The candidate stack defines `In3.Cu` as `In3.PROTECTED_12V`, but the current
+board had no protected 12 V fill. A disposable full-acreage In3 fill was
+tested with native refill and DRC. It introduced no shorting or crossing
+records and reduced missing connections only from 397 to 395: unresolved
+surface regulator/capacitor pads still require explicit physical launches.
+The plane-only candidate is rejected as insufficient; the layer role remains
+available for a launch-mapped power repair.
+
 ## Closed in this checkpoint
 
 - The clean project now resolves all 34 custom symbols through the assembled

@@ -566,3 +566,11 @@ clearance. A bounded dogleg variant around the existing B.Cu SATA-TX trunk
 passes the local native gate: five missing RX-N connections were removed,
 with no new short or crossing record. The full candidate still has 392 native
 unconnected records, so this does not close Phase 24.
+
+## Protected 12 V plane rejected as sole repair
+
+Adding the plan-defined `In3.PROTECTED_12V` plane was electrically clean but
+only removed two native missing-connection records (397 to 395). It cannot
+contact the unresolved F.Cu SMD regulator and capacitor pads without explicit
+vias/dogbones. No DRC severity was relaxed; the remaining issue is a
+launch-mapped power implementation.
