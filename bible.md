@@ -4063,4 +4063,5 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: rejected first acreage clock-support transplant (218 native violations including clock crossings/short); independent U5 capacitor island had no shorts/crossings but retained dangling/inherited violations.
 2026-09-05 Phase24: rejected U5 surface-only capacitor trial; native DRC reported 202 violations including a rail/GND short and crossings.
 2026-09-05 Phase24: rejected outboard U5 surface rail-trunk placement; native DRC reported 203 violations including rail/GND short and crossings.
+2026-09-05 Phase24: hardware audit retained full-board parity reservation; ground-aware U5 V2 reduced the island to one crossing/no shorts but remained unconnected and was rejected.
 2026-09-05 Phase24: materialized all eight missing Phase24 component references; exact pad-net audit passed and native DRC had no shorts or crossings, while routed parity remains open.

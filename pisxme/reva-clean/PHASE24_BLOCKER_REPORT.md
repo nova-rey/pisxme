@@ -446,3 +446,17 @@ violations, including a bridge-1V1/POWER_GND short and crossings. Together
 with the prior surface-only trial, this rejects the surface-rail-trunk class.
 The next experiment must map existing copper/ground clearances and provide a
 deliberate return path.
+## Independent audit and ground-aware U5 V2
+
+The hardware-auditor review confirms that the eight-part baseline is only
+narrow materialization evidence. It does not prove full schematic↔PCB parity,
+routing connectivity, footprint-filter parity, or source ownership. It also
+flags the existing electrical Ethernet center-tap references as a separate
+source/PCB parity reservation.
+
+`phase24_u5_caps_ground_aware_v2.py` was then tested with rotated C44-C47,
+separate rail/return lanes, and the existing local ground launch. Native DRC
+reported 197 violations and 392 unconnected pads, with one localized rail/
+return crossing and no shorting record. It is rejected as incomplete, but is
+the best U5 placement class so far; the next trial must separate its source
+and return lanes by layer or use a mapped return launch.

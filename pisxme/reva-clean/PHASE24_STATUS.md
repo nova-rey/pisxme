@@ -154,3 +154,10 @@ class: native DRC reported 203 violations, including a bridge-1V1/POWER_GND
 short and crossings. Two surface-only placements have now failed; the next
 repair must use a clearance-mapped ground-aware island rather than another
 surface rail trunk.
+The independent hardware audit confirms the eight-part materialization is
+narrow evidence only: full-board parity, routing connectivity, source
+ownership, and footprint-filter parity remain unproven. The ground-aware U5
+V2 trial reduced the new problem to one localized rail/return crossing with
+no new shorting record, but still has unconnected/inherited failures and is
+not promoted. The next U5 repair must separate the source and return lanes by
+layer or use a mapped return launch.
