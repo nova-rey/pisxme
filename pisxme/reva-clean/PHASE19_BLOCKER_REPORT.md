@@ -883,3 +883,14 @@ one coherent routing repair. Phase 19 remains open; Phase 20+ has not started.
 Artifact: `PHASE19_OPEN_ISLAND_LIVE.kicad_pcb`; DRC receipt:
 `PHASE19_OPEN_ISLAND_LIVE-drc.rpt`; authoring path:
 `phase19_live_coordinated_open_island.py`.
+
+## 2026-09-04 separated-M.2 live-endpoint variant
+
+The same complete U7/clock/coupling island was retained while J3 was moved
+downboard to `(290,145)` (rotation `0`) so the M.2 launch could pass above and
+below the U7 body rather than through its bottom USB row. Native DRC measured
+`374` violations and `478` unconnected items. This is an improvement over the
+immediate same-y connector variant for the M.2 launch, but remains rejected:
+the U7-side SATA/clock escape still has local crossings, and one USB3 return
+via remains too close to inherited support geometry. No clean board was
+modified or promoted; Phase 19 remains open and Phase 20+ remains untouched.

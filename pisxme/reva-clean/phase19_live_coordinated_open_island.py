@@ -38,7 +38,7 @@ def main():
   u=b.FindFootprintByReference('U7'); j=b.FindFootprintByReference('J3')
   # Open region to the right of the PCIe/CM5 source corridors.
   u.SetPosition(V(260,105)); u.SetOrientationDegrees(270)
-  j.SetPosition(V(290,105)); j.SetOrientationDegrees(0)
+  j.SetPosition(V(290,145)); j.SetOrientationDegrees(0)
   # This donor already carries clean C30-C33 clock-candidate objects.
   for ref,(x,y) in {'C30':(245,96),'C31':(245,99),'C32':(245,108),'C33':(245,112)}.items():
    f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(180)
@@ -97,13 +97,13 @@ def main():
    outlayer=pcbnew.F_Cu if bn.startswith('BRIDGE_SATA_TX_') else pcbnew.B_Cu
    sy=99.725 if jn in ('1','3') else 107.275
    if bn == 'BRIDGE_SATA_TX_P':
-    q=(270.0,96.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); r=(276.0,96.0); seg(b,socket,q,r,pcbnew.F_Cu); seg(b,socket,r,d)
+    q=(270.0,96.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); r=(d[0]-5.0,96.0); seg(b,socket,q,r,pcbnew.F_Cu); seg(b,socket,r,d)
    elif bn == 'BRIDGE_SATA_TX_N':
-    q=(250.0,115.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(276.0,115.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,d)
+    q=(250.0,118.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(d[0]-5.0,118.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,d)
    elif bn == 'BRIDGE_SATA_RX_P':
-    q=(250.0,92.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(276.0,92.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,(276.0,99.725)); seg(b,socket,(276.0,99.725),d)
+    q=(250.0,90.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(d[0]-5.0,90.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,(d[0]-5.0,d[1])); seg(b,socket,(d[0]-5.0,d[1]),d)
    else:
-    q=(252.0,120.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(276.0,120.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,(276.0,107.275)); seg(b,socket,(276.0,107.275),d)
+    q=(252.0,160.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(d[0]-5.0,160.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,(d[0]-5.0,d[1])); seg(b,socket,(d[0]-5.0,d[1]),d)
   elif layer==pcbnew.F_Cu:
    seg(b,bridge,a,(a[0]-2,a[1])); seg(b,bridge,(a[0]-2,a[1]),cp['2'])
    seg(b,socket,cp['1'],(230,cp['1'][1])); seg(b,socket,(230,cp['1'][1]),(230,z[1])); seg(b,socket,(230,z[1]),z)

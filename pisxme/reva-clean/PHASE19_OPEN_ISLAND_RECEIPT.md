@@ -12,8 +12,8 @@ Native DRC command:
 kicad-cli pcb drc --all-track-errors -o PHASE19_OPEN_ISLAND_LIVE-drc.rpt PHASE19_OPEN_ISLAND_LIVE.kicad_pcb
 ```
 
-Result: `311` DRC violations and `478` unconnected items. The candidate is
-rejected. It has candidate-introduced SATA/clock crossings and shorts; the
+Latest result: `374` DRC violations and `478` unconnected items for the
+separated-M.2 variant with J3 at `(290,145)`. The candidate is rejected. It has candidate-introduced SATA/clock crossings and shorts; the
 board-wide unconnected count also reflects that this disposable donor has no
 inherited production copper. No clean-board artifact was modified or promoted.
 
