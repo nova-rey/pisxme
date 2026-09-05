@@ -208,22 +208,27 @@ def main():
    # pair.  The two pairs therefore cannot cross in the long corridor;
    # their U7 pad dogbones are kept in separate upper/lower launch bands.
    first={'CM5_USB3_RX_N':(72.0,103.9),'CM5_USB3_RX_P':(74.0,104.3),
-          'CM5_USB3_TX_N':(78.0,106.3),'CM5_USB3_TX_P':(76.0,106.7)}[suffix]
-   top={'CM5_USB3_RX_N':(72.0,82.0),'CM5_USB3_RX_P':(74.0,80.0),
-        'CM5_USB3_TX_N':(78.0,86.0),'CM5_USB3_TX_P':(76.0,84.0)}[suffix]
-   outx={'CM5_USB3_RX_N':295.0,'CM5_USB3_RX_P':296.0,
-         'CM5_USB3_TX_N':297.0,'CM5_USB3_TX_P':298.0}[suffix]
+          'CM5_USB3_TX_N':(76.0,106.3),'CM5_USB3_TX_P':(78.0,106.7)}[suffix]
+   top={'CM5_USB3_RX_N':(72.0,80.0),'CM5_USB3_RX_P':(74.0,82.0),
+        'CM5_USB3_TX_N':(76.0,84.0),'CM5_USB3_TX_P':(78.0,86.0)}[suffix]
+   # Higher source lane exits use the nearer outboard column so the
+   # vertical drops cannot cut across a lower lane's horizontal run.
+   outx={'CM5_USB3_RX_N':298.0,'CM5_USB3_RX_P':297.0,
+         'CM5_USB3_TX_N':296.0,'CM5_USB3_TX_P':295.0}[suffix]
    landing={'CM5_USB3_RX_N':(288.0,110.0),'CM5_USB3_RX_P':(289.0,112.0),
             'CM5_USB3_TX_N':(290.0,116.0),'CM5_USB3_TX_P':(291.0,118.0)}[suffix]
    launch=(71.2,s[1]); seg(b,n,s,launch); seg(b,n,launch,first)
-   if suffix.startswith('CM5_USB3_RX_'):
-    via(b,n,first); layer=pcbnew.B_Cu
-   else:
-    layer=pcbnew.F_Cu
+   via(b,n,first); layer=pcbnew.B_Cu
    seg(b,n,first,(first[0],top[1]),layer); seg(b,n,(first[0],top[1]),(260.0,top[1]),layer)
    seg(b,n,(260.0,top[1]),(outx,top[1]),layer); seg(b,n,(outx,top[1]),(outx,landing[1]),layer); seg(b,n,(outx,landing[1]),landing,layer)
-   if suffix.startswith('CM5_USB3_RX_'): via(b,n,landing)
-   seg(b,n,landing,d,pcbnew.F_Cu)
+   # Bring every serialized U7 endpoint to an individually separated
+   # underside transition, then use only a short F.Cu dogbone into the
+   # live SMD pad.  The long layer-separated corridors cannot cut the
+   # clock bus or one another.
+   via_pos={'CM5_USB3_RX_N':(274.0,114.0),'CM5_USB3_RX_P':(278.0,116.0),
+            'CM5_USB3_TX_N':(282.0,118.0),'CM5_USB3_TX_P':(286.0,120.0)}[suffix]
+   seg(b,n,landing,via_pos,pcbnew.B_Cu); via(b,n,via_pos)
+   seg(b,n,via_pos,d,pcbnew.F_Cu)
    continue
   if USB_VERTICAL:
    # Pair-aware vertical-entry experiment: RX approaches the left side of

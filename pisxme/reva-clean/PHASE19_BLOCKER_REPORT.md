@@ -1045,6 +1045,16 @@ unconnected items, with the earlier coupling-pad and U7 RX pair short class
 removed. Remaining candidate errors are concentrated at the dense J3 launch
 and its mechanical/NC-pad field. The candidate remains rejected and Phase 19
 remains open.
+
+## 2026-09-05 pair split endpoint-spacing follow-up
+
+The follow-up kept all four long USB3 corridors on B.Cu, reversed the
+outboard exit ordering, and separated the U7-side transitions by 4 mm. Pair
+skew improved further to approximately 0.45 mm RX and 0.53 mm TX. Native DRC
+still reports long-corridor crossings plus source-via clearances and U7-side
+dogbone clearance/crossing violations. This stronger discriminating result
+is rejected and not promoted. The next correction must serialize the complete
+source-to-U7 graph including the layer-transition columns.
 ## 2026-09-05 rotated-270 SATA transition/capacitor oracle refinement
 
 The disposable authoring path was corrected so every capacitor-to-B.Cu SATA
