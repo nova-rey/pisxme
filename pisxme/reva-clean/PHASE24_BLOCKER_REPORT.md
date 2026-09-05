@@ -122,3 +122,15 @@ violations, zero `tracks_crossing`, zero `shorting_items`, zero
 no XI/XO/VSSOSC entries. This is the clean local topology proof. It is not
 yet an acreage proof because the discriminator intentionally removes
 unrelated ancestor copper and has not materialized the U5 C44-C47 island.
+
+## Combined proven-clock transplant (rejected)
+
+`phase24_transplant_proven_clock.py` rigidly transformed the passing rot90
+U7/Y1/R23/C42/C43 copper graph into the V5 rot180 U7 orientation, deriving
+all support footprints and post-transform vias from the saved oracle. The
+result was tested as `PHASE24_PROVEN_CLOCK_ROT180_ACREAGE-drc.rpt` and
+rejected: native DRC found true shorts and crossings against the inherited
+PCIe/SATA corridors, plus a POWER_GND-to-XO conflict. This rejects that
+placement transform only; it does not invalidate the passing local clock
+topology. The next integration candidate must select a genuinely open
+acreage support shelf and preserve the existing PCIe/SATA corridors.
