@@ -4046,3 +4046,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: tested an adjacent U7/J3 clock shelf with the seeded solver; conservative search returned no XI path before board generation, so the candidate and search model remain unpromoted.
 2026-09-05 Phase24: rejected expanded-acreage coordinated storage transplant; rigid donor shift removed PCIe clock crossings but disconnected CM5 USB3 and left storage support incomplete.
 2026-09-05 Phase24: applied the independent tunnel map to the seeded clock solver; all three downstream routes are found and via-clearance conflicts are removed, but XO source launch crossings remain.
+2026-09-05 Phase24: tunnel-guided A* source-launch refinement reached 226 native DRC violations; XO/SATA crossing removed, Y1 approach remains open.

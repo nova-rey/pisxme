@@ -289,3 +289,13 @@ was added, native DRC reports 238 violations with no new close-via cluster.
 The remaining first errors are localized to the XO F.Cu package-edge launch
 against the inherited SATA-TX/RX F.Cu rails. This is the strongest current
 candidate but remains unpromoted until the XO source launch is also clean.
+
+## Tunnel-guided source-launch refinement (in progress)
+
+The tunnel-guided A* candidate was refined using the measured y=123--129 mm
+B.Cu tunnel, explicit via reservation, an XO staging point at (111,132), and
+explicit Y1 pad-layer metadata. The latest generated artifact
+`PHASE24_CLOCK_ASTAR_NEARWEST.kicad_pcb` reports 226 native DRC violations.
+The prior XO/SATA source crossing is removed; remaining errors are localized
+to the Y1 XI/VSSOSC approach and one inherited CM5 USB3 interaction. This
+remains unpromoted; Phase 24 parity is open.
