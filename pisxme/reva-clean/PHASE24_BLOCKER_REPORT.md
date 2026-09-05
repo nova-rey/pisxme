@@ -645,3 +645,10 @@ violations with zero shorts and zero crossings; the earlier layer-separated
 variant was rejected for two feedback crossings and one short. This closes
 only the U4 local geometry discriminator and does not close the board-wide
 native connection gate (390 unconnected records remain).
+
+The CM5-ground launch attempts were rejected. The first two offsets entered
+the J7 signal escape field; the widest tested perimeter offset reduced
+unconnected records but caused 17 shorts and eight crossings in native DRC.
+No CM5 ground was bridged to global `POWER_GND`. This remains an explicit
+local routing/authority blocker, not evidence that the CM5 architecture is
+electrically impossible.

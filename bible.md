@@ -4091,3 +4091,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: rejected B.Cu-only J1 bus, then validated F.Cu column plus offset-via B.Cu bus; native DRC held at 201 violations, removed 129 unconnected records, and preserved zero shorts/crossings.
 2026-09-05 Phase24: combined the validated J1 protected bus with the In3 distribution plane; native DRC stayed at 201 violations with zero shorts/crossings and reduced unconnected records to 265.
 2026-09-05 Phase24: rejected J1 ground launches intersecting the protected bus, then validated y=98.0 mm ground-plane launches; native DRC held at 201 violations, zero shorts/crossings, and 195 unconnected records.
+2026-09-05 Phase24: rejected CM5 ground-launch offsets after native DRC exposed pad-field shorts/crossings; preserved separate CM5 ground authority and documented obstacle-aware escape requirement.

@@ -326,6 +326,17 @@ inherited violations with zero shorts/crossings and 195 unconnected items.
 This is accepted J1 ground-field evidence; local ground launches elsewhere
 and the separate CM5 ground net remain open.
 
+## CM5 ground-launch experiment (rejected)
+
+The CM5 connector ground net was tested with a dedicated local In1 plane
+island and serialized J7 pad-to-via launches. A 0.85 mm outward offset
+shorted adjacent signal pads; widening to 1.8 mm still produced new
+clearance/short records, and a 3.0 mm perimeter variant reduced the native
+unconnected count to 176 but produced 17 shorts, eight crossings, and 422
+violations. All variants are rejected. CM5 ground must not be copper-bridged
+to global POWER_GND; an obstacle-aware escape or authority correction is
+required.
+
 ## J1 protected-12V field bus experiment
 
 The first J1 B.Cu-only bus was rejected because the saved connector pads are
