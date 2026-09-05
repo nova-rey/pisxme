@@ -1011,3 +1011,9 @@ The subsequent local U7 escape adjustment was rejected. Native DRC measured
 `93` violations / `62` unconnected items and reintroduced one clock crossing
 while retaining U7 pad-field and return clearances. The preceding separated
 clock-bus candidate at `92` / `62` remains the best known result.
+
+The fine-width escape experiment was also rejected. Applying 0.100 mm to the
+clock routes against the unchanged 0.200 mm board minimum produced `120`
+native DRC violations / `62` unconnected items, including repeated
+track-width failures. The board fabrication rule was not relaxed and the
+0.200 mm separated-bus path remains the active baseline.

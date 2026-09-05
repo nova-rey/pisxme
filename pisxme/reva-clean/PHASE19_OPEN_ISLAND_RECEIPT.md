@@ -71,3 +71,7 @@ full pass, retained as the current best clock topology.
 Follow-up U7 escape adjustment: native DRC measured `93` / `62` and
 reintroduced a clock crossing. Rejected; the preceding `92` / `62`
 separated-clock-bus candidate remains preferred.
+
+Fine-width clock escape trial: 0.100 mm clock traces were tested without
+changing the board minimum. Native DRC measured `120` / `62` with repeated
+track-width errors. Rejected; the fabrication rule remains unchanged.
