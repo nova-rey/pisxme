@@ -548,3 +548,12 @@ the escapes on B.Cu. Native DRC holds at 205 violations with zero
 from 156 to 145. The candidate is accepted as the next cumulative ancestor.
 The remaining BRIDGE_1V1 records are isolated R19, R22, and C41 endpoints and
 will be handled separately rather than assuming this field route closed them.
+
+## Bridge 1V1 field joined to U5
+
+`phase24_bridge_1v1_field_join.py` adds a B.Cu perimeter join from the
+field's existing ordinary via to the C46.1/U5.5/U5.8/U5.9 output island.
+Native DRC remains at 205 violations with zero `[shorting_items]` and zero
+`[tracks_crossing]`; unconnected records fall to 144. Native connectivity
+confirms the complete capacitor field and U5 output pads are one component.
+R19.1 and R22.1 remain isolated endpoints for a separate local repair.

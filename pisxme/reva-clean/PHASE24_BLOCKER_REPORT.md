@@ -775,3 +775,10 @@ The spaced bridge-1V1 capacitor field was regenerated with pad-adjacent
 ordinary vias and a B.Cu rail chain. Native DRC reports zero shorting and
 crossing classes and 145 unconnected records, down from 156. This is accepted
 targeted progress; R19, R22, and C41 remain explicit native findings.
+
+## Bridge 1V1 field joined to output island
+
+The field-to-U5 output join passes native DRC with zero shorts and crossings
+and reduces the unconnected census to 144. Native connectivity confirms the
+capacitors and U5 output pads are joined. R19.1 and R22.1 remain explicit
+isolated rail endpoints.
