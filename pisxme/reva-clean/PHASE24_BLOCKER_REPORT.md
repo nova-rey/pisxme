@@ -421,3 +421,10 @@ against the proven clock topology.
 ancestor. Its native DRC reported 214 inherited violations but no
 `shorting_items` or `tracks_crossing` records. Ten dangling-track/via records
 remain, so this is a useful electrical island discriminator, not closure.
+## U5 surface-only trial (rejected)
+
+`phase24_u5_caps_surface.py` removed the added ground vias and attempted a
+single F.Cu bridge-1V1 trunk to C44-C47. Native DRC reported 202 violations,
+including a rail/POWER_GND short and track crossings. The variant is rejected;
+the prior no-crossing U5 island remains the better starting point, subject to
+correcting its source/return geometry.

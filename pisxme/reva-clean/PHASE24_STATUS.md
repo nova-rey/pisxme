@@ -139,3 +139,7 @@ placing passive branches into inherited USB3 and clock corridors. This does
 not invalidate the coordinated disposable topology. A separate U5 C44-C47
 island trial has no shorting or crossing records, but retains inherited
 unconnected/dangling cleanup and is not yet promoted.
+The follow-up surface-only U5 support trial was also rejected: native DRC
+reported 202 violations, including a rail/ground short and crossings. It is
+not promoted; the U5 rail must be regenerated with a real return strategy and
+clearance-aware source launch.

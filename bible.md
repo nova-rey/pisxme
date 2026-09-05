@@ -4061,3 +4061,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: rejected layer-separated passive dogbones and four outboard variants; best native DRC was 306 violations with 14 shorts and 6 crossings.
 2026-09-05 Phase24: coordinated layer-owned clock graph passed native clock-specific DRC with zero crossings, shorts, and footprint errors; acreage transplant remains open.
 2026-09-05 Phase24: rejected first acreage clock-support transplant (218 native violations including clock crossings/short); independent U5 capacitor island had no shorts/crossings but retained dangling/inherited violations.
+2026-09-05 Phase24: rejected U5 surface-only capacitor trial; native DRC reported 202 violations including a rail/GND short and crossings.
