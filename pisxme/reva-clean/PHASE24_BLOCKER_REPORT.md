@@ -208,3 +208,10 @@ remained at 214 violations and added several short B.Cu crossings at the Y1
 pad field. Orientation alone is insufficient; the next candidate must author
 an explicit ordered three-lane escape rather than use the generic Manhattan
 fanout.
+
+The ordered-lane rerun exposed and corrected a disposable-script output-path
+bug that had left the previous orientation report stale. The corrected
+near-west 0-degree/layer-split artifact reports 215 native DRC violations;
+remaining new defects are the U7-to-crystal source corridor and one inherited
+CM5 USB3 overlap. The prior 214 count is discarded. No acreage promotion or
+parity closure is claimed.
