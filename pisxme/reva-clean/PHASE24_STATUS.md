@@ -289,3 +289,14 @@ for the integrated-layered baseline; there are zero `shorting_items` and zero
 record. This is a valid targeted physical repair, not full Phase 24 closure:
 the remaining missing connections are dominated by board-wide protected-12V,
 global/CM5 ground, input/fused-12V, low-voltage, and clock/storage groups.
+
+## Regulator-field follow-up
+
+`phase24_regulator_power_field_stitch.py` generalized the serialized
+TPSM63606 exposed-pad repair. The all-regulator trial was rejected: U4's
+existing PG_BRIDGE_3V3 corridor occupies the direct 12V escape and native DRC
+reported one crossing and three shorts. A bounded U3+U5 trial was then run
+without U4. It reports the inherited 201 DRC violations, zero shorts, zero
+crossings, and 384 unconnected items (down from 397). This promotes only the
+U3/U5 local field evidence; U4 requires an obstacle-aware escape and the
+board-wide power/ground distribution is still unresolved.

@@ -4083,3 +4083,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: promoted the corrected U7 BRIDGE_SATA_RX_N pad-field stitch; native DRC removed five target connections with zero new shorts/crossings, while 392 inherited/unresolved records remain.
 2026-09-05 Phase24: rejected plane-only In3 protected-12V experiment; native DRC stayed free of shorts/crossings but removed only two of 397 missing connections, proving surface power launches are still required.
 2026-09-05 Phase24: validated U5 same-net input-power pad-field stitch; native DRC held at 201 violations, removed seven unconnected records, and introduced zero shorts or crossings; board-wide closure remains open.
+2026-09-05 Phase24: rejected all-regulator pad-field stitch at U4 due native PG crossing/shorts; retained clean U3/U5 field repair with 384 unconnected records, zero shorts, and zero crossings.

@@ -89,6 +89,17 @@ targeted evidence, but cannot be promoted as the board solution while the
 remaining native records include 12V_PROTECTED, POWER_GND, CM5 ground,
 input/fused 12V, low-voltage, and clock/storage connectivity gaps.
 
+## Regulator-field follow-up
+
+The generalized exposed-pad experiment confirms that local field stitching is
+useful but must respect existing control routes. The all-U3/U4/U5 candidate
+was rejected by one native crossing and three true shorts at U4's existing
+PG_BRIDGE_3V3 path. The bounded U3+U5 candidate has zero shorts/crossings and
+384 native unconnected records, so it is retained as targeted evidence. U4
+and the board-wide 12V/ground distribution remain open and need
+obstacle-aware launches; no severity was changed and no connection was
+waived.
+
 After removing the stale bridge-1V1 source segments and moving the island to
 an open acreage shelf, `PHASE24_U5_CAPS_ISLAND-far4-drc.rpt` reports `214`
 inherited/disposable violations and `391` unrelated unconnected items, but
