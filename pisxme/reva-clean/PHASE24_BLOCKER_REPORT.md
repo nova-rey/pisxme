@@ -782,3 +782,10 @@ The field-to-U5 output join passes native DRC with zero shorts and crossings
 and reduces the unconnected census to 144. Native connectivity confirms the
 capacitors and U5 output pads are joined. R19.1 and R22.1 remain explicit
 isolated rail endpoints.
+
+## Bridge 1V1 endpoints accepted
+
+Sequential R19.1 and R22.1 local joins pass native DRC with zero shorts and
+crossings, reducing the cumulative unconnected census to 142. The identified
+BRIDGE_1V1 endpoint cluster is closed; remaining Phase 24 findings are other
+net classes.

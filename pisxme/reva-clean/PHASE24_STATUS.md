@@ -557,3 +557,11 @@ Native DRC remains at 205 violations with zero `[shorting_items]` and zero
 `[tracks_crossing]`; unconnected records fall to 144. Native connectivity
 confirms the complete capacitor field and U5 output pads are one component.
 R19.1 and R22.1 remain isolated endpoints for a separate local repair.
+
+## Bridge 1V1 feedback endpoints
+
+The R19.1 outboard B.Cu join and the short R22.1 local B.Cu join were tested
+sequentially from the accepted field/output ancestor. Both pass native DRC
+without shorting or crossing classes; the cumulative unconnected census falls
+from 144 to 142. The BRIDGE_1V1 rail is now natively continuous for the
+identified endpoints.
