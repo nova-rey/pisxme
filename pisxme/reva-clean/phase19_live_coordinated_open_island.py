@@ -18,6 +18,7 @@ PREP=ARGS.get('P19_PREP',os.environ.get('P19_PREP','0'))=='1'
 SKIP_SATA=ARGS.get('P19_SKIP_SATA',os.environ.get('P19_SKIP_SATA','0'))=='1'
 SKIP_CLOCK=ARGS.get('P19_SKIP_CLOCK',os.environ.get('P19_SKIP_CLOCK','0'))=='1'
 SKIP_USB=ARGS.get('P19_SKIP_USB',os.environ.get('P19_SKIP_USB','0'))=='1'
+CLOCK_ONLY=ARGS.get('P19_CLOCK_ONLY',os.environ.get('P19_CLOCK_ONLY','0'))=='1'
 W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def pos(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
@@ -92,11 +93,11 @@ def main():
        ('BRIDGE_SATA_RX_P','60','3','C32',pcbnew.F_Cu,(216,103)),
        ('BRIDGE_SATA_RX_N','59','4','C33',pcbnew.B_Cu,(217,105)))
  for bn,upn,jn,cr,layer,esc in sata:
+  if SKIP_SATA or CLOCK_ONLY:
+   continue
   bridge=N['/STORAGE/'+bn]; socket=N['/STORAGE/'+bn.replace('BRIDGE_SATA_','SATA_M2_')]
   cp={str(p.GetNumber()):pos(p) for p in caps[cr].Pads()}; a=U[upn]; z=J[jn]
   setpad(pad(caps[cr],'1'),socket); setpad(pad(caps[cr],'2'),bridge); setpad(pad(j,jn),socket)
-  if SKIP_SATA:
-   continue
   if u.GetOrientationDegrees() == -90.0 and j.GetOrientationDegrees() == 90.0:
    # Rot270 U7 exposes SATA on a single west-facing row.  Use live pad
    # coordinates and a pair-per-layer monotonic launch to the left-column
