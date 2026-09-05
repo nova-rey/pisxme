@@ -665,6 +665,18 @@ This is not a Phase 19 pass: the clock network has not yet been regenerated
 against this corrected SATA ancestor, and the unconnected count remains open.
 It is now the required ancestor for the next integrated clock trial.
 
+## 2026-09-04 corrected-SATA clock-west integration trial
+
+The authoritative clock network was rerun on the corrected
+`PHASE19_COORDINATED_U7ROT270_SATAFIX.kicad_pcb` ancestor with a west/outboard
+support island. Native KiCad DRC measured `372` violations and `423`
+unconnected items, a material reduction from the prior rot270 clock-overlay
+candidate (`486` / `416`). The trial is rejected because its local clock
+fanout still crosses at the Y1 field and the inherited candidate retains
+unconnected/shorting debt. The west-side SATA-aware ancestor remains the
+correct basis; the next repair must replace the local clock fanout topology,
+not revert the rotation-aware SATA launch.
+
 ## 2026-09-04 rotation-aware SATA launch generation
 
 The coordinated generator was corrected so the `P19_SATA_V3` geometry is no
