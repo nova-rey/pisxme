@@ -325,3 +325,18 @@ promoted: it still requires the short physical XI/XO/VSSOSC copper loop,
 clock-to-high-speed clearance review, and the outstanding USB3/SATA
 length/reference/return-via acceptance evidence. The candidate remains
 `REJECTED_EXPERIMENT` pending those checks; no Phase 20 work has started.
+
+## 2026-09-04 clock-loop routing experiment
+
+A disposable physical clock-island experiment was applied to the best
+coordinated SATA/USB3 candidate. It carried U7.30/U7.31, U7.52/U7.53/U7.54,
+Y1, R23, C42, and C43 with the corrected net assignments. The first direct
+F.Cu star/branch loop was rejected: native KiCad DRC measured 212 violations
+and 415 unconnected items, including new `tracks_crossing` and
+`shorting_items` records between XI, XO, and VSSOSC. The experiment is not
+evidence against the crystal architecture; it is a failed local escape class.
+
+The valid retained state is the schematic/netlist/materialization baseline,
+not this routed experiment. Further work must use an ordinary-via,
+layer-separated short clock escape with the exact pad coordinates, then
+re-run focused native DRC and return/reference checks before promotion.
