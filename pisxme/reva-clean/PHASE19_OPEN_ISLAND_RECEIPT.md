@@ -157,6 +157,12 @@ Rejected as a full SATA pass.
   and no shorting records; rejected.
 - Failure class: same-layer TX_P corridor intersects upper-pair vertical
   trunks despite the outboard SATA clearance.
+### 2026-09-05 — RX-F/TX-B pair-layer coordinated trial
+
+- `PHASE19_COORDINATED_SPLIT1-drc.rpt`: 217 total records, 2 crossings, and
+  4 shorts; rejected.
+- Pair-layer separation introduced CM5 support-pad and U7 NC-pad collisions;
+  complete storage-island relocation remains the next class.
 ### 2026-09-05 — U7 rotation-180 USB3 diagnostic
 
 - `PHASE19_U7ROT180_USB_VERTICAL1-drc.rpt`: 223 total records, two

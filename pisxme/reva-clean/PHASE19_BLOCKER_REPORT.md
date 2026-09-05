@@ -1153,6 +1153,14 @@ are the unavoidable same-layer interaction between the long TX_P corridor
 and the upper-pair vertical trunks. The candidate is rejected; the next
 class is pair-layer separation with source escapes routed around CM5 support
 geometry.
+## 2026-09-05 RX-F/TX-B pair-layer coordinated trial
+
+`PHASE19_COORDINATED_SPLIT1.kicad_pcb` assigned the RX pair to F.Cu and the
+TX pair to B.Cu while retaining the source-order staircase and SATA270
+oracle. Native KiCad DRC reported 217 records, including two crossings and
+four shorts. Failures were CM5 support-pad collisions and U7 NC-pad
+interceptions on the F.Cu RX corridor. The candidate is rejected. Pair-layer
+separation without moving the complete storage island is not sufficient.
 ## 2026-09-05 U7 rotation-180 USB3 diagnostic
 
 `PHASE19_U7ROT180_USB_VERTICAL1.kicad_pcb` tested the mirrored side-row

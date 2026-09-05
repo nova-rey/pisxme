@@ -25,6 +25,7 @@ USB_TOP_EAST=ARGS.get('P19_USB_TOP_EAST',os.environ.get('P19_USB_TOP_EAST','0'))
 USB_PAIR_SPLIT=ARGS.get('P19_USB_PAIR_SPLIT',os.environ.get('P19_USB_PAIR_SPLIT','0'))=='1'
 USB_VERTICAL=ARGS.get('P19_USB_VERTICAL',os.environ.get('P19_USB_VERTICAL','0'))=='1'
 USB_ORDERED=ARGS.get('P19_USB_ORDERED',os.environ.get('P19_USB_ORDERED','0'))=='1'
+USB_SPLIT=ARGS.get('P19_USB_SPLIT',os.environ.get('P19_USB_SPLIT','0'))=='1'
 U7ROT=int(ARGS.get('P19_U7_ROT',os.environ.get('P19_U7_ROT','270')))
 W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
@@ -89,7 +90,7 @@ def main():
    continue
   n=N['/CORE_CM5/'+suffix]; s=S[sp]; d=U[up]
   setpad(pad(src,sp),n); setpad(pad(u,up),n)
-  if USB_ORDERED and U7ROT == 270:
+  if (USB_ORDERED or USB_SPLIT) and U7ROT == 270:
     # Source-order monotonic escape: J7 pads serialize RX_N, RX_P, TX_N,
     # TX_P from low to high y.  Preserve that order through the initial
     # breakout, then use separated pair corridors and serialized U7 pad x.
@@ -113,11 +114,11 @@ def main():
     is_rx=suffix.startswith('CM5_USB3_RX_')
     seg(b,n,launch,(prex,s[1]),pcbnew.F_Cu)
     seg(b,n,(prex,s[1]),(prex,lane_y),pcbnew.F_Cu)
-    if is_rx: via_sig(b,n,(prex,lane_y))
-    layer=pcbnew.B_Cu
+    if (not USB_SPLIT) or (not is_rx): via_sig(b,n,(prex,lane_y))
+    layer=pcbnew.F_Cu if (USB_SPLIT and is_rx) else pcbnew.B_Cu
     seg(b,n,(prex,lane_y),(trunk_x,lane_y),layer)
     seg(b,n,(trunk_x,lane_y),(trunk_x,landing_y),layer); seg(b,n,(trunk_x,landing_y),(target_x,landing_y),layer)
-    via_sig(b,n,(target_x,landing_y))
+    if (not USB_SPLIT) or (not is_rx): via_sig(b,n,(target_x,landing_y))
     seg(b,n,(target_x,landing_y),d,pcbnew.F_Cu)
     continue
   if USB_TOP_EAST:
