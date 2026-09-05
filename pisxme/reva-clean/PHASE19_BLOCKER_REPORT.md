@@ -972,3 +972,13 @@ unconnected pads, with zero USB3 crossings, shorts, dangling vias, or source
 fanout opens. The two prior U7 final-escape clearance errors were eliminated;
 remaining violations belong to the deliberately unrouted M.2/clock fixture
 baseline. This is still an isolated sub-gate result, not Phase 19 closure.
+
+## 2026-09-05 local clock-support relocation trial
+
+The clock-only diagnostic moved Y1/R23/C42/C43 beside the relocated U7 and
+excluded USB3 and SATA routing. Native KiCad DRC measured `116` violations /
+`70` unconnected items. The existing hard-coded XI/XO/VSSOSC fanout still
+crossed and shorted the relocated support pads, confirming that clock
+support relocation without a regenerated live-endpoint topology is rejected.
+This does not invalidate the USB3 result or the TUSB9261 clock architecture;
+Phase 19 remains open and Phase 20+ remains untouched.

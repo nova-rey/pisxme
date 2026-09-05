@@ -17,6 +17,7 @@ OUT=R/'PHASE19_OPEN_ISLAND_LIVE.kicad_pcb'
 PREP=ARGS.get('P19_PREP',os.environ.get('P19_PREP','0'))=='1'
 SKIP_SATA=ARGS.get('P19_SKIP_SATA',os.environ.get('P19_SKIP_SATA','0'))=='1'
 SKIP_CLOCK=ARGS.get('P19_SKIP_CLOCK',os.environ.get('P19_SKIP_CLOCK','0'))=='1'
+SKIP_USB=ARGS.get('P19_SKIP_USB',os.environ.get('P19_SKIP_USB','0'))=='1'
 W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def pos(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
@@ -50,7 +51,7 @@ def main():
   # This donor already carries clean C30-C33 clock-candidate objects.
   for ref,(x,y) in {'C30':(265,96),'C31':(265,100),'C32':(265,108),'C33':(265,112)}.items():
    f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(180)
-  for ref,xyv in {'Y1':(280,75),'R23':(285,75),'C42':(280,80),'C43':(285,80)}.items():
+  for ref,xyv in {'Y1':(268,98),'R23':(272,98),'C42':(272,94),'C43':(276,98)}.items():
    f=b.FindFootprintByReference(ref)
    if f is None: raise RuntimeError('clock donor missing '+ref)
    f.SetPosition(V(*xyv)); f.SetOrientationDegrees(0)
@@ -72,6 +73,8 @@ def main():
  usb=(('CM5_USB3_RX_N','128','42',(78,114),(200,114)),('CM5_USB3_RX_P','130','43',(76,116),(204,116)),
       ('CM5_USB3_TX_N','140','45',(74,118),(208,118)),('CM5_USB3_TX_P','142','46',(72,120),(212,120)))
  for suffix,sp,up,start,far in usb:
+  if SKIP_USB:
+   continue
   n=N['/CORE_CM5/'+suffix]; s=S[sp]; d=U[up]
   setpad(pad(src,sp),n); setpad(pad(u,up),n)
   seg(b,n,s,(start[0],s[1])); seg(b,n,(start[0],s[1]),start); via(b,n,start); seg(b,n,start,far,pcbnew.B_Cu)

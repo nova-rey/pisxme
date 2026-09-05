@@ -51,3 +51,8 @@ U7 escape follow-up: transition vias were moved farther from the live pad
 field. Native DRC measured `78` / `75`; USB3 had zero crossings, shorts,
 dangling vias, and source fanout opens. The result remains fixture evidence,
 not a Phase 19 pass.
+
+Clock-only support relocation trial: Y1/R23/C42/C43 were moved beside U7
+while USB3 and SATA routing were skipped. Native DRC measured `116` / `70`;
+the inherited hard-coded XI/XO/VSSOSC fanout crossed and shorted the local
+support pads. Rejected; a live-endpoint clock regeneration is required.
