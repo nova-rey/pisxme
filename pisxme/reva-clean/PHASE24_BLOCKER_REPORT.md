@@ -1,3 +1,14 @@
+# Phase 24 same-row collector continuation
+
+`PHASE24_CM5_GROUND_RIGHT_SAME_ROWS.kicad_pcb` was regenerated from the
+accepted right-outer collector. It adds only F.Cu same-row ground bridges
+between the two lower-right J7 ground banks (y=109.5–117.9). Fresh native
+KiCad DRC reports 209 violations, 122 unconnected records, zero
+`[shorting_items]`, and zero `[tracks_crossing]` records when the complete
+report is counted. The candidate is accepted as the current working basis;
+the remaining Phase 24 census is still open and no validation severity was
+changed.
+
 # PiSXMe Rev A Clean — Phase 24 blocker report
 
 Status: `PHASE24_IN_PROGRESS` (recoverable implementation blocker)

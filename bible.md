@@ -4128,3 +4128,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Accepted the KiCad-recommended three-pad CM5-ground discriminator; fresh DRC reports 209 violations, 139 unconnected records, zero shorts, and zero crossings.
 2026-09-05: Expanded the accepted right-column CM5-ground collector through four additional lower pads; fresh DRC reports 209 violations, 130 unconnected records, zero shorts, and zero crossings.
 2026-09-05: Accepted the lower x=70.04 J7 CM5-ground outer collector; fresh DRC reports 209 violations, 124 unconnected records, zero shorts, and zero crossings.
+2026-09-05: Accepted the clean same-row bridges joining the lower-right J7 CM5-ground collectors; fresh full-report native DRC is 209 violations, 122 unconnected records, zero shorts, and zero crossings.

@@ -669,4 +669,11 @@ signal launches rather than extend the ground comb through them.
 The same-row-only upper J7 ground bridges are also rejected: fresh native DRC
 reports 216 violations, 124 unconnected records, one short, and six
 crossings. Upper-row CM5-ground collection therefore requires regeneration of
-the existing Ethernet pad escapes; no further comb-only variant is promoted.
+ the existing Ethernet pad escapes; no further comb-only variant is promoted.
+
+The accepted lower-right collector was extended with same-row F.Cu bridges
+between the x=66.96 and x=70.04 J7 ground banks for y=109.5 through 117.9.
+The serialized `PHASE24_CM5_GROUND_RIGHT_SAME_ROWS` candidate passes the full
+native DRC classes relevant to this repair at 209 violations, 122 unconnected
+records, zero shorts, and zero crossings. It is promoted as the current clean
+CM5-ground working basis; no native finding or severity was waived.
