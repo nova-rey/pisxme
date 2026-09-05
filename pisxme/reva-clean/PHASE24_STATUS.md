@@ -108,3 +108,8 @@ The first obstacle-aware passive router found all six passive paths but was
 rejected by native DRC (380 violations: 29 shorts and 13 crossings). The
 remaining repair must regenerate the clock topology with branch reservations
 before adding passive fanout.
+
+The rail-attachment variant was rejected by native DRC (268 violations: 12
+shorts and 9 crossings). The remaining valid implementation class is a
+single coordinated clock graph containing source escape, Y1, R23, C42, and
+C43 before materialization.

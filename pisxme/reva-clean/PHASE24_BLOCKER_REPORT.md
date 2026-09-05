@@ -357,3 +357,13 @@ router found all six paths, but native DRC reported 380 violations, including
 29 shorts and 13 crossings. The candidate is rejected: endpoint targeting at
 the dense Y1 field is insufficient without a branch-aware regenerated clock
 topology.
+
+## Branch-to-existing-rail attempt (rejected)
+
+`phase24_support_astar.py` was revised to attach the six passive branches to
+open points on the validated XI/XO/VSSOSC rails rather than directly to Y1.
+The VSSOSC branch could not reach its selected rail point; the generated
+candidate reported 268 native DRC violations, including 12 shorts and 9
+crossings. This class is rejected. The next candidate must generate the
+complete clock island as one coordinated graph, including passive branches,
+before emitting any copper.

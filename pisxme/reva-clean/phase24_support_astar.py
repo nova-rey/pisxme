@@ -6,7 +6,7 @@ import pcbnew
 
 R=Path(__file__).resolve().parent
 BASE=R/'PHASE24_CLOCK_ASTAR_NEARWEST.kicad_pcb'
-OUT=R/'PHASE24_SUPPORT_ASTAR.kicad_pcb'
+OUT=R/'PHASE24_SUPPORT_BRANCH_ASTAR.kicad_pcb'
 STEP=.25
 
 def V(x,y): return pcbnew.VECTOR2I_MM(float(x),float(y))
@@ -29,7 +29,10 @@ def main():
         for p,k in zip(f.Pads(),maps[ref]):
             p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode()); ls=pcbnew.LSET(); ls.AddLayer(pcbnew.B_Cu); p.SetLayerSet(ls)
     y=b.FindFootprintByReference('Y1')
-    targets={'XI':xy(P(y,'1')),'XO':xy(P(y,'3')),'VS':xy(P(y,'2'))}
+    # Attach branches to open points on the already validated B.Cu rails,
+    # not to the crystal pads. This keeps all passive fanout outside the
+    # four-pad Y1 field and makes the branch topology explicit.
+    targets={'XI':(104.0,127.75),'XO':(112.0,128.25),'VS':(118.0,135.0)}
     # Build a conservative B.Cu obstacle grid. Same-net copper is passable;
     # every other-net pad/track is forbidden, with the two endpoints exempted.
     occ=set()
