@@ -619,6 +619,12 @@ DRC violations, zero shorts/crossings, and five fewer unconnected records
 complete named input-branch, protected-12V, ground, low-voltage, and
 clock/storage connectivity.
 
+The protected-12V plane was tested on the corrected J1 field bus. It remains
+native-clean relative to the candidate (201 DRC violations, zero
+shorts/crossings) and reduces unconnected records from 268 to 265. This
+confirms the In3 distribution layer can be used with the J1 field, while
+explicit surface launches remain required elsewhere.
+
 An U4-specific left-side dogbone trial was run after the all-regulator trial.
 It removed the U4 short class but introduced four native F.Cu crossings at
 the existing PG_BRIDGE_3V3 and U4 ground geometry, so it is rejected. U3/U5

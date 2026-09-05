@@ -310,6 +310,13 @@ items fall from 397 to 391. The candidate is retained as targeted input
 geometry evidence, but the F2 fields still need named connections to J6/U2/Q2
 and the rest of the protected distribution.
 
+The J1 bus was then combined with a full `In3.PROTECTED_12V` zone in
+`phase24_j1_protected_plane.py`. Native DRC remains at 201 violations with
+zero shorts and zero crossings; unconnected items improve 268 to 265. The
+plane is therefore electrically compatible with the validated connector bus,
+but does not replace explicit surface launches for the remaining regulators,
+capacitors, input branches, and SXM2/ground populations.
+
 ## J1 protected-12V field bus experiment
 
 The first J1 B.Cu-only bus was rejected because the saved connector pads are
