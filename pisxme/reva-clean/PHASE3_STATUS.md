@@ -220,3 +220,10 @@ inherited V3, with zero focused USB3 crossings or shorts and unchanged PCIe
 geometry. USB3 pair skew is bounded at 3.083 mm. The candidate remains gated
 because C30-C33 are not serialized as the required four inline SATA coupling
 capacitors; no Phase 20+ work has started.
+
+Phase 19 inline-capacitor continuation (2026-09-05): a four-capacitor
+coordinated authoring probe serialized the required split SATA nets but
+measured 313 native DRC violations / 413 unconnected items, including 63
+clearance and 66 hole-clearance findings from the generated via/connector
+launch. It was rejected; the source-preserving V3 USB3 schedule remains the
+best moved-U7 ancestor and Phase 19 remains active.

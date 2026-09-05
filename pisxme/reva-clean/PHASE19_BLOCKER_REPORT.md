@@ -1584,3 +1584,22 @@ the complete schematic storage path. The next bounded action is to restore
 the authoritative four inline <=0402 SATA capacitors in this same V3 island,
 route each bridge-side and socket-side net, then rerun native DRC and the
 complete USB3/SATA endpoint graph. No Phase 20 work has started.
+## 2026-09-05 inline SATA coupling-capacitor continuation
+
+The existing generic coordinated-storage authoring path was exercised against
+the moved-U7 V3 placement with four donor `C_0402_1005Metric` footprints and
+the explicit split nets `BRIDGE_SATA_*` -> `C30-C33` -> `SATA_M2_*`. The
+candidate serialized the capacitor-side net assignments and preserved the
+USB3/SATA endpoint intent, but native DRC reported 313 violations / 413
+unconnected items. It introduced no `tracks_crossing` or `shorting_items`,
+but it introduced 63 clearance and 66 hole-clearance findings, primarily from
+the generated via schedule and the very tight J3 launch. It is rejected as a
+complete Phase 19 candidate. The experiment is useful because it confirms the
+missing-capacitor issue is a real authoring/topology requirement, while the
+present V3 direct-SATA island remains the cleaner endpoint ancestor.
+
+The next repair will keep the successful V3 USB3 source-preserving schedule,
+materialize the four authoritative inline capacitors without recreating
+inherited vias, and use a cap/connector launch schedule with no via in or
+near the M.2 alternating pad field. Phase 19 remains active; Phase 20+ has
+not started.
