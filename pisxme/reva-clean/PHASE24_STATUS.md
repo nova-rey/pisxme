@@ -255,3 +255,14 @@ smaller groups include bridge 1V1/3V3, input/fused 12 V, SATA RX-N, and the
 clock nets. The complete table is in
 `PHASE24_NATIVE_UNCONNECTED_CENSUS.md`. This identifies the next repair
 classes while retaining every native connection as mandatory.
+
+## U7 SATA RX-N pad-field repair
+
+The U7 `BRIDGE_SATA_RX_N` repeated-pad group was repaired with four same-net
+F.Cu pad-field links, an offset F.Cu/B.Cu via at `(127.5,140.5)`, a B.Cu
+dogleg around the existing SATA-TX trunk, and an offset return via at
+`(119.5,134.5)`. Native DRC on the resulting candidate reports 201
+violations, zero `shorting_items`, zero `tracks_crossing`, and 392
+unconnected pads versus 397 before the repair. No `BRIDGE_SATA_RX_N`
+unconnected record remains. This is targeted storage evidence; full-board
+parity remains open.

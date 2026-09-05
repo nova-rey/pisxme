@@ -558,3 +558,11 @@ largest unresolved classes are `12V_PROTECTED` (146), `POWER_GND` (128), and
 `/CORE_CM5/POWER_GND` (50), followed by regulator rails, power-entry rails,
 SATA RX-N, and bridge clock nets. No records were waived; the table is
 diagnostic evidence for sequencing the remaining physical repairs.
+
+## Promoted U7 RX-N local repair
+
+The first RX-N pad-field launch was rejected for SATA-TX crossing and RX-P
+clearance. A bounded dogleg variant around the existing B.Cu SATA-TX trunk
+passes the local native gate: five missing RX-N connections were removed,
+with no new short or crossing record. The full candidate still has 392 native
+unconnected records, so this does not close Phase 24.

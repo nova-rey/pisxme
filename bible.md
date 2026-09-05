@@ -4080,3 +4080,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: corrected the clock-fixture U7 pad-frame transform and reran it; native DRC still rejected the overlay with 227 violations, SATA/clock shorts, crossings, and 393 unconnected pads, so local clock regeneration remains required.
 2026-09-05 Phase24: replaced the U5 audit with serialized net/layer-aware physical connectivity, and passed independent missing-trace and missing-via negative controls; full-board routed parity remains open.
 2026-09-05 Phase24: added a native DRC unconnected census covering all 397 records; 12V_PROTECTED, POWER_GND, and CM5 ground dominate, with no severity waiver or connection filtering.
+2026-09-05 Phase24: promoted the corrected U7 BRIDGE_SATA_RX_N pad-field stitch; native DRC removed five target connections with zero new shorts/crossings, while 392 inherited/unresolved records remain.
