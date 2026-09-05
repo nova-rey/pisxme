@@ -226,6 +226,16 @@ not remove that local pad-field obstruction. Consultant/unblocker dispatch was
 retried but remains unavailable because the agent thread limit is exhausted;
 local analysis continues and this is not treated as an architectural block.
 
+## Obstacle-aware route-search diagnostic
+
+`phase24_clock_astar.py` was added as a bounded route-search diagnostic over
+the inherited F.Cu/B.Cu track and pad field. Its initial conservative model
+correctly refused to seed an XI path through the dense U7 pad field and
+returned `no route XI`; no candidate was generated or promoted. This is a
+model limitation: the solver must seed the manufacturer-style package-edge
+dogbone outside the source pad before searching downstream lanes. It is not
+evidence that the clock topology or the board is impossible.
+
 ## Surgical SATA-launch reroute trial (rejected)
 
 The next bounded class removed only the inherited U7-to-AC-capacitor TX_N/TX_P
