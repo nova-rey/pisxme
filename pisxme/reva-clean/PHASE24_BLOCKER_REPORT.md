@@ -684,3 +684,9 @@ preserves the clean J1/global-return/bridge/input repairs while omitting the
 overlapping regulator ground traces. It passes native DRC at 201 inherited
 violations with zero shorts/crossings and 168 unconnected records. This is
 the current best power/rail integration candidate, not Phase 24 closure.
+
+The validated U7 RX-N pad-field stitch was then composed onto the cumulative
+candidate. Native DRC remains at 201 inherited violations with zero
+shorts/crossings and reduces unconnected records from 168 to 163. This
+storage repair composes cleanly; clock and remaining SATA/control records
+remain unresolved.

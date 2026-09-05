@@ -417,3 +417,12 @@ overlapping ground additions yields a clean cumulative candidate: native DRC
 201 inherited violations, zero shorts, zero crossings, and 168 unconnected
 items. Ground-field additions remain separately validated and must be
 reintegrated only with obstacle-aware layer separation.
+
+## Cumulative U7 RX-N integration
+
+`phase24_compose_u7_rxn.py` applies the previously validated U7
+BRIDGE_SATA_RX_N pad-field stitch to the cumulative local-repair candidate.
+Native DRC remains at 201 inherited violations with zero shorts and zero
+crossings; unconnected items fall from 168 to 163. The storage correction
+therefore composes cleanly with the accepted power/rail repairs. Clock and
+the remaining SATA/control groups remain open.
