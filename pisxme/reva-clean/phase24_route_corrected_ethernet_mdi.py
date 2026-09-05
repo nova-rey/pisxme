@@ -62,8 +62,13 @@ def build_occupancy(board, ignore_refs):
 
 def route_path(occ, start, goal, start_layer, goal_layer):
     s=(grid(*start)[0],grid(*start)[1],start_layer); g=(grid(*goal)[0],grid(*goal)[1],goal_layer)
+    # Permit departure from the active pad and its already-created same-net
+    # escape. Other nets remain obstacles; the prior single-cell exemption
+    # trapped the second stage behind its own first-stage dogbone.
     for layer in (F,B):
-        occ[layer].discard((s[0],s[1])); occ[layer].discard((g[0],g[1]))
+        for cx,cy in ((s[0],s[1]),(g[0],g[1])):
+            for dx in range(-3,4):
+                for dy in range(-3,4): occ[layer].discard((cx+dx,cy+dy))
     bounds=(grid(0,94),grid(45,162))
     q=[(0,s)]; cost={s:0}; prev={s:None}
     while q:
@@ -85,11 +90,22 @@ def route_path(occ, start, goal, start_layer, goal_layer):
     while cur is not None:path.append(cur);cur=prev[cur]
     return list(reversed(path))
 
+def add_via(board, net, x, y):
+    # Do not serialize duplicate same-net vias when the search revisits a
+    # transition coordinate. A different-net via at the same point remains a
+    # real collision and is intentionally not coalesced.
+    for item in board.GetTracks():
+        if isinstance(item, pcbnew.PCB_VIA) and item.GetNetname() == net.GetNetname():
+            px, py = mm(item.GetPosition())
+            if abs(px-x) < 1e-6 and abs(py-y) < 1e-6:
+                return
+    v=pcbnew.PCB_VIA(board);v.SetPosition(V(x,y));v.SetWidth(pcbnew.FromMM(VIA_W));v.SetDrill(pcbnew.FromMM(VIA_D));v.SetLayerPair(F,B);v.SetNet(net);board.Add(v)
+
 def emit(board, net, path, occ):
     last=None; last_layer=None
     for a,z in zip(path,path[1:]):
         if a[2]!=z[2]:
-            x,y=xy(a); v=pcbnew.PCB_VIA(board);v.SetPosition(V(x,y));v.SetWidth(pcbnew.FromMM(VIA_W));v.SetDrill(pcbnew.FromMM(VIA_D));v.SetLayerPair(F,B);v.SetNet(net);board.Add(v)
+            x,y=xy(a); add_via(board,net,x,y)
             for layer in (F,B): occ[layer].update((grid(x,y)[0]+dx,grid(x,y)[1]+dy) for dx in (-1,0,1) for dy in (-1,0,1))
             last=None;last_layer=z[2]
         else:
@@ -98,10 +114,10 @@ def emit(board, net, path, occ):
 
 board=pcbnew.LoadBoard(str(BASE))
 mapping=[
- ('CM5_GBE_TD1_P','4','U6','6','J2','3'),('CM5_GBE_TD1_N','6','U6','7','J2','6'),
- ('CM5_GBE_TD0_N','10','U6','9','J2','2'),('CM5_GBE_TD0_P','12','U6','10','J2','1'),
- ('CM5_GBE_TD3_P','3','U9','5','J2','9'),('CM5_GBE_TD3_N','5','U9','4','J2','10'),
- ('CM5_GBE_TD2_N','9','U9','2','J2','8'),('CM5_GBE_TD2_P','11','U9','1','J2','7')]
+ ('CM5_GBE_TD1_P','4','U6','6','J2','3',B),('CM5_GBE_TD1_N','6','U6','7','J2','6',B),
+ ('CM5_GBE_TD0_N','10','U6','9','J2','2',F),('CM5_GBE_TD0_P','12','U6','10','J2','1',F),
+ ('CM5_GBE_TD3_P','3','U9','5','J2','9',B),('CM5_GBE_TD3_N','5','U9','4','J2','10',F),
+ ('CM5_GBE_TD2_N','9','U9','2','J2','8',B),('CM5_GBE_TD2_P','11','U9','1','J2','7',F)]
 occ=build_occupancy(board,{'J7','U6','U9','J2'})
 # Endpoint footprints may be ignored as body obstacles for escape routing, but
 # their other copper pads remain real obstacles.  The prior trial exempted the
@@ -112,7 +128,7 @@ for ref in ('J7','U6','U9','J2'):
         for layer in (F,B):
             if p.GetLayerSet().Contains(layer):
                 mark_line(occ,layer,(px,py),(px,py),max(sx,sy)/2+.08)
-for name,j7,esd,ep,jack,jp in mapping:
+for name,j7,esd,ep,jack,jp,return_layer in mapping:
     net=board.FindNet(name)
     if net is None: raise RuntimeError(f"missing net {name}")
     src=pos(pad(board,'J7',j7)); mid=pos(pad(board,esd,ep)); dst=pos(pad(board,jack,jp))
@@ -131,7 +147,7 @@ for name,j7,esd,ep,jack,jp in mapping:
     # dogbone; routing directly to the pad center made the search model weave
     # through neighboring barrels.
     entry=(dst[0], dst[1] + (1.0 if dst[1] > 152.0 else -1.0))
-    p2=route_path(occ,mid,entry,F,F);emit(board,net,p2,occ)
-    t=pcbnew.PCB_TRACK(board);t.SetStart(V(*entry));t.SetEnd(V(*dst));t.SetLayer(F);t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(net);board.Add(t);mark_line(occ,F,entry,dst,.14)
+    p2=route_path(occ,mid,entry,F,return_layer);emit(board,net,p2,occ)
+    t=pcbnew.PCB_TRACK(board);t.SetStart(V(*entry));t.SetEnd(V(*dst));t.SetLayer(return_layer);t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(net);board.Add(t);mark_line(occ,return_layer,entry,dst,.14)
     print(name,'source',src,'esd',esd,ep,'jack',dst,'segments',len(p1)+len(p2))
 board.BuildListOfNets();board.Save(str(OUT));print(OUT)

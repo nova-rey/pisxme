@@ -1,5 +1,22 @@
 # Phase 24 acreage validation status
 
+## Layered Ethernet escape V2 — 2026-09-05
+
+The multipair layered search was rerun after fixing two authoring defects:
+endpoint pads remain obstacles, and same-net vias are deduplicated. The
+complete eight-pair candidate is reproducible as
+`PHASE24_CORRECTED_ETHERNET_LAYERED_ESCAPE_V2.kicad_pcb`; native DRC reports
+875 violations and 440 unconnected items, with real differential-pair
+shorting records remaining. It is rejected. The result is useful evidence
+that the current generic sequential A* escape still weaves pair lanes in the
+dense CM5/ESD/MagJack geometry; it is not evidence against the corrected
+macro floorplan. No validation severity or connectivity assertion was
+relaxed, and no rejected copper was promoted.
+
+The next implementation class is a reference-topology-preserving multipair
+escape with explicit non-crossing pair corridors and controlled rip-up, rather
+than another unconstrained sequential search. Phase 24 remains open.
+
 ## Ethernet launch-orientation experiment — 2026-09-05
 
 The corrected-basis router was run against disposable J2 rotations 90 and 270
