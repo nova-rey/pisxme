@@ -64,3 +64,9 @@ branches, and produced U7 pad-field shorts. This is not evidence against the
 storage architecture. The next valid class is layer-separated clock fanout
 with vias outside the U7 pad field, then an independent coherent U5
 rail/return island. See `PHASE24_BLOCKER_REPORT.md`.
+
+The first rotated-U7 discriminator was rejected as an authoring/tooling proof:
+it changed U7 orientation but used a pre-rotation hard-coded clock endpoint
+graph, producing pad mismatches. It is not a valid architecture failure. Any
+next rotated-U7 experiment must query the post-rotation footprint and support
+pad coordinates before creating tracks or vias.

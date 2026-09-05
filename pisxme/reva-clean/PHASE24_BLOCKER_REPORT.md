@@ -34,3 +34,12 @@ F.Cu dogbones and ordinary vias outside the U7 field (preferred); (2) reopen
 the storage island and regenerate USB3/SATA/clock together around PCIe; or (3)
 consider a new support architecture only if both in-scope routing classes fail.
 No Phase 25 freeze or READY claim is made.
+
+## Follow-up discriminator
+
+The rotated-U7 probe was rejected as a proof artifact. Its generator rotated
+the footprint but retained a hard-coded pre-rotation clock endpoint graph, so
+native DRC correctly found mismatches at unrelated U7 pads. This does not
+invalidate U7 rotation as an in-scope option. A valid next experiment must
+derive both the rotated U7 clock pads and every support pad from the serialized
+post-rotation footprints before generating copper.
