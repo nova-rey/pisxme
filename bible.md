@@ -4117,3 +4117,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Phase 24 accepted the bridge-3v3 capacitor/support and R14 output joins; native DRC has zero short/crossing classes and 138 unconnected records remaining.
 2026-09-05: Phase 24 closed the isolated C3.2 12V_A bypass with a short F.Cu dogleg to U1.3; native DRC has zero short/crossing classes and 137 unconnected records remaining.
 2026-09-05: Phase 24 closed the U7 BRIDGE_CFG pad join on the accepted ancestor; native DRC has zero short/crossing classes and 136 unconnected records remaining.
+2026-09-05: Corrected Phase 24 DRC evidence after an independent fresh native rerun found 235 violations, 4 shorts, and 7 crossings; earlier zero short/crossing parser claims are superseded, and the J7 top-row trial was rejected at 8 shorts and 10 crossings.

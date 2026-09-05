@@ -106,6 +106,15 @@ The remaining U7 configuration pad pair is now natively joined on the current
 ancestor. DRC reports zero shorts/crossings and 136 unconnected records; no
 validation severity or storage topology was changed.
 
+## Native DRC evidence correction
+
+Fresh KiCad DRC on the exact current ancestor reports 235 violations, 136
+unconnected records, 4 shorts, and 7 crossings. Prior zero short/crossing
+claims were produced by a parser that began at the unconnected section and
+missed earlier report sections; they are superseded. The J7 top-row trial is
+also rejected at 8 shorts and 10 crossings despite reducing unconnected
+records to 134.
+
 ## 12V input bypass accepted
 
 C3.2 was joined to the existing `/POWER_INPUT/12V_IN_A` component with a

@@ -588,3 +588,18 @@ shorting and crossing classes; the cumulative unconnected census falls from
 remains at zero shorting/crossing classes and the unconnected census falls
 from 137 to 136. This closes the one remaining U7 configuration connectivity
 record without changing the storage architecture.
+
+## Fresh native DRC reconciliation
+
+An independent auditor reran KiCad DRC on the exact serialized
+`PHASE24_U7_CFG_JOIN_CURRENT.kicad_pcb` ancestor. The authoritative fresh
+result is 235 total violations, 136 unconnected records, 4
+`[shorting_items]`, and 7 `[tracks_crossing]` records. Earlier incremental
+receipts that reported zero shorts/crossings used a parser scoped after the
+unconnected section and therefore did not count those earlier report
+sections. Those zero claims are superseded; no candidate is considered clean
+until the complete report is clean.
+
+The top-row-only J7 ground experiment is rejected: fresh DRC reports 134
+unconnected records but 8 shorting and 10 crossing records. It is retained
+only as negative geometry evidence.
