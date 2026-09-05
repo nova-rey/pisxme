@@ -24,6 +24,7 @@ USB_EAST=ARGS.get('P19_USB_EAST',os.environ.get('P19_USB_EAST','0'))=='1'
 USB_TOP_EAST=ARGS.get('P19_USB_TOP_EAST',os.environ.get('P19_USB_TOP_EAST','0'))=='1'
 USB_PAIR_SPLIT=ARGS.get('P19_USB_PAIR_SPLIT',os.environ.get('P19_USB_PAIR_SPLIT','0'))=='1'
 USB_VERTICAL=ARGS.get('P19_USB_VERTICAL',os.environ.get('P19_USB_VERTICAL','0'))=='1'
+U7ROT=int(ARGS.get('P19_U7_ROT',os.environ.get('P19_U7_ROT','270')))
 W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def pos(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
@@ -50,7 +51,7 @@ def main():
   b=pcbnew.LoadBoard(str(BASE))
   u=b.FindFootprintByReference('U7'); j=b.FindFootprintByReference('J3')
   # Open region to the right of the PCIe/CM5 source corridors.
-  u.SetPosition(V(280,105)); u.SetOrientationDegrees(270)
+  u.SetPosition(V(280,105)); u.SetOrientationDegrees(U7ROT)
   j.SetPosition(V(200,140)); j.SetOrientationDegrees(270 if SATA270 else 90)
   old_mech=b.FindFootprintByReference('MECH_M2_2280')
   if old_mech is not None: b.Remove(old_mech)
@@ -137,6 +138,28 @@ def main():
          'CM5_USB3_TX_N':297.0,'CM5_USB3_TX_P':298.0}[suffix]
    landing={'CM5_USB3_RX_N':(285.0,104.0),'CM5_USB3_RX_P':(286.0,105.0),
             'CM5_USB3_TX_N':(287.0,115.0),'CM5_USB3_TX_P':(288.0,116.0)}[suffix]
+   launch=(71.2,s[1]); seg(b,n,s,launch); seg(b,n,launch,first)
+   is_rx=suffix.startswith('CM5_USB3_RX_')
+   if is_rx: via(b,n,first)
+   layer=pcbnew.B_Cu if is_rx else pcbnew.F_Cu
+   seg(b,n,first,(first[0],lane_y),layer); seg(b,n,(first[0],lane_y),(outx,lane_y),layer)
+   seg(b,n,(outx,lane_y),(outx,landing[1]),layer); seg(b,n,(outx,landing[1]),landing,layer)
+   if is_rx: via(b,n,landing)
+   seg(b,n,landing,d,pcbnew.F_Cu)
+   continue
+  if U7ROT == 0 and SKIP_SATA:
+   # Rotation-0 diagnostic: U7 USB pads form a vertical side row, so RX
+   # enters from the upper B.Cu corridor and TX from the lower F.Cu corridor.
+   # This is intentionally USB-only; SATA is regenerated after the USB
+   # orientation is proven.
+   first={'CM5_USB3_RX_N':(94.0,103.9),'CM5_USB3_RX_P':(90.0,105.5),
+          'CM5_USB3_TX_N':(100.0,106.3),'CM5_USB3_TX_P':(96.0,106.7)}[suffix]
+   lane_y={'CM5_USB3_RX_N':82.0,'CM5_USB3_RX_P':80.0,
+           'CM5_USB3_TX_N':158.0,'CM5_USB3_TX_P':160.0}[suffix]
+   outx={'CM5_USB3_RX_N':295.0,'CM5_USB3_RX_P':299.0,
+         'CM5_USB3_TX_N':295.0,'CM5_USB3_TX_P':298.0}[suffix]
+   landing={'CM5_USB3_RX_N':(294.0,101.0),'CM5_USB3_RX_P':(290.0,103.5),
+            'CM5_USB3_TX_N':(297.5,99.0),'CM5_USB3_TX_P':(298.0,98.0)}[suffix]
    launch=(71.2,s[1]); seg(b,n,s,launch); seg(b,n,launch,first)
    is_rx=suffix.startswith('CM5_USB3_RX_')
    if is_rx: via(b,n,first)

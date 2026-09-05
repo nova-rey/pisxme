@@ -131,3 +131,9 @@ Rejected as a full SATA pass.
   four crossings, two shorts; rejected.
 - RX/TX pair corridors were separated, but U7’s single-row USB fan-in and
   the bottom corridor/J3 mechanical-hole interaction remained.
+### 2026-09-05 — U7 rotation-0 USB3 orientation study
+
+- `PHASE19_U7ROT0_USB_VERTICAL10-drc.rpt`: 84 total records, two USB3
+  crossings, zero focused shorting records; rejected pending side-row
+  dogbone repair and SATA regeneration.
+- This is a new orientation class, not a promotion or Phase 19 closure.

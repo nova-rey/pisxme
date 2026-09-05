@@ -1113,3 +1113,14 @@ dogbone fan-in, one RX launch into a neighboring U7 pad, and a bottom F.Cu
 source corridor intersecting the J3 mechanical hole. This candidate is
 rejected. The repeated U7 single-row fan-in is now the discriminating evidence
 for the next orientation search; no SATA short/crossing was reintroduced.
+## 2026-09-05 U7 rotation-0 USB3 orientation study
+
+`PHASE19_U7ROT0_USB_VERTICAL10.kicad_pcb` tested U7 at `(280,105)` rotation
+0 with SATA suppressed. This orientation changes the USB3 endpoint from the
+270-degree horizontal row to a vertical side row. The best current diagnostic
+measured 84 total native DRC records, with two USB3 crossings, no shorts
+reported by the focused count, and 74 unconnected records from intentionally
+suppressed SATA/clock fixture nets. The remaining crossings/clearances are
+the U7 side-row fan-in and are not evidence against the orientation itself.
+The candidate is not yet promoted; SATA must be regenerated against the same
+orientation and the final side-row dogbones must pass.
