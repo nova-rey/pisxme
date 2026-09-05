@@ -145,6 +145,12 @@ Rejected as a full SATA pass.
   two B.Cu crossings against SATA RX_P; rejected as an integrated ancestor.
 - Generator change: source-order staircase fanout with ordinary signal vias;
   no architecture, stack, PCIe, or CM5 change.
+### 2026-09-05 — coordinated landing-separation follow-up
+
+- `PHASE19_COORDINATED_ORDERED22-drc.rpt`: 213 total records, 3 crossings,
+  and 1 short to F2 `FUSED_12V_B`; rejected.
+- The zero-short `PHASE19_COORDINATED_ORDERED19` result remains the best
+  coordinated ancestor, but still has two USB/SATA crossings.
 ### 2026-09-05 — U7 rotation-180 USB3 diagnostic
 
 - `PHASE19_U7ROT180_USB_VERTICAL1-drc.rpt`: 223 total records, two

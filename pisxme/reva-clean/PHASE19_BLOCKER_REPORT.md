@@ -1135,6 +1135,15 @@ records). Coordinated regeneration is still open: the latest
 crossings between the USB3 corridors and the SATA RX_P launch. It is rejected
 as an integrated Phase 19 ancestor; the next experiment must relocate the
 local USB/SATA corridor relationship, not change connectivity authority.
+## 2026-09-05 coordinated landing-separation follow-up
+
+`PHASE19_COORDINATED_ORDERED22.kicad_pcb` moved RX_P/TX_N landings below the
+SATA RX_P diagonal and retained ordinary signal vias. Native KiCad DRC
+reported 213 records, including three track crossings and one real short
+from the TX_N corridor to the F2 `FUSED_12V_B` pad. It is rejected. The
+attempt confirms that the remaining problem is corridor coexistence with
+the inherited power-entry geometry; it does not invalidate the zero-short
+isolated USB3 staircase or the SATA-only oracle.
 ## 2026-09-05 U7 rotation-180 USB3 diagnostic
 
 `PHASE19_U7ROT180_USB_VERTICAL1.kicad_pcb` tested the mirrored side-row
