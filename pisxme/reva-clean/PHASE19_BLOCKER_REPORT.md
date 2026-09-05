@@ -1073,3 +1073,13 @@ source fanout ordering and U7 landing crossings, so this placement is
 rejected. The experiment confirms that moving only the USB3 corridors is not
 enough; the next candidate must co-place the complete U7/J3 island and
 regenerate the source breakout as one monotonic graph. Phase 19 remains open.
+## 2026-09-05 preserved-source top/east USB3 trial
+
+`PHASE19_COORDINATED_SATA270_USB_TOP_EAST3.kicad_pcb` preserved the CM5
+source-side breakout ordering, moved the USB3 corridors to an ordered upper
+B.Cu region, and used an outboard U7 approach. Native KiCad DRC measured 88
+records, including nine USB3 crossings. The failures are source-to-corridor
+lift interleaving and U7 final dogbone crossings; the SATA-only oracle remains
+clean. This candidate is rejected. A valid next candidate must route the
+complete USB3 differential pairs as pair-aware corridors during storage-island
+co-placement rather than translating four independent global lanes.

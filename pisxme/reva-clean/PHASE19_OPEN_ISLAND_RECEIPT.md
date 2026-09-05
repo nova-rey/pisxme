@@ -106,3 +106,10 @@ Rejected as a full SATA pass.
   short and nine crossings; rejected.
 - Failure class: altered source breakout and U7 landing dogbones crossed;
   SATA oracle was not the source of the failure.
+### 2026-09-05 — preserved-source top/east USB3 trial
+
+- `PHASE19_COORDINATED_SATA270_USB_TOP_EAST3-drc.rpt`: 88 total records,
+  nine USB3 crossings; rejected.
+- The CM5 source breakout was retained, but the source-to-upper-corridor lifts
+  interleaved and the U7 landing dogbones crossed. No SATA-only failure was
+  introduced.

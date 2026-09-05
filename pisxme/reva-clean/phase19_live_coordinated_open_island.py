@@ -21,6 +21,7 @@ SKIP_USB=ARGS.get('P19_SKIP_USB',os.environ.get('P19_SKIP_USB','0'))=='1'
 CLOCK_ONLY=ARGS.get('P19_CLOCK_ONLY',os.environ.get('P19_CLOCK_ONLY','0'))=='1'
 SATA270=ARGS.get('P19_SATA270',os.environ.get('P19_SATA270','0'))=='1'
 USB_EAST=ARGS.get('P19_USB_EAST',os.environ.get('P19_USB_EAST','0'))=='1'
+USB_TOP_EAST=ARGS.get('P19_USB_TOP_EAST',os.environ.get('P19_USB_TOP_EAST','0'))=='1'
 W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def pos(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
@@ -82,6 +83,23 @@ def main():
    continue
   n=N['/CORE_CM5/'+suffix]; s=S[sp]; d=U[up]
   setpad(pad(src,sp),n); setpad(pad(u,up),n)
+  if USB_TOP_EAST:
+   # Preserve the serialized CM5 source escape, then use four ordered
+   # top-side B.Cu corridors and an outboard x>290 approach to U7.  This
+   # keeps the USB3 graph outside the SATA island instead of changing the
+   # source-side fanout as the rejected USB_EAST trial did.
+   first={'CM5_USB3_RX_N':(78.0,103.9),'CM5_USB3_RX_P':(76.0,104.8),
+          'CM5_USB3_TX_N':(74.0,108.0),'CM5_USB3_TX_P':(72.0,109.0)}[suffix]
+   top={'CM5_USB3_RX_N':(86.0,80.0),'CM5_USB3_RX_P':(84.0,82.0),
+        'CM5_USB3_TX_N':(82.0,84.0),'CM5_USB3_TX_P':(80.0,86.0)}[suffix]
+   outx={'CM5_USB3_RX_N':295.0,'CM5_USB3_RX_P':296.0,
+         'CM5_USB3_TX_N':297.0,'CM5_USB3_TX_P':298.0}[suffix]
+   landing={'CM5_USB3_RX_N':(290.0,112.0),'CM5_USB3_RX_P':(291.0,114.5),
+            'CM5_USB3_TX_N':(292.0,117.0),'CM5_USB3_TX_P':(293.0,119.5)}[suffix]
+   launch=(71.2,s[1]); seg(b,n,s,launch); seg(b,n,launch,first); via(b,n,first)
+   seg(b,n,first,top,pcbnew.B_Cu); seg(b,n,top,(outx,top[1]),pcbnew.B_Cu); seg(b,n,(outx,top[1]),(outx,landing[1]),pcbnew.B_Cu); seg(b,n,(outx,landing[1]),landing,pcbnew.B_Cu); via(b,n,landing)
+   dog=(d[0],landing[1]-1.0); seg(b,n,landing,dog,pcbnew.F_Cu); seg(b,n,dog,d,pcbnew.F_Cu)
+   continue
   seg(b,n,s,(start[0],s[1])); seg(b,n,(start[0],s[1]),start); via(b,n,start); seg(b,n,start,far,pcbnew.B_Cu)
   # The rotated U7 USB pads share a continuous bottom row.  Do not run a
   # same-layer horizontal track through that row; use a distinct B.Cu lane
