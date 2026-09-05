@@ -32,6 +32,8 @@ U7Y=float(ARGS.get('P19_U7_Y',os.environ.get('P19_U7_Y','105')))
 J3X=float(ARGS.get('P19_J3_X',os.environ.get('P19_J3_X','200')))
 J3Y=float(ARGS.get('P19_J3_Y',os.environ.get('P19_J3_Y','140')))
 RELOCATED=abs(U7X-280.0)>0.01 or abs(U7Y-105.0)>0.01 or abs(J3X-200.0)>0.01 or abs(J3Y-140.0)>0.01
+def C(x,y): return (x+(U7X-280.0), y+(U7Y-105.0)-30.0)
+def CY(y): return y+(U7Y-105.0)-30.0
 W=pcbnew.FromMM(.200)
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def pos(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
@@ -68,7 +70,7 @@ def main():
   _caps=({'C30':(U7X-40,U7Y+5),'C31':(U7X-40,U7Y+3),'C32':(U7X-40,U7Y+9),'C33':(U7X-40,U7Y+7)} if SATA270 else {'C30':(U7X-15,U7Y-9),'C31':(U7X-15,U7Y-5),'C32':(U7X-15,U7Y+3),'C33':(U7X-15,U7Y+7)})
   for ref,(x,y) in _caps.items():
    f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(0 if SATA270 else 180)
-  for ref,xyv in {'Y1':(268,98),'R23':(272,98),'C42':(272,94),'C43':(276,98)}.items():
+  for ref,xyv in {'Y1':C(268,98),'R23':C(272,98),'C42':C(272,94),'C43':C(276,98)}.items():
    f=b.FindFootprintByReference(ref)
    if f is None: raise RuntimeError('clock donor missing '+ref)
    f.SetPosition(V(*xyv)); f.SetOrientationDegrees(0)
@@ -101,32 +103,52 @@ def main():
     # breakout, then use separated pair corridors and serialized U7 pad x.
     first={'CM5_USB3_RX_N':(74.0,103.9),'CM5_USB3_RX_P':(82.0,104.3),
            'CM5_USB3_TX_N':(90.0,118.0),'CM5_USB3_TX_P':(98.0,120.0)}[suffix]
-    lane_y=({'CM5_USB3_RX_N':50.0,'CM5_USB3_RX_P':52.0,
+    lane_y=({'CM5_USB3_RX_N':80.0,'CM5_USB3_RX_P':82.0,
+             'CM5_USB3_TX_N':100.0,'CM5_USB3_TX_P':102.0} if RELOCATED else
+            {'CM5_USB3_RX_N':50.0,'CM5_USB3_RX_P':52.0,
              'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':92.0} if USB_SPLIT else
             {'CM5_USB3_RX_N':70.0,'CM5_USB3_RX_P':72.0,
              'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':92.0})[suffix]
     ox=U7X-280.0
     target_x={'CM5_USB3_RX_N':280.0+ox,'CM5_USB3_RX_P':280.5+ox,
               'CM5_USB3_TX_N':281.5+ox,'CM5_USB3_TX_P':282.0+ox}[suffix]
-    landing_y={'CM5_USB3_RX_N':102.0,'CM5_USB3_RX_P':104.0,
-               'CM5_USB3_TX_N':106.0,'CM5_USB3_TX_P':108.0}[suffix]
-    trunk_x={'CM5_USB3_RX_N':290.0+ox,'CM5_USB3_RX_P':292.0+ox,
-             'CM5_USB3_TX_N':294.0+ox,'CM5_USB3_TX_P':296.0+ox}[suffix]
+    landing_y={'CM5_USB3_RX_N':108.0,'CM5_USB3_RX_P':106.0,
+               'CM5_USB3_TX_N':136.0,
+               'CM5_USB3_TX_P':102.0}[suffix]
+    trunk_x=({'CM5_USB3_RX_N':U7X+6.0,'CM5_USB3_RX_P':U7X+4.0,
+             'CM5_USB3_TX_N':64.0,'CM5_USB3_TX_P':80.0} if RELOCATED else
+             {'CM5_USB3_RX_N':290.0+ox,'CM5_USB3_RX_P':292.0+ox,
+              'CM5_USB3_TX_N':294.0+ox,'CM5_USB3_TX_P':296.0+ox})[suffix]
     launch_x={'CM5_USB3_RX_N':71.2,'CM5_USB3_RX_P':72.2,
               'CM5_USB3_TX_N':71.2,'CM5_USB3_TX_P':72.2}[suffix]
     launch=(launch_x,s[1]); seg(b,n,s,launch)
     # Staircase source escape: each pre-via x is outside the preceding
     # vertical drop, so the serialized J7 fanout cannot self-cross.
-    prex={'CM5_USB3_RX_N':74.0,'CM5_USB3_RX_P':84.0,
-          'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':68.0}[suffix]
+    prex=({'CM5_USB3_RX_N':74.0,'CM5_USB3_RX_P':84.0,
+           'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':68.0} if RELOCATED else
+          {'CM5_USB3_RX_N':74.0,'CM5_USB3_RX_P':84.0,
+           'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':68.0})[suffix]
     is_rx=suffix.startswith('CM5_USB3_RX_')
     seg(b,n,launch,(prex,s[1]),pcbnew.F_Cu)
     seg(b,n,(prex,s[1]),(prex,lane_y),pcbnew.F_Cu)
-    if (not USB_SPLIT) or (not is_rx): via_sig(b,n,(prex,lane_y))
-    layer=pcbnew.F_Cu if (USB_SPLIT and is_rx) else pcbnew.B_Cu
-    seg(b,n,(prex,lane_y),(trunk_x,lane_y),layer)
-    seg(b,n,(trunk_x,lane_y),(trunk_x,landing_y),layer); seg(b,n,(trunk_x,landing_y),(target_x,landing_y),layer)
-    if (not USB_SPLIT) or (not is_rx): via_sig(b,n,(target_x,landing_y))
+    if suffix == 'CM5_USB3_TX_N' and RELOCATED:
+     # The relocated SATA RX_P launch occupies the lower B.Cu corridor.
+     # Cross to F.Cu in open acreage before the final U7 approach.
+     via_sig(b,n,(prex,lane_y))
+     seg(b,n,(prex,lane_y),(trunk_x,lane_y),pcbnew.B_Cu)
+     mid=(170.0,lane_y); seg(b,n,(trunk_x,lane_y),mid,pcbnew.B_Cu); via_sig(b,n,mid)
+     # Go below the unpopulated lower half of the M.2 connector before
+     # returning to the U7-side landing corridor.
+     seg(b,n,mid,(mid[0],155.0),pcbnew.F_Cu)
+     seg(b,n,(mid[0],155.0),(220.0,155.0),pcbnew.F_Cu)
+     seg(b,n,(220.0,155.0),(220.0,landing_y),pcbnew.F_Cu)
+     seg(b,n,(220.0,landing_y),(target_x,landing_y),pcbnew.F_Cu)
+    else:
+     if (not USB_SPLIT) or (not is_rx): via_sig(b,n,(prex,lane_y))
+     layer=pcbnew.F_Cu if (USB_SPLIT and is_rx) else pcbnew.B_Cu
+     seg(b,n,(prex,lane_y),(trunk_x,lane_y),layer)
+     seg(b,n,(trunk_x,lane_y),(trunk_x,landing_y),layer); seg(b,n,(trunk_x,landing_y),(target_x,landing_y),layer)
+     if (not USB_SPLIT) or (not is_rx): via_sig(b,n,(target_x,landing_y))
     seg(b,n,(target_x,landing_y),d,pcbnew.F_Cu)
     continue
   if USB_TOP_EAST:
@@ -278,12 +300,13 @@ def main():
   cp={str(p.GetNumber()):pos(p) for p in caps[cr].Pads()}; a=U[upn]; z=J[jn]
   setpad(pad(caps[cr],'1'),socket); setpad(pad(caps[cr],'2'),bridge); setpad(pad(j,jn),socket); setpad(pad(u,upn),bridge)
   if SATA270:
+   L=lambda x,y:(x+(U7X-280.0),y+(U7Y-105.0))
    # Never start a B.Cu segment directly on an SMD pad.  Use a short
    # F.Cu dogbone and an ordinary through-via outside the capacitor pad.
    cap_via = (cp['2'][0]+1.0, cp['2'][1])
    if bn in ('BRIDGE_SATA_TX_P','BRIDGE_SATA_RX_P'):
     if bn == 'BRIDGE_SATA_RX_P':
-     e=(a[0]+3.0,a[1]+20.0); seg(b,bridge,a,(a[0]+1.5,a[1]),pcbnew.F_Cu); seg(b,bridge,(a[0]+1.5,a[1]),e,pcbnew.F_Cu); via(b,bridge,e); mid=(250.0,e[1]); seg(b,bridge,e,mid,pcbnew.B_Cu); seg(b,bridge,mid,(250.0,cp['2'][1]),pcbnew.B_Cu); seg(b,bridge,(250.0,cp['2'][1]),cap_via,pcbnew.B_Cu); via(b,bridge,cap_via); seg(b,bridge,cap_via,cp['2'],pcbnew.F_Cu)
+     e=(a[0]+3.0,a[1]); seg(b,bridge,a,e,pcbnew.F_Cu); via(b,bridge,e); seg(b,bridge,e,cap_via,pcbnew.B_Cu); via(b,bridge,cap_via); seg(b,bridge,cap_via,cp['2'],pcbnew.F_Cu)
     else:
      seg(b,bridge,a,cp['2'],pcbnew.F_Cu)
    else:
@@ -297,15 +320,16 @@ def main():
    # two pairs are assigned to opposite layers so the alternating M.2 pad
    # columns do not force a same-layer crossing.
    if bn == 'BRIDGE_SATA_TX_P':
-    p=(235.0,110.0); seg(b,socket,cp['1'],p,pcbnew.F_Cu); seg(b,socket,p,(235.0,129.0),pcbnew.F_Cu); seg(b,socket,(235.0,129.0),(208.0,129.0),pcbnew.F_Cu); seg(b,socket,(208.0,129.0),(208.0,130.75),pcbnew.F_Cu); seg(b,socket,(208.0,130.75),z,pcbnew.F_Cu)
+    p=L(235.0,110.0); seg(b,socket,cp['1'],p,pcbnew.F_Cu); seg(b,socket,p,L(235.0,129.0),pcbnew.F_Cu); seg(b,socket,L(235.0,129.0),L(208.0,129.0),pcbnew.F_Cu); seg(b,socket,L(208.0,129.0),L(208.0,130.75),pcbnew.F_Cu); seg(b,socket,L(208.0,130.75),z,pcbnew.F_Cu)
    elif bn == 'BRIDGE_SATA_TX_N':
-    p=(190.0,108.0); seg(b,socket,cp['1'],p,pcbnew.F_Cu); seg(b,socket,p,(190.0,131.0),pcbnew.F_Cu); seg(b,socket,(190.0,131.0),z,pcbnew.F_Cu)
+    p=L(190.0,108.0); seg(b,socket,cp['1'],p,pcbnew.F_Cu); seg(b,socket,p,L(190.0,131.0),pcbnew.F_Cu); seg(b,socket,L(190.0,131.0),z,pcbnew.F_Cu)
    elif bn == 'BRIDGE_SATA_RX_P':
-    p=(238.5,cp['1'][1]); seg(b,socket,cp['1'],p,pcbnew.F_Cu); via(b,socket,p); mid=(250.0,126.0); seg(b,socket,p,mid,pcbnew.B_Cu); q=(225.0,126.0); seg(b,socket,mid,q,pcbnew.B_Cu); q2=(225.0,z[1]); seg(b,socket,q,q2,pcbnew.B_Cu); via(b,socket,q2); seg(b,socket,q2,z,pcbnew.F_Cu)
+    p=L(238.5,cp['1'][1]); seg(b,socket,cp['1'],p,pcbnew.F_Cu); via(b,socket,p); m=L(215.0,p[1]); seg(b,socket,p,m,pcbnew.B_Cu); q=L(215.0,131.25); seg(b,socket,m,q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
    else:
-    p=(238.5,cp['1'][1]); seg(b,socket,cp['1'],p,pcbnew.F_Cu); via(b,socket,p); m=(210.0,p[1]); seg(b,socket,p,m,pcbnew.B_Cu); q=(210.0,132.5); seg(b,socket,m,q,pcbnew.B_Cu); r=(190.0,132.5); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,(190.0,131.5),pcbnew.F_Cu); seg(b,socket,(190.0,131.5),z,pcbnew.F_Cu)
+    p=L(238.5,cp['1'][1]); seg(b,socket,cp['1'],p,pcbnew.F_Cu); via(b,socket,p); m=L(210.0,p[1]); seg(b,socket,p,m,pcbnew.B_Cu); q=L(210.0,132.5); seg(b,socket,m,q,pcbnew.B_Cu); r=L(190.0,132.5); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,L(190.0,131.5),pcbnew.F_Cu); seg(b,socket,L(190.0,131.5),z,pcbnew.F_Cu)
    continue
   if u.GetOrientationDegrees() == -90.0 and j.GetOrientationDegrees() == 90.0:
+   L=lambda x,y:(x+(U7X-280.0),y+(U7Y-105.0))
    # Rot270 U7 exposes SATA on a single west-facing row.  Use live pad
    # coordinates and a pair-per-layer monotonic launch to the left-column
    # M.2 pads; the two pairs never share a signal layer.
@@ -320,13 +344,13 @@ def main():
    # Legal horizontal M.2 orientation: independent live lanes approach the
    # rotated socket from four disjoint corridors around U7.
    if bn == 'BRIDGE_SATA_TX_P':
-    q=(235.0,96.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); r=(215.0,96.0); seg(b,socket,q,r,pcbnew.F_Cu); seg(b,socket,r,(r[0],d[1]),pcbnew.F_Cu); seg(b,socket,(r[0],d[1]),d)
+    q=L(235.0,96.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); r=L(215.0,96.0); seg(b,socket,q,r,pcbnew.F_Cu); seg(b,socket,r,(r[0],d[1]),pcbnew.F_Cu); seg(b,socket,(r[0],d[1]),d)
    elif bn == 'BRIDGE_SATA_TX_N':
-    q=(235.0,100.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(210.0,100.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,(r[0],d[1]+6),pcbnew.B_Cu); via(b,socket,(r[0],d[1]+6)); seg(b,socket,(r[0],d[1]+6),d)
+    q=L(235.0,100.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=L(210.0,100.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,(r[0],d[1]+6),pcbnew.B_Cu); via(b,socket,(r[0],d[1]+6)); seg(b,socket,(r[0],d[1]+6),d)
    elif bn == 'BRIDGE_SATA_RX_P':
-    q=(235.0,108.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(205.0,108.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,(r[0],d[1]-5),pcbnew.B_Cu); via(b,socket,(r[0],d[1]-5)); seg(b,socket,(r[0],d[1]-5),d)
+    q=L(235.0,108.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=L(205.0,108.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,(r[0],d[1]-5),pcbnew.B_Cu); via(b,socket,(r[0],d[1]-5)); seg(b,socket,(r[0],d[1]-5),d)
    else:
-    q=(235.0,112.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=(215.0,112.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,(r[0],d[1]+10),pcbnew.B_Cu); via(b,socket,(r[0],d[1]+10)); seg(b,socket,(r[0],d[1]+10),d)
+    q=L(235.0,112.0); seg(b,socket,cp['1'],q,pcbnew.F_Cu); via(b,socket,q); r=L(215.0,112.0); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,(r[0],d[1]+10),pcbnew.B_Cu); via(b,socket,(r[0],d[1]+10)); seg(b,socket,(r[0],d[1]+10),d)
   elif layer==pcbnew.F_Cu:
    seg(b,bridge,a,(a[0]-2,a[1])); seg(b,bridge,(a[0]-2,a[1]),cp['2'])
    seg(b,socket,cp['1'],(230,cp['1'][1])); seg(b,socket,(230,cp['1'][1]),(230,z[1])); seg(b,socket,(230,z[1]),z)
@@ -344,28 +368,18 @@ def main():
  for pn,nm in (('52','/STORAGE/BRIDGE_XI'),('53','/STORAGE/BRIDGE_VSSOSC'),('54','/STORAGE/BRIDGE_XO')): setpad(pad(u,pn),N[nm])
  Y={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('Y1').Pads()}; R23={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('R23').Pads()}; C42={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('C42').Pads()}; C43={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('C43').Pads()}
  xi,xo,vs=N['/STORAGE/BRIDGE_XI'],N['/STORAGE/BRIDGE_XO'],N['/STORAGE/BRIDGE_VSSOSC']
- # Live-endpoint clock topology: XI is a short F.Cu local star; XO is
- # isolated onto B.Cu through ordinary offset vias, so the two oscillator
- # nets cannot cross in the dense support-pad region.
- seg(b,xi,U['52'],(273.5,103.5)); seg(b,xi,(273.5,103.5),(271.5,103.5)); seg(b,xi,(271.5,103.5),R23['1'])
- seg(b,xi,Y['1'],(268.0,96.0)); seg(b,xi,(268.0,96.0),R23['1'])
- seg(b,xi,C42['1'],(271.5,96.0)); seg(b,xi,(271.5,96.0),R23['1'])
- for p,q in ((U['54'],(278.0,103.0)),(Y['3'],(269.5,100.5)),(R23['2'],(273.5,99.5)),(C43['1'],(275.5,96.5))):
-  seg(b,xo,p,q); via(b,xo,q)
- for q in ((278.0,103.0),(269.5,100.5),(273.5,99.5),(275.5,96.5)):
-  seg(b,xo,q,(q[0],90.0),pcbnew.B_Cu)
- seg(b,xo,(269.5,90.0),(278.0,90.0),pcbnew.B_Cu)
- # Return vias are deliberately offset from every SMD pad (no via-in-pad).
- for p,q in ((U['53'],(277.0,104.5)),(Y['2'],(264.0,100.0)),(Y['4'],(270.5,96.0)),(C42['2'],(274.5,92.5)),(C43['2'],(279.5,98.0))):
-  seg(b,vs,p,q); via(b,vs,q)
- # Private oscillator return is joined on B.Cu outside the signal stubs.
- for q in ((277.0,104.5),(264.0,100.0),(270.5,96.0),(274.5,92.5),(279.5,98.0)):
-  seg(b,vs,q,(q[0],106.0),pcbnew.B_Cu)
- seg(b,vs,(264.0,106.0),(279.5,106.0),pcbnew.B_Cu)
+ # Keep the oscillator island above the relocated SATA launch.  Each net
+ # uses a disjoint monotonic F.Cu corridor; no via-in-pad is introduced.
+ seg(b,xi,U['52'],C(260,103)); seg(b,xi,C(260,103),C(260,98)); seg(b,xi,C(260,98),R23['1'])
+ seg(b,xi,Y['1'],C(260,98)); seg(b,xi,C42['1'],C(260,94)); seg(b,xi,C(260,94),C(260,98))
+ seg(b,xo,U['54'],C(264,103)); seg(b,xo,C(264,103),C(264,98)); seg(b,xo,C(264,98),R23['2'])
+ seg(b,xo,Y['3'],C(264,98)); seg(b,xo,C43['1'],C(264,98))
+ seg(b,vs,U['53'],C(256,103)); seg(b,vs,C(256,103),C(256,92)); seg(b,vs,C(256,92),C42['2'])
+ seg(b,vs,Y['2'],C(256,92)); seg(b,vs,Y['4'],C(256,92)); seg(b,vs,C43['2'],C(268,92)); seg(b,vs,C(268,92),C(256,92))
  # FREQSEL0/1 and VDDIO high on the local 3V3 net; local short fanout.
  v33=b.FindNet('/STORAGE/BRIDGE_3V3')
  for pn in ('24','30','31'): setpad(pad(u,pn),v33)
- seg(b,v33,U['24'],(287,106)); seg(b,v33,(287,106),U['30']); seg(b,v33,(287,106),U['31'])
+ seg(b,v33,U['24'],C(287,106)); seg(b,v33,C(287,106),U['30']); seg(b,v33,C(287,106),U['31'])
  b.Save(str(OUT))
  # Remove only known donor duplicate net fields from U7 pads 5-12 in the
  # serialized footprint; this is the same deterministic cleanup used by the

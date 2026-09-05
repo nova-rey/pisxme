@@ -1239,3 +1239,19 @@ five track crossings and one real short between `CM5_USB3_TX_P` and
 `POWER_GND`. The candidate is rejected. Its failure is confined to the
 diagnostic CM5 source-to-U7 fan-in and landing geometry; it is not a valid
 coordinated storage ancestor.
+
+## 2026-09-05 coordinated relocation progress: U7 (270,105), J3 (190,140)
+
+The parameterized author was advanced to a coherent mid-acreage storage island.
+`PHASE19_RELOC_U270J190_COORD21_FOCUSED.kicad_pcb` uses the SATA270 endpoint
+oracle and regenerated CM5-to-U7 USB3 paths. Native KiCad DRC reports zero
+`shorting_items` and zero `tracks_crossing` records in the focused trial.
+The remaining report records are inherited board/fixture checks and the
+focused trial intentionally suppresses the oscillator support block while
+its relocated local routing is repaired.
+
+The full-support companion `PHASE19_RELOC_U270J190_COORD21_FULL.kicad_pcb`
+is rejected for now: its regenerated oscillator island has six shorts and
+six crossings against the relocated U7/SATA launch. This is a local support
+routing defect, not evidence against moving U7/J3 or the USB3/SATA
+architecture. Phase 19 remains open pending a clean full-support candidate.
