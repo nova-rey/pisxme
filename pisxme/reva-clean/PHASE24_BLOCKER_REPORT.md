@@ -299,3 +299,16 @@ explicit Y1 pad-layer metadata. The latest generated artifact
 The prior XO/SATA source crossing is removed; remaining errors are localized
 to the Y1 XI/VSSOSC approach and one inherited CM5 USB3 interaction. This
 remains unpromoted; Phase 24 parity is open.
+
+## Side-separated crystal escape refinement (in progress)
+
+The next disposable refinement assigns all four crystal pads to B.Cu, routes
+XI to a west-side staging point, carries VSSOSC around the south side to an
+outboard vertical, and terminates XO through a separate B.Cu staging point.
+The generated candidate reports 207 native DRC violations, with zero
+`tracks_crossing` and zero `shorting_items` records. The remaining report
+violations are inherited board hygiene (including 391 inherited unconnected
+items and existing presentation/clearance findings); this is not a clean
+Phase 24 board and is not promoted. The next step is support-part
+materialization on this clock oracle followed by a targeted connectivity and
+parity audit.

@@ -4047,3 +4047,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: rejected expanded-acreage coordinated storage transplant; rigid donor shift removed PCIe clock crossings but disconnected CM5 USB3 and left storage support incomplete.
 2026-09-05 Phase24: applied the independent tunnel map to the seeded clock solver; all three downstream routes are found and via-clearance conflicts are removed, but XO source launch crossings remain.
 2026-09-05 Phase24: tunnel-guided A* source-launch refinement reached 226 native DRC violations; XO/SATA crossing removed, Y1 approach remains open.
+2026-09-05 Phase24: side-separated crystal escape reached 207 native DRC violations with zero clock tracks-crossing or shorting records; inherited board hygiene and support parity remain open.

@@ -15,10 +15,10 @@ def main():
   if nets[k] is None:
    nets[k]=pcbnew.NETINFO_ITEM(b,v); nets[k].SetNetCode(b.GetNetCount()+1); b.Add(nets[k])
  for p in y.Pads():
-  k={'1':'XI','2':'VS','3':'XO','4':'VS'}[str(p.GetNumber())]; p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode()); p.SetLayer(pcbnew.B_Cu if k!='VS' else pcbnew.F_Cu)
+  k={'1':'XI','2':'VS','3':'XO','4':'VS'}[str(p.GetNumber())]; p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode()); ls=pcbnew.LSET(); ls.AddLayer(pcbnew.B_Cu); p.SetLayerSet(ls)
  sources={'XI':pad(u,'52'),'VS':pad(u,'53'),'XO':pad(u,'54')}; targets={'XI':pad(y,'1'),'VS':pad(y,'4'),'XO':pad(y,'3')}
  for k,p in sources.items(): p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode())
- seeds={'XI':(126.5,127.0),'VS':(122.5,127.0),'XO':(113.0,108.0)}
+ seeds={'XI':(126.5,127.0),'VS':(122.5,127.0),'XO':(128.0,126.0)}
  # Grid chosen fine enough for the package field; coarse enough to keep the
  # search bounded. Existing item bboxes are conservatively inflated.
  step=.25; xmin,xmax,ymin,ymax=95,140,100,150
@@ -46,7 +46,10 @@ def main():
  def blocked(g,layer,skip):
   return g in occ[layer]
  def route(k):
-  start=cell(sources[k]); goal=cell(targets[k]); seed=cell_point=tuple(round(v/step) for v in seeds[k]); goal_layer=pcbnew.B_Cu if k!='VS' else pcbnew.F_Cu
+  start=cell(sources[k]); goal=cell(targets[k]);
+  if k=='XI': goal=tuple(round(v/step) for v in (104.0,129.15))
+  if k=='XO': goal=tuple(round(v/step) for v in (112.0,130.0))
+  seed=cell_point=tuple(round(v/step) for v in seeds[k]); goal_layer=pcbnew.B_Cu
   skips=[(u,sources[k]),(y,targets[k])]; start_state=(seed[0],seed[1],pcbnew.B_Cu); goal_state=(goal[0],goal[1],goal_layer); q=[(0,start_state)]; prev={start_state:None}; cost={start_state:0}
   while q:
    _,cur=heappop(q)
@@ -79,7 +82,7 @@ def main():
   net=nets[k]; src=xy(sources[k]); dst=seeds[k]
   bends={'XI':[(123,134.5),dst],
          'VS':[(122.5,133.5),dst],
-         'XO':[(122.0,108.0),(113.0,108.0)] if k=='XO' else []}[k]
+         'XO':[(122.0,126.0),(128.0,126.0)] if k=='XO' else []}[k]
   a=src
   for z in bends:
    t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(pcbnew.F_Cu); t.SetWidth(pcbnew.FromMM(.1321)); t.SetNet(net); b.Add(t)
@@ -90,5 +93,12 @@ def main():
   cell_point=tuple(round(v/step) for v in dst); reserve_via(*cell_point)
  for k in ('XI','VS','XO'):
   path=route(k); print(k,len(path),path[0],path[-1]); seedpath(k); addpath(k,path)
+ # Approach XI from the west side of the crystal; this prevents the XI tail
+ # from sharing the narrow pad-row corridor with the VSSOSC bridge.
+ xi=targets['XI']; t=pcbnew.PCB_TRACK(b); t.SetStart(V(104.0,129.15)); t.SetEnd(V(*xy(xi))); t.SetLayer(pcbnew.B_Cu); t.SetWidth(pcbnew.FromMM(.1321)); t.SetNet(nets['XI']); b.Add(t)
+ p2=xy(pad(y,'2')); p4=xy(pad(y,'4')); vss=nets['VS']
+ for a,z in [(p2,(105.0,135.0)),((105.0,135.0),(118.0,135.0)),((118.0,135.0),(118.0,129.15)),((118.0,129.15),p4)]:
+  t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(pcbnew.B_Cu); t.SetWidth(pcbnew.FromMM(.1321)); t.SetNet(vss); b.Add(t)
+ xo=nets['XO']; t=pcbnew.PCB_TRACK(b); t.SetStart(V(112.0,130.0)); t.SetEnd(V(*xy(targets['XO']))); t.SetLayer(pcbnew.B_Cu); t.SetWidth(pcbnew.FromMM(.1321)); t.SetNet(xo); b.Add(t)
  b.Save(str(OUT)); print(OUT)
 if __name__=='__main__': main()
