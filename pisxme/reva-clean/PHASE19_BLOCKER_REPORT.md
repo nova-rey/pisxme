@@ -1124,3 +1124,24 @@ suppressed SATA/clock fixture nets. The remaining crossings/clearances are
 the U7 side-row fan-in and are not evidence against the orientation itself.
 The candidate is not yet promoted; SATA must be regenerated against the same
 orientation and the final side-row dogbones must pass.
+## 2026-09-05 U7 rotation-180 USB3 diagnostic
+
+`PHASE19_U7ROT180_USB_VERTICAL1.kicad_pcb` tested the mirrored side-row
+orientation with SATA suppressed. Native KiCad DRC reported 223 records,
+including two track crossings and seven real shorts. The shorts include
+coincident RX polarity-transition vias on the serialized U7 pad row and a
+TX lane colliding with existing support geometry. The candidate is rejected.
+
+### Rotation-0 evidence correction
+
+The native report for `PHASE19_U7ROT0_USB_VERTICAL10.kicad_pcb` contains two
+`shorting_items` as well as two crossings; the earlier receipt wording saying
+zero focused shorts was incorrect. The rotation-0 candidate remains rejected.
+## 2026-09-05 U7 rotation-90 USB3 diagnostic
+
+`PHASE19_U7ROT90_USB_VERTICAL1.kicad_pcb` tested U7 at `(280,105)` rotation
+90 with SATA suppressed. Native KiCad DRC reported 211 records, including
+five track crossings and one real short between `CM5_USB3_TX_P` and
+`POWER_GND`. The candidate is rejected. Its failure is confined to the
+diagnostic CM5 source-to-U7 fan-in and landing geometry; it is not a valid
+coordinated storage ancestor.

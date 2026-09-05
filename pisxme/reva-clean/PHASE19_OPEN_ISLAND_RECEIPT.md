@@ -137,3 +137,21 @@ Rejected as a full SATA pass.
   crossings, zero focused shorting records; rejected pending side-row
   dogbone repair and SATA regeneration.
 - This is a new orientation class, not a promotion or Phase 19 closure.
+### 2026-09-05 — U7 rotation-180 USB3 diagnostic
+
+- `PHASE19_U7ROT180_USB_VERTICAL1-drc.rpt`: 223 total records, two
+  `tracks_crossing`, and seven `shorting_items`; SATA/clock were suppressed.
+- Decision: rejected. The mirrored side-row has coincident RX transition
+  coordinates and a TX/support collision.
+
+### Evidence correction — rotation-0 diagnostic
+
+- `PHASE19_U7ROT0_USB_VERTICAL10-drc.rpt` contains two `shorting_items` and
+  two crossings. The prior receipt phrase “zero focused shorting records” is
+  withdrawn; the candidate remains rejected.
+### 2026-09-05 — U7 rotation-90 USB3 diagnostic
+
+- `PHASE19_U7ROT90_USB_VERTICAL1-drc.rpt`: 211 total records, five
+  `tracks_crossing`, one `shorting_items` (`CM5_USB3_TX_P` to `POWER_GND`),
+  and 481 unconnected items because SATA/clock were suppressed.
+- Decision: rejected; no promotion or Phase 19 closure.

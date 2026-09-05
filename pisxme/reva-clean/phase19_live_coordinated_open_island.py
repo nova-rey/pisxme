@@ -169,6 +169,51 @@ def main():
    if is_rx: via(b,n,landing)
    seg(b,n,landing,d,pcbnew.F_Cu)
    continue
+  if U7ROT == 90 and SKIP_SATA:
+   # Rotation-90 diagnostic: U7 USB pads form a horizontal top row while
+   # SATA remains on the opposite side.  Keep RX and TX on independent
+   # long corridors and use one vertical landing per serialized pad x;
+   # this avoids fan-in across the pad row.
+   first={'CM5_USB3_RX_N':(94.0,103.9),'CM5_USB3_RX_P':(90.0,105.5),
+          'CM5_USB3_TX_N':(100.0,106.3),'CM5_USB3_TX_P':(96.0,106.7)}[suffix]
+   lane_y={'CM5_USB3_RX_N':82.0,'CM5_USB3_RX_P':80.0,
+           'CM5_USB3_TX_N':158.0,'CM5_USB3_TX_P':160.0}[suffix]
+   target_x={'CM5_USB3_RX_N':280.0,'CM5_USB3_RX_P':279.5,
+             'CM5_USB3_TX_N':278.5,'CM5_USB3_TX_P':278.0}[suffix]
+   landing_y={'CM5_USB3_RX_N':98.0,'CM5_USB3_RX_P':96.0,
+              'CM5_USB3_TX_N':94.0,'CM5_USB3_TX_P':92.0}[suffix]
+   launch=(71.2,s[1]); seg(b,n,s,launch); seg(b,n,launch,first)
+   is_rx=suffix.startswith('CM5_USB3_RX_')
+   if is_rx: via(b,n,first)
+   layer=pcbnew.B_Cu if is_rx else pcbnew.F_Cu
+   seg(b,n,first,(first[0],lane_y),layer); seg(b,n,(first[0],lane_y),(292.0,lane_y),layer)
+   seg(b,n,(292.0,lane_y),(292.0,landing_y),layer); seg(b,n,(292.0,landing_y),(target_x,landing_y),layer)
+   if is_rx: via(b,n,(target_x,landing_y))
+   seg(b,n,(target_x,landing_y),d,pcbnew.F_Cu)
+   continue
+  if U7ROT == 180 and SKIP_SATA:
+   # Rotation-180 diagnostic: mirrored vertical USB side row.  Use distinct
+   # upper/lower pair corridors and serialized pad coordinates so the final
+   # approach is monotonic rather than a four-lane fan-in.
+   first={'CM5_USB3_RX_N':(94.0,103.9),'CM5_USB3_RX_P':(90.0,105.5),
+          'CM5_USB3_TX_N':(100.0,106.3),'CM5_USB3_TX_P':(96.0,106.7)}[suffix]
+   lane_y={'CM5_USB3_RX_N':82.0,'CM5_USB3_RX_P':80.0,
+           'CM5_USB3_TX_N':158.0,'CM5_USB3_TX_P':160.0}[suffix]
+   target_x={'CM5_USB3_RX_N':275.5,'CM5_USB3_RX_P':275.5,
+             'CM5_USB3_TX_N':275.5,'CM5_USB3_TX_P':275.5}[suffix]
+   target_y={'CM5_USB3_RX_N':105.0,'CM5_USB3_RX_P':105.5,
+             'CM5_USB3_TX_N':106.5,'CM5_USB3_TX_P':107.0}[suffix]
+   landing_x={'CM5_USB3_RX_N':272.0,'CM5_USB3_RX_P':270.0,
+              'CM5_USB3_TX_N':268.0,'CM5_USB3_TX_P':266.0}[suffix]
+   launch=(71.2,s[1]); seg(b,n,s,launch); seg(b,n,launch,first)
+   is_rx=suffix.startswith('CM5_USB3_RX_')
+   if is_rx: via(b,n,first)
+   layer=pcbnew.B_Cu if is_rx else pcbnew.F_Cu
+   seg(b,n,first,(first[0],lane_y),layer); seg(b,n,(first[0],lane_y),(landing_x,lane_y),layer)
+   seg(b,n,(landing_x,lane_y),(landing_x,target_y),layer); seg(b,n,(landing_x,target_y),(target_x,target_y),layer)
+   if is_rx: via(b,n,(target_x,target_y))
+   seg(b,n,(target_x,target_y),d,pcbnew.F_Cu)
+   continue
   seg(b,n,s,(start[0],s[1])); seg(b,n,(start[0],s[1]),start); via(b,n,start); seg(b,n,start,far,pcbnew.B_Cu)
   # The rotated U7 USB pads share a continuous bottom row.  Do not run a
   # same-layer horizontal track through that row; use a distinct B.Cu lane
