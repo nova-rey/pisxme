@@ -278,3 +278,14 @@ connections also remained incomplete. The candidate is rejected. Relocation
 must regenerate the CM5-to-U7 USB3 corridor separately from the relocated
 bridge/SATA/clock island; blind rigid translation is not a valid integration
 method.
+
+## Authoritative tunnel-guided solver result (in progress)
+
+The independent geometry review identified a clear inherited B.Cu tunnel at
+approximately y=123--129 mm and recommended moving the XI/VS seeds into it.
+That recommendation was implemented in `phase24_clock_astar.py`. The solver
+now finds all three downstream routes and, after real via-clearance reservation
+was added, native DRC reports 238 violations with no new close-via cluster.
+The remaining first errors are localized to the XO F.Cu package-edge launch
+against the inherited SATA-TX/RX F.Cu rails. This is the strongest current
+candidate but remains unpromoted until the XO source launch is also clean.
