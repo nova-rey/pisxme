@@ -1010,3 +1010,20 @@ all eight J7/U6/U9/J2 paths and correctly fails after removal of a necessary
 track. Full-board DRC remains non-passing at 449/122/0/1 (total DRC,
 unconnected, crossings, shorts); the sole short is unrelated
 POWER_GND/BRIDGE_1V1. This is a conditional MDI basis, not Phase 24 closure.
+
+## Current continuation audit — 2026-09-05
+
+The saved clean Ethernet schematic was inspected before support
+materialization. It has J2/U6/U9 plus CT/LED/shield labels only; it has no
+schematic-authoritative CT termination or LED resistor references. The
+CM5IO/EDAC documents remain implementation authority, but PCB-only addition
+would break source-to-PCB parity.
+
+The U5 layered integration remains the best current candidate. Native U5
+connectivity and its trace-removal negative control pass. A current-candidate
+CM5-ground launch/plane test derived from actual J7 pad positions was
+rejected by native DRC (`264` violations, `397` unconnected records, four
+shorts, one crossing), versus `201`/`397`/zero/zero on the current candidate.
+The experiment is not promoted; the next repair class must be a
+clearance-mapped, layer-owned return strategy or a schematic-authorized
+support change.

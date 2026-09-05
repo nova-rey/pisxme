@@ -815,3 +815,18 @@ track crossings, and one unrelated POWER_GND/BRIDGE_1V1 short. Therefore the
 MDI geometry is conditionally retained, but the board candidate is not
 promoted until the unrelated inherited debt, support nets, impedance rule,
 and complete mechanical checks are closed.
+
+## Current native support and return audit — 2026-09-05
+
+The clean `ETHERNET.kicad_sch` contains only the authoritative J2/U6/U9
+symbols and the `ETH_CT1..4`, LED, and shield labels. It does not contain CT
+termination capacitors/resistors or LED-current resistors. CM5IO and EDAC
+remain support/topology authorities, but PCB-only addition of those parts is
+not promoted without schematic-level authority.
+
+The current U5 layered candidate was rechecked with native connectivity and
+the trace-removal negative control; both pass. Native DRC remains `201`
+violations and `397` unconnected records, so full-board closure is still
+open. A fresh J7-derived CM5-ground launch/plane experiment was rejected:
+`264` violations, `397` unconnected records, four shorts, and one crossing.
+No severity or connection was waived.
