@@ -122,3 +122,8 @@ The rail-attachment variant was rejected by native DRC (268 violations: 12
 shorts and 9 crossings). The remaining valid implementation class is a
 single coordinated clock graph containing source escape, Y1, R23, C42, and
 C43 before materialization.
+
+Layer-separated passive dogbones with offset through-vias were also rejected
+by native DRC (306 violations: 14 shorts and 6 crossings); four outboard
+variants had no conservative path. A fresh coordinated clock graph is now
+required for support integration.

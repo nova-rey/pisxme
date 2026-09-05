@@ -7,7 +7,7 @@ import pcbnew
 
 R=Path(__file__).resolve().parent
 BASE=R/'PHASE24_CLOCK_ASTAR_NEARWEST.kicad_pcb'
-OUT=R/'PHASE24_SUPPORT_BRANCH_ASTAR.kicad_pcb'
+OUT=R/'PHASE24_SUPPORT_LAYER_SPLIT_ASTAR.kicad_pcb'
 STEP=.25
 
 def V(x,y): return pcbnew.VECTOR2I_MM(float(x),float(y))
@@ -29,7 +29,7 @@ def main():
     for ref,pos in placements.items():
         f=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),libs[ref]); f.SetReference(ref); f.SetPosition(V(*pos)); f.SetLayer(pcbnew.B_Cu); b.Add(f); fs[ref]=f
         for p,k in zip(f.Pads(),maps[ref]):
-            p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode()); ls=pcbnew.LSET(); ls.AddLayer(pcbnew.B_Cu); p.SetLayerSet(ls)
+            p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode()); ls=pcbnew.LSET(); ls.AddLayer(pcbnew.F_Cu); p.SetLayerSet(ls)
     y=b.FindFootprintByReference('Y1')
     # Attach branches to reachable points on the already validated B.Cu
     # graphs, not to one guessed rail coordinate or directly to Y1 pads.
@@ -50,6 +50,8 @@ def main():
             if p.GetLayerSet().Contains(pcbnew.B_Cu) and p.GetNetCode() not in {n.GetNetCode() for n in nets.values()}:
                 q=xy(p); s=p.GetSize(); mark(q[0]-pcbnew.ToMM(s.x)/2-.18,q[0]+pcbnew.ToMM(s.x)/2+.18,q[1]-pcbnew.ToMM(s.y)/2-.18,q[1]+pcbnew.ToMM(s.y)/2+.18)
     reserved=set()
+    def addvia(n,q):
+        v=pcbnew.PCB_VIA(b); v.SetPosition(V(*q)); v.SetWidth(pcbnew.FromMM(.50)); v.SetDrill(pcbnew.FromMM(.30)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(n); b.Add(v)
     options={k:{targets[k]} for k in targets}
     for t in b.GetTracks():
         if t.GetLayer()!=pcbnew.B_Cu: continue
@@ -74,13 +76,15 @@ def main():
         return list(reversed(path))
     for ref,f in fs.items():
         for p,k in zip(f.Pads(),maps[ref]):
-            a=xy(p); choices=[]
+            a=xy(p); q=(a[0]+.75,a[1]+.75)
+            t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*q)); t.SetLayer(pcbnew.F_Cu); t.SetWidth(pcbnew.FromMM(.1321)); t.SetNet(nets[k]); b.Add(t)
+            addvia(nets[k],q); choices=[]
             for z in options[k]:
-                try: choices.append((len(route(a,z)),z))
+                try: choices.append((len(route(q,z)),z))
                 except RuntimeError: pass
-            if not choices: raise RuntimeError(f'no route {a} to any {k} graph point')
+            if not choices: raise RuntimeError(f'no route {q} to any {k} graph point')
             _,z=min(choices)
-            path=route(a,z); print(ref,p.GetNumber(),k,len(path),z)
+            path=route(q,z); print(ref,p.GetNumber(),k,len(path),z)
             for u,v in zip(path,path[1:]):
                 seg(b,nets[k],(u[0]*STEP,u[1]*STEP),(v[0]*STEP,v[1]*STEP)); reserved.add(v)
     b.Save(str(OUT)); print(OUT)

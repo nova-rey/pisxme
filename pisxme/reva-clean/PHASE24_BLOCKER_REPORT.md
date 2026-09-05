@@ -386,3 +386,12 @@ least one serialized rail anchor; the best generated placement still
 reported 322 native DRC violations. No placement was promoted. The sweep
 supports replacing the current fixed-rail attachment model with a fresh
 multi-net graph whose clock and passive branches are solved together.
+
+## Layer-separated passive branch attempt (rejected)
+
+The next experiment placed passive pads on F.Cu, added offset ordinary
+through-vias, and routed only post-via branches on B.Cu. Native DRC still
+reported 306 violations, including 14 shorts and 6 crossings. Four further
+outboard placement variants had no conservative route to a clock graph point.
+This class is rejected; the inherited clock oracle cannot accept passive
+fanout incrementally.
