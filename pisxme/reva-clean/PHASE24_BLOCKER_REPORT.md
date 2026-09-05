@@ -540,3 +540,13 @@ The fixture-to-acreage mapping was corrected using the serialized U7 pad frame
 native DRC reports 227 violations, 393 unconnected pads, crossings, and
 clock-to-SATA shorts. The remaining work is local clock-corridor regeneration;
 the clock architecture itself remains supported by the standalone fixture.
+
+## U5 audit correction
+
+The former U5 regression audit was not accepted as physical proof because it
+injected hard-coded edges. It has now been replaced with a net-aware,
+layer-aware graph derived from the saved PCB's tracks, vias, pads, and filled
+zones. Positive proof passes on the integrated U5 board. Disposable missing
+trace and missing via controls both fail as required. This closes the audit
+method defect, but not full-board Phase 24 routed parity; native DRC still
+reports 397 non-target unconnected pads.

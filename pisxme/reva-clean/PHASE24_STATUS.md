@@ -232,3 +232,16 @@ unconnected pads, multiple crossings, and shorts between the clock return/XI
 nets and existing SATA copper. This establishes that the proven clock topology
 needs a locally regenerated corridor around the existing storage routes, not a
 blind copper overlay.
+
+## U5 physical-audit correction and negative controls
+
+`phase24_u5_layer_connectivity_audit.py` was corrected to derive edges only
+from serialized net-aware layer geometry: track endpoints and intersections,
+ordinary through-via F.Cu/B.Cu transitions, actual pad layer sets, and filled
+zone contact. It no longer hard-codes graph edges or uses XY-only nodes.
+Against `PHASE24_U5_INTEGRATED_LAYERED.kicad_pcb` it passes for U5.9 to
+C44-C47.1 and R20.2 to C44-C47.2. The disposable negative-control harness
+removes the required C44 rail dogbone trace and, separately, its required
+through-via; both controls correctly make the audit fail. Native DRC has no
+target C44-C47 unconnected finding, while the remaining 397 unconnected pads
+are outside this local proof and keep full Phase 24 open.
