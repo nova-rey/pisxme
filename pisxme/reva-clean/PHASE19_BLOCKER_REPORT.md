@@ -894,3 +894,17 @@ immediate same-y connector variant for the M.2 launch, but remains rejected:
 the U7-side SATA/clock escape still has local crossings, and one USB3 return
 via remains too close to inherited support geometry. No clean board was
 modified or promoted; Phase 19 remains open and Phase 20+ remains untouched.
+
+## 2026-09-05 consultant-reviewed legal 90-degree J3 trial
+
+The independent consultant review identified that the prior `(290,105)` J3
+trial placed mounting geometry beyond the 300-mm board edge, and that the
+rotated-U7 candidate still put U7 between the coupling bank and socket launch.
+The stale `MECH_M2_2280` donor keepout was removed from the disposable. A
+bounded follow-up moved U7 to `(240,105)` rotation `270`, J3 to `(270,145)`
+rotation `90`, moved clock/coupling support with the island, and regenerated
+USB3/SATA/clock together. Native DRC measured `390` violations and `478`
+unconnected items. It is rejected: local U7-side SATA/clock escapes still
+cross existing regulator geometry. No PCIe, storage architecture, or clean
+production artifact was changed; Phase 19 remains open and Phase 20+ remains
+untouched.
