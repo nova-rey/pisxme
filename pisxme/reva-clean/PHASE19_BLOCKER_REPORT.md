@@ -1017,3 +1017,13 @@ clock routes against the unchanged 0.200 mm board minimum produced `120`
 native DRC violations / `62` unconnected items, including repeated
 track-width failures. The board fabrication rule was not relaxed and the
 0.200 mm separated-bus path remains the active baseline.
+
+## 2026-09-05 clock-oracle post-generation transplant
+
+The passing minimal clock geometry was applied after a fresh USB/SATA
+generation, using the serialized U7 location and removing only prior clock
+copper. Native DRC measured `248` violations / `62` unconnected items. The
+combined candidate remains rejected because the existing SATA/USB geometry
+still contains crossings and shorts; no new clock-crossing class was
+introduced by the transplant. This establishes the clock-oracle staging path
+for the next corrected SATA authoring pass, not Phase 19 closure.

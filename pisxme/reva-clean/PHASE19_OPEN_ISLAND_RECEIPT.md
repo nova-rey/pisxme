@@ -75,3 +75,8 @@ separated-clock-bus candidate remains preferred.
 Fine-width clock escape trial: 0.100 mm clock traces were tested without
 changing the board minimum. Native DRC measured `120` / `62` with repeated
 track-width errors. Rejected; the fabrication rule remains unchanged.
+
+Clock-oracle post-generation transplant: applied the passing minimal clock
+geometry over a freshly generated USB/SATA board. Native DRC measured `248` /
+`62`; rejection is due to candidate USB/SATA crossings and shorts, while the
+clock transplant introduced no new clock-crossing class.
