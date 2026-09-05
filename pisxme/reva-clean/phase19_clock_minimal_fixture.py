@@ -2,24 +2,32 @@
 from pathlib import Path
 import pcbnew
 
-R=Path(__file__).resolve().parent; BASE=R/'ACREAGE_CLOCK_CANDIDATE5.kicad_pcb'; OUT=R/'PHASE19_CLOCK_MINIMAL_FIXTURE.kicad_pcb'
+R=Path(__file__).resolve().parent; BASE=R/'ACREAGE_CLOCK_CANDIDATE5.kicad_pcb'; OUT=R/('PHASE19_CLOCK_ACREAGE_RELATIVE.kicad_pcb' if __import__('os').environ.get('CLOCK_ACREAGE')=='1' else 'PHASE19_CLOCK_MINIMAL_FIXTURE.kicad_pcb')
+import os
+KEEP_BOARD=os.environ.get('CLOCK_ACREAGE')=='1'; DX,DY=((150,5) if KEEP_BOARD else (0,0))
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def T(b,n,a,z,l):
-    t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(l); t.SetWidth(pcbnew.FromMM(.2)); t.SetNet(n); b.Add(t)
+    t=pcbnew.PCB_TRACK(b); t.SetStart(V(a[0]+DX,a[1]+DY)); t.SetEnd(V(z[0]+DX,z[1]+DY)); t.SetLayer(l); t.SetWidth(pcbnew.FromMM(.2)); t.SetNet(n); b.Add(t)
 def X(b,n,p):
-    v=pcbnew.PCB_VIA(b); v.SetPosition(V(*p)); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(n); b.Add(v)
+    v=pcbnew.PCB_VIA(b); v.SetPosition(V(p[0]+DX,p[1]+DY)); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(n); b.Add(v)
 def xy(p): return (pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y))
 def main():
     b=pcbnew.LoadBoard(str(BASE)); keep={'U7','Y1','R23','C42','C43'}
     footprints=list(b.GetFootprints()); tracks=list(b.GetTracks()); zones=list(b.Zones())
-    for f in footprints:
-        if f.GetReference() not in keep: b.Remove(f)
-    for t in tracks: b.Remove(t)
-    for z in zones: b.Remove(z)
-    u=b.FindFootprintByReference('U7'); u.SetPosition(V(100,100)); u.SetOrientationDegrees(0)
-    placements={'Y1':((100,115),0),'R23':((100,125),0),'C42':((94,125),0),'C43':((106,125),0)}
+    if not KEEP_BOARD:
+        for f in footprints:
+            if f.GetReference() not in keep: b.Remove(f)
+        for t in tracks: b.Remove(t)
+        for z in zones: b.Remove(z)
+    u=b.FindFootprintByReference('U7')
+    if not KEEP_BOARD: u.SetPosition(V(100,100)); u.SetOrientationDegrees(0)
+    placements={'Y1':((100+DX,115+DY),0),'R23':((100+DX,125+DY),0),'C42':((94+DX,125+DY),0),'C43':((106+DX,125+DY),0)}
     maps={'Y1':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_VSSOSC','3':'/STORAGE/BRIDGE_XO','4':'/STORAGE/BRIDGE_VSSOSC'},'R23':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_XO'},'C42':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_VSSOSC'},'C43':{'1':'/STORAGE/BRIDGE_XO','2':'/STORAGE/BRIDGE_VSSOSC'}}
     nets={x:b.FindNet(x) for x in ('/STORAGE/BRIDGE_XI','/STORAGE/BRIDGE_XO','/STORAGE/BRIDGE_VSSOSC')}
+    if KEEP_BOARD:
+        clock_codes={n.GetNetCode() for n in nets.values()}
+        for t in list(b.GetTracks()):
+            if t.GetNetCode() in clock_codes: b.Remove(t)
     for ref,(p,rot) in placements.items():
         f=b.FindFootprintByReference(ref); f.SetPosition(V(*p)); f.SetOrientationDegrees(rot)
         for q in f.Pads():
@@ -29,19 +37,24 @@ def main():
     xi,xo,vs=(nets[x] for x in ('/STORAGE/BRIDGE_XI','/STORAGE/BRIDGE_XO','/STORAGE/BRIDGE_VSSOSC'))
     # Serialized U7 clock row at this placement: 52=(97,104.5),
     # 53=(97.5,104.5), 54=(98,104.5). Leave the row perpendicular-first.
-    T(b,xi,(97,104.5),(97,112),pcbnew.F_Cu); T(b,xi,(97,112),(98.9,114.15),pcbnew.F_Cu)
-    T(b,xi,(98.9,114.15),(97.5,114.15),pcbnew.F_Cu); T(b,xi,(97.5,114.15),(97.5,123),pcbnew.F_Cu); T(b,xi,(97.5,123),(99.5,125),pcbnew.F_Cu); T(b,xi,(97,112),(95,112),pcbnew.F_Cu); T(b,xi,(95,112),(93.5,125),pcbnew.F_Cu)
-    T(b,xo,(98,104.5),(98,111),pcbnew.F_Cu); T(b,xo,(98,111),(102,111),pcbnew.F_Cu); T(b,xo,(102,111),(102,115.85),pcbnew.F_Cu); T(b,xo,(102,115.85),(101.1,115.85),pcbnew.F_Cu)
+    T(b,xi,(97,104.5),(97,112),pcbnew.F_Cu); T(b,xi,(97,112),(96,114.5),pcbnew.F_Cu); T(b,xi,(96,114.5),(98.9,114.15),pcbnew.F_Cu)
+    T(b,xi,(98.9,114.15),(97.5,114.15),pcbnew.F_Cu); T(b,xi,(97.5,114.15),(97.5,123),pcbnew.F_Cu); T(b,xi,(97.5,123),(99.5,125),pcbnew.F_Cu); T(b,xi,(98.9,114.15),(96,114.15),pcbnew.F_Cu); T(b,xi,(96,114.15),(93.5,125),pcbnew.F_Cu)
+    T(b,xo,(98,104.5),(98,111),pcbnew.F_Cu); T(b,xo,(98,111),(99.5,111),pcbnew.F_Cu); X(b,xo,(99.5,111)); T(b,xo,(99.5,111),(102,116.5),pcbnew.B_Cu); X(b,xo,(102,116.5)); T(b,xo,(102,116.5),(101.1,115.85),pcbnew.F_Cu)
     T(b,xo,(101.1,115.85),(100.5,125),pcbnew.F_Cu); T(b,xo,(101.1,115.85),(105.5,125),pcbnew.F_Cu)
     # VSSOSC is a private B.Cu return. Vias are deliberately outside all SMD pads.
-    T(b,vs,(97.5,104.5),(97.5,113.5),pcbnew.F_Cu); X(b,vs,(97.5,113.5)); T(b,vs,(97.5,113.5),(92,128),pcbnew.B_Cu); T(b,vs,(92,128),(108,128),pcbnew.B_Cu)
-    for p in ((100.5,117.0),(103.5,116.5),(94.5,126.2),(106.5,126.2)):
+    T(b,vs,(97.5,104.5),(97.5,113.5),pcbnew.F_Cu); X(b,vs,(97.5,113.5)); T(b,vs,(97.5,113.5),(94.5,128),pcbnew.B_Cu); T(b,vs,(94.5,128),(106.5,128),pcbnew.B_Cu)
+    for p in ((99.5,117.0),(103.5,116.5),(94.5,126.2),(106.5,126.2)):
         X(b,vs,p)
         T(b,vs,p,(p[0],128),pcbnew.B_Cu)
     # Short top-side dogbones from the B.Cu VSSOSC corridor to each pad.
     f=b.FindFootprintByReference('Y1'); yp={str(q.GetNumber()):xy(q) for q in f.Pads()}
-    T(b,vs,(100.5,117.0),yp['2'],pcbnew.F_Cu); T(b,vs,(103.5,116.5),yp['4'],pcbnew.F_Cu)
-    f=b.FindFootprintByReference('C42'); cp={str(q.GetNumber()):xy(q) for q in f.Pads()}; T(b,vs,(94.5,126.2),cp['2'],pcbnew.F_Cu)
-    f=b.FindFootprintByReference('C43'); cp={str(q.GetNumber()):xy(q) for q in f.Pads()}; T(b,vs,(106.5,126.2),cp['2'],pcbnew.F_Cu)
+    T(b,vs,(99.5,117.0),(yp['2'][0]-DX,yp['2'][1]-DY),pcbnew.F_Cu); T(b,vs,(103.5,116.5),(yp['4'][0]-DX,yp['4'][1]-DY),pcbnew.F_Cu)
+    f=b.FindFootprintByReference('C42'); cp={str(q.GetNumber()):xy(q) for q in f.Pads()}; T(b,vs,(94.5,126.2),(cp['2'][0]-DX,cp['2'][1]-DY),pcbnew.F_Cu)
+    f=b.FindFootprintByReference('C43'); cp={str(q.GetNumber()):xy(q) for q in f.Pads()}; T(b,vs,(106.5,126.2),(cp['2'][0]-DX,cp['2'][1]-DY),pcbnew.F_Cu)
+    # FREQSEL0/FREQSEL1 are both high in the authoritative 40 MHz mode.
+    v33=b.FindNet('/STORAGE/BRIDGE_3V3')
+    p30=next(q for q in u.Pads() if str(q.GetNumber())=='30'); p31=next(q for q in u.Pads() if str(q.GetNumber())=='31'); p24=next(q for q in u.Pads() if str(q.GetNumber())=='24')
+    for q in (p30,p31,p24): q.SetNet(v33); q.SetNetCode(v33.GetNetCode())
+    T(b,v33,(98,95.5),(97.5,95.5),pcbnew.F_Cu); T(b,v33,(98,95.5),(98,93.5),pcbnew.F_Cu); T(b,v33,(98,93.5),(101,93.5),pcbnew.F_Cu); T(b,v33,(101,93.5),(101,95.5),pcbnew.F_Cu)
     b.Save(str(OUT)); print(OUT)
 if __name__=='__main__': main()

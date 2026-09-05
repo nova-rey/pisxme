@@ -412,3 +412,20 @@ made explicit in the fixture before applying the clock route to the complete
 coordinated storage island. The result confirms that the clock network is
 implementable with the approved architecture and layers; Phase 19 remains
 active and Phase 20+ remain untouched.
+
+## 2026-09-04 acreage clock integration baseline
+
+The cleaned minimal clock topology was applied with a relative transform to
+the materialized acreage candidate, preserving U7 and moving only the local
+clock support island. The integration harness removes any inherited clock-net
+tracks before adding the corrected route, and compensates dynamic pad
+coordinates so no stale transformed endpoint is serialized. Native KiCad DRC
+measured 207 violations / 473 unconnected items versus 206 violations for the
+materialization baseline. The report contains no new clock `tracks_crossing`,
+`shorting_items`, or runaway-length VSSOSC records; the remaining DRC debt is
+inherited board geometry and incomplete non-clock routing.
+
+This is a usable clock integration baseline, not Phase 19 closure. The next
+step is to apply the same relative clock island to the complete coordinated
+USB3/SATA candidate and rerun the full storage SI, return-via, and native DRC
+gates. Phase 20+ remain untouched.
