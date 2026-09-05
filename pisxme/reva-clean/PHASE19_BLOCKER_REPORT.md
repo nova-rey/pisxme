@@ -1539,3 +1539,19 @@ failure, not a design result.
 Phase 19 remains open. The next credible experiment is a regenerated
 coordinate-49 island using the known-clean SATA graph and a fully resynthesized
 USB endpoint schedule, with the U7/M.2 alternating fanout modeled explicitly.
+
+## 2026-09-05 coordinate-49 TX_N lower-layer resynthesis
+
+The USB TX_N endpoint was regenerated from live serialized pads rather than
+copied. The successful structural schedule keeps its long trunk on B.Cu,
+transitions at `(170,100)`, and uses the existing lower F.Cu landing at
+`(220,155) -> (220,136) -> (271.5,136)`. Native DRC introduced no new
+`tracks_crossing`, `shorting_items`, or high-speed `clearance` records; only
+the four inherited J7/CM5 hole-clearance records remain in the focused report.
+
+Measured USB3 copper lengths are RX_N `271.36 mm`, RX_P `257.26 mm`, TX_N
+`308.26 mm`, and TX_P `222.56 mm`. Thus the structural crossing defect is
+resolved, but TX intra-pair imbalance remains approximately `85.70 mm`, so
+this is not a Phase 18/19 pass. The result is retained as a clean endpoint
+ancestor for a placement-level co-resynthesis that gives TX_N a shorter
+parallel corridor; no acreage promotion or Phase 20 work is claimed.
