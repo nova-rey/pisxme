@@ -691,3 +691,10 @@ native DRC reports 215 violations, 118 unconnected records, two shorts, and
 three crossings. A specialist review confirms that the preserved upper
 Ethernet lanes do not provide enough clearance for ordinary 0.50/0.30 mm
 through-via transitions; no upper escape is promoted.
+
+Two outboard `POWER_GND` return experiments were rejected. A proposed
+C14-to-C19 horizontal chain produced 219 violations, 118 unconnected
+records, three shorts, and two crossings. Narrowing the trial to adjacent
+C14-to-C15 still produced 212 violations, 121 unconnected records, and two
+shorts. Neither return-row candidate is promoted; the clean same-row CM5
+ground basis remains 209/122/0/0.

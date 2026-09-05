@@ -1,3 +1,10 @@
+# Phase 24 outboard return-row rejection
+
+The isolated global-return trials are rejected. A C14–C19 horizontal chain
+produced three shorts and two crossings; narrowing the experiment to adjacent
+C14–C15 still produced two native shorts. Neither candidate changes the
+active design or validation severity.
+
 # Phase 24 same-row collector continuation
 
 `PHASE24_CM5_GROUND_RIGHT_SAME_ROWS.kicad_pcb` was regenerated from the

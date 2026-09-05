@@ -24,6 +24,8 @@ serialized Phase 24 candidates, counting report sections globally.
 | `PHASE24_CM5_GROUND_RIGHT_SAME_ROWS` | 209 | 122 | 0 | 0 | accepted continuation |
 | `PHASE24_CM5_GROUND_PLANE_ATTACH` | 210 | 122 | 0 | 0 | rejected: no connectivity gain; added native zone/via findings |
 | `PHASE24_CM5_GROUND_UPPER_OUTER_ESCAPE` | 215 | 118 | 2 | 3 | rejected: upper Ethernet-lane collisions |
+| `PHASE24_POWER_GND_C14_C19_CHAIN` | 219 | 118 | 3 | 2 | rejected: outboard return-row collisions |
+| `PHASE24_POWER_GND_C14_C15_PAIR` | 212 | 121 | 2 | 0 | rejected: native shorts |
 | `PHASE24_CM5_GROUND_UPPER_BRIDGES_ONLY` | 216 | 124 | 1 | 6 | rejected |
 
 The clean working basis for subsequent repairs is therefore

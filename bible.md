@@ -4131,3 +4131,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Accepted the clean same-row bridges joining the lower-right J7 CM5-ground collectors; fresh full-report native DRC is 209 violations, 122 unconnected records, zero shorts, and zero crossings.
 2026-09-05: Rejected the CM5-ground In1 plane-attachment trial after fresh native DRC found 210 violations and no connectivity gain; retained the 209/122/0-short/0-crossing same-row collector basis.
 2026-09-05: Rejected the upper CM5-ground outer-escape trial at 215 violations, 118 unconnected records, two shorts, and three crossings; specialist review confirms ordinary-via clearance is insufficient in the preserved Ethernet launch.
+2026-09-05: Rejected the outboard POWER_GND return-row trials: C14-C19 produced 3 shorts/2 crossings and C14-C15 produced 2 shorts; retained the clean 209/122/0/0 basis.
