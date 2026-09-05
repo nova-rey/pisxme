@@ -51,7 +51,7 @@ def main():
   old_mech=b.FindFootprintByReference('MECH_M2_2280')
   if old_mech is not None: b.Remove(old_mech)
   # This donor already carries clean C30-C33 clock-candidate objects.
-  _caps={'C30':(240,108),'C31':(240,110),'C32':(240,112),'C33':(240,114)} if SATA270 else {'C30':(265,96),'C31':(265,100),'C32':(265,108),'C33':(265,112)}
+  _caps={'C30':(240,110),'C31':(240,108),'C32':(240,114),'C33':(240,112)} if SATA270 else {'C30':(265,96),'C31':(265,100),'C32':(265,108),'C33':(265,112)}
   for ref,(x,y) in _caps.items():
    f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(0 if SATA270 else 180)
   for ref,xyv in {'Y1':(268,98),'R23':(272,98),'C42':(272,94),'C43':(276,98)}.items():
@@ -101,15 +101,32 @@ def main():
   cp={str(p.GetNumber()):pos(p) for p in caps[cr].Pads()}; a=U[upn]; z=J[jn]
   setpad(pad(caps[cr],'1'),socket); setpad(pad(caps[cr],'2'),bridge); setpad(pad(j,jn),socket); setpad(pad(u,upn),bridge)
   if SATA270:
+   # Never start a B.Cu segment directly on an SMD pad.  Use a short
+   # F.Cu dogbone and an ordinary through-via outside the capacitor pad.
+   cap_via = (cp['2'][0]+1.0, cp['2'][1])
    if bn in ('BRIDGE_SATA_TX_P','BRIDGE_SATA_RX_P'):
-    seg(b,bridge,a,cp['2'],pcbnew.F_Cu)
+    if bn == 'BRIDGE_SATA_RX_P':
+     e=(a[0]+3.0,a[1]); seg(b,bridge,a,e,pcbnew.F_Cu); via(b,bridge,e); seg(b,bridge,e,cap_via,pcbnew.B_Cu); via(b,bridge,cap_via); seg(b,bridge,cap_via,cp['2'],pcbnew.F_Cu)
+    else:
+     seg(b,bridge,a,cp['2'],pcbnew.F_Cu)
    else:
-    e=(a[0]-3.0,a[1]-1.0) if bn=='BRIDGE_SATA_TX_N' else (a[0]+3.5,a[1]+2.5); seg(b,bridge,a,e,pcbnew.F_Cu); via(b,bridge,e); seg(b,bridge,e,cp['2'],pcbnew.B_Cu)
-   if bn=='BRIDGE_SATA_TX_P': seg(b,socket,cp['1'],z,pcbnew.F_Cu)
-   elif bn=='BRIDGE_SATA_RX_P':
-    q0=(238.0,112.0); seg(b,socket,cp['1'],q0,pcbnew.F_Cu); via(b,socket,q0); q=(207.0,132.5); seg(b,socket,q0,q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
-   elif bn=='BRIDGE_SATA_TX_N': q=(197.0,127.0); seg(b,socket,cp['1'],q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
-   else: q=(207.0,135.0); seg(b,socket,cp['1'],q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
+    if bn == 'BRIDGE_SATA_RX_N':
+     seg(b,bridge,a,cp['2'],pcbnew.F_Cu)
+    else:
+     e=(a[0]-3.0,a[1]-1.0)
+     seg(b,bridge,a,e,pcbnew.F_Cu); via(b,bridge,e); seg(b,bridge,e,cap_via,pcbnew.B_Cu); via(b,bridge,cap_via); seg(b,bridge,cap_via,cp['2'],pcbnew.F_Cu)
+   # Keep each SATA pair on one signal layer.  The positive lane uses the
+   # right-hand corridor and the negative lane the left-hand corridor; the
+   # two pairs are assigned to opposite layers so the alternating M.2 pad
+   # columns do not force a same-layer crossing.
+   if bn == 'BRIDGE_SATA_TX_P':
+    p=(235.0,110.0); seg(b,socket,cp['1'],p,pcbnew.F_Cu); seg(b,socket,p,(235.0,129.0),pcbnew.F_Cu); seg(b,socket,(235.0,129.0),(208.0,129.0),pcbnew.F_Cu); seg(b,socket,(208.0,129.0),(208.0,130.75),pcbnew.F_Cu); seg(b,socket,(208.0,130.75),z,pcbnew.F_Cu)
+   elif bn == 'BRIDGE_SATA_TX_N':
+    p=(190.0,108.0); seg(b,socket,cp['1'],p,pcbnew.F_Cu); seg(b,socket,p,(190.0,131.0),pcbnew.F_Cu); seg(b,socket,(190.0,131.0),z,pcbnew.F_Cu)
+   elif bn == 'BRIDGE_SATA_RX_P':
+    p=(238.5,cp['1'][1]); seg(b,socket,cp['1'],p,pcbnew.F_Cu); via(b,socket,p); m=(215.0,p[1]); seg(b,socket,p,m,pcbnew.B_Cu); q=(215.0,131.25); seg(b,socket,m,q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
+   else:
+    p=(238.5,cp['1'][1]); seg(b,socket,cp['1'],p,pcbnew.F_Cu); via(b,socket,p); m=(210.0,p[1]); seg(b,socket,p,m,pcbnew.B_Cu); q=(210.0,132.5); seg(b,socket,m,q,pcbnew.B_Cu); r=(190.0,132.5); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,(190.0,131.5),pcbnew.F_Cu); seg(b,socket,(190.0,131.5),z,pcbnew.F_Cu)
    continue
   if u.GetOrientationDegrees() == -90.0 and j.GetOrientationDegrees() == 90.0:
    # Rot270 U7 exposes SATA on a single west-facing row.  Use live pad

@@ -1045,3 +1045,21 @@ unconnected items, with the earlier coupling-pad and U7 RX pair short class
 removed. Remaining candidate errors are concentrated at the dense J3 launch
 and its mechanical/NC-pad field. The candidate remains rejected and Phase 19
 remains open.
+## 2026-09-05 rotated-270 SATA transition/capacitor oracle refinement
+
+The disposable authoring path was corrected so every capacitor-to-B.Cu SATA
+transition uses an ordinary offset via and an F.Cu dogbone; no via-in-pad is
+used. The rotated J3 island also mirrors the TX and RX capacitor row order to
+match the live U7 pad order. The best SATA-only native KiCad 10 run is
+`PHASE19_SATA270_LIVE24.kicad_pcb` with `78` total DRC records, zero
+`shorting_items`, and zero `tracks_crossing` records. The remaining records
+are inherited connector solder-mask warnings and unsatisfied non-SATA fixture
+nets because USB3 and clock were intentionally suppressed for this diagnostic.
+
+The first coordinated regeneration using the same SATA island and fresh USB3
+routes is `PHASE19_COORDINATED_SATA270_USB1.kicad_pcb`: `84` total records,
+zero shorts, and five crossings. All five are USB3/SATA corridor collisions;
+the SATA-only short/crossing class does not return. This candidate is rejected
+for Phase 19 integration, but the SATA island topology is retained as the
+current storage-side oracle. USB3 corridor placement remains the next
+bounded experiment; Phase 19 is not closed.

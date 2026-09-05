@@ -89,3 +89,14 @@ clock transplant introduced no new clock-crossing class.
 SATA transition follow-up: native DRC measured `96` / `75`. Coupling-pad and
 U7 RX pair shorts were removed; dense J3 launch/NC-pad clearances remain.
 Rejected as a full SATA pass.
+### 2026-09-05 — SATA transition oracle refinement
+
+- `PHASE19_SATA270_LIVE24-drc.rpt`: SATA-only diagnostic, 78 total records,
+  zero SATA shorting records and zero SATA crossing records.
+- `PHASE19_COORDINATED_SATA270_USB1-drc.rpt`: coordinated diagnostic, 84
+  total records, zero shorts, five USB3/SATA crossings.
+- Authoring correction: capacitor B.Cu transitions now use ordinary offset
+  vias with F.Cu dogbones; TX/RX capacitor rows mirror the rotated U7 pad
+  order. No via-in-pad or plane-layer signal was introduced.
+- Decision: retain the rotated SATA island as the storage-side oracle;
+  reject coordinated candidate until USB3 corridors are regenerated around it.
