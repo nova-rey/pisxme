@@ -409,3 +409,15 @@ unconnected items are unrelated non-clock U7 pads intentionally left isolated
 by the disposable fixture. All clock source and support pads are connected.
 This is the first complete clock/support topology proof; it is not yet an
 acreage promotion.
+## Acreage transplant and U5 island trials
+
+`phase24_clock_support_transplant.py` was tested against the rot180 A* clock
+oracle and rejected. Native DRC reported 218 violations, including clock-net
+crossings and a VSSOSC/XO short; the passive branches entered inherited USB3
+and clock corridors. This is an integration-placement failure, not evidence
+against the proven clock topology.
+
+`phase24_u5_caps_island.py` was independently tested from the Phase 23
+ancestor. Its native DRC reported 214 inherited violations but no
+`shorting_items` or `tracks_crossing` records. Ten dangling-track/via records
+remain, so this is a useful electrical island discriminator, not closure.

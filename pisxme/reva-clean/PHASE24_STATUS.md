@@ -133,3 +133,9 @@ VSSOSC on a separate B.Cu perimeter. Native DRC reports no clock crossings,
 shorts, footprint errors, or clock unconnected records. Its eight remaining
 unconnected records are deliberately isolated non-clock U7 pads in the
 stripped fixture; acreage transplant and full Phase 24 parity remain open.
+The first acreage support transplant was rejected: native DRC reported 218
+violations, including clock-net crossings and a VSSOSC/XO short caused by
+placing passive branches into inherited USB3 and clock corridors. This does
+not invalidate the coordinated disposable topology. A separate U5 C44-C47
+island trial has no shorting or crossing records, but retains inherited
+unconnected/dangling cleanup and is not yet promoted.
