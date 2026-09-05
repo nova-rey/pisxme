@@ -46,16 +46,25 @@ def net(b,name):
   n=pcbnew.NETINFO_ITEM(b,name); n.SetNetCode(b.GetNetCount()+1); b.Add(n)
  return n
 def seg(b,n,a,z,layer=pcbnew.F_Cu,width=W):
+ if a == z: return
  t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(layer); t.SetWidth(width); t.SetNet(n); b.Add(t)
 def via(b,n,p):
  q=pcbnew.PCB_VIA(b); q.SetPosition(V(*p)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(n); b.Add(q)
 def via_sig(b,n,p):
- q=pcbnew.PCB_VIA(b); q.SetPosition(V(*p)); q.SetWidth(pcbnew.FromMM(.40)); q.SetDrill(pcbnew.FromMM(.20)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(n); b.Add(q)
+ # The board contract permits ordinary through-vias only; keep the signal
+ # helper inside the native 0.30 mm minimum finished-drill rule.
+ q=pcbnew.PCB_VIA(b); q.SetPosition(V(*p)); q.SetWidth(pcbnew.FromMM(.50)); q.SetDrill(pcbnew.FromMM(.30)); q.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); q.SetNet(n); b.Add(q)
 def strip_old(b):
  for t in list(b.GetTracks()):
   n=t.GetNetname()
   if any(x in n for x in ('CM5_USB3','BRIDGE_SATA','SATA_M2','BRIDGE_XI','BRIDGE_XO','BRIDGE_VSSOSC','BRIDGE_3V3')):
    b.Remove(t)
+ for v in list(b.Tracks()):
+  if not isinstance(v,pcbnew.PCB_VIA):
+   continue
+  n=v.GetNetname()
+  if any(x in n for x in ('CM5_USB3','BRIDGE_SATA','SATA_M2','BRIDGE_XI','BRIDGE_XO','BRIDGE_VSSOSC','BRIDGE_3V3')):
+   b.Remove(v)
 def setpad(p,n): p.SetNet(n); p.SetNetCode(n.GetNetCode())
 def main():
  if PREP:
@@ -72,7 +81,7 @@ def main():
    f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(0 if SATA270 else 180)
   # Put the low-profile clock island in open south acreage, clear of the
   # relocated U7/SATA launch.  The placement remains relative to U7/J3.
-  for ref,xyv in {'Y1':(U7X+35,U7Y-25),'R23':(U7X+39,U7Y-25),'C42':(U7X+39,U7Y-29),'C43':(U7X+43,U7Y-25)}.items():
+  for ref,xyv in {'Y1':(U7X-120,U7Y-45),'R23':(U7X-116,U7Y-45),'C42':(U7X-116,U7Y-49),'C43':(U7X-112,U7Y-45)}.items():
    f=b.FindFootprintByReference(ref)
    if f is None: raise RuntimeError('clock donor missing '+ref)
    f.SetPosition(V(*xyv)); f.SetOrientationDegrees(0)
@@ -112,8 +121,8 @@ def main():
             {'CM5_USB3_RX_N':70.0,'CM5_USB3_RX_P':72.0,
              'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':92.0})[suffix]
     ox=U7X-280.0
-    target_x={'CM5_USB3_RX_N':280.0+ox,'CM5_USB3_RX_P':280.5+ox,
-              'CM5_USB3_TX_N':281.5+ox,'CM5_USB3_TX_P':282.0+ox}[suffix]
+    target_x={'CM5_USB3_RX_N':(267.0 if RELOCATED else 280.0+ox),'CM5_USB3_RX_P':280.5+ox,
+              'CM5_USB3_TX_N':(281.5+ox),'CM5_USB3_TX_P':282.0+ox}[suffix]
     landing_y={'CM5_USB3_RX_N':108.0,'CM5_USB3_RX_P':106.0,
                'CM5_USB3_TX_N':136.0,
                'CM5_USB3_TX_P':102.0}[suffix]
@@ -133,6 +142,22 @@ def main():
     is_rx=suffix.startswith('CM5_USB3_RX_')
     seg(b,n,launch,(prex,s[1]),pcbnew.F_Cu)
     seg(b,n,(prex,s[1]),(prex,lane_y),pcbnew.F_Cu)
+    if is_rx and RELOCATED and False:
+     # Keep RX source corridors on B.Cu, but lift through an ordinary via
+     # before the TX_N B.Cu trunk so the ordered lanes do not intersect.
+     via_sig(b,n,(prex,lane_y)); seg(b,n,(prex,lane_y),(trunk_x,lane_y),pcbnew.B_Cu)
+     rx_lift=(trunk_x,96.0); seg(b,n,(trunk_x,lane_y),rx_lift,pcbnew.B_Cu); via_sig(b,n,rx_lift)
+     far_x=290.0 if suffix == 'CM5_USB3_RX_N' else 296.0
+     corridor_y=94.0 if suffix == 'CM5_USB3_RX_N' else 90.0
+     approach_y=116.0 if suffix == 'CM5_USB3_RX_N' else 112.0
+     seg(b,n,rx_lift,(trunk_x,corridor_y),pcbnew.F_Cu)
+     seg(b,n,(trunk_x,corridor_y),(far_x,corridor_y),pcbnew.F_Cu)
+     seg(b,n,(far_x,corridor_y),(far_x,approach_y),pcbnew.F_Cu)
+     if suffix == 'CM5_USB3_RX_N':
+      seg(b,n,(far_x,approach_y),(270.0,approach_y),pcbnew.F_Cu); seg(b,n,(270.0,approach_y),(270.0,landing_y),pcbnew.F_Cu); seg(b,n,(270.0,landing_y),d,pcbnew.F_Cu)
+     else:
+      seg(b,n,(far_x,approach_y),(target_x,approach_y),pcbnew.F_Cu); seg(b,n,(target_x,approach_y),(target_x,landing_y),pcbnew.F_Cu); seg(b,n,(target_x,landing_y),d,pcbnew.F_Cu)
+     continue
     if suffix == 'CM5_USB3_TX_N' and RELOCATED:
      # The relocated SATA RX_P launch occupies the lower B.Cu corridor.
      # Cross to F.Cu in open acreage before the final U7 approach.
@@ -145,13 +170,21 @@ def main():
      seg(b,n,(mid[0],155.0),(220.0,155.0),pcbnew.F_Cu)
      seg(b,n,(220.0,155.0),(220.0,landing_y),pcbnew.F_Cu)
      seg(b,n,(220.0,landing_y),(target_x,landing_y),pcbnew.F_Cu)
+     seg(b,n,(target_x,landing_y),d,pcbnew.F_Cu)
+     continue
     else:
      if (not USB_SPLIT) or (not is_rx): via_sig(b,n,(prex,lane_y))
      layer=pcbnew.F_Cu if (USB_SPLIT and is_rx) else pcbnew.B_Cu
      seg(b,n,(prex,lane_y),(trunk_x,lane_y),layer)
      seg(b,n,(trunk_x,lane_y),(trunk_x,landing_y),layer); seg(b,n,(trunk_x,landing_y),(target_x,landing_y),layer)
      if (not USB_SPLIT) or (not is_rx): via_sig(b,n,(target_x,landing_y))
-    seg(b,n,(target_x,landing_y),d,pcbnew.F_Cu)
+    if suffix == 'CM5_USB3_RX_N' and RELOCATED:
+     seg(b,n,(target_x,landing_y),(270.0,landing_y),pcbnew.F_Cu); seg(b,n,(270.0,landing_y),d,pcbnew.F_Cu)
+    elif suffix == 'CM5_USB3_TX_N' and RELOCATED:
+     mid=(170.0,lane_y); seg(b,n,(target_x,landing_y),mid,pcbnew.F_Cu)
+     seg(b,n,mid,(mid[0],155.0),pcbnew.F_Cu); seg(b,n,(mid[0],155.0),(220.0,155.0),pcbnew.F_Cu); seg(b,n,(220.0,155.0),(220.0,landing_y),pcbnew.F_Cu); seg(b,n,(220.0,landing_y),d,pcbnew.F_Cu)
+    else:
+     seg(b,n,(target_x,landing_y),d,pcbnew.F_Cu)
     continue
   if USB_TOP_EAST:
    # Preserve the serialized CM5 source escape, then use four ordered
@@ -370,14 +403,27 @@ def main():
  for pn,nm in (('52','/STORAGE/BRIDGE_XI'),('53','/STORAGE/BRIDGE_VSSOSC'),('54','/STORAGE/BRIDGE_XO')): setpad(pad(u,pn),N[nm])
  Y={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('Y1').Pads()}; R23={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('R23').Pads()}; C42={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('C42').Pads()}; C43={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('C43').Pads()}
  xi,xo,vs=N['/STORAGE/BRIDGE_XI'],N['/STORAGE/BRIDGE_XO'],N['/STORAGE/BRIDGE_VSSOSC']
- # Clock island: outboard support acreage with separated monotonic lanes.
+ # Clock island: separated north-acreage lanes, with live pad endpoints.
  y1x,y1y=pos(b.FindFootprintByReference('Y1').Pads()[0]); r1x,r1y=R23['1']; r2x,r2y=R23['2']
- xi_bus=(r1x,y1y+8.0); seg(b,xi,U['52'],(U['52'][0]-2.0,U['52'][1])); seg(b,xi,(U['52'][0]-2.0,U['52'][1]),(U['52'][0]-2.0,xi_bus[1])); seg(b,xi,(U['52'][0]-2.0,xi_bus[1]),xi_bus); seg(b,xi,xi_bus,R23['1'])
- seg(b,xi,C42['1'],(C42['1'][0],y1y+6.0)); seg(b,xi,(C42['1'][0],y1y+6.0),xi_bus); seg(b,xi,Y['1'],xi_bus)
- xo_e=(U['54'][0]-5.0,U['54'][1]); xo_bus=(C43['1'][0]-2.0,y1y+10.0)
- seg(b,xo,U['54'],xo_e); via_sig(b,xo,xo_e); seg(b,xo,xo_e,(xo_e[0],xo_bus[1]),pcbnew.B_Cu); seg(b,xo,(xo_e[0],xo_bus[1]),xo_bus,pcbnew.B_Cu); via_sig(b,xo,xo_bus); seg(b,xo,xo_bus,C43['1']); seg(b,xo,C43['1'],R23['2']); seg(b,xo,Y['3'],R23['2'])
- vs_bus=(C43['2'][0]+2.0,y1y+12.0); seg(b,vs,U['53'],(U['53'][0]-7.0,U['53'][1])); seg(b,vs,(U['53'][0]-7.0,U['53'][1]),(U['53'][0]-7.0,vs_bus[1])); seg(b,vs,(U['53'][0]-7.0,vs_bus[1]),vs_bus); seg(b,vs,vs_bus,C43['2'])
- seg(b,vs,Y['2'],vs_bus); seg(b,vs,Y['4'],vs_bus); seg(b,vs,C42['2'],(C42['2'][0],vs_bus[1])); seg(b,vs,(C42['2'][0],vs_bus[1]),vs_bus)
+ xi_bus=(r1x,y1y-9.0); xi_e=(U['52'][0]-5.5,U['52'][1]); seg(b,xi,U['52'],xi_e); seg(b,xi,xi_e,(xi_e[0],xi_bus[1])); seg(b,xi,(xi_e[0],xi_bus[1]),xi_bus); seg(b,xi,xi_bus,R23['1']); seg(b,xi,C42['1'],(C42['1'][0],xi_bus[1])); seg(b,xi,(C42['1'][0],xi_bus[1]),xi_bus); seg(b,xi,Y['1'],(Y['1'][0],xi_bus[1])); seg(b,xi,(Y['1'][0],xi_bus[1]),xi_bus)
+ xo_e=(U['54'][0]-9.5,U['54'][1]); xo_bus=(C43['1'][0],y1y+7.0); seg(b,xo,U['54'],xo_e); seg(b,xo,xo_e,(xo_e[0],xo_bus[1])); seg(b,xo,(xo_e[0],xo_bus[1]),xo_bus); seg(b,xo,xo_bus,C43['1']); seg(b,xo,C43['1'],R23['2']); xo_y3=(Y['3'][0],y1y+4.0); seg(b,xo,Y['3'],xo_y3); seg(b,xo,xo_y3,(C43['1'][0],xo_y3[1])); seg(b,xo,(C43['1'][0],xo_y3[1]),C43['1'])
+ vs_e=(U['53'][0]-7.5,U['53'][1]); vs_bus=(C43['2'][0]+3.0,y1y+12.0); seg(b,vs,U['53'],vs_e); seg(b,vs,vs_e,(vs_e[0],vs_bus[1])); via_sig(b,vs,(vs_e[0],vs_bus[1])); seg(b,vs,(vs_e[0],vs_bus[1]),vs_bus,pcbnew.B_Cu)
+ # Each support return uses a short pad dogbone to its own B.Cu via; the
+ # shared return bus is below the support field and cannot cross XO/XI.
+ yv=vs_bus[1]
+ for p,q in ((Y['2'],(Y['2'][0]-4.0,yv)),(Y['4'],(Y['4'][0]+4.4,yv)),(C42['2'],(C42['2'][0],C42['2'][1]+2.0)),(C43['2'],(C43['2'][0]-5.0,yv))):
+  if p == Y['4'] or p == C43['2']:
+   # These two pads sit beside the XO support lane. Escape on F.Cu only to
+   # an offset via, then stay on B.Cu through the return bus.
+   e=(p[0],p[1]-3.0); seg(b,vs,p,e); via_sig(b,vs,e); seg(b,vs,e,q,pcbnew.B_Cu)
+  elif p == C43['2']:
+   mid=(p[0],p[1]-3.0); seg(b,vs,p,mid); seg(b,vs,mid,(q[0],mid[1])); seg(b,vs,(q[0],mid[1]),q)
+  elif q[1] == yv:
+   seg(b,vs,p,(q[0],p[1])); seg(b,vs,(q[0],p[1]),q)
+  else: seg(b,vs,p,q)
+  if p != Y['4'] and p != C43['2']: via_sig(b,vs,q)
+  if q[1] != yv: seg(b,vs,q,(q[0],yv),pcbnew.B_Cu)
+  seg(b,vs,(q[0],yv),vs_bus,pcbnew.B_Cu)
  # FREQSEL0/1 and VDDIO high on the local 3V3 net; local short fanout.
  v33=b.FindNet('/STORAGE/BRIDGE_3V3')
  for pn in ('24','30','31'): setpad(pad(u,pn),v33)

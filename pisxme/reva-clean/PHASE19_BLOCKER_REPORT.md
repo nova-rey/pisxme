@@ -1294,3 +1294,19 @@ the experiment is rejected. The clean focused USB3+SATA result is unchanged.
 The generator retains the relative outboard placement as an explicit
 experiment, but Phase 19 is not closed. A passing full-support solution still
 requires a collision-aware clock layer/placement schedule.
+
+## 2026-09-05 full-support structural closure and SI rejection
+
+`PHASE19_RELOC_U270J190_COORD49_FULL.kicad_pcb` is the first regenerated
+full-support U7/J3 relocation with zero native `shorting_items`, zero
+`tracks_crossing`, zero clearance, zero drill/via-diameter, and zero dangling
+track/via records. No USB3, SATA, M.2, or clock-net unconnected item is
+reported; the 461 remaining unconnected records are inherited unrelated
+acreage debt.
+
+It is not promoted as a Phase 19 pass because measured pair-length skew is
+still excessive: CM5 USB3 RX 14.10 mm, CM5 USB3 TX 137.70 mm, bridge SATA RX
+6.26 mm, M.2 TX 25.25 mm, and M.2 RX 27.25 mm. The TX_N lower detour that
+removed crossings is the dominant defect. Phase 19 therefore remains open
+for a nearer/shorter pair-preserving route or an explicit controlled
+matching geometry; no DRC shortcut or validation relaxation is allowed.
