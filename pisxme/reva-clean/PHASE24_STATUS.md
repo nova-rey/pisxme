@@ -580,3 +580,11 @@ unconnected census falls from 142 to 138.
 bypass pad to U1.3 on `/POWER_INPUT/12V_IN_A`. Native DRC remains free of
 shorting and crossing classes; the cumulative unconnected census falls from
 138 to 137. The input topology and fuse/protection architecture are unchanged.
+
+## U7 BRIDGE_CFG closure
+
+`phase24_u7_cfg_join_current.py` regenerated the serialized U7
+`/STORAGE/BRIDGE_CFG` pad-to-pad copper on the accepted ancestor. Native DRC
+remains at zero shorting/crossing classes and the unconnected census falls
+from 137 to 136. This closes the one remaining U7 configuration connectivity
+record without changing the storage architecture.

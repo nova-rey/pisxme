@@ -100,6 +100,12 @@ and the board-wide 12V/ground distribution remain open and need
 obstacle-aware launches; no severity was changed and no connection was
 waived.
 
+## U7 BRIDGE_CFG accepted
+
+The remaining U7 configuration pad pair is now natively joined on the current
+ancestor. DRC reports zero shorts/crossings and 136 unconnected records; no
+validation severity or storage topology was changed.
+
 ## 12V input bypass accepted
 
 C3.2 was joined to the existing `/POWER_INPUT/12V_IN_A` component with a
