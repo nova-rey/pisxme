@@ -538,3 +538,13 @@ unconnected records, with zero `[shorting_items]` and zero
 `[tracks_crossing]`. The clock is therefore promoted into the cumulative
 ancestor; Phase 24 remains open for the unrelated board-wide connectivity
 census.
+
+## Bridge 1V1 capacitor-field continuation
+
+`phase24_bridge_1v1_cap_chain.py` adds adjacent ordinary-via escapes from the
+left-side rail pad of the spaced C26/C27/C28/C29 and C34-C41 fields, then joins
+the escapes on B.Cu. Native DRC holds at 205 violations with zero
+`[shorting_items]` and zero `[tracks_crossing]`; the unconnected census falls
+from 156 to 145. The candidate is accepted as the next cumulative ancestor.
+The remaining BRIDGE_1V1 records are isolated R19, R22, and C41 endpoints and
+will be handled separately rather than assuming this field route closed them.

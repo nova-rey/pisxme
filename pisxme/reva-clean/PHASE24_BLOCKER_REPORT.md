@@ -768,3 +768,10 @@ local-repair board yields 205 DRC violations and 156 unconnected records, but
 zero native shorting or track-crossing classes. The complete clock source is
 accepted as the Phase 24 ancestor; the remaining blocker is the unrelated
 board-wide connectivity/DRC census, not clock topology.
+
+## Bridge 1V1 field accepted
+
+The spaced bridge-1V1 capacitor field was regenerated with pad-adjacent
+ordinary vias and a B.Cu rail chain. Native DRC reports zero shorting and
+crossing classes and 145 unconnected records, down from 156. This is accepted
+targeted progress; R19, R22, and C41 remain explicit native findings.

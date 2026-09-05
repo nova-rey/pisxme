@@ -4111,3 +4111,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Phase 24 incremental clock probes isolated clean XI and XO launches; the first VSSOSC perimeter was rejected by two native shorts and two crossings at the inherited SATA corridor.
 2026-09-05: Phase 24 passive-field obstacle search found no legal B.Cu path from serialized Y1.1 to R23.1; no incomplete candidate was promoted.
 2026-09-05: Phase 24 composed the corrected complete XI/XO/VSSOSC clock onto cumulative repairs; native component checks pass with zero short/crossing classes and 156 unconnected records remaining.
+2026-09-05: Phase 24 accepted the bridge-1V1 capacitor-field B.Cu chain with ordinary pad-adjacent vias; native DRC has zero short/crossing classes and 145 unconnected records remaining.
