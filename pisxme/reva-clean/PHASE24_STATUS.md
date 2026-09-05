@@ -379,3 +379,10 @@ variant moved the escape to y=100.5 mm and avoids that trunk. Native DRC is
 back to the inherited 201 violations with zero shorts and zero crossings. It
 is retained as a clean U4 local geometry experiment, but the remaining 390
 native unconnected items are board-wide and still prevent Phase 24 closure.
+
+The U3 POWER_GND exposed field was tested with a right-side perimeter escape
+around the central thermal row and a lower side-pad rail. Native DRC remains
+at 201 inherited violations with zero shorts and zero crossings; the prior
+bridge candidate's unconnected count falls from 261 to 258. This is accepted
+targeted regulator-return evidence; full ground-plane attachment remains
+open.

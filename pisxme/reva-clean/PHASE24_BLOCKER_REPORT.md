@@ -659,3 +659,8 @@ unconnected records but caused 17 shorts and eight crossings in native DRC.
 No CM5 ground was bridged to global `POWER_GND`. This remains an explicit
 local routing/authority blocker, not evidence that the CM5 architecture is
 electrically impossible.
+
+The U3 POWER_GND field now has a clean targeted perimeter escape: 201
+inherited native DRC violations, zero shorts/crossings, and 258 unconnected
+records versus 261. The remaining board-wide ground distribution and CM5
+ground authority are still unresolved.

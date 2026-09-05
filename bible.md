@@ -4093,3 +4093,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: rejected J1 ground launches intersecting the protected bus, then validated y=98.0 mm ground-plane launches; native DRC held at 201 violations, zero shorts/crossings, and 195 unconnected records.
 2026-09-05 Phase24: rejected CM5 ground-launch offsets after native DRC exposed pad-field shorts/crossings; preserved separate CM5 ground authority and documented obstacle-aware escape requirement.
 2026-09-05 Phase24: rejected direct bridge low-voltage pad joins at intervening ground pads, then validated perimeter escapes; native DRC held at 201 violations, zero shorts/crossings, and 261 unconnected records.
+2026-09-05 Phase24: validated U3 POWER_GND perimeter field escape; native DRC held at 201 violations, zero shorts/crossings, and reduced targeted candidate to 258 unconnected records.
