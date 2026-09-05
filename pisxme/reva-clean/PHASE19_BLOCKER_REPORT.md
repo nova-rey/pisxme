@@ -45,6 +45,16 @@ known passing isolated-clock graph as the local support template and
 regenerate its three U7 source corridors together, rather than applying
 another support-coordinate-only overlay.
 
+The coordinated generator was also exercised directly at U7/J3 placements
+`(150,100)/(230,100)`, `(180,90)/(250,105)`, and `(200,80)/(270,100)` with
+the authoritative V3 SATA branch and U7 rotation 180. Native DRC measured
+`426`, `473`, and `364` violations respectively, with `413` unconnected
+items in each artifact and `13`, `20`, and `24` crossing/short records. These
+are rejected as placement sweep evidence: the lower raw DRC count does not
+pass because the coordinated USB3/SATA connectivity gate remains open, and
+the clock network still has to be generated and routed as part of the same
+candidate.
+
 ## 2026-09-04 coordinated storage authoring repair
 
 The coordinated-island generator was corrected after a KiCad 10 serialization
