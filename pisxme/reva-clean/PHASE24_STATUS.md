@@ -521,3 +521,8 @@ VSSOSC addition is rejected at 163 unconnected records because its F.Cu path
 crosses the inherited SATA-TX-N corridor and shorts the XI launch and a
 POWER_GND pad. The next repair is a layer-separated VSSOSC obstacle crossing;
 XI/XO are retained unchanged.
+
+The subsequent passive-field B.Cu search could not find a path from the
+serialized Y1.1 launch to R23.1 within the current local bounds, so no
+candidate was emitted. This further localizes the open work to coordinated
+passive-field routing/placement.

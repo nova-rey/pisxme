@@ -4109,3 +4109,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Recorded the Phase 24 clock placement sweep; near-west is the best rejected class at zero clock shorts and one crossing, while the complete isolated fixture still needs four crossing repairs.
 2026-09-05: Phase 24 clock fixture V2 passes clock-specific native connectivity and DRC checks with split layer ownership; its acreage transform is rejected at 226 DRC violations and retained as integration evidence.
 2026-09-05: Phase 24 incremental clock probes isolated clean XI and XO launches; the first VSSOSC perimeter was rejected by two native shorts and two crossings at the inherited SATA corridor.
+2026-09-05: Phase 24 passive-field obstacle search found no legal B.Cu path from serialized Y1.1 to R23.1; no incomplete candidate was promoted.

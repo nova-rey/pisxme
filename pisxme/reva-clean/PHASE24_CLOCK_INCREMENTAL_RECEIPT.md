@@ -16,3 +16,8 @@ used an F.Cu perimeter through `(122.5,126.5) -> (116,126.5) -> (116,120)`;
 native DRC shows that it crosses the inherited SATA-TX-N corridor and shorts
 the XI launch and a POWER_GND pad. It is rejected. The next VSSOSC probe must
 cross the SATA obstacle in a deliberate layer-separated location.
+
+The follow-on `phase24_clock_passive_astar.py` search found no B.Cu path from
+the serialized Y1.1 launch to R23.1 inside the current local corridor and
+therefore emitted no candidate. This is rejected routing evidence, not a gate
+relaxation; remaining work is coordinated passive-field routing or placement.
