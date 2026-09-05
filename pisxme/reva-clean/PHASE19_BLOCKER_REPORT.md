@@ -429,3 +429,23 @@ This is a usable clock integration baseline, not Phase 19 closure. The next
 step is to apply the same relative clock island to the complete coordinated
 USB3/SATA candidate and rerun the full storage SI, return-via, and native DRC
 gates. Phase 20+ remain untouched.
+
+## 2026-09-04 clean minimal clock fixture and coordinated transplant
+
+The minimal fixture was refined to close the explicit FREQSEL0/FREQSEL1 tie
+and terminate the VSSOSC return at a connected ordinary-via bus. Native KiCad
+DRC reports 12 warnings, zero unconnected pads, zero clock shorts, and zero
+clock crossings; the remaining warnings are silkscreen/copper-sliver checks.
+This closes the clock topology as a disposable electrical fixture, not as an
+acreage release artifact.
+
+The same relative geometry was then applied to the coordinated storage
+candidate at U7 `(140,110)` / J3 `(145,125)`, with inherited clock copper
+removed before routing. That transplant was rejected at 406 violations / 471
+unconnected items because the candidate's live SATA/USB3 copper occupies the
+translated support corridors and the new clock branches collide with those
+signals. The result is a valid rejection of this placement transplant, not of
+the clean minimal topology. The next experiment must relocate the complete
+clock support island into a corridor clear of the already-routed USB3/SATA
+fields, then regenerate the coordinated candidate. Phase 19 remains active;
+Phase 20+ remain untouched.

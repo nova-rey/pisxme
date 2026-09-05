@@ -1,10 +1,12 @@
 """Minimal native KiCad fixture for the TUSB9261 crystal clock network."""
 from pathlib import Path
+import os
 import pcbnew
 
-R=Path(__file__).resolve().parent; BASE=R/'ACREAGE_CLOCK_CANDIDATE5.kicad_pcb'; OUT=R/('PHASE19_CLOCK_ACREAGE_RELATIVE.kicad_pcb' if __import__('os').environ.get('CLOCK_ACREAGE')=='1' else 'PHASE19_CLOCK_MINIMAL_FIXTURE.kicad_pcb')
-import os
-KEEP_BOARD=os.environ.get('CLOCK_ACREAGE')=='1'; DX,DY=((150,5) if KEEP_BOARD else (0,0))
+R=Path(__file__).resolve().parent; KEEP_BOARD=os.environ.get('CLOCK_ACREAGE')=='1'
+BASE=R/os.environ.get('CLOCK_BASE','ACREAGE_CLOCK_CANDIDATE5.kicad_pcb')
+OUT=R/os.environ.get('CLOCK_OUT',('PHASE19_CLOCK_ACREAGE_RELATIVE.kicad_pcb' if KEEP_BOARD else 'PHASE19_CLOCK_MINIMAL_FIXTURE.kicad_pcb'))
+DX,DY=((int(os.environ.get('CLOCK_DX','150')),int(os.environ.get('CLOCK_DY','5'))) if KEEP_BOARD else (0,0))
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def T(b,n,a,z,l):
     t=pcbnew.PCB_TRACK(b); t.SetStart(V(a[0]+DX,a[1]+DY)); t.SetEnd(V(z[0]+DX,z[1]+DY)); t.SetLayer(l); t.SetWidth(pcbnew.FromMM(.2)); t.SetNet(n); b.Add(t)
