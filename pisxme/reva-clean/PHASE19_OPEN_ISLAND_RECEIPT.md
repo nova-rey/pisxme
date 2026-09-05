@@ -168,6 +168,12 @@ Rejected as a full SATA pass.
 - `PHASE19_COORDINATED_SATAP_F24-drc.rpt`: 215 total records, 5 crossings,
   1 U7 NC-pad short, and an additional F.Cu SATA crossing; rejected.
 - SATA270 remains the storage-side oracle.
+### 2026-09-05 — legacy mid-acreage relocation baseline
+
+- `PHASE19_MIDACREAGE_COORDINATED-drc.rpt`: 320 total records, 4 crossings,
+  5 shorts, and 426 unconnected; rejected.
+- The legacy mid-acreage author is reference-only and is not a valid
+  coordinated ancestor.
 ### 2026-09-05 — U7 rotation-180 USB3 diagnostic
 
 - `PHASE19_U7ROT180_USB_VERTICAL1-drc.rpt`: 223 total records, two
