@@ -68,13 +68,13 @@ def build_occupancy(board, ignore_refs):
 
 def route_path(occ, start, goal, start_layer, goal_layer):
     s=(grid(*start)[0],grid(*start)[1],start_layer); g=(grid(*goal)[0],grid(*goal)[1],goal_layer)
-    # Permit departure from the active pad and its already-created same-net
-    # escape. Other nets remain obstacles; the prior single-cell exemption
-    # trapped the second stage behind its own first-stage dogbone.
-    for layer in (F,B):
-        for cx,cy in ((s[0],s[1]),(g[0],g[1])):
-            for dx in range(-3,4):
-                for dy in range(-3,4): occ[layer].discard((cx+dx,cy+dy))
+    # Permit departure/arrival only at the actual endpoint copper layers.
+    # The previous implementation cleared a broad 7x7-cell neighborhood on
+    # both layers, erasing neighboring endpoint pads in dense J7/ESD fields
+    # and allowing native shorts.  Keep every other pad-field obstacle real.
+    for layer, (cx,cy) in ((start_layer,(s[0],s[1])),(goal_layer,(g[0],g[1]))):
+        for dx in range(-2,3):
+            for dy in range(-2,3): occ[layer].discard((cx+dx,cy+dy))
     bounds=(grid(0,94),grid(45,162))
     q=[(0,s)]; cost={s:0}; prev={s:None}
     while q:
