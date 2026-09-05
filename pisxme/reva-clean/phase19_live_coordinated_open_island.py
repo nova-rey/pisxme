@@ -210,10 +210,10 @@ def main():
    # Spread the serialized source fanout before the first transition.  The
    # increasing x/y order keeps each vertical escape outside the next
    # source segment instead of placing vias in the adjacent pad launch.
-   first={'CM5_USB3_RX_N':(74.0,101.0),'CM5_USB3_RX_P':(84.0,105.0),
-          'CM5_USB3_TX_N':(94.0,110.0),'CM5_USB3_TX_P':(104.0,115.0)}[suffix]
-   top={'CM5_USB3_RX_N':(74.0,80.0),'CM5_USB3_RX_P':(84.0,82.0),
-        'CM5_USB3_TX_N':(94.0,84.0),'CM5_USB3_TX_P':(104.0,86.0)}[suffix]
+   first={'CM5_USB3_RX_N':(64.0,100.0),'CM5_USB3_RX_P':(82.0,104.0),
+          'CM5_USB3_TX_N':(95.0,110.0),'CM5_USB3_TX_P':(105.0,116.0)}[suffix]
+   top={'CM5_USB3_RX_N':(64.0,80.0),'CM5_USB3_RX_P':(82.0,82.0),
+        'CM5_USB3_TX_N':(95.0,84.0),'CM5_USB3_TX_P':(105.0,86.0)}[suffix]
    # Higher source lane exits use the nearer outboard column so the
    # vertical drops cannot cut across a lower lane's horizontal run.
    outx={'CM5_USB3_RX_N':298.0,'CM5_USB3_RX_P':297.0,
@@ -230,7 +230,8 @@ def main():
    # clock bus or one another.
    via_pos={'CM5_USB3_RX_N':(270.0,120.0),'CM5_USB3_RX_P':(270.5,122.0),
             'CM5_USB3_TX_N':(271.5,124.0),'CM5_USB3_TX_P':(272.0,126.0)}[suffix]
-   seg(b,n,landing,via_pos,pcbnew.B_Cu); via(b,n,via_pos)
+   seg(b,n,landing,via_pos,pcbnew.B_Cu)
+   via(b,n,via_pos)
    seg(b,n,via_pos,d,pcbnew.F_Cu)
    continue
   if USB_VERTICAL:

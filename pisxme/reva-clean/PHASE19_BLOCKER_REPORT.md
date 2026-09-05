@@ -1373,6 +1373,17 @@ shorts. This proves the useful solution class is pair-preserving and
 layer-separated, but the current endpoint schedule is not legal. Phase 19
 remains open.
 
+## 2026-09-05 source fanout spread experiment
+
+The CM5-side fanout was spread to 4--10 mm-separated transition columns
+before entering the four B.Cu corridors. This did not produce a legal graph:
+native DRC still reports two outboard corridor crossings, a TX_N/TX_P
+fan-in crossing, and J7-side hole/clearance violations. The measured skews
+were 9.91 mm RX and 8.45 mm TX, worse than the prior low-skew candidate, so
+this variant is rejected. The next attempt must change the complete
+serialized escape schedule, including source launch ordering and the first
+layer transitions together.
+
 ## 2026-09-05 mixed-layer fan-in experiment
 
 Moving only the TX final fan-in from B.Cu to F.Cu did not resolve the
