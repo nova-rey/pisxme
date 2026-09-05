@@ -166,3 +166,15 @@ including clock shorting and crossing records in the local branch topology.
 The endpoint-authoring defect is fixed, but this shelf routing graph remains
 rejected. The proven rot90 topology and U5-cap topology remain the valid
 local oracles for the next integration attempt.
+
+## Rot180 source-escape oracle
+
+`phase24_rot180_source_escape.py` now derives U7 pins 52/53/54 after setting
+the footprint to rot180 and validates the asymmetric top-row escape: XI
+exits diagonally right, VSSOSC exits upward, and XO exits diagonally left
+before the ordinary through-vias. Native DRC report
+`PHASE24_ROT180_SOURCE_ESCAPE-derived-drc.rpt` contains `164` inherited
+violations but zero `shorting_items`, zero `tracks_crossing`, zero
+`track_width`, zero footprint errors, and no XI/XO/VSSOSC unconnected
+records. This closes the rot180 source-escape geometry proof only; shelf
+fanout and full acreage parity remain open.
