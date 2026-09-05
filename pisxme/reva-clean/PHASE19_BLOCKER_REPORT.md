@@ -1481,3 +1481,15 @@ mechanical body/anchor region, and U7-side no-connect/3V3 pad-field conflicts.
 The result is not evidence against the U7/J3 architecture; it rejects this
 specific layer/coordinate schedule. No Phase 18 or Phase 19 gate is claimed
 closed, and no Phase 20 work has started.
+
+## 2026-09-05 coherent island translation probe
+
+As a further local fallback, the complete storage/clock footprint and copper
+graph was translated together by 20 mm in X, leaving PCIe and CM5 unchanged,
+and the ordered USB3 escape was reintroduced with current 0.50/0.30-mm vias.
+The probe was intentionally disposable. Native DRC still found USB3/SATA
+crossings at the U7 launch, layer-sharing between the ordered USB corridors
+and SATA support, and connector-body/anchor clearance conflicts. The probe is
+rejected. It does not invalidate the clean translated-island concept; it shows
+that the USB3 escape must be regenerated as a full endpoint schedule after the
+storage translation, rather than copied as independent legacy segments.
