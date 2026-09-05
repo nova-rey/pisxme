@@ -438,3 +438,11 @@ references and every pad-net assignment. Native DRC for
 and 406 unconnected pads, but no `shorting_items` or `tracks_crossing`
 records. This proves component/net authority, while routing and full parity
 remain open.
+## U5 outboard surface placement (rejected)
+
+`phase24_u5_caps_outboard.py` moved C44-C47 to a separate outboard acreage
+region and routed a monotonic F.Cu bridge-1V1 trunk. Native DRC reported 203
+violations, including a bridge-1V1/POWER_GND short and crossings. Together
+with the prior surface-only trial, this rejects the surface-rail-trunk class.
+The next experiment must map existing copper/ground clearances and provide a
+deliberate return path.

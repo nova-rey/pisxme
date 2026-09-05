@@ -149,3 +149,8 @@ The exact pad-net audit passes for Y1/R23/C42/C43/C44-C47. Native DRC reports
 187 inherited violations and 406 unconnected pads, but no shorting or crossing
 records; this closes the component-materialization discriminator only, not
 routed Phase 24 closure.
+The outboard U5 surface placement was rejected as the same failed solution
+class: native DRC reported 203 violations, including a bridge-1V1/POWER_GND
+short and crossings. Two surface-only placements have now failed; the next
+repair must use a clearance-mapped ground-aware island rather than another
+surface rail trunk.
