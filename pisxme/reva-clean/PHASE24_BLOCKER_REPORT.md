@@ -941,3 +941,13 @@ native PCB shows `U8` is SERVICE USB2 ESD; Ethernet ESD is `U6`/`U9`
 (`TPD4EUSB30`). Candidate moves and the macro assessment use the corrected
 Ethernet set `U6`/`U9` plus `J2`. This does not promote moved copper or relax
 Phase 24 acceptance gates.
+
+## ETH_WEST trial result
+
+The independent review recommends the west-edge coherent Ethernet move. The
+first disposable rigid transplant was rejected after native DRC reported 571
+total violations, 123 unconnected records, 12 shorts, and 20 crossings. This
+is a placement-plus-authoring failure caused by carrying reference copper
+through the acreage board, not evidence against the CM5IO Ethernet
+architecture. The next authorized step is obstacle-aware regeneration from
+native moved pads.

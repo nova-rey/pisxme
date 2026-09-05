@@ -59,3 +59,13 @@ device. Native footprint/value inspection establishes that `U8` is the
 Texas_DRT_3 SERVICE USB2 ESD device. Ethernet ESD is `U6`/`U9`
 (`TPD4EUSB30`), and the disposable Ethernet candidates move `U6`/`U9`
 together with `J2`. All conclusions use the corrected identity.
+
+## First moved-island trial
+
+The independent review recommends `ETH_WEST`: it reduces the native nearest
+Ethernet pad distance to 11.81 mm, avoids the SERVICE connector body, and
+preserves the PCIe-east corridor. A rigid CM5IO-island transplant moved
+`J2/U6/U9` coherently to that west neighborhood. Native DRC reports 571
+violations, including 123 unconnected records, 12 shorts, and 20 crossings.
+The failure is translated reference copper entering unrelated acreage
+geometry; the candidate is rejected and no translated tracks are promoted.

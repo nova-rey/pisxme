@@ -738,3 +738,12 @@ PCB identity is `U8` = SERVICE USB2 ESD (`Texas_DRT_3`), while Ethernet ESD is
 `U6`/`U9` = `TPD4EUSB30`. Proposed Ethernet island moves apply to `U6`/`U9`
 and `J2`; native geometry and candidate generation are corrected accordingly.
 This is a documentation correction, not a validation waiver.
+
+## ETH_WEST trial rejected
+
+The independent review selected `ETH_WEST` as the best macro candidate. A
+disposable rigid CM5IO-derived transplant moved native `J2/U6/U9` coherently,
+but native DRC reported 571 violations, 123 unconnected records, 12 shorts,
+and 20 crossings because translated copper entered unrelated acreage
+geometry. The result is rejected; live-pad obstacle-aware regeneration is
+required next.
