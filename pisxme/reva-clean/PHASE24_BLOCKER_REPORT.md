@@ -367,3 +367,12 @@ candidate reported 268 native DRC violations, including 12 shorts and 9
 crossings. This class is rejected. The next candidate must generate the
 complete clock island as one coordinated graph, including passive branches,
 before emitting any copper.
+
+## Coordinated-island placement sweep (rejected)
+
+The branch router was parameterized and swept across five acreage placements
+for the R23/C42/C43 island. Four placements had no conservative path to at
+least one serialized rail anchor; the best generated placement still
+reported 322 native DRC violations. No placement was promoted. The sweep
+supports replacing the current fixed-rail attachment model with a fresh
+multi-net graph whose clock and passive branches are solved together.

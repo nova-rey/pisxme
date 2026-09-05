@@ -2,6 +2,7 @@
 from pathlib import Path
 from heapq import heappush, heappop
 import math
+import os
 import pcbnew
 
 R=Path(__file__).resolve().parent
@@ -22,7 +23,8 @@ def main():
     nets={k:b.FindNet(v) for k,v in names.items()}
     libs={'R23':'R_0402_1005Metric','C42':'C_0402_1005Metric','C43':'C_0402_1005Metric'}
     maps={'R23':['XI','XO'],'C42':['XI','VS'],'C43':['XO','VS']}
-    placements={'R23':(108,120),'C42':(102,120),'C43':(114,120)}
+    sx=float(os.environ.get('SUPPORT_X','108')); sy=float(os.environ.get('SUPPORT_Y','120'))
+    placements={'R23':(sx,sy),'C42':(sx-6,sy),'C43':(sx+6,sy)}
     fs={}
     for ref,pos in placements.items():
         f=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),libs[ref]); f.SetReference(ref); f.SetPosition(V(*pos)); f.SetLayer(pcbnew.B_Cu); b.Add(f); fs[ref]=f

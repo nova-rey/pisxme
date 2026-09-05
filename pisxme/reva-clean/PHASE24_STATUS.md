@@ -109,6 +109,10 @@ rejected by native DRC (380 violations: 29 shorts and 13 crossings). The
 remaining repair must regenerate the clock topology with branch reservations
 before adding passive fanout.
 
+A five-position coordinated-island sweep was also rejected: four placements
+had no conservative route to a rail anchor and the best generated board had
+322 native DRC violations. No candidate was promoted.
+
 The rail-attachment variant was rejected by native DRC (268 violations: 12
 shorts and 9 crossings). The remaining valid implementation class is a
 single coordinated clock graph containing source escape, Y1, R23, C42, and
