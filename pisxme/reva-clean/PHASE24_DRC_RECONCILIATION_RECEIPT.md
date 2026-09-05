@@ -17,6 +17,7 @@ serialized Phase 24 candidates, counting report sections globally.
 | `PHASE24_CM5_GROUND_LOWER_COMB` | 208 | 127 | 0 | 0 | accepted continuation |
 | `PHASE24_CM5_GROUND_UPPER_COMB` | 223 | 121 | 3 | 9 | rejected |
 | `PHASE24_CM5_GROUND_UPPER_BRIDGES_ONLY` | 216 | 124 | 1 | 6 | rejected |
+| `PHASE24_CM5_GROUND_UPPER_BRIDGES_ONLY` | 216 | 124 | 1 | 6 | rejected |
 
 The clean working basis for subsequent repairs is therefore
 `PHASE24_BRIDGE_1V1_CAP_CHAIN.kicad_pcb`. Earlier incremental notes that

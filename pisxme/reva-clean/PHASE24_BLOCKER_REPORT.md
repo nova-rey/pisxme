@@ -519,6 +519,10 @@ references and every pad-net assignment. Native DRC for
 and 406 unconnected pads, but no `shorting_items` or `tracks_crossing`
 records. This proves component/net authority, while routing and full parity
 remain open.
+
+The horizontal-only upper J7 bridges were tested independently and rejected
+at one native short and six crossings. The lower comb remains the accepted
+basis; upper-row closure requires Ethernet-launch regeneration.
 ## U5 outboard surface placement (rejected)
 
 `phase24_u5_caps_outboard.py` moved C44-C47 to a separate outboard acreage

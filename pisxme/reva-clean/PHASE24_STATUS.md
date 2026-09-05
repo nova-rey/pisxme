@@ -633,6 +633,11 @@ zero shorts, and zero crossings. This is accepted targeted progress; the
 upper high-speed rows and the separate connector-to-plane CM5-ground launch
 remain open.
 
+The upper same-row-only J7 ground bridges are rejected: fresh native DRC
+reports 216 violations, 124 unconnected records, one short, and six
+crossings. This confirms that the live Ethernet launch segments must be
+regenerated before upper-row CM5-ground collection can proceed.
+
 The upper-row comb extension is rejected: fresh native DRC reports 223
 violations, 121 unconnected records, three shorts, and nine crossings. The
 failure occurs in the live Ethernet launch rows, so the lower-comb candidate
