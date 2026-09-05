@@ -1401,6 +1401,15 @@ degraded to approximately 9.59 mm RX and 8.63 mm TX. The prior all-B.Cu
 pair-corridor result remains the better baseline; no Phase 19 promotion or
 Phase 20 work has started.
 
+## 2026-09-05 isolated quadrant fan-in follow-up
+
+The alternating-quadrant U7 fan-in was rerun against the restored all-B.Cu
+baseline, removing the earlier pre-clock transition confounder. Native DRC
+still reported two corridor crossings, a TX fan-in crossing/short, and local
+U7/support clearances. The measured USB3 skews were 1.11 mm RX and 0.00 mm
+TX, but the geometry is electrically illegal and is rejected. The
+reproducible generator was restored to the separated-column baseline.
+
 The generator is now restored to the all-B.Cu pair-corridor authoring path
 used for the retained baseline; the rejected pre-clock transition code is no
 longer active in the reproducible path.
