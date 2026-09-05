@@ -13,7 +13,8 @@ def main():
  b=pcbnew.LoadBoard(str(BASE)); n=b.FindNet(NET)
  def pad_token(spec):
   ref,pn=spec.split('.',1); return next(p for p in b.FindFootprintByReference(ref).Pads() if str(p.GetNumber())==pn)
- start=mm(pad_token(sys.argv[3] if len(sys.argv)>3 else 'Y1.1').GetPosition()); target=mm(pad_token(sys.argv[5] if len(sys.argv)>5 else 'R23.1').GetPosition()); occ={pcbnew.F_Cu:set(),pcbnew.B_Cu:set()}
+ source_pad=pad_token(sys.argv[3] if len(sys.argv)>3 else 'Y1.1'); target_pad=pad_token(sys.argv[5] if len(sys.argv)>5 else 'R23.1')
+ start=mm(source_pad.GetPosition()); target=mm(target_pad.GetPosition()); occ={pcbnew.F_Cu:set(),pcbnew.B_Cu:set()}
  def mark(l,a,z,inf=.12):
   for x in range(math.floor((min(a[0],z[0])-inf)/STEP),math.ceil((max(a[0],z[0])+inf)/STEP)+1):
    for yy in range(math.floor((min(a[1],z[1])-inf)/STEP),math.ceil((max(a[1],z[1])+inf)/STEP)+1): occ[l].add((x,yy))
@@ -46,7 +47,8 @@ def main():
    if nl!=l and ((nx,ny) in occ[pcbnew.F_Cu] or (nx,ny) in occ[pcbnew.B_Cu]): continue
    ns=(nx,ny,nl); nc=cost[cur]+(12 if nl!=l else 1)
    if nc<cost.get(ns,10**9): cost[ns]=nc; prev[ns]=cur; heappush(q,(nc+abs(nx-g[0])+abs(ny-g[1]),ns))
- goal=(g[0],g[1],pcbnew.B_Cu)
+ target_layer=pcbnew.F_Cu if target_pad.GetLayerSet().Contains(pcbnew.F_Cu) else pcbnew.B_Cu
+ goal=(g[0],g[1],target_layer)
  if goal not in prev: raise RuntimeError(f'no XI passive path {start}->{target}')
  path=[]; cur=goal
  while cur is not None: path.append(cur); cur=prev[cur]

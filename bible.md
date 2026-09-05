@@ -4158,4 +4158,5 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Accepted U7 BRIDGE_3V3 pad-field dogleg: U7.24/30/31 connect to TP5.1 around no-connect pads, reducing opens 396 to 394 with zero new shorts/crossings.
 2026-09-05: Rejected corrected A* clock routing on the integrated board: source/pad crossings were removed, but signal transition vias violated ground-zone clearance and raised DRC to 217; no route promoted.
 2026-09-05: Revalidated the clock A* discriminator with native CLI zone refill: XI reduced opens 394 to 392 with zero shorts/crossings but added five refill-clean clearance/dangling findings (429 to 434); stale-zone route rejected.
+2026-09-05: Corrected clock-support SMD pad layers to F.Cu and confirmed U7 pad authority; preserving real obstacles leaves no bounded XI path to R23.1, so the route was not promoted and requires a moved/reserved clock island.
 2026-09-05: Added U7 pad-net authority regression: corrected candidate passes all 17 schematic-owned U7 endpoint assignments and the prior baseline fails on five omitted pads; no synthetic connectivity edges are used.

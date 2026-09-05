@@ -899,3 +899,11 @@ candidate for all 17 schematic-owned U7 endpoints and fails on the prior
 integrated baseline for the five omitted clock/3V3 pads. This is now a
 regression gate for subsequent support routing; it derives assertions from
 serialized pad net identity and supplies no connectivity edges.
+
+The clock-support footprint audit found a second authoring defect: top-side
+Y1/R23/C42/C43 footprints had their SMD copper pads serialized on B.Cu. A
+disposable correction restores their pads to F.Cu and passes the U7
+pad-authority audit with native DRC reporting no shorts/crossings. With the
+real pad obstacles preserved, bounded A* finds no legal XI path to R23.1;
+this route is not promoted and the next clock island must move or use a
+separately reserved corridor.

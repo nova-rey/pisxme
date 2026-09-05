@@ -1062,6 +1062,13 @@ early-via route that added six DRC violations without closing an open. The
 next valid storage repair must regenerate the CFG/support neighborhood with
 the U7 pad field and existing SATA corridor reserved together.
 
+The clock support footprints were also malformed at the layer level:
+Y1/R23/C42/C43 are F.Cu-mounted SMDs but their pads were B.Cu-only. The
+correction is native-audit-clean, but preserving the corrected pad field
+leaves no legal bounded XI path from U7.52 to R23.1. This is a placement/
+corridor result, not permission to retain impossible pad layers or use a
+maze route.
+
 ## Accepted SATA pad-field repair — 2026-09-05
 
 The native U7 RX-N stitch is accepted as bounded progress. It connects U7.5
