@@ -942,6 +942,14 @@ native PCB shows `U8` is SERVICE USB2 ESD; Ethernet ESD is `U6`/`U9`
 Ethernet set `U6`/`U9` plus `J2`. This does not promote moved copper or relax
 Phase 24 acceptance gates.
 
+## Current mechanically conservative candidate
+
+The first ETH_WEST ESD coordinates overlapped the native J7 body and are not
+acceptable. The corrected disposable study
+`PHASE24_MACRO_ETH_WEST_OUTBOARD.kicad_pcb` places U6/U9 at `(20,104)/(26,104)`
+and J2 at `(15,145)`, with native bbox checks showing no J7-body overlap.
+Complete live-pad routing and native validation remain outstanding.
+
 ## ETH_WEST trial result
 
 The independent review recommends the west-edge coherent Ethernet move. The
@@ -951,3 +959,9 @@ is a placement-plus-authoring failure caused by carrying reference copper
 through the acreage board, not evidence against the CM5IO Ethernet
 architecture. The next authorized step is obstacle-aware regeneration from
 native moved pads.
+
+The initial ETH_WEST ESD coordinates were inside the native J7 body bbox and
+are not mechanically accepted. A corrected outboard study,
+`PHASE24_MACRO_ETH_WEST_OUTBOARD`, places U6/U9 at `(20,104)/(26,104)` and J2
+at `(15,145)`. It remains disposable pending complete regenerated routing
+and native clearance/connectivity evidence.

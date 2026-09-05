@@ -739,6 +739,14 @@ PCB identity is `U8` = SERVICE USB2 ESD (`Texas_DRT_3`), while Ethernet ESD is
 and `J2`; native geometry and candidate generation are corrected accordingly.
 This is a documentation correction, not a validation waiver.
 
+## ETH_WEST_OUTBOARD placement study
+
+The initial ETH_WEST ESD coordinates were inside the native J7 body bbox and
+were rejected mechanically. `PHASE24_MACRO_ETH_WEST_OUTBOARD.kicad_pcb` moves
+U6/U9 to `(20,104)/(26,104)` and J2 to `(15,145)`. Native bbox inspection
+shows no J7-body intersection for those three Ethernet bodies. It is not yet
+an accepted routed candidate.
+
 ## ETH_WEST trial rejected
 
 The independent review selected `ETH_WEST` as the best macro candidate. A
@@ -747,3 +755,9 @@ but native DRC reported 571 violations, 123 unconnected records, 12 shorts,
 and 20 crossings because translated copper entered unrelated acreage
 geometry. The result is rejected; live-pad obstacle-aware regeneration is
 required next.
+
+The first west study's ESD coordinates were also identified as lying within
+the native CM5 body bbox. A corrected `PHASE24_MACRO_ETH_WEST_OUTBOARD`
+placement study puts U6/U9 west of that body at `(20,104)/(26,104)` while
+retaining the west-edge J2. It is the current mechanically conservative
+Ethernet placement candidate; no copper has yet been promoted.

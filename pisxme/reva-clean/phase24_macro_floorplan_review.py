@@ -50,6 +50,7 @@ def candidate(name,moves):
   f=x.FindFootprintByReference(ref); f.SetPosition(pcbnew.VECTOR2I_MM(px,py)); f.SetOrientationDegrees(rot)
  x.Save(str(R/f'PHASE24_MACRO_{name}.kicad_pcb'))
 candidate('ETH_WEST',{'J2':(15,145,180),'U6':(42,88,-90),'U9':(48,88,-90)})
+candidate('ETH_WEST_OUTBOARD',{'J2':(15,145,180),'U6':(20,104,-90),'U9':(26,104,-90)})
 candidate('ETH_SOUTH',{'J2':(75,160,180),'U6':(42,88,-90),'U9':(48,88,-90)})
 candidate('STORAGE_LOCAL',{'U7':(95,120,180),'J3':(145,125,90)})
 print(R/'PHASE24_MACRO_FLOORPLAN_REVIEW.md')
