@@ -528,6 +528,24 @@ high-speed envelope before descending, and preserve the passing
 minimal-fixture topology. Phase 19 remains active; Phase 20+ remains
 untouched.
 
+## 2026-09-04 coordinated U7 rotation-270 trial
+
+The generator invocation path was corrected and used to produce a distinct
+coordinated candidate with U7 at `(140,130)`, rotation `270` degrees, and J3
+at `(180,115)`. This is the first complete candidate in the new orientation;
+the U7 clock row is on the west side while the SATA pins remain on the
+opposite local side. The USB3/SATA island was regenerated from the Phase 18
+ancestor without modifying PCIe.
+
+After adding the authoritative 40 MHz clock network and the south support
+island, native KiCad DRC measured `486` violations and `416` unconnected
+items. The candidate is rejected. New records show that the generated SATA
+launch still occupies the local U7 pad-row escape, and the trial's ordinary
+clock vias also encounter inherited unfilled-plane/zone rule records. This is
+not evidence against rotation 270: it identifies the required next repair as
+clock-aware SATA pad-row generation plus a native zone-fill/reload pass.
+Phase 19 remains active; Phase 20+ remains untouched.
+
 ## 2026-09-04 coordinated-generator invocation correction
 
 The coordinated storage generator previously depended on host-side `P19_*`

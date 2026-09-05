@@ -261,7 +261,13 @@ def main():
  # Refill the inherited reference planes after adding all ordinary through
  # vias.  Native DRC otherwise evaluates stale zone geometry as a collision
  # at every new F.Cu/B.Cu transition.
- pcbnew.ZONE_FILLER(b).Fill(b.Zones())
+ # Keep the SWIG zone container alive while native KiCad fills it.  Passing
+ # the temporary generator expression directly can segfault in KiCad 10's
+ # Flatpak after a footprint rotation/materialization sequence.
+ if os.environ.get('P19_FILL_ZONES', '0') == '1':
+  _zones = list(b.Zones())
+  _filler = pcbnew.ZONE_FILLER(b)
+  _filler.Fill(_zones)
  b.Save(str(OUT))
  # The donor PCB carries stale duplicate net fields on U7 pads 5-12.  SWIG
  # crashes when those pad objects are nulled after the net synchronization,
