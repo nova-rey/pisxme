@@ -913,3 +913,29 @@ refill: it reduced the open census to `384`, but introduced nine real F.Cu
 crossings between clock lanes and the existing `BRIDGE_SATA_TX_N` launch.
 The placement is not promoted; the next candidate must reserve the SATA
 corridor and separate clock layers before routing.
+
+## Whole-board macro-floorplan discriminator — 2026-09-05
+
+Local clock/SATA experiments are paused pending this review. The current
+native-loaded integrated candidate is `PHASE24_U7_3V3_CURRENT_LOCAL.kicad_pcb`.
+The review script and disposable placement-only boards are
+`phase24_macro_floorplan_review.py`, `PHASE24_MACRO_*.kicad_pcb`, and
+`PHASE24_MACRO_FLOORPLAN_REVIEW.md`. They use KiCad-transformed pad positions
+from J7's carrier mating view; moved copper is explicitly not accepted.
+
+Native source launches are: Ethernet centroid `(34.50,99.90)`, PCIe
+`(69.60,101.50)`, USB3 `(70.04,105.30)`, and SERVICE `(66.96,99.30)` mm.
+Current island centroid distances are approximately Ethernet `59.2` mm,
+PCIe `81.2` mm, USB3/storage `67.6` mm, and SERVICE `22.0` mm. The current
+PCIe endpoint J1 is the closest validated high-speed anchor and remains the
+preferred frozen anchor. SERVICE is the only already-local interface.
+
+The CM5-neighborhood candidate reduces Ethernet source-to-island centroid
+distance to `5.1` mm and storage to `51.0` mm; the ETH/storage swap candidate
+reduces Ethernet to `22.5` mm and storage to `52.6` mm. The current upper
+Ethernet placement and mid-acreage storage/clock placement are therefore
+materially nonlocal and compete for the PCIe/power/SATA corridors. These
+candidate boards are placement topology probes only; no island has been
+promoted and no downstream routing has been regenerated yet. The next gate
+is consultant/reviewer selection of a coherent macro-floorplan, followed by
+fresh routing and full affected-subsystem validation.

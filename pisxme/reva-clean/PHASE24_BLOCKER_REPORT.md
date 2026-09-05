@@ -1111,3 +1111,23 @@ The U7 pad-net authority regression now passes on the corrected candidate and
 fails on the prior baseline, specifically catching U7.30/U7.31/U7.52/U7.53/
 U7.54 no-net serialization. Routing is still required after this mapping
 gate; no synthetic graph connectivity is used.
+
+## Current discriminator: whole-board macro-floorplan review — 2026-09-05
+
+The clock/SATA blocker is not being attacked locally while macro-placement is
+undetermined. Native geometry shows the current Ethernet island is about
+`59.2` mm from the CM5 GBE launch and the complete storage island about
+`67.6` mm from the CM5 USB3 launch. The CM5-neighborhood disposable candidate
+reduces those centroid distances to `5.1` and `51.0` mm respectively; the
+ETH/storage swap reduces them to `22.5` and `52.6` mm. Current PCIe J1 remains
+the least-disruptive high-speed anchor relative to its CM5 group and is not
+moved by these probes.
+
+This is a recoverable placement discriminator, not a terminal architecture
+failure. The generated candidate boards contain inherited copper that is
+invalidated by the footprint moves and are deliberately not routing passes.
+The exact source coordinates, component transforms, candidate definitions,
+and current copper/via census are in
+`PHASE24_MACRO_FLOORPLAN_REVIEW.md`. Before any further detailed clock/SATA
+repair, choose a coherent island arrangement and regenerate every affected
+route from native pad authority.

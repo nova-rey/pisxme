@@ -1,6 +1,6 @@
 # Phase 24 macro-floorplan review
 
-Baseline: `PHASE24_CM5_GROUND_RIGHT_SAME_ROWS.kicad_pcb` (native-loaded last accepted Phase 24 integrated candidate).
+Baseline: `PHASE24_U7_3V3_CURRENT_LOCAL.kicad_pcb` (native-loaded current integrated candidate).
 All coordinates below are extracted after KiCad transforms; existing copper is not silently treated as valid after a footprint move.
 
 | footprint | value | center (mm) | rotation | side | native body bbox |
@@ -26,12 +26,12 @@ All coordinates below are extracted after KiCad transforms; existing copper is n
 
 ## CM5 pin-group to island distances
 
-| group | CM5 native pads | current island | nearest pad distance (mm) |
-|---|---:|---|---:|
-| Ethernet | 8 | U6, U9, J2 | 50.70 |
-| PCIe | 7 | J1 | 55.39 |
-| USB3-storage | 4 | U7, J3 | 53.81 |
-| SERVICE-USB2 | 2 | J4 | 19.96 |
+| group | CM5 native pads | CM5 launch centroid (mm) | island centroid (mm) | centroid distance (mm) | nearest pad distance (mm) |
+|---|---:|---:|---:|---:|---:|
+| Ethernet | 8 | (34.50,99.90) | (77.76,59.56) | 59.15 | 50.70 |
+| PCIe | 7 | (69.60,101.50) | (150.00,90.00) | 81.22 | 55.39 |
+| USB3-storage | 4 | (70.04,105.30) | (132.11,132.11) | 67.61 | 36.06 |
+| SERVICE-USB2 | 2 | (66.96,99.30) | (45.00,100.00) | 21.97 | 19.96 |
 
 ## High-speed copper census
 
@@ -50,12 +50,28 @@ All coordinates below are extracted after KiCad transforms; existing copper is n
 
 `STORAGE_LOCAL`: move U7 to `(95,120)` and retain J3 as the outboard M.2 endpoint `(145,125)`, keeping the long 2280 mechanical envelope while shortening the CM5 USB3 launch. USB3/SATA copper and clock/support routes must be regenerated.
 
+`SWAP_ETH_STORAGE`: move the complete Ethernet endpoint set to the south-west/CM5 side and move the complete storage island north-west/mid-acreage, explicitly testing whether both interfaces gain monotonic corridors without consuming the PCIe launch region.
+
+`CM5_NEIGHBORHOODS`: place ESD/support near the GBE launch, U7/clock near USB3, SERVICE near its USB2 launch, and retain J1 at the PCIe launch. This is a placement-only topology candidate.
+
 These are disposable placement candidates, not accepted routing. Candidate selection requires native DRC/connectivity, pair metrics, references, mechanical access, and revalidation of every affected frozen subsystem.
 
-The earlier `(42,88)/(48,88)` ESD study overlaps the native J7 body and is
-rejected mechanically. `ETH_WEST_OUTBOARD` places U6/U9 at `(20,104)/(26,104)`
-and J2 at `(15,145)`; native bbox checks show no J7-body intersection.
-`ETH_EAST_ESD_WEST_JACK` is the cross-class alternative, placing U6/U9 at
-`(82,104)/(76,104)` and only J2 at `(15,145)`, also clear of J7. Both remain
-placement-only until live-pad copper is regenerated and native DRC/connectivity
-passes.
+## Candidate centroid comparison
+
+| candidate | Ethernet island centroid | Storage island centroid | SERVICE centroid | Ethernet source distance (mm) | USB3 source distance (mm) |
+|---|---:|---:|---:|---:|---:|
+| `CURRENT` | (77.8,59.6) | (132.1,132.1) | (45.0,100.0) | 59.2 | 67.6 |
+| `ETH_WEST` | (28.0,121.5) | (132.1,132.1) | (45.0,100.0) | 22.5 | 67.6 |
+| `ETH_WEST_OUTBOARD` | (18.5,128.4) | (132.1,132.1) | (45.0,100.0) | 32.7 | 67.6 |
+| `ETH_EAST_ESD_WEST_JACK` | (42.8,128.4) | (132.1,132.1) | (45.0,100.0) | 29.7 | 67.6 |
+| `ETH_SOUTH` | (62.0,129.9) | (132.1,132.1) | (45.0,100.0) | 40.7 | 67.6 |
+| `STORAGE_LOCAL` | (77.8,59.6) | (121.4,123.5) | (45.0,100.0) | 59.2 | 54.5 |
+| `SWAP_ETH_STORAGE` | (28.0,121.5) | (119.7,122.8) | (45.0,100.0) | 22.5 | 52.6 |
+| `CM5_NEIGHBORHOODS` | (30.6,103.2) | (117.0,125.1) | (84.0,100.0) | 5.1 | 51.0 |
+
+## Whole-board interpretation
+
+- `J7` is on B.Cu at `(35.0,130.0)`; Ethernet exits the left mating-side column at `(32.96–36.04,99.1–100.7)`, while PCIe/USB3/SERVICE exit the right column at approximately `(66.96–70.04,99.3–106.7)`.
+- PCIe `J1` is the closest high-speed endpoint to its CM5 launch and remains the anchor; moving it would spend the most sensitive validated geometry for little gain.
+- SERVICE `J4` is the only currently local interface. Ethernet and storage are both materially remote; the current top Ethernet island and mid-board storage island occupy corridors that compete with PCIe/power and expose the clock/SATA congestion.
+- The migration/swap candidates are topology probes only. They intentionally invalidate affected copper and require complete regeneration before any promotion.
