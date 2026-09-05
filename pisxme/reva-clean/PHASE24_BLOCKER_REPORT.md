@@ -428,3 +428,13 @@ single F.Cu bridge-1V1 trunk to C44-C47. Native DRC reported 202 violations,
 including a rail/POWER_GND short and track crossings. The variant is rejected;
 the prior no-crossing U5 island remains the better starting point, subject to
 correcting its source/return geometry.
+## Complete authoritative component baseline
+
+`phase24_materialize_all_authoritative_parts.py` materializes Y1, R23, C42,
+C43, and C44-C47 from the clean local footprint library with explicit
+schematic net maps. `phase24_authoritative_parts_audit.py` passes all eight
+references and every pad-net assignment. Native DRC for
+`PHASE24_ALL_AUTHORITATIVE_PARTS.kicad_pcb` reports 187 inherited violations
+and 406 unconnected pads, but no `shorting_items` or `tracks_crossing`
+records. This proves component/net authority, while routing and full parity
+remain open.
