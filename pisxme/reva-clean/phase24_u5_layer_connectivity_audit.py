@@ -1,4 +1,8 @@
-"""Physical U5 connectivity audit from serialized PCB copper only."""
+"""Audit U5 connectivity using KiCad's native serialized-copper model.
+
+The target table is assertion-only. Connectivity comes from the saved PCB's
+actual pads, tracks, vias and filled zones after KiCad rebuilds connectivity.
+"""
 from pathlib import Path
 import sys
 import pcbnew
@@ -10,123 +14,71 @@ TARGET = {
     "POWER_GND": ["R20.2", "C44.2", "C45.2", "C46.2", "C47.2"],
 }
 
+def token(pad):
+    return f"{pad.GetParentFootprint().GetReference()}.{pad.GetNumber()}"
 
-def node(net, layer, point):
-    return (net, int(layer), int(point.x), int(point.y))
+def pads_by_token(board):
+    return {token(pad): pad for fp in board.GetFootprints() for pad in fp.Pads()}
 
-
-def orient(a, b, c):
-    return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x)
-
-
-def between(a, b, c):
-    return min(a.x, b.x) <= c.x <= max(a.x, b.x) and min(a.y, b.y) <= c.y <= max(a.y, b.y)
-
-
-def intersects(a, b, c, d):
-    # Exact integer geometry is sufficient for the orthogonal KiCad tracks in
-    # this island, including endpoint-to-interior T junctions.
-    return ((orient(a, b, c) == 0 and between(a, b, c)) or
-            (orient(a, b, d) == 0 and between(a, b, d)) or
-            (orient(c, d, a) == 0 and between(c, d, a)) or
-            (orient(c, d, b) == 0 and between(c, d, b)) or
-            (orient(a, b, c) > 0) != (orient(a, b, d) > 0) and
-            (orient(c, d, a) > 0) != (orient(c, d, b) > 0))
-
-
-def pad_layers(pad):
-    layers = pad.GetLayerSet()
-    return [layer for layer in (pcbnew.F_Cu, pcbnew.B_Cu) if layers.Contains(layer)]
-
+def native_components(board):
+    """Return native connected pad sets; never add expected graph edges."""
+    board.BuildConnectivity()
+    connectivity = board.GetConnectivity()
+    pads = pads_by_token(board)
+    components = {}
+    for name, members in TARGET.items():
+        for member in members:
+            if member not in pads:
+                raise AssertionError(f"missing serialized pad {member}")
+            pad = pads[member]
+            if pad.GetNetname() != name:
+                raise AssertionError(f"wrong net on {member}: {pad.GetNetname()} != {name}")
+            connected = {token(item) for item in connectivity.GetConnectedItems(pad)
+                         if type(item).__name__ == "PAD"}
+            connected.add(member)
+            components[member] = connected
+        expected = set(members)
+        if not all(expected <= components[member] for member in members):
+            details = {m: sorted(components[m] & expected) for m in members}
+            raise AssertionError(f"{name} target pads are not natively connected: {details}")
+    return components
 
 def audit(board_path=DEFAULT_BOARD):
     board = pcbnew.LoadBoard(str(board_path))
-    # KiCad's Python binding uses a board layer object for B.Cu in some
-    # releases; normalize all layer IDs through the serialized item layer.
-    parent = {}
-
-    def find(value):
-        parent.setdefault(value, value)
-        if parent[value] != value:
-            parent[value] = find(parent[value])
-        return parent[value]
-
-    def join(left, right):
-        left, right = find(left), find(right)
-        if left != right:
-            parent[right] = left
-
-    segments = []
-    # Edges come only from serialized track geometry and via transitions.
-    # Net identity is part of each node, so unlike nets cannot join.
-    for item in board.GetTracks():
-        net = item.GetNetname()
-        if not net:
-            continue
-        if isinstance(item, pcbnew.PCB_VIA):
-            join(node(net, pcbnew.F_Cu, item.GetPosition()),
-                 node(net, pcbnew.B_Cu, item.GetPosition()))
-        else:
-            layer = item.GetLayer()
-            join(node(net, layer, item.GetStart()), node(net, layer, item.GetEnd()))
-            segments.append((net, layer, item.GetStart(), item.GetEnd()))
-
-    # Join same-net track segments that physically intersect, not just those
-    # whose endpoints coincide.  This captures serialized T-junctions without
-    # assuming any expected route or adding synthetic edges.
-    for i, (net_a, layer_a, a, b) in enumerate(segments):
-        for net_c, layer_c, c, d in segments[i + 1:]:
-            if net_a == net_c and layer_a == layer_c and intersects(a, b, c, d):
-                join(node(net_a, layer_a, a), node(net_c, layer_c, c))
-
-    # A pad joins copper only on its actual layer set and only at its exact
-    # serialized position.  No expected edge is injected here.
-    pad_nodes = {}
-    for footprint in board.GetFootprints():
-        for pad in footprint.Pads():
-            net = pad.GetNetname()
-            if not net:
-                continue
-            key = f"{footprint.GetReference()}.{pad.GetNumber()}"
-            pad_nodes[key] = [node(net, layer, pad.GetPosition()) for layer in pad_layers(pad)]
-            for pad_node in pad_nodes[key]:
-                find(pad_node)
-
-    # Zone contact is represented by filled geometry.  A same-net copper point
-    # receives a zone edge only when its serialized point is inside that fill.
-    for zone in board.Zones():
-        net = zone.GetNetname()
-        if not net or not zone.IsFilled():
-            continue
-        layer = zone.GetLayer()
-        filled = zone.GetFilledPolysList(layer)
-        zone_key = (net, int(layer), "ZONE", id(zone))
-        find(zone_key)
-        for item in board.GetTracks():
-            if isinstance(item, pcbnew.PCB_VIA) and item.GetNetname() == net:
-                if filled.Contains(item.GetPosition()):
-                    join(node(net, layer, item.GetPosition()), zone_key)
-        for key, points in pad_nodes.items():
-            for point in points:
-                if point[0] == net and point[1] == int(layer):
-                    if filled.Contains(pcbnew.VECTOR2I(point[2], point[3])):
-                        join(point, zone_key)
-
-    for net, members in TARGET.items():
-        roots = []
-        for token in members:
-            if token not in pad_nodes:
-                raise AssertionError(f"missing serialized pad {token}")
-            if not pad_nodes[token]:
-                raise AssertionError(f"pad has no copper layer {token}")
-            if any(pad_node[0] != net for pad_node in pad_nodes[token]):
-                raise AssertionError(f"wrong net on {token}: {pad_nodes[token]}")
-            roots.extend(find(pad_node) for pad_node in pad_nodes[token])
-        if len(set(roots)) != 1:
-            raise AssertionError(f"{net} target pads are not physically connected: {set(roots)}")
+    native_components(board)
     return True
 
+def signature(item):
+    return (item.GetNetname(), int(item.GetLayer()), item.GetStart().x,
+            item.GetStart().y, item.GetEnd().x, item.GetEnd().y, item.GetWidth())
+
+def negative_controls(board_path=DEFAULT_BOARD):
+    """Prove removing an actually connected trace makes the audit fail."""
+    source = pcbnew.LoadBoard(str(board_path))
+    native_components(source)
+    source.BuildConnectivity()
+    pads = pads_by_token(source)
+    candidates = []
+    for member in TARGET["/REGULATORS/BRIDGE_1V1"]:
+        for item in source.GetConnectivity().GetConnectedItems(pads[member]):
+            if type(item).__name__ == "PCB_TRACK":
+                candidates.append((member, signature(item)))
+    for member, wanted in candidates:
+        trial = pcbnew.LoadBoard(str(board_path))
+        victim = next((item for item in trial.GetTracks()
+                       if type(item).__name__ == "PCB_TRACK" and signature(item) == wanted), None)
+        if victim is None:
+            continue
+        trial.RemoveNative(victim)
+        try:
+            native_components(trial)
+        except AssertionError:
+            return {"removed_member": member, "trace_removal_fails": True}
+    raise AssertionError("negative control failed: no necessary target trace was found")
 
 if __name__ == "__main__":
-    audit(Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_BOARD)
-    print("Phase24 U5 physical connectivity audit: PASS; serialized pads/tracks/vias/zones prove both target groups")
+    board_path = Path(sys.argv[1]) if len(sys.argv) > 1 else DEFAULT_BOARD
+    audit(board_path)
+    print("Phase24 U5 native connectivity audit: PASS")
+    if len(sys.argv) > 2 and sys.argv[2] == "--negative-controls":
+        print("negative controls:", negative_controls(board_path))

@@ -735,3 +735,12 @@ items, including clock/SATA crossings, clock/J3 interactions, and
 shorts/clearance failures. This rejects the fixed-coordinate transplant only;
 the oracle topology remains valid and requires obstacle-aware local
 regeneration around the current U7/storage launch.
+
+## U5 audit regression fixed
+
+The former U5 audit's synthetic geometry graph was replaced with KiCad's
+native saved-board connectivity rebuild. Assertions identify required pads
+only; pads, tracks, vias, layers, nets, and filled zones supply the evidence.
+The saved U5 board passes native connectivity, while a disposable removal of
+a native-connected U5.9 trace fails the audit. This removes the false-pass
+risk without waiving any remaining board connection.

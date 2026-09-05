@@ -493,3 +493,12 @@ reported 288 violations and 166 unconnected items, including clock/SATA
 crossings, clock/J3 interactions, and shorts/clearance failures. Rejected for
 acreage integration; the oracle topology remains valid and must be regenerated
 around the current serialized U7/storage geometry.
+
+## U5 connectivity audit corrected
+
+`phase24_u5_layer_connectivity_audit.py` now uses KiCad's native connectivity
+rebuild over the saved PCB and checks asserted target pads against native
+connected-item components. It no longer creates graph edges from expected
+connectivity. The saved U5 board passes, and the regression negative control
+removes an actually connected U5.9 trace in a disposable board object; the
+audit then fails as required. No validation severity was changed.
