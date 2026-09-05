@@ -35,7 +35,7 @@ def main():
  # Remove all inherited copper.  This discriminator must contain only the
  # post-rotation U7 clock/support topology authored below.
  for t in list(b.GetTracks()):
-  b.Remove(t)
+  b.RemoveNative(t)
  # This discriminator isolates the clock geometry; full-board plane and
  # return validation is performed only after a clean local route exists.
  for z in list(b.Zones()): b.Remove(z)
@@ -49,11 +49,12 @@ def main():
  # U7-to-Y1 source legs are derived from the post-rotation pad positions and
  # leave the U7 lead field before changing layers.
  S(b,XO,(124.5,142),(127,140)); S(b,XO,(127,140),(134,140)); X(b,XO,(134,140)); S(b,XO,(134,140),(136,140),pcbnew.F_Cu); S(b,XO,(136,140),(136,146.1),pcbnew.F_Cu); X(b,XO,(136,146.1)); S(b,XO,(136,146.1),(137,146.1),pcbnew.B_Cu); X(b,XO,(137,146.1)); S(b,XO,(137,146.1),ps['Y1']['3'],pcbnew.F_Cu)
- S(b,VS,(124.5,142.5),(128,142.5)); X(b,VS,(128,142.5)); S(b,VS,(128,142.5),(132,142.5),pcbnew.B_Cu); S(b,VS,(132,142.5),(132,143.9),pcbnew.B_Cu); S(b,VS,(132,143.9),(139.15,143.9),pcbnew.B_Cu); X(b,VS,(139.15,143.9)); S(b,VS,(139.15,143.9),ps['Y1']['2'],pcbnew.F_Cu)
- S(b,XI,(124.5,143),(127,145.5)); X(b,XI,(130,145.5)); S(b,XI,(127,145.5),(130,145.5),pcbnew.B_Cu); S(b,XI,(130,145.5),(126,145.5),pcbnew.B_Cu); S(b,XI,(126,145.5),(126,145),pcbnew.B_Cu); S(b,XI,(126,145),(140.85,145),pcbnew.B_Cu); X(b,XI,(140.85,145)); S(b,XI,(140.85,145),ps['Y1']['1'],pcbnew.F_Cu)
+ S(b,VS,(124.5,142.5),(128,142.5)); X(b,VS,(128,142.5)); S(b,VS,(128,142.5),(132,142.5),pcbnew.B_Cu); S(b,VS,(132,142.5),(132,143.9),pcbnew.B_Cu); S(b,VS,(132,143.9),(138.5,143.9),pcbnew.B_Cu); X(b,VS,(138.5,143.9)); S(b,VS,(138.5,143.9),ps['Y1']['2'],pcbnew.F_Cu)
+ S(b,XI,(124.5,143),(127,145.5)); S(b,XI,(127,145.5),(130,145.5),pcbnew.F_Cu); X(b,XI,(130,145.5)); S(b,XI,(130,145.5),(126,145.5),pcbnew.B_Cu); S(b,XI,(126,145.5),(126,145),pcbnew.B_Cu); S(b,XI,(126,145),(140.85,145),pcbnew.B_Cu); X(b,XI,(140.85,145)); S(b,XI,(140.85,145),ps['Y1']['1'],pcbnew.F_Cu)
  S(b,XO,(137,146.1),(137,158),pcbnew.B_Cu); X(b,XO,(137,158)); S(b,XO,(137,158),(155,158),pcbnew.F_Cu); X(b,XO,(155,158)); S(b,XO,(155,158),(156,165),pcbnew.B_Cu); X(b,XO,(156,165)); S(b,XO,(156,165),ps['R23']['2'],pcbnew.F_Cu); S(b,XO,(155,158),(210,158),pcbnew.F_Cu); X(b,XO,(210,158)); S(b,XO,(210,158),(209,164.5),pcbnew.B_Cu); X(b,XO,(209,164.5)); S(b,XO,(209,164.5),ps['C43']['1'],pcbnew.F_Cu)
  S(b,VS,(132,143.9),(115,143.9),pcbnew.B_Cu); S(b,VS,(115,143.9),(115,170),pcbnew.B_Cu); S(b,VS,(115,170),(126,170),pcbnew.B_Cu); X(b,VS,(126,170)); S(b,VS,(126,170),ps['C42']['2'],pcbnew.F_Cu)
  S(b,VS,ps['Y1']['4'],(145,146.1)); X(b,VS,(145,146.1)); S(b,VS,(145,146.1),(145,140),pcbnew.B_Cu); S(b,VS,(145,140),(195,140),pcbnew.B_Cu); S(b,VS,(195,140),(195,170),pcbnew.B_Cu); S(b,VS,(195,170),(212.5,170),pcbnew.B_Cu); X(b,VS,(212.5,170)); S(b,VS,(212.5,170),(212.5,165),pcbnew.F_Cu); S(b,VS,(212.5,165),ps['C43']['2'],pcbnew.F_Cu)
+ S(b,VS,(145,146.1),(145,148),pcbnew.B_Cu); X(b,VS,(145,148)); S(b,VS,(145,148),(112,148),pcbnew.F_Cu); X(b,VS,(112,148)); S(b,VS,(112,148),(112,138),pcbnew.F_Cu); X(b,VS,(112,138)); S(b,VS,(112,138),(138.5,138),pcbnew.B_Cu); S(b,VS,(138.5,138),(138.5,143.9),pcbnew.B_Cu)
  S(b,XI,ps['Y1']['1'],(150,145)); X(b,XI,(150,145)); S(b,XI,(150,145),(150,165),pcbnew.B_Cu); S(b,XI,(150,165),(154,165),pcbnew.B_Cu); X(b,XI,(154,165)); S(b,XI,(154,165),ps['R23']['1'],pcbnew.F_Cu); S(b,XI,(150,160),(124,160),pcbnew.B_Cu); S(b,XI,(124,160),(124,164.5),pcbnew.B_Cu); X(b,XI,(124,164.5)); S(b,XI,(124,164.5),ps['C42']['1'],pcbnew.F_Cu)
  # Regulator capacitor materialization is intentionally a separate experiment.
  if b.Zones(): pcbnew.ZONE_FILLER(b).Fill(b.Zones())

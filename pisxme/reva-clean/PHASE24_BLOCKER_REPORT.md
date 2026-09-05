@@ -73,3 +73,17 @@ footprint errors. The target XI/XO/VSSOSC groups still appear in the native
 unconnected report, so this is not yet connectivity proof. The remaining
 issue is authoring/connectivity attachment through the generated layer
 transitions; no production board or Phase 24 gate has been promoted.
+
+## Clock-support topology pass
+
+After correcting the SWIG-safe copper reset and separating the common
+VSSOSC return with an additional ordinary-via layer transition, the complete
+U7/Y1/R23/C42/C43 discriminator was rerun as
+`PHASE24_STORAGE_ROT90_PROBE-native5-drc.rpt`. Native DRC reports zero
+`tracks_crossing`, zero `shorting_items`, zero `track_width`, and zero
+footprint errors. The target XI/XO/VSSOSC nets do not appear in the
+unconnected-items section. The report still contains `499` unrelated
+unconnected items because all inherited acreage copper is intentionally
+removed; therefore this closes only the local clock-support topology proof.
+Next work is to transplant this generated support into a coordinated acreage
+candidate and materialize C44-C47 against the actual U5 rail pads.
