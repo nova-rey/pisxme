@@ -7,7 +7,7 @@ copper is retained; the source CM5 pads, bridge, socket, split caps, and
 from pathlib import Path
 import re, pcbnew
 R=Path(__file__).resolve().parent
-BASE=R/'ACREAGE_CLOCK_CANDIDATE5.kicad_pcb'
+BASE=R/__import__('os').environ.get('P19_BASE','ACREAGE_CLOCK_CANDIDATE5.kicad_pcb')
 SYNC=R/'.phase19_open_island_sync.kicad_pcb'
 OUT=R/'PHASE19_OPEN_ISLAND_LIVE.kicad_pcb'
 PREP=__import__('os').environ.get('P19_PREP','0')=='1'

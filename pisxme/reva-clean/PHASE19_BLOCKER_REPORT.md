@@ -936,3 +936,17 @@ clock/SATA escape still has crossings and the disposable donor retains
 unrelated regulator connectivity debt. No clean production artifact, PCIe
 ancestor, or architecture was changed; Phase 19 remains open and Phase 20+
 remains untouched.
+
+## 2026-09-05 topology-vs-integration storage fixture
+
+To discriminate inherited-acreage debt from the storage authoring topology, a
+textual native S-expression fixture was created from the clock-bearing donor,
+retaining only J7, U7, J3, C30-C33, Y1, R23, C42, and C43 and removing all
+tracks/zones without SWIG mutation. KiCad accepted the fixture and native DRC
+reported `92` violations / `78` unconnected items before routing. The same
+coordinated live-endpoint generator then routed the fixture; native DRC
+reported `322` violations / `70` unconnected items with candidate SATA and
+clock crossings/shorts. This proves the present authoring topology itself is
+not yet valid; it is not an acreage integration pass. The fixture and its
+S-expression preparation script are retained as a regression/debug oracle.
+Phase 19 remains open and Phase 20+ remains untouched.

@@ -32,3 +32,10 @@ Follow-up farther-outboard bridge: U7 `(280,105)` rotation `270`, J3
 `(200,140)` rotation `90`, with C30-C33 between bridge and socket. Native DRC
 measured `384` violations and `476` unconnected items. Rejected; clock/SATA
 local escape crossings remain.
+
+Topology-vs-integration fixture: the balanced S-expression preparation path
+created a KiCad-loadable storage-only donor with `92` DRC violations / `78`
+unconnected items before routing. The coordinated generator produced `322`
+violations / `70` unconnected items after routing; candidate SATA/clock
+crossings remain. This fixture is rejected and does not establish Phase 19
+closure.
