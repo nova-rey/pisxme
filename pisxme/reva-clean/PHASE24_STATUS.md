@@ -730,3 +730,11 @@ unconnected records, and one `POWER_GND`/`BRIDGE_1V1` short. Three
 single-segment discriminators reproduce the same short class (210/119/1/0,
 211/122/1/0, and 211/122/1/0). The corrected U5 native-connectivity audit
 still passes independently; no U5 field copper is promoted.
+
+## Macro-floorplan identity correction
+
+The macro review's earlier `U8` Ethernet label was incorrect. Native-loaded
+PCB identity is `U8` = SERVICE USB2 ESD (`Texas_DRT_3`), while Ethernet ESD is
+`U6`/`U9` = `TPD4EUSB30`. Proposed Ethernet island moves apply to `U6`/`U9`
+and `J2`; native geometry and candidate generation are corrected accordingly.
+This is a documentation correction, not a validation waiver.

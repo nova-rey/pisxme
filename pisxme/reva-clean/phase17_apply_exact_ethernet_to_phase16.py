@@ -18,6 +18,7 @@ CT2_LAYER_OVERRIDE = os.environ.get("PISXME_CT2_LAYER", "")
 SAFE_CT_LAUNCH = os.environ.get("PISXME_SAFE_CT_LAUNCH", "") == "1"
 SAFE_CT_CLEAR = os.environ.get("PISXME_SAFE_CT_CLEAR", "1") == "1"
 KEEP_FOOTPRINTS = os.environ.get("PISXME_KEEP_FOOTPRINTS", "0") == "1"
+REMOVE_GENERIC_V100 = os.environ.get("PISXME_REMOVE_GENERIC_V100", "1") == "1"
 ETH_DX = float(os.environ.get("PISXME_ETH_DX", "0"))
 ETH_DY = float(os.environ.get("PISXME_ETH_DY", "0"))
 ETH_REFS = {"J2", "U6", "U9", "CCT", "CCT1", "CCT2", "CCT3", "CCT4",
@@ -71,6 +72,7 @@ def main():
     board = pcbnew.LoadBoard(str(BASE))
     source = pcbnew.LoadBoard(str(FIXTURE))
     footprint_pad_names = {}
+    footprint_positions = {}
     for fp in source.GetFootprints():
         if fp.GetReference() in ETH_REFS:
             # Capture scalar pad identity before copying. In KiCad 10 the
@@ -78,6 +80,8 @@ def main():
             # reliably iterable after it is added to another board.
             footprint_pad_names[fp.GetReference()] = [
                 (str(p.GetNumber()), short(p.GetNetname())) for p in fp.Pads()]
+            q = fp.GetPosition()
+            footprint_positions[fp.GetReference()] = (pcbnew.ToMM(q.x), pcbnew.ToMM(q.y))
     tracks = []
     for item in source.GetTracks():
         if short(item.GetNetname()).startswith(PREFIXES):
@@ -94,6 +98,10 @@ def main():
     for item in list(board.GetTracks()):
         if short(item.GetNetname()).startswith(PREFIXES):
             board.Remove(item)
+    if REMOVE_GENERIC_V100:
+        generic_v100 = board.FindFootprintByReference("MECH_V100")
+        if generic_v100 is not None:
+            board.Remove(generic_v100)
     if not KEEP_FOOTPRINTS:
         for ref in ETH_REFS:
             old = board.FindFootprintByReference(ref)
@@ -104,21 +112,26 @@ def main():
         source_fp = source.FindFootprintByReference(ref)
         if source_fp is None:
             raise RuntimeError(f"missing source footprint {ref}")
+        # Capture the source position before detaching the KiCad-10 SWIG
+        # object.  Detached FOOTPRINT copies can expose an opaque position
+        # wrapper until they are attached to the destination board.
+        sx, sy = footprint_positions[ref]
         # Copy, attach, and remap one footprint at a time. This is the
         # KiCad-10-safe ownership pattern used by the validated island helper.
         fp = pcbnew.FOOTPRINT(source_fp)
         fp.SetReference(ref)
         if ETH_DX or ETH_DY:
-            fp.SetPosition(V(xy(fp.GetPosition())[0] + ETH_DX,
-                             xy(fp.GetPosition())[1] + ETH_DY))
+            fp.SetPosition(V(sx + ETH_DX, sy + ETH_DY))
+        # Attach before walking Pads(); KiCad 10 may expose the detached
+        # copy's SWIG container as opaque until board ownership is established.
+        board.Add(fp)
+        attached = board.FindFootprintByReference(ref)
         for number, pname in footprint_pad_names.get(ref, ()):
             if pname:
-                pad = next((p for p in fp.Pads()
-                            if str(p.GetNumber()) == number), None)
+                pad = attached.FindPadByNumber(number)
                 if pad is None:
                     raise RuntimeError(f"missing copied pad {ref}.{number}")
                 pad.SetNetCode(target_net(board, pname).GetNetCode())
-        board.Add(fp)
 
     for record in tracks:
         kind = record[0]

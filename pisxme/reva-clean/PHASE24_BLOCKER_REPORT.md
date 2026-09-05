@@ -933,3 +933,11 @@ movement and are not evidence of routing closure. The next action is to
 select a coherent candidate using consultant/specialist review, then
 regenerate affected Ethernet/storage copper and revalidate all dependent
 subsystems.
+
+## Identity correction
+
+The earlier current-state paragraph mislabeled `U8` as Ethernet ESD. The
+native PCB shows `U8` is SERVICE USB2 ESD; Ethernet ESD is `U6`/`U9`
+(`TPD4EUSB30`). Candidate moves and the macro assessment use the corrected
+Ethernet set `U6`/`U9` plus `J2`. This does not promote moved copper or relax
+Phase 24 acceptance gates.

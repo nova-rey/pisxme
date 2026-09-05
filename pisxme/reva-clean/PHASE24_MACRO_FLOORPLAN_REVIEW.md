@@ -7,6 +7,8 @@ All coordinates below are extracted after KiCad transforms; existing copper is n
 |---|---|---:|---:|---|---|
 | `J7` | `Raspberry-Pi-5-Compute-Module` | `35.00,130.00` | `0.0` | `B.Cu` | `31.44,78.44–71.56,133.56` |
 | `J2` | `A70-112-331N126` | `77.50,53.00` | `180.0` | `F.Cu` | `68.53,41.74–86.47,65.30` |
+| `U6` | `TPD4EUSB30` | `81.10,65.22` | `-90.0` | `F.Cu` | `77.17,64.25–82.85,66.15` |
+| `U9` | `TPD4EUSB30` | `75.10,65.22` | `-90.0` | `F.Cu` | `73.58,64.25–79.03,66.15` |
 | `U8` | `Texas_DRT_3` | `58.00,100.00` | `90.0` | `F.Cu` | `57.27,99.17–58.73,100.83` |
 | `J1` | `74221-101LF` | `150.00,90.00` | `0.0` | `F.Cu` | `116.47,76.20–183.53,103.80` |
 | `U7` | `TUSB9261IPVP` | `120.00,140.00` | `180.0` | `F.Cu` | `115.28,135.28–124.72,146.18` |
@@ -26,7 +28,7 @@ All coordinates below are extracted after KiCad transforms; existing copper is n
 
 | group | CM5 native pads | current island | nearest pad distance (mm) |
 |---|---:|---|---:|
-| Ethernet | 8 | U8, J2 | 21.54 |
+| Ethernet | 8 | U6, U9, J2 | 50.70 |
 | PCIe | 7 | J1 | 55.39 |
 | USB3-storage | 4 | U7, J3 | 53.81 |
 | SERVICE-USB2 | 2 | J4 | 19.96 |
@@ -42,25 +44,18 @@ All coordinates below are extracted after KiCad transforms; existing copper is n
 
 ## Macro-placement candidates
 
-`ETH_WEST`: move coherent Ethernet endpoints to a west-edge neighborhood: J2 `(15,145)`, U8 `(38,100)`. This avoids the power/service bodies while making the CM5→ESD launch local and the ESD→MagJack path edge-directed; all affected Ethernet copper must be regenerated.
+`ETH_WEST`: move the complete Ethernet endpoint set to a west-edge neighborhood: J2 `(15,145)`, U6 `(42,88)`, U9 `(48,88)`. This keeps ESD near the CM5 GBE launch, avoids the SERVICE connector body, and gives the MagJack a natural west-edge launch; all affected Ethernet copper must be regenerated.
 
-`ETH_SOUTH`: move the MagJack to the south edge `(75,160)` while retaining U8 near the CM5 launch `(38,100)`. This tests a separated source/connector island without consuming the PCIe east corridor; all affected Ethernet copper must be regenerated.
+`ETH_SOUTH`: move the MagJack to the south edge `(75,160)` while placing U6/U9 near the CM5 launch at `(42,88)/(48,88)`. This tests a separated source/connector island without consuming the PCIe east corridor; all affected Ethernet copper must be regenerated.
 
 `STORAGE_LOCAL`: move U7 to `(95,120)` and retain J3 as the outboard M.2 endpoint `(145,125)`, keeping the long 2280 mechanical envelope while shortening the CM5 USB3 launch. USB3/SATA copper and clock/support routes must be regenerated.
 
 These are disposable placement candidates, not accepted routing. Candidate selection requires native DRC/connectivity, pair metrics, references, mechanical access, and revalidation of every affected frozen subsystem.
 
-## Current assessment
+## Reference correction (native footprint map)
 
-The current macro-floorplan is not a sensible final acreage arrangement for
-Ethernet or storage. J7 Ethernet pads are at x=32.96/36.04 mm and y=99.1–100.7
-mm, while U8 is at (58,100) and J2 is at (77.5,53); the nearest relevant
-pad-to-island distance is 21.54 mm and the routed Ethernet census is 534.4 mm
-of F.Cu copper. The CM5 USB3 pads at x=70.04 mm and y=103.9–106.7 mm are
-53.81 mm from the current U7/J3 storage island. PCIe and SERVICE are also
-long corridors, at 55.39 mm and 19.96 mm nearest-pad distance respectively.
-
-Native body-bbox checks on the regenerated disposable candidates report no
-major-footprint overlaps. Existing tracks remain invalid after any move and
-must be regenerated as complete functional neighborhoods; no candidate is
-promoted by this review alone.
+The earlier prose in this report incorrectly called `U8` the Ethernet ESD
+device. Native footprint/value inspection establishes that `U8` is the
+Texas_DRT_3 SERVICE USB2 ESD device. Ethernet ESD is `U6`/`U9`
+(`TPD4EUSB30`), and the disposable Ethernet candidates move `U6`/`U9`
+together with `J2`. All conclusions use the corrected identity.

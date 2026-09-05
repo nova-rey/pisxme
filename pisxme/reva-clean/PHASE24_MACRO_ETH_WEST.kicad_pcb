@@ -78,7 +78,7 @@
 	(footprint "Package_SON:USON-10_2.5x1.0mm_P0.5mm"
 		(layer "F.Cu")
 		(uuid "00000000-0000-0000-0000-00005d2e0a4e")
-		(at 75.1 65.215 -90)
+		(at 48 88 -90)
 		(descr "USON-10 2.5x1.0mm_ Pitch 0.5mm http://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf")
 		(tags "USON-10 2.5x1.0mm Pitch 0.5mm")
 		(property "Reference" "U9"
@@ -452,7 +452,7 @@
 	(footprint "Package_SON:USON-10_2.5x1.0mm_P0.5mm"
 		(layer "F.Cu")
 		(uuid "00000000-0000-0000-0000-00005e42c127")
-		(at 81.1 65.215 -90)
+		(at 42 88 -90)
 		(descr "USON-10 2.5x1.0mm_ Pitch 0.5mm http://www.ti.com/lit/ds/symlink/tpd4e02b04.pdf")
 		(tags "USON-10 2.5x1.0mm Pitch 0.5mm")
 		(property "Reference" "U6"
@@ -1839,7 +1839,7 @@
 	(footprint "Texas_DRT_3"
 		(layer "F.Cu")
 		(uuid "20c2ab54-41a5-4874-98db-a087925f752d")
-		(at 38 100 90)
+		(at 58 100 90)
 		(descr "Texas Instruments DRT-3 1x0.8mm, 0.7mm pitch; TI TPD2EUSB30 datasheet; KiCad maintained footprint")
 		(tags "DRT-3 1x0.8mm Pitch 0.7mm")
 		(property "Reference" "U8"
