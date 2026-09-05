@@ -1510,3 +1510,32 @@ This is a real endpoint-schedule failure, not evidence against the rotation-90
 co-located island. The next candidate must use mixed-layer per-signal QFN
 escapes or move the clock/support graph out of those approach lanes before
 adding the SATA endpoint.
+## 2026-09-05 coordinated rotation-0 SATA launch probe
+
+The serialized rotation-0 U7 artifact was used as the USB endpoint oracle and
+a complete SATA split-cap/M.2 launch was attempted with J3 moved to a
+rotation-180 east-facing launch. The first implementation was invalid: naïve
+same-side routing through the alternating 0.5-mm M.2 endpoint field produced
+14 focused crossings/shorts/clearance or hole-clearance errors. A second
+launch revision removed the direct connector-body shorts, but still retained
+SATA pair crossings at the cap-field and M.2-side transitions plus U7-row
+clearances. Both are rejected; no gate is claimed closed.
+
+The evidence confirms that U7 rotation-0 can separate USB and SATA edge
+directions, but the M.2 launch must be authored as a true alternating-pad
+fanout with opposite-side approach/layer transitions, not as four independent
+same-side corridors. The disposable source is
+`PHASE19_U7ROT0_USB_VERTICAL17.kicad_pcb`; the rejected full probe is
+`PHASE19_U7ROT0_USB_SATA_V1.kicad_pcb`.
+
+The existing complete coordinate-49 storage oracle was also rechecked. It has
+no focused `tracks_crossing` or `shorting_items` records, but its USB3 lengths
+are RX_N 271.36 mm, RX_P 257.26 mm, TX_N 360.26 mm, and TX_P 222.56 mm. The
+TX_N detour therefore fails the current USB3 skew target. A disposable script
+intended to shorten only TX_N crashed in KiCad 10's SWIG binding before
+serialization; it produced no board evidence and is classified as a tooling
+failure, not a design result.
+
+Phase 19 remains open. The next credible experiment is a regenerated
+coordinate-49 island using the known-clean SATA graph and a fully resynthesized
+USB endpoint schedule, with the U7/M.2 alternating fanout modeled explicitly.
