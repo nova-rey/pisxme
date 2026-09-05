@@ -29,6 +29,14 @@ live SATA and regulator geometry. This closes the stale-coordinate hypothesis
 and identifies the next required class: regenerate U7/J3/clock together with
 the clock support outside the live SATA corridor.
 
+The corrected live-U7 transform was swept with support shifts `-5, -10, -15,
+-20, -25, -30, -35, -40 mm` on the best no-crossing coordinated ancestor.
+The best result was the `-20 mm` shift at 245 native DRC violations / 417
+unconnected items, with 9 crossing/short records; the other shifts were no
+better. This bounded negative result confirms that moving clock support within
+the existing U7/J3 placement cannot clear SATA occupancy. The next credible
+step is one regenerated storage island with a dedicated clock corridor.
+
 ## 2026-09-04 local underside clock-island follow-up
 
 The next authorized class was implemented as a parameterized authoring path in
