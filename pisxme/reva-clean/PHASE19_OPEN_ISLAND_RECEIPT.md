@@ -56,3 +56,8 @@ Clock-only support relocation trial: Y1/R23/C42/C43 were moved beside U7
 while USB3 and SATA routing were skipped. Native DRC measured `116` / `70`;
 the inherited hard-coded XI/XO/VSSOSC fanout crossed and shorted the local
 support pads. Rejected; a live-endpoint clock regeneration is required.
+
+Live-endpoint clock regeneration trial: native DRC measured `96` / `67` with
+fewer errors than the relocation trial, but clock crossings, support/via
+clearances, and one return-via collision with the shared SATA coupling bank
+remain. Rejected pending a corrected isolated return corridor.

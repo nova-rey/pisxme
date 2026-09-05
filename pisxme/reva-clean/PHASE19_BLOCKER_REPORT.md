@@ -982,3 +982,16 @@ crossed and shorted the relocated support pads, confirming that clock
 support relocation without a regenerated live-endpoint topology is rejected.
 This does not invalidate the USB3 result or the TUSB9261 clock architecture;
 Phase 19 remains open and Phase 20+ remains untouched.
+
+## 2026-09-05 live-endpoint clock regeneration trial
+
+The clock authoring block was replaced with a live-endpoint trial using the
+serialized Y1/R23/C42/C43 and U7 pad coordinates, XI on a local F.Cu star,
+XO through ordinary offset transitions to B.Cu, and an explicit VSSOSC return
+bus. Native KiCad DRC measured `96` violations / `67` unconnected items,
+improving on the preceding relocation trial, but two clock-signal crossings
+and several support/via clearances remain. One return via also overlapped the
+disposable SATA coupling footprint because that footprint remains present in
+the shared fixture. The trial is rejected; the live-endpoint method remains
+the selected direction for the next corrected fixture. Phase 19 remains open
+and Phase 20+ remains untouched.

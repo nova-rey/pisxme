@@ -136,13 +136,23 @@ def main():
  for pn,nm in (('52','/STORAGE/BRIDGE_XI'),('53','/STORAGE/BRIDGE_VSSOSC'),('54','/STORAGE/BRIDGE_XO')): setpad(pad(u,pn),N[nm])
  Y={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('Y1').Pads()}; R23={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('R23').Pads()}; C42={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('C42').Pads()}; C43={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('C43').Pads()}
  xi,xo,vs=N['/STORAGE/BRIDGE_XI'],N['/STORAGE/BRIDGE_XO'],N['/STORAGE/BRIDGE_VSSOSC']
- seg(b,xi,U['52'],(250,102)); seg(b,xi,(250,102),(250,88)); seg(b,xi,(250,88),Y['1'])
- seg(b,xo,U['54'],(252,103)); via(b,xo,(252,103)); seg(b,xo,(252,103),(252,89),pcbnew.B_Cu); seg(b,xo,(252,89),Y['3'],pcbnew.B_Cu); via(b,xo,(252,89)); seg(b,xo,(252,89),Y['3'])
- seg(b,xi,Y['1'],R23['1']); seg(b,xo,Y['3'],R23['2'])
- seg(b,xi,C42['1'],Y['1']); seg(b,xo,C43['1'],Y['3'])
+ # Live-endpoint clock topology: XI is a short F.Cu local star; XO is
+ # isolated onto B.Cu through ordinary offset vias, so the two oscillator
+ # nets cannot cross in the dense support-pad region.
+ seg(b,xi,U['52'],(273.5,100.5)); seg(b,xi,(273.5,100.5),R23['1'])
+ seg(b,xi,R23['1'],Y['1']); seg(b,xi,R23['1'],C42['1'])
+ for p,q in ((U['54'],(277.0,103.0)),(Y['3'],(268.0,100.5)),(R23['2'],(272.5,99.5)),(C43['1'],(275.5,96.5))):
+  seg(b,xo,p,q); via(b,xo,q)
+ seg(b,xo,(277.0,103.0),(275.5,96.5),pcbnew.B_Cu)
+ seg(b,xo,(268.0,100.5),(272.5,99.5),pcbnew.B_Cu)
+ seg(b,xo,(272.5,99.5),(275.5,96.5),pcbnew.B_Cu)
  # Return vias are deliberately offset from every SMD pad (no via-in-pad).
- for p,q in ((U['53'],(251.5,102.5)),(Y['2'],(278.9,78.0)),(Y['4'],(281.1,78.0)),(C42['2'],(278.9,82.0)),(C43['2'],(283.8,82.0))):
+ for p,q in ((U['53'],(274.0,104.5)),(Y['2'],(265.5,100.0)),(Y['4'],(270.5,96.0)),(C42['2'],(273.5,92.5)),(C43['2'],(278.0,98.0))):
   seg(b,vs,p,q); via(b,vs,q)
+ # Private oscillator return is joined on B.Cu outside the signal stubs.
+ for q in ((274.0,104.5),(265.5,100.0),(270.5,96.0),(273.5,92.5),(278.0,98.0)):
+  seg(b,vs,q,(q[0],106.0),pcbnew.B_Cu)
+ seg(b,vs,(265.5,106.0),(278.0,106.0),pcbnew.B_Cu)
  # FREQSEL0/1 and VDDIO high on the local 3V3 net; local short fanout.
  v33=b.FindNet('/STORAGE/BRIDGE_3V3')
  for pn in ('24','30','31'): setpad(pad(u,pn),v33)
