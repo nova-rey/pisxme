@@ -1441,3 +1441,13 @@ endpoint problem. Native DRC still reported three crossings, including the
 TX pair itself and an RX/TX corridor interaction, plus source/U7 clearances.
 The mixed-layer change was rejected and the all-B.Cu pair-corridor generator
 was restored. Phase 19 remains open.
+
+## 2026-09-05 legacy USB3-artifact comparison
+
+The older `PHASE19_U7ROT270_USB_ORDERED12` artifact was inspected as a
+possible source oracle. Its USB3 graph has no reported USB3 crossing/short,
+but it uses obsolete 0.40 mm / 0.20 mm vias and fails the current board
+minimums (0.50 mm diameter / 0.30 mm drill). Regenerating at the original
+U7/J3 coordinates against the current SATA/clock island introduced five
+storage/USB crossings and power-pad shorts. It cannot be promoted or copied
+without reauthoring the endpoint graph under the current fabrication rules.
