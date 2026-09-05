@@ -454,3 +454,13 @@ candidate has zero shorts and zero crossings. Native DRC reports 204 total
 inherited/placement violations and 166 unconnected items. This closes the
 source-escape discriminator only; support-passive branches and end-to-end
 clock connectivity remain open.
+
+## Complete clock passive-branch trial (rejected)
+
+`phase24_clock_passive_branches.py` attempted full XI/XO/VSSOSC branches on
+B.Cu from the clean U7 source escape to Y1/R23/C42/C43. The candidate reduced
+the unconnected census to 156, but native DRC found three shorts and ten
+crossings where the branches entered adjacent passive pads and existing
+storage copper. It is rejected; the useful result is that clock closure needs
+isolated pad launches and layer-separated buses, not direct B.Cu pad-field
+approaches.

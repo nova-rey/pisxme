@@ -707,3 +707,8 @@ and was rejected. Moving only XO below that corridor yields a disposable
 source escape with zero native shorts/crossings (204 total DRC violations,
 166 unconnected records). This is source-side clock evidence, not complete
 clock closure; the passive island still needs obstacle-aware branches.
+
+The first complete passive clock-branch attempt was rejected despite reducing
+unconnected records to 156: native DRC reported three shorts and ten
+crossings in the B.Cu passive-pad approaches. No gate was relaxed. The next
+clock class is isolated pad launches with layer-separated buses.
