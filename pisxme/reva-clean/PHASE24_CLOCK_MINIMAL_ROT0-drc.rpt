@@ -1,0 +1,63 @@
+** Drc report for PHASE24_CLOCK_MINIMAL_ROT0.kicad_pcb **
+** Created on 2026-09-05T08:20:38 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 12 DRC violations **
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(100.0000 mm, 124.1000 mm): Reference field of R23
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(100.0000 mm, 115.0000 mm): Reference field of Y1
+    @(98.9000 mm, 114.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(100.0000 mm, 115.0000 mm): Reference field of Y1
+    @(101.1000 mm, 114.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(98.4000 mm, 113.7500 mm): Rectangle of Y1 on f.silkscreen
+    @(98.9000 mm, 114.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(98.4000 mm, 113.7500 mm): Rectangle of Y1 on f.silkscreen
+    @(101.1000 mm, 114.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(98.4000 mm, 113.7500 mm): Rectangle of Y1 on f.silkscreen
+    @(101.1000 mm, 115.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(98.4000 mm, 113.7500 mm): Rectangle of Y1 on f.silkscreen
+    @(98.9000 mm, 115.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(100.0000 mm, 115.0000 mm): Reference field of Y1
+    @(98.9000 mm, 115.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(100.0000 mm, 115.0000 mm): Reference field of Y1
+    @(101.1000 mm, 115.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(93.5500 mm, 124.6000 mm): Segment of C42 on f.silkscreen
+    @(93.5000 mm, 125.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of C42 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(105.5500 mm, 124.6000 mm): Segment of C43 on f.silkscreen
+    @(105.5000 mm, 125.0000 mm): Pad 1 [/STORAGE/BRIDGE_XO] of C43 on F.Cu
+[copper_sliver]: Copper sliver (B.Cu)
+    Local override; warning
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

@@ -87,3 +87,9 @@ was rejected at 240 native violations because the added Y1 passive branches
 entered the crystal pad field and the C44--C47 placement overlapped existing
 regulator support. The clock oracle is retained as evidence; support networks
 must be placed and routed as independently bounded islands.
+
+The complete clock-support topology also passes in the native-orientation
+disposable fixture: `PHASE24_CLOCK_MINIMAL_ROT0-drc.rpt` reports zero
+unconnected items, shorts, crossings, and footprint errors. This is an
+isolation proof, not acreage closure; the remaining work is the rot180
+coordinate transplant plus a separate U5 capacitor island.
