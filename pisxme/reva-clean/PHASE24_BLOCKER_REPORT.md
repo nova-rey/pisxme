@@ -1052,3 +1052,11 @@ discriminators: direct F.Cu shorting, B.Cu SATA crossings, and a no-crossing
 early-via route that added six DRC violations without closing an open. The
 next valid storage repair must regenerate the CFG/support neighborhood with
 the U7 pad field and existing SATA corridor reserved together.
+
+## Accepted SATA pad-field repair — 2026-09-05
+
+The native U7 RX-N stitch is accepted as bounded progress. It connects U7.5
+through U7.9 to U7.59/C33.2, reducing native unconnected records from `396`
+to `391` without adding shorts or crossings. Native DRC remains `201` total
+violations; all five dangling-via warnings are inherited. CFG, clock support,
+and the remaining power/return opens are still unclosed.

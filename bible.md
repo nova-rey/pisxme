@@ -4152,3 +4152,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Corrected stale-base U5 pair sweep: C44/C45 and C46/C47 pair joins were DRC-clean but reduced no native opens, so they were not promoted; the real remaining defect is island-to-return attachment.
 2026-09-05: Corrected stale-base U5 pair sweep: C44/C45 and C46/C47 pair joins were DRC-clean but reduced no native opens, so they were not promoted; the real remaining defect is island-to-return attachment.
 2026-09-05: Rejected three U7 BRIDGE_CFG local escapes: direct F.Cu short, B.Cu SATA crossings, and an early-via route adding six DRC violations without closing an open; no CFG copper promoted.
+2026-09-05: Accepted native U7 RX-N pad-field stitch: U7.5-U7.9 now connect to U7.59/C33.2, reducing opens 396 to 391 with zero new shorts/crossings; inherited dangling-via warnings unchanged.

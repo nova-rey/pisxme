@@ -854,3 +854,10 @@ U7's no-connect/power pad field; two ordinary-via B.Cu variants removed
 shorts but created SATA crossings, and a local early-via variant removed
 crossings but raised native DRC from `201` to `207` without reducing the
 `396` open census. No CFG copper was promoted.
+
+The current storage repair class is the native U7 SATA RX-N pad-field stitch.
+All five repeated U7 RX-N pads now connect through the saved PCB's actual
+tracks/vias to U7.59/C33.2. Native DRC reports `201` total violations and
+`391` unconnected records, with zero shorts/crossings; the five dangling-via
+warnings are inherited and unchanged. U5 connectivity, its negative control,
+and the authoritative-part audit remain passing.
