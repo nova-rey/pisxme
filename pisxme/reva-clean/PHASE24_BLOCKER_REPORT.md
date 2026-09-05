@@ -965,3 +965,7 @@ are not mechanically accepted. A corrected outboard study,
 `PHASE24_MACRO_ETH_WEST_OUTBOARD`, places U6/U9 at `(20,104)/(26,104)` and J2
 at `(15,145)`. It remains disposable pending complete regenerated routing
 and native clearance/connectivity evidence.
+
+The cross-class alternative `PHASE24_MACRO_ETH_EAST_ESD_WEST_JACK` keeps the
+ESD pair east of J7 and moves only the tall MagJack west. Neither placement is
+promoted until complete live-pad routing and native validation pass.

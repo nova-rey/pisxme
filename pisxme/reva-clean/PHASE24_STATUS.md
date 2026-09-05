@@ -761,3 +761,8 @@ the native CM5 body bbox. A corrected `PHASE24_MACRO_ETH_WEST_OUTBOARD`
 placement study puts U6/U9 west of that body at `(20,104)/(26,104)` while
 retaining the west-edge J2. It is the current mechanically conservative
 Ethernet placement candidate; no copper has yet been promoted.
+
+The cross-class alternative `PHASE24_MACRO_ETH_EAST_ESD_WEST_JACK` keeps
+U6/U9 east of J7 and moves only J2 west. It is retained for routing comparison
+if the outboard-west ESD escape cannot preserve pair integrity without
+entering the CM5 body.

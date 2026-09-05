@@ -52,11 +52,10 @@ All coordinates below are extracted after KiCad transforms; existing copper is n
 
 These are disposable placement candidates, not accepted routing. Candidate selection requires native DRC/connectivity, pair metrics, references, mechanical access, and revalidation of every affected frozen subsystem.
 
-## Native mechanical follow-up
-
-The earlier `(42,88)/(48,88)` Ethernet ESD study overlaps the native J7 body
-bbox and is not mechanically accepted. A corrected `ETH_WEST_OUTBOARD` study
-was generated with U6/U9 at `(20,104)/(26,104)` and J2 at `(15,145)`.
-Native-loaded bbox checks show both ESD bodies and the MagJack clear the J7
-body; this remains placement-only evidence until complete regenerated copper,
-courtyard, and connector-access checks pass.
+The earlier `(42,88)/(48,88)` ESD study overlaps the native J7 body and is
+rejected mechanically. `ETH_WEST_OUTBOARD` places U6/U9 at `(20,104)/(26,104)`
+and J2 at `(15,145)`; native bbox checks show no J7-body intersection.
+`ETH_EAST_ESD_WEST_JACK` is the cross-class alternative, placing U6/U9 at
+`(82,104)/(76,104)` and only J2 at `(15,145)`, also clear of J7. Both remain
+placement-only until live-pad copper is regenerated and native DRC/connectivity
+passes.
