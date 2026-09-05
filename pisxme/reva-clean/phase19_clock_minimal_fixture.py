@@ -19,11 +19,20 @@ def TF(p):
     if ROT==90:
         q=(TX-(p[1]-100), TY+(p[0]-100))
         return (q[0]+(SUPPORT_SHIFT if p[1]>=115 else 0),q[1])
+    if ROT==180:
+        # Reflect the passing local fixture about the U7 package center.
+        # For a live U7 at (TX,TY), the source row (97..98,104.5) becomes
+        # the native rotation-180 row (TX+3..TX+2,TY-4.5).
+        sx = SUPPORT_SHIFT if p[1] >= 115 else 0
+        return (TX+(100-p[0])+sx, TY+(100-p[1]))
     return ((240-p[0],210-p[1]) if MIRROR else (p[0]+DX,p[1]+DY))
 def LOCAL(p):
     if ROT==90:
         x=p[0]-(SUPPORT_SHIFT if p[0] < TX-5 else 0)
         return (100+(p[1]-TY), 100-(x-TX))
+    if ROT==180:
+        sx = SUPPORT_SHIFT if p[0] > TX-10 else 0
+        return (100+(TX-p[0]-sx), 100+(TY-p[1]))
     return (TF(p) if MIRROR else (p[0]-DX,p[1]-DY))
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def T(b,n,a,z,l):
@@ -48,7 +57,7 @@ def main():
                 f=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),lib); f.SetReference(ref); b.Add(f)
     # KiCad's native footprint-positive rotation is clockwise in board
     # coordinates; the graph transform above is mathematical CCW.
-    _support_rot = 270 if ROT==90 else 0
+    _support_rot = 270 if ROT==90 else (180 if ROT==180 else 0)
     placements={'Y1':(TF((100,115)),_support_rot),'R23':(TF((100,125)),_support_rot),'C42':(TF((94,125)),_support_rot),'C43':(TF((106,125)),_support_rot)}
     maps={'Y1':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_VSSOSC','3':'/STORAGE/BRIDGE_XO','4':'/STORAGE/BRIDGE_VSSOSC'},'R23':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_XO'},'C42':{'1':'/STORAGE/BRIDGE_XI','2':'/STORAGE/BRIDGE_VSSOSC'},'C43':{'1':'/STORAGE/BRIDGE_XO','2':'/STORAGE/BRIDGE_VSSOSC'}}
     nets={x:b.FindNet(x) for x in ('/STORAGE/BRIDGE_XI','/STORAGE/BRIDGE_XO','/STORAGE/BRIDGE_VSSOSC')}

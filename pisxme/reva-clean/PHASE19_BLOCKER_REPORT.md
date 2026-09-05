@@ -11,6 +11,24 @@ The next implementation must replace the bridge/socket route topology from
 live pad coordinates while co-generating the clock network. No sweep candidate
 is promoted.
 
+## 2026-09-05 live U7 rotation-180 clock transform correction
+
+The clock authoring path previously used the old synthetic U7 origin even when
+applied to `PHASE19_COORDINATED_PASS_CANDIDATE_FINAL` (`U7` at `(120,140)`,
+rotation 180). The generic fixture now reflects its passing local graph about
+the live U7 center and supports a parameterized support shift. The generated
+clock support is at the expected transformed locations (`Y1` `(120,125)`
+before shift), and the three U7 clock routes land on serialized pads
+`52=(123,135.5)`, `53=(122.5,135.5)`, and `54=(122,135.5)`.
+
+The corrected no-shift candidate was rejected at 234 native DRC violations /
+413 unconnected items, with new records where the correctly landed clock
+routes occupy the inherited SATA corridor. A west-shifted run reduced the
+clock-related crossing/short class to 10 records but still collided with
+live SATA and regulator geometry. This closes the stale-coordinate hypothesis
+and identifies the next required class: regenerate U7/J3/clock together with
+the clock support outside the live SATA corridor.
+
 ## 2026-09-04 local underside clock-island follow-up
 
 The next authorized class was implemented as a parameterized authoring path in
