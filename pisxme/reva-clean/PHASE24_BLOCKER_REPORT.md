@@ -51,3 +51,14 @@ The corrected rotated-U7 source-escape discriminator in
 authoring copper. Its native DRC report records zero `shorting_items` and zero
 `tracks_crossing` for the clock escape. It remains disposable because the
 support-passive branches and U5 C44-C47 island are not yet complete.
+
+## Spread-support experiment (rejected)
+
+The completed Y1/R23/C42/C43 acreage-spread fanout was run through native
+KiCad 10.0.5 DRC as `PHASE24_STORAGE_ROT90_PROBE-spread-drc.rpt`.
+It produced `229` violations, including three genuine `tracks_crossing`
+records between XI, XO, and VSSOSC. The underlying rotated-U7 source escape
+remained free of `shorting_items`; the failure is confined to the newly added
+passive branch geometry. The experiment is rejected and is not production
+authority. Next repair remains layer-separated passive fanout with explicit
+via/layer ownership, followed by the missing U5 C44-C47 island.

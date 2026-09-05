@@ -25,7 +25,7 @@ def main():
  u_pads={str(q.GetNumber()):q for q in list(u.Pads())}
  names=set(v for m in MAP.values() for v in m.values()); ns={s:N(b,s) for s in names}
  io=pcbnew.PCB_IO_KICAD_SEXPR(); fs={}
- for ref,(x,y) in {'Y1':(140,145),'R23':(140,155),'C42':(134,155),'C43':(146,155)}.items():
+ for ref,(x,y) in {'Y1':(140,145),'R23':(155,165),'C42':(125,165),'C43':(180,165)}.items():
   f=io.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),LIB[ref]); f.SetReference(ref); f.SetPosition(V(x,y)); f.SetLayer(pcbnew.B_Cu); f.SetOrientationDegrees(270 if ref=='Y1' else 0); b.Add(f); fs[ref]=f
   for q in f.Pads(): q.SetNet(ns[MAP[ref][str(q.GetNumber())]]); q.SetNetCode(ns[MAP[ref][str(q.GetNumber())]].GetNetCode())
  ps={r:{str(q.GetNumber()):xy(q) for q in list(f.Pads())} for r,f in fs.items()}
@@ -53,6 +53,14 @@ def main():
  S(b,VS,(124.5,142.5),(128,142.5)); X(b,VS,(128,142.5)); S(b,VS,(128,142.5),(132,142.5),pcbnew.B_Cu); S(b,VS,(132,142.5),(132,143.9),pcbnew.B_Cu); S(b,VS,(132,143.9),ps['Y1']['2'],pcbnew.B_Cu)
  S(b,XI,(124.5,143),(127,145.5)); S(b,XI,(127,145.5),(130,145.5),pcbnew.B_Cu); X(b,XI,(130,145.5)); S(b,XI,(130,145.5),(126,145.5),pcbnew.B_Cu); S(b,XI,(126,145.5),(126,145),pcbnew.B_Cu); S(b,XI,(126,145),(140.85,145),pcbnew.B_Cu); S(b,XI,(140.85,145),ps['Y1']['1'],pcbnew.B_Cu)
  S(b,VS,ps['Y1']['2'],(139.15,142.8),pcbnew.B_Cu); S(b,VS,(139.15,142.8),(143,142.8),pcbnew.B_Cu); S(b,VS,(143,142.8),(143,147),pcbnew.B_Cu); S(b,VS,(143,147),(140.85,147),pcbnew.B_Cu); S(b,VS,(140.85,147),ps['Y1']['4'],pcbnew.B_Cu)
+ # Complete the crystal support network in an acreage layout.  The passive
+ # island is spread below Y1 so every net has a monotonic B.Cu corridor;
+ # this is a geometry discriminator, not a proposed compact placement.
+ w=.1321
+ S(b,XI,ps['Y1']['1'],(150,145),pcbnew.B_Cu,w); S(b,XI,(150,145),(150,165),pcbnew.B_Cu,w); S(b,XI,(150,165),ps['R23']['1'],pcbnew.B_Cu,w); S(b,XI,(150,160),(125,160),pcbnew.B_Cu,w); S(b,XI,(125,160),ps['C42']['1'],pcbnew.B_Cu,w)
+ S(b,XO,ps['Y1']['3'],(135,146.1),pcbnew.B_Cu,w); S(b,XO,(135,146.1),(135,158),pcbnew.B_Cu,w); S(b,XO,(135,158),(155,158),pcbnew.B_Cu,w); S(b,XO,(155,158),ps['R23']['2'],pcbnew.B_Cu,w); S(b,XO,(155,158),(180,158),pcbnew.B_Cu,w); S(b,XO,(180,158),ps['C43']['1'],pcbnew.B_Cu,w)
+ S(b,VS,ps['Y1']['2'],(120,143),pcbnew.B_Cu,w); S(b,VS,(120,143),(120,165),pcbnew.B_Cu,w); S(b,VS,(120,165),ps['C42']['2'],pcbnew.B_Cu,w)
+ S(b,VS,ps['Y1']['4'],(190,142),pcbnew.B_Cu,w); S(b,VS,(190,142),(190,165),pcbnew.B_Cu,w); S(b,VS,(190,165),ps['C43']['2'],pcbnew.B_Cu,w)
  # Regulator capacitor materialization is intentionally a separate experiment.
  if b.Zones(): pcbnew.ZONE_FILLER(b).Fill(b.Zones())
  b.Save(str(OUT)); print(OUT)
