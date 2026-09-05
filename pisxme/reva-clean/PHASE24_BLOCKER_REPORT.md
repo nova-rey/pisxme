@@ -189,3 +189,16 @@ violations but zero `shorting_items`, zero `tracks_crossing`, zero
 `track_width`, zero footprint errors, and no XI/XO/VSSOSC unconnected
 records. This closes the rot180 source-escape geometry proof only; shelf
 fanout and full acreage parity remain open.
+
+## Compact clock-position sweep (in progress)
+
+`phase24_clock_position_sweep.py` tested five compact/open support positions
+against the V5 rot180 ancestor using serialized U7 pad coordinates and the
+outward pad-row escape. The best candidate is `nearwest` (`Y1` approximately
+108/130 mm, underside pads): native DRC reports 212 violations, with the
+remaining new clock defect reduced to a localized B.Cu lane crossing at the
+U7 escape. The other candidates remain worse because they intersect inherited
+PCIe, SATA, or M.2 geometry. This is evidence that the open-acreage class is
+viable, but the candidate is not promoted: the next experiment must rotate or
+reorder the crystal footprint and make the three clock lanes monotonic before
+full support fanout is restored.

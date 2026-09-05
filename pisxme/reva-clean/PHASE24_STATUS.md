@@ -75,3 +75,8 @@ The corrected rotated-U7 source-escape discriminator now derives post-rotation
 U7 endpoints and produces zero native DRC `shorting_items` and
 `tracks_crossing` records for the clock escape. It remains a disposable oracle
 because the Y1/R23/C42/C43 branches and U5 C44-C47 island are not yet complete.
+
+The latest bounded sweep (`phase24_clock_position_sweep.py`) improved the
+clock-support search to a compact near-west underside candidate, but it still
+has one localized B.Cu clock-lane crossing at the U7 escape. It remains an
+unpromoted experiment; Phase 24 is still open.
