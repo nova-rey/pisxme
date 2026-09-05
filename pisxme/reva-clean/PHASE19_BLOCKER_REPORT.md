@@ -528,6 +528,23 @@ high-speed envelope before descending, and preserve the passing
 minimal-fixture topology. Phase 19 remains active; Phase 20+ remains
 untouched.
 
+## 2026-09-04 corrected south-island clock trial
+
+The south trial was corrected to use the exact serialized support-pad
+coordinates and moved the support farther outboard to `(250,150)`, `(270,149)`,
+`(250,170)`, and `(270,170)`. The proposed VSSOSC return was isolated on
+B.Cu after an ordinary transition at `(200,92)`. Native DRC measured `417`
+violations and `466` unconnected items.
+
+The prior non-pad endpoint defect is gone. The remaining new records are
+geometric: long F.Cu XI/XO trunks still enter the J3/J1 pad fields before
+reaching the open acreage, and the adjacent Y1 clock-return dogbones need a
+layer-separated pad escape. Existing SATA/USB3 debt remains inherited. The
+candidate is rejected, but the result confirms the support area itself is
+available. The next trial must transition the clock trunks before the J3/J1
+fields and use a genuinely separate local return layer at Y1; no architecture,
+PCIe, stack, or Phase 20 gate has been changed.
+
 ## 2026-09-04 clock control-fixture rerun
 
 The native minimal TUSB9261 clock fixture was regenerated and checked again

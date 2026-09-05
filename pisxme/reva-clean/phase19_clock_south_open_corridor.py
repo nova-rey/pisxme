@@ -26,8 +26,8 @@ def main():
     # The entire low-profile support island is below the measured live copper
     # envelope.  The tall J3 body remains at the board edge; this does not
     # change connector access or the validated storage architecture.
-    for ref, pos in {'Y1': (220, 150), 'R23': (230, 150),
-                     'C42': (220, 160), 'C43': (230, 160)}.items():
+    for ref, pos in {'Y1': (250, 150), 'R23': (270, 149),
+                     'C42': (250, 170), 'C43': (270, 170)}.items():
         f = b.FindFootprintByReference(ref)
         f.SetPosition(V(*pos)); f.SetOrientationDegrees(0)
         padmap = {
@@ -51,25 +51,32 @@ def main():
     # 53=(142.5,105.5), 54=(142,105.5).  Escape perpendicular to the row,
     # then use separate monotonic lanes around the existing SATA field.
     xi, xo, vs, v33 = (nets[n] for n in names)
-    T(b, xi, (143,105.5), (143,100)); T(b, xi, (143,100), (155,98))
-    T(b, xi, (155,98), (155,140)); T(b, xi, (155,140), (218.9,149.15))
-    T(b, xo, (142,105.5), (142,99)); T(b, xo, (142,99), (157,97))
-    T(b, xo, (157,97), (157,145)); T(b, xo, (157,145), (218.9,150.85))
-    T(b, vs, (142.5,105.5), (142.5,98)); T(b, vs, (142.5,98), (159,96))
-    T(b, vs, (159,96), (159,165)); T(b, vs, (159,165), (218.9,159.15))
+    T(b, xi, (143,105.5), (143,100)); T(b, xi, (143,100), (190,95))
+    T(b, xi, (190,95), (190,140)); T(b, xi, (190,140), (248.9,149.15))
+    T(b, xo, (142,105.5), (142,99)); T(b, xo, (142,99), (195,94))
+    T(b, xo, (195,94), (195,145)); T(b, xo, (195,145), (251.1,150.85))
+    T(b, vs, (142.5,105.5), (142.5,98)); T(b, vs, (142.5,98), (200,92))
+    X = lambda n, p: (lambda v: (v.SetPosition(V(*p)), v.SetWidth(pcbnew.FromMM(.5)), v.SetDrill(pcbnew.FromMM(.3)), v.SetLayerPair(pcbnew.F_Cu, pcbnew.B_Cu), v.SetNet(n), b.Add(v))[-1])(pcbnew.PCB_VIA(b))
+    X(vs, (200,92)); T(b, vs, (200,92), (200,165), pcbnew.B_Cu)
 
     # Local branches are separated by net/lane, with no via required in this
     # open corridor.  Pad coordinates are explicit for the selected 3225 and
     # 0402 footprints.
-    T(b, xi, (218.9,149.15), (218.9,149.15))      # Y1.1
-    T(b, xi, (218.9,149.15), (219.5,160.0))       # C42.1
-    T(b, xi, (218.9,149.15), (229.5,150.0))       # R23.1
-    T(b, xo, (218.9,150.85), (221.1,150.85)); T(b, xo, (221.1,150.85), (230.5,150.0)) # R23.2
-    T(b, xo, (221.1,150.85), (229.5,160.0))      # C43.1
-    T(b, vs, (218.9,159.15), (218.9,150.85))      # Y1.2
-    T(b, vs, (218.9,159.15), (221.1,149.15))      # Y1.4
-    T(b, vs, (218.9,159.15), (220.5,160.0))       # C42.2
-    T(b, vs, (218.9,159.15), (230.5,160.0))       # C43.2
+    T(b, xi, (248.9,149.15), (249.5,170.0))      # Y1.1 to C42.1
+    T(b, xi, (248.9,149.15), (269.5,149.0))       # Y1.1 to R23.1
+    T(b, xo, (251.1,150.85), (270.5,149.0))      # Y1.3 to R23.2
+    T(b, xo, (251.1,150.85), (269.5,170.0))      # Y1.3 to C43.1
+    # VSSOSC remains on B.Cu after the ordinary U7 transition.  Each SMD
+    # return pad gets a nearby through-via and only a short F.Cu dogbone.
+    for p, q in [((248.9,153.0),(248.9,150.85)),
+                 ((251.1,153.0),(251.1,149.15)),
+                 ((249.5,173.0),(250.5,170.0)),
+                 ((269.5,173.0),(270.5,170.0))]:
+        X(vs, p); T(b, vs, p, q, pcbnew.F_Cu)
+    T(b, vs, (200,165), (248.9,153.0), pcbnew.B_Cu)
+    T(b, vs, (248.9,153.0), (251.1,153.0), pcbnew.B_Cu)
+    T(b, vs, (251.1,153.0), (249.5,173.0), pcbnew.B_Cu)
+    T(b, vs, (249.5,173.0), (269.5,173.0), pcbnew.B_Cu)
 
     # FREQSEL0/FREQSEL1 high, using the existing 3V3 net and a local branch.
     T(b, v33, (142.5,114.5), (142.5,117)); T(b, v33, (142.5,117), (146,117))
