@@ -969,3 +969,10 @@ and native clearance/connectivity evidence.
 The cross-class alternative `PHASE24_MACRO_ETH_EAST_ESD_WEST_JACK` keeps the
 ESD pair east of J7 and moves only the tall MagJack west. Neither placement is
 promoted until complete live-pad routing and native validation pass.
+
+The live-pad east-ESD/west-J2 trial was rejected by native DRC: 569 total
+violations, 131 unconnected records, 34 shorts, and 28 crossings. Focused
+records show the hand-routed east fanout colliding with existing SERVICE and
+reference geometry as well as crossing at the ESD pad field. This is a
+rejected placement/routing experiment, not a reason to waive Phase 24; the
+next bounded class is the west-outboard ESD candidate with isolated corridors.

@@ -766,3 +766,11 @@ The cross-class alternative `PHASE24_MACRO_ETH_EAST_ESD_WEST_JACK` keeps
 U6/U9 east of J7 and moves only J2 west. It is retained for routing comparison
 if the outboard-west ESD escape cannot preserve pair integrity without
 entering the CM5 body.
+
+The live-pad `ETH_EAST_ESD_WEST_JACK` routing discriminator was run with all
+eight CM5IO-authoritative MDI nets after moving native U6/U9/J2 footprints.
+Native DRC reported 569 violations, 131 unconnected records, 34 shorts, and
+28 crossings. The focused failures include collisions with SERVICE/REFCLK
+geometry, pair crossings at the east-side ESD escape, and crossing/shorting
+via fanout. It is rejected; the west-outboard ESD candidate is the next
+dedicated-corridor experiment.
