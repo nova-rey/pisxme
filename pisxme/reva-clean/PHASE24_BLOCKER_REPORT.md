@@ -312,3 +312,13 @@ items and existing presentation/clearance findings); this is not a clean
 Phase 24 board and is not promoted. The next step is support-part
 materialization on this clock oracle followed by a targeted connectivity and
 parity audit.
+
+## First support materialization (rejected)
+
+`phase24_materialize_clock_support.py` added Y1's R23/C42/C43 and C44--C47
+to the side-separated clock candidate. Native DRC reported 240 violations,
+including 3 new track crossings and 8 new shorting records. The clock passive
+branches entered the Y1 pad field and the C44--C47 placement overlapped
+existing regulator feedback/support geometry. This candidate is rejected;
+the clean clock escape remains useful, but support parts must be placed and
+routed as independently bounded islands before integration.

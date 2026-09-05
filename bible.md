@@ -4048,3 +4048,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: applied the independent tunnel map to the seeded clock solver; all three downstream routes are found and via-clearance conflicts are removed, but XO source launch crossings remain.
 2026-09-05 Phase24: tunnel-guided A* source-launch refinement reached 226 native DRC violations; XO/SATA crossing removed, Y1 approach remains open.
 2026-09-05 Phase24: side-separated crystal escape reached 207 native DRC violations with zero clock tracks-crossing or shorting records; inherited board hygiene and support parity remain open.
+2026-09-05 Phase24: rejected first support materialization; Y1 passive branches caused 3 crossings/8 shorts and C44-C47 overlapped regulator support, so clock and support islands remain separate.
