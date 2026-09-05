@@ -1401,6 +1401,10 @@ degraded to approximately 9.59 mm RX and 8.63 mm TX. The prior all-B.Cu
 pair-corridor result remains the better baseline; no Phase 19 promotion or
 Phase 20 work has started.
 
+The generator is now restored to the all-B.Cu pair-corridor authoring path
+used for the retained baseline; the rejected pre-clock transition code is no
+longer active in the reproducible path.
+
 ## 2026-09-05 source fanout spread experiment
 
 The CM5-side fanout was spread to 4--10 mm-separated transition columns

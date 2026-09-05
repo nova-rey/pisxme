@@ -210,32 +210,20 @@ def main():
    # Spread the serialized source fanout before the first transition.  The
    # increasing x/y order keeps each vertical escape outside the next
    # source segment instead of placing vias in the adjacent pad launch.
-   first={'CM5_USB3_RX_N':(64.0,100.0),'CM5_USB3_RX_P':(82.0,104.0),
-          'CM5_USB3_TX_N':(95.0,110.0),'CM5_USB3_TX_P':(105.0,116.0)}[suffix]
-   top={'CM5_USB3_RX_N':(64.0,80.0),'CM5_USB3_RX_P':(82.0,82.0),
-        'CM5_USB3_TX_N':(95.0,60.0),'CM5_USB3_TX_P':(105.0,62.0)}[suffix]
+   first={'CM5_USB3_RX_N':(74.0,101.0),'CM5_USB3_RX_P':(84.0,105.0),
+          'CM5_USB3_TX_N':(94.0,110.0),'CM5_USB3_TX_P':(104.0,115.0)}[suffix]
+   top={'CM5_USB3_RX_N':(74.0,80.0),'CM5_USB3_RX_P':(84.0,82.0),
+        'CM5_USB3_TX_N':(94.0,84.0),'CM5_USB3_TX_P':(104.0,86.0)}[suffix]
    # Higher source lane exits use the nearer outboard column so the
    # vertical drops cannot cut across a lower lane's horizontal run.
    outx={'CM5_USB3_RX_N':298.0,'CM5_USB3_RX_P':297.0,
          'CM5_USB3_TX_N':296.0,'CM5_USB3_TX_P':295.0}[suffix]
    landing={'CM5_USB3_RX_N':(300.0,110.0),'CM5_USB3_RX_P':(301.0,112.0),
             'CM5_USB3_TX_N':(302.0,116.0),'CM5_USB3_TX_P':(303.0,118.0)}[suffix]
-   launch_y={'CM5_USB3_RX_N':103.0,'CM5_USB3_RX_P':105.0,
-             'CM5_USB3_TX_N':106.0,'CM5_USB3_TX_P':108.0}[suffix]
-   launch=(71.2,launch_y); seg(b,n,s,launch); seg(b,n,launch,first)
-   is_tx=suffix.startswith('CM5_USB3_TX_')
-   if is_tx:
-    # Keep TX on F.Cu only to x=250, before the clock's F.Cu vertical
-    # spine, then transition into its own B.Cu acreage corridor.
-    layer=pcbnew.F_Cu
-    seg(b,n,first,(first[0],top[1]),layer); seg(b,n,(first[0],top[1]),(250.0,top[1]),layer)
-    via(b,n,(250.0,top[1])); layer=pcbnew.B_Cu
-    seg(b,n,(250.0,top[1]),(outx,top[1]),layer)
-   else:
-    via(b,n,first); layer=pcbnew.B_Cu
-    seg(b,n,first,(first[0],top[1]),layer); seg(b,n,(first[0],top[1]),(260.0,top[1]),layer)
-    seg(b,n,(260.0,top[1]),(outx,top[1]),layer)
-   seg(b,n,(outx,top[1]),(outx,landing[1]),pcbnew.B_Cu); seg(b,n,(outx,landing[1]),landing,pcbnew.B_Cu)
+   launch=(71.2,s[1]); seg(b,n,s,launch); seg(b,n,launch,first)
+   via(b,n,first); layer=pcbnew.B_Cu
+   seg(b,n,first,(first[0],top[1]),layer); seg(b,n,(first[0],top[1]),(260.0,top[1]),layer)
+   seg(b,n,(260.0,top[1]),(outx,top[1]),layer); seg(b,n,(outx,top[1]),(outx,landing[1]),layer); seg(b,n,(outx,landing[1]),landing,pcbnew.B_Cu)
    # Bring every serialized U7 endpoint to an individually separated
    # underside transition, then use only a short F.Cu dogbone into the
    # live SMD pad.  The long layer-separated corridors cannot cut the
