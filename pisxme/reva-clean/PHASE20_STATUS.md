@@ -38,12 +38,14 @@ Native schematic ERC still reports inherited root-side and unconnected-sheet
 pin debt, but the specific SERVICE hierarchy association is now represented
 correctly and carries the service nets to J7 in the native export.
 
-## Next bounded continuation
+## Latest bounded continuation
 
-Complete the board-side SERVICE island from the corrected hierarchy. The
-current best primary escape is
-`PHASE20_SERVICE_PADFIELD_DETOUR.kicad_pcb`: it has no SERVICE USB2
-`shorting_items` or `tracks_crossing` entries in the primary escape, but the
-USB-C duplicate A/B pads, VBUS aliases, RD resistors, and GND return still
-need explicit completion. No PCIe, storage, stack, or validation gate is
-relaxed.
+The complete disposable service-island candidate is
+`PHASE20_SERVICE_RD_OUTER_REFILLED.kicad_pcb`. It connects both USB2 data
+duplicate pad rows, VBUS aliases, both Rd resistors, and canonical
+`POWER_GND`. Native DRC reports 194 violations / 405 unconnected items versus
+190 / 415 in the inherited base: the delta contains no new clearance,
+shorting, or crossing class; the remaining three clearance and five
+via-dangling warnings are inherited. The candidate is electrically complete
+for the service nets, but Phase 20 is not promoted until the local/native
+mechanical and return review is recorded.
