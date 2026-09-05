@@ -610,3 +610,10 @@ The later R22, U7 CFG, C3, and 3V3 dogleg candidates are not promoted until
 they pass a full-report native rerun; the current serialized U7 CFG candidate
 is explicitly rejected at 235 violations, including four shorts and seven
 crossings.
+
+The full-report rerun of `PHASE24_BRIDGE_1V1_R19_JOIN.kicad_pcb` is clean of
+shorting/crossing classes at 208 violations and 143 unconnected records. From
+that basis, `PHASE24_BRIDGE_3V3_CAP_CHAIN_V2.kicad_pcb` is also clean of
+shorting/crossing classes at 208 violations and 141 unconnected records. These
+are the current accepted working sequence; the R22, 3V3 support, C3, and CFG
+joins are not promoted from contaminated ancestors.

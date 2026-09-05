@@ -11,6 +11,8 @@ serialized Phase 24 candidates, counting report sections globally.
 | `PHASE24_BRIDGE_1V1_R22_JOIN` | 210 | 142 | 1 | 0 | rejected |
 | `PHASE24_U7_CFG_JOIN_CURRENT` | 235 | 136 | 4 | 7 | rejected |
 | `PHASE24_CM5_GROUND_TOP4` | 235 | 134 | 8 | 10 | rejected |
+| `PHASE24_BRIDGE_1V1_R19_JOIN` | 208 | 143 | 0 | 0 | accepted basis |
+| `PHASE24_BRIDGE_3V3_CAP_CHAIN_V2` | 208 | 141 | 0 | 0 | accepted continuation |
 
 The clean working basis for subsequent repairs is therefore
 `PHASE24_BRIDGE_1V1_CAP_CHAIN.kicad_pcb`. Earlier incremental notes that

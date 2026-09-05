@@ -1,7 +1,7 @@
 """Disposable B.Cu chain for the separated bridge-3V3 capacitor field."""
 from pathlib import Path
 import pcbnew
-R=Path(__file__).resolve().parent; BASE=R/'PHASE24_BRIDGE_1V1_R22_JOIN.kicad_pcb'; OUT=R/'PHASE24_BRIDGE_3V3_CAP_CHAIN.kicad_pcb'
+R=Path(__file__).resolve().parent; BASE=R/'PHASE24_BRIDGE_1V1_R19_JOIN.kicad_pcb'; OUT=R/'PHASE24_BRIDGE_3V3_CAP_CHAIN_V2.kicad_pcb'
 b=pcbnew.LoadBoard(str(BASE));n=b.FindNet('/REGULATORS/BRIDGE_3V3')
 def V(x,y): return pcbnew.VECTOR2I_MM(float(x),float(y))
 def tr(layer,a,z):

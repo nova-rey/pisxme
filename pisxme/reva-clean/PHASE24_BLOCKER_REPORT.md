@@ -115,6 +115,12 @@ missed earlier report sections; they are superseded. The J7 top-row trial is
 also rejected at 8 shorts and 10 crossings despite reducing unconnected
 records to 134.
 
+The clean repair sequence now ends at `PHASE24_BRIDGE_3V3_CAP_CHAIN_V2`:
+208 DRC violations, 141 unconnected records, zero shorts, and zero
+crossings. This candidate includes only the clean 1V1 capacitor field/R19
+path and the clean 3V3 capacitor field. Later support/CFG/input joins remain
+rejected until regenerated from this clean basis.
+
 ## Working-basis correction
 
 Full-report counting establishes the clean basis as
