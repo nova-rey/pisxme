@@ -301,6 +301,15 @@ crossings, and 384 unconnected items (down from 397). This promotes only the
 U3/U5 local field evidence; U4 requires an obstacle-aware escape and the
 board-wide power/ground distribution is still unresolved.
 
+## B-side input fuse pad-field experiment
+
+`phase24_f2_padfield_stitch.py` joins the four raw-side F2 pads and four
+fused-side F2 pads as two separate same-net F.Cu fields. Native DRC remains at
+the inherited 201 violations with zero shorts and zero crossings; unconnected
+items fall from 397 to 391. The candidate is retained as targeted input
+geometry evidence, but the F2 fields still need named connections to J6/U2/Q2
+and the rest of the protected distribution.
+
 The U4-specific left-side dogbone was rejected as well. It removed the U4
 short class, but native DRC found four F.Cu crossings against the existing
 PG_BRIDGE_3V3 corridor and U4 ground escape, leaving 390 unconnected items.

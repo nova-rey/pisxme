@@ -598,6 +598,13 @@ contact the unresolved F.Cu SMD regulator and capacitor pads without explicit
 vias/dogbones. No DRC severity was relaxed; the remaining issue is a
 launch-mapped power implementation.
 
+The B-side fuse pad-field trial joined F2's raw and fused four-pad groups as
+separate same-net fields. Native DRC stayed at 201 violations with zero
+shorts/crossings and removed six unconnected records (397 to 391). This is
+accepted targeted evidence only; it does not falsely bridge raw-to-fused
+power, and the named J6/F2/U2/Q2 branch and board-wide distribution remain
+open.
+
 An U4-specific left-side dogbone trial was run after the all-regulator trial.
 It removed the U4 short class but introduced four native F.Cu crossings at
 the existing PG_BRIDGE_3V3 and U4 ground geometry, so it is rejected. U3/U5

@@ -4086,3 +4086,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05 Phase24: rejected all-regulator pad-field stitch at U4 due native PG crossing/shorts; retained clean U3/U5 field repair with 384 unconnected records, zero shorts, and zero crossings.
 2026-09-05 Phase24: rejected U4 same-layer obstacle-aware field stitch after native DRC found four crossings; documented need for layer-separated/local regenerated U4 corridor.
 2026-09-05 Phase24: accepted corrected U4 perimeter power-field geometry after moving the escape above the PG/feedback corridor; native DRC returned to baseline with zero shorts/crossings.
+2026-09-05 Phase24: validated separate F2 raw/fused pad-field joins; native DRC held at 201 violations, removed six unconnected records, and preserved raw-to-fused net isolation.
