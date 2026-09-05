@@ -275,7 +275,7 @@ def main():
    cap_via = (cp['2'][0]+1.0, cp['2'][1])
    if bn in ('BRIDGE_SATA_TX_P','BRIDGE_SATA_RX_P'):
     if bn == 'BRIDGE_SATA_RX_P':
-     e=(a[0]+3.0,a[1]); seg(b,bridge,a,e,pcbnew.F_Cu); seg(b,bridge,e,cp['2'],pcbnew.F_Cu)
+     e=(a[0]+3.0,a[1]+20.0); seg(b,bridge,a,(a[0]+1.5,a[1]),pcbnew.F_Cu); seg(b,bridge,(a[0]+1.5,a[1]),e,pcbnew.F_Cu); via(b,bridge,e); mid=(250.0,e[1]); seg(b,bridge,e,mid,pcbnew.B_Cu); seg(b,bridge,mid,(250.0,cp['2'][1]),pcbnew.B_Cu); seg(b,bridge,(250.0,cp['2'][1]),cap_via,pcbnew.B_Cu); via(b,bridge,cap_via); seg(b,bridge,cap_via,cp['2'],pcbnew.F_Cu)
     else:
      seg(b,bridge,a,cp['2'],pcbnew.F_Cu)
    else:
@@ -293,7 +293,7 @@ def main():
    elif bn == 'BRIDGE_SATA_TX_N':
     p=(190.0,108.0); seg(b,socket,cp['1'],p,pcbnew.F_Cu); seg(b,socket,p,(190.0,131.0),pcbnew.F_Cu); seg(b,socket,(190.0,131.0),z,pcbnew.F_Cu)
    elif bn == 'BRIDGE_SATA_RX_P':
-    p=(238.5,cp['1'][1]); seg(b,socket,cp['1'],p,pcbnew.F_Cu); q=(225.0,p[1]); seg(b,socket,p,q,pcbnew.F_Cu); r=(225.0,z[1]); seg(b,socket,q,r,pcbnew.F_Cu); seg(b,socket,r,z,pcbnew.F_Cu)
+    p=(238.5,cp['1'][1]); seg(b,socket,cp['1'],p,pcbnew.F_Cu); via(b,socket,p); mid=(250.0,126.0); seg(b,socket,p,mid,pcbnew.B_Cu); q=(225.0,126.0); seg(b,socket,mid,q,pcbnew.B_Cu); q2=(225.0,z[1]); seg(b,socket,q,q2,pcbnew.B_Cu); via(b,socket,q2); seg(b,socket,q2,z,pcbnew.F_Cu)
    else:
     p=(238.5,cp['1'][1]); seg(b,socket,cp['1'],p,pcbnew.F_Cu); via(b,socket,p); m=(210.0,p[1]); seg(b,socket,p,m,pcbnew.B_Cu); q=(210.0,132.5); seg(b,socket,m,q,pcbnew.B_Cu); r=(190.0,132.5); seg(b,socket,q,r,pcbnew.B_Cu); via(b,socket,r); seg(b,socket,r,(190.0,131.5),pcbnew.F_Cu); seg(b,socket,(190.0,131.5),z,pcbnew.F_Cu)
    continue

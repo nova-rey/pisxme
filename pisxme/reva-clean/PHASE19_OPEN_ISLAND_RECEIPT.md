@@ -168,6 +168,11 @@ Rejected as a full SATA pass.
 - `PHASE19_COORDINATED_SATAP_F24-drc.rpt`: 215 total records, 5 crossings,
   1 U7 NC-pad short, and an additional F.Cu SATA crossing; rejected.
 - SATA270 remains the storage-side oracle.
+### 2026-09-05 — SATA RX_P lower-side bypass trial
+
+- `PHASE19_COORDINATED_SATA_RXP_BYPASS25-drc.rpt`: 214 total records, 5
+  crossings, 0 shorting records; rejected.
+- Failure: three SATA bypass junction crossings and two USB trunk crossings.
 ### 2026-09-05 — relocation baselines
 
 - SATA RX_P F.Cu trial: 215 records, 5 crossings, 1 U7 NC-pad short, plus an
