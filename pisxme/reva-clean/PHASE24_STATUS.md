@@ -310,6 +310,12 @@ items fall from 397 to 391. The candidate is retained as targeted input
 geometry evidence, but the F2 fields still need named connections to J6/U2/Q2
 and the rest of the protected distribution.
 
+The analogous F1 A-side pad-field trial joins its raw and fused four-pad
+groups independently. Native DRC remains at 201 violations with zero shorts
+and zero crossings; unconnected items fall from 397 to 392. This is retained
+as targeted evidence and preserves the dual-input architecture. The existing
+F1/J5/Q1/U1 branch still needs complete named routing and plane launches.
+
 The U4-specific left-side dogbone was rejected as well. It removed the U4
 short class, but native DRC found four F.Cu crossings against the existing
 PG_BRIDGE_3V3 corridor and U4 ground escape, leaving 390 unconnected items.

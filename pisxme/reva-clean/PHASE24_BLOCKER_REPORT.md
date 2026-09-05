@@ -605,6 +605,12 @@ accepted targeted evidence only; it does not falsely bridge raw-to-fused
 power, and the named J6/F2/U2/Q2 branch and board-wide distribution remain
 open.
 
+The F1 A-side pad-field trial likewise passed as local evidence: 201 native
+DRC violations, zero shorts/crossings, and five fewer unconnected records
+(397 to 392). Raw and fused nets remain separate. Full Phase 24 still awaits
+complete named input-branch, protected-12V, ground, low-voltage, and
+clock/storage connectivity.
+
 An U4-specific left-side dogbone trial was run after the all-regulator trial.
 It removed the U4 short class but introduced four native F.Cu crossings at
 the existing PG_BRIDGE_3V3 and U4 ground geometry, so it is rejected. U3/U5
