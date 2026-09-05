@@ -1281,3 +1281,16 @@ zero shorts and zero crossings. The remaining work is therefore confined to
 cleanly escaping U7 clock pins and its local support network after the
 authorized U7 relocation; no storage architecture or PCIe reopening is
 indicated.
+
+## 2026-09-05 outboard clock-island experiment
+
+The next bounded experiment moved Y1/R23/C42/C43 to open acreage east/north
+of U7 and regenerated their routes from live serialized support pads. Native
+KiCad DRC for `PHASE19_RELOC_U270J190_COORD25_FULL.kicad_pcb` reports two
+shorting records and nine crossings. The failures are localized to clock
+support-pad dogbones and two clock-to-existing-USB3 corridor interactions;
+the experiment is rejected. The clean focused USB3+SATA result is unchanged.
+
+The generator retains the relative outboard placement as an explicit
+experiment, but Phase 19 is not closed. A passing full-support solution still
+requires a collision-aware clock layer/placement schedule.

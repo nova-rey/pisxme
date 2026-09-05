@@ -70,7 +70,9 @@ def main():
   _caps=({'C30':(U7X-40,U7Y+5),'C31':(U7X-40,U7Y+3),'C32':(U7X-40,U7Y+9),'C33':(U7X-40,U7Y+7)} if SATA270 else {'C30':(U7X-15,U7Y-9),'C31':(U7X-15,U7Y-5),'C32':(U7X-15,U7Y+3),'C33':(U7X-15,U7Y+7)})
   for ref,(x,y) in _caps.items():
    f=b.FindFootprintByReference(ref); f.SetPosition(V(x,y)); f.SetOrientationDegrees(0 if SATA270 else 180)
-  for ref,xyv in {'Y1':C(268,98),'R23':C(272,98),'C42':C(272,94),'C43':C(276,98)}.items():
+  # Put the low-profile clock island in open south acreage, clear of the
+  # relocated U7/SATA launch.  The placement remains relative to U7/J3.
+  for ref,xyv in {'Y1':(U7X+35,U7Y-25),'R23':(U7X+39,U7Y-25),'C42':(U7X+39,U7Y-29),'C43':(U7X+43,U7Y-25)}.items():
    f=b.FindFootprintByReference(ref)
    if f is None: raise RuntimeError('clock donor missing '+ref)
    f.SetPosition(V(*xyv)); f.SetOrientationDegrees(0)
@@ -368,17 +370,14 @@ def main():
  for pn,nm in (('52','/STORAGE/BRIDGE_XI'),('53','/STORAGE/BRIDGE_VSSOSC'),('54','/STORAGE/BRIDGE_XO')): setpad(pad(u,pn),N[nm])
  Y={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('Y1').Pads()}; R23={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('R23').Pads()}; C42={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('C42').Pads()}; C43={str(p.GetNumber()):pos(p) for p in b.FindFootprintByReference('C43').Pads()}
  xi,xo,vs=N['/STORAGE/BRIDGE_XI'],N['/STORAGE/BRIDGE_XO'],N['/STORAGE/BRIDGE_VSSOSC']
- # Clock island: escape the live U7 row to distinct B.Cu corridors, then
- # use short F.Cu dogbones into the support pads. Coordinates are the
- # native serialized locations for the selected U7/J3 relocation.
- seg(b,xi,U['52'],(263,102)); via_sig(b,xi,(263,102)); seg(b,xi,(263,102),(263,70),pcbnew.B_Cu); seg(b,xi,(263,70),(261,70),pcbnew.B_Cu); via_sig(b,xi,(261,70)); seg(b,xi,(261,70),R23['1'],pcbnew.F_Cu)
- seg(b,xi,C42['1'],(261,62)); via_sig(b,xi,(261,62)); seg(b,xi,(261,62),(261,70),pcbnew.B_Cu)
- seg(b,xi,Y['1'],(255,67)); seg(b,xi,(255,67),(261,70),pcbnew.F_Cu)
- seg(b,xo,U['54'],(260,103)); via_sig(b,xo,(260,103)); seg(b,xo,(260,103),(260,72),pcbnew.B_Cu); seg(b,xo,(260,72),(266,72),pcbnew.B_Cu); via_sig(b,xo,(266,72)); seg(b,xo,(266,72),C43['1'],pcbnew.F_Cu); seg(b,xo,C43['1'],R23['2'],pcbnew.F_Cu); seg(b,xo,Y['3'],R23['2'],pcbnew.F_Cu)
- seg(b,vs,U['53'],(258,102.5)); via_sig(b,vs,(258,102.5)); seg(b,vs,(258,102.5),(258,74),pcbnew.B_Cu); seg(b,vs,(258,74),(268,74),pcbnew.B_Cu); via_sig(b,vs,(268,74)); seg(b,vs,(268,74),C43['2'],pcbnew.F_Cu)
- seg(b,vs,Y['2'],(255,74)); via_sig(b,vs,(255,74)); seg(b,vs,(255,74),(258,74),pcbnew.B_Cu)
- seg(b,vs,Y['4'],(259,74)); via_sig(b,vs,(259,74)); seg(b,vs,(259,74),(258,74),pcbnew.B_Cu)
- seg(b,vs,C42['2'],(262.5,62)); via_sig(b,vs,(262.5,62)); seg(b,vs,(262.5,62),(258,74),pcbnew.B_Cu)
+ # Clock island: outboard support acreage with separated monotonic lanes.
+ y1x,y1y=pos(b.FindFootprintByReference('Y1').Pads()[0]); r1x,r1y=R23['1']; r2x,r2y=R23['2']
+ xi_bus=(r1x,y1y+8.0); seg(b,xi,U['52'],(U['52'][0]-2.0,U['52'][1])); seg(b,xi,(U['52'][0]-2.0,U['52'][1]),(U['52'][0]-2.0,xi_bus[1])); seg(b,xi,(U['52'][0]-2.0,xi_bus[1]),xi_bus); seg(b,xi,xi_bus,R23['1'])
+ seg(b,xi,C42['1'],(C42['1'][0],y1y+6.0)); seg(b,xi,(C42['1'][0],y1y+6.0),xi_bus); seg(b,xi,Y['1'],xi_bus)
+ xo_e=(U['54'][0]-5.0,U['54'][1]); xo_bus=(C43['1'][0]-2.0,y1y+10.0)
+ seg(b,xo,U['54'],xo_e); via_sig(b,xo,xo_e); seg(b,xo,xo_e,(xo_e[0],xo_bus[1]),pcbnew.B_Cu); seg(b,xo,(xo_e[0],xo_bus[1]),xo_bus,pcbnew.B_Cu); via_sig(b,xo,xo_bus); seg(b,xo,xo_bus,C43['1']); seg(b,xo,C43['1'],R23['2']); seg(b,xo,Y['3'],R23['2'])
+ vs_bus=(C43['2'][0]+2.0,y1y+12.0); seg(b,vs,U['53'],(U['53'][0]-7.0,U['53'][1])); seg(b,vs,(U['53'][0]-7.0,U['53'][1]),(U['53'][0]-7.0,vs_bus[1])); seg(b,vs,(U['53'][0]-7.0,vs_bus[1]),vs_bus); seg(b,vs,vs_bus,C43['2'])
+ seg(b,vs,Y['2'],vs_bus); seg(b,vs,Y['4'],vs_bus); seg(b,vs,C42['2'],(C42['2'][0],vs_bus[1])); seg(b,vs,(C42['2'][0],vs_bus[1]),vs_bus)
  # FREQSEL0/1 and VDDIO high on the local 3V3 net; local short fanout.
  v33=b.FindNet('/STORAGE/BRIDGE_3V3')
  for pn in ('24','30','31'): setpad(pad(u,pn),v33)
