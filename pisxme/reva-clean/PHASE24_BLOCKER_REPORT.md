@@ -115,6 +115,15 @@ missed earlier report sections; they are superseded. The J7 top-row trial is
 also rejected at 8 shorts and 10 crossings despite reducing unconnected
 records to 134.
 
+## Working-basis correction
+
+Full-report counting establishes the clean basis as
+`PHASE24_BRIDGE_1V1_CAP_CHAIN.kicad_pcb` at 205 DRC violations, 145
+unconnected records, zero shorts, and zero crossings. The later composite
+candidate is not clean: fresh DRC reports 235 violations, 136 unconnected,
+four shorts, and seven crossings. Those later joins are rejected pending
+regeneration from the clean basis.
+
 ## 12V input bypass accepted
 
 C3.2 was joined to the existing `/POWER_INPUT/12V_IN_A` component with a

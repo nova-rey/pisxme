@@ -603,3 +603,10 @@ until the complete report is clean.
 The top-row-only J7 ground experiment is rejected: fresh DRC reports 134
 unconnected records but 8 shorting and 10 crossing records. It is retained
 only as negative geometry evidence.
+
+The reconciliation receipt `PHASE24_DRC_RECONCILIATION_RECEIPT.md` establishes
+`PHASE24_BRIDGE_1V1_CAP_CHAIN.kicad_pcb` as the latest clean working basis.
+The later R22, U7 CFG, C3, and 3V3 dogleg candidates are not promoted until
+they pass a full-report native rerun; the current serialized U7 CFG candidate
+is explicitly rejected at 235 violations, including four shorts and seven
+crossings.
