@@ -134,3 +134,13 @@ PCIe/SATA corridors, plus a POWER_GND-to-XO conflict. This rejects that
 placement transform only; it does not invalidate the passing local clock
 topology. The next integration candidate must select a genuinely open
 acreage support shelf and preserve the existing PCIe/SATA corridors.
+
+## Combined integration attempt
+
+The existing rot180 acreage clock generator and a rigid transform of the
+passing rot90 clock graph were both tested against the V5 PCIe/SATA/USB3
+ancestor. The generator produced local clock-to-storage shorts/crossings;
+the rigid transform produced true PCIe/SATA shorts and crossings. These are
+rejected integration candidates. The local clock and U5 capacitor topology
+proofs remain valid and are retained as the authoritative sub-fixtures for
+the next open-shelf integration pass.
