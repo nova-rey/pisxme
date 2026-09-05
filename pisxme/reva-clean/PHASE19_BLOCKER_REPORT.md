@@ -1310,3 +1310,22 @@ still excessive: CM5 USB3 RX 14.10 mm, CM5 USB3 TX 137.70 mm, bridge SATA RX
 removed crossings is the dominant defect. Phase 19 therefore remains open
 for a nearer/shorter pair-preserving route or an explicit controlled
 matching geometry; no DRC shortcut or validation relaxation is allowed.
+
+## 2026-09-05 TX escape discriminating experiments
+
+The regenerated ordered USB3 path was tested with the TX_N lower detour
+removed. Moving its landing from the old 136 mm corridor to 110 mm reduced
+CM5 USB3 TX skew from 137.70 mm to 64.22 mm, but native DRC identified a
+real crossing against SATA RX_P and a U7 pad-field short. A second lower-edge
+dogbone removed the NC-pad short but crossed the TX_P launch. Moving U7 to
+230/240/250/260 mm without regenerating the surrounding donor power geometry
+introduced additional island shorts/crossings, so those placements are
+rejected as non-discriminating integration experiments.
+
+The regenerated `COORD49_FULL` geometry remains the only accepted
+full-support baseline: zero target shorting/crossing/dangling records, but
+with excessive USB3 pair skew. The authoring script was restored to that
+reproducible baseline; Phase 19 remains open. The next credible solution is a
+new pair-preserving U7 entry/layer schedule or a coordinated storage-island
+placement generated from a donor whose local power geometry is also moved
+coherently.
