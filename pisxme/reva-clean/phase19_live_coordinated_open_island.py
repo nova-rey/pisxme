@@ -104,12 +104,12 @@ def main():
    if bn in ('BRIDGE_SATA_TX_P','BRIDGE_SATA_RX_P'):
     seg(b,bridge,a,cp['2'],pcbnew.F_Cu)
    else:
-    e=(a[0]-3.0,a[1]-1.0) if bn=='BRIDGE_SATA_TX_N' else (a[0]+2.5,a[1]+2.5); seg(b,bridge,a,e,pcbnew.F_Cu); via(b,bridge,e); seg(b,bridge,e,cp['2'],pcbnew.B_Cu)
+    e=(a[0]-3.0,a[1]-1.0) if bn=='BRIDGE_SATA_TX_N' else (a[0]+3.5,a[1]+2.5); seg(b,bridge,a,e,pcbnew.F_Cu); via(b,bridge,e); seg(b,bridge,e,cp['2'],pcbnew.B_Cu)
    if bn=='BRIDGE_SATA_TX_P': seg(b,socket,cp['1'],z,pcbnew.F_Cu)
    elif bn=='BRIDGE_SATA_RX_P':
-    q0=(239.5,113.5); seg(b,socket,cp['1'],q0,pcbnew.F_Cu); via(b,socket,q0); q=(207.0,132.5); seg(b,socket,q0,q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
+    q0=(238.0,112.0); seg(b,socket,cp['1'],q0,pcbnew.F_Cu); via(b,socket,q0); q=(207.0,132.5); seg(b,socket,q0,q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
    elif bn=='BRIDGE_SATA_TX_N': q=(197.0,127.0); seg(b,socket,cp['1'],q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
-   else: q=(207.0,134.0); seg(b,socket,cp['1'],q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
+   else: q=(207.0,135.0); seg(b,socket,cp['1'],q,pcbnew.B_Cu); via(b,socket,q); seg(b,socket,q,z,pcbnew.F_Cu)
    continue
   if u.GetOrientationDegrees() == -90.0 and j.GetOrientationDegrees() == 90.0:
    # Rot270 U7 exposes SATA on a single west-facing row.  Use live pad

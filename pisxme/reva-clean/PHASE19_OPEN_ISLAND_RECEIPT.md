@@ -85,3 +85,7 @@ Clock-oracle post-generation transplant: applied the passing minimal clock
 geometry over a freshly generated USB/SATA board. Native DRC measured `248` /
 `62`; rejection is due to candidate USB/SATA crossings and shorts, while the
 clock transplant introduced no new clock-crossing class.
+
+SATA transition follow-up: native DRC measured `96` / `75`. Coupling-pad and
+U7 RX pair shorts were removed; dense J3 launch/NC-pad clearances remain.
+Rejected as a full SATA pass.

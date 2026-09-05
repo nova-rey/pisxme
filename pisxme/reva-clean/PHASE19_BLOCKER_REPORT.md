@@ -1037,3 +1037,11 @@ unconnected items, improving over the earlier `105` result but retaining
 candidate short/clearance records at the U7 RX escape, capacitor transitions,
 and the M.2-side dogbones. The trial is rejected; the rotated launch and
 monotonic cap-row geometry remain useful inputs for the next correction.
+
+The follow-up moved the RXP coupling transition off C32's pad, separated the
+socket-side B.Cu transition coordinates, and moved the U7 RXN escape away
+from the RXP launch. Native DRC improved to `96` violations / `75`
+unconnected items, with the earlier coupling-pad and U7 RX pair short class
+removed. Remaining candidate errors are concentrated at the dense J3 launch
+and its mechanical/NC-pad field. The candidate remains rejected and Phase 19
+remains open.
