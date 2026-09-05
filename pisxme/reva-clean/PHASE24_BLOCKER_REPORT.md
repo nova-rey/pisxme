@@ -691,6 +691,12 @@ shorts/crossings and reduces unconnected records from 168 to 163. This
 storage repair composes cleanly; clock and remaining SATA/control records
 remain unresolved.
 
+The cumulative PCB was missing serialized net identity on U7 clock pads
+52/53/54. That was corrected in a disposable candidate using the schematic's
+XI/VSSOSC/XO mapping. Native DRC remains at 201 violations with zero
+shorts/crossings; the unconnected census rises 163 to 166 because the source
+pads are now correctly included. No clock routing claim is made yet.
+
 The U7 `BRIDGE_CFG` repeated-pad join was tested and rejected: the direct
 link hit pad 24 on `BRIDGE_3V3`, while the perimeter reroute produced two
 shorts and one crossing. No severity was relaxed; the control escape remains

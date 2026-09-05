@@ -427,6 +427,17 @@ crossings; unconnected items fall from 168 to 163. The storage correction
 therefore composes cleanly with the accepted power/rail repairs. Clock and
 the remaining SATA/control groups remain open.
 
+## U7 clock-pad authority correction
+
+Inspection of the cumulative candidate found U7 pads 52, 53, and 54
+serialized without net assignments, despite the schematic mapping to
+`BRIDGE_XI`, `BRIDGE_VSSOSC`, and `BRIDGE_XO`. The disposable
+`phase24_assign_u7_clock_pads.py` materializes those exact net identities.
+Native DRC remains at 201 violations with zero shorts and zero crossings;
+the unconnected count changes from 163 to 166 because the now-authoritative
+source pads correctly enter the native gate. Clock copper fanout remains
+unresolved and will be routed from these real source pads.
+
 ## U7 BRIDGE_CFG join experiment (rejected)
 
 The direct CFG pad join crossed U7 pad 24 (`BRIDGE_3V3`) and was rejected.
