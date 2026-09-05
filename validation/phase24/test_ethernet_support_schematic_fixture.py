@@ -4,7 +4,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[2]
 R = ROOT / "pisxme/reva-clean"
-NETLIST = R / "PHASE24_ETHERNET_SUPPORT_FIXTURE3.xml"
+NETLIST = R / "PHASE24_ETHERNET_SUPPORT_FIXTURE4.xml"
 ERC = R / "PHASE24_ETHERNET_SUPPORT_FIXTURE_ROOT2-erc.rpt"
 SOURCE = R / "PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch"
 
@@ -31,7 +31,9 @@ def block(text, name):
 def main():
     assert "Errors 0" in ERC.read_text()
     source = SOURCE.read_text()
-    assert "PROVISIONAL_NOT_PROCUREMENT_AUTHORITY" in source
+    assert "PROVISIONAL_NOT_PROCUREMENT_AUTHORITY" not in source
+    for mpn in ("GRM188R72A223KAC4J", "CRCW040275R0FKEDC", "1206GC102KAT2A", "RK73G1ETTP4700D"):
+        assert mpn in source
     text = NETLIST.read_text()
     for name, members in EXPECTED.items():
         got = {f"{r}.{p}" for r, p in re.findall(r'\(ref "([^"]+)"\).*?\(pin "([^"]+)"\)', block(text, name), re.S)}

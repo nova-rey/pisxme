@@ -1088,6 +1088,6 @@ being inferred from the donor.
 
 The disposable native support fixture now passes root ERC with zero errors and
 the saved netlist contains the complete EDAC CT branch/common/shield topology
-and 470 ohm LED series elements. It deliberately uses provisional MPN fields
-and is topology evidence only; production hierarchy mapping and procurement
-authority remain open.
+and 470 ohm LED series elements. The fixture now uses selected commodity MPNs
+for the 0603/0402/1206 parts; passive authority is recorded separately, while
+production hierarchy mapping and parity remain open.

@@ -48,8 +48,8 @@ support island may be regenerated from those saved nets.
 
 `phase24_ethernet_support_fixture.py` creates a disposable child/root pair
 without editing production sources. The fixture uses ordinary `C48-C52` and
-`R26-R31` references and explicitly marks its MPN fields
-`PROVISIONAL_NOT_PROCUREMENT_AUTHORITY`; it proves topology only.
+`R26-R31` references. Its selected passive MPNs are recorded in
+`authority-inventory/primary-docs/ethernet-support-passives/ETHERNET_SUPPORT_PASSIVES_AUTHORITY.md`.
 
 Native KiCad 10.0.5 root ERC reports `Errors 0`. The exported netlist proves
 all four J2 center taps reach their own capacitor, each capacitor reaches its

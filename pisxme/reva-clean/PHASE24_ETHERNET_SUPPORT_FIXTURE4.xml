@@ -1,0 +1,1730 @@
+(export
+	(version "E")
+	(design
+		(source "/home/nyx/PiSXMe/pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+		(date "2026-09-05T17:10:14")
+		(tool "Eeschema 10.0.5")
+		(sheet
+			(number "1")
+			(name "/")
+			(tstamps "/")
+			(title_block
+				(title)
+				(company)
+				(rev)
+				(date)
+				(source "PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+				(comment
+					(number "1")
+					(value "")
+				)
+				(comment
+					(number "2")
+					(value "")
+				)
+				(comment
+					(number "3")
+					(value "")
+				)
+				(comment
+					(number "4")
+					(value "")
+				)
+				(comment
+					(number "5")
+					(value "")
+				)
+				(comment
+					(number "6")
+					(value "")
+				)
+				(comment
+					(number "7")
+					(value "")
+				)
+				(comment
+					(number "8")
+					(value "")
+				)
+				(comment
+					(number "9")
+					(value "")
+				)
+			)
+		)
+	)
+	(components
+		(comp
+			(ref "C48")
+			(value "22nF 100V")
+			(footprint "PiSXMeRevAClean:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "GRM188R72A223KAC4J")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "GRM188R72A223KAC4J")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "695a5dfc-9446-42dd-92f7-16c3d9c7878a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C49")
+			(value "22nF 100V")
+			(footprint "PiSXMeRevAClean:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "GRM188R72A223KAC4J")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "GRM188R72A223KAC4J")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a0cdef62-f2cd-4812-ae7f-8252bcbdfc67")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C50")
+			(value "22nF 100V")
+			(footprint "PiSXMeRevAClean:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "GRM188R72A223KAC4J")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "GRM188R72A223KAC4J")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "af0a1088-de24-4ee0-8ec2-22d703459178")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C51")
+			(value "22nF 100V")
+			(footprint "PiSXMeRevAClean:C_0603_1608Metric")
+			(fields
+				(field
+					(name "MPN") "GRM188R72A223KAC4J")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:C_0603_1608Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "GRM188R72A223KAC4J")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "19c9dd19-bb06-490b-ab97-b23cd10e6df0")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "C52")
+			(value "1nF 2kV")
+			(footprint "PiSXMeRevAClean:C_1206_3216Metric")
+			(fields
+				(field
+					(name "MPN") "1206GC102KAT2A")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:C_1206_3216Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "C")
+				(description "Unpolarized capacitor")
+			)
+			(property
+				(name "MPN")
+				(value "1206GC102KAT2A")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "cap capacitor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "C_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "a742c030-085f-4869-88c1-742adee1973a")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "J2")
+			(value "A70-112-331N126")
+			(footprint "PiSXMeRevAClean:EDAC_A70_112_331N126")
+			(fields
+				(field
+					(name "MPN") "A70-112-331N126")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:EDAC_A70_112_331N126")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMeRevAClean")
+				(part "EDAC_A70_112_331N126_Ethernet")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "A70-112-331N126")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "d9000000-0000-0000-0000-000000000000")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+						(pin
+							(num "11")
+						)
+						(pin
+							(num "12")
+						)
+						(pin
+							(num "13")
+						)
+						(pin
+							(num "14")
+						)
+						(pin
+							(num "15")
+						)
+						(pin
+							(num "16")
+						)
+						(pin
+							(num "17")
+						)
+						(pin
+							(num "18")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R26")
+			(value "75R")
+			(footprint "PiSXMeRevAClean:R_0402_1005Metric")
+			(fields
+				(field
+					(name "MPN") "CRCW040275R0FKEDC")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "CRCW040275R0FKEDC")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "119f7891-2554-4ce2-81af-4417952f3834")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R27")
+			(value "75R")
+			(footprint "PiSXMeRevAClean:R_0402_1005Metric")
+			(fields
+				(field
+					(name "MPN") "CRCW040275R0FKEDC")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "CRCW040275R0FKEDC")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "4f1b72cf-a508-42b6-a853-85d1653aa928")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R28")
+			(value "75R")
+			(footprint "PiSXMeRevAClean:R_0402_1005Metric")
+			(fields
+				(field
+					(name "MPN") "CRCW040275R0FKEDC")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "CRCW040275R0FKEDC")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "49669e91-e65b-49a4-86ca-c3a2dd28deeb")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R29")
+			(value "75R")
+			(footprint "PiSXMeRevAClean:R_0402_1005Metric")
+			(fields
+				(field
+					(name "MPN") "CRCW040275R0FKEDC")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "CRCW040275R0FKEDC")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "81d58508-fcc0-4ce0-9272-54926d9e0397")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R30")
+			(value "470R")
+			(footprint "PiSXMeRevAClean:R_0402_1005Metric")
+			(fields
+				(field
+					(name "MPN") "RK73G1ETTP4700D")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RK73G1ETTP4700D")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "9a6ba573-11b2-4f56-bd26-a82627336965")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "R31")
+			(value "470R")
+			(footprint "PiSXMeRevAClean:R_0402_1005Metric")
+			(fields
+				(field
+					(name "MPN") "RK73G1ETTP4700D")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:R_0402_1005Metric")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "Device")
+				(part "R")
+				(description "Resistor")
+			)
+			(property
+				(name "MPN")
+				(value "RK73G1ETTP4700D")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(property
+				(name "ki_keywords")
+				(value "R res resistor")
+			)
+			(property
+				(name "ki_fp_filters")
+				(value "R_*")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "56aa81dd-1c10-496c-9ece-60e561d1bdcc")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U6")
+			(value "TPD4EUSB30DQAR")
+			(footprint "PiSXMeRevAClean:USON-10_2.5x1.0mm_P0.5mm")
+			(fields
+				(field
+					(name "MPN") "TPD4EUSB30DQAR")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:USON-10_2.5x1.0mm_P0.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMeRevAClean")
+				(part "TPD4EUSB30DQAR")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "TPD4EUSB30DQAR")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dc000000-0000-0000-0000-000000000000")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+					)
+				)
+			)
+		)
+		(comp
+			(ref "U9")
+			(value "TPD4EUSB30DQAR")
+			(footprint "PiSXMeRevAClean:USON-10_2.5x1.0mm_P0.5mm")
+			(fields
+				(field
+					(name "MPN") "TPD4EUSB30DQAR")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:USON-10_2.5x1.0mm_P0.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(libsource
+				(lib "PiSXMeRevAClean")
+				(part "TPD4EUSB30DQAR")
+				(description "")
+			)
+			(property
+				(name "MPN")
+				(value "TPD4EUSB30DQAR")
+			)
+			(property
+				(name "Sheetname")
+				(value "Root")
+			)
+			(property
+				(name "Sheetfile")
+				(value "pisxme/reva-clean/PHASE24_ETHERNET_SUPPORT_FIXTURE.kicad_sch")
+			)
+			(sheetpath
+				(names "/")
+				(tstamps "/")
+			)
+			(tstamps "dd000000-0000-0000-0000-000000000000")
+			(units
+				(unit
+					(name "A")
+					(pins
+						(pin
+							(num "1")
+						)
+						(pin
+							(num "2")
+						)
+						(pin
+							(num "3")
+						)
+						(pin
+							(num "4")
+						)
+						(pin
+							(num "5")
+						)
+						(pin
+							(num "6")
+						)
+						(pin
+							(num "7")
+						)
+						(pin
+							(num "8")
+						)
+						(pin
+							(num "9")
+						)
+						(pin
+							(num "10")
+						)
+					)
+				)
+			)
+		)
+	)
+	(groups)
+	(variants)
+	(libparts
+		(libpart
+			(lib "Device")
+			(part "C")
+			(description "Unpolarized capacitor")
+			(footprints
+				(fp "C_*")
+			)
+			(fields
+				(field
+					(name "Reference") "C")
+				(field
+					(name "Value") "C")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Unpolarized capacitor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "Device")
+			(part "R")
+			(description "Resistor")
+			(footprints
+				(fp "R_*")
+			)
+			(fields
+				(field
+					(name "Reference") "R")
+				(field
+					(name "Value") "R")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description") "Resistor")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMeRevAClean")
+			(part "EDAC_A70_112_331N126_Ethernet")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "EDAC_A70_112_331N126_Ethernet")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "TRD0+")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "TRD0-")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "TRD1+")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "TRD1-")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "TRD2+")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "TRD2-")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "TRD3+")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "TRD3-")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "VC1")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "VC2")
+					(type "passive")
+				)
+				(pin
+					(num "11")
+					(name "VC3")
+					(type "passive")
+				)
+				(pin
+					(num "12")
+					(name "VC4")
+					(type "passive")
+				)
+				(pin
+					(num "13")
+					(name "LEDY_A")
+					(type "passive")
+				)
+				(pin
+					(num "14")
+					(name "LEDY_K")
+					(type "passive")
+				)
+				(pin
+					(num "15")
+					(name "LEDG_A")
+					(type "passive")
+				)
+				(pin
+					(num "16")
+					(name "LEDG_K")
+					(type "passive")
+				)
+				(pin
+					(num "17")
+					(name "SHIELD_A")
+					(type "passive")
+				)
+				(pin
+					(num "18")
+					(name "SHIELD_B")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMeRevAClean")
+			(part "ETHERNET_Contract")
+			(fields
+				(field
+					(name "Reference") "X")
+				(field
+					(name "Value") "ETHERNET_Contract")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "CM5_GBE")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "GBE_LED")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "GBE_SHIELD")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "ETH_POWER")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "PiSXMeRevAClean")
+			(part "TPD4EUSB30DQAR")
+			(fields
+				(field
+					(name "Reference") "U")
+				(field
+					(name "Value") "TPD4EUSB30DQAR")
+				(field
+					(name "Footprint") "PiSXMeRevAClean:USON-10_2.5x1.0mm_P0.5mm")
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "IO1_A")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "IO2_A")
+					(type "passive")
+				)
+				(pin
+					(num "3")
+					(name "GND_A")
+					(type "passive")
+				)
+				(pin
+					(num "4")
+					(name "IO3_A")
+					(type "passive")
+				)
+				(pin
+					(num "5")
+					(name "IO4_A")
+					(type "passive")
+				)
+				(pin
+					(num "6")
+					(name "IO4_B")
+					(type "passive")
+				)
+				(pin
+					(num "7")
+					(name "IO3_B")
+					(type "passive")
+				)
+				(pin
+					(num "8")
+					(name "GND_B")
+					(type "passive")
+				)
+				(pin
+					(num "9")
+					(name "IO2_B")
+					(type "passive")
+				)
+				(pin
+					(num "10")
+					(name "IO1_B")
+					(type "passive")
+				)
+			)
+		)
+	)
+	(libraries
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+	)
+	(nets
+		(net
+			(code "2")
+			(name "/ETH_CT1")
+			(class "Default")
+			(node
+				(ref "C48")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "9")
+				(pinfunction "VC1_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "3")
+			(name "/ETH_CT2")
+			(class "Default")
+			(node
+				(ref "C49")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "10")
+				(pinfunction "VC2_10")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "4")
+			(name "/ETH_CT3")
+			(class "Default")
+			(node
+				(ref "C50")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "11")
+				(pinfunction "VC3_11")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "5")
+			(name "/ETH_CT4")
+			(class "Default")
+			(node
+				(ref "C51")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "12")
+				(pinfunction "VC4_12")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "6")
+			(name "/ETH_CT_BRANCH_1")
+			(class "Default")
+			(node
+				(ref "C48")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R26")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "7")
+			(name "/ETH_CT_BRANCH_2")
+			(class "Default")
+			(node
+				(ref "C49")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R27")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "8")
+			(name "/ETH_CT_BRANCH_3")
+			(class "Default")
+			(node
+				(ref "C50")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R28")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "9")
+			(name "/ETH_CT_BRANCH_4")
+			(class "Default")
+			(node
+				(ref "C51")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R29")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "10")
+			(name "/ETH_CT_COMMON")
+			(class "Default")
+			(node
+				(ref "C52")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R26")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R27")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R28")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R29")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "11")
+			(name "/ETH_POWER")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "13")
+				(pinfunction "LEDY_A_13")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "15")
+				(pinfunction "LEDG_A_15")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "13")
+			(name "/GBE_LED_G_K")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "16")
+				(pinfunction "LEDG_K_16")
+				(pintype "passive")
+			)
+			(node
+				(ref "R31")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "14")
+			(name "/GBE_LED_Y_K")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "14")
+				(pinfunction "LEDY_K_14")
+				(pintype "passive")
+			)
+			(node
+				(ref "R30")
+				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "15")
+			(name "CM5_ETH_LED2")
+			(class "Default")
+			(node
+				(ref "R30")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "16")
+			(name "CM5_ETH_LED3")
+			(class "Default")
+			(node
+				(ref "R31")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "17")
+			(name "CM5_GBE_TD0_N")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "2")
+				(pinfunction "TRD0-_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "2")
+				(pinfunction "IO2_A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "9")
+				(pinfunction "IO2_B_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "18")
+			(name "CM5_GBE_TD0_P")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "1")
+				(pinfunction "TRD0+_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "1")
+				(pinfunction "IO1_A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "10")
+				(pinfunction "IO1_B_10")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "19")
+			(name "CM5_GBE_TD1_N")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "4")
+				(pinfunction "TRD1-_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "4")
+				(pinfunction "IO3_A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "7")
+				(pinfunction "IO3_B_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "20")
+			(name "CM5_GBE_TD1_P")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "3")
+				(pinfunction "TRD1+_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "5")
+				(pinfunction "IO4_A_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "6")
+				(pinfunction "IO4_B_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "21")
+			(name "CM5_GBE_TD2_N")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "6")
+				(pinfunction "TRD2-_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "U9")
+				(pin "2")
+				(pinfunction "IO2_A_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "U9")
+				(pin "9")
+				(pinfunction "IO2_B_9")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "22")
+			(name "CM5_GBE_TD2_P")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "5")
+				(pinfunction "TRD2+_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U9")
+				(pin "1")
+				(pinfunction "IO1_A_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "U9")
+				(pin "10")
+				(pinfunction "IO1_B_10")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "23")
+			(name "CM5_GBE_TD3_N")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "8")
+				(pinfunction "TRD3-_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U9")
+				(pin "4")
+				(pinfunction "IO3_A_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "U9")
+				(pin "7")
+				(pinfunction "IO3_B_7")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "24")
+			(name "CM5_GBE_TD3_P")
+			(class "Default")
+			(node
+				(ref "J2")
+				(pin "7")
+				(pinfunction "TRD3+_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "U9")
+				(pin "5")
+				(pinfunction "IO4_A_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "U9")
+				(pin "6")
+				(pinfunction "IO4_B_6")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "25")
+			(name "GBE_SHIELD")
+			(class "Default")
+			(node
+				(ref "C52")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "17")
+				(pinfunction "SHIELD_A_17")
+				(pintype "passive")
+			)
+			(node
+				(ref "J2")
+				(pin "18")
+				(pinfunction "SHIELD_B_18")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "26")
+			(name "POWER_GND")
+			(class "Default")
+			(node
+				(ref "U6")
+				(pin "3")
+				(pinfunction "GND_A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U6")
+				(pin "8")
+				(pinfunction "GND_B_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "U9")
+				(pin "3")
+				(pinfunction "GND_A_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "U9")
+				(pin "8")
+				(pinfunction "GND_B_8")
+				(pintype "passive")
+			)
+		)
+	)
+)
