@@ -1401,6 +1401,15 @@ degraded to approximately 9.59 mm RX and 8.63 mm TX. The prior all-B.Cu
 pair-corridor result remains the better baseline; no Phase 19 promotion or
 Phase 20 work has started.
 
+## 2026-09-05 planar fan-in schedule experiment
+
+The proposed descending-column/ascending-y B.Cu fan-in was implemented as a
+complete source-to-U7 schedule. Native DRC rejected it with multiple B.Cu
+crossings between the intermediate fan-in segments and the existing lane
+columns; the source/U7 transition clearance debt remained. Pair skew was
+approximately 4.71 mm RX and 1.23 mm TX. The authoring path was restored to
+the prior separated-column baseline.
+
 ## 2026-09-05 isolated quadrant fan-in follow-up
 
 The alternating-quadrant U7 fan-in was rerun against the restored all-B.Cu
