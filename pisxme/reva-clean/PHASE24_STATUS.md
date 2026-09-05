@@ -692,6 +692,25 @@ three crossings. A specialist review confirms that the preserved upper
 Ethernet lanes do not provide enough clearance for ordinary 0.50/0.30 mm
 through-via transitions; no upper escape is promoted.
 
+## Macro-floorplan review amendment
+
+The live native-loaded integrated candidate is
+`PHASE24_CM5_GROUND_RIGHT_SAME_ROWS.kicad_pcb`, checkpointed through
+`4ace494`. Its transformed geometry places J7 on B.Cu at (35,130), with
+Ethernet pads at (32.96/36.04, 99.1–100.7), U8 at (58,100), and J2 at
+(77.5,53). U7/J3 storage is at (120,140)/(145,125); J4 SERVICE is at
+(45,100); J1 PCIe/SXM2 is at (150,90); power/regulator islands occupy the
+west, south, and east edges. Native-loaded group metrics are Ethernet 21.54
+mm nearest-pad distance and 534.4 mm F.Cu copper, PCIe 55.39 mm and 704.5 mm,
+USB3-storage 53.81 mm and 323.8 mm, and SERVICE 19.96 mm and 101.6 mm.
+
+Three disposable no-major-body-overlap candidates were generated:
+`PHASE24_MACRO_ETH_WEST`, `PHASE24_MACRO_ETH_SOUTH`, and
+`PHASE24_MACRO_STORAGE_LOCAL`. They are placement-only studies; their
+existing copper is intentionally not considered valid after movement. The
+review establishes that the acreage macro-floorplan should be repaired as
+coherent functional neighborhoods before further net-by-net Phase 24 repair.
+
 Two outboard `POWER_GND` return experiments were rejected. A proposed
 C14-to-C19 horizontal chain produced 219 violations, 118 unconnected
 records, three shorts, and two crossings. Narrowing the trial to adjacent

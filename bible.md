@@ -4134,3 +4134,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Rejected the outboard POWER_GND return-row trials: C14-C19 produced 3 shorts/2 crossings and C14-C15 produced 2 shorts; retained the clean 209/122/0/0 basis.
 2026-09-05: Rejected transplant of the earlier J1 ground-column geometry onto the cumulative basis at 217 violations, 122 unconnected records, 1 short, and 2 crossings; retained 209/122/0/0.
 2026-09-05: Rejected cumulative U5 exposed-ground stitching after full native DRC found a POWER_GND/BRIDGE_1V1 short; three single-segment discriminators reproduced the short, while the corrected U5 audit remained passing.
+2026-09-05: Performed the authorized native macro-floorplan review; extracted transformed CM5/island geometry, generated three disposable no-overlap candidates, and identified Ethernet/storage as materially nonlocal before further Phase 24 copper repair.

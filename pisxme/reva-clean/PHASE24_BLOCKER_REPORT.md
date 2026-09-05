@@ -917,3 +917,19 @@ The 3V3 capacitor field, R11/C18 support join, and R14-to-U4 output dogleg
 were validated sequentially. Native DRC reports zero shorts and crossings;
 the cumulative unconnected census is 138. No severity or connection was
 waived.
+# Current Phase 24 macro-floorplan assessment
+
+The live integrated baseline is `PHASE24_CM5_GROUND_RIGHT_SAME_ROWS.kicad_pcb`.
+Native-loaded geometry places CM5 Ethernet pads at (32.96/36.04, 99.1–100.7)
+mm, U8 at (58,100), and J2 at (77.5,53), with 21.54 mm nearest-pad distance
+and 534.4 mm of routed Ethernet F.Cu copper. CM5 USB3 to the U7/J3 storage
+island is 53.81 mm nearest-pad distance. The macro-floorplan is therefore
+materially nonlocal for these two neighborhoods.
+
+`PHASE24_MACRO_ETH_WEST`, `PHASE24_MACRO_ETH_SOUTH`, and
+`PHASE24_MACRO_STORAGE_LOCAL` are disposable placement-only candidates with
+no major footprint-body overlaps. Their existing tracks are invalidated by
+movement and are not evidence of routing closure. The next action is to
+select a coherent candidate using consultant/specialist review, then
+regenerate affected Ethernet/storage copper and revalidate all dependent
+subsystems.
