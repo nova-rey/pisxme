@@ -63,6 +63,18 @@ passive branch geometry. The experiment is rejected and is not production
 authority. Next repair remains layer-separated passive fanout with explicit
 via/layer ownership, followed by the missing U5 C44-C47 island.
 
+## U5 capacitor-island experiments (rejected)
+
+The first C44-C47 materialization placed the four schematic-authoritative
+1210 capacitors near the U5 region, but native DRC found new shorts against
+the existing `/REGULATORS/RT_BRIDGE_3V3` corridor and new crossings. A
+second outboard translation was run as `PHASE24_U5_CAPS_ISLAND-outboard-drc.rpt`;
+it still found two true shorts involving inherited feedback/ground geometry
+and two crossings involving the existing PG corridor. Both experiments are
+rejected. The component parity gap remains real, and the next attempt must
+select a clear rail/return corridor relative to actual U5/feedback/PG pads,
+not merely translate the same fanout.
+
 ## Full clock-support discriminator (still open)
 
 The subsequent no-via-in-pad revision uses rule-width tracks and offset
