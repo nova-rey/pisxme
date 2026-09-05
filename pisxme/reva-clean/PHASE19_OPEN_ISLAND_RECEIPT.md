@@ -151,6 +151,12 @@ Rejected as a full SATA pass.
   and 1 short to F2 `FUSED_12V_B`; rejected.
 - The zero-short `PHASE19_COORDINATED_ORDERED19` result remains the best
   coordinated ancestor, but still has two USB/SATA crossings.
+### 2026-09-05 — outboard four-trunk coordinated trial
+
+- `PHASE19_COORDINATED_ORDERED23-drc.rpt`: 210 total records, 3 crossings,
+  and no shorting records; rejected.
+- Failure class: same-layer TX_P corridor intersects upper-pair vertical
+  trunks despite the outboard SATA clearance.
 ### 2026-09-05 — U7 rotation-180 USB3 diagnostic
 
 - `PHASE19_U7ROT180_USB_VERTICAL1-drc.rpt`: 223 total records, two

@@ -99,10 +99,10 @@ def main():
             'CM5_USB3_TX_N':90.0,'CM5_USB3_TX_P':92.0}[suffix]
     target_x={'CM5_USB3_RX_N':280.0,'CM5_USB3_RX_P':280.5,
               'CM5_USB3_TX_N':281.5,'CM5_USB3_TX_P':282.0}[suffix]
-    landing_y={'CM5_USB3_RX_N':116.0,'CM5_USB3_RX_P':120.0,
-               'CM5_USB3_TX_N':124.0,'CM5_USB3_TX_P':102.0}[suffix]
-    trunk_x={'CM5_USB3_RX_N':286.0,'CM5_USB3_RX_P':60.0,
-             'CM5_USB3_TX_N':56.0,'CM5_USB3_TX_P':284.0}[suffix]
+    landing_y={'CM5_USB3_RX_N':102.0,'CM5_USB3_RX_P':104.0,
+               'CM5_USB3_TX_N':106.0,'CM5_USB3_TX_P':108.0}[suffix]
+    trunk_x={'CM5_USB3_RX_N':290.0,'CM5_USB3_RX_P':292.0,
+             'CM5_USB3_TX_N':294.0,'CM5_USB3_TX_P':296.0}[suffix]
     launch_x={'CM5_USB3_RX_N':71.2,'CM5_USB3_RX_P':72.2,
               'CM5_USB3_TX_N':71.2,'CM5_USB3_TX_P':72.2}[suffix]
     launch=(launch_x,s[1]); seg(b,n,s,launch)

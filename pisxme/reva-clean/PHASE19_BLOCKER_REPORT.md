@@ -1144,6 +1144,15 @@ from the TX_N corridor to the F2 `FUSED_12V_B` pad. It is rejected. The
 attempt confirms that the remaining problem is corridor coexistence with
 the inherited power-entry geometry; it does not invalidate the zero-short
 isolated USB3 staircase or the SATA-only oracle.
+## 2026-09-05 outboard four-trunk coordinated trial
+
+`PHASE19_COORDINATED_ORDERED23.kicad_pcb` moved all four USB3 landings to
+outboard B.Cu trunks beyond the SATA diagonal. Native KiCad DRC reported 210
+records with three track crossings and no shorting records. The crossings
+are the unavoidable same-layer interaction between the long TX_P corridor
+and the upper-pair vertical trunks. The candidate is rejected; the next
+class is pair-layer separation with source escapes routed around CM5 support
+geometry.
 ## 2026-09-05 U7 rotation-180 USB3 diagnostic
 
 `PHASE19_U7ROT180_USB_VERTICAL1.kicad_pcb` tested the mirrored side-row
