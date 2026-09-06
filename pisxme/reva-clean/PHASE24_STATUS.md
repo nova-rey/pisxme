@@ -1381,3 +1381,20 @@ orientations plus this wider local staging move have now been exhausted;
 further progress requires the official CM5IO-style staged split-layer escape,
 ordinary through-vias outside the dense pad fields, and connector launch
 regeneration.
+
+## Hand-authored staged split-layer probe — 2026-09-05
+
+The first hand-authored split-layer source-escape probe used native J7/U6/U9
+pad identities, F.Cu departures, B.Cu staged corridors, and ordinary
+through-vias outside the nominal pad fields. Native refilled DRC rejected the
+probe with `317` violations and `456` unconnected items, including real
+Ethernet shorts/crossings and dangling transitions. The disposable evidence
+is `PHASE24_ETHERNET_STAGED_SOURCE_ESCAPE.kicad_pcb` with report
+`PHASE24_ETHERNET_STAGED_SOURCE_ESCAPE-drc.rpt`.
+
+This is `ROUTE_IMPLEMENTATION_FAILURE`: the proposed via/waypoint geometry
+did not serialize as connected copper and the corridor was not pad-field
+safe. It is not a macro-placement conclusion. The successful official
+CM5IO transplant remains the route oracle; the next implementation must
+derive its branch topology and transition ownership from that saved native
+route rather than inventing another coordinate set.
