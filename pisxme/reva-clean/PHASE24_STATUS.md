@@ -3244,11 +3244,32 @@ pads. The production STORAGE symbol footprint field was updated to the new
 asset and the Phase 14 footprint-authority test passes.
 
 This corrects footprint selection and reproducibility only. It does not claim
-that U7 is yet electrically complete: the clean symbol still lacks the TI
-mandatory pin-field support identified above, and no routed PCB was regenerated
-from this footprint. Phase 24 remains open.
+that U7 is yet electrically complete: the symbol pin field is now present, but
+the newly named USB2/reference support circuits and fresh routed PCB have not
+yet been regenerated and validated. Phase 24 remains open.
 
 Receipt:
 `phase14_footprint_authority.py`,
 `validation/phase3/test_phase14_footprint_authority.py`, and the passing test
 output from 2026-09-06.
+
+## TI-footprint replacement on storage PCB — 2026-09-06
+
+The disposable `phase24_replace_u7_with_ti_footprint_fixture.py` replaced
+only U7 in the latest storage candidate with the 65-pad TI PVP0064A footprint
+and assigned all 41 U7 pad nets from the native repaired netlist. The complete
+U7 pad-authority audit passes, proving the new footprint/net ownership is
+consistent with the expanded schematic.
+
+The inherited routes were authored against the rejected 0.5 mm footprint and
+cannot be reused as-is. Native DRC on the replacement fixture finds 486
+violations, including old copper terminating on the new pad field; USB3 and
+SATA endpoint audits fail at the relocated U7 pads. This is
+`ROUTE_IMPLEMENTATION_FAILURE`, not evidence against the TI footprint or the
+storage architecture. The fixture is not promoted. Fresh obstacle-aware U7
+USB3/SATA escapes must be generated against the TI pad coordinates, with all
+support/power pins retained.
+
+Receipt:
+`phase24_replace_u7_with_ti_footprint_fixture.py` and
+`PHASE24_STORAGE_TI_PINFIELD_REPLACED-drc.rpt`.
