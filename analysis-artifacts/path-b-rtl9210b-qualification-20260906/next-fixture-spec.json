@@ -20,6 +20,12 @@
     "individually accessible PERST, CLKREQ, REFCLK, PEWAKE/HOT_PLUG, PEDET/CONFIG1",
     "current-monitored SSD 3.3V path"
   ],
+  "socket_lane_mapping_assertion": {
+    "controller_tx_68_67": "M2_contacts_49_47_platform_PET_SATA_A",
+    "controller_rx_64_65": "M2_contacts_43_41_platform_PER_SATA_B",
+    "controller_refclk_61_62": "M2_contacts_55_53",
+    "do_not_copy": "retained WIP RTL9210B_ROOT.xml reversed hierarchy association"
+  },
   "required_states": [
     "forced_sata",
     "forced_nvme",

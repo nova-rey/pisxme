@@ -4806,3 +4806,6 @@ validation remain open.
  mismatch against native M.2 contact authority and has a mutation negative
  control; it prevents the community root receipt from becoming Path-B wiring
  authority by accident.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: updated the isolated future
+ fixture specification with the corrected physical M-key lane assignment and
+ an explicit prohibition on inheriting the reversed WIP hierarchy mapping.
