@@ -1879,3 +1879,13 @@ the earlier broad U7 no-net landing defect removed. It remains
 bridge-side escape ordering, socket-side pair ordering, and one USB3/clock
 clearance interaction. The candidate is preserved but not promoted, and the
 selected macro is unchanged.
+
+### Storage native lane-order refinement — 2026-09-05
+
+The coordinated storage generator now preserves all saved U7 pad/net fields,
+supports a native north escape from the SATA edge, avoids the USB3 TX_P
+landing through the opposite SATA pad field, and can test a separate
+layer-separated M.2 socket launch. The best candidate from this cycle still
+reports 4 native shorts and 8 crossings; the records are localized to SATA
+bridge/socket ordering and one USB3/clock interaction. It is rejected as
+`ROUTE_IMPLEMENTATION_FAILURE`, while the selected macro remains unchanged.
