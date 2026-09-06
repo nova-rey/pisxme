@@ -1900,3 +1900,24 @@ layer-separated M.2 socket launch. The best candidate from this cycle still
 reports 4 native shorts and 8 crossings; the records are localized to SATA
 bridge/socket ordering and one USB3/clock interaction. It is rejected as
 `ROUTE_IMPLEMENTATION_FAILURE`, while the selected macro remains unchanged.
+
+### Native-pad obstacle-aware SATA A* trial — 2026-09-05
+
+The disposable SATA router was corrected to use KiCad's actual pad position,
+size, drill, layer set, and saved net identity. Its occupancy map now retains
+all U7, coupling-capacitor, and J3 pads as obstacles; only the active segment's
+source/target halos are cleared, and those edits are local to the segment. The
+trial also removes only inherited BRIDGE_SATA_/SATA_M2_ copper before emitting
+new native tracks and ordinary through-vias, leaving USB3, PCIe, power, and
+unrelated copper intact.
+
+Native DRC on
+`PHASE24_SELECTED_MACRO_SATA_ASTAR_NATIVE.kicad_pcb` reports zero
+`shorting_items` and zero SATA net shorts; four localized track-crossing
+records remain at the RX socket launch. The board still reports 430
+unconnected items because this is a focused SATA trial on an incomplete
+acreage ancestor, and 18 track-dangling records include the new A* terminals.
+It is therefore rejected as `ROUTE_IMPLEMENTATION_FAILURE`, but it is a
+materially improved native-pad route-development baseline. Remaining work is
+pair-aware RX launch separation and full USB3/SATA integrated rerouting,
+followed by native connectivity/parity and full-board closure.
