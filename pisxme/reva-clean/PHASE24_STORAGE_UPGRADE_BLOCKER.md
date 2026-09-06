@@ -4,6 +4,41 @@ Status: `OPEN — implementation authorized; procurement evidence remains HIGH
 risk` for the authorized SATA/NVMe upgrade only.
 The prior SATA-only board is preserved.
 
+## CURRENT LIVE STATE — 2026-09-06
+
+This file is an open-risk record, not a terminal blocker. The authoritative
+schematic already contains the JMS583 branch, both selectors, TE M-key J3,
+JMS583 clocks/rails/reset/decoupling/USB-PCIe support, and J5/U14 mode
+control. The current library audit passes for the 64-pad JMS583 QFN, TI
+selector packages, and TE M-key contact pattern. Structural schematic,
+mode-contract, and JMS583-support audits pass.
+
+The active native route candidate is still unfinished. The corrected-package
+USB3 fixture's latest report is
+`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED28-drc.rpt`: the authored paths have
+no shorting findings, one remaining track crossing, and 78 unconnected items
+because the fixture intentionally omits most support circuitry. Native ERC,
+complete switched-mode DRC/connectivity, TE pad/model parity, and integrated
+storage validation remain open. No Phase 24 resumption or completion is
+claimed.
+
+Current blocker/risk classification:
+
+- `JMS583_AUTHORIZED_PROTOTYPE_SUPPLY`: procurement risk remains HIGH/OPEN;
+  JLC's retained exact listing showed zero stock, and broker listings are
+  corroborating rather than authorized release supply.
+- TE M-key pad/courtyard/model parity: implementation review remains OPEN;
+  the B-key J3 has been replaced in schematic authority and the candidate
+  footprint has passed only the structural contact-count audit so far.
+- USB3/native storage routing and complete mode validation: active engineering
+  gates, not external blockers.
+
+The corrected JMS583 pin authority and 64-pad library supersede all earlier
+42-pad/U11 geometry and route results; those artifacts remain historical
+evidence only.
+
+## SUPERSEDED HISTORICAL SNAPSHOT — not current instructions
+
 ## Exact unresolved items
 
 `JMS583_AUTHORIZED_PROTOTYPE_SUPPLY`; TE M-key footprint authoring/parity is

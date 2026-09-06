@@ -12,7 +12,9 @@ R = Path(__file__).resolve().parent
 BASE = R / "PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb"
 OUT = R / "PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED.kicad_pcb"
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
-W = pcbnew.FromMM(0.15)
+# Match the saved board's approved minimum differential-pair width; the
+# earlier 0.15-mm trial is retained only as rejected evidence.
+W = pcbnew.FromMM(0.20)
 
 def V(x, y): return pcbnew.VECTOR2I_MM(float(x), float(y))
 def pos(p): return p.GetPosition()
@@ -100,15 +102,29 @@ def main():
         path(b, n1, [pos(p11), V(pos(p11).x and pcbnew.ToMM(pos(p11).x), y1), V(180, y1), pos(c1)], F)
         n2 = net(b, dst_name); c2 = pad(b, cref, "2"); p12 = pad(b, "U12", u12n)
         own(c2, n2); own(p12, n2)
-        xout = 205.0 if cref == "C86" else 210.0
-        path(b, n2, [pos(c2), V(xout, pcbnew.ToMM(pos(c2).y)), V(xout, y2), pos(p12)], F)
+        # Keep both bridge-side TX legs on the reserved B.Cu corridor.  Only
+        # their SMD endpoint escapes remain on F.Cu, so the RX dogbones cannot
+        # cross a TX vertical segment at the U12 edge.
+        cvia = (192.0, 165.0) if cref == "C86" else (194.0, 170.0)
+        xout = 215.0 if cref == "C86" else 220.0
+        escape_via(b, n2, c2, *cvia); escape_via(b, n2, p12, xout, y2)
+        path(b, n2, [V(*cvia), V(xout, pcbnew.ToMM(pos(c2).y)), V(xout, y2)], B)
     for name, u11n, u12n, y1, y2, xout in [
         ("USB_RXP1", "26", "23", 175.0, 152.8, 225.0),
         ("USB_RXN1", "27", "22", 180.0, 153.2, 230.0),
     ]:
         n = net(b, name); p11 = pad(b, "U11", u11n); p12 = pad(b, "U12", u12n)
         own(p11, n); own(p12, n)
-        path(b, n, [pos(p11), V(pcbnew.ToMM(pos(p11).x), y1), V(xout, y1), V(xout, y2), pos(p12)], F)
+        # RX uses the reserved B.Cu corridor.  The two F.Cu dogbones are
+        # outside the SMD pad rows and terminate in ordinary through-vias.
+        xv = 149.4 if u11n == "26" else 149.0
+        yv = 170.0 if u11n == "26" else 175.0
+        tx = 235.0 if u11n == "26" else 240.0
+        ty = 190.0 if u11n == "26" else 200.0
+        escape_via(b, n, p11, xv, yv); escape_via(b, n, p12, tx, y2)
+        lane_x = 140.0 if u11n == "26" else 250.0
+        path(b, n, [V(xv, yv), V(lane_x, yv), V(lane_x, ty),
+                    V(tx, ty), V(tx, y2)], B)
     b.BuildListOfNets(); b.Save(str(OUT)); print(OUT)
 
 if __name__ == "__main__": main()

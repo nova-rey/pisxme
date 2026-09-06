@@ -4688,3 +4688,11 @@ authoritative 16/16/16/16 QFN64 perimeter; library and structural audits
 pass, and the placement was regenerated. USB3 report 24 has no selector/source
 shorting findings but retains five localized crossings and partial-fixture
 opens, so it is a routing baseline rather than closure evidence.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: reconciled current status and
+blocker narratives with live schematic, corrected libraries, placement, and
+native reports. Marked older support-instantiation, malformed-footprint, and
+pre-correction routing TODOs as superseded historical snapshots. The live
+JMS583 support/mode-control authority is authored; native copper, mode-aware
+validation, TE parity, and procurement risk remain open. Report 28 records
+the corrected-package USB3 candidate with zero shorting findings and one
+remaining crossing.

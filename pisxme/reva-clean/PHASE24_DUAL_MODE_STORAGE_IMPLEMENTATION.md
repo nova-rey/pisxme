@@ -1,18 +1,56 @@
 # Phase 24 dual-mode storage implementation
 
-Status: `IN PROGRESS — native symbol/connector integration landed; mode
-control, copper fixture, and full electrical validation remain open`
-(2026-09-06).
+Status: `IN PROGRESS — support circuitry and mode-control authority are
+authored; native copper, mode-aware validation, and release checks remain
+open` (2026-09-06, live checkpoint).
 
 The active implementation is the storage-local two-bridge topology:
 
 `CM5 USB -> HD3SS6126RUAR -> {TUSB9261 SATA | JMS583-QHFA3A NVMe}
 -> HD3SS3412RUAR -> TE 1-2199230-4 M-key Socket 3`.
 
-The selected JMS583 is factory mask-ROM qualified for baseline use. Its
-optional SPI NVRAM remains DNP. This does not close procurement: JLC's exact
-part listing currently reports zero stock and broker listings are not an
-authorized source.
+The selected JMS583-QHFA3A is factory mask-ROM qualified for baseline use.
+Optional SPI NVRAM remains DNP. Firmware is not a design dependency, but
+authorized prototype supply remains a procurement risk: the retained JLC
+listing currently reports zero stock and broker listings are corroborating
+only.
+
+## CURRENT STATE — authoritative now
+
+- `STORAGE.kicad_sch` contains the existing TUSB9261 SATA branch, JMS583
+  NVMe branch, both TI selectors, the TE M-key socket, the JMS583 support
+  network, and J5/U14 mode control. The schematic and mode-contract audits
+  pass; native ERC is still open.
+- The generated libraries now contain a real 64-pad JMS583 QFN perimeter,
+  TI RUA0042A 17/4/17/4 selector packages with 0.60-mm perimeter pads, and
+  the 67-contact TE M-key candidate. Library and selector geometry audits
+  pass.
+- The current disposable placement/routing candidate is
+  `PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb`; it is not production
+  authority. The latest corrected-package USB3 fixture is
+  `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED.kicad_pcb`, with native report
+  `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED28-drc.rpt`: no authored-path
+  shorting findings, one remaining track crossing, and partial-fixture
+  unconnected items. It is not yet a route or release pass.
+
+## CURRENT OPEN GATES
+
+1. Finish the native USB3/source and selector copper, then complete the
+   remaining SATA/PCIe, USB2, support, return, and power routing without
+   synthetic connectivity edges.
+2. Complete native ERC/DRC, mode-aware connectivity and inactive-state checks
+   for forced SATA, forced NVMe, AUTO, empty socket, reset, and power-off
+   states.
+3. Finish TE M-key pad-by-pad, courtyard, mask/paste, mechanical, and model
+   parity against the retained manufacturer material.
+4. Reconcile the NVMe 3.3-V transient/inrush budget and document the current
+   JMS583 prototype sourcing risk. No purchase or firmware binary is assumed.
+5. Integrate only after the complete storage island passes; then resume the
+   preserved whole-board Phase 24 closure work.
+
+The following implementation history is retained below for archaeology. Its
+older TODO wording is superseded by the current-state and open-gate sections
+above; raw reports and rejected experiments remain evidence.
 
 ## Land-pattern artifacts
 
@@ -48,7 +86,12 @@ expected evidence that the candidate is not routed or promoted. Existing U8/U9
 references on the ancestor were preserved, so the new storage silicon uses
 U11/U12/U13 consistently.
 
-## Remaining implementation gates
+## SUPERSEDED HISTORICAL SNAPSHOT — not current instructions
+
+The next section records the earlier pre-integration snapshot. It is retained
+to explain prior checkpoints and must not be read as a current TODO list.
+
+## Historical implementation gates at that snapshot
 
 1. Add native symbols whose pin numbers exactly match the retained TI tables,
    JMS583 datasheet, and TP-053 socket table.
