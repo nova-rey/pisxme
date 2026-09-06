@@ -166,24 +166,26 @@ for name,up,cap,cp,jp in jobs:
         # B.Cu corridor through an ordinary via at the segment source; the
         # A* path itself begins on B.Cu and cannot infer this terminal via.
         via(b,socket,a)
-    # TX_N must approach J3 from the lower/right side of its mounting hole;
-    # route to a free waypoint first, then solve the short connector launch.
-    # This keeps the NPTH hard obstacle out of the final F.Cu approach.
-    if name == 'BRIDGE_SATA_TX_N':
-        waypoint=(150.0,136.0)
-        path=route(occ,hard,a,waypoint,F,F,None,2.0,1.0); emit(b,socket,path,occ)
-        # The final connector launch is intentionally a single measured
-        # diagonal from the cleared free waypoint; A* correctly treats the
-        # dense connector pad field as an obstacle and cannot represent this
-        # pad-to-pad terminal departure without a dedicated pad escape model.
+    # Use explicit free-corridor waypoints before the dense J3 pad field.  The
+    # final segments are monotonic pad launches, not arbitrary diagonals.
+    if name == 'BRIDGE_SATA_TX_P':
+        waypoint=(136.0,134.25)
+        path=route(occ,hard,a,waypoint,F,F,None,2.0,0.5); emit(b,socket,path,occ)
         direct(b,socket,waypoint,z,F,occ)
-    elif name == 'BRIDGE_SATA_RX_N':
-        waypoint=(150.0,135.5)
-        path=route(occ,hard,a,waypoint,B,B,None,2.0,1.0); emit(b,socket,path,occ)
+    if name == 'BRIDGE_SATA_TX_N':
+        waypoint=(153.0,130.0)
+        path=route(occ,hard,a,waypoint,F,F,None,2.0,0.5); emit(b,socket,path,occ)
+        direct(b,socket,waypoint,(153.0,134.0),F,occ)
+        direct(b,socket,(153.0,134.0),z,F,occ)
+    elif name == 'BRIDGE_SATA_RX_P':
+        waypoint=(136.0,133.75)
+        path=route(occ,hard,a,waypoint,B,B,(-1,118.75),2.0,0.5); emit(b,socket,path,occ)
         via(b,socket,waypoint)
         direct(b,socket,waypoint,z,F,occ)
-    else:
-        target_clear = 1.0 if z[0] > 145.0 else 1.5
-        path=route(occ,hard,a,z,socket_start,F,gate,2.0,target_clear); emit(b,socket,path,occ)
+    elif name == 'BRIDGE_SATA_RX_N':
+        waypoint=(150.0,133.5)
+        path=route(occ,hard,a,waypoint,B,B,(1,120.25),2.0,1.0); emit(b,socket,path,occ)
+        via(b,socket,waypoint)
+        direct(b,socket,waypoint,z,F,occ)
     print(name,'bridge',a,'to',z)
 b.Save(str(OUT));print(OUT)

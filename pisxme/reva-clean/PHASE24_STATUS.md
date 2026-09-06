@@ -1958,3 +1958,14 @@ are the cause of the new pad-field shorts; they are not promoted and do not
 change the selected storage floorplan. The next implementation must model a
 legal manufacturer-style pad escape, not emit diagonal copper across the J3
 launch field.
+
+### Separated pad-corridor waypoint trial — 2026-09-05
+
+The next disposable trial separated the RX source escapes and moved TX_N to a
+dedicated outboard column. Although the physical NPTH check remained clean,
+native DRC regressed to one shorting item and eight track crossings, with 23
+ordinary clearance violations and the same 428 incomplete-board unconnected
+items. The candidate is rejected as `ROUTE_IMPLEMENTATION_FAILURE`; the
+waypoint changes are not evidence against the storage macro. The prior
+zero-short/zero-crossing A* result remains the comparison baseline while the
+next implementation removes waypoint-generated diagonal/terminal geometry.
