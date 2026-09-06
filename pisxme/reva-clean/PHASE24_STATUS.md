@@ -3415,3 +3415,7 @@ failures caused by the malformed land rotations are superseded.
 Receipts: `phase24_generate_ti_u7_authoritative_footprint.py`,
 `phase24_ti_u7_ordered_escape_fixture.py`, and
 `PHASE24_TI_STORAGE_ORDERED_ESCAPE-drc.rpt`.
+
+The Phase 14 footprint-authority regression now also checks the four side
+orientations, so future regeneration cannot silently restore the overlapping
+vertical-land error.

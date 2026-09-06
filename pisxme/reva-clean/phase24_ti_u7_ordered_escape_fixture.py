@@ -58,19 +58,27 @@ for k,jp,up,sy,ly in usb:
     path(b,n,[src,(72.,src[1]),sv],F);via(b,n,sv);path(b,n,[sv,ev],B);via(b,n,ev);path(b,n,[ev,dst],F)
 
 # U7 SATA bottom row -> coupling capacitors, preserving physical pair order.
-bridge_y={'RX_P':146.,'RX_N':146.8,'TX_P':148.,'TX_N':148.8}
+# RX uses B.Cu and TX uses F.Cu after ordinary dogbone transitions.  The via
+# positions are deliberately separated from the 0.4 mm-pitch pad row.
+bridge_via={'RX_P':(114.,145.5),'RX_N':(116.,146.5),
+            'TX_P':(118.,147.5),'TX_N':(120.,148.5)}
 for k,(ref,x) in row.items():
     up={'RX_P':'60','RX_N':'59','TX_P':'57','TX_N':'56'}[k]
     n=net(b,'/STORAGE/BRIDGE_SATA_'+k);src=POS[('U7',up)];dst=POS[(ref,'2')]
-    lane=bridge_y[k];path(b,n,[src,(src[0],lane),(dst[0],lane),dst],F)
+    vp=bridge_via[k]; layer=B if k.startswith('RX_') else F
+    path(b,n,[src,(src[0],vp[1]),vp],F);via(b,n,vp)
+    if layer == B:
+        ep=(dst[0]-1.5,dst[1]); path(b,n,[vp,(ep[0],vp[1]),ep],B);via(b,n,ep);path(b,n,[ep,dst],F)
+    else:
+        path(b,n,[vp,(dst[0],vp[1]),dst],F)
 
 # Capacitor output -> J3.  Use two monotonic F.Cu groups, with the left and
 # right M.2 launches kept in their native pair order.
 socket={
- 'RX_P':('C32','1','J3','3',[(124.5,150.),(124.5,156.),(138.,156.),(138.,137.)]),
- 'TX_P':('C30','1','J3','1',[(132.5,150.),(132.5,158.),(139.,158.),(139.,138.)]),
- 'RX_N':('C33','1','J3','4',[(128.5,150.),(130.5,150.),(145.,156.),(146.,136.)]),
- 'TX_N':('C31','1','J3','2',[(136.5,150.),(138.5,150.),(146.,158.),(146.,138.)]),
+ 'RX_P':('C32','1','J3','3',[(124.5,150.),(124.5,156.),(130.,156.),(138.,137.)]),
+ 'TX_P':('C30','1','J3','1',[(132.5,150.),(132.5,158.),(136.,158.),(139.,138.)]),
+ 'RX_N':('C33','1','J3','4',[(128.5,150.),(130.5,150.),(144.,156.),(146.,136.)]),
+ 'TX_N':('C31','1','J3','2',[(136.5,150.),(138.5,150.),(145.,158.),(146.,138.)]),
 }
 for k,(cr,cp,jr,jp,pts) in socket.items():
     n=net(b,'/STORAGE/SATA_M2_'+k);dst=POS[(jr,jp)]

@@ -4331,3 +4331,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Corrected regenerated USB3 source-pad net normalization from the native export; canonical J7-to-U7 identity and SATA endpoints pass, while native DRC still rejects the disposable corridors as implementation failure.
 2026-09-06: Added an isolated native TI-U7 route-development fixture; endpoint authority remains reproducible, while local A* escape geometry is rejected by DRC for pair crossings and pad/support clearance.
 2026-09-06: Corrected TI PVP0064A land rotations after native DRC proved vertical-row overlap; corrected geometry reduces inherited-candidate DRC to 213, and an ordered disposable escape reaches all USB3/SATA endpoints with 103 remaining route violations.
+2026-09-06: Added Phase 14 regression assertions for TI PVP0064A side-land rotations, preventing regeneration of overlapping 0.4 mm-pitch vertical lands.

@@ -14,6 +14,14 @@ def main() -> None:
     for name, count in expected.items():
         text = (PRETTY / name).read_text()
         assert text.count('(pad "') == count, name
+    ti = (PRETTY / "TUSB9261IPVP_PVP0064A.kicad_mod").read_text()
+    # PVP0064A has 1.2 x 0.2 mm lands.  Long dimension is radial: vertical
+    # sides are rotation 0, horizontal sides rotation 90.  This regression
+    # prevents a superficially correct 65-pad asset from overlapping at the
+    # 0.4 mm pitch.
+    for number, at in ((1, "-3.800 -3.000 0"), (17, "3.000 3.800 90"),
+                       (33, "3.800 3.000 0"), (49, "-3.000 -3.800 90")):
+        assert f'(pad "{number}" smd roundrect (at {at}) (size 1.200 0.200)' in ti
     for sheet in ROOT.glob("*.kicad_sch"):
         if sheet.name in {"storage_head_test.kicad_sch", "storage_variant_no_defs.kicad_sch", "storage_variant_no_clock.kicad_sch"}:
             continue

@@ -16,9 +16,10 @@ KEEP = {
 }
 def relevant(name):
     return any(x in name for x in (
-        'CM5_USB3_', 'BRIDGE_SATA_', 'SATA_M2_', 'BRIDGE_XI',
-        'BRIDGE_XO', 'BRIDGE_VSSOSC', 'BRIDGE_USB_VBUS', 'BRIDGE_R1',
-        'BRIDGE_R1RTN', 'BRIDGE_1V1', 'BRIDGE_3V3', 'CM5_5V', 'POWER_GND'))
+        # Keep only the high-speed storage copper in this route-development
+        # fixture.  Support footprints remain as real obstacles, but their
+        # inherited power/return traces must not bias the escape experiment.
+        'CM5_USB3_', 'BRIDGE_SATA_', 'SATA_M2_'))
 
 def main():
     ap = argparse.ArgumentParser()
@@ -33,8 +34,8 @@ def main():
     for f in list(b.GetFootprints()):
         if f.GetReference() not in KEEP: b.Remove(f)
     for t in tracks:
-        if not relevant(t.GetNetname()): b.Remove(t)
-    for z in zones: b.Remove(z)
+        if not relevant(t.GetNetname()): b.RemoveNative(t)
+    for z in zones: b.RemoveNative(z)
     b.BuildListOfNets(); b.Save(a.output)
     print(f'isolated TI-U7 storage fixture: {a.output}')
 
