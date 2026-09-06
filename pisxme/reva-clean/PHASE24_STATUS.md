@@ -2203,3 +2203,13 @@ each pad. Native connectivity places all 12 capacitor pads in one real
 crossings, 238 unconnected items, and 12 clearance items. The candidate
 `PHASE24_BRIDGE_1V1_CAPBANK_PLANE_CURRENT.kicad_pcb` is promoted; its final
 connection to the U5 output field remains a separate required repair.
+
+### Promote U5 repeated-output field bridge — 2026-09-06
+
+The first U5 field bridge was retained after the wider U5.5 dogbone was
+rejected for introducing three new clearance violations. Its offset-via
+geometry joins U5.8 to U5.9/C44-C47 without crossing the intervening QFN
+control/ground pads. Native DRC reports 0 shorts, 0 track crossings, 237
+unconnected items, and 12 clearance items. U5.5 remains explicitly isolated
+and is not waived; it requires a later placement-aware escape. The candidate
+`PHASE24_BRIDGE_1V1_U5_FIELD_CURRENT.kicad_pcb` is promoted.

@@ -4259,3 +4259,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Promoted dogbone-routed native POWER_GND capacitor links; DRC remains at zero shorts/crossings, capacitor-field opens close, and total unconnected items fall from 254 to 251 with clearance findings reduced from 13 to 12.
 2026-09-06: Promoted local same-layer Ethernet support-ground joins; native Ethernet connectivity and its real-track negative control pass, DRC remains at zero shorts/crossings, and total unconnected items fall from 251 to 249.
 2026-09-06: Promoted a bounded In2 bridge-1V1 capacitor-bank plane with offset through-vias; all 12 capacitor pads are natively connected, DRC remains at zero shorts/crossings, and total unconnected items fall from 249 to 238.
+2026-09-06: Promoted the narrow U5 repeated-output field bridge after rejecting the wider U5.5 dogbone for new clearances; native DRC remains at zero shorts/crossings and total unconnected items fall from 238 to 237.
