@@ -26,10 +26,10 @@ def net(b,n):
   q=pcbnew.NETINFO_ITEM(b,n);q.SetNetCode(b.GetNetCount()+1);b.Add(q)
  return q
 b=pcbnew.LoadBoard(str(BASE));io=pcbnew.PCB_IO_KICAD_SEXPR()
-names={n for _,m,_ in PARTS.values() for n in m.values()}|{'ETH_POWER','GBE_LED_Y_A','GBE_LED_G_A'}
+names={n for _,m,_ in PARTS.values() for n in m.values()}|{'ETH_POWER'}
 nets={n:net(b,n) for n in names}
 j2=b.FindFootprintByReference('J2');j7=b.FindFootprintByReference('J7')
-for pn,n in {'11':'ETH_CT1','12':'ETH_CT2','13':'ETH_CT3','14':'ETH_CT4','15':'GBE_LED_Y_A','16':'GBE_LED_Y_K','17':'GBE_LED_G_A','18':'GBE_LED_G_K','19':'GBE_SHIELD','20':'GBE_SHIELD'}.items():
+for pn,n in {'11':'ETH_CT1','12':'ETH_CT2','13':'ETH_CT3','14':'ETH_CT4','15':'ETH_POWER','16':'GBE_LED_Y_K','17':'ETH_POWER','18':'GBE_LED_G_K','19':'GBE_SHIELD','20':'GBE_SHIELD'}.items():
  p=j2.FindPadByNumber(pn);p.SetNet(nets[n]);p.SetNetCode(nets[n].GetNetCode())
 for pn,n in {'15':'ETH_LEDG','17':'ETH_LEDY'}.items():
  p=j7.FindPadByNumber(pn);p.SetNet(nets[n]);p.SetNetCode(nets[n].GetNetCode())

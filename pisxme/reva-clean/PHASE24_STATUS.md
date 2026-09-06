@@ -1430,3 +1430,20 @@ This remains `ROUTE_IMPLEMENTATION_FAILURE`; the official MDI placement and
 support footprint/net materialization remain valid. The next support attempt
 must use obstacle-aware/topology-derived branch routing and preserve the
 parent/child native DRC comparison.
+
+## Complete CM5IO Ethernet fixture oracle — 2026-09-05
+
+The existing CM5IO transplant authoring path was rerun from the archived
+official PCB with `PISXME_DIRECT_J7=1 PISXME_CT_TIES=1`. The resulting saved
+fixture contains the complete 189-item official MDI route, four CT capacitor
+and 75-ohm branches, common termination, shield return, ESD ground treatment,
+and native J7/J2/U6/U9 mappings.
+
+Native refilled DRC reports `0` unconnected items, `0` shorting items,
+`0` track crossings, `0` dangling vias, and `0` footprint errors. The report
+contains 238 remaining clearance/width/edge warnings from the disposable
+fixture rule environment; these are not connectivity failures and are not
+being waived for the acreage board. This is the authoritative complete
+Ethernet implementation oracle. Its exact branch/support geometry is now the
+source for adapting the official placement candidate; local hand-authored
+support routes remain rejected.
