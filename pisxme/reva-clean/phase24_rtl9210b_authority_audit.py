@@ -69,6 +69,8 @@ if len(pad_numbers) != 69 or set(pad_numbers) != {str(i) for i in range(1, 70)}:
     sys.exit(fail(f"qualification footprint pad set is not 1..69: {len(pad_numbers)} pads"))
 if not re.search(r"\(pad 69\s+smd\s+rect .*?size 4\.800 4\.800", good, re.S):
     sys.exit(fail("qualification footprint lacks 4.8 mm exposed pad 69"))
+if "(layer F.Fab)" not in good or "4.60" not in good:
+    sys.exit(fail("qualification footprint lacks explicit body/fabrication and conservative courtyard"))
 print("PASS qualification footprint is 69-pad SMD with exposed pad 69")
 
 sch_text = sch.read_text(errors="replace")

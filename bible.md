@@ -4748,3 +4748,7 @@ validation remain open.
  with KiCad 10.0.5. The receipts confirm native parsing and expose the
  shared-lane and PEDET/contact-69 nets; they are explicitly parse evidence,
  not PCB connectivity or ERC/DRC closure.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: strengthened the isolated
+ RTL9210B artifact audit to verify the corrected footprint's explicit F.Fab
+ body and conservative courtyard as well as its pad set and SMD metadata.
+ The audit passes; no production Path-B integration was made.
