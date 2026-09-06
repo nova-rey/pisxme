@@ -1946,3 +1946,15 @@ obstacle model is retained, and the next bounded experiment must add a
 dedicated pad-escape/terminal corridor rather than direct diagonal copper.
 No placement, storage architecture, PCIe ancestor, or validation threshold
 has been changed.
+
+### Native terminal-escape model follow-up — 2026-09-05
+
+The router was further instrumented with explicit physical-hole preservation,
+side-gated socket approaches, and source-via serialization. The resulting
+trial remains rejected: native DRC reports 6 shorting items, 0 track
+crossings, 0 M.2 hole-clearance items, 15 ordinary clearance items, and 428
+incomplete-board unconnected items. The attempted direct terminal segments
+are the cause of the new pad-field shorts; they are not promoted and do not
+change the selected storage floorplan. The next implementation must model a
+legal manufacturer-style pad escape, not emit diagonal copper across the J3
+launch field.
