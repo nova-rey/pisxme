@@ -65,3 +65,22 @@ U11/U12/U13 consistently.
    SATA, forced NVMe, AUTO, empty, reset, and inactive-state audits pass.
 
 No production PCB change is claimed by the footprint generation alone.
+
+## USB3 fixture discriminator — 2026-09-06
+
+`phase24_usb3_dual_mode_isolated_fixture.py` created a disposable native
+fixture containing only J7, U12, U11, and the two JMS583 TX coupling
+capacitors. The fixture uses saved pad coordinates and native copper; it does
+not inject graph edges. It was rejected as a route implementation, not as an
+architecture decision: the first attempt drove straight into the dense U12
+QFN pad field, producing six track crossings and twenty shorting findings in
+native DRC. The remaining findings include inherited package mask/clearance
+and unconnected pads because this is a deliberately partial fixture.
+
+The next implementation must use package-side dogbones and layer-separated
+escapes outside the U12 pad field, then reconnect the four USB2 pins from an
+explicit CM5 port-0 source. The current CORE_CM5 sheet exposes `CM5_USB3`
+and SERVICE USB2 but does not yet expose CM5 port-0 USB2 `USB3-0-D_P/N` as
+hierarchical storage nets. That is an authority/interface omission to repair
+before production regeneration; `CM5_USB2_DP/DM` must not be invented as a
+replacement without tying them to the actual CM5 port-0 pads.

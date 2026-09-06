@@ -4602,3 +4602,12 @@ source-net and ground authority. Native KiCad loading finds J4 SERVICE, J5
 mode control, U11/U12/U13/J3, and C80-C93 support references. Native DRC runs
 and reports 1,072 violations / 499 unconnected items; the candidate remains
 placement/routing development evidence only.
+
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: checkpointed isolated native
+USB3 fixture authoring. The fixture retained only saved J7/U11/U12/C86/C87
+objects and derived all copper terminals from actual pads. Native DRC rejected
+the first route as ROUTE_IMPLEMENTATION_FAILURE (QFN escape entered adjacent
+pads); no production PCB was promoted. The run also confirmed CORE_CM5 still
+needs an explicit port-0 USB2 hierarchy interface before the storage selector
+can be electrically complete. Next action: repair source authority, implement
+package-side dogbone escapes, and rerun isolated native connectivity/DRC.
