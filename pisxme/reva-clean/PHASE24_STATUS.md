@@ -2817,3 +2817,31 @@ the isolated source escape passed, while the selected-board corridor needs
 obstacle-aware reauthoring around PCIe, power, and references. This does not
 invalidate the macro-floorplan discriminator or the 0-degree U7 ordering
 finding. No accepted acreage copper or PCIe route was changed.
+
+## Whole-board functional-island review re-run — 2026-09-06
+
+Per the steering correction, detailed local USB3 repair was paused and the
+whole-board discriminator was rerun against the native-loaded corrected basis.
+The review mapped the actual J7 carrier-mating launch regions and compared
+Ethernet, PCIe/V100, complete USB3→U7→SATA→J3 storage, SERVICE USB2, power,
+and regulator/load-delivery islands. Five disposable macro candidates plus
+the PCIe exchange test were generated without routing them.
+
+The closest Ethernet migrations reduced centroid distance from 32.7 mm to
+5.1 mm, but their native body envelopes intruded into J7/SERVICE/power
+geometry. The outboard alternative reduced the body conflict but retained a
+power-corridor conflict and worsened storage proximity. The PCIe exchange
+worsened the sensitive PCIe source-to-endpoint distance from 81.2 mm to
+119.0 mm. SERVICE is already source-local and is not an exchange target.
+
+The complete placement-only record is
+`PHASE24_WHOLE_BOARD_FUNCTIONAL_ISLAND_REVIEW_20260906.md`; generated
+candidates and detailed metrics are retained beside it. No candidate was
+ranked by mature-board DRC or by immature first-pass route counts.
+
+`MACRO_FLOORPLAN_REVIEW = COMPLETE`
+`SELECTED_MACRO = CURRENT_CORRECTED`
+`PHASE24_DETAILED_ROUTING = RESUME_AFTER_DISCRIMINATOR`
+
+The west U7 disposable remains a route implementation failure (two native RX
+shorts plus two copper-sliver warnings), not macro-placement evidence.
