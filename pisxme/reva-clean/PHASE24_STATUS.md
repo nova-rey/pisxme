@@ -3606,3 +3606,17 @@ Receipt: `phase24_storage_orientation_discriminator.py`,
 The Phase 14 footprint-authority regression now also checks the four side
 orientations, so future regeneration cannot silently restore the overlapping
 vertical-land error.
+
+## SATA source-ordered capacitor placement trial — 2026-09-06
+
+V9/V10 tested a source-ordered coupling-capacitor arrangement intended to
+make the M.2 socket launch monotonic. Native DRC rejected V10 with 96
+violations. The actionable findings are a B.Cu TX_N/RX_N crossing at the
+right launch, a TX_P via entering the M.2 no-net field, and a bridge TX_P
+escape crossing the U7 USB3 pad field. This is `ROUTE IMPLEMENTATION FAILURE`:
+the candidate received a distinct placement/escape implementation cycle, but
+the selected SWAP_ETH_STORAGE macro topology is not being rejected.
+
+The V10 board and DRC receipt are preserved as
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_PAIR_CORRIDOR_V10.*`. No production
+board or Phase 18 USB3 route was changed.

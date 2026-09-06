@@ -4346,3 +4346,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Re-ran the native whole-board macro-floorplan discriminator through KiCad 10.0.5, restored the explicit topology-versus-route comparison rule and SWAP_ETH_STORAGE decision, and kept Phase 24 open for fair route development.
 2026-09-06: Preserved V7/V8 SATA launch experiments after native DRC rejected their U7/M.2 corridor implementations; the failures are recorded separately from the selected macro-floorplan decision, with Phase 24 still open.
 2026-09-06: Expanded the reproducible macro-floorplan record to cover source-less power and regulator neighborhoods, corridor occupancy, and downstream mechanical/reference checks without changing the selected SWAP_ETH_STORAGE topology.
+2026-09-06: Preserved the source-ordered SATA V9/V10 trial; native DRC exposed U7 USB3-field and M.2 launch collisions, so the route implementation was rejected without revising the macro-floorplan decision.
