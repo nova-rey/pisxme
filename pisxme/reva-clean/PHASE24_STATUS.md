@@ -1930,3 +1930,19 @@ candidate still has 430 incomplete-board unconnected items and 19 dangling
 tracks, so it remains an unpromoted `ROUTE_IMPLEMENTATION_FAILURE`; the
 result is evidence that the remaining problem is local launch/DFM cleanup,
 not a demonstrated macro-placement failure.
+
+### NPTH-preserving terminal waypoint trial — 2026-09-05
+
+The next disposable iteration restored drilled-hole keepouts after terminal
+halo clearing and attempted explicit right-side waypoints for the J3 TX_N and
+RX_N launches. The resulting native DRC removed the prior eight M.2
+hole-clearance records, but introduced six shorting items and 15 ordinary
+clearance violations in the dense connector pad field. Track crossings remain
+zero and the incomplete-board census remains 428 unconnected items.
+
+This candidate is rejected as `ROUTE_IMPLEMENTATION_FAILURE`: the waypoint
+direct-terminal emitter is too coarse for the J3 pad field. The NPTH-aware
+obstacle model is retained, and the next bounded experiment must add a
+dedicated pad-escape/terminal corridor rather than direct diagonal copper.
+No placement, storage architecture, PCIe ancestor, or validation threshold
+has been changed.

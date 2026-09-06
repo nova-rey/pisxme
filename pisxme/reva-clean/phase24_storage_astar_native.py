@@ -41,6 +41,7 @@ def line_block(occ, layer, a, z, radius=.2):
 
 def occupancy(b, ignored):
     occ={F:set(),B:set()}
+    hard={F:set(),B:set()}
     for t in b.GetTracks():
         if isinstance(t,pcbnew.PCB_VIA):
             q=xy(t.GetPosition()); block(occ,F,q,.35); block(occ,B,q,.35)
@@ -51,10 +52,20 @@ def occupancy(b, ignored):
             sx,sy=size_xy(p.GetSize())
             drill=size_xy(p.GetDrillSize())[0]
             r=max(sx,sy)/2 + (.30 if drill < 1.5 else 1.4)
-            for l in layers(p): block(occ,l,xy(p.GetPosition()),r)
-    return occ
+            pad_layers=layers(p)
+            # NPTH and through-hole pads may report no usable copper layer
+            # set through the Python wrapper, but their drilled/physical body
+            # still blocks both outer copper layers.
+            drilled = drill > 0 or p.GetAttribute() == 3
+            if not pad_layers and drilled:
+                pad_layers=list(LAYERS)
+            for l in pad_layers: block(occ,l,xy(p.GetPosition()),r)
+            if drilled:
+                for l in LAYERS: block(hard,l,xy(p.GetPosition()),r)
+    return occ,hard
 
-def route(occ,start,goal,start_layer=F,goal_layer=F,x_gate=None):
+def route(occ,hard,start,goal,start_layer=F,goal_layer=F,x_gate=None,
+          clear_start_mm=2.0,clear_goal_mm=2.0):
     # Terminal halos are a per-segment escape allowance, not global edits to
     # the board obstacle map.  Keeping the base map intact prevents a later
     # lane from using the first lane's cleared pad field as a shortcut.
@@ -63,9 +74,14 @@ def route(occ,start,goal,start_layer=F,goal_layer=F,x_gate=None):
     # Native SMD/QFN escapes need a real local departure window.  Two grid
     # cells was only 0.5 mm and left the source pad imprisoned by its legal
     # neighboring pads; clear a bounded 2 mm halo for the current terminal.
-    for l,q in ((start_layer,s),(goal_layer,t)):
-        for dx in range(-8,9):
-            for dy in range(-8,9): local[l].discard((q[0]+dx,q[1]+dy))
+    for l,q,clear_mm in ((start_layer,s,clear_start_mm),(goal_layer,t,clear_goal_mm)):
+        cells=math.ceil(clear_mm/STEP)
+        for dx in range(-cells,cells+1):
+            for dy in range(-cells,cells+1): local[l].discard((q[0]+dx,q[1]+dy))
+    # Restore physical drilled-hole keepouts after the terminal departure
+    # allowance.  Target halos may clear neighboring SMD pads, but never a
+    # connector mounting hole or other through-hole body.
+    for l in LAYERS: local[l].update(hard[l])
     bounds=(grid((1,1)),grid((299,179)))
     q=[(0,s)]; cost={s:0}; prev={s:None}
     while q:
@@ -83,7 +99,7 @@ def route(occ,start,goal,start_layer=F,goal_layer=F,x_gate=None):
             if (nx,ny) in local[nl] and (nx,ny,nl)!=t: continue
             ns=(nx,ny,nl)
             gate=0
-            if x_gate is not None and 117.0 <= ny*STEP <= 132.5:
+            if x_gate is not None and 117.0 <= ny*STEP <= 134.0:
                 side,limit=x_gate
                 if (side < 0 and nx*STEP > limit) or (side > 0 and nx*STEP < limit):
                     gate=18
@@ -108,6 +124,11 @@ def emit(b,n,path,occ):
         end=point(z[:2]);t=pcbnew.PCB_TRACK(b);t.SetStart(V(*last));t.SetEnd(V(*end));t.SetLayer(a[2]);t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(n);b.Add(t)
         line_block(occ,a[2],last,end,.22);last=end
 
+def direct(b,n,a,z,layer,occ):
+    t=pcbnew.PCB_TRACK(b);t.SetStart(V(*a));t.SetEnd(V(*z));t.SetLayer(layer)
+    t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(n);b.Add(t)
+    line_block(occ,layer,a,z,.22)
+
 b=pcbnew.LoadBoard(str(BASE))
 # Remove only the previous SATA copper so this experiment evaluates the new
 # native-pad route rather than colliding with inherited SATA geometry.  USB3,
@@ -119,7 +140,7 @@ for t in list(b.GetTracks()):
 # source/target halos for the current segment; excluding whole footprints
 # would allow one lane to pass through adjacent pads of another net.
 ignored=set()
-occ=occupancy(b,ignored)
+occ,hard=occupancy(b,ignored)
 jobs=[
  ('BRIDGE_SATA_TX_P','57','C30','2','1'),
  ('BRIDGE_SATA_TX_N','56','C31','2','2'),
@@ -130,15 +151,39 @@ for name,up,cap,cp,jp in jobs:
     bridge=b.FindNet('/STORAGE/'+name); socket=b.FindNet('/STORAGE/'+name.replace('BRIDGE_SATA_','SATA_M2_'))
     if bridge is None or socket is None: raise RuntimeError(name)
     a=xy(pad(b,'U7',up).GetPosition()); z=xy(pad(b,cap,cp).GetPosition())
-    path=route(occ,a,z,F,F); emit(b,bridge,path,occ)
+    path=route(occ,hard,a,z,F,F); emit(b,bridge,path,occ)
     a=xy(pad(b,cap,'1').GetPosition()); z=xy(pad(b,'J3',jp).GetPosition())
     # Keep the RX socket pair on B.Cu after an ordinary via at the coupling
     # capacitor; TX remains F.Cu.  This is a permitted layer split and avoids
     # the close M.2 launch pair weaving on one layer.
     socket_start = B if name.startswith('BRIDGE_SATA_RX_') else F
     gate = None
+    if name == 'BRIDGE_SATA_TX_N': gate=(1,147.5)
     if name == 'BRIDGE_SATA_RX_P': gate=(-1,118.75)
     if name == 'BRIDGE_SATA_RX_N': gate=(1,120.25)
-    path=route(occ,a,z,socket_start,F,gate); emit(b,socket,path,occ)
+    if socket_start == B:
+        # The coupling capacitor is an F.Cu SMD pad.  Explicitly launch the
+        # B.Cu corridor through an ordinary via at the segment source; the
+        # A* path itself begins on B.Cu and cannot infer this terminal via.
+        via(b,socket,a)
+    # TX_N must approach J3 from the lower/right side of its mounting hole;
+    # route to a free waypoint first, then solve the short connector launch.
+    # This keeps the NPTH hard obstacle out of the final F.Cu approach.
+    if name == 'BRIDGE_SATA_TX_N':
+        waypoint=(150.0,136.0)
+        path=route(occ,hard,a,waypoint,F,F,None,2.0,1.0); emit(b,socket,path,occ)
+        # The final connector launch is intentionally a single measured
+        # diagonal from the cleared free waypoint; A* correctly treats the
+        # dense connector pad field as an obstacle and cannot represent this
+        # pad-to-pad terminal departure without a dedicated pad escape model.
+        direct(b,socket,waypoint,z,F,occ)
+    elif name == 'BRIDGE_SATA_RX_N':
+        waypoint=(150.0,135.5)
+        path=route(occ,hard,a,waypoint,B,B,None,2.0,1.0); emit(b,socket,path,occ)
+        via(b,socket,waypoint)
+        direct(b,socket,waypoint,z,F,occ)
+    else:
+        target_clear = 1.0 if z[0] > 145.0 else 1.5
+        path=route(occ,hard,a,z,socket_start,F,gate,2.0,target_clear); emit(b,socket,path,occ)
     print(name,'bridge',a,'to',z)
 b.Save(str(OUT));print(OUT)
