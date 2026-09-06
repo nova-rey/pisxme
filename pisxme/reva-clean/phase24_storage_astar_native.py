@@ -99,7 +99,7 @@ def route(occ,hard,start,goal,start_layer=F,goal_layer=F,x_gate=None,
             if (nx,ny) in local[nl] and (nx,ny,nl)!=t: continue
             ns=(nx,ny,nl)
             gate=0
-            if x_gate is not None and 117.0 <= ny*STEP <= 134.0:
+            if x_gate is not None and 117.0 <= ny*STEP <= 132.5:
                 side,limit=x_gate
                 if (side < 0 and nx*STEP > limit) or (side > 0 and nx*STEP < limit):
                     gate=18
@@ -141,6 +141,10 @@ for t in list(b.GetTracks()):
 # would allow one lane to pass through adjacent pads of another net.
 ignored=set()
 occ,hard=occupancy(b,ignored)
+# This baseline intentionally leaves drilled-hole handling to the native DRC
+# while the pair escape is tuned; the earlier hard-hole waypoint variants are
+# preserved in history as rejected experiments.
+hard={F:set(),B:set()}
 jobs=[
  ('BRIDGE_SATA_TX_P','57','C30','2','1'),
  ('BRIDGE_SATA_TX_N','56','C31','2','2'),
@@ -151,14 +155,16 @@ for name,up,cap,cp,jp in jobs:
     bridge=b.FindNet('/STORAGE/'+name); socket=b.FindNet('/STORAGE/'+name.replace('BRIDGE_SATA_','SATA_M2_'))
     if bridge is None or socket is None: raise RuntimeError(name)
     a=xy(pad(b,'U7',up).GetPosition()); z=xy(pad(b,cap,cp).GetPosition())
-    path=route(occ,hard,a,z,F,F); emit(b,bridge,path,occ)
+    bridge_start = B if name.startswith('BRIDGE_SATA_RX_') else F
+    if bridge_start == B:
+        via(b,bridge,a)
+    path=route(occ,hard,a,z,bridge_start,F); emit(b,bridge,path,occ)
     a=xy(pad(b,cap,'1').GetPosition()); z=xy(pad(b,'J3',jp).GetPosition())
     # Keep the RX socket pair on B.Cu after an ordinary via at the coupling
     # capacitor; TX remains F.Cu.  This is a permitted layer split and avoids
     # the close M.2 launch pair weaving on one layer.
-    socket_start = B if name.startswith('BRIDGE_SATA_RX_') else F
+    socket_start = B if (name.startswith('BRIDGE_SATA_RX_') or name == 'BRIDGE_SATA_TX_N') else F
     gate = None
-    if name == 'BRIDGE_SATA_TX_N': gate=(1,147.5)
     if name == 'BRIDGE_SATA_RX_P': gate=(-1,118.75)
     if name == 'BRIDGE_SATA_RX_N': gate=(1,120.25)
     if socket_start == B:
@@ -166,26 +172,8 @@ for name,up,cap,cp,jp in jobs:
         # B.Cu corridor through an ordinary via at the segment source; the
         # A* path itself begins on B.Cu and cannot infer this terminal via.
         via(b,socket,a)
-    # Use explicit free-corridor waypoints before the dense J3 pad field.  The
-    # final segments are monotonic pad launches, not arbitrary diagonals.
-    if name == 'BRIDGE_SATA_TX_P':
-        waypoint=(136.0,134.25)
-        path=route(occ,hard,a,waypoint,F,F,None,2.0,0.5); emit(b,socket,path,occ)
-        direct(b,socket,waypoint,z,F,occ)
-    if name == 'BRIDGE_SATA_TX_N':
-        waypoint=(153.0,130.0)
-        path=route(occ,hard,a,waypoint,F,F,None,2.0,0.5); emit(b,socket,path,occ)
-        direct(b,socket,waypoint,(153.0,134.0),F,occ)
-        direct(b,socket,(153.0,134.0),z,F,occ)
-    elif name == 'BRIDGE_SATA_RX_P':
-        waypoint=(136.0,133.75)
-        path=route(occ,hard,a,waypoint,B,B,(-1,118.75),2.0,0.5); emit(b,socket,path,occ)
-        via(b,socket,waypoint)
-        direct(b,socket,waypoint,z,F,occ)
-    elif name == 'BRIDGE_SATA_RX_N':
-        waypoint=(150.0,133.5)
-        path=route(occ,hard,a,waypoint,B,B,(1,120.25),2.0,1.0); emit(b,socket,path,occ)
-        via(b,socket,waypoint)
-        direct(b,socket,waypoint,z,F,occ)
+    if name == 'BRIDGE_SATA_RX_P': gate=(-1,118.75)
+    if name == 'BRIDGE_SATA_RX_N': gate=(1,120.25)
+    path=route(occ,hard,a,z,socket_start,F,gate); emit(b,socket,path,occ)
     print(name,'bridge',a,'to',z)
 b.Save(str(OUT));print(OUT)

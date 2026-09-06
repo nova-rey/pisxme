@@ -1969,3 +1969,15 @@ items. The candidate is rejected as `ROUTE_IMPLEMENTATION_FAILURE`; the
 waypoint changes are not evidence against the storage macro. The prior
 zero-short/zero-crossing A* result remains the comparison baseline while the
 next implementation removes waypoint-generated diagonal/terminal geometry.
+
+### Complete RX bridge-side layer-split trial — 2026-09-05
+
+The next bounded experiment kept the M.2 launch on the prior native-pad
+baseline but moved both bridge-side RX lanes to B.Cu with ordinary source
+vias. Native DRC removed the bridge-side crossing class, but source-via/pad
+escape interaction produced six shorting items, four hole-clearance items,
+and 12 ordinary clearance items; 428 incomplete-board unconnected items
+remain. The trial is rejected as `ROUTE_IMPLEMENTATION_FAILURE`. This does
+not reject the macro-placement: the defect is localized to U7 source-via
+escape geometry, and the prior zero-short/zero-crossing candidate remains the
+active comparison baseline.
