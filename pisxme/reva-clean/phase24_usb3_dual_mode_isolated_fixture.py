@@ -110,7 +110,7 @@ def main():
         # their SMD endpoint escapes remain on F.Cu, so the RX dogbones cannot
         # cross a TX vertical segment at the U12 edge.
         cvia = (192.0, 165.0) if cref == "C86" else (194.0, 170.0)
-        xout = 215.0 if cref == "C86" else 220.0
+        xout = 172.0 if cref == "C86" else 170.0
         escape_via(b, n2, c2, *cvia); escape_via(b, n2, p12, xout, y2)
         path(b, n2, [V(*cvia), V(xout, pcbnew.ToMM(pos(c2).y)), V(xout, y2)], B)
     for name, u11n, u12n, y1, y2, xout in [

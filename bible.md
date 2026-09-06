@@ -4712,3 +4712,7 @@ source escape, assigning CM5-source TX to F.Cu and RX to B.Cu. Native report
 38 records zero shorts, track-width, or track-crossing findings, while retaining
 clearance, board-edge, solder-mask, and intentional partial-fixture opens.
 This is a routing candidate, not storage closure.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: moved bridge-side USB3 vias
+closer to U12 and corrected their local X ordering. Native report 40 retains
+zero shorts, crossings, and width findings, with 152 clearance findings and
+the known partial-fixture opens. The candidate remains non-release.

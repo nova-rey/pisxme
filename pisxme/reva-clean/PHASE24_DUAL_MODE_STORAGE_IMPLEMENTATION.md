@@ -29,8 +29,8 @@ only.
   `PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb`; it is not production
   authority. The latest corrected-package USB3 fixture is
   `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED.kicad_pcb`, with native report
-  `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED38-drc.rpt`: zero authored shorts,
-  track-width findings, and track-crossing findings; 153 clearance, 4
+  `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED40-drc.rpt`: zero authored shorts,
+  track-width findings, and track-crossing findings; 152 clearance, 4
   board-edge, and 7 solder-mask findings remain, plus partial-fixture
   unconnected items. It is not yet a route or release pass.
 
@@ -224,8 +224,9 @@ but it supersedes results obtained with the malformed 42-pad footprint.
 The follow-on QFN64 package-aware escape moved RXP perpendicular to the
 bottom pad row and retained RXN on the reserved lower B.Cu lane. The later
 source-via alignment in report
-`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED38-drc.rpt` records zero authored
+`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED40-drc.rpt` records zero authored
 shorting, track-width, and track-crossing findings after partitioning the
-CM5-source TX pair onto F.Cu and the RX pair onto B.Cu. Native clearance,
-board-edge, solder-mask, and intentional support-pad unconnected findings
-remain; it is not yet a complete storage pass.
+CM5-source TX pair onto F.Cu and the RX pair onto B.Cu and ordering the local
+bridge vias monotonically. Native clearance, board-edge, solder-mask, and
+intentional support-pad unconnected findings remain; it is not yet a complete
+storage pass.
