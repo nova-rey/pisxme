@@ -69,11 +69,16 @@ for name,j,u,l in JOBS:terms.append((name,xy(pad(b,'J7',j)),xy(pad(b,'U7',u)),ne
 sf=obs(b,F);sb=obs(b,B)
 for idx,(name,src,dst,n,l) in enumerate(terms):
  if l==F:
-  sv=(74.0,src[1]);tv=(96.0,dst[1]);track(b,n,src,sv,B);via(b,n,sv);p=route(sf,sv,tv)
+  sv=(74.0,src[1]);
+  # U7-at-0 places USB3 lands on the east edge.  Put the transition outside
+  # the package, not in the exposed thermal-pad field as earlier controls did.
+  target_vias=((104.5,123.8),(104.5,122.6),(104.5,121.4),(104.5,120.2))
+  tv=target_vias[idx];track(b,n,src,sv,B);via(b,n,sv);p=route(sf,sv,tv)
   for a,z in zip(p,p[1:]):track(b,n,a,z,F);raster(sf,a,z,.28)
   via(b,n,tv);track(b,n,tv,dst,F)
  else:
-  tv=(96.0,dst[1]);p=route(sb,src,tv)
+  target_vias=((104.5,123.8),(104.5,122.6),(104.5,121.4),(104.5,120.2))
+  tv=target_vias[idx];p=route(sb,src,tv)
   for a,z in zip(p,p[1:]):track(b,n,a,z,B);raster(sb,a,z,.28)
   via(b,n,tv);track(b,n,tv,dst,F)
  print(name,'layer',l,'segments',len(p),'src',src,'dst',dst)

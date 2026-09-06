@@ -4090,6 +4090,28 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## TI U7 outside-field target-transition experiment — 2026-09-06
+
+The prior integrated mixed-layer control was corrected to place target vias
+outside the TI exposed-pad field on the U7 0-degree signal-pad side, with
+1.2 mm vertical staggering. The layer-aware planner could not find an F.Cu
+path from the RX source transitions to those outside-field targets in the
+current integrated obstacle map and emitted no candidate for that branch.
+
+This is a bounded `ROUTE_IMPLEMENTATION_FAILURE` before copper emission, not
+a production or macro-placement failure. It separates the earlier native
+DRC shorts caused by target vias inside U7 pad 65 from the next problem:
+coordinating an outside-field B.Cu corridor and final F.Cu dogbones without
+crossing the retained board corridors. No PCIe copper or production candidate
+was changed.
+
+Receipt: `phase24_ti_usb3_mixed_integrated_astar.py` (outside-field target
+transition variant).
+
+`TI_U7_OUTSIDE_FIELD_TRANSITION = UNREACHABLE_IN_CURRENT_LAYER_MODEL`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`
+
 ## U7 0-degree mixed-layer integrated cycle — 2026-09-06
 
 The shortest-path U7 0-degree orientation candidate received a distinct
