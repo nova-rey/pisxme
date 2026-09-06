@@ -3378,3 +3378,19 @@ not promoted and Phase 24 remains open.
 
 Receipt: `phase24_reroute_storage_usb3_native.py` and
 `PHASE24_STORAGE_TI_VBUS_REAUTH_SUPPORT_USB3_CANONICAL_SATA-drc.rpt`.
+
+## Isolated TI-U7 route-development boundary — 2026-09-06
+
+`phase24_make_ti_storage_isolated_fixture.py` now creates a disposable native
+route-development board containing only J7, the TI U7, J3, and authoritative
+storage/support footprints. This prevents inherited acreage copper from being
+used as direct evidence against the corrected package escape. The isolated
+fixture reproduces the same native endpoint result: four USB3 and eight SATA
+paths can be represented, but the current A* geometry still fails DRC with
+local pair crossings, pad-field clearance, and support-copper interactions.
+Those findings remain route-authoring failures; the isolated fixture is not
+promoted. A clean next route must solve the local TI pad-field escape and keep
+support returns outside its corridor before integration.
+
+Receipt: `phase24_make_ti_storage_isolated_fixture.py` and
+`PHASE24_TI_STORAGE_ISOLATED_USB3_SATA-drc.rpt`.
