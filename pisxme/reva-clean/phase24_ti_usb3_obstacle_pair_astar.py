@@ -46,7 +46,7 @@ def obstacle_map(b,layer):
     for f in b.GetFootprints():
         for p in f.Pads():
             if p.GetLayerSet().Contains(layer):
-                q=p.GetSize();r=max(pcbnew.ToMM(q.x),pcbnew.ToMM(q.y))/2+.28
+                q=p.GetSize();r=max(pcbnew.ToMM(q.x),pcbnew.ToMM(q.y))/2+.16
                 raster_line(blocked,xy(p),xy(p),r)
     return blocked
 def astar(blocked,start,goal):
@@ -83,7 +83,7 @@ for t in list(b.GetTracks()):
 blocked=obstacle_map(b,F)
 for idx,(name,src,dst) in enumerate(terms):
     n=net(b,name)
-    sx=75.0+idx*1.5
+    sx=84.0+idx*2.0
     sy=(100.0,102.0,106.0,108.0)[idx]
     sv=(sx,sy);tv=dst
     # J7 source pads are on B.Cu in the carrier-mating view.

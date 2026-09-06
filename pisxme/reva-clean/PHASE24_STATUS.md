@@ -3910,6 +3910,14 @@ The next route-development class is obstacle-aware pair routing that treats
 existing PCIe/power/footprint copper as live obstacles and derives actual TI
 pad exits, rather than adding another fixed-coordinate corridor.
 
+The obstacle model was then refined to use the actual 0.15 mm trace/clearance
+envelope at the 0.4 mm TI USB3 pitch and to spread source transitions outside
+the J7 row. The next run still found no F.Cu path from the first source
+transition to U7 while retaining all existing board copper as obstacles. This
+remains a router-model/integration result, not a placement verdict; the next
+probe must distinguish stale/inherited copper from mandatory obstacles and
+model explicit local launch corridors without deleting frozen PCIe evidence.
+
 ## Obstacle-aware TI-U7 USB3 router probe — 2026-09-06
 
 `phase24_ti_usb3_obstacle_pair_astar.py` was added as a new route class. It

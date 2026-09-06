@@ -4390,5 +4390,7 @@ Promoted the disposable `PHASE24_CLOCK_LAYERESC_DIRECT_XO` clock-support milesto
 Recorded the topology-only comparison rule and rejected the fixed-coordinate TI U7 escape as route implementation failure; mature historical DRC is not used to rank immature rearranged routing.
 # 2026-09-06 — Phase 24 TI U7 native-coordinate route trials
 Recorded rejection of B.Cu and mixed-layer native-coordinate USB3 route classes on the selected macro; both had real crossings/shorts against existing board obstacles and remain disposable route evidence only.
+# 2026-09-06 — Phase 24 TI obstacle model refinement
+Refined TI-U7 USB3 routing to account for native pad pitch and separated source transitions; no path was found under the retained-copper model, preserved as router/integration evidence rather than a placement verdict.
 # 2026-09-06 — Phase 24 obstacle-aware TI U7 router probe
 Added and exercised a native-pad obstacle-aware USB3 router; its conservative raster model found no first-lane path, so the result remains router-model evidence and not a macro-placement verdict.
