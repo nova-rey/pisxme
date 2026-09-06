@@ -3416,6 +3416,48 @@ Receipts: `phase24_generate_ti_u7_authoritative_footprint.py`,
 `phase24_ti_u7_ordered_escape_fixture.py`, and
 `PHASE24_TI_STORAGE_ORDERED_ESCAPE-drc.rpt`.
 
+## Whole-board macro-floorplan discriminator and controlled selection — 2026-09-06
+
+Per the steering correction, local Phase 24 routing experiments were paused
+and the whole-board functional-island question was re-evaluated from the
+native-loaded `PHASE24_U7_3V3_CURRENT_LOCAL.kicad_pcb`. The CM5 J7 source
+groups were extracted after native transforms: Ethernet `(34.50,99.90)`,
+PCIe `(69.60,101.50)`, USB3-storage `(70.04,105.30)`, and SERVICE
+`(66.96,99.30)`. The review included complete Ethernet, PCIe/V100, storage
+USB3->U7->SATA->J3 plus clock/support, SERVICE, power-entry/protection, and
+regulator/load-delivery neighborhoods.
+
+The placement comparison intentionally excluded existing route maturity,
+DRC count, and open count. Multiple disposable native candidates were
+generated and compared using transformed pad centroids, Euclidean/Manhattan
+source distance, same-net ratsnest length, coarse body-box overlap, anchor
+preservation, and corridor topology. `SWAP_ETH_STORAGE` was selected over
+the current topology: Ethernet source distance falls from 59.2 mm to 22.5 mm
+and storage source distance from 65.9 mm to 49.5 mm, while the selected swap
+has zero coarse major-body overlaps and preserves PCIe, SERVICE, power, and
+regulator anchors. `ETH_LOCAL_STORAGE_MID` was rejected by its native
+body-box conflicts despite shorter distances.
+
+The live basis was snapshotted as
+`PHASE24_MACRO_REVIEW_LIVE_BASIS_20260906.kicad_pcb`. The selected disposable
+macro basis is `PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE.kicad_pcb`; only
+Ethernet/storage high-speed copper invalidated by coherent island moves was
+removed. Native inspection confirmed J7/J1/J4 and the power/regulator
+anchors are unchanged. Native DRC reports 287 violations and 459
+unconnected items on this intentionally unrouted basis, classified as
+`ROUTE_IMPLEMENTATION_FAILURE` and not used to rank the floorplan.
+
+Consultant dispatch was attempted for the required independent review and
+failed with `collab spawn failed: agent thread limit reached`; local native
+geometry review completed the discriminator without retrying that unchanged
+tooling failure. The next action is a fair, obstacle-aware route-development
+cycle on the selected topology, followed by affected-subsystem revalidation.
+
+Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
+`PHASE24_WHOLE_BOARD_MACRO_DISCRIMINATOR_20260906.md`,
+`PHASE24_MACRO_REVIEW_LIVE_BASIS_20260906.kicad_pcb`, and
+`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE.kicad_pcb`.
+
 The Phase 14 footprint-authority regression now also checks the four side
 orientations, so future regeneration cannot silently restore the overlapping
 vertical-land error.

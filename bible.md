@@ -4332,3 +4332,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Added an isolated native TI-U7 route-development fixture; endpoint authority remains reproducible, while local A* escape geometry is rejected by DRC for pair crossings and pad/support clearance.
 2026-09-06: Corrected TI PVP0064A land rotations after native DRC proved vertical-row overlap; corrected geometry reduces inherited-candidate DRC to 213, and an ordered disposable escape reaches all USB3/SATA endpoints with 103 remaining route violations.
 2026-09-06: Added Phase 14 regression assertions for TI PVP0064A side-land rotations, preventing regeneration of overlapping 0.4 mm-pitch vertical lands.
+2026-09-06: Completed a native whole-board Phase 24 macro-floorplan discriminator, selected the topology-superior SWAP_ETH_STORAGE coherent-island basis, and preserved the historical acreage board as the live snapshot while route regeneration remains open.
