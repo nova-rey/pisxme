@@ -1720,3 +1720,14 @@ ordering trials likewise dead-ended before completion. These are
 `ROUTE_IMPLEMENTATION_FAILURE` results from the current global-search model,
 not evidence that the selected coherent macro placement is impossible. No
 layer, clearance, severity, or connectivity gate was relaxed.
+
+### Ethernet pad-aware escape refinement — 2026-09-05
+
+The router now uses a separate native-pad-derived via occupancy map and
+supports controlled all-F.Cu and reverse-order experiments. V6 produced zero
+track crossings with two localized ESD/J7 shorts; V8 correctly rejected a
+path under strict via clearance, and V9/V10 confirmed that layer assignment
+or ordering alone does not solve the current terminal escape. These remain
+route implementation results. The next implementation class is an explicit
+CM5IO-derived pad-field departure template with reserved lanes, followed by
+full native DRC/connectivity validation.
