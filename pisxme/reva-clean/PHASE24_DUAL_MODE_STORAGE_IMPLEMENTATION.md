@@ -1,7 +1,8 @@
 # Phase 24 dual-mode storage implementation
 
-Status: `IN PROGRESS — library authority landed; native schematic integration
-and routed mode fixture remain open` (2026-09-06).
+Status: `IN PROGRESS — native symbol/connector integration landed; mode
+control, copper fixture, and full electrical validation remain open`
+(2026-09-06).
 
 The active implementation is the storage-local two-bridge topology:
 
@@ -15,18 +16,29 @@ authorized source.
 
 ## Land-pattern artifacts
 
-`phase24_generate_dual_mode_storage_libraries.py` emits three native
+`phase24_generate_dual_mode_storage_libraries.py` emits native
 footprints from retained authorities:
 
 - `JMS583_QFN64_8x8.kicad_mod`: QFN64, 0.4-mm pitch, 8-mm body, 64 pads.
-- `HD3SS_RUA0042A_WQFN42.kicad_mod`: TI RUA0042A, 42 pads plus exposed pad
-  43, shared by the two selected TI switches.
+- `HD3SS6126_RUA0042A.kicad_mod` and `HD3SS3412_RUA0042A.kicad_mod`: TI
+  RUA0042A, 42 pads plus exposed pad 43. Separate names preserve distinct
+  pin ownership despite the common package drawing.
 - `TE_1-2199230-4_MKEY.kicad_mod`: 67 contacts with the TP-053 M-key gap.
 
 The generated files are review candidates until native pad-by-pad comparison
 against the TE DXF/application drawing and TI/JMicron package pages is signed
 off. The library audit is intentionally structural; it does not assert PCB
 connectivity.
+
+## Current evidence
+
+`STORAGE.kicad_sch` now contains U7 plus native U8 JMS583, U9 HD3SS6126,
+U10 HD3SS3412, and J3 TE 1-2199230-4. The B-key J3 is removed. The saved
+sheet parses under KiCad 10.0.5, and `phase24_dual_mode_storage_schematic_audit.py`
+passes; its negative-control copy fails when a required M-key label is removed.
+Native ERC currently reports 205 violations, so this is not an ERC pass. The
+report is retained as evidence and includes inherited abstract-sheet issues,
+off-grid generated symbol endpoints, and isolated labels requiring cleanup.
 
 ## Remaining implementation gates
 

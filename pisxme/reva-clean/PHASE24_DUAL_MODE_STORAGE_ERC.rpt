@@ -1,0 +1,629 @@
+ERC report (2026-09-06T13:06:54, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+[pin_not_connected]: Hierarchical label 'CM5_USB3' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(5.00 mm, 10.00 mm): Hierarchical Label 'CM5_USB3'
+[pin_not_connected]: Hierarchical label 'BRIDGE_SATA' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(5.00 mm, 13.00 mm): Hierarchical Label 'BRIDGE_SATA'
+[pin_not_connected]: Hierarchical label 'M2_SATA' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(5.00 mm, 16.00 mm): Hierarchical Label 'M2_SATA'
+[pin_not_connected]: Hierarchical label 'M2_3V3' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(5.00 mm, 19.00 mm): Hierarchical Label 'M2_3V3'
+[pin_not_connected]: Hierarchical label 'BRIDGE_CFG' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(5.00 mm, 22.00 mm): Hierarchical Label 'BRIDGE_CFG'
+[pin_not_connected]: Hierarchical label 'BRIDGE_3V3' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(5.00 mm, 101.25 mm): Hierarchical Label 'BRIDGE_3V3'
+[pin_not_connected]: Hierarchical label 'BRIDGE_1V1' in root sheet cannot be connected to non-existent parent sheet
+    ; error
+    @(5.00 mm, 103.75 mm): Hierarchical Label 'BRIDGE_1V1'
+[label_dangling]: Label not connected
+    ; error
+    @(130.00 mm, 88.75 mm): Label 'SATA_M2_TX_P'
+[label_dangling]: Label not connected
+    ; error
+    @(130.00 mm, 91.25 mm): Label 'SATA_M2_TX_N'
+[label_dangling]: Label not connected
+    ; error
+    @(130.00 mm, 93.75 mm): Label 'SATA_M2_RX_P'
+[label_dangling]: Label not connected
+    ; error
+    @(130.00 mm, 96.25 mm): Label 'SATA_M2_RX_N'
+[label_dangling]: Label not connected
+    ; error
+    @(130.00 mm, 98.75 mm): Label 'M2_3V3'
+[label_dangling]: Label not connected
+    ; error
+    @(130.00 mm, 101.25 mm): Label 'M2_GND'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(5.00 mm, 10.00 mm): Horizontal Wire, length 14.92 mm
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(5.00 mm, 10.00 mm): Hierarchical Label 'CM5_USB3'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(5.00 mm, 13.00 mm): Horizontal Wire, length 14.92 mm
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(5.00 mm, 13.00 mm): Hierarchical Label 'BRIDGE_SATA'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(5.00 mm, 16.00 mm): Horizontal Wire, length 14.92 mm
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(5.00 mm, 16.00 mm): Hierarchical Label 'M2_SATA'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(5.00 mm, 19.00 mm): Horizontal Wire, length 14.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(5.00 mm, 22.00 mm): Horizontal Wire, length 14.92 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(5.00 mm, 101.25 mm): Horizontal Wire, length 65.00 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(5.00 mm, 103.75 mm): Horizontal Wire, length 65.00 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(19.92 mm, 10.00 mm): Symbol X7 Pin 1 [CM5_USB3, Passive, Line]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(25.00 mm, 10.00 mm): Symbol X7 [STORAGE_Contract]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(50.00 mm, 95.00 mm): Symbol U7 [TUSB9261IPVP_STORAGE]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(50.00 mm, 95.00 mm): Symbol U7 [TUSB9261IPVP_STORAGE]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(50.00 mm, 165.00 mm): Symbol U8 [JMS583_QFN64]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(50.00 mm, 165.00 mm): Symbol U8 [JMS583_QFN64]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(70.00 mm, 81.25 mm): Symbol U7 Pin 46 [USB3_TX_P, Passive, Line]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 81.25 mm): Global Label 'CM5_USB3_TX_P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 83.75 mm): Global Label 'CM5_USB3_TX_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 86.25 mm): Global Label 'CM5_USB3_RX_P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 88.75 mm): Global Label 'CM5_USB3_RX_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 106.25 mm): Label 'BRIDGE_RESET'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 124.995 mm): Label 'LXO'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(70.00 mm, 125.00 mm): Global Label 'BRIDGE_1V1'
+    @(70.00 mm, 103.75 mm): Label 'BRIDGE_1V1'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(70.00 mm, 127.50 mm): Global Label 'BRIDGE_3V3'
+    @(70.00 mm, 101.25 mm): Label 'BRIDGE_3V3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 130.075 mm): Label 'TME'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 132.615 mm): Label 'NC_58'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 133.885 mm): Label 'NC_57'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 135.155 mm): Label 'NC_56'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 136.425 mm): Label 'PCIE_CLKREQ_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 137.695 mm): Label 'PCIE_RESET_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 138.965 mm): Label 'NC_53'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 140.235 mm): Label 'NC_52'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 141.505 mm): Label 'XOUT'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 142.50 mm): Global Label 'BRIDGE_USB_DM'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 142.775 mm): Label 'XIN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 144.045 mm): Label 'NC_49'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 145.00 mm): Global Label 'BRIDGE_USB_DP'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 145.315 mm): Label 'REFCLK_P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 146.585 mm): Label 'REFCLK_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 149.125 mm): Label 'PCIE_TXP0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 150.395 mm): Label 'PCIE_TXN0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 151.665 mm): Label 'NC_43'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 152.935 mm): Label 'PCIE_RXP0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 154.205 mm): Label 'PCIE_RXN0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 156.745 mm): Label 'NC_39'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 158.015 mm): Label 'PCIE_TXP1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 159.285 mm): Label 'PCIE_TXN1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 161.825 mm): Label 'PCIE_RXP1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 163.095 mm): Label 'PCIE_RXN1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 164.365 mm): Label 'NC_33'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 166.905 mm): Label 'NC_31'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 169.445 mm): Label 'USB_RXP2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 170.715 mm): Label 'USB_RXN2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 171.985 mm): Label 'USB_RXN1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 173.255 mm): Label 'USB_RXP1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 174.525 mm): Label 'NC_25'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 175.795 mm): Label 'USB_TXP2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 177.065 mm): Label 'USB_TXN2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 178.335 mm): Label 'USB_TXN1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 179.605 mm): Label 'USB_TXP1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 182.145 mm): Label 'NC_19'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 183.415 mm): Label 'USB_DP'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 184.685 mm): Label 'USB_DM'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 185.955 mm): Label 'VBUS'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 187.225 mm): Label 'NC_15'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 188.495 mm): Label 'NC_14'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 189.765 mm): Label 'NC_13'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 191.035 mm): Label 'NC_12'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 192.305 mm): Label 'NC_11'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 193.575 mm): Label 'NC_10'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 194.845 mm): Label 'NC_9'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(70.00 mm, 197.385 mm): Label 'NC_7'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(70.00 mm, 205.005 mm): Symbol U8 Pin 1 [NC_1, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(80.00 mm, 120.00 mm): Symbol C30 [SATA_AC_CAP]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(80.00 mm, 120.00 mm): Symbol C30 [SATA_AC_CAP]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(92.00 mm, 120.00 mm): Symbol C31 [SATA_AC_CAP]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(92.00 mm, 120.00 mm): Symbol C31 [SATA_AC_CAP]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(100.00 mm, 121.25 mm): Symbol C30 Pin 1 [SATA_IN, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(100.00 mm, 165.00 mm): Symbol U9 [HD3SS6126_RUA0042A]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(100.00 mm, 165.00 mm): Symbol U9 [HD3SS6126_RUA0042A]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(100.00 mm, 175.00 mm): Symbol R24 [CLOCK_R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(100.00 mm, 175.00 mm): Symbol R24 [CLOCK_R]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(100.00 mm, 190.00 mm): Symbol R32 [CLOCK_R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(100.00 mm, 190.00 mm): Symbol R32 [CLOCK_R]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(104.00 mm, 120.00 mm): Symbol C32 [SATA_AC_CAP]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(104.00 mm, 120.00 mm): Symbol C32 [SATA_AC_CAP]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(112.00 mm, 121.25 mm): Symbol C31 Pin 1 [SATA_IN, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(116.00 mm, 120.00 mm): Symbol C33 [SATA_AC_CAP]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(116.00 mm, 120.00 mm): Symbol C33 [SATA_AC_CAP]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 155.475 mm): Label 'TUSB_SSTXP'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 156.745 mm): Label 'TUSB_SSTXN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 158.015 mm): Label 'TUSB_SSRXP'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 159.285 mm): Label 'TUSB_SSRXN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 160.555 mm): Label 'JMS_SSTXP'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 161.825 mm): Label 'JMS_SSTXN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 163.095 mm): Label 'JMS_SSRXP'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 164.365 mm): Label 'JMS_SSRXN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 171.985 mm): Label 'CM5_SSRXN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 173.255 mm): Label 'CM5_SSRXP'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(120.00 mm, 176.25 mm): Symbol R24 Pin 1 [XI, Passive, Line]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 177.065 mm): Label 'CM5_SSTXN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 178.335 mm): Label 'CM5_SSTXP'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 180.875 mm): Label 'USB_SEL'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 184.685 mm): Label 'USB_OE_N'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(120.00 mm, 191.035 mm): Symbol U9 Pin 1 [NC_1, Passive, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(120.00 mm, 191.25 mm): Symbol R32 Pin 1 [XI, Passive, Line]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(120.00 mm, 191.25 mm): Global Label 'CM5_5V'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(124.00 mm, 121.25 mm): Symbol C32 Pin 1 [SATA_IN, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(135.00 mm, 190.00 mm): Symbol R33 [CLOCK_R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(135.00 mm, 190.00 mm): Symbol R33 [CLOCK_R]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(136.00 mm, 121.25 mm): Symbol C33 Pin 1 [SATA_IN, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(150.00 mm, 130.00 mm): Symbol Y1 [CLOCK_XTAL_4P]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(150.00 mm, 130.00 mm): Symbol Y1 [CLOCK_XTAL_4P]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(150.00 mm, 140.00 mm): Symbol R23 [CLOCK_R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(150.00 mm, 140.00 mm): Symbol R23 [CLOCK_R]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(150.00 mm, 165.00 mm): Symbol U10 [HD3SS3412_RUA0042A]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(150.00 mm, 165.00 mm): Symbol U10 [HD3SS3412_RUA0042A]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(155.00 mm, 191.25 mm): Symbol R33 Pin 1 [XI, Passive, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(170.00 mm, 133.75 mm): Symbol Y1 Pin 1 [XI, Passive, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(170.00 mm, 141.25 mm): Symbol R23 Pin 1 [XI, Passive, Line]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 155.475 mm): Label 'TUSB_SATA_TXP'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 156.745 mm): Label 'TUSB_SATA_TXN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 158.015 mm): Label 'TUSB_SATA_RXP'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 159.285 mm): Label 'TUSB_SATA_RXN'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 160.555 mm): Label 'JMS_PCIE_RXP0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 161.825 mm): Label 'JMS_PCIE_RXN0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 163.095 mm): Label 'JMS_PCIE_TXP0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 164.365 mm): Label 'JMS_PCIE_TXN0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 171.985 mm): Label 'SOCKET_P3_RX'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 173.255 mm): Label 'SOCKET_P3_TX'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 177.065 mm): Label 'SOCKET_P2_RX'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 178.335 mm): Label 'SOCKET_P2_TX'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 180.875 mm): Label 'STORAGE_SEL'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 183.415 mm): Label 'SOCKET_P1_RX'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 184.685 mm): Label 'SOCKET_P1_TX'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 188.495 mm): Label 'SOCKET_P0_RX'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(170.00 mm, 189.765 mm): Label 'SOCKET_P0_TX'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(170.00 mm, 191.035 mm): Symbol U10 Pin 1 [NC_1, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(180.00 mm, 130.00 mm): Symbol C42 [CLOCK_C]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(180.00 mm, 130.00 mm): Symbol C42 [CLOCK_C]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(180.00 mm, 140.00 mm): Symbol C43 [CLOCK_C]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(180.00 mm, 140.00 mm): Symbol C43 [CLOCK_C]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(200.00 mm, 131.25 mm): Symbol C42 Pin 1 [CLOCK, Passive, Line]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(200.00 mm, 141.25 mm): Symbol C43 Pin 1 [CLOCK, Passive, Line]
+[footprint_link_issues]: The current configuration does not include the footprint library 'PiSXMeRevAClean'
+    ; warning
+    @(220.00 mm, 165.00 mm): Symbol J3 [TE_1-2199230-4_MKEY]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'PiSXMeRevAClean'
+    ; warning
+    @(220.00 mm, 165.00 mm): Symbol J3 [TE_1-2199230-4_MKEY]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 118.01 mm): Label 'M2_CONFIG2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 125.63 mm): Label 'M2_CONFIG1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 126.90 mm): Label 'M2_SUSCLK'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 128.17 mm): Label 'NC_67'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 129.44 mm): Label 'NC_66'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 130.71 mm): Label 'NC_65'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 131.98 mm): Label 'NC_64'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 133.25 mm): Label 'NC_63'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 137.06 mm): Label 'NC_60'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 139.60 mm): Label 'M2_MFG2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 142.14 mm): Label 'M2_MFG1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 143.41 mm): Label 'M2_REFCLK_P'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 144.68 mm): Label 'M2_PEWake_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 145.95 mm): Label 'M2_REFCLK_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 147.22 mm): Label 'M2_CLKREQ_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 149.76 mm): Label 'M2_PERST_N'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 151.03 mm): Label 'M2_SATA_A_P_PCIE_TXP0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 152.30 mm): Label 'NC_48'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 153.57 mm): Label 'M2_SATA_A_N_PCIE_TXN0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 157.38 mm): Label 'NC_44'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 158.65 mm): Label 'M2_SATA_B_N_PCIE_RXP0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 159.92 mm): Label 'NC_42'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 161.19 mm): Label 'M2_SATA_B_P_PCIE_RXN0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 165.00 mm): Label 'M2_DEVSLP'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 166.27 mm): Label 'M2_PCIE_TXP1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 168.81 mm): Label 'M2_PCIE_TXN1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 170.08 mm): Label 'NC_34'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 173.89 mm): Label 'M2_PCIE_RXP1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 176.43 mm): Label 'M2_PCIE_RXN1'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 177.70 mm): Label 'NC_28'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 180.24 mm): Label 'NC_26'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 181.51 mm): Label 'M2_PCIE_TXP2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 182.78 mm): Label 'NC_24'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 184.05 mm): Label 'M2_PCIE_TXN2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 185.32 mm): Label 'NC_22'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 186.59 mm): Label 'M2_CONFIG0'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 189.13 mm): Label 'M2_PCIE_RXP2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 191.67 mm): Label 'M2_PCIE_RXN2'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 196.75 mm): Label 'M2_PCIE_TXP3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 199.29 mm): Label 'M2_PCIE_TXN3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 200.56 mm): Label 'M2_DAS_DSS'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 204.37 mm): Label 'M2_PCIE_RXP3'
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 206.91 mm): Label 'M2_PCIE_RXN3'
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(240.00 mm, 211.99 mm): Symbol J3 Pin 1 [M2_CONFIG3, Passive, Line]
+[isolated_pin_label]: Label connected to only one pin
+    ; warning
+    @(240.00 mm, 211.99 mm): Label 'M2_CONFIG3'
+
+ ** ERC messages: 205  Errors 13  Warnings 192
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters
