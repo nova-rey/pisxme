@@ -3028,3 +3028,8 @@ current coordinated storage basis, not a Phase 24 closure.
 Receipts:
 `PHASE24_STORAGE_NATIVE_ORACLE_SUPPORT_C19_BOTTOM_FLIPPED-drc.rpt` and
 `phase24_u7_support_c19_bottom_flip.py`.
+
+The underside mechanical spot check found C19 at `(107.0,118.0)` on B.Cu,
+with no nearby B.Cu component body or verified mounting feature within the
+local 12 mm review radius. This is only local evidence; enclosure, M.2,
+standoff, and assembly-side checks remain part of the later full-board gate.
