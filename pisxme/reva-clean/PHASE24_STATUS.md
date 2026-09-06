@@ -2113,3 +2113,16 @@ violation class. The U7 pad-net authority audit passes. The resulting
 `PHASE24_CLOCK_COMPLETE_V2_ON_CURRENT.kicad_pcb` is promoted as the current
 Phase 24 integration basis; full-board ground, power, service, and remaining
 connectivity closure is still required.
+
+### Local In3 power-entry planes — 2026-09-05
+
+The second input block was tested using native In3 copper rather than an
+F.Cu/B.Cu signal-layer detour. Two local filled regions feed the existing
+`/POWER_INPUT/12V_IN_B` and `/POWER_INPUT/FUSED_12V_B` PTH entry networks;
+no schematic net names or power topology were changed. Native DRC reports
+0 shorts, 0 track crossings, and 390 unconnected items, down from 397. The
+specific input-net open census improves from 6 to 2 for `12V_IN_B` and from
+6 to 3 for `FUSED_12V_B`; `12V_PROTECTED` is unchanged at 146. The candidate
+`PHASE24_POWER_INPUT_PLANES_PROBE.kicad_pcb` is promoted as the current basis.
+The remaining input-side SMD launches and the distinct `12V_PROTECTED` load
+distribution still require explicit routing/return validation.
