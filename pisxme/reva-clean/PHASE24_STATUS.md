@@ -1398,3 +1398,20 @@ safe. It is not a macro-placement conclusion. The successful official
 CM5IO transplant remains the route oracle; the next implementation must
 derive its branch topology and transition ownership from that saved native
 route rather than inventing another coordinate set.
+
+## Official-placement Ethernet support materialization — 2026-09-05
+
+The official MDI transplant was extended with the 11 production schematic-
+owned Ethernet support footprints using `phase24_materialize_official_eth_support.py`:
+C48–C52 and R26–R31. Native saved-board inspection confirms every support pad
+has the intended CT, branch, common, shield, or LED net and is assigned to
+B.Cu for the pending support route. J2 pads 11–20 and J7 LED pads 15/17 were
+also reconciled to the production net contract.
+
+The materialized candidate is `PHASE24_OFFICIAL_ETH_SUPPORT_MATERIALIZED.kicad_pcb`.
+Native refilled DRC reports `378` inherited/unrouted violations and `443`
+unconnected items, with no `shorting_items`, `tracks_crossing`, or footprint
+mapping errors. This is a materialization boundary PASS, not a routed Ethernet
+or acreage pass. Next action is native-pad-derived CT/LED/shield support
+routing on this official-placement oracle, followed by comparison against the
+selected corrected macro.
