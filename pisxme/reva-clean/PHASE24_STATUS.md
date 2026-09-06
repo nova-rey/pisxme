@@ -1,5 +1,14 @@
 # Phase 24 acreage validation status
 
+## Clock source-oracle regression confirmation
+
+`test_phase24_clock_fixture_v2.py` was rerun through native KiCad Python and
+returned `Phase24 complete clock fixture V2: PASS`. All XI/XO/VSSOSC passive
+endpoints remain natively connected and the source report has no clock
+shorting or crossing classes. The unresolved Phase 24 defect is therefore
+strictly the V26 transplant/launch integration; the source clock topology is
+not under dispute.
+
 ## Coherent clock-island relocation search (rejected)
 
 The complete V2 passive clock island was translated 20 mm west and 10 mm

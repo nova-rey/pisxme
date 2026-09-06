@@ -4368,3 +4368,5 @@ The actual-pad obstacle-aware B.Cu search found an XI path but no legal non-over
 Reran the actual-board launch search with XI/XO on B.Cu and VSSOSC on F.Cu. XI found a path but VSSOSC had no legal path in the inherited corridor; no copper was promoted, and the native-valid clock graph plus V26 data routes remain preserved.
 # 2026-09-06 — Phase 24 coherent clock-island relocation search
 Tested a 20 mm west / 10 mm south coherent migration of the native-valid V2 clock passive island. Actual-board obstacle search found no legal second B.Cu launch path; candidate rejected as corridor-capacity failure with all validated data and PCIe copper preserved.
+# 2026-09-06 — Phase 24 clock source oracle revalidation
+Reran the native KiCad regression for the complete V2 clock fixture: PASS. The source XI/XO/VSSOSC graph remains free of clock shorting/crossing classes; only V26 transplant/launch integration remains open.
