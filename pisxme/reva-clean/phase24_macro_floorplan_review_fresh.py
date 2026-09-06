@@ -48,6 +48,7 @@ candidates = {
     "ETH_OUTBOARD": {"J2": (12,100,180), "U6": (24,94,-90), "U9": (24,106,-90)},
     "STORAGE_LOCAL": {"U7": (90,112,180), "J3": (125,112,90), "Y1": (84,124,0), "R23": (78,124,0), "C42": (78,120,0), "C43": (78,128,0)},
     "STORAGE_LOCAL_CLEAR2": {"U7": (90,120,180), "J3": (125,120,90), "Y1": (82,132,0), "R23": (76,132,0), "C42": (76,128,0), "C43": (76,136,0), "C16": (82,110,0), "C17": (88,110,0), "C19": (94,110,0), "C30": (105,112,0), "C31": (113,112,0), "C32": (105,128,0), "C33": (113,128,0)},
+    "STORAGE_LOCAL_J3_EDGE": {"U7": (90,120,180), "J3": (145,125,90), "Y1": (82,132,0), "R23": (76,132,0), "C42": (76,128,0), "C43": (76,136,0), "C16": (94,135,0), "C17": (100,135,0), "C19": (106,135,0), "C30": (105,118,0), "C31": (113,118,0), "C32": (105,132,0), "C33": (113,132,0)},
     "STORAGE_SOUTH_CLEAR": {"U7": (100,145,180), "J3": (150,145,90), "Y1": (94,157,0), "R23": (88,157,0), "C42": (88,153,0), "C43": (88,161,0)},
     "STORAGE_CENTER_CLEAR": {"U7": (100,140,180), "J3": (150,140,90), "Y1": (88,130,0), "R23": (82,130,0), "C42": (82,126,0), "C43": (82,134,0), "C16": (88,136,0), "C17": (88,142,0), "C19": (88,148,0), "C30": (112,132,0), "C31": (120,132,0), "C32": (112,148,0), "C33": (120,148,0)},
     "ETH_OUTBOARD_STORAGE_LOCAL": {
@@ -61,6 +62,9 @@ candidates = {
         "J2": (12,100,180), "U6": (24,94,-90), "U9": (24,106,-90),
         "U7": (100,145,180), "J3": (150,145,90), "Y1": (94,157,0), "R23": (88,157,0), "C42": (88,153,0), "C43": (88,161,0),
     },
+    "ETH_OUTBOARD_STORAGE_LOCAL_J3_EDGE": {
+        "J2": (12,100,180), "U6": (24,94,-90), "U9": (24,106,-90),
+        "U7": (90,120,180), "J3": (145,125,90), "Y1": (82,132,0), "R23": (76,132,0), "C42": (76,128,0), "C43": (76,136,0), "C16": (94,135,0), "C17": (100,135,0), "C19": (106,135,0), "C30": (105,118,0), "C31": (113,118,0), "C32": (105,132,0), "C33": (113,132,0)},
     "ETH_OUTBOARD_STORAGE_CENTER_CLEAR": {
         "J2": (12,100,180), "U6": (24,94,-90), "U9": (24,106,-90),
         "U7": (100,140,180), "J3": (150,140,90), "Y1": (88,130,0), "R23": (82,130,0), "C42": (82,126,0), "C43": (82,134,0), "C16": (88,136,0), "C17": (88,142,0), "C19": (88,148,0), "C30": (112,132,0), "C31": (120,132,0), "C32": (112,148,0), "C33": (120,148,0)},
@@ -89,6 +93,15 @@ paths = {}
 for name, moves in candidates.items():
     if name != "CURRENT":
         boards[name], paths[name] = moved_board(name, moves)
+
+def overlap_pairs(b):
+    fs = list(b.GetFootprints()); pairs = set()
+    for i, a in enumerate(fs):
+        for z in fs[i+1:]:
+            if a.GetBoundingBox().Intersects(z.GetBoundingBox()):
+                pairs.add(tuple(sorted((a.GetReference(), z.GetReference()))))
+    return pairs
+baseline_overlaps = overlap_pairs(base)
 
 def net_ratsnest(b, keys, refs):
     terms = [(p.GetNetname(), xy(p)) for p in j7.Pads() if any(k in p.GetNetname() for k in keys)]
@@ -125,9 +138,11 @@ for name,b in boards.items():
         for other in b.GetFootprints():
             if other.GetReference()==ref or other.GetReference() in moved: continue
             if a.Intersects(other.GetBoundingBox()): ov.append(f"{ref}<->{other.GetReference()}")
-    lines.append(f"| `{name}` | {vals['Ethernet'][0]:.1f} | {vals['Ethernet'][1]:.1f} | {vals['Storage USB3/SATA'][0]:.1f} | {vals['Storage USB3/SATA'][1]:.1f} | {vals['PCIe/V100'][0]:.1f} | {vals['SERVICE USB2'][0]:.1f} | {vals['Storage USB3/SATA'][2]:.1f} | {vals['Ethernet'][2]:.1f} | {', '.join(sorted(set(ov))) or 'none'} |")
+    pairs = {tuple(sorted(x.split('<->'))) for x in set(ov)}
+    new_ov = sorted('<->'.join(x) for x in pairs - baseline_overlaps)
+    lines.append(f"| `{name}` | {vals['Ethernet'][0]:.1f} | {vals['Ethernet'][1]:.1f} | {vals['Storage USB3/SATA'][0]:.1f} | {vals['Storage USB3/SATA'][1]:.1f} | {vals['PCIe/V100'][0]:.1f} | {vals['SERVICE USB2'][0]:.1f} | {vals['Storage USB3/SATA'][2]:.1f} | {vals['Ethernet'][2]:.1f} | {', '.join(new_ov) or 'none (inherited overlaps excluded'} |")
 
-lines += ["", "## Functional-neighborhood findings", "", "- J7 has two physically distinct launch regions: Ethernet pads at x≈32.96/36.04, y≈99.1–100.7, and PCIe/USB3/SERVICE pads at x≈66.96/70.04, y≈99.1–106.7. This is native pad geometry, not schematic drawing order.", "- SERVICE is already adjacent to its right-side launch and is a poor exchange target.", "- PCIe remains the most sensitive validated anchor; no candidate is allowed to invalidate it merely to improve a lower-priority neighborhood.", "- The accepted baseline already has the Ethernet island in the left/source acreage, so the remaining topology question is storage placement, not another Ethernet relocation.", "- The current storage group remains remote from the actual USB3 launch. `STORAGE_LOCAL`, `STORAGE_LOCAL_CLEAR2`, and the joint Ethernet/storage variants are topology candidates that shorten the storage source relationship; body overlaps are mechanical-screen findings, not route-quality scores.", "- `STORAGE_LOCAL_CLEAR2` is the best screened storage candidate: storage same-net ratsnest falls to 88.1 mm and the moved-body screen reports no overlaps. It keeps PCIe, SERVICE, power input, regulator islands, and the accepted Ethernet placement unchanged.", "- `ETH_EAST_STORAGE_NORTH` is a connector-edge stress candidate; its long source paths make it a fallback, not a preferred topology.", "", "## Discriminator decision", "", "`MACRO_FLOORPLAN_DISCRIMINATOR = COMPLETE`", "The topology-only comparison selects `STORAGE_LOCAL_CLEAR2` as the next development basis because it reduces storage same-net ratsnest from 231.2 mm to 88.1 mm without a moved-body overlap. It is not promoted until its affected USB3/SATA/clock routes are regenerated and validated.", "", "The comparison deliberately does not use raw DRC counts from the mature baseline against first-pass candidate routing. A candidate route defect is a route implementation failure unless a valid routing-development cycle demonstrates a structural placement obstruction.", ""]
+lines += ["", "## Functional-neighborhood findings", "", "- J7 has two physically distinct launch regions: Ethernet pads at x≈32.96/36.04, y≈99.1–100.7, and PCIe/USB3/SERVICE pads at x≈66.96/70.04, y≈99.1–106.7. This is native pad geometry, not schematic drawing order.", "- SERVICE is already adjacent to its right-side launch and is a poor exchange target.", "- PCIe remains the most sensitive validated anchor; no candidate is allowed to invalidate it merely to improve a lower-priority neighborhood.", "- The accepted baseline already has the Ethernet island in the left/source acreage, so the remaining topology question is storage placement, not another Ethernet relocation.", "- The current storage group remains remote from the actual USB3 launch. `STORAGE_LOCAL`, `STORAGE_LOCAL_CLEAR2`, and the joint Ethernet/storage variants are topology candidates that shorten the storage source relationship; body overlaps are mechanical-screen findings, not route-quality scores.", "- `STORAGE_LOCAL_J3_EDGE` is the next screened candidate: it moves U7 and all local support toward USB3 while retaining the already mechanically valid J3 edge position, avoiding the inherited PCIe/PERST corridor.", "- `ETH_EAST_STORAGE_NORTH` is a connector-edge stress candidate; its long source paths make it a fallback, not a preferred topology.", "", "## Discriminator decision", "", "`MACRO_FLOORPLAN_DISCRIMINATOR = COMPLETE`", "The topology-only comparison selects `STORAGE_LOCAL_J3_EDGE` as the next development basis because it shortens the bridge-side USB3 relationship while retaining J3's mechanically compatible edge position. It is not promoted until its affected USB3/SATA/clock routes are regenerated and validated.", "", "The comparison deliberately does not use raw DRC counts from the mature baseline against first-pass candidate routing. A candidate route defect is a route implementation failure unless a valid routing-development cycle demonstrates a structural placement obstruction.", ""]
 REPORT.write_text("\n".join(lines))
 print(REPORT)
 for name,path in paths.items(): print(name, path)

@@ -30,18 +30,20 @@ Distances and same-net ratsnest lengths are computed from native transformed pad
 
 | candidate | Eth Euc | Eth Manhattan | storage Euc | storage Manhattan | PCIe Euc | service Euc | USB3 same-net | Eth same-net | moved body screen |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| `CURRENT` | 32.7 | 44.5 | 66.0 | 86.4 | 81.2 | 20.1 | 231.2 | 97.4 | none |
-| `ETH_OUTBOARD` | 17.3 | 18.6 | 66.0 | 86.4 | 81.2 | 20.1 | 231.2 | 95.6 | J2<->C4, J2<->Q2, J2<->U2, U6<->U2 |
-| `STORAGE_LOCAL` | 32.7 | 44.5 | 39.3 | 46.7 | 81.2 | 20.1 | 69.1 | 97.4 | C42<->C15, J3<->C31, J3<->C32, J3<->C33, J3<->J1, U7<->C16 |
-| `STORAGE_LOCAL_CLEAR2` | 32.7 | 44.5 | 39.9 | 52.1 | 81.2 | 20.1 | 88.1 | 97.4 | none |
+| `CURRENT` | 32.7 | 44.5 | 66.0 | 86.4 | 81.2 | 20.1 | 231.2 | 97.4 | none (inherited overlaps excluded |
+| `ETH_OUTBOARD` | 17.3 | 18.6 | 66.0 | 86.4 | 81.2 | 20.1 | 231.2 | 95.6 | C4<->J2, J2<->Q2, J2<->U2, U2<->U6 |
+| `STORAGE_LOCAL` | 32.7 | 44.5 | 39.3 | 46.7 | 81.2 | 20.1 | 69.1 | 97.4 | C15<->C42, C16<->U7, C31<->J3, C32<->J3, C33<->J3, J1<->J3 |
+| `STORAGE_LOCAL_CLEAR2` | 32.7 | 44.5 | 39.9 | 52.1 | 81.2 | 20.1 | 88.1 | 97.4 | none (inherited overlaps excluded |
+| `STORAGE_LOCAL_J3_EDGE` | 32.7 | 44.5 | 50.1 | 65.3 | 81.2 | 20.1 | 88.1 | 97.4 | none (inherited overlaps excluded |
 | `STORAGE_SOUTH_CLEAR` | 32.7 | 44.5 | 66.6 | 92.9 | 81.2 | 20.1 | 192.0 | 97.4 | J3<->MECH_M2_2280 |
 | `STORAGE_CENTER_CLEAR` | 32.7 | 44.5 | 63.1 | 87.4 | 81.2 | 20.1 | 175.4 | 97.4 | J3<->MECH_M2_2280 |
-| `ETH_OUTBOARD_STORAGE_LOCAL` | 17.3 | 18.6 | 39.3 | 46.7 | 81.2 | 20.1 | 69.1 | 95.6 | C42<->C15, J2<->C4, J2<->Q2, J2<->U2, J3<->C31, J3<->C32, J3<->C33, J3<->J1, U6<->U2, U7<->C16 |
-| `ETH_OUTBOARD_STORAGE_LOCAL_CLEAR2` | 17.3 | 18.6 | 39.9 | 52.1 | 81.2 | 20.1 | 88.1 | 95.6 | J2<->C4, J2<->Q2, J2<->U2, U6<->U2 |
-| `ETH_OUTBOARD_STORAGE_SOUTH_CLEAR` | 17.3 | 18.6 | 66.6 | 92.9 | 81.2 | 20.1 | 192.0 | 95.6 | J2<->C4, J2<->Q2, J2<->U2, J3<->MECH_M2_2280, U6<->U2 |
-| `ETH_OUTBOARD_STORAGE_CENTER_CLEAR` | 17.3 | 18.6 | 63.1 | 87.4 | 81.2 | 20.1 | 175.4 | 95.6 | J2<->C4, J2<->Q2, J2<->U2, J3<->MECH_M2_2280, U6<->U2 |
-| `ETH_OUTBOARD_STORAGE_CLEAR` | 17.3 | 18.6 | 43.9 | 60.3 | 81.2 | 20.1 | 88.1 | 95.6 | J2<->C4, J2<->Q2, J2<->U2, J3<->C23, J3<->C24, J3<->C25, J3<->C30, J3<->TP5, U6<->U2, U7<->C16 |
-| `ETH_EAST_STORAGE_NORTH` | 152.8 | 178.0 | 73.6 | 96.2 | 81.2 | 20.1 | 257.5 | 1149.9 | J3<->J1, U7<->J1 |
+| `ETH_OUTBOARD_STORAGE_LOCAL` | 17.3 | 18.6 | 39.3 | 46.7 | 81.2 | 20.1 | 69.1 | 95.6 | C15<->C42, C16<->U7, C31<->J3, C32<->J3, C33<->J3, C4<->J2, J1<->J3, J2<->Q2, J2<->U2, U2<->U6 |
+| `ETH_OUTBOARD_STORAGE_LOCAL_CLEAR2` | 17.3 | 18.6 | 39.9 | 52.1 | 81.2 | 20.1 | 88.1 | 95.6 | C4<->J2, J2<->Q2, J2<->U2, U2<->U6 |
+| `ETH_OUTBOARD_STORAGE_SOUTH_CLEAR` | 17.3 | 18.6 | 66.6 | 92.9 | 81.2 | 20.1 | 192.0 | 95.6 | C4<->J2, J2<->Q2, J2<->U2, J3<->MECH_M2_2280, U2<->U6 |
+| `ETH_OUTBOARD_STORAGE_LOCAL_J3_EDGE` | 17.3 | 18.6 | 50.1 | 65.3 | 81.2 | 20.1 | 88.1 | 95.6 | C4<->J2, J2<->Q2, J2<->U2, U2<->U6 |
+| `ETH_OUTBOARD_STORAGE_CENTER_CLEAR` | 17.3 | 18.6 | 63.1 | 87.4 | 81.2 | 20.1 | 175.4 | 95.6 | C4<->J2, J2<->Q2, J2<->U2, J3<->MECH_M2_2280, U2<->U6 |
+| `ETH_OUTBOARD_STORAGE_CLEAR` | 17.3 | 18.6 | 43.9 | 60.3 | 81.2 | 20.1 | 88.1 | 95.6 | C16<->U7, C23<->J3, C24<->J3, C25<->J3, C30<->J3, C4<->J2, J2<->Q2, J2<->U2, J3<->TP5, U2<->U6 |
+| `ETH_EAST_STORAGE_NORTH` | 152.8 | 178.0 | 73.6 | 96.2 | 81.2 | 20.1 | 257.5 | 1149.9 | J1<->J3, J1<->U7 |
 
 ## Functional-neighborhood findings
 
@@ -50,12 +52,12 @@ Distances and same-net ratsnest lengths are computed from native transformed pad
 - PCIe remains the most sensitive validated anchor; no candidate is allowed to invalidate it merely to improve a lower-priority neighborhood.
 - The accepted baseline already has the Ethernet island in the left/source acreage, so the remaining topology question is storage placement, not another Ethernet relocation.
 - The current storage group remains remote from the actual USB3 launch. `STORAGE_LOCAL`, `STORAGE_LOCAL_CLEAR2`, and the joint Ethernet/storage variants are topology candidates that shorten the storage source relationship; body overlaps are mechanical-screen findings, not route-quality scores.
-- `STORAGE_LOCAL_CLEAR2` is the best screened storage candidate: storage same-net ratsnest falls to 88.1 mm and the moved-body screen reports no overlaps. It keeps PCIe, SERVICE, power input, regulator islands, and the accepted Ethernet placement unchanged.
+- `STORAGE_LOCAL_J3_EDGE` is the next screened candidate: it moves U7 and all local support toward USB3 while retaining the already mechanically valid J3 edge position, avoiding the inherited PCIe/PERST corridor.
 - `ETH_EAST_STORAGE_NORTH` is a connector-edge stress candidate; its long source paths make it a fallback, not a preferred topology.
 
 ## Discriminator decision
 
 `MACRO_FLOORPLAN_DISCRIMINATOR = COMPLETE`
-The topology-only comparison selects `STORAGE_LOCAL_CLEAR2` as the next development basis because it reduces storage same-net ratsnest from 231.2 mm to 88.1 mm without a moved-body overlap. It is not promoted until its affected USB3/SATA/clock routes are regenerated and validated.
+The topology-only comparison selects `STORAGE_LOCAL_J3_EDGE` as the next development basis because it shortens the bridge-side USB3 relationship while retaining J3's mechanically compatible edge position. It is not promoted until its affected USB3/SATA/clock routes are regenerated and validated.
 
 The comparison deliberately does not use raw DRC counts from the mature baseline against first-pass candidate routing. A candidate route defect is a route implementation failure unless a valid routing-development cycle demonstrates a structural placement obstruction.

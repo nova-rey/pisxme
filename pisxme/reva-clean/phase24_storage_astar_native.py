@@ -39,10 +39,10 @@ def line_block(occ, layer, a, z, radius=.2):
         for dx in range(-rr,rr+1):
             for dy in range(-rr,rr+1): occ[layer].add((q[0]+dx,q[1]+dy))
 
-def occupancy(b, ignored):
+def occupancy(b, ignored, track_snapshot=None):
     occ={F:set(),B:set()}
     hard={F:set(),B:set()}
-    for t in b.GetTracks():
+    for t in (track_snapshot if track_snapshot is not None else list(b.Tracks())):
         if isinstance(t,pcbnew.PCB_VIA):
             q=xy(t.GetPosition()); block(occ,F,q,.35); block(occ,B,q,.35)
         else: line_block(occ,t.GetLayer(),xy(t.GetStart()),xy(t.GetEnd()),.22)
@@ -142,17 +142,35 @@ u7x=os.environ.get('PISXME_U7_X'); u7y=os.environ.get('PISXME_U7_Y')
 if u7x and u7y:
     u7=b.FindFootprintByReference('U7')
     u7.SetPosition(V(float(u7x),float(u7y)))
+u7rot=os.environ.get('PISXME_U7_ROT')
+if u7rot:
+    b.FindFootprintByReference('U7').SetOrientationDegrees(float(u7rot))
 # Remove only the previous SATA copper so this experiment evaluates the new
 # native-pad route rather than colliding with inherited SATA geometry.  USB3,
 # PCIe, power, and all unrelated copper remain untouched.
-for t in list(b.GetTracks()):
+track_snapshot = list(b.Tracks())
+removed_sata = False
+for t in track_snapshot:
     if any(k in t.GetNetname() for k in ('BRIDGE_SATA_', 'SATA_M2_')):
         b.Remove(t)
+        removed_sata = True
 # Keep all pads in the obstacle model.  `route()` clears only the actual
 # source/target halos for the current segment; excluding whole footprints
 # would allow one lane to pass through adjacent pads of another net.
 ignored=set()
-occ,hard=occupancy(b,ignored)
+track_snapshot = [t for t in track_snapshot
+                  if not any(k in t.GetNetname() for k in ('BRIDGE_SATA_', 'SATA_M2_'))]
+# KiCad 10 invalidates SWIG track proxies after in-place removal.  Reload the
+# saved post-removal board before building the obstacle map so every remaining
+# track is a live native object and no deleted proxy can enter the router.
+if removed_sata:
+    reload_path = str(OUT.with_suffix('.routing_base.kicad_pcb'))
+    b.Save(reload_path)
+    # Reloading in the same KiCad Python process is unreliable after a large
+    # in-place mutation; a fresh invocation can consume this serialized base.
+    raise RuntimeError(f'SATA_REMOVED_RELOAD_REQUIRED:{reload_path}')
+track_snapshot = list(b.Tracks())
+occ,hard=occupancy(b,ignored,track_snapshot)
 # This baseline intentionally leaves drilled-hole handling to the native DRC
 # while the pair escape is tuned; the earlier hard-hole waypoint variants are
 # preserved in history as rejected experiments.

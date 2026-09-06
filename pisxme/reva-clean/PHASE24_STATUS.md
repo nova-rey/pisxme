@@ -2425,3 +2425,34 @@ Historical-board DRC and first-pass candidate DRC remain excluded from this
 floorplan ranking. Any later failed route is classified separately as route
 implementation failure unless valid routing development demonstrates an
 inherent placement obstruction.
+
+## Selected storage-basis routing development — 2026-09-06
+
+The selected placement was refined to `STORAGE_LOCAL_J3_EDGE`: U7 and its
+clock, decoupling, and SATA-coupling support move toward the CM5 USB3 launch;
+J3 retains the existing mechanically compatible edge position. The native
+body screen reports no new moved-body overlaps after inherited overlaps are
+excluded. This supersedes the earlier `STORAGE_LOCAL_CLEAR2` coordinate set,
+whose moved support row intersected inherited PCIe/SERVICE copper.
+
+The first USB3 A* regeneration was rejected as `ROUTE_IMPLEMENTATION_FAILURE`
+because it left malformed terminal escape geometry: native DRC reported 27
+shorts, 15 crossings, and 264 unconnected items. The first SATA continuation
+from that malformed basis was likewise rejected with 37 shorts, 23 crossings,
+and 248 unconnected items. Neither result is used as floorplan evidence.
+
+A second, coherent manual reference-style USB3 probe removed all affected
+USB3/SATA/clock copper before authoring explicit monotonic split-layer lanes.
+The corrected native DRC result is 0 shorts, 0 crossings, 259 unconnected
+items, and 15 clearance items. The zero-short/crossing result is useful route
+development evidence, but the remaining native opens, dangling transitions,
+and clearance findings prevent promotion. A follow-on manual SATA probe was
+rejected with 13 shorts, 10 crossings, 249 unconnected items, and 21
+clearance items; it is retained only as negative route evidence.
+
+Disposition: the macro choice remains `STORAGE_LOCAL_J3_EDGE`, and all failed
+probes are `ROUTE_IMPLEMENTATION_FAILURE`, not `MACRO-PLACEMENT FAILURE`.
+No candidate copper is promoted. The next action is to adapt the already
+proven Phase 24 storage route topology to this placement with native terminal
+escapes and post-mutation reloads, then validate USB3 and SATA together before
+clock/support reintegration.
