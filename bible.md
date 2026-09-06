@@ -4579,3 +4579,11 @@ Corrected the J5 mode-selector schematic instance path reference as well as
 its displayed reference. Native inspection now distinguishes SERVICE J4 from
 storage mode-control J5 without duplicate references; the regenerated PCB
 candidate contains J4, J5, and Y2 as distinct native footprints.
+## 2026-09-06 — storage support namespace and native route pass
+
+Corrected inherited PCB reference collisions by moving JMS583 support to
+storage references C80-C93, R80-R83, L10, and Y10. Native inspection confirms
+SERVICE J4 and storage mode J5 are distinct. Added and executed a disposable
+native pad-derived low-speed support router; it saved 14 support connections
+and produced a loadable PCB, while DRC remains open at 1,158 violations and
+499 unconnected items. The routed fixture is not promoted.

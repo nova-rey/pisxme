@@ -123,3 +123,13 @@ failure.
 This report therefore remains `OPEN`; no Phase 24 resumption or completion is
 claimed. The corrected JMS583 pin authority also supersedes any earlier
 intermediate map that called pin 12 REXT.
+## Follow-up implementation evidence — 2026-09-06
+
+Native inspection found inherited C44-C47 reference collisions in the
+disposable acreage candidate. JMS583 support was moved to collision-free
+references C80-C93, R80-R83, L10, and Y10; SERVICE J4 and storage mode J5 are
+now distinct. A first disposable native support-routing pass saved 14
+low-speed pad-to-pad connections and loaded natively. Its DRC reports 1,158
+violations and 499 unconnected items because high-speed and remaining support
+paths are unfinished. This is route implementation progress, not a blocker
+claim or closure evidence.

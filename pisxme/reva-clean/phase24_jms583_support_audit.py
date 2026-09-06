@@ -5,13 +5,13 @@ import argparse
 
 ROOT=Path(__file__).resolve().parent
 REQUIRED={
- 'R34':'12k 1%', 'L2':'4.7uH', 'Y2':'25MHz +/-30ppm',
- 'C44':'4.7uF', 'C45':'100n', 'C46':'100n', 'C47':'100n', 'C48':'100n',
- 'R35':'10k reset pullup', 'C49':'100n reset delay',
- 'R36':'100k VBUS top', 'R37':'100k VBUS bottom',
- 'C50':'100n USB TX1P', 'C51':'100n USB TX1N',
- 'C54':'220n PCIe TX0P', 'C55':'220n PCIe TX0N',
- 'C56':'220n PCIe TX1P', 'C57':'220n PCIe TX1N'}
+ 'R80':'12k 1%', 'L10':'4.7uH', 'Y10':'25MHz +/-30ppm',
+ 'C80':'4.7uF', 'C81':'100n', 'C82':'100n', 'C83':'100n', 'C84':'100n',
+ 'R81':'10k reset pullup', 'C85':'100n reset delay',
+ 'R82':'100k VBUS top', 'R83':'100k VBUS bottom',
+ 'C86':'100n USB TX1P', 'C87':'100n USB TX1N',
+ 'C90':'220n PCIe TX0P', 'C91':'220n PCIe TX0N',
+ 'C92':'220n PCIe TX1P', 'C93':'220n PCIe TX1N'}
 NETS=('JMS_REXT','JMS_LXO','JMS_VDDREG_5V','JMS_XIN','JMS_XOUT',
       'JMS_AVDD33','JMS_VCCO','JMS_VCCK','JMS_AVDDL','JMS_XAVDDH',
       'JMS_RESET_N','STORAGE_3V3','VBUS','JMS_VBUS_SENSE',

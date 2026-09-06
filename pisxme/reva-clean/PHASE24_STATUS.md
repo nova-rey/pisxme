@@ -34,6 +34,14 @@ JMS583 baseline firmware remains factory mask-ROM; prototype procurement is
 still HIGH risk because the exact JLC listing is currently out of stock and
 no verified major-distributor listing is retained.
 
+The storage support reference namespace was corrected after native inspection:
+the integrated ancestor already owns low-numbered C/R references, so JMS583
+support now uses `C80–C93`, `R80–R83`, `L10`, and `Y10`. The regenerated native
+candidate contains distinct SERVICE `J4`, storage mode `J5`, and all support
+references. A disposable native low-speed support route pass saves 14
+pad-to-pad connections; its DRC remains open at 1,158 violations / 499
+unconnected items and is not promoted.
+
 ## Live dual-mode checkpoint — 2026-09-06
 
 Latest private checkpoint: `7938f64` (`reva-clean`). The active storage
