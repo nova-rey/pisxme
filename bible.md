@@ -4400,3 +4400,5 @@ Corrected the obstacle planner to use anisotropic pad envelopes and explicit U7 
 Proved all four selected-macro J7-to-TI-U7 paths are reachable in a two-footprint native fixture; rejected the first package-field escape by native DRC as TI padfield route implementation failure.
 # 2026-09-06 — Phase 24 monotonic TI U7 escape control
 Tested a direct native-pad monotonic escape control; native DRC reduced the clean-fixture result to 37 findings but rejected the source-via/lane geometry, preserving the result as route implementation evidence.
+# 2026-09-06 — Phase 24 TI U7 lane-assignment sweep
+Tested package-aware column and direct-sloped escape variants; native DRC rejected both, with the best disposable result at 18 findings, preserving the evidence for diagonal/offset routing refinement.

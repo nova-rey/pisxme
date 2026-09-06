@@ -3957,3 +3957,14 @@ findings, including five crossings and 11 shorts, but it remains rejected.
 This separates the previous A* zigzag class as a router implementation
 defect; the remaining failures are localized to source-via/lane assignment
 and TI pad-field approach geometry. No integrated or PCIe copper was modified.
+
+## TI-U7 package escape lane-assignment sweep — 2026-09-06
+
+The package-aware monotonic control used separated source transitions and
+per-lane columns before a horizontal dogbone into the TI lands. Native DRC
+reduced the minimal-fixture result to 18 findings, but still reported 12
+crossings and one short from shared-column interactions. A direct-sloped
+variant was worse at 27 findings and was rejected. These are disposable
+`ROUTE_IMPLEMENTATION_FAILURE` results; no integrated or PCIe copper was
+changed. The next credible class is pair-preserving diagonal/offset escape
+geometry without shared vertical lane crossings.
