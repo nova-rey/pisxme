@@ -4552,3 +4552,9 @@ receipt, procurement update, and a negative-control audit proving removal of
 required REXT support fails. This is an implementation checkpoint, not a
 storage or Phase 24 closure; routing, mode-aware physical connectivity,
 connector CAD parity, and native ERC/DRC gates remain open.
+
+## 2026-09-06 — storage checkpoint receipt reconciliation
+
+Reconciled the live Phase 24 status and procurement matrix to private
+checkpoint `7938f64`; the dual-mode storage upgrade remains the sole active
+priority and whole-board routing remains paused.

@@ -36,7 +36,7 @@ no verified major-distributor listing is retained.
 
 ## Live dual-mode checkpoint — 2026-09-06
 
-Latest private checkpoint: `9f1bca1` (`reva-clean`). The active storage
+Latest private checkpoint: `7938f64` (`reva-clean`). The active storage
 candidate is `JMS583-QHFA3A` plus retained `TUSB9261IPVP`, TI
 `HD3SS6126RUAR`/`HD3SS3412RUAR`, TE `1-2199230-4`, and U14
 `SN74LVC1G17DBVR`, all inside the storage island. JMS583 pin authority and
