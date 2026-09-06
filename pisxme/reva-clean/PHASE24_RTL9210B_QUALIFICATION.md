@@ -70,6 +70,8 @@ negative corroborating evidence and is excluded from production authority.
 The standalone `phase24_rtl9210b_m2_mapping_audit.py` asserts only the native
 socket contact labels and AC-coupling boundary; it does not bless the WIP
 hierarchy's reversed associations.
+`phase24_rtl9210b_wip_hierarchy_conflict_audit.py` independently detects and
+quarantines that conflict, including a mutation negative control.
 
 The chip pad 69 is the exposed ground pad. It is not M.2 contact 69. The
 shared lane-0 assignments above are explicit in the retained pin tables.

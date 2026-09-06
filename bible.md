@@ -4801,3 +4801,8 @@ validation remain open.
  association and is now explicitly negative WIP evidence. Added the native
  socket-contact audit and kept Path-B CAD gated on authoritative application,
  sideband, power/inrush, land-pattern, and provisioning evidence.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: added a quarantine audit for
+ the retained WIP hierarchy's reversed lane mapping. The audit detects the
+ mismatch against native M.2 contact authority and has a mutation negative
+ control; it prevents the community root receipt from becoming Path-B wiring
+ authority by accident.
