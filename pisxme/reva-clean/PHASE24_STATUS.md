@@ -3458,6 +3458,28 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `PHASE24_MACRO_REVIEW_LIVE_BASIS_20260906.kicad_pcb`, and
 `PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE.kicad_pcb`.
 
+## Selected macro storage route-development cycle 1 — 2026-09-06
+
+The selected `SWAP_ETH_STORAGE` basis was reduced to a native isolated
+storage fixture and regenerated against the actual bridge/socket pads. The
+native SATA endpoint audit passes all eight required memberships:
+U7-to-coupling-cap for TX/RX and coupling-cap-to-J3 for all four M.2 SATA
+pairs. This proves the new placement has a representable endpoint topology;
+it does not prove route quality.
+
+Native DRC rejects the first SATA route implementation with 108 violations
+and 84 unconnected items, including actual same-net-pair crossing/shorting
+and clearance findings. The candidate is rejected as
+`ROUTE_IMPLEMENTATION_FAILURE`, not `MACRO-PLACEMENT FAILURE`; the old
+historical board was not used as a raw DRC comparator. The next cycle must
+repair obstacle-aware SATA escape geometry on the selected macro basis and
+then regenerate USB3 from the same moved U7 placement before integration.
+
+Receipts: `PHASE24_SELECTED_MACRO_SWAP_STORAGE_ISOLATED.kicad_pcb`,
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_ASTAR.kicad_pcb`,
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_ASTAR-drc.rpt`, and
+`phase24_sata_native_connectivity_audit.py`.
+
 The Phase 14 footprint-authority regression now also checks the four side
 orientations, so future regeneration cannot silently restore the overlapping
 vertical-land error.
