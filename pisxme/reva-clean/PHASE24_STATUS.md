@@ -2043,4 +2043,42 @@ storage unconnected records remain, all the known duplicate U7
 unconnected records because USB3, clock/support, power, and other Phase 24
 work remain incomplete. This is a materially improved storage route baseline,
 not Phase 18/19 closure. The remaining U7 pad-field relationships must be
-resolved from schematic/footprint authority before promotion.
+ resolved from schematic/footprint authority before promotion.
+
+### Macro-floorplan discriminator and coordinated storage integration — 2026-09-05
+
+The whole-board macro review was completed before further open-by-open repair.
+The actual native CM5 launch regions, not schematic drawing order, were used:
+Ethernet `(34.50,99.90)`, PCIe `(69.60,101.50)`, USB3 `(70.04,105.30)`, and
+SERVICE `(66.96,99.30)`. Multiple disposable macro candidates, including
+Ethernet/storage exchange and PCIe-exchange probes, were compared using
+source-to-island topology, ratsnest/Manhattan distance, apparent corridor
+crossings, island coherence, connector-edge suitability, and acreage. The
+selected west-Ethernet/mid-storage macro has the lowest apparent Ethernet
+crossing burden while retaining the validated PCIe/SERVICE anchors. The
+comparison deliberately did not use the historical board's mature DRC count
+against first-pass candidate routes; immature copper failures remain classified
+as `ROUTE IMPLEMENTATION FAILURE` unless they follow inherently from placement.
+
+The preserved Phase 19 native storage implementation was then transplanted as
+a complete U7/J3/C30-C33 coherent island. Its USB3 and SATA copper is derived
+from actual donor tracks/vias and the current board's actual net objects. The
+U7 RX-N pad-field stitch passes the native U7 pad-net authority audit. The
+coordinated top-side candidate had exactly two localized shorts: C17 and C19
+bridge-3V3 pads occupied the donor USB3 TX corridors. A native obstacle-aware
+USB3 A* rewrite was attempted and rejected: it introduced multiple shorts and
+crossings and is not evidence against the macro placement.
+
+The authorized local-support repair moved C16/C17/C19 together to a low-profile
+B.Cu row at `(95,118)`, `(101,118)`, `(107,118)`, preserving values, nets, and
+decoupling topology. Native KiCad DRC for
+`PHASE24_SELECTED_MACRO_STORAGE_PROVEN_USB3_SATA_RXN_STITCH_CAPS_BOTTOM.kicad_pcb`
+reports 0 `shorting_items`, 0 `tracks_crossing`, 0 M.2 hole-clearance errors,
+419 inherited incomplete-board unconnected items, and 10 ordinary clearance
+items. The three courtyard overlaps are inherited C7/C8, J7/C14, and C5/C6;
+none involves the moved bridge caps. The U7 pad-net authority audit passes and
+storage-specific unconnected count is zero for CM5 USB3, BRIDGE_SATA, and
+SATA_M2 nets. This closes the coordinated storage route locally, but does not
+close Phase 24: clock/support, power-delivery, and other board opens remain.
+Consultant spawning was unavailable at the thread limit; the review was
+performed locally against the saved native geometry and preserved evidence.
