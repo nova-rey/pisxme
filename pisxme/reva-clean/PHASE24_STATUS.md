@@ -4090,6 +4090,31 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Selected-macro integrated B.Cu source-escape experiment — 2026-09-06
+
+The integrated B.Cu-only obstacle-aware experiment was followed by a
+dedicated source-boundary variant using one ordinary through-via and
+monotonic dogbone per J7 USB3 pad before the corridor search. Native DRC
+rejected the variant with 464 violations, including 36 shorts, 23 track
+crossings, 106 clearance findings, 119 hole-clearance findings, and 469
+unconnected items. It is discarded; the prior B.Cu control (341 violations,
+one short, 12 crossings) remains evidence only.
+
+This is another `ROUTE_IMPLEMENTATION_FAILURE`: the dedicated source
+transitions were placed into the existing integrated obstacle field without
+an approved complete source-escape corridor. It is not evidence that the
+selected `SWAP_ETH_STORAGE` macro is inferior. No PCIe copper, schematic
+authority, or production candidate was changed. The next cycle must use a
+source-escape topology derived from the native CM5IO launch and validate that
+escape in the integrated obstacle field before promoting any copper.
+
+Receipt: `phase24_ti_usb3_bcu_integrated_astar.py` and
+`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_BCU_INTEGRATED_ASTAR-drc.rpt`.
+
+`SELECTED_MACRO_SOURCE_ESCAPE_VARIANT = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`
+
 ## Selected-macro TI-U7 integration cycle — 2026-09-06
 
 The selected `SWAP_ETH_STORAGE` macro was reloaded and U7 was regenerated from

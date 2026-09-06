@@ -4418,3 +4418,5 @@ Rejected an alternate-layer RX escape after native DRC regressed to 14 findings 
 Snapshotted the native integrated storage basis and completed a topology-only comparison of six disposable whole-board macro-floorplans; selected SWAP_ETH_STORAGE without promoting immature routing.
 # 2026-09-06 — Phase 24 selected-macro TI-U7 integration cycle
 Corrected hierarchical U7 net resolution, passed TI pin/net authority audits, and rejected two disposable integrated USB3 route controls after native DRC found real crossings/shorts; classified as route implementation failure.
+# 2026-09-06 — Phase 24 integrated B.Cu source-escape experiment
+Rejected a dedicated J7 source-via escape after native integrated DRC regressed to 36 shorts and 23 crossings; retained the selected macro and classified the result as route implementation failure.
