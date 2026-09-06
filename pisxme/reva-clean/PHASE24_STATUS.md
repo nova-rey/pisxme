@@ -2096,3 +2096,20 @@ FB_BRIDGE_3V3, 2 to 0 PG_BRIDGE_3V3, and 1 to 0 RT_BRIDGE_3V3 records. Storage
 specific unconnected count remains zero, and the U7 pad-net authority audit
 passes. The candidate is promoted as the current Phase 24 integration basis;
 the two additional ordinary clearances are retained for later local review.
+
+### Complete clock-support transplant from passing V2 fixture — 2026-09-05
+
+The passing `PHASE24_CLOCK_COMPLETE_ASTAR_V2` fixture was adapted onto the
+current storage/power baseline using its serialized clock tracks and vias,
+with the current board's native `/STORAGE/BRIDGE_XI`,
+`/STORAGE/BRIDGE_XO`, and `/STORAGE/BRIDGE_VSSOSC` net objects. Y1/R23/C42/C43
+were moved as one support island to the fixture's proven coordinates. Native
+KiCad DRC reports 0 `shorting_items`, 0 `tracks_crossing`, and 397 total
+unconnected items. Compared with the preceding 407-open basis, all clock
+specific unconnected records (10) are removed; storage-specific unconnected
+records remain zero. Clearance count remains 12 and courtyard count remains
+3, identical to the preceding basis, so this transplant introduced no new
+violation class. The U7 pad-net authority audit passes. The resulting
+`PHASE24_CLOCK_COMPLETE_V2_ON_CURRENT.kicad_pcb` is promoted as the current
+Phase 24 integration basis; full-board ground, power, service, and remaining
+connectivity closure is still required.
