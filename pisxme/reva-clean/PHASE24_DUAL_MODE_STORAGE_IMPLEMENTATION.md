@@ -158,3 +158,11 @@ reduced the artificial detour, but the F.Cu selector paths still intersected
 native CM5-source escape vias and package-edge corridors. They are rejected
 as a route implementation class. The saved generator remains the committed
 zero-short baseline pending a proper two-layer via-handoff construction.
+
+The explicit via-handoff trial is retained as
+`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED21-drc.rpt` and rejected. Native DRC
+found shorts between handoff vias and the inherited CM5 source corridor, plus
+crossing split-cap paths. The experiment confirms that handoff vias must be
+planned with a reserved corridor; inserting them into existing copper is not
+a valid repair. The generator was restored to the committed zero-short
+baseline.
