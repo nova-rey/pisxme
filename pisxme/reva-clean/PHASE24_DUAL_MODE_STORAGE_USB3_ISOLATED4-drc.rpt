@@ -1,0 +1,1570 @@
+** Drc report for PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED.kicad_pcb **
+** Created on 2026-09-06T15:16:51 **
+** Report includes: Errors, Warnings **
+
+** Found 313 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(70.0400 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 9.4600 mm
+    @(76.0000 mm, 103.9000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 15.1000 mm
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_TX_N and /CORE_CM5/CM5_USB3_RX_N)
+    Local override; error
+    @(160.0000 mm, 113.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 43.0465 mm
+    @(162.0000 mm, 154.0000 mm): Via [/CORE_CM5/CM5_USB3_RX_N] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(160.0000 mm, 113.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 43.0465 mm
+    @(160.0000 mm, 116.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 38.8330 mm
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_TX_N and /CORE_CM5/CM5_USB3_RX_N)
+    Local override; error
+    @(160.0000 mm, 113.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 43.0465 mm
+    @(160.0000 mm, 119.0000 mm): Via [/CORE_CM5/CM5_USB3_RX_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_TX_P and )
+    Local override; error
+    @(168.0000 mm, 156.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 4.3681 mm
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1640 mm)
+    Local override; error
+    @(160.0000 mm, 110.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 46.6905 mm
+    @(160.0000 mm, 113.0000 mm): Via [/CORE_CM5/CM5_USB3_TX_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1805 mm)
+    Local override; error
+    @(160.0000 mm, 138.0000 mm): Track [JMS_USB3_TXN] on B.Cu, length 14.3178 mm
+    @(158.0000 mm, 145.0000 mm): Track [USB_RXP1] on B.Cu, length 10.6508 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(160.0000 mm, 135.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 16.6517 mm
+    @(155.0000 mm, 138.0000 mm): Track [USB_TXN1] on B.Cu, length 154.2603 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(155.0000 mm, 135.0000 mm): Track [USB_TXP1] on B.Cu, length 177.5929 mm
+    @(160.0000 mm, 135.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 16.6517 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(151.0000 mm, 154.0000 mm): Track [USB_TXN1] on B.Cu, length 16.4924 mm
+    @(149.4000 mm, 154.0000 mm): Track [USB_RXP1] on B.Cu, length 12.4483 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(151.4000 mm, 154.0000 mm): Track [USB_TXP1] on B.Cu, length 19.3380 mm
+    @(151.0000 mm, 154.0000 mm): Track [USB_TXN1] on B.Cu, length 16.4924 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(149.0000 mm, 154.0000 mm): Track [USB_RXN1] on B.Cu, length 10.8167 mm
+    @(149.4000 mm, 154.0000 mm): Track [USB_RXP1] on B.Cu, length 12.4483 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(160.0000 mm, 113.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 43.0465 mm
+    @(160.0000 mm, 135.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 16.6517 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(79.0000 mm, 106.3000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 6.7000 mm
+    @(70.0400 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 9.4600 mm
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_TX_N and /CORE_CM5/CM5_USB3_RX_P)
+    Local override; error
+    @(160.0000 mm, 113.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 43.0465 mm
+    @(76.5000 mm, 116.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 83.5000 mm
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_TX_N and /CORE_CM5/CM5_USB3_RX_P)
+    Local override; error
+    @(160.0000 mm, 113.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 43.0465 mm
+    @(160.0000 mm, 116.0000 mm): Via [/CORE_CM5/CM5_USB3_RX_P] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(76.5000 mm, 104.3000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 11.7000 mm
+    @(70.0400 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 9.4600 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1994 mm)
+    Local override; error
+    @(168.0000 mm, 156.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 4.3681 mm
+    @(168.0000 mm, 154.0000 mm): Via [/CORE_CM5/CM5_USB3_RX_P] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(160.0000 mm, 113.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 43.0465 mm
+    @(160.0000 mm, 119.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 35.0571 mm
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_TX_P and /CORE_CM5/CM5_USB3_RX_P)
+    Local override; error
+    @(160.0000 mm, 110.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 46.6905 mm
+    @(168.0000 mm, 154.0000 mm): Via [/CORE_CM5/CM5_USB3_RX_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_TX_N and )
+    Local override; error
+    @(162.0000 mm, 156.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 6.0828 mm
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0400 mm)
+    Local override; error
+    @(160.0000 mm, 138.0000 mm): Track [JMS_USB3_TXN] on B.Cu, length 14.3178 mm
+    @(160.0000 mm, 135.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 16.6517 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0385 mm)
+    Local override; error
+    @(160.0000 mm, 110.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 46.6905 mm
+    @(160.0000 mm, 135.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 16.6517 mm
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_RX_P and )
+    Local override; error
+    @(168.0000 mm, 154.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 3.5609 mm
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1288 mm)
+    Local override; error
+    @(76.0000 mm, 119.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 84.0000 mm
+    @(160.0000 mm, 113.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 43.0465 mm
+[shorting_items]: Items shorting two nets (nets POWER_GND and /CORE_CM5/CM5_USB3_RX_N)
+    Local override; error
+    @(164.4000 mm, 151.8000 mm): Pad 17 [POWER_GND] of U12 on F.Cu
+    @(162.0000 mm, 154.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 3.5609 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 148.2000 mm): Pad 1 [<no net>] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 148.2000 mm): Pad 1 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 148.2000 mm): Pad 41 [NC_41] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 148.2000 mm): Pad 1 [<no net>] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 42 [NC_42] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 148.2000 mm): Pad 1 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 148.2000 mm): Pad 31 [TUSB_USB2_DP] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 147.0000 mm): Pad 1 [JMS_VDDREG_5V] of U11 on F.Cu
+    @(146.0000 mm, 147.4000 mm): Pad 2 [JMS_VCCK] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 148.2000 mm): Pad 1 [<no net>] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 32 [TUSB_USB2_DM] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 147.4000 mm): Pad 2 [JMS_VCCK] of U11 on F.Cu
+    @(146.0000 mm, 147.8000 mm): Pad 3 [JMS_SPI_SO_DNP] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 148.6000 mm): Pad 2 [<no net>] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 148.6000 mm): Pad 2 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 148.2000 mm): Pad 41 [NC_41] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 148.6000 mm): Pad 2 [<no net>] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 42 [NC_42] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 147.8000 mm): Pad 3 [JMS_SPI_SO_DNP] of U11 on F.Cu
+    @(146.0000 mm, 148.2000 mm): Pad 4 [JMS_SPI_SCK_DNP] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 148.2000 mm): Pad 4 [JMS_SPI_SCK_DNP] of U11 on F.Cu
+    @(146.0000 mm, 148.6000 mm): Pad 5 [JMS_SPI_SI_DNP] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.2000 mm, 148.6000 mm): Pad 2 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 149.0000 mm): Pad 3 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 148.6000 mm): Pad 5 [JMS_SPI_SI_DNP] of U11 on F.Cu
+    @(146.0000 mm, 149.0000 mm): Pad 6 [JMS_VCCO] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 148.6000 mm): Pad 2 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 148.2000 mm): Pad 31 [TUSB_USB2_DP] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 148.6000 mm): Pad 2 [<no net>] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 32 [TUSB_USB2_DM] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 149.0000 mm): Pad 6 [JMS_VCCO] of U11 on F.Cu
+    @(146.0000 mm, 149.4000 mm): Pad 7 [JMS_SPI_CS_N_DNP] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 149.4000 mm): Pad 7 [JMS_SPI_CS_N_DNP] of U11 on F.Cu
+    @(146.0000 mm, 149.8000 mm): Pad 8 [JMS_GPIO4_NC] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.2000 mm, 148.6000 mm): Pad 2 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 148.2000 mm): Pad 1 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 149.8000 mm): Pad 8 [JMS_GPIO4_NC] of U11 on F.Cu
+    @(146.0000 mm, 150.2000 mm): Pad 9 [JMS_GPIO5_NC] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 150.2000 mm): Pad 9 [JMS_GPIO5_NC] of U11 on F.Cu
+    @(146.0000 mm, 150.6000 mm): Pad 10 [JMS_VBUS_SENSE] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 149.0000 mm): Pad 3 [<no net>] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 150.6000 mm): Pad 10 [JMS_VBUS_SENSE] of U11 on F.Cu
+    @(146.0000 mm, 151.0000 mm): Pad 11 [JMS_VCCO] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 151.0000 mm): Pad 11 [JMS_VCCO] of U11 on F.Cu
+    @(146.0000 mm, 151.4000 mm): Pad 12 [JMS_GPIO7_NC] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.2000 mm, 149.0000 mm): Pad 3 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 149.4000 mm): Pad 4 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 151.4000 mm): Pad 12 [JMS_GPIO7_NC] of U11 on F.Cu
+    @(146.0000 mm, 151.8000 mm): Pad 13 [JMS_GPIO8_NC] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 151.8000 mm): Pad 13 [JMS_GPIO8_NC] of U11 on F.Cu
+    @(146.0000 mm, 152.2000 mm): Pad 14 [JMS_GPIO9_NC] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 152.2000 mm): Pad 14 [JMS_GPIO9_NC] of U11 on F.Cu
+    @(146.0000 mm, 152.6000 mm): Pad 15 [JMS_RESET_N] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 149.4000 mm): Pad 4 [<no net>] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(146.0000 mm, 152.6000 mm): Pad 15 [JMS_RESET_N] of U11 on F.Cu
+    @(146.0000 mm, 153.0000 mm): Pad 16 [VBUS] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(153.0000 mm, 154.0000 mm): Pad 17 [USB_DM] of U11 on F.Cu
+    @(152.6000 mm, 154.0000 mm): Pad 18 [USB_DP] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.2000 mm, 149.4000 mm): Pad 4 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 149.8000 mm): Pad 5 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(152.6000 mm, 154.0000 mm): Pad 18 [USB_DP] of U11 on F.Cu
+    @(152.2000 mm, 154.0000 mm): Pad 19 [JMS_AVDD33] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(152.2000 mm, 154.0000 mm): Pad 19 [JMS_AVDD33] of U11 on F.Cu
+    @(151.8000 mm, 154.0000 mm): Pad 20 [JMS_AVDDL] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 149.8000 mm): Pad 5 [<no net>] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(151.8000 mm, 154.0000 mm): Pad 20 [JMS_AVDDL] of U11 on F.Cu
+    @(151.4000 mm, 154.0000 mm): Pad 21 [USB_TXP1] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(151.4000 mm, 154.0000 mm): Pad 21 [USB_TXP1] of U11 on F.Cu
+    @(151.0000 mm, 154.0000 mm): Pad 22 [USB_TXN1] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(151.0000 mm, 154.0000 mm): Pad 22 [USB_TXN1] of U11 on F.Cu
+    @(150.6000 mm, 154.0000 mm): Pad 23 [USB_TXN2] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.2000 mm, 149.8000 mm): Pad 5 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 150.2000 mm): Pad 6 [USB_OE_N] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(150.6000 mm, 154.0000 mm): Pad 23 [USB_TXN2] of U11 on F.Cu
+    @(150.2000 mm, 154.0000 mm): Pad 24 [USB_TXP2] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(150.2000 mm, 154.0000 mm): Pad 24 [USB_TXP2] of U11 on F.Cu
+    @(149.8000 mm, 154.0000 mm): Pad 25 [JMS_AVDDL] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.2000 mm, 150.2000 mm): Pad 6 [USB_OE_N] of U12 on F.Cu
+    @(163.2000 mm, 150.6000 mm): Pad 7 [CM5_STORAGE_USB2_DM] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(149.8000 mm, 154.0000 mm): Pad 25 [JMS_AVDDL] of U11 on F.Cu
+    @(149.4000 mm, 154.0000 mm): Pad 26 [USB_RXP1] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 150.2000 mm): Pad 6 [USB_OE_N] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(149.4000 mm, 154.0000 mm): Pad 26 [USB_RXP1] of U11 on F.Cu
+    @(149.0000 mm, 154.0000 mm): Pad 27 [USB_RXN1] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(149.0000 mm, 154.0000 mm): Pad 27 [USB_RXN1] of U11 on F.Cu
+    @(148.6000 mm, 154.0000 mm): Pad 28 [USB_RXN2] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(148.6000 mm, 154.0000 mm): Pad 28 [USB_RXN2] of U11 on F.Cu
+    @(148.2000 mm, 154.0000 mm): Pad 29 [USB_RXP2] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(148.2000 mm, 154.0000 mm): Pad 29 [USB_RXP2] of U11 on F.Cu
+    @(147.8000 mm, 154.0000 mm): Pad 30 [JMS_AVDDL] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(147.8000 mm, 154.0000 mm): Pad 30 [JMS_AVDDL] of U11 on F.Cu
+    @(147.4000 mm, 154.0000 mm): Pad 31 [JMS_VCCK] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(147.4000 mm, 154.0000 mm): Pad 31 [JMS_VCCK] of U11 on F.Cu
+    @(147.0000 mm, 154.0000 mm): Pad 32 [JMS_VCCO] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.2000 mm, 150.6000 mm): Pad 7 [CM5_STORAGE_USB2_DM] of U12 on F.Cu
+    @(163.2000 mm, 151.0000 mm): Pad 8 [CM5_STORAGE_USB2_DP] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 153.0000 mm): Pad 33 [JMS_AVDDL] of U11 on F.Cu
+    @(154.0000 mm, 152.6000 mm): Pad 34 [PCIE_RXN1] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 150.6000 mm): Pad 7 [CM5_STORAGE_USB2_DM] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 152.6000 mm): Pad 34 [PCIE_RXN1] of U11 on F.Cu
+    @(154.0000 mm, 152.2000 mm): Pad 35 [PCIE_RXP1] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 152.2000 mm): Pad 35 [PCIE_RXP1] of U11 on F.Cu
+    @(154.0000 mm, 151.8000 mm): Pad 36 [JMS_AVDDL] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 151.8000 mm): Pad 36 [JMS_AVDDL] of U11 on F.Cu
+    @(154.0000 mm, 151.4000 mm): Pad 37 [PCIE_TXN1] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.2000 mm, 151.0000 mm): Pad 8 [CM5_STORAGE_USB2_DP] of U12 on F.Cu
+    @(163.2000 mm, 151.4000 mm): Pad 9 [USB_SEL] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 151.4000 mm): Pad 37 [PCIE_TXN1] of U11 on F.Cu
+    @(154.0000 mm, 151.0000 mm): Pad 38 [PCIE_TXP1] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 151.0000 mm): Pad 8 [CM5_STORAGE_USB2_DP] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 151.0000 mm): Pad 38 [PCIE_TXP1] of U11 on F.Cu
+    @(154.0000 mm, 150.6000 mm): Pad 39 [JMS_REXT] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 150.6000 mm): Pad 39 [JMS_REXT] of U11 on F.Cu
+    @(154.0000 mm, 150.2000 mm): Pad 40 [JMS_AVDDL] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 150.2000 mm): Pad 40 [JMS_AVDDL] of U11 on F.Cu
+    @(154.0000 mm, 149.8000 mm): Pad 41 [PCIE_RXN0] of U11 on F.Cu
+[shorting_items]: Items shorting two nets (nets USB_SEL and STORAGE_3V3)
+    Local override; error
+    @(163.2000 mm, 151.4000 mm): Pad 9 [USB_SEL] of U12 on F.Cu
+    @(163.2000 mm, 151.8000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 149.8000 mm): Pad 41 [PCIE_RXN0] of U11 on F.Cu
+    @(154.0000 mm, 149.4000 mm): Pad 42 [PCIE_RXP0] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 151.4000 mm): Pad 9 [USB_SEL] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[shorting_items]: Items shorting two nets (nets USB_SEL and POWER_GND)
+    Local override; error
+    @(163.2000 mm, 151.4000 mm): Pad 9 [USB_SEL] of U12 on F.Cu
+    @(163.6000 mm, 151.8000 mm): Pad 19 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 149.4000 mm): Pad 42 [PCIE_RXP0] of U11 on F.Cu
+    @(154.0000 mm, 149.0000 mm): Pad 43 [JMS_AVDDL] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.2000 mm, 151.4000 mm): Pad 9 [USB_SEL] of U12 on F.Cu
+    @(163.2000 mm, 151.8000 mm): Pad 10 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 149.0000 mm): Pad 43 [JMS_AVDDL] of U11 on F.Cu
+    @(154.0000 mm, 148.6000 mm): Pad 44 [PCIE_TXN0] of U11 on F.Cu
+[shorting_items]: Items shorting two nets (nets POWER_GND and STORAGE_3V3)
+    Local override; error
+    @(163.2000 mm, 151.8000 mm): Pad 10 [POWER_GND] of U12 on F.Cu
+    @(163.2000 mm, 151.8000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 148.6000 mm): Pad 44 [PCIE_TXN0] of U11 on F.Cu
+    @(154.0000 mm, 148.2000 mm): Pad 45 [PCIE_TXP0] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 148.2000 mm): Pad 45 [PCIE_TXP0] of U11 on F.Cu
+    @(154.0000 mm, 147.8000 mm): Pad 46 [JMS_AVDDL] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 151.8000 mm): Pad 10 [POWER_GND] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 147.8000 mm): Pad 46 [JMS_AVDDL] of U11 on F.Cu
+    @(154.0000 mm, 147.4000 mm): Pad 47 [REFCLK_N] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(154.0000 mm, 147.4000 mm): Pad 47 [REFCLK_N] of U11 on F.Cu
+    @(154.0000 mm, 147.0000 mm): Pad 48 [REFCLK_P] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.8000 mm, 151.8000 mm): Pad 11 [/CORE_CM5/CM5_USB3_TX_P] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_TX_P and POWER_GND)
+    Local override; error
+    @(166.8000 mm, 151.8000 mm): Pad 11 [/CORE_CM5/CM5_USB3_TX_P] of U12 on F.Cu
+    @(166.8000 mm, 151.8000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(147.0000 mm, 146.0000 mm): Pad 49 [JMS_AVDDL] of U11 on F.Cu
+    @(147.4000 mm, 146.0000 mm): Pad 50 [XIN] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.8000 mm, 151.8000 mm): Pad 11 [/CORE_CM5/CM5_USB3_TX_P] of U12 on F.Cu
+    @(166.4000 mm, 151.8000 mm): Pad 12 [/CORE_CM5/CM5_USB3_TX_N] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(147.4000 mm, 146.0000 mm): Pad 50 [XIN] of U11 on F.Cu
+    @(147.8000 mm, 146.0000 mm): Pad 51 [XOUT] of U11 on F.Cu
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_TX_P and USB_RXN1)
+    Local override; error
+    @(166.8000 mm, 151.8000 mm): Pad 11 [/CORE_CM5/CM5_USB3_TX_P] of U12 on F.Cu
+    @(166.8000 mm, 151.4000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(147.8000 mm, 146.0000 mm): Pad 51 [XOUT] of U11 on F.Cu
+    @(148.2000 mm, 146.0000 mm): Pad 52 [JMS_XAVDDH] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(148.2000 mm, 146.0000 mm): Pad 52 [JMS_XAVDDH] of U11 on F.Cu
+    @(148.6000 mm, 146.0000 mm): Pad 53 [JMS_VCCK] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.4000 mm, 151.8000 mm): Pad 12 [/CORE_CM5/CM5_USB3_TX_N] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(148.6000 mm, 146.0000 mm): Pad 53 [JMS_VCCK] of U11 on F.Cu
+    @(149.0000 mm, 146.0000 mm): Pad 54 [PCIE_RESET_N] of U11 on F.Cu
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_TX_N and POWER_GND)
+    Local override; error
+    @(166.4000 mm, 151.8000 mm): Pad 12 [/CORE_CM5/CM5_USB3_TX_N] of U12 on F.Cu
+    @(166.8000 mm, 151.8000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(149.0000 mm, 146.0000 mm): Pad 54 [PCIE_RESET_N] of U11 on F.Cu
+    @(149.4000 mm, 146.0000 mm): Pad 55 [PCIE_CLKREQ_N] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.4000 mm, 151.8000 mm): Pad 12 [/CORE_CM5/CM5_USB3_TX_N] of U12 on F.Cu
+    @(166.0000 mm, 151.8000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(149.4000 mm, 146.0000 mm): Pad 55 [PCIE_CLKREQ_N] of U11 on F.Cu
+    @(149.8000 mm, 146.0000 mm): Pad 56 [JMS_VCCO] of U11 on F.Cu
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_TX_N and USB_RXN1)
+    Local override; error
+    @(166.4000 mm, 151.8000 mm): Pad 12 [/CORE_CM5/CM5_USB3_TX_N] of U12 on F.Cu
+    @(166.8000 mm, 151.4000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(149.8000 mm, 146.0000 mm): Pad 56 [JMS_VCCO] of U11 on F.Cu
+    @(150.2000 mm, 146.0000 mm): Pad 57 [JMS_GPIO12_NC] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(150.2000 mm, 146.0000 mm): Pad 57 [JMS_GPIO12_NC] of U11 on F.Cu
+    @(150.6000 mm, 146.0000 mm): Pad 58 [JMS_GPIO11_NC] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(150.6000 mm, 146.0000 mm): Pad 58 [JMS_GPIO11_NC] of U11 on F.Cu
+    @(151.0000 mm, 146.0000 mm): Pad 59 [JMS_GPIO10_NC] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.0000 mm, 151.8000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(151.0000 mm, 146.0000 mm): Pad 59 [JMS_GPIO10_NC] of U11 on F.Cu
+    @(151.4000 mm, 146.0000 mm): Pad 60 [POWER_GND] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.0000 mm, 151.8000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+    @(165.6000 mm, 151.8000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(151.4000 mm, 146.0000 mm): Pad 60 [POWER_GND] of U11 on F.Cu
+    @(151.8000 mm, 146.0000 mm): Pad 61 [JMS_CC2_NC] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(151.8000 mm, 146.0000 mm): Pad 61 [JMS_CC2_NC] of U11 on F.Cu
+    @(152.2000 mm, 146.0000 mm): Pad 62 [JMS_CC1_NC] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(152.2000 mm, 146.0000 mm): Pad 62 [JMS_CC1_NC] of U11 on F.Cu
+    @(152.6000 mm, 146.0000 mm): Pad 63 [POWER_GND] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1800 mm)
+    Local override; error
+    @(152.6000 mm, 146.0000 mm): Pad 63 [POWER_GND] of U11 on F.Cu
+    @(153.0000 mm, 146.0000 mm): Pad 64 [LXO] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(165.6000 mm, 151.8000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(165.6000 mm, 151.8000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
+    @(165.2000 mm, 151.8000 mm): Pad 15 [/CORE_CM5/CM5_USB3_RX_P] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(165.2000 mm, 151.8000 mm): Pad 15 [/CORE_CM5/CM5_USB3_RX_P] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(165.2000 mm, 151.8000 mm): Pad 15 [/CORE_CM5/CM5_USB3_RX_P] of U12 on F.Cu
+    @(164.8000 mm, 151.8000 mm): Pad 16 [/CORE_CM5/CM5_USB3_RX_N] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(164.8000 mm, 151.8000 mm): Pad 16 [/CORE_CM5/CM5_USB3_RX_N] of U12 on F.Cu
+    @(164.4000 mm, 151.8000 mm): Pad 17 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(164.8000 mm, 151.8000 mm): Pad 16 [/CORE_CM5/CM5_USB3_RX_N] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(164.4000 mm, 151.8000 mm): Pad 17 [POWER_GND] of U12 on F.Cu
+    @(164.0000 mm, 151.8000 mm): Pad 18 [NC_18] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(164.4000 mm, 151.8000 mm): Pad 17 [POWER_GND] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(164.0000 mm, 151.8000 mm): Pad 18 [NC_18] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(164.0000 mm, 151.8000 mm): Pad 18 [NC_18] of U12 on F.Cu
+    @(163.6000 mm, 151.8000 mm): Pad 19 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.6000 mm, 151.8000 mm): Pad 19 [POWER_GND] of U12 on F.Cu
+    @(163.2000 mm, 151.8000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.6000 mm, 151.8000 mm): Pad 19 [POWER_GND] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 151.8000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.8000 mm, 151.8000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.8000 mm, 151.8000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+    @(166.8000 mm, 151.4000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.8000 mm, 151.4000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.8000 mm, 151.4000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+    @(166.8000 mm, 151.0000 mm): Pad 23 [USB_RXP1] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.8000 mm, 151.0000 mm): Pad 23 [USB_RXP1] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.8000 mm, 151.0000 mm): Pad 23 [USB_RXP1] of U12 on F.Cu
+    @(166.8000 mm, 150.6000 mm): Pad 24 [JMS_USB3_TXN] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.8000 mm, 150.6000 mm): Pad 24 [JMS_USB3_TXN] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.8000 mm, 150.6000 mm): Pad 24 [JMS_USB3_TXN] of U12 on F.Cu
+    @(166.8000 mm, 150.2000 mm): Pad 25 [JMS_USB3_TXP] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.8000 mm, 150.2000 mm): Pad 25 [JMS_USB3_TXP] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.8000 mm, 150.2000 mm): Pad 25 [JMS_USB3_TXP] of U12 on F.Cu
+    @(166.8000 mm, 149.8000 mm): Pad 26 [TUSB_SSRXN] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.8000 mm, 149.8000 mm): Pad 26 [TUSB_SSRXN] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.8000 mm, 149.8000 mm): Pad 26 [TUSB_SSRXN] of U12 on F.Cu
+    @(166.8000 mm, 149.4000 mm): Pad 27 [TUSB_SSRXP] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.8000 mm, 149.4000 mm): Pad 27 [TUSB_SSRXP] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.8000 mm, 149.4000 mm): Pad 27 [TUSB_SSRXP] of U12 on F.Cu
+    @(166.8000 mm, 149.0000 mm): Pad 28 [TUSB_SSTXN] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.8000 mm, 149.0000 mm): Pad 28 [TUSB_SSTXN] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.8000 mm, 149.0000 mm): Pad 28 [TUSB_SSTXN] of U12 on F.Cu
+    @(166.8000 mm, 148.6000 mm): Pad 29 [TUSB_SSTXP] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.8000 mm, 148.6000 mm): Pad 29 [TUSB_SSTXP] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.8000 mm, 148.6000 mm): Pad 29 [TUSB_SSTXP] of U12 on F.Cu
+    @(166.8000 mm, 148.2000 mm): Pad 30 [STORAGE_3V3] of U12 on F.Cu
+[shorting_items]: Items shorting two nets (nets TUSB_SSTXP and NC_40)
+    Local override; error
+    @(166.8000 mm, 148.6000 mm): Pad 29 [TUSB_SSTXP] of U12 on F.Cu
+    @(166.8000 mm, 148.2000 mm): Pad 40 [NC_40] of U12 on F.Cu
+[shorting_items]: Items shorting two nets (nets TUSB_SSTXP and NC_39)
+    Local override; error
+    @(166.8000 mm, 148.6000 mm): Pad 29 [TUSB_SSTXP] of U12 on F.Cu
+    @(166.4000 mm, 148.2000 mm): Pad 39 [NC_39] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.8000 mm, 148.2000 mm): Pad 30 [STORAGE_3V3] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[shorting_items]: Items shorting two nets (nets STORAGE_3V3 and NC_40)
+    Local override; error
+    @(166.8000 mm, 148.2000 mm): Pad 30 [STORAGE_3V3] of U12 on F.Cu
+    @(166.8000 mm, 148.2000 mm): Pad 40 [NC_40] of U12 on F.Cu
+[shorting_items]: Items shorting two nets (nets STORAGE_3V3 and NC_39)
+    Local override; error
+    @(166.8000 mm, 148.2000 mm): Pad 30 [STORAGE_3V3] of U12 on F.Cu
+    @(166.4000 mm, 148.2000 mm): Pad 39 [NC_39] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 148.2000 mm): Pad 31 [TUSB_USB2_DP] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[shorting_items]: Items shorting two nets (nets TUSB_USB2_DP and NC_41)
+    Local override; error
+    @(163.2000 mm, 148.2000 mm): Pad 31 [TUSB_USB2_DP] of U12 on F.Cu
+    @(163.2000 mm, 148.2000 mm): Pad 41 [NC_41] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.2000 mm, 148.2000 mm): Pad 31 [TUSB_USB2_DP] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 42 [NC_42] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.2000 mm, 148.2000 mm): Pad 31 [TUSB_USB2_DP] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 32 [TUSB_USB2_DM] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.6000 mm, 148.2000 mm): Pad 32 [TUSB_USB2_DM] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.6000 mm, 148.2000 mm): Pad 32 [TUSB_USB2_DM] of U12 on F.Cu
+    @(163.2000 mm, 148.2000 mm): Pad 41 [NC_41] of U12 on F.Cu
+[shorting_items]: Items shorting two nets (nets TUSB_USB2_DM and NC_42)
+    Local override; error
+    @(163.6000 mm, 148.2000 mm): Pad 32 [TUSB_USB2_DM] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 42 [NC_42] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.6000 mm, 148.2000 mm): Pad 32 [TUSB_USB2_DM] of U12 on F.Cu
+    @(164.0000 mm, 148.2000 mm): Pad 33 [JMS_USB2_DP] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(164.0000 mm, 148.2000 mm): Pad 33 [JMS_USB2_DP] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(164.0000 mm, 148.2000 mm): Pad 33 [JMS_USB2_DP] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 42 [NC_42] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(164.0000 mm, 148.2000 mm): Pad 33 [JMS_USB2_DP] of U12 on F.Cu
+    @(164.4000 mm, 148.2000 mm): Pad 34 [JMS_USB2_DM] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(164.4000 mm, 148.2000 mm): Pad 34 [JMS_USB2_DM] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(164.4000 mm, 148.2000 mm): Pad 34 [JMS_USB2_DM] of U12 on F.Cu
+    @(164.8000 mm, 148.2000 mm): Pad 35 [NC_35] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(164.8000 mm, 148.2000 mm): Pad 35 [NC_35] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(164.8000 mm, 148.2000 mm): Pad 35 [NC_35] of U12 on F.Cu
+    @(165.2000 mm, 148.2000 mm): Pad 36 [NC_36] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(165.2000 mm, 148.2000 mm): Pad 36 [NC_36] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(165.2000 mm, 148.2000 mm): Pad 36 [NC_36] of U12 on F.Cu
+    @(165.6000 mm, 148.2000 mm): Pad 37 [NC_37] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(165.6000 mm, 148.2000 mm): Pad 37 [NC_37] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(165.6000 mm, 148.2000 mm): Pad 37 [NC_37] of U12 on F.Cu
+    @(166.0000 mm, 148.2000 mm): Pad 38 [NC_38] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.0000 mm, 148.2000 mm): Pad 38 [NC_38] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.0000 mm, 148.2000 mm): Pad 38 [NC_38] of U12 on F.Cu
+    @(166.4000 mm, 148.2000 mm): Pad 39 [NC_39] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.4000 mm, 148.2000 mm): Pad 39 [NC_39] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(166.4000 mm, 148.2000 mm): Pad 39 [NC_39] of U12 on F.Cu
+    @(166.8000 mm, 148.2000 mm): Pad 40 [NC_40] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(166.8000 mm, 148.2000 mm): Pad 40 [NC_40] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.2000 mm, 148.2000 mm): Pad 41 [NC_41] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(163.2000 mm, 148.2000 mm): Pad 41 [NC_41] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 42 [NC_42] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0000 mm)
+    Local override; error
+    @(163.6000 mm, 148.2000 mm): Pad 42 [NC_42] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.2488 mm)
+    Rule: board setup constraints edge; error
+    @(0.0000 mm, 0.0000 mm): Rectangle on Edge.Cuts
+    @(155.0000 mm, 135.0000 mm): Track [USB_TXP1] on B.Cu, length 177.5929 mm
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(0.0000 mm, 0.0000 mm): Rectangle on Edge.Cuts
+    @(155.0000 mm, 138.0000 mm): Track [USB_TXN1] on B.Cu, length 154.2603 mm
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(0.0000 mm, 0.0000 mm): Rectangle on Edge.Cuts
+    @(325.5000 mm, 188.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 173.7793 mm
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(0.0000 mm, 0.0000 mm): Rectangle on Edge.Cuts
+    @(300.5000 mm, 192.0000 mm): Track [JMS_USB3_TXN] on B.Cu, length 150.5199 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0400 mm, 103.9000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 5.9600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(162.0000 mm, 154.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 3.5609 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(76.0000 mm, 103.9000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 15.1000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(76.0000 mm, 119.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 84.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(160.0000 mm, 119.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 35.0571 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(76.5000 mm, 104.3000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 11.7000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0400 mm, 104.3000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 6.4600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(168.0000 mm, 154.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 3.5609 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(160.0000 mm, 116.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 38.8330 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(76.5000 mm, 116.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 83.5000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(79.0000 mm, 106.3000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 6.7000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(162.0000 mm, 156.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 6.0828 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0400 mm, 106.3000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 8.9600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(160.0000 mm, 113.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 43.0465 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(79.0000 mm, 113.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 81.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0400 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 9.4600 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(79.5000 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 3.3000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(168.0000 mm, 156.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 4.3681 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(160.0000 mm, 110.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 46.6905 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(79.5000 mm, 110.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 80.5000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(151.4000 mm, 154.0000 mm): Track [USB_TXP1] on B.Cu, length 19.3380 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(155.0000 mm, 135.0000 mm): Track [USB_TXP1] on B.Cu, length 177.5929 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(151.0000 mm, 154.0000 mm): Track [USB_TXN1] on B.Cu, length 16.4924 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(155.0000 mm, 138.0000 mm): Track [USB_TXN1] on B.Cu, length 154.2603 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(149.4000 mm, 154.0000 mm): Track [USB_RXP1] on B.Cu, length 12.4483 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(158.0000 mm, 145.0000 mm): Track [USB_RXP1] on B.Cu, length 10.6508 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(158.0000 mm, 148.0000 mm): Track [USB_RXN1] on B.Cu, length 9.4340 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(149.0000 mm, 154.0000 mm): Track [USB_RXN1] on B.Cu, length 10.8167 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(325.5000 mm, 188.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 173.7793 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(160.0000 mm, 135.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 16.6517 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(160.0000 mm, 138.0000 mm): Track [JMS_USB3_TXN] on B.Cu, length 14.3178 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(300.5000 mm, 192.0000 mm): Track [JMS_USB3_TXN] on B.Cu, length 150.5199 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(164.4000 mm, 151.8000 mm): Pad 17 [POWER_GND] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(164.0000 mm, 151.8000 mm): Pad 18 [NC_18] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.2000 mm): Pad 1 [<no net>] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.2000 mm): Pad 1 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 148.2000 mm): Pad 31 [TUSB_USB2_DP] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.2000 mm): Pad 1 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 148.2000 mm): Pad 41 [NC_41] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.2000 mm): Pad 1 [<no net>] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 32 [TUSB_USB2_DM] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.2000 mm): Pad 1 [<no net>] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 42 [NC_42] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.6000 mm): Pad 2 [<no net>] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.6000 mm): Pad 2 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 148.2000 mm): Pad 31 [TUSB_USB2_DP] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.6000 mm): Pad 2 [<no net>] of U12 on F.Cu
+    @(163.2000 mm, 148.2000 mm): Pad 41 [NC_41] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.6000 mm): Pad 2 [<no net>] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 32 [TUSB_USB2_DM] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.6000 mm): Pad 2 [<no net>] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 42 [NC_42] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 149.0000 mm): Pad 3 [<no net>] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 149.4000 mm): Pad 4 [<no net>] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.6000 mm, 151.8000 mm): Pad 19 [POWER_GND] of U12 on F.Cu
+    @(163.2000 mm, 151.4000 mm): Pad 9 [USB_SEL] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.6000 mm, 151.8000 mm): Pad 19 [POWER_GND] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(162.0000 mm, 154.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 3.5609 mm
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 151.8000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
+    @(163.2000 mm, 151.4000 mm): Pad 9 [USB_SEL] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 149.8000 mm): Pad 5 [<no net>] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 151.8000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
+    @(163.2000 mm, 151.8000 mm): Pad 10 [POWER_GND] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 151.8000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(162.0000 mm, 154.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 3.5609 mm
+    @(164.4000 mm, 151.8000 mm): Pad 17 [POWER_GND] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 151.8000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 151.8000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+    @(166.8000 mm, 151.8000 mm): Pad 11 [/CORE_CM5/CM5_USB3_TX_P] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 151.8000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+    @(166.4000 mm, 151.8000 mm): Pad 12 [/CORE_CM5/CM5_USB3_TX_N] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 151.4000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 151.4000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+    @(166.8000 mm, 151.8000 mm): Pad 11 [/CORE_CM5/CM5_USB3_TX_P] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 151.4000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+    @(166.4000 mm, 151.8000 mm): Pad 12 [/CORE_CM5/CM5_USB3_TX_N] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 151.0000 mm): Pad 23 [USB_RXP1] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(168.0000 mm, 154.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 3.5609 mm
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(168.0000 mm, 154.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 3.5609 mm
+    @(165.6000 mm, 151.8000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 150.2000 mm): Pad 6 [USB_OE_N] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 150.6000 mm): Pad 24 [JMS_USB3_TXN] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 150.6000 mm): Pad 7 [CM5_STORAGE_USB2_DM] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 150.2000 mm): Pad 25 [JMS_USB3_TXP] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 149.8000 mm): Pad 26 [TUSB_SSRXN] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(162.0000 mm, 156.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 6.0828 mm
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(162.0000 mm, 156.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 6.0828 mm
+    @(166.8000 mm, 151.8000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(162.0000 mm, 156.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 6.0828 mm
+    @(166.0000 mm, 151.8000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 151.0000 mm): Pad 8 [CM5_STORAGE_USB2_DP] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 149.4000 mm): Pad 27 [TUSB_SSRXP] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 151.4000 mm): Pad 9 [USB_SEL] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 149.0000 mm): Pad 28 [TUSB_SSTXN] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(168.0000 mm, 156.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 4.3681 mm
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 148.6000 mm): Pad 29 [TUSB_SSTXP] of U12 on F.Cu
+    @(166.8000 mm, 148.2000 mm): Pad 40 [NC_40] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 148.6000 mm): Pad 29 [TUSB_SSTXP] of U12 on F.Cu
+    @(166.4000 mm, 148.2000 mm): Pad 39 [NC_39] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 148.6000 mm): Pad 29 [TUSB_SSTXP] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 148.2000 mm): Pad 30 [STORAGE_3V3] of U12 on F.Cu
+    @(166.8000 mm, 148.2000 mm): Pad 40 [NC_40] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 148.2000 mm): Pad 30 [STORAGE_3V3] of U12 on F.Cu
+    @(166.4000 mm, 148.2000 mm): Pad 39 [NC_39] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 148.2000 mm): Pad 30 [STORAGE_3V3] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 151.8000 mm): Pad 10 [POWER_GND] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.2000 mm): Pad 31 [TUSB_USB2_DP] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.2000 mm): Pad 31 [TUSB_USB2_DP] of U12 on F.Cu
+    @(163.2000 mm, 148.2000 mm): Pad 41 [NC_41] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(168.0000 mm, 156.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 4.3681 mm
+    @(166.8000 mm, 151.8000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 151.8000 mm): Pad 11 [/CORE_CM5/CM5_USB3_TX_P] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.6000 mm, 148.2000 mm): Pad 32 [TUSB_USB2_DM] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.6000 mm, 148.2000 mm): Pad 32 [TUSB_USB2_DM] of U12 on F.Cu
+    @(163.6000 mm, 148.2000 mm): Pad 42 [NC_42] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(164.0000 mm, 148.2000 mm): Pad 33 [JMS_USB2_DP] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.4000 mm, 151.8000 mm): Pad 12 [/CORE_CM5/CM5_USB3_TX_N] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.0000 mm, 151.8000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(165.6000 mm, 151.8000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(164.4000 mm, 148.2000 mm): Pad 34 [JMS_USB2_DM] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(164.8000 mm, 148.2000 mm): Pad 35 [NC_35] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(165.2000 mm, 151.8000 mm): Pad 15 [/CORE_CM5/CM5_USB3_RX_P] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(164.8000 mm, 151.8000 mm): Pad 16 [/CORE_CM5/CM5_USB3_RX_N] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(165.2000 mm, 148.2000 mm): Pad 36 [NC_36] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(165.6000 mm, 148.2000 mm): Pad 37 [NC_37] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.0000 mm, 148.2000 mm): Pad 38 [NC_38] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.4000 mm, 148.2000 mm): Pad 39 [NC_39] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(166.8000 mm, 148.2000 mm): Pad 40 [NC_40] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.2000 mm, 148.2000 mm): Pad 41 [NC_41] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(163.6000 mm, 148.2000 mm): Pad 42 [NC_42] of U12 on F.Cu
+    @(165.0000 mm, 150.0000 mm): Pad 43 [<no net>] of U12 on F.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(160.0000 mm, 119.0000 mm): Via [/CORE_CM5/CM5_USB3_RX_N] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(160.0000 mm, 116.0000 mm): Via [/CORE_CM5/CM5_USB3_RX_P] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(160.0000 mm, 113.0000 mm): Via [/CORE_CM5/CM5_USB3_TX_N] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(160.0000 mm, 110.0000 mm): Via [/CORE_CM5/CM5_USB3_TX_P] on F.Cu - B.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(151.4000 mm, 154.0000 mm): Track [USB_TXP1] on B.Cu, length 19.3380 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(155.0000 mm, 135.0000 mm): Track [USB_TXP1] on B.Cu, length 177.5929 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(151.0000 mm, 154.0000 mm): Track [USB_TXN1] on B.Cu, length 16.4924 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(155.0000 mm, 138.0000 mm): Track [USB_TXN1] on B.Cu, length 154.2603 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(149.4000 mm, 154.0000 mm): Track [USB_RXP1] on B.Cu, length 12.4483 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(158.0000 mm, 145.0000 mm): Track [USB_RXP1] on B.Cu, length 10.6508 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(158.0000 mm, 148.0000 mm): Track [USB_RXN1] on B.Cu, length 9.4340 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(149.0000 mm, 154.0000 mm): Track [USB_RXN1] on B.Cu, length 10.8167 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(325.5000 mm, 188.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 173.7793 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(160.0000 mm, 135.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 16.6517 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(160.0000 mm, 138.0000 mm): Track [JMS_USB3_TXN] on B.Cu, length 14.3178 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(300.5000 mm, 192.0000 mm): Track [JMS_USB3_TXN] on B.Cu, length 150.5199 mm
+
+** Found 87 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(152.6000 mm, 146.0000 mm): Pad 63 [POWER_GND] of U11 on F.Cu
+    @(151.4000 mm, 146.0000 mm): Pad 60 [POWER_GND] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(163.2000 mm, 151.8000 mm): Pad 10 [POWER_GND] of U12 on F.Cu
+    @(152.6000 mm, 146.0000 mm): Pad 63 [POWER_GND] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(163.6000 mm, 151.8000 mm): Pad 19 [POWER_GND] of U12 on F.Cu
+    @(164.4000 mm, 151.8000 mm): Pad 17 [POWER_GND] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(164.4000 mm, 151.8000 mm): Pad 17 [POWER_GND] of U12 on F.Cu
+    @(165.6000 mm, 151.8000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(165.6000 mm, 151.8000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
+    @(166.8000 mm, 151.8000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(163.2000 mm, 151.8000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
+    @(166.0000 mm, 151.8000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(166.0000 mm, 151.8000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+    @(166.8000 mm, 148.2000 mm): Pad 30 [STORAGE_3V3] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(149.0000 mm, 154.0000 mm): Pad 27 [USB_RXN1] of U11 on F.Cu
+    @(149.0000 mm, 154.0000 mm): Track [USB_RXN1] on B.Cu, length 10.8167 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(166.8000 mm, 151.4000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+    @(158.0000 mm, 148.0000 mm): Track [USB_RXN1] on B.Cu, length 9.4340 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(149.4000 mm, 154.0000 mm): Pad 26 [USB_RXP1] of U11 on F.Cu
+    @(149.4000 mm, 154.0000 mm): Track [USB_RXP1] on B.Cu, length 12.4483 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(166.8000 mm, 151.0000 mm): Pad 23 [USB_RXP1] of U12 on F.Cu
+    @(158.0000 mm, 145.0000 mm): Track [USB_RXP1] on B.Cu, length 10.6508 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(166.8000 mm, 150.6000 mm): Pad 24 [JMS_USB3_TXN] of U12 on F.Cu
+    @(160.0000 mm, 138.0000 mm): Track [JMS_USB3_TXN] on B.Cu, length 14.3178 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(300.5000 mm, 192.0000 mm): Pad 2 [JMS_USB3_TXN] of C87 on F.Cu
+    @(300.5000 mm, 192.0000 mm): Track [JMS_USB3_TXN] on B.Cu, length 150.5199 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(166.8000 mm, 150.2000 mm): Pad 25 [JMS_USB3_TXP] of U12 on F.Cu
+    @(160.0000 mm, 135.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 16.6517 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(325.5000 mm, 188.0000 mm): Pad 2 [JMS_USB3_TXP] of C86 on F.Cu
+    @(325.5000 mm, 188.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 173.7793 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(151.4000 mm, 154.0000 mm): Pad 21 [USB_TXP1] of U11 on F.Cu
+    @(151.4000 mm, 154.0000 mm): Track [USB_TXP1] on B.Cu, length 19.3380 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(324.5000 mm, 188.0000 mm): Pad 1 [USB_TXP1] of C86 on F.Cu
+    @(155.0000 mm, 135.0000 mm): Track [USB_TXP1] on B.Cu, length 177.5929 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(151.0000 mm, 154.0000 mm): Pad 22 [USB_TXN1] of U11 on F.Cu
+    @(151.0000 mm, 154.0000 mm): Track [USB_TXN1] on B.Cu, length 16.4924 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(299.5000 mm, 192.0000 mm): Pad 1 [USB_TXN1] of C87 on F.Cu
+    @(155.0000 mm, 138.0000 mm): Track [USB_TXN1] on B.Cu, length 154.2603 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(146.0000 mm, 147.4000 mm): Pad 2 [JMS_VCCK] of U11 on F.Cu
+    @(147.4000 mm, 154.0000 mm): Pad 31 [JMS_VCCK] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(148.6000 mm, 146.0000 mm): Pad 53 [JMS_VCCK] of U11 on F.Cu
+    @(146.0000 mm, 147.4000 mm): Pad 2 [JMS_VCCK] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(146.0000 mm, 149.0000 mm): Pad 6 [JMS_VCCO] of U11 on F.Cu
+    @(146.0000 mm, 151.0000 mm): Pad 11 [JMS_VCCO] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(146.0000 mm, 151.0000 mm): Pad 11 [JMS_VCCO] of U11 on F.Cu
+    @(147.0000 mm, 154.0000 mm): Pad 32 [JMS_VCCO] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(149.8000 mm, 146.0000 mm): Pad 56 [JMS_VCCO] of U11 on F.Cu
+    @(146.0000 mm, 149.0000 mm): Pad 6 [JMS_VCCO] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(147.8000 mm, 154.0000 mm): Pad 30 [JMS_AVDDL] of U11 on F.Cu
+    @(149.8000 mm, 154.0000 mm): Pad 25 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(149.8000 mm, 154.0000 mm): Pad 25 [JMS_AVDDL] of U11 on F.Cu
+    @(151.8000 mm, 154.0000 mm): Pad 20 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(151.8000 mm, 154.0000 mm): Pad 20 [JMS_AVDDL] of U11 on F.Cu
+    @(154.0000 mm, 153.0000 mm): Pad 33 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(154.0000 mm, 147.8000 mm): Pad 46 [JMS_AVDDL] of U11 on F.Cu
+    @(147.0000 mm, 146.0000 mm): Pad 49 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(154.0000 mm, 149.0000 mm): Pad 43 [JMS_AVDDL] of U11 on F.Cu
+    @(154.0000 mm, 147.8000 mm): Pad 46 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(154.0000 mm, 150.2000 mm): Pad 40 [JMS_AVDDL] of U11 on F.Cu
+    @(154.0000 mm, 149.0000 mm): Pad 43 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(154.0000 mm, 151.8000 mm): Pad 36 [JMS_AVDDL] of U11 on F.Cu
+    @(154.0000 mm, 150.2000 mm): Pad 40 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(154.0000 mm, 153.0000 mm): Pad 33 [JMS_AVDDL] of U11 on F.Cu
+    @(154.0000 mm, 151.8000 mm): Pad 36 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 98.7000 mm): Pad 1 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 99.9000 mm): Pad 7 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 99.9000 mm): Pad 7 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 101.1000 mm): Pad 13 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 101.1000 mm): Pad 13 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 103.1000 mm): Pad 23 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 103.1000 mm): Pad 23 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 105.1000 mm): Pad 33 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 105.1000 mm): Pad 33 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 107.1000 mm): Pad 43 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 107.1000 mm): Pad 43 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 109.1000 mm): Pad 53 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 109.1000 mm): Pad 53 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 110.3000 mm): Pad 59 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 110.3000 mm): Pad 59 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 111.5000 mm): Pad 65 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 111.5000 mm): Pad 65 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 112.7000 mm): Pad 71 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 99.9000 mm): Pad 8 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 98.7000 mm): Pad 2 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 101.1000 mm): Pad 14 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 99.9000 mm): Pad 8 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 101.1000 mm): Pad 14 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 102.7000 mm): Pad 22 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 102.7000 mm): Pad 22 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 104.7000 mm): Pad 32 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 104.7000 mm): Pad 32 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 106.7000 mm): Pad 42 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 106.7000 mm): Pad 42 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 108.7000 mm): Pad 52 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 110.3000 mm): Pad 60 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 111.5000 mm): Pad 66 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 110.3000 mm): Pad 60 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 108.7000 mm): Pad 52 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 111.5000 mm): Pad 66 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 113.1000 mm): Pad 74 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 111.5000 mm): Pad 66 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 111.5000 mm): Pad 65 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 117.9000 mm): Pad 98 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 113.1000 mm): Pad 74 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 101.1000 mm): Pad 113 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 99.9000 mm): Pad 107 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 102.3000 mm): Pad 119 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 101.1000 mm): Pad 113 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 103.5000 mm): Pad 125 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 102.3000 mm): Pad 119 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 104.7000 mm): Pad 131 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 103.5000 mm): Pad 125 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 104.7000 mm): Pad 131 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 105.9000 mm): Pad 137 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 104.7000 mm): Pad 131 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 104.7000 mm): Pad 32 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 105.9000 mm): Pad 137 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 105.9000 mm): Pad 138 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 110.7000 mm): Pad 161 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 109.5000 mm): Pad 155 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 110.7000 mm): Pad 161 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 111.9000 mm): Pad 167 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 111.9000 mm): Pad 167 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 113.1000 mm): Pad 173 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 113.1000 mm): Pad 173 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 114.3000 mm): Pad 179 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 115.5000 mm): Pad 185 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 114.3000 mm): Pad 179 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 116.7000 mm): Pad 191 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 115.5000 mm): Pad 185 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 117.9000 mm): Pad 197 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 116.7000 mm): Pad 191 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 101.1000 mm): Pad 114 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 99.9000 mm): Pad 108 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 102.3000 mm): Pad 120 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 101.1000 mm): Pad 114 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 103.5000 mm): Pad 126 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 102.3000 mm): Pad 120 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 104.7000 mm): Pad 132 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 103.5000 mm): Pad 126 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 105.9000 mm): Pad 138 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 104.7000 mm): Pad 132 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 107.1000 mm): Pad 144 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 105.9000 mm): Pad 138 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 108.3000 mm): Pad 150 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 107.1000 mm): Pad 144 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 109.5000 mm): Pad 156 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 108.3000 mm): Pad 150 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 110.7000 mm): Pad 162 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 109.5000 mm): Pad 156 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 111.9000 mm): Pad 168 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 110.7000 mm): Pad 162 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 113.1000 mm): Pad 174 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 111.9000 mm): Pad 168 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 114.3000 mm): Pad 180 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 113.1000 mm): Pad 174 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 115.5000 mm): Pad 186 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 114.3000 mm): Pad 180 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 116.7000 mm): Pad 192 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 115.5000 mm): Pad 186 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 116.7000 mm): Pad 192 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 116.7000 mm): Pad 191 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 117.9000 mm): Pad 198 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 116.7000 mm): Pad 192 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 113.9000 mm): Pad 77 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 114.3000 mm): Pad 79 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 114.3000 mm): Pad 79 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 114.7000 mm): Pad 81 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 114.7000 mm): Pad 81 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 115.1000 mm): Pad 83 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 115.1000 mm): Pad 83 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 115.5000 mm): Pad 85 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 115.5000 mm): Pad 85 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 115.9000 mm): Pad 87 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

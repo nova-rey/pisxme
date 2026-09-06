@@ -94,3 +94,12 @@ uses those same nets. Native root netlist export now shows J7.134 to U12.8
 and J7.136 to U12.7 on the same nets. U12-to-JMS583 USB3 names were also
 normalized to `USB_TXP1/TXN1` and `USB_RXP1/RXN1`. The prior isolated PCB
 fixture predates this source correction and remains rejected evidence.
+
+The follow-on isolated fixture was regenerated with the corrected source and
+package-side dogbone intent. It is still rejected as implementation evidence:
+the U12 pad-field direct shorts were removed, but the current B.Cu lane order
+crosses at the staggered through-via escapes. Native DRC reports 11 crossing
+findings and 22 shorting findings in the current route, plus expected partial
+fixture/unconnected/package-rule findings. The next bounded repair is to make
+the B.Cu corridor ordering match the staggered escape ordering; no component
+or architecture change is indicated.

@@ -65,7 +65,17 @@ def main():
         path(b, n, [a, V(x0, pcbnew.ToMM(a.y)), V(x0, lanes[j7n])], F)
         via(b, n, x0, lanes[j7n]); via(b, n, 160.0, lanes[j7n])
         path(b, n, [V(x0, lanes[j7n]), V(160.0, lanes[j7n])], B)
-        path(b, n, [V(160.0, lanes[j7n]), V(160.0, pcbnew.ToMM(z.y)), z], F)
+        # U12 pins 11/12/15/16 are on the package bottom edge.  Escape each
+        # pad straight outward first; approaching horizontally through the
+        # row is a package-field short, not a valid route.
+        # Through-vias cannot occupy the 0.4-mm QFN pitch.  Stagger them
+        # outside the field while keeping the final dogbone short.
+        escapes = {"128": (162.0, 154.0), "130": (168.0, 154.0),
+                   "140": (162.0, 156.0), "142": (168.0, 156.0)}
+        zx, dogbone_y = escapes[j7n]
+        via(b, n, zx, dogbone_y)
+        path(b, n, [V(160.0, lanes[j7n]), V(zx, dogbone_y)], B)
+        path(b, n, [V(zx, dogbone_y), z], F)
 
     # The selector output uses explicit JMS583 USB names; TX traverses the
     # authoritative AC capacitors, RX is the selected lane without AC caps.

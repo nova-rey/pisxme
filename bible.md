@@ -4617,3 +4617,10 @@ CM5_STORAGE_USB2_DP/DM nets, and the native root netlist confirms J7.134 to
 U12.8 and J7.136 to U12.7. Normalized U12/JMS583 USB3 bridge net names and
 regenerated the disposable native storage placement candidate. Structural
 audits pass; native ERC/PCB routing remain open.
+
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: regenerated the isolated USB3
+fixture after source correction and changed the U12 escape to staggered
+through-vias outside the QFN field. Native DRC reduced the original direct
+pad-field failure but still reports route-implementation crossings/shorts in
+the shared B.Cu corridor. This remains disposable evidence; next repair is
+lane-order correction, not architecture or rule relaxation.
