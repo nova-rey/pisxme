@@ -2896,3 +2896,20 @@ The exact failed candidate is
 PCIe/power copper changed. The next route-development experiment must reserve
 every source escape and transition in the native occupancy model and retain
 monotonic pair ordering before any integrated promotion.
+
+## Selected-macro source-escape continuation — 2026-09-06
+
+The source-transition occupancy bug was corrected and a spread-via variant
+was tested on the selected macro. Native endpoint connectivity passed all
+four USB3 pairs, but native DRC still reported one crossing and six
+clearances: the source-via spread now avoids true shorts, while the fixed
+landing/dogbone choices conflict with the U7 pad field and one existing
+PCIe-adjacent corridor. This is retained as a rejected
+`ROUTE IMPLEMENTATION FAILURE`.
+
+The experiment did not move the selected macro or alter accepted PCIe,
+power, stack, or validation severity. The next valid cycle is a coordinated
+U7/storage-island endpoint escape or a complete storage-island placement
+trial, with all affected USB3/SATA/clock/support geometry revalidated
+together. The historical route remains an oracle only; no raw mature-board
+DRC comparison is being used to rank the floorplan.

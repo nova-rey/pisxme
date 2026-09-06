@@ -9,7 +9,7 @@ from heapq import heappush, heappop
 import math, pcbnew
 R=Path(__file__).resolve().parent; BASE=R/'PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb'; OUT=R/'PHASE24_USB3_SELECTED_SOURCE_ESCAPE_ASTAR.kicad_pcb'
 F,B=pcbnew.F_Cu,pcbnew.B_Cu; STEP=.25; W=.13208
-JOBS=(('CM5_USB3_RX_N','128','42',(72.,103.9)),('CM5_USB3_RX_P','130','43',(72.,104.8)),('CM5_USB3_TX_N','140','45',(72.,108.)),('CM5_USB3_TX_P','142','46',(71.,109.)))
+JOBS=(('CM5_USB3_RX_N','128','42',(73.,103.9)),('CM5_USB3_RX_P','130','43',(74.,104.3)),('CM5_USB3_TX_N','140','45',(75.,106.3)),('CM5_USB3_TX_P','142','46',(76.,106.7)))
 def V(x,y):return pcbnew.VECTOR2I_MM(float(x),float(y))
 def xy(p):
  p=p.GetPosition() if hasattr(p,'GetPosition') else p;return pcbnew.ToMM(p.x),pcbnew.ToMM(p.y)
@@ -80,20 +80,11 @@ blocked=occupied(b)
 landings={'CM5_USB3_RX_N':(98.0,122.0),'CM5_USB3_RX_P':(98.0,124.0),'CM5_USB3_TX_N':(98.0,126.0),'CM5_USB3_TX_P':(98.0,128.0)}
 for n,src,goal,sv in ends:
  net=b.FindNet('/CORE_CM5/'+n)
- # Explicit source escape; TX separation follows the validated oracle geometry.
- if n=='CM5_USB3_TX_N':
-  a=(71.2,106.3);q=(72.5,106.3);r=(72.5,108.0)
-  t=pcbnew.PCB_TRACK(b);t.SetStart(V(*src));t.SetEnd(V(*a));t.SetLayer(F);t.SetWidth(pcbnew.FromMM(W));t.SetNet(net);b.Add(t)
-  for x,y in ((a[0],a[1]),(q[0],q[1]),(r[0],r[1])):pass
-  # use the designated source via after a separated F.Cu dogbone
-  tt=pcbnew.PCB_TRACK(b);tt.SetStart(V(*a));tt.SetEnd(V(*r));tt.SetLayer(F);tt.SetWidth(pcbnew.FromMM(W));tt.SetNet(net);b.Add(tt)
- elif n=='CM5_USB3_TX_P':
-  a=(70.8,106.7);r=(70.8,109.0)
-  tt=pcbnew.PCB_TRACK(b);tt.SetStart(V(*src));tt.SetEnd(V(*a));tt.SetLayer(F);tt.SetWidth(pcbnew.FromMM(W));tt.SetNet(net);b.Add(tt)
-  tt=pcbnew.PCB_TRACK(b);tt.SetStart(V(*a));tt.SetEnd(V(*r));tt.SetLayer(F);tt.SetWidth(pcbnew.FromMM(W));tt.SetNet(net);b.Add(tt)
- else:
-  r=sv;tt=pcbnew.PCB_TRACK(b);tt.SetStart(V(*src));tt.SetEnd(V(*r));tt.SetLayer(F);tt.SetWidth(pcbnew.FromMM(W));tt.SetNet(net);b.Add(tt)
- via(b,net,r);add_disc(blocked,F,r,.4);add_disc(blocked,B,r,.4)
+ # Explicit source transition, spread across the free F.Cu launch acreage.
+ # Reserve both the dogbone and through-via before searching the next lane.
+ r=sv
+ tt=pcbnew.PCB_TRACK(b);tt.SetStart(V(*src));tt.SetEnd(V(*r));tt.SetLayer(F);tt.SetWidth(pcbnew.FromMM(W));tt.SetNet(net);b.Add(tt)
+ add_line(blocked,F,src,r,.22); via(b,net,r); add_disc(blocked,F,r,.4); add_disc(blocked,B,r,.4)
  landing=landings[n]
  path=route(blocked,r,landing);emit(b,net,path,blocked)
  # The landing is an explicit via outside the U7 pad field.  Only the final
