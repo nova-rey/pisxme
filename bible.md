@@ -4587,3 +4587,11 @@ SERVICE J4 and storage mode J5 are distinct. Added and executed a disposable
 native pad-derived low-speed support router; it saved 14 support connections
 and produced a loadable PCB, while DRC remains open at 1,158 violations and
 499 unconnected items. The routed fixture is not promoted.
+## 2026-09-06 — storage source-net authority correction
+
+Reconciled the storage selector authoring path to the actual CM5 hierarchy:
+U12 now names its four CM5 USB3 source pins
+`CM5_USB3_TX_{P,N}` and `CM5_USB3_RX_{P,N}` instead of synthetic SST/SSR
+aliases. Reconciled selector ground labels to native `POWER_GND` and verified
+the corrected schematic with library/instance audits and native netlist export.
+The routed storage fixture remains disposable and nonpassing.
