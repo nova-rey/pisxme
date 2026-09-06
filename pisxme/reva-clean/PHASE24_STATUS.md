@@ -1616,3 +1616,19 @@ real ETH_LEDY trace and fails as required. This is the first LED-support
 candidate that passes the focused connectivity/copper crossing gate, but it
 remains a disposable official-placement oracle until native mechanical,
 component-parity, and integrated-acreage checks are complete.
+
+## Focused LED route promotion candidate — 2026-09-05
+
+The obstacle-search generator was tightened further: native pad/hole
+clearances are inflated in the occupancy map, all emitted direct segments are
+reserved for subsequent searches, and long cathode trunks are forced to B.Cu
+with explicit F.Cu dogbones and ordinary vias. On the saved
+`PHASE24_OFFICIAL_ETH_LED_ASTAR_PROBE.kicad_pcb`, native refilled DRC retains
+426 inherited unconnected items but reports zero `shorting_items` and zero
+`tracks_crossing` records. The focused MDI/CT/common/shield and LED
+BuildConnectivity audits both pass, including real-trace negative controls.
+
+This is a focused Ethernet support pass, not a Phase 24 board pass. The
+candidate still requires integrated-board mechanical, schematic/PCB parity,
+power/return, DRC inheritance review, and promotion validation before the
+official Ethernet implementation can replace the current acreage island.
