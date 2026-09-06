@@ -2913,3 +2913,32 @@ U7/storage-island endpoint escape or a complete storage-island placement
 trial, with all affected USB3/SATA/clock/support geometry revalidated
 together. The historical route remains an oracle only; no raw mature-board
 DRC comparison is being used to rank the floorplan.
+
+## Coherent storage SATA bridge escape discriminator — 2026-09-06
+
+The coherent storage candidate
+`PHASE24_STORAGE_ISLAND_COHERENT_USB3_SATA_BRIDGE_ESCAPE_FIELD_AWARE.kicad_pcb`
+was used for a native U7-to-coupling-capacitor escape trial. The first
+direct-pad trial was rejected with U7 pad-field shorts/crossings. A second
+field-aware trial left the U7 row vertically and reduced the candidate to
+one inherited USB3-corridor crossing plus the board-baseline findings; the
+crossing is between the proposed RX_N transition and the already-authored
+USB3 corridor. A right-side detour variant then collided with existing
+PCIe/PERST corridors and was also rejected. Native DRC counts for the
+field-aware candidate are 179 violations and 446 unconnected items; this is
+not a complete SATA route and does not close Phase 19 or Phase 24.
+
+Both USB3 native endpoint assertions and the U7 pad-net authority audit pass
+on the field-aware candidate. The failures are therefore classified as
+`ROUTE IMPLEMENTATION FAILURE`, not a storage-architecture or macro-placement
+failure. No accepted PCIe/power copper or clean-board authority was changed.
+The next experiment must use an obstacle-aware complete SATA bridge-to-J3
+escape, or transplant/adapt the preserved native SATA route while explicitly
+avoiding the USB3 and PCIe corridors; it must validate all four bridge and
+all four M.2 endpoints before promotion.
+
+Receipts:
+`PHASE24_STORAGE_ISLAND_COHERENT_USB3_SATA_BRIDGE_ESCAPE-drc.rpt`,
+`PHASE24_STORAGE_ISLAND_COHERENT_USB3_SATA_BRIDGE_ESCAPE_FIELD_AWARE-drc.rpt`,
+`phase24_sata_bridge_pad_escape.py`, and
+`phase24_sata_bridge_pad_escape_field_aware.py`.
