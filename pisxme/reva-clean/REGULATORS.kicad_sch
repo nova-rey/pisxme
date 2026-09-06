@@ -392,6 +392,10 @@
     (instances (project "PiSXMe_RevA_Clean"
       (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000005" (reference "X5" ) (unit 1))))
   )
+(hierarchical_label "BRIDGE_3V3" (shape bidirectional) (at 5 157 180) (effects (font (size 1 1)) (justify right)) (uuid d6000000-0000-0000-0000-00000000a101))
+(wire (pts (xy 5 157) (xy 70 157)) (stroke (width 0) (type default)) (uuid d6000000-0000-0000-0000-000000000201))
+(hierarchical_label "BRIDGE_1V1" (shape bidirectional) (at 5 207 180) (effects (font (size 1 1)) (justify right)) (uuid d7000000-0000-0000-0000-00000000a102))
+(wire (pts (xy 5 207) (xy 70 207)) (stroke (width 0) (type default)) (uuid d7000000-0000-0000-0000-000000000202))
 	(symbol (lib_id "PiSXMeRevAClean:TPSM63606RDLR_5V") (at 50 95 0)
  (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no)
  (uuid d5000000-0000-0000-0000-000000000000)

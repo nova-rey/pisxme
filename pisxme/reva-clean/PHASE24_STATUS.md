@@ -3054,3 +3054,34 @@ repair is made, U7 power closure and full Phase 24 closure remain open.
 
 Receipt:
 `phase24_u7_supply_hierarchy_audit.py`.
+
+## U7 bridge-supply hierarchy repair proof and application — 2026-09-06
+
+The missing U7 supply authority was repaired in the native schematic authoring
+path. A disposable native KiCad fixture first added explicit `BRIDGE_3V3` and
+`BRIDGE_1V1` hierarchical ports at both the STORAGE and REGULATORS children,
+with real child-sheet wires to the existing local rail coordinates and root
+sheet wires/global labels. KiCad's own netlist export then produced one
+unscoped `BRIDGE_3V3` net containing the U7 supply/configuration pads and the
+regulator/support members, and one unscoped `BRIDGE_1V1` net containing U7.41
+and the regulator/load decoupling members. This is native hierarchy evidence,
+not a PCB graph edge or synthetic net join.
+
+The same edit was applied to the production clean schematic sources. Native
+`kicad-cli sch export netlist` succeeds for the saved clean root, and its
+export contains the merged bridge rails. Native ERC still returns the existing
+project-wide violations (632 messages in this run), but a targeted search finds
+no hierarchical sheet-pin, hierarchy, or sheet-pin association errors. ERC
+therefore proves the repaired hierarchy association while not constituting a
+full-project ERC pass.
+
+Phase 24 remains open. The current PCB candidates were authored against the
+pre-repair hierarchical net identities, so the next action is to regenerate or
+authoritatively re-net the selected storage PCB from this corrected schematic,
+then rerun U7 supply, clock, native connectivity, parity, DRC, and full-board
+closure checks. No Phase 25/26 work has started.
+
+Receipts:
+`phase24_probe_bridge_supply_hierarchy.py`,
+`PHASE24_CLEAN_HIERARCHY_REPAIRED.xml`, and
+`PHASE24_CLEAN_HIERARCHY_REPAIRED-erc.rpt`.
