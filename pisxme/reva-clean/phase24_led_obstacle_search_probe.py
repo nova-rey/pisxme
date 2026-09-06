@@ -57,7 +57,12 @@ def make_occ(b, ignored):
     for fp in b.GetFootprints():
         if fp.GetReference() in ignored: continue
         for p in fp.Pads():
-            q = pxy(p); sx, sy = mm(p.GetSize()); r = max(sx, sy) / 2 + .18
+            q = pxy(p); sx, sy = mm(p.GetSize()); drill = mm(p.GetDrillSize())[0]
+            # Include the native hole-clearance envelope for large mounting
+            # NPTHs/PTHs.  A pad-only point obstacle is not sufficient around
+            # J7's 3.5 mm mounting holes.
+            extra = 1.40 if drill >= 1.5 else .30
+            r = max(sx, sy) / 2 + extra
             for layer in layers(p): point_block(occ, layer, q, r)
     return occ
 
@@ -109,8 +114,9 @@ def emit(b, net, path, occ):
         end = XY(z[:2]); t = pcbnew.PCB_TRACK(b); t.SetStart(V(*last)); t.SetEnd(V(*end)); t.SetLayer(a[2]); t.SetWidth(pcbnew.FromMM(WIDTH)); t.SetNet(net); b.Add(t)
         line_block(occ, a[2], last, end, .20); last = end
 
-def direct(b, net, a, z, layer=F):
+def direct(b, net, a, z, layer=F, occ=None):
     t = pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(layer); t.SetWidth(pcbnew.FromMM(WIDTH)); t.SetNet(net); b.Add(t)
+    if occ is not None: line_block(occ, layer, a, z, .20)
 
 b = pcbnew.LoadBoard(str(BASE)); io = pcbnew.PCB_IO_KICAD_SEXPR()
 names = ('ETH_LEDY', 'ETH_LEDG', '/ETHERNET/GBE_LED_Y_K', '/ETHERNET/GBE_LED_G_K')
@@ -133,7 +139,9 @@ for ref, a, c in [('R30','ETH_LEDY','/ETHERNET/GBE_LED_Y_K'), ('R31','ETH_LEDG',
 occ = make_occ(b, {'J7','J2','R30','R31'})
 for ref in ('J7','J2','R30','R31'):
     for p in b.FindFootprintByReference(ref).Pads():
-        for layer in layers(p): point_block(occ, layer, pxy(p), max(mm(p.GetSize())) / 2 + .10)
+        sx, sy = mm(p.GetSize()); drill = mm(p.GetDrillSize())[0]
+        extra = 1.40 if drill >= 1.5 else .30
+        for layer in layers(p): point_block(occ, layer, pxy(p), max(sx, sy) / 2 + extra)
 
 jobs = [
     ('ETH_LEDY','17','R30','1','J2','16',(30.0,101.9),(23.5,104.5),(79.0,48.94),(24.5,107.5)),
@@ -141,11 +149,16 @@ jobs = [
 ]
 for name, src_ref, rref, rnum, jref, jnum, src_exit, r1_exit, j_exit, r2_exit in jobs:
     net = nets[name]; src = pxy(P('J7', src_ref)); target = pxy(P(rref, rnum))
-    direct(b, net, src, src_exit)
-    path = route(occ, src_exit, r1_exit); emit(b, net, path, occ); direct(b, net, r1_exit, target)
+    direct(b, net, src, src_exit, occ=occ)
+    path = route(occ, src_exit, r1_exit); emit(b, net, path, occ); direct(b, net, r1_exit, target, occ=occ)
     cath = '/ETHERNET/GBE_LED_Y_K' if name == 'ETH_LEDY' else '/ETHERNET/GBE_LED_G_K'
     cnet = nets[cath]; csrc = pxy(P(jref, jnum)); ctarget = pxy(P(rref, '2'))
-    direct(b, cnet, csrc, j_exit)
-    path = route(occ, j_exit, r2_exit); emit(b, cnet, path, occ); direct(b, cnet, r2_exit, ctarget)
+    direct(b, cnet, csrc, j_exit, occ=occ)
+    # Keep the long low-speed trunk on B.Cu.  Only the connector/resistor
+    # dogbones are F.Cu; explicit ordinary vias make the layer contract
+    # visible and prevent the search from consuming an F.Cu MDI lane.
+    add_via(b, cnet, j_exit); add_via(b, cnet, r2_exit)
+    path = route(occ, j_exit, r2_exit, B, B); emit(b, cnet, path, occ)
+    direct(b, cnet, r2_exit, ctarget, occ=occ)
     print(name, 'source', src, 'R', target, 'cathode', csrc, 'R', ctarget)
 b.BuildListOfNets(); b.Save(str(OUT)); print(OUT)

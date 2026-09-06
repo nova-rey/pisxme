@@ -1599,3 +1599,20 @@ the full native hole-clearance envelope. This is a
 `ROUTE_IMPLEMENTATION_FAILURE`, not a macro-placement failure. The next
 revision will inflate NPTH/PTH obstacles from native hole and pad geometry
 and preserve explicit pad-field dogbones before evaluating the route.
+
+## Native obstacle-search LED trunk separation — 2026-09-05
+
+The search was tightened to use native-sized pad/hole obstacles, reserve every
+emitted route in the occupancy map, and force the long cathode trunks to B.Cu
+after explicit F.Cu dogbones and ordinary vias. The resulting disposable
+child has 426 unconnected items, zero shorting records, zero track-crossing
+records, and no forbidden plane-layer signals. Native DRC retains 199
+inherited/non-LED warnings; the two clearance records are inherited CM5
+reference-clock findings, while LED-specific failures are absent.
+
+`phase24_led_astar_connectivity_audit.py` passes the four LED net endpoint
+assertions using KiCad `BuildConnectivity`; its negative control removes a
+real ETH_LEDY trace and fails as required. This is the first LED-support
+candidate that passes the focused connectivity/copper crossing gate, but it
+remains a disposable official-placement oracle until native mechanical,
+component-parity, and integrated-acreage checks are complete.
