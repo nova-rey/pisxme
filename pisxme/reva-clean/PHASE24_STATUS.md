@@ -1921,3 +1921,12 @@ It is therefore rejected as `ROUTE_IMPLEMENTATION_FAILURE`, but it is a
 materially improved native-pad route-development baseline. Remaining work is
 pair-aware RX launch separation and full USB3/SATA integrated rerouting,
 followed by native connectivity/parity and full-board closure.
+
+The follow-on pair-corridor refinement biases RX_P and RX_N to opposite
+launch corridors and prohibits layer transitions within 3 mm of the M.2
+connector pads. Native DRC now reports zero shorting items and zero track
+crossings, with hole-clearance violations reduced to eight. The focused
+candidate still has 430 incomplete-board unconnected items and 19 dangling
+tracks, so it remains an unpromoted `ROUTE_IMPLEMENTATION_FAILURE`; the
+result is evidence that the remaining problem is local launch/DFM cleanup,
+not a demonstrated macro-placement failure.

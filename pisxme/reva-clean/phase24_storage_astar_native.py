@@ -54,7 +54,7 @@ def occupancy(b, ignored):
             for l in layers(p): block(occ,l,xy(p.GetPosition()),r)
     return occ
 
-def route(occ,start,goal,start_layer=F,goal_layer=F):
+def route(occ,start,goal,start_layer=F,goal_layer=F,x_gate=None):
     # Terminal halos are a per-segment escape allowance, not global edits to
     # the board obstacle map.  Keeping the base map intact prevents a later
     # lane from using the first lane's cleared pad field as a shortcut.
@@ -74,8 +74,20 @@ def route(occ,start,goal,start_layer=F,goal_layer=F):
         x,y,l=cur
         for nx,ny,nl in ((x+1,y,l),(x-1,y,l),(x,y+1,l),(x,y-1,l),(x,y,B if l==F else F)):
             if not(bounds[0][0]<=nx<=bounds[1][0] and bounds[0][1]<=ny<=bounds[1][1]): continue
+            # Keep ordinary through-vias away from the M.2 SMD launch.  The
+            # final copper approach must be on F.Cu; a transition in the
+            # connector pad field is via-in/near-pad geometry and is not a
+            # valid Rev-A escape.
+            if nl != l and abs(nx-t[0]+0.0)*STEP + abs(ny-t[1]+0.0)*STEP < 3.0:
+                continue
             if (nx,ny) in local[nl] and (nx,ny,nl)!=t: continue
-            ns=(nx,ny,nl); nc=cost[cur]+1+(28 if nl!=l else 0)
+            ns=(nx,ny,nl)
+            gate=0
+            if x_gate is not None and 117.0 <= ny*STEP <= 132.5:
+                side,limit=x_gate
+                if (side < 0 and nx*STEP > limit) or (side > 0 and nx*STEP < limit):
+                    gate=18
+            nc=cost[cur]+1+(28 if nl!=l else 0)+gate
             if nc<cost.get(ns,10**12):
                 cost[ns]=nc; prev[ns]=cur
                 h=abs(nx-t[0])+abs(ny-t[1])+(28 if nl!=t[2] else 0)
@@ -124,6 +136,9 @@ for name,up,cap,cp,jp in jobs:
     # capacitor; TX remains F.Cu.  This is a permitted layer split and avoids
     # the close M.2 launch pair weaving on one layer.
     socket_start = B if name.startswith('BRIDGE_SATA_RX_') else F
-    path=route(occ,a,z,socket_start,F); emit(b,socket,path,occ)
+    gate = None
+    if name == 'BRIDGE_SATA_RX_P': gate=(-1,118.75)
+    if name == 'BRIDGE_SATA_RX_N': gate=(1,120.25)
+    path=route(occ,a,z,socket_start,F,gate); emit(b,socket,path,occ)
     print(name,'bridge',a,'to',z)
 b.Save(str(OUT));print(OUT)
