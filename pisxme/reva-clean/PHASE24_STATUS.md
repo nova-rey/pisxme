@@ -2243,3 +2243,11 @@ distinct `/STORAGE/BRIDGE_3V3` U7 net was not merged. Native KiCad DRC
 reports 0 shorts, 0 crossings, 234 unconnected items, and 12 clearance
 items. `PHASE24_BRIDGE_3V3_CAPBANK_LINKS_CURRENT.kicad_pcb` is promoted;
 the U4 regulator-side field remains to be connected.
+### Promote F1 input-side PTH field — 2026-09-06
+
+The four native F1 input pads on `/POWER_INPUT/12V_IN_A` were joined with a
+wide B.Cu rectangular field. The field touches only the four same-net PTH
+pads and preserves the separate fused-output group. Native KiCad DRC reports
+0 shorts, 0 track crossings, 231 unconnected items, and 12 clearance items.
+`PHASE24_F1_INPUT_PAD_FIELD_CURRENT.kicad_pcb` is promoted; the remaining
+input/protection and regulator endpoints remain open.
