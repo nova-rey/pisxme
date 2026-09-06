@@ -3688,3 +3688,24 @@ the complete U7 clock/control/rail integration must be revalidated with this
 data route.
 
 Receipt: `PHASE24_STORAGE_DATA_ROUTE_V26_RECEIPT.md`.
+# V26 support-oracle transplant rejection (2026-09-06)
+
+`phase24_transplant_support_v26.py` was added as a disposable native-support
+experiment. It copied the previously observed U7 clock/rail/control support
+geometry by the actual U7 displacement and tested rigid rotations about the
+native U7 origin. The unrotated transform is rejected: C16 lands in the J7
+CM5 pad field and the transformed clock traces intersect the existing CM5
+USB3 route. The rotated variants are also rejected as route-implementation
+failures: native DRC reports true `BRIDGE_XI`/`BRIDGE_XO`/`BRIDGE_VSSOSC`
+shorts and clearance violations in the transformed support geometry.
+
+This evidence does not invalidate the V26 SATA/USB3 data corridors: the
+native SATA audit still passes all eight SATA endpoints on the rejected
+support candidate. The support donor itself was not a clean integrated
+oracle, so it is not promoted. The V26 data-route milestone remains the
+working basis while support is rebuilt from actual pad/net authority in a
+dedicated local placement, with no PCIe or validated USB3/SATA copper change.
+
+Classification: `ROUTE_IMPLEMENTATION_FAILURE` / support-placement
+incompatibility, not `MACRO-PLACEMENT FAILURE` and not an architecture
+blocker.
