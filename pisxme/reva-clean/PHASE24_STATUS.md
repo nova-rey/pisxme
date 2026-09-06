@@ -3112,3 +3112,27 @@ closure.
 Receipt:
 `phase24_sync_bridge_supply_nets.py` and
 `PHASE24_STORAGE_NATIVE_ORACLE_SUPPORT_C19_BOTTOM_FLIPPED_HIERARCHY_SYNC-drc.rpt`.
+
+## Authoritative U7 PCB sync and unsourced probe removal — 2026-09-06
+
+The stale U7.3 assignment was corrected to no-net, while U7.24/U7.30/U7.31
+were assigned to the native `BRIDGE_3V3` net and U7.41 to native
+`BRIDGE_1V1`. The selected candidate also contained TP5, a board-only probe
+absent from the saved schematic, with an explicit bridge-rail route ending at
+its no-net pad. That probe and only its two launch segments were removed from
+the disposable candidate; the adjacent bridge-rail grid was retained.
+
+The resulting candidate has zero native shorting items and zero track
+crossings. Native USB3 endpoint connectivity remains PASS for all four pairs,
+and native SATA endpoint connectivity remains PASS for all eight endpoints.
+The candidate still has inherited full-board DRC findings (184 violations,
+429 unconnected items), so it is not promoted or called a Phase 24 pass. The
+updated hierarchy audit now passes against the saved repaired KiCad XML, and
+the next required work is full-board schematic-to-pad parity plus actual U7
+power-plane/return closure.
+
+Receipts:
+`phase24_sync_bridge_supply_nets.py`,
+`phase24_remove_unsourced_tp5_route.py`,
+`phase24_u7_supply_hierarchy_audit.py`, and
+`PHASE24_STORAGE_NATIVE_ORACLE_SUPPORT_C19_BOTTOM_FLIPPED_HIERARCHY_SYNC_TP5_REMOVED-drc.rpt`.
