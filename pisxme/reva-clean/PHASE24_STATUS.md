@@ -2656,3 +2656,12 @@ mm. This explains why the PiSXMe minimal full-width RX_P launch retains a
 matching. It is a real connector-launch rule/geometry issue; it is not
 evidence against U7 placement or the USB3 route topology. No constraint was
 changed in this comparison.
+
+## Divergent official-style launch negative control — 2026-09-06
+
+A divergent full-width source escape was tested in the minimal native fixture
+to move RX_P away from J7 ground pad 132 while retaining the board's existing
+rules. Native DRC found 7 violations, including one RX_P short to frozen
+J7/CM5 PCIe pad 124 and two RX pair crossings. It is rejected as
+`ROUTE_IMPLEMENTATION_FAILURE`. The fixture was restored to the prior best
+source-via spacing afterward; no integrated board or validation rule changed.
