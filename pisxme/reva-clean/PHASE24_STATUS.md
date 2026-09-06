@@ -1,5 +1,27 @@
 # Phase 24 acreage validation status
 
+## Active steering amendment — RTL9210B Path B
+
+The dual-mode storage upgrade is still the active Phase 24 work item. Path A
+(`CM5 USB -> HD3SS6126 -> TUSB9261/JMS583 -> HD3SS3412 -> M-key`) remains
+preserved as the fallback/reference. Path B is now an isolated, serious
+qualification candidate: `CM5 USB -> RTL9210B-CG -> one M-key socket`.
+
+Path B evidence and its current gates are authoritative in
+`PHASE24_RTL9210B_QUALIFICATION.md` and
+`authority-inventory/rtl9210b/README.md`. The retained Rev. 1.1 technical
+document establishes PEDET SATA/PCIe auto-selection, shared lane-0 pins,
+USB2/USB3, SPI flash, clock, reset, PCIe sidebands, and power interfaces.
+This does not yet authorize production replacement: exact current application
+support, land-pattern release authority, virgin-chip programming, firmware
+provenance/rights, and hardware mode bring-up remain open.
+
+The previous SATA-only contract in the historical approved-plan assumptions
+is superseded for this active storage-island qualification by the explicit
+dual-mode steering. No whole-board floorplan or unrelated Phase 24 work may
+resume until Path A is closed or the Path-B comparison reaches its defined
+decision experiment.
+
 ## Current priority — dual-mode storage upgrade
 
 Phase 24 routing experiments are paused at the user's direction. The active

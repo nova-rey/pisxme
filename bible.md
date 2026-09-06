@@ -4729,3 +4729,10 @@ validation remain open.
  and live stock/price remain open. Recommendation: continue both pending the
  narrowly defined virgin-chip bring-up and authorized application-circuit
  experiment; no production replacement was made.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: added an assertion-only
+ RTL9210B artifact audit and reconciled PHASE24_STATUS with the active Path-B
+ steering amendment. The audit independently verifies the 69-pin symbol,
+ shared SATA/PCIe lane pins, PEDET/REFCLK/SPI evidence, corrected SMD
+ qualification footprint metadata, and retained community schematic. Path A
+ remains unchanged; production Path-B CAD remains gated on authorized support
+ circuit and virgin-chip firmware bring-up evidence.
