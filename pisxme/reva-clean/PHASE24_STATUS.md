@@ -5,8 +5,8 @@
 Phase 24 routing experiments are paused at the user's direction. The active
 work item is the storage-island upgrade, not further clock/SATA/USB3 repair.
 JMS583-QHFA3A is the preferred NVMe candidate after bounded substitution
-research; the production design remains gated on legitimate firmware/
-programming and authorized prototype supply. TE 1-2199230-4 is the preferred
+research; its factory mask-ROM baseline is now design-authorized, while
+authorized prototype supply remains open. TE 1-2199230-4 is the preferred
 M-key socket candidate; exact customer CAD/pad parity remains open. Resume
 the preserved Phase 24 checkpoint only after the one-socket dual-mode island
 is implemented and its mode-aware/native validation passes.

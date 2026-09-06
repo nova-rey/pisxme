@@ -4507,3 +4507,5 @@ Checked JMicron's current JMS581DL single-chip SATA/NVMe alternative and its JLC
 Captured TE's exact 1-2199230-4 customer 2D CAD archive and Rev C M.2 application specification. The customer CAD now anchors the mechanical envelope and the application Figure 2 anchors the PCB pad layout; no connector footprint was promoted before pad-by-pad authoring review.
 # 2026-09-06 — Phase 24 TE M-key CAD extraction
 Extracted the TE customer DXF from the retained archive for direct geometry inspection. Connector CAD authority is now locally available; footprint promotion remains gated on a native KiCad pad/courtyard/model parity check.
+# 2026-09-06 — Phase 24 JMS583 mask-ROM firmware gate correction
+Reconciled the JMS583 datasheet ordering-code and GPIO/SPI evidence with an independent review. The ordered device carries factory mask-ROM baseline firmware; external SPI NVRAM is optional VID/PID customization and is DNP for Rev A. Closed the firmware prerequisite, retained authorized-supply risk, and authorized storage-island implementation subject to native connector parity.

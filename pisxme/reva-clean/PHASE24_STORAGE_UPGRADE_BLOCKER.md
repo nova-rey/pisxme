@@ -1,12 +1,13 @@
 # Phase 24 storage-island upgrade blocker
 
-Status: `PISXME_REVA_CLEAN_BLOCKED` for the authorized SATA/NVMe upgrade only.
+Status: `OPEN — implementation authorized; procurement evidence remains HIGH
+risk` for the authorized SATA/NVMe upgrade only.
 The prior SATA-only board is preserved.
 
 ## Exact unresolved items
 
-`JMS583_FIRMWARE_PROGRAMMING_AND_AUTHORIZED_SUPPLY`; TE M-key customer CAD
-parity is open but independently tractable.
+`JMS583_AUTHORIZED_PROTOTYPE_SUPPLY`; TE M-key footprint authoring/parity is
+the remaining local implementation gate.
 
 ASM2362 is rejected, but it is no longer the only candidate. Bounded research
 qualified JMS583's exact QFN64 pin assignment, land-pattern dimensions,
@@ -14,25 +15,26 @@ support values and power timing from JMicron's detailed Rev 2.1 datasheet.
 JLCPCB lists exact `JMS583-QHFA3A` (`C25701682`, about $6.06 qty 1, minimum 1,
 SMT), but currently reports zero stock; broker stock is corroborating only.
 
-The remaining external artifact is a legitimate JMS583 firmware/configuration
-and programming path. JMicron says firmware is downloaded through USB and
-external SPI NVRAM holds vendor information, but its public download center
-does not publish a generic firmware image, matching programmer, supported SPI
-flash/config format, or redistribution rights. No third-party binary may be
-copied into the design. Authorized prototype supply or factory-programmed
-parts is also not demonstrated.
+The firmware prerequisite is now closed for baseline operation: the
+manufacturer ordering code includes a mask-ROM version, and the selected
+device is factory programmed. External SPI NVRAM is documented for optional
+VID/PID customization and is DNP in Rev A. Firmware update remains an
+authorized future-maintenance path, not a design dependency. Authorized
+prototype supply is still not demonstrated; JLC currently reports zero stock
+and broker listings are not sufficient release evidence.
 
 ## Why production implementation stops
 
 The NVMe bridge owns the USB and PCIe sides of the new path. JMS583's pads and
-reference component values are now reviewable, but a board without approved
-firmware/configuration would not be a validated storage device. No mystery
-firmware, symbol promotion, selector wiring, or PCB-only repair was authored.
+reference component values are now reviewable; baseline design may proceed
+with factory mask-ROM operation. No mystery firmware or PCB-only repair is
+permitted.
 
 TE `1-2199230-4` is an eligible replacement: TE identifies it as Active, M
 code, 67-position, 4.2-mm SMT and publishes application specification Rev C.
-The exact TE customer CAD/pad drawing still must be imported and compared
-before replacing J3. Existing `SM3ZS067U410ABR1000` remains B-key-only.
+The exact TE customer CAD is now retained locally; native footprint pad,
+courtyard and model parity must be completed before replacing J3. Existing
+`SM3ZS067U410ABR1000` remains B-key-only.
 
 ## Sources checked
 
@@ -54,17 +56,16 @@ No purchase was made.
 
 ## Shortest human action
 
-Obtain from JMicron or an authorized design partner: the approved JMS583
-firmware image, matching programming utility/use rights, SPI flash/config
-format, and an authorized prototype quote or factory-programmed
-`JMS583-QHFA3A` supply. Separately obtain TE's exact customer CAD/drawing for
-`1-2199230-4`. With those artifacts, the storage island can be implemented and
-validated without reopening the board macro-floorplan.
+Obtain an authorized prototype quote or traceable factory-programmed
+`JMS583-QHFA3A` supply. The baseline design can proceed without a firmware
+binary; external SPI NVRAM remains optional/DNP. Finish the native TE M-key
+footprint parity check for `1-2199230-4` before replacing J3.
 
 ## Continuation options
 
-1. Recommended: obtain the JMS583 firmware/programming/supply package and TE
-   customer CAD, then implement the storage island and resume Phase 24.
+1. Recommended: obtain JMS583 prototype supply confirmation and finish TE
+   customer-CAD footprint parity, then implement the storage island and resume
+   Phase 24.
 2. Use a factory-programmed complete USB-to-NVMe module only if its exposed
    interfaces, firmware provenance and socket-side integration are documented.
 3. Dropping dual-mode storage would retain the old SATA-only board, but that

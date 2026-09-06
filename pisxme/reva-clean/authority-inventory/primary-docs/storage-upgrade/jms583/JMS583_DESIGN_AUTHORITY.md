@@ -49,25 +49,19 @@ inputs, not permission to omit the full reference circuit review.
 
 ## Firmware/configuration decision
 
-JMicron states that JMS583 uses external SPI NVRAM for USB VID/PID/vendor
-information and provides software utilities for firmware download/update over
-USB. The datasheet also reports an evaluation board firmware version, proving
-that firmware is required in the ecosystem. The public JMicron download center
-currently exposes product briefs, not a released generic firmware image,
-programming utility, or redistribution license for this custom board.
+The ordering-code section of the manufacturer datasheet includes a mask-ROM
+version field and defines `Z0` as no mask ROM. The selected `JMS583-QHFA3A`
+is therefore a factory-programmed mask-ROM device; baseline operation does
+not require this project to author or redistribute firmware. The datasheet
+scopes external SPI NVRAM to vendor VID/PID information and shows GPIO0--3 as
+serial-flash pins after power-on detection. SPI NVRAM is optional for Rev A
+and is provisioned as a DNP bring-up/customization footprint, not a boot
+dependency.
 
-Therefore the firmware path is **OPEN**, not silently assumed closed. Before
-production release, obtain from JMicron or an authorized design partner:
-
-1. the approved firmware image for `JMS583-QHFA3A`;
-2. the matching USB/SPI programming utility and use rights;
-3. the supported SPI NVRAM device/configuration format; and
-4. confirmation that factory-preprogrammed parts can be supplied if the tool
-   is not distributable.
-
-No third-party firmware binary is copied into this repository. Third-party
-firmware/update pages are corroborating evidence only and are not a legal
-production source.
+JMicron also documents a USB firmware-update utility for future maintenance.
+Rev A does not depend on that utility or copy a proprietary image. Any future
+upgrade must use a JMicron-authorized image/tool matching the ordered variant.
+This closes the firmware prerequisite for baseline design.
 
 ## Procurement
 
@@ -80,15 +74,16 @@ and carry MEDIUM/HIGH counterfeit and continuity risk. No exact DigiKey,
 Mouser, Arrow, or Newark listing was verified.
 
 Status: **PROCUREMENT OPEN / sourcing risk HIGH** until an authorized
-prototype-quantity quote or traceable factory-programmed supply is obtained.
+prototype-quantity quote or traceable factory-programmed supply is obtained;
+the firmware prerequisite is CLOSED for baseline operation.
 
 ## Decision
 
 JMS583 replaces ASM2362 as the preferred NVMe candidate because it has the
 strongest retained package/pin/land-pattern authority and a clear published
-reference-component set. It is not yet promoted into the clean schematic or
-PCB: firmware/programming and authorized supply remain mandatory closure
-items. The existing TUSB9261 SATA leg remains retained.
+reference-component set. It is eligible for promotion into the clean
+schematic/PCB; authorized prototype supply remains a procurement gate. The
+existing TUSB9261 SATA leg remains retained.
 
 ## Provenance and license
 
