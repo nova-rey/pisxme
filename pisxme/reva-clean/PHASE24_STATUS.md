@@ -1566,3 +1566,20 @@ source-local terminal/via interactions. It is rejected as
 J2-west attempt but does not yet constitute an Ethernet or Phase 24 pass; an
 obstacle-aware router or a mechanically separated LED-support placement is
 still required.
+
+## J7-west rotated LED island probe — 2026-09-05
+
+A third disposable child rotated and staggered the source-local R30/R31
+resistors, used separate F.Cu terminal escapes, and dogboned J2.16/J2.18 on
+F.Cu before entering two left-edge B.Cu trunks. The authoritative MDI, CT,
+common-termination, and shield parent remained unchanged.
+
+Native refilled DRC reported 258 total violations and 430 unconnected items,
+with 20 shorting records and 15 crossing records. The added unconnected
+items show that the fixed coordinate assumptions for the rotated terminal/via
+transitions were not correct; this is rejected as
+`ROUTE_IMPLEMENTATION_FAILURE`. No Ethernet architecture or official
+placement conclusion is changed. Further work must first derive transformed
+pad coordinates from the saved native footprint objects and use an
+obstacle-aware route search, rather than continuing hand-authored coordinate
+variants.
