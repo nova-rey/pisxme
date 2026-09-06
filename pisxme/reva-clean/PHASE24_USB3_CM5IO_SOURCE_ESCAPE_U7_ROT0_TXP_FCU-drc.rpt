@@ -1,0 +1,288 @@
+** Drc report for PHASE24_USB3_CM5IO_SOURCE_ESCAPE_U7_ROT0_TXP_FCU.kicad_pcb **
+** Created on 2026-09-06T03:24:23 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 3 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(100.0000 mm, 118.5000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 6.5000 mm
+    @(61.9485 mm, 87.2515 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 46.5367 mm
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(62.3485 mm, 82.8515 mm): Via [/CORE_CM5/CM5_USB3_TX_P] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(95.5000 mm, 118.0000 mm): Via [/CORE_CM5/CM5_USB3_TX_P] on F.Cu - B.Cu
+
+** Found 65 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(85.5000 mm, 115.5000 mm): Pad 1 [/STORAGE/BRIDGE_CFG] of U7 on F.Cu
+    @(92.5000 mm, 115.5000 mm): Pad 21 [/STORAGE/BRIDGE_CFG] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(85.5000 mm, 116.0000 mm): Pad 2 [/STORAGE/BRIDGE_RESET] of U7 on F.Cu
+    @(85.5000 mm, 117.0000 mm): Pad 4 [/STORAGE/BRIDGE_RESET] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(85.5000 mm, 116.5000 mm): Pad 3 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
+    @(94.5000 mm, 120.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(85.5000 mm, 117.5000 mm): Pad 5 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+    @(85.5000 mm, 118.0000 mm): Pad 6 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(85.5000 mm, 118.0000 mm): Pad 6 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+    @(85.5000 mm, 118.5000 mm): Pad 7 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(85.5000 mm, 118.5000 mm): Pad 7 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+    @(85.5000 mm, 119.0000 mm): Pad 8 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(85.5000 mm, 119.0000 mm): Pad 8 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+    @(85.5000 mm, 119.5000 mm): Pad 9 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(85.5000 mm, 119.5000 mm): Pad 9 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+    @(90.5000 mm, 124.5000 mm): Pad 59 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(87.5000 mm, 115.5000 mm): Pad 31 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
+    @(88.0000 mm, 115.5000 mm): Pad 30 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.0000 mm, 115.5000 mm): Pad 30 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
+    @(91.0000 mm, 115.5000 mm): Pad 24 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 98.7000 mm): Pad 1 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 99.9000 mm): Pad 7 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 99.9000 mm): Pad 7 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 101.1000 mm): Pad 13 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 101.1000 mm): Pad 13 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 103.1000 mm): Pad 23 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 103.1000 mm): Pad 23 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 105.1000 mm): Pad 33 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 105.1000 mm): Pad 33 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 107.1000 mm): Pad 43 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 107.1000 mm): Pad 43 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 109.1000 mm): Pad 53 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 109.1000 mm): Pad 53 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 110.3000 mm): Pad 59 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 110.3000 mm): Pad 59 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 111.5000 mm): Pad 65 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 111.5000 mm): Pad 65 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 112.7000 mm): Pad 71 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 99.9000 mm): Pad 8 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 98.7000 mm): Pad 2 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 101.1000 mm): Pad 14 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 99.9000 mm): Pad 8 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 101.1000 mm): Pad 14 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 102.7000 mm): Pad 22 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 102.7000 mm): Pad 22 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 104.7000 mm): Pad 32 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 104.7000 mm): Pad 32 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 106.7000 mm): Pad 42 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 106.7000 mm): Pad 42 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 108.7000 mm): Pad 52 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 110.3000 mm): Pad 60 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 111.5000 mm): Pad 66 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 110.3000 mm): Pad 60 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 108.7000 mm): Pad 52 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 111.5000 mm): Pad 66 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 113.1000 mm): Pad 74 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 111.5000 mm): Pad 66 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 111.5000 mm): Pad 65 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 117.9000 mm): Pad 98 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 113.1000 mm): Pad 74 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 101.1000 mm): Pad 113 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 99.9000 mm): Pad 107 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 102.3000 mm): Pad 119 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 101.1000 mm): Pad 113 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 103.5000 mm): Pad 125 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 102.3000 mm): Pad 119 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 104.7000 mm): Pad 131 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 103.5000 mm): Pad 125 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 104.7000 mm): Pad 131 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 105.9000 mm): Pad 137 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 104.7000 mm): Pad 131 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 104.7000 mm): Pad 32 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 105.9000 mm): Pad 137 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 105.9000 mm): Pad 138 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 110.7000 mm): Pad 161 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 109.5000 mm): Pad 155 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 110.7000 mm): Pad 161 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 111.9000 mm): Pad 167 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 111.9000 mm): Pad 167 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 113.1000 mm): Pad 173 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 113.1000 mm): Pad 173 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 114.3000 mm): Pad 179 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 115.5000 mm): Pad 185 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 114.3000 mm): Pad 179 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 116.7000 mm): Pad 191 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 115.5000 mm): Pad 185 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 117.9000 mm): Pad 197 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 116.7000 mm): Pad 191 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 101.1000 mm): Pad 114 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 99.9000 mm): Pad 108 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 102.3000 mm): Pad 120 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 101.1000 mm): Pad 114 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 103.5000 mm): Pad 126 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 102.3000 mm): Pad 120 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 104.7000 mm): Pad 132 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 103.5000 mm): Pad 126 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 105.9000 mm): Pad 138 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 104.7000 mm): Pad 132 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 107.1000 mm): Pad 144 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 105.9000 mm): Pad 138 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 108.3000 mm): Pad 150 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 107.1000 mm): Pad 144 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 109.5000 mm): Pad 156 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 108.3000 mm): Pad 150 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 110.7000 mm): Pad 162 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 109.5000 mm): Pad 156 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 111.9000 mm): Pad 168 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 110.7000 mm): Pad 162 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 113.1000 mm): Pad 174 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 111.9000 mm): Pad 168 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 114.3000 mm): Pad 180 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 113.1000 mm): Pad 174 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 115.5000 mm): Pad 186 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 114.3000 mm): Pad 180 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 116.7000 mm): Pad 192 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 115.5000 mm): Pad 186 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 116.7000 mm): Pad 192 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 116.7000 mm): Pad 191 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 117.9000 mm): Pad 198 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 116.7000 mm): Pad 192 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 113.9000 mm): Pad 77 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 114.3000 mm): Pad 79 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 114.3000 mm): Pad 79 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 114.7000 mm): Pad 81 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 114.7000 mm): Pad 81 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 115.1000 mm): Pad 83 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 115.1000 mm): Pad 83 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 115.5000 mm): Pad 85 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 115.5000 mm): Pad 85 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 115.9000 mm): Pad 87 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

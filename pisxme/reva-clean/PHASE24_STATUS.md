@@ -2742,3 +2742,28 @@ authoring defect, the mirrored frame is a real improvement in source-side
 orientation, and the remaining crossings/clearance are incomplete endpoint
 corridor development. No fixture copper is promoted to the integrated board;
 no layer policy, clearance rule, or validation severity is relaxed.
+
+## U7 orientation and CM5IO corridor refinement — 2026-09-06
+
+The official-source fixture was extended with an authorized U7 orientation
+probe. Native inspection showed that U7 at 0 degrees preserves the CM5IO
+source pair ordering, whereas the selected 180-degree orientation reverses
+the endpoint order and forces crossing dogbones. The 0-degree, spaced-via
+candidate (`PHASE24_USB3_CM5IO_SOURCE_ESCAPE_U7_ROT0_SPACED.kicad_pcb`)
+reduced the disposable fixture to 4 total DRC findings: 0 shorts, 2
+crossings, 0 clearance, 0 via-dangling, 2 hole-clearance, and 65 expected
+fixture opens; all four native USB3 endpoints passed.
+
+A TX_P-only F.Cu continuation variant then removed the hole-clearance and
+one crossing class, reaching 3 total findings: 0 shorts, 1 crossing, 0
+clearance, 0 hole-clearance, 2 expected dangling TX_P transitions, and 65
+expected fixture opens. A further TX_N endpoint dogleg was rejected because
+it regressed to 7 findings with 2 clearances; the 3-finding variant remains
+the best result and is saved as
+`PHASE24_USB3_CM5IO_SOURCE_ESCAPE_U7_ROT0_TXP_FCU.kicad_pcb`.
+
+This is still route-development evidence, not Phase 18 closure: the final
+crossing and dangling transitions require correction, and the fixture omits
+the remaining storage/support circuitry by design. No integrated copper was
+promoted, and the 0-degree orientation is not yet promoted to the acreage
+board until the complete USB3/SATA/clock/support island passes together.

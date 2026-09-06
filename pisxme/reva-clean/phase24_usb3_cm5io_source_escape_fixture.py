@@ -88,6 +88,8 @@ oracle_paths = {name: first_via_path(None, o, oracle_name, jpad)
                 for name, (oracle_name, jpad, _upad) in names.items()}
 b = pcbnew.LoadBoard(str(BASE))
 if b is None: raise RuntimeError("native target load failed")
+u7 = b.FindFootprintByReference("U7")
+u7.SetOrientationDegrees(float(os.environ.get("P24_U7_ROT", "180")))
 net_codes = {name: b.FindNet("/CORE_CM5/" + name).GetNetCode() for name in names}
 u7_pads = {name: pad(b, "U7", upad) for name, (_oracle_name, _jpad, upad) in names.items()}
 for item in list(b.GetFootprints()):
@@ -105,6 +107,15 @@ end_vias = {
     "CM5_USB3_RX_N": V(84.0, 120.5), "CM5_USB3_RX_P": V(84.0, 119.8),
     "CM5_USB3_TX_N": V(84.0, 121.5), "CM5_USB3_TX_P": V(84.0, 122.2),
 }
+if int(float(os.environ.get("P24_U7_ROT", "180"))) == 0:
+    # At 0 degrees the native U7 pad order matches the CM5IO-derived source
+    # order, so endpoint vias can sit directly beside their corresponding pads.
+    end_vias = {
+        "CM5_USB3_RX_N": V(93.5, pcbnew.ToMM(u7_pads["CM5_USB3_RX_N"].y)),
+        "CM5_USB3_RX_P": V(95.5, pcbnew.ToMM(u7_pads["CM5_USB3_RX_P"].y)),
+        "CM5_USB3_TX_N": V(93.5, 122.5),
+        "CM5_USB3_TX_P": V(95.5, pcbnew.ToMM(u7_pads["CM5_USB3_TX_P"].y)),
+    }
 for target_name, (oracle_name, jpad, upad) in names.items():
     net_code = net_codes[target_name]
     copied, first = oracle_paths[target_name]
@@ -115,11 +126,16 @@ for target_name, (oracle_name, jpad, upad) in names.items():
     if target_name.startswith("CM5_USB3_RX"):
         track(b, net_code, src_via, ev, B)
     else:
-        # Keep TX on B.Cu, but take it outside the RX corridor before
-        # descending; this avoids crossing the source-side RX escape.
-        outer = V(92.0, pcbnew.ToMM(src_via.y))
-        lower = V(92.0, pcbnew.ToMM(ev.y))
-        polyline(b, net_code, [src_via, outer, lower, ev], B)
+        # Keep TX on B.Cu, first step above the J7 NPTH obstruction, then use
+        # distinct outer x-channels before descending outside the RX corridor.
+        outer_x = 100.0 if target_name.endswith("TX_N") else 102.0
+        outer = V(outer_x, pcbnew.ToMM(src_via.y))
+        top_y = 78.0 if target_name.endswith("TX_N") else 78.5
+        top_at_via = V(pcbnew.ToMM(src_via.x), top_y)
+        top = V(outer_x, top_y)
+        lower = V(outer_x, pcbnew.ToMM(ev.y))
+        route_layer = F if (target_name.endswith("TX_P") and os.environ.get("P24_TXP_FCU") == "1") else B
+        polyline(b, net_code, [src_via, top_at_via, top, lower, ev], route_layer)
     track(b, net_code, ev, u7_pads[target_name], F)
 
 b.BuildListOfNets(); b.Save(str(OUT)); print(OUT)
