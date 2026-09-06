@@ -15,8 +15,8 @@ mode-contract, and JMS583-support audits pass.
 
 The active native route candidate is still unfinished. The corrected-package
 USB3 fixture's latest report is
-`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED28-drc.rpt`: the authored paths have
-no shorting findings, one remaining track crossing, and 78 unconnected items
+`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED32-drc.rpt`: the authored paths have
+no shorting, track-width, or track-crossing findings, and 78 unconnected items
 because the fixture intentionally omits most support circuitry. Native ERC,
 complete switched-mode DRC/connectivity, TE pad/model parity, and integrated
 storage validation remain open. No Phase 24 resumption or completion is
@@ -39,7 +39,7 @@ evidence only.
 
 ## SUPERSEDED HISTORICAL SNAPSHOT — not current instructions
 
-## Exact unresolved items
+## Exact unresolved items — historical snapshot at this checkpoint
 
 `JMS583_AUTHORIZED_PROTOTYPE_SUPPLY`; TE M-key footprint authoring/parity is
 the remaining local implementation gate.
@@ -146,7 +146,8 @@ failure.
    grounds it and PCIe/NVMe leaves it open. AUTO therefore needs the documented
    Schmitt-qualified, power-off mode-control implementation; DAS/DSS is not
    used as a detector.
-2. The JMS583 support network is represented as pin authority but still needs
+2. At that earlier checkpoint, the JMS583 support network was represented as
+pin authority but still needed
    native component instances and physical support routing: 25-MHz crystal,
    REXT, AVDD33 capacitor, LXO inductor, reset RC, VBUS divider, decoupling,
    and the documented AC coupling capacitors.

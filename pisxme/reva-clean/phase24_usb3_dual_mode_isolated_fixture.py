@@ -75,8 +75,11 @@ def main():
     # RUA0042A pins 11/12/15/16 are on the left long edge in the documented
     # 17/4/17/4 perimeter. Leave the package outward (-X) and spread the
     # through-vias well outside the 0.4-mm signal pitch.
-    target_vias = {"128": (156.0, 160.0), "130": (158.0, 156.0),
-                   "140": (160.0, 152.0), "142": (162.0, 148.0)}
+    # Align each destination via to the native U12 pad Y.  The prior
+    # staggered-Y map made the final F.Cu dogbones cross even though the
+    # electrical ordering was correct.
+    target_vias = {"128": (156.0, 153.0), "130": (158.0, 152.6),
+                   "140": (160.0, 151.2), "142": (162.0, 150.8)}
     for name, j7n, u12n in source:
         n = net(b, name); a = pos(pad(b, "J7", j7n)); z = pos(pad(b, "U12", u12n))
         own(pad(b, "U12", u12n), n)

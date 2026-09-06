@@ -4701,3 +4701,9 @@ bottom-row RXP escape and retained RXN on the lower B.Cu lane. Native report
 31 has zero authored shorting findings and zero track-width findings; one
 inherited CM5-source crossing remains, with partial-fixture support opens
 retained. This is a routing discriminator, not storage closure.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: aligned the CM5 source-via
+handoff to the corrected selector pad geometry. Native report 32 now records
+zero authored shorting, track-width, and track-crossing findings; package-edge
+and J7 launch clearances plus intentional partial-fixture opens remain. Updated
+current status narratives to point to report 32 and marked earlier TODOs as
+historical/superseded.
