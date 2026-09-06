@@ -130,6 +130,14 @@ def direct(b,n,a,z,layer,occ):
     line_block(occ,layer,a,z,.22)
 
 b=pcbnew.LoadBoard(str(BASE))
+# Disposable storage-island placement override.  The default is the saved
+# candidate; experiments may move only J3 to test whether its physical
+# mounting-hole/pad field, rather than U7 or the macro topology, is the local
+# launch constraint.
+j3x=os.environ.get('PISXME_J3_X'); j3y=os.environ.get('PISXME_J3_Y')
+if j3x and j3y:
+    j3=b.FindFootprintByReference('J3')
+    j3.SetPosition(V(float(j3x),float(j3y)))
 # Remove only the previous SATA copper so this experiment evaluates the new
 # native-pad route rather than colliding with inherited SATA geometry.  USB3,
 # PCIe, power, and all unrelated copper remain untouched.
@@ -156,6 +164,8 @@ for name,up,cap,cp,jp in jobs:
     if bridge is None or socket is None: raise RuntimeError(name)
     a=xy(pad(b,'U7',up).GetPosition()); z=xy(pad(b,cap,cp).GetPosition())
     bridge_start = B if name.startswith('BRIDGE_SATA_RX_') else F
+    if os.environ.get('PISXME_BASELINE_ESCAPE') == '1':
+        bridge_start=F
     if bridge_start == B:
         # Escape the dense U7 pad field on F.Cu before changing layers.  A
         # via directly on the QFN pad field is not an acceptable terminal.
@@ -169,7 +179,9 @@ for name,up,cap,cp,jp in jobs:
     # Keep the RX socket pair on B.Cu after an ordinary via at the coupling
     # capacitor; TX remains F.Cu.  This is a permitted layer split and avoids
     # the close M.2 launch pair weaving on one layer.
-    socket_start = B if (name.startswith('BRIDGE_SATA_RX_') or name == 'BRIDGE_SATA_TX_N') else F
+    socket_start = B if name.startswith('BRIDGE_SATA_RX_') else F
+    if os.environ.get('PISXME_BASELINE_ESCAPE') != '1' and name == 'BRIDGE_SATA_TX_N':
+        socket_start=B
     gate = None
     if name == 'BRIDGE_SATA_RX_P': gate=(-1,118.75)
     if name == 'BRIDGE_SATA_RX_N': gate=(1,120.25)

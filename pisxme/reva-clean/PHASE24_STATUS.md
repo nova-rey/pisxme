@@ -1982,6 +1982,18 @@ not reject the macro-placement: the defect is localized to U7 source-via
 escape geometry, and the prior zero-short/zero-crossing candidate remains the
 active comparison baseline.
 
+### Outboard J3 placement discriminator — 2026-09-05
+
+A disposable candidate moved only the authoritative J3 M.2 socket from
+`(145,125)` to `(165,125)` while retaining U7, the selected macro, and the
+baseline native-pad escape mode. Native DRC reported zero shorts, zero M.2
+hole-clearance violations, two track crossings, 14 ordinary clearance
+violations, and 428 incomplete-board unconnected items. The outboard move
+therefore removes the socket NPTH constraint but does not solve the separate
+U7 bridge-side escape crossing class. It is retained as a topology
+discriminator, not promoted; this is still `ROUTE_IMPLEMENTATION_FAILURE`,
+not evidence of a macro-placement failure.
+
 ### U7 source dogbone escape trial — 2026-09-05
 
 The next local experiment avoided via-in-pad at U7 by routing each bridge-side
