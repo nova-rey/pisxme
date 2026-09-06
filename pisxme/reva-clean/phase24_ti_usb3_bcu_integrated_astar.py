@@ -11,7 +11,7 @@ import os
 
 R=Path(__file__).resolve().parent
 BASE=R/os.environ.get('P24_TI_BCU_BASE','PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_REVIEW.kicad_pcb')
-OUT=R/os.environ.get('P24_TI_BCU_OUT','PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_BCU_INTEGRATED_ASTAR.kicad_pcb')
+OUT=R/os.environ.get('P24_TI_BCU_OUT','PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_BCU_INTEGRATED_ASTAR_V3.kicad_pcb')
 F,B=pcbnew.F_Cu,pcbnew.B_Cu; STEP=.25; WIDTH=.15
 JOBS=(('CM5_USB3_RX_N','128','42'),('CM5_USB3_RX_P','130','43'),('CM5_USB3_TX_N','140','45'),('CM5_USB3_TX_P','142','46'))
 def V(p): return pcbnew.VECTOR2I_MM(float(p[0]),float(p[1]))
@@ -39,7 +39,7 @@ def obstacles(b):
  s=set()
  for t in b.GetTracks():
   if isinstance(t,pcbnew.PCB_VIA): block_line(s,xy(t),xy(t),.42)
-  elif t.GetLayer()==B: block_line(s,xy(t.GetStart()),xy(t.GetEnd()),.24)
+  elif t.GetLayer()==B: block_line(s,xy(t.GetStart()),xy(t.GetEnd()),.38)
  for f in b.GetFootprints():
   if f.GetReference() == 'J7': continue
   for p in f.Pads():
@@ -75,16 +75,17 @@ for name,j,u in JOBS:
 for t in list(b.GetTracks()):
  if any(x in t.GetNetname() for x in ('CM5_USB3_RX_','CM5_USB3_TX_')): b.Remove(t)
 s=obstacles(b)
-targets=((80.5,104.8),(80.5,105.8),(80.5,106.8),(80.5,107.8))
+# Target transitions are outside the west edge of the native U7 180-degree
+# package at (96,124), and align with the four USB3 pad rows.
+targets=((88.0,124.6),(88.0,125.5),(88.0,126.4),(88.0,127.3))
 for idx,((name,src,dst),tv) in enumerate(zip(terms,targets)):
  n=net(b,name)
- # Leave the carrier pad field on a dedicated monotonic dogbone before the
- # shared-board search.  Starting A* at the pad itself lets neighboring J7
- # lands become artificial crossings in an otherwise legal corridor.
- sv=(74.0 + idx * 2.0, src[1])
- track(b,n,src,sv,B); via(b,n,sv); block_line(s,src,sv,.28)
+ # The CM5 USB3 lands are native B.Cu pads.  Do not introduce a source via
+ # into the already occupied CM5/PCIe breakout field; let the obstacle-aware
+ # search start at the actual pad and use one transition at U7.
+ sv=src
  p=astar(s,sv,tv)
- for a,z in zip(p,p[1:]): track(b,n,a,z,B); block_line(s,a,z,.28)
+ for a,z in zip(p,p[1:]): track(b,n,a,z,B); block_line(s,a,z,.38)
  via(b,n,tv); track(b,n,tv,dst,F)
  print(name,'segments',len(p),'src',src,'target',dst)
 b.BuildListOfNets();b.Save(str(OUT));print(OUT)

@@ -4417,3 +4417,22 @@ Receipt: `phase24_promote_ti_usb3_rx_split_v2.py`,
 `TI_U7_INTEGRATED_ESCAPE = REJECTED`
 `FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
 `PHASE24 = OPEN`
+
+## Obstacle-aware integrated USB3 regeneration — 2026-09-06
+
+The next route class removed the source transition vias and began B.Cu A* at
+the actual CM5 USB3 pads, then increased the obstacle margin for retained
+tracks and routed each lane sequentially. All four paths were authored, but
+native DRC still found 352 violations, including 15 shorts, 85 crossings, and
+469 unconnected items. This remains `ROUTE IMPLEMENTATION FAILURE`: the
+planner's coarse grid/obstacle model is not yet producing manufacturable
+integrated copper. The selected macro is not rejected on this evidence, and
+no PCIe or production board was changed.
+
+Receipt: `phase24_ti_usb3_bcu_integrated_astar.py`,
+`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_BCU_INTEGRATED_ASTAR_V3.kicad_pcb`,
+and its native DRC report.
+
+`INTEGRATED_USB3_ASTAR_V3 = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`
