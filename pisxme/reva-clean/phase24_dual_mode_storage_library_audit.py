@@ -17,6 +17,9 @@ def main():
     p=pads(LIB/'JMS583_QFN64_8x8.kicad_mod')
     checks.append(('JMS583 has 64 pads',len(p)==64))
     checks.append(('JMS583 numbering is 1..64',[x[0] for x in p]==[str(i) for i in range(1,65)]))
+    for name in ('HD3SS6126_RUA0042A.kicad_mod','HD3SS3412_RUA0042A.kicad_mod'):
+        p=pads(LIB/name)
+        checks.append((name+' has 42 signal pads plus EP',len(p)==43 and p[-1][0]=='43'))
     p=pads(LIB/'TE_1-2199230-4_MKEY.kicad_mod')
     expected=[str(i) for i in range(1,59)]+[str(i) for i in range(67,76)]
     checks.append(('TE M-key has 67 contacts plus four mechanical pads',len(p)==71))

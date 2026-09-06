@@ -26,8 +26,31 @@ def mkey():
           ' (pad "S1" smd rect (at -10.35 -4.5) (size 1.2 2.75) (layers "F.Cu" "F.Paste" "F.Mask"))',
           ' (pad "S2" smd rect (at 10.35 -4.5) (size 1.2 2.75) (layers "F.Cu" "F.Paste" "F.Mask"))']
     o.append(')'); return '\n'.join(o)+'\n'
+def symbol(name, ref, pinmap):
+    o=[f' (symbol "PiSXMeRevAClean:{name}" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes)',
+       f'  (property "Reference" "{ref}" (at 0 -8 0) (effects (font (size 1 1))))',
+       f'  (property "Value" "{name}" (at 0 8 0) (effects (font (size 1 1))))',
+       '  (property "Footprint" "" (at 0 0 0) (effects (font (size 1 1)) (hide yes)))',
+       f'  (symbol "{name}_1_1" (rectangle (start -15 -6) (end 15 6) (stroke (width 0.254) (type default)) (fill (type background)))']
+    for i,(num,nm) in enumerate(pinmap):
+        y=(i-(len(pinmap)-1)/2)*1.27
+        o.append(f'   (pin passive line (at 20 {y:g} 180) (length 5) (name "{nm}" (effects (font (size 1 1)))) (number "{num}" (effects (font (size 1 1)))))')
+    o.append('  ) (embedded_fonts no))'); return '\n'.join(o)
+def storage_symbols():
+    jms={16:'VBUS',17:'USB_DM',18:'USB_DP',21:'U_TXP1',22:'U_TXN1',23:'U_TXN2',24:'U_TXP2',26:'U_RXP1',27:'U_RXN1',28:'U_RXN2',29:'U_RXP2',34:'P_RXN1',35:'P_RXP1',37:'P_TXN1',38:'P_TXP1',41:'P_RXN0',42:'P_RXP0',44:'P_TXN0',45:'P_TXP0',47:'CLKN',48:'CLKP',50:'XIN',51:'XOUT',54:'P_RSTN',55:'P_CLKREQN',60:'TME',63:'GND',64:'LXO'}
+    s6126={6:'HS_OE',9:'SEL',10:'GND',11:'SSA0P',12:'SSA0N',15:'SSA1P',16:'SSA1N',22:'SSC1N',23:'SSC1P',24:'SSC0N',25:'SSC0P',26:'SSB1N',27:'SSB1P',28:'SSB0N',29:'SSB0P',30:'VDD',31:'C1N',32:'C1P',33:'HSC_P',34:'HSC_N'}
+    s3412={9:'SEL',5:'VDD',10:'GND',2:'A0P',3:'A0N',6:'A1P',7:'A1N',11:'A2P',12:'A2N',15:'A3P',16:'A3N',38:'B0P',37:'B0N',36:'B1P',35:'B1N',29:'B2P',28:'B2N',27:'B3P',26:'B3N',34:'C0P',33:'C0N',32:'C1P',31:'C1N',25:'C2P',24:'C2N',23:'C3P',22:'C3N'}
+    def allpins(d,count): return [(i,d.get(i,'NC_'+str(i))) for i in range(1,count+1)]
+    txt='(kicad_symbol_lib (version 20231120) (generator "PiSXMe Rev A Clean")\n'
+    txt+=symbol('JMS583_QFN64','U',allpins(jms,64))+'\n'+symbol('HD3SS6126_RUA0042A','U',allpins(s6126,42))+'\n'+symbol('HD3SS3412_RUA0042A','U',allpins(s3412,42))+'\n)\n'
+    (ROOT/'Storage_DualMode.kicad_sym').write_text(txt)
 def main():
     LIB.mkdir(exist_ok=True)
     (LIB/'JMS583_QFN64_8x8.kicad_mod').write_text(qfn('JMS583_QFN64_8x8',64,8,.4,.7,.22))
+    # Both retained TI datasheets point to package drawing RUA0042A. They
+    # still receive separate library names because their pin functions differ.
+    (LIB/'HD3SS6126_RUA0042A.kicad_mod').write_text(qfn('HD3SS6126_RUA0042A',42,3.6,.4,.75,.25,43))
+    (LIB/'HD3SS3412_RUA0042A.kicad_mod').write_text(qfn('HD3SS3412_RUA0042A',42,3.6,.4,.75,.25,43))
     (LIB/'TE_1-2199230-4_MKEY.kicad_mod').write_text(mkey())
+    storage_symbols()
 if __name__=='__main__':main()
