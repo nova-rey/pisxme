@@ -2025,3 +2025,22 @@ ordinary clearance violations, with 428 incomplete-board unconnected items.
 The trial is rejected as `ROUTE_IMPLEMENTATION_FAILURE`. The result is
 localized to the chosen U7 escape coordinates competing with the pad/clock
 field; it does not reject the storage macro or the native-pad routing method.
+
+### Proven Phase 19 SATA-island transplant — 2026-09-05
+
+The preserved `PHASE19_V3_USB_PROVEN_SPLIT_SATA_REFILL` candidate was used as
+a native implementation oracle. A disposable transplant moved U7, J3, and
+C30-C33 to the donor's coherent coordinates/orientations and copied only the
+donor's actual BRIDGE_SATA_/SATA_M2_ tracks and ordinary vias onto the current
+Phase 24 macro ancestor. The transplant script uses the base board's actual
+net objects and preserves the full pad/layer identity; the U7 pad-net audit
+passes.
+
+Native DRC reports zero shorts, zero track crossings, zero M.2 hole-clearance
+violations, and nine inherited ordinary clearance violations. Only five
+storage unconnected records remain, all the known duplicate U7
+`BRIDGE_SATA_RX_N` pad-field relationships; the complete board still has 428
+unconnected records because USB3, clock/support, power, and other Phase 24
+work remain incomplete. This is a materially improved storage route baseline,
+not Phase 18/19 closure. The remaining U7 pad-field relationships must be
+resolved from schematic/footprint authority before promotion.
