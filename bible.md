@@ -4720,3 +4720,12 @@ the known partial-fixture opens. The candidate remains non-release.
 USB3 connectivity audit. The regenerated candidate passes all ten intended
 CM5/U12/U11/coupling-capacitor endpoint pairs; physical DRC and full storage
 validation remain open.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: opened an isolated RTL9210B-CG
+ Path-B qualification track while preserving Path A. Retained the Rev. 1.1
+ pin/mode/power evidence, corroborating KiCad implementation, corrected SMD
+ qualification footprint metadata, firmware/configuration artifacts, and
+ current JLCPCB identity. RTL9210B is a credible one-chip candidate; virgin
+ programming, firmware provenance/rights, exact production application BOM,
+ and live stock/price remain open. Recommendation: continue both pending the
+ narrowly defined virgin-chip bring-up and authorized application-circuit
+ experiment; no production replacement was made.

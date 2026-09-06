@@ -1,0 +1,480 @@
+(kicad_symbol_lib
+  (version 20211014)
+  (generator https://github.com/uPesy/easyeda2kicad.py)
+
+  (symbol "RTL9210B-CG"
+    (in_bom yes)
+    (on_board yes)
+    (property
+      "Reference"
+      "U"
+      (id 0)
+      (at 0 52.07 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Value"
+      "RTL9210B-CG"
+      (id 1)
+      (at 0 -49.53 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Footprint"
+      "easyeda2kicad:QFN-68_L8.0-W8.0-P0.40-BL-EP4.8"
+      (id 2)
+      (at 0 -52.07 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Datasheet"
+      "https://www.lcsc.com/datasheet/C5143573.pdf"
+      (id 3)
+      (at 0 -54.61 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Manufacturer"
+      "null"
+      (id 4)
+      (at 0 -57.15 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "MPN"
+      "RTL9210B-CG"
+      (id 5)
+      (at 0 -59.69 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "LCSC Part"
+      "C5143573"
+      (id 6)
+      (at 0 -62.23 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (symbol "RTL9210B-CG_0_1"
+      (rectangle
+        (start -40.64 41.91)
+        (end 40.64 -46.99)
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (pin unspecified line
+        (at -2.54 46.99 270)
+        (length 5.08)
+        (name "GNDPAD" (effects (font (size 1.27 1.27))))
+        (number "69" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 39.37 180)
+        (length 5.08)
+        (name "SATA_TXOP/PCIE_TXOP_0" (effects (font (size 1.27 1.27))))
+        (number "68" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 36.83 180)
+        (length 5.08)
+        (name "SATA_TXON/PCIE_TXON_0" (effects (font (size 1.27 1.27))))
+        (number "67" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 34.29 180)
+        (length 5.08)
+        (name "PCIE_GNDA" (effects (font (size 1.27 1.27))))
+        (number "66" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 31.75 180)
+        (length 5.08)
+        (name "SATA_RXIN/PCIE_RXIN_0" (effects (font (size 1.27 1.27))))
+        (number "65" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 29.21 180)
+        (length 5.08)
+        (name "SATA_RXIP/PCIE_RXIP_0" (effects (font (size 1.27 1.27))))
+        (number "64" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 26.67 180)
+        (length 5.08)
+        (name "PCIE_AVDD11" (effects (font (size 1.27 1.27))))
+        (number "63" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 24.13 180)
+        (length 5.08)
+        (name "PCIE_REFCLKM" (effects (font (size 1.27 1.27))))
+        (number "62" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 21.59 180)
+        (length 5.08)
+        (name "PCIE_REFCLKP" (effects (font (size 1.27 1.27))))
+        (number "61" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 19.05 180)
+        (length 5.08)
+        (name "PCIE_AVDD11" (effects (font (size 1.27 1.27))))
+        (number "60" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 16.51 180)
+        (length 5.08)
+        (name "PCIE_RXIP_1" (effects (font (size 1.27 1.27))))
+        (number "59" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 13.97 180)
+        (length 5.08)
+        (name "PCIE_RXIN_1" (effects (font (size 1.27 1.27))))
+        (number "58" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 11.43 180)
+        (length 5.08)
+        (name "PCIE_TXON_1" (effects (font (size 1.27 1.27))))
+        (number "57" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 8.89 180)
+        (length 5.08)
+        (name "PCIE_TXOP_1" (effects (font (size 1.27 1.27))))
+        (number "56" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 6.35 180)
+        (length 5.08)
+        (name "PCIE_AVDD11" (effects (font (size 1.27 1.27))))
+        (number "55" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 3.81 180)
+        (length 5.08)
+        (name "XTAL_OUT" (effects (font (size 1.27 1.27))))
+        (number "54" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 1.27 180)
+        (length 5.08)
+        (name "XTAL_IN" (effects (font (size 1.27 1.27))))
+        (number "53" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -1.27 180)
+        (length 5.08)
+        (name "XTAL_AVCC33" (effects (font (size 1.27 1.27))))
+        (number "52" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -3.81 180)
+        (length 5.08)
+        (name "RSET" (effects (font (size 1.27 1.27))))
+        (number "51" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -6.35 180)
+        (length 5.08)
+        (name "USB_AVDD11" (effects (font (size 1.27 1.27))))
+        (number "50" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -8.89 180)
+        (length 5.08)
+        (name "USB_RXP1" (effects (font (size 1.27 1.27))))
+        (number "49" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -11.43 180)
+        (length 5.08)
+        (name "USB_RXN1" (effects (font (size 1.27 1.27))))
+        (number "48" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -13.97 180)
+        (length 5.08)
+        (name "USB_RXN0" (effects (font (size 1.27 1.27))))
+        (number "47" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -16.51 180)
+        (length 5.08)
+        (name "USB_RXP0" (effects (font (size 1.27 1.27))))
+        (number "46" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -19.05 180)
+        (length 5.08)
+        (name "USB_GNDA" (effects (font (size 1.27 1.27))))
+        (number "45" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -21.59 180)
+        (length 5.08)
+        (name "USB_TXP1" (effects (font (size 1.27 1.27))))
+        (number "44" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -24.13 180)
+        (length 5.08)
+        (name "USB_TXN1" (effects (font (size 1.27 1.27))))
+        (number "43" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -26.67 180)
+        (length 5.08)
+        (name "USB_TXN0" (effects (font (size 1.27 1.27))))
+        (number "42" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -29.21 180)
+        (length 5.08)
+        (name "USB_TXP0" (effects (font (size 1.27 1.27))))
+        (number "41" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -31.75 180)
+        (length 5.08)
+        (name "USB_AVDD11" (effects (font (size 1.27 1.27))))
+        (number "40" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -34.29 180)
+        (length 5.08)
+        (name "USB_AVCC33" (effects (font (size 1.27 1.27))))
+        (number "39" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -36.83 180)
+        (length 5.08)
+        (name "HSDM" (effects (font (size 1.27 1.27))))
+        (number "38" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -39.37 180)
+        (length 5.08)
+        (name "HSDP" (effects (font (size 1.27 1.27))))
+        (number "37" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -41.91 180)
+        (length 5.08)
+        (name "USB_DVDD11" (effects (font (size 1.27 1.27))))
+        (number "36" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 45.72 -44.45 180)
+        (length 5.08)
+        (name "VDD11" (effects (font (size 1.27 1.27))))
+        (number "35" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -44.45 0)
+        (length 5.08)
+        (name "LDO-5TO3-OUT" (effects (font (size 1.27 1.27))))
+        (number "34" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -41.91 0)
+        (length 5.08)
+        (name "LDO-5TO3-IN" (effects (font (size 1.27 1.27))))
+        (number "33" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -39.37 0)
+        (length 5.08)
+        (name "CC2" (effects (font (size 1.27 1.27))))
+        (number "32" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -36.83 0)
+        (length 5.08)
+        (name "VCON" (effects (font (size 1.27 1.27))))
+        (number "31" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -34.29 0)
+        (length 5.08)
+        (name "CC1" (effects (font (size 1.27 1.27))))
+        (number "30" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -31.75 0)
+        (length 5.08)
+        (name "DIS_DB" (effects (font (size 1.27 1.27))))
+        (number "29" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -29.21 0)
+        (length 5.08)
+        (name "GPIO13/I2C_CLK/SPIO3" (effects (font (size 1.27 1.27))))
+        (number "28" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -26.67 0)
+        (length 5.08)
+        (name "GPIO12/LED1/I2C_CLK" (effects (font (size 1.27 1.27))))
+        (number "27" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -24.13 0)
+        (length 5.08)
+        (name "GPIO11/I2C_DATA" (effects (font (size 1.27 1.27))))
+        (number "26" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -21.59 0)
+        (length 5.08)
+        (name "DVDD11" (effects (font (size 1.27 1.27))))
+        (number "25" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -19.05 0)
+        (length 5.08)
+        (name "SPICS" (effects (font (size 1.27 1.27))))
+        (number "24" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -16.51 0)
+        (length 5.08)
+        (name "SPISO" (effects (font (size 1.27 1.27))))
+        (number "23" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -13.97 0)
+        (length 5.08)
+        (name "I2C_DATA/SPIO3/GPIO10" (effects (font (size 1.27 1.27))))
+        (number "22" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -11.43 0)
+        (length 5.08)
+        (name "I2C_CLK/SPIO2/GPIO9" (effects (font (size 1.27 1.27))))
+        (number "21" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -8.89 0)
+        (length 5.08)
+        (name "VDD33" (effects (font (size 1.27 1.27))))
+        (number "20" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -6.35 0)
+        (length 5.08)
+        (name "SPICLK" (effects (font (size 1.27 1.27))))
+        (number "19" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -3.81 0)
+        (length 5.08)
+        (name "SPISI" (effects (font (size 1.27 1.27))))
+        (number "18" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 -1.27 0)
+        (length 5.08)
+        (name "SWR_5TO1_IN" (effects (font (size 1.27 1.27))))
+        (number "17" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 1.27 0)
+        (length 5.08)
+        (name "SWR_5TO1_OUT" (effects (font (size 1.27 1.27))))
+        (number "16" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 3.81 0)
+        (length 5.08)
+        (name "SWR_GNDA" (effects (font (size 1.27 1.27))))
+        (number "15" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 6.35 0)
+        (length 5.08)
+        (name "PERSTBPIN" (effects (font (size 1.27 1.27))))
+        (number "14" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 8.89 0)
+        (length 5.08)
+        (name "CLKREQPIN" (effects (font (size 1.27 1.27))))
+        (number "13" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 11.43 0)
+        (length 5.08)
+        (name "ISOLATEBPIN" (effects (font (size 1.27 1.27))))
+        (number "12" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 13.97 0)
+        (length 5.08)
+        (name "DVDD11" (effects (font (size 1.27 1.27))))
+        (number "11" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 16.51 0)
+        (length 5.08)
+        (name "GPIO8/HOT_PLUG/I2C_DATA/SPIO2" (effects (font (size 1.27 1.27))))
+        (number "10" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 19.05 0)
+        (length 5.08)
+        (name "GPIO7/SJTDO/LED0" (effects (font (size 1.27 1.27))))
+        (number "9" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 21.59 0)
+        (length 5.08)
+        (name "GPIO6/SJTMS/PEDET" (effects (font (size 1.27 1.27))))
+        (number "8" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 24.13 0)
+        (length 5.08)
+        (name "TESTENPIN" (effects (font (size 1.27 1.27))))
+        (number "7" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 26.67 0)
+        (length 5.08)
+        (name "UART_TXD/SJTTDI/GPIO5" (effects (font (size 1.27 1.27))))
+        (number "6" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 29.21 0)
+        (length 5.08)
+        (name "UART_RXD/SJTCLK/GPIO4" (effects (font (size 1.27 1.27))))
+        (number "5" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 31.75 0)
+        (length 5.08)
+        (name "VDD33" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 34.29 0)
+        (length 5.08)
+        (name "RST_INPIN/NC" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 36.83 0)
+        (length 5.08)
+        (name "PCIE_AVDD11" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -45.72 39.37 0)
+        (length 5.08)
+        (name "PCIE_AVCC33" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
+)
