@@ -4795,3 +4795,9 @@ validation remain open.
  negative controls, and the still-open Path-B evidence gates. The rejected
  straight-line fixture remains classified as route implementation failure;
  unrelated whole-board routing stays paused.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: corrected and machine-checked
+ the RTL9210B physical M-key mapping. Platform-side contacts are TX 68/67 to
+ 49/47 and RX 64/65 from 43/41; the retained community root XML reverses that
+ association and is now explicitly negative WIP evidence. Added the native
+ socket-contact audit and kept Path-B CAD gated on authoritative application,
+ sideband, power/inrush, land-pattern, and provisioning evidence.

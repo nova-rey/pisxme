@@ -24,15 +24,52 @@ rights or variant-compatibility questions.
 ```text
 CM5 USB3 TX/RX + USB2 D+/D-
         -> RTL9210B-CG USB_TXP0/N0, USB_RXP0/N0, HSDP/HSDM
-RTL9210B SATA_TXOP/TXON (68/67) -> M.2 SATA B pair
-RTL9210B SATA_RXIP/RXIN (64/65) <- M.2 SATA A pair
+RTL9210B SATA_TXOP/TXON (68/67) -> M.2 contacts 49/47 (SATA-A)
+RTL9210B SATA_RXIP/RXIN (64/65) <- M.2 contacts 43/41 (SATA-B)
 RTL9210B PCIe_TXOP/TXON_0 (68/67) -> M.2 PETp0/PETn0
 RTL9210B PCIe_RXIP/RXIN_0 (64/65) <- M.2 PERp0/PERn0
 RTL9210B PCIE_REFCLKP/N (61/62) -> M.2 REFCLKP/N
 RTL9210B PERSTBPIN (14) -> M.2 PERST#
 RTL9210B CLKREQB (13) <-> M.2 CLKREQ# with required pull-up
-RTL9210B GPIO6/PEDET (8) <- M.2 contact 69 / CONFIG1, per verified socket convention
+RTL9210B GPIO6/PEDET (8) <-> M.2 contact 69 / CONFIG1, with socket/platform pull-up rules
 ```
+
+The earlier compact mapping above used the SATA pair labels incorrectly and
+is superseded by this physical-contact table. The M.2 names are
+platform/socket-side PCIe names; the same contacts carry the SSD-side SATA
+names. The community M.2 XML and the M.2 reference table both put the PCIe
+TX launch on contacts 49/47 and PCIe RX return on 43/41:
+
+| RTL9210B signal | Socket contact | Platform-side name | SSD-side SATA name |
+|---|---:|---|---|
+| `TXOP/TXON` pins 68/67 | 49/47 | `PETp0/PETn0` | `SATA-A+/SATA-A-` |
+| `RXIP/RXIN` pins 64/65 | 43/41 | `PERp0/PERn0` | `SATA-B-/SATA-B+` |
+| `REFCLKP/N` pins 61/62 | 55/53 | `REFCLKp/REFCLKn` | not used in SATA |
+
+This table records physical contact authority and avoids treating PCIe
+platform-side names as SSD-side directions. The SATA polarity convention and
+the RTL9210B mode-specific interpretation of the shared pins still require
+the current application circuit or a controlled hardware test; no Path-B
+fixture may silently swap these pairs.
+
+Contact 69 is the standard M.2 PEDET/CONFIG1 contact: SATA modules tie it
+low, while PCIe modules leave it unconnected and the platform supplies the
+pull-up. That establishes the socket-side convention, not yet the complete
+RTL9210B pull-up, empty-socket, or power-sequencing circuit.
+
+### WIP hierarchy mapping conflict
+
+The retained community `RTL9210B_ROOT.xml` is **not** a mapping oracle. Its
+native netlist attaches RTL pins 68/67 to CN6 contacts 43/41 and attaches RTL
+pins 64/65 through C89/C90 toward contacts 49/47. That is opposite the
+platform-side M-key contact convention above, where controller TX launches to
+49/47 and controller RX returns on 43/41. This is a concrete WIP-CAD mapping
+conflict, not a reason to invent a third mapping. The root XML is retained as
+negative corroborating evidence and is excluded from production authority.
+
+The standalone `phase24_rtl9210b_m2_mapping_audit.py` asserts only the native
+socket contact labels and AC-coupling boundary; it does not bless the WIP
+hierarchy's reversed associations.
 
 The chip pad 69 is the exposed ground pad. It is not M.2 contact 69. The
 shared lane-0 assignments above are explicit in the retained pin tables.
@@ -114,6 +151,7 @@ Required bring-up experiment before Path-B promotion:
 |---|---|---|
 | SATA/PCIe auto-selection | CLOSED at technical qualification | Rev. 1.1 mode table explicitly specifies PEDET and polarity |
 | Shared lane-0 pin identity | CLOSED at technical qualification | Rev. 1.1 PCIe and SATA tables agree on 64/65/67/68 |
+| Physical M-key contact direction | OPEN / corrected | Platform-side M.2 authority requires TX→49/47 and RX→43/41; retained WIP root XML reverses those associations |
 | USB2/USB3 bridge function | CLOSED at technical qualification | Rev. 1.1 USB table and feature summary |
 | QFN-68 package existence | CLOSED, corroborated | Rev. 1.1 package statement plus JLC listing |
 | Land pattern | OPEN | Community SMD footprint is useful but has bad `through_hole` metadata; recreate and audit |
@@ -153,5 +191,7 @@ implementation path.
 - Realtek RTL9210B-CG Rev. 1.1 PDF, retained under `authority-inventory/rtl9210b/community-lz1/rtl9210b.pdf`.
 - [JLCPCB C5143573 listing](https://jlcpcb.com/partdetail/RealtekSemicon-RTL9210BCG/C5143573).
 - [HynixCJR/LZ-1-Backplane](https://github.com/HynixCJR/LZ-1-Backplane), corroborating WIP CAD.
+- [congatec AN43 M.2 pinout/reference designs](https://www.congatec.com/fileadmin/user_upload/Documents/Application_Notes/AN43_M.2_Pinout_Descriptions_and_Reference_Designs.pdf), platform-side Key-M contact and PEDET convention cross-check.
+- [PCI-SIG specifications](https://pcisig.com/specifications), governing M.2 specification index; the detailed standard remains licensed.
 - [bensuperpc/rtl9210](https://github.com/bensuperpc/rtl9210), firmware/configuration and recovery evidence.
 - [damnnfo/rtl9210b-firmware](https://github.com/damnnfo/rtl9210b-firmware), firmware/config artifacts.

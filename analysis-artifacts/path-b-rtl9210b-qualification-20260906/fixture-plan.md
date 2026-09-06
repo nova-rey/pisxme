@@ -48,8 +48,8 @@ These facts are safe to record as pin identity, not as a complete design:
 | 13 | CLKREQB, open-drain capable, active low | Expose to a test point and M-key contact 52 only after the application circuit defines pull-up and ownership. |
 | 14 | PERSTB, active-low 3.3 V output | Expose to a test point and M-key contact 50 only after sideband direction/sequence is confirmed. |
 | 61/62 | PCIe REFCLK P/N output, 100 MHz | Route as a future differential pair; termination, coupling, and load remain application-circuit gates. |
-| 64/65 | PCIe RX lane 0 / SATA RX pair | Shared lane-0 receive identity is corroborated; do not connect both protocol interpretations simultaneously. |
-| 67/68 | PCIe TX lane 0 / SATA TX pair | Shared lane-0 transmit identity is corroborated; do not connect both protocol interpretations simultaneously. |
+| 64/65 | PCIe RX lane 0 / SATA RX pair | Shared lane-0 receive identity is corroborated; the physical socket contacts are 43/41 (`PERp/PERn`, SSD-side `SATA-B-/SATA-B+`). |
+| 67/68 | PCIe TX lane 0 / SATA TX pair | Shared lane-0 transmit identity is corroborated; the physical socket contacts are 49/47 (`PETp/PETn`, SSD-side `SATA-A+/SATA-A-`). |
 | 10 | PCIe HOT_PLUG input / GPIO8 share | M-key PEWAKE/DAS/hot-plug treatment is unresolved; do not silently wire it. |
 | 12 | ISOLATEB output; controls PCIe or SATA power by mode | Board power switch/inrush implementation is unresolved. |
 | 3 | Active-low RST_INPIN | Bring out reset access; exact RC/host ownership is not closed. |
@@ -71,8 +71,8 @@ The current contact naming is:
 
 | M-key contact(s) | Current project name/function | Path-B disposition |
 |---|---|---|
-| 41/43 | SATA-B pair or PCIe PER lane 0 | Candidate shared receive pair; direct RTL mapping must be confirmed independently. |
-| 47/49 | SATA-A pair or PCIe PET lane 0 | Candidate shared transmit pair; direct RTL mapping must be confirmed independently. |
+| 41/43 | SATA-B pair or PCIe PER lane 0 | Shared receive physical contacts; RTL pins 65/64 respectively, with polarity/mode interpretation still requiring application-circuit review. |
+| 47/49 | SATA-A pair or PCIe PET lane 0 | Shared transmit physical contacts; RTL pins 67/68 respectively, with polarity/mode interpretation still requiring application-circuit review. |
 | 50 | PERST# | Sideband contract open. |
 | 52 | CLKREQ# | Pull-up, direction, and power sequencing open. |
 | 53/55 | REFCLK-/REFCLK+ | Direct RTL output/load and AC/termination details open. |
@@ -84,6 +84,18 @@ The current contact naming is:
 The current Path-A mode matrix is not a Path-B wiring authority. It contains
 selector-mediated ownership and must not be copied into a direct RTL9210B
 fixture.
+
+The physical contact assignments above correct the earlier report wording that
+called 68/67 the SATA-B pair and 64/65 the SATA-A pair. The correction is a
+documentation/authority repair only; no production schematic or PCB has been
+changed.
+
+The retained community `RTL9210B_ROOT.xml` must not be copied as a wiring
+oracle: its WIP hierarchy associates controller TX 68/67 with CN6 43/41 and
+controller RX 64/65 toward 49/47, opposite the platform-side contact roles
+asserted above. This conflict is retained as negative evidence and is one
+reason the standalone fixture remains gated on authoritative application
+documentation.
 
 ## Why a complete native fixture is stopped
 

@@ -2,7 +2,7 @@
 
 ## Current checkpoint — 2026-09-06
 
-Latest private Path-B evidence checkpoint: `d80a395`. The retained WIP
+Latest private Path-B evidence checkpoint: `5cb4415`. The retained WIP
 RTL9210B native XML support netlist now has a reproducible audit with
 component, rail, clock, SPI, reset, RSET, PEDET, ISOLATEB, shared-lane, and
 unused-pin assertions. Component-identity and PEDET-net mutation negative
@@ -11,6 +11,12 @@ production Path-B CAD was promoted and Path A remains intact. Open gates are
 still the authorized/current application circuit, M-key sideband ownership,
 released land pattern, SSD power/inrush/thermal budget, and traceable virgin
 firmware/configuration programming.
+
+The M-key lane-role review corrected the earlier ambiguous SATA labels: RTL
+TX 68/67 goes to physical contacts 49/47 (platform PET, SATA-A), and RTL RX
+64/65 returns from 43/41 (platform PER, SATA-B). The retained WIP root XML
+reverses those associations, so it is explicitly negative corroboration and
+must not seed Path-B CAD.
 
 The rejected RTL9210B straight-line PCB fixture remains a
 `ROUTE_IMPLEMENTATION_FAILURE`, not an architecture rejection. The next
