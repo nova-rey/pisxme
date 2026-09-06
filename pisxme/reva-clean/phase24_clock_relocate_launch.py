@@ -4,9 +4,9 @@ from heapq import heappush, heappop
 import math, pcbnew
 R=Path(__file__).resolve().parent
 SRC=R/'PHASE24_SELECTED_MACRO_STORAGE_V26_CLOCK_V2_SOUTH40.kicad_pcb'
-OUT=R/'PHASE24_SELECTED_MACRO_STORAGE_V26_CLOCK_V2_WEST_LAUNCH.kicad_pcb'
+OUT=R/'PHASE24_SELECTED_MACRO_STORAGE_V26_CLOCK_V2_COMMON_REGION.kicad_pcb'
 CLOCK={'/STORAGE/BRIDGE_XI','/STORAGE/BRIDGE_XO','/STORAGE/BRIDGE_VSSOSC'}
-DX,DY=-20.0,-10.0; STEP=.25
+DX,DY=-4.0,5.5; STEP=.25
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
 def xy(p): return pcbnew.ToMM(p.x),pcbnew.ToMM(p.y)
 def shift(p): return V(xy(p)[0]+DX,xy(p)[1]+DY)

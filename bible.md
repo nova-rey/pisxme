@@ -4374,3 +4374,5 @@ Reran the native KiCad regression for the complete V2 clock fixture: PASS. The s
 Selected the native-clean coordinated-layer clock fixture as the strongest support source. Its west/south V26 transform preserves pad-layer authority and has no shorting, crossing, clearance, or dangling-via classes; only three U7 launch tails and inherited board opens remain.
 # 2026-09-06 — Phase 24 common-region clock reachability
 An actual net-aware obstacle scan from ordinary U7 clock-pad exit vias found a large common B.Cu reachable region for XI, XO, and VSSOSC. This distinguishes endpoint-corridor placement failure from inherent U7 escape impossibility and directs the next candidate into that common region.
+# 2026-09-06 — Phase 24 reachable-region clock migration attempt
+Tested the measured common B.Cu region with a coherent clock-island translation. The inherited clock-tail endpoint was blocked before the first launch; rejected as stale-tail geometry. The next route must regenerate passive-to-U7 paths from actual pads, with V26 SATA/USB3 and PCIe unchanged.

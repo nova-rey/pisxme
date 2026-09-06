@@ -1,5 +1,16 @@
 # Phase 24 acreage validation status
 
+## Reachable-region clock migration attempt
+
+The measured common B.Cu region was exercised by translating the complete
+clock island and invoking the native obstacle search for its U7 launches.
+The translated support geometry itself did not introduce a new source-level
+short, but the inherited clock-tail endpoint was blocked before the first
+launch could reach it. This candidate is rejected as stale-tail geometry;
+the next implementation must regenerate the passive-to-U7 paths from actual
+pad locations rather than translate those tails. V26 SATA/USB3 and PCIe
+remain unchanged.
+
 ## Common-region reachability discriminator
 
 An actual-board reachability scan was run from ordinary via-exit points near
