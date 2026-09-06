@@ -1,5 +1,14 @@
 # Phase 24 acreage validation status
 
+## Layer-aware U7 clock launch search (rejected)
+
+The actual saved-board obstacle search was rerun with the V2 layer split:
+XI/XO on B.Cu and VSSOSC on F.Cu. It found an XI path but no legal VSSOSC
+path in the inherited U7-to-clock-island corridor, even after expanding the
+search window. No copper was promoted. This is a `ROUTE_IMPLEMENTATION_FAILURE`
+localized to the launch corridor; the native-valid passive clock graph and
+V26 SATA/USB3 routes remain preserved.
+
 ## Whole-board floorplan comparison and SATA route discrimination — 2026-09-06
 
 ## Clock launch obstacle-aware search (rejected)
