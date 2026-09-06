@@ -1774,3 +1774,14 @@ endpoint open. V12 also corrected the generic post-via emitter to begin the
 next-layer segment at the serialized via; native DRC/connectivity remained
 unchanged, isolating the remaining defect to the saved ESD-to-MagJack leg.
 No candidate was promoted.
+
+### Ethernet MDI focused regeneration pass — 2026-09-05
+
+After snapping every routed seed/entry to the 0.25 mm search grid and
+joining the native duplicate ESD pads from the upper approach terminal, V15
+completed all eight selected-macro MDI routes. Native refilled DRC reports
+`0` `shorting_items` and `0` `tracks_crossing`; the focused
+`phase24_ethernet_native_connectivity_audit.py` also passes all J7→U6/U9→J2
+net assertions. The report still contains 5 inherited dangling vias and 430
+unconnected items from the incomplete selected-macro/full-board basis, so
+this is a focused Ethernet MDI pass, not Phase 24 closure or promotion.

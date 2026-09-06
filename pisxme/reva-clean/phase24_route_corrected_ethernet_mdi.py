@@ -22,6 +22,7 @@ def V(x, y): return pcbnew.VECTOR2I_MM(x, y)
 def mm(p): return pcbnew.ToMM(p.x), pcbnew.ToMM(p.y)
 def grid(x, y): return round(x / STEP), round(y / STEP)
 def xy(g): return g[0] * STEP, g[1] * STEP
+def snap(p): return xy(grid(*p))
 def pad(board, ref, number):
     p = board.FindFootprintByReference(ref).FindPadByNumber(str(number))
     if p is None: raise RuntimeError(f"missing {ref}.{number}")
@@ -128,7 +129,17 @@ def route_path(occ, start, goal, start_layer, goal_layer):
     if g not in prev: raise RuntimeError(f"no route {start}->{goal} {start_layer}->{goal_layer}")
     path=[];cur=g
     while cur is not None:path.append(cur);cur=prev[cur]
-    return list(reversed(path))
+    path=list(reversed(path))
+    # A* can legally toggle layers more than once at the same coordinate.
+    # Since serialized same-net vias are de-duplicated, retaining those
+    # zero-length toggles creates dangling vias and disconnected chains.
+    compact=[path[0]]
+    for state in path[1:]:
+        if state[:2] == compact[-1][:2]:
+            compact[-1] = state
+        else:
+            compact.append(state)
+    return compact
 
 def add_via(board, net, x, y):
     # Do not serialize duplicate same-net vias when the search revisits a
@@ -195,14 +206,14 @@ for name,j7,esd,ep,jack,jp,return_layer in mapping:
     approach = pos(approach_pad); depart = pos(depart_pad)
     open_pad(occ, pad_layer(src_pad), src_pad)
     open_pad(occ, pad_layer(approach_pad), approach_pad)
-    approach_seed=(approach[0], approach[1]-0.75)
+    approach_seed=snap((approach[0], approach[1]-0.75))
     p1=route_path(occ,src,approach_seed,pad_layer(src_pad),pad_layer(approach_pad));emit(board,net,p1,occ)
     t=pcbnew.PCB_TRACK(board);t.SetStart(V(*approach_seed));t.SetEnd(V(*approach));t.SetLayer(pad_layer(approach_pad));t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(net);board.Add(t)
     mid=approach
     # Connect duplicate same-net ESD pads from the selected pad with local
     # native-pad-aware paths, then continue to the connector.
     for other in same_esd:
-        if other.GetNetname()==name and other.GetNumber()!=ep:
+        if other.GetNetname()==name and other.GetNumber()!=approach_pad.GetNumber():
             po=pos(other)
             # The duplicated same-net ESD pads are adjacent package pads;
             # connect them with a native short surface segment rather than
@@ -215,9 +226,9 @@ for name,j7,esd,ep,jack,jp,return_layer in mapping:
     # an explicit outside-of-field entry point, then use a short native-pad
     # dogbone; routing directly to the pad center made the search model weave
     # through neighboring barrels.
-    entry=(dst[0], dst[1] + (1.0 if dst[1] > 152.0 else -1.0))
+    entry=snap((dst[0], dst[1] + (1.0 if dst[1] > 152.0 else -1.0)))
     open_pad(occ, pad_layer(depart_pad), depart_pad)
-    depart_seed=(depart[0], depart[1]+0.75)
+    depart_seed=snap((depart[0], depart[1]+0.75))
     t=pcbnew.PCB_TRACK(board);t.SetStart(V(*depart));t.SetEnd(V(*depart_seed));t.SetLayer(pad_layer(depart_pad));t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(net);board.Add(t)
     p2=route_path(occ,depart_seed,entry,pad_layer(depart_pad),return_layer);emit(board,net,p2,occ)
     t=pcbnew.PCB_TRACK(board);t.SetStart(V(*entry));t.SetEnd(V(*dst));t.SetLayer(return_layer);t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(net);board.Add(t);mark_line(occ,return_layer,entry,dst,.14)
