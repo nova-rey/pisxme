@@ -1,44 +1,16 @@
-** Drc report for PHASE24_STORAGE_LOCAL_J3_EDGE_MANUAL_MONOTONIC.kicad_pcb **
-** Created on 2026-09-06T01:43:38 **
+** Drc report for PHASE24_STORAGE_LOCAL_J3_EDGE_USB3_DIRECT.kicad_pcb **
+** Created on 2026-09-06T01:41:18 **
 ** Report includes: Errors, Warnings, Exclusions **
 
-** Found 455 DRC violations **
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1265 mm)
-    Local override; error
-    @(33.7500 mm, 99.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 0.2500 mm
-    @(32.9600 mm, 99.1000 mm): Pad 3 [CM5_GBE_TD3_P] of J7 on F.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1365 mm)
-    Local override; error
-    @(36.0400 mm, 98.7000 mm): Pad 2 [/CORE_CM5/POWER_GND] of J7 on F.Cu
-    @(36.0000 mm, 99.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 0.2500 mm
+** Found 464 DRC violations **
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1265 mm)
     Local override; error
     @(32.9600 mm, 98.7000 mm): Pad 1 [/CORE_CM5/POWER_GND] of J7 on F.Cu
     @(33.5000 mm, 98.7500 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 0.2500 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1365 mm)
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1265 mm)
     Local override; error
-    @(35.7500 mm, 99.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 0.2500 mm
-    @(36.0400 mm, 98.7000 mm): Pad 2 [/CORE_CM5/POWER_GND] of J7 on F.Cu
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(73.0000 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 4.3000 mm
-    @(72.0000 mm, 109.5000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 8.0623 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1390 mm)
-    Local override; error
-    @(81.5000 mm, 119.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 5.0000 mm
-    @(85.5000 mm, 121.5000 mm): Pad 45 [/CORE_CM5/CM5_USB3_TX_N] of U7 on F.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0750 mm)
-    Local override; error
-    @(70.0400 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 2.9600 mm
-    @(72.0000 mm, 106.3000 mm): Via [/CORE_CM5/CM5_USB3_TX_N] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1292 mm)
-    Local override; error
-    @(70.0400 mm, 104.7000 mm): Pad 132 [/CORE_CM5/POWER_GND] of J7 on F.Cu
-    @(70.0400 mm, 104.3000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 2.0228 mm
-[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1253 mm)
-    Local override; error
-    @(80.0000 mm, 117.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 7.1063 mm
-    @(85.5000 mm, 121.0000 mm): Pad 44 [<no net>] of U7 on F.Cu
+    @(33.7500 mm, 99.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 0.2500 mm
+    @(32.9600 mm, 99.1000 mm): Pad 3 [CM5_GBE_TD3_P] of J7 on F.Cu
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1100 mm)
     Local override; error
     @(226.0000 mm, 104.7500 mm): Track [/REGULATORS/PG_BRIDGE_3V3] on F.Cu, length 2.7500 mm
@@ -47,10 +19,6 @@
     Local override; error
     @(227.2500 mm, 104.7500 mm): Track [/REGULATORS/PG_BRIDGE_3V3] on F.Cu, length 1.2500 mm
     @(225.0000 mm, 104.6250 mm): Pad 18 [POWER_GND] of U4 on F.Cu
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(83.0000 mm, 108.8000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 10.2000 mm
-    @(82.9500 mm, 110.0000 mm): Track [/V100_PCIE/V100_PET0_N] on F.Cu, length 1.0500 mm
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1473 mm)
     Local override; error
     @(70.0400 mm, 100.3000 mm): Pad 110 [/CORE_CM5/CM5_REFCLK_P] of J7 on F.Cu
@@ -61,8 +29,56 @@
     @(70.0400 mm, 99.9000 mm): Pad 108 [/CORE_CM5/POWER_GND] of J7 on F.Cu
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(83.0000 mm, 108.8000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 10.2000 mm
-    @(82.0000 mm, 118.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 4.0311 mm
+    @(81.0000 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 15.3000 mm
+    @(76.0000 mm, 103.1000 mm): Track [/CORE_CM5/CM5_PET0_N] on F.Cu, length 8.5506 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(76.0000 mm, 103.1000 mm): Track [/CORE_CM5/CM5_PET0_N] on F.Cu, length 8.5506 mm
+    @(70.0400 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 10.9600 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(70.0400 mm, 106.3000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 9.9600 mm
+    @(76.0000 mm, 103.1000 mm): Track [/CORE_CM5/CM5_PET0_N] on F.Cu, length 8.5506 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(76.0000 mm, 102.7000 mm): Track [/CORE_CM5/CM5_PET0_P] on F.Cu, length 6.0326 mm
+    @(70.0400 mm, 104.3000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 8.9600 mm
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_RX_P and POWER_GND)
+    Local override; error
+    @(79.0000 mm, 120.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 6.5000 mm
+    @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(78.0000 mm, 103.9000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 16.1000 mm
+    @(70.0400 mm, 104.3000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 8.9600 mm
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_RX_N and POWER_GND)
+    Local override; error
+    @(78.0000 mm, 120.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 7.5000 mm
+    @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(70.0400 mm, 103.9000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 7.9600 mm
+    @(76.0000 mm, 102.7000 mm): Track [/CORE_CM5/CM5_PET0_P] on F.Cu, length 6.0326 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0250 mm)
+    Local override; error
+    @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
+    @(80.0000 mm, 106.3000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 15.2000 mm
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/CM5_USB3_RX_P and POWER_GND)
+    Local override; error
+    @(79.0000 mm, 104.3000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 16.2000 mm
+    @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(81.0000 mm, 106.7000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 15.3000 mm
+    @(80.0000 mm, 121.5000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 5.5000 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1365 mm)
+    Local override; error
+    @(36.0400 mm, 98.7000 mm): Pad 2 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0000 mm, 99.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1365 mm)
+    Local override; error
+    @(35.7500 mm, 99.0000 mm): Track [CM5_GBE_TD1_P] on F.Cu, length 0.2500 mm
+    @(36.0400 mm, 98.7000 mm): Pad 2 [/CORE_CM5/POWER_GND] of J7 on F.Cu
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1265 mm)
     Local override; error
     @(32.9600 mm, 98.7000 mm): Pad 1 [/CORE_CM5/POWER_GND] of J7 on F.Cu
@@ -70,11 +86,19 @@
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1365 mm)
     Local override; error
     @(32.9600 mm, 98.7000 mm): Pad 1 [/CORE_CM5/POWER_GND] of J7 on F.Cu
-    @(32.7500 mm, 99.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 0.2500 mm
+    @(33.0000 mm, 99.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 0.2500 mm
 [clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1365 mm)
     Local override; error
     @(32.9600 mm, 98.7000 mm): Pad 1 [/CORE_CM5/POWER_GND] of J7 on F.Cu
-    @(33.0000 mm, 99.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 0.2500 mm
+    @(32.7500 mm, 99.0000 mm): Track [CM5_GBE_TD3_P] on F.Cu, length 0.2500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(78.0000 mm, 120.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 7.5000 mm
+    @(79.1000 mm, 117.5000 mm): Track [POWER_GND] on F.Cu, length 2.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(71.1000 mm, 117.5000 mm): Track [POWER_GND] on F.Cu, length 8.0000 mm
+    @(78.0000 mm, 103.9000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 16.1000 mm
 [courtyards_overlap]: Courtyards overlap
     Rule: board setup constraints courtyard; error
     @(65.0000 mm, 168.5000 mm): Footprint C7
@@ -802,20 +826,16 @@
     @(17.0000 mm, 149.5000 mm): Via [CM5_GBE_TD1_P] on F.Cu - B.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
-    @(139.7250 mm, 120.7500 mm): Pad 55 [<no net>] of J3 on F.Cu
-    @(139.7250 mm, 121.2500 mm): Pad 53 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
-    @(139.7250 mm, 120.7500 mm): Pad 55 [<no net>] of J3 on F.Cu
-    @(139.7250 mm, 120.2500 mm): Pad 57 [<no net>] of J3 on F.Cu
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; error
     @(147.2750 mm, 120.5000 mm): Pad 56 [<no net>] of J3 on F.Cu
     @(147.2750 mm, 120.0000 mm): Pad 58 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(147.2750 mm, 120.5000 mm): Pad 56 [<no net>] of J3 on F.Cu
     @(147.2750 mm, 121.0000 mm): Pad 54 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(139.7250 mm, 120.2500 mm): Pad 57 [<no net>] of J3 on F.Cu
+    @(139.7250 mm, 120.7500 mm): Pad 55 [<no net>] of J3 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(147.2750 mm, 131.5000 mm): Pad 59 [<no net>] of J3 on F.Cu
@@ -884,6 +904,18 @@
     Rule: board setup solder mask min width; error
     @(139.7250 mm, 116.2500 mm): Pad 73 [<no net>] of J3 on F.Cu
     @(139.7250 mm, 115.7500 mm): Pad 75 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(78.0000 mm, 120.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 7.5000 mm
+    @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(79.0000 mm, 104.3000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 16.2000 mm
+    @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(79.0000 mm, 120.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 6.5000 mm
+    @(79.1000 mm, 120.0000 mm): Pad 2 [POWER_GND] of C15 on F.Cu
 [solder_mask_bridge]: Front solder mask aperture bridges items with different nets
     Rule: board setup solder mask min width; error
     @(139.7250 mm, 134.2500 mm): Pad 1 [/STORAGE/SATA_M2_TX_P] of J3 on F.Cu
@@ -1052,6 +1084,10 @@
     Rule: board setup solder mask min width; error
     @(147.2750 mm, 121.5000 mm): Pad 52 [<no net>] of J3 on F.Cu
     @(147.2750 mm, 121.0000 mm): Pad 54 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(139.7250 mm, 121.2500 mm): Pad 53 [<no net>] of J3 on F.Cu
+    @(139.7250 mm, 120.7500 mm): Pad 55 [<no net>] of J3 on F.Cu
 [track_dangling]: Track has unconnected end
     Local override; warning
     @(122.5000 mm, 135.5000 mm): Track [POWER_GND] on F.Cu, length 9.0000 mm
@@ -1126,6 +1162,9 @@
     @(82.9500 mm, 106.0000 mm): Track [/V100_PCIE/V100_PET0_P] on F.Cu, length 1.0500 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
+    @(82.9500 mm, 110.0000 mm): Track [/V100_PCIE/V100_PET0_N] on F.Cu, length 1.0500 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
     @(83.2150 mm, 56.8300 mm): Track [/ETHERNET/ETH_CT1] on B.Cu, length 15.7614 mm
 [track_dangling]: Track has unconnected end
     Local override; warning
@@ -1148,9 +1187,6 @@
 [track_dangling]: Track has unconnected end
     Local override; warning
     @(76.0000 mm, 102.7000 mm): Track [/CORE_CM5/CM5_PET0_P] on F.Cu, length 6.0326 mm
-[track_dangling]: Track has unconnected end
-    Local override; warning
-    @(76.0000 mm, 103.1000 mm): Track [/CORE_CM5/CM5_PET0_N] on F.Cu, length 8.5506 mm
 [holes_co_located]: Drilled holes co-located
     Local override; warning
     @(77.5000 mm, 65.7000 mm): Via [POWER_GND] on F.Cu - B.Cu
@@ -2030,24 +2066,24 @@
     @(235.0000 mm, 103.8750 mm): Pad 17 [POWER_GND] of U5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(60.0000 mm, 180.0000 mm): Track [/CORE_CM5/CM5_5V] on B.Cu, length 18.0000 mm
+    @(63.6500 mm, 170.5000 mm): Track [/CORE_CM5/CM5_5V] on F.Cu, length 10.1771 mm
     @(62.7000 mm, 176.2500 mm): Track [/CORE_CM5/CM5_5V] on F.Cu, length 1.3000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(232.7500 mm, 107.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on F.Cu, length 1.5000 mm
-    @(232.7500 mm, 105.2500 mm): Track [/REGULATORS/BRIDGE_1V1] on F.Cu, length 1.5000 mm
+    @(232.7500 mm, 105.2500 mm): Pad 5 [/REGULATORS/BRIDGE_1V1] of U5 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(239.5000 mm, 115.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R22 on F.Cu
-    @(239.0000 mm, 110.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on B.Cu, length 6.0000 mm
+    @(239.0000 mm, 116.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on B.Cu, length 25.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(242.0000 mm, 118.5000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of R19 on F.Cu
-    @(239.0000 mm, 110.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on B.Cu, length 6.0000 mm
+    @(239.0000 mm, 116.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on B.Cu, length 25.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(250.0000 mm, 139.3500 mm): Track [/REGULATORS/BRIDGE_1V1] on F.Cu, length 1.2000 mm
-    @(204.6500 mm, 168.0000 mm): Track [/REGULATORS/BRIDGE_1V1] on F.Cu, length 1.8000 mm
+    @(250.0000 mm, 139.3500 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C46 on F.Cu
+    @(204.6500 mm, 168.0000 mm): Pad 1 [/REGULATORS/BRIDGE_1V1] of C41 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(10.0000 mm, 108.0000 mm): PTH pad 2 [12V_PROTECTED] of Q2
@@ -2166,7 +2202,7 @@
     @(56.4000 mm, 118.7500 mm): PTH pad 7 [/POWER_INPUT/FUSED_12V_B] of F2
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(233.6000 mm, 38.7500 mm): Track [/POWER_INPUT/12V_IN_A] on B.Cu, length 222.0262 mm
+    @(12.0000 mm, 25.0000 mm): PTH pad 1 [/POWER_INPUT/12V_IN_A] of J5
     @(15.8000 mm, 70.0000 mm): Pad 2 [/POWER_INPUT/12V_IN_A] of C3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -2174,7 +2210,7 @@
     @(21.4500 mm, 76.4500 mm): Track [/POWER_INPUT/12V_IN_A] on F.Cu, length 4.5500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(108.0000 mm, 32.0000 mm): Track [/POWER_INPUT/FUSED_12V_A] on F.Cu, length 12.0000 mm
+    @(108.0000 mm, 32.0000 mm): Pad 1 [/POWER_INPUT/FUSED_12V_A] of D1 on F.Cu
     @(27.4600 mm, 78.0000 mm): Track [/POWER_INPUT/FUSED_12V_A] on B.Cu, length 5.3480 mm
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -2182,7 +2218,7 @@
     @(80.0500 mm, 164.0000 mm): Track [/REGULATORS/FB_CM5_5V] on F.Cu, length 2.5000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(70.0000 mm, 174.7500 mm): Track [/REGULATORS/PG_CM5_5V] on B.Cu, length 8.7500 mm
+    @(70.0000 mm, 166.0000 mm): Track [/REGULATORS/PG_CM5_5V] on B.Cu, length 10.5475 mm
     @(62.2500 mm, 164.7500 mm): Track [/REGULATORS/PG_CM5_5V] on F.Cu, length 1.7500 mm
 [unconnected_items]: Missing connection between items
     Local override; error

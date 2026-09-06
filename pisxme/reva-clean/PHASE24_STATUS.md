@@ -2474,3 +2474,20 @@ connector-side pair ordering. This is `ROUTE_IMPLEMENTATION_FAILURE`, not
 `MACRO-PLACEMENT FAILURE`; the placement comparison remains based on native
 pad topology and mechanical screening only. No route or validation severity
 was waived, and Phase 18/19 remain open pending a proven-topology adaptation.
+
+## USB3 transition-semantics correction — 2026-09-06
+
+Inspection of the serialized manual probe found an authoring defect in the
+disposable layer-transition emitter: a transition point with a changed XY
+coordinate skipped the segment between the via and the next layer. The probe
+was corrected to emit duplicate-coordinate transition points, preserving real
+through-via contact on both copper layers. Fresh native DRC improved from 253
+to 251 unconnected items while retaining 0 shorts; it still reports 3 track
+crossings, 15 clearance items, 6 dangling vias, and 27 dangling tracks, so it
+remains unpromoted. This confirms the prior failure was partly
+`ROUTE_IMPLEMENTATION_FAILURE` in the generator, not a placement verdict.
+
+Consultant dispatch was retried for the transition/escape review and again
+returned `agent thread limit reached`; local native serialized-board evidence
+remains the active basis. No validation severity or architecture constraint
+was relaxed.
