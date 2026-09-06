@@ -3294,3 +3294,23 @@ old storage route remains donor evidence only; Phase 24 is open.
 Receipt:
 `phase24_sync_u7_route_names.py` and
 `PHASE24_STORAGE_TI_PINFIELD_REPLACED_ROUTE_NAMES-drc.rpt`.
+
+## TUSB9261 precision-reference support added — 2026-09-06
+
+The TI implementation guide requires a 10-kOhm, 1% precision resistor no
+farther than 500 mil from USB_R1 (pin 38) to USB_R1RTN (pin 39). The clean
+STORAGE sheet now includes R24, `RC0402FR-0710KL`, with explicit
+`BRIDGE_R1` and `BRIDGE_R1RTN` connections to those native U7 pins. Native
+netlist export shows both exact two-member nets, and the mandatory TI pin
+contract audit passes with no missing pins. Native ERC still reports the
+pre-existing project-wide findings (635 in this run), with no targeted
+hierarchy-association errors.
+
+USB_VBUS divider/support and fresh U7 PCB routing remain open; this resistor
+addition is not being represented as completed hardware support until those
+circuits and the regenerated PCB pass native validation.
+
+Receipts:
+`PHASE24_CLEAN_TUSB_PINFIELD_R1.kicadxml`,
+`PHASE24_CLEAN_TUSB_PINFIELD_R1-erc.rpt`, and the TI
+`TUSB9261-implementation-guide-revE.pdf`.
