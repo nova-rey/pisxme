@@ -4422,3 +4422,5 @@ Corrected hierarchical U7 net resolution, passed TI pin/net authority audits, an
 Rejected a dedicated J7 source-via escape after native integrated DRC regressed to 36 shorts and 23 crossings; retained the selected macro and classified the result as route implementation failure.
 # 2026-09-06 — Phase 24 corrected TI hierarchy binding and source-route cycle
 Rebound regenerated TI U7 pads to the existing CM5 hierarchy, passed native authority audits, and recorded integrated fixed, obstacle-aware, and B.Cu source-escape controls as disposable route-development evidence.
+# 2026-09-06 — Phase 24 CM5IO source-escape integrated cycle
+Tested a clipped native CM5IO source escape with an integrated B.Cu continuation; native DRC rejected the disposable result with 16 shorts and 28 crossings, classified as route implementation failure.

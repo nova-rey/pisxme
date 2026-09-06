@@ -4090,6 +4090,37 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## CM5IO-derived source-escape integrated cycle — 2026-09-06
+
+The next route class copied only the measured source-side geometry from the
+native CM5IO-derived USB3 fixture, clipped at the explicit x=77 mm handoff,
+then routed the remaining corridor on B.Cu with ordinary transitions into
+the TI U7 land field. Native source handoffs were `(77.0,103.40)`,
+`(77.0,101.72)`, `(77.0,78.0)`, and `(77.0,78.5)` for RX_N, RX_P, TX_N,
+and TX_P respectively.
+
+Native DRC rejected `PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_CM5IO_SOURCE_INTEGRATED.kicad_pcb`
+with 422 violations: 16 shorts, 28 track crossings, 89 clearances, 114
+hole-clearance findings, and 465 unconnected items. The TX handoffs expose a
+long incomplete corridor and the candidate is discarded. This remains
+`ROUTE_IMPLEMENTATION_FAILURE`: it is a clipped reference transplant plus a
+first integrated continuation, not a validated route cycle proving a
+placement-inherent obstruction. No PCIe copper or production candidate was
+changed.
+
+The high-speed specialist dispatch was attempted but the orchestration
+service again returned `collab spawn failed: agent thread limit reached`.
+This availability issue is not treated as an engineering blocker; the next
+cycle will use the native source evidence and a different integrated
+transition topology.
+
+Receipt: `phase24_cm5io_source_escape_integrated.py` and
+`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_CM5IO_SOURCE_INTEGRATED-drc.rpt`.
+
+`CM5IO_SOURCE_ESCAPE_CYCLE = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`
+
 ## Selected-macro integrated B.Cu source-escape experiment — 2026-09-06
 
 The integrated B.Cu-only obstacle-aware experiment was followed by a
