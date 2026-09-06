@@ -117,11 +117,25 @@ def main():
         own(p11, n); own(p12, n)
         # RX uses the reserved B.Cu corridor.  The two F.Cu dogbones are
         # outside the SMD pad rows and terminate in ordinary through-vias.
-        xv = 149.4 if u11n == "26" else 149.0
-        yv = 170.0 if u11n == "26" else 175.0
+        # The adjacent QFN64 RX pads share a bottom-edge row.  Give RXP a
+        # lateral 0.6-mm escape so its via is not parallel/clearance-bound
+        # to the RXN pad escape.
+        xv = 150.0 if u11n == "26" else 149.0
+        # RXN drops on F.Cu to the lower lane height; this keeps its B.Cu
+        # launch from crossing the RXP return vertical at x=235.
+        yv = 170.0 if u11n == "26" else 200.0
         tx = 235.0 if u11n == "26" else 240.0
         ty = 190.0 if u11n == "26" else 200.0
-        escape_via(b, n, p11, xv, yv); escape_via(b, n, p12, tx, y2)
+        if u11n == "26":
+            # RXP is the third-from-left bottom-edge pad.  Exit downward
+            # before moving laterally; a horizontal first move would cross
+            # the adjacent QFN64 pads.
+            a = pos(p11)
+            path(b, n, [a, V(pcbnew.ToMM(a.x), 158.0), V(xv, yv)], F)
+            via(b, n, xv, yv)
+        else:
+            escape_via(b, n, p11, xv, yv)
+        escape_via(b, n, p12, tx, y2)
         lane_x = 140.0 if u11n == "26" else 250.0
         path(b, n, [V(xv, yv), V(lane_x, yv), V(lane_x, ty),
                     V(tx, ty), V(tx, y2)], B)

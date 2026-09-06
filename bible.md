@@ -4696,3 +4696,8 @@ JMS583 support/mode-control authority is authored; native copper, mode-aware
 validation, TE parity, and procurement risk remain open. Report 28 records
 the corrected-package USB3 candidate with zero shorting findings and one
 remaining crossing.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: corrected the JMS583 QFN64
+bottom-row RXP escape and retained RXN on the lower B.Cu lane. Native report
+31 has zero authored shorting findings and zero track-width findings; one
+inherited CM5-source crossing remains, with partial-fixture support opens
+retained. This is a routing discriminator, not storage closure.

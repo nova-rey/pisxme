@@ -29,8 +29,9 @@ only.
   `PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb`; it is not production
   authority. The latest corrected-package USB3 fixture is
   `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED.kicad_pcb`, with native report
-  `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED28-drc.rpt`: no authored-path
-  shorting findings, one remaining track crossing, and partial-fixture
+  `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED31-drc.rpt`: no authored-path
+  shorting findings, no track-width findings, one inherited CM5-source
+  crossing, and partial-fixture
   unconnected items. It is not yet a route or release pass.
 
 ## CURRENT OPEN GATES
@@ -219,3 +220,10 @@ package. USB3 isolated report
 first route against that corrected geometry: it reports no selector/source
 shorting items and five localized track crossings. It is not a route pass,
 but it supersedes results obtained with the malformed 42-pad footprint.
+
+The follow-on QFN64 package-aware escape moved RXP perpendicular to the
+bottom pad row and retained RXN on the reserved lower B.Cu lane. Report
+`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED31-drc.rpt` records zero authored
+shorting findings and zero track-width findings; the only crossing is the
+pre-existing CM5 source fanout. The isolated fixture still has intentional
+support-pad unconnected findings and is not yet a complete storage pass.
