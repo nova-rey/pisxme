@@ -4382,3 +4382,5 @@ Fresh pad/net-derived common-region routing authored complete XI and XO trees, t
 The pad/net-derived generator authored valid XI/XO branches in a coherent open island but could not place VSSOSC after the shared B.Cu channel was occupied. Candidate rejected as sequential channel-assignment failure; native clock source and V26 data/PCIe copper preserved.
 # 2026-09-06 — Phase 24 reduced-envelope clock search
 Reran common-region clock routing with actual pad envelopes and a small raster guard. XI/XO trees completed, VSSOSC remained unreachable after shared B.Cu occupancy; candidate not promoted and native DRC gates remain unchanged.
+# 2026-09-06 — Phase 24 clock net-order discriminator
+Ran all six XI/XO/VSSOSC routing permutations from clean regenerated boards. None completed the three-net graph; failures moved among shared crystal/passive targets. Net ordering is exhausted for this placement; validated SATA/USB3/PCIe copper preserved.

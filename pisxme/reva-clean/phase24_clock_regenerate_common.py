@@ -1,12 +1,13 @@
 """Regenerate U7 clock support in a measured open region."""
 from pathlib import Path
+import os
 from heapq import heappush, heappop
 import math
 import pcbnew
 
 R = Path(__file__).resolve().parent
 BASE = R / 'PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_PAIR_CORRIDOR_V26_AUTH_SKEW.kicad_pcb'
-OUT = R / 'PHASE24_SELECTED_MACRO_STORAGE_V26_CLOCK_REGENERATED_COMMON.kicad_pcb'
+OUT = R / os.environ.get('PISXME_CLOCK_OUT','PHASE24_SELECTED_MACRO_STORAGE_V26_CLOCK_REGENERATED_COMMON.kicad_pcb')
 STEP = .25
 NETS = {'XI':'/STORAGE/BRIDGE_XI','XO':'/STORAGE/BRIDGE_XO','VS':'/STORAGE/BRIDGE_VSSOSC'}
 MAP = {'Y1':{'1':'XI','2':'VS','3':'XO','4':'VS'}, 'R23':{'1':'XI','2':'XO'},
@@ -65,7 +66,10 @@ def route(start, goal, occ, reserved):
 
 reserved={pcbnew.F_Cu:set(), pcbnew.B_Cu:set()}
 layers={'XI':pcbnew.B_Cu,'XO':pcbnew.B_Cu,'VS':pcbnew.B_Cu}
-for number, key in [('52','XI'),('54','XO'),('53','VS')]:
+default_order=[('52','XI'),('54','XO'),('53','VS')]
+by_key={k:(n,k) for n,k in default_order}
+order=[by_key[k] for k in os.environ.get('PISXME_CLOCK_ORDER','XI,XO,VS').split(',')]
+for number, key in order:
     p=next(p for p in u.Pads() if p.GetNumber()==number); net=nets[key]
     start=xy(p.GetPosition()); layer=layers[key]; via=(start[0]+({'52':.75,'54':-.25,'53':.25}[number]),start[1]+1.0)
     targets=[]

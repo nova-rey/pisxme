@@ -1,5 +1,13 @@
 # Phase 24 acreage validation status
 
+## Clock net-order permutation discriminator
+
+The fresh common-region generator was run from clean copies under all six
+XI/XO/VSSOSC tree-order permutations. None completed all three trees; each
+failed at a different shared crystal/passive target. This exhausts net-order
+selection for the current island placement without relaxing native DRC. No
+candidate was promoted and the V26 SATA/USB3/PCIe copper remains unchanged.
+
 ## Reduced-envelope coordinated clock search
 
 The common-region generator was rerun with actual pad envelopes plus a small
