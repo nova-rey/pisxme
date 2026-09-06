@@ -2543,3 +2543,14 @@ TX-pair interaction and an RX interaction with inherited bridge power, with
 crossing/clearance findings also remaining. It is rejected as
 `ROUTE_IMPLEMENTATION_FAILURE`. No copper was promoted and the selected
 macro-floorplan is unchanged.
+
+## USB3 dense-pad escape follow-up — 2026-09-06
+
+A second CM5IO-style B.Cu corridor trial kept the corrected J7 launch but
+moved the endpoint transitions to horizontal approaches at U7. Native DRC
+found 12 shorts, 42 crossing findings, and 259 unconnected items; the shorts
+are concentrated in the RX/TX pair approaches at the U7 pad field. This is
+also rejected as `ROUTE_IMPLEMENTATION_FAILURE`. The two corrected launch
+attempts have now demonstrated that further hand-authored corridor tuning is
+low-value; the next attempt must transplant a proven dense-pad escape or use
+native interactive routing semantics. The macro-floorplan remains unchanged.
