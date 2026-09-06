@@ -1,5 +1,17 @@
 # Append-only project bible
 
+## 2026-09-06 — Authorized dual-mode storage upgrade qualification checkpoint
+
+Checkpointed Phase 24 at `68aac08` before editing production KiCad assets.
+Retained the selected `SWAP_ETH_STORAGE` macro and all prior routing evidence;
+qualified TUSB9261 and the TI selector families for design review; identified
+JAE `SM3ZS067U215BMR1500` as the correct M-key family direction; and rejected
+ASM2362 implementation because the public source lacks the exact design pack,
+firmware/configuration/programming path, and traceable prototype procurement
+needed for a pad-authoritative schematic. The original SATA-only board remains
+preserved. See the storage-upgrade checkpoint, qualification, source receipt,
+and blocker report under `pisxme/reva-clean/`.
+
 ## 2026-09-05 — Phase 24 clock orientation trial rejected
 
 Rejected the 90-degree near-west crystal trial; explicit ordered three-lane escape remains required.

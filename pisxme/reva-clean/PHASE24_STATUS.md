@@ -1,5 +1,21 @@
 # Phase 24 acreage validation status
 
+## Authorized storage-island upgrade checkpoint — 2026-09-06
+
+The Phase 24 route-development work was safely checkpointed at HEAD
+`68aac08` before the authorized SATA/NVMe storage-island upgrade. The selected
+`SWAP_ETH_STORAGE` macro, CM5 source topology, PCIe/Ethernet/SERVICE anchors,
+and all rejected routing evidence remain preserved. The upgrade qualification
+retains TI `TUSB9261IPVP` as the SATA bridge and qualifies the TI selector
+families for design review, but does not yet authorize a schematic/PCB edit:
+the ASM2362 NVMe bridge lacks a public exact pin/land-pattern, reference
+circuit, firmware/configuration, programming, and traceable procurement
+package. The existing J3 is B-key-only; JAE's M-key family direction is
+recorded but its exact released drawing must still be captured and compared.
+See `PHASE24_STORAGE_UPGRADE_CHECKPOINT_20260906.md`,
+`PHASE24_STORAGE_UPGRADE_QUALIFICATION.md`, and
+`PHASE24_STORAGE_UPGRADE_BLOCKER.md`. `PHASE24` remains `OPEN`.
+
 ## Mixed-layer regenerated clock-support milestone
 
 `PHASE24_CLOCK_LAYERESC_XI_p5_1p0.kicad_pcb` is superseded by
