@@ -3503,6 +3503,29 @@ Receipts: `phase24_reroute_storage_usb3_native.py`,
 `PHASE24_SELECTED_MACRO_SWAP_STORAGE_ORDERED_ESCAPE.kicad_pcb`, and
 `PHASE24_SELECTED_MACRO_SWAP_STORAGE_ORDERED_ESCAPE-drc.rpt`.
 
+## Selected macro USB3 pair-corridor cycle 3 — 2026-09-06
+
+The A* route class was replaced with an explicit pair-preserving monotonic
+corridor based on native transformed pad coordinates. The four source-to-TI
+USB3 pairs now all pass the native endpoint audit. The accepted route shape
+uses ordered F.Cu corridors, no vias, and the selected U7 position; measured
+track lengths are RX_N 41.56 mm, RX_P 41.66 mm, TX_N 40.66 mm, and TX_P
+40.76 mm. Native DRC reports no `tracks_crossing`, `shorting_items`, or
+high-speed clearance category on this candidate.
+
+The fixture-wide DRC still reports 74 findings: 88 unconnected items from
+the intentionally incomplete support/connector fixture and 63 inherited
+J3 solder-mask bridge findings, plus unrelated silkscreen/text findings.
+Those are not waived; this is a channel-level route-development result and
+does not close USB3 or Phase 24. The candidate is retained as the current
+USB3 escape method and the next work is a compatible SATA pair corridor and
+complete support-circuit integration.
+
+Receipt: `phase24_storage_usb3_pair_corridor.py`,
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_USB3_PAIR_CORRIDOR_V3.kicad_pcb`,
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_USB3_PAIR_CORRIDOR_V3-drc.rpt`, and
+`phase24_usb3_native_connectivity_audit.py`.
+
 The Phase 14 footprint-authority regression now also checks the four side
 orientations, so future regeneration cannot silently restore the overlapping
 vertical-land error.
