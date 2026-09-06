@@ -1981,3 +1981,14 @@ remain. The trial is rejected as `ROUTE_IMPLEMENTATION_FAILURE`. This does
 not reject the macro-placement: the defect is localized to U7 source-via
 escape geometry, and the prior zero-short/zero-crossing candidate remains the
 active comparison baseline.
+
+### U7 source dogbone escape trial — 2026-09-05
+
+The next local experiment avoided via-in-pad at U7 by routing each bridge-side
+RX lane on F.Cu to a separate dogbone point, placing an ordinary via there,
+and continuing on B.Cu to the coupling capacitor. Native DRC reported seven
+shorting items, two track crossings, one hole-clearance violation, and 23
+ordinary clearance violations, with 428 incomplete-board unconnected items.
+The trial is rejected as `ROUTE_IMPLEMENTATION_FAILURE`. The result is
+localized to the chosen U7 escape coordinates competing with the pad/clock
+field; it does not reject the storage macro or the native-pad routing method.

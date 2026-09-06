@@ -157,8 +157,14 @@ for name,up,cap,cp,jp in jobs:
     a=xy(pad(b,'U7',up).GetPosition()); z=xy(pad(b,cap,cp).GetPosition())
     bridge_start = B if name.startswith('BRIDGE_SATA_RX_') else F
     if bridge_start == B:
-        via(b,bridge,a)
-    path=route(occ,hard,a,z,bridge_start,F); emit(b,bridge,path,occ)
+        # Escape the dense U7 pad field on F.Cu before changing layers.  A
+        # via directly on the QFN pad field is not an acceptable terminal.
+        dogbone = (101.0,118.0) if name == 'BRIDGE_SATA_RX_P' else (101.0,121.0)
+        path=route(occ,hard,a,dogbone,F,F,None,2.0,0.5); emit(b,bridge,path,occ)
+        via(b,bridge,dogbone)
+        path=route(occ,hard,dogbone,z,B,F); emit(b,bridge,path,occ)
+    else:
+        path=route(occ,hard,a,z,F,F); emit(b,bridge,path,occ)
     a=xy(pad(b,cap,'1').GetPosition()); z=xy(pad(b,'J3',jp).GetPosition())
     # Keep the RX socket pair on B.Cu after an ordinary via at the coupling
     # capacitor; TX remains F.Cu.  This is a permitted layer split and avoids
