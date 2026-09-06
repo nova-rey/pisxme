@@ -11,6 +11,22 @@ M-key socket candidate; exact customer CAD/pad parity remains open. Resume
 the preserved Phase 24 checkpoint only after the one-socket dual-mode island
 is implemented and its mode-aware/native validation passes.
 
+## Live dual-mode checkpoint — 2026-09-06
+
+Latest private checkpoint: `9f1bca1` (`reva-clean`). The active storage
+candidate is `JMS583-QHFA3A` plus retained `TUSB9261IPVP`, TI
+`HD3SS6126RUAR`/`HD3SS3412RUAR`, TE `1-2199230-4`, and U14
+`SN74LVC1G17DBVR`, all inside the storage island. JMS583 pin authority and
+M-key contact 69 PEDET/CONFIG1 are corrected and structural audits pass.
+
+The candidate is not release-ready: native schematic ERC reports 322 findings
+at full severity (13 errors on the child alone, including inherited root
+hierarchy/dangling-label issues), and the native PCB placement fixture remains
+unrouted with 1,013 DRC violations and 499 unconnected items. The next action
+is to instantiate the three-position SATA/AUTO/NVMe override and documented
+JMS583 support network, then create and route a mode-aware native fixture.
+Phase 24 whole-board work remains paused.
+
 ## Authorized storage-island upgrade checkpoint — 2026-09-06
 
 The Phase 24 route-development work was safely checkpointed at HEAD
