@@ -7,10 +7,11 @@ TI lands.  No expected graph edges are authored.
 from pathlib import Path
 from heapq import heappush, heappop
 import pcbnew
+import os
 
 R=Path(__file__).resolve().parent
-BASE=R/'PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_REVIEW.kicad_pcb'
-OUT=R/'PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_BCU_INTEGRATED_ASTAR.kicad_pcb'
+BASE=R/os.environ.get('P24_TI_BCU_BASE','PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_REVIEW.kicad_pcb')
+OUT=R/os.environ.get('P24_TI_BCU_OUT','PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_BCU_INTEGRATED_ASTAR.kicad_pcb')
 F,B=pcbnew.F_Cu,pcbnew.B_Cu; STEP=.25; WIDTH=.15
 JOBS=(('CM5_USB3_RX_N','128','42'),('CM5_USB3_RX_P','130','43'),('CM5_USB3_TX_N','140','45'),('CM5_USB3_TX_P','142','46'))
 def V(p): return pcbnew.VECTOR2I_MM(float(p[0]),float(p[1]))

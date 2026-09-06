@@ -4426,3 +4426,5 @@ Rebound regenerated TI U7 pads to the existing CM5 hierarchy, passed native auth
 Tested a clipped native CM5IO source escape with an integrated B.Cu continuation; native DRC rejected the disposable result with 16 shorts and 28 crossings, classified as route implementation failure.
 # 2026-09-06 — Phase 24 TI U7 orientation reachability discriminator
 Generated five native TI storage-orientation candidates; all four USB3 paths were reachable, while the shortest U7 0-degree first-pass route remained DRC-invalid and was not promoted.
+# 2026-09-06 — Phase 24 U7 0-degree mixed-layer cycle
+Tested RX-on-F.Cu/TX-on-B.Cu integrated routing for the U7 0-degree candidate; native DRC rejected it with 54 shorts and 16 crossings, so coordinated transition allocation remains open.
