@@ -60,10 +60,10 @@ for item in [b.Tracks()[i] for i in range(b.Tracks().size())]:
 # corridor; putting the initial vias on the opposite side of the dense pad
 # field creates real shorts to adjacent J7 pads.
 routes = {
-    "CM5_USB3_RX_N": ("128", "42", V(72.0, 103.9), None, V(64.0, 116.5), V(83.5, 120.0)),
-    "CM5_USB3_RX_P": ("130", "43", V(72.0, 104.8), None, V(63.0, 118.0), V(83.5, 120.5)),
-    "CM5_USB3_TX_N": ("140", "45", V(72.0, 108.0), V(72.0, 112.0), V(62.0, 119.0), V(83.5, 121.5)),
-    "CM5_USB3_TX_P": ("142", "46", V(71.0, 109.0), V(71.0, 114.0), V(61.0, 121.0), V(83.5, 122.0)),
+    "CM5_USB3_RX_N": ("128", "42", V(72.0, 103.9), None, V(64.0, 116.5), V(82.5, 119.0)),
+    "CM5_USB3_RX_P": ("130", "43", V(72.0, 104.8), None, V(63.0, 118.0), V(81.5, 120.5)),
+    "CM5_USB3_TX_N": ("140", "45", V(72.0, 108.0), V(72.0, 112.0), V(62.0, 119.0), V(82.5, 122.0)),
+    "CM5_USB3_TX_P": ("142", "46", V(71.0, 109.0), V(71.0, 114.0), V(61.0, 121.0), V(81.5, 123.5)),
 }
 for name, (jpad, upad, jvia, mid, bend, uvia) in routes.items():
     net = b.FindNet("/CORE_CM5/" + name)
