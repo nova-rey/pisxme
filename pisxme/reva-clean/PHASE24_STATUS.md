@@ -2845,3 +2845,31 @@ ranked by mature-board DRC or by immature first-pass route counts.
 
 The west U7 disposable remains a route implementation failure (two native RX
 shorts plus two copper-sliver warnings), not macro-placement evidence.
+
+## Reference-route development after macro discriminator — 2026-09-06
+
+The first native-pad A* route on the selected macro was rejected. Although
+all four J7↔U7 endpoint assertions passed, its generic 1.5 mm terminal halo
+cleared neighboring J7 pads and native DRC reported 375 violations, including
+USB3 shorts and crossings. This is a `ROUTE IMPLEMENTATION FAILURE` caused by
+an invalid source-escape authoring model; no macro conclusion was drawn.
+
+The already validated CM5IO-derived Phase 18 route was then promoted into a
+disposable copy of the corrected macro. Native connectivity passed all four
+USB3 endpoints, with zero `shorting_items` and zero `tracks_crossing`. The
+candidate added two localized USB3 clearances: the TX_P/TX_N J7 launch
+segments are too close, and the RX_N endpoint approach is too close to U7
+pad 41. The remaining 450 unconnected records and 63 solder-mask records are
+board-baseline/incomplete-board findings; the candidate is not yet a Phase
+18 closure.
+
+A bounded RX_N endpoint dogleg/via relocation was attempted after that
+evidence. It preserved endpoint connectivity but regressed to six shorts and
+one crossing, so it is rejected. This confirms that the next repair should
+alter the source/endpoint escape geometry using the official reference
+ordering and native pad-field clearances, rather than move the macro island.
+
+Receipts:
+`PHASE24_USB3_PHASE18_ORACLE_ON_CORRECTED_MACRO-drc.rpt`,
+`PHASE24_USB3_PHASE18_ORACLE_RXN_DOGLEG-drc.rpt`, and
+`phase24_usb3_obstacle_aware_native.py`.
