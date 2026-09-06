@@ -2126,3 +2126,16 @@ specific input-net open census improves from 6 to 2 for `12V_IN_B` and from
 `PHASE24_POWER_INPUT_PLANES_PROBE.kicad_pcb` is promoted as the current basis.
 The remaining input-side SMD launches and the distinct `12V_PROTECTED` load
 distribution still require explicit routing/return validation.
+
+### J1 protected-field bus on current basis — 2026-09-05
+
+The validated 13-column J1 `12V_PROTECTED` field implementation was applied
+to the current clock/storage/power basis. Column coordinates were derived from
+the native J1 pads; each column uses F.Cu field copper, one offset ordinary
+through-via below the connector field, and a B.Cu collector. Native KiCad DRC
+reports 0 shorts, 0 track crossings, and 261 unconnected items, down from 390.
+The `12V_PROTECTED` open census falls from 146 to 17 and J1-field records are
+reduced from 201 to 70; storage-specific opens remain zero. The candidate
+`PHASE24_J1_PROTECTED_FIELD_CURRENT.kicad_pcb` is promoted. The remaining
+protected-load launches, power-return populations, and other board opens still
+require closure.
