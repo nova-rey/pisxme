@@ -33,7 +33,8 @@ dual-use contacts, not permission to join unrelated sources.
 | 52 | CLKREQ# | U11 only; pulled/isolated per bridge reference |
 | 53/55 | REFCLK-/REFCLK+ | U11 only; routed as a differential pair |
 | 54 | PEWAKE# | U11 only; inactive in SATA mode |
-| 10 | DAS/DSS | SATA-side support only; not a generic presence detector |
+| 10 | DAS/DSS | SATA-side support only |
+| 69 | PEDET / CONFIG1 | SATA module grounds it; PCIe/NVMe module leaves it open; host pull-up and mode logic |
 | 2,4,12,14,16,18,70,72,74 | 3.3 V | storage SSD rail |
 | 3,9,15,27,33,39,45,51,57,71,73 | GND | local ground and return vias |
 
@@ -46,13 +47,17 @@ SATA mode and when the socket is empty is a required inactive-state review.
 single logical `STORAGE_MODE_NVME` signal to both selectors, with a documented
 per-device polarity mapping. Mode changes are power-off operations.
 
-The M.2 authority retained in this repository states that IFDET and PRESENCE
-contacts were removed from the format. Its M-key table contains DAS/DSS but no
-generic PEDET contact. DAS/DSS is a SATA device-activity/disable-staggered-spin
-up signal and cannot be promoted to an authoritative SATA-versus-NVMe presence
-detector. Consequently `AUTO` is **OPEN** until a real detector is established
-(for example a documented bridge/link-detect sequencer or an explicitly
-approved controller). A three-way switch mislabeled AUTO is not acceptable.
+The older M.2 Socket 3 interface-detect definition identifies contact 69 as
+PEDET/CONFIG1: SATA grounds it and PCIe/NVMe leaves it open, with a platform
+pull-up. The retained TP-053 table names the same contact CONFIG1. Rev A will
+use that contact through a Schmitt-qualified input and a power-off mode latch;
+the signal selects protocol, not proof that a drive is functional. DAS/DSS is
+not used as the detector. The latch must treat an empty socket as PCIe/NVMe
+default and the manual override must force either mode. TI's selector truth
+tables make one shared polarity possible: U12 selects its B port at SEL=0 and
+C port at SEL=1; U13 selects its B port at SEL=L and C port at SEL=H. Thus
+`STORAGE_SEL=0` is SATA and `STORAGE_SEL=1` is NVMe, while U12 HS_OE is held
+low for normal operation.
 
 ## Support-circuit obligations
 

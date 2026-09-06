@@ -91,4 +91,7 @@ pins 3/4/5/7 remain optional DNP SPI signals and pins 8/9/12/13/14/57/58/59
 are named as configurable GPIOs rather than silently treated as power or REXT.
 The M.2 TP-053 revision also states that IFDET/PRESENCE contacts were removed;
 DAS/DSS is not accepted as a generic SATA/NVMe detector. AUTO therefore remains
-open until a real detector/sequencer is documented.
+open until the documented PEDET/CONFIG1 detector is implemented through a
+Schmitt-qualified, power-off mode-control circuit and passes its empty/socket
+state checks. TP-053 calls contact 69 CONFIG1; the older Socket 3 interface
+definition calls the same SATA-ground/PCIe-open function PEDET.

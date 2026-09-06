@@ -7,6 +7,7 @@ J3/adds U8-U10 inside the storage acreage.
 from pathlib import Path
 import re, uuid
 from phase3_scaffold import balanced
+from phase24_integrate_dual_mode_storage import JMS, USB, MUX, M2
 
 ROOT=Path(__file__).resolve().parent
 BASE=ROOT/'PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_BCU_INTEGRATED_ASTAR_V3.kicad_pcb'
@@ -18,6 +19,13 @@ MAPS={
  'HD3SS6126_RUA0042A.kicad_mod':('U12',{6:'USB_SEL_OE_N',7:'CM5_USB2_DN',8:'CM5_USB2_DP',9:'STORAGE_USB_SEL',10:'POWER_GND',11:'CM5_USB3_TXP',12:'CM5_USB3_TXN',15:'CM5_USB3_RXP',16:'CM5_USB3_RXN',22:'JMS_USB3_RXN',23:'JMS_USB3_RXP',24:'JMS_USB3_TXN',25:'JMS_USB3_TXP',26:'TUSB_USB3_RXN',27:'TUSB_USB3_RXP',28:'TUSB_USB3_TXN',29:'TUSB_USB3_TXP',31:'TUSB_USB2_DP',32:'TUSB_USB2_DN',33:'JMS_USB2_DP',34:'JMS_USB2_DN',13:'STORAGE_3V3',20:'STORAGE_3V3',30:'STORAGE_3V3'}),
  'HD3SS3412_RUA0042A.kicad_mod':('U13',{2:'M2_PCIE_TXP0',3:'M2_PCIE_RXP0',5:'STORAGE_3V3',6:'M2_PCIE_TXP1',7:'M2_PCIE_RXP1',9:'STORAGE_SEL',10:'POWER_GND',11:'M2_PCIE_TXP2',12:'M2_PCIE_RXP2',15:'M2_PCIE_TXP3',16:'M2_PCIE_RXP3',22:'JMS_PCIE_TXN0',23:'JMS_PCIE_TXP0',24:'JMS_PCIE_RXN0',25:'JMS_PCIE_RXP0',26:'TUSB_SATA_RXN',27:'TUSB_SATA_RXP',28:'TUSB_SATA_TXN',29:'TUSB_SATA_TXP',30:'STORAGE_3V3'}),
  'TE_1-2199230-4_MKEY.kicad_mod':('J3',{2:'M2_3V3',3:'POWER_GND',4:'M2_3V3',41:'M2_SATA_B_P_PCIE_RXN0',43:'M2_SATA_B_N_PCIE_RXP0',47:'M2_SATA_A_N_PCIE_TXN0',49:'M2_SATA_A_P_PCIE_TXP0',50:'M2_PERST_N',52:'M2_CLKREQ_N',53:'M2_REFCLK_N',54:'M2_PEWake_N',55:'M2_REFCLK_P',68:'M2_SUSCLK',70:'M2_3V3',71:'POWER_GND',72:'M2_3V3',73:'POWER_GND',74:'M2_3V3'})}
+
+# Use the same reviewed schematic maps for the disposable PCB metadata. The
+# earlier placement probe used abbreviated aliases and is not authority.
+MAPS['JMS583_QFN64_8x8.kicad_mod'] = ('U11', JMS)
+MAPS['HD3SS6126_RUA0042A.kicad_mod'] = ('U12', USB)
+MAPS['HD3SS3412_RUA0042A.kicad_mod'] = ('U13', MUX)
+MAPS['TE_1-2199230-4_MKEY.kicad_mod'] = ('J3', M2)
 
 def append_pad_metadata(text, nets, stem):
     def repl(m):

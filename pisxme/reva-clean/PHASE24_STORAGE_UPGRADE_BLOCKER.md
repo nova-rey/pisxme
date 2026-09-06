@@ -90,10 +90,11 @@ The implementation path has since been advanced in the working tree:
 The remaining engineering blockers are now explicit rather than generic
 documentation objections:
 
-1. The M.2 standard revision retained in the repository has no generic PEDET
-   contact; IFDET/PRESENCE were removed. DAS/DSS cannot honestly be used as a
-   universal SATA-versus-NVMe detector. AUTO therefore needs a real documented
-   detector/sequencer or must remain open.
+1. Contact 69 is named CONFIG1 in retained TP-053 and is identified as the
+   PEDET/interface-detect contact by the older Socket 3 definition: SATA
+   grounds it and PCIe/NVMe leaves it open. AUTO therefore needs the documented
+   Schmitt-qualified, power-off mode-control implementation; DAS/DSS is not
+   used as a detector.
 2. The JMS583 support network is represented as pin authority but still needs
    native component instances and physical support routing: 25-MHz crystal,
    REXT, AVDD33 capacitor, LXO inductor, reset RC, VBUS divider, decoupling,
