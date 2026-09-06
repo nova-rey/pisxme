@@ -4265,4 +4265,5 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Promoted the native F1 `/POWER_INPUT/12V_IN_A` four-pad B.Cu field; DRC remains at zero shorts/crossings and total unconnected items fall from 234 to 231.
 2026-09-06: Promoted the native F1 `/POWER_INPUT/FUSED_12V_A` four-pad B.Cu field; DRC remains at zero shorts/crossings and total unconnected items fall from 231 to 229.
 2026-09-06: Promoted the native Q1 fused-A local launch to the existing B.Cu segment; DRC remains at zero shorts/crossings and total unconnected items fall from 229 to 228.
+2026-09-06: Promoted the D1 fused-A F.Cu-to-elevated-B.Cu parallel launch after rejecting the crossing first path; native DRC remains at zero shorts/crossings and total unconnected items fall from 228 to 227.
 2026-09-06: Promoted dogbone-routed regulator-side BRIDGE_3V3 capacitor links without merging the distinct storage net; native DRC remains at zero shorts/crossings and total unconnected items fall from 236 to 234.

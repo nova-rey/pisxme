@@ -2270,3 +2270,12 @@ items, and 12 clearance items. The D1 long-bus trial was rejected because it
 added a crossing without closing an open. `PHASE24_FUSED_Q1_LAUNCH_CURRENT.
 kicad_pcb` is promoted; D1 and the remaining fused-A distribution endpoints
 remain open.
+
+### Promote D1 fused-A parallel launch — 2026-09-06
+
+The first D1 bus path crossed the diagonal 12V_IN_A bus. The corrected
+variant transitions from D1 on F.Cu at the pad launch, then uses an elevated
+B.Cu corridor to the existing fused-A vertical. Native KiCad DRC reports 0
+shorts, 0 track crossings, 227 unconnected items, and 12 clearance items.
+`PHASE24_FUSED_D1_PARALLEL_LAUNCH_CURRENT.kicad_pcb` is promoted; Q2/F2 and
+the remaining protected-load distribution are still open.
