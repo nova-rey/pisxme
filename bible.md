@@ -4505,3 +4505,5 @@ Added the previously captured JMS583 Rev 2.1 detailed datasheet, text extraction
 Checked JMicron's current JMS581DL single-chip SATA/NVMe alternative and its JLCPCB 144TFBGA assembly listing. It is architecturally attractive but rejected pending a manufacturer ball map, detailed design pack, and legitimate firmware/programming path; no mystery BGA symbol or wiring was promoted.
 # 2026-09-06 — Phase 24 TE M-key CAD capture
 Captured TE's exact 1-2199230-4 customer 2D CAD archive and Rev C M.2 application specification. The customer CAD now anchors the mechanical envelope and the application Figure 2 anchors the PCB pad layout; no connector footprint was promoted before pad-by-pad authoring review.
+# 2026-09-06 — Phase 24 TE M-key CAD extraction
+Extracted the TE customer DXF from the retained archive for direct geometry inspection. Connector CAD authority is now locally available; footprint promotion remains gated on a native KiCad pad/courtyard/model parity check.
