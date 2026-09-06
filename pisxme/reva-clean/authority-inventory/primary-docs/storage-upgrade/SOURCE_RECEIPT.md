@@ -16,6 +16,8 @@ before a purchase.
 | JLCPCB exact JMS583-QHFA3A | browser capture; `C25701682` | https://jlcpcb.com/partdetail/Jmicron-JMS583QHFA3A/C25701682 |
 | TE exact M-key product page | `connectors/te/TE_MKEY_AUTHORITY.md` | https://www.te.com/de/product-1-2199230-4.html |
 | TE M.2 application specification Rev C | `connectors/te/TE-114-115006-application-spec-revC.pdf` | https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=114-115006&DocType=Specification+Or+Standard&PartCntxt=1-2199230-4 |
+| TE exact customer 2D CAD | `connectors/te/cad/TE-1-2199230-4-2d-dxf.zip` | https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=2d_dxf.zip&DocLang=English&DocNm=CVM_1-2199230-4&DocType=Customer+View+Model&PartCntxt=1-2199230-4 |
+| JMicron JMS581DL official product brief | `jms581dl/JMS581DL-product-brief-official.pdf` | https://www.jmicron.com/file/download/1222/JMS581DL%2BProduct%2BBrief%2B%28Rev.1.00%29.pdf |
 | JMicron JMS583 official product brief | `jms583/JMS583-product-brief-official-1046.pdf` | https://www.jmicron.com/file/download/1046/JMS583.pdf |
 | JMicron JMS583 datasheet Rev 2.1 | `jms583/JMS583-datasheet-rev2.1.pdf` and text extraction | https://snapeda.s3.amazonaws.com/datasheets/2115-PDS-17001_JMS583_Datasheet_(Rev._2.1)_20190716.pdf |
 | JLCPCB exact JMS583-QHFA3A | browser capture; `C25701682` | https://jlcpcb.com/partdetail/Jmicron-JMS583QHFA3A/C25701682 |
@@ -33,6 +35,8 @@ SHA-256:
 - `JMS583-datasheet-rev2.1.pdf`: `27a491efa2361a5b3363d61ebf43b0983ce0c2407a49a5e949a3ff9b83b88529`
 - `TE-114-115006-application-spec-revC.pdf`: `3919d7af08573732ab864840b67a9a8520405a29e90d886ae5fef236d76586eb`
 - `TE-1-2199230-4-lcsc-datasheet.pdf`: `0b5de10c795caabfc67fa71dfb909e6b1b5a154dd45551c41e9b89840807b234`
+- `TE-1-2199230-4-2d-dxf.zip`: `89ab400716590e16d7b43165ecb0e4e7835bb6b0b077d00ecca7c9af1150b787`
+- `JMS581DL-product-brief-official.pdf`: `4c7516711fda2483cb827cea543270063b5077192f377f1de7c23622bc0e77b`
 - `JMS583-product-brief-official-1046.pdf`: `c472cdcb93cc02eedcdb2e31256b48c95e601fe4a98b662ae627e6d695006824`
 - `JMS583-datasheet-rev2.1.pdf`: `27a491efa2361a5b3363d61ebf43b0983ce0c2407a49a5e949a3ff9b83b88529`
 - `TE-1-2199230-4-lcsc-datasheet.pdf`: `0b5de10c795caabfc67fa71dfb909e6b1b5a154dd45551c41e9b89840807b234`

@@ -20,10 +20,11 @@ Local file: `TE-114-115006-application-spec-revC.pdf`.
 
 The application spec states that the M.2 connector accepts standard modules,
 is designed for automatic placement, requires precisely located PCB pads,
-and gives reflow, insertion and removal guidance. TE's exact customer drawing
-and CAD files must still be imported into the project library for final
-pad/courtyard/3D parity; the family application layout is not a substitute
-for that final comparison.
+and gives reflow, insertion and removal guidance. The exact TE customer 2D
+CAD is now captured as `cad/TE-1-2199230-4-2d-dxf.zip`; the application
+specification Figure 2 is retained as the PCB pad-layout authority. A KiCad
+footprint still needs to be authored and pad-by-pad checked before production
+replacement.
 
 ## Procurement and decision
 

@@ -4503,3 +4503,5 @@ Paused Phase 24 routing and completed a bounded NVMe bridge substitution review.
 Added the previously captured JMS583 Rev 2.1 detailed datasheet, text extraction, and prior product brief to the private provenance set. These files support pin/package and support-circuit review; they do not include or imply permission to redistribute proprietary firmware.
 # 2026-09-06 — Phase 24 JMS581DL alternative review
 Checked JMicron's current JMS581DL single-chip SATA/NVMe alternative and its JLCPCB 144TFBGA assembly listing. It is architecturally attractive but rejected pending a manufacturer ball map, detailed design pack, and legitimate firmware/programming path; no mystery BGA symbol or wiring was promoted.
+# 2026-09-06 — Phase 24 TE M-key CAD capture
+Captured TE's exact 1-2199230-4 customer 2D CAD archive and Rev C M.2 application specification. The customer CAD now anchors the mechanical envelope and the application Figure 2 anchors the PCB pad layout; no connector footprint was promoted before pad-by-pad authoring review.
