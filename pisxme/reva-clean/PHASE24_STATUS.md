@@ -3636,3 +3636,20 @@ including same-row TX/RX dogbone crossings and paired target vias within the
 The next 0-degree route cycle must offset the final signal-pad dogbones in Y
 and keep each pair's target vias outside the connector field. No production
 board or validated USB3/PCIe copper was changed.
+
+## V19 monotonic SATA route milestone — 2026-09-06
+
+The corrected 0-degree J3 route was regenerated after removing redundant
+socket transition vias and restoring monotonic B.Cu ordering. Native DRC
+reports zero `shorting_items`, zero `tracks_crossing`, zero clearance or
+hole-clearance findings, and zero `via_dangling` findings for the candidate.
+The native SATA audit passes all eight bridge/coupler/socket endpoint pairs.
+
+V19 remains a route-topology milestone, not Phase 19 closure: the full
+candidate still reports the selected J3 footprint's 63 solder-mask-bridge
+records and 80 unrelated/unrouted board connections. Measured route lengths
+are retained for skew work: TX bridge P/N = 33.000/40.500 mm, RX bridge P/N =
+21.736/30.000 mm, and socket-side P/N lengths are 36.206/36.679 mm (TX) and
+34.945/40.858 mm (RX). The endpoint proof and high-speed DRC screen are
+stronger than the earlier 90-degree candidates, but pair-length matching and
+coexistence with the complete storage support network remain open.

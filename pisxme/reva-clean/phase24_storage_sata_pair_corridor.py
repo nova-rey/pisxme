@@ -45,6 +45,8 @@ if J3_ROT != 90:
     j3 = board.FindFootprintByReference("J3")
     if j3 is None: raise RuntimeError("missing J3")
     j3.SetOrientationDegrees(J3_ROT)
+    if J3_ROT == 0:
+        j3.SetPosition(V(138.0, 95.0))
 
 # Native capacitor positions: N is above P at the bridge and socket ends,
 # and TX/RX occupy distinct physical corridors. All caps retain their
@@ -80,7 +82,7 @@ bridge = {
     "TX_N": ("56", F, [(97.0,119.5),(97.0,108.0),(107.0,108.0),(107.0,124.0),(110.0,124.0)]),
     "TX_P": ("57", F, [(96.5,119.5),(96.5,106.0),(110.0,106.0),(110.0,112.0)]),
     "RX_N": ("59", B, [(95.5,119.5),(95.5,117.0),(111.0,117.0),(111.0,128.0),(110.0,128.0)]),
-    "RX_P": ("60", B, [(95.0,119.5),(93.0,117.0),(93.0,116.0),(110.0,116.0)]),
+    "RX_P": ("60", B, [(95.0,119.5),(95.0,118.0),(93.0,117.0),(93.0,116.0),(110.0,116.0)]),
 }
 for key, (u7pin, layer, pts) in bridge.items():
     n = find_net(board, "/STORAGE/BRIDGE_SATA_" + key)
@@ -103,6 +105,23 @@ socket = {
     "RX_P": ("C32", (112.0,116.0), B, [(112.0,116.0),(126.75,118.725)]),
 }
 socket_pads = {"TX_N": "2", "TX_P": "1", "RX_N": "4", "RX_P": "3"}
+final_dogbones = {}
+if J3_ROT == 0:
+    # In the native 0-degree footprint the two members of each row are
+    # adjacent F.Cu lands.  Stagger their approach Y coordinates so the
+    # final dogbones do not cross or share a via clearance envelope.
+    socket = {
+        "TX_N": ("C31", (114.0,124.0), B, [(114.0,124.0),(125.0,105.0)]),
+        "TX_P": ("C30", (114.0,112.0), B, [(114.0,112.0),(126.0,87.0)]),
+        "RX_N": ("C33", (114.0,128.0), B, [(114.0,128.0),(126.0,110.0)]),
+        "RX_P": ("C32", (114.0,116.0), B, [(114.0,116.0),(127.0,93.0)]),
+    }
+    final_dogbones = {
+        "TX_N": [(125.0,105.0),(129.0,105.0)],
+        "TX_P": [(126.0,87.0),(128.75,87.0)],
+        "RX_N": [(126.0,110.0),(129.5,110.0)],
+        "RX_P": [(127.0,93.0),(129.25,93.0)],
+    }
 for key, (cap, start, layer, pts) in socket.items():
     n = find_net(board, "/STORAGE/SATA_M2_" + key)
     cap_pad = xy(pad(board, cap, "1"))
@@ -114,8 +133,8 @@ for key, (cap, start, layer, pts) in socket.items():
     cap_via = (cap_pad[0] + 1.5, cap_pad[1])
     path(board, n, [cap_pad, cap_via], F); via(board, n, cap_via)
     path(board, n, [cap_via, source_via], B)
-    via(board, n, source_via)
     path(board, n, pts, B); via(board, n, target_via)
-    path(board, n, [target_via, xy(pad(board, "J3", socket_pads[key]))], F)
+    end_path = final_dogbones.get(key, [target_via]) + [xy(pad(board, "J3", socket_pads[key]))]
+    path(board, n, end_path, F)
 
 board.BuildListOfNets(); board.Save(str(OUT)); print(OUT)
