@@ -4315,6 +4315,10 @@
     (at 5 31 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-00000000006b))
+  (hierarchical_label "CM5_STORAGE_USB2_DP" (shape bidirectional) (at 5 49 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid 50000000-0000-0000-0000-000000000071))
+  (hierarchical_label "CM5_STORAGE_USB2_DM" (shape bidirectional) (at 5 52 180) (effects (font (size 1.27 1.27)) (justify right)) (uuid 50000000-0000-0000-0000-000000000072))
+  (wire (pts (xy 5 49) (xy 19.92 49)) (stroke (width 0) (type default)) (uuid 50000000-0000-0000-0000-000000000073))
+  (wire (pts (xy 5 52) (xy 19.92 52)) (stroke (width 0) (type default)) (uuid 50000000-0000-0000-0000-000000000074))
   (hierarchical_label "CM5_GBE"
     (shape bidirectional)
     (at 5 34 180)
@@ -5035,4 +5039,6 @@
 (label "SERVICE_USB2_DP" (at 260.18 44.12 0) (effects (font (size 1.1 1.1))) (uuid f0000000-0000-0000-0000-000000000105))
 (no_connect (at 270.18 155.88) (uuid e4000000-0000-0000-0000-000000000000))
 (no_connect (at 270.18 158.42) (uuid e4000000-0000-0000-0000-000000000001))
+(global_label "CM5_STORAGE_USB2_DP" (shape bidirectional) (at 209.22 79.68 0) (effects (font (size 1 1)) (justify left)) (uuid e3000000-0000-0000-0000-000000000220))
+(global_label "CM5_STORAGE_USB2_DM" (shape bidirectional) (at 209.22 82.22 0) (effects (font (size 1 1)) (justify left)) (uuid e3000000-0000-0000-0000-000000000221))
 )

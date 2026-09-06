@@ -84,3 +84,13 @@ and SERVICE USB2 but does not yet expose CM5 port-0 USB2 `USB3-0-D_P/N` as
 hierarchical storage nets. That is an authority/interface omission to repair
 before production regeneration; `CM5_USB2_DP/DM` must not be invented as a
 replacement without tying them to the actual CM5 port-0 pads.
+
+## CM5 USB2 source correction — 2026-09-06
+
+The omission was repaired in the schematic authoring path. CM5 carrier pads
+134/136 (`USB3-0-D_P/N`, the USB2 companion of port 0) now export explicit
+`CM5_STORAGE_USB2_DP/DM` global nets from `CORE_CM5`; the storage selector
+uses those same nets. Native root netlist export now shows J7.134 to U12.8
+and J7.136 to U12.7 on the same nets. U12-to-JMS583 USB3 names were also
+normalized to `USB_TXP1/TXN1` and `USB_RXP1/RXN1`. The prior isolated PCB
+fixture predates this source correction and remains rejected evidence.

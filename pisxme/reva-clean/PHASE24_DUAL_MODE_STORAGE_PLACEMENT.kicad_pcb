@@ -26908,8 +26908,8 @@
  (pad "4" smd roundrect (at -1.8 -0.6 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
  (pad "5" smd roundrect (at -1.8 -0.2 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
  (pad "6" smd roundrect (at -1.8 0.2 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "USB_OE_N") (pinfunction "USB_OE_N") (pintype "passive") (uuid "80311314-43d5-5048-b2fd-39841b8a5939"))
- (pad "7" smd roundrect (at -1.8 0.6 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "CM5_USB2_DM") (pinfunction "CM5_USB2_DM") (pintype "passive") (uuid "99650914-07f8-5216-a702-1a72bb2b6ee2"))
- (pad "8" smd roundrect (at -1.8 1 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "CM5_USB2_DP") (pinfunction "CM5_USB2_DP") (pintype "passive") (uuid "0a4dc101-7205-5044-a7e5-f0170ddd0946"))
+ (pad "7" smd roundrect (at -1.8 0.6 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "CM5_STORAGE_USB2_DM") (pinfunction "CM5_STORAGE_USB2_DM") (pintype "passive") (uuid "99650914-07f8-5216-a702-1a72bb2b6ee2"))
+ (pad "8" smd roundrect (at -1.8 1 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "CM5_STORAGE_USB2_DP") (pinfunction "CM5_STORAGE_USB2_DP") (pintype "passive") (uuid "0a4dc101-7205-5044-a7e5-f0170ddd0946"))
  (pad "9" smd roundrect (at -1.8 1.4 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "USB_SEL") (pinfunction "USB_SEL") (pintype "passive") (uuid "e3a4bad2-639a-527e-b7a2-7084659fef52"))
  (pad "10" smd roundrect (at -1.8 1.8 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "b2e3322b-8722-5b45-9510-8c4a03aea3f1"))
  (pad "11" smd roundrect (at 1.8 1.8 90) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "CM5_USB3_TX_P") (pinfunction "CM5_USB3_TX_P") (pintype "passive") (uuid "a9edd6cc-41ee-5cf3-ba7f-dc84a0870096"))
@@ -26923,10 +26923,10 @@
  (pad "19" smd roundrect (at -1.4 1.8 90) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "a523c0f8-b9f5-5324-8ad7-0c1a8dff08d1"))
  (pad "20" smd roundrect (at -1.8 1.8 90) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "STORAGE_3V3") (pinfunction "STORAGE_3V3") (pintype "passive") (uuid "035757e6-4abb-5b93-947f-4aaa8620293f"))
  (pad "21" smd roundrect (at 1.8 1.8 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "9ff836fa-e08c-539e-b9bc-e917dd776784"))
- (pad "22" smd roundrect (at 1.8 1.4 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_SSRXN") (pinfunction "JMS_SSRXN") (pintype "passive") (uuid "5d52cc19-c96d-53d3-a3ed-7366b6a711df"))
- (pad "23" smd roundrect (at 1.8 1 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_SSRXP") (pinfunction "JMS_SSRXP") (pintype "passive") (uuid "6051088f-7f4d-58a9-b58e-69ef01b484a2"))
- (pad "24" smd roundrect (at 1.8 0.6 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_SSTXN") (pinfunction "JMS_SSTXN") (pintype "passive") (uuid "b6151d28-9383-5f31-8c51-16e8e890d7cc"))
- (pad "25" smd roundrect (at 1.8 0.2 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_SSTXP") (pinfunction "JMS_SSTXP") (pintype "passive") (uuid "de6fa2a1-a8e7-526b-8133-890b7ca3ca35"))
+ (pad "22" smd roundrect (at 1.8 1.4 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "USB_RXN1") (pinfunction "USB_RXN1") (pintype "passive") (uuid "5d52cc19-c96d-53d3-a3ed-7366b6a711df"))
+ (pad "23" smd roundrect (at 1.8 1 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "USB_RXP1") (pinfunction "USB_RXP1") (pintype "passive") (uuid "6051088f-7f4d-58a9-b58e-69ef01b484a2"))
+ (pad "24" smd roundrect (at 1.8 0.6 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "USB_TXN1") (pinfunction "USB_TXN1") (pintype "passive") (uuid "b6151d28-9383-5f31-8c51-16e8e890d7cc"))
+ (pad "25" smd roundrect (at 1.8 0.2 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "USB_TXP1") (pinfunction "USB_TXP1") (pintype "passive") (uuid "de6fa2a1-a8e7-526b-8133-890b7ca3ca35"))
  (pad "26" smd roundrect (at 1.8 -0.2 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "TUSB_SSRXN") (pinfunction "TUSB_SSRXN") (pintype "passive") (uuid "4f655d10-523c-5719-a3e7-308ada00ae71"))
  (pad "27" smd roundrect (at 1.8 -0.6 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "TUSB_SSRXP") (pinfunction "TUSB_SSRXP") (pintype "passive") (uuid "2fc5950c-e78c-52db-9b90-1a80f5a5383f"))
  (pad "28" smd roundrect (at 1.8 -1 0) (size 0.75 0.25) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "TUSB_SSTXN") (pinfunction "TUSB_SSTXN") (pintype "passive") (uuid "459afaad-1112-5d4b-bd22-837564ea6be0"))
@@ -27004,7 +27004,7 @@
  (uuid "03bd60f8-2169-562b-866a-0136b03f1e0b")
 )
 (footprint "SOT-23-5" (version 20240108) (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 210 150)
   (descr "TI SN74LVC1G17DBVR; DBV SOT-23-5 review footprint")
@@ -27028,7 +27028,7 @@
  (uuid "e083d7e4-a686-53cd-a0b1-fb25d65fe53c")
 )
 (footprint "MODE_JUMPER_1x04" (version 20240108) (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 230 165)
   (descr "Storage-local power-off mode strap: FORCE_SATA/AUTO_PEDET/FORCE_NVME/MODE_IN")
@@ -27045,7 +27045,7 @@
  (uuid "bced165b-ba0a-54c2-86bc-43a4421bc948")
 )
 (footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 250 180)
   (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
@@ -27073,7 +27073,7 @@
 (footprint "Crystal_3225_4Pad"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 270 190)
   (descr "3.2 x 2.5 mm 4-pad crystal; verify vendor pad numbering before release")
@@ -27091,7 +27091,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 310 184)
   (property "Reference" "C80"
@@ -27120,7 +27120,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 315 184)
   (property "Reference" "C81"
@@ -27149,7 +27149,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 320 184)
   (property "Reference" "C82"
@@ -27178,7 +27178,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 325 184)
   (property "Reference" "C83"
@@ -27207,7 +27207,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 300 188)
   (property "Reference" "C84"
@@ -27234,7 +27234,7 @@
  (uuid "35fef3a6-fa13-5274-8d98-cd6229c835c5")
 )
 (footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 305 188)
   (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
@@ -27250,7 +27250,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 310 188)
   (property "Reference" "C85"
@@ -27277,7 +27277,7 @@
  (uuid "6ba8ad1b-d963-5037-88cd-ca2b9436b721")
 )
 (footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 315 188)
   (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
@@ -27291,7 +27291,7 @@
  (uuid "03a33dee-09ee-5bf8-b086-ab0d23565052")
 )
 (footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 320 188)
   (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
@@ -27307,7 +27307,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 325 188)
   (property "Reference" "C86"
@@ -27336,7 +27336,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 300 192)
   (property "Reference" "C87"
@@ -27365,7 +27365,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 305 192)
   (property "Reference" "C88"
@@ -27394,7 +27394,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 310 192)
   (property "Reference" "C89"
@@ -27423,7 +27423,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 315 192)
   (property "Reference" "C90"
@@ -27452,7 +27452,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 320 192)
   (property "Reference" "C91"
@@ -27481,7 +27481,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 325 192)
   (property "Reference" "C92"
@@ -27510,7 +27510,7 @@
 (footprint "C_0402_1005Metric"
   (version 20240108)
   (generator pcbnew)
-
+ 
  (layer "F.Cu")
  (at 300 196)
   (property "Reference" "C93"

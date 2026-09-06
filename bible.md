@@ -4611,3 +4611,9 @@ pads); no production PCB was promoted. The run also confirmed CORE_CM5 still
 needs an explicit port-0 USB2 hierarchy interface before the storage selector
 can be electrically complete. Next action: repair source authority, implement
 package-side dogbone escapes, and rerun isolated native connectivity/DRC.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: corrected CM5 USB2 source
+authority. CORE_CM5 pads 134/136 (`USB3-0-D_P/N`) now export explicit
+CM5_STORAGE_USB2_DP/DM nets, and the native root netlist confirms J7.134 to
+U12.8 and J7.136 to U12.7. Normalized U12/JMS583 USB3 bridge net names and
+regenerated the disposable native storage placement candidate. Structural
+audits pass; native ERC/PCB routing remain open.
