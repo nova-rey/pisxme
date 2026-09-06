@@ -4454,3 +4454,33 @@ Receipt: `phase24_ti_usb3_bcu_integrated_astar.py` and
 `INTEGRATED_USB3_SOURCE_FIELD_ASTAR = REJECTED`
 `FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
 `PHASE24 = OPEN`
+
+Correction to the preceding A* entry: the authoritative native DRC report
+contains 352 violations consisting of 15 `shorting_items`, 15
+`tracks_crossing`, 85 `clearance`, and 78 `hole_clearance` findings, plus 469
+unconnected items. The prior prose accidentally called the crossing and
+shorting categories the other way around; no PASS claim depends on that
+summary.
+
+## Integrated USB3 explicit lane-escape experiment — 2026-09-06
+
+The next route class reserves the measured PCIe B.Cu spine band
+(`x≈84..190`, `y≈99.5..110.5`) and gives each native CM5 USB3 pad an ordered
+west-side escape, a unique south corridor, and one U7-side through-via. Native
+DRC validation is the deciding evidence; the candidate is not promoted unless
+it has zero true shorts/crossings and the required connectivity/mechanical
+checks pass.
+
+Receipt: `phase24_ti_usb3_integrated_lane_escape.py`.
+
+The explicit-lane candidate was rejected after native DRC: 354 violations,
+including 6 shorts, 35 crossings, 58 clearance findings, 78 hole-clearance
+findings, and 469 unconnected items. It is a route implementation failure,
+not a macro-placement result; the measured PCIe band reservation alone does
+not solve the native CM5 source escape. The next method must transplant the
+official CM5IO source-side geometry as a fixed anchor and route its
+continuation with native obstacle checks.
+
+`INTEGRATED_USB3_LANE_ESCAPE = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`

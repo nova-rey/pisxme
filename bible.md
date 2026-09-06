@@ -4448,3 +4448,7 @@ Applied the zero-clearance-error TI-U7 disposable escape to the selected macro; 
 Removed source transition vias and regenerated all four USB3 paths from native CM5 pads with a larger B.Cu obstacle margin; the coarse integrated planner still produced shorts/crossings and was rejected as route implementation evidence.
 # 2026-09-06 — Phase 24 integrated USB3 source-field refinement
 Confirmed the grid planner reaches all four U7 targets but mishandles the native CM5 pad-field escape; rejected the route implementation and selected official CM5IO source-escape anchoring as the next method.
+# 2026-09-06 — Phase 24 integrated USB3 lane-escape experiment
+Corrected the prior DRC category transcription and authored a disposable lane-disciplined route reserving the measured PCIe B.Cu spine band for native validation.
+# 2026-09-06 — Phase 24 integrated USB3 lane-escape result
+Rejected the explicit PCIe-band/lane-discipline candidate after native DRC found 6 shorts and 35 crossings; retained the route-implementation classification and moved the next method to official CM5IO source-escape anchoring.
