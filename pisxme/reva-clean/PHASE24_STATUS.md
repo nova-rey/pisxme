@@ -1415,3 +1415,18 @@ mapping errors. This is a materialization boundary PASS, not a routed Ethernet
 or acreage pass. Next action is native-pad-derived CT/LED/shield support
 routing on this official-placement oracle, followed by comparison against the
 selected corrected macro.
+
+## Official-placement CT support route probe — 2026-09-05
+
+The first support-copper attempt used the official-placement materialized
+candidate, actual J2 CT pad locations, B.Cu staging lanes, local 75-ohm branch
+connections, and one deliberate common bus. Native refilled DRC rejected the
+child with `419` violations, `16` shorting items, `15` crossings, `5` inherited
+power dangling vias, and `432` unconnected items. The parent materialization
+had zero shorting/crossing records, so these new defects are attributable to
+the hand-authored CT fanout and common-bus geometry.
+
+This remains `ROUTE_IMPLEMENTATION_FAILURE`; the official MDI placement and
+support footprint/net materialization remain valid. The next support attempt
+must use obstacle-aware/topology-derived branch routing and preserve the
+parent/child native DRC comparison.
