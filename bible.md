@@ -4276,3 +4276,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Promoted the native CM5 5V FB_CM5_5V C9/R3/R4 dogbone chain; native DRC remains at zero shorts/crossings and total unconnected items fall from 222 to 220.
 2026-09-06: Promoted the adjacent U7 `/STORAGE/BRIDGE_3V3` U7.30/U7.31 native pad join without merging the regulator-side net; DRC remains at zero shorts/crossings and total unconnected items fall from 220 to 219.
 2026-09-06: Promoted the U7.24-to-U7.30/U7.31 storage 3V3 dogbone field; native DRC remains at zero shorts/crossings and total unconnected items fall from 219 to 218.
+2026-09-06: Completed the corrected whole-board macro-floorplan discriminator from the current accepted native PCB; topology-only comparison selects ETH_OUTBOARD_STORAGE_LOCAL for storage-neighborhood development without using immature routing DRC as floorplan evidence.

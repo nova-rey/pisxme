@@ -2352,3 +2352,46 @@ edge-side F.Cu dogbone around their opposite ground pads. Native KiCad DRC
 reports 0 shorts, 0 track crossings, 222 unconnected items, and 12 clearance
 items. `PHASE24_PROTECTED_C23_C25_LINK_CURRENT.kicad_pcb` is promoted;
 connection to the U3 protected-input field remains open.
+
+## Whole-board macro-floorplan review corrected for current accepted basis — 2026-09-06
+
+The required macro-floorplan discriminator was rerun from the actual current
+accepted integrated PCB `PHASE24_U7_STORAGE_3V3_PAD24_CURRENT.kicad_pcb`, not
+from a historical disposable filename. The reproducible native-loaded script
+is `phase24_macro_floorplan_review_fresh.py`; the evidence report is
+`PHASE24_WHOLE_BOARD_MACRO_REVIEW_CURRENT.md`. All coordinates are extracted
+after KiCad footprint transforms in the CM5 carrier-mating view. Existing
+copper and mature-board DRC counts are excluded from candidate ranking.
+
+Native J7 launch centroids are Ethernet `(34.50,99.90)`, PCIe
+`(69.60,101.50)`, USB3 `(70.04,105.30)`, and SERVICE `(66.96,99.30)` mm.
+The accepted current physical map is Ethernet `(18.48,128.42)` with a
+32.71-mm centroid distance, PCIe `(150.00,90.00)` with 81.22 mm, storage
+`(130.81,130.97)` with 65.97 mm, and SERVICE `(46.88,100.00)` with 20.09 mm.
+Power-input/protection and regulator/load-delivery centroids are also recorded
+in the report; their copper was not moved.
+
+Five disposable placement candidates were generated and compared using
+source-to-island Euclidean/Manhattan distances and native-pad same-net
+ratsnest lengths. The accepted baseline has 231.2 mm of USB3/storage
+same-net ratsnest. `STORAGE_LOCAL` and the joint
+`ETH_OUTBOARD_STORAGE_LOCAL` candidate reduce that topology metric to 69.1
+mm and storage centroid distance to 39.3 mm, while PCIe and SERVICE remain at
+their baseline anchors. `ETH_EAST_STORAGE_NORTH` is a fallback with a 152.8-mm
+Ethernet centroid distance. Body/courtyard overlaps in moved candidates are
+reported separately as mechanical-screen findings; no route or DRC result was
+used to reject a topology candidate.
+
+Disposition: `MACRO_FLOORPLAN_DISCRIMINATOR = COMPLETE`.
+`ETH_OUTBOARD_STORAGE_LOCAL` is selected as the next routing-development
+basis because it tests the explicit Ethernet/storage neighborhood swap while
+preserving the PCIe and SERVICE anchors. This is a topology selection, not a
+routing pass. Any failed first-pass copper remains `ROUTE IMPLEMENTATION
+FAILURE` unless a fair obstacle-aware development cycle demonstrates an
+inherent placement obstruction. Detailed Phase 24 repair may resume only for
+the complete affected storage/Ethernet neighborhoods from this basis.
+
+Consultant dispatch was attempted for the required independent review but the
+collaboration service returned `agent thread limit reached`; no engineering
+conclusion was taken from that unavailable thread, and the review was completed
+locally from native KiCad evidence.

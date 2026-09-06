@@ -2832,7 +2832,7 @@
 	(footprint "C_0402_1005Metric"
 		(layer "F.Cu")
 		(uuid "543ab529-0614-4506-8366-7a5a714b163e")
-		(at 78 120)
+		(at 101 126)
 		(property "Reference" "C42"
 			(at 0 -1.1 0)
 			(layer "F.SilkS")
@@ -2931,7 +2931,7 @@
 	(footprint "TUSB9261IPVP_HTQFP64"
 		(layer "F.Cu")
 		(uuid "54673ee0-cfb7-437a-b360-34402223694e")
-		(at 90 112 180)
+		(at 120 140 180)
 		(descr "TUSB9261IPVP; package outline is datasheet-derived and requires final fab-library review")
 		(property "Reference" "U7"
 			(at 0 -5.5 180)
@@ -4226,7 +4226,7 @@
 	(footprint "C_0402_1005Metric"
 		(layer "F.Cu")
 		(uuid "7d6380dc-3597-4f8e-a7dd-59db0a3e22f1")
-		(at 78 128)
+		(at 101 134)
 		(property "Reference" "C43"
 			(at 0 -1.1 0)
 			(layer "F.SilkS")
@@ -8480,7 +8480,7 @@
 	(footprint "Crystal_3225_4Pad"
 		(layer "F.Cu")
 		(uuid "a564f720-cc70-4a4c-aa9c-1bb721b7b27b")
-		(at 84 124)
+		(at 108 130)
 		(descr "3.2 x 2.5 mm 4-pad crystal; verify vendor pad numbering before release")
 		(property "Reference" "Y1"
 			(at 0 0 0)
@@ -9350,7 +9350,7 @@
 	(footprint "R_0402_1005Metric"
 		(layer "F.Cu")
 		(uuid "d37310b7-78c4-4ad6-98dc-d945527b2144")
-		(at 78 124)
+		(at 101 130)
 		(descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
 		(property "Reference" "R23"
 			(at 0 -0.9 0)
@@ -9781,7 +9781,7 @@
 	(footprint "JAE_SM3ZS067U410ABR1000_BKEY"
 		(layer "F.Cu")
 		(uuid "dce016b8-c7f7-4745-b037-1b256faefbd6")
-		(at 125 112 90)
+		(at 145 125 90)
 		(property "Reference" "J3"
 			(at -7.62 -10.287 90)
 			(layer "F.SilkS")

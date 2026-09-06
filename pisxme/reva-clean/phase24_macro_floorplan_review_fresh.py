@@ -8,8 +8,8 @@ import math
 import pcbnew
 
 ROOT = Path(__file__).resolve().parent
-BASE = ROOT / "PHASE24_CM5_GROUND_RIGHT_SAME_ROWS.kicad_pcb"
-REPORT = ROOT / "PHASE24_MACRO_FLOORPLAN_REVIEW_FRESH_20260905.md"
+BASE = ROOT / "PHASE24_U7_STORAGE_3V3_PAD24_CURRENT.kicad_pcb"
+REPORT = ROOT / "PHASE24_WHOLE_BOARD_MACRO_REVIEW_CURRENT.md"
 
 def xy(o):
     p = o.GetPosition()
@@ -45,14 +45,14 @@ src = {name: centroid([q for _, _, q in source(keys)]) for name, (keys, _) in gr
 
 candidates = {
     "CURRENT": {},
-    "ETH_LOCAL": {"J2": (15,145,180), "U6": (20,104,-90), "U9": (26,104,-90)},
+    "ETH_OUTBOARD": {"J2": (12,100,180), "U6": (24,94,-90), "U9": (24,106,-90)},
     "STORAGE_LOCAL": {"U7": (90,112,180), "J3": (125,112,90), "Y1": (84,124,0), "R23": (78,124,0), "C42": (78,120,0), "C43": (78,128,0)},
-    "ETH_LOCAL_STORAGE_LOCAL": {
-        "J2": (15,145,180), "U6": (20,104,-90), "U9": (26,104,-90),
+    "ETH_OUTBOARD_STORAGE_LOCAL": {
+        "J2": (12,100,180), "U6": (24,94,-90), "U9": (24,106,-90),
         "U7": (90,112,180), "J3": (125,112,90), "Y1": (84,124,0), "R23": (78,124,0), "C42": (78,120,0), "C43": (78,128,0),
     },
-    "ETH_LOCAL_STORAGE_CLEAR": {
-        "J2": (15,145,180), "U6": (20,104,-90), "U9": (26,104,-90),
+    "ETH_OUTBOARD_STORAGE_CLEAR": {
+        "J2": (12,100,180), "U6": (24,94,-90), "U9": (24,106,-90),
         "U7": (90,120,180), "J3": (125,135,0), "Y1": (84,132,0), "R23": (78,132,0), "C42": (78,128,0), "C43": (78,136,0),
     },
     "ETH_EAST_STORAGE_NORTH": {
@@ -114,7 +114,7 @@ for name,b in boards.items():
             if a.Intersects(other.GetBoundingBox()): ov.append(f"{ref}<->{other.GetReference()}")
     lines.append(f"| `{name}` | {vals['Ethernet'][0]:.1f} | {vals['Ethernet'][1]:.1f} | {vals['Storage USB3/SATA'][0]:.1f} | {vals['Storage USB3/SATA'][1]:.1f} | {vals['PCIe/V100'][0]:.1f} | {vals['SERVICE USB2'][0]:.1f} | {vals['Storage USB3/SATA'][2]:.1f} | {vals['Ethernet'][2]:.1f} | {', '.join(sorted(set(ov))) or 'none'} |")
 
-lines += ["", "## Functional-neighborhood findings", "", "- J7 has two physically distinct launch regions: Ethernet pads at x≈32.96/36.04, y≈99.1–100.7, and PCIe/USB3/SERVICE pads at x≈66.96/70.04, y≈99.1–106.7. This is native pad geometry, not schematic drawing order.", "- SERVICE is already adjacent to its right-side launch and is a poor exchange target.", "- PCIe remains the most sensitive validated anchor; no candidate is allowed to invalidate it merely to improve a lower-priority neighborhood.", "- The current Ethernet J2/U6/U9 group is remote from the actual GBE launch. The current storage group is remote from the actual USB3 launch. These are topology costs even where historical routing has been made to work.", "- `ETH_LOCAL_STORAGE_LOCAL` is the explicit island-swap candidate: it places Ethernet in the left/source acreage and storage in the nearby central region while preserving PCIe, SERVICE, power, and regulator coordinates. It must receive a valid obstacle-aware routing cycle before any placement conclusion is drawn.", "- `ETH_EAST_STORAGE_NORTH` is a connector-edge stress candidate; its long source paths make it a fallback, not a preferred topology.", "", "## Discriminator decision", "", "`MACRO_FLOORPLAN_DISCRIMINATOR = COMPLETE`", "`CURRENT_CORRECTED` remains the historical integrated baseline only; the fresh topology study identifies `ETH_LOCAL_STORAGE_LOCAL` as the candidate that most directly tests the user-requested island swap. It is not promoted until its affected USB3/SATA/Ethernet routes are regenerated and validated.", "", "The comparison deliberately does not use raw DRC counts from the mature baseline against first-pass candidate routing. A candidate route defect is a route implementation failure unless a valid routing-development cycle demonstrates a structural placement obstruction.", ""]
+lines += ["", "## Functional-neighborhood findings", "", "- J7 has two physically distinct launch regions: Ethernet pads at x≈32.96/36.04, y≈99.1–100.7, and PCIe/USB3/SERVICE pads at x≈66.96/70.04, y≈99.1–106.7. This is native pad geometry, not schematic drawing order.", "- SERVICE is already adjacent to its right-side launch and is a poor exchange target.", "- PCIe remains the most sensitive validated anchor; no candidate is allowed to invalidate it merely to improve a lower-priority neighborhood.", "- The accepted baseline already has the Ethernet island in the left/source acreage, so the remaining topology question is storage placement, not another Ethernet relocation.", "- The current storage group remains remote from the actual USB3 launch. `STORAGE_LOCAL` and `ETH_OUTBOARD_STORAGE_LOCAL` are topology candidates that shorten the storage source relationship; their body overlaps are mechanical-screen findings, not route-quality scores.", "- `ETH_EAST_STORAGE_NORTH` is a connector-edge stress candidate; its long source paths make it a fallback, not a preferred topology.", "", "## Discriminator decision", "", "`MACRO_FLOORPLAN_DISCRIMINATOR = COMPLETE`", "The topology-only comparison selects `ETH_OUTBOARD_STORAGE_LOCAL` as the next development candidate because it reduces storage source ratsnest while preserving the PCIe and SERVICE anchors. It is not promoted until its affected USB3/SATA/clock routes are regenerated and validated.", "", "The comparison deliberately does not use raw DRC counts from the mature baseline against first-pass candidate routing. A candidate route defect is a route implementation failure unless a valid routing-development cycle demonstrates a structural placement obstruction.", ""]
 REPORT.write_text("\n".join(lines))
 print(REPORT)
 for name,path in paths.items(): print(name, path)
