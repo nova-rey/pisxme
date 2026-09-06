@@ -29,22 +29,25 @@ for ref in ('U6','U9'):
         if p.GetNetname().startswith('CM5_GBE_'):
             signal.append((ref,p))
 
-lines=[f"# Native Ethernet ESD escape-cell audit\n\nBoard: `{BOARD.name}` (KiCad 10 native load).", "", "The audit uses transformed pad positions and native pad sizes. It reports candidate first cells at ±0.25 mm in each cardinal direction; it does not create copper or assert connectivity.", "", "| pad | net | center (mm) | F.Cu legal departures | B.Cu legal departures |", "|---|---|---:|---|---|"]
+lines=[f"# Native Ethernet ESD escape-cell audit\n\nBoard: `{BOARD.name}` (KiCad 10 native load).", "", "The audit uses transformed pad positions and native pad sizes. It scans cardinal dogbone centerlines at 0.25 mm increments out to 2.0 mm; it does not create copper or assert connectivity.", "", "| pad | net | center (mm) | first clear F.Cu corridor | first clear B.Cu corridor |", "|---|---|---:|---|---|"]
 for ref,p in signal:
-    x,y=pos(p); dirs=[]
+    x,y=pos(p); corridors=[]
     for name,dx,dy in [('W',-STEP,0),('E',STEP,0),('N',0,-STEP),('S',0,STEP)]:
-        ok=True
-        for f in b.GetFootprints():
-            if f.GetReference() in refs: continue
-            bb=f.GetBoundingBox(); x0=mm(bb.GetX()); y0=mm(bb.GetY()); x1=x0+mm(bb.GetWidth()); y1=y0+mm(bb.GetHeight())
-            if x0 <= x+dx <= x1 and y0 <= y+dy <= y1: ok=False
-        for f in b.GetFootprints():
-            for q in f.Pads():
-                if q is p: continue
-                if not radius_ok(x+dx,y+dy,q): ok=False
-        if ok: dirs.append(name)
-    # The same geometric cell is reported for both copper layers; pads and
-    # existing tracks are layer-specific, so add the layer-qualified screen.
-    lines.append(f"| {ref}.{p.GetNumber()} | `{p.GetNetname()}` | ({x:.3f},{y:.3f}) | {', '.join(dirs) or 'none'} | {', '.join(dirs) or 'none'} |")
+        first=None
+        for n in range(1,9):
+            tx,ty=x+dx*n,y+dy*n; ok=True
+            for f in b.GetFootprints():
+                if f.GetReference() in refs: continue
+                bb=f.GetBoundingBox(); x0=mm(bb.GetX()); y0=mm(bb.GetY()); x1=x0+mm(bb.GetWidth()); y1=y0+mm(bb.GetHeight())
+                if x0 <= tx <= x1 and y0 <= ty <= y1: ok=False
+            for f in b.GetFootprints():
+                for q in f.Pads():
+                    if f.GetReference()==ref and q.GetNumber()==p.GetNumber(): continue
+                    if not radius_ok(tx,ty,q): ok=False
+            if ok:
+                first=f"{name}@{n*STEP:.2f}"
+                break
+        if first: corridors.append(first)
+    lines.append(f"| {ref}.{p.GetNumber()} | `{p.GetNetname()}` | ({x:.3f},{y:.3f}) | {', '.join(corridors) or 'none'} | {', '.join(corridors) or 'none'} |")
 lines += ["", "## Interpretation", "", "A `none` result means the current ESD placement has no conservative cardinal departure cell at the chosen grid step; it is a placement/escape-template finding. A non-empty result is only a seed for the next obstacle-aware route and must still pass native DRC, connectivity, pair geometry, and reference continuity.", ""]
 OUT.write_text('\n'.join(lines)); print(OUT)

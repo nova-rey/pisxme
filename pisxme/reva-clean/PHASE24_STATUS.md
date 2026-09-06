@@ -1754,3 +1754,12 @@ were authored. It is rejected as `ROUTE_IMPLEMENTATION_FAILURE`: the old
 waypoints cannot be transplanted unchanged into this local Ethernet
 placement. The evidence narrows the next template to new local directional
 lanes with explicit obstacle ownership.
+
+### Directional ESD corridor refinement — 2026-09-05
+
+The native escape audit was extended from the immediate cell to a 2.0 mm
+cardinal dogbone scan. Valid N/S package-end departure seeds exist for every
+U6/U9 signal pad; the earlier “none” result was only an immediate-cell
+screen, not a package impossibility. These native seeds will drive the next
+explicit route template and keep `ROUTE_IMPLEMENTATION_FAILURE` distinct from
+`MACRO-PLACEMENT FAILURE`.
