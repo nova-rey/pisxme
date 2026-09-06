@@ -4016,3 +4016,11 @@ mixed-layer control. It regressed to 23 native DRC findings, including one
 crossing, five shorts, and four hole-clearance findings, so it was rejected
 and the 10-finding control was restored. No validation severity, layer
 contract, macro placement, or frozen PCIe copper changed.
+
+## TI-U7 split-RX transition experiment — 2026-09-06
+
+An alternate-layer RX_P experiment was tested while retaining the mixed-layer
+TX assignment. Native DRC regressed to 14 findings with three crossings and
+two clearances; no shorts were introduced, but the candidate was rejected.
+The prior 10-finding mixed-layer control was restored. This remains route
+implementation evidence only; no macro or frozen PCIe geometry changed.

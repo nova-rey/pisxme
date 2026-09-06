@@ -4412,3 +4412,5 @@ Refined mixed-layer TX source/target transition ordering; the best disposable re
 Tested RX final-approach offsets; the best result remained the 10-finding zero-short/zero-crossing control, and the coordinate class was closed without promotion.
 # 2026-09-06 — Phase 24 TI U7 target height sweep
 Rejected a small TX target-transition height variation after native DRC regressed to 23 findings; restored the best zero-short/zero-crossing control.
+# 2026-09-06 — Phase 24 TI U7 split-RX experiment
+Rejected an alternate-layer RX escape after native DRC regressed to 14 findings with three crossings; restored the best mixed-layer control.
