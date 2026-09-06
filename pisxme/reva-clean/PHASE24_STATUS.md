@@ -1584,7 +1584,7 @@ pad coordinates from the saved native footprint objects and use an
 obstacle-aware route search, rather than continuing hand-authored coordinate
 variants.
 
-## Native obstacle-search LED probe — 2026-09-06
+## Native obstacle-search LED probe — 2026-09-05
 
 `phase24_led_obstacle_search_probe.py` was added as the first generator that
 derives transformed endpoint coordinates from native pads and searches both
