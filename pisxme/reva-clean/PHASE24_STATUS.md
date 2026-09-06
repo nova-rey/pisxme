@@ -3085,3 +3085,30 @@ Receipts:
 `phase24_probe_bridge_supply_hierarchy.py`,
 `PHASE24_CLEAN_HIERARCHY_REPAIRED.xml`, and
 `PHASE24_CLEAN_HIERARCHY_REPAIRED-erc.rpt`.
+
+## PCB synchronization discriminator after hierarchy repair — 2026-09-06
+
+The first PCB-side synchronization trial was deliberately authority-checked
+against the repaired native netlist before changing rail ownership. The
+selected storage candidate contains stale `/STORAGE/BRIDGE_3V3` and
+`/STORAGE/BRIDGE_1V1` names, which can be normalized for the authoritative U7
+members. It also contains U7.3 assigned to `/STORAGE/BRIDGE_1V1`, but the TI
+TUSB9261 Rev-I pin table identifies pin 3 as PWM1; the clean schematic does
+not use that optional pin. The synchronization therefore clears U7.3 to no
+net rather than incorrectly joining it to the 1.1-V rail. This is a real
+schematic-to-footprint mapping defect exposed by the new authority, not a
+routing failure.
+
+The trial reassigned 36 authoritative bridge-rail pads and saved a disposable
+candidate. Native DRC then exposed one additional pre-existing board-only
+TP5 route ending on a no-net test pad, so that disposable result is rejected;
+no PCB candidate is promoted. The native DRC still has zero track crossings,
+but it has one short between `BRIDGE_3V3` and the no-net TP5 pad. The next
+action is to remove or explicitly authorise that test-point circuit from the
+schematic, then rerun net synchronization and the U7 power/connectivity/parity
+audits. This preserves fail-closed validation and does not claim Phase 24
+closure.
+
+Receipt:
+`phase24_sync_bridge_supply_nets.py` and
+`PHASE24_STORAGE_NATIVE_ORACLE_SUPPORT_C19_BOTTOM_FLIPPED_HIERARCHY_SYNC-drc.rpt`.
