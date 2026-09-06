@@ -4595,3 +4595,10 @@ U12 now names its four CM5 USB3 source pins
 aliases. Reconciled selector ground labels to native `POWER_GND` and verified
 the corrected schematic with library/instance audits and native netlist export.
 The routed storage fixture remains disposable and nonpassing.
+## 2026-09-06 — storage PCB authority regenerated
+
+Regenerated the disposable storage placement candidate from the corrected
+source-net and ground authority. Native KiCad loading finds J4 SERVICE, J5
+mode control, U11/U12/U13/J3, and C80-C93 support references. Native DRC runs
+and reports 1,072 violations / 499 unconnected items; the candidate remains
+placement/routing development evidence only.
