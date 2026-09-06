@@ -2288,3 +2288,11 @@ unconnected items from 227 to 225 but introduced three shorts, one crossing,
 and three new clearance items. Both variants are rejected as
 `ROUTE IMPLEMENTATION_FAILURE`; `/POWER_INPUT/12V_IN_B` remains open and its
 VCAP_B separation is preserved.
+
+### Promote obstacle-aware C4/U2 12V_IN_B launch — 2026-09-06
+
+The corrected B-input route transitions at C4.2 and laterally at U2.3, then
+uses B.Cu around the existing VCAP_B and Ethernet escapes. Native KiCad DRC
+reports 0 shorts, 0 track crossings, 225 unconnected items, and 12 clearance
+items. `PHASE24_12V_B_C4_U2_OBSTACLE_ROUTE_CURRENT.kicad_pcb` is promoted;
+the remaining U2-to-F2 source connection is still open.
