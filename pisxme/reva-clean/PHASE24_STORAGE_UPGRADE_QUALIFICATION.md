@@ -19,7 +19,7 @@ storage acreage.
 | USB A/B switch | TI `HD3SS6126RUAR`, 42-pin RUA WQFN | TI datasheet Rev A and product/order page | QUALIFIED FOR DESIGN REVIEW | It switches USB3 TX/RX and USB2 D+/D-. Active lifecycle; TI page was out of stock at check, while DigiKey/Mouser records showed orderable stock snapshots. Final exact distributor snapshot is required before BOM release. |
 | SATA/PCIe switch | TI `HD3SS3412RUAR`, 42-pin RUA WQFN | TI datasheet Rev F / `HD3SS3412A` pinout and product page | QUALIFIED FOR DESIGN REVIEW | Four bidirectional differential channels, 3.3 V, common-mode and amplitude limits documented. SATA OOB and inactive NVMe electrical-idle behavior still require a complete mode-state review before pad assignment. |
 | M.2 socket | JAE `SM3ZS067U215BMR1500`, 67-position, 0.5 mm, 2.15 mm M-key | JAE SM3-series manufacturer page and family drawing references; DigiKey exact-family evidence | IDENTITY/PROCUREMENT CLOSED; LAND PATTERN PENDING | This is the correct M-key variant direction. The exact released drawing/ECAD capture and pad-by-pad comparison must still be saved before replacing J3. The existing `SM3ZS067U410ABR1000` is B-key-only and cannot be reused for NVMe. |
-| NVMe bridge | ASMedia `ASM2362`, QFN64 9 x 9 | ASMedia official product page only | BLOCKED | No public exact pinout/land pattern, reference circuit, firmware/configuration package, programming procedure, or authorized major-distributor order record was found. Do not invent a symbol/footprint or implement it. |
+| NVMe bridge | ASMedia `ASM2362`, QFN64 9 x 9 | ASMedia official product page; JLCPCB part `C5121260` listing and assembly record | BLOCKED | JLCPCB improves assembly/procurement evidence and exposes EasyEDA CAD, but no public ASMedia-authoritative exact pinout/land pattern, reference circuit, firmware/configuration package, or programming procedure was found. Do not promote marketplace CAD into electrical authority. |
 | NVMe alternatives | JMS583/JMS586/JMS580, RTL9210B, ASM2364/ASM2464 | Prior repo authority, bounded web search, and independent read-only review | REJECTED FOR THIS GATE | No candidate simultaneously exposed manufacturer-authoritative pin/land-pattern, reference schematic, firmware/configuration/programming, and traceable prototype procurement evidence. Marketplace availability does not close the authority gap. |
 
 ## Authoritative electrical facts captured
@@ -45,6 +45,10 @@ storage acreage.
   QFN64 9 x 9, with SPI external ROM, GPIO/I2C/UART, 25 MHz crystal, UAS,
   TRIM, and a 1.05 V supply. Those marketing-level facts do not provide the
   package pin ownership or a buildable authorized design package.
+- JLCPCB currently lists ASM2362 as `C5121260`, QFN-64, for its economic and
+  standard SMT assembly flow and exposes an EasyEDA symbol/footprint link.
+  That improves assembly evidence but closes neither manufacturer pin/land
+  pattern authority nor the firmware/configuration/programming requirement.
 
 ## Mode/control and validation work that remains gated
 

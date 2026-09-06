@@ -4489,3 +4489,5 @@ Corrected shared TX lane geometry and target-row indexing in the anchored contin
 Tested a native-J7 local B.Cu source escape after proving the transformed CM5IO F.Cu prefix conflicts with the existing PCIe/REFCLK breakout; the variant had zero shorts and crossings but added localized via/clearance findings and was retained for refinement.
 # 2026-09-06 — Phase 24 U5 native recheck receipt
 Reran the corrected KiCad-native U5 connectivity audit against the saved fixture and promoted integrated basis; both pass, and a disposable real U5.9 trace-removal control fails as required. Native DRC/unconnected findings remain open and no full-board closure was claimed.
+# 2026-09-06 — Phase 24 ASM2362 JLCPCB qualification refresh
+Captured the current JLCPCB ASM2362 assembly listing and EasyEDA CAD-link evidence. It improves procurement/assembly evidence but does not close missing ASMedia-authoritative pinout, reference design, firmware, or programming authority; no mystery bridge was implemented.

@@ -15,8 +15,10 @@ protocol features, but it does not expose the exact pad-level pin map, package
 land pattern, reference schematic, firmware/configuration image or authorized
 programming workflow. No exact ASM2362 procurement record from DigiKey,
 Mouser, Arrow/Newark, LCSC, or another traceable mainstream channel was
-captured. A product page, marketplace listing, or guessed family footprint is
-not enough for this project’s authority gate.
+captured. JLCPCB now provides an assembly listing (`C5121260`) and EasyEDA
+CAD link, but that is procurement/assembly evidence rather than ASMedia
+design authority. A product page, marketplace listing, or guessed family
+footprint is not enough for this project’s authority gate.
 
 ## Why implementation stops here
 
@@ -45,6 +47,9 @@ socket and is not a valid substitute.
 - JAE SM3 manufacturer series page and exact M-key family listing.
 - Existing repo authority for JMS578, ASM1153E, the B-key JAE socket, and
   TUSB9261 firmware/configuration.
+- JLCPCB ASM2362 listing (`C5121260`) was inspected and saved locally. It
+  supports assembly availability but does not expose the missing electrical
+  and firmware authority.
 
 An independent read-only hardware review also inspected the captured ASMedia
 page and prior repo evaluations. It reached the same conclusion for
