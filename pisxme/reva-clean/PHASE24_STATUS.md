@@ -1867,3 +1867,15 @@ corridors and one inherited PCIe-vs-storage corridor conflict. This is still
 `ROUTE_IMPLEMENTATION_FAILURE`, not `MACRO-PLACEMENT FAILURE`; the selected
 macro has received a materially different, native-pad-authoritative routing
 cycle and remains the active basis for the next lane-ordering repair.
+
+### Storage layer-separated socket-launch trial — 2026-09-05
+
+The storage authoring path was extended with a native north escape for the
+saved U7 rotation, explicit USB3 TX_P final pad-field avoidance, and a
+layer-separated SATA socket launch. The best disposable result reduced the
+isolated V15-parent candidate to 4 native shorts and 8 track crossings, with
+the earlier broad U7 no-net landing defect removed. It remains
+`ROUTE_IMPLEMENTATION_FAILURE`: the remaining records identify SATA
+bridge-side escape ordering, socket-side pair ordering, and one USB3/clock
+clearance interaction. The candidate is preserved but not promoted, and the
+selected macro is unchanged.

@@ -243,10 +243,21 @@ def main():
      T(b,n,e,a,pcbnew.F_Cu)
     # Socket-side legs use distinct monotonic upper/lower lanes and return to
     # F.Cu before the M.2 pads.
-    socket_v=(z[0]+(2.0 if jn in ('1','3') else -2.0), z[1]-4.0)
-    T(b,socket,z,socket_v,pcbnew.F_Cu); X(b,socket,socket_v)
-    socket_lane=(socket_v[0], d[1]-4.0 if jn in ('1','3') else d[1]+4.0)
-    T(b,socket,socket_v,socket_lane,pcbnew.B_Cu); X(b,socket,socket_lane); T(b,socket,socket_lane,d,pcbnew.F_Cu)
+    if os.environ.get('P19_SATA_SOCKET_SIMPLE','0') == '1':
+     # Keep the two SATA pairs on separate permitted signal layers all the
+     # way to the connector launch.  The x lanes preserve endpoint ordering;
+     # vias are outside both the coupling-cap and M.2 pad fields.
+     if name.startswith('BRIDGE_SATA_TX_'):
+      socket_lane=(124.0 if jn == '1' else 128.0, d[1])
+      T(b,socket,z,(socket_lane[0],z[1]),pcbnew.F_Cu); T(b,socket,(socket_lane[0],z[1]),socket_lane,pcbnew.F_Cu); T(b,socket,socket_lane,d,pcbnew.F_Cu)
+     else:
+      socket_lane=(121.0 if jn == '3' else 130.0, d[1])
+      socket_v=(socket_lane[0],z[1]); T(b,socket,z,socket_v,pcbnew.F_Cu); X(b,socket,socket_v); T(b,socket,socket_v,socket_lane,pcbnew.B_Cu); X(b,socket,socket_lane); T(b,socket,socket_lane,d,pcbnew.F_Cu)
+    else:
+     socket_v=(z[0]+(2.0 if jn in ('1','3') else -2.0), z[1]-4.0)
+     T(b,socket,z,socket_v,pcbnew.F_Cu); X(b,socket,socket_v)
+     socket_lane=(socket_v[0], d[1]-4.0 if jn in ('1','3') else d[1]+4.0)
+     T(b,socket,socket_v,socket_lane,pcbnew.B_Cu); X(b,socket,socket_lane); T(b,socket,socket_lane,d,pcbnew.F_Cu)
    elif os.environ.get('P19_SATA_V3','0') == '1' and jrot == 90:
     # V3 routes: TX_P uses the lower B.Cu corridor, TX_N the upper F.Cu
     # corridor, and the RX pair use separated B.Cu lanes.  Each cap is
