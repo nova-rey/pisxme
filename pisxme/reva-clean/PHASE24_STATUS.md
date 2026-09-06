@@ -3999,3 +3999,11 @@ fixture-only dangling warnings. A farther-separated target-via variant
 regressed to 15 findings and was rejected. The 10-finding result remains
 disposable `ROUTE_IMPLEMENTATION_FAILURE`; no integrated or PCIe copper was
 changed or promoted.
+
+## TI-U7 target-transition height sweep — 2026-09-06
+
+A small TX target-transition height variation was tested against the best
+mixed-layer control. It regressed to 23 native DRC findings, including one
+crossing, five shorts, and four hole-clearance findings, so it was rejected
+and the 10-finding control was restored. No validation severity, layer
+contract, macro placement, or frozen PCIe copper changed.

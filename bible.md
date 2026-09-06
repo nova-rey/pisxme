@@ -4408,3 +4408,5 @@ Tested native-row source transitions with direct diagonal TI-U7 escapes; native 
 Tested separated mixed-layer RX/TX pair escapes; the best native DRC result reached zero shorts with one crossing and one hole-clearance finding, but remains unpromoted route evidence.
 # 2026-09-06 — Phase 24 TI U7 transition refinement
 Refined mixed-layer TX source/target transition ordering; the best disposable result reached zero shorts and crossings with four remaining local geometry errors, and was not promoted.
+# 2026-09-06 — Phase 24 TI U7 target height sweep
+Rejected a small TX target-transition height variation after native DRC regressed to 23 findings; restored the best zero-short/zero-crossing control.
