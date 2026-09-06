@@ -1695,3 +1695,15 @@ not evidence against the macro-floorplan. The candidate is preserved with
 its native DRC receipt for the next obstacle-aware/reference-topology
 regeneration cycle; no severity, layer policy, or connectivity assertion was
 relaxed.
+
+### Ethernet router endpoint-model correction probe — 2026-09-05
+
+The generator was corrected in two generic ways: duplicate same-net ESD pads
+are now attached independently to the selected terminal, and the search no
+longer clears a broad five-cell halo around terminal centers. The first
+change reduced the disposable candidate from 497 to 473 DRC violations but
+still left real shorts/crossings. The second change correctly preserved
+neighboring native pads, but the conservative occupancy model then found no
+legal path from the ESD field to the MagJack entry. This remains
+`ROUTE_IMPLEMENTATION_FAILURE` and identifies the next required fix:
+pad-shape-aware terminal escape, not another macro-floorplan comparison.

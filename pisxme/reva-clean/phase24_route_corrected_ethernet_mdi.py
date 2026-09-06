@@ -73,8 +73,10 @@ def route_path(occ, start, goal, start_layer, goal_layer):
     # both layers, erasing neighboring endpoint pads in dense J7/ESD fields
     # and allowing native shorts.  Keep every other pad-field obstacle real.
     for layer, (cx,cy) in ((start_layer,(s[0],s[1])),(goal_layer,(g[0],g[1]))):
-        for dx in range(-2,3):
-            for dy in range(-2,3): occ[layer].discard((cx+dx,cy+dy))
+        # Remove only the terminal cell.  A broad halo erased neighboring
+        # native pads in dense J7/ESD fields and let the search emit tracks
+        # through power or opposite-polarity pads.
+        occ[layer].discard((cx,cy))
     bounds=(grid(0,94),grid(45,162))
     q=[(0,s)]; cost={s:0}; prev={s:None}
     while q:
@@ -148,7 +150,10 @@ for name,j7,esd,ep,jack,jp,return_layer in mapping:
             # The duplicated same-net ESD pads are adjacent package pads;
             # connect them with a native short surface segment rather than
             # asking the global router to treat the pad field as open space.
-            t=pcbnew.PCB_TRACK(board);t.SetStart(V(*mid));t.SetEnd(V(*po));t.SetLayer(pad_layer(esd_pad));t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(net);board.Add(t);mark_line(occ,pad_layer(esd_pad),mid,po,.14);mid=po
+            t=pcbnew.PCB_TRACK(board);t.SetStart(V(*mid));t.SetEnd(V(*po));t.SetLayer(pad_layer(esd_pad));t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(net);board.Add(t);mark_line(occ,pad_layer(esd_pad),mid,po,.14)
+            # Keep the routed terminal at the selected ESD pad. Chaining
+            # duplicate package pads made the next pair's route start inside
+            # the neighboring pad field and caused false self-weaving.
     # Through-hole MagJack signal pads form a dense two-row field.  Route to
     # an explicit outside-of-field entry point, then use a short native-pad
     # dogbone; routing directly to the pad center made the search model weave

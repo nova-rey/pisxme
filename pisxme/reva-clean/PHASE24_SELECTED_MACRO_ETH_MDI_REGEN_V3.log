@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/nyx/PiSXMe/pisxme/reva-clean/phase24_route_corrected_ethernet_mdi.py", line 162, in <module>
+    p2=route_path(occ,mid,entry,pad_layer(esd_pad),return_layer);emit(board,net,p2,occ)
+  File "/home/nyx/PiSXMe/pisxme/reva-clean/phase24_route_corrected_ethernet_mdi.py", line 96, in route_path
+    if g not in prev: raise RuntimeError(f"no route {start}->{goal} {start_layer}->{goal_layer}")
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: no route (19.0, 104.385)->(18.175, 154.89) 0->2
