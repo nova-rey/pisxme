@@ -4,7 +4,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 R=Path(__file__).resolve().parent
-XML=R/'PHASE24_CLEAN_TUSB_PINFIELD.kicadxml'
+XML=R/'PHASE24_CLEAN_TUSB_VBUS_DIVIDER.kicadxml'
 MANDATORY={
  '1','7','12','19','24','32','33','34','40','41','47','48','49','50','51',
  '55','61','62','63','65', # supplies, USB VBUS, thermal pad

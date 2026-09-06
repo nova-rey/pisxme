@@ -7,10 +7,10 @@ import pcbnew
 
 R=Path(__file__).resolve().parent
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument('pcb'); ap.add_argument('output'); a=ap.parse_args()
+    ap=argparse.ArgumentParser(); ap.add_argument('pcb'); ap.add_argument('output'); ap.add_argument('--xml', default='PHASE24_CLEAN_TUSB_VBUS_DIVIDER.kicadxml'); a=ap.parse_args()
     b=pcbnew.LoadBoard(a.pcb); old=b.FindFootprintByReference('U7')
     if old is None: raise SystemExit('U7 missing')
-    xml=ET.parse(R/'PHASE24_CLEAN_TUSB_PINFIELD.kicadxml').getroot()
+    xml=ET.parse(R/a.xml).getroot()
     expected={n.get('pin'):net.get('name') for net in xml.findall('.//nets/net')
               for n in net.findall('node') if n.get('ref')=='U7'}
     new=pcbnew.FootprintLoad(str(R/'PiSXMe_RevA_Clean.pretty'),'TUSB9261IPVP_PVP0064A')

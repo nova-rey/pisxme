@@ -3335,3 +3335,27 @@ Receipts:
 `phase24_rename_storage_vbus_refs.py`,
 `PHASE24_CLEAN_TUSB_VBUS_DIVIDER.kicadxml`, and
 `PHASE24_CLEAN_TUSB_VBUS_DIVIDER-erc.rpt`.
+
+## U7 support materialization and fresh-route discriminator — 2026-09-06
+
+`phase24_materialize_u7_support_from_netlist.py` materialized R32/R33 and the
+TI U7 pad ownership from `PHASE24_CLEAN_TUSB_VBUS_DIVIDER.kicadxml` onto a
+disposable replacement board. The TI pad-authority audit and mandatory-pin
+contract both pass against the latest VBUS-inclusive native export.
+
+The first USB3 A* regeneration reaches all four native TI USB3 pads, but its
+inherited-board DRC is not a pass and is not promoted. A subsequent SATA A*
+discriminator reaches all eight SATA endpoints and the native SATA endpoint
+audit passes; DRC still reports implementation defects, including pair
+clearance/crossing and stale neighboring copper interactions. These are
+`ROUTE_IMPLEMENTATION_FAILURE` results against the new package geometry, not
+evidence to reject the TI footprint or storage architecture. The regenerated
+fixtures are disposable and Phase 24 remains open pending clean local escape
+authoring and support-circuit routing.
+
+Receipts:
+`phase24_materialize_u7_support_from_netlist.py`,
+`PHASE24_STORAGE_TI_PINFIELD_SUPPORT_MATERIALIZED.kicad_pcb`,
+`PHASE24_STORAGE_TI_PINFIELD_SUPPORT_USB3_ASTAR.kicad_pcb`,
+`PHASE24_STORAGE_TI_PINFIELD_SUPPORT_USB3_SATA_ASTAR.kicad_pcb`, and
+`PHASE24_STORAGE_TI_PINFIELD_SUPPORT_USB3_SATA_ASTAR-drc.rpt`.
