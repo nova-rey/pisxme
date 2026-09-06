@@ -2567,3 +2567,9 @@ route-development evidence, not as Phase 18 closure. The next correction is
 deliberate local return-via and plane-clearance handling followed by
 storage-specific connectivity audit. An earlier summary that called this
 zero-crossing was a report-parser error and is superseded here.
+
+The focused native `BuildConnectivity` audit nevertheless confirms all four
+USB3 endpoint memberships in the saved v4 probe: J7.128↔U7.42,
+J7.130↔U7.43, J7.140↔U7.45, and J7.142↔U7.46. This is endpoint-connectivity
+evidence only; it does not waive the remaining native DRC crossings,
+clearances, or whole-board opens.
