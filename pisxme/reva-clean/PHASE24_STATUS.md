@@ -1982,6 +1982,17 @@ not reject the macro-placement: the defect is localized to U7 source-via
 escape geometry, and the prior zero-short/zero-crossing candidate remains the
 active comparison baseline.
 
+### U7 translation and J3 north-band placement trials — 2026-09-05
+
+Two additional placement discriminators used the baseline native-pad escape
+mode. Translating U7 west to `(100,124)` with J3 retained reproduced the
+zero-short/zero-crossing class, with eight M.2 hole-clearance items. Combining
+that U7 translation with an outboard J3 at `(165,125)` cleared the hole class
+but retained two crossings and 14 clearances. A closer north-band J3 at
+`(145,100)` produced two shorts, two crossings, 13 hole-clearance items, and
+48 clearances. None is promoted: these results distinguish local launch
+geometry from macro placement and remain `ROUTE_IMPLEMENTATION_FAILURE`.
+
 ### Outboard J3 placement discriminator — 2026-09-05
 
 A disposable candidate moved only the authoritative J3 M.2 socket from

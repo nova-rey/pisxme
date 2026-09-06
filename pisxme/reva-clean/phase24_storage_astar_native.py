@@ -138,6 +138,10 @@ j3x=os.environ.get('PISXME_J3_X'); j3y=os.environ.get('PISXME_J3_Y')
 if j3x and j3y:
     j3=b.FindFootprintByReference('J3')
     j3.SetPosition(V(float(j3x),float(j3y)))
+u7x=os.environ.get('PISXME_U7_X'); u7y=os.environ.get('PISXME_U7_Y')
+if u7x and u7y:
+    u7=b.FindFootprintByReference('U7')
+    u7.SetPosition(V(float(u7x),float(u7y)))
 # Remove only the previous SATA copper so this experiment evaluates the new
 # native-pad route rather than colliding with inherited SATA geometry.  USB3,
 # PCIe, power, and all unrelated copper remain untouched.
