@@ -2252,6 +2252,13 @@ pads and preserves the separate fused-output group. Native KiCad DRC reports
 `PHASE24_F1_INPUT_PAD_FIELD_CURRENT.kicad_pcb` is promoted; the remaining
 input/protection and regulator endpoints remain open.
 
+### Rejected Q1/U1 protected launch — 2026-09-06
+
+The direct F.Cu Q1.2-to-U1.4 `/12V_PROTECTED` launch reduced the native open
+count from 225 to 224 but shorted an existing Ethernet trace. It is rejected
+as `ROUTE IMPLEMENTATION_FAILURE`; the protected power net remains separate
+and the promoted zero-short/crossing basis is unchanged.
+
 ### Promote F1 fused-output PTH field — 2026-09-06
 
 The four F1 output-side PTH pads on `/POWER_INPUT/FUSED_12V_A` were joined
