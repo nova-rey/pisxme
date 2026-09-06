@@ -4271,3 +4271,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Rejected direct Q1/U1 12V_PROTECTED launch after it shorted an existing Ethernet trace; retained the zero-short/crossing promoted basis and documented the local power-routing conflict.
 2026-09-06: Promoted dogbone-routed regulator-side BRIDGE_3V3 capacitor links without merging the distinct storage net; native DRC remains at zero shorts/crossings and total unconnected items fall from 236 to 234.
 2026-09-06: Promoted the local C14/C15 12V_PROTECTED dogbone around their opposite ground pads; native DRC remains at zero shorts/crossings and total unconnected items fall from 225 to 224.
+2026-09-06: Promoted the edge-side C23/C24/C25 12V_PROTECTED dogbone field; native DRC remains at zero shorts/crossings and total unconnected items fall from 224 to 222.

@@ -2310,3 +2310,11 @@ opposite POWER_GND pads with a short F.Cu dogbone. Native KiCad DRC reports
 0 shorts, 0 track crossings, 224 unconnected items, and 12 clearance items.
 `PHASE24_PROTECTED_C14_C15_LINK_CURRENT.kicad_pcb` is promoted; remaining
 protected-load and regulator distribution endpoints remain open.
+
+### Promote C23-C25 protected capacitor field — 2026-09-06
+
+The same-net C23.1/C24.1/C25.1 `/12V_PROTECTED` pads were joined with an
+edge-side F.Cu dogbone around their opposite ground pads. Native KiCad DRC
+reports 0 shorts, 0 track crossings, 222 unconnected items, and 12 clearance
+items. `PHASE24_PROTECTED_C23_C25_LINK_CURRENT.kicad_pcb` is promoted;
+connection to the U3 protected-input field remains open.
