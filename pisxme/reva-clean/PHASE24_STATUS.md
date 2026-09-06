@@ -1731,3 +1731,14 @@ or ordering alone does not solve the current terminal escape. These remain
 route implementation results. The next implementation class is an explicit
 CM5IO-derived pad-field departure template with reserved lanes, followed by
 full native DRC/connectivity validation.
+
+### Native ESD departure-cell audit — 2026-09-05
+
+`phase24_native_escape_cell_audit.py` inspected all sixteen U6/U9 Ethernet
+signal pads on the selected macro using transformed native dimensions. At a
+0.25 mm cardinal grid step, every immediate departure cell is blocked by the
+pad-field clearance envelope. This does not prove the package is unroutable;
+it proves the next router must model continuous pad-edge dogbones and
+directional escape corridors rather than treating pad centers as free grid
+nodes. The audit is preserved as a generator requirement and no routing gate
+was relaxed.
