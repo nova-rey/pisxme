@@ -1742,3 +1742,15 @@ it proves the next router must model continuous pad-edge dogbones and
 directional escape corridors rather than treating pad centers as free grid
 nodes. The audit is preserved as a generator requirement and no routing gate
 was relaxed.
+
+### CM5IO source-escape template trial — 2026-09-05
+
+The existing CM5IO-derived source escape waypoint pattern was regenerated
+from native J7 pads on the selected corrected macro. The disposable source
+template produced 221 native DRC violations, including source-pair
+crossings, shorts into SERVICE/power geometry, five dangling vias inherited
+from the template basis, and 454 unconnected pads because only source escapes
+were authored. It is rejected as `ROUTE_IMPLEMENTATION_FAILURE`: the old
+waypoints cannot be transplanted unchanged into this local Ethernet
+placement. The evidence narrows the next template to new local directional
+lanes with explicit obstacle ownership.
