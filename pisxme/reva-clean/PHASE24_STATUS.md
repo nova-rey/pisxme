@@ -3160,3 +3160,28 @@ Receipt:
 `phase24_u7_pad_net_authority_audit.py` and
 the TI `TUSB9261-datasheet-revI.pdf` retained under
 `authority-inventory/primary-docs/tusb9261/`.
+
+## TI PVP0064A U7 footprint authority fixture — 2026-09-06
+
+The retained TI TUSB9261 Rev-I package drawing was checked directly. It
+specifies the PVP0064A HTQFP land pattern at 0.4 mm pitch with 1.2 mm by
+0.2 mm perimeter lands, an approximately 8.5 mm land-pattern envelope, and
+an exposed thermal pad 65 in the 3.321--3.581 mm range. The prior clean
+`TUSB9261IPVP_HTQFP64` asset uses 0.5 mm pitch, has no pad 65, and is marked
+as requiring final fab-library review; it cannot be treated as manufacturer
+authoritative.
+
+`phase24_generate_ti_u7_authoritative_footprint.py` now generates a
+disposable `TUSB9261IPVP_PVP0064A` footprint basis from those dimensions.
+KiCad 10.0.5 loads it with all 65 pads and the expected 3.45 mm exposed-pad
+metal. The exposed-pad paste segmentation is intentionally not guessed and
+therefore remains a fabrication/stencil review item. This asset is evidence
+for the correction path, not a promoted production footprint.
+
+The complete U7 authority repair remains open: the clean symbol must represent
+the TI-required VDD/VDD33/VDDA33/VSS pins and the resulting schematic must be
+regenerated into a correctly mapped footprint before any U7 route is accepted.
+
+Receipt:
+`phase24_generate_ti_u7_authoritative_footprint.py` and
+`PiSXMe_RevA_Clean.pretty/TUSB9261IPVP_PVP0064A.kicad_mod`.
