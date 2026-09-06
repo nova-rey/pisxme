@@ -4360,3 +4360,5 @@ Recorded rejection of the native-clean V2 clock fixture after a bounded transfor
 Recorded rejection of the farther-south native V2 clock-oracle placement after native DRC found one real XI/VSSOSC short and 19 total violations. The support topology remains a valid source fixture; V26 USB3/SATA data copper was preserved unchanged.
 # 2026-09-06 — Phase 24 clock pad-layer correction audit
 The V2 clock fixture was retested on the V26 storage basis with its authoritative per-pad F.Cu/B.Cu layer sets preserved. The south-40 candidate passes native XI/XO/VSSOSC passive connectivity and has no native shorting, crossing, clearance, or dangling-via classes, but remains open at 73 board connections and is not promoted.
+# 2026-09-06 — Phase 24 parallel U7 clock-launch probe
+Recorded rejection of the direct three-via U7 clock launch: native DRC found 100 violations including true clock shorts, crossings, and clearance failures. The passive clock island and V26 data channels remain preserved.

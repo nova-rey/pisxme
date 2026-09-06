@@ -3740,3 +3740,11 @@ It still reports 73 board opens and three dangling F.Cu support tails, so it
 is a clock-support milestone rather than an accepted Phase 24 ancestor. The
 remaining work is to connect the three U7 clock launches and integrate the
 rail/reset/configuration support without reintroducing data-route conflicts.
+
+## Parallel U7 clock-launch probe (rejected)
+
+Three ordinary through-vias and parallel B.Cu legs were added from U7.52/.53/.54
+to the south-40 fixture launch points. Native DRC rejected this direct launch
+class with 100 violations, including real clock shorts, crossings, and
+clearance failures. It is preserved as `ROUTE_IMPLEMENTATION_FAILURE`; the
+passive clock island and V26 USB3/SATA data corridors were not changed.
