@@ -1812,3 +1812,19 @@ evidence only; the incomplete selected macro still has inherited/open-board
 DRC findings, so no Phase 24 closure is claimed. Further local Ethernet or
 clock/SATA routing experiments are paused until the macro review decision is
 accepted as the active basis.
+
+### Current-basis topology metrics reconciliation — 2026-09-05
+
+The independent review identified that the earlier candidate table was based
+on an older integrated ancestor. That gap is closed by
+`PHASE24_CURRENT_MACRO_TOPOLOGY_METRICS_20260905.md`, generated from a native
+load of `PHASE24_SELECTED_MACRO_ETH_SUPPORT_V15_LOCAL.kicad_pcb`. It includes
+the complete translated Ethernet support island and the complete storage
+bridge/M.2/clock/support island. The selected basis measures Ethernet
+97.45 mm same-net topology and storage USB3-source 145.11 mm same-net
+topology, with source-to-island centroid distances of 35.45 mm and 57.10 mm.
+
+This reconciliation strengthens the floorplan decision only; it does not
+promote the incomplete routed candidate. `CURRENT_MACRO_TOPOLOGY_METRICS =
+COMPLETE`, while native full-board electrical, return, mechanical, DFM, and
+route-quality gates remain open.
