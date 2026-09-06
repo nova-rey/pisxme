@@ -3185,3 +3185,23 @@ regenerated into a correctly mapped footprint before any U7 route is accepted.
 Receipt:
 `phase24_generate_ti_u7_authoritative_footprint.py` and
 `PiSXMe_RevA_Clean.pretty/TUSB9261IPVP_PVP0064A.kicad_mod`.
+
+## TUSB9261 mandatory pin-contract audit — 2026-09-06
+
+The native clean netlist currently represents only 17 U7 pins. Comparing it
+with the TI Rev-I signal/power tables shows that the symbol/netlist is missing
+mandatory package authority for VDD pins 1, 12, 19, 32, 33, 47, 49, 55, 61,
+and 63; VDD33 pins 7 and 51; VDDA33 pins 34, 40, 48, and 62; USB_VBUS pin
+50; USB2 pins 35/36; USB_R1/R1RTN pins 38/39; VSS pins 44/58; and exposed
+thermal pad 65. Pin 53 is represented, but remains intentionally classified
+as the oscillator-ground connection requiring its documented treatment.
+
+`phase24_u7_ti_pin_contract_audit.py` fails with that exact missing-pin list.
+This confirms the footprint discrepancy is coupled to an incomplete schematic
+component contract; it is not safe to repair the PCB by assigning nets to
+unrepresented pads. The next implementation step is to expand U7's clean
+symbol and support network from the TI pin contract, then export a fresh
+native netlist and regenerate the PCB mapping. Phase 24 remains open.
+
+Receipt:
+`phase24_u7_ti_pin_contract_audit.py`.
