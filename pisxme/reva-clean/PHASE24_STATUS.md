@@ -11,6 +11,29 @@ M-key socket candidate; exact customer CAD/pad parity remains open. Resume
 the preserved Phase 24 checkpoint only after the one-socket dual-mode island
 is implemented and its mode-aware/native validation passes.
 
+## Live storage-upgrade work — 2026-09-06
+
+The dual-mode storage implementation remains the active task; unrelated Phase
+24 routing is still paused. The authoritative child schematic now includes
+the TE `1-2199230-4` M-key socket, retained TI TUSB9261 SATA bridge, JMS583
+`QHFA3A`, TI HD3SS6126/HD3SS3412 selectors, a three-position power-off mode
+override (`J4`: FORCE_SATA / AUTO_PEDET / FORCE_NVME), and U14
+SN74LVC1G17DBVR buffering `MODE_IN` to `STORAGE_SEL`. JMS583 Rev 2.1 required
+support is explicit: 25-MHz crystal, 12-kOhm REXT, 4.7-uH LXO inductor,
+AVDD33/rail decoupling, reset RC, VBUS divider, and USB/PCIe TX coupling.
+
+Evidence checkpoint: `phase24_dual_mode_storage_mode_audit.py` and
+`phase24_jms583_support_audit.py` pass; native schematic netlist export exits
+zero. Native ERC reports 407 findings and is not a pass. The disposable PCB
+placement fixture loads natively and reports 1,069 violations / 499
+unconnected items because it is not routed; it is not a pass. Remaining work
+is to complete authoritative support footprints/placement, author a routed
+mode-aware fixture with forced SATA/NVMe/AUTO/empty/reset/inactive-state
+checks, reconcile native ERC/DRC and TE mechanical parity, then integrate.
+JMS583 baseline firmware remains factory mask-ROM; prototype procurement is
+still HIGH risk because the exact JLC listing is currently out of stock and
+no verified major-distributor listing is retained.
+
 ## Live dual-mode checkpoint — 2026-09-06
 
 Latest private checkpoint: `9f1bca1` (`reva-clean`). The active storage

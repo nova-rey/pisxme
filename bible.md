@@ -4529,3 +4529,16 @@ Added an executable mode truth-table regression proving the shared selector cont
 Added the documented TI SN74LVC1G17DBVR PEDET buffer to the storage child schematic and the disposable storage-island PCB candidate, retaining explicit M2_PEDET, STORAGE_SEL, storage power, and ground pad ownership. Native netlist parsing and placement DRC still show the candidate is incomplete; the manual override, JMS583 support network, and routed mode-aware fixture remain required.
 # 2026-09-06 — Phase 24 live storage checkpoint reconciliation
 Updated the current-state receipt to checkpoint `9f1bca1`, recording the corrected JMS583/M-key/U14 authority, native ERC and unrouted-placement evidence, and the exact next implementation gates. Whole-board Phase 24 remains paused until the dual-mode island itself closes.
+## 2026-09-06 — dual-mode storage support-authority checkpoint
+
+Paused the resumed Phase 24 routing work at the pushed storage checkpoint and
+continued the authorized one-socket SATA/NVMe upgrade. Added the storage-local
+power-off three-position mode override (`J4`), corrected U14 to buffer
+`MODE_IN`, and materialized the JMS583 Rev 2.1 support obligations: 25-MHz
+crystal, REXT, LXO inductor, rail/analog decoupling, reset RC, VBUS divider,
+and USB/PCIe transmitter coupling. Added fail-closed structural and negative
+control audits. Native schematic netlist export succeeds; the disposable PCB
+placement fixture loads and native DRC runs, but it remains unrouted with 499
+unconnected items and is not a pass. Native ERC remains open (407 findings).
+Whole-board Phase 24 remains paused until the routed mode-aware storage fixture
+and integrated validation close.

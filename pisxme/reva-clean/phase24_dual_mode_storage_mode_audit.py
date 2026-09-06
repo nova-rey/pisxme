@@ -38,6 +38,13 @@ def main():
             failures.append(f"missing instance {ref}")
         if mpn not in text:
             failures.append(f"missing MPN {mpn}")
+    if 'property "Reference" "J4"' not in text:
+        failures.append("missing J4 AUTO / FORCE SATA / FORCE NVMe override")
+    if 'AUTO / FORCE SATA / FORCE NVMe' not in text:
+        failures.append("mode override value missing")
+    for label in ("MODE_IN", "M2_PEDET", "STORAGE_SEL"):
+        if text.count(f'(label "{label}"') < 1:
+            failures.append(f"missing mode-control label: {label}")
     if not MATRIX.exists():
         failures.append("reviewed pin/mode matrix missing")
     if not args.allow_auto_open and "AUTO additionally requires" in MATRIX.read_text():

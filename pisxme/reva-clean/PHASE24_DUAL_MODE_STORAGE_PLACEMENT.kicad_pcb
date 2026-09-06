@@ -26885,7 +26885,7 @@
  (pad "57" smd roundrect (at 0.2 -4 90) (size 0.7 0.22) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_GPIO12_NC") (pinfunction "JMS_GPIO12_NC") (pintype "passive") (uuid "819dc93c-5200-526b-8c3a-833414f3d1c4"))
  (pad "58" smd roundrect (at 0.6 -4 90) (size 0.7 0.22) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_GPIO11_NC") (pinfunction "JMS_GPIO11_NC") (pintype "passive") (uuid "b617d773-5bef-5dd1-b1be-9906d0211ff4"))
  (pad "59" smd roundrect (at 1 -4 90) (size 0.7 0.22) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_GPIO10_NC") (pinfunction "JMS_GPIO10_NC") (pintype "passive") (uuid "d6e45d76-251f-5a40-baac-84239b8d14a0"))
- (pad "60" smd roundrect (at 1.4 -4 90) (size 0.7 0.22) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "TME") (pinfunction "TME") (pintype "passive") (uuid "6d6a5cbe-617a-521f-b459-9624e4338163"))
+ (pad "60" smd roundrect (at 1.4 -4 90) (size 0.7 0.22) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "6d6a5cbe-617a-521f-b459-9624e4338163"))
  (pad "61" smd roundrect (at 1.8 -4 90) (size 0.7 0.22) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_CC2_NC") (pinfunction "JMS_CC2_NC") (pintype "passive") (uuid "4c61f9c2-0606-5c1c-a245-3a76547eba58"))
  (pad "62" smd roundrect (at 2.2 -4 90) (size 0.7 0.22) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_CC1_NC") (pinfunction "JMS_CC1_NC") (pintype "passive") (uuid "a7a16ae6-64bb-5115-98a3-61853a65a0ba"))
  (pad "63" smd roundrect (at 2.6 -4 90) (size 0.7 0.22) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "c449788c-e345-51ce-977a-59eade1a62b7"))
@@ -27004,7 +27004,7 @@
  (uuid "03bd60f8-2169-562b-866a-0136b03f1e0b")
 )
 (footprint "SOT-23-5" (version 20240108) (generator pcbnew)
- 
+
  (layer "F.Cu")
  (at 210 150)
   (descr "TI SN74LVC1G17DBVR; DBV SOT-23-5 review footprint")
@@ -27020,11 +27020,501 @@
   (fp_line (start -0.9 -0.9) (end -0.9 -0.45)
     (stroke (width 0.15) (type default)) (layer "F.SilkS"))
   (pad "1" smd roundrect (at -1.1 -0.95) (size 1.0 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
-  (pad "2" smd roundrect (at -1.1 0.0) (size 1.0 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "M2_PEDET") (pinfunction "M2_PEDET") (pintype "passive") (uuid "5d4893e5-e207-5da7-aaf0-00e1ad43fc51"))
+  (pad "2" smd roundrect (at -1.1 0.0) (size 1.0 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "MODE_IN") (pinfunction "MODE_IN") (pintype "passive") (uuid "5d4893e5-e207-5da7-aaf0-00e1ad43fc51"))
   (pad "3" smd roundrect (at -1.1 0.95) (size 1.0 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "283de4c6-1240-5fe5-bea9-0937a6e715ff"))
   (pad "4" smd roundrect (at 1.1 0.95) (size 1.0 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "STORAGE_SEL") (pinfunction "STORAGE_SEL") (pintype "passive") (uuid "63c1463a-54b7-5393-afb5-f3e2d0fb3c83"))
   (pad "5" smd roundrect (at 1.1 -0.95) (size 1.0 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "STORAGE_3V3") (pinfunction "STORAGE_3V3") (pintype "passive") (uuid "2907504b-e21c-5c42-8005-d186b72b80f7"))
 
  (uuid "e083d7e4-a686-53cd-a0b1-fb25d65fe53c")
+)
+(footprint "MODE_JUMPER_1x04" (version 20240108) (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 230 165)
+  (descr "Storage-local power-off mode strap: FORCE_SATA/AUTO_PEDET/FORCE_NVME/MODE_IN")
+  (property "Reference" "J4" (at 0 -3 0) (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "" (at 0 3 0) (layer "F.Fab") hide (effects (font (size 0.8 0.8))))
+  (attr through_hole)
+  (fp_rect (start -2 -2) (end 2 2) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (pad "1" thru_hole rect (at -1.27 -1.27) (size 1.7 1.7) (drill 0.9) (layers "*.Cu" "*.Mask") (net "FORCE_SATA") (pinfunction "FORCE_SATA") (pintype "passive") (uuid "385f8007-cab6-57fc-9db2-d793fcb79409"))
+  (pad "2" thru_hole circle (at 1.27 -1.27) (size 1.7 1.7) (drill 0.9) (layers "*.Cu" "*.Mask") (net "AUTO_PEDET") (pinfunction "AUTO_PEDET") (pintype "passive") (uuid "94328aaf-8617-5297-b776-2de2ac44e61b"))
+  (pad "3" thru_hole circle (at -1.27 1.27) (size 1.7 1.7) (drill 0.9) (layers "*.Cu" "*.Mask") (net "FORCE_NVME") (pinfunction "FORCE_NVME") (pintype "passive") (uuid "7ebf6d8c-b8f8-5c82-9ae0-25601f3d6c56"))
+  (pad "4" thru_hole circle (at 1.27 1.27) (size 1.7 1.7) (drill 0.9) (layers "*.Cu" "*.Mask") (net "MODE_IN") (pinfunction "MODE_IN") (pintype "passive") (uuid "c3335eaa-c67c-542a-87af-bee0e5e9fd45"))
+
+ (uuid "1536c43d-321b-5698-aa56-9ee63565aad5")
+)
+(footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 250 180)
+  (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
+  (property "Reference" "R34" (at 0 -0.9 0) (layer "F.SilkS") (effects (font (size 0.7 0.7) (thickness 0.12))))
+  (property "Value" "R_0402_1005Metric" (at 0 0.9 0) (layer "F.Fab") (hide yes) (effects (font (size 0.7 0.7) (thickness 0.12))))
+  (attr smd)
+  (fp_rect (start -0.7 -0.45) (end 0.7 0.45) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_REXT") (pinfunction "JMS_REXT") (pintype "passive") (uuid "71a90290-ed5d-519f-960a-afe6cd3b6322"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "1166ce61-05cc-5cff-90bd-f30df6c1882a"))
+
+ (uuid "26167e7d-3115-5365-ac55-abb9fa2d68d7")
+)
+(footprint "L_2520_6332Metric" (version 20240108) (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 258 180) (descr "4.7uH power inductor; JMS583 Rev 2.1 support")
+ (property "Reference" "L2" (at 0 -2) (layer "F.SilkS") (effects (font (size 0.8 0.8) (thickness 0.12))))
+ (property "Value" "4.7uH" (at 0 2) (layer "F.Fab") hide (effects (font (size 0.8 0.8))))
+ (fp_rect (start -1.6 -1.4) (end 1.6 1.4) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+ (pad "1" smd roundrect (at -1.15 0) (size 1.4 1.8) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_LXO") (pinfunction "JMS_LXO") (pintype "passive") (uuid "b568a531-a94e-5070-b2c0-8779b8cc499d"))
+ (pad "2" smd roundrect (at 1.15 0) (size 1.4 1.8) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_VDDREG_5V") (pinfunction "JMS_VDDREG_5V") (pintype "passive") (uuid "092dd300-25ed-59c4-8fb8-3f1eaac9e417"))
+
+ (uuid "4e0f4593-5575-5bf9-afbb-7177ec3f0357")
+)
+(footprint "Crystal_3225_4Pad"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 270 190)
+  (descr "3.2 x 2.5 mm 4-pad crystal; verify vendor pad numbering before release")
+  (fp_rect (start -1.6 -1.25) (end 1.6 1.25) (stroke (width 0.12) (type default)) (fill none) (layer "F.SilkS"))
+  (fp_rect (start -1.7 -1.35) (end 1.7 1.35) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (pad "1" smd roundrect (at -1.1 -0.85) (size 1.2 0.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_XIN") (pinfunction "JMS_XIN") (pintype "passive") (uuid "be66251a-7422-5054-b051-42ad6e68dfdf"))
+  (pad "2" smd roundrect (at -1.1 0.85) (size 1.2 0.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_XOUT") (pinfunction "JMS_XOUT") (pintype "passive") (uuid "2d61c354-6e66-5385-89f0-ba1f973b2ad7"))
+  (pad "3" smd roundrect (at 1.1 0.85) (size 1.2 0.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "b5243a7a-a6ca-5b5f-9ed9-4a8d79b05c87"))
+  (pad "4" smd roundrect (at 1.1 -0.85) (size 1.2 0.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "ebb03c20-32d6-5b11-b310-9aabebd208f1"))
+
+ (uuid "01db149c-261b-548c-bdcc-a01dd03c1a9e")
+)
+(footprint "C_0603_1608Metric" (version 20240108) (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 310 184) (at 0 0)
+ (property "Reference" "C" (at 0 -1.5 0) (layer "F.SilkS") (effects (font (size 1 1) (thickness 0.15))))
+ (property "Value" "C_0603_1608Metric" (at 0 1.5 0) (layer "F.Fab") (hide yes) (effects (font (size 1 1) (thickness 0.15))))
+ (fp_rect (start -1.4 -0.8) (end 1.4 0.8) (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab"))
+ (pad "1" smd roundrect (at -0.8 0) (size 0.9 0.95) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_AVDD33") (pinfunction "JMS_AVDD33") (pintype "passive") (uuid "81485df5-b02d-58e8-9e39-021e465898d4"))
+ (pad "2" smd roundrect (at 0.8 0) (size 0.9 0.95) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "04d8122b-8ff7-509e-920a-a1a1c7e5e24e"))
+
+ (uuid "6b9f6bf6-7aed-5d51-96c4-1f84c4a91f89")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 315 184)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_VCCO") (pinfunction "JMS_VCCO") (pintype "passive") (uuid "772da7c2-b796-5fc6-a8ea-8724577e8d68"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "3e076c2c-be70-59f1-b074-6b2921c7db40"))
+
+ (uuid "bd5a2dd4-1256-537e-b2d8-cd25f7f0a5ab")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 320 184)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_VCCK") (pinfunction "JMS_VCCK") (pintype "passive") (uuid "24267066-e505-5451-b7bd-9ee4c0319772"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "5200c71b-33ad-5fc6-aecc-055d771ce122"))
+
+ (uuid "75d531ba-3669-5884-912c-348b4c5c8485")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 325 184)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_AVDDL") (pinfunction "JMS_AVDDL") (pintype "passive") (uuid "a7a73858-67a3-5cb3-9fd4-dd3ec56bb296"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "a6317fec-7181-5057-bccb-43604870052c"))
+
+ (uuid "8782b381-e073-58d3-a1cd-f14290960370")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 300 188)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_XAVDDH") (pinfunction "JMS_XAVDDH") (pintype "passive") (uuid "b49fed5a-86d6-5eea-bddc-5624818610ba"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "03f0e134-8769-51f6-bec2-535ab96faa36"))
+
+ (uuid "cc58b8d5-7e38-52a0-be42-6ff00df3e965")
+)
+(footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 305 188)
+  (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
+  (property "Reference" "R35" (at 0 -0.9 0) (layer "F.SilkS") (effects (font (size 0.7 0.7) (thickness 0.12))))
+  (property "Value" "R_0402_1005Metric" (at 0 0.9 0) (layer "F.Fab") (hide yes) (effects (font (size 0.7 0.7) (thickness 0.12))))
+  (attr smd)
+  (fp_rect (start -0.7 -0.45) (end 0.7 0.45) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_RESET_N") (pinfunction "JMS_RESET_N") (pintype "passive") (uuid "d197c7bb-28f5-562f-ac78-774247a513b9"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "STORAGE_3V3") (pinfunction "STORAGE_3V3") (pintype "passive") (uuid "0cd8eb46-ae43-5015-aca2-e9f50b181b6d"))
+
+ (uuid "7bfcd293-4cf3-59eb-b826-e8ba1e1ae5b7")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 310 188)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_RESET_N") (pinfunction "JMS_RESET_N") (pintype "passive") (uuid "7298c0df-f07f-500c-8ec7-e7a9ee9250b5"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "9e788f89-ac00-5c2a-887e-1633afeeb1e3"))
+
+ (uuid "2a265f1a-714c-5258-9758-12c969a4967b")
+)
+(footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 315 188)
+  (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
+  (property "Reference" "R36" (at 0 -0.9 0) (layer "F.SilkS") (effects (font (size 0.7 0.7) (thickness 0.12))))
+  (property "Value" "R_0402_1005Metric" (at 0 0.9 0) (layer "F.Fab") (hide yes) (effects (font (size 0.7 0.7) (thickness 0.12))))
+  (attr smd)
+  (fp_rect (start -0.7 -0.45) (end 0.7 0.45) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "VBUS") (pinfunction "VBUS") (pintype "passive") (uuid "61063598-41a0-5589-b4ce-42c627cd6320"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_VBUS_SENSE") (pinfunction "JMS_VBUS_SENSE") (pintype "passive") (uuid "9c32bdb6-0168-50ed-a1f5-2848c3b32db4"))
+
+ (uuid "67515ee1-2a05-58d1-8afd-67b56ad6b41f")
+)
+(footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 320 188)
+  (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
+  (property "Reference" "R37" (at 0 -0.9 0) (layer "F.SilkS") (effects (font (size 0.7 0.7) (thickness 0.12))))
+  (property "Value" "R_0402_1005Metric" (at 0 0.9 0) (layer "F.Fab") (hide yes) (effects (font (size 0.7 0.7) (thickness 0.12))))
+  (attr smd)
+  (fp_rect (start -0.7 -0.45) (end 0.7 0.45) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_VBUS_SENSE") (pinfunction "JMS_VBUS_SENSE") (pintype "passive") (uuid "10c38638-3c00-5788-a093-e845dd5230c6"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "9dbfca4f-71b9-5f43-931e-9e7e1319a150"))
+
+ (uuid "db113a75-6248-5eb5-8313-205e204eef4e")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 325 188)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "USB_TXP1") (pinfunction "USB_TXP1") (pintype "passive") (uuid "e4a5fdec-7c32-5926-8620-e7938d9f2cdc"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_USB3_TXP") (pinfunction "JMS_USB3_TXP") (pintype "passive") (uuid "bf869bf0-fd8f-53d6-b5be-cb7035ffb575"))
+
+ (uuid "2c982e06-47ce-557f-ac46-c5529504b1fc")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 300 192)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "USB_TXN1") (pinfunction "USB_TXN1") (pintype "passive") (uuid "85977013-5701-5c81-8d52-8a985af368b5"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_USB3_TXN") (pinfunction "JMS_USB3_TXN") (pintype "passive") (uuid "ff1f92b8-8313-5b4a-9141-0d7421798389"))
+
+ (uuid "2db4892c-c1d2-5722-a9fe-88ad54f60425")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 305 192)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "USB_TXP2") (pinfunction "USB_TXP2") (pintype "passive") (uuid "44754fb1-311d-5ce4-a174-2437f681ef61"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_USB3_TXP2") (pinfunction "JMS_USB3_TXP2") (pintype "passive") (uuid "0c107e88-d927-5787-aa20-be59d9db0c11"))
+
+ (uuid "c3eeb71e-d532-55a5-a4b7-bf55579da775")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 310 192)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "USB_TXN2") (pinfunction "USB_TXN2") (pintype "passive") (uuid "52a0f738-bbf2-5e4e-884c-7a0b03e6fac2"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_USB3_TXN2") (pinfunction "JMS_USB3_TXN2") (pintype "passive") (uuid "f701ed15-f1fa-5bf8-b40b-bff590cfdfaf"))
+
+ (uuid "ac5dc5a9-fd8d-58aa-8ab6-93760824781a")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 315 192)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "PCIE_TXP0") (pinfunction "PCIE_TXP0") (pintype "passive") (uuid "4435f117-2404-53ec-834a-0b49c0f0f8d7"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_PCIE_TXP0") (pinfunction "JMS_PCIE_TXP0") (pintype "passive") (uuid "b4336838-dff9-5675-9ee0-cea8326de3b6"))
+
+ (uuid "10482759-a6c0-5c0b-ba1f-5ad9fe077e02")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 320 192)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "PCIE_TXN0") (pinfunction "PCIE_TXN0") (pintype "passive") (uuid "cff7f874-f157-5e49-a771-ac0922b7acc3"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_PCIE_TXN0") (pinfunction "JMS_PCIE_TXN0") (pintype "passive") (uuid "bc15e7f6-18f9-5e3b-b6ce-354d26ff902c"))
+
+ (uuid "40fda968-191f-5f51-ac8f-94825b381f1f")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 325 192)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "PCIE_TXP1") (pinfunction "PCIE_TXP1") (pintype "passive") (uuid "e7937d2f-4b50-54ca-ab42-20b17d16e7fa"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_PCIE_TXP1") (pinfunction "JMS_PCIE_TXP1") (pintype "passive") (uuid "ca53641f-2ba7-5699-9c96-6b40ad7a3513"))
+
+ (uuid "52a9366a-e3f5-5e47-978f-e6261549cbd6")
+)
+(footprint "C_0402_1005Metric"
+  (version 20240108)
+  (generator pcbnew)
+
+ (layer "F.Cu")
+ (at 300 196)
+  (property "Reference" "C"
+    (at 0 -1.1 0)
+    (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "C_0402_1005Metric"
+    (at 0 1.1 0)
+    (layer "F.Fab")
+    (effects (font (size 1 1) (thickness 0.15))))
+  (fp_rect
+    (start -0.5 -0.3) (end 0.5 0.3)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))
+  (fp_rect
+    (start -0.8 -0.55) (end 0.8 0.55)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.45 -0.4) (end -0.45 0.4)
+    (stroke (width 0.12) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "PCIE_TXN1") (pinfunction "PCIE_TXN1") (pintype "passive") (uuid "f605b983-9517-5328-a74b-f422ee753875"))
+  (pad "2" smd roundrect (at 0.5 0) (size 0.6 0.65)
+    (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_PCIE_TXN1") (pinfunction "JMS_PCIE_TXN1") (pintype "passive") (uuid "c1e39059-ea0a-5836-9701-1dbaf7a594a6"))
+
+ (uuid "0d2b8c9b-d434-5d08-8060-286b07a928cb")
 )
 )

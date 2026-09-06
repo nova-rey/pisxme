@@ -1,0 +1,3 @@
+PASS dual-mode mode contract
+PASS dual-mode schematic instances, footprints, and required net labels
+netlist_exit=0

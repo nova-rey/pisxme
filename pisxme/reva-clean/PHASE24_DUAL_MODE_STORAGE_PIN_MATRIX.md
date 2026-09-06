@@ -1,6 +1,6 @@
 # Phase 24 dual-mode storage pin and mode matrix
 
-Status: `IMPLEMENTATION REVIEW — forced modes defined; automatic mode open`
+Status: `IMPLEMENTATION REVIEW — mode override and PEDET buffer authored; native mode-aware fixture remains open`
 
 This document is the reviewed ownership record for the storage island. It is
 not a substitute for native schematic connectivity or bench validation.
@@ -81,6 +81,10 @@ CAD retained under `authority-inventory/primary-docs/storage-upgrade/`.
 
 ## Closure criteria
 
-The island cannot be promoted until forced SATA, forced NVMe, empty socket,
-reset/startup, and inactive-path tests pass in a native mode-aware fixture.
-AUTO additionally requires a real, authoritative detection implementation.
+The island cannot be promoted until forced SATA, forced NVMe, AUTO, empty
+socket, reset/startup, and inactive-path tests pass in a native mode-aware
+fixture. J4 is the power-off three-position override (FORCE_SATA,
+AUTO_PEDET, FORCE_NVME); U14 is the SN74LVC1G17DBVR Schmitt buffer from the
+verified TI DBV pinout, with MODE_IN driven by the selected strap or PEDET
+implementation and STORAGE_SEL driving both selectors. This is schematic
+authority only until the complete support network and native fixture pass.
