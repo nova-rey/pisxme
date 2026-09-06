@@ -4404,3 +4404,5 @@ Tested a direct native-pad monotonic escape control; native DRC reduced the clea
 Tested package-aware column and direct-sloped escape variants; native DRC rejected both, with the best disposable result at 18 findings, preserving the evidence for diagonal/offset routing refinement.
 # 2026-09-06 — Phase 24 TI U7 diagonal escape control
 Tested native-row source transitions with direct diagonal TI-U7 escapes; native DRC reported 36 findings and rejected the candidate, preserving it as route implementation evidence.
+# 2026-09-06 — Phase 24 mixed-layer TI U7 pair assignment
+Tested separated mixed-layer RX/TX pair escapes; the best native DRC result reached zero shorts with one crossing and one hole-clearance finding, but remains unpromoted route evidence.

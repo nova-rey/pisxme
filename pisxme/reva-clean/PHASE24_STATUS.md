@@ -3969,6 +3969,17 @@ variant was worse at 27 findings and was rejected. These are disposable
 changed. The next credible class is pair-preserving diagonal/offset escape
 geometry without shared vertical lane crossings.
 
+## TI-U7 mixed-layer pair assignment — 2026-09-06
+
+The mixed-layer control kept RX on F.Cu and moved TX to B.Cu between ordinary
+through-vias, with reversed/laterally separated source-via ordering to retain
+pair monotonicity. The best saved native DRC result is 12 findings: zero
+shorts, one crossing, one hole-clearance finding, and the expected incomplete
+fixture opens. It is not promoted; the remaining crossing is in the TX source
+escape and the hole finding is a transition-field geometry defect. This is
+the strongest current package-route control and remains
+`ROUTE_IMPLEMENTATION_FAILURE`, not a floorplan failure.
+
 ## TI-U7 diagonal escape control — 2026-09-06
 
 The next disposable control kept each source transition on its native J7 row,
