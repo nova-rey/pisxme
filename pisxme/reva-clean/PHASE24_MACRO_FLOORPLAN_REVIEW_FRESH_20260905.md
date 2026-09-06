@@ -58,3 +58,29 @@ The comparison deliberately does not use raw DRC counts from the mature baseline
 The live integrated file used above is the older `PHASE24_CM5_GROUND_RIGHT_SAME_ROWS.kicad_pcb` ancestor. The repository also contains the subsequently corrected coherent-neighborhood basis `PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb` (SHA-256 `de316ff211675b514bd85d9064ccd4defd3486b73968033c2b4c0c4ce95c2f4a`). An independent native review checked both meanings of “current” and found the corrected basis to be the superior selected macro: Ethernet-west plus complete storage-mid, no newly introduced conservative body-bbox overlap, PCIe/SERVICE/power/regulator anchors retained, and same-net Ethernet/storage topology approximately `97.4 / 145.1 mm`.
 
 Therefore `PHASE24_SELECTED_ETH_LOCAL_MACRO.kicad_pcb` is retained only as a single-island diagnostic derived from the older ancestor; it is not promoted over the corrected coherent-neighborhood basis. The selected floorplan for subsequent routing development is `PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb`. All candidate routing defects remain `ROUTE IMPLEMENTATION FAILURE` until a valid native-pad, obstacle-aware regeneration demonstrates a structural placement obstruction.
+
+## Steering correction — comparison discipline
+
+The old integrated board and the selected macro candidate are not compared by
+raw native DRC counts or connectivity completeness. The old board has mature,
+iteratively repaired copper; the selected candidate has only focused,
+disposable route-development evidence. Those are route-maturity properties,
+not floorplan properties.
+
+Question A, floorplan quality, is decided here from native transformed-pad
+topology: source-to-island distances, same-net ratsnest length, endpoint
+ordering, corridor competition, mechanical screening, and coherent island
+placement. On that basis the selected Ethernet-west/storage-mid arrangement
+is retained.
+
+Question B, routing quality, remains open. The V15 MDI regeneration and the
+translated CM5IO support candidate are implementation experiments. V15 has
+focused MDI connectivity PASS and zero native MDI shorts/crossings; the full
+support candidate has full CM5IO Ethernet connectivity PASS but is not a
+full-board pass because the selected macro is incomplete and native DRC still
+reports inherited/incomplete-board opens. No candidate is rejected for those
+immature route results as a macro-placement failure.
+
+`MACRO_REVIEW_REQUIRED_BEFORE_MORE_LOCAL_ROUTING = SATISFIED`
+`CURRENT_SELECTED_MACRO = PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb`
+`NEXT_ACTION = develop_valid_routing_on_selected_macro_after_macro_discriminator`

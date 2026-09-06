@@ -1785,3 +1785,30 @@ completed all eight selected-macro MDI routes. Native refilled DRC reports
 net assertions. The report still contains 5 inherited dangling vias and 430
 unconnected items from the incomplete selected-macro/full-board basis, so
 this is a focused Ethernet MDI pass, not Phase 24 closure or promotion.
+
+### Whole-board macro-floorplan discriminator — steering correction — 2026-09-05
+
+The required whole-board functional-island review is complete before further
+clock/SATA corridor repair. Native transformed CM5 carrier-mating pads were
+mapped for Ethernet `(34.50,99.90)`, PCIe `(69.60,101.50)`, storage USB3
+`(70.04,105.30)`, and SERVICE `(66.96,99.30)`; Ethernet, PCIe/V100,
+complete storage, SERVICE, power/protection, and regulator islands were
+compared using topology-only metrics and mechanical screening. Five
+disposable macro candidates were generated, including explicit Ethernet and
+storage local migrations and an island-swap candidate.
+
+The comparison intentionally separates `A: IS THE FLOORPLAN BETTER?` from
+`B: HAS THIS FLOORPLAN BEEN ROUTED WELL YET?`. Historical acreage DRC and
+connectivity maturity were excluded from ranking. The selected basis remains
+`PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb`: coherent Ethernet-west plus
+storage-mid, with PCIe/SERVICE/power/regulator anchors retained. The new
+candidate's early route defects remain `ROUTE IMPLEMENTATION FAILURE` unless
+a valid routing-development cycle demonstrates a structural obstruction.
+
+The temporary local-J2 Ethernet support translation was checked separately:
+the full CM5IO MDI/CT/common/shield native connectivity audit passes and its
+real-trace negative control fails as expected. This is route-development
+evidence only; the incomplete selected macro still has inherited/open-board
+DRC findings, so no Phase 24 closure is claimed. Further local Ethernet or
+clock/SATA routing experiments are paused until the macro review decision is
+accepted as the active basis.
