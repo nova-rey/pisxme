@@ -2311,6 +2311,15 @@ opposite POWER_GND pads with a short F.Cu dogbone. Native KiCad DRC reports
 `PHASE24_PROTECTED_C14_C15_LINK_CURRENT.kicad_pcb` is promoted; remaining
 protected-load and regulator distribution endpoints remain open.
 
+### Rejected U3 protected-input bridge — 2026-09-06
+
+The U3.14/U3.16 `/12V_PROTECTED` offset-via bridge reduced the native open
+count from 222 to 221 in a disposable copy, but both via placements entered
+the U3 central POWER_GND keepout and produced a native short/clearance defect.
+It is rejected as `ROUTE_IMPLEMENTATION_FAILURE`; U3 remains an explicit
+placement-aware repair target and the promoted zero-short/crossing basis is
+unchanged.
+
 ### Promote C23-C25 protected capacitor field — 2026-09-06
 
 The same-net C23.1/C24.1/C25.1 `/12V_PROTECTED` pads were joined with an
