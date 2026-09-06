@@ -1,0 +1,9 @@
+CM5_GBE_TD1_P source (36.04, 99.1) esd U6 6 jack (18.175, 153.89) segments 338
+CM5_GBE_TD1_N source (36.04, 99.5) esd U6 7 jack (14.365, 151.35) segments 299
+CM5_GBE_TD0_N source (36.04, 100.3) esd U6 9 jack (19.445, 151.35) segments 294
+CM5_GBE_TD0_P source (36.04, 100.7) esd U6 10 jack (20.715, 153.89) segments 316
+CM5_GBE_TD3_P source (32.96, 99.1) esd U9 5 jack (10.555, 153.89) segments 319
+CM5_GBE_TD3_N source (32.96, 99.5) esd U9 4 jack (9.285, 151.35) segments 310
+CM5_GBE_TD2_N source (32.96, 100.3) esd U9 2 jack (11.825, 151.35) segments 286
+CM5_GBE_TD2_P source (32.96, 100.7) esd U9 1 jack (13.095, 153.89) segments 299
+/home/nyx/PiSXMe/pisxme/reva-clean/PHASE24_SELECTED_MACRO_ETH_MDI_REGEN.kicad_pcb

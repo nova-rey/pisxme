@@ -1681,3 +1681,17 @@ introduced conservative body-bbox overlap, and unchanged PCIe, SERVICE,
 power, and regulator anchors. This does not use mature DRC as floorplan
 evidence. Detailed routing resumes only from this corrected basis, with
 affected Ethernet, USB3/SATA, and clock copper regenerated together.
+
+### First matched Ethernet regeneration from selected macro — 2026-09-05
+
+The native-pad Ethernet generator was run against the selected
+`PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb`, producing
+`PHASE24_SELECTED_MACRO_ETH_MDI_REGEN.kicad_pcb`. It completed all eight
+source→ESD→MagJack searches, but native refilled DRC reports 497 violations
+with real Ethernet shorting and crossing records. This is recorded as
+`ROUTE_IMPLEMENTATION_FAILURE`: the generator's sequential occupancy/escape
+model is not yet a valid implementation for the selected placement. It is
+not evidence against the macro-floorplan. The candidate is preserved with
+its native DRC receipt for the next obstacle-aware/reference-topology
+regeneration cycle; no severity, layer policy, or connectivity assertion was
+relaxed.
