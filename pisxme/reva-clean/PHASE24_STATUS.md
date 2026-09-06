@@ -4545,3 +4545,23 @@ and its native DRC report.
 `CM5IO_OUTER_CONTINUATION = REJECTED`
 `FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
 `PHASE24 = OPEN`
+
+## CM5IO-anchored F.Cu lane continuation — 2026-09-06
+
+A second continuation class kept the exact CM5IO first transition and routed
+four ordered lanes on separate F.Cu corridors west of the PCIe B.Cu spine,
+then used a single U7-side transition. Native DRC rejected the integrated
+candidate with 392 violations: 21 shorts, 32 track crossings, 70 clearance
+findings, 88 hole-clearance findings, and 465 unconnected items. The source
+anchor remains authoritative, but this continuation is rejected as route
+implementation failure. The next cycle must validate the transformed source
+escape by itself against the carrier J7 launch before adding a long
+continuation.
+
+Receipt: `phase24_usb3_cm5io_anchored_continuation.py`,
+`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_CM5IO_FCU_LANES.kicad_pcb`, and
+its native DRC report.
+
+`CM5IO_FCU_LANE_CONTINUATION = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`

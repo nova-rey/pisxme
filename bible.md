@@ -4458,3 +4458,5 @@ Independent review confirmed the selected macro remains viable, identified the P
 Copied the native CM5IO USB3 source escape into carrier coordinates and rejected the first integrated continuation planner after native DRC found 11 shorts and 2,251 crossings; source-anchor evidence was preserved.
 # 2026-09-06 — Phase 24 CM5IO outer-acreage continuation
 Tested a separated outer-acreage continuation from native CM5IO first-transition anchors; native DRC rejected it with 19 shorts and 57 crossings, preserving the source-anchor evidence and route-implementation classification.
+# 2026-09-06 — Phase 24 CM5IO F.Cu lane continuation
+Tested ordered F.Cu continuation lanes from the exact CM5IO first transitions; native integrated DRC rejected the class with 21 shorts and 32 crossings, so source-anchor validation is now isolated before further corridor routing.

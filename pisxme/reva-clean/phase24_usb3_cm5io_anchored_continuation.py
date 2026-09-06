@@ -6,7 +6,7 @@ import math, pcbnew
 R = Path(__file__).resolve().parent
 BASE = R / "PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_REVIEW.kicad_pcb"
 ORACLE = R / "authority-inventory/cm5io-rev2/CM5IO.kicad_pcb"
-OUT = R / "PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_CM5IO_ANCHORED_OUTER.kicad_pcb"
+OUT = R / "PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_CM5IO_FCU_LANES.kicad_pcb"
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 STEP, WIDTH = .25, .15
 JOBS = (("CM5_USB3_RX_N", "128", "42", "/CM5_HighSpeed/USB3-0-RX_N"),
@@ -73,6 +73,8 @@ def astar(blocked, start, goal, start_layer=B):
 def track(board,n,a,z,l):
     if a==z:return
     t=pcbnew.PCB_TRACK(board);t.SetStart(V(a));t.SetEnd(V(z));t.SetLayer(l);t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(n);board.Add(t)
+def path(board,n,points,layer):
+    for a,z in zip(points,points[1:]): track(board,n,a,z,layer)
 def via(board,n,p):
     v=pcbnew.PCB_VIA(board);v.SetPosition(V(p));v.SetWidth(pcbnew.FromMM(.5));v.SetDrill(pcbnew.FromMM(.3));v.SetLayerPair(F,B);v.SetNet(n);board.Add(v)
 def first_path(oracle,name,padno):
@@ -106,21 +108,12 @@ for i,(name,jp,up,_) in enumerate(JOBS):
     for a,z,l,w in copied: track(board,n,transform(a),transform(z),l)
     sv=transform(first); via(board,n,sv)
     target=(88.0,124.6 + (0.9 * (int(up)-42)))
-    # Keep this discriminator deliberately outside the congested central
-    # acreage: source transition -> west staging -> F.Cu upper corridor ->
-    # east staging -> B.Cu lower corridor -> U7.  It is a topology probe,
-    # not a production-length route.
-    lane = i * 1.0
-    west = (56.0, 70.0 + lane); east = (260.0, 70.0 + lane)
-    lower = (260.0, 145.0 + lane); approach = (88.0, 145.0 + lane)
-    path = [(sv, B, west), (west, None, None), (west, F, east),
-            (east, None, None), (east, B, lower), (lower, B, approach),
-            (approach, B, target)]
-    for start, layer, end in path:
-        if layer is None:
-            via(board,n,start)
-        else:
-            track(board,n,start,end,layer)
+    # The official first via already exposes F.Cu. Keep the continuation on
+    # four ordered, west-of-PCIe F.Cu lanes; no second transition is needed
+    # until the short U7-side dogbone.
+    lane_x = (58.0, 57.0, 56.0, 55.0)[i]
+    lane_y = (90.0, 91.5, 93.0, 94.5)[i]
+    path(board,n,[sv,(lane_x,lane_y),(lane_x,120.0 + i),(88.0,target[1])],F)
     via(board,n,target); track(board,n,target,dst,F)
     print(name,'source_via',sv,'target',target,'outer_corridor',True)
 board.BuildListOfNets();board.Save(str(OUT));print(OUT)
