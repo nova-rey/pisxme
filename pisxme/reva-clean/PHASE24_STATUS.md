@@ -2303,3 +2303,10 @@ uses B.Cu around the existing VCAP_B and Ethernet escapes. Native KiCad DRC
 reports 0 shorts, 0 track crossings, 225 unconnected items, and 12 clearance
 items. `PHASE24_12V_B_C4_U2_OBSTACLE_ROUTE_CURRENT.kicad_pcb` is promoted;
 the remaining U2-to-F2 source connection is still open.
+### Promote C14/C15 protected capacitor link — 2026-09-06
+
+The same-net C14.1/C15.1 `/12V_PROTECTED` pads were joined around their
+opposite POWER_GND pads with a short F.Cu dogbone. Native KiCad DRC reports
+0 shorts, 0 track crossings, 224 unconnected items, and 12 clearance items.
+`PHASE24_PROTECTED_C14_C15_LINK_CURRENT.kicad_pcb` is promoted; remaining
+protected-load and regulator distribution endpoints remain open.
