@@ -4636,6 +4636,12 @@ fanout on the isolated native USB3 fixture. The variant was rejected because
 its B.Cu source trunk collided with selector-side continuation copper. This
 narrows the route defect to corridor partitioning; no architecture or rule
 change was made.
+
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: tested actual CM5 pad-order
+monotonic USB3 routing with outward-Y U12 dogbones. The source-field crossing
+class was removed, but native DRC still reports dense-package via clearance
+and selector-continuation crossings. Rejected as route implementation only;
+next action is farther via placement plus corridor separation.
 2026-09-06 — PiSXMe Phase 24 dual-mode storage: closed the USB2 ownership
 regression in source authority. Native root netlist confirms CM5 port-0
 USB2 J7.134/136 to U12.8/7, the SATA branch U12.31/32 to U7.36/35, and the

@@ -115,3 +115,10 @@ the B.Cu source trunk now colliding with the selector-side U11/U12
 continuation. It is rejected as a shared-corridor route implementation; the
 next fixture must reserve separate local corridors for source escape and
 selector continuation.
+
+The seventh/eighth escape trial uses actual CM5 pad-order monotonic routing
+and outward-Y U12 dogbones. It removes the prior source-field crossing class,
+but native DRC still finds via-to-neighbor clearance at the dense package
+edge and inherited selector-continuation crossings. It is rejected as a
+fixture route implementation. The next bounded repair moves the vias farther
+outside the package and gives selector continuation a separate corridor.

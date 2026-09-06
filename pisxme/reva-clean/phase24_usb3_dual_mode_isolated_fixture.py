@@ -55,34 +55,24 @@ def main():
         ("/CORE_CM5/CM5_USB3_TX_N", "140", "12"),
         ("/CORE_CM5/CM5_USB3_TX_P", "142", "11"),
     ]
-    # Use separated F.Cu launch fanout, then a monotonic B.Cu corridor.  The
-    # deliberately ordered lane values are chosen from the actual pad rows.
-    lanes = {"128": 119.0, "130": 116.0, "140": 113.0, "142": 110.0}
+    # Escape in the actual CM5 pad order (RX_N, RX_P, TX_N, TX_P), then use a
+    # monotonic B.Cu corridor to the corresponding U12 bottom-edge pads.
+    source_vias = {"128": (74.0, 100.0), "130": (78.0, 102.0),
+                   "140": (82.0, 104.0), "142": (86.0, 106.0)}
+    # These are bottom-edge pads.  Leave each pad in +Y and stagger the
+    # through-vias in Y; lateral escape would cross the adjacent ground pads.
+    target_vias = {"128": (164.8, 154.0), "130": (165.2, 157.0),
+                   "140": (166.4, 160.0), "142": (166.8, 163.0)}
     for name, j7n, u12n in source:
         n = net(b, name); a = pos(pad(b, "J7", j7n)); z = pos(pad(b, "U12", u12n))
         own(pad(b, "U12", u12n), n)
-        x0 = {"128": 74.0, "130": 78.0, "140": 82.0, "142": 86.0}[j7n]
-        src_layer = F if j7n in ("128", "130") else B
-        path(b, n, [a, V(x0, pcbnew.ToMM(a.y))], F)
-        via(b, n, x0, pcbnew.ToMM(a.y))
-        path(b, n, [V(x0, pcbnew.ToMM(a.y)), V(x0, lanes[j7n])], src_layer)
-        via(b, n, x0, lanes[j7n]); via(b, n, 160.0, lanes[j7n])
-        path(b, n, [V(x0, lanes[j7n]), V(160.0, lanes[j7n])], B)
-        # U12 pins 11/12/15/16 are on the package bottom edge.  Escape each
-        # pad straight outward first; approaching horizontally through the
-        # row is a package-field short, not a valid route.
-        # Through-vias cannot occupy the 0.4-mm QFN pitch.  Stagger them
-        # outside the field while keeping the final dogbone short.
-        # Order the B.Cu destinations in the same top-to-bottom order as the
-        # source corridors: TX_P, TX_N, RX_P, RX_N.  The vias are deliberately
-        # spread beyond the QFN field, so no two through-vias share the 0.4-mm
-        # package pitch.
-        escapes = {"142": (162.0, 154.0), "140": (164.0, 154.0),
-                   "130": (166.0, 154.0), "128": (168.0, 154.0)}
-        zx, dogbone_y = escapes[j7n]
-        via(b, n, zx, dogbone_y)
-        path(b, n, [V(160.0, lanes[j7n]), V(zx, dogbone_y)], B)
-        path(b, n, [V(zx, dogbone_y), z], F)
+        sx, sy = source_vias[j7n]; tx, ty = target_vias[j7n]
+        path(b, n, [a, V(sx, sy)], F); via(b, n, sx, sy)
+        path(b, n, [V(sx, sy), V(tx, ty)], B); via(b, n, tx, ty)
+        # U12 pins 11/12/15/16 are on the package bottom edge.  The final
+        # F.Cu segment is a short outward dogbone from a full-pitch-spaced
+        # via, never a horizontal approach through the pad row.
+        path(b, n, [V(tx, ty), z], F)
 
     # The selector output uses explicit JMS583 USB names; TX traverses the
     # authoritative AC capacitors, RX is the selected lane without AC caps.
