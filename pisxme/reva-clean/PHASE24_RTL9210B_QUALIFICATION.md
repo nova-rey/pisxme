@@ -68,6 +68,14 @@ community `RTL9210b_0.kicad_sch` and `M.2_0.kicad_sch`; those receipts are in
 the CAD sources parse natively and that their RTL9210B pin names and M.2
 PEDET contact are inspectable. It is not a PCB connectivity or ERC/DRC pass.
 
+A secondary-hosted RTL9210 68-pin V203 demo schematic also explicitly lists
+an RTL9210B-CG variant and corroborates candidate support values including a
+2.2-uH regulator inductor and 12-kOhm RSET. It is retained as
+`authority-inventory/rtl9210b/RTL9210B_DEMO_CORROBORATION.md`, but remains
+non-authoritative because it is a different host design and does not close
+the M-key sideband, SSD power, firmware-rights, or released-land-pattern
+gates.
+
 ## Firmware and programming
 
 The community firmware repository contains RTL9210B-specific configurations,

@@ -4766,3 +4766,9 @@ validation remain open.
  reject RTL9210B architecture. The delegated KiCad review's plan-only
  standalone bring-up recommendation was retained for the next bounded
  fixture.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: retained a secondary-hosted
+ RTL9210 68-pin V203 demo schematic as corroborating evidence. It explicitly
+ includes an RTL9210B-CG variant and candidate support values, including the
+ 2.2-uH regulator inductor and 12-kOhm RSET. It is not promoted to authority;
+ M-key sidebands, SSD power/inrush, firmware rights, and released land-pattern
+ gates remain open.
