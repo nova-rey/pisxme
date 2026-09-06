@@ -4641,3 +4641,9 @@ regression in source authority. Native root netlist confirms CM5 port-0
 USB2 J7.134/136 to U12.8/7, the SATA branch U12.31/32 to U7.36/35, and the
 NVMe branch U12.33/34 to JMS583 U11.18/17. Structural audits pass; copper and
 native ERC/DRC remain open.
+
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: regenerated storage PCB
+authority after switched USB2 ownership correction. The candidate now carries
+CM5_STORAGE_USB2, BRIDGE_USB, and NVMe USB net identities from the updated
+authoring map. It remains a disposable placement/routing candidate pending
+native copper validation.
