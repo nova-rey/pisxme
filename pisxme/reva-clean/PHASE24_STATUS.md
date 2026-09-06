@@ -4024,3 +4024,68 @@ TX assignment. Native DRC regressed to 14 findings with three crossings and
 two clearances; no shorts were introduced, but the candidate was rejected.
 The prior 10-finding mixed-layer control was restored. This remains route
 implementation evidence only; no macro or frozen PCIe geometry changed.
+
+## Whole-board functional-island macro-floorplan discriminator — 2026-09-06
+
+Local Phase 24 net-by-net routing was paused as directed. The live integrated
+storage candidate was snapshotted before review:
+`PHASE24_MACRO_REVIEW_SNAPSHOT_20260906.kicad_pcb`, SHA-256
+`48840a9e353249f43853547a891c5588cdc5254fd771ac7ddfdb21efaddd058e`.
+The source basis was the native-loaded
+`PHASE24_U7_3V3_CURRENT_LOCAL.kicad_pcb` with the same SHA-256, so the review
+did not accidentally use a historical disposable fixture.
+
+The review used transformed native pad positions from J7, not schematic
+drawing positions, guessed rotations, or the previously generated pinout
+image. The launch centroids are Ethernet `(34.5,99.9)`, PCIe/V100
+`(69.6,101.5)`, storage USB3 `(70.0,105.3)`, and SERVICE USB2
+`(67.0,99.3)`. Current functional-island anchors are Ethernet `(77.8,59.6)`,
+PCIe/V100 `(150.0,90.0)`, storage `(130.7,131.0)`, SERVICE `(46.9,100.0)`,
+power entry `(72.4,76.9)`, and regulators `(173.3,125.0)`.
+
+Six disposable native placement candidates were generated without promoting
+or ranking their retained copper: `CURRENT`, `ETH_LOCAL_STORAGE_MID`,
+`SWAP_ETH_STORAGE`, `ETH_SOUTH_STORAGE_NORTH`, `STORAGE_LOCAL`, and
+`POWER_EAST_REGULATORS_WEST`. Topology-only metrics were source-to-island
+Euclidean/Manhattan distance, nearest source pad, same-net ratsnest, native
+transformed-body overlap, endpoint neighborhood, corridor occupancy, and
+mechanical/access screening. Mature historical DRC and immature candidate
+DRC were explicitly excluded: a route implementation failure is not a
+macro-placement failure.
+
+`SWAP_ETH_STORAGE` remains the best candidate tested: Ethernet source-to-
+island distance changes from 59.2 mm to 22.5 mm and same-net ratsnest from
+443.9 mm to 127.7 mm; storage changes from 65.9 mm to 49.5 mm and 231.2 mm
+to 116.5 mm. It retains the PCIe/V100 and SERVICE anchors and has zero coarse
+major-body overlaps. The compact `ETH_LOCAL_STORAGE_MID` candidate is nearer
+for Ethernet but has four coarse body overlaps, including SERVICE/power, and
+is rejected as a worse shared-floorplan topology. `ETH_SOUTH_STORAGE_NORTH`
+and `POWER_EAST_REGULATORS_WEST` do not improve both high-speed neighborhoods.
+
+Power and regulator groups were included as corridor occupants and coherent
+mechanical neighborhoods; their electrical topology was not changed. The
+review did not treat historical edge assignments, old coordinates, or the
+cooler hypothesis as hard constraints. Actual connector/mounting/access,
+power return capacity, and native courtyard/3-D checks remain required after
+any promotion.
+
+Consultant dispatch was attempted for the independent review but the
+orchestration service returned `collab spawn failed: agent thread limit
+reached`; it was not retried unchanged. The local review is complete from
+native PCB objects, and consultant unavailability is not treated as an
+engineering blocker.
+
+This is a floorplan discriminator, not a detailed routing result. The selected
+macro receives a fair obstacle-aware native routing-development cycle before
+any comparison against the mature historical board. No detailed Phase 24
+open-by-open repair was resumed during this discriminator.
+
+Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
+`PHASE24_WHOLE_BOARD_MACRO_DISCRIMINATOR_20260906.md`, and the six generated
+`PHASE24_MACRO_DISCRIM_*.kicad_pcb` disposable candidates.
+
+`WHOLE_BOARD_FUNCTIONAL_ISLAND_REVIEW = COMPLETE`
+`SELECTED_MACRO_TOPOLOGY = SWAP_ETH_STORAGE`
+`CURRENT_INTEGRATED_BASIS_SNAPSHOTTED = TRUE`
+`ROUTE_COMPARISON_BIAS_CONTROL = PASS`
+`PHASE24 = OPEN`

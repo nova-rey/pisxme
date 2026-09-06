@@ -4414,3 +4414,5 @@ Tested RX final-approach offsets; the best result remained the 10-finding zero-s
 Rejected a small TX target-transition height variation after native DRC regressed to 23 findings; restored the best zero-short/zero-crossing control.
 # 2026-09-06 — Phase 24 TI U7 split-RX experiment
 Rejected an alternate-layer RX escape after native DRC regressed to 14 findings with three crossings; restored the best mixed-layer control.
+# 2026-09-06 — Phase 24 whole-board functional-island macro discriminator
+Snapshotted the native integrated storage basis and completed a topology-only comparison of six disposable whole-board macro-floorplans; selected SWAP_ETH_STORAGE without promoting immature routing.
