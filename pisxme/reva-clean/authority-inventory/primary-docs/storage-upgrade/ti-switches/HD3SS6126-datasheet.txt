@@ -1,0 +1,1274 @@
+                              Product         Sample &         Technical              Tools &              Support &
+                              Folder          Buy              Documents              Software             Community
+
+
+
+                                                                                                                               HD3SS6126
+                                                                                             SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015
+
+             HD3SS6126 USB 3.0 and USB 2.0 Differential Switch 2:1/1:2 MUX/DEMUX
+1 Features                                                             3 Description
+1•   Ideal for USB Applications                                        The HD3SS6126 device is a high-speed, passive
+                                                                       switch that is designed for USB applications to route
+     – Signal Switch for USB 3.0 (SuperSpeed USB                       both SuperSpeed USB RX and TX and USB 2.0 DP
+        and USB 2.0 HS/FS/LS)                                          and DM signals from a source to two destinations or
+•    Three Bidirectional Differential Pair Channel                     vice versa. The device can also be used for
+     MUX/DEMUX Switches Also Suitable for                              DisplayPort, PCI-Express™, SATA, SAS, and XAUI
+     DisplayPort, PCIe Gen1/2/3, SATA 1.5/3/6G, SAS                    applications. The HD3SS6126 device can be used in
+     1.5/3/6G and XAUI Applications                                    either sink-side or source-side applications.
+•    Supports Data Rates up to 10 Gbps on High-
+                                                                                                  Device Information(1)
+     Bandwidth Path (SS)
+                                                                           PART NUMBER                    PACKAGE         BODY SIZE (NOM)
+•    VCC Operating Range 3.3 V ± 10%
+                                                                        HD3SS6126                   WQFN (42)             9.00 mm × 3.50 mm
+•    Wide –3-dB Differential BW of More Than 10 GHz
+                                                                        (1) For all available packages, see the orderable addendum at
+     on High-Bandwidth Path (SS)                                            the end of the data sheet.
+•    Uses a Unique Adaptation Method to Maintain a
+     Constant Channel Impedance Over the Supported                                           Typical Application Diagram
+     Common-Mode Voltage Range
+•    Excellent High-bandwidth Path Dynamic                                    NoteBook
+     Characteristics (at 2.5 GHz)
+     – Crosstalk = –35 dB
+
+
+
+
+                                                                                                           HD3SS6126
+     – Isolation = –23 dB                                                         USB HOST     USB 3 Rx
+
+     – Insertion Loss = –1.1 dB                                                                USB 3 Tx
+     – Return Loss = –11 dB                                                                                                USB
+                                                                                                 USB 2
+•    Small 3.5 mm × 9 mm, 42-Pin WQFN Package                                                   DP / DM                   Connector
+     (RUA)
+•    Active Mode Power = 8 mW
+
+2 Applications
+•    Desktop PCs                                                                             Connector
+•    Notebook PCs
+•    Tablets
+•    Docking Stations
+•    Telecommunications
+•    Televisions
+                                                                                                                        USB
+                                                                                                                       Connector
+                                                                             Dock Station
+
+
+
+
+1
+
+
+
+
+       An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications,
+       intellectual property matters and other important disclaimers. PRODUCTION DATA.
+HD3SS6126
+SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015                                                                                                                       www.ti.com
+
+
+                                                                           Table of Contents
+    1   Features .................................................................. 1              7.2 Functional Block Diagram ....................................... 11
+    2   Applications ........................................................... 1                 7.3 Feature Description................................................. 11
+    3   Description ............................................................. 1                7.4 Device Functional Modes........................................ 12
+    4   Revision History..................................................... 2              8    Application and Implementation ........................ 13
+                                                                                                   8.1 Application Information............................................ 13
+    5   Pin Configuration and Functions ......................... 3
+                                                                                                   8.2 Typical Application ................................................. 13
+    6   Specifications......................................................... 5
+         6.1 Absolute Maximum Ratings ...................................... 5               9 Power Supply Recommendations...................... 15
+         6.2 ESD Ratings.............................................................. 5     10 Layout................................................................... 15
+         6.3 Recommended Operating Conditions....................... 5                             10.1 Layout Guidelines ................................................. 15
+         6.4 Thermal Information .................................................. 6              10.2 Layout Examples................................................... 15
+         6.5 Electrical Characteristics – Device Parameters ........ 6                       11 Device and Documentation Support ................. 17
+         6.6 Electrical Characteristics – Signal Switch                                            11.1    Community Resources.......................................... 17
+             Parameters................................................................. 7         11.2    Trademarks ........................................................... 17
+         6.7 Switching Characteristics .......................................... 8                11.3    Electrostatic Discharge Caution ............................ 17
+         6.8 Typical Characteristics ............................................ 10               11.4    Glossary ................................................................ 17
+    7   Detailed Description ............................................ 10                 12 Mechanical, Packaging, and Orderable
+         7.1 Overview ................................................................. 10      Information ........................................................... 17
+
+
+
+4 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+
+Changes from Original (November 2013) to Revision A                                                                                                                           Page
+
+•   Added Pin Configuration and Functions section, ESD Ratings table, Typical Characteristics section, Feature
+    Description section, Device Functional Modes, Application and Implementation section, Power Supply
+    Recommendations section, Layout section, Device and Documentation Support section, and Mechanical,
+    Packaging, and Orderable Information section ..................................................................................................................... 1
+
+
+
+
+2        Submit Documentation Feedback                                                                        Copyright © 2013–2015, Texas Instruments Incorporated
+
+                                                                       Product Folder Links: HD3SS6126
+                                                                                                                          HD3SS6126
+www.ti.com                                                                                SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015
+
+
+5 Pin Configuration and Functions
+
+                                                                RUA Package
+                                                                42-Pin WQFN
+                                                                  Top View
+
+
+
+
+                                                              NC
+                                                              NC
+
+                                                              NC
+                                                              NC
+                                                              41
+                                                              40
+                                                              39
+                                                              42
+                                             NC 1                                   38 NC
+                                             NC 2                                   37 NC
+                                             NC 3                                   36 NC
+                                             NC 4                                   35 NC
+                                             NC 5                                   34 HSC(n)
+                                          HS_OE 6                                   33 HSC(p)
+                                          HSA(n) 7                                  32 HSB(n)
+                                          HSA(p) 8                                  31 HSB(p)
+                                                                    TQFN
+                                             SEL 9                                  30 VDD
+                                            GND 10                                  29 SSB0(p)
+                                         SSA0(p) 11                                 28 SSB0(n)
+                                         SSA0(n) 12                                 27 SSB1(p)
+                                            VDD 13                                  26 SSB1(n)
+                                            GND 14                                  25 SSC0(p)
+                                         SSA1(p) 15                                 24 SSC0(n)
+                                         SSA1(n) 16                                 23 SSC1(p)
+                                            GND 17                                  22 SSC1(n)
+                                                               18
+                                                               19
+                                                               20
+                                                               21
+                                                              GND
+                                                              NC
+                                                              GND
+                                                              VDD
+
+
+
+
+Copyright © 2013–2015, Texas Instruments Incorporated                                             Submit Documentation Feedback       3
+                                                        Product Folder Links: HD3SS6126
+HD3SS6126
+SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015                                                                                      www.ti.com
+
+
+                                                            Pin Functions
+             PIN
+                                    I/O                                              DESCRIPTION
+NAME                  NO.
+                   10, 14, 17,
+GND                               Supply       Ground
+                     19, 21
+HSA(p)                 8                       Port A USB 2.0 positive signal
+                                    I/O
+HSA(n)                 7                       Port A USB 2.0 negative signal
+HSB(p)                 31                      Port B USB 2.0 positive signal
+                                    I/O
+HSB(n)                 32                      Port B USB 2.0 negative signal
+HSC(p)                 33                      Port C USB 2.0 positive signal
+                                    I/O
+HSC(n)                 34                      Port C USB 2.0 negative signal
+                                               Output Enable
+HS_OE                  6         I (Control)   H = Power Down
+                                               L = Normal Operation
+                1, 2, 3, 4, 5,
+                 18, 35, 36,
+NC                                   —         Electrically No Connection
+                 37, 38, 39,
+                 40, 41, 42
+SEL                    9         I (Control)   USB 3.0/2.0 Port Selection Control Pins
+SSA0(p)                11                      Port A, Channel 0, USB 3.0 Positive Signal
+                                    I/O
+SSA0(n)                12                      Port A, Channel 0, USB 3.0 Negative Signal
+SSA1(p)                15                      Port A, Channel 1, USB 3.0 Positive Signal
+                                    I/O
+SSA1(n)                16                      Port A, Channel 1, USB 3.0 Negative Signal
+SSB0(p)                29                      Port B, Channel 0, USB 3.0 Positive Signal
+                                    I/O
+SSB0(n)                28                      Port B, Channel 0, USB 3.0 Negative Signal
+SSB1(p)                27                      Port B, Channel 1, USB 3.0 Positive Signal
+                                    I/O
+SSB1(n)                26                      Port B, Channel 1, USB 3.0 Negative Signal
+SSC0(p)                25                      Port C, Channel 0, USB 3.0 Positive Signal
+                                    I/O
+SSC0(n)                24                      Port C, Channel 0, USB 3.0 Negative Signal
+SSC1(p)                23                      Port C, Channel 1, USB 3.0 Positive Signal
+                                    I/O
+SSC1(n)                22                      Port C, Channel 1, USB 3.0 Negative Signal
+VDD                13, 20, 30     Supply       3.3-V power supply voltage
+
+
+
+
+4        Submit Documentation Feedback                                                      Copyright © 2013–2015, Texas Instruments Incorporated
+
+                                                    Product Folder Links: HD3SS6126
+                                                                                                                                HD3SS6126
+www.ti.com                                                                                   SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015
+
+
+6 Specifications
+6.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted) (1)
+                                                                                                            MIN           MAX         UNIT
+Supply Voltage, VDD (2)                                                                                     –0.3           4            V
+                   Differential I/O, High-bandwidth signal path: SSA0/1(p/n), SSB0/1(p/n), SSC0/1(p/n)      –0.5           4
+Voltage            Differential I/O, Low-bandwidth signal path: HSAp/n), HSB(p/n), HSC(p/n)                 -0.5           7            V
+                   Control pin and single ended I/O                                                         –0.3     VDD + 0.3
+Continuous power dissipation                                                                             See Thermal Information
+Storage temperature, Tstg                                                                                   –65           150          °C
+
+(1)   Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress ratings
+      only and functional operation of the device at these or any conditions beyond those indicated under Recommended Operating
+      Conditions is not implied. Exposure to absolute-maximum-rated conditions for extended periods may affect device reliability.
+(2)   All voltage values, except differential voltages, are with respect to network ground terminal.
+
+6.2 ESD Ratings
+                                                                                                                     VALUE            UNIT
+                                           Human body model (HBM), per ANSI/ESDA/JEDEC JS-001 (1)                     ±2000
+V(ESD)      Electrostatic discharge        Charged device model (CDM), per JEDEC specification JESD22-                                 V
+                                                                                                                      ±500
+                                           C101 (2)
+
+(1)   JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+(2)   JEDEC document JEP157 states that 250-V CDM allows safe manufacturing with a standard ESD control process.
+
+6.3 Recommended Operating Conditions
+typical values for all parameters are at VCC = 3.3 V and TA = 25°C; all temperature limits are specified by design
+                                                                                                           MIN     NOM         MAX    UNIT
+VDD           Supply voltage                                                                                3.0     3.3         3.6    V
+VIH           Input high voltage          Control Pins                                                      2.0                VDD     V
+VIL           Input low voltage           Control Pins                                                    –0.1                  0.8    V
+                                          Switch I/O differential voltage for High-bandwidth signal
+VI/O_Diff     Differential voltage                                                                           0                  1.8   Vp-p
+                                          path only: SSA0/1(p/n), SSB0/1(p/n), SSC0/1(p/n)
+                                          Switch I/O common mode voltage for High-bandwidth signal
+VI/O_CM       Common voltage                                                                                 0                  2.0    V
+                                          path only: SSA0/1(p/n), SSB0/1(p/n), SSC0/1(p/n)
+TA            Operating free-air temperature                                                                 0                  70     °C
+
+
+
+
+Copyright © 2013–2015, Texas Instruments Incorporated                                                 Submit Documentation Feedback          5
+                                                         Product Folder Links: HD3SS6126
+HD3SS6126
+SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015                                                                                    www.ti.com
+
+
+6.4 Thermal Information
+                                                                                                             HD3SS6126
+                                           THERMAL METRIC                                                   RUA (WQFN)                UNIT
+                                                                                                               42 PINS
+RθJA             Junction-to-ambient thermal resistance                                                          53.8                 °C/W
+RθJC(top)        Junction-to-case (top) thermal resistance                                                       38.2                 °C/W
+RθJB             Junction-to-board thermal resistance                                                            27.4                 °C/W
+ψJT              Junction-to-top characterization parameter (1)                                                  5.6                  °C/W
+                                                                  (1)
+ψJB              Junction-to-board characterization parameter                                                    27.3                 °C/W
+
+(1)   For more information about traditional and new thermal metrics, see Semiconductor and IC Package Thermal Metrics application report,
+      SPRA953. Test conditions for ΨJB and ΨJT are clarified in the application report..
+
+6.5 Electrical Characteristics – Device Parameters
+over recommended operating conditions (unless otherwise noted)
+              PARAMETER                                           TEST CONDITIONS                             MIN      TYP    MAX      UNIT
+ICC         Supply current              VDD = 3.6 V, SEL = VDD /GND; OE = GND; Outputs Floating                         2.4       3    mA
+SEL
+IIH         Input high current          VDD = 3.6 V, VIN = VDD                                                                  95      µA
+IIL         Input high current          VDD = 3.6 V, VIN = GND                                                                    1     µA
+HS_OE
+IIH         Input high current          VDD = 3.6 V, VIN = VDD                                                                    1     µA
+IIL         Input high current          VDD = 3.6 V, VIN = GND                                                                    1     µA
+SSA0/1, SSB0/1, SSC0/1
+                                        VDD = 3.6 V, VIN = 2 V, VOUT= 2 V,
+                                                                                                                               130
+            High-impedance leakage      (ILK on open outputs Port B and C)
+ILK                                                                                                                                     µA
+            current                     VDD = 3.6 V, VIN = 2 V, VOUT= 2 V,
+                                                                                                                                  4
+                                        (ILK on open outputs Port A)
+HSA, HSB, HSC
+            High-impedance leakage      VDD = 3.6 V, VIN = 0 V, VOUT= 0 V to 4 V,
+ILK                                                                                                                               1     µA
+            current                     HS_OE_IN = GND
+
+
+
+
+6        Submit Documentation Feedback                                                    Copyright © 2013–2015, Texas Instruments Incorporated
+
+                                                        Product Folder Links: HD3SS6126
+                                                                                                                              HD3SS6126
+www.ti.com                                                                                    SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015
+
+
+6.6 Electrical Characteristics – Signal Switch Parameters
+under recommended operating conditions; RL, RSC = 50 Ω, CL = 10 pF (unless otherwise noted)
+                    PARAMETER                                         TEST CONDITIONS                      MIN      TYP     MAX       UNIT
+SSA0/1(p/n), SSB0/1(p/n), SSC0/1(p/n) Signal Path
+CON            Outputs ON capacitance                   VIN = 0 V, outputs open, switch ON                           1.5              pF
+COFF           Outputs OFF capacitance                  VIN = 0 V, outputs open, switch OFF                            1              pF
+                                                        VDD = 3.3 V, VCM = 0 V – 2 V,
+RON            Output ON resistance                                                                                    5        8      Ω
+                                                        IO = –8 mA
+               ON resistance match between pairs        VDD = 3.3 V; 0 V ≤ VIN ≤ 2 V;
+ΔRON                                                                                                                          0.7      Ω
+               of the same channel                      IO = –8 mA
+               ON resistance flatness
+RFLAT_ON                                                VDD = 3.3 V; –0 V ≤ VIN ≤ 2 V                                        1.15      Ω
+               (RON(MAX)– RON(MIN)
+                                                        f = 0.3 MHz                                                  –25
+               Differential return loss
+RL                                                      f = 2.5 GHz                                                  –11              dB
+               (VCM = 0 V)
+                                                        f = 4 GHz                                                    –11
+                                                        f = 0.3 MHz                                                  -85
+               Differential crosstalk
+XTALK                                                   f = 2.5 GHz                                                  –35              dB
+               (VCM = 0 V)
+                                                        f = 4 GHz                                                    –33
+                                                        f = 0.3 MHz                                                  -85
+               Differential off-isolation
+OIRR                                                    f = 2.5 GHz                                                  -23              dB
+               (VCM = 0 V)
+                                                        f = 4 GHz                                                    –21
+                                                        f = 0.3 MHz                                                –0.43
+               Differential insertion loss
+IL                                                      f = 2.5 GHz                                                 –1.1              dB
+               (VCM = 0 V)
+                                                        f = 4 GHz                                                   –1.3
+BW             Bandwidth                                At –3 dB                                                      10              GHz
+HSA(p/n), HSB(p/n), HSC(p/n) SIGNAL PATH
+CON            Outputs ON capacitance                   VIN = 0 V, Outputs Open, Switch ON                             6      7.5     pF
+COFF           Outputs OFF capacitance                  VIN = 0 V, Outputs Open, Switch OFF                          3.5        6     pF
+                                                        VDD = 3 V, VIN = 0 V,
+                                                                                                                       3        6
+                                                        IO = 30 mA
+RON            Output ON resistance                                                                                                    Ω
+                                                        VDD = 3 V, VIN = 2.4 V,
+                                                                                                                     3.4        6
+                                                        IO = 30 mA
+                                                        VDD = 3 V; VIN = 0 V;
+                                                                                                                     0.2
+               ON resistance match between pairs        IO = 30 mA
+ΔRON                                                                                                                                   Ω
+               of the same channel                      VDD = 3 V; VIN = 1.7 V;
+                                                                                                                     0.2
+                                                        IO = -15 mA
+                                                        VDD = 3 V; VIN = 0 V;
+                                                                                                                       1
+               ON resistance flatness                   IO = 30 mA
+RFLAT_ON                                                                                                                               Ω
+               (RON(MAX)– RON(MIN )                     VDD = 3 V; VIN = 1.7 V;
+                                                                                                                       1
+                                                        IO = –15 mA
+XTALK          Differential crosstalk (VCM = 0 V)       RL = 50 Ω, f = 250 MHz                                       –40              dB
+OIRR           Differential off-isolation (VCM = 0 V)   RL = 50 Ω, f = 250 MHz                                       –41              dB
+BW             Bandwidth                                RL = 50 Ω                                                    0.9              GHz
+
+
+
+
+Copyright © 2013–2015, Texas Instruments Incorporated                                                 Submit Documentation Feedback          7
+                                                        Product Folder Links: HD3SS6126
+HD3SS6126
+SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015                                                                                                                   www.ti.com
+
+
+6.7 Switching Characteristics
+over operating free-air temperature range (unless otherwise noted)
+                       PARAMETER                                        TEST CONDITIONS                               MIN              TYP               MAX       UNIT
+SSA0/1(p/n), SSB0/1(p/n), SSC0/1(p/n) Signal Path
+ton              SEL-to-Switch ton                             RSC and RL = 50 Ω, See Figure 1                                          70               250        ns
+toff             SEL-to-Switch toff                            RSC and RL = 50 Ω, See Figure 1                                          70               250        ns
+tPD              Switch propagation delay                      RSC and RL = 50 Ω, See Figure 3                                                            85        ps
+tSK(O)           Interpair output skew (CH-CH)                 RSC and RL = 50 Ω, See Figure 3                                                            20        ps
+tSK(b-b)         Intrapair Output Skew (bit-bit)               RSC and RL = 50 Ω, See Figure 3                                                               8      ps
+HSA(p/n), HSB(p/n), HSC(p/n) SIGNAL PATH
+                 SEL to Switch tON                             See Figure 2                                                                               30
+tON                                                                                                                                                                 ns
+                 HS_OE to Switch tON                           See Figure 2                                                                               17
+                 SEL to Switch tOFF                            See Figure 2                                                                               12
+tOFF                                                                                                                                                                ns
+                 HS_OE to Switch tOFF                          See Figure 2                                                                               10
+tPD (1)          Switch propagation delay                      See Figure 3                                                            250                          ps
+tSK(O) (1)       Interpair output skew (CH-CH)                                                                                         100               200        ps
+tSK(P) (1)       Intrapair Output Skew (bit-bit)                                                                                       100               200        ps
+
+(1)    Specified by design
+
+
+
+                                                50%
+                                 SEL
+
+
+
+
+                                                             90%
+                                 VOUT                                                                                 10%
+
+
+
+
+                                             t on                                                                           t off
+
+                                                       Figure 1. Select to Switch tON and tOFF
+
+                                                      VCC
+
+                                                                                                          TEST          RL             CL      VCOM
+                                                       HSB or HSC VOUT1 or VOUT2
+                                                                                                           tON         500 Ω          50 pF         V+
+                        VIN          HSA
+                                                       HSB or HSC            CL(2)              RL
+                                                                                                           tOFF        500 Ω          50 pF         V+
+
+
+
+                     VCTRL           SEL
+                                                                                                 Logic                                                   1.8 V
+                                                                     CL(2)             RL        Input                50%               50%
+                 Logic                                                                             (VI)                                                  0
+                                                      GND
+                 Input (1)
+                                                                                                             tON                              tOFF
+                                                                                                Switch                                                   VOH
+                                                                                               Output                           90%           90%
+                                                                                      (VOUT1 or VOUT2)                                                   VOL
+
+
+                (1) All input pulses are supplied by generators have the following characteristics: PRR ≤ 10 MHZ, Z
+                                                                                                                   O = 50 Ω, tr< 5 ns, tf < 5 ns.
+                (2) C includes probe and jig capacitance.
+                     L
+
+                                                    Figure 2. Turnon (tON) and Turnoff Time (tOFF)
+
+8            Submit Documentation Feedback                                                                   Copyright © 2013–2015, Texas Instruments Incorporated
+
+                                                                Product Folder Links: HD3SS6126
+                                                                                                                                          HD3SS6126
+www.ti.com                                                                                                SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015
+
+
+
+                                                                                       Vcc
+
+                                                50 Ω
+                                  A(p)                                                                                B/C(p)
+
+
+
+
+                                                                      HD3SS6126
+                                  B/C(p)                                                                              A(p)
+                                                                                                          50 Ω
+
+
+                                                50 Ω
+                                  A(n)                                                                                B/C(n)
+                                  B/C(n)                                                                             A(n)
+                                                                                                          50 Ω
+
+                                                                                       SEL
+
+                              C/B (p)
+
+                                              50%                                            50%
+
+                              C/B (n)
+
+                               A (p)
+
+                                              50%                                            50%
+
+                               A (n)
+                                                    tP1                                        tP2
+
+                                                                       Interpair skew
+                                                                 tPD = Max(tp1, tp2)
+                                                                 tSK(O) = Difference between tPD for any
+                                                                            two pairs of outputs
+
+
+                                         t1      t2                               t3               t4
+                             C/B/A (p)
+                                                               50%
+
+
+                            C/B/A (n)
+                                                      tSK(O)
+                            C/B/A (p)
+
+
+
+                            C/B/A (n)
+
+                                                                          Intrapair skew
+                                                               tSK(b-b) = 0.5 X |(t4 – t3) + (t1 – t2)|
+
+                            NOTES:
+                                1. Measurements based on an ideal input with zero intrapair skew on
+                                   the input, i.e. the input at A to B/C or the input at B/C to A
+                                2. Interpair skew is measured from lane to lane on the same channel,
+                                   e.g. C0 to C1
+                                3. Intrapair skew is defined as the relative difference from the p and n
+                                   signals of a single lane
+
+                                               Figure 3. Propagation Delay and Skew
+
+
+
+
+Copyright © 2013–2015, Texas Instruments Incorporated                                                             Submit Documentation Feedback       9
+                                                               Product Folder Links: HD3SS6126
+HD3SS6126
+SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015                                                                                                       www.ti.com
+
+
+6.8 Typical Characteristics
+
+                 0.475                                                                      0.625
+                 0.465                                                                       0.62
+                 0.455                                                                      0.615
+                 0.445                                                                       0.61
+     SKEW (ps)
+
+
+
+
+                                                                                SKEW (ps)
+                 0.435                                                                      0.605
+                 0.425                                                                        0.6
+                 0.415                                                                      0.595
+                 0.405                                                                       0.59
+                 0.395                                                                      0.585
+                 0.385                                                                       0.58
+                 0.375                                                                      0.575
+                         0   5   10 15 20 25 30 35 40 45 50 55 60 65 70                             0   5   10 15 20 25 30 35 40 45 50 55 60 65 70
+                                           Temperature (qC)           D001
+                                                                                                                      Temperature (qC)           D002
+                             Figure 4. Intrapair Skew SSA to SSB Port                                   Figure 5. Intrapair Skew SSA to SSC Port
+
+
+
+7 Detailed Description
+
+7.1 Overview
+The HD3SS6126 is a USB 3.0 and USB 2.0 differential switch, it is designed to support data rates up to 10 Gbps
+on high-bandwidth paths (SS), it is also suitable for DisplayPort, PCIe Gen1/2/3, SATA 1.5/3/6G, SAS 1.5/3/6G
+and XAUI applications. The device uses a unique adaptation method to maintain a constant channel impedance
+over the supported common-mode voltage range, resulting in an excellent high-bandwidth path dynamic
+characteristics (at 2.5 GHz; Crosstalk = –35 dB, Isolation = –23 dB, Insertion Loss = –1.1 dB, Return Loss = –11
+dB).
+
+
+
+
+10                Submit Documentation Feedback                                                              Copyright © 2013–2015, Texas Instruments Incorporated
+
+                                                              Product Folder Links: HD3SS6126
+                                                                                                                          HD3SS6126
+www.ti.com                                                                                SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015
+
+
+7.2 Functional Block Diagram
+
+
+
+
+                                                              NC
+                                                              NC
+
+                                                              NC
+                                                              NC
+                                                              41
+                                                              40
+                                                              39
+                                                              42
+                                             NC 1                                   38 NC
+                                             NC 2                                   37 NC
+                                             NC 3                                   36 NC
+                                             NC 4                                   35 NC
+                                             NC 5                                   34 HSC(n)
+                                          HS_OE 6                                   33 HSC(p)
+                                          HSA(n) 7                                  32 HSB(n)
+                                          HSA(p) 8                                  31 HSB(p)
+                                             SEL 9                                  30 VDD
+                                            GND 10                                  29 SSB0(p)
+                                         SSA0(p) 11                                 28 SSB0(n)
+                                         SSA0(n) 12                                 27 SSB1(p)
+                                            VDD 13                                  26 SSB1(n)
+                                            GND 14                                  25 SSC0(p)
+                                         SSA1(p) 15                                 24 SSC0(n)
+                                         SSA1(n) 16                                 23 SSC1(p)
+                                            GND 17                                  22 SSC1(n)
+                                                               18
+                                                               19
+                                                               20
+                                                               21
+                                                              GND
+                                                              NC
+                                                              GND
+                                                              VDD
+
+
+
+
+7.3 Feature Description
+The HD3SS6126 can be powered by VBUS from the USB Host, and is capable of selecting USB2 independently
+from USB3. Although the main application of the HD3SS6126 is USB3.0/2.0, the device also supports common
+interfaces such as PCIe Gen1 and Gen2, DP and SATA/SAS applications. The device is able to support these
+additional interfaces because of its support of data rates up to 5.4 Gbps and common-mode voltages from 0 V to
+2 V with a maximum signal swing of 1.8 V. All of these applications use an 8b or 10b coding technique to
+achieve DC balance and facilitate terminal equipment.
+
+                                                     NOTE
+               The device may need AC capacitors and additional bias voltage to support the PCIe Gen1
+               and Gen2 interfaces.
+
+
+
+
+Copyright © 2013–2015, Texas Instruments Incorporated                                             Submit Documentation Feedback      11
+                                                        Product Folder Links: HD3SS6126
+HD3SS6126
+SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015                                                                                   www.ti.com
+
+
+7.4 Device Functional Modes
+
+                                   Table 1. Truth Table USB 3.0 SuperSpeed USB
+
+                                                                 USB 3.0 PORT SELECTION
+                         SEL
+                                                 SSA0/1                  SSB0/1                         SSC0/1
+                          0                 To/From SSB0/1            To/From SSA0/1                      Off
+                          1                 To/From SSC0/1                 Off                     To/From SSA0/1
+
+
+                      Table 2. Truth Table USB 2.0 High-Speed, Full-Speed, Low-Speed Path
+                                                                                 USB 2.0 Port Selection
+         HS_OE                     SEL
+                                                              HSA                           HSB                           HSC
+            0                          0                  To/From HSB                  To/From HSA                         Off
+            0                          1                  To/From HSC                        Off                     To/From HSA
+            1                        X                         Off                           Off                           Off
+
+
+
+
+12     Submit Documentation Feedback                                                   Copyright © 2013–2015, Texas Instruments Incorporated
+
+                                                 Product Folder Links: HD3SS6126
+                                                                                                                          HD3SS6126
+www.ti.com                                                                                SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015
+
+
+8 Application and Implementation
+
+                                                           NOTE
+               Information in the following applications sections is not part of the TI component
+               specification, and TI does not warrant its accuracy or completeness. TI’s customers are
+               responsible for determining suitability of components for their purposes. Customers should
+               validate and test their design implementation to confirm system functionality.
+
+
+8.1 Application Information
+A typical application for the HD3SS6126 is a USB 3.0 KVM switch, where one of two USB hosts system can be
+selected for an USB device. These guidelines are also suitable for PCIe(Gen1,Gen2), SATA, XAUI and DP,
+since the HD3SS6126 device is fully compatible with these protocols.
+
+8.2 Typical Application
+                                                               HD3SS6126
+                                                                  xN
+
+                           PCIe/DP/USB/SATA
+                            Signal Source 1
+
+                                                                                           PCIe/DP/USB/SATA
+                                                                                              Signal Sink
+
+
+                           PCIe/DP/USB/SATA
+                            Signal Source 2
+
+
+
+                                        Figure 6. Two Signal Sources to One Destination
+
+                                                               HD3SS6126
+                                                                  xN
+
+                                                                                             PCIe/DP/USB/SATA
+                                                                                               Signal Sink 1
+
+                             PCIe/DP/USB/SATA
+                               Signal Source
+
+
+                                                                                             PCIe/DP/USB/SATA
+                                                                                               Signal Sink 2
+
+
+
+                                        Figure 7. One Signal Sources to Two Destination
+
+
+
+
+Copyright © 2013–2015, Texas Instruments Incorporated                                             Submit Documentation Feedback      13
+                                                        Product Folder Links: HD3SS6126
+HD3SS6126
+SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015                                                                             www.ti.com
+
+
+Typical Application (continued)
+8.2.1 Design Requirements
+Power supply requirements:
+• VDD from 3 V to 3.6 V
+Control pins requirements
+• VIH from 2 V to VDD
+• VIL from –0.1 V to 0.8 V
+Differential pairs requirements:
+• VI/O_Diff from 0 V to 1.8 Vp-p
+• VI/O_CM from 0 V to 2 V
+TA Operating free-air temperature from 0°C to 70°C
+
+8.2.2 Detailed Design Procedure
+
+8.2.2.1 Power Supply
+The first step is to design the power supply and determine the VCC stability and minimum current required (see
+Power Supply Recommendations).
+
+8.2.2.2 Differential Pairs
+All of the interfaces the HD3SS6126 device supports require AC coupling between the transmitter and receiver.
+TI recommends using 0402-sized capacitors to provide AC coupling, but 0603-sized capacitors are also
+acceptable. Both 0805-sized capacitors and C-packs should be avoided. Best practice is to place AC-coupling
+capacitors symmetrically. A capacitor value of 0.1uF is best and the value should be matched for the +/-signal
+pair. The placement should be along the TX pairs on the system board, which are usually routed on the top layer
+of the board.
+All differential pairs must have a matched impedance according to the implemented protocol: 100-Ω differential
+(±10%) for PCIe and 90-Ω differential (±15%) for USB 2.0 and USB 3.0.
+The control logic can be implemented by use of an external control processor or by using a simple selector
+switch. TI recommends using 5-kΩ pullup and pulldown resistors on the control signals, if they are included. The
+control logic must not violate the input voltage parameters outlined in the Recommended Operating Conditions
+table.
+
+8.2.3 Application Curves
+
+
+
+
+       Figure 8. USB 3.0 TX Eye Pattern Test With 3-Inch 5-mil          Figure 9. USB 3.0 TX Eye Pattern Test With 3-Inch 5-mil
+             Differential PCB Trace Without HD3SS6126                           Differential PCB Trace With HD3SS6126
+
+
+
+
+14     Submit Documentation Feedback                                               Copyright © 2013–2015, Texas Instruments Incorporated
+
+                                                 Product Folder Links: HD3SS6126
+                                                                                                                              HD3SS6126
+www.ti.com                                                                                    SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015
+
+
+9 Power Supply Recommendations
+The power supply must provide a constant voltage with a 10% maximum variation of the nominal value, and has
+to be able to provide at least 3 mA for the HD3SS6126 only (based on the maximum power consumption). It is
+also possible to provide the power supply from VBUS from the Host, just by including a voltage regulator
+powered through VBUS. Each VCC pin must have a 0.1-µF bypass capacitor placed as closely as possible. TI
+recommends including two extra capacitors in parallel, which should be also placed as closely as possible to the
+VCC pin. The suggested values for these extra capacitors are 1 µF and 0.01 µF.
+
+10 Layout
+
+10.1 Layout Guidelines
+Generally, impedance match becomes critical in such high-speed signal applications to avoid reflection. Each
+differential-signal pair must have a differential impedance of about 90 Ω ±15% (for PCIe or DP, 100 Ω ±10%)
+with single-end signal impedance about 50 Ω to ground. Usually, Microstrip is used to accomplish impedance
+match. Four layers are recommended for a low-EMI PCB design. shows physical geometries of differential traces
+to form Microstrip. In order to better maintain signal integrity, reference the following:
+ 1. Route high-speed differential signals on the top layer with a solid ground layer under them to accomplish
+     controlled impedance, while avoiding vias and stubs which may cause impedance discontinuities. If vias
+     must be used, make sure the space of the vias is as minimal as possible.
+ 2. Be sure both the length of differential traces and the length of differential signal pairs are matched in order to
+     reduce intrapair skew and interpair skew separately which also does good to low EMI. TI recommends
+     keeping the space of the traces of the differential signal the same across the entire length of the trace to
+     keep impedance match and reduce EMI.
+ 3. Route low-speed, but fast-edged control signals on the bottom layer to minimize the crosstalk of the high-
+     speed signal.
+ 4. For other adjacent signal traces on the same layer, make distance L ≥ 3 S to facilitate impedance match.
+ 5. TI reccommends using 45° bends instead of 90° bends in order to maintain signal integrity and low EMI.
+
+10.2 Layout Examples
+                    W                                            L
+                                                                                                Layer 1: High-Speed Diff-Signal Traces
+        t                         S
+                    +                        -
+                                                        h            0r       X
+                                                                                                Layer 2: GND Plane
+
+
+
+
+                                                                                                Layer 3: Power Plane
+
+
+
+
+                                                                                                Layer 4: Low-Speed Signal Traces
+
+                                                    Figure 10. PCB Layers Example
+
+
+
+
+Copyright © 2013–2015, Texas Instruments Incorporated                                                 Submit Documentation Feedback      15
+                                                            Product Folder Links: HD3SS6126
+HD3SS6126
+SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015                                                                             www.ti.com
+
+
+Layout Examples (continued)
+
+
+
+
+                                       Figure 11. USB Signals Routing Example
+
+
+
+
+16     Submit Documentation Feedback                                               Copyright © 2013–2015, Texas Instruments Incorporated
+
+                                                 Product Folder Links: HD3SS6126
+                                                                                                                           HD3SS6126
+www.ti.com                                                                                SLAS975A – NOVEMBER 2013 – REVISED AUGUST 2015
+
+
+11 Device and Documentation Support
+
+11.1 Community Resources
+The following links connect to TI community resources. Linked contents are provided "AS IS" by the respective
+contributors. They do not constitute TI specifications and do not necessarily reflect TI's views; see TI's Terms of
+Use.
+TI E2E™ Online Community TI's Engineer-to-Engineer (E2E) Community. Created to foster collaboration
+           among engineers. At e2e.ti.com, you can ask questions, share knowledge, explore ideas and help
+           solve problems with fellow engineers.
+Design Support TI's Design Support Quickly find helpful E2E forums along with design support tools and
+           contact information for technical support.
+
+11.2 Trademarks
+E2E is a trademark of Texas Instruments.
+PCI-Express is a trademark of PCI-SIG.
+All other trademarks are the property of their respective owners.
+11.3 Electrostatic Discharge Caution
+          These devices have limited built-in ESD protection. The leads should be shorted together or the device placed in conductive foam
+          during storage or handling to prevent electrostatic damage to the MOS gates.
+
+
+11.4 Glossary
+SLYZ022 — TI Glossary.
+   This glossary lists and explains terms, acronyms, and definitions.
+
+12 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most
+current data available for the designated devices. This data is subject to change without notice and revision of
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+
+
+
+
+Copyright © 2013–2015, Texas Instruments Incorporated                                             Submit Documentation Feedback         17
+                                                        Product Folder Links: HD3SS6126
+                                                                                                                                                                      PACKAGE OPTION ADDENDUM
+
+       www.ti.com                                                                                                                                                                                                    6-Feb-2026
+
+
+
+
+PACKAGING INFORMATION
+
+       Orderable part number          Status     Material type      Package | Pins      Package qty | Carrier        RoHS             Lead finish/              MSL rating/               Op temp (°C)          Part marking
+                                        (1)            (2)                                                             (3)            Ball material             Peak reflow                                           (6)
+                                                                                                                                            (4)                      (5)
+
+         HD3SS6126RUAR                Active      Production       WQFN (RUA) | 42       3000 | LARGE T&R             Yes                NIPDAU            Level-3-260C-168 HR               0 to 70             HD3SS6126
+        HD3SS6126RUARG4               Active      Production       WQFN (RUA) | 42       3000 | LARGE T&R             Yes                NIPDAU            Level-3-260C-168 HR               0 to 70             HD3SS6126
+
+(1)
+      Status: For more details on status, see our product life cycle.
+
+(2)
+   Material type: When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+
+(3)
+      RoHS values: Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+
+(4)
+   Lead finish/Ball material: Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+
+(5)
+  MSL rating/Peak reflow: The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+
+(6)
+      Part marking: There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+
+
+
+
+                                                                                                          Addendum-Page 1
+                                                                              PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                                                      18-Jun-2025
+
+
+
+TAPE AND REEL INFORMATION
+
+       REEL DIMENSIONS                                                                     TAPE DIMENSIONS
+                                                                                      K0       P1
+
+
+
+                                                                                                                     B0 W
+                                       Reel
+                                     Diameter
+                                                                                   Cavity           A0
+                                                               A0   Dimension designed to accommodate the component width
+                                                               B0   Dimension designed to accommodate the component length
+                                                               K0   Dimension designed to accommodate the component thickness
+                                                               W    Overall width of the carrier tape
+                                                               P1   Pitch between successive cavity centers
+
+
+                                      Reel Width (W1)
+                              QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+
+                                                                                                    Sprocket Holes
+
+
+                                                Q1        Q2          Q1    Q2
+
+                                                Q3        Q4          Q3    Q4                  User Direction of Feed
+
+
+
+                                                           Pocket Quadrants
+
+
+*All dimensions are nominal
+             Device           Package Package Pins             SPQ       Reel   Reel   A0                  B0         K0     P1     W     Pin1
+                               Type Drawing                            Diameter Width (mm)                (mm)       (mm)   (mm)   (mm) Quadrant
+                                                                         (mm) W1 (mm)
+    HD3SS6126RUAR             WQFN     RUA           42        3000        330.0        16.4        3.8    9.3       1.0    8.0    16.0    Q1
+  HD3SS6126RUARG4             WQFN     RUA           42        3000        330.0        16.4        3.8    9.3       1.0    8.0    16.0    Q1
+
+
+
+
+                                                                     Pack Materials-Page 1
+                                                                PACKAGE MATERIALS INFORMATION
+
+www.ti.com                                                                                                              18-Jun-2025
+
+
+
+ TAPE AND REEL BOX DIMENSIONS
+
+
+
+
+                                                               Width (mm)
+                                                                              H
+                      W
+
+
+
+
+                                                          L
+
+
+
+
+*All dimensions are nominal
+             Device           Package Type   Package Drawing   Pins         SPQ    Length (mm)   Width (mm)   Height (mm)
+    HD3SS6126RUAR                WQFN             RUA           42          3000      367.0        367.0         38.0
+   HD3SS6126RUARG4               WQFN             RUA           42          3000      367.0        367.0         38.0
+
+
+
+
+                                                        Pack Materials-Page 2
+                                                                  GENERIC PACKAGE VIEW
+RUA 42                                                                  WQFN - 0.8 mm max height
+9 x 3.5, 0.5 mm pitch                                                       PLASTIC QUAD FLATPACK - NO LEAD
+
+
+
+
+               This image is a representation of the package family, actual package may vary.
+                             Refer to the product data sheet for package details.
+
+
+
+
+                                                                                                   4226504/A
+
+
+
+
+                                                    www.ti.com
+                                                                                                                 PACKAGE OUTLINE
+ RUA0042A                                                          SCALE 1.800
+                                                                                                              WQFN - 0.8 mm max height
+                                                                                                                 PLASTIC QUAD FLATPACK - NO LEAD
+
+                                                                  3.6
+                                               B                                             A
+                                                                  3.4
+
+
+
+
+                             PIN 1 INDEX AREA
+                                                                                             9.1
+                                                                                             8.9
+
+
+
+
+                                         0.8
+                                         0.6                                                  C
+
+                                                                                                     SEATING PLANE
+                                           0.05
+                                           0.00                                                      0.08 C
+
+                                                                                       2.05 0.1
+                                                                                       2X 1.5
+                                                              SYMM                                                                 (0.1) TYP
+                                     EXPOSED
+                                  THERMAL PAD           18                        21
+                                                   17
+                                                                                       22
+
+
+
+
+                                               SYMM                     43
+                                       2X 8                                                 7.55 0.1
+
+
+
+
+                                                    1                                                0.3
+                                                                                       38      42X
+                                                             42                  39                  0.2
+                                    38X 0.5
+                                                                   0.5                                0.1     C A B
+                                        PIN 1 ID             42X
+                                                                   0.3                                0.05
+                                                                                                                                4219139/A 03/2020
+
+NOTES:
+
+1. All linear dimensions are in millimeters. Any dimensions in parenthesis are for reference only. Dimensioning and tolerancing
+   per ASME Y14.5M.
+2. This drawing is subject to change without notice.
+3. The package thermal pad must be soldered to the printed circuit board for thermal and mechanical performance.
+
+
+
+
+                                                                                 www.ti.com
+                                                                                          EXAMPLE BOARD LAYOUT
+ RUA0042A                                                                                          WQFN - 0.8 mm max height
+                                                                                                       PLASTIC QUAD FLATPACK - NO LEAD
+
+
+                                                                       (2.05)
+
+                                         42X (0.6)                     SYMM                SEE SOLDER MASK
+                                                                  42            39         DETAIL
+                                     42X (0.25)
+                                                      1
+                                  38X (0.5)                                               38
+
+
+
+
+                                                                                                (3.525) TYP
+                                    (R0.05) TYP
+                                    ( 0.2) TYP
+                                            VIA
+                                                                                           1.17 TYP
+                                              SYMM                        43
+                                                                                                         (7.55) (8.8)
+
+
+
+
+                                                     17                                   22
+
+                                                             18                  21
+
+                                                            (0.775)
+                                                               TYP
+                                                                       (3.3)
+
+
+                                                      LAND PATTERN EXAMPLE
+                                                          EXPOSED METAL SHOWN
+                                                               SCALE: 10X
+
+
+
+                                                                                            0.05 MIN
+                          0.05 MAX                                                      ALL AROUND
+                      ALL AROUND
+                                                                                                                    METAL UNDER
+                                                          METAL EDGE                                                SOLDER MASK
+
+
+                         EXPOSED                          SOLDER MASK                 EXPOSED                       SOLDER MASK
+                           METAL                          OPENING                       METAL                       OPENING
+
+                                   NON SOLDER MASK
+                                       DEFINED                                             SOLDER MASK DEFINED
+                                     (PREFERRED)
+                                                          SOLDER MASK DETAILS
+                                                                                                                             4219139/A 03/2020
+NOTES: (continued)
+
+4. This package is designed to be soldered to a thermal pad on the board. For more information, see Texas Instruments literature
+   number SLUA271 (www.ti.com/lit/slua271).
+5. Vias are optional depending on application, refer to device data sheet. If any vias are implemented, refer to their locations shown
+   on this view. It is recommended that vias under paste be filled, plugged or tented.
+
+
+
+
+                                                                         www.ti.com
+                                                                                  EXAMPLE STENCIL DESIGN
+ RUA0042A                                                                                      WQFN - 0.8 mm max height
+                                                                                                      PLASTIC QUAD FLATPACK - NO LEAD
+
+
+
+
+                                                                              (0.56) TYP
+                                   42X (0.6)
+                                                           42            39
+                              42X (0.25)
+                                               1
+                           38X (0.5)                                                   38
+
+
+
+
+                              (R0.05) TYP
+
+
+
+
+                                                                                            (0.585)
+                                        SYMM                        43                        TYP
+                                                                                                      (8.8)
+
+
+
+
+                                                                                           12X (0.97)
+
+
+
+                                               17                                      22
+
+
+                                                           18            21
+                                                                                           12X (0.92)
+
+                                                                SYMM
+
+                                                                (3.3)
+
+
+
+                                                     SOLDER PASTE EXAMPLE
+                                                    BASED ON 0.125 MM THICK STENCIL
+                                                              SCALE: 12X
+
+                                                    EXPOSED PAD 43
+                                  69% PRINTED SOLDER COVERAGE BY AREA UNDER PACKAGE
+
+
+
+
+                                                                                                                     4219139/A 03/2020
+
+NOTES: (continued)
+
+6. Laser cutting apertures with trapezoidal walls and rounded corners may offer better paste release. IPC-7525 may have alternate
+  design recommendations.
+
+
+
+
+                                                                  www.ti.com
+                                         IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS”
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+
+                                                Copyright © 2026, Texas Instruments Incorporated
+                                                                Last updated 10/2025
+
