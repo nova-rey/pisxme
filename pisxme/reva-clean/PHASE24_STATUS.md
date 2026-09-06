@@ -3722,3 +3722,12 @@ shorts and track crossings, plus 77 unconnected records. This is a
 `ROUTE_IMPLEMENTATION_FAILURE` caused by collision with inherited V26 copper,
 not a failure of the standalone clock topology. The candidate was not
 promoted and V26 SATA/USB3 copper remains unchanged.
+## V2 clock-oracle south-40 placement probe (rejected)
+
+A second placement of the native-clean V2 clock fixture moved the complete
+passive island farther south, outside the immediate SATA corridor. Native
+DRC reduced this integration result to 19 violations and one real
+`BRIDGE_XI` to `BRIDGE_VSSOSC` short, with 77 unresolved opens. It is rejected
+rather than waived. This localizes the remaining support work to correcting
+the transformed clock pad escape and completing the support rails; V26
+USB3/SATA data copper remains unchanged.

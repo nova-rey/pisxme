@@ -12,14 +12,16 @@ import pcbnew
 R = Path(__file__).resolve().parent
 BASE = R / 'PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_PAIR_CORRIDOR_V26_AUTH_SKEW.kicad_pcb'
 FIX = R / 'PHASE24_COMPLETE_CLOCK_FIXTURE_V2.kicad_pcb'
-OUT = R / 'PHASE24_SELECTED_MACRO_STORAGE_V26_CLOCK_V2_SOUTH.kicad_pcb'
+OUT = R / 'PHASE24_SELECTED_MACRO_STORAGE_V26_CLOCK_V2_SOUTH40.kicad_pcb'
 CLOCK = {'/STORAGE/BRIDGE_XI','/STORAGE/BRIDGE_XO','/STORAGE/BRIDGE_VSSOSC'}
 
 def tr(p, src_u7, dst_u7):
     # 180 degrees about fixture U7, then anchor at base U7, with 10/20 mm
-    # local clearance translation.
+    # local clearance translation.  The passive island is deliberately well
+    # south of U7; the acreage basis has inherited SATA copper immediately
+    # north/east of the bridge.
     x = dst_u7.x - (p.x - src_u7.x) + pcbnew.FromMM(10)
-    y = dst_u7.y - (p.y - src_u7.y) + pcbnew.FromMM(20)
+    y = dst_u7.y - (p.y - src_u7.y) + pcbnew.FromMM(40)
     return pcbnew.VECTOR2I(x, y)
 
 base = pcbnew.LoadBoard(str(BASE)); fix = pcbnew.LoadBoard(str(FIX))
