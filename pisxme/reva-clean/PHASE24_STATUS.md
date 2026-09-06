@@ -4090,6 +4090,24 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## TI U7 RX target-via separation experiment — 2026-09-06
+
+The best clean west-target control was challenged by moving only RX_P's
+target via to `(82.0,106.5)` while retaining all other source/target
+geometry. Native DRC regressed from 15 findings (one short, zero crossings)
+to 34 findings (10 shorts, zero crossings, three clearances, 12
+hole-clearance findings, and 80 expected unconnected items). The variant was
+rejected and the 15-finding zero-crossing control restored.
+
+The failure is localized to through-via interaction with the opposite RX
+member, not a missing net or a macro-placement proof. The next credible class
+is a cross-layer pair transition that avoids placing a through-via inside the
+other member's B.Cu corridor.
+
+`TI_U7_RX_TARGET_SEPARATION = REJECTED`
+`BEST_CLEAN_FIXTURE_RESTORED = TRUE`
+`PHASE24 = OPEN`
+
 ## Clean TI-U7 west-target package fixture — 2026-09-06
 
 The source-local two-footprint fixture was regenerated from the corrected TI
