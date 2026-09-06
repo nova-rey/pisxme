@@ -2213,3 +2213,13 @@ control/ground pads. Native DRC reports 0 shorts, 0 track crossings, 237
 unconnected items, and 12 clearance items. U5.5 remains explicitly isolated
 and is not waived; it requires a later placement-aware escape. The candidate
 `PHASE24_BRIDGE_1V1_U5_FIELD_CURRENT.kicad_pcb` is promoted.
+
+### Promote U5 protected-input top-edge join — 2026-09-06
+
+The combined U4/U5 input join was rejected because the U4 segment crossed an
+existing PG_BRIDGE_3V3 escape. The isolated U5 top-edge join was then tested
+alone. It connects U5.1 to U5.16 using their actual native `12V_PROTECTED`
+pads, with no shorts or crossings. Native DRC reports 0 shorts, 0 crossings,
+236 unconnected items, and 12 clearance items. The candidate
+`PHASE24_REGULATOR_INPUT_TOP_PAD_CURRENT.kicad_pcb` is promoted; U4 and the
+remaining U5.14 input pad remain explicit open repair targets.
