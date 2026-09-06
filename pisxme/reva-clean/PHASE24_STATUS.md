@@ -2169,3 +2169,15 @@ results; they do not invalidate the completed macro-floorplan discriminator,
 U5 authority, Ethernet, PCIe, or coordinated storage neighborhoods. The
 current integrated basis remains `PHASE24_PGND_CLUSTER_CURRENT.kicad_pcb`
 with 0 shorting items, 0 track crossings, and 254 native unconnected items.
+
+### Promote local POWER_GND capacitor links — 2026-09-06
+
+The same-net capacitor-field repair was regenerated with dogbone geometry
+around the opposite pads rather than straight pad-field crossings. Native
+KiCad DRC reports 0 `shorting_items`, 0 `tracks_crossing`, 251 unconnected
+items, and 12 clearance items, improving the promoted basis from 254 opens
+and 13 clearance items. Native connectivity confirms C14.2-C15.2 and
+C16.2-C17.2-C19.2 are connected on their actual copper layers. The U5 audit
+and real-trace negative control still pass. The candidate
+`PHASE24_GROUND_CAP_LINKS_CURRENT.kicad_pcb` is promoted; all remaining
+full-board opens still require closure.
