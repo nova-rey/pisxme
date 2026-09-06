@@ -1852,3 +1852,18 @@ The selected macro remains the active basis. The next implementation step is
 a native-pad/net-aware coordinated storage generator that clears the J7/U7
 fields and assigns separated SATA pair corridors; no Phase 24 closure, Phase
 25 freeze, or Phase 26 compression has begun.
+
+### Storage generator pad-authority correction — 2026-09-05
+
+The first storage regeneration exposed a generic authoring defect: its broad
+serialized cleanup removed valid U7 pads 6/7/9 because it assumed all pads
+5–12 were stale donor fields. That cleanup was removed. A rerun from the
+passing V15 MDI parent preserves the saved U7 pad/net assignments and no
+longer produces the false no-net U7 USB3/SATA landing class.
+
+The corrected north-escape trial remains unpromoted. Native DRC reports 5
+shorts and 8 track crossings, principally among the SATA bridge/socket
+corridors and one inherited PCIe-vs-storage corridor conflict. This is still
+`ROUTE_IMPLEMENTATION_FAILURE`, not `MACRO-PLACEMENT FAILURE`; the selected
+macro has received a materially different, native-pad-authoritative routing
+cycle and remains the active basis for the next lane-ordering repair.

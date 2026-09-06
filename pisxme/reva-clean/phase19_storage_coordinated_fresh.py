@@ -1,7 +1,6 @@
 """Fresh coordinated storage island: exact CM5 escape, moved U7/J3, USB3+SATA."""
 from pathlib import Path
 import os
-import re
 import sys
 import pcbnew
 # KiCad's Flatpak launcher does not consistently preserve host-side environment
@@ -28,10 +27,14 @@ def main():
  # not stale pre-move pad positions.
  sync=R/'.phase19_storage_sync.kicad_pcb'; b.Save(str(sync)); b=pcbnew.LoadBoard(str(sync));u=b.FindFootprintByReference('U7');j=b.FindFootprintByReference('J3');src=b.FindFootprintByReference('J7')
  ux=float(os.environ.get('P19_U7_X','140')); uy=float(os.environ.get('P19_U7_Y','110'))
- # Carry the authoritative oscillator island with the moved bridge.
- for ref,dx,dy in (('Y1',8.0,-5.0),('R23',8.0,0.0),('C42',8.0,5.0),('C43',12.0,5.0)):
-  f=b.FindFootprintByReference(ref)
-  if f is not None: f.SetPosition(V(ux+dx,uy+dy))
+ # Carry the authoritative oscillator island with the moved bridge only when
+ # explicitly requested.  The selected macro already contains a native
+ # clock/support placement; silently translating it into the SATA pad field
+ # creates a false route obstruction and violates coherent-island authority.
+ if os.environ.get('P19_KEEP_CLOCK','0') != '1':
+  for ref,dx,dy in (('Y1',8.0,-5.0),('R23',8.0,0.0),('C42',8.0,5.0),('C43',12.0,5.0)):
+   f=b.FindFootprintByReference(ref)
+   if f is not None: f.SetPosition(V(ux+dx,uy+dy))
  b.Save(str(sync)); b=pcbnew.LoadBoard(str(sync));u=b.FindFootprintByReference('U7');j=b.FindFootprintByReference('J3');src=b.FindFootprintByReference('J7')
  jrot=int(os.environ.get('P19_J3_ROT','90'))
  skip_sata=os.environ.get('P19_SKIP_SATA','0')=='1'
@@ -178,7 +181,10 @@ def main():
   elif name == 'CM5_USB3_TX_P':
    # Keep the lower TX_P corridor on B.Cu and return at a single via outside
    # the moved-U7 pad field.
-   T(b,n,second,landing,pcbnew.B_Cu); X(b,n,landing); T(b,n,landing,d,pcbnew.F_Cu)
+   if os.environ.get('P19_USB_DIRECT_FINAL','0') == '1':
+    T(b,n,second,(98.0,second[1]),pcbnew.F_Cu); T(b,n,(98.0,second[1]),(98.0,d[1]),pcbnew.F_Cu); T(b,n,(98.0,d[1]),d,pcbnew.F_Cu)
+   else:
+    T(b,n,second,landing,pcbnew.B_Cu); X(b,n,landing); T(b,n,landing,d,pcbnew.F_Cu)
   elif name == 'CM5_USB3_TX_N' and os.environ.get('P19_TXN_B','0') == '1':
    # Optional layer-separated final dogleg for placement experiments.  The
    # source corridor is already on B.Cu at `second`; remain on B.Cu until a
@@ -220,6 +226,27 @@ def main():
     else:
      e=(s[0]+6.0,s[1]); T(b,n,s,e,pcbnew.F_Cu); X(b,n,e); T(b,n,e,a,pcbnew.B_Cu)
      q=(z[0]+8.0,z[1]); T(b,socket,z,q,pcbnew.B_Cu); T(b,socket,q,d,pcbnew.B_Cu)
+   elif os.environ.get('P19_SATA_NORTH','0') == '1' and jrot == 90 and urot == 180:
+    # Native north escape for the selected U7 rotation.  The SATA pads occupy
+    # the upper edge of this saved footprint; leave that edge first, then use
+    # separated F.Cu/B.Cu lanes.  Every B.Cu transition is outside both the
+    # U7 and 0402 pad fields.
+    north_lane={'BRIDGE_SATA_TX_P':101.0,'BRIDGE_SATA_TX_N':99.5,
+                'BRIDGE_SATA_RX_P':109.0,'BRIDGE_SATA_RX_N':110.5}[name]
+    north_y={'BRIDGE_SATA_TX_P':117.5,'BRIDGE_SATA_TX_N':116.5,
+             'BRIDGE_SATA_RX_P':118.5,'BRIDGE_SATA_RX_N':115.5}[name]
+    e=(north_lane,north_y); layer=pcbnew.F_Cu if name.startswith('BRIDGE_SATA_TX_') else pcbnew.B_Cu
+    T(b,n,s,(s[0],north_y),pcbnew.F_Cu); T(b,n,(s[0],north_y),e,pcbnew.F_Cu)
+    if layer == pcbnew.B_Cu:
+     X(b,n,e); bridge_v=(a[0],a[1]-1.0); T(b,n,e,bridge_v,pcbnew.B_Cu); X(b,n,bridge_v); T(b,n,bridge_v,a,pcbnew.F_Cu)
+    else:
+     T(b,n,e,a,pcbnew.F_Cu)
+    # Socket-side legs use distinct monotonic upper/lower lanes and return to
+    # F.Cu before the M.2 pads.
+    socket_v=(z[0]+(2.0 if jn in ('1','3') else -2.0), z[1]-4.0)
+    T(b,socket,z,socket_v,pcbnew.F_Cu); X(b,socket,socket_v)
+    socket_lane=(socket_v[0], d[1]-4.0 if jn in ('1','3') else d[1]+4.0)
+    T(b,socket,socket_v,socket_lane,pcbnew.B_Cu); X(b,socket,socket_lane); T(b,socket,socket_lane,d,pcbnew.F_Cu)
    elif os.environ.get('P19_SATA_V3','0') == '1' and jrot == 90:
     # V3 routes: TX_P uses the lower B.Cu corridor, TX_N the upper F.Cu
     # corridor, and the RX pair use separated B.Cu lanes.  Each cap is
@@ -291,21 +318,10 @@ def main():
   _filler = pcbnew.ZONE_FILLER(b)
   _filler.Fill(_zones)
  b.Save(str(OUT))
- # The donor PCB carries stale duplicate net fields on U7 pads 5-12.  SWIG
- # crashes when those pad objects are nulled after the net synchronization,
- # so remove only those serialized fields in the scoped U7 footprint.  This
- # preserves the authoritative physical mappings on pads 42/43/45/46 and
- # 57/56/60/59 while keeping the operation deterministic and reloadable.
- text=Path(OUT).read_text()
- us=text.index('(footprint "TUSB9261IPVP_HTQFP64"')
- ue=text.index('\n\t(footprint ',us+1)
- utext=text[us:ue]
- for pn in range(5,13):
-  m=re.search(r'(?ms)(\n\t\t\(pad "'+str(pn)+r'".*?)(?=\n\t\t\(pad |\n\t\))',utext)
-  if m:
-   block=re.sub(r'\n\t\t\t\(net "[^"]*"\)', '', m.group(1))
-   utext=utext[:m.start(1)]+block+utext[m.end(1):]
- text=text[:us]+utext+text[ue:]
- Path(OUT).write_text(text)
+ # Preserve every serialized U7 pad/net assignment.  Earlier generations
+ # removed pads 5-12 indiscriminately under the assumption that they were
+ # stale donor fields; on the selected native footprint pads 6/7/9 are real
+ # USB3/SATA functions.  Connectivity is authoritative from the saved
+ # footprint, so no broad text surgery is permitted here.
  print(OUT)
 if __name__=='__main__':main()
