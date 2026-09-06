@@ -29,9 +29,9 @@ only.
   `PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb`; it is not production
   authority. The latest corrected-package USB3 fixture is
   `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED.kicad_pcb`, with native report
-  `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED32-drc.rpt`: no authored-path
-  shorting findings, no track-width findings, no authored track-crossing
-  findings, and partial-fixture
+  `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED32-drc.rpt`: no authored track-width
+  or track-crossing findings, one authored TX source-via short, and partial-
+  fixture
   unconnected items. It is not yet a route or release pass.
 
 ## CURRENT OPEN GATES
@@ -225,7 +225,7 @@ The follow-on QFN64 package-aware escape moved RXP perpendicular to the
 bottom pad row and retained RXN on the reserved lower B.Cu lane. The later
 source-via alignment in report
 `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED32-drc.rpt` records zero authored
-shorting, track-width, and track-crossing findings. Remaining native findings
-are package-edge/J7 launch clearances and intentional support-pad
-unconnected items in the disposable fixture; it is not yet a complete
-storage pass.
+track-width and track-crossing findings, but retains one authored TX
+source-via short. Remaining native findings include package-edge/J7 launch
+clearances and intentional support-pad unconnected items in the disposable
+fixture; it is not yet a complete storage pass.
