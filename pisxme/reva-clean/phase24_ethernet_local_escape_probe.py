@@ -20,6 +20,8 @@ def add(b,net,a,z):
 b=pcbnew.LoadBoard(str(BASE))
 # A 0-degree orientation presents each four-channel ESD group as a vertical,
 # monotonic pad field relative to the native J7 source lanes.
+b.FindFootprintByReference('U6').SetPosition(pcbnew.VECTOR2I_MM(12,112))
+b.FindFootprintByReference('U9').SetPosition(pcbnew.VECTOR2I_MM(20,112))
 b.FindFootprintByReference('U6').SetOrientationDegrees(0)
 b.FindFootprintByReference('U9').SetOrientationDegrees(0)
 for item in list(b.GetTracks()):

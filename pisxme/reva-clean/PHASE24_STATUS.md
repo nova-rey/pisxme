@@ -1363,3 +1363,21 @@ This is again `ROUTE_IMPLEMENTATION_FAILURE`, not
 the required pad-field clearance. The next valid class must add a wider
 staging corridor and controlled split-layer transitions outside the J7/ESD
 fields, or make a small Ethernet-local translation to create that corridor.
+
+## Wider Ethernet-local staging probe — 2026-09-05
+
+As the bounded local-placement follow-up, U6/U9 were moved coherently to
+`(12,112)` and `(20,112)` and retained the vertical `0°` pad-field
+orientation. J7, J2, storage, PCIe, power, and all logical net identities
+were unchanged. The disposable output and native report retain the same
+artifact names `PHASE24_ETHERNET_LOCAL_ESCAPE_PROBE.kicad_pcb` and
+`PHASE24_ETHERNET_LOCAL_ESCAPE_PROBE-drc.rpt`.
+
+Native refilled DRC again reports `288` total violations and `438`
+unconnected items, with real Ethernet pad-field shorts/crossings. The result
+does not improve the direct single-layer class and is classified as
+`ROUTE_IMPLEMENTATION_FAILURE`. Two materially different direct-F.Cu
+orientations plus this wider local staging move have now been exhausted;
+further progress requires the official CM5IO-style staged split-layer escape,
+ordinary through-vias outside the dense pad fields, and connector launch
+regeneration.
