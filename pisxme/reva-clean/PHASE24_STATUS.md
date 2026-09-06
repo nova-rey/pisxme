@@ -1534,3 +1534,20 @@ with the J2 power/shield/CT field. It is rejected as
 placement or electrical topology. The next experiment must use the actual
 reference LED lane geometry or a dedicated low-speed support corridor with
 pad-field-aware dogbones; no promotion to the acreage board has occurred.
+
+## J2-west LED resistor staging probe — 2026-09-05
+
+Following the consultant review, a disposable child placed R30/R31 at the
+west side of J2 and used explicit pad-aware source escapes, two ordinary
+through-via transitions, and separate B.Cu trunk seeds toward the CM5 launch.
+The experiment preserved the validated official MDI/CT/common/shield parent.
+
+Native refilled DRC reported 264 total violations and 428 unconnected items.
+The child added 8 shorting records and 39 crossing records, primarily where
+the resistor terminal lanes entered the official MDI escape corridor and
+where the two J2 cathode exits met existing CT geometry. It is rejected as
+`ROUTE_IMPLEMENTATION_FAILURE`; the official Ethernet placement remains
+structurally unrefuted. Consultant review recommends either a fully
+source-local J7-west LED island or an obstacle-aware low-speed corridor
+generator with reserved tracks, rather than further direct dogbones through
+the MDI field.

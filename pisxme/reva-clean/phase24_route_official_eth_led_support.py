@@ -34,18 +34,17 @@ P(b,'R31','1').SetNet(nets['ETH_LEDG']);P(b,'R31','1').SetNetCode(nets['ETH_LEDG
 # Keep the two source launches on separate ordinary B.Cu corridors after
 # explicit F.Cu-to-B.Cu vias outside the J7 pad field.
 for name,src,ref,via_xy,pts in [
- ('ETH_LEDY','17',( 'R30'),(0,0),[(32.96,101.9),(30,101.9),(30,110),(60,75)]),
- ('ETH_LEDG','15',( 'R31'),(0,0),[(32.96,101.5),(27,101.5),(27,90),(70,75)])]:
- net=nets[name];last=xy(P(b,'J7',src))
- for q in pts[1:]:seg(b,net,last,q,pcbnew.F_Cu);last=q
- seg(b,net,last,xy(P(b,ref,'1')))
+ ('ETH_LEDY','17',( 'R30'),(60,47.8),[(32.96,101.9),(29,101.9),(23,101.9),(23,60),(60,60),(60,47.8)]),
+ ('ETH_LEDG','15',( 'R31'),(60,52.0),[(32.96,101.5),(27,101.5),(20,101.5),(20,55),(60,55),(60,52.0)])]:
+ net=nets[name];last=xy(P(b,'J7',src));via(b,net,via_xy)
+ for q in pts[1:-1]:seg(b,net,last,q,pcbnew.F_Cu if last==xy(P(b,'J7',src)) else pcbnew.B_Cu);last=q
+ seg(b,net,last,via_xy,pcbnew.B_Cu)
+ seg(b,net,via_xy,xy(P(b,ref,'1')),pcbnew.F_Cu)
 # Connector cathodes use distinct launch heights to avoid a crossing at J2.
 for name,pn,ref,via_xy,pts in [
-    ('/ETHERNET/GBE_LED_Y_K','16','R30',(58.5,75),[(81.59,48.94),(87,48.94),(87,68),(58.5,68)]),
-    ('/ETHERNET/GBE_LED_G_K','18','R31',(68.5,75),[(70.87,48.94),(65,48.94),(65,72),(68.5,72)])]:
-    net=nets[name];a=xy(P(b,'J2',pn));z=xy(P(b,ref,'2'));via(b,net,via_xy)
-    last=a
-    for q in pts: seg(b,net,last,q,pcbnew.B_Cu);last=q
-    seg(b,net,last,via_xy,pcbnew.B_Cu)
-    seg(b,net,via_xy,z,pcbnew.F_Cu)
+    ('/ETHERNET/GBE_LED_Y_K','16','R30',(0,0),[(81.59,48.94),(75,47.8),(62.5,47.8)]),
+    ('/ETHERNET/GBE_LED_G_K','18','R31',(0,0),[(70.87,48.94),(68,51),(62.5,51)])]:
+    net=nets[name];last=xy(P(b,'J2',pn));z=xy(P(b,ref,'2'))
+    for q in pts[1:]:seg(b,net,last,q,pcbnew.F_Cu);last=q
+    seg(b,net,last,z,pcbnew.F_Cu)
 b.BuildListOfNets();b.Save(str(OUT));print(OUT)
