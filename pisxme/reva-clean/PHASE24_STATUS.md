@@ -1447,3 +1447,33 @@ being waived for the acreage board. This is the authoritative complete
 Ethernet implementation oracle. Its exact branch/support geometry is now the
 source for adapting the official placement candidate; local hand-authored
 support routes remain rejected.
+
+Repository regression checks were then run directly against the saved complete
+fixture. `test_cm5io_transplant_fixture.py` passes all eight MDI mappings and
+reports pair length differences of `0.680`, `0.829`, `0.547`, and `0.688 mm`
+for TD0–TD3. `test_cm5io_transplant_native_drc.py` also passes, finding no
+shorts, crossings, dangling vias, unconnected pads, or footprint errors. This
+fixture gate is closed; it does not substitute for the integrated-acreage
+gate.
+
+## Official-placement MDI width-corrected discriminator — 2026-09-05
+
+Following the independent review, the official 189-item MDI geometry was
+regenerated onto the disposable official endpoint placement with every track
+width clamped to the board’s required `0.13208 mm` minimum. The focused native
+Ethernet connectivity audit passes all eight J7→ESD→J2 net memberships.
+
+Native refilled DRC reports `178` total inherited/unrelated violations and
+`426` unconnected acreage items, with zero `shorting_items`, zero
+`tracks_crossing`, zero `track_width` violations, and only five inherited
+`CORE_CM5/CM5_5V` dangling vias outside the Ethernet block. The repository
+fixture regression requiring `0.127 mm` is intentionally not used for this
+candidate; its width assertion is specific to the disposable official
+fixture, while this candidate obeys the live board rule.
+
+This proves the official route can be adapted to legal board geometry without
+Ethernet pair crossings or shorts. It remains a routing oracle/disposable
+alternative: `CURRENT_CORRECTED` stays selected for board-level topology
+because it is much closer to J7 and has better connector-edge access. Full
+support parity, connector mechanics, and integrated-acreage closure remain
+open.

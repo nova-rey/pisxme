@@ -27,6 +27,6 @@ for item in o.GetTracks():
     if isinstance(item,pcbnew.PCB_VIA):
         x,y=xy(item.GetPosition());v=pcbnew.PCB_VIA(b);v.SetPosition(V(x,y));v.SetWidth(item.GetWidth());v.SetDrill(item.GetDrill());v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu);v.SetNet(net);b.Add(v)
     else:
-        t=pcbnew.PCB_TRACK(b);t.SetStart(V(*xy(item.GetStart())));t.SetEnd(V(*xy(item.GetEnd())));t.SetLayer(item.GetLayer());t.SetWidth(item.GetWidth());t.SetNet(net);b.Add(t)
+        t=pcbnew.PCB_TRACK(b);t.SetStart(V(*xy(item.GetStart())));t.SetEnd(V(*xy(item.GetEnd())));t.SetLayer(item.GetLayer());t.SetWidth(max(item.GetWidth(), pcbnew.FromMM(0.13208)));t.SetNet(net);b.Add(t)
     count+=1
 b.BuildListOfNets();b.Save(str(OUT));print(OUT,'items',count)
