@@ -88,3 +88,16 @@ AUTO_PEDET, FORCE_NVME); U14 is the SN74LVC1G17DBVR Schmitt buffer from the
 verified TI DBV pinout, with MODE_IN driven by the selected strap or PEDET
 implementation and STORAGE_SEL driving both selectors. This is schematic
 authority only until the complete support network and native fixture pass.
+## USB2 ownership correction — 2026-09-06
+
+Native root netlist evidence now confirms the three switched USB2 branches:
+
+| Path | Native net | Endpoints |
+|---|---|---|
+| CM5 source | `CM5_STORAGE_USB2_DP/DM` | J7.134/136 ↔ U12.8/7 |
+| SATA bridge | `BRIDGE_USB_DP/DM` | U12.31/32 ↔ U7.36/35 |
+| NVMe bridge | `USB_DP/DM` | U12.33/34 ↔ U11.18/17 |
+
+This replaces the earlier unconnected `CM5_USB2_*`, `TUSB_USB2_*`, and
+`JMS_USB2_*` naming. The selector remains the sole USB2 owner; the two bridge
+ports are never paralleled.
