@@ -4434,3 +4434,5 @@ Moved target transitions outside the TI exposed pad field; the current F.Cu obst
 Moved the complete storage support island south and rebound TI U7; RX was reachable but the fixed planner stalled on TX, so the candidate was retained as route-implementation evidence only.
 # 2026-09-06 — Phase 24 USB3-source-local coherent storage discriminator
 Corrected the placement probe to remove stale copper at moved pads; the native planner reached all four lanes, but fixed transitions still conflicted with PCIe/package geometry, so the candidate was not promoted.
+# 2026-09-06 — Phase 24 clean TI-U7 west-target fixture
+Separated source and west-side target transitions in the clean TI fixture; native DRC reached zero crossings with one short and three local geometry findings, and the best control was retained for final repair.

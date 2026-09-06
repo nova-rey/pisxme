@@ -4090,6 +4090,29 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Clean TI-U7 west-target package fixture — 2026-09-06
+
+The source-local two-footprint fixture was regenerated from the corrected TI
+PVP0064A package and given a west-side target transition topology. Source and
+target transition fields were separated while final F.Cu dogbones remained
+on the actual U7 USB3 land rows. Native DRC reached 15 findings: zero track
+crossings, one short, three clearances, three hole-clearance findings, and
+80 expected incomplete-fixture unconnected items. A lateral target-via
+variant regressed to 21 findings with two shorts and seven hole-clearance
+findings and was rejected; the 15-finding control was restored.
+
+This is the strongest current package-only control, but it is not yet a
+PASS: the remaining short/clearances must be removed before promotion into
+the integrated acreage board. The result is `ROUTE_IMPLEMENTATION_FAILURE`
+evidence at the package transition, not a macro-floorplan rejection.
+
+Receipt: `phase24_ti_usb3_west_target_fixture.py` and
+`PHASE24_USB3_LOCAL_TI_WEST_TARGET-drc.rpt`.
+
+`TI_U7_CLEAN_FIXTURE = NEAR_PASS`
+`TI_U7_CLEAN_FIXTURE_CROSSINGS = 0`
+`PHASE24 = OPEN`
+
 ## USB3-source-local coherent storage discriminator — 2026-09-06
 
 An additional coherent candidate moved U7/J3 and all clock, coupling, and
