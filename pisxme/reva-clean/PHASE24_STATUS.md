@@ -3033,3 +3033,24 @@ The underside mechanical spot check found C19 at `(107.0,118.0)` on B.Cu,
 with no nearby B.Cu component body or verified mounting feature within the
 local 12 mm review radius. This is only local evidence; enclosure, M.2,
 standoff, and assembly-side checks remain part of the later full-board gate.
+
+## U7 supply hierarchy authority audit — 2026-09-06
+
+The authoritative saved schematic/netlist was audited before adding copper.
+`STORAGE.kicad_sch` has no hierarchical ports named `BRIDGE_3V3` or
+`BRIDGE_1V1`; `REGULATORS.kicad_sch` likewise has neither port. The root
+sheet exports `STORAGE_3V3` and `BRIDGE_1V1_3V3`, but not the two separate
+bridge rails required by U7. The netlist consequently contains distinct
+`/STORAGE/BRIDGE_3V3`, `/STORAGE/BRIDGE_1V1`, `/REGULATORS/BRIDGE_3V3`, and
+`/REGULATORS/BRIDGE_1V1` nets with no authoritative join. This explains why
+the board candidate's U7 supply pads and regulator decouplers cannot be
+closed by valid PCB copper alone.
+
+No synthetic net join was added. This is now the earliest unresolved Phase
+24 authority defect: the minimum safe continuation is a native hierarchy-port
+repair that explicitly maps both bridge rails between STORAGE and REGULATORS,
+followed by schematic/netlist/PCB regeneration and revalidation. Until that
+repair is made, U7 power closure and full Phase 24 closure remain open.
+
+Receipt:
+`phase24_u7_supply_hierarchy_audit.py`.
