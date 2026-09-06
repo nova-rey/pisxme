@@ -32,7 +32,8 @@ def main():
         if f'(label "{net}"' not in text and f'(global_label "{net}"' not in text:
             failures.append(f"missing reviewed net label: {net}")
     for ref, mpn in (("U11", "JMS583-QHFA3A"), ("U12", "HD3SS6126RUAR"),
-                     ("U13", "HD3SS3412RUAR"), ("J3", "1-2199230-4")):
+                     ("U13", "HD3SS3412RUAR"), ("U14", "SN74LVC1G17DBVR"),
+                     ("J3", "1-2199230-4")):
         if f'(property "Reference" "{ref}"' not in text:
             failures.append(f"missing instance {ref}")
         if mpn not in text:

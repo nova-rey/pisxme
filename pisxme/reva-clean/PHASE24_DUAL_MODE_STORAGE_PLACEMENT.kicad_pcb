@@ -27003,4 +27003,28 @@
 
  (uuid "03bd60f8-2169-562b-866a-0136b03f1e0b")
 )
+(footprint "SOT-23-5" (version 20240108) (generator pcbnew)
+ 
+ (layer "F.Cu")
+ (at 210 150)
+  (descr "TI SN74LVC1G17DBVR; DBV SOT-23-5 review footprint")
+  (property "Reference" "U14" (at 0 -2.4 0) (layer "F.SilkS")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+  (property "Value" "" (at 0 2.4 0) (layer "F.Fab") hide
+    (effects (font (size 0.8 0.8))))
+  (attr smd)
+  (fp_rect (start -1.7 -1.4) (end 1.7 1.4)
+    (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
+  (fp_line (start -0.9 -0.9) (end -0.45 -0.9)
+    (stroke (width 0.15) (type default)) (layer "F.SilkS"))
+  (fp_line (start -0.9 -0.9) (end -0.9 -0.45)
+    (stroke (width 0.15) (type default)) (layer "F.SilkS"))
+  (pad "1" smd roundrect (at -1.1 -0.95) (size 1.0 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))
+  (pad "2" smd roundrect (at -1.1 0.0) (size 1.0 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "M2_PEDET") (pinfunction "M2_PEDET") (pintype "passive") (uuid "5d4893e5-e207-5da7-aaf0-00e1ad43fc51"))
+  (pad "3" smd roundrect (at -1.1 0.95) (size 1.0 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "283de4c6-1240-5fe5-bea9-0937a6e715ff"))
+  (pad "4" smd roundrect (at 1.1 0.95) (size 1.0 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "STORAGE_SEL") (pinfunction "STORAGE_SEL") (pintype "passive") (uuid "63c1463a-54b7-5393-afb5-f3e2d0fb3c83"))
+  (pad "5" smd roundrect (at 1.1 -0.95) (size 1.0 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "STORAGE_3V3") (pinfunction "STORAGE_3V3") (pintype "passive") (uuid "2907504b-e21c-5c42-8005-d186b72b80f7"))
+
+ (uuid "e083d7e4-a686-53cd-a0b1-fb25d65fe53c")
+)
 )
