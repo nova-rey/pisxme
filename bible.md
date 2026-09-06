@@ -4491,3 +4491,5 @@ Tested a native-J7 local B.Cu source escape after proving the transformed CM5IO 
 Reran the corrected KiCad-native U5 connectivity audit against the saved fixture and promoted integrated basis; both pass, and a disposable real U5.9 trace-removal control fails as required. Native DRC/unconnected findings remain open and no full-board closure was claimed.
 # 2026-09-06 — Phase 24 ASM2362 JLCPCB qualification refresh
 Captured the current JLCPCB ASM2362 assembly listing and EasyEDA CAD-link evidence. It improves procurement/assembly evidence but does not close missing ASMedia-authoritative pinout, reference design, firmware, or programming authority; no mystery bridge was implemented.
+# 2026-09-06 — Phase 24 authority recheck
+Reran the authoritative support-part pad-net, U7 supply-hierarchy, and full schematic/PCB reference-set audits; all passed. Copper routing, native DRC, and dual-mode storage qualification remain open.

@@ -4184,6 +4184,20 @@ Receipt: `PHASE24_U5_NATIVE_RECHECK_20260906.md`.
 `U5_NEGATIVE_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Phase 24 authority recheck — 2026-09-06
+
+Reran the authoritative support-part pad-net audit, U7 supply-hierarchy
+audit, and full schematic/PCB reference-set audit with KiCad 10.0.5. All
+passed: eight support references were exact, U7 was present on both
+canonical bridge rails, and the reference set was `78` schematic / `101` PCB
+with the expected `23` PCB-only mechanical/test extras. These checks do not
+close copper routing, native DRC, or the scoped dual-mode storage upgrade.
+
+Receipt: `PHASE24_AUTHORITY_RECHECK_20260906.md`.
+
+`PHASE24_AUTHORITY_RECHECK = PASS`
+`PHASE24 = OPEN`
+
 ## TI U7 RX target-via separation experiment — 2026-09-06
 
 The best clean west-target control was challenged by moving only RX_P's
