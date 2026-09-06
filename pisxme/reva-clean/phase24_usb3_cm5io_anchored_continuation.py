@@ -6,7 +6,7 @@ import math, pcbnew
 R = Path(__file__).resolve().parent
 BASE = R / "PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_REVIEW.kicad_pcb"
 ORACLE = R / "authority-inventory/cm5io-rev2/CM5IO.kicad_pcb"
-OUT = R / "PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_CM5IO_FCU_LANES.kicad_pcb"
+OUT = R / "PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_CM5IO_PAIR_LAYER_SPLIT.kicad_pcb"
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 STEP, WIDTH = .25, .15
 JOBS = (("CM5_USB3_RX_N", "128", "42", "/CM5_HighSpeed/USB3-0-RX_N"),
@@ -107,13 +107,15 @@ for i,(name,jp,up,_) in enumerate(JOBS):
     copied, first=paths[name]
     for a,z,l,w in copied: track(board,n,transform(a),transform(z),l)
     sv=transform(first); via(board,n,sv)
-    target=(88.0,124.6 + (0.9 * (int(up)-42)))
-    # The official first via already exposes F.Cu. Keep the continuation on
-    # four ordered, west-of-PCIe F.Cu lanes; no second transition is needed
-    # until the short U7-side dogbone.
-    lane_x = (58.0, 57.0, 56.0, 55.0)[i]
-    lane_y = (90.0, 91.5, 93.0, 94.5)[i]
-    path(board,n,[sv,(lane_x,lane_y),(lane_x,120.0 + i),(88.0,target[1])],F)
+    target=(88.0,124.6 + (0.9 * i))
+    # Keep RX and TX on separate permitted signal layers to avoid the
+    # reversed first-via ordering introduced by the reference transform.
+    # RX uses the west B.Cu corridor below the PCIe spine; TX uses a distinct
+    # F.Cu corridor west of the launch field.
+    layer = B if i < 2 else F
+    lane_x = (76.0, 76.0, 58.0, 54.0)[i]
+    lane_y = (124.6, 125.5, 126.4, 127.3)[i]
+    path(board,n,[sv,(lane_x,sv[1]),(lane_x,lane_y),(88.0,lane_y)],layer)
     via(board,n,target); track(board,n,target,dst,F)
     print(name,'source_via',sv,'target',target,'outer_corridor',True)
 board.BuildListOfNets();board.Save(str(OUT));print(OUT)

@@ -4587,3 +4587,22 @@ Receipt: `phase24_cm5io_source_anchor_audit.py`,
 `CM5IO_SOURCE_ANCHOR_AUDIT = PASS`
 `CONTINUATION_ROUTING = OPEN`
 `PHASE24 = OPEN`
+
+## CM5IO anchored pair-layer continuation correction — 2026-09-06
+
+The pair-layer continuation was corrected after native inspection found a
+generator defect: TX_N and TX_P had shared one F.Cu x-channel, and the target
+row calculation skipped the U7 TX_N row. Distinct TX channels and the native
+four-row target sequence were regenerated. Native DRC still rejected the
+integrated candidate with 364 violations: 4 shorts, 36 track crossings, 68
+clearance findings, 81 hole-clearance findings, and 465 unconnected items.
+The corrected candidate is rejected as route implementation evidence; the
+isolated CM5IO source-anchor PASS and selected macro decision remain valid.
+
+Receipt: `phase24_usb3_cm5io_anchored_continuation.py`,
+`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_CM5IO_PAIR_LAYER_SPLIT.kicad_pcb`,
+and its native DRC report.
+
+`CM5IO_PAIR_LAYER_CONTINUATION = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`
