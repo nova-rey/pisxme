@@ -4090,6 +4090,25 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## TI-U7 separated-target-via approach refinement — 2026-09-06
+
+The best disposable escape was refined by aligning the TX final F.Cu
+dogbones to the actual native U7 pad rows. Native DRC reports 8 findings,
+all expected incomplete-fixture warnings or unconnected items; there are zero
+shorts, zero track crossings, and zero clearance violations. The geometry was
+then authored into a selected-macro disposable integration basis with all
+four USB3 nets and native net identity preserved. The integrated result is
+not promoted until its full-board DRC/connectivity/reference checks pass.
+
+Receipts: `phase24_ti_usb3_rx_split_v2_fixture.py`,
+`phase24_promote_ti_usb3_rx_split_v2.py`,
+`PHASE24_RX_SPLIT_V2_CHECK.rpt`, and
+`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_USB3_RX_SPLIT_V2.kicad_pcb`.
+
+`TI_U7_DISPOSABLE_ESCAPE = PASS`
+`TI_U7_INTEGRATED_ESCAPE = OPEN`
+`PHASE24 = OPEN`
+
 ## Macro-floorplan comparison-bias reconciliation — 2026-09-06
 
 The whole-board discriminator was rechecked against the comparison rule that
@@ -4376,5 +4395,25 @@ and `PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_OBSTACLE_REVIEW.kicad_pcb`.
 
 `TI_U7_AUTHORITY = PASS`
 `SELECTED_MACRO_ROUTE_CYCLE = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`
+
+## Selected-macro TI-U7 v2 escape integration cycle — 2026-09-06
+
+The zero-clearance-error disposable TI-U7 escape was applied using native
+pad/net identity to the selected `SWAP_ETH_STORAGE` macro. Native DRC found
+356 violations, including USB3 collisions/crossings with retained board
+copper and 469 unconnected items. The candidate is rejected as a route
+implementation failure: the package-only proof passed, but its fixed
+absolute transition corridors were not obstacle-aware in the integrated
+board. No PCIe or production copper was changed, and the floorplan decision
+is unaffected.
+
+Receipt: `phase24_promote_ti_usb3_rx_split_v2.py`,
+`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_USB3_RX_SPLIT_V2.kicad_pcb`, and
+`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_USB3_RX_SPLIT_V2-drc.rpt`.
+
+`TI_U7_DISPOSABLE_ESCAPE = PASS`
+`TI_U7_INTEGRATED_ESCAPE = REJECTED`
 `FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
 `PHASE24 = OPEN`

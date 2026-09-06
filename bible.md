@@ -4442,3 +4442,5 @@ Rejected a targeted RX_P target-via relocation after native DRC regressed to 10 
 Reconciled the whole-board floorplan records: selected SWAP_ETH_STORAGE from native transformed-pad topology, while keeping early candidate DRC separate from floorplan ranking and classifying immature route failures as route implementation evidence.
 # 2026-09-06 — Phase 24 TI-U7 separated-target-via route probe
 Tested a fresh monotonic TI-U7 USB3 escape; the best native control has zero shorts and crossings but two local approach-clearance errors, while a staggered target-via variant regressed and was rejected.
+# 2026-09-06 — Phase 24 TI-U7 v2 integrated escape cycle
+Applied the zero-clearance-error TI-U7 disposable escape to the selected macro; native integration found obstacle collisions and incomplete connectivity, so the fixed-corridor candidate was rejected as route implementation evidence.

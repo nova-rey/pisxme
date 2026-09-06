@@ -43,7 +43,13 @@ for i, (_, source, destination, n) in enumerate(terms):
     via(board, n, sv)
     path(board, n, [sv, tv], B)
     via(board, n, tv)
-    path(board, n, [tv, destination], F)
+    # Align the TX dogbones to the native U7 pad rows before the final
+    # approach; a direct diagonal grazes the adjacent ground/support pads.
+    if i >= 2:
+        aligned = (83.0, destination[1])
+        path(board, n, [tv, aligned, destination], F)
+    else:
+        path(board, n, [tv, destination], F)
 board.BuildListOfNets()
 board.Save(str(OUT))
 print(OUT)
