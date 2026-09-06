@@ -4716,3 +4716,7 @@ This is a routing candidate, not storage closure.
 closer to U12 and corrected their local X ordering. Native report 40 retains
 zero shorts, crossings, and width findings, with 152 clearance findings and
 the known partial-fixture opens. The candidate remains non-release.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: added an assertion-only native
+USB3 connectivity audit. The regenerated candidate passes all ten intended
+CM5/U12/U11/coupling-capacitor endpoint pairs; physical DRC and full storage
+validation remain open.

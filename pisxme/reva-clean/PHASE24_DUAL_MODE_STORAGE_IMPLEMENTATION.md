@@ -33,6 +33,10 @@ only.
   track-width findings, and track-crossing findings; 152 clearance, 4
   board-edge, and 7 solder-mask findings remain, plus partial-fixture
   unconnected items. It is not yet a route or release pass.
+- `phase24_dual_mode_storage_usb3_native_connectivity_audit.py` passes all ten
+  intended CM5/U12/U11/coupling-capacitor endpoint pairs on the regenerated
+  candidate. This proves native endpoint connectivity only; it does not waive
+  the physical DRC findings above.
 
 ## CURRENT OPEN GATES
 
