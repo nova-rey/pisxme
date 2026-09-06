@@ -1551,3 +1551,18 @@ structurally unrefuted. Consultant review recommends either a fully
 source-local J7-west LED island or an obstacle-aware low-speed corridor
 generator with reserved tracks, rather than further direct dogbones through
 the MDI field.
+## J7-west source-local LED island probe — 2026-09-05
+
+The second consultant-recommended class placed staggered R30/R31 immediately
+west of J7, kept source traces on F.Cu, and used open left-edge B.Cu lanes for
+the J2 cathode trunks with separate ordinary through-vias. This preserved the
+official MDI/CT/common/shield parent and did not touch differential copper.
+
+Native refilled DRC reported 241 total violations and 426 inherited
+unconnected items. The child still introduced 13 shorting records and 15
+crossing records, including J2 launch-field/pad-barrel interactions and
+source-local terminal/via interactions. It is rejected as
+`ROUTE_IMPLEMENTATION_FAILURE`. The measured result improves over the prior
+J2-west attempt but does not yet constitute an Ethernet or Phase 24 pass; an
+obstacle-aware router or a mechanically separated LED-support placement is
+still required.
