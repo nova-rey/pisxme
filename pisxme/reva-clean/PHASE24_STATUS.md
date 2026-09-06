@@ -4089,3 +4089,38 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `CURRENT_INTEGRATED_BASIS_SNAPSHOTTED = TRUE`
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
+
+## Selected-macro TI-U7 integration cycle — 2026-09-06
+
+The selected `SWAP_ETH_STORAGE` macro was reloaded and U7 was regenerated from
+the authoritative 65-pad `TUSB9261IPVP_PVP0064A` footprint. The corrected
+replacement helper now resolves exported local net names to an unambiguous
+`/CORE_CM5/...` hierarchy suffix and does not create duplicate USB3 net
+objects. The TI mandatory-pin contract and native U7 pad-net authority audit
+both pass.
+
+Two disposable native route-development controls were evaluated against this
+integrated basis. The best isolated mixed-layer control copied 20 scalar
+native track/via objects, but native DRC reported 336 violations, 15
+`shorting_items`, 15 `tracks_crossing`, and 469 unconnected items. The
+obstacle-aware native planner authored all four source-to-U7 paths, but DRC
+reported 384 violations, 15 `shorting_items`, 15 `tracks_crossing`, and 469
+unconnected items. The failures include USB3 against the retained PCIe
+corridor, so neither candidate is promoted.
+
+These results are explicitly `ROUTE_IMPLEMENTATION_FAILURE`, not
+`MACRO-PLACEMENT FAILURE`: one control was a fixed-coordinate transplant and
+the other was a first integrated planner pass. They do not answer whether
+the selected macro is topologically better than the historical board. No
+PCIe copper or production candidate was changed.
+
+The generic authoring correction is recorded in
+`phase24_replace_u7_with_ti_footprint_fixture.py`; the integration experiment
+is reproducible with `phase24_promote_ti_usb3_mixed_fixture.py`. Native
+receipts are `PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_MIXED_REVIEW.kicad_pcb`
+and `PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_OBSTACLE_REVIEW.kicad_pcb`.
+
+`TI_U7_AUTHORITY = PASS`
+`SELECTED_MACRO_ROUTE_CYCLE = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`

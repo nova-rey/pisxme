@@ -4416,3 +4416,5 @@ Rejected a small TX target-transition height variation after native DRC regresse
 Rejected an alternate-layer RX escape after native DRC regressed to 14 findings with three crossings; restored the best mixed-layer control.
 # 2026-09-06 — Phase 24 whole-board functional-island macro discriminator
 Snapshotted the native integrated storage basis and completed a topology-only comparison of six disposable whole-board macro-floorplans; selected SWAP_ETH_STORAGE without promoting immature routing.
+# 2026-09-06 — Phase 24 selected-macro TI-U7 integration cycle
+Corrected hierarchical U7 net resolution, passed TI pin/net authority audits, and rejected two disposable integrated USB3 route controls after native DRC found real crossings/shorts; classified as route implementation failure.

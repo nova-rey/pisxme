@@ -24,7 +24,7 @@ def audit(path):
     errors = []
     for num, name in sorted(exp.items()):
         if num not in pads: errors.append(f'missing U7.{num}')
-        elif pads[num].GetNetname() != name:
+        elif not (pads[num].GetNetname() == name or pads[num].GetNetname().endswith('/' + name)):
             errors.append(f'U7.{num}: {pads[num].GetNetname()!r} != {name!r}')
     for num, pad in sorted(pads.items()):
         if num not in exp and pad.GetNetname():

@@ -18,8 +18,19 @@ def main():
     new.SetReference('U7'); new.SetPosition(old.GetPosition()); new.SetOrientation(old.GetOrientation())
     nets={}
     for name in set(expected.values()):
-        n=b.FindNet(name) or pcbnew.NETINFO_ITEM(b,name)
-        if b.FindNet(name) is None: b.Add(n)
+        # The repaired export may contain local XML names while the saved PCB
+        # carries the authoritative hierarchical spelling.  Resolve by exact
+        # name first, then by an unambiguous hierarchical suffix; never create
+        # a duplicate net merely because the export omitted its hierarchy.
+        suffix = [b.GetNetsByName()[k] for k in b.GetNetsByName()
+                  if str(k).endswith("/" + name)]
+        # Prefer the carrier's canonical hierarchy for shared CM5 signals.
+        # This also avoids SWIG FindNet() ambiguity when a stale local alias
+        # exists in a disposable donor board.
+        preferred = [n for n in suffix if str(n.GetNetname()).startswith("/CORE_CM5/")]
+        n = preferred[0] if len(preferred) == 1 else (suffix[0] if len(suffix) == 1 else b.FindNet(name))
+        if n is None:
+            n=pcbnew.NETINFO_ITEM(b,name); b.Add(n)
         nets[name]=n
     for p in new.Pads():
         name=expected.get(str(p.GetNumber()))
