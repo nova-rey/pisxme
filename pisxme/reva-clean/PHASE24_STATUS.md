@@ -2251,3 +2251,12 @@ pads and preserves the separate fused-output group. Native KiCad DRC reports
 0 shorts, 0 track crossings, 231 unconnected items, and 12 clearance items.
 `PHASE24_F1_INPUT_PAD_FIELD_CURRENT.kicad_pcb` is promoted; the remaining
 input/protection and regulator endpoints remain open.
+
+### Promote F1 fused-output PTH field — 2026-09-06
+
+The four F1 output-side PTH pads on `/POWER_INPUT/FUSED_12V_A` were joined
+with a separate wide B.Cu rectangular field. The field does not touch the
+input-side field or alter the fuse/protection topology. Native KiCad DRC
+reports 0 shorts, 0 track crossings, 229 unconnected items, and 12 clearance
+items. `PHASE24_F1_FUSED_OUTPUT_PAD_FIELD_CURRENT.kicad_pcb` is promoted;
+Q1/D1/load distribution remains to be connected and validated.
