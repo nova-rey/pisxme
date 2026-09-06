@@ -142,3 +142,11 @@ but native DRC still finds via-to-neighbor clearance at the dense package
 edge and inherited selector-continuation crossings. It is rejected as a
 fixture route implementation. The next bounded repair moves the vias farther
 outside the package and gives selector continuation a separate corridor.
+
+The subsequent orthogonal SMD-pad-escape experiment is retained as
+`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED17-drc.rpt` and rejected. It used
+native pad/via/track objects, but introduced real collisions between the
+selector continuation, CM5 source fanout, and cap-side return corridors.
+That result is a route implementation failure, not evidence against the
+dual-mode architecture or the corrected TI package. The committed generator
+remains at the preceding zero-short baseline; no production PCB was promoted.

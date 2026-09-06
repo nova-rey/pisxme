@@ -4666,3 +4666,9 @@ perimeter pad length to the retained example-layout value of 0.60 mm (from
 the prior 0.75 mm generator value). Geometry audit passes and the regenerated
 isolated USB3 fixture remains zero-short; native track-width and localized
 crossing findings remain open.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: rejected the next orthogonal
+SMD-pad-escape USB3 experiment after native DRC found real selector/source
+and cap-side corridor collisions. Preserved its raw report as disposable
+evidence and restored the committed generator to the prior zero-short
+baseline; architecture and authoritative package geometry remain open for
+further route implementation work.
