@@ -4503,3 +4503,25 @@ floorplan, and no terminal blocker is declared.
 `INDEPENDENT_ROUTE_REVIEW = COMPLETE`
 `NEXT_ROUTE_CLASS = CM5IO_ANCHORED_CONTINUATION`
 `PHASE24 = OPEN`
+
+## CM5IO-anchored source escape continuation — 2026-09-06
+
+The official CM5IO USB3 source-side geometry was extracted from the native
+reference PCB, transformed into the native J7 carrier coordinates, and
+copied through each first reference transition. A disposable continuation
+planner then attempted to route from those fixed anchors to the selected TI
+U7 island. Native DRC rejected the integrated candidate with 3,030
+violations: 11 shorts, 2,251 track crossings, 499 clearance findings, 95
+hole-clearance findings, and 465 unconnected items. The source anchoring
+itself is retained as authoritative evidence; the continuation planner is
+rejected as a route implementation failure. No PCIe or production copper was
+changed.
+
+Receipt: `phase24_usb3_cm5io_anchored_continuation.py`,
+`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_CM5IO_ANCHORED.kicad_pcb`, and
+its native DRC report.
+
+`CM5IO_SOURCE_ANCHOR = AUTHORITATIVE`
+`CM5IO_ANCHORED_CONTINUATION = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`
