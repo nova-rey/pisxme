@@ -3136,3 +3136,27 @@ Receipts:
 `phase24_remove_unsourced_tp5_route.py`,
 `phase24_u7_supply_hierarchy_audit.py`, and
 `PHASE24_STORAGE_NATIVE_ORACLE_SUPPORT_C19_BOTTOM_FLIPPED_HIERARCHY_SYNC_TP5_REMOVED-drc.rpt`.
+
+## U7 package-pin authority follow-up — 2026-09-06
+
+The repaired-netlist U7 pad audit is intentionally fail-closed on the
+disposable board. In addition to the corrected U7.3 PWM1 stale assignment,
+the candidate assigns `/STORAGE/BRIDGE_CFG` to U7.1 and
+`/STORAGE/BRIDGE_SATA_RX_N` to U7.5--U7.9, although the native schematic
+netlist has no such U7 nodes. TI's TUSB9261 Rev-I pin table identifies these
+physical pins as VDD/GPIO pins, while the actual SATA receive pins are 59/60
+and bridge configuration is pin 21. Therefore the prior local connectivity
+audits were insufficient: they proved the intended endpoint pads, but did not
+prove the complete package pin field was authoritatively mapped.
+
+This is now classified as a `SCHEMATIC_FOOTPRINT_AUTHORITY` defect, not a
+route implementation failure. The next repair must expose or otherwise
+authoritatively represent the TUSB9261 power, ground, GPIO/PWM, and NC pins
+in the clean symbol and regenerate the U7 footprint net assignment from that
+source. No PCB-only reassignment of U7.1/U7.5--U7.9 is accepted. Phase 24
+remains open and no acreage candidate is promoted.
+
+Receipt:
+`phase24_u7_pad_net_authority_audit.py` and
+the TI `TUSB9261-datasheet-revI.pdf` retained under
+`authority-inventory/primary-docs/tusb9261/`.

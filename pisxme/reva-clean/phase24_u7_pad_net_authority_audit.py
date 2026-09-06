@@ -1,23 +1,34 @@
-"""Audit U7 pad net ownership against the native exported netlist contract."""
+"""Audit U7 pad ownership against the repaired native KiCad netlist."""
 from pathlib import Path
 import sys
+import xml.etree.ElementTree as ET
 import pcbnew
 
-EXPECTED={
- '4':'/STORAGE/BRIDGE_RESET','21':'/STORAGE/BRIDGE_CFG',
- '24':'/STORAGE/BRIDGE_3V3','30':'/STORAGE/BRIDGE_3V3','31':'/STORAGE/BRIDGE_3V3',
- '41':'/STORAGE/BRIDGE_1V1','42':'/CORE_CM5/CM5_USB3_RX_N','43':'/CORE_CM5/CM5_USB3_RX_P',
- '45':'/CORE_CM5/CM5_USB3_TX_N','46':'/CORE_CM5/CM5_USB3_TX_P',
- '52':'/STORAGE/BRIDGE_XI','53':'/STORAGE/BRIDGE_VSSOSC','54':'/STORAGE/BRIDGE_XO',
- '56':'/STORAGE/BRIDGE_SATA_TX_N','57':'/STORAGE/BRIDGE_SATA_TX_P',
- '59':'/STORAGE/BRIDGE_SATA_RX_N','60':'/STORAGE/BRIDGE_SATA_RX_P'}
+R = Path(__file__).resolve().parent
+XML = R / 'PHASE24_CLEAN_HIERARCHY_REPAIRED.kicadxml'
+
+def expected_u7():
+    root = ET.parse(XML).getroot(); out = {}
+    for net in root.findall('.//nets/net'):
+        for node in net.findall('node'):
+            if node.get('ref') == 'U7': out[node.get('pin')] = net.get('name')
+    return out
+
 def audit(path):
- b=pcbnew.LoadBoard(str(path)); f=b.FindFootprintByReference('U7'); errors=[]
- for num,name in EXPECTED.items():
-  p=next((p for p in f.Pads() if str(p.GetNumber())==num),None)
-  if p is None: errors.append(f'missing U7.{num}')
-  elif p.GetNetname()!=name: errors.append(f'U7.{num}: {p.GetNetname()!r} != {name!r}')
- if errors: raise AssertionError('; '.join(errors))
- return True
-if __name__=='__main__':
- audit(Path(sys.argv[1])); print('Phase24 U7 pad-net authority: PASS')
+    b = pcbnew.LoadBoard(str(path)); f = b.FindFootprintByReference('U7')
+    if f is None: raise AssertionError('missing U7')
+    exp = expected_u7()
+    pads = {str(p.GetNumber()): p for p in f.Pads()}
+    errors = []
+    for num, name in sorted(exp.items()):
+        if num not in pads: errors.append(f'missing U7.{num}')
+        elif pads[num].GetNetname() != name:
+            errors.append(f'U7.{num}: {pads[num].GetNetname()!r} != {name!r}')
+    for num, pad in sorted(pads.items()):
+        if num not in exp and pad.GetNetname():
+            errors.append(f'U7.{num}: unsourced stale net {pad.GetNetname()!r}')
+    if errors: raise AssertionError('; '.join(errors))
+    return True
+
+if __name__ == '__main__':
+    audit(Path(sys.argv[1])); print('Phase24 repaired U7 pad-net authority: PASS')
