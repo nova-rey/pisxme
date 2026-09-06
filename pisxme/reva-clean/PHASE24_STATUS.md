@@ -2558,12 +2558,12 @@ native interactive routing semantics. The macro-floorplan remains unchanged.
 ## USB3 via-spacing correction — 2026-09-06
 
 The next bounded correction spread the endpoint transitions outside the U7
-pad-field diameter envelope. Native DRC now reports zero shorting items and
-zero track-crossing findings, demonstrating that the pair corridors can be
-authored without crossing at the selected placement. It still reports 535
-total violations, 259 unconnected items, and 42 clearance findings, including
-plane-clearance findings at the transition vias and inherited board defects.
-The probe is therefore rejected and remains `ROUTE_IMPLEMENTATION_FAILURE`;
-the zero-short/zero-crossing result is retained as route-development evidence,
-not as Phase 18 closure. The next correction is deliberate local return-via
-and plane-clearance handling followed by storage-specific connectivity audit.
+pad-field diameter envelope. Native DRC reports zero shorting items but 9
+`tracks_crossing` findings, 535 total violations, 259 unconnected items, and
+42 clearance findings, including plane-clearance findings at the transition
+vias and inherited board defects. The probe is therefore rejected and remains
+`ROUTE_IMPLEMENTATION_FAILURE`; the zero-short result is retained as limited
+route-development evidence, not as Phase 18 closure. The next correction is
+deliberate local return-via and plane-clearance handling followed by
+storage-specific connectivity audit. An earlier summary that called this
+zero-crossing was a report-parser error and is superseded here.

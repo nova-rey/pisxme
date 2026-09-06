@@ -35,7 +35,9 @@ def track(board, net, a, z, layer):
 
 def via(board, net, p):
     q = pcbnew.PCB_VIA(board); q.SetPosition(p)
-    q.SetWidth(pcbnew.FromMM(0.55)); q.SetDrill(pcbnew.FromMM(0.30))
+    # Keep the ordinary through-via drill while reducing annular copper enough
+    # to clear the selected board's plane-zone boundary.
+    q.SetWidth(pcbnew.FromMM(0.45)); q.SetDrill(pcbnew.FromMM(0.30))
     q.SetLayerPair(F, B); q.SetNet(net); board.Add(q)
 
 b = pcbnew.LoadBoard(str(BASE))
