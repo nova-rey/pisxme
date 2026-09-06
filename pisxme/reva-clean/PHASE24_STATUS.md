@@ -3653,3 +3653,19 @@ are retained for skew work: TX bridge P/N = 33.000/40.500 mm, RX bridge P/N =
 34.945/40.858 mm (RX). The endpoint proof and high-speed DRC screen are
 stronger than the earlier 90-degree candidates, but pair-length matching and
 coexistence with the complete storage support network remain open.
+
+## V21 authoritative J3 refresh — 2026-09-06
+
+The embedded J3 instance was replaced from the corrected
+`JAE_SM3ZS067U410ABR1000_BKEY` library footprint. The refresh path preserves
+reference, value, native position/orientation, and each saved pad's net by
+pad number, binding nets only after the replacement footprint is attached to
+the board. The native SATA and USB3 audits both pass.
+
+V21 native DRC reports zero errors and only 11 unrelated text/silkscreen
+warnings; the earlier J3 solder-mask-bridge findings are gone. The
+severity-error command still reports 80 unconnected board items, all outside
+the SATA/USB3 endpoint set (regulator/support and other incomplete-board
+connections), so V21 is not claimed as a full-board Phase 19 closure. The
+corrected footprint and refresh script are now the authoritative route-fixture
+path for the next coordinated storage integration.

@@ -47,6 +47,14 @@ manufacturer 3D file was available in the local capture; the CM5IO STEP
 only. Assembly is ordinary SMT/reflow with a discrete 2280 screw/standoff
 retention feature.
 
+The contact lands are 0.30 mm wide at 0.50 mm pitch. The footprint's prior
+0.102 mm explicit solder-mask margin was not compatible with that pitch and
+caused native KiCad solder-mask-bridge errors; it has been corrected to
+0.050 mm, preserving the manufacturer land width while producing a practical
+0.40 mm mask opening. A native V21 route fixture using the refreshed
+footprint has zero shorts, crossings, clearance, hole-clearance, or dangling
+via findings; the remaining DRC records are unrelated board warnings/opens.
+
 SATA-IO mapping authority is saved as
 `SATA-IO-TP053v11-M2-card-format.pdf`, SHA-256
 `9d419572e7fba7cf1c7b1207f38cae3c47c04210695293fb516c484b4fd09abf`. It
