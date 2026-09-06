@@ -42,6 +42,9 @@ before replacing J3. Existing `SM3ZS067U410ABR1000` remains B-key-only.
 - TE exact M-key product page, TE Rev C application/product specifications,
   and DigiKey exact MPN page.
 - ASMedia ASM2362 official product page and JLCPCB assembly listing.
+- JMicron's official JMS581DL product page/Product Brief and JLCPCB
+  144TFBGA assembly listing were checked as a simpler one-chip alternative;
+  its ball map/design pack/firmware path are not public.
 - Realtek RTL9210B community firmware/reference ecosystem and searches for
   manufacturer documentation; no better authoritative bare-chip path found.
 - TI TUSB9261/switch authorities and existing project firmware records.
