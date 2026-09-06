@@ -4736,3 +4736,10 @@ validation remain open.
  qualification footprint metadata, and retained community schematic. Path A
  remains unchanged; production Path-B CAD remains gated on authorized support
  circuit and virgin-chip firmware bring-up evidence.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: applied the footprint-review
+ correction to the isolated RTL9210B qualification footprint. It is now an
+ explicit SMD 69-pad artifact with a fabrication body outline and conservative
+ courtyard; the community source remains retained unchanged as evidence of
+ its through-hole metadata defect. The authority audit passes. This remains a
+ qualification artifact only until exact Realtek land-pattern and application
+ circuit authority is obtained.
