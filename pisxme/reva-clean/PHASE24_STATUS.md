@@ -2665,3 +2665,41 @@ rules. Native DRC found 7 violations, including one RX_P short to frozen
 J7/CM5 PCIe pad 124 and two RX pair crossings. It is rejected as
 `ROUTE_IMPLEMENTATION_FAILURE`. The fixture was restored to the prior best
 source-via spacing afterward; no integrated board or validation rule changed.
+
+## Macro-floorplan discriminator checkpoint and CM5IO native DRC context — 2026-09-06
+
+The current integrated candidate was snapshotted by SHA-256 as
+`0466f93782dd535b6f02fed9a0492d77dce18ebe5eceb59a3df30c60fe96f92d` for
+`PHASE24_U7_STORAGE_3V3_PAD24_CURRENT.kicad_pcb`. The whole-board review was
+rerun from that native-loaded board and regenerated the disposable candidate
+set recorded in `PHASE24_WHOLE_BOARD_MACRO_REVIEW_CURRENT.md`, including
+`CURRENT`, `ETH_OUTBOARD`, `STORAGE_LOCAL`, `STORAGE_LOCAL_CLEAR2`,
+`STORAGE_LOCAL_J3_EDGE`, south/center storage variants, and combined
+Ethernet/storage variants. Ranking remains topology-only: native CM5 launch
+coordinates, transformed-pad distances, same-net ratsnest lengths, corridor
+competition, and mechanical body screening; mature historical DRC and
+first-pass candidate DRC are excluded.
+
+The discriminator remains complete and selects
+`STORAGE_LOCAL_J3_EDGE` as the routing-development basis. This is a
+`MACRO_FLOORPLAN` decision, not a claim that its affected routing is complete;
+the current USB3 findings remain `ROUTE IMPLEMENTATION FAILURE` until a fair
+reference/obstacle-aware development cycle closes them. The selected
+placement snapshot hash is
+`b03c8be8913d0103c7453d7e4976e3b21ccf1d0e9d3e9a294683d1130aa7ce71`.
+
+The official native CM5IO Rev 2 board was also checked with KiCad 10 native
+DRC and the full receipt is saved as
+`PHASE24_CM5IO_OFFICIAL_NATIVE-drc.rpt`. It reports 76 findings: 26
+`clearance`, 49 `lib_footprint_mismatch`, and 1 `courtyards_overlap`; it
+reports zero `shorting_items`, zero `tracks_crossing`, zero
+`unconnected_items`, and zero `annular_width` records. The clearance findings
+are existing POE-tap/reference-board context and the library mismatches are
+embedded-copy differences, so this result is an implementation oracle for
+topology rather than a blanket claim of zero CM5IO DRC findings.
+
+Consultant was retried for the required independent review and again could
+not spawn because the collaboration service reported `agent thread limit
+reached`. No conclusion was taken from that unavailable reviewer; local
+review used the native-loaded evidence above. Phase 24 remains open and no
+Phase 25/26 work has begun.
