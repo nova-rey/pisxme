@@ -7,6 +7,7 @@ authority or inserts synthetic connectivity.
 from pathlib import Path
 from heapq import heappush, heappop
 import math
+import os
 import sys
 import pcbnew
 
@@ -42,6 +43,33 @@ def mark_line(occ, layer, a, z, inflate=0.15):
         for dx in range(-r, r+1):
             for dy in range(-r, r+1): occ[layer].add((x+dx,y+dy))
 
+def mark_pad(occ, layer, pad, clearance=0.08):
+    """Mark a native pad using its transformed rectangular dimensions.
+
+    The prior max(size.x,size.y) radius turned 0.30x0.55 mm ESD pads into
+    circular 0.55 mm obstacles, sealing legal side escapes and encouraging
+    the router to cross neighboring pads.  Keep the two axes independent.
+    """
+    x, y = pos(pad)
+    sx, sy = mm(pad.GetSize())
+    gx, gy = grid(x, y)
+    rx = max(1, math.ceil((sx / 2 + clearance) / STEP))
+    ry = max(1, math.ceil((sy / 2 + clearance) / STEP))
+    for dx in range(-rx, rx + 1):
+        for dy in range(-ry, ry + 1):
+            occ[layer].add((gx + dx, gy + dy))
+
+def open_pad(occ, layer, pad):
+    """Open only the native terminal pad footprint for route departure."""
+    x, y = pos(pad)
+    sx, sy = mm(pad.GetSize())
+    gx, gy = grid(x, y)
+    rx = max(0, math.ceil((sx / 2) / STEP))
+    ry = max(0, math.ceil((sy / 2) / STEP))
+    for dx in range(-rx, rx + 1):
+        for dy in range(-ry, ry + 1):
+            occ[layer].discard((gx + dx, gy + dy))
+
 def build_occupancy(board, ignore_refs):
     occ = {F:set(), B:set()}
     for fp in board.GetFootprints():
@@ -54,16 +82,19 @@ def build_occupancy(board, ignore_refs):
         if isinstance(item, pcbnew.PCB_VIA):
             x,y=grid(*mm(item.GetPosition()))
             for layer in (F,B):
-                for dx in range(-1,2):
-                    for dy in range(-1,2): occ[layer].add((x+dx,y+dy))
+                # 0.45 mm via plus 0.15 mm clearance requires at least 0.60
+                # mm center spacing; reserve a two-cell radius on the 0.25
+                # mm routing grid.
+                for dx in range(-2,3):
+                    for dy in range(-2,3): occ[layer].add((x+dx,y+dy))
         else:
             mark_line(occ,item.GetLayer(),mm(item.GetStart()),mm(item.GetEnd()),.18)
     # Preserve all pads as copper obstacles, except the explicit endpoints.
     for fp in board.GetFootprints():
         if fp.GetReference() in ignore_refs: continue
         for p in fp.Pads():
-            px,py=pos(p); sx,sy=mm(p.GetSize())
-            for layer in (F,B): mark_line(occ,layer,(px,py),(px,py),max(sx,sy)/2+.15)
+            for layer in (F,B):
+                if p.GetLayerSet().Contains(layer): mark_pad(occ, layer, p, .23)
     return occ
 
 def route_path(occ, start, goal, start_layer, goal_layer):
@@ -87,6 +118,7 @@ def route_path(occ, start, goal, start_layer, goal_layer):
                (x,y,F if layer==B else B)]
         for nx,ny,nl in moves:
             if not(bounds[0][0]<=nx<=bounds[1][0] and bounds[0][1]<=ny<=bounds[1][1]): continue
+            if nl != layer and (nx, ny) in VIA_OCC[layer]: continue
             if (nx,ny) in occ[nl] and (nx,ny,nl)!=g: continue
             nc=cost[cur]+(18 if nl!=layer else 1)
             ns=(nx,ny,nl)
@@ -114,33 +146,45 @@ def emit(board, net, path, occ):
     for a,z in zip(path,path[1:]):
         if a[2]!=z[2]:
             x,y=xy(a); add_via(board,net,x,y)
-            for layer in (F,B): occ[layer].update((grid(x,y)[0]+dx,grid(x,y)[1]+dy) for dx in (-1,0,1) for dy in (-1,0,1))
+            for layer in (F,B):
+                occ[layer].update((grid(x,y)[0]+dx,grid(x,y)[1]+dy) for dx in range(-2,3) for dy in range(-2,3))
+                VIA_OCC[layer].update((grid(x,y)[0]+dx,grid(x,y)[1]+dy) for dx in range(-2,3) for dy in range(-2,3))
             last=None;last_layer=z[2]
         else:
             if last is None: last=xy(a);last_layer=a[2]
             end=xy(z);t=pcbnew.PCB_TRACK(board);t.SetStart(V(*last));t.SetEnd(V(*end));t.SetLayer(a[2]);t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(net);board.Add(t);mark_line(occ,a[2],last,end,.14);last=end
 
 board=pcbnew.LoadBoard(str(BASE))
+VIA_OCC = {F:set(), B:set()}
+for footprint in board.GetFootprints():
+    for native_pad in footprint.Pads():
+        for layer in (F, B):
+            if native_pad.GetLayerSet().Contains(layer):
+                mark_pad(VIA_OCC, layer, native_pad, .375)
 mapping=[
  ('CM5_GBE_TD1_P','4','U6','6','J2','3',B),('CM5_GBE_TD1_N','6','U6','7','J2','6',B),
  ('CM5_GBE_TD0_N','10','U6','9','J2','2',F),('CM5_GBE_TD0_P','12','U6','10','J2','1',F),
  ('CM5_GBE_TD3_P','3','U9','5','J2','9',B),('CM5_GBE_TD3_N','5','U9','4','J2','10',F),
  ('CM5_GBE_TD2_N','9','U9','2','J2','8',B),('CM5_GBE_TD2_P','11','U9','1','J2','7',F)]
+if os.environ.get('PISXME_ETH_RETURN_ALL_F') == '1':
+    mapping = [(*entry[:-1], F) for entry in mapping]
+if os.environ.get('PISXME_ETH_ROUTE_REVERSE') == '1':
+    mapping = list(reversed(mapping))
 occ=build_occupancy(board,{'J7','U6','U9','J2'})
 # Endpoint footprints may be ignored as body obstacles for escape routing, but
 # their other copper pads remain real obstacles.  The prior trial exempted the
 # whole endpoint footprint and native DRC consequently found pad-field shorts.
 for ref in ('J7','U6','U9','J2'):
     for p in board.FindFootprintByReference(ref).Pads():
-        px,py=pos(p); sx,sy=mm(p.GetSize())
         for layer in (F,B):
-            if p.GetLayerSet().Contains(layer):
-                mark_line(occ,layer,(px,py),(px,py),max(sx,sy)/2+.08)
+            if p.GetLayerSet().Contains(layer): mark_pad(occ, layer, p, .08)
 for name,j7,esd,ep,jack,jp,return_layer in mapping:
     net=board.FindNet(name)
     if net is None: raise RuntimeError(f"missing net {name}")
     src_pad=pad(board,'J7',j7); esd_pad=pad(board,esd,ep); jack_pad=pad(board,jack,jp)
     src=pos(src_pad); mid=pos(esd_pad); dst=pos(jack_pad)
+    open_pad(occ, pad_layer(src_pad), src_pad)
+    open_pad(occ, pad_layer(esd_pad), esd_pad)
     p1=route_path(occ,src,mid,pad_layer(src_pad),pad_layer(esd_pad));emit(board,net,p1,occ)
     # Connect duplicate same-net ESD pads from the selected pad with local
     # native-pad-aware paths, then continue to the connector.
@@ -159,6 +203,7 @@ for name,j7,esd,ep,jack,jp,return_layer in mapping:
     # dogbone; routing directly to the pad center made the search model weave
     # through neighboring barrels.
     entry=(dst[0], dst[1] + (1.0 if dst[1] > 152.0 else -1.0))
+    open_pad(occ, pad_layer(esd_pad), esd_pad)
     p2=route_path(occ,mid,entry,pad_layer(esd_pad),return_layer);emit(board,net,p2,occ)
     t=pcbnew.PCB_TRACK(board);t.SetStart(V(*entry));t.SetEnd(V(*dst));t.SetLayer(return_layer);t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(net);board.Add(t);mark_line(occ,return_layer,entry,dst,.14)
     print(name,'source',src,'esd',esd,ep,'jack',dst,'segments',len(p1)+len(p2))

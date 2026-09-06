@@ -1707,3 +1707,16 @@ neighboring native pads, but the conservative occupancy model then found no
 legal path from the ESD field to the MagJack entry. This remains
 `ROUTE_IMPLEMENTATION_FAILURE` and identifies the next required fix:
 pad-shape-aware terminal escape, not another macro-floorplan comparison.
+
+### Ethernet pad-field and via-clearance routing cycle — 2026-09-05
+
+The selected macro Ethernet router was further corrected to use native
+rectangular pad dimensions, independently attach duplicate ESD pads, reserve
+0.45 mm-via clearance from all native pads, and reserve emitted via fields.
+V5 reduced the route to zero track crossings with one localized short; V6
+reduced it to two localized shorts and zero crossings. The stricter V8
+via-specific occupancy correctly refused a later path, and all-F / reverse
+ordering trials likewise dead-ended before completion. These are
+`ROUTE_IMPLEMENTATION_FAILURE` results from the current global-search model,
+not evidence that the selected coherent macro placement is impossible. No
+layer, clearance, severity, or connectivity gate was relaxed.
