@@ -76,3 +76,32 @@ This is a conservative collision screen, not a replacement for final courtyard/3
 This decision answers floorplan question A only. It does not claim the selected candidate is routed. Any first-pass copper failure on the selected candidate is classified as `ROUTE IMPLEMENTATION FAILURE` until a fair native-pad, obstacle-aware routing cycle has been attempted; raw DRC comparison against the mature historical board is prohibited.
 
 Next action: promote only the corrected collision-free candidate after a native courtyard/body review, then regenerate the affected Ethernet/storage/clock neighborhoods from native pad/net authority. This review answers floorplan question A; route development and native closure remain open.
+
+## Comparison-bias correction — 2026-09-06
+
+The earlier prose above is retained as historical review evidence, but its
+`ETH_WEST_CLEAR_STORAGE_MID` preference was superseded by the later
+six-candidate discriminator. That later discriminator uses the same native
+CM5 launch map and adds the complete Ethernet support island, the complete
+storage island, and a zero-overlap coarse major-body screen for the selected
+candidate.
+
+The current decision is therefore:
+
+| decision | result |
+|---|---|
+| floorplan question A | `SWAP_ETH_STORAGE` selected on native transformed-pad topology |
+| route question B | still open; affected USB3/SATA/clock copper has not passed |
+| historical DRC comparison | prohibited for ranking |
+| first-pass candidate DRC | implementation evidence only, not floorplan evidence |
+| fallback | `ETH_WEST_CLEAR_STORAGE_MID`, if a valid routing cycle establishes a placement-inherent obstruction |
+
+`SWAP_ETH_STORAGE` reduces the combined Ethernet and storage source distance
+and same-net ratsnest burden relative to the current placement while keeping
+PCIe, SERVICE, power, and regulator anchors unchanged. The candidate’s
+immature DRC/open counts must not be compared directly with the mature
+historical acreage board. A new route failure remains
+`ROUTE IMPLEMENTATION FAILURE` until a competent native-pad, obstacle-aware
+routing cycle demonstrates a structural macro-placement defect.
+
+`MACRO_COMPARISON_BIAS_CONTROL = PASS`

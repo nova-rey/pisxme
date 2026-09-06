@@ -4090,6 +4090,28 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Macro-floorplan comparison-bias reconciliation — 2026-09-06
+
+The whole-board discriminator was rechecked against the comparison rule that
+historical routing maturity and first-pass candidate DRC must not rank a
+floorplan. The native transformed-pad metrics and coarse major-body screen
+select `SWAP_ETH_STORAGE`; the earlier `ETH_WEST_CLEAR_STORAGE_MID` preference
+is retained only as a documented fallback. PCIe, SERVICE, power-entry, and
+regulator anchors remain unchanged. The selected macro is a topology decision
+only; USB3/SATA/clock routing remains route-development work and is not yet a
+Phase 24 closure.
+
+Receipt: `PHASE24_WHOLE_BOARD_MACRO_DISCRIMINATOR_20260906.md`,
+`PHASE24_WHOLE_BOARD_FLOORPLAN_REVIEW.md`, and the six native disposable
+candidate PCBs. Consultant dispatch remains unavailable because the known
+orchestration thread limit was already reached; local native review supplies
+the independent comparison and does not change the acceptance gate.
+
+`MACRO_COMPARISON_BIAS_CONTROL = PASS`
+`SELECTED_MACRO_TOPOLOGY = SWAP_ETH_STORAGE`
+`ROUTE_IMPLEMENTATION_FAILURE != MACRO_PLACEMENT_FAILURE`
+`PHASE24 = OPEN`
+
 ## TI U7 RX target-via separation experiment — 2026-09-06
 
 The best clean west-target control was challenged by moving only RX_P's

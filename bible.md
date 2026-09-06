@@ -4438,3 +4438,5 @@ Corrected the placement probe to remove stale copper at moved pads; the native p
 Separated source and west-side target transitions in the clean TI fixture; native DRC reached zero crossings with one short and three local geometry findings, and the best control was retained for final repair.
 # 2026-09-06 — Phase 24 TI U7 RX target-via separation experiment
 Rejected a targeted RX_P target-via relocation after native DRC regressed to 10 shorts and 12 hole findings; restored the zero-crossing clean-fixture control.
+# 2026-09-06 — Phase 24 macro-floorplan comparison-bias reconciliation
+Reconciled the whole-board floorplan records: selected SWAP_ETH_STORAGE from native transformed-pad topology, while keeping early candidate DRC separate from floorplan ranking and classifying immature route failures as route implementation evidence.
