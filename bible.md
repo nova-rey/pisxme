@@ -4366,3 +4366,5 @@ Recorded rejection of the direct three-via U7 clock launch: native DRC found 100
 The actual-pad obstacle-aware B.Cu search found an XI path but no legal non-overlapping VSSOSC path in the shared local corridor. The all-B.Cu launch class was rejected as a capacity failure; V2 clock topology and V26 data routing remain preserved.
 # 2026-09-06 — Phase 24 layer-aware clock launch search
 Reran the actual-board launch search with XI/XO on B.Cu and VSSOSC on F.Cu. XI found a path but VSSOSC had no legal path in the inherited corridor; no copper was promoted, and the native-valid clock graph plus V26 data routes remain preserved.
+# 2026-09-06 — Phase 24 coherent clock-island relocation search
+Tested a 20 mm west / 10 mm south coherent migration of the native-valid V2 clock passive island. Actual-board obstacle search found no legal second B.Cu launch path; candidate rejected as corridor-capacity failure with all validated data and PCIe copper preserved.

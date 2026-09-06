@@ -1,5 +1,15 @@
 # Phase 24 acreage validation status
 
+## Coherent clock-island relocation search (rejected)
+
+The complete V2 passive clock island was translated 20 mm west and 10 mm
+south as a coherent block, preserving its native pad-layer topology. An
+actual-board obstacle search was then used for the three U7 launches. The
+first B.Cu launch could be explored, but no legal non-overlapping path was
+found for the second B.Cu clock leg to its relocated tail. This candidate is
+rejected as a route-implementation/corridor-capacity failure; no production
+copper, PCIe routing, or V26 SATA/USB3 data routing changed.
+
 ## Layer-aware U7 clock launch search (rejected)
 
 The actual saved-board obstacle search was rerun with the V2 layer split:
