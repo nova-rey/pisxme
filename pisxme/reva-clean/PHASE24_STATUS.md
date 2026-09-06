@@ -3550,6 +3550,27 @@ Receipts: `phase24_storage_sata_pair_corridor.py`,
 `PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_PAIR_CORRIDOR_V5.kicad_pcb`,
 and their native DRC reports.
 
+## Storage orientation discriminator — 2026-09-06
+
+The next solution class was a coherent U7/J3 orientation change. Native pad
+coordinates were compared for `U7_180_J3_90`, `U7_0_J3_270`, and
+`U7_270_J3_270`. The 0-degree U7/270-degree J3 candidate makes the SATA
+pair order monotonic, but its native USB3 trial still creates three real
+crossings, six true/field shorts around the U7 field, and J3/J7
+hole-clearance conflicts. It is rejected as an orientation-level
+route/mechanical candidate. The selected U7 180-degree/J3 90-degree basis
+remains active because its USB3 pair-corridor trial passes all four native
+endpoints with no high-speed crossings, shorts, or clearance findings.
+
+This comparison does not use raw DRC totals against the mature historical
+board. It distinguishes the tested alternate's concrete local
+implementation/mechanical failures from the macro-floorplan decision.
+
+Receipt: `phase24_storage_orientation_discriminator.py`,
+`PHASE24_STORAGE_ORIENTATION_DISCRIMINATOR_20260906.md`,
+`PHASE24_STORAGE_ORIENTATION_U7_0_J3_270_USB3_PAIR.kicad_pcb`, and
+`PHASE24_STORAGE_ORIENTATION_U7_0_J3_270_USB3_PAIR-drc.rpt`.
+
 The Phase 14 footprint-authority regression now also checks the four side
 orientations, so future regeneration cannot silently restore the overlapping
 vertical-land error.
