@@ -4362,3 +4362,5 @@ Recorded rejection of the farther-south native V2 clock-oracle placement after n
 The V2 clock fixture was retested on the V26 storage basis with its authoritative per-pad F.Cu/B.Cu layer sets preserved. The south-40 candidate passes native XI/XO/VSSOSC passive connectivity and has no native shorting, crossing, clearance, or dangling-via classes, but remains open at 73 board connections and is not promoted.
 # 2026-09-06 — Phase 24 parallel U7 clock-launch probe
 Recorded rejection of the direct three-via U7 clock launch: native DRC found 100 violations including true clock shorts, crossings, and clearance failures. The passive clock island and V26 data channels remain preserved.
+# 2026-09-06 — Phase 24 clock launch obstacle-aware search
+The actual-pad obstacle-aware B.Cu search found an XI path but no legal non-overlapping VSSOSC path in the shared local corridor. The all-B.Cu launch class was rejected as a capacity failure; V2 clock topology and V26 data routing remain preserved.

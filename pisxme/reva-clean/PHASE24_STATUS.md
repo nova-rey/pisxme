@@ -2,6 +2,16 @@
 
 ## Whole-board floorplan comparison and SATA route discrimination — 2026-09-06
 
+## Clock launch obstacle-aware search (rejected)
+
+The first obstacle-aware B.Cu search from the actual U7.52/.53/.54 pads to
+the south-40 V2 fixture launch tails found a route for XI but no legal
+non-overlapping path for the next VSSOSC leg within the local corridor. No
+candidate was promoted. This rejects the all-B.Cu launch class as a capacity
+problem; it does not reject the V2 clock topology or the V26 data route. A
+layer-aware trial remains the next implementation class, preserving V2's
+XI/XO B.Cu and VSSOSC F.Cu division.
+
 The required whole-board macro-floorplan review was rerun through the
 installed KiCad 10.0.5 native Python environment from the byte-verified live
 basis `PHASE24_U7_3V3_CURRENT_LOCAL.kicad_pcb`. Five disposable candidates
