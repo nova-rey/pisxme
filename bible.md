@@ -4446,3 +4446,5 @@ Tested a fresh monotonic TI-U7 USB3 escape; the best native control has zero sho
 Applied the zero-clearance-error TI-U7 disposable escape to the selected macro; native integration found obstacle collisions and incomplete connectivity, so the fixed-corridor candidate was rejected as route implementation evidence.
 # 2026-09-06 — Phase 24 obstacle-aware integrated USB3 regeneration
 Removed source transition vias and regenerated all four USB3 paths from native CM5 pads with a larger B.Cu obstacle margin; the coarse integrated planner still produced shorts/crossings and was rejected as route implementation evidence.
+# 2026-09-06 — Phase 24 integrated USB3 source-field refinement
+Confirmed the grid planner reaches all four U7 targets but mishandles the native CM5 pad-field escape; rejected the route implementation and selected official CM5IO source-escape anchoring as the next method.

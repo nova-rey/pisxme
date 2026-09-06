@@ -4436,3 +4436,21 @@ and its native DRC report.
 `INTEGRATED_USB3_ASTAR_V3 = REJECTED`
 `FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
 `PHASE24 = OPEN`
+
+## Integrated USB3 A* source-field refinement — 2026-09-06
+
+The planner was rerun with no source transition vias and a larger retained
+B.Cu obstacle margin. It reached all four native U7 targets, but native DRC
+still found 349 violations, including source-pad-field crossings and U7
+target-transition conflicts, plus 469 unconnected items. The observed
+failures are route-authoring defects: the grid planner is not respecting the
+native CM5 escape/pad-field geometry closely enough. This candidate is
+rejected; the next cycle must anchor the official CM5IO source escape and
+route only its continuation through the selected macro corridor.
+
+Receipt: `phase24_ti_usb3_bcu_integrated_astar.py` and
+`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_BCU_INTEGRATED_ASTAR_V3.kicad_pcb`.
+
+`INTEGRATED_USB3_SOURCE_FIELD_ASTAR = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`
