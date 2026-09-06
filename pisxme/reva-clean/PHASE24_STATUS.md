@@ -1880,6 +1880,17 @@ bridge-side escape ordering, socket-side pair ordering, and one USB3/clock
 clearance interaction. The candidate is preserved but not promoted, and the
 selected macro is unchanged.
 
+### Storage U7 rotation and outboard translation trials — 2026-09-05
+
+Two additional coherent storage experiments were run after the native
+pad-authority correction. U7 rotation-270 reduced apparent crossings but
+introduced bridge/USB3 pad-field shorts and was rejected. A farther-out
+U7/J3 translation increased source/inter-island crossings and collided with
+the frozen PCIe and clock corridors; it was also rejected. Both are
+`ROUTE_IMPLEMENTATION_FAILURE` results from the current route templates,
+not macro-placement conclusions. The corrected Ethernet-west/storage-mid
+basis remains selected pending a better native obstacle-aware SATA escape.
+
 ### Storage native lane-order refinement — 2026-09-05
 
 The coordinated storage generator now preserves all saved U7 pad/net fields,
