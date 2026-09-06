@@ -1,5 +1,17 @@
 # Phase 24 acreage validation status
 
+## Mixed-layer regenerated clock-support milestone
+
+`PHASE24_CLOCK_LAYERESC_XI_p5_1p0.kicad_pcb` is superseded by
+`PHASE24_CLOCK_LAYERESC_DIRECT_XO.kicad_pcb`, generated from actual V26 pad
+and net objects with XI/VSSOSC on B.Cu and XO on F.Cu. Native DRC reports 11
+warnings only (silkscreen/text), 70 unrelated board opens, and zero
+`shorting_items`, `tracks_crossing`, clearance, dangling-via, or dangling-
+track classes. The strengthened native audit passes U7.52/U7.53/U7.54 plus
+all Y1/R23/C42/C43 clock endpoints. This is promoted as the clock-support
+milestone, not full Phase 24 closure: bridge rails, reset/configuration,
+grounds/returns, and the remaining board-wide opens are still gated.
+
 ## Clock net-order permutation discriminator
 
 The fresh common-region generator was run from clean copies under all six

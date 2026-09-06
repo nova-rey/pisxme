@@ -29,7 +29,7 @@ for ref, pos in positions.items():
     for p in f.Pads():
         k = MAP[ref][str(p.GetNumber())]
         p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode())
-        ls = pcbnew.LSET(); ls.AddLayer(pcbnew.B_Cu); p.SetLayerSet(ls)
+        ls = pcbnew.LSET(); ls.AddLayer(pcbnew.F_Cu if k == 'XO' else pcbnew.B_Cu); p.SetLayerSet(ls)
 
 def blocked(netcode, layer):
     out = set()
@@ -65,13 +65,18 @@ def route(start, goal, occ, reserved):
     return list(reversed(path))
 
 reserved={pcbnew.F_Cu:set(), pcbnew.B_Cu:set()}
-layers={'XI':pcbnew.B_Cu,'XO':pcbnew.B_Cu,'VS':pcbnew.B_Cu}
+layers={'XI':pcbnew.B_Cu,'XO':pcbnew.F_Cu,'VS':pcbnew.B_Cu}
 default_order=[('52','XI'),('54','XO'),('53','VS')]
 by_key={k:(n,k) for n,k in default_order}
 order=[by_key[k] for k in os.environ.get('PISXME_CLOCK_ORDER','XI,XO,VS').split(',')]
 for number, key in order:
     p=next(p for p in u.Pads() if p.GetNumber()==number); net=nets[key]
-    start=xy(p.GetPosition()); layer=layers[key]; via=(start[0]+({'52':.75,'54':-.25,'53':.25}[number]),start[1]+1.0)
+    start=xy(p.GetPosition()); layer=layers[key]
+    if number == '52':
+        via=(start[0]+float(os.environ.get('PISXME_XI_VIA_DX','.75')),
+             start[1]+float(os.environ.get('PISXME_XI_VIA_DY','1.0')))
+    else:
+        via=(start[0]+({'54':-.25,'53':.25}[number]),start[1]+1.0)
     targets=[]
     for f in b.GetFootprints():
         if f.GetReference() not in MAP: continue
@@ -81,9 +86,16 @@ for number, key in order:
     # passives.  This keeps the high-value pad-field escape short and avoids
     # reserving a branch through the neighboring crystal pad.
     targets.sort(key=lambda q: (q[1], q[0]))
-    current=via if layer==pcbnew.B_Cu else start
+    if layer==pcbnew.F_Cu:
+        # XO exits directly north from the top U7 pad row; no layer change is
+        # needed because its passive pads are also F.Cu.
+        via=(start[0], start[1]-1.0); current=via
+    else:
+        current=via
     if layer==pcbnew.B_Cu:
         v=pcbnew.PCB_VIA(b); v.SetPosition(V(*via)); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(pcbnew.F_Cu,pcbnew.B_Cu); v.SetNet(net); b.Add(v)
+        dog=pcbnew.PCB_TRACK(b); dog.SetStart(p.GetPosition()); dog.SetEnd(V(*via)); dog.SetLayer(pcbnew.F_Cu); dog.SetWidth(pcbnew.FromMM(.15)); dog.SetNet(net); b.Add(dog)
+    else:
         dog=pcbnew.PCB_TRACK(b); dog.SetStart(p.GetPosition()); dog.SetEnd(V(*via)); dog.SetLayer(pcbnew.F_Cu); dog.SetWidth(pcbnew.FromMM(.15)); dog.SetNet(net); b.Add(dog)
     for target in targets:
         # Candidate search permits the native DRC to arbitrate exact
