@@ -15,9 +15,9 @@ mode-contract, and JMS583-support audits pass.
 
 The active native route candidate is still unfinished. The corrected-package
 USB3 fixture's latest report is
-`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED32-drc.rpt`: the authored paths have
-no track-width or track-crossing findings, one TX source-via short, and 78
-unconnected items
+`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED38-drc.rpt`: the authored paths have
+no shorting, track-width, or track-crossing findings, but retain clearance,
+board-edge, solder-mask, and 78 intentional partial-fixture unconnected items
 because the fixture intentionally omits most support circuitry. Native ERC,
 complete switched-mode DRC/connectivity, TE pad/model parity, and integrated
 storage validation remain open. No Phase 24 resumption or completion is

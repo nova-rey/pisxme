@@ -4707,3 +4707,8 @@ track-crossing findings, but retains one authored TX source-via short, along
 with package-edge/J7 clearances and intentional partial-fixture opens. Current
 status narratives now distinguish this remaining electrical defect from the
 superseded historical TODOs.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: tested a layer-partitioned USB3
+source escape, assigning CM5-source TX to F.Cu and RX to B.Cu. Native report
+38 records zero shorts, track-width, or track-crossing findings, while retaining
+clearance, board-edge, solder-mask, and intentional partial-fixture opens.
+This is a routing candidate, not storage closure.

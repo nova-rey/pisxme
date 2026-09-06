@@ -84,8 +84,9 @@ def main():
         n = net(b, name); a = pos(pad(b, "J7", j7n)); z = pos(pad(b, "U12", u12n))
         own(pad(b, "U12", u12n), n)
         sx, sy = source_vias[j7n]; tx, ty = target_vias[j7n]
+        route_layer = F if j7n in ("140", "142") else B
         path(b, n, [a, V(sx, sy)], F); via(b, n, sx, sy)
-        path(b, n, [V(sx, sy), V(tx, ty)], B); via(b, n, tx, ty)
+        path(b, n, [V(sx, sy), V(tx, ty)], route_layer); via(b, n, tx, ty)
         # U12 pins 11/12/15/16 are on the package bottom edge.  The final
         # F.Cu segment is a short outward dogbone from a full-pitch-spaced
         # via, never a horizontal approach through the pad row.
