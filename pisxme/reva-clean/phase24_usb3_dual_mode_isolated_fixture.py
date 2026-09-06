@@ -40,6 +40,12 @@ def via(b, n, x, y):
 def path(b, n, points, layer):
     for a, z in zip(points, points[1:]): seg(b, n, a, z, layer)
 
+def escape_via(b, n, p, x, y):
+    """Escape an SMD endpoint on F.Cu before entering a B.Cu lane."""
+    a = pos(p)
+    path(b, n, [a, V(x, pcbnew.ToMM(a.y)), V(x, y)], F)
+    via(b, n, x, y)
+
 def main():
     b = pcbnew.LoadBoard(str(BASE))
     keep = {"J7", "U11", "U12", "C86", "C87"}
@@ -47,6 +53,11 @@ def main():
         if f.GetReference() not in keep: b.RemoveNative(f)
     for t in list(b.GetTracks()): b.RemoveNative(t)
     for z in list(b.Zones()): b.RemoveNative(z)
+
+    # Keep the disposable TX coupling parts in the local bridge neighborhood;
+    # their historical acreage coordinates are not a routing constraint.
+    fp(b, "C86").SetPosition(V(190, 165))
+    fp(b, "C87").SetPosition(V(190, 170))
 
     # Source authority and U12 source side.
     source = [
@@ -77,22 +88,27 @@ def main():
         # horizontally; a diagonal from the via cuts through its neighbor.
         path(b, n, [V(tx, ty), V(tx, pcbnew.ToMM(z.y)), z], F)
 
-    # The selector output uses explicit JMS583 USB names; TX traverses the
-    # authoritative AC capacitors, RX is the selected lane without AC caps.
-    for name, u11n, c, u12n in [
-        ("USB_TXP1", "21", "C86", "25"),
-        ("USB_TXN1", "22", "C87", "24"),
+    # The actual JMS583 QFN64 USB pads are all on its bottom edge.  Keep the
+    # complete selector continuation on a separate F.Cu local island for this
+    # placement discriminator; the CM5 source fanout above is B.Cu.
+    for src_name, u11n, cref, dst_name, u12n, y1, y2 in [
+        ("USB_TXP1", "21", "C86", "JMS_USB3_TXP", "25", 165.0, 152.0),
+        ("USB_TXN1", "22", "C87", "JMS_USB3_TXN", "24", 170.0, 152.4),
     ]:
-        n1 = net(b, name); own(pad(b, "U11", u11n), n1); own(pad(b, c, "1"), n1)
-        n2name = "JMS_USB3_TXP" if c == "C86" else "JMS_USB3_TXN"
-        n2 = net(b, n2name); own(pad(b, c, "2"), n2); own(pad(b, "U12", u12n), n2)
-        y = 135.0 if c == "C86" else 138.0
-        path(b, n1, [pos(pad(b, "U11", u11n)), V(155, y), pos(pad(b, c, "1"))], B)
-        path(b, n2, [pos(pad(b, c, "2")), V(160, y), pos(pad(b, "U12", u12n))], B)
-    for name, u11n, u12n in [("USB_RXP1", "26", "23"), ("USB_RXN1", "27", "22")]:
-        n = net(b, name); own(pad(b, "U11", u11n), n); own(pad(b, "U12", u12n), n)
-        y = 145.0 if u11n == "26" else 148.0
-        path(b, n, [pos(pad(b, "U11", u11n)), V(158, y), pos(pad(b, "U12", u12n))], B)
+        n1 = net(b, src_name); p11 = pad(b, "U11", u11n); c1 = pad(b, cref, "1")
+        own(p11, n1); own(c1, n1)
+        path(b, n1, [pos(p11), V(pos(p11).x and pcbnew.ToMM(pos(p11).x), y1), V(180, y1), pos(c1)], F)
+        n2 = net(b, dst_name); c2 = pad(b, cref, "2"); p12 = pad(b, "U12", u12n)
+        own(c2, n2); own(p12, n2)
+        xout = 205.0 if cref == "C86" else 210.0
+        path(b, n2, [pos(c2), V(xout, pcbnew.ToMM(pos(c2).y)), V(xout, y2), pos(p12)], F)
+    for name, u11n, u12n, y1, y2, xout in [
+        ("USB_RXP1", "26", "23", 175.0, 152.8, 225.0),
+        ("USB_RXN1", "27", "22", 180.0, 153.2, 230.0),
+    ]:
+        n = net(b, name); p11 = pad(b, "U11", u11n); p12 = pad(b, "U12", u12n)
+        own(p11, n); own(p12, n)
+        path(b, n, [pos(p11), V(pcbnew.ToMM(pos(p11).x), y1), V(xout, y1), V(xout, y2), pos(p12)], F)
     b.BuildListOfNets(); b.Save(str(OUT)); print(OUT)
 
 if __name__ == "__main__": main()

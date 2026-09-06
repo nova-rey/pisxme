@@ -4682,3 +4682,9 @@ via-handoff USB3 trial after native DRC found shorts to inherited CM5 source
 corridors and crossings in split capacitor paths. Preserved report 21 and
 restored the committed zero-short baseline; handoff corridors must be
 reserved before vias are placed.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: corrected a generator defect
+that emitted the JMS583 QFN64 as only 42 pads. The generator now emits the
+authoritative 16/16/16/16 QFN64 perimeter; library and structural audits
+pass, and the placement was regenerated. USB3 report 24 has no selector/source
+shorting findings but retains five localized crossings and partial-fixture
+opens, so it is a routing baseline rather than closure evidence.

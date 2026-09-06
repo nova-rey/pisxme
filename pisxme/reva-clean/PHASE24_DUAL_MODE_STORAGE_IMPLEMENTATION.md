@@ -166,3 +166,13 @@ crossing split-cap paths. The experiment confirms that handoff vias must be
 planned with a reserved corridor; inserting them into existing copper is not
 a valid repair. The generator was restored to the committed zero-short
 baseline.
+
+The JMS583 package audit then exposed that the prior generator had silently
+emitted only 42 pads for the 64-pin device. The generator was corrected to
+emit a 16/16/16/16 QFN64 perimeter, and the placement candidate was
+regenerated. Structural audits now pass against the corrected native U11
+package. USB3 isolated report
+`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED24-drc.rpt` is retained from the
+first route against that corrected geometry: it reports no selector/source
+shorting items and five localized track crossings. It is not a route pass,
+but it supersedes results obtained with the malformed 42-pad footprint.

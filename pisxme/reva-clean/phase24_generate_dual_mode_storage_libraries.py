@@ -3,17 +3,20 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parent; LIB=ROOT/'PiSXMe_RevA_Clean.pretty'
 def qfn(name,pins,body,pitch,pad_len,pad_w,ep=None):
     # TI RUA0042A is a 9.0 x 3.5 mm WQFN: 17 pins on each long side and
-    # 4 pins on each short side (17 + 4 + 17 + 4 = 42).  The old generator
-    # incorrectly made a square 10-pin-per-side package, overlapping pads.
+    # 4 pins on each short side (17 + 4 + 17 + 4 = 42).  JMS583 is a
+    # separate 8 x 8 mm QFN64 with 16 pins on each side.  Keep the package
+    # topology derived from the requested pin count; the old generator
+    # silently emitted the TI 42-pad perimeter even for JMS583.
     o=[f'(footprint "{name}" (version 20240108) (generator pcbnew)',' (layer "F.Cu")',f' (descr "{name}; TI RUA0042A, 9.0 x 3.5 mm WQFN")',' (property "Reference" "REF**" (at 0 -5.4 0) (layer "F.SilkS") (effects (font (size 0.8 0.8) (thickness 0.12))))',' (property "Value" "" (at 0 5.4 0) (layer "F.Fab") hide (effects (font (size 0.8 0.8))))',' (attr smd)',' (fp_rect (start -2.1 -4.6) (end 2.1 4.6) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))']
-    counts=(17,4,17,4); number=1
+    counts=(16,16,16,16) if pins == 64 else (17,4,17,4); number=1
+    edge = 3.6 if pins == 64 else 4.5
     for side,count in enumerate(counts):
         for i in range(count):
             a=(i-(count-1)/2)*pitch
-            if side==0: x,y,r=-1.8,a,0
-            elif side==1: x,y,r=-a,4.5,90
-            elif side==2: x,y,r=1.8,-a,0
-            else: x,y,r=a,-4.5,90
+            if side==0: x,y,r=-(body/2-pad_len/2),a,0
+            elif side==1: x,y,r=-a,edge,90
+            elif side==2: x,y,r=(body/2-pad_len/2),-a,0
+            else: x,y,r=a,-edge,90
             o.append(f' (pad "{number}" smd roundrect (at {x:g} {y:g} {r}) (size {pad_len:g} {pad_w:g}) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2))')
             number += 1
     if ep:o.append(f' (pad "{ep}" smd rect (at 0 0) (size 2.05 7.55) (layers "F.Cu" "F.Paste" "F.Mask"))')
