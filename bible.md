@@ -4758,3 +4758,11 @@ validation remain open.
  CLKREQ, DEVSLP, and SPI evidence without synthetic edges. The removed-PEDET
  negative control fails as required. This is a native schematic/netlist gate,
  not PCB or production closure.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: generated and natively loaded
+ a disposable RTL9210B-to-M-key PCB connectivity fixture, then rejected it
+ after native DRC found 102 violations including crossings and a shorting
+ condition. Zero unconnected items did not waive those failures. The raw
+ board/report are retained as rejected route evidence; the failure does not
+ reject RTL9210B architecture. The delegated KiCad review's plan-only
+ standalone bring-up recommendation was retained for the next bounded
+ fixture.

@@ -1,0 +1,425 @@
+** Drc report for PHASE24_RTL9210B_NATIVE_FIXTURE.kicad_pcb **
+** Created on 2026-09-06T18:19:36 **
+** Report includes: Errors, Warnings **
+
+** Found 102 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(96.0500 mm, 101.6000 mm): Track [LANE0_RXP] on F.Cu, length 45.7199 mm
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(96.0500 mm, 102.0000 mm): Track [LANE0_RXN] on F.Cu, length 45.2881 mm
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(96.0500 mm, 102.8000 mm): Track [LANE0_TXN] on F.Cu, length 46.9004 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(96.0500 mm, 103.2000 mm): Track [LANE0_TXP] on F.Cu, length 47.4628 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(96.0500 mm, 100.4000 mm): Track [REFCLK_P] on F.Cu, length 48.5329 mm
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(101.6000 mm, 103.9500 mm): Track [CLKREQ_N] on F.Cu, length 41.9335 mm
+    @(102.0000 mm, 103.9500 mm): Track [PERST_N] on F.Cu, length 41.0342 mm
+[shorting_items]: Items shorting two nets (nets PERST_N and )
+    Local override; error
+    @(102.0000 mm, 103.9500 mm): Track [PERST_N] on F.Cu, length 41.0342 mm
+    @(103.2000 mm, 103.9500 mm): Pad 17 [<no net>] of U1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1772 mm)
+    Local override; error
+    @(103.9500 mm, 100.0000 mm): Track [DEVSLP] on F.Cu, length 36.1217 mm
+    @(103.9500 mm, 100.4000 mm): Pad 25 [<no net>] of U1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1763 mm)
+    Local override; error
+    @(101.6000 mm, 103.9500 mm): Track [CLKREQ_N] on F.Cu, length 41.9335 mm
+    @(99.6000 mm, 103.9500 mm): Track [PEDET] on F.Cu, length 49.0257 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1693 mm)
+    Local override; error
+    @(96.0500 mm, 98.4000 mm): Track [PCIE_TXP1] on F.Cu, length 43.8543 mm
+    @(96.0500 mm, 98.0000 mm): Pad 55 [<no net>] of U1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1572 mm)
+    Local override; error
+    @(96.0500 mm, 99.6000 mm): Track [PCIE_RXP1] on F.Cu, length 42.4807 mm
+    @(96.0500 mm, 99.2000 mm): Pad 58 [PCIE_RXN1] of U1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1526 mm)
+    Local override; error
+    @(96.0500 mm, 100.4000 mm): Pad 61 [REFCLK_P] of U1 on F.Cu
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1654 mm)
+    Local override; error
+    @(96.0500 mm, 98.8000 mm): Track [PCIE_TXN1] on F.Cu, length 43.3918 mm
+    @(96.0500 mm, 98.4000 mm): Pad 56 [PCIE_TXP1] of U1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1604 mm)
+    Local override; error
+    @(96.0500 mm, 98.8000 mm): Pad 57 [PCIE_TXN1] of U1 on F.Cu
+    @(96.0500 mm, 99.2000 mm): Track [PCIE_RXN1] on F.Cu, length 41.9394 mm
+[invalid_outline]: Board has malformed outline (no edges found on Edge.Cuts layer)
+    Local override; error
+    @(0.0000 mm, 0.0000 mm): PCB
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 101.6000 mm): Track [LANE0_RXP] on F.Cu, length 45.7199 mm
+    @(103.9500 mm, 100.4000 mm): Pad 25 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 101.6000 mm): Track [LANE0_RXP] on F.Cu, length 45.7199 mm
+    @(100.0000 mm, 100.0000 mm): Pad 69 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 101.6000 mm): Track [LANE0_RXP] on F.Cu, length 45.7199 mm
+    @(137.7500 mm, 94.7250 mm): Pad 29 [PCIE_RXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 101.6000 mm): Track [LANE0_RXP] on F.Cu, length 45.7199 mm
+    @(138.2500 mm, 94.7250 mm): Pad 31 [PCIE_RXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 101.6000 mm): Track [LANE0_RXP] on F.Cu, length 45.7199 mm
+    @(139.2500 mm, 94.7250 mm): Pad 35 [PCIE_TXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 101.6000 mm): Track [LANE0_RXP] on F.Cu, length 45.7199 mm
+    @(139.7500 mm, 94.7250 mm): Pad 37 [PCIE_TXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 101.6000 mm): Track [LANE0_RXP] on F.Cu, length 45.7199 mm
+    @(140.7500 mm, 94.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.0000 mm): Track [LANE0_RXN] on F.Cu, length 45.2881 mm
+    @(103.9500 mm, 100.8000 mm): Pad 24 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.0000 mm): Track [LANE0_RXN] on F.Cu, length 45.2881 mm
+    @(100.0000 mm, 100.0000 mm): Pad 69 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.0000 mm): Track [LANE0_RXN] on F.Cu, length 45.2881 mm
+    @(137.7500 mm, 94.7250 mm): Pad 29 [PCIE_RXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.0000 mm): Track [LANE0_RXN] on F.Cu, length 45.2881 mm
+    @(138.2500 mm, 94.7250 mm): Pad 31 [PCIE_RXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.0000 mm): Track [LANE0_RXN] on F.Cu, length 45.2881 mm
+    @(139.2500 mm, 94.7250 mm): Pad 35 [PCIE_TXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.0000 mm): Track [LANE0_RXN] on F.Cu, length 45.2881 mm
+    @(139.7500 mm, 94.7250 mm): Pad 37 [PCIE_TXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.8000 mm): Track [LANE0_TXN] on F.Cu, length 46.9004 mm
+    @(103.9500 mm, 101.6000 mm): Pad 22 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.8000 mm): Track [LANE0_TXN] on F.Cu, length 46.9004 mm
+    @(103.9500 mm, 101.2000 mm): Pad 23 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.8000 mm): Track [LANE0_TXN] on F.Cu, length 46.9004 mm
+    @(100.0000 mm, 100.0000 mm): Pad 69 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.8000 mm): Track [LANE0_TXN] on F.Cu, length 46.9004 mm
+    @(137.7500 mm, 94.7250 mm): Pad 29 [PCIE_RXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.8000 mm): Track [LANE0_TXN] on F.Cu, length 46.9004 mm
+    @(138.2500 mm, 94.7250 mm): Pad 31 [PCIE_RXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.8000 mm): Track [LANE0_TXN] on F.Cu, length 46.9004 mm
+    @(139.2500 mm, 94.7250 mm): Pad 35 [PCIE_TXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.8000 mm): Track [LANE0_TXN] on F.Cu, length 46.9004 mm
+    @(139.7500 mm, 94.7250 mm): Pad 37 [PCIE_TXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.8000 mm): Track [LANE0_TXN] on F.Cu, length 46.9004 mm
+    @(140.7500 mm, 94.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 102.8000 mm): Track [LANE0_TXN] on F.Cu, length 46.9004 mm
+    @(141.2500 mm, 94.7250 mm): Pad 43 [LANE0_RXP] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 103.2000 mm): Track [LANE0_TXP] on F.Cu, length 47.4628 mm
+    @(103.9500 mm, 102.0000 mm): Pad 21 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 103.2000 mm): Track [LANE0_TXP] on F.Cu, length 47.4628 mm
+    @(103.9500 mm, 101.6000 mm): Pad 22 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 103.2000 mm): Track [LANE0_TXP] on F.Cu, length 47.4628 mm
+    @(100.0000 mm, 100.0000 mm): Pad 69 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 103.2000 mm): Track [LANE0_TXP] on F.Cu, length 47.4628 mm
+    @(138.2500 mm, 94.7250 mm): Pad 31 [PCIE_RXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 103.2000 mm): Track [LANE0_TXP] on F.Cu, length 47.4628 mm
+    @(139.2500 mm, 94.7250 mm): Pad 35 [PCIE_TXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 103.2000 mm): Track [LANE0_TXP] on F.Cu, length 47.4628 mm
+    @(139.7500 mm, 94.7250 mm): Pad 37 [PCIE_TXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 103.2000 mm): Track [LANE0_TXP] on F.Cu, length 47.4628 mm
+    @(140.7500 mm, 94.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 103.2000 mm): Track [LANE0_TXP] on F.Cu, length 47.4628 mm
+    @(141.2500 mm, 94.7250 mm): Pad 43 [LANE0_RXP] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 103.2000 mm): Track [LANE0_TXP] on F.Cu, length 47.4628 mm
+    @(142.2500 mm, 94.7250 mm): Pad 47 [LANE0_TXN] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 98.4000 mm): Track [PCIE_TXP1] on F.Cu, length 43.8543 mm
+    @(100.0000 mm, 100.0000 mm): Pad 69 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 98.4000 mm): Track [PCIE_TXP1] on F.Cu, length 43.8543 mm
+    @(103.9500 mm, 97.6000 mm): Pad 32 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 98.4000 mm): Track [PCIE_TXP1] on F.Cu, length 43.8543 mm
+    @(137.7500 mm, 94.7250 mm): Pad 29 [PCIE_RXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 98.4000 mm): Track [PCIE_TXP1] on F.Cu, length 43.8543 mm
+    @(138.2500 mm, 94.7250 mm): Pad 31 [PCIE_RXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 98.4000 mm): Track [PCIE_TXP1] on F.Cu, length 43.8543 mm
+    @(139.2500 mm, 94.7250 mm): Pad 35 [PCIE_TXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 98.8000 mm): Track [PCIE_TXN1] on F.Cu, length 43.3918 mm
+    @(100.0000 mm, 100.0000 mm): Pad 69 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 98.8000 mm): Track [PCIE_TXN1] on F.Cu, length 43.3918 mm
+    @(103.9500 mm, 98.0000 mm): Pad 31 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 98.8000 mm): Track [PCIE_TXN1] on F.Cu, length 43.3918 mm
+    @(137.7500 mm, 94.7250 mm): Pad 29 [PCIE_RXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 98.8000 mm): Track [PCIE_TXN1] on F.Cu, length 43.3918 mm
+    @(138.2500 mm, 94.7250 mm): Pad 31 [PCIE_RXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 99.2000 mm): Track [PCIE_RXN1] on F.Cu, length 41.9394 mm
+    @(100.0000 mm, 100.0000 mm): Pad 69 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(103.9500 mm, 100.0000 mm): Pad 26 [DEVSLP] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 99.2000 mm): Track [PCIE_RXN1] on F.Cu, length 41.9394 mm
+    @(103.9500 mm, 98.4000 mm): Pad 30 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(103.9500 mm, 99.6000 mm): Pad 27 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(100.0000 mm, 100.0000 mm): Pad 69 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 99.6000 mm): Track [PCIE_RXP1] on F.Cu, length 42.4807 mm
+    @(100.0000 mm, 100.0000 mm): Pad 69 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 99.6000 mm): Track [PCIE_RXP1] on F.Cu, length 42.4807 mm
+    @(103.9500 mm, 98.8000 mm): Pad 29 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 99.6000 mm): Track [PCIE_RXP1] on F.Cu, length 42.4807 mm
+    @(137.7500 mm, 94.7250 mm): Pad 29 [PCIE_RXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.4000 mm): Track [REFCLK_P] on F.Cu, length 48.5329 mm
+    @(103.9500 mm, 99.6000 mm): Pad 27 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.4000 mm): Track [REFCLK_P] on F.Cu, length 48.5329 mm
+    @(100.0000 mm, 100.0000 mm): Pad 69 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.4000 mm): Track [REFCLK_P] on F.Cu, length 48.5329 mm
+    @(137.7500 mm, 94.7250 mm): Pad 29 [PCIE_RXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.4000 mm): Track [REFCLK_P] on F.Cu, length 48.5329 mm
+    @(138.2500 mm, 94.7250 mm): Pad 31 [PCIE_RXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.4000 mm): Track [REFCLK_P] on F.Cu, length 48.5329 mm
+    @(139.2500 mm, 94.7250 mm): Pad 35 [PCIE_TXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.4000 mm): Track [REFCLK_P] on F.Cu, length 48.5329 mm
+    @(139.7500 mm, 94.7250 mm): Pad 37 [PCIE_TXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.4000 mm): Track [REFCLK_P] on F.Cu, length 48.5329 mm
+    @(140.7500 mm, 94.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.4000 mm): Track [REFCLK_P] on F.Cu, length 48.5329 mm
+    @(141.2500 mm, 94.7250 mm): Pad 43 [LANE0_RXP] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.4000 mm): Track [REFCLK_P] on F.Cu, length 48.5329 mm
+    @(142.2500 mm, 94.7250 mm): Pad 47 [LANE0_TXN] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.4000 mm): Track [REFCLK_P] on F.Cu, length 48.5329 mm
+    @(142.7500 mm, 94.7250 mm): Pad 49 [LANE0_TXP] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.4000 mm): Track [REFCLK_P] on F.Cu, length 48.5329 mm
+    @(143.7500 mm, 94.7250 mm): Pad 53 [REFCLK_N] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(137.7500 mm, 94.7250 mm): Pad 29 [PCIE_RXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(138.2500 mm, 94.7250 mm): Pad 31 [PCIE_RXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(139.2500 mm, 94.7250 mm): Pad 35 [PCIE_TXN1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(139.7500 mm, 94.7250 mm): Pad 37 [PCIE_TXP1] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(140.7500 mm, 94.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(141.2500 mm, 94.7250 mm): Pad 43 [LANE0_RXP] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(142.2500 mm, 94.7250 mm): Pad 47 [LANE0_TXN] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0500 mm, 100.8000 mm): Track [REFCLK_N] on F.Cu, length 48.0853 mm
+    @(142.7500 mm, 94.7250 mm): Pad 49 [LANE0_TXP] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.6000 mm, 103.9500 mm): Track [PEDET] on F.Cu, length 49.0257 mm
+    @(102.4000 mm, 103.9500 mm): Pad 15 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.6000 mm, 103.9500 mm): Track [PEDET] on F.Cu, length 49.0257 mm
+    @(102.0000 mm, 103.9500 mm): Pad 14 [PERST_N] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.6000 mm, 103.9500 mm): Track [PEDET] on F.Cu, length 49.0257 mm
+    @(101.6000 mm, 103.9500 mm): Pad 13 [CLKREQ_N] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.6000 mm, 103.9500 mm): Track [PEDET] on F.Cu, length 49.0257 mm
+    @(101.2000 mm, 103.9500 mm): Pad 12 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.6000 mm, 103.9500 mm): Track [PEDET] on F.Cu, length 49.0257 mm
+    @(100.8000 mm, 103.9500 mm): Pad 11 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.6000 mm, 103.9500 mm): Track [PEDET] on F.Cu, length 49.0257 mm
+    @(100.4000 mm, 103.9500 mm): Pad 10 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.6000 mm, 103.9500 mm): Track [PEDET] on F.Cu, length 49.0257 mm
+    @(100.0000 mm, 103.9500 mm): Pad 9 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.6000 mm, 103.9500 mm): Track [PEDET] on F.Cu, length 49.0257 mm
+    @(103.9500 mm, 103.2000 mm): Pad 18 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.6000 mm, 103.9500 mm): Track [PEDET] on F.Cu, length 49.0257 mm
+    @(143.7500 mm, 94.7250 mm): Pad 53 [REFCLK_N] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.6000 mm, 103.9500 mm): Track [PEDET] on F.Cu, length 49.0257 mm
+    @(144.2500 mm, 94.7250 mm): Pad 55 [REFCLK_P] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.6000 mm, 103.9500 mm): Track [CLKREQ_N] on F.Cu, length 41.9335 mm
+    @(103.2000 mm, 103.9500 mm): Pad 17 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.6000 mm, 103.9500 mm): Track [CLKREQ_N] on F.Cu, length 41.9335 mm
+    @(102.8000 mm, 103.9500 mm): Pad 16 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.6000 mm, 103.9500 mm): Track [CLKREQ_N] on F.Cu, length 41.9335 mm
+    @(102.4000 mm, 103.9500 mm): Pad 15 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.6000 mm, 103.9500 mm): Track [CLKREQ_N] on F.Cu, length 41.9335 mm
+    @(102.0000 mm, 103.9500 mm): Pad 14 [PERST_N] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.6000 mm, 103.9500 mm): Track [CLKREQ_N] on F.Cu, length 41.9335 mm
+    @(140.0000 mm, 102.2750 mm): Pad 38 [DEVSLP] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.6000 mm, 103.9500 mm): Track [CLKREQ_N] on F.Cu, length 41.9335 mm
+    @(143.0000 mm, 102.2750 mm): Pad 50 [PERST_N] of J1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(102.0000 mm, 103.9500 mm): Track [PERST_N] on F.Cu, length 41.0342 mm
+    @(103.2000 mm, 103.9500 mm): Pad 17 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(102.0000 mm, 103.9500 mm): Track [PERST_N] on F.Cu, length 41.0342 mm
+    @(102.8000 mm, 103.9500 mm): Pad 16 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(102.0000 mm, 103.9500 mm): Track [PERST_N] on F.Cu, length 41.0342 mm
+    @(102.4000 mm, 103.9500 mm): Pad 15 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(102.0000 mm, 103.9500 mm): Track [PERST_N] on F.Cu, length 41.0342 mm
+    @(140.0000 mm, 102.2750 mm): Pad 38 [DEVSLP] of J1 on F.Cu
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

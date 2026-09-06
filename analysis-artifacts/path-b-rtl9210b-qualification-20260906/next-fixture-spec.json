@@ -1,0 +1,48 @@
+{
+  "status": "not_authorized_until_gates_B1_to_B5",
+  "artifact_kind": "standalone_bringup_fixture_plan",
+  "production_integration": false,
+  "path_a_modified": false,
+  "target": "RTL9210B-CG direct USB-to-M.2 qualification board",
+  "must_not_inherit": [
+    "Path-A selector-mediated mode truth table",
+    "Path-A bridge support values",
+    "community footprint without independent land-pattern review",
+    "community firmware/config binaries without rights and variant proof"
+  ],
+  "required_blocks": [
+    "RTL9210B-CG QFN-68 with exposed-pad grounding",
+    "authorized power, decoupling, clock, RSET, reset, ISOLATEB, and flash support",
+    "SPI flash footprint and accessible programming/recovery pads",
+    "UART/JTAG test pads",
+    "CM5 USB2/USB3 boundary",
+    "TE 1-2199230-4 M-key socket or controlled socket-side test interface",
+    "individually accessible PERST, CLKREQ, REFCLK, PEWAKE/HOT_PLUG, PEDET/CONFIG1",
+    "current-monitored SSD 3.3V path"
+  ],
+  "required_states": [
+    "forced_sata",
+    "forced_nvme",
+    "auto_pe_det",
+    "empty_socket",
+    "reset_startup",
+    "inactive_interface_isolation",
+    "isolateb_power_behavior",
+    "firmware_recovery"
+  ],
+  "native_acceptance": [
+    "KiCad 10.0.5 parse/load/save",
+    "ERC reviewed by violation class",
+    "netlist pin and sideband endpoint proof",
+    "PCB DRC with six-layer stack basis",
+    "schematic parity DRC",
+    "provenance and hash receipt for image/config/chip/flash"
+  ],
+  "blocking_gates": [
+    "B1_authorized_application_circuit",
+    "B2_direct_path_b_sideband_matrix",
+    "B3_released_qfn_land_pattern",
+    "B4_power_inrush_thermal_budget",
+    "B5_authorized_virgin_programming_path"
+  ]
+}

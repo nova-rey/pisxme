@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-06",
+  "status": "plan_only_native_fixture_not_authorized",
+  "path_a_modified": false,
+  "production_integration": false,
+  "tool_versions": {
+    "kicad_cli": "10.0.5",
+    "pcbnew_python": "10.0.5",
+    "flatpak_app": "org.kicad.KiCad 10.0.5 stable"
+  },
+  "sources": [
+    {"path": "pisxme/reva-clean/authority-inventory/rtl9210b/community-lz1/rtl9210b.pdf", "sha256": "b379713dec9820b38dda8bf50468652ebc2b2a7fa5f09a1812b5519fe9bb8f29"},
+    {"path": "pisxme/reva-clean/authority-inventory/rtl9210b/community-lz1/RTL9210b_0.kicad_sch", "sha256": "92f2cbed22d9da0fee588c486a36317f9c5b9f4856598224c6c61fb2fd55dce7"},
+    {"path": "pisxme/reva-clean/authority-inventory/rtl9210b/community-lz1/QFN-68_L8.0-W8.0-P0.40-BL-EP4.8.kicad_mod", "sha256": "0f6824e59cfbf64aa7f37a07c3cb15ffe99f7fd4a18dd56608aa913494bf2ab7"},
+    {"path": "pisxme/reva-clean/authority-inventory/rtl9210b/RTL9210B-CG_QUALIFICATION.kicad_mod", "sha256": "9c756764c7d37e66572924e8deab1c0993118ab433828155d0dc477f9b21bc4f"},
+    {"path": "pisxme/reva-clean/STORAGE.kicad_sch", "sha256": "f00edd18575c32c4ae41c893b720aeec4eb32e119da5eb1866f9458212bc6381"},
+    {"path": "pisxme/reva-clean/PiSXMe_RevA_Clean.kicad_sch", "sha256": "a207910cc6e4cc357afb45de55643e1fb772186d145d6dd41f1cca3d6c56c7ef"},
+    {"path": "pisxme/reva-clean/PiSXMe_RevA_Clean.pretty/TE_1-2199230-4_MKEY.kicad_mod", "sha256": "a370a3406738f21ec4c9724c16bdd98e24d5312845730f4300704df104b737c9"},
+    {"path": "pisxme/reva-clean/PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb", "sha256": "5ac1857b9a6387f6152edbdf71956c78e5fee4eb5f81201f10ee8e08c0fd2c8c"},
+    {"path": "pisxme/reva-clean/PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED.kicad_pcb", "sha256": "6fda3471b693440d4fc44a089a2df7371f1f00efda1a39f110005920cde11c1d"},
+    {"path": "pisxme/reva-clean/PHASE24_DUAL_MODE_STORAGE_SUPPORT_ROUTED.kicad_pcb", "sha256": "b77bc8e34061c8e8167f430a7902fd1008ddb74b2649dd0f6a5822add0d42a69"},
+    {"path": "pisxme/reva-clean/PHASE24_DUAL_MODE_STORAGE_ERC_AFTER_USB2.rpt", "sha256": "0bbd508a72326a5f63a199c9957df6cb7b85da0b043fe5149c4a558b7e315145"},
+    {"path": "pisxme/reva-clean/PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED40-drc.rpt", "sha256": "e11acbe3d77f0d54ab4949ad0abf0cc46576d919a1ce4d49253fea0c74ee2149"}
+  ],
+  "provenance_limits": [
+    "Community RTL9210B PDF/CAD is not manufacturer release authority.",
+    "The current TE M-key authority is connector-side authority, not direct Path-B sideband authority.",
+    "Fresh ERC/DRC reports are baseline observations, not Path-B validation."
+  ]
+}

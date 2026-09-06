@@ -1,0 +1,29 @@
+class,rtl_pin_or_m2_contact,fact_or_question,status,source_or_reason
+known,RTL9210B.8,PEDET/GPIO6 and 1=PCIe 0=SATA,technical-fact,PHASE24_RTL9210B_QUALIFICATION.md and retained Rev1.1 PDF
+known,RTL9210B.13,CLKREQB open-drain capable active-low,technical-fact,retained Rev1.1 PDF
+known,RTL9210B.14,PERSTB active-low 3.3V output,technical-fact,retained Rev1.1 PDF
+known,RTL9210B.61/62,PCIe REFCLK P/N 100MHz output,technical-fact,retained Rev1.1 PDF
+known,RTL9210B.64/65,shared PCIe RX0 and SATA RX pair,technical-fact,retained Rev1.1 PDF
+known,RTL9210B.67/68,shared PCIe TX0 and SATA TX pair,technical-fact,retained Rev1.1 PDF
+known,RTL9210B.10,HOT_PLUG input/GPIO8 share,technical-fact,retained Rev1.1 PDF
+known,RTL9210B.12,ISOLATEB mode-dependent power-control output,technical-fact,retained Rev1.1 PDF
+known,RTL9210B.3,RST_INPIN active-low,technical-fact,retained Rev1.1 PDF
+known,RTL9210B.17/33,5V input pins,technical-fact,retained Rev1.1 PDF
+known,RTL9210B.16/34,internal 1.1V/3.3V regulator outputs,technical-fact,retained Rev1.1 PDF warns internal-only
+known,RTL9210B.18/19/21/22/23/24,SPI flash interface pins,technical-fact,retained Rev1.1 PDF
+known,RTL9210B.51,RSET reference input,identity-only,exact value/layout open
+known,RTL9210B.52/53/54,clock supply and 25MHz crystal pins,identity-only,exact load/support open
+known,RTL9210B.69,exposed ground pad,technical-fact,distinct from M.2 contact 69
+known,M2.41/43,shared SATA-B or PCIe PER lane-0 contacts,connector-side fact,TP-053/current M-key authority
+known,M2.47/49,shared SATA-A or PCIe PET lane-0 contacts,connector-side fact,TP-053/current M-key authority
+known,M2.50,PERST# contact,connector-side fact,Path-B electrical ownership open
+known,M2.52,CLKREQ# contact,connector-side fact,Path-B pull-up/ownership open
+known,M2.53/55,REFCLK contacts,connector-side fact,Path-B source/load open
+known,M2.54,PEWAKE# contact,connector-side fact,RTL mapping open
+known,M2.69,CONFIG1/PEDET convention,connector-side fact,Path-B mode-control implementation open
+unknown,RTL9210B support network,authorized BOM/layout and exact values,open,qualification record explicitly requires latest approved application circuit
+unknown,RTL9210B.10 to M2.54,hot-plug/PEWAKE relationship and direction,open,not closed by retained pin tables
+unknown,RTL9210B.12 to SSD rail,ISOLATEB load/inrush/power-switch circuit,open,board-level power requirement
+unknown,RTL9210B shared GPIO/SPI/JTAG pins,strap and runtime ownership,open,community schematic is corroborating WIP only
+unknown,RTL9210B firmware,authorized image/config/updater and virgin programming,open-high,rights and variant compatibility unresolved
+unknown,QFN-68 land pattern,manufacturer release and independent pad/courtyard/model parity,open,community footprint attr is through_hole
