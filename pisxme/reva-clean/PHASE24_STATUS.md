@@ -2328,6 +2328,14 @@ shorts, 0 track crossings, 219 unconnected items, and 12 clearance items.
 `PHASE24_U7_STORAGE_3V3_ADJACENT_CURRENT.kicad_pcb` is promoted; the
 remaining U7 storage 3V3 pad-field connection remains open.
 
+### Promote U7 storage 3V3 pad-field completion — 2026-09-06
+
+The remaining U7.24 `/STORAGE/BRIDGE_3V3` pad was connected to the joined
+U7.30/U7.31 field using the native F.Cu dogbone around the QFN edge. Native
+KiCad DRC reports 0 shorts, 0 track crossings, 218 unconnected items, and 12
+clearance items. `PHASE24_U7_STORAGE_3V3_PAD24_CURRENT.kicad_pcb` is
+promoted; the storage bridge 3V3 pad field is now complete.
+
 ### Rejected U3 protected-input bridge — 2026-09-06
 
 The U3.14/U3.16 `/12V_PROTECTED` offset-via bridge reduced the native open
