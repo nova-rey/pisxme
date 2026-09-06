@@ -1664,5 +1664,20 @@ review independently confirmed the native pad map and the distinction
 between the corrected placement basis and the older integrated artifact.
 
 `MACRO_FLOORPLAN_DISCRIMINATOR = COMPLETE`
-`SELECTED_MACRO_BASIS = PHASE24_SELECTED_ETH_LOCAL_MACRO`
-`PHASE24 = OPEN; DETAILED ROUTING PAUSED UNTIL SELECTED ETHERNET MIGRATION REGENERATION`
+`SELECTED_MACRO_BASIS = PHASE24_CORRECTED_MACRO_PLACEMENT`
+`PHASE24 = OPEN; DETAILED ROUTING PAUSED UNTIL SELECTED COHERENT-NEIGHBORHOOD REGENERATION`
+
+### Macro-basis reconciliation
+
+The fresh review intentionally began from the older integrated ancestor to
+expose the native CM5-to-island topology. The single-Ethernet migration
+`PHASE24_SELECTED_ETH_LOCAL_MACRO.kicad_pcb` is retained as a diagnostic, not
+as the final selection. Independent native review reconciled the two current
+file meanings and confirms that `PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb`
+(SHA-256 `de316ff211675b514bd85d9064ccd4defd3486b73968033c2b4c0c4ce95c2f4a`)
+is the superior coherent basis: Ethernet-west plus complete storage-mid,
+approximately `97.4 / 145.1 mm` Ethernet/storage same-net topology, no newly
+introduced conservative body-bbox overlap, and unchanged PCIe, SERVICE,
+power, and regulator anchors. This does not use mature DRC as floorplan
+evidence. Detailed routing resumes only from this corrected basis, with
+affected Ethernet, USB3/SATA, and clock copper regenerated together.

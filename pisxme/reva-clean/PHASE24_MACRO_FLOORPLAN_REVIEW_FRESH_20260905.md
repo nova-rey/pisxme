@@ -52,3 +52,9 @@ Distances and same-net ratsnest lengths are computed from native transformed pad
 `CURRENT_CORRECTED` remains the historical integrated baseline only; the fresh topology study identifies `ETH_LOCAL_STORAGE_LOCAL` as the candidate that most directly tests the user-requested island swap. It is not promoted until its affected USB3/SATA/Ethernet routes are regenerated and validated.
 
 The comparison deliberately does not use raw DRC counts from the mature baseline against first-pass candidate routing. A candidate route defect is a route implementation failure unless a valid routing-development cycle demonstrates a structural placement obstruction.
+
+## Independent review reconciliation
+
+The live integrated file used above is the older `PHASE24_CM5_GROUND_RIGHT_SAME_ROWS.kicad_pcb` ancestor. The repository also contains the subsequently corrected coherent-neighborhood basis `PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb` (SHA-256 `de316ff211675b514bd85d9064ccd4defd3486b73968033c2b4c0c4ce95c2f4a`). An independent native review checked both meanings of “current” and found the corrected basis to be the superior selected macro: Ethernet-west plus complete storage-mid, no newly introduced conservative body-bbox overlap, PCIe/SERVICE/power/regulator anchors retained, and same-net Ethernet/storage topology approximately `97.4 / 145.1 mm`.
+
+Therefore `PHASE24_SELECTED_ETH_LOCAL_MACRO.kicad_pcb` is retained only as a single-island diagnostic derived from the older ancestor; it is not promoted over the corrected coherent-neighborhood basis. The selected floorplan for subsequent routing development is `PHASE24_CORRECTED_MACRO_PLACEMENT.kicad_pcb`. All candidate routing defects remain `ROUTE IMPLEMENTATION FAILURE` until a valid native-pad, obstacle-aware regeneration demonstrates a structural placement obstruction.
