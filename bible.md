@@ -4255,3 +4255,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-05: Promoted local In3 power-entry planes for the two cold-plug B-input nets; native DRC remains at zero shorts/crossings and full-board unconnected items fall from 397 to 390.
 2026-09-05: Promoted the native 13-column J1 protected-field bus onto the current basis; native DRC remains at zero shorts/crossings, 12V_PROTECTED opens fall from 146 to 17, and total board opens fall from 390 to 261.
 2026-09-05: Applied the validated U1/U2/J4/U8 global POWER_GND launch cluster to the current basis; native DRC remains at zero shorts/crossings and total board opens fall from 261 to 254.
+2026-09-06: Rechecked the corrected native U5 connectivity audit and its real-trace negative control on the integrated basis; rejected POWER_GND, BRIDGE_1V1 plane-access, and local-link probes after native shorts appeared, preserving the zero-short/crossing promoted basis at 254 unconnected items.

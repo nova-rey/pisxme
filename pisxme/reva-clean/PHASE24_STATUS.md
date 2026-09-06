@@ -2150,3 +2150,22 @@ unconnected items, down from 261. POWER_GND-related open records fall from
 181 to 174 while the 12V_PROTECTED count remains 17. The candidate
 `PHASE24_PGND_CLUSTER_CURRENT.kicad_pcb` is promoted; remaining ground and
 protected-load endpoints still require explicit closure.
+
+### Native U5 audit recheck and rejected plane/link probes — 2026-09-06
+
+The corrected U5 connectivity audit was rerun against both its saved native
+U5 fixture and the current integrated `PHASE24_PGND_CLUSTER_CURRENT` board.
+Both passed using KiCad `BuildConnectivity`; the disposable negative control
+removed a real U5.9 trace and failed as required. No expected graph edges are
+used by the audit.
+
+Two subsequent disposable repairs were rejected against the same promoted
+`e1f497d` basis. A global `POWER_GND` In1 plane with offset vias reduced native
+unconnected records from 254 to 247 but created five shorts. A `/REGULATORS/
+BRIDGE_1V1` In2 plane with offset vias reduced them to 242 but created four
+shorts. A same-layer local ground-link probe reduced them to 248 but created
+three shorts. None is promoted. These are `ROUTE IMPLEMENTATION FAILURE`
+results; they do not invalidate the completed macro-floorplan discriminator,
+U5 authority, Ethernet, PCIe, or coordinated storage neighborhoods. The
+current integrated basis remains `PHASE24_PGND_CLUSTER_CURRENT.kicad_pcb`
+with 0 shorting items, 0 track crossings, and 254 native unconnected items.
