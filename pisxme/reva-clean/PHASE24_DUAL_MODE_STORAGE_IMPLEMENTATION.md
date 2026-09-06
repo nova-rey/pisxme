@@ -40,6 +40,14 @@ Native ERC currently reports 205 violations, so this is not an ERC pass. The
 report is retained as evidence and includes inherited abstract-sheet issues,
 off-grid generated symbol endpoints, and isolated labels requiring cleanup.
 
+`PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb` is a disposable native
+placement candidate derived from the selected storage macro ancestor. It
+contains the M-key J3 and U11/U12/U13 footprints with physical pad nets. KiCad
+10.0.5 loads it and reports 1,013 violations / 482 unconnected items; this is
+expected evidence that the candidate is not routed or promoted. Existing U8/U9
+references on the ancestor were preserved, so the new storage silicon uses
+U11/U12/U13 consistently.
+
 ## Remaining implementation gates
 
 1. Add native symbols whose pin numbers exactly match the retained TI tables,
