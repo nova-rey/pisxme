@@ -25,7 +25,8 @@ for i,(name,jp,up) in enumerate(jobs):
   # Reverse lateral via order so the native source row and target row remain
   # monotonic as the pair bundle advances toward U7.
   sv=((76.,76.)[i],(102.,104.)[i]);path(b,n,[src,sv],B);via(b,n,sv)
-  path(b,n,[sv,(90.8,dst[1]),dst],F)
+  gatey=dst[1]+(-.25 if i==0 else .25)
+  path(b,n,[sv,(90.8,gatey),(91.3,gatey),dst],F)
  else:
   sv=(82.,(105.,109.)[i-2]);tv=((91.,87.)[i-2],dst[1])
   path(b,n,[src,sv],B);via(b,n,sv);path(b,n,[sv,tv],B);via(b,n,tv);path(b,n,[tv,dst],F)

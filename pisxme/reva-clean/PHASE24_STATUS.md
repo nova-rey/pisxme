@@ -4000,6 +4000,15 @@ regressed to 15 findings and was rejected. The 10-finding result remains
 disposable `ROUTE_IMPLEMENTATION_FAILURE`; no integrated or PCIe copper was
 changed or promoted.
 
+## TI-U7 RX approach-gate sweep — 2026-09-06
+
+RX final-approach gates were offset by ±0.25 mm to reduce convergence near
+the TI land field. Native DRC remained at the 10-finding baseline with zero
+shorts/crossings; a ±0.5 mm variant regressed to 18 findings with shorts and
+additional clearances. The best control was restored. This coordinate class
+is exhausted without changing the selected macro or layer contract; the next
+attempt must use a different legal transition topology.
+
 ## TI-U7 target-transition height sweep — 2026-09-06
 
 A small TX target-transition height variation was tested against the best
