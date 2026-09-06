@@ -4495,3 +4495,7 @@ Captured the current JLCPCB ASM2362 assembly listing and EasyEDA CAD-link eviden
 Reran the authoritative support-part pad-net, U7 supply-hierarchy, and full schematic/PCB reference-set audits; all passed. Copper routing, native DRC, and dual-mode storage qualification remain open.
 # 2026-09-06 — Phase 24 USB3 selected-source A* trial
 Rejected the disposable native-pad source-to-U7 A* continuation after DRC found 180 violations, 450 unconnected items, one crossing, dangling tracks, and dangling vias. No production route or macro-floorplan was promoted.
+# 2026-09-06 — Phase 24 CM5IO manual south-span trial
+Rejected the distinct hand-authored CM5IO-prefix south-span route after native DRC found 207 violations, 465 unconnected items, 16 crossings, and 4 shorts. No production route or macro-floorplan change was promoted.
+# 2026-09-06 — Phase 24 dual-mode storage qualification pivot
+Paused Phase 24 routing and completed a bounded NVMe bridge substitution review. JMicron JMS583 now supersedes ASM2362 as the preferred technical candidate because its retained manufacturer brief/detailed pin and land-pattern evidence is sufficient for design review. Added source captures, TE M-key connector authority, procurement matrix, and the narrowed blocker: legitimate JMS583 firmware/programming/supply plus exact TE customer CAD remain open. No production schematic/PCB edits or mystery firmware were authored.

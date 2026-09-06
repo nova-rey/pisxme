@@ -11,6 +11,16 @@ before a purchase.
 | JAE SM3 family | `jae-mkey/JAE-SM3-series-page.html` | https://www.jae.com/en/connectors/series/detail/id%3D64187%26application_code%3D%26order%5B%5D%3Dsubject%3Adesc |
 | ASMedia ASM2362 | `asm2362/ASMedia-ASM2362-product-page.html` | https://www.asmedia.com.tw/product/Ee1YQF9sX7yyajH5/C5cYq34qpByQ6jm6.html |
 | JLCPCB ASM2362 listing | `asm2362/JLCPCB-ASM2362-part-page.html` | https://jlcpcb.com/partdetail/ASMediaTech-ASM2362/C5121260 |
+| JMicron JMS583 official product brief | `jms583/JMS583-product-brief-official-1046.pdf` | https://www.jmicron.com/file/download/1046/JMS583.pdf |
+| JMicron JMS583 datasheet Rev 2.1 | `jms583/JMS583-datasheet-rev2.1.pdf` and text extraction | https://snapeda.s3.amazonaws.com/datasheets/2115-PDS-17001_JMS583_Datasheet_(Rev._2.1)_20190716.pdf |
+| JLCPCB exact JMS583-QHFA3A | browser capture; `C25701682` | https://jlcpcb.com/partdetail/Jmicron-JMS583QHFA3A/C25701682 |
+| TE exact M-key product page | `connectors/te/TE_MKEY_AUTHORITY.md` | https://www.te.com/de/product-1-2199230-4.html |
+| TE M.2 application specification Rev C | `connectors/te/TE-114-115006-application-spec-revC.pdf` | https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=114-115006&DocType=Specification+Or+Standard&PartCntxt=1-2199230-4 |
+| JMicron JMS583 official product brief | `jms583/JMS583-product-brief-official-1046.pdf` | https://www.jmicron.com/file/download/1046/JMS583.pdf |
+| JMicron JMS583 datasheet Rev 2.1 | `jms583/JMS583-datasheet-rev2.1.pdf` and text extraction | https://snapeda.s3.amazonaws.com/datasheets/2115-PDS-17001_JMS583_Datasheet_(Rev._2.1)_20190716.pdf |
+| JLCPCB exact JMS583-QHFA3A | browser capture; `C25701682` | https://jlcpcb.com/partdetail/Jmicron-JMS583QHFA3A/C25701682 |
+| TE exact M-key product page | browser capture; `TE_MKEY_AUTHORITY.md` | https://www.te.com/de/product-1-2199230-4.html |
+| TE M.2 application specification Rev C | `connectors/te/TE-114-115006-application-spec-revC.pdf` | https://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocFormat=pdf&DocLang=English&DocNm=114-115006&DocType=Specification+Or+Standard&PartCntxt=1-2199230-4 |
 
 SHA-256:
 
@@ -19,6 +29,13 @@ SHA-256:
 - `JAE-SM3-series-page.html`: acquisition returned HTTP 403 and no file was represented as a false capture.
 - `ASMedia-ASM2362-product-page.html`: `da194e78a04f004d75c107ca6a21c9abf983ffd7876a94ab50f5376c7e549beb`
 - `JLCPCB-ASM2362-part-page.html`: `424df54a72292b32fb560bda9a7b3cf1e6513f91812641648bca0f2a220a3bd1`
+- `JMS583-product-brief-official-1046.pdf`: `c472cdcb93cc02eedcdb2e31256b48c95e601fe4a98b662ae627e6d695006824`
+- `JMS583-datasheet-rev2.1.pdf`: `27a491efa2361a5b3363d61ebf43b0983ce0c2407a49a5e949a3ff9b83b88529`
+- `TE-114-115006-application-spec-revC.pdf`: `3919d7af08573732ab864840b67a9a8520405a29e90d886ae5fef236d76586eb`
+- `TE-1-2199230-4-lcsc-datasheet.pdf`: `0b5de10c795caabfc67fa71dfb909e6b1b5a154dd45551c41e9b89840807b234`
+- `JMS583-product-brief-official-1046.pdf`: `c472cdcb93cc02eedcdb2e31256b48c95e601fe4a98b662ae627e6d695006824`
+- `JMS583-datasheet-rev2.1.pdf`: `27a491efa2361a5b3363d61ebf43b0983ce0c2407a49a5e949a3ff9b83b88529`
+- `TE-1-2199230-4-lcsc-datasheet.pdf`: `0b5de10c795caabfc67fa71dfb909e6b1b5a154dd45551c41e9b89840807b234`
 
 The source page contents were inspected through the browser and the relevant
 claims are reproduced in the qualification and blocker records. Manufacturer

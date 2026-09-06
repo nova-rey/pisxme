@@ -1,5 +1,16 @@
 # Phase 24 acreage validation status
 
+## Current priority — dual-mode storage upgrade
+
+Phase 24 routing experiments are paused at the user's direction. The active
+work item is the storage-island upgrade, not further clock/SATA/USB3 repair.
+JMS583-QHFA3A is the preferred NVMe candidate after bounded substitution
+research; the production design remains gated on legitimate firmware/
+programming and authorized prototype supply. TE 1-2199230-4 is the preferred
+M-key socket candidate; exact customer CAD/pad parity remains open. Resume
+the preserved Phase 24 checkpoint only after the one-socket dual-mode island
+is implemented and its mode-aware/native validation passes.
+
 ## Authorized storage-island upgrade checkpoint — 2026-09-06
 
 The Phase 24 route-development work was safely checkpointed at HEAD
@@ -4211,6 +4222,21 @@ Receipt: `PHASE24_USB3_SELECTED_SOURCE_ESCAPE_ASTAR_RECEIPT_20260906.md` and
 `PHASE24_USB3_SELECTED_SOURCE_ESCAPE_ASTAR-drc.json`.
 
 `USB3_ASTAR_CONTINUATION = REJECTED`
+`PHASE24 = OPEN`
+
+## CM5IO manual south-span trial — 2026-09-06
+
+The next distinct route class retained the official CM5IO source prefix and
+used explicit standard-geometry through-vias with hand-authored B.Cu
+south-span polylines to U7. Native KiCad DRC reported 207 violations, 465
+unconnected items, 16 track crossings, and 4 shorting items. It is rejected
+as `ROUTE_IMPLEMENTATION_FAILURE`; no production route or macro-floorplan
+change was promoted.
+
+Receipt: `PHASE24_USB3_CM5IO_MANUAL_SOUTH_SPAN_RECEIPT_20260906.md` and
+`PHASE24_USB3_CM5IO_MANUAL_SOUTH_SPAN-drc.json`.
+
+`USB3_MANUAL_SOUTH_SPAN = REJECTED`
 `PHASE24 = OPEN`
 
 ## TI U7 RX target-via separation experiment — 2026-09-06

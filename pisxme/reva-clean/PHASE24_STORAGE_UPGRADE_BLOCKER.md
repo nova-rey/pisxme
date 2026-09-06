@@ -1,84 +1,68 @@
 # Phase 24 storage-island upgrade blocker
 
 Status: `PISXME_REVA_CLEAN_BLOCKED` for the authorized SATA/NVMe upgrade only.
-The prior SATA-only board is preserved; this is not a claim that the original
-board architecture is electrically impossible.
+The prior SATA-only board is preserved.
 
-## Exact unresolved item
+## Exact unresolved items
 
-`NVME_BRIDGE_AUTHORITY_ASM2362`
+`JMS583_FIRMWARE_PROGRAMMING_AND_AUTHORIZED_SUPPLY`; TE M-key customer CAD
+parity is open but independently tractable.
 
-The requested one-socket dual-mode implementation cannot be promoted because
-the NVMe bridge is not qualified. The official ASMedia ASM2362 page confirms
-function, interface class, QFN64 9 x 9 package, SPI external ROM, and several
-protocol features, but it does not expose the exact pad-level pin map, package
-land pattern, reference schematic, firmware/configuration image or authorized
-programming workflow. No exact ASM2362 procurement record from DigiKey,
-Mouser, Arrow/Newark, LCSC, or another traceable mainstream channel was
-captured. JLCPCB now provides an assembly listing (`C5121260`) and EasyEDA
-CAD link, but that is procurement/assembly evidence rather than ASMedia
-design authority. A product page, marketplace listing, or guessed family
-footprint is not enough for this project’s authority gate.
+ASM2362 is rejected, but it is no longer the only candidate. Bounded research
+qualified JMS583's exact QFN64 pin assignment, land-pattern dimensions,
+support values and power timing from JMicron's detailed Rev 2.1 datasheet.
+JLCPCB lists exact `JMS583-QHFA3A` (`C25701682`, about $6.06 qty 1, minimum 1,
+SMT), but currently reports zero stock; broker stock is corroborating only.
 
-## Why implementation stops here
+The remaining external artifact is a legitimate JMS583 firmware/configuration
+and programming path. JMicron says firmware is downloaded through USB and
+external SPI NVRAM holds vendor information, but its public download center
+does not publish a generic firmware image, matching programmer, supported SPI
+flash/config format, or redistribution rights. No third-party binary may be
+copied into the design. Authorized prototype supply or factory-programmed
+parts is also not demonstrated.
 
-The NVMe device is the electrical owner of the PCIe and USB sides of the new
-storage path. Guessing its pads, rails, reset/clock/flash wiring, or firmware
-would create an unreviewable schematic and make native PCB parity meaningless.
-The user explicitly required rejecting a bridge whose chip or firmware
-ecosystem is impractical. Therefore no mystery ASM2362 symbol, footprint,
-selector wiring, or PCB-only net repair was authored.
+## Why production implementation stops
 
-The M-key connector direction is also not yet production-closed: JAE
-`SM3ZS067U215BMR1500` is manufacturer-listed as a key-M 67-position part, but
-the exact drawing and pad-by-pad local land-pattern capture still must be
-obtained. The existing J3 (`SM3ZS067U410ABR1000`) is explicitly a B-key SATA
-socket and is not a valid substitute.
+The NVMe bridge owns the USB and PCIe sides of the new path. JMS583's pads and
+reference component values are now reviewable, but a board without approved
+firmware/configuration would not be a validated storage device. No mystery
+firmware, symbol promotion, selector wiring, or PCB-only repair was authored.
+
+TE `1-2199230-4` is an eligible replacement: TE identifies it as Active, M
+code, 67-position, 4.2-mm SMT and publishes application specification Rev C.
+The exact TE customer CAD/pad drawing still must be imported and compared
+before replacing J3. Existing `SM3ZS067U410ABR1000` remains B-key-only.
 
 ## Sources checked
 
-- ASMedia ASM2362 official product page and its published feature/package
-  information.
-- TI TUSB9261 official product page, datasheet/programming resources, and
-  exact DigiKey/Mouser records.
-- TI HD3SS6126 official product page/datasheet and exact distributor pages.
-- TI HD3SS3412 official product page/datasheet, including package pinout and
-  electrical limits.
-- JAE SM3 manufacturer series page and exact M-key family listing.
-- Existing repo authority for JMS578, ASM1153E, the B-key JAE socket, and
-  TUSB9261 firmware/configuration.
-- JLCPCB ASM2362 listing (`C5121260`) was inspected and saved locally. It
-  supports assembly availability but does not expose the missing electrical
-  and firmware authority.
+- JMicron official JMS583 product/solution page, official product brief,
+  detailed Rev 2.1 datasheet, and official download center.
+- JLCPCB exact JMS583-QHFA3A page and multiple broker stock snapshots.
+- TE exact M-key product page, TE Rev C application/product specifications,
+  and DigiKey exact MPN page.
+- ASMedia ASM2362 official product page and JLCPCB assembly listing.
+- Realtek RTL9210B community firmware/reference ecosystem and searches for
+  manufacturer documentation; no better authoritative bare-chip path found.
+- TI TUSB9261/switch authorities and existing project firmware records.
 
-An independent read-only hardware review also inspected the captured ASMedia
-page and prior repo evaluations. It reached the same conclusion for
-ASM2362/ASM2364/ASM2464, JMS583/JMS586/JMS580, and RTL9210B: marketplace
-availability does not substitute for manufacturer-authoritative pinout,
-land-pattern, reference-circuit, firmware/configuration, programming, and
-traceable procurement evidence. This corroborates the blocker without
-relaxing any gate.
+All captures are retained under `authority-inventory/primary-docs/storage-upgrade/`.
+No purchase was made.
 
-## Shortest human action to unblock
+## Shortest human action
 
-Obtain from ASMedia or an authorized design partner the ASM2362 design pack:
-exact orderable suffix and datasheet/pinout, recommended schematic/land
-pattern/3D data, firmware/configuration image and programming rights/tool,
-and a prototype-quantity authorized supply quote. In parallel, obtain the
-released JAE M-key drawing for `SM3ZS067U215BMR1500` (or a fully documented
-equivalent). Once those are supplied, the storage island can be edited and
+Obtain from JMicron or an authorized design partner: the approved JMS583
+firmware image, matching programming utility/use rights, SPI flash/config
+format, and an authorized prototype quote or factory-programmed
+`JMS583-QHFA3A` supply. Separately obtain TE's exact customer CAD/drawing for
+`1-2199230-4`. With those artifacts, the storage island can be implemented and
 validated without reopening the board macro-floorplan.
 
 ## Continuation options
 
-1. **Recommended:** user supplies the ASM2362 design pack and JAE M-key
-   drawing/procurement confirmation; continue the authorized storage-island
-   implementation and then resume Phase 24.
-2. Qualify another NVMe bridge only if its manufacturer documentation,
-   firmware/configuration path, exact package/land pattern, and two-channel
-   procurement evidence are all available. This is a bounded component
-   substitution, not an invitation to repeat the JMS578 hunt.
-3. If dual-mode storage is dropped by user decision, retain the existing
-   TUSB9261 + B-key SATA design and resume the original SATA-only Phase 24
-   closure; that would materially change the latest objective and is not
-   assumed here.
+1. Recommended: obtain the JMS583 firmware/programming/supply package and TE
+   customer CAD, then implement the storage island and resume Phase 24.
+2. Use a factory-programmed complete USB-to-NVMe module only if its exposed
+   interfaces, firmware provenance and socket-side integration are documented.
+3. Dropping dual-mode storage would retain the old SATA-only board, but that
+   is a user architectural decision and is not assumed.
