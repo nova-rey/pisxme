@@ -2703,3 +2703,19 @@ not spawn because the collaboration service reported `agent thread limit
 reached`. No conclusion was taken from that unavailable reviewer; local
 review used the native-loaded evidence above. Phase 24 remains open and no
 Phase 25/26 work has begun.
+
+## CM5IO source-escape transplant authoring probe — 2026-09-06
+
+A disposable fixture attempted to transplant the official CM5IO USB3 source
+escape using the measured native pad-frame transform (`x' = x - 90.42`,
+`y' = 203.5 - y`) and the official 0.147 mm source geometry. The oracle path
+was snapshotted into scalar coordinates before target-board mutation, and the
+RX_N path correctly identified seven source-side segments terminating at the
+first official via. KiCad 10's `pcbnew` Python binding then exited with
+`SIGSEGV` while adding that transformed via, before any fixture board was
+saved or validated. This is classified as `ROUTE IMPLEMENTATION / TOOLING
+FAILURE`, not `MACRO-PLACEMENT FAILURE` or Ethernet/USB3 electrical evidence.
+The integrated candidate and all accepted copper remain unchanged. The next
+attempt must use a safer native serialization/native-GUI path or a minimal
+via-add mutation isolated from the transformed-track loop; no validation
+gate or clearance rule is relaxed.
