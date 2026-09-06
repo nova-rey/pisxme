@@ -1321,3 +1321,29 @@ split-layer escape: controlled F.Cu/B.Cu assignments, ordinary through-vias
 outside J7/ESD pads, and native pad-field-aware dogbones, followed by the
 complete ESD-to-MagJack launch. No detailed clock/SATA repair or Phase 25/26
 work is being started from this failed probe.
+
+## Official CM5IO topology transplant discriminator — 2026-09-05
+
+As a separate routing-development oracle, the 189 MDI track/via items from
+the saved official CM5IO Ethernet implementation were transplanted onto the
+corrected acreage board using native net identities. The generated artifact is
+`PHASE24_OFFICIAL_ETH_TRANSPLANT_CORRECTED_BASIS.kicad_pcb`, with reproducible
+source `phase24_official_eth_transplant_corrected_basis.py` and native report
+`PHASE24_OFFICIAL_ETH_TRANSPLANT_CORRECTED_BASIS-drc.rpt`.
+
+Native DRC reports `367` total violations and `426` unconnected items, but
+zero `shorting_items` and zero `tracks_crossing`. The five dangling vias are
+inherited `CORE_CM5/CM5_5V` power vias at `(79.65,158.00)`, `(89.50,158.00)`,
+`(85.50,158.00)`, `(80.50,167.00)`, and `(68.50,162.00)`; they are outside
+the transplanted Ethernet MDI block. The unconnected items and unrelated
+clearance/width findings are inherited acreage debt, so this is not an
+integrated pass.
+
+This controlled result is positive routing evidence: the official CM5IO MDI
+topology can be represented natively without pair shorts or crossings on the
+live board basis. The earlier local failures are therefore retained as
+`ROUTE_IMPLEMENTATION_FAILURE`, specifically local escape/placement geometry
+and generator handling, not as evidence that the selected macro floorplan or
+Ethernet architecture is impossible. The next attempt must retain the
+official route topology while regenerating its source escape against native
+J7/U6/U9 pad fields; Phase 24 remains open.
