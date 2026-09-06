@@ -4606,3 +4606,25 @@ and its native DRC report.
 `CM5IO_PAIR_LAYER_CONTINUATION = REJECTED`
 `FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
 `PHASE24 = OPEN`
+
+## Carrier-context local B.Cu source escape discriminator — 2026-09-06
+
+The full-context audit showed the transformed CM5IO F.Cu prefix conflicts with
+the existing J7 PCIe/REFCLK breakout. A local ordered B.Cu source escape was
+therefore tested from the actual J7 USB3 pads to four explicit first vias.
+Compared with the same selected-macro baseline (287 violations, 50 clearance,
+64 hole-clearance, and 469 unconnected), the variant has 315 violations, no
+shorts, no track crossings, 58 clearance, 72 hole-clearance, and 469
+unconnected items. The additional findings are localized to transition/via
+clearance; the prior baseline findings remain inherited. This is an improved
+source-field route class but not yet a PASS; the next iteration must move the
+first vias away from the inherited SERVICE/zone conflict before continuation.
+
+Receipts: `phase24_cm5io_source_anchor_audit.py`,
+`PHASE24_CM5IO_SOURCE_ANCHOR_LOCAL_B_INTEGRATED_AUDIT.kicad_pcb`, and its
+native DRC report.
+
+`LOCAL_B_SOURCE_ESCAPE = IMPROVED_REJECTED`
+`ZERO_SHORTS = TRUE`
+`ZERO_TRACK_CROSSINGS = TRUE`
+`PHASE24 = OPEN`

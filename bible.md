@@ -4464,3 +4464,5 @@ Tested ordered F.Cu continuation lanes from the exact CM5IO first transitions; n
 Corrected the KiCad 10 SWIG deletion crash in the anchor harness and verified the four transformed official CM5IO first-transition escapes against native J7 with no shorts, crossings, clearance, or hole-clearance findings.
 # 2026-09-06 — Phase 24 CM5IO pair-layer continuation correction
 Corrected shared TX lane geometry and target-row indexing in the anchored continuation; native DRC still rejected the integrated route with 4 shorts and 36 crossings, preserving source-anchor PASS and route-implementation classification.
+# 2026-09-06 — Phase 24 carrier-context local BCu source escape
+Tested a native-J7 local B.Cu source escape after proving the transformed CM5IO F.Cu prefix conflicts with the existing PCIe/REFCLK breakout; the variant had zero shorts and crossings but added localized via/clearance findings and was retained for refinement.
