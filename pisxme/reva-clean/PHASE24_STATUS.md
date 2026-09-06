@@ -4090,6 +4090,30 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## TI U7 orientation reachability discriminator — 2026-09-06
+
+Five disposable native storage-orientation candidates were generated and
+authoritatively rebound to the TI PVP0064A footprint: U7 rotations 180°,
+180° with J3 at 0°/270°, U7 0°/J3 270°, and U7 270°/J3 270°. The native
+obstacle-aware planner successfully authored all four J7-to-U7 USB3 paths for
+each candidate, so no orientation was unreachable in the current raster
+model. The U7 0° candidate produced the shortest first-pass path counts
+(121/107/90/88 segments), but its native DRC still reports 547 violations,
+including 42 shorts, 37 track crossings, 149 clearances, and 469
+unconnected items.
+
+This is not a floorplan ranking by immature DRC and does not replace the
+selected `SWAP_ETH_STORAGE` macro. The orientation experiments are
+`ROUTE_IMPLEMENTATION_FAILURE` evidence until a reference-aware, obstacle-
+valid regenerated route passes native DRC and the storage support gate.
+
+Receipt: `phase24_storage_orientation_discriminator.py` and the generated
+`PHASE24_STORAGE_ORIENTATION_*_TI_ASTAR.kicad_pcb` disposable boards.
+
+`TI_U7_ORIENTATION_REACHABILITY = COMPLETE`
+`TI_U7_ORIENTATION_PROMOTION = NONE`
+`PHASE24 = OPEN`
+
 ## CM5IO-derived source-escape integrated cycle — 2026-09-06
 
 The next route class copied only the measured source-side geometry from the
