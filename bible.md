@@ -4790,3 +4790,8 @@ validation remain open.
  switched-rail endpoints, and a second PEDET-net negative control. The audit
  remains evidence-only; no Path-B production CAD or Path-A fallback work was
  changed.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: refreshed PHASE24_STATUS with
+ the d80a395 checkpoint, the strengthened native support-netlist audit and
+ negative controls, and the still-open Path-B evidence gates. The rejected
+ straight-line fixture remains classified as route implementation failure;
+ unrelated whole-board routing stays paused.
