@@ -4777,3 +4777,11 @@ validation remain open.
  confirms RTL9210B/M.2 child-sheet references but is explicitly limited to
  hierarchy/source-lineage evidence because unrelated child sheets are not
  included; no root ERC/netlist closure is claimed.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: added a native XML audit of
+ the retained RTL9210B support network. It verifies the corroborating WIP
+ implementation's USB2/USB3, shared lane-0, REFCLK/PERST/CLKREQ, PEDET,
+ ISOLATEB, crystal, SPI flash, RSET, switched rails, and explicit unused-pin
+ records, with a mutation negative control. The extraction narrows the
+ standalone Path-B fixture gates but does not promote community values,
+ land-pattern metadata, M-key sideband behavior, SSD power/inrush, or
+ firmware provisioning to production authority.

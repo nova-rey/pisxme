@@ -68,6 +68,17 @@ community `RTL9210b_0.kicad_sch` and `M.2_0.kicad_sch`; those receipts are in
 the CAD sources parse natively and that their RTL9210B pin names and M.2
 PEDET contact are inspectable. It is not a PCB connectivity or ERC/DRC pass.
 
+The support portion of `RTL9210B_0.xml` was independently audited by
+`phase24_rtl9210b_corroborating_support_audit.py`. The extracted native
+evidence now confirms the WIP source contains USB2/USB3, shared lane-0,
+REFCLK/PERST/CLKREQ, PEDET, ISOLATEB, 25-MHz crystal, SPI-flash connector,
+RSET, switched rails, and explicit unused-pin records. The detailed extraction
+is in `authority-inventory/rtl9210b/RTL9210B_CORROBORATING_SUPPORT_NETLIST.md`.
+This narrows B1 and the future fixture plan, but does not close B1–B5: the
+source remains a WIP community implementation and still does not establish
+PiSXMe M-key sideband ownership, released land-pattern authority, SSD
+power/inrush validation, or authorized virgin-chip provisioning.
+
 A secondary-hosted RTL9210 68-pin V203 demo schematic also explicitly lists
 an RTL9210B-CG variant and corroborates candidate support values including a
 2.2-uH regulator inductor and 12-kOhm RSET. It is retained as
