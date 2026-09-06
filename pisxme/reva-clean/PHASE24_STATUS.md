@@ -4090,6 +4090,31 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## USB3-source-local coherent storage discriminator — 2026-09-06
+
+An additional coherent candidate moved U7/J3 and all clock, coupling, and
+local support references to the native USB3 launch region. The placement
+probe was corrected to remove every saved track/via incident on the old pads
+of moved footprints, preventing stale unrelated nets from contaminating the
+experiment. With authoritative TI U7 replacement, the native obstacle-aware
+planner reached all four endpoints in 47/37/12/4 segments for RX_N/RX_P/
+TX_N/TX_P respectively.
+
+The resulting first route still fails native DRC because its fixed transition
+geometry conflicts with the retained PCIe corridor and local package escape
+(673 violations, 118 shorts, 5 crossings, 469 unconnected items). This is
+`ROUTE_IMPLEMENTATION_FAILURE` evidence: the route was not regenerated with
+a PCIe-safe source/target allocator. The local island is not promoted and
+the selected `SWAP_ETH_STORAGE` macro remains the current basis.
+
+Receipt: `phase24_storage_usb3_local_probe.py`,
+`PHASE24_STORAGE_USB3_LOCAL_COHERENT_TI_ASTAR_CLEAN.kicad_pcb`, and its native
+DRC report.
+
+`USB3_SOURCE_LOCAL_DISCRIMINATOR = COMPLETE`
+`USB3_SOURCE_LOCAL_PROMOTION = NONE`
+`PHASE24 = OPEN`
+
 ## South coherent storage migration probe — 2026-09-06
 
 As a bounded macro alternative, the complete U7/J3/clock/coupling support

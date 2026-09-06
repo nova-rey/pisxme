@@ -41,7 +41,7 @@ def obstacles(b):
   if isinstance(t,pcbnew.PCB_VIA): block_line(s,xy(t),xy(t),.42)
   elif t.GetLayer()==B: block_line(s,xy(t.GetStart()),xy(t.GetEnd()),.24)
  for f in b.GetFootprints():
-  if f.GetReference() in ('J7','U7'): continue
+  if f.GetReference() == 'J7': continue
   for p in f.Pads():
    if p.GetLayerSet().Contains(B):
     q=p.GetSize(); block_rect(s,xy(p),pcbnew.ToMM(q.x)/2+.16,pcbnew.ToMM(q.y)/2+.16)
@@ -75,13 +75,13 @@ for name,j,u in JOBS:
 for t in list(b.GetTracks()):
  if any(x in t.GetNetname() for x in ('CM5_USB3_RX_','CM5_USB3_TX_')): b.Remove(t)
 s=obstacles(b)
-targets=((89.0,122.8),(89.0,124.0),(89.0,126.0),(89.0,127.2))
-for (name,src,dst),tv in zip(terms,targets):
+targets=((80.5,104.8),(80.5,105.8),(80.5,106.8),(80.5,107.8))
+for idx,((name,src,dst),tv) in enumerate(zip(terms,targets)):
  n=net(b,name)
  # Leave the carrier pad field on a dedicated monotonic dogbone before the
  # shared-board search.  Starting A* at the pad itself lets neighboring J7
  # lands become artificial crossings in an otherwise legal corridor.
- sv=(73.0, src[1])
+ sv=(74.0 + idx * 2.0, src[1])
  track(b,n,src,sv,B); via(b,n,sv); block_line(s,src,sv,.28)
  p=astar(s,sv,tv)
  for a,z in zip(p,p[1:]): track(b,n,a,z,B); block_line(s,a,z,.28)
