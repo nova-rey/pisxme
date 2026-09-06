@@ -7,19 +7,19 @@ small south/east translation so the complete passive island stays outside
 the U7/J7/USB3 pad fields.
 """
 from pathlib import Path
+import os
 import pcbnew
 
 R = Path(__file__).resolve().parent
 BASE = R / 'PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_PAIR_CORRIDOR_V26_AUTH_SKEW.kicad_pcb'
-FIX = R / 'PHASE24_COMPLETE_CLOCK_FIXTURE_V2.kicad_pcb'
-OUT = R / 'PHASE24_SELECTED_MACRO_STORAGE_V26_CLOCK_V2_NATIVE_ANCHOR.kicad_pcb'
+FIX = R / os.environ.get('PISXME_CLOCK_FIXTURE', 'PHASE24_COMPLETE_CLOCK_FIXTURE_V2.kicad_pcb')
+OUT = R / os.environ.get('PISXME_CLOCK_OUT', 'PHASE24_SELECTED_MACRO_STORAGE_V26_CLOCK_V2_NATIVE_ANCHOR.kicad_pcb')
 CLOCK = {'/STORAGE/BRIDGE_XI','/STORAGE/BRIDGE_XO','/STORAGE/BRIDGE_VSSOSC'}
 
 def tr(p, src_u7, dst_u7):
     # 180 degrees about fixture U7, then anchor at base U7, with 10/20 mm
-    # No translation: retain the fixture's native U7-relative launch first.
-    x = dst_u7.x - (p.x - src_u7.x) + pcbnew.FromMM(10)
-    y = dst_u7.y - (p.y - src_u7.y)
+    x = dst_u7.x - (p.x - src_u7.x) + pcbnew.FromMM(float(os.environ.get('PISXME_CLOCK_DX', '10')))
+    y = dst_u7.y - (p.y - src_u7.y) + pcbnew.FromMM(float(os.environ.get('PISXME_CLOCK_DY', '0')))
     return pcbnew.VECTOR2I(x, y)
 
 base = pcbnew.LoadBoard(str(BASE)); fix = pcbnew.LoadBoard(str(FIX))
@@ -65,6 +65,8 @@ launch = {'52': ('/STORAGE/BRIDGE_XI', 0.75),
           '54': ('/STORAGE/BRIDGE_XO', -0.25)}
 u7 = base.FindFootprintByReference('U7')
 for number, (name, off) in launch.items():
+    if os.environ.get('PISXME_CLOCK_NO_LAUNCH') == '1':
+        continue
     pad = next(p for p in u7.Pads() if p.GetNumber() == number)
     net = base.FindNet(name)
     start = pad.GetPosition()

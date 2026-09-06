@@ -4370,3 +4370,5 @@ Reran the actual-board launch search with XI/XO on B.Cu and VSSOSC on F.Cu. XI f
 Tested a 20 mm west / 10 mm south coherent migration of the native-valid V2 clock passive island. Actual-board obstacle search found no legal second B.Cu launch path; candidate rejected as corridor-capacity failure with all validated data and PCIe copper preserved.
 # 2026-09-06 — Phase 24 clock source oracle revalidation
 Reran the native KiCad regression for the complete V2 clock fixture: PASS. The source XI/XO/VSSOSC graph remains free of clock shorting/crossing classes; only V26 transplant/launch integration remains open.
+# 2026-09-06 — Phase 24 coordinated-layer clock oracle basis
+Selected the native-clean coordinated-layer clock fixture as the strongest support source. Its west/south V26 transform preserves pad-layer authority and has no shorting, crossing, clearance, or dangling-via classes; only three U7 launch tails and inherited board opens remain.

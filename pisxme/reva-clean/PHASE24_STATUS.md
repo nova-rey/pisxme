@@ -1,5 +1,18 @@
 # Phase 24 acreage validation status
 
+## Coordinated-layer clock oracle placement basis
+
+`PHASE24_CLOCK_COORDINATED_LAYERS.kicad_pcb` was identified as the strongest
+native clock source: its XI/XO/VSSOSC graph is complete and native DRC has no
+shorting or crossing classes, with only eight unrelated U7 opens. A bounded
+transform using the actual V26 U7 frame, preserving fixture pad layer sets,
+and placing the passive island west/south produced
+`PHASE24_COORD_CLOCK_XM10_Y35_NO_LAUNCH.kicad_pcb`. Native DRC reports 14
+violations consisting of three deliberate U7 launch tails and inherited
+silkscreen warnings; there are no shorting, crossing, clearance, dangling-via,
+or footprint classes. The candidate is not promoted until the three U7
+launches and remaining support rails are connected.
+
 ## Clock source-oracle regression confirmation
 
 `test_phase24_clock_fixture_v2.py` was rerun through native KiCad Python and
