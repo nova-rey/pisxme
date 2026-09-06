@@ -4388,3 +4388,5 @@ Ran all six XI/XO/VSSOSC routing permutations from clean regenerated boards. Non
 Promoted the disposable `PHASE24_CLOCK_LAYERESC_DIRECT_XO` clock-support milestone: XI/VSSOSC on B.Cu, XO on F.Cu, native U7 plus passive connectivity PASS, and zero shorts/crossings/clearance/dangling-via/track classes. Full Phase 24 remains gated by bridge rails, reset/configuration, returns, and board-wide opens.
 # 2026-09-06 — Phase 24 macro-floorplan comparison reaffirmed
 Recorded the topology-only comparison rule and rejected the fixed-coordinate TI U7 escape as route implementation failure; mature historical DRC is not used to rank immature rearranged routing.
+# 2026-09-06 — Phase 24 TI U7 native-coordinate route trials
+Recorded rejection of B.Cu and mixed-layer native-coordinate USB3 route classes on the selected macro; both had real crossings/shorts against existing board obstacles and remain disposable route evidence only.

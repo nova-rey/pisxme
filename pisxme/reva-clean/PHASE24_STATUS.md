@@ -3891,3 +3891,21 @@ invalidate the macro discriminator or justify reverting to the historical
 floorplan. The next route cycle must use native TI pad coordinates with a
 fresh obstacle-aware escape and retain the same separation between floorplan
 question A and route-implementation question B.
+
+## TI-U7 native-coordinate USB3 route-class trials — 2026-09-06
+
+The selected macro was converted in a disposable copy to the authoritative
+TI TUSB9261 PVP0064A footprint, preserving the 41 native U7 pad-net mappings.
+The first ordered escape used fixed coordinates and was rejected by native DRC
+for real SATA/USB3 crossings, shorts, and clearances. A second trial,
+`phase24_ti_usb3_ordered_bcu.py`, derived all endpoints from saved native pad
+coordinates and used ordinary vias outside the TI field. Its B.Cu corridor
+was rejected with 403 native findings, including 18 crossings and 20 shorts,
+because it competed with the existing PCIe copper. A mixed-layer revision was
+also rejected with 407 findings, including 21 crossings and 21 shorts. These
+are `ROUTE IMPLEMENTATION FAILURE` results; neither trial is floorplan
+evidence and no production copper was promoted.
+
+The next route-development class is obstacle-aware pair routing that treats
+existing PCIe/power/footprint copper as live obstacles and derives actual TI
+pad exits, rather than adding another fixed-coordinate corridor.
