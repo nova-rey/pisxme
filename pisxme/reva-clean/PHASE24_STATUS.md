@@ -2507,3 +2507,26 @@ The next route class is therefore a native/reference-topology transplant with
 explicit obstacle clearing and saved-board reload between mutation stages,
 followed by independent native connectivity/DRC. No further same-class manual
 lane sweep is promoted.
+
+## Native storage-topology control — 2026-09-06
+
+`phase24_storage_reference_control.py` was added as a disposable control. It
+loads the selected macro board and the already-proven native storage route,
+snapshots donor geometry before target mutation, restores the donor's coherent
+U7/J3/support placement, and copies only the donor's actual USB3/SATA/clock
+copper onto the target board's native net objects. KiCad 10's SWIG collection
+must be snapshotted before target edits; otherwise donor track proxies become
+invalid during mutation.
+
+The saved control was checked with native KiCad DRC: 510 total violations and
+258 unconnected items. It is rejected as a whole-board candidate. The result
+does not rank the selected macro floorplan: the control intentionally changes
+placement and retains the target board's inherited defects. It does establish
+the next authoring boundary and preserves a reproducible native/reference
+transplant path. The selected `STORAGE_LOCAL_J3_EDGE` placement remains the
+development basis; adaptation must preserve native pad contact at its new U7
+location and be independently rechecked.
+
+Consultant dispatch remains unavailable because the agent thread limit is
+reached. Local native evidence is used; no validation severity, layer policy,
+architecture, or floorplan decision was relaxed.
