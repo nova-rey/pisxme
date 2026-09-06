@@ -4112,6 +4112,27 @@ the independent comparison and does not change the acceptance gate.
 `ROUTE_IMPLEMENTATION_FAILURE != MACRO_PLACEMENT_FAILURE`
 `PHASE24 = OPEN`
 
+## TI-U7 separated-target-via route-class probe — 2026-09-06
+
+A fresh disposable TI-U7 USB3 fixture tested a monotonic B.Cu source-to-target
+escape with separated target transitions and short F.Cu pad-row dogbones.
+The best geometry produced 10 native DRC violations, zero shorts, and zero
+track crossings; the remaining two errors are local F.Cu approach clearances
+into adjacent U7 pads, with the expected incomplete-fixture unconnected
+items. A pad-row-aligned staggered-via variant regressed to 15 violations,
+including two shorts and multiple hole-clearance errors, so it was rejected
+and the best control was restored. This is route implementation evidence,
+not a macro-placement failure and not an integrated-board pass.
+
+Receipt: `phase24_ti_usb3_rx_split_v2_fixture.py`,
+`PHASE24_USB3_LOCAL_TI_RX_SPLIT_V2.kicad_pcb`, and
+`PHASE24_RX_SPLIT_V2_CHECK.rpt`.
+
+`TI_U7_V2_SEPARATED_TARGET_PROBE = REJECTED_VARIANT_BEST_CONTROL_RESTORED`
+`ZERO_SHORTS = TRUE`
+`ZERO_TRACK_CROSSINGS = TRUE`
+`PHASE24 = OPEN`
+
 ## TI U7 RX target-via separation experiment — 2026-09-06
 
 The best clean west-target control was challenged by moving only RX_P's

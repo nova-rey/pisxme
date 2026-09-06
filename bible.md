@@ -4440,3 +4440,5 @@ Separated source and west-side target transitions in the clean TI fixture; nativ
 Rejected a targeted RX_P target-via relocation after native DRC regressed to 10 shorts and 12 hole findings; restored the zero-crossing clean-fixture control.
 # 2026-09-06 — Phase 24 macro-floorplan comparison-bias reconciliation
 Reconciled the whole-board floorplan records: selected SWAP_ETH_STORAGE from native transformed-pad topology, while keeping early candidate DRC separate from floorplan ranking and classifying immature route failures as route implementation evidence.
+# 2026-09-06 — Phase 24 TI-U7 separated-target-via route probe
+Tested a fresh monotonic TI-U7 USB3 escape; the best native control has zero shorts and crossings but two local approach-clearance errors, while a staggered target-via variant regressed and was rejected.
