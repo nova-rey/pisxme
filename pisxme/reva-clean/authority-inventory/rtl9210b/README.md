@@ -24,3 +24,9 @@ KiCad 10.0.5 natively exported XML netlists from the retained
 `RTL9210B_0.xml` and `M.2_0.xml`. They confirm native parsing and expose the
 community schematic's RTL9210B pin/net names and M.2 PEDET contact 69. This
 is schematic parse evidence, not a completed PCB or ERC/DRC pass.
+
+The HynixCJR project root was also copied into `community-lz1/root-reference`
+with its RTL9210B and M.2 child sheets. KiCad 10.0.5 exported a native root
+XML receipt as `RTL9210B_ROOT.xml`, confirming the hierarchy names and child
+sheet references. Missing unrelated child sheets mean this is hierarchy and
+source-lineage evidence only, not a complete root ERC/netlist closure.

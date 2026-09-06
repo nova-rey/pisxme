@@ -4772,3 +4772,8 @@ validation remain open.
  2.2-uH regulator inductor and 12-kOhm RSET. It is not promoted to authority;
  M-key sidebands, SSD power/inrush, firmware rights, and released land-pattern
  gates remain open.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: retained the HynixCJR
+ hierarchical root reference and a KiCad 10.0.5 native root XML export. It
+ confirms RTL9210B/M.2 child-sheet references but is explicitly limited to
+ hierarchy/source-lineage evidence because unrelated child sheets are not
+ included; no root ERC/netlist closure is claimed.
