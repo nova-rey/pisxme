@@ -4814,3 +4814,5 @@ validation remain open.
  schematics, power-consumption, and layout-guide files. The endpoint is
  login-gated here, so the files were not claimed as retrieved or used as
  authority; Path-A and Path-B production CAD remain unchanged.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: refreshed the current status
+ checkpoint to 819015d after recording the reference-package recovery lead.

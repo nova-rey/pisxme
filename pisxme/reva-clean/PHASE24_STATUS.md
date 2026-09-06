@@ -2,7 +2,7 @@
 
 ## Current checkpoint — 2026-09-06
 
-Latest private Path-B evidence checkpoint: `5cb4415`. The retained WIP
+Latest private Path-B evidence checkpoint: `819015d`. The retained WIP
 RTL9210B native XML support netlist now has a reproducible audit with
 component, rail, clock, SPI, reset, RSET, PEDET, ISOLATEB, shared-lane, and
 unused-pin assertions. Component-identity and PEDET-net mutation negative
