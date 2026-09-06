@@ -1456,6 +1456,21 @@ shorts, crossings, dangling vias, unconnected pads, or footprint errors. This
 fixture gate is closed; it does not substitute for the integrated-acreage
 gate.
 
+## Official-placement LED support route probe — 2026-09-05
+
+R30/R31 were added with the production `ETH_LEDY`/`ETH_LEDG` source nets,
+physical EDAC cathode aliases, and ordinary B.Cu routes on a child of the
+clean official MDI/CT support oracle. Native refilled DRC reports `214`
+violations and `428` unconnected items, including one new short and five new
+crossings. The parent had zero shorting/crossing records, so this child is
+rejected as `ROUTE_IMPLEMENTATION_FAILURE`.
+
+The new findings are localized to the hand-authored LED corridors: CT3/CT1
+intersections, the J2 shield barrel field, and the two source-launch vias.
+The production LED net mapping and resistor materialization remain valid;
+the next attempt must use dedicated staged LED lanes or a support-local
+placement change while preserving the clean MDI/CT parent.
+
 ## Official-placement complete support-route transplant — 2026-09-05
 
 The complete CM5IO fixture support geometry was transplanted onto the
