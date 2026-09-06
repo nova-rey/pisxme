@@ -4565,3 +4565,25 @@ its native DRC report.
 `CM5IO_FCU_LANE_CONTINUATION = REJECTED`
 `FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
 `PHASE24 = OPEN`
+
+## Isolated CM5IO source-anchor audit — 2026-09-06
+
+The source-only harness was corrected after a KiCad 10 SWIG object-lifetime
+crash caused by deleting a full integrated board in-process. It now uses the
+native two-footprint minimal fixture, preserving J7/U7 objects and removing
+only disposable tracks. The four official CM5IO first-transition escapes
+map to the actual J7 pads at `(70.04,103.9)`, `(70.04,104.3)`,
+`(70.04,106.3)`, and `(70.04,106.7)`; the transformed first vias are
+`(61.451,87.749)`, `(61.949,87.251)`, `(61.851,83.349)`, and
+`(62.349,82.851)`. Native DRC reports no shorts, crossings, clearance, or
+hole-clearance findings; only expected dangling source-only geometry and 80
+unconnected fixture items remain. This closes the source-anchor question and
+isolates the remaining failure to continuation placement/routing.
+
+Receipt: `phase24_cm5io_source_anchor_audit.py`,
+`PHASE24_CM5IO_SOURCE_ANCHOR_AUDIT.kicad_pcb`, and
+`PHASE24_CM5IO_SOURCE_ANCHOR_AUDIT-drc.rpt`.
+
+`CM5IO_SOURCE_ANCHOR_AUDIT = PASS`
+`CONTINUATION_ROUTING = OPEN`
+`PHASE24 = OPEN`

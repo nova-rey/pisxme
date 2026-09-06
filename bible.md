@@ -4460,3 +4460,5 @@ Copied the native CM5IO USB3 source escape into carrier coordinates and rejected
 Tested a separated outer-acreage continuation from native CM5IO first-transition anchors; native DRC rejected it with 19 shorts and 57 crossings, preserving the source-anchor evidence and route-implementation classification.
 # 2026-09-06 — Phase 24 CM5IO F.Cu lane continuation
 Tested ordered F.Cu continuation lanes from the exact CM5IO first transitions; native integrated DRC rejected the class with 21 shorts and 32 crossings, so source-anchor validation is now isolated before further corridor routing.
+# 2026-09-06 — Phase 24 isolated CM5IO source-anchor audit
+Corrected the KiCad 10 SWIG deletion crash in the anchor harness and verified the four transformed official CM5IO first-transition escapes against native J7 with no shorts, crossings, clearance, or hole-clearance findings.
