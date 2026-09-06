@@ -150,3 +150,11 @@ selector continuation, CM5 source fanout, and cap-side return corridors.
 That result is a route implementation failure, not evidence against the
 dual-mode architecture or the corrected TI package. The committed generator
 remains at the preceding zero-short baseline; no production PCB was promoted.
+
+The local-cap/F.Cu corridor experiments are retained as
+`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED18-drc.rpt` and
+`PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED19-drc.rpt`. Moving C86/C87 locally
+reduced the artificial detour, but the F.Cu selector paths still intersected
+native CM5-source escape vias and package-edge corridors. They are rejected
+as a route implementation class. The saved generator remains the committed
+zero-short baseline pending a proper two-layer via-handoff construction.

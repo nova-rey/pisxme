@@ -4672,3 +4672,8 @@ and cap-side corridor collisions. Preserved its raw report as disposable
 evidence and restored the committed generator to the prior zero-short
 baseline; architecture and authoritative package geometry remain open for
 further route implementation work.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: rejected the local-cap/F.Cu
+USB3 corridor experiments. Moving C86/C87 reduced the artificial detour, but
+native DRC still found intersections with CM5 source escapes and package-edge
+corridors. Preserved raw reports 18/19 and restored the committed zero-short
+baseline; the next class requires explicit two-layer via handoffs.
