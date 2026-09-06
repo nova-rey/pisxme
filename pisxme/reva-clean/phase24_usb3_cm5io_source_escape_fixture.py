@@ -90,6 +90,8 @@ b = pcbnew.LoadBoard(str(BASE))
 if b is None: raise RuntimeError("native target load failed")
 u7 = b.FindFootprintByReference("U7")
 u7.SetOrientationDegrees(float(os.environ.get("P24_U7_ROT", "180")))
+if "P24_U7_X" in os.environ and "P24_U7_Y" in os.environ:
+    u7.SetPosition(V(float(os.environ["P24_U7_X"]), float(os.environ["P24_U7_Y"])))
 net_codes = {name: b.FindNet("/CORE_CM5/" + name).GetNetCode() for name in names}
 u7_pads = {name: pad(b, "U7", upad) for name, (_oracle_name, _jpad, upad) in names.items()}
 for item in list(b.GetFootprints()):
@@ -116,6 +118,15 @@ if int(float(os.environ.get("P24_U7_ROT", "180"))) == 0:
         "CM5_USB3_TX_N": V(90.0, pcbnew.ToMM(u7_pads["CM5_USB3_TX_N"].y)),
         "CM5_USB3_TX_P": V(95.5, pcbnew.ToMM(u7_pads["CM5_USB3_TX_P"].y)),
     }
+    if os.environ.get("P24_LOCAL_CORRIDOR") == "1":
+        # Keep the endpoint vias well outside the 0.5 mm annular copper
+        # overlap while preserving the native U7-at-0-degree ordering.
+        end_vias = {
+            "CM5_USB3_RX_N": V(pcbnew.ToMM(u7_pads["CM5_USB3_RX_N"].x) - 1.5, pcbnew.ToMM(u7_pads["CM5_USB3_RX_N"].y)),
+            "CM5_USB3_RX_P": V(pcbnew.ToMM(u7_pads["CM5_USB3_RX_P"].x) + 0.5, pcbnew.ToMM(u7_pads["CM5_USB3_RX_P"].y)),
+            "CM5_USB3_TX_N": V(pcbnew.ToMM(u7_pads["CM5_USB3_TX_N"].x) - 1.5, pcbnew.ToMM(u7_pads["CM5_USB3_TX_N"].y)),
+            "CM5_USB3_TX_P": V(pcbnew.ToMM(u7_pads["CM5_USB3_TX_P"].x) + 0.5, pcbnew.ToMM(u7_pads["CM5_USB3_TX_P"].y)),
+        }
 for target_name, (oracle_name, jpad, upad) in names.items():
     net_code = net_codes[target_name]
     copied, first = oracle_paths[target_name]
@@ -128,7 +139,18 @@ for target_name, (oracle_name, jpad, upad) in names.items():
     ev = end_vias[target_name]
     if not txp_fcu:
         via(b, net_code, ev)
-    if target_name.startswith("CM5_USB3_RX"):
+    if os.environ.get("P24_LOCAL_CORRIDOR") == "1":
+        # The moved-endpoint experiment deliberately uses a direct B.Cu
+        # corridor; the native source-side escape still retains its exact
+        # CM5IO layer geometry and ordinary through-via at the source.
+        if target_name.startswith("CM5_USB3_TX"):
+            outer_x = 96.0 if target_name.endswith("TX_N") else 98.0
+            top_y = 78.0 if target_name.endswith("TX_N") else 78.5
+            local_layer = F if txp_fcu else B
+            polyline(b, net_code, [src_via, V(pcbnew.ToMM(src_via.x), top_y), V(outer_x, top_y), V(outer_x, pcbnew.ToMM(ev.y)), ev], local_layer)
+        else:
+            track(b, net_code, src_via, ev, B)
+    elif target_name.startswith("CM5_USB3_RX"):
         track(b, net_code, src_via, ev, B)
     else:
         # Keep TX on B.Cu, first step above the J7 NPTH obstruction, then use

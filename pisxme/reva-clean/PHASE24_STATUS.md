@@ -2768,6 +2768,23 @@ the remaining storage/support circuitry by design. No integrated copper was
 promoted, and the 0-degree orientation is not yet promoted to the acreage
 board until the complete USB3/SATA/clock/support island passes together.
 
+## Moved-U7 corridor discriminator — 2026-09-06
+
+To separate the long-corridor integration problem from the CM5IO source
+escape, a disposable fixture moved U7 and its USB3 endpoint neighborhood to
+`(100,90)` at 0 degrees. The direct local corridor plus restored source-side
+NPTH dogleg produced 1 native crossing, 0 shorts, 0 clearance violations, 0
+hole-clearance violations, 0 dangling-via findings, and 65 expected fixture
+opens; all four native J7↔U7 endpoints passed. The remaining crossing is
+between the two TX source dogbones at the B.Cu top channel.
+
+A TX_P F.Cu continuation removed that crossing but shorted an existing U7
+`BRIDGE_3V3` pad in the moved endpoint field, so it is rejected as a local
+route implementation failure. The `(100,90)` candidate is not promoted yet:
+the remaining crossing and the rest of the USB3/SATA/clock/support circuit
+still require coordinated validation. No PCIe, power architecture, or
+accepted acreage copper changed.
+
 ## Final USB3 endpoint-corridor discriminator — 2026-09-06
 
 The TX_N local endpoint dogleg was tested against the best U7-at-0-degree,
