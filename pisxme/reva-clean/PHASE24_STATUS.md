@@ -2260,3 +2260,13 @@ input-side field or alter the fuse/protection topology. Native KiCad DRC
 reports 0 shorts, 0 track crossings, 229 unconnected items, and 12 clearance
 items. `PHASE24_F1_FUSED_OUTPUT_PAD_FIELD_CURRENT.kicad_pcb` is promoted;
 Q1/D1/load distribution remains to be connected and validated.
+
+### Promote Q1 fused-A local launch — 2026-09-06
+
+The Q1 `/POWER_INPUT/FUSED_12V_A` PTH launch was connected to the existing
+native B.Cu fused-A segment ending at `(22.5,80)` with one short local
+segment. Native DRC reports 0 shorts, 0 track crossings, 228 unconnected
+items, and 12 clearance items. The D1 long-bus trial was rejected because it
+added a crossing without closing an open. `PHASE24_FUSED_Q1_LAUNCH_CURRENT.
+kicad_pcb` is promoted; D1 and the remaining fused-A distribution endpoints
+remain open.
