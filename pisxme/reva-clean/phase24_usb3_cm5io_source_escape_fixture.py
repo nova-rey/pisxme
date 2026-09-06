@@ -113,7 +113,7 @@ if int(float(os.environ.get("P24_U7_ROT", "180"))) == 0:
     end_vias = {
         "CM5_USB3_RX_N": V(93.5, pcbnew.ToMM(u7_pads["CM5_USB3_RX_N"].y)),
         "CM5_USB3_RX_P": V(95.5, pcbnew.ToMM(u7_pads["CM5_USB3_RX_P"].y)),
-        "CM5_USB3_TX_N": V(93.5, 122.5),
+        "CM5_USB3_TX_N": V(90.0, pcbnew.ToMM(u7_pads["CM5_USB3_TX_N"].y)),
         "CM5_USB3_TX_P": V(95.5, pcbnew.ToMM(u7_pads["CM5_USB3_TX_P"].y)),
     }
 for target_name, (oracle_name, jpad, upad) in names.items():
@@ -133,9 +133,13 @@ for target_name, (oracle_name, jpad, upad) in names.items():
         top_y = 78.0 if target_name.endswith("TX_N") else 78.5
         top_at_via = V(pcbnew.ToMM(src_via.x), top_y)
         top = V(outer_x, top_y)
-        lower = V(outer_x, pcbnew.ToMM(ev.y))
-        route_layer = F if (target_name.endswith("TX_P") and os.environ.get("P24_TXP_FCU") == "1") else B
-        polyline(b, net_code, [src_via, top_at_via, top, lower, ev], route_layer)
+        route_layer = F if ((target_name.endswith("TX_P") and os.environ.get("P24_TXP_FCU") == "1") or (target_name.endswith("TX_N") and os.environ.get("P24_TXN_FCU") == "1")) else B
+        if target_name.endswith("TX_N") and os.environ.get("P24_TXN_LOCAL") == "1":
+            mid_y = 115.0
+            polyline(b, net_code, [src_via, top_at_via, top, V(outer_x, mid_y), V(90.0, mid_y), ev], route_layer)
+        else:
+            lower = V(outer_x, pcbnew.ToMM(ev.y))
+            polyline(b, net_code, [src_via, top_at_via, top, lower, ev], route_layer)
     track(b, net_code, ev, u7_pads[target_name], F)
 
 b.BuildListOfNets(); b.Save(str(OUT)); print(OUT)

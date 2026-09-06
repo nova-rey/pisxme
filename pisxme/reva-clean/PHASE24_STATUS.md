@@ -2767,3 +2767,17 @@ crossing and dangling transitions require correction, and the fixture omits
 the remaining storage/support circuitry by design. No integrated copper was
 promoted, and the 0-degree orientation is not yet promoted to the acreage
 board until the complete USB3/SATA/clock/support island passes together.
+
+## Final USB3 endpoint-corridor discriminator — 2026-09-06
+
+The TX_N local endpoint dogleg was tested against the best U7-at-0-degree,
+TX_P-on-F.Cu candidate. It removed the previous endpoint approach crossing
+class but introduced two crossings against the RX B.Cu lanes; it is rejected.
+The best retained candidate remains
+`PHASE24_USB3_CM5IO_SOURCE_ESCAPE_U7_ROT0_TXP_FCU.kicad_pcb`, with native
+DRC counts of 0 shorts, 1 crossing, 0 clearance, 0 hole-clearance, 2
+via-dangling warnings, and 65 expected fixture opens. Native
+`BuildConnectivity` still passes all four USB3 endpoints. This remains a
+route-implementation result, not a Phase 18 promotion; the final crossing
+and dangling transitions must be resolved in a complete storage-island
+context before acreage integration.
