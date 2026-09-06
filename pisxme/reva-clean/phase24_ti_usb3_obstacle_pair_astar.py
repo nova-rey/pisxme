@@ -94,10 +94,12 @@ for idx,(name,src,dst) in enumerate(terms):
     n=net(b,name)
     sx=84.0+idx*2.0
     sy=(100.0,102.0,106.0,108.0)[idx]
-    sv=(sx,sy);tv=dst
+    sv=(sx,sy);tv=(90.0,dst[1])
     # J7 source pads are on B.Cu in the carrier-mating view.
     add_track(b,n,src,sv,B);add_via(b,n,sv)
     p=astar(blocked,sv,tv);emit(b,n,p,blocked)
-    # TI USB3 lands are F.Cu SMD pads; no target via is necessary.
+    # Approach each TI land from the left through a short, explicit dogbone;
+    # the planner must not wander into the adjacent U7 support-pad rows.
+    add_track(b,n,tv,dst,F)
     print(name,"segments",len(p),"source",src,"target",dst)
 b.BuildListOfNets();b.Save(str(OUT));print(OUT)

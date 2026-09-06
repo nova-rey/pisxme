@@ -4398,3 +4398,5 @@ Added and exercised a native-pad obstacle-aware USB3 router; its conservative ra
 Corrected the obstacle planner to use anisotropic pad envelopes and explicit U7 USB3 target-land exemptions; retained-copper blocking remains a route-model issue, not a macro-placement verdict.
 # 2026-09-06 — Phase 24 clean TI-U7 package discriminator
 Proved all four selected-macro J7-to-TI-U7 paths are reachable in a two-footprint native fixture; rejected the first package-field escape by native DRC as TI padfield route implementation failure.
+# 2026-09-06 — Phase 24 monotonic TI U7 escape control
+Tested a direct native-pad monotonic escape control; native DRC reduced the clean-fixture result to 37 findings but rejected the source-via/lane geometry, preserving the result as route implementation evidence.

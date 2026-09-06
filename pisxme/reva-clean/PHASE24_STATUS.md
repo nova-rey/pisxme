@@ -3947,3 +3947,13 @@ crossings and 30 shorts. This proves reachability of the selected macro
 source-to-U7 relationship while identifying the remaining defect as
 `ROUTE_IMPLEMENTATION_FAILURE / TI_PADFIELD_ESCAPE`, not
 `MACRO-PLACEMENT FAILURE`. No integrated copper was changed or promoted.
+
+## Monotonic TI-U7 direct-escape control — 2026-09-06
+
+The grid A* path was replaced with a minimal monotonic control using one
+ordinary source-side through-via per lane and a direct F.Cu segment to each
+native TI USB3 land. Native DRC reduced the clean-fixture result to 37
+findings, including five crossings and 11 shorts, but it remains rejected.
+This separates the previous A* zigzag class as a router implementation
+defect; the remaining failures are localized to source-via/lane assignment
+and TI pad-field approach geometry. No integrated or PCIe copper was modified.
