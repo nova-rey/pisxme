@@ -1,5 +1,37 @@
 # Phase 24 acreage validation status
 
+## Whole-board floorplan comparison and SATA route discrimination — 2026-09-06
+
+The required whole-board macro-floorplan review was rerun through the
+installed KiCad 10.0.5 native Python environment from the byte-verified live
+basis `PHASE24_U7_3V3_CURRENT_LOCAL.kicad_pcb`. Five disposable candidates
+were generated from native-transformed pad/body geometry. The comparison
+uses source-to-island distance, same-net ratsnest, body overlap, connector
+appropriateness, and corridor topology; it deliberately does not use the
+mature historical board's accumulated DRC/open count.
+
+`SWAP_ETH_STORAGE` remains selected. It reduces Ethernet source distance from
+59.2 mm to 22.5 mm and storage from 65.9 mm to 49.5 mm, has zero coarse
+major-body overlaps, and preserves the PCIe, SERVICE, power-entry, and
+regulator anchors. `ETH_LOCAL_STORAGE_MID` is shorter but introduces four
+body overlaps; the south/north exchange introduces two. The integrated
+candidate is unchanged and the selected board remains disposable.
+
+The SATA route authoring received a new separated-lane cycle. V7 removed the
+old direct run through the M.2 field but still had a native U7 launch short,
+an M.2 no-net-field short, and a crossing. V8 transitions beside each
+coupling capacitor and stays on B.Cu through the connector field; native DRC
+then exposed a B.Cu corridor crossing and two RX bridge vias with only 0.1 mm
+hole clearance. Both are rejected as `ROUTE IMPLEMENTATION FAILURE`. These
+results do not reject the selected macro floorplan; the next SATA cycle must
+use a source-ordered connector launch with separated RX vias and no crossing
+horizontal/vertical B.Cu corridors.
+
+Consultant dispatch was attempted for the required independent review and was
+unavailable because the orchestration service reported a thread-limit error.
+The review was therefore completed locally from native-loaded objects; this
+tooling availability issue is not treated as an engineering blocker.
+
 ## Native pad-layer correction and Ethernet V3 — 2026-09-05
 
 The independent geometry review identified a real authoring assumption error:

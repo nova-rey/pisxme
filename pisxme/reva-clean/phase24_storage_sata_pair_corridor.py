@@ -45,10 +45,10 @@ board = pcbnew.LoadBoard(str(BASE))
 # and TX/RX occupy distinct physical corridors. All caps retain their
 # manufacturer footprint orientation; pad 2 is bridge-side, pad 1 socket-side.
 CAPS = {
-    "TX_N": ("C31", (110.0, 112.0)),
-    "TX_P": ("C30", (110.0, 114.0)),
-    "RX_N": ("C33", (110.0, 116.0)),
-    "RX_P": ("C32", (110.0, 118.0)),
+    "TX_N": ("C31", (115.5, 105.0)),
+    "TX_P": ("C30", (115.5, 110.0)),
+    "RX_N": ("C33", (115.5, 125.0)),
+    "RX_P": ("C32", (115.5, 130.0)),
 }
 for ref, (x, y) in CAPS.values():
     f = board.FindFootprintByReference(ref)
@@ -72,13 +72,10 @@ for item in list(board.GetTracks()):
 # Bridge-side escapes. TX stays on F.Cu. RX starts on F.Cu at the SMD bridge
 # lands, transitions to B.Cu at separated points, then reaches the cap pads.
 bridge = {
-    "TX_N": ("56", F, [(97.0,119.5),(97.0,112.0),(109.5,112.0)]),
-    # Route the lower member around the upper member's vertical escape
-    # outside the U7 body; this is the planar solution for the reversed
-    # bridge-pad/ordered-cap geometry.
-    "TX_P": ("57", F, [(96.5,119.5),(96.5,118.5),(94.0,118.5),(94.0,110.0),(109.5,110.0),(109.5,114.0)]),
-    "RX_N": ("59", B, [(95.5,119.5),(95.5,116.0),(109.5,116.0)]),
-    "RX_P": ("60", B, [(95.0,119.5),(95.0,118.0),(109.5,118.0)]),
+    "TX_N": ("56", F, [(97.0,119.5),(97.0,105.0),(115.0,105.0)]),
+    "TX_P": ("57", F, [(96.5,119.5),(96.5,110.0),(115.0,110.0)]),
+    "RX_N": ("59", B, [(95.5,119.5),(95.5,121.0),(115.0,125.0)]),
+    "RX_P": ("60", B, [(95.0,119.5),(95.0,121.0),(115.0,130.0)]),
 }
 for key, (u7pin, layer, pts) in bridge.items():
     n = find_net(board, "/STORAGE/BRIDGE_SATA_" + key)
@@ -91,25 +88,29 @@ for key, (u7pin, layer, pts) in bridge.items():
         path(board, n, [source_via, cap_via], B); via(board, n, cap_via)
         path(board, n, [cap_via, cap_pad], F)
 
-# Socket-side launches. TX remains F.Cu. RX transitions immediately after
-# the cap and returns to F.Cu at ordinary vias outside the J3 pad field.
+# Socket-side launches. TX transitions above the connector, traverses B.Cu
+# under its body, and returns at vias outside the signal-pad field. RX uses
+# F.Cu side-entry channels away from the TX launch vias.
 socket = {
-    "TX_N": ("C31", (110.5,112.0), F, [(116.0,112.0),(116.0,136.0),(140.275,136.0),(140.275,133.0)]),
-    "TX_P": ("C30", (110.5,114.0), F, [(118.0,114.0),(118.0,136.0),(132.725,136.0),(132.725,133.25)]),
-    "RX_N": ("C33", (110.5,116.0), B, [(112.0,116.0),(124.0,116.0),(138.0,128.0),(138.0,132.5)]),
-    "RX_P": ("C32", (110.5,118.0), B, [(114.0,118.0),(122.0,118.0),(130.0,128.0),(130.0,132.75)]),
+    "TX_N": ("C31", (145.0,105.0), B, [(145.0,105.0),(145.0,133.0)]),
+    "TX_P": ("C30", (129.0,110.0), B, [(129.0,110.0),(129.0,133.25)]),
+    "RX_N": ("C33", (147.0,125.0), B, [(147.0,125.0),(147.0,132.5)]),
+    "RX_P": ("C32", (131.0,130.0), B, [(131.0,130.0),(131.0,132.75)]),
 }
 socket_pads = {"TX_N": "2", "TX_P": "1", "RX_N": "4", "RX_P": "3"}
 for key, (cap, start, layer, pts) in socket.items():
     n = find_net(board, "/STORAGE/SATA_M2_" + key)
     cap_pad = xy(pad(board, cap, "1"))
-    if layer == F:
-        path(board, n, [cap_pad] + pts[1:], F)
-    else:
-        source_via = pts[0]
-        target_via = pts[-1]
-        path(board, n, [cap_pad, source_via], F); via(board, n, source_via)
-        path(board, n, pts, B); via(board, n, target_via)
-        path(board, n, [target_via, xy(pad(board, "J3", socket_pads[key]))], F)
+    source_via = pts[0]
+    target_via = pts[-1]
+    # The connector body has a dense F.Cu-only no-net field.  Transition
+    # immediately beside the coupling capacitor, stay on B.Cu through the
+    # field, then return only for the final signal-pad dogbone.
+    cap_via = (cap_pad[0] + 1.5, cap_pad[1])
+    path(board, n, [cap_pad, cap_via], F); via(board, n, cap_via)
+    path(board, n, [cap_via, source_via], B)
+    via(board, n, source_via)
+    path(board, n, pts, B); via(board, n, target_via)
+    path(board, n, [target_via, xy(pad(board, "J3", socket_pads[key]))], F)
 
 board.BuildListOfNets(); board.Save(str(OUT)); print(OUT)
