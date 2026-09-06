@@ -2781,3 +2781,22 @@ via-dangling warnings, and 65 expected fixture opens. Native
 route-implementation result, not a Phase 18 promotion; the final crossing
 and dangling transitions must be resolved in a complete storage-island
 context before acreage integration.
+
+## USB3 cleanpass promotion and integrated collision screen — 2026-09-06
+
+The native zero-DRC disposable source-escape fixture was promoted into a
+disposable copy of the selected macro board by moving only U7 to 0 degrees
+and copying its saved CM5IO-derived USB3 copper. The focused native endpoint
+audit still passes all four J7↔U7 USB3 nets. Whole-board native DRC reports
+536 findings, including 4 shorts, 7 `tracks_crossing`, 37 clearance, 9
+`via_dangling`, 24 hole-clearance, and 259 unconnected records. The new
+USB3-specific interactions include shorts/crossings against the frozen
+CM5_PER0_P corridor, crossings against CM5_REFCLK_P and existing power
+return copper, and via/zone interaction at the transformed source/end
+transitions.
+
+The candidate is rejected for integration as `ROUTE IMPLEMENTATION FAILURE`:
+the isolated source escape passed, while the selected-board corridor needs
+obstacle-aware reauthoring around PCIe, power, and references. This does not
+invalidate the macro-floorplan discriminator or the 0-degree U7 ordering
+finding. No accepted acreage copper or PCIe route was changed.

@@ -121,8 +121,13 @@ for target_name, (oracle_name, jpad, upad) in names.items():
     copied, first = oracle_paths[target_name]
     for a, z, layer, _width in copied:
         track(b, net_code, cm5io_to_pisxme(pcbnew.VECTOR2I(a[0], a[1])), cm5io_to_pisxme(pcbnew.VECTOR2I(z[0], z[1])), layer)
-    src_via = cm5io_to_pisxme(pcbnew.VECTOR2I(first[0], first[1])); via(b, net_code, src_via)
-    ev = end_vias[target_name]; via(b, net_code, ev)
+    src_via = cm5io_to_pisxme(pcbnew.VECTOR2I(first[0], first[1]))
+    txp_fcu = target_name.endswith("TX_P") and os.environ.get("P24_TXP_FCU") == "1"
+    if not txp_fcu:
+        via(b, net_code, src_via)
+    ev = end_vias[target_name]
+    if not txp_fcu:
+        via(b, net_code, ev)
     if target_name.startswith("CM5_USB3_RX"):
         track(b, net_code, src_via, ev, B)
     else:
@@ -135,7 +140,7 @@ for target_name, (oracle_name, jpad, upad) in names.items():
         top = V(outer_x, top_y)
         route_layer = F if ((target_name.endswith("TX_P") and os.environ.get("P24_TXP_FCU") == "1") or (target_name.endswith("TX_N") and os.environ.get("P24_TXN_FCU") == "1")) else B
         if target_name.endswith("TX_N") and os.environ.get("P24_TXN_LOCAL") == "1":
-            mid_y = 115.0
+            mid_y = 122.5
             polyline(b, net_code, [src_via, top_at_via, top, V(outer_x, mid_y), V(90.0, mid_y), ev], route_layer)
         else:
             lower = V(outer_x, pcbnew.ToMM(ev.y))
