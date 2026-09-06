@@ -4809,3 +4809,8 @@ validation remain open.
 2026-09-06 — PiSXMe Phase 24 dual-mode storage: updated the isolated future
  fixture specification with the corrected physical M-key lane assignment and
  an explicit prohibition on inheriting the reversed WIP hierarchy mapping.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: recorded a legitimate
+ third-party 21ic reference-package recovery lead listing V004/V008
+ schematics, power-consumption, and layout-guide files. The endpoint is
+ login-gated here, so the files were not claimed as retrieved or used as
+ authority; Path-A and Path-B production CAD remain unchanged.

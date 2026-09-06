@@ -188,6 +188,12 @@ preferred migration candidate because it removes both external high-speed
 selectors and the second bridge. Until then Path A remains the protected
 implementation path.
 
+A third-party 21ic listing advertises V004/V008 reference schematics, a power
+consumption report, and a layout guide. The download is login-gated in the
+current environment and has therefore been recorded only as a recovery lead
+in `authority-inventory/rtl9210b/RTL9210B_REFERENCE_PACKAGE_LEAD.md`; none of
+its advertised files are treated as retrieved or authoritative.
+
 ## Sources
 
 - Realtek RTL9210B-CG Rev. 1.1 PDF, retained under `authority-inventory/rtl9210b/community-lz1/rtl9210b.pdf`.
