@@ -2620,3 +2620,15 @@ clear the adjacent J7 ground pad instead introduced RX pair shorts/crossings,
 with 13 total DRC violations. It is rejected. The prior two-clearance
 geometry remains the best isolated route reference; the angular launch is
 retained only as negative evidence, and no integrated copper is promoted.
+
+## Minimal USB3 source-via spacing result — 2026-09-06
+
+The minimal native J7/U7 fixture was refined with wider pair-ordered source
+via spacing and native endpoint coordinates. Native DRC now reports 1
+clearance finding and 65 expected fixture opens, with no shorts, no
+`tracks_crossing` findings, and no annular-width violations. Native
+`BuildConnectivity` passes J7.128↔U7.42, J7.130↔U7.43, J7.140↔U7.45, and
+J7.142↔U7.46. The sole remaining DRC error is the full-width RX_P escape
+against adjacent fine-pitch J7 ground pad 132 (0.0709 mm actual clearance).
+This is a connector-launch constraint issue; no severity or width rule was
+relaxed, and the fixture is not an integrated-board promotion.

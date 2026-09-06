@@ -30,8 +30,8 @@ b = pcbnew.LoadBoard(str(BASE))
 if b is None: raise RuntimeError("native board load failed")
 ends = {
     "CM5_USB3_RX_N": ("128", "42", V(72, 103.9), V(81, 120)),
-    "CM5_USB3_RX_P": ("130", "43", V(72, 103.5), V(82, 120.5)),
-    "CM5_USB3_TX_N": ("140", "45", V(78, 108.0), V(83, 121.5)),
+    "CM5_USB3_RX_P": ("130", "43", V(74.5, 104.8), V(82, 120.5)),
+    "CM5_USB3_TX_N": ("140", "45", V(79, 107.5), V(83, 121.5)),
     "CM5_USB3_TX_P": ("142", "46", V(80, 109.0), V(84, 122)),
 }
 native = {n: (native_pad(b, "J7", jp), native_pad(b, "U7", up)) for n, (jp, up, _sv, _ev) in ends.items()}
@@ -53,11 +53,7 @@ for name, (_jp, _up, src_via, end_via) in ends.items():
     if name.endswith("RX_P"): launch = V(71.2, 104.8)
     elif name.endswith("TX_N"): launch = V(71.2, 106.3)
     elif name.endswith("TX_P"): launch = V(71.2, 106.7)
-    if name.endswith("RX_P"):
-        launch = V(70.8, 103.5)
-        track(b, net, src, launch, F); track(b, net, launch, src_via, F)
-    else:
-        track(b, net, src, launch, F); track(b, net, launch, src_via, F)
+    track(b, net, src, launch, F); track(b, net, launch, src_via, F)
     via(b, net, src_via); track(b, net, src_via, end_via, B)
     via(b, net, end_via); track(b, net, end_via, dst, F)
 
