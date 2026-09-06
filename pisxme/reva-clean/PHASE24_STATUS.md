@@ -4090,6 +4090,25 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## South coherent storage migration probe — 2026-09-06
+
+As a bounded macro alternative, the complete U7/J3/clock/coupling support
+neighborhood was moved to the south acreage in
+`PHASE24_STORAGE_SOUTH_COHERENT.kicad_pcb`, then U7 was rebound to the
+authoritative TI footprint. The native planner reached both RX targets but
+could not find the TX continuation under its fixed source/target transition
+assumptions; it emitted no accepted route. This is a route-planner failure,
+not a valid placement rejection, and no production or PCIe geometry changed.
+
+The unblocker dispatch for distinct blocker `PHASE24_TI_U7_USB3_INTEGRATED_ROUTING`
+was attempted and returned `collab spawn failed: agent thread limit reached`.
+No unchanged retry was made. Local evidence remains sufficient to continue
+with a cross-class transition allocator; subagent availability is not treated
+as an engineering blocker.
+
+`STORAGE_SOUTH_COHERENT_PROBE = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`
+
 ## TI U7 outside-field target-transition experiment — 2026-09-06
 
 The prior integrated mixed-layer control was corrected to place target vias

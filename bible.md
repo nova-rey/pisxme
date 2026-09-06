@@ -4430,3 +4430,5 @@ Generated five native TI storage-orientation candidates; all four USB3 paths wer
 Tested RX-on-F.Cu/TX-on-B.Cu integrated routing for the U7 0-degree candidate; native DRC rejected it with 54 shorts and 16 crossings, so coordinated transition allocation remains open.
 # 2026-09-06 — Phase 24 TI U7 outside-field transition probe
 Moved target transitions outside the TI exposed pad field; the current F.Cu obstacle model could not reach the targets, so no copper was emitted and the route class remains open.
+# 2026-09-06 — Phase 24 south coherent storage migration probe
+Moved the complete storage support island south and rebound TI U7; RX was reachable but the fixed planner stalled on TX, so the candidate was retained as route-implementation evidence only.
