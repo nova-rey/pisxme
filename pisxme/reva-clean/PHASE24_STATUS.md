@@ -1456,6 +1456,30 @@ shorts, crossings, dangling vias, unconnected pads, or footprint errors. This
 fixture gate is closed; it does not substitute for the integrated-acreage
 gate.
 
+## Official-placement complete support-route transplant — 2026-09-05
+
+The complete CM5IO fixture support geometry was transplanted onto the
+width-corrected official-placement MDI candidate by
+`phase24_transplant_official_support_routes.py`. The operation recreates the
+production C48–C52/R26–R29 support footprints at the exact oracle positions,
+maps the saved native support tracks to the hierarchical production net
+names, and legalizes the fixture's disposable 0.20 mm via drills to ordinary
+0.30 mm through vias. MDI copper was not regenerated or altered.
+
+The resulting `PHASE24_OFFICIAL_ETH_FULL_SUPPORT_ROUTE.kicad_pcb` has native
+DRC counts of `197` total inherited/unrelated violations and `426`
+unconnected acreage items, but zero `shorting_items`, zero `tracks_crossing`,
+zero `track_width` violations, and zero `drill_out_of_range` findings. The
+five dangling vias are inherited power vias outside the Ethernet block.
+
+The new `phase24_official_eth_full_connectivity_audit.py` derives connectivity
+from saved pads/tracks/vias/zones and passes all eight MDI nets, four CT nets,
+four 75-ohm branches, common termination, and shield membership. Its
+negative control removes one real CT1 track and fails as required. This closes
+the complete official support-route oracle gate; it remains an adaptation
+candidate, not an integrated-acreage pass. R30/R31 LED series parts and their
+production routing are still required before final Ethernet promotion.
+
 ## Official-placement MDI width-corrected discriminator — 2026-09-05
 
 Following the independent review, the official 189-item MDI geometry was
