@@ -82,3 +82,13 @@ Distributor pages are procurement evidence, not design authority. The local
 PCB footprint for the existing JAE B-key part is project-derived and remains
 reference-only for the requested M-key replacement until exact M-key drawing
 parity is demonstrated.
+
+## 2026-09-06 correction
+
+The detailed JMS583 Rev 2.1 pin table assigns REXT to pin 39, GPIO[7] to pin
+12, and AVDD33 to pin 19. The generated authority was corrected accordingly;
+pins 3/4/5/7 remain optional DNP SPI signals and pins 8/9/12/13/14/57/58/59
+are named as configurable GPIOs rather than silently treated as power or REXT.
+The M.2 TP-053 revision also states that IFDET/PRESENCE contacts were removed;
+DAS/DSS is not accepted as a generic SATA/NVMe detector. AUTO therefore remains
+open until a real detector/sequencer is documented.

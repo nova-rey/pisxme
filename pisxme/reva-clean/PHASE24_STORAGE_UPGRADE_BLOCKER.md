@@ -70,3 +70,39 @@ footprint parity check for `1-2199230-4` before replacing J3.
    interfaces, firmware provenance and socket-side integration are documented.
 3. Dropping dual-mode storage would retain the old SATA-only board, but that
    is a user architectural decision and is not assumed.
+
+## Current implementation audit — 2026-09-06
+
+The implementation path has since been advanced in the working tree:
+
+- `STORAGE.kicad_sch` contains the TE M-key socket, JMS583-QHFA3A, and the two
+  TI selectors. The JMS583 embedded symbol now reflects the detailed table,
+  including REXT pin 39, AVDD33 pin 19, all AVDDL/VCCO/VCCK pins, GPIO/SPI
+  optional pins, reset, crystal, and LXO.
+- `phase24_dual_mode_storage_schematic_audit.py`, the library audit, and the
+  mode-contract net-label audit pass. A removed-label negative control fails.
+- Native KiCad netlist export parses successfully. Native ERC still reports
+  201 violations, so this is not a release schematic.
+- The native PCB candidate is placement-only and remains unrouted; its last
+  native report recorded 1,013 violations and 482 unconnected items. It is not
+  an integrated-board PASS.
+
+The remaining engineering blockers are now explicit rather than generic
+documentation objections:
+
+1. The M.2 standard revision retained in the repository has no generic PEDET
+   contact; IFDET/PRESENCE were removed. DAS/DSS cannot honestly be used as a
+   universal SATA-versus-NVMe detector. AUTO therefore needs a real documented
+   detector/sequencer or must remain open.
+2. The JMS583 support network is represented as pin authority but still needs
+   native component instances and physical support routing: 25-MHz crystal,
+   REXT, AVDD33 capacitor, LXO inductor, reset RC, VBUS divider, decoupling,
+   and the documented AC coupling capacitors.
+3. The complete switched-mode native fixture, including inactive-state
+   isolation and forced SATA/NVMe cases, has not yet passed DRC/connectivity.
+4. TE customer CAD is retained, but its pad-by-pad native coordinate audit,
+   courtyard, and 3D model release review remain open.
+
+This report therefore remains `OPEN`; no Phase 24 resumption or completion is
+claimed. The corrected JMS583 pin authority also supersedes any earlier
+intermediate map that called pin 12 REXT.
