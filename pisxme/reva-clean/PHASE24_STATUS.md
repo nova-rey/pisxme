@@ -2609,3 +2609,14 @@ all four J7↔U7 USB3 endpoint assertions. This is a successful USB3 route-
 development result but not Phase 18 closure: clearance findings and inherited
 opens remain, and SATA/clock/support integration is still outstanding. No
 copper was promoted to the acreage candidate.
+
+## Minimal USB3 fixture launch follow-up — 2026-09-06
+
+The minimal native fixture isolated the J7/U7 geometry from inherited board
+objects. Its wider source-via fanout reached 2 clearance findings, 0 shorts,
+0 crossings, and 65 fixture opens; native `BuildConnectivity` passed all four
+J7↔U7 endpoints. A subsequent full-width angular RX_P launch intended to
+clear the adjacent J7 ground pad instead introduced RX pair shorts/crossings,
+with 13 total DRC violations. It is rejected. The prior two-clearance
+geometry remains the best isolated route reference; the angular launch is
+retained only as negative evidence, and no integrated copper is promoted.
