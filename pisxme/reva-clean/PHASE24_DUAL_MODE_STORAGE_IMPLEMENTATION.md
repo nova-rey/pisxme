@@ -103,3 +103,9 @@ findings and 22 shorting findings in the current route, plus expected partial
 fixture/unconnected/package-rule findings. The next bounded repair is to make
 the B.Cu corridor ordering match the staggered escape ordering; no component
 or architecture change is indicated.
+
+The fifth isolated routing iteration corrected the B.Cu destination ordering
+and reduced native DRC shorting findings to 17. Remaining crossings are
+localized to the CM5 source fanout, the final U12 dogbones, and the separate
+U11 selector-side pair fanouts. These are still route implementation defects;
+the next experiment will partition those corridors by permitted copper layer.

@@ -70,8 +70,12 @@ def main():
         # row is a package-field short, not a valid route.
         # Through-vias cannot occupy the 0.4-mm QFN pitch.  Stagger them
         # outside the field while keeping the final dogbone short.
-        escapes = {"128": (162.0, 154.0), "130": (168.0, 154.0),
-                   "140": (162.0, 156.0), "142": (168.0, 156.0)}
+        # Order the B.Cu destinations in the same top-to-bottom order as the
+        # source corridors: TX_P, TX_N, RX_P, RX_N.  The vias are deliberately
+        # spread beyond the QFN field, so no two through-vias share the 0.4-mm
+        # package pitch.
+        escapes = {"142": (162.0, 154.0), "140": (164.0, 154.0),
+                   "130": (166.0, 154.0), "128": (168.0, 154.0)}
         zx, dogbone_y = escapes[j7n]
         via(b, n, zx, dogbone_y)
         path(b, n, [V(160.0, lanes[j7n]), V(zx, dogbone_y)], B)

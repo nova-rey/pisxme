@@ -4624,3 +4624,9 @@ through-vias outside the QFN field. Native DRC reduced the original direct
 pad-field failure but still reports route-implementation crossings/shorts in
 the shared B.Cu corridor. This remains disposable evidence; next repair is
 lane-order correction, not architecture or rule relaxation.
+
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: ordered the isolated USB3
+destination escapes to match the B.Cu corridor and reran native DRC. The
+experiment reduced shorting findings to 17; remaining crossings are localized
+to source fanout, U12 dogbones, and selector-side pair fanouts. Continue with
+permitted layer partitioning; architecture and validation rules remain fixed.
