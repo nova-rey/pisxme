@@ -2223,3 +2223,14 @@ pads, with no shorts or crossings. Native DRC reports 0 shorts, 0 crossings,
 236 unconnected items, and 12 clearance items. The candidate
 `PHASE24_REGULATOR_INPUT_TOP_PAD_CURRENT.kicad_pcb` is promoted; U4 and the
 remaining U5.14 input pad remain explicit open repair targets.
+
+### Rejected U4/U7 local escape variants — 2026-09-06
+
+The U4 protected-input B.Cu bridge reduced the native unconnected count from
+236 to 235 but added two clearance violations against the existing
+PG_BRIDGE_3V3 geometry, so it was rejected. The U7
+`/STORAGE/BRIDGE_1V1` outside-QFN dogbone reduced the count to 236 but added
+one short and two track crossings, so it was rejected. Both are
+`ROUTE IMPLEMENTATION FAILURE` results. The promoted basis remains
+`PHASE24_REGULATOR_INPUT_TOP_PAD_CURRENT.kicad_pcb` with zero shorts and zero
+crossings; neither U4 nor U7 architecture or placement is being waived.
