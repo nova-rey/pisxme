@@ -2319,6 +2319,15 @@ shorts, 0 track crossings, 220 unconnected items, and 12 clearance items.
 `PHASE24_CM5_5V_FEEDBACK_DOGBONE_CURRENT.kicad_pcb` is promoted; the
 remaining CM5 5V feedback/control and power-return endpoints remain open.
 
+### Promote U7 storage 3V3 adjacent pad join — 2026-09-06
+
+The adjacent U7.30/U7.31 `/STORAGE/BRIDGE_3V3` pads were joined with a short
+F.Cu segment using their actual native net identity. The regulator-side
+`/REGULATORS/BRIDGE_3V3` net was not merged. Native KiCad DRC reports 0
+shorts, 0 track crossings, 219 unconnected items, and 12 clearance items.
+`PHASE24_U7_STORAGE_3V3_ADJACENT_CURRENT.kicad_pcb` is promoted; the
+remaining U7 storage 3V3 pad-field connection remains open.
+
 ### Rejected U3 protected-input bridge — 2026-09-06
 
 The U3.14/U3.16 `/12V_PROTECTED` offset-via bridge reduced the native open
