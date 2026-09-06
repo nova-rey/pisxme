@@ -2181,3 +2181,14 @@ C16.2-C17.2-C19.2 are connected on their actual copper layers. The U5 audit
 and real-trace negative control still pass. The candidate
 `PHASE24_GROUND_CAP_LINKS_CURRENT.kicad_pcb` is promoted; all remaining
 full-board opens still require closure.
+
+### Promote local Ethernet support-ground joins — 2026-09-06
+
+The two isolated POWER_GND pads on each Ethernet support device were joined
+with short same-layer F.Cu tracks only. The earlier cross-island probe was
+rejected; this local-only geometry avoids the signal-pad corridors. Native
+KiCad DRC reports 0 shorts, 0 track crossings, 249 unconnected items, and 12
+clearance items. The Ethernet native connectivity audit and real-track
+negative control both pass. `PHASE24_ETH_GROUND_LOCAL_CURRENT.kicad_pcb` is
+promoted; remaining board-wide ground, power, service, and control opens are
+still open.
