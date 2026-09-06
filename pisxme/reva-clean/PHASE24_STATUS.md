@@ -1,5 +1,15 @@
 # Phase 24 acreage validation status
 
+## Common-region reachability discriminator
+
+An actual-board reachability scan was run from ordinary via-exit points near
+U7.52/.53/.54, using net-aware obstacles on B.Cu. All three clock nets share
+a large reachable region; the earlier launch failures are therefore caused
+by the chosen passive-island endpoint corridor and its reserved paths, not by
+an inherently disconnected U7 escape. The next candidate should place the
+complete passive island inside that common region and terminate each launch
+with a local endpoint via before any detailed support routing is attempted.
+
 ## Coordinated-layer clock oracle placement basis
 
 `PHASE24_CLOCK_COORDINATED_LAYERS.kicad_pcb` was identified as the strongest

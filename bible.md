@@ -4372,3 +4372,5 @@ Tested a 20 mm west / 10 mm south coherent migration of the native-valid V2 cloc
 Reran the native KiCad regression for the complete V2 clock fixture: PASS. The source XI/XO/VSSOSC graph remains free of clock shorting/crossing classes; only V26 transplant/launch integration remains open.
 # 2026-09-06 — Phase 24 coordinated-layer clock oracle basis
 Selected the native-clean coordinated-layer clock fixture as the strongest support source. Its west/south V26 transform preserves pad-layer authority and has no shorting, crossing, clearance, or dangling-via classes; only three U7 launch tails and inherited board opens remain.
+# 2026-09-06 — Phase 24 common-region clock reachability
+An actual net-aware obstacle scan from ordinary U7 clock-pad exit vias found a large common B.Cu reachable region for XI, XO, and VSSOSC. This distinguishes endpoint-corridor placement failure from inherent U7 escape impossibility and directs the next candidate into that common region.
