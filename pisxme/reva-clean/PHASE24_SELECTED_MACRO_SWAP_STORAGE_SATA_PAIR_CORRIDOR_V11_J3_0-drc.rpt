@@ -1,0 +1,883 @@
+** Drc report for PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_PAIR_CORRIDOR_V11_J3_0.kicad_pcb **
+** Created on 2026-09-06T07:33:16 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 137 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(126.7500 mm, 118.7250 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 2.5000 mm
+    @(126.5000 mm, 118.7250 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 2.2500 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_P and /STORAGE/SATA_M2_TX_P)
+    Local override; error
+    @(126.7500 mm, 118.7250 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 2.5000 mm
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0340 mm)
+    Rule: board setup constraints hole; error
+    @(126.7500 mm, 118.7250 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 2.5000 mm
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_P and )
+    Local override; error
+    @(126.7500 mm, 118.7250 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 2.5000 mm
+    @(127.6500 mm, 119.5000 mm): Pad S1 [<no net>] of J3 on F.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(128.7500 mm, 118.7250 mm): Pad 1 [/STORAGE/SATA_M2_TX_P] of J3 on F.Cu
+    @(126.7500 mm, 118.7250 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 2.5000 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(112.0000 mm, 116.0000 mm): Track [/STORAGE/SATA_M2_RX_P] on B.Cu, length 14.9996 mm
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(112.0000 mm, 116.0000 mm): Track [/STORAGE/SATA_M2_RX_P] on B.Cu, length 14.9996 mm
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(112.0000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on B.Cu, length 15.9836 mm
+    @(112.0000 mm, 116.0000 mm): Track [/STORAGE/SATA_M2_RX_P] on B.Cu, length 14.9996 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1379 mm)
+    Local override; error
+    @(95.0000 mm, 119.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on F.Cu, length 3.2016 mm
+    @(94.5000 mm, 119.5000 mm): Pad 61 [<no net>] of U7 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(127.2500 mm, 126.2750 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 2.2500 mm
+    @(126.7500 mm, 126.2750 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 2.2500 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_N and /STORAGE/SATA_M2_TX_N)
+    Local override; error
+    @(127.2500 mm, 126.2750 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 2.2500 mm
+    @(129.0000 mm, 126.2750 mm): Pad 2 [/STORAGE/SATA_M2_TX_N] of J3 on F.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_N and /STORAGE/SATA_M2_RX_N)
+    Local override; error
+    @(126.7500 mm, 126.2750 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 2.2500 mm
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(126.7500 mm, 126.2750 mm): Track [/STORAGE/SATA_M2_TX_N] on F.Cu, length 2.2500 mm
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_N and /STORAGE/SATA_M2_RX_N)
+    Local override; error
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1000 mm)
+    Rule: board setup constraints hole; error
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_N and /STORAGE/SATA_M2_RX_N)
+    Local override; error
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1000 mm)
+    Rule: board setup constraints hole; error
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_N and /STORAGE/SATA_M2_RX_N)
+    Local override; error
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1000 mm)
+    Rule: board setup constraints hole; error
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_N and /STORAGE/SATA_M2_RX_N)
+    Local override; error
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1000 mm)
+    Rule: board setup constraints hole; error
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_N and /STORAGE/SATA_M2_RX_N)
+    Local override; error
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1000 mm)
+    Rule: board setup constraints hole; error
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_N and /STORAGE/SATA_M2_RX_N)
+    Local override; error
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1000 mm)
+    Rule: board setup constraints hole; error
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_N and /STORAGE/SATA_M2_TX_N)
+    Local override; error
+    @(112.0000 mm, 128.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on B.Cu, length 15.3473 mm
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(112.0000 mm, 128.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on B.Cu, length 15.3473 mm
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_RX_N and /STORAGE/SATA_M2_TX_N)
+    Local override; error
+    @(112.0000 mm, 128.0000 mm): Track [/STORAGE/SATA_M2_RX_N] on B.Cu, length 15.3473 mm
+    @(112.0000 mm, 124.0000 mm): Track [/STORAGE/SATA_M2_TX_N] on B.Cu, length 14.9244 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and )
+    Local override; error
+    @(126.5000 mm, 118.7250 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 2.2500 mm
+    @(127.6500 mm, 119.5000 mm): Pad S1 [<no net>] of J3 on F.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(126.5000 mm, 118.7250 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 2.2500 mm
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(126.5000 mm, 118.7250 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 2.2500 mm
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.0500 mm)
+    Local override; error
+    @(127.6500 mm, 119.5000 mm): Pad S1 [<no net>] of J3 on F.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(127.6500 mm, 119.5000 mm): Pad S1 [<no net>] of J3 on F.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(112.0000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on B.Cu, length 15.9836 mm
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0340 mm)
+    Rule: board setup constraints hole; error
+    @(112.0000 mm, 112.0000 mm): Track [/STORAGE/SATA_M2_TX_P] on B.Cu, length 15.9836 mm
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/SATA_M2_TX_P and /STORAGE/SATA_M2_RX_P)
+    Local override; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(127.6500 mm, 119.5000 mm): Pad S1 [<no net>] of J3 on F.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(0.0000 mm, 0.0000 mm): Rectangle on Edge.Cuts
+    @(138.0000 mm, 182.2500 mm): PTH pad M3 [<no net>] of J3
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(126.7500 mm, 118.7250 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 2.5000 mm
+    @(128.7500 mm, 118.7250 mm): Pad 1 [/STORAGE/SATA_M2_TX_P] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(126.7500 mm, 118.7250 mm): Track [/STORAGE/SATA_M2_RX_P] on F.Cu, length 2.5000 mm
+    @(127.6500 mm, 119.5000 mm): Pad S1 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+    @(127.6500 mm, 119.5000 mm): Pad S1 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(127.2500 mm, 126.2750 mm): Track [/STORAGE/SATA_M2_RX_N] on F.Cu, length 2.2500 mm
+    @(129.0000 mm, 126.2750 mm): Pad 2 [/STORAGE/SATA_M2_TX_N] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(126.5000 mm, 118.7250 mm): Track [/STORAGE/SATA_M2_TX_P] on F.Cu, length 2.2500 mm
+    @(127.6500 mm, 119.5000 mm): Pad S1 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(128.7500 mm, 118.7250 mm): Pad 1 [/STORAGE/SATA_M2_TX_P] of J3 on F.Cu
+    @(129.2500 mm, 118.7250 mm): Pad 3 [/STORAGE/SATA_M2_RX_P] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(139.2500 mm, 118.7250 mm): Pad 43 [<no net>] of J3 on F.Cu
+    @(138.7500 mm, 118.7250 mm): Pad 41 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(139.2500 mm, 118.7250 mm): Pad 43 [<no net>] of J3 on F.Cu
+    @(139.7500 mm, 118.7250 mm): Pad 45 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(139.5000 mm, 126.2750 mm): Pad 44 [<no net>] of J3 on F.Cu
+    @(139.0000 mm, 126.2750 mm): Pad 42 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(139.5000 mm, 126.2750 mm): Pad 44 [<no net>] of J3 on F.Cu
+    @(140.0000 mm, 126.2750 mm): Pad 46 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(129.0000 mm, 126.2750 mm): Pad 2 [/STORAGE/SATA_M2_TX_N] of J3 on F.Cu
+    @(129.5000 mm, 126.2750 mm): Pad 4 [/STORAGE/SATA_M2_RX_N] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(129.2500 mm, 118.7250 mm): Pad 3 [/STORAGE/SATA_M2_RX_P] of J3 on F.Cu
+    @(129.7500 mm, 118.7250 mm): Pad 5 [/STORAGE/M2_3V3] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(129.5000 mm, 126.2750 mm): Pad 4 [/STORAGE/SATA_M2_RX_N] of J3 on F.Cu
+    @(130.0000 mm, 126.2750 mm): Pad 6 [POWER_GND] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(129.7500 mm, 118.7250 mm): Pad 5 [/STORAGE/M2_3V3] of J3 on F.Cu
+    @(130.2500 mm, 118.7250 mm): Pad 7 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(139.7500 mm, 118.7250 mm): Pad 45 [<no net>] of J3 on F.Cu
+    @(140.2500 mm, 118.7250 mm): Pad 47 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(140.0000 mm, 126.2750 mm): Pad 46 [<no net>] of J3 on F.Cu
+    @(140.5000 mm, 126.2750 mm): Pad 48 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(130.0000 mm, 126.2750 mm): Pad 6 [POWER_GND] of J3 on F.Cu
+    @(130.5000 mm, 126.2750 mm): Pad 8 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(140.2500 mm, 118.7250 mm): Pad 47 [<no net>] of J3 on F.Cu
+    @(140.7500 mm, 118.7250 mm): Pad 49 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(140.5000 mm, 126.2750 mm): Pad 48 [<no net>] of J3 on F.Cu
+    @(141.0000 mm, 126.2750 mm): Pad 50 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(140.7500 mm, 118.7250 mm): Pad 49 [<no net>] of J3 on F.Cu
+    @(141.2500 mm, 118.7250 mm): Pad 51 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(130.2500 mm, 118.7250 mm): Pad 7 [<no net>] of J3 on F.Cu
+    @(130.7500 mm, 118.7250 mm): Pad 9 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(130.5000 mm, 126.2750 mm): Pad 8 [<no net>] of J3 on F.Cu
+    @(131.0000 mm, 126.2750 mm): Pad 10 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(141.0000 mm, 126.2750 mm): Pad 50 [<no net>] of J3 on F.Cu
+    @(141.5000 mm, 126.2750 mm): Pad 52 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(141.2500 mm, 118.7250 mm): Pad 51 [<no net>] of J3 on F.Cu
+    @(141.7500 mm, 118.7250 mm): Pad 53 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(141.5000 mm, 126.2750 mm): Pad 52 [<no net>] of J3 on F.Cu
+    @(142.0000 mm, 126.2750 mm): Pad 54 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(141.7500 mm, 118.7250 mm): Pad 53 [<no net>] of J3 on F.Cu
+    @(142.2500 mm, 118.7250 mm): Pad 55 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(142.0000 mm, 126.2750 mm): Pad 54 [<no net>] of J3 on F.Cu
+    @(142.5000 mm, 126.2750 mm): Pad 56 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(142.2500 mm, 118.7250 mm): Pad 55 [<no net>] of J3 on F.Cu
+    @(142.7500 mm, 118.7250 mm): Pad 57 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(142.5000 mm, 126.2750 mm): Pad 56 [<no net>] of J3 on F.Cu
+    @(143.0000 mm, 126.2750 mm): Pad 58 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(131.5000 mm, 126.2750 mm): Pad 59 [<no net>] of J3 on F.Cu
+    @(131.0000 mm, 126.2750 mm): Pad 10 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(131.5000 mm, 126.2750 mm): Pad 59 [<no net>] of J3 on F.Cu
+    @(132.0000 mm, 126.2750 mm): Pad 61 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(131.7500 mm, 118.7250 mm): Pad 60 [<no net>] of J3 on F.Cu
+    @(131.2500 mm, 118.7250 mm): Pad 11 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(131.7500 mm, 118.7250 mm): Pad 60 [<no net>] of J3 on F.Cu
+    @(132.2500 mm, 118.7250 mm): Pad 62 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(132.0000 mm, 126.2750 mm): Pad 61 [<no net>] of J3 on F.Cu
+    @(132.5000 mm, 126.2750 mm): Pad 63 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(130.7500 mm, 118.7250 mm): Pad 9 [<no net>] of J3 on F.Cu
+    @(131.2500 mm, 118.7250 mm): Pad 11 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(132.2500 mm, 118.7250 mm): Pad 62 [<no net>] of J3 on F.Cu
+    @(132.7500 mm, 118.7250 mm): Pad 64 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(133.5000 mm, 126.2750 mm): Pad 20 [<no net>] of J3 on F.Cu
+    @(133.0000 mm, 126.2750 mm): Pad 65 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(132.5000 mm, 126.2750 mm): Pad 63 [<no net>] of J3 on F.Cu
+    @(133.0000 mm, 126.2750 mm): Pad 65 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(132.7500 mm, 118.7250 mm): Pad 64 [<no net>] of J3 on F.Cu
+    @(133.2500 mm, 118.7250 mm): Pad 66 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(133.5000 mm, 126.2750 mm): Pad 20 [<no net>] of J3 on F.Cu
+    @(134.0000 mm, 126.2750 mm): Pad 22 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(133.2500 mm, 118.7250 mm): Pad 66 [<no net>] of J3 on F.Cu
+    @(133.7500 mm, 118.7250 mm): Pad 21 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(145.2500 mm, 118.7250 mm): Pad 67 [<no net>] of J3 on F.Cu
+    @(145.7500 mm, 118.7250 mm): Pad 69 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(145.5000 mm, 126.2750 mm): Pad 68 [<no net>] of J3 on F.Cu
+    @(146.0000 mm, 126.2750 mm): Pad 70 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(145.7500 mm, 118.7250 mm): Pad 69 [<no net>] of J3 on F.Cu
+    @(146.2500 mm, 118.7250 mm): Pad 71 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(146.0000 mm, 126.2750 mm): Pad 70 [<no net>] of J3 on F.Cu
+    @(146.5000 mm, 126.2750 mm): Pad 72 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(133.7500 mm, 118.7250 mm): Pad 21 [<no net>] of J3 on F.Cu
+    @(134.2500 mm, 118.7250 mm): Pad 23 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(146.2500 mm, 118.7250 mm): Pad 71 [<no net>] of J3 on F.Cu
+    @(146.7500 mm, 118.7250 mm): Pad 73 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(146.5000 mm, 126.2750 mm): Pad 72 [<no net>] of J3 on F.Cu
+    @(147.0000 mm, 126.2750 mm): Pad 74 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(134.0000 mm, 126.2750 mm): Pad 22 [<no net>] of J3 on F.Cu
+    @(134.5000 mm, 126.2750 mm): Pad 24 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(134.2500 mm, 118.7250 mm): Pad 23 [<no net>] of J3 on F.Cu
+    @(134.7500 mm, 118.7250 mm): Pad 25 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(134.5000 mm, 126.2750 mm): Pad 24 [<no net>] of J3 on F.Cu
+    @(135.0000 mm, 126.2750 mm): Pad 26 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(134.7500 mm, 118.7250 mm): Pad 25 [<no net>] of J3 on F.Cu
+    @(135.2500 mm, 118.7250 mm): Pad 27 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(135.0000 mm, 126.2750 mm): Pad 26 [<no net>] of J3 on F.Cu
+    @(135.5000 mm, 126.2750 mm): Pad 28 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(146.7500 mm, 118.7250 mm): Pad 73 [<no net>] of J3 on F.Cu
+    @(147.2500 mm, 118.7250 mm): Pad 75 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(135.2500 mm, 118.7250 mm): Pad 27 [<no net>] of J3 on F.Cu
+    @(135.7500 mm, 118.7250 mm): Pad 29 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(135.5000 mm, 126.2750 mm): Pad 28 [<no net>] of J3 on F.Cu
+    @(136.0000 mm, 126.2750 mm): Pad 30 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(135.7500 mm, 118.7250 mm): Pad 29 [<no net>] of J3 on F.Cu
+    @(136.2500 mm, 118.7250 mm): Pad 31 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(136.0000 mm, 126.2750 mm): Pad 30 [<no net>] of J3 on F.Cu
+    @(136.5000 mm, 126.2750 mm): Pad 32 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(136.2500 mm, 118.7250 mm): Pad 31 [<no net>] of J3 on F.Cu
+    @(136.7500 mm, 118.7250 mm): Pad 33 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(136.5000 mm, 126.2750 mm): Pad 32 [<no net>] of J3 on F.Cu
+    @(137.0000 mm, 126.2750 mm): Pad 34 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(136.7500 mm, 118.7250 mm): Pad 33 [<no net>] of J3 on F.Cu
+    @(137.2500 mm, 118.7250 mm): Pad 35 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(137.0000 mm, 126.2750 mm): Pad 34 [<no net>] of J3 on F.Cu
+    @(137.5000 mm, 126.2750 mm): Pad 36 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(137.2500 mm, 118.7250 mm): Pad 35 [<no net>] of J3 on F.Cu
+    @(137.7500 mm, 118.7250 mm): Pad 37 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(137.5000 mm, 126.2750 mm): Pad 36 [<no net>] of J3 on F.Cu
+    @(138.0000 mm, 126.2750 mm): Pad 38 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(137.7500 mm, 118.7250 mm): Pad 37 [<no net>] of J3 on F.Cu
+    @(138.2500 mm, 118.7250 mm): Pad 39 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(138.0000 mm, 126.2750 mm): Pad 38 [<no net>] of J3 on F.Cu
+    @(138.5000 mm, 126.2750 mm): Pad 40 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(138.2500 mm, 118.7250 mm): Pad 39 [<no net>] of J3 on F.Cu
+    @(138.7500 mm, 118.7250 mm): Pad 41 [<no net>] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(138.5000 mm, 126.2750 mm): Pad 40 [<no net>] of J3 on F.Cu
+    @(139.0000 mm, 126.2750 mm): Pad 42 [<no net>] of J3 on F.Cu
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(0.0000 mm, 0.0000 mm): Rectangle on Edge.Cuts
+    @(126.5000 mm, 124.0000 mm): Segment of J3 on f.silkscreen
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(0.0000 mm, 0.0000 mm): Rectangle on Edge.Cuts
+    @(149.5000 mm, 202.2500 mm): Segment of J3 on f.silkscreen
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.2000 mm)
+    Rule: board setup constraints; warning
+    @(112.0000 mm, 116.0000 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+    @(112.5000 mm, 116.0000 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)
+    Rule: board setup constraints; warning
+    @(126.5000 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(126.7500 mm, 118.7250 mm): Via [/STORAGE/SATA_M2_RX_P] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.2000 mm)
+    Rule: board setup constraints; warning
+    @(112.0000 mm, 128.0000 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+    @(112.5000 mm, 128.0000 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.2000 mm)
+    Rule: board setup constraints; warning
+    @(126.7500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(127.2500 mm, 126.2750 mm): Via [/STORAGE/SATA_M2_RX_N] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.2000 mm)
+    Rule: board setup constraints; warning
+    @(112.0000 mm, 124.0000 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+    @(112.5000 mm, 124.0000 mm): Via [/STORAGE/SATA_M2_TX_N] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.2000 mm)
+    Rule: board setup constraints; warning
+    @(112.5000 mm, 112.0000 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+    @(112.0000 mm, 112.0000 mm): Via [/STORAGE/SATA_M2_TX_P] on F.Cu - B.Cu
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(172.0000 mm, 185.1000 mm): Reference field of R23
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(191.0000 mm, 162.0000 mm): Reference field of C17
+    @(189.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C17 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(191.0000 mm, 162.0000 mm): Reference field of C17
+    @(192.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C17 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(197.0000 mm, 162.0000 mm): Reference field of C19
+    @(195.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C19 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(197.0000 mm, 162.0000 mm): Reference field of C19
+    @(198.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C19 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(185.0000 mm, 162.0000 mm): Reference field of C16
+    @(183.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C16 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(185.0000 mm, 162.0000 mm): Reference field of C16
+    @(186.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C16 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.9500 mm, 116.4000 mm): Segment of C32 on f.silkscreen
+    @(111.0000 mm, 116.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_P] of C32 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.9500 mm, 128.4000 mm): Segment of C33 on f.silkscreen
+    @(111.0000 mm, 128.0000 mm): Pad 1 [/STORAGE/SATA_M2_RX_N] of C33 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.9500 mm, 124.4000 mm): Segment of C31 on f.silkscreen
+    @(111.0000 mm, 124.0000 mm): Pad 1 [/STORAGE/SATA_M2_TX_N] of C31 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.9500 mm, 112.4000 mm): Segment of C30 on f.silkscreen
+    @(111.0000 mm, 112.0000 mm): Pad 1 [/STORAGE/SATA_M2_TX_P] of C30 on F.Cu
+[copper_sliver]: Copper sliver (B.Cu)
+    Local override; warning
+
+** Found 80 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(183.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C16 on F.Cu
+    @(189.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C17 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(189.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C17 on F.Cu
+    @(195.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C19 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(130.0000 mm, 126.2750 mm): Pad 6 [POWER_GND] of J3 on F.Cu
+    @(186.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C16 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(186.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C16 on F.Cu
+    @(192.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C17 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(192.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C17 on F.Cu
+    @(198.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C19 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.0000 mm, 119.5000 mm): Pad 52 [/STORAGE/BRIDGE_XI] of U7 on F.Cu
+    @(171.5000 mm, 182.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of C42 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(171.5000 mm, 182.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of C42 on B.Cu
+    @(171.5000 mm, 186.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of R23 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(171.5000 mm, 186.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of R23 on B.Cu
+    @(176.9000 mm, 185.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(172.5000 mm, 182.0000 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of C42 on B.Cu
+    @(176.9000 mm, 186.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(172.5000 mm, 182.0000 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of C42 on B.Cu
+    @(98.5000 mm, 119.5000 mm): Pad 53 [/STORAGE/BRIDGE_VSSOSC] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(172.5000 mm, 190.0000 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of C43 on B.Cu
+    @(176.9000 mm, 186.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(176.9000 mm, 186.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+    @(179.1000 mm, 185.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.5000 mm, 128.5000 mm): Pad 21 [/STORAGE/BRIDGE_CFG] of U7 on F.Cu
+    @(100.5000 mm, 128.5000 mm): Pad 1 [/STORAGE/BRIDGE_CFG] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.5000 mm, 127.0000 mm): Pad 4 [/STORAGE/BRIDGE_RESET] of U7 on F.Cu
+    @(100.5000 mm, 128.0000 mm): Pad 2 [/STORAGE/BRIDGE_RESET] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(91.5000 mm, 123.5000 mm): Pad 41 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
+    @(100.5000 mm, 127.5000 mm): Pad 3 [/STORAGE/BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(95.5000 mm, 119.5000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 2.5000 mm
+    @(100.5000 mm, 124.5000 mm): Pad 9 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.5000 mm, 124.5000 mm): Pad 9 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+    @(100.5000 mm, 125.0000 mm): Pad 8 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.5000 mm, 125.0000 mm): Pad 8 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+    @(100.5000 mm, 125.5000 mm): Pad 7 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.5000 mm, 125.5000 mm): Pad 7 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+    @(100.5000 mm, 126.0000 mm): Pad 6 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.5000 mm, 126.5000 mm): Pad 5 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+    @(100.5000 mm, 126.0000 mm): Pad 6 [/STORAGE/BRIDGE_SATA_RX_N] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(95.0000 mm, 128.5000 mm): Pad 24 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
+    @(98.0000 mm, 128.5000 mm): Pad 30 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(98.0000 mm, 128.5000 mm): Pad 30 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
+    @(98.5000 mm, 128.5000 mm): Pad 31 [/STORAGE/BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(98.0000 mm, 119.5000 mm): Pad 54 [/STORAGE/BRIDGE_XO] of U7 on F.Cu
+    @(172.5000 mm, 186.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(172.5000 mm, 186.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
+    @(171.5000 mm, 190.0000 mm): Pad 1 [/STORAGE/BRIDGE_XO] of C43 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(179.1000 mm, 186.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on B.Cu
+    @(172.5000 mm, 186.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 98.7000 mm): Pad 1 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 99.9000 mm): Pad 7 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 99.9000 mm): Pad 7 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 101.1000 mm): Pad 13 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 101.1000 mm): Pad 13 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 103.1000 mm): Pad 23 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 103.1000 mm): Pad 23 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 105.1000 mm): Pad 33 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 105.1000 mm): Pad 33 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 107.1000 mm): Pad 43 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 107.1000 mm): Pad 43 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 109.1000 mm): Pad 53 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 109.1000 mm): Pad 53 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 110.3000 mm): Pad 59 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 110.3000 mm): Pad 59 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 111.5000 mm): Pad 65 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 111.5000 mm): Pad 65 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 112.7000 mm): Pad 71 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 99.9000 mm): Pad 8 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 98.7000 mm): Pad 2 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 101.1000 mm): Pad 14 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 99.9000 mm): Pad 8 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 101.1000 mm): Pad 14 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 102.7000 mm): Pad 22 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 102.7000 mm): Pad 22 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 104.7000 mm): Pad 32 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 104.7000 mm): Pad 32 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 106.7000 mm): Pad 42 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 106.7000 mm): Pad 42 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 108.7000 mm): Pad 52 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 110.3000 mm): Pad 60 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 111.5000 mm): Pad 66 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 110.3000 mm): Pad 60 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 108.7000 mm): Pad 52 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 111.5000 mm): Pad 66 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 113.1000 mm): Pad 74 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 111.5000 mm): Pad 66 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 111.5000 mm): Pad 65 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 117.9000 mm): Pad 98 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 113.1000 mm): Pad 74 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 101.1000 mm): Pad 113 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 99.9000 mm): Pad 107 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 102.3000 mm): Pad 119 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 101.1000 mm): Pad 113 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 103.5000 mm): Pad 125 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 102.3000 mm): Pad 119 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 104.7000 mm): Pad 131 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 103.5000 mm): Pad 125 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 104.7000 mm): Pad 131 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 105.9000 mm): Pad 137 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 104.7000 mm): Pad 131 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 104.7000 mm): Pad 32 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 105.9000 mm): Pad 137 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 105.9000 mm): Pad 138 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 110.7000 mm): Pad 161 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 109.5000 mm): Pad 155 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 110.7000 mm): Pad 161 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 111.9000 mm): Pad 167 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 111.9000 mm): Pad 167 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 113.1000 mm): Pad 173 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 113.1000 mm): Pad 173 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 114.3000 mm): Pad 179 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 115.5000 mm): Pad 185 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 114.3000 mm): Pad 179 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 116.7000 mm): Pad 191 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 115.5000 mm): Pad 185 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 117.9000 mm): Pad 197 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 116.7000 mm): Pad 191 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 101.1000 mm): Pad 114 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 99.9000 mm): Pad 108 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 102.3000 mm): Pad 120 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 101.1000 mm): Pad 114 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 103.5000 mm): Pad 126 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 102.3000 mm): Pad 120 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 104.7000 mm): Pad 132 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 103.5000 mm): Pad 126 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 105.9000 mm): Pad 138 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 104.7000 mm): Pad 132 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 107.1000 mm): Pad 144 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 105.9000 mm): Pad 138 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 108.3000 mm): Pad 150 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 107.1000 mm): Pad 144 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 109.5000 mm): Pad 156 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 108.3000 mm): Pad 150 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 110.7000 mm): Pad 162 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 109.5000 mm): Pad 156 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 111.9000 mm): Pad 168 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 110.7000 mm): Pad 162 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 113.1000 mm): Pad 174 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 111.9000 mm): Pad 168 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 114.3000 mm): Pad 180 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 113.1000 mm): Pad 174 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 115.5000 mm): Pad 186 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 114.3000 mm): Pad 180 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 116.7000 mm): Pad 192 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 115.5000 mm): Pad 186 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 116.7000 mm): Pad 192 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 116.7000 mm): Pad 191 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 117.9000 mm): Pad 198 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 116.7000 mm): Pad 192 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 113.9000 mm): Pad 77 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 114.3000 mm): Pad 79 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 114.3000 mm): Pad 79 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 114.7000 mm): Pad 81 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 114.7000 mm): Pad 81 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 115.1000 mm): Pad 83 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 115.1000 mm): Pad 83 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 115.5000 mm): Pad 85 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 115.5000 mm): Pad 85 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 115.9000 mm): Pad 87 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

@@ -3620,3 +3620,19 @@ the selected SWAP_ETH_STORAGE macro topology is not being rejected.
 The V10 board and DRC receipt are preserved as
 `PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_PAIR_CORRIDOR_V10.*`. No production
 board or Phase 18 USB3 route was changed.
+
+## Alternate native J3 orientation trial — 2026-09-06
+
+The native placement discriminator was extended to test U7 180 degrees with
+J3 at 0 and 270 degrees. The 0-degree launch presents the four SATA pads in
+two ordered rows at the near connector edge and is a credible next topology;
+the 270-degree placement introduces additional inherited mechanical/launch
+interactions. A first 0-degree SATA route implementation was generated from
+native pad coordinates, but native DRC rejected it with 137 violations,
+including same-row TX/RX dogbone crossings and paired target vias within the
+0.25 mm hole-clearance requirement. It is retained as
+`ROUTE IMPLEMENTATION FAILURE`, not as a macro-placement rejection.
+
+The next 0-degree route cycle must offset the final signal-pad dogbones in Y
+and keep each pair's target vias outside the connector field. No production
+board or validated USB3/PCIe copper was changed.

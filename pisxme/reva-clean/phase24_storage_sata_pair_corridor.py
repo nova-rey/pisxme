@@ -40,15 +40,20 @@ def path(board, net, points, layer):
     for a, z in zip(points, points[1:]): track(board, net, a, z, layer)
 
 board = pcbnew.LoadBoard(str(BASE))
+J3_ROT = int(os.environ.get("PISXME_J3_ROT", "90"))
+if J3_ROT != 90:
+    j3 = board.FindFootprintByReference("J3")
+    if j3 is None: raise RuntimeError("missing J3")
+    j3.SetOrientationDegrees(J3_ROT)
 
 # Native capacitor positions: N is above P at the bridge and socket ends,
 # and TX/RX occupy distinct physical corridors. All caps retain their
 # manufacturer footprint orientation; pad 2 is bridge-side, pad 1 socket-side.
 CAPS = {
-    "TX_N": ("C31", (150.5, 130.0)),
-    "TX_P": ("C30", (126.5, 130.0)),
-    "RX_N": ("C33", (152.5, 125.0)),
-    "RX_P": ("C32", (128.5, 125.0)),
+    "TX_N": ("C31", (110.5, 124.0)),
+    "TX_P": ("C30", (110.5, 112.0)),
+    "RX_N": ("C33", (110.5, 128.0)),
+    "RX_P": ("C32", (110.5, 116.0)),
 }
 for ref, (x, y) in CAPS.values():
     f = board.FindFootprintByReference(ref)
@@ -72,10 +77,10 @@ for item in list(board.GetTracks()):
 # Bridge-side escapes. TX stays on F.Cu. RX starts on F.Cu at the SMD bridge
 # lands, transitions to B.Cu at separated points, then reaches the cap pads.
 bridge = {
-    "TX_N": ("56", F, [(97.0,119.5),(97.0,105.0),(150.0,105.0),(150.0,130.0)]),
-    "TX_P": ("57", F, [(96.5,119.5),(96.5,124.0),(126.0,124.0),(126.0,130.0)]),
-    "RX_N": ("59", B, [(95.5,119.5),(95.5,115.0),(152.0,115.0),(152.0,125.0)]),
-    "RX_P": ("60", B, [(95.0,119.5),(93.0,121.0),(128.0,135.0),(128.0,125.0)]),
+    "TX_N": ("56", F, [(97.0,119.5),(97.0,108.0),(107.0,108.0),(107.0,124.0),(110.0,124.0)]),
+    "TX_P": ("57", F, [(96.5,119.5),(96.5,106.0),(110.0,106.0),(110.0,112.0)]),
+    "RX_N": ("59", B, [(95.5,119.5),(95.5,117.0),(111.0,117.0),(111.0,128.0),(110.0,128.0)]),
+    "RX_P": ("60", B, [(95.0,119.5),(93.0,117.0),(93.0,116.0),(110.0,116.0)]),
 }
 for key, (u7pin, layer, pts) in bridge.items():
     n = find_net(board, "/STORAGE/BRIDGE_SATA_" + key)
@@ -92,10 +97,10 @@ for key, (u7pin, layer, pts) in bridge.items():
 # under its body, and returns at vias outside the signal-pad field. RX uses
 # F.Cu side-entry channels away from the TX launch vias.
 socket = {
-    "TX_N": ("C31", (155.0,130.0), B, [(155.0,130.0),(143.5,133.0)]),
-    "TX_P": ("C30", (132.0,130.0), B, [(132.0,130.0),(130.5,133.25)]),
-    "RX_N": ("C33", (155.0,125.0), B, [(155.0,125.0),(145.5,132.5)]),
-    "RX_P": ("C32", (134.0,125.0), B, [(134.0,125.0),(131.5,132.75)]),
+    "TX_N": ("C31", (112.0,124.0), B, [(112.0,124.0),(126.75,126.275)]),
+    "TX_P": ("C30", (112.0,112.0), B, [(112.0,112.0),(126.5,118.725)]),
+    "RX_N": ("C33", (112.0,128.0), B, [(112.0,128.0),(127.25,126.275)]),
+    "RX_P": ("C32", (112.0,116.0), B, [(112.0,116.0),(126.75,118.725)]),
 }
 socket_pads = {"TX_N": "2", "TX_P": "1", "RX_N": "4", "RX_P": "3"}
 for key, (cap, start, layer, pts) in socket.items():
