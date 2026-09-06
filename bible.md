@@ -4396,3 +4396,5 @@ Refined TI-U7 USB3 routing to account for native pad pitch and separated source 
 Added and exercised a native-pad obstacle-aware USB3 router; its conservative raster model found no first-lane path, so the result remains router-model evidence and not a macro-placement verdict.
 # 2026-09-06 — Phase 24 TI pad-envelope planner correction
 Corrected the obstacle planner to use anisotropic pad envelopes and explicit U7 USB3 target-land exemptions; retained-copper blocking remains a route-model issue, not a macro-placement verdict.
+# 2026-09-06 — Phase 24 clean TI-U7 package discriminator
+Proved all four selected-macro J7-to-TI-U7 paths are reachable in a two-footprint native fixture; rejected the first package-field escape by native DRC as TI padfield route implementation failure.

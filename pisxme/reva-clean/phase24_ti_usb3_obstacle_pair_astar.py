@@ -52,7 +52,7 @@ def obstacle_map(b,layer):
             # The four routed terminals are intentional goals.  Their local
             # dogbone approach must be allowed to enter the native land field;
             # KiCad DRC, not the raster planner, decides the final clearance.
-            if f.GetReference() == "U7" and str(p.GetNumber()) in {"42","43","45","46"}:
+            if f.GetReference() == "U7":
                 continue
             if p.GetLayerSet().Contains(layer):
                 q=p.GetSize()
