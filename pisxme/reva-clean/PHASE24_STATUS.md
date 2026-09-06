@@ -2311,6 +2311,14 @@ opposite POWER_GND pads with a short F.Cu dogbone. Native KiCad DRC reports
 `PHASE24_PROTECTED_C14_C15_LINK_CURRENT.kicad_pcb` is promoted; remaining
 protected-load and regulator distribution endpoints remain open.
 
+### Promote CM5 5V feedback dogbone — 2026-09-06
+
+The native `FB_CM5_5V` chain C9.1–R3.2–R4.1 was routed around the opposite
+CM5_5V/POWER_GND pads with an F.Cu dogbone. Native KiCad DRC reports 0
+shorts, 0 track crossings, 220 unconnected items, and 12 clearance items.
+`PHASE24_CM5_5V_FEEDBACK_DOGBONE_CURRENT.kicad_pcb` is promoted; the
+remaining CM5 5V feedback/control and power-return endpoints remain open.
+
 ### Rejected U3 protected-input bridge — 2026-09-06
 
 The U3.14/U3.16 `/12V_PROTECTED` offset-via bridge reduced the native open

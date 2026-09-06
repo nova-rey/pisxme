@@ -4273,3 +4273,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Promoted the local C14/C15 12V_PROTECTED dogbone around their opposite ground pads; native DRC remains at zero shorts/crossings and total unconnected items fall from 225 to 224.
 2026-09-06: Promoted the edge-side C23/C24/C25 12V_PROTECTED dogbone field; native DRC remains at zero shorts/crossings and total unconnected items fall from 224 to 222.
 2026-09-06: Rejected U3 protected-input offset-via bridge after native clearance/short failure at the central POWER_GND pad; retained the zero-short/crossing promoted basis and recorded the placement-aware repair target.
+2026-09-06: Promoted the native CM5 5V FB_CM5_5V C9/R3/R4 dogbone chain; native DRC remains at zero shorts/crossings and total unconnected items fall from 222 to 220.
