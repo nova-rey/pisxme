@@ -2942,3 +2942,31 @@ Receipts:
 `PHASE24_STORAGE_ISLAND_COHERENT_USB3_SATA_BRIDGE_ESCAPE_FIELD_AWARE-drc.rpt`,
 `phase24_sata_bridge_pad_escape.py`, and
 `phase24_sata_bridge_pad_escape_field_aware.py`.
+
+## Native storage-route oracle transplant — 2026-09-06
+
+The preserved native Phase 19 USB3/SATA route was transplanted into a
+disposable copy of the coherent storage base, moving U7, J3, and C30-C33 as
+one data-island placement. The complete eight-net SATA path and four-net
+CM5-to-U7 USB3 path pass native KiCad connectivity assertions. Native DRC
+reports 177 findings and 442 unconnected items, but no `shorting_items`, no
+`tracks_crossing`, and no SATA-specific clearance or dangling-via finding.
+The three clearance findings are inherited CM5 USB3/reference-launch issues;
+the remaining findings are incomplete-board baseline findings.
+
+This is the strongest current storage routing candidate, but it is not yet
+promoted or declared closed: the U7 power/clock/support neighborhood and
+full-board open/short/parity gates still require revalidation, and the native
+route's pair-length metrics must be checked against the Phase 24 SI limits.
+The route itself is classified as a successful implementation discriminator,
+not a Phase 24 pass.
+
+The SATA audit derives connectivity from saved native pads, tracks, and vias;
+its expected endpoint table is assertion-only. A disposable negative control
+removing one required SATA trace fails as expected.
+
+Receipts:
+`PHASE24_STORAGE_NATIVE_ORACLE_TRANSPLANT-drc.rpt`,
+`phase24_transplant_native_storage_oracle.py`,
+`phase24_sata_native_connectivity_audit.py`, and
+`phase24_sata_native_connectivity_negative_control.py`.
