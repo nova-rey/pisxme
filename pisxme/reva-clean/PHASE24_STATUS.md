@@ -3273,3 +3273,24 @@ support/power pins retained.
 Receipt:
 `phase24_replace_u7_with_ti_footprint_fixture.py` and
 `PHASE24_STORAGE_TI_PINFIELD_REPLACED-drc.rpt`.
+
+## Fresh-route basis with TI U7 pad geometry — 2026-09-06
+
+`phase24_sync_u7_route_names.py` normalized the retained storage candidate's
+USB3 aliases from `/CORE_CM5/...` to the native repaired netlist names and
+cleared unsourced U7 pad assignments. The complete U7 pad-authority audit
+still passes after synchronization. Native DRC remains at 486 violations and
+449 unconnected items, with old copper now visibly terminating at the new
+0.4 mm TI pad field; native SATA endpoint connectivity fails at U7.57 and
+USB3 endpoint validation still uses the old route geometry.
+
+This is a preserved `ROUTE_IMPLEMENTATION_FAILURE`: the experiment confirms
+the schematic/footprint authority can be synchronized without synthetic graph
+edges, but the prior route cannot be transplanted across the package change.
+The next route attempt must regenerate the U7 USB3/SATA escapes from actual
+TI pad coordinates and include the newly represented support/power pads. The
+old storage route remains donor evidence only; Phase 24 is open.
+
+Receipt:
+`phase24_sync_u7_route_names.py` and
+`PHASE24_STORAGE_TI_PINFIELD_REPLACED_ROUTE_NAMES-drc.rpt`.
