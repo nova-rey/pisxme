@@ -4484,3 +4484,22 @@ continuation with native obstacle checks.
 `INTEGRATED_USB3_LANE_ESCAPE = REJECTED`
 `FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
 `PHASE24 = OPEN`
+
+## Independent route review and next-method selection — 2026-09-06
+
+The available read-only independent review confirms that the selected macro
+has not yet been fairly tested with an authoritative source escape. It also
+identified the native PCIe B.Cu spine as a real shared corridor constraint,
+while the U7 landing-field errors are router artifacts. The review recommends
+anchoring the official CM5IO source-side geometry, treating the PCIe spine as
+an explicit reserved band, and solving only the continuation with ordered
+lanes. This is within the approved Phase 24 architecture and does not reopen
+PCIe.
+
+The current integrated route experiments remain rejected implementation
+attempts. No comparison against mature historical DRC is used to rank the
+floorplan, and no terminal blocker is declared.
+
+`INDEPENDENT_ROUTE_REVIEW = COMPLETE`
+`NEXT_ROUTE_CLASS = CM5IO_ANCHORED_CONTINUATION`
+`PHASE24 = OPEN`
