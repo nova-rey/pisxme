@@ -4542,3 +4542,13 @@ placement fixture loads and native DRC runs, but it remains unrouted with 499
 unconnected items and is not a pass. Native ERC remains open (407 findings).
 Whole-board Phase 24 remains paused until the routed mode-aware storage fixture
 and integrated validation close.
+
+## 2026-09-06 — dual-mode storage implementation checkpoint pushed
+
+Committed `ea8dfb6` and pushed it to the private `reva-clean` branch. The
+checkpoint includes the corrected native mode-control authoring path, explicit
+JMS583 support-network authority, PCB placement metadata, native-load DRC
+receipt, procurement update, and a negative-control audit proving removal of
+required REXT support fails. This is an implementation checkpoint, not a
+storage or Phase 24 closure; routing, mode-aware physical connectivity,
+connector CAD parity, and native ERC/DRC gates remain open.
