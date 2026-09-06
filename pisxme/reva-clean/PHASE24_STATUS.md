@@ -2719,3 +2719,26 @@ The integrated candidate and all accepted copper remain unchanged. The next
 attempt must use a safer native serialization/native-GUI path or a minimal
 via-add mutation isolated from the transformed-track loop; no validation
 gate or clearance rule is relaxed.
+
+## CM5IO source-frame and layer-routing discriminators — 2026-09-06
+
+The safe load-order correction (oracle snapshot first, target board loaded
+last, target net codes and pad positions snapshotted before mutation) produced
+a saved native fixture. The initial translated source escape was rejected
+after it forced all copied tracks onto F.Cu and produced 12 shorts and one
+crossing; retaining the official track layers removed that authoring defect.
+
+The full mirrored carrier-frame transform then removed all shorts. Its native
+fixture result was 17 total findings: 0 shorts, 8 crossings, 2 clearances,
+and 65 expected fixture opens. A localized RX layer split was tested and
+rejected at 15 findings including 7 shorts. The restored mirrored pair-order
+variant, with TX routed around the J7 NPTH launch obstruction, remains a
+disposable result at 6 findings: 0 shorts, 4 crossings, 1 clearance, 1 hole
+clearance, and 65 expected fixture opens. In both saved variants, independent
+native `BuildConnectivity` passes all four J7↔U7 USB3 endpoint assertions.
+
+These experiments separate three classes of evidence: the first is a route
+authoring defect, the mirrored frame is a real improvement in source-side
+orientation, and the remaining crossings/clearance are incomplete endpoint
+corridor development. No fixture copper is promoted to the integrated board;
+no layer policy, clearance rule, or validation severity is relaxed.
