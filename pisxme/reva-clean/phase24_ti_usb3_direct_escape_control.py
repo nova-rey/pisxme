@@ -17,8 +17,7 @@ def tr(b,n,a,z,l):
 def via(b,n,p):
  v=pcbnew.PCB_VIA(b);v.SetPosition(V(*p));v.SetWidth(pcbnew.FromMM(.5));v.SetDrill(pcbnew.FromMM(.3));v.SetLayerPair(F,B);v.SetNet(n);b.Add(v)
 b=pcbnew.LoadBoard(str(BASE));jobs=[('CM5_USB3_RX_N','128','42'),('CM5_USB3_RX_P','130','43'),('CM5_USB3_TX_N','140','45'),('CM5_USB3_TX_P','142','46')]
-ys=(100.,102.,106.,108.)
 for i,(name,jp,up) in enumerate(jobs):
- n=net(b,name);src=xy(pad(b,'J7',jp));dst=xy(pad(b,'U7',up));sv=(76.+i*2.,ys[i])
+ n=net(b,name);src=xy(pad(b,'J7',jp));dst=xy(pad(b,'U7',up));sv=(76.+i*2.,src[1])
  tr(b,n,src,sv,B);via(b,n,sv);tr(b,n,sv,dst,F)
 b.BuildListOfNets();b.Save(str(OUT));print(OUT)

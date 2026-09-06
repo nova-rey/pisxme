@@ -3968,3 +3968,12 @@ variant was worse at 27 findings and was rejected. These are disposable
 `ROUTE_IMPLEMENTATION_FAILURE` results; no integrated or PCIe copper was
 changed. The next credible class is pair-preserving diagonal/offset escape
 geometry without shared vertical lane crossings.
+
+## TI-U7 diagonal escape control — 2026-09-06
+
+The next disposable control kept each source transition on its native J7 row,
+spread the transition vias laterally, and used a direct diagonal F.Cu segment
+to the native TI lands. Native DRC reported 36 findings, including six
+crossings and nine shorts, a small improvement over the column control but
+still a rejection. The candidate remains `ROUTE_IMPLEMENTATION_FAILURE`;
+the selected macro and PCIe ancestor are unchanged.
