@@ -2987,3 +2987,24 @@ accepted as the current storage data reference.
 Receipt:
 `PHASE24_STORAGE_NATIVE_ORACLE_SUPPORT_TRANSPLANT-drc.rpt` and
 `phase24_transplant_u7_support_oracle.py`.
+
+## Coordinated U7 USB3/support escape attempts — 2026-09-06
+
+Two local repairs were tested against the combined U7 support/data candidate.
+Moving USB3 TX_N's long leg to B.Cu avoided the C19 top-side short but
+introduced a native crossing with the PCIe B.Cu corridor and multiple
+oscillator-return conflicts. Moving TX_N on F.Cu around C19 instead created
+crossings with the transplanted RX_P lane and a clock-via short. Both
+variants preserved native USB3 and SATA endpoint assertions but failed native
+DRC, and are rejected as `ROUTE_IMPLEMENTATION_FAILURE`.
+
+The evidence narrows the next repair to a coordinated local escape: reserve
+the U7 USB3 pad-field ordering, clock return vias, and support-cap placement
+in one occupancy model, then regenerate the affected USB3 route. No accepted
+PCIe or storage data-route authority was altered.
+
+Receipts:
+`PHASE24_STORAGE_NATIVE_ORACLE_SUPPORT_TXN_BCU_REPAIR-drc.rpt`,
+`PHASE24_STORAGE_NATIVE_ORACLE_SUPPORT_TXN_FCU_AROUND_C19-drc.rpt`,
+`phase24_support_usb3_txn_bcu_repair.py`, and
+`phase24_support_usb3_txn_fcu_around_c19.py`.
