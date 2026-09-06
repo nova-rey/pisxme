@@ -2585,3 +2585,14 @@ audit still proves all four J7-to-U7 endpoint memberships, but no candidate
 copper is promoted. Same-class hand-authored lane tuning is stopped; the next
 route class must use a proven/reference dense-pad escape or native router
 semantics with obstacle clearing.
+
+## SERVICE-corridor discriminator — 2026-09-06
+
+A disposable copy removed only inherited `SERVICE_RD_B` copper before
+re-emitting the selected-placement USB3 escape. Native DRC improved to 540
+total violations and 260 unconnected items, with 1 short, 4
+`tracks_crossing` findings, and 35 clearance findings. The focused native
+audit still passes all four J7-to-U7 USB3 endpoint memberships. This separates
+an inter-island corridor conflict from the remaining USB3 pair-order escape
+failure, but the candidate is rejected and no SERVICE or USB3 copper is
+promoted. The selected macro-floorplan remains unchanged.
