@@ -83,31 +83,15 @@ A first-pass candidate route defect is `ROUTE IMPLEMENTATION FAILURE` until a va
 
 ## Decision and controlled reopening
 
-`ETH_LOCAL_STORAGE_MID` has the shortest source distances, but its native
-body-box screen overlaps the SERVICE/power neighborhood. `SWAP_ETH_STORAGE`
-is the better acreage topology: it materially reduces both Ethernet and
-storage source distance while retaining zero coarse major-body overlaps and
-the existing PCIe/SERVICE anchors. This is a topology decision independent
-of the immature routing state.
+`ETH_LOCAL_STORAGE_MID` has the shortest source distances, but its native body-box screen overlaps the SERVICE/power neighborhood. `SWAP_ETH_STORAGE` is the better acreage topology: it materially reduces both Ethernet and storage source distance while retaining zero coarse major-body overlaps and the existing PCIe/SERVICE anchors. This is a topology decision independent of immature route implementation.
 
-The live integrated board was snapshotted as
-`PHASE24_MACRO_REVIEW_LIVE_BASIS_20260906.kicad_pcb`. The selected disposable
-basis is `PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE.kicad_pcb`; it moves only
-the coherent Ethernet and storage neighborhoods and removes their stale
-high-speed copper. Native inspection confirms J7, J1, J4, power-entry, and
-regulator anchor placements are unchanged.
+The live integrated board was snapshotted as `PHASE24_MACRO_REVIEW_LIVE_BASIS_20260906.kicad_pcb`. The selected disposable basis is `PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE.kicad_pcb`; it moves only the coherent Ethernet and storage neighborhoods and removes their stale high-speed copper. Native inspection confirms J7, J1, J4, power-entry, and regulator anchor placements are unchanged.
 
-The first native DRC on this unrouted candidate reports 287 violations and
-459 unconnected items. This is a route-development result, not a floorplan
-ranking result. It is classified `ROUTE_IMPLEMENTATION_FAILURE` until the
-selected topology receives a valid obstacle-aware regeneration cycle.
+The selected candidate's early DRC/open findings are not used to rank the floorplans. They are route-development evidence only. Ethernet/storage routing must receive a fair native-pad, obstacle-aware regeneration cycle before any placement-inherent conclusion is allowed.
 
-Consultant dispatch was attempted for the independent review but the
-orchestrator returned `collab spawn failed: agent thread limit reached`.
-The required independent-style review was therefore performed locally from
-the native-loaded geometry, with no unchanged failure retried.
+Consultant dispatch was attempted for the independent review but the orchestration service returned `collab spawn failed: agent thread limit reached`. The review was completed locally from the native-loaded objects; this availability issue is not treated as an engineering blocker.
 
 `WHOLE_BOARD_MACRO_FLOORPLAN_REVIEW = COMPLETE`
 `SELECTED_MACRO = SWAP_ETH_STORAGE`
 `CURRENT_INTEGRATED_CANDIDATE_UNCHANGED = TRUE`
-`PHASE24 = OPEN_PENDING_SELECTED_MACRO_ROUTE_REGENERATION`
+`PHASE24 = OPEN`

@@ -4343,3 +4343,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Recorded selected-macro SATA pair-corridor trials; all eight native SATA endpoints pass, while the best disposable route remains rejected for real local crossings and shorts in bridge/socket launch geometry.
 2026-09-06: Recorded selected-macro SATA pair-corridor trials; all eight native SATA endpoints pass, while the best disposable route remains rejected for real local crossings and shorts in bridge/socket launch geometry.
 2026-09-06: Completed a native U7/J3 orientation discriminator; the U7-0/J3-270 alternate is rejected for USB3 crossings, U7-field shorts, and J3/J7 hole conflicts, so the proven U7-180/J3-90 USB3 basis remains selected.
+2026-09-06: Re-ran the native whole-board macro-floorplan discriminator through KiCad 10.0.5, restored the explicit topology-versus-route comparison rule and SWAP_ETH_STORAGE decision, and kept Phase 24 open for fair route development.
