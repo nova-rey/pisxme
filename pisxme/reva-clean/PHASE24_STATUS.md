@@ -1516,3 +1516,21 @@ alternative: `CURRENT_CORRECTED` stays selected for board-level topology
 because it is much closer to J7 and has better connector-edge access. Full
 support parity, connector mechanics, and integrated-acreage closure remain
 open.
+
+## Official-placement LED mixed-side corridor probe — 2026-09-05
+
+The next disposable LED experiment moved R30/R31 to a source-adjacent
+top-side island, escaped ETH_LEDY/ETH_LEDG from J7 on separate F.Cu lanes,
+and used separate B.Cu cathode corridors with ordinary F.Cu/B.Cu transitions.
+This was a valid implementation experiment; it did not modify the validated
+MDI, CT, common-termination, or shield copper in the parent.
+
+Native refilled DRC reported 270 total violations and 428 inherited
+unconnected items. The child introduced 20 shorting records and 21 crossing
+records, including source-launch contact with adjacent J7 pads, LED corridor
+intersections with inherited CM5/service/MDI copper, and cathode interaction
+with the J2 power/shield/CT field. It is rejected as
+`ROUTE_IMPLEMENTATION_FAILURE`, not as evidence against the official Ethernet
+placement or electrical topology. The next experiment must use the actual
+reference LED lane geometry or a dedicated low-speed support corridor with
+pad-field-aware dogbones; no promotion to the acreage board has occurred.
