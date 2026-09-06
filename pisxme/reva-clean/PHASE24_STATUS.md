@@ -4198,6 +4198,21 @@ Receipt: `PHASE24_AUTHORITY_RECHECK_20260906.md`.
 `PHASE24_AUTHORITY_RECHECK = PASS`
 `PHASE24 = OPEN`
 
+## USB3 selected-source A* trial — 2026-09-06
+
+The disposable source-to-U7 A* continuation began from actual J7/U7 native
+pad coordinates and explicit source transitions. Native KiCad DRC reported
+180 violations and 450 unconnected items, including one track crossing, nine
+dangling tracks, and five dangling vias. The candidate is rejected as
+`ROUTE_IMPLEMENTATION_FAILURE`; it was not promoted and does not invalidate
+the CM5IO source-anchor or selected macro evidence.
+
+Receipt: `PHASE24_USB3_SELECTED_SOURCE_ESCAPE_ASTAR_RECEIPT_20260906.md` and
+`PHASE24_USB3_SELECTED_SOURCE_ESCAPE_ASTAR-drc.json`.
+
+`USB3_ASTAR_CONTINUATION = REJECTED`
+`PHASE24 = OPEN`
+
 ## TI U7 RX target-via separation experiment — 2026-09-06
 
 The best clean west-target control was challenged by moving only RX_P's

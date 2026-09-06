@@ -4493,3 +4493,5 @@ Reran the corrected KiCad-native U5 connectivity audit against the saved fixture
 Captured the current JLCPCB ASM2362 assembly listing and EasyEDA CAD-link evidence. It improves procurement/assembly evidence but does not close missing ASMedia-authoritative pinout, reference design, firmware, or programming authority; no mystery bridge was implemented.
 # 2026-09-06 — Phase 24 authority recheck
 Reran the authoritative support-part pad-net, U7 supply-hierarchy, and full schematic/PCB reference-set audits; all passed. Copper routing, native DRC, and dual-mode storage qualification remain open.
+# 2026-09-06 — Phase 24 USB3 selected-source A* trial
+Rejected the disposable native-pad source-to-U7 A* continuation after DRC found 180 violations, 450 unconnected items, one crossing, dangling tracks, and dangling vias. No production route or macro-floorplan was promoted.
