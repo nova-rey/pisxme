@@ -2632,3 +2632,15 @@ J7.142↔U7.46. The sole remaining DRC error is the full-width RX_P escape
 against adjacent fine-pitch J7 ground pad 132 (0.0709 mm actual clearance).
 This is a connector-launch constraint issue; no severity or width rule was
 relaxed, and the fixture is not an integrated-board promotion.
+
+## Official CM5IO USB3 CAD extraction — 2026-09-06
+
+The native Rev 2 CM5IO PCB source was inspected directly at
+`authority-inventory/cm5io-rev2/CM5IO.kicad_pcb`. The reproducible extraction
+receipt records the actual `Module1` ComputeModule5 footprint transform and
+all four USB3-0 nets. The official source uses 0.147 mm segments on F.Cu and
+B.Cu, with two ordinary through-vias on each RX pair and one on each TX pair;
+no signal tracks are on In1/In4. The extracted native via positions and layer
+census are saved in `PHASE24_CM5IO_USB3_REFERENCE_EXTRACT.md`. This is the
+reference implementation oracle for the next PiSXMe adaptation, not a claim
+that its absolute coordinates transplant unchanged.
