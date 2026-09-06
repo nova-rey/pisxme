@@ -1,5 +1,16 @@
 # Phase 24 acreage validation status
 
+## Fresh common-region clock regeneration attempt
+
+The new pad/net-derived generator placed a coherent clock island in the
+measured open region. Its sequential obstacle search can author complete XI
+and XO branches, but the remaining VSSOSC branch becomes unreachable when
+the other two valid branches occupy their shared B.Cu channel. No candidate
+was promoted and no V26 SATA/USB3 or PCIe copper changed. This is a
+`ROUTE_IMPLEMENTATION_FAILURE` of sequential channel assignment; the next
+step is coordinated multi-net escape planning using the native-valid clock
+fixture as the topology oracle.
+
 ## Regenerated common-region clock search
 
 The fresh common-region generator placed Y1/R23/C42/C43 as one coherent

@@ -4378,3 +4378,5 @@ An actual net-aware obstacle scan from ordinary U7 clock-pad exit vias found a l
 Tested the measured common B.Cu region with a coherent clock-island translation. The inherited clock-tail endpoint was blocked before the first launch; rejected as stale-tail geometry. The next route must regenerate passive-to-U7 paths from actual pads, with V26 SATA/USB3 and PCIe unchanged.
 # 2026-09-06 — Phase 24 regenerated clock common-region search
 Fresh pad/net-derived common-region routing authored complete XI and XO trees, then failed to place VSSOSC through the occupied B.Cu corridor. No candidate was promoted; this localizes the remaining work to simultaneous three-net channel assignment without changing validated data or PCIe routing.
+# 2026-09-06 — Phase 24 fresh common-region clock regeneration
+The pad/net-derived generator authored valid XI/XO branches in a coherent open island but could not place VSSOSC after the shared B.Cu channel was occupied. Candidate rejected as sequential channel-assignment failure; native clock source and V26 data/PCIe copper preserved.
