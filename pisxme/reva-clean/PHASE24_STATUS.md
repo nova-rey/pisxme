@@ -2644,3 +2644,15 @@ no signal tracks are on In1/In4. The extracted native via positions and layer
 census are saved in `PHASE24_CM5IO_USB3_REFERENCE_EXTRACT.md`. This is the
 reference implementation oracle for the next PiSXMe adaptation, not a claim
 that its absolute coordinates transplant unchanged.
+
+## CM5IO versus PiSXMe launch-rule comparison — 2026-09-06
+
+Native inspection confirms that the PiSXMe J7 USB3 pads and official CM5IO
+ComputeModule5 USB3 pads both use 0.2 mm × 0.7 mm rectangular pads on 0.4 mm
+pitch. The relevant board constraints differ: the official CM5IO native PCB
+uses 0.125 mm minimum clearance, while the PiSXMe acreage board uses 0.150
+mm. This explains why the PiSXMe minimal full-width RX_P launch retains a
+0.0709 mm clearance finding even though the pad geometry is authoritative and
+matching. It is a real connector-launch rule/geometry issue; it is not
+evidence against U7 placement or the USB3 route topology. No constraint was
+changed in this comparison.
