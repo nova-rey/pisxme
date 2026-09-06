@@ -1,5 +1,17 @@
 # Phase 24 acreage validation status
 
+## Regenerated common-region clock search
+
+The fresh common-region generator placed Y1/R23/C42/C43 as one coherent
+island and derived all pad/net identity from the V26 board. Its native A*
+search successfully authored complete XI and XO route trees before the third
+VSSOSC tree became unreachable through the reserved/occupied B.Cu corridor.
+The candidate was not emitted or promoted. This is a partial
+`ROUTE_IMPLEMENTATION_FAILURE`: it validates the new island placement and
+local net-authoring path, while identifying simultaneous three-net channel
+assignment as the remaining issue. No SATA, USB3, PCIe, or schematic
+authority changed.
+
 ## Reachable-region clock migration attempt
 
 The measured common B.Cu region was exercised by translating the complete
