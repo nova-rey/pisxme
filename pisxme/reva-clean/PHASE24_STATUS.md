@@ -3008,3 +3008,23 @@ Receipts:
 `PHASE24_STORAGE_NATIVE_ORACLE_SUPPORT_TXN_FCU_AROUND_C19-drc.rpt`,
 `phase24_support_usb3_txn_bcu_repair.py`, and
 `phase24_support_usb3_txn_fcu_around_c19.py`.
+
+## Underside U7 support-cap discriminator — 2026-09-06
+
+A true KiCad underside flip of C19 was tested in the combined support/data
+candidate. It removes the prior C19-to-USB3 short without changing the
+support net identity. Native DRC reports no shorts and no track crossings;
+the candidate retains only the three inherited CM5 launch clearances among
+its high-speed copper findings. Native USB3 and all eight SATA endpoint
+assertions pass. The oscillator network is natively joined through U7.52/.53/.54,
+and the reset/3V3 U7 pad fields are connected.
+
+C19 underside placement remains provisional pending the full mechanical,
+power-return, decoupling, and board-level parity gates. The remaining U7
+power-cap connectivity is not being inferred from the data-route PASS and
+must be closed from actual plane/track/pad contact. This candidate is the
+current coordinated storage basis, not a Phase 24 closure.
+
+Receipts:
+`PHASE24_STORAGE_NATIVE_ORACLE_SUPPORT_C19_BOTTOM_FLIPPED-drc.rpt` and
+`phase24_u7_support_c19_bottom_flip.py`.
