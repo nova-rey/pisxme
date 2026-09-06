@@ -4394,3 +4394,5 @@ Recorded rejection of B.Cu and mixed-layer native-coordinate USB3 route classes 
 Refined TI-U7 USB3 routing to account for native pad pitch and separated source transitions; no path was found under the retained-copper model, preserved as router/integration evidence rather than a placement verdict.
 # 2026-09-06 — Phase 24 obstacle-aware TI U7 router probe
 Added and exercised a native-pad obstacle-aware USB3 router; its conservative raster model found no first-lane path, so the result remains router-model evidence and not a macro-placement verdict.
+# 2026-09-06 — Phase 24 TI pad-envelope planner correction
+Corrected the obstacle planner to use anisotropic pad envelopes and explicit U7 USB3 target-land exemptions; retained-copper blocking remains a route-model issue, not a macro-placement verdict.

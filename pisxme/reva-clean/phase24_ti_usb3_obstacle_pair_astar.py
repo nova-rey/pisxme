@@ -36,7 +36,11 @@ def raster_line(blocked,a,z,r=.22):
     for k in range(steps+1):
         x=round(ax+(zx-ax)*k/steps);y=round(ay+(zy-ay)*k/steps)
         for i in range(-q,q+1):
-            for j in range(-q,q+1):blocked.add((x+i,y+j))
+                for j in range(-q,q+1):blocked.add((x+i,y+j))
+def raster_rect(blocked,p,rx,ry):
+    x,y=grid(p);qx=max(1,math.ceil(rx/STEP));qy=max(1,math.ceil(ry/STEP))
+    for i in range(-qx,qx+1):
+        for j in range(-qy,qy+1):blocked.add((x+i,y+j))
 def obstacle_map(b,layer):
     blocked=set()
     for t in b.GetTracks():
@@ -45,9 +49,14 @@ def obstacle_map(b,layer):
         elif t.GetLayer()==layer:raster_line(blocked,xy(t.GetStart()),xy(t.GetEnd()),.23)
     for f in b.GetFootprints():
         for p in f.Pads():
+            # The four routed terminals are intentional goals.  Their local
+            # dogbone approach must be allowed to enter the native land field;
+            # KiCad DRC, not the raster planner, decides the final clearance.
+            if f.GetReference() == "U7" and str(p.GetNumber()) in {"42","43","45","46"}:
+                continue
             if p.GetLayerSet().Contains(layer):
-                q=p.GetSize();r=max(pcbnew.ToMM(q.x),pcbnew.ToMM(q.y))/2+.16
-                raster_line(blocked,xy(p),xy(p),r)
+                q=p.GetSize()
+                raster_rect(blocked,xy(p),pcbnew.ToMM(q.x)/2+.16,pcbnew.ToMM(q.y)/2+.16)
     return blocked
 def astar(blocked,start,goal):
     s=grid(start);g=grid(goal)

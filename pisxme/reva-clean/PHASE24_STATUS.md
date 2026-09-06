@@ -3929,3 +3929,9 @@ no board was promoted and no gate was relaxed. This is retained as
 `ROUTE_IMPLEMENTATION_FAILURE / ROUTER_MODEL_LIMIT`, not
 `MACRO-PLACEMENT FAILURE`, because local source/via escape exemptions and
 package-approach geometry still need to be modeled explicitly.
+
+The planner was further corrected to use anisotropic native pad envelopes and
+to exempt only the four intentional U7 USB3 target lands from its obstacle
+mask. The isolated selected-macro fixture still finds no first-lane path with
+inherited storage-support copper retained, so this remains route-model
+evidence rather than a macro-placement rejection.
