@@ -4752,3 +4752,9 @@ validation remain open.
  RTL9210B artifact audit to verify the corrected footprint's explicit F.Fab
  body and conservative courtyard as well as its pad set and SMD metadata.
  The audit passes; no production Path-B integration was made.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: added a native XML netlist
+ audit for the isolated RTL9210B/M.2 reference pair. KiCad-exported netlists
+ assert the shared lane pins, USB2/USB3, PEDET/contact 69, REFCLK, PERST,
+ CLKREQ, DEVSLP, and SPI evidence without synthetic edges. The removed-PEDET
+ negative control fails as required. This is a native schematic/netlist gate,
+ not PCB or production closure.
