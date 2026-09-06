@@ -4558,3 +4558,11 @@ connector CAD parity, and native ERC/DRC gates remain open.
 Reconciled the live Phase 24 status and procurement matrix to private
 checkpoint `7938f64`; the dual-mode storage upgrade remains the sole active
 priority and whole-board routing remains paused.
+## 2026-09-06 — storage audit revalidation
+
+Re-ran the storage library, schematic, mode-contract, JMS583 support, and
+negative-control audits after the private checkpoint. All structural checks
+and native schematic netlist export pass. Native PCB DRC remains intentionally
+nonpassing for the unrouted placement fixture (1,074 violations, 499
+unconnected items); no closure claim was made. Consultant/auditor dispatch was
+retry-blocked by the current thread limit, so work continued locally.

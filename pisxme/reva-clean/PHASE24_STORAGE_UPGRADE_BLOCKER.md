@@ -90,6 +90,22 @@ The implementation path has since been advanced in the working tree:
 The remaining engineering blockers are now explicit rather than generic
 documentation objections:
 
+## Current implementation state — 2026-09-06
+
+The documentation-only stop condition has been superseded by an authorized
+implementation checkpoint. `ea8dfb6`/`7938f64`/`7dbf709` added the JMicron
+support network, J4/U14 mode control, project-local support footprints, and
+native audits. The latest structural audits and schematic netlist export pass.
+Native ERC remains open at 407 findings, and the disposable PCB candidate is
+placement-only with 1,074 DRC violations and 499 unconnected items. These are
+active implementation gates, not a terminal blocker. The next required work
+is a correct routed native fixture, mode-aware selected-path/inactive-state
+validation, and exact TE CAD pad/courtyard/model parity.
+
+The attempted consultant review could not run because the orchestration thread
+limit is currently exhausted; no engineering decision is based on that
+failure.
+
 1. Contact 69 is named CONFIG1 in retained TP-053 and is identified as the
    PEDET/interface-detect contact by the older Socket 3 definition: SATA
    grounds it and PCIe/NVMe leaves it open. AUTO therefore needs the documented
