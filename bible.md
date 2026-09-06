@@ -4653,3 +4653,10 @@ authority after switched USB2 ownership correction. The candidate now carries
 CM5_STORAGE_USB2, BRIDGE_USB, and NVMe USB net identities from the updated
 authoring map. It remains a disposable placement/routing candidate pending
 native copper validation.
+
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: corrected the TI RUA0042A
+selector footprint from the malformed square 10/10/10/10 generator to the
+authoritative 9.0 x 3.5 mm 17/4/17/4 perimeter. Geometry audit passes for
+both selectors. The regenerated isolated USB3 fixture now has zero native
+shorting findings; seven localized track crossings remain, so routing is
+still open and no production PCB was promoted.

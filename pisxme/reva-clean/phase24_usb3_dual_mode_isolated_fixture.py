@@ -59,10 +59,11 @@ def main():
     # monotonic B.Cu corridor to the corresponding U12 bottom-edge pads.
     source_vias = {"128": (74.0, 100.0), "130": (78.0, 102.0),
                    "140": (82.0, 104.0), "142": (86.0, 106.0)}
-    # These are bottom-edge pads.  Leave each pad in +Y and stagger the
-    # through-vias in Y; lateral escape would cross the adjacent ground pads.
-    target_vias = {"128": (164.8, 154.0), "130": (165.2, 157.0),
-                   "140": (166.4, 160.0), "142": (166.8, 163.0)}
+    # RUA0042A pins 11/12/15/16 are on the left long edge in the documented
+    # 17/4/17/4 perimeter. Leave the package outward (-X) and spread the
+    # through-vias well outside the 0.4-mm signal pitch.
+    target_vias = {"128": (156.0, 160.0), "130": (158.0, 156.0),
+                   "140": (160.0, 152.0), "142": (162.0, 148.0)}
     for name, j7n, u12n in source:
         n = net(b, name); a = pos(pad(b, "J7", j7n)); z = pos(pad(b, "U12", u12n))
         own(pad(b, "U12", u12n), n)
@@ -72,7 +73,9 @@ def main():
         # U12 pins 11/12/15/16 are on the package bottom edge.  The final
         # F.Cu segment is a short outward dogbone from a full-pitch-spaced
         # via, never a horizontal approach through the pad row.
-        path(b, n, [V(tx, ty), z], F)
+        # Stay outside the long-edge pad row until the target Y, then enter
+        # horizontally; a diagonal from the via cuts through its neighbor.
+        path(b, n, [V(tx, ty), V(tx, pcbnew.ToMM(z.y)), z], F)
 
     # The selector output uses explicit JMS583 USB names; TX traverses the
     # authoritative AC capacitors, RX is the selected lane without AC caps.

@@ -110,6 +110,20 @@ localized to the CM5 source fanout, the final U12 dogbones, and the separate
 U11 selector-side pair fanouts. These are still route implementation defects;
 the next experiment will partition those corridors by permitted copper layer.
 
+## TI RUA0042A footprint correction — 2026-09-06
+
+The retained TI package drawing identifies RUA0042A as 9.0 x 3.5 mm with a
+17/4/17/4 perimeter. The previous generated footprint was a square,
+10/10/10/10 construction and placed pads 11 and 21 at the same coordinate.
+The generator now emits the documented perimeter, and the selector geometry
+audit passes for both selectors. The placement candidate was regenerated from
+that corrected library.
+
+The latest isolated native USB3 fixture uses the corrected pad positions and
+orthogonal package-side dogbones. Native DRC reports zero shorting findings;
+seven track crossings remain in the final dogbones/selector continuation and
+are not accepted as a routing pass.
+
 The sixth iteration split RX/TX source fanout layers, but native DRC showed
 the B.Cu source trunk now colliding with the selector-side U11/U12
 continuation. It is rejected as a shared-corridor route implementation; the
