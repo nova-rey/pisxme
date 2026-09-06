@@ -4743,3 +4743,8 @@ validation remain open.
  its through-hole metadata defect. The authority audit passes. This remains a
  qualification artifact only until exact Realtek land-pattern and application
  circuit authority is obtained.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: natively exported XML
+ netlists from the retained RTL9210B community schematic and M.2 schematic
+ with KiCad 10.0.5. The receipts confirm native parsing and expose the
+ shared-lane and PEDET/contact-69 nets; they are explicitly parse evidence,
+ not PCB connectivity or ERC/DRC closure.

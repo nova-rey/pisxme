@@ -62,6 +62,12 @@ latest Realtek application circuit, M.2 socket sideband handling, SSD
 3.3-V/inrush budget, thermal measurement, and validation of nonselected
 interface behavior when the socket is empty or unpowered.
 
+KiCad 10.0.5 successfully exported native XML netlists from the retained
+community `RTL9210b_0.kicad_sch` and `M.2_0.kicad_sch`; those receipts are in
+`authority-inventory/rtl9210b/RTL9210B_0.xml` and `M.2_0.xml`. This confirms
+the CAD sources parse natively and that their RTL9210B pin names and M.2
+PEDET contact are inspectable. It is not a PCB connectivity or ERC/DRC pass.
+
 ## Firmware and programming
 
 The community firmware repository contains RTL9210B-specific configurations,

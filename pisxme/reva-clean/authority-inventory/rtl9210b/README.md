@@ -18,3 +18,9 @@ The PDF is the strongest available technical source in this qualification;
 the CAD and firmware repositories are corroboration, not manufacturer
 authorization. SHA-256 values for retained files are recorded in the
 procurement/qualification report and should be regenerated before release.
+
+KiCad 10.0.5 natively exported XML netlists from the retained
+`RTL9210b_0.kicad_sch` and `M.2_0.kicad_sch`; the receipts are
+`RTL9210B_0.xml` and `M.2_0.xml`. They confirm native parsing and expose the
+community schematic's RTL9210B pin/net names and M.2 PEDET contact 69. This
+is schematic parse evidence, not a completed PCB or ERC/DRC pass.

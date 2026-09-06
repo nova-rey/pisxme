@@ -1,0 +1,697 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/nyx/PiSXMe/pisxme/reva-clean/authority-inventory/rtl9210b/community-lz1/M.2_0.kicad_sch</source>
+    <date>2026-09-06T18:07:12</date>
+    <tool>Eeschema 10.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>M.2_0.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C89">
+      <value>220nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B224KO5NNNC_C16772.pdf</datasheet>
+      <description>16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C16772</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B224KO5NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B224KO5NNNC_C16772.pdf</field>
+        <field name="Description">16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B224KO5NNNC" description="16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C16772"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B224KO5NNNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="M.2_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C16772 CL05B224KO5NNNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f7601897-bbec-467f-afc9-107c49e0d414</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C90">
+      <value>220nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B224KO5NNNC_C16772.pdf</datasheet>
+      <description>16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C16772</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B224KO5NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B224KO5NNNC_C16772.pdf</field>
+        <field name="Description">16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B224KO5NNNC" description="16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C16772"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B224KO5NNNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="M.2_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C16772 CL05B224KO5NNNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8176b566-7898-4e5b-91ff-6164ab01223e</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C91">
+      <value>220nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B224KO5NNNC_C16772.pdf</datasheet>
+      <description>16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C16772</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B224KO5NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B224KO5NNNC_C16772.pdf</field>
+        <field name="Description">16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B224KO5NNNC" description="16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C16772"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B224KO5NNNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="M.2_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C16772 CL05B224KO5NNNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5ddced34-0bd9-4308-a08b-aef48c70095b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C92">
+      <value>220nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B224KO5NNNC_C16772.pdf</datasheet>
+      <description>16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C16772</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B224KO5NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B224KO5NNNC_C16772.pdf</field>
+        <field name="Description">16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B224KO5NNNC" description="16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C16772"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B224KO5NNNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="M.2_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C16772 CL05B224KO5NNNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d28e7dde-1155-4e0a-a2d7-c4477f3270b2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="CN6">
+      <value>SM3ZS067U310AMR1200</value>
+      <footprint>JLCImport:2E0BC21-S85BM-7H</footprint>
+      <datasheet>https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/508/SM3ZS067U410__Dwg.pdf</datasheet>
+      <description>-40℃~+80℃ 0.5mm 67P Copper alloy Gold Surface Mount, Right Angle SMD,P=0.5mm,卧贴 Edgeboard Connectors ROHS</description>
+      <fields>
+        <field name="LCSC">C4527433</field>
+        <field name="Manufacturer">JAE Electronics</field>
+        <field name="Manufacturer Part">SM3ZS067U310AMR1200</field>
+        <field name="Footprint">JLCImport:2E0BC21-S85BM-7H</field>
+        <field name="Datasheet">https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/508/SM3ZS067U410__Dwg.pdf</field>
+        <field name="Description">-40℃~+80℃ 0.5mm 67P Copper alloy Gold Surface Mount, Right Angle SMD,P=0.5mm,卧贴 Edgeboard Connectors ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="SM3ZS067U310AMR1200" description="-40℃~+80℃ 0.5mm 67P Copper alloy Gold Surface Mount, Right Angle SMD,P=0.5mm,卧贴 Edgeboard Connectors ROHS"/>
+      <property name="LCSC" value="C4527433"/>
+      <property name="Manufacturer" value="JAE Electronics"/>
+      <property name="Manufacturer Part" value="SM3ZS067U310AMR1200"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="M.2_0.kicad_sch"/>
+      <property name="ki_keywords" value="C4527433 CONN-SMD_SM3ZS067U410AMR1000 JAE Electronics SM3ZS067U310AMR1200"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5a00ad25-efd0-4379-bb52-ab1f58b293b8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="50"/>
+            <pin num="52"/>
+            <pin num="54"/>
+            <pin num="49"/>
+            <pin num="47"/>
+            <pin num="43"/>
+            <pin num="41"/>
+            <pin num="37"/>
+            <pin num="35"/>
+            <pin num="31"/>
+            <pin num="29"/>
+            <pin num="25"/>
+            <pin num="23"/>
+            <pin num="19"/>
+            <pin num="17"/>
+            <pin num="13"/>
+            <pin num="11"/>
+            <pin num="7"/>
+            <pin num="5"/>
+            <pin num="38"/>
+            <pin num="55"/>
+            <pin num="53"/>
+            <pin num="2"/>
+            <pin num="18"/>
+            <pin num="16"/>
+            <pin num="70"/>
+            <pin num="14"/>
+            <pin num="12"/>
+            <pin num="72"/>
+            <pin num="74"/>
+            <pin num="4"/>
+            <pin num="57"/>
+            <pin num="51"/>
+            <pin num="71"/>
+            <pin num="45"/>
+            <pin num="73"/>
+            <pin num="1"/>
+            <pin num="75"/>
+            <pin num="39"/>
+            <pin num="3"/>
+            <pin num="9"/>
+            <pin num="33"/>
+            <pin num="15"/>
+            <pin num="27"/>
+            <pin num="21"/>
+            <pin num="58"/>
+            <pin num="56"/>
+            <pin num="48"/>
+            <pin num="46"/>
+            <pin num="44"/>
+            <pin num="42"/>
+            <pin num="40"/>
+            <pin num="36"/>
+            <pin num="34"/>
+            <pin num="32"/>
+            <pin num="30"/>
+            <pin num="28"/>
+            <pin num="26"/>
+            <pin num="24"/>
+            <pin num="22"/>
+            <pin num="20"/>
+            <pin num="8"/>
+            <pin num="6"/>
+            <pin num="67"/>
+            <pin num="10"/>
+            <pin num="69"/>
+            <pin num="68"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R20">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</datasheet>
+      <description>-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF1002TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</field>
+        <field name="Description">-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="" part="0402WGF1002TCE_1" description="-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C25744"/>
+      <property name="Manufacturer" value="UNI-ROYAL(Uniroyal Elec)"/>
+      <property name="Manufacturer Part" value="0402WGF1002TCE"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="M.2_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF1002TCE C25744 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a61b3c07-9707-43b5-95a2-2dbb0b780fe0</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R21">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</datasheet>
+      <description>-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF1002TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</field>
+        <field name="Description">-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="" part="0402WGF1002TCE_1" description="-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C25744"/>
+      <property name="Manufacturer" value="UNI-ROYAL(Uniroyal Elec)"/>
+      <property name="Manufacturer Part" value="0402WGF1002TCE"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="M.2_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF1002TCE C25744 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>67d33bf8-98ca-4820-a9c9-f4818ea8a38a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R53">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</datasheet>
+      <description>-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF1002TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</field>
+        <field name="Description">-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="" part="0402WGF1002TCE_1" description="-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C25744"/>
+      <property name="Manufacturer" value="UNI-ROYAL(Uniroyal Elec)"/>
+      <property name="Manufacturer Part" value="0402WGF1002TCE"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="M.2_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF1002TCE C25744 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>13a95964-e3b0-4497-b8ad-3b9ea65d0997</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R57">
+      <value>100k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2206010100_UNI-ROYAL-Uniroyal-Elec-0402WGF1003TCE_C25741.pdf</datasheet>
+      <description>-55℃~+155℃ 100kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C25741</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF1003TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2206010100_UNI-ROYAL-Uniroyal-Elec-0402WGF1003TCE_C25741.pdf</field>
+        <field name="Description">-55℃~+155℃ 100kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="" part="0402WGF1003TCE_1" description="-55℃~+155℃ 100kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C25741"/>
+      <property name="Manufacturer" value="UNI-ROYAL(Uniroyal Elec)"/>
+      <property name="Manufacturer Part" value="0402WGF1003TCE"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="M.2_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF1003TCE C25741 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>db338b90-b1d0-4e5d-9312-8b2da70537f5</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="" part="0402WGF1002TCE_1">
+      <description>-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">0402WGF1002TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</field>
+        <field name="Description">-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF1002TCE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="0402WGF1003TCE_1">
+      <description>-55℃~+155℃ 100kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2206010100_UNI-ROYAL-Uniroyal-Elec-0402WGF1003TCE_C25741.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">0402WGF1003TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2206010100_UNI-ROYAL-Uniroyal-Elec-0402WGF1003TCE_C25741.pdf</field>
+        <field name="Description">-55℃~+155℃ 100kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+        <field name="LCSC">C25741</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF1003TCE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="CL05B224KO5NNNC">
+      <description>16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B224KO5NNNC_C16772.pdf</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CL05B224KO5NNNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B224KO5NNNC_C16772.pdf</field>
+        <field name="Description">16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+        <field name="LCSC">C16772</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B224KO5NNNC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="SM3ZS067U310AMR1200">
+      <description>-40℃~+80℃ 0.5mm 67P Copper alloy Gold Surface Mount, Right Angle SMD,P=0.5mm,卧贴 Edgeboard Connectors ROHS</description>
+      <docs>https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/508/SM3ZS067U410__Dwg.pdf</docs>
+      <fields>
+        <field name="Reference">CN3</field>
+        <field name="Value">SM3ZS067U310AMR1200</field>
+        <field name="Footprint">JLCImport:SM3ZS067U310AMR1200</field>
+        <field name="Datasheet">https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/508/SM3ZS067U410__Dwg.pdf</field>
+        <field name="Description">-40℃~+80℃ 0.5mm 67P Copper alloy Gold Surface Mount, Right Angle SMD,P=0.5mm,卧贴 Edgeboard Connectors ROHS</field>
+        <field name="LCSC">C4527433</field>
+        <field name="Manufacturer">JAE Electronics</field>
+        <field name="Manufacturer Part">SM3ZS067U310AMR1200</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="3.3V" type="power_in"/>
+        <pin num="3" name="GND" type="passive"/>
+        <pin num="4" name="3.3V" type="passive"/>
+        <pin num="5" name="PERn3" type="input"/>
+        <pin num="6" name="NC" type="no_connect"/>
+        <pin num="7" name="PERp3" type="input"/>
+        <pin num="8" name="NC" type="no_connect"/>
+        <pin num="9" name="GND" type="passive"/>
+        <pin num="10" name="DAS/~{DSS}/~{LED1}" type="bidirectional"/>
+        <pin num="11" name="PETn3" type="output"/>
+        <pin num="12" name="3.3V" type="passive"/>
+        <pin num="13" name="PETp3" type="output"/>
+        <pin num="14" name="3.3V" type="passive"/>
+        <pin num="15" name="GND" type="passive"/>
+        <pin num="16" name="3.3V" type="passive"/>
+        <pin num="17" name="PERn2" type="input"/>
+        <pin num="18" name="3.3V" type="passive"/>
+        <pin num="19" name="PERp2" type="input"/>
+        <pin num="20" name="NC" type="no_connect"/>
+        <pin num="21" name="GND" type="passive"/>
+        <pin num="22" name="NC" type="no_connect"/>
+        <pin num="23" name="PETn2" type="output"/>
+        <pin num="24" name="NC" type="no_connect"/>
+        <pin num="25" name="PETp2" type="output"/>
+        <pin num="26" name="NC" type="no_connect"/>
+        <pin num="27" name="GND" type="passive"/>
+        <pin num="28" name="NC" type="no_connect"/>
+        <pin num="29" name="PERn1" type="input"/>
+        <pin num="30" name="NC" type="no_connect"/>
+        <pin num="31" name="PERp1" type="input"/>
+        <pin num="32" name="NC" type="no_connect"/>
+        <pin num="33" name="GND" type="passive"/>
+        <pin num="34" name="NC" type="no_connect"/>
+        <pin num="35" name="PETn1" type="output"/>
+        <pin num="36" name="NC" type="no_connect"/>
+        <pin num="37" name="PETp1" type="output"/>
+        <pin num="38" name="DEVSLP" type="output"/>
+        <pin num="39" name="GND" type="passive"/>
+        <pin num="40" name="NC" type="no_connect"/>
+        <pin num="41" name="PERn0/SATA-B+" type="input"/>
+        <pin num="42" name="NC" type="no_connect"/>
+        <pin num="43" name="PERp0/SATA-B-" type="input"/>
+        <pin num="44" name="NC" type="no_connect"/>
+        <pin num="45" name="GND" type="passive"/>
+        <pin num="46" name="NC" type="no_connect"/>
+        <pin num="47" name="PETn0/SATA-A-" type="output"/>
+        <pin num="48" name="NC" type="no_connect"/>
+        <pin num="49" name="PETp0/SATA-A+" type="output"/>
+        <pin num="50" name="~{PERST}" type="output"/>
+        <pin num="51" name="GND" type="passive"/>
+        <pin num="52" name="~{CLKREQ}" type="bidirectional"/>
+        <pin num="53" name="REFCLKn" type="output"/>
+        <pin num="54" name="~{PEWAKE}" type="bidirectional"/>
+        <pin num="55" name="REFCLKp" type="output"/>
+        <pin num="56" name="NC" type="no_connect"/>
+        <pin num="57" name="GND" type="passive"/>
+        <pin num="58" name="NC" type="no_connect"/>
+        <pin num="67" name="NC" type="no_connect"/>
+        <pin num="68" name="SUSCLK" type="output"/>
+        <pin num="69" name="PEDET" type="passive"/>
+        <pin num="70" name="3.3V" type="passive"/>
+        <pin num="71" name="GND" type="passive"/>
+        <pin num="72" name="3.3V" type="passive"/>
+        <pin num="73" name="GND" type="passive"/>
+        <pin num="74" name="3.3V" type="passive"/>
+        <pin num="75" name="GND" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries/>
+  <nets>
+    <net code="1" name="/+3V3" class="Default">
+      <node ref="CN6" pin="12" pinfunction="3.3V_12" pintype="passive"/>
+      <node ref="CN6" pin="14" pinfunction="3.3V_14" pintype="passive"/>
+      <node ref="CN6" pin="16" pinfunction="3.3V_16" pintype="passive"/>
+      <node ref="CN6" pin="18" pinfunction="3.3V_18" pintype="passive"/>
+      <node ref="CN6" pin="2" pinfunction="3.3V_2" pintype="power_in"/>
+      <node ref="CN6" pin="4" pinfunction="3.3V_4" pintype="passive"/>
+      <node ref="CN6" pin="70" pinfunction="3.3V_70" pintype="passive"/>
+      <node ref="CN6" pin="72" pinfunction="3.3V_72" pintype="passive"/>
+      <node ref="CN6" pin="74" pinfunction="3.3V_74" pintype="passive"/>
+      <node ref="R20" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="R21" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="R53" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="R57" pin="2" pinfunction="2_2" pintype="input"/>
+    </net>
+    <net code="2" name="/CLKREQ#" class="Default">
+      <node ref="CN6" pin="52" pinfunction="~{CLKREQ}_52" pintype="bidirectional"/>
+      <node ref="R20" pin="1" pinfunction="1_1" pintype="input"/>
+    </net>
+    <net code="3" name="/DEVSLP" class="Default">
+      <node ref="CN6" pin="38" pinfunction="DEVSLP_38" pintype="output"/>
+      <node ref="R21" pin="1" pinfunction="1_1" pintype="input"/>
+    </net>
+    <net code="4" name="/PCIE_REFCLK+" class="Default">
+      <node ref="CN6" pin="55" pinfunction="REFCLKp_55" pintype="output"/>
+    </net>
+    <net code="5" name="/PCIE_REFCLK-" class="Default">
+      <node ref="CN6" pin="53" pinfunction="REFCLKn_53" pintype="output"/>
+    </net>
+    <net code="6" name="/PCIE_RXI0+" class="Default">
+      <node ref="CN6" pin="43" pinfunction="PERp0/SATA-B-_43" pintype="input"/>
+    </net>
+    <net code="7" name="/PCIE_RXI0-" class="Default">
+      <node ref="CN6" pin="41" pinfunction="PERn0/SATA-B+_41" pintype="input"/>
+    </net>
+    <net code="8" name="/PCIE_RXI_1+" class="Default">
+      <node ref="CN6" pin="31" pinfunction="PERp1_31" pintype="input"/>
+    </net>
+    <net code="9" name="/PCIE_RXI_1-" class="Default">
+      <node ref="CN6" pin="29" pinfunction="PERn1_29" pintype="input"/>
+    </net>
+    <net code="10" name="/PCIE_TXO_0+" class="Default">
+      <node ref="C89" pin="1" pinfunction="1_1" pintype="input"/>
+    </net>
+    <net code="11" name="/PCIE_TXO_0-" class="Default">
+      <node ref="C90" pin="1" pinfunction="1_1" pintype="input"/>
+    </net>
+    <net code="12" name="/PCIE_TXO_1+" class="Default">
+      <node ref="C91" pin="1" pinfunction="1_1" pintype="input"/>
+    </net>
+    <net code="13" name="/PCIE_TXO_1-" class="Default">
+      <node ref="C92" pin="1" pinfunction="1_1" pintype="input"/>
+    </net>
+    <net code="14" name="/PDET" class="Default">
+      <node ref="CN6" pin="69" pinfunction="PEDET_69" pintype="passive"/>
+      <node ref="R57" pin="1" pinfunction="1_1" pintype="input"/>
+    </net>
+    <net code="15" name="/PERST#" class="Default">
+      <node ref="CN6" pin="50" pinfunction="~{PERST}_50" pintype="output"/>
+      <node ref="R53" pin="1" pinfunction="1_1" pintype="input"/>
+    </net>
+    <net code="16" name="GND" class="Default">
+      <node ref="CN6" pin="1" pinfunction="GND_1" pintype="power_in"/>
+      <node ref="CN6" pin="15" pinfunction="GND_15" pintype="passive"/>
+      <node ref="CN6" pin="21" pinfunction="GND_21" pintype="passive"/>
+      <node ref="CN6" pin="27" pinfunction="GND_27" pintype="passive"/>
+      <node ref="CN6" pin="3" pinfunction="GND_3" pintype="passive"/>
+      <node ref="CN6" pin="33" pinfunction="GND_33" pintype="passive"/>
+      <node ref="CN6" pin="39" pinfunction="GND_39" pintype="passive"/>
+      <node ref="CN6" pin="45" pinfunction="GND_45" pintype="passive"/>
+      <node ref="CN6" pin="51" pinfunction="GND_51" pintype="passive"/>
+      <node ref="CN6" pin="57" pinfunction="GND_57" pintype="passive"/>
+      <node ref="CN6" pin="71" pinfunction="GND_71" pintype="passive"/>
+      <node ref="CN6" pin="73" pinfunction="GND_73" pintype="passive"/>
+      <node ref="CN6" pin="75" pinfunction="GND_75" pintype="passive"/>
+      <node ref="CN6" pin="9" pinfunction="GND_9" pintype="passive"/>
+    </net>
+    <net code="17" name="Net-(CN6-PETn0/SATA-A-)" class="Default">
+      <node ref="C90" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="CN6" pin="47" pinfunction="PETn0/SATA-A-_47" pintype="output"/>
+    </net>
+    <net code="18" name="Net-(CN6-PETn1)" class="Default">
+      <node ref="C92" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="CN6" pin="35" pinfunction="PETn1_35" pintype="output"/>
+    </net>
+    <net code="19" name="Net-(CN6-PETp0/SATA-A+)" class="Default">
+      <node ref="C89" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="CN6" pin="49" pinfunction="PETp0/SATA-A+_49" pintype="output"/>
+    </net>
+    <net code="20" name="Net-(CN6-PETp1)" class="Default">
+      <node ref="C91" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="CN6" pin="37" pinfunction="PETp1_37" pintype="output"/>
+    </net>
+    <net code="21" name="unconnected-(CN6-DAS/~{DSS}/~{LED1}-Pad10)" class="Default">
+      <node ref="CN6" pin="10" pinfunction="DAS/~{DSS}/~{LED1}_10" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="22" name="unconnected-(CN6-NC-Pad6)" class="Default">
+      <node ref="CN6" pin="6" pinfunction="NC_6" pintype="no_connect"/>
+    </net>
+    <net code="23" name="unconnected-(CN6-NC-Pad8)" class="Default">
+      <node ref="CN6" pin="8" pinfunction="NC_8" pintype="no_connect"/>
+    </net>
+    <net code="24" name="unconnected-(CN6-NC-Pad20)" class="Default">
+      <node ref="CN6" pin="20" pinfunction="NC_20" pintype="no_connect"/>
+    </net>
+    <net code="25" name="unconnected-(CN6-NC-Pad22)" class="Default">
+      <node ref="CN6" pin="22" pinfunction="NC_22" pintype="no_connect"/>
+    </net>
+    <net code="26" name="unconnected-(CN6-NC-Pad24)" class="Default">
+      <node ref="CN6" pin="24" pinfunction="NC_24" pintype="no_connect"/>
+    </net>
+    <net code="27" name="unconnected-(CN6-NC-Pad26)" class="Default">
+      <node ref="CN6" pin="26" pinfunction="NC_26" pintype="no_connect"/>
+    </net>
+    <net code="28" name="unconnected-(CN6-NC-Pad28)" class="Default">
+      <node ref="CN6" pin="28" pinfunction="NC_28" pintype="no_connect"/>
+    </net>
+    <net code="29" name="unconnected-(CN6-NC-Pad30)" class="Default">
+      <node ref="CN6" pin="30" pinfunction="NC_30" pintype="no_connect"/>
+    </net>
+    <net code="30" name="unconnected-(CN6-NC-Pad32)" class="Default">
+      <node ref="CN6" pin="32" pinfunction="NC_32" pintype="no_connect"/>
+    </net>
+    <net code="31" name="unconnected-(CN6-NC-Pad34)" class="Default">
+      <node ref="CN6" pin="34" pinfunction="NC_34" pintype="no_connect"/>
+    </net>
+    <net code="32" name="unconnected-(CN6-NC-Pad36)" class="Default">
+      <node ref="CN6" pin="36" pinfunction="NC_36" pintype="no_connect"/>
+    </net>
+    <net code="33" name="unconnected-(CN6-NC-Pad40)" class="Default">
+      <node ref="CN6" pin="40" pinfunction="NC_40" pintype="no_connect"/>
+    </net>
+    <net code="34" name="unconnected-(CN6-NC-Pad42)" class="Default">
+      <node ref="CN6" pin="42" pinfunction="NC_42" pintype="no_connect"/>
+    </net>
+    <net code="35" name="unconnected-(CN6-NC-Pad44)" class="Default">
+      <node ref="CN6" pin="44" pinfunction="NC_44" pintype="no_connect"/>
+    </net>
+    <net code="36" name="unconnected-(CN6-NC-Pad46)" class="Default">
+      <node ref="CN6" pin="46" pinfunction="NC_46" pintype="no_connect"/>
+    </net>
+    <net code="37" name="unconnected-(CN6-NC-Pad48)" class="Default">
+      <node ref="CN6" pin="48" pinfunction="NC_48" pintype="no_connect"/>
+    </net>
+    <net code="38" name="unconnected-(CN6-NC-Pad56)" class="Default">
+      <node ref="CN6" pin="56" pinfunction="NC_56" pintype="no_connect"/>
+    </net>
+    <net code="39" name="unconnected-(CN6-NC-Pad58)" class="Default">
+      <node ref="CN6" pin="58" pinfunction="NC_58" pintype="no_connect"/>
+    </net>
+    <net code="40" name="unconnected-(CN6-NC-Pad67)" class="Default">
+      <node ref="CN6" pin="67" pinfunction="NC_67" pintype="no_connect"/>
+    </net>
+    <net code="41" name="unconnected-(CN6-PERn2-Pad17)" class="Default">
+      <node ref="CN6" pin="17" pinfunction="PERn2_17" pintype="input+no_connect"/>
+    </net>
+    <net code="42" name="unconnected-(CN6-PERn3-Pad5)" class="Default">
+      <node ref="CN6" pin="5" pinfunction="PERn3_5" pintype="input+no_connect"/>
+    </net>
+    <net code="43" name="unconnected-(CN6-PERp2-Pad19)" class="Default">
+      <node ref="CN6" pin="19" pinfunction="PERp2_19" pintype="input+no_connect"/>
+    </net>
+    <net code="44" name="unconnected-(CN6-PERp3-Pad7)" class="Default">
+      <node ref="CN6" pin="7" pinfunction="PERp3_7" pintype="input+no_connect"/>
+    </net>
+    <net code="45" name="unconnected-(CN6-PETn2-Pad23)" class="Default">
+      <node ref="CN6" pin="23" pinfunction="PETn2_23" pintype="output+no_connect"/>
+    </net>
+    <net code="46" name="unconnected-(CN6-PETn3-Pad11)" class="Default">
+      <node ref="CN6" pin="11" pinfunction="PETn3_11" pintype="output+no_connect"/>
+    </net>
+    <net code="47" name="unconnected-(CN6-PETp2-Pad25)" class="Default">
+      <node ref="CN6" pin="25" pinfunction="PETp2_25" pintype="output+no_connect"/>
+    </net>
+    <net code="48" name="unconnected-(CN6-PETp3-Pad13)" class="Default">
+      <node ref="CN6" pin="13" pinfunction="PETp3_13" pintype="output+no_connect"/>
+    </net>
+    <net code="49" name="unconnected-(CN6-SUSCLK-Pad68)" class="Default">
+      <node ref="CN6" pin="68" pinfunction="SUSCLK_68" pintype="output+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(CN6-~{PEWAKE}-Pad54)" class="Default">
+      <node ref="CN6" pin="54" pinfunction="~{PEWAKE}_54" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>

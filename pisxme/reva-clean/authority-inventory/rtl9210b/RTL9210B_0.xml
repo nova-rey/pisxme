@@ -1,0 +1,2052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/nyx/PiSXMe/pisxme/reva-clean/authority-inventory/rtl9210b/community-lz1/RTL9210b_0.kicad_sch</source>
+    <date>2026-09-06T18:06:55</date>
+    <tool>Eeschema 10.0.5</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>RTL9210b_0.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C8">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</datasheet>
+      <description>22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C59461</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL10A226MQ8NRNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</field>
+        <field name="Description">22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="" part="CL10A226MQ8NRNC_2" description="22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C59461"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL10A226MQ8NRNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0603 C59461 CL10A226MQ8NRNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>70413496-334d-4f82-aa71-e9ca07c5af52</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C9">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</datasheet>
+      <description>22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C59461</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL10A226MQ8NRNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</field>
+        <field name="Description">22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="" part="CL10A226MQ8NRNC_2" description="22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C59461"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL10A226MQ8NRNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0603 C59461 CL10A226MQ8NRNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5110586d-8abd-4826-ac19-f3343d671e60</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C10">
+      <value>16pF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_FH--Guangdong-Fenghua-Advanced-Tech-0402CG160J500NT_C48836.pdf</datasheet>
+      <description>16pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C48836</field>
+        <field name="Manufacturer">FH (Guangdong Fenghua Advanced Tech)</field>
+        <field name="Manufacturer Part">0402CG160J500NT</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_FH--Guangdong-Fenghua-Advanced-Tech-0402CG160J500NT_C48836.pdf</field>
+        <field name="Description">16pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="0402CG160J500NT" description="16pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C48836"/>
+      <property name="Manufacturer" value="FH (Guangdong Fenghua Advanced Tech)"/>
+      <property name="Manufacturer Part" value="0402CG160J500NT"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402CG160J500NT C0402 C48836 FH (Guangdong Fenghua Advanced Tech)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c0617bc1-aca0-4dd7-8c5a-f463e28e758b</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C11">
+      <value>4.7uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05A475MP5NRNC_C23733.pdf</datasheet>
+      <description>10V 4.7uF X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C23733</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05A475MP5NRNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05A475MP5NRNC_C23733.pdf</field>
+        <field name="Description">10V 4.7uF X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05A475MP5NRNC" description="10V 4.7uF X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C23733"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05A475MP5NRNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C23733 CL05A475MP5NRNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>79fb065f-9607-4230-8959-2365ff194914</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C12">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</datasheet>
+      <description>100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C307331</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B104KB54PNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</field>
+        <field name="Description">100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B104KB54PNC" description="100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C307331"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B104KB54PNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C307331 CL05B104KB54PNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5c9c471c-db42-488e-9eaf-284e0ba29f6c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C13">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</datasheet>
+      <description>100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C307331</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B104KB54PNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</field>
+        <field name="Description">100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B104KB54PNC" description="100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C307331"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B104KB54PNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C307331 CL05B104KB54PNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>268bbde8-5ac7-42ca-998d-7e091e8d6456</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C14">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</datasheet>
+      <description>100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C307331</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B104KB54PNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</field>
+        <field name="Description">100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B104KB54PNC" description="100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C307331"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B104KB54PNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C307331 CL05B104KB54PNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>202ad1ce-0004-465b-a764-208c15a97b79</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C15">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</datasheet>
+      <description>100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C307331</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B104KB54PNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</field>
+        <field name="Description">100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B104KB54PNC" description="100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C307331"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B104KB54PNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C307331 CL05B104KB54PNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a3993af6-d6d2-4353-81bb-28ff2eb9dbf7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C16">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</datasheet>
+      <description>100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C307331</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B104KB54PNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</field>
+        <field name="Description">100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B104KB54PNC" description="100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C307331"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B104KB54PNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C307331 CL05B104KB54PNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>436433bd-e97b-4222-8678-e5b90a66f246</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C17">
+      <value>16pF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_FH--Guangdong-Fenghua-Advanced-Tech-0402CG160J500NT_C48836.pdf</datasheet>
+      <description>16pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C48836</field>
+        <field name="Manufacturer">FH (Guangdong Fenghua Advanced Tech)</field>
+        <field name="Manufacturer Part">0402CG160J500NT</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_FH--Guangdong-Fenghua-Advanced-Tech-0402CG160J500NT_C48836.pdf</field>
+        <field name="Description">16pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="0402CG160J500NT" description="16pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C48836"/>
+      <property name="Manufacturer" value="FH (Guangdong Fenghua Advanced Tech)"/>
+      <property name="Manufacturer Part" value="0402CG160J500NT"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402CG160J500NT C0402 C48836 FH (Guangdong Fenghua Advanced Tech)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4282c872-9b9e-4483-ac4d-6335354cad0a</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C18">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</datasheet>
+      <description>100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C307331</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B104KB54PNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</field>
+        <field name="Description">100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B104KB54PNC" description="100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C307331"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B104KB54PNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C307331 CL05B104KB54PNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cf0eff06-f5b7-4b8a-9fbc-49d92ef13520</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C21">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</datasheet>
+      <description>100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C307331</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B104KB54PNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</field>
+        <field name="Description">100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B104KB54PNC" description="100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C307331"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B104KB54PNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C307331 CL05B104KB54PNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>844ef3f2-bb79-47ac-b0ea-c5e7e96e90b7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C24">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</datasheet>
+      <description>100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C307331</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B104KB54PNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</field>
+        <field name="Description">100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B104KB54PNC" description="100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C307331"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B104KB54PNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C307331 CL05B104KB54PNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>43e6e69e-deca-49bd-bf48-f299ab4dcbf7</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C25">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</datasheet>
+      <description>100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C307331</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B104KB54PNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</field>
+        <field name="Description">100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B104KB54PNC" description="100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C307331"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B104KB54PNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C307331 CL05B104KB54PNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b4e1c55b-8806-442a-9c14-32cd1e3c9a94</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C33">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</datasheet>
+      <description>22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C59461</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL10A226MQ8NRNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</field>
+        <field name="Description">22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="" part="CL10A226MQ8NRNC_3" description="22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C59461"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL10A226MQ8NRNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0603 C59461 CL10A226MQ8NRNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>03e7964a-d3da-421f-940b-7d98f66cc3fb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C34">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</datasheet>
+      <description>22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C59461</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL10A226MQ8NRNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</field>
+        <field name="Description">22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="" part="CL10A226MQ8NRNC_1" description="22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C59461"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL10A226MQ8NRNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0603 C59461 CL10A226MQ8NRNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>77fb712c-ba68-46db-beb0-5f2ca5c90dd8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C35">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</datasheet>
+      <description>100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C307331</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B104KB54PNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</field>
+        <field name="Description">100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05B104KB54PNC" description="100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C307331"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05B104KB54PNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C307331 CL05B104KB54PNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e8055943-f6f4-4c1f-92ba-755f96cfa1f1</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C36">
+      <value>22uF</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</datasheet>
+      <description>22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C59461</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL10A226MQ8NRNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</field>
+        <field name="Description">22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="" part="CL10A226MQ8NRNC_3" description="22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C59461"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL10A226MQ8NRNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0603 C59461 CL10A226MQ8NRNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a2d48533-1f4b-4bde-bdd1-3f1472dd9d33</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C37">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2208231630_Samsung-Electro-Mechanics-CL05A106MQ5NUNC_C15525.pdf</datasheet>
+      <description>10uF 6.3V X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C15525</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05A106MQ5NUNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2208231630_Samsung-Electro-Mechanics-CL05A106MQ5NUNC_C15525.pdf</field>
+        <field name="Description">10uF 6.3V X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05A106MQ5NUNC" description="10uF 6.3V X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C15525"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05A106MQ5NUNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C15525 CL05A106MQ5NUNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b28674e1-dc82-48c8-9ad0-5906146fb94c</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="C49">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2208231630_Samsung-Electro-Mechanics-CL05A106MQ5NUNC_C15525.pdf</datasheet>
+      <description>10uF 6.3V X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <fields>
+        <field name="LCSC">C15525</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05A106MQ5NUNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2208231630_Samsung-Electro-Mechanics-CL05A106MQ5NUNC_C15525.pdf</field>
+        <field name="Description">10uF 6.3V X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CL05A106MQ5NUNC" description="10uF 6.3V X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS"/>
+      <property name="LCSC" value="C15525"/>
+      <property name="Manufacturer" value="Samsung Electro-Mechanics"/>
+      <property name="Manufacturer Part" value="CL05A106MQ5NUNC"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C0402 C15525 CL05A106MQ5NUNC Samsung Electro-Mechanics"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1001d0f6-5770-4e4c-b016-587d1407e4eb</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="CN3">
+      <value>W25Q128FVIQ_Connector</value>
+      <footprint>JLCImport:H2541FV-C762-2X04P</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2405141422_HanElectricity-H2541FV-C762-2x04P_C22387106.pdf</datasheet>
+      <description>-55℃~+105℃ 2.54mm 7.62mm 8P DIP Phosphor bronze Square Hole DIP-8 IC / Transistor Socket ROHS</description>
+      <fields>
+        <field name="LCSC">C22387106</field>
+        <field name="Manufacturer">HanElectricity</field>
+        <field name="Manufacturer Part">H2541FV-C762-2x04P</field>
+        <field name="Footprint">JLCImport:H2541FV-C762-2X04P</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2405141422_HanElectricity-H2541FV-C762-2x04P_C22387106.pdf</field>
+        <field name="Description">-55℃~+105℃ 2.54mm 7.62mm 8P DIP Phosphor bronze Square Hole DIP-8 IC / Transistor Socket ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="H2541FV-C762-2X04P" description="-55℃~+105℃ 2.54mm 7.62mm 8P DIP Phosphor bronze Square Hole DIP-8 IC / Transistor Socket ROHS"/>
+      <property name="LCSC" value="C22387106"/>
+      <property name="Manufacturer" value="HanElectricity"/>
+      <property name="Manufacturer Part" value="H2541FV-C762-2x04P"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C22387106 DIP-8_L10.2-W10.1-P2.54-LS7.6-BL_2 H2541FV-C762-2x04P HanElectricity"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7a542d22-a99a-4cd1-8ac2-4ca02637eb3f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="6"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L5">
+      <value>1uH</value>
+      <footprint>TerminalBlock_Phoenix:TerminalBlock_Phoenix_PTSM-0,5-2-2,5-V-SMD_1x02-1MP_P2.50mm_Vertical</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2504101957_Huacui-Micro-PIM252012S1R0MBCA_C46970566.pdf</datasheet>
+      <description>1uH 3.6A 35mΩ 5A ±20% 1008 Power Inductors ROHS</description>
+      <fields>
+        <field name="LCSC">C46970566</field>
+        <field name="Manufacturer">Huacui Micro</field>
+        <field name="Manufacturer Part">PIM252012S1R0MBCA</field>
+        <field name="Footprint">TerminalBlock_Phoenix:TerminalBlock_Phoenix_PTSM-0,5-2-2,5-V-SMD_1x02-1MP_P2.50mm_Vertical</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2504101957_Huacui-Micro-PIM252012S1R0MBCA_C46970566.pdf</field>
+        <field name="Description">1uH 3.6A 35mΩ 5A ±20% 1008 Power Inductors ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="PIM252012S1R0MBCA" description="1uH 3.6A 35mΩ 5A ±20% 1008 Power Inductors ROHS"/>
+      <property name="LCSC" value="C46970566"/>
+      <property name="Manufacturer" value="Huacui Micro"/>
+      <property name="Manufacturer Part" value="PIM252012S1R0MBCA"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C46970566 Huacui Micro IND-SMD_L2.5-W2.0_ZEPIM252012S PIM252012S1R0MBCA"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>237ce66e-97eb-4374-972f-d5f159f94a04</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L6">
+      <value>10mΩ ±25%</value>
+      <footprint>Inductor_SMD:L_1206_3216Metric</footprint>
+      <datasheet>https://item.szlcsc.com/375393.html</datasheet>
+      <description>1206 Ferrite Beads ROHS</description>
+      <fields>
+        <field name="LCSC">C53309025</field>
+        <field name="Manufacturer">SOREDE</field>
+        <field name="Manufacturer Part">SRLB.1206.600TT60</field>
+        <field name="Footprint">Inductor_SMD:L_1206_3216Metric</field>
+        <field name="Datasheet">https://item.szlcsc.com/375393.html</field>
+        <field name="Description">1206 Ferrite Beads ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="SRLB_1206_600TT60" description="1206 Ferrite Beads ROHS"/>
+      <property name="LCSC" value="C53309025"/>
+      <property name="Manufacturer" value="SOREDE"/>
+      <property name="Manufacturer Part" value="SRLB.1206.600TT60"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C53309025 L1206 SOREDE SRLB.1206.600TT60"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b3f7b995-ffd1-4de3-b49a-d94113d44dd6</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="L7">
+      <value>10mΩ ±25%</value>
+      <footprint>Inductor_SMD:L_1206_3216Metric</footprint>
+      <datasheet>https://item.szlcsc.com/375393.html</datasheet>
+      <description>1206 Ferrite Beads ROHS</description>
+      <fields>
+        <field name="LCSC">C53309025</field>
+        <field name="Manufacturer">SOREDE</field>
+        <field name="Manufacturer Part">SRLB.1206.600TT60</field>
+        <field name="Footprint">Inductor_SMD:L_1206_3216Metric</field>
+        <field name="Datasheet">https://item.szlcsc.com/375393.html</field>
+        <field name="Description">1206 Ferrite Beads ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="SRLB_1206_600TT60" description="1206 Ferrite Beads ROHS"/>
+      <property name="LCSC" value="C53309025"/>
+      <property name="Manufacturer" value="SOREDE"/>
+      <property name="Manufacturer Part" value="SRLB.1206.600TT60"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C53309025 L1206 SOREDE SRLB.1206.600TT60"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0a975aac-db2e-4db1-a6d6-f4f6177c5bee</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R10">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</datasheet>
+      <description>-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF1002TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</field>
+        <field name="Description">-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="" part="0402WGF1002TCE_2" description="-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C25744"/>
+      <property name="Manufacturer" value="UNI-ROYAL(Uniroyal Elec)"/>
+      <property name="Manufacturer Part" value="0402WGF1002TCE"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF1002TCE C25744 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9b96b6bc-9fe9-426e-a5d0-f1dc3eb23d4f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R11">
+      <value>5.1k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF5101TCE_C25905.pdf</datasheet>
+      <description>-55℃~+155℃ 5.1kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C25905</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF5101TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF5101TCE_C25905.pdf</field>
+        <field name="Description">-55℃~+155℃ 5.1kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="0402WGF5101TCE" description="-55℃~+155℃ 5.1kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C25905"/>
+      <property name="Manufacturer" value="UNI-ROYAL(Uniroyal Elec)"/>
+      <property name="Manufacturer Part" value="0402WGF5101TCE"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF5101TCE C25905 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a3edfe98-8904-4438-8021-e3befd372f37</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R12">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF4701TCE_C25900.pdf</datasheet>
+      <description>-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C25900</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF4701TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF4701TCE_C25900.pdf</field>
+        <field name="Description">-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="0402WGF4701TCE" description="-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C25900"/>
+      <property name="Manufacturer" value="UNI-ROYAL(Uniroyal Elec)"/>
+      <property name="Manufacturer Part" value="0402WGF4701TCE"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF4701TCE C25900 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cabedb5c-7f70-46c7-b91b-5fd6f3df1077</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R13">
+      <value>5.1k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF5101TCE_C25905.pdf</datasheet>
+      <description>-55℃~+155℃ 5.1kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C25905</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF5101TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF5101TCE_C25905.pdf</field>
+        <field name="Description">-55℃~+155℃ 5.1kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="0402WGF5101TCE" description="-55℃~+155℃ 5.1kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C25905"/>
+      <property name="Manufacturer" value="UNI-ROYAL(Uniroyal Elec)"/>
+      <property name="Manufacturer Part" value="0402WGF5101TCE"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF5101TCE C25905 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>675aa7d8-a2e3-4597-83c5-03a109fd4e87</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R14">
+      <value>4.7k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF4701TCE_C25900.pdf</datasheet>
+      <description>-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C25900</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF4701TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF4701TCE_C25900.pdf</field>
+        <field name="Description">-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="" part="0402WGF4701TCE_1" description="-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C25900"/>
+      <property name="Manufacturer" value="UNI-ROYAL(Uniroyal Elec)"/>
+      <property name="Manufacturer Part" value="0402WGF4701TCE"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF4701TCE C25900 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>942d7ebf-74fd-4f4e-8279-05c0a1e77626</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R15">
+      <value>76.8</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/C48971957.pdf?spm=wm.sxq.inf.ggs___wm.fly.bg.23.xh&amp;lcsc_vid=EQBYUQZXQQAMUlQCFlBYAwdUFlULBF1VEwJfX1xeQAAxVlNeRFhYUlZWRVdXVjsOAxUeFF5JWBYZEEoKFBINSQcJGk4dAgUUFAk%3D</datasheet>
+      <description>RES 76.8Ω ±1% 62.5mW 0402</description>
+      <fields>
+        <field name="LCSC">C48971957</field>
+        <field name="Manufacturer">FH</field>
+        <field name="Manufacturer Part">RC-02K76R8FT</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/C48971957.pdf?spm=wm.sxq.inf.ggs___wm.fly.bg.23.xh&amp;lcsc_vid=EQBYUQZXQQAMUlQCFlBYAwdUFlULBF1VEwJfX1xeQAAxVlNeRFhYUlZWRVdXVjsOAxUeFF5JWBYZEEoKFBINSQcJGk4dAgUUFAk%3D</field>
+        <field name="Description">RES 76.8Ω ±1% 62.5mW 0402</field>
+      </fields>
+      <libsource lib="JLCImport" part="0402WGF4701TCE" description="-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C48971957"/>
+      <property name="Manufacturer" value="FH"/>
+      <property name="Manufacturer Part" value="RC-02K76R8FT"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF4701TCE C25900 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>807302b1-b599-4fcc-b427-8dc055780300</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R16">
+      <value>76.8</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/C48971957.pdf?spm=wm.sxq.inf.ggs___wm.fly.bg.23.xh&amp;lcsc_vid=EQBYUQZXQQAMUlQCFlBYAwdUFlULBF1VEwJfX1xeQAAxVlNeRFhYUlZWRVdXVjsOAxUeFF5JWBYZEEoKFBINSQcJGk4dAgUUFAk%3D</datasheet>
+      <description>RES 76.8Ω ±1% 62.5mW 0402</description>
+      <fields>
+        <field name="LCSC">C48971957</field>
+        <field name="Manufacturer">FH</field>
+        <field name="Manufacturer Part">RC-02K76R8FT</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/C48971957.pdf?spm=wm.sxq.inf.ggs___wm.fly.bg.23.xh&amp;lcsc_vid=EQBYUQZXQQAMUlQCFlBYAwdUFlULBF1VEwJfX1xeQAAxVlNeRFhYUlZWRVdXVjsOAxUeFF5JWBYZEEoKFBINSQcJGk4dAgUUFAk%3D</field>
+        <field name="Description">RES 76.8Ω ±1% 62.5mW 0402</field>
+      </fields>
+      <libsource lib="JLCImport" part="0402WGF4701TCE" description="-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C48971957"/>
+      <property name="Manufacturer" value="FH"/>
+      <property name="Manufacturer Part" value="RC-02K76R8FT"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF4701TCE C25900 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>592ef83b-78db-434a-9a8f-cff382a5f724</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R17">
+      <value>12k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Ever-Ohms-Tech-CR0402F12K0Q10Z_C881068.pdf</datasheet>
+      <description>-55℃~+155℃ 12kΩ 50V 63mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C881068</field>
+        <field name="Manufacturer">Ever Ohms Tech</field>
+        <field name="Manufacturer Part">CR0402F12K0Q10Z</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Ever-Ohms-Tech-CR0402F12K0Q10Z_C881068.pdf</field>
+        <field name="Description">-55℃~+155℃ 12kΩ 50V 63mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="CR0402F12K0Q10Z" description="-55℃~+155℃ 12kΩ 50V 63mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C881068"/>
+      <property name="Manufacturer" value="Ever Ohms Tech"/>
+      <property name="Manufacturer Part" value="CR0402F12K0Q10Z"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C881068 CR0402F12K0Q10Z Ever Ohms Tech R0402"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6275a70b-6ed6-4b6c-a39f-fd44472089d8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R18">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</datasheet>
+      <description>-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF1002TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</field>
+        <field name="Description">-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="0402WGF1002TCE" description="-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C25744"/>
+      <property name="Manufacturer" value="UNI-ROYAL(Uniroyal Elec)"/>
+      <property name="Manufacturer Part" value="0402WGF1002TCE"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF1002TCE C25744 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>211ae53a-0a1b-4edc-984a-1e519d11fe22</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R19">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</datasheet>
+      <description>-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF1002TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</field>
+        <field name="Description">-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="0402WGF1002TCE" description="-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C25744"/>
+      <property name="Manufacturer" value="UNI-ROYAL(Uniroyal Elec)"/>
+      <property name="Manufacturer Part" value="0402WGF1002TCE"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF1002TCE C25744 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cbfa3eaf-4f66-46fe-a94a-6e80ee73c031</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="R56">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</datasheet>
+      <description>-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <fields>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF1002TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</field>
+        <field name="Description">-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="0402WGF1002TCE" description="-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS"/>
+      <property name="LCSC" value="C25744"/>
+      <property name="Manufacturer" value="UNI-ROYAL(Uniroyal Elec)"/>
+      <property name="Manufacturer Part" value="0402WGF1002TCE"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="0402WGF1002TCE C25744 R0402 UNI-ROYAL(Uniroyal Elec)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3c397b60-0448-4cfd-bd62-9f2f0afb75a3</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U1">
+      <value>25MHz 10pF</value>
+      <footprint>JLCImport:25M_10PF_50PPM</footprint>
+      <datasheet>https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2207221830_SST-25M-10PF-50PPM_C4944018.pdf</datasheet>
+      <description>-20℃~+70℃ 10pF 25MHz ±30ppm ±50ppm HC-49S-SMD-2P-Mini Crystals ROHS</description>
+      <fields>
+        <field name="LCSC">C4944018</field>
+        <field name="Manufacturer">SST</field>
+        <field name="Manufacturer Part">25M 10PF 50PPM</field>
+        <field name="Footprint">JLCImport:25M_10PF_50PPM</field>
+        <field name="Datasheet">https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2207221830_SST-25M-10PF-50PPM_C4944018.pdf</field>
+        <field name="Description">-20℃~+70℃ 10pF 25MHz ±30ppm ±50ppm HC-49S-SMD-2P-Mini Crystals ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="25M_10PF_50PPM" description="-20℃~+70℃ 10pF 25MHz ±30ppm ±50ppm HC-49S-SMD-2P-Mini Crystals ROHS"/>
+      <property name="LCSC" value="C4944018"/>
+      <property name="Manufacturer" value="SST"/>
+      <property name="Manufacturer Part" value="25M 10PF 50PPM"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="25M 10PF 50PPM C4944018 CRYSTAL-SMD_L7.0-W4.0-LS7.7 SST"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9223e3c7-68df-40a0-984e-e2cba4cae4c2</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U2">
+      <value>RTL9210B-CG</value>
+      <footprint>RTL9210B-CG:QFN-68_L8.0-W8.0-P0.40-BL-EP4.8</footprint>
+      <datasheet>https://www.lcsc.com/datasheet/C5143573.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">null</field>
+        <field name="MPN">RTL9210B-CG</field>
+        <field name="LCSC Part">C5143573</field>
+        <field name="Footprint">RTL9210B-CG:QFN-68_L8.0-W8.0-P0.40-BL-EP4.8</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/C5143573.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="RTL9210B-CG" part="RTL9210B-CG" description=""/>
+      <property name="Manufacturer" value="null"/>
+      <property name="MPN" value="RTL9210B-CG"/>
+      <property name="LCSC Part" value="C5143573"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>71e268dc-5a26-45d7-8c4e-e2b162c2cb8f</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="5"/>
+            <pin num="6"/>
+            <pin num="7"/>
+            <pin num="8"/>
+            <pin num="9"/>
+            <pin num="10"/>
+            <pin num="11"/>
+            <pin num="12"/>
+            <pin num="13"/>
+            <pin num="14"/>
+            <pin num="15"/>
+            <pin num="16"/>
+            <pin num="17"/>
+            <pin num="18"/>
+            <pin num="19"/>
+            <pin num="20"/>
+            <pin num="21"/>
+            <pin num="22"/>
+            <pin num="23"/>
+            <pin num="24"/>
+            <pin num="25"/>
+            <pin num="26"/>
+            <pin num="27"/>
+            <pin num="28"/>
+            <pin num="29"/>
+            <pin num="30"/>
+            <pin num="31"/>
+            <pin num="32"/>
+            <pin num="33"/>
+            <pin num="34"/>
+            <pin num="69"/>
+            <pin num="68"/>
+            <pin num="67"/>
+            <pin num="66"/>
+            <pin num="65"/>
+            <pin num="64"/>
+            <pin num="63"/>
+            <pin num="62"/>
+            <pin num="61"/>
+            <pin num="60"/>
+            <pin num="59"/>
+            <pin num="58"/>
+            <pin num="57"/>
+            <pin num="56"/>
+            <pin num="55"/>
+            <pin num="54"/>
+            <pin num="53"/>
+            <pin num="52"/>
+            <pin num="51"/>
+            <pin num="50"/>
+            <pin num="49"/>
+            <pin num="48"/>
+            <pin num="47"/>
+            <pin num="46"/>
+            <pin num="45"/>
+            <pin num="44"/>
+            <pin num="43"/>
+            <pin num="42"/>
+            <pin num="41"/>
+            <pin num="40"/>
+            <pin num="39"/>
+            <pin num="38"/>
+            <pin num="37"/>
+            <pin num="36"/>
+            <pin num="35"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U3">
+      <value>MIC2545A-1YM</value>
+      <footprint>JLCImport:MIC2545A-1YM</footprint>
+      <datasheet>https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2210172000_Microchip-Tech-MIC2545A-1YM_C637455.pdf</datasheet>
+      <description>-40℃~+85℃ 1 2.7V~5.5V 35mΩ 3A Active High High Side Switch Overcurrent Protection(OCP)、Overtemperature protection (OTP) SOP-8 Power Distribution Switches ROHS</description>
+      <fields>
+        <field name="LCSC">C637455</field>
+        <field name="Manufacturer">Microchip Tech</field>
+        <field name="Manufacturer Part">MIC2545A-1YM</field>
+        <field name="Footprint">JLCImport:MIC2545A-1YM</field>
+        <field name="Datasheet">https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2210172000_Microchip-Tech-MIC2545A-1YM_C637455.pdf</field>
+        <field name="Description">-40℃~+85℃ 1 2.7V~5.5V 35mΩ 3A Active High High Side Switch Overcurrent Protection(OCP)、Overtemperature protection (OTP) SOP-8 Power Distribution Switches ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="MIC2545A-1YM" description="-40℃~+85℃ 1 2.7V~5.5V 35mΩ 3A Active High High Side Switch Overcurrent Protection(OCP)、Overtemperature protection (OTP) SOP-8 Power Distribution Switches ROHS"/>
+      <property name="LCSC" value="C637455"/>
+      <property name="Manufacturer" value="Microchip Tech"/>
+      <property name="Manufacturer Part" value="MIC2545A-1YM"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C637455 MIC2545A-1YM Microchip Tech SOP-8_L5.0-W4.0-P1.27-LS6.2-BL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>44191fb4-38af-415d-89cb-5bf232f028b8</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="6"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+    <comp ref="U12">
+      <value>MIC2545A-2YM-TR</value>
+      <footprint>JLCImport:MIC2545A-2YM-TR</footprint>
+      <datasheet>https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2210180100_Microchip-Tech-MIC2545A-2YM-TR_C627837.pdf</datasheet>
+      <description>-40℃~+85℃ 1 2.7V~5.5V 35mΩ 3A Active Low High Side Switch SOP-8 Power Distribution Switches ROHS</description>
+      <fields>
+        <field name="LCSC">C627837</field>
+        <field name="Manufacturer">Microchip Tech</field>
+        <field name="Manufacturer Part">MIC2545A-2YM-TR</field>
+        <field name="Footprint">JLCImport:MIC2545A-2YM-TR</field>
+        <field name="Datasheet">https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2210180100_Microchip-Tech-MIC2545A-2YM-TR_C627837.pdf</field>
+        <field name="Description">-40℃~+85℃ 1 2.7V~5.5V 35mΩ 3A Active Low High Side Switch SOP-8 Power Distribution Switches ROHS</field>
+      </fields>
+      <libsource lib="JLCImport" part="MIC2545A-2YM-TR" description="-40℃~+85℃ 1 2.7V~5.5V 35mΩ 3A Active Low High Side Switch SOP-8 Power Distribution Switches ROHS"/>
+      <property name="LCSC" value="C627837"/>
+      <property name="Manufacturer" value="Microchip Tech"/>
+      <property name="Manufacturer Part" value="MIC2545A-2YM-TR"/>
+      <property name="Sheetname" value="Root"/>
+      <property name="Sheetfile" value="RTL9210b_0.kicad_sch"/>
+      <property name="ki_keywords" value="C627837 MIC2545A-2YM-TR Microchip Tech SOP-8_L5.1-W3.9-P1.27-LS6.0-BL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>06b09743-35f0-4d07-a9ad-5dff5eae6e66</tstamps>
+      <units>
+        <unit name="A">
+          <pins>
+            <pin num="1"/>
+            <pin num="2"/>
+            <pin num="3"/>
+            <pin num="4"/>
+            <pin num="8"/>
+            <pin num="7"/>
+            <pin num="6"/>
+            <pin num="5"/>
+          </pins>
+        </unit>
+      </units>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="" part="0402WGF1002TCE_2">
+      <description>-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">0402WGF1002TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</field>
+        <field name="Description">-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF1002TCE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="0402WGF4701TCE_1">
+      <description>-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF4701TCE_C25900.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">0402WGF4701TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF4701TCE_C25900.pdf</field>
+        <field name="Description">-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+        <field name="LCSC">C25900</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF4701TCE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="CL10A226MQ8NRNC_1">
+      <description>22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CL10A226MQ8NRNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</field>
+        <field name="Description">22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+        <field name="LCSC">C59461</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL10A226MQ8NRNC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="CL10A226MQ8NRNC_2">
+      <description>22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CL10A226MQ8NRNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</field>
+        <field name="Description">22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+        <field name="LCSC">C59461</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL10A226MQ8NRNC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="" part="CL10A226MQ8NRNC_3">
+      <description>22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CL10A226MQ8NRNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.pdf</field>
+        <field name="Description">22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+        <field name="LCSC">C59461</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL10A226MQ8NRNC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="0402CG160J500NT">
+      <description>16pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <docs>https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_FH--Guangdong-Fenghua-Advanced-Tech-0402CG160J500NT_C48836.pdf</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">0402CG160J500NT</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_FH--Guangdong-Fenghua-Advanced-Tech-0402CG160J500NT_C48836.pdf</field>
+        <field name="Description">16pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+        <field name="LCSC">C48836</field>
+        <field name="Manufacturer">FH (Guangdong Fenghua Advanced Tech)</field>
+        <field name="Manufacturer Part">0402CG160J500NT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="0402WGF1002TCE">
+      <description>-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">0402WGF1002TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0402WGF1002TCE_C25744.pdf</field>
+        <field name="Description">-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+        <field name="LCSC">C25744</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF1002TCE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="0402WGF4701TCE">
+      <description>-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF4701TCE_C25900.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">0402WGF4701TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF4701TCE_C25900.pdf</field>
+        <field name="Description">-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+        <field name="LCSC">C25900</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF4701TCE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="0402WGF5101TCE">
+      <description>-55℃~+155℃ 5.1kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF5101TCE_C25905.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">0402WGF5101TCE</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2206010045_UNI-ROYAL-Uniroyal-Elec-0402WGF5101TCE_C25905.pdf</field>
+        <field name="Description">-55℃~+155℃ 5.1kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+        <field name="LCSC">C25905</field>
+        <field name="Manufacturer">UNI-ROYAL(Uniroyal Elec)</field>
+        <field name="Manufacturer Part">0402WGF5101TCE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="25M_10PF_50PPM">
+      <description>-20℃~+70℃ 10pF 25MHz ±30ppm ±50ppm HC-49S-SMD-2P-Mini Crystals ROHS</description>
+      <docs>https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2207221830_SST-25M-10PF-50PPM_C4944018.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">25M_10PF_50PPM</field>
+        <field name="Footprint">JLCImport:25M_10PF_50PPM</field>
+        <field name="Datasheet">https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2207221830_SST-25M-10PF-50PPM_C4944018.pdf</field>
+        <field name="Description">-20℃~+70℃ 10pF 25MHz ±30ppm ±50ppm HC-49S-SMD-2P-Mini Crystals ROHS</field>
+        <field name="LCSC">C4944018</field>
+        <field name="Manufacturer">SST</field>
+        <field name="Manufacturer Part">25M 10PF 50PPM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="CL05A106MQ5NUNC">
+      <description>10uF 6.3V X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2208231630_Samsung-Electro-Mechanics-CL05A106MQ5NUNC_C15525.pdf</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CL05A106MQ5NUNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2208231630_Samsung-Electro-Mechanics-CL05A106MQ5NUNC_C15525.pdf</field>
+        <field name="Description">10uF 6.3V X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+        <field name="LCSC">C15525</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05A106MQ5NUNC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="CL05A475MP5NRNC">
+      <description>10V 4.7uF X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05A475MP5NRNC_C23733.pdf</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CL05A475MP5NRNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05A475MP5NRNC_C23733.pdf</field>
+        <field name="Description">10V 4.7uF X5R ±20% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+        <field name="LCSC">C23733</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05A475MP5NRNC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="CL05B104KB54PNC">
+      <description>100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</docs>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CL05B104KB54PNC</field>
+        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL05B104KB54PNC_C307331.pdf</field>
+        <field name="Description">100nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS</field>
+        <field name="LCSC">C307331</field>
+        <field name="Manufacturer">Samsung Electro-Mechanics</field>
+        <field name="Manufacturer Part">CL05B104KB54PNC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="CR0402F12K0Q10Z">
+      <description>-55℃~+155℃ 12kΩ 50V 63mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</description>
+      <docs>https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Ever-Ohms-Tech-CR0402F12K0Q10Z_C881068.pdf</docs>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">CR0402F12K0Q10Z</field>
+        <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
+        <field name="Datasheet">https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2304140030_Ever-Ohms-Tech-CR0402F12K0Q10Z_C881068.pdf</field>
+        <field name="Description">-55℃~+155℃ 12kΩ 50V 63mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS</field>
+        <field name="LCSC">C881068</field>
+        <field name="Manufacturer">Ever Ohms Tech</field>
+        <field name="Manufacturer Part">CR0402F12K0Q10Z</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="H2541FV-C762-2X04P">
+      <description>-55℃~+105℃ 2.54mm 7.62mm 8P DIP Phosphor bronze Square Hole DIP-8 IC / Transistor Socket ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2405141422_HanElectricity-H2541FV-C762-2x04P_C22387106.pdf</docs>
+      <fields>
+        <field name="Reference">CN3</field>
+        <field name="Value">H2541FV-C762-2X04P</field>
+        <field name="Footprint">JLCImport:H2541FV-C762-2X04P</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2405141422_HanElectricity-H2541FV-C762-2x04P_C22387106.pdf</field>
+        <field name="Description">-55℃~+105℃ 2.54mm 7.62mm 8P DIP Phosphor bronze Square Hole DIP-8 IC / Transistor Socket ROHS</field>
+        <field name="LCSC">C22387106</field>
+        <field name="Manufacturer">HanElectricity</field>
+        <field name="Manufacturer Part">H2541FV-C762-2x04P</field>
+      </fields>
+      <pins>
+        <pin num="1" name="CS#" type="unspecified"/>
+        <pin num="2" name="D_OUT" type="unspecified"/>
+        <pin num="3" name="IO2" type="unspecified"/>
+        <pin num="4" name="GND" type="unspecified"/>
+        <pin num="5" name="D_IN" type="unspecified"/>
+        <pin num="6" name="CLK" type="unspecified"/>
+        <pin num="7" name="IO3" type="unspecified"/>
+        <pin num="8" name="VCC" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="MIC2545A-1YM">
+      <description>-40℃~+85℃ 1 2.7V~5.5V 35mΩ 3A Active High High Side Switch Overcurrent Protection(OCP)、Overtemperature protection (OTP) SOP-8 Power Distribution Switches ROHS</description>
+      <docs>https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2210172000_Microchip-Tech-MIC2545A-1YM_C637455.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MIC2545A-1YM</field>
+        <field name="Footprint">JLCImport:MIC2545A-1YM</field>
+        <field name="Datasheet">https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2210172000_Microchip-Tech-MIC2545A-1YM_C637455.pdf</field>
+        <field name="Description">-40℃~+85℃ 1 2.7V~5.5V 35mΩ 3A Active High High Side Switch Overcurrent Protection(OCP)、Overtemperature protection (OTP) SOP-8 Power Distribution Switches ROHS</field>
+        <field name="LCSC">C637455</field>
+        <field name="Manufacturer">Microchip Tech</field>
+        <field name="Manufacturer Part">MIC2545A-1YM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="EN" type="unspecified"/>
+        <pin num="2" name="FLG" type="unspecified"/>
+        <pin num="3" name="GND" type="unspecified"/>
+        <pin num="4" name="ILIM" type="unspecified"/>
+        <pin num="5" name="IN" type="unspecified"/>
+        <pin num="6" name="OUT" type="unspecified"/>
+        <pin num="7" name="IN" type="unspecified"/>
+        <pin num="8" name="OUT" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="MIC2545A-2YM-TR">
+      <description>-40℃~+85℃ 1 2.7V~5.5V 35mΩ 3A Active Low High Side Switch SOP-8 Power Distribution Switches ROHS</description>
+      <docs>https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2210180100_Microchip-Tech-MIC2545A-2YM-TR_C627837.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MIC2545A-2YM-TR</field>
+        <field name="Footprint">JLCImport:MIC2545A-2YM-TR</field>
+        <field name="Datasheet">https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2210180100_Microchip-Tech-MIC2545A-2YM-TR_C627837.pdf</field>
+        <field name="Description">-40℃~+85℃ 1 2.7V~5.5V 35mΩ 3A Active Low High Side Switch SOP-8 Power Distribution Switches ROHS</field>
+        <field name="LCSC">C627837</field>
+        <field name="Manufacturer">Microchip Tech</field>
+        <field name="Manufacturer Part">MIC2545A-2YM-TR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="EN" type="unspecified"/>
+        <pin num="2" name="FLG" type="unspecified"/>
+        <pin num="3" name="GND" type="unspecified"/>
+        <pin num="4" name="ILIM" type="unspecified"/>
+        <pin num="5" name="IN" type="unspecified"/>
+        <pin num="6" name="OUT" type="unspecified"/>
+        <pin num="7" name="IN" type="unspecified"/>
+        <pin num="8" name="OUT" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="PIM252012S1R0MBCA">
+      <description>1uH 3.6A 35mΩ 5A ±20% 1008 Power Inductors ROHS</description>
+      <docs>https://www.lcsc.com/datasheet/lcsc_datasheet_2504101957_Huacui-Micro-PIM252012S1R0MBCA_C46970566.pdf</docs>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">PIM252012S1R0MBCA</field>
+        <field name="Footprint">TerminalBlock_Phoenix:TerminalBlock_Phoenix_PTSM-0,5-2-2,5-V-SMD_1x02-1MP_P2.50mm_Vertical</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/lcsc_datasheet_2504101957_Huacui-Micro-PIM252012S1R0MBCA_C46970566.pdf</field>
+        <field name="Description">1uH 3.6A 35mΩ 5A ±20% 1008 Power Inductors ROHS</field>
+        <field name="LCSC">C46970566</field>
+        <field name="Manufacturer">Huacui Micro</field>
+        <field name="Manufacturer Part">PIM252012S1R0MBCA</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="JLCImport" part="SRLB_1206_600TT60">
+      <description>1206 Ferrite Beads ROHS</description>
+      <docs>https://item.szlcsc.com/375393.html</docs>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">SRLB_1206_600TT60</field>
+        <field name="Footprint">Inductor_SMD:L_1206_3216Metric</field>
+        <field name="Datasheet">https://item.szlcsc.com/375393.html</field>
+        <field name="Description">1206 Ferrite Beads ROHS</field>
+        <field name="LCSC">C53309025</field>
+        <field name="Manufacturer">SOREDE</field>
+        <field name="Manufacturer Part">SRLB.1206.600TT60</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="unspecified"/>
+        <pin num="2" name="2" type="unspecified"/>
+      </pins>
+    </libpart>
+    <libpart lib="RTL9210B-CG" part="RTL9210B-CG">
+      <docs>https://www.lcsc.com/datasheet/C5143573.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">RTL9210B-CG</field>
+        <field name="Footprint">easyeda2kicad:QFN-68_L8.0-W8.0-P0.40-BL-EP4.8</field>
+        <field name="Datasheet">https://www.lcsc.com/datasheet/C5143573.pdf</field>
+        <field name="Description"/>
+        <field name="Manufacturer">null</field>
+        <field name="MPN">RTL9210B-CG</field>
+        <field name="LCSC Part">C5143573</field>
+      </fields>
+      <pins>
+        <pin num="1" name="PCIE_AVCC33" type="unspecified"/>
+        <pin num="2" name="PCIE_AVDD11" type="unspecified"/>
+        <pin num="3" name="RST_INPIN/NC" type="unspecified"/>
+        <pin num="4" name="VDD33" type="unspecified"/>
+        <pin num="5" name="UART_RXD/SJTCLK/GPIO4" type="unspecified"/>
+        <pin num="6" name="UART_TXD/SJTTDI/GPIO5" type="unspecified"/>
+        <pin num="7" name="TESTENPIN" type="unspecified"/>
+        <pin num="8" name="GPIO6/SJTMS/PEDET" type="unspecified"/>
+        <pin num="9" name="GPIO7/SJTDO/LED0" type="unspecified"/>
+        <pin num="10" name="GPIO8/HOT_PLUG/I2C_DATA/SPIO2" type="unspecified"/>
+        <pin num="11" name="DVDD11" type="unspecified"/>
+        <pin num="12" name="ISOLATEBPIN" type="unspecified"/>
+        <pin num="13" name="CLKREQPIN" type="unspecified"/>
+        <pin num="14" name="PERSTBPIN" type="unspecified"/>
+        <pin num="15" name="SWR_GNDA" type="unspecified"/>
+        <pin num="16" name="SWR_5TO1_OUT" type="unspecified"/>
+        <pin num="17" name="SWR_5TO1_IN" type="unspecified"/>
+        <pin num="18" name="SPISI" type="unspecified"/>
+        <pin num="19" name="SPICLK" type="unspecified"/>
+        <pin num="20" name="VDD33" type="unspecified"/>
+        <pin num="21" name="I2C_CLK/SPIO2/GPIO9" type="unspecified"/>
+        <pin num="22" name="I2C_DATA/SPIO3/GPIO10" type="unspecified"/>
+        <pin num="23" name="SPISO" type="unspecified"/>
+        <pin num="24" name="SPICS" type="unspecified"/>
+        <pin num="25" name="DVDD11" type="unspecified"/>
+        <pin num="26" name="GPIO11/I2C_DATA" type="unspecified"/>
+        <pin num="27" name="GPIO12/LED1/I2C_CLK" type="unspecified"/>
+        <pin num="28" name="GPIO13/I2C_CLK/SPIO3" type="unspecified"/>
+        <pin num="29" name="DIS_DB" type="unspecified"/>
+        <pin num="30" name="CC1" type="unspecified"/>
+        <pin num="31" name="VCON" type="unspecified"/>
+        <pin num="32" name="CC2" type="unspecified"/>
+        <pin num="33" name="LDO-5TO3-IN" type="unspecified"/>
+        <pin num="34" name="LDO-5TO3-OUT" type="unspecified"/>
+        <pin num="35" name="VDD11" type="unspecified"/>
+        <pin num="36" name="USB_DVDD11" type="unspecified"/>
+        <pin num="37" name="HSDP" type="unspecified"/>
+        <pin num="38" name="HSDM" type="unspecified"/>
+        <pin num="39" name="USB_AVCC33" type="unspecified"/>
+        <pin num="40" name="USB_AVDD11" type="unspecified"/>
+        <pin num="41" name="USB_TXP0" type="unspecified"/>
+        <pin num="42" name="USB_TXN0" type="unspecified"/>
+        <pin num="43" name="USB_TXN1" type="unspecified"/>
+        <pin num="44" name="USB_TXP1" type="unspecified"/>
+        <pin num="45" name="USB_GNDA" type="unspecified"/>
+        <pin num="46" name="USB_RXP0" type="unspecified"/>
+        <pin num="47" name="USB_RXN0" type="unspecified"/>
+        <pin num="48" name="USB_RXN1" type="unspecified"/>
+        <pin num="49" name="USB_RXP1" type="unspecified"/>
+        <pin num="50" name="USB_AVDD11" type="unspecified"/>
+        <pin num="51" name="RSET" type="unspecified"/>
+        <pin num="52" name="XTAL_AVCC33" type="unspecified"/>
+        <pin num="53" name="XTAL_IN" type="unspecified"/>
+        <pin num="54" name="XTAL_OUT" type="unspecified"/>
+        <pin num="55" name="PCIE_AVDD11" type="unspecified"/>
+        <pin num="56" name="PCIE_TXOP_1" type="unspecified"/>
+        <pin num="57" name="PCIE_TXON_1" type="unspecified"/>
+        <pin num="58" name="PCIE_RXIN_1" type="unspecified"/>
+        <pin num="59" name="PCIE_RXIP_1" type="unspecified"/>
+        <pin num="60" name="PCIE_AVDD11" type="unspecified"/>
+        <pin num="61" name="PCIE_REFCLKP" type="unspecified"/>
+        <pin num="62" name="PCIE_REFCLKM" type="unspecified"/>
+        <pin num="63" name="PCIE_AVDD11" type="unspecified"/>
+        <pin num="64" name="SATA_RXIP/PCIE_RXIP_0" type="unspecified"/>
+        <pin num="65" name="SATA_RXIN/PCIE_RXIN_0" type="unspecified"/>
+        <pin num="66" name="PCIE_GNDA" type="unspecified"/>
+        <pin num="67" name="SATA_TXON/PCIE_TXON_0" type="unspecified"/>
+        <pin num="68" name="SATA_TXOP/PCIE_TXOP_0" type="unspecified"/>
+        <pin num="69" name="GNDPAD" type="unspecified"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries/>
+  <nets>
+    <net code="1" name="/+1V1_local" class="Default">
+      <node ref="C12" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C14" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C35" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C8" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C9" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="L5" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="U2" pin="11" pinfunction="DVDD11_11" pintype="unspecified"/>
+      <node ref="U2" pin="2" pinfunction="PCIE_AVDD11_2" pintype="unspecified"/>
+      <node ref="U2" pin="25" pinfunction="DVDD11_25" pintype="unspecified"/>
+      <node ref="U2" pin="35" pinfunction="VDD11_35" pintype="unspecified"/>
+      <node ref="U2" pin="36" pinfunction="USB_DVDD11_36" pintype="unspecified"/>
+      <node ref="U2" pin="40" pinfunction="USB_AVDD11_40" pintype="unspecified"/>
+      <node ref="U2" pin="50" pinfunction="USB_AVDD11_50" pintype="unspecified"/>
+      <node ref="U2" pin="55" pinfunction="PCIE_AVDD11_55" pintype="unspecified"/>
+      <node ref="U2" pin="60" pinfunction="PCIE_AVDD11_60" pintype="unspecified"/>
+      <node ref="U2" pin="63" pinfunction="PCIE_AVDD11_63" pintype="unspecified"/>
+    </net>
+    <net code="2" name="/+3V3" class="Default">
+      <node ref="L6" pin="2" pinfunction="2_2" pintype="unspecified"/>
+    </net>
+    <net code="3" name="/+3V3_SSD" class="Default">
+      <node ref="C33" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C36" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="U3" pin="6" pinfunction="OUT_6" pintype="unspecified"/>
+      <node ref="U3" pin="8" pinfunction="OUT_8" pintype="unspecified"/>
+    </net>
+    <net code="4" name="/+3V3_local" class="Default">
+      <node ref="C11" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C13" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C15" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C16" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="CN3" pin="8" pinfunction="VCC_8" pintype="unspecified"/>
+      <node ref="R12" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="R18" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="R19" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="R56" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="U2" pin="1" pinfunction="PCIE_AVCC33_1" pintype="unspecified"/>
+      <node ref="U2" pin="20" pinfunction="VDD33_20" pintype="unspecified"/>
+      <node ref="U2" pin="34" pinfunction="LDO-5TO3-OUT_34" pintype="unspecified"/>
+      <node ref="U2" pin="39" pinfunction="USB_AVCC33_39" pintype="unspecified"/>
+      <node ref="U2" pin="4" pinfunction="VDD33_4" pintype="unspecified"/>
+      <node ref="U2" pin="52" pinfunction="XTAL_AVCC33_52" pintype="unspecified"/>
+    </net>
+    <net code="5" name="/+5V" class="Default">
+      <node ref="L7" pin="2" pinfunction="2_2" pintype="unspecified"/>
+    </net>
+    <net code="6" name="/+5V_local" class="Default">
+      <node ref="C34" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C37" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="C49" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="R10" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="U12" pin="6" pinfunction="OUT_6" pintype="unspecified"/>
+      <node ref="U12" pin="8" pinfunction="OUT_8" pintype="unspecified"/>
+      <node ref="U2" pin="17" pinfunction="SWR_5TO1_IN_17" pintype="unspecified"/>
+      <node ref="U2" pin="31" pinfunction="VCON_31" pintype="unspecified"/>
+      <node ref="U2" pin="33" pinfunction="LDO-5TO3-IN_33" pintype="unspecified"/>
+    </net>
+    <net code="7" name="/CC1" class="Default">
+      <node ref="R10" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="R11" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="U2" pin="30" pinfunction="CC1_30" pintype="unspecified"/>
+    </net>
+    <net code="8" name="/CC2" class="Default">
+      <node ref="R13" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="U2" pin="32" pinfunction="CC2_32" pintype="unspecified"/>
+    </net>
+    <net code="9" name="/CLKREQ#" class="Default">
+      <node ref="U2" pin="13" pinfunction="CLKREQPIN_13" pintype="unspecified"/>
+    </net>
+    <net code="10" name="/DEVSLP" class="Default">
+      <node ref="U2" pin="26" pinfunction="GPIO11/I2C_DATA_26" pintype="unspecified"/>
+    </net>
+    <net code="11" name="/EN#" class="Default">
+      <node ref="R14" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="U12" pin="1" pinfunction="EN_1" pintype="unspecified"/>
+    </net>
+    <net code="12" name="/ISOLATEB" class="Default">
+      <node ref="U2" pin="12" pinfunction="ISOLATEBPIN_12" pintype="unspecified"/>
+      <node ref="U3" pin="1" pinfunction="EN_1" pintype="unspecified"/>
+    </net>
+    <net code="13" name="/PCIE_REFCLK+" class="Default">
+      <node ref="U2" pin="61" pinfunction="PCIE_REFCLKP_61" pintype="unspecified"/>
+    </net>
+    <net code="14" name="/PCIE_REFCLK-" class="Default">
+      <node ref="U2" pin="62" pinfunction="PCIE_REFCLKM_62" pintype="unspecified"/>
+    </net>
+    <net code="15" name="/PCIE_RXI0+" class="Default">
+      <node ref="U2" pin="64" pinfunction="SATA_RXIP/PCIE_RXIP_0_64" pintype="unspecified"/>
+    </net>
+    <net code="16" name="/PCIE_RXI0-" class="Default">
+      <node ref="U2" pin="65" pinfunction="SATA_RXIN/PCIE_RXIN_0_65" pintype="unspecified"/>
+    </net>
+    <net code="17" name="/PCIE_RXI_1+" class="Default">
+      <node ref="U2" pin="59" pinfunction="PCIE_RXIP_1_59" pintype="unspecified"/>
+    </net>
+    <net code="18" name="/PCIE_RXI_1-" class="Default">
+      <node ref="U2" pin="58" pinfunction="PCIE_RXIN_1_58" pintype="unspecified"/>
+    </net>
+    <net code="19" name="/PCIE_TXO_0+" class="Default">
+      <node ref="U2" pin="68" pinfunction="SATA_TXOP/PCIE_TXOP_0_68" pintype="unspecified"/>
+    </net>
+    <net code="20" name="/PCIE_TXO_0-" class="Default">
+      <node ref="U2" pin="67" pinfunction="SATA_TXON/PCIE_TXON_0_67" pintype="unspecified"/>
+    </net>
+    <net code="21" name="/PCIE_TXO_1+" class="Default">
+      <node ref="U2" pin="56" pinfunction="PCIE_TXOP_1_56" pintype="unspecified"/>
+    </net>
+    <net code="22" name="/PCIE_TXO_1-" class="Default">
+      <node ref="U2" pin="57" pinfunction="PCIE_TXON_1_57" pintype="unspecified"/>
+    </net>
+    <net code="23" name="/PDET" class="Default">
+      <node ref="U2" pin="8" pinfunction="GPIO6/SJTMS/PEDET_8" pintype="unspecified"/>
+    </net>
+    <net code="24" name="/PERST#" class="Default">
+      <node ref="U2" pin="14" pinfunction="PERSTBPIN_14" pintype="unspecified"/>
+    </net>
+    <net code="25" name="/SPI_CLK" class="Default">
+      <node ref="CN3" pin="6" pinfunction="CLK_6" pintype="unspecified"/>
+      <node ref="U2" pin="19" pinfunction="SPICLK_19" pintype="unspecified"/>
+    </net>
+    <net code="26" name="/SPI_CS" class="Default">
+      <node ref="CN3" pin="1" pinfunction="CS#_1" pintype="unspecified"/>
+      <node ref="R19" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="U2" pin="24" pinfunction="SPICS_24" pintype="unspecified"/>
+    </net>
+    <net code="27" name="/SPI_HD" class="Default">
+      <node ref="CN3" pin="7" pinfunction="IO3_7" pintype="unspecified"/>
+      <node ref="R56" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="U2" pin="22" pinfunction="I2C_DATA/SPIO3/GPIO10_22" pintype="unspecified"/>
+    </net>
+    <net code="28" name="/SPI_SI" class="Default">
+      <node ref="CN3" pin="5" pinfunction="D_IN_5" pintype="unspecified"/>
+      <node ref="U2" pin="18" pinfunction="SPISI_18" pintype="unspecified"/>
+    </net>
+    <net code="29" name="/SPI_SO" class="Default">
+      <node ref="CN3" pin="2" pinfunction="D_OUT_2" pintype="unspecified"/>
+      <node ref="U2" pin="23" pinfunction="SPISO_23" pintype="unspecified"/>
+    </net>
+    <net code="30" name="/SPI_WP" class="Default">
+      <node ref="CN3" pin="3" pinfunction="IO2_3" pintype="unspecified"/>
+      <node ref="R18" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="U2" pin="21" pinfunction="I2C_CLK/SPIO2/GPIO9_21" pintype="unspecified"/>
+    </net>
+    <net code="31" name="/USB2.0_D+" class="Default">
+      <node ref="U2" pin="37" pinfunction="HSDP_37" pintype="unspecified"/>
+    </net>
+    <net code="32" name="/USB2.0_D-" class="Default">
+      <node ref="U2" pin="38" pinfunction="HSDM_38" pintype="unspecified"/>
+    </net>
+    <net code="33" name="/USB3.0_RX+" class="Default">
+      <node ref="U2" pin="46" pinfunction="USB_RXP0_46" pintype="unspecified"/>
+    </net>
+    <net code="34" name="/USB3.0_RX-" class="Default">
+      <node ref="U2" pin="47" pinfunction="USB_RXN0_47" pintype="unspecified"/>
+    </net>
+    <net code="35" name="/USB3.0_TX+" class="Default">
+      <node ref="U2" pin="41" pinfunction="USB_TXP0_41" pintype="unspecified"/>
+    </net>
+    <net code="36" name="/USB3.0_TX-" class="Default">
+      <node ref="U2" pin="42" pinfunction="USB_TXN0_42" pintype="unspecified"/>
+    </net>
+    <net code="37" name="/XTALI" class="Default">
+      <node ref="C10" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="U1" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="U2" pin="53" pinfunction="XTAL_IN_53" pintype="unspecified"/>
+    </net>
+    <net code="38" name="/XTALO" class="Default">
+      <node ref="C17" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="U1" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="U2" pin="54" pinfunction="XTAL_OUT_54" pintype="unspecified"/>
+    </net>
+    <net code="39" name="GND" class="Default">
+      <node ref="C10" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="C11" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="C12" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="C13" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="C14" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="C15" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="C16" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="C17" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="C18" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C21" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C24" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C25" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="C33" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="C34" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="C35" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="C36" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="C37" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="C49" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="C8" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="C9" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="CN3" pin="4" pinfunction="GND_4" pintype="unspecified"/>
+      <node ref="R11" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="R13" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="R14" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="R15" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="R16" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="R17" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="U12" pin="3" pinfunction="GND_3" pintype="unspecified"/>
+      <node ref="U2" pin="15" pinfunction="SWR_GNDA_15" pintype="unspecified"/>
+      <node ref="U2" pin="29" pinfunction="DIS_DB_29" pintype="unspecified"/>
+      <node ref="U2" pin="45" pinfunction="USB_GNDA_45" pintype="unspecified"/>
+      <node ref="U2" pin="66" pinfunction="PCIE_GNDA_66" pintype="unspecified"/>
+      <node ref="U2" pin="69" pinfunction="GNDPAD_69" pintype="unspecified"/>
+      <node ref="U2" pin="7" pinfunction="TESTENPIN_7" pintype="unspecified"/>
+      <node ref="U3" pin="3" pinfunction="GND_3" pintype="unspecified"/>
+    </net>
+    <net code="40" name="Net-(C18-Pad1)" class="Default">
+      <node ref="C18" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="U3" pin="7" pinfunction="IN_7" pintype="unspecified"/>
+    </net>
+    <net code="41" name="Net-(C21-Pad1)" class="Default">
+      <node ref="C21" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="L6" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="U3" pin="5" pinfunction="IN_5" pintype="unspecified"/>
+    </net>
+    <net code="42" name="Net-(C24-Pad1)" class="Default">
+      <node ref="C24" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="U12" pin="7" pinfunction="IN_7" pintype="unspecified"/>
+    </net>
+    <net code="43" name="Net-(C25-Pad1)" class="Default">
+      <node ref="C25" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="L7" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="U12" pin="5" pinfunction="IN_5" pintype="unspecified"/>
+    </net>
+    <net code="44" name="Net-(U2-RSET)" class="Default">
+      <node ref="R17" pin="1" pinfunction="1_1" pintype="unspecified"/>
+      <node ref="U2" pin="51" pinfunction="RSET_51" pintype="unspecified"/>
+    </net>
+    <net code="45" name="Net-(U2-RST_INPIN/NC)" class="Default">
+      <node ref="R12" pin="1" pinfunction="1_1" pintype="input"/>
+      <node ref="U2" pin="3" pinfunction="RST_INPIN/NC_3" pintype="unspecified"/>
+    </net>
+    <net code="46" name="Net-(U2-SWR_5TO1_OUT)" class="Default">
+      <node ref="L5" pin="2" pinfunction="2_2" pintype="unspecified"/>
+      <node ref="U2" pin="16" pinfunction="SWR_5TO1_OUT_16" pintype="unspecified"/>
+    </net>
+    <net code="47" name="Net-(U3-ILIM)" class="Default">
+      <node ref="R15" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="U3" pin="4" pinfunction="ILIM_4" pintype="unspecified"/>
+    </net>
+    <net code="48" name="Net-(U12-ILIM)" class="Default">
+      <node ref="R16" pin="2" pinfunction="2_2" pintype="input"/>
+      <node ref="U12" pin="4" pinfunction="ILIM_4" pintype="unspecified"/>
+    </net>
+    <net code="49" name="unconnected-(U2-GPIO7/SJTDO/LED0-Pad9)" class="Default">
+      <node ref="U2" pin="9" pinfunction="GPIO7/SJTDO/LED0_9" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="50" name="unconnected-(U2-GPIO8/HOT_PLUG/I2C_DATA/SPIO2-Pad10)" class="Default">
+      <node ref="U2" pin="10" pinfunction="GPIO8/HOT_PLUG/I2C_DATA/SPIO2_10" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="51" name="unconnected-(U2-GPIO12/LED1/I2C_CLK-Pad27)" class="Default">
+      <node ref="U2" pin="27" pinfunction="GPIO12/LED1/I2C_CLK_27" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="52" name="unconnected-(U2-GPIO13/I2C_CLK/SPIO3-Pad28)" class="Default">
+      <node ref="U2" pin="28" pinfunction="GPIO13/I2C_CLK/SPIO3_28" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="53" name="unconnected-(U2-UART_RXD/SJTCLK/GPIO4-Pad5)" class="Default">
+      <node ref="U2" pin="5" pinfunction="UART_RXD/SJTCLK/GPIO4_5" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="54" name="unconnected-(U2-UART_TXD/SJTTDI/GPIO5-Pad6)" class="Default">
+      <node ref="U2" pin="6" pinfunction="UART_TXD/SJTTDI/GPIO5_6" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="55" name="unconnected-(U2-USB_RXN1-Pad48)" class="Default">
+      <node ref="U2" pin="48" pinfunction="USB_RXN1_48" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="56" name="unconnected-(U2-USB_RXP1-Pad49)" class="Default">
+      <node ref="U2" pin="49" pinfunction="USB_RXP1_49" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="57" name="unconnected-(U2-USB_TXN1-Pad43)" class="Default">
+      <node ref="U2" pin="43" pinfunction="USB_TXN1_43" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="58" name="unconnected-(U2-USB_TXP1-Pad44)" class="Default">
+      <node ref="U2" pin="44" pinfunction="USB_TXP1_44" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="59" name="unconnected-(U3-FLG-Pad2)" class="Default">
+      <node ref="U3" pin="2" pinfunction="FLG_2" pintype="unspecified+no_connect"/>
+    </net>
+    <net code="60" name="unconnected-(U12-FLG-Pad2)" class="Default">
+      <node ref="U12" pin="2" pinfunction="FLG_2" pintype="unspecified+no_connect"/>
+    </net>
+  </nets>
+</export>
