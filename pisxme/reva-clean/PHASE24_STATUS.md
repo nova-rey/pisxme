@@ -4525,3 +4525,23 @@ its native DRC report.
 `CM5IO_ANCHORED_CONTINUATION = REJECTED`
 `FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
 `PHASE24 = OPEN`
+
+## CM5IO-anchored outer-acreage continuation discriminator — 2026-09-06
+
+An explicit outer-acreage continuation was tested after the interior A* path
+was rejected. Each lane used the native CM5IO first transition, a separate
+west staging segment, an F.Cu upper corridor, an east staging transition, and
+a B.Cu lower corridor into U7. Native DRC rejected the candidate with 453
+violations: 19 shorts, 57 track crossings, 85 clearance findings, 112
+hole-clearance findings, and 465 unconnected items. This is a route
+implementation failure; the long outer path does not provide a valid
+production route and does not disprove the selected macro. The official
+source anchor remains preserved, and no PCIe or production copper changed.
+
+Receipt: `phase24_usb3_cm5io_anchored_continuation.py`,
+`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_CM5IO_ANCHORED_OUTER.kicad_pcb`,
+and its native DRC report.
+
+`CM5IO_OUTER_CONTINUATION = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`

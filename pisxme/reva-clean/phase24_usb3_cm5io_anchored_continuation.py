@@ -6,7 +6,7 @@ import math, pcbnew
 R = Path(__file__).resolve().parent
 BASE = R / "PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_REVIEW.kicad_pcb"
 ORACLE = R / "authority-inventory/cm5io-rev2/CM5IO.kicad_pcb"
-OUT = R / "PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_CM5IO_ANCHORED.kicad_pcb"
+OUT = R / "PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_CM5IO_ANCHORED_OUTER.kicad_pcb"
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 STEP, WIDTH = .25, .15
 JOBS = (("CM5_USB3_RX_N", "128", "42", "/CM5_HighSpeed/USB3-0-RX_N"),
@@ -99,20 +99,28 @@ oracle=pcbnew.LoadBoard(str(ORACLE)); board=pcbnew.LoadBoard(str(BASE))
 for t in list(board.GetTracks()):
     if any(n in t.GetNetname() for n,_,_,_ in JOBS): board.Remove(t)
 paths={name:first_path(oracle,on,jp) for name,jp,_,on in JOBS}
-for name,jp,up,_ in JOBS:
+for i,(name,jp,up,_) in enumerate(JOBS):
     n=net(board,name); j=board.FindFootprintByReference("J7"); u=board.FindFootprintByReference("U7")
     src=mm(j.FindPadByNumber(jp).GetPosition()); dst=mm(u.FindPadByNumber(up).GetPosition())
     copied, first=paths[name]
     for a,z,l,w in copied: track(board,n,transform(a),transform(z),l)
     sv=transform(first); via(board,n,sv)
     target=(88.0,124.6 + (0.9 * (int(up)-42)))
-    blocked=occupancy(board); route=astar(blocked,sv,target)
-    last=None
-    for a,z in zip(route,route[1:]):
-        if a[2]!=z[2]: via(board,n,point(a[:2])); last=None
+    # Keep this discriminator deliberately outside the congested central
+    # acreage: source transition -> west staging -> F.Cu upper corridor ->
+    # east staging -> B.Cu lower corridor -> U7.  It is a topology probe,
+    # not a production-length route.
+    lane = i * 1.0
+    west = (56.0, 70.0 + lane); east = (260.0, 70.0 + lane)
+    lower = (260.0, 145.0 + lane); approach = (88.0, 145.0 + lane)
+    path = [(sv, B, west), (west, None, None), (west, F, east),
+            (east, None, None), (east, B, lower), (lower, B, approach),
+            (approach, B, target)]
+    for start, layer, end in path:
+        if layer is None:
+            via(board,n,start)
         else:
-            if last is None:last=point(a[:2])
-            end=point(z[:2]);track(board,n,last,end,a[2]);add_line(blocked,a[2],last,end,.38);last=end
+            track(board,n,start,end,layer)
     via(board,n,target); track(board,n,target,dst,F)
-    print(name,'source_via',sv,'target',target,'route_nodes',len(route))
+    print(name,'source_via',sv,'target',target,'outer_corridor',True)
 board.BuildListOfNets();board.Save(str(OUT));print(OUT)

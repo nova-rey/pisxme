@@ -4456,3 +4456,5 @@ Rejected the explicit PCIe-band/lane-discipline candidate after native DRC found
 Independent review confirmed the selected macro remains viable, identified the PCIe B.Cu spine and router landing-field defects, and selected official CM5IO source anchoring plus obstacle-aware continuation as the next route class.
 # 2026-09-06 — Phase 24 CM5IO-anchored continuation
 Copied the native CM5IO USB3 source escape into carrier coordinates and rejected the first integrated continuation planner after native DRC found 11 shorts and 2,251 crossings; source-anchor evidence was preserved.
+# 2026-09-06 — Phase 24 CM5IO outer-acreage continuation
+Tested a separated outer-acreage continuation from native CM5IO first-transition anchors; native DRC rejected it with 19 shorts and 57 crossings, preserving the source-anchor evidence and route-implementation classification.
