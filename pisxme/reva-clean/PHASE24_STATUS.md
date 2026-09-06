@@ -1583,3 +1583,19 @@ placement conclusion is changed. Further work must first derive transformed
 pad coordinates from the saved native footprint objects and use an
 obstacle-aware route search, rather than continuing hand-authored coordinate
 variants.
+
+## Native obstacle-search LED probe — 2026-09-06
+
+`phase24_led_obstacle_search_probe.py` was added as the first generator that
+derives transformed endpoint coordinates from native pads and searches both
+permitted copper layers while retaining saved tracks and pads as obstacles.
+It completed both J7→R30→J2 and J7→R31→J2 paths with 426 inherited
+unconnected items and no route-search failure.
+
+Native DRC still reports 255 violations, including 4 shorting records and
+16 crossing records. The remaining failures are concentrated in the dense
+J7/J2 pad and mounting-hole fields: the search endpoint halo is not yet using
+the full native hole-clearance envelope. This is a
+`ROUTE_IMPLEMENTATION_FAILURE`, not a macro-placement failure. The next
+revision will inflate NPTH/PTH obstacles from native hole and pad geometry
+and preserve explicit pad-field dogbones before evaluating the route.
