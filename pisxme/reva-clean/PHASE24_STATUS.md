@@ -2596,3 +2596,16 @@ audit still passes all four J7-to-U7 USB3 endpoint memberships. This separates
 an inter-island corridor conflict from the remaining USB3 pair-order escape
 failure, but the candidate is rejected and no SERVICE or USB3 copper is
 promoted. The selected macro-floorplan remains unchanged.
+
+## Monotonic USB3 reference-channel result — 2026-09-06
+
+A disposable channelized fanout then removed the artificial vertical-channel
+crossings and used direct order-preserving B.Cu segments between source and
+endpoint transitions. The saved native board has 0 shorting items, 0
+`tracks_crossing` findings, 42 clearance findings, and 260 whole-board
+unconnected items. The corrected 0.50 mm finished vias satisfy the board's
+0.10 mm annular-width minimum. Independent native `BuildConnectivity` passes
+all four J7↔U7 USB3 endpoint assertions. This is a successful USB3 route-
+development result but not Phase 18 closure: clearance findings and inherited
+opens remain, and SATA/clock/support integration is still outstanding. No
+copper was promoted to the acreage candidate.
