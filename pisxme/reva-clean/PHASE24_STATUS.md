@@ -2873,3 +2873,26 @@ Receipts:
 `PHASE24_USB3_PHASE18_ORACLE_ON_CORRECTED_MACRO-drc.rpt`,
 `PHASE24_USB3_PHASE18_ORACLE_RXN_DOGLEG-drc.rpt`, and
 `phase24_usb3_obstacle_aware_native.py`.
+
+## USB3 source/endpoint router discriminator — 2026-09-06
+
+The validated CM5IO-derived route was checked again with `--refill-zones`;
+this is required because unfilled full-board zones otherwise produce false
+via/zone clearance records. The TX-launch-separated candidate then measured
+three total clearance findings, all attributable to the remaining RX_N/U7
+endpoint approach plus the two inherited J7 reference violations.
+
+A selected-macro native A* continuation was attempted from explicit source
+transition vias to landing vias outside the U7 pad field. It passed all four
+native J7↔U7 endpoint assertions, but native DRC found 14 shorts and four
+crossings. Inspection showed the authoring defect: source dogbone/via geometry
+was not entered into the occupancy map before later lanes were searched, so
+later paths entered earlier source transitions. It is rejected as
+`ROUTE IMPLEMENTATION FAILURE`; it is not evidence against the macro.
+
+The exact failed candidate is
+`PHASE24_USB3_SELECTED_SOURCE_ESCAPE_ASTAR.kicad_pcb` with receipt
+`PHASE24_USB3_SELECTED_SOURCE_ESCAPE_ASTAR-drc.rpt`. No accepted board or
+PCIe/power copper changed. The next route-development experiment must reserve
+every source escape and transition in the native occupancy model and retain
+monotonic pair ordering before any integrated promotion.
