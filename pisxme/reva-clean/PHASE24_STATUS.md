@@ -2573,3 +2573,15 @@ USB3 endpoint memberships in the saved v4 probe: J7.128↔U7.42,
 J7.130↔U7.43, J7.140↔U7.45, and J7.142↔U7.46. This is endpoint-connectivity
 evidence only; it does not waive the remaining native DRC crossings,
 clearances, or whole-board opens.
+
+## USB3 TX lane-order follow-ups — 2026-09-06
+
+Two further native DRC trials attempted to remove the one USB3 TX-pair
+crossing while preserving the selected U7 placement. The first retained 9
+crossing findings; the second increased the result to 10 because the new TX_N
+segment crossed both TX_P and the inherited SERVICE B.Cu corridor. Both are
+rejected as `ROUTE_IMPLEMENTATION_FAILURE`. The focused native connectivity
+audit still proves all four J7-to-U7 endpoint memberships, but no candidate
+copper is promoted. Same-class hand-authored lane tuning is stopped; the next
+route class must use a proven/reference dense-pad escape or native router
+semantics with obstacle clearing.
