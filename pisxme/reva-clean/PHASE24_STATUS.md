@@ -2456,3 +2456,21 @@ No candidate copper is promoted. The next action is to adapt the already
 proven Phase 24 storage route topology to this placement with native terminal
 escapes and post-mutation reloads, then validate USB3 and SATA together before
 clock/support reintegration.
+
+## Storage route-method correction evidence — 2026-09-06
+
+The selected-basis route probes were evaluated as saved native boards. The
+initial generic A* USB3/SATA sequence is rejected because its terminal-halo
+authoring created actual pad-field shorts/crossings. The corrected manual
+USB3 sequence removes all affected USB3/SATA/clock tracks first and emits
+explicit F.Cu/B.Cu lanes from native J7/U7 pad coordinates. Native DRC reports
+0 shorts, 0 track crossings, 259 unconnected items, and 15 clearance items;
+the remaining opens include dangling transitions, so it is not promoted.
+
+The subsequent SATA probe is also rejected: native DRC reports 13 shorts, 10
+crossings, 249 unconnected items, and 21 clearance items. The failures are
+localized to U7's dense SATA pad field, coupling-pad boundary, and the
+connector-side pair ordering. This is `ROUTE_IMPLEMENTATION_FAILURE`, not
+`MACRO-PLACEMENT FAILURE`; the placement comparison remains based on native
+pad topology and mechanical screening only. No route or validation severity
+was waived, and Phase 18/19 remain open pending a proven-topology adaptation.
