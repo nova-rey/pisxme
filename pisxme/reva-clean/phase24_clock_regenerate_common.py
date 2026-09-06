@@ -28,7 +28,7 @@ for ref, pos in positions.items():
     for p in f.Pads():
         k = MAP[ref][str(p.GetNumber())]
         p.SetNet(nets[k]); p.SetNetCode(nets[k].GetNetCode())
-        ls = pcbnew.LSET(); ls.AddLayer(pcbnew.F_Cu if k == 'XO' else pcbnew.B_Cu); p.SetLayerSet(ls)
+        ls = pcbnew.LSET(); ls.AddLayer(pcbnew.B_Cu); p.SetLayerSet(ls)
 
 def blocked(netcode, layer):
     out = set()
@@ -42,7 +42,10 @@ def blocked(netcode, layer):
         for p in f.Pads():
             if p.GetNetCode()==netcode or not p.GetLayerSet().Contains(layer): continue
             q=xy(p.GetPosition()); sx=pcbnew.ToMM(p.GetSize().x); sy=pcbnew.ToMM(p.GetSize().y)
-            mark(V(q[0]-sx/2-.2,q[1]-sy/2-.2),V(q[0]+sx/2+.2,q[1]+sy/2+.2))
+            # Use the board's actual pad envelope plus a small raster guard;
+            # the native DRC, not an oversized synthetic box, judges the
+            # resulting copper clearance.
+            mark(V(q[0]-sx/2-.05,q[1]-sy/2-.05),V(q[0]+sx/2+.05,q[1]+sy/2+.05))
     return out
 
 def route(start, goal, occ, reserved):
@@ -61,7 +64,7 @@ def route(start, goal, occ, reserved):
     return list(reversed(path))
 
 reserved={pcbnew.F_Cu:set(), pcbnew.B_Cu:set()}
-layers={'XI':pcbnew.B_Cu,'XO':pcbnew.F_Cu,'VS':pcbnew.B_Cu}
+layers={'XI':pcbnew.B_Cu,'XO':pcbnew.B_Cu,'VS':pcbnew.B_Cu}
 for number, key in [('52','XI'),('54','XO'),('53','VS')]:
     p=next(p for p in u.Pads() if p.GetNumber()==number); net=nets[key]
     start=xy(p.GetPosition()); layer=layers[key]; via=(start[0]+({'52':.75,'54':-.25,'53':.25}[number]),start[1]+1.0)

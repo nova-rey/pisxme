@@ -1,5 +1,15 @@
 # Phase 24 acreage validation status
 
+## Reduced-envelope coordinated clock search
+
+The common-region generator was rerun with actual pad envelopes plus a small
+raster guard and ordinary through-via exits. It still authored complete XI
+and XO trees but could not reach the VSSOSC tree after those two nets occupied
+the shared B.Cu channel. The candidate was not emitted or promoted; native
+DRC remains the acceptance authority. This rules out oversized pad boxes as
+the sole cause and localizes the remaining repair to coordinated multi-net
+channel allocation around the crystal field.
+
 ## Fresh common-region clock regeneration attempt
 
 The new pad/net-derived generator placed a coherent clock island in the
