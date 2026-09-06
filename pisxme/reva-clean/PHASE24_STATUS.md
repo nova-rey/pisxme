@@ -2970,3 +2970,20 @@ Receipts:
 `phase24_transplant_native_storage_oracle.py`,
 `phase24_sata_native_connectivity_audit.py`, and
 `phase24_sata_native_connectivity_negative_control.py`.
+
+## U7 support-oracle integration discriminator — 2026-09-06
+
+The proven U7 support/clock/3V3 copper from
+`PHASE24_U7_STORAGE_3V3_PAD24_CURRENT.kicad_pcb` was transplanted into the
+native data-route oracle, with C16/C17/C19 and Y1/R23/C42/C43 moved as a
+support group. Native DRC exposed one true short: the support placement at
+C19 conflicts with the transplanted CM5 USB3 TX_N corridor. The support
+donor remains valid in its own coordinated context; the failure is a
+`ROUTE_IMPLEMENTATION_FAILURE` caused by combining independently developed
+placement/routing contexts, not evidence against the U7 storage architecture
+or the proven SATA data route. The data-route oracle remains unchanged and
+accepted as the current storage data reference.
+
+Receipt:
+`PHASE24_STORAGE_NATIVE_ORACLE_SUPPORT_TRANSPLANT-drc.rpt` and
+`phase24_transplant_u7_support_oracle.py`.
