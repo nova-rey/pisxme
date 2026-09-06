@@ -4262,3 +4262,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Promoted the narrow U5 repeated-output field bridge after rejecting the wider U5.5 dogbone for new clearances; native DRC remains at zero shorts/crossings and total unconnected items fall from 238 to 237.
 2026-09-06: Promoted the isolated U5 protected-input top-edge join after rejecting the crossing U4/U5 variant; native DRC remains at zero shorts/crossings and total unconnected items fall from 237 to 236.
 2026-09-06: Rejected U4 B.Cu protected-input and U7 BRIDGE_1V1 dogbone variants for new clearances/crossings/shorts; retained the zero-short/crossing promoted basis and recorded both as route-implementation failures.
+2026-09-06: Promoted dogbone-routed regulator-side BRIDGE_3V3 capacitor links without merging the distinct storage net; native DRC remains at zero shorts/crossings and total unconnected items fall from 236 to 234.

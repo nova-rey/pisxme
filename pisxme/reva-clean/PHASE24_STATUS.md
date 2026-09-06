@@ -2234,3 +2234,12 @@ one short and two track crossings, so it was rejected. Both are
 `ROUTE IMPLEMENTATION FAILURE` results. The promoted basis remains
 `PHASE24_REGULATOR_INPUT_TOP_PAD_CURRENT.kicad_pcb` with zero shorts and zero
 crossings; neither U4 nor U7 architecture or placement is being waived.
+
+### Promote regulator 3V3 capacitor-bank links — 2026-09-06
+
+The three moved C16/C17/C19 regulator-side 3V3 pads were joined with a
+same-net B.Cu dogbone routed below their opposite POWER_GND pads. The
+distinct `/STORAGE/BRIDGE_3V3` U7 net was not merged. Native KiCad DRC
+reports 0 shorts, 0 crossings, 234 unconnected items, and 12 clearance
+items. `PHASE24_BRIDGE_3V3_CAPBANK_LINKS_CURRENT.kicad_pcb` is promoted;
+the U4 regulator-side field remains to be connected.
