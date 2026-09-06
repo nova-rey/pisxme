@@ -3731,3 +3731,12 @@ DRC reduced this integration result to 19 violations and one real
 rather than waived. This localizes the remaining support work to correcting
 the transformed clock pad escape and completing the support rails; V26
 USB3/SATA data copper remains unchanged.
+
+The follow-up corrected the footprint pad-layer sets from the fixture instead
+of inheriting the acreage placeholders. The south-40 candidate then passed a
+new actual KiCad connectivity audit for all XI/XO/VSSOSC passive endpoints and
+native DRC reported no shorting, crossing, clearance, or dangling-via classes.
+It still reports 73 board opens and three dangling F.Cu support tails, so it
+is a clock-support milestone rather than an accepted Phase 24 ancestor. The
+remaining work is to connect the three U7 clock launches and integrate the
+rail/reset/configuration support without reintroducing data-route conflicts.

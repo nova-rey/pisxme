@@ -4358,3 +4358,5 @@ Recorded native DRC rejection of the transformed U7 support-oracle transplant: t
 Recorded rejection of the native-clean V2 clock fixture after a bounded transform onto V26: native DRC found clock/SATA shorts and crossings from inherited copper. The standalone clock topology remains valid; the transformed candidate was not promoted and V26 SATA/USB3 data copper remains unchanged.
 # 2026-09-06 — Phase 24 V2 clock south-40 placement probe
 Recorded rejection of the farther-south native V2 clock-oracle placement after native DRC found one real XI/VSSOSC short and 19 total violations. The support topology remains a valid source fixture; V26 USB3/SATA data copper was preserved unchanged.
+# 2026-09-06 — Phase 24 clock pad-layer correction audit
+The V2 clock fixture was retested on the V26 storage basis with its authoritative per-pad F.Cu/B.Cu layer sets preserved. The south-40 candidate passes native XI/XO/VSSOSC passive connectivity and has no native shorting, crossing, clearance, or dangling-via classes, but remains open at 73 board connections and is not promoted.
