@@ -1763,3 +1763,14 @@ U6/U9 signal pad; the earlier “none” result was only an immediate-cell
 screen, not a package impossibility. These native seeds will drive the next
 explicit route template and keep `ROUTE_IMPLEMENTATION_FAILURE` distinct from
 `MACRO-PLACEMENT FAILURE`.
+
+### Explicit top/bottom ESD dogbone routing — 2026-09-05
+
+The router was changed to approach each ESD net at its upper native pad and
+depart from its lower native pad using 0.75 mm dogbones. V11 completed all
+eight searches and native DRC reported zero `shorting_items` and zero
+`tracks_crossing` records, but the real connectivity audit found the J2
+endpoint open. V12 also corrected the generic post-via emitter to begin the
+next-layer segment at the serialized via; native DRC/connectivity remained
+unchanged, isolating the remaining defect to the saved ESD-to-MagJack leg.
+No candidate was promoted.
