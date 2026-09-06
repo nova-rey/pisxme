@@ -4354,3 +4354,5 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Completed V26 selected storage data-route validation: native SATA/USB3 endpoint audits pass, high-speed DRC has no shorts/crossings/clearance/dangling-via errors, and end-to-end SATA skew is 0.97 mm TX and 0.365 mm RX; full U7 support and board closure remain open.
 # 2026-09-06 — Phase 24 V26 storage support transplant audit
 Recorded native DRC rejection of the transformed U7 support-oracle transplant: the unrotated donor collides with J7/CM5 USB3, while rotated variants create true clock-net shorts/clearances. Preserved V26 SATA/USB3 data-route evidence and classified the result as a support route-implementation failure; no production board or PCIe copper was changed.
+# 2026-09-06 — Phase 24 V2 clock oracle integration trial
+Recorded rejection of the native-clean V2 clock fixture after a bounded transform onto V26: native DRC found clock/SATA shorts and crossings from inherited copper. The standalone clock topology remains valid; the transformed candidate was not promoted and V26 SATA/USB3 data copper remains unchanged.

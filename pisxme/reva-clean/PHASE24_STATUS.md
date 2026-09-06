@@ -3709,3 +3709,16 @@ dedicated local placement, with no PCIe or validated USB3/SATA copper change.
 Classification: `ROUTE_IMPLEMENTATION_FAILURE` / support-placement
 incompatibility, not `MACRO-PLACEMENT FAILURE` and not an architecture
 blocker.
+
+## V2 clock-oracle placement trial (rejected)
+
+The standalone `PHASE24_COMPLETE_CLOCK_FIXTURE_V2.kicad_pcb` is retained as
+the authoritative clock-topology source because its native clock-specific
+receipt reports no clock shorting or crossing classes. A bounded transform
+onto the V26 U7 frame was then tested with the required 180-degree footprint
+orientation and a 10 mm east / 20 mm south local translation. The integrated
+candidate was rejected by native DRC: 58 violations, including clock/SATA
+shorts and track crossings, plus 77 unconnected records. This is a
+`ROUTE_IMPLEMENTATION_FAILURE` caused by collision with inherited V26 copper,
+not a failure of the standalone clock topology. The candidate was not
+promoted and V26 SATA/USB3 copper remains unchanged.
