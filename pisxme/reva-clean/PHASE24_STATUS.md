@@ -2491,3 +2491,19 @@ Consultant dispatch was retried for the transition/escape review and again
 returned `agent thread limit reached`; local native serialized-board evidence
 remains the active basis. No validation severity or architecture constraint
 was relaxed.
+
+## Manual USB3 lane-order follow-up — 2026-09-06
+
+A further no-via/transition-order correction was tested on the same selected
+storage placement. Native DRC retained 0 shorts but exposed 7 crossings, 13
+clearance items, 251 unconnected items, 6 dangling vias, and 27 dangling
+tracks. The new crossings are at the CM5/PCIe launch corridor and the U7
+approach; this confirms that hand-picked lane coordinates are not an adequate
+authoring method for the integrated board. The probe is rejected as
+`ROUTE_IMPLEMENTATION_FAILURE`; it does not change the topology-only
+floorplan selection or the frozen PCIe architecture.
+
+The next route class is therefore a native/reference-topology transplant with
+explicit obstacle clearing and saved-board reload between mutation stages,
+followed by independent native connectivity/DRC. No further same-class manual
+lane sweep is promoted.
