@@ -12,6 +12,15 @@ needed for a pad-authoritative schematic. The original SATA-only board remains
 preserved. See the storage-upgrade checkpoint, qualification, source receipt,
 and blocker report under `pisxme/reva-clean/`.
 
+## 2026-09-06 — Dual-mode storage blocker independently corroborated
+
+An independent read-only review confirmed that public ASM2362-family, JMS58x,
+and RTL9210B material does not provide the manufacturer-authoritative bare-chip
+design package required for implementation. The JAE U215 M-key variant
+identity/procurement path was strengthened, while exact land-pattern capture
+and the NVMe bridge design pack remain gated. No production KiCad assets were
+changed.
+
 ## 2026-09-05 — Phase 24 clock orientation trial rejected
 
 Rejected the 90-degree near-west crystal trial; explicit ordered three-lane escape remains required.

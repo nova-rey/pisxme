@@ -46,6 +46,14 @@ socket and is not a valid substitute.
 - Existing repo authority for JMS578, ASM1153E, the B-key JAE socket, and
   TUSB9261 firmware/configuration.
 
+An independent read-only hardware review also inspected the captured ASMedia
+page and prior repo evaluations. It reached the same conclusion for
+ASM2362/ASM2364/ASM2464, JMS583/JMS586/JMS580, and RTL9210B: marketplace
+availability does not substitute for manufacturer-authoritative pinout,
+land-pattern, reference-circuit, firmware/configuration, programming, and
+traceable procurement evidence. This corroborates the blocker without
+relaxing any gate.
+
 ## Shortest human action to unblock
 
 Obtain from ASMedia or an authorized design partner the ASM2362 design pack:

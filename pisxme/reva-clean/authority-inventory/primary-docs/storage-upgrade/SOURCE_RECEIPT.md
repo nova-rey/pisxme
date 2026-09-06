@@ -21,3 +21,16 @@ SHA-256:
 The source page contents were inspected through the browser and the relevant
 claims are reproduced in the qualification and blocker records. Manufacturer
 copyright and redistribution restrictions remain applicable.
+
+Additional M-key observations:
+
+- JAE's current product listing identifies `SM3ZS067U215BMR1500` as a
+  67-position, 0.5-mm, 2.15-mm SMT M-key connector:
+  https://products.jae.com/gl/en/connectors/content-library/featured-content/cadence_clarity/
+- JAE family documentation identifies the U215 drawing family as
+  `SJ113567/SJ113568`; the released exact pad/courtyard drawing still needs to
+  be obtained for local parity before production replacement.
+- DigiKey exact-family evidence exists for the corresponding JAE M-key U215
+  series with MOQ 1 and quantity-1 pricing/stock snapshots. Exact
+  `BMR1500` distributor confirmation remains a BOM-release check and is not
+  inferred from a nearby suffix.
