@@ -4573,3 +4573,9 @@ SERVICE USB-C connector. Renamed the storage mode selector to free reference
 J5 and corrected the custom 25-MHz crystal footprint with native Reference and
 Value properties. Regenerated the disposable candidate; native loading and
 DRC continue to run, with the candidate still intentionally unrouted.
+## 2026-09-06 — storage selector hierarchy-reference correction
+
+Corrected the J5 mode-selector schematic instance path reference as well as
+its displayed reference. Native inspection now distinguishes SERVICE J4 from
+storage mode-control J5 without duplicate references; the regenerated PCB
+candidate contains J4, J5, and Y2 as distinct native footprints.
