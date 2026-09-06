@@ -3206,6 +3206,34 @@ native netlist and regenerate the PCB mapping. Phase 24 remains open.
 Receipt:
 `phase24_u7_ti_pin_contract_audit.py`.
 
+## Native complete U7 pin-field expansion — 2026-09-06
+
+The disposable symbol expansion was promoted to the production clean STORAGE
+sheet after native validation. U7 now represents the TI-required VDD, VDD33,
+VDDA33, VSS, USB_VBUS, USB2, USB_R1/R1RTN, oscillator, signal, and exposed
+thermal-pad pins. Native KiCad netlist export succeeds and contains 41 U7
+nodes, including every mandatory pin in the TI contract. Native ERC reports
+the existing project-wide violations (636 messages in this run), but targeted
+hierarchy searches report no hierarchical sheet-pin or hierarchy-association
+errors.
+
+The new U7 support labels are explicit: VDD uses `BRIDGE_1V1`, VDD33/VDDA33
+use `BRIDGE_3V3`, VSS and pad 65 use `POWER_GND`, USB VBUS uses `CM5_5V`, and
+the USB2/reference pins have named local nets pending their support components.
+This is an authority correction, not a waiver of those remaining support
+circuits.
+
+The U7 pad and mandatory-pin audits now consume
+`PHASE24_CLEAN_TUSB_PINFIELD.kicadxml`. PCB regeneration is the next step;
+existing routed candidates remain invalid until their footprint geometry,
+complete pin ownership, support components, and native connectivity are
+rebuilt against this source.
+
+Receipts:
+`phase24_expand_u7_ti_pinfield_fixture.py`,
+`PHASE24_CLEAN_TUSB_PINFIELD.kicadxml`, and
+`PHASE24_CLEAN_TUSB_PINFIELD-erc.rpt`.
+
 ## U7 footprint authoring-path correction — 2026-09-06
 
 The Phase 14 footprint authoring path was updated so future clean-generation

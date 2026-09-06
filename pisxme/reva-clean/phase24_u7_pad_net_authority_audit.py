@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 import pcbnew
 
 R = Path(__file__).resolve().parent
-XML = R / 'PHASE24_CLEAN_HIERARCHY_REPAIRED.kicadxml'
+XML = R / 'PHASE24_CLEAN_TUSB_PINFIELD.kicadxml'
 
 def expected_u7():
     root = ET.parse(XML).getroot(); out = {}
