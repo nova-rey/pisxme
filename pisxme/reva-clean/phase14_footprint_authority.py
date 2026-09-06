@@ -13,7 +13,7 @@ PRETTY = ROOT / "PiSXMe_RevA_Clean.pretty"
 PACKAGE_MAP = {
     "LM74700QDBVRQ1": "LM74700QDBVRQ1_SOT23_6",
     "TPSM63606RDLR": "TPSM63606RDLR_RDL0020",
-    "TUSB9261IPVP": "TUSB9261IPVP_HTQFP64",
+    "TUSB9261IPVP": "TUSB9261IPVP_PVP0064A",
     "TPD4E004DRYR": "TPD4E004DRYR_WSON6",
 }
 
@@ -69,11 +69,14 @@ def main() -> None:
     specs = (
         ("LM74700QDBVRQ1_SOT23_6", "LM74700QDBVRQ1", 6, 2.9, 0.95, 0.55),
         ("TPSM63606RDLR_RDL0020", "TPSM63606RDLR", 20, 4.5, 0.5, 0.35),
-        ("TUSB9261IPVP_HTQFP64", "TUSB9261IPVP", 64, 9.0, 0.5, 0.30),
         ("TPD4E004DRYR_WSON6", "TPD4E004DRYR", 6, 1.5, 0.5, 0.28),
     )
     for name, mpn, count, span, pitch, width in specs:
         (PRETTY / f"{name}.kicad_mod").write_text(footprint(name, mpn, count, span, pitch, width))
+    # TUSB9261IPVP is a TI PVP0064A PowerPAD package; use the dedicated
+    # datasheet-derived generator rather than the generic 0.5 mm fallback.
+    from phase24_generate_ti_u7_authoritative_footprint import main as generate_ti_u7
+    generate_ti_u7()
     total = 0
     for sheet in sorted(ROOT.glob("*.kicad_sch")):
         updated, count = assign_instances(sheet.read_text())

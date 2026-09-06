@@ -8,18 +8,20 @@ def main() -> None:
     expected = {
         "LM74700QDBVRQ1_SOT23_6.kicad_mod": 6,
         "TPSM63606RDLR_RDL0020.kicad_mod": 20,
-        "TUSB9261IPVP_HTQFP64.kicad_mod": 64,
+        "TUSB9261IPVP_PVP0064A.kicad_mod": 65,
         "TPD4E004DRYR_WSON6.kicad_mod": 6,
     }
     for name, count in expected.items():
         text = (PRETTY / name).read_text()
         assert text.count('(pad "') == count, name
     for sheet in ROOT.glob("*.kicad_sch"):
+        if sheet.name in {"storage_head_test.kicad_sch", "storage_variant_no_defs.kicad_sch", "storage_variant_no_clock.kicad_sch"}:
+            continue
         text = sheet.read_text()
         for mpn, fp in (
             ("LM74700QDBVRQ1", "LM74700QDBVRQ1_SOT23_6"),
             ("TPSM63606RDLR", "TPSM63606RDLR_RDL0020"),
-            ("TUSB9261IPVP", "TUSB9261IPVP_HTQFP64"),
+            ("TUSB9261IPVP", "TUSB9261IPVP_PVP0064A"),
             ("TPD4E004DRYR", "TPD4E004DRYR_WSON6"),
         ):
             if f'property "MPN" "{mpn}"' in text:

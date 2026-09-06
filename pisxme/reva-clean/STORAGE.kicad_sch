@@ -565,7 +565,7 @@
 (wire (pts (xy 5 101.25) (xy 70 101.25)) (stroke (width 0) (type default)) (uuid db000000-0000-0000-0000-000000000201))
 (hierarchical_label "BRIDGE_1V1" (shape bidirectional) (at 5 103.75 180) (effects (font (size 1 1)) (justify right)) (uuid db000000-0000-0000-0000-00000000a102))
 (wire (pts (xy 5 103.75) (xy 70 103.75)) (stroke (width 0) (type default)) (uuid db000000-0000-0000-0000-000000000202))
-(symbol (lib_id "PiSXMeRevAClean:TUSB9261IPVP_STORAGE") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid db000000-0000-0000-0000-000000000000) (property "Reference" "U7" (at 50 82 0) (effects (font (size 1.1 1.1)))) (property "Value" "TUSB9261IPVP" (at 50 108 0) (effects (font (size 1.1 1.1)))) (property "MPN" "TUSB9261IPVP" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:TUSB9261IPVP_HTQFP64" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (pin "46" (uuid db000000-0000-0000-0000-000000000100))
+(symbol (lib_id "PiSXMeRevAClean:TUSB9261IPVP_STORAGE") (at 50 95 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid db000000-0000-0000-0000-000000000000) (property "Reference" "U7" (at 50 82 0) (effects (font (size 1.1 1.1)))) (property "Value" "TUSB9261IPVP" (at 50 108 0) (effects (font (size 1.1 1.1)))) (property "MPN" "TUSB9261IPVP" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (property "Footprint" "PiSXMeRevAClean:TUSB9261IPVP_PVP0064A" (at 50 95 0) (effects (font (size 1 1)) (hide yes))) (pin "46" (uuid db000000-0000-0000-0000-000000000100))
 (pin "45" (uuid db000000-0000-0000-0000-000000000101))
 (pin "43" (uuid db000000-0000-0000-0000-000000000102))
 (pin "42" (uuid db000000-0000-0000-0000-000000000103))

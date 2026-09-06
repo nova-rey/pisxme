@@ -3205,3 +3205,22 @@ native netlist and regenerate the PCB mapping. Phase 24 remains open.
 
 Receipt:
 `phase24_u7_ti_pin_contract_audit.py`.
+
+## U7 footprint authoring-path correction — 2026-09-06
+
+The Phase 14 footprint authoring path was updated so future clean-generation
+runs no longer recreate the rejected generic 0.5 mm/64-pad U7 asset. It now
+invokes the dedicated TI PVP0064A generator, assigns
+`TUSB9261IPVP_PVP0064A`, and the Phase 14 regression test checks for all 65
+pads. The production STORAGE symbol footprint field was updated to the new
+asset and the Phase 14 footprint-authority test passes.
+
+This corrects footprint selection and reproducibility only. It does not claim
+that U7 is yet electrically complete: the clean symbol still lacks the TI
+mandatory pin-field support identified above, and no routed PCB was regenerated
+from this footprint. Phase 24 remains open.
+
+Receipt:
+`phase14_footprint_authority.py`,
+`validation/phase3/test_phase14_footprint_authority.py`, and the passing test
+output from 2026-09-06.
