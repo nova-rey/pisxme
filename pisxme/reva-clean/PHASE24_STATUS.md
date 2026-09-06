@@ -3873,3 +3873,21 @@ to the south-40 fixture launch points. Native DRC rejected this direct launch
 class with 100 violations, including real clock shorts, crossings, and
 clearance failures. It is preserved as `ROUTE_IMPLEMENTATION_FAILURE`; the
 passive clock island and V26 USB3/SATA data corridors were not changed.
+
+## Macro-floorplan comparison rule reaffirmed — 2026-09-06
+
+The whole-board discriminator remains the controlling placement evidence. It
+compares native transformed-pad topology, source-to-island distance, same-net
+ratsnest, endpoint order, coarse body screening, corridor competition, and
+mechanical/access constraints. It does not compare the mature historical
+board's DRC/open count against first-pass routing on a rearranged candidate.
+
+The selected `SWAP_ETH_STORAGE` / `STORAGE_LOCAL_J3_EDGE` topology therefore
+remains a routing-development basis, not a route-quality claim. The latest
+TI-authoritative U7 disposable escape (`PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_ORDERED.kicad_pcb`)
+was rejected for real crossings, shorts, and clearances caused by its fixed
+escape coordinates. This is `ROUTE IMPLEMENTATION FAILURE`; it does not
+invalidate the macro discriminator or justify reverting to the historical
+floorplan. The next route cycle must use native TI pad coordinates with a
+fresh obstacle-aware escape and retain the same separation between floorplan
+question A and route-implementation question B.

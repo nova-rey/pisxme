@@ -4386,3 +4386,5 @@ Reran common-region clock routing with actual pad envelopes and a small raster g
 Ran all six XI/XO/VSSOSC routing permutations from clean regenerated boards. None completed the three-net graph; failures moved among shared crystal/passive targets. Net ordering is exhausted for this placement; validated SATA/USB3/PCIe copper preserved.
 # 2026-09-06 — Phase 24 mixed-layer regenerated clock milestone
 Promoted the disposable `PHASE24_CLOCK_LAYERESC_DIRECT_XO` clock-support milestone: XI/VSSOSC on B.Cu, XO on F.Cu, native U7 plus passive connectivity PASS, and zero shorts/crossings/clearance/dangling-via/track classes. Full Phase 24 remains gated by bridge rails, reset/configuration, returns, and board-wide opens.
+# 2026-09-06 — Phase 24 macro-floorplan comparison reaffirmed
+Recorded the topology-only comparison rule and rejected the fixed-coordinate TI U7 escape as route implementation failure; mature historical DRC is not used to rank immature rearranged routing.
