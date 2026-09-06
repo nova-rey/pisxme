@@ -1,0 +1,1546 @@
+                                    DATASHEET
+
+
+
+
+                JMS583
+  USB 3.2 Gen 2 to PCIe Gen3x2 Bridge
+
+                 Document No.: PDS-17001 / Revision: 2.1 / Date: 07/16/2019
+
+
+
+
+JMicron Technology Corporation
+1F, No. 13, Innovation Road 1, Science-Based Industrial Park,
+
+Hsinchu, Taiwan 300, R.O.C.
+
+Tel: 886-3-5797389
+
+Fax: 886-3-5799566
+
+Email: sales@jmicron.com
+
+Website: http://www.jmicron.com
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+
+Copyright © 2019, JMicron Technology Corp. All Rights Reserved.
+
+Printed in Taiwan 2019
+
+JMicron and the JMicron Logo are trademarks of JMicron Technology Corporation in Taiwan and/or other countries.
+
+Other company, product and service names may be trademarks or service marks of others.
+
+All information contained in this document is subject to change without notice.            The products described in this
+document are NOT intended for use implantation or other life supports application where malfunction may result in
+injury or death to persons.    The information contained in this document does not affect or change JMicron’s product
+specification or warranties.   Nothing in this document shall operate as an express or implied license or environments,
+and is presented as an illustration.   The results obtained in other operating environments may vary.
+
+THE INFORMATION CONTAINED IN THIS DOCUMENT IS PROVIDED ON AN “AS IS” BASIS.                                 In no event will
+JMicron be liable for damages arising directly or indirectly from any use of the information contained in this document.
+
+For more information on JMicron products, please visit the JMicron web site at http://www.JMicron.com or send e-mail
+to sales@jmicron.com.
+
+
+JMicron Technology Corporation
+1F, No.13, Innovation Road 1, Science-Based Industrial Park, Hsinchu, Taiwan 300, R.O.C.
+Tel: 886-3-5797389
+Fax: 886-3-5799566
+
+
+
+
+Revision 2.1                                                  i                                     Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+
+                                                  Revision History
+
+Revision       Effective                           Description of revision
+                                                                                                              Author
+number           date        Reference                      Description of change
+
+
+    0.1        11/09/2017        -         Draft release.                                                   Joe Chang
+
+
+                              Table 9     1.     Add XAVDDH signal description
+    0.2        04/12/2018                                                                                   Joe Chang
+                            Section 5.4.1 2.     GPIO [4] is used as LED indicator by default
+
+                             Figure 4      1.    Package outline drawing of QFN64 8x8
+    0.3        06/06/2018   Section 6.5    2.    Update crystal electrical                                  Joe Chang
+                            Chapter 6      3.    Update electrical characteristics
+
+                            Section 2.3    1.    Support SCSI/ NVMe Pass-through command
+    1.0        06/30/2018                                                                                   Joe Chang
+                             Table 11      2.    Change the typical value of 1.0V power supply
+
+
+                            Section 6.9    1.    Modified T4 measure point of Figure 4
+    1.1        03/29/2019                                                                                   Mika Cheng
+                            Section 6.8    2.    Modified Table 26
+
+
+                                           1.    Change pin assignment diagram
+    1.2        04/12/2019    Chapter 5                                                                      Mika Cheng
+                                           2.    Added note on pin19
+
+                            Section 5.4 1.       Add Function Description for GPIO use
+    2.0        06/12/2019   Table 11、13 2.       Add Note for testing result                                 Katie Shih
+                            Section 6.6 3.       Add IC condition and setting environment
+
+
+    2.1        07/16/2019     Table 13     1.    Delete DC Driving at IOH and IOL                            Katie Shih
+
+
+
+
+Revision 2.1                                                  ii                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                                                                      JMS583
+                                                                                                                                                                     Datasheet
+
+
+
+
+                                                                      Table of Contents
+
+Revision History ........................................................................................................................................................... ii
+
+
+Table of Contents ........................................................................................................................................................ iii
+
+
+Figure List ..................................................................................................................................................................... v
+
+
+Table List...................................................................................................................................................................... vi
+
+
+1    Overview ................................................................................................................................................................. 1
+
+
+2    Features .................................................................................................................................................................. 2
+
+     2.1 General Features ............................................................................................................................................. 2
+
+     2.2 Universal Serial Bus ......................................................................................................................................... 2
+
+     2.3 PCI Express ..................................................................................................................................................... 2
+
+
+3    Block Diagram ........................................................................................................................................................ 3
+
+
+4    Application .............................................................................................................................................................. 4
+
+
+5    Package and Pin Assignments .............................................................................................................................. 5
+
+     5.1 Pin Diagram ..................................................................................................................................................... 5
+
+     5.2 Mechanical Dimensions ................................................................................................................................... 6
+
+     5.3 Signal Descriptions .......................................................................................................................................... 8
+
+     5.3.1 Pin Type Definitions ......................................................................................................................................... 8
+
+     5.3.2 Pin Descriptions ............................................................................................................................................... 9
+
+            PCIe Interface Signals ..................................................................................................................................... 9
+
+            USB 3.2 Gen1 and Gen2 Shard Interface Signals ......................................................................................... 10
+
+            USB 2.0 Interface Signals .............................................................................................................................. 10
+
+            Switching Regulator Interface ........................................................................................................................ 11
+
+            Crystal Interface ............................................................................................................................................. 11
+
+            USB Type-C
+                                TM
+                                     Configuration Channel ........................................................................................................... 11
+
+            Control and GPIO Interface............................................................................................................................ 12
+
+            Power Supply Interface .................................................................................................................................. 13
+     5.4 Function Description ...................................................................................................................................... 13
+
+     5.4.1 LED Indicator ................................................................................................................................................. 13
+
+
+Revision 2.1                                                                            iii                                                   Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                                                               JMS583
+                                                                                                                                                              Datasheet
+
+
+
+    5.4.2 GPIO Initial Value ........................................................................................................................................... 13
+
+
+6   Electrical Specifications ...................................................................................................................................... 13
+
+    6.1 Absolute Maximum Ratings ........................................................................................................................... 13
+
+    6.2 Recommended Operating Voltage and Temperature ..................................................................................... 14
+
+    6.3 External Clock Source Conditions .................................................................................................................. 15
+
+    6.4 DC Electrical Characteristics .......................................................................................................................... 15
+
+    6.5 Crystal input ................................................................................................................................................... 16
+
+    6.6 Power Consumption ....................................................................................................................................... 16
+
+    6.6.1 USB 2.0 to PCIe ............................................................................................................................................. 17
+
+          Operation with PCIe L0 state ......................................................................................................................... 17
+
+          Idle with PCIe L0 state ................................................................................................................................... 17
+
+          Suspend with PCIe L2 state ........................................................................................................................... 17
+    6.6.2 USB 3.2 Gen 1 to PCIe .................................................................................................................................. 18
+
+          Operation with PCIe L0 state ......................................................................................................................... 18
+
+          Idle with PCIe L0 state ................................................................................................................................... 18
+
+          Suspend with PCIe L2 state ........................................................................................................................... 18
+    6.6.3 USB 3.2 Gen 2 to PCIe .................................................................................................................................. 19
+
+          Operation with PCIe L0 state ......................................................................................................................... 19
+
+          Idle with PCIe L0 state ................................................................................................................................... 19
+
+          Suspend with PCIe L2 state ........................................................................................................................... 20
+    6.7 Internal Linear Regulator................................................................................................................................ 20
+
+    6.8 Power-on Sequence....................................................................................................................................... 21
+
+
+7   Product Naming Rule ........................................................................................................................................... 23
+
+    7.1 Format of Part Number .................................................................................................................................. 23
+
+    7.2 Explanation of Part Number ........................................................................................................................... 23
+    7.3 Top Mark ........................................................................................................................................................ 24
+
+
+
+
+Revision 2.1                                                                        iv                                                  Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                                                          JMS583
+                                                                                                                                                         Datasheet
+
+
+
+
+                                                                      Figure List
+
+Figure 1       Block Diagram ........................................................................................................................................3
+Figure 2       Application Scenarios ..........................................................................................................................4
+Figure 3       Pin Assignment of JMS583 .................................................................................................................5
+Figure 4       Package Outline Drawing of QFN64 8x8 .........................................................................................7
+Figure 5       Power-on Sequence ............................................................................................................................ 21
+Figure 6       Format of the Part Number ............................................................................................................... 23
+Figure 7       Illustration of Device Top Mark ........................................................................................................ 24
+
+
+
+
+Revision 2.1                                                                     v                                                 Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                                                        JMS583
+                                                                                                                                                       Datasheet
+
+
+
+
+                                                                      Table List
+
+Table 1    Pin Type Definitions ................................................................................................................................8
+Table 2    PCIe Interface Signals ............................................................................................................................9
+Table 3    USB 3.2 Gen1 and Gen2 Shard Interface Signals ......................................................................... 10
+Table 4    USB 2.0 Interface Signals .................................................................................................................... 10
+Table 5    Switching Regulator Interface ............................................................................................................ 11
+Table 6    Crystal Interface .................................................................................................................................... 11
+                                 TM
+Table 7    USB Type-C                 Configuration Channel ............................................................................................. 11
+Table 8    Control and GPIO Interface ................................................................................................................. 12
+Table 9    Power Supply Interface ........................................................................................................................ 13
+Table 10       Absolute Maximum Ratings ............................................................................................................. 14
+Table 11       Operating Voltage and Temperature ............................................................................................... 14
+Table 12       External Clock Source Conditions ................................................................................................. 15
+Table 13       DC Specifications ................................................................................................................................ 15
+Table 14       Crystal Electrical Specification ....................................................................................................... 16
+Table 15       Power Dissipation – USB 2.0 to PCIe L0 ....................................................................................... 17
+Table 16       Power Dissipation – USB 2.0 to PCIe L0 ....................................................................................... 17
+Table 17       Power Dissipation – USB 2.0 to PCIe L2 ....................................................................................... 17
+Table 18       Power Dissipation –USB 3.2 Gen 1 to PCIe L0 ............................................................................ 18
+Table 19       Power Dissipation –USB 3.2 Gen 1 to PCIe L0 ............................................................................ 18
+Table 20       Power Dissipation – USB 2.0 to PCIe L0 ....................................................................................... 18
+Table 21       Power Dissipation – USB 3.2 Gen 2 to PCIe L0 ........................................................................... 19
+Table 22       Power Dissipation – USB 3.2 Gen 2 to PCIe L0 ........................................................................... 19
+Table 23       Power Dissipation – USB 3.2 Gen 2 to PCIe L2 ........................................................................... 20
+Table 24       Internal Linear Regulator Specification ......................................................................................... 20
+Table 25       Power-on timing Requirements ....................................................................................................... 21
+Table 26       Explanation of Part Number ............................................................................................................. 23
+
+
+
+
+Revision 2.1                                                                    vi                                               Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+
+1 Overview
+
+JMS583 is a bridge controller between the USB host and the storage devices with PCIe/NVMe interface.
+Its upstream port provides a USB which data speed can reach up to ten gigabits per second (10 Gb/s), or
+the data transmission rate for USB 3.2 Gen2 specification. Meanwhile, its downstream port can connect to
+PCIe/NVMe storage devices, such as a solid-state drive (SSD). The data speed for the PCIe port can
+arrive at 16 Gb/s, or the data rate for the PCIe Gen3x2 requirements.
+
+
+                                      TM
+Also, JMS583 has USB Type-C                connectivity built in to the controller that any device using JMS583 can
+                        TM
+have a USB Type-C            connector without adding any additional peripheral part. It can save costs to buy
+parts, and efforts to build inventory, and it can reduce printed circuit board area for the system designs.
+
+
+JMS583 supports TRIM to the SSD and can transmit and receive data by both of the USB Mass Storage
+Class Bulk-Only Transport (BOT) and USB Attached SCSI Protocol (UASP) to and from the host
+respectively. The data storage devices can achieve its summit of performance by taking advantage of
+these built-in unmatched features.
+
+
+JMS583 is well equipped for power management that it can meet a wide variety of power requirements
+from different scales of data storage systems: those for data center, network attached storage (NAS)
+systems, and portable SSDs, and even those for thumb-sized Internet-of-Thing (IoT) devices.
+
+
+                              TM
+Owing to its USB Type-C            connectivity, JMS583 can work with some power management controllers to a
+USB Power Delivery (PD) enabled data storage device. The data storage devices having SSDs of large
+capacity can accept the electrical power from sources of energy, such as hosts acting as a power provider
+of USB PD to supply sufficient electricity to the device after they negotiate with each other, without
+plugging in.
+
+
+Finally, JMS583 is a new product that almost reaches USB3.2 Gen2 line bandwidth. Using JMS583, the
+security system can transfer higher quality video, such as 4K or even 8K, and quicker to their data storage
+devices than ever.
+
+
+
+
+Revision 2.1                                                  1                                     Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+2 Features
+
+2.1 General Features
+
+ Design for Windows 7, Windows 10 and MAC 10.10.5 or later version
+
+ Embedded 5V to 1.0V voltage regulator
+
+ Embedded 5V to 3.3V linear voltage regulator (LDO)
+
+ Provide hardware controlled PWMs
+
+ Provide software utilities for downloading the upgraded firmware code under USB2.0/ USB 3.2 Gen1
+
+   and Gen2
+ QFN64 8x8 package
+
+ Support 25MHz external crystal
+
+ Support 3.3V I/O
+
+ Thirteen GPIOs for customization
+
+
+2.2 Universal Serial Bus
+
+ Comply with USB 3.2 Gen 1 and Gen 2 Specification,
+
+ Comply with USB Mass Storage Class, Bulk-Only Transport Specification (Revision 1.0)
+
+ Comply with USB Attached SCSI Protocol (UASP) Specification (Revision 4)
+                                   TM
+ Integrate with USB Type-C             multiplexer & configuration channel (CC) logic
+ Support USB Super-Speed/ High-Speed/ Full-Speed Operation
+
+ Support USB2.0/ USB 3.2 Gen 1/ Gen 2 power saving mode
+
+ Support external SPI NVRAM for Vendor VID/PID of USB2.0/USB 3.2 Gen 1/2 device controller
+
+
+2.3 PCI Express
+
+ Comply with PCI Express Base Specification Revision 3.1a
+
+ Comply with NVM Express 1.3
+
+ Support TRIM to the SSD
+
+ Support SCSI/ NVMe Pass-through command to allow an application client to transmit a NVMe
+
+   command to a NVMe device.
+
+
+
+
+Revision 2.1                                                  2                                     Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+3 Block Diagram
+
+
+
+
+                                              Figure 1     Block Diagram
+
+
+
+
+Revision 2.1                                                  3                                     Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+4 Application
+
+
+
+
+                                          Figure 2     Application Scenarios
+
+
+
+
+Revision 2.1                                                  4                                     Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+5 Package and Pin Assignments
+
+5.1 Pin Diagram
+
+
+
+
+                                      Figure 3      Pin Assignment of JMS583
+
+
+
+
+Revision 2.1                                                  5                                     Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+5.2 Mechanical Dimensions
+
+
+
+
+Revision 2.1                                                  6                                     Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+
+                               Figure 4     Package Outline Drawing of QFN64 8x8
+
+
+
+
+Revision 2.1                                                  7                                     Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+5.3 Signal Descriptions
+
+5.3.1 Pin Type Definitions
+
+                                           Table 1    Pin Type Definitions
+
+                         Pin Type                                                      Definitions
+
+                              A                                                           Analog
+
+                              D                                                           Digital
+
+                              P                                                           Power
+
+                               I                                                           Input
+
+                              O                                                           Output
+
+                              IO                                                      Bi-directional
+
+                             OD                                                        Open-Drain
+
+                              H                                                 Internal weak pull-high
+
+                              L                                                  Internal weak pull-low
+
+
+
+
+Revision 2.1                                                  8                                     Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+5.3.2 Pin Descriptions
+
+PCIe Interface Signals
+
+                                         Table 2     PCIe Interface Signals
+
+ Signal Name         Pin Number             Type                                    Description
+
+    P_RXN1                 34                 AI          PCIe Port RX- Signal of Lane 1
+
+
+    P_RXP1                 35                 AI          PCIe Port RX+ Signal of Lane 1
+
+                                                          PCIe Port TX- Signal of Lane 1
+     P_TXN1                37                AO           A 220 nF capacitor should be connected between this pin and
+                                                          PCIe connector.
+                                                          PCIe Port TX+ Signal of Lane 1
+     P_TXP1                38                AO           A 220 nF capacitor should be connected between this pin and
+                                                          PCIe connector.
+                                                          External Reference Resistance
+      REXT                 39                 AI          A 12kΩ ±1% external resistor should be connected to this
+                                                          pin.
+
+    P_RXN0                 41                 AI          PCIe Port RX- Signal of Lane 0
+
+
+    P_RXP0                 42                 AI          PCIe Port RX+ Signal of Lane 0
+
+                                                          PCIe Port TX- Signal of Lane 0
+     P_TXN0                44                AO           A 220 nF capacitor should be connected between this pin and
+                                                          PCIe connector.
+                                                          PCIe Port TX+ Signal of Lane 0
+     P_TXP0                45                AO           A 220 nF capacitor should be connected between this pin and
+                                                          PCIe connector.
+                                                          Differential Clock P
+      CLKP                 48                DO
+                                                          100Mhz reference clock for Device.
+
+                                                          Differential Clock N
+      CLKN                 47                DO
+                                                          100Mhz reference clock for Device.
+
+
+    P_RSTN                 54                DO           PCIe Reset for Device
+
+
+  P_CLKREQN                55                DIO          This is for L1 substrate
+
+
+
+
+Revision 2.1                                                  9                                     Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+USB 3.2 Gen1 and Gen2 Shard Interface Signals
+
+                           Table 3    USB 3.2 Gen1 and Gen2 Shard Interface Signals
+
+ Signal Name         Pin Number             Type                                    Description
+
+    U_RXP2                 29                 AI          Super Speed RX+ 2 signal
+
+
+    U_RXN2                 28                 AI          Super Speed RX- 2 signal
+
+
+    U_RXN1                 27                 AI          Super Speed RX- 1 signal
+
+
+    U_RXP1                 26                 AI          Super Speed RX+ 1 signal
+
+                                                          Super Speed TX+ 2 signal
+     U_TXP2                24                AO           A 100 nF capacitor should be connected between this pin and
+                                                          USB connector.
+                                                          Super Speed TX- 2 signal
+    U_TXN2                 23                AO           A 100 nF capacitor should be connected between this pin and
+                                                          USB connector.
+                                                          Super Speed TX- 1 signal
+    U_TXN1                 22                AO           A 100 nF capacitor should be connected between this pin and
+                                                          USB connector.
+                                                          Super Speed TX+ 1 signal
+     U_TXP1                21                AO           A 100 nF capacitor should be connected between this pin and
+                                                          USB connector.
+
+
+
+USB 2.0 Interface Signals
+
+                                       Table 4     USB 2.0 Interface Signals
+
+ Signal Name         Pin Number             Type                                    Description
+
+       DP                  18                AIO          USB 2.0 Bus D+ Signal
+
+
+       DM                  17                AIO          USB 2.0 Bus D- Signal
+
+
+      VBUS                 16                 PI          USB 5V VBUS power for LDO input
+
+                                                          USB 2.0 Analog 3.3V Output
+                                                          A capacitor to ground is recommended on this pin. The value
+                                                          should be one uF.
+                                                          The output voltage range is 3.3V ±10%
+    AVDD33                 19                PO
+                                                          Note:
+                                                          1.    This pin provides power less than 100mA @ 3.3V.
+                                                          2.    This pin can afford chip internal power usage only.
+                                                          3.    If this pin does not provide an external power supply,
+
+
+
+Revision 2.1                                                  10                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+ Signal Name         Pin Number             Type                                      Description
+                                                                      this pin must be connected to a 4.7uF capacitor to
+                                                                      ground.
+
+
+
+
+Switching Regulator Interface
+
+                                     Table 5        Switching Regulator Interface
+
+ Signal Name         Pin Number             Type                                      Description
+
+    VDDREG                 1                   PI          Voltage Regulator 5V Power Supply
+
+
+      GND                  63                  PI          Voltage Regulator Ground
+
+                                                           Voltage Regulator 1.0V Output
+       LXO                 64                PO            Switch node. Connect with external power inductor with a
+                                                           value of 4.7 uH.
+
+
+
+Crystal Interface
+
+                                             Table 6      Crystal Interface
+
+ Signal Name         Pin Number             Type                                      Description
+                                                           Crystal Input/ Oscillator Input
+                                                           It is connected to a 25MHz crystal or crystal oscillator. The
+       XIN                 50                  AI
+                                                           variation range should be ±30ppm. And the input voltage
+                                                           should range in 3.3V ±5%.
+                                                           Crystal Output
+                                                           It is connected to a crystal. While crystal oscillator is applied,
+      XOUT                 51                AO            this pin should be reserved for No Connection (NC). The
+                                                           output variation range is around ±30ppm (input dependent).
+                                                           And the input voltage range is 3.3V ±5% (input dependent).
+
+
+
+USB Type-CTM Configuration Channel
+
+                                                            TM
+                                Table 7     USB Type-C           Configuration Channel
+
+ Signal Name         Pin Number             Type                                      Description
+
+                                                           CC Pin1 input for voltage detection
+       CC1                 62                  AI
+                                                           The maximum tolerant input voltage is 3.3V.
+
+                                                           CC Pin2 input for voltage detection
+       CC2                 61                  AI
+                                                           The maximum tolerant input voltage is 3.3V.
+
+
+
+
+Revision 2.1                                                     11                                 Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+Control and GPIO Interface
+
+                                      Table 8      Control and GPIO Interface
+
+ Signal Name         Pin Number             Type                                    Description
+                                                          System Global Reset Input
+       RST                 15                 DI          Active-low to reset the entire chip.
+                                                          An external RC should be connected to this pin.
+                                                          MP Test Mode Enable
+       TME                 60                 DI          The pin is reserved for IC mass production testing. Keep this
+                                                          pin to logic “0” in normal operation.
+                                                          Serial Flash (SO)
+    GPIO [0]               3                DIOH          After power on status detecting, this pin becomes Data
+                                                          Output of serial flash. This pin is by default set to input.
+                                                          Serial Flash (SCK)
+    GPIO [1]               4                DIOH          This pin is Serial Flash Data Clock (SCK) of serial flash. This
+                                                          pin is by default set to output.
+                                                          Serial Flash (SI)
+    GPIO [2]               5                DIOH          Serial Flash Data Input (SI) of Serial Flash. This pin is by
+                                                          default set to output.
+                                                          Serial Flash (CE0#)
+    GPIO [3]               7                DIOH
+                                                          This pin functions as Chip Enable (CE#0) of Serial Flash.
+
+                                                          GPIO [4]
+    GPIO [4]               8                DIOH
+                                                          Can be configured by customer firmware.
+
+                                                          GPIO [5]
+    GPIO [5]               9                DIOH
+                                                          Can be configured by customer firmware.
+
+                                                          GPIO [6]
+    GPIO [6]               10               DIOH
+                                                          Can be configured by customer firmware.
+
+                                                          GPIO [7]
+    GPIO [7]               12               DIOH
+                                                          Can be configured by customer firmware.
+
+                                                          RISC UART TX Interface/ GPIO[8]
+ UAO/GPIO [8]              13               DIOH
+                                                          Can be configured by customer firmware.
+
+                                                          RISC UART RX Interface/ GPIO[9]
+ UAO/GPIO [9]              14               DIOH
+                                                          Can be configured by customer firmware.
+
+                                                          GPIO[10]
+    GPIO [10]              59               DIOH
+                                                          Can be configured by customer firmware.
+
+                                                          GPIO[11]
+    GPIO [11]              58               DIOH
+                                                          Can be configured by customer firmware.
+
+                                                          GPIO[12]
+    GPIO [12]              57               DIOH
+                                                          Can be configured by customer firmware.
+
+
+
+
+Revision 2.1                                                  12                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+Power Supply Interface
+
+                                         Table 9    Power Supply Interface
+
+ Signal Name         Pin Number             Type                                    Description
+
+      VCCO           6, 11, 32, 56            PI          3.3V I/O power supply
+
+
+      VCCK             2, 31, 53              PI          1.0V core power supply
+
+                    20, 25, 30, 33,
+     AVDDL          36, 40, 43, 46,           PI          Analog 1.0V power supply
+                          49
+
+    XAVDDH                 52                 PI          3.3V crystal pad power (i.e., AVDDXTAL)
+
+
+
+
+5.4 Function Description
+
+5.4.1 LED Indicator
+
+By default, GPIO [4] is used as LED indicator. If the user has a different application for LED function,
+please contact JMicron’s AE before PCB layout.
+
+
+
+5.4.2 GPIO Initial Value
+
+All GPIOs set as input mode and enable internal pull-up function while in reset. After reset, the firmware
+will program all GPIOs as input mode. Afterward, the initial value of GPIOs is read and stored in the system
+RAM for future using.
+
+
+     VBUS detector
+GPIO[6] is used for VBUS detection. There is a voltage divider circuit on a board. Power source is
+connected from VBUS 5V. The output is connected to GPIO[6] for V BUS detection.
+
+
+
+6 Electrical Specifications
+
+6.1 Absolute Maximum Ratings
+
+Warning: Absolute maximum rating may cause the device permanent damage or reliability will be affected.
+All voltage is a specified reference to the ground unless otherwise specified.
+
+
+
+
+Revision 2.1                                                  13                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+                                     Table 10         Absolute Maximum Ratings
+
+               Parameter                   Symbol                  Min         Typical            Max             Units
+
+ Digital 3.3V                              VCCO(ABS)               -0.3            -              4.13              V
+
+
+
+ Digital 1.0V                              VCCK(ABS)               -0.3            -              1.15              V
+
+
+
+ Switching regulator power                AVDDS(ABS)               -0.3            -               5.5              V
+
+
+
+ 3.3V Crystal Pad power                  XAVDDH(ABS)               -0.3            -              4.13              V
+
+
+
+ Analog 1.0V                              AVDDL(ABS)               -0.3            -              1.15              V
+
+
+
+ USB VBUS                                     VBUS                  -              -               5.5              V
+
+
+
+ Digital I/O input voltage                    VI(D)                -0.3            -              4.13              V
+
+
+
+ Storage temperature                       TSTORAGE                -40             -              150               o
+                                                                                                                     C
+
+
+
+
+6.2 Recommended Operating Voltage and Temperature
+
+                                Table 11      Operating Voltage and Temperature
+
+               Parameter                   Symbol                  Min         Typical            Max             Units
+
+ Digital 3.3V Power Supply                   VCCO                  3.0            3.3              3.6              V
+
+
+
+ Digital 1.0V Power Supply                   VCCK                  0.95           1.0              1.1              V
+
+
+
+ Switching Regulator                        AVDDS                  4.5            5.0              5.5              V
+
+
+
+ 3.3V Crystal Pad Power                    XAVDDH                  3.0            3.3              3.6              V
+
+
+
+ Analog 1.0V Power Supply                   AVDDL                  0.95           1.0              1.1              V
+
+
+
+
+Revision 2.1                                                  14                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+
+ USB VBUS                                     VBUS                 4.5            5.0              5.5              V
+
+
+
+ Digital I/O input voltage                    VI(D)                3.0            3.3              3.6              V
+
+
+
+ Ambient Operation Temperature                 TA                   0              -               70               o
+                                                                                                                     C
+
+
+
+ Maximum Junction Temperature                  TJ                   -              -              125               o
+                                                                                                                     C
+
+
+Note:
+
+        1.   All supply mean voltage power noise <±5%
+
+
+
+
+6.3 External Clock Source Conditions
+
+                                  Table 12     External Clock Source Conditions
+
+             Parameter                    Symbol                   Min          Typical           Max             Units
+
+ External reference clock                                      -30ppm             25             +30ppm            MHz
+
+
+
+ Clock Duty Cycle                                                  45             50               55               %
+
+
+
+
+6.4 DC Electrical Characteristics
+
+                                           Table 13       DC Specifications
+
+             Parameter                        Symbol                     Min           Typical       Max          Units
+
+
+ Input low voltage                                  VIL                  -0.3             -             0.8             V
+
+
+
+ Input high voltage                                 VIH                   2               -             5.5             V
+
+
+
+ Output low voltage                              VOL                      -               -             0.4             V
+
+
+
+ Output high voltage                             VOH                     2.4              -              -              V
+
+
+
+ Low Level Output Current                           IOL                  9.7              -          21.5           mA
+
+
+
+
+Revision 2.1                                                  15                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+
+    High Level Output Current                     IOH                   17.0               -         56.5           mA
+
+
+    Internal weak pull-high
+                                                  Rpu                    27                38         59            KΩ
+    resistance
+
+
+    Internal pull-low resistance                  Rpd                     -                -           -            KΩ
+
+
+Note:
+
+1. The above test results are under the environment at ambient temperature 25 C.       o
+
+
+
+
+6.5 Crystal input
+
+Signal crystal input (25MHz) is needed.
+                                      Table 14    Crystal Electrical Specification
+
+               Parameter                         Symbol                Min          Typical          Max           Units
+
+    Crystal start up time vs. AVDDL               TCrystal               -                 -           5            mS
+
+
+    Crystal Frequency                              Fclk                  -             25              -            MHz
+
+
+    Long term stability (Crystal Only)        ∆fMAX_Crystal             -30                -          30            ppm
+
+
+    Long term stability (On Board)           ∆fMAX_OnBoard             -150                -         150            ppm
+
+
+    Equivalent Series Resistance                  ESR                    -                 -          55             Ω
+
+
+
+
+6.6 Power Consumption
+
+The power consumption is tested by the following setting environment and IC condition.
+       Setting Environment
+       Operation System: Windows 10 64bit
+       Test tool: IOMeter
+       Connected device: SSD Samsung 960 pro
+       IC Condition
+       Device Under Test: Evaluation Board(JMS583-EV-01-01-2)
+       Voltage: 1.0V / 3.3V
+       Firmware version: v00.01.00.03
+       Device: JMS583
+
+
+
+
+Revision 2.1                                                  16                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+6.6.1    USB 2.0 to PCIe
+
+Operation with PCIe L0 state
+
+                              Table 15     Power Dissipation – USB 2.0 to PCIe L0
+
+    Parameter               Symbol             Min       Typical        Max        Units         Details/ Conditions
+
+                                                                                              Operate @ 3.3V
+    Digital 3.3V             VCCO                -          1.8           -          mA
+                                                                                              Temperature = 25℃
+
+                                                                                              Operate @ 1.0V
+    Digital 1.0V             VCCK                -         157.6          -          mA
+                                                                                              Temperature = 25℃
+
+                                                                                              Operate @ 3.3V
+    Analog 3.3V            XAVDDH                -          1.3           -          mA
+                                                                                              Temperature = 25℃
+
+                                                                                              Operate @ 1.0V
+    Analog 1.0V             AVDDL                -         292.8          -          mA
+                                                                                              Temperature = 25℃
+
+
+
+
+Idle with PCIe L0 state
+
+                              Table 16     Power Dissipation – USB 2.0 to PCIe L0
+
+    Parameter               Symbol             Min       Typical        Max        Units         Details/ Conditions
+
+    Digital 3.3V             VCCO                -          1.6           -          mA             Operate @ 3.3V
+
+
+    Digital 1.0V             VCCK                -         152.1          -          mA             Operate @ 1.0V
+
+
+    Analog 3.3V            XAVDDH                -          1.2           -          mA             Operate @ 3.3V
+
+
+    Analog 1.0V             AVDDL                -         273.8          -          mA             Operate @ 1.0V
+
+
+
+
+Suspend with PCIe L2 state
+
+                              Table 17     Power Dissipation – USB 2.0 to PCIe L2
+
+    Parameter               Symbol             Min       Typical        Max        Units         Details/ Conditions
+
+    Digital 3.3V             VCCO                -          0.3           -          mA             Operate @ 3.3V
+
+
+    Digital 1.0V             VCCK                -          2.0           -          mA             Operate @ 1.0V
+
+
+    Analog 3.3V            XAVDDH                -          0.0           -          mA             Operate @ 3.3V
+
+
+
+
+Revision 2.1                                                  17                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+    Parameter               Symbol             Min       Typical        Max        Units         Details/ Conditions
+
+    Analog 1.0V             AVDDL                -          0.6           -          mA             Operate @ 1.0V
+
+
+
+
+6.6.2    USB 3.2 Gen 1 to PCIe
+
+Operation with PCIe L0 state
+
+                          Table 18     Power Dissipation –USB 3.2 Gen 1 to PCIe L0
+
+    Parameter               Symbol             Min       Typical        Max        Units         Details/ Conditions
+
+    Digital 3.3V             VCCO                -          1.6           -          mA             Operate @ 3.3V
+
+
+    Digital 1.0V             VCCK                -         177.3          -          mA             Operate @ 1.0V
+
+
+    Analog 3.3V            XAVDDH                -          1.2           -          mA             Operate @ 3.3V
+
+
+    Analog 1.0V             AVDDL                -         346.3          -          mA             Operate @ 1.0V
+
+
+
+
+Idle with PCIe L0 state
+
+                          Table 19     Power Dissipation –USB 3.2 Gen 1 to PCIe L0
+
+    Parameter               Symbol             Min       Typical        Max        Units         Details/ Conditions
+
+    Digital 3.3V             VCCO                -          1.6           -          mA             Operate @ 3.3V
+
+
+    Digital 1.0V             VCCK                -         150.0          -          mA             Operate @ 1.0V
+
+
+    Analog 3.3V            XAVDDH                -          1.2           -          mA             Operate @ 3.3V
+
+
+    Analog 1.0V             AVDDL                -         344.6          -          mA             Operate @ 1.0V
+
+
+
+
+Suspend with PCIe L2 state
+
+                              Table 20     Power Dissipation – USB 2.0 to PCIe L0
+
+    Parameter               Symbol             Min       Typical        Max        Units         Details/ Conditions
+
+    Digital 3.3V             VCCO                -          0.3           -          mA             Operate @ 3.3V
+
+
+
+
+Revision 2.1                                                  18                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+    Parameter               Symbol             Min       Typical        Max        Units         Details/ Conditions
+
+    Digital 1.0V             VCCK                -          2.0           -          mA             Operate @ 1.0V
+
+
+    Analog 3.3V            XAVDDH                -          0.0           -          mA             Operate @ 3.3V
+
+
+    Analog 1.0V             AVDDL                -          2.0           -          mA             Operate @ 1.0V
+
+
+
+
+6.6.3    USB 3.2 Gen 2 to PCIe
+
+Operation with PCIe L0 state
+
+                          Table 21     Power Dissipation – USB 3.2 Gen 2 to PCIe L0
+
+    Parameter               Symbol             Min       Typical        Max        Units         Details/ Conditions
+
+    Digital 3.3V             VCCO                -          1.7           -          mA             Operate @ 3.3V
+
+
+    Digital 1.0V             VCCK                -         238.3          -          mA             Operate @ 1.0V
+
+
+    Analog 3.3V            XAVDDH                -          1.2           -          mA             Operate @ 3.3V
+
+
+    Analog 1.0V             AVDDL                -         422.6          -          mA             Operate @ 1.0V
+
+
+
+
+Idle with PCIe L0 state
+
+                          Table 22     Power Dissipation – USB 3.2 Gen 2 to PCIe L0
+
+    Parameter               Symbol             Min       Typical        Max        Units         Details/ Conditions
+
+    Digital 3.3V             VCCO                -          1.6           -          mA             Operate @ 3.3V
+
+
+    Digital 1.0V             VCCK                -         176.3          -          mA             Operate @ 1.0V
+
+
+    Analog 3.3V            XAVDDH                -          1.2           -          mA             Operate @ 3.3V
+
+
+    Analog 1.0V             AVDDL                -         421.7          -          mA             Operate @ 1.0V
+
+
+
+
+Revision 2.1                                                  19                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+Suspend with PCIe L2 state
+
+                          Table 23       Power Dissipation – USB 3.2 Gen 2 to PCIe L2
+
+     Parameter              Symbol             Min       Typical        Max        Units         Details/ Conditions
+
+     Digital 3.3V            VCCO                -          0.3           -          mA             Operate @ 3.3V
+
+
+     Digital 1.0V            VCCK                -          2.0           -          mA             Operate @ 1.0V
+
+
+     Analog 3.3V           XAVDDH                -          0.0           -          mA             Operate @ 3.3V
+
+
+     Analog 1.0V            AVDDL                -          2.0           -          mA             Operate @ 1.0V
+
+Z
+
+
+
+
+6.7 Internal Linear Regulator
+
+                               Table 24      Internal Linear Regulator Specification
+
+        Parameter              Symbol          Min       Typical        Max        Units         Details/ Conditions
+
+    Input Voltage Range        VIN_LINEAR        -           5            -           V
+
+
+    Output Voltage Range      VOUT_LINEAR        -          3.3           -           V
+
+
+     Max Output Current           IMAX           -            -         150          mA
+
+
+
+
+Revision 2.1                                                  20                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+6.8 Power-on Sequence
+
+The power-on sequence is defined in Figure 5. Designers should follow all the rules for external power
+designs.
+
+
+
+
+                                          Figure 5     Power-on Sequence
+
+
+T5V: Rise time for 5Vpowerrailfrom 10% to 90%
+T1: Rise time for 3V3 power rail from 5V 10% to 3V3 90%
+T2: Rise time for 1V0power rail from 10% to 90%
+T3: Time interval between 3V3power and 1V0Power
+T4: Rise time for RST# signal from 0V to 1V77
+TClock: Time interval between3V3and 90% clock swing
+Note: Clock must meet 25MHz +/-30ppm during the sequence.
+
+
+The recommended power sequence and timing requirements are listed in Table 25.
+
+
+                                   Table 25     Power-on timing Requirements
+
+                 Time                                    Minimum                                  Maximum
+                   T5V                                        -                                      20 ms
+
+                   T1                                       0 ms                                     10 ms
+
+                   T2                                       0 ms                                     10 ms
+
+                   T3                                      -5 ms                                      5 ms
+
+                   T4                                      120 ms                                    500 ms
+
+
+
+Revision 2.1                                                  21                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+                 Time                                    Minimum                                  Maximum
+                  TClock                                      -                                       5 ms
+
+
+
+The RESET timing constraint is based on the external RC reset circuits. To control the charge and
+discharge time for RC circuits, minimum, and maximum requirements are listed. If designers apply timing
+control chip to control the reset signal, the only requirement will be the minimum value. In other words, the
+maximum value can be ignored without problems.
+
+
+
+
+Revision 2.1                                                  22                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+7 Product Naming Rule
+
+7.1 Format of Part Number
+
+The part number consists of the information of provider, product category, device number, package type,
+material type, product grade (operating temperature), mask ROM version and device version. The format
+of the part number is illustrated in Figure 6 below.
+
+
+
+
+                                      Figure 6      Format of the Part Number
+
+
+
+7.2 Explanation of Part Number
+
+                                     Table 26     Explanation of Part Number
+  Section           Length                Purpose                  Code(s)                         Meaning
+    a (JM)          2 digits             Brand name                   JM             The provider JMicron
+
+     b (S)           1 digit          Product category                 S             SoC, system-on-a-chip
+
+                                                                                     The       serialnumber       assigned
+
+                                                                                     randomly to form the device name
+   c (583)          3 digits           Device number                  583
+                                                                                     “JMS583”in conjunction with brand
+                                                                                     name and product category.
+
+                                                                                     B = BGA; L = LQFP; Q = QFN; T =
+     d (P)           1 digit            Package type               B, L, Q, T
+                                                                                     TQFP
+
+                                                                                     G = Gold wired RoHS compliant
+
+                                                                                     halogen-free green product;
+                                                                                     Ta: 0 ~ 70°C.
+
+                                                                                     H = Copper wired RoHS compliant
+
+                                                                                     halogen-free green product;
+    e (M)            1 digit          Material & grade             G, H, I, J
+                                                                                     Ta: 0 ~ 70°C.
+
+                                                                                     I = Gold wired RoHS compliant
+
+                                                                                     halogen-free green product;
+                                                                                     Ta: -40 ~ 85°C.
+
+                                                                                     J= Copper wired RoHS compliant
+
+
+
+Revision 2.1                                                  23                                     Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+                                                                                                                     JMS583
+                                                                                                                    Datasheet
+
+
+
+                                                                                     halogen-free green product;
+                                                                                     Ta: -40 ~ 85°C.
+
+     f (B)           1 digit        Internal bonding type          A, B, C, …        A, B, C, …
+
+                                                                A0, A1, A2, …        Version A0, A1, A2, …
+
+    g (RN)           2 digit       Version of mask ROM          B0, B1, B2, …        Version B0, B1, B2, …
+
+                                                                       Z0            Version Z0= no mask ROM
+
+     h (V)           1 digit          Version of the IC            A, B, C, …        Version A, B, C, …
+
+
+
+
+7.3 Top Mark
+
+Each device has its unique top mark containing the information of provider, device name, part number,
+manufacturing date code, lot number and pin one identifier for identification. The top mark is illustrated in
+Figure 7 below.
+
+
+
+
+                                   Figure 7 Illustration of Device Top Mark
+
+
+Note: The above information is only for use in this product datasheet. For more detailed ordering
+information, please contact to JMicron’s Sales Department, representatives, or distributors when
+ordering parts.
+
+
+How to Reach Us:
+     Home Page: http://www.jmicron.com
+     Technical & Order Support: sales@jmicron.com
+
+
+
+
+Revision 2.1                                                  24                                    Document No.: PDS-17001
+The information contained in this document is the exclusive property of JMicron Technology Corporation and shall not be used,
+collected, reproduced, distributed and/or disclosed in whole or in part without prior written permission of JMicron Technology
+Corporation.
+
