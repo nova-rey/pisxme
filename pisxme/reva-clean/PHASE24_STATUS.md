@@ -1994,6 +1994,16 @@ U7 bridge-side escape crossing class. It is retained as a topology
 discriminator, not promoted; this is still `ROUTE_IMPLEMENTATION_FAILURE`,
 not evidence of a macro-placement failure.
 
+### U7 top-edge split dogbone trial — 2026-09-05
+
+The U7 escape was revised so the two bridge RX lanes left the QFN top edge
+through opposite dogbone corridors before ordinary vias, rather than sharing
+the prior west-side departure. Native DRC reported eight shorts, one track
+crossing, zero M.2 hole-clearance items, and 20 ordinary clearance items,
+with 428 incomplete-board unconnected items. The trial is rejected as
+`ROUTE_IMPLEMENTATION_FAILURE`; the selected storage macro and electrical
+architecture remain unchanged.
+
 ### U7 source dogbone escape trial — 2026-09-05
 
 The next local experiment avoided via-in-pad at U7 by routing each bridge-side

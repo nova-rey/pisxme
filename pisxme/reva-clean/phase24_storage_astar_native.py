@@ -169,8 +169,9 @@ for name,up,cap,cp,jp in jobs:
     if bridge_start == B:
         # Escape the dense U7 pad field on F.Cu before changing layers.  A
         # via directly on the QFN pad field is not an acceptable terminal.
-        dogbone = (101.0,118.0) if name == 'BRIDGE_SATA_RX_P' else (101.0,121.0)
-        path=route(occ,hard,a,dogbone,F,F,None,2.0,0.5); emit(b,bridge,path,occ)
+        dogbone = (102.5,117.0) if name == 'BRIDGE_SATA_RX_P' else (106.5,117.0)
+        dog_gate = (-1,103.0) if name == 'BRIDGE_SATA_RX_P' else (1,106.0)
+        path=route(occ,hard,a,dogbone,F,F,dog_gate,2.0,0.5); emit(b,bridge,path,occ)
         via(b,bridge,dogbone)
         path=route(occ,hard,dogbone,z,B,F); emit(b,bridge,path,occ)
     else:
