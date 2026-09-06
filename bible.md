@@ -4277,3 +4277,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Promoted the adjacent U7 `/STORAGE/BRIDGE_3V3` U7.30/U7.31 native pad join without merging the regulator-side net; DRC remains at zero shorts/crossings and total unconnected items fall from 220 to 219.
 2026-09-06: Promoted the U7.24-to-U7.30/U7.31 storage 3V3 dogbone field; native DRC remains at zero shorts/crossings and total unconnected items fall from 219 to 218.
 2026-09-06: Completed the corrected whole-board macro-floorplan discriminator from the current accepted native PCB; topology-only comparison selects ETH_OUTBOARD_STORAGE_LOCAL for storage-neighborhood development without using immature routing DRC as floorplan evidence.
+2026-09-06: Refined the whole-board macro discriminator with mechanical screening; selected STORAGE_LOCAL_CLEAR2 as the coherent storage-island basis, reducing USB3/storage same-net ratsnest from 231.2 mm to 88.1 mm with no moved-body overlaps.

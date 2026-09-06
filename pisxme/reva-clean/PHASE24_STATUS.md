@@ -2395,3 +2395,33 @@ Consultant dispatch was attempted for the required independent review but the
 collaboration service returned `agent thread limit reached`; no engineering
 conclusion was taken from that unavailable thread, and the review was completed
 locally from native KiCad evidence.
+
+## Macro candidate screen refined for mechanical clearance — 2026-09-06
+
+The initial swap candidate shortened the storage ratsnest but overlapped J1
+and local support bodies. A further placement-only sweep tested south and
+center alternatives while moving U7, J3, clock support, decoupling, and SATA
+coupling as one coherent storage island. `STORAGE_LOCAL_CLEAR2` places U7 at
+`(90,120)` and J3 at `(125,120)` with its complete local support set moved
+accordingly. Native transformed-body screening reports no moved-body overlap.
+
+Its topology-only source metrics are storage centroid distance `39.9 mm`,
+Manhattan distance `52.1 mm`, and USB3/storage same-net ratsnest `88.1 mm`,
+versus `66.0 mm`, `86.4 mm`, and `231.2 mm` for the current accepted basis.
+PCIe remains `81.2 mm` and SERVICE `20.1 mm`; the accepted Ethernet island,
+power-input/protection, and regulator/load-delivery islands are unchanged.
+The south-clear candidate was mechanically screened but leaves storage
+same-net ratsnest at `192.0 mm`; the Ethernet-outboard variants introduce
+power-entry body conflicts and are not selected.
+
+Disposition superseding the prior topology-probe wording:
+`MACRO_FLOORPLAN_DISCRIMINATOR = COMPLETE` and
+`SELECTED_MACRO_BASIS = STORAGE_LOCAL_CLEAR2`.
+The selected placement is saved as `PHASE24_MACRO_FRESH_STORAGE_LOCAL_CLEAR2.kicad_pcb`.
+This is a placement decision only. No temporary candidate copper is accepted;
+the next action is coordinated regeneration of USB3, SATA, clock, support,
+reference, and return routing from the selected coherent storage island.
+Historical-board DRC and first-pass candidate DRC remain excluded from this
+floorplan ranking. Any later failed route is classified separately as route
+implementation failure unless valid routing development demonstrates an
+inherent placement obstruction.
