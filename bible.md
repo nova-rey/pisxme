@@ -4660,3 +4660,9 @@ authoritative 9.0 x 3.5 mm 17/4/17/4 perimeter. Geometry audit passes for
 both selectors. The regenerated isolated USB3 fixture now has zero native
 shorting findings; seven localized track crossings remain, so routing is
 still open and no production PCB was promoted.
+
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: corrected the TI RUA0042A
+perimeter pad length to the retained example-layout value of 0.60 mm (from
+the prior 0.75 mm generator value). Geometry audit passes and the regenerated
+isolated USB3 fixture remains zero-short; native track-width and localized
+crossing findings remain open.

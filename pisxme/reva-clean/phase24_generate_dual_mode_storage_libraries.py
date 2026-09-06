@@ -54,8 +54,8 @@ def main():
     (LIB/'JMS583_QFN64_8x8.kicad_mod').write_text(qfn('JMS583_QFN64_8x8',64,8,.4,.7,.22))
     # Both retained TI datasheets point to package drawing RUA0042A. They
     # still receive separate library names because their pin functions differ.
-    (LIB/'HD3SS6126_RUA0042A.kicad_mod').write_text(qfn('HD3SS6126_RUA0042A',42,3.6,.4,.75,.25,43))
-    (LIB/'HD3SS3412_RUA0042A.kicad_mod').write_text(qfn('HD3SS3412_RUA0042A',42,3.6,.4,.75,.25,43))
+    (LIB/'HD3SS6126_RUA0042A.kicad_mod').write_text(qfn('HD3SS6126_RUA0042A',42,3.6,.4,.6,.25,43))
+    (LIB/'HD3SS3412_RUA0042A.kicad_mod').write_text(qfn('HD3SS3412_RUA0042A',42,3.6,.4,.6,.25,43))
     (LIB/'TE_1-2199230-4_MKEY.kicad_mod').write_text(mkey())
     storage_symbols()
 if __name__=='__main__':main()

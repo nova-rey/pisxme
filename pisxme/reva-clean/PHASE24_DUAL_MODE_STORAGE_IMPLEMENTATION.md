@@ -124,6 +124,12 @@ orthogonal package-side dogbones. Native DRC reports zero shorting findings;
 seven track crossings remain in the final dogbones/selector continuation and
 are not accepted as a routing pass.
 
+The TI example board layout also specifies 0.60 mm perimeter-pad length;
+the generator now uses 0.60 x 0.25 mm pads for both selectors. The geometry
+audit still passes after this correction and the isolated native fixture
+remains zero-short. Track-width findings in the fixture are retained and
+must be resolved against the approved JLC routing rule before promotion.
+
 The sixth iteration split RX/TX source fanout layers, but native DRC showed
 the B.Cu source trunk now colliding with the selector-side U11/U12
 continuation. It is rejected as a shared-corridor route implementation; the
