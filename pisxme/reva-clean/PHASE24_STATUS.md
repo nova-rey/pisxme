@@ -17,7 +17,7 @@ The dual-mode storage implementation remains the active task; unrelated Phase
 24 routing is still paused. The authoritative child schematic now includes
 the TE `1-2199230-4` M-key socket, retained TI TUSB9261 SATA bridge, JMS583
 `QHFA3A`, TI HD3SS6126/HD3SS3412 selectors, a three-position power-off mode
-override (`J4`: FORCE_SATA / AUTO_PEDET / FORCE_NVME), and U14
+override (`J5`: FORCE_SATA / AUTO_PEDET / FORCE_NVME), and U14
 SN74LVC1G17DBVR buffering `MODE_IN` to `STORAGE_SEL`. JMS583 Rev 2.1 required
 support is explicit: 25-MHz crystal, 12-kOhm REXT, 4.7-uH LXO inductor,
 AVDD33/rail decoupling, reset RC, VBUS divider, and USB/PCIe TX coupling.

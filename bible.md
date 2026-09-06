@@ -4566,3 +4566,10 @@ and native schematic netlist export pass. Native PCB DRC remains intentionally
 nonpassing for the unrouted placement fixture (1,074 violations, 499
 unconnected items); no closure claim was made. Consultant/auditor dispatch was
 retry-blocked by the current thread limit, so work continued locally.
+## 2026-09-06 — storage reference collision correction
+
+Native inspection of the integrated candidate found that J4 was already the
+SERVICE USB-C connector. Renamed the storage mode selector to free reference
+J5 and corrected the custom 25-MHz crystal footprint with native Reference and
+Value properties. Regenerated the disposable candidate; native loading and
+DRC continue to run, with the candidate still intentionally unrouted.

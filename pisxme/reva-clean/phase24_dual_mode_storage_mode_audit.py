@@ -38,8 +38,8 @@ def main():
             failures.append(f"missing instance {ref}")
         if mpn not in text:
             failures.append(f"missing MPN {mpn}")
-    if 'property "Reference" "J4"' not in text:
-        failures.append("missing J4 AUTO / FORCE SATA / FORCE NVMe override")
+    if 'property "Reference" "J5"' not in text:
+        failures.append("missing J5 AUTO / FORCE SATA / FORCE NVMe override")
     if 'AUTO / FORCE SATA / FORCE NVMe' not in text:
         failures.append("mode override value missing")
     for label in ("MODE_IN", "M2_PEDET", "STORAGE_SEL"):

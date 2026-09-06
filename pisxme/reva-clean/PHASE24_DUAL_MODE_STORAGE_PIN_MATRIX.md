@@ -83,7 +83,7 @@ CAD retained under `authority-inventory/primary-docs/storage-upgrade/`.
 
 The island cannot be promoted until forced SATA, forced NVMe, AUTO, empty
 socket, reset/startup, and inactive-path tests pass in a native mode-aware
-fixture. J4 is the power-off three-position override (FORCE_SATA,
+fixture. J5 is the power-off three-position override (FORCE_SATA,
 AUTO_PEDET, FORCE_NVME); U14 is the SN74LVC1G17DBVR Schmitt buffer from the
 verified TI DBV pinout, with MODE_IN driven by the selected strap or PEDET
 implementation and STORAGE_SEL driving both selectors. This is schematic

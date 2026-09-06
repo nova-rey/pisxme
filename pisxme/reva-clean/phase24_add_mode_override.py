@@ -30,11 +30,16 @@ def main():
         text = text.replace('\n  (sheet_instances ', '\n' + u14 + '\n  (sheet_instances ', 1)
 
     override = {1:'FORCE_SATA', 2:'AUTO_PEDET', 3:'FORCE_NVME', 4:'MODE_IN'}
-    if 'property "Reference" "J4"' not in text:
+    mode_start = text.find('(symbol (lib_id "PiSXMeRevAClean:STORAGE_MODE_OVERRIDE")')
+    if mode_start >= 0:
+        old = balanced(text, mode_start)
+        new = old.replace('property "Reference" "J4"', 'property "Reference" "J5"').replace('(reference "J4")', '(reference "J5")')
+        text = text[:mode_start] + new + text[mode_start + len(old):]
+    if 'property "Reference" "J5"' not in text:
         lib_end = text.index('(lib_symbols')
         lib_close = lib_end + len(balanced(text, lib_end)) - 1
         text = text[:lib_close].rstrip() + '\n' + definition('STORAGE_MODE_OVERRIDE', override) + '\n' + text[lib_close:]
-        j4 = instance('STORAGE_MODE_OVERRIDE', 'J4', 'AUTO / FORCE SATA / FORCE NVMe', override,
+        j4 = instance('STORAGE_MODE_OVERRIDE', 'J5', 'AUTO / FORCE SATA / FORCE NVMe', override,
                        0xf1000000000000000000000000001500, 330, 165,
                        'PiSXMeRevAClean:MODE_JUMPER_1x04')
         text = text.replace('\n  (sheet_instances ', '\n' + j4 + '\n  (sheet_instances ', 1)

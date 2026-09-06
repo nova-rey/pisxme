@@ -20,7 +20,7 @@ MAPS={
  'HD3SS3412_RUA0042A.kicad_mod':('U13',{2:'M2_PCIE_TXP0',3:'M2_PCIE_RXP0',5:'STORAGE_3V3',6:'M2_PCIE_TXP1',7:'M2_PCIE_RXP1',9:'STORAGE_SEL',10:'POWER_GND',11:'M2_PCIE_TXP2',12:'M2_PCIE_RXP2',15:'M2_PCIE_TXP3',16:'M2_PCIE_RXP3',22:'JMS_PCIE_TXN0',23:'JMS_PCIE_TXP0',24:'JMS_PCIE_RXN0',25:'JMS_PCIE_RXP0',26:'TUSB_SATA_RXN',27:'TUSB_SATA_RXP',28:'TUSB_SATA_TXN',29:'TUSB_SATA_TXP',30:'STORAGE_3V3'}),
  'TE_1-2199230-4_MKEY.kicad_mod':('J3',{2:'M2_3V3',3:'POWER_GND',4:'M2_3V3',41:'M2_SATA_B_P_PCIE_RXN0',43:'M2_SATA_B_N_PCIE_RXP0',47:'M2_SATA_A_N_PCIE_TXN0',49:'M2_SATA_A_P_PCIE_TXP0',50:'M2_PERST_N',52:'M2_CLKREQ_N',53:'M2_REFCLK_N',54:'M2_PEWake_N',55:'M2_REFCLK_P',68:'M2_SUSCLK',70:'M2_3V3',71:'POWER_GND',72:'M2_3V3',73:'POWER_GND',74:'M2_3V3'}),
  'SOT-23-5.kicad_mod':('U14',{2:'MODE_IN',3:'POWER_GND',4:'STORAGE_SEL',5:'STORAGE_3V3'}),
- 'MODE_JUMPER_1x04.kicad_mod':('J4',{1:'FORCE_SATA',2:'AUTO_PEDET',3:'FORCE_NVME',4:'MODE_IN'}),
+ 'MODE_JUMPER_1x04.kicad_mod':('J5',{1:'FORCE_SATA',2:'AUTO_PEDET',3:'FORCE_NVME',4:'MODE_IN'}),
  'R_0402_1005Metric.kicad_mod':('R34',{1:'JMS_REXT',2:'POWER_GND'}),
  'L_2520_6332Metric.kicad_mod':('L2',{1:'JMS_LXO',2:'JMS_VDDREG_5V'}),
  'Crystal_3225_4Pad.kicad_mod':('Y2',{1:'JMS_XIN',2:'JMS_XOUT',3:'POWER_GND',4:'POWER_GND'})}
@@ -70,8 +70,8 @@ def main():
     additions=[]
     for fname,(ref,nets) in MAPS.items():
         if ref=='J3': continue
-        x={'U11':150,'U12':165,'U13':180,'U14':210,'J4':230,'R34':250,'L2':258,'Y2':270}[ref]
-        y={'U11':150,'U12':150,'U13':150,'U14':150,'J4':165,'R34':180,'L2':180,'Y2':190}[ref]
+        x={'U11':150,'U12':165,'U13':180,'U14':210,'J5':230,'R34':250,'L2':258,'Y2':270}[ref]
+        y={'U11':150,'U12':150,'U13':150,'U14':150,'J5':165,'R34':180,'L2':180,'Y2':190}[ref]
         additions.append(pcb_footprint(LIB/fname,ref,x,y,nets))
     for ref,nets in SUPPORT_PCB.items():
         fname = 'C_0603_1608Metric.kicad_mod' if ref == 'C44' else ('Crystal_3225_4Pad.kicad_mod' if ref == 'Y2' else ('L_2520_6332Metric.kicad_mod' if ref == 'L2' else ('R_0402_1005Metric.kicad_mod' if ref.startswith('R') else 'C_0402_1005Metric.kicad_mod')))

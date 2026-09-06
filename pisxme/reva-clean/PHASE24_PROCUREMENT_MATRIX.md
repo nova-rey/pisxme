@@ -32,7 +32,7 @@ and support BOM after firmware and connector CAD close. No purchase was made.
 | Function | Selected item | Evidence/price basis | Risk | Decision |
 |---|---|---|---|---|
 | JMS583 support | 25-MHz crystal, 12-kOhm 1% REXT, 4.7-uH inductor, decoupling, reset RC, VBUS divider, USB/PCIe AC caps | JMS583 Rev 2.1 retained authority; commodity planning values | MEDIUM | Materialized in schematic; exact BOM quote pending |
-| Mode control | J4 power-off 3-position selector + SN74LVC1G17DBVR U14 | commodity planning estimate, MOQ 1 | LOW | FORCE_SATA / AUTO_PEDET / FORCE_NVME, common MODE_IN |
+| Mode control | J5 power-off 3-position selector + SN74LVC1G17DBVR U14 | commodity planning estimate, MOQ 1 | LOW | FORCE_SATA / AUTO_PEDET / FORCE_NVME, common MODE_IN |
 
 The factory mask-ROM JMS583 baseline does not require project-supplied SPI
 firmware; external NVRAM remains DNP until a JMicron-authorized device is

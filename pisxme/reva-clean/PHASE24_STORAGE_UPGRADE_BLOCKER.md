@@ -94,7 +94,7 @@ documentation objections:
 
 The documentation-only stop condition has been superseded by an authorized
 implementation checkpoint. `ea8dfb6`/`7938f64`/`7dbf709` added the JMicron
-support network, J4/U14 mode control, project-local support footprints, and
+support network, J5/U14 mode control, project-local support footprints, and
 native audits. The latest structural audits and schematic netlist export pass.
 Native ERC remains open at 407 findings, and the disposable PCB candidate is
 placement-only with 1,074 DRC violations and 499 unconnected items. These are
