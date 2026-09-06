@@ -3480,6 +3480,29 @@ Receipts: `PHASE24_SELECTED_MACRO_SWAP_STORAGE_ISOLATED.kicad_pcb`,
 `PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_ASTAR-drc.rpt`, and
 `phase24_sata_native_connectivity_audit.py`.
 
+## Selected macro storage route-development cycle 2 — 2026-09-06
+
+The native route generators were generalized to accept the selected macro
+basis and resolve the saved hierarchical CM5/STORAGE net names without
+creating synthetic connectivity. A second ordered USB3/SATA escape was run
+from `PHASE24_SELECTED_MACRO_SWAP_STORAGE_ISOLATED.kicad_pcb`.
+
+The USB3 A* output reaches all four native J7-to-U7 terminal pairs, while
+native DRC rejects it with 217 violations and 88 unconnected items. The
+ordered SATA output again passes all eight native SATA endpoint memberships,
+but native DRC rejects the geometry with 112 violations and 80 unconnected
+items, including real crossings/shorting/clearance findings. These are
+`ROUTE_IMPLEMENTATION_FAILURE` results on an immature disposable route, not
+evidence against the selected macro placement. No integrated copper or
+production candidate was changed.
+
+Receipts: `phase24_reroute_storage_usb3_native.py`,
+`phase24_ti_u7_ordered_escape_fixture.py`,
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_USB3_ASTAR.kicad_pcb`,
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_USB3_ASTAR-drc.rpt`,
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_ORDERED_ESCAPE.kicad_pcb`, and
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_ORDERED_ESCAPE-drc.rpt`.
+
 The Phase 14 footprint-authority regression now also checks the four side
 orientations, so future regeneration cannot silently restore the overlapping
 vertical-land error.

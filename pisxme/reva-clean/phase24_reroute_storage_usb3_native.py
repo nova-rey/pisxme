@@ -2,6 +2,7 @@
 from pathlib import Path
 from heapq import heappush, heappop
 import math, pcbnew
+import os
 R=Path(__file__).resolve().parent
 BASE=R/(__import__('os').environ.get('PISXME_USB3_BASE','PHASE24_MACRO_FRESH_STORAGE_LOCAL_CLEAR2.kicad_pcb'))
 OUT=R/(__import__('os').environ.get('PISXME_USB3_OUT','PHASE24_STORAGE_LOCAL_CLEAR2_USB3_ASTAR.kicad_pcb'))
@@ -14,6 +15,13 @@ def pad(b,r,n):
     p=b.FindFootprintByReference(r).FindPadByNumber(str(n))
     if p is None: raise RuntimeError(f'missing {r}.{n}')
     return p
+def find_net(b, name):
+    """Resolve native exported hierarchy names without inventing a net."""
+    for candidate in (name, '/CORE_CM5/' + name, '/STORAGE/' + name):
+        q = b.FindNet(candidate)
+        if q is not None:
+            return q
+    raise RuntimeError(f'missing native USB3 net {name}')
 def block(o,l,p,r=.2):
     x,y=gr(p); q=max(1,math.ceil(r/STEP))
     for i in range(-q,q+1):
@@ -68,8 +76,7 @@ jobs=[('CM5_USB3_RX_N','128','42'),('CM5_USB3_RX_P','130','43'),('CM5_USB3_TX_N'
 # Normalize stale hierarchical aliases on the four J7 source pads to the
 # canonical names in the repaired native export before emitting new copper.
 for name,jp,_up in jobs:
-    n=b.FindNet(name)
-    if n is None: raise RuntimeError(f'missing native USB3 net {name}')
+    n=find_net(b,name)
     b.FindFootprintByReference('J7').FindPadByNumber(jp).SetNet(n)
 # Resolve native terminal coordinates before bulk track mutation; this avoids
 # the KiCad 10 Python wrapper invalidating footprint proxies during mutation.
@@ -78,5 +85,5 @@ o=occ(b)
 for t in list(b.GetTracks()):
     if 'CM5_USB3_' in t.GetNetname():b.Remove(t)
 for name,a,z in terminals:
-    n=b.FindNet(name);emit(b,n,astar(o,a,z),o);print(name,a,z)
+    n=find_net(b,name);emit(b,n,astar(o,a,z),o);print(name,a,z)
 b.Save(str(OUT));print(OUT)
