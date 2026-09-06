@@ -1632,3 +1632,37 @@ This is a focused Ethernet support pass, not a Phase 24 board pass. The
 candidate still requires integrated-board mechanical, schematic/PCB parity,
 power/return, DRC inheritance review, and promotion validation before the
 official Ethernet implementation can replace the current acreage island.
+
+## Whole-board functional-island macro-floorplan discriminator — 2026-09-05
+
+Per the steering correction, detailed Phase 24 routing experiments were
+paused and the live integrated candidate
+`PHASE24_CM5_GROUND_RIGHT_SAME_ROWS.kicad_pcb` was re-read with KiCad 10.0.5.
+The native carrier-mating J7 launch centroids are Ethernet `(34.50,99.90)`,
+PCIe `(69.60,101.50)`, USB3 `(70.04,105.30)`, and SERVICE `(66.96,99.30)`.
+The live endpoint centroids are Ethernet `(77.76,59.56)`, storage
+`(130.65,131.04)`, PCIe `(150,90)`, and SERVICE `(46.88,100)`.
+
+The fresh placement-only discriminator
+`phase24_macro_floorplan_review_fresh.py` generated five disposable native
+candidates. It intentionally excludes existing copper and mature DRC from
+ranking. The coherent Ethernet migration candidate reduces Ethernet
+same-net ratsnest from `443.9 mm` to `97.4 mm` and Euclidean source-to-island
+distance from `59.2 mm` to `32.7 mm`, with no moved-body overlap in the
+conservative screen. It is materialized as
+`PHASE24_SELECTED_ETH_LOCAL_MACRO.kicad_pcb` with only Ethernet copper
+removed, so it is a routing base, not a claimed routed pass.
+
+The combined storage-local candidates reduce USB3 same-net ratsnest from
+`231.2 mm` to `69.1 mm`, but the tested placements introduce M.2/body or
+support overlap screens. They are rejected as placement candidates pending a
+new mechanically clean storage arrangement, not because of immature routing.
+PCIe/J1, SERVICE/J4/U8, power input, and regulator cores remain unmoved.
+The external consultant dispatch was unavailable at the platform thread
+limit; the available independent board reviewers were used instead. One
+review independently confirmed the native pad map and the distinction
+between the corrected placement basis and the older integrated artifact.
+
+`MACRO_FLOORPLAN_DISCRIMINATOR = COMPLETE`
+`SELECTED_MACRO_BASIS = PHASE24_SELECTED_ETH_LOCAL_MACRO`
+`PHASE24 = OPEN; DETAILED ROUTING PAUSED UNTIL SELECTED ETHERNET MIGRATION REGENERATION`
