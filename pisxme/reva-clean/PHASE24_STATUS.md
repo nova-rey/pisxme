@@ -3526,6 +3526,30 @@ Receipt: `phase24_storage_usb3_pair_corridor.py`,
 `PHASE24_SELECTED_MACRO_SWAP_STORAGE_USB3_PAIR_CORRIDOR_V3-drc.rpt`, and
 `phase24_usb3_native_connectivity_audit.py`.
 
+## Selected macro SATA pair-corridor development — 2026-09-06
+
+Several explicit native SATA corridor constructions were tested on the
+selected macro storage island. Every construction passes the authoritative
+eight-endpoint SATA connectivity audit through U7, all four coupling
+capacitors, and J3. The attempts remain rejected for route quality: the best
+current trial still contains six real track crossings and four true shorts,
+principally from bridge-pad fanout ordering, the J3 connector launch field,
+and local support footprints occupying the trial corridor.
+
+These are `ROUTE_IMPLEMENTATION_FAILURE` results, not
+`MACRO-PLACEMENT FAILURE`. The selected placement has not been changed and
+no SATA copper has been promoted to the integrated board. The next action is
+to use the native violation coordinates to refine the local bridge/socket
+launch or rotate the coherent storage island, rather than compare these
+immature routes against the mature historical board by raw DRC totals.
+
+Receipts: `phase24_storage_sata_pair_corridor.py`,
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_PAIR_CORRIDOR_V2.kicad_pcb`,
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_PAIR_CORRIDOR_V3.kicad_pcb`,
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_PAIR_CORRIDOR_V4.kicad_pcb`,
+`PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_PAIR_CORRIDOR_V5.kicad_pcb`,
+and their native DRC reports.
+
 The Phase 14 footprint-authority regression now also checks the four side
 orientations, so future regeneration cannot silently restore the overlapping
 vertical-land error.
