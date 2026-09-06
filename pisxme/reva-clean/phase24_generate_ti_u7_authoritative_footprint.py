@@ -25,10 +25,13 @@ def main():
       ' (fp_rect (start -4.25 -4.25) (end 4.25 4.25) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))',
       ' (fp_rect (start -3.6 -3.6) (end 3.6 3.6) (stroke (width 0.05) (type default)) (fill none) (layer "F.Fab"))']
     n=1
-    for y in [ -3.0+i*.4 for i in range(16) ]: lines.append(pad(n,-3.8,y,'90')); n+=1
-    for x in [ 3.0-i*.4 for i in range(16) ]: lines.append(pad(n,x,3.8,'0')); n+=1
-    for y in [ 3.0-i*.4 for i in range(16) ]: lines.append(pad(n,3.8,y,'90')); n+=1
-    for x in [ -3.0+i*.4 for i in range(16) ]: lines.append(pad(n,x,-3.8,'0')); n+=1
+    # KiCad's pad rotation rotates the 1.2 x 0.2 rectangle.  Vertical-side
+    # lands keep the long dimension radial (rotation 0); horizontal-side
+    # lands rotate it 90 degrees so the 0.2 mm dimension follows the row.
+    for y in [ -3.0+i*.4 for i in range(16) ]: lines.append(pad(n,-3.8,y,'0')); n+=1
+    for x in [ 3.0-i*.4 for i in range(16) ]: lines.append(pad(n,x,3.8,'90')); n+=1
+    for y in [ 3.0-i*.4 for i in range(16) ]: lines.append(pad(n,3.8,y,'0')); n+=1
+    for x in [ -3.0+i*.4 for i in range(16) ]: lines.append(pad(n,x,-3.8,'90')); n+=1
     lines += ['  (pad "65" smd rect (at 0 0) (size 3.450 3.450) (layers "F.Cu" "F.Mask"))']
     # Paste is intentionally omitted from pad 65 here.  TI's example calls
     # for a segmented stencil, which must be represented by an explicit

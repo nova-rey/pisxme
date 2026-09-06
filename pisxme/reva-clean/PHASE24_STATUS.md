@@ -3394,3 +3394,24 @@ support returns outside its corridor before integration.
 
 Receipt: `phase24_make_ti_storage_isolated_fixture.py` and
 `PHASE24_TI_STORAGE_ISOLATED_USB3_SATA-drc.rpt`.
+
+## TI PVP0064A rotation correction and ordered escape — 2026-09-06
+
+Native DRC of the first TI footprint replacement exposed a footprint-authoring
+defect: the 1.2 mm x 0.2 mm lands were rotated on the vertical sides, making
+the 0.4 mm-pitch row overlap. The generator now keeps vertical-side lands at
+rotation 0 and rotates only the horizontal-side lands. Replacing U7 with this
+corrected asset reduces the unchanged inherited-candidate DRC from 488 to 213
+before route regeneration, while the native TI pad-authority and mandatory-pin
+audits continue to pass.
+
+The disposable ordered escape then reduces local route-development DRC to 103
+violations and preserves native endpoint connectivity for all four USB3 and
+all eight SATA paths. It is still rejected as a route pass: remaining issues
+are explicit pair crossings/clearances and connector launch keepouts. This is
+now a valid package geometry and a useful route-development basis; prior
+failures caused by the malformed land rotations are superseded.
+
+Receipts: `phase24_generate_ti_u7_authoritative_footprint.py`,
+`phase24_ti_u7_ordered_escape_fixture.py`, and
+`PHASE24_TI_STORAGE_ORDERED_ESCAPE-drc.rpt`.
