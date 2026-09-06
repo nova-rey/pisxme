@@ -2139,3 +2139,14 @@ reduced from 201 to 70; storage-specific opens remain zero. The candidate
 `PHASE24_J1_PROTECTED_FIELD_CURRENT.kicad_pcb` is promoted. The remaining
 protected-load launches, power-return populations, and other board opens still
 require closure.
+
+### Global POWER_GND launch cluster on current basis — 2026-09-05
+
+The previously validated U1/U2/J4/U8 global-ground launch cluster was applied
+to the current J1/storage/clock basis. It uses short F.Cu dogbones and
+ordinary through-vias at the native pad coordinates, with no CM5 scoped-ground
+net merge. Native KiCad DRC reports 0 shorts, 0 track crossings, and 254
+unconnected items, down from 261. POWER_GND-related open records fall from
+181 to 174 while the 12V_PROTECTED count remains 17. The candidate
+`PHASE24_PGND_CLUSTER_CURRENT.kicad_pcb` is promoted; remaining ground and
+protected-load endpoints still require explicit closure.
