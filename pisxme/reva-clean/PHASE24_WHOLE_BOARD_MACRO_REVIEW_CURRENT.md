@@ -45,6 +45,30 @@ Distances and same-net ratsnest lengths are computed from native transformed pad
 | `ETH_OUTBOARD_STORAGE_CLEAR` | 17.3 | 18.6 | 43.9 | 60.3 | 81.2 | 20.1 | 88.1 | 95.6 | C16<->U7, C23<->J3, C24<->J3, C25<->J3, C30<->J3, C4<->J2, J2<->Q2, J2<->U2, J3<->TP5, U2<->U6 |
 | `ETH_EAST_STORAGE_NORTH` | 152.8 | 178.0 | 73.6 | 96.2 | 81.2 | 20.1 | 257.5 | 1149.9 | J1<->J3, J1<->U7 |
 
+## Corridor, transition, congestion, and mechanical assessment
+
+This is a placement-only discriminator, so route crossings and actual via
+counts are not fabricated. The following are pre-routing expectations from
+native pad order, island geometry, connector access, and the approved
+F.Cu/B.Cu-only signal contract.
+
+| island | natural corridor | apparent crossing risk | expected transitions | competing corridors / return concern | mechanical/access result |
+|---|---|---|---|---|---|
+| Ethernet | left CM5 Ethernet launch to left/outboard MagJack edge | low when kept left; high if sent across storage/power | low, using ordinary F.Cu/B.Cu changes | avoid storage and power-entry lanes; preserve shield return | MagJack edge access retained |
+| PCIe/V100 | right CM5 high-speed launch toward J1/V100 | low in current anchor; high if exchanged | existing validated burden retained | strongest protected corridor and continuous references | V100/SXM2 and cooler reservation unchanged |
+| Storage USB3→U7→SATA→J3 | right CM5 USB3 launch, local bridge, edge M.2 launch | lower than remote storage; selected edge basis avoids PCIe/PERST | ordinary F.Cu/B.Cu escape/return changes expected | preserve power/return access around the shared launch region | selected coherent group has no new moved-body overlap |
+| SERVICE USB2 | right CM5 service launch to nearby J4/U8 | low; already natural | low | should not become a high-speed detour | connector access retained; poor swap target |
+| Power input/protection | input connectors/fuses/protection at upper-middle entry | not a CM5 data corridor, but can block detours | power vias/copper remain local | preserve high-current entry and return acreage | unchanged/frozen |
+| Regulators/load delivery | U3/U4/U5 load-side region | not a source-launch corridor; obstruction is placement-dependent | local power vias only | preserve regulator islands and returns | unchanged/frozen |
+
+The selected storage-local candidates improve both source-to-island distance
+and same-net ratsnest without requiring a PCIe or SERVICE migration.
+Ethernet-outboard variants improve Ethernet distance but create moved-body or
+power conflicts, so they are not the preferred global swap. No candidate is
+penalized for immature copper; route quality is a separate downstream
+question. Actual crossing and via counts must be measured after valid copper
+is authored.
+
 ## Functional-neighborhood findings
 
 - J7 has two physically distinct launch regions: Ethernet pads at x≈32.96/36.04, y≈99.1–100.7, and PCIe/USB3/SERVICE pads at x≈66.96/70.04, y≈99.1–106.7. This is native pad geometry, not schematic drawing order.
