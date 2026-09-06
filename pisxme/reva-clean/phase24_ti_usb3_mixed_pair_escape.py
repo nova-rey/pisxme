@@ -27,6 +27,6 @@ for i,(name,jp,up) in enumerate(jobs):
   sv=((76.,76.)[i],(102.,104.)[i]);path(b,n,[src,sv],B);via(b,n,sv)
   path(b,n,[sv,(90.8,dst[1]),dst],F)
  else:
-  sv=(82.,(106.,108.)[i-2]);tv=((89.,91.)[i-2],dst[1])
+  sv=(82.,(105.,109.)[i-2]);tv=((91.,87.)[i-2],dst[1])
   path(b,n,[src,sv],B);via(b,n,sv);path(b,n,[sv,tv],B);via(b,n,tv);path(b,n,[tv,dst],F)
 b.BuildListOfNets();b.Save(str(OUT));print(OUT)

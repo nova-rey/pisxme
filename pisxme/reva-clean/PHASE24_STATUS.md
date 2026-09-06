@@ -3988,3 +3988,14 @@ to the native TI lands. Native DRC reported 36 findings, including six
 crossings and nine shorts, a small improvement over the column control but
 still a rejection. The candidate remains `ROUTE_IMPLEMENTATION_FAILURE`;
 the selected macro and PCIe ancestor are unchanged.
+
+## TI-U7 mixed-layer transition refinement — 2026-09-06
+
+The mixed-layer control was refined with separated TX source transitions and
+reversed target-via ordering. The best native DRC result now reports 10
+findings with zero `shorting_items` and zero `tracks_crossing`; remaining
+errors are three local clearances and one hole-clearance interaction, plus
+fixture-only dangling warnings. A farther-separated target-via variant
+regressed to 15 findings and was rejected. The 10-finding result remains
+disposable `ROUTE_IMPLEMENTATION_FAILURE`; no integrated or PCIe copper was
+changed or promoted.
