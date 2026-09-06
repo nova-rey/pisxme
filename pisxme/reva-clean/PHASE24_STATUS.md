@@ -3669,3 +3669,22 @@ the SATA/USB3 endpoint set (regulator/support and other incomplete-board
 connections), so V21 is not claimed as a full-board Phase 19 closure. The
 corrected footprint and refresh script are now the authoritative route-fixture
 path for the next coordinated storage integration.
+
+## V26 selected storage data-route milestone — 2026-09-06
+
+The J3 0-degree route was regenerated with separated final dogbones and a
+short B.Cu RX-P meander. After refreshing J3 from the corrected authoritative
+footprint, native DRC reports 11 unrelated text/silkscreen warnings and zero
+shorting, crossing, clearance, hole-clearance, dangling-via, or footprint
+errors. The native SATA audit passes all eight endpoints and the unchanged
+USB3 audit passes all four CM5-to-U7 endpoints.
+
+Measured end-to-end SATA pair skew is 0.97 mm TX and 0.365 mm RX, within the
+recorded 1.2 mm bound. Ordinary through-vias are used; no plane-layer signals
+or via-in-pad construction was introduced. V26 is therefore the selected
+storage data-route milestone. Full Phase 19/24 closure remains open because
+the board still has 80 unrelated support/power/ground connectivity opens and
+the complete U7 clock/control/rail integration must be revalidated with this
+data route.
+
+Receipt: `PHASE24_STORAGE_DATA_ROUTE_V26_RECEIPT.md`.
