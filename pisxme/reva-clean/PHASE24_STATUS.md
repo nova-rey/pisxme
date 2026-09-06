@@ -2530,3 +2530,16 @@ location and be independently rechecked.
 Consultant dispatch remains unavailable because the agent thread limit is
 reached. Local native evidence is used; no validation severity, layer policy,
 architecture, or floorplan decision was relaxed.
+
+## CM5IO-style USB3 launch correction — 2026-09-06
+
+`phase24_usb3_reference_escape_probe.py` was corrected to place the initial
+through-vias on the official CM5IO launch side of J7 before entering the
+secondary B.Cu corridor. This reduced the launch-related shorts from six to
+two, confirming that the first probe's opposite-side escape was an authoring
+failure. The corrected saved board still fails native DRC with 537 total
+violations and 259 unconnected items; the remaining real shorts include a
+TX-pair interaction and an RX interaction with inherited bridge power, with
+crossing/clearance findings also remaining. It is rejected as
+`ROUTE_IMPLEMENTATION_FAILURE`. No copper was promoted and the selected
+macro-floorplan is unchanged.
