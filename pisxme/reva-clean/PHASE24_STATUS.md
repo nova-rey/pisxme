@@ -3359,3 +3359,22 @@ Receipts:
 `PHASE24_STORAGE_TI_PINFIELD_SUPPORT_USB3_ASTAR.kicad_pcb`,
 `PHASE24_STORAGE_TI_PINFIELD_SUPPORT_USB3_SATA_ASTAR.kicad_pcb`, and
 `PHASE24_STORAGE_TI_PINFIELD_SUPPORT_USB3_SATA_ASTAR-drc.rpt`.
+
+## Canonical USB3 source-net normalization — 2026-09-06
+
+The first fresh USB3 route exposed a second implementation defect: retained
+PCB J7 pads still used the pre-repair `/CORE_CM5/CM5_USB3_*` aliases while the
+authoritative TI U7 pads used `CM5_USB3_*`. The route generator was corrected
+to assign J7 pads from the native net names before creating copper, preventing
+split PCB identities for one USB3 channel.
+
+The corrected disposable regeneration reaches all four canonical J7-to-U7
+USB3 endpoints, all eight native SATA endpoints still pass, and U7 pad
+authority passes. Native DRC reports 730 violations/448 unconnected items,
+down from 736/448 in the prior same-basis route, so this remains
+`ROUTE_IMPLEMENTATION_FAILURE`: the remaining defects include local pair
+clearance/crossing and inherited-board corridor interactions. The fixture is
+not promoted and Phase 24 remains open.
+
+Receipt: `phase24_reroute_storage_usb3_native.py` and
+`PHASE24_STORAGE_TI_VBUS_REAUTH_SUPPORT_USB3_CANONICAL_SATA-drc.rpt`.

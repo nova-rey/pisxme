@@ -202,17 +202,14 @@ for name,up,cap,cp,jp in jobs:
     # Keep the RX socket pair on B.Cu after an ordinary via at the coupling
     # capacitor; TX remains F.Cu.  This is a permitted layer split and avoids
     # the close M.2 launch pair weaving on one layer.
-    socket_start = B if name.startswith('BRIDGE_SATA_RX_') else F
-    if os.environ.get('PISXME_BASELINE_ESCAPE') != '1' and name == 'BRIDGE_SATA_TX_N':
-        socket_start=B
+    # Coupling-capacitor pads are SMD terminals on F.Cu.  A through-via at the
+    # capacitor pad is via-in-pad and creates a false escape; begin the native
+    # socket-side route on F.Cu and let A* introduce a transition only after a
+    # real dogbone if the corridor requires it.
+    socket_start = F
     gate = None
     if name == 'BRIDGE_SATA_RX_P': gate=(-1,118.75)
     if name == 'BRIDGE_SATA_RX_N': gate=(1,120.25)
-    if socket_start == B:
-        # The coupling capacitor is an F.Cu SMD pad.  Explicitly launch the
-        # B.Cu corridor through an ordinary via at the segment source; the
-        # A* path itself begins on B.Cu and cannot infer this terminal via.
-        via(b,socket,a)
     if name == 'BRIDGE_SATA_RX_P': gate=(-1,118.75)
     if name == 'BRIDGE_SATA_RX_N': gate=(1,120.25)
     path=route(occ,hard,a,z,socket_start,F,gate); emit(b,socket,path,occ)
