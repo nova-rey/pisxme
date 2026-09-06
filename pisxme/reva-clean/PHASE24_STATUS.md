@@ -4168,6 +4168,22 @@ Receipt: `phase24_ti_usb3_rx_split_v2_fixture.py`,
 `ZERO_TRACK_CROSSINGS = TRUE`
 `PHASE24 = OPEN`
 
+## U5 native recheck receipt — 2026-09-06
+
+The corrected U5 audit was rerun against the saved U5 fixture and the
+promoted `PHASE24_PGND_CLUSTER_CURRENT.kicad_pcb` basis using KiCad 10.0.5
+`BuildConnectivity`. Both focused audits pass. The disposable negative
+control removes an actual U5.9-connected trace and fails as required. The
+audit derives connectivity from serialized pads, tracks, vias, and filled
+zones; expected membership remains assertion-only. This is focused evidence,
+not full-board closure: native DRC/unconnected findings remain open.
+
+Receipt: `PHASE24_U5_NATIVE_RECHECK_20260906.md`.
+
+`U5_NATIVE_AUDIT = PASS`
+`U5_NEGATIVE_CONTROL = PASS`
+`PHASE24 = OPEN`
+
 ## TI U7 RX target-via separation experiment — 2026-09-06
 
 The best clean west-target control was challenged by moving only RX_P's
