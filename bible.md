@@ -4420,3 +4420,5 @@ Snapshotted the native integrated storage basis and completed a topology-only co
 Corrected hierarchical U7 net resolution, passed TI pin/net authority audits, and rejected two disposable integrated USB3 route controls after native DRC found real crossings/shorts; classified as route implementation failure.
 # 2026-09-06 — Phase 24 integrated B.Cu source-escape experiment
 Rejected a dedicated J7 source-via escape after native integrated DRC regressed to 36 shorts and 23 crossings; retained the selected macro and classified the result as route implementation failure.
+# 2026-09-06 — Phase 24 corrected TI hierarchy binding and source-route cycle
+Rebound regenerated TI U7 pads to the existing CM5 hierarchy, passed native authority audits, and recorded integrated fixed, obstacle-aware, and B.Cu source-escape controls as disposable route-development evidence.
