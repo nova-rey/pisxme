@@ -2082,3 +2082,17 @@ SATA_M2 nets. This closes the coordinated storage route locally, but does not
 close Phase 24: clock/support, power-delivery, and other board opens remain.
 Consultant spawning was unavailable at the thread limit; the review was
 performed locally against the saved native geometry and preserved evidence.
+
+### Bridge regulator-support oracle overlay — 2026-09-05
+
+The next coherent repair copied only the proven bridge regulator-support
+copper from `PHASE24_U5_INTEGRATED_LAYERED.kicad_pcb` onto the promoted
+storage baseline. No Ethernet, PCIe, USB3, or SATA copper was replaced. The
+overlay uses the current board's actual net objects and KiCad-native track/via
+geometry. Native DRC improves from 419 to 407 unconnected items, with zero
+`shorting_items` and zero `tracks_crossing`. The affected open census changes
+from 21 to 17 BRIDGE_1V1, 17 to 10 BRIDGE_3V3, 1 to 0 BRIDGE_RESET, 3 to 0
+FB_BRIDGE_3V3, 2 to 0 PG_BRIDGE_3V3, and 1 to 0 RT_BRIDGE_3V3 records. Storage
+specific unconnected count remains zero, and the U7 pad-net authority audit
+passes. The candidate is promoted as the current Phase 24 integration basis;
+the two additional ordinary clearances are retained for later local review.
