@@ -2279,3 +2279,12 @@ B.Cu corridor to the existing fused-A vertical. Native KiCad DRC reports 0
 shorts, 0 track crossings, 227 unconnected items, and 12 clearance items.
 `PHASE24_FUSED_D1_PARALLEL_LAUNCH_CURRENT.kicad_pcb` is promoted; Q2/F2 and
 the remaining protected-load distribution are still open.
+
+### Rejected B-input C4/U2 launch variants — 2026-09-06
+
+The direct C4.2-to-U2.3 F.Cu launch shorted the existing `/POWER_INPUT/VCAP_B`
+route. An offset-via B.Cu alternative was then tested; it reduced native
+unconnected items from 227 to 225 but introduced three shorts, one crossing,
+and three new clearance items. Both variants are rejected as
+`ROUTE IMPLEMENTATION_FAILURE`; `/POWER_INPUT/12V_IN_B` remains open and its
+VCAP_B separation is preserved.
