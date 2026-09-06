@@ -4326,3 +4326,4 @@ final Phase 17 closure remains pending the complete board gate.
 2026-09-06: Replaced U7 in a disposable storage PCB with the TI 65-pad footprint; complete pad authority passed, while inherited 0.5 mm routes failed native DRC and USB3/SATA endpoints, proving a fresh route implementation is required.
 2026-09-06: Normalized retained U7 route aliases against the repaired native netlist; complete pad authority still passed, but old copper remained invalid at the new TI pad field, so fresh USB3/SATA escapes are required.
 2026-09-06: Added the TI-required 10 kOhm USB_R1-to-USB_R1RTN precision reference resistor to the clean STORAGE sheet; native export shows both U7 pins and R24, while VBUS support and PCB regeneration remain open.
+2026-09-06: Added the TI-required 90.9 kOhm/10 kOhm USB_VBUS divider as R32/R33, verified native U7.50/source/return net membership, and resolved duplicate references without weakening ERC; PCB materialization remains open.

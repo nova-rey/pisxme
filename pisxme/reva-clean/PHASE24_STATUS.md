@@ -3314,3 +3314,24 @@ Receipts:
 `PHASE24_CLEAN_TUSB_PINFIELD_R1.kicadxml`,
 `PHASE24_CLEAN_TUSB_PINFIELD_R1-erc.rpt`, and the TI
 `TUSB9261-implementation-guide-revE.pdf`.
+
+## TUSB9261 USB_VBUS divider support added — 2026-09-06
+
+The TI implementation guide requires USB_VBUS to be driven through a 90.9 kOhm,
+1% upper resistor and a 10 kOhm, 1% lower resistor to ground. The clean
+STORAGE sheet now includes R32 (`RC0402FR-0790K9L`) from `CM5_5V` to the
+native U7 pin-50 net `BRIDGE_USB_VBUS`, and R33 (`RC0402FR-0710KL`) from that
+node to `POWER_GND`. The references were selected after checking the complete
+clean hierarchy for duplicates.
+
+Native KiCad export proves the exact three-member VBUS node (U7.50, R32.2,
+R33.1), the CM5_5V source node (R32.1), and the POWER_GND return (R33.2 plus
+the U7 ground pins). Native ERC remains project-wide nonzero (637 existing
+messages) but has no targeted hierarchy/association errors. The VBUS support
+network is now represented authoritatively; PCB materialization and routing
+remain open.
+
+Receipts:
+`phase24_rename_storage_vbus_refs.py`,
+`PHASE24_CLEAN_TUSB_VBUS_DIVIDER.kicadxml`, and
+`PHASE24_CLEAN_TUSB_VBUS_DIVIDER-erc.rpt`.
