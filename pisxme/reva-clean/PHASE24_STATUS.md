@@ -1828,3 +1828,27 @@ This reconciliation strengthens the floorplan decision only; it does not
 promote the incomplete routed candidate. `CURRENT_MACRO_TOPOLOGY_METRICS =
 COMPLETE`, while native full-board electrical, return, mechanical, DFM, and
 route-quality gates remain open.
+
+### Coordinated-neighborhood route-development cycle — 2026-09-05
+
+After the macro discriminator and direct-current topology reconciliation, a
+fair disposable route-development cycle was run on the selected basis. The
+CM5IO MDI/CT/common/shield connectivity audit passes on the local-J2 support
+candidate, and the LED support path passes its native connectivity audit with
+the real-trace negative control. These focused connectivity results do not
+override native DRC.
+
+The local LED placement trials were rejected as
+`ROUTE_IMPLEMENTATION_FAILURE`: native DRC showed shorts/crossings where the
+support block and J7 escape field competed. The shifted support-block trial
+also increased native unconnected findings. A first selected-storage
+regeneration was separately rejected as `ROUTE_IMPLEMENTATION_FAILURE`:
+native DRC reported 67 shorts and 37 track crossings, including SATA-pair
+corridor weaving and an invalid no-net U7 pad landing. These experiments are
+preserved as evidence, not compared against the mature historical board and
+not used to reject the macro placement.
+
+The selected macro remains the active basis. The next implementation step is
+a native-pad/net-aware coordinated storage generator that clears the J7/U7
+fields and assigns separated SATA pair corridors; no Phase 24 closure, Phase
+25 freeze, or Phase 26 compression has begun.

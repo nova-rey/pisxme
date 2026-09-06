@@ -2,11 +2,12 @@
 from pathlib import Path
 from heapq import heappush, heappop
 import math
+import os
 import pcbnew
 
 R = Path(__file__).resolve().parent
-BASE = R / "PHASE24_OFFICIAL_ETH_FULL_SUPPORT_ROUTE.kicad_pcb"
-OUT = R / "PHASE24_OFFICIAL_ETH_LED_ASTAR_PROBE.kicad_pcb"
+BASE = Path(os.environ.get("PISXME_LED_BASE", str(R / "PHASE24_OFFICIAL_ETH_FULL_SUPPORT_ROUTE.kicad_pcb")))
+OUT = Path(os.environ.get("PISXME_LED_OUT", str(R / "PHASE24_OFFICIAL_ETH_LED_ASTAR_PROBE.kicad_pcb")))
 LIB = R / "PiSXMe_RevA_Clean.pretty"
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 STEP, WIDTH = 0.5, 0.20
@@ -128,7 +129,7 @@ for pn, n in {'15':'ETH_POWER','16':'/ETHERNET/GBE_LED_Y_K','17':'ETH_POWER','18
 for pn, n in {'15':'ETH_LEDG','17':'ETH_LEDY'}.items():
     p = pad(b, 'J7', pn); p.SetNet(nets[n]); p.SetNetCode(nets[n].GetNetCode())
 
-for ref, x, y in [('R30', 24, 106), ('R31', 20, 106)]:
+for ref, x, y in [('R30', 38, 110), ('R31', 33, 110)]:
     fp = io.FootprintLoad(str(LIB), 'R_0402_1005Metric'); fp.SetReference(ref); fp.SetPosition(V(x, y)); fp.SetLayer(F); b.Add(fp)
     ls = pcbnew.LSET(); ls.AddLayer(F); ls.AddLayer(pcbnew.F_Mask); ls.AddLayer(pcbnew.F_Paste)
     for p in fp.Pads(): p.SetLayerSet(ls)
@@ -144,8 +145,8 @@ for ref in ('J7','J2','R30','R31'):
         for layer in layers(p): point_block(occ, layer, pxy(p), max(sx, sy) / 2 + extra)
 
 jobs = [
-    ('ETH_LEDY','17','R30','1','J2','16',(30.0,101.9),(23.5,104.5),(79.0,48.94),(24.5,107.5)),
-    ('ETH_LEDG','15','R31','1','J2','18',(30.0,101.5),(19.5,104.5),(69.0,50.5),(20.5,107.5)),
+    ('ETH_LEDY','17','R30','1','J2','16',(30.0,101.9),(37.5,109.0),(19.09,139.5),(37.5,110.5)),
+    ('ETH_LEDG','15','R31','1','J2','18',(30.0,101.5),(32.5,109.0),(8.37,139.5),(32.5,110.5)),
 ]
 for name, src_ref, rref, rnum, jref, jnum, src_exit, r1_exit, j_exit, r2_exit in jobs:
     net = nets[name]; src = pxy(P('J7', src_ref)); target = pxy(P(rref, rnum))

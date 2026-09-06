@@ -4,11 +4,12 @@ This disposable trial leaves clock/support routing for a separate pass. All
 endpoints are resolved from the saved board; no expected graph is injected.
 """
 from pathlib import Path
+import os
 import pcbnew
 
 R = Path(__file__).resolve().parent
-BASE = R / 'PHASE24_SELECTED_MACRO_PLACEMENT.kicad_pcb'
-OUT = R / 'PHASE24_SELECTED_MACRO_STORAGE_REGEN.kicad_pcb'
+BASE = Path(os.environ.get('PISXME_STORAGE_BASE', str(R / 'PHASE24_SELECTED_MACRO_PLACEMENT.kicad_pcb')))
+OUT = Path(os.environ.get('PISXME_STORAGE_OUT', str(R / 'PHASE24_SELECTED_MACRO_STORAGE_REGEN.kicad_pcb')))
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 W = pcbnew.FromMM(.15)
 
