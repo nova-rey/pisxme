@@ -2192,3 +2192,14 @@ clearance items. The Ethernet native connectivity audit and real-track
 negative control both pass. `PHASE24_ETH_GROUND_LOCAL_CURRENT.kicad_pcb` is
 promoted; remaining board-wide ground, power, service, and control opens are
 still open.
+
+### Promote local bridge 1V1 capacitor-bank plane — 2026-09-06
+
+The broad bridge-rail plane was rejected because it shorted unrelated board
+regions. A bounded In2 pour was then confined to the actual C26-C29/C34-C41
+capacitor acreage, with offset ordinary through-vias and F.Cu dogbones at
+each pad. Native connectivity places all 12 capacitor pads in one real
+`/REGULATORS/BRIDGE_1V1` component. Native DRC reports 0 shorts, 0 track
+crossings, 238 unconnected items, and 12 clearance items. The candidate
+`PHASE24_BRIDGE_1V1_CAPBANK_PLANE_CURRENT.kicad_pcb` is promoted; its final
+connection to the U5 output field remains a separate required repair.
