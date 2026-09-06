@@ -4630,3 +4630,9 @@ destination escapes to match the B.Cu corridor and reran native DRC. The
 experiment reduced shorting findings to 17; remaining crossings are localized
 to source fanout, U12 dogbones, and selector-side pair fanouts. Continue with
 permitted layer partitioning; architecture and validation rules remain fixed.
+
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: tested split F.Cu/B.Cu source
+fanout on the isolated native USB3 fixture. The variant was rejected because
+its B.Cu source trunk collided with selector-side continuation copper. This
+narrows the route defect to corridor partitioning; no architecture or rule
+change was made.

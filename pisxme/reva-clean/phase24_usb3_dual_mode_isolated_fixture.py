@@ -61,8 +61,11 @@ def main():
     for name, j7n, u12n in source:
         n = net(b, name); a = pos(pad(b, "J7", j7n)); z = pos(pad(b, "U12", u12n))
         own(pad(b, "U12", u12n), n)
-        x0 = 76.0 + (int(j7n) - 128) / 4.0
-        path(b, n, [a, V(x0, pcbnew.ToMM(a.y)), V(x0, lanes[j7n])], F)
+        x0 = {"128": 74.0, "130": 78.0, "140": 82.0, "142": 86.0}[j7n]
+        src_layer = F if j7n in ("128", "130") else B
+        path(b, n, [a, V(x0, pcbnew.ToMM(a.y))], F)
+        via(b, n, x0, pcbnew.ToMM(a.y))
+        path(b, n, [V(x0, pcbnew.ToMM(a.y)), V(x0, lanes[j7n])], src_layer)
         via(b, n, x0, lanes[j7n]); via(b, n, 160.0, lanes[j7n])
         path(b, n, [V(x0, lanes[j7n]), V(160.0, lanes[j7n])], B)
         # U12 pins 11/12/15/16 are on the package bottom edge.  Escape each

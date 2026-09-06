@@ -109,3 +109,9 @@ and reduced native DRC shorting findings to 17. Remaining crossings are
 localized to the CM5 source fanout, the final U12 dogbones, and the separate
 U11 selector-side pair fanouts. These are still route implementation defects;
 the next experiment will partition those corridors by permitted copper layer.
+
+The sixth iteration split RX/TX source fanout layers, but native DRC showed
+the B.Cu source trunk now colliding with the selector-side U11/U12
+continuation. It is rejected as a shared-corridor route implementation; the
+next fixture must reserve separate local corridors for source escape and
+selector continuation.
