@@ -1347,3 +1347,19 @@ and generator handling, not as evidence that the selected macro floorplan or
 Ethernet architecture is impossible. The next attempt must retain the
 official route topology while regenerating its source escape against native
 J7/U6/U9 pad fields; Phase 24 remains open.
+
+## ESD vertical-pad-field escape probe — 2026-09-05
+
+The next disposable probe oriented both local TPD4EUSB30 footprints at `0°`
+and remapped only the symmetric protection channels so each four-channel
+group presents a vertical monotonic order. This preserved the selected
+Ethernet package/topology and changed no schematic net identity. Native
+refilled DRC still reports `288` violations and `438` unconnected items,
+including real Ethernet crossings and shorts at the converging package
+entrances.
+
+This is again `ROUTE_IMPLEMENTATION_FAILURE`, not
+`MACRO-PLACEMENT_FAILURE`: monotonic endpoint order alone does not provide
+the required pad-field clearance. The next valid class must add a wider
+staging corridor and controlled split-layer transitions outside the J7/ESD
+fields, or make a small Ethernet-local translation to create that corridor.
