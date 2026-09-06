@@ -54,6 +54,10 @@ def audit(path: Path):
         "U3": "MIC2545A-1YM",
         "U12": "MIC2545A-2YM-TR",
         "L5": "1uH",
+        "L6": "10mΩ ±25%",
+        "L7": "10mΩ ±25%",
+        "C10": "16pF",
+        "C17": "16pF",
         "R17": "12k",
         "R15": "76.8",
         "R16": "76.8",
@@ -99,9 +103,21 @@ def audit(path: Path):
         "/SPI_SO": (("U2", "23"), ("CN3", "2")),
         "/SPI_WP": (("U2", "21"), ("CN3", "3")),
         "/SPI_HD": (("U2", "22"), ("CN3", "7")),
-        ("Net-(U2-RSET)" if "Net-(U2-RSET)" in nets else "Net-(U2-RSET)"): (("U2", "51"), ("R17", "1")),
-        ("Net-(U2-RST_INPIN/NC)" if "Net-(U2-RST_INPIN/NC)" in nets else "Net-(U2-RST_INPIN/NC)"): (("U2", "3"), ("R12", "1")),
-        ("Net-(U2-SWR_5TO1_OUT)" if "Net-(U2-SWR_5TO1_OUT)" in nets else "Net-(U2-SWR_5TO1_OUT)"): (("U2", "16"), ("L5", "2")),
+        ("Net-(U2-RSET)"): (("U2", "51"), ("R17", "1")),
+        ("Net-(U2-RST_INPIN/NC)"): (("U2", "3"), ("R12", "1")),
+        ("Net-(U2-SWR_5TO1_OUT)"): (("U2", "16"), ("L5", "2")),
+    }.items():
+        for ref, pin in endpoints:
+            has(net, ref, pin)
+
+    # Assert the supply partition and switched SSD rails described in the
+    # extraction report, while keeping their design authority explicitly WIP.
+    for net, endpoints in {
+        "/+1V1_local": (("U2", "11"), ("U2", "2"), ("U2", "25")),
+        "/+3V3_local": (("U2", "1"), ("U2", "20"), ("U2", "34"), ("U2", "39"), ("U2", "52")),
+        "/+3V3_SSD": (("U3", "6"), ("U3", "8")),
+        "/+5V_local": (("U2", "17"), ("U2", "33"), ("U12", "6"), ("U12", "8")),
+        "/ISOLATEB": (("U3", "1"),),
     }.items():
         for ref, pin in endpoints:
             has(net, ref, pin)
@@ -143,6 +159,20 @@ def main():
                 print("PASS negative control: mutated RTL9210B component identity fails")
             else:
                 print("FAIL negative control did not fail")
+                return 1
+        bad_net = text.replace('name="/PDET"', 'name="/REMOVED_PDET"', 1)
+        if bad_net == text:
+            print("FAIL negative control could not mutate PEDET net")
+            return 1
+        with tempfile.NamedTemporaryFile("w", suffix=".xml") as fh:
+            fh.write(bad_net)
+            fh.flush()
+            try:
+                audit(Path(fh.name))
+            except AssertionError:
+                print("PASS negative control: mutated PEDET net fails")
+            else:
+                print("FAIL PEDET-net negative control did not fail")
                 return 1
     return 0
 

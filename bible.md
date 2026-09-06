@@ -4785,3 +4785,8 @@ validation remain open.
  standalone Path-B fixture gates but does not promote community values,
  land-pattern metadata, M-key sideband behavior, SSD power/inrush, or
  firmware provisioning to production authority.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: strengthened the RTL9210B
+ corroborating audit to assert crystal values, controller rail endpoints,
+ switched-rail endpoints, and a second PEDET-net negative control. The audit
+ remains evidence-only; no Path-B production CAD or Path-A fallback work was
+ changed.
