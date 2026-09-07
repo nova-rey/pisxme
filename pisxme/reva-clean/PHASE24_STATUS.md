@@ -125,6 +125,13 @@ non-signal isolated-copper/silkscreen warnings / 27 opens with no new signal
 violations. V58 is rejected for using the C3-adjacent launch. The remaining
 RTL_1V1 U1 edge groups are still open.
 
+V60 attempted a complete RTL_1V1 perimeter collector and is rejected at 35
+native violations / 20 opens. The candidate crossed the existing XTAL_IN/
+XTAL_OUT and RSET fields, entered the SPICS source transition, and placed a
+left-edge via too close to the 3V3 escape. This is a route implementation
+failure, not a supply-rail authority decision. V59 remains the only promoted
+1V1 sub-primitive; the remaining edge groups require separate corridors.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

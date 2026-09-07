@@ -103,6 +103,12 @@ reports 5 non-signal isolated-copper/silkscreen warnings / 27 intended opens
 and no new signal violations. V59 is promoted only as the U1.16/C4.1
 sub-primitive; the other RTL_1V1 pad groups remain unfinished.
 
+V60 is rejected at 35 native findings / 20 opens. Its full perimeter collector
+crossed retained XTAL_IN/XTAL_OUT/RSET and SPI fields and violated the local
+3V3 clearance at a left-edge via. Keep it as negative evidence only; V59 is
+the current promoted U1.16/C4.1 sub-primitive, and the remaining 1V1 groups
+must be allocated in separate native corridors.
+
 V57 completes the RTL_5V disposable rail primitive. Its U1.33-to-U1.17
 F.Cu escape passes above the native SPI source endpoints, then uses the
 SPI-clear B.Cu dogleg and a right-side C5.1 launch. Native DRC reports 5
