@@ -1,5 +1,17 @@
 # RTL9210B support-fixture route experiments — 2026-09-07
 
+## V76–V78 U1.40 edge-group trials — rejected
+
+V76 placed the U1.40 RTL_1V1 transition at (92.8,68.8), where the via
+shorted the retained RTL_3V3 left escape; native DRC reported 9 violations /
+24 opens. V77 moved the transition to (90.8,68.8), but its B.Cu collector
+crossed the retained RTL_3V3 diagonal and still shorted its via; native DRC
+reported 8 violations / 24 opens. V78 tried an upper-perimeter escape and is
+rejected at 14 violations / 24 opens for RTL_3V3/SPICLK crossings and
+clearance into adjacent U1 pads. Preserve all three as negative evidence.
+They reject these route allocations only; V75 remains the promoted partial
+RTL_1V1 basis and U1.40 remains open.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It

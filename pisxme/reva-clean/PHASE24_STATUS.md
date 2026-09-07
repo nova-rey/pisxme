@@ -2,6 +2,18 @@
 
 ## Authoritative current state — 2026-09-07
 
+V76 and V77 are rejected U1.40 RTL_1V1 edge-group trials from the promoted
+V75 basis. V76 placed the transition at (92.8,68.8) and directly shorted the
+RTL_3V3 left escape; native DRC reported 9 violations / 24 opens. V77 moved
+the transition farther left to (90.8,68.8), but its B.Cu collector crossed
+the retained RTL_3V3 diagonal and still shorted the RTL_3V3 via; native DRC
+reported 8 violations / 24 opens. V78 tested an upper-perimeter transition
+for U1.40 and is rejected at 14 violations / 24 opens: the F.Cu departure
+crosses the RTL_3V3 field and adjacent U1 pads, while the B.Cu span collides
+with SPICLK/RTL_3V3. These are local route-implementation failures, not a
+Path-B electrical decision. V75 remains the promoted 1V1 sub-primitive;
+U1.40 and the remaining 1V1 groups are open.
+
 ### RTL9210B source-field update — current
 
 V26, V27, V28, V29, and V30 are rejected disposable source-field route
