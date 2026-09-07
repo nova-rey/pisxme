@@ -79,6 +79,13 @@ with existing B.Cu source tails. The corrected U2 pad map itself is valid;
 this append-style route is rejected, and the next trial must regenerate the
 complete five-net branch together.
 
+The fully regenerated V3 branch
+`PHASE24_RTL9210B_FULL_REGENERATED_SPI_V3.kicad_pcb` removed the lower
+SPISO/SPICS B.Cu source tails and routed those nets directly on F.Cu. Native
+KiCad reports 8 violations / 40 opens: SPICS crosses the regenerated source
+dogbones and SPICLK/SPISO3 still conflict on the upper B.Cu departure. The
+class is rejected; source and downstream channels must be planned together.
+
 The follow-up five-net probe changed the departure to straight outward
 segments before the staggered diagonals. Native KiCad improved to 17
 violations / 44 opens, but SPICLK and SPISO3 still short/collide at the

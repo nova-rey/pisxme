@@ -57,6 +57,15 @@ with the B.Cu source tails. The next implementation must regenerate the
 whole five-net branch in one pass; appending to the source-only probe is not
 valid evidence of placement failure.
 
+The fully regenerated V3 branch
+`PHASE24_RTL9210B_FULL_REGENERATED_SPI_V3` is rejected at 8 native
+violations / 40 opens. Removing the lower SPISO/SPICS B.Cu source tails
+caused the SPICS F.Cu corridor to cross the regenerated source dogbones,
+while SPICLK/SPISO3 still interact on the upper B.Cu departure. This
+confirms the five-net source and downstream layer/channel plan must be
+generated as one deliberately separated topology; neither Path A nor the
+production board was changed.
+
 The V3 source-transition spacing trial
 `PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V3` remains rejected at 10 native
 violations / 44 opens. Increasing the lower transition-row separation left

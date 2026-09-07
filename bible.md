@@ -5535,3 +5535,8 @@ two-layer SPI partition at 12 native violations / 39 opens. SPISO/SPICS
 crossed at the F.Cu handoff and SPICLK/SPISO3 conflicted with retained B.Cu
 source tails. The corrected U2 pad map is valid; the next trial must
 regenerate the complete five-net branch together.
+2026-09-07 — PiSXMe Phase 24 Path B: rejected fully regenerated SPI branch
+V3 at 8 native violations / 40 opens. Removing lower B.Cu tails caused the
+SPICS F.Cu corridor to cross source dogbones while SPICLK/SPISO3 still
+interacted on B.Cu. A new layer/channel topology is required; Path A and
+production CAD remain unchanged.
