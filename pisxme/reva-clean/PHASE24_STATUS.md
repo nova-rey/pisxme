@@ -20,8 +20,9 @@ V140 shifts the U1.34 departure left and raises the B.Cu handoff above the
 V139 SPISO3 via, but native DRC still reports three SPISO↔RTL_3V3 shorts and
 one crossing. Reject V140; U1.34 needs a new shared QFN source-field
 allocation rather than another blind endpoint tweak.
-current promoted disposable support basis is
-`PHASE24_RTL9210B_U136_RIGHT_ESCAPE_V102.kicad_pcb`. V97 moved
+The current promoted disposable RTL_5V/control basis is
+`PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
+CLKREQ/PEDET support evidence. V97 moved
 `XTAL_OUT` above the local support field and added U1.55; V98 and V99 are
 rejected crossing variants; V100 routes `RTL_1V1` around the left endpoint of
 the new XTAL_OUT span and restores the U1.55-to-existing-1V1 connectivity.

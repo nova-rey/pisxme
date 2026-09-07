@@ -5,8 +5,9 @@
 The JMS583 support network is already instantiated in the live authoritative
 storage schematic and in the disposable support candidates. Any earlier note
 in this record saying it still needs instantiation is historical/superseded,
-not a current TODO. The current Path-B disposable basis is V100 below; Path A
-and production CAD remain preserved.
+not a current TODO. The current promoted rail/control disposable basis is V137
+with V131/V122 support sub-primitives; V100 remains historical 1V1 evidence.
+Path A and production CAD remain preserved.
 
 ## V132–V137 RTL_5V completion trials
 
