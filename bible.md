@@ -4906,6 +4906,12 @@ validation remain open.
  and MSL 3. The listing is PCBA-only and exposes no reproducible stock/price/
  lead-time receipt, so procurement remains an explicit risk rather than a
  fabricated availability claim.
+2026-09-06 — PiSXMe Phase 24 Path A: tested three bounded SATA bridge-layer
+ assignment variants against the project-local U7 footprint. All eight native
+ endpoint assertions passed. The best variant reduced DRC to 11 but retained
+ three real copper crossings; other variants retained shorts or crossings.
+ Rejected all variants, restored the mono2 author, and preserved raw boards/
+ reports for the next obstacle-aware QFN escape attempt.
 2026-09-06 — PiSXMe Phase 24 RTL9210B Path B: added a hashed firmware and
  programming matrix separating enclosure updates, virgin-chip programming,
  PiSXMe configuration, recovery, and redistribution rights. Public binaries
