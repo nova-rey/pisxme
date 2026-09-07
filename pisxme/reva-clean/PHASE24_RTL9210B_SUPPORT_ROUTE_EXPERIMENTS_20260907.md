@@ -32,6 +32,12 @@ replacement for explicit rail access; native DRC reports five findings,
 including the inherited GND thermal warning. The zone shortcut is not
 promoted, and V35 remains the support/SPI baseline.
 
+V38 corrected the malformed C3/C4/C5 footprints using ordinary local
+SMD-coordinate CAD and introduced no DRC regression. V39 added a native
+RTL_5V route to corrected C5, but native DRC reports two real crossings with
+the retained RTL_3V3/SPI corridor. It is rejected as a route implementation;
+the next attempt must co-author the 3V3 and 5V fields.
+
 V37 added explicit rail pad-to-via dogbones and shaped B.Cu rail fields. It is
 rejected at 41 native violations / 34 opens because the via fanout enters the
 QFN SPI/source field and neighboring rail pads. The result is preserved as

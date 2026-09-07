@@ -43,6 +43,13 @@ malformed disposable support footprints. No production CAD or Path-A asset
 changed. The next rail candidate must use explicit native pad/via access and
 preserve the V35 SPI/support geometry.
 
+V38 normalized C3/C4/C5 to ordinary local-coordinate C_0603 footprints;
+native DRC remained at the V35 inherited baseline with no new violations.
+V39 added the RTL_5V branch against corrected C5, but is rejected at 7
+findings / 32 opens because its B.Cu handoff crosses the retained RTL_3V3
+trunk and SPISI transition. The corrected capacitor CAD is retained; the
+next candidate must jointly allocate the 3V3/5V rail corridors.
+
 Path B remains a disposable RTL9210B qualification path. The current best
 combined support baseline is `PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V8`
 plus the validated RTL_5V V9 rail primitive. V8 native support and SPI audits
