@@ -5096,3 +5096,11 @@ clearance output as stale fill state and kept production CAD unchanged.
  RTL9210B bring-up fixture's 56-open count as historical baseline evidence
  and pointed current-state prose to the SPI V7 plus GND-plane candidate with
  45 opens. No raw receipt was rewritten and no validation severity was changed.
+2026-09-07 — PiSXMe Phase 24 Path B: corrected the relocated R2/R3 control
+ support placement and regenerated its RTL_3V3 named-net bus, then preserved
+ three native PEDET/CLKREQ perimeter-route experiments. V1/V2/V3 reported
+ 6/34, 8/35, and 10/35 DRC-violation/unconnected-item counts and were
+ rejected as route/corridor implementations. The evidence does not reject
+ RTL9210B or Path A; production CAD remains unchanged and the next class must
+ regenerate the local control departures coherently rather than add more
+ detours to the mixed baseline.

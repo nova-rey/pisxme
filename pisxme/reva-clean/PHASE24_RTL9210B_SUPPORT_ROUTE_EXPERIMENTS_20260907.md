@@ -149,3 +149,33 @@ not close the class: their native results were respectively 8 violations /
 PEDET, CLKREQ_N, RTL_5V, and inherited support corridors. This coordinate-only
 class is rejected; further work must use a genuinely layer-separated source
 and endpoint departure.
+
+## Relocated R2/R3 control-island placement and perimeter routes
+
+The disposable placement `PHASE24_RTL9210B_CONTROL_SUPPORT_LOCAL.kicad_pcb`
+was corrected after an initial coordinate-frame error. Native inspection
+confirms R2 pad 1 at `(71,48)` and R3 pad 1 at `(74,48)`; the only baseline
+findings after relocation were stale RTL_3V3 tracks to the former positions.
+The 3V3 bus was regenerated from saved named nets before testing controls.
+
+Three new route classes were then tested and rejected without changing Path A
+or production CAD:
+
+* `PHASE24_RTL9210B_CONTROL_SUPPORT_LOCAL_V1.kicad_pcb`: 6 native DRC
+  violations / 34 unconnected items. PEDET/CLKREQ crossed the inherited
+  RTL_5V/RTL_1V1/RTL_3V3 corridors and CLKREQ approached REFCLK too closely.
+* `PHASE24_RTL9210B_CONTROL_SUPPORT_LOCAL_V2.kicad_pcb`: 8 violations / 35
+  unconnected items. The upper/lower layer split still crossed inherited rail
+  corridors and placed the CLKREQ via inside the PERST clearance field.
+* `PHASE24_RTL9210B_CONTROL_SUPPORT_LOCAL_V3.kicad_pcb`: 10 violations / 35
+  unconnected items. The lower-perimeter class collided with inherited
+  RESET/PERST and crystal/support geometry and produced a PEDET pad-field
+  interaction.
+
+These are valid native KiCad experiments, not synthetic graph results. They
+show that the current local placement plus inherited support escape does not
+yet provide a legal PEDET/CLKREQ corridor. They do not reject RTL9210B. The
+next authorized class is a coherent local control/support-island regeneration
+that includes RESET/PERST departures, rather than adding more perimeter
+detours to the current mixed baseline. The fixture remains isolated and Path
+A remains preserved.

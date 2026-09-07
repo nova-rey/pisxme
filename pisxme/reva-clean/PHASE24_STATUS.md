@@ -72,11 +72,14 @@ The corrected separate RESET_N/PERST_N route passes its endpoint audit and
 native DRC with 37 remaining opens. The first combined PEDET/CLKREQ trial is
 rejected at 8 DRC violations / 33 opens due to same-layer corridor crossings,
 two control-to-power interactions, and a J1 via clearance issue; it is not
-used as current fixture evidence. A follow-up V2 control arrangement reduced
-the PEDET/CLKREQ class to 3 crossings / 33 opens, but still crossed the
-inherited RTL_1V1 corridor; V3 changed that corridor and regressed to 5
-crossings / 33 opens. Both remain rejected route implementations. The clean
-RESET_N/PERST_N candidate remains the current control baseline.
+used as current fixture evidence. Follow-up V2/V3/V4/V5/V6 control routes
+remain rejected at 3/33, 5/33, 8/34, 3/34, and 4/33 respectively. The
+relocated R2/R3 placement is retained as a valid disposable placement
+experiment, but its V1/V2/V3 perimeter route candidates are also rejected at
+6/34, 8/35, and 10/35 native DRC violations/unconnected-item counts. Their
+failures are route-implementation/placement-corridor evidence, not a Path-B
+architecture rejection. The clean RESET_N/PERST_N candidate remains the
+current control baseline; PEDET/CLKREQ is the next open Path-B gate.
 
 Further control variants V4/V5/V6 were also rejected: V4 reports 8 DRC
 violations / 34 opens, V5 reports 3 / 34, and V6 reports 4 / 33. Their
