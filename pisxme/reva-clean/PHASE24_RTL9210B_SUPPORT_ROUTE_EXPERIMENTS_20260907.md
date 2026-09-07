@@ -113,6 +113,14 @@ Native KiCad reports 4 inherited findings / 33 unconnected items and no new
 signal violation. Saved-board connectivity passes U1.17, U1.33, and C5.1.
 This is a local rail primitive, not full support closure.
 
+## RTL_3V3 rail V10/V11 — rejected
+
+The V10 local 3V3 trunk reduced the fixture to 31 opens but produced real
+SPICLK/RTL_3V3 and XTAL_IN/RTL_3V3 shorts. V11 moved the source transitions
+but its lower B.Cu trunk crossed SPICS and the Y1 XTAL_IN launch, reporting
+12 native signal violations / 31 opens. Both are rejected route
+implementations; the next 3V3 trial must change corridor topology.
+
 `phase24_rtl9210b_support_v8_audit.py` records the same check as a reusable
 regression: all three V8 support nets pass from saved-board native
 connectivity, and removal of an XTAL_OUT track fails the audit.

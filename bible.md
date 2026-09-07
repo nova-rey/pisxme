@@ -5561,5 +5561,8 @@ RTL_5V rail probe V9 then connected U1.17/U1.33/C5.1 with no new signal DRC
 violation; native saved-board connectivity passed all three endpoints. The
 probe reduced unrelated fixture opens from 35 to 33 and remains a local rail
 primitive, not full Path-B closure.
+RTL_3V3 probes V10/V11 were rejected: V10 collided with SPICLK/XTAL_IN and
+V11 crossed SPICS and Y1 XTAL_IN, reaching 12 native signal violations / 31
+opens. The next 3V3 attempt must use a different corridor topology.
 Added a reusable saved-board V8 support audit; XTAL_IN/XTAL_OUT/RSET pass and
 the XTAL_OUT trace-removal negative control fails as required.

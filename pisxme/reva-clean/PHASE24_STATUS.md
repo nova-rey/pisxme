@@ -99,6 +99,12 @@ connectivity confirms all three RTL_5V endpoints. V9 is retained as a valid
 rail primitive while the remaining RTL_1V1/RTL_3V3/control and support joins
 remain open.
 
+RTL_3V3 probes V10/V11 are rejected route implementations. V10 collided
+with retained SPICLK/XTAL_IN escapes; V11 moved those transitions but its
+lower B.Cu trunk crossed SPICS and the Y1 XTAL_IN launch, reporting 12 native
+signal violations / 31 opens. The next 3V3 attempt must use a different
+corridor topology.
+
 `phase24_rtl9210b_support_v8_audit.py` now provides a reusable saved-board
 audit for the V8 support baseline. It derives XTAL_IN, XTAL_OUT, and RSET
 connectivity from native KiCad connectivity and passes the required
