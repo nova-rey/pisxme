@@ -4886,3 +4886,10 @@ validation remain open.
  assertions passed and the minimal native fixture improved to 12 DRC
  findings. Preserved the candidate for the next focused TX-escape and
  socket-clearance repair.
+2026-09-06 — PiSXMe Phase 24 RTL9210B Path B: re-ran the isolated
+ qualification/audit suite, including the native netlist and intentional
+ negative control. Path B remains a serious parallel candidate with the
+ corrected M-key contact mapping and corroborated support network, but is not
+ promoted to production CAD. The live decision remains CONTINUE BOTH pending
+ one traceable virgin-chip programming/mode-bring-up experiment and a current
+ Realtek application-circuit package. Path A remains preserved.

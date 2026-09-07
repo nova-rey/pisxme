@@ -203,3 +203,40 @@ its advertised files are treated as retrieved or authoritative.
 - [PCI-SIG specifications](https://pcisig.com/specifications), governing M.2 specification index; the detailed standard remains licensed.
 - [bensuperpc/rtl9210](https://github.com/bensuperpc/rtl9210), firmware/configuration and recovery evidence.
 - [damnnfo/rtl9210b-firmware](https://github.com/damnnfo/rtl9210b-firmware), firmware/config artifacts.
+
+## Live requalification checkpoint — 2026-09-06
+
+The Path-B evidence package was re-run against the current checkout before
+any production-CAD change:
+
+```text
+phase24_rtl9210b_authority_audit.py                         PASS
+phase24_rtl9210b_corroborating_support_audit.py              PASS
+phase24_rtl9210b_m2_mapping_audit.py                         PASS
+phase24_rtl9210b_native_netlist_audit.py                    PASS
+phase24_rtl9210b_native_netlist_audit.py --negative-control  PASS (fails as intended)
+phase24_rtl9210b_wip_hierarchy_conflict_audit.py             PASS
+```
+
+The retained native straight-line RTL9210B PCB fixture remains rejected by
+its raw KiCad report (`102` DRC violations, including crossings and a short).
+That fixture is incomplete and is classified as route-implementation failure;
+it is not evidence against the controller architecture. No Path-A source or
+production PCB was changed.
+
+The requested apples-to-apples decision is therefore still **CONTINUE BOTH**.
+Path B materially reduces the high-speed IC count and removes both external
+selectors, but it has not yet closed the two productization gates that matter:
+traceable virgin-part programming/configuration and authorized firmware
+provenance. The current JLC/LCSC listing is an assembly/procurement lead, not
+an independently verified stock-depth or quantity-1 quote; JLC itself states
+that live quantity and price appear during the order/product-detail flow
+([JLC parts guidance](https://jlcpcb.com/help/article/searching-for-products)).
+
+The next narrowly defined experiment is a standalone Path-B bring-up fixture
+with the corrected SMD QFN-68 land pattern, complete support circuit, exposed
+SPI-flash/programming access, and the corrected M-key lane mapping. It must be
+held outside production CAD until a traceable RTL9210B-CG lot can be
+programmed and verified in both SATA and NVMe modes. This preserves Path A as
+the fallback while advancing the candidate on the evidence that can actually
+change the decision.
