@@ -105,7 +105,7 @@ orientation before selecting a separate collector corridor.
 V52 normalizes the native R2/R3 footprint frames and derives pad-2 escapes
 from the saved pad/net identities. The taps are collected on a B.Cu corridor
 that approaches the existing U1.20/C3 trunk from the SPI-clear side. Native
-DRC is 5 inherited isolated-copper/silkscreen warnings / 28 opens, and the
+DRC is 5 non-signal isolated-copper/silkscreen warnings / 28 opens, and the
 saved-board connectivity audit joins all RTL_3V3 pads across U1, U2, R2, R3,
 and C3. V52 is promoted as the current disposable RTL_3V3 rail basis; the
 remaining Path-B support rails and controls are still open.
