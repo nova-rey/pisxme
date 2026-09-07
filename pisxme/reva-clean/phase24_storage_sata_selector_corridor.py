@@ -59,10 +59,10 @@ for k,(r,bridge,sata,upin) in caps.items():
 
 # Capacitor pad 1 to U13 Port B. Each path changes layer away from the pads.
 bpaths={
- 'TXP':(F,[(103.5,116),(110,116),(110,142)],(177.5,142)),
- 'TXN':(B,[(103.5,132),(112,132),(112,140)],(177.5,140)),
- 'RXP':(F,[(103.5,120),(108,120),(108,154)],(177.5,154)),
- 'RXN':(B,[(103.5,128),(114,128),(114,156)],(177.5,156)),}
+ 'TXP':(B,[(104,116),(140,108),(184,108),(184,145.8)],(184,145.8)),
+ 'TXN':(B,[(104,132),(140,104),(185,104),(185,145.2)],(185,145.2)),
+ 'RXP':(B,[(104,120),(140,156),(184,156),(184,154)],(184,154)),
+ 'RXN':(B,[(104,128),(140,160),(185,160),(185,155)],(185,155)),}
 for k,(r,bridge,sata,upin) in caps.items():
  n=net(b,sata);l,pts,vp=bpaths[k];pts=[pinpos(b,r,'1')]+pts[1:]
  pts=pts+[vp]
@@ -76,13 +76,13 @@ for k,(r,bridge,sata,upin) in caps.items():
 # deliberately kept on B.Cu until connector-side dogbones to avoid a pad-field
 # crossing in this first selector-inclusive fixture.
 apaths={
- 'TXP':('2','49',B,[(178.5,147.2),(185,147.2),(205,138),(217,138),(222.75,157.5)]),
- 'TXN':('3','47',B,[(178.5,147.6),(186,147.6),(204,136),(216,136),(222.25,157.5)]),
- 'RXN':('6','41',F,[(178.5,148.8),(190,150),(205,152),(220.75,159.725)]),
- 'RXP':('7','43',F,[(178.5,149.2),(190,151),(206,153),(221.25,159.725)]),}
+ 'TXP':('2','49',B,[(178.5,147.2),(177.3,146.2),(176.2,145.6),(196,130),(220,130),(220,157)]),
+ 'TXN':('3','47',F,[(178.5,147.6),(177.3,148.8),(176.2,149.8),(196,134),(218,134),(218,157)]),
+ 'RXN':('6','41',B,[(178.5,148.8),(177.3,150.2),(176.2,151.0),(196,162),(216,162),(216,157)]),
+ 'RXP':('7','43',F,[(178.5,149.2),(177.3,150.8),(176.2,152.0),(196,158),(214,157)]),}
 for k,(up,jp,l,pts) in apaths.items():
  n=net(b, {'TXP':'M2_SATA_A_P_PCIE_TXP0','TXN':'M2_SATA_A_N_PCIE_TXN0','RXN':'M2_SATA_B_P_PCIE_RXN0','RXP':'M2_SATA_B_N_PCIE_RXP0'}[k])
  if l==B:
-  via(b,n,pts[0]);path(b,n,pts,B);via(b,n,pts[-1]);path(b,n,[pts[-1],pinpos(b,'J3',jp)],F)
- else:path(b,n,[pinpos(b,'U13',up)]+pts[1:],F)
+  path(b,n,pts[:3],F);via(b,n,pts[2]);path(b,n,pts[2:],B);via(b,n,pts[-1]);path(b,n,[pts[-1],pinpos(b,'J3',jp)],F)
+ else:path(b,n,[pinpos(b,'U13',up)]+pts[1:]+[pinpos(b,'J3',jp)],F)
 b.BuildListOfNets();b.Save(str(OUT));print(OUT)

@@ -20,6 +20,14 @@ The corrected PCB generator also assigns U13's exposed thermal pad 43 to
 former no-net pad artifact into a real routing constraint; the next disposable
 route must clear that pad rather than crossing it.
 
+The current regenerated V3 selector fixture does clear the source/net
+authority issue and passes all twelve native endpoint assertions, but native
+DRC remains open at 133 findings / 52 opens, including two real shorts and ten
+crossings. The two shorts are localized to the U13 thermal-pad TXN corridor
+and an M.2 final launch interaction. See
+`PHASE24_PATHA_SATA_SELECTOR_ROUTE_V3_20260907.md`; this is route
+implementation evidence, not a production-board pass.
+
 ## Current checkpoint — 2026-09-06
 
 Latest focused routing-generator checkpoint: `5184b6f`. The deduplication

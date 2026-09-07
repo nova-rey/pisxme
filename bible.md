@@ -4983,3 +4983,9 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  generated PCB metadata, matching TI's package requirement; it is not a
  schematic signal pin. Routes crossing the thermal pad are now treated as
  real ground shorts.
+2026-09-07 — PiSXMe Phase 24 Path A: regenerated the selector-inclusive SATA
+ fixture from corrected source/net authority and grounded U13 pad 43. V3
+ passed all twelve native selector endpoint assertions; native DRC remained
+ open at 133 findings / 52 opens with two localized shorts and ten crossings.
+ Preserved the V3 board/report as rejected route evidence and kept production
+ CAD unchanged.
