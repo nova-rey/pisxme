@@ -15,6 +15,14 @@ are expected because the relocated branch is intentionally unrouted. This is
 now a clean placement-only candidate, not a completion claim. Production CAD
 and Path A remain unchanged.
 
+The first reroute probe from the relocated pads,
+`PHASE24_RTL9210B_SUPPORT_BRANCH_RELOCATED_SPI_V1`, is rejected as a route
+implementation: native DRC reports 46 violations / 28 opens, dominated by
+over-tight source-side SPI vias, corridor crossings, and U2 pad-field
+interactions. It does not invalidate the relocation. The next route writer
+will reuse the known-clean V6 source escape pattern and extend its corridors
+to the relocated U2.
+
 The original isolated RTL9210B-CG bring-up fixture remains archived at
 `PHASE24_RTL9210B_BRINGUP_FIXTURE.kicad_pcb`. It captures the corrected
 QFN-68/M-key lane mapping, PEDET/sideband ownership, support-net boundary,
