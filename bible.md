@@ -5159,3 +5159,7 @@ reported 80 violations / 33 unconnected items, with no shorts and one RX
 source crossing. V6 changed the RX source corridors but regressed to 83 / 33
 and introduced an M1 mounting-hole interaction. V5 is the best isolated
 baseline; both remain rejected and unintegrated.
+2026-09-07 — PiSXMe Phase 24 Path A: tested V7/V8 RXP B.Cu alternatives.
+V7 reported 84 violations / 34 unconnected with an M1 short and one
+crossing. V8 routed below/outboard of M1 and reported 82 / 34 with no shorts
+and one crossing. Both were rejected; V5 remains the best isolated baseline.

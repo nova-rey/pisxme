@@ -4498,6 +4498,19 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-A isolated M.2 lane-0 launches V7/V8 — 2026-09-07
+
+V7 moved RXP to a lower B.Cu corridor. Native DRC reported 84 violations /
+34 unconnected items, with one M1 mounting-hole short and one source crossing.
+V8 routed that B.Cu corridor below/outboard of M1; native DRC reported 82
+violations / 34 unconnected items, with no shorts but one source crossing.
+Neither is a pass. V5 remains the best isolated baseline at 80 / 33 with no
+shorts; V7/V8 are preserved as alternative layer/clearance evidence.
+
+`PATHA_M2_LANE0_V7 = REJECTED`
+`PATHA_M2_LANE0_V8 = REJECTED`
+`PHASE24 = OPEN`
+
 ## Path-A isolated M.2 lane-0 launches V5/V6 — 2026-09-07
 
 V5 (`PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V5.kicad_pcb`) used orthogonal

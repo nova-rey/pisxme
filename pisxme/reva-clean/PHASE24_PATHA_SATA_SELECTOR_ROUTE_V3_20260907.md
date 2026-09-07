@@ -76,3 +76,10 @@ cross in the target-via field. The experiment remains useful evidence that
 the M1 detour alone is insufficient. It is rejected as route implementation;
 the next candidate must reorder and move the connector-side target vias and
 final dogbones together.
+
+## V7/V8 RXP layer alternatives — rejected
+
+V7 moved RXP to a lower B.Cu corridor and reported 84 violations / 34
+unconnected items, including an M1 short and one crossing. V8 routed below
+and outboard of M1 and reported 82 / 34, with no shorts and one crossing.
+Both are rejected; V5 remains the preferred isolated baseline.
