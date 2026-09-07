@@ -13,6 +13,11 @@ V101's first U1.36 handoff shorted the retained RTL_3V3 field and is rejected;
 V102 routes U1.36 around the right side of that field and restores the
 remaining 1V1 pad-group join. Native DRC has no `shorting_items` or
 `tracks_crossing` class for V102.
+V103/V104 then tested the next RTL_3V3 U1.34 handoff. V103 did not reach the
+existing-layer endpoint and left U1.34 isolated; V104 reached the native
+3V3 via and connected U1.34, but native DRC reported two track crossings.
+Both are rejected route-allocation trials; the current promoted basis remains
+V102 and RTL_3V3 U1.34 is still open.
 Native saved-board inspection joins U1.55 with U1.16/U1.25/U1.40/U1.50/
 U1.60/U1.63/C4.1, and a centerline scan finds no different-net track crossing
 for the new escape. The disposable fixture still has 19 intentional/open

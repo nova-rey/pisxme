@@ -114,6 +114,15 @@ V102 is promoted only as the disposable 1V1 edge-group basis; remaining
 RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
 remain open.
 
+## V103/V104 U1.34 RTL_3V3 handoff trials — rejected
+
+V103 attempted a left dogbone and B.Cu diagonal but targeted the wrong layer
+endpoint, so native connectivity left U1.34 isolated. V104 corrected the
+endpoint to the existing RTL_3V3 via at (100.4,60.8) and native connectivity
+joined U1.34 to C3/R2/R3/U1.20, but native DRC reported two real track
+crossings. Both are retained as route-authoring evidence; V102 remains the
+promoted disposable basis and U1.34 remains open.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It
