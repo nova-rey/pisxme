@@ -1647,3 +1647,11 @@ ISOLATEB pad. It removed the pad-field short but crossed the existing B.Cu
 REFCLK_N corridor. V260 moved the B.Cu dogleg farther south; native DRC still
 reported the REFCLK_N crossing. Reject both as local route implementations;
 CLKREQ_N and REFCLK_N departures must be co-authored as one QFN side-field.
+
+## V261 CLKREQ east-side re-escape — retained, not promoted
+
+V261 routes U1.13 CLKREQ_N east on F.Cu, then drops at x=103.4 mm and joins
+the existing B.Cu continuation from a south dogleg. Native DRC reports 633
+findings / 15 unconnected items with no `shorting_items` or `tracks_crossing`
+class. This is the best current CLKREQ local geometry, but the remaining
+rail, clock, support, and high-speed connectivity failures prevent promotion.

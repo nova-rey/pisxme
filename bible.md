@@ -5816,3 +5816,7 @@ CAD remain unchanged.
 removed the ISOLATEB pad-field short but crossed REFCLK_N; V260 retained that
 crossing after a south dogleg. The next trial must co-author the neighboring
 QFN CLKREQ/REFCLK/sideband field; Path A and production CAD remain unchanged.
+2026-09-07: Recorded RTL9210B V261 east-side CLKREQ_N re-escape. Native DRC
+reported 633 findings / 15 opens with no shorting or track-crossing class.
+V261 is retained as the current sideband geometry, not promoted; the complete
+QFN rail/clock/support field remains open and Path A/production CAD are unchanged.

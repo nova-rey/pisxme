@@ -6766,3 +6766,6 @@ V259/V260 are rejected CLKREQ_N re-escapes: V259 trades the ISOLATEB short
 for a REFCLK_N crossing, and V260 retains that crossing after a south dogleg.
 The next experiment is a coordinated CLKREQ/REFCLK/sideband field, not another
 single-net departure.
+V261 is retained as the best current CLKREQ_N local geometry: native DRC has
+no shorting or track-crossing class (633 findings / 15 opens), but the full
+RTL9210B QFN support field remains incomplete and unpromoted.
