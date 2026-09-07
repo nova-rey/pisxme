@@ -285,3 +285,14 @@ connectivity data and passes PEDET, CLKREQ_N, PERST_N, RESET_N, and all four
 U1↔U2 SPI endpoint assertions on V12. Its negative control removes PEDET
 copper and fails as required. Test pads remain deliberately outside the
 assertion set until a coordinated access route is authored.
+
+## RTL_5V pad-17 escape V1 — rejected
+
+Starting from the preferred RTL_1V1 collector V2, a direct F.Cu side escape
+was attempted for U1 RTL_5V pad 17 into the existing pad-33/C5 rail bus.
+Native connectivity gained one real rail endpoint and reduced unconnected
+items from 30 to 29, but native DRC reported 8 violations: the escape
+crossed/shorted the SPISO, SPISI, and SPICLK field and retained the inherited
+PEDET/RTL_3V3 and RTL_1V1/CLKREQ conflicts. This is rejected as a route
+implementation; the V2 collector remains the current disposable baseline and
+production copper is unchanged.

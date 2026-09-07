@@ -512,6 +512,10 @@ Recorded seeded-exit search result; inherited SATA launch still blocks downstrea
 - The J10-side route stays below the connector contact row and avoids the
   existing FAST-B USB3 DM/RX geometry. PCIe and accepted high-speed routes are
 unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested RTL_5V pad-17 escape V1. Native
+connectivity gained one rail endpoint and reduced opens 30 to 29, but native
+DRC reported 8 violations from SPI/control-field crossings and shorts.
+Rejected as a route implementation; production CAD unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: preserved PEDET/CLKREQ control-route
  variants V2 and V3. V2 reduced the local class to 3 crossings / 33 opens;
  V3 regressed to 5 crossings / 33 opens after moving the inherited RTL_1V1

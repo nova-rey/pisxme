@@ -1,0 +1,164 @@
+** Drc report for PHASE24_RTL9210B_5V_PAD17_V1.kicad_pcb **
+** Created on 2026-09-07T02:31:20 **
+** Report includes: Errors, Warnings **
+
+** Found 8 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(85.5000 mm, 62.0000 mm): Track [SPISO] on F.Cu, length 1.5000 mm
+    @(87.0000 mm, 65.9500 mm): Track [RTL_5V] on F.Cu, length 8.9500 mm
+[shorting_items]: Items shorting two nets (nets SPISO and RTL_5V)
+    Local override; error
+    @(87.0000 mm, 62.0000 mm): Via [SPISO] on F.Cu - B.Cu
+    @(87.0000 mm, 65.9500 mm): Track [RTL_5V] on F.Cu, length 8.9500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(68.0000 mm, 42.5000 mm): Track [PEDET] on F.Cu, length 76.0000 mm
+    @(93.2000 mm, 58.0000 mm): Track [RTL_3V3] on F.Cu, length 16.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(85.5000 mm, 65.2000 mm): Track [SPISI] on F.Cu, length 4.8000 mm
+    @(83.2000 mm, 65.9500 mm): Track [RTL_5V] on F.Cu, length 3.8000 mm
+[shorting_items]: Items shorting two nets (nets RTL_1V1 and CLKREQ_N)
+    Local override; error
+    @(81.2000 mm, 56.5000 mm): Via [RTL_1V1] on F.Cu - B.Cu
+    @(81.6000 mm, 69.5000 mm): Track [CLKREQ_N] on B.Cu, length 23.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(87.0000 mm, 65.9500 mm): Track [RTL_5V] on F.Cu, length 8.9500 mm
+    @(83.9500 mm, 64.8000 mm): Track [SPICLK] on F.Cu, length 5.0500 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(93.2000 mm, 58.0000 mm): Track [RTL_3V3] on F.Cu, length 16.0000 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(99.2000 mm, 58.0000 mm): Track [RTL_3V3] on F.Cu, length 16.0000 mm
+
+** Found 29 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(85.0000 mm, 62.8000 mm): Track [SPICS] on F.Cu, length 1.8000 mm
+    @(88.0000 mm, 78.0000 mm): Pad 1 [SPICS] of TP1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.0000 mm, 78.0000 mm): Pad 1 [SPISO] of TP4 on F.Cu
+    @(85.5000 mm, 62.0000 mm): Track [SPISO] on F.Cu, length 1.5000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(82.8000 mm, 65.9500 mm): Track [RTL_1V1] on F.Cu, length 1.5500 mm
+    @(83.9500 mm, 62.4000 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(96.0000 mm, 78.0000 mm): Pad 1 [SPISI] of TP3 on F.Cu
+    @(85.5000 mm, 70.0000 mm): Track [SPISI] on F.Cu, length 10.1000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.0000 mm, 78.0000 mm): Pad 1 [SPICLK] of TP2 on F.Cu
+    @(89.0000 mm, 64.8000 mm): Track [SPICLK] on B.Cu, length 12.8000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.0500 mm, 58.8000 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
+    @(81.6000 mm, 58.0500 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(83.9500 mm, 58.8000 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(81.6000 mm, 58.0500 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(83.9500 mm, 58.8000 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(83.9500 mm, 64.4000 mm): Pad 20 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(83.9500 mm, 58.8000 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(93.2000 mm, 58.0000 mm): Track [RTL_3V3] on F.Cu, length 16.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.2000 mm, 58.0000 mm): Track [RTL_3V3] on F.Cu, length 16.0000 mm
+    @(93.2000 mm, 58.0000 mm): Track [RTL_3V3] on F.Cu, length 16.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(82.0000 mm, 42.0000 mm): Track [RTL_3V3] on B.Cu, length 18.4000 mm
+    @(99.2000 mm, 58.0000 mm): Track [RTL_3V3] on F.Cu, length 16.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.0500 mm, 64.4000 mm): Pad 66 [GND] of U1 on F.Cu
+    @(80.0000 mm, 62.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+    @(79.2000 mm, 58.0500 mm): Pad 45 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(80.0000 mm, 62.0000 mm): Pad 69 [GND] of U1 on F.Cu
+    @(79.2000 mm, 58.0500 mm): Pad 45 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(69.4000 mm, 51.0000 mm): Pad 1 [RSET] of R1 on F.Cu
+    @(76.8000 mm, 58.0500 mm): Pad 51 [RSET] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(69.3000 mm, 55.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu
+    @(66.4000 mm, 55.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.0500 mm, 59.2000 mm): Pad 53 [XTAL_IN] of U1 on F.Cu
+    @(69.3000 mm, 55.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(72.4000 mm, 55.0000 mm): Pad 1 [XTAL_OUT] of C2 on F.Cu
+    @(70.7000 mm, 55.0000 mm): Pad 2 [XTAL_OUT] of Y1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.0500 mm, 59.6000 mm): Pad 54 [XTAL_OUT] of U1 on F.Cu
+    @(72.4000 mm, 55.0000 mm): Pad 1 [XTAL_OUT] of C2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.0500 mm, 62.4000 mm): Pad 61 [REFCLK_P] of U1 on F.Cu
+    @(137.2500 mm, 62.7250 mm): Pad 55 [REFCLK_P] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.0500 mm, 62.8000 mm): Pad 62 [REFCLK_N] of U1 on F.Cu
+    @(136.7500 mm, 62.7250 mm): Pad 53 [REFCLK_N] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.0500 mm, 63.6000 mm): Pad 64 [LANE0_RXP] of U1 on F.Cu
+    @(134.2500 mm, 62.7250 mm): Pad 43 [LANE0_RXP] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.0500 mm, 64.0000 mm): Pad 65 [LANE0_RXN] of U1 on F.Cu
+    @(133.7500 mm, 62.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.0500 mm, 64.8000 mm): Pad 67 [LANE0_TXN] of U1 on F.Cu
+    @(135.2500 mm, 62.7250 mm): Pad 47 [LANE0_TXN] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(76.0500 mm, 65.2000 mm): Pad 68 [LANE0_TXP] of U1 on F.Cu
+    @(135.7500 mm, 62.7250 mm): Pad 49 [LANE0_TXP] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(114.7500 mm, 62.7250 mm): Pad 2 [SSD_3V3] of J1 on F.Cu
+    @(115.2500 mm, 62.7250 mm): Pad 4 [SSD_3V3] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(115.2500 mm, 62.7250 mm): Pad 4 [SSD_3V3] of J1 on F.Cu
+    @(115.7500 mm, 62.7250 mm): Pad 6 [SSD_3V3] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(115.7500 mm, 62.7250 mm): Pad 6 [SSD_3V3] of J1 on F.Cu
+    @(116.2500 mm, 62.7250 mm): Pad 8 [SSD_3V3] of J1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

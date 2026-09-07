@@ -4498,6 +4498,18 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-B RTL_5V pad-17 escape V1 — 2026-09-07
+
+V1 attempted a coherent F.Cu side escape from U1 RTL_5V pad 17 to the
+existing pad-33/C5 bus on the V2 rail baseline. It connected one required
+rail endpoint and reduced the open count from 30 to 29, but native DRC
+reported 8 violations from SPISO, SPISI, SPICLK, and the inherited PEDET
+field. It is rejected as a route implementation; no power topology or
+production CAD changed.
+
+`PATHB_RTL_5V_PAD17_V1 = REJECTED`
+`PHASE24 = OPEN`
+
 ## Path-B RTL_3V3 QFN zone V1 — 2026-09-07
 
 V1 tested a local F.Cu RTL_3V3 power zone around U1 using the V2 RTL_1V1
