@@ -123,6 +123,13 @@ joined U1.34 to C3/R2/R3/U1.20, but native DRC reported two real track
 crossings. Both are retained as route-authoring evidence; V102 remains the
 promoted disposable basis and U1.34 remains open.
 
+V105 kept the handoff above the SPI channels but its B.Cu vertical crossed
+SPICLK and SPISI. V106 keeps the U1.34 departure on F.Cu until clear of those
+channels, then transitions to the existing 3V3 via field. Native DRC reports
+no `shorting_items` or `tracks_crossing`, and saved-board connectivity joins
+U1.34 to the existing C3/R2/R3/U1.20 group. Promote V106 only as the
+disposable U1.34 edge-group basis; full Path-B support remains open.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It

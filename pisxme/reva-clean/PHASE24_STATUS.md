@@ -18,6 +18,12 @@ existing-layer endpoint and left U1.34 isolated; V104 reached the native
 3V3 via and connected U1.34, but native DRC reported two track crossings.
 Both are rejected route-allocation trials; the current promoted basis remains
 V102 and RTL_3V3 U1.34 is still open.
+V105 moved the handoff above the SPI channels but its B.Cu vertical still
+crossed SPICLK and SPISI. V106 keeps the departure on F.Cu until clear of
+those channels, then joins the existing 3V3 via field; native DRC reports no
+`shorting_items` or `tracks_crossing`, and saved connectivity joins U1.34 to
+the existing C3/R2/R3/U1.20 3V3 group. Promote V106 only as the disposable
+U1.34 edge-group basis; full Path-B support remains open.
 Native saved-board inspection joins U1.55 with U1.16/U1.25/U1.40/U1.50/
 U1.60/U1.63/C4.1, and a centerline scan finds no different-net track crossing
 for the new escape. The disposable fixture still has 19 intentional/open
