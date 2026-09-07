@@ -145,6 +145,12 @@ y=77 and the proposed offset also fell inside the XTAL/RSET corridor. V63
 remains the cleanest promoted 1V1 basis; the remaining bottom/left groups need
 a route around the native XTAL_OUT endpoint, not another direct drop.
 
+V65 attempted U1.55 bottom-edge RTL_1V1 routing and is rejected at 15 native
+findings / 26 opens. The rightward escape clipped adjacent no-net U1.56, and
+the proposed transition was too close to the XTAL_OUT via/segment. This is a
+local source-field allocation failure; V59 and V63 remain promoted 1V1
+sub-primitives and U1.55 remains open.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

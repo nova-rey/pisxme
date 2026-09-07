@@ -121,6 +121,11 @@ entered the retained XTAL_OUT B.Cu segment at y=77 and did not clear the local
 XTAL/RSET corridor. Preserve it as negative evidence; V63 remains the current
 promoted 1V1 basis and future bottom-edge routes must avoid XTAL_OUT entirely.
 
+V65 is rejected at 15 native findings / 26 opens. The U1.55 rightward escape
+entered adjacent no-net U1.56 and its transition violated clearance to the
+XTAL_OUT via/segment. Preserve it as negative evidence; U1.55 needs a new
+local source-field allocation rather than another direct bottom drop.
+
 V57 completes the RTL_5V disposable rail primitive. Its U1.33-to-U1.17
 F.Cu escape passes above the native SPI source endpoints, then uses the
 SPI-clear B.Cu dogleg and a right-side C5.1 launch. Native DRC reports 5
