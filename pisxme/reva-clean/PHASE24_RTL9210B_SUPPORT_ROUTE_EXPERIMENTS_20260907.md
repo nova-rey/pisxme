@@ -139,6 +139,11 @@ transitions but still crossed the retained 1V1 field and companion control
 route. Preserve these as route-allocation evidence only. The next trial must
 use genuinely layer-separated launches.
 
+V112 is the first genuinely layer-separated control attempt. It removes the
+control-control shorts, but native DRC still reports three crossings against
+the inherited RTL_1V1/RTL_3V3/upper-rail fields. It is rejected as a route
+implementation trial; no architecture or layer-policy change follows.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It

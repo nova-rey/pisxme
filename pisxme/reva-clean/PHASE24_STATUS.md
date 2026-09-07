@@ -29,6 +29,10 @@ CLKREQ_N/PERST_N vias, V108/V109 crossed the retained RTL_1V1/RTL_3V3 field,
 and V110/V111 retained companion-control or 1V1 crossings. These are
 authoring/allocation failures, not evidence against the RTL9210B control
 topology. The next control trial must use genuinely layer-separated launches.
+V112 is the first genuinely layer-separated control attempt: it removes
+control-control shorts, but native DRC still reports three crossings against
+the inherited RTL_1V1/RTL_3V3/upper-rail fields. It is rejected as an
+implementation trial; no architecture or layer-policy change follows.
 Native saved-board inspection joins U1.55 with U1.16/U1.25/U1.40/U1.50/
 U1.60/U1.63/C4.1, and a centerline scan finds no different-net track crossing
 for the new escape. The disposable fixture still has 19 intentional/open
