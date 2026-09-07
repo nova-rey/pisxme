@@ -26,6 +26,12 @@ GND/silkscreen findings; the five-net SPI audit and XTAL_IN/XTAL_OUT/RSET
 support audit both pass, and both trace-removal negative controls fail. This
 does not close the remaining RTL9210B rail, control, USB, M.2, or power gates.
 
+V36 broad F.Cu rail-zone probe is rejected. It leaves RTL_3V3/RTL_5V/RTL_1V1
+pad joins open in the saved-board connectivity report and adds no acceptable
+replacement for explicit rail access; native DRC reports five findings,
+including the inherited GND thermal warning. The zone shortcut is not
+promoted, and V35 remains the support/SPI baseline.
+
 V8 is the current combined support/SPI baseline and V9 is the retained
 RTL_5V rail primitive. V10/V11 RTL_3V3 trunks are rejected because they
 intersect retained high-speed/support corridors. The next experiment must

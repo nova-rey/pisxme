@@ -29,6 +29,13 @@ passes XTAL_IN, XTAL_OUT, and RSET with its XTAL_OUT negative control. This
 closes the local moved-cluster support sub-gate only; RTL_1V1, RTL_3V3,
 RTL_5V, controls, grounds, USB, M.2, and full Path-B validation remain open.
 
+V36 tested broad F.Cu local zones for RTL_3V3, RTL_5V, and RTL_1V1. It is
+rejected: native DRC still reports rail opens and an inherited GND thermal
+finding, because the zones do not provide complete pad/via access around the
+malformed disposable support footprints. No production CAD or Path-A asset
+changed. The next rail candidate must use explicit native pad/via access and
+preserve the V35 SPI/support geometry.
+
 Path B remains a disposable RTL9210B qualification path. The current best
 combined support baseline is `PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V8`
 plus the validated RTL_5V V9 rail primitive. V8 native support and SPI audits
