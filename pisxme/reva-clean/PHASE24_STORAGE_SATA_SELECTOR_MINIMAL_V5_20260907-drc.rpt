@@ -1,0 +1,903 @@
+** Drc report for PHASE24_STORAGE_SATA_SELECTOR_MINIMAL_V5_20260907.kicad_pcb **
+** Created on 2026-09-06T22:37:34 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 184 DRC violations **
+[shorting_items]: Items shorting two nets (nets M2_SATA_A_P_PCIE_TXP0 and POWER_GND)
+    Local override; error
+    @(178.5000 mm, 147.2000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 1.5620 mm
+    @(178.5000 mm, 146.8000 mm): Pad 1 [POWER_GND] of U13 on F.Cu
+[shorting_items]: Items shorting two nets (nets M2_GND and M2_SATA_A_P_PCIE_TXP0)
+    Local override; error
+    @(221.7500 mm, 159.7250 mm): Pad 45 [M2_GND] of J3 on F.Cu
+    @(220.0000 mm, 157.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 3.8714 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(185.0000 mm, 104.0000 mm): Track [TUSB_SATA_TXN] on B.Cu, length 41.2000 mm
+    @(176.2000 mm, 145.6000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 25.2071 mm
+[shorting_items]: Items shorting two nets (nets M2_SATA_A_N_PCIE_TXN0 and POWER_GND)
+    Local override; error
+    @(178.5000 mm, 147.6000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 1.6971 mm
+    @(178.5000 mm, 148.0000 mm): Pad 4 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0013 mm)
+    Local override; error
+    @(218.0000 mm, 157.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 5.0486 mm
+    @(220.7500 mm, 159.7250 mm): Pad 41 [M2_SATA_B_P_PCIE_RXN0] of J3 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(104.0000 mm, 116.0000 mm): Track [TUSB_SATA_TXP] on B.Cu, length 36.8782 mm
+    @(104.0000 mm, 120.0000 mm): Track [TUSB_SATA_TXN] on B.Cu, length 39.3954 mm
+[shorting_items]: Items shorting two nets (nets JMS_PCIE_TXP0 and TUSB_SATA_RXP)
+    Local override; error
+    @(181.5000 mm, 148.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
+    @(184.0000 mm, 154.0000 mm): Track [TUSB_SATA_RXP] on F.Cu, length 6.8710 mm
+[shorting_items]: Items shorting two nets (nets M2_SATA_B_N_PCIE_RXP0 and NC_8)
+    Local override; error
+    @(178.5000 mm, 149.2000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 2.0000 mm
+    @(178.5000 mm, 149.6000 mm): Pad 8 [NC_8] of U13 on F.Cu
+[shorting_items]: Items shorting two nets (nets TUSB_SATA_RXN and JMS_PCIE_TXP0)
+    Local override; error
+    @(185.0000 mm, 155.0000 mm): Track [TUSB_SATA_RXN] on F.Cu, length 7.8262 mm
+    @(181.5000 mm, 148.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1328 mm)
+    Local override; error
+    @(95.8000 mm, 128.7000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 0.9900 mm
+    @(96.2000 mm, 128.7000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu, length 1.1402 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1193 mm)
+    Local override; error
+    @(176.2000 mm, 152.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 20.6891 mm
+    @(181.5000 mm, 153.2000 mm): Pad 22 [JMS_PCIE_RXN1] of U13 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(98.0000 mm, 120.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 5.0000 mm
+    @(96.5000 mm, 129.4000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on B.Cu, length 13.6312 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(97.1000 mm, 129.4000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.4430 mm
+    @(96.5000 mm, 129.4000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on B.Cu, length 13.6312 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1328 mm)
+    Local override; error
+    @(96.2000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu, length 0.9000 mm
+    @(95.8000 mm, 128.7000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 0.9900 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(97.0000 mm, 128.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on B.Cu, length 6.0000 mm
+    @(97.1000 mm, 129.4000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.4430 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(176.2000 mm, 151.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on B.Cu, length 22.6504 mm
+    @(185.0000 mm, 160.0000 mm): Track [TUSB_SATA_RXN] on B.Cu, length 5.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1103 mm)
+    Local override; error
+    @(178.5000 mm, 148.8000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 1.8439 mm
+    @(178.5000 mm, 149.2000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 2.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(96.5000 mm, 129.4000 mm): Via [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu - B.Cu
+    @(97.1000 mm, 129.4000 mm): Via [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(216.0000 mm, 157.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 5.4761 mm
+    @(214.0000 mm, 157.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 7.7452 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(96.5000 mm, 129.4000 mm): Via [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu - B.Cu
+    @(97.1000 mm, 129.4000 mm): Via [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0264 mm)
+    Local override; error
+    @(214.0000 mm, 157.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 7.7452 mm
+    @(218.7500 mm, 159.7250 mm): Pad 33 [M2_GND] of J3 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(96.5000 mm, 129.4000 mm): Via [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu - B.Cu
+    @(97.1000 mm, 129.4000 mm): Via [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(96.5000 mm, 129.4000 mm): Via [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu - B.Cu
+    @(97.1000 mm, 129.4000 mm): Via [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(96.5000 mm, 129.4000 mm): Via [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu - B.Cu
+    @(97.1000 mm, 129.4000 mm): Via [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(96.5000 mm, 129.4000 mm): Via [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu - B.Cu
+    @(97.1000 mm, 129.4000 mm): Via [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(176.2000 mm, 149.8000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on B.Cu, length 25.3314 mm
+    @(185.0000 mm, 104.0000 mm): Track [TUSB_SATA_TXN] on B.Cu, length 41.2000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0830 mm)
+    Local override; error
+    @(97.1000 mm, 129.4000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.4430 mm
+    @(93.7000 mm, 129.4000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on B.Cu, length 3.5847 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(185.0000 mm, 145.2000 mm): Track [TUSB_SATA_TXN] on F.Cu, length 4.0311 mm
+    @(184.0000 mm, 145.8000 mm): Track [TUSB_SATA_TXP] on F.Cu, length 2.6926 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 147.2000 mm): Pad 2 [M2_SATA_A_P_PCIE_TXP0] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 147.2000 mm): Pad 2 [M2_SATA_A_P_PCIE_TXP0] of U13 on F.Cu
+    @(178.5000 mm, 146.8000 mm): Pad 1 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 147.2000 mm): Pad 2 [M2_SATA_A_P_PCIE_TXP0] of U13 on F.Cu
+    @(178.5000 mm, 147.6000 mm): Pad 3 [M2_SATA_A_N_PCIE_TXN0] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 147.6000 mm): Pad 3 [M2_SATA_A_N_PCIE_TXN0] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 147.6000 mm): Pad 3 [M2_SATA_A_N_PCIE_TXN0] of U13 on F.Cu
+    @(178.5000 mm, 148.0000 mm): Pad 4 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 148.0000 mm): Pad 4 [POWER_GND] of U13 on F.Cu
+    @(178.5000 mm, 148.4000 mm): Pad 5 [STORAGE_3V3] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 148.4000 mm): Pad 5 [STORAGE_3V3] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 148.4000 mm): Pad 5 [STORAGE_3V3] of U13 on F.Cu
+    @(178.5000 mm, 148.8000 mm): Pad 6 [M2_SATA_B_P_PCIE_RXN0] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 148.8000 mm): Pad 6 [M2_SATA_B_P_PCIE_RXN0] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 148.8000 mm): Pad 6 [M2_SATA_B_P_PCIE_RXN0] of U13 on F.Cu
+    @(178.5000 mm, 149.2000 mm): Pad 7 [M2_SATA_B_N_PCIE_RXP0] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 149.2000 mm): Pad 7 [M2_SATA_B_N_PCIE_RXP0] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 149.2000 mm): Pad 7 [M2_SATA_B_N_PCIE_RXP0] of U13 on F.Cu
+    @(178.5000 mm, 149.6000 mm): Pad 8 [NC_8] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 149.6000 mm): Pad 8 [NC_8] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 150.0000 mm): Pad 9 [STORAGE_SEL] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 150.0000 mm): Pad 9 [STORAGE_SEL] of U13 on F.Cu
+    @(178.5000 mm, 149.6000 mm): Pad 8 [NC_8] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 150.0000 mm): Pad 9 [STORAGE_SEL] of U13 on F.Cu
+    @(178.5000 mm, 150.4000 mm): Pad 10 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1746 mm)
+    Local override; error
+    @(99.8000 mm, 121.0000 mm): Pad 16 [<no net>] of U7 on F.Cu
+    @(99.0000 mm, 120.2000 mm): Pad 32 [BRIDGE_1V1] of U7 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 150.4000 mm): Pad 10 [POWER_GND] of U13 on F.Cu
+    @(178.5000 mm, 150.8000 mm): Pad 11 [M2_PCIE_TXP2] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 150.8000 mm): Pad 11 [M2_PCIE_TXP2] of U13 on F.Cu
+    @(178.5000 mm, 151.2000 mm): Pad 12 [M2_PCIE_TXN2] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1746 mm)
+    Local override; error
+    @(93.0000 mm, 120.2000 mm): Pad 17 [<no net>] of U7 on F.Cu
+    @(92.2000 mm, 121.0000 mm): Pad 33 [BRIDGE_1V1] of U7 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 150.8000 mm): Pad 11 [M2_PCIE_TXP2] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 151.2000 mm): Pad 12 [M2_PCIE_TXN2] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 151.2000 mm): Pad 12 [M2_PCIE_TXN2] of U13 on F.Cu
+    @(178.5000 mm, 151.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 151.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 151.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
+    @(178.5000 mm, 152.0000 mm): Pad 14 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 152.0000 mm): Pad 14 [POWER_GND] of U13 on F.Cu
+    @(178.5000 mm, 152.4000 mm): Pad 15 [M2_PCIE_TXP3] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 152.4000 mm): Pad 15 [M2_PCIE_TXP3] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 152.4000 mm): Pad 15 [M2_PCIE_TXP3] of U13 on F.Cu
+    @(178.5000 mm, 152.8000 mm): Pad 16 [M2_PCIE_TXN3] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 152.8000 mm): Pad 16 [M2_PCIE_TXN3] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 152.8000 mm): Pad 16 [M2_PCIE_TXN3] of U13 on F.Cu
+    @(178.5000 mm, 153.2000 mm): Pad 17 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(180.6000 mm, 154.5000 mm): Pad 18 [NC_18] of U13 on F.Cu
+    @(180.2000 mm, 154.5000 mm): Pad 19 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(180.2000 mm, 154.5000 mm): Pad 19 [POWER_GND] of U13 on F.Cu
+    @(179.8000 mm, 154.5000 mm): Pad 20 [STORAGE_3V3] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(179.8000 mm, 154.5000 mm): Pad 20 [STORAGE_3V3] of U13 on F.Cu
+    @(179.4000 mm, 154.5000 mm): Pad 21 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 153.2000 mm): Pad 22 [JMS_PCIE_RXN1] of U13 on F.Cu
+    @(181.5000 mm, 152.8000 mm): Pad 23 [JMS_PCIE_RXP1] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 153.2000 mm): Pad 22 [JMS_PCIE_RXN1] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 152.8000 mm): Pad 23 [JMS_PCIE_RXP1] of U13 on F.Cu
+    @(181.5000 mm, 152.4000 mm): Pad 24 [JMS_PCIE_TXN1] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 152.8000 mm): Pad 23 [JMS_PCIE_RXP1] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 152.4000 mm): Pad 24 [JMS_PCIE_TXN1] of U13 on F.Cu
+    @(181.5000 mm, 152.0000 mm): Pad 25 [JMS_PCIE_TXP1] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 152.4000 mm): Pad 24 [JMS_PCIE_TXN1] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 152.0000 mm): Pad 25 [JMS_PCIE_TXP1] of U13 on F.Cu
+    @(181.5000 mm, 151.6000 mm): Pad 26 [NC_26] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 152.0000 mm): Pad 25 [JMS_PCIE_TXP1] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 151.6000 mm): Pad 26 [NC_26] of U13 on F.Cu
+    @(181.5000 mm, 151.2000 mm): Pad 27 [NC_27] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 151.6000 mm): Pad 26 [NC_26] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 151.2000 mm): Pad 27 [NC_27] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 151.2000 mm): Pad 27 [NC_27] of U13 on F.Cu
+    @(181.5000 mm, 150.8000 mm): Pad 28 [NC_28] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 150.8000 mm): Pad 28 [NC_28] of U13 on F.Cu
+    @(181.5000 mm, 150.4000 mm): Pad 29 [NC_29] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1746 mm)
+    Local override; error
+    @(92.2000 mm, 127.0000 mm): Pad 48 [BRIDGE_3V3] of U7 on F.Cu
+    @(93.0000 mm, 127.8000 mm): Pad 64 [<no net>] of U7 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 150.8000 mm): Pad 28 [NC_28] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 150.4000 mm): Pad 29 [NC_29] of U13 on F.Cu
+    @(181.5000 mm, 150.0000 mm): Pad 30 [STORAGE_3V3] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 150.4000 mm): Pad 29 [NC_29] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 150.0000 mm): Pad 30 [STORAGE_3V3] of U13 on F.Cu
+    @(181.5000 mm, 149.6000 mm): Pad 31 [JMS_PCIE_RXN0] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 150.0000 mm): Pad 30 [STORAGE_3V3] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 149.6000 mm): Pad 31 [JMS_PCIE_RXN0] of U13 on F.Cu
+    @(181.5000 mm, 149.2000 mm): Pad 32 [JMS_PCIE_RXP0] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 149.6000 mm): Pad 31 [JMS_PCIE_RXN0] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 149.2000 mm): Pad 32 [JMS_PCIE_RXP0] of U13 on F.Cu
+    @(181.5000 mm, 148.8000 mm): Pad 33 [JMS_PCIE_TXN0] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 149.2000 mm): Pad 32 [JMS_PCIE_RXP0] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 148.8000 mm): Pad 33 [JMS_PCIE_TXN0] of U13 on F.Cu
+    @(181.5000 mm, 148.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 148.8000 mm): Pad 33 [JMS_PCIE_TXN0] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 148.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
+    @(181.5000 mm, 148.0000 mm): Pad 35 [TUSB_SATA_RXN] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 148.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 148.0000 mm): Pad 35 [TUSB_SATA_RXN] of U13 on F.Cu
+    @(181.5000 mm, 147.6000 mm): Pad 36 [TUSB_SATA_RXP] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 148.0000 mm): Pad 35 [TUSB_SATA_RXN] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 147.6000 mm): Pad 36 [TUSB_SATA_RXP] of U13 on F.Cu
+    @(181.5000 mm, 147.2000 mm): Pad 37 [TUSB_SATA_TXN] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 147.6000 mm): Pad 36 [TUSB_SATA_RXP] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 147.2000 mm): Pad 37 [TUSB_SATA_TXN] of U13 on F.Cu
+    @(181.5000 mm, 146.8000 mm): Pad 38 [TUSB_SATA_TXP] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 147.2000 mm): Pad 37 [TUSB_SATA_TXN] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 146.8000 mm): Pad 38 [TUSB_SATA_TXP] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(179.4000 mm, 145.5000 mm): Pad 39 [NC_39] of U13 on F.Cu
+    @(179.8000 mm, 145.5000 mm): Pad 40 [NC_40] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(179.8000 mm, 145.5000 mm): Pad 40 [NC_40] of U13 on F.Cu
+    @(180.2000 mm, 145.5000 mm): Pad 41 [NC_41] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(180.2000 mm, 145.5000 mm): Pad 41 [NC_41] of U13 on F.Cu
+    @(180.6000 mm, 145.5000 mm): Pad 42 [NC_42] of U13 on F.Cu
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(178.5000 mm, 147.2000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 1.5620 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(220.0000 mm, 157.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 3.8714 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(177.3000 mm, 146.2000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 1.2530 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(176.2000 mm, 145.6000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 25.2071 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(220.0000 mm, 130.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 27.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(196.0000 mm, 130.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 24.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(218.0000 mm, 157.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 5.0486 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(178.5000 mm, 147.6000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 1.6971 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(177.3000 mm, 148.8000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 1.4866 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(176.2000 mm, 149.8000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on B.Cu, length 25.3314 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(196.0000 mm, 134.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on B.Cu, length 22.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(218.0000 mm, 134.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on B.Cu, length 23.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(216.0000 mm, 157.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 5.4761 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(177.3000 mm, 150.2000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 1.3601 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(178.5000 mm, 148.8000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 1.8439 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(176.2000 mm, 151.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on B.Cu, length 22.6504 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(196.0000 mm, 162.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on B.Cu, length 20.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(216.0000 mm, 162.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on B.Cu, length 5.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(176.2000 mm, 152.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 20.6891 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(196.0000 mm, 158.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 18.0278 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(178.5000 mm, 149.2000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 2.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(177.3000 mm, 150.8000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 1.6279 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(214.0000 mm, 157.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 7.7452 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(185.0000 mm, 155.0000 mm): Track [TUSB_SATA_RXN] on F.Cu, length 7.8262 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(140.0000 mm, 160.0000 mm): Track [TUSB_SATA_RXN] on B.Cu, length 45.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(185.0000 mm, 160.0000 mm): Track [TUSB_SATA_RXN] on B.Cu, length 5.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(185.0000 mm, 155.0000 mm): Track [TUSB_SATA_RXN] on B.Cu, length 0.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(104.0000 mm, 132.0000 mm): Track [TUSB_SATA_RXN] on B.Cu, length 45.6070 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(184.0000 mm, 154.0000 mm): Track [TUSB_SATA_RXP] on F.Cu, length 6.8710 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(184.0000 mm, 154.0000 mm): Track [TUSB_SATA_RXP] on B.Cu, length 0.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(140.0000 mm, 156.0000 mm): Track [TUSB_SATA_RXP] on B.Cu, length 44.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(104.0000 mm, 128.0000 mm): Track [TUSB_SATA_RXP] on B.Cu, length 45.6070 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(184.0000 mm, 156.0000 mm): Track [TUSB_SATA_RXP] on B.Cu, length 2.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(185.0000 mm, 145.2000 mm): Track [TUSB_SATA_TXN] on F.Cu, length 4.0311 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(185.0000 mm, 104.0000 mm): Track [TUSB_SATA_TXN] on B.Cu, length 41.2000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(185.0000 mm, 145.2000 mm): Track [TUSB_SATA_TXN] on B.Cu, length 0.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(140.0000 mm, 104.0000 mm): Track [TUSB_SATA_TXN] on B.Cu, length 45.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(104.0000 mm, 120.0000 mm): Track [TUSB_SATA_TXN] on B.Cu, length 39.3954 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(184.0000 mm, 145.8000 mm): Track [TUSB_SATA_TXP] on F.Cu, length 2.6926 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(140.0000 mm, 108.0000 mm): Track [TUSB_SATA_TXP] on B.Cu, length 44.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(184.0000 mm, 108.0000 mm): Track [TUSB_SATA_TXP] on B.Cu, length 37.8000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(184.0000 mm, 145.8000 mm): Track [TUSB_SATA_TXP] on B.Cu, length 0.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(104.0000 mm, 116.0000 mm): Track [TUSB_SATA_TXP] on B.Cu, length 36.8782 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(94.6000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on F.Cu, length 0.9000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(94.6000 mm, 128.7000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on F.Cu, length 1.1402 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(97.0000 mm, 128.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on B.Cu, length 6.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(93.7000 mm, 129.4000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on B.Cu, length 3.5847 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(96.2000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu, length 0.9000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(96.2000 mm, 128.7000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu, length 1.1402 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(97.1000 mm, 129.4000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.4430 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(98.0000 mm, 120.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 5.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(95.8000 mm, 128.7000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 0.9900 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(95.8000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 0.9000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(99.0000 mm, 116.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on B.Cu, length 4.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(96.5000 mm, 129.4000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on B.Cu, length 13.6312 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(95.0000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 0.9000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(95.0000 mm, 128.7000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 1.4765 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(94.3000 mm, 130.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on B.Cu, length 2.6249 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(96.0000 mm, 132.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on B.Cu, length 7.0000 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(178.5000 mm, 147.2000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 1.5620 mm
+    @(178.5000 mm, 146.8000 mm): Pad 1 [POWER_GND] of U13 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(220.0000 mm, 157.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 3.8714 mm
+    @(221.7500 mm, 159.7250 mm): Pad 45 [M2_GND] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(220.0000 mm, 157.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 3.8714 mm
+    @(222.2500 mm, 159.7250 mm): Pad 47 [M2_SATA_A_N_PCIE_TXN0] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(218.0000 mm, 157.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 5.0486 mm
+    @(220.7500 mm, 159.7250 mm): Pad 41 [M2_SATA_B_P_PCIE_RXN0] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(218.0000 mm, 157.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 5.0486 mm
+    @(221.2500 mm, 159.7250 mm): Pad 43 [M2_SATA_B_N_PCIE_RXP0] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(218.0000 mm, 157.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 5.0486 mm
+    @(221.7500 mm, 159.7250 mm): Pad 45 [M2_GND] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(178.5000 mm, 147.6000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 1.6971 mm
+    @(178.5000 mm, 148.0000 mm): Pad 4 [POWER_GND] of U13 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(216.0000 mm, 157.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 5.4761 mm
+    @(219.2500 mm, 159.7250 mm): Pad 35 [M2_PCIE_TXN1] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(216.0000 mm, 157.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 5.4761 mm
+    @(219.7500 mm, 159.7250 mm): Pad 37 [M2_PCIE_TXP1] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(216.0000 mm, 157.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 5.4761 mm
+    @(220.2500 mm, 159.7250 mm): Pad 39 [M2_GND] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(178.5000 mm, 148.8000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 1.8439 mm
+    @(178.5000 mm, 149.2000 mm): Pad 7 [M2_SATA_B_N_PCIE_RXP0] of U13 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(176.2000 mm, 152.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 20.6891 mm
+    @(178.5000 mm, 152.8000 mm): Pad 16 [M2_PCIE_TXN3] of U13 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(176.2000 mm, 152.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 20.6891 mm
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(178.5000 mm, 149.2000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 2.0000 mm
+    @(178.5000 mm, 149.6000 mm): Pad 8 [NC_8] of U13 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(214.0000 mm, 157.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 7.7452 mm
+    @(218.7500 mm, 159.7250 mm): Pad 33 [M2_GND] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(214.0000 mm, 157.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 7.7452 mm
+    @(219.2500 mm, 159.7250 mm): Pad 35 [M2_PCIE_TXN1] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(214.0000 mm, 157.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 7.7452 mm
+    @(219.7500 mm, 159.7250 mm): Pad 37 [M2_PCIE_TXP1] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(214.0000 mm, 157.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 7.7452 mm
+    @(220.2500 mm, 159.7250 mm): Pad 39 [M2_GND] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(214.0000 mm, 157.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 7.7452 mm
+    @(220.7500 mm, 159.7250 mm): Pad 41 [M2_SATA_B_P_PCIE_RXN0] of J3 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(185.0000 mm, 155.0000 mm): Track [TUSB_SATA_RXN] on F.Cu, length 7.8262 mm
+    @(181.5000 mm, 148.8000 mm): Pad 33 [JMS_PCIE_TXN0] of U13 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(185.0000 mm, 155.0000 mm): Track [TUSB_SATA_RXN] on F.Cu, length 7.8262 mm
+    @(181.5000 mm, 148.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(184.0000 mm, 154.0000 mm): Track [TUSB_SATA_RXP] on F.Cu, length 6.8710 mm
+    @(181.5000 mm, 148.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(184.0000 mm, 154.0000 mm): Track [TUSB_SATA_RXP] on F.Cu, length 6.8710 mm
+    @(181.5000 mm, 148.0000 mm): Pad 35 [TUSB_SATA_RXN] of U13 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(103.9500 mm, 132.4000 mm): Segment of C33 on f.silkscreen
+    @(104.0000 mm, 132.0000 mm): Pad 1 [TUSB_SATA_RXN] of C33 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(103.9500 mm, 128.4000 mm): Segment of C32 on f.silkscreen
+    @(104.0000 mm, 128.0000 mm): Pad 1 [TUSB_SATA_RXP] of C32 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(103.9500 mm, 120.4000 mm): Segment of C31 on f.silkscreen
+    @(104.0000 mm, 120.0000 mm): Pad 1 [TUSB_SATA_TXN] of C31 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(103.9500 mm, 116.4000 mm): Segment of C30 on f.silkscreen
+    @(104.0000 mm, 116.0000 mm): Pad 1 [TUSB_SATA_TXP] of C30 on F.Cu
+
+** Found 52 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(178.5000 mm, 146.8000 mm): Pad 1 [POWER_GND] of U13 on F.Cu
+    @(178.5000 mm, 148.0000 mm): Pad 4 [POWER_GND] of U13 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(178.5000 mm, 148.0000 mm): Pad 4 [POWER_GND] of U13 on F.Cu
+    @(178.5000 mm, 150.4000 mm): Pad 10 [POWER_GND] of U13 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(178.5000 mm, 150.4000 mm): Pad 10 [POWER_GND] of U13 on F.Cu
+    @(180.0000 mm, 150.0000 mm): Pad 43 [POWER_GND] of U13 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(178.5000 mm, 150.4000 mm): Pad 10 [POWER_GND] of U13 on F.Cu
+    @(178.5000 mm, 152.0000 mm): Pad 14 [POWER_GND] of U13 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(178.5000 mm, 152.0000 mm): Pad 14 [POWER_GND] of U13 on F.Cu
+    @(178.5000 mm, 153.2000 mm): Pad 17 [POWER_GND] of U13 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(178.5000 mm, 153.2000 mm): Pad 17 [POWER_GND] of U13 on F.Cu
+    @(179.4000 mm, 154.5000 mm): Pad 21 [POWER_GND] of U13 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(179.4000 mm, 154.5000 mm): Pad 21 [POWER_GND] of U13 on F.Cu
+    @(180.2000 mm, 154.5000 mm): Pad 19 [POWER_GND] of U13 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(178.5000 mm, 148.4000 mm): Pad 5 [STORAGE_3V3] of U13 on F.Cu
+    @(178.5000 mm, 151.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(178.5000 mm, 151.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
+    @(179.8000 mm, 154.5000 mm): Pad 20 [STORAGE_3V3] of U13 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(181.5000 mm, 150.0000 mm): Pad 30 [STORAGE_3V3] of U13 on F.Cu
+    @(178.5000 mm, 151.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(178.5000 mm, 150.8000 mm): Pad 11 [M2_PCIE_TXP2] of U13 on F.Cu
+    @(216.7500 mm, 159.7250 mm): Pad 25 [M2_PCIE_TXP2] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(178.5000 mm, 151.2000 mm): Pad 12 [M2_PCIE_TXN2] of U13 on F.Cu
+    @(216.2500 mm, 159.7250 mm): Pad 23 [M2_PCIE_TXN2] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(178.5000 mm, 152.4000 mm): Pad 15 [M2_PCIE_TXP3] of U13 on F.Cu
+    @(213.7500 mm, 159.7250 mm): Pad 13 [M2_PCIE_TXP3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(178.5000 mm, 152.8000 mm): Pad 16 [M2_PCIE_TXN3] of U13 on F.Cu
+    @(213.2500 mm, 159.7250 mm): Pad 11 [M2_PCIE_TXN3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(211.0000 mm, 167.2750 mm): Pad 2 [M2_3V3] of J3 on F.Cu
+    @(211.5000 mm, 167.2750 mm): Pad 4 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(211.5000 mm, 167.2750 mm): Pad 4 [M2_3V3] of J3 on F.Cu
+    @(213.5000 mm, 167.2750 mm): Pad 12 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(213.5000 mm, 167.2750 mm): Pad 12 [M2_3V3] of J3 on F.Cu
+    @(214.0000 mm, 167.2750 mm): Pad 14 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(214.0000 mm, 167.2750 mm): Pad 14 [M2_3V3] of J3 on F.Cu
+    @(214.5000 mm, 167.2750 mm): Pad 16 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(214.5000 mm, 167.2750 mm): Pad 16 [M2_3V3] of J3 on F.Cu
+    @(215.0000 mm, 167.2750 mm): Pad 18 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(215.0000 mm, 167.2750 mm): Pad 18 [M2_3V3] of J3 on F.Cu
+    @(228.0000 mm, 167.2750 mm): Pad 70 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(228.0000 mm, 167.2750 mm): Pad 70 [M2_3V3] of J3 on F.Cu
+    @(228.5000 mm, 167.2750 mm): Pad 72 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(228.5000 mm, 167.2750 mm): Pad 72 [M2_3V3] of J3 on F.Cu
+    @(229.0000 mm, 167.2750 mm): Pad 74 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(211.2500 mm, 159.7250 mm): Pad 3 [M2_GND] of J3 on F.Cu
+    @(212.7500 mm, 159.7250 mm): Pad 9 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(212.7500 mm, 159.7250 mm): Pad 9 [M2_GND] of J3 on F.Cu
+    @(214.2500 mm, 159.7250 mm): Pad 15 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(214.2500 mm, 159.7250 mm): Pad 15 [M2_GND] of J3 on F.Cu
+    @(217.2500 mm, 159.7250 mm): Pad 27 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(217.2500 mm, 159.7250 mm): Pad 27 [M2_GND] of J3 on F.Cu
+    @(218.7500 mm, 159.7250 mm): Pad 33 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(218.7500 mm, 159.7250 mm): Pad 33 [M2_GND] of J3 on F.Cu
+    @(220.2500 mm, 159.7250 mm): Pad 39 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(220.2500 mm, 159.7250 mm): Pad 39 [M2_GND] of J3 on F.Cu
+    @(221.7500 mm, 159.7250 mm): Pad 45 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(221.7500 mm, 159.7250 mm): Pad 45 [M2_GND] of J3 on F.Cu
+    @(223.2500 mm, 159.7250 mm): Pad 51 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(223.2500 mm, 159.7250 mm): Pad 51 [M2_GND] of J3 on F.Cu
+    @(224.7500 mm, 159.7250 mm): Pad 57 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(224.7500 mm, 159.7250 mm): Pad 57 [M2_GND] of J3 on F.Cu
+    @(228.2500 mm, 159.7250 mm): Pad 71 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(228.2500 mm, 159.7250 mm): Pad 71 [M2_GND] of J3 on F.Cu
+    @(228.7500 mm, 159.7250 mm): Pad 73 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 121.0000 mm): Pad 33 [BRIDGE_1V1] of U7 on F.Cu
+    @(92.2000 mm, 124.2000 mm): Pad 41 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 124.2000 mm): Pad 41 [BRIDGE_1V1] of U7 on F.Cu
+    @(92.2000 mm, 126.6000 mm): Pad 47 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 126.6000 mm): Pad 47 [BRIDGE_1V1] of U7 on F.Cu
+    @(93.4000 mm, 127.8000 mm): Pad 63 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.4000 mm, 127.8000 mm): Pad 63 [BRIDGE_1V1] of U7 on F.Cu
+    @(94.2000 mm, 127.8000 mm): Pad 61 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.8000 mm, 120.2000 mm): Pad 19 [BRIDGE_1V1] of U7 on F.Cu
+    @(92.2000 mm, 121.0000 mm): Pad 33 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.2000 mm, 127.8000 mm): Pad 61 [BRIDGE_1V1] of U7 on F.Cu
+    @(96.6000 mm, 127.8000 mm): Pad 55 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(96.6000 mm, 127.8000 mm): Pad 55 [BRIDGE_1V1] of U7 on F.Cu
+    @(99.0000 mm, 127.8000 mm): Pad 49 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.0000 mm, 127.8000 mm): Pad 49 [BRIDGE_1V1] of U7 on F.Cu
+    @(99.8000 mm, 127.0000 mm): Pad 1 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.8000 mm, 122.6000 mm): Pad 12 [BRIDGE_1V1] of U7 on F.Cu
+    @(99.0000 mm, 120.2000 mm): Pad 32 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.8000 mm, 127.0000 mm): Pad 1 [BRIDGE_1V1] of U7 on F.Cu
+    @(99.8000 mm, 122.6000 mm): Pad 12 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 121.4000 mm): Pad 34 [BRIDGE_3V3] of U7 on F.Cu
+    @(92.2000 mm, 123.8000 mm): Pad 40 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 123.8000 mm): Pad 40 [BRIDGE_3V3] of U7 on F.Cu
+    @(92.2000 mm, 127.0000 mm): Pad 48 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 127.0000 mm): Pad 48 [BRIDGE_3V3] of U7 on F.Cu
+    @(93.8000 mm, 127.8000 mm): Pad 62 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.8000 mm, 127.8000 mm): Pad 62 [BRIDGE_3V3] of U7 on F.Cu
+    @(98.2000 mm, 127.8000 mm): Pad 51 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(95.8000 mm, 120.2000 mm): Pad 24 [BRIDGE_3V3] of U7 on F.Cu
+    @(92.2000 mm, 121.4000 mm): Pad 34 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(98.2000 mm, 120.2000 mm): Pad 30 [BRIDGE_3V3] of U7 on F.Cu
+    @(95.8000 mm, 120.2000 mm): Pad 24 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(98.2000 mm, 127.8000 mm): Pad 51 [BRIDGE_3V3] of U7 on F.Cu
+    @(99.8000 mm, 124.6000 mm): Pad 7 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(98.6000 mm, 120.2000 mm): Pad 31 [BRIDGE_3V3] of U7 on F.Cu
+    @(98.2000 mm, 120.2000 mm): Pad 30 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 125.4000 mm): Pad 44 [/CORE_CM5/POWER_GND] of U7 on F.Cu
+    @(95.4000 mm, 127.8000 mm): Pad 58 [/CORE_CM5/POWER_GND] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(95.4000 mm, 127.8000 mm): Pad 58 [/CORE_CM5/POWER_GND] of U7 on F.Cu
+    @(96.0000 mm, 124.0000 mm): Pad 65 [/CORE_CM5/POWER_GND] of U7 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

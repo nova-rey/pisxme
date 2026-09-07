@@ -4989,3 +4989,8 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  open at 133 findings / 52 opens with two localized shorts and ten crossings.
  Preserved the V3 board/report as rejected route evidence and kept production
  CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path A: tested a disposable 180-degree U13
+ orientation so Port B faced the bridge and Port A faced J3. The native
+ twelve-endpoint audit passed, but the first via/escape author produced 180
+ findings / 52 opens, 23 shorts, and 5 crossings. Classified it as local
+ route/via geometry failure, preserved the evidence, and left V3 as baseline.

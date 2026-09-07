@@ -28,6 +28,12 @@ and an M.2 final launch interaction. See
 `PHASE24_PATHA_SATA_SELECTOR_ROUTE_V3_20260907.md`; this is route
 implementation evidence, not a production-board pass.
 
+A bounded U13 180-degree orientation experiment is also preserved in
+`PHASE24_PATHA_SATA_SELECTOR_ROT180_20260907.md`. It improved the physical
+Port-B/Port-A direction but its first via author failed at 180 findings / 52
+opens with 23 shorts and 5 crossings. It is rejected for local via/escape
+geometry, not for architecture; V3 remains the current route baseline.
+
 ## Current checkpoint — 2026-09-06
 
 Latest focused routing-generator checkpoint: `5184b6f`. The deduplication
