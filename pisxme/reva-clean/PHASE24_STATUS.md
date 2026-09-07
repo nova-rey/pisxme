@@ -1,5 +1,20 @@
 # Phase 24 acreage validation status
 
+## Current live correction — 2026-09-06
+
+The old V4 SATA claim is superseded for Path-A topology: its C30–C33 to J3
+route bypassed U13 even though its old audit passed. The live source authority
+now labels C30–C33 selector-side pins as `TUSB_SATA_*` and maps U13 A1 to the
+shared M.2 SATA-B/PCIe-RX0 pair. A regenerated selector-inclusive disposable
+route passes all twelve native endpoint assertions and its saved-track
+negative control, but its first copper author still has real local DRC
+crossings/shorts. Current gate is `ROUTE IMPLEMENTATION OPEN`; do not use the
+old V4 receipt as evidence of a closed SATA selector path. Full-board and
+combined USB3/SATA closure remain open.
+
+See `PHASE24_PATHA_SATA_SELECTOR_CORRECTION_20260906.md` for the exact TI
+pin/port basis and raw selector-inclusive fixture names.
+
 ## Current checkpoint — 2026-09-06
 
 Latest focused routing-generator checkpoint: `5184b6f`. The deduplication

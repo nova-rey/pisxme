@@ -4966,3 +4966,10 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  and shorts where the historical USB3 corridor intersects the SATA launch.
  Preserved it as route/placement evidence, not production authority, and
  fixed the USB3 disposable author to use safe native collection mutation.
+2026-09-06 — PiSXMe Phase 24 Path A: found that the historical V4 SATA
+ route bypassed the HD3SS3412 selector. Verified TI's Port A/B/C mapping,
+ corrected STORAGE source labels and U13 A1 ownership, regenerated native
+ selector-side pad nets, and replaced the direct SATA audit with a twelve-
+ endpoint U7 -> caps -> U13 Port B -> U13 Port A -> J3 audit. Added a saved-
+ track negative control. The first selector-inclusive copper author remains
+ rejected for local DRC crossings/shorts; no production route was promoted.

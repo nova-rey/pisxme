@@ -15,10 +15,10 @@ OUT = Path(os.environ.get("PISXME_STORAGE_NET_OUT",
                          str(R / "PHASE24_STORAGE_SATA_NET_AUTHORITY_REGEN_20260906.kicad_pcb")))
 
 FAMILY = {
-    "C30.1": ("M2_SATA_A_P_PCIE_TXP0", "J3.49"),
-    "C31.1": ("M2_SATA_A_N_PCIE_TXN0", "J3.47"),
-    "C32.1": ("M2_SATA_B_N_PCIE_RXP0", "J3.43"),
-    "C33.1": ("M2_SATA_B_P_PCIE_RXN0", "J3.41"),
+    "C30.1": ("TUSB_SATA_TXP", "U13.38"),
+    "C31.1": ("TUSB_SATA_TXN", "U13.37"),
+    "C32.1": ("TUSB_SATA_RXP", "U13.36"),
+    "C33.1": ("TUSB_SATA_RXN", "U13.35"),
 }
 
 def pkey(p):
@@ -34,7 +34,7 @@ for source, (net_name, socket_key) in FAMILY.items():
         raise RuntimeError(f"missing authority endpoint {source} or {socket_key}")
     socket_net = pads[socket_key].GetNetname()
     if socket_net not in (net_name, "/STORAGE/" + net_name) and not socket_net.endswith("/" + net_name):
-        raise RuntimeError(f"socket authority mismatch {socket_key}: {socket_net} != {net_name}")
+        raise RuntimeError(f"selector-side authority mismatch {socket_key}: {socket_net} != {net_name}")
     net = b.FindNet(net_name) or b.FindNet("/STORAGE/" + net_name)
     if net is None:
         raise RuntimeError(f"missing native net object {net_name}")

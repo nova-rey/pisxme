@@ -20,6 +20,15 @@ U12 and U13 are passive high-speed switches; their control pins are not
 interchangeable and must be driven from the same settled logical mode after
 any required inversion.
 
+## Selector channel authority — corrected 2026-09-06
+
+For U13 HD3SS3412 RUA0042A, TI's datasheet Table 1 maps Port A to Port B
+when `SEL=L` and Port A to Port C when `SEL=H`. The Path-A SATA route is
+therefore explicitly `U7 SATA -> C30..C33 -> U13 Port B (pins 38/37,
+36/35) -> U13 Port A (pins 2/3, 6/7) -> J3 contacts 49/47, 41/43`.
+The four capacitors must not be labeled directly with the J3 M.2 nets.
+The prior direct-capacitor-to-J3 V4 route is superseded bypass evidence.
+
 ## M-key contacts
 
 The contact names below follow SATA-IO TP-053 Rev 1.1. The slash names are

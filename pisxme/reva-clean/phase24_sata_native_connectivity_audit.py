@@ -6,13 +6,16 @@ BOARD=Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'PHASE24_STORAGE_NATIVE_ORA
 ENDPOINTS={
  'BRIDGE_SATA_TX_P':('U7.57','C30.2'), 'BRIDGE_SATA_TX_N':('U7.56','C31.2'),
  'BRIDGE_SATA_RX_P':('U7.60','C32.2'), 'BRIDGE_SATA_RX_N':('U7.59','C33.2'),
- # M.2 Socket 3 shared SATA/PCIe lane-0 contacts.  J3.1..4 are
- # configuration/power contacts on the native M-key footprint and are not
- # valid SATA endpoints.
- 'M2_SATA_A_P_PCIE_TXP0':('C30.1','J3.49'),
- 'M2_SATA_A_N_PCIE_TXN0':('C31.1','J3.47'),
- 'M2_SATA_B_N_PCIE_RXP0':('C32.1','J3.43'),
- 'M2_SATA_B_P_PCIE_RXN0':('C33.1','J3.41'),
+ # Coupling capacitors terminate at HD3SS3412 Port B; Port A continues to J3.
+ # A direct capacitor-to-socket bypass is explicitly rejected.
+ 'TUSB_SATA_TXP':('C30.1','U13.38'),
+ 'TUSB_SATA_TXN':('C31.1','U13.37'),
+ 'TUSB_SATA_RXP':('C32.1','U13.36'),
+ 'TUSB_SATA_RXN':('C33.1','U13.35'),
+ 'M2_SATA_A_P_PCIE_TXP0':('U13.2','J3.49'),
+ 'M2_SATA_A_N_PCIE_TXN0':('U13.3','J3.47'),
+ 'M2_SATA_B_P_PCIE_RXN0':('U13.6','J3.41'),
+ 'M2_SATA_B_N_PCIE_RXP0':('U13.7','J3.43'),
 }
 def tok(p): return f'{p.GetParentFootprint().GetReference()}.{p.GetNumber()}'
 b=pcbnew.LoadBoard(str(BOARD))
@@ -28,4 +31,8 @@ for net,ends in ENDPOINTS.items():
   reached={tok(x) for x in conn.GetConnectedItems(pads[e]) if type(x).__name__=='PAD'}|{e}
   if not set(ends)<=reached: raise AssertionError(f'{net} disconnected at {e}: {sorted(reached)}')
  print(f'{net}: PASS ({ends[0]} <-> {ends[1]})')
+for cap, socket in (('C30.1','J3.49'),('C31.1','J3.47'),('C32.1','J3.41'),('C33.1','J3.43')):
+ reached={tok(x) for x in conn.GetConnectedItems(pads[cap]) if type(x).__name__=='PAD'}
+ if socket in reached:
+  raise AssertionError(f'rejected direct SATA bypass remains: {cap} reaches {socket}')
 print('SATA native endpoint connectivity: PASS')
