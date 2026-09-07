@@ -41,6 +41,11 @@ V145 is rejected as a REFCLK route implementation: the lower two-layer
 corridors contacted XTAL/1V1/CLKREQ fields and connector sideband pads and
 introduced six signal crossings. It does not reject the RTL9210B pinout or
 the V144 placement basis; REFCLK needs an outer-corridor allocation.
+V146/V147 are rejected REFCLK allocation trials. V146 avoided the inherited
+CLKREQ corridor but entered the J1 TX pad field; V147 used separated outer
+J1-side drops but still crossed the RTL9210B exposed GND pad. The pair's
+remaining blocker is the inherited QFN lower-edge/RTL_1V1 source-field
+allocation, so the next experiment must relocate that local support field.
 The current promoted disposable RTL_5V/control basis is
 `PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
 CLKREQ/PEDET support evidence. V97 moved

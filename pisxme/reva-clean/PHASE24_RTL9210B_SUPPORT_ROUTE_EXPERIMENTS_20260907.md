@@ -67,6 +67,12 @@ contacts/crossings with inherited XTAL/1V1/CLKREQ fields and J1 sideband pads.
 This is route-allocation evidence only; the V144 support basis and RTL9210B
 REFCLK authority remain valid, and REFCLK remains open.
 
+V146/V147 are retained rejected REFCLK trials. V146's lower F.Cu corridor
+entered the J1 TX pad field; V147's outer F.Cu corridors still crossed the
+U1 exposed GND pad despite separating the J1 drops. These results identify a
+QFN lower-edge/RTL_1V1 source-field allocation problem. The next experiment
+must move or reauthor that local support field before another REFCLK sweep.
+
 ## V76–V78 U1.40 edge-group trials — rejected
 
 V76 placed the U1.40 RTL_1V1 transition at (92.8,68.8), where the via
