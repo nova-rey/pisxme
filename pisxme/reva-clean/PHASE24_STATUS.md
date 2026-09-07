@@ -19,6 +19,12 @@ departure because it entered adjacent U1 RTL_5V/RTL_1V1 pads and crossed
 SPICLK. The next implementation must use a transformed-pad-aware escape cell
 before downstream routing is regenerated.
 
+The transformed-pad-aware V22 diagonal probe is rejected at 9 native
+violations / 41 opens: RTL_3V3 collides with SPISO3/SPICS and crosses the
+SPICLK B.Cu channel. V20 remains the best 90-degree implementation baseline;
+V22 confirms that hand-placed diagonals are not a substitute for a formal
+escape-cell construction.
+
 ## Current live Path-B step — 2026-09-07
 
 ### Current open gate

@@ -5583,6 +5583,10 @@ The 90-degree U1 four-net V16 source-field probe was rejected at 7 native
 violations / 41 opens because the B.Cu channels crossed at the U2 handoff.
 The orientation remains a placement alternative; downstream drops must be
 staggered outside the horizontal channel envelope.
+The transformed-pad-aware V22 diagonal probe was rejected at 9 native
+violations / 41 opens: RTL_3V3 collided with SPISO3/SPICS and crossed SPICLK.
+V20 remains the best 90-degree baseline; a formal escape-cell construction
+is still required.
 The 90-degree V18-V21 trials remain disposable evidence. V20 reduced the
 source-field result to 3 findings / 41 opens; V21 rejected down/right RTL_3V3
 because it entered adjacent U1 RTL_5V/RTL_1V1 pads and crossed SPICLK. A

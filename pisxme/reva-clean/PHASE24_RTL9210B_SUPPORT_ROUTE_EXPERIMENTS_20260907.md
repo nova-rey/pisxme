@@ -13,6 +13,13 @@ down/right RTL_3V3 departure after it entered adjacent U1 RTL_5V/RTL_1V1 pads
 and crossed SPICLK. The next implementation requires a transformed-pad-aware
 escape cell.
 
+## 90-degree transformed diagonal V22 — rejected
+
+V22 moved the RTL_3V3 source through a diagonal transformed-pad-aware probe.
+Native KiCad reports 9 violations / 41 opens: the departure collides with
+SPISO3/SPICS and crosses the SPICLK B.Cu channel. V20 remains the best
+implementation baseline; a formal escape-cell construction is still needed.
+
 Status: **REJECTED ROUTE IMPLEMENTATIONS; PATH B ARCHITECTURE UNCHANGED**
 
 These experiments operate only on disposable RTL9210B bring-up fixtures.
