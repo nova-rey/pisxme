@@ -63,6 +63,11 @@ V155 is rejected: its split REFCLK_N escape still contacted U1 pad 65 and the
 outboard 1V1 handoff, while REFCLK_P contacted the XTAL_IN endpoint. V154
 remains the validated local-support basis; REFCLK requires a coordinated
 endpoint/sideband allocation, not another uncoordinated split.
+V156 moves only the CLKREQ_N J1 launch to x≈139 and passes the focused native
+signal gate with the same six intended opens. V157 moves XTAL_IN outboard but
+is rejected because its new endpoint crosses the retained XTAL_OUT vertical
+span. REFCLK remains open; the next local support experiment must co-author
+XTAL_IN and XTAL_OUT together.
 The current promoted disposable RTL_5V/control basis is
 `PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
 CLKREQ/PEDET support evidence. V97 moved

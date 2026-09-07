@@ -89,6 +89,10 @@ V155 is rejected: the split REFCLK_N escape contacted U1 pad 65 and the
 outboard 1V1 handoff, while REFCLK_P contacted the XTAL_IN endpoint. V154
 remains the validated local-support basis; the next REFCLK attempt must
 co-author the endpoint/sideband allocation.
+V156 moves only the CLKREQ_N J1 launch outboard and passes native signal DRC.
+V157 moves XTAL_IN to an outboard endpoint but crosses the retained XTAL_OUT
+vertical span. Reject V157; the next support attempt must co-author the two
+crystal nets.
 
 ## V76–V78 U1.40 edge-group trials — rejected
 
