@@ -17,6 +17,11 @@ The source-to-PCB SATA net-authority derivation and bounded-search result are
 captured in `PHASE24_PATHA_SATA_REGEN_SEARCH_20260906.md`; the source mapping
 passes native inspection, while routed-board closure remains open.
 
+The follow-on local-corridor discriminator is recorded in
+`PHASE24_PATHA_SATA_LOCAL_CORRIDOR_20260906.md`: source net ownership passes,
+but the current unconstrained A* implementation cannot emit a local route.
+This remains a route-method failure, not a storage-architecture rejection.
+
 Latest private storage evidence checkpoint: `9e45a72`. The retained WIP
 RTL9210B native XML support netlist now has a reproducible audit with
 component, rail, clock, SPI, reset, RSET, PEDET, ISOLATEB, shared-lane, and

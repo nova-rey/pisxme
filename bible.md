@@ -4845,3 +4845,8 @@ validation remain open.
 2026-09-06 — PiSXMe Phase 24 dual-mode storage: refreshed the live status
  checkpoint to `9645567` after pushing the source-to-PCB SATA regeneration
  bridge and bounded search receipt.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: tested the corrected source
+ net map in a storage-isolated fixture with the socket translated locally.
+ A* returned no route in a tight local window and exhausted its bounded search
+ in a wider one. Preserved the result as a route-method failure; no integrated
+ board or architecture changed.

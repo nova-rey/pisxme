@@ -83,7 +83,12 @@ def route(occ,hard,start,goal,start_layer=F,goal_layer=F,x_gate=None,
     # allowance.  Target halos may clear neighboring SMD pads, but never a
     # connector mounting hole or other through-hole body.
     for l in LAYERS: local[l].update(hard[l])
-    bounds=(grid((1,1)),grid((299,179)))
+    bounds_spec=os.environ.get('PISXME_ROUTE_BOUNDS')
+    if bounds_spec:
+        bx0,by0,bx1,by1=(float(v) for v in bounds_spec.split(','))
+        bounds=(grid((bx0,by0)),grid((bx1,by1)))
+    else:
+        bounds=(grid((1,1)),grid((299,179)))
     q=[(0,s)]; cost={s:0}; prev={s:None}
     expanded=0
     closed=set()
