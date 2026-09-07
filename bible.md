@@ -5297,6 +5297,11 @@ fixture with a fresh native KiCad DRC report (6 violations / 25 unconnected
 items) and the saved-board connectivity audit. XTAL_IN, XTAL_OUT, and eight
 RTL_1V1 endpoints passed; removal of XTAL_OUT copper failed the negative
 control as required. Production CAD remains unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested a V6-derived SPI extension to the
+22 mm relocated support branch. Native DRC reported 31 violations / 32 opens;
+the endpoint count improved but source-pad and destination-corridor crossings
+remain. Rejected as route implementation evidence; Path A and production CAD
+unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: attempted the first SPI reroute from the
 relocated support branch. Native DRC reported 46 violations / 28 opens due to
 over-tight source vias and destination pad-field crossings. Rejected as route

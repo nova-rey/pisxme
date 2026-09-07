@@ -23,6 +23,14 @@ interactions. It does not invalidate the relocation. The next route writer
 will reuse the known-clean V6 source escape pattern and extend its corridors
 to the relocated U2.
 
+That V6-derived SPI extension is preserved as
+`PHASE24_RTL9210B_SUPPORT_BRANCH_RELOCATED_SPI_V2`; native DRC reports 31
+violations / 32 opens. It reduces the disconnected endpoint count but is
+rejected for source-pad/corridor crossings and destination-side conflicts.
+The failure is route implementation, not evidence against the 22 mm support
+relocation. Further routing must separate the SPI and control corridors
+before the remaining rail/support joins are attempted.
+
 The original isolated RTL9210B-CG bring-up fixture remains archived at
 `PHASE24_RTL9210B_BRINGUP_FIXTURE.kicad_pcb`. It captures the corrected
 QFN-68/M-key lane mapping, PEDET/sideband ownership, support-net boundary,
