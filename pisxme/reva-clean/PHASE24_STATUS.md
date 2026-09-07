@@ -38,6 +38,16 @@ U1.40-to-U1.41 and RTL_3V3-to-U1.35 clearance failures. This does not justify
 changing the land pattern or relaxing rules; authoritative package evidence
 is still required before either could be considered.
 
+V84/V85 tested a coordinated U1.39/U1.40 source-field reallocation using the
+repository's validated JLC rule basis. V84 duplicated the U1.40 via and V85
+removed the retained 3V3 via while replacing local tracks; both are rejected
+authoring variants. V86 corrects those mutations, preserves the native 3V3
+via, sets the disposable default netclass to 0.13208-mm minimum track / 0.15-mm
+clearance, and joins U1.40 to the promoted RTL_1V1 collector. Native DRC is 6
+inherited isolated-GND/silkscreen warnings with no signal violations, and
+native connectivity joins U1.40/U1.16/U1.25/U1.50/C4.1. Promote V86 only as
+the U1.40 edge-group sub-primitive; all remaining Path-B gates stay open.
+
 V81 tested the same V79 U1.40 path with a 0.15-mm fine-pitch dogbone. Native
 DRC rejected it at 10 findings / 25 opens: the escape still has only
 0.1647-mm clearance to U1.41, the reallocated 3V3 segment remains 0.100 mm

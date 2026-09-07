@@ -40,6 +40,18 @@ perimeter pads in the V79 disposable footprint did not clear the two local
 signal defects; native DRC remained 8 findings / 25 opens. No land-pattern
 promotion or board-rule change follows from this test.
 
+## V84–V86 coordinated QFN/JLC source-field trials
+
+V84 is rejected because the first JLC-rule candidate duplicated the U1.40
+via, and V85 is rejected because its cleanup removed the retained 3V3 via,
+leaving two dangling endpoints. V86 corrects both authoring defects: it keeps
+the native 3V3 via, replaces the local source tracks coherently, and persists
+the validated disposable JLC defaults (0.13208-mm minimum track and 0.15-mm
+clearance) in the default netclass. Native DRC reports only 6 inherited
+isolated-GND/silkscreen warnings; native saved connectivity joins U1.40 with
+U1.16/U1.25/U1.50/C4.1. Promote V86 only as the U1.40/3V3 edge-group
+sub-primitive, not as full RTL9210B support closure.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It
