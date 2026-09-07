@@ -5661,3 +5661,4 @@ F.Cu corridor in the next attempt.
 2026-09-07: Promoted RTL9210B V144 combined support basis by carrying V141's J1.2/J1.4/J1.6/J1.8 SSD_3V3 contact join onto V143. Native audits pass both rail joins and negative controls; six high-speed endpoint opens and the SSD_3V3 source/power gate remain open.
 2026-09-07: Rejected RTL9210B REFCLK lower-corridor trial V145 for inherited XTAL/1V1/CLKREQ and J1 sideband contacts/crossings. V144 remains the promoted basis; REFCLK route allocation remains open.
 2026-09-07: Rejected RTL9210B REFCLK trials V146/V147: V146 entered the J1 TX pad field and V147 still crossed the U1 exposed GND pad. REFCLK remains authoritative but needs local QFN lower-edge/RTL_1V1 source-field reallocation.
+2026-09-07: Rejected RTL9210B local RTL_1V1 relocation trials V148/V149: V148 crossed XTAL_IN and V149 still contacted XTAL_IN/C1 ground. The next support repair must co-author XTAL_IN and the lower 1V1 field.

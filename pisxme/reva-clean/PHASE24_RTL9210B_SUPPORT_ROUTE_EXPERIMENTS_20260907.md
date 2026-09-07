@@ -73,6 +73,11 @@ U1 exposed GND pad despite separating the J1 drops. These results identify a
 QFN lower-edge/RTL_1V1 source-field allocation problem. The next experiment
 must move or reauthor that local support field before another REFCLK sweep.
 
+V148/V149 are rejected local-support relocation trials. V148 moved the lower
+RTL_1V1 collector to B.Cu but crossed XTAL_IN; V149 added an F.Cu overpass but
+still contacted XTAL_IN and C1 ground. The next attempt must co-author the
+XTAL_IN and lower 1V1 fields together.
+
 ## V76–V78 U1.40 edge-group trials — rejected
 
 V76 placed the U1.40 RTL_1V1 transition at (92.8,68.8), where the via
