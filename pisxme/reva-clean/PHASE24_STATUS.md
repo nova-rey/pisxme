@@ -35,6 +35,12 @@ mask bridges). This remains a Path-B route-implementation gate. The V2
 support-local placement and corrected native layer serialization remain the
 current baseline; production CAD is unchanged.
 
+The V7 oscillator/RSET route is the first clean local Path-B routing result:
+native DRC reports 0 violations / 52 unconnected items, and its independent
+saved-track audit passes. This closes only the oscillator/RSET local route
+sub-gate. The rest of the support fixture remains unrouted and Path B remains
+isolated with `CONTINUE BOTH`.
+
 ## Current live correction — 2026-09-06
 
 The old V4 SATA claim is superseded for Path-A topology: its C30–C33 to J3

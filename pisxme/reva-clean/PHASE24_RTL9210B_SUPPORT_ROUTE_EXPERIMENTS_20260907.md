@@ -77,3 +77,14 @@ opens, including two shorts and three solder-mask bridges. V4 is rejected as
 worse than V3. These experiments do not reject RTL9210B or its support
 topology; they establish that another routing method is required rather than
 another fixed-coordinate oscillator trial.
+
+## Attempt 5 — V7 separated-layer oscillator route
+
+V7 changed the method rather than another local dogbone ordering: XTAL_IN
+escapes to B.Cu at a transition clear of the adjacent QFN pads, XTAL_OUT
+uses a separate transition below the XTAL_IN escape, and RSET uses an
+independent B.Cu corridor. Native KiCad DRC reports **0 violations / 52
+unconnected items**. The local saved-track audit passes and confirms that the
+three intended nets are actually authored; the 52 opens are the remaining
+unrouted support-fixture boundary and are not waived. V7 is therefore a local
+route PASS, not a full RTL9210B fixture PASS.

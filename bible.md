@@ -5048,3 +5048,9 @@ XTAL/RSET local shorts/crossing and a mask bridge; V4 regressed to 5 / 52
 with two shorts and three mask bridges. Rejected both as route
 implementations, retained the coherent V2 placement, and kept production CAD
 unchanged before changing routing method.
+2026-09-07 — PiSXMe Phase 24 Path B: changed routing method after the V3/V4
+ oscillator trials. V7 separates XTAL_IN, XTAL_OUT, and RSET with native
+ QFN-clear transitions and independent F.Cu/B.Cu corridors. Native DRC is
+ 0 violations / 52 intentional remaining opens and the independent local
+ saved-track audit passes. Closed only this local oscillator/RSET sub-gate;
+ the full fixture remains open and production CAD unchanged.
