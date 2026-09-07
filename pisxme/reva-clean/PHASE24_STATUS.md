@@ -24,6 +24,11 @@ those channels, then joins the existing 3V3 via field; native DRC reports no
 `shorting_items` or `tracks_crossing`, and saved connectivity joins U1.34 to
 the existing C3/R2/R3/U1.20 3V3 group. Promote V106 only as the disposable
 U1.34 edge-group basis; full Path-B support remains open.
+V107–V111 are rejected control-sideband route trials: V107 shorted adjacent
+CLKREQ_N/PERST_N vias, V108/V109 crossed the retained RTL_1V1/RTL_3V3 field,
+and V110/V111 retained companion-control or 1V1 crossings. These are
+authoring/allocation failures, not evidence against the RTL9210B control
+topology. The next control trial must use genuinely layer-separated launches.
 Native saved-board inspection joins U1.55 with U1.16/U1.25/U1.40/U1.50/
 U1.60/U1.63/C4.1, and a centerline scan finds no different-net track crossing
 for the new escape. The disposable fixture still has 19 intentional/open

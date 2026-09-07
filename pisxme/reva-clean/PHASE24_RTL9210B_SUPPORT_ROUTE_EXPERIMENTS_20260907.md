@@ -130,6 +130,15 @@ no `shorting_items` or `tracks_crossing`, and saved-board connectivity joins
 U1.34 to the existing C3/R2/R3/U1.20 group. Promote V106 only as the
 disposable U1.34 edge-group basis; full Path-B support remains open.
 
+## V107–V111 control-sideband trials — rejected
+
+V107 shorted adjacent CLKREQ_N/PERST_N vias. V108 and V109 moved the vias but
+crossed the retained RTL_1V1/RTL_3V3 field. V110 used F.Cu monotonic paths but
+the two control departures crossed each other at the QFN edge; V111 split the
+transitions but still crossed the retained 1V1 field and companion control
+route. Preserve these as route-allocation evidence only. The next trial must
+use genuinely layer-separated launches.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It
