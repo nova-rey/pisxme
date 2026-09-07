@@ -41,8 +41,8 @@ def main():
  # here.  Additional QFN rail pads remain for the subsequent collector pass.
  # Use alternating layers for the three long spines.  This avoids crossing
  # one rail's source escape with another rail's horizontal collector.
- n=b.FindNet('RTL_3V3');tr(b,n,F,(83.95,58.8),(83.95,57.5));tr(b,n,F,(83.95,57.5),(86.5,57.5));via(b,n,(86.5,57.5));tr(b,n,B,(86.5,57.5),(86.5,43));tr(b,n,B,(86.5,43),(120.4,43));tr(b,n,B,(120.4,43),(120.4,51));via(b,n,(120.4,51))
+ n=b.FindNet('RTL_3V3');tr(b,n,F,(83.95,58.8),(83.95,57.5));tr(b,n,F,(83.95,57.5),(84.8,57.5));via(b,n,(84.8,57.5));tr(b,n,B,(84.8,57.5),(84.8,43));tr(b,n,B,(84.8,43),(120.4,43));tr(b,n,B,(120.4,43),(120.4,51));via(b,n,(120.4,51))
  n=b.FindNet('RTL_1V1');tr(b,n,F,(82.8,58.05),(82.8,56.8));tr(b,n,F,(82.8,56.8),(83.5,56.8));via(b,n,(83.5,56.8));tr(b,n,B,(83.5,56.8),(83.5,45));via(b,n,(83.5,45));tr(b,n,F,(83.5,45),(123.4,45));via(b,n,(123.4,45));tr(b,n,B,(123.4,45),(123.4,51));via(b,n,(123.4,51))
- n=b.FindNet('RTL_5V');tr(b,n,F,(83.95,59.2),(85,59.2));via(b,n,(85,59.2));tr(b,n,B,(85,59.2),(85,47));via(b,n,(85,47));tr(b,n,F,(85,47),(126.4,47));via(b,n,(126.4,47));tr(b,n,B,(126.4,47),(126.4,51));via(b,n,(126.4,51))
+ n=b.FindNet('RTL_5V');tr(b,n,F,(83.95,59.2),(88,59.2));via(b,n,(88,59.2));tr(b,n,B,(88,59.2),(88,47));via(b,n,(88,47));tr(b,n,F,(88,47),(126.4,47));via(b,n,(126.4,47));tr(b,n,B,(126.4,47),(126.4,51));via(b,n,(126.4,51))
  b.BuildListOfNets();b.Save(str(OUT));print(OUT)
 if __name__=='__main__':main()

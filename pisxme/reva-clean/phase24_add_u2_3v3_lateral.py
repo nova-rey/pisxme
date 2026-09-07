@@ -14,7 +14,9 @@ def via(b,n,p):
 def main():
  b=pcbnew.LoadBoard(str(BASE));n=b.FindNet('RTL_3V3')
  tr(b,n,B,(120.4,43),(134.2,43))
- for x in (128.2,134.2):
-  via(b,n,(x,55));tr(b,n,B,(x,43),(x,55));tr(b,n,F,(x,55),(x,58))
+ # U2.3 is jogged around the nearby C5 ground pad; U2.8 can use a direct
+ # vertical landing.  Both branches remain on the named 3V3 net.
+ via(b,n,(129.5,43));tr(b,n,F,(129.5,43),(129.5,55));tr(b,n,F,(129.5,55),(128.2,58))
+ via(b,n,(134.2,43));tr(b,n,F,(134.2,43),(134.2,58))
  b.BuildListOfNets();b.Save(str(OUT));print(OUT)
 if __name__=='__main__':main()

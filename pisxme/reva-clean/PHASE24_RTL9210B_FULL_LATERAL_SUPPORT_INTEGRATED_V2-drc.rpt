@@ -1,60 +1,56 @@
 ** Drc report for PHASE24_RTL9210B_FULL_LATERAL_SUPPORT_INTEGRATED_V2.kicad_pcb **
-** Created on 2026-09-07T04:36:23 **
+** Created on 2026-09-07T04:44:53 **
 ** Report includes: Errors, Warnings **
 
-** Found 19 DRC violations **
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(85.0000 mm, 47.0000 mm): Track [RTL_5V] on F.Cu, length 41.4000 mm
-    @(95.6000 mm, 46.0000 mm): Track [SPISI] on F.Cu, length 12.0000 mm
+** Found 18 DRC violations **
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
     Local override; error
     @(126.4000 mm, 51.0000 mm): Pad 1 [RTL_5V] of C5 on F.Cu
     @(125.8000 mm, 48.0000 mm): Track [SPICS] on F.Cu, length 10.0000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
+    @(86.0000 mm, 48.0000 mm): Track [SPICS] on B.Cu, length 39.8000 mm
     @(123.4000 mm, 45.0000 mm): Track [RTL_1V1] on B.Cu, length 6.0000 mm
-    @(88.0000 mm, 50.0000 mm): Track [SPISO3] on B.Cu, length 45.0000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(89.0000 mm, 52.0000 mm): Track [SPICLK] on B.Cu, length 42.8000 mm
-    @(128.2000 mm, 43.0000 mm): Track [RTL_3V3] on B.Cu, length 12.0000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(95.6000 mm, 70.0000 mm): Track [SPISI] on F.Cu, length 24.0000 mm
-    @(85.0000 mm, 47.0000 mm): Track [RTL_5V] on F.Cu, length 41.4000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(123.4000 mm, 45.0000 mm): Track [RTL_1V1] on B.Cu, length 6.0000 mm
-    @(87.0000 mm, 49.0000 mm): Track [SPISO] on B.Cu, length 40.0000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
-    Local override; error
-    @(86.5000 mm, 57.5000 mm): Via [RTL_3V3] on F.Cu - B.Cu
-    @(87.0000 mm, 62.0000 mm): Track [SPISO] on B.Cu, length 13.0000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
-    Local override; error
-    @(87.0000 mm, 62.0000 mm): Track [SPISO] on B.Cu, length 13.0000 mm
-    @(86.5000 mm, 57.5000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+    @(86.0000 mm, 48.0000 mm): Track [SPICS] on B.Cu, length 4.8000 mm
+    @(88.0000 mm, 59.2000 mm): Track [RTL_5V] on B.Cu, length 12.2000 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
     Local override; error
     @(126.4000 mm, 51.0000 mm): Pad 1 [RTL_5V] of C5 on F.Cu
     @(127.0000 mm, 49.0000 mm): Track [SPISO] on F.Cu, length 9.0000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
-    Local override; error
-    @(86.5000 mm, 57.5000 mm): Via [RTL_3V3] on F.Cu - B.Cu
-    @(86.0000 mm, 61.0000 mm): Track [SPICS] on B.Cu, length 13.0000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(86.0000 mm, 48.0000 mm): Track [SPICS] on B.Cu, length 4.8000 mm
-    @(86.5000 mm, 57.5000 mm): Track [RTL_3V3] on B.Cu, length 14.5000 mm
+    @(87.0000 mm, 49.0000 mm): Track [SPISO] on B.Cu, length 5.0000 mm
+    @(88.0000 mm, 59.2000 mm): Track [RTL_5V] on B.Cu, length 12.2000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(86.0000 mm, 48.0000 mm): Track [SPICS] on B.Cu, length 39.8000 mm
+    @(87.0000 mm, 49.0000 mm): Track [SPISO] on B.Cu, length 40.0000 mm
     @(123.4000 mm, 45.0000 mm): Track [RTL_1V1] on B.Cu, length 6.0000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+[tracks_crossing]: Tracks crossing
     Local override; error
-    @(86.0000 mm, 61.0000 mm): Track [SPICS] on B.Cu, length 13.0000 mm
-    @(86.5000 mm, 57.5000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+    @(88.0000 mm, 47.0000 mm): Track [RTL_5V] on F.Cu, length 38.4000 mm
+    @(95.6000 mm, 70.0000 mm): Track [SPISI] on F.Cu, length 24.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(88.0000 mm, 47.0000 mm): Track [RTL_5V] on F.Cu, length 38.4000 mm
+    @(95.6000 mm, 46.0000 mm): Track [SPISI] on F.Cu, length 12.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(88.0000 mm, 59.2000 mm): Track [RTL_5V] on B.Cu, length 12.2000 mm
+    @(88.0000 mm, 50.0000 mm): Track [SPISO3] on B.Cu, length 10.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(123.4000 mm, 45.0000 mm): Track [RTL_1V1] on B.Cu, length 6.0000 mm
+    @(88.0000 mm, 50.0000 mm): Track [SPISO3] on B.Cu, length 45.0000 mm
+[shorting_items]: Items shorting two nets (nets RTL_5V and SPISO3)
+    Local override; error
+    @(88.0000 mm, 59.2000 mm): Via [RTL_5V] on F.Cu - B.Cu
+    @(88.0000 mm, 63.0000 mm): Track [SPISO3] on B.Cu, length 13.0000 mm
+[shorting_items]: Items shorting two nets (nets RTL_5V and SPISO3)
+    Local override; error
+    @(88.0000 mm, 59.2000 mm): Via [RTL_5V] on F.Cu - B.Cu
+    @(88.0000 mm, 63.0000 mm): Track [SPISO3] on B.Cu, length 13.0000 mm
 [starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)
     Local override; error
     @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
@@ -79,11 +75,11 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(88.0000 mm, 78.0000 mm): Pad 1 [SPICS] of TP1 on F.Cu
-    @(83.9500 mm, 62.8000 mm): Track [SPICS] on F.Cu, length 1.0500 mm
+    @(85.0000 mm, 62.8000 mm): Track [SPICS] on F.Cu, length 1.8000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(100.0000 mm, 78.0000 mm): Pad 1 [SPISO] of TP4 on F.Cu
-    @(85.5000 mm, 62.0000 mm): Track [SPISO] on F.Cu, length 1.5000 mm
+    @(87.0000 mm, 62.0000 mm): Track [SPISO] on B.Cu, length 13.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(76.0500 mm, 60.0000 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
@@ -114,16 +110,16 @@
     @(83.9500 mm, 62.4000 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(83.9500 mm, 59.2000 mm): Track [RTL_5V] on F.Cu, length 1.0500 mm
+    @(83.9500 mm, 59.2000 mm): Track [RTL_5V] on F.Cu, length 4.0500 mm
     @(83.2000 mm, 65.9500 mm): Pad 17 [RTL_5V] of U1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(96.0000 mm, 78.0000 mm): Pad 1 [SPISI] of TP3 on F.Cu
-    @(95.6000 mm, 70.0000 mm): Track [SPISI] on F.Cu, length 24.0000 mm
+    @(85.5000 mm, 70.0000 mm): Track [SPISI] on F.Cu, length 10.1000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(92.0000 mm, 78.0000 mm): Pad 1 [SPICLK] of TP2 on F.Cu
-    @(89.0000 mm, 64.8000 mm): Track [SPICLK] on B.Cu, length 12.8000 mm
+    @(83.9500 mm, 64.8000 mm): Track [SPICLK] on F.Cu, length 5.0500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(75.2000 mm, 48.0000 mm): Pad 2 [RTL_3V3] of R3 on F.Cu
@@ -131,19 +127,19 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(76.0500 mm, 58.8000 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
-    @(75.2000 mm, 48.0000 mm): Pad 2 [RTL_3V3] of R3 on F.Cu
+    @(81.6000 mm, 58.0500 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
+    @(83.9500 mm, 57.5000 mm): Track [RTL_3V3] on F.Cu, length 0.8500 mm
     @(81.6000 mm, 58.0500 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
-    @(83.9500 mm, 57.5000 mm): Track [RTL_3V3] on F.Cu, length 2.5500 mm
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(81.6000 mm, 58.0500 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
-    @(76.0500 mm, 58.8000 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(83.9500 mm, 58.8000 mm): Track [RTL_3V3] on F.Cu, length 1.3000 mm
     @(83.9500 mm, 64.4000 mm): Pad 20 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(84.8000 mm, 43.0000 mm): Track [RTL_3V3] on B.Cu, length 35.6000 mm
+    @(75.2000 mm, 48.0000 mm): Pad 2 [RTL_3V3] of R3 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(79.2000 mm, 58.0500 mm): Pad 45 [GND] of U1 on F.Cu
