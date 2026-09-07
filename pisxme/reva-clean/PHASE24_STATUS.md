@@ -5368,3 +5368,9 @@ V3 reached the full crystal endpoint set at 6 DRC / 25 opens but crossed an
 RTL_1V1 escape. V4 moved the final leg and introduced XTAL_OUT shorts to
 XTAL_IN and RTL_1V1, at 7 DRC / 25 opens. Both are rejected; production CAD
 is unchanged.
+### Path-B QFN escape map and crystal V5 (rejected)
+
+The native QFN map is saved in `PHASE24_RTL9210B_QFN_ESCAPE_MAP_20260907.txt`.
+Crystal V5 used the mapped outer perimeter but produced 18 DRC violations
+from RTL_5V/control/perimeter conflicts. It is rejected; production CAD is
+unchanged.

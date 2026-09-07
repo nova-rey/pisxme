@@ -354,3 +354,12 @@ crossing an existing RTL_1V1 pad escape. V4 moved that final leg, but native
 DRC found seven violations including XTAL_OUT shorts to the XTAL_IN via and
 RTL_1V1 via. Both remain disposable negative evidence; no production copper
 is promoted.
+## QFN escape map and crystal V5 — rejected
+
+`phase24_rtl9210b_qfn_escape_map.py` records native U1 pad coordinates and
+all existing track/via corridors in the x=73..87, y=56..68 window. It shows
+that the RTL_1V1 collector and control transitions form a real local barrier.
+Crystal V5 routed XTAL_OUT around the outer perimeter, but native DRC found
+18 violations including RTL_5V crossing/shorts, PEDET/PERST/CLKREQ conflicts,
+and a GND-pad clearance failure. V5 is rejected; the map is retained as the
+authoritative basis for the next escape attempt.

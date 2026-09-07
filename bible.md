@@ -5253,3 +5253,7 @@ unchanged.
 reached all endpoints at 6 DRC / 25 opens but crossed RTL_1V1; V4 moved the
 final leg but shorted XTAL_IN and RTL_1V1, at 7 DRC / 25 opens. Rejected as
 route implementation evidence; production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: generated the native RTL9210B QFN
+escape map and tested crystal V5. The map exposes the RTL_1V1/control-field
+barriers; V5's outer-perimeter XTAL_OUT route produced 18 DRC violations.
+Rejected as route implementation evidence; production CAD unchanged.
