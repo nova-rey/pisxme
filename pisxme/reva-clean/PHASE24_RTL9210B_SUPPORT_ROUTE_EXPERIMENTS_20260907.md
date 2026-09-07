@@ -1580,3 +1580,18 @@ negative control pass. Native DRC reports 541 findings / 14 unconnected
 items, including three signal shorts (USB_RXN0/RTL_3V3 twice and RTL_3V3/GND)
 and one remaining source-field crossing. Reject V250; the adjacent inherited
 USB/3V3/GND fields must be co-relocated before another parallel escape.
+negative control pass. Native DRC reports 541 findings / 14 unconnected
+items, including three signal shorts (USB_RXN0/RTL_3V3 twice and RTL_3V3/GND)
+and one remaining source-field crossing. Reject V250; the adjacent inherited
+USB/3V3/GND fields must be co-relocated before another parallel escape.
+
+## V251–V253 QFN source-field co-allocation — rejected
+
+V251 co-authored the U1.52 RTL_3V3 branch with the V250 field; native rail,
+REFCLK, and RTL_3V3 connectivity plus the trace-removal negative control
+passed, but DRC reported an XTAL_IN/RTL_3V3 short and one crossing. V252
+moved that handoff again and retained two source-field short/crossing classes.
+V253 moved it farther west; native connectivity and the negative control still
+passed, while DRC reported 541 findings / 14 unconnected items, three
+crossings, and one RTL_3V3/GND short. Reject V251–V253 as route
+implementations; no Path-A or production-CAD change occurred.

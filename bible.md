@@ -532,6 +532,11 @@ Native connectivity and the trace-removal negative control passed, but DRC
 found five crossings against RTL_5V, PEDET, RTL_3V3, REFCLK_P, and PERST_N.
 V242 remains the promoted disposable rail basis; Path A and production CAD
 remain unchanged.
+2026-09-07: Rejected RTL9210B V251-V253 QFN source-field co-allocation
+trials. Native rail/REFCLK/RTL3V3 connectivity and negative controls passed,
+but the successive U1.52 handoffs retained XTAL_IN, source-field crossing,
+and RTL_3V3/GND defects. V242 remains promoted; Path A and production CAD
+remain unchanged.
 2026-09-07: Rejected RTL9210B V246 lower-edge U1.60/U1.63 allocation pending
 one PERST-column overpass. Native connectivity and negative control passed;
 DRC reduced the new route defect to one RTL_1V1/PERST_N crossing, with one
