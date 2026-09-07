@@ -2,7 +2,7 @@
 
 ## Current checkpoint — 2026-09-06
 
-Latest focused routing-generator checkpoint: `9645567`. The deduplication
+Latest focused routing-generator checkpoint: `e449d06`. The deduplication
 experiment recorded in `PHASE24_PATHA_SATA_ROUTER_DEDUP_20260906.md` is
 rejected as route implementation failure; no integrated board was changed.
 
@@ -21,6 +21,13 @@ The follow-on local-corridor discriminator is recorded in
 `PHASE24_PATHA_SATA_LOCAL_CORRIDOR_20260906.md`: source net ownership passes,
 but the current unconstrained A* implementation cannot emit a local route.
 This remains a route-method failure, not a storage-architecture rejection.
+
+The subsequent canonical native corridor trial is recorded in
+`PHASE24_PATHA_SATA_CORRIDOR_CANONICAL_20260906.md`. It derives U7 starts and
+rotated J3 launch coordinates from native pads, and its assertion-only audit
+passes all eight SATA endpoint pairs. Native DRC still rejects the disposable
+fixture with 251 findings; this is an open route-implementation experiment,
+not a Phase 24 or Path-A closure.
 
 Latest private storage evidence checkpoint: `9e45a72`. The retained WIP
 RTL9210B native XML support netlist now has a reproducible audit with

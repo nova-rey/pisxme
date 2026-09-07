@@ -4856,3 +4856,6 @@ validation remain open.
  The native endpoint audit passed all eight SATA endpoints. Native DRC still
  rejected the fixture (251 violations), so the candidate was not promoted;
  raw DRC and the focused receipt preserve the route-implementation evidence.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: refreshed the live status
+ checkpoint to `e449d06` and recorded that the eight-endpoint SATA audit is
+ passing while native DRC remains open on the disposable corridor trial.
