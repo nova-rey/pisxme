@@ -4959,3 +4959,10 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  connectivity negative control. Removing one real saved track caused the
  native C30.1-to-J3.49 connection to fail, confirming the focused endpoint
  audit is assertion-only and derives connectivity from saved KiCad objects.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: built one source-derived
+ high-speed fixture containing USB3 selector/bridge routing and the V4 SATA
+ escape. All ten USB3 and all eight SATA native endpoint assertions passed,
+ but native DRC found 576 violations / 187 opens, including real crossings
+ and shorts where the historical USB3 corridor intersects the SATA launch.
+ Preserved it as route/placement evidence, not production authority, and
+ fixed the USB3 disposable author to use safe native collection mutation.

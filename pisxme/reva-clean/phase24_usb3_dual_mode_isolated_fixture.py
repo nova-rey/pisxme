@@ -6,11 +6,12 @@ are injected: every endpoint is an actual saved pad and every connection is
 native PCB copper.
 """
 from pathlib import Path
+import os
 import pcbnew
 
 R = Path(__file__).resolve().parent
-BASE = R / "PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb"
-OUT = R / "PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED.kicad_pcb"
+BASE = Path(os.environ.get("PISXME_USB3_ISO_BASE", str(R / "PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb")))
+OUT = Path(os.environ.get("PISXME_USB3_ISO_OUT", str(R / "PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED.kicad_pcb")))
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 # Match the saved board's approved minimum differential-pair width; the
 # earlier 0.15-mm trial is retained only as rejected evidence.
@@ -50,7 +51,13 @@ def escape_via(b, n, p, x, y):
 
 def main():
     b = pcbnew.LoadBoard(str(BASE))
-    keep = {"J7", "U11", "U12", "C86", "C87"}
+    keep = {
+        "J7", "U7", "U11", "U12", "U13", "U14", "J3", "J5",
+        "C30", "C31", "C32", "C33", "C86", "C87", "Y1", "R23",
+        "C42", "C43", "R24", "R32", "R33", "L10", "R80", "R81",
+        "R82", "R83", "C80", "C81", "C82", "C83", "C84", "C85",
+        "C86", "C87", "C88", "C89", "C90", "C91", "C92", "C93",
+    }
     for f in list(b.GetFootprints()):
         if f.GetReference() not in keep: b.RemoveNative(f)
     for t in list(b.GetTracks()): b.RemoveNative(t)

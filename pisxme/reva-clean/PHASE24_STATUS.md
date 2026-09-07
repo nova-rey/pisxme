@@ -79,6 +79,13 @@ The V4 native connectivity negative control also passes: removing one actual
 saved SATA track disconnects C30.1 -> J3.49. This confirms the focused audit
 uses saved pads/tracks/vias rather than synthetic expected edges.
 
+The combined dual-mode storage high-speed fixture is recorded in
+`PHASE24_DUAL_MODE_STORAGE_HS_FIXTURE_20260906.md`. Its single saved board
+passes all ten USB3 and all eight SATA native endpoint audits, but native DRC
+reports 576 findings / 187 unconnected items, including real USB3/SATA
+crossings and shorts. It is therefore a route/placement discriminator only;
+the dual-mode source architecture remains open and unaltered.
+
 ## Current Path-B qualification checkpoint — 2026-09-06
 
 The isolated RTL9210B-CG candidate now has explicit authority and mode
