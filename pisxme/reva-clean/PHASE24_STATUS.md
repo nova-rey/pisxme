@@ -6475,6 +6475,18 @@ This remains disposable support evidence only. RTL_5V's remaining source/
 support joins, RTL_1V1, west-field RTL_3V3, SPI/control, and full Path-B mode
 validation remain open.
 
+## Current RTL9210B 1V1 rail slice — V188
+
+`PHASE24_RTL9210B_RTL1V1_U116_C4_V188.kicad_pcb` adds the native U1.16 to
+C4.1 RTL_1V1 handoff on a dedicated B.Cu corridor. Native KiCad DRC reports
+282 findings / 28 unconnected items with zero `shorting_items` or
+`tracks_crossing`; saved native connectivity and the trace-removal negative
+control pass.
+
+This is disposable rail evidence only. The remaining RTL_1V1 collector,
+west-field RTL_3V3 launches, SPI/control paths, and full Path-B validation
+remain open.
+
 ## Current RTL9210B shared 3V3 rail — V186
 
 The latest disposable rail basis is
