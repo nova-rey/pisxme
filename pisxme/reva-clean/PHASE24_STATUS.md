@@ -132,6 +132,13 @@ left-edge via too close to the 3V3 escape. This is a route implementation
 failure, not a supply-rail authority decision. V59 remains the only promoted
 1V1 sub-primitive; the remaining edge groups require separate corridors.
 
+V63 validates the U1.25-to-C4.1 RTL_1V1 sub-primitive. U1.25 exits left of
+the SPICS via, rises to the upper perimeter, and joins the existing C4.1
+right-side corridor without crossing retained copper. Native DRC is 5
+non-signal isolated-copper/silkscreen warnings / 26 opens with no new signal
+violations. V60-V62 remain rejected full/perimeter and upper-corridor trials;
+the remaining RTL_1V1 U1 edge groups are still open.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

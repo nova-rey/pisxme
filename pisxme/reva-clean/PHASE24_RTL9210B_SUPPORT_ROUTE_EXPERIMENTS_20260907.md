@@ -109,6 +109,13 @@ crossed retained XTAL_IN/XTAL_OUT/RSET and SPI fields and violated the local
 the current promoted U1.16/C4.1 sub-primitive, and the remaining 1V1 groups
 must be allocated in separate native corridors.
 
+V63 validates the U1.25 RTL_1V1 top-edge sub-primitive. Its F.Cu escape is
+offset left of SPICS before entering the upper B.Cu perimeter, which joins the
+existing C4.1 right-side route. Native DRC reports 5 non-signal
+isolated-copper/silkscreen warnings / 26 intended opens and no new signal
+violations. Promote V63 only as this U1.25/C4.1 sub-primitive; remaining 1V1
+groups are unfinished.
+
 V57 completes the RTL_5V disposable rail primitive. Its U1.33-to-U1.17
 F.Cu escape passes above the native SPI source endpoints, then uses the
 SPI-clear B.Cu dogleg and a right-side C5.1 launch. Native DRC reports 5
