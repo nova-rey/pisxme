@@ -1552,3 +1552,12 @@ RTL_1V1/PERST_N B.Cu crossing at the horizontal handoff near (104.5,65.8);
 the report also contains one ISOLATEB/CLKREQ_N shorting class in the retained
 sideband field. Reject V246 pending a PERST-column overpass; it is useful
 allocation evidence and does not alter V242 or production CAD.
+
+## V248 RTL_1V1 U1.60/U1.63 source-dogbone correction — rejected
+
+V248 corrected V247's U1.60 source departure around no-connect pad 59 and
+used the split F.Cu/B.Cu handoff. Native U1.36/U1.60/U1.63 connectivity and
+the full-rail-removal negative control pass. Native DRC reports 527 findings
+/ 14 unconnected items, including an REFCLK_N crossing at the corrected
+source field and a no-connect-pad/RTL_3V3 short. Reject V248; the next trial
+must move the source escape farther from the REFCLK and no-connect fields.

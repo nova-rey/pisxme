@@ -5775,3 +5775,7 @@ corrected native audit passed U1.36/U1.40-to-C4.1 and U1.39/U1.52-to-C3.1
 connectivity with a trace-removal negative control, but native DRC introduced
 USB_RXN0/RTL_3V3 and ISOLATEB/CLKREQ_N shorting classes. V242 remains the
 promoted rail basis; Path A and production CAD remain unchanged.
+2026-09-07: Rejected RTL9210B V248 corrected U1.60/U1.63 source dogbone.
+Native connectivity and the full-rail-removal negative control passed, but DRC
+reported an REFCLK_N crossing and a no-connect-pad/RTL_3V3 short. V242 remains
+the promoted disposable rail basis; Path A and production CAD are unchanged.
