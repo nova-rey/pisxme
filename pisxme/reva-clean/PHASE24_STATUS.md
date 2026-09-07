@@ -9,11 +9,11 @@ The V11 crystal/support baseline was freshly rechecked with native KiCad:
 RTL_1V1 endpoints pass the saved-board connectivity audit, including its
 negative control. The next implementation class is a coherent support-branch
 relocation. Disposable candidate `PHASE24_RTL9210B_SUPPORT_BRANCH_RELOCATED_V1`
-translates U2/C3/C4/C5/R2/R3 by 22 mm but intentionally retains old copper;
-its 115-violation/31-open DRC is stale-copper and provisional-join
-route-implementation evidence,
-not a placement comparison. A stable net-aware copper rewrite is the next
-action. Production CAD and Path A remain unchanged.
+translates U2/C3/C4/C5/R2/R3 by 22 mm and scrubs only the affected serialized
+tracks/vias before saving. Native DRC is 2 violations / 44 opens; the opens
+are expected because the relocated branch is intentionally unrouted. This is
+now a clean placement-only candidate, not a completion claim. Production CAD
+and Path A remain unchanged.
 
 The original isolated RTL9210B-CG bring-up fixture remains archived at
 `PHASE24_RTL9210B_BRINGUP_FIXTURE.kicad_pcb`. It captures the corrected

@@ -11,6 +11,7 @@ import pcbnew
 HERE = Path(__file__).resolve().parent
 BASE = HERE / "PHASE24_RTL9210B_CRYSTAL_V11.kicad_pcb"
 OUT = HERE / "PHASE24_RTL9210B_SUPPORT_BRANCH_RELOCATED_V1.kicad_pcb"
+SCRUBBED = HERE / ".phase24_support_branch_scrubbed.kicad_pcb"
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 W = pcbnew.FromMM(0.20)
 DX, DY = 0.0, 22.0
@@ -27,8 +28,33 @@ def seg(board, net, layer, a, z):
     t.SetWidth(W); t.SetNet(net); t.SetNetCode(net.GetNetCode())
     board.Add(t)
 
+def scrub_affected_copper(src):
+    """Remove serialized segment/via blocks without SWIG collection mutation."""
+    text = src.read_text()
+    starts = []
+    i = 0
+    while i < len(text):
+        if text.startswith("\t(segment", i) or text.startswith("\t(via", i):
+            depth = 0; j = i
+            while j < len(text):
+                if text[j] == "(": depth += 1
+                elif text[j] == ")":
+                    depth -= 1
+                    if depth == 0:
+                        block = text[i:j + 1]
+                        if any(f'(net "{name}")' in block for name in NETS):
+                            starts.append((i, j + 1))
+                        i = j
+                        break
+                j += 1
+        i += 1
+    for a, z in reversed(starts):
+        text = text[:a] + text[z:]
+    SCRUBBED.write_text(text)
+
 def main():
-    board = pcbnew.LoadBoard(str(BASE))
+    scrub_affected_copper(BASE)
+    board = pcbnew.LoadBoard(str(SCRUBBED))
     codes = {board.FindNet(name).GetNetCode() for name in NETS
              if board.FindNet(name)}
     # This first candidate deliberately preserves copper.  Removing mixed
@@ -44,21 +70,10 @@ def main():
             raise RuntimeError(f"missing footprint {ref}")
         fp.SetPos(fp.GetPosition() + v(DX, DY))
 
-    # Add deliberately simple local support joins at the relocated branch.
-    # Long/global fanout remains intentionally open for the next routing pass.
-    for name in ("RTL_3V3", "RTL_1V1", "RTL_5V"):
-        net = board.FindNet(name)
-        pads = []
-        for fp in board.GetFootprints():
-            for pad in fp.Pads():
-                if pad.GetNetCode() == net.GetNetCode():
-                    p = pad.GetPosition()
-                    pads.append((pcbnew.ToMM(p.x), pcbnew.ToMM(p.y)))
-        pads.sort(key=lambda p: (p[1], p[0]))
-        for a, z in zip(pads, pads[1:]):
-            if abs(a[0] - z[0]) + abs(a[1] - z[1]) < 18:
-                seg(board, net, F, a, (z[0], a[1]))
-                seg(board, net, F, (z[0], a[1]), z)
+    # Do not synthesize support joins in this placement-only candidate.  The
+    # next route writer must derive each net's legal escape from these moved
+    # pads; a sorted XY chain would be synthetic connectivity and could hide
+    # the actual local routing problem.
 
     board.BuildListOfNets()
     board.Save(str(OUT))
