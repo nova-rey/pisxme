@@ -64,6 +64,15 @@ joins U1.60 to U1.16/U1.25/U1.40/U1.50/C4.1. Promote V95 only as the U1.60
 edge-group primitive; remaining U1.36/U1.55/U1.63 and full support gates are
 unfinished.
 
+## V96 U1.63 shared launch — promoted sub-primitive
+
+V96 joins U1.63 to the promoted U1.60 F.Cu launch without a new via or
+XTAL/support route. Native DRC reports only the eight inherited
+isolated-GND/silkscreen warnings; native saved connectivity joins U1.63 with
+U1.16/U1.25/U1.40/U1.50/U1.60/C4.1, reducing the fixture to 23 opens. This is
+only the U1.63 edge-group primitive; U1.36/U1.55 and full Path-B closure are
+unfinished.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It
