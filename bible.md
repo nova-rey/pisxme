@@ -511,7 +511,12 @@ Recorded seeded-exit search result; inherited SATA launch still blocks downstrea
   preserve manufacturable clearance.
 - The J10-side route stays below the connector contact row and avoids the
   existing FAST-B USB3 DM/RX geometry. PCIe and accepted high-speed routes are
-  unchanged.
+unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: preserved PEDET/CLKREQ control-route
+ variants V2 and V3. V2 reduced the local class to 3 crossings / 33 opens;
+ V3 regressed to 5 crossings / 33 opens after moving the inherited RTL_1V1
+ corridor. Rejected both as route implementations and retained the clean
+ RESET_N/PERST_N baseline.
 - Lock-free KiCad 10.0.5 DRC reports 67 total findings and 347 remaining
   unconnected items. No FAST-B CC2-specific unconnected, short, clearance,
   crossing, mask, drill, or via findings were introduced; only the inherited

@@ -138,4 +138,7 @@ RESET_N versus PERST_N ownership, but the PEDET/CLKREQ B.Cu corridors crossed
 the rail/SPI corridors and one J1 transition was too close to PERST. A
 corrected separate RESET_N/PERST_N route was then authored from the V6 rail
 baseline and passes native DRC at **0 violations / 37 opens**. PEDET/CLKREQ
-remain the next control-routing gate and are not waived.
+remain the next control-routing gate and are not waived. V2 reduced the
+combined PEDET/CLKREQ class to 3 crossings / 33 opens; V3 changed the
+RTL_1V1 corridor but regressed to 5 crossings / 33 opens. Both are retained
+as rejected route evidence, not current fixture candidates.

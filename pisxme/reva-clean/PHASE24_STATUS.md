@@ -72,7 +72,11 @@ The corrected separate RESET_N/PERST_N route passes its endpoint audit and
 native DRC with 37 remaining opens. The first combined PEDET/CLKREQ trial is
 rejected at 8 DRC violations / 33 opens due to same-layer corridor crossings,
 two control-to-power interactions, and a J1 via clearance issue; it is not
-used as current fixture evidence.
+used as current fixture evidence. A follow-up V2 control arrangement reduced
+the PEDET/CLKREQ class to 3 crossings / 33 opens, but still crossed the
+inherited RTL_1V1 corridor; V3 changed that corridor and regressed to 5
+crossings / 33 opens. Both remain rejected route implementations. The clean
+RESET_N/PERST_N candidate remains the current control baseline.
 
 ## Current live correction — 2026-09-06
 
