@@ -5285,3 +5285,6 @@ unchanged.
 V1. It reduced opens 25 to 24 but shorted RTL_5V and crossed RTL_1V1,
 producing 9 native DRC violations. Rejected as route implementation evidence;
 production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested U1 RTL_3V3 pad-34 escape V1.
+It reduced opens 25 to 24 but shorted RTL_5V and crossed RTL_1V1, producing
+9 native DRC violations. Rejected; coherent support relocation is required.

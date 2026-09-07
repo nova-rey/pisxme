@@ -5415,3 +5415,8 @@ It is rejected; V11 remains the preferred disposable baseline.
 The pad-34 escape reduced opens 25 to 24 but shorted the RTL_5V bus and
 crossed RTL_1V1, producing 9 native DRC violations. Rejected; production CAD
 is unchanged.
+### Path-B pad-34 3V3 escape V1 (rejected)
+
+The pad-34 escape reduced opens 25 to 24 but shorted RTL_5V and crossed
+RTL_1V1, yielding 9 native DRC violations. Rejected; isolated 3V3 escapes
+are no longer the active route class.

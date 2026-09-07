@@ -385,3 +385,10 @@ opens from 25 to 24. Its F.Cu jog was 0.0472 mm from the RTL_5V bus and
 shorted it; the B.Cu trunk also crossed the RTL_1V1 bus. Native DRC reported
 9 violations. Rejected; this indicates coherent 3V3 support relocation is
 needed rather than further local trace nudging.
+## U1 RTL_3V3 pad-34 B.Cu escape V1 — rejected
+
+The pad-34 offset escape reached one additional native endpoint, reducing
+opens 25 to 24. Native DRC reported 9 violations: the short F.Cu jog was
+0.0472 mm from the RTL_5V bus and shorted it, while the B.Cu trunk crossed
+the RTL_1V1 bus. This route class is rejected; the measured result requires
+coherent 3V3/1V1 support relocation.
