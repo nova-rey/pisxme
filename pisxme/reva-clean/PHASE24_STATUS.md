@@ -123,6 +123,13 @@ and opens remain 17 / 26, with no reduction in the missing QFN rail
 connections. The zone did not establish the required pad-field continuity;
 no validation rule was relaxed and V5 remains the baseline.
 
+The V9 pad-aware RTL_1V1 escape probe is rejected. Native DRC reports 32
+violations / 22 opens, including new CLKREQ_N/RTL_1V1, RTL_3V3/RTL_1V1,
+RTL_1V1/RTL_5V, and board-edge conflicts. The attempted serialized QFN
+escape remains a route-implementation failure; V5 is retained and the next
+class must use native/source-authority escape geometry rather than more
+coordinate-only edits.
+
 The rail layer rebalance is now verified: the rail-only/U2 branch returns to
 native DRC 0 violations / 45 opens, and regenerating the combined candidate
 reduces its native DRC to 18 violations / 34 opens with the combined endpoint

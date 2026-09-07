@@ -5389,3 +5389,7 @@ as superseded provisional-join evidence. Production CAD and Path A unchanged.
 probe V8. Native DRC and opens remained 17/26, so the zone did not establish
 QFN rail continuity and was rejected. No validation rule or production CAD
 changed; V5 remains the baseline.
+2026-09-07 — PiSXMe Phase 24 Path B: tested pad-aware RTL_1V1 escape probe
+V9. Native DRC reports 32 violations / 22 opens, including new control/rail,
+rail/rail, and edge-clearance conflicts. Rejected as route-implementation
+failure; V5 remains the baseline and production CAD is unchanged.
