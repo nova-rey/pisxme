@@ -6772,3 +6772,7 @@ RTL9210B QFN support field remains incomplete and unpromoted.
 V262 is rejected: moving the RTL_1V1 via bus to y=68.8 mm reduced opens to 13
 but created multiple RTL_1V1/REFCLK/XTAL shorting classes. The next repair is
 coherent support-component relocation with coordinated field regeneration.
+V266 is the retained scrubbed placement baseline: after correcting the V265
+Y1/C1 overlap, native DRC reports 228 findings / 36 opens with no shorting or
+track-crossing class and zero footprint errors. Support copper is intentionally
+absent; route regeneration now starts from this placement.

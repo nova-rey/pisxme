@@ -1640,6 +1640,16 @@ REFCLK_N, and XTAL_OUT. Reject; the QFN support field must be co-authored
 with those neighboring analog/clock escapes rather than populated with
 independent vias.
 
+## V265–V266 coherent support-cluster placement — V266 retained
+
+The first scrubbed placement (V265) put Y1/C1 too close and produced one
+XTAL_OUT/GND pad overlap. V266 translated C1 to clear that overlap. The
+scrubbed V266 board has no `shorting_items`, no `tracks_crossing`, and zero
+footprint errors; native DRC reports 228 findings / 36 opens because all
+affected support copper was intentionally removed. V266 is retained as the
+placement baseline for coordinated route regeneration; it is not yet a
+routed or promoted RTL9210B implementation.
+
 ## V259–V260 CLKREQ local re-escape — rejected
 
 V259 escaped U1.13 CLKREQ_N to an ordinary via west of the adjacent U1.12

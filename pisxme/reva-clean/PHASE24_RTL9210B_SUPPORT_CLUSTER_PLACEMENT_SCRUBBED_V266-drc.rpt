@@ -1,0 +1,1061 @@
+** Drc report for PHASE24_RTL9210B_SUPPORT_CLUSTER_PLACEMENT_SCRUBBED_V266.kicad_pcb **
+** Created on 2026-09-07T18:58:36 **
+** Report includes: Errors, Warnings **
+
+** Found 228 DRC violations **
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(134.5000 mm, 72.0000 mm): Track [PERST_N] on F.Cu, length 2.2822 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 60.0000 mm): Track [PERST_N] on F.Cu, length 2.5500 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(134.5000 mm, 72.0000 mm): Via [PERST_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(134.5000 mm, 72.0000 mm): Via [PERST_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(134.5000 mm, 72.0000 mm): Via [PERST_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(134.5000 mm, 72.0000 mm): Via [PERST_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(104.5000 mm, 63.0000 mm): Via [PERST_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(104.5000 mm, 63.0000 mm): Via [PERST_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(104.5000 mm, 72.0000 mm): Track [PERST_N] on B.Cu, length 30.0000 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(104.5000 mm, 63.0000 mm): Via [PERST_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(104.5000 mm, 63.0000 mm): Via [PERST_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1432 mm)
+    Local override; error
+    @(98.4000 mm, 65.9500 mm): Track [REFCLK_P] on F.Cu, length 0.8732 mm
+    @(98.0000 mm, 65.9500 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(98.4000 mm, 65.9500 mm): Track [REFCLK_P] on F.Cu, length 0.8732 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(104.5000 mm, 63.0000 mm): Track [PERST_N] on B.Cu, length 9.0000 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(138.5000 mm, 60.0000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(138.5000 mm, 60.0000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(138.5000 mm, 60.0000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(138.5000 mm, 60.0000 mm): Track [REFCLK_P] on F.Cu, length 2.9980 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(138.5000 mm, 60.0000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(104.5000 mm, 60.0000 mm): Track [PERST_N] on F.Cu, length 3.0000 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1385 mm)
+    Local override; error
+    @(98.2000 mm, 66.8000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(98.0000 mm, 65.9500 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(98.2000 mm, 66.8000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(98.2000 mm, 66.8000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(98.2000 mm, 66.8000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(98.2000 mm, 66.8000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(98.2000 mm, 66.8000 mm): Track [REFCLK_P] on B.Cu, length 6.8000 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1432 mm)
+    Local override; error
+    @(99.2000 mm, 65.9500 mm): Pad 63 [RTL_1V1] of U1 on F.Cu
+    @(98.8000 mm, 65.9500 mm): Track [REFCLK_N] on F.Cu, length 0.8732 mm
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(98.8000 mm, 65.9500 mm): Track [REFCLK_N] on F.Cu, length 0.8732 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(136.7500 mm, 60.8000 mm): Track [REFCLK_N] on F.Cu, length 1.9250 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(98.2000 mm, 60.0000 mm): Track [REFCLK_P] on B.Cu, length 40.3000 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.0000 mm, 60.8000 mm): Track [REFCLK_N] on B.Cu, length 37.7500 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(136.7500 mm, 60.8000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1385 mm)
+    Local override; error
+    @(99.2000 mm, 65.9500 mm): Pad 63 [RTL_1V1] of U1 on F.Cu
+    @(99.0000 mm, 66.8000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.0000 mm, 66.8000 mm): Track [REFCLK_N] on B.Cu, length 6.0000 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(136.7500 mm, 60.8000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.0000 mm, 66.8000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(136.7500 mm, 60.8000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(99.0000 mm, 66.8000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(136.7500 mm, 60.8000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.0000 mm, 66.8000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(99.0000 mm, 66.8000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(116.4000 mm, 61.0000 mm): Pad 1 [RTL_5V] of C5 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 65.2000 mm): Pad 1 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 64.8000 mm): Pad 2 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 64.4000 mm): Pad 3 [RESET_N] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 64.0000 mm): Pad 4 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 63.6000 mm): Pad 5 [JTAG_TCK] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 63.2000 mm): Pad 6 [JTAG_TDI] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 62.8000 mm): Pad 7 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 62.4000 mm): Pad 8 [PEDET] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 62.0000 mm): Pad 9 [JTAG_TDO] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 61.6000 mm): Pad 10 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 61.2000 mm): Pad 11 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 60.8000 mm): Pad 12 [ISOLATEB] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 60.4000 mm): Pad 13 [CLKREQ_N] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 60.0000 mm): Pad 14 [PERST_N] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 59.6000 mm): Pad 15 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 59.2000 mm): Pad 16 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.9500 mm, 58.8000 mm): Pad 17 [RTL_5V] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.2000 mm, 58.0500 mm): Pad 18 [SPISI] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(100.8000 mm, 58.0500 mm): Pad 19 [SPICLK] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(100.4000 mm, 58.0500 mm): Pad 20 [RTL_3V3] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(100.0000 mm, 58.0500 mm): Pad 21 [SPISO2] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.6000 mm, 58.0500 mm): Pad 22 [SPISO3] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.2000 mm, 58.0500 mm): Pad 23 [SPISO] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(98.8000 mm, 58.0500 mm): Pad 24 [SPICS] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(98.4000 mm, 58.0500 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(93.4000 mm, 71.0000 mm): Pad 1 [RSET] of R1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(96.4000 mm, 55.0000 mm): Pad 1 [XTAL_OUT] of C2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(102.2000 mm, 53.0000 mm): Pad 1 [RTL_3V3] of C3 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(105.2000 mm, 53.0000 mm): Pad 1 [RTL_1V1] of C4 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(83.3000 mm, 70.0000 mm): Pad 1 [SPICS] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(84.5000 mm, 70.0000 mm): Pad 2 [SPISO] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(90.9000 mm, 53.0000 mm): Pad 1 [PEDET] of R2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(85.7000 mm, 70.0000 mm): Pad 3 [RTL_3V3] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(88.1000 mm, 70.0000 mm): Pad 5 [SPISI] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(89.3000 mm, 70.0000 mm): Pad 6 [SPICLK] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(92.1000 mm, 53.0000 mm): Pad 2 [RTL_3V3] of R2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(90.5000 mm, 70.0000 mm): Pad 7 [SPISO3] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(91.7000 mm, 70.0000 mm): Pad 8 [RTL_3V3] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(93.4000 mm, 53.0000 mm): Pad 1 [CLKREQ_N] of R3 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.6000 mm, 53.0000 mm): Pad 2 [RTL_3V3] of R3 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.1000 mm, 53.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(98.0000 mm, 58.0500 mm): Pad 26 [DEVSLP] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(97.6000 mm, 58.0500 mm): Pad 27 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(97.2000 mm, 58.0500 mm): Pad 28 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(96.8000 mm, 58.0500 mm): Pad 29 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(96.4000 mm, 58.0500 mm): Pad 30 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(96.0000 mm, 58.0500 mm): Pad 31 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(95.6000 mm, 58.0500 mm): Pad 32 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(95.2000 mm, 58.0500 mm): Pad 33 [RTL_5V] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.8000 mm, 58.0500 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 58.8000 mm): Pad 35 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 59.2000 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 59.6000 mm): Pad 37 [USB_DP] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 60.0000 mm): Pad 38 [USB_DM] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 60.4000 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 60.8000 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 61.2000 mm): Pad 41 [USB_TXP0] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 61.6000 mm): Pad 42 [USB_TXN0] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 62.0000 mm): Pad 43 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 62.4000 mm): Pad 44 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 63.2000 mm): Pad 46 [USB_RXP0] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 63.6000 mm): Pad 47 [USB_RXN0] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 64.0000 mm): Pad 48 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 64.4000 mm): Pad 49 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 64.8000 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.0500 mm, 65.2000 mm): Pad 51 [RSET] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(94.8000 mm, 65.9500 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(95.2000 mm, 65.9500 mm): Pad 53 [XTAL_IN] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(95.6000 mm, 65.9500 mm): Pad 54 [XTAL_OUT] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(96.0000 mm, 65.9500 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(96.4000 mm, 65.9500 mm): Pad 56 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(96.8000 mm, 65.9500 mm): Pad 57 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(97.2000 mm, 65.9500 mm): Pad 58 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(97.6000 mm, 65.9500 mm): Pad 59 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(98.0000 mm, 65.9500 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(98.4000 mm, 65.9500 mm): Pad 61 [REFCLK_P] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(98.8000 mm, 65.9500 mm): Pad 62 [REFCLK_N] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.2000 mm, 65.9500 mm): Pad 63 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.6000 mm, 65.9500 mm): Pad 64 [LANE0_RXP] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(100.0000 mm, 65.9500 mm): Pad 65 [LANE0_RXN] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(100.8000 mm, 65.9500 mm): Pad 67 [LANE0_TXN] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(101.2000 mm, 65.9500 mm): Pad 68 [LANE0_TXP] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(96.3000 mm, 53.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(97.7000 mm, 53.0000 mm): Pad 2 [XTAL_OUT] of Y1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(98.4000 mm, 65.9500 mm): Track [REFCLK_P] on F.Cu, length 0.8732 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(138.5000 mm, 60.0000 mm): Track [REFCLK_P] on F.Cu, length 2.9980 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(98.2000 mm, 60.0000 mm): Track [REFCLK_P] on B.Cu, length 40.3000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(98.2000 mm, 66.8000 mm): Track [REFCLK_P] on B.Cu, length 6.8000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(136.7500 mm, 60.8000 mm): Track [REFCLK_N] on F.Cu, length 1.9250 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(98.8000 mm, 65.9500 mm): Track [REFCLK_N] on F.Cu, length 0.8732 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(99.0000 mm, 60.8000 mm): Track [REFCLK_N] on B.Cu, length 37.7500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(99.0000 mm, 66.8000 mm): Track [REFCLK_N] on B.Cu, length 6.0000 mm
+[starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)
+    Local override; error
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+    @(98.0000 mm, 62.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)
+    Local override; error
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+    @(86.9000 mm, 70.0000 mm): Pad 4 [GND] of U2 on F.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.0000 mm)
+    Rule: netclass 'Default'; error
+    @(104.5000 mm, 63.0000 mm): Via [PERST_N] on F.Cu - B.Cu
+[via_diameter]: Via diameter (board setup constraints min diameter 0.5000 mm; actual 0.0000 mm)
+    Rule: netclass 'Default'; error
+    @(134.5000 mm, 72.0000 mm): Via [PERST_N] on F.Cu - B.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(116.4000 mm, 61.0000 mm): Pad 1 [RTL_5V] of C5 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 65.2000 mm): Pad 1 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 64.8000 mm): Pad 2 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 64.4000 mm): Pad 3 [RESET_N] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 64.0000 mm): Pad 4 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 63.6000 mm): Pad 5 [JTAG_TCK] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 63.2000 mm): Pad 6 [JTAG_TDI] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 62.8000 mm): Pad 7 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 62.4000 mm): Pad 8 [PEDET] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 62.0000 mm): Pad 9 [JTAG_TDO] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 61.6000 mm): Pad 10 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 61.2000 mm): Pad 11 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 60.8000 mm): Pad 12 [ISOLATEB] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 60.4000 mm): Pad 13 [CLKREQ_N] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 60.0000 mm): Pad 14 [PERST_N] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 59.6000 mm): Pad 15 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 59.2000 mm): Pad 16 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.9500 mm, 58.8000 mm): Pad 17 [RTL_5V] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.2000 mm, 58.0500 mm): Pad 18 [SPISI] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(100.8000 mm, 58.0500 mm): Pad 19 [SPICLK] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(100.4000 mm, 58.0500 mm): Pad 20 [RTL_3V3] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(100.0000 mm, 58.0500 mm): Pad 21 [SPISO2] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.6000 mm, 58.0500 mm): Pad 22 [SPISO3] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.2000 mm, 58.0500 mm): Pad 23 [SPISO] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(98.8000 mm, 58.0500 mm): Pad 24 [SPICS] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(98.4000 mm, 58.0500 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(98.0000 mm, 58.0500 mm): Pad 26 [DEVSLP] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(97.6000 mm, 58.0500 mm): Pad 27 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(97.2000 mm, 58.0500 mm): Pad 28 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.8000 mm, 58.0500 mm): Pad 29 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.4000 mm, 58.0500 mm): Pad 30 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0000 mm, 58.0500 mm): Pad 31 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(95.6000 mm, 58.0500 mm): Pad 32 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(95.2000 mm, 58.0500 mm): Pad 33 [RTL_5V] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.8000 mm, 58.0500 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 58.8000 mm): Pad 35 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 59.2000 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 59.6000 mm): Pad 37 [USB_DP] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 60.0000 mm): Pad 38 [USB_DM] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 60.4000 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 62.0000 mm): Pad 43 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 62.4000 mm): Pad 44 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 60.8000 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 61.2000 mm): Pad 41 [USB_TXP0] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 63.2000 mm): Pad 46 [USB_RXP0] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 61.6000 mm): Pad 42 [USB_TXN0] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 63.6000 mm): Pad 47 [USB_RXN0] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 64.0000 mm): Pad 48 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(95.6000 mm, 65.9500 mm): Pad 54 [XTAL_OUT] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0000 mm, 65.9500 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 64.4000 mm): Pad 49 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.4000 mm, 65.9500 mm): Pad 56 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.8000 mm, 65.9500 mm): Pad 57 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(97.2000 mm, 65.9500 mm): Pad 58 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(97.6000 mm, 65.9500 mm): Pad 59 [<no net>] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 64.8000 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(98.0000 mm, 65.9500 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 65.2000 mm): Pad 51 [RSET] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(98.4000 mm, 65.9500 mm): Pad 61 [REFCLK_P] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.8000 mm, 65.9500 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(95.2000 mm, 65.9500 mm): Pad 53 [XTAL_IN] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(98.8000 mm, 65.9500 mm): Pad 62 [REFCLK_N] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.2000 mm, 65.9500 mm): Pad 63 [RTL_1V1] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.6000 mm, 65.9500 mm): Pad 64 [LANE0_RXP] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(100.0000 mm, 65.9500 mm): Pad 65 [LANE0_RXN] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(100.8000 mm, 65.9500 mm): Pad 67 [LANE0_TXN] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.2000 mm, 65.9500 mm): Pad 68 [LANE0_TXP] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.4000 mm, 55.0000 mm): Pad 1 [XTAL_OUT] of C2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.3000 mm, 53.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(97.7000 mm, 53.0000 mm): Pad 2 [XTAL_OUT] of Y1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(90.9000 mm, 53.0000 mm): Pad 1 [PEDET] of R2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(92.1000 mm, 53.0000 mm): Pad 2 [RTL_3V3] of R2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(93.4000 mm, 71.0000 mm): Pad 1 [RSET] of R1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(102.2000 mm, 53.0000 mm): Pad 1 [RTL_3V3] of C3 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(83.3000 mm, 70.0000 mm): Pad 1 [SPICS] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(84.5000 mm, 70.0000 mm): Pad 2 [SPISO] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(85.7000 mm, 70.0000 mm): Pad 3 [RTL_3V3] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(88.1000 mm, 70.0000 mm): Pad 5 [SPISI] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(89.3000 mm, 70.0000 mm): Pad 6 [SPICLK] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(90.5000 mm, 70.0000 mm): Pad 7 [SPISO3] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(91.7000 mm, 70.0000 mm): Pad 8 [RTL_3V3] of U2 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(105.2000 mm, 53.0000 mm): Pad 1 [RTL_1V1] of C4 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(101.1000 mm, 53.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(93.4000 mm, 53.0000 mm): Pad 1 [CLKREQ_N] of R3 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.6000 mm, 53.0000 mm): Pad 2 [RTL_3V3] of R3 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[isolated_copper]: Isolated copper fill
+    Local override; warning
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[isolated_copper]: Isolated copper fill
+    Local override; warning
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[isolated_copper]: Isolated copper fill
+    Local override; warning
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(97.0000 mm, 53.5000 mm): Reference field of C2
+    @(96.3000 mm, 53.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(97.0000 mm, 53.5000 mm): Reference field of C2
+    @(97.7000 mm, 53.0000 mm): Pad 2 [XTAL_OUT] of Y1 on F.Cu
+
+** Found 36 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 58.8000 mm): Pad 17 [RTL_5V] of U1 on F.Cu
+    @(95.2000 mm, 58.0500 mm): Pad 33 [RTL_5V] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(116.4000 mm, 61.0000 mm): Pad 1 [RTL_5V] of C5 on F.Cu
+    @(101.9500 mm, 58.8000 mm): Pad 17 [RTL_5V] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(90.9000 mm, 53.0000 mm): Pad 1 [PEDET] of R2 on F.Cu
+    @(101.9500 mm, 62.4000 mm): Pad 8 [PEDET] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 62.4000 mm): Pad 8 [PEDET] of U1 on F.Cu
+    @(140.7500 mm, 62.7250 mm): Pad 69 [PEDET] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.4000 mm, 53.0000 mm): Pad 1 [CLKREQ_N] of R3 on F.Cu
+    @(101.9500 mm, 60.4000 mm): Pad 13 [CLKREQ_N] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 60.4000 mm): Pad 13 [CLKREQ_N] of U1 on F.Cu
+    @(136.5000 mm, 70.2750 mm): Pad 52 [CLKREQ_N] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 59.2000 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+    @(94.0500 mm, 60.8000 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 59.2000 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+    @(98.4000 mm, 58.0500 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 60.8000 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+    @(94.0500 mm, 64.8000 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 64.8000 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+    @(96.0000 mm, 65.9500 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(96.0000 mm, 65.9500 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+    @(98.0000 mm, 65.9500 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(98.0000 mm, 65.9500 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+    @(99.2000 mm, 65.9500 mm): Pad 63 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(98.4000 mm, 58.0500 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+    @(101.9500 mm, 59.2000 mm): Pad 16 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 59.2000 mm): Pad 16 [RTL_1V1] of U1 on F.Cu
+    @(105.2000 mm, 53.0000 mm): Pad 1 [RTL_1V1] of C4 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.1000 mm, 70.0000 mm): Pad 5 [SPISI] of U2 on F.Cu
+    @(101.2000 mm, 58.0500 mm): Pad 18 [SPISI] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(89.3000 mm, 70.0000 mm): Pad 6 [SPICLK] of U2 on F.Cu
+    @(100.8000 mm, 58.0500 mm): Pad 19 [SPICLK] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(85.7000 mm, 70.0000 mm): Pad 3 [RTL_3V3] of U2 on F.Cu
+    @(91.7000 mm, 70.0000 mm): Pad 8 [RTL_3V3] of U2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(91.7000 mm, 70.0000 mm): Pad 8 [RTL_3V3] of U2 on F.Cu
+    @(94.8000 mm, 65.9500 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.6000 mm, 53.0000 mm): Pad 2 [RTL_3V3] of R3 on F.Cu
+    @(92.1000 mm, 53.0000 mm): Pad 2 [RTL_3V3] of R2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.6000 mm, 53.0000 mm): Pad 2 [RTL_3V3] of R3 on F.Cu
+    @(94.8000 mm, 58.0500 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.8000 mm, 58.0500 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(94.0500 mm, 60.4000 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.8000 mm, 65.9500 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
+    @(94.0500 mm, 60.4000 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.4000 mm, 58.0500 mm): Pad 20 [RTL_3V3] of U1 on F.Cu
+    @(102.2000 mm, 53.0000 mm): Pad 1 [RTL_3V3] of C3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.4000 mm, 58.0500 mm): Pad 20 [RTL_3V3] of U1 on F.Cu
+    @(94.8000 mm, 58.0500 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(90.5000 mm, 70.0000 mm): Pad 7 [SPISO3] of U2 on F.Cu
+    @(99.6000 mm, 58.0500 mm): Pad 22 [SPISO3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(84.5000 mm, 70.0000 mm): Pad 2 [SPISO] of U2 on F.Cu
+    @(99.2000 mm, 58.0500 mm): Pad 23 [SPISO] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(83.3000 mm, 70.0000 mm): Pad 1 [SPICS] of U2 on F.Cu
+    @(98.8000 mm, 58.0500 mm): Pad 24 [SPICS] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.4000 mm, 71.0000 mm): Pad 1 [RSET] of R1 on F.Cu
+    @(94.0500 mm, 65.2000 mm): Pad 51 [RSET] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(96.3000 mm, 53.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu
+    @(95.2000 mm, 65.9500 mm): Pad 53 [XTAL_IN] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.1000 mm, 53.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+    @(96.3000 mm, 53.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(96.4000 mm, 55.0000 mm): Pad 1 [XTAL_OUT] of C2 on F.Cu
+    @(95.6000 mm, 65.9500 mm): Pad 54 [XTAL_OUT] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(97.7000 mm, 53.0000 mm): Pad 2 [XTAL_OUT] of Y1 on F.Cu
+    @(96.4000 mm, 55.0000 mm): Pad 1 [XTAL_OUT] of C2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.6000 mm, 65.9500 mm): Pad 64 [LANE0_RXP] of U1 on F.Cu
+    @(134.2500 mm, 62.7250 mm): Pad 43 [LANE0_RXP] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.0000 mm, 65.9500 mm): Pad 65 [LANE0_RXN] of U1 on F.Cu
+    @(133.7500 mm, 62.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.8000 mm, 65.9500 mm): Pad 67 [LANE0_TXN] of U1 on F.Cu
+    @(135.2500 mm, 62.7250 mm): Pad 47 [LANE0_TXN] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.2000 mm, 65.9500 mm): Pad 68 [LANE0_TXP] of U1 on F.Cu
+    @(135.7500 mm, 62.7250 mm): Pad 49 [LANE0_TXP] of J1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

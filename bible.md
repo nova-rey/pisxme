@@ -5824,3 +5824,7 @@ QFN rail/clock/support field remains open and Path A/production CAD are unchange
 reduced opens to 13 but introduced multiple real RTL_1V1/REFCLK/XTAL shorts.
 The next repair is coherent support-component relocation and coordinated field
 regeneration; Path A and production CAD remain unchanged.
+2026-09-07: Retained RTL9210B V266 as the coherent support-cluster placement
+baseline. Scrubbed native DRC found no shorting or track-crossing class and
+zero footprint errors; 228 findings / 36 opens are expected before route
+regeneration. Path A and production CAD remain unchanged.
