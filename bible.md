@@ -5690,3 +5690,10 @@ passes native RTL_3V3/SPICLK/SPISI/XTAL_IN connectivity with four negative
 controls, and reports zero native signal shorting/crossing classes. Path A,
 production CAD, and the accepted macro-floorplan remain unchanged; remaining
 Path-B support, mode validation, and integration gates stay open.
+2026-09-07: Rejected RTL9210B SPISO3 V209/V210 source departures for retained
+RTL_1V1/SPISO source-field crossing/shorting. Promoted V211 after a diagonal
+source dogbone, ordinary-via B.Cu handoff, and outboard F.Cu corridor
+produced native SPISO3 connectivity plus a passing trace-removal negative
+control and zero native signal shorting/crossing classes. Path A and
+production CAD remain unchanged; Path-B support and full validation remain
+open.

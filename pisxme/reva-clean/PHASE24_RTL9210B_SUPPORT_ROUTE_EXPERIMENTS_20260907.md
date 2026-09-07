@@ -1369,3 +1369,15 @@ as required. V208 is promoted as the current disposable coordinated
 SPI/crystal source-field basis. The remaining RTL9210B support/control nets,
 full mode validation, and production integration remain open. Path A,
 production CAD, and the accepted macro-floorplan are unchanged.
+## V209–V211 SPISO3 U1.22-to-flash allocation
+
+V209 attempted a direct F.Cu outboard SPISO3 departure and failed at the U1
+source field, crossing the retained RTL_1V1/SPISO escape. V210 moved the
+departure through an ordinary-via B.Cu handoff and preserved native endpoint
+connectivity, but native DRC still found one real SPISO3/SPISO source-field
+short. V211 changed only the local dogbone to a diagonal departure before
+the via. Native connectivity and the trace-removal negative control pass;
+native DRC reports 357 findings / 24 unconnected items with no
+`shorting_items` or `tracks_crossing`. V211 is promoted as a disposable
+SPISO3 sub-primitive. Remaining RTL9210B support/control, high-speed,
+mode-aware, firmware, and production gates remain open.

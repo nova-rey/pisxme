@@ -6577,3 +6577,16 @@ production-CAD change, or Path-A replacement. Remaining RTL9210B rails and
 controls, USB/SATA high-speed paths, mode-aware validation, procurement and
 firmware gates, and full integration remain open. Path A and the production
 board remain unchanged.
+## Current RTL9210B SPISO3 source-field basis — V211
+
+`PHASE24_RTL9210B_SPISO3_U122_U2_V211.kicad_pcb` adds the U1.22-to-U2.7
+SPISO3 path to the V208 coordinated source-field basis. The source uses a
+short diagonal F.Cu dogbone, an ordinary-via B.Cu handoff, and an outboard
+F.Cu corridor to the flash pad. Native DRC reports 357 findings / 24
+unconnected items with zero `shorting_items` and zero `tracks_crossing`;
+native saved-board connectivity and the trace-removal negative control pass.
+
+V211 is disposable Path-B route evidence only. It does not close Path B or
+change production CAD/Path A. Remaining support rails, controls, USB/SATA
+high-speed paths, mode validation, firmware/procurement, and integration
+gates remain open.
