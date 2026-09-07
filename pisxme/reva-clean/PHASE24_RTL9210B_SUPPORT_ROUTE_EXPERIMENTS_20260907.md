@@ -1596,6 +1596,15 @@ passed, while DRC reported 541 findings / 14 unconnected items, three
 crossings, and one RTL_3V3/GND short. Reject V251–V253 as route
 implementations; no Path-A or production-CAD change occurred.
 
+## V255 native A* U1.40 escape — rejected
+
+The native-layer-aware A* search was corrected to honor SMD pad layers and
+preserve exact native pad-center endpoints. It found a 131-node U1.40 route;
+the native endpoint audit passed. Native DRC reported 628 findings / 15
+unconnected items with no track-crossing class, but retained one
+RTL_3V3/RSET short in the local QFN field. V255 is rejected as a route
+promotion, but the search method now produces reproducible topology evidence.
+
 ## V254 U1.39 support-field relocation — rejected
 
 V254 moved only the U1.39 RTL_3V3 escape around the C2 ground pad on the
@@ -1603,3 +1612,14 @@ V253 basis. Native rail/REFCLK/RTL_3V3 connectivity and the trace-removal
 negative control pass, but native DRC reports 546 findings / 14 unconnected
 items with new RTL_1V1/RTL_3V3 crossings and a retained ISOLATEB/CLKREQ_N
 short. Reject V254; the complete adjacent support cluster must move together.
+
+## V256 U1.52 RSET co-clearance — rejected
+
+V256 applies a narrow local repair to the inherited U1.52 RTL_3V3 escape,
+moving its short departure and vertical trunk from x=94.5 mm to x=94.7 mm so
+the rail clears U1.51 RSET. Native DRC reports 623 findings / 16 unconnected
+items, with no `shorting_items` or `tracks_crossing` class. Native U1.36/U1.40
+connectivity passes, and removing a required RTL_1V1 trace fails the negative
+control as expected. The remaining unconnected support and manufacturing-rule
+findings prevent promotion; V256 is retained as evidence for the next
+co-authored support-field repair.

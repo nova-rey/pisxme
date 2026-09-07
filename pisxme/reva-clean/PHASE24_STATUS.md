@@ -6745,7 +6745,15 @@ V250 is rejected: native rail/REFCLK connectivity and the trace-removal
 negative control pass, but DRC reports 541 findings / 14 opens with three
 signal shorts and one source-field crossing. The next experiment must
 co-relocate inherited USB/3V3/GND fields with the QFN departures.
+V255 is retained as native A* routing evidence, not a promotion: exact
+pad-center endpoint emission and native U1.36/U1.40 connectivity pass, while
+DRC reports 628 findings / 15 opens and one RTL_3V3/RSET short with no track
+crossing class. V242 remains the promoted disposable rail basis.
 V254 is rejected: its native connectivity and negative control pass, but DRC
 reports 546 findings / 14 opens with new RTL_1V1/RTL_3V3 crossings and a
 retained ISOLATEB/CLKREQ_N short. The complete adjacent support cluster must
 move together.
+V256 is retained as a local U1.52 co-clearance experiment, not a promotion:
+native U1.36/U1.40 connectivity and the trace-removal negative control pass;
+DRC reports 623 findings / 16 opens with no shorting or track-crossing class.
+The promoted disposable rail basis remains V242.

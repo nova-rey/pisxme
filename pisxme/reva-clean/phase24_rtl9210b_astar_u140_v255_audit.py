@@ -1,0 +1,2 @@
+import pcbnew
+path='PHASE24_RTL9210B_RTL1V1_U136_U139_U152_V255.kicad_pcb';b=pcbnew.LoadBoard(path);b.BuildConnectivity();c=b.GetConnectivity();u=b.FindFootprintByReference('U1');c4=b.FindFootprintByReference('C4').FindPadByNumber('1');assert c4 in c.GetConnectedItems(u.FindPadByNumber('40'));assert c4 in c.GetConnectedItems(u.FindPadByNumber('36'));print('V255 native U1.36/U1.40 rail connectivity PASS')

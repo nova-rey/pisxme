@@ -5798,3 +5798,12 @@ unchanged.
 rail/REFCLK/RTL3V3 connectivity and the negative control passed, but DRC
 reported new RTL_1V1/RTL_3V3 crossings and a retained ISOLATEB/CLKREQ_N short.
 The next attempt must move the complete adjacent support cluster together.
+2026-09-07: Recorded RTL9210B V255 native-layer-aware A* routing evidence.
+After correcting SMD layer occupancy and exact pad-center emission, the U1.40
+endpoint audit passed and DRC showed no track crossings, but one RTL_3V3/RSET
+short remained. No Path-A or production CAD changed; V242 remains promoted.
+2026-09-07: Recorded RTL9210B V256 U1.52 RSET co-clearance evidence. The
+inherited RTL_3V3 departure was shifted locally; native connectivity and the
+trace-removal negative control passed, while DRC reported 623 findings / 16
+opens with no shorting or track-crossing class. V256 is not promoted; Path A
+and production CAD remain unchanged and V242 remains the promoted basis.
