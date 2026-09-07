@@ -1,7 +1,7 @@
 """Disposable five-net rotated-U1 QFN dogbone source-field probe."""
 from pathlib import Path
 import re,pcbnew
-HERE=Path(__file__).resolve().parent;BASE=HERE/'PHASE24_RTL9210B_ROTATE_U1_V1.kicad_pcb';OUT=HERE/'PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V2.kicad_pcb';SCRUB=HERE/'.phase24_qfn_five_scrubbed_v2.kicad_pcb'
+HERE=Path(__file__).resolve().parent;BASE=HERE/'PHASE24_RTL9210B_ROTATE_U1_V1.kicad_pcb';OUT=HERE/'PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V3.kicad_pcb';SCRUB=HERE/'.phase24_qfn_five_scrubbed_v3.kicad_pcb'
 F,B=pcbnew.F_Cu,pcbnew.B_Cu;W=pcbnew.FromMM(.20);NETS=('SPISI','SPICLK','SPISO3','SPISO','SPICS','XTAL_IN','XTAL_OUT','RSET')
 def P(x,y):return pcbnew.VECTOR2I_MM(float(x),float(y))
 def t(b,n,l,a,z):
@@ -22,7 +22,7 @@ def main():
      break
  for a,z in reversed(sp):text=text[:a]+text[z:]
  SCRUB.write_text(text);b=pcbnew.LoadBoard(str(SCRUB))
- lanes=[('SPISI',(94.05,66.8),(93.0,66.8),(92.2,66.0)),('SPICLK',(94.05,67.2),(93.0,67.2),(91.0,67.8)),('SPISO3',(94.05,68.4),(93.0,68.4),(92.2,68.4)),('SPISO',(94.05,68.8),(92.5,68.8),(91.0,69.6)),('SPICS',(94.05,69.2),(93.0,69.2),(92.2,70.6))]
+ lanes=[('SPISI',(94.05,66.8),(93.0,66.8),(92.2,66.0)),('SPICLK',(94.05,67.2),(93.0,67.2),(91.0,67.8)),('SPISO3',(94.05,68.4),(93.0,68.4),(92.2,68.4)),('SPISO',(94.05,68.8),(92.5,68.8),(91.0,70.0)),('SPICS',(94.05,69.2),(93.0,69.2),(92.2,71.2))]
  for name,src,el,viaq in lanes:
   n=b.FindNet(name);t(b,n,F,src,el);t(b,n,F,el,viaq);v(b,n,viaq);t(b,n,B,viaq,(88.0,viaq[1]))
  b.BuildListOfNets();b.Save(str(OUT));print(OUT)

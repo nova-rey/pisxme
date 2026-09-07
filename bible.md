@@ -5512,6 +5512,10 @@ native KiCad reports only 5 incomplete-probe/inherited-GND findings and 44
 opens. The probe establishes a viable 45-degree departure to an ordinary via
 outside the pad field. Five-net SPI and regenerated neighboring support
 remain open; Path A and production CAD are unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: V3 source-transition spacing trial
+retained one SPISO-to-SPISO3 clearance violation at 0.100 mm actual versus
+0.200 mm required, with no shorts or crossings. The next class must change
+the post-pad fanout shape; Path A and production CAD remain unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: rejected the V2 QFN transition-spacing
 micro-variant at 10 native violations / 44 opens; one SPISO/SPISO3 clearance
 remains and the result does not improve V1. Both receipts are preserved and

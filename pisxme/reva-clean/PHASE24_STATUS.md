@@ -48,6 +48,14 @@ clearance finding. This localizes the remaining defect to transition layout
 after the pad envelope; it does not reject the validated single-net dogbone
 or the RTL9210B architecture.
 
+The V3 source-transition spacing trial
+`PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V3` remains rejected at 10 native
+violations / 44 opens. Increasing the lower transition-row separation left
+the same single SPISO-to-SPISO3 clearance violation (actual 0.100 mm versus
+0.200 mm required), with no shorts or crossings. This identifies the next
+required change as a different post-pad fanout shape, not more via-row
+nudging.
+
 The transition-spacing micro-variant
 `PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V2` was also rejected. Native KiCad
 reports 10 violations / 44 opens, including one remaining SPISO/SPISO3

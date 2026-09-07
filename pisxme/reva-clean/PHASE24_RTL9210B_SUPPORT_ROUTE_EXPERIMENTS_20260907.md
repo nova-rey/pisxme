@@ -68,6 +68,13 @@ violations / 44 opens, but SPICLK and SPISO3 still short/collide at the
 transition-layout implementation; the diagonal single-net departure remains
 validated evidence.
 
+The V3 source-transition spacing trial
+`PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V3.kicad_pcb` increased the lower-row
+separation but still reports 10 violations / 44 opens. The only signal
+violation is the same SPISO-to-SPISO3 clearance (0.100 mm actual versus
+0.200 mm required); there are no shorts or crossings. V3 is rejected and
+the next class must change the post-pad fanout shape.
+
 The V2 transition-spacing micro-variant
 `PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V2.kicad_pcb` was rejected at 10
 violations / 44 opens. It leaves one SPISO/SPISO3 clearance violation and
