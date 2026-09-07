@@ -176,6 +176,11 @@ new local defect being RTL_1V1 U1.25 via/track interaction with the SPICS and
 SPISO QFN escapes. The V4 1V1+crystal+RSET baseline remains clean; this is a
 QFN source-escape partitioning issue, not a rejection of the SPI topology.
 
+The far-transition SPI source probe is rejected. Native DRC reports 32
+violations, including SPICS/RTL_1V1 and adjacent SPI source-pad shorts plus
+0.0403-mm clearances. Straight multi-net F.Cu escape at the current QFN
+clearance contract is not viable; V4 remains the valid local baseline.
+
 The QFN escape-map utility now inspects the latest integrated V11 saved board,
 including the validated RSET transplant, instead of superseded V3/V5 fixture
 states. `PHASE24_RTL9210B_QFN_ESCAPE_MAP_V5.txt` is retained as historical

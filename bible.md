@@ -5340,6 +5340,9 @@ not a full Path-B pass.
 V4 local baseline. Native DRC was 17/27; the primary new defect was the
 RTL_1V1 U1.25 via/track interaction with SPICS/SPISO QFN escapes. Rejected as
 combined geometry; V4 remains the local 1V1/crystal/RSET baseline.
+2026-09-07 — PiSXMe Phase 24 Path B: tested far-transition SPI source escape
+V1 from V4. Native DRC reports 32 violations with source-pad shorts and
+0.0403-mm clearances. Rejected; V4 remains the valid local baseline.
 2026-09-07 — PiSXMe Phase 24 Path B: transplanted the isolated audited 1V1
 fanout into the V11 combined candidate as V12. Opens fell to 18, but native
 DRC rose to 30 with CLKREQ_N, XTAL_OUT, and rail conflicts. Rejected as
