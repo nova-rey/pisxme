@@ -5454,3 +5454,8 @@ XTAL_IN, XTAL_OUT, RSET, and RTL_1V1 copper from native pad coordinates.
 The (+18,+8) mm candidate reports 4 findings / 32 opens and passes the saved
 board endpoint audit for all four local support nets. This is a local
 sub-gate baseline only; U2 links and remaining support routes remain open.
+2026-09-07 — PiSXMe Phase 24 Path B: co-located C3/C4/C5 with the relocated
+RTL9210B source island and regenerated the RTL_1V1 continuation. Native KiCad
+reports 4 findings / 32 opens with no signal shorts/crossings, and the saved
+board confirms all nine asserted U1/C4 RTL_1V1 endpoints. Other support nets
+remain open; production CAD and Path A are unchanged.

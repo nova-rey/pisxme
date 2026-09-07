@@ -35,6 +35,14 @@ relocated local support sub-gate. Rails to C3/C5, SPI/control links to U2, and
 the remaining RTL9210B support/bring-up checks remain open; no production CAD
 or Path A artifact is changed.
 
+The rail-cap co-location probe `PHASE24_RTL9210B_SUPPORT_RELOCATION_CAPS_V1`
+then moved C3/C4/C5 coherently beside the relocated U1 and regenerated the
+RTL_1V1 continuation to C4. Native KiCad reports 4 findings / 32 opens with
+no signal shorts or crossings; a saved-board check confirms all nine asserted
+U1/C4 RTL_1V1 endpoints are connected. This is now the preferred local
+Path-B routing baseline. 3V3/5V, SPI/control, and remaining support checks
+remain open; production CAD and Path A are unchanged.
+
 The V11 crystal/support baseline was freshly rechecked with native KiCad:
 6 violations and 25 unconnected items; XTAL_IN, XTAL_OUT, and the asserted
 RTL_1V1 endpoints pass the saved-board connectivity audit, including its

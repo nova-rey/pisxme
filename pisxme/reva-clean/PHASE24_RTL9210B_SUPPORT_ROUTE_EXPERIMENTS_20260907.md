@@ -404,6 +404,15 @@ passes XTAL_IN, XTAL_OUT, RSET, and all eight asserted RTL_1V1 endpoints.
 This is a positive local route baseline, not full Path-B closure: U2/C3-C5
 links, controls, and remaining support paths are still open.
 
+## Rail-cap co-location V1 — positive local baseline
+
+C3/C4/C5 were moved coherently by (-10,+18) mm beside the relocated U1.
+Stale external RTL_1V1 copper was scrubbed and a new B.Cu continuation was
+connected to the moved C4 pad. Native KiCad reports 4 findings / 32 opens,
+with no signal shorts or crossings. The saved-board check confirms all nine
+asserted RTL_1V1 endpoints. This is a local routing baseline only; the other
+rails, SPI/control links, and full Path-B validation remain open.
+
 ## QFN source partition V1 — rejected
 
 `phase24_qfn_spi_power_partition_v1.py` first exposed a KiCad Python API
