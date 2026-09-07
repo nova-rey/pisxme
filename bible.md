@@ -5520,3 +5520,8 @@ the post-pad fanout shape; Path A and production CAD remain unchanged.
 micro-variant at 10 native violations / 44 opens; one SPISO/SPISO3 clearance
 remains and the result does not improve V1. Both receipts are preserved and
 production CAD/Path A remain unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: V4 lateral-transition source probe is
+the first five-net QFN escape with no signal shorts, crossings, or clearance
+violations. Native KiCad reports 9 findings / 44 opens, limited to
+incomplete-probe/inherited GND conditions. Extension to corrected U2 and
+regenerated support remains open; Path A and production CAD are unchanged.

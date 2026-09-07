@@ -56,6 +56,15 @@ the same single SPISO-to-SPISO3 clearance violation (actual 0.100 mm versus
 required change as a different post-pad fanout shape, not more via-row
 nudging.
 
+The V4 lateral-transition source probe
+`PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V4` is the first five-net source
+escape with no signal violations. Native KiCad reports 9 findings / 44 opens;
+the remaining findings are incomplete-probe dangling items and inherited
+ground-zone conditions. Moving SPISO3 laterally removed the prior
+SPISO/SPISO3 clearance defect. This closes the local five-net QFN source
+escape sub-gate only; extension to corrected U2 and regenerated support is
+still open.
+
 The transition-spacing micro-variant
 `PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V2` was also rejected. Native KiCad
 reports 10 violations / 44 opens, including one remaining SPISO/SPISO3

@@ -75,6 +75,14 @@ violation is the same SPISO-to-SPISO3 clearance (0.100 mm actual versus
 0.200 mm required); there are no shorts or crossings. V3 is rejected and
 the next class must change the post-pad fanout shape.
 
+The V4 lateral-transition source probe
+`PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V4.kicad_pcb` moves SPISO3's
+transition laterally away from the SPISO departure. Native KiCad reports 9
+findings / 44 opens with no shorts, crossings, or signal-clearance errors;
+the remaining findings are incomplete-probe dangling items and inherited
+GND conditions. This closes the local five-net QFN source-escape sub-gate,
+not the full SPI branch.
+
 The V2 transition-spacing micro-variant
 `PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V2.kicad_pcb` was rejected at 10
 violations / 44 opens. It leaves one SPISO/SPISO3 clearance violation and
