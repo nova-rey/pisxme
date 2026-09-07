@@ -5104,3 +5104,9 @@ clearance output as stale fill state and kept production CAD unchanged.
  RTL9210B or Path A; production CAD remains unchanged and the next class must
  regenerate the local control departures coherently rather than add more
  detours to the mixed baseline.
+2026-09-07 — PiSXMe Phase 24 Path B: regenerated the complete relocated
+ RTL9210B control group through V4–V8. V5 corrected QFN-edge diagonal
+ departures; V6 is the best disposable result at 3 native DRC violations /
+ 36 opens. V7/V8 rejected alternate RTL_5V/PEDET corridor classes at 15/32
+ and 4/35. The remaining issue is a local power/control transition field;
+ no production CAD or Path-A authority changed.

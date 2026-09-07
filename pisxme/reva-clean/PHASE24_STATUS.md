@@ -81,6 +81,16 @@ failures are route-implementation/placement-corridor evidence, not a Path-B
 architecture rejection. The clean RESET_N/PERST_N candidate remains the
 current control baseline; PEDET/CLKREQ is the next open Path-B gate.
 
+The subsequent coherent four-control regeneration trials are preserved as
+V4/V5/V6/V7/V8. They report 16/34, 6/35, 3/36, 15/32, and 4/35 native
+DRC-violation/unconnected-item counts respectively. V5 fixed the QFN-edge
+diagonal-departure defect; V6 is the current disposable baseline with one
+remaining RTL_5V/PEDET transition short. V7 proved that moving the inherited
+RTL_5V transition through the QFN-side escape is the wrong class, and V8
+showed that a PEDET-only B.Cu dogleg still conflicts with the local
+3V3/RTL_5V transition field. None is promoted and none changes production
+CAD or rejects the RTL9210B architecture.
+
 Further control variants V4/V5/V6 were also rejected: V4 reports 8 DRC
 violations / 34 opens, V5 reports 3 / 34, and V6 reports 4 / 33. Their
 remaining findings are same-layer PEDET/CLKREQ/rail corridor crossings. This

@@ -179,3 +179,23 @@ next authorized class is a coherent local control/support-island regeneration
 that includes RESET/PERST departures, rather than adding more perimeter
 detours to the current mixed baseline. The fixture remains isolated and Path
 A remains preserved.
+
+## Coherent four-control regeneration — V4 through V8
+
+V4 removed the inherited RESET/PERST/PEDET/CLKREQ copper and regenerated all
+four controls together, but its diagonal QFN departures crossed adjacent
+no-net pads and produced 16 violations / 34 opens. V5 corrected the source
+departures to vertical QFN-safe escapes and reduced the result to 6 / 35.
+
+V6 corrected the remaining 3V3 branch transitions and moved only the local
+PEDET/rail interaction. Native DRC reports **3 violations / 36 opens**. V7
+moved the inherited RTL_5V transition into a nominally clear B.Cu channel,
+but that channel intersects RTL_1V1 and drives the rail through the QFN-side
+pad field; it regresses to **15 / 32**. V8 restores V6's rail geometry and
+moves only PEDET to a B.Cu dogleg; it reports **4 / 35**, including a
+dogleg/3V3 transition conflict.
+
+V6 is retained as the current disposable baseline, not a pass. The remaining
+implementation task is the local RTL_5V/3V3/PEDET transition field; further
+long perimeter detours are not justified. All results are native KiCad DRC
+after zone refill, and Path A/production CAD remain unchanged.
