@@ -61,6 +61,13 @@ SSD-power field. This proves the V6 source escape plus a sufficiently
 outboard destination can be electrically authored; the remaining work is
 reintegrating rails, controls, crystal, flash support, and test access.
 
+The rail-only lateral proof is now positive:
+`PHASE24_RTL9210B_RAIL_ONLY_LATERAL_V1` has native DRC 0 violations and its
+saved-board audit passes U1-to-C3/C4/C5 for RTL_3V3/RTL_1V1/RTL_5V. Removing
+all serialized RTL_3V3 copper fails the negative control. This validates the
+separated rail-spine geometry; U2 rail pads, control nets, and remaining
+support circuitry are still open.
+
 The full support placement candidate moves U2 35 mm and C3/C4/C5 20 mm
 laterally. The proven SPI-only copper was transplanted by serialized
 net-scoped block extraction into
