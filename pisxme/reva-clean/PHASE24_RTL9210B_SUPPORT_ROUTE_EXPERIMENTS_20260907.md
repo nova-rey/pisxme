@@ -1292,3 +1292,15 @@ crossing. The saved-board audit joins U1.34 to C3.1 and its trace-removal
 negative control fails as required. V185 is a promoted disposable rail
 sub-primitive; the remaining 3V3 branches, support rails, SPI/control, and
 full Path-B validation remain open.
+
+## SPISO V190–V193 route allocation
+
+V190 and V191 were rejected after native DRC found source-field and
+destination-corridor shorts/crossings. V192 cleared the source field but
+hit the RSET support pad at `(83.4,66.0)`. V193 moved the destination
+dogleg above that pad band while retaining the threaded source escape.
+Native KiCad reports 308 findings / 26 unconnected items for V193, with zero
+`shorting_items` and zero `tracks_crossing`. The saved-board audit joins
+U1.23/U2.2 and its trace-removal negative control fails as required. V193 is
+promoted as a disposable SPISO sub-primitive; the other SPI/control nets and
+full Path-B validation remain open.

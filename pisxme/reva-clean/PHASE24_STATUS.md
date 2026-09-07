@@ -459,6 +459,18 @@ collided locally. This is a placement/route implementation failure; V69 still
 proves the U1.60 corridor when XTAL_IN is removed, and production CAD remains
 unchanged.
 
+## Current RTL9210B SPISO slice — V193
+
+`PHASE24_RTL9210B_SPISO_U123_U2_V193.kicad_pcb` is the promoted SPISO basis.
+V190/V191 were rejected for real source/destination conflicts; V192 was
+rejected for contacting the RSET support pad. V193 uses the corrected
+threaded source and destination dogleg. Native DRC reports 308 findings /
+26 unconnected items with zero `shorting_items` or `tracks_crossing`; saved
+native connectivity and the trace-removal negative control pass.
+
+The remaining SPI/control paths, mode validation, and production integration
+remain open.
+
 V72 tested the upper-right coherent XTAL/RSET relocation with U1.60 1V1 and
 is rejected at 51 native findings / 30 opens. The placement margin was clear,
 but the regenerated paths used incorrect post-transform support-pad
