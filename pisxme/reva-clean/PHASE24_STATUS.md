@@ -48,6 +48,15 @@ clearance finding. This localizes the remaining defect to transition layout
 after the pad envelope; it does not reject the validated single-net dogbone
 or the RTL9210B architecture.
 
+The complete corrected-U2 partition trial
+`PHASE24_RTL9210B_COMPLETE_SPI_PARTITION_V1` is rejected at 12 native
+violations / 39 opens. The corrected U2 footprint loads with the intended
+0-degree pin map, but appending downstream routes to the source-only tails
+causes SPISO/SPICS crossing at the F.Cu handoff and SPICLK/SPISO3 conflicts
+with the B.Cu source tails. The next implementation must regenerate the
+whole five-net branch in one pass; appending to the source-only probe is not
+valid evidence of placement failure.
+
 The V3 source-transition spacing trial
 `PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V3` remains rejected at 10 native
 violations / 44 opens. Increasing the lower transition-row separation left

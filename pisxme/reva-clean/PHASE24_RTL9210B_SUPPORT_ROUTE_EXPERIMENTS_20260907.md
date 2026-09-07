@@ -69,6 +69,16 @@ SPISO3/XTAL_IN conflicts plus crossings. It is rejected as a one-net route
 implementation. The result establishes that the complete five-net source
 escape and downstream flash launch must be authored together.
 
+## Complete corrected-U2 partition trial
+
+`PHASE24_RTL9210B_COMPLETE_SPI_PARTITION_V1.kicad_pcb` used the corrected U2
+footprint at 0 degrees and connected all five source tails toward the flash
+row using a proposed two-layer partition. Native KiCad reports 12 violations
+/ 39 opens. SPISO/SPICS cross at the F.Cu handoff, and SPICLK/SPISO3 conflict
+with existing B.Cu source tails. The corrected U2 pad map itself is valid;
+this append-style route is rejected, and the next trial must regenerate the
+complete five-net branch together.
+
 The follow-up five-net probe changed the departure to straight outward
 segments before the staggered diagonals. Native KiCad improved to 17
 violations / 44 opens, but SPICLK and SPISO3 still short/collide at the

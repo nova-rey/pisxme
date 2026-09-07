@@ -5530,3 +5530,8 @@ the first five-net QFN escape with no signal shorts, crossings, or clearance
 violations. Native KiCad reports 9 findings / 44 opens, limited to
 incomplete-probe/inherited GND conditions. Extension to corrected U2 and
 regenerated support remains open; Path A and production CAD are unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: rejected the complete corrected-U2
+two-layer SPI partition at 12 native violations / 39 opens. SPISO/SPICS
+crossed at the F.Cu handoff and SPICLK/SPISO3 conflicted with retained B.Cu
+source tails. The corrected U2 pad map is valid; the next trial must
+regenerate the complete five-net branch together.
