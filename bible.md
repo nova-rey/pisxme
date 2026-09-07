@@ -5480,3 +5480,7 @@ from the co-located U1/U2 pads. Native KiCad reports 19 violations / 26 opens,
 including source crossings, rail clearances, and an RTL_1V1/SPICS short. U2
 co-location remains placement evidence; the next SPI class must change layer
 and escape ordering.
+2026-09-07 — PiSXMe Phase 24 Path B: rejected the rotated-U1 five-net SPI
+escape. Native KiCad reports 38 violations / 39 opens, including overlapping
+source vias and crossings of retained XTAL/RSET corridors. The rotation is
+retained only as disposable placement evidence; production CAD is unchanged.

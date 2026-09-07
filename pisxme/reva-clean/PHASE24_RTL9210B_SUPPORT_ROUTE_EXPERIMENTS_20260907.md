@@ -471,6 +471,15 @@ route implementation. The U2 co-location remains a valid placement
 discriminator; the next SPI class must use layer transitions and a deliberate
 escape ordering.
 
+## Rotated-U1 SPI V1 — rejected
+
+After rotating U1 180 degrees about its exposed-pad center, a five-net SPI
+escape was tested from the new left-side source field to the co-located U2.
+Native KiCad reports 38 violations / 39 opens, including overlapping source
+transition vias, SPICS/SPISO3 conflicts, and crossings of retained XTAL/RSET
+copper. It is rejected as a route implementation. The rotation remains a
+disposable placement alternative only.
+
 ## Isolated SPICS layer probe V1 — rejected
 
 A single-net SPICS route was tested from the moved U1 source to the moved U2

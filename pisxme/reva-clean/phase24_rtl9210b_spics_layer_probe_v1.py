@@ -12,8 +12,9 @@ def via(b,n,q):
  v=pcbnew.PCB_VIA(b);v.SetPosition(P(*q));v.SetWidth(pcbnew.FromMM(.60));v.SetDrill(pcbnew.FromMM(.30));v.SetLayerPair(F,B);v.SetNet(n);v.SetNetCode(n.GetNetCode());b.Add(v)
 def main():
  b=pcbnew.LoadBoard(str(BASE));n=b.FindNet('SPICS')
- seg(b,n,F,(101.95,70.8),(102.4,70.8));via(b,n,(102.4,70.8))
- seg(b,n,B,(102.4,70.8),(102.4,77.5));seg(b,n,B,(102.4,77.5),(110.0,77.5));
- via(b,n,(110.0,77.5));seg(b,n,F,(110.0,77.5),(110.8,76.0))
+ seg(b,n,F,(101.95,70.8),(103.0,70.8));seg(b,n,F,(103.0,70.8),(103.0,69.0));via(b,n,(103.0,69.0))
+ seg(b,n,B,(103.0,69.0),(103.0,60.0));seg(b,n,B,(103.0,60.0),(106.0,60.0))
+ seg(b,n,B,(106.0,60.0),(106.0,75.0));seg(b,n,B,(106.0,75.0),(110.8,75.0))
+ via(b,n,(110.8,75.0));seg(b,n,F,(110.8,75.0),(110.8,76.0))
  b.BuildListOfNets();b.Save(str(OUT));print(OUT)
 if __name__=='__main__':main()

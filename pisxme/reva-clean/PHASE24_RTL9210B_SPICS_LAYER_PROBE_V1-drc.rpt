@@ -1,32 +1,32 @@
 ** Drc report for PHASE24_RTL9210B_SPICS_LAYER_PROBE_V1.kicad_pcb **
-** Created on 2026-09-07T06:29:02 **
+** Created on 2026-09-07T06:32:12 **
 ** Report includes: Errors, Warnings **
 
-** Found 11 DRC violations **
+** Found 12 DRC violations **
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(102.4000 mm, 70.8000 mm): Track [SPICS] on B.Cu, length 6.7000 mm
-    @(103.2000 mm, 75.2000 mm): Track [RTL_1V1] on B.Cu, length 2.4000 mm
+    @(103.0000 mm, 69.0000 mm): Track [SPICS] on B.Cu, length 9.0000 mm
+    @(99.2000 mm, 63.5000 mm): Track [RTL_1V1] on B.Cu, length 4.0000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(102.4000 mm, 70.8000 mm): Track [SPICS] on B.Cu, length 6.7000 mm
-    @(92.8000 mm, 71.2000 mm): Track [RTL_1V1] on B.Cu, length 10.4000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0123 mm)
+    @(103.2000 mm, 71.2000 mm): Track [RTL_1V1] on B.Cu, length 4.8000 mm
+    @(106.0000 mm, 60.0000 mm): Track [SPICS] on B.Cu, length 15.0000 mm
+[tracks_crossing]: Tracks crossing
     Local override; error
-    @(101.9500 mm, 70.4000 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
-    @(102.4000 mm, 70.8000 mm): Via [SPICS] on F.Cu - B.Cu
-[shorting_items]: Items shorting two nets (nets RTL_1V1 and SPICS)
+    @(100.8000 mm, 63.5000 mm): Track [RTL_1V1] on B.Cu, length 2.4000 mm
+    @(103.0000 mm, 69.0000 mm): Track [SPICS] on B.Cu, length 9.0000 mm
+[shorting_items]: Items shorting two nets (nets SPICS and RTL_1V1)
+    Local override; error
+    @(103.0000 mm, 69.0000 mm): Via [SPICS] on F.Cu - B.Cu
+    @(103.2000 mm, 63.5000 mm): Track [RTL_1V1] on B.Cu, length 11.7000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0472 mm)
+    Local override; error
+    @(103.2000 mm, 70.4000 mm): Via [RTL_1V1] on F.Cu - B.Cu
+    @(101.9500 mm, 70.8000 mm): Track [SPICS] on F.Cu, length 1.0500 mm
+[tracks_crossing]: Tracks crossing
     Local override; error
     @(101.9500 mm, 70.4000 mm): Track [RTL_1V1] on F.Cu, length 1.2500 mm
-    @(102.4000 mm, 70.8000 mm): Via [SPICS] on F.Cu - B.Cu
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1623 mm)
-    Rule: board setup constraints hole; error
-    @(101.9500 mm, 71.2000 mm): Pad 23 [SPISO] of U1 on F.Cu
-    @(102.4000 mm, 70.8000 mm): Via [SPICS] on F.Cu - B.Cu
-[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1623 mm)
-    Rule: board setup constraints hole; error
-    @(101.9500 mm, 70.4000 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
-    @(102.4000 mm, 70.8000 mm): Via [SPICS] on F.Cu - B.Cu
+    @(103.0000 mm, 70.8000 mm): Track [SPICS] on F.Cu, length 1.8000 mm
 [starved_thermal]: Thermal relief connection to zone incomplete (layer F.Cu; zone min spoke count 2; actual 1)
     Local override; error
     @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
@@ -35,6 +35,9 @@
     Local override; error
     @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
     @(85.6000 mm, 63.0000 mm): Pad 2 [GND] of C1 on F.Cu
+[isolated_copper]: Isolated copper fill
+    Local override; warning
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
 [isolated_copper]: Isolated copper fill
     Local override; warning
     @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0

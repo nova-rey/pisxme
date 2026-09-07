@@ -68,6 +68,13 @@ earlier far-transition form also failed. This is a QFN pad-field escape
 implementation failure, not a U2 placement or Path-B architecture result;
 the next trial must use a true pad-field dogbone/escape geometry.
 
+The rotated-U1 SPI trial `PHASE24_RTL9210B_ROTATE_U1_SPI_V1` is rejected as
+route implementation evidence. Native KiCad reports 38 violations / 39 opens:
+the proposed left-side transition vias overlap at 0.4-mm source pitch, and
+the B.Cu lanes cross retained XTAL/RSET corridors. The 180-degree placement
+itself introduced no new placement short; a future attempt would need a
+fully scrubbed rotated support baseline and a staggered source escape.
+
 The first co-located SPI route trial
 `PHASE24_RTL9210B_SUPPORT_RELOCATION_SPI_V1` is rejected as route
 implementation evidence. Native KiCad reports 19 violations / 26 opens,
