@@ -37,6 +37,10 @@ native audit passes U1.34 RTL_3V3 and J1.2/J1.4/J1.6/J1.8 connectivity with a
 negative-control failure; native DRC still has no shorting or crossing class.
 The six remaining opens are the PCIe/shared high-speed endpoints. SSD_3V3
 source/power and those high-speed channels remain open.
+V145 is rejected as a REFCLK route implementation: the lower two-layer
+corridors contacted XTAL/1V1/CLKREQ fields and connector sideband pads and
+introduced six signal crossings. It does not reject the RTL9210B pinout or
+the V144 placement basis; REFCLK needs an outer-corridor allocation.
 The current promoted disposable RTL_5V/control basis is
 `PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
 CLKREQ/PEDET support evidence. V97 moved

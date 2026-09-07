@@ -60,6 +60,13 @@ J1.2/J1.4/J1.6/J1.8; native DRC has no `shorting_items` or
 `tracks_crossing`. Six intended high-speed endpoint opens remain, and the
 SSD_3V3 source/power gate is not closed.
 
+## V145 REFCLK lower-corridor trial — rejected
+
+V145 attempted ordinary-via REFCLK pair corridors below U1. Native DRC found
+contacts/crossings with inherited XTAL/1V1/CLKREQ fields and J1 sideband pads.
+This is route-allocation evidence only; the V144 support basis and RTL9210B
+REFCLK authority remain valid, and REFCLK remains open.
+
 ## V76–V78 U1.40 edge-group trials — rejected
 
 V76 placed the U1.40 RTL_1V1 transition at (92.8,68.8), where the via
