@@ -4936,3 +4936,9 @@ validation remain open.
  findings, removing four clearance-only findings but retaining two shorts,
  one crossing, and 38 intentional fixture opens. The probe is evidence only;
  no production rule or route was promoted.
+2026-09-06 — PiSXMe Phase 24 Path A: tested two native pad-derived U7
+ escape repairs after the explicit rule-basis probe. They worsened the
+ disposable fixture to 22 and 23 DRC findings by colliding with oscillator,
+ power, RX, and TX escape geometry. Classified both as route implementation
+ failures, preserved their raw boards/reports, and restored the committed
+ mono2 author without changing production CAD or architecture.

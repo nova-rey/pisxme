@@ -54,6 +54,13 @@ findings disappear, while two real shorts and one real crossing remain, plus
 the intentionally incomplete fixture's 38 opens. This is rule-basis
 evidence, not a route PASS or an integrated-board rule change.
 
+Two follow-on native pad-derived escape variants are preserved in
+`PHASE24_PATHA_SATA_ESCAPE_REPAIR_REJECTED_20260906.md`. They are both
+`ROUTE_IMPLEMENTATION_FAILURE`: the first produced 22 DRC findings and the
+second 23, including new crossings/shorts in the U7 oscillator, power, and
+adjacent RX escape field. The corridor author was restored to the committed
+mono2 baseline; no architecture, production CAD, or integrated board changed.
+
 ## Current Path-B qualification checkpoint — 2026-09-06
 
 The isolated RTL9210B-CG candidate now has explicit authority and mode
