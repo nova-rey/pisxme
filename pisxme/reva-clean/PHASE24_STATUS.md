@@ -123,6 +123,12 @@ still reaches the XTAL_IN/Y1 launch. Native KiCad reports 9 violations / 31
 opens. The next attempt must co-author the rail with the QFN source escape
 and preserved SPI.
 
+Integrated source-escape V13 regenerated SPICLK with RTL_3V3 but is rejected
+at 10 native violations / 31 opens. SPICLK still crossed the retained SPISI
+departure, while the RTL_3V3 transitions collided with SPICLK and XTAL_IN.
+The next candidate must regenerate a multi-net QFN field
+(SPISI/SPICLK/SPISO3/RTL_3V3) together.
+
 `phase24_rtl9210b_support_v8_audit.py` now provides a reusable saved-board
 audit for the V8 support baseline. It derives XTAL_IN, XTAL_OUT, and RSET
 connectivity from native KiCad connectivity and passes the required

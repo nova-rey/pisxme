@@ -133,6 +133,13 @@ opens. U1.20 crosses the validated SPISI/SPICLK source escapes and U1.52's
 transition reaches the XTAL_IN/Y1 launch. The next attempt must co-author 3V3
 with the QFN source escape and preserved SPI.
 
+## Integrated 3V3/SPICLK source escape V13 — rejected
+
+V13 regenerated SPICLK with RTL_3V3 but still reports 10 native violations /
+31 opens. SPICLK crosses the retained SPISI departure, and RTL_3V3 collides
+with SPICLK and XTAL_IN. The next candidate must regenerate the
+SPISI/SPICLK/SPISO3/RTL_3V3 QFN source field together.
+
 `phase24_rtl9210b_support_v8_audit.py` records the same check as a reusable
 regression: all three V8 support nets pass from saved-board native
 connectivity, and removal of an XTAL_OUT track fails the audit.
