@@ -251,3 +251,8 @@ items. It reintroduced the superseded PEDET short and crossed SPI, RESET,
 PERST, and CLKREQ corridors; B.Cu routes also lacked a valid F.Cu pad
 transition. The candidate is preserved as negative-control evidence and is
 not a current baseline.
+
+V2 was regenerated from corrected V12 control geometry, but native DRC
+reported 33 violations / 35 unconnected items. The four B.Cu lanes caused
+source-pad shorts, RESET/PERST/CLKREQ crossings, mask bridges, and via
+clearance failures. V2 is rejected; no test-access copper is promoted.

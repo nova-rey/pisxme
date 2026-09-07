@@ -5187,6 +5187,10 @@ with Path B isolated and production CAD unchanged.
 old V6 control board. Native DRC reported 12 / 35; it reintroduced the
 superseded PEDET short and crossed SPI/control corridors. Rejected as a
 negative-control route implementation; no production copper changed.
+2026-09-07 — PiSXMe Phase 24 Path B: tested corrected V12-based SPI
+test-access V2. Native DRC reported 33 / 35 with source-pad shorts,
+control-corridor crossings, mask bridges, and via-clearance failures.
+Rejected as a coordinated-island route failure; production copper unchanged.
 2026-09-07 — PiSXMe Phase 24 Path A: tested V14 at 0.15-mm track width.
 Native DRC reported 105 / 34 with 28 track-width violations. Rejected under
 the selected 0.20-mm differential-width contract; V12 remains the valid-width

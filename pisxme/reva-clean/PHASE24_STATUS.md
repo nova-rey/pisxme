@@ -4498,6 +4498,18 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-B test-access V2 — 2026-09-07
+
+V2 was generated from corrected V12 control geometry with four explicit
+B.Cu test-access lanes and F.Cu pad dogbones. Native DRC reported 33
+violations / 35 unconnected items, including source-pad shorts, crossings
+through RESET/PERST/CLKREQ corridors, solder-mask bridges, and invalid via
+clearances. It is rejected; test access requires a coordinated support-island
+regeneration rather than appended lanes. No production CAD changed.
+
+`PATHB_TEST_ACCESS_V2 = REJECTED`
+`PHASE24 = OPEN`
+
 ## Path-B test-access V1 — 2026-09-07
 
 The first four-SPI-test-pad route was generated against the older V6 control
