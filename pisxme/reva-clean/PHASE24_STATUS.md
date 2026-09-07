@@ -59,6 +59,10 @@ the XTAL_IN via and V153 contacts the 1V1 source field. V154 moves only the
 native audit with no signal shorting/crossing. Promote V154 as the current
 REFCLK-ready local-support basis; XTAL_IN/REFCLK and remaining high-speed
 endpoints remain open.
+V155 is rejected: its split REFCLK_N escape still contacted U1 pad 65 and the
+outboard 1V1 handoff, while REFCLK_P contacted the XTAL_IN endpoint. V154
+remains the validated local-support basis; REFCLK requires a coordinated
+endpoint/sideband allocation, not another uncoordinated split.
 The current promoted disposable RTL_5V/control basis is
 `PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
 CLKREQ/PEDET support evidence. V97 moved

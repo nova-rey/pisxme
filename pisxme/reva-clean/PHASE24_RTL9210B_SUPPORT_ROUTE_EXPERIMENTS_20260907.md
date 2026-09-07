@@ -85,6 +85,10 @@ V152/V153 are rejected REFCLK trials against V151 for XTAL_IN and 1V1
 contacts. V154 moves only the 1V1 handoff outboard and passes native DRC's
 signal gate plus the complete 1V1 audit. Promote V154 as the current local
 support basis; REFCLK remains open.
+V155 is rejected: the split REFCLK_N escape contacted U1 pad 65 and the
+outboard 1V1 handoff, while REFCLK_P contacted the XTAL_IN endpoint. V154
+remains the validated local-support basis; the next REFCLK attempt must
+co-author the endpoint/sideband allocation.
 
 ## V76–V78 U1.40 edge-group trials — rejected
 
