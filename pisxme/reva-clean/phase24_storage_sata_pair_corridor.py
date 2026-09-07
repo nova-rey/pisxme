@@ -14,7 +14,10 @@ ROOT = Path(__file__).resolve().parent
 BASE = ROOT / os.environ.get("PISXME_SATA_PAIR_BASE", "PHASE24_SELECTED_MACRO_SWAP_STORAGE_USB3_PAIR_CORRIDOR_V3.kicad_pcb")
 OUT = ROOT / os.environ.get("PISXME_SATA_PAIR_OUT", "PHASE24_SELECTED_MACRO_SWAP_STORAGE_SATA_PAIR_CORRIDOR.kicad_pcb")
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
-WIDTH = pcbnew.FromMM(0.1321)
+# Use the board's ordinary 0.20-mm signal rule for this route-development
+# fixture; the earlier 0.1321-mm trial was below the saved minimum-width rule
+# and therefore could not be a valid DRC candidate.
+WIDTH = pcbnew.FromMM(0.20)
 
 def V(x, y): return pcbnew.VECTOR2I_MM(float(x), float(y))
 def xy(p):
@@ -99,7 +102,7 @@ bridge = {
     "RX_N": ("59", F, [u7pads["RX_N"], (95.0,131.5), (92.0,134.0),
                          (104.0,134.0), (104.0,128.0), (109.0,128.0)]),
     "RX_P": ("60", F, [u7pads["RX_P"], (94.6,132.5), (91.0,136.0),
-                         (111.0,136.0), (111.0,116.0), (109.0,116.0)]),
+                         (108.0,136.0), (108.0,116.0), (109.0,116.0)]),
 }
 for key, (u7pin, layer, pts) in bridge.items():
     n = find_net(board, "/STORAGE/BRIDGE_SATA_" + key)
@@ -143,8 +146,8 @@ if J3_ROT == 90:
                                                (121.0,j3pads["TX_P"][1])]),
         "RX_N": ("C33", (114.0,128.0), F, [(130.0,128.0),
                                                (130.0,j3pads["RX_N"][1])]),
-        "RX_P": ("C32", (114.0,116.0), F, [(131.5,116.0),
-                                               (131.5,j3pads["RX_P"][1])]),
+        "RX_P": ("C32", (114.0,116.0), F, [(129.0,116.0),
+                                               (129.0,j3pads["RX_P"][1])]),
     }
     final_dogbones = {key: [(pts[-1][0], pts[-1][1]), j3pads[key]]
                       for key, (_, _, _, pts) in socket.items()}

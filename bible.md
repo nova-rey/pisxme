@@ -4877,3 +4877,7 @@ validation remain open.
  PASS and native DRC reduced to 59 findings, isolating the remaining issue to
  local bridge/capacitor escape ordering. Preserved the raw report and did not
  promote the route.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: corrected the disposable
+ SATA route to the saved 0.20-mm minimum width and repaired the rotated
+ socket-side lane ordering. The minimal native fixture retained all eight
+ endpoint assertions and improved to 14 DRC findings; it remains unpromoted.

@@ -65,6 +65,13 @@ implementation/escape development; it does not reject the M-key authority or
 the Path-A topology. Raw evidence is
 `PHASE24_PATHA_MINIMAL_SATA_CORRIDOR_20260906-drc.rpt`.
 
+The best current minimal-island candidate is the width-corrected, socket-lane
+ordering trial `PHASE24_PATHA_MINIMAL_SATA_CORRIDOR_W020C_20260906.kicad_pcb`.
+It uses the saved 0.20-mm minimum signal width, retains the eight-endpoint
+audit PASS, and reduces the native DRC result to 14 findings. The remaining
+findings are local U7 escape/corridor interactions, U7 footprint clearances,
+and silkscreen warnings; the candidate is not yet promoted to production.
+
 ## Next action
 
 Continue with a layer-separated, native-pad-derived U7 escape trial or a
