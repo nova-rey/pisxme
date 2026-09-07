@@ -2,6 +2,19 @@
 
 ## Authoritative current state — 2026-09-07
 
+### RTL9210B source-field update — current
+
+V26, V27, V28, V29, and V30 are rejected disposable source-field route
+implementations. V31 is the best complete five-net SPI source/target
+primitive so far: native KiCad reports 4 inherited findings / 39 unrelated
+opens, with no SPI signal shorts, crossings, or clearance violations; the
+saved-board SPI audit passes SPISI, SPICLK, SPISO3, SPISO, and SPICS, and its
+trace-removal negative control fails. V31 is not full Path-B closure because
+its V24 base omits the XTAL/RSET support joins. V32 attempted those joins and
+is rejected at 11 violations / 35 opens for support-corridor crossings and
+shorts. The next step is a coordinated support-field allocator based on the
+V31 five-net result; production CAD and Path A remain unchanged.
+
 Path B remains a disposable RTL9210B qualification path. The current best
 combined support baseline is `PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V8`
 plus the validated RTL_5V V9 rail primitive. V8 native support and SPI audits

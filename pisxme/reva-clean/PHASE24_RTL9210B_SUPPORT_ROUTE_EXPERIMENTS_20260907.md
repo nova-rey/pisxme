@@ -2,6 +2,17 @@
 
 ## Current authoritative baseline
 
+V31 is the current best complete five-net SPI source/target primitive. It
+uses native saved-pad coordinates and separates SPISO3, SPISO, and SPICS from
+the retained V24 SPISI/SPICLK/RTL_3V3 field. Native DRC reports only inherited
+GND-fill/silkscreen findings (4 total), with no SPI signal violations; the
+saved-board positive and trace-removal negative-control audits pass all five
+SPI nets. This does not close support because the V24 base has no XTAL/RSET
+joins. V32 is retained as a rejected support implementation (11 violations /
+35 opens): its F.Cu support paths crossed each other and the local passive
+pad field. The next candidate must allocate support and rails coherently
+around V31 rather than append the V32 paths.
+
 V8 is the current combined support/SPI baseline and V9 is the retained
 RTL_5V rail primitive. V10/V11 RTL_3V3 trunks are rejected because they
 intersect retained high-speed/support corridors. The next experiment must
