@@ -29,6 +29,13 @@ passes XTAL_IN, XTAL_OUT, and RSET with its XTAL_OUT negative control. This
 closes the local moved-cluster support sub-gate only; RTL_1V1, RTL_3V3,
 RTL_5V, controls, grounds, USB, M.2, and full Path-B validation remain open.
 
+V37 tested explicit F.Cu pad-to-via access feeding shaped B.Cu rail fields.
+It is rejected at 41 native violations / 34 opens: the via fanout collides
+with neighboring rail pads and retained SPI/source-field geometry. This does
+not invalidate V35; it rules out an indiscriminate shared via-field solution.
+The next rail candidate must partition the rail escapes or move the local
+decoupling pads coherently.
+
 V36 tested broad F.Cu local zones for RTL_3V3, RTL_5V, and RTL_1V1. It is
 rejected: native DRC still reports rail opens and an inherited GND thermal
 finding, because the zones do not provide complete pad/via access around the
