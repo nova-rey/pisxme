@@ -131,6 +131,12 @@ before applying the same placement and REFCLK cell. Native DRC has zero
 trace-removal negative control pass both REFCLK mappings. Promote V174 only
 as a disposable translated REFCLK placement/topology sub-primitive. It is
 not full Path-B support closure.
+V175 restores the validated V158 XTAL_IN/XTAL_OUT copper translated onto
+V174. Native DRC shows the expected local co-allocation defects: REFCLK-P
+contacts the translated XTAL_IN transition and REFCLK-N crosses the
+translated XTAL_OUT span. Reject V175 as route implementation evidence;
+V174 remains the clean REFCLK-only basis and the next trial must co-author
+the translated crystal and REFCLK lower exits.
 V172 keeps the V169 pair topology but drops the lower exits below the crystal
 row. Native DRC still reports U2/SPISI/RTL3V3/RTL1V1/PEDET conflicts and one
 P/N endpoint crossing, so it is rejected. The V169 native saved-connectivity

@@ -120,6 +120,13 @@ passes U1.61→J1.55 and U1.62→J1.53, with a trace-removal negative control.
 Promote V174 only as the translated REFCLK placement/topology sub-primitive;
 the remaining RTL9210B rails, SPI, reset, USB, M.2, firmware, and full Path-B
 gates remain open.
+V175 restores the validated V158 crystal copper translated onto V174. Native
+DRC exposes only the expected local co-allocation failures: REFCLK-P meets
+the translated XTAL_IN transition and REFCLK-N crosses the translated
+XTAL_OUT span. Reject V175 as a route implementation, not a placement or
+authority failure; V174 remains the clean REFCLK-only basis. The next trial
+must move the two REFCLK lower transitions around the translated crystal
+field or co-author the crystal exits together.
 The current promoted disposable RTL_5V/control basis is
 `PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
 CLKREQ/PEDET support evidence. V97 moved
