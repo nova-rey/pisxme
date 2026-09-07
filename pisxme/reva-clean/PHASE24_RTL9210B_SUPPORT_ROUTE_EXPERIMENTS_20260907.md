@@ -99,6 +99,19 @@ audit/negative control with no signal DRC classes. V160 removes the old F.Cu
 B.Cu rail. V162 is rejected as the first REFCLK attempt on this basis because
 its N transition contacts XTAL_OUT/legacy 1V1 and the source escapes cross.
 V160/V158 remain the coordinated-support basis; REFCLK is open.
+V163 co-authors XTAL_OUT on an upper B.Cu span and attempts upper REFCLK
+escapes. Native DRC rejects it for an exposed-pad contact, REFCLK-N/CLKREQ_N
+shorting, a REFCLK-P/N source-field contact, and J1 launch clearance.
+V164 separates the source drops and moves the N launch, removing short
+classes but leaving six native crossings involving the old 1V1 bridge,
+XTAL_OUT, CLKREQ, PEDET, and the J1 sideband field. V165 removes the
+superseded 1V1 bridge and tries P on F.Cu/N on B.Cu; native DRC still finds a
+REFCLK-P contact with U1 pad 62 and XTAL_OUT crossings. V166 moves P to B.Cu
+above the QFN, but the source via contacts exposed GND, its B.Cu span
+contacts moved XTAL_OUT, and the J1-side N transition is too close to TXP.
+Preserve V163-V166 as rejected route-allocation evidence. No Path-A asset,
+production CAD, layer policy, or electrical authority changed; the remaining
+task is one pad-aware QFN/XTAL/REFCLK/J1 allocation.
 
 ## V76–V78 U1.40 edge-group trials — rejected
 

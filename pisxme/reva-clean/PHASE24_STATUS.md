@@ -75,6 +75,19 @@ control pass. V160 removes the old F.Cu 1V1 handoff and joins the complete
 that basis is rejected for XTAL_OUT/legacy 1V1 contacts and two crossings.
 The current coordinated-support basis is V160 plus V158's crystal routes;
 REFCLK remains open.
+V163 is rejected: moving XTAL_OUT to the proposed upper B.Cu span placed its
+left transition too close to the exposed GND pad and the REFCLK-N launch
+still entered the CLKREQ field. V164 separates the REFCLK source drops and
+uses a moved XTAL_OUT, but native DRC retains six real crossing classes,
+including the inherited 1V1/CLKREQ corridors and the J1 launch. V165 removes
+the superseded 1V1 bridge and tries P on F.Cu/N on B.Cu; it still shorts the
+REFCLK-P departure into U1 pad 62 and crosses the XTAL_OUT span. V166 moves
+P to an upper B.Cu corridor, but native DRC reports REFCLK-P contacts with
+the exposed GND/XTAL_OUT fields and the J1-side N via is too close to the
+TXP pad. Reject V163-V166 as route-allocation evidence. They do not alter
+the V158/V160 support basis or the RTL9210B authority; REFCLK remains open
+and the next trial must allocate the QFN source escapes, XTAL_OUT transition,
+and J1 launch as one cell.
 The current promoted disposable RTL_5V/control basis is
 `PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
 CLKREQ/PEDET support evidence. V97 moved
