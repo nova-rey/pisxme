@@ -5405,3 +5405,8 @@ V11's native endpoint audit passes XTAL_IN, XTAL_OUT, and the eight asserted
 RTL_1V1 endpoints, with a negative control that fails when XTAL_OUT copper is
 removed. Native DRC remains 6 violations / 25 opens, so V11 is not a closed
 or production board; it is the preferred support-routing baseline.
+### Path-B U2 RTL_3V3 B.Cu trunks V1 (rejected)
+
+The U2 3V3 transition trial reduced native opens 25 to 22 but produced 8 DRC
+violations from B.Cu crossings with SPI/RTL_1V1 and a remaining 3V3 branch.
+It is rejected; V11 remains the preferred disposable baseline.

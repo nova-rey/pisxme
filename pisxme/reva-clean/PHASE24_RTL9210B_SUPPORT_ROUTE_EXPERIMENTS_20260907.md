@@ -371,3 +371,10 @@ V7 restored the lower segment but left pad-55 disconnected from the complete
 collector and collided with the relocated transition, at 8 DRC violations /
 26 opens. This proves that a single-via move is insufficient: the next class
 must relocate the full RTL_1V1 collector or move the local support island.
+## U2 RTL_3V3 B.Cu trunks V1 — rejected
+
+Moving the two U2-side 3V3 trunks below the PEDET corridor connected three
+additional native endpoints, reducing opens from 25 to 22. The long B.Cu
+trunks crossed SPISO3, SPICLK, and RTL_1V1 corridors and retained a 3V3
+pull-up crossing; native DRC increased to 8 violations. The candidate is
+rejected as route implementation evidence and V11 remains the baseline.

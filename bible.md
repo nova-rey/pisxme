@@ -5276,3 +5276,8 @@ of the prior KiCad API warning and preserves measured via dimensions.
 passed XTAL_IN, XTAL_OUT, and eight RTL_1V1 endpoints; removing XTAL_OUT
 copper passed the negative control. V11 remains disposable at 6 DRC / 25
 opens and production CAD is unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested U2 RTL_3V3 B.Cu trunks V1.
+They connected three additional endpoints and reduced opens 25 to 22, but
+crossed SPI/RTL_1V1 corridors and left a 3V3 branch crossing, at 8 DRC
+violations. Rejected as route implementation evidence; production CAD
+unchanged.
