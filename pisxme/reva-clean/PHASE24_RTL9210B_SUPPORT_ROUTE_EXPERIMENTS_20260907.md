@@ -49,6 +49,18 @@ U1 source escape and retained XTAL_OUT region, not the U2 footprint's
 coordinate frame. This route class is rejected; the next trial must solve
 the QFN source breakout itself or change the U1 source-facing orientation.
 
+## Focused QFN dogbone probe
+
+`PHASE24_RTL9210B_U1_QFN_SINGLE_DOGBONE_V1.kicad_pcb` scrubbed retained
+XTAL_IN/XTAL_OUT/RSET/local SPISI copper and tested only the rotated-U1
+SPISI departure. The route leaves the pad at 45 degrees, reaches a
+0.6/0.3-mm ordinary-via transition outside the QFN field, and continues on
+B.Cu. Native KiCad reports 5 findings / 44 opens with no signal short,
+crossing, or clearance violation from the dogbone. Remaining findings are
+the intentionally incomplete probe and inherited GND conditions. This
+validates the local departure geometry; it does not close the five-net SPI
+branch.
+
 ## Attempt 1 — all-F.Cu support fanout
 
 `PHASE24_RTL9210B_BRINGUP_SUPPORT_ROUTED.kicad_pcb`

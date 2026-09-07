@@ -30,6 +30,16 @@ crossings. This separates the corrected footprint placement evidence from
 the still-failing route implementation; no production CAD or Path-A asset
 changed.
 
+A focused source-breakout probe,
+`PHASE24_RTL9210B_U1_QFN_SINGLE_DOGBONE_V1`, scrubbed retained XTAL/RSET
+copper and tested SPISI alone with a 45-degree departure to a 0.6/0.3-mm
+ordinary-via transition outside the pad field. Native KiCad reports 5
+findings / 44 opens: no signal short, crossing, or clearance violation from
+the dogbone; the findings are incomplete-probe dangling items and inherited
+ground conditions. This validates the local departure geometry. The next
+five-net trial must preserve that clearance and regenerate neighboring
+XTAL/RSET routes independently.
+
 The corrected-footprint far placement with an order-preserving two-layer
 partition, `PHASE24_RTL9210B_U2_CORRECTED_FAR_PARTITION_SPI_V1`, is rejected
 at 30 violations / 40 opens. Native evidence shows the remaining failure is

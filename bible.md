@@ -5501,3 +5501,9 @@ a malformed disposable U2 flash footprint coordinate frame; a corrected
 local-coordinate candidate was created and rejected at 53 violations / 39
 opens due to the test placement/SPI permutation. Path A, production CAD, and
 the Path-B electrical architecture remain unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: focused QFN SPISI dogbone probe passed
+the source geometry with no signal short, crossing, or clearance violation;
+native KiCad reports only 5 incomplete-probe/inherited-GND findings and 44
+opens. The probe establishes a viable 45-degree departure to an ordinary via
+outside the pad field. Five-net SPI and regenerated neighboring support
+remain open; Path A and production CAD are unchanged.
