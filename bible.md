@@ -522,6 +522,11 @@ Path A and production CAD remain unchanged.
 native connectivity and negative control passed but DRC found three rail
 track crossings. V242 remains the promoted disposable rail basis; Path A and
 production CAD remain unchanged.
+2026-09-07: Rejected RTL9210B V245 translated U1.60/U1.63 lower-edge route.
+Native connectivity and the trace-removal negative control passed, but DRC
+found five crossings against RTL_5V, PEDET, RTL_3V3, REFCLK_P, and PERST_N.
+V242 remains the promoted disposable rail basis; Path A and production CAD
+remain unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: validated a corrected U2 footprint in a
 left/90-degree placement-only candidate at 6 findings / 44 opens with no new
 signal short, then rejected its mixed-layer SPI route at 24 violations / 39

@@ -1530,3 +1530,14 @@ negative control pass for U1.36/U1.39/U1.50/U1.52. Native DRC reports 496
 findings / 15 unconnected items and three track crossings: the new B.Cu
 vertical crosses RTL_5V and RTL_3V3, and the source leg crosses RTL_3V3.
 Reject V244 as a route implementation; V242 remains promoted.
+
+## V245 RTL_1V1 U1.60/U1.63 translated lower-edge topology — rejected
+
+V245 translated the historical V95/V96 lower-edge route class onto the V242
+pad field and terminated it at the promoted 1V1 trunk. Native connectivity
+and the trace-removal negative control pass for U1.36/U1.60/U1.63. Native
+DRC reports 502 findings / 14 unconnected items and five track crossings:
+the new B.Cu vertical crosses RTL_5V, PEDET, and RTL_3V3, while its F.Cu
+source field crosses REFCLK_P and PERST_N. Reject V245 as a route
+implementation; V242 remains promoted and no Path-A or production-CAD change
+occurred.
