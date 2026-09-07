@@ -4498,6 +4498,20 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-B native connectivity audit — 2026-09-07
+
+`phase24_rtl9210b_control_connectivity_audit.py` now derives connectivity
+from KiCad's saved pads, tracks, vias, and native connectivity engine. On
+`PHASE24_RTL9210B_CONTROL_SUPPORT_LOCAL_V12.kicad_pcb`, PEDET, CLKREQ_N,
+PERST_N, RESET_N, and SPICS/SPISO/SPISI/SPICLK U1↔U2 endpoints all pass.
+The negative control removes all saved PEDET copper and fails as required.
+The four SPI test pads are intentionally not asserted by this audit and
+remain an open test-access task. No synthetic graph edges are used.
+
+`PATHB_CONTROL_CONNECTIVITY_AUDIT = PASS`
+`PATHB_TEST_ACCESS = OPEN`
+`PHASE24 = OPEN`
+
 ## Path-B test-access V2 — 2026-09-07
 
 V2 was generated from corrected V12 control geometry with four explicit

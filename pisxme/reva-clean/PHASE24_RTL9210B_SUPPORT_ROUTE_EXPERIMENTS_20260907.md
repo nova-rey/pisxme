@@ -256,3 +256,11 @@ V2 was regenerated from corrected V12 control geometry, but native DRC
 reported 33 violations / 35 unconnected items. The four B.Cu lanes caused
 source-pad shorts, RESET/PERST/CLKREQ crossings, mask bridges, and via
 clearance failures. V2 is rejected; no test-access copper is promoted.
+
+## Native connectivity audit
+
+`phase24_rtl9210b_control_connectivity_audit.py` uses KiCad's actual saved
+connectivity data and passes PEDET, CLKREQ_N, PERST_N, RESET_N, and all four
+U1↔U2 SPI endpoint assertions on V12. Its negative control removes PEDET
+copper and fails as required. Test pads remain deliberately outside the
+assertion set until a coordinated access route is authored.

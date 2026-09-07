@@ -5195,3 +5195,8 @@ Rejected as a coordinated-island route failure; production copper unchanged.
 Native DRC reported 105 / 34 with 28 track-width violations. Rejected under
 the selected 0.20-mm differential-width contract; V12 remains the valid-width
 baseline and production CAD is unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: added native connectivity audit for V12.
+KiCad's saved pad/track/via connectivity passes PEDET, CLKREQ_N, PERST_N,
+RESET_N, and U1↔U2 SPICS/SPISO/SPISI/SPICLK; removing PEDET copper makes the
+negative control fail. Test pads remain open and unasserted; no synthetic
+edges or production copper were added.
