@@ -178,6 +178,13 @@ coordinates, causing local XTAL/RSET/rail/SPI collisions. This is an
 authoring/route implementation failure; the next relocation must derive every
 moved support pad from the saved native footprint after transform.
 
+V73 regenerated the moved support paths using the actual post-transform native
+pad coordinates, but is rejected at 32 native findings / 28 opens. The
+remaining defects are route allocation: the long RSET perimeter crosses SPI/
+3V3, and the U1-side XTAL_IN departure is too close to RTL_3V3. The
+transformed-endpoint authoring issue is corrected; future support work must
+use shorter local corridors or another coherent field allocation.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

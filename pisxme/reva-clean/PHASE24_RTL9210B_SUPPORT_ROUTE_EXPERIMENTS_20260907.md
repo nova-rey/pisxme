@@ -150,6 +150,12 @@ based on guessed transformed pad coordinates and collided with local
 XTAL/rail/SPI geometry. Preserve it as authoring evidence; future relocation
 work must inspect post-transform native pad positions before routing.
 
+V73 used the extracted post-transform endpoints, but is rejected at 32 native
+findings / 28 opens. Its long RSET perimeter crosses retained SPI/3V3 fields,
+and the U1-side XTAL_IN departure is too close to RTL_3V3. The endpoint
+authoring defect is fixed; the next class must split support routes into
+shorter local corridors.
+
 V57 completes the RTL_5V disposable rail primitive. Its U1.33-to-U1.17
 F.Cu escape passes above the native SPI source endpoints, then uses the
 SPI-clear B.Cu dogleg and a right-side C5.1 launch. Native DRC reports 5
