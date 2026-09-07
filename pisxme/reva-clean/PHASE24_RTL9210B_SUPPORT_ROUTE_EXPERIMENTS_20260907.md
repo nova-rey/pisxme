@@ -148,6 +148,13 @@ SPISO3, and RTL_3V3 channels. Native KiCad reports 7 violations / 41 opens;
 the B.Cu channels cross during the U2 handoff. The placement remains useful
 evidence, but the simple parallel-drop implementation is rejected.
 
+## 90-degree mixed-layer source field V17 — rejected
+
+V17 kept SPISO3 on F.Cu and placed SPICLK/SPISI on separated B.Cu channels,
+with RTL_3V3 on its own upper bus. Native KiCad reports 5 findings / 41
+opens; SPISI/SPICLK transition proximity and the reversed B.Cu handoff still
+produce real shorts/crossing. This improves over V16 but is not promotable.
+
 ## Integrated 3V3/SPICLK source escape V13 — rejected
 
 V13 regenerated SPICLK with RTL_3V3 but still reports 10 native violations /

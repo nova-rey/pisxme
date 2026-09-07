@@ -137,6 +137,12 @@ but the B.Cu channels still cross at the U2 handoff. The orientation remains
 a placement alternative; the next route must stagger downstream drops outside
 the horizontal channel envelope.
 
+Mixed-layer 90-degree source-field V17 reduces the placement candidate to 5
+native findings / 41 opens, but remains rejected: SPISI/SPICLK transition
+proximity and their reversed B.Cu handoff still create real shorts/crossing.
+This improves over V16 and confirms that one reversed-order channel must move
+to an independent F.Cu corridor before the orientation can be evaluated.
+
 Integrated source-escape V13 regenerated SPICLK with RTL_3V3 but is rejected
 at 10 native violations / 31 opens. SPICLK still crossed the retained SPISI
 departure, while the RTL_3V3 transitions collided with SPICLK and XTAL_IN.

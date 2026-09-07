@@ -5583,3 +5583,7 @@ The 90-degree U1 four-net V16 source-field probe was rejected at 7 native
 violations / 41 opens because the B.Cu channels crossed at the U2 handoff.
 The orientation remains a placement alternative; downstream drops must be
 staggered outside the horizontal channel envelope.
+Mixed-layer 90-degree source field V17 improved to 5 native findings / 41
+opens but was rejected for SPISI/SPICLK transition proximity and reversed B.Cu
+handoff crossing. One reversed-order channel must move to an independent
+F.Cu corridor in the next attempt.
