@@ -181,6 +181,16 @@ passes the focused CLKREQ audit: R3.1/U1.13/J1.52 are connected, with no
 fails as required. Promote V131 only as the disposable complete CLKREQ
 sub-primitive; RESET_N, RTL_5V, high-speed links, and full Path-B validation
 remain open.
+
+## Current RTL9210B SPICLK status — V194–V196 rejected
+
+V194–V196 were disposable SPICLK route trials from U1.19 to U2.6. V194
+shorted adjacent SPISI and crossed XTAL_IN; V195's combined XTAL_IN
+relocation introduced crystal/source conflicts; V196 retained the V193
+crystal geometry but contacted C2 ground and crossed XTAL_OUT. These are
+route-allocation failures, not a Path-B architecture rejection. The next
+credible experiment must co-author the local crystal/SPI field or move the
+small support cluster coherently. Path A and production CAD remain unchanged.
 V116 adds the PEDET U1-to-M.2 launch on an independent F.Cu corridor. Native
  connectivity joins U1.8 to J1.69 and native DRC reports no
  `shorting_items` or `tracks_crossing`. Promote V116 only as the disposable

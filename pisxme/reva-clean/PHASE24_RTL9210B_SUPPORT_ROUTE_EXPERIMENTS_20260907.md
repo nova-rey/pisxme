@@ -1293,6 +1293,18 @@ negative control fails as required. V185 is a promoted disposable rail
 sub-primitive; the remaining 3V3 branches, support rails, SPI/control, and
 full Path-B validation remain open.
 
+## SPICLK V194–V196 route allocation — rejected
+
+V194 shorted adjacent U1.18 SPISI and crossed XTAL_IN. V195 attempted the
+consultant-recommended source reshape plus XTAL_IN via relocation, but the
+new crystal transition contacted XTAL_OUT and U1.52 and still crossed the
+SPICLK corridor. V196 retained the validated V193 crystal geometry and
+doglegged SPICLK around the XTAL_IN via; native DRC still found C2 ground
+contact and an XTAL_OUT crossing. All three are rejected route
+implementations. The evidence now supports a coordinated local
+crystal/SPI-field relocation or co-authored escape; no production CAD or
+Path-A architecture changed.
+
 ## SPISO V190–V193 route allocation
 
 V190 and V191 were rejected after native DRC found source-field and
