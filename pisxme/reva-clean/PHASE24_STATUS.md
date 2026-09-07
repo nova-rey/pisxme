@@ -5399,3 +5399,9 @@ The native escape-map utility now queries via width with an explicit copper
 layer, eliminating the KiCad `PCB_VIA::GetWidth` warning. The regenerated
 map preserves the measured 0.600/0.300-mm via dimensions and is suitable for
 the forthcoming full RTL_1V1 collector relocation comparison.
+### Path-B crystal V11 preferred disposable baseline
+
+V11's native endpoint audit passes XTAL_IN, XTAL_OUT, and the eight asserted
+RTL_1V1 endpoints, with a negative control that fails when XTAL_OUT copper is
+removed. Native DRC remains 6 violations / 25 opens, so V11 is not a closed
+or production board; it is the preferred support-routing baseline.

@@ -5272,3 +5272,7 @@ at 8 DRC / 26 opens. Rejected; full collector relocation is required.
 2026-09-07 — PiSXMe Phase 24 Path B: refreshed the native QFN escape map to
 query via width with an explicit copper layer. The regenerated map is free
 of the prior KiCad API warning and preserves measured via dimensions.
+2026-09-07 — PiSXMe Phase 24 Path B: V11 crystal/collector native audit
+passed XTAL_IN, XTAL_OUT, and eight RTL_1V1 endpoints; removing XTAL_OUT
+copper passed the negative control. V11 remains disposable at 6 DRC / 25
+opens and production CAD is unchanged.
