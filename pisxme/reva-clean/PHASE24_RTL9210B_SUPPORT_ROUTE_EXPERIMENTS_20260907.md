@@ -226,3 +226,9 @@ CLKREQ, PERST, RESET, and 3V3 corridors. Native DRC reports **10 violations
 / 33 opens**, including SPI/3V3 interference, lower control crossings, and a
 GND-via collision. It is rejected as a route implementation; the lower
 placement remains disposable and no Path-B architecture decision changes.
+
+V10 attempted a QFN-safe RTL_5V departure from U1 pad 17 while preserving
+V6 controls and 3V3. Native DRC regressed to **14 violations / 35 opens**;
+the new rail transition collided with RTL_1V1 and PERST geometry and did not
+complete the source join. It is rejected. Moving only the rail departure is
+insufficient; the support island remains isolated and Path A is preserved.

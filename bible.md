@@ -5125,4 +5125,8 @@ relocation/re-authoring, with production CAD unchanged.
  separated PEDET/CLKREQ/PERST/RESET corridors and an early C3 3V3
  transition. Native DRC reported 10 violations / 33 opens, so it was
  rejected as a route implementation. The lower placement and RTL9210B
- architecture remain unpromoted; production CAD is unchanged.
+architecture remain unpromoted; production CAD is unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested V10, a QFN-safe RTL_5V departure
+from U1 pad 17 on the V6 baseline. Native DRC regressed to 14 violations /
+35 opens from RTL_1V1/PERST collisions and an incomplete rail join. Rejected
+the rail-only repair and preserved the Path-B isolation boundary.

@@ -114,6 +114,13 @@ SPI/3V3 interference, lower control crossings, and a GND-via collision. It
 is rejected as a route implementation; no placement or architecture is
 promoted from this candidate.
 
+V10 attempted a QFN-safe RTL_5V departure from U1 pad 17 while preserving
+V6 controls and 3V3. Native DRC regressed to 14 violations / 35 opens from
+RTL_1V1/RTL_5V crossings, PERST-via collisions, and an incomplete rail join.
+It is rejected; moving only the rail departure is insufficient. The next
+workstream may proceed independently while the Path-B support island remains
+isolated.
+
 Further control variants V4/V5/V6 were also rejected: V4 reports 8 DRC
 violations / 34 opens, V5 reports 3 / 34, and V6 reports 4 / 33. Their
 remaining findings are same-layer PEDET/CLKREQ/rail corridor crossings. This
