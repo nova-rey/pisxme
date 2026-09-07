@@ -111,6 +111,13 @@ attempted fanout geometry, not evidence against the RTL9210B support
 architecture; V5 remains the clean baseline for the next independent rail
 escape class.
 
+The V7 RTL_1V1 perimeter-escape probe is also rejected. Replacing the prior
+1V1 routes with a perimeter collector produced 31 DRC violations and 21
+opens, including multiple new rail-to-rail shorts and edge-clearance errors.
+The attempted perimeter path is therefore not a valid next baseline; V5 is
+retained as the best combined candidate while a new, pad-field-aware escape
+class is developed.
+
 The rail layer rebalance is now verified: the rail-only/U2 branch returns to
 native DRC 0 violations / 45 opens, and regenerating the combined candidate
 reduces its native DRC to 18 violations / 34 opens with the combined endpoint
