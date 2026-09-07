@@ -48,6 +48,13 @@ identifies pair-corridor crossings and one local QFN escape interaction.
 This is a route-implementation result, not a connector or architecture
 result.
 
+The next bounded experiment separated the TX pair onto B.Cu and the RX pair
+onto F.Cu while preserving pair-local routing and the same rotated J3 launch.
+The eight-endpoint audit remained PASS; native DRC reported 66 findings and
+still rejected the trial because the independently authored corridors cross
+in the shared storage acreage. This is retained as another rejected route
+implementation, with no production promotion.
+
 ## Next action
 
 Continue with a layer-separated, native-pad-derived U7 escape trial or a

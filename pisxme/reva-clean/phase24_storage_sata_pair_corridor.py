@@ -96,10 +96,10 @@ bridge = {
                          (100.0,130.0), (100.0,124.0), (109.0,124.0)]),
     "TX_P": ("57", B, [u7pads["TX_P"], (95.8,130.5), (94.6,132.0),
                          (102.0,132.0), (102.0,112.0), (109.0,112.0)]),
-    "RX_N": ("59", B, [u7pads["RX_N"], (95.0,131.5), (93.2,134.0),
+    "RX_N": ("59", F, [u7pads["RX_N"], (95.0,131.5), (92.0,134.0),
                          (104.0,134.0), (104.0,128.0), (109.0,128.0)]),
-    "RX_P": ("60", B, [u7pads["RX_P"], (94.6,132.5), (91.8,136.0),
-                         (106.0,136.0), (106.0,116.0), (109.0,116.0)]),
+    "RX_P": ("60", F, [u7pads["RX_P"], (94.6,132.5), (91.0,136.0),
+                         (111.0,136.0), (111.0,116.0), (109.0,116.0)]),
 }
 for key, (u7pin, layer, pts) in bridge.items():
     n = find_net(board, "/STORAGE/BRIDGE_SATA_" + key)
@@ -141,10 +141,10 @@ if J3_ROT == 90:
                                                (123.0,j3pads["TX_N"][1])]),
         "TX_P": ("C30", (114.0,112.0), B, [(114.0,112.0),(121.0,112.0),
                                                (121.0,j3pads["TX_P"][1])]),
-        "RX_N": ("C33", (114.0,128.0), B, [(114.0,128.0),(127.0,128.0),
-                                               (127.0,j3pads["RX_N"][1])]),
-        "RX_P": ("C32", (114.0,116.0), B, [(114.0,116.0),(125.0,116.0),
-                                               (125.0,j3pads["RX_P"][1])]),
+        "RX_N": ("C33", (114.0,128.0), F, [(130.0,128.0),
+                                               (130.0,j3pads["RX_N"][1])]),
+        "RX_P": ("C32", (114.0,116.0), F, [(131.5,116.0),
+                                               (131.5,j3pads["RX_P"][1])]),
     }
     final_dogbones = {key: [(pts[-1][0], pts[-1][1]), j3pads[key]]
                       for key, (_, _, _, pts) in socket.items()}
@@ -179,12 +179,15 @@ for key, (cap, start, layer, pts) in socket.items():
     # immediately beside the coupling capacitor, stay on B.Cu through the
     # field, then return only for the final signal-pad dogbone.
     cap_via = (cap_pad[0] + 1.5, cap_pad[1])
-    path(board, n, [cap_pad, cap_via], F); via(board, n, cap_via)
-    path(board, n, [cap_via, source_via], B)
-    path(board, n, pts, B); via(board, n, target_via)
-    end_path = final_dogbones.get(key, [target_via])
-    if end_path[0] != target_via:
-        path(board, n, [target_via, end_path[0]], B)
-    path(board, n, end_path, F)
+    if layer == F:
+        path(board, n, [cap_pad] + pts + [xy(pad(board, "J3", socket_pads[key]))], F)
+    else:
+        path(board, n, [cap_pad, cap_via], F); via(board, n, cap_via)
+        path(board, n, [cap_via, source_via], B)
+        path(board, n, pts, B); via(board, n, target_via)
+        end_path = final_dogbones.get(key, [target_via])
+        if end_path[0] != target_via:
+            path(board, n, [target_via, end_path[0]], B)
+        path(board, n, end_path, F)
 
 board.BuildListOfNets(); board.Save(str(OUT)); print(OUT)

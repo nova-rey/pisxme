@@ -4864,3 +4864,8 @@ validation remain open.
  remained PASS and DRC improved to 67 findings, but pair-corridor crossings
  and a local QFN escape interaction remained. Preserved the raw report and
  rejected the route implementation without changing Path A architecture.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: tried a pair-layer-separated
+ SATA corridor, assigning TX to B.Cu and RX to F.Cu with native-pad-derived
+ escapes. All eight endpoint assertions remained PASS; native DRC reported
+ 66 findings from shared-corridor crossings and inherited fixture opens.
+ Preserved the result as rejected route-method evidence.
