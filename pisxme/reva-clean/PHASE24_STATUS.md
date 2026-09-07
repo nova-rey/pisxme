@@ -20,6 +20,11 @@ V140 shifts the U1.34 departure left and raises the B.Cu handoff above the
 V139 SPISO3 via, but native DRC still reports three SPISO↔RTL_3V3 shorts and
 one crossing. Reject V140; U1.34 needs a new shared QFN source-field
 allocation rather than another blind endpoint tweak.
+V141 joins the four shared M.2 `SSD_3V3` contacts on the V137 basis. Native
+DRC has no shorting or crossing classes; the saved-board audit connects
+J1.2/J1.4/J1.6/J1.8 and its trace-removal negative control fails as required.
+This closes only the socket-contact collector; the actual SSD_3V3 source,
+power-budget, and remaining high-speed Path-B endpoints remain open.
 The current promoted disposable RTL_5V/control basis is
 `PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
 CLKREQ/PEDET support evidence. V97 moved

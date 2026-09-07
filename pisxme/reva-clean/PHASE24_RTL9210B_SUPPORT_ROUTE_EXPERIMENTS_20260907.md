@@ -35,6 +35,14 @@ shorts SPISO and leaves a crossing in native DRC, so it is rejected. The
 remaining U1.34 issue is allocation of the shared QFN source field on the
 promoted V137 basis, not missing saved-board connectivity.
 
+## V141 M.2 SSD_3V3 contact-row sub-primitive
+
+V141 joins J1.2/J1.4/J1.6/J1.8 on the V137 basis using native pad-derived
+F.Cu segments. Native DRC reports no `shorting_items` or `tracks_crossing`;
+the saved-board audit and trace-removal negative control pass. This is only
+the M.2 contact collector. It does not close the SSD_3V3 source, inrush,
+power-budget, or complete Path-B power gate.
+
 ## V76–V78 U1.40 edge-group trials — rejected
 
 V76 placed the U1.40 RTL_1V1 transition at (92.8,68.8), where the via
