@@ -5016,3 +5016,16 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  disposable author, native PCB, and raw DRC receipt referenced by the status
  documents. The artifacts are explicitly rejected route evidence; no
  integrated or production PCB was altered.
+2026-09-07 — PiSXMe Phase 24 Path B: added an independent PDF-level audit
+ against the retained RTL9210B Rev. 1.1 document. It passes exact PEDET
+ mode, shared SATA/PCIe lane, REFCLK, PERST/CLKREQ, ISOLATEB, clock, rail,
+ RSET, exposed-pad, USB, SPI, and flash-sizing-boundary assertions; its
+ PEDET mutation negative control fails as intended. This strengthens pin/mode
+ evidence without promoting community firmware or production CAD.
+2026-09-07 — PiSXMe Phase 24 Path B: authored the isolated RTL9210B bring-up
+ fixture with corrected M-key lane mapping, support-net ownership, SPI/reset/
+ UART test access, and explicit SSD-power/PEDET/sideband boundaries. Native
+ DRC reports zero violations and 56 intentional unrouted items; the fixture
+ audit and negative control pass. Kept it outside production CAD and recorded
+ the remaining routed-fixture, programming, firmware-rights, and hardware
+ validation gates explicitly.

@@ -221,7 +221,26 @@ phase24_rtl9210b_m2_mapping_audit.py                         PASS
 phase24_rtl9210b_native_netlist_audit.py                    PASS
 phase24_rtl9210b_native_netlist_audit.py --negative-control  PASS (fails as intended)
 phase24_rtl9210b_wip_hierarchy_conflict_audit.py             PASS
+phase24_rtl9210b_pdf_pin_audit.py                           PASS
+phase24_rtl9210b_pdf_pin_audit.py --negative-control        PASS (fails as intended)
 ```
+
+The PDF audit independently checks the retained Rev. 1.1 document for
+PEDET's explicit `1 = PCIe / 0 = SATA` mode table, the shared 64/65/67/68
+SATA/PCIe lane identity, REFCLK 61/62, PERST 14, CLKREQ 13, ISOLATEB 12,
+25-MHz clock, RSET 51, exposed ground pad 69, USB pins, SPI pins, and the
+document's explicit Realtek-FAE dependency for exact flash sizing. Its
+negative control mutates PEDET text and fails as intended. This strengthens
+the technical pin/mode authority but does not close firmware rights,
+authorized provisioning, or the production application-circuit gate.
+
+The next isolated implementation step is now materialized in
+`PHASE24_RTL9210B_BRINGUP_FIXTURE.md`. Its saved native PCB has the corrected
+QFN-68/M-key mapping, support/test net boundary, and exposed programming
+access. The fixture audit and negative control pass; native DRC reports zero
+violations and 56 intentionally unrouted items. This is a design-evidence
+fixture, not a routed production candidate, so the unrouted items remain an
+explicit gate rather than a waived failure.
 
 The retained native straight-line RTL9210B PCB fixture remains rejected by
 its raw KiCad report (`102` DRC violations, including crossings and a short).
