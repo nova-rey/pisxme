@@ -4869,3 +4869,6 @@ validation remain open.
  escapes. All eight endpoint assertions remained PASS; native DRC reported
  66 findings from shared-corridor crossings and inherited fixture opens.
  Preserved the result as rejected route-method evidence.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: refreshed the live status
+ checkpoint to `5184b6f`, distinguishing the passing native endpoint audit
+ from the still-failing native DRC route gate.
