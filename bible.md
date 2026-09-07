@@ -5322,6 +5322,10 @@ reported 29 violations / 38 opens; source geometry was recoverable, but the
 destination lanes intersect inherited controls and the lower SPISI branch.
 Rejected as a complete route; source-escape evidence retained and production
 CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: isolated RTL_1V1 fanout from the native
+V11 QFN map after removing all prior 1V1 copper. The candidate reports 26 DRC
+violations / 18 opens, including rail/GND, rail/3V3, and crystal conflicts.
+Rejected as ordinary-via coordinate fanout; no production CAD changed.
 2026-09-07 — PiSXMe Phase 24 Path B: the SPI-only lateral proof passed native
 saved-board connectivity for all five U1-to-U2 SPI nets; serialized removal of
 all SPICS copper failed the negative control as required. Native DRC reports

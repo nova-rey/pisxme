@@ -141,6 +141,14 @@ improves to 16 violations / 25 opens; a saved-board native audit proves
 U1.51/R1.1 and its serialized negative control fails as required. This closes
 only the RSET local sub-gate; the full Path-B support gate remains open.
 
+The isolated V1V1-native-fanout probe is rejected: after removing all prior
+RTL_1V1 copper and rebuilding the fanout from the loaded QFN pad map, native
+DRC reports 26 violations / 18 opens, including RTL_1V1 conflicts with GND,
+RTL_3V3, XTAL_OUT, and existing corridor geometry. This independently
+confirms that ordinary-via coordinate fanout is exhausted for this placement;
+the next method must be a validated native/reference escape or a local
+footprint/placement change within the disposable fixture.
+
 The QFN escape-map utility now inspects the latest integrated V11 saved board,
 including the validated RSET transplant, instead of superseded V3/V5 fixture
 states. `PHASE24_RTL9210B_QFN_ESCAPE_MAP_V5.txt` is retained as historical
