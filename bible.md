@@ -5393,6 +5393,11 @@ changed; V5 remains the baseline.
 V10. Native opens reduced to 19, but DRC rose to 26 with XTAL_OUT, CLKREQ_N,
 SPISO, GND, RTL_5V, and sub-rule clearance conflicts. Rejected; V5 remains
 the baseline and production CAD is unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: transplanted the separately validated
+native oscillator V7 RSET route into the combined V5 candidate. The corrected
+numeric-to-named-net transplant adds seven objects; native DRC improves to
+16/25, and the saved-board RSET audit plus negative control pass. Full Path-B
+support remains open and production CAD is unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: tested pad-aware RTL_1V1 escape probe
 V9. Native DRC reports 32 violations / 22 opens, including new control/rail,
 rail/rail, and edge-clearance conflicts. Rejected as route-implementation

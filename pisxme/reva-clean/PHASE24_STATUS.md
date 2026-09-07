@@ -129,6 +129,13 @@ SPISO, GND, and RTL_5V conflicts plus a 0.0472-mm clearance. The result is
 not promotable; V5 remains the current combined baseline and the next work
 must use a native/reference-derived escape strategy.
 
+The native source-authority RSET route from the separately validated oscillator
+V7 fixture is now transplanted into V5 as
+`PHASE24_RTL9210B_FULL_LATERAL_SUPPORT_CRYSTAL_V11_NATIVE_RSET`. Native DRC
+improves to 16 violations / 25 opens; a saved-board native audit proves
+U1.51/R1.1 and its serialized negative control fails as required. This closes
+only the RSET local sub-gate; the full Path-B support gate remains open.
+
 The V9 pad-aware RTL_1V1 escape probe is rejected. Native DRC reports 32
 violations / 22 opens, including new CLKREQ_N/RTL_1V1, RTL_3V3/RTL_1V1,
 RTL_1V1/RTL_5V, and board-edge conflicts. The attempted serialized QFN
