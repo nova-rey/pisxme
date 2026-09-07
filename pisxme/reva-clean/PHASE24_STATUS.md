@@ -136,10 +136,10 @@ improves to 16 violations / 25 opens; a saved-board native audit proves
 U1.51/R1.1 and its serialized negative control fails as required. This closes
 only the RSET local sub-gate; the full Path-B support gate remains open.
 
-The QFN escape-map utility was corrected to inspect the current V5 saved board
-instead of the superseded V3 pad-17 fixture. `PHASE24_RTL9210B_QFN_ESCAPE_MAP_V5.txt`
-is now the current native pad/track/via geometry receipt; earlier map output is
-historical and must not be used as the live baseline.
+The QFN escape-map utility now inspects the latest integrated V11 saved board,
+including the validated RSET transplant, instead of superseded V3/V5 fixture
+states. `PHASE24_RTL9210B_QFN_ESCAPE_MAP_V5.txt` is retained as historical
+V5 evidence; a V11 receipt is generated for current routing decisions.
 
 The V9 pad-aware RTL_1V1 escape probe is rejected. Native DRC reports 32
 violations / 22 opens, including new CLKREQ_N/RTL_1V1, RTL_3V3/RTL_1V1,
