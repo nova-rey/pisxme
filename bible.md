@@ -5010,6 +5010,11 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  crossings, versus V2 at 138 / 52 with six shorts and eleven crossings.
  Rejected V3 as worse local launch geometry; preserved raw evidence and left
  production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: preserved control-route variants V4/V5/V6
+ with native results 8/34, 3/34, and 4/33 (DRC violations/open items).
+ Rejected the repeated same-layer corridor class and retained the clean
+ RESET_N/PERST_N baseline; next control work requires a genuinely separated
+ layer departure.
 2026-09-06 — PiSXMe Phase 24 Path B: refreshed the firmware boundary from
  live public guidance. The RTL9210 ecosystem documents Windows enclosure
  update/recovery and configuration dumping, while the retained technical

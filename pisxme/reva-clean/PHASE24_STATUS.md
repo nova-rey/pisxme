@@ -78,6 +78,13 @@ inherited RTL_1V1 corridor; V3 changed that corridor and regressed to 5
 crossings / 33 opens. Both remain rejected route implementations. The clean
 RESET_N/PERST_N candidate remains the current control baseline.
 
+Further control variants V4/V5/V6 were also rejected: V4 reports 8 DRC
+violations / 34 opens, V5 reports 3 / 34, and V6 reports 4 / 33. Their
+remaining findings are same-layer PEDET/CLKREQ/rail corridor crossings. This
+coordinate-only B.Cu class is exhausted for now; the next control method must
+separate the source/endpoint departures by layer rather than tune the same
+parallel channels.
+
 ## Current live correction — 2026-09-06
 
 The old V4 SATA claim is superseded for Path-A topology: its C30–C33 to J3

@@ -142,3 +142,10 @@ remain the next control-routing gate and are not waived. V2 reduced the
 combined PEDET/CLKREQ class to 3 crossings / 33 opens; V3 changed the
 RTL_1V1 corridor but regressed to 5 crossings / 33 opens. Both are retained
 as rejected route evidence, not current fixture candidates.
+
+V4/V5/V6 continued the control experiments with layer/detour changes but did
+not close the class: their native results were respectively 8 violations /
+34 opens, 3 / 34, and 4 / 33. The residuals are same-layer crossings between
+PEDET, CLKREQ_N, RTL_5V, and inherited support corridors. This coordinate-only
+class is rejected; further work must use a genuinely layer-separated source
+and endpoint departure.
