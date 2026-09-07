@@ -151,6 +151,12 @@ the proposed transition was too close to the XTAL_OUT via/segment. This is a
 local source-field allocation failure; V59 and V63 remain promoted 1V1
 sub-primitives and U1.55 remains open.
 
+V68 attempted U1.60 bottom-edge RTL_1V1 routing above the XTAL_OUT launch and
+is rejected at 7 native findings / 26 opens because the F.Cu leg intersects
+the retained XTAL_IN launch near x=107.5. The C4-side B.Cu join was otherwise
+clear. U1.60 requires coherent XTAL/support-field relocation or an alternate
+source-side layer escape; further direct bottom-edge nudging is not promoted.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

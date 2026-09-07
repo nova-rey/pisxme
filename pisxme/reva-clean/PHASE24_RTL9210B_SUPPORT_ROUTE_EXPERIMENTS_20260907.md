@@ -126,6 +126,11 @@ entered adjacent no-net U1.56 and its transition violated clearance to the
 XTAL_OUT via/segment. Preserve it as negative evidence; U1.55 needs a new
 local source-field allocation rather than another direct bottom drop.
 
+V68 is rejected at 7 native findings / 26 opens. The U1.60 F.Cu leg was
+clear of XTAL_OUT but intersected the retained XTAL_IN launch near x=107.5;
+the C4-side B.Cu join was otherwise clear. U1.60 therefore needs a coherent
+XTAL/support-field relocation or a different source-side layer escape.
+
 V57 completes the RTL_5V disposable rail primitive. Its U1.33-to-U1.17
 F.Cu escape passes above the native SPI source endpoints, then uses the
 SPI-clear B.Cu dogleg and a right-side C5.1 launch. Native DRC reports 5
