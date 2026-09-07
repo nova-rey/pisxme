@@ -205,3 +205,18 @@ via. It remains at **3 violations / 36 opens** because the dogleg intersects
 the RTL_5V vertical departure. This closes the current same-placement route
 class for evidence; the next class must relocate or coherently re-author the
 small RTL_5V/3V3/control support island rather than add more PEDET detours.
+
+## Lower-left support placement discriminator
+
+The first lower-placement helper incorrectly used global pad coordinates as
+the footprint anchor and placed R2/R3 at the wrong coordinates. That variant
+is retained only as tooling evidence. The corrected helper uses the native
+pad-to-footprint local offset and produces R2 pad 1 at `(69,78)` and R3 pad 1
+at `(72,78)`.
+
+The first regenerated lower-placement route uses a separate bottom 3V3
+collector and lower PEDET/CLKREQ/PERST corridors. Native DRC reports **9
+violations / 33 opens**, including RESET/3V3 crossings, PEDET/CLKREQ
+crossings, a GND-via collision, and a QFN-edge departure clearance. It is
+rejected as a route implementation and not ranked above V6 merely because it
+has fewer opens. Production CAD and Path A remain unchanged.

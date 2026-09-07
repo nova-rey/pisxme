@@ -5113,5 +5113,11 @@ clearance output as stale fill state and kept production CAD unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: V9 retained the best V6 control-route
  baseline and tested a PEDET dogleg around the inherited RTL_5V via. Native
  DRC remained at 3 violations / 36 opens. The same-placement PEDET route
- class is exhausted; the next step is coherent local support-island
- relocation/re-authoring, with production CAD unchanged.
+class is exhausted; the next step is coherent local support-island
+relocation/re-authoring, with production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: corrected the native footprint-anchor
+ math for a lower-left R2/R3 placement, verified pad 1 at (69,78)/(72,78),
+ and tested a regenerated lower control/3V3 route. Native DRC reported 9
+ violations / 33 opens, so the placement route was rejected as an immature
+ implementation. V6 remains the best disposable baseline; no production CAD
+ or Path-A authority changed.

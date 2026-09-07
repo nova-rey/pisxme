@@ -98,6 +98,15 @@ same-placement route class for evidence purposes. The next experiment must
 relocate or coherently re-author the small RTL_5V/3V3/control support island;
 additional coordinate-only PEDET detours are not promoted.
 
+The corrected lower-left placement experiment was generated from native
+footprint-local offsets: R2 pad 1 is `(69,78)` and R3 pad 1 is `(72,78)`.
+Its first regenerated control/3V3 route reports 9 native DRC violations / 33
+opens, including lower-corridor crossings, a GND-via collision, and one
+QFN-edge departure clearance. The earlier lower baseline had a coordinate
+frame error and is superseded by this corrected placement evidence. The
+lower placement remains disposable and unpromoted; V6 remains the best
+current route baseline.
+
 Further control variants V4/V5/V6 were also rejected: V4 reports 8 DRC
 violations / 34 opens, V5 reports 3 / 34, and V6 reports 4 / 33. Their
 remaining findings are same-layer PEDET/CLKREQ/rail corridor crossings. This
