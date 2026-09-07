@@ -4,7 +4,7 @@ from pathlib import Path
 import pcbnew
 
 ROOT = Path(__file__).resolve().parent
-BOARD = ROOT / "PHASE24_RTL9210B_5V_PAD17_V3.kicad_pcb"
+BOARD = ROOT / "PHASE24_RTL9210B_FULL_LATERAL_SUPPORT_CRYSTAL_V5_NO_FIXTURE_STUBS.kicad_pcb"
 b = pcbnew.LoadBoard(str(BOARD))
 u = b.FindFootprintByReference("U1")
 print("U1 native pads")

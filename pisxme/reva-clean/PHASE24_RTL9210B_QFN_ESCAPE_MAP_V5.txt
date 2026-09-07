@@ -1,0 +1,109 @@
+U1 native pads
+pad  1  <none>        76.800  65.950 size 0.200x0.900
+pad  2  <none>        77.200  65.950 size 0.200x0.900
+pad  3  RESET_N       77.600  65.950 size 0.200x0.900
+pad  4  <none>        78.000  65.950 size 0.200x0.900
+pad  5  JTAG_TCK      78.400  65.950 size 0.200x0.900
+pad  6  JTAG_TDI      78.800  65.950 size 0.200x0.900
+pad  7  <none>        79.200  65.950 size 0.200x0.900
+pad  8  PEDET         79.600  65.950 size 0.200x0.900
+pad  9  JTAG_TDO      80.000  65.950 size 0.200x0.900
+pad 10  <none>        80.400  65.950 size 0.200x0.900
+pad 11  <none>        80.800  65.950 size 0.200x0.900
+pad 12  ISOLATEB      81.200  65.950 size 0.200x0.900
+pad 13  CLKREQ_N      81.600  65.950 size 0.200x0.900
+pad 14  PERST_N       82.000  65.950 size 0.200x0.900
+pad 15  <none>        82.400  65.950 size 0.200x0.900
+pad 16  RTL_1V1       82.800  65.950 size 0.200x0.900
+pad 17  RTL_5V        83.200  65.950 size 0.200x0.900
+pad 18  SPISI         83.950  65.200 size 0.900x0.200
+pad 19  SPICLK        83.950  64.800 size 0.900x0.200
+pad 20  RTL_3V3       83.950  64.400 size 0.900x0.200
+pad 21  SPISO2        83.950  64.000 size 0.900x0.200
+pad 22  SPISO3        83.950  63.600 size 0.900x0.200
+pad 23  SPISO         83.950  63.200 size 0.900x0.200
+pad 24  SPICS         83.950  62.800 size 0.900x0.200
+pad 25  RTL_1V1       83.950  62.400 size 0.900x0.200
+pad 26  DEVSLP        83.950  62.000 size 0.900x0.200
+pad 27  <none>        83.950  61.600 size 0.900x0.200
+pad 28  <none>        83.950  61.200 size 0.900x0.200
+pad 29  <none>        83.950  60.800 size 0.900x0.200
+pad 30  <none>        83.950  60.400 size 0.900x0.200
+pad 31  <none>        83.950  60.000 size 0.900x0.200
+pad 32  <none>        83.950  59.600 size 0.900x0.200
+pad 33  RTL_5V        83.950  59.200 size 0.900x0.200
+pad 34  RTL_3V3       83.950  58.800 size 0.900x0.200
+pad 35  <none>        83.200  58.050 size 0.200x0.900
+pad 36  RTL_1V1       82.800  58.050 size 0.200x0.900
+pad 37  USB_DP        82.400  58.050 size 0.200x0.900
+pad 38  USB_DM        82.000  58.050 size 0.200x0.900
+pad 39  RTL_3V3       81.600  58.050 size 0.200x0.900
+pad 40  RTL_1V1       81.200  58.050 size 0.200x0.900
+pad 41  USB_TXP0      80.800  58.050 size 0.200x0.900
+pad 42  USB_TXN0      80.400  58.050 size 0.200x0.900
+pad 43  <none>        80.000  58.050 size 0.200x0.900
+pad 44  <none>        79.600  58.050 size 0.200x0.900
+pad 45  GND           79.200  58.050 size 0.200x0.900
+pad 46  USB_RXP0      78.800  58.050 size 0.200x0.900
+pad 47  USB_RXN0      78.400  58.050 size 0.200x0.900
+pad 48  <none>        78.000  58.050 size 0.200x0.900
+pad 49  <none>        77.600  58.050 size 0.200x0.900
+pad 50  RTL_1V1       77.200  58.050 size 0.200x0.900
+pad 51  RSET          76.800  58.050 size 0.200x0.900
+pad 52  RTL_3V3       76.050  58.800 size 0.900x0.200
+pad 53  XTAL_IN       76.050  59.200 size 0.900x0.200
+pad 54  XTAL_OUT      76.050  59.600 size 0.900x0.200
+pad 55  RTL_1V1       76.050  60.000 size 0.900x0.200
+pad 56  <none>        76.050  60.400 size 0.900x0.200
+pad 57  <none>        76.050  60.800 size 0.900x0.200
+pad 58  <none>        76.050  61.200 size 0.900x0.200
+pad 59  <none>        76.050  61.600 size 0.900x0.200
+pad 60  RTL_1V1       76.050  62.000 size 0.900x0.200
+pad 61  REFCLK_P      76.050  62.400 size 0.900x0.200
+pad 62  REFCLK_N      76.050  62.800 size 0.900x0.200
+pad 63  RTL_1V1       76.050  63.200 size 0.900x0.200
+pad 64  LANE0_RXP     76.050  63.600 size 0.900x0.200
+pad 65  LANE0_RXN     76.050  64.000 size 0.900x0.200
+pad 66  GND           76.050  64.400 size 0.900x0.200
+pad 67  LANE0_TXN     76.050  64.800 size 0.900x0.200
+pad 68  LANE0_TXP     76.050  65.200 size 0.900x0.200
+pad 69  GND           80.000  62.000 size 4.800x4.800
+
+objects in QFN escape window x=73..87, y=56..68
+track RESET_N      F.Cu  (77.600,65.950)->(77.600,69.500)
+track PEDET        F.Cu  (79.600,65.950)->(79.600,68.500)
+track CLKREQ_N     F.Cu  (81.600,65.950)->(81.600,69.500)
+track PERST_N      F.Cu  (82.000,65.950)->(82.000,68.500)
+track RTL_1V1      F.Cu  (82.800,58.050)->(82.800,56.800)
+track RTL_1V1      F.Cu  (82.800,56.800)->(83.500,56.800)
+track RTL_1V1      F.Cu  (83.500,56.800)->(83.500,56.800)
+track RTL_1V1      B.Cu  (83.500,56.800)->(83.500,45.000)
+track RTL_5V       F.Cu  (83.950,59.200)->(88.000,59.200)
+track SPISI        F.Cu  (83.950,65.200)->(85.500,65.200)
+track SPISI        F.Cu  (85.500,65.200)->(85.500,70.000)
+track SPICLK       F.Cu  (83.950,64.800)->(89.000,64.800)
+track RTL_3V3      F.Cu  (83.950,58.800)->(83.950,57.500)
+track RTL_3V3      F.Cu  (83.950,57.500)->(84.800,57.500)
+track RTL_3V3      F.Cu  (84.800,57.500)->(84.800,57.500)
+track RTL_3V3      B.Cu  (84.800,57.500)->(84.800,43.000)
+track SPISO3       F.Cu  (86.000,63.600)->(86.000,63.000)
+track SPISO3       F.Cu  (83.950,63.600)->(86.000,63.600)
+track SPISO3       F.Cu  (86.000,63.000)->(88.000,63.000)
+track SPISO        F.Cu  (85.500,62.000)->(87.000,62.000)
+track SPISO        F.Cu  (85.500,63.200)->(85.500,62.000)
+track SPISO        F.Cu  (83.950,63.200)->(85.500,63.200)
+track SPISO        F.Cu  (87.000,62.000)->(87.000,62.000)
+track SPISO        B.Cu  (87.000,62.000)->(87.000,49.000)
+track SPISO        B.Cu  (87.000,62.000)->(87.000,49.000)
+track SPICS        F.Cu  (85.000,62.800)->(85.000,61.000)
+track SPICS        F.Cu  (83.950,62.800)->(85.000,62.800)
+track SPICS        F.Cu  (85.000,61.000)->(86.000,61.000)
+track SPICS        F.Cu  (86.000,61.000)->(86.000,61.000)
+track SPICS        B.Cu  (86.000,61.000)->(86.000,48.000)
+track SPICS        B.Cu  (86.000,61.000)->(86.000,48.000)
+track XTAL_IN      F.Cu  (72.000,59.200)->(76.050,59.200)
+track XTAL_OUT     F.Cu  (72.800,59.600)->(76.050,59.600)
+via   RTL_1V1      (83.500,56.800) size 0.600 drill 0.300
+via   RTL_3V3      (84.800,57.500) size 0.600 drill 0.300
+via   SPISO        (87.000,62.000) size 0.600 drill 0.300
+via   SPICS        (86.000,61.000) size 0.600 drill 0.300

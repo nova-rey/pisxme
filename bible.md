@@ -5398,6 +5398,10 @@ native oscillator V7 RSET route into the combined V5 candidate. The corrected
 numeric-to-named-net transplant adds seven objects; native DRC improves to
 16/25, and the saved-board RSET audit plus negative control pass. Full Path-B
 support remains open and production CAD is unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: corrected the QFN escape-map utility to
+load the current V5 combined candidate rather than superseded V3 fixture
+geometry, and saved the resulting native pad/track/via receipt. Historical
+map output is no longer a live routing baseline.
 2026-09-07 — PiSXMe Phase 24 Path B: tested pad-aware RTL_1V1 escape probe
 V9. Native DRC reports 32 violations / 22 opens, including new control/rail,
 rail/rail, and edge-clearance conflicts. Rejected as route-implementation
