@@ -4346,6 +4346,13 @@ remained PASS and native DRC remained at 12 findings, so the suspected
 embedded/project footprint mismatch is not the route root cause. The next
 Path-A repair must address local route geometry and support connectivity.
 
+The TI land-pattern receipt
+`authority-inventory/primary-docs/tusb9261/TUSB9261_PVP_LAND_PATTERN_RECEIPT.md`
+now confirms the exact 0.4-mm/1.2 x 0.2-mm PVP0064A geometry from the current
+TI datasheet. A disposable 0.15-mm API clearance probe did not alter KiCad's
+active 0.20-mm rule basis and is rejected as a rule-authoring method; no
+production clearance rule has been weakened.
+
 ## U5 native recheck receipt — 2026-09-06
 
 The corrected U5 audit was rerun against the saved U5 fixture and the

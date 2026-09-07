@@ -4924,3 +4924,8 @@ validation remain open.
  native DRC remained at 12 findings, ruling out the embedded/project footprint
  mismatch as the route blocker. Preserved the raw board/report and redirected
  the next repair toward local route geometry and support connectivity.
+2026-09-06 — PiSXMe Phase 24 Path A: checked the current TI TUSB9261 Rev-I
+ package drawing and recorded the authoritative PVP0064A 0.4-mm pitch,
+ 1.2 x 0.2-mm pad geometry. A disposable 0.15-mm clearance API probe did not
+ alter KiCad's active 0.20-mm rule basis and was rejected; no production rule
+ or validation severity was weakened.
