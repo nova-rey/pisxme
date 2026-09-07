@@ -157,6 +157,13 @@ the retained XTAL_IN launch near x=107.5. The C4-side B.Cu join was otherwise
 clear. U1.60 requires coherent XTAL/support-field relocation or an alternate
 source-side layer escape; further direct bottom-edge nudging is not promoted.
 
+V69 is a diagnostic discriminator: removing only the obstructing XTAL_IN
+route allows the U1.60 RTL_1V1 corridor to run with no signal DRC violations.
+The report has 6 findings / 28 opens, consisting of the intentionally
+disconnected XTAL_IN/support path, one diagnostic dangling endpoint, and
+inherited non-signal warnings. This confirms a local XTAL/support placement
+collision rather than an impossible U1.60 rail route; V69 is not promoted.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

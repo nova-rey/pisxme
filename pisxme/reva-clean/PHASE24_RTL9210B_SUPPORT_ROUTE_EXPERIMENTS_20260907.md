@@ -131,6 +131,13 @@ clear of XTAL_OUT but intersected the retained XTAL_IN launch near x=107.5;
 the C4-side B.Cu join was otherwise clear. U1.60 therefore needs a coherent
 XTAL/support-field relocation or a different source-side layer escape.
 
+V69 is a diagnostic discriminator, not a support PASS. Removing only the
+obstructing XTAL_IN copper permits the U1.60 RTL_1V1 corridor with no signal
+DRC violations; its 6 findings / 28 opens are the deliberately disconnected
+XTAL_IN/support path, one dangling diagnostic endpoint, and inherited
+non-signal warnings. The result confirms a local XTAL/support placement
+collision and supports coherent relocation.
+
 V57 completes the RTL_5V disposable rail primitive. Its U1.33-to-U1.17
 F.Cu escape passes above the native SPI source endpoints, then uses the
 SPI-clear B.Cu dogleg and a right-side C5.1 launch. Native DRC reports 5
