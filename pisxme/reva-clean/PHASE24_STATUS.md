@@ -62,6 +62,14 @@ V41 U1 pad-field defect; one RSET-adjacent via/transition remains, so V42 is
 not promoted. The source/downstream split is retained for the next rail-pad
 join pass.
 
+V44 removed the redundant V43 transition and returns the 3V3 branch to 4
+inherited GND/silkscreen findings with no signal DRC violations. Saved-board
+inspection shows U1.34/U1.39/U2.3/U2.8 are joined, while U1.20/C3 remains a
+separate valid trunk and U1.52 is still unjoined. V45 attempted that U1.52
+join and is rejected at 10 findings / 30 opens for repeated XTAL_IN-via
+clearance violations. The next step must relocate the 3V3 support handoff or
+co-author the U1.52/XTAL_IN source field; no production CAD changed.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

@@ -50,6 +50,13 @@ pad-field defect is gone, but one RSET-adjacent via remains dangling/too
 close. It is not promoted; the partition is retained as the next rail-pad
 join basis.
 
+V44 removes the redundant same-layer V43 via and has only the inherited
+GND/silkscreen DRC findings. The saved-board 3V3 connectivity is partial:
+U1.34/U1.39/U2.3/U2.8 are joined, U1.20/C3 remains a separate trunk, and
+U1.52 is open. V45's attempted U1.52 handoff is rejected at 10 findings /
+30 opens for XTAL_IN-via clearances. Further work must relocate the handoff
+or regenerate the U1.52/XTAL_IN source field together.
+
 V40 jointly reauthored the 3V3/5V rail spines. Native DRC reports 8 findings,
 including a new RTL_3V3/SPISO3 source collision and retained RTL_5V/SPISI and
 C5-handoff conflicts. It is rejected; the next rail class must keep the V24
