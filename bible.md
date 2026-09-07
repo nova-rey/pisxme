@@ -4994,3 +4994,14 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  twelve-endpoint audit passed, but the first via/escape author produced 180
  findings / 52 opens, 23 shorts, and 5 crossings. Classified it as local
  route/via geometry failure, preserved the evidence, and left V3 as baseline.
+2026-09-06 — PiSXMe Phase 24 Path B: rechecked the live JLCPCB RTL9210B-CG
+ listing (C5143573). It confirms Realtek identity, QFN-68, SMT Economic/
+ Standard PCBA eligibility, MSL 3, and PCBA-only storage; no reproducible
+ quantity-1 price, stock depth, or lead time was exposed. Saved a dated web
+ receipt and kept standalone procurement as an explicit open gate.
+2026-09-07 — PiSXMe Phase 24 Path A: completed the rotated U13 V3
+ disposable comparison. The twelve-endpoint native audit passed, but native
+ DRC regressed to 204 findings / 52 opens with six shorts and twelve
+ crossings, versus V2 at 138 / 52 with six shorts and eleven crossings.
+ Rejected V3 as worse local launch geometry; preserved raw evidence and left
+ production CAD unchanged.

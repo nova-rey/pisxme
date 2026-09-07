@@ -206,6 +206,11 @@ its advertised files are treated as retrieved or authoritative.
 
 ## Live requalification checkpoint — 2026-09-06
 
+The live JLCPCB page was rechecked and its identity/assembly facts are now
+captured verbatim as a local source receipt. This improves procurement
+confidence but does not convert the page's PCBA-only listing into a verified
+quantity-1 bare-chip supply or close firmware rights.
+
 The Path-B evidence package was re-run against the current checkout before
 any production-CAD change:
 
