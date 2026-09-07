@@ -68,6 +68,12 @@ The RTL_5V/C5 and RTL_1V1/C4 local support route now passes as V6:
 after refill and leaves 39 unconnected items. V1–V5 are retained as rejected
 route-method evidence; no production CAD changed.
 
+The corrected separate RESET_N/PERST_N route passes its endpoint audit and
+native DRC with 37 remaining opens. The first combined PEDET/CLKREQ trial is
+rejected at 8 DRC violations / 33 opens due to same-layer corridor crossings,
+two control-to-power interactions, and a J1 via clearance issue; it is not
+used as current fixture evidence.
+
 ## Current live correction — 2026-09-06
 
 The old V4 SATA claim is superseded for Path-A topology: its C30–C33 to J3

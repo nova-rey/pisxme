@@ -5076,6 +5076,12 @@ clearance output as stale fill state and kept production CAD unchanged.
  escapes, ordinary vias, and separated outer-layer corridors; after native
  zone refill it passes DRC with 0 violations / 39 remaining opens. Preserved
  V1–V5 as rejected evidence and kept production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: preserved the rejected combined
+ PEDET/CLKREQ/PERST/RESET route (8 DRC violations / 33 opens) after its
+ saved-net audit caught distinct reset ownership. A separate corrected
+ RESET_N/PERST_N route passes native DRC at 0 violations / 37 opens. Kept
+ PEDET/CLKREQ open for a different layer assignment and production CAD
+ unchanged.
 2026-09-07 — PiSXMe Phase 24 documentation hygiene: marked the original
  RTL9210B bring-up fixture's 56-open count as historical baseline evidence
  and pointed current-state prose to the SPI V7 plus GND-plane candidate with

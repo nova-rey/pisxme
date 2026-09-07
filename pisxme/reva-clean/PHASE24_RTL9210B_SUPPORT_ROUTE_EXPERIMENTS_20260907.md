@@ -129,3 +129,13 @@ RTL_1V1 escapes from the QFN top row before its B.Cu transition. Native DRC
 after zone refill reports **0 violations / 39 unconnected items**. This closes
 the two local rail-support sub-gate only; control/sideband, USB, M.2, and
 test-access connectivity remain open.
+
+## RESET/PERST and PEDET/CLKREQ control routing
+
+The first combined PEDET/CLKREQ/PERST/RESET author was rejected at **8 DRC
+violations / 33 opens**. Its saved-net audit correctly caught distinct
+RESET_N versus PERST_N ownership, but the PEDET/CLKREQ B.Cu corridors crossed
+the rail/SPI corridors and one J1 transition was too close to PERST. A
+corrected separate RESET_N/PERST_N route was then authored from the V6 rail
+baseline and passes native DRC at **0 violations / 37 opens**. PEDET/CLKREQ
+remain the next control-routing gate and are not waived.
