@@ -105,6 +105,14 @@ SPISI, SPICLK, SPISO3, SPISO, and SPICS. Its SPISI trace-removal negative
 control fails as required, confirming no synthetic connectivity edge was
 introduced by the support relocation.
 
+## RTL_5V rail V9 — local PASS
+
+`PHASE24_RTL9210B_RTL5V_RAIL_V9.kicad_pcb` adds a bottom-side RTL_5V trunk
+from U1.17/U1.33 to C5.1 through ordinary vias outside the QFN pad field.
+Native KiCad reports 4 inherited findings / 33 unconnected items and no new
+signal violation. Saved-board connectivity passes U1.17, U1.33, and C5.1.
+This is a local rail primitive, not full support closure.
+
 `phase24_rtl9210b_support_v8_audit.py` records the same check as a reusable
 regression: all three V8 support nets pass from saved-board native
 connectivity, and removal of an XTAL_OUT track fails the audit.

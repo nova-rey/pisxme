@@ -5557,5 +5557,9 @@ remain, so V8 is a local support-route baseline, not full Path-B closure.
 The same saved board passes the native five-net SPI endpoint audit and its
 SPISI trace-removal negative control. Remaining work is control/sideband,
 rail/ground completion, USB, M.2, power, and full Path-B validation.
+RTL_5V rail probe V9 then connected U1.17/U1.33/C5.1 with no new signal DRC
+violation; native saved-board connectivity passed all three endpoints. The
+probe reduced unrelated fixture opens from 35 to 33 and remains a local rail
+primitive, not full Path-B closure.
 Added a reusable saved-board V8 support audit; XTAL_IN/XTAL_OUT/RSET pass and
 the XTAL_OUT trace-removal negative control fails as required.

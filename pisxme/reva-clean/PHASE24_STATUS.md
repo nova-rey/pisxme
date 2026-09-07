@@ -92,6 +92,13 @@ required. This confirms that the support relocation did not regress the
 channelized SPI baseline. The next open class is remaining control/sideband,
 rail-join, ground-access, USB, M.2, and power completion.
 
+The RTL_5V V9 disposable rail probe connects U1.17, U1.33, and C5.1 using
+ordinary transitions outside the QFN field. Native KiCad reports 4 inherited
+findings / 33 unconnected items, with no new signal violation; saved-board
+connectivity confirms all three RTL_5V endpoints. V9 is retained as a valid
+rail primitive while the remaining RTL_1V1/RTL_3V3/control and support joins
+remain open.
+
 `phase24_rtl9210b_support_v8_audit.py` now provides a reusable saved-board
 audit for the V8 support baseline. It derives XTAL_IN, XTAL_OUT, and RSET
 connectivity from native KiCad connectivity and passes the required
