@@ -52,6 +52,14 @@ higher outer B.Cu path. Native DRC reports no `shorting_items` or
 trace-removal negative control fails as required. Promote V143 only as the
 U1.34 disposable sub-primitive; complete Path-B closure is still open.
 
+## V144 combined support basis
+
+V144 starts from V143 and reapplies the V141 socket-contact collector. Native
+saved connectivity and the negative control pass for both U1.34 RTL_3V3 and
+J1.2/J1.4/J1.6/J1.8; native DRC has no `shorting_items` or
+`tracks_crossing`. Six intended high-speed endpoint opens remain, and the
+SSD_3V3 source/power gate is not closed.
+
 ## V76–V78 U1.40 edge-group trials — rejected
 
 V76 placed the U1.40 RTL_1V1 transition at (92.8,68.8), where the via
