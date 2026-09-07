@@ -15,6 +15,12 @@ is rejected at 11 violations / 35 opens for support-corridor crossings and
 shorts. The next step is a coordinated support-field allocator based on the
 V31 five-net result; production CAD and Path A remain unchanged.
 
+V33 is also rejected as a support implementation: native KiCad reports 15
+violations / 35 opens, including XTAL_IN/XTAL_OUT/RSET shorts and support-pad
+crossings. Its B.Cu long-span concept does not clear the existing passive
+cluster. The next candidate must relocate or reauthor the support island
+coherently; no production CAD or Path-A asset changed.
+
 Path B remains a disposable RTL9210B qualification path. The current best
 combined support baseline is `PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V8`
 plus the validated RTL_5V V9 rail primitive. V8 native support and SPI audits

@@ -13,6 +13,12 @@ joins. V32 is retained as a rejected support implementation (11 violations /
 pad field. The next candidate must allocate support and rails coherently
 around V31 rather than append the V32 paths.
 
+V33 tested B.Cu long-span XTAL/RSET handoffs with local F.Cu dogbones. It is
+rejected at 15 native violations / 35 opens: the handoff vias and local
+dogbones entered the C1/Y1 passive field and crossed one another. This is a
+support-island placement/authoring failure, not a rejection of the V31
+five-net SPI primitive or the RTL9210B architecture.
+
 V8 is the current combined support/SPI baseline and V9 is the retained
 RTL_5V rail primitive. V10/V11 RTL_3V3 trunks are rejected because they
 intersect retained high-speed/support corridors. The next experiment must

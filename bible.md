@@ -1,5 +1,6 @@
 # Append-only project bible
 
+
 ## 2026-09-06 — Authorized dual-mode storage upgrade qualification checkpoint
 
 Checkpointed Phase 24 at `68aac08` before editing production KiCad assets.
@@ -5606,3 +5607,4 @@ opens but was rejected for SPISI/SPICLK transition proximity and reversed B.Cu
 handoff crossing. One reversed-order channel must move to an independent
 F.Cu corridor in the next attempt.
 2026-09-07: Phase 24 RTL9210B source-field allocator V26-V30 experiments were preserved and rejected for native signal crossings/shorts. V31 is the best complete five-net SPI primitive: native DRC has no SPI signal violations, saved-board positive connectivity passes all five SPI nets, and the trace-removal negative control fails. V32 support append is rejected for XTAL/RSET crossings and shorts; Path A, production CAD, and the accepted architecture remain unchanged.
+2026-09-07: Rejected RTL9210B support allocator V33 at 15 native violations / 35 opens after B.Cu XTAL/RSET handoffs entered the passive field and crossed. V31 five-net SPI remains the best local primitive; next work must relocate or coherently reauthor the support island, with Path A and production CAD unchanged.
