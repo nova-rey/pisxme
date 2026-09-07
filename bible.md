@@ -5557,3 +5557,5 @@ remain, so V8 is a local support-route baseline, not full Path-B closure.
 The same saved board passes the native five-net SPI endpoint audit and its
 SPISI trace-removal negative control. Remaining work is control/sideband,
 rail/ground completion, USB, M.2, power, and full Path-B validation.
+Added a reusable saved-board V8 support audit; XTAL_IN/XTAL_OUT/RSET pass and
+the XTAL_OUT trace-removal negative control fails as required.

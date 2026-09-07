@@ -105,6 +105,10 @@ SPISI, SPICLK, SPISO3, SPISO, and SPICS. Its SPISI trace-removal negative
 control fails as required, confirming no synthetic connectivity edge was
 introduced by the support relocation.
 
+`phase24_rtl9210b_support_v8_audit.py` records the same check as a reusable
+regression: all three V8 support nets pass from saved-board native
+connectivity, and removal of an XTAL_OUT track fails the audit.
+
 The fully regenerated V3 branch
 `PHASE24_RTL9210B_FULL_REGENERATED_SPI_V3.kicad_pcb` removed the lower
 SPISO/SPICS B.Cu source tails and routed those nets directly on F.Cu. Native

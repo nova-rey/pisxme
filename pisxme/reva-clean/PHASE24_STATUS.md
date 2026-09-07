@@ -92,6 +92,11 @@ required. This confirms that the support relocation did not regress the
 channelized SPI baseline. The next open class is remaining control/sideband,
 rail-join, ground-access, USB, M.2, and power completion.
 
+`phase24_rtl9210b_support_v8_audit.py` now provides a reusable saved-board
+audit for the V8 support baseline. It derives XTAL_IN, XTAL_OUT, and RSET
+connectivity from native KiCad connectivity and passes the required
+XTAL_OUT-removal negative control.
+
 The normalized rotated-support V3 route
 `PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V3` is rejected at 14 native
 violations / 37 opens. XTAL_IN and RSET remain natively connected, but
