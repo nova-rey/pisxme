@@ -76,6 +76,16 @@ at 9 native violations / 30 opens: the proposed transitions collide at the
 cleanest partial 3V3 result; the next credible class is local U1/support
 rotation or coherent support relocation, not further coordinate nudging.
 
+V47 corrected a generator/authoring defect in the disposable RTL9210B U1
+footprint frame. The footprint anchor was inconsistent with its saved pad
+coordinates; V47 normalizes the frame while preserving every absolute pad
+location. Reload inspection confirms U1.18/U1.20/U1.22 and U1.51-U1.54 retain
+their intended physical coordinates. Native DRC is back to the V44 inherited
+baseline (4 findings / 31 opens) with no new signal violations. V47 is the
+current disposable Path-B authoring basis, not a full support-network PASS;
+next work must reauthor the remaining rail/support fields from this corrected
+frame.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

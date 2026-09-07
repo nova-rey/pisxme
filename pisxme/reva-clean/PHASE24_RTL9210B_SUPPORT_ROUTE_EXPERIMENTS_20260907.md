@@ -63,6 +63,17 @@ including XTAL_IN/RTL_3V3 shorts and crossings. V44 remains the cleanest
 partial 3V3 result; further work must rotate or coherently relocate the local
 support field.
 
+V47 is a successful authoring-path correction, not a routing closure. The
+disposable U1 footprint had a malformed transformed frame: its anchor was at
+(36,150) while its pads were physically authored near (98,70). The V47
+generator records the saved absolute pad locations, normalizes the footprint
+anchor, and restores those pad locations after the transform. Reloaded native
+coordinates match the pre-transform pad field for U1.18/U1.20/U1.22 and
+U1.51-U1.54. Native DRC returns to 4 inherited GND/silkscreen findings / 31
+opens with no new signal violations. Use V47 as the stable basis for the next
+coherent rail/support authoring pass; do not treat its intended opens as a
+complete RTL9210B support PASS.
+
 V40 jointly reauthored the 3V3/5V rail spines. Native DRC reports 8 findings,
 including a new RTL_3V3/SPISO3 source collision and retained RTL_5V/SPISI and
 C5-handoff conflicts. It is rejected; the next rail class must keep the V24
