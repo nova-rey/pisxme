@@ -88,6 +88,18 @@ disconnected and the source transitions conflict with U1 power-field pads.
 V3 is rejected as a route implementation; V2 and the original support
 placement evidence remain preserved.
 
+## Rotated support relocation V8 — local PASS
+
+`PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V8.kicad_pcb` preserves the
+compact relocated support placement and moves the XTAL_OUT transition beyond
+the U1 QFN pad envelope. Native KiCad reports 2 inherited findings only:
+isolated B.Cu GND fill and a silkscreen overlap. There are no signal shorts,
+crossings, or signal-clearance violations. A saved-board native audit passes
+XTAL_IN (U1.53/Y1.1/C1.1), XTAL_OUT (U1.54/Y1.2/C2.1), and RSET
+(U1.51/R1.1). The fixture still reports 35 unrelated unconnected items, so
+this is a local support-route PASS rather than full Path-B closure. Path A
+and production CAD are unchanged.
+
 The fully regenerated V3 branch
 `PHASE24_RTL9210B_FULL_REGENERATED_SPI_V3.kicad_pcb` removed the lower
 SPISO/SPICS B.Cu source tails and routed those nets directly on F.Cu. Native

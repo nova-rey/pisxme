@@ -1,9 +1,9 @@
 """Disposable rotated-U1 crystal/RSET support relocation with normalized footprints."""
 from pathlib import Path
 import re,pcbnew
-HERE=Path(__file__).resolve().parent;BASE=HERE/'PHASE24_RTL9210B_CHANNELIZED_FULL_SPI_V1.kicad_pcb';OUT=HERE/'PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V3.kicad_pcb';SCRUB=HERE/'.phase24_rotated_support_relocation_scrubbed_v3.kicad_pcb'
+HERE=Path(__file__).resolve().parent;BASE=HERE/'PHASE24_RTL9210B_CHANNELIZED_FULL_SPI_V1.kicad_pcb';OUT=HERE/'PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V8.kicad_pcb';SCRUB=HERE/'.phase24_rotated_support_relocation_scrubbed_v8.kicad_pcb'
 F,B=pcbnew.F_Cu,pcbnew.B_Cu;W=pcbnew.FromMM(.20);NETS=('XTAL_IN','XTAL_OUT','RSET')
-TARGET={'Y1':(107,63,70,55),'C1':(104,63,67,55),'C2':(110,63,73,55),'R1':(107,58,70,51)}
+TARGET={'Y1':(105,72.8,70,55),'C1':(105,75,67,55),'C2':(108,75,73,55),'R1':(105,78,70,51)}
 def P(x,y):return pcbnew.VECTOR2I_MM(float(x),float(y))
 def s(b,n,l,a,z):
  q=pcbnew.PCB_TRACK(b);q.SetStart(P(*a));q.SetEnd(P(*z));q.SetLayer(l);q.SetWidth(W);q.SetNet(n);q.SetNetCode(n.GetNetCode());b.Add(q)
@@ -33,17 +33,11 @@ def main():
   fb=re.sub(r'\(at\s+([-\d.]+)\s+([-\d.]+)((?:\s+[-\d.]+)?)\)',cv,fb);text=text[:st]+fb+text[en:]
  SCRUB.write_text(text);b=pcbnew.LoadBoard(str(SCRUB))
  for name,net,layer,pts in [
-  ('XTAL_IN','XTAL_IN',F,[(101.95,72.8),(102.8,72.8),(102.8,62.0),(104.6,62.0),(104.6,63.0),(106.3,63.0)]),
-  ('XTAL_OUT','XTAL_OUT',B,[(103.0,75.0),(103.0,61.0),(107.7,61.0),(107.7,62.0)]),
-  ('RSET','RSET',B,[(103.5,75.5),(103.5,57.0),(106.4,57.0)])]:
+  ('XTAL_IN','XTAL_IN',F,[(101.95,72.8),(104.3,72.8),(105.6,75.0)]),
+  ('XTAL_OUT','XTAL_OUT',B,[(103.5,70.5),(103.5,70.0),(104.8,70.0),(105.7,71.8)]),
+  ('RSET','RSET',F,[(101.2,73.95),(104.4,78.0)])]:
   n=b.FindNet(net)
-  if name=='XTAL_OUT':s(b,n,F,(101.95,72.4),(103.0,75.0))
-  if name=='RSET':s(b,n,F,(101.2,73.95),(103.5,75.5))
+  if name=='XTAL_OUT':s(b,n,F,(101.95,72.4),(103.5,72.4));s(b,n,F,(103.5,72.4),(103.5,70.5));v(b,n,(103.5,70.5));v(b,n,(105.7,71.8));s(b,n,F,(105.7,71.8),(105.7,72.8));s(b,n,F,(105.7,72.8),(107.4,75.0))
   for a,z in zip(pts,pts[1:]):s(b,n,layer,a,z)
-  if name in ('XTAL_OUT','RSET'):
-   # Connect the F.Cu source and target pads through ordinary transitions.
-   src=(103.0,75.0) if name=='XTAL_OUT' else (103.5,75.5)
-   dst=(107.7,62.0) if name=='XTAL_OUT' else (106.4,57.0)
-   v(b,n,src);v(b,n,dst);s(b,n,F,dst,(107.7,63.0) if name=='XTAL_OUT' else (106.4,58.0))
  b.BuildListOfNets();b.Save(str(OUT));print(OUT)
 if __name__=='__main__':main()

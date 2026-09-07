@@ -76,6 +76,15 @@ control also fails after removal of a necessary SPISI trace. This closes the
 RTL9210B SPI local route/connectivity sub-gate only; remaining support,
 control, USB, M.2, power, and full Path-B validation remain open.
 
+The rotated-U1 support relocation was subsequently re-authored through V8.
+V8 places the XTAL_OUT transition beyond the U1 QFN pad envelope. Native
+KiCad reports only two inherited findings (isolated B.Cu GND fill and a
+silkscreen overlap), with no signal short, crossing, or clearance violation.
+Saved-board native connectivity passes XTAL_IN (U1.53/Y1.1/C1.1), XTAL_OUT
+(U1.54/Y1.2/C2.1), and RSET (U1.51/R1.1). The fixture still has 35 unrelated
+unconnected items, so V8 is a local support-route PASS, not full Path-B
+closure. Production CAD and Path A remain unchanged.
+
 The normalized rotated-support V3 route
 `PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V3` is rejected at 14 native
 violations / 37 opens. XTAL_IN and RSET remain natively connected, but

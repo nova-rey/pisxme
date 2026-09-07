@@ -5549,3 +5549,8 @@ negative control fails as required. One inherited isolated-GND warning and
 V3 at 14 native violations / 37 opens; XTAL_IN/RSET connected but XTAL_OUT
 disconnected, with transitions entering the U1 power field. V2 remains the
 better support-placement reference; Path A and production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: rotated-support V8 moves the XTAL_OUT
+transition beyond the U1 QFN pad envelope. Native KiCad reports no signal
+shorts, crossings, or clearance violations; saved-board audits pass XTAL_IN,
+XTAL_OUT, and RSET. Two inherited findings and 35 unrelated fixture opens
+remain, so V8 is a local support-route baseline, not full Path-B closure.
