@@ -2,7 +2,7 @@
 
 ## Current checkpoint — 2026-09-06
 
-Latest focused routing-generator checkpoint: `3a96472`. The deduplication
+Latest focused routing-generator checkpoint: `9645567`. The deduplication
 experiment recorded in `PHASE24_PATHA_SATA_ROUTER_DEDUP_20260906.md` is
 rejected as route implementation failure; no integrated board was changed.
 

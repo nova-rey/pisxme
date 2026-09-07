@@ -4842,3 +4842,6 @@ validation remain open.
  J3 rotation, and bounded search. Disposable 0-degree/90-degree searches
  did not emit a promotable route; preserved the result as search/corridor
  implementation evidence without changing the integrated board.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: refreshed the live status
+ checkpoint to `9645567` after pushing the source-to-PCB SATA regeneration
+ bridge and bounded search receipt.
