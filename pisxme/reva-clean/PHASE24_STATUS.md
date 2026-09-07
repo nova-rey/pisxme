@@ -6769,3 +6769,6 @@ single-net departure.
 V261 is retained as the best current CLKREQ_N local geometry: native DRC has
 no shorting or track-crossing class (633 findings / 15 opens), but the full
 RTL9210B QFN support field remains incomplete and unpromoted.
+V262 is rejected: moving the RTL_1V1 via bus to y=68.8 mm reduced opens to 13
+but created multiple RTL_1V1/REFCLK/XTAL shorting classes. The next repair is
+coherent support-component relocation with coordinated field regeneration.

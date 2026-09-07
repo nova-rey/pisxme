@@ -1655,3 +1655,11 @@ the existing B.Cu continuation from a south dogleg. Native DRC reports 633
 findings / 15 unconnected items with no `shorting_items` or `tracks_crossing`
 class. This is the best current CLKREQ local geometry, but the remaining
 rail, clock, support, and high-speed connectivity failures prevent promotion.
+
+## V262 bottom-edge RTL_1V1 bus at increased clearance — rejected
+
+V262 repeated the U1.55/U1.60/U1.63 bottom-edge bus with the escape row moved
+to y=68.8 mm. It reduced the unconnected count to 13, but native DRC reported
+652 findings with real RTL_1V1 shorts into RTL_3V3, REFCLK_P/N, and XTAL_OUT.
+Reject; independent via placement cannot safely coexist with the existing
+clock field.

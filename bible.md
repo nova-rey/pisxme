@@ -5820,3 +5820,7 @@ QFN CLKREQ/REFCLK/sideband field; Path A and production CAD remain unchanged.
 reported 633 findings / 15 opens with no shorting or track-crossing class.
 V261 is retained as the current sideband geometry, not promoted; the complete
 QFN rail/clock/support field remains open and Path A/production CAD are unchanged.
+2026-09-07: Rejected RTL9210B V262 increased-clearance RTL_1V1 via bus. It
+reduced opens to 13 but introduced multiple real RTL_1V1/REFCLK/XTAL shorts.
+The next repair is coherent support-component relocation and coordinated field
+regeneration; Path A and production CAD remain unchanged.
