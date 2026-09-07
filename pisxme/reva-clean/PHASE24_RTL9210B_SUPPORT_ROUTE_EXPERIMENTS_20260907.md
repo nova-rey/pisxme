@@ -1348,3 +1348,24 @@ Native KiCad reports 308 findings / 26 unconnected items for V193, with zero
 U1.23/U2.2 and its trace-removal negative control fails as required. V193 is
 promoted as a disposable SPISO sub-primitive; the other SPI/control nets and
 full Path-B validation remain open.
+## V202–V208 coordinated SPI/crystal source-field allocation
+
+V202 co-authored SPICLK, SPISI, RTL_3V3, and XTAL_IN from the V200 basis.
+Native DRC reported 338 findings / 25 unconnected items; the remaining
+signal-specific defect was XTAL_IN contacting C1 ground. V203's east C1 move
+was rejected after 352 DRC findings exposed multiple XTAL field conflicts.
+V204/V205 moved C1 downward; V205 corrected the omitted Y1.1 branch in the
+audit, but native DRC still found an XTAL_IN/XTAL_OUT conflict. V206 retained
+the source-field approach but still contacted Y1.1/C1 ground. V207 removed
+the signal-specific DRC defects, while its first audit correctly exposed that
+the intentional XTAL_IN branch to Y1.1 had not been authored in the test
+fixture.
+
+V208 adds that explicit branch and reruns the saved-board audit. Native DRC
+reports 337 findings / 25 unconnected items with zero `shorting_items` and
+zero `tracks_crossing`. Native connectivity passes the asserted RTL_3V3,
+SPICLK, SPISI, and XTAL_IN groups; four trace-removal negative controls fail
+as required. V208 is promoted as the current disposable coordinated
+SPI/crystal source-field basis. The remaining RTL9210B support/control nets,
+full mode validation, and production integration remain open. Path A,
+production CAD, and the accepted macro-floorplan are unchanged.

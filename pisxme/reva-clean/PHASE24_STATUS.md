@@ -6562,3 +6562,18 @@ The west-field U1.39/U1.52 launches remain intentionally open because their
 current placement is co-located with the crystal/RSET field; they are not
 being misclassified as solved by V186. Path A and production CAD remain
 unchanged.
+## Current RTL9210B coordinated SPI source-field basis — V208
+
+The current disposable Path-B support basis is
+`PHASE24_RTL9210B_SPI_SOURCE_FIELD_V208.kicad_pcb`. It co-authors the
+RTL_3V3, SPICLK, SPISI, and XTAL_IN source/destination fields rather than
+stacking those routes independently. Native KiCad DRC reports 337 findings /
+25 unconnected items, with zero `shorting_items` and zero
+`tracks_crossing`. The saved-board native audit passes all four asserted net
+groups and four trace-removal negative controls.
+
+V208 is a promoted disposable route basis only. It is not a Path-B closure,
+production-CAD change, or Path-A replacement. Remaining RTL9210B rails and
+controls, USB/SATA high-speed paths, mode-aware validation, procurement and
+firmware gates, and full integration remain open. Path A and the production
+board remain unchanged.

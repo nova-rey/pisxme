@@ -5682,3 +5682,11 @@ F.Cu corridor in the next attempt.
 2026-09-07: Rejected RTL9210B V197 coherent west crystal/RSET shift: saved connectivity passed, but native DRC found XTAL_OUT/SPICS crossing and SPISO/C2-ground contact. The west-shift class is rejected; the next attempt must co-author the complete SPI/crystal destination field. Path A and production CAD remain unchanged.
 2026-09-07: Rejected RTL9210B V198/V199 for Y1.1 contact and RSET/XTAL_OUT crossing. Promoted V200 after the east crystal translation and y=67.5 RSET handoff produced zero native shorting_items/tracks_crossing plus four negative-control passes. V200 remains disposable support evidence; remaining SPI/control and Path-B gates stay open.
 2026-09-07: Rejected RTL9210B SPISI V201: native connectivity passed, but DRC found C1 ground contact and SPISI/SPICLK source-field conflict. The next attempt must co-author the coupled SPI source/destination field; Path A and production CAD remain unchanged.
+2026-09-07: Promoted RTL9210B V208 as the disposable coordinated SPI/crystal
+source-field basis. V202-V207 were preserved as evidence: source-field and
+crystal placement variants either contacted support copper or exposed an
+audit authoring omission. V208 adds the explicit XTAL_IN-to-Y1.1 branch,
+passes native RTL_3V3/SPICLK/SPISI/XTAL_IN connectivity with four negative
+controls, and reports zero native signal shorting/crossing classes. Path A,
+production CAD, and the accepted macro-floorplan remain unchanged; remaining
+Path-B support, mode validation, and integration gates stay open.
