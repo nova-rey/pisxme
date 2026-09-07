@@ -265,6 +265,13 @@ SPISO pad-field conflicts, a CLKREQ crossing, and duplicate-via geometry.
 It is rejected as a route implementation; the open-count reduction confirms
 that coherent rail collection is preferable to individual signal detours.
 
+## RTL_3V3 zone V1 — rejected
+
+The local F.Cu RTL_3V3 zone did not reduce the required open count: native
+DRC remained 4 violations / 30 unconnected items and U1 RTL_3V3 pads did not
+gain native connectivity. It is rejected as ineffective; V2 remains the
+RTL_1V1 collector baseline.
+
 V2 removed the duplicate transition, omitted the SPI-conflicting pad-25
 branch, and jogged the bottom rail around CLKREQ: native DRC 4/30, with six
 RTL_1V1 pads collected. V3 moved the pad-40 via left but caused a

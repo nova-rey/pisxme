@@ -5009,7 +5009,11 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  DRC regressed to 204 findings / 52 opens with six shorts and twelve
  crossings, versus V2 at 138 / 52 with six shorts and eleven crossings.
  Rejected V3 as worse local launch geometry; preserved raw evidence and left
- production CAD unchanged.
+production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested an F.Cu RTL_3V3 QFN zone around
+U1. Native DRC remained 4 / 30 and the native connectivity census showed no
+additional required RTL_3V3 pad joins. Rejected the zone as ineffective; no
+power or plane rule changed and production CAD stayed unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: preserved control-route variants V4/V5/V6
  with native results 8/34, 3/34, and 4/33 (DRC violations/open items).
  Rejected the repeated same-layer corridor class and retained the clean

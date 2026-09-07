@@ -4498,6 +4498,17 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-B RTL_3V3 QFN zone V1 — 2026-09-07
+
+V1 tested a local F.Cu RTL_3V3 power zone around U1 using the V2 RTL_1V1
+collector. Native DRC remained 4 violations / 30 unconnected items and the
+native pad connectivity census showed no additional required RTL_3V3 pads
+were joined. The zone is rejected as ineffective; no power rule or plane
+policy was changed and production CAD remains untouched.
+
+`PATHB_RTL_3V3_ZONE_V1 = REJECTED`
+`PHASE24 = OPEN`
+
 ## Path-B RTL_1V1 QFN collectors V2/V3 — 2026-09-07
 
 V2 removed the duplicate via, omitted the SPI-conflicting pad-25 branch, and
