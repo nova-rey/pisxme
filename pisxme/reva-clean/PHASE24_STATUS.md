@@ -5410,3 +5410,8 @@ or production board; it is the preferred support-routing baseline.
 The U2 3V3 transition trial reduced native opens 25 to 22 but produced 8 DRC
 violations from B.Cu crossings with SPI/RTL_1V1 and a remaining 3V3 branch.
 It is rejected; V11 remains the preferred disposable baseline.
+### Path-B U1 RTL_3V3 pad-34 escape V1 (rejected)
+
+The pad-34 escape reduced opens 25 to 24 but shorted the RTL_5V bus and
+crossed RTL_1V1, producing 9 native DRC violations. Rejected; production CAD
+is unchanged.

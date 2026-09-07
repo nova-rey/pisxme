@@ -378,3 +378,10 @@ additional native endpoints, reducing opens from 25 to 22. The long B.Cu
 trunks crossed SPISO3, SPICLK, and RTL_1V1 corridors and retained a 3V3
 pull-up crossing; native DRC increased to 8 violations. The candidate is
 rejected as route implementation evidence and V11 remains the baseline.
+## U1 RTL_3V3 pad-34 B.Cu escape V1 — rejected
+
+The measured offset escape reached one additional native endpoint, reducing
+opens from 25 to 24. Its F.Cu jog was 0.0472 mm from the RTL_5V bus and
+shorted it; the B.Cu trunk also crossed the RTL_1V1 bus. Native DRC reported
+9 violations. Rejected; this indicates coherent 3V3 support relocation is
+needed rather than further local trace nudging.
