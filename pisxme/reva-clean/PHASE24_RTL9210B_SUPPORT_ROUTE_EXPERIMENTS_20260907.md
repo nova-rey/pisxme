@@ -363,3 +363,11 @@ Crystal V5 routed XTAL_OUT around the outer perimeter, but native DRC found
 18 violations including RTL_5V crossing/shorts, PEDET/PERST/CLKREQ conflicts,
 and a GND-pad clearance failure. V5 is rejected; the map is retained as the
 authoritative basis for the next escape attempt.
+## Crystal V6/V7 with pad-55 RTL_1V1 move — rejected
+
+The coherent pad-55 transition move was tested with the dual-layer crystal
+routes. V6 exposed a broken lower RTL_1V1 collector and 9 DRC violations;
+V7 restored the lower segment but left pad-55 disconnected from the complete
+collector and collided with the relocated transition, at 8 DRC violations /
+26 opens. This proves that a single-via move is insufficient: the next class
+must relocate the full RTL_1V1 collector or move the local support island.

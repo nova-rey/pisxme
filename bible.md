@@ -5265,3 +5265,7 @@ changed.
 with native KiCad DRC (4 violations / 29 opens) and live endpoint audits.
 RTL_5V and RTL_1V1 assertions passed; the RTL_5V negative control failed as
 required. Production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested crystal V6/V7 with a pad-55
+RTL_1V1 transition move. V7 restored part of the collector but left pad 55
+disconnected from the full rail and retained a crystal transition collision,
+at 8 DRC / 26 opens. Rejected; full collector relocation is required.

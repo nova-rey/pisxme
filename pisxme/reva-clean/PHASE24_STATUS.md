@@ -5387,3 +5387,9 @@ The live V3 disposable fixture was revalidated with native KiCad: 4 DRC
 violations and 29 unconnected items. The focused native endpoint audits pass
 RTL_5V (U1.17/U1.33/C5.1) and RTL_1V1 (eight asserted endpoints), including
 the RTL_5V negative control. No production CAD changed.
+### Path-B crystal V6/V7 with pad-55 1V1 move (rejected)
+
+Moving only the pad-55 RTL_1V1 transition did not preserve the complete
+collector. V7 reported 8 native DRC violations / 26 opens and retained a
+crystal-to-transition conflict. Rejected; the next repair class is full
+collector relocation or coherent support-island placement.
