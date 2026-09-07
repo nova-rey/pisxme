@@ -5779,3 +5779,8 @@ promoted rail basis; Path A and production CAD remain unchanged.
 Native connectivity and the full-rail-removal negative control passed, but DRC
 reported an REFCLK_N crossing and a no-connect-pad/RTL_3V3 short. V242 remains
 the promoted disposable rail basis; Path A and production CAD are unchanged.
+2026-09-07: Rejected RTL9210B V249 REFCLK/RTL_1V1 co-allocation. Native
+rail/REFCLK connectivity and the trace-removal negative control passed, but
+DRC found two source-field crossings and one REFCLK_N/RTL_1V1 short. V242
+remains the promoted disposable rail basis; Path A and production CAD remain
+unchanged.

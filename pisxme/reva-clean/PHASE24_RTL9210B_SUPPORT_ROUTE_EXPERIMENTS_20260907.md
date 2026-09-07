@@ -1561,3 +1561,12 @@ the full-rail-removal negative control pass. Native DRC reports 527 findings
 / 14 unconnected items, including an REFCLK_N crossing at the corrected
 source field and a no-connect-pad/RTL_3V3 short. Reject V248; the next trial
 must move the source escape farther from the REFCLK and no-connect fields.
+
+## V249 RTL_1V1/REFCLK co-allocation — rejected
+
+V249 moved the local REFCLK transitions outward and co-authored U1.60/U1.63
+lower-edge rail escapes. Native rail/REFCLK endpoint connectivity and the
+trace-removal negative control pass. Native DRC reports 525 findings / 14
+unconnected items, with two REFCLK/source-field crossings and one
+REFCLK_N/RTL_1V1 short at the QFN pad launches. Reject V249; the next trial
+must separate the first F.Cu departures before either layer transition.
