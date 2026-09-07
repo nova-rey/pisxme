@@ -4906,3 +4906,9 @@ validation remain open.
  and MSL 3. The listing is PCBA-only and exposes no reproducible stock/price/
  lead-time receipt, so procurement remains an explicit risk rather than a
  fabricated availability claim.
+2026-09-06 — PiSXMe Phase 24 Path A: replaced embedded U7 with the project-
+ local TUSB9261 footprint in a disposable native fixture while preserving all
+ saved pad nets and placement. The eight-endpoint SATA audit remained PASS and
+ native DRC remained at 12 findings, ruling out the embedded/project footprint
+ mismatch as the route blocker. Preserved the raw board/report and redirected
+ the next repair toward local route geometry and support connectivity.

@@ -4337,6 +4337,15 @@ Receipt: `phase24_ti_usb3_rx_split_v2_fixture.py`,
 `ZERO_TRACK_CROSSINGS = TRUE`
 `PHASE24 = OPEN`
 
+## U7 project-footprint replacement discriminator — 2026-09-06
+
+`PHASE24_PATHA_U7_FOOTPRINT_REPLACEMENT_20260906.md` records a disposable
+native replacement of embedded U7 with the project-local TUSB9261 footprint.
+Native pad nets and placement were preserved. The eight-endpoint SATA audit
+remained PASS and native DRC remained at 12 findings, so the suspected
+embedded/project footprint mismatch is not the route root cause. The next
+Path-A repair must address local route geometry and support connectivity.
+
 ## U5 native recheck receipt — 2026-09-06
 
 The corrected U5 audit was rerun against the saved U5 fixture and the
