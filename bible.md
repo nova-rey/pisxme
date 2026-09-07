@@ -5121,3 +5121,8 @@ relocation/re-authoring, with production CAD unchanged.
  violations / 33 opens, so the placement route was rejected as an immature
  implementation. V6 remains the best disposable baseline; no production CAD
  or Path-A authority changed.
+2026-09-07 — PiSXMe Phase 24 Path B: tested lower-placement V3 with
+ separated PEDET/CLKREQ/PERST/RESET corridors and an early C3 3V3
+ transition. Native DRC reported 10 violations / 33 opens, so it was
+ rejected as a route implementation. The lower placement and RTL9210B
+ architecture remain unpromoted; production CAD is unchanged.

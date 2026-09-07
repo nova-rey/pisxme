@@ -107,6 +107,13 @@ frame error and is superseded by this corrected placement evidence. The
 lower placement remains disposable and unpromoted; V6 remains the best
 current route baseline.
 
+Lower V3 re-authored the corrected lower placement with PEDET y=68,
+CLKREQ y=74, PERST y=72, RESET on a separate bottom path, and an early C3
+3V3 transition. Native DRC reports 10 violations / 33 opens, including
+SPI/3V3 interference, lower control crossings, and a GND-via collision. It
+is rejected as a route implementation; no placement or architecture is
+promoted from this candidate.
+
 Further control variants V4/V5/V6 were also rejected: V4 reports 8 DRC
 violations / 34 opens, V5 reports 3 / 34, and V6 reports 4 / 33. Their
 remaining findings are same-layer PEDET/CLKREQ/rail corridor crossings. This

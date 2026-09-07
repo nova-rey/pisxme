@@ -220,3 +220,9 @@ violations / 33 opens**, including RESET/3V3 crossings, PEDET/CLKREQ
 crossings, a GND-via collision, and a QFN-edge departure clearance. It is
 rejected as a route implementation and not ranked above V6 merely because it
 has fewer opens. Production CAD and Path A remain unchanged.
+
+Lower V3 re-authored the corrected lower placement with separated PEDET,
+CLKREQ, PERST, RESET, and 3V3 corridors. Native DRC reports **10 violations
+/ 33 opens**, including SPI/3V3 interference, lower control crossings, and a
+GND-via collision. It is rejected as a route implementation; the lower
+placement remains disposable and no Path-B architecture decision changes.
