@@ -123,6 +123,12 @@ and opens remain 17 / 26, with no reduction in the missing QFN rail
 connections. The zone did not establish the required pad-field continuity;
 no validation rule was relaxed and V5 remains the baseline.
 
+The V10 edge-normal QFN escape probe is rejected. It reduces the native open
+count to 19 but produces 26 DRC violations, including XTAL_OUT, CLKREQ_N,
+SPISO, GND, and RTL_5V conflicts plus a 0.0472-mm clearance. The result is
+not promotable; V5 remains the current combined baseline and the next work
+must use a native/reference-derived escape strategy.
+
 The V9 pad-aware RTL_1V1 escape probe is rejected. Native DRC reports 32
 violations / 22 opens, including new CLKREQ_N/RTL_1V1, RTL_3V3/RTL_1V1,
 RTL_1V1/RTL_5V, and board-edge conflicts. The attempted serialized QFN
