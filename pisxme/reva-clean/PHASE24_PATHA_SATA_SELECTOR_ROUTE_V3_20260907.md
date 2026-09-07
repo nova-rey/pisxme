@@ -96,3 +96,8 @@ shorts/crossings at 75 clearance findings, 34 unconnected items, four
 disposable via-dangling findings, and two track-dangling findings. V12 is the
 best current topological candidate but remains rejected pending full native
 clearance/connectivity closure.
+
+V13 tested the same V12 topology with 0.10-mm escape tracks. Native DRC
+reported 102 violations / 34 unconnected items, including 28 track-width
+violations. It is rejected under the existing width contract; no rule was
+relaxed and no copper was integrated.

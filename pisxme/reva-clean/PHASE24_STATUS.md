@@ -4498,6 +4498,19 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-A isolated M.2 lane-0 launch V13 — 2026-09-07
+
+V13 retained V12 geometry with 0.10-mm disposable escape tracks as a
+clearance discriminator. Native DRC reported 102 violations / 34
+unconnected items: zero shorts/crossings, 68 clearance findings, and 28
+track-width violations. It is rejected under the unchanged manufacturing
+contract; width rules are not relaxed. V12 remains the best valid-width
+topological baseline and no production CAD changed.
+
+`PATHA_M2_LANE0_V13 = REJECTED`
+`FAILURE_CLASS = MANUFACTURING_RULE / ROUTE_IMPLEMENTATION`
+`PHASE24 = OPEN`
+
 ## Path-A isolated M.2 lane-0 launches V11/V12 — 2026-09-07
 
 V11 staggered the four M.2 contact-row departure heights and reduced native

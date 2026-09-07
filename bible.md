@@ -5173,3 +5173,8 @@ dogbone departures. V11 reported 79 / 34 with 72 clearance findings but one
 crossing. V12 swapped the conflicting departures and reported 81 / 34 with
 zero shorts and zero crossings. V12 is the best topology candidate, not a
 PASS; production CAD remains unchanged.
+2026-09-07 — PiSXMe Phase 24 Path A: tested V13 with 0.10-mm disposable
+escape tracks to discriminate contact-field clearance. Native DRC reported
+102 / 34 with zero shorts/crossings but 28 track-width violations. Rejected
+under the unchanged manufacturing contract; V12 remains the best valid-width
+topology baseline and production CAD is unchanged.
