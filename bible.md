@@ -5288,3 +5288,7 @@ production CAD unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: tested U1 RTL_3V3 pad-34 escape V1.
 It reduced opens 25 to 24 but shorted RTL_5V and crossed RTL_1V1, producing
 9 native DRC violations. Rejected; coherent support relocation is required.
+2026-09-07 — PiSXMe Phase 24 Path B: recorded the support-corridor decision
+from the native QFN map and V11/V3 trials. Isolated 3V3/crystal nudges are
+rejected; the next implementation class is coherent 3V3/1V1 support-branch
+relocation. Production CAD and Path A unchanged.

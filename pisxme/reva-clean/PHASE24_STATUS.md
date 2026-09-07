@@ -5420,3 +5420,10 @@ is unchanged.
 The pad-34 escape reduced opens 25 to 24 but shorted RTL_5V and crossed
 RTL_1V1, yielding 9 native DRC violations. Rejected; isolated 3V3 escapes
 are no longer the active route class.
+### Path-B support-corridor decision
+
+The native QFN map and V11/V3 experiments establish that isolated 3V3 or
+crystal trace nudges are no longer a viable class. The remaining repair is a
+coherent 3V3/1V1 support-branch relocation or local bridge-support move;
+production CAD and Path A remain unchanged. See
+`PHASE24_RTL9210B_SUPPORT_CORRIDOR_DECISION_20260907.md`.
