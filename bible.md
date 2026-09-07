@@ -5697,3 +5697,8 @@ produced native SPISO3 connectivity plus a passing trace-removal negative
 control and zero native signal shorting/crossing classes. Path A and
 production CAD remain unchanged; Path-B support and full validation remain
 open.
+2026-09-07: Promoted RTL9210B V212 PEDET U1.8-to-M.2 contact-69 sideband
+slice. Native connectivity and the trace-removal negative control pass, and
+native DRC has zero signal shorting/crossing classes. Path A and production
+CAD remain unchanged; reset/CLKREQ, remaining support, mode, firmware, and
+full Path-B validation remain open.

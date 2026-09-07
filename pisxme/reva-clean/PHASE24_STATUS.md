@@ -6590,3 +6590,15 @@ V211 is disposable Path-B route evidence only. It does not close Path B or
 change production CAD/Path A. Remaining support rails, controls, USB/SATA
 high-speed paths, mode validation, firmware/procurement, and integration
 gates remain open.
+## Current RTL9210B PEDET sideband basis — V212
+
+`PHASE24_RTL9210B_PEDET_U18_J1_69_V212.kicad_pcb` extends the V211
+disposable basis with the native U1.8 PEDET connection to M.2 contact 69.
+Native DRC reports 370 findings / 23 unconnected items with zero
+`shorting_items` and zero `tracks_crossing`; native saved-board connectivity
+and the trace-removal negative control pass.
+
+This remains disposable Path-B evidence only. It does not close Path B or
+change Path A/production CAD. Reset/CLKREQ, remaining rail branches, USB/SATA
+high-speed paths, mode-aware validation, firmware/procurement, and integrated
+mechanical/DFM gates remain open.

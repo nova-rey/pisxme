@@ -1381,3 +1381,13 @@ native DRC reports 357 findings / 24 unconnected items with no
 `shorting_items` or `tracks_crossing`. V211 is promoted as a disposable
 SPISO3 sub-primitive. Remaining RTL9210B support/control, high-speed,
 mode-aware, firmware, and production gates remain open.
+## V212 PEDET U1.8-to-M.2 contact 69
+
+V212 adds the RTL9210B PEDET sideband from native U1.8 to the M-key socket's
+contact 69 using a short F.Cu source dogbone, an ordinary-via B.Cu trunk, and
+a connector-side F.Cu return. Native KiCad DRC reports 370 findings / 23
+unconnected items with zero `shorting_items` and `tracks_crossing`. The
+saved-board audit joins U1.8/J1.69 and its trace-removal negative control
+fails as required. V212 is promoted as disposable PEDET evidence only;
+remaining reset/clock-request, support, high-speed, mode, firmware, and
+production gates remain open.
