@@ -1,5 +1,20 @@
 # Phase 24 storage-island upgrade blocker
 
+## AUTHORITATIVE CURRENT STATE — 2026-09-07
+
+This is an open implementation-risk record, not a terminal blocker. The live
+JMS583 support network is already instantiated in the authoritative schematic
+and in the disposable routed-support candidates; older text below that says it
+“needs to be instantiated” is superseded historical wording. Current Path-B
+work is RTL9210B parallel qualification, with V100 the promoted disposable
+1V1/XTAL support basis. Path A remains preserved and is not being replaced.
+
+Current open gates are complete RTL9210B support/control/USB/M.2/power and
+mode-aware routing/validation, plus procurement and firmware productization
+risks. Native reports, raw receipts, rejected footprints/routes, and negative
+controls remain immutable evidence. No production CAD or Path-A asset is
+authorized by this checkpoint.
+
 Status: `OPEN — implementation authorized; procurement evidence remains HIGH
 risk` for the authorized SATA/NVMe upgrade only.
 The prior SATA-only board is preserved.
@@ -107,7 +122,7 @@ footprint parity check for `1-2199230-4` before replacing J3.
 3. Dropping dual-mode storage would retain the old SATA-only board, but that
    is a user architectural decision and is not assumed.
 
-## Current implementation audit — 2026-09-06
+## SUPERSEDED HISTORICAL IMPLEMENTATION AUDIT — 2026-09-06
 
 The implementation path has since been advanced in the working tree:
 
@@ -126,7 +141,7 @@ The implementation path has since been advanced in the working tree:
 The remaining engineering blockers are now explicit rather than generic
 documentation objections:
 
-## Current implementation state — 2026-09-06
+## SUPERSEDED HISTORICAL IMPLEMENTATION STATE — 2026-09-06
 
 The documentation-only stop condition has been superseded by an authorized
 implementation checkpoint. `ea8dfb6`/`7938f64`/`7dbf709` added the JMicron

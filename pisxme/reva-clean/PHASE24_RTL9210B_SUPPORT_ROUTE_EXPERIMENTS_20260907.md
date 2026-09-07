@@ -1,5 +1,13 @@
 # RTL9210B support-fixture route experiments — 2026-09-07
 
+## Current state and documentation hygiene
+
+The JMS583 support network is already instantiated in the live authoritative
+storage schematic and in the disposable support candidates. Any earlier note
+in this record saying it still needs instantiation is historical/superseded,
+not a current TODO. The current Path-B disposable basis is V100 below; Path A
+and production CAD remain preserved.
+
 ## V76–V78 U1.40 edge-group trials — rejected
 
 V76 placed the U1.40 RTL_1V1 transition at (92.8,68.8), where the via
@@ -72,6 +80,27 @@ isolated-GND/silkscreen warnings; native saved connectivity joins U1.63 with
 U1.16/U1.25/U1.40/U1.50/U1.60/C4.1, reducing the fixture to 23 opens. This is
 only the U1.63 edge-group primitive; U1.36/U1.55 and full Path-B closure are
 unfinished.
+
+## V97–V99 XTAL_OUT/U1.55 trials — rejected
+
+V97 reauthored XTAL_OUT as a B.Cu span above the support field and added the
+U1.55 RTL_1V1 launch. It restored U1.55 connectivity but crossed the retained
+RTL_1V1 drop at x107.0. V98 moved that drop right and crossed the XTAL_OUT
+vertical endpoint; V99 attempted a B.Cu overpass but still crossed the
+XTAL_OUT horizontal at the first vertical segment. All three are retained
+rejected route-implementation evidence.
+
+## V100 left-endpoint escape — promoted disposable sub-primitive
+
+V100 starts from V97, removes the crossing RTL_1V1 drop, travels on B.Cu below
+the XTAL_OUT span to x94.8, then drops around the XTAL_OUT left endpoint into
+the existing RTL_1V1 collector. Native saved-board connectivity joins U1.55
+with U1.16/U1.25/U1.40/U1.50/U1.60/U1.63/C4.1. A native same-layer,
+different-net centerline scan reports no new track crossing for the escape.
+The direct CLI report retains the disposable fixture's inherited zone,
+hole, mask, thermal, and unconnected findings; those are not waived or
+represented as a full support PASS. V100 is promoted only as the current
+U1.55/XTAL support sub-primitive.
 
 ## Current authoritative baseline
 

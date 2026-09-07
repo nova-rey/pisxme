@@ -1,5 +1,32 @@
 # Phase 24 acreage validation status
 
+## AUTHORITATIVE CURRENT STATE — 2026-09-07
+
+The active work item is isolated RTL9210B Path-B support qualification; Path A,
+production/acreage CAD, and unrelated Phase 24 work remain unchanged. The
+current promoted disposable support basis is
+`PHASE24_RTL9210B_XTALOUT_U155_LEFT_ESCAPE_V100.kicad_pcb`. V97 moved
+`XTAL_OUT` above the local support field and added U1.55; V98 and V99 are
+rejected crossing variants; V100 routes `RTL_1V1` around the left endpoint of
+the new XTAL_OUT span and restores the U1.55-to-existing-1V1 connectivity.
+Native saved-board inspection joins U1.55 with U1.16/U1.25/U1.40/U1.50/
+U1.60/U1.63/C4.1, and a centerline scan finds no different-net track crossing
+for the new escape. The disposable fixture still has 19 intentional/open
+support connections and inherited manufacturing/zone findings; this is a
+support sub-primitive promotion, not a Path-B or Phase 24 closure.
+
+The direct current KiCad CLI report for V100 counts inherited zone, hole,
+solder-mask, thermal, and other disposable-fixture findings in addition to
+unconnected items. Those are retained evidence and are not waived. The
+signal-specific result is recorded separately: no new short or track-crossing
+class was found for the V100 escape. The next open Path-B support gate is the
+remaining QFN support/control/power connectivity, followed by complete
+USB/M.2/mode/firmware and integrated validation.
+
+All later sections in this append-only file are historical experiment records;
+their “current” wording is local to the checkpoint they describe and must not
+override this section.
+
 ## Authoritative current state — 2026-09-07
 
 V76 and V77 are rejected U1.40 RTL_1V1 edge-group trials from the promoted
