@@ -5326,6 +5326,11 @@ CAD unchanged.
 V11 QFN map after removing all prior 1V1 copper. The candidate reports 26 DRC
 violations / 18 opens, including rail/GND, rail/3V3, and crystal conflicts.
 Rejected as ordinary-via coordinate fanout; no production CAD changed.
+2026-09-07 — PiSXMe Phase 24 Path B: isolated the full RTL_1V1 QFN pad-field
+fanout from neighboring copper. Native DRC is 1/37, and the saved-board audit
+passes U1 pads 16/25/36/40/50/55/60/63 plus C4.1. This proves the fanout is
+viable in isolation; V11 failures are integration congestion, not package
+impossibility. Production CAD remains unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: the SPI-only lateral proof passed native
 saved-board connectivity for all five U1-to-U2 SPI nets; serialized removal of
 all SPICS copper failed the negative control as required. Native DRC reports
