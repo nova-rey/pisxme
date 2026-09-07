@@ -86,11 +86,15 @@ def route(occ,hard,start,goal,start_layer=F,goal_layer=F,x_gate=None,
     bounds=(grid((1,1)),grid((299,179)))
     q=[(0,s)]; cost={s:0}; prev={s:None}
     expanded=0
+    closed=set()
     while q:
         expanded += 1
         if expanded > MAX_EXPANSIONS:
             raise RuntimeError(f'A* expansion limit reached ({MAX_EXPANSIONS}) for {start}->{goal}')
         _,cur=heappop(q)
+        if cur in closed:
+            continue
+        closed.add(cur)
         if cur==t: break
         x,y,l=cur
         for nx,ny,nl in ((x+1,y,l),(x-1,y,l),(x,y+1,l),(x,y-1,l),(x,y,B if l==F else F)):
@@ -153,6 +157,9 @@ j3x=os.environ.get('PISXME_J3_X'); j3y=os.environ.get('PISXME_J3_Y')
 if j3x and j3y:
     j3=b.FindFootprintByReference('J3')
     j3.SetPosition(V(float(j3x),float(j3y)))
+j3rot=os.environ.get('PISXME_J3_ROT')
+if j3rot:
+    b.FindFootprintByReference('J3').SetOrientationDegrees(float(j3rot))
 u7x=os.environ.get('PISXME_U7_X'); u7y=os.environ.get('PISXME_U7_Y')
 if u7x and u7y:
     u7=b.FindFootprintByReference('U7')

@@ -4835,3 +4835,10 @@ validation remain open.
  evidence. Retained hard-hole obstacles and bounded A* search; the bounded
  search did not emit a promotable candidate. Native source audits pass and
  routed-board closure remains open.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: added a reproducible
+ source-to-PCB derivation for the four canonical M.2 SATA contacts and
+ confirmed C30.1/C31.1/C32.1/C33.1 match J3.49/47/43/41 by native net
+ inspection. Added A* closed-set handling, hard-hole preservation, optional
+ J3 rotation, and bounded search. Disposable 0-degree/90-degree searches
+ did not emit a promotable route; preserved the result as search/corridor
+ implementation evidence without changing the integrated board.
