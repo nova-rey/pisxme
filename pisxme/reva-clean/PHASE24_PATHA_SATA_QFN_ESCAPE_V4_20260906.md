@@ -44,6 +44,13 @@ endpoint assertions pass, but full-board native DRC remains 1,210 findings /
 promotion. The generated board is preserved for comparison; no clean-board
 authority was replaced.
 
+The route author now rejects stale support-routed ancestors before emitting
+copper: a direct run on the older board fails on `C31.1`'s superseded
+`/STORAGE/SATA_M2_TX_N` net and explicitly requires
+`phase24_regenerate_storage_sata_net_authority.py`. A canonical regenerated
+ancestor then routes successfully. This prevents a PCB-only net-ownership
+regression from being mistaken for a SATA geometry result.
+
 ## Decision
 
 V4 replaces mono2 as the best disposable SATA escape topology. The next

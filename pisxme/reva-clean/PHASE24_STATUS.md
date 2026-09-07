@@ -70,6 +70,11 @@ author applied to the source-regenerated integrated candidate preserves the
 eight endpoint assertions but leaves full-board DRC at 1,210 findings / 499
 unconnected items, so it is not promoted to clean-board authority.
 
+The SATA route author now has a native guard against stale support-routed
+ancestors: direct use of the older board fails on `C31.1`'s superseded
+`/STORAGE/SATA_M2_TX_N` net and points to the source-derived net-authority
+regeneration step. The canonical regenerated ancestor routes successfully.
+
 ## Current Path-B qualification checkpoint — 2026-09-06
 
 The isolated RTL9210B-CG candidate now has explicit authority and mode

@@ -4950,3 +4950,8 @@ validation remain open.
  Applied to the source-regenerated integrated candidate, the SATA assertions
  still passed but inherited board DRC remained 1,210/499, so no production
  board authority was promoted.
+2026-09-06 — PiSXMe Phase 24 Path A: added a native net-authority guard to
+ the SATA route author. It rejects stale support-routed ancestors carrying
+ `/STORAGE/SATA_M2_*` capacitor nets and requires source-derived regeneration;
+ canonical regenerated inputs continue to route with the V4 topology. This
+ prevents PCB-only stale-net ownership from being misclassified as geometry.

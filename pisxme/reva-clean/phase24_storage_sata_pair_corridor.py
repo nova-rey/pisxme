@@ -64,10 +64,24 @@ CAPS = {
     "RX_N": ("C33", (110.5, 128.0)),
     "RX_P": ("C32", (110.5, 116.0)),
 }
+CAP_SOCKET_NETS = {
+    "TX_N": "M2_SATA_A_N_PCIE_TXN0",
+    "TX_P": "M2_SATA_A_P_PCIE_TXP0",
+    "RX_N": "M2_SATA_B_P_PCIE_RXN0",
+    "RX_P": "M2_SATA_B_N_PCIE_RXP0",
+}
 for ref, (x, y) in CAPS.values():
     f = board.FindFootprintByReference(ref)
     if f is None: raise RuntimeError(f"missing {ref}")
     f.SetPosition(V(x, y)); f.SetOrientationDegrees(180)
+for key, (ref, _position) in CAPS.items():
+    p = pad(board, ref, "1")
+    expected = CAP_SOCKET_NETS[key]
+    actual = p.GetNetname()
+    if actual not in (expected, "/STORAGE/" + expected) and not actual.endswith("/" + expected):
+        raise RuntimeError(
+            f"stale {ref}.1 net {actual!r}; run phase24_regenerate_storage_sata_net_authority.py before routing"
+        )
 
 # Keep clock, divider, and bridge-rail support as real obstacles but outside
 # the high-speed corridor. This is a placement choice for the disposable
