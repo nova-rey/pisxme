@@ -5540,3 +5540,8 @@ V3 at 8 native violations / 40 opens. Removing lower B.Cu tails caused the
 SPICS F.Cu corridor to cross source dogbones while SPICLK/SPISO3 still
 interacted on B.Cu. A new layer/channel topology is required; Path A and
 production CAD remain unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: channelized full SPI V1 passes the
+local native signal gate with no SPI shorts, crossings, or clearance
+violations; native endpoint audit passes all five U1/U2 pairs and its SPISI
+negative control fails as required. One inherited isolated-GND warning and
+40 unrelated support opens remain, so full Path-B closure is still open.

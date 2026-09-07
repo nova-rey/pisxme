@@ -66,6 +66,16 @@ confirms the five-net source and downstream layer/channel plan must be
 generated as one deliberately separated topology; neither Path A nor the
 production board was changed.
 
+The channelized full branch
+`PHASE24_RTL9210B_CHANNELIZED_FULL_SPI_V1` is now the preferred SPI-route
+baseline. Native KiCad reports 1 inherited isolated-GND warning / 40
+unconnected support items, with no SPI shorts, crossings, or clearance
+violations. `phase24_rtl9210b_spi_connectivity_audit.py` derives connectivity
+from the saved native board and passes all five U1/U2 endpoints; its negative
+control also fails after removal of a necessary SPISI trace. This closes the
+RTL9210B SPI local route/connectivity sub-gate only; remaining support,
+control, USB, M.2, power, and full Path-B validation remain open.
+
 The V3 source-transition spacing trial
 `PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V3` remains rejected at 10 native
 violations / 44 opens. Increasing the lower transition-row separation left

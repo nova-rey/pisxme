@@ -86,6 +86,18 @@ KiCad reports 8 violations / 40 opens: SPICS crosses the regenerated source
 dogbones and SPICLK/SPISO3 still conflict on the upper B.Cu departure. The
 class is rejected; source and downstream channels must be planned together.
 
+## Channelized full SPI V1 — local PASS
+
+`PHASE24_RTL9210B_CHANNELIZED_FULL_SPI_V1.kicad_pcb` regenerates all five
+U1-to-U2 SPI nets from a scrubbed base. It preserves the validated lateral
+QFN departures, keeps SPISI/SPICLK/SPISO3 on separated B.Cu orthogonal
+columns, gives SPISO an independent F.Cu corridor, and routes SPICS below
+the upper channels on B.Cu. Native KiCad reports 1 inherited isolated-GND
+warning / 40 unrelated support opens, with no SPI signal violation. The
+saved-board native audit passes all five endpoint pairs; removing a necessary
+SPISI track makes the audit fail. This is a local SPI sub-gate PASS, not a
+full fixture or production-CAD PASS.
+
 The follow-up five-net probe changed the departure to straight outward
 segments before the staggered diagonals. Native KiCad improved to 17
 violations / 44 opens, but SPICLK and SPISO3 still short/collide at the
