@@ -48,6 +48,21 @@ update tooling, and recovery artifacts exist in the public ecosystem. They do
 not establish Realtek authorization, exact virgin-chip compatibility, or
 redistribution rights. Those remain explicit Path-B promotion gates.
 
+The firmware repository's live README is especially important for the
+qualification boundary: its documented updater flow assumes a connected,
+already-working enclosure and warns that the updater is Windows-only and can
+brick a device. It also instructs the operator to dump the device
+configuration before updating. This is positive evidence for an enclosure
+update/recovery ecosystem, but negative evidence against claiming a bare
+virgin-QFN programming flow without a separate authorized procedure.
+
+The repository's public chipset table identifies `RTL9210B-CG` as a USB
+3.x / PCIe 3.0 x2 / SATA 3 bridge. The retained mirrored Rev. 1.1 technical
+document independently describes the SPI flash command interface and states
+that exact flash size depends on features and should be obtained from a
+Realtek FAE/agent. The latter is a remaining application/provisioning
+dependency, not a missing pin-map fact.
+
 ## Decision impact
 
 This receipt strengthens the procurement and ecosystem evidence for Path B;

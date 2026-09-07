@@ -28,6 +28,15 @@ this repository.
 | D. Recover/unbrick a failed device | Community recovery/update references and SPI-flash access precedent | Plausible, but no controlled PiSXMe recovery run |
 | E. Redistribute firmware/config in an open product | Public artifacts exist, but license/permission chain is not established | OPEN/HIGH |
 
+The live public updater guidance narrows the technical conclusion: the
+published flow is for a connected, already-working enclosure, uses a
+Windows-only updater, and asks the operator to dump the existing device
+configuration before flashing. It does not document programming a virgin
+RTL9210B-CG plus blank SPI flash on a custom PCB. The SPI command description
+in the retained Rev. 1.1 technical document proves that a standard serial
+flash interface exists, but not the complete Realtek production image,
+configuration contract, or provisioning authorization.
+
 ## Narrow experiment that can change the decision
 
 Obtain a traceable RTL9210B-CG lot and Realtek/OEM-authorized image/config

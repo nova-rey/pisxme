@@ -5005,3 +5005,10 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  crossings, versus V2 at 138 / 52 with six shorts and eleven crossings.
  Rejected V3 as worse local launch geometry; preserved raw evidence and left
  production CAD unchanged.
+2026-09-06 — PiSXMe Phase 24 Path B: refreshed the firmware boundary from
+ live public guidance. The RTL9210 ecosystem documents Windows enclosure
+ update/recovery and configuration dumping, while the retained technical
+ document confirms SPI flash access but defers exact flash sizing to a
+ Realtek FAE/agent. Kept virgin-chip provisioning, configuration authority,
+ and redistribution rights OPEN/HIGH; no community image was promoted to
+ production authority.
