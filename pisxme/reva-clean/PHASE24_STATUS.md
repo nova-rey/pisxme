@@ -4498,6 +4498,20 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-A isolated M.2 lane-0 launches V9/V10 — 2026-09-07
+
+V9 moved RXN farther left before its vertical source jog and removed the
+source crossing, but native DRC reported 81 violations / 34 unconnected items
+with one RXN/RXP source short at the RXP transition via. V10 moved that RXP
+transition below RXN's escape. Native DRC remained at 81 / 34 with zero
+shorts and zero track crossings. The remaining findings are clearance and
+package/contact-field findings, notably the 0.5-mm-pitch M.2 final fanout.
+V10 is the best topological baseline but is not integrated or closed.
+
+`PATHA_M2_LANE0_V9 = REJECTED`
+`PATHA_M2_LANE0_V10 = REJECTED_BEST_TOPOLOGY_BASELINE`
+`PHASE24 = OPEN`
+
 ## Path-A isolated M.2 lane-0 launches V7/V8 — 2026-09-07
 
 V7 moved RXP to a lower B.Cu corridor. Native DRC reported 84 violations /

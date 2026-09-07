@@ -83,3 +83,9 @@ V7 moved RXP to a lower B.Cu corridor and reported 84 violations / 34
 unconnected items, including an M1 short and one crossing. V8 routed below
 and outboard of M1 and reported 82 / 34, with no shorts and one crossing.
 Both are rejected; V5 remains the preferred isolated baseline.
+
+V9 moved RXN farther left and reported 81 violations / 34 unconnected with
+one RX source short. V10 moved the RXP transition below that escape and
+reported 81 / 34 with zero shorts and zero crossings. V10 is retained as the
+best topological baseline; its remaining issue is the clearance-constrained
+M.2 contact-row fanout.

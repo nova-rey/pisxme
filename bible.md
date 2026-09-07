@@ -5163,3 +5163,8 @@ baseline; both remain rejected and unintegrated.
 V7 reported 84 violations / 34 unconnected with an M1 short and one
 crossing. V8 routed below/outboard of M1 and reported 82 / 34 with no shorts
 and one crossing. Both were rejected; V5 remains the best isolated baseline.
+2026-09-07 — PiSXMe Phase 24 Path A: tested V9/V10 source-escape repairs.
+V9 reported 81 violations / 34 unconnected with one RX source short. V10
+moved the RXP transition below RXN's escape and reported 81 / 34 with zero
+shorts and zero crossings. V10 is the best topological baseline, but M.2
+contact-row clearance findings remain; no production CAD changed.
