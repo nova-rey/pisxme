@@ -317,3 +317,11 @@ unconnected set. The remaining violations are inherited from the V2 baseline
 (RTL_3V3/PEDET, CLKREQ/RTL_1V1, and unfinished support/test geometry). V3 is
 the preferred disposable RTL_5V collector baseline; no production copper is
 promoted.
+## RTL_3V3 pad-52 escape V1/V2 — rejected
+
+V1 routed U1 pad 52 to the existing west-side 3V3 trunk and reduced native
+opens from 29 to 28, but its F.Cu trunk shorted the verified GND via at
+(75.0,54.0). V2 jogged west around that via, but collided with the CLKREQ
+pull-up at (74.0,48.0) and regressed to 7 DRC violations / 30 opens. Both
+are rejected as route implementations; the V3 RTL_5V board remains the
+preferred disposable baseline and production CAD is unchanged.

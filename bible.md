@@ -5231,3 +5231,7 @@ implementation evidence; production CAD unchanged.
 for U1.17, U1.33, and C5.1 on the V3 disposable fixture. KiCad connectivity
 passed; removing the pad-17 escape caused the required negative-control
 failure. No production CAD changed.
+2026-09-07 — PiSXMe Phase 24 Path B: tested RTL_3V3 pad-52 escapes V1/V2.
+V1 reduced opens 29 to 28 but shorted a GND via; V2 avoided that via but
+shorted/crossed CLKREQ and regressed to 7 DRC violations / 30 opens. Both
+rejected as route implementations; production CAD unchanged.

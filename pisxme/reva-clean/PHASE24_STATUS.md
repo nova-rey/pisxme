@@ -5339,3 +5339,9 @@ The disposable local 3V3 trunk reduced native opens 29 to 27 but produced 17
 native DRC violations by crossing/shorting the SPI field and RTL_5V escape.
 It is rejected as a route implementation; the RTL_5V V3 board remains the
 preferred disposable baseline and production CAD is unchanged.
+### Path-B RTL_3V3 pad-52 escapes V1/V2 (rejected)
+
+Pad-52 V1 reduced opens 29 to 28 but shorted the verified GND transition;
+V2 avoided it but collided with CLKREQ and regressed to 7 DRC violations /
+30 opens. Neither is promoted. The clean RTL_5V V3 disposable fixture remains
+the current Path-B baseline; production CAD is unchanged.
