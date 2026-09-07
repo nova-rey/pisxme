@@ -4906,6 +4906,12 @@ validation remain open.
  and MSL 3. The listing is PCBA-only and exposes no reproducible stock/price/
  lead-time receipt, so procurement remains an explicit risk rather than a
  fabricated availability claim.
+2026-09-06 — PiSXMe Phase 24 RTL9210B Path B: added a hashed firmware and
+ programming matrix separating enclosure updates, virgin-chip programming,
+ PiSXMe configuration, recovery, and redistribution rights. Public binaries
+ and configs demonstrate an ecosystem but do not close authorized virgin
+ provisioning or productization; those remain a narrowly defined hardware/
+ authorization experiment.
 2026-09-06 — PiSXMe Phase 24 Path A: replaced embedded U7 with the project-
  local TUSB9261 footprint in a disposable native fixture while preserving all
  saved pad nets and placement. The eight-endpoint SATA audit remained PASS and
