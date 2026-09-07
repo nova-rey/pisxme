@@ -31,6 +31,13 @@ The failure is route implementation, not evidence against the 22 mm support
 relocation. Further routing must separate the SPI and control corridors
 before the remaining rail/support joins are attempted.
 
+An outboard translation candidate was also tested: U2/support moved another
+20 mm in X, with the same clean placement-only DRC baseline (11 violations /
+37 opens). Its first extended SPI route is preserved as
+`PHASE24_RTL9210B_SUPPORT_BRANCH_OUTBOARD_SPI_V3`; native DRC reports 40
+violations / 33 opens. This is another route-implementation rejection, with
+no evidence of a mechanical placement collision.
+
 The original isolated RTL9210B-CG bring-up fixture remains archived at
 `PHASE24_RTL9210B_BRINGUP_FIXTURE.kicad_pcb`. It captures the corrected
 QFN-68/M-key lane mapping, PEDET/sideband ownership, support-net boundary,

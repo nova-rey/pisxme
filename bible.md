@@ -5302,6 +5302,11 @@ control as required. Production CAD remains unchanged.
 the endpoint count improved but source-pad and destination-corridor crossings
 remain. Rejected as route implementation evidence; Path A and production CAD
 unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested the outboard support translation
+and SPI extension (U2/support +20 mm X). Placement-only DRC remained at
+11/37; the routed extension produced 40/33 with corridor crossings and was
+rejected as route implementation evidence. No mechanical placement failure
+was found; Path A and production CAD unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: attempted the first SPI reroute from the
 relocated support branch. Native DRC reported 46 violations / 28 opens due to
 over-tight source vias and destination pad-field crossings. Rejected as route
