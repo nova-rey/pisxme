@@ -88,6 +88,27 @@ TXP pad. Reject V163-V166 as route-allocation evidence. They do not alter
 the V158/V160 support basis or the RTL9210B authority; REFCLK remains open
 and the next trial must allocate the QFN source escapes, XTAL_OUT transition,
 and J1 launch as one cell.
+V167 applies the measured QFN pad-gap dogbones, but the lower B.Cu exits
+cross XTAL_IN/XTAL_OUT and the J1 transitions are shorted because both vias
+were placed directly in the REFCLK contact row. V168 moves the J1 transitions
+outboard and removes REFCLK-to-REFCLK shorts; remaining failures are XTAL
+and SPI/RTL_5V/1V1 corridor ownership. V169 moves the pair above the SPI
+fields and leaves only corridor crossings (no REFCLK-P/N shorting), making it
+the best disposable topology so far, but it is not promoted: P/N endpoint
+launches and the lower support exits still need native DRC closure. V170
+puts the whole upper span on F.Cu and is rejected by RTL_3V3/lane/XTAL
+contacts. V171 adds short F.Cu overpasses at the B.Cu trunk crossings and is
+also rejected by XTAL/RTL_3V3/SSD_3V3 contacts. Preserve V167-V171 as raw
+implementation evidence; V169 is the current experimental reference only,
+while V158/V160 remain the last promoted support basis.
+V172 keeps the V169 pair topology but moves the lower exits below the crystal
+row; native DRC still finds the U2/SPISI/RTL3V3/RTL1V1/PEDET ownership
+conflicts and one P/N endpoint crossing. It is rejected. The V169 saved-board
+audit nevertheless passes native connectivity for U1.61→J1.55 and
+U1.62→J1.53, and its trace-removal negative control fails as required; that
+is connectivity evidence only, not a route PASS. The next repair should move
+the directly conflicting local support geometry or allocate a distinct local
+escape cell, not waive the crossings.
 The current promoted disposable RTL_5V/control basis is
 `PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
 CLKREQ/PEDET support evidence. V97 moved

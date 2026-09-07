@@ -112,6 +112,23 @@ contacts moved XTAL_OUT, and the J1-side N transition is too close to TXP.
 Preserve V163-V166 as rejected route-allocation evidence. No Path-A asset,
 production CAD, layer policy, or electrical authority changed; the remaining
 task is one pad-aware QFN/XTAL/REFCLK/J1 allocation.
+V167 uses the measured QFN pad gaps for narrow REFCLK dogbones, but its lower
+B.Cu exits cross the unchanged crystal routes and its J1 vias occupy the
+0.5-mm REFCLK contact row. V168 moves both J1 transitions outboard and
+removes REFCLK-P/N shorts; it still collides with XTAL, SPI, RTL_5V, and the
+old 1V1 collector. V169 moves the upper pair above the SPI fields and has no
+REFCLK-P/N shorting, but its remaining lower support and corridor crossings
+prevent promotion. V170 places the complete upper span on F.Cu and is
+rejected by RTL_3V3, lane, and XTAL contacts. V171 adds short F.Cu
+overpasses at the B.Cu trunk crossings and is rejected by XTAL/RTL_3V3/
+SSD_3V3 contacts. V169 is retained as the best disposable topology, not a
+pass; V158/V160 remain the promoted support basis.
+V172 keeps the V169 pair topology but drops the lower exits below the crystal
+row. Native DRC still reports U2/SPISI/RTL3V3/RTL1V1/PEDET conflicts and one
+P/N endpoint crossing, so it is rejected. The V169 native saved-connectivity
+audit passes both REFCLK mappings (U1.61→J1.55 and U1.62→J1.53) and its
+trace-removal negative control fails as required. This confirms the remaining
+problem is physical corridor ownership, not missing REFCLK net authority.
 
 ## V76–V78 U1.40 edge-group trials — rejected
 
