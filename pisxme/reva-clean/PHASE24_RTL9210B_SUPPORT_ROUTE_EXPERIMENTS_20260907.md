@@ -74,6 +74,14 @@ opens with no new signal violations. Use V47 as the stable basis for the next
 coherent rail/support authoring pass; do not treat its intended opens as a
 complete RTL9210B support PASS.
 
+V49 is the cleanest follow-on handoff from the corrected frame. It routes
+U1.52 around the existing XTAL_IN lower-left field and joins U1.52 to the
+U1.34/U1.39/U2 branch with native DRC at the inherited 4-warning / 30-open
+baseline. V50 attempted to join the R2/R3 rail taps and U1.20/C3 with a
+straight F.Cu collector; it is rejected at 7 findings / 28 opens for real
+crossings with retained SPISO, SPICS, and SPISO3. This is a route allocation
+failure, not evidence against the corrected footprint or the RTL_3V3 net.
+
 V40 jointly reauthored the 3V3/5V rail spines. Native DRC reports 8 findings,
 including a new RTL_3V3/SPISO3 source collision and retained RTL_5V/SPISI and
 C5-handoff conflicts. It is rejected; the next rail class must keep the V24

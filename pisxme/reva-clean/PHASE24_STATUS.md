@@ -86,6 +86,15 @@ current disposable Path-B authoring basis, not a full support-network PASS;
 next work must reauthor the remaining rail/support fields from this corrected
 frame.
 
+V49 uses the corrected frame to co-author the U1.52 RTL_3V3 escape around the
+existing XTAL_IN field. Native DRC returns to the 4 inherited warnings / 30
+opens baseline, and saved-board connectivity joins U1.52 to U1.34/U1.39/U2.3/
+U2.8 without a new signal violation. V49 is the current cleanest 3V3 handoff
+basis. V50's direct R2/R3-to-U1.20/C3 rail join is rejected at 7 findings /
+28 opens because the straight F.Cu rail crosses retained SPISO, SPICS, and
+SPISO3 departures. The next class must allocate rail taps on another layer or
+coherently reauthor the local support field; no production CAD changed.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch
