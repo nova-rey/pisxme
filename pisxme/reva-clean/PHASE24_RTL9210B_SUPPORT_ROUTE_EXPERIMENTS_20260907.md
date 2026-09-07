@@ -88,3 +88,14 @@ unconnected items**. The local saved-track audit passes and confirms that the
 three intended nets are actually authored; the 52 opens are the remaining
 unrouted support-fixture boundary and are not waived. V7 is therefore a local
 route PASS, not a full RTL9210B fixture PASS.
+
+## Attempts 6 and 7 — SPI support route
+
+SPI V2/V3/V4/V5/V6 were retained as routing-development evidence. They
+progressively removed undersized-via, source-pad clearance, dangling-via, and
+same-layer crossing defects. The final V7 uses ordinary 0.6/0.3-mm vias for
+the three monotonic B.Cu channels, a separated B.Cu SPICLK corridor, and a
+F.Cu perimeter corridor for SPISI. Native KiCad DRC reports **0 violations /
+52 unconnected items**, and the saved-track/net/via audit passes. This closes
+the SPI local route sub-gate only; remaining fixture support and intentional
+boundary opens are still open.

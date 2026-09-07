@@ -5054,3 +5054,9 @@ unchanged before changing routing method.
  0 violations / 52 intentional remaining opens and the independent local
  saved-track audit passes. Closed only this local oscillator/RSET sub-gate;
  the full fixture remains open and production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: corrected the isolated SPI support route
+ with staggered U1 fanout, ordinary 0.6/0.3-mm vias, a separated B.Cu
+ SPICLK corridor, and an F.Cu SPISI perimeter. SPI V7 has 0 native DRC
+ violations / 52 intentional fixture-boundary opens and passes its independent
+ saved-track/net/via audit. Closed only the SPI local route sub-gate; kept the
+ full fixture and production CAD open/unchanged.
