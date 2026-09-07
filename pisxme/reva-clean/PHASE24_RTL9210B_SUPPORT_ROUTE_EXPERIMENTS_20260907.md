@@ -29,6 +29,12 @@ clearance from the reallocated 3V3 segment to U1.35, and two minimum-width
 violations. The board's 0.200-mm routing rule is retained; a finer trace is
 not an acceptable workaround.
 
+V82 tested a diagonal U1.40 escape against the V79 reallocated 3V3 field.
+Native DRC reports 11 findings / 25 opens: the diagonal shorts/crosses the
+U1.39 RTL_3V3 pad escape and violates the adjacent U1.38 solder-mask/clearance
+envelope. Preserve it as evidence that the U1.40 departure and neighboring
+3V3 source field must be authored as one QFN escape cell.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It

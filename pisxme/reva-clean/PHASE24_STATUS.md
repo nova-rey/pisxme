@@ -24,6 +24,13 @@ are rejected route-allocation/authoring trials. This confirms that the local
 3V3 corridor is the right decision surface, but the QFN edge escape still
 needs a pad-aware dogbone and a completely connected 3V3 path.
 
+V82 tested a pad-aware diagonal U1.40 escape against the V79 reallocated
+3V3 field. Native DRC rejected it at 11 findings / 25 opens: the departure
+shorts/crosses the U1.39/RTL_3V3 pad escape and also violates the adjacent
+U1.38 solder-mask/clearance envelope. This is further evidence that U1.40
+must be co-authored with the neighboring 3V3 source field, not added as an
+isolated dogbone.
+
 V81 tested the same V79 U1.40 path with a 0.15-mm fine-pitch dogbone. Native
 DRC rejected it at 10 findings / 25 opens: the escape still has only
 0.1647-mm clearance to U1.41, the reallocated 3V3 segment remains 0.100 mm
