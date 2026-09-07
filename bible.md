@@ -512,6 +512,11 @@ Recorded seeded-exit search result; inherited SATA launch still blocks downstrea
 - The J10-side route stays below the connector contact row and avoids the
   existing FAST-B USB3 DM/RX geometry. PCIe and accepted high-speed routes are
 unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested corrected U2 far placement with
+an order-preserving two-layer SPI partition. Native KiCad reports 30
+violations / 40 opens; dominant failures remain the rotated U1 QFN source
+escape and retained XTAL_OUT region. U2 footprint coordinates are corrected;
+Path A and production CAD remain unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: validated a corrected U2 footprint in a
 left/90-degree placement-only candidate at 6 findings / 44 opens with no new
 signal short, then rejected its mixed-layer SPI route at 24 violations / 39

@@ -30,6 +30,17 @@ crossings. This separates the corrected footprint placement evidence from
 the still-failing route implementation; no production CAD or Path-A asset
 changed.
 
+The corrected-footprint far placement with an order-preserving two-layer
+partition, `PHASE24_RTL9210B_U2_CORRECTED_FAR_PARTITION_SPI_V1`, is rejected
+at 30 violations / 40 opens. Native evidence shows the remaining failure is
+the rotated U1 source-field escape: the long source dogbones and transition
+vias still enter adjacent QFN pad clearances and cross the retained
+XTAL_OUT/source region. The farther U2 placement did not itself create the
+dominant defect. This class is not evidence against RTL9210B; the next
+credible step is a native QFN breakout/footprint escape treatment (or a
+different U1 orientation with source transitions outside the pad field), not
+more target-row permutations.
+
 The disposable `PHASE24_RTL9210B_QFN_SPI_POWER_PARTITION_V1` probe was
 authored after correcting a KiCad Python net-handle defect. Native KiCad
 reports 22 violations / 33 unconnected items. The candidate is rejected as a

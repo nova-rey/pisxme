@@ -37,6 +37,18 @@ placement remains valid evidence that further trials must use corrected
 transformable geometry, but this coordinate/orientation plus simple
 two-layer escape is not promotable.
 
+## Far placement and order-preserving layer partition
+
+`PHASE24_RTL9210B_U2_CORRECTED_FAR_PARTITION_SPI_V1.kicad_pcb` placed the
+corrected U2 at `(86,90)` with 90-degree orientation and assigned the
+order-preserving SPI subsets to F.Cu and B.Cu. Native KiCad reports 30
+violations / 40 opens. The dominant findings are actual SPISI/SPICLK,
+SPICS/SPICLK, SPISO3/SPICS, and SPISO/SPICS conflicts, plus source-field
+clearances and crossings. The report shows the failure is at the rotated
+U1 source escape and retained XTAL_OUT region, not the U2 footprint's
+coordinate frame. This route class is rejected; the next trial must solve
+the QFN source breakout itself or change the U1 source-facing orientation.
+
 ## Attempt 1 — all-F.Cu support fanout
 
 `PHASE24_RTL9210B_BRINGUP_SUPPORT_ROUTED.kicad_pcb`
