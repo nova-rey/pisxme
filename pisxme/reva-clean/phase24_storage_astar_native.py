@@ -15,6 +15,7 @@ OUT = Path(os.environ.get('PISXME_SATA_OUT', str(R/'PHASE24_SELECTED_MACRO_SATA_
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 STEP, WIDTH, VIA_W, VIA_D = .25, .15, .50, .30
 LAYERS = (F, B)
+MAX_EXPANSIONS = int(os.environ.get('PISXME_ASTAR_MAX_EXPANSIONS', '250000'))
 
 def V(x,y): return pcbnew.VECTOR2I_MM(float(x),float(y))
 def xy(p): return pcbnew.ToMM(p.x), pcbnew.ToMM(p.y)
@@ -84,7 +85,11 @@ def route(occ,hard,start,goal,start_layer=F,goal_layer=F,x_gate=None,
     for l in LAYERS: local[l].update(hard[l])
     bounds=(grid((1,1)),grid((299,179)))
     q=[(0,s)]; cost={s:0}; prev={s:None}
+    expanded=0
     while q:
+        expanded += 1
+        if expanded > MAX_EXPANSIONS:
+            raise RuntimeError(f'A* expansion limit reached ({MAX_EXPANSIONS}) for {start}->{goal}')
         _,cur=heappop(q)
         if cur==t: break
         x,y,l=cur
@@ -181,18 +186,28 @@ if removed_sata:
     raise RuntimeError(f'SATA_REMOVED_RELOAD_REQUIRED:{reload_path}')
 track_snapshot = list(b.Tracks())
 occ,hard=occupancy(b,ignored,track_snapshot)
-# This baseline intentionally leaves drilled-hole handling to the native DRC
-# while the pair escape is tuned; the earlier hard-hole waypoint variants are
-# preserved in history as rejected experiments.
-hard={F:set(),B:set()}
+# Keep the native drilled-hole obstacle map.  The earlier reset here allowed
+# ordinary vias to be emitted into hole/zone keepouts, which native DRC then
+# rejected.  Hard obstacles are still distinct from copper occupancy, so
+# terminal allowances cannot erase physical drilled geometry.
 jobs=[
- ('BRIDGE_SATA_TX_P','57','C30','2','1'),
- ('BRIDGE_SATA_TX_N','56','C31','2','2'),
- ('BRIDGE_SATA_RX_P','60','C32','2','3'),
- ('BRIDGE_SATA_RX_N','59','C33','2','4'),
+ # M.2 Socket 3 shared SATA/PCIe lane-0 contacts.  Pads 1..4 are
+ # configuration/power contacts, not the SATA launch; using them was a
+ # generator defect that created apparent pair shorts at the connector.
+ ('BRIDGE_SATA_TX_P','57','C30','2','49'),
+ ('BRIDGE_SATA_TX_N','56','C31','2','47'),
+ ('BRIDGE_SATA_RX_P','60','C32','2','43'),
+ ('BRIDGE_SATA_RX_N','59','C33','2','41'),
 ]
+socket_nets={
+ 'BRIDGE_SATA_TX_P':'M2_SATA_A_P_PCIE_TXP0',
+ 'BRIDGE_SATA_TX_N':'M2_SATA_A_N_PCIE_TXN0',
+ 'BRIDGE_SATA_RX_P':'M2_SATA_B_N_PCIE_RXP0',
+ 'BRIDGE_SATA_RX_N':'M2_SATA_B_P_PCIE_RXN0',
+}
 for name,up,cap,cp,jp in jobs:
-    bridge=b.FindNet('/STORAGE/'+name); socket=b.FindNet('/STORAGE/'+name.replace('BRIDGE_SATA_','SATA_M2_'))
+    bridge=b.FindNet('/STORAGE/'+name)
+    socket=b.FindNet('/STORAGE/'+socket_nets[name]) or b.FindNet(socket_nets[name])
     if bridge is None or socket is None: raise RuntimeError(name)
     a=xy(pad(b,'U7',up).GetPosition()); z=xy(pad(b,cap,cp).GetPosition())
     bridge_start = B if name.startswith('BRIDGE_SATA_RX_') else F
@@ -222,6 +237,10 @@ for name,up,cap,cp,jp in jobs:
     if name == 'BRIDGE_SATA_RX_N': gate=(1,120.25)
     if name == 'BRIDGE_SATA_RX_P': gate=(-1,118.75)
     if name == 'BRIDGE_SATA_RX_N': gate=(1,120.25)
-    path=route(occ,hard,a,z,socket_start,F,gate); emit(b,socket,path,occ)
+    # The M.2 contact row is interleaved at 0.5 mm pitch.  A broad target
+    # halo would clear neighboring contacts and let A* approach the selected
+    # contact through another net.  Keep the real pad field intact and let
+    # the final grid cell be the only target exception.
+    path=route(occ,hard,a,z,socket_start,F,gate,2.0,0.0); emit(b,socket,path,occ)
     print(name,'bridge',a,'to',z)
 b.Save(str(OUT));print(OUT)

@@ -6,6 +6,13 @@ Latest focused routing-generator checkpoint: `e8dd6fc`. The deduplication
 experiment recorded in `PHASE24_PATHA_SATA_ROUTER_DEDUP_20260906.md` is
 rejected as route implementation failure; no integrated board was changed.
 
+The next live finding is a source/net-authority correction recorded in
+`PHASE24_PATHA_SATA_CONTACT_AUTHORITY_20260906.md`: the SATA router and audit
+now use J3 contacts 49/47/43/41, and the child schematic coupling-cap outputs
+were reconciled to the connector's canonical M.2 net names. Source audits pass;
+native routed-board closure remains open. The hard-obstacle search was bounded
+after it failed to produce a candidate, and no integrated board was changed.
+
 Latest private storage evidence checkpoint: `9e45a72`. The retained WIP
 RTL9210B native XML support netlist now has a reproducible audit with
 component, rail, clock, SPI, reset, RSET, PEDET, ISOLATEB, shared-lane, and

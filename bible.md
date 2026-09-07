@@ -4827,3 +4827,11 @@ validation remain open.
  violations but remained rejected with 499 unconnected items and crossings.
  Preserved the board and raw report as route-implementation evidence; Path A
  authority and Path B qualification were not changed.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: native inspection found the
+ SATA router was targeting J3.1–4 instead of the TE M-key shared lane contacts
+ J3.49/47/43/41. Corrected the generic router and endpoint audit, reconciled
+ the four coupling-cap outputs in the authoritative STORAGE schematic to the
+ canonical M.2 net names, and preserved the pre-reconciliation DRC as rejected
+ evidence. Retained hard-hole obstacles and bounded A* search; the bounded
+ search did not emit a promotable candidate. Native source audits pass and
+ routed-board closure remains open.

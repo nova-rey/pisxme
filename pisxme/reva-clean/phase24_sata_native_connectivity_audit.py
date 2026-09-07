@@ -6,8 +6,13 @@ BOARD=Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'PHASE24_STORAGE_NATIVE_ORA
 ENDPOINTS={
  'BRIDGE_SATA_TX_P':('U7.57','C30.2'), 'BRIDGE_SATA_TX_N':('U7.56','C31.2'),
  'BRIDGE_SATA_RX_P':('U7.60','C32.2'), 'BRIDGE_SATA_RX_N':('U7.59','C33.2'),
- 'SATA_M2_TX_P':('C30.1','J3.1'), 'SATA_M2_TX_N':('C31.1','J3.2'),
- 'SATA_M2_RX_P':('C32.1','J3.3'), 'SATA_M2_RX_N':('C33.1','J3.4'),
+ # M.2 Socket 3 shared SATA/PCIe lane-0 contacts.  J3.1..4 are
+ # configuration/power contacts on the native M-key footprint and are not
+ # valid SATA endpoints.
+ 'M2_SATA_A_P_PCIE_TXP0':('C30.1','J3.49'),
+ 'M2_SATA_A_N_PCIE_TXN0':('C31.1','J3.47'),
+ 'M2_SATA_B_N_PCIE_RXP0':('C32.1','J3.43'),
+ 'M2_SATA_B_P_PCIE_RXN0':('C33.1','J3.41'),
 }
 def tok(p): return f'{p.GetParentFootprint().GetReference()}.{p.GetNumber()}'
 b=pcbnew.LoadBoard(str(BOARD))
@@ -17,7 +22,8 @@ pads={tok(p):p for f in b.GetFootprints() for p in f.Pads()}
 for net,ends in ENDPOINTS.items():
  for e in ends:
   if e not in pads: raise AssertionError(f'missing endpoint {e}')
-  if not pads[e].GetNetname().endswith('/'+net): raise AssertionError(f'wrong net {e}: {pads[e].GetNetname()}')
+  if pads[e].GetNetname() not in (net, '/STORAGE/'+net) and not pads[e].GetNetname().endswith('/'+net):
+   raise AssertionError(f'wrong net {e}: {pads[e].GetNetname()}')
  for e in ends:
   reached={tok(x) for x in conn.GetConnectedItems(pads[e]) if type(x).__name__=='PAD'}|{e}
   if not set(ends)<=reached: raise AssertionError(f'{net} disconnected at {e}: {sorted(reached)}')
