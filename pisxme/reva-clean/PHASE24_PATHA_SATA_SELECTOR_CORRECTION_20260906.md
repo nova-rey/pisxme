@@ -30,6 +30,11 @@ is source-authoritative in `STORAGE.kicad_sch` and generated into the
 disposable PCB by `phase24_integrate_dual_mode_storage.py` and
 `phase24_place_dual_mode_storage_island.py`.
 
+The TI package drawing also requires the exposed thermal pad to be soldered to
+the PCB. The PCB generator now assigns U13 pad 43 to `POWER_GND`; it is not
+invented as a schematic signal pin. Any F.Cu route over that pad is therefore
+a real ground short and must be routed around or below it.
+
 ## Native evidence
 
 `PHASE24_STORAGE_SATA_SELECTOR_CORRIDOR_20260906.kicad_pcb` passes the

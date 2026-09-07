@@ -15,6 +15,11 @@ combined USB3/SATA closure remain open.
 See `PHASE24_PATHA_SATA_SELECTOR_CORRECTION_20260906.md` for the exact TI
 pin/port basis and raw selector-inclusive fixture names.
 
+The corrected PCB generator also assigns U13's exposed thermal pad 43 to
+`POWER_GND`, as required by the TI RUA0042A package drawing. This converts the
+former no-net pad artifact into a real routing constraint; the next disposable
+route must clear that pad rather than crossing it.
+
 ## Current checkpoint — 2026-09-06
 
 Latest focused routing-generator checkpoint: `5184b6f`. The deduplication

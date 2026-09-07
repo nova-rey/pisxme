@@ -40,7 +40,10 @@ SUPPORT_PCB = {
 # earlier placement probe used abbreviated aliases and is not authority.
 MAPS['JMS583_QFN64_8x8.kicad_mod'] = ('U11', JMS)
 MAPS['HD3SS6126_RUA0042A.kicad_mod'] = ('U12', USB)
-MAPS['HD3SS3412_RUA0042A.kicad_mod'] = ('U13', MUX)
+ # Pad 43 is the package exposed thermal pad, not a signal pin. TI's RUA
+ # package drawing requires it soldered to the PCB; assign the saved PCB pad
+ # to the established power-ground net without inventing a schematic pin.
+MAPS['HD3SS3412_RUA0042A.kicad_mod'] = ('U13', {**MUX, 43:'POWER_GND'})
 MAPS['TE_1-2199230-4_MKEY.kicad_mod'] = ('J3', M2)
 
 def append_pad_metadata(text, nets, stem):

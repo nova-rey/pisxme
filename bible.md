@@ -4978,3 +4978,8 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  the twelve-endpoint native PASS and the negative-control PASS, but remain
  rejected raw route evidence because U7/U13/M.2 escape implementation still
  contains real crossings and shorts.
+2026-09-06 — PiSXMe Phase 24 Path A: corrected the disposable HD3SS3412
+ exposed thermal pad authority. U13 pad 43 is now assigned to POWER_GND in
+ generated PCB metadata, matching TI's package requirement; it is not a
+ schematic signal pin. Routes crossing the thermal pad are now treated as
+ real ground shorts.
