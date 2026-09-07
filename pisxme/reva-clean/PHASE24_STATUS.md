@@ -4498,6 +4498,23 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-B PEDET reroute V11–V15 — 2026-09-07
+
+V11 moved the PEDET upper return below the RTL_5V via but violated board-edge
+clearance at 5 native findings / 35 opens. V12 moved the return to y=42.5;
+native DRC reported 3 findings / 36 opens, with one PEDET/RTL_3V3 crossing and
+two inherited RTL_3V3 dangling warnings. V13 moved the upper run to B.Cu and
+reported 4 / 35 from GND-via clearance and a redundant transition. V14
+repositioned that transition but reported 4 / 35 from RTL_5V/PEDET and
+RTL_3V3/PEDET crossings. V15 attempted a two-layer detour and regressed to
+15 / 35 with multiple rail-field shorts/crossings. All are rejected route
+implementations. V6 remains the best Path-B control baseline at 3 / 36; no
+production CAD or architecture decision changed.
+
+`PATHB_PEDET_ROUTE_CLASS = REJECTED`
+`PATHB_ARCHITECTURE = CONTINUE_BOTH`
+`PHASE24 = OPEN`
+
 ## Path-A isolated M.2 lane-0 launch V14 — 2026-09-07
 
 V14 repeated the V13 geometry at 0.15 mm, below the selected 0.20-mm

@@ -5178,6 +5178,11 @@ escape tracks to discriminate contact-field clearance. Native DRC reported
 102 / 34 with zero shorts/crossings but 28 track-width violations. Rejected
 under the unchanged manufacturing contract; V12 remains the best valid-width
 topology baseline and production CAD is unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested PEDET reroute V11–V15 around the
+V6 rail field. Native DRC results were 5/35, 3/36, 4/35, 4/35, and 15/35.
+The class removed the original RTL_5V/PEDET short only by introducing edge,
+via, or rail-field failures. Rejected all five; V6 remains the best baseline,
+with Path B isolated and production CAD unchanged.
 2026-09-07 — PiSXMe Phase 24 Path A: tested V14 at 0.15-mm track width.
 Native DRC reported 105 / 34 with 28 track-width violations. Rejected under
 the selected 0.20-mm differential-width contract; V12 remains the valid-width

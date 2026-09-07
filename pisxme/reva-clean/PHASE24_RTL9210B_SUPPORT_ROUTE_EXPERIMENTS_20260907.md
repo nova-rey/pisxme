@@ -232,3 +232,13 @@ V6 controls and 3V3. Native DRC regressed to **14 violations / 35 opens**;
 the new rail transition collided with RTL_1V1 and PERST geometry and did not
 complete the source join. It is rejected. Moving only the rail departure is
 insufficient; the support island remains isolated and Path A is preserved.
+
+## PEDET reroute V11–V15
+
+V11–V15 tested bounded PEDET return relocations around the V6 rail field:
+native DRC results were 5/35, 3/36, 4/35, 4/35, and 15/35 respectively.
+V12 removed the original RTL_5V/PEDET short but introduced an RTL_3V3
+crossing; V13/V14 moved the transition to B.Cu but retained via/rail-field
+conflicts; V15 regressed with multiple shorts and crossings. The route class
+is rejected. V6 remains the current baseline and no Path-B authority or
+production CAD changed.
