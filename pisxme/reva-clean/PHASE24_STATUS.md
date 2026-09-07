@@ -182,6 +182,14 @@ fails as required. Promote V131 only as the disposable complete CLKREQ
 sub-primitive; RESET_N, RTL_5V, high-speed links, and full Path-B validation
 remain open.
 
+## Current RTL9210B SPISI status — V201 rejected
+
+V201 is rejected as a single-net route implementation. It connected U1.18
+to U2.5 in saved native connectivity, but DRC found C1 ground contact at
+the destination and conflict with the promoted SPICLK launch at the QFN
+source. The next credible route must co-author SPICLK/SPISI source escapes
+and the local destination support field together.
+
 ## Current RTL9210B crystal/SPICLK basis — V200
 
 `PHASE24_RTL9210B_SPICLK_CRYSTAL_EAST_V200.kicad_pcb` is the promoted local

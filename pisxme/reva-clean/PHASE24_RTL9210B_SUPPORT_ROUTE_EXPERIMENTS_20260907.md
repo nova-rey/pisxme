@@ -1293,6 +1293,14 @@ negative control fails as required. V185 is a promoted disposable rail
 sub-primitive; the remaining 3V3 branches, support rails, SPI/control, and
 full Path-B validation remain open.
 
+## V201 SPISI route — rejected
+
+V201 tested U1.18 SPISI to U2.5 from the promoted V200 basis. Native
+connectivity and the trace-removal negative control passed, but native DRC
+found SPISI contact to C1 ground at the destination and SPISI/SPICLK source
+shorting/crossing at the QFN escape. This is a coupled SPI source/destination
+allocation failure; no production CAD or Path-A architecture changed.
+
 ## V198–V200 SPICLK/crystal allocation
 
 V198 retained the V193 support placement and moved XTAL_IN left, but the
