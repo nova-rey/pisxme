@@ -138,6 +138,12 @@ XTAL_IN/support path, one dangling diagnostic endpoint, and inherited
 non-signal warnings. The result confirms a local XTAL/support placement
 collision and supports coherent relocation.
 
+V70 is rejected at 18 native findings / 27 opens. The moved Y1/C1/C2/R1
+island was placed too close to the board edge, while its regenerated
+XTAL_IN/XTAL_OUT/RSET paths had local clearance/short issues. Preserve this
+as a relocation failure; V69 remains the diagnostic proof that U1.60 routing
+is feasible after clearing XTAL_IN.
+
 V57 completes the RTL_5V disposable rail primitive. Its U1.33-to-U1.17
 F.Cu escape passes above the native SPI source endpoints, then uses the
 SPI-clear B.Cu dogleg and a right-side C5.1 launch. Native DRC reports 5

@@ -164,6 +164,13 @@ disconnected XTAL_IN/support path, one diagnostic dangling endpoint, and
 inherited non-signal warnings. This confirms a local XTAL/support placement
 collision rather than an impossible U1.60 rail route; V69 is not promoted.
 
+V70 attempted a coherent Y1/C1/C2/R1 relocation with U1.60 1V1 routing and
+is rejected at 18 native findings / 27 opens. The selected support island was
+too close to the board edge, and the regenerated XTAL_IN/XTAL_OUT/RSET paths
+collided locally. This is a placement/route implementation failure; V69 still
+proves the U1.60 corridor when XTAL_IN is removed, and production CAD remains
+unchanged.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch
