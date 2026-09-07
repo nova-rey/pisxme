@@ -199,3 +199,9 @@ V6 is retained as the current disposable baseline, not a pass. The remaining
 implementation task is the local RTL_5V/3V3/PEDET transition field; further
 long perimeter detours are not justified. All results are native KiCad DRC
 after zone refill, and Path A/production CAD remain unchanged.
+
+V9 retained V6 and added a local PEDET dogleg around the inherited RTL_5V
+via. It remains at **3 violations / 36 opens** because the dogleg intersects
+the RTL_5V vertical departure. This closes the current same-placement route
+class for evidence; the next class must relocate or coherently re-author the
+small RTL_5V/3V3/control support island rather than add more PEDET detours.

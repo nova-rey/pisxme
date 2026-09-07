@@ -91,6 +91,13 @@ showed that a PEDET-only B.Cu dogleg still conflicts with the local
 3V3/RTL_5V transition field. None is promoted and none changes production
 CAD or rejects the RTL9210B architecture.
 
+V9 retained the V6 rail/control baseline and added a PEDET F.Cu dogleg around
+the RTL_5V via; native DRC still reports 3 violations / 36 opens because the
+dogleg intersects the inherited RTL_5V vertical. This closes the current
+same-placement route class for evidence purposes. The next experiment must
+relocate or coherently re-author the small RTL_5V/3V3/control support island;
+additional coordinate-only PEDET detours are not promoted.
+
 Further control variants V4/V5/V6 were also rejected: V4 reports 8 DRC
 violations / 34 opens, V5 reports 3 / 34, and V6 reports 4 / 33. Their
 remaining findings are same-layer PEDET/CLKREQ/rail corridor crossings. This

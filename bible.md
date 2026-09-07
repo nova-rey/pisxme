@@ -5110,3 +5110,8 @@ clearance output as stale fill state and kept production CAD unchanged.
  36 opens. V7/V8 rejected alternate RTL_5V/PEDET corridor classes at 15/32
  and 4/35. The remaining issue is a local power/control transition field;
  no production CAD or Path-A authority changed.
+2026-09-07 — PiSXMe Phase 24 Path B: V9 retained the best V6 control-route
+ baseline and tested a PEDET dogleg around the inherited RTL_5V via. Native
+ DRC remained at 3 violations / 36 opens. The same-placement PEDET route
+ class is exhausted; the next step is coherent local support-island
+ relocation/re-authoring, with production CAD unchanged.
