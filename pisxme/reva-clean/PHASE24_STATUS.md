@@ -5362,3 +5362,9 @@ is unchanged.
 Layer-separated crystal routing still reached the endpoints but produced
 8 native DRC violations / 25 opens from U1-side XTAL crossings, RTL_1V1
 interaction, and C1 thermal relief. Rejected; production CAD unchanged.
+### Path-B crystal support V3/V4 (rejected)
+
+V3 reached the full crystal endpoint set at 6 DRC / 25 opens but crossed an
+RTL_1V1 escape. V4 moved the final leg and introduced XTAL_OUT shorts to
+XTAL_IN and RTL_1V1, at 7 DRC / 25 opens. Both are rejected; production CAD
+is unchanged.

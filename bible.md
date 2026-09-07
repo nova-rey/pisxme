@@ -5249,3 +5249,7 @@ V2. It reached the endpoints and reduced opens to 25, but U1-side XTAL
 approaches crossed and interacted with RTL_1V1; C1 thermal relief remained
 incomplete. Rejected as route implementation evidence; production CAD
 unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested crystal support V3/V4. V3
+reached all endpoints at 6 DRC / 25 opens but crossed RTL_1V1; V4 moved the
+final leg but shorted XTAL_IN and RTL_1V1, at 7 DRC / 25 opens. Rejected as
+route implementation evidence; production CAD unchanged.

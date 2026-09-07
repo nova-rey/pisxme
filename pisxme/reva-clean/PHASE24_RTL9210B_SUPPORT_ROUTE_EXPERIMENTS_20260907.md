@@ -346,3 +346,11 @@ F.Cu. The candidate still reduced native opens to 25, but the U1-side
 approaches crossed at the transition, crossed RTL_1V1, and retained the
 incomplete C1 ground thermal connection. It is rejected; future work must
 change the U1-side approach geometry rather than repeat the capacitor escape.
+## Crystal support V3/V4 — rejected
+
+V3 separated both crystal nets through B.Cu and reached all endpoints at
+6 DRC violations / 25 opens; the only new error was the XTAL_OUT approach
+crossing an existing RTL_1V1 pad escape. V4 moved that final leg, but native
+DRC found seven violations including XTAL_OUT shorts to the XTAL_IN via and
+RTL_1V1 via. Both remain disposable negative evidence; no production copper
+is promoted.
