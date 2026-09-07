@@ -325,3 +325,10 @@ opens from 29 to 28, but its F.Cu trunk shorted the verified GND via at
 pull-up at (74.0,48.0) and regressed to 7 DRC violations / 30 opens. Both
 are rejected as route implementations; the V3 RTL_5V board remains the
 preferred disposable baseline and production CAD is unchanged.
+## RSET V1/V2/V3 — rejected
+
+RSET V1 reached U1 but shorted the C1 ground pad. V2 jogged around C1 but
+shorted the Y1 XTAL_IN pad. V3 moved both endpoints through ordinary vias and
+B.Cu, reducing native opens to 28, but crossed the RTL_1V1 B.Cu corridor and
+exposed an inherited RTL_1V1/CLKREQ via conflict. The route class is
+rejected; no production copper is changed.

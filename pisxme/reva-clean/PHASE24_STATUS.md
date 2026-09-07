@@ -5345,3 +5345,9 @@ Pad-52 V1 reduced opens 29 to 28 but shorted the verified GND transition;
 V2 avoided it but collided with CLKREQ and regressed to 7 DRC violations /
 30 opens. Neither is promoted. The clean RTL_5V V3 disposable fixture remains
 the current Path-B baseline; production CAD is unchanged.
+### Path-B RSET route variants V1/V2/V3 (rejected)
+
+RSET V1/V2 collided with C1/Y1 pads. V3 used ordinary vias and B.Cu, reached
+the endpoint, and reduced opens to 28, but crossed RTL_1V1 and retained a
+control-via conflict. All are rejected as route implementations; production
+CAD remains unchanged.

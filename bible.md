@@ -5235,3 +5235,8 @@ failure. No production CAD changed.
 V1 reduced opens 29 to 28 but shorted a GND via; V2 avoided that via but
 shorted/crossed CLKREQ and regressed to 7 DRC violations / 30 opens. Both
 rejected as route implementations; production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested RSET route variants V1-V3.
+V1/V2 collided with crystal support pads; V3 reached U1 through ordinary
+vias/B.Cu and reduced opens to 28 but crossed RTL_1V1 and retained a control
+via conflict. Rejected as route implementation evidence; production CAD
+unchanged.
