@@ -5059,4 +5059,10 @@ unchanged before changing routing method.
  SPICLK corridor, and an F.Cu SPISI perimeter. SPI V7 has 0 native DRC
  violations / 52 intentional fixture-boundary opens and passes its independent
  saved-track/net/via audit. Closed only the SPI local route sub-gate; kept the
- full fixture and production CAD open/unchanged.
+full fixture and production CAD open/unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: added a disposable in-board F.Cu/B.Cu
+ GND-plane and stitching-via discriminator to the clean SPI V7 fixture.
+ Native DRC stayed at 0 violations and real plane connectivity reduced open
+ items from 52 to 45. This closes only the fixture reference-return
+ discriminator; signal/power/sideband/test-access opens and production CAD
+ remain open/unchanged.

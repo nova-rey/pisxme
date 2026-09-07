@@ -47,6 +47,13 @@ audit passes. Earlier SPI variants remain preserved as route-development
 evidence. The full RTL9210B fixture is still open for the remaining support
 circuits and complete connectivity.
 
+The current isolated Path-B routing baseline is
+`PHASE24_RTL9210B_SPI_V7_GND_PLANES_V3.kicad_pcb`: native DRC is 0 and the
+GND-plane/reference discriminator reduces the fixture to 45 unconnected
+items. Those remaining opens are not waived; they are the next support,
+power, sideband, and test-access routing gate. Production CAD remains
+unchanged.
+
 ## Current live correction — 2026-09-06
 
 The old V4 SATA claim is superseded for Path-A topology: its C30–C33 to J3

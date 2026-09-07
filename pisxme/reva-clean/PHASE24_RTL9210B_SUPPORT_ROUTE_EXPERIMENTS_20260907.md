@@ -99,3 +99,13 @@ F.Cu perimeter corridor for SPISI. Native KiCad DRC reports **0 violations /
 52 unconnected items**, and the saved-track/net/via audit passes. This closes
 the SPI local route sub-gate only; remaining fixture support and intentional
 boundary opens are still open.
+
+## Ground/reference closure discriminator
+
+The isolated V2 fixture had no copper zones, so every GND return remained an
+open even after local signal routes passed. An in-board disposable F.Cu/B.Cu
+GND pair with ordinary 0.6/0.3-mm stitching vias was added to the SPI V7
+candidate. Native DRC remains **0 violations** and unconnected items fall from
+52 to 45. This closes reference-plane connectivity for the disposable
+fixture only; it does not synthesize signal edges or promote the fixture into
+production CAD.
