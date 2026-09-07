@@ -4816,3 +4816,8 @@ validation remain open.
  authority; Path-A and Path-B production CAD remain unchanged.
 2026-09-06 — PiSXMe Phase 24 dual-mode storage: refreshed the current status
  checkpoint to 819015d after recording the reference-package recovery lead.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: ran fresh Path-A source,
+ library, mode-contract, JMS583-support, and native PCB checks. Authority
+ audits passed; the support-routed partial PCB remained open at 1,160 native
+ DRC violations and 499 unconnected items. Captured the result without
+ changing severity or waiving findings.
