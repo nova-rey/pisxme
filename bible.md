@@ -4859,3 +4859,8 @@ validation remain open.
 2026-09-06 — PiSXMe Phase 24 dual-mode storage: refreshed the live status
  checkpoint to `e449d06` and recorded that the eight-endpoint SATA audit is
  passing while native DRC remains open on the disposable corridor trial.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: separated the native U7
+ escape fanout and reran the isolated SATA corridor. Endpoint assertions
+ remained PASS and DRC improved to 67 findings, but pair-corridor crossings
+ and a local QFN escape interaction remained. Preserved the raw report and
+ rejected the route implementation without changing Path A architecture.

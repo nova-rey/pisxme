@@ -92,14 +92,14 @@ for item in list(board.GetTracks()):
 u7pads = {key: xy(pad(board, "U7", pin)) for key, pin in {
     "TX_N": "56", "TX_P": "57", "RX_N": "59", "RX_P": "60"}.items()}
 bridge = {
-    "TX_N": ("56", B, [u7pads["TX_N"], (97.4,130.0), (100.0,130.0),
-                         (100.0,124.0), (109.0,124.0)]),
-    "TX_P": ("57", B, [u7pads["TX_P"], (94.6,130.0), (102.0,130.0),
-                         (102.0,112.0), (109.0,112.0)]),
-    "RX_N": ("59", B, [u7pads["RX_N"], (93.2,132.0), (104.0,132.0),
-                         (104.0,128.0), (109.0,128.0)]),
-    "RX_P": ("60", B, [u7pads["RX_P"], (91.8,134.0), (106.0,134.0),
-                         (106.0,116.0), (109.0,116.0)]),
+    "TX_N": ("56", B, [u7pads["TX_N"], (96.2,129.0), (97.4,130.0),
+                         (100.0,130.0), (100.0,124.0), (109.0,124.0)]),
+    "TX_P": ("57", B, [u7pads["TX_P"], (95.8,130.5), (94.6,132.0),
+                         (102.0,132.0), (102.0,112.0), (109.0,112.0)]),
+    "RX_N": ("59", B, [u7pads["RX_N"], (95.0,131.5), (93.2,134.0),
+                         (104.0,134.0), (104.0,128.0), (109.0,128.0)]),
+    "RX_P": ("60", B, [u7pads["RX_P"], (94.6,132.5), (91.8,136.0),
+                         (106.0,136.0), (106.0,116.0), (109.0,116.0)]),
 }
 for key, (u7pin, layer, pts) in bridge.items():
     n = find_net(board, "/STORAGE/BRIDGE_SATA_" + key)
@@ -107,9 +107,9 @@ for key, (u7pin, layer, pts) in bridge.items():
     if layer == F:
         path(board, n, pts[:-1] + [cap_pad], F)
     else:
-        source_via, cap_via = pts[1], pts[-1]
-        path(board, n, [pts[0], source_via], F); via(board, n, source_via)
-        path(board, n, [source_via] + pts[2:], B); via(board, n, cap_via)
+        source_via, cap_via = pts[2], pts[-1]
+        path(board, n, pts[:3], F); via(board, n, source_via)
+        path(board, n, [source_via] + pts[3:], B); via(board, n, cap_via)
         path(board, n, [cap_via, cap_pad], F)
 
 # Socket-side launches. TX transitions above the connector, traverses B.Cu

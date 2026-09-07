@@ -41,6 +41,13 @@ The empty-routing-base variant also passes the eight endpoint assertions but
 still fails native DRC with 71 violations. It is retained as a negative
 comparison, not a candidate. No routed Path-A board was promoted.
 
+The follow-up empty-routing-base fanout iteration, with separated native-pad
+vertical escapes, reduced the isolated DRC result to 67 findings while
+retaining the eight-endpoint audit PASS. It remains rejected: native DRC
+identifies pair-corridor crossings and one local QFN escape interaction.
+This is a route-implementation result, not a connector or architecture
+result.
+
 ## Next action
 
 Continue with a layer-separated, native-pad-derived U7 escape trial or a
