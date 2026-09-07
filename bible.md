@@ -4900,3 +4900,9 @@ validation remain open.
  hierarchy-conflict, and negative-control audits; all passed. Path B remains
  a serious comparison candidate, not production CAD, and Path A remains
  preserved.
+2026-09-06 — PiSXMe Phase 24 RTL9210B Path B: refreshed the procurement
+ snapshot from the current JLC listing, confirming the exact Realtek
+ RTL9210B-CG/C5143573 identity, QFN-68 package, SMT/Economic/Standard PCBA,
+ and MSL 3. The listing is PCBA-only and exposes no reproducible stock/price/
+ lead-time receipt, so procurement remains an explicit risk rather than a
+ fabricated availability claim.
