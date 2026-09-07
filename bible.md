@@ -5183,6 +5183,10 @@ V6 rail field. Native DRC results were 5/35, 3/36, 4/35, 4/35, and 15/35.
 The class removed the original RTL_5V/PEDET short only by introducing edge,
 via, or rail-field failures. Rejected all five; V6 remains the best baseline,
 with Path B isolated and production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested SPI test-access V1 against the
+old V6 control board. Native DRC reported 12 / 35; it reintroduced the
+superseded PEDET short and crossed SPI/control corridors. Rejected as a
+negative-control route implementation; no production copper changed.
 2026-09-07 — PiSXMe Phase 24 Path A: tested V14 at 0.15-mm track width.
 Native DRC reported 105 / 34 with 28 track-width violations. Rejected under
 the selected 0.20-mm differential-width contract; V12 remains the valid-width

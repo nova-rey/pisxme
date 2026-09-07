@@ -242,3 +242,12 @@ crossing; V13/V14 moved the transition to B.Cu but retained via/rail-field
 conflicts; V15 regressed with multiple shorts and crossings. The route class
 is rejected. V6 remains the current baseline and no Path-B authority or
 production CAD changed.
+
+## SPI test-access V1 — rejected
+
+The first test-access author connected four SPI test-pad targets from the V6
+control fixture, but native DRC reported 12 violations / 35 unconnected
+items. It reintroduced the superseded PEDET short and crossed SPI, RESET,
+PERST, and CLKREQ corridors; B.Cu routes also lacked a valid F.Cu pad
+transition. The candidate is preserved as negative-control evidence and is
+not a current baseline.

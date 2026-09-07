@@ -4498,6 +4498,19 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-B test-access V1 — 2026-09-07
+
+The first four-SPI-test-pad route was generated against the older V6 control
+baseline rather than the corrected PEDET baseline. Native DRC reported 12
+violations / 35 unconnected items: it reintroduced the known RTL_5V/PEDET
+short, crossed SPI/control corridors, and did not physically connect the
+F.Cu test pads from B.Cu paths. V1 is rejected as a route implementation and
+is preserved as a negative control; no test-access or production copper was
+promoted.
+
+`PATHB_TEST_ACCESS_V1 = REJECTED`
+`PHASE24 = OPEN`
+
 ## Path-B PEDET reroute V11–V15 — 2026-09-07
 
 V11 moved the PEDET upper return below the RTL_5V via but violated board-edge
