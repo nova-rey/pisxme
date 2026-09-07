@@ -61,6 +61,15 @@ second 23, including new crossings/shorts in the U7 oscillator, power, and
 adjacent RX escape field. The corridor author was restored to the committed
 mono2 baseline; no architecture, production CAD, or integrated board changed.
 
+The next coordinated V4 escape is now the best disposable topology. Its
+native endpoint audit passes all eight SATA pairs and native DRC reports zero
+shorts/crossings (10 findings on the 0.20 mm basis; six clearance and four
+silkscreen). Under the explicit 0.15 mm disposable basis only the four
+silkscreen findings remain, alongside 38 intentional fixture opens. The same
+author applied to the source-regenerated integrated candidate preserves the
+eight endpoint assertions but leaves full-board DRC at 1,210 findings / 499
+unconnected items, so it is not promoted to clean-board authority.
+
 ## Current Path-B qualification checkpoint — 2026-09-06
 
 The isolated RTL9210B-CG candidate now has explicit authority and mode

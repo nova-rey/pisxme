@@ -4942,3 +4942,11 @@ validation remain open.
  power, RX, and TX escape geometry. Classified both as route implementation
  failures, preserved their raw boards/reports, and restored the committed
  mono2 author without changing production CAD or architecture.
+2026-09-06 — PiSXMe Phase 24 Path A: coordinated the U7 QFN SATA escape
+ topology using native pad identity. V4 passed all eight endpoint assertions
+ with zero shorts/crossings; the 0.20-mm disposable DRC basis reported only
+ six clearance and four silkscreen findings, and the explicit 0.15-mm probe
+ reduced that to four silkscreen findings plus intentional fixture opens.
+ Applied to the source-regenerated integrated candidate, the SATA assertions
+ still passed but inherited board DRC remained 1,210/499, so no production
+ board authority was promoted.
