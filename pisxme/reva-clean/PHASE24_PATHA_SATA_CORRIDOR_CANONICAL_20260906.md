@@ -1,0 +1,49 @@
+# Phase 24 Path A SATA canonical-corridor trial — 2026-09-06
+
+## Scope
+
+Disposable route-development evidence only. Path A production schematic and
+the accepted storage architecture were not changed by this trial.
+
+## Corrections applied
+
+- Socket-side nets use the live canonical names from `STORAGE.kicad_sch`.
+- M-key lane-0 endpoints are J3.49/J3.47/J3.43/J3.41, not the obsolete
+  J3.1–J3.4 assumptions.
+- J3 placement/orientation is configurable for disposable experiments and
+  post-transform pad coordinates are used for the final launch.
+- U7 escape starts are derived from native U7 pads rather than stale guessed
+  coordinates.
+- Generated track and via net codes are written explicitly.
+
+## Result
+
+The assertion-only native endpoint audit passes all eight SATA endpoint pairs:
+
+```
+BRIDGE_SATA_TX_P U7.57 <-> C30.2       PASS
+BRIDGE_SATA_TX_N U7.56 <-> C31.2       PASS
+BRIDGE_SATA_RX_P U7.60 <-> C32.2       PASS
+BRIDGE_SATA_RX_N U7.59 <-> C33.2       PASS
+M2...TXP0       C30.1 <-> J3.49       PASS
+M2...TXN0       C31.1 <-> J3.47       PASS
+M2...RXP0       C32.1 <-> J3.43       PASS
+M2...RXN0       C33.1 <-> J3.41       PASS
+```
+
+Native DRC still rejects the disposable fixture: 251 violations. The raw
+report is `PHASE24_PATHA_SATA_CORRIDOR_CANONICAL_20260906-drc.rpt`. The
+remaining errors are route-implementation failures in the trial (U7 escape,
+local corridor crossings, and inherited support/USB obstacles); this is not
+evidence against the canonical connector mapping or storage architecture.
+
+The empty-routing-base variant also passes the eight endpoint assertions but
+still fails native DRC with 71 violations. It is retained as a negative
+comparison, not a candidate. No routed Path-A board was promoted.
+
+## Next action
+
+Continue with a layer-separated, native-pad-derived U7 escape trial or a
+proper interactive/native router on the disposable storage fixture. Promote
+only a candidate that passes native DRC, the physical-connectivity audit, and
+the existing pair/reference/mechanical gates.

@@ -4850,3 +4850,9 @@ validation remain open.
  A* returned no route in a tight local window and exhausted its bounded search
  in a wider one. Preserved the result as a route-method failure; no integrated
  board or architecture changed.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: corrected the disposable
+ SATA corridor author to use native U7 pad starts, canonical M-key contacts
+ J3.49/47/43/41, explicit net codes, and a rotated vertical socket launch.
+ The native endpoint audit passed all eight SATA endpoints. Native DRC still
+ rejected the fixture (251 violations), so the candidate was not promoted;
+ raw DRC and the focused receipt preserve the route-implementation evidence.

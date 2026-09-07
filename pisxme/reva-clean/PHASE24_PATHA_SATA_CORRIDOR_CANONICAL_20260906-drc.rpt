@@ -1,0 +1,1269 @@
+** Drc report for PHASE24_PATHA_SATA_CORRIDOR_CANONICAL_20260906.kicad_pcb **
+** Created on 2026-09-06T19:48:35 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 251 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(70.0000 mm, 107.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 0.2500 mm
+    @(70.0000 mm, 106.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(94.6000 mm, 130.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on B.Cu, length 7.4000 mm
+    @(100.0000 mm, 130.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 6.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(100.0000 mm, 124.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.0000 mm
+    @(102.0000 mm, 130.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on B.Cu, length 18.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(97.4000 mm, 130.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 2.6000 mm
+    @(94.6000 mm, 130.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on B.Cu, length 7.4000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(123.0000 mm, 124.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on B.Cu, length 31.2500 mm
+    @(114.0000 mm, 116.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on B.Cu, length 11.0000 mm
+[shorting_items]: Items shorting two nets (nets BRIDGE_1V1 and /STORAGE/BRIDGE_SATA_RX_P)
+    Local override; error
+    @(94.2000 mm, 127.8000 mm): Pad 61 [BRIDGE_1V1] of U7 on F.Cu
+    @(94.6000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on F.Cu, length 6.8029 mm
+[shorting_items]: Items shorting two nets (nets /CORE_CM5/POWER_GND and /STORAGE/BRIDGE_SATA_TX_P)
+    Local override; error
+    @(95.4000 mm, 127.8000 mm): Pad 58 [/CORE_CM5/POWER_GND] of U7 on F.Cu
+    @(95.8000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 2.5060 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_TX_N and BRIDGE_1V1)
+    Local override; error
+    @(96.2000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu, length 2.5060 mm
+    @(96.6000 mm, 127.8000 mm): Pad 55 [BRIDGE_1V1] of U7 on F.Cu
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_RX_N and /STORAGE/BRIDGE_SATA_RX_P)
+    Local override; error
+    @(95.0000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 4.5695 mm
+    @(94.6000 mm, 127.8000 mm): Pad 60 [/STORAGE/BRIDGE_SATA_RX_P] of U7 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(70.0000 mm, 104.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+    @(70.0000 mm, 104.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(88.0000 mm, 126.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 0.2500 mm
+    @(88.0000 mm, 125.5000 mm): Via [/CORE_CM5/CM5_USB3_RX_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0720 mm)
+    Local override; error
+    @(92.2000 mm, 126.6000 mm): Pad 47 [BRIDGE_1V1] of U7 on F.Cu
+    @(88.0000 mm, 127.3000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on F.Cu, length 4.3417 mm
+[shorting_items]: Items shorting two nets (nets /STORAGE/BRIDGE_SATA_TX_N and /STORAGE/BRIDGE_SATA_TX_P)
+    Local override; error
+    @(97.4000 mm, 130.0000 mm): Via [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu - B.Cu
+    @(94.6000 mm, 130.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on B.Cu, length 7.4000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1829 mm)
+    Local override; error
+    @(94.6000 mm, 130.0000 mm): Via [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu - B.Cu
+    @(95.0000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 4.5695 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(88.0000 mm, 126.7500 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 0.2500 mm
+    @(88.0000 mm, 126.2500 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(88.2500 mm, 126.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 0.2500 mm
+    @(88.0000 mm, 125.5000 mm): Via [/CORE_CM5/CM5_USB3_RX_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1051 mm)
+    Local override; error
+    @(88.0000 mm, 126.4000 mm): Via [/CORE_CM5/CM5_USB3_TX_N] on F.Cu - B.Cu
+    @(88.5000 mm, 126.7500 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1564 mm)
+    Local override; error
+    @(88.0000 mm, 125.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 4.2297 mm
+    @(92.2000 mm, 125.4000 mm): Pad 44 [/CORE_CM5/POWER_GND] of U7 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1424 mm)
+    Local override; error
+    @(88.0000 mm, 126.4000 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on F.Cu, length 4.2426 mm
+    @(92.2000 mm, 126.2000 mm): Pad 46 [/CORE_CM5/CM5_USB3_TX_P] of U7 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(70.0000 mm, 106.2500 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 0.2500 mm
+    @(70.0000 mm, 106.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(70.0000 mm, 107.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 0.2500 mm
+    @(70.0000 mm, 106.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(70.0000 mm, 104.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+    @(70.0000 mm, 104.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(70.0000 mm, 104.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+    @(70.0000 mm, 105.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(70.0000 mm, 104.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+    @(70.0000 mm, 104.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(70.0000 mm, 107.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 0.2500 mm
+    @(70.0000 mm, 107.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(70.0000 mm, 107.0000 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 0.2500 mm
+    @(70.0000 mm, 107.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(70.0000 mm, 104.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+    @(70.0000 mm, 104.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(70.0000 mm, 106.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+    @(70.0000 mm, 106.2500 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 0.2500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(100.0000 mm, 124.0000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on B.Cu, length 9.0000 mm
+    @(106.0000 mm, 134.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on B.Cu, length 18.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1840 mm)
+    Local override; error
+    @(127.0000 mm, 94.2500 mm): Via [M2_SATA_B_P_PCIE_RXN0] on F.Cu - B.Cu
+    @(125.0000 mm, 93.7500 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 7.7250 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0750 mm)
+    Local override; error
+    @(88.2500 mm, 125.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+    @(88.0000 mm, 124.6000 mm): Via [/CORE_CM5/CM5_USB3_RX_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1840 mm)
+    Local override; error
+    @(123.0000 mm, 92.7500 mm): Via [M2_SATA_A_N_PCIE_TXN0] on F.Cu - B.Cu
+    @(121.0000 mm, 92.2500 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 11.7250 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(70.0000 mm, 105.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+    @(70.0000 mm, 106.2500 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1746 mm)
+    Local override; error
+    @(99.8000 mm, 121.0000 mm): Pad 16 [<no net>] of U7 on F.Cu
+    @(99.0000 mm, 120.2000 mm): Pad 32 [BRIDGE_1V1] of U7 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1746 mm)
+    Local override; error
+    @(93.0000 mm, 120.2000 mm): Pad 17 [<no net>] of U7 on F.Cu
+    @(92.2000 mm, 121.0000 mm): Pad 33 [BRIDGE_1V1] of U7 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1746 mm)
+    Local override; error
+    @(92.2000 mm, 127.0000 mm): Pad 48 [BRIDGE_3V3] of U7 on F.Cu
+    @(93.0000 mm, 127.8000 mm): Pad 64 [<no net>] of U7 on F.Cu
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(111.0000 mm, 116.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 1.5000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(125.0000 mm, 93.7500 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 7.7250 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(112.5000 mm, 116.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on B.Cu, length 1.5000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(125.0000 mm, 116.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on B.Cu, length 22.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(114.0000 mm, 116.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on B.Cu, length 11.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(109.0000 mm, 116.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on F.Cu, length 1.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(94.6000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on F.Cu, length 6.8029 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(91.8000 mm, 134.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on B.Cu, length 14.2000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(106.0000 mm, 134.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on B.Cu, length 18.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(106.0000 mm, 116.0000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on B.Cu, length 3.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(127.0000 mm, 94.2500 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 5.7250 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(111.0000 mm, 128.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 1.5000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(127.0000 mm, 128.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on B.Cu, length 33.7500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(114.0000 mm, 128.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on B.Cu, length 13.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(112.5000 mm, 128.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on B.Cu, length 1.5000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(111.0000 mm, 124.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 1.5000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(123.0000 mm, 92.7500 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 9.7250 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(114.0000 mm, 124.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on B.Cu, length 9.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(123.0000 mm, 124.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on B.Cu, length 31.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(112.5000 mm, 124.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on B.Cu, length 1.5000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(121.0000 mm, 92.2500 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 11.7250 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(111.0000 mm, 112.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 1.5000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(121.0000 mm, 112.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 19.7500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(114.0000 mm, 112.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 7.0000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
+    Rule: netclass 'Default'; error
+    @(112.5000 mm, 112.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 1.5000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(88.0000 mm, 124.6000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on F.Cu, length 4.2000 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(81.0000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(75.0000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(73.5000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(79.2500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(79.7500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(82.7500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 122.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 109.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 119.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(72.2500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 118.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(85.5000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 119.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 108.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(81.2500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 120.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.5000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 119.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 111.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 117.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 106.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 116.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 110.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(75.5000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(77.0000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(71.0000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(82.0000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 105.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(87.0000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(71.5000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 105.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(76.7500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 107.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 113.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 114.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.2500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 122.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(71.2500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(83.0000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(71.7500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 107.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 118.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 124.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 112.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.5000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(76.2500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 110.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 114.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(83.2500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 111.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 109.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 117.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 123.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 108.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(72.0000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(78.7500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(72.7500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 123.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 110.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 104.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 109.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 113.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(84.7500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(78.2500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 121.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(78.5000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 108.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.7500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 119.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(83.7500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(76.5000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(78.0000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(77.5000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 114.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(87.7500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(84.2500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 116.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 112.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(85.0000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 124.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 115.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(74.7500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 121.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 116.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(86.7500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(75.7500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 118.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(84.0000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(73.2500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(83.5000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 122.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.0000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 104.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 120.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(87.2500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(81.7500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(72.5000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(86.0000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 115.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 112.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(82.2500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 105.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 121.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 123.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 112.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 104.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 122.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 117.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 113.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 106.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(77.2500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 107.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(74.0000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 106.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 118.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(75.2500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(73.0000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 105.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.2500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(85.7500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 111.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 107.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(79.0000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 111.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 123.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 110.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(86.2500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(73.7500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(76.0000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 120.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(84.5000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 109.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(79.5000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(82.5000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(85.2500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 104.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(81.5000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 115.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(74.5000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 117.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 106.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 116.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(77.7500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(87.5000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 115.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.0000 mm, 108.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(74.2500 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 120.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 114.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(86.5000 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(80.7500 mm, 121.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(88.0000 mm, 125.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on F.Cu, length 4.2297 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(81.5000 mm, 112.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(70.7500 mm, 104.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(73.0000 mm, 112.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(71.2500 mm, 112.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(76.2500 mm, 112.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(77.5000 mm, 112.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(79.5000 mm, 112.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(81.5000 mm, 113.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(79.2500 mm, 112.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(81.5000 mm, 112.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(72.2500 mm, 112.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(86.7500 mm, 123.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(88.7500 mm, 124.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(72.5000 mm, 112.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(88.7500 mm, 124.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(81.5000 mm, 113.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(81.5000 mm, 117.7500 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(72.0000 mm, 112.5000 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.2000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_TX_N] on F.Cu, length 2.5060 mm
+    @(96.6000 mm, 127.8000 mm): Pad 55 [BRIDGE_1V1] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(95.8000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_TX_P] on F.Cu, length 2.5060 mm
+    @(95.4000 mm, 127.8000 mm): Pad 58 [/CORE_CM5/POWER_GND] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(95.0000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_RX_N] on F.Cu, length 4.5695 mm
+    @(94.6000 mm, 127.8000 mm): Pad 60 [/STORAGE/BRIDGE_SATA_RX_P] of U7 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.6000 mm, 127.8000 mm): Track [/STORAGE/BRIDGE_SATA_RX_P] on F.Cu, length 6.8029 mm
+    @(94.2000 mm, 127.8000 mm): Pad 61 [BRIDGE_1V1] of U7 on F.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(70.0000 mm, 104.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[text_height]: Text height out of range (board setup constraints silk text height min height 0.8000 mm; actual 0.7000 mm)
+    Rule: board setup constraints silk text height; warning
+    @(172.0000 mm, 185.1000 mm): Reference field of R23
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.9500 mm, 128.4000 mm): Segment of C33 on f.silkscreen
+    @(111.0000 mm, 128.0000 mm): Pad 1 [M2_SATA_B_P_PCIE_RXN0] of C33 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.9500 mm, 124.4000 mm): Segment of C31 on f.silkscreen
+    @(111.0000 mm, 124.0000 mm): Pad 1 [M2_SATA_A_N_PCIE_TXN0] of C31 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.9500 mm, 116.4000 mm): Segment of C32 on f.silkscreen
+    @(111.0000 mm, 116.0000 mm): Pad 1 [M2_SATA_B_N_PCIE_RXP0] of C32 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(110.9500 mm, 112.4000 mm): Segment of C30 on f.silkscreen
+    @(111.0000 mm, 112.0000 mm): Pad 1 [M2_SATA_A_P_PCIE_TXP0] of C30 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(191.0000 mm, 162.0000 mm): Reference field of C17
+    @(189.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C17 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(191.0000 mm, 162.0000 mm): Reference field of C17
+    @(192.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C17 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(197.0000 mm, 162.0000 mm): Reference field of C19
+    @(195.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C19 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(197.0000 mm, 162.0000 mm): Reference field of C19
+    @(198.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C19 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(185.0000 mm, 162.0000 mm): Reference field of C16
+    @(183.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C16 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(185.0000 mm, 162.0000 mm): Reference field of C16
+    @(186.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C16 on F.Cu
+
+** Found 112 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(183.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C16 on F.Cu
+    @(189.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C17 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(189.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C17 on F.Cu
+    @(195.6500 mm, 162.0000 mm): Pad 1 [/REGULATORS/BRIDGE_3V3] of C19 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(186.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C16 on F.Cu
+    @(192.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C17 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(192.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C17 on F.Cu
+    @(198.3500 mm, 162.0000 mm): Pad 2 [POWER_GND] of C19 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(140.2750 mm, 86.0000 mm): Pad 74 [M2_3V3] of J3 on F.Cu
+    @(140.2750 mm, 86.5000 mm): Pad 72 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(140.2750 mm, 86.5000 mm): Pad 72 [M2_3V3] of J3 on F.Cu
+    @(140.2750 mm, 87.0000 mm): Pad 70 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(140.2750 mm, 87.0000 mm): Pad 70 [M2_3V3] of J3 on F.Cu
+    @(140.2750 mm, 100.0000 mm): Pad 18 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(140.2750 mm, 100.0000 mm): Pad 18 [M2_3V3] of J3 on F.Cu
+    @(140.2750 mm, 100.5000 mm): Pad 16 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(140.2750 mm, 100.5000 mm): Pad 16 [M2_3V3] of J3 on F.Cu
+    @(140.2750 mm, 101.0000 mm): Pad 14 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(140.2750 mm, 101.0000 mm): Pad 14 [M2_3V3] of J3 on F.Cu
+    @(140.2750 mm, 101.5000 mm): Pad 12 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(140.2750 mm, 101.5000 mm): Pad 12 [M2_3V3] of J3 on F.Cu
+    @(140.2750 mm, 103.5000 mm): Pad 4 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(140.2750 mm, 103.5000 mm): Pad 4 [M2_3V3] of J3 on F.Cu
+    @(140.2750 mm, 104.0000 mm): Pad 2 [M2_3V3] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.7250 mm, 86.2500 mm): Pad 73 [M2_GND] of J3 on F.Cu
+    @(132.7250 mm, 86.7500 mm): Pad 71 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.7250 mm, 86.7500 mm): Pad 71 [M2_GND] of J3 on F.Cu
+    @(132.7250 mm, 90.2500 mm): Pad 57 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.7250 mm, 90.2500 mm): Pad 57 [M2_GND] of J3 on F.Cu
+    @(132.7250 mm, 91.7500 mm): Pad 51 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.7250 mm, 91.7500 mm): Pad 51 [M2_GND] of J3 on F.Cu
+    @(132.7250 mm, 93.2500 mm): Pad 45 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.7250 mm, 93.2500 mm): Pad 45 [M2_GND] of J3 on F.Cu
+    @(132.7250 mm, 94.7500 mm): Pad 39 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.7250 mm, 94.7500 mm): Pad 39 [M2_GND] of J3 on F.Cu
+    @(132.7250 mm, 96.2500 mm): Pad 33 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.7250 mm, 96.2500 mm): Pad 33 [M2_GND] of J3 on F.Cu
+    @(132.7250 mm, 97.7500 mm): Pad 27 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.7250 mm, 97.7500 mm): Pad 27 [M2_GND] of J3 on F.Cu
+    @(132.7250 mm, 100.7500 mm): Pad 15 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.7250 mm, 100.7500 mm): Pad 15 [M2_GND] of J3 on F.Cu
+    @(132.7250 mm, 102.2500 mm): Pad 9 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.7250 mm, 102.2500 mm): Pad 9 [M2_GND] of J3 on F.Cu
+    @(132.7250 mm, 103.7500 mm): Pad 3 [M2_GND] of J3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 121.0000 mm): Pad 33 [BRIDGE_1V1] of U7 on F.Cu
+    @(92.2000 mm, 124.2000 mm): Pad 41 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 124.2000 mm): Pad 41 [BRIDGE_1V1] of U7 on F.Cu
+    @(92.2000 mm, 126.6000 mm): Pad 47 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 126.6000 mm): Pad 47 [BRIDGE_1V1] of U7 on F.Cu
+    @(93.4000 mm, 127.8000 mm): Pad 63 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.4000 mm, 127.8000 mm): Pad 63 [BRIDGE_1V1] of U7 on F.Cu
+    @(94.2000 mm, 127.8000 mm): Pad 61 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.8000 mm, 120.2000 mm): Pad 19 [BRIDGE_1V1] of U7 on F.Cu
+    @(92.2000 mm, 121.0000 mm): Pad 33 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.2000 mm, 127.8000 mm): Pad 61 [BRIDGE_1V1] of U7 on F.Cu
+    @(96.6000 mm, 127.8000 mm): Pad 55 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(96.6000 mm, 127.8000 mm): Pad 55 [BRIDGE_1V1] of U7 on F.Cu
+    @(99.0000 mm, 127.8000 mm): Pad 49 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.0000 mm, 127.8000 mm): Pad 49 [BRIDGE_1V1] of U7 on F.Cu
+    @(99.8000 mm, 127.0000 mm): Pad 1 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.8000 mm, 122.6000 mm): Pad 12 [BRIDGE_1V1] of U7 on F.Cu
+    @(99.0000 mm, 120.2000 mm): Pad 32 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.8000 mm, 127.0000 mm): Pad 1 [BRIDGE_1V1] of U7 on F.Cu
+    @(99.8000 mm, 122.6000 mm): Pad 12 [BRIDGE_1V1] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 121.4000 mm): Pad 34 [BRIDGE_3V3] of U7 on F.Cu
+    @(92.2000 mm, 123.8000 mm): Pad 40 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 123.8000 mm): Pad 40 [BRIDGE_3V3] of U7 on F.Cu
+    @(92.2000 mm, 127.0000 mm): Pad 48 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 127.0000 mm): Pad 48 [BRIDGE_3V3] of U7 on F.Cu
+    @(93.8000 mm, 127.8000 mm): Pad 62 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.8000 mm, 127.8000 mm): Pad 62 [BRIDGE_3V3] of U7 on F.Cu
+    @(98.2000 mm, 127.8000 mm): Pad 51 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(95.8000 mm, 120.2000 mm): Pad 24 [BRIDGE_3V3] of U7 on F.Cu
+    @(92.2000 mm, 121.4000 mm): Pad 34 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(98.2000 mm, 120.2000 mm): Pad 30 [BRIDGE_3V3] of U7 on F.Cu
+    @(95.8000 mm, 120.2000 mm): Pad 24 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(98.2000 mm, 127.8000 mm): Pad 51 [BRIDGE_3V3] of U7 on F.Cu
+    @(99.8000 mm, 124.6000 mm): Pad 7 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(98.6000 mm, 120.2000 mm): Pad 31 [BRIDGE_3V3] of U7 on F.Cu
+    @(98.2000 mm, 120.2000 mm): Pad 30 [BRIDGE_3V3] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 103.9000 mm): Pad 128 [/CORE_CM5/CM5_USB3_RX_N] of J7 on F.Cu
+    @(70.0000 mm, 104.0000 mm): Track [/CORE_CM5/CM5_USB3_RX_N] on B.Cu, length 0.2500 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 104.3000 mm): Pad 130 [/CORE_CM5/CM5_USB3_RX_P] of J7 on F.Cu
+    @(70.0000 mm, 104.2500 mm): Track [/CORE_CM5/CM5_USB3_RX_P] on B.Cu, length 0.2500 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 98.7000 mm): Pad 1 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 99.9000 mm): Pad 7 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 99.9000 mm): Pad 7 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 101.1000 mm): Pad 13 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 101.1000 mm): Pad 13 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 103.1000 mm): Pad 23 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 101.1000 mm): Pad 13 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 101.1000 mm): Pad 14 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 103.1000 mm): Pad 23 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 105.1000 mm): Pad 33 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 105.1000 mm): Pad 33 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 107.1000 mm): Pad 43 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 107.1000 mm): Pad 43 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 109.1000 mm): Pad 53 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 109.1000 mm): Pad 53 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 110.3000 mm): Pad 59 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 110.3000 mm): Pad 59 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 111.5000 mm): Pad 65 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 111.5000 mm): Pad 65 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(32.9600 mm, 112.7000 mm): Pad 71 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 98.7000 mm): Pad 2 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 99.9000 mm): Pad 8 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 99.9000 mm): Pad 8 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 101.1000 mm): Pad 14 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 101.1000 mm): Pad 14 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 102.7000 mm): Pad 22 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 102.7000 mm): Pad 22 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 104.7000 mm): Pad 32 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 106.7000 mm): Pad 42 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 104.7000 mm): Pad 32 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 106.7000 mm): Pad 42 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 108.7000 mm): Pad 52 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 108.7000 mm): Pad 52 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 110.3000 mm): Pad 60 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 111.5000 mm): Pad 66 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 110.3000 mm): Pad 60 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 111.5000 mm): Pad 66 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 113.1000 mm): Pad 74 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 113.1000 mm): Pad 74 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(36.0400 mm, 117.9000 mm): Pad 98 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 117.9000 mm): Pad 98 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 117.9000 mm): Pad 197 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 99.9000 mm): Pad 107 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 101.1000 mm): Pad 113 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 101.1000 mm): Pad 113 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 102.3000 mm): Pad 119 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 102.3000 mm): Pad 119 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 103.5000 mm): Pad 125 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 103.5000 mm): Pad 125 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 104.7000 mm): Pad 131 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 105.9000 mm): Pad 137 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 104.7000 mm): Pad 131 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 105.9000 mm): Pad 137 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 105.9000 mm): Pad 138 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 109.5000 mm): Pad 155 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 110.7000 mm): Pad 161 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 111.9000 mm): Pad 167 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 110.7000 mm): Pad 161 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 113.1000 mm): Pad 173 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 111.9000 mm): Pad 167 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 114.3000 mm): Pad 179 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 113.1000 mm): Pad 173 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 115.5000 mm): Pad 185 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 116.7000 mm): Pad 191 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 115.5000 mm): Pad 185 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 114.3000 mm): Pad 179 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 116.7000 mm): Pad 191 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 116.7000 mm): Pad 192 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(66.9600 mm, 117.9000 mm): Pad 197 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(66.9600 mm, 116.7000 mm): Pad 191 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 101.1000 mm): Pad 114 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 99.9000 mm): Pad 108 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 102.3000 mm): Pad 120 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 103.5000 mm): Pad 126 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 102.3000 mm): Pad 120 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 101.1000 mm): Pad 114 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 103.5000 mm): Pad 126 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 104.7000 mm): Pad 132 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 104.7000 mm): Pad 132 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 105.9000 mm): Pad 138 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 105.9000 mm): Pad 138 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 107.1000 mm): Pad 144 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 107.1000 mm): Pad 144 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 108.3000 mm): Pad 150 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 108.3000 mm): Pad 150 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 109.5000 mm): Pad 156 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 109.5000 mm): Pad 156 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 110.7000 mm): Pad 162 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 110.7000 mm): Pad 162 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 111.9000 mm): Pad 168 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 111.9000 mm): Pad 168 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 113.1000 mm): Pad 174 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 113.1000 mm): Pad 174 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 114.3000 mm): Pad 180 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 115.5000 mm): Pad 186 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 114.3000 mm): Pad 180 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 116.7000 mm): Pad 192 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 115.5000 mm): Pad 186 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 116.7000 mm): Pad 192 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(70.0400 mm, 117.9000 mm): Pad 198 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 117.9000 mm): Pad 198 [/CORE_CM5/POWER_GND] of J7 on F.Cu
+    @(92.2000 mm, 125.4000 mm): Pad 44 [/CORE_CM5/POWER_GND] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2000 mm, 125.4000 mm): Pad 44 [/CORE_CM5/POWER_GND] of U7 on F.Cu
+    @(95.4000 mm, 127.8000 mm): Pad 58 [/CORE_CM5/POWER_GND] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(95.4000 mm, 127.8000 mm): Pad 58 [/CORE_CM5/POWER_GND] of U7 on F.Cu
+    @(96.0000 mm, 124.0000 mm): Pad 65 [/CORE_CM5/POWER_GND] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 106.3000 mm): Pad 140 [/CORE_CM5/CM5_USB3_TX_N] of J7 on F.Cu
+    @(70.0000 mm, 106.2500 mm): Track [/CORE_CM5/CM5_USB3_TX_N] on B.Cu, length 0.2500 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(70.0400 mm, 106.7000 mm): Pad 142 [/CORE_CM5/CM5_USB3_TX_P] of J7 on F.Cu
+    @(70.0000 mm, 106.7500 mm): Track [/CORE_CM5/CM5_USB3_TX_P] on B.Cu, length 0.2500 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(97.8000 mm, 127.8000 mm): Pad 52 [/STORAGE/BRIDGE_XI] of U7 on F.Cu
+    @(171.5000 mm, 182.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of C42 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(171.5000 mm, 182.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of C42 on B.Cu
+    @(171.5000 mm, 186.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of R23 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(171.5000 mm, 186.0000 mm): Pad 1 [/STORAGE/BRIDGE_XI] of R23 on B.Cu
+    @(176.9000 mm, 185.1500 mm): Pad 1 [/STORAGE/BRIDGE_XI] of Y1 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(172.5000 mm, 182.0000 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of C42 on B.Cu
+    @(176.9000 mm, 186.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(172.5000 mm, 182.0000 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of C42 on B.Cu
+    @(97.4000 mm, 127.8000 mm): Pad 53 [/STORAGE/BRIDGE_VSSOSC] of U7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(172.5000 mm, 190.0000 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of C43 on B.Cu
+    @(176.9000 mm, 186.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(176.9000 mm, 186.8500 mm): Pad 2 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+    @(179.1000 mm, 185.1500 mm): Pad 4 [/STORAGE/BRIDGE_VSSOSC] of Y1 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(97.0000 mm, 127.8000 mm): Pad 54 [/STORAGE/BRIDGE_XO] of U7 on F.Cu
+    @(172.5000 mm, 186.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(172.5000 mm, 186.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
+    @(171.5000 mm, 190.0000 mm): Pad 1 [/STORAGE/BRIDGE_XO] of C43 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(179.1000 mm, 186.8500 mm): Pad 3 [/STORAGE/BRIDGE_XO] of Y1 on B.Cu
+    @(172.5000 mm, 186.0000 mm): Pad 2 [/STORAGE/BRIDGE_XO] of R23 on B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 113.9000 mm): Pad 77 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 114.3000 mm): Pad 79 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 114.3000 mm): Pad 79 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 114.7000 mm): Pad 81 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 114.7000 mm): Pad 81 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 115.1000 mm): Pad 83 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 115.1000 mm): Pad 83 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 115.5000 mm): Pad 85 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 115.5000 mm): Pad 85 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+    @(32.9600 mm, 115.9000 mm): Pad 87 [/CORE_CM5/CM5_5V] of J7 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
