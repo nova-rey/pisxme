@@ -6694,3 +6694,11 @@ V237 is disposable support evidence only. Remaining RTL_3V3/RTL_1V1
 branches, high-speed paths, mode-aware validation, firmware/procurement, and
 production integration remain open. Path A and production CAD remain
 unchanged.
+## Current RTL9210B rail-field state — U1.36 remains open
+
+V238 proves the U1.36-to-C4.1 rail endpoints but retains one local crossing
+with the U1.39 3V3 escape. V239's attempt to move U1.39 was rejected for
+XTAL_OUT contact and U1.52 3V3 interaction. No rail branch is being called
+closed from these partial results; the next repair is a coordinated
+U1.36/U1.39/U1.52 lower-field allocation. Path A and production CAD remain
+unchanged.

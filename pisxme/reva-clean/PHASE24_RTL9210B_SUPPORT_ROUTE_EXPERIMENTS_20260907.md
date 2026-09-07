@@ -1490,3 +1490,12 @@ negative control fails as required. Native DRC reports 466 findings / 17
 unconnected items with zero `shorting_items` and zero `tracks_crossing`.
 V237 is promoted as the disposable U1.52 RTL_3V3 basis; remaining rail
 branches and all other Path-B gates remain open.
+## V238–V239 RTL_1V1 U1.36 / RTL_3V3 co-allocation
+
+V238 joins U1.36 to C4.1 with native connectivity and a passing
+trace-removal negative control; native DRC reports 475 findings / 16 opens
+with one RTL_1V1/RTL_3V3 crossing at the existing U1.39 vertical. V239 moved
+the U1.39 vertical west, but that co-allocation introduced XTAL_OUT contact
+and a new crossing with the promoted U1.52 3V3 vertical. Both are retained
+as route evidence, not promoted. The next attempt must co-author U1.36,
+U1.39, and U1.52 together; Path A and production CAD remain unchanged.

@@ -5746,3 +5746,7 @@ conflicts. Promoted V237 after a dogleg above pad 49 cleared the lower source
 field. U1.52/C3.1 native connectivity and the trace-removal negative control
 pass with zero signal shorting/crossing classes. Remaining Path-B gates stay
 open; Path A and production CAD remain unchanged.
+2026-09-07: Recorded RTL9210B rail-field V238/V239. V238 connected U1.36/C4.1
+but crossed U1.39 3V3. V239 moved U1.39 but contacted XTAL_OUT and crossed
+U1.52 3V3. Neither is promoted; the next attempt must co-author the three
+lower-field rail escapes. Path A and production CAD remain unchanged.
