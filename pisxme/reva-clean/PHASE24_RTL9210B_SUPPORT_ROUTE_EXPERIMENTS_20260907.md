@@ -8,6 +8,23 @@ in this record saying it still needs instantiation is historical/superseded,
 not a current TODO. The current Path-B disposable basis is V100 below; Path A
 and production CAD remain preserved.
 
+## V132–V137 RTL_5V completion trials
+
+V132–V136 are rejected route-allocation experiments. V132 reused an old
+RTL_5V path and shorted retained RTL_1V1/CLKREQ fields; V133 co-authored the
+rail above SPI but retained an RTL_1V1 short and PERST crossing; V134 hit
+ground and CLKREQ vias; V135 entered the inherited CLKREQ corridor and C5
+ground; V136 removed the PERST crossing but still contacted CLKREQ. These
+reject those geometries only, not RTL9210B.
+
+V137 starts from V131, keeps the validated CLKREQ overpass, and sends the C5
+branch below the local control field before returning to C5.1. Native saved
+connectivity joins C5.1/U1.17/U1.33. The focused audit and trace-removal
+negative control pass, and the native report has no `shorting_items` or
+`tracks_crossing`. Promote V137 only as the disposable RTL_5V
+sub-primitive; inherited zone/manufacturing/open-support findings remain
+unclosed.
+
 ## V76–V78 U1.40 edge-group trials — rejected
 
 V76 placed the U1.40 RTL_1V1 transition at (92.8,68.8), where the via

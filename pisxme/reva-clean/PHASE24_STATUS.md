@@ -4,6 +4,14 @@
 
 The active work item is isolated RTL9210B Path-B support qualification; Path A,
 production/acreage CAD, and unrelated Phase 24 work remain unchanged. The
+V132–V136 RTL_5V trials are rejected route-allocation variants: each either
+shorted/crossed retained control or 1V1 fields, or entered a ground/CLKREQ
+via. V137 routes U1.33/U1.17/C5.1 through the lower C5 approach and passes
+the focused native audit: saved connectivity joins C5.1/U1.17/U1.33, the
+trace-removal negative control fails as required, and the native report has no
+`shorting_items` or `tracks_crossing`. Promote V137 only as the disposable
+RTL_5V sub-primitive; remaining rail, high-speed, USB, M.2, firmware, and full
+Path-B validation gates remain open.
 current promoted disposable support basis is
 `PHASE24_RTL9210B_U136_RIGHT_ESCAPE_V102.kicad_pcb`. V97 moved
 `XTAL_OUT` above the local support field and added U1.55; V98 and V99 are
