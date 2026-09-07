@@ -4,6 +4,16 @@
 
 ### Current open gate
 
+The disposable `PHASE24_RTL9210B_QFN_SPI_POWER_PARTITION_V1` probe was
+authored after correcting a KiCad Python net-handle defect. Native KiCad
+reports 22 violations / 33 unconnected items. The candidate is rejected as a
+route implementation: the proposed 1V1 collector still approaches U1.14,
+XTAL_OUT, and SPICS, while the imported V7-style SPI corridors also conflict
+with the staged crystal/RSET geometry. This is not an architecture or
+placement rejection. The staged V4 rail/crystal/RSET baseline remains the
+clean local baseline; the next distinct class is a native/reference-derived
+QFN escape or a local U1/support relocation, not another collector jog.
+
 The V11 crystal/support baseline was freshly rechecked with native KiCad:
 6 violations and 25 unconnected items; XTAL_IN, XTAL_OUT, and the asserted
 RTL_1V1 endpoints pass the saved-board connectivity audit, including its

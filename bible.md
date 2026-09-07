@@ -5437,3 +5437,9 @@ CAD unchanged.
 V9. Native DRC reports 32 violations / 22 opens, including new control/rail,
 rail/rail, and edge-clearance conflicts. Rejected as route-implementation
 failure; V5 remains the baseline and production CAD is unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: corrected the disposable QFN source
+partition writer to retain native KiCad net handles before serialized-track
+mutation. Native DRC of the resulting V1 candidate reports 22 violations / 33
+opens, including RTL_1V1/U1.14, RTL_1V1/XTAL_OUT, and SPI corridor conflicts.
+Rejected as route implementation evidence; staged V4 remains the local
+rail/crystal/RSET baseline and production CAD is unchanged.

@@ -392,3 +392,16 @@ opens 25 to 24. Native DRC reported 9 violations: the short F.Cu jog was
 0.0472 mm from the RTL_5V bus and shorted it, while the B.Cu trunk crossed
 the RTL_1V1 bus. This route class is rejected; the measured result requires
 coherent 3V3/1V1 support relocation.
+
+## QFN source partition V1 — rejected
+
+`phase24_qfn_spi_power_partition_v1.py` first exposed a KiCad Python API
+failure: calling `FindNet()` after removing serialized tracks returned an
+opaque invalid handle. The script was corrected to capture native net objects
+before mutation. The resulting `PHASE24_RTL9210B_QFN_SPI_POWER_PARTITION_V1`
+was checked by native KiCad 10.0.5 and produced 22 violations / 33
+unconnected items. It introduced an RTL_1V1 clearance conflict at U1.14,
+an RTL_1V1/XTAL_OUT short at the left transition, and SPICS/SPISO corridor
+conflicts. The experiment is rejected as route implementation evidence; no
+production CAD was changed. The API correction is retained in the script for
+future disposable writers.
