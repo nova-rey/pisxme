@@ -6745,3 +6745,7 @@ V250 is rejected: native rail/REFCLK connectivity and the trace-removal
 negative control pass, but DRC reports 541 findings / 14 opens with three
 signal shorts and one source-field crossing. The next experiment must
 co-relocate inherited USB/3V3/GND fields with the QFN departures.
+V254 is rejected: its native connectivity and negative control pass, but DRC
+reports 546 findings / 14 opens with new RTL_1V1/RTL_3V3 crossings and a
+retained ISOLATEB/CLKREQ_N short. The complete adjacent support cluster must
+move together.

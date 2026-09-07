@@ -1595,3 +1595,11 @@ V253 moved it farther west; native connectivity and the negative control still
 passed, while DRC reported 541 findings / 14 unconnected items, three
 crossings, and one RTL_3V3/GND short. Reject V251–V253 as route
 implementations; no Path-A or production-CAD change occurred.
+
+## V254 U1.39 support-field relocation — rejected
+
+V254 moved only the U1.39 RTL_3V3 escape around the C2 ground pad on the
+V253 basis. Native rail/REFCLK/RTL_3V3 connectivity and the trace-removal
+negative control pass, but native DRC reports 546 findings / 14 unconnected
+items with new RTL_1V1/RTL_3V3 crossings and a retained ISOLATEB/CLKREQ_N
+short. Reject V254; the complete adjacent support cluster must move together.

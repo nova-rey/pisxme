@@ -5794,3 +5794,7 @@ rail/REFCLK connectivity and the trace-removal negative control passed, but
 DRC found two source-field crossings and one REFCLK_N/RTL_1V1 short. V242
 remains the promoted disposable rail basis; Path A and production CAD remain
 unchanged.
+2026-09-07: Rejected RTL9210B V254 U1.39 support-field relocation. Native
+rail/REFCLK/RTL3V3 connectivity and the negative control passed, but DRC
+reported new RTL_1V1/RTL_3V3 crossings and a retained ISOLATEB/CLKREQ_N short.
+The next attempt must move the complete adjacent support cluster together.
