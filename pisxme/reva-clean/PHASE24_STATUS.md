@@ -24,6 +24,12 @@ are rejected route-allocation/authoring trials. This confirms that the local
 3V3 corridor is the right decision surface, but the QFN edge escape still
 needs a pad-aware dogbone and a completely connected 3V3 path.
 
+V81 tested the same V79 U1.40 path with a 0.15-mm fine-pitch dogbone. Native
+DRC rejected it at 10 findings / 25 opens: the escape still has only
+0.1647-mm clearance to U1.41, the reallocated 3V3 segment remains 0.100 mm
+from U1.35, and the 0.15-mm width violates the board's 0.200-mm minimum.
+This closes the fine-width escape hypothesis; do not relax the board rule.
+
 ### RTL9210B source-field update — current
 
 V26, V27, V28, V29, and V30 are rejected disposable source-field route

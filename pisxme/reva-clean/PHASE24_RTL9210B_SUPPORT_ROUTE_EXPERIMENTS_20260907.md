@@ -23,6 +23,12 @@ clearance defect; native DRC remains 8 findings / 25 opens. Preserve both as
 negative evidence. The next attempt must derive the complete 3V3 replacement
 path and a pad-aware U1.40 dogbone together.
 
+V81 tested that dogbone at 0.15 mm. It remains rejected: native DRC reports
+10 findings / 25 opens, including 0.1647-mm clearance to U1.41, 0.100-mm
+clearance from the reallocated 3V3 segment to U1.35, and two minimum-width
+violations. The board's 0.200-mm routing rule is retained; a finer trace is
+not an acceptable workaround.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It
