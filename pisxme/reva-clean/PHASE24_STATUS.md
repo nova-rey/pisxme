@@ -56,7 +56,8 @@ The isolated SPI-only lateral proof now passes its saved-board native endpoint
 audit for all five SPI nets, including the required negative control after
 serialized removal of SPICS copper. Its native DRC has 5 warnings / 45 opens;
 the warnings are legacy dangling test branches, while the SPI route itself
-has no short or crossing. This proves the V6 source escape plus a sufficiently
+has no short or crossing. U2 is translated 35 mm laterally to clear the J1
+SSD-power field. This proves the V6 source escape plus a sufficiently
 outboard destination can be electrically authored; the remaining work is
 reintegrating rails, controls, crystal, flash support, and test access.
 

@@ -5328,6 +5328,12 @@ all SPICS copper failed the negative control as required. Native DRC reports
 5 warnings / 45 opens, with no SPI short or crossing. This validates the
 clean V6 source escape and outboard destination geometry in isolation; full
 support reintegration remains open.
+2026-09-07 — PiSXMe Phase 24 Path B: tightened the SPI-only lateral proof by
+removing duplicate source/destination segments and moving U2 35 mm outboard
+to clear J1's SSD-power field. Native DRC is 5 warnings / 45 opens with no
+SPI short/crossing; all five saved-board endpoint assertions and the SPICS
+negative control pass. This is the current SPI geometry baseline, not a full
+Path-B closure.
 2026-09-07 — PiSXMe Phase 24 Path B: rebuilt the lateral support placement
 from the clean V6 source directly. Placement-only native DRC was 8/43; the
 laterally extended SPI route was 22/38 and was rejected for destination and
