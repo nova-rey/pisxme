@@ -63,6 +63,11 @@ and native DRC after zone refill reports 0 violations / 41 remaining opens.
 The initial pre-refill clearance findings were rejected as stale zone-fill
 state and are not used as current evidence.
 
+The RTL_5V/C5 and RTL_1V1/C4 local support route now passes as V6:
+`PHASE24_RTL9210B_5V_1V1_SUPPORT_V6.kicad_pcb` has native DRC 0 violations
+after refill and leaves 39 unconnected items. V1–V5 are retained as rejected
+route-method evidence; no production CAD changed.
+
 ## Current live correction — 2026-09-06
 
 The old V4 SATA claim is superseded for Path-A topology: its C30–C33 to J3

@@ -119,3 +119,13 @@ refilling zones. The generator now emits native named-net segments. The
 refilled candidate connects U2 pins 3/8, C3, and the R2/R3 3V3 returns;
 native DRC reports **0 violations / 41 unconnected items**, and the saved-net
 audit passes. This is a local support sub-gate, not full fixture closure.
+
+## RTL_5V/C5 and RTL_1V1/C4 support
+
+Five local route variants were rejected for QFN pad-field, corridor, via, or
+adjacent-GND geometry. V6 changes the route class: RTL_5V reaches its B.Cu
+outboard corridor through an F.Cu transition and approaches C5 from above;
+RTL_1V1 escapes from the QFN top row before its B.Cu transition. Native DRC
+after zone refill reports **0 violations / 39 unconnected items**. This closes
+the two local rail-support sub-gate only; control/sideband, USB, M.2, and
+test-access connectivity remain open.

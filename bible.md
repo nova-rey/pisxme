@@ -5070,7 +5070,12 @@ full fixture and production CAD open/unchanged.
  serialization path and routed the RTL_3V3 support bus. After native zone
  refill, U2 pins 3/8, C3, and the R2/R3 3V3 returns pass the saved-net audit;
  native DRC is 0 violations / 41 remaining opens. Rejected pre-refill zone
- clearance output as stale fill state and kept production CAD unchanged.
+clearance output as stale fill state and kept production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: iterated the RTL_5V/C5 and RTL_1V1/C4
+ support routes through six bounded local variants. V6 uses QFN-clear source
+ escapes, ordinary vias, and separated outer-layer corridors; after native
+ zone refill it passes DRC with 0 violations / 39 remaining opens. Preserved
+ V1–V5 as rejected evidence and kept production CAD unchanged.
 2026-09-07 — PiSXMe Phase 24 documentation hygiene: marked the original
  RTL9210B bring-up fixture's 56-open count as historical baseline evidence
  and pointed current-state prose to the SPI V7 plus GND-plane candidate with
