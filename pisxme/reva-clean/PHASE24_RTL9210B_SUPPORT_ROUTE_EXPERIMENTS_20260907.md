@@ -1473,3 +1473,11 @@ required. Native DRC reports 448 findings / 18 unconnected items with zero
 `shorting_items` and zero `tracks_crossing`. V232 is promoted as disposable
 rail evidence; remaining RTL_3V3/RTL_1V1 branches and all other Path-B gates
 remain open.
+## V233 RTL_3V3 U1.52 branch — rejected
+
+V233 connected U1.52 to C3.1 in saved-board native connectivity and passed
+its trace-removal negative control, but native DRC found an RTL_3V3/CLKREQ
+via short and an RTL_3V3/XTAL_OUT crossing in the lower QFN/crystal field.
+It is rejected as an isolated rail route. The next U1.52 attempt must
+co-author XTAL_OUT and the local CLKREQ return; V232 remains the promoted
+U1.39 rail basis.

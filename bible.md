@@ -5737,3 +5737,7 @@ production CAD remain unchanged.
 connectivity and the trace-removal negative control pass with zero signal
 shorting/crossing classes. Remaining support rails and Path-B validation stay
 open; Path A and production CAD remain unchanged.
+2026-09-07: Rejected RTL9210B V233 U1.52 RTL_3V3 isolated route: native
+connectivity and negative control pass, but DRC found a lower-field
+RTL_3V3/XTAL_OUT crossing and CLKREQ-via short. U1.52 requires coordinated
+XTAL_OUT/3V3 allocation; V232 U1.39 remains promoted.

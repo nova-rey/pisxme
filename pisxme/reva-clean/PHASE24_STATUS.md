@@ -6676,3 +6676,9 @@ the saved-board U1.39/C3.1 audit and trace-removal negative control pass.
 This remains disposable Path-B support evidence. Remaining rail branches,
 high-speed routing, mode-aware validation, firmware/procurement, and
 production integration remain open; Path A and production CAD are unchanged.
+## Current RTL9210B lower 3V3 finding — U1.52 remains open
+
+V233 proves U1.52-to-C3.1 endpoint connectivity but is rejected by native
+DRC for a lower-field XTAL_OUT crossing and conflict with the promoted CLKREQ
+return. This is a local coordinated rail/crystal allocation issue; the V232
+U1.39 branch remains promoted. Path A and production CAD are unchanged.
