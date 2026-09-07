@@ -68,6 +68,12 @@ all serialized RTL_3V3 copper fails the negative control. This validates the
 separated rail-spine geometry; U2 rail pads, control nets, and remaining
 support circuitry are still open.
 
+The RTL_3V3 extension to relocated U2 is now positive in
+`PHASE24_RTL9210B_RAIL_ONLY_LATERAL_U2_V2`: native DRC reports 0 violations /
+45 opens, and the saved-board audit proves U1.34/C3.1/U2.3/U2.8 connectivity.
+This closes the local 3V3 support sub-gate only; 1V1/5V U2 support, controls,
+crystal, flash support, and full integration remain open.
+
 The full support placement candidate moves U2 35 mm and C3/C4/C5 20 mm
 laterally. The proven SPI-only copper was transplanted by serialized
 net-scoped block extraction into

@@ -5339,6 +5339,10 @@ DRC with 0 violations and passed saved-board endpoint assertions from U1 to
 C3/C4/C5 on RTL_3V3/RTL_1V1/RTL_5V. Removing serialized RTL_3V3 copper failed
 the negative control. Rail-spine geometry is validated in isolation; full
 support remains open and production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: extended RTL_3V3 from the validated
+lateral spine to relocated U2 pads 3/8 with ordinary vias. Native DRC reports
+0 violations / 45 opens; the saved-board audit proves U1.34/C3.1/U2.3/U2.8
+connectivity. The 3V3 local sub-gate is closed; full support remains open.
 2026-09-07 — PiSXMe Phase 24 Path B: transplanted the proven SPI-only copper
 into the full support placement (U2 +35 mm; C3/C4/C5 +20 mm) using serialized
 net-scoped blocks. The integrated saved-board SPI audit passes all five
