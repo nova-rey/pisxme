@@ -461,3 +461,12 @@ KiCad reports 5 findings / 30 opens, matching the prior rail baseline and
 adding no signal short or crossing. The five SPI destination pads now occupy
 a local row near the moved source, providing the next source/target geometry
 for routed SPI regeneration. No production CAD was changed.
+
+## Co-located SPI V1 — rejected
+
+The first explicit F.Cu-only SPI regeneration from the moved U1/U2 pads
+produced 19 native violations / 26 opens, including multiple source-pad
+crossings, rail interactions, and an RTL_1V1/SPICS short. It is rejected as a
+route implementation. The U2 co-location remains a valid placement
+discriminator; the next SPI class must use layer transitions and a deliberate
+escape ordering.

@@ -5471,3 +5471,8 @@ is exhausted for this placement; the clean relocated rail baseline remains.
 RTL9210B support island. Native KiCad remains at 5 findings / 30 opens with
 no new signal shorts/crossings; SPI destinations are now a local row near U1.
 This is placement evidence only and production CAD remains unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: rejected the first F.Cu-only SPI route
+from the co-located U1/U2 pads. Native KiCad reports 19 violations / 26 opens,
+including source crossings, rail clearances, and an RTL_1V1/SPICS short. U2
+co-location remains placement evidence; the next SPI class must change layer
+and escape ordering.

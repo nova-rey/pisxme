@@ -60,6 +60,14 @@ approximately y=76 mm, materially reducing the source-to-destination span.
 This is placement evidence only; SPI copper must still be regenerated from the
 actual moved pads before the candidate can advance.
 
+The first co-located SPI route trial
+`PHASE24_RTL9210B_SUPPORT_RELOCATION_SPI_V1` is rejected as route
+implementation evidence. Native KiCad reports 19 violations / 26 opens,
+including source-pad crossings, rail/ SPI clearances, and an RTL_1V1/SPICS
+short. The U2 co-location placement remains mechanically/native-clean at the
+prior 5-findings / 30-opens baseline; the next SPI attempt must change layer
+and escape ordering rather than repeat same-layer orthogonal routing.
+
 The rail-cap co-location probe `PHASE24_RTL9210B_SUPPORT_RELOCATION_CAPS_V1`
 then moved C3/C4/C5 coherently beside the relocated U1 and regenerated the
 RTL_1V1 continuation to C4. Native KiCad reports 4 findings / 32 opens with
