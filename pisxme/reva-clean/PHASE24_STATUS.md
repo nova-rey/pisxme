@@ -118,6 +118,13 @@ connectivity joins U1.17, U1.33, and C5.1. V53-V56 remain rejected routing
 experiments. V57 is promoted as the current RTL_5V basis; RTL_1V1, controls,
 ground, USB, M.2, and full Path-B validation remain open.
 
+V59 is a valid RTL_1V1 sub-primitive for the native U1.16-to-C4.1 path. It
+uses the right-edge U1 escape, a B.Cu dogleg below the 3V3 handoff, and a
+right-side C4 launch that clears the adjacent C3 ground pad. Native DRC is 5
+non-signal isolated-copper/silkscreen warnings / 27 opens with no new signal
+violations. V58 is rejected for using the C3-adjacent launch. The remaining
+RTL_1V1 U1 edge groups are still open.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

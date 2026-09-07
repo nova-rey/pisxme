@@ -97,6 +97,12 @@ joins U1.20/U1.34/U1.39/U1.52, U2.3/U2.8, R2.2, R3.2, and C3.1. Promote V52 as
 the current disposable 3V3 basis, while retaining the remaining rail/control
 opens as unfinished work.
 
+V59 corrects the V58 1V1 launch by routing U1.16 through a B.Cu dogleg below
+the 3V3 handoff and entering C4.1 from the right, clear of C3. Native DRC
+reports 5 non-signal isolated-copper/silkscreen warnings / 27 intended opens
+and no new signal violations. V59 is promoted only as the U1.16/C4.1
+sub-primitive; the other RTL_1V1 pad groups remain unfinished.
+
 V57 completes the RTL_5V disposable rail primitive. Its U1.33-to-U1.17
 F.Cu escape passes above the native SPI source endpoints, then uses the
 SPI-clear B.Cu dogleg and a right-side C5.1 launch. Native DRC reports 5
