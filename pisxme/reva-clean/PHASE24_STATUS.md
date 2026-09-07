@@ -31,6 +31,13 @@ U1.38 solder-mask/clearance envelope. This is further evidence that U1.40
 must be co-authored with the neighboring 3V3 source field, not added as an
 isolated dogbone.
 
+V83 is a diagnostic-only pad-width sensitivity trial from V79. It shrank the
+68 perimeter pads in the disposable U1 footprint without changing copper,
+rules, or nets; native DRC remained 8 findings / 25 opens, with the same
+U1.40-to-U1.41 and RTL_3V3-to-U1.35 clearance failures. This does not justify
+changing the land pattern or relaxing rules; authoritative package evidence
+is still required before either could be considered.
+
 V81 tested the same V79 U1.40 path with a 0.15-mm fine-pitch dogbone. Native
 DRC rejected it at 10 findings / 25 opens: the escape still has only
 0.1647-mm clearance to U1.41, the reallocated 3V3 segment remains 0.100 mm

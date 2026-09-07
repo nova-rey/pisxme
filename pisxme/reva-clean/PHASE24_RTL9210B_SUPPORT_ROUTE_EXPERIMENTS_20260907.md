@@ -35,6 +35,11 @@ U1.39 RTL_3V3 pad escape and violates the adjacent U1.38 solder-mask/clearance
 envelope. Preserve it as evidence that the U1.40 departure and neighboring
 3V3 source field must be authored as one QFN escape cell.
 
+V83 is a diagnostic-only pad-width sensitivity trial. Shrinking the 68
+perimeter pads in the V79 disposable footprint did not clear the two local
+signal defects; native DRC remained 8 findings / 25 opens. No land-pattern
+promotion or board-rule change follows from this test.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It
