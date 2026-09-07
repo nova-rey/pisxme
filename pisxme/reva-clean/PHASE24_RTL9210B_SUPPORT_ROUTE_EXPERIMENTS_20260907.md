@@ -1249,6 +1249,16 @@ trace-removal negative control fails as required. V186 is promoted as a
 disposable shared-rail sub-primitive; U1.39/U1.52/U2.3/U2.8/R2.2/R3.2 and
 the remaining Path-B support gates remain open.
 
+## V189 SPICS U1.24-to-U2.1 handoff
+
+V189 adds the SPICS route from native U1.24 to U2.1 through an upper
+F.Cu/B.Cu/F.Cu outer corridor. Native KiCad reports 293 findings / 27
+unconnected items, with zero `shorting_items` and zero `tracks_crossing`.
+The saved-board audit joins U1.24/U2.1 and its trace-removal negative
+control fails as required. V189 is promoted as a disposable SPI
+sub-primitive; the remaining SPI nets, rail branches, controls, and full
+Path-B validation remain open.
+
 ## V188 RTL_1V1 U1.16-to-C4.1 handoff
 
 V188 adds a separate right-edge RTL_1V1 corridor from native U1.16 to C4.1

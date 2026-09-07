@@ -6475,6 +6475,17 @@ This remains disposable support evidence only. RTL_5V's remaining source/
 support joins, RTL_1V1, west-field RTL_3V3, SPI/control, and full Path-B mode
 validation remain open.
 
+## Current RTL9210B SPICS slice — V189
+
+`PHASE24_RTL9210B_SPICS_U124_U2_V189.kicad_pcb` adds the native U1.24 to
+U2.1 SPICS route above the existing rail corridors. Native KiCad DRC reports
+293 findings / 27 unconnected items with zero `shorting_items` or
+`tracks_crossing`; the saved native connectivity audit and trace-removal
+negative control pass.
+
+This is disposable SPI evidence only. The remaining SPI nets, rail branches,
+controls, mode validation, and production integration remain open.
+
 ## Current RTL9210B 1V1 rail slice — V188
 
 `PHASE24_RTL9210B_RTL1V1_U116_C4_V188.kicad_pcb` adds the native U1.16 to
