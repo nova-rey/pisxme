@@ -7,6 +7,12 @@ RTL_5V rail primitive. V10/V11 RTL_3V3 trunks are rejected because they
 intersect retained high-speed/support corridors. The next experiment must
 change the 3V3/support corridor or coherently reauthor that local island.
 
+The 90-degree mixed-layer V18/V19/V20/V21 trials remain disposable evidence.
+V20 reduced the source-field result to 3 findings / 41 opens; V21 rejected a
+down/right RTL_3V3 departure after it entered adjacent U1 RTL_5V/RTL_1V1 pads
+and crossed SPICLK. The next implementation requires a transformed-pad-aware
+escape cell.
+
 Status: **REJECTED ROUTE IMPLEMENTATIONS; PATH B ARCHITECTURE UNCHANGED**
 
 These experiments operate only on disposable RTL9210B bring-up fixtures.

@@ -12,6 +12,13 @@ by remaining control/sideband, RTL_1V1, ground, USB, M.2, power, and full
 Path-B validation. Path A, production acreage CAD, and approved architecture
 remain unchanged.
 
+The 90-degree mixed-layer V18/V19/V20/V21 source-field trials are retained
+as disposable evidence. V20 reduced the candidate to 3 findings / 41 opens
+by fixing SPISI transition proximity; V21 rejected a down/right RTL_3V3
+departure because it entered adjacent U1 RTL_5V/RTL_1V1 pads and crossed
+SPICLK. The next implementation must use a transformed-pad-aware escape cell
+before downstream routing is regenerated.
+
 ## Current live Path-B step — 2026-09-07
 
 ### Current open gate
