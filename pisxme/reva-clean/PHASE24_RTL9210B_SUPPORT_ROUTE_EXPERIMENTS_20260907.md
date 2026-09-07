@@ -61,6 +61,13 @@ the intentionally incomplete probe and inherited GND conditions. This
 validates the local departure geometry; it does not close the five-net SPI
 branch.
 
+The follow-up five-net probe changed the departure to straight outward
+segments before the staggered diagonals. Native KiCad improved to 17
+violations / 44 opens, but SPICLK and SPISO3 still short/collide at the
+0.6-mm transitions and one source clearance remains. This is rejected as a
+transition-layout implementation; the diagonal single-net departure remains
+validated evidence.
+
 ## Attempt 1 — all-F.Cu support fanout
 
 `PHASE24_RTL9210B_BRINGUP_SUPPORT_ROUTED.kicad_pcb`

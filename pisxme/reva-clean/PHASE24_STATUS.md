@@ -40,6 +40,14 @@ ground conditions. This validates the local departure geometry. The next
 five-net trial must preserve that clearance and regenerate neighboring
 XTAL/RSET routes independently.
 
+The five-net source-field follow-up was regenerated with straight outward
+departures before the staggered diagonals. It improves to 17 native
+violations / 44 opens but remains rejected: the SPICLK/SPISO3 transitions
+still short/collide at their 0.6-mm via spacing, with one additional source
+clearance finding. This localizes the remaining defect to transition layout
+after the pad envelope; it does not reject the validated single-net dogbone
+or the RTL9210B architecture.
+
 The corrected-footprint far placement with an order-preserving two-layer
 partition, `PHASE24_RTL9210B_U2_CORRECTED_FAR_PARTITION_SPI_V1`, is rejected
 at 30 violations / 40 opens. Native evidence shows the remaining failure is
