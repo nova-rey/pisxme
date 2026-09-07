@@ -470,3 +470,12 @@ crossings, rail interactions, and an RTL_1V1/SPICS short. It is rejected as a
 route implementation. The U2 co-location remains a valid placement
 discriminator; the next SPI class must use layer transitions and a deliberate
 escape ordering.
+
+## Isolated SPICS layer probe V1 — rejected
+
+A single-net SPICS route was tested from the moved U1 source to the moved U2
+destination using an ordinary 0.6/0.3-mm through-via. Native KiCad reports
+11 violations / 29 opens, including a SPICS/RTL_1V1 short and crossing at the
+source field, plus pad/hole-clearance failures. The near-transition variant
+is rejected; the prior far-transition variant is also retained as negative
+evidence. The next attempt must solve the QFN pad-field escape itself.

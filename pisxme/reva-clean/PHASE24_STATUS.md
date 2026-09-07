@@ -60,6 +60,14 @@ approximately y=76 mm, materially reducing the source-to-destination span.
 This is placement evidence only; SPI copper must still be regenerated from the
 actual moved pads before the candidate can advance.
 
+The isolated SPICS layer probe `PHASE24_RTL9210B_SPICS_LAYER_PROBE_V1`
+confirms the current source-field barrier independently: native KiCad reports
+11 violations / 29 opens for the near-transition variant, including a
+SPICS/RTL_1V1 short and crossing at the 0.6/0.3-mm via beside U1.25. The
+earlier far-transition form also failed. This is a QFN pad-field escape
+implementation failure, not a U2 placement or Path-B architecture result;
+the next trial must use a true pad-field dogbone/escape geometry.
+
 The first co-located SPI route trial
 `PHASE24_RTL9210B_SUPPORT_RELOCATION_SPI_V1` is rejected as route
 implementation evidence. Native KiCad reports 19 violations / 26 opens,
