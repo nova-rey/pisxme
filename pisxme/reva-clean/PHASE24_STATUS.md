@@ -96,6 +96,13 @@ violations but opens reduce from 34 to 30; a saved-board audit passes all
 XTAL_IN/XTAL_OUT endpoints. The 19 DRC findings remain open and are not
 waived.
 
+Fixture-only TP1--TP8 were removed in the disposable V4/V5 candidates; this
+reduces the report to 17 violations / 26 opens after removing one attached
+test stub, but does not close any required RTL9210B support gate. The V5
+combined native endpoint audit still passes SPI, crystal, and rail endpoints.
+The remaining crossings, rail short/escape defects, QFN rail fanout opens,
+and native manufacturing findings remain current and unwaived.
+
 The rail layer rebalance is now verified: the rail-only/U2 branch returns to
 native DRC 0 violations / 45 opens, and regenerating the combined candidate
 reduces its native DRC to 18 violations / 34 opens with the combined endpoint

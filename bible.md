@@ -5357,6 +5357,11 @@ Production CAD and Path A unchanged.
 routing into the combined lateral SPI/rail support candidate. Native DRC is
 19 violations / 30 opens (down from 34); the saved-board XTAL_IN/XTAL_OUT
 audit passes. Remaining DRC findings remain open and unwaived.
+2026-09-07 — PiSXMe Phase 24 Path B: removed fixture-only TP1--TP8 from
+disposable V4/V5 candidates. V5 reports 17 violations / 26 opens after one
+attached test stub is removed; combined SPI/crystal/rail endpoint audit
+passes, while required crossings, rail/QFN fanout, and manufacturing findings
+remain open and unwaived.
 2026-09-07 — PiSXMe Phase 24 Path B: rebalanced the lateral rail spines and
 U2.3/U2.8 branch to avoid SPI-layer interactions. Rail-only native DRC is
 0/45; the combined candidate improves to 18/34, and the combined SPI/rail
