@@ -68,6 +68,13 @@ violations / 44 opens, but SPICLK and SPISO3 still short/collide at the
 transition-layout implementation; the diagonal single-net departure remains
 validated evidence.
 
+The V2 transition-spacing micro-variant
+`PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V2.kicad_pcb` was rejected at 10
+violations / 44 opens. It leaves one SPISO/SPISO3 clearance violation and
+the expected incomplete-probe/inherited findings, so it does not improve
+the V1 source-field result. The V1 and V2 results are retained separately;
+production CAD and Path A are unchanged.
+
 ## Attempt 1 — all-F.Cu support fanout
 
 `PHASE24_RTL9210B_BRINGUP_SUPPORT_ROUTED.kicad_pcb`

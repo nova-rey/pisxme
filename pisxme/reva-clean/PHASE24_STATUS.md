@@ -48,6 +48,13 @@ clearance finding. This localizes the remaining defect to transition layout
 after the pad envelope; it does not reject the validated single-net dogbone
 or the RTL9210B architecture.
 
+The transition-spacing micro-variant
+`PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V2` was also rejected. Native KiCad
+reports 10 violations / 44 opens, including one remaining SPISO/SPISO3
+clearance violation and only expected incomplete-probe/inherited findings
+otherwise. The change did not improve the V1 source-field result; no
+production CAD or Path-A asset changed.
+
 The corrected-footprint far placement with an order-preserving two-layer
 partition, `PHASE24_RTL9210B_U2_CORRECTED_FAR_PARTITION_SPI_V1`, is rejected
 at 30 violations / 40 opens. Native evidence shows the remaining failure is
