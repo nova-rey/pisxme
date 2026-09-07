@@ -2,10 +2,9 @@
 
 ## Current checkpoint — 2026-09-06
 
-Latest focused routing-generator checkpoint: `2d28158` plus the uncommitted
-deduplication experiment recorded in
-`PHASE24_PATHA_SATA_ROUTER_DEDUP_20260906.md`. The experiment is rejected as
-route implementation failure; no integrated board was changed.
+Latest focused routing-generator checkpoint: `e8dd6fc`. The deduplication
+experiment recorded in `PHASE24_PATHA_SATA_ROUTER_DEDUP_20260906.md` is
+rejected as route implementation failure; no integrated board was changed.
 
 Latest private storage evidence checkpoint: `9e45a72`. The retained WIP
 RTL9210B native XML support netlist now has a reproducible audit with
