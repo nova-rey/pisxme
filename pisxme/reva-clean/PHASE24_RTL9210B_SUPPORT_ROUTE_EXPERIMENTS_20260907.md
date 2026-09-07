@@ -1235,3 +1235,16 @@ The saved-board V184 audit passes XTAL_IN, XTAL_OUT, RSET, REFCLK_P, and
 REFCLK_N, with five trace-removal negative controls. V184 is promoted only
 as a disposable support sub-primitive; inherited manufacturing/clearance/
 open findings and the remaining Path-B support gates remain open.
+
+## V185 RTL_3V3 U1.34-to-C3.1 handoff
+
+V185 adds only the native-pad-derived U1.34-to-C3.1 RTL_3V3 rail slice to
+the promoted V184 support basis. It exits the rotated QFN on F.Cu, changes
+to B.Cu outside the pad field, and returns at C3.1. Native KiCad reports
+254 findings / 31 unconnected items, with no `shorting_items` or
+`tracks_crossing`; the increase in total findings is inherited
+clearance/zone/open reporting from the added copper, not a signal short or
+crossing. The saved-board audit joins U1.34 to C3.1 and its trace-removal
+negative control fails as required. V185 is a promoted disposable rail
+sub-primitive; the remaining 3V3 branches, support rails, SPI/control, and
+full Path-B validation remain open.

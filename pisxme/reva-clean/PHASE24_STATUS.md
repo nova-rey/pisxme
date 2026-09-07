@@ -6449,3 +6449,16 @@ V184 is a promoted local route sub-primitive, not a Path-B or production
 board PASS. The next work is the remaining RTL9210B support network and its
 full native/parity/mode validation. Path A, production CAD, and the accepted
 macro-floorplan remain unchanged.
+
+## Current RTL9210B rail slice — V185
+
+The latest disposable support basis is
+`PHASE24_RTL9210B_RTL3V3_U134_C3_V185.kicad_pcb`, which adds the
+native-pad-derived U1.34-to-C3.1 RTL_3V3 handoff to V184. Native KiCad DRC
+reports 254 findings / 31 unconnected items and zero `shorting_items` or
+`tracks_crossing`. The saved-board audit passes U1.34↔C3.1 connectivity and
+its trace-removal negative control.
+
+This is a promoted local rail sub-primitive only. The other RTL_3V3 branches,
+support rails, SPI/control paths, and full Path-B validation remain open;
+Path A and production CAD remain unchanged.
