@@ -1,5 +1,17 @@
 # Phase 24 acreage validation status
 
+## Authoritative current state — 2026-09-07
+
+Path B remains a disposable RTL9210B qualification path. The current best
+combined support baseline is `PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V8`
+plus the validated RTL_5V V9 rail primitive. V8 native support and SPI audits
+pass with negative controls; V9 natively connects U1.17/U1.33/C5.1. The
+RTL_3V3 V10/V11 probes are rejected route implementations. Current open work
+is a new 3V3/support corridor or coherent local-island reauthoring, followed
+by remaining control/sideband, RTL_1V1, ground, USB, M.2, power, and full
+Path-B validation. Path A, production acreage CAD, and approved architecture
+remain unchanged.
+
 ## Current live Path-B step — 2026-09-07
 
 ### Current open gate

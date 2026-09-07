@@ -1,5 +1,12 @@
 # RTL9210B support-fixture route experiments — 2026-09-07
 
+## Current authoritative baseline
+
+V8 is the current combined support/SPI baseline and V9 is the retained
+RTL_5V rail primitive. V10/V11 RTL_3V3 trunks are rejected because they
+intersect retained high-speed/support corridors. The next experiment must
+change the 3V3/support corridor or coherently reauthor that local island.
+
 Status: **REJECTED ROUTE IMPLEMENTATIONS; PATH B ARCHITECTURE UNCHANGED**
 
 These experiments operate only on disposable RTL9210B bring-up fixtures.
