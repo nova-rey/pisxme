@@ -50,6 +50,15 @@ V148/V149 test that relocation. V148 moves the lower RTL_1V1 collector to
 B.Cu but crosses XTAL_IN; V149 adds an F.Cu overpass around the XTAL span but
 still contacts XTAL_IN and C1 ground. Both are rejected local-support
 allocations. The next repair must co-author XTAL_IN and the lower 1V1 field.
+V150/V151 test the corrected below-XTAL collector. V150 has no signal
+shorting/crossing but loses the existing 1V1 layer handoff; V151 restores the
+handoff and passes the native 1V1 audit/negative control with no signal
+shorting/crossing. V152/V153 then test REFCLK over that basis; V152 contacts
+the XTAL_IN via and V153 contacts the 1V1 source field. V154 moves only the
+1V1 handoff outboard, restores the full 1V1 group, and passes the focused
+native audit with no signal shorting/crossing. Promote V154 as the current
+REFCLK-ready local-support basis; XTAL_IN/REFCLK and remaining high-speed
+endpoints remain open.
 The current promoted disposable RTL_5V/control basis is
 `PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
 CLKREQ/PEDET support evidence. V97 moved

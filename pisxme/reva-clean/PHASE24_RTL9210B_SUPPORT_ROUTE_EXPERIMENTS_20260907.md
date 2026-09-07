@@ -78,6 +78,14 @@ RTL_1V1 collector to B.Cu but crossed XTAL_IN; V149 added an F.Cu overpass but
 still contacted XTAL_IN and C1 ground. The next attempt must co-author the
 XTAL_IN and lower 1V1 fields together.
 
+V150/V151 refine the below-XTAL collector. V150 preserves clean signal DRC
+but leaves the lower 1V1 pads disconnected from the existing handoff; V151
+corrects that handoff and passes the native 1V1 audit and negative control.
+V152/V153 are rejected REFCLK trials against V151 for XTAL_IN and 1V1
+contacts. V154 moves only the 1V1 handoff outboard and passes native DRC's
+signal gate plus the complete 1V1 audit. Promote V154 as the current local
+support basis; REFCLK remains open.
+
 ## V76–V78 U1.40 edge-group trials — rejected
 
 V76 placed the U1.40 RTL_1V1 transition at (92.8,68.8), where the via
