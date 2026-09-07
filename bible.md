@@ -5737,14 +5737,6 @@ production CAD remain unchanged.
 connectivity and the trace-removal negative control pass with zero signal
 shorting/crossing classes. Remaining support rails and Path-B validation stay
 open; Path A and production CAD remain unchanged.
-2026-09-07: Rejected RTL9210B V240/V241 U1.36 1V1 allocation trials: V240
-crossed SPISI and V241 moved the crossing into a via short. Corrected V242
-co-authors the B.Cu trunk extension and moved handoff via at x=104.0. Native
-U1.36/U1.39/U1.52 rail connectivity and the trace-removal negative control
-pass; native DRC reports 484 findings / 16 unconnected items with zero signal
-shorting/crossing classes. V242 is promoted as disposable rail evidence only;
-Path A and production CAD remain unchanged and remaining Path-B gates stay
-open.
 2026-09-07: Rejected RTL9210B V233 U1.52 RTL_3V3 isolated route: native
 connectivity and negative control pass, but DRC found a lower-field
 RTL_3V3/XTAL_OUT crossing and CLKREQ-via short. U1.52 requires coordinated
@@ -5758,3 +5750,9 @@ open; Path A and production CAD remain unchanged.
 but crossed U1.39 3V3. V239 moved U1.39 but contacted XTAL_OUT and crossed
 U1.52 3V3. Neither is promoted; the next attempt must co-author the three
 lower-field rail escapes. Path A and production CAD remain unchanged.
+2026-09-07: Corrected the V242 rail-evidence entry placement so bible.md
+remains append-only. V240/V241 were rejected for SPISI crossing/shorting;
+corrected V242 promotes the U1.36/U1.39/U1.52 RTL_1V1 co-allocation after
+native connectivity and the trace-removal negative control passed, with zero
+native signal shorting/crossing classes. Path A and production CAD remain
+unchanged; remaining Path-B gates stay open.
