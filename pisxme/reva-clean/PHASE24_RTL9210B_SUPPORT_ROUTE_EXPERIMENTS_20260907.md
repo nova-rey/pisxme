@@ -1249,6 +1249,16 @@ trace-removal negative control fails as required. V186 is promoted as a
 disposable shared-rail sub-primitive; U1.39/U1.52/U2.3/U2.8/R2.2/R3.2 and
 the remaining Path-B support gates remain open.
 
+## V187 RTL_5V U1.33-to-C5.1 handoff
+
+V187 adds the separate upper RTL_5V corridor from native U1.33 to C5.1 on
+the V186 basis. Native KiCad reports 270 findings / 29 unconnected items,
+with zero `shorting_items` and zero `tracks_crossing`. The saved-board audit
+joins U1.33/C5.1 and its trace-removal negative control fails as required.
+V187 is promoted as a disposable rail sub-primitive; the remaining RTL_5V
+branch, RTL_1V1, west-field RTL_3V3, SPI/control, and full Path-B validation
+remain open.
+
 ## V185 RTL_3V3 U1.34-to-C3.1 handoff
 
 V185 adds only the native-pad-derived U1.34-to-C3.1 RTL_3V3 rail slice to

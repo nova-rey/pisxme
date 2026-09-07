@@ -6463,6 +6463,18 @@ This is a promoted local rail sub-primitive only. The other RTL_3V3 branches,
 support rails, SPI/control paths, and full Path-B validation remain open;
 Path A and production CAD remain unchanged.
 
+## Current RTL9210B 5V rail slice — V187
+
+`PHASE24_RTL9210B_RTL5V_U133_C5_V187.kicad_pcb` adds the native U1.33 to
+C5.1 RTL_5V handoff above the V186 RTL_3V3 corridor. Native KiCad DRC
+reports 270 findings / 29 unconnected items with zero `shorting_items` or
+`tracks_crossing`; the saved-board connectivity audit and trace-removal
+negative control pass.
+
+This remains disposable support evidence only. RTL_5V's remaining source/
+support joins, RTL_1V1, west-field RTL_3V3, SPI/control, and full Path-B mode
+validation remain open.
+
 ## Current RTL9210B shared 3V3 rail — V186
 
 The latest disposable rail basis is
