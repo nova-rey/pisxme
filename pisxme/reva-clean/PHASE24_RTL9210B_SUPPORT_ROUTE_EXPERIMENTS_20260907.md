@@ -453,3 +453,11 @@ trunks. Native KiCad reduced opens to 28 but reported real 3V3/5V and
 1V1/5V shorts or clearances and a B.Cu crossing. It is rejected as the second
 failure in this ordinary-via additional-pad-fanout class. No production CAD
 was changed; the clean rail baseline remains the prior rails candidate.
+
+## U2 co-location V1 — placement discriminator
+
+U2 was translated by (-15,+18) mm into the relocated U1/C3-C5 island. Native
+KiCad reports 5 findings / 30 opens, matching the prior rail baseline and
+adding no signal short or crossing. The five SPI destination pads now occupy
+a local row near the moved source, providing the next source/target geometry
+for routed SPI regeneration. No production CAD was changed.

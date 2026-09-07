@@ -5467,3 +5467,7 @@ pairs. Remaining support and Path-B validation are open.
 ordinary-via fanout probe. It reduced opens to 28 but introduced real
 RTL_3V3/RTL_5V and RTL_1V1/RTL_5V conflicts plus a B.Cu crossing. The class
 is exhausted for this placement; the clean relocated rail baseline remains.
+2026-09-07 — PiSXMe Phase 24 Path B: tested U2 co-location with the relocated
+RTL9210B support island. Native KiCad remains at 5 findings / 30 opens with
+no new signal shorts/crossings; SPI destinations are now a local row near U1.
+This is placement evidence only and production CAD remains unchanged.

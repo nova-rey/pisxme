@@ -52,6 +52,14 @@ change class to a native/reference escape arrangement or a further coherent
 local support placement change. The clean rail baseline remains
 `PHASE24_RTL9210B_SUPPORT_RELOCATION_RAILS_V1`.
 
+The U2 co-location discriminator `PHASE24_RTL9210B_SUPPORT_RELOCATION_U2_V1`
+moves the SPI flash destination into the relocated storage-local island.
+Native KiCad reports 5 findings / 30 opens, matching the prior rail baseline,
+with no new signal shorts or crossings. U2 SPI pads now form a local row at
+approximately y=76 mm, materially reducing the source-to-destination span.
+This is placement evidence only; SPI copper must still be regenerated from the
+actual moved pads before the candidate can advance.
+
 The rail-cap co-location probe `PHASE24_RTL9210B_SUPPORT_RELOCATION_CAPS_V1`
 then moved C3/C4/C5 coherently beside the relocated U1 and regenerated the
 RTL_1V1 continuation to C4. Native KiCad reports 4 findings / 32 opens with
