@@ -39,6 +39,11 @@ the focused control-pair gate: native connectivity joins U1.13→J1.52 and
 U1.14→J1.50, with no `shorting_items` or `tracks_crossing`. Promote V115 only
 as the disposable CLKREQ_N/PERST_N sub-primitive; PEDET and remaining Path-B
 endpoints stay open.
+V116 adds the PEDET U1-to-M.2 launch on an independent F.Cu corridor. Native
+ connectivity joins U1.8 to J1.69 and native DRC reports no
+ `shorting_items` or `tracks_crossing`. Promote V116 only as the disposable
+ U1-to-socket PEDET sub-primitive; R2 source connection and remaining Path-B
+ endpoints stay open.
 Native saved-board inspection joins U1.55 with U1.16/U1.25/U1.40/U1.50/
 U1.60/U1.63/C4.1, and a centerline scan finds no different-net track crossing
 for the new escape. The disposable fixture still has 19 intentional/open

@@ -149,6 +149,10 @@ separation and passes the focused control-pair gate: native connectivity joins
 U1.13 to J1.52 and U1.14 to J1.50, with no `shorting_items` or
 `tracks_crossing`. Promote V115 only as the disposable control-pair
 sub-primitive; PEDET and remaining Path-B endpoints stay open.
+V116 adds the PEDET U1-to-M.2 launch on an independent F.Cu corridor. Native
+connectivity joins U1.8 to J1.69 and native DRC reports no `shorting_items` or
+`tracks_crossing`. Promote V116 only as the disposable U1-to-socket PEDET
+sub-primitive; R2 source connection and remaining Path-B endpoints stay open.
 
 ## Current authoritative baseline
 
