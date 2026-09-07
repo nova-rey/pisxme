@@ -5029,3 +5029,9 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  audit and negative control pass. Kept it outside production CAD and recorded
  the remaining routed-fixture, programming, firmware-rights, and hardware
  validation gates explicitly.
+2026-09-07 — PiSXMe Phase 24 Path B: tested two disposable support-route
+ classes for the bring-up fixture. The all-F.Cu support fanout failed with
+ 17 crossings, 2 shorts, undersized 0.15 mm tracks, and 3 mask bridges. The
+ ordered SPI B.Cu escape failed with 2 shorts plus annular/via/drill and
+ clearance violations. Preserved both raw reports, classified them as route
+ implementation failures, and kept production CAD unchanged.

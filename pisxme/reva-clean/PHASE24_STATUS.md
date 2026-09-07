@@ -11,6 +11,14 @@ native DRC reports zero violations and 56 explicit unrouted items. Those
 opens remain an unclosed fixture-routing gate, not a waived production
 finding. Path B remains isolated and `CONTINUE BOTH`.
 
+Two disposable support-route attempts are preserved in
+`PHASE24_RTL9210B_SUPPORT_ROUTE_EXPERIMENTS_20260907.md`. The first all-F.Cu
+fanout failed with crossings, shorts, undersized tracks, and solder-mask
+bridges. The second ordered SPI B.Cu attempt eliminated that fanout class but
+failed ordinary-via fabrication rules, clearances, and two shorts. Both are
+route implementation failures; the next attempt must use the ordinary-via
+basis and a larger pad-field escape.
+
 ## Current live correction — 2026-09-06
 
 The old V4 SATA claim is superseded for Path-A topology: its C30–C33 to J3

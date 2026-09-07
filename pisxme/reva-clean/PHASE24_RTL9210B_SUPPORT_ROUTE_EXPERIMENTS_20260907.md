@@ -1,0 +1,48 @@
+# RTL9210B support-fixture route experiments — 2026-09-07
+
+Status: **REJECTED ROUTE IMPLEMENTATIONS; PATH B ARCHITECTURE UNCHANGED**
+
+These experiments operate only on disposable RTL9210B bring-up fixtures.
+Neither changes `STORAGE.kicad_sch` nor the clean acreage PCB.
+
+## Attempt 1 — all-F.Cu support fanout
+
+`PHASE24_RTL9210B_BRINGUP_SUPPORT_ROUTED.kicad_pcb`
+
+The crystal, RSET, and SPI support nets were routed directly on F.Cu using
+the fixture's first placement. Native DRC found 58 violations and 46
+unconnected items:
+
+```text
+17 tracks_crossing
+2 shorting_items
+36 track_width
+3 solder_mask_bridge
+```
+
+The author used 0.15 mm tracks below the board's 0.20 mm minimum and forced
+long support corridors through one another. Rejected as route implementation
+failure.
+
+## Attempt 2 — SPI B.Cu ordinary-via escape
+
+`PHASE24_RTL9210B_SPI_BCU_FIXTURE.kicad_pcb`
+
+The five SPI nets were re-authored with pad dogbones, ordinary F.Cu/B.Cu
+transitions, and ordered B.Cu channels. The saved-track/via audit passes and
+confirms no via-in-pad coordinates, but native DRC still finds:
+
+```text
+2 shorting_items
+14 clearance
+10 annular_width
+10 via_diameter
+10 drill_out_of_range
+51 unconnected_items
+```
+
+This rejects the specific via geometry and remaining pad-field interaction.
+It does not reject RTL9210B or the support topology. The next valid route
+class must use the ordinary-via dimensions allowed by the selected JLC stack,
+move transitions farther from the QFN/flash pad fields, and then revalidate
+the full support group.
