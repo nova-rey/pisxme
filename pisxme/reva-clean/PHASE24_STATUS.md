@@ -6712,3 +6712,9 @@ fails as required. Native DRC reports 484 findings / 16 unconnected items
 with zero `shorting_items` or `tracks_crossing`. Remaining RTL_1V1 branches,
 high-speed paths, and full Path-B validation remain open; Path A and
 production/acreage CAD remain unchanged.
+V243 is rejected as a U1.40 RTL_1V1 route implementation. Its corrected
+native audit passes U1.36/U1.40-to-C4.1 and U1.39/U1.52-to-C3.1 assertions
+with the required trace-removal negative control, but native DRC introduces
+three signal shorting classes (USB_RXN0/RTL_3V3 twice and ISOLATEB/CLKREQ_N)
+at 493 findings / 15 unconnected items. V242 remains the promoted rail
+basis; no Path-A or production/acreage CAD change occurred.

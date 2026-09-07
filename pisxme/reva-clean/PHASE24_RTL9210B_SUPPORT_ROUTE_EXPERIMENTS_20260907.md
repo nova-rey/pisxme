@@ -1510,3 +1510,14 @@ script now passes native U1.36/U1.39/U1.52 connectivity and the trace-removal
 negative control. Native DRC is 484 findings / 16 unconnected items with zero
 `shorting_items` or `tracks_crossing`. V242 is promoted as disposable rail
 evidence; remaining RTL_1V1 branches and full Path-B gates remain open.
+
+## V243 RTL_1V1 U1.40 west-side escape — rejected
+
+V243 tested U1.40 from the V242 basis using a west-side F.Cu departure,
+ordinary via at (91.0,60.8), and B.Cu return to the promoted 1V1 trunk.
+The corrected native audit joins U1.36/U1.40 to C4.1 and U1.39/U1.52 to
+C3.1; its trace-removal negative control fails as required. Native DRC,
+however, reports 493 findings / 15 unconnected items and three signal
+shorting classes: USB_RXN0/RTL_3V3 twice and ISOLATEB/CLKREQ_N. Reject V243
+as a route implementation. V242 remains the promoted basis; Path A and
+production CAD remain unchanged.

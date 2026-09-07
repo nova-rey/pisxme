@@ -5756,3 +5756,8 @@ corrected V242 promotes the U1.36/U1.39/U1.52 RTL_1V1 co-allocation after
 native connectivity and the trace-removal negative control passed, with zero
 native signal shorting/crossing classes. Path A and production CAD remain
 unchanged; remaining Path-B gates stay open.
+2026-09-07: Rejected RTL9210B V243 U1.40 west-side RTL_1V1 escape. The
+corrected native audit passed U1.36/U1.40-to-C4.1 and U1.39/U1.52-to-C3.1
+connectivity with a trace-removal negative control, but native DRC introduced
+USB_RXN0/RTL_3V3 and ISOLATEB/CLKREQ_N shorting classes. V242 remains the
+promoted rail basis; Path A and production CAD remain unchanged.
