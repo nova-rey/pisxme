@@ -1424,3 +1424,12 @@ reports a PERST/RTL_1V1 source crossing. All four are rejected route
 implementations. The PERST source field requires a coordinated local
 allocation with the adjacent QFN control/rail escapes; no Path-A or
 production-CAD change is justified.
+## V226 PERST upper B.Cu detour — rejected
+
+V226 kept the U1.14 horizontal exit clear of the adjacent RTL_1V1 launch and
+used an upper B.Cu detour, but the transition via and first B.Cu segment
+landed on the retained REFCLK_P horizontal. Native endpoint connectivity and
+the trace-removal negative control pass; native DRC reports a real
+REFCLK_P/PERST_N short/crossing. This confirms that PERST requires a coupled
+REFCLK/QFN source-field allocation. It is rejected as a route
+implementation; no Path-A or production-CAD change occurred.

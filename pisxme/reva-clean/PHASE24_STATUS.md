@@ -6625,3 +6625,11 @@ rejected by native source-field crossings/shorts, with V225's remaining
 defect localized to the U1.14/RTL_1V1 field. These are route-allocation
 findings, not architecture or component rejection. Path A, production CAD,
 and the accepted macro-floorplan remain unchanged.
+## Current RTL9210B PERST source-field finding — V226 rejected
+
+V226 preserved endpoint connectivity but its U1.14 transition still
+intersects the promoted REFCLK_P B.Cu corridor. The remaining PERST issue is
+therefore localized to the coupled U1.14/REFCLK/QFN source field; it is not a
+connector or long-corridor failure. V220 remains the clean partial CLKREQ
+U1/J1 slice, while R3.1 and complete PERST remain open. Path A and production
+CAD are unchanged.

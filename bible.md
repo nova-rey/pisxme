@@ -5713,3 +5713,8 @@ but R3.1 remains open. V221's R3 return crossed PEDET/XTAL. PERST V222-V225
 were rejected for source-field crossings/shorts despite endpoint audit PASS;
 V225 localizes the remaining defect to the U1.14/RTL_1V1 field. No Path-A or
 production-CAD change was made.
+2026-09-07: Rejected RTL9210B PERST V226 after native DRC localized the
+remaining source defect to a REFCLK_P/PERST_N via/track short and crossing.
+Endpoint connectivity and negative control still pass. PERST requires a
+coupled QFN/REFCLK source-field allocation; no Path-A or production-CAD
+change occurred.
