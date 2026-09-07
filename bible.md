@@ -5316,6 +5316,12 @@ relocated support branch. Native DRC reported 46 violations / 28 opens due to
 over-tight source vias and destination pad-field crossings. Rejected as route
 implementation evidence; the relocation remains valid and production CAD is
 unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: reconstructed the SPI extension from the
+clean V6 source escape and translated the U2 destination outboard. Native DRC
+reported 29 violations / 38 opens; source geometry was recoverable, but the
+destination lanes intersect inherited controls and the lower SPISI branch.
+Rejected as a complete route; source-escape evidence retained and production
+CAD unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: created a coherent support-branch
 relocation probe translating U2/C3/C4/C5/R2/R3 by 22 mm. A serialized
 net-scoped scrub removed only affected tracks/vias without unstable SWIG

@@ -45,6 +45,13 @@ an implementation. The next pass must start from a truly SPI-scrubbed
 placement candidate and use the native V6 escape geometry without retaining
 any legacy SPI stubs.
 
+The clean-V6-source reconstruction is preserved as
+`PHASE24_RTL9210B_V6_SOURCE_OUTBOARD_SPI_V1`; native DRC reports 29
+violations / 38 opens. It confirms the source geometry is recoverable, but
+the destination lanes intersect inherited control corridors and the lower
+SPISI branch. It is rejected as a complete route; the clean source escape is
+retained as the next writer's oracle.
+
 The original isolated RTL9210B-CG bring-up fixture remains archived at
 `PHASE24_RTL9210B_BRINGUP_FIXTURE.kicad_pcb`. It captures the corrected
 QFN-68/M-key lane mapping, PEDET/sideband ownership, support-net boundary,
