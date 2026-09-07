@@ -39,6 +39,15 @@ the focused control-pair gate: native connectivity joins U1.13→J1.52 and
 U1.14→J1.50, with no `shorting_items` or `tracks_crossing`. Promote V115 only
 as the disposable CLKREQ_N/PERST_N sub-primitive; PEDET and remaining Path-B
 endpoints stay open.
+V123/V124 joined R3.1 electrically but crossed the existing SPI/PEDET/1V1
+fields. V125/V126 moved the return farther right but contacted the C5/RTL_3V3
+field; V127/V128/V129 successively reduced the defect to the PERST elbow.
+V130 reduced it to one upper-rail crossing. V131 overpasses that rail and
+passes the focused CLKREQ audit: R3.1/U1.13/J1.52 are connected, with no
+`shorting_items` or `tracks_crossing`; the route-removal negative control
+fails as required. Promote V131 only as the disposable complete CLKREQ
+sub-primitive; RESET_N, RTL_5V, high-speed links, and full Path-B validation
+remain open.
 V116 adds the PEDET U1-to-M.2 launch on an independent F.Cu corridor. Native
  connectivity joins U1.8 to J1.69 and native DRC reports no
  `shorting_items` or `tracks_crossing`. Promote V116 only as the disposable

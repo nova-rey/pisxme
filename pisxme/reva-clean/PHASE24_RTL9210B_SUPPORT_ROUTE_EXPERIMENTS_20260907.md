@@ -162,6 +162,15 @@ native PEDET audit: R2.1/U1.8/J1.69 are connected, and the trace-removal
 negative control fails as required. Promote V122 only as the disposable
 complete PEDET sub-primitive; remaining Path-B gates stay open.
 
+V123/V124 joined R3.1 electrically but crossed existing SPI/PEDET/1V1 fields.
+V125/V126 moved the return right but contacted C5/RTL_3V3; V127/V128/V129
+reduced the defect to the PERST elbow, and V130 reduced it to one upper-rail
+crossing. V131 overpasses that rail and passes the focused CLKREQ audit:
+R3.1/U1.13/J1.52 are connected, with no `shorting_items` or
+`tracks_crossing`; the route-removal negative control fails as required.
+Promote V131 only as the disposable complete CLKREQ sub-primitive; RESET_N,
+RTL_5V, high-speed links, and full Path-B validation remain open.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It
