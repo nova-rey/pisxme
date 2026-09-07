@@ -101,3 +101,8 @@ V13 tested the same V12 topology with 0.10-mm escape tracks. Native DRC
 reported 102 violations / 34 unconnected items, including 28 track-width
 violations. It is rejected under the existing width contract; no rule was
 relaxed and no copper was integrated.
+
+V14 repeated V13 at 0.15 mm. Native DRC reported 105 violations / 34
+unconnected items, including 28 track-width violations. It is rejected under
+the selected 0.20-mm differential-width contract; V12 remains the valid-width
+baseline.

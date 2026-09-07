@@ -4498,6 +4498,18 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-A isolated M.2 lane-0 launch V14 — 2026-09-07
+
+V14 repeated the V13 geometry at 0.15 mm, below the selected 0.20-mm
+differential route width. Native DRC reported 105 violations / 34
+unconnected items, including 28 track-width violations. It is rejected; the
+approved width contract is not relaxed. V12 remains the valid-width baseline
+with zero shorts and zero crossings.
+
+`PATHA_M2_LANE0_V14 = REJECTED`
+`FAILURE_CLASS = MANUFACTURING_RULE / ROUTE_IMPLEMENTATION`
+`PHASE24 = OPEN`
+
 ## Path-A isolated M.2 lane-0 launch V13 — 2026-09-07
 
 V13 retained V12 geometry with 0.10-mm disposable escape tracks as a

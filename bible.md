@@ -5178,3 +5178,7 @@ escape tracks to discriminate contact-field clearance. Native DRC reported
 102 / 34 with zero shorts/crossings but 28 track-width violations. Rejected
 under the unchanged manufacturing contract; V12 remains the best valid-width
 topology baseline and production CAD is unchanged.
+2026-09-07 — PiSXMe Phase 24 Path A: tested V14 at 0.15-mm track width.
+Native DRC reported 105 / 34 with 28 track-width violations. Rejected under
+the selected 0.20-mm differential-width contract; V12 remains the valid-width
+baseline and production CAD is unchanged.
