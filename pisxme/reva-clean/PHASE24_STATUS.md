@@ -52,6 +52,14 @@ the destination lanes intersect inherited control corridors and the lower
 SPISI branch. It is rejected as a complete route; the clean source escape is
 retained as the next writer's oracle.
 
+The next source-authority discriminator starts from V6 directly:
+`PHASE24_RTL9210B_V6_LATERAL_SUPPORT_PLACEMENT_V2` moves only U2/C3/C4/C5
+20 mm laterally and reports 8 violations / 43 opens before new copper. Its
+SPI extension, `PHASE24_RTL9210B_V6_LATERAL_SPI_V3`, reports 22 violations /
+38 opens and is rejected for destination/corridor implementation conflicts.
+This separates the clean QFN escape from the still-unproven destination
+fanout; no production CAD has changed.
+
 The original isolated RTL9210B-CG bring-up fixture remains archived at
 `PHASE24_RTL9210B_BRINGUP_FIXTURE.kicad_pcb`. It captures the corrected
 QFN-68/M-key lane mapping, PEDET/sideband ownership, support-net boundary,

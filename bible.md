@@ -5322,6 +5322,11 @@ reported 29 violations / 38 opens; source geometry was recoverable, but the
 destination lanes intersect inherited controls and the lower SPISI branch.
 Rejected as a complete route; source-escape evidence retained and production
 CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: rebuilt the lateral support placement
+from the clean V6 source directly. Placement-only native DRC was 8/43; the
+laterally extended SPI route was 22/38 and was rejected for destination and
+corridor conflicts. Source escape remains the authority; production CAD and
+Path A unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: created a coherent support-branch
 relocation probe translating U2/C3/C4/C5/R2/R3 by 22 mm. A serialized
 net-scoped scrub removed only affected tracks/vias without unstable SWIG
