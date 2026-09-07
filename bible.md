@@ -4872,3 +4872,8 @@ validation remain open.
 2026-09-06 — PiSXMe Phase 24 dual-mode storage: refreshed the live status
  checkpoint to `5184b6f`, distinguishing the passing native endpoint audit
  from the still-failing native DRC route gate.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: reduced the SATA route trial
+ to a minimal U7/C30–C33/J3 native fixture. The eight-endpoint audit remained
+ PASS and native DRC reduced to 59 findings, isolating the remaining issue to
+ local bridge/capacitor escape ordering. Preserved the raw report and did not
+ promote the route.

@@ -31,6 +31,13 @@ the latest failure being shared-corridor crossings and inherited fixture
 opens. This is an open route-implementation experiment, not a Phase 24 or
 Path-A closure.
 
+A minimal U7/C30–C33/J3 fixture then reduced the native DRC result to 59
+findings while retaining the eight-endpoint audit PASS. This removes unrelated
+board obstacles and confirms the remaining defect class is local escape and
+pair ordering around the bridge/capacitor row. The raw report is
+`PHASE24_PATHA_MINIMAL_SATA_CORRIDOR_20260906-drc.rpt`; no production route
+was promoted.
+
 Latest private storage evidence checkpoint: `9e45a72`. The retained WIP
 RTL9210B native XML support netlist now has a reproducible audit with
 component, rail, clock, SPI, reset, RSET, PEDET, ISOLATEB, shared-lane, and

@@ -55,6 +55,16 @@ still rejected the trial because the independently authored corridors cross
 in the shared storage acreage. This is retained as another rejected route
 implementation, with no production promotion.
 
+Finally, the same author was run against a minimal native fixture containing
+only U7, C30–C33, and J3, with all inherited footprints, copper, and zones
+removed. The eight-endpoint audit again passed. Native DRC improved to 59
+findings, and the remaining errors are now directly attributable to the
+trial's pair ordering around the U7/coupling row and the deliberate absence
+of the other storage support connections. This isolates the problem as route
+implementation/escape development; it does not reject the M-key authority or
+the Path-A topology. Raw evidence is
+`PHASE24_PATHA_MINIMAL_SATA_CORRIDOR_20260906-drc.rpt`.
+
 ## Next action
 
 Continue with a layer-separated, native-pad-derived U7 escape trial or a
