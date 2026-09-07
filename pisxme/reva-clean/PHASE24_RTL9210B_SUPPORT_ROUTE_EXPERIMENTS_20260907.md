@@ -20,6 +20,15 @@ Native KiCad reports 9 violations / 41 opens: the departure collides with
 SPISO3/SPICS and crosses the SPICLK B.Cu channel. V20 remains the best
 implementation baseline; a formal escape-cell construction is still needed.
 
+## 90-degree formal source field V24 — local PASS
+
+V24 moves the SPISI transition outside the measured SPICLK clearance envelope
+while retaining the mixed-layer channel plan. Native KiCad reports 2 inherited
+findings / 41 opens and no signal shorts, crossings, or clearance violations.
+Saved-board native checks pass SPISI, SPICLK, SPISO3, and RTL_3V3 endpoints;
+removing a required SPISI segment fails the negative control. V24 is a local
+source-field baseline, not full RTL9210B fixture closure.
+
 The native escape-cell map utility now records the transformed U1 pad centers,
 orientations, dimensions, and package-center outward vectors in
 `PHASE24_RTL9210B_ESCAPE_CELL_MAP_NATIVE_V15.txt`. This map is the source for

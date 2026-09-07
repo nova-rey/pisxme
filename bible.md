@@ -5590,6 +5590,10 @@ is still required.
 Added a native transformed-pad escape-cell map utility and V15 receipt; it
 records U1 pad centers, dimensions, orientations, and outward vectors for the
 next formal source-escape generator.
+Formal native-pad source field V24 is a local PASS: native KiCad reports no
+signal shorts, crossings, or clearance violations, positive saved-board
+connectivity passes SPISI/SPICLK/SPISO3/RTL_3V3, and the SPISI trace-removal
+negative control fails as required. Remaining RTL9210B support is open.
 The 90-degree V18-V21 trials remain disposable evidence. V20 reduced the
 source-field result to 3 findings / 41 opens; V21 rejected down/right RTL_3V3
 because it entered adjacent U1 RTL_5V/RTL_1V1 pads and crossed SPICLK. A

@@ -150,6 +150,11 @@ multi-net route implementation failure. The next class must change the U1 or
 local-support placement/orientation and regenerate the field, not add more
 coordinate-only vias.
 
+Formal native-pad source field V24 is a local PASS: native KiCad reports no
+signal shorts, crossings, or clearance violations, positive saved-board
+connectivity passes SPISI/SPICLK/SPISO3/RTL_3V3, and the SPISI trace-removal
+negative control fails as required. Remaining RTL9210B support is open.
+
 The 90-degree U1 placement/source-field V16 probe is rejected at 7 native
 violations / 41 opens. Straight top-row departures are mechanically cleaner,
 but the B.Cu channels still cross at the U2 handoff. The orientation remains
