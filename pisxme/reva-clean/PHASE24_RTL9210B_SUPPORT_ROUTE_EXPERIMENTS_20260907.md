@@ -1293,6 +1293,19 @@ negative control fails as required. V185 is a promoted disposable rail
 sub-primitive; the remaining 3V3 branches, support rails, SPI/control, and
 full Path-B validation remain open.
 
+## V198–V200 SPICLK/crystal allocation
+
+V198 retained the V193 support placement and moved XTAL_IN left, but the
+straight SPICLK column contacted Y1.1. V199 translated Y1/C1/C2/R1 east by
+2 mm and regenerated all crystal/RSET routes; it removed the shorts but
+left an RSET/XTAL_OUT crossing. V200 corrected only the RSET transition to
+the validated y=67.5 gap. Native KiCad reports 318 findings / 26
+unconnected items for V200, with zero `shorting_items` and zero
+`tracks_crossing`. The saved-board audit passes XTAL_IN, XTAL_OUT, RSET,
+and SPICLK, with four trace-removal negative controls. V200 is promoted as
+the disposable crystal/SPICLK basis; remaining SPI/control and Path-B gates
+remain open.
+
 ## V197 coherent crystal/SPI west shift — rejected
 
 V197 moved Y1/C1/C2/R1 west as one support cluster, regenerated XTAL_IN,

@@ -182,6 +182,18 @@ fails as required. Promote V131 only as the disposable complete CLKREQ
 sub-primitive; RESET_N, RTL_5V, high-speed links, and full Path-B validation
 remain open.
 
+## Current RTL9210B crystal/SPICLK basis — V200
+
+`PHASE24_RTL9210B_SPICLK_CRYSTAL_EAST_V200.kicad_pcb` is the promoted local
+support basis. V198 was rejected for Y1.1 contact; V199 removed the shorts
+but retained an RSET/XTAL_OUT crossing. V200 corrects the RSET transition.
+Native KiCad DRC reports 318 findings / 26 unconnected items with zero
+`shorting_items` or `tracks_crossing`; saved native connectivity and four
+negative controls pass.
+
+V200 is disposable support evidence only. Remaining SPI/control paths,
+mode validation, and production integration remain open.
+
 ## Current RTL9210B crystal/SPI allocation — V197 rejected
 
 V197 was the first coherent west shift of the complete Y1/C1/C2/R1 support
