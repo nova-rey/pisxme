@@ -19,6 +19,17 @@ legally. This is footprint/route implementation evidence, not a Path-B
 architecture rejection. The corrected footprint frame must be used for any
 further U2 placement comparison.
 
+The corrected-footprint left/90-degree placement
+`PHASE24_RTL9210B_U2_CORRECTED_LEFT_ROT90_PLACEMENT_V1` is mechanically/native
+placement-clean apart from the inherited six GND/footprint findings (6
+findings / 44 opens) and introduces no signal short. A first mixed-layer SPI
+route against its real transformed pads,
+`PHASE24_RTL9210B_U2_CORRECTED_LEFT_ROT90_SPI_V1`, is rejected at 24
+violations / 39 opens for source/target-field clearances and SPI shorts or
+crossings. This separates the corrected footprint placement evidence from
+the still-failing route implementation; no production CAD or Path-A asset
+changed.
+
 The disposable `PHASE24_RTL9210B_QFN_SPI_POWER_PARTITION_V1` probe was
 authored after correcting a KiCad Python net-handle defect. Native KiCad
 reports 22 violations / 33 unconnected items. The candidate is rejected as a

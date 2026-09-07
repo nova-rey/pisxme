@@ -25,6 +25,18 @@ an implementation candidate, while the coordinate-frame correction is
 retained as the basis for future placement tests. The defect does not alter
 the Path-B electrical decision or production CAD.
 
+The corrected-footprint left/90-degree placement
+`PHASE24_RTL9210B_U2_CORRECTED_LEFT_ROT90_PLACEMENT_V1.kicad_pcb` was then
+checked without copper. Native KiCad reports 6 findings / 44 opens, with no
+new signal short; the inherited findings are the known GND/footprint
+conditions. A mixed-layer SPI trial against its actual transformed pads,
+`PHASE24_RTL9210B_U2_CORRECTED_LEFT_ROT90_SPI_V1.kicad_pcb`, reports 24
+violations / 39 opens, including SPISI/SPICLK and SPICS/SPISO conflicts and
+pad-field clearances. It is rejected as a route implementation. The
+placement remains valid evidence that further trials must use corrected
+transformable geometry, but this coordinate/orientation plus simple
+two-layer escape is not promotable.
+
 ## Attempt 1 — all-F.Cu support fanout
 
 `PHASE24_RTL9210B_BRINGUP_SUPPORT_ROUTED.kicad_pcb`

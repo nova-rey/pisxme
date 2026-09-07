@@ -512,6 +512,12 @@ Recorded seeded-exit search result; inherited SATA launch still blocks downstrea
 - The J10-side route stays below the connector contact row and avoids the
   existing FAST-B USB3 DM/RX geometry. PCIe and accepted high-speed routes are
 unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: validated a corrected U2 footprint in a
+left/90-degree placement-only candidate at 6 findings / 44 opens with no new
+signal short, then rejected its mixed-layer SPI route at 24 violations / 39
+opens for pad-field clearances and SPI shorts/crossings. Corrected footprint
+geometry is now the basis for future trials; production CAD and Path A remain
+unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: tested RTL_5V pad-17 escape V1. Native
 connectivity gained one rail endpoint and reduced opens 30 to 29, but native
 DRC reported 8 violations from SPI/control-field crossings and shorts.
