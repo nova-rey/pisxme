@@ -29,6 +29,10 @@ V138 and V139 reapply the earlier U1.34 RTL_3V3 handoff on V137. Both join
 U1.34 to C3/R2/R3/U1.20 in saved-board connectivity. V138 shorts the promoted
 RTL_5V source field; V139 avoids that field but crosses SPISO3. Reject both as
 route-allocation evidence. U1.34 remains an open endpoint.
+V140 moves the U1.34 source left and raises its B.Cu corridor. It still
+shorts SPISO and leaves a crossing in native DRC, so it is rejected. The
+remaining U1.34 issue is allocation of the shared QFN source field on the
+promoted V137 basis, not missing saved-board connectivity.
 
 ## V76–V78 U1.40 edge-group trials — rejected
 

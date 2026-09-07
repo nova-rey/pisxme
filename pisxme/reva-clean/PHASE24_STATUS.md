@@ -16,6 +16,10 @@ V138 and V139 apply the earlier U1.34 RTL_3V3 handoff to the promoted V137
 rail basis. Both achieve native U1.34-to-C3/R2/R3/U1.20 connectivity, but V138
 shorts the new RTL_5V source field and V139 collides with SPISO3 and retains a
 track crossing. Reject both as route-allocation evidence; U1.34 remains open.
+V140 shifts the U1.34 departure left and raises the B.Cu handoff above the
+V139 SPISO3 via, but native DRC still reports three SPISO↔RTL_3V3 shorts and
+one crossing. Reject V140; U1.34 needs a new shared QFN source-field
+allocation rather than another blind endpoint tweak.
 current promoted disposable support basis is
 `PHASE24_RTL9210B_U136_RIGHT_ESCAPE_V102.kicad_pcb`. V97 moved
 `XTAL_OUT` above the local support field and added U1.55; V98 and V99 are
