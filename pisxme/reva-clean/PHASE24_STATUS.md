@@ -156,6 +156,13 @@ the saved-board audit passes all eight U1 rail pads plus C4.1. Native DRC is
 boundaries. This is positive evidence that V11 fails from neighboring-copper
 integration congestion, not from an intrinsically impossible QFN escape.
 
+The V12 combined transplant of the isolated 1V1 fanout is rejected as an
+integration candidate. It reduces native opens to 18, but native DRC rises to
+30 violations with CLKREQ_N, XTAL_OUT, RTL_3V3, RTL_5V, and clearance/crossing
+conflicts. The isolated V1 fanout remains electrically valid; V11 remains the
+combined baseline for support-corridor relocation rather than direct copper
+transplant.
+
 The QFN escape-map utility now inspects the latest integrated V11 saved board,
 including the validated RSET transplant, instead of superseded V3/V5 fixture
 states. `PHASE24_RTL9210B_QFN_ESCAPE_MAP_V5.txt` is retained as historical

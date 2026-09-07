@@ -5331,6 +5331,10 @@ fanout from neighboring copper. Native DRC is 1/37, and the saved-board audit
 passes U1 pads 16/25/36/40/50/55/60/63 plus C4.1. This proves the fanout is
 viable in isolation; V11 failures are integration congestion, not package
 impossibility. Production CAD remains unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: transplanted the isolated audited 1V1
+fanout into the V11 combined candidate as V12. Opens fell to 18, but native
+DRC rose to 30 with CLKREQ_N, XTAL_OUT, and rail conflicts. Rejected as
+integration congestion; isolated V1 remains the valid fanout geometry.
 2026-09-07 — PiSXMe Phase 24 Path B: the SPI-only lateral proof passed native
 saved-board connectivity for all five U1-to-U2 SPI nets; serialized removal of
 all SPICS copper failed the negative control as required. Native DRC reports
