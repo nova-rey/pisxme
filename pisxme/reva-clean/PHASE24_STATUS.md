@@ -5381,3 +5381,9 @@ target the live V3 disposable board and derive endpoint membership from
 KiCad's native connectivity. It now passes three RTL_5V endpoints and eight
 RTL_1V1 endpoints; it no longer uses text-count heuristics or a nonexistent
 historical board.
+### Path-B V3 refreshed baseline
+
+The live V3 disposable fixture was revalidated with native KiCad: 4 DRC
+violations and 29 unconnected items. The focused native endpoint audits pass
+RTL_5V (U1.17/U1.33/C5.1) and RTL_1V1 (eight asserted endpoints), including
+the RTL_5V negative control. No production CAD changed.

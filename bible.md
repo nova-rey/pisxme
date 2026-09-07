@@ -5261,3 +5261,7 @@ Rejected as route implementation evidence; production CAD unchanged.
 support audit to load the live V3 board and use native KiCad connectivity.
 The audit passes three RTL_5V and eight RTL_1V1 endpoints. No production CAD
 changed.
+2026-09-07 — PiSXMe Phase 24 Path B: refreshed the V3 disposable baseline
+with native KiCad DRC (4 violations / 29 opens) and live endpoint audits.
+RTL_5V and RTL_1V1 assertions passed; the RTL_5V negative control failed as
+required. Production CAD unchanged.
