@@ -6741,3 +6741,7 @@ with the required trace-removal negative control, but native DRC introduces
 three signal shorting classes (USB_RXN0/RTL_3V3 twice and ISOLATEB/CLKREQ_N)
 at 493 findings / 15 unconnected items. V242 remains the promoted rail
 basis; no Path-A or production/acreage CAD change occurred.
+V250 is rejected: native rail/REFCLK connectivity and the trace-removal
+negative control pass, but DRC reports 541 findings / 14 opens with three
+signal shorts and one source-field crossing. The next experiment must
+co-relocate inherited USB/3V3/GND fields with the QFN departures.

@@ -1570,3 +1570,13 @@ trace-removal negative control pass. Native DRC reports 525 findings / 14
 unconnected items, with two REFCLK/source-field crossings and one
 REFCLK_N/RTL_1V1 short at the QFN pad launches. Reject V249; the next trial
 must separate the first F.Cu departures before either layer transition.
+
+## V250 QFN source-field parallel departures — rejected
+
+V250 tested 0.13-mm parallel lower-edge departures for REFCLK_P, REFCLK_N,
+U1.60, and U1.63, with relocated local REFCLK transitions and the V242 rail
+trunk preserved. Native rail/REFCLK connectivity and the trace-removal
+negative control pass. Native DRC reports 541 findings / 14 unconnected
+items, including three signal shorts (USB_RXN0/RTL_3V3 twice and RTL_3V3/GND)
+and one remaining source-field crossing. Reject V250; the adjacent inherited
+USB/3V3/GND fields must be co-relocated before another parallel escape.

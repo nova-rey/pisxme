@@ -513,6 +513,11 @@ Recorded seeded-exit search result; inherited SATA launch still blocks downstrea
 - The J10-side route stays below the connector contact row and avoids the
   existing FAST-B USB3 DM/RX geometry. PCIe and accepted high-speed routes are
 unchanged.
+2026-09-07: Rejected RTL9210B V250 parallel lower-edge QFN source-field
+departures. Native rail/REFCLK connectivity and the trace-removal negative
+control passed, but DRC found three signal shorts and one crossing against
+inherited USB/3V3/GND fields. V242 remains the promoted disposable rail
+basis; Path A and production CAD remain unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: tested corrected U2 far placement with
 an order-preserving two-layer SPI partition. Native KiCad reports 30
 violations / 40 opens; dominant failures remain the rotated U1 QFN source
