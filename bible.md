@@ -5200,3 +5200,8 @@ KiCad's saved pad/track/via connectivity passes PEDET, CLKREQ_N, PERST_N,
 RESET_N, and U1↔U2 SPICS/SPISO/SPISI/SPICLK; removing PEDET copper makes the
 negative control fail. Test pads remain open and unasserted; no synthetic
 edges or production copper were added.
+2026-09-07 — PiSXMe Phase 24 Path B: tested RTL_1V1 ordinary-via QFN
+collector V1. Native DRC reported 9 violations / 29 unconnected items,
+reducing the V12 baseline by seven opens. Rejected the first perimeter
+geometry for SPICS/SPISO and CLKREQ conflicts; rail collection remains the
+next implementation class and production copper is unchanged.

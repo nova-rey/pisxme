@@ -4498,6 +4498,20 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-B RTL_1V1 QFN collector V1 — 2026-09-07
+
+V1 added ordinary-via perimeter collection for the actual U1 RTL_1V1 pads,
+without via-in-pad. Native DRC reports 9 violations / 29 unconnected items,
+reducing the V12 baseline's 36 opens by seven. It is rejected as authored:
+the first perimeter collides with SPICS/SPISO near the QFN edge, crosses the
+CLKREQ field, and contains a duplicate existing transition. The reduction
+confirms coherent rail collection is the correct next class; no copper is
+promoted and production CAD remains unchanged.
+
+`PATHB_RTL_1V1_COLLECTOR_V1 = REJECTED`
+`PATHB_SUPPORT_OPEN = TRUE`
+`PHASE24 = OPEN`
+
 ## Path-B native connectivity audit — 2026-09-07
 
 `phase24_rtl9210b_control_connectivity_audit.py` now derives connectivity

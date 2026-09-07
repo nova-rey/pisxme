@@ -257,6 +257,14 @@ reported 33 violations / 35 unconnected items. The four B.Cu lanes caused
 source-pad shorts, RESET/PERST/CLKREQ crossings, mask bridges, and via
 clearance failures. V2 is rejected; no test-access copper is promoted.
 
+## RTL_1V1 QFN collector V1
+
+The first ordinary-via perimeter collector for U1 RTL_1V1 pads reduced native
+unconnected items from 36 to 29, but DRC reported 9 violations from SPICS/
+SPISO pad-field conflicts, a CLKREQ crossing, and duplicate-via geometry.
+It is rejected as a route implementation; the open-count reduction confirms
+that coherent rail collection is preferable to individual signal detours.
+
 ## Native connectivity audit
 
 `phase24_rtl9210b_control_connectivity_audit.py` uses KiCad's actual saved
