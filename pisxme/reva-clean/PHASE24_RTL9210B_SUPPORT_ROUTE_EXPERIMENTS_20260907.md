@@ -89,6 +89,14 @@ this as negative evidence; V49 remains the cleanest handoff basis. The next
 rail pass must derive resistor pad sides from the saved footprint and allocate
 a collector corridor that is clear of SPI.
 
+V52 is the first successful complete RTL_3V3 rail join in this series. It
+normalizes the R2/R3 footprint frames, escapes their verified RTL_3V3 pad 2
+sides, and uses a B.Cu collector clear of the retained SPI transitions. Native
+DRC reports 5 inherited warnings / 28 intended opens; saved-board connectivity
+joins U1.20/U1.34/U1.39/U1.52, U2.3/U2.8, R2.2, R3.2, and C3.1. Promote V52 as
+the current disposable 3V3 basis, while retaining the remaining rail/control
+opens as unfinished work.
+
 V40 jointly reauthored the 3V3/5V rail spines. Native DRC reports 8 findings,
 including a new RTL_3V3/SPISO3 source collision and retained RTL_5V/SPISI and
 C5-handoff conflicts. It is rejected; the next rail class must keep the V24

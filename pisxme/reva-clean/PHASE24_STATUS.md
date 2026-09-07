@@ -102,6 +102,14 @@ the retained SPISO3 transition. This is a route-authoring failure; V49
 remains the current cleanest basis and the next pass must verify resistor pad
 orientation before selecting a separate collector corridor.
 
+V52 normalizes the native R2/R3 footprint frames and derives pad-2 escapes
+from the saved pad/net identities. The taps are collected on a B.Cu corridor
+that approaches the existing U1.20/C3 trunk from the SPI-clear side. Native
+DRC is 5 inherited isolated-copper/silkscreen warnings / 28 opens, and the
+saved-board connectivity audit joins all RTL_3V3 pads across U1, U2, R2, R3,
+and C3. V52 is promoted as the current disposable RTL_3V3 rail basis; the
+remaining Path-B support rails and controls are still open.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch
