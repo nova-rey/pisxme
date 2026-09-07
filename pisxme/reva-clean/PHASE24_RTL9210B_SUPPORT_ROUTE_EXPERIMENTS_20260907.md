@@ -38,6 +38,11 @@ RTL_5V route to corrected C5, but native DRC reports two real crossings with
 the retained RTL_3V3/SPI corridor. It is rejected as a route implementation;
 the next attempt must co-author the 3V3 and 5V fields.
 
+V40 jointly reauthored the 3V3/5V rail spines. Native DRC reports 8 findings,
+including a new RTL_3V3/SPISO3 source collision and retained RTL_5V/SPISI and
+C5-handoff conflicts. It is rejected; the next rail class must keep the V24
+3V3 source departure and add partitioned access around it.
+
 V37 added explicit rail pad-to-via dogbones and shaped B.Cu rail fields. It is
 rejected at 41 native violations / 34 opens because the via fanout enters the
 QFN SPI/source field and neighboring rail pads. The result is preserved as

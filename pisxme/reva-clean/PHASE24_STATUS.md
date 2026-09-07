@@ -50,6 +50,13 @@ findings / 32 opens because its B.Cu handoff crosses the retained RTL_3V3
 trunk and SPISI transition. The corrected capacitor CAD is retained; the
 next candidate must jointly allocate the 3V3/5V rail corridors.
 
+V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
+It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
+collides with the retained SPISO3 source departure, while the 5V branch
+still contacts the SPISI handoff and the corrected C5 transition. The next
+candidate must preserve the validated V24 3V3 source departure and add rail
+access in a partitioned local field.
+
 Path B remains a disposable RTL9210B qualification path. The current best
 combined support baseline is `PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V8`
 plus the validated RTL_5V V9 rail primitive. V8 native support and SPI audits
