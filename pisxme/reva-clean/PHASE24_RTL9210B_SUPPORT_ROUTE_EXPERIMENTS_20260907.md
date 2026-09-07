@@ -1433,3 +1433,15 @@ the trace-removal negative control pass; native DRC reports a real
 REFCLK_P/PERST_N short/crossing. This confirms that PERST requires a coupled
 REFCLK/QFN source-field allocation. It is rejected as a route
 implementation; no Path-A or production-CAD change occurred.
+## V227 coordinated SPISO3/PERST QFN source-field repair
+
+V227 removed the prior disposable SPISO3 and PERST route implementations and
+co-authored both source fields. SPISO3 moves to an outboard F.Cu column;
+PERST exits U1.14 through the newly cleared F.Cu lane, transitions below the
+PEDET trunk, and launches to J1.50. Native connectivity passes both
+SPISO3/U1.22-to-U2.7 and PERST/U1.14-to-J1.50 assertions. Both trace-removal
+negative controls fail as required. Native DRC reports 392 findings / 21
+unconnected items with zero `shorting_items` and zero `tracks_crossing`.
+V227 is promoted as a disposable coupled-source-field basis. R3.1/CLKREQ,
+remaining rails, high-speed paths, mode, firmware, and production gates
+remain open.

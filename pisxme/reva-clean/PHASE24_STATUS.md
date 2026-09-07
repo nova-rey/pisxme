@@ -6633,3 +6633,16 @@ therefore localized to the coupled U1.14/REFCLK/QFN source field; it is not a
 connector or long-corridor failure. V220 remains the clean partial CLKREQ
 U1/J1 slice, while R3.1 and complete PERST remain open. Path A and production
 CAD are unchanged.
+## Current RTL9210B coupled QFN sideband basis — V227
+
+`PHASE24_RTL9210B_QFN_SIDEBAND_SPISO3_PERST_V227.kicad_pcb` is the current
+disposable basis for the coupled U1 source field. It co-authors SPISO3 and
+PERST around the QFN rather than preserving their conflicting historical
+departures. Native DRC reports 392 findings / 21 unconnected items with zero
+`shorting_items` and zero `tracks_crossing`; native connectivity and two
+trace-removal negative controls pass.
+
+This is not Path-B closure or production integration. CLKREQ/R3.1, remaining
+support rails, USB/SATA high-speed routing, mode-aware validation,
+firmware/procurement, and integrated mechanical/DFM gates remain open. Path A
+and production CAD remain unchanged.

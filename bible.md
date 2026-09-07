@@ -5718,3 +5718,9 @@ remaining source defect to a REFCLK_P/PERST_N via/track short and crossing.
 Endpoint connectivity and negative control still pass. PERST requires a
 coupled QFN/REFCLK source-field allocation; no Path-A or production-CAD
 change occurred.
+2026-09-07: Promoted RTL9210B V227 as the disposable coupled QFN source-field
+basis. Co-authored SPISO3 and PERST, replacing their conflicting local
+departures; both native endpoint audits and two trace-removal negative
+controls pass, with zero native signal shorting/crossing classes. Path A and
+production CAD remain unchanged; CLKREQ/R3.1 and all remaining Path-B gates
+stay open.
