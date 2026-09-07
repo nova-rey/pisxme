@@ -57,6 +57,12 @@ U1.52 is open. V45's attempted U1.52 handoff is rejected at 10 findings /
 30 opens for XTAL_IN-via clearances. Further work must relocate the handoff
 or regenerate the U1.52/XTAL_IN source field together.
 
+V46 co-authored XTAL_IN and U1.52 from V44 but is rejected at 9 native
+violations / 30 opens. The new transitions collide at the 0.4-mm QFN pitch,
+including XTAL_IN/RTL_3V3 shorts and crossings. V44 remains the cleanest
+partial 3V3 result; further work must rotate or coherently relocate the local
+support field.
+
 V40 jointly reauthored the 3V3/5V rail spines. Native DRC reports 8 findings,
 including a new RTL_3V3/SPISO3 source collision and retained RTL_5V/SPISI and
 C5-handoff conflicts. It is rejected; the next rail class must keep the V24

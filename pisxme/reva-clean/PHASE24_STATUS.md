@@ -70,6 +70,12 @@ join and is rejected at 10 findings / 30 opens for repeated XTAL_IN-via
 clearance violations. The next step must relocate the 3V3 support handoff or
 co-author the U1.52/XTAL_IN source field; no production CAD changed.
 
+V46 co-authored XTAL_IN and U1.52 from the V44 partial branch. It is rejected
+at 9 native violations / 30 opens: the proposed transitions collide at the
+0.4-mm QFN source pitch and XTAL_IN/RTL_3V3 short/cross. V44 remains the
+cleanest partial 3V3 result; the next credible class is local U1/support
+rotation or coherent support relocation, not further coordinate nudging.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch
