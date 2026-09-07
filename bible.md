@@ -5443,3 +5443,9 @@ mutation. Native DRC of the resulting V1 candidate reports 22 violations / 33
 opens, including RTL_1V1/U1.14, RTL_1V1/XTAL_OUT, and SPI corridor conflicts.
 Rejected as route implementation evidence; staged V4 remains the local
 rail/crystal/RSET baseline and production CAD is unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: preserved the coherent U1/support
+relocation discriminator at (+18,+18) mm. Serialized local copper was
+scrubbed before moving U1, crystal/RSET/decoupling support, and PEDET/CLKREQ
+pull-ups; native KiCad reports 9 findings / 45 opens with no new signal
+shorts or crossings. This is placement-only evidence, not a support-route
+pass; production CAD and Path A remain unchanged.
