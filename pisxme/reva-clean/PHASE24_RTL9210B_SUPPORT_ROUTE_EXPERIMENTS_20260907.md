@@ -102,6 +102,18 @@ hole, mask, thermal, and unconnected findings; those are not waived or
 represented as a full support PASS. V100 is promoted only as the current
 U1.55/XTAL support sub-primitive.
 
+## V101/V102 U1.36 completion trials
+
+V101 attempted a left-side U1.36 RTL_1V1 handoff and is rejected by native
+KiCad: its via/escape shorted and crossed the retained RTL_3V3 source field.
+V102 returns to V100 and routes U1.36 rightward to a native through-via and
+the existing RTL_1V1 collector. Native DRC reports no `shorting_items` or
+`tracks_crossing`; saved-board connectivity joins U1.36 with the complete
+currently assembled U1.16/U1.25/U1.40/U1.50/U1.55/U1.60/U1.63/C4.1 group.
+V102 is promoted only as the disposable 1V1 edge-group basis; remaining
+RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
+remain open.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It
