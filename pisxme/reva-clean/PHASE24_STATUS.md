@@ -140,6 +140,12 @@ crossings/shorts. Current gate is `ROUTE IMPLEMENTATION OPEN`; do not use the
 old V4 receipt as evidence of a closed SATA selector path. Full-board and
 combined USB3/SATA closure remain open.
 
+A TX-only thermal-clear V4 was tested from the V3 saved board. It removes the
+two original U13 thermal-pad shorts, but native DRC regresses to 136 findings
+/ 52 opens with TXP/TXN launch-via spacing conflicts and inherited corridor
+crossings. It is rejected as a route implementation; selector authority and
+the U13 thermal-pad assignment remain unchanged.
+
 See `PHASE24_PATHA_SATA_SELECTOR_CORRECTION_20260906.md` for the exact TI
 pin/port basis and raw selector-inclusive fixture names.
 

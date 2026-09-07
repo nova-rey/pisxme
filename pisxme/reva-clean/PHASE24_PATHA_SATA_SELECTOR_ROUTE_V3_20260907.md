@@ -31,3 +31,10 @@ Move TXN to a thermal-pad-clearing B.Cu escape with an ordinary via outside
 the U13 pad field, and re-author the four M.2 final dogbones with ordered
 target-via columns. Re-run native DRC, the 12-endpoint audit, pair geometry,
 and the selector negative control before considering integration.
+
+The TX-only thermal-clear experiment is preserved as
+`PHASE24_STORAGE_SATA_SELECTOR_TX_THERMAL_ESCAPE_V4.kicad_pcb`. It removed
+the two original U13 thermal-pad shorts but regressed to 136 native DRC
+findings / 52 opens, including TXP/TXN via spacing and inherited corridor
+crossings. It is rejected as a route implementation; no V4 copper is
+promoted.

@@ -5130,3 +5130,8 @@ architecture remain unpromoted; production CAD is unchanged.
 from U1 pad 17 on the V6 baseline. Native DRC regressed to 14 violations /
 35 opens from RTL_1V1/PERST collisions and an incomplete rail join. Rejected
 the rail-only repair and preserved the Path-B isolation boundary.
+2026-09-07 — PiSXMe Phase 24 Path A: tested a TX-only thermal-clear launch
+from the V3 selector fixture. It removed the original U13 thermal-pad shorts
+but regressed to 136 native DRC findings / 52 opens with TXP/TXN via spacing
+and inherited corridor conflicts. Rejected the route implementation and kept
+selector authority and production CAD unchanged.
