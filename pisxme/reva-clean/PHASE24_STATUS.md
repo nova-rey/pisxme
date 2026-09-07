@@ -110,6 +110,14 @@ saved-board connectivity audit joins all RTL_3V3 pads across U1, U2, R2, R3,
 and C3. V52 is promoted as the current disposable RTL_3V3 rail basis; the
 remaining Path-B support rails and controls are still open.
 
+V57 completes the RTL_5V disposable rail primitive from the native U1/C5 pad
+map. U1.33 escapes above the native SPI endpoints, U1.17 descends on the
+right, and C5.1 launches from its right side with a cleared via. Native DRC is
+5 non-signal isolated-copper/silkscreen warnings / 26 opens; saved-board
+connectivity joins U1.17, U1.33, and C5.1. V53-V56 remain rejected routing
+experiments. V57 is promoted as the current RTL_5V basis; RTL_1V1, controls,
+ground, USB, M.2, and full Path-B validation remain open.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

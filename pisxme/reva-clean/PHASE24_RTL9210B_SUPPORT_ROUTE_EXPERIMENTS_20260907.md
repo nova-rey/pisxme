@@ -97,6 +97,13 @@ joins U1.20/U1.34/U1.39/U1.52, U2.3/U2.8, R2.2, R3.2, and C3.1. Promote V52 as
 the current disposable 3V3 basis, while retaining the remaining rail/control
 opens as unfinished work.
 
+V57 completes the RTL_5V disposable rail primitive. Its U1.33-to-U1.17
+F.Cu escape passes above the native SPI source endpoints, then uses the
+SPI-clear B.Cu dogleg and a right-side C5.1 launch. Native DRC reports 5
+non-signal isolated-copper/silkscreen warnings / 26 intended opens, and
+saved-board connectivity joins U1.17/U1.33/C5.1. Promote V57 as the current
+RTL_5V basis; the remaining rail/control opens are unfinished.
+
 V40 jointly reauthored the 3V3/5V rail spines. Native DRC reports 8 findings,
 including a new RTL_3V3/SPISO3 source collision and retained RTL_5V/SPISI and
 C5-handoff conflicts. It is rejected; the next rail class must keep the V24
