@@ -1293,6 +1293,17 @@ negative control fails as required. V185 is a promoted disposable rail
 sub-primitive; the remaining 3V3 branches, support rails, SPI/control, and
 full Path-B validation remain open.
 
+## V197 coherent crystal/SPI west shift — rejected
+
+V197 moved Y1/C1/C2/R1 west as one support cluster, regenerated XTAL_IN,
+XTAL_OUT, RSET, and retried SPICLK. The native saved-board audit passed all
+four asserted net groups with negative controls, but native DRC reported
+315 findings / 27 unconnected items including an XTAL_OUT/SPICS crossing,
+SPISO contact to C2 ground, and a new SPICS/XTAL_OUT collision at the moved
+C2 pads. This placement class is rejected; it does not justify changing the
+accepted Path-B architecture. The next attempt must co-author the complete
+SPI/crystal destination field rather than shifting only the crystal cluster.
+
 ## SPICLK V194–V196 route allocation — rejected
 
 V194 shorted adjacent U1.18 SPISI and crossed XTAL_IN. V195 attempted the

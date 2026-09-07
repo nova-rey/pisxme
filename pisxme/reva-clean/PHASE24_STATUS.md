@@ -182,6 +182,15 @@ fails as required. Promote V131 only as the disposable complete CLKREQ
 sub-primitive; RESET_N, RTL_5V, high-speed links, and full Path-B validation
 remain open.
 
+## Current RTL9210B crystal/SPI allocation — V197 rejected
+
+V197 was the first coherent west shift of the complete Y1/C1/C2/R1 support
+cluster. It passed saved connectivity and four negative controls, but native
+DRC found 315 findings / 27 opens including XTAL_OUT/SPICS crossing and
+SPISO/C2-ground contact. The shift is rejected as a placement class. The
+remaining work is a coordinated SPI/crystal destination-field allocation;
+Path A and production CAD remain unchanged.
+
 ## Current RTL9210B SPICLK status — V194–V196 rejected
 
 V194–V196 were disposable SPICLK route trials from U1.19 to U2.6. V194
