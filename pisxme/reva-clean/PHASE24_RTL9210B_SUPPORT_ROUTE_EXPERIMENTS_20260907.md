@@ -109,3 +109,13 @@ candidate. Native DRC remains **0 violations** and unconnected items fall from
 52 to 45. This closes reference-plane connectivity for the disposable
 fixture only; it does not synthesize signal edges or promote the fixture into
 production CAD.
+
+## RTL_3V3 support bus
+
+The first power-support route exposed a generator assumption: after native
+KiCad saved the filled fixture, net identities were serialized by name rather
+than through the old numeric net table, and the first DRC was run before
+refilling zones. The generator now emits native named-net segments. The
+refilled candidate connects U2 pins 3/8, C3, and the R2/R3 3V3 returns;
+native DRC reports **0 violations / 41 unconnected items**, and the saved-net
+audit passes. This is a local support sub-gate, not full fixture closure.

@@ -5066,6 +5066,11 @@ full fixture and production CAD open/unchanged.
  items from 52 to 45. This closes only the fixture reference-return
  discriminator; signal/power/sideband/test-access opens and production CAD
  remain open/unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: corrected the disposable named-net
+ serialization path and routed the RTL_3V3 support bus. After native zone
+ refill, U2 pins 3/8, C3, and the R2/R3 3V3 returns pass the saved-net audit;
+ native DRC is 0 violations / 41 remaining opens. Rejected pre-refill zone
+ clearance output as stale fill state and kept production CAD unchanged.
 2026-09-07 — PiSXMe Phase 24 documentation hygiene: marked the original
  RTL9210B bring-up fixture's 56-open count as historical baseline evidence
  and pointed current-state prose to the SPI V7 plus GND-plane candidate with

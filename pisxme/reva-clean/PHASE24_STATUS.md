@@ -56,6 +56,13 @@ items. Those remaining opens are not waived; they are the next support,
 power, sideband, and test-access routing gate. Production CAD remains
 unchanged.
 
+The RTL_3V3 support bus is now a clean local sub-gate in
+`PHASE24_RTL9210B_3V3_SUPPORT.kicad_pcb`: U2 pins 3/8, C3, and the R2/R3
+3V3 returns are saved on the actual named net, the independent audit passes,
+and native DRC after zone refill reports 0 violations / 41 remaining opens.
+The initial pre-refill clearance findings were rejected as stale zone-fill
+state and are not used as current evidence.
+
 ## Current live correction — 2026-09-06
 
 The old V4 SATA claim is superseded for Path-A topology: its C30–C33 to J3
