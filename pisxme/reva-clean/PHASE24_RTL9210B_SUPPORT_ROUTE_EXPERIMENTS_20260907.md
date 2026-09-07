@@ -5,6 +5,26 @@ Status: **REJECTED ROUTE IMPLEMENTATIONS; PATH B ARCHITECTURE UNCHANGED**
 These experiments operate only on disposable RTL9210B bring-up fixtures.
 Neither changes `STORAGE.kicad_sch` nor the clean acreage PCB.
 
+## Latest source-field experiments
+
+The fully scrubbed rotated-U1 staggered-via candidate
+`PHASE24_RTL9210B_ROTATE_U1_STAGGERED_SPI_V1.kicad_pcb` was tested with
+ordinary 0.6/0.3-mm vias and source transitions spaced 1.2 mm apart. Native
+KiCad reports 24 violations / 40 unconnected items, including SPI net
+shorts, crossings, and source-field clearances. It is rejected as a route
+implementation; no production or Path-A asset changed.
+
+That trial also exposed a real disposable-library defect in U2. The
+`BRINGUP_W25Q128_SPI_FLASH` footprint had `(at 20 18)` but pad coordinates
+that were authored as absolute-looking board coordinates. Consequently,
+moving U2 did not move its pads. A corrected local-coordinate test was
+created as `PHASE24_RTL9210B_U2_CORRECTED_FOOTPRINT_V1.kicad_pcb`. Its native
+DRC result is 53 violations / 39 opens because the selected placement and
+SPI permutation still collide with the rotated U1 field; it is rejected as
+an implementation candidate, while the coordinate-frame correction is
+retained as the basis for future placement tests. The defect does not alter
+the Path-B electrical decision or production CAD.
+
 ## Attempt 1 — all-F.Cu support fanout
 
 `PHASE24_RTL9210B_BRINGUP_SUPPORT_ROUTED.kicad_pcb`

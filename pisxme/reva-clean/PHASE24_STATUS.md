@@ -4,6 +4,21 @@
 
 ### Current open gate
 
+Path B remains a disposable qualification path. The latest fully scrubbed
+rotated-U1 staggered-via SPI escape
+`PHASE24_RTL9210B_ROTATE_U1_STAGGERED_SPI_V1` is rejected as a route
+implementation: native KiCad reports 24 violations / 40 unconnected items,
+including real SPI shorts/crossings and source-field clearance failures.
+The subsequent left-relocation probe exposed and corrected a separate
+authoring defect in the disposable U2 flash footprint: its anchor was at
+`(20,18)` while its pad coordinates were effectively absolute. The corrected
+coordinate-frame candidate `PHASE24_RTL9210B_U2_CORRECTED_FOOTPRINT_V1`
+reports 53 violations / 39 opens because the test placement still overlaps
+the rotated U1/source field and its SPI permutation is not yet routed
+legally. This is footprint/route implementation evidence, not a Path-B
+architecture rejection. The corrected footprint frame must be used for any
+further U2 placement comparison.
+
 The disposable `PHASE24_RTL9210B_QFN_SPI_POWER_PARTITION_V1` probe was
 authored after correcting a KiCad Python net-handle defect. Native KiCad
 reports 22 violations / 33 unconnected items. The candidate is rejected as a

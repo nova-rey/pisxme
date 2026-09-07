@@ -5484,3 +5484,9 @@ and escape ordering.
 escape. Native KiCad reports 38 violations / 39 opens, including overlapping
 source vias and crossings of retained XTAL/RSET corridors. The rotation is
 retained only as disposable placement evidence; production CAD is unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: rejected a fully scrubbed rotated-U1
+staggered-via SPI escape at 24 violations / 40 opens. The test also exposed
+a malformed disposable U2 flash footprint coordinate frame; a corrected
+local-coordinate candidate was created and rejected at 53 violations / 39
+opens due to the test placement/SPI permutation. Path A, production CAD, and
+the Path-B electrical architecture remain unchanged.
