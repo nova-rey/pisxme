@@ -5707,3 +5707,9 @@ crossings. Promoted V215 after routing R2.1 around the outboard ends of the
 REFCLK/RTL_5V B.Cu spans. U1.8/R2.1/J1.69 native connectivity and the
 trace-removal negative control pass with zero signal shorting/crossing
 classes. Path A and production CAD remain unchanged.
+2026-09-07: Recorded RTL9210B sideband experiments V216-V225. V220 is a
+clean partial U1.13-to-J1.52 CLKREQ slice with native negative-control PASS,
+but R3.1 remains open. V221's R3 return crossed PEDET/XTAL. PERST V222-V225
+were rejected for source-field crossings/shorts despite endpoint audit PASS;
+V225 localizes the remaining defect to the U1.14/RTL_1V1 field. No Path-A or
+production-CAD change was made.

@@ -1402,3 +1402,25 @@ Native connectivity joins U1.8/R2.1/J1.69 and its trace-removal negative
 control fails as required. V215 is promoted as the complete disposable PEDET
 support slice; remaining Path-B controls, rails, high-speed, mode, firmware,
 and production gates remain open.
+## V216–V221 CLKREQ allocation
+
+V216 connected U1.13 to J1.52 but crossed SPISO3 and entered J1 PERST pad
+50. V217 moved the connector dogleg but retained a PEDET/source-field
+crossing. V218 moved the source transition early, but crossed REFCLK_N.
+V219 moved below the REFCLK corridor and hit the adjacent RTL_1V1 launch.
+V220 is the clean partial slice: native U1.13-to-J1.52 connectivity and the
+trace-removal negative control pass, with native DRC reporting 402 findings /
+21 opens and no signal shorting/crossing classes. V221 added R3.1 but
+reintroduced PEDET/XTAL conflicts. V220 is retained only as partial evidence;
+the complete CLKREQ support return remains open.
+
+## V222–V225 PERST allocation
+
+V222 connected U1.14 to J1.50 but crossed SPISO3. V223 moved the transition
+left but shorted REFCLK_N and ISOLATEB. V224 moved above the adjacent field
+but contacted the no-connect pad 15. V225 moved horizontally before rising;
+native connectivity and the negative control pass, but native DRC still
+reports a PERST/RTL_1V1 source crossing. All four are rejected route
+implementations. The PERST source field requires a coordinated local
+allocation with the adjacent QFN control/rail escapes; no Path-A or
+production-CAD change is justified.

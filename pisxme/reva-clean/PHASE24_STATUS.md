@@ -6615,3 +6615,13 @@ V215 is disposable Path-B evidence only; Path A and production CAD remain
 unchanged. Remaining CLKREQ/PERST, support-rail branches, USB/SATA
 high-speed, mode-aware, firmware/procurement, and integrated DFM gates remain
 open.
+## Current RTL9210B sideband state — PEDET complete; CLKREQ/PERST source fields open
+
+V215 is the current complete PEDET basis. V220 provides a clean disposable
+U1.13-to-J1.52 CLKREQ launch but does not include the R3.1 pull-network
+return. V221's R3 completion attempt was rejected for PEDET/XTAL conflicts.
+PERST attempts V222–V225 all pass narrow endpoint connectivity audits but are
+rejected by native source-field crossings/shorts, with V225's remaining
+defect localized to the U1.14/RTL_1V1 field. These are route-allocation
+findings, not architecture or component rejection. Path A, production CAD,
+and the accepted macro-floorplan remain unchanged.
