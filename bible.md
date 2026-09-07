@@ -5153,3 +5153,9 @@ split TX/RX layers and connector-ordered target vias. Native DRC reported
 RXN/RXP, TXN contacted inherited TUSB_SATA_RXP copper, and one crossing
 remained. Rejected V3 as route implementation evidence; no production CAD or
 Path-B authority changed.
+2026-09-07 — PiSXMe Phase 24 Path A: tested isolated lane-0 launch V5 with
+orthogonal source escapes and vertical M.2 contact-row dogbones. Native DRC
+reported 80 violations / 33 unconnected items, with no shorts and one RX
+source crossing. V6 changed the RX source corridors but regressed to 83 / 33
+and introduced an M1 mounting-hole interaction. V5 is the best isolated
+baseline; both remain rejected and unintegrated.

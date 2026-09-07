@@ -4498,6 +4498,24 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-A isolated M.2 lane-0 launches V5/V6 — 2026-09-07
+
+V5 (`PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V5.kicad_pcb`) used orthogonal
+source escapes and vertical M.2 contact-row dogbones. Native DRC reported 80
+violations / 33 unconnected items, with no shorting items; one RX source
+track-crossing and package/contact-field clearance findings remain. V5 is
+rejected but is the best current isolated launch baseline.
+
+V6 (`PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V6.kicad_pcb`) changed the RX
+source corridors to remove that crossing. Native DRC reported 83 violations /
+33 unconnected items and introduced an actual M1 mounting-hole interaction and
+another crossing. V6 is rejected. Both are route implementation evidence only;
+production CAD and Path-B authority remain unchanged.
+
+`PATHA_M2_LANE0_V5 = REJECTED_BEST_BASELINE`
+`PATHA_M2_LANE0_V6 = REJECTED`
+`PHASE24 = OPEN`
+
 ## Path-A isolated M.2 lane-0 launch V3 — 2026-09-07
 
 `PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V3.kicad_pcb` tested split-layer

@@ -56,6 +56,15 @@ RXP, TXN interacted with inherited TUSB_SATA_RXP copper, and a track crossing
 remained. V3 is rejected as route implementation evidence; the connector
 launch needs a less congested fanout/side assignment.
 
+## V5/V6 launch comparison — rejected
+
+V5 (`PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V5.kicad_pcb`) used orthogonal
+source escapes and vertical contact-row dogbones. Native DRC: 80 violations /
+33 unconnected items, no shorts, one RX source crossing. V6 changed the RX
+source corridors; native DRC regressed to 83 violations / 33 unconnected and
+introduced an M1 mounting-hole interaction. V5 is retained as the best
+isolated baseline; neither candidate is integrated.
+
 ## V2 isolated launch — rejected
 
 `PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V2.kicad_pcb` moved the RX lower
