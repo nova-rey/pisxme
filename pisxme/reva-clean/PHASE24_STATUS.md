@@ -5393,3 +5393,9 @@ Moving only the pad-55 RTL_1V1 transition did not preserve the complete
 collector. V7 reported 8 native DRC violations / 26 opens and retained a
 crystal-to-transition conflict. Rejected; the next repair class is full
 collector relocation or coherent support-island placement.
+### QFN escape-map reproducibility refresh
+
+The native escape-map utility now queries via width with an explicit copper
+layer, eliminating the KiCad `PCB_VIA::GetWidth` warning. The regenerated
+map preserves the measured 0.600/0.300-mm via dimensions and is suitable for
+the forthcoming full RTL_1V1 collector relocation comparison.

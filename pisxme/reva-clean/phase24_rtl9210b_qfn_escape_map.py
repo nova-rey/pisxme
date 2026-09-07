@@ -22,4 +22,4 @@ for item in b.GetTracks():
         continue
     p = item.GetPosition()
     if 73e6 <= p.x <= 87e6 and 56e6 <= p.y <= 68e6:
-        print(f"via   {item.GetNetname():<12} ({p.x/1e6:.3f},{p.y/1e6:.3f}) size {item.GetWidth()/1e6:.3f} drill {item.GetDrill()/1e6:.3f}")
+        print(f"via   {item.GetNetname():<12} ({p.x/1e6:.3f},{p.y/1e6:.3f}) size {item.GetWidth(pcbnew.F_Cu)/1e6:.3f} drill {item.GetDrill()/1e6:.3f}")
