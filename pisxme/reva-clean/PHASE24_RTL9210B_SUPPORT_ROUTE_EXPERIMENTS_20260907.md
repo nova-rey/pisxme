@@ -1521,3 +1521,12 @@ however, reports 493 findings / 15 unconnected items and three signal
 shorting classes: USB_RXN0/RTL_3V3 twice and ISOLATEB/CLKREQ_N. Reject V243
 as a route implementation. V242 remains the promoted basis; Path A and
 production CAD remain unchanged.
+## V244 RTL_1V1 U1.50 lower-edge escape — rejected
+
+V244 tested U1.50 from the V242 basis with a lower-edge F.Cu departure at
+(94.05,64.8), an ordinary via at (96.0,64.8), and B.Cu return to the
+promoted 1V1 trunk. Native connectivity and the corrected trace-removal
+negative control pass for U1.36/U1.39/U1.50/U1.52. Native DRC reports 496
+findings / 15 unconnected items and three track crossings: the new B.Cu
+vertical crosses RTL_5V and RTL_3V3, and the source leg crosses RTL_3V3.
+Reject V244 as a route implementation; V242 remains promoted.

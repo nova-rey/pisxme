@@ -518,6 +518,10 @@ an order-preserving two-layer SPI partition. Native KiCad reports 30
 violations / 40 opens; dominant failures remain the rotated U1 QFN source
 escape and retained XTAL_OUT region. U2 footprint coordinates are corrected;
 Path A and production CAD remain unchanged.
+2026-09-07: Rejected RTL9210B V244 U1.50 lower-edge RTL_1V1 escape after
+native connectivity and negative control passed but DRC found three rail
+track crossings. V242 remains the promoted disposable rail basis; Path A and
+production CAD remain unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: validated a corrected U2 footprint in a
 left/90-degree placement-only candidate at 6 findings / 44 opens with no new
 signal short, then rejected its mixed-layer SPI route at 24 violations / 39
