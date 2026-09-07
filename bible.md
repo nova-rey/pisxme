@@ -5322,6 +5322,12 @@ reported 29 violations / 38 opens; source geometry was recoverable, but the
 destination lanes intersect inherited controls and the lower SPISI branch.
 Rejected as a complete route; source-escape evidence retained and production
 CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: the SPI-only lateral proof passed native
+saved-board connectivity for all five U1-to-U2 SPI nets; serialized removal of
+all SPICS copper failed the negative control as required. Native DRC reports
+5 warnings / 45 opens, with no SPI short or crossing. This validates the
+clean V6 source escape and outboard destination geometry in isolation; full
+support reintegration remains open.
 2026-09-07 — PiSXMe Phase 24 Path B: rebuilt the lateral support placement
 from the clean V6 source directly. Placement-only native DRC was 8/43; the
 laterally extended SPI route was 22/38 and was rejected for destination and

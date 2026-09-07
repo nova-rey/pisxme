@@ -52,6 +52,14 @@ the destination lanes intersect inherited control corridors and the lower
 SPISI branch. It is rejected as a complete route; the clean source escape is
 retained as the next writer's oracle.
 
+The isolated SPI-only lateral proof now passes its saved-board native endpoint
+audit for all five SPI nets, including the required negative control after
+serialized removal of SPICS copper. Its native DRC has 5 warnings / 45 opens;
+the warnings are legacy dangling test branches, while the SPI route itself
+has no short or crossing. This proves the V6 source escape plus a sufficiently
+outboard destination can be electrically authored; the remaining work is
+reintegrating rails, controls, crystal, flash support, and test access.
+
 The next source-authority discriminator starts from V6 directly:
 `PHASE24_RTL9210B_V6_LATERAL_SUPPORT_PLACEMENT_V2` moves only U2/C3/C4/C5
 20 mm laterally and reports 8 violations / 43 opens before new copper. Its
