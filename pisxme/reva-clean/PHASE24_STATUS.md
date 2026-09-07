@@ -12,6 +12,10 @@ trace-removal negative control fails as required, and the native report has no
 `shorting_items` or `tracks_crossing`. Promote V137 only as the disposable
 RTL_5V sub-primitive; remaining rail, high-speed, USB, M.2, firmware, and full
 Path-B validation gates remain open.
+V138 and V139 apply the earlier U1.34 RTL_3V3 handoff to the promoted V137
+rail basis. Both achieve native U1.34-to-C3/R2/R3/U1.20 connectivity, but V138
+shorts the new RTL_5V source field and V139 collides with SPISO3 and retains a
+track crossing. Reject both as route-allocation evidence; U1.34 remains open.
 current promoted disposable support basis is
 `PHASE24_RTL9210B_U136_RIGHT_ESCAPE_V102.kicad_pcb`. V97 moved
 `XTAL_OUT` above the local support field and added U1.55; V98 and V99 are

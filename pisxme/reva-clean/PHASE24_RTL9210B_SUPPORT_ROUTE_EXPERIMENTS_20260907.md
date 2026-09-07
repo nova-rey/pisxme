@@ -25,6 +25,11 @@ negative control pass, and the native report has no `shorting_items` or
 sub-primitive; inherited zone/manufacturing/open-support findings remain
 unclosed.
 
+V138 and V139 reapply the earlier U1.34 RTL_3V3 handoff on V137. Both join
+U1.34 to C3/R2/R3/U1.20 in saved-board connectivity. V138 shorts the promoted
+RTL_5V source field; V139 avoids that field but crosses SPISO3. Reject both as
+route-allocation evidence. U1.34 remains an open endpoint.
+
 ## V76–V78 U1.40 edge-group trials — rejected
 
 V76 placed the U1.40 RTL_1V1 transition at (92.8,68.8), where the via
