@@ -133,6 +133,14 @@ opens. U1.20 crosses the validated SPISI/SPICLK source escapes and U1.52's
 transition reaches the XTAL_IN/Y1 launch. The next attempt must co-author 3V3
 with the QFN source escape and preserved SPI.
 
+## Complete four-net QFN field V14 — rejected
+
+V14 regenerated SPISI, SPICLK, SPISO3, and RTL_3V3 as one source-field
+topology. Native KiCad reports 24 violations / 31 opens: direct departures
+cross the U1 pad field, B.Cu channels cross, and RTL_3V3 collides with
+XTAL_IN. This route class is rejected; the next class must change U1 or
+local-support placement/orientation.
+
 ## Integrated 3V3/SPICLK source escape V13 — rejected
 
 V13 regenerated SPICLK with RTL_3V3 but still reports 10 native violations /

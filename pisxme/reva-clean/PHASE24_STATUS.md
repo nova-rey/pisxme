@@ -123,6 +123,14 @@ still reaches the XTAL_IN/Y1 launch. Native KiCad reports 9 violations / 31
 opens. The next attempt must co-author the rail with the QFN source escape
 and preserved SPI.
 
+The complete four-net QFN-field V14 probe regenerated SPISI, SPICLK, SPISO3,
+and RTL_3V3 together but is rejected at 24 native violations / 31 opens.
+Direct source departures cross the dense U1 pad field, the B.Cu channels
+cross each other, and RTL_3V3 also collides with retained XTAL_IN. This is a
+multi-net route implementation failure. The next class must change the U1 or
+local-support placement/orientation and regenerate the field, not add more
+coordinate-only vias.
+
 Integrated source-escape V13 regenerated SPICLK with RTL_3V3 but is rejected
 at 10 native violations / 31 opens. SPICLK still crossed the retained SPISI
 departure, while the RTL_3V3 transitions collided with SPICLK and XTAL_IN.

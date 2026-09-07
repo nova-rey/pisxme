@@ -5573,5 +5573,9 @@ co-author the QFN source escape with the retained SPI routing.
 Integrated source-escape V13 was rejected at 10 native violations / 31 opens;
 SPICLK crossed SPISI and RTL_3V3 collided with SPICLK/XTAL_IN. The next route
 class must regenerate SPISI/SPICLK/SPISO3/RTL_3V3 together.
+Complete four-net QFN field V14 was rejected at 24 native violations / 31
+opens: source departures crossed the U1 pad field, B.Cu channels crossed,
+and RTL_3V3 collided with XTAL_IN. The next class must change U1/local
+support placement or orientation.
 Added a reusable saved-board V8 support audit; XTAL_IN/XTAL_OUT/RSET pass and
 the XTAL_OUT trace-removal negative control fails as required.
