@@ -33,6 +33,12 @@ V112 is the first genuinely layer-separated control attempt: it removes
 control-control shorts, but native DRC still reports three crossings against
 the inherited RTL_1V1/RTL_3V3/upper-rail fields. It is rejected as an
 implementation trial; no architecture or layer-policy change follows.
+V113 reduced the problem to one RTL_3V3 crossing; V114 removed that crossing
+but left CLKREQ/PERST clearance contact. V115 widens the separation and passes
+the focused control-pair gate: native connectivity joins U1.13→J1.52 and
+U1.14→J1.50, with no `shorting_items` or `tracks_crossing`. Promote V115 only
+as the disposable CLKREQ_N/PERST_N sub-primitive; PEDET and remaining Path-B
+endpoints stay open.
 Native saved-board inspection joins U1.55 with U1.16/U1.25/U1.40/U1.50/
 U1.60/U1.63/C4.1, and a centerline scan finds no different-net track crossing
 for the new escape. The disposable fixture still has 19 intentional/open

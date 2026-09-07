@@ -143,6 +143,12 @@ V112 is the first genuinely layer-separated control attempt. It removes the
 control-control shorts, but native DRC still reports three crossings against
 the inherited RTL_1V1/RTL_3V3/upper-rail fields. It is rejected as a route
 implementation trial; no architecture or layer-policy change follows.
+V113 reduced the layer-separated trial to one RTL_3V3 crossing. V114 removed
+that crossing but left CLKREQ_N/PERST_N clearance contact. V115 widens the
+separation and passes the focused control-pair gate: native connectivity joins
+U1.13 to J1.52 and U1.14 to J1.50, with no `shorting_items` or
+`tracks_crossing`. Promote V115 only as the disposable control-pair
+sub-primitive; PEDET and remaining Path-B endpoints stay open.
 
 ## Current authoritative baseline
 
