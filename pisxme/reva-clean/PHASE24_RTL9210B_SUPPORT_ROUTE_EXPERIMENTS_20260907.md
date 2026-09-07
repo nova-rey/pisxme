@@ -1541,3 +1541,14 @@ the new B.Cu vertical crosses RTL_5V, PEDET, and RTL_3V3, while its F.Cu
 source field crosses REFCLK_P and PERST_N. Reject V245 as a route
 implementation; V242 remains promoted and no Path-A or production-CAD change
 occurred.
+
+## V246 RTL_1V1 U1.60/U1.63 co-allocation — rejected, narrowed
+
+V246 co-authored the lower-edge source escape around the REFCLK/PEDET fields
+and preserved the V242 trunk. Native U1.36/U1.60/U1.63 connectivity and the
+trace-removal negative control pass. Native DRC reports 511 findings / 14
+unconnected items. The prior lower-edge crossings were reduced to one
+RTL_1V1/PERST_N B.Cu crossing at the horizontal handoff near (104.5,65.8);
+the report also contains one ISOLATEB/CLKREQ_N shorting class in the retained
+sideband field. Reject V246 pending a PERST-column overpass; it is useful
+allocation evidence and does not alter V242 or production CAD.

@@ -527,6 +527,11 @@ Native connectivity and the trace-removal negative control passed, but DRC
 found five crossings against RTL_5V, PEDET, RTL_3V3, REFCLK_P, and PERST_N.
 V242 remains the promoted disposable rail basis; Path A and production CAD
 remain unchanged.
+2026-09-07: Rejected RTL9210B V246 lower-edge U1.60/U1.63 allocation pending
+one PERST-column overpass. Native connectivity and negative control passed;
+DRC reduced the new route defect to one RTL_1V1/PERST_N crossing, with one
+retained ISOLATEB/CLKREQ_N shorting class. V242 and production CAD remain
+unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: validated a corrected U2 footprint in a
 left/90-degree placement-only candidate at 6 findings / 44 opens with no new
 signal short, then rejected its mixed-layer SPI route at 24 violations / 39

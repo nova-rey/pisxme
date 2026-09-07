@@ -6717,6 +6717,11 @@ and the trace-removal negative control pass, but native DRC reports 496
 findings / 15 unconnected items and three track crossings: the new B.Cu
 vertical crosses RTL_5V and RTL_3V3, and the source leg crosses RTL_3V3.
 V242 remains the promoted disposable rail basis.
+V246 is rejected pending one local overpass: its native audit and negative
+control pass, while DRC reduces the new lower-edge problem to an
+RTL_1V1/PERST_N crossing at the B.Cu handoff near (104.5,65.8). One retained
+ISOLATEB/CLKREQ_N shorting class is also reported. No Path-A or production
+CAD change occurred.
 V245 is rejected as a translated U1.60/U1.63 lower-edge route. Native
 connectivity and the trace-removal negative control pass, but native DRC
 reports 502 findings / 14 unconnected items and five track crossings against
