@@ -38,6 +38,12 @@ RTL_5V route to corrected C5, but native DRC reports two real crossings with
 the retained RTL_3V3/SPI corridor. It is rejected as a route implementation;
 the next attempt must co-author the 3V3 and 5V fields.
 
+V41 added a local RTL_3V3 fanout without changing the validated SPI or
+XTAL/RSET paths. Native DRC reports 7 findings / 30 opens. It is rejected for
+one U1 pad-field clearance, one XTAL_IN-adjacent via, and an RSET-via conflict
+on the U2 branch; the next attempt must partition the source and downstream
+3V3 branches.
+
 V40 jointly reauthored the 3V3/5V rail spines. Native DRC reports 8 findings,
 including a new RTL_3V3/SPISO3 source collision and retained RTL_5V/SPISI and
 C5-handoff conflicts. It is rejected; the next rail class must keep the V24

@@ -50,6 +50,12 @@ findings / 32 opens because its B.Cu handoff crosses the retained RTL_3V3
 trunk and SPISI transition. The corrected capacitor CAD is retained; the
 next candidate must jointly allocate the 3V3/5V rail corridors.
 
+V41 added an RTL_3V3 local fanout from the corrected-cap V38/V35 basis. It is
+rejected at 7 native violations / 30 opens: one U1 pad-field clearance, one
+XTAL_IN-adjacent via, and one RSET-via conflict on the U2 branch remain. The
+trial did not alter SPI or XTAL/RSET copper; the next 3V3 pass must split the
+local source fanout from its downstream U2 branch.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch
