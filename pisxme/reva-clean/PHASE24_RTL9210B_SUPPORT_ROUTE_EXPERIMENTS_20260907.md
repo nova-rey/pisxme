@@ -12,6 +12,17 @@ clearance into adjacent U1 pads. Preserve all three as negative evidence.
 They reject these route allocations only; V75 remains the promoted partial
 RTL_1V1 basis and U1.40 remains open.
 
+## V79–V80 3V3 reallocation trials — rejected
+
+V79 reallocated the left RTL_3V3 escape and tested U1.40. Native DRC reports
+8 findings / 25 opens; the former U1.40/3V3 short is gone, leaving a U1.40
+dogbone clearance defect against pad 41 and a 3V3 clearance defect at the
+no-net U1.35 field. V80 moved the 3V3 segment again, but its endpoint
+authoring left a dangling track and did not remove the U1.40 pad-field
+clearance defect; native DRC remains 8 findings / 25 opens. Preserve both as
+negative evidence. The next attempt must derive the complete 3V3 replacement
+path and a pad-aware U1.40 dogbone together.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It

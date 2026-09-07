@@ -14,6 +14,16 @@ with SPICLK/RTL_3V3. These are local route-implementation failures, not a
 Path-B electrical decision. V75 remains the promoted 1V1 sub-primitive;
 U1.40 and the remaining 1V1 groups are open.
 
+V79 reallocated the local RTL_3V3 escape before testing U1.40. It removed the
+previous U1.40/3V3 short and reduced the signal failures to a U1.40 dogbone
+clearance violation against adjacent pad 41 and a 3V3 clearance violation at
+the no-net U1.35 field; native DRC reported 8 findings / 25 opens. V80 moved
+the 3V3 segment again but left a dangling endpoint while retaining the U1.40
+pad-field clearance defect; native DRC reported 8 findings / 25 opens. Both
+are rejected route-allocation/authoring trials. This confirms that the local
+3V3 corridor is the right decision surface, but the QFN edge escape still
+needs a pad-aware dogbone and a completely connected 3V3 path.
+
 ### RTL9210B source-field update — current
 
 V26, V27, V28, V29, and V30 are rejected disposable source-field route
