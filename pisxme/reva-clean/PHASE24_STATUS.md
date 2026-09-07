@@ -120,6 +120,15 @@ passes U1.61→J1.55 and U1.62→J1.53, with a trace-removal negative control.
 Promote V174 only as the translated REFCLK placement/topology sub-primitive;
 the remaining RTL9210B rails, SPI, reset, USB, M.2, firmware, and full Path-B
 gates remain open.
+V176/V177 attempt to co-author the translated crystal routes without moving
+the cluster and are rejected for XTAL/REFCLK source-field contacts. V178
+was also rejected because it accidentally layered a second REFCLK route over
+V174's existing copper; it is retained as an authoring negative. V179 is the
+correct clean experiment: it removes the old local routes, moves Y1/C1/C2/R1
+west of U1, and regenerates XTAL_IN/XTAL_OUT/RSET plus REFCLK once. Native
+DRC now shows no REFCLK-to-crystal conflict; only four localized crystal/
+RSET/QFN source defects remain. V179 is not promoted yet, but it is the best
+translated support-placement basis for the next pad-aware source escape.
 V175 restores the validated V158 crystal copper translated onto V174. Native
 DRC exposes only the expected local co-allocation failures: REFCLK-P meets
 the translated XTAL_IN transition and REFCLK-N crosses the translated

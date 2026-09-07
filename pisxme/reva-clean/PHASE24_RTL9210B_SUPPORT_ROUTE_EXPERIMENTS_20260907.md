@@ -131,6 +131,13 @@ before applying the same placement and REFCLK cell. Native DRC has zero
 trace-removal negative control pass both REFCLK mappings. Promote V174 only
 as a disposable translated REFCLK placement/topology sub-primitive. It is
 not full Path-B support closure.
+V176/V177 retain the east-side translated crystal cluster and fail at the
+XTAL/REFCLK source field. V178 is an authoring-negative because it stacked a
+second REFCLK route on the V174 copper. V179 removes all superseded local
+routes, moves Y1/C1/C2/R1 west of U1, and regenerates the crystal, RSET, and
+REFCLK paths once. The board-wide REFCLK/XTAL corridor conflict disappears;
+four localized crystal/RSET/QFN source defects remain. Preserve V179 as the
+best translated-placement candidate, not a pass.
 V175 restores the validated V158 XTAL_IN/XTAL_OUT copper translated onto
 V174. Native DRC shows the expected local co-allocation defects: REFCLK-P
 contacts the translated XTAL_IN transition and REFCLK-N crosses the
