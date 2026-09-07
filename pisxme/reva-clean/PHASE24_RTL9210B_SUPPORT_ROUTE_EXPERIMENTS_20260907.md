@@ -332,3 +332,10 @@ shorted the Y1 XTAL_IN pad. V3 moved both endpoints through ordinary vias and
 B.Cu, reducing native opens to 28, but crossed the RTL_1V1 B.Cu corridor and
 exposed an inherited RTL_1V1/CLKREQ via conflict. The route class is
 rejected; no production copper is changed.
+## Crystal support V1 — rejected
+
+The complete XTAL_IN/XTAL_OUT candidate used explicit dogbones around the
+collinear capacitor pads and reached the U1 crystal pads, reducing native
+opens 29 to 25. Native DRC nevertheless found four real XTAL_IN/XTAL_OUT
+crossings and an incomplete C1 ground thermal connection. It is rejected;
+the next attempt must separate the two crystal nets by layer/transition.

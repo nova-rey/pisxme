@@ -5351,3 +5351,9 @@ RSET V1/V2 collided with C1/Y1 pads. V3 used ordinary vias and B.Cu, reached
 the endpoint, and reduced opens to 28, but crossed RTL_1V1 and retained a
 control-via conflict. All are rejected as route implementations; production
 CAD remains unchanged.
+### Path-B crystal support V1 (rejected)
+
+The crystal candidate reached all four signal endpoints and reduced opens
+29 to 25, but introduced four XTAL_IN/XTAL_OUT crossings and a C1 thermal
+violation. It is rejected as route implementation evidence; production CAD
+is unchanged.

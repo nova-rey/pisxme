@@ -5240,3 +5240,7 @@ V1/V2 collided with crystal support pads; V3 reached U1 through ordinary
 vias/B.Cu and reduced opens to 28 but crossed RTL_1V1 and retained a control
 via conflict. Rejected as route implementation evidence; production CAD
 unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested complete crystal support V1.
+It reduced native opens 29 to 25 but introduced four XTAL_IN/XTAL_OUT
+crossings and an incomplete C1 ground thermal connection. Rejected as route
+implementation evidence; production CAD unchanged.
