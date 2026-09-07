@@ -4821,3 +4821,9 @@ validation remain open.
  audits passed; the support-routed partial PCB remained open at 1,160 native
  DRC violations and 499 unconnected items. Captured the result without
  changing severity or waiving findings.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: corrected the disposable
+ SATA A* emitter to deduplicate repeated native vias and identical/zero-length
+ segments. The fresh native candidate improved from 1,246 to 1,240 DRC
+ violations but remained rejected with 499 unconnected items and crossings.
+ Preserved the board and raw report as route-implementation evidence; Path A
+ authority and Path B qualification were not changed.

@@ -117,12 +117,22 @@ def via(b,n,p):
     v=pcbnew.PCB_VIA(b);v.SetPosition(V(*p));v.SetWidth(pcbnew.FromMM(VIA_W));v.SetDrill(pcbnew.FromMM(VIA_D));v.SetLayerPair(F,B);v.SetNet(n);b.Add(v)
 def emit(b,n,path,occ):
     last=None
+    emitted_vias=set()
+    emitted_segments=set()
     for a,z in zip(path,path[1:]):
         if a[2]!=z[2]:
-            p=point(a[:2]);via(b,n,p);block(occ,F,p,.38);block(occ,B,p,.38);last=None;continue
+            p=point(a[:2])
+            if p not in emitted_vias:
+                via(b,n,p); emitted_vias.add(p)
+            block(occ,F,p,.38);block(occ,B,p,.38);last=None;continue
         if last is None:last=point(a[:2])
-        end=point(z[:2]);t=pcbnew.PCB_TRACK(b);t.SetStart(V(*last));t.SetEnd(V(*end));t.SetLayer(a[2]);t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(n);b.Add(t)
-        line_block(occ,a[2],last,end,.22);last=end
+        end=point(z[:2])
+        segment=(a[2],last,end)
+        if last != end and segment not in emitted_segments:
+            t=pcbnew.PCB_TRACK(b);t.SetStart(V(*last));t.SetEnd(V(*end));t.SetLayer(a[2]);t.SetWidth(pcbnew.FromMM(WIDTH));t.SetNet(n);b.Add(t)
+            emitted_segments.add(segment)
+            line_block(occ,a[2],last,end,.22)
+        last=end
 
 def direct(b,n,a,z,layer,occ):
     t=pcbnew.PCB_TRACK(b);t.SetStart(V(*a));t.SetEnd(V(*z));t.SetLayer(layer)
