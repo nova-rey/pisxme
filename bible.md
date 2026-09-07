@@ -5035,3 +5035,10 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  ordered SPI B.Cu escape failed with 2 shorts plus annular/via/drill and
  clearance violations. Preserved both raw reports, classified them as route
  implementation failures, and kept production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: corrected the disposable fixture layer
+ serialization after native KiCad loaded numeric layer 2 as In4.GND rather
+ than B.Cu. The generator now matches native six-layer signal ordering. A
+ support-local V2 placement has a zero-violation native baseline; its first
+ native-coordinate oscillator/RSET route remains rejected at 4 violations /
+ 52 opens from local crossings and one RSET/XTAL interaction. Preserved the
+ V2 placement and raw report for the next route class.

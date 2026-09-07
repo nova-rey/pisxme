@@ -19,6 +19,15 @@ failed ordinary-via fabrication rules, clearances, and two shorts. Both are
 route implementation failures; the next attempt must use the ordinary-via
 basis and a larger pad-field escape.
 
+Native KiCad inspection then found a fixture serialization defect: the layer
+table declared inner layers as `power` and ordered `B.Cu` before the inner
+layers, so numeric layer 2 loaded as `In4.GND`. The generator now matches the
+native six-layer `signal` form and ordering. A support-local V2 placement
+moved the crystal/RSET/flash/support parts coherently; its baseline is DRC
+clean. The first native-coordinate oscillator/RSET route is still rejected at
+4 violations / 52 opens from three local crossings and one RSET/XTAL
+interaction, with no via, drill, or track-width violations.
+
 ## Current live correction — 2026-09-06
 
 The old V4 SATA claim is superseded for Path-A topology: its C30–C33 to J3

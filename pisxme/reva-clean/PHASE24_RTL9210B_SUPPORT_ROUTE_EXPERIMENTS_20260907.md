@@ -46,3 +46,20 @@ It does not reject RTL9210B or the support topology. The next valid route
 class must use the ordinary-via dimensions allowed by the selected JLC stack,
 move transitions farther from the QFN/flash pad fields, and then revalidate
 the full support group.
+
+## Generator correction and support-local V2
+
+Native KiCad inspection found a fixture serialization defect: the generated
+layer table declared inner layers as `power` and ordered `B.Cu` before the
+inner layers, so numeric layer 2 was loaded as `In4.GND` rather than `B.Cu`.
+The generator now matches native KiCad's six-layer `signal` serialization and
+layer order. This was a fixture-authoring defect, not evidence against the
+route topology.
+
+The support-local V2 placement then moved the crystal, RSET, flash,
+decoupling, and pull-ups into a coherent local neighborhood. Its unrouted
+native baseline has zero DRC violations. A native-coordinate oscillator/RSET
+route against that placement improves to 4 DRC violations / 52 opens, with
+three local crossings and one RSET/XTAL interaction; no via, drill, or track
+width violations remain. It is still rejected as a route implementation, but
+the placement variant remains a credible next baseline.

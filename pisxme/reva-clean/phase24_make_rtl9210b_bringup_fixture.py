@@ -131,7 +131,9 @@ def main() -> None:
         generic("TP7", "UART_TX_TEST", 112, 78, [("1", "UART_TX")], (1.2, 1.2)),
         generic("TP8", "UART_RX_TEST", 116, 78, [("1", "UART_RX")], (1.2, 1.2)),
     ]
-    layers = '(layers (0 "F.Cu" signal) (2 "B.Cu" signal) (4 "In1.Cu" power "In1.GND") (6 "In2.Cu" power "In2.PWR") (8 "In3.Cu" power "In3.PROTECTED_12V") (10 "In4.Cu" power "In4.GND") (5 "F.SilkS" user "f.silkscreen") (7 "B.SilkS" user "b.silkscreen") (25 "Edge.Cuts" user))'
+    # KiCad's native six-layer serialization uses `signal` for plane layers;
+    # `power` here causes numeric layer 2 to be misresolved as In4.GND.
+    layers = '(layers (0 "F.Cu" signal) (4 "In1.Cu" signal "In1.GND") (6 "In2.Cu" signal "In2.PWR") (8 "In3.Cu" signal "In3.PROTECTED_12V") (10 "In4.Cu" signal "In4.GND") (2 "B.Cu" signal) (5 "F.SilkS" user "f.silkscreen") (7 "B.SilkS" user "b.silkscreen") (25 "Edge.Cuts" user))'
     net_lines = '\n'.join(f'  (net {NET[n]} "{n}")' for n in NETS)
     outline = '\n'.join([
         '  (gr_rect (start 65 40) (end 145 85) (stroke (width 0.2) (type default)) (fill none) (layer "Edge.Cuts"))',
