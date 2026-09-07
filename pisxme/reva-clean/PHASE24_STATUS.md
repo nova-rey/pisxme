@@ -6682,3 +6682,15 @@ V233 proves U1.52-to-C3.1 endpoint connectivity but is rejected by native
 DRC for a lower-field XTAL_OUT crossing and conflict with the promoted CLKREQ
 return. This is a local coordinated rail/crystal allocation issue; the V232
 U1.39 branch remains promoted. Path A and production CAD are unchanged.
+## Current RTL9210B U1.52 RTL_3V3 basis — V237
+
+`PHASE24_RTL9210B_RTL3V3_U152_V237.kicad_pcb` extends V232 with a
+coordinated U1.52 rail escape above pad 49, RSET, and the XTAL_IN diagonal.
+Native DRC reports 466 findings / 17 unconnected items with zero
+`shorting_items` and zero `tracks_crossing`; the saved-board U1.52/C3.1
+audit and trace-removal negative control pass.
+
+V237 is disposable support evidence only. Remaining RTL_3V3/RTL_1V1
+branches, high-speed paths, mode-aware validation, firmware/procurement, and
+production integration remain open. Path A and production CAD remain
+unchanged.

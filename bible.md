@@ -5741,3 +5741,8 @@ open; Path A and production CAD remain unchanged.
 connectivity and negative control pass, but DRC found a lower-field
 RTL_3V3/XTAL_OUT crossing and CLKREQ-via short. U1.52 requires coordinated
 XTAL_OUT/3V3 allocation; V232 U1.39 remains promoted.
+2026-09-07: Rejected RTL9210B U1.52 rail V234-V236 for XTAL_IN/RSET/pad-field
+conflicts. Promoted V237 after a dogleg above pad 49 cleared the lower source
+field. U1.52/C3.1 native connectivity and the trace-removal negative control
+pass with zero signal shorting/crossing classes. Remaining Path-B gates stay
+open; Path A and production CAD remain unchanged.

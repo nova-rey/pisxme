@@ -1481,3 +1481,12 @@ via short and an RTL_3V3/XTAL_OUT crossing in the lower QFN/crystal field.
 It is rejected as an isolated rail route. The next U1.52 attempt must
 co-author XTAL_OUT and the local CLKREQ return; V232 remains the promoted
 U1.39 rail basis.
+## V234–V237 RTL_3V3 U1.52 allocation
+
+V234 crossed XTAL_IN and RSET. V235/V236 moved the transition but still
+contacted RSET or pad 49. V237 doglegged above pad 49 before the layer
+transition. Native connectivity joins U1.52/C3.1 and the trace-removal
+negative control fails as required. Native DRC reports 466 findings / 17
+unconnected items with zero `shorting_items` and zero `tracks_crossing`.
+V237 is promoted as the disposable U1.52 RTL_3V3 basis; remaining rail
+branches and all other Path-B gates remain open.
