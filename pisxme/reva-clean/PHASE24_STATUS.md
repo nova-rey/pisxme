@@ -171,6 +171,13 @@ collided locally. This is a placement/route implementation failure; V69 still
 proves the U1.60 corridor when XTAL_IN is removed, and production CAD remains
 unchanged.
 
+V72 tested the upper-right coherent XTAL/RSET relocation with U1.60 1V1 and
+is rejected at 51 native findings / 30 opens. The placement margin was clear,
+but the regenerated paths used incorrect post-transform support-pad
+coordinates, causing local XTAL/RSET/rail/SPI collisions. This is an
+authoring/route implementation failure; the next relocation must derive every
+moved support pad from the saved native footprint after transform.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

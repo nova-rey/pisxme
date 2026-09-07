@@ -144,6 +144,12 @@ XTAL_IN/XTAL_OUT/RSET paths had local clearance/short issues. Preserve this
 as a relocation failure; V69 remains the diagnostic proof that U1.60 routing
 is feasible after clearing XTAL_IN.
 
+V72 is rejected at 51 native findings / 30 opens. The upper-right support
+placement had usable board-edge margin, but regenerated XTAL/RSET paths were
+based on guessed transformed pad coordinates and collided with local
+XTAL/rail/SPI geometry. Preserve it as authoring evidence; future relocation
+work must inspect post-transform native pad positions before routing.
+
 V57 completes the RTL_5V disposable rail primitive. Its U1.33-to-U1.17
 F.Cu escape passes above the native SPI source endpoints, then uses the
 SPI-clear B.Cu dogleg and a right-side C5.1 launch. Native DRC reports 5
