@@ -43,6 +43,15 @@ both rail pairs. The support branch is still incomplete: remaining rail-pad
 parity, SPI/control links, and full Path-B mode/bring-up validation remain
 open.
 
+The additional U1 rail-pad escape probe
+`PHASE24_RTL9210B_SUPPORT_RELOCATION_RAIL_PADS_V1` is rejected. It reduced
+the native open count to 28 but introduced real RTL_3V3/RTL_5V and
+RTL_1V1/RTL_5V shorts/clearances plus a B.Cu crossing. This is the second
+failure of the ordinary-via additional-pad-fanout class; the next step must
+change class to a native/reference escape arrangement or a further coherent
+local support placement change. The clean rail baseline remains
+`PHASE24_RTL9210B_SUPPORT_RELOCATION_RAILS_V1`.
+
 The rail-cap co-location probe `PHASE24_RTL9210B_SUPPORT_RELOCATION_CAPS_V1`
 then moved C3/C4/C5 coherently beside the relocated U1 and regenerated the
 RTL_1V1 continuation to C4. Native KiCad reports 4 findings / 32 opens with

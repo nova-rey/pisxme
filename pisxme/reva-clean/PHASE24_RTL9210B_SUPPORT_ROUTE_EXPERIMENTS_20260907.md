@@ -445,3 +445,11 @@ transitions, and dogbones outside the capacitor pads. Native KiCad reports 5
 findings / 30 opens, with no signal shorts or crossings. Saved-board checks
 pass U1.20/C3.1 on RTL_3V3 and U1.17/C5.1 on RTL_5V. Remaining QFN rail-pad
 parity, SPI/control, and full support validation are open.
+
+## Additional U1 rail-pad fanout V1 — rejected
+
+The probe attempted U1.34/U1.33 escapes to the existing relocated 3V3/5V
+trunks. Native KiCad reduced opens to 28 but reported real 3V3/5V and
+1V1/5V shorts or clearances and a B.Cu crossing. It is rejected as the second
+failure in this ordinary-via additional-pad-fanout class. No production CAD
+was changed; the clean rail baseline remains the prior rails candidate.
