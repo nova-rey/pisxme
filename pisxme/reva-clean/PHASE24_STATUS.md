@@ -6428,3 +6428,24 @@ crystal trace nudges are no longer a viable class. The remaining repair is a
 coherent 3V3/1V1 support-branch relocation or local bridge-support move;
 production CAD and Path A remain unchanged. See
 `PHASE24_RTL9210B_SUPPORT_CORRIDOR_DECISION_20260907.md`.
+
+## Current RTL9210B disposable support state — V184
+
+The current Path-B disposable basis is
+`PHASE24_RTL9210B_REFCLK_SUPPORT_RELOCATED_V184.kicad_pcb`. It retains the
+west-relocated Y1/C1/C2/R1 placement from V179, the translated REFCLK
+topology from V174, and the V184 RSET transition above XTAL_OUT with a
+B.Cu trunk below the crystal island.
+
+Native KiCad 10.0.5 DRC reports 243 findings / 32 unconnected items. The
+signal-specific gate passes: V184 contains zero `shorting_items` and zero
+`tracks_crossing`. Remaining findings are inherited disposable-board
+clearance/zone/manufacturing/open findings and are not waived.
+`phase24_rtl9210b_refclk_support_relocated_v184_audit.py` passes saved native
+connectivity for XTAL_IN, XTAL_OUT, RSET, REFCLK_P, and REFCLK_N, plus five
+trace-removal negative controls.
+
+V184 is a promoted local route sub-primitive, not a Path-B or production
+board PASS. The next work is the remaining RTL9210B support network and its
+full native/parity/mode validation. Path A, production CAD, and the accepted
+macro-floorplan remain unchanged.

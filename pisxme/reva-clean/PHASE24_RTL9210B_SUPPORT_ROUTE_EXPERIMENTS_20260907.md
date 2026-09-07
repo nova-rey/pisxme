@@ -1222,3 +1222,16 @@ destination using an ordinary 0.6/0.3-mm through-via. Native KiCad reports
 source field, plus pad/hole-clearance failures. The near-transition variant
 is rejected; the prior far-transition variant is also retained as negative
 evidence. The next attempt must solve the QFN pad-field escape itself.
+
+## V180–V184 crystal/RSET local repair
+
+V180–V183 were rejected as localized route implementations: V180 had an
+RSET/XTAL_OUT crossing and RTL_1V1 source short; V181/V183 moved the
+conflict onto the XTAL_IN or XTAL_OUT transition; V182 removed the short
+but retained an F.Cu crossing. V184 moves the RSET transition into the gap
+above XTAL_OUT and keeps the RSET trunk on B.Cu below the crystal island.
+Native KiCad DRC reports zero `shorting_items` and zero `tracks_crossing`.
+The saved-board V184 audit passes XTAL_IN, XTAL_OUT, RSET, REFCLK_P, and
+REFCLK_N, with five trace-removal negative controls. V184 is promoted only
+as a disposable support sub-primitive; inherited manufacturing/clearance/
+open findings and the remaining Path-B support gates remain open.
