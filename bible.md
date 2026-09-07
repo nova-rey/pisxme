@@ -5012,3 +5012,7 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  Realtek FAE/agent. Kept virgin-chip provisioning, configuration authority,
  and redistribution rights OPEN/HIGH; no community image was promoted to
  production authority.
+2026-09-07 — PiSXMe Phase 24 Path A: checkpointed the rotated-U13 V3
+ disposable author, native PCB, and raw DRC receipt referenced by the status
+ documents. The artifacts are explicitly rejected route evidence; no
+ integrated or production PCB was altered.
