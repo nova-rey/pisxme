@@ -48,6 +48,16 @@ inherited isolated-GND/silkscreen warnings with no signal violations, and
 native connectivity joins U1.40/U1.16/U1.25/U1.50/C4.1. Promote V86 only as
 the U1.40 edge-group sub-primitive; all remaining Path-B gates stay open.
 
+V88–V94 are rejected U1.55/U1.60 bottom-edge trials. V88's U1.55 via
+shorted the retained XTAL_OUT launch; V89/V90/V91 placed U1.60 transitions in
+the XTAL_IN corridor; and V92–V94 exposed successive QFN/XTAL gap allocation
+errors. V95 corrects the latter with an F.Cu dogleg to (103.0,73.8), a B.Cu
+span above XTAL_IN, and a drop at x107.0. Native DRC is 8 inherited
+isolated-GND/silkscreen warnings with no signal violations; native
+connectivity joins U1.60 with U1.16/U1.25/U1.40/U1.50/C4.1. Promote V95
+only as the U1.60 edge-group sub-primitive; U1.36/U1.55/U1.63 and other
+Path-B support remain open.
+
 V81 tested the same V79 U1.40 path with a 0.15-mm fine-pitch dogbone. Native
 DRC rejected it at 10 findings / 25 opens: the escape still has only
 0.1647-mm clearance to U1.41, the reallocated 3V3 segment remains 0.100 mm

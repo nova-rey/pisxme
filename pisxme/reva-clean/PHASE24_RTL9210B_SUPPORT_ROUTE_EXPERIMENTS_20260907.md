@@ -52,6 +52,18 @@ isolated-GND/silkscreen warnings; native saved connectivity joins U1.40 with
 U1.16/U1.25/U1.50/C4.1. Promote V86 only as the U1.40/3V3 edge-group
 sub-primitive, not as full RTL9210B support closure.
 
+## V88–V95 bottom-edge RTL_1V1 trials
+
+V88–V94 are retained rejected experiments: V88 shorted U1.55 into XTAL_OUT;
+V89–V91 placed U1.60 in or too near XTAL_IN; and V92–V94 successively
+exposed QFN-pad, XTAL-via, and corridor-ordering defects. V95 is the first
+clean U1.60 result: its F.Cu dogleg reaches an x103.0/y73.8 transition, its
+B.Cu route passes above XTAL_IN, and it drops at x107.0. Native DRC reports
+only 8 inherited isolated-GND/silkscreen warnings; native saved connectivity
+joins U1.60 to U1.16/U1.25/U1.40/U1.50/C4.1. Promote V95 only as the U1.60
+edge-group primitive; remaining U1.36/U1.55/U1.63 and full support gates are
+unfinished.
+
 ## Current authoritative baseline
 
 V31 is the current best complete five-net SPI source/target primitive. It
