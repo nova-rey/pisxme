@@ -116,6 +116,12 @@ isolated-copper/silkscreen warnings / 26 intended opens and no new signal
 violations. Promote V63 only as this U1.25/C4.1 sub-primitive; remaining 1V1
 groups are unfinished.
 
+V75 validates the U1.50 RTL_1V1 left-edge sub-primitive. Moving the collector
+below the RTL_3V3 handoff removes V74's only signal crossing; native DRC is 6
+non-signal isolated-copper/silkscreen warnings / 25 intended opens, and saved
+connectivity joins U1.50/U1.16/U1.25/C4.1. Promote V75 only as this edge-group
+primitive; the remaining RTL_1V1 groups are unfinished.
+
 V64 is rejected at 8 native findings / 26 opens. The U1.60 bottom-edge drop
 entered the retained XTAL_OUT B.Cu segment at y=77 and did not clear the local
 XTAL/RSET corridor. Preserve it as negative evidence; V63 remains the current

@@ -139,6 +139,13 @@ non-signal isolated-copper/silkscreen warnings / 26 opens with no new signal
 violations. V60-V62 remain rejected full/perimeter and upper-corridor trials;
 the remaining RTL_1V1 U1 edge groups are still open.
 
+V75 validates the U1.50 left-edge RTL_1V1 sub-primitive. Its B.Cu collector
+runs below the RTL_3V3 vertical handoff and joins the existing C4.1 path
+without signal crossings. Native DRC is 6 non-signal isolated-copper/
+silkscreen warnings / 25 opens; saved-board connectivity joins U1.50 with
+U1.16, U1.25, and C4.1. V74 is rejected for its RTL_3V3 crossing. Remaining
+RTL_1V1 edge groups are still open.
+
 V64 attempted the U1.60 bottom-edge RTL_1V1 group and is rejected at 8 native
 findings / 26 opens. Its B.Cu drop entered the retained XTAL_OUT segment at
 y=77 and the proposed offset also fell inside the XTAL/RSET corridor. V63
