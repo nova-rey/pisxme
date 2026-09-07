@@ -437,3 +437,11 @@ overlaps; no new signal short or crossing was introduced. This does not pass
 the support route gate. It establishes the moved native pad coordinates as a
 candidate source for complete regenerated support routing; U2/C3-C5 remain at
 their existing outboard positions and production CAD is unchanged.
+
+## Relocated 3V3/5V rail slice V1 — positive
+
+The moved U1-to-C3/C5 rail slice uses F.Cu source escapes, separated B.Cu
+transitions, and dogbones outside the capacitor pads. Native KiCad reports 5
+findings / 30 opens, with no signal shorts or crossings. Saved-board checks
+pass U1.20/C3.1 on RTL_3V3 and U1.17/C5.1 on RTL_5V. Remaining QFN rail-pad
+parity, SPI/control, and full support validation are open.

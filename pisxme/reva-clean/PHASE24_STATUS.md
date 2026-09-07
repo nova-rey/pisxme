@@ -35,6 +35,14 @@ relocated local support sub-gate. Rails to C3/C5, SPI/control links to U2, and
 the remaining RTL9210B support/bring-up checks remain open; no production CAD
 or Path A artifact is changed.
 
+The relocated rail slice `PHASE24_RTL9210B_SUPPORT_RELOCATION_RAILS_V1` now
+connects U1.20 RTL_3V3 to C3.1 and U1.17 RTL_5V to C5.1 using separated
+ordinary-via corridors and non-pad vias. Native KiCad reports 5 findings / 30
+opens, with no signal shorts or crossings; saved-board endpoint checks pass
+both rail pairs. The support branch is still incomplete: remaining rail-pad
+parity, SPI/control links, and full Path-B mode/bring-up validation remain
+open.
+
 The rail-cap co-location probe `PHASE24_RTL9210B_SUPPORT_RELOCATION_CAPS_V1`
 then moved C3/C4/C5 coherently beside the relocated U1 and regenerated the
 RTL_1V1 continuation to C4. Native KiCad reports 4 findings / 32 opens with

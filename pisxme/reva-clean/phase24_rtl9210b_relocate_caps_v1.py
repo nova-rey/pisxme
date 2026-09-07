@@ -21,10 +21,13 @@ def main():
                     block = text[start:i + 1]
                     pts = [(float(x), float(y)) for x, y in re.findall(
                         r'\((?:start|end|at)\s+([-\d.]+)\s+([-\d.]+)', block)]
-                    if ('RTL_1V1' in block and
-                        (any(y <= 42 and x >= 104 for x, y in pts) or
-                         (m.group(1) == "segment" and
-                          all(x >= 103 and y >= 70 for x, y in pts)))):
+                    remove = ('RTL_1V1' in block and
+                              (any(y <= 42 and x >= 104 for x, y in pts) or
+                               (m.group(1) == "segment" and
+                                all(x >= 103 and y >= 70 for x, y in pts)) or
+                               (m.group(1) == "segment" and
+                                all(x >= 108 and y >= 68 for x, y in pts))))
+                    if remove:
                         spans.append((start, i + 1))
                     break
     for a, z in reversed(spans): text = text[:a] + text[z:]
@@ -44,8 +47,10 @@ def main():
         t.SetNetCode(net.GetNetCode()); board.Add(t)
     add_seg((103.2, 71.2), (108.0, 71.2), pcbnew.B_Cu)
     add_seg((103.2, 70.4), (103.2, 71.2), pcbnew.B_Cu)
-    add_seg((108.0, 71.2), (113.4, 69.0), pcbnew.B_Cu)
-    via = pcbnew.PCB_VIA(board); via.SetPosition(pcbnew.VECTOR2I_MM(113.4, 69.0))
+    add_seg((108.0, 71.2), (108.0, 67.5), pcbnew.B_Cu)
+    add_seg((108.0, 67.5), (112.0, 67.5), pcbnew.B_Cu)
+    add_seg((112.0, 67.5), (113.4, 69.0), pcbnew.F_Cu)
+    via = pcbnew.PCB_VIA(board); via.SetPosition(pcbnew.VECTOR2I_MM(112.0, 67.5))
     via.SetWidth(pcbnew.FromMM(0.60)); via.SetDrill(pcbnew.FromMM(0.30))
     via.SetLayerPair(pcbnew.F_Cu, pcbnew.B_Cu); via.SetNet(net)
     via.SetNetCode(net.GetNetCode()); board.Add(via)

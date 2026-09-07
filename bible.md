@@ -5459,3 +5459,7 @@ RTL9210B source island and regenerated the RTL_1V1 continuation. Native KiCad
 reports 4 findings / 32 opens with no signal shorts/crossings, and the saved
 board confirms all nine asserted U1/C4 RTL_1V1 endpoints. Other support nets
 remain open; production CAD and Path A are unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: added separated relocated RTL_3V3 and
+RTL_5V rails from U1 to C3/C5. Native KiCad reports 5 findings / 30 opens,
+with no signal shorts/crossings; saved-board endpoint checks pass both rail
+pairs. Remaining support and Path-B validation are open.
