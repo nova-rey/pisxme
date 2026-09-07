@@ -139,6 +139,12 @@ non-signal isolated-copper/silkscreen warnings / 26 opens with no new signal
 violations. V60-V62 remain rejected full/perimeter and upper-corridor trials;
 the remaining RTL_1V1 U1 edge groups are still open.
 
+V64 attempted the U1.60 bottom-edge RTL_1V1 group and is rejected at 8 native
+findings / 26 opens. Its B.Cu drop entered the retained XTAL_OUT segment at
+y=77 and the proposed offset also fell inside the XTAL/RSET corridor. V63
+remains the cleanest promoted 1V1 basis; the remaining bottom/left groups need
+a route around the native XTAL_OUT endpoint, not another direct drop.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

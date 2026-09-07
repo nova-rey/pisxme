@@ -116,6 +116,11 @@ isolated-copper/silkscreen warnings / 26 intended opens and no new signal
 violations. Promote V63 only as this U1.25/C4.1 sub-primitive; remaining 1V1
 groups are unfinished.
 
+V64 is rejected at 8 native findings / 26 opens. The U1.60 bottom-edge drop
+entered the retained XTAL_OUT B.Cu segment at y=77 and did not clear the local
+XTAL/RSET corridor. Preserve it as negative evidence; V63 remains the current
+promoted 1V1 basis and future bottom-edge routes must avoid XTAL_OUT entirely.
+
 V57 completes the RTL_5V disposable rail primitive. Its U1.33-to-U1.17
 F.Cu escape passes above the native SPI source endpoints, then uses the
 SPI-clear B.Cu dogleg and a right-side C5.1 launch. Native DRC reports 5
