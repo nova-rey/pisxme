@@ -4929,3 +4929,10 @@ validation remain open.
  1.2 x 0.2-mm pad geometry. A disposable 0.15-mm clearance API probe did not
  alter KiCad's active 0.20-mm rule basis and was rejected; no production rule
  or validation severity was weakened.
+2026-09-06 — PiSXMe Phase 24 Path A: authored an explicit disposable native
+ rule-basis probe with both global and default-netclass clearance set to
+ 0.15 mm, using the documented JLC multilayer capability as fabrication
+ evidence. Native DRC reduced the unchanged mono2 fixture from 12 to 7
+ findings, removing four clearance-only findings but retaining two shorts,
+ one crossing, and 38 intentional fixture opens. The probe is evidence only;
+ no production rule or route was promoted.

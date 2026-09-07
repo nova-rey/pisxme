@@ -45,6 +45,15 @@ Only the TX source dogbone, one socket launch clearance, U7 footprint
 clearances, and silkscreen fixture findings remain; no production storage
 route has been promoted.
 
+The subsequent explicit native-rule probe is recorded in
+`PHASE24_U7_RULE_BASIS_PROBE_20260906.md`. It sets the disposable board's
+global and default-netclass clearance to 0.15 mm, matching the documented
+JLC multilayer capability, then reruns native DRC without severity changes or
+exclusions. Findings reduce from 12 to 7: the four U7/socket clearance
+findings disappear, while two real shorts and one real crossing remain, plus
+the intentionally incomplete fixture's 38 opens. This is rule-basis
+evidence, not a route PASS or an integrated-board rule change.
+
 ## Current Path-B qualification checkpoint — 2026-09-06
 
 The isolated RTL9210B-CG candidate now has explicit authority and mode
