@@ -5227,3 +5227,7 @@ unchanged.
 reduced native opens 29 to 27 but introduced 17 DRC violations by crossing
 and shorting SPI/control and RTL_5V geometry. Rejected as route
 implementation evidence; production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: added native RTL_5V connectivity audit
+for U1.17, U1.33, and C5.1 on the V3 disposable fixture. KiCad connectivity
+passed; removing the pad-17 escape caused the required negative-control
+failure. No production CAD changed.
