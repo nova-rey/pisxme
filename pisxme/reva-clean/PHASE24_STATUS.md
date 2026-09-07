@@ -14,6 +14,18 @@ placement rejection. The staged V4 rail/crystal/RSET baseline remains the
 clean local baseline; the next distinct class is a native/reference-derived
 QFN escape or a local U1/support relocation, not another collector jog.
 
+The next distinct class is now a coherent local relocation discriminator.
+`phase24_rtl9210b_support_relocation_v1.py` serializes away the old local
+support copper, then moves U1, its crystal/RSET/decoupling support, and the
+local PEDET/CLKREQ pull-ups by (+18,+18) mm. Native KiCad reports 9 findings /
+45 opens: the findings are one intentionally dangling old RTL_1V1 trunk, an
+isolated legacy zone, and non-production silkscreen overlaps; no signal
+short/crossing is introduced by the placement change. This is placement-only
+evidence and is not yet a routed or promotable support candidate. The next
+route writer must regenerate the complete local support branch from the moved
+native pads, with U2/C3-C5 destinations and the existing Path-A/production
+CAD left untouched.
+
 The V11 crystal/support baseline was freshly rechecked with native KiCad:
 6 violations and 25 unconnected items; XTAL_IN, XTAL_OUT, and the asserted
 RTL_1V1 endpoints pass the saved-board connectivity audit, including its

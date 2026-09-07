@@ -405,3 +405,15 @@ an RTL_1V1/XTAL_OUT short at the left transition, and SPICS/SPISO corridor
 conflicts. The experiment is rejected as route implementation evidence; no
 production CAD was changed. The API correction is retained in the script for
 future disposable writers.
+
+## Coherent U1/support relocation V1 — placement discriminator
+
+Because the source-partition route class remained congested, a separate
+placement-only candidate moved U1, C1/C2, R1, Y1, and R2/R3 by (+18,+18) mm
+after serialized removal of their old local support copper. Native KiCad
+reports 9 findings / 45 opens. The findings are one deliberately dangling
+old RTL_1V1 trunk, an isolated legacy zone, and non-production silkscreen
+overlaps; no new signal short or crossing was introduced. This does not pass
+the support route gate. It establishes the moved native pad coordinates as a
+candidate source for complete regenerated support routing; U2/C3-C5 remain at
+their existing outboard positions and production CAD is unchanged.
