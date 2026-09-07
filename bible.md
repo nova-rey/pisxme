@@ -5244,3 +5244,8 @@ unchanged.
 It reduced native opens 29 to 25 but introduced four XTAL_IN/XTAL_OUT
 crossings and an incomplete C1 ground thermal connection. Rejected as route
 implementation evidence; production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested layer-separated crystal support
+V2. It reached the endpoints and reduced opens to 25, but U1-side XTAL
+approaches crossed and interacted with RTL_1V1; C1 thermal relief remained
+incomplete. Rejected as route implementation evidence; production CAD
+unchanged.

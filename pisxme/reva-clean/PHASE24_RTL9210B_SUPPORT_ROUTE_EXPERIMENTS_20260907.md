@@ -339,3 +339,10 @@ collinear capacitor pads and reached the U1 crystal pads, reducing native
 opens 29 to 25. Native DRC nevertheless found four real XTAL_IN/XTAL_OUT
 crossings and an incomplete C1 ground thermal connection. It is rejected;
 the next attempt must separate the two crystal nets by layer/transition.
+## Crystal support V2 — rejected
+
+XTAL_IN was moved to B.Cu immediately after Y1 while XTAL_OUT remained on
+F.Cu. The candidate still reduced native opens to 25, but the U1-side
+approaches crossed at the transition, crossed RTL_1V1, and retained the
+incomplete C1 ground thermal connection. It is rejected; future work must
+change the U1-side approach geometry rather than repeat the capacitor escape.

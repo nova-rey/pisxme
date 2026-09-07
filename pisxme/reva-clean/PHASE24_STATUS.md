@@ -5357,3 +5357,8 @@ The crystal candidate reached all four signal endpoints and reduced opens
 29 to 25, but introduced four XTAL_IN/XTAL_OUT crossings and a C1 thermal
 violation. It is rejected as route implementation evidence; production CAD
 is unchanged.
+### Path-B crystal support V2 (rejected)
+
+Layer-separated crystal routing still reached the endpoints but produced
+8 native DRC violations / 25 opens from U1-side XTAL crossings, RTL_1V1
+interaction, and C1 thermal relief. Rejected; production CAD unchanged.
