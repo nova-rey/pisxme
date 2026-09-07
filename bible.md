@@ -5223,3 +5223,7 @@ V2 reported 4 / 30 and collected six rail pads without via-in-pad. V3 moved
 the pad-40 via but caused an RTL_1V1/USB_TXP0 short and CLKREQ crossing at
 6 / 30. V2 remains the best disposable collector baseline; production CAD
 unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested RTL_3V3 local trunk V1. It
+reduced native opens 29 to 27 but introduced 17 DRC violations by crossing
+and shorting SPI/control and RTL_5V geometry. Rejected as route
+implementation evidence; production CAD unchanged.

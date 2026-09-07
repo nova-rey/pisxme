@@ -297,6 +297,15 @@ PEDET/RTL_3V3 and RTL_1V1/CLKREQ conflicts. This is rejected as a route
 implementation; the V2 collector remains the current disposable baseline and
 production copper is unchanged.
 
+## RTL_3V3 local trunk V1 — rejected
+
+From the V3 RTL_5V baseline, a direct F.Cu trunk was added from U1 pad 34
+through pad 20 and toward the existing C3-side RTL_3V3 branch. Native DRC
+reported 17 violations / 27 unconnected items: the trunk crossed and shorted
+SPICS, SPISO, the RTL_5V transition, and nearby pad-field geometry. Although
+the open count fell by two, the geometry is not manufacturable and is
+rejected. The clean V3 RTL_5V baseline remains preferred.
+
 ## RTL_5V pad-17 escape V2/V3
 
 V2 moved the transition below the QFN but placed the 0.6-mm via too close to

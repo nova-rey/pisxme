@@ -5333,3 +5333,9 @@ native DRC report.
 `ZERO_SHORTS = TRUE`
 `ZERO_TRACK_CROSSINGS = TRUE`
 `PHASE24 = OPEN`
+### Path-B RTL_3V3 local trunk V1 (rejected)
+
+The disposable local 3V3 trunk reduced native opens 29 to 27 but produced 17
+native DRC violations by crossing/shorting the SPI field and RTL_5V escape.
+It is rejected as a route implementation; the RTL_5V V3 board remains the
+preferred disposable baseline and production CAD is unchanged.
