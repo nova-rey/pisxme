@@ -5403,6 +5403,11 @@ load the current V5 combined candidate rather than superseded V3 fixture
 geometry, and saved the resulting native pad/track/via receipt. Historical
 map output is no longer a live routing baseline. The utility is now pointed at
 the latest integrated V11 candidate, with a separate current V11 receipt.
+2026-09-07 — PiSXMe Phase 24 Path B: recorded the native V11 QFN escape
+authority boundary, including loaded pad sizes/coordinates, exposed-pad
+geometry, the single existing 1V1 escape, and the 16/25 open findings. The
+receipt rejects reuse of V6--V10 serialized rail probes and keeps production
+CAD unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: tested pad-aware RTL_1V1 escape probe
 V9. Native DRC reports 32 violations / 22 opens, including new control/rail,
 rail/rail, and edge-clearance conflicts. Rejected as route-implementation

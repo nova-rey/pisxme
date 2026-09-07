@@ -129,6 +129,11 @@ SPISO, GND, and RTL_5V conflicts plus a 0.0472-mm clearance. The result is
 not promotable; V5 remains the current combined baseline and the next work
 must use a native/reference-derived escape strategy.
 
+The current V11 native escape-authority receipt is
+`PHASE24_RTL9210B_QFN_ESCAPE_AUTHORITY_V11.md`. It records the loaded QFN
+dimensions, interleaved pad ownership, exposed-pad geometry, current local
+escape, and the explicit open authority boundary for the next fixture class.
+
 The native source-authority RSET route from the separately validated oscillator
 V7 fixture is now transplanted into V5 as
 `PHASE24_RTL9210B_FULL_LATERAL_SUPPORT_CRYSTAL_V11_NATIVE_RSET`. Native DRC
