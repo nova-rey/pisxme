@@ -4954,4 +4954,8 @@ validation remain open.
  the SATA route author. It rejects stale support-routed ancestors carrying
  `/STORAGE/SATA_M2_*` capacitor nets and requires source-derived regeneration;
  canonical regenerated inputs continue to route with the V4 topology. This
- prevents PCB-only stale-net ownership from being misclassified as geometry.
+prevents PCB-only stale-net ownership from being misclassified as geometry.
+2026-09-06 — PiSXMe Phase 24 Path A: added and ran a V4 SATA native
+ connectivity negative control. Removing one real saved track caused the
+ native C30.1-to-J3.49 connection to fail, confirming the focused endpoint
+ audit is assertion-only and derives connectivity from saved KiCad objects.

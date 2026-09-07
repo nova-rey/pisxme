@@ -35,6 +35,12 @@ track crossings. Applying the explicit disposable 0.15 mm rule basis reduces
 this to four silkscreen warnings; the fixture still has 38 intentional
 unconnected support pads.
 
+The independent negative control
+`phase24_sata_native_connectivity_negative_control_v4.py` removes a real
+saved SATA track from the V4 board and confirms that native C30.1 -> J3.49
+connectivity then fails. Expected endpoint tuples therefore remain assertions
+only; they are not supplying graph edges.
+
 ## Integrated-source regeneration
 
 The same author was applied to

@@ -75,6 +75,10 @@ ancestors: direct use of the older board fails on `C31.1`'s superseded
 `/STORAGE/SATA_M2_TX_N` net and points to the source-derived net-authority
 regeneration step. The canonical regenerated ancestor routes successfully.
 
+The V4 native connectivity negative control also passes: removing one actual
+saved SATA track disconnects C30.1 -> J3.49. This confirms the focused audit
+uses saved pads/tracks/vias rather than synthetic expected edges.
+
 ## Current Path-B qualification checkpoint — 2026-09-06
 
 The isolated RTL9210B-CG candidate now has explicit authority and mode
