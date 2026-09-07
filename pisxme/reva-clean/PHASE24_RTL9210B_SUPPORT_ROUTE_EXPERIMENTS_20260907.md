@@ -153,6 +153,14 @@ V116 adds the PEDET U1-to-M.2 launch on an independent F.Cu corridor. Native
 connectivity joins U1.8 to J1.69 and native DRC reports no `shorting_items` or
 `tracks_crossing`. Promote V116 only as the disposable U1-to-socket PEDET
 sub-primitive; R2 source connection and remaining Path-B endpoints stay open.
+V117 electrically joined R2 but crossed two SPI traces. V118 moved the source
+outboard but crossed the 1V1 return wall; V119 moved below that wall but
+introduced PEDET/ground and PEDET/1V1 defects. V120 removed the field crossings
+but crossed XTAL_IN; V121 removed that crossing but left a 0.125-mm C2
+clearance defect. V122 shifts the bottom return right and passes the focused
+native PEDET audit: R2.1/U1.8/J1.69 are connected, and the trace-removal
+negative control fails as required. Promote V122 only as the disposable
+complete PEDET sub-primitive; remaining Path-B gates stay open.
 
 ## Current authoritative baseline
 
