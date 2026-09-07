@@ -45,6 +45,22 @@ Only the TX source dogbone, one socket launch clearance, U7 footprint
 clearances, and silkscreen fixture findings remain; no production storage
 route has been promoted.
 
+## Current Path-B qualification checkpoint — 2026-09-06
+
+The isolated RTL9210B-CG candidate now has explicit authority and mode
+matrices in `authority-inventory/rtl9210b/RTL9210B_PATHB_AUTHORITY.md` and
+`RTL9210B_PATHB_MODE_MATRIX.md`. These are derived from the retained Rev. 1.1
+technical document, native corroborating netlists, corrected M-key contact
+mapping, and the locally recreated SMD QFN-68 footprint. They do not authorize
+production replacement of Path A.
+
+Current decision remains `CONTINUE BOTH`: Path B reduces the bridge/switch
+count and can use native PEDET selection, while virgin-chip programming,
+firmware provenance/rights, authorized application-circuit values, SSD power
+budget, and hardware mode bring-up remain open. The rejected straight-line
+RTL9210B fixture is route-implementation evidence only. Path A remains
+preserved and Phase 24 closure is still open.
+
 Latest private storage evidence checkpoint: `9e45a72`. The retained WIP
 RTL9210B native XML support netlist now has a reproducible audit with
 component, rail, clock, SPI, reset, RSET, PEDET, ISOLATEB, shared-lane, and

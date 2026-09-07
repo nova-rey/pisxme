@@ -4893,3 +4893,10 @@ validation remain open.
  promoted to production CAD. The live decision remains CONTINUE BOTH pending
  one traceable virgin-chip programming/mode-bring-up experiment and a current
  Realtek application-circuit package. Path A remains preserved.
+2026-09-06 — PiSXMe Phase 24 RTL9210B Path B: added explicit isolated
+ authority and mode matrices covering the corrected M-key lane mapping,
+ PEDET selection, package/footprint provenance, support-pin ownership, and
+ promotion gates. Re-ran the symbol, support-netlist, M-key, native-netlist,
+ hierarchy-conflict, and negative-control audits; all passed. Path B remains
+ a serious comparison candidate, not production CAD, and Path A remains
+ preserved.
