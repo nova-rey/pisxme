@@ -5807,3 +5807,8 @@ inherited RTL_3V3 departure was shifted locally; native connectivity and the
 trace-removal negative control passed, while DRC reported 623 findings / 16
 opens with no shorting or track-crossing class. V256 is not promoted; Path A
 and production CAD remain unchanged and V242 remains the promoted basis.
+2026-09-07: Rejected RTL9210B V257/V258 local support-field routes. V257
+completed the U1.52 RTL_3V3 join but exposed ISOLATEB/CLKREQ_N; V258 reduced
+opens to 13 with bottom-edge RTL_1V1 vias but introduced multiple REFCLK/XTAL
+shorts. The QFN rail/clock field must be co-authored; Path A and production
+CAD remain unchanged.

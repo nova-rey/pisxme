@@ -6757,3 +6757,8 @@ V256 is retained as a local U1.52 co-clearance experiment, not a promotion:
 native U1.36/U1.40 connectivity and the trace-removal negative control pass;
 DRC reports 623 findings / 16 opens with no shorting or track-crossing class.
 The promoted disposable rail basis remains V242.
+V257 joins the repaired U1.52 RTL_3V3 branch and exposes the inherited
+ISOLATEB/CLKREQ_N short (626 findings / 15 opens); it is rejected. V258's
+independent bottom-edge RTL_1V1 vias reduce opens to 13 but create multiple
+REFCLK/XTAL shorts (668 findings); it is also rejected. The next Path-B
+experiment must co-author the complete QFN rail/clock support field.

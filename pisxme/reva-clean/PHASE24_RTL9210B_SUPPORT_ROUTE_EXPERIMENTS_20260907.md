@@ -1623,3 +1623,19 @@ connectivity passes, and removing a required RTL_1V1 trace fails the negative
 control as expected. The remaining unconnected support and manufacturing-rule
 findings prevent promotion; V256 is retained as evidence for the next
 co-authored support-field repair.
+
+## V257 U1.52 rail join — rejected
+
+V257 completed the short V256 RTL_3V3 branch into the existing upper rail
+field. Native DRC reports 626 findings / 15 unconnected items. The U1.52
+branch is connected, but the inherited ISOLATEB/CLKREQ_N pad-field short is
+exposed. Reject as a route promotion.
+
+## V258 bottom-edge RTL_1V1 via bus — rejected
+
+V258 attempted ordinary F.Cu-to-B.Cu escapes for U1.55/U1.60/U1.63 and a
+local B.Cu RTL_1V1 bus. It reduced the unconnected count to 13, but native
+DRC reports 668 findings and multiple real RTL_1V1 shorts into REFCLK_P,
+REFCLK_N, and XTAL_OUT. Reject; the QFN support field must be co-authored
+with those neighboring analog/clock escapes rather than populated with
+independent vias.
