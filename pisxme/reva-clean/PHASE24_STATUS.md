@@ -163,6 +163,13 @@ conflicts. The isolated V1 fanout remains electrically valid; V11 remains the
 combined baseline for support-corridor relocation rather than direct copper
 transplant.
 
+Staged V4 combines the audited full RTL_1V1 fanout with the proven crystal
+and RSET routes while suppressing unrelated support copper. Native DRC is
+4 findings: one existing C1 GND starved-thermal error and three isolated
+GND-zone warnings; there are no signal crossings or shorts. The 32 opens are
+unrelated PEDET/control/PCIe/fixture boundaries. V4 is therefore the current
+local rail/crystal/RSET routing baseline, not a full-support pass.
+
 The QFN escape-map utility now inspects the latest integrated V11 saved board,
 including the validated RSET transplant, instead of superseded V3/V5 fixture
 states. `PHASE24_RTL9210B_QFN_ESCAPE_MAP_V5.txt` is retained as historical

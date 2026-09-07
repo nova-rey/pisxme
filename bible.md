@@ -5331,6 +5331,11 @@ fanout from neighboring copper. Native DRC is 1/37, and the saved-board audit
 passes U1 pads 16/25/36/40/50/55/60/63 plus C4.1. This proves the fanout is
 viable in isolation; V11 failures are integration congestion, not package
 impossibility. Production CAD remains unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: staged V4 with crystal/RSET plus the
+isolated audited 1V1 fanout and removed unrelated support copper. Native DRC
+is 4 known GND-zone findings with no signal crossing/short; 32 opens are
+unrelated fixture boundaries. V4 becomes the local support-routing baseline,
+not a full Path-B pass.
 2026-09-07 — PiSXMe Phase 24 Path B: transplanted the isolated audited 1V1
 fanout into the V11 combined candidate as V12. Opens fell to 18, but native
 DRC rose to 30 with CLKREQ_N, XTAL_OUT, and rail conflicts. Rejected as
