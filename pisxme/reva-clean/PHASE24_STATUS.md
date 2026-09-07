@@ -109,6 +109,17 @@ U1.62→J1.53, and its trace-removal negative control fails as required; that
 is connectivity evidence only, not a route PASS. The next repair should move
 the directly conflicting local support geometry or allocate a distinct local
 escape cell, not waive the crossings.
+V173 translates U1/U2 and the local crystal/rail support upward by 8 mm and
+regenerates REFCLK from the transformed U1 pads, but stale external local-net
+copper remains and creates unrelated SPI/sideband findings. V174 repeats the
+same coherent placement after globally scrubbing superseded local-net copper.
+Native DRC then reports zero `shorting_items` and zero `tracks_crossing` for
+the disposable fixture; the remaining findings are inherited zone,
+manufacturing, and intentionally open support pads. The V174 native audit
+passes U1.61→J1.55 and U1.62→J1.53, with a trace-removal negative control.
+Promote V174 only as the translated REFCLK placement/topology sub-primitive;
+the remaining RTL9210B rails, SPI, reset, USB, M.2, firmware, and full Path-B
+gates remain open.
 The current promoted disposable RTL_5V/control basis is
 `PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
 CLKREQ/PEDET support evidence. V97 moved

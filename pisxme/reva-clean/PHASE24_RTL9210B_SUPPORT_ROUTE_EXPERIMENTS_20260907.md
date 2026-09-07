@@ -123,6 +123,14 @@ rejected by RTL_3V3, lane, and XTAL contacts. V171 adds short F.Cu
 overpasses at the B.Cu trunk crossings and is rejected by XTAL/RTL_3V3/
 SSD_3V3 contacts. V169 is retained as the best disposable topology, not a
 pass; V158/V160 remain the promoted support basis.
+V173 translates the local U1/U2/crystal/rail support island upward by 8 mm
+and regenerates REFCLK from transformed native pads, but stale external
+local-net copper remains. V174 globally scrubs those superseded local nets
+before applying the same placement and REFCLK cell. Native DRC has zero
+`shorting_items` and zero `tracks_crossing`; its saved-board audit and
+trace-removal negative control pass both REFCLK mappings. Promote V174 only
+as a disposable translated REFCLK placement/topology sub-primitive. It is
+not full Path-B support closure.
 V172 keeps the V169 pair topology but drops the lower exits below the crystal
 row. Native DRC still reports U2/SPISI/RTL3V3/RTL1V1/PEDET conflicts and one
 P/N endpoint crossing, so it is rejected. The V169 native saved-connectivity
