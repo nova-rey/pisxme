@@ -68,6 +68,13 @@ signal gate with the same six intended opens. V157 moves XTAL_IN outboard but
 is rejected because its new endpoint crosses the retained XTAL_OUT vertical
 span. REFCLK remains open; the next local support experiment must co-author
 XTAL_IN and XTAL_OUT together.
+V158 moves XTAL_IN's transition inward, left of XTAL_OUT. Native DRC has no
+signal shorting/crossing classes; the crystal connectivity audit and negative
+control pass. V160 removes the old F.Cu 1V1 handoff and joins the complete
+1V1 group directly to the existing B.Cu rail. V162's first REFCLK attempt on
+that basis is rejected for XTAL_OUT/legacy 1V1 contacts and two crossings.
+The current coordinated-support basis is V160 plus V158's crystal routes;
+REFCLK remains open.
 The current promoted disposable RTL_5V/control basis is
 `PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
 CLKREQ/PEDET support evidence. V97 moved

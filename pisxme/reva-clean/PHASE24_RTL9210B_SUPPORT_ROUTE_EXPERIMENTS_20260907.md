@@ -93,6 +93,12 @@ V156 moves only the CLKREQ_N J1 launch outboard and passes native signal DRC.
 V157 moves XTAL_IN to an outboard endpoint but crosses the retained XTAL_OUT
 vertical span. Reject V157; the next support attempt must co-author the two
 crystal nets.
+V158 moves XTAL_IN's transition inward and passes the crystal connectivity
+audit/negative control with no signal DRC classes. V160 removes the old F.Cu
+1V1 handoff and joins the complete 1V1 pad group directly to the existing
+B.Cu rail. V162 is rejected as the first REFCLK attempt on this basis because
+its N transition contacts XTAL_OUT/legacy 1V1 and the source escapes cross.
+V160/V158 remain the coordinated-support basis; REFCLK is open.
 
 ## V76–V78 U1.40 edge-group trials — rejected
 
