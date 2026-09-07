@@ -5205,3 +5205,8 @@ collector V1. Native DRC reported 9 violations / 29 unconnected items,
 reducing the V12 baseline by seven opens. Rejected the first perimeter
 geometry for SPICS/SPISO and CLKREQ conflicts; rail collection remains the
 next implementation class and production copper is unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested RTL_1V1 collector V2/V3.
+V2 reported 4 / 30 and collected six rail pads without via-in-pad. V3 moved
+the pad-40 via but caused an RTL_1V1/USB_TXP0 short and CLKREQ crossing at
+6 / 30. V2 remains the best disposable collector baseline; production CAD
+unchanged.

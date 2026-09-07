@@ -265,6 +265,12 @@ SPISO pad-field conflicts, a CLKREQ crossing, and duplicate-via geometry.
 It is rejected as a route implementation; the open-count reduction confirms
 that coherent rail collection is preferable to individual signal detours.
 
+V2 removed the duplicate transition, omitted the SPI-conflicting pad-25
+branch, and jogged the bottom rail around CLKREQ: native DRC 4/30, with six
+RTL_1V1 pads collected. V3 moved the pad-40 via left but caused a
+USB_TXP0 short and CLKREQ crossing at 6/30. V2 is the preferred disposable
+collector baseline; no rail copper is promoted.
+
 ## Native connectivity audit
 
 `phase24_rtl9210b_control_connectivity_audit.py` uses KiCad's actual saved

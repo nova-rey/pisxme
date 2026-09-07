@@ -4498,6 +4498,19 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-B RTL_1V1 QFN collectors V2/V3 — 2026-09-07
+
+V2 removed the duplicate via, omitted the SPI-conflicting pad-25 branch, and
+jogged the bottom collector around CLKREQ. Native DRC reports 4 violations /
+30 unconnected items; six RTL_1V1 pads are physically collected without
+via-in-pad. V3 moved the pad-40 via left, but native DRC regressed to 6 / 30
+with an RTL_1V1/USB_TXP0 short and a CLKREQ crossing. V2 is retained as the
+best collector baseline; neither is integrated.
+
+`PATHB_RTL_1V1_COLLECTOR_V2 = REJECTED_BEST_BASELINE`
+`PATHB_RTL_1V1_COLLECTOR_V3 = REJECTED`
+`PHASE24 = OPEN`
+
 ## Path-B RTL_1V1 QFN collector V1 — 2026-09-07
 
 V1 added ordinary-via perimeter collection for the actual U1 RTL_1V1 pads,
