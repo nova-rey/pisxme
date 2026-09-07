@@ -1499,3 +1499,14 @@ the U1.39 vertical west, but that co-allocation introduced XTAL_OUT contact
 and a new crossing with the promoted U1.52 3V3 vertical. Both are retained
 as route evidence, not promoted. The next attempt must co-author U1.36,
 U1.39, and U1.52 together; Path A and production CAD remain unchanged.
+
+## V240–V242 RTL_1V1 U1.36/U1.39/U1.52 co-allocation
+
+V240 added U1.36-to-C4.1 but crossed SPISI. V241 removed that crossing but
+introduced a native SPISI/RTL_1V1 via short. V242 moves the handoff via to
+x=104.0 and explicitly extends the B.Cu trunk from x=102.5 to that via. The
+first V242 run exposed a generator omission of that extension; the corrected
+script now passes native U1.36/U1.39/U1.52 connectivity and the trace-removal
+negative control. Native DRC is 484 findings / 16 unconnected items with zero
+`shorting_items` or `tracks_crossing`. V242 is promoted as disposable rail
+evidence; remaining RTL_1V1 branches and full Path-B gates remain open.

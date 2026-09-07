@@ -6702,3 +6702,13 @@ XTAL_OUT contact and U1.52 3V3 interaction. No rail branch is being called
 closed from these partial results; the next repair is a coordinated
 U1.36/U1.39/U1.52 lower-field allocation. Path A and production CAD remain
 unchanged.
+
+V240/V241 are rejected U1.36 RTL_1V1 co-allocation trials: V240 crossed the
+SPISI field and V241 replaced that crossing with a via short. V242 is the
+promoted corrected basis. Its first authoring pass omitted the B.Cu trunk
+extension to the moved via; after correction, native connectivity joins
+U1.36/C4.1, U1.39/C3.1, and U1.52/C3.1 and the trace-removal negative control
+fails as required. Native DRC reports 484 findings / 16 unconnected items
+with zero `shorting_items` or `tracks_crossing`. Remaining RTL_1V1 branches,
+high-speed paths, and full Path-B validation remain open; Path A and
+production/acreage CAD remain unchanged.
