@@ -5567,5 +5567,8 @@ opens. The next 3V3 attempt must use a different corridor topology.
 Current authoritative Path-B baseline is V8 support/SPI plus V9 RTL_5V;
 V10/V11 RTL_3V3 are rejected, and the next class must reauthor the local
 3V3/support corridor coherently. Path A and production acreage remain intact.
+RTL_3V3 V12 was then rejected at 9 native violations / 31 opens: U1.20
+crossed SPISI/SPICLK and U1.52 reached XTAL_IN/Y1. The next class must
+co-author the QFN source escape with the retained SPI routing.
 Added a reusable saved-board V8 support audit; XTAL_IN/XTAL_OUT/RSET pass and
 the XTAL_OUT trace-removal negative control fails as required.

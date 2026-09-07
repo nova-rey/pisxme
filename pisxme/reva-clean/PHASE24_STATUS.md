@@ -117,6 +117,12 @@ lower B.Cu trunk crossed SPICS and the Y1 XTAL_IN launch, reporting 12 native
 signal violations / 31 opens. The next 3V3 attempt must use a different
 corridor topology.
 
+The top/outer RTL_3V3 V12 probe is also rejected. Its U1.20 source departure
+crosses the validated SPISI/SPICLK F.Cu escapes, while the U1.52 transition
+still reaches the XTAL_IN/Y1 launch. Native KiCad reports 9 violations / 31
+opens. The next attempt must co-author the rail with the QFN source escape
+and preserved SPI.
+
 `phase24_rtl9210b_support_v8_audit.py` now provides a reusable saved-board
 audit for the V8 support baseline. It derives XTAL_IN, XTAL_OUT, and RSET
 connectivity from native KiCad connectivity and passes the required

@@ -128,6 +128,11 @@ but its lower B.Cu trunk crossed SPICS and the Y1 XTAL_IN launch, reporting
 12 native signal violations / 31 opens. Both are rejected route
 implementations; the next 3V3 trial must change corridor topology.
 
+The top/outer RTL_3V3 V12 probe is rejected at 9 native violations / 31
+opens. U1.20 crosses the validated SPISI/SPICLK source escapes and U1.52's
+transition reaches the XTAL_IN/Y1 launch. The next attempt must co-author 3V3
+with the QFN source escape and preserved SPI.
+
 `phase24_rtl9210b_support_v8_audit.py` records the same check as a reusable
 regression: all three V8 support nets pass from saved-board native
 connectivity, and removal of an XTAL_OUT track fails the audit.
