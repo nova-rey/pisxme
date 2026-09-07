@@ -5353,6 +5353,10 @@ transplants with the V6 control/crystal support. Native DRC is 19 violations /
 34 opens. The native endpoint audit passes all five SPI pairs and the
 RTL_3V3/RTL_1V1/RTL_5V support endpoints; remaining DRC/opens are not waived.
 Production CAD and Path A unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: transplanted the proven V11 crystal
+routing into the combined lateral SPI/rail support candidate. Native DRC is
+19 violations / 30 opens (down from 34); the saved-board XTAL_IN/XTAL_OUT
+audit passes. Remaining DRC findings remain open and unwaived.
 2026-09-07 — PiSXMe Phase 24 Path B: rebalanced the lateral rail spines and
 U2.3/U2.8 branch to avoid SPI-layer interactions. Rail-only native DRC is
 0/45; the combined candidate improves to 18/34, and the combined SPI/rail

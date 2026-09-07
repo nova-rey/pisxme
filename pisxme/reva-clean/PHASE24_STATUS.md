@@ -90,6 +90,12 @@ RTL_3V3 U1.34/C3.1/U2.3/U2.8 and the RTL_1V1/RTL_5V decoupler endpoints.
 Remaining DRC and opens are control/crystal/flash/test-access work and are
 not waived.
 
+The V11 crystal routing is now transplanted into the combined candidate as
+`PHASE24_RTL9210B_FULL_LATERAL_SUPPORT_CRYSTAL_V3`. Native DRC remains 19
+violations but opens reduce from 34 to 30; a saved-board audit passes all
+XTAL_IN/XTAL_OUT endpoints. The 19 DRC findings remain open and are not
+waived.
+
 The rail layer rebalance is now verified: the rail-only/U2 branch returns to
 native DRC 0 violations / 45 opens, and regenerating the combined candidate
 reduces its native DRC to 18 violations / 34 opens with the combined endpoint
