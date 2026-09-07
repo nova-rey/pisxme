@@ -61,6 +61,15 @@ SSD-power field. This proves the V6 source escape plus a sufficiently
 outboard destination can be electrically authored; the remaining work is
 reintegrating rails, controls, crystal, flash support, and test access.
 
+The full support placement candidate moves U2 35 mm and C3/C4/C5 20 mm
+laterally. The proven SPI-only copper was transplanted by serialized
+net-scoped block extraction into
+`PHASE24_RTL9210B_FULL_LATERAL_SPI_INTEGRATED_V1`; its saved-board native
+audit passes all five SPI endpoint pairs. Integrated native DRC is 17
+violations / 40 opens; remaining findings are outside the SPI proof and this
+candidate is not promoted until rails, controls, crystal, flash support, and
+mechanical access are revalidated.
+
 The next source-authority discriminator starts from V6 directly:
 `PHASE24_RTL9210B_V6_LATERAL_SUPPORT_PLACEMENT_V2` moves only U2/C3/C4/C5
 20 mm laterally and reports 8 violations / 43 opens before new copper. Its

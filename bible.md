@@ -5334,6 +5334,11 @@ to clear J1's SSD-power field. Native DRC is 5 warnings / 45 opens with no
 SPI short/crossing; all five saved-board endpoint assertions and the SPICS
 negative control pass. This is the current SPI geometry baseline, not a full
 Path-B closure.
+2026-09-07 — PiSXMe Phase 24 Path B: transplanted the proven SPI-only copper
+into the full support placement (U2 +35 mm; C3/C4/C5 +20 mm) using serialized
+net-scoped blocks. The integrated saved-board SPI audit passes all five
+U1-to-U2 endpoint pairs. Native DRC is 17 violations / 40 opens, with
+remaining findings outside the SPI proof; rails/control/support remain open.
 2026-09-07 — PiSXMe Phase 24 Path B: rebuilt the lateral support placement
 from the clean V6 source directly. Placement-only native DRC was 8/43; the
 laterally extended SPI route was 22/38 and was rejected for destination and
