@@ -296,3 +296,15 @@ crossed/shorted the SPISO, SPISI, and SPICLK field and retained the inherited
 PEDET/RTL_3V3 and RTL_1V1/CLKREQ conflicts. This is rejected as a route
 implementation; the V2 collector remains the current disposable baseline and
 production copper is unchanged.
+
+## RTL_5V pad-17 escape V2/V3
+
+V2 moved the transition below the QFN but placed the 0.6-mm via too close to
+the existing RTL_1V1 via at (82.8,67.5), producing an RTL_1V1/RTL_5V short
+and six clearance violations; it is rejected. V3 moved the ordinary via to
+(83.6,67.0) and retained the B.Cu corridor to the existing bus. Native DRC
+reported 4 violations / 29 unconnected items, with pad 17 absent from the
+unconnected set. The remaining violations are inherited from the V2 baseline
+(RTL_3V3/PEDET, CLKREQ/RTL_1V1, and unfinished support/test geometry). V3 is
+the preferred disposable RTL_5V collector baseline; no production copper is
+promoted.

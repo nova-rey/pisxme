@@ -516,6 +516,11 @@ unchanged.
 connectivity gained one rail endpoint and reduced opens 30 to 29, but native
 DRC reported 8 violations from SPI/control-field crossings and shorts.
 Rejected as a route implementation; production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested RTL_5V pad-17 escape V2/V3.
+V2 shorted the nearby RTL_1V1 via. V3 moved the ordinary transition to
+(83.6,67.0), connected U1 pad 17 natively, and reduced the fixture to the
+V2 baseline's four inherited DRC violations / 29 opens. V3 is the preferred
+disposable rail baseline; production CAD unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: preserved PEDET/CLKREQ control-route
  variants V2 and V3. V2 reduced the local class to 3 crossings / 33 opens;
  V3 regressed to 5 crossings / 33 opens after moving the inherited RTL_1V1
