@@ -5257,3 +5257,7 @@ route implementation evidence; production CAD unchanged.
 escape map and tested crystal V5. The map exposes the RTL_1V1/control-field
 barriers; V5's outer-perimeter XTAL_OUT route produced 18 DRC violations.
 Rejected as route implementation evidence; production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: corrected the stale RTL_5V/RTL_1V1
+support audit to load the live V3 board and use native KiCad connectivity.
+The audit passes three RTL_5V and eight RTL_1V1 endpoints. No production CAD
+changed.

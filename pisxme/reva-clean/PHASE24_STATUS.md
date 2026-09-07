@@ -5374,3 +5374,10 @@ The native QFN map is saved in `PHASE24_RTL9210B_QFN_ESCAPE_MAP_20260907.txt`.
 Crystal V5 used the mapped outer perimeter but produced 18 DRC violations
 from RTL_5V/control/perimeter conflicts. It is rejected; production CAD is
 unchanged.
+### Path-B rail audit hygiene
+
+The stale `phase24_rtl9210b_5v_1v1_support_audit.py` helper was corrected to
+target the live V3 disposable board and derive endpoint membership from
+KiCad's native connectivity. It now passes three RTL_5V endpoints and eight
+RTL_1V1 endpoints; it no longer uses text-count heuristics or a nonexistent
+historical board.
