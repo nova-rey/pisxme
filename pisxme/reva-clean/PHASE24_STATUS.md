@@ -146,6 +146,13 @@ two original U13 thermal-pad shorts, but native DRC regresses to 136 findings
 crossings. It is rejected as a route implementation; selector authority and
 the U13 thermal-pad assignment remain unchanged.
 
+An isolated U13-to-J3 lane-0 fixture was then generated with no inherited
+selector/bridge copper. Its ordered split-corridor launch reports 84 native
+DRC violations / 32 opens, including M.2 mounting-hole/ground interactions
+and connector-side target-via conflicts. It is rejected as a launch
+implementation; the remaining issue is connector-side mechanical/via
+placement, not U13 selector pin authority.
+
 See `PHASE24_PATHA_SATA_SELECTOR_CORRECTION_20260906.md` for the exact TI
 pin/port basis and raw selector-inclusive fixture names.
 

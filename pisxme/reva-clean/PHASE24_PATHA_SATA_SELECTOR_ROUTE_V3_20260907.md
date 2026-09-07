@@ -38,3 +38,11 @@ the two original U13 thermal-pad shorts but regressed to 136 native DRC
 findings / 52 opens, including TXP/TXN via spacing and inherited corridor
 crossings. It is rejected as a route implementation; no V4 copper is
 promoted.
+
+The isolated launch fixture
+`PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V1.kicad_pcb` removes all inherited
+selector/bridge copper and tests only U13 lane-0 to J3. Native DRC reports
+84 findings / 32 opens, including M.2 mounting-hole/ground interactions and
+connector-side target-via conflicts. It is rejected; the next launch class
+must move target vias farther outboard and explicitly clear the connector's
+mechanical holes.

@@ -5135,3 +5135,8 @@ from the V3 selector fixture. It removed the original U13 thermal-pad shorts
 but regressed to 136 native DRC findings / 52 opens with TXP/TXN via spacing
 and inherited corridor conflicts. Rejected the route implementation and kept
 selector authority and production CAD unchanged.
+2026-09-07 — PiSXMe Phase 24 Path A: generated an isolated U13-to-J3 lane-0
+launch fixture without inherited selector/bridge copper. Native DRC reported
+84 findings / 32 opens, including M.2 mounting-hole/ground and connector-side
+via conflicts. Rejected the launch implementation and preserved the selector
+authority boundary.
