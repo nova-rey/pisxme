@@ -131,6 +131,12 @@ multi-net route implementation failure. The next class must change the U1 or
 local-support placement/orientation and regenerate the field, not add more
 coordinate-only vias.
 
+The 90-degree U1 placement/source-field V16 probe is rejected at 7 native
+violations / 41 opens. Straight top-row departures are mechanically cleaner,
+but the B.Cu channels still cross at the U2 handoff. The orientation remains
+a placement alternative; the next route must stagger downstream drops outside
+the horizontal channel envelope.
+
 Integrated source-escape V13 regenerated SPICLK with RTL_3V3 but is rejected
 at 10 native violations / 31 opens. SPICLK still crossed the retained SPISI
 departure, while the RTL_3V3 transitions collided with SPICLK and XTAL_IN.

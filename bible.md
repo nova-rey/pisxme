@@ -5579,3 +5579,7 @@ and RTL_3V3 collided with XTAL_IN. The next class must change U1/local
 support placement or orientation.
 Added a reusable saved-board V8 support audit; XTAL_IN/XTAL_OUT/RSET pass and
 the XTAL_OUT trace-removal negative control fails as required.
+The 90-degree U1 four-net V16 source-field probe was rejected at 7 native
+violations / 41 opens because the B.Cu channels crossed at the U2 handoff.
+The orientation remains a placement alternative; downstream drops must be
+staggered outside the horizontal channel envelope.

@@ -141,6 +141,13 @@ cross the U1 pad field, B.Cu channels cross, and RTL_3V3 collides with
 XTAL_IN. This route class is rejected; the next class must change U1 or
 local-support placement/orientation.
 
+## 90-degree U1 four-net field V16 — rejected
+
+V16 tested the rotated U1 top-row source field with separated SPISI, SPICLK,
+SPISO3, and RTL_3V3 channels. Native KiCad reports 7 violations / 41 opens;
+the B.Cu channels cross during the U2 handoff. The placement remains useful
+evidence, but the simple parallel-drop implementation is rejected.
+
 ## Integrated 3V3/SPICLK source escape V13 — rejected
 
 V13 regenerated SPICLK with RTL_3V3 but still reports 10 native violations /
