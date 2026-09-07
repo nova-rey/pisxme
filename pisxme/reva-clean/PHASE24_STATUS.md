@@ -83,6 +83,13 @@ violations / 40 opens; remaining findings are outside the SPI proof and this
 candidate is not promoted until rails, controls, crystal, flash support, and
 mechanical access are revalidated.
 
+The combined lateral transplant,
+`PHASE24_RTL9210B_FULL_LATERAL_SUPPORT_INTEGRATED_V2`, reports native DRC
+19 violations / 34 opens. Its native audit passes all five SPI pairs plus
+RTL_3V3 U1.34/C3.1/U2.3/U2.8 and the RTL_1V1/RTL_5V decoupler endpoints.
+Remaining DRC and opens are control/crystal/flash/test-access work and are
+not waived.
+
 The next source-authority discriminator starts from V6 directly:
 `PHASE24_RTL9210B_V6_LATERAL_SUPPORT_PLACEMENT_V2` moves only U2/C3/C4/C5
 20 mm laterally and reports 8 violations / 43 opens before new copper. Its

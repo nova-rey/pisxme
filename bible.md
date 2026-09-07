@@ -5348,6 +5348,11 @@ into the full support placement (U2 +35 mm; C3/C4/C5 +20 mm) using serialized
 net-scoped blocks. The integrated saved-board SPI audit passes all five
 U1-to-U2 endpoint pairs. Native DRC is 17 violations / 40 opens, with
 remaining findings outside the SPI proof; rails/control/support remain open.
+2026-09-07 — PiSXMe Phase 24 Path B: combined the proven lateral SPI and rail
+transplants with the V6 control/crystal support. Native DRC is 19 violations /
+34 opens. The native endpoint audit passes all five SPI pairs and the
+RTL_3V3/RTL_1V1/RTL_5V support endpoints; remaining DRC/opens are not waived.
+Production CAD and Path A unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: rebuilt the lateral support placement
 from the clean V6 source directly. Placement-only native DRC was 8/43; the
 laterally extended SPI route was 22/38 and was rejected for destination and
