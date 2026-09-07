@@ -6762,3 +6762,7 @@ ISOLATEB/CLKREQ_N short (626 findings / 15 opens); it is rejected. V258's
 independent bottom-edge RTL_1V1 vias reduce opens to 13 but create multiple
 REFCLK/XTAL shorts (668 findings); it is also rejected. The next Path-B
 experiment must co-author the complete QFN rail/clock support field.
+V259/V260 are rejected CLKREQ_N re-escapes: V259 trades the ISOLATEB short
+for a REFCLK_N crossing, and V260 retains that crossing after a south dogleg.
+The next experiment is a coordinated CLKREQ/REFCLK/sideband field, not another
+single-net departure.

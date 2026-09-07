@@ -5812,3 +5812,7 @@ completed the U1.52 RTL_3V3 join but exposed ISOLATEB/CLKREQ_N; V258 reduced
 opens to 13 with bottom-edge RTL_1V1 vias but introduced multiple REFCLK/XTAL
 shorts. The QFN rail/clock field must be co-authored; Path A and production
 CAD remain unchanged.
+2026-09-07: Rejected RTL9210B V259/V260 CLKREQ_N local re-escapes. V259
+removed the ISOLATEB pad-field short but crossed REFCLK_N; V260 retained that
+crossing after a south dogleg. The next trial must co-author the neighboring
+QFN CLKREQ/REFCLK/sideband field; Path A and production CAD remain unchanged.

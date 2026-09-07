@@ -1639,3 +1639,11 @@ DRC reports 668 findings and multiple real RTL_1V1 shorts into REFCLK_P,
 REFCLK_N, and XTAL_OUT. Reject; the QFN support field must be co-authored
 with those neighboring analog/clock escapes rather than populated with
 independent vias.
+
+## V259–V260 CLKREQ local re-escape — rejected
+
+V259 escaped U1.13 CLKREQ_N to an ordinary via west of the adjacent U1.12
+ISOLATEB pad. It removed the pad-field short but crossed the existing B.Cu
+REFCLK_N corridor. V260 moved the B.Cu dogleg farther south; native DRC still
+reported the REFCLK_N crossing. Reject both as local route implementations;
+CLKREQ_N and REFCLK_N departures must be co-authored as one QFN side-field.
