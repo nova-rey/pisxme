@@ -5587,6 +5587,9 @@ The transformed-pad-aware V22 diagonal probe was rejected at 9 native
 violations / 41 opens: RTL_3V3 collided with SPISO3/SPICS and crossed SPICLK.
 V20 remains the best 90-degree baseline; a formal escape-cell construction
 is still required.
+Added a native transformed-pad escape-cell map utility and V15 receipt; it
+records U1 pad centers, dimensions, orientations, and outward vectors for the
+next formal source-escape generator.
 The 90-degree V18-V21 trials remain disposable evidence. V20 reduced the
 source-field result to 3 findings / 41 opens; V21 rejected down/right RTL_3V3
 because it entered adjacent U1 RTL_5V/RTL_1V1 pads and crossed SPICLK. A

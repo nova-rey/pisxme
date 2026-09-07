@@ -25,6 +25,12 @@ SPICLK B.Cu channel. V20 remains the best 90-degree implementation baseline;
 V22 confirms that hand-placed diagonals are not a substitute for a formal
 escape-cell construction.
 
+`phase24_rtl9210b_escape_cell_map.py` now derives the rotated U1 pad centers,
+orientations, dimensions, and package-center outward vectors from native
+KiCad objects, saving `PHASE24_RTL9210B_ESCAPE_CELL_MAP_NATIVE_V15.txt`.
+This is the authoritative geometry input for the next formal escape-cell
+generator; no source coordinates are inferred from pad-number order.
+
 ## Current live Path-B step — 2026-09-07
 
 ### Current open gate

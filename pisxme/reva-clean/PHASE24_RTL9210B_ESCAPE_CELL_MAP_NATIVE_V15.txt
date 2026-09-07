@@ -1,0 +1,34 @@
+PCB=PHASE24_RTL9210B_ROTATE_U1_90_V15.kicad_pcb
+EXPOSED_PAD=98.0000,70.0000
+34 RTL_3V3 center=94.8000,66.0500 size=0.9000,0.2000 orientation=90.0 outward=-0.6295,-0.7770
+33 RTL_5V center=95.2000,66.0500 size=0.9000,0.2000 orientation=90.0 outward=-0.5783,-0.8158
+25 RTL_1V1 center=98.4000,66.0500 size=0.9000,0.2000 orientation=90.0 outward=0.1008,-0.9949
+24 SPICS center=98.8000,66.0500 size=0.9000,0.2000 orientation=90.0 outward=0.1985,-0.9801
+23 SPISO center=99.2000,66.0500 size=0.9000,0.2000 orientation=90.0 outward=0.2907,-0.9568
+22 SPISO3 center=99.6000,66.0500 size=0.9000,0.2000 orientation=90.0 outward=0.3754,-0.9268
+21 SPISO2 center=100.0000,66.0500 size=0.9000,0.2000 orientation=90.0 outward=0.4517,-0.8922
+20 RTL_3V3 center=100.4000,66.0500 size=0.9000,0.2000 orientation=90.0 outward=0.5193,-0.8546
+19 SPICLK center=100.8000,66.0500 size=0.9000,0.2000 orientation=90.0 outward=0.5783,-0.8158
+18 SPISI center=101.2000,66.0500 size=0.9000,0.2000 orientation=90.0 outward=0.6295,-0.7770
+17 RTL_5V center=101.9500,66.8000 size=0.2000,0.9000 orientation=90.0 outward=0.7770,-0.6295
+36 RTL_1V1 center=94.0500,67.2000 size=0.2000,0.9000 orientation=90.0 outward=-0.8158,-0.5783
+16 RTL_1V1 center=101.9500,67.2000 size=0.2000,0.9000 orientation=90.0 outward=0.8158,-0.5783
+14 PERST_N center=101.9500,68.0000 size=0.2000,0.9000 orientation=90.0 outward=0.8922,-0.4517
+39 RTL_3V3 center=94.0500,68.4000 size=0.2000,0.9000 orientation=90.0 outward=-0.9268,-0.3754
+13 CLKREQ_N center=101.9500,68.4000 size=0.2000,0.9000 orientation=90.0 outward=0.9268,-0.3754
+40 RTL_1V1 center=94.0500,68.8000 size=0.2000,0.9000 orientation=90.0 outward=-0.9568,-0.2907
+50 RTL_1V1 center=94.0500,72.8000 size=0.2000,0.9000 orientation=90.0 outward=-0.8158,0.5783
+51 RSET center=94.0500,73.2000 size=0.2000,0.9000 orientation=90.0 outward=-0.7770,0.6295
+52 RTL_3V3 center=94.8000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=-0.6295,0.7770
+53 XTAL_IN center=95.2000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=-0.5783,0.8158
+54 XTAL_OUT center=95.6000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=-0.5193,0.8546
+55 RTL_1V1 center=96.0000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=-0.4517,0.8922
+60 RTL_1V1 center=98.0000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=0.0000,1.0000
+61 REFCLK_P center=98.4000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=0.1008,0.9949
+62 REFCLK_N center=98.8000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=0.1985,0.9801
+63 RTL_1V1 center=99.2000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=0.2907,0.9568
+64 LANE0_RXP center=99.6000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=0.3754,0.9268
+65 LANE0_RXN center=100.0000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=0.4517,0.8922
+66 GND center=100.4000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=0.5193,0.8546
+67 LANE0_TXN center=100.8000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=0.5783,0.8158
+68 LANE0_TXP center=101.2000,73.9500 size=0.9000,0.2000 orientation=90.0 outward=0.6295,0.7770
