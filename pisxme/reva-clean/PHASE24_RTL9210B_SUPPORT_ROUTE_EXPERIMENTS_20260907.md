@@ -44,6 +44,12 @@ one U1 pad-field clearance, one XTAL_IN-adjacent via, and an RSET-via conflict
 on the U2 branch; the next attempt must partition the source and downstream
 3V3 branches.
 
+V42 partitioned the RTL_3V3 source and U2 branches and restored the validated
+U1.20/C3 trunk. Native DRC reports 6 findings / 31 opens; the prior U1
+pad-field defect is gone, but one RSET-adjacent via remains dangling/too
+close. It is not promoted; the partition is retained as the next rail-pad
+join basis.
+
 V40 jointly reauthored the 3V3/5V rail spines. Native DRC reports 8 findings,
 including a new RTL_3V3/SPISO3 source collision and retained RTL_5V/SPISI and
 C5-handoff conflicts. It is rejected; the next rail class must keep the V24

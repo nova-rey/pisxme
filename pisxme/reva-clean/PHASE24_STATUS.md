@@ -56,6 +56,12 @@ XTAL_IN-adjacent via, and one RSET-via conflict on the U2 branch remain. The
 trial did not alter SPI or XTAL/RSET copper; the next 3V3 pass must split the
 local source fanout from its downstream U2 branch.
 
+V42 partitioned RTL_3V3 source and U2 branches while restoring the validated
+U1.20/C3 trunk. Native DRC improved to 6 findings / 31 opens and removed the
+V41 U1 pad-field defect; one RSET-adjacent via/transition remains, so V42 is
+not promoted. The source/downstream split is retained for the next rail-pad
+join pass.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch
