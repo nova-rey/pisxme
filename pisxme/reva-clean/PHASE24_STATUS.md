@@ -95,6 +95,13 @@ basis. V50's direct R2/R3-to-U1.20/C3 rail join is rejected at 7 findings /
 SPISO3 departures. The next class must allocate rail taps on another layer or
 coherently reauthor the local support field; no production CAD changed.
 
+V51 attempted a B.Cu collector for R2/R3, but is rejected at 15 findings /
+28 opens. The pad escapes were authored toward the opposite-net resistor
+pads (PEDET/CLKREQ_N), and the proposed B.Cu collector also shorts/crosses
+the retained SPISO3 transition. This is a route-authoring failure; V49
+remains the current cleanest basis and the next pass must verify resistor pad
+orientation before selecting a separate collector corridor.
+
 V40 jointly reauthored the 3V3/5V spines after correcting the rail-cap CAD.
 It is rejected at 8 native violations / 32 opens: the outer 3V3 spine
 collides with the retained SPISO3 source departure, while the 5V branch

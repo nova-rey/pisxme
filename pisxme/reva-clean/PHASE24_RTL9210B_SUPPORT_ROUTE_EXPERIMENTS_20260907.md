@@ -82,6 +82,13 @@ straight F.Cu collector; it is rejected at 7 findings / 28 opens for real
 crossings with retained SPISO, SPICS, and SPISO3. This is a route allocation
 failure, not evidence against the corrected footprint or the RTL_3V3 net.
 
+V51 is rejected at 15 native findings / 28 opens. Its R2/R3 escapes ran into
+the opposite-net pads because the resistor pad orientation was not respected,
+and its B.Cu collector conflicted with the retained SPISO3 transition. Keep
+this as negative evidence; V49 remains the cleanest handoff basis. The next
+rail pass must derive resistor pad sides from the saved footprint and allocate
+a collector corridor that is clear of SPI.
+
 V40 jointly reauthored the 3V3/5V rail spines. Native DRC reports 8 findings,
 including a new RTL_3V3/SPISO3 source collision and retained RTL_5V/SPISI and
 C5-handoff conflicts. It is rejected; the next rail class must keep the V24
