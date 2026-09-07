@@ -5297,3 +5297,8 @@ fixture with a fresh native KiCad DRC report (6 violations / 25 unconnected
 items) and the saved-board connectivity audit. XTAL_IN, XTAL_OUT, and eight
 RTL_1V1 endpoints passed; removal of XTAL_OUT copper failed the negative
 control as required. Production CAD remains unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: created the first coherent support-branch
+relocation probe, translating U2/C3/C4/C5/R2/R3 by 22 mm in a disposable V11
+copy. Native DRC is 115 violations / 31 opens because the probe retains stale
+old copper and provisional joins; this is route-implementation evidence, not
+a placement verdict. Production CAD and Path A remain unchanged.
