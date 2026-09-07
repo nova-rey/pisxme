@@ -62,4 +62,18 @@ native baseline has zero DRC violations. A native-coordinate oscillator/RSET
 route against that placement improves to 4 DRC violations / 52 opens, with
 three local crossings and one RSET/XTAL interaction; no via, drill, or track
 width violations remain. It is still rejected as a route implementation, but
-the placement variant remains a credible next baseline.
+ the placement variant remains a credible next baseline.
+
+## Attempts 3 and 4 — oscillator/RSET local variants
+
+Two further variants were generated from the same native-coordinate support
+placement. V3 remained at 4 native DRC violations / 52 opens, including one
+XTAL_IN/XTAL_OUT crossing, two shorts (XTAL_IN/XTAL_OUT and XTAL_OUT/GND), and
+one solder-mask bridge. V3 is rejected as a route implementation while the
+support-local V2 placement remains retained.
+
+V4 changed the local dogbone ordering but regressed to 5 violations / 52
+opens, including two shorts and three solder-mask bridges. V4 is rejected as
+worse than V3. These experiments do not reject RTL9210B or its support
+topology; they establish that another routing method is required rather than
+another fixed-coordinate oscillator trial.

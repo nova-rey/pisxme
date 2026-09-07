@@ -5042,3 +5042,9 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  native-coordinate oscillator/RSET route remains rejected at 4 violations /
  52 opens from local crossings and one RSET/XTAL interaction. Preserved the
  V2 placement and raw report for the next route class.
+2026-09-07 — PiSXMe Phase 24 Path B: preserved two further native-coordinate
+oscillator-route trials. V3 remained at 4 DRC violations / 52 opens with
+XTAL/RSET local shorts/crossing and a mask bridge; V4 regressed to 5 / 52
+with two shorts and three mask bridges. Rejected both as route
+implementations, retained the coherent V2 placement, and kept production CAD
+unchanged before changing routing method.

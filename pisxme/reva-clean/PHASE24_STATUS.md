@@ -26,7 +26,14 @@ native six-layer `signal` form and ordering. A support-local V2 placement
 moved the crystal/RSET/flash/support parts coherently; its baseline is DRC
 clean. The first native-coordinate oscillator/RSET route is still rejected at
 4 violations / 52 opens from three local crossings and one RSET/XTAL
-interaction, with no via, drill, or track-width violations.
+ interaction, with no via, drill, or track-width violations.
+
+Two additional oscillator-route trials were preserved and rejected: V3 has
+4 native DRC violations / 52 opens (two shorts, one crossing, one mask
+bridge), while V4 regresses to 5 violations / 52 opens (two shorts and three
+mask bridges). This remains a Path-B route-implementation gate. The V2
+support-local placement and corrected native layer serialization remain the
+current baseline; production CAD is unchanged.
 
 ## Current live correction — 2026-09-06
 
