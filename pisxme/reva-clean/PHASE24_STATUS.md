@@ -4498,6 +4498,20 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-A isolated M.2 lane-0 launches V11/V12 — 2026-09-07
+
+V11 staggered the four M.2 contact-row departure heights and reduced native
+DRC to 79 violations / 34 unconnected items, but introduced one crossing
+between RXP and TXN final dogbones. V12 swapped those two departure heights:
+native DRC reports 81 violations / 34 unconnected items, with zero shorts and
+zero track crossings. V12 is the strongest current topological candidate;
+remaining findings are clearance, dangling disposable-fixture geometry, and
+unconnected M.2 ground/mechanical contacts. Neither is integrated.
+
+`PATHA_M2_LANE0_V11 = REJECTED`
+`PATHA_M2_LANE0_V12 = REJECTED_BEST_TOPOLOGY`
+`PHASE24 = OPEN`
+
 ## Path-A isolated M.2 lane-0 launches V9/V10 — 2026-09-07
 
 V9 moved RXN farther left before its vertical source jog and removed the

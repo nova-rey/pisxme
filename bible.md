@@ -5168,3 +5168,8 @@ V9 reported 81 violations / 34 unconnected with one RX source short. V10
 moved the RXP transition below RXN's escape and reported 81 / 34 with zero
 shorts and zero crossings. V10 is the best topological baseline, but M.2
 contact-row clearance findings remain; no production CAD changed.
+2026-09-07 — PiSXMe Phase 24 Path A: tested V11/V12 staggered M.2 final
+dogbone departures. V11 reported 79 / 34 with 72 clearance findings but one
+crossing. V12 swapped the conflicting departures and reported 81 / 34 with
+zero shorts and zero crossings. V12 is the best topology candidate, not a
+PASS; production CAD remains unchanged.

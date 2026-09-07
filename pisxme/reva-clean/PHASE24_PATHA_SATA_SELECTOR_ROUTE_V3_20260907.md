@@ -89,3 +89,10 @@ one RX source short. V10 moved the RXP transition below that escape and
 reported 81 / 34 with zero shorts and zero crossings. V10 is retained as the
 best topological baseline; its remaining issue is the clearance-constrained
 M.2 contact-row fanout.
+
+V11 reduced the clearance count to 72 but introduced one RXP/TXN final
+dogbone crossing. V12 swapped those departure heights and returned to zero
+shorts/crossings at 75 clearance findings, 34 unconnected items, four
+disposable via-dangling findings, and two track-dangling findings. V12 is the
+best current topological candidate but remains rejected pending full native
+clearance/connectivity closure.
