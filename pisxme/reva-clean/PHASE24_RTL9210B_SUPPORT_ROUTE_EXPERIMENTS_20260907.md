@@ -1391,3 +1391,14 @@ saved-board audit joins U1.8/J1.69 and its trace-removal negative control
 fails as required. V212 is promoted as disposable PEDET evidence only;
 remaining reset/clock-request, support, high-speed, mode, firmware, and
 production gates remain open.
+## V213–V215 complete PEDET support return
+
+V213 correctly joined U1.8, R2.1, and J1.69 but crossed the retained SPISI
+and REFCLK/RTL_5V corridors. V214 moved the branch above the SPI field but
+still crossed the long B.Cu REFCLK_P and RTL_5V spans. V215 carried the R2
+return around those outboard corridor ends. Native DRC reports 381 findings /
+22 unconnected items with zero `shorting_items` and `tracks_crossing`.
+Native connectivity joins U1.8/R2.1/J1.69 and its trace-removal negative
+control fails as required. V215 is promoted as the complete disposable PEDET
+support slice; remaining Path-B controls, rails, high-speed, mode, firmware,
+and production gates remain open.

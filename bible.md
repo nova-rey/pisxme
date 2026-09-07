@@ -5702,3 +5702,8 @@ slice. Native connectivity and the trace-removal negative control pass, and
 native DRC has zero signal shorting/crossing classes. Path A and production
 CAD remain unchanged; reset/CLKREQ, remaining support, mode, firmware, and
 full Path-B validation remain open.
+2026-09-07: Rejected RTL9210B PEDET support V213/V214 for retained-corridor
+crossings. Promoted V215 after routing R2.1 around the outboard ends of the
+REFCLK/RTL_5V B.Cu spans. U1.8/R2.1/J1.69 native connectivity and the
+trace-removal negative control pass with zero signal shorting/crossing
+classes. Path A and production CAD remain unchanged.

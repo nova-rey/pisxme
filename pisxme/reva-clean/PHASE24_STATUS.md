@@ -6602,3 +6602,16 @@ This remains disposable Path-B evidence only. It does not close Path B or
 change Path A/production CAD. Reset/CLKREQ, remaining rail branches, USB/SATA
 high-speed paths, mode-aware validation, firmware/procurement, and integrated
 mechanical/DFM gates remain open.
+## Current RTL9210B complete PEDET support basis — V215
+
+`PHASE24_RTL9210B_PEDET_R2_U18_J1_69_V215.kicad_pcb` extends the V212
+U1.8-to-J1.69 sideband with the R2.1 PEDET pull network. The R2 return is
+carried around the outboard ends of the existing REFCLK and RTL_5V B.Cu
+corridors. Native DRC reports 381 findings / 22 unconnected items with zero
+`shorting_items` and zero `tracks_crossing`; the saved-board audit joins all
+three PEDET endpoints and passes its trace-removal negative control.
+
+V215 is disposable Path-B evidence only; Path A and production CAD remain
+unchanged. Remaining CLKREQ/PERST, support-rail branches, USB/SATA
+high-speed, mode-aware, firmware/procurement, and integrated DFM gates remain
+open.
