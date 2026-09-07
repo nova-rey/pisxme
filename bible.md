@@ -5594,6 +5594,9 @@ Formal native-pad source field V24 is a local PASS: native KiCad reports no
 signal shorts, crossings, or clearance violations, positive saved-board
 connectivity passes SPISI/SPICLK/SPISO3/RTL_3V3, and the SPISI trace-removal
 negative control fails as required. Remaining RTL9210B support is open.
+V25 added SPISO/SPICS but was rejected at 4 native violations / 39 opens for
+SPISO/SPISO3 crossing and a SPICS source transition conflict. V24 remains
+the valid four-net baseline; the remaining channels need a layer swap.
 The 90-degree V18-V21 trials remain disposable evidence. V20 reduced the
 source-field result to 3 findings / 41 opens; V21 rejected down/right RTL_3V3
 because it entered adjacent U1 RTL_5V/RTL_1V1 pads and crossed SPICLK. A

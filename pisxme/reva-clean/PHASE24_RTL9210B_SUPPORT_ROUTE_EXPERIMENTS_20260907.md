@@ -29,6 +29,13 @@ Saved-board native checks pass SPISI, SPICLK, SPISO3, and RTL_3V3 endpoints;
 removing a required SPISI segment fails the negative control. V24 is a local
 source-field baseline, not full RTL9210B fixture closure.
 
+## Complete SPI from V24 V25 — rejected
+
+V25 added SPISO and SPICS to the V24 source baseline. Native KiCad reports 4
+violations / 39 opens: SPISO crosses the SPISO3 F.Cu escape and SPICS enters
+that source corridor. V24 remains the valid four-net source baseline; the
+remaining channels require a source-field-aware layer swap.
+
 The native escape-cell map utility now records the transformed U1 pad centers,
 orientations, dimensions, and package-center outward vectors in
 `PHASE24_RTL9210B_ESCAPE_CELL_MAP_NATIVE_V15.txt`. This map is the source for

@@ -155,6 +155,12 @@ signal shorts, crossings, or clearance violations, positive saved-board
 connectivity passes SPISI/SPICLK/SPISO3/RTL_3V3, and the SPISI trace-removal
 negative control fails as required. Remaining RTL9210B support is open.
 
+The V25 completion probe added SPISO and SPICS to V24 but is rejected at 4
+native violations / 39 opens: SPISO crossed the retained SPISO3 F.Cu escape
+and the SPICS transition entered that source corridor. V24 remains the valid
+four-net source baseline; the remaining channels need a source-field-aware
+layer swap.
+
 The 90-degree U1 placement/source-field V16 probe is rejected at 7 native
 violations / 41 opens. Straight top-row departures are mechanically cleaner,
 but the B.Cu channels still cross at the U2 handoff. The orientation remains
