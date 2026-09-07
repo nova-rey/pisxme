@@ -4498,6 +4498,24 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-A isolated M.2 lane-0 launch V2 — 2026-09-07
+
+`PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V2.kicad_pcb` is preserved as a
+disposable route experiment. It moved the RX lower corridors around the J3
+M1 mounting-hole region, but native DRC still reports 83 violations and 32
+unconnected items. The remaining failures are route-authoring defects: the
+TXP final launch contacts J3 pad 47 (TXN), the TXN final launch contacts J3
+ground pad 45, the RXP final launch contacts J3 ground pad 39, and the RXN/RXP
+lower corridors cross near their target-via field. Inherited U13 QFN pad-field
+clearance findings remain present as package/rule findings. V2 is rejected and
+is not integrated; no Path-B or production CAD changed. The next experiment
+must change the connector-side target-via/final-dogbone ordering rather than
+repeat the V2 corridor.
+
+`PATHA_M2_LANE0_V2 = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`
+
 ## TI-U7 separated-target-via approach refinement — 2026-09-06
 
 The best disposable escape was refined by aligning the TX final F.Cu

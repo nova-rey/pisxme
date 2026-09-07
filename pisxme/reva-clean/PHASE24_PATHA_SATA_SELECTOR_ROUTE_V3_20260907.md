@@ -46,3 +46,15 @@ selector/bridge copper and tests only U13 lane-0 to J3. Native DRC reports
 connector-side target-via conflicts. It is rejected; the next launch class
 must move target vias farther outboard and explicitly clear the connector's
 mechanical holes.
+
+## V2 isolated launch — rejected
+
+`PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V2.kicad_pcb` moved the RX lower
+corridors around M1 before the connector launch. Native DRC reports 83
+violations / 32 unconnected items. This did not pass: the TXP final dogbone
+contacts J3 pad 47 (TXN), the TXN final dogbone contacts J3 ground pad 45,
+the RXP final dogbone contacts J3 ground pad 39, and the RXN/RXP corridors
+cross in the target-via field. The experiment remains useful evidence that
+the M1 detour alone is insufficient. It is rejected as route implementation;
+the next candidate must reorder and move the connector-side target vias and
+final dogbones together.

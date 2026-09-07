@@ -5140,3 +5140,10 @@ launch fixture without inherited selector/bridge copper. Native DRC reported
 84 findings / 32 opens, including M.2 mounting-hole/ground and connector-side
 via conflicts. Rejected the launch implementation and preserved the selector
 authority boundary.
+2026-09-07 — PiSXMe Phase 24 Path A: tested isolated lane-0 launch V2 with
+the RX lower corridors moved around J3 mounting hole M1. Native DRC reported
+83 violations / 32 unconnected items. TXP/TXN/RXP final dogbones still
+contacted adjacent J3 pads or ground, and RXN/RXP crossed in the target-via
+field. Rejected V2 as route implementation evidence; production CAD and
+Path-B isolation remain unchanged. Next work must re-author connector-side
+target-via ordering rather than repeat this corridor.
