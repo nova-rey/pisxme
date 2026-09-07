@@ -25,6 +25,13 @@ DRC has no shorting or crossing classes; the saved-board audit connects
 J1.2/J1.4/J1.6/J1.8 and its trace-removal negative control fails as required.
 This closes only the socket-contact collector; the actual SSD_3V3 source,
 power-budget, and remaining high-speed Path-B endpoints remain open.
+V142 is rejected: its high-clearance U1.34 B.Cu span still contacted SPICS.
+V143 moves the U1.34 departure outside the V137 RTL_5V source corridor and
+uses a higher outer B.Cu handoff. Native DRC has no `shorting_items` or
+`tracks_crossing`; the saved-board audit joins U1.34/C3/R2/R3/U1.20 and its
+trace-removal negative control fails. Promote V143 only as the disposable
+U1.34 RTL_3V3 sub-primitive; high-speed links, USB, reset, SSD_3V3 source,
+firmware, and full Path-B validation remain open.
 The current promoted disposable RTL_5V/control basis is
 `PHASE24_RTL9210B_RTL5V_BELOW_C5_V137.kicad_pcb`, layered on the V131
 CLKREQ/PEDET support evidence. V97 moved

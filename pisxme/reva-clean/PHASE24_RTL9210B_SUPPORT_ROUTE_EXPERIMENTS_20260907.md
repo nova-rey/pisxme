@@ -43,6 +43,15 @@ the saved-board audit and trace-removal negative control pass. This is only
 the M.2 contact collector. It does not close the SSD_3V3 source, inrush,
 power-budget, or complete Path-B power gate.
 
+## V142–V143 U1.34 RTL_3V3 source-field allocation
+
+V142 raised the U1.34 B.Cu corridor but contacted the retained SPICS via and
+is rejected. V143 moves the source outside the V137 RTL_5V field and takes a
+higher outer B.Cu path. Native DRC reports no `shorting_items` or
+`tracks_crossing`; the native audit joins U1.34/C3/R2/R3/U1.20 and the
+trace-removal negative control fails as required. Promote V143 only as the
+U1.34 disposable sub-primitive; complete Path-B closure is still open.
+
 ## V76–V78 U1.40 edge-group trials — rejected
 
 V76 placed the U1.40 RTL_1V1 transition at (92.8,68.8), where the via
