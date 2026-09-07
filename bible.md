@@ -5728,3 +5728,8 @@ stay open.
 connectivity and negative control pass, but CLKREQ crossed/shorted RSET,
 REFCLK_N, and PERST in the local corridor. V227 remains the promoted
 SPISO3/PERST basis; no Path-A or production-CAD change occurred.
+2026-09-07: Rejected RTL9210B CLKREQ V229/V230 for XTAL_IN/SPISO3/RSET
+crossings. Promoted V231 after shifting only the R3 return west of the RSET
+diagonal. U1.13/R3.1/J1.52 native connectivity and the trace-removal
+negative control pass with zero signal shorting/crossing classes. Path A and
+production CAD remain unchanged.

@@ -1453,3 +1453,14 @@ reports 426 findings / 19 opens with CLKREQ crossing/shorting the retained
 RSET, REFCLK_N, and PERST corridors. This is a three-net local sideband
 allocation failure; V227 remains the promoted SPISO3/PERST basis and no
 production or Path-A change occurred.
+## V229–V231 complete CLKREQ corridor
+
+V229 separated CLKREQ by transitioning from B.Cu to F.Cu around PERST, but
+the R3 return crossed XTAL_IN and the F.Cu run crossed SPISO3. V230 moved the
+R3 join below XTAL/RSET and added a short F.Cu overpass, leaving one RSET
+crossing. V231 moved only the R3 vertical farther west. Native connectivity
+joins U1.13/R3.1/J1.52; the trace-removal negative control fails as required.
+Native DRC reports 435 findings / 19 unconnected items with zero
+`shorting_items` and zero `tracks_crossing`. V231 is promoted as the
+disposable complete CLKREQ basis. Remaining rails, high-speed paths, mode,
+firmware, and production gates remain open.

@@ -6653,3 +6653,16 @@ candidate routing conflicts with RSET, REFCLK_N, and PERST in the local
 sideband field. It is rejected as a route implementation. The next attempt
 must co-author that three-net corridor; V227 remains the promoted disposable
 SPISO3/PERST basis. Path A and production CAD remain unchanged.
+## Current RTL9210B complete CLKREQ basis — V231
+
+`PHASE24_RTL9210B_CLKREQ_R3_U113_J1_52_V231.kicad_pcb` extends the V227
+coupled source-field basis with a complete U1.13/R3.1/J1.52 CLKREQ network.
+The route uses a low B.Cu return, a short layer-separated overpass around
+PERST, and a west-shifted R3 escape. Native DRC reports 435 findings / 19
+unconnected items with zero `shorting_items` and zero `tracks_crossing`;
+native connectivity and the trace-removal negative control pass.
+
+V231 remains disposable Path-B evidence, not production integration or Path-B
+closure. Remaining support rails, USB/SATA high-speed paths, mode-aware
+validation, firmware/procurement, and integrated DFM/mechanical gates remain
+open. Path A and production CAD remain unchanged.
