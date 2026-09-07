@@ -118,6 +118,11 @@ The attempted perimeter path is therefore not a valid next baseline; V5 is
 retained as the best combined candidate while a new, pad-field-aware escape
 class is developed.
 
+The V8 local RTL_1V1 F.Cu-zone probe is rejected as non-effective: native DRC
+and opens remain 17 / 26, with no reduction in the missing QFN rail
+connections. The zone did not establish the required pad-field continuity;
+no validation rule was relaxed and V5 remains the baseline.
+
 The rail layer rebalance is now verified: the rail-only/U2 branch returns to
 native DRC 0 violations / 45 opens, and regenerating the combined candidate
 reduces its native DRC to 18 violations / 34 opens with the combined endpoint

@@ -5385,3 +5385,7 @@ net-scoped scrub removed only affected tracks/vias without unstable SWIG
 collection mutation; the placement-only candidate reports native DRC 2 / 44
 opens, with unrouted support expected. The earlier 115/31 result is retained
 as superseded provisional-join evidence. Production CAD and Path A unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: tested local RTL_1V1 F.Cu power-zone
+probe V8. Native DRC and opens remained 17/26, so the zone did not establish
+QFN rail continuity and was rejected. No validation rule or production CAD
+changed; V5 remains the baseline.
