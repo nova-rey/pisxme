@@ -5292,3 +5292,8 @@ It reduced opens 25 to 24 but shorted RTL_5V and crossed RTL_1V1, producing
 from the native QFN map and V11/V3 trials. Isolated 3V3/crystal nudges are
 rejected; the next implementation class is coherent 3V3/1V1 support-branch
 relocation. Production CAD and Path A unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: revalidated the disposable crystal V11
+fixture with a fresh native KiCad DRC report (6 violations / 25 unconnected
+items) and the saved-board connectivity audit. XTAL_IN, XTAL_OUT, and eight
+RTL_1V1 endpoints passed; removal of XTAL_OUT copper failed the negative
+control as required. Production CAD remains unchanged.
