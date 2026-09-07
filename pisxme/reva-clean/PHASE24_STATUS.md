@@ -85,6 +85,13 @@ Saved-board native connectivity passes XTAL_IN (U1.53/Y1.1/C1.1), XTAL_OUT
 unconnected items, so V8 is a local support-route PASS, not full Path-B
 closure. Production CAD and Path A remain unchanged.
 
+The V8 combined fixture was rechecked with the saved-board native SPI audit:
+SPISI, SPICLK, SPISO3, SPISO, and SPICS all connect between the rotated U1
+and corrected U2 pads, and the SPISI trace-removal negative control fails as
+required. This confirms that the support relocation did not regress the
+channelized SPI baseline. The next open class is remaining control/sideband,
+rail-join, ground-access, USB, M.2, and power completion.
+
 The normalized rotated-support V3 route
 `PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V3` is rejected at 14 native
 violations / 37 opens. XTAL_IN and RSET remain natively connected, but

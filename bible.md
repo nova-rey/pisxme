@@ -5554,3 +5554,6 @@ transition beyond the U1 QFN pad envelope. Native KiCad reports no signal
 shorts, crossings, or clearance violations; saved-board audits pass XTAL_IN,
 XTAL_OUT, and RSET. Two inherited findings and 35 unrelated fixture opens
 remain, so V8 is a local support-route baseline, not full Path-B closure.
+The same saved board passes the native five-net SPI endpoint audit and its
+SPISI trace-removal negative control. Remaining work is control/sideband,
+rail/ground completion, USB, M.2, power, and full Path-B validation.

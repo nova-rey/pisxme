@@ -100,6 +100,11 @@ XTAL_IN (U1.53/Y1.1/C1.1), XTAL_OUT (U1.54/Y1.2/C2.1), and RSET
 this is a local support-route PASS rather than full Path-B closure. Path A
 and production CAD are unchanged.
 
+The same V8 saved board passes the native five-net SPI endpoint audit for
+SPISI, SPICLK, SPISO3, SPISO, and SPICS. Its SPISI trace-removal negative
+control fails as required, confirming no synthetic connectivity edge was
+introduced by the support relocation.
+
 The fully regenerated V3 branch
 `PHASE24_RTL9210B_FULL_REGENERATED_SPI_V3.kicad_pcb` removed the lower
 SPISO/SPICS B.Cu source tails and routed those nets directly on F.Cu. Native
