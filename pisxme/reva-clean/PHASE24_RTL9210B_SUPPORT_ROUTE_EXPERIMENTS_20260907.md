@@ -19,6 +19,13 @@ dogbones entered the C1/Y1 passive field and crossed one another. This is a
 support-island placement/authoring failure, not a rejection of the V31
 five-net SPI primitive or the RTL9210B architecture.
 
+V35 is the first combined V31-support candidate with a clean local result.
+The coherent +4/+3-mm move keeps Y1/C1/C2/R1 inside the fixture outline and
+separates the U1-side handoffs. Native DRC has only four inherited
+GND/silkscreen findings; the five-net SPI audit and XTAL_IN/XTAL_OUT/RSET
+support audit both pass, and both trace-removal negative controls fail. This
+does not close the remaining RTL9210B rail, control, USB, M.2, or power gates.
+
 V8 is the current combined support/SPI baseline and V9 is the retained
 RTL_5V rail primitive. V10/V11 RTL_3V3 trunks are rejected because they
 intersect retained high-speed/support corridors. The next experiment must

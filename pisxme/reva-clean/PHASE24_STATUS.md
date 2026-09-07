@@ -21,6 +21,14 @@ crossings. Its B.Cu long-span concept does not clear the existing passive
 cluster. The next candidate must relocate or reauthor the support island
 coherently; no production CAD or Path-A asset changed.
 
+V35 moves Y1/C1/C2/R1 together inside the fixture outline and separates the
+U1-side handoff vias. Native KiCad reports 4 inherited findings / 34 opens,
+with no signal violations. The saved-board SPI audit passes all five SPI
+endpoints with its trace-removal negative control, and the V35 support audit
+passes XTAL_IN, XTAL_OUT, and RSET with its XTAL_OUT negative control. This
+closes the local moved-cluster support sub-gate only; RTL_1V1, RTL_3V3,
+RTL_5V, controls, grounds, USB, M.2, and full Path-B validation remain open.
+
 Path B remains a disposable RTL9210B qualification path. The current best
 combined support baseline is `PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V8`
 plus the validated RTL_5V V9 rail primitive. V8 native support and SPI audits

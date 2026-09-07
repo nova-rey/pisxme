@@ -1,0 +1,13 @@
+SPISI: PASS (U1.18 <-> U2.5)
+SPICLK: PASS (U1.19 <-> U2.6)
+SPISO3: PASS (U1.22 <-> U2.7)
+SPISO: PASS (U1.23 <-> U2.2)
+SPICS: PASS (U1.24 <-> U2.1)
+RTL9210B SPI native endpoint connectivity: PASS
+SPISI: PASS (U1.18 <-> U2.5)
+SPICLK: PASS (U1.19 <-> U2.6)
+SPISO3: PASS (U1.22 <-> U2.7)
+SPISO: PASS (U1.23 <-> U2.2)
+SPICS: PASS (U1.24 <-> U2.1)
+RTL9210B SPI native endpoint connectivity: PASS
+negative controls: {'removed_net': 'SPISI', 'trace_removal_fails': True}

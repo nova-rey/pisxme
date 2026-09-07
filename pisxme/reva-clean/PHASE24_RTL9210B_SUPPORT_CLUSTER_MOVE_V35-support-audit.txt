@@ -1,0 +1,4 @@
+XTAL_IN: PASS [('C1', '1'), ('U1', '53'), ('Y1', '1')]
+XTAL_OUT: PASS [('C2', '1'), ('U1', '54'), ('Y1', '2')]
+RSET: PASS [('R1', '1'), ('U1', '51')]
+negative control: PASS (removed XTAL_OUT trace breaks connectivity)
