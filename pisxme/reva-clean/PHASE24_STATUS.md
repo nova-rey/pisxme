@@ -6462,3 +6462,17 @@ its trace-removal negative control.
 This is a promoted local rail sub-primitive only. The other RTL_3V3 branches,
 support rails, SPI/control paths, and full Path-B validation remain open;
 Path A and production CAD remain unchanged.
+
+## Current RTL9210B shared 3V3 rail — V186
+
+The latest disposable rail basis is
+`PHASE24_RTL9210B_RTL3V3_U134_PAD20_V186.kicad_pcb`. It extends the passing
+V185 U1.34-to-C3.1 rail with a native U1.20 launch into the existing B.Cu
+RTL_3V3 trunk. Native KiCad DRC reports 259 findings / 30 unconnected items
+and zero `shorting_items` or `tracks_crossing`. The saved-board audit passes
+U1.20/U1.34/C3.1 connectivity and the trace-removal negative control.
+
+The west-field U1.39/U1.52 launches remain intentionally open because their
+current placement is co-located with the crystal/RSET field; they are not
+being misclassified as solved by V186. Path A and production CAD remain
+unchanged.

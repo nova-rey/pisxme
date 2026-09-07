@@ -1236,6 +1236,19 @@ REFCLK_N, with five trace-removal negative controls. V184 is promoted only
 as a disposable support sub-primitive; inherited manufacturing/clearance/
 open findings and the remaining Path-B support gates remain open.
 
+## V186 RTL_3V3 shared U1.20 launch
+
+Consultant review of V185 identified U1.20 as the next clean same-net
+extension and warned that U1.39/U1.52 are in the west-field crystal/RSET
+placement conflict. V186 adds only a vertical F.Cu stub from native U1.20
+pad coordinates `(100.4,58.05)` to `(100.4,56.5)` and a 0.6/0.3-mm via
+onto the existing V185 B.Cu RTL_3V3 rail. Native DRC reports 259 findings /
+30 unconnected items, with zero `shorting_items` and zero
+`tracks_crossing`. The saved-board audit joins U1.20/U1.34/C3.1 and its
+trace-removal negative control fails as required. V186 is promoted as a
+disposable shared-rail sub-primitive; U1.39/U1.52/U2.3/U2.8/R2.2/R3.2 and
+the remaining Path-B support gates remain open.
+
 ## V185 RTL_3V3 U1.34-to-C3.1 handoff
 
 V185 adds only the native-pad-derived U1.34-to-C3.1 RTL_3V3 rail slice to
