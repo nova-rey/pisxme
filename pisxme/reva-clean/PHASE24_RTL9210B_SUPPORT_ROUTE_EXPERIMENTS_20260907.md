@@ -393,6 +393,17 @@ opens 25 to 24. Native DRC reported 9 violations: the short F.Cu jog was
 the RTL_1V1 bus. This route class is rejected; the measured result requires
 coherent 3V3/1V1 support relocation.
 
+## Coherent relocation route V2 — local sub-gate positive
+
+The in-board (+18,+8) mm relocation was regenerated from the native moved
+pads. XTAL_IN, XTAL_OUT, and RSET copper was translated from the staged
+source-authority routes; RTL_1V1 was translated locally and given a new
+outboard continuation to C4. Native KiCad reports 4 findings / 32 opens,
+with no signal shorts or crossings. `phase24_rtl9210b_relocation_route_audit.py`
+passes XTAL_IN, XTAL_OUT, RSET, and all eight asserted RTL_1V1 endpoints.
+This is a positive local route baseline, not full Path-B closure: U2/C3-C5
+links, controls, and remaining support paths are still open.
+
 ## QFN source partition V1 — rejected
 
 `phase24_qfn_spi_power_partition_v1.py` first exposed a KiCad Python API

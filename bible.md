@@ -5449,3 +5449,8 @@ scrubbed before moving U1, crystal/RSET/decoupling support, and PEDET/CLKREQ
 pull-ups; native KiCad reports 9 findings / 45 opens with no new signal
 shorts or crossings. This is placement-only evidence, not a support-route
 pass; production CAD and Path A remain unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: regenerated the moved RTL9210B local
+XTAL_IN, XTAL_OUT, RSET, and RTL_1V1 copper from native pad coordinates.
+The (+18,+8) mm candidate reports 4 findings / 32 opens and passes the saved
+board endpoint audit for all four local support nets. This is a local
+sub-gate baseline only; U2 links and remaining support routes remain open.

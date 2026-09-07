@@ -10,9 +10,9 @@ import pcbnew
 
 HERE = Path(__file__).resolve().parent
 BASE = HERE / "PHASE24_RTL9210B_1V1_CRYSTAL_RSET_STAGED_V4.kicad_pcb"
-OUT = HERE / "PHASE24_RTL9210B_SUPPORT_RELOCATION_V1.kicad_pcb"
+OUT = HERE / "PHASE24_RTL9210B_SUPPORT_RELOCATION_V2.kicad_pcb"
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
-DX, DY = 18.0, 18.0
+DX, DY = 18.0, 8.0
 MOVED = {"U1", "C1", "C2", "R1", "R2", "R3", "Y1"}
 LOCAL_NETS = {"RTL_1V1", "RTL_3V3", "RTL_5V", "RSET", "XTAL_IN",
               "XTAL_OUT", "PEDET", "CLKREQ_N", "RESET_N", "PERST_N"}
@@ -26,6 +26,10 @@ def point(item):
 
 def in_old_local(item):
     return any(62 <= x <= 88 and 45 <= y <= 72 for x, y in point(item))
+
+def stale_external(item):
+    return item.GetNetname() == "RTL_1V1" and any(
+        84 <= x <= 124 and 40 <= y <= 42 for x, y in point(item))
 
 def scrub_serialized():
     text = BASE.read_text()
@@ -42,8 +46,10 @@ def scrub_serialized():
                     names = re.findall(r'\(net "([^"]+)"\)', block)
                     coords = [(float(x), float(y)) for x, y in
                               re.findall(r'\((?:start|end|at)\s+([-\d.]+)\s+([-\d.]+)', block)]
-                    if any(n in LOCAL_NETS for n in names) and any(
-                            62 <= x <= 88 and 45 <= y <= 72 for x, y in coords):
+                    if (any(n in LOCAL_NETS for n in names) and
+                        (any(62 <= x <= 88 and 45 <= y <= 72 for x, y in coords)
+                         or ("RTL_1V1" in names and any(84 <= x <= 124 and 40 <= y <= 42
+                                                         for x, y in coords)))):
                         spans.append((start, i + 1))
                     break
     for a, z in reversed(spans):

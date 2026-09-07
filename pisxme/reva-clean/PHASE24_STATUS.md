@@ -26,6 +26,15 @@ route writer must regenerate the complete local support branch from the moved
 native pads, with U2/C3-C5 destinations and the existing Path-A/production
 CAD left untouched.
 
+The (+18,+8) mm in-board relocation was then routed incrementally in
+`PHASE24_RTL9210B_SUPPORT_RELOCATION_ROUTE_V2.kicad_pcb`. Native KiCad reports
+4 findings / 32 opens, the same signal-clean baseline as staged V4; there are
+no signal shorts or crossings. The saved-board native audit passes XTAL_IN,
+XTAL_OUT, RSET, and all eight asserted RTL_1V1 endpoints. This closes only a
+relocated local support sub-gate. Rails to C3/C5, SPI/control links to U2, and
+the remaining RTL9210B support/bring-up checks remain open; no production CAD
+or Path A artifact is changed.
+
 The V11 crystal/support baseline was freshly rechecked with native KiCad:
 6 violations and 25 unconnected items; XTAL_IN, XTAL_OUT, and the asserted
 RTL_1V1 endpoints pass the saved-board connectivity audit, including its
