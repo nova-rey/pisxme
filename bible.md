@@ -5336,6 +5336,10 @@ isolated audited 1V1 fanout and removed unrelated support copper. Native DRC
 is 4 known GND-zone findings with no signal crossing/short; 32 opens are
 unrelated fixture boundaries. V4 becomes the local support-routing baseline,
 not a full Path-B pass.
+2026-09-07 — PiSXMe Phase 24 Path B: added audited lateral SPI copper to the
+V4 local baseline. Native DRC was 17/27; the primary new defect was the
+RTL_1V1 U1.25 via/track interaction with SPICS/SPISO QFN escapes. Rejected as
+combined geometry; V4 remains the local 1V1/crystal/RSET baseline.
 2026-09-07 — PiSXMe Phase 24 Path B: transplanted the isolated audited 1V1
 fanout into the V11 combined candidate as V12. Opens fell to 18, but native
 DRC rose to 30 with CLKREQ_N, XTAL_OUT, and rail conflicts. Rejected as

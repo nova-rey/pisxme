@@ -170,6 +170,12 @@ GND-zone warnings; there are no signal crossings or shorts. The 32 opens are
 unrelated PEDET/control/PCIe/fixture boundaries. V4 is therefore the current
 local rail/crystal/RSET routing baseline, not a full-support pass.
 
+Adding the previously audited lateral SPI copper to V4 was rejected as a
+combined candidate: native DRC is 17 violations / 27 opens, with the main
+new local defect being RTL_1V1 U1.25 via/track interaction with the SPICS and
+SPISO QFN escapes. The V4 1V1+crystal+RSET baseline remains clean; this is a
+QFN source-escape partitioning issue, not a rejection of the SPI topology.
+
 The QFN escape-map utility now inspects the latest integrated V11 saved board,
 including the validated RSET transplant, instead of superseded V3/V5 fixture
 states. `PHASE24_RTL9210B_QFN_ESCAPE_MAP_V5.txt` is retained as historical
