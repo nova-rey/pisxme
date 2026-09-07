@@ -1464,3 +1464,12 @@ Native DRC reports 435 findings / 19 unconnected items with zero
 `shorting_items` and zero `tracks_crossing`. V231 is promoted as the
 disposable complete CLKREQ basis. Remaining rails, high-speed paths, mode,
 firmware, and production gates remain open.
+## V232 RTL_3V3 U1.39 branch
+
+V232 joins native U1.39 into the promoted RTL_3V3 trunk at the existing
+3V3 support field using an F.Cu left escape and B.Cu handoff. Native
+connectivity joins U1.39/C3.1 and the trace-removal negative control fails as
+required. Native DRC reports 448 findings / 18 unconnected items with zero
+`shorting_items` and zero `tracks_crossing`. V232 is promoted as disposable
+rail evidence; remaining RTL_3V3/RTL_1V1 branches and all other Path-B gates
+remain open.

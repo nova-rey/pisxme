@@ -6666,3 +6666,13 @@ V231 remains disposable Path-B evidence, not production integration or Path-B
 closure. Remaining support rails, USB/SATA high-speed paths, mode-aware
 validation, firmware/procurement, and integrated DFM/mechanical gates remain
 open. Path A and production CAD remain unchanged.
+## Current RTL9210B RTL_3V3 support basis — V232
+
+`PHASE24_RTL9210B_RTL3V3_U139_V232.kicad_pcb` extends the V231 sideband
+basis with the native U1.39 RTL_3V3 branch. Native DRC reports 448 findings /
+18 unconnected items with zero `shorting_items` and zero `tracks_crossing`;
+the saved-board U1.39/C3.1 audit and trace-removal negative control pass.
+
+This remains disposable Path-B support evidence. Remaining rail branches,
+high-speed routing, mode-aware validation, firmware/procurement, and
+production integration remain open; Path A and production CAD are unchanged.
