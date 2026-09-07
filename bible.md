@@ -4973,3 +4973,8 @@ prevents PCB-only stale-net ownership from being misclassified as geometry.
  endpoint U7 -> caps -> U13 Port B -> U13 Port A -> J3 audit. Added a saved-
  track negative control. The first selector-inclusive copper author remains
  rejected for local DRC crossings/shorts; no production route was promoted.
+2026-09-06 — PiSXMe Phase 24 Path A: preserved integrated-context and minimal
+ selector-inclusive SATA route fixtures with native DRC receipts. Both retain
+ the twelve-endpoint native PASS and the negative-control PASS, but remain
+ rejected raw route evidence because U7/U13/M.2 escape implementation still
+ contains real crossings and shorts.
