@@ -5362,6 +5362,10 @@ disposable V4/V5 candidates. V5 reports 17 violations / 26 opens after one
 attached test stub is removed; combined SPI/crystal/rail endpoint audit
 passes, while required crossings, rail/QFN fanout, and manufacturing findings
 remain open and unwaived.
+2026-09-07 — PiSXMe Phase 24 Path B: tested disposable QFN rail-fanout probe
+V6. Native opens fell 26 to 20, but DRC rose to 20 with real
+RTL_1V1/XTAL_OUT and RTL_1V1/USB_TXP0 shorts. Rejected as route
+implementation failure; V5 remains the baseline and no production CAD changed.
 2026-09-07 — PiSXMe Phase 24 Path B: rebalanced the lateral rail spines and
 U2.3/U2.8 branch to avoid SPI-layer interactions. Rail-only native DRC is
 0/45; the combined candidate improves to 18/34, and the combined SPI/rail

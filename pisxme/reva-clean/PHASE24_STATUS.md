@@ -103,6 +103,14 @@ combined native endpoint audit still passes SPI, crystal, and rail endpoints.
 The remaining crossings, rail short/escape defects, QFN rail fanout opens,
 and native manufacturing findings remain current and unwaived.
 
+The V6 QFN rail-fanout probe is rejected as a production candidate. It
+reduces native opens from 26 to 20 and preserves the combined endpoint audit,
+but introduces 20 DRC violations including RTL_1V1/XTAL_OUT and
+RTL_1V1/USB_TXP0 shorts. This is a route-implementation failure of the
+attempted fanout geometry, not evidence against the RTL9210B support
+architecture; V5 remains the clean baseline for the next independent rail
+escape class.
+
 The rail layer rebalance is now verified: the rail-only/U2 branch returns to
 native DRC 0 violations / 45 opens, and regenerating the combined candidate
 reduces its native DRC to 18 violations / 34 opens with the combined endpoint
