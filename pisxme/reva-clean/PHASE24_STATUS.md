@@ -38,6 +38,13 @@ An outboard translation candidate was also tested: U2/support moved another
 violations / 33 opens. This is another route-implementation rejection, with
 no evidence of a mechanical placement collision.
 
+A further disposable V4 separated the SPI test from the inherited control
+routes before routing. It still reports 32 native violations / 37 opens,
+including source escape and lower-corridor conflicts, so it is rejected as
+an implementation. The next pass must start from a truly SPI-scrubbed
+placement candidate and use the native V6 escape geometry without retaining
+any legacy SPI stubs.
+
 The original isolated RTL9210B-CG bring-up fixture remains archived at
 `PHASE24_RTL9210B_BRINGUP_FIXTURE.kicad_pcb`. It captures the corrected
 QFN-68/M-key lane mapping, PEDET/sideband ownership, support-net boundary,

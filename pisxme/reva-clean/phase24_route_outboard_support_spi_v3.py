@@ -6,9 +6,9 @@ import pcbnew
 HERE=Path(__file__).resolve().parent
 BASE=HERE/'PHASE24_RTL9210B_SUPPORT_BRANCH_OUTBOARD_V2.kicad_pcb'
 SCRUB=HERE/'.phase24_outboard_spi_scrub.kicad_pcb'
-OUT=HERE/'PHASE24_RTL9210B_SUPPORT_BRANCH_OUTBOARD_SPI_V3.kicad_pcb'
+OUT=HERE/'PHASE24_RTL9210B_SUPPORT_BRANCH_OUTBOARD_SPI_V4.kicad_pcb'
 F,B=pcbnew.F_Cu,pcbnew.B_Cu; W=pcbnew.FromMM(.20)
-SPI={'SPICS','SPISO','SPISI','SPICLK','SPISO3'}
+SPI={'SPICS','SPISO','SPISI','SPICLK','SPISO3','PEDET','CLKREQ_N','PERST_N','RESET_N'}
 def P(x,y): return pcbnew.VECTOR2I_MM(float(x),float(y))
 def tr(b,n,l,a,z):
  t=pcbnew.PCB_TRACK(b); t.SetStart(P(*a)); t.SetEnd(P(*z)); t.SetLayer(l); t.SetWidth(W); t.SetNet(n); t.SetNetCode(n.GetNetCode()); b.Add(t)
@@ -37,10 +37,10 @@ def route(b,n,s,sv,corridor,tv):
  via(b,net,last); tr(b,net,F,last,tv)
 def main():
  scrub(BASE); b=pcbnew.LoadBoard(str(SCRUB))
- route(b,'SPICS',(83.95,62.8),(85,61),[(86,61),(86,75),(110.8,75)],(110.8,80))
- route(b,'SPISO',(83.95,63.2),(85.5,62),[(87,62),(87,76),(112,76)],(112,80))
- route(b,'SPISO3',(83.95,63.6),(86,63),[(88,63),(88,78),(118,78)],(118,80))
- route(b,'SPICLK',(83.95,64.8),(89,64.8),[(89,72),(116.8,72)],(116.8,80))
+ route(b,'SPICS',(83.95,62.8),(85,61),[(86,61),(86,78),(110.8,78)],(110.8,80))
+ route(b,'SPISO',(83.95,63.2),(85.5,62),[(87,62),(87,79),(112,79)],(112,80))
+ route(b,'SPISO3',(83.95,63.6),(86,63),[(88,63),(88,81),(118,81)],(118,80))
+ route(b,'SPICLK',(83.95,64.8),(89,64.8),[(89,82),(116.8,82)],(116.8,80))
  net=b.FindNet('SPISI'); tr(b,net,F,(83.95,65.2),(85.5,70)); tr(b,net,F,(85.5,70),(105,70)); via(b,net,(105,70)); tr(b,net,B,(105,70),(105,79)); via(b,net,(105,79)); tr(b,net,F,(105,79),(115.6,80))
  b.BuildListOfNets(); b.Save(str(OUT)); print(OUT)
 if __name__=='__main__': main()
