@@ -4881,3 +4881,8 @@ validation remain open.
  SATA route to the saved 0.20-mm minimum width and repaired the rotated
  socket-side lane ordering. The minimal native fixture retained all eight
  endpoint assertions and improved to 14 DRC findings; it remains unpromoted.
+2026-09-06 — PiSXMe Phase 24 dual-mode storage: tested a source-order-
+ preserving U7 fanout with TX on B.Cu and RX on F.Cu. All eight endpoint
+ assertions passed and the minimal native fixture improved to 12 DRC
+ findings. Preserved the candidate for the next focused TX-escape and
+ socket-clearance repair.

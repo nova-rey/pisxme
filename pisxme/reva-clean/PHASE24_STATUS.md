@@ -38,11 +38,12 @@ pair ordering around the bridge/capacitor row. The raw report is
 `PHASE24_PATHA_MINIMAL_SATA_CORRIDOR_20260906-drc.rpt`; no production route
 was promoted.
 
-The current best disposable candidate is the width-corrected
-`PHASE24_PATHA_MINIMAL_SATA_CORRIDOR_W020C_20260906.kicad_pcb`. Its native
-endpoint audit passes all eight SATA pairs and native DRC reports 14 findings.
-It remains an implementation trial only; no production storage route has
-been promoted.
+The current best disposable candidate is the source-order-preserving
+`PHASE24_PATHA_MINIMAL_SATA_CORRIDOR_MONO2_20260906.kicad_pcb`. Its native
+endpoint audit passes all eight SATA pairs and native DRC reports 12 findings.
+Only the TX source dogbone, one socket launch clearance, U7 footprint
+clearances, and silkscreen fixture findings remain; no production storage
+route has been promoted.
 
 Latest private storage evidence checkpoint: `9e45a72`. The retained WIP
 RTL9210B native XML support netlist now has a reproducible audit with
