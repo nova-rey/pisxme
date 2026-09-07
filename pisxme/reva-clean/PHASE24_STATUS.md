@@ -65,6 +65,14 @@ SPISO/SPISO3 clearance defect. This closes the local five-net QFN source
 escape sub-gate only; extension to corrected U2 and regenerated support is
 still open.
 
+The corrected-U2 SPISO3 handoff V2
+`PHASE24_RTL9210B_SPISO3_CORRECTED_U2_V2` is rejected at 16 native
+violations / 43 opens. Moving the handoff to a north-side F.Cu corridor
+still crosses the neighboring SPISI/source-field geometry and retained
+XTAL paths. The one-net result confirms that U1-to-U2 routing must be
+co-designed as a complete five-net escape; no production CAD or Path-A
+asset changed.
+
 The transition-spacing micro-variant
 `PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V2` was also rejected. Native KiCad
 reports 10 violations / 44 opens, including one remaining SPISO/SPISO3

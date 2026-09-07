@@ -61,6 +61,14 @@ the intentionally incomplete probe and inherited GND conditions. This
 validates the local departure geometry; it does not close the five-net SPI
 branch.
 
+The SPISO3 corrected-U2 handoff V2
+`PHASE24_RTL9210B_SPISO3_CORRECTED_U2_V2.kicad_pcb` moved the handoff to a
+north-side F.Cu corridor after recreating the validated source dogbone.
+Native KiCad reports 16 violations / 43 opens, including SPISI/SPISO3 and
+SPISO3/XTAL_IN conflicts plus crossings. It is rejected as a one-net route
+implementation. The result establishes that the complete five-net source
+escape and downstream flash launch must be authored together.
+
 The follow-up five-net probe changed the departure to straight outward
 segments before the staggered diagonals. Native KiCad improved to 17
 violations / 44 opens, but SPICLK and SPISO3 still short/collide at the

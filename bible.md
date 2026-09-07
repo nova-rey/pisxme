@@ -5506,6 +5506,11 @@ straight outward departures improved to 17 native violations / 44 opens but
 still failed at SPICLK/SPISO3 transition spacing and one source clearance.
 The failure is localized to transition layout; the single-net dogbone remains
 validated evidence and production CAD/Path A are unchanged.
+2026-09-07 — PiSXMe Phase 24 Path B: rejected the corrected-U2 SPISO3
+one-net handoff V2 at 16 native violations / 43 opens. The north-side F.Cu
+route still conflicted with neighboring SPISI/source-field and XTAL geometry,
+confirming that all five SPI exits and the flash launch must be authored
+together. Path A and production CAD remain unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: focused QFN SPISI dogbone probe passed
 the source geometry with no signal short, crossing, or clearance violation;
 native KiCad reports only 5 incomplete-probe/inherited-GND findings and 44
