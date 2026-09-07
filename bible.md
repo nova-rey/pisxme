@@ -5545,3 +5545,7 @@ local native signal gate with no SPI shorts, crossings, or clearance
 violations; native endpoint audit passes all five U1/U2 pairs and its SPISI
 negative control fails as required. One inherited isolated-GND warning and
 40 unrelated support opens remain, so full Path-B closure is still open.
+2026-09-07 — PiSXMe Phase 24 Path B: rejected normalized rotated-support
+V3 at 14 native violations / 37 opens; XTAL_IN/RSET connected but XTAL_OUT
+disconnected, with transitions entering the U1 power field. V2 remains the
+better support-placement reference; Path A and production CAD unchanged.

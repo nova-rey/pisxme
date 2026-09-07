@@ -76,6 +76,14 @@ control also fails after removal of a necessary SPISI trace. This closes the
 RTL9210B SPI local route/connectivity sub-gate only; remaining support,
 control, USB, M.2, power, and full Path-B validation remain open.
 
+The normalized rotated-support V3 route
+`PHASE24_RTL9210B_ROTATED_SUPPORT_RELOCATION_V3` is rejected at 14 native
+violations / 37 opens. XTAL_IN and RSET remain natively connected, but
+XTAL_OUT is disconnected; the attempted outside transitions still enter the
+rotated U1 right-side power field and create clearance/short/crossing
+findings. V2 remains the better support-placement reference; V3 is route
+implementation evidence only and does not alter Path A or production CAD.
+
 The V3 source-transition spacing trial
 `PHASE24_RTL9210B_U1_QFN_FIVE_DOGBONES_V3` remains rejected at 10 native
 violations / 44 opens. Increasing the lower transition-row separation left

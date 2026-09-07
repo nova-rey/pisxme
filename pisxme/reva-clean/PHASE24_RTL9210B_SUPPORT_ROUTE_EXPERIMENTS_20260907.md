@@ -79,6 +79,15 @@ with existing B.Cu source tails. The corrected U2 pad map itself is valid;
 this append-style route is rejected, and the next trial must regenerate the
 complete five-net branch together.
 
+## Rotated support relocation V3 — rejected
+
+The normalized Y1/C1/C2/R1 support relocation was re-authored with ordinary
+transitions outside the QFN field. Native KiCad reports 14 violations / 37
+opens. XTAL_IN and RSET pass saved-board connectivity, but XTAL_OUT is
+disconnected and the source transitions conflict with U1 power-field pads.
+V3 is rejected as a route implementation; V2 and the original support
+placement evidence remain preserved.
+
 The fully regenerated V3 branch
 `PHASE24_RTL9210B_FULL_REGENERATED_SPI_V3.kicad_pcb` removed the lower
 SPISO/SPICS B.Cu source tails and routed those nets directly on F.Cu. Native
