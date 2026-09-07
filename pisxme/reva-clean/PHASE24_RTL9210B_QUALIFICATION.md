@@ -234,13 +234,16 @@ negative control mutates PEDET text and fails as intended. This strengthens
 the technical pin/mode authority but does not close firmware rights,
 authorized provisioning, or the production application-circuit gate.
 
-The next isolated implementation step is now materialized in
+The original isolated implementation baseline is materialized in
 `PHASE24_RTL9210B_BRINGUP_FIXTURE.md`. Its saved native PCB has the corrected
 QFN-68/M-key mapping, support/test net boundary, and exposed programming
-access. The fixture audit and negative control pass; native DRC reports zero
-violations and 56 intentionally unrouted items. This is a design-evidence
-fixture, not a routed production candidate, so the unrouted items remain an
-explicit gate rather than a waived failure.
+access. The fixture audit and negative control pass; its original native DRC
+receipt reports zero violations and 56 intentionally unrouted items. That
+receipt is historical baseline evidence. Current routed-fixture work is
+tracked in `PHASE24_RTL9210B_SUPPORT_ROUTE_EXPERIMENTS_20260907.md` and the
+live Phase 24 status, where the GND-plane candidate has 45 unconnected items.
+Neither count is waived; the current fixture remains a design-evidence
+candidate, not a routed production candidate.
 
 The retained native straight-line RTL9210B PCB fixture remains rejected by
 its raw KiCad report (`102` DRC violations, including crossings and a short).

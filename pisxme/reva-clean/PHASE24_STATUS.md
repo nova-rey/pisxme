@@ -2,13 +2,15 @@
 
 ## Current live Path-B step — 2026-09-07
 
-The isolated RTL9210B-CG bring-up fixture is now authored at
+The original isolated RTL9210B-CG bring-up fixture remains archived at
 `PHASE24_RTL9210B_BRINGUP_FIXTURE.kicad_pcb`. It captures the corrected
 QFN-68/M-key lane mapping, PEDET/sideband ownership, support-net boundary,
 SPI/reset/UART test access, and SSD-power nets without changing production
 CAD. Its authority audit and saved-track-independent negative control pass;
-native DRC reports zero violations and 56 explicit unrouted items. Those
-opens remain an unclosed fixture-routing gate, not a waived production
+native DRC reports zero violations and 56 explicit unrouted items. That count
+belongs to the original unrouted bring-up baseline; it is superseded for
+current routing by the later SPI V7 plus GND-plane candidate below. The 56
+opens remain historical evidence, not a current count or waived production
 finding. Path B remains isolated and `CONTINUE BOTH`.
 
 Two disposable support-route attempts are preserved in
