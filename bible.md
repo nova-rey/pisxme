@@ -5724,3 +5724,7 @@ departures; both native endpoint audits and two trace-removal negative
 controls pass, with zero native signal shorting/crossing classes. Path A and
 production CAD remain unchanged; CLKREQ/R3.1 and all remaining Path-B gates
 stay open.
+2026-09-07: Rejected RTL9210B V228 complete CLKREQ routing: native endpoint
+connectivity and negative control pass, but CLKREQ crossed/shorted RSET,
+REFCLK_N, and PERST in the local corridor. V227 remains the promoted
+SPISO3/PERST basis; no Path-A or production-CAD change occurred.

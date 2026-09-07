@@ -1445,3 +1445,11 @@ unconnected items with zero `shorting_items` and zero `tracks_crossing`.
 V227 is promoted as a disposable coupled-source-field basis. R3.1/CLKREQ,
 remaining rails, high-speed paths, mode, firmware, and production gates
 remain open.
+## V228 CLKREQ completion attempt — rejected
+
+V228 added U1.13, R3.1, and J1.52 to the V227 coupled basis. Native
+connectivity and the trace-removal negative control pass, but native DRC
+reports 426 findings / 19 opens with CLKREQ crossing/shorting the retained
+RSET, REFCLK_N, and PERST corridors. This is a three-net local sideband
+allocation failure; V227 remains the promoted SPISO3/PERST basis and no
+production or Path-A change occurred.

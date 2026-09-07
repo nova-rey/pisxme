@@ -6646,3 +6646,10 @@ This is not Path-B closure or production integration. CLKREQ/R3.1, remaining
 support rails, USB/SATA high-speed routing, mode-aware validation,
 firmware/procurement, and integrated mechanical/DFM gates remain open. Path A
 and production CAD remain unchanged.
+## Current RTL9210B CLKREQ finding — V228 rejected
+
+V228 proves the complete U1.13/R3.1/J1.52 endpoint mapping natively, but its
+candidate routing conflicts with RSET, REFCLK_N, and PERST in the local
+sideband field. It is rejected as a route implementation. The next attempt
+must co-author that three-net corridor; V227 remains the promoted disposable
+SPISO3/PERST basis. Path A and production CAD remain unchanged.
