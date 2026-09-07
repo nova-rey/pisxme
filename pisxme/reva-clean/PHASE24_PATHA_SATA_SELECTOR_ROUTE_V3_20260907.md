@@ -47,6 +47,15 @@ connector-side target-via conflicts. It is rejected; the next launch class
 must move target vias farther outboard and explicitly clear the connector's
 mechanical holes.
 
+## V3 split-layer launch — rejected
+
+`PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V3.kicad_pcb` tested separate TX/RX
+layer corridors and connector-ordered target vias. Native DRC reports 103
+violations / 32 unconnected items. The target-via field still shorted RXN and
+RXP, TXN interacted with inherited TUSB_SATA_RXP copper, and a track crossing
+remained. V3 is rejected as route implementation evidence; the connector
+launch needs a less congested fanout/side assignment.
+
 ## V2 isolated launch — rejected
 
 `PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V2.kicad_pcb` moved the RX lower

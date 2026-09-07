@@ -5147,3 +5147,9 @@ contacted adjacent J3 pads or ground, and RXN/RXP crossed in the target-via
 field. Rejected V2 as route implementation evidence; production CAD and
 Path-B isolation remain unchanged. Next work must re-author connector-side
 target-via ordering rather than repeat this corridor.
+2026-09-07 — PiSXMe Phase 24 Path A: tested isolated lane-0 launch V3 with
+split TX/RX layers and connector-ordered target vias. Native DRC reported
+103 violations / 32 unconnected items. The RX target-via field still shorted
+RXN/RXP, TXN contacted inherited TUSB_SATA_RXP copper, and one crossing
+remained. Rejected V3 as route implementation evidence; no production CAD or
+Path-B authority changed.

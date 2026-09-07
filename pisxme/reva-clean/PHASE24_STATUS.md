@@ -4498,6 +4498,19 @@ Receipt: `phase24_whole_board_macro_floorplan_discriminator.py`,
 `ROUTE_COMPARISON_BIAS_CONTROL = PASS`
 `PHASE24 = OPEN`
 
+## Path-A isolated M.2 lane-0 launch V3 — 2026-09-07
+
+`PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V3.kicad_pcb` tested split-layer
+source routing with a connector-ordered target-via column. Native DRC reports
+103 violations and 32 unconnected items. It is rejected: the RX target-via
+field shorts RXN/RXP, TXN also contacts inherited TUSB_SATA_RXP copper, and
+one track-crossing remains. The result is a route implementation failure, not
+evidence against the shared M.2 architecture. No V3 copper is integrated.
+
+`PATHA_M2_LANE0_V3 = REJECTED`
+`FAILURE_CLASS = ROUTE_IMPLEMENTATION_FAILURE`
+`PHASE24 = OPEN`
+
 ## Path-A isolated M.2 lane-0 launch V2 — 2026-09-07
 
 `PHASE24_PATHA_M2_LANE0_LAUNCH_ISOLATED_V2.kicad_pcb` is preserved as a
