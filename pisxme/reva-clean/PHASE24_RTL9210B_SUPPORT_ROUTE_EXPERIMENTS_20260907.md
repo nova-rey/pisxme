@@ -1080,6 +1080,14 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V516 removes the exact XTAL_IN, XTAL_OUT, and RTL_3V3 spine segments that
+blocked V514/V515, then coauthors the U1.25 RTL_1V1 escape. The resulting
+native DRC has no new short, crossing, clearance, mask, or thermal errors;
+only inherited incomplete-fixture findings remain. However, the strengthened
+native connectivity audit still fails to find the complete U1.16/U1.25/U1.36
+to C4.1 component. V516 is therefore rejected: the support-field geometry is
+promising, but saved connectivity is not proven. Path A and production CAD
+remain unchanged.
 V514/V515 test U1.25 RTL_1V1 with a vertical pad escape, B.Cu channel, and
 early F.Cu return to U1.36. Both native audits expose the intended
 connectivity requirement; V514/V515 are rejected by native DRC because the

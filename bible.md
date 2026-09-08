@@ -6210,6 +6210,11 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V516 coallocates U1.25 after removing the exact
+XTAL_IN/XTAL_OUT/RTL_3V3 blocking spines. Native DRC has no new local errors,
+but the strengthened native connectivity audit fails to prove the complete
+U1.16/U1.25/U1.36 to C4.1 path. V516 is rejected; Path A and production CAD
+remain unchanged.
 2026-09-08: RTL9210B V514/V515 test U1.25 RTL_1V1 with vertical escape and
 early F.Cu return. Native audits expose the intended connectivity, but DRC
 rejects both for retained XTAL_IN/RTL_3V3 spine crossings and local return-via
