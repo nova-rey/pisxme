@@ -19,6 +19,10 @@ DRC is back to four inherited warnings. This is route-allocation evidence
 only, not full support closure. The detailed source-field checkpoint is
 `PHASE24_RTL9210B_V35_SOURCE_FIELD_REPORT.md`; the next pass must co-author
 all rails and QFN departures around V35's proven five-net field.
+The first V35-derived RTL_1V1 lower-bus probe is rejected: native endpoint
+connectivity and the negative control pass, but native DRC reports 21
+violations from RSET/XTAL_OUT crossings, U2/C4 ground contacts, and occupied
+via fields. The next 1V1 pass must relocate/co-author the support endpoint.
 V562 is the retained corrected support baseline: its native saved-board audit
 connects the complete RTL_1V1 and RTL_3V3 support groups with a working
 trace/zone-removal negative control. V563, V564, and V565 are rejected

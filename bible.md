@@ -6620,3 +6620,7 @@ five-net SPI/crystal field; Path A and production CAD remain untouched.
 U1.17/U1.33/C5.1 connectivity and trace-removal negative control pass, and
 native DRC returns to the four inherited warnings. Full RTL9210B support,
 including other rails and controls, remains open.
+2026-09-08: The first V35-derived RTL_1V1 lower-bus probe was rejected by
+native DRC (21 violations) for RSET/XTAL_OUT crossings, U2/C4 ground contacts,
+and occupied via fields. Its native endpoint audit and trace-removal negative
+control passed; the next 1V1 pass must relocate/co-author the support field.

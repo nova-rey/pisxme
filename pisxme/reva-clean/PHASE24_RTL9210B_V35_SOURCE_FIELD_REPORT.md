@@ -39,6 +39,14 @@ unconnected items because the remaining Path-B support is not yet authored.
 V4 is promoted only as the RTL_5V sub-primitive, not as complete support or
 production CAD.
 
+The first RTL_1V1 lower-bus probe is rejected as a route implementation. Its
+native endpoint audit and trace-removal negative control pass, but native DRC
+reports 21 violations: the proposed bus crosses RSET and XTAL_OUT, contacts
+U2 GND and C4 GND, and places several vias in occupied source-field areas.
+The next 1V1 attempt must relocate the capacitor/support endpoint or
+co-author the lower source field; another identical lower-bus sweep is not a
+credible continuation.
+
 ## Next implementation step
 
 Re-author the complete current support field from native pad coordinates on a
@@ -56,3 +64,5 @@ remaining work is coordinated route allocation and full Path-B validation.
 - `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_RTL5V_PROBE_V2-drc.rpt`
 - `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_RTL5V_PROBE_V4-drc.rpt`
 - `phase24_rtl9210b_v35_rtl5v_audit.py`
+- `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_RTL1V1_PROBE-drc.rpt`
+- `phase24_rtl9210b_v35_rtl1v1_audit.py`
