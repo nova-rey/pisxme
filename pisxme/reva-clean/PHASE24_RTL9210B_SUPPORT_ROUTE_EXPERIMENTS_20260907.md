@@ -2952,3 +2952,8 @@ ordinary-via escapes and a broad In2 power collector. Native DRC rejected 56
 findings, including rail-to-rail, rail-to-SPI, and rail-to-crystal shorts and
 crossings. The shared-collector class is rejected; the result does not change
 the signal source-field or architecture decision.
+V660 relocated C3/C4/C5 and assigned separate In2 collectors for RTL_1V1,
+RTL_3V3, and RTL_5V while preserving the V35 signal field. Native DRC rejected
+98 findings, including real rail-to-crystal, rail-to-SPI, rail-to-rail, and
+crossing classes. Endpoint relocation alone is not sufficient; source escapes
+and rail channels must be regenerated together.

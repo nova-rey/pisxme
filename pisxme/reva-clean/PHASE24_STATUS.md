@@ -121,6 +121,10 @@ and rail-to-crystal shorts/crossings. The helper defects encountered before
 authoring were corrected and are not engineering results. The next candidate
 must allocate rails and signal exits together with explicit local keepouts;
 a shared broad collector is not a valid solution class.
+V660 is rejected after a valid native rerun: relocating C3/C4/C5 with separate
+In2 rail collectors produced 98 violations, including rail-to-crystal,
+rail-to-SPI, rail-to-rail, and crossing classes. This confirms that the source
+escape allocation must be regenerated jointly with the rail channels.
 V658 is rejected after a valid rerun: its coordinated XTAL_IN/XTAL_OUT/RSET
 field produced 31 native violations, including real XTAL pair, rail, and RSET
 shorts/crossings. The pre-authoring helper error was corrected; no result was

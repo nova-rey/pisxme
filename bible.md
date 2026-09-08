@@ -6839,3 +6839,7 @@ geometry, not synthetic connectivity.
 the fresh V35 source field on an In2 collector. Native DRC rejected 56
 violations, including rail-to-rail, rail-to-SPI, and rail-to-crystal
 shorts/crossings. Preserve the result as rejected shared-collector evidence.
+2026-09-08: V660 relocated C3/C4/C5 and used separate In2 rail collectors on
+the V35 signal field. Native DRC rejected 98 violations, including rail-to-
+crystal, rail-to-SPI, rail-to-rail, and crossing classes. Endpoint relocation
+alone is rejected; source escapes and rails must be co-authored.
