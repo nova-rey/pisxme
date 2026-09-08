@@ -33,6 +33,11 @@ V632 is rejected: the first all-1V1 perimeter collector on V631 caused true
 source-field shorts at U1.16/U1.17 and U1.36/U1.35, crossings with retained
 5V/3V3 fields, a C4 ground collision, and edge-clearance findings. It is a
 route-allocation failure; no routing rule or architecture was changed.
+V633 is rejected: a bottom-edge U1.36/U1.40/U1.50 RTL_1V1 collector caused
+a true U1.40 RTL_1V1 collision with the retained U1.39 RTL_3V3 transition,
+plus additional source/edge findings. The experiment does not invalidate
+V631; the next 1V1 pass must co-author its departures with the 3V3 transition
+field rather than append a bottom collector.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus

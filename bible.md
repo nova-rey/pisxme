@@ -6731,3 +6731,7 @@ after native DRC found U1.16/U1.17 and U1.36/U1.35 source shorts, crossings
 with retained 5V/3V3 fields, a C4 ground collision, and edge-clearance
 findings. This was a route-allocation failure; rules and architecture remain
 unchanged.
+2026-09-08: V633 tested a bottom-edge U1.36/U1.40/U1.50 RTL_1V1 collector.
+Native DRC found a real U1.40-to-retained-U1.39 RTL_3V3 transition collision
+and additional source/edge findings. Reject the collector; retain V631 and
+co-author the next 1V1 departures with the 3V3 transition field.
