@@ -257,6 +257,13 @@ V102 is promoted only as the disposable 1V1 edge-group basis; remaining
 RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
 remain open.
 
+## V294 PEDET east-side landing — retained, not promoted
+
+V294 approaches U1.8 from an east-side F.Cu dogleg after the PEDET B.Cu trunk
+transitions at x=106 mm. It avoids the earlier REFCLK crossing, but native
+DRC retains one PEDET/PERST crossing at the U1 landing. The route is retained
+as a local basis; PEDET is not closed until the PERST/PEDET field is coordinated.
+
 ## V289 combined five-net SPI audit — retained basis
 
 Because V289 is chained from V278, V282, V286, and V288, its saved board

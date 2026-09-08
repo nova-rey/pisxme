@@ -532,6 +532,10 @@ Path A and production CAD remain unchanged.
 REFCLK crossing but retained PERST; V293 avoided PERST but introduced JTAG /
 undefined-field shorting and was rejected. PEDET remains open; Path A and
 production CAD remain unchanged.
+2026-09-07: Retained RTL9210B V294 PEDET east-side landing basis. It removes
+the earlier REFCLK issue but native DRC retains one PEDET/PERST crossing at
+U1.8. PEDET remains open and requires coordinated sideband-field repair; Path
+A and production CAD remain unchanged.
 2026-09-07: Retained RTL9210B V288 SPICLK short-escape basis. Native U1.19/U2.6
 connectivity passed; DRC reported 402 findings / 23 inherited opens with no
 shorting or crossing class and zero footprint errors. Remaining support routes

@@ -6800,6 +6800,9 @@ pass, both trace-removal negative controls pass, and native DRC has 366
 findings / 25 inherited opens with no shorting or crossing class and zero
 footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
 high-speed support remain open.
+V294 improves the PEDET launch and retains the R2/J1 trunk, but native DRC
+still reports one PEDET/PERST crossing at the U1 landing. PEDET remains open;
+the next repair must coordinate the local PEDET and PERST sideband field.
 V290 and V291 PEDET trials reduced the sideband open count but retained
 crossings with the existing REFCLK/PERST corridors. V292 removes REFCLK and
 leaves one PERST crossing. V293 avoids that crossing but shorts JTAG/undefined
