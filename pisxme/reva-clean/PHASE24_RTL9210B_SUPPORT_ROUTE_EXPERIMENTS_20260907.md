@@ -2017,3 +2017,9 @@ onto V368. It is rejected as an integration route failure: native DRC found
 6 shorting and 7 crossing classes, chiefly between RX B.Cu, XTAL_OUT, and
 the 1V1 launches. The next high-speed pass must co-author lane-0, XTAL_OUT,
 and the 1V1 right-side channels; no authority or Path-A CAD changed.
+V370/V372 provide the retained XTAL_OUT relocation basis: direct U1-to-riser
+F.Cu handoff, outboard B.Cu riser, and native endpoint continuity. V373
+transplant of V328 lane-0 was rejected with 5 shorts and 3 crossings. V374
+and V375 below-band RXN experiments were also rejected after native pad-field
+and connector-launch conflicts. The remaining work is a joint RX-pair and
+1V1 launch allocation; no production or Path-A CAD changed.

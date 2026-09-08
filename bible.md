@@ -6016,3 +6016,7 @@ remains open; Path A and production CAD remain unchanged.
 shorting and seven crossing classes where the V328 RX corridor conflicted
 with XTAL_OUT and RTL_1V1 launches. This is an integration route failure;
 Path A and production CAD remain unchanged.
+2026-09-07: Rejected RTL9210B V374/V375 RXN re-escape trials. Native DRC
+found source pad-field and companion-pair connector-launch conflicts. The
+next lane work must regenerate both RX pair escapes and launch together;
+Path A and production CAD remain unchanged.
