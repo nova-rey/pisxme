@@ -2673,3 +2673,12 @@ the supply pads out of the V546 bottom row, native DRC rejected the trial for
 actual RTL_1V1 crossings/shorts with the inherited RX/XTAL/GND source field,
 including a C4 ground collision. The orientation is therefore not a drop-in
 fix; its neighboring high-speed source launches must be regenerated with it.
+## V558 strict-width recheck of V546 — baseline corrected
+
+V558 re-emits all V546 0.13208 mm tracks at the project production minimum
+0.2 mm width and reruns native DRC with the strict V388/production ruleset
+(0.2 mm clearance, 0.6/0.3 mm ordinary vias). It reports 25 findings / 26
+unconnected items, including seven genuine 0.2 mm clearance errors, but no
+shorting or tracks-crossing class. The earlier V546 "clean primitive" claim
+was therefore ruleset-qualified only; V546 is retained as a topology basis,
+not production-clean evidence. Path A and production CAD remain unchanged.

@@ -6459,3 +6459,8 @@ In2 power plane. Native DRC rejected RX/XTAL/GND source-field conflicts and a
 C4 ground collision. The orientation is not a drop-in fix; neighboring
 high-speed launches must be regenerated coherently. Path A and production CAD
 remain unchanged.
+2026-09-08: RTL9210B V558 rechecked V546 at the production 0.2 mm track width
+and strict 0.2 mm clearance. Native DRC found 25 findings / 26 opens,
+including seven real clearance errors and no shorting/crossing class. V546's
+prior clean claim is ruleset-qualified and is no longer treated as
+production-clean evidence. Path A and production CAD remain unchanged.

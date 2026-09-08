@@ -6963,3 +6963,9 @@ Native DRC rejected it for inherited RX/XTAL/GND source-field conflicts and a
 C4 ground collision. This is a route-implementation/source-field integration
 failure, not an architecture rejection; the next trial must regenerate the
 orientation and neighboring launches together.
+V558 corrected the V546 evidence basis by widening its 100 tracks to the
+production 0.2 mm width and rerunning native DRC under the strict production
+ruleset. It reports 25 findings / 26 unconnected items, including seven real
+clearance errors but no shorting or crossing class. V546 is now a topology
+basis only, not a production-clean primitive; the lower source-field gate
+and strict-width cleanup remain open.
