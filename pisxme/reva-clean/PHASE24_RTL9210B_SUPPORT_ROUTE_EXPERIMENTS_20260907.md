@@ -1133,6 +1133,12 @@ negative controls. V537 is rejected for clearance to U1 pad 41 and U1 pad
 43; V538 is rejected because its transition and B.Cu rise collide with the
 accepted RTL_3V3 source-field corridor. This confirms the remaining issue is
 source-field coallocation, not net ownership or audit methodology.
+V539/V540/V541 test progressively displaced U1.40 RTL_1V1 transitions with
+native positive connectivity and exact branch-removal negative controls. V539
+and V541 remain rejected by clearance to the V535 3V3 via/spine; V540 is
+rejected by U1 pad-43/hole clearance. The repeated result identifies a
+structural 1V1/3V3 source-field coallocation constraint. No Path-A or
+production-CAD change.
 V526 proves the U1.39-to-C3.1 graph with an exact branch-removal negative
 control, but its raised outer B.Cu return is rejected by native DRC for
 RTL_5V-via clearance/crossing and REFCLK corridor interaction (23 findings).

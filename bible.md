@@ -6230,6 +6230,11 @@ branch-removal negative controls but are rejected by native DRC. V537 is too
 close to U1 pads 41/43; V538 collides with the accepted RTL_3V3 field. The
 remaining issue is coherent 1V1/3V3 source-field coallocation, not net
 ownership or audit methodology. Path A and production CAD remain unchanged.
+2026-09-08: RTL9210B V539/V540/V541 prove U1.40 RTL_1V1 connectivity and
+exact negative controls, but native DRC rejects each local transition due to
+3V3-field proximity or U1 pad/hole clearance. The next method is coherent
+1V1/3V3 source-field regeneration; Path A and production CAD remain
+unchanged.
 2026-09-08: RTL9210B V535 completes the disposable four-source RTL_3V3
 primitive. U1.20/U1.34/U1.39/U1.52 all reach C3.1 in the native graph and
 the exact U1.52 branch-removal negative control passes. Native DRC adds no
