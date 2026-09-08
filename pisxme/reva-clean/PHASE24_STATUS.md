@@ -13,6 +13,12 @@ items; both are rejected. The remaining two-item failure is therefore a
 native generated-label/duplicate-UUID association defect, not a reason to
 rewrite PCB aliases. Native ERC/DRC and complete routing remain open.
 
+The current native-pad support routing trial is rejected: native DRC reports
+834 violations and 499 inherited unconnected items, including authored
+support crossings. It remains disposable evidence only. The structural
+JMS583 support audit and its removed-R80 negative control both pass after
+updating the audit to the canonical `LXO`/`XIN`/`XOUT` names.
+
 The active work item is the protected Path-A dual-mode storage implementation
 and the remaining clean-board Phase 24 closure. RTL9210B Path B is rejected
 for the current Rev-A package/DFM contract; its isolated artifacts remain

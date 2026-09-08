@@ -7177,3 +7177,8 @@ serialization order. Native re-export reduced storage parity to two remaining
 items (`R80.1` and `U11.39` resolving as `JMS_GPIO7_NC`). Targeted duplicate-
 label cleanup and restoration probes were rejected after changing U12/U13
 ownership; no PCB alias repair or validation waiver was promoted.
+
+2026-09-08: Updated the JMS583 structural support audit to the live canonical
+clock-net names and verified its removed-R80 negative control. A fresh native
+support-routing trial was rejected at 834 DRC violations / 499 inherited
+opens with authored support crossings; it remains disposable evidence.
