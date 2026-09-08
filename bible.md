@@ -1,5 +1,10 @@
 # Append-only project bible
 
+2026-09-08: Parameterized the retained V3 JMS583 QFN escape author for an
+explicit disposable base/output, enabling controlled integration with later
+storage candidates without mutating the Path-A basis. The earlier complete-
+support cohort author remains preserved as experimental evidence.
+
 2026-09-08: Generalized the JMS583 native support-cohort audit to accept an
 explicit disposable PCB path while retaining its saved-pad/track/via-only
 connectivity model. Against the corrected NC39 support replay it correctly

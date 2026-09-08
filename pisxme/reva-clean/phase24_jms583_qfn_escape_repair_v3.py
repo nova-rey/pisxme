@@ -1,8 +1,10 @@
 """Final local XOUT corridor trial; keep both crystal lanes off XAVDDH."""
 from pathlib import Path
+import os
 import pcbnew
 R=Path(__file__).resolve().parent
-BASE=R/'PHASE24_DUAL_MODE_STORAGE_NC39_SUPPORT_COHORT.kicad_pcb'; OUT=R/'PHASE24_DUAL_MODE_STORAGE_NC39_QFN_ESCAPE_REPAIR_V3.kicad_pcb'
+BASE=R/os.environ.get('PISXME_QFN_ESCAPE_BASE','PHASE24_DUAL_MODE_STORAGE_NC39_SUPPORT_COHORT.kicad_pcb')
+OUT=R/os.environ.get('PISXME_QFN_ESCAPE_OUT','PHASE24_DUAL_MODE_STORAGE_NC39_QFN_ESCAPE_REPAIR_V3.kicad_pcb')
 def P(x,y): return pcbnew.VECTOR2I_MM(float(x),float(y))
 def xy(p): return pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y)
 def pad(b,r,n): return b.FindFootprintByReference(r).FindPadByNumber(str(n))
