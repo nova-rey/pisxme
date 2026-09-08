@@ -50,6 +50,11 @@ open. The VBUS divider probe is retained in
 R82.2-to-R83.1 pass native connectivity and the paired trace-removal negative
 control. No authored shorting class remains; the crossing findings are
 inherited donor USB artifacts.
+The rotated-L10 rail probe is retained in
+`PHASE24_JMS583_VDDREG_PROBE-drc.rpt`: U11.1-to-L10.2 native connectivity
+and the trace-removal negative control pass, with no authored shorting/local
+crossing class. The coupled LXO/inductor and remaining support routes remain
+open.
 The combined four-net cohort is retained in
 `PHASE24_JMS583_SUPPORT_COHORT_V4-drc.rpt`: reset, AVDD33, VCCO, and VCCK
 all remain natively connected with no authored shorting/crossing class, and

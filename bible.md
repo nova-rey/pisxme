@@ -6968,3 +6968,6 @@ the prior y=150 mm crossing variant remains rejected evidence.
 
 The JMS_VCCK U11.2-to-C82.1 west/south escape passed native connectivity and
 a trace-removal negative control with no authored shorting/crossing class.
+The rotated L10 JMS_VDDREG_5V escape passed native U11.1-to-L10.2
+connectivity and a trace-removal negative control with no authored shorting or
+local crossing class. Coupled LXO support remains open.
