@@ -313,6 +313,12 @@ V653's local Y1/C1/C2 relocation is rejected. It reduces the crystal span but
 creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
+
+2026-09-08 crystal fixture recheck: the saved `PHASE24_JMS583_CRYSTAL_ESCAPE_PROBE`
+was regenerated and its native XIN/XOUT endpoint audit passes with the required
+trace-removal negative control. Native DRC remains 519 violations / 499
+unconnected donor items; this is route evidence only, not a promoted crystal
+solution or Phase 24 closure.
 Native footprint geometry quantifies a bounded Path-B DFM blocker: U1.39/U1.40
 are 0.4 mm apart with 0.2 x 0.9 mm pads, while an ordinary 0.60/0.30 mm via
 plus 0.20 mm clearance requires 0.95 mm separation. V663/V664 reproduce the

@@ -7045,6 +7045,11 @@ and passes a destructive-copy negative control after local ground copper is
 removed. The JMS583 support cohort remains open because the saved candidate
 still carries inherited donor DRC/open findings.
 
+2026-09-08: Re-ran the JMS583 XIN/XOUT crystal fixture from the saved native
+board. Both endpoints and the trace-removal negative control passed; native
+DRC remained 519 violations / 499 inherited unconnected items. The fixture
+was checkpointed as route evidence only, with no Phase 24 closure claim.
+
 2026-09-08: Validated the first JMS583 ground-return access template. Ordinary
 through-vias at C80.2 and U11.63, with native F.Cu pad escapes and refilled
 POWER_GND zones, connect C80 ground to the JMS583 ground domain in saved
