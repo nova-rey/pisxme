@@ -1937,3 +1937,11 @@ retained XTAL_IN B.Cu route. These are implementation/channel-allocation
 failures. The next RTL_1V1 candidate must co-author the complete 1V1 fanout
 with the crystal and adjacent support fields; no production or Path-A CAD
 was changed.
+
+V358 is rejected as a coordinated 1V1 probe. It removed the retained
+XTAL_IN/XTAL_OUT copper before adding a complete U1/C4 1V1 field; native DRC
+reported 6 shorting classes and 2 crossing classes, primarily against the
+retained RTL_3V3 and RSET fields. It reduced the inherited open count to 23,
+but does not establish a valid route. The result confirms that the next
+attempt must use an explicitly isolated RTL_1V1 power region or a jointly
+reallocated 3V3/RSET/1V1 channel plan.

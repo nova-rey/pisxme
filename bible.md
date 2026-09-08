@@ -5971,3 +5971,8 @@ QFN-field shorts/crossings; V356/V357 exposed XTAL_IN/XTAL_OUT channel
 conflicts. These are disposable route-allocation failures, preserved with
 native DRC receipts; no Path-A or production CAD changed. The next attempt
 must co-author the complete RTL_1V1 fanout with crystal/support channels.
+2026-09-07: Rejected RTL9210B V358 coordinated RTL_1V1 probe. Removing the
+crystal copper before routing the full 1V1 field still produced six native
+shorting classes and two crossings against RTL_3V3/RSET. The evidence
+supports an isolated RTL_1V1 power region or jointly reallocated support
+channel plan; no production CAD changed.
