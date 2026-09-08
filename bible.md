@@ -580,6 +580,11 @@ identified actual source-field shorts, track crossings, or clearances. V424
 entered U1 no-connect pad 4; V425/V426 crossed PERST; V427 crossed PEDET and
 PERST. V418 remains the clean PEDET/control basis; Path A and production CAD
 remain unchanged.
+2026-09-08: RTL9210B V431 closed the CLKREQ source-escape repair on the V418
+basis. Native DRC reported zero shorts/crossings and only the inherited
+dangling-power and isolated-fill warnings; the native audit and seven
+trace-removal negative controls passed. REFCLK, SPI, remaining rails/ground,
+and full Path-B closure remain open.
 2026-09-08: RTL9210B V428 90-degree U1 control trial was rejected as an
 incomplete disposable regeneration: native DRC found 46 violations because
 legacy lane/crystal copper remained while provisional controls were added.

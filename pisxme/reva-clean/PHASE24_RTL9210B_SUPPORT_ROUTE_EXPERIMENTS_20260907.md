@@ -2135,6 +2135,13 @@ RTL_5V pad too closely. V426 has the same PERST crossing and an RTL_5V
 clearance error. V427 crosses the PEDET source and existing PERST trunk.
 These are route-implementation failures; V418 remains the best clean
 PEDET/control basis and no Path-A or production CAD was changed.
+V430 raised the V416 CLKREQ dogleg but still left a 0.15 mm clearance to
+U1.12. V431 raised it to y=57.10 mm. Native DRC then reported only the two
+inherited warnings (dangling RTL_3V3 and isolated GND fill) plus the 20
+intentional/inherited opens; it reported zero shorts and zero crossings. The
+V431 native audit passes all lane/support/PERST/CLKREQ/PEDET groups and seven
+trace-removal negative controls. This closes the CLKREQ source-escape repair
+on the V418 basis; REFCLK and remaining power/SPI support are still open.
 V428 changed solution class by rotating U1 90 degrees and regenerating
 PEDET/CLKREQ/PERST from the transformed native pads. It is rejected as an
 early disposable trial: stale lane/crystal copper was not co-regenerated,
