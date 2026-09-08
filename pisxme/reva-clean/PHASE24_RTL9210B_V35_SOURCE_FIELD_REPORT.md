@@ -139,6 +139,11 @@ the QFN pad-body envelope before turning to its own ordinary through-via and
 B.Cu corridor. Native DRC remains at four inherited warnings and has no new
 signal class. Native U1.40-to-C4.1 and U1.39-to-U2.8 connectivity pass. Retain
 this local sub-primitive and continue with the remaining U1.36 departure.
+V641's first U1.36 via collided with the retained B.Cu RTL_3V3 collector and
+is rejected. V2 moves the via to x=92.5 mm, y=74.3 mm and uses a separate
+north-side B.Cu channel. Native DRC returns only the four inherited warnings;
+U1.36-to-C4.1 connectivity passes. The full local QFN RTL_1V1 source set is
+now connected without relaxing width, clearance, layer, or via rules.
 V636 extends the passing 1V1 trunk with a north-of-QFN U1.25 departure.
 Native U1.25-to-C4.1 connectivity and the trace-removal negative control
 pass; native DRC remains at four inherited warnings with no signal violation.

@@ -75,6 +75,12 @@ returns only the four inherited warnings, with no signal short, crossing, or
 clearance violation; native U1.40-to-C4.1 and U1.39-to-U2.8 connectivity both
 pass. This closes the U1.39/U1.40 local escape sub-primitive, not the full
 RTL9210B support field; U1.36 remains the next open 1V1 source.
+V641's first U1.36 continuation is rejected because its via occupied the
+retained B.Cu RTL_3V3 collector. The corrected delayed-bend V2 moves the
+1V1 via and trunk north of that collector: native DRC returns the four
+inherited warnings only, with no signal short, crossing, or clearance class,
+and U1.36-to-C4.1 native connectivity passes. The local QFN 1V1 source field
+is now connected; remaining opens belong to other support groups.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus

@@ -6766,3 +6766,7 @@ has only the four inherited warnings, with no signal short, crossing, or
 clearance class. Native U1.40-to-C4.1 and U1.39-to-U2.8 connectivity pass.
 The adjacent source-field escape is valid; continue with U1.36 without
 relaxing rules or changing architecture.
+2026-09-08: V641 corrected the U1.36 RTL_1V1 escape after its first via
+collided with the retained B.Cu RTL_3V3 collector. V2 moves the via/trunk to
+the north-side channel; native DRC again has only four inherited warnings and
+U1.36-to-C4.1 connectivity passes. The local QFN 1V1 source set is connected.
