@@ -7015,6 +7015,11 @@ cohort passes native connectivity and trace-removal negative control; its
 811-violation/499-unconnected DRC result remains open because paste/mask/
 courtyard review and inherited manufacturing findings are not closed.
 
+2026-09-08: Updated the native JMS583 PCB authority audit to cover all 64
+signal pads plus the newly authoritative grounded exposed pad 65. The live
+placement audit passes; this changes coverage reporting only and does not
+close the remaining support-routing or manufacturing gates.
+
 2026-09-08: Post-reconciliation REXT V7 confirms the corrected JMS583
 U11.39 source field is no longer the failure. The translated R80 approach
 instead shorts the U12 exposed pad and crosses the inherited CM5_PERST
