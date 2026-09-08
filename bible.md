@@ -6847,3 +6847,9 @@ alone is rejected; source escapes and rails must be co-authored.
 reports four inherited findings and 34 unconnected pads, with no shorting or
 tracks-crossing class. Preserve it as the reproducible source-field baseline,
 not as full RTL9210B support closure.
+2026-09-08: V661 combined the proven V35 RTL_5V route with the U2-left
+crystal/1V1/upper-3V3 field. Native DRC reports nine inherited warnings and no
+shorting/crossing class, but 23 support pads remain open. The legacy RTL_5V
+negative-control helper unexpectedly passed because it removed a redundant
+same-net track; do not treat that audit as valid. Preserve V661 as the next
+rail basis.

@@ -2957,3 +2957,13 @@ RTL_3V3, and RTL_5V while preserving the V35 signal field. Native DRC rejected
 98 findings, including real rail-to-crystal, rail-to-SPI, rail-to-rail, and
 crossing classes. Endpoint relocation alone is not sufficient; source escapes
 and rail channels must be regenerated together.
+## V661 combined V35 rail basis — retained, not closed
+
+V661 starts from the retained V35 U2-left crystal/1V1/upper-3V3 field and
+adds the previously successful RTL_5V route to U1.17/U1.33/C5.1. Native DRC
+reports nine inherited warnings, with no shorting or tracks-crossing class,
+and 23 unconnected pads remain for unwritten controls, REFCLK, lane-0, and
+lower support. The endpoint group is physically connected. The legacy V35
+RTL_5V negative-control helper is invalid here because removing its first
+selected track can leave a redundant same-net route; it unexpectedly passed.
+This is an audit-tool defect, not waived connectivity evidence.

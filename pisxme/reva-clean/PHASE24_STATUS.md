@@ -115,6 +115,12 @@ V653's local Y1/C1/C2 relocation is rejected. It reduces the crystal span but
 creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
+V661 is the current retained rail-integration basis: native DRC has nine
+inherited warnings and no shorting/crossing class after adding the proven
+RTL_5V route to the V35 U2-left crystal/1V1/upper-3V3 field. It still has 23
+unconnected pads and is not closure. The legacy RTL_5V negative-control helper
+is invalid for this redundant route because it removes only the first same-net
+track; it unexpectedly passes and is not used as evidence.
 V659 is rejected after a valid native rerun: the all-rail In2 collector on the
 fresh V35 basis produced 56 violations, including rail-to-rail, rail-to-SPI,
 and rail-to-crystal shorts/crossings. The helper defects encountered before
