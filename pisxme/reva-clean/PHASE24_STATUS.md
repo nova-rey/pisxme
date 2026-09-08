@@ -86,6 +86,12 @@ U11.39 adjacent-pad failure. Its translated-R80 approach instead shorts the
 U12 exposed pad and crosses the inherited CM5_PERST corridor, so V7 is
 rejected as a placement implementation. REXT remains open for a corridor
 that clears both neighboring islands; no routing rule was relaxed.
+REXT V8 relocates R80 into the open U11/U12 gap at (148,130) and uses a
+short orthogonal F.Cu path from U11.39. Focused native DRC reports no
+JMS_REXT short/crossing and returns to the corrected cohort total of 811
+violations / 499 inherited unconnected items. The dedicated endpoint and
+trace-removal negative-control audit passes. V8 is retained as the current
+REXT subprimitive; full support release validation remains open.
 The two-via REXT corridor V1 was then rejected: its lower transition lands
 in the existing C90/R33 support field and its through-vias also incur the
 saved-board plane-clearance findings. Native DRC reports 824 violations /

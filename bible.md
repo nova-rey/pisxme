@@ -7026,6 +7026,12 @@ instead shorts the U12 exposed pad and crosses the inherited CM5_PERST
 corridor. V7 is rejected as placement evidence; REXT remains open and no
 production rule was relaxed.
 
+2026-09-08: Retained JMS REXT V8. Moving R80 into the open U11/U12 gap and
+using an orthogonal native-pad F.Cu escape removes the prior REXT source,
+PCIe, C93, U12-EP, and AVDD33 corridor conflicts. Focused native DRC reports
+no JMS_REXT short/crossing, and the endpoint plus trace-removal negative
+control pass. The full JMS583 support/release gate remains open.
+
 2026-09-08: Rejected the JMS REXT two-via corridor V1. Native DRC found the
 lower transition in the C90/R33 support field and plane-clearance findings on
 the ordinary through-vias. It remains disposable route evidence only; the
