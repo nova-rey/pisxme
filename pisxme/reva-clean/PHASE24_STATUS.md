@@ -8,11 +8,11 @@ for the current Rev-A package/DFM contract; its isolated artifacts remain
 qualification evidence only. Path A, production/acreage CAD, and unrelated
 Phase 24 work are preserved.
 The current Path-A storage placement candidate was freshly checked with native
-KiCad on 2026-09-08: 876 DRC violations and 499 unconnected items, including
-real track crossings and M2_3V3/FORCE_NVME shorts. A disposable V3 move was
-also rejected (863 violations, 499 opens, a real PERST-to-USB_DP short, and
-eight crossings). Neither is a Phase 24 pass; the next work must regenerate
-and repair from authoritative storage connectivity.
+KiCad on 2026-09-08: 843 DRC violations and 499 unconnected items. The
+U11-west/J5-clear placement removes the prior real storage short classes
+(`shorting_items` = 0); eight crossings and incomplete copper remain, so this
+is a routing basis, not a Phase 24 pass. The V3 and J5-clear predecessors are
+preserved as rejected evidence.
 The new `PHASE24_RTL9210B_QFN_ORIENTATION180_PROBE.kicad_pcb` is the current
 disposable placement basis for the next QFN field pass: native DRC reports
 four inherited warnings, and the U1.39-to-U2.8 RTL_3V3 corridor in

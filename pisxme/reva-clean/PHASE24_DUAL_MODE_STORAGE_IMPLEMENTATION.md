@@ -42,9 +42,10 @@ only.
   intended CM5/U12/U11/coupling-capacitor endpoint pairs on the regenerated
   candidate. This proves native endpoint connectivity only; it does not waive
   the physical DRC findings above.
-  The dual-mode island remains open integration work because of real
-  crossings, shorts, and incomplete copper; no placement experiment has been
-  promoted.
+  The accepted disposable placement basis is the U11-west/J5-clear result:
+  native DRC has zero shorting items, but eight crossings and 499 unconnected
+  items remain. The dual-mode island remains open integration work; no
+  placement experiment has been promoted to production authority.
 
 ## CURRENT OPEN GATES
 

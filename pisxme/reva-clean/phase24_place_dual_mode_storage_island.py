@@ -93,8 +93,11 @@ def main():
     additions=[]
     for fname,(ref,nets) in MAPS.items():
         if ref=='J3': continue
-        x={'U11':150,'U12':165,'U13':180,'U14':210,'J5':230,'R80':250,'L10':258,'Y10':270}[ref]
-        y={'U11':150,'U12':150,'U13':150,'U14':150,'J5':165,'R80':180,'L10':180,'Y10':190}[ref]
+        # J5 is deliberately outboard of the M-key socket.  At the former
+        # (230,165) origin its FORCE_NVME pad landed in J3's M2_3V3 pad
+        # column; this is a physical placement collision, not a net issue.
+        x={'U11':140,'U12':155,'U13':180,'U14':210,'J5':245,'R80':250,'L10':258,'Y10':270}[ref]
+        y={'U11':135,'U12':135,'U13':135,'U14':150,'J5':150,'R80':180,'L10':180,'Y10':190}[ref]
         additions.append(pcb_footprint(LIB/fname,ref,x,y,nets))
     for ref,nets in SUPPORT_PCB.items():
         fname = 'C_0603_1608Metric.kicad_mod' if ref == 'C44' else ('Crystal_3225_4Pad.kicad_mod' if ref == 'Y2' else ('L_2520_6332Metric.kicad_mod' if ref == 'L2' else ('R_0402_1005Metric.kicad_mod' if ref.startswith('R') else 'C_0402_1005Metric.kicad_mod')))

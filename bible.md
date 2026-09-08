@@ -6882,3 +6882,8 @@ Path-A dual-mode storage implementation. Marked the V3 placement (863 DRC,
 499 opens, real PERST-to-USB_DP short, and crossings) and USB3 route trial
 (834 DRC, real source shorts/crossings) as rejected disposable evidence;
 restored the authoritative generator and kept Path B historical/superseded.
+2026-09-08: Moved disposable JMS583 U11 west to clear the inherited
+CM5_PERST corridor while retaining the outboard J5 mode jumper. Native DRC
+reports 843 violations and 499 unconnected items with zero shorting items;
+eight crossings and incomplete copper remain. Retain this as the best current
+Path-A routing basis, not a Phase 24 pass.
