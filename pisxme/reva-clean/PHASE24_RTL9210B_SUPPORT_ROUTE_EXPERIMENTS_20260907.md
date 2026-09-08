@@ -2125,3 +2125,13 @@ the V418 audit passes lane/support/control/PEDET connectivity with seven
 trace-removal negative controls. Remaining opens are RTL_1V1, SPI, REFCLK,
 and associated return/power support; Path A and production CAD remain
 unchanged.
+
+V419-V423 are rejected CLKREQ source-escape experiments. V419 introduced a
+PEDET/CLKREQ short; V420 introduced JTAG/XTAL conflicts; V421 crossed the
+PERST source; and V422/V423 each introduced a real RTL_1V1 or PERST conflict.
+V424 entered U1's no-connect pad-4 field and crossed XTAL_IN, so it is also
+rejected. V425 avoided pad 4 but crossed the PERST source and approached the
+RTL_5V pad too closely. V426 has the same PERST crossing and an RTL_5V
+clearance error. V427 crosses the PEDET source and existing PERST trunk.
+These are route-implementation failures; V418 remains the best clean
+PEDET/control basis and no Path-A or production CAD was changed.

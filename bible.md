@@ -575,6 +575,11 @@ unchanged.
 REFCLK crossing but retained PERST; V293 avoided PERST but introduced JTAG /
 undefined-field shorting and was rejected. PEDET remains open; Path A and
 production CAD remain unchanged.
+2026-09-08: Rejected RTL9210B CLKREQ escape trials V419-V427 after native DRC
+identified actual source-field shorts, track crossings, or clearances. V424
+entered U1 no-connect pad 4; V425/V426 crossed PERST; V427 crossed PEDET and
+PERST. V418 remains the clean PEDET/control basis; Path A and production CAD
+remain unchanged.
 2026-09-07: Rejected RTL9210B V399 local-clearance trial. Reauthoring RSET,
 RTL_3V3, and XTAL_OUT from the V397 basis introduced two GND shorts at the
 oscillator transition. V397 remains the current basis; Path A and production
