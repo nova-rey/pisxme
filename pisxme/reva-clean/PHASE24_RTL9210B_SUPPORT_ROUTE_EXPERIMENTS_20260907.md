@@ -1903,3 +1903,11 @@ capacitor handoffs. Native DRC reports zero shorting and zero crossing
 classes, and the saved-board crystal audit plus trace-removal negative control
 pass. This closes only the local crystal primitive; remaining RTL9210B
 support and interface nets are still open.
+
+## V340 RSET route primitive
+
+V340 routes U1.51 RSET to R1.1 on the V339 crystal/lane placement using a
+short F.Cu departure, a B.Cu corridor, and an F.Cu resistor handoff. Native
+DRC reports zero shorting and zero crossing classes; the saved-board
+connectivity audit and trace-removal negative control pass. RSET is retained;
+remaining rails, controls, SPI, REFCLK, USB, and M.2 support remain open.

@@ -6927,3 +6927,8 @@ XTAL_OUT on separate B.Cu spines with native F.Cu capacitor handoffs; DRC
 reports zero shorting and zero crossing classes. The saved-board crystal
 audit and trace-removal negative control pass. Crystal support is retained;
 rails, controls, SPI, REFCLK, USB, M.2 launch, and power remain open.
+
+V340 adds RSET on the retained V339 crystal/lane placement. Native DRC has
+zero shorting and crossing classes; the saved-board U1.51/R1.1 audit and
+trace-removal negative control pass. RSET is retained as a local primitive;
+the remaining RTL9210B support/interface nets remain open.

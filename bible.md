@@ -5956,3 +5956,7 @@ bases and the next SPI work must use coordinated channel allocation.
 an SPISO3/GND short at the C1 crystal-support pad. This is a route-
 implementation failure; the next SPI work must allocate remaining channels
 together. Path A and production CAD remain unchanged.
+
+2026-09-07: Retained RTL9210B V340 RSET route primitive. Native DRC and
+saved-board negative-control audit pass with zero shorts/crossings; remaining
+Path-B support/interface nets remain open.
