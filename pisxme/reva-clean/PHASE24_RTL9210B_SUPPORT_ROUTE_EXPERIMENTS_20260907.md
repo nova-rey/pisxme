@@ -1080,6 +1080,12 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V499 tested native U1.16 RTL_1V1 to C4.1. Connectivity and the negative
+control pass, but native DRC rejects the isolated branch: the initial route
+crossed the RTL_5V handoff, and the left detour crossed the SPISO2/RTL_3V3
+source field. This is a route/source-field co-allocation failure, not an
+RTL_1V1 electrical rejection. U1.16 must be regenerated with SPI and the
+remaining 1V1 source escapes together. No Path-A or production CAD changed.
 V498 is the first valid combined lower-QFN source-field basis. It regenerates
 XTAL_IN, XTAL_OUT, RSET, and U1.52 RTL_3V3 together around the retained
 U1.34/U1.39/U1.20 3V3 field. Native saved-board connectivity passes all four

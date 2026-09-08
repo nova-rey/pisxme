@@ -6227,6 +6227,12 @@ Native aggregation connectivity and one trace-removal negative control pass.
 Native DRC has zero errors; nine inherited incomplete-fixture warnings
 remain. Remaining source pads and support nets stay open; no Path-A or
 production-CAD change.
+2026-09-08: RTL9210B V499 tested U1.16 RTL_1V1 to C4.1. Native connectivity
+and the negative control pass, but DRC rejects isolated routes against the
+RTL_5V handoff and then the SPISO2/RTL_3V3 source field. This is a
+source-field co-allocation failure, not RTL_1V1 rejection; U1.16 must be
+regenerated with SPI and remaining 1V1 escapes together. No Path-A or
+production-CAD change.
 2026-09-08: RTL9210B V498 is the first valid combined lower-QFN source-field
 basis. XTAL_IN, XTAL_OUT, RSET, and U1.52 RTL_3V3 are regenerated together
 around the retained 3V3 source field. Native connectivity passes all four
