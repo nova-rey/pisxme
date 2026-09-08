@@ -1080,6 +1080,13 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V508 tests U1.25 RTL_1V1 with an early B.Cu/F.Cu return into the V506
+left-side trunk. Native saved-board connectivity and the trace-removal
+negative control pass. Native DRC rejects the candidate because the U1.25
+departure contacts adjacent DEVSLP/no-connect pads and the B.Cu return
+crosses retained XTAL_IN/RTL_3V3 support spines. This confirms that the
+remaining 1V1 work requires complete QFN pad-field reallocation rather than
+another isolated trunk extension. Path A and production CAD remain unchanged.
 V507 tests U1.25 RTL_1V1 using a short F.Cu escape, ordinary through-via,
 B.Cu lateral handoff, and return to the V506 RTL_1V1 trunk. Native saved-board
 connectivity and the trace-removal negative control pass, but native DRC

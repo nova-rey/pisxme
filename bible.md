@@ -6210,6 +6210,11 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V508 tests U1.25 RTL_1V1 with an early B.Cu/F.Cu return.
+Native connectivity and the trace-removal negative control pass, but native
+DRC rejects the route for DEVSLP/no-connect pad contact and crossings into
+retained XTAL_IN/RTL_3V3 spines. Complete QFN pad-field allocation remains
+open; Path A and production CAD remain unchanged.
 2026-09-08: RTL9210B V507 tests U1.25 RTL_1V1 into the V506 trunk. Native
 connectivity and the trace-removal negative control pass, but native DRC
 rejects the route for crossings into retained support spines and contact with
