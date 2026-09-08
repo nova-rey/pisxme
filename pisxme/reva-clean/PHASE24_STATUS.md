@@ -26,6 +26,11 @@ PCB authoring path normalizes donor `/CORE_CM5/` aliases to those canonical
 names before placement. This closes the aliasing ambiguity in the authoring
 path; the disposable candidate is not claimed as fully connected.
 
+Independent live-source checks currently pass: dual-mode schematic/library
+authority, exact JMS583/selector/M-key pad counts, authoritative component
+maps, selector truth table (`SATA=0`, `NVMe=1`), and mode contract. These
+checks do not waive the still-open native copper/DRC closure.
+
 The live USB3 map audit then found and corrected a second source-authority
 defect: U12 TX pins 24/25 are the bridge-side `JMS_USB3_TXN/P` nets across
 C87/C86, while U12 RX pins 22/23 remain direct `USB_RXN1/P` bridge links.

@@ -24,6 +24,11 @@ donor hierarchy aliases before generating disposable PCB candidates. This
 closes the aliasing ambiguity in the authoring path, not the remaining
 physical USB3 routing or native DRC gates.
 
+The current live-source audits pass for schematic/library authority,
+component pad counts and maps, selector truth table (`SATA=0`, `NVMe=1`),
+and the mode contract. Native copper, mode-aware switched connectivity, and
+DRC closure remain open.
+
 The live U12 map was also reconciled at the source-authoring boundary:
 pins 24/25 use bridge-side `JMS_USB3_TXN/P` across the TX coupling capacitors,
 while pins 22/23 retain direct `USB_RXN1/P` bridge links. The resulting

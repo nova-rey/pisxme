@@ -7091,6 +7091,11 @@ native endpoint assertions; native DRC remains open at 880 violations / 499
 inherited unconnected items. Root-native XML also proves canonical CM5 USB3
 ownership, and all prior contradictory prose is now explicitly superseded.
 
+2026-09-08: Re-ran the live dual-mode source checks. Schematic/library
+authority, exact JMS583/selector/M-key pad counts, authoritative component
+maps, selector truth table (SATA=0, NVMe=1), and mode contract all pass.
+Native copper and DRC closure remain open.
+
 2026-09-08: Rejected source-launch relocation FULL10. Although all ten USB3
 endpoints remained natively connected, inward vias introduced shorts to J1
 12V pads and U11 ground; the trial is preserved as negative route evidence
