@@ -6913,3 +6913,10 @@ U2 pad fields, and J1 SSD_3V3 at the chosen endpoints, with 7/11 native
 shorting classes and crossings respectively. Inner-layer power remains an
 available contract resource, but the next route must be generated with a
 single coordinated rail/lane via map; no production CAD or Path A changed.
+
+V323 is the retained coherent-placement probe: U1 is at `(106,62)` with
+180-degree orientation and the local support cluster moves coherently. V328
+routes all four RTL9210B lane-0 nets from the transformed U1 bank to J1 with
+zero native shorting/crossing findings; its saved-board audit and trace-
+removal negative control pass. Support rails/control/REFCLK remain open, so
+V328 is a lane-only primitive rather than full Path-B closure.

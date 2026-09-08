@@ -1884,3 +1884,13 @@ three short/crossing classes at the upper QFN field; V313 moved the escape to
 a lower perimeter but retained one short and three crossings. Both are
 rejected as route-implementation failures. No Path-A or production CAD
 changed, and V311 remains the retained sideband basis.
+
+## V323/V328 coherent reorientation and lane-0 closure primitive
+
+V323 moves U1 to `(106,62)` at 180 degrees and translates the RTL9210B local
+support components together, clearing the J1 SSD-power field that invalidated
+V322. Its unrouted native DRC has no shorting or crossing class. V328 routes
+the four transformed lane-0 nets using TX on F.Cu and RX with explicit outer-
+layer transitions outside both pad fields. Native DRC reports zero shorting
+and zero crossing classes; the saved-board endpoint audit and trace-removal
+negative control pass. Support/control/REFCLK remain open.
