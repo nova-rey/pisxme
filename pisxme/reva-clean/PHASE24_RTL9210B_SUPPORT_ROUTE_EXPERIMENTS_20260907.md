@@ -1894,3 +1894,12 @@ the four transformed lane-0 nets using TX on F.Cu and RX with explicit outer-
 layer transitions outside both pad fields. Native DRC reports zero shorting
 and zero crossing classes; the saved-board endpoint audit and trace-removal
 negative control pass. Support/control/REFCLK remain open.
+
+## V337/V339 crystal relocation and route primitive
+
+V337 clears C2 from C4 while retaining the coherent V323 support placement.
+V339 routes XTAL_IN and XTAL_OUT using separate B.Cu spines and short native
+capacitor handoffs. Native DRC reports zero shorting and zero crossing
+classes, and the saved-board crystal audit plus trace-removal negative control
+pass. This closes only the local crystal primitive; remaining RTL9210B
+support and interface nets are still open.

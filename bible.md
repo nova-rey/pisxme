@@ -6,6 +6,11 @@ real short/crossing classes (V312: three; V313: one short and three
 crossings). They remain preserved evidence only; V311 is the current retained
 sideband basis and Path A/production CAD are unchanged.
 
+2026-09-07: Retained RTL9210B V337/V339 crystal-support primitive. C2 was
+cleared from C4, then XTAL_IN/XTAL_OUT were routed with separate B.Cu spines;
+native DRC and saved-board negative-control audits pass with zero shorts or
+crossings. Remaining Path-B support/interface nets are open.
+
 2026-09-07: Retained RTL9210B V323/V328 coherent placement and lane-0
 primitive. U1 was reoriented toward J1 with coherent support translation;
 V328 passed native four-pair connectivity, zero shorts/crossings, and a

@@ -6920,3 +6920,10 @@ routes all four RTL9210B lane-0 nets from the transformed U1 bank to J1 with
 zero native shorting/crossing findings; its saved-board audit and trace-
 removal negative control pass. Support rails/control/REFCLK remain open, so
 V328 is a lane-only primitive rather than full Path-B closure.
+
+V337 clears the relocated crystal trio from C4, producing an unrouted native
+placement with no shorting or crossing class. V339 routes XTAL_IN and
+XTAL_OUT on separate B.Cu spines with native F.Cu capacitor handoffs; DRC
+reports zero shorting and zero crossing classes. The saved-board crystal
+audit and trace-removal negative control pass. Crystal support is retained;
+rails, controls, SPI, REFCLK, USB, M.2 launch, and power remain open.
