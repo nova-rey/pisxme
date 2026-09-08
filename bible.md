@@ -6163,3 +6163,8 @@ primitive so far. Ordered vertical escapes with 0.9-mm-spaced F.Cu jogs
 produce native DRC zero shorts/crossings/clearances; the saved-board audit
 and six negative controls pass. This is only a source-fanout primitive, not
 full Path-B closure; Path A and production CAD remain unchanged.
+2026-09-08: Rejected RTL9210B V463/V464 full lane-0 and REFCLK continuation
+trials. V463 retained the clean V462 source fanout but had one RXN/RXP
+clearance issue. V464's proven connector handoff reuse exposed three
+corridor crossings and connector-transition clearance/short errors. V462 is
+retained; no Path-A or production-CAD change.
