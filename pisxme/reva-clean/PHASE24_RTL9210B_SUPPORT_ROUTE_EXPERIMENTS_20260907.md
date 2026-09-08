@@ -257,6 +257,16 @@ V102 is promoted only as the disposable 1V1 edge-group basis; remaining
 RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
 remain open.
 
+## V289 combined five-net SPI audit — retained basis
+
+Because V289 is chained from V278, V282, V286, and V288, its saved board
+contains all five SPI routes. The native five-net endpoint audit passes all
+five U1/U2 mappings, and the trace-removal negative control fails as required.
+The board DRC summary is 420 findings / 22 inherited opens with zero
+`shorting_items`, zero `tracks_crossing`, and zero footprint errors. This
+closes the disposable five-net SPI routing subtask, but does not close the
+RTL9210B support field or Path B.
+
 ## V289 SPISI high-north corridor — retained, not promoted
 
 V289 routes actual U1.18=(101.2,58.05) to U2.5=(88.1,70.0) through a

@@ -513,6 +513,11 @@ Recorded seeded-exit search result; inherited SATA launch still blocks downstrea
 - The J10-side route stays below the connector contact row and avoids the
   existing FAST-B USB3 DM/RX geometry. PCIe and accepted high-speed routes are
 unchanged.
+2026-09-07: V289 combined five-net SPI audit passed all native U1/U2 endpoint
+mappings and its trace-removal negative control. DRC remained 420 findings /
+22 inherited opens with no shorting, crossing, or footprint-error class.
+This closes the disposable SPI routing subtask only; RTL9210B support and
+Path-B validation remain open. Path A and production CAD remain unchanged.
 2026-09-07: Rejected RTL9210B V250 parallel lower-edge QFN source-field
 departures. Native rail/REFCLK connectivity and the trace-removal negative
 control passed, but DRC found three signal shorts and one crossing against

@@ -6800,6 +6800,12 @@ pass, both trace-removal negative controls pass, and native DRC has 366
 findings / 25 inherited opens with no shorting or crossing class and zero
 footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
 high-speed support remain open.
+The combined V289 chain now passes the full native five-net SPI audit:
+SPISI U1.18/U2.5, SPICLK U1.19/U2.6, SPISO3 U1.22/U2.7, SPISO U1.23/U2.2,
+and SPICS U1.24/U2.1. The trace-removal negative control fails as required.
+The saved V289 DRC summary remains 420 findings / 22 inherited opens with no
+shorting, crossing, or footprint-error class. The SPI field is retained;
+remaining RTL9210B control, rail, and high-speed support remain open.
 V289 is retained as the SPISI basis: native U1.18/U2.5 connectivity passes;
 native DRC reports 420 findings / 22 inherited opens with no shorting or
 crossing class and zero footprint errors. The four-net SPI source escape is

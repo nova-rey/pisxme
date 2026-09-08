@@ -1,0 +1,20 @@
+RTL9210B Path-B V289 native saved-board audit
+Date: 2026-09-07
+
+Native KiCad endpoint audit:
+  SPISI  U1.18 <-> U2.5  PASS
+  SPICLK U1.19 <-> U2.6  PASS
+  SPISO3 U1.22 <-> U2.7  PASS
+  SPISO  U1.23 <-> U2.2  PASS
+  SPICS  U1.24 <-> U2.1  PASS
+  Full RTL9210B SPI native endpoint connectivity: PASS
+
+Trace-removal negative control:
+  Removed a necessary SPISI track from a disposable in-memory board.
+  Endpoint audit failed as required: PASS
+
+Native DRC summary:
+  420 findings; 22 unconnected items; zero shorting_items;
+  zero tracks_crossing; zero footprint errors.
+  The remaining unconnected items are inherited unfinished Path-B support
+  and high-speed circuitry, not a failure of the five-net SPI field.
