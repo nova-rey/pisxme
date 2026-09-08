@@ -257,15 +257,6 @@ V102 is promoted only as the disposable 1V1 edge-group basis; remaining
 RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
 remain open.
 
-## V283 SPISO3 trial — rejected implementation
-
-V283 attempted a split-layer SPISO3 corridor from actual U1.22 to U2.7.
-Native DRC found SPISO3/SPISO and SPISO3/GND shorting classes plus a
-source-field crossing with RTL_3V3. This is a route-implementation failure
-from independently adding a third channel to the V278/V282 corridors; it is
-not evidence against the support placement. The next SPI experiment must
-allocate all remaining channels together.
-
 ## V103/V104 U1.34 RTL_3V3 handoff trials — rejected
 
 V103 attempted a left dogbone and B.Cu diagonal but targeted the wrong layer
@@ -1322,6 +1313,15 @@ unconnected items for V200, with zero `shorting_items` and zero
 and SPICLK, with four trace-removal negative controls. V200 is promoted as
 the disposable crystal/SPICLK basis; remaining SPI/control and Path-B gates
 remain open.
+
+## V283 SPISO3 trial — rejected implementation
+
+V283 attempted a split-layer SPISO3 corridor from actual U1.22 to U2.7.
+Native DRC found SPISO3/SPISO and SPISO3/GND shorting classes plus a
+source-field crossing with RTL_3V3. This is a route-implementation failure
+from independently adding a third channel to the V278/V282 corridors; it is
+not evidence against the support placement. The next SPI experiment must
+allocate all remaining channels together.
 
 ## V197 coherent crystal/SPI west shift — rejected
 
