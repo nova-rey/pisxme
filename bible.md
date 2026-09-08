@@ -6427,3 +6427,12 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+## 2026-09-08 — RTL9210B V552/V553 bottom-field discrimination
+
+V552 and V553 were disposable coordinated source-field trials from the
+accepted V546 RTL9210B support baseline. Both preserved native net identity
+and were rejected by native DRC: V552 exposed XTAL_OUT/XTAL_IN/3V3 and
+exposed-pad conflicts; V553 exposed remaining 1V1/3V3/LANE0/REFCLK source
+field crossings. These are route-implementation failures, not an
+architecture rejection. V546 remains the accepted U1.40 primitive and the
+next attempt must reallocate the adjacent bottom signal field coherently.

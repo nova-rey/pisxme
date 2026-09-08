@@ -2622,3 +2622,18 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+## V552/V553 coordinated bottom-field trials — rejected
+
+V552 started from the accepted V546 east-side U1.40 escape and reallocated
+XTAL_OUT while collecting U1.55/U1.60/U1.63 RTL_1V1 on a local lower return.
+Native saved-board connectivity was not yet a pass because the candidate was
+rejected by native DRC: XTAL_OUT crossed the existing XTAL_IN/3V3 field and
+shorted/cleared the exposed-pad and existing support geometry. This is a route
+implementation failure, not evidence against the RTL9210B topology.
+
+V553 tested a separate B.Cu return elevation and an outboard XTAL_OUT escape.
+It reduced the incomplete-fixture report to 24 unconnected items, but native
+DRC still found crossings/clearance with the existing 1V1, 3V3, LANE0_RXP,
+and REFCLK source field. The bottom 1V1 group therefore requires coordinated
+reallocation of the adjacent signal field; further same-class collector-only
+variants are not promoted. V546 remains the valid primitive baseline.
