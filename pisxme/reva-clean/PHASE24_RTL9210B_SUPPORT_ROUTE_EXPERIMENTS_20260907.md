@@ -1986,6 +1986,16 @@ handoffs outward. It removes all shorting classes but retains three native
 tracks-crossing classes, all against the retained XTAL_OUT B.Cu spine. It is
 rejected pending either moving that crystal spine or assigning those 1V1
 branches to a different layer/channel.
+V372 removes the unnecessary XTAL_OUT intermediate via and routes directly
+from U1 to an outboard B.Cu riser. Native DRC reports 0 shorting items, 0
+tracks-crossing items, and 21 unconnected items; this restores the V368
+support audit basis while freeing the former XTAL_OUT channel.
+
+V373 transplants the V328 lane-0 primitive onto V372. It is rejected as an
+integration route: native DRC reports 5 shorting and 3 crossing classes,
+including lane RXN against the outboard XTAL_OUT riser and lane TXN/RXN
+against RTL_1V1 right-side launches. The next candidate must co-author the
+lane escape and 1V1 right-side channels; no Path-A or production CAD changed.
 V368 is retained as the first clean coallocated support basis. It keeps the
 retained RSET and XTAL_IN/XTAL_OUT primitives, routes the RTL_1V1 right-side
 branches on In2, and routes the top/left branches on B.Cu to avoid RTL_3V3.
