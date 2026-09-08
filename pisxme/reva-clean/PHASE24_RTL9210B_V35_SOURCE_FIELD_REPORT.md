@@ -108,6 +108,10 @@ connectivity for U1.17/U1.33/C5.1 RTL_5V and both lower RTL_3V3 endpoint
 groups, with all-rail trace removal breaking all three groups. Native DRC is
 four inherited warnings and has no shorting, crossing, or clearance class.
 Retain it as the current disposable coordinated rail basis.
+The first all-1V1 perimeter collector derived from V631 is rejected. Native
+DRC found U1.16/U1.17 and U1.36/U1.35 source shorts, retained-rail crossings,
+and a C4 ground collision. The next 1V1 attempt must use source-side channel
+allocation around the proven rail field, not a global collector sweep.
 
 Re-author the complete current support field from native pad coordinates on a
 fresh V35-derived disposable board: first allocate all three rails and the

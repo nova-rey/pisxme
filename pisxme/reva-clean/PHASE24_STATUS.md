@@ -29,6 +29,10 @@ RTL_3V3 channels with ordinary 0.60/0.30-mm vias. Native DRC reports only the
 four inherited warnings, with no shorting, crossing, or clearance class.
 Native connectivity passes all three endpoint groups, and removing all rail
 tracks breaks all three. This remains a disposable support-field pass.
+V632 is rejected: the first all-1V1 perimeter collector on V631 caused true
+source-field shorts at U1.16/U1.17 and U1.36/U1.35, crossings with retained
+5V/3V3 fields, a C4 ground collision, and edge-clearance findings. It is a
+route-allocation failure; no routing rule or architecture was changed.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus
