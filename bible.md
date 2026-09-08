@@ -6992,3 +6992,11 @@ shorting/local crossing class.
 The right-side JMS_XAVDDH U11.52-to-C84.1 escape passed native connectivity
 and a trace-removal negative control with no authored shorting/local crossing
 class. Remaining analog support remains open.
+
+2026-09-08: Rejected JMS XAVDDH V7 perimeter via after native DRC identified
+it in the U11.57 JMS_GPIO12_NC pad field. Retained V8 as corrected
+seven-net support-cohort evidence: U11.52 exits south from the native pad,
+uses ordinary through-vias outside the QFN field, and passes native endpoint
+connectivity plus the trace-removal negative control with no authored local
+short/crossing class. The 878-violation/499-unconnected inherited donor-board
+DRC result remains open evidence, not a Phase 24 pass.

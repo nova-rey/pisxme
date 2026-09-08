@@ -55,6 +55,16 @@ The right-side XAVDDH probe is retained in
 connectivity and the trace-removal negative control pass, with no authored
 shorting/local crossing class. Remaining analog support and complete release
 validation remain open.
+
+The seven-net JMS support cohort was regenerated after the first XAVDDH
+perimeter via landed in the U11.57 JMS_GPIO12_NC pad field. That V7 trial is
+rejected as route implementation evidence. V8 exits U11.52 south from the
+native pad at (138.2,131.4), transitions with ordinary through-vias outside
+the QFN field, and reaches C84.1 without an authored shorting/crossing class.
+Native DRC reports 878 total violations / 499 unconnected items, still
+including inherited donor-board findings; it is not a Phase 24 pass. The
+seven-net saved-board audit and trace-removal negative control pass. The
+remaining JMS support cohort and full storage integration gate remain open.
 The `JMS_AVDDL` decoupler probe is retained in
 `PHASE24_JMS583_AVDDL_PROBE-drc.rpt`: U11.20-to-C83.1 native connectivity
 and its trace-removal negative control pass, with no authored shorting/local
