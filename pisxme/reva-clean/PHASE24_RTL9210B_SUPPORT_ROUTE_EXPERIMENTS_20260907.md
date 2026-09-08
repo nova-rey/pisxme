@@ -1133,6 +1133,13 @@ negative controls. V537 is rejected for clearance to U1 pad 41 and U1 pad
 43; V538 is rejected because its transition and B.Cu rise collide with the
 accepted RTL_3V3 source-field corridor. This confirms the remaining issue is
 source-field coallocation, not net ownership or audit methodology.
+V546 applies the independent east-side escape: U1.40 leaves on F.Cu at
+x=102.9, descends to the U1.50 row, and transitions to the existing 1V1
+B.Cu handoff. Native U1.40-to-C4.1 connectivity and the exact branch-removal
+negative control pass. Native DRC has no new short, crossing, or clearance
+error and the incomplete-fixture unconnected count drops from 28 to 26.
+V546 is the current U1.40 1V1 primitive; Path A and production CAD remain
+unchanged.
 V539/V540/V541 test progressively displaced U1.40 RTL_1V1 transitions with
 native positive connectivity and exact branch-removal negative controls. V539
 and V541 remain rejected by clearance to the V535 3V3 via/spine; V540 is
