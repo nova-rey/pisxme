@@ -82,6 +82,12 @@ V603 is rejected: the SPISO3 transition/endpoint entered the lower RTL_3V3
 field and crossed the existing 1V1 branch. V604 moved that endpoint west but
 crossed/shorted the retained SPISI launch. The next pass must allocate all SPI
 source and endpoint channels together.
+V605 is rejected: its SPISO3 channel crossed the retained SPISI vertical and
+endpoint launch. V606 avoided that crossing but entered the lower 3V3/1V1
+clearance envelope; V607 moved inward and collided with the SPISI endpoint
+via. V608 coordinated two endpoint transitions but still collided at the U2
+SPICLK pad field. The next pass must allocate U1 source and U2 endpoint
+channels together.
 V578 replaced the first U1.33 5V departure with an exact-horizontal segment.
 Native saved-board connectivity then showed dangling 5V branches and DRC
 still reported the pad-32 clearance violation. Reject V578; V576 remains the
