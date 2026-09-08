@@ -6035,3 +6035,9 @@ and, with RTL_1V1/RTL_3V3/crystal copper removed for isolation, native DRC
 reported zero shorts and zero crossings (37 intentional/inherited opens).
 This separates route-authoring failure from lane-topology failure; Path A and
 production CAD remain unchanged.
+2026-09-07: RTL9210B lane co-allocation V381-V386 reworked RTL_3V3 and RSET
+around the exact V328 lane. Earlier variants retained shorts/crossings; V387
+co-authored RSET below the 3V3 channel and achieved native DRC zero shorts and
+zero crossings with 27 open connections, while XTAL_OUT remained removed for
+isolation. This is an intermediate support-channel basis, not Path-B closure;
+Path A and production CAD remain unchanged.

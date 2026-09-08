@@ -1626,6 +1626,20 @@ however, reports 493 findings / 15 unconnected items and three signal
 shorting classes: USB_RXN0/RTL_3V3 twice and ISOLATEB/CLKREQ_N. Reject V243
 as a route implementation. V242 remains the promoted basis; Path A and
 production CAD remain unchanged.
+
+V381-V386 explored reallocation of the U1.52 RTL_3V3 escape and the RSET
+return while keeping the exact V328 lane primitive. V381-V383 were rejected
+for crossings or shorts against the retained RSET/XTAL channels. V384-V386
+showed that simply moving the transition closer to the RX via field still
+causes clearance/short conflicts; these are retained as route-implementation
+evidence.
+
+V387 co-authors the RSET return below the 3V3 channel and terminates RTL_3V3
+on In2 at the existing power trunk, avoiding the RX B.Cu corridor. Native DRC
+reports 0 shorting items and 0 tracks-crossing items, with 27 unconnected
+items and remaining ordinary clearance/width findings. XTAL_OUT is still
+removed for this discriminator, so V387 is an intermediate support-channel
+basis, not a Path-B closure. Path A and production CAD remain unchanged.
 ## V244 RTL_1V1 U1.50 lower-edge escape — rejected
 
 V244 tested U1.50 from the V242 basis with a lower-edge F.Cu departure at
