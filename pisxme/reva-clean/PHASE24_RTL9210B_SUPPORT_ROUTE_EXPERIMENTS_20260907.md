@@ -2637,3 +2637,13 @@ DRC still found crossings/clearance with the existing 1V1, 3V3, LANE0_RXP,
 and REFCLK source field. The bottom 1V1 group therefore requires coordinated
 reallocation of the adjacent signal field; further same-class collector-only
 variants are not promoted. V546 remains the valid primitive baseline.
+## V554 lower-field RX/1V1 co-allocation — rejected
+
+V554 moved the LANE0_RXP/RXN source escapes to B.Cu and used the freed local
+field for the U1.55/U1.60/U1.63 RTL_1V1 collector. The saved-board native
+graph reduced the open count to 23, but native DRC rejected the candidate for
+RX P/N source-pad-field crossings, REFCLK_P collision, XTAL_OUT/RTL_1V1 and
+RTL_3V3/RTL_1V1 source-field collisions. This establishes that independent
+RX source movement is insufficient; REFCLK, lane-0, crystal, 3V3, and bottom
+1V1 launches must be regenerated as one field. No Path-A or production CAD
+change was made.

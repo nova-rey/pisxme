@@ -6943,3 +6943,8 @@ shorting involving XTAL_IN/XTAL_OUT, RTL_3V3, REFCLK, and LANE0. These are
 route-implementation failures; Path A, production CAD, and the selected Path-B
 architecture are unchanged. The next experiment must co-author the complete
 bottom signal-field allocation, rather than add another collector-only route.
+V554 is rejected as a lower-field route implementation: moving RX source
+escapes to B.Cu reduced the isolated open count but created native RX P/N,
+REFCLK, XTAL_OUT, RTL_3V3, and RTL_1V1 collision classes. The next Path-B
+trial must regenerate the complete lower QFN source field coherently; no
+architecture, Path-A, or production-CAD change was made.

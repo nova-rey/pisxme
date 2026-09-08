@@ -6440,3 +6440,8 @@ next attempt must reallocate the adjacent bottom signal field coherently.
 discriminator. The current Path-B open gate is coordinated lower QFN source
 field allocation; V552/V553 are rejected route implementations, not an
 architecture blocker. Path A and production CAD remain untouched.
+2026-09-08: RTL9210B V554 moved the RX source escapes to B.Cu while collecting
+the bottom RTL_1V1 pads. Native DRC rejected RX P/N, REFCLK, XTAL_OUT, 3V3,
+and 1V1 collision classes. This is a route-implementation discriminator: the
+complete lower QFN source field must be regenerated together. Path A and
+production CAD remain unchanged.
