@@ -141,6 +141,13 @@ collision, and local XIN/XOUT via-clearance. The support primitive remains
 valid in isolation; its three QFN edge exits must be regenerated in-place
 around the USB3 copper.
 
+The focused three-exit transplant (`PHASE24_DUAL_MODE_STORAGE_FULL7_THREE_EXITS`)
+passes native XIN/XOUT/XAVDDH endpoint connectivity and the XIN removal
+negative control, but is rejected as an integrated route: native DRC reports
+851 violations / 499 unconnected items, including a real XAVDDH-to-
+CM5_USB3_TX_N collision. The remaining repair is the in-place XAVDDH exit;
+the crystal endpoint geometry itself is not the blocker.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

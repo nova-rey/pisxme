@@ -108,6 +108,12 @@ collision and local XIN/XOUT via-clearance. The primitive remains valid
 isolated evidence; the next pass must regenerate its QFN exits in-place around
 the USB3 copper.
 
+The focused three-exit transplant passes native XIN/XOUT/XAVDDH connectivity
+and its XIN negative control, but native DRC rejects the integrated route at
+851 violations / 499 unconnected items because the XAVDDH departure collides
+with CM5_USB3_TX_N. The candidate is preserved as rejected evidence; the
+remaining work is an in-place XAVDDH escape repair.
+
 The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route
 evidence only; FULL7 is still the active basis.

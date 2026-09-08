@@ -7364,3 +7364,9 @@ negative-control audits passed, but integrated DRC reported 917 violations,
 including a real JMS_XAVDDH/CM5_USB3_TX_N collision and local XIN/XOUT
 via-clearance. Retained the primitive as isolated evidence; QFN exits must be
 regenerated in-place around USB3 copper.
+
+2026-09-08: Tested the focused XIN/XOUT/XAVDDH transplant onto FULL7. Native
+endpoint and XIN-removal negative-control checks passed, but integrated DRC
+rejected it at 851 violations / 499 unconnected items with a real
+JMS_XAVDDH/CM5_USB3_TX_N collision. The remaining work is an in-place
+XAVDDH escape repair; the candidate is preserved as rejected evidence.
