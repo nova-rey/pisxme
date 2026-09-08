@@ -28,6 +28,10 @@ The isolated `JMS_RESET_N` direct-join discriminator is also rejected in
 its straight F.Cu corridor enters the local USB coupling field at 0.0379 mm
 clearance. This confirms the next implementation must use an intentional
 through-via/layer corridor, not a direct pad-to-pad segment.
+The first such reset via corridor is rejected in
+`PHASE24_JMS583_RESET_VIA_ESCAPE-drc.rpt`: its west B.Cu transition still
+contacts the JMS XAVDDH/support field and produces a real reset short. The
+next corridor must be allocated against the complete local support geometry.
 The retained RSET sub-primitive (`phase24_jms583_rset_escape_probe.py`) uses
 native U11.39/R80.1 pads and a short F.Cu escape. Native DRC reports no
 shorting items and the RSET endpoint is connected; this does not close the

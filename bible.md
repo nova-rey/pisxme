@@ -6922,6 +6922,10 @@ its saved path enters the local USB coupling field at 0.0379 mm clearance.
 This is route-allocation evidence and directs the next support pass to use a
 deliberate ordinary-via corridor.
 
+The first ordinary-via reset corridor was rejected by native DRC: its west
+B.Cu transition shorted the JMS_XAVDDH support field. This preserves the
+failure as corridor-allocation evidence and leaves Path A open.
+
 The next bounded support placement moved R80/L10/Y10 beside U11 and corrected
 the L10 LXO net alias. The all-net direct support trial was rejected at one
 real reset short and six crossings; co-location is retained as a better basis,
