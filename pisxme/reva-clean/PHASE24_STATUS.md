@@ -105,6 +105,9 @@ V648's first SPISI source-to-U2.5 channel is rejected: its B.Cu corridor
 crosses the retained RTL_3V3 source trunk and RTL_5V collector. Native DRC
 still validates the rest of the fixture, but SPISI remains open for a separate
 SPI corridor allocation.
+V649's high B.Cu SPISI corridor is rejected: its x=91 transition column
+crosses both retained RTL_3V3 and RTL_5V collectors. Preserve the rails and
+allocate the next SPI transition west of that power fence.
 V646's first RSET escape is rejected: the native endpoint path is connected,
 but its B.Cu diagonal crosses the retained U1.40 RTL_1V1 corridor. RSET
 remains open for a separate channel allocation; accepted rail geometry and

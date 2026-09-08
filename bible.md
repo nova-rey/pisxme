@@ -6790,6 +6790,9 @@ co-author crystal exits with the rail field.
 2026-09-08: V648 tested a SPISI source-to-U2.5 channel. Native routing exposed
 crossings with the retained RTL_3V3 source trunk and RTL_5V collector; reject
 the route and preserve the rail field for a separate SPI allocation.
+2026-09-08: V649 tested a high B.Cu SPISI corridor. Its x=91 transition
+column crossed the retained RTL_3V3 and RTL_5V collectors; reject the route
+and preserve the accepted rail geometry.
 2026-09-08: V646 tested the first RSET escape. Native endpoint connectivity
 was present, but the B.Cu diagonal crossed the retained U1.40 RTL_1V1 corridor;
 reject the route and preserve the accepted rail geometry.
