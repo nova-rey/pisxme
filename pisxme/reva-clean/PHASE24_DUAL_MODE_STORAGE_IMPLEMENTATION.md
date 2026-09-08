@@ -41,6 +41,10 @@ reduces native DRC to 827 violations / 499 inherited unconnected items.
 Three inherited J1 launch shorts and local crossings remain, so this is not
 closure; FULL5 and FULL6 are superseded routing evidence.
 
+The native-pad A* source-router trial passed endpoint connectivity but is
+rejected on native DRC (929 violations, 25 shorts, 6 crossings). It is not a
+macro-placement conclusion; FULL7 remains active.
+
 The U12 x=148 mm translation trial is rejected on native DRC (851
 violations, 8 shorts, 15 crossings) despite 10/10 USB3 endpoint connectivity.
 It is a negative placement experiment, not an architecture conclusion.

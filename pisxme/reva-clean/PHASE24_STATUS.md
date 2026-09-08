@@ -45,6 +45,11 @@ violations / 499 inherited unconnected items; three inherited J1 launch
 shorts and local track crossings remain, so it is routing evidence only.
 FULL5 and FULL6 are superseded routing evidence.
 
+The native-pad A* source-router trial `PHASE24_DUAL_MODE_STORAGE_NC39_ASTAR_FULL`
+is rejected: endpoint connectivity passed 10/10 and crossings fell to 6,
+but native DRC reported 929 violations and 25 shorts. It remains route
+implementation evidence only; FULL7 is the active basis.
+
 The coherent U12 translation trial `PHASE24_DUAL_MODE_STORAGE_U12_X148_FULL`
 is rejected: native USB3 endpoint connectivity remained 10/10, but native
 DRC reported 851 violations, 8 shorts, and 15 crossings. The translation is

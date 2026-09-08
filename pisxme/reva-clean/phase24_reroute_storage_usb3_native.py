@@ -72,7 +72,14 @@ def emit(b,n,path,o):
         if last is None:last=pt(a[:2])
         e=pt(z[:2]);t=pcbnew.PCB_TRACK(b);t.SetStart(V(*last));t.SetEnd(V(*e));t.SetLayer(a[2]);t.SetWidth(pcbnew.FromMM(W));t.SetNet(n);b.Add(t);line(o,a[2],last,e,.22);last=e
 b=pcbnew.LoadBoard(str(BASE))
-jobs=[('CM5_USB3_RX_N','128','42'),('CM5_USB3_RX_P','130','43'),('CM5_USB3_TX_N','140','45'),('CM5_USB3_TX_P','142','46')]
+target_ref = os.environ.get('PISXME_USB3_TARGET_REF', 'U7')
+target_pins = {'U7': ('42','43','45','46'), 'U12': ('16','15','12','11')}
+if target_ref not in target_pins:
+    raise RuntimeError(f'unsupported target reference {target_ref}')
+jobs=[('CM5_USB3_RX_N','128',target_pins[target_ref][0]),
+      ('CM5_USB3_RX_P','130',target_pins[target_ref][1]),
+      ('CM5_USB3_TX_N','140',target_pins[target_ref][2]),
+      ('CM5_USB3_TX_P','142',target_pins[target_ref][3])]
 # Normalize stale hierarchical aliases on the four J7 source pads to the
 # canonical names in the repaired native export before emitting new copper.
 for name,jp,_up in jobs:
@@ -80,7 +87,7 @@ for name,jp,_up in jobs:
     b.FindFootprintByReference('J7').FindPadByNumber(jp).SetNet(n)
 # Resolve native terminal coordinates before bulk track mutation; this avoids
 # the KiCad 10 Python wrapper invalidating footprint proxies during mutation.
-terminals=[(name,xy(pad(b,'J7',jp).GetPosition()),xy(pad(b,'U7',up).GetPosition())) for name,jp,up in jobs]
+terminals=[(name,xy(pad(b,'J7',jp).GetPosition()),xy(pad(b,target_ref,up).GetPosition())) for name,jp,up in jobs]
 o=occ(b)
 for t in list(b.GetTracks()):
     if 'CM5_USB3_' in t.GetNetname():b.Remove(t)
