@@ -7394,3 +7394,9 @@ the current REXT/XAVDDH/USB3 basis. U11.15-to-R81.1-to-C85.1 connectivity and
 the trace-removal negative control passed. Native DRC remains 863 violations /
 499 inherited unconnected items with no authored shorts or crossings; support
 rails and full storage closure remain open.
+
+2026-09-08: Promoted the upper native-pad-aware JMS_AVDD33 repair onto the
+current REXT/RESET_N/XAVDDH/USB3 basis. U11.19-to-C80.1 connectivity and the
+trace-removal negative control passed. Native DRC remains 876 violations /
+499 inherited unconnected items with no authored shorts or crossings; other
+support rails and full storage closure remain open.

@@ -171,6 +171,13 @@ controls. Native DRC remains 853 violations / 499 inherited unconnected
 items with no authored shorting or track-crossing class. This closes only the
 REXT/three-exit/USB3 primitive, not the full support network or Phase 24.
 
+The current basis now includes the upper native-pad-aware `JMS_AVDD33` repair
+as `PHASE24_DUAL_MODE_STORAGE_FULL7_AVDD33`. U11.19-to-C80.1 connectivity and
+the AVDD33 trace-removal negative control pass; REXT, RESET_N, XIN/XOUT/
+XAVDDH, and all ten USB3 endpoints remain passing. Native DRC reports 876
+violations / 499 inherited unconnected items with no authored shorting or
+track-crossing class. Remaining support rails and storage gates remain open.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

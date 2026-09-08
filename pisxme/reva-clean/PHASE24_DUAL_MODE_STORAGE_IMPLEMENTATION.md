@@ -133,6 +133,12 @@ inherited unconnected items with no authored shorts or crossings. This is
 still only a support/USB3 routing primitive, not full storage or Phase 24
 closure.
 
+The current basis includes the upper native-pad-aware JMS_AVDD33 repair after
+REXT and RESET_N. U11.19-to-C80.1 connectivity and its trace-removal negative
+control pass; all prior USB3 and three-exit checks remain passing. Native DRC
+is 876 violations / 499 inherited unconnected items with no authored shorts or
+crossings. Remaining support rails and full storage validation are open.
+
 The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route
 evidence only; FULL7 is still the active basis.
