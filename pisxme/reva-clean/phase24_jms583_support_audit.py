@@ -19,7 +19,9 @@ NETS=('JMS_REXT','JMS_LXO','JMS_VDDREG_5V','JMS_XIN','JMS_XOUT',
       'JMS_PCIE_TXP1','JMS_PCIE_TXN1')
 def main():
  ap=argparse.ArgumentParser(); ap.add_argument('input',nargs='?',default='STORAGE.kicad_sch'); args=ap.parse_args()
- s=Path(args.input).read_text(); failures=[]
+ source=Path(args.input)
+ if not source.is_absolute(): source=ROOT/source
+ s=source.read_text(); failures=[]
  for ref,val in REQUIRED.items():
   block=re.search(r'\(symbol \(lib_id "PiSXMeRevAClean:STORAGE_(?:PASSIVE_2|CRYSTAL_4)".*?\(property "Reference" "'+ref+r'".*?\(property "Value" "([^"]+)"',s,re.S)
   if not block: failures.append('missing support instance '+ref)

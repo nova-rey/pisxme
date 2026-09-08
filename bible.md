@@ -7051,6 +7051,11 @@ of R81 and reaches C85.1. Native eight-net endpoint connectivity and the
 combined trace-removal negative control pass. DRC remains 819 violations /
 499 inherited unconnected items; no validation rule was relaxed.
 
+2026-09-08: Fixed the JMS583 structural support audit to resolve relative
+schematic inputs from its repository directory. The audit now passes from
+the repository root against STORAGE.kicad_sch, covering required support
+instances, values, and support-net labels.
+
 2026-09-08: Rejected the JMS REXT two-via corridor V1. Native DRC found the
 lower transition in the C90/R33 support field and plane-clearance findings on
 the ordinary through-vias. It remains disposable route evidence only; the
