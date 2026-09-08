@@ -1116,6 +1116,14 @@ V524 U1.34 branch. Native connectivity and the exact negative control pass,
 but DRC rejects the route for U1 pad-35 clearance and RTL_1V1 crossing (24
 findings). The next solution class is coherent C3/source-field relocation,
 not another detour. Path A and production CAD remain unchanged.
+V528 keeps U1.39 on B.Cu before a local F.Cu return. Native connectivity and
+the exact negative control pass, but DRC finds 21 violations because the
+return crosses the F.Cu 1V1 collector. V529 keeps the branch on B.Cu to the
+V524 transition; its native graph and negative control pass, but DRC finds
+22 violations from the crystal XTAL_IN return corridor. These results reject
+the remaining fixed-field local routes and identify a necessary coherent
+XTAL/3V3 source-field reallocation. Path A and production CAD remain
+unchanged.
 V520 coallocates U1.25 RTL_1V1 and XTAL_IN after clearing the exact local
 RTL_3V3/RSET conflicts identified in V519. Native U1.16/U1.25/U1.36/C4.1
 and U1.53/Y1.1/C1.1 connectivity pass with stable-key graph traversal and

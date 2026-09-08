@@ -20,6 +20,11 @@ trace-removal negative control. Support/control/REFCLK remain open.
 exposed real short/crossing classes despite reduced open counts. V311 remains
 the retained disposable sideband basis; Path A and production CAD are
 unchanged.
+2026-09-08: RTL9210B V528/V529 preserve native connectivity and exact
+branch-removal negative controls but are rejected by DRC. V528 crosses the
+F.Cu 1V1 collector; V529 conflicts with the XTAL_IN B.Cu return. The next
+step is coherent XTAL/3V3 source-field reallocation, not another fixed-field
+detour. Path A and production CAD remain unchanged.
 
 2026-09-07: Retained RTL9210B V320 M.2 coordinate-frame correction. J1 now
 has a real local footprint anchor while native reload verification proves all
