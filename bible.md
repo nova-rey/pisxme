@@ -6681,3 +6681,7 @@ V625 is rejected route evidence. Path A and production CAD remain unchanged.
 DRC still found adjacent USB-pad clearance and solder-mask bridging, while
 the saved board rejected the 0.25 mm drills and sub-0.20 mm tracks. No
 production rule was changed; V626 is rejected evidence.
+2026-09-08: V627 tested a 0.60/0.30 mm ordinary via-in-pad at RTL9210B U1.39.
+Native DRC found a real short to adjacent USB_DM and hole-clearance failures
+to neighboring QFN pads. Via-in-pad is rejected under the saved rules; Path A
+and production CAD remain unchanged.

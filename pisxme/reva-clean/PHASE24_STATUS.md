@@ -7227,3 +7227,8 @@ still found adjacent USB-pad clearance and solder-mask conflicts; it also
 flagged the 0.25 mm drill below the saved board's 0.30 mm minimum and the
 0.13208 mm track below the active 0.20 mm netclass. It is rejected and does
 not authorize changing the production rules.
+V627 tested an ordinary 0.60/0.30 mm through-via directly in the U1.39 pad
+on the native 0-degree basis. Native DRC rejects via-in-pad here: the via
+shorts adjacent USB_DM and violates the 0.25 mm hole-clearance rule to both
+neighboring QFN pads. This authorized cross-class alternative is rejected;
+no production rule or Path A artifact changed.

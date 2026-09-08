@@ -2920,3 +2920,10 @@ V626 tested the farther-out 0-degree U1.39 escape with 0.13208 mm tracks and
 USB_DP/USB_DM source clearance and solder-mask bridging. The saved board also
 flagged the 0.25 mm drill and 0.13208 mm tracks below its 0.30 mm/0.20 mm
 minimums. No production rule was changed; the candidate is rejected.
+## V627 via-in-pad U1.39 discriminator — rejected
+
+V627 placed an ordinary 0.60/0.30 mm through-via at the native U1.39 pad
+center and carried RTL_3V3 on B.Cu. Native DRC found a real short to adjacent
+USB_DM and hole-clearance violations to both neighboring QFN pads. The
+via-in-pad class is rejected under the saved board rules; Path A and
+production CAD remain unchanged.
