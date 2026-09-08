@@ -532,6 +532,10 @@ Path A and production CAD remain unchanged.
 REFCLK crossing but retained PERST; V293 avoided PERST but introduced JTAG /
 undefined-field shorting and was rejected. PEDET remains open; Path A and
 production CAD remain unchanged.
+2026-09-07: Rejected RTL9210B V303 lower CLKREQ corridor. Native DRC found
+CLKREQ/PEDET and CLKREQ/RTL_3V3 shorts at the R3/U1 source field despite the
+lower destination corridor. The next repair must co-author source escapes;
+Path A and production CAD remain unchanged.
 2026-09-07: Rejected RTL9210B V302 CLKREQ alternate launch. Native DRC found
 real CLKREQ/PEDET shorting at R2 and CLKREQ/ISOLATEB shorting at U1. The
 native open count was 18, but the source geometry is invalid; Path A and
