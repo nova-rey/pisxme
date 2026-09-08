@@ -1,5 +1,11 @@
 # Append-only project bible
 
+2026-09-08: Generalized the JMS583 native support-cohort audit to accept an
+explicit disposable PCB path while retaining its saved-pad/track/via-only
+connectivity model. Against the corrected NC39 support replay it correctly
+fails incomplete support connectivity; the separate removed-R80 schematic
+negative control also fails as required. No validation severity was changed.
+
 2026-09-08: Replayed the JMS583 support author against the corrected NC39
 candidate. Native DRC reports 836 violations / 499 unconnected items,
 including one real JMS_REXT-to-JMS_AVDDL short and authored crossings. The

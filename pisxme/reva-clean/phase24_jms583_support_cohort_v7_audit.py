@@ -4,11 +4,12 @@ Edges are derived only from KiCad's saved pads/tracks/vias/zones.  The
 negative control removes the authored tracks and must fail every assertion.
 """
 from pathlib import Path
+import os
 import pcbnew
 
 R = Path(__file__).resolve().parent
-PCB = R / "PHASE24_JMS583_SUPPORT_COHORT_PROBE.kicad_pcb"
-NEG = R / "PHASE24_JMS583_SUPPORT_COHORT_V7_NEGATIVE.kicad_pcb"
+PCB = R / os.environ.get("PISXME_SUPPORT_AUDIT_PCB", "PHASE24_JMS583_SUPPORT_COHORT_PROBE.kicad_pcb")
+NEG = R / os.environ.get("PISXME_SUPPORT_AUDIT_NEG", "PHASE24_JMS583_SUPPORT_COHORT_V7_NEGATIVE.kicad_pcb")
 
 PAIRS = [
     ("JMS_RESET_N", "15", "R81", "1"),
