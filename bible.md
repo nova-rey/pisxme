@@ -6227,6 +6227,11 @@ graph with an exact branch-removal negative control, but the lower/right
 detour is rejected by 22 native DRC violations, including RTL_5V and REFCLK_P
 crossings. This remains a local route implementation failure; Path A and
 production CAD are unchanged.
+2026-09-08: RTL9210B V526/V527 prove their intended native rail graphs and
+exact branch-removal negative controls, but both routes are rejected by
+native DRC. V526 crosses/clears RTL_5V and REFCLK; V527 collides with U1 pad
+35 and RTL_1V1. The evidence points to coherent C3/source-field relocation
+as the next route class; Path A and production CAD remain unchanged.
 2026-09-08: RTL9210B V520 coallocates U1.25 RTL_1V1 and XTAL_IN after
 clearing local RTL_3V3/RSET conflicts. Native 1V1 and XTAL_IN connectivity,
 including C1.1, plus trace-removal negative controls pass; native DRC has no

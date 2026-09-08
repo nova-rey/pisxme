@@ -1108,6 +1108,14 @@ violations including crossings with RTL_5V and REFCLK_P. V525 is rejected as
 a detour route; the next U1.39 attempt must coallocate the lower source field
 instead of crossing mature corridors. Path A and production CAD remain
 unchanged.
+V526 proves the U1.39-to-C3.1 graph with an exact branch-removal negative
+control, but its raised outer B.Cu return is rejected by native DRC for
+RTL_5V-via clearance/crossing and REFCLK corridor interaction (23 findings).
+V527 reduces the branch to a local F.Cu join from the U1.39 handoff to the
+V524 U1.34 branch. Native connectivity and the exact negative control pass,
+but DRC rejects the route for U1 pad-35 clearance and RTL_1V1 crossing (24
+findings). The next solution class is coherent C3/source-field relocation,
+not another detour. Path A and production CAD remain unchanged.
 V520 coallocates U1.25 RTL_1V1 and XTAL_IN after clearing the exact local
 RTL_3V3/RSET conflicts identified in V519. Native U1.16/U1.25/U1.36/C4.1
 and U1.53/Y1.1/C1.1 connectivity pass with stable-key graph traversal and
