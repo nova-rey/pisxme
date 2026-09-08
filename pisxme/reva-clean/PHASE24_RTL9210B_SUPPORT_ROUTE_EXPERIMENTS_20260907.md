@@ -1929,3 +1929,11 @@ V355 RTL_1V1 is rejected as an initial placement/escape trial. It produced
 8 shorting and 4 crossing classes, including collisions with the retained
 RTL_3V3 and crystal fields. No authority or Path-A asset changed; further
 RTL_1V1 work must use coordinated pad-field channel allocation.
+
+V356/V357 are rejected partial RTL_1V1 channel trials. V356 attempted a
+direct B.Cu U1.16-to-C4 trunk and collided with the retained XTAL_OUT spine.
+V357 moved the C4 handoff to F.Cu, but collided with C3/GND and crossed the
+retained XTAL_IN B.Cu route. These are implementation/channel-allocation
+failures. The next RTL_1V1 candidate must co-author the complete 1V1 fanout
+with the crystal and adjacent support fields; no production or Path-A CAD
+was changed.

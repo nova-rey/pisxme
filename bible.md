@@ -5966,3 +5966,8 @@ V354 uses a B.Cu perimeter handoff around the retained In2 RTL_3V3 fanout;
 native DRC reports zero shorting and zero crossing classes, and the saved
 board endpoint audit plus trace-removal negative control pass. Path A,
 production CAD, and the accepted storage architecture remain unchanged.
+2026-09-07: Rejected RTL9210B V355/V356/V357 RTL_1V1 trials. V355 produced
+QFN-field shorts/crossings; V356/V357 exposed XTAL_IN/XTAL_OUT channel
+conflicts. These are disposable route-allocation failures, preserved with
+native DRC receipts; no Path-A or production CAD changed. The next attempt
+must co-author the complete RTL_1V1 fanout with crystal/support channels.
