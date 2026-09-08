@@ -6641,3 +6641,7 @@ external opens remain. Retain it as the strongest disposable basis.
 negative-control audits with no signal DRC violations. The lower RTL_3V3
 trial was rejected for QFN/1V1/RSET contacts and active minimum-width-rule
 violations; no DRC rule was relaxed.
+2026-09-08: The V35/U2-left upper RTL_3V3 field passes native endpoint and
+negative-control audits with no signal DRC violations. Lower RTL_3V3 trials
+remain rejected for RSET/1V1/QFN source-field conflicts; a 0.13208 mm retry
+also violated the active 0.200 mm minimum-width rule. No rule was relaxed.

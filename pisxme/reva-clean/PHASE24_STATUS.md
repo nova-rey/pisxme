@@ -41,6 +41,10 @@ USB, controls, power, firmware, and full Path-B validation remain open.
 The upper RTL_3V3 field also passes its native endpoint audit and negative
 control with no signal DRC violations. Lower RTL_3V3 remains open: its trial
 caused QFN/1V1/RSET contacts and violated the active 0.200 mm minimum width.
+The upper RTL_3V3 field is independently valid with native endpoint and
+negative-control audits and no signal DRC violations. Lower RTL_3V3 remains
+open after the native nine-finding trial and its rejected 0.13208 mm retry;
+the next attempt must use a new coherent QFN escape allocation.
 V562 is the retained corrected support baseline: its native saved-board audit
 connects the complete RTL_1V1 and RTL_3V3 support groups with a working
 trace/zone-removal negative control. V563, V564, and V565 are rejected

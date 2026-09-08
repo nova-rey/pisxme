@@ -1,41 +1,20 @@
 ** Drc report for PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_U2_LEFT_RTL3V3_LOWER.kicad_pcb **
-** Created on 2026-09-08T09:40:37 **
+** Created on 2026-09-08T09:46:38 **
 ** Report includes: Errors, Warnings **
 
-** Found 16 DRC violations **
+** Found 9 DRC violations **
+[shorting_items]: Items shorting two nets (nets RSET and RTL_3V3)
+    Local override; error
+    @(94.0500 mm, 73.2000 mm): Track [RSET] on F.Cu, length 5.6870 mm
+    @(93.2000 mm, 74.5000 mm): Via [RTL_3V3] on F.Cu - B.Cu
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(94.0500 mm, 67.2000 mm): Track [RTL_1V1] on F.Cu, length 7.0500 mm
-    @(92.8000 mm, 67.7000 mm): Track [RTL_3V3] on F.Cu, length 1.2000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0120 mm)
+    @(94.8000 mm, 73.9500 mm): Track [RTL_3V3] on F.Cu, length 1.6919 mm
+    @(94.0500 mm, 73.2000 mm): Track [RSET] on F.Cu, length 5.6870 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0092 mm)
     Local override; error
-    @(94.0500 mm, 68.4000 mm): Track [RTL_3V3] on F.Cu, length 1.4327 mm
+    @(94.0500 mm, 68.4000 mm): Track [RTL_3V3] on F.Cu, length 1.3865 mm
     @(94.0500 mm, 68.0000 mm): Pad 38 [USB_DM] of U1 on F.Cu
-[shorting_items]: Items shorting two nets (nets RTL_3V3 and XTAL_IN)
-    Local override; error
-    @(94.8000 mm, 75.0000 mm): Via [RTL_3V3] on F.Cu - B.Cu
-    @(95.2000 mm, 73.9500 mm): Track [XTAL_IN] on F.Cu, length 1.5500 mm
-[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
-    Rule: netclass 'Default'; error
-    @(94.8000 mm, 73.9500 mm): Track [RTL_3V3] on F.Cu, length 1.0500 mm
-[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
-    Rule: netclass 'Default'; error
-    @(74.2000 mm, 75.0000 mm): Track [RTL_3V3] on F.Cu, length 5.0000 mm
-[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
-    Rule: netclass 'Default'; error
-    @(80.2000 mm, 66.5000 mm): Track [RTL_3V3] on F.Cu, length 13.5000 mm
-[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
-    Rule: netclass 'Default'; error
-    @(94.0500 mm, 68.4000 mm): Track [RTL_3V3] on F.Cu, length 1.4327 mm
-[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
-    Rule: netclass 'Default'; error
-    @(92.8000 mm, 67.7000 mm): Track [RTL_3V3] on F.Cu, length 1.2000 mm
-[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
-    Rule: netclass 'Default'; error
-    @(94.8000 mm, 75.0000 mm): Track [RTL_3V3] on B.Cu, length 20.6000 mm
-[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1321 mm)
-    Rule: netclass 'Default'; error
-    @(92.8000 mm, 66.5000 mm): Track [RTL_3V3] on B.Cu, length 12.6000 mm
 [isolated_copper]: Isolated copper fill
     Local override; warning
     @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
@@ -89,12 +68,12 @@
     @(98.4000 mm, 66.0500 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(92.8000 mm, 66.5000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+    @(94.0500 mm, 68.4000 mm): Track [RTL_3V3] on F.Cu, length 1.3865 mm
     @(94.8000 mm, 66.0500 mm): Track [RTL_3V3] on F.Cu, length 2.7281 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(94.0500 mm, 68.4000 mm): Track [RTL_3V3] on F.Cu, length 1.4327 mm
-    @(94.8000 mm, 73.9500 mm): Track [RTL_3V3] on F.Cu, length 1.0500 mm
+    @(94.0500 mm, 68.4000 mm): Track [RTL_3V3] on F.Cu, length 1.3865 mm
+    @(94.8000 mm, 73.9500 mm): Track [RTL_3V3] on F.Cu, length 1.6919 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(98.0000 mm, 70.0000 mm): Pad 69 [GND] of U1 on F.Cu

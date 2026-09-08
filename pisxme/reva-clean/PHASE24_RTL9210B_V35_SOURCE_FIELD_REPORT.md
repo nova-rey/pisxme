@@ -79,6 +79,14 @@ rejected: it caused QFN/1V1/RSET contacts, and its 0.13208 mm traces violate
 the active 0.200 mm minimum-width rule. Lower 3V3 and remaining controls
 remain open; no DRC rule was relaxed.
 
+The upper RTL_3V3 candidate connects U1.20/U1.34/R2.2/R3.2/C3.1 and passes
+its native trace-removal negative control. The lower RTL_3V3 candidate was
+then tried with U1.39/U1.52 and the relocated U2 endpoints. Its native audit
+does not pass; native DRC reports nine findings including RSET/1V1/QFN
+contacts. A 0.13208 mm retry was also rejected because it still contacted the
+source field and violated the active 0.200 mm minimum-width rule. These are
+route-allocation failures, not grounds to weaken the board rules.
+
 ## Next implementation step
 
 Re-author the complete current support field from native pad coordinates on a
