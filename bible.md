@@ -6141,3 +6141,11 @@ coallocation basis; no production-CAD or Path-A change.
 2026-09-08: Rejected RTL9210B V455 RX_P source shift. Native DRC found source
 crossing and TX_N pad/solder-mask conflicts; V454 remains the best combined
 REFCLK/lane basis. Further work moves to complete QFN fanout regeneration.
+2026-09-08: RTL9210B V456 corrected rotated-fixture authoring by removing the
+entire stale local copper envelope before transforming U1. Native saved-board
+connectivity and six trace-removal negative controls passed; DRC had zero
+shorts/crossings but three real local source-via clearance errors. V457's
+monotonic via row was rejected for one short and four source-field clearance/
+mask errors. V458 removed the V454 RX_P/RX_N source short but created
+REFCLK_N/RX_N coallocation crossings/shorts. No production CAD or Path-A
+change; V454 remains the combined basis.

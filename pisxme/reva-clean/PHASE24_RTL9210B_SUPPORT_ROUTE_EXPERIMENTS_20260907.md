@@ -2221,3 +2221,17 @@ errors. V454 therefore remains the best combined basis. The source-field
 gate has now been tested with straight, staggered, early-via, upper, lower,
 and diverging allocations; the next credible class is a complete
 rotated/re-authored QFN fanout, not another single-net coordinate tweak.
+V456 corrected the rotated-package fixture authoring path by removing the
+complete local copper envelope before applying the 90-degree U1 transform.
+Its saved-board audit proves all six transformed source pads reach their
+local transition vias, and six trace-removal negative controls fail as
+expected. Native DRC has zero shorts/crossings but retains three real local
+clearance errors in the staggered source-via fanout, so V456 is not closure.
+V457 tested a monotonic row of source vias. Native DRC rejected it with one
+source short plus four QFN source-field clearance/solder-mask errors; this is
+another route-implementation failure, not evidence against the RTL9210B
+pin map. V458 moved RX_P's V454 source transition beyond the RX_N endpoint.
+It removed the original V454 RX_P/RX_N transition short but crossed/shorted
+the existing REFCLK_N and RX_N transitions, so it is rejected. V454 remains
+the strongest combined basis while a complete clearance-aware QFN fanout is
+developed; no Path-A or production CAD changed.
