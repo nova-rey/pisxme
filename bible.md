@@ -7193,3 +7193,9 @@ ownership or increased mismatches.
 probe. Native export produced 20 mismatches, including unrelated
 `JMS_AVDDL`/`BRIDGE_USB_VBUS` ownership changes; the live source was restored
 to the stable two-item JMS_REXT association defect.
+
+2026-09-08: Reconciled 203 duplicate generated schematic-label UUIDs while
+preserving every label atom. The bridge schematic backend now loads the live
+source; native parity remains at the two R80.1/U11.39 association mismatches.
+This closes duplicate-UUID validity as a structural issue but not the native
+association mapping.

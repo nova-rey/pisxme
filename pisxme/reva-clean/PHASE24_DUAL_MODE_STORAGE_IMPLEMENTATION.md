@@ -21,8 +21,11 @@ only.
   using the native KiCad label ordering. Native re-export confirms the L10 and
   Y10 support mappings are corrected; the remaining parity defect is limited
   to R80.1/U11.39 resolving as `JMS_GPIO7_NC` rather than `JMS_REXT`. A
-  targeted duplicate-label repair and a restoration probe were rejected after
-  changing U12/U13 ownership; no PCB-only alias repair is accepted.
+  duplicate-label UUID reconciliation now makes the source load in the
+  schematic backend without deleting labels. Duplicate-label deletion and
+  reauthor probes were rejected after changing U12/U13 ownership; native
+  parity remains at the same two association mismatches, and no PCB-only
+  alias repair is accepted.
 
 - `STORAGE.kicad_sch` contains the existing TUSB9261 SATA branch, JMS583
   NVMe branch, both TI selectors, the TE M-key socket, the JMS583 support

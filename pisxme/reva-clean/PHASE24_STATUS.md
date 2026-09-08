@@ -10,8 +10,14 @@ export reduced the actionable source-to-PCB parity failure to two items:
 `JMS_GPIO7_NC`. A targeted U11 duplicate-label cleanup fixed U11 while
 regressing U12/U13 ownership, and a duplicate restoration probe regressed 20
 items; both are rejected. The remaining two-item failure is therefore a
-native generated-label/duplicate-UUID association defect, not a reason to
-rewrite PCB aliases. Native ERC/DRC and complete routing remain open.
+native generated-label association defect, not a reason to rewrite PCB
+aliases. Native ERC/DRC and complete routing remain open.
+
+The 203 duplicate generated label UUIDs have now been reconciled uniquely in
+the live source. The schematic backend loads successfully, while native XML
+parity remains at the same two R80.1/U11.39 ownership mismatches. The
+remaining issue is association mapping, not duplicate-UUID validity; the
+migration is idempotent and fail-closed.
 
 The current native-pad support routing trial is rejected: native DRC reports
 834 violations and 499 inherited unconnected items, including authored
