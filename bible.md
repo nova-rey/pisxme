@@ -6957,6 +6957,11 @@ The implementation narrative was reconciled so JMS583 library evidence is
 described as structural package identity only; selector/contact audits pass,
 but final JMS583 land-pattern geometry remains an explicit open gate.
 
+The four-net JMS support cohort (reset, AVDD33, VCCO, VCCK) was co-authored
+with separated departures and validated natively plus a combined trace-removal
+negative control. It has no authored shorting/crossing class; full support
+release validation remains open.
+
 The JMS_VCCO U11.6-to-C81.1 escape was moved north of the inherited CM5
 PERST corridor. Native connectivity and trace-removal negative control pass;
 the prior y=150 mm crossing variant remains rejected evidence.

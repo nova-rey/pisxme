@@ -50,6 +50,12 @@ open. The VBUS divider probe is retained in
 R82.2-to-R83.1 pass native connectivity and the paired trace-removal negative
 control. No authored shorting class remains; the crossing findings are
 inherited donor USB artifacts.
+The combined four-net cohort is retained in
+`PHASE24_JMS583_SUPPORT_COHORT_V4-drc.rpt`: reset, AVDD33, VCCO, and VCCK
+all remain natively connected with no authored shorting/crossing class, and
+the combined trace-removal negative control passes. Remaining findings are
+inherited donor/zone or JMS583 pad-field constraints; complete support-field
+release validation remains open.
 The VCCK decoupler probe is retained in
 `PHASE24_JMS583_VCCK_PROBE-drc.rpt`: U11.2-to-C82.1 native connectivity and
 the trace-removal negative control pass, with no authored shorting/crossing
