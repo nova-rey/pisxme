@@ -676,12 +676,12 @@
 (pin "63" (uuid db000000-0000-0000-0000-000000000322))
 (pin "65" (uuid db000000-0000-0000-0000-000000000323))
 (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "U7") (unit 1)))) )
-(label "M2_SATA_A_P_PCIE_TXP0" (at 130 88.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid dc000000-0000-0000-0000-000000000064))
-(label "M2_SATA_A_N_PCIE_TXN0" (at 130 91.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid dc000000-0000-0000-0000-000000000065))
-(label "M2_SATA_B_N_PCIE_RXP0" (at 130 93.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid dc000000-0000-0000-0000-000000000066))
-(label "M2_SATA_B_P_PCIE_RXN0" (at 130 96.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid dc000000-0000-0000-0000-000000000067))
-(label "M2_3V3" (at 130 98.75 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid dc000000-0000-0000-0000-000000000068))
-(label "M2_GND" (at 130 101.25 0) (effects (font (size 1.1 1.1)) (justify left)) (uuid dc000000-0000-0000-0000-000000000069))
+
+
+
+
+
+
 (global_label "BRIDGE_1V1" (shape bidirectional) (at 70 125.00 0) (effects (font (size 1 1)) (justify left)) (uuid de000000-0000-0000-0000-000000000300))
 (global_label "BRIDGE_3V3" (shape bidirectional) (at 70 127.50 0) (effects (font (size 1 1)) (justify left)) (uuid de000000-0000-0000-0000-000000000301))
 (global_label "BRIDGE_1V1" (shape bidirectional) (at 70 130.00 0) (effects (font (size 1 1)) (justify left)) (uuid de000000-0000-0000-0000-000000000302))

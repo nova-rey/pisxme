@@ -31,7 +31,9 @@ DRC closure remain open.
 
 Fresh native ERC reports 927 violations on the current source, including
 dangling M.2 labels and inherited off-grid/same-label findings. ERC remains
-an independent open gate.
+an independent open gate. The six isolated legacy M.2 labels were removed at
+the source boundary; post-fix ERC has no dangling-M.2 entries, but remains
+927 overall due to unrelated inherited findings.
 
 FULL7 saved-copper metrics are retained in
 `PHASE24_DUAL_MODE_STORAGE_NC39_USB3_FULL7-metrics.txt`. They expose

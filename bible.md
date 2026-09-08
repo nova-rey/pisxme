@@ -7104,7 +7104,9 @@ a skew, impedance, or DRC pass.
 2026-09-08: Fresh native schematic ERC on the live source reports 927
 violations, led by dangling M.2 labels and inherited off-grid/same-label
 findings. The raw report is retained; endpoint and mode-audit passes do not
-waive ERC.
+waive ERC. Removed six genuinely isolated legacy M.2 labels from the child
+source; the post-fix ERC report no longer contains those dangling entries,
+although the total remains 927 from independent inherited findings.
 
 2026-09-08: Rejected source-launch relocation FULL10. Although all ten USB3
 endpoints remained natively connected, inward vias introduced shorts to J1

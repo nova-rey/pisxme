@@ -34,7 +34,10 @@ checks do not waive the still-open native copper/DRC closure.
 Fresh native schematic ERC on the current source reports 927 violations. The
 leading findings include dangling M.2 labels plus inherited off-grid and
 same-local/global-label warnings. The raw report is retained as an open ERC
-gate; the USB3 endpoint audit does not waive it.
+gate; the USB3 endpoint audit does not waive it. The six isolated legacy M.2
+labels named in the prior report were removed from the child-sheet source;
+the post-fix report has no such dangling labels, while the total remains 927
+because the independent inherited findings remain.
 
 Saved-copper metrics for FULL7 are recorded in
 `PHASE24_DUAL_MODE_STORAGE_NC39_USB3_FULL7-metrics.txt`. The source legs have
