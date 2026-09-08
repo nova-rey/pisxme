@@ -1769,3 +1769,19 @@ errors. Native endpoint audits and trace-removal negative controls pass for
 both SPICS and SPISO. V282 is retained as the two-net SPI corridor basis;
 SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and high-speed paths
 remain open.
+
+## V285 SPISO3 trunk trial — rejected implementation
+
+V285 moved the SPISO3 escape to B.Cu before the crystal field, but its
+vertical trunk crossed the retained XTAL_IN branch. It is rejected as a
+route-implementation failure.
+
+## V286 SPISO3 offset trunk — retained, not promoted
+
+V286 shifts that B.Cu trunk laterally around XTAL_IN while preserving the
+V278/V282 bases and actual U1.22=(99.6,58.05) to U2.7=(90.5,70.0) endpoint
+mapping. Native DRC reports 383 findings / 24 inherited opens, with zero
+shorting or crossing class and zero footprint errors. Native endpoint and
+trace-removal negative-control audits pass. V286 is retained as the SPISO3
+basis; SPICLK, SPISI, PEDET, reset, remaining rails, and high-speed paths
+remain open.

@@ -527,6 +527,11 @@ Path A and production CAD remain unchanged.
 native connectivity and negative control passed but DRC found three rail
 track crossings. V242 remains the promoted disposable rail basis; Path A and
 production CAD remain unchanged.
+2026-09-07: Retained RTL9210B V286 SPISO3 offset-trunk basis after rejecting
+V285. Native U1.22/U2.7 connectivity and trace-removal negative control
+passed; DRC reported 383 findings / 24 inherited opens with no shorting or
+crossing class and zero footprint errors. Remaining support routes are open;
+Path A and production CAD remain unchanged.
 2026-09-07: Rejected RTL9210B V245 translated U1.60/U1.63 lower-edge route.
 Native connectivity and the trace-removal negative control passed, but DRC
 found five crossings against RTL_5V, PEDET, RTL_3V3, REFCLK_P, and PERST_N.
