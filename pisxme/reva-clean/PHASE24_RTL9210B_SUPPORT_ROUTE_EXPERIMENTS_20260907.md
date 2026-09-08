@@ -93,6 +93,12 @@ V598 is rejected because its B.Cu transition shorted SPICS to retained 1V1
 and 5V fields. V599 is rejected because its direct F.Cu outer departure
 crossed the PEDET/5V/3V3/CLKREQ source field. The next pass must co-author the
 shared QFN escape rather than add another scalar SPI detour.
+V600 is rejected because direct SPI lines after a U2 rotation ran through
+U1's interleaved power/control pads. V601 is rejected because its SPISI
+transition occupied the RTL_3V3 In2 field. V602 moves the transition west;
+U1.18→U2.5 connectivity and its trace-removal negative control pass, while
+native DRC is 10 findings with no new short/crossing. Retain V602 as the
+SPISI sub-primitive, not full SPI closure.
 V580 attempted ordinary-via returns for U1 ground pads 69, 45, and 66.
 Native DRC rejected the placement with true GND-to-USB/3V3 shorts and local
 QFN clearance violations. Reject V580; V579 remains the retained rail

@@ -6574,6 +6574,12 @@ an occupied RTL_3V3 transition site; V597's all-F.Cu staircase crossed the
 1V1 escape and shorted SPICS into RTL_3V3. Preserve V594/V595 as the valid
 PEDET/CLKREQ-plus-rail basis; the next SPI attempt needs coordinated corridor
 allocation.
+2026-09-08: RTL9210B V600/V601 rejected direct/incorrect SPISI escapes: V600
+ran through U1 interleaved power/control pads after a U2 rotation, and V601's
+transition occupied the RTL_3V3 In2 field. V602 moved the transition west;
+U1.18→U2.5 native connectivity and the trace-removal negative control pass,
+with no new DRC short/crossing. V602 is retained as the SPISI sub-primitive,
+not full SPI closure.
 2026-09-08: RTL9210B V598/V599 rejected two further SPICS route classes.
 V598 shorted its B.Cu transition into retained RTL_1V1/RTL_5V fields; V599's
 direct F.Cu outer departure crossed the PEDET/5V/3V3/CLKREQ source field.
