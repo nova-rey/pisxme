@@ -30,6 +30,13 @@ DRC improves to 14 findings with no shorting or crossing classes, but QFN/
 pad-field clearance and inherited support findings remain. Retain V572 as
 the current disposable candidate; it is not production-clean.
 
+V573 moved only the lower RTL_5V transition away from U1 pads 31/32, but
+native DRC found a short to the retained RTL_3V3 In2 spine. V574 moved the
+3V3 spine around that via and reduced native DRC to 12 findings with no
+shorting or crossing classes, but its independent saved-board audit failed
+the complete 3V3 endpoint group. Reject V573/V574; V572 remains the retained
+connected baseline.
+
 ## Current state and documentation hygiene
 
 The JMS583 support network is already instantiated in the live authoritative

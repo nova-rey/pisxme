@@ -27,6 +27,13 @@ V572 corrects the missing 3V3 In2 bridge and replaces the V571 diagonal with
  disposable candidate, not a production pass: QFN/pad-field clearances and
  inherited support findings remain open.
 
+V573 moved only the lower RTL_5V transition away from pads 31/32, but
+shorted the RTL_5V via into the retained RTL_3V3 In2 spine. V574 rerouted
+that spine around the via and reduced native DRC to 12 findings with no
+shorting or crossing classes, but its independent saved-board audit failed
+the complete 3V3 endpoint group. Reject V573/V574; V572 remains the retained
+electrically connected baseline.
+
 ## CURRENT OPEN GATES
 
 Re-author the RTL9210B local QFN source field coherently at the strict

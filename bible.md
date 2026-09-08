@@ -6507,3 +6507,9 @@ baseline and RTL_5V remains open.
  remain, including local QFN/pad-field clearance issues. V570 is not
  production-clean or promoted. Path A, production CAD, and unrelated Phase
  24 work remain unchanged.
+2026-09-08: RTL9210B V573 moved the lower RTL_5V transition away from U1
+pads 31/32 but shorted the new via into the RTL_3V3 In2 spine. V574 moved the
+3V3 spine around that via and reduced native DRC to 12 findings with no
+shorting or crossing classes, but its independent saved-board audit failed
+the complete 3V3 endpoint group. Both were rejected; V572 remains the
+retained electrically connected baseline.
