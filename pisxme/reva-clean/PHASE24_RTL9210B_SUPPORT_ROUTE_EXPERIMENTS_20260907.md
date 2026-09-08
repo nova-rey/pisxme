@@ -1232,6 +1232,11 @@ U1 pad 48 (no-connect). These are rejected source-field geometries. The
 remaining U1.40 work therefore requires an explicit via escape outside the
 QFN envelope, not another same-layer lower-edge extension. Path A and
 production CAD remain unchanged.
+V548 tests outward-offset bottom-edge 1V1 escapes for U1.55/U1.60/U1.63.
+Native connectivity and the exact bottom-edge negative control pass, but DRC
+rejects the row for XTAL_OUT crossing/clearance and collision with the V535
+RTL_3V3 lower corridor. It is rejected as a route implementation; the next
+attempt requires coherent bottom support/REFCLK field reallocation.
 V508 tests U1.25 RTL_1V1 with an early B.Cu/F.Cu return into the V506
 left-side trunk. Native saved-board connectivity and the trace-removal
 negative control pass. Native DRC rejects the candidate because the U1.25
