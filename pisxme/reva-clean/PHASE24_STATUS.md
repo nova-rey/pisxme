@@ -6800,6 +6800,12 @@ pass, both trace-removal negative controls pass, and native DRC has 366
 findings / 25 inherited opens with no shorting or crossing class and zero
 footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
 high-speed support remain open.
+V299 removed all PEDET/PERST crossing classes with a U-shaped approach but
+exposed a floating J1 branch junction. V300 adds the missing same-net F.Cu
+join. Native connectivity now joins R2.1/U1.8/J1.69; native DRC reports 454
+findings / 20 inherited opens with no shorting, crossing, or footprint-error
+class. PEDET is retained as closed in the disposable sideband basis; CLKREQ,
+reset, remaining rails, and high-speed support remain open.
 V295–V298 are retained PEDET/PERST local-field experiments, not promoted:
 V295 moved PERST to B.Cu and crossed REFCLK; V296–V298 kept PERST on F.Cu
 and progressively moved the local dogleg, but each retained one native

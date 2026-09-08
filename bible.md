@@ -532,6 +532,10 @@ Path A and production CAD remain unchanged.
 REFCLK crossing but retained PERST; V293 avoided PERST but introduced JTAG /
 undefined-field shorting and was rejected. PEDET remains open; Path A and
 production CAD remain unchanged.
+2026-09-07: Retained RTL9210B V300 PEDET sideband basis after V299 exposed a
+floating J1 branch. Native R2.1/U1.8/J1.69 connectivity passed; DRC reported
+454 findings / 20 inherited opens with no shorting, crossing, or footprint
+errors. PEDET closes in the disposable basis; remaining support is open.
 2026-09-07: Recorded RTL9210B PEDET/PERST local-field experiments V295–V298.
 V295 crossed REFCLK after a B.Cu transition; V296–V298 retained one native
 PEDET/PERST crossing despite local dogleg moves. The next repair is a

@@ -257,6 +257,17 @@ V102 is promoted only as the disposable 1V1 edge-group basis; remaining
 RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
 remain open.
 
+## V299/V300 PEDET sideband correction — retained, not promoted
+
+V299 removes the PEDET/PERST crossing class with a U-shaped approach around
+the PERST endpoint, but native connectivity exposed a floating J1 branch.
+V300 adds the missing same-net join from the x=109 F.Cu dogleg to the existing
+J1 branch via. Native connectivity joins R2.1, U1.8, and J1.69. Native DRC
+reports 454 findings / 20 inherited opens with zero `shorting_items`, zero
+`tracks_crossing`, and zero footprint errors. PEDET is closed for this
+disposable sideband basis; CLKREQ, reset, remaining rails, and high-speed
+support remain open.
+
 ## V294 PEDET east-side landing — retained, not promoted
 
 V294 approaches U1.8 from an east-side F.Cu dogleg after the PEDET B.Cu trunk
