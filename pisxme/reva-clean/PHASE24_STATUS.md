@@ -6890,3 +6890,10 @@ short plus three crossing classes on its perimeter escape. They are route
 implementation failures, not evidence against the RTL9210B support topology.
 V311 remains the current disposable reference; RTL_1V1, RTL_3V3, and lane-0
 support remain open.
+
+V314/V315 are rejected rail-field trials: V314 reduced opens to 13 but
+introduced four shorts and three crossings; V315 reduced opens to 16 but
+introduced four shorts and four crossings. V316/V317 are rejected lane-0
+trials: both reduced opens to 14 but retained real lane shorts/crossings.
+These are route-implementation failures in the dense V311 field, not a
+Path-B architecture rejection; production CAD and Path A remain unchanged.

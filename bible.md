@@ -6,6 +6,11 @@ real short/crossing classes (V312: three; V313: one short and three
 crossings). They remain preserved evidence only; V311 is the current retained
 sideband basis and Path A/production CAD are unchanged.
 
+2026-09-07: Rejected RTL9210B V314–V317 rail and lane probes. Native DRC
+exposed real short/crossing classes despite reduced open counts. V311 remains
+the retained disposable sideband basis; Path A and production CAD are
+unchanged.
+
 
 ## 2026-09-06 — Authorized dual-mode storage upgrade qualification checkpoint
 

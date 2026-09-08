@@ -257,6 +257,13 @@ V102 is promoted only as the disposable 1V1 edge-group basis; remaining
 RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
 remain open.
 
+## V314–V317 coordinated-field probes — rejected implementations
+
+V314 tested RTL_1V1, V315 RTL_3V3, and V316/V317 lane-0 escapes from V311.
+They reduced native open counts but introduced real shorts/crossings, so all
+are rejected route-implementation attempts. V311 remains the retained
+disposable basis; no Path-A or production CAD changed.
+
 ## V302 CLKREQ alternate launch — rejected implementation
 
 V302 shifts the R3 launch west and transitions the U1-side branch below the
