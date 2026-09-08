@@ -115,6 +115,9 @@ the 3V3 field.
 V634 provides a clean right-side U1.60-to-C4.1 1V1 sub-primitive on F.Cu.
 Native connectivity and the all-RTL_1V1 trace-removal negative control pass;
 native DRC remains at four inherited warnings with no signal violation.
+V636 extends the passing 1V1 trunk with a north-of-QFN U1.25 departure.
+Native U1.25-to-C4.1 connectivity and the trace-removal negative control
+pass; native DRC remains at four inherited warnings with no signal violation.
 V635 extends the passing U1.60-to-C4.1 1V1 channel with a north U1.16
 departure. Native connectivity and the trace-removal negative control pass;
 native DRC remains at four inherited warnings with no signal violation.

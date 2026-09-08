@@ -49,6 +49,10 @@ U1.16-to-C4.1 path is natively connected and its all-RTL_1V1 trace-removal
 negative control breaks the path. Native DRC remains four inherited warnings
 with no shorting, crossing, or clearance class. This is still a disposable
 sub-primitive while the remaining 1V1 pins are open.
+V636 extends the 1V1 trunk with U1.25 using a north-of-QFN F.Cu departure.
+U1.25-to-C4.1 native connectivity and the all-RTL_1V1 trace-removal
+negative control pass; native DRC remains four inherited warnings with no
+shorting, crossing, or clearance class. Remaining 1V1 pins remain open.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus

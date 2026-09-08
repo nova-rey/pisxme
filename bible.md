@@ -6739,6 +6739,10 @@ co-author the next 1V1 departures with the 3V3 transition field.
 sub-primitive. Native connectivity passes, removing all RTL_1V1 traces breaks
 the endpoint, and native DRC remains four inherited warnings with no signal
 violation. Retain this channel; the remaining 1V1 source field is open.
+2026-09-08: V636 extended the RTL_1V1 trunk with a north-of-QFN U1.25
+departure. Native U1.25-to-C4.1 connectivity passes, removing all RTL_1V1
+traces breaks the path, and native DRC remains four inherited warnings with
+no signal violation. Remaining 1V1 pins stay open.
 2026-09-08: V635 extended the valid right-side RTL_1V1 channel with U1.16.
 Native U1.16-to-C4.1 connectivity passes and removing all RTL_1V1 traces
 breaks the path; native DRC remains four inherited warnings with no signal
