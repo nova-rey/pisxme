@@ -2268,6 +2268,13 @@ those source crossings, but the F.Cu connector launches intersect the existing
 PERST corridor and violate connector-side clearance. Both are rejected as
 isolated TX route implementations; TX must be co-allocated with PERST/
 CLKREQ and the connector-side control field.
+V469 coallocated TX above the PERST field but retained a source-jog crossing,
+PERST/CLKREQ interaction, and connector launch conflicts. V470 corrected the
+TX source-jog ordering and moved the rows above CLKREQ; native DRC then
+exposed crossings against the validated RX F.Cu launch, CLKREQ, and PEDET
+corridors plus connector clearance. Both are rejected coallocation trials.
+The next TX route must use a dedicated side corridor and avoid the RX launch
+layer; no Path-A or production CAD changed.
 V463 connected the six V462 source transitions to the J1 endpoints using
 distinct B.Cu horizontal rows and F.Cu endpoint launches. Native DRC found
 one real RXN/RXP clearance issue; V464 reused the proven V448/V328 connector

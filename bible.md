@@ -563,6 +563,10 @@ Path A and production CAD remain unchanged.
 V467 crossed TX source jogs; V468 removed those crossings but collided with
 the existing PERST corridor and connector-side clearances. TX remains open
 for coallocation with PERST/CLKREQ; no Path-A or production-CAD change.
+2026-09-08: Rejected RTL9210B V469/V470 TX coallocation trials. V469 had TX
+source-jog and PERST/CLKREQ conflicts. V470 fixed the source jogs but exposed
+RX-launch, CLKREQ/PEDET, and connector-clearance conflicts. Next work uses a
+dedicated TX side corridor; Path A and production CAD remain unchanged.
 2026-09-08: Rejected RTL9210B REFCLK isolation V432 as a malformed first
 launch. Native DRC caught overlapping transition-via bodies and connector
 dogbones entering adjacent J1 MDI pads. Preserve REFCLK net authority; the
