@@ -6624,3 +6624,8 @@ including other rails and controls, remains open.
 native DRC (21 violations) for RSET/XTAL_OUT crossings, U2/C4 ground contacts,
 and occupied via fields. Its native endpoint audit and trace-removal negative
 control passed; the next 1V1 pass must relocate/co-author the support field.
+2026-09-08: The U2-left coordinated V35 experiment cleared the lower 1V1/U2
+corridor, and native SPI/1V1 audits passed, but naïve regenerated SPI source
+channels caused 14 native DRC violations including five QFN-source shorts and
+an XTAL_OUT crossing. Reject the route implementation; co-author U1 SPI
+source escapes and 1V1 departures next.

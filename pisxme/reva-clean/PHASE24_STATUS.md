@@ -23,6 +23,11 @@ The first V35-derived RTL_1V1 lower-bus probe is rejected: native endpoint
 connectivity and the negative control pass, but native DRC reports 21
 violations from RSET/XTAL_OUT crossings, U2/C4 ground contacts, and occupied
 via fields. The next 1V1 pass must relocate/co-author the support endpoint.
+The U2-left coordinated relocation is rejected as a route implementation:
+native SPI and 1V1 audits pass, but naïve regenerated SPI source channels
+produce 14 native DRC violations, including five QFN-source shorts and an
+XTAL_OUT crossing. It does clear the lower 1V1/U2 corridor; the next pass
+must co-author U1 SPI source escapes and 1V1 departures.
 V562 is the retained corrected support baseline: its native saved-board audit
 connects the complete RTL_1V1 and RTL_3V3 support groups with a working
 trace/zone-removal negative control. V563, V564, and V565 are rejected

@@ -47,6 +47,14 @@ The next 1V1 attempt must relocate the capacitor/support endpoint or
 co-author the lower source field; another identical lower-bus sweep is not a
 credible continuation.
 
+The U2-left coordinated experiment moved U2 by 10 mm, regenerated all five
+SPI channels from native U1/U2 pads, moved C4, and added the lower 1V1 fanout.
+Its independent native SPI and 1V1 endpoint audits pass, but native DRC
+reports 14 violations including five QFN-source SPI shorts and one XTAL_OUT
+crossing. Reject this route implementation. The experiment does show that U2
+migration clears the lower 1V1/U2 corridor; the next attempt must regenerate
+the U1 source escapes and 1V1 departures as one field.
+
 ## Next implementation step
 
 Re-author the complete current support field from native pad coordinates on a
@@ -66,3 +74,5 @@ remaining work is coordinated route allocation and full Path-B validation.
 - `phase24_rtl9210b_v35_rtl5v_audit.py`
 - `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_RTL1V1_PROBE-drc.rpt`
 - `phase24_rtl9210b_v35_rtl1v1_audit.py`
+- `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_U2_LEFT_REROUTE-drc.rpt`
+- `phase24_rtl9210b_v35_u2_left_reroute.py`
