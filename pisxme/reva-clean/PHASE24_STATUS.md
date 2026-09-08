@@ -38,6 +38,11 @@ field. Native 5V and 3V3 endpoint audits pass with independent trace-removal
 negative controls; native DRC remains at 12 findings with no shorting or
 crossing classes. Retain V576 as the current connected disposable candidate,
 not production closure.
+V582 re-centered the lower RTL_3V3 In2 spine in the measured gap between
+the neighboring RSET and 1V1 transitions. Native 5V/3V3 audits and both
+trace-removal negative controls pass; native DRC falls to 10 findings with
+19 opens and no shorting or crossing classes. Retain V582 as the current
+Path-B rail candidate, not full support closure.
 V578 replaced the first U1.33 5V departure with an exact-horizontal segment.
 Native saved-board connectivity then showed dangling 5V branches and DRC
 still reported the pad-32 clearance violation. Reject V578; V576 remains the

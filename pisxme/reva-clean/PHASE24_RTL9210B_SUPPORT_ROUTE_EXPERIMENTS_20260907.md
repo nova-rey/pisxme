@@ -62,6 +62,11 @@ outboard transition while the V576 coupled 3V3 network is retained. Native
 V579 as the current RTL_5V/3V3 candidate, not full Path-B closure.
 
 ## Current state and documentation hygiene
+V582 re-centered the lower RTL_3V3 In2 spine in the measured gap between the
+neighboring RSET and 1V1 transitions. Native 5V/3V3 audits and both
+trace-removal negative controls pass; native DRC falls to 10 findings with
+19 opens and no shorting or crossing classes. Retain V582 as the current
+Path-B rail candidate, not full support closure.
 V580 attempted ordinary-via returns for U1 ground pads 69, 45, and 66.
 Native DRC rejected the placement with true GND-to-USB/3V3 shorts and local
 QFN clearance violations. Reject V580; V579 remains the retained rail
