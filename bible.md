@@ -6957,6 +6957,10 @@ The implementation narrative was reconciled so JMS583 library evidence is
 described as structural package identity only; selector/contact audits pass,
 but final JMS583 land-pattern geometry remains an explicit open gate.
 
+The JMS_AVDDL U11.20-to-C83.1 south-east escape passed native connectivity
+and a trace-removal negative control with no authored shorting/local crossing
+class. Remaining AVDDL pins and full rail routing remain open.
+
 The four-net JMS support cohort (reset, AVDD33, VCCO, VCCK) was co-authored
 with separated departures and validated natively plus a combined trace-removal
 negative control. It has no authored shorting/crossing class; full support

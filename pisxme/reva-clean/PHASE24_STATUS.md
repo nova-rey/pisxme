@@ -50,6 +50,10 @@ open. The VBUS divider probe is retained in
 R82.2-to-R83.1 pass native connectivity and the paired trace-removal negative
 control. No authored shorting class remains; the crossing findings are
 inherited donor USB artifacts.
+The `JMS_AVDDL` decoupler probe is retained in
+`PHASE24_JMS583_AVDDL_PROBE-drc.rpt`: U11.20-to-C83.1 native connectivity
+and its trace-removal negative control pass, with no authored shorting/local
+crossing class. Remaining AVDDL pins and complete rail routing remain open.
 The rotated-L10 LXO probe is retained in
 `PHASE24_JMS583_LXO_PROBE_V2-drc.rpt`: U11.64-to-L10.1 native connectivity
 and the trace-removal negative control pass, with no authored shorting or
