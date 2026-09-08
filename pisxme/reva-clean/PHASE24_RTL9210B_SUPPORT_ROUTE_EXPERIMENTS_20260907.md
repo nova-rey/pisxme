@@ -67,6 +67,11 @@ neighboring RSET and 1V1 transitions. Native 5V/3V3 audits and both
 trace-removal negative controls pass; native DRC falls to 10 findings with
 19 opens and no shorting or crossing classes. Retain V582 as the current
 Path-B rail candidate, not full support closure.
+V583 moved only the upper RTL_5V B.Cu corridor from y=50.5 to y=49.5 to
+clear the 3V3 via. Native 5V/3V3 audits and both trace-removal negative
+controls pass; native DRC falls to 9 findings with 19 opens and no 5V
+shorting/crossing or clearance class. Retain V583 as the current rail
+candidate, not full Path-B closure.
 V580 attempted ordinary-via returns for U1 ground pads 69, 45, and 66.
 Native DRC rejected the placement with true GND-to-USB/3V3 shorts and local
 QFN clearance violations. Reject V580; V579 remains the retained rail
