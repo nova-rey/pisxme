@@ -6948,3 +6948,8 @@ escapes to B.Cu reduced the isolated open count but created native RX P/N,
 REFCLK, XTAL_OUT, RTL_3V3, and RTL_1V1 collision classes. The next Path-B
 trial must regenerate the complete lower QFN source field coherently; no
 architecture, Path-A, or production-CAD change was made.
+V555 tested an outboard B.Cu RTL_1V1 return to the valid upper trunk. Native
+DRC rejected it for crossings with RTL_3V3/RTL_5V and remaining XTAL_OUT,
+RX, and REFCLK source-field conflicts. This is a route-implementation
+failure; the complete lower QFN field remains open and no architecture,
+Path-A, or production-CAD change was made.

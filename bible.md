@@ -6445,3 +6445,7 @@ the bottom RTL_1V1 pads. Native DRC rejected RX P/N, REFCLK, XTAL_OUT, 3V3,
 and 1V1 collision classes. This is a route-implementation discriminator: the
 complete lower QFN source field must be regenerated together. Path A and
 production CAD remain unchanged.
+2026-09-08: RTL9210B V555 tested an outboard B.Cu return for U1.55/U1.60/U1.63
+RTL_1V1. Native DRC rejected crossings with RTL_3V3/RTL_5V and remaining
+XTAL_OUT/RX/REFCLK source fields. The lower QFN field remains a coordinated
+route-implementation open; Path A and production CAD are unchanged.
