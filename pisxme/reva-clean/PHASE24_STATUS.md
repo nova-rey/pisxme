@@ -22,6 +22,11 @@ The retained RSET sub-primitive (`phase24_jms583_rset_escape_probe.py`) uses
 native U11.39/R80.1 pads and a short F.Cu escape. Native DRC reports no
 shorting items and the RSET endpoint is connected; this does not close the
 remaining support network.
+The refilled split-layer crystal probe removes stale-zone and via-hole
+diagnostics, but native DRC still finds the 0.20-mm source traces at adjacent
+0.4-mm-pitch U11 crystal pads at approximately 0.19 mm clearance. Crystal
+support therefore remains open at the strict board rule; no rule relaxation
+or production promotion is claimed.
 The new `PHASE24_RTL9210B_QFN_ORIENTATION180_PROBE.kicad_pcb` is the current
 disposable placement basis for the next QFN field pass: native DRC reports
 four inherited warnings, and the U1.39-to-U2.8 RTL_3V3 corridor in

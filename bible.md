@@ -6895,3 +6895,7 @@ coherent local placement/routing is the next Path-A task.
 2026-09-08: Retained the native-pad JMS583 RSET escape probe. U11.39 to
 R80.1 is connected on F.Cu with no native shorting items; the disposable
 board reports 840 total violations. This closes only the RSET sub-primitive.
+2026-09-08: Refilled zones and reran the split-layer JMS583 crystal probe.
+Stale zone/via-hole findings disappeared, but native DRC still rejects the
+0.20-mm traces leaving adjacent 0.4-mm-pitch U11 crystal pads at about
+0.19-mm clearance. Keep crystal support open; do not relax rules.
