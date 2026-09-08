@@ -33,6 +33,11 @@ that spine around the via and reduced native DRC to 12 findings with no
 shorting or crossing classes, but its independent saved-board audit failed
 the complete 3V3 endpoint group. Reject V573/V574; V572 remains the retained
 electrically connected baseline.
+V575 shifted the U1.34 3V3 departure by 0.05 mm on the V574 lineage, but
+native DRC retained strict source-field clearance and the regenerated 3V3
+branches were dangling in saved-board connectivity. Reject V575; further
+progress requires coordinated QFN escape authoring, not scalar coordinate
+nudges.
 
 ## CURRENT OPEN GATES
 

@@ -36,6 +36,10 @@ native DRC found a short to the retained RTL_3V3 In2 spine. V574 moved the
 shorting or crossing classes, but its independent saved-board audit failed
 the complete 3V3 endpoint group. Reject V573/V574; V572 remains the retained
 connected baseline.
+V575 shifted the U1.34 3V3 departure by 0.05 mm on the V574 lineage. Native
+DRC retained strict source-field clearance, and the regenerated 3V3 branches
+were dangling in saved-board connectivity. Reject V575; the next step is
+coordinated QFN escape authoring rather than another scalar coordinate nudge.
 
 ## Current state and documentation hygiene
 
