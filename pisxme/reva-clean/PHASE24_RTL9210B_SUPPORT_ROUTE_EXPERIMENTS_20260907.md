@@ -1237,6 +1237,11 @@ Native connectivity and the exact bottom-edge negative control pass, but DRC
 rejects the row for XTAL_OUT crossing/clearance and collision with the V535
 RTL_3V3 lower corridor. It is rejected as a route implementation; the next
 attempt requires coherent bottom support/REFCLK field reallocation.
+V549 tests a shared east-side B.Cu return for U1.55/U1.60/U1.63 with
+outward-offset F.Cu escapes. Native connectivity and the exact bottom-edge
+negative control pass, but DRC rejects the return for crossings with REFCLK,
+RTL_3V3, and LANE0_RXP. The outward shared-return class is rejected; the
+next attempt must reallocate the bottom support/REFCLK launch as one field.
 V508 tests U1.25 RTL_1V1 with an early B.Cu/F.Cu return into the V506
 left-side trunk. Native saved-board connectivity and the trace-removal
 negative control pass. Native DRC rejects the candidate because the U1.25
