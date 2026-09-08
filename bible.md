@@ -7014,3 +7014,9 @@ nominal 4.46 mm exposed pad on POWER_GND. The regenerated V9 seven-net
 cohort passes native connectivity and trace-removal negative control; its
 811-violation/499-unconnected DRC result remains open because paste/mask/
 courtyard review and inherited manufacturing findings are not closed.
+
+2026-09-08: Post-reconciliation REXT V7 confirms the corrected JMS583
+U11.39 source field is no longer the failure. The translated R80 approach
+instead shorts the U12 exposed pad and crosses the inherited CM5_PERST
+corridor. V7 is rejected as placement evidence; REXT remains open and no
+production rule was relaxed.

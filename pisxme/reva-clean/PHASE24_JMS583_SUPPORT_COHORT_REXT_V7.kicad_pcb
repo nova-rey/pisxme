@@ -15089,7 +15089,7 @@
 	(footprint "R_0402_1005Metric"
 		(layer "F.Cu")
 		(uuid "f3731b70-3c30-56a7-91b1-969651a3a92f")
-		(at 148 140)
+		(at 155 135)
 		(descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
 		(property "Reference" "R80"
 			(at 0 -0.9 0)
@@ -28021,28 +28021,20 @@
 		(uuid "87d24445-db87-45d6-a452-3f5f3273671e")
 	)
 	(segment
+		(start 151 135)
+		(end 154.5 135)
+		(width 0.2)
+		(layer "F.Cu")
+		(net "JMS_REXT")
+		(uuid "9fb8d893-7c5b-4788-b6fe-9ce847d026b8")
+	)
+	(segment
 		(start 151 135.6)
-		(end 151 142)
+		(end 151 135)
 		(width 0.2)
 		(layer "F.Cu")
 		(net "JMS_REXT")
-		(uuid "6ac32806-a524-43f6-9b6f-2d4aa2152b56")
-	)
-	(segment
-		(start 147.5 142)
-		(end 147.5 140)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "JMS_REXT")
-		(uuid "d1fb0fed-c2cb-4a9b-b468-ad6b529f0913")
-	)
-	(segment
-		(start 151 142)
-		(end 147.5 142)
-		(width 0.2)
-		(layer "F.Cu")
-		(net "JMS_REXT")
-		(uuid "eddbfe45-2e67-45da-b2a7-3b0bb0801509")
+		(uuid "a3205f92-051b-4aed-ad36-8d4f2954238b")
 	)
 	(segment
 		(start 143.65 135.6)
@@ -28050,7 +28042,7 @@
 		(width 0.2)
 		(layer "F.Cu")
 		(net "JMS_REXT")
-		(uuid "f8524a33-df5d-4dc7-b94a-408ca18df417")
+		(uuid "c8896a92-6a4a-4556-81bb-6c42d97ebf71")
 	)
 	(zone
 		(net "POWER_GND")

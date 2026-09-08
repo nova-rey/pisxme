@@ -81,6 +81,11 @@ exposed pad and passes the seven-net native connectivity plus negative-control
 audit; native DRC reports 811 violations / 499 unconnected items, with the
 remaining zone/via and inherited donor findings still open. Paste/mask and
 full manufacturing review remain open; this is not production closure.
+After the QFN correction, the REXT V7 trial no longer reports the prior
+U11.39 adjacent-pad failure. Its translated-R80 approach instead shorts the
+U12 exposed pad and crosses the inherited CM5_PERST corridor, so V7 is
+rejected as a placement implementation. REXT remains open for a corridor
+that clears both neighboring islands; no routing rule was relaxed.
 The `JMS_AVDDL` decoupler probe is retained in
 `PHASE24_JMS583_AVDDL_PROBE-drc.rpt`: U11.20-to-C83.1 native connectivity
 and its trace-removal negative control pass, with no authored shorting/local
