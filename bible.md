@@ -6747,3 +6747,7 @@ no signal violation. Remaining 1V1 pins stay open.
 Native U1.16-to-C4.1 connectivity passes and removing all RTL_1V1 traces
 breaks the path; native DRC remains four inherited warnings with no signal
 violation. Remaining 1V1 pins are still open.
+2026-09-08: V637 extended the right-side RTL_1V1 trunk with U1.50-to-C4.1.
+Native connectivity passes, removing all RTL_1V1 traces breaks the path, and
+native DRC remains four inherited warnings with no signal violation. The
+U1.36/U1.40/U1.55/U1.63 source cluster remains open.
