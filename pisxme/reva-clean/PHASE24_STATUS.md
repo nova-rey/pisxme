@@ -38,6 +38,12 @@ a true U1.40 RTL_1V1 collision with the retained U1.39 RTL_3V3 transition,
 plus additional source/edge findings. The experiment does not invalidate
 V631; the next 1V1 pass must co-author its departures with the 3V3 transition
 field rather than append a bottom collector.
+V634 is the retained right-side 1V1 sub-primitive: U1.60 routes directly to
+C4.1 on `PHASE24_RTL9210B_ORIENTATION180_1V1_U160_PROBE.kicad_pcb` using
+F.Cu only. Native DRC remains at four inherited warnings with no shorting,
+crossing, or clearance class; native connectivity passes and removing all
+RTL_1V1 traces breaks the endpoint connection. This does not close the
+remaining RTL_1V1 source-field group.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus

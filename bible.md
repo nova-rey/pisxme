@@ -6735,3 +6735,7 @@ unchanged.
 Native DRC found a real U1.40-to-retained-U1.39 RTL_3V3 transition collision
 and additional source/edge findings. Reject the collector; retain V631 and
 co-author the next 1V1 departures with the 3V3 transition field.
+2026-09-08: V634 routed U1.60 to C4.1 as a right-side RTL_1V1
+sub-primitive. Native connectivity passes, removing all RTL_1V1 traces breaks
+the endpoint, and native DRC remains four inherited warnings with no signal
+violation. Retain this channel; the remaining 1V1 source field is open.

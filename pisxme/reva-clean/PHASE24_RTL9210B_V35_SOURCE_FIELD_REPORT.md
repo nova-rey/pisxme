@@ -112,6 +112,9 @@ The bottom-edge U1.36/U1.40/U1.50 1V1 collector is rejected: native DRC
 identified a U1.40-to-retained-U1.39 3V3 transition collision and additional
 source/edge findings. The next 1V1 authoring must co-allocate departures with
 the 3V3 field.
+V634 provides a clean right-side U1.60-to-C4.1 1V1 sub-primitive on F.Cu.
+Native connectivity and the all-RTL_1V1 trace-removal negative control pass;
+native DRC remains at four inherited warnings with no signal violation.
 The first all-1V1 perimeter collector derived from V631 is rejected. Native
 DRC found U1.16/U1.17 and U1.36/U1.35 source shorts, retained-rail crossings,
 and a C4 ground collision. The next 1V1 attempt must use source-side channel
