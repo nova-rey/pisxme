@@ -6210,6 +6210,11 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V514/V515 test U1.25 RTL_1V1 with vertical escape and
+early F.Cu return. Native audits expose the intended connectivity, but DRC
+rejects both for retained XTAL_IN/RTL_3V3 spine crossings and local return-via
+clearance. Neighboring support spines must be reallocated with the 1V1 bank;
+Path A and production CAD remain unchanged.
 2026-09-08: RTL9210B V513 tests an outside-envelope U1.40/U1.50 via escape.
 The transitive native audit fails to find one saved connectivity component,
 and native DRC reports exposed-GND-pad and RTL_3V3 source-field conflicts.

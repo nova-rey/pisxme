@@ -1080,6 +1080,13 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V514/V515 test U1.25 RTL_1V1 with a vertical pad escape, B.Cu channel, and
+early F.Cu return to U1.36. Both native audits expose the intended
+connectivity requirement; V514/V515 are rejected by native DRC because the
+return channel crosses retained XTAL_IN/RTL_3V3 support spines and the return
+via is too close to the neighboring support field. This establishes that the
+neighboring support spines must be reallocated together with the remaining
+1V1 pad bank. Path A and production CAD remain unchanged.
 V513 tests U1.40 RTL_1V1 with an outside-envelope F.Cu/B.Cu escape to the
 same-net U1.50 pad. The native audit (including transitive graph traversal)
 fails to find one saved connectivity component, and native DRC reports
