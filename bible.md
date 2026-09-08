@@ -532,6 +532,10 @@ Path A and production CAD remain unchanged.
 REFCLK crossing but retained PERST; V293 avoided PERST but introduced JTAG /
 undefined-field shorting and was rejected. PEDET remains open; Path A and
 production CAD remain unchanged.
+2026-09-07: Recorded RTL9210B PEDET/PERST local-field experiments V295–V298.
+V295 crossed REFCLK after a B.Cu transition; V296–V298 retained one native
+PEDET/PERST crossing despite local dogleg moves. The next repair is a
+co-authored sideband field; production and Path-A CAD remain unchanged.
 2026-09-07: Retained RTL9210B V294 PEDET east-side landing basis. It removes
 the earlier REFCLK issue but native DRC retains one PEDET/PERST crossing at
 U1.8. PEDET remains open and requires coordinated sideband-field repair; Path
