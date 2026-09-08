@@ -172,6 +172,10 @@ V649's high B.Cu SPISI corridor is rejected because its x=91 transition column
 crosses the retained RTL_3V3 source route and RTL_5V collector. The next SPI
 escape must place the transition west of both rails or co-author the source
 field with them.
+V650 is a documentation correction: the native C3-join board still has
+multiple RTL_3V3 physical components. Endpoint checks alone did not prove the
+same-net field; native DRC and the saved-board component inventory reopen this
+rail until every assigned pad and support endpoint is physically joined.
 V646's first RSET route is rejected. The U1.51-to-R1.1 endpoint path is
 physically connected, but its B.Cu diagonal crosses the retained U1.40 1V1
 corridor. A separate RSET channel is required; no routing rule is relaxed.

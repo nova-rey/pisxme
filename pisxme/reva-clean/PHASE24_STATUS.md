@@ -108,6 +108,11 @@ SPI corridor allocation.
 V649's high B.Cu SPISI corridor is rejected: its x=91 transition column
 crosses both retained RTL_3V3 and RTL_5V collectors. Preserve the rails and
 allocate the next SPI transition west of that power fence.
+V650 corrects the prior V645 wording: native DRC on the saved C3-join board
+still reports separate RTL_3V3 physical components (U1.52/C3 and the QFN
+lower/source branches). The earlier endpoint-only interpretation was
+insufficient. RTL_3V3 is therefore reopened as an incomplete field until the
+native same-net component is proven unified.
 V646's first RSET escape is rejected: the native endpoint path is connected,
 but its B.Cu diagonal crosses the retained U1.40 RTL_1V1 corridor. RSET
 remains open for a separate channel allocation; accepted rail geometry and

@@ -6793,6 +6793,10 @@ the route and preserve the rail field for a separate SPI allocation.
 2026-09-08: V649 tested a high B.Cu SPISI corridor. Its x=91 transition
 column crossed the retained RTL_3V3 and RTL_5V collectors; reject the route
 and preserve the accepted rail geometry.
+2026-09-08: V650 corrected the V645 RTL_3V3 closure claim. Native DRC and the
+saved-board inventory show multiple separate RTL_3V3 components; endpoint-only
+checks were insufficient. Reopen the rail until the complete same-net field
+is physically unified.
 2026-09-08: V646 tested the first RSET escape. Native endpoint connectivity
 was present, but the B.Cu diagonal crossed the retained U1.40 RTL_1V1 corridor;
 reject the route and preserve the accepted rail geometry.
