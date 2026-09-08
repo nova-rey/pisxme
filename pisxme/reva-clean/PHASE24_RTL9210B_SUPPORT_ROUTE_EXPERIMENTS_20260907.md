@@ -2719,3 +2719,10 @@ two source-pad branches as authored, and native DRC found actual
 RTL_5V/SPISI, RTL_5V/RTL_3V3, and RTL_5V/PEDET collisions plus inherited
 clearance findings. The route is rejected; V562 remains the support baseline
 and future RTL_5V work must assert every pad-by-pad native join.
+## V565 RTL_5V local In2 plane — rejected
+
+V565 added explicit ordinary-via escapes from U1.17/U1.33/C5.1 to a local
+In2 RTL_5V island. Native DRC rejected the source vias against the existing
+RTL_3V3 field and reported the proposed 5V branches as disconnected in the
+saved-board graph. The plane-only approach is rejected; RTL_5V requires
+coherent source-field reallocation. V562 remains the retained baseline.

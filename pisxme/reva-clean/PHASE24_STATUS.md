@@ -6987,3 +6987,7 @@ support baseline.
 V564 is rejected: its lower outboard RTL_5V route failed native source-pad
 joining and introduced RTL_5V/SPISI, RTL_5V/RTL_3V3, and RTL_5V/PEDET DRC
 collisions. V562 remains the retained support baseline; RTL_5V is still open.
+V565 tested a local In2 RTL_5V plane with explicit source vias. Native DRC
+rejected the vias against the RTL_3V3 field, and native connectivity left the
+5V branches disconnected. RTL_5V remains open; V562 remains the retained
+Path-B support baseline.
