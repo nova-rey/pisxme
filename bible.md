@@ -6747,6 +6747,10 @@ no signal violation. Remaining 1V1 pins stay open.
 Native U1.16-to-C4.1 connectivity passes and removing all RTL_1V1 traces
 breaks the path; native DRC remains four inherited warnings with no signal
 violation. Remaining 1V1 pins are still open.
+2026-09-08: V638 added right-edge U1.55/U1.63 RTL_1V1 extensions to the
+passing C4.1 trunk. Both native endpoints pass and removing all RTL_1V1
+tracks breaks both; native DRC remains four inherited warnings with no signal
+violation. Only U1.36/U1.40 remain in this local 1V1 allocation.
 2026-09-08: V637 extended the right-side RTL_1V1 trunk with U1.50-to-C4.1.
 Native connectivity passes, removing all RTL_1V1 traces breaks the path, and
 native DRC remains four inherited warnings with no signal violation. The

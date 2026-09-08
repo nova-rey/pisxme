@@ -53,6 +53,11 @@ V637 extends the right-side 1V1 trunk with U1.50. The saved-board
 U1.50-to-C4.1 path is natively connected; removing all RTL_1V1 traces breaks
 it. Native DRC remains four inherited warnings with no shorting, crossing, or
 clearance class. The U1.36/U1.40/U1.55/U1.63 source cluster remains open.
+V638 adds the corrected right-edge U1.55/U1.63 1V1 extensions to the C4.1
+trunk. Both native endpoint checks pass and removing all RTL_1V1 tracks breaks
+both paths. Native DRC remains four inherited warnings with no shorting,
+crossing, or clearance class. Only the U1.36/U1.40 source cluster remains in
+this local 1V1 allocation.
 V636 extends the 1V1 trunk with U1.25 using a north-of-QFN F.Cu departure.
 U1.25-to-C4.1 native connectivity and the all-RTL_1V1 trace-removal
 negative control pass; native DRC remains four inherited warnings with no

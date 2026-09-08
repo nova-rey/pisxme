@@ -119,6 +119,10 @@ V637 extends the right-side 1V1 trunk with U1.50-to-C4.1. Native connectivity
 and the all-RTL_1V1 trace-removal negative control pass; native DRC remains at
 four inherited warnings with no signal violation. The remaining source
 cluster is U1.36/U1.40/U1.55/U1.63.
+V638 resolves the U1.55/U1.63 portion with right-edge F.Cu extensions to the
+passing C4.1 trunk. Both native endpoints and the all-RTL_1V1 trace-removal
+negative controls pass; native DRC remains four inherited warnings with no
+signal violation. U1.36/U1.40 remain open.
 V636 extends the passing 1V1 trunk with a north-of-QFN U1.25 departure.
 Native U1.25-to-C4.1 connectivity and the trace-removal negative control
 pass; native DRC remains at four inherited warnings with no signal violation.
