@@ -575,6 +575,10 @@ unchanged.
 REFCLK crossing but retained PERST; V293 avoided PERST but introduced JTAG /
 undefined-field shorting and was rejected. PEDET remains open; Path A and
 production CAD remain unchanged.
+2026-09-07: Rejected RTL9210B V399 local-clearance trial. Reauthoring RSET,
+RTL_3V3, and XTAL_OUT from the V397 basis introduced two GND shorts at the
+oscillator transition. V397 remains the current basis; Path A and production
+CAD remain unchanged.
 2026-09-07: Retained RTL9210B V311 CLKREQ basis after rejecting V309/V310.
 Native R3.1/U1.13/J1.52 connectivity passed; DRC reported 514 findings / 18
 inherited opens with no shorting, crossing, or footprint-error class. Reset,

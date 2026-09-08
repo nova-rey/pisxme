@@ -2091,3 +2091,6 @@ XTAL_IN beyond the exposed-pad edge; V397 is the better basis with 6 native
 non-open findings and 26 opens. V398 moved XTAL_OUT rightward and regressed
 one local clearance, so it is rejected. All remain disposable Path-B work;
 Path A and production CAD are unchanged.
+V399 co-authored RSET/RTL_3V3 and XTAL_OUT from the V397 basis but introduced
+two GND shorts at the XTAL_OUT transition, so it is rejected. V397 remains the
+current basis for the next repair; Path A and production CAD are unchanged.
