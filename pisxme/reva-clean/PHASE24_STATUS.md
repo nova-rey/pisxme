@@ -6800,3 +6800,8 @@ pass, both trace-removal negative controls pass, and native DRC has 366
 findings / 25 inherited opens with no shorting or crossing class and zero
 footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
 high-speed support remain open.
+V283 is rejected: the independent SPISO3 trial creates native SPISO3/SPISO
+and SPISO3/GND shorting classes and an RTL_3V3 source-field crossing. This is
+a route-implementation failure; the retained V278/V282 placement and bases
+remain valid. Remaining SPI channels must be allocated as one coordinated
+field.

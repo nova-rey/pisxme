@@ -527,6 +527,10 @@ Path A and production CAD remain unchanged.
 native connectivity and negative control passed but DRC found three rail
 track crossings. V242 remains the promoted disposable rail basis; Path A and
 production CAD remain unchanged.
+2026-09-07: Rejected RTL9210B V283 independent SPISO3 route. Native DRC found
+SPISO3/SPISO and SPISO3/GND shorting classes plus an RTL_3V3 source-field
+crossing. This is a route-implementation failure; V278/V282 remain retained
+bases and the next SPI work must use coordinated channel allocation.
 2026-09-07: Rejected RTL9210B V245 translated U1.60/U1.63 lower-edge route.
 Native connectivity and the trace-removal negative control passed, but DRC
 found five crossings against RTL_5V, PEDET, RTL_3V3, REFCLK_P, and PERST_N.
