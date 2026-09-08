@@ -6611,3 +6611,8 @@ native zone refill as PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED.
 Current native DRC is 4 inherited warnings; five-net SPI and XTAL/RSET audits
 pass with trace-removal negative controls. This is the current source-field
 reference, not production closure.
+2026-09-08: Added the V35 source-field checkpoint report and preserved V1/V2
+RTL_5V disposable probes. V2 was rejected by native DRC for RTL_5V crossings
+with SPISI/RTL_3V3, a QFN-edge contact, and dangling segments. The next Path-B
+experiment must co-author all rails and QFN departures around the proven V35
+five-net SPI/crystal field; Path A and production CAD remain untouched.

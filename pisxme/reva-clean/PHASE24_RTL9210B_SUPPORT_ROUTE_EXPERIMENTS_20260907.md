@@ -8,6 +8,11 @@ as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`. Current DRC
 is 4 inherited warnings; SPI and XTAL/RSET native audits plus independent
 trace-removal controls pass. Retain this as the current source-field reference
 for re-authoring, not as production closure.
+The V35-derived RTL_5V probes V1/V2 are rejected route-allocation trials.
+V2's native DRC has 15 findings, including RTL_5V crossings with SPISI and
+RTL_3V3, a QFN-edge contact, and dangling segments. Preserve the raw boards
+and receipt; do not interpret this as evidence against the V35 source-field
+placement. See `PHASE24_RTL9210B_V35_SOURCE_FIELD_REPORT.md`.
 RTL_1V1 field from the saved V342 source without copying duplicate RSET or
 crystal copper; native connectivity and the route/zone negative control pass
 for all eight U1 1V1 pads plus C4.1. Its native DRC remains open.

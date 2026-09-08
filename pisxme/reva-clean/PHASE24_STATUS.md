@@ -11,6 +11,12 @@ XTAL_IN/XTAL_OUT/RSET audits pass with trace-removal negative controls. This
 is the current source-field/reference basis for the next implementation pass;
 it is not yet production closure because rails, controls, USB, lane-0,
 REFCLK, M.2, power, firmware, and integrated Path-B gates remain open.
+The V35-derived RTL_5V probe V1/V2 is rejected: V2 has 15 native DRC
+violations, including RTL_5V crossings with SPISI/RTL_3V3, a QFN-edge
+RTL_5V-to-RTL_3V3 contact, and dangling segments. This is route-allocation
+evidence only. The detailed source-field checkpoint is
+`PHASE24_RTL9210B_V35_SOURCE_FIELD_REPORT.md`; the next pass must co-author
+all rails and QFN departures around V35's proven five-net field.
 V562 is the retained corrected support baseline: its native saved-board audit
 connects the complete RTL_1V1 and RTL_3V3 support groups with a working
 trace/zone-removal negative control. V563, V564, and V565 are rejected
