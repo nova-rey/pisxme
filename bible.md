@@ -6475,3 +6475,6 @@ route-and-zone negative control passes. Native DRC has 11 findings / 21 opens
 with no shorting/crossing or footprint errors. V562 is the retained Path-B
 support baseline; remaining RTL_5V, GND, controls, SPI, REFCLK, and lane-0
 work remains open. Path A and production CAD are unchanged.
+2026-09-08: RTL9210B V563 connected U1.17/U1.33/C5.1 natively but was
+rejected by DRC for XTAL_OUT/RTL_5V, RTL_3V3/RTL_5V, and PEDET/RTL_5V
+collisions. RTL_5V remains open and V562 remains the retained support basis.

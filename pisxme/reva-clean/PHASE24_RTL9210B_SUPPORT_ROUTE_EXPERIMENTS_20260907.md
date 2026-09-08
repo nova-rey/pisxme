@@ -2703,3 +2703,11 @@ unconnected nets are RTL_5V, GND attachment, PEDET/CLKREQ/PERST, SPI, REFCLK,
 and lane-0. V562 is retained as the current Path-B support baseline under
 0.2 mm tracks and 0.2 mm clearance. V546 remains historical topology
 evidence only; no Path-A or production CAD changed.
+## V563 RTL_5V outer-corridor trial — rejected
+
+V563 starts from retained V562 and connects U1.17/U1.33 to C5.1 with a
+pad-aware west-side F.Cu join and outer B.Cu corridor. Native graph
+connectivity for all three RTL_5V endpoints passes, but native DRC rejects
+the candidate for XTAL_OUT/RTL_5V, RTL_3V3/RTL_5V, and PEDET/RTL_5V source
+field collisions. The next RTL_5V attempt must use a separated source-field
+corridor; V562 remains the retained support baseline.

@@ -6980,3 +6980,7 @@ native all-eight 1V1/C4, 3V3, crystal, and RSET audit with a route-and-zone
 negative control. Native DRC has 11 findings / 21 unconnected pads, zero
 shorting/crossing classes, and zero footprint errors. Remaining open nets are
 RTL_5V, GND attachment, PEDET/CLKREQ/PERST, SPI, REFCLK, and lane-0.
+V563 connects U1.17/U1.33/C5.1 in the native saved-board graph, but native
+DRC rejects its west/outer RTL_5V corridor for XTAL_OUT, RTL_3V3, and PEDET
+collision classes. RTL_5V remains open; V562 remains the retained Path-B
+support baseline.
