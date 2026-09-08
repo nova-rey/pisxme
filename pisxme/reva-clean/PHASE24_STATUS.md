@@ -6800,6 +6800,11 @@ pass, both trace-removal negative controls pass, and native DRC has 366
 findings / 25 inherited opens with no shorting or crossing class and zero
 footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
 high-speed support remain open.
+V290 and V291 PEDET trials reduced the sideband open count but retained
+crossings with the existing REFCLK/PERST corridors. V292 removes REFCLK and
+leaves one PERST crossing. V293 avoids that crossing but shorts JTAG/undefined
+field geometry, so it is rejected. PEDET remains open for a farther-out layer
+transition; no architecture or production CAD change was made.
 The combined V289 chain now passes the full native five-net SPI audit:
 SPISI U1.18/U2.5, SPICLK U1.19/U2.6, SPISO3 U1.22/U2.7, SPISO U1.23/U2.2,
 and SPICS U1.24/U2.1. The trace-removal negative control fails as required.
