@@ -6478,3 +6478,7 @@ work remains open. Path A and production CAD are unchanged.
 2026-09-08: RTL9210B V563 connected U1.17/U1.33/C5.1 natively but was
 rejected by DRC for XTAL_OUT/RTL_5V, RTL_3V3/RTL_5V, and PEDET/RTL_5V
 collisions. RTL_5V remains open and V562 remains the retained support basis.
+2026-09-08: RTL9210B V564 attempted a lower outboard RTL_5V corridor. Native
+connectivity did not join both source branches, and DRC found RTL_5V/SPISI,
+RTL_5V/RTL_3V3, and RTL_5V/PEDET collisions. V564 was rejected; V562 remains
+the support baseline and RTL_5V remains open.

@@ -6984,3 +6984,6 @@ V563 connects U1.17/U1.33/C5.1 in the native saved-board graph, but native
 DRC rejects its west/outer RTL_5V corridor for XTAL_OUT, RTL_3V3, and PEDET
 collision classes. RTL_5V remains open; V562 remains the retained Path-B
 support baseline.
+V564 is rejected: its lower outboard RTL_5V route failed native source-pad
+joining and introduced RTL_5V/SPISI, RTL_5V/RTL_3V3, and RTL_5V/PEDET DRC
+collisions. V562 remains the retained support baseline; RTL_5V is still open.

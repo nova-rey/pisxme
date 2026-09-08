@@ -2711,3 +2711,11 @@ connectivity for all three RTL_5V endpoints passes, but native DRC rejects
 the candidate for XTAL_OUT/RTL_5V, RTL_3V3/RTL_5V, and PEDET/RTL_5V source
 field collisions. The next RTL_5V attempt must use a separated source-field
 corridor; V562 remains the retained support baseline.
+## V564 RTL_5V lower outboard corridor — rejected
+
+V564 attempted to join U1.17/U1.33 on the west side and carry RTL_5V through
+the lower outboard corridor to C5.1. The saved-board graph did not join the
+two source-pad branches as authored, and native DRC found actual
+RTL_5V/SPISI, RTL_5V/RTL_3V3, and RTL_5V/PEDET collisions plus inherited
+clearance findings. The route is rejected; V562 remains the support baseline
+and future RTL_5V work must assert every pad-by-pad native join.
