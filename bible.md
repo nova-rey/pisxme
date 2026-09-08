@@ -6518,6 +6518,11 @@ bridges on the V574 coupled field. Native 5V and 3V3 endpoint audits pass with
 independent trace-removal negative controls. Native DRC remains at 12 findings
 with no shorting or crossing classes; V576 is retained as the current
 connected disposable candidate, not production closure.
+2026-09-08: RTL9210B V577 made a native 0.05 mm U1.34 handoff edit on V576.
+Native DRC rose to 13 findings and still reported the strict pad-33/pad-34
+source-field clearance and pad-35 clearance. V577 was rejected; V576 remains
+the retained candidate. The limiting condition is intrinsic to the 0.4 mm
+QFN edge field, not a missing saved-net association.
 2026-09-08: RTL9210B V575 shifted the U1.34 RTL_3V3 departure by 0.05 mm on
 the V574 lineage. Native DRC retained strict QFN source-field clearance and
 the regenerated 3V3 branches were dangling in saved-board connectivity.

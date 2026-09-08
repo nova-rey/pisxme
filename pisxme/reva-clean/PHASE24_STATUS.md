@@ -38,6 +38,10 @@ field. Native 5V and 3V3 endpoint audits pass with independent trace-removal
 negative controls; native DRC remains at 12 findings with no shorting or
 crossing classes. Retain V576 as the current connected disposable candidate,
 not production closure.
+V577 edited the existing V576 U1.34 handoff natively by 0.05 mm rather than
+rebuilding the field. Native DRC rose to 13 findings and still reported the
+strict pad-33/pad-34 source-field clearance (plus pad-35 clearance); it did
+not improve the limiting geometry. Reject V577 and retain V576.
 V575 shifted the U1.34 3V3 departure by 0.05 mm on the V574 lineage, but
 native DRC retained strict source-field clearance and the regenerated 3V3
 branches were dangling in saved-board connectivity. Reject V575; further
