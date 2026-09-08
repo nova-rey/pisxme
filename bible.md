@@ -5976,3 +5976,7 @@ crystal copper before routing the full 1V1 field still produced six native
 shorting classes and two crossings against RTL_3V3/RSET. The evidence
 supports an isolated RTL_1V1 power region or jointly reallocated support
 channel plan; no production CAD changed.
+2026-09-07: Rejected RTL9210B V359 isolated RTL_1V1 zone probe. The In2 zone
+removed track crossings, but native DRC found seven real escape/via shorts
+against RSET, XTAL_OUT, and RTL_3V3. Preserved as evidence; production CAD
+and Path A remain unchanged.

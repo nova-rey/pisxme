@@ -1945,3 +1945,10 @@ retained RTL_3V3 and RSET fields. It reduced the inherited open count to 23,
 but does not establish a valid route. The result confirms that the next
 attempt must use an explicitly isolated RTL_1V1 power region or a jointly
 reallocated 3V3/RSET/1V1 channel plan.
+ 
+V359 tested an In2 RTL_1V1 zone with native F.Cu pad escapes, rather than
+synthetic connectivity. The zone eliminated track-crossing classes but the
+chosen escapes/via locations still produced 7 native shorting classes against
+RSET, XTAL_OUT, and RTL_3V3. It is rejected; the result supports using a
+power-region approach only after the package escapes and neighboring support
+channels are co-allocated with verified clearance.
