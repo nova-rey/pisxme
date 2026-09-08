@@ -6436,3 +6436,7 @@ exposed-pad conflicts; V553 exposed remaining 1V1/3V3/LANE0/REFCLK source
 field crossings. These are route-implementation failures, not an
 architecture rejection. V546 remains the accepted U1.40 primitive and the
 next attempt must reallocate the adjacent bottom signal field coherently.
+2026-09-08: Phase24 status was reconciled with the live RTL9210B V552/V553
+discriminator. The current Path-B open gate is coordinated lower QFN source
+field allocation; V552/V553 are rejected route implementations, not an
+architecture blocker. Path A and production CAD remain untouched.

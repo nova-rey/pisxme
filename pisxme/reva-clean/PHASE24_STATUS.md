@@ -6932,3 +6932,14 @@ V340 adds RSET on the retained V339 crystal/lane placement. Native DRC has
 zero shorting and crossing classes; the saved-board U1.51/R1.1 audit and
 trace-removal negative control pass. RSET is retained as a local primitive;
 the remaining RTL9210B support/interface nets remain open.
+## Active Path-B continuation — V552/V553 lower-field discriminator (2026-09-08)
+
+The live isolated RTL9210B baseline remains V546: RTL_3V3 is fully collected,
+RTL_5V U1.17/U1.33 is natively connected, and the east-side U1.40 RTL_1V1
+escape is retained. V552 and V553 attempted coordinated completion of the
+remaining U1.55/U1.60/U1.63 RTL_1V1 group while reallocating XTAL_OUT. Native
+DRC rejected both candidates for actual lower-field crossings/clearance and
+shorting involving XTAL_IN/XTAL_OUT, RTL_3V3, REFCLK, and LANE0. These are
+route-implementation failures; Path A, production CAD, and the selected Path-B
+architecture are unchanged. The next experiment must co-author the complete
+bottom signal-field allocation, rather than add another collector-only route.
