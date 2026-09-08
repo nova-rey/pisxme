@@ -1080,6 +1080,13 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V520 coallocates U1.25 RTL_1V1 and XTAL_IN after clearing the exact local
+RTL_3V3/RSET conflicts identified in V519. Native U1.16/U1.25/U1.36/C4.1
+and U1.53/Y1.1/C1.1 connectivity pass with stable-key graph traversal and
+independent trace-removal negative controls. Native DRC reports no new local
+errors; retained RTL_3V3 support is intentionally incomplete in this
+disposable field and must be regenerated next. Path A and production CAD
+remain unchanged.
 V517 regenerates XTAL_IN on the V516 coallocated 1V1 basis. Native saved-board
 audits pass the complete V516 1V1 group and XTAL_IN group, with independent
 trace-removal negative controls. Native DRC rejects the candidate because the

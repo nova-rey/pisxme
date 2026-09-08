@@ -6210,6 +6210,11 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V520 coallocates U1.25 RTL_1V1 and XTAL_IN after
+clearing local RTL_3V3/RSET conflicts. Native 1V1 and XTAL_IN connectivity,
+including C1.1, plus trace-removal negative controls pass; native DRC has no
+new local errors. RTL_3V3 remains intentionally incomplete in the disposable
+field; Path A and production CAD remain unchanged.
 2026-09-08: RTL9210B V517 regenerates XTAL_IN beside the V516 1V1 field.
 Native 1V1 and XTAL_IN audits plus trace-removal negative controls pass, but
 native DRC rejects the fixed XTAL_IN B.Cu vertical crossing the new U1.25
