@@ -6588,6 +6588,10 @@ the shared source and endpoint channels together.
 progressed from SPISI crossing to lower power-field clearance and finally a
 coordinated endpoint collision at the U2 SPICLK pad row. The next SPI pass
 must co-author both U1 source escapes and U2 endpoint dogbones.
+2026-09-08: RTL9210B V617-V619 rejected SPICLK source/channel variants.
+Moving the channel above SPISI did not prevent source departure crossings with
+SPISI/RTL_5V, while lower endpoints entered 3V3. The next pass must co-author
+the complete U1 QFN SPI source field.
 2026-09-08: RTL9210B V616 rejected the SPISO lower-corridor trial. It crossed
 retained SPISO3/SPISI channels and violated the 3V3 source-field clearance.
 The next SPI pass requires complete five-net allocation or coherent U2 support

@@ -106,6 +106,10 @@ V605/V606/V607/V608 reject successive SPISO3 channel allocations: the first
 crossed SPISI, the next two entered lower power or endpoint clearance, and
 V608 still collided at the U2 SPICLK pad launch. The remaining SPI task is a
 co-authored U1 source plus U2 endpoint dogbone field.
+V617-V619 reject SPICLK source/channel variants: source dogbone crossings
+persisted against SPISI/RTL_5V even after moving the channel above the retained
+field, and lower endpoint transitions entered 3V3. The next pass must
+co-author the complete U1 QFN SPI source field.
 V616 is rejected: its SPISO lower corridor crossed retained SPISO3/SPISI
 channels and its source transition violated the 3V3 clearance envelope. The
 remaining SPI task requires complete five-net allocation or coherent U2

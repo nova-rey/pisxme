@@ -88,6 +88,12 @@ clearance envelope; V607 moved inward and collided with the SPISI endpoint
 via. V608 coordinated two endpoint transitions but still collided at the U2
 SPICLK pad field. The next pass must allocate U1 source and U2 endpoint
 channels together.
+V617 is rejected: its SPICLK source dogbone crossed SPISI and its endpoint
+transition entered the lower 3V3 field. V618 separated the source transition
+but still coupled to SPISI/3V3; V619 moved the channel above SPISI but its
+source departure crossed the retained SPISI escape and RTL_5V via. These
+results confirm that the next step is coordinated QFN SPI source-field
+authoring, not more independent channel detours.
 V616 is rejected: the proposed SPISO lower B.Cu corridor crossed the retained
 SPISO3 source channel and SPISI bottom approach, and its source transition
 violated the 3V3 clearance envelope. The remaining SPI work is a complete
