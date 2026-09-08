@@ -185,6 +185,13 @@ Native DRC reports 877 violations / 499 inherited unconnected items, with no
 new VCCK short or crossing relative to the AVDD33 parent. Other support rails,
 mode control, storage routing, and full Phase 24 gates remain open.
 
+The native inventory `phase24_jms583_current_support_inventory.py` confirms
+that REXT, XIN, XOUT, RESET_N, AVDD33, and VCCK are connected on this basis;
+AVDDL, VCCO, VDDREG_5V, and LXO remain genuinely open with zero authored
+tracks. The first AVDDL all-F.Cu and east-via corridors are rejected: native
+DRC found shorts into existing USB3/PCIe geometry. These are
+route-implementation results only.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

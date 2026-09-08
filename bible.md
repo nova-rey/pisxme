@@ -7407,3 +7407,9 @@ U11.2-to-C82.1 connectivity and the trace-removal negative control passed.
 Native DRC reports 877 violations / 499 inherited unconnected items with no
 new VCCK short or crossing relative to the AVDD33 parent. Remaining support,
 mode-control, storage-routing, and Phase 24 closure gates remain open.
+
+2026-09-08: Native support inventory on the VCCK basis confirms REXT, XIN,
+XOUT, RESET_N, AVDD33, and VCCK connected; AVDDL, VCCO, VDDREG_5V, and LXO
+remain open. The first AVDDL all-F.Cu and east-via corridors were rejected by
+native DRC for shorts into existing USB3/PCIe geometry. Inventory and rejected
+route evidence are preserved; no validation severity was changed.

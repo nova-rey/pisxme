@@ -36,6 +36,11 @@ DRC is 877 violations / 499 inherited unconnected items, with no new VCCK
 short or crossing relative to the AVDD33 parent. Other support rails,
 mode-control, storage routing, and full-board gates remain open.
 
+Native support inventory confirms AVDDL, VCCO, VDDREG_5V, and LXO remain open;
+REXT, crystal, reset, AVDD33, and VCCK are connected on the current basis.
+AVDDL corridor trials are retained as rejected route evidence because native
+DRC found shorts into existing USB3/PCIe copper.
+
 Fresh native ERC reports 927 violations on the current source. The post-fix
 report has no dangling M.2 entries; remaining findings are inherited
 off-grid/same-label and other source-quality warnings. ERC remains an
