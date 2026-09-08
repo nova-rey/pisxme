@@ -7039,6 +7039,11 @@ trace-removal negative control pass; the V10 DRC remains 811 violations / 499
 inherited unconnected items. This is placement-authority progress, not full
 Phase 24 closure.
 
+2026-09-08: Retained a JMS583 crystal production-width discriminator using
+0.20 mm traces and ordinary 0.50/0.30 mm through-vias. Native XIN/XOUT
+connectivity and the trace-removal negative control pass; DRC remains 519
+violations / 499 inherited donor opens, so no closure was claimed.
+
 2026-09-08: Added `phase24_jms583_ground_return_audit.py`. It derives JMS583
 support-ground connectivity from native pads, tracks, vias, and filled zones,
 and passes a destructive-copy negative control after local ground copper is

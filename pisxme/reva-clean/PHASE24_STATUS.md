@@ -314,6 +314,12 @@ creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
 
+The retained production-width crystal discriminator uses the same native
+split-layer corridor but 0.20 mm tracks rather than the earlier sensitivity
+probe's 0.15 mm tracks. Both U11 crystal endpoints pass native connectivity
+and a trace-removal negative control; native DRC remains 519 violations / 499
+inherited donor opens, so this does not close the support or Phase 24 gates.
+
 2026-09-08 crystal fixture recheck: the saved `PHASE24_JMS583_CRYSTAL_ESCAPE_PROBE`
 was regenerated and its native XIN/XOUT endpoint audit passes with the required
 trace-removal negative control. Native DRC remains 519 violations / 499
