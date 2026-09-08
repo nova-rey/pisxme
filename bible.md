@@ -6181,3 +6181,8 @@ trials. V463 retained the clean V462 source fanout but had one RXN/RXP
 clearance issue. V464's proven connector handoff reuse exposed three
 corridor crossings and connector-transition clearance/short errors. V462 is
 retained; no Path-A or production-CAD change.
+2026-09-08: Corrected RTL9210B V475 after its audit caught a generator
+omission in the TX source escapes. The regenerated four-pair lane basis
+passes native saved-board connectivity, four negative controls, and DRC zero
+shorts/crossings/clearances. Only inherited/incomplete-fixture findings
+remain; REFCLK and support integration are still open.

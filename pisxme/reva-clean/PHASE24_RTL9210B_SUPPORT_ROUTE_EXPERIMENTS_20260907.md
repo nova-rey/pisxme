@@ -2283,3 +2283,11 @@ connector-transition clearances/shorts. Both are rejected route
 implementations. V462 remains the clean source primitive; the next full route
 must allocate endpoint corridors by layer and connector ordering rather than
 sharing a single row family.
+The first V475 audit attempt exposed a generator omission: after removing the
+TX tracks, the script did not regenerate the U1 TX-pad-to-source-via escapes.
+That result was not accepted. V475 was corrected to author those escapes from
+the transformed native pads. The corrected saved board passes all four MDI
+endpoint groups and four trace-removal negative controls; native DRC remains
+at zero shorts, crossings, and clearance errors with only inherited/local
+warnings and incomplete-fixture opens. V475 is now the retained four-pair
+lane basis, while REFCLK and remaining support/control integration stay open.
