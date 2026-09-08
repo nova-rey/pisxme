@@ -6020,3 +6020,7 @@ Path A and production CAD remain unchanged.
 found source pad-field and companion-pair connector-launch conflicts. The
 next lane work must regenerate both RX pair escapes and launch together;
 Path A and production CAD remain unchanged.
+2026-09-07: Rejected RTL9210B V376 complete RX-pair regeneration. Native DRC
+reported ten shorting and two crossing classes at the U1 REFCLK/RTL_1V1
+source field and lower via bus. Connector geometry improved, but source
+escape allocation remains open; Path A and production CAD remain unchanged.

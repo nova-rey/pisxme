@@ -2023,3 +2023,8 @@ transplant of V328 lane-0 was rejected with 5 shorts and 3 crossings. V374
 and V375 below-band RXN experiments were also rejected after native pad-field
 and connector-launch conflicts. The remaining work is a joint RX-pair and
 1V1 launch allocation; no production or Path-A CAD changed.
+V376 regenerated both lane-0 RX pair escapes and their connector launches
+together. It is rejected: native DRC reports 10 shorting and 2 crossing
+classes, including RXN/U1 REFCLK and RXN/RTL_1V1 lower-via contacts. The
+connector crossing was reduced, but the source escape still requires a
+co-authored U1 pad-field channel plan.
