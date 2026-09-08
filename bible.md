@@ -20,6 +20,12 @@ trace-removal negative control. Support/control/REFCLK remain open.
 exposed real short/crossing classes despite reduced open counts. V311 remains
 the retained disposable sideband basis; Path A and production CAD are
 unchanged.
+2026-09-08: RTL9210B V542-V545 are rejected U1.40 1V1 transition trials;
+their native connectivity and exact negative controls pass, but DRC finds
+3V3 or U1 pad-field conflicts. V547 proves U1.55/U1.60/U1.63 connectivity
+with an exact bottom-edge negative control, but DRC rejects its via row
+against REFCLK and 3V3 geometry. V546 remains the accepted U1.40 primitive;
+Path A and production CAD remain unchanged.
 2026-09-08: RTL9210B V528/V529 preserve native connectivity and exact
 branch-removal negative controls but are rejected by DRC. V528 crosses the
 F.Cu 1V1 collector; V529 conflicts with the XTAL_IN B.Cu return. The next

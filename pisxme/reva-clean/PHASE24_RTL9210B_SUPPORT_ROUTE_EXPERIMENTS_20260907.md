@@ -1146,6 +1146,13 @@ and V541 remain rejected by clearance to the V535 3V3 via/spine; V540 is
 rejected by U1 pad-43/hole clearance. The repeated result identifies a
 structural 1V1/3V3 source-field coallocation constraint. No Path-A or
 production-CAD change.
+V542-V545 test lower U1.40 RTL_1V1 transitions; each native connectivity
+audit and exact negative control pass, but DRC rejects the transitions at
+the 3V3 spine or U1 no-net pad field. V546 remains the clean east-side U1.40
+primitive. V547 joins U1.55/U1.60/U1.63 to the existing 1V1 handoff in the
+native graph with an exact bottom-edge negative control, but DRC rejects the
+shared via row against REFCLK_P/REFCLK_N and the 3V3 rail. These are route
+implementation failures; Path A and production CAD remain unchanged.
 V526 proves the U1.39-to-C3.1 graph with an exact branch-removal negative
 control, but its raised outer B.Cu return is rejected by native DRC for
 RTL_5V-via clearance/crossing and REFCLK corridor interaction (23 findings).
