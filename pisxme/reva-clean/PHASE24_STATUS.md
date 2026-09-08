@@ -6783,3 +6783,7 @@ the remaining rail, reset, SPI, and high-speed support field is open.
 V270 is the retained RSET-route basis: native U1.51/R1.1 connectivity passes;
 DRC reports 307 findings / 31 opens with no shorts/crossings and zero footprint
 errors. Rail, control, SPI, and high-speed support remain open.
+V274 is the retained combined crystal/RSET/RTL_3V3 support basis: native
+connectivity confirms four RTL_3V3 joins in addition to the V269 crystal and
+V270 RSET joins. DRC reports 319 findings / 27 opens with no shorts/crossings
+and zero footprint errors; the full Path-B support field remains open.

@@ -1697,3 +1697,18 @@ one ordinary via, and a local F.Cu landing. Native connectivity confirms the
 join. Native DRC reports 307 findings / 31 opens with no `shorting_items` or
 `tracks_crossing` class and zero footprint errors. The remaining rail,
 control, SPI, and high-speed support paths remain open.
+
+## V271–V273 rail escape trials — rejected
+
+V271 and V272 exposed, then corrected, U1.20/U1.18 pad-field interactions in
+the RTL_3V3 departure. V273 uses the corrected U1.20 north escape and direct
+local branches to C3.1, R3.2, and R2.2. It has no shorting or crossing class,
+but the U1.52-to-U1.34 endpoint remained open.
+
+## V274 completed RTL_3V3 local joins — retained, not promoted
+
+V274 adds the final short same-net join between the U1.52 branch and U1.34.
+Native connectivity confirms U1.20→C3.1, U1.34→R3.2, U1.39→R2.2, and
+U1.52→U1.34. Native DRC reports 319 findings / 27 opens with no
+`shorting_items` or `tracks_crossing` class and zero footprint errors. SPI,
+PEDET, reset, remaining rail branches, and high-speed paths remain open.
