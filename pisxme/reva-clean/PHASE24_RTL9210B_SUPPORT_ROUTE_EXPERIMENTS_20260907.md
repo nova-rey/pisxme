@@ -1072,6 +1072,14 @@ crossing; V13/V14 moved the transition to B.Cu but retained via/rail-field
 conflicts; V15 regressed with multiple shorts and crossings. The route class
 is rejected. V6 remains the current baseline and no Path-B authority or
 production CAD changed.
+V491 adds the rotated native U1.17 RTL_5V branch to C5.1. A direct F.Cu
+route crossed the retained REFCLK_N corridor and M.2 supply launch; the
+corrected implementation uses a short F.Cu escape, an ordinary through-via,
+a B.Cu corridor, and an F.Cu C5 launch. Native saved-board connectivity and
+one trace-removal negative control pass. Native DRC has zero errors; nine
+inherited incomplete-fixture warnings remain. V491 is retained as the
+RTL_5V branch primitive; remaining supply pins and support nets stay open.
+No Path-A or production CAD changed.
 
 ## SPI test-access V1 — rejected
 
@@ -2341,3 +2349,11 @@ trace-removal negative control pass. Native DRC has zero shorts, crossings,
 and clearance errors; ten inherited incomplete-fixture warnings remain.
 V489 is retained as the RSET support primitive; rail, SPI, reset, sideband,
 and control integration remain open. No Path-A or production CAD changed.
+V491 adds the rotated native U1.17 RTL_5V branch to C5.1. A direct F.Cu
+route crossed the retained REFCLK_N corridor and M.2 supply launch; the
+corrected implementation uses a short F.Cu escape, an ordinary through-via,
+a B.Cu corridor, and an F.Cu C5 launch. Native saved-board connectivity and
+one trace-removal negative control pass. Native DRC has zero errors; nine
+inherited incomplete-fixture warnings remain. V491 is retained as the
+RTL_5V branch primitive; remaining supply pins and support nets stay open.
+No Path-A or production CAD changed.

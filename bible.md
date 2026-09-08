@@ -6204,6 +6204,12 @@ basis. All four MDI pairs and both REFCLK nets pass native saved-board
 connectivity and six negative controls; native DRC reports zero
 shorts/crossings/clearances. Support/control integration remains open; no
 Path-A or production-CAD change.
+2026-09-08: RTL9210B V491 adds the rotated native U1.17 RTL_5V branch to
+C5.1. The corrected F.Cu/B.Cu/ordinary-via corridor avoids REFCLK_N and the
+M.2 supply launch. Native saved-board connectivity and one trace-removal
+negative control pass. Native DRC has zero errors; nine inherited
+incomplete-fixture warnings remain. Remaining supply pins and support nets
+stay open; no Path-A or production-CAD change.
 2026-09-08: RTL9210B V488 adds the rotated-U1 crystal support from native
 XTAL_IN/XTAL_OUT pads through Y1/C1/C2 with ordinary through-via escapes and
 explicit local GND returns. Both crystal groups and two trace-removal negative
@@ -6223,3 +6229,9 @@ one trace-removal negative control pass. Native DRC has zero shorts,
 crossings, and clearance errors; ten inherited incomplete-fixture warnings
 remain. Rail, SPI, reset, sideband, and control integration remain open; no
 Path-A or production-CAD change.
+2026-09-08: RTL9210B V491 adds the rotated native U1.17 RTL_5V branch to
+C5.1. The corrected F.Cu/B.Cu/ordinary-via corridor avoids REFCLK_N and the
+M.2 supply launch. Native saved-board connectivity and one trace-removal
+negative control pass. Native DRC has zero errors; nine inherited
+incomplete-fixture warnings remain. Remaining supply pins and support nets
+stay open; no Path-A or production-CAD change.
