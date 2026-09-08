@@ -6199,3 +6199,8 @@ the next attempt must regenerate their source fields together.
 REFCLK_N conflicts with XTAL_OUT/U1 support and REFCLK_P crossing the TX_N
 corridor. V475 and V479 remain the clean independent primitives; no
 production CAD or Path-A change.
+2026-09-08: RTL9210B V487 is the first complete six-net high-speed channel
+basis. All four MDI pairs and both REFCLK nets pass native saved-board
+connectivity and six negative controls; native DRC reports zero
+shorts/crossings/clearances. Support/control integration remains open; no
+Path-A or production-CAD change.

@@ -2311,3 +2311,10 @@ DRC rejected it for REFCLK_N/XTAL_OUT and U1-support shorts/clearances plus a
 REFCLK_P/TX_N corridor crossing. The failure confirms that REFCLK source and
 support geometry must be regenerated together with the complete QFN field;
 V475 and V479 remain the clean independent primitives.
+V483-V486 progressively moved REFCLK support rows and the TX_N endpoint;
+each was preserved with its native DRC result. V487 is the first complete
+six-net channel basis: all four MDI pairs and both REFCLK nets pass native
+saved-board connectivity, six trace-removal negative controls, and native DRC
+zero shorts, crossings, and clearance violations. It uses the approved
+0.13208-mm high-speed width and ordinary through-vias. Support/control
+integration remains open; no Path-A or production CAD changed.
