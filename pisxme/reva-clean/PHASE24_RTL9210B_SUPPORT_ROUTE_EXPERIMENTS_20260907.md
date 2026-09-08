@@ -2200,3 +2200,11 @@ rejected it with RX_P/RX_N source-field contact, REFCLK_N/RTL_3V3 conflicts,
 and a malformed RX_P handoff that left a dangling transition. It is rejected
 as a route-authoring/coallocation trial; V448 remains the clean REFCLK
 primitive and V328 remains the authoritative lane primitive.
+V451 retained the clean V443-style REFCLK_P launch and moved REFCLK_N's
+transition upward before its lower B.Cu corridor. Native DRC reported zero
+shorts/crossings with only inherited warnings and 26 inherited opens. V452
+added the exact V328 lane primitive; native DRC exposed the real shared-field
+conflicts: RX_N intersects the REFCLK_N source/transition, RX_P approaches
+U1 RTL_3V3, and the lower REFCLK trunk approaches the RX_P transition. V452
+is rejected as a coallocation candidate, while V451 remains the clean
+REFCLK basis and V328 remains the lane authority.

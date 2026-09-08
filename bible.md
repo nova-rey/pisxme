@@ -6130,3 +6130,7 @@ remains open for co-allocation with the lane source field and full support.
 2026-09-08: Rejected RTL9210B REFCLK/lane coallocation V450. Native DRC found
 source-field and RTL_3V3 conflicts plus a malformed RX_P handoff. V448 and
 V328 remain the retained isolated primitives; no production-CAD change.
+2026-09-08: V451 retained a clean isolated REFCLK primitive; V452 added the
+exact V328 lane and exposed the true shared QFN-field conflicts between
+REFCLK_N, RX_N, RX_P, and RTL_3V3. V452 is rejected; no Path-A or production
+CAD changed.
