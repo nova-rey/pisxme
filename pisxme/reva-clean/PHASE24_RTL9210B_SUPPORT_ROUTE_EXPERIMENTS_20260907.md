@@ -1689,3 +1689,11 @@ Native DRC reports 293 findings / 32 opens with no `shorting_items` or
 `tracks_crossing` class and zero footprint errors. Rail, reset, SPI, and
 remaining support connections are still open, so V269 is retained as the
 crystal-field basis rather than promoted as a complete Path-B board.
+
+## V270 RSET route on retained support placement — retained, not promoted
+
+V270 adds the moved RSET path from U1.51 to R1.1 using a short F.Cu escape,
+one ordinary via, and a local F.Cu landing. Native connectivity confirms the
+join. Native DRC reports 307 findings / 31 opens with no `shorting_items` or
+`tracks_crossing` class and zero footprint errors. The remaining rail,
+control, SPI, and high-speed support paths remain open.

@@ -5833,3 +5833,7 @@ Native connectivity passed U1.53/Y1.1, U1.54/Y1.2, C1.1/Y1.1, and C2.1/Y1.2;
 native DRC reported 293 findings / 32 opens with no shorting or crossing class
 and zero footprint errors. V267/V268 were rejected; Path A and production CAD
 remain unchanged.
+2026-09-07: Retained RTL9210B V270 RSET routing evidence. Native U1.51 to
+R1.1 connectivity passed; native DRC reported 307 findings / 31 opens with no
+shorting or crossing class and zero footprint errors. Remaining Path-B support
+routes are open; Path A and production CAD remain unchanged.

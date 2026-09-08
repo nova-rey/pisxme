@@ -6780,3 +6780,6 @@ V269 is the retained crystal-field basis: four native net joins (U1/Y1/C1/C2)
 pass, while DRC reports 293 findings / 32 opens with no shorts/crossings and
 zero footprint errors. V267/V268 are rejected crystal route implementations;
 the remaining rail, reset, SPI, and high-speed support field is open.
+V270 is the retained RSET-route basis: native U1.51/R1.1 connectivity passes;
+DRC reports 307 findings / 31 opens with no shorts/crossings and zero footprint
+errors. Rail, control, SPI, and high-speed support remain open.
