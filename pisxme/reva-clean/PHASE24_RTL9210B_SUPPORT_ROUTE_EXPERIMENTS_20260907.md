@@ -3,6 +3,11 @@
 ## Current 2026-09-08 state — V562/V570
 
 V562 is the retained corrected support baseline. It regenerates the complete
+The V35 rotated-U1 support reference was natively re-saved after zone refill
+as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`. Current DRC
+is 4 inherited warnings; SPI and XTAL/RSET native audits plus independent
+trace-removal controls pass. Retain this as the current source-field reference
+for re-authoring, not as production closure.
 RTL_1V1 field from the saved V342 source without copying duplicate RSET or
 crystal copper; native connectivity and the route/zone negative control pass
 for all eight U1 1V1 pads plus C4.1. Its native DRC remains open.

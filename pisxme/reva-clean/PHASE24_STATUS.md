@@ -4,6 +4,13 @@
 
 The active work item remains isolated RTL9210B Path-B support qualification;
 Path A, production/acreage CAD, and unrelated Phase 24 work are preserved.
+The historical V35 rotated-U1 support reference was re-saved through native
+zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
+Current native DRC is 4 inherited warnings, and the native five-net SPI plus
+XTAL_IN/XTAL_OUT/RSET audits pass with trace-removal negative controls. This
+is the current source-field/reference basis for the next implementation pass;
+it is not yet production closure because rails, controls, USB, lane-0,
+REFCLK, M.2, power, firmware, and integrated Path-B gates remain open.
 V562 is the retained corrected support baseline: its native saved-board audit
 connects the complete RTL_1V1 and RTL_3V3 support groups with a working
 trace/zone-removal negative control. V563, V564, and V565 are rejected

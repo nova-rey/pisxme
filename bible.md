@@ -6606,3 +6606,8 @@ V598 shorted its B.Cu transition into retained RTL_1V1/RTL_5V fields; V599's
 direct F.Cu outer departure crossed the PEDET/5V/3V3/CLKREQ source field.
 The next SPI pass must co-author the shared QFN escape; V594/V595 remain the
 valid PEDET/CLKREQ-plus-rail basis.
+2026-09-08: Re-saved the historical V35 rotated-U1 support reference through
+native zone refill as PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED.
+Current native DRC is 4 inherited warnings; five-net SPI and XTAL/RSET audits
+pass with trace-removal negative controls. This is the current source-field
+reference, not production closure.
