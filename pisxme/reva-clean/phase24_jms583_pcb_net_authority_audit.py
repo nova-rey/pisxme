@@ -21,4 +21,4 @@ for number, expected in sorted(JMS.items()):
 if failures:
     for failure in failures: print("FAIL", failure)
     raise SystemExit(1)
-print("PASS U11 64-pad native PCB net authority")
+print("PASS U11 64 signal pads plus grounded exposed pad native PCB net authority")
