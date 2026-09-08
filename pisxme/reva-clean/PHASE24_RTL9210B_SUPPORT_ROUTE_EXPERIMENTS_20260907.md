@@ -1080,6 +1080,19 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V499 tests U1.16 RTL_1V1 to C4.1 on the V498 co-allocated source field and
+is rejected by native DRC because the first escape collides with the retained
+RTL_5V handoff and adjacent source-field geometry. V500 moves C4 beside the
+U1.16 launch and tests an ordinary through-via bottom-layer corridor; native
+connectivity is valid, but the via conflicts with RTL_5V and the REFCLK_P
+field. V501 preserves the moved C4 and separates the via handoff; its native
+connectivity and trace-removal negative control pass, but DRC finds the
+REFCLK_P corridor and RTL_5V via/CLKREQ clearance conflicts. V502 and V503
+test F.Cu-only lower-edge doglegs; both native connectivity audits pass with
+negative controls, but V502 clips U1 pad 10 and V503 clips the exposed-pad /
+lower no-connect/reset field. These are route-implementation failures, not
+evidence against RTL9210B or the storage architecture. All are isolated
+Path-B evidence; Path A and production CAD remain unchanged.
 V499 tested native U1.16 RTL_1V1 to C4.1. Connectivity and the negative
 control pass, but native DRC rejects the isolated branch: the initial route
 crossed the RTL_5V handoff, and the left detour crossed the SPISO2/RTL_3V3

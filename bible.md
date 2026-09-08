@@ -6210,6 +6210,11 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V499-V503 continue isolated RTL_1V1 support routing.
+Each saved-board native connectivity audit passes with a trace-removal
+negative control. V499-V503 are rejected by native DRC for local source-field
+collisions (RTL_5V, REFCLK_P, QFN no-connect/exposed-pad geometry); they are
+retained as route evidence only. Path A and production CAD remain unchanged.
 2026-09-08: RTL9210B V496 adds native U1.39 RTL_3V3 to the retained C3 rail.
 The corrected left-side F.Cu escape joins the existing U1.34/C3 handoff and
 avoids XTAL_IN. Native aggregation connectivity and one trace-removal
