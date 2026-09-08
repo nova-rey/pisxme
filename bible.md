@@ -6102,3 +6102,7 @@ co-authored RSET below the 3V3 channel and achieved native DRC zero shorts and
 zero crossings with 27 open connections, while XTAL_OUT remained removed for
 isolation. This is an intermediate support-channel basis, not Path-B closure;
 Path A and production CAD remain unchanged.
+2026-09-08: Rejected RTL9210B REFCLK V435-V437 source/launch trials. Native
+DRC identified exposed-pad/XTAL interactions, adjacent J1 MDI contact entry,
+and 0.4-mm QFN P/N source-field conflicts. These remain route-authoring
+evidence; no Path-A or production CAD changed.

@@ -2162,3 +2162,10 @@ escape/via interaction and a J1.53 launch conflict. Both are rejected as
 route-implementation failures. They establish the needed monotonic
 connector ordering; the next pass must co-allocate REFCLK with the lane
 source transitions and use a clearance-aware source escape.
+V435-V437 continued REFCLK co-allocation. V435/V436 showed that leftward
+transitions enter the exposed pad or XTAL_OUT; V437 separated the outer J1
+launches but still hit the adjacent MDI pad and the 0.4-mm U1 REFCLK P/N
+source spacing. These are valid native-D RC failures of the current broad
+escape primitives, not Path-B closure. The next source allocation must use a
+complete co-regenerated QFN fanout (including lane/XTAL) with verified local
+clearance; no production CAD changed.
