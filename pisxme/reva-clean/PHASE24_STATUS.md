@@ -36,6 +36,12 @@ leading findings include dangling M.2 labels plus inherited off-grid and
 same-local/global-label warnings. The raw report is retained as an open ERC
 gate; the USB3 endpoint audit does not waive it.
 
+Saved-copper metrics for FULL7 are recorded in
+`PHASE24_DUAL_MODE_STORAGE_NC39_USB3_FULL7-metrics.txt`. The source legs have
+three vias each and measured length proxies of 149.160/145.160 mm (RX N/P)
+and 141.960/137.960 mm (TX N/P); local bridge legs are shorter but unequal.
+These are diagnostic measurements, not a controlled-impedance or skew pass.
+
 The live USB3 map audit then found and corrected a second source-authority
 defect: U12 TX pins 24/25 are the bridge-side `JMS_USB3_TXN/P` nets across
 C87/C86, while U12 RX pins 22/23 remain direct `USB_RXN1/P` bridge links.

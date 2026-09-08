@@ -33,6 +33,11 @@ Fresh native ERC reports 927 violations on the current source, including
 dangling M.2 labels and inherited off-grid/same-label findings. ERC remains
 an independent open gate.
 
+FULL7 saved-copper metrics are retained in
+`PHASE24_DUAL_MODE_STORAGE_NC39_USB3_FULL7-metrics.txt`. They expose
+source-leg length imbalance and three-via-per-pair paths; the measurements are
+diagnostic only and do not close impedance, skew, or DRC requirements.
+
 The live U12 map was also reconciled at the source-authoring boundary:
 pins 24/25 use bridge-side `JMS_USB3_TXN/P` across the TX coupling capacitors,
 while pins 22/23 retain direct `USB_RXN1/P` bridge links. The resulting

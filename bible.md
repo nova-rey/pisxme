@@ -7096,6 +7096,11 @@ authority, exact JMS583/selector/M-key pad counts, authoritative component
 maps, selector truth table (SATA=0, NVMe=1), and mode contract all pass.
 Native copper and DRC closure remain open.
 
+2026-09-08: Added saved-copper USB3 metrics for FULL7. Source legs measure
+149.160/145.160 mm RX N/P and 141.960/137.960 mm TX N/P, with three vias
+each; local legs are also unequal. These remain diagnostic measurements, not
+a skew, impedance, or DRC pass.
+
 2026-09-08: Fresh native schematic ERC on the live source reports 927
 violations, led by dangling M.2 labels and inherited off-grid/same-label
 findings. The raw report is retained; endpoint and mode-audit passes do not
