@@ -111,6 +111,13 @@ was rejected; V16's corrected branch passes the native eight-net endpoint
 audit including R81.1-to-C85.1 and the combined trace-removal negative
 control. Native DRC remains 819 violations / 499 inherited unconnected
 items, so this is support progress rather than Phase 24 closure.
+The full local ground-stitch trial was corrected before retention: R81.2
+(`STORAGE_3V3`) is no longer incorrectly tied to POWER_GND, and the AVDDL
+B.Cu leg is clear of the C80 stitch. After native zone refill, C80/C81/C82/
+C83/C84/C85/R80/R83/Y10 ground pads all join U11.63 in saved connectivity.
+The filled V2 candidate reports 520 violations / 499 inherited donor opens,
+with no authored JMS support short/crossing class. Remaining signal branches,
+power returns, and Phase 24 closure remain open.
 The retained eight-net cohort was refilled with KiCad's native zone filler;
 the filled saved candidate reports 519 DRC violations / 499 inherited donor
 unconnected items. This materially removes the unfilled-zone via noise, but

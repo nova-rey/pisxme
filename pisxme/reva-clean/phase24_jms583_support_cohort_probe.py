@@ -34,9 +34,9 @@ route(b,'JMS_AVDD33','U11','19',[(142.2,140),(147,140),(147,143)])
 route(b,'JMS_AVDD33','C80','1',[(147,143)])
 na=b.FindNet('JMS_AVDDL'); s=xy(u.FindPadByNumber('20').GetPosition()); d=xy(b.FindFootprintByReference('C83').FindPadByNumber('1').GetPosition())
 seg(b,na,s,(141.8,140.5)); via(b,na,(141.8,140.5))
-for a,z in [((141.8,140.5),(154.5,144))]:
+for a,z in [((141.8,140.5),(154.5,142))]:
     t=pcbnew.PCB_TRACK(b);t.SetStart(P(*a));t.SetEnd(P(*z));t.SetLayer(pcbnew.B_Cu);t.SetWidth(pcbnew.FromMM(.20));t.SetNet(na);t.SetNetCode(na.GetNetCode());b.Add(t)
-via(b,na,(154.5,144));seg(b,na,(154.5,144),(154.5,147));seg(b,na,(154.5,147),d)
+via(b,na,(154.5,142));seg(b,na,(154.5,142),(154.5,147));seg(b,na,(154.5,147),d)
 n=b.FindNet('JMS_VCCO');s=xy(u.FindPadByNumber('6').GetPosition());d=xy(b.FindFootprintByReference('C81').FindPadByNumber('1').GetPosition())
 seg(b,n,s,(134.5,s[1]));via(b,n,(134.5,s[1]));
 for a,z in [((134.5,s[1]),(134.5,145)),((134.5,145),(147,145))]:
@@ -53,4 +53,19 @@ seg(b,n,src,v1);via(b,n,v1)
 for a,z in [(v1,(138.2,140)),((138.2,140),v2)]:
     t=pcbnew.PCB_TRACK(b);t.SetStart(P(*a));t.SetEnd(P(*z));t.SetLayer(pcbnew.B_Cu);t.SetWidth(pcbnew.FromMM(.20));t.SetNet(n);t.SetNetCode(n.GetNetCode());b.Add(t)
 via(b,n,v2);seg(b,n,v2,d)
+# Give each local support return explicit access to the refilled POWER_GND
+# planes.  These are ordinary through-vias outside the passive pads; no
+# synthetic graph edges or via-in-pad are used.
+for ref, padnum, dx, dy in [
+    ('C80','2',1.0,0),('C81','2',1.0,0),('C82','2',1.0,0),
+    ('C83','2',1.0,0),('C84','2',1.0,0),('C85','2',1.0,0),
+    ('R80','2',1.0,0),('R83','2',1.0,0),
+]:
+    p=xy(b.FindFootprintByReference(ref).FindPadByNumber(padnum).GetPosition()); q=(p[0]+dx,p[1]+dy)
+    via(b,b.FindNet('POWER_GND'),q); seg(b,b.FindNet('POWER_GND'),p,q)
+for ref,padnum in [('Y10','3'),('Y10','4')]:
+    p=xy(b.FindFootprintByReference(ref).FindPadByNumber(padnum).GetPosition()); q=(p[0],p[1]+1.0)
+    via(b,b.FindNet('POWER_GND'),q); seg(b,b.FindNet('POWER_GND'),p,q)
+pg=b.FindNet('POWER_GND'); p=xy(u.FindPadByNumber('63').GetPosition()); q=(p[0],p[1]-1.4)
+via(b,pg,q); seg(b,pg,p,q)
 b.Save(str(OUT));print(OUT)

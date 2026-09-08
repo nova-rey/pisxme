@@ -7057,6 +7057,12 @@ of R81 and reaches C85.1. Native eight-net endpoint connectivity and the
 combined trace-removal negative control pass. DRC remains 819 violations /
 499 inherited unconnected items; no validation rule was relaxed.
 
+2026-09-08: Corrected the JMS583 full ground-stitch trial by removing an
+invalid R81.2-to-POWER_GND stitch and moving the AVDDL B.Cu leg clear of the
+C80 return via. Native refilled connectivity shows all local JMS583 support
+ground pads join U11.63. The saved filled V2 report is 520 violations / 499
+inherited donor opens, with no authored JMS support short/crossing class.
+
 2026-09-08: Fixed the JMS583 structural support audit to resolve relative
 schematic inputs from its repository directory. The audit now passes from
 the repository root against STORAGE.kicad_sch, covering required support
