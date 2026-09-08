@@ -6793,3 +6793,10 @@ the corrected SPICS basis: native U1.24/U2.1 connectivity and a trace-removal
 negative control pass; native DRC has 335 findings / 26 inherited opens, no
 shorting or crossing class, and zero footprint errors. Remaining SPI, PEDET,
 reset, rail, and high-speed support routes are still open.
+V279–V281 are rejected SPISO route implementations: each retained a real
+crossing with the promoted SPICS/crystal/support field. V282 is retained as
+the corrected two-net SPI basis: native U1.24/U2.1 and U1.23/U2.2 connectivity
+pass, both trace-removal negative controls pass, and native DRC has 366
+findings / 25 inherited opens with no shorting or crossing class and zero
+footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
+high-speed support remain open.

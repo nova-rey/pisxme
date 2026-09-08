@@ -1733,3 +1733,23 @@ the inherited unfinished support field, not a SPICS failure. The native
 endpoint audit and its trace-removal negative control both pass. V278 is
 retained as the SPICS route basis; SPISO, SPISO3, SPICLK, SPISI, PEDET,
 reset, remaining rail branches, and high-speed paths remain open.
+
+## V279–V281 SPISO corridor trials — rejected implementations
+
+V279 attempted a lower B.Cu SPISO lane but crossed the V278 SPICS source and
+return lanes and also crossed at the U1 adjacent-pad escape. V280 moved the
+lane but still crossed the SPICS horizontal branch and had a pad-field
+crossing. V281 fixed the U1 north escape and endpoint dogbone but retained a
+single SPISO/SPICS B.Cu crossing. These are route-implementation failures.
+
+## V282 SPISO split-layer corridor — retained, not promoted
+
+V282 retains V278 and adds SPISO from actual U1.23=(99.2,58.05) to
+U2.2=(84.5,70.0). It transitions from the U1 north escape to B.Cu, crosses
+to F.Cu before the SPICS endpoint, and returns to a lower B.Cu lane with
+ordinary through-vias. Native KiCad DRC reports 366 findings / 25 unconnected
+items, zero `tracks_crossing`, zero `shorting_items`, and zero footprint
+errors. Native endpoint audits and trace-removal negative controls pass for
+both SPICS and SPISO. V282 is retained as the two-net SPI corridor basis;
+SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and high-speed paths
+remain open.

@@ -5847,3 +5847,9 @@ crossing implementations. Native U1.24/U2.1 connectivity and trace-removal
 negative control passed; DRC reported 335 findings / 26 inherited opens with
 no shorting or crossing class and zero footprint errors. Remaining support
 routes are open; Path A and production CAD remain unchanged.
+2026-09-07: Retained RTL9210B V282 split-layer SPISO basis after rejecting
+V279–V281 crossing implementations. Native U1.24/U2.1 and U1.23/U2.2
+connectivity passed with trace-removal negative controls; DRC reported 366
+findings / 25 inherited opens with no shorting or crossing class and zero
+footprint errors. Remaining SPI/support routes are open; Path A and
+production CAD remain unchanged.
