@@ -1846,3 +1846,13 @@ shorting or crossing class and zero footprint errors. Native endpoint and
 trace-removal negative-control audits pass. V286 is retained as the SPISO3
 basis; SPICLK, SPISI, PEDET, reset, remaining rails, and high-speed paths
 remain open.
+
+## V312/V313 RTL_5V perimeter trials — rejected implementations
+
+V312 and V313 were tested from the saved V311 board using native pad-derived
+endpoints and ordinary F.Cu/B.Cu through-vias. Each reduced the native
+unconnected count from 18 to 16 by joining U1.17/U1.33/C5.1. V312 introduced
+three short/crossing classes at the upper QFN field; V313 moved the escape to
+a lower perimeter but retained one short and three crossings. Both are
+rejected as route-implementation failures. No Path-A or production CAD
+changed, and V311 remains the retained sideband basis.

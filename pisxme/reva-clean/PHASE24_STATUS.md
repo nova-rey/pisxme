@@ -6882,3 +6882,11 @@ V284 is rejected: the high-north SPISO3 trial avoids the lower SPI crossings
 but creates a native SPISO3/GND short at the C1 crystal-support pad. This is
 another route-implementation failure; the next experiment must allocate
 SPISO3, SPICLK, and SPISI together around the source/support field.
+
+V312/V313 are rejected RTL_5V implementation trials from the saved V311
+sideband basis. Both close the native RTL_5V endpoint opens, but V312 creates
+three short/crossing classes in the upper QFN field and V313 creates one
+short plus three crossing classes on its perimeter escape. They are route
+implementation failures, not evidence against the RTL9210B support topology.
+V311 remains the current disposable reference; RTL_1V1, RTL_3V3, and lane-0
+support remain open.

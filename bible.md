@@ -1,5 +1,11 @@
 # Append-only project bible
 
+2026-09-07: Rejected disposable RTL9210B V312/V313 RTL_5V perimeter trials.
+Both native-pad-derived trials closed the RTL_5V endpoint opens but introduced
+real short/crossing classes (V312: three; V313: one short and three
+crossings). They remain preserved evidence only; V311 is the current retained
+sideband basis and Path A/production CAD are unchanged.
+
 
 ## 2026-09-06 — Authorized dual-mode storage upgrade qualification checkpoint
 
