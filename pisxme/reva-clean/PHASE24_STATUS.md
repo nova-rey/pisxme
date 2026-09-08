@@ -35,6 +35,11 @@ violations / 499 inherited unconnected items; three inherited J1 launch
 shorts and local track crossings remain, so it is routing evidence only.
 FULL5 and FULL6 are superseded routing evidence.
 
+The source-launch relocation trial `PHASE24_DUAL_MODE_STORAGE_NC39_USB3_FULL10`
+is rejected: native connectivity still passed, but inward launch vias created
+new shorts into J1 12V pads and the U11 ground pad. It is preserved as a
+route-implementation negative result; FULL7 remains the active basis.
+
 The current native-pad support routing trial is rejected: native DRC reports
 834 violations and 499 inherited unconnected items, including authored
 support crossings. It remains disposable evidence only. The structural

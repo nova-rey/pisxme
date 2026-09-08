@@ -7091,6 +7091,11 @@ native endpoint assertions; native DRC remains open at 880 violations / 499
 inherited unconnected items. Root-native XML also proves canonical CM5 USB3
 ownership, and all prior contradictory prose is now explicitly superseded.
 
+2026-09-08: Rejected source-launch relocation FULL10. Although all ten USB3
+endpoints remained natively connected, inward vias introduced shorts to J1
+12V pads and U11 ground; the trial is preserved as negative route evidence
+and FULL7 remains the active basis.
+
 2026-09-08: Continued USB3 routing against the corrected source map. FULL7
 passes all ten native endpoint assertions and reduces native DRC to 827
 violations / 499 inherited opens; remaining local crossings and three

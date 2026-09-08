@@ -32,6 +32,10 @@ reduces native DRC to 827 violations / 499 inherited unconnected items.
 Three inherited J1 launch shorts and local crossings remain, so this is not
 closure; FULL5 and FULL6 are superseded routing evidence.
 
+The inward source-launch relocation FULL10 was rejected after native DRC
+showed new shorts into J1 12V pads and the U11 ground pad. It remains a
+negative route experiment, not a placement or architecture finding.
+
 - The support-symbol authoring path emits canonical JMS583 support nets using
   the native KiCad label ordering. The endpoint-overlap repair removed stale
   generated label atoms at U11 pin 12/pin 39, and the shared-selector maps no
