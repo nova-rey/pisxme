@@ -320,6 +320,13 @@ probe's 0.15 mm tracks. Both U11 crystal endpoints pass native connectivity
 and a trace-removal negative control; native DRC remains 519 violations / 499
 inherited donor opens, so this does not close the support or Phase 24 gates.
 
+The first combined support/crystal cohort is rejected: overlaying the
+production-width XIN/XOUT escape on the retained XAVDDH support path raises
+native DRC to 527 violations / 499 inherited opens, with authored B.Cu
+crossings and an XOUT-to-XAVDDH short at the QFN-side transition. The crystal
+endpoint proof remains valid in isolation; the next route must co-allocate
+the crystal on the opposite side of the XAVDDH diagonal.
+
 The earlier JMS583 crystal DRC receipts, including divergent, split-layer,
 pad-width, and net-name variants, are retained as raw historical evidence;
 they are not current acceptance criteria and do not override the production-

@@ -7039,6 +7039,12 @@ trace-removal negative control pass; the V10 DRC remains 811 violations / 499
 inherited unconnected items. This is placement-authority progress, not full
 Phase 24 closure.
 
+2026-09-08: Rejected the first combined JMS583 support/crystal cohort. The
+isolated production-width XIN/XOUT route conflicts with the retained XAVDDH
+diagonal when integrated, producing authored B.Cu crossings and an XOUT to
+XAVDDH short. This is route-allocation evidence; the crystal and support
+architecture remain unchanged.
+
 2026-09-08: Published the previously untracked JMS583 crystal DRC receipts
 for divergent, split-layer, pad-width, and net-name experiments. They remain
 immutable historical route evidence; the production-width discriminator is
