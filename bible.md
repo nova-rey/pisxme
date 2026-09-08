@@ -6921,3 +6921,8 @@ The next bounded support placement moved R80/L10/Y10 beside U11 and corrected
 the L10 LXO net alias. The all-net direct support trial was rejected at one
 real reset short and six crossings; co-location is retained as a better basis,
 but native-pad-aware per-net source escapes are still required.
+
+The refreshed committed local-anchor placement report remains 857 DRC
+violations and 499 unconnected items with eight crossing findings and no
+shorting class on the placement-only board. This confirms the coordinate
+correction is stable; the routed all-net trial remains separately rejected.
