@@ -118,6 +118,13 @@ placement overlaps the USB3 field, including a JMS_USB3_TXN/USB_RXP1 short.
 This is route/placement implementation evidence only; the clean USB3 basis
 remains active and the support cohort must be co-authored around it.
 
+The follow-up north-side support co-author was also rejected. Its native
+support endpoint and trace-removal audits pass, but native DRC reports 924
+violations / 499 unconnected items with new support-to-USB, XIN/AVDD33, and
+XAVDDH return conflicts. This confirms that support placement and USB3 escape
+must be allocated jointly with native obstacles; the north translation alone
+is not a viable route.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

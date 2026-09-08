@@ -87,6 +87,13 @@ USB_RXP1 short. The support cohort remains a reusable primitive, not an
 integrated route; the next pass must allocate its placement and escapes
 against the USB3 geometry together.
 
+The north-side support co-author is likewise rejected: support endpoint and
+negative-control audits pass, but native DRC reports 924 violations / 499
+unconnected items and new local support-to-USB, crystal/rail, and return-via
+conflicts. This is preserved as placement/route evidence; the next support
+pass must use obstacle-aware native-pad allocation across the complete local
+field.
+
 The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route
 evidence only; FULL7 is still the active basis.

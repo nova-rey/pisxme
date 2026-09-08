@@ -7345,3 +7345,9 @@ passed, but native DRC found 870 violations / 499 unconnected items and new
 local support-placement conflicts, including a JMS_USB3_TXN/USB_RXP1 short.
 The composite is preserved as rejected evidence; support placement must be
 co-authored around the USB3 field.
+
+2026-09-08: Rejected the north-side JMS583 support co-author. Native support
+endpoint and negative-control audits passed, but DRC found 924 violations /
+499 unconnected items plus new support-to-USB, crystal/rail, and return-via
+conflicts. The placement-only translation is preserved as evidence; the next
+pass requires joint obstacle-aware allocation with the USB3 field.
