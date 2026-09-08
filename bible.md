@@ -5980,3 +5980,8 @@ channel plan; no production CAD changed.
 removed track crossings, but native DRC found seven real escape/via shorts
 against RSET, XTAL_OUT, and RTL_3V3. Preserved as evidence; production CAD
 and Path A remain unchanged.
+2026-09-07: Retained RTL9210B V361 coordinated RTL_1V1-first basis after
+native zone refill. V360's initial unfilled-zone connectivity was not
+accepted; V361 used pcbnew ZONE_FILLER before audit. Native DRC reports zero
+shorting/crossing classes, all nine 1V1 endpoints connect, and the trace-
+removal negative control passes. Neighboring support routes remain open.

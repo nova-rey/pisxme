@@ -1952,3 +1952,13 @@ chosen escapes/via locations still produced 7 native shorting classes against
 RSET, XTAL_OUT, and RTL_3V3. It is rejected; the result supports using a
 power-region approach only after the package escapes and neighboring support
 channels are co-allocated with verified clearance.
+
+V360/V361 are retained as a coordinated 1V1-first basis. V360 removed only
+the disposable RTL_3V3/RSET/XTAL copper and authored native U1/C4 escapes plus
+an In2 RTL_1V1 region. Its first saved board had an unfilled zone, so its
+connectivity count was not accepted. V361 refilled that saved zone with the
+native `ZONE_FILLER` and was then audited from actual pads/tracks/vias/zones.
+Native DRC reports 0 shorting items, 0 tracks-crossing items, and 34
+unconnected items; all nine asserted 1V1 endpoints connect, and the
+trace-removal negative control fails as required. This closes the 1V1-first
+allocation hypothesis only, not the neighboring support routes or Path B.
