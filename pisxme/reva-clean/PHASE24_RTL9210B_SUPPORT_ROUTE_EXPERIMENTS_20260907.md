@@ -257,6 +257,16 @@ V102 is promoted only as the disposable 1V1 edge-group basis; remaining
 RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
 remain open.
 
+## V288 SPICLK short-escape corridor — retained, not promoted
+
+V288 uses the actual U1.19=(100.8,58.05) and U2.6=(89.3,70.0) endpoints,
+placing the source via at (100.8,57.5) before the RTL_3V3 handoff and using
+the retained high-north B.Cu destination corridor. Native connectivity
+passes. Native DRC reports 402 findings / 23 inherited opens with zero
+`tracks_crossing`, zero `shorting_items`, and zero footprint errors. V288 is
+retained as the SPICLK basis; SPISI, PEDET, reset, remaining rails, and
+high-speed support remain open.
+
 ## V287 SPICLK high-north trial — rejected implementation
 
 V287 attempted an isolated SPICLK corridor from U1.19=(100.8,58.05) to

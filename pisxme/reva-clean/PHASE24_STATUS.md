@@ -6800,6 +6800,11 @@ pass, both trace-removal negative controls pass, and native DRC has 366
 findings / 25 inherited opens with no shorting or crossing class and zero
 footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
 high-speed support remain open.
+V288 is retained as the SPICLK basis: the shorter U1.19 escape reaches its
+through-via before the RTL_3V3 handoff, native connectivity joins U1.19/U2.6,
+and native DRC reports 402 findings / 23 inherited opens with no shorting or
+crossing class and zero footprint errors. SPISI, PEDET, reset, remaining rails,
+and high-speed support remain open.
 V287 is rejected: the independent SPICLK trial crosses the retained
 RTL_3V3 source-field handoff at the U1 north escape. The high-north B.Cu
 destination corridor itself remains plausible, but the next pass must

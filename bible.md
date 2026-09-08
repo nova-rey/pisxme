@@ -523,6 +523,10 @@ an order-preserving two-layer SPI partition. Native KiCad reports 30
 violations / 40 opens; dominant failures remain the rotated U1 QFN source
 escape and retained XTAL_OUT region. U2 footprint coordinates are corrected;
 Path A and production CAD remain unchanged.
+2026-09-07: Retained RTL9210B V288 SPICLK short-escape basis. Native U1.19/U2.6
+connectivity passed; DRC reported 402 findings / 23 inherited opens with no
+shorting or crossing class and zero footprint errors. Remaining support routes
+are open; Path A and production CAD remain unchanged.
 2026-09-07: Rejected RTL9210B V287 isolated SPICLK route. Native DRC found
 the U1 north escape crossing the retained RTL_3V3 handoff. The destination
 corridor remains plausible; remaining SPI source escapes require coordinated
