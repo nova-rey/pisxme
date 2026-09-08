@@ -6114,3 +6114,8 @@ co-regenerated QFN fanout remains required.
 confirmed the adjacent 0.40-mm U1 REFCLK pad-field conflict with 0.20-mm
 traces. A complete authoritative QFN fanout remains required; no rule
 relaxation or production-CAD change was made.
+2026-09-08: V440 native package audit confirmed RTL9210B U1 is the intended
+SMD QFN-style `RTL9210B-CG_QUALIFICATION` footprint: 0.9 x 0.2 mm peripheral
+SMD pads at 0.4 mm pitch and 4.8 x 4.8 mm exposed SMD pad 69. The current
+REFCLK failures are a real package/board-rule escape interaction, not a
+through-hole metadata artifact.
