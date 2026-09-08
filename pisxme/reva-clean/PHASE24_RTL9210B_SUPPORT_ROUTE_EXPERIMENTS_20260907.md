@@ -36,6 +36,11 @@ native DRC found a short to the retained RTL_3V3 In2 spine. V574 moved the
 shorting or crossing classes, but its independent saved-board audit failed
 the complete 3V3 endpoint group. Reject V573/V574; V572 remains the retained
 connected baseline.
+V576 restores the two omitted physical In2 3V3 bridges on the V574 coupled
+field. Native audits pass complete 5V and 3V3 endpoint groups with independent
+trace-removal negative controls. Native DRC remains at 12 findings with no
+shorting or crossing classes; retain V576 as the current connected disposable
+candidate, not production closure.
 V575 shifted the U1.34 3V3 departure by 0.05 mm on the V574 lineage. Native
 DRC retained strict source-field clearance, and the regenerated 3V3 branches
 were dangling in saved-board connectivity. Reject V575; the next step is

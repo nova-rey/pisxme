@@ -6513,6 +6513,11 @@ pads 31/32 but shorted the new via into the RTL_3V3 In2 spine. V574 moved the
 shorting or crossing classes, but its independent saved-board audit failed
 the complete 3V3 endpoint group. Both were rejected; V572 remains the
 retained electrically connected baseline.
+2026-09-08: RTL9210B V576 restored the two omitted physical RTL_3V3 In2
+bridges on the V574 coupled field. Native 5V and 3V3 endpoint audits pass with
+independent trace-removal negative controls. Native DRC remains at 12 findings
+with no shorting or crossing classes; V576 is retained as the current
+connected disposable candidate, not production closure.
 2026-09-08: RTL9210B V575 shifted the U1.34 RTL_3V3 departure by 0.05 mm on
 the V574 lineage. Native DRC retained strict QFN source-field clearance and
 the regenerated 3V3 branches were dangling in saved-board connectivity.
