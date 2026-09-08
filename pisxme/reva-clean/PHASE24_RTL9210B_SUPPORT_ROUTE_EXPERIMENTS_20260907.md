@@ -99,6 +99,9 @@ transition occupied the RTL_3V3 In2 field. V602 moves the transition west;
 U1.18→U2.5 connectivity and its trace-removal negative control pass, while
 native DRC is 10 findings with no new short/crossing. Retain V602 as the
 SPISI sub-primitive, not full SPI closure.
+V603 is rejected because its SPISO3 endpoint entered the lower RTL_3V3 field
+and crossed 1V1. V604 moved the endpoint west but crossed/shorted the retained
+SPISI launch. The next pass must co-author all SPI source and endpoint channels.
 V580 attempted ordinary-via returns for U1 ground pads 69, 45, and 66.
 Native DRC rejected the placement with true GND-to-USB/3V3 shorts and local
 QFN clearance violations. Reject V580; V579 remains the retained rail

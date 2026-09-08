@@ -6580,6 +6580,10 @@ transition occupied the RTL_3V3 In2 field. V602 moved the transition west;
 U1.18→U2.5 native connectivity and the trace-removal negative control pass,
 with no new DRC short/crossing. V602 is retained as the SPISI sub-primitive,
 not full SPI closure.
+2026-09-08: RTL9210B V603/V604 rejected independent SPISO3 escape classes.
+V603 entered the lower RTL_3V3 field and crossed 1V1; V604 moved west but
+crossed/shorted the retained SPISI launch. Future SPI routing must allocate
+the shared source and endpoint channels together.
 2026-09-08: RTL9210B V598/V599 rejected two further SPICS route classes.
 V598 shorted its B.Cu transition into retained RTL_1V1/RTL_5V fields; V599's
 direct F.Cu outer departure crossed the PEDET/5V/3V3/CLKREQ source field.

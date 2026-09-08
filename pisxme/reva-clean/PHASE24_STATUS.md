@@ -78,6 +78,10 @@ SPISI transition occupied the RTL_3V3 In2 field. V602 moves that transition
 west; U1.18→U2.5 connectivity and the trace-removal negative control pass,
 with native DRC at 10 inherited/local findings and no new short/crossing.
 Retain V602 as the SPISI sub-primitive, not full SPI or Path-B closure.
+V603 is rejected: the SPISO3 transition/endpoint entered the lower RTL_3V3
+field and crossed the existing 1V1 branch. V604 moved that endpoint west but
+crossed/shorted the retained SPISI launch. The next pass must allocate all SPI
+source and endpoint channels together.
 V578 replaced the first U1.33 5V departure with an exact-horizontal segment.
 Native saved-board connectivity then showed dangling 5V branches and DRC
 still reported the pad-32 clearance violation. Reject V578; V576 remains the
