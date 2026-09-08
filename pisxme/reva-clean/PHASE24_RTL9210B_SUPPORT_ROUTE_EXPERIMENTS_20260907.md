@@ -1911,3 +1911,21 @@ short F.Cu departure, a B.Cu corridor, and an F.Cu resistor handoff. Native
 DRC reports zero shorting and zero crossing classes; the saved-board
 connectivity audit and trace-removal negative control pass. RSET is retained;
 remaining rails, controls, SPI, REFCLK, USB, and M.2 support remain open.
+
+## V341-V354 rail-field follow-up
+
+V341-V345 RTL_3V3/RTL_5V trials were rejected as route-implementation
+failures because they introduced real shorting or crossing classes in the
+QFN support field. V342 remains the clean RTL_3V3 base. V346-V353 tested
+alternate RTL_5V handoffs; V354 is retained as the first clean candidate.
+V354 routes U1.17/U1.33/C5.1 to the RTL_5V support field using a short
+F.Cu escape and a B.Cu perimeter trunk. Native DRC reports 0 shorting
+items, 0 tracks-crossing items, and 24 unconnected items (the base V342
+had 26). The native endpoint audit and trace-removal negative control pass.
+This does not close the RTL9210B support rail or Path B: RTL_1V1, USB,
+REFCLK, reset, remaining control, lane, and M.2 integration work remain open.
+
+V355 RTL_1V1 is rejected as an initial placement/escape trial. It produced
+8 shorting and 4 crossing classes, including collisions with the retained
+RTL_3V3 and crystal fields. No authority or Path-A asset changed; further
+RTL_1V1 work must use coordinated pad-field channel allocation.

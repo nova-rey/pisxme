@@ -5960,3 +5960,9 @@ together. Path A and production CAD remain unchanged.
 2026-09-07: Retained RTL9210B V340 RSET route primitive. Native DRC and
 saved-board negative-control audit pass with zero shorts/crossings; remaining
 Path-B support/interface nets remain open.
+2026-09-07: Retained RTL9210B V354 RTL_5V route primitive. V341-V353 were
+rejected where native DRC found real QFN-field shorting/crossing classes.
+V354 uses a B.Cu perimeter handoff around the retained In2 RTL_3V3 fanout;
+native DRC reports zero shorting and zero crossing classes, and the saved
+board endpoint audit plus trace-removal negative control pass. Path A,
+production CAD, and the accepted storage architecture remain unchanged.
