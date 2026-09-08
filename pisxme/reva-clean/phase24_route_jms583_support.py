@@ -4,11 +4,12 @@ This intentionally leaves high-speed USB/PCIe/SATA channels for their own
 constraint-aware router. Every endpoint is resolved from native pad objects.
 """
 from pathlib import Path
+import os
 import pcbnew
 
 R=Path(__file__).resolve().parent
-BASE=R/'PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb'
-OUT=R/'PHASE24_DUAL_MODE_STORAGE_SUPPORT_ROUTED.kicad_pcb'
+BASE=R/os.environ.get('PISXME_STORAGE_SUPPORT_BASE','PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb')
+OUT=R/os.environ.get('PISXME_STORAGE_SUPPORT_OUT','PHASE24_DUAL_MODE_STORAGE_SUPPORT_CURRENT_TRIAL.kicad_pcb')
 def V(p): return pcbnew.VECTOR2I_MM(float(p[0]),float(p[1]))
 def xy(p): return pcbnew.ToMM(p.x),pcbnew.ToMM(p.y)
 def net(b,name):
@@ -21,7 +22,7 @@ def pad(b,ref,num):
  p=f.FindPadByNumber(str(num))
  if p is None: raise RuntimeError(f'missing {ref}.{num}')
  return p
-def track(b,n,a,z,layer=pcbnew.F_Cu,w=.18):
+def track(b,n,a,z,layer=pcbnew.F_Cu,w=.20):
  t=pcbnew.PCB_TRACK(b); t.SetStart(V(a)); t.SetEnd(V(z)); t.SetLayer(layer); t.SetWidth(pcbnew.FromMM(w)); t.SetNet(n); b.Add(t)
 def join(b,na,ra,pa,rb,pb):
  a=xy(pad(b,ra,pa).GetPosition()); z=xy(pad(b,rb,pb).GetPosition())

@@ -6887,3 +6887,8 @@ CM5_PERST corridor while retaining the outboard J5 mode jumper. Native DRC
 reports 843 violations and 499 unconnected items with zero shorting items;
 eight crossings and incomplete copper remain. Retain this as the best current
 Path-A routing basis, not a Phase 24 pass.
+2026-09-08: Ran the native-pad JMS583 support author against the accepted
+U11-west/J5-clear placement. Reject the trial: five real shorts and seven
+crossings arise from stale distributed support coordinates and direct F.Cu
+joins through the QFN field. The support circuitry remains authoritative;
+coherent local placement/routing is the next Path-A task.

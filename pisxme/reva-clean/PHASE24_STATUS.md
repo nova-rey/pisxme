@@ -13,6 +13,11 @@ U11-west/J5-clear placement removes the prior real storage short classes
 (`shorting_items` = 0); eight crossings and incomplete copper remain, so this
 is a routing basis, not a Phase 24 pass. The V3 and J5-clear predecessors are
 preserved as rejected evidence.
+The current native-pad JMS583 support author was run against this basis and
+rejected: it created five real shorts and seven crossings because support
+coordinates remain spread across the donor geometry. The support network is
+electrically instantiated; its physical placement/routing still requires a
+coherent local allocation.
 The new `PHASE24_RTL9210B_QFN_ORIENTATION180_PROBE.kicad_pcb` is the current
 disposable placement basis for the next QFN field pass: native DRC reports
 four inherited warnings, and the U1.39-to-U2.8 RTL_3V3 corridor in

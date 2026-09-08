@@ -46,6 +46,10 @@ only.
   native DRC has zero shorting items, but eight crossings and 499 unconnected
   items remain. The dual-mode island remains open integration work; no
   placement experiment has been promoted to production authority.
+  A current-candidate support-routing trial is rejected evidence: five native
+  shorts and seven crossings result from stale distributed support placement,
+  so the next support pass must co-locate the support parts with U11 before
+  routing them.
 
 ## CURRENT OPEN GATES
 
