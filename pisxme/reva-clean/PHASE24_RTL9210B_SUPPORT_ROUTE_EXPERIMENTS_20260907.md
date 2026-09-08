@@ -55,6 +55,12 @@ DRC retained strict source-field clearance, and the regenerated 3V3 branches
 were dangling in saved-board connectivity. Reject V575; the next step is
 coordinated QFN escape authoring rather than another scalar coordinate nudge.
 
+V579 removes the diagonal source departure: U1.33 runs straight to an
+outboard transition while the V576 coupled 3V3 network is retained. Native
+5V/3V3 audits and both trace-removal negative controls pass. Native DRC is
+11 findings with 20 opens; the 5V source group is no longer open. Retain
+V579 as the current RTL_5V/3V3 candidate, not full Path-B closure.
+
 ## Current state and documentation hygiene
 
 The JMS583 support network is already instantiated in the live authoritative

@@ -6533,3 +6533,9 @@ the V574 lineage. Native DRC retained strict QFN source-field clearance and
 the regenerated 3V3 branches were dangling in saved-board connectivity.
 V575 was rejected; further progress requires coordinated QFN escape
 authoring, not scalar coordinate nudges.
+2026-09-08: RTL9210B V579 removed the diagonal U1.33 RTL_5V departure and
+ran it straight to an outboard transition while retaining the V576 coupled
+RTL_3V3 field. Native 5V/3V3 audits and both trace-removal negative controls
+pass. Native DRC is 11 findings with 20 opens; the 5V source group is no
+longer open. V579 is retained as the current 5V/3V3 candidate, not full
+Path-B closure.

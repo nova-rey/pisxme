@@ -52,6 +52,14 @@ branches were dangling in saved-board connectivity. Reject V575; further
 progress requires coordinated QFN escape authoring, not scalar coordinate
 nudges.
 
+V579 removes the V576/V578 diagonal source departure entirely: U1.33 runs
+straight to an outboard transition, while the 3V3 field remains on the V576
+coupled network. Native 5V/3V3 audits and both trace-removal negative
+controls pass. Native DRC is 11 findings with 20 opens; the 5V source group
+is no longer open, and the remaining findings are localized/inherited
+support, return, and other Path-B endpoints. Retain V579 as the current
+RTL_5V/3V3 candidate, not full Path-B closure.
+
 ## CURRENT OPEN GATES
 
 Re-author the RTL9210B local QFN source field coherently at the strict
