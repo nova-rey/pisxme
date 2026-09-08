@@ -1080,6 +1080,14 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V498 is the first valid combined lower-QFN source-field basis. It regenerates
+XTAL_IN, XTAL_OUT, RSET, and U1.52 RTL_3V3 together around the retained
+U1.34/U1.39/U1.20 3V3 field. Native saved-board connectivity passes all four
+groups and four trace-removal negative controls. Native DRC has zero
+shorts/crossings/clearance errors; seven inherited/incomplete-fixture
+warnings remain, with unrelated support opens still expected. V498 is
+retained for the next RTL9210B support integration stage. No Path-A or
+production CAD changed.
 The latest V497 variant moves the U1.52 handoff to the right-side lower
 escape, but native DRC still rejects it for XTAL_IN and RSET source-field
 crossings/clearances. Its native connectivity and negative control remain
