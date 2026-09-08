@@ -559,6 +559,12 @@ an order-preserving two-layer SPI partition. Native KiCad reports 30
 violations / 40 opens; dominant failures remain the rotated U1 QFN source
 escape and retained XTAL_OUT region. U2 footprint coordinates are corrected;
 Path A and production CAD remain unchanged.
+2026-09-07: V388 restored XTAL_OUT on a separate U1 escape/B.Cu channel while
+retaining the exact V328 lane and V387 RSET/RTL_3V3 allocation. Native support
+audit and four trace-removal negative controls pass; native DRC reports zero
+shorts and zero crossings with 25 opens. Remaining clearance/width and
+support-net findings keep Path B open; Path A and production CAD remain
+unchanged.
 2026-09-07: Recorded RTL9210B PEDET trials V290–V293. V292 removed the
 REFCLK crossing but retained PERST; V293 avoided PERST but introduced JTAG /
 undefined-field shorting and was rejected. PEDET remains open; Path A and

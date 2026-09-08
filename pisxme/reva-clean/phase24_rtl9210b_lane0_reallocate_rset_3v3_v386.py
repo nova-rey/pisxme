@@ -2,7 +2,7 @@
 from pathlib import Path
 import pcbnew
 H=Path(__file__).resolve().parent
-BASE=H/'PHASE24_RTL9210B_SUPPORT_XTALOUT_DIRECT_V372.kicad_pcb'; SRC=H/'PHASE24_RTL9210B_LANE0_ROUTE_V328.kicad_pcb'; OUT=H/'PHASE24_RTL9210B_LANE0_REALLOCATE_RSET_3V3_V387.kicad_pcb'
+BASE=H/'PHASE24_RTL9210B_SUPPORT_XTALOUT_DIRECT_V372.kicad_pcb'; SRC=H/'PHASE24_RTL9210B_LANE0_ROUTE_V328.kicad_pcb'; OUT=H/'PHASE24_RTL9210B_LANE0_REALLOCATE_RSET_3V3_XTALOUT_V388.kicad_pcb'
 F,B=pcbnew.F_Cu,pcbnew.B_Cu; W=pcbnew.FromMM(.20)
 def P(x,y): return pcbnew.VECTOR2I_MM(float(x),float(y))
 def seg(b,n,l,a,z):
@@ -24,5 +24,6 @@ def main():
  n=b.FindNet('LANE0_RXN'); seg(b,n,F,(109.95,60),(111.5,60)); seg(b,n,F,(111.5,60),(111.5,64.5)); via(b,n,(111.5,64.5)); seg(b,n,B,(111.5,64.5),(132,64.5)); via(b,n,(132,64.5)); seg(b,n,F,(132,64.5),(133.75,64.5)); seg(b,n,F,(133.75,64.5),(133.75,62.725))
  n=b.FindNet('RTL_3V3'); seg(b,n,F,(109.95,65.2),(109.8,65.2)); seg(b,n,F,(109.8,65.2),(109.8,66.8)); via(b,n,(109.8,66.8)); seg(b,n,B,(109.8,66.8),(109.8,68.5)); seg(b,n,B,(109.8,68.5),(112,68.5)); via(b,n,(112,68.5)); seg(b,n,pcbnew.In2_Cu,(112,68.5),(104.4,68.5))
  n=b.FindNet('RSET'); seg(b,n,F,(109.2,65.95),(109.2,67.5)); seg(b,n,F,(109.2,67.5),(108.5,67.5)); via(b,n,(108.5,67.5)); seg(b,n,B,(108.5,67.5),(101.4,67.5)); via(b,n,(101.4,67.5)); seg(b,n,F,(101.4,67.5),(101.4,71.0))
+ n=b.FindNet('XTAL_OUT'); seg(b,n,F,(109.95,64.4),(109.2,64.4)); seg(b,n,F,(109.2,64.4),(109.2,63.4)); via(b,n,(109.2,63.4)); seg(b,n,B,(109.2,63.4),(109.2,46.0)); seg(b,n,B,(109.2,46.0),(116.7,46.0)); via(b,n,(116.7,46.0)); seg(b,n,F,(116.7,46.0),(116.7,49.0)); seg(b,n,F,(116.7,49.0),(118.0,49.0)); via(b,n,(118.0,49.0)); seg(b,n,B,(118.0,49.0),(120.4,49.0)); seg(b,n,B,(120.4,49.0),(120.4,53.0)); via(b,n,(120.4,53.0))
  b.BuildListOfNets(); b.Save(str(OUT)); print(OUT)
 if __name__=='__main__': main()

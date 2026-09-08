@@ -1640,6 +1640,15 @@ reports 0 shorting items and 0 tracks-crossing items, with 27 unconnected
 items and remaining ordinary clearance/width findings. XTAL_OUT is still
 removed for this discriminator, so V387 is an intermediate support-channel
 basis, not a Path-B closure. Path A and production CAD remain unchanged.
+
+V388 restores XTAL_OUT on a separate U1 escape and B.Cu vertical channel,
+while retaining the V387 RSET/RTL_3V3 allocation and exact V328 lane. The
+native V388 audit passes all four lane nets plus RTL_3V3, XTAL_IN, XTAL_OUT,
+and RSET; four trace-removal negative controls fail as required. Native DRC
+reports 0 shorting items, 0 tracks-crossing items, and 25 unconnected items.
+Remaining findings include ordinary clearance/width/manufacturing issues,
+so V388 is the first complete lane/support co-allocation basis but is not
+yet Path-B closure. Path A and production CAD remain unchanged.
 ## V244 RTL_1V1 U1.50 lower-edge escape — rejected
 
 V244 tested U1.50 from the V242 basis with a lower-edge F.Cu departure at
