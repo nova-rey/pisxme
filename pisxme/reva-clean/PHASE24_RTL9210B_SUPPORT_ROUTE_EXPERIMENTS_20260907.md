@@ -2974,3 +2974,9 @@ V663 moves the U1.39 lower RTL_3V3 transition farther west on the V661 basis.
 Native DRC still reports the RTL_3V3/RTL_1V1 source-field short, with 10 total
 findings and 21 unconnected pads. Reject this escape class; it is not an
 architecture result.
+## V664 diagonal lower RTL_3V3 escape — rejected
+
+V664 tested a diagonal U1.39 departure toward the upper-left pocket on the
+retained V661 basis. Native DRC reports 13 findings, including a real
+RTL_3V3/RTL_1V1 short and track crossings, with 21 unconnected pads. Reject
+this escape class; no architecture, rule, Path-A, or production-CAD change.

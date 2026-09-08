@@ -6859,3 +6859,6 @@ and the corrected trace-removal control fails as required.
 2026-09-08: V663 moved the U1.39 lower RTL_3V3 transition farther west; native
 DRC still reported the RTL_3V3/RTL_1V1 QFN source-field short (10 findings,
 21 opens). Reject the escape class; no architecture or production CAD changed.
+2026-09-08: V664 tested a diagonal U1.39 RTL_3V3 departure; native DRC still
+reported the RTL_3V3/RTL_1V1 short and crossings (13 findings, 21 opens).
+Reject the escape class; no architecture or production CAD changed.
