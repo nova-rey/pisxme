@@ -320,6 +320,11 @@ probe's 0.15 mm tracks. Both U11 crystal endpoints pass native connectivity
 and a trace-removal negative control; native DRC remains 519 violations / 499
 inherited donor opens, so this does not close the support or Phase 24 gates.
 
+The earlier JMS583 crystal DRC receipts, including divergent, split-layer,
+pad-width, and net-name variants, are retained as raw historical evidence;
+they are not current acceptance criteria and do not override the production-
+width discriminator result.
+
 2026-09-08 crystal fixture recheck: the saved `PHASE24_JMS583_CRYSTAL_ESCAPE_PROBE`
 was regenerated and its native XIN/XOUT endpoint audit passes with the required
 trace-removal negative control. Native DRC remains 519 violations / 499
