@@ -2927,3 +2927,12 @@ center and carried RTL_3V3 on B.Cu. Native DRC found a real short to adjacent
 USB_DM and hole-clearance violations to both neighboring QFN pads. The
 via-in-pad class is rejected under the saved board rules; Path A and
 production CAD remain unchanged.
+
+## V656/V657 fresh SPI allocation discriminators — rejected
+
+V656 moved U2 as a coherent support endpoint to the east of the RTL9210B QFN
+and regenerated all five SPI channels from transformed U1 pads. Native KiCad
+DRC rejected the route with 43 findings, including real shorts and crossings.
+V657 tested a narrower west-channel SPICS escape; native DRC rejected seven
+findings, including a real CLKREQ_N/SPICS short. These are route-implementation
+evidence only; Path A, production CAD, and validation rules remain unchanged.

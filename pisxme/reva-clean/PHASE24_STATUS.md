@@ -115,6 +115,11 @@ V653's local Y1/C1/C2 relocation is rejected. It reduces the crystal span but
 creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
+V656/V657 are rejected disposable SPI allocation trials. V656 moved U2 east
+and regenerated all five SPI channels, but native DRC found 43 violations with
+real shorts/crossings. V657's single-net west SPICS discriminator found seven
+violations, including CLKREQ_N/SPICS shorting. These are route-implementation
+failures; Path A, production CAD, and validation rules remain unchanged.
 V654 corrected the disposable KiCad net-assignment helper to capture net
 codes before adding tracks, eliminating its SWIG proxy failure. The rerun of
 the co-authored U1.52/crystal candidate is rejected by native DRC: XTAL_OUT

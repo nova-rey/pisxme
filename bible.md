@@ -6822,3 +6822,8 @@ accepted rail geometry remain unchanged.
 2026-09-08: V655 tested a joint U1.52/crystal and shifted-3V3 field. Native
 DRC rejected it for XTAL source crossing and 3V3/XTAL and 3V3/1V1 collisions.
 The next solution must coherently reauthor or relocate the local support field.
+2026-09-08: V656 moved U2 east and regenerated all five SPI channels as one
+field; native DRC rejected 43 violations including shorts/crossings. V657
+tested a narrower SPICS west channel; native DRC rejected seven violations,
+including CLKREQ_N/SPICS shorting. Preserve both as route-implementation
+evidence only; Path A, production CAD, and validation rules remain unchanged.
