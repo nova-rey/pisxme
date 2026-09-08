@@ -6872,3 +6872,8 @@ rules or alter production CAD.
 reports 876 violations and 499 unconnected items, including real crossings
 and M2_3V3/FORCE_NVME shorts. Preserve this as the current open integration
 gate; do not infer closure from candidate names or historical fixtures.
+2026-09-08: Restored the disposable Path-A storage placement candidate to the
+prior generator output after rejecting a worse placement-map experiment.
+Fresh native DRC remains 876 violations and 499 unconnected items, including
+real crossings and M2_3V3/FORCE_NVME shorts. The Path-A integration gate stays
+open and production CAD remains unchanged.
