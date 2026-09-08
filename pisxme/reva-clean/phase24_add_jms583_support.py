@@ -26,6 +26,8 @@ def reconcile_existing_support(text):
         atom_start = text.rfind(marker, 0, start)
         atom_end = text.find('))', start) + 2
         atom = text[atom_start:atom_end]
+        if f'(label "{name}" (at {xy} 0)' in atom:
+            continue
         import re
         updated = re.sub(r'\(label "[^"]+" \(at [^)]+\)',
                          f'(label "{name}" (at {xy} 0)', atom, count=1)

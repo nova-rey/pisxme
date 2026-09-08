@@ -7182,3 +7182,9 @@ ownership; no PCB alias repair or validation waiver was promoted.
 clock-net names and verified its removed-R80 negative control. A fresh native
 support-routing trial was rejected at 834 DRC violations / 499 inherited
 opens with authored support crossings; it remains disposable evidence.
+
+2026-09-08: Made the JMS583 support-label migration idempotent when the
+canonical corrected atoms are already present. Native re-export remains at
+the two-item R80.1/U11.39 association defect; U11-only, old-block, UUID, and
+endpoint serialization probes were rejected when they changed unrelated
+ownership or increased mismatches.
