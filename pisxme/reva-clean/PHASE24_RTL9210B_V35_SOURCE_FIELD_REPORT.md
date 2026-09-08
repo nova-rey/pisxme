@@ -165,6 +165,9 @@ V647's crystal-pair trials are rejected. The direct F.Cu path crosses the
 retained rail field; the staggered B.Cu retry removes XTAL_IN/XTAL_OUT contact
 but still conflicts with the U1.20 3V3 via and U1 1V1 corridor. The crystal
 source exits require coordinated allocation with those rails.
+V648's first SPISI route is rejected because its B.Cu source corridor crosses
+the retained RTL_3V3 and RTL_5V collectors. The endpoint route class remains
+open; allocate SPI separately from the rail field.
 V646's first RSET route is rejected. The U1.51-to-R1.1 endpoint path is
 physically connected, but its B.Cu diagonal crosses the retained U1.40 1V1
 corridor. A separate RSET channel is required; no routing rule is relaxed.

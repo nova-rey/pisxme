@@ -101,6 +101,10 @@ the retained 1V1/3V3 transition field. A staggered B.Cu retry removes the
 pair-to-pair contact but still conflicts with the nearby 3V3 via and retained
 1V1 corridor. XTAL_IN/XTAL_OUT remain open for coordinated source allocation;
 no rules or accepted rail geometry changed.
+V648's first SPISI source-to-U2.5 channel is rejected: its B.Cu corridor
+crosses the retained RTL_3V3 source trunk and RTL_5V collector. Native DRC
+still validates the rest of the fixture, but SPISI remains open for a separate
+SPI corridor allocation.
 V646's first RSET escape is rejected: the native endpoint path is connected,
 but its B.Cu diagonal crosses the retained U1.40 RTL_1V1 corridor. RSET
 remains open for a separate channel allocation; accepted rail geometry and
