@@ -50,6 +50,11 @@ open. The VBUS divider probe is retained in
 R82.2-to-R83.1 pass native connectivity and the paired trace-removal negative
 control. No authored shorting class remains; the crossing findings are
 inherited donor USB artifacts.
+The VCCO decoupler probe is retained in
+`PHASE24_JMS583_VCCO_PROBE_V2-drc.rpt`: U11.6-to-C81.1 native connectivity
+and its trace-removal negative control pass, with no authored shorting or
+crossing class. The earlier y=150 mm version is rejected for crossing the
+CM5 PERST corridor.
 The pad-width sensitivity candidate is recorded in
 `PHASE24_JMS583_CRYSTAL_PAD20_NARROW-drc.rpt`: the disposable runtime
 footprint uses 0.20 mm pitch-direction pads and 0.15 mm support traces, and
