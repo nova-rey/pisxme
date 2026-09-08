@@ -6158,3 +6158,8 @@ Path-A change.
 direct diagonal F.Cu escapes created seven QFN source-field shorts/clearance
 or solder-mask errors. This was a route-primitive failure; Path A and
 production CAD remain unchanged, with V454 retained as the combined basis.
+2026-09-08: RTL9210B V462 is the strongest rotated QFN source-fanout
+primitive so far. Ordered vertical escapes with 0.9-mm-spaced F.Cu jogs
+produce native DRC zero shorts/crossings/clearances; the saved-board audit
+and six negative controls pass. This is only a source-fanout primitive, not
+full Path-B closure; Path A and production CAD remain unchanged.

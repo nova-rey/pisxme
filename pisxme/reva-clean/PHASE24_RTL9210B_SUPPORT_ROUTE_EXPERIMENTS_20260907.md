@@ -2247,3 +2247,10 @@ diagonal fanout with seven source-field shorts/clearance and solder-mask
 errors. This is an invalid escape primitive, not a rejection of the package
 pin map; the retained basis remains V454 while a proper layer-aware fanout
 must be authored.
+V461 used a planar rotated fanout with ordered vertical escapes and decreasing
+F.Cu jog heights. It eliminated shorts and crossings but retained five
+0.5-mm-adjacent via/jog clearances. V462 widened those jog heights to 0.9 mm.
+Native DRC reports zero shorts, crossings, and clearance violations; the
+saved-board audit proves all six source pads connect to their transition vias,
+and six trace-removal negative controls pass. V462 is the strongest source
+fanout primitive, but it is not a complete Path-B route or support closure.
