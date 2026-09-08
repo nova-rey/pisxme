@@ -2665,3 +2665,11 @@ the adjacent RX/XTAL/TXN pad-field and existing support-via geometry. This
 discriminates against a plane-only repair; the physical source breakout must
 be reallocated with the neighboring signal launches. No Path-A or production
 CAD change was made.
+## V557 V388 right-edge RTL_1V1 plane trial — rejected
+
+V557 used the retained V388 coherent lane/crystal/3V3 field and added a
+right-edge RTL_1V1 fanout to an In2.Cu plane. Although this orientation moves
+the supply pads out of the V546 bottom row, native DRC rejected the trial for
+actual RTL_1V1 crossings/shorts with the inherited RX/XTAL/GND source field,
+including a C4 ground collision. The orientation is therefore not a drop-in
+fix; its neighboring high-speed source launches must be regenerated with it.

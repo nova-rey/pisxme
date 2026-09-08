@@ -6454,3 +6454,8 @@ escapes. Native DRC rejected the F.Cu source dogbones/vias against adjacent
 RX/XTAL/TXN and support geometry. The plane is not sufficient; the lower QFN
 source field needs coherent regeneration. Path A and production CAD remain
 unchanged.
+2026-09-08: RTL9210B V557 tested the V388 right-edge RTL_1V1 fanout with an
+In2 power plane. Native DRC rejected RX/XTAL/GND source-field conflicts and a
+C4 ground collision. The orientation is not a drop-in fix; neighboring
+high-speed launches must be regenerated coherently. Path A and production CAD
+remain unchanged.

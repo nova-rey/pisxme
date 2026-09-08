@@ -6958,3 +6958,8 @@ rejected the source dogbones/vias against adjacent RX/XTAL/TXN and support
 geometry, so the plane does not remove the lower QFN breakout constraint.
 The Path-B lower-field gate remains open for coherent source-field
 regeneration; no architecture, Path-A, or production-CAD change was made.
+V557 tested the V388 right-edge supply orientation with an In2 RTL_1V1 plane.
+Native DRC rejected it for inherited RX/XTAL/GND source-field conflicts and a
+C4 ground collision. This is a route-implementation/source-field integration
+failure, not an architecture rejection; the next trial must regenerate the
+orientation and neighboring launches together.
