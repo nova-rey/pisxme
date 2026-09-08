@@ -2947,3 +2947,8 @@ The independent V658 saved-board audit passes XTAL_IN, XTAL_OUT, and RSET
 endpoint connectivity and its XTAL_OUT trace-removal negative control fails as
 required. Therefore the V658 rejection is specifically native physical DRC
 geometry, not a synthetic-connectivity or missing-endpoint artifact.
+V659 tested all three RTL9210B rails from a fresh V35 source-field basis using
+ordinary-via escapes and a broad In2 power collector. Native DRC rejected 56
+findings, including rail-to-rail, rail-to-SPI, and rail-to-crystal shorts and
+crossings. The shared-collector class is rejected; the result does not change
+the signal source-field or architecture decision.

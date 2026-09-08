@@ -6835,3 +6835,7 @@ route-allocation evidence only; no Path-A or production-CAD artifact changed.
 XTAL_OUT, and RSET endpoint connectivity; its XTAL_OUT trace-removal negative
 control failed as required. V658 is therefore rejected for physical DRC
 geometry, not synthetic connectivity.
+2026-09-08: V659 corrected its helper and tested all three RTL9210B rails from
+the fresh V35 source field on an In2 collector. Native DRC rejected 56
+violations, including rail-to-rail, rail-to-SPI, and rail-to-crystal
+shorts/crossings. Preserve the result as rejected shared-collector evidence.

@@ -115,6 +115,12 @@ V653's local Y1/C1/C2 relocation is rejected. It reduces the crystal span but
 creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
+V659 is rejected after a valid native rerun: the all-rail In2 collector on the
+fresh V35 basis produced 56 violations, including rail-to-rail, rail-to-SPI,
+and rail-to-crystal shorts/crossings. The helper defects encountered before
+authoring were corrected and are not engineering results. The next candidate
+must allocate rails and signal exits together with explicit local keepouts;
+a shared broad collector is not a valid solution class.
 V658 is rejected after a valid rerun: its coordinated XTAL_IN/XTAL_OUT/RSET
 field produced 31 native violations, including real XTAL pair, rail, and RSET
 shorts/crossings. The pre-authoring helper error was corrected; no result was
