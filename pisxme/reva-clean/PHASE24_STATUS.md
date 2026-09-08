@@ -53,6 +53,11 @@ saved-board open count by one, but native DRC found true PEDET crossings with
 the retained RTL_5V vertical corridor and RTL_1V1 field. It is not evidence
 against the PEDET function; the next valid experiment must relocate the local
 PEDET source/escape or allocate a legal corridor around both fields.
+V594 completes the PEDET endpoint path using an all-F.Cu outer perimeter:
+J1.69→R2.1→U1.8 is natively connected and the trace-removal negative control
+fails as required. Native DRC returns to 9 findings with no PEDET crossing;
+the remaining findings are inherited/local support findings. Retain V594 as
+the current PEDET-plus-rail disposable candidate, not production closure.
 V578 replaced the first U1.33 5V departure with an exact-horizontal segment.
 Native saved-board connectivity then showed dangling 5V branches and DRC
 still reported the pad-32 clearance violation. Reject V578; V576 remains the

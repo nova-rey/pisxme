@@ -6559,3 +6559,8 @@ crossings with the retained RTL_5V vertical corridor and RTL_1V1 field. V589
 is rejected; V583 remains the retained rail candidate. The live JMS583
 support network is already instantiated, so older support-network TODO prose
 is superseded by the current route-allocation/DRC gate.
+2026-09-08: RTL9210B V594 completed J1.69→R2.1→U1.8 PEDET using an all-F.Cu
+outer perimeter. Native saved-board connectivity and independent trace-removal
+negative controls pass; native DRC returns to 9 findings with no PEDET
+crossing. V594 is retained as the current PEDET-plus-rail disposable
+candidate, not production closure.

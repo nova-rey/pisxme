@@ -76,6 +76,11 @@ V589 is rejected: the attempted local B.Cu PEDET route from R2.1 toward U1.8
 crossed the retained RTL_5V vertical corridor and RTL_1V1 field. Native DRC
 reported 13 violations and 18 opens. The lower open count does not outweigh
 the true crossings; PEDET needs a new local source/escape allocation.
+V594 completes the full PEDET path with an all-F.Cu outer perimeter. Native
+saved-board connectivity joins J1.69, R2.1, and U1.8; the independent
+trace-removal negative control fails as required. Native DRC returns to 9
+findings with no PEDET crossing. Retain V594 as the current disposable
+PEDET-plus-rail candidate, not production closure.
 V580 attempted ordinary-via returns for U1 ground pads 69, 45, and 66.
 Native DRC rejected the placement with true GND-to-USB/3V3 shorts and local
 QFN clearance violations. Reject V580; V579 remains the retained rail
