@@ -6211,6 +6211,12 @@ controls pass native saved-board connectivity. Native DRC has zero shorts,
 crossings, clearance, solder-mask, and thermal errors; ten inherited
 incomplete-fixture warnings remain. Rails, SPI, reset, sideband, and control
 integration remain open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V490 adds the rotated native U1.34 RTL_3V3 branch to
+C3.1. After moving its ordinary-via handoff out of the retained XTAL_OUT
+corridor, native saved-board connectivity and one trace-removal negative
+control pass. Native DRC has zero errors; nine inherited incomplete-fixture
+warnings remain. V490 is the first current-geometry 3V3 rail primitive; no
+Path-A or production-CAD change.
 2026-09-08: RTL9210B V489 adds RSET from rotated native U1.51 to R1.1 with
 ordinary through-via transitions. Native saved-board RSET connectivity and
 one trace-removal negative control pass. Native DRC has zero shorts,

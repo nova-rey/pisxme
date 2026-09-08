@@ -2327,6 +2327,14 @@ clearance, solder-mask, and thermal errors; ten inherited dangling/support
 warnings remain on the incomplete parent fixture. V488 is retained as the
 clean crystal-support primitive; rails, SPI, reset, sideband, and control
 integration remain open. No Path-A or production CAD changed.
+V490 adds the rotated native U1.34 RTL_3V3 branch to C3.1. The first
+placement crossed the retained XTAL_OUT corridor; moving its ordinary-via
+handoff to the open left/top corridor removed the crossing without changing
+the crystal/RSET/high-speed primitives. Native saved-board connectivity and
+one trace-removal negative control pass. Native DRC has zero errors; the
+remaining nine findings are inherited incomplete-fixture warnings. V490 is
+retained as the first current-geometry 3V3 rail primitive. No Path-A or
+production CAD changed.
 V489 adds RSET from the rotated native U1.51 pad to R1.1 using two ordinary
 through-via transitions. The saved-board RSET connectivity audit and its
 trace-removal negative control pass. Native DRC has zero shorts, crossings,
