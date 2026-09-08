@@ -7382,3 +7382,9 @@ support/USB3 integration basis. Native XIN/XOUT/XAVDDH and USB3 endpoint
 audits pass, including the XIN-removal negative control. Native DRC reports
 853 violations / 499 inherited unconnected items with no authored shorts or
 track crossings; full Phase 24 closure remains open.
+
+2026-09-08: Recorded the validated lateral JMS_REXT addition on the current
+FULL7/XAVDDH basis. Native REXT, three-exit, and USB3 endpoint audits pass
+with trace-removal controls; native DRC remains 853 violations / 499 inherited
+unconnected items and no authored shorting/crossing class. Full support and
+Phase 24 closure remain open.
