@@ -1,7 +1,10 @@
 """Combine the validated JMS583 support sub-primitive corridors."""
 from pathlib import Path
+import os
 import pcbnew
-R=Path(__file__).resolve().parent;BASE=R/'PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb';OUT=R/'PHASE24_JMS583_SUPPORT_COHORT_PROBE.kicad_pcb'
+R=Path(__file__).resolve().parent
+BASE=R/os.environ.get('PISXME_SUPPORT_COHORT_BASE','PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb')
+OUT=R/os.environ.get('PISXME_SUPPORT_COHORT_OUT','PHASE24_JMS583_SUPPORT_COHORT_PROBE.kicad_pcb')
 def P(x,y): return pcbnew.VECTOR2I_MM(float(x),float(y))
 def seg(b,n,a,z,w=.20):
     t=pcbnew.PCB_TRACK(b);t.SetStart(P(*a));t.SetEnd(P(*z));t.SetLayer(pcbnew.F_Cu);t.SetWidth(pcbnew.FromMM(w));t.SetNet(n);t.SetNetCode(n.GetNetCode());b.Add(t)

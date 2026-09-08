@@ -43,6 +43,13 @@ only.
   including a real `JMS_REXT`-to-`JMS_AVDDL` short and authored crossings.
   The next support implementation must use native-pad-aware per-net escape
   allocation.
+- A coherent native-pad-aware support cohort was then generated as
+  `PHASE24_DUAL_MODE_STORAGE_NC39_SUPPORT_COHORT.kicad_pcb`. Its eight-net
+  connectivity audit and trace-removal negative control pass. Native DRC
+  reports 820 violations / 499 unconnected items, with zero authored shorts;
+  the seven crossings are inherited CM5 donor USB escape findings. Retain it
+  as the current support-routing primitive while the complete storage island
+  remains open.
 - The current regenerated disposable placement candidate is
   `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb`; it is not
   production authority. The current fresh native result is recorded in

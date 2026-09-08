@@ -29,6 +29,13 @@ author as `PHASE24_DUAL_MODE_STORAGE_NC39_SUPPORT_TRIAL.kicad_pcb`. Native DRC
 reports 836 violations / 499 unconnected items, including a real
 `JMS_REXT`-to-`JMS_AVDDL` short and authored support crossings. It is rejected
 route evidence; the source/parity correction remains valid.
+The subsequent coherent native-pad support cohort,
+`PHASE24_DUAL_MODE_STORAGE_NC39_SUPPORT_COHORT.kicad_pcb`, passes all eight
+support endpoint assertions and its trace-removal negative control. Native
+DRC reports 820 violations / 499 unconnected items with zero authored
+shorting items; the seven crossing findings are confined to inherited CM5
+donor USB escape geometry. This is the strongest current JMS support routing
+primitive, not full-board closure.
 The physically scoped U11-only reauthor probe is also rejected: native export
 produced 20 mismatches and merged unrelated `JMS_AVDDL`/`BRIDGE_USB_VBUS`
 ownership. The live source was restored to the stable two-mismatch state.

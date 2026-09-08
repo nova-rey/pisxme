@@ -6,6 +6,13 @@ connectivity model. Against the corrected NC39 support replay it correctly
 fails incomplete support connectivity; the separate removed-R80 schematic
 negative control also fails as required. No validation severity was changed.
 
+2026-09-08: Generated the coherent native-pad JMS583 support cohort on the
+corrected NC39 basis. All eight support endpoint assertions and the exact
+trace-removal negative control pass; native DRC reports 820 violations / 499
+unconnected items, zero authored shorts, and seven inherited CM5 donor USB
+crossings. Retain this as the strongest support-routing primitive, not a
+full-board pass.
+
 2026-09-08: Replayed the JMS583 support author against the corrected NC39
 candidate. Native DRC reports 836 violations / 499 unconnected items,
 including one real JMS_REXT-to-JMS_AVDDL short and authored crossings. The
