@@ -1080,6 +1080,13 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V492 and V493 tested the second RTL_5V source pad U1.33 to C5.1. Both
+saved-board audits and their negative controls passed connectivity, but both
+route implementations are rejected: V492 used an upper B.Cu corridor that
+conflicted with the retained crystal ground return, 3V3 handoff, and board
+edge; V493 used a direct F.Cu corridor that crossed REFCLK_N. These are route
+implementation failures, not RTL9210B electrical rejection. The next RTL_5V
+attempt must co-allocate the source field with crystal/REFCLK geometry.
 
 ## SPI test-access V1 — rejected
 
