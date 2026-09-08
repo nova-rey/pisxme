@@ -192,6 +192,14 @@ tracks. The first AVDDL all-F.Cu and east-via corridors are rejected: native
 DRC found shorts into existing USB3/PCIe geometry. These are
 route-implementation results only.
 
+The VCCO path is now promoted through the local F.Cu power-copper candidate
+`PHASE24_DUAL_MODE_STORAGE_FULL7_VCCO_rectangle_zone.kicad_pcb`. Native U11.6
+to C81.1 connectivity and the zone-removal negative control both pass using
+`phase24_jms583_vcco_zone_audit.py`. Native DRC reports 514 findings, with no
+VCCO-authored short/crossing class; the remaining short and crossing classes
+are inherited from the parent basis. This is power copper only, not a
+signal-plane exception.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

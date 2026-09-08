@@ -41,6 +41,12 @@ REXT, crystal, reset, AVDD33, and VCCK are connected on the current basis.
 AVDDL corridor trials are retained as rejected route evidence because native
 DRC found shorts into existing USB3/PCIe copper.
 
+VCCO is promoted on `PHASE24_DUAL_MODE_STORAGE_FULL7_VCCO_rectangle_zone`
+using a local F.Cu power-copper zone. Native U11.6-to-C81.1 connectivity and
+the zone-removal negative control pass; native DRC is 514 findings with no
+VCCO-authored short/crossing class. This does not close the remaining AVDDL,
+VDDREG_5V, LXO, mode-control, or full-board gates.
+
 Fresh native ERC reports 927 violations on the current source. The post-fix
 report has no dangling M.2 entries; remaining findings are inherited
 off-grid/same-label and other source-quality warnings. ERC remains an

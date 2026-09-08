@@ -7413,3 +7413,10 @@ XOUT, RESET_N, AVDD33, and VCCK connected; AVDDL, VCCO, VDDREG_5V, and LXO
 remain open. The first AVDDL all-F.Cu and east-via corridors were rejected by
 native DRC for shorts into existing USB3/PCIe geometry. Inventory and rejected
 route evidence are preserved; no validation severity was changed.
+
+2026-09-08: Promoted the rectangular local F.Cu JMS_VCCO power-copper zone
+as PHASE24_DUAL_MODE_STORAGE_FULL7_VCCO_rectangle_zone. Native U11.6-to-C81.1
+connectivity and the zone-removal negative control passed. Native DRC reports
+514 findings with no VCCO-authored short/crossing class; inherited shorts and
+crossings remain open. This is power copper only and does not relax the
+no-signal-on-plane policy.
