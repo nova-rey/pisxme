@@ -2943,3 +2943,7 @@ V658 corrected its helper and regenerated XTAL_IN, XTAL_OUT, and RSET together
 from the retained orientation-180/RSET basis. Native DRC rejected 31 findings,
 including XTAL pair, rail, and RSET shorts/crossings. This is lower-QFN
 route-allocation evidence only; no Path-A or production-CAD artifact changed.
+The independent V658 saved-board audit passes XTAL_IN, XTAL_OUT, and RSET
+endpoint connectivity and its XTAL_OUT trace-removal negative control fails as
+required. Therefore the V658 rejection is specifically native physical DRC
+geometry, not a synthetic-connectivity or missing-endpoint artifact.

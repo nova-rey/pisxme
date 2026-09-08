@@ -6831,3 +6831,7 @@ evidence only; Path A, production CAD, and validation rules remain unchanged.
 XTAL_IN/XTAL_OUT/RSET source field. Native DRC rejected 31 findings, including
 XTAL pair, rail, and RSET shorts/crossings. Preserve it as lower-QFN
 route-allocation evidence only; no Path-A or production-CAD artifact changed.
+2026-09-08: The independent V658 native saved-board audit passed XTAL_IN,
+XTAL_OUT, and RSET endpoint connectivity; its XTAL_OUT trace-removal negative
+control failed as required. V658 is therefore rejected for physical DRC
+geometry, not synthetic connectivity.

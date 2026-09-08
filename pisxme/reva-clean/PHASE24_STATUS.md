@@ -120,6 +120,12 @@ field produced 31 native violations, including real XTAL pair, rail, and RSET
 shorts/crossings. The pre-authoring helper error was corrected; no result was
 taken from the malformed first run. The remaining Path-B issue is the complete
 QFN lower source-field allocation.
+The V658 native connectivity audit passes all XTAL_IN/XTAL_OUT/RSET endpoints
+and its trace-removal negative control fails as required. Native DRC remains
+the governing rejection. Consultant review recommends the next experiment
+co-author the five SPI nets plus CLKREQ_N against the existing rail field, or
+reopen the rail escapes as one complete lower-QFN allocation; isolated net
+nudges are now exhausted as a solution class.
 V656/V657 are rejected disposable SPI allocation trials. V656 moved U2 east
 and regenerated all five SPI channels, but native DRC found 43 violations with
 real shorts/crossings. V657's single-net west SPICS discriminator found seven
