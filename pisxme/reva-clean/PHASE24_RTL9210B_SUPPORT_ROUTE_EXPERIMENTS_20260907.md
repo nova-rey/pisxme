@@ -13,6 +13,10 @@ V2's native DRC has 15 findings, including RTL_5V crossings with SPISI and
 RTL_3V3, a QFN-edge contact, and dangling segments. Preserve the raw boards
 and receipt; do not interpret this as evidence against the V35 source-field
 placement. See `PHASE24_RTL9210B_V35_SOURCE_FIELD_REPORT.md`.
+V4 is retained as the RTL_5V sub-primitive: U1.17/U1.33/C5.1 native
+connectivity and the trace-removal negative control pass, with native DRC at
+the four inherited warnings. The remaining 32 opens are other Path-B support
+and external connections, not evidence that RTL_5V is closed globally.
 RTL_1V1 field from the saved V342 source without copying duplicate RSET or
 crystal copper; native connectivity and the route/zone negative control pass
 for all eight U1 1V1 pads plus C4.1. Its native DRC remains open.

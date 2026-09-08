@@ -26,15 +26,18 @@ y=58.05–65.95 mm, with extensive rail/PEDET/CLKREQ copper already allocated.
 V35 therefore supplies a clean five-net SPI/crystal source-field oracle, but
 does not contain the complete current rail/control implementation.
 
-## Rejected implementation probe
+## RTL_5V co-allocation result
 
-`PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_RTL5V_PROBE_V2.kicad_pcb` used
-only native V35 pad coordinates and ordinary through-vias to test an RTL_5V
-co-allocation. Native DRC found 15 violations, including RTL_5V crossings
-with SPISI and RTL_3V3, an RTL_5V-to-RTL_3V3 contact at the QFN edge, and
-dangling RTL_5V segments. V1 is also preserved and was rejected for the
-same route-implementation class. Neither probe changes the retained V35
-reference or production design.
+V1 and V2 used only native V35 pad coordinates and ordinary through-vias and
+were rejected: V2's native DRC found 15 violations, including RTL_5V
+crossings with SPISI and RTL_3V3, a QFN-edge contact, and dangling segments.
+V4 then used the clear upper source corridor, moved the U1.17 departure clear
+of SPISI, and removed an unnecessary mid-corridor via. Its native endpoint
+audit passes U1.17/U1.33/C5.1, and the trace-removal negative control passes.
+Native DRC has four inherited warnings only; the board still has 32 intended
+unconnected items because the remaining Path-B support is not yet authored.
+V4 is promoted only as the RTL_5V sub-primitive, not as complete support or
+production CAD.
 
 ## Next implementation step
 
@@ -51,3 +54,5 @@ remaining work is coordinated route allocation and full Path-B validation.
 - `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35-spi-audit.txt`
 - `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35-support-audit.txt`
 - `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_RTL5V_PROBE_V2-drc.rpt`
+- `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_RTL5V_PROBE_V4-drc.rpt`
+- `phase24_rtl9210b_v35_rtl5v_audit.py`

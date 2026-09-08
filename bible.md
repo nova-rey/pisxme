@@ -6616,3 +6616,7 @@ RTL_5V disposable probes. V2 was rejected by native DRC for RTL_5V crossings
 with SPISI/RTL_3V3, a QFN-edge contact, and dangling segments. The next Path-B
 experiment must co-author all rails and QFN departures around the proven V35
 five-net SPI/crystal field; Path A and production CAD remain untouched.
+2026-09-08: V4 is retained as the V35-derived RTL_5V sub-primitive. Native
+U1.17/U1.33/C5.1 connectivity and trace-removal negative control pass, and
+native DRC returns to the four inherited warnings. Full RTL9210B support,
+including other rails and controls, remains open.
