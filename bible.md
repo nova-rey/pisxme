@@ -6946,6 +6946,10 @@ The JMS_AVDD33 U11.19-to-C80.1 south-east escape passed native connectivity
 and a trace-removal negative control with no authored shorting/crossing class.
 It is retained as a support sub-primitive; complete rail routing remains open.
 
+The paired JMS VBUS divider escape passed native U11.16/R82.1 and
+R82.2/R83.1 connectivity plus a trace-removal negative control. Its remaining
+crossings are inherited donor USB artifacts; full support routing remains open.
+
 The JMS crystal pad-20 sensitivity candidate passed native XIN/XOUT endpoint
 connectivity and its trace-removal negative control. It remains disposable
 evidence only because final JMS583 land-pattern pad geometry is still open.

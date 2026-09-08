@@ -45,7 +45,11 @@ The `JMS_AVDD33` decoupler escape is likewise retained as a valid
 sub-primitive in `PHASE24_JMS583_AVDD33_PROBE-drc.rpt`: U11.19-to-C80.1
 native connectivity and the trace-removal negative control pass, with no
 authored shorting/crossing class. Full rail and support-field routing remains
-open.
+open. The VBUS divider probe is retained in
+`PHASE24_JMS583_VBUS_DIVIDER_PROBE-drc.rpt`: both U11.16-to-R82.1 and
+R82.2-to-R83.1 pass native connectivity and the paired trace-removal negative
+control. No authored shorting class remains; the crossing findings are
+inherited donor USB artifacts.
 The pad-width sensitivity candidate is recorded in
 `PHASE24_JMS583_CRYSTAL_PAD20_NARROW-drc.rpt`: the disposable runtime
 footprint uses 0.20 mm pitch-direction pads and 0.15 mm support traces, and
