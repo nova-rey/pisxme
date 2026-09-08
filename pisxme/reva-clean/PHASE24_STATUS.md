@@ -124,6 +124,10 @@ track; it unexpectedly passes and is not used as evidence.
 The corrected V661 audit removes every duplicate instance of the unique
 RTL_5V trunk. The endpoint group passes and the trace-removal negative control
 now fails as required.
+V663 is rejected as the lower RTL_3V3 source-escape class: after moving the
+U1.39 transition farther west, native DRC still reports a real RTL_3V3/
+RTL_1V1 short at the QFN field. The candidate has 10 total findings and 21
+unconnected pads. No rule or architecture change was made.
 V659 is rejected after a valid native rerun: the all-rail In2 collector on the
 fresh V35 basis produced 56 violations, including rail-to-rail, rail-to-SPI,
 and rail-to-crystal shorts/crossings. The helper defects encountered before

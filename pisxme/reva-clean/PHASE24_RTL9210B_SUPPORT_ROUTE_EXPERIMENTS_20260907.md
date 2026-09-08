@@ -2970,3 +2970,7 @@ This is an audit-tool defect, not waived connectivity evidence.
 The corrected branch-specific V661 audit removes every duplicate instance of
 the unique RTL_5V trunk. The endpoint group passes and the negative control
 fails as required.
+V663 moves the U1.39 lower RTL_3V3 transition farther west on the V661 basis.
+Native DRC still reports the RTL_3V3/RTL_1V1 source-field short, with 10 total
+findings and 21 unconnected pads. Reject this escape class; it is not an
+architecture result.

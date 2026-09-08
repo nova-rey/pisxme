@@ -6856,3 +6856,6 @@ rail basis.
 2026-09-08: Corrected the V661 RTL_5V negative control to remove every
 duplicate instance of the unique trunk. The saved-board endpoint audit passes,
 and the corrected trace-removal control fails as required.
+2026-09-08: V663 moved the U1.39 lower RTL_3V3 transition farther west; native
+DRC still reported the RTL_3V3/RTL_1V1 QFN source-field short (10 findings,
+21 opens). Reject the escape class; no architecture or production CAD changed.
