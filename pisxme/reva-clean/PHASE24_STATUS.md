@@ -40,6 +40,11 @@ is rejected: native connectivity still passed, but inward launch vias created
 new shorts into J1 12V pads and the U11 ground pad. It is preserved as a
 route-implementation negative result; FULL7 remains the active basis.
 
+The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
+also rejected: it reduced some crossings but raised native DRC to 845 and
+introduced additional local clearance/crossing findings. FULL7 remains the
+best current USB3 basis.
+
 The current native-pad support routing trial is rejected: native DRC reports
 834 violations and 499 inherited unconnected items, including authored
 support crossings. It remains disposable evidence only. The structural

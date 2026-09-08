@@ -7096,6 +7096,11 @@ endpoints remained natively connected, inward vias introduced shorts to J1
 12V pads and U11 ground; the trial is preserved as negative route evidence
 and FULL7 remains the active basis.
 
+2026-09-08: Rejected FULL11, a TX layer-transition attempt around the
+CM5_PERST corridor. Native USB3 endpoints remained connected, but DRC rose
+to 845 with additional local clearance/crossing findings; FULL7 remains the
+active route basis.
+
 2026-09-08: Continued USB3 routing against the corrected source map. FULL7
 passes all ten native endpoint assertions and reduces native DRC to 827
 violations / 499 inherited opens; remaining local crossings and three
