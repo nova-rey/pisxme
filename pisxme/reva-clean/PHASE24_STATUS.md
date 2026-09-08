@@ -133,6 +133,14 @@ model/escape-allocation failure, not an electrical or macro-placement result.
 The next allocator must use per-pad legal escape corridors and preserve
 neighboring QFN fields even within the active terminal halo.
 
+Transplanting the verified JMS583 support primitive onto the unmodified FULL7
+USB3 source basis was also rejected as an integrated route. Support endpoint
+and negative-control checks pass, but native DRC reports 917 violations,
+including the inherited CM5 findings, a real JMS_XAVDDH/CM5_USB3_TX_N
+collision, and local XIN/XOUT via-clearance. The support primitive remains
+valid in isolation; its three QFN edge exits must be regenerated in-place
+around the USB3 copper.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

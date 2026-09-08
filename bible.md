@@ -7357,3 +7357,10 @@ its global-endpoint omission. Native DRC still found 1,013 violations and
 multiple real shorts because its bounded 2 mm terminal halo admitted routes
 through neighboring QFN fields. This is router-model evidence only; the next
 pass requires per-pad legal escape corridors.
+
+2026-09-08: Rejected direct transplantation of the verified JMS583 support
+primitive onto the FULL7 USB3 source basis. Native support endpoint and
+negative-control audits passed, but integrated DRC reported 917 violations,
+including a real JMS_XAVDDH/CM5_USB3_TX_N collision and local XIN/XOUT
+via-clearance. Retained the primitive as isolated evidence; QFN exits must be
+regenerated in-place around USB3 copper.

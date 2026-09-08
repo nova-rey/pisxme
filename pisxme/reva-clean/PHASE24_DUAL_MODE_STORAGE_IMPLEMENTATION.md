@@ -101,6 +101,13 @@ neighboring QFN fields. Native DRC reports 1,013 violations and multiple real
 shorts. The candidate and report are preserved; the next implementation must
 encode legal per-pad escape corridors rather than a broad halo.
 
+The verified JMS583 support primitive was transplanted onto the unmodified
+FULL7 USB3 basis and rejected as an integrated route. Native support audits
+pass, but DRC reports 917 violations including a real XAVDDH-to-CM5_USB3_TX_N
+collision and local XIN/XOUT via-clearance. The primitive remains valid
+isolated evidence; the next pass must regenerate its QFN exits in-place around
+the USB3 copper.
+
 The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route
 evidence only; FULL7 is still the active basis.
