@@ -161,6 +161,10 @@ the B.Cu field to the U1.20 branch. Native DRC has no RTL_3V3 short, crossing,
 or unconnected finding and remains at three inherited silkscreen warnings.
 This is a rail-field closure only; controls, clocks, SPI, USB, lane 0, M.2,
 power, firmware, and integrated Path-B validation remain open.
+V647's crystal-pair trials are rejected. The direct F.Cu path crosses the
+retained rail field; the staggered B.Cu retry removes XTAL_IN/XTAL_OUT contact
+but still conflicts with the U1.20 3V3 via and U1 1V1 corridor. The crystal
+source exits require coordinated allocation with those rails.
 V646's first RSET route is rejected. The U1.51-to-R1.1 endpoint path is
 physically connected, but its B.Cu diagonal crosses the retained U1.40 1V1
 corridor. A separate RSET channel is required; no routing rule is relaxed.
