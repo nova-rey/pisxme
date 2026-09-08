@@ -18,6 +18,12 @@ storage island and using separated ordinary-via XIN/XOUT corridors still
 produced real XIN/XOUT-to-support shorts; native DRC was 850 violations / 499
 unconnected items. Preserve as route-implementation evidence only.
 
+2026-09-08: V3 QFN escape repair completed the JMS583 support field. Native
+complete-support audit and trace-removal negative control pass all ten endpoint
+pairs; native DRC reports 852 violations / 499 unconnected items with no
+storage-local short/crossing and seven inherited CM5 donor USB crossings.
+Retain as the current support-field primitive, not Phase 24 closure.
+
 2026-09-08: Replayed the JMS583 support author against the corrected NC39
 candidate. Native DRC reports 836 violations / 499 unconnected items,
 including one real JMS_REXT-to-JMS_AVDDL short and authored crossings. The

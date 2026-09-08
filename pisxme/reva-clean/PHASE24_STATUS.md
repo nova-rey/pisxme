@@ -41,6 +41,13 @@ into the storage island and regenerated separated XIN/XOUT escapes, but native
 DRC reports 850 violations / 499 unconnected items with real XIN/XOUT shorts
 against JMS support rails. It is rejected route implementation evidence; no
 severity or layer-policy relaxation was made.
+The V3 QFN escape repair then separated the XIN/XOUT B.Cu corridors and moved
+the REXT transition outside the adjacent pad row. The complete-support audit
+passes all ten native endpoint assertions and its trace-removal negative
+control. Native DRC reports 852 violations / 499 unconnected items with no
+storage-local short or crossing; the seven crossing records are inherited
+CM5 donor USB geometry. This is a validated support-field primitive, not yet
+the complete storage-island or Phase 24 pass.
 The physically scoped U11-only reauthor probe is also rejected: native export
 produced 20 mismatches and merged unrelated `JMS_AVDDL`/`BRIDGE_USB_VBUS`
 ownership. The live source was restored to the stable two-mismatch state.

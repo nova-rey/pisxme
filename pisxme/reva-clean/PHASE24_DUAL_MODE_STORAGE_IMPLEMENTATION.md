@@ -55,6 +55,14 @@ only.
   DRC reports 850 violations / 499 unconnected items and real XIN/XOUT shorts
   into the support field. The crystal field still needs obstacle-aware
   allocation; no rule relaxation or production promotion occurred.
+- The V3 QFN escape repair,
+  `PHASE24_DUAL_MODE_STORAGE_NC39_QFN_ESCAPE_REPAIR_V3.kicad_pcb`, completes
+  REXT, XIN, and XOUT with ordinary through-via corridors. The complete
+  support audit and trace-removal negative control pass for all ten support
+  endpoint pairs. Native DRC reports 852 violations / 499 unconnected items;
+  no storage-local short/crossing is present, while seven crossings are
+  inherited CM5 donor USB geometry. This remains a support-field primitive,
+  not full storage closure.
 - The current regenerated disposable placement candidate is
   `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb`; it is not
   production authority. The current fresh native result is recorded in
