@@ -1640,7 +1640,7 @@ references. A disposable native low-speed support route pass saves 14
 pad-to-pad connections; its DRC remains open at 1,158 violations / 499
 unconnected items and is not promoted.
 
-## Live dual-mode checkpoint — 2026-09-06
+## Superseded historical dual-mode checkpoint — 2026-09-06
 
 Latest private checkpoint: `7938f64` (`reva-clean`). The active storage
 candidate is `JMS583-QHFA3A` plus retained `TUSB9261IPVP`, TI
@@ -1648,13 +1648,15 @@ candidate is `JMS583-QHFA3A` plus retained `TUSB9261IPVP`, TI
 `SN74LVC1G17DBVR`, all inside the storage island. JMS583 pin authority and
 M-key contact 69 PEDET/CONFIG1 are corrected and structural audits pass.
 
-The candidate is not release-ready: native schematic ERC reports 322 findings
-at full severity (13 errors on the child alone, including inherited root
-hierarchy/dangling-label issues), and the native PCB placement fixture remains
-unrouted with 1,013 DRC violations and 499 unconnected items. The next action
-is to instantiate the three-position SATA/AUTO/NVMe override and documented
-JMS583 support network, then create and route a mode-aware native fixture.
-Phase 24 whole-board work remains paused.
+The candidate was not release-ready at that checkpoint: native schematic ERC
+reported 322 findings at full severity (13 errors on the child alone,
+including inherited root hierarchy/dangling-label issues), and the native PCB
+placement fixture remained unrouted with 1,013 DRC violations and 499
+unconnected items. The former next action was to instantiate the
+three-position SATA/AUTO/NVMe override and documented JMS583 support network.
+That work is now superseded by the live state at the top of this document:
+the support network is instantiated and audited; mode-aware routing and
+release validation remain open. Phase 24 whole-board work remains paused.
 
 ## Authorized storage-island upgrade checkpoint — 2026-09-06
 

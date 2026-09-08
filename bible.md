@@ -6697,3 +6697,7 @@ The storage placement generator now owns R24/R32/R33 and removes donor
 duplicates before regenerating the disposable current placement. The result
 is not promoted: the available parity comparison still uses a stale XML
 export, and native DRC/connectivity closure remains open.
+2026-09-08: Marked the older 2026-09-06 dual-mode checkpoint in
+PHASE24_STATUS.md as superseded historical evidence. Its former
+"instantiate support network" next-action wording now states that the work
+was completed and that routing/release validation is the live open gate.
