@@ -6191,3 +6191,7 @@ V480 combined it with the V475 four-pair lane basis but was rejected by
 native DRC for one REFCLK source short, two lane/REFCLK crossings, and two
 clearances. V475 and V479 remain the retained isolated bases; no production
 CAD or Path-A change.
+2026-09-08: Rejected RTL9210B V481 full six-net coallocation. Native DRC
+found one REFCLK_N/TX_P short and two REFCLK/lane crossings, while retaining
+zero clearance violations. V475 and V479 remain the isolated retained bases;
+the next attempt must regenerate their source fields together.

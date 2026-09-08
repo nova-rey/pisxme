@@ -2300,3 +2300,9 @@ V475 lane basis with a new REFCLK split; it was rejected by native DRC for a
 REFCLK source short, two lane/REFCLK crossings, and two local clearances.
 V479 remains the clean REFCLK primitive and V475 the clean four-pair lane
 basis; no production CAD or Path-A change.
+V481 replaced only the REFCLK continuation on the V480 six-net candidate.
+Native DRC retained zero clearance violations but found one REFCLK_N/TXP
+short and two crossings involving REFCLK_N/RXP and REFCLK_P/TXN. The
+isolated V479 REFCLK and V475 four-pair primitives remain valid; complete
+coallocation still requires regenerating the REFCLK and lane source field as
+one layer-aware escape.
