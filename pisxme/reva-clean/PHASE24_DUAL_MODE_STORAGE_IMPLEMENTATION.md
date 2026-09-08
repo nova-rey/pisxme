@@ -54,6 +54,9 @@ only.
   shorts and seven crossings result from stale distributed support placement,
   so the next support pass must co-locate the support parts with U11 before
   routing them.
+  The subsequent local-anchor trial is also rejected evidence: it reports one
+  reset short and six crossings, showing that co-location alone is insufficient
+  and that each support net needs a native-pad-aware escape corridor.
 
 ## CURRENT OPEN GATES
 

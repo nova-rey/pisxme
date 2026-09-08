@@ -25,7 +25,7 @@ MAPS={
  'SOT-23-5.kicad_mod':('U14',{2:'MODE_IN',3:'POWER_GND',4:'STORAGE_SEL',5:'STORAGE_3V3'}),
  'MODE_JUMPER_1x04.kicad_mod':('J5',{1:'FORCE_SATA',2:'AUTO_PEDET',3:'FORCE_NVME',4:'MODE_IN'}),
  'R_0402_1005Metric.kicad_mod':('R80',{1:'JMS_REXT',2:'POWER_GND'}),
- 'L_2520_6332Metric.kicad_mod':('L10',{1:'JMS_LXO',2:'JMS_VDDREG_5V'}),
+ 'L_2520_6332Metric.kicad_mod':('L10',{1:'LXO',2:'JMS_VDDREG_5V'}),
  'Crystal_3225_4Pad.kicad_mod':('Y10',{1:'XIN',2:'XOUT',3:'POWER_GND',4:'POWER_GND'})}
 SUPPORT_PCB = {
  'C80':{1:'JMS_AVDD33',2:'POWER_GND'},'C81':{1:'JMS_VCCO',2:'POWER_GND'},
@@ -99,8 +99,10 @@ def main():
         # J5 is deliberately outboard of the M-key socket.  At the former
         # (230,165) origin its FORCE_NVME pad landed in J3's M2_3V3 pad
         # column; this is a physical placement collision, not a net issue.
-        x={'U11':140,'U12':155,'U13':180,'U14':210,'J5':245,'R80':250,'L10':258,'Y10':270}[ref]
-        y={'U11':135,'U12':135,'U13':135,'U14':150,'J5':150,'R80':180,'L10':180,'Y10':190}[ref]
+        x={'U11':140,'U12':155,'U13':180,'U14':210,'J5':245,
+           'R80':131,'L10':136,'Y10':145}[ref]
+        y={'U11':135,'U12':135,'U13':135,'U14':150,'J5':150,
+           'R80':125,'L10':125,'Y10':125}[ref]
         additions.append(pcb_footprint(LIB/fname,ref,x,y,nets))
     for ref,nets in SUPPORT_PCB.items():
         fname = 'C_0603_1608Metric.kicad_mod' if ref == 'C44' else ('Crystal_3225_4Pad.kicad_mod' if ref == 'Y2' else ('L_2520_6332Metric.kicad_mod' if ref == 'L2' else ('R_0402_1005Metric.kicad_mod' if ref.startswith('R') else 'C_0402_1005Metric.kicad_mod')))

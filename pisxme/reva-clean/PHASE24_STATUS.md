@@ -41,6 +41,12 @@ endpoint audit remains PASS, while physical crystal escape clearance/crossing
 work remains open.
 The new `phase24_jms583_pcb_net_authority_audit.py` checks all 64 native U11
 pad nets against the live schematic authority and passes after regeneration.
+The local-anchor support trial is rejected in
+`PHASE24_JMS583_SUPPORT_LOCAL_ANCHORS_V2-drc.rpt`: it removes the old
+long-detour cause but direct all-net joins still create one real reset short,
+six crossings, and dense pad-field clearance findings. It is useful placement
+evidence only; the next author must allocate native-pad escapes per corridor,
+not append straight joins.
 The new `PHASE24_RTL9210B_QFN_ORIENTATION180_PROBE.kicad_pcb` is the current
 disposable placement basis for the next QFN field pass: native DRC reports
 four inherited warnings, and the U1.39-to-U2.8 RTL_3V3 corridor in

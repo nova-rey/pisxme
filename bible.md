@@ -6916,3 +6916,8 @@ still pass; the regenerated placement remains open at 857 DRC violations and
 last short-free disposable basis while its later report remains rejected
 evidence. JMS583 package identity/pitch are documented, but final land-pattern
 pad geometry remains an explicit open production gate.
+
+The next bounded support placement moved R80/L10/Y10 beside U11 and corrected
+the L10 LXO net alias. The all-net direct support trial was rejected at one
+real reset short and six crossings; co-location is retained as a better basis,
+but native-pad-aware per-net source escapes are still required.
