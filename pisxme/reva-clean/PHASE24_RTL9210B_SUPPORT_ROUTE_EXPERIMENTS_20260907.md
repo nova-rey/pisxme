@@ -1994,3 +1994,8 @@ items, and 21 unconnected items. A native endpoint audit passes RTL_1V1,
 RTL_3V3, XTAL_IN, XTAL_OUT, and RSET; negative controls remove every route
 for RTL_1V1 and RSET and fail as required. This is a support-field basis,
 not Path-B closure; USB, REFCLK, reset, SPI, lane, and M.2 remain open.
+V369 attempted to transplant the current-orientation V328 lane-0 primitive
+onto V368. It is rejected as an integration route failure: native DRC found
+6 shorting and 7 crossing classes, chiefly between RX B.Cu, XTAL_OUT, and
+the 1V1 launches. The next high-speed pass must co-author lane-0, XTAL_OUT,
+and the 1V1 right-side channels; no authority or Path-A CAD changed.

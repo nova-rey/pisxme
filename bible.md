@@ -6004,3 +6004,7 @@ reports zero shorts and zero crossings with 21 inherited opens. The native
 audit passes RTL_1V1, RTL_3V3, XTAL_IN, XTAL_OUT, and RSET, and complete-net
 trace-removal negative controls pass. Path B interface and integration work
 remains open; Path A and production CAD remain unchanged.
+2026-09-07: Rejected RTL9210B V369 lane-0 transplant. Native DRC found six
+shorting and seven crossing classes where the V328 RX corridor conflicted
+with XTAL_OUT and RTL_1V1 launches. This is an integration route failure;
+Path A and production CAD remain unchanged.
