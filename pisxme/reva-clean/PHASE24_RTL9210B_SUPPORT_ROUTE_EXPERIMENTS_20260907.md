@@ -62,6 +62,10 @@ outboard transition while the V576 coupled 3V3 network is retained. Native
 V579 as the current RTL_5V/3V3 candidate, not full Path-B closure.
 
 ## Current state and documentation hygiene
+V580 attempted ordinary-via returns for U1 ground pads 69, 45, and 66.
+Native DRC rejected the placement with true GND-to-USB/3V3 shorts and local
+QFN clearance violations. Reject V580; V579 remains the retained rail
+candidate.
 
 The JMS583 support network is already instantiated in the live authoritative
 storage schematic and in the disposable support candidates. Any earlier note

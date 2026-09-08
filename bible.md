@@ -5595,6 +5595,10 @@ to clear J1's SSD-power field. Native DRC is 5 warnings / 45 opens with no
 SPI short/crossing; all five saved-board endpoint assertions and the SPICS
 negative control pass. This is the current SPI geometry baseline, not a full
 Path-B closure.
+2026-09-08: RTL9210B V580 attempted ordinary-via returns for U1 ground pads
+69, 45, and 66. Native DRC found true GND-to-USB/3V3 shorts and local QFN
+clearance violations. V580 was rejected; V579 remains the retained rail
+candidate.
 2026-09-07 — PiSXMe Phase 24 Path B: the rail-only lateral proof passed native
 DRC with 0 violations and passed saved-board endpoint assertions from U1 to
 C3/C4/C5 on RTL_3V3/RTL_1V1/RTL_5V. Removing serialized RTL_3V3 copper failed

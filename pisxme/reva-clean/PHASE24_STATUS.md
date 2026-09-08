@@ -59,6 +59,10 @@ controls pass. Native DRC is 11 findings with 20 opens; the 5V source group
 is no longer open, and the remaining findings are localized/inherited
 support, return, and other Path-B endpoints. Retain V579 as the current
 RTL_5V/3V3 candidate, not full Path-B closure.
+V580 attempted ordinary-via returns for U1 exposed/ground pads 69, 45, and
+66. Native DRC rejected the placement with true GND-to-USB/3V3 shorts and
+clearance violations near the QFN lower field; do not use it. V579 remains
+the retained rail candidate.
 
 ## CURRENT OPEN GATES
 
