@@ -20,6 +20,12 @@ V571 is rejected: the attempted east U1.34 reallocation did not preserve the
 complete 3V3 saved-board connectivity group and still retained QFN/pad-field
 clearance and solder-mask violations. Its audit failure is preserved as a
 negative result; V562 remains the retained baseline.
+V572 corrects the missing 3V3 In2 bridge and replaces the V571 diagonal with
+ a Manhattan U1.34-to-U1.39 handoff. Native 5V and 3V3 connectivity audits
+ pass with independent trace-removal negative controls; native DRC improves
+ to 14 findings with no shorting or crossing classes. V572 is the retained
+ disposable candidate, not a production pass: QFN/pad-field clearances and
+ inherited support findings remain open.
 
 ## CURRENT OPEN GATES
 

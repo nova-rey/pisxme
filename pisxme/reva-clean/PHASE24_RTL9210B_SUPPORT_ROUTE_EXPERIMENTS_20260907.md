@@ -23,6 +23,13 @@ failed the complete 3V3 endpoint group, and native DRC retained QFN/pad-field
 clearance plus solder-mask findings. Reject V571; its failed audit is evidence
 against this specific east handoff, not against RTL9210B or Path A.
 
+V572 corrects V571's missing In2 bridge and replaces the diagonal U1.34-to-
+U1.39 escape with a Manhattan handoff. The native audit passes both complete
+5V and 3V3 endpoint groups and both trace-removal negative controls. Native
+DRC improves to 14 findings with no shorting or crossing classes, but QFN/
+pad-field clearance and inherited support findings remain. Retain V572 as
+the current disposable candidate; it is not production-clean.
+
 ## Current state and documentation hygiene
 
 The JMS583 support network is already instantiated in the live authoritative

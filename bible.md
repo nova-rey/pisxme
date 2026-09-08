@@ -6487,6 +6487,12 @@ reallocation to free the west 5V escape. The saved-board audit failed the
 complete 3V3 endpoint group, and native DRC retained QFN/pad-field clearance
 and solder-mask violations. V571 was rejected; V562 remains the support
 baseline and Path A/production CAD remain unchanged.
+2026-09-08: RTL9210B V572 corrected V571's missing RTL_3V3 In2 bridge and
+replaced the diagonal U1.34-to-U1.39 escape with a Manhattan handoff. Native
+audits pass complete RTL_5V and RTL_3V3 groups with independent trace-removal
+negative controls. Native DRC is down to 14 findings with no shorting or
+crossing classes, but QFN/pad-field and inherited support findings remain;
+V572 is retained as a disposable candidate, not production closure.
 2026-09-08: RTL9210B V565 tested a local In2 RTL_5V plane. Native DRC rejected
 the source vias against RTL_3V3 and native connectivity left the 5V branches
 disconnected. The plane-only approach is rejected; V562 remains the support
