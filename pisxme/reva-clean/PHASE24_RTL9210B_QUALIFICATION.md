@@ -1,7 +1,7 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
-Status: **CONTINUE BOTH**. Path A remains the fallback/reference and is not
-modified. Path B is a credible isolated prototype candidate, but is not yet
+Status: **KEEP A**. Path A remains the protected production architecture and
+is not modified. Path B was evaluated as an isolated candidate but is not
 authorized for destructive replacement or production integration.
 
 ## Decision summary
@@ -181,7 +181,8 @@ Required bring-up experiment before Path-B promotion:
 | Validation burden | Mode isolation across two switches/bridges | Firmware, mode, and unpowered-state behavior |
 | Productization | More conventional/documentable | Smaller but dependent on Realtek/OEM package rights |
 
-Recommendation: **CONTINUE BOTH pending one narrowly defined experiment** —
+Historical recommendation (superseded by the bounded DFM decision below):
+**CONTINUE BOTH pending one narrowly defined experiment** —
 traceable virgin-chip programming and mode bring-up, plus acquisition of the
 current Realtek application circuit. If that experiment closes, Path B is the
 preferred migration candidate because it removes both external high-speed
@@ -251,7 +252,8 @@ That fixture is incomplete and is classified as route-implementation failure;
 it is not evidence against the controller architecture. No Path-A source or
 production PCB was changed.
 
-The requested apples-to-apples decision is therefore still **CONTINUE BOTH**.
+The earlier apples-to-apples recommendation was **CONTINUE BOTH**; it is
+superseded by the native lower-QFN DFM result documented below.
 Path B materially reduces the high-speed IC count and removes both external
 selectors, but it has not yet closed the two productization gates that matter:
 traceable virgin-part programming/configuration and authorized firmware
@@ -260,10 +262,29 @@ an independently verified stock-depth or quantity-1 quote; JLC itself states
 that live quantity and price appear during the order/product-detail flow
 ([JLC parts guidance](https://jlcpcb.com/help/article/searching-for-products)).
 
-The next narrowly defined experiment is a standalone Path-B bring-up fixture
+The previously proposed standalone Path-B bring-up fixture is retained as
+historical qualification context, not a production prerequisite. The next
+production action is to preserve Path A and continue the approved plan.
+The next narrowly defined experiment was a standalone Path-B bring-up fixture
 with the corrected SMD QFN-68 land pattern, complete support circuit, exposed
 SPI-flash/programming access, and the corrected M-key lane mapping. It must be
 held outside production CAD until a traceable RTL9210B-CG lot can be
 programmed and verified in both SATA and NVMe modes. This preserves Path A as
 the fallback while advancing the candidate on the evidence that can actually
 change the decision.
+
+## Path-B DFM decision — bounded rejection
+
+The remaining lower-QFN escape blocker is quantified from the native footprint.
+U1.39 and U1.40 have 0.4 mm center spacing and 0.2 x 0.9 mm pads. Under the
+approved ordinary 0.60/0.30 mm via and 0.20 mm clearance contract, a neighboring
+pad requires 0.30 + 0.20 + 0.45 = 0.95 mm radial separation from a via. The
+ordinary-via escape envelope cannot fit between this adjacent pad pair.
+Native V663/V664 trials reproduce the resulting short/crossing classes.
+
+This is a concrete package/DFM constraint, not a documentation or firmware
+objection. Closing it would require qualified microvia/via-in-pad, a different
+package, or relaxed manufacturing rules outside the approved contract.
+RTL9210B Path B is rejected for this Rev-A implementation. Path A remains the
+protected production architecture; RTL9210B artifacts remain qualification
+evidence only.

@@ -115,6 +115,11 @@ V653's local Y1/C1/C2 relocation is rejected. It reduces the crystal span but
 creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
+Native footprint geometry quantifies a bounded Path-B DFM blocker: U1.39/U1.40
+are 0.4 mm apart with 0.2 x 0.9 mm pads, while an ordinary 0.60/0.30 mm via
+plus 0.20 mm clearance requires 0.95 mm separation. V663/V664 reproduce the
+source-field shorts/crossings. Reject RTL9210B Path B for the current package
+and DFM contract; Path A remains protected.
 V661 is the current retained rail-integration basis: native DRC has nine
 inherited warnings and no shorting/crossing class after adding the proven
 RTL_5V route to the V35 U2-left crystal/1V1/upper-3V3 field. It still has 23

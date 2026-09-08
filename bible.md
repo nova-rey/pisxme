@@ -6862,3 +6862,9 @@ DRC still reported the RTL_3V3/RTL_1V1 QFN source-field short (10 findings,
 2026-09-08: V664 tested a diagonal U1.39 RTL_3V3 departure; native DRC still
 reported the RTL_3V3/RTL_1V1 short and crossings (13 findings, 21 opens).
 Reject the escape class; no architecture or production CAD changed.
+2026-09-08: Native footprint geometry quantified the RTL9210B lower-QFN DFM
+blocker: U1.39/U1.40 are 0.4 mm apart with 0.2 x 0.9 mm pads, while an
+ordinary 0.60/0.30 mm via plus 0.20 mm clearance requires 0.95 mm separation.
+V663/V664 reproduce the source-field shorts/crossings. Reject RTL9210B Path B
+for the current Rev-A package/DFM contract; retain Path A and do not relax
+rules or alter production CAD.
