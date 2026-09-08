@@ -532,6 +532,10 @@ Path A and production CAD remain unchanged.
 REFCLK crossing but retained PERST; V293 avoided PERST but introduced JTAG /
 undefined-field shorting and was rejected. PEDET remains open; Path A and
 production CAD remain unchanged.
+2026-09-07: Retained RTL9210B V301 CLKREQ topology basis. Native endpoint
+connectivity reduced the saved-board open count to 18, but DRC found
+CLKREQ/SPISO and CLKREQ/XTAL_IN crossings and a CLKREQ/REFCLK_N short at the
+U1 transition. Path A and production CAD remain unchanged.
 2026-09-07: Retained RTL9210B V300 PEDET sideband basis after V299 exposed a
 floating J1 branch. Native R2.1/U1.8/J1.69 connectivity passed; DRC reported
 454 findings / 20 inherited opens with no shorting, crossing, or footprint

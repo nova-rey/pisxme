@@ -6800,6 +6800,11 @@ pass, both trace-removal negative controls pass, and native DRC has 366
 findings / 25 inherited opens with no shorting or crossing class and zero
 footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
 high-speed support remain open.
+V301 is retained as a CLKREQ topology basis but not promoted. Native endpoint
+connectivity reduces the saved-board open count to 18, while DRC identifies
+CLKREQ/SPISO and CLKREQ/XTAL_IN crossings plus a CLKREQ/REFCLK_N short at the
+U1 transition. The next repair is the U1-side CLKREQ transition; no
+architecture or production CAD change was made.
 V299 removed all PEDET/PERST crossing classes with a U-shaped approach but
 exposed a floating J1 branch junction. V300 adds the missing same-net F.Cu
 join. Native connectivity now joins R2.1/U1.8/J1.69; native DRC reports 454
