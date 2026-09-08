@@ -6127,3 +6127,6 @@ transition vias with lane escape.
 native DRC reports zero shorts/crossings with only inherited warnings, and
 the saved-board audit plus two trace-removal negative controls pass. REFCLK
 remains open for co-allocation with the lane source field and full support.
+2026-09-08: Rejected RTL9210B REFCLK/lane coallocation V450. Native DRC found
+source-field and RTL_3V3 conflicts plus a malformed RX_P handoff. V448 and
+V328 remain the retained isolated primitives; no production-CAD change.

@@ -2195,3 +2195,8 @@ Native DRC reports zero shorts/crossings with only the inherited dangling
 RTL_3V3 and isolated-GND warnings; the V448 audit passes both REFCLK endpoint
 groups and two trace-removal negative controls. V448 is the retained REFCLK
 primitive pending full lane/REFCLK co-allocation.
+V450 attempted early RX_P transition plus a lower REFCLK_N trunk. Native DRC
+rejected it with RX_P/RX_N source-field contact, REFCLK_N/RTL_3V3 conflicts,
+and a malformed RX_P handoff that left a dangling transition. It is rejected
+as a route-authoring/coallocation trial; V448 remains the clean REFCLK
+primitive and V328 remains the authoritative lane primitive.
