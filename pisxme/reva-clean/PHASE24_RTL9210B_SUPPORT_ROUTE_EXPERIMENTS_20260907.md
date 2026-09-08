@@ -2074,3 +2074,11 @@ the intentionally incomplete support base. This proves the exact lane
 primitive remains geometrically valid; the remaining task is joint
 allocation of support rails/crystal and the lane source channels. Path A and
 production CAD remain unchanged.
+V389 refilled all native zones on V388 before comparing DRC. This removed the
+stale zone-clearance flood and left 17 violations, including 25 unconnected
+items counted separately by the report. V390 applied the board minimum 0.20 mm
+width to all four lane nets and removed the four imported 0.13 mm width
+errors. V390 retains 0 shorts and 0 crossings, with 25 opens and localized
+clearance/hole-clearance, dangling-power, and isolated-copper findings. These
+remain open manufacturing/layout findings; no Path-A or production CAD
+changed.

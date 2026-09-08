@@ -559,6 +559,12 @@ an order-preserving two-layer SPI partition. Native KiCad reports 30
 violations / 40 opens; dominant failures remain the rotated U1 QFN source
 escape and retained XTAL_OUT region. U2 footprint coordinates are corrected;
 Path A and production CAD remain unchanged.
+2026-09-07: V389 refilled native zones on the V388 candidate, reducing the
+stale zone-clearance flood to 17 DRC violations plus 25 opens. V390 widened
+all four imported lane nets to the board minimum 0.20 mm; native DRC retained
+zero shorts and zero crossings, with 25 opens and localized clearance,
+hole-clearance, dangling-power, and isolated-copper findings. Path B remains
+open and Path A/production CAD remain unchanged.
 2026-09-07: V388 restored XTAL_OUT on a separate U1 escape/B.Cu channel while
 retaining the exact V328 lane and V387 RSET/RTL_3V3 allocation. Native support
 audit and four trace-removal negative controls pass; native DRC reports zero
