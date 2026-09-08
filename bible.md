@@ -6677,3 +6677,7 @@ and production CAD remain unchanged.
 solder-mask bridging at adjacent USB_DP/USB_DM pads. The failure precedes the
 via corridor and confirms the intrinsic 0.4 mm QFN/strict-width constraint;
 V625 is rejected route evidence. Path A and production CAD remain unchanged.
+2026-09-08: V626 tested a disposable 0.13208 mm JLC-width U1.39 escape. Native
+DRC still found adjacent USB-pad clearance and solder-mask bridging, while
+the saved board rejected the 0.25 mm drills and sub-0.20 mm tracks. No
+production rule was changed; V626 is rejected evidence.

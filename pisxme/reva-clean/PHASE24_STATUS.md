@@ -7221,3 +7221,9 @@ pad bodies and solder-mask bridging, despite moving the via well outside the
 field. This confirms an intrinsic 0.4 mm-pitch QFN/strict-width source escape
 constraint; V625 is rejected route evidence. No Path A or production CAD
 changed.
+V626 is a disposable JLC-width discriminator only. It used 0.13208 mm
+tracks and 0.50/0.25 mm vias on the 0-degree U1.39 source escape. Native DRC
+still found adjacent USB-pad clearance and solder-mask conflicts; it also
+flagged the 0.25 mm drill below the saved board's 0.30 mm minimum and the
+0.13208 mm track below the active 0.20 mm netclass. It is rejected and does
+not authorize changing the production rules.

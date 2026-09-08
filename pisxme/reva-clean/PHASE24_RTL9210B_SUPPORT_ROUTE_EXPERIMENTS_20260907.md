@@ -2913,3 +2913,10 @@ bridging their solder mask. The failure occurs before the via/destination
 geometry, so this route variant is rejected as implementation evidence. The
 0-degree placement probe remains retained, and Path A/production CAD are
 unchanged.
+## V626 JLC-width U1.39 discriminator — rejected
+
+V626 tested the farther-out 0-degree U1.39 escape with 0.13208 mm tracks and
+0.50/0.25 mm vias as a disposable capability probe. Native DRC still found
+USB_DP/USB_DM source clearance and solder-mask bridging. The saved board also
+flagged the 0.25 mm drill and 0.13208 mm tracks below its 0.30 mm/0.20 mm
+minimums. No production rule was changed; the candidate is rejected.
