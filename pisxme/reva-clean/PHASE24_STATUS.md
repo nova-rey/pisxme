@@ -80,6 +80,10 @@ the four previously validated support paths. Its native endpoint audit and
 combined trace-removal negative control pass; `PHASE24_JMS583_SUPPORT_COHORT_V6-drc.rpt`
 contains no authored shorting/crossing class. It remains disposable because
 the complete support field and JMS583 production land pattern are not closed.
+The complete reset-delay branch is retained in
+`PHASE24_JMS583_RESET_DELAY_PROBE-drc.rpt`: U11.15-to-R81.1 and R81.1-to-C85.1
+both pass native connectivity and the branch trace-removal negative control;
+no authored shorting/local crossing class remains.
 The VCCK decoupler probe is retained in
 `PHASE24_JMS583_VCCK_PROBE-drc.rpt`: U11.2-to-C82.1 native connectivity and
 the trace-removal negative control pass, with no authored shorting/crossing
