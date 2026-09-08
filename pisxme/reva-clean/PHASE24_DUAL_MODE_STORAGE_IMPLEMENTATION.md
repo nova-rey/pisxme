@@ -70,6 +70,13 @@ The saved-board USB3 negative control passes: FULL7 is connected at baseline,
 and removing a required RX_N track breaks the native endpoint assertion. This
 is validation-method evidence only; routing and DRC remain open.
 
+The local USB3 router now defaults to the saved FULL7 native authority. Its
+older canonical-placement default was rejected by native connectivity because
+U12.24/U12.25 retained stale USB_TXN1/P ownership. No PCB-only net repair was
+used. The corrected disposable `PHASE24_DUAL_MODE_STORAGE_USB3_LOCAL_FROM_FULL7`
+passes all ten endpoint assertions and reports 830 DRC violations / 499
+unconnected items; it is the current routing basis, not closure.
+
 The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route
 evidence only; FULL7 is still the active basis.

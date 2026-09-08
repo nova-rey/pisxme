@@ -3,7 +3,10 @@ from pathlib import Path
 import os
 import pcbnew
 R=Path(__file__).resolve().parent
-BASE=R/os.environ.get('PISXME_STORAGE_USB3_BASE','PHASE24_DUAL_MODE_STORAGE_NC39_CANONICAL_USB3.kicad_pcb')
+# FULL7 is the current saved native authority: unlike the earlier canonical
+# placement export, its U12.24/U12.25 pads already carry JMS_USB3_TXN/P.
+# Callers may still select another disposable base explicitly.
+BASE=R/os.environ.get('PISXME_STORAGE_USB3_BASE','PHASE24_DUAL_MODE_STORAGE_NC39_USB3_FULL7.kicad_pcb')
 OUT=R/os.environ.get('PISXME_STORAGE_USB3_OUT','PHASE24_DUAL_MODE_STORAGE_NC39_USB3_LOCAL.kicad_pcb')
 F,B=pcbnew.F_Cu,pcbnew.B_Cu
 def P(x,y):return pcbnew.VECTOR2I_MM(float(x),float(y))

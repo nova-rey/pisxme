@@ -101,6 +101,13 @@ the saved PCB: baseline native connectivity passes, and removing one required
 CM5_USB3_RX_N track makes the audit fail as required. This hardens the
 connectivity evidence without treating the route as closed.
 
+The local USB3 router was corrected to default to the saved FULL7 native
+authority. A trial from the older canonical placement export was rejected by
+native connectivity because U12.24/U12.25 still carried stale USB_TXN1/P net
+ownership; no PCB-only ownership repair was applied. Re-running from FULL7
+passes all ten native endpoint assertions and reports 830 DRC violations / 499
+unconnected items. It is the current USB3 routing basis, not a Phase 24 pass.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

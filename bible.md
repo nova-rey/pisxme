@@ -7322,6 +7322,13 @@ source; native parity remains at the two R80.1/U11.39 association mismatches.
 This closes duplicate-UUID validity as a structural issue but not the native
 association mapping.
 
+2026-09-08: Corrected the local USB3 router to default to the saved FULL7
+native authority rather than the stale canonical placement export. The stale
+base failed native bridge-side TX endpoint connectivity due to U12.24/U12.25
+USB_TXN1/P ownership; no PCB-only net repair was used. The FULL7-based
+disposable route passes all ten endpoint assertions and records 830 DRC
+violations / 499 unconnected items, remaining open routing evidence.
+
 2026-09-08: Reconciled Phase 24 narrative status against the live dual-mode
 storage implementation. Current sections now identify Path A as active, record
 the current 857-violation placement baseline and 927-violation post-fix ERC,
