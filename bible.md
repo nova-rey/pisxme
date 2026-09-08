@@ -6210,6 +6210,11 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V512 exposed and corrected a disposable via-layer-pair
+serialization defect. After regeneration, native connectivity still fails to
+join U1.40/U1.50 and native DRC rejects the route for GND-pad/hole and
+XTAL_IN clearance. V512 remains rejected evidence; Path A and production CAD
+remain unchanged.
 2026-09-08: RTL9210B V509-V511 test U1.40 RTL_1V1 source-field escapes.
 Native connectivity and negative controls pass in each candidate, while DRC
 rejects successive corridors at U1.41/U1.42, GND pad 45, and no-connect pad

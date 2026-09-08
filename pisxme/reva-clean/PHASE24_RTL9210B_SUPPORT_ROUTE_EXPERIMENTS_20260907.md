@@ -1080,6 +1080,13 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V512 initially exposed a disposable via-serialization defect: the generated
+vias lacked an explicit F.Cu/B.Cu layer pair, and the native audit correctly
+failed to join U1.40 to U1.50. The generator was corrected and the board was
+regenerated, but the corrected V512 still fails native connectivity for the
+via chain and native DRC rejects the geometry for U1 GND-pad/hole clearance
+and XTAL_IN clearance. V512 is rejected; this is both a tooling correction
+and a genuine local geometry failure, not a production or Path-A change.
 V509 tests U1.40 RTL_1V1 with a lower-left F.Cu dogleg into the V506 trunk;
 native connectivity and the negative control pass, but DRC contacts U1.41/
 U1.42 USB pads. V510 departs rightward and clears those pads, but its return
