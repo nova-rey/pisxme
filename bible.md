@@ -765,7 +765,11 @@ disposable rail baseline; production CAD unchanged.
   findings. This closes the FAST-B SuperSpeed copper class.
 - The larger FAST-B skew remains an explicit post-route signal-integrity risk;
   ground-plane and power-zone implementation must not cut through these
-  corridors.
+corridors.
+2026-09-08: Rejected RTL9210B REFCLK V433/V434 after native DRC found
+source-transition interaction and connector-launch conflicts. The trials
+preserved the correct REFCLK authority and demonstrated the upper/lower J1
+launch ordering; REFCLK must now be co-allocated with lane source escapes.
 
 # 2026-08-22 — routed DRC and release-gate checkpoint
 

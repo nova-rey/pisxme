@@ -2155,3 +2155,10 @@ and its straight connector dogbones contacted adjacent J1 MDI pads. The
 source/endpoint choice is not evidence against REFCLK; the next fixture must
 stagger both transitions and approach J1.53/J1.55 from clear connector-side
 corridors.
+V433/V434 regenerated REFCLK_P/REFCLK_N with separated upper/lower J1
+approaches. V433 still crossed the two B.Cu diagonals and contacted the
+adjacent REFCLK connector pad; V434 spread the trunks but retained a source
+escape/via interaction and a J1.53 launch conflict. Both are rejected as
+route-implementation failures. They establish the needed monotonic
+connector ordering; the next pass must co-allocate REFCLK with the lane
+source transitions and use a clearance-aware source escape.
