@@ -88,6 +88,10 @@ clearance envelope; V607 moved inward and collided with the SPISI endpoint
 via. V608 coordinated two endpoint transitions but still collided at the U2
 SPICLK pad field. The next pass must allocate U1 source and U2 endpoint
 channels together.
+V616 is rejected: the proposed SPISO lower B.Cu corridor crossed the retained
+SPISO3 source channel and SPISI bottom approach, and its source transition
+violated the 3V3 clearance envelope. The remaining SPI work is a complete
+five-net channel allocation or coherent U2 support relocation.
 V609-V614 rejected successive coordinated SPISI/SPISO3 endpoint variants for
 U2 ground, occupied-via, or lower-field contact/clearance. V615 lifts the
 SPISI bottom dogbone; both SPISI and SPISO3 native connectivity audits and
