@@ -7182,3 +7182,18 @@ V565 tested a local In2 RTL_5V plane with explicit source vias. Native DRC
 rejected the vias against the RTL_3V3 field, and native connectivity left the
 5V branches disconnected. RTL_5V remains open; V562 remains the retained
 Path-B support baseline.
+## Current Path-B continuation — U1.39 lower RTL_3V3 discriminator (2026-09-08)
+
+The isolated RTL9210B Path-B gate remains OPEN. The U1.39-to-U2.8
+RTL_3V3 subprimitive was regenerated from the retained V35/U2-left upper
+RTL_3V3 basis and passes the saved-board native connectivity audit, including
+the required trace-removal negative control. It is not promotable: native DRC
+reports nine violations, including an RTL_1V1/RTL_3V3 short at the QFN field,
+RTL_3V3 clearance/solder-mask conflicts with adjacent USB pads, and inherited
+warnings. The earlier diagonal version reported eight violations; the revised
+exit reduced neither the root QFN escape constraint nor the shorting class.
+This is a route-implementation failure, not a Path-B architecture or Path-A
+failure. The candidate is preserved as raw V620/V621 evidence; no production
+CAD or Path A changed. The next trial must allocate the complete lower QFN
+source field coherently, with the active 0.20 mm width/clearance rules
+unchanged.

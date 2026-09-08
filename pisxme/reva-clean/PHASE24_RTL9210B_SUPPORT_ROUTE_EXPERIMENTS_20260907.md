@@ -2862,3 +2862,15 @@ In2 RTL_5V island. Native DRC rejected the source vias against the existing
 RTL_3V3 field and reported the proposed 5V branches as disconnected in the
 saved-board graph. The plane-only approach is rejected; RTL_5V requires
 coherent source-field reallocation. V562 remains the retained baseline.
+## V620/V621 U1.39 lower RTL_3V3 escape — rejected
+
+V620/V621 tested a distinct U1.39-to-U2.8 RTL_3V3 escape from the retained
+V35/U2-left upper field while regenerating the U1.40 RTL_1V1 outer channel.
+The native saved-board audit passed the U1.39/U2.8 endpoint assertion and its
+trace-removal negative control. Native DRC rejected the trial: the first
+diagonal exit produced U1.38/U1.55 clearance conflicts; the revised exit
+still produced an RTL_1V1/RTL_3V3 short, adjacent USB-pad clearance and
+solder-mask conflicts, and inherited warnings. The route class is rejected,
+not the RTL9210B architecture. The raw PCB and DRC receipt are retained;
+Path A and production CAD remain unchanged. The next attempt must co-author
+the complete lower QFN escape allocation rather than move one via or branch.

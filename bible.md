@@ -6645,3 +6645,9 @@ violations; no DRC rule was relaxed.
 negative-control audits with no signal DRC violations. Lower RTL_3V3 trials
 remain rejected for RSET/1V1/QFN source-field conflicts; a 0.13208 mm retry
 also violated the active 0.200 mm minimum-width rule. No rule was relaxed.
+2026-09-08: V620/V621 tested a new U1.39-to-U2.8 RTL_3V3 escape with native
+endpoint and trace-removal negative-control PASS. Native DRC rejected both
+geometry variants for QFN-field clearance/shorting conflicts, including an
+RTL_1V1/RTL_3V3 short and adjacent USB-pad conflicts. Preserve the raw
+evidence; co-author the complete lower QFN field next. Path A and production
+CAD remain unchanged.
