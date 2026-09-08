@@ -7025,3 +7025,8 @@ U11.39 source field is no longer the failure. The translated R80 approach
 instead shorts the U12 exposed pad and crosses the inherited CM5_PERST
 corridor. V7 is rejected as placement evidence; REXT remains open and no
 production rule was relaxed.
+
+2026-09-08: Rejected the JMS REXT two-via corridor V1. Native DRC found the
+lower transition in the C90/R33 support field and plane-clearance findings on
+the ordinary through-vias. It remains disposable route evidence only; the
+JMS583 support gate and active routing rules remain unchanged.

@@ -86,6 +86,10 @@ U11.39 adjacent-pad failure. Its translated-R80 approach instead shorts the
 U12 exposed pad and crosses the inherited CM5_PERST corridor, so V7 is
 rejected as a placement implementation. REXT remains open for a corridor
 that clears both neighboring islands; no routing rule was relaxed.
+The two-via REXT corridor V1 was then rejected: its lower transition lands
+in the existing C90/R33 support field and its through-vias also incur the
+saved-board plane-clearance findings. Native DRC reports 824 violations /
+499 unconnected items, with no evidence that this corridor is promotable.
 The `JMS_AVDDL` decoupler probe is retained in
 `PHASE24_JMS583_AVDDL_PROBE-drc.rpt`: U11.20-to-C83.1 native connectivity
 and its trace-removal negative control pass, with no authored shorting/local
