@@ -22,9 +22,9 @@ M2={1:'M2_CONFIG3',2:'M2_3V3',3:'POWER_GND',4:'M2_3V3',5:'M2_PCIE_RXN3',6:'JMS_V
 # disposable PCB generators consume one reviewed mapping source.
 USB.update({1:'JMS_VDDREG_5V',2:'JMS_VCCK',3:'JMS_SPI_SO_DNP',
             4:'JMS_SPI_SCK_DNP',5:'JMS_SPI_SI_DNP',36:'JMS_AVDDL',
-            39:'JMS_GPIO7_NC',40:'JMS_AVDDL'})
+            40:'JMS_AVDDL'})
 MUX.update({6:'M2_PCIE_TXP1',7:'M2_PCIE_TXN1',8:'JMS_GPIO4_NC',
-            39:'JMS_GPIO7_NC',40:'JMS_AVDDL'})
+            40:'JMS_AVDDL'})
 JMS[60] = 'POWER_GND'  # TME is strapped low per JMS583 Rev 2.1
 JMS[65] = 'POWER_GND'  # exposed QFN64 thermal pad; package pad, not a signal pin
 

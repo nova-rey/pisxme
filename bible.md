@@ -1,5 +1,14 @@
 # Append-only project bible
 
+2026-09-08: Corrected the live JMS583 source/PCB association path. A native
+endpoint-overlap repair removed stale U11 generated label atoms, and the
+shared selector maps restored pin 39 to the schematic's `NC_39` instead of
+`JMS_GPIO7_NC`. The regenerated `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_NC39`
+candidate passes native schematic-to-PCB pad-net parity with zero mismatches.
+Native DRC remains open at 797 violations / 499 unconnected items; this is a
+source-authority checkpoint, not Phase 24 closure. Historical probes remain
+preserved as rejected evidence.
+
 2026-09-07: Rejected disposable RTL9210B V312/V313 RTL_5V perimeter trials.
 Both native-pad-derived trials closed the RTL_5V endpoint opens but introduced
 real short/crossing classes (V312: three; V313: one short and three

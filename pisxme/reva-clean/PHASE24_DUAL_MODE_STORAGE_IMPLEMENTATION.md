@@ -17,15 +17,15 @@ only.
 
 ## CURRENT STATE — authoritative now
 
-- The support-symbol authoring path now emits canonical JMS583 support nets
-  using the native KiCad label ordering. Native re-export confirms the L10 and
-  Y10 support mappings are corrected; the remaining parity defect is limited
-  to R80.1/U11.39 resolving as `JMS_GPIO7_NC` rather than `JMS_REXT`. A
-  duplicate-label UUID reconciliation now makes the source load in the
-  schematic backend without deleting labels. Duplicate-label deletion and
-  reauthor probes were rejected after changing U12/U13 ownership; native
-  parity remains at the same two association mismatches, and no PCB-only
-  alias repair is accepted.
+- The support-symbol authoring path emits canonical JMS583 support nets using
+  the native KiCad label ordering. The endpoint-overlap repair removed stale
+  generated label atoms at U11 pin 12/pin 39, and the shared-selector maps no
+  longer assign `JMS_GPIO7_NC` to pin 39. The regenerated
+  `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_NC39.kicad_pcb` passes the native
+  schematic-to-PCB pad-net parity audit with zero expected-pad mismatches.
+  Earlier duplicate-label deletion/reauthor probes remain rejected historical
+  evidence; they are not current requirements. Native routing and DRC remain
+  open.
 
 - `STORAGE.kicad_sch` contains the existing TUSB9261 SATA branch, JMS583
   NVMe branch, both TI selectors, the TE M-key socket, the JMS583 support
@@ -71,12 +71,12 @@ only.
   The isolated reset discriminator independently rejects a direct F.Cu join
   because it enters the USB coupling field at 0.0379 mm clearance; the next
   route must allocate a layer-transition corridor deliberately.
-- The live native netlist is `PHASE24_STORAGE_LIVE_NETLIST.xml`. The current
-  schematic-to-PCB pad audit is fail-closed at five mismatches, limited to
-  JMS support-label ownership (`L10.1`, `R80.1`, `U11.39`, `Y10.1`, and
-  `Y10.2`). The intentional TE key gap and non-board X7 marker are the only
-  excluded cases. These five source-authority mismatches must be resolved
-  before the storage island can enter native routing closure.
+- The live native XML export used for the corrected disposable candidate is
+  `PHASE24_STORAGE_NATIVE_FINAL.xml`; its schematic-to-PCB pad audit passes
+  with zero expected-pad mismatches. The older five-mismatch and two-mismatch
+  reports are superseded association evidence, not current open gates. The
+  corrected candidate still has native DRC/routing findings (797 violations /
+  499 unconnected items), and those physical findings remain open.
 
 ## CURRENT OPEN GATES
 

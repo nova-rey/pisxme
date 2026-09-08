@@ -4,20 +4,20 @@
 
 The JMS583 support-label authoring path was corrected and applied to the live
 source: support labels now use the canonical `JMS_REXT`, `LXO`, `XIN`, and
-`XOUT` nets with the native KiCad serialization order. A fresh native XML
-export reduced the actionable source-to-PCB parity failure to two items:
-`R80.1` and `U11.39`, both expected `JMS_REXT` but exported as
-`JMS_GPIO7_NC`. A targeted U11 duplicate-label cleanup fixed U11 while
-regressing U12/U13 ownership, and a duplicate restoration probe regressed 20
-items; both are rejected. The remaining two-item failure is therefore a
-native generated-label association defect, not a reason to rewrite PCB
-aliases. Native ERC/DRC and complete routing remain open.
+`XOUT` nets with the native KiCad serialization order. The native endpoint
+overlap repair removed stale generated label atoms at the U11 pin-12/pin-39
+endpoints, and the shared-selector pin maps no longer override pin 39 with
+`JMS_GPIO7_NC`. The regenerated `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_NC39`
+candidate now passes the native schematic-to-PCB pad-net parity audit with
+zero expected-pad mismatches. Native ERC/DRC and complete routing remain
+open; the candidate's native DRC is 797 violations / 499 unconnected items,
+so parity PASS is not a Phase 24 pass.
 
 The 203 duplicate generated label UUIDs have now been reconciled uniquely in
-the live source. The schematic backend loads successfully, while native XML
-parity remains at the same two R80.1/U11.39 ownership mismatches. The
-remaining issue is association mapping, not duplicate-UUID validity; the
-migration is idempotent and fail-closed.
+the live source. The schematic backend loads successfully. The earlier
+two-item R80.1/U11.39 association mismatch is superseded by the endpoint
+overlap repair and NC39 map correction; its raw probes remain historical
+evidence. The migration is idempotent and fail-closed.
 
 The current native-pad support routing trial is rejected: native DRC reports
 834 violations and 499 inherited unconnected items, including authored

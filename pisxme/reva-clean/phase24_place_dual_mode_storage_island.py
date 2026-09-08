@@ -6,12 +6,13 @@ J3/adds U8-U10 inside the storage acreage.
 """
 from pathlib import Path
 import re, uuid
+import os
 from phase3_scaffold import balanced
 from phase24_integrate_dual_mode_storage import JMS, USB, MUX, M2
 
 ROOT=Path(__file__).resolve().parent
-BASE=ROOT/'PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_BCU_INTEGRATED_ASTAR_V3.kicad_pcb'
-OUT=ROOT/'PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb'
+BASE=ROOT/os.environ.get('PISXME_STORAGE_PLACEMENT_BASE','PHASE24_SELECTED_MACRO_SWAP_ETH_STORAGE_TI_BCU_INTEGRATED_ASTAR_V3.kicad_pcb')
+OUT=ROOT/os.environ.get('PISXME_STORAGE_PLACEMENT_OUT','PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb')
 LIB=ROOT/'PiSXMe_RevA_Clean.pretty'
 
 MAPS={
