@@ -79,6 +79,14 @@ unconnected items; it is the current routing basis, not closure.
 The saved-board negative control also passes on this candidate: removing a
 required CM5_USB3_RX_N track breaks native endpoint connectivity.
 
+The first composite of this USB3 basis with the existing JMS583 support
+cohort is rejected. Although the support audit and negative control pass,
+native DRC reports 870 violations / 499 unconnected items and identifies new
+support-placement conflicts in the USB3 field, including a JMS_USB3_TXN to
+USB_RXP1 short. The support cohort remains a reusable primitive, not an
+integrated route; the next pass must allocate its placement and escapes
+against the USB3 geometry together.
+
 The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route
 evidence only; FULL7 is still the active basis.

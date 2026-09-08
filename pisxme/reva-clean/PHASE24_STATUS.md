@@ -110,6 +110,14 @@ unconnected items. It is the current USB3 routing basis, not a Phase 24 pass.
 The same candidate passes the saved-board USB3 negative control: removing a
 required CM5_USB3_RX_N track makes the native connectivity check fail.
 
+A disposable composite of the corrected USB3 basis with the existing JMS583
+support-cohort author was rejected. The support endpoint audit and its
+trace-removal negative control pass, but native DRC reports 870 violations /
+499 unconnected items and new local conflicts where the hard-coded support
+placement overlaps the USB3 field, including a JMS_USB3_TXN/USB_RXP1 short.
+This is route/placement implementation evidence only; the clean USB3 basis
+remains active and the support cohort must be co-authored around it.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

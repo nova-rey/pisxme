@@ -7338,3 +7338,10 @@ and explicitly state that the JMS583 support network is already instantiated.
 The pre-label-fix 205-violation ERC and earlier 797-violation placement result
 are marked as superseded historical snapshots; raw reports and rejected
 experiments were not modified.
+
+2026-09-08: Rejected the first composite of the corrected FULL7 USB3 basis
+with the JMS583 support cohort. Support endpoint and trace-removal audits
+passed, but native DRC found 870 violations / 499 unconnected items and new
+local support-placement conflicts, including a JMS_USB3_TXN/USB_RXP1 short.
+The composite is preserved as rejected evidence; support placement must be
+co-authored around the USB3 field.
