@@ -363,6 +363,14 @@ contacts are the intentional 59--66 M-key key gap, while the other findings
 are genuine selector/support/JMS control ownership mismatches requiring
 authoritative source repair.
 
+The parity checker now excludes only the intentional non-board X7 contract
+marker in addition to the TE key gap. With the complete U12/U13/U14 support
+metadata regenerated from the live netlist, the disposable placement reaches
+10 real mismatches: the unresolved set is confined to JMS support-label/net
+ownership (`L10`, `R80`, U11.39, `Y10`). These remain fail-closed and require
+source-level reconciliation; no PCB-only alias is being used to manufacture
+a pass.
+
 The complete JMS583 support/co-author cohort now passes one native saved-board
 audit: reset, AVDD33, AVDDL, VCCO, VCCK, VDDREG, LXO, XAVDDH, XIN, XOUT, and
 reset-delay all reach their intended support pads. Removing the XIN copper

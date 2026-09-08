@@ -20,6 +20,17 @@ def expected(xml):
     for net in root.findall('.//nets/net'):
         name = net.get('name')
         for node in net.findall('node'):
+            # X7 is the non-BOM, non-board storage contract marker in the
+            # schematic; it intentionally has no PCB footprint.
+            if node.get('ref') == 'X7':
+                continue
+            # TE M-key Socket 3 intentionally has no physical contacts 59..66
+            # at the key gap.  Those schematic placeholders are mechanical
+            # contract data, not missing PCB pads; every other absent pad
+            # remains a hard parity failure below.
+            if node.get('ref') == 'J3' and node.get('pin', '').isdigit() \
+                    and 59 <= int(node.get('pin')) <= 66:
+                continue
             out[(node.get('ref'), node.get('pin'))] = norm_net(name)
     return out
 

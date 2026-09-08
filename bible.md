@@ -7055,6 +7055,11 @@ parity improved from 65 to 32 actionable mismatches; intentional M-key
 contacts 59--66 remain absent, and all other mismatches stay open for source
 repair.
 
+2026-09-08: Corrected the storage parity scope for the intentional TE M-key
+gap and non-board X7 contract marker, then regenerated complete U12/U13/U14
+support metadata. Native parity improved to 10 real mismatches; the remaining
+JMS support-label ownership anomalies stay open and fail-closed.
+
 2026-09-08: Rejected the first combined JMS583 support/crystal cohort. The
 isolated production-width XIN/XOUT route conflicts with the retained XAVDDH
 diagonal when integrated, producing authored B.Cu crossings and an XOUT to
