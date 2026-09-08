@@ -6783,3 +6783,6 @@ without relaxing rules.
 below the retained 5V collector and the U1.52/C3 branch joins through B.Cu.
 Native DRC has no RTL_3V3 finding and remains at three inherited silkscreen
 warnings; remaining support opens are elsewhere in Path B.
+2026-09-08: V646 tested the first RSET escape. Native endpoint connectivity
+was present, but the B.Cu diagonal crossed the retained U1.40 RTL_1V1 corridor;
+reject the route and preserve the accepted rail geometry.

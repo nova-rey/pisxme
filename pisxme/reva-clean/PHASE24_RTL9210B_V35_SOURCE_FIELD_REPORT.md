@@ -161,6 +161,9 @@ the B.Cu field to the U1.20 branch. Native DRC has no RTL_3V3 short, crossing,
 or unconnected finding and remains at three inherited silkscreen warnings.
 This is a rail-field closure only; controls, clocks, SPI, USB, lane 0, M.2,
 power, firmware, and integrated Path-B validation remain open.
+V646's first RSET route is rejected. The U1.51-to-R1.1 endpoint path is
+physically connected, but its B.Cu diagonal crosses the retained U1.40 1V1
+corridor. A separate RSET channel is required; no routing rule is relaxed.
 V636 extends the passing 1V1 trunk with a north-of-QFN U1.25 departure.
 Native U1.25-to-C4.1 connectivity and the trace-removal negative control
 pass; native DRC remains at four inherited warnings with no signal violation.

@@ -96,6 +96,10 @@ joins the lower field from below the 5V collector, and the U1.52/C3 branch
 joins through a separate B.Cu corridor. Native DRC has no RTL_3V3 findings and
 remains at three inherited silkscreen warnings; 25 unrelated support opens
 remain. This closes only the RTL_3V3 rail field.
+V646's first RSET escape is rejected: the native endpoint path is connected,
+but its B.Cu diagonal crosses the retained U1.40 RTL_1V1 corridor. RSET
+remains open for a separate channel allocation; accepted rail geometry and
+rules are unchanged.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus
