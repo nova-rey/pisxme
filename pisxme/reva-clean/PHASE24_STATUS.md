@@ -35,6 +35,11 @@ violations / 499 inherited unconnected items; three inherited J1 launch
 shorts and local track crossings remain, so it is routing evidence only.
 FULL5 and FULL6 are superseded routing evidence.
 
+The coherent U12 translation trial `PHASE24_DUAL_MODE_STORAGE_U12_X148_FULL`
+is rejected: native USB3 endpoint connectivity remained 10/10, but native
+DRC reported 851 violations, 8 shorts, and 15 crossings. The translation is
+preserved as negative placement evidence; FULL7 remains active.
+
 The source-launch relocation trial `PHASE24_DUAL_MODE_STORAGE_NC39_USB3_FULL10`
 is rejected: native connectivity still passed, but inward launch vias created
 new shorts into J1 12V pads and the U11 ground pad. It is preserved as a

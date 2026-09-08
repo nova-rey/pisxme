@@ -36,7 +36,8 @@ for name,ref,up,ycap,uv,cv,bridge in [
     # order.  This is a disposable route experiment; no edges are inferred.
     seg(b,n,s,(s[0],uv[1]),F);seg(b,n,(s[0],uv[1]),(c[0],uv[1]),F);seg(b,n,(c[0],uv[1]),c,F)
     n2=clear(b,'JMS_USB3_TXP' if ref=='C86' else 'JMS_USB3_TXN');c2=xy(pad(b,ref,2));d=xy(pad(b,'U12',25 if ref=='C86' else 24));ev=(159.0,d[1]) if ref=='C86' else (161.0,d[1])
-    channel=162.0 if ref=='C86' else 164.0
+    channel_base=float(os.environ.get('PISXME_USB3_CHANNEL_BASE', str(d[0]+5.5)))
+    channel=channel_base if ref=='C86' else channel_base+1.5
     seg(b,n2,c2,(channel,c2[1]),F);seg(b,n2,(channel,c2[1]),(channel,d[1]),F);seg(b,n2,(channel,d[1]),d,F)
 for name,up,down,v1,v2 in [
  ('USB_RXP1',26,23,(139.4,142.0),(158.5,142.0)),
