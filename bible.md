@@ -6574,3 +6574,8 @@ an occupied RTL_3V3 transition site; V597's all-F.Cu staircase crossed the
 1V1 escape and shorted SPICS into RTL_3V3. Preserve V594/V595 as the valid
 PEDET/CLKREQ-plus-rail basis; the next SPI attempt needs coordinated corridor
 allocation.
+2026-09-08: RTL9210B V598/V599 rejected two further SPICS route classes.
+V598 shorted its B.Cu transition into retained RTL_1V1/RTL_5V fields; V599's
+direct F.Cu outer departure crossed the PEDET/5V/3V3/CLKREQ source field.
+The next SPI pass must co-author the shared QFN escape; V594/V595 remain the
+valid PEDET/CLKREQ-plus-rail basis.

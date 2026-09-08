@@ -67,6 +67,11 @@ RTL_3V3 via field and the saved route was not a valid SPICS implementation.
 V597 is also rejected: an all-F.Cu SPICS staircase crossed the 1V1 escape and
 shorted SPICS into RTL_3V3. The next SPI attempt requires an allocated local
 corridor or coherent support relocation.
+V598 is rejected: its proposed SPICS B.Cu transition created true shorts to
+the retained RTL_1V1 and RTL_5V fields. V599 is rejected: its direct F.Cu
+outer departure crossed the PEDET/5V/3V3/CLKREQ source-field geometry. These
+are implementation failures of scalar SPI escape allocation; the next pass
+must co-author the shared QFN source field.
 V578 replaced the first U1.33 5V departure with an exact-horizontal segment.
 Native saved-board connectivity then showed dangling 5V branches and DRC
 still reported the pad-32 clearance violation. Reject V578; V576 remains the

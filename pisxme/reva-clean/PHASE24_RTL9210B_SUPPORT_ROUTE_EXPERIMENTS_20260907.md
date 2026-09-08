@@ -89,6 +89,10 @@ V596 is rejected because its proposed SPICS transition occupied the existing
 RTL_3V3 via field. V597 is rejected because its all-F.Cu SPICS staircase
 crossed the 1V1 escape and shorted SPICS into RTL_3V3. These are route
 implementation failures; the next SPI attempt needs a real corridor allocation.
+V598 is rejected because its B.Cu transition shorted SPICS to retained 1V1
+and 5V fields. V599 is rejected because its direct F.Cu outer departure
+crossed the PEDET/5V/3V3/CLKREQ source field. The next pass must co-author the
+shared QFN escape rather than add another scalar SPI detour.
 V580 attempted ordinary-via returns for U1 ground pads 69, 45, and 66.
 Native DRC rejected the placement with true GND-to-USB/3V3 shorts and local
 QFN clearance violations. Reject V580; V579 remains the retained rail
