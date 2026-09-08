@@ -25,6 +25,10 @@ exact negative control, but native DRC rejects the shared return for REFCLK,
 RTL_3V3, and LANE0_RXP crossings. The outward shared-return class is
 rejected; bottom support/REFCLK must be reallocated together. Path A and
 production CAD remain unchanged.
+2026-09-08: RTL9210B V550 proves the isolated U1.55 1V1 native graph and
+exact branch-removal negative control, but native DRC rejects it for 3V3 and
+XTAL_OUT conflicts. Bottom 1V1 completion requires coherent source-field
+regeneration; Path A and production CAD remain unchanged.
 2026-09-08: RTL9210B V542-V545 are rejected U1.40 1V1 transition trials;
 their native connectivity and exact negative controls pass, but DRC finds
 3V3 or U1 pad-field conflicts. V547 proves U1.55/U1.60/U1.63 connectivity
