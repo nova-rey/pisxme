@@ -1116,6 +1116,13 @@ through a mid-level B.Cu corridor beneath the QFN edge. All three source pads
 reach C3.1, the exact U1.39 negative control passes, and native DRC has no
 new short, crossing, or clearance error; inherited incomplete-fixture
 warnings/opens remain. V532 is the current 3V3 source-field primitive.
+V533/V534 test U1.52 transitions at the original endpoint and below it;
+both native audits pass, while XTAL_IN remains the DRC-observed conflict.
+V535 doglegs the U1.52 transition to the right of that XTAL_IN endpoint.
+Native connectivity for U1.20/U1.34/U1.39/U1.52 to C3.1 and the exact
+U1.52 branch-removal negative control pass. Native DRC has no new local
+short, crossing, or clearance error; inherited incomplete-fixture findings
+remain. V535 is the current four-source RTL_3V3 primitive.
 V526 proves the U1.39-to-C3.1 graph with an exact branch-removal negative
 control, but its raised outer B.Cu return is rejected by native DRC for
 RTL_5V-via clearance/crossing and REFCLK corridor interaction (23 findings).
