@@ -178,6 +178,13 @@ XAVDDH, and all ten USB3 endpoints remain passing. Native DRC reports 876
 violations / 499 inherited unconnected items with no authored shorting or
 track-crossing class. Remaining support rails and storage gates remain open.
 
+The current support-routing basis also includes the all-F.Cu `JMS_VCCK`
+repair `PHASE24_DUAL_MODE_STORAGE_FULL7_VCCK_F_center.kicad_pcb`. Native
+U11.2-to-C82.1 connectivity and its trace-removal negative control pass.
+Native DRC reports 877 violations / 499 inherited unconnected items, with no
+new VCCK short or crossing relative to the AVDD33 parent. Other support rails,
+mode control, storage routing, and full Phase 24 gates remain open.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

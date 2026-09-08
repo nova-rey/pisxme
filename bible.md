@@ -7400,3 +7400,10 @@ current REXT/RESET_N/XAVDDH/USB3 basis. U11.19-to-C80.1 connectivity and the
 trace-removal negative control passed. Native DRC remains 876 violations /
 499 inherited unconnected items with no authored shorts or crossings; other
 support rails and full storage closure remain open.
+
+2026-09-08: Promoted the native all-F.Cu JMS_VCCK repair onto the current
+support/USB3 basis as PHASE24_DUAL_MODE_STORAGE_FULL7_VCCK_F_center. Native
+U11.2-to-C82.1 connectivity and the trace-removal negative control passed.
+Native DRC reports 877 violations / 499 inherited unconnected items with no
+new VCCK short or crossing relative to the AVDD33 parent. Remaining support,
+mode-control, storage-routing, and Phase 24 closure gates remain open.

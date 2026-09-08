@@ -29,6 +29,13 @@ component pad counts and maps, selector truth table (`SATA=0`, `NVMe=1`),
 and the mode contract. Native copper, mode-aware switched connectivity, and
 DRC closure remain open.
 
+The current support-routing basis includes the native all-F.Cu `JMS_VCCK`
+repair `PHASE24_DUAL_MODE_STORAGE_FULL7_VCCK_F_center.kicad_pcb`. Its U11.2
+to C82.1 native connectivity and trace-removal negative control pass. Native
+DRC is 877 violations / 499 inherited unconnected items, with no new VCCK
+short or crossing relative to the AVDD33 parent. Other support rails,
+mode-control, storage routing, and full-board gates remain open.
+
 Fresh native ERC reports 927 violations on the current source. The post-fix
 report has no dangling M.2 entries; remaining findings are inherited
 off-grid/same-label and other source-quality warnings. ERC remains an
