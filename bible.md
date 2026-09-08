@@ -7049,6 +7049,12 @@ JMS583 package's 64 signal pads plus grounded exposed pad 65. The repaired
 library, selector, and TE M-key checks pass; physical storage validation
 remains open.
 
+2026-09-08: Regenerated the disposable storage placement from the complete
+M-key contact map and SATA coupling ownership. Native schematic-to-PCB pad
+parity improved from 65 to 32 actionable mismatches; intentional M-key
+contacts 59--66 remain absent, and all other mismatches stay open for source
+repair.
+
 2026-09-08: Rejected the first combined JMS583 support/crystal cohort. The
 isolated production-width XIN/XOUT route conflicts with the retained XAVDDH
 diagonal when integrated, producing authored B.Cu crossings and an XOUT to

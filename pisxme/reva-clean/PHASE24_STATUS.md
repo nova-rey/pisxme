@@ -355,6 +355,14 @@ audit now passes JMS583, both selector packages, and the TE M-key contact/key
 gap checks. This fixes validation coverage only; native ERC/DRC, physical
 routing, mode-state, and full storage integration gates remain open.
 
+The live schematic netlist `PHASE24_STORAGE_LIVE_NETLIST.xml` was exported
+with KiCad 10.0.5 and compared against a freshly regenerated placement. The
+complete M-key contact map and SATA coupling ownership reduced actionable
+pad mismatches from 65 to 32. The remaining findings are not waived: eight
+contacts are the intentional 59--66 M-key key gap, while the other findings
+are genuine selector/support/JMS control ownership mismatches requiring
+authoritative source repair.
+
 The complete JMS583 support/co-author cohort now passes one native saved-board
 audit: reset, AVDD33, AVDDL, VCCO, VCCK, VDDREG, LXO, XAVDDH, XIN, XOUT, and
 reset-delay all reach their intended support pads. Removing the XIN copper
