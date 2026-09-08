@@ -535,6 +535,11 @@ allocation. Path A and production CAD remain unchanged.
 native connectivity and negative control passed but DRC found three rail
 track crossings. V242 remains the promoted disposable rail basis; Path A and
 production CAD remain unchanged.
+2026-09-07: Retained RTL9210B V289 SPISI high-north basis. Native U1.18/U2.5
+connectivity passed; DRC reported 420 findings / 22 inherited opens with no
+shorting or crossing class and zero footprint errors. Remaining Path-B
+support and high-speed routes remain open; Path A and production CAD remain
+unchanged.
 2026-09-07: Retained RTL9210B V286 SPISO3 offset-trunk basis after rejecting
 V285. Native U1.22/U2.7 connectivity and trace-removal negative control
 passed; DRC reported 383 findings / 24 inherited opens with no shorting or

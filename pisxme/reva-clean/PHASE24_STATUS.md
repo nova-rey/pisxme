@@ -6800,6 +6800,11 @@ pass, both trace-removal negative controls pass, and native DRC has 366
 findings / 25 inherited opens with no shorting or crossing class and zero
 footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
 high-speed support remain open.
+V289 is retained as the SPISI basis: native U1.18/U2.5 connectivity passes;
+native DRC reports 420 findings / 22 inherited opens with no shorting or
+crossing class and zero footprint errors. The four-net SPI source escape is
+now represented by retained SPICS, SPISO, SPISO3, and SPICLK/SPISI bases;
+remaining support and high-speed routes remain open.
 V288 is retained as the SPICLK basis: the shorter U1.19 escape reaches its
 through-via before the RTL_3V3 handoff, native connectivity joins U1.19/U2.6,
 and native DRC reports 402 findings / 23 inherited opens with no shorting or

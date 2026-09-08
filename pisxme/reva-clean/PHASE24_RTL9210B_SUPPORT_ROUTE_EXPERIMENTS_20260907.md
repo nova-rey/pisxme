@@ -257,6 +257,14 @@ V102 is promoted only as the disposable 1V1 edge-group basis; remaining
 RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
 remain open.
 
+## V289 SPISI high-north corridor — retained, not promoted
+
+V289 routes actual U1.18=(101.2,58.05) to U2.5=(88.1,70.0) through a
+separate high-north B.Cu corridor. Native connectivity passes. Native DRC
+reports 420 findings / 22 inherited opens with zero `tracks_crossing`, zero
+`shorting_items`, and zero footprint errors. V289 is retained as the SPISI
+basis; remaining support and high-speed routes remain open.
+
 ## V288 SPICLK short-escape corridor — retained, not promoted
 
 V288 uses the actual U1.19=(100.8,58.05) and U2.6=(89.3,70.0) endpoints,
