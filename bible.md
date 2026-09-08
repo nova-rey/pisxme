@@ -6707,6 +6707,12 @@ the retained 180-degree RTL9210B basis. Both lower channels are natively
 connected; removing all RTL_3V3 tracks breaks both. Native DRC remains four
 inherited warnings with no shorting/crossing class. This remains disposable
 source-field evidence; Path A and production CAD remain unchanged.
+2026-09-08: V630 separated the RTL_5V transition from the retained 180-degree
+RTL9210B rail field. Native DRC reduced the candidate to one real clearance
+violation at U1.33 versus adjacent U1.32 no-connect pad geometry (0.0769 mm
+actual versus 0.20 mm required); both lower RTL_3V3 channels stayed native
+connected. Reject the route; next step is alternate package/land-pattern
+authority, with no routing-rule relaxation.
 2026-09-08: Marked the older 2026-09-06 dual-mode checkpoint in
 PHASE24_STATUS.md as superseded historical evidence. Its former
 "instantiate support network" next-action wording now states that the work

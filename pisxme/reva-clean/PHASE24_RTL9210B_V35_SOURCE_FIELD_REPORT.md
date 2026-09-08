@@ -98,6 +98,11 @@ V629 adds the complementary U1.34-to-U2.3 lower RTL_3V3 corridor. Both
 channels pass saved-board native connectivity, and removing all RTL_3V3
 tracks breaks both; native DRC remains at four inherited warnings with no
 shorting or crossing class.
+V630 attempted a separated U1.33 RTL_5V departure. It retained both lower
+3V3 native connections and reduced the rail field to one real DRC violation,
+but the U1.33 0.20-mm source track remains only 0.0769 mm from adjacent
+U1.32 no-connect pad geometry. Reject this route and evaluate an alternate
+authoritative land pattern/package; do not relax the active routing rule.
 
 Re-author the complete current support field from native pad coordinates on a
 fresh V35-derived disposable board: first allocate all three rails and the

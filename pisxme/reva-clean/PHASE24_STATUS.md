@@ -16,6 +16,13 @@ Both lower channels are natively connected on
 RTL_3V3 tracks breaks both connections. Native DRC remains four inherited
 warnings with no shorting or crossing class. This is still disposable
 source-field evidence, not full support closure.
+V630 tried a separated U1.33 RTL_5V transition and reduced the coordinated
+rail probe to one real native DRC clearance violation: the 0.20-mm source
+track leaves U1.33 within 0.0769 mm of adjacent U1.32 no-connect pad geometry.
+The two lower RTL_3V3 channels remain connected, but the current QFN escape
+field is not manufacturable at the enforced width. Reject V630; this is now
+an alternate land-pattern/package authority problem, not a rule-relaxation
+opportunity.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus
