@@ -6897,3 +6897,11 @@ introduced four shorts and four crossings. V316/V317 are rejected lane-0
 trials: both reduced opens to 14 but retained real lane shorts/crossings.
 These are route-implementation failures in the dense V311 field, not a
 Path-B architecture rejection; production CAD and Path A remain unchanged.
+
+V318/V319 tested the cross-class coordinated rail hypothesis using the
+designated In2 power layer. They reduced the native open count to 15 but are
+rejected: the proposed transitions collided with existing SPI/PEDET copper,
+U2 pad fields, and J1 SSD_3V3 at the chosen endpoints, with 7/11 native
+shorting classes and crossings respectively. Inner-layer power remains an
+available contract resource, but the next route must be generated with a
+single coordinated rail/lane via map; no production CAD or Path A changed.

@@ -264,6 +264,17 @@ They reduced native open counts but introduced real shorts/crossings, so all
 are rejected route-implementation attempts. V311 remains the retained
 disposable basis; no Path-A or production CAD changed.
 
+## V318/V319 coordinated In2 rail trials — rejected implementations
+
+V318/V319 moved RTL_5V, RTL_1V1, and RTL_3V3 onto the contract-designated
+In2.PWR layer from V311. Corrected native endpoints reduced the open count to
+15, but the proposed vias and inner-layer corridors collided with retained
+SPI/PEDET copper, U2 pads, and J1 SSD_3V3. Native DRC reported 7/11 real
+shorting/crossing classes across the two trials. The experiment confirms
+inner-layer power is available in principle, but does not provide a usable
+append-only route. The next candidate must co-author rails and lane-0 with a
+precomputed via map.
+
 ## V302 CLKREQ alternate launch — rejected implementation
 
 V302 shifts the R3 launch west and transitions the U1-side branch below the
