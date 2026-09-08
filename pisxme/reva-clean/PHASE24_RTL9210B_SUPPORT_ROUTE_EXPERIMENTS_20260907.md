@@ -1973,3 +1973,11 @@ Native DRC reports 0 shorting items, 0 tracks-crossing items, and 34
 unconnected items; all nine asserted 1V1 endpoints connect, and the
 trace-removal negative control fails as required. This closes the 1V1-first
 allocation hypothesis only, not the neighboring support routes or Path B.
+
+V365 transplanted the retained RSET/crystal primitives onto V364 and is
+rejected with 5 shorting and 4 crossing classes; it demonstrates that those
+primitives must be reallocated together with 1V1. V366 is the first complete
+coallocated 1V1 fanout trial with the retained neighboring primitives. It
+reduced the problem to 3 shorting and 1 crossing class: a C4/GND handoff and
+one right-side 1V1 trunk at the RTL_3V3 field. V366 is rejected as a route
+implementation, while V364 remains the retained clean power-field basis.

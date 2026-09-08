@@ -5990,3 +5990,8 @@ native zone refill. V360's initial unfilled-zone connectivity was not
 accepted; V361 used pcbnew ZONE_FILLER before audit. Native DRC reports zero
 shorting/crossing classes, all nine 1V1 endpoints connect, and the trace-
 removal negative control passes. Neighboring support routes remain open.
+2026-09-07: Rejected RTL9210B V365/V366 support coallocation trials. V365
+showed retained RSET/crystal primitives collide with the initial 1V1 channels.
+V366 reduced the complete coallocated fanout to three shorts and one crossing
+at C4/GND and the RTL_3V3 field. V364 remains the retained clean power-field
+basis; no production CAD changed.
