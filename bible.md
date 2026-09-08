@@ -6808,3 +6808,7 @@ is physically unified.
 2026-09-08: V646 tested the first RSET escape. Native endpoint connectivity
 was present, but the B.Cu diagonal crossed the retained U1.40 RTL_1V1 corridor;
 reject the route and preserve the accepted rail geometry.
+2026-09-08: V652 retained the corrected RSET lower-channel route. Native DRC
+has only three inherited silkscreen warnings, no signal violation, and the
+open count falls to 24. The U1.51-to-R1.1 path is locally closed; full Path-B
+support remains open.

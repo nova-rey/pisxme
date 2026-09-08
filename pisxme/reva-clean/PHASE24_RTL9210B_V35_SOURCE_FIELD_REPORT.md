@@ -176,6 +176,10 @@ V651 freshly reloads the retained C3-join board through native KiCad. The
 saved-board DRC is 3 inherited silkscreen warnings / 25 unconnected items;
 the native inventory confirms all 9 RTL_3V3 pads are joined, while SPISI,
 RSET, and XTAL_IN remain open. Use this as the reproducible next-pass baseline.
+V652 retains the lower-channel RSET route. The source and resistor-side
+transitions are outboard of the QFN and crystal/power fields; native DRC is
+three inherited silkscreen warnings with no signal class, and the open count
+falls from 25 to 24. RSET is locally closed; remaining support gates stay open.
 V650 is a documentation correction: the native C3-join board still has
 multiple RTL_3V3 physical components. Endpoint checks alone did not prove the
 same-net field; native DRC and the saved-board component inventory reopen this

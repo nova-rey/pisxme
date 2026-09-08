@@ -106,6 +106,11 @@ KiCad DRC reports 3 inherited silkscreen warnings and 25 unconnected items.
 The native inventory independently reports all 9 RTL_3V3 pads joined, while
 SPISI, RSET, and XTAL_IN remain incomplete. This is the current reproducible
 baseline for the next support-field pass.
+V652 retains the corrected RSET lower-channel route: U1.51 exits to an
+ordinary via at (102.5,76.0), crosses B.Cu to an outboard transition at
+(108.4,80.0), and enters R1.1 without contacting R1.2/GND. Native DRC is
+three inherited silkscreen warnings with no signal violation; the open count
+falls to 24. RSET is locally closed, while full support remains open.
 V648's first SPISI source-to-U2.5 channel is rejected: its B.Cu corridor
 crosses the retained RTL_3V3 source trunk and RTL_5V collector. Native DRC
 still validates the rest of the fixture, but SPISI remains open for a separate
