@@ -6779,3 +6779,7 @@ an ordinary via and B.Cu corridor; native DRC remains at three inherited
 silkscreen warnings. V644's attempted R2/R3 source extension crossed the
 retained RTL_5V B.Cu collector and is rejected. Reallocate that source corridor
 without relaxing rules.
+2026-09-08: V645 completed the physical RTL_3V3 field. The R2/R3 source joins
+below the retained 5V collector and the U1.52/C3 branch joins through B.Cu.
+Native DRC has no RTL_3V3 finding and remains at three inherited silkscreen
+warnings; remaining support opens are elsewhere in Path B.

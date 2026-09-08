@@ -155,6 +155,12 @@ ordinary via at (92.0,67.6) and B.Cu; native DRC remains at three inherited
 silkscreen warnings. V644's R2/R3 source extension is rejected because its
 west-side B.Cu corridor crosses the retained RTL_5V segment at x=89.0. The
 source join must be co-authored around that collector.
+V645 completes the shared RTL_3V3 physical component. The R2/R3 source route
+joins below the retained 5V collector, and the U1.52/C3 branch joins through
+the B.Cu field to the U1.20 branch. Native DRC has no RTL_3V3 short, crossing,
+or unconnected finding and remains at three inherited silkscreen warnings.
+This is a rail-field closure only; controls, clocks, SPI, USB, lane 0, M.2,
+power, firmware, and integrated Path-B validation remain open.
 V636 extends the passing 1V1 trunk with a north-of-QFN U1.25 departure.
 Native U1.25-to-C4.1 connectivity and the trace-removal negative control
 pass; native DRC remains at four inherited warnings with no signal violation.

@@ -91,6 +91,11 @@ through-via and B.Cu west-side corridor. Native DRC remains at three inherited
 silkscreen warnings. V644's first R2/R3 source extension is rejected because
 its B.Cu trunk crosses the retained RTL_5V collector; the source join remains
 open and requires a separate corridor allocation.
+V645 completes the RTL_3V3 physical field: the corrected R2/R3 source route
+joins the lower field from below the 5V collector, and the U1.52/C3 branch
+joins through a separate B.Cu corridor. Native DRC has no RTL_3V3 findings and
+remains at three inherited silkscreen warnings; 25 unrelated support opens
+remain. This closes only the RTL_3V3 rail field.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus

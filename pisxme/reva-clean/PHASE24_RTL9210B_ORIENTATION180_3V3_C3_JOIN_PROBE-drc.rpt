@@ -1,5 +1,5 @@
-** Drc report for PHASE24_RTL9210B_ORIENTATION180_3V3_SOURCE_JOIN_PROBE.kicad_pcb **
-** Created on 2026-09-08T11:53:51 **
+** Drc report for PHASE24_RTL9210B_ORIENTATION180_3V3_C3_JOIN_PROBE.kicad_pcb **
+** Created on 2026-09-08T11:55:55 **
 ** Report includes: Errors, Warnings **
 
 ** Found 3 DRC violations **
@@ -16,7 +16,7 @@
     @(105.0000 mm, 82.0000 mm): PCB text 'RTL9210B PATH-B BRING-UP — NON-PRODUCTION' on f.silkscreen
     @(105.2000 mm, 82.0000 mm): Pad 2 [GND] of C4 on F.Cu
 
-** Found 26 unconnected pads **
+** Found 25 unconnected pads **
 [unconnected_items]: Missing connection between items
     Local override; error
     @(89.0000 mm, 56.0000 mm): Pad 1 [PEDET] of R2 on F.Cu
@@ -47,14 +47,6 @@
     @(94.0500 mm, 67.2000 mm): Pad 19 [SPICLK] of U1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(101.9500 mm, 73.2000 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
-    @(96.4000 mm, 73.9500 mm): Track [RTL_3V3] on F.Cu, length 1.2500 mm
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(101.9500 mm, 73.2000 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
-    @(110.4000 mm, 69.0000 mm): Pad 1 [RTL_3V3] of C3 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
     @(79.0000 mm, 80.0000 mm): Pad 7 [SPISO3] of U2 on F.Cu
     @(94.0500 mm, 68.4000 mm): Pad 22 [SPISO3] of U1 on F.Cu
 [unconnected_items]: Missing connection between items
@@ -65,6 +57,10 @@
     Local override; error
     @(71.8000 mm, 80.0000 mm): Pad 1 [SPICS] of U2 on F.Cu
     @(94.0500 mm, 69.2000 mm): Pad 24 [SPICS] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
 [unconnected_items]: Missing connection between items
     Local override; error
     @(101.2000 mm, 73.9500 mm): Pad 51 [RSET] of U1 on F.Cu
