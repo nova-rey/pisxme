@@ -6984,3 +6984,7 @@ local crossing class. Coupled LXO support remains open.
 The rotated L10 LXO escape passed native U11.64-to-L10.1 connectivity and a
 trace-removal negative control after moving Y10 clear of the corridor. The
 prior Y10 collision remains rejected evidence.
+
+The right-side JMS_XAVDDH U11.52-to-C84.1 escape passed native connectivity
+and a trace-removal negative control with no authored shorting/local crossing
+class. Remaining analog support remains open.
