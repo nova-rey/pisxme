@@ -6186,3 +6186,8 @@ omission in the TX source escapes. The regenerated four-pair lane basis
 passes native saved-board connectivity, four negative controls, and DRC zero
 shorts/crossings/clearances. Only inherited/incomplete-fixture findings
 remain; REFCLK and support integration are still open.
+2026-09-08: RTL9210B V479 is a clean isolated REFCLK layer-split primitive;
+V480 combined it with the V475 four-pair lane basis but was rejected by
+native DRC for one REFCLK source short, two lane/REFCLK crossings, and two
+clearances. V475 and V479 remain the retained isolated bases; no production
+CAD or Path-A change.

@@ -2291,3 +2291,12 @@ endpoint groups and four trace-removal negative controls; native DRC remains
 at zero shorts, crossings, and clearance errors with only inherited/local
 warnings and incomplete-fixture opens. V475 is now the retained four-pair
 lane basis, while REFCLK and remaining support/control integration stay open.
+V476/V477 tested ordered REFCLK corridors below and above the XTAL escape;
+both retained crystal-boundary crossings. V478 moved the corridor below the
+crystal but its two source transitions still crossed. V479 used a bounded
+REFCLK_P layer split and achieved native DRC zero shorts/crossings/clearances
+with two endpoint negative controls passing. V480 combined the four-pair
+V475 lane basis with a new REFCLK split; it was rejected by native DRC for a
+REFCLK source short, two lane/REFCLK crossings, and two local clearances.
+V479 remains the clean REFCLK primitive and V475 the clean four-pair lane
+basis; no production CAD or Path-A change.
