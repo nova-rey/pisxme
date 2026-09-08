@@ -65,6 +65,13 @@ Native DRC reports 878 total violations / 499 unconnected items, still
 including inherited donor-board findings; it is not a Phase 24 pass. The
 seven-net saved-board audit and trace-removal negative control pass. The
 remaining JMS support cohort and full storage integration gate remain open.
+The REXT follow-up was also tested on the retained V8 cohort. V1's direct
+route shorted the XAVDDH field; the relocated-R80 V2/V3 route avoids that
+short but still fails native clearance at U11.39 against adjacent QFN pads
+and at the R80 approach. This is route/source-field evidence, not a pass:
+the active 0.20 mm support width cannot be claimed manufacturable until the
+JMS583 land-pattern/source-field authority is reconciled. Path A remains
+open and no production CAD was promoted.
 The `JMS_AVDDL` decoupler probe is retained in
 `PHASE24_JMS583_AVDDL_PROBE-drc.rpt`: U11.20-to-C83.1 native connectivity
 and its trace-removal negative control pass, with no authored shorting/local

@@ -7000,3 +7000,9 @@ uses ordinary through-vias outside the QFN field, and passes native endpoint
 connectivity plus the trace-removal negative control with no authored local
 short/crossing class. The 878-violation/499-unconnected inherited donor-board
 DRC result remains open evidence, not a Phase 24 pass.
+
+2026-09-08: JMS REXT V1 direct route was rejected after native DRC found a
+real JMS_REXT/JMS_XAVDDH short. Relocating R80 in V2/V3 removes that short,
+but the 0.20 mm REXT escape still fails U11.39 adjacent-QFN clearance and
+the R80 approach. Preserve these as source-field/land-pattern evidence; do
+not promote the route or relax the active manufacturing rules.
