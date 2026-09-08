@@ -6843,3 +6843,7 @@ shorts/crossings. Preserve the result as rejected shared-collector evidence.
 the V35 signal field. Native DRC rejected 98 violations, including rail-to-
 crystal, rail-to-SPI, rail-to-rail, and crossing classes. Endpoint relocation
 alone is rejected; source escapes and rails must be co-authored.
+2026-09-08: Fresh native KiCad DRC of the retained V35 source-field reference
+reports four inherited findings and 34 unconnected pads, with no shorting or
+tracks-crossing class. Preserve it as the reproducible source-field baseline,
+not as full RTL9210B support closure.

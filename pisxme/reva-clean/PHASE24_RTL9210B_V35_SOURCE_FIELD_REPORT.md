@@ -89,6 +89,11 @@ route-allocation failures, not grounds to weaken the board rules.
 
 ## Next implementation step
 
+The native-refilled V35 reference was freshly rerun on 2026-09-08. Native
+KiCad reports four inherited findings and 34 unconnected pads, with no
+shorting or tracks-crossing class. This receipt is a source-field reference
+baseline only; it does not close the incomplete Path-B support network.
+
 The 180-degree native orientation probe is now the preferred placement
 discriminator. Its U1.39-to-U2.8 RTL_3V3 corridor passes saved-board native
 connectivity and fails the trace-removal negative control; native DRC remains
