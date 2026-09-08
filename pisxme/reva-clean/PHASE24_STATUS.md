@@ -36,6 +36,11 @@ DRC reports 820 violations / 499 unconnected items with zero authored
 shorting items; the seven crossing findings are confined to inherited CM5
 donor USB escape geometry. This is the strongest current JMS support routing
 primitive, not full-board closure.
+The follow-up `PHASE24_DUAL_MODE_STORAGE_NC39_LOCAL_CRYSTAL` trial moved Y10
+into the storage island and regenerated separated XIN/XOUT escapes, but native
+DRC reports 850 violations / 499 unconnected items with real XIN/XOUT shorts
+against JMS support rails. It is rejected route implementation evidence; no
+severity or layer-policy relaxation was made.
 The physically scoped U11-only reauthor probe is also rejected: native export
 produced 20 mismatches and merged unrelated `JMS_AVDDL`/`BRIDGE_USB_VBUS`
 ownership. The live source was restored to the stable two-mismatch state.

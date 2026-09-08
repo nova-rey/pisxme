@@ -50,6 +50,11 @@ only.
   the seven crossings are inherited CM5 donor USB escape findings. Retain it
   as the current support-routing primitive while the complete storage island
   remains open.
+- The co-located-crystal follow-up
+  `PHASE24_DUAL_MODE_STORAGE_NC39_LOCAL_CRYSTAL.kicad_pcb` is rejected: native
+  DRC reports 850 violations / 499 unconnected items and real XIN/XOUT shorts
+  into the support field. The crystal field still needs obstacle-aware
+  allocation; no rule relaxation or production promotion occurred.
 - The current regenerated disposable placement candidate is
   `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb`; it is not
   production authority. The current fresh native result is recorded in

@@ -13,6 +13,11 @@ unconnected items, zero authored shorts, and seven inherited CM5 donor USB
 crossings. Retain this as the strongest support-routing primitive, not a
 full-board pass.
 
+2026-09-08: Rejected the NC39 co-located-crystal trial. Moving Y10 into the
+storage island and using separated ordinary-via XIN/XOUT corridors still
+produced real XIN/XOUT-to-support shorts; native DRC was 850 violations / 499
+unconnected items. Preserve as route-implementation evidence only.
+
 2026-09-08: Replayed the JMS583 support author against the corrected NC39
 candidate. Native DRC reports 836 violations / 499 unconnected items,
 including one real JMS_REXT-to-JMS_AVDDL short and authored crossings. The
