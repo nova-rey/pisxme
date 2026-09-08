@@ -6210,6 +6210,11 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V507 tests U1.25 RTL_1V1 into the V506 trunk. Native
+connectivity and the trace-removal negative control pass, but native DRC
+rejects the route for crossings into retained support spines and contact with
+U1.26 DEVSLP. It is retained as source-field allocation evidence only; Path A
+and production CAD remain unchanged.
 2026-09-08: RTL9210B V504-V506 complete the current RTL_1V1 local support
 primitive. V504/V505 pass native connectivity with negative controls but are
 rejected for C4 pad-field and RTL_3V3 crossing geometry. V506 shifts the

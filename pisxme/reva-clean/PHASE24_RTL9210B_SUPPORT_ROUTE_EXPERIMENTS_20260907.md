@@ -1080,6 +1080,13 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V507 tests U1.25 RTL_1V1 using a short F.Cu escape, ordinary through-via,
+B.Cu lateral handoff, and return to the V506 RTL_1V1 trunk. Native saved-board
+connectivity and the trace-removal negative control pass, but native DRC
+rejects the handoff: it crosses retained RTL_3V3/XTAL_IN/XTAL_OUT B.Cu spines
+and contacts the adjacent U1.26 DEVSLP pad. This is a source-field allocation
+failure. The next credible class is coallocation of the upper QFN pad bank;
+Path A and production CAD remain unchanged.
 V504 relocates C4 to the left-side native RTL_1V1 source channel and joins
 U1.16/U1.36 to C4.1; native connectivity passes, but the approach clips
 C4's GND pad. V505 keeps the placement and approaches C4.1 from below;
