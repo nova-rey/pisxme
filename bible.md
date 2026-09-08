@@ -6449,3 +6449,8 @@ production CAD remain unchanged.
 RTL_1V1. Native DRC rejected crossings with RTL_3V3/RTL_5V and remaining
 XTAL_OUT/RX/REFCLK source fields. The lower QFN field remains a coordinated
 route-implementation open; Path A and production CAD are unchanged.
+2026-09-08: RTL9210B V556 tested an In2 RTL_1V1 plane with ordinary-via
+escapes. Native DRC rejected the F.Cu source dogbones/vias against adjacent
+RX/XTAL/TXN and support geometry. The plane is not sufficient; the lower QFN
+source field needs coherent regeneration. Path A and production CAD remain
+unchanged.

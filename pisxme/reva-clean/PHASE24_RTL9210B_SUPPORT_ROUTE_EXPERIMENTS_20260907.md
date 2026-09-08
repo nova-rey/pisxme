@@ -2656,3 +2656,12 @@ RTL_5V B.Cu trunks, while the pad escapes retained XTAL_OUT and RX/REFCLK
 clearance/short classes. The outboard return concept is therefore not
 promoted; the lower QFN field needs complete coordinated regeneration rather
 than a collector-only return. Path A and production CAD remain unchanged.
+## V556 RTL_1V1 In2-plane probe — rejected
+
+V556 added an In2.Cu RTL_1V1 power plane and ordinary-via escapes for the
+remaining U1.55/U1.60/U1.63 supply pads. Native DRC rejected the candidate
+before the plane could provide a useful closure: the F.Cu dogbones/vias hit
+the adjacent RX/XTAL/TXN pad-field and existing support-via geometry. This
+discriminates against a plane-only repair; the physical source breakout must
+be reallocated with the neighboring signal launches. No Path-A or production
+CAD change was made.

@@ -6953,3 +6953,8 @@ DRC rejected it for crossings with RTL_3V3/RTL_5V and remaining XTAL_OUT,
 RX, and REFCLK source-field conflicts. This is a route-implementation
 failure; the complete lower QFN field remains open and no architecture,
 Path-A, or production-CAD change was made.
+V556 tested an In2.Cu RTL_1V1 plane with ordinary-via escapes. Native DRC
+rejected the source dogbones/vias against adjacent RX/XTAL/TXN and support
+geometry, so the plane does not remove the lower QFN breakout constraint.
+The Path-B lower-field gate remains open for coherent source-field
+regeneration; no architecture, Path-A, or production-CAD change was made.
