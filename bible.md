@@ -7055,6 +7055,11 @@ restored XOUT QFN dogbone still shorts the retained XAVDDH transition. The
 result is preserved as route-allocation evidence; the next trial must
 co-author those two native source fields.
 
+2026-09-08: The JMS583 three-exit co-author passes native XIN, XOUT, and
+XAVDDH endpoint connectivity plus trace-removal negative control. Native DRC
+is 522 violations / 499 inherited opens with no authored shorting class; it
+is retained as the strongest analog/crystal support-field basis, not closure.
+
 2026-09-08: Rejected the follow-up JMS583 left-corridor source regeneration.
 It removed the XIN/XOUT crossing and XAVDDH corridor crossings, but the
 adjacent QFN exits still produced one XOUT-to-XAVDDH short. The next trial

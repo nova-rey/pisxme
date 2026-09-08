@@ -341,6 +341,14 @@ reports one real XOUT-to-XAVDDH short at the adjacent QFN exits (527 total /
 499 inherited opens). Reject it; the next trial must co-allocate all three
 bottom-edge analog/crystal exits before any layer transition.
 
+The co-authored three-exit candidate now passes native U11.50/XIN to Y10.1,
+U11.51/XOUT to Y10.2, and U11.52/XAVDDH to C84.1 connectivity with a
+trace-removal negative control. Native DRC is 522 violations / 499 inherited
+opens, with no authored shorting class; the remaining crossing/dangling
+records are donor-board artifacts. Retain this as the strongest JMS583
+analog/crystal support-field basis, but do not call the full storage island
+or Phase 24 closed.
+
 The earlier JMS583 crystal DRC receipts, including divergent, split-layer,
 pad-width, and net-name variants, are retained as raw historical evidence;
 they are not current acceptance criteria and do not override the production-
