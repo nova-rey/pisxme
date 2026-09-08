@@ -1080,6 +1080,13 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V494 joins the second native RTL_5V source U1.33 to the already-clean
+U1.17-to-C5.1 F.Cu trunk before the REFCLK corridor. This avoids both rejected
+direct-to-C5 route classes. Native saved-board common-rail connectivity and
+one trace-removal negative control pass. Native DRC has zero errors; nine
+inherited incomplete-fixture warnings remain. V494 is retained as the
+RTL_5V source aggregation primitive; remaining supply pins and support nets
+stay open. No Path-A or production CAD changed.
 V492 and V493 tested the second RTL_5V source pad U1.33 to C5.1. Both
 saved-board audits and their negative controls passed connectivity, but both
 route implementations are rejected: V492 used an upper B.Cu corridor that

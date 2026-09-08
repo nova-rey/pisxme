@@ -6210,6 +6210,11 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V494 joins native U1.33 RTL_5V to the accepted U1.17/C5.1
+trunk before REFCLK. Native common-rail connectivity and one trace-removal
+negative control pass. Native DRC has zero errors; nine inherited
+incomplete-fixture warnings remain. Remaining supply pins and support nets
+stay open; no Path-A or production-CAD change.
 2026-09-08: RTL9210B V492 and V493 electrically connected U1.33 RTL_5V to
 C5.1 and passed their native negative controls, but native DRC rejected both
 route classes. V492 conflicted with the crystal ground return, 3V3 handoff,
