@@ -29,11 +29,11 @@ path; the disposable candidate is not claimed as fully connected.
 The live USB3 map audit then found and corrected a second source-authority
 defect: U12 TX pins 24/25 are the bridge-side `JMS_USB3_TXN/P` nets across
 C87/C86, while U12 RX pins 22/23 remain direct `USB_RXN1/P` bridge links.
-The regenerated `PHASE24_DUAL_MODE_STORAGE_NC39_USB3_FULL6` candidate passes
-all ten native USB3 endpoint assertions. Its native DRC reports 858
-violations / 499 inherited unconnected items; local track crossings and two
-inherited J1 launch shorts remain, so it is routing evidence only. FULL5 is
-superseded routing evidence.
+The regenerated `PHASE24_DUAL_MODE_STORAGE_NC39_USB3_FULL7` candidate passes
+all ten native USB3 endpoint assertions. Its native DRC reports 827
+violations / 499 inherited unconnected items; three inherited J1 launch
+shorts and local track crossings remain, so it is routing evidence only.
+FULL5 and FULL6 are superseded routing evidence.
 
 The current native-pad support routing trial is rejected: native DRC reports
 834 violations and 499 inherited unconnected items, including authored

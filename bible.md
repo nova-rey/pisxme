@@ -7091,10 +7091,10 @@ native endpoint assertions; native DRC remains open at 880 violations / 499
 inherited unconnected items. Root-native XML also proves canonical CM5 USB3
 ownership, and all prior contradictory prose is now explicitly superseded.
 
-2026-09-08: Continued USB3 routing against the corrected source map. FULL6
-passes all ten native endpoint assertions and reduces native DRC to 858
-violations / 499 inherited opens; remaining local crossings and two inherited
-J1 launch shorts keep routing open. FULL5 is superseded evidence.
+2026-09-08: Continued USB3 routing against the corrected source map. FULL7
+passes all ten native endpoint assertions and reduces native DRC to 827
+violations / 499 inherited opens; remaining local crossings and three
+inherited J1 launch shorts keep routing open. FULL5/FULL6 are superseded.
 
 2026-09-08: The complete JMS583 support/co-author cohort passed native
 connectivity and a trace-removal negative control across reset, rails, LXO,

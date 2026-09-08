@@ -29,10 +29,15 @@ for name,ref,up,ycap,uv,cv,bridge in [
  ('USB_TXP1','C86',21,145,(141.4,144.0),(146.0,144.0),(147.5,145.0)),
  ('USB_TXN1','C87',22,149,(141.0,146.0),(146.0,148.0),(147.5,149.0)),
 ]:
- n=clear(b,name);s=xy(pad(b,'U11',up));c=xy(pad(b,ref,1));
- seg(b,n,s,(s[0],uv[1]),F);via(b,n,uv);seg(b,n,uv,cv,B);via(b,n,cv);seg(b,n,cv,c,F)
- n2=clear(b,'JMS_USB3_TXP' if ref=='C86' else 'JMS_USB3_TXN');c2=xy(pad(b,ref,2));d=xy(pad(b,'U12',25 if ref=='C86' else 24));ev=(159.0,d[1]) if ref=='C86' else (161.0,d[1])
- seg(b,n2,c2,bridge,F);via(b,n2,bridge);seg(b,n2,bridge,ev,B);via(b,n2,ev);seg(b,n2,ev,d,F)
+    n=clear(b,name);s=xy(pad(b,'U11',up));c=xy(pad(b,ref,1));
+    # Keep the TX pair on F.Cu through the coupling capacitors.  The source
+    # QFN departures are ordered to avoid the RX pair, and the bridge-side
+    # launches use separate outboard channels because U12 reverses the pad
+    # order.  This is a disposable route experiment; no edges are inferred.
+    seg(b,n,s,(s[0],uv[1]),F);seg(b,n,(s[0],uv[1]),(c[0],uv[1]),F);seg(b,n,(c[0],uv[1]),c,F)
+    n2=clear(b,'JMS_USB3_TXP' if ref=='C86' else 'JMS_USB3_TXN');c2=xy(pad(b,ref,2));d=xy(pad(b,'U12',25 if ref=='C86' else 24));ev=(159.0,d[1]) if ref=='C86' else (161.0,d[1])
+    channel=162.0 if ref=='C86' else 164.0
+    seg(b,n2,c2,(channel,c2[1]),F);seg(b,n2,(channel,c2[1]),(channel,d[1]),F);seg(b,n2,(channel,d[1]),d,F)
 for name,up,down,v1,v2 in [
  ('USB_RXP1',26,23,(139.4,142.0),(158.5,142.0)),
  ('USB_RXN1',27,22,(139.0,143.0),(160.5,143.0)),

@@ -27,10 +27,10 @@ physical USB3 routing or native DRC gates.
 The live U12 map was also reconciled at the source-authoring boundary:
 pins 24/25 use bridge-side `JMS_USB3_TXN/P` across the TX coupling capacitors,
 while pins 22/23 retain direct `USB_RXN1/P` bridge links. The resulting
-USB3_FULL6 disposable route passes all ten native endpoint assertions and
-reduces native DRC to 858 violations / 499 inherited unconnected items.
-Local crossings and two inherited J1 launch shorts remain, so this is not
-closure; FULL5 is superseded routing evidence.
+USB3_FULL7 disposable route passes all ten native endpoint assertions and
+reduces native DRC to 827 violations / 499 inherited unconnected items.
+Three inherited J1 launch shorts and local crossings remain, so this is not
+closure; FULL5 and FULL6 are superseded routing evidence.
 
 - The support-symbol authoring path emits canonical JMS583 support nets using
   the native KiCad label ordering. The endpoint-overlap repair removed stale
