@@ -35,7 +35,12 @@ next corridor must be allocated against the complete local support geometry.
 The retained RSET sub-primitive (`phase24_jms583_rset_escape_probe.py`) uses
 native U11.39/R80.1 pads and a short F.Cu escape. Native DRC reports no
 shorting items and the RSET endpoint is connected; this does not close the
-remaining support network.
+remaining support network. The corrected lateral QFN escape is retained as a
+valid sub-primitive in `PHASE24_JMS583_RESET_SOUTH_PROBE_V3-drc.rpt`:
+native U11.15-to-R81.1 connectivity passes, the trace-removal negative
+control passes, and no local shorting/track-crossing class remains. The six
+crossings in that report are inherited USB fixture artifacts at the donor
+CM5 source region.
 The refilled split-layer crystal probe removes stale-zone and via-hole
 diagnostics, but native DRC still finds the 0.20-mm source traces at adjacent
 0.4-mm-pitch U11 crystal pads at approximately 0.19 mm clearance. Crystal
