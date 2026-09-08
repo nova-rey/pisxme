@@ -27,7 +27,10 @@ only.
   pass.
 - The current regenerated disposable placement candidate is
   `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb`; it is not
-  production authority. The older
+  production authority. The current fresh native result is 876 DRC
+  violations and 499 unconnected items. The V3 disposable relocation
+  (`phase24_storage_candidate_v3.rpt`) is rejected evidence, not the current
+  candidate. The older
   `PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb` remains historical evidence.
   The latest corrected-package USB3 fixture is
   `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED.kicad_pcb`, with native report
@@ -39,9 +42,9 @@ only.
   intended CM5/U12/U11/coupling-capacitor endpoint pairs on the regenerated
   candidate. This proves native endpoint connectivity only; it does not waive
   the physical DRC findings above.
-  Fresh native DRC of the current placement candidate reports 876 violations
-  and 499 unconnected items, including real crossings and M2_3V3/FORCE_NVME
-  shorts. The dual-mode island remains open integration work.
+  The dual-mode island remains open integration work because of real
+  crossings, shorts, and incomplete copper; no placement experiment has been
+  promoted.
 
 ## CURRENT OPEN GATES
 

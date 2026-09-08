@@ -9,8 +9,10 @@ qualification evidence only. Path A, production/acreage CAD, and unrelated
 Phase 24 work are preserved.
 The current Path-A storage placement candidate was freshly checked with native
 KiCad on 2026-09-08: 876 DRC violations and 499 unconnected items, including
-real track crossings and M2_3V3/FORCE_NVME shorts. It is not a Phase 24 pass;
-the next work must regenerate/repair from authoritative storage connectivity.
+real track crossings and M2_3V3/FORCE_NVME shorts. A disposable V3 move was
+also rejected (863 violations, 499 opens, a real PERST-to-USB_DP short, and
+eight crossings). Neither is a Phase 24 pass; the next work must regenerate
+and repair from authoritative storage connectivity.
 The new `PHASE24_RTL9210B_QFN_ORIENTATION180_PROBE.kicad_pcb` is the current
 disposable placement basis for the next QFN field pass: native DRC reports
 four inherited warnings, and the U1.39-to-U2.8 RTL_3V3 corridor in
@@ -363,16 +365,12 @@ the retained rail candidate.
 
 ## CURRENT OPEN GATES
 
-Use the 180-degree native placement as the current route-allocation basis and
-re-author the RTL9210B local QFN source field coherently at the strict
-0.20 mm routing basis, especially U1.33/U1.34 adjacency, the nearby 1V1,
-3V3, RSET, crystal, PEDET, and exposed-ground fields. The live JMS583
-support-network circuitry is already instantiated; the remaining issue is
-physical saved-board connectivity/DRC, not support-network creation. Then
-revalidate RTL_5V,
-REFCLK, lane-0, controls, SPI, USB, M.2, power, firmware, native DRC, and
-full Path-B comparison. The 5V candidate must clear native clearance rules;
-saved connectivity alone is insufficient.
+The active gate is Path-A storage-island integration: route and validate the
+live JMS583/TUSB9261 + selectors + M-key socket candidate from authoritative
+schematic/library data. The support network is already instantiated and its
+audit passes; the open issue is physical saved-board connectivity/DRC and
+mode-aware validation, not support-network creation. RTL9210B Path B is
+superseded for this Rev-A DFM contract and is not a current execution gate.
 
 Documentation hygiene note: the live `STORAGE.kicad_sch` already contains the
 JMS583 support network and its support-network audit passes. Any older prose
