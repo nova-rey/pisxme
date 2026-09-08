@@ -6960,3 +6960,6 @@ but final JMS583 land-pattern geometry remains an explicit open gate.
 The JMS_VCCO U11.6-to-C81.1 escape was moved north of the inherited CM5
 PERST corridor. Native connectivity and trace-removal negative control pass;
 the prior y=150 mm crossing variant remains rejected evidence.
+
+The JMS_VCCK U11.2-to-C82.1 west/south escape passed native connectivity and
+a trace-removal negative control with no authored shorting/crossing class.

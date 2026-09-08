@@ -50,6 +50,10 @@ open. The VBUS divider probe is retained in
 R82.2-to-R83.1 pass native connectivity and the paired trace-removal negative
 control. No authored shorting class remains; the crossing findings are
 inherited donor USB artifacts.
+The VCCK decoupler probe is retained in
+`PHASE24_JMS583_VCCK_PROBE-drc.rpt`: U11.2-to-C82.1 native connectivity and
+the trace-removal negative control pass, with no authored shorting/crossing
+class. Full rail-field routing remains open.
 The VCCO decoupler probe is retained in
 `PHASE24_JMS583_VCCO_PROBE_V2-drc.rpt`: U11.6-to-C81.1 native connectivity
 and its trace-removal negative control pass, with no authored shorting or
