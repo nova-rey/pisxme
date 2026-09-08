@@ -2682,3 +2682,12 @@ unconnected items, including seven genuine 0.2 mm clearance errors, but no
 shorting or tracks-crossing class. The earlier V546 "clean primitive" claim
 was therefore ruleset-qualified only; V546 is retained as a topology basis,
 not production-clean evidence. Path A and production CAD remain unchanged.
+## V560/V561 duplicate-copper cleanup trials — rejected
+
+V560 removed exact duplicate tracks and vias from V368, reducing native DRC
+findings from 22 to 11, but the saved-board connectivity graph disconnected
+U1.25 from the RTL_1V1 group. V561 removed exact duplicate tracks only while
+preserving vias; it still disconnected U1.25. Both are rejected as unsafe
+authoring transformations. The original V368 all-eight RTL_1V1 topology is
+retained as evidence, and any future cleanup must preserve native connectivity
+with a dedicated before/after parity audit rather than geometry-key deletion.

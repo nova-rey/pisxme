@@ -6969,3 +6969,8 @@ ruleset. It reports 25 findings / 26 unconnected items, including seven real
 clearance errors but no shorting or crossing class. V546 is now a topology
 basis only, not a production-clean primitive; the lower source-field gate
 and strict-width cleanup remain open.
+V560/V561 tested duplicate-copper cleanup on the V368 all-eight RTL_1V1
+topology. Both reduced apparent DRC clutter but caused the native saved-board
+graph to disconnect U1.25, so neither is promotable. The original V368
+topology remains the evidence basis; cleanup is a tooling-risk item requiring
+connectivity-preserving regression coverage.

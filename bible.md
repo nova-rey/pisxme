@@ -6464,3 +6464,7 @@ and strict 0.2 mm clearance. Native DRC found 25 findings / 26 opens,
 including seven real clearance errors and no shorting/crossing class. V546's
 prior clean claim is ruleset-qualified and is no longer treated as
 production-clean evidence. Path A and production CAD remain unchanged.
+2026-09-08: RTL9210B V560/V561 duplicate-copper cleanup trials reduced DRC
+clutter but disconnected U1.25 in the native saved-board graph. Both were
+rejected. Preserve V368 as the all-eight 1V1 evidence basis and require
+connectivity-preserving cleanup tests; do not delete copper by geometry key.
