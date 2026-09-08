@@ -6812,3 +6812,6 @@ reject the route and preserve the accepted rail geometry.
 has only three inherited silkscreen warnings, no signal violation, and the
 open count falls to 24. The U1.51-to-R1.1 path is locally closed; full Path-B
 support remains open.
+2026-09-08: V653 tested local Y1/C1/C2 relocation. Native DRC found C2 versus
+RTL_1V1 clearance/shorting and XTAL_IN versus the U1.20 RTL_3V3 transition;
+reject the relocation and co-author crystal support with the retained fields.

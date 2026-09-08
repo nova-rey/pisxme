@@ -180,6 +180,10 @@ V652 retains the lower-channel RSET route. The source and resistor-side
 transitions are outboard of the QFN and crystal/power fields; native DRC is
 three inherited silkscreen warnings with no signal class, and the open count
 falls from 25 to 24. RSET is locally closed; remaining support gates stay open.
+V653's local crystal relocation is rejected. Native DRC finds C2 contact with
+the retained U1.40/RTL_1V1 corridor and XTAL_IN contact with the U1.20 3V3
+transition. Shorter physical distance did not yield a valid field; co-author
+the source exits and capacitor placement with the retained rails.
 V650 is a documentation correction: the native C3-join board still has
 multiple RTL_3V3 physical components. Endpoint checks alone did not prove the
 same-net field; native DRC and the saved-board component inventory reopen this

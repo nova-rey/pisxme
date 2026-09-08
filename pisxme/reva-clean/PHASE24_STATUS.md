@@ -111,6 +111,10 @@ ordinary via at (102.5,76.0), crosses B.Cu to an outboard transition at
 (108.4,80.0), and enters R1.1 without contacting R1.2/GND. Native DRC is
 three inherited silkscreen warnings with no signal violation; the open count
 falls to 24. RSET is locally closed, while full support remains open.
+V653's local Y1/C1/C2 relocation is rejected. It reduces the crystal span but
+creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
+contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
+source-field and capacitor placement.
 V648's first SPISI source-to-U2.5 channel is rejected: its B.Cu corridor
 crosses the retained RTL_3V3 source trunk and RTL_5V collector. Native DRC
 still validates the rest of the fixture, but SPISI remains open for a separate
@@ -7381,3 +7385,7 @@ include missing R24/R32/R33 pads, J3.69 `M2_PEDET` versus schematic
 no-connect/power contacts. The normalization change does not waive any
 ownership or connectivity failure; these must be repaired in the authoritative
 storage source before promotion.
+V653's local Y1/C1/C2 relocation is rejected. It reduces the crystal span but
+creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
+contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
+source-field and capacitor placement.
