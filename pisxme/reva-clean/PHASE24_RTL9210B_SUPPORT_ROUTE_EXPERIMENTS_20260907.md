@@ -1242,6 +1242,12 @@ outward-offset F.Cu escapes. Native connectivity and the exact bottom-edge
 negative control pass, but DRC rejects the return for crossings with REFCLK,
 RTL_3V3, and LANE0_RXP. The outward shared-return class is rejected; the
 next attempt must reallocate the bottom support/REFCLK launch as one field.
+V551 repeats the bottom-group test below the REFCLK endpoint at y=72.5 mm.
+Native U1.55/U1.60/U1.63 connectivity and the exact negative control pass,
+but DRC rejects the route for XTAL_OUT, LANE0_RXP, and RTL_3V3 conflicts.
+The below-REFCLK shared-return class is exhausted; the next work is a
+coherent bottom source-field regeneration. Path A and production CAD remain
+unchanged.
 V550 isolates U1.55 with native connectivity and an exact branch-removal
 negative control. Native DRC rejects the minimal route for a 3V3 B.Cu
 crossing and XTAL_OUT/via conflict, confirming that even the single bottom
