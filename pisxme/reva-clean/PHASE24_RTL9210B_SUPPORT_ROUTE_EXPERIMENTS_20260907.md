@@ -1080,6 +1080,15 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V504 relocates C4 to the left-side native RTL_1V1 source channel and joins
+U1.16/U1.36 to C4.1; native connectivity passes, but the approach clips
+C4's GND pad. V505 keeps the placement and approaches C4.1 from below;
+native connectivity and its trace-removal negative control pass, leaving one
+RTL_1V1/RTL_3V3 crossing. V506 shifts the dogleg one channel left and removes
+that crossing. Native V506 connectivity and negative control pass, and native
+DRC reports zero local errors (seven inherited incomplete-fixture warnings
+remain). V506 is retained as the current RTL_1V1 support primitive. Path A
+and production CAD remain unchanged.
 V499 tests U1.16 RTL_1V1 to C4.1 on the V498 co-allocated source field and
 is rejected by native DRC because the first escape collides with the retained
 RTL_5V handoff and adjacent source-field geometry. V500 moves C4 beside the
