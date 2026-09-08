@@ -7101,6 +7101,11 @@ CM5_PERST corridor. Native USB3 endpoints remained connected, but DRC rose
 to 845 with additional local clearance/crossing findings; FULL7 remains the
 active route basis.
 
+2026-09-08: Rejected the U12 180-degree rotation trial. Native USB3 endpoint
+connectivity remained 10/10, but DRC rose to 845 with six shorts and 19
+crossings. The rotation is preserved as negative placement evidence; FULL7
+remains active.
+
 2026-09-08: Added and ran the saved-board USB3 negative control. FULL7 passes
 baseline native connectivity, and removal of one required CM5_USB3_RX_N track
 causes the audit to fail as required. This confirms the audit derives from

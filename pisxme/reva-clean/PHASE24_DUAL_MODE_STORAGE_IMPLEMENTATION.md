@@ -36,6 +36,11 @@ The inward source-launch relocation FULL10 was rejected after native DRC
 showed new shorts into J1 12V pads and the U11 ground pad. It remains a
 negative route experiment, not a placement or architecture finding.
 
+The disposable U12 180-degree rotation trial preserves endpoint connectivity
+but is rejected on native DRC (845 violations, six shorts, 19 crossings).
+This is a placement-route negative result, not an electrical architecture
+finding.
+
 The saved-board USB3 negative control passes: FULL7 is connected at baseline,
 and removing a required RX_N track breaks the native endpoint assertion. This
 is validation-method evidence only; routing and DRC remain open.

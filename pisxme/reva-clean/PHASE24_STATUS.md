@@ -40,6 +40,11 @@ is rejected: native connectivity still passed, but inward launch vias created
 new shorts into J1 12V pads and the U11 ground pad. It is preserved as a
 route-implementation negative result; FULL7 remains the active basis.
 
+The U12 180-degree rotation trial `PHASE24_DUAL_MODE_STORAGE_NC39_U12_ROT180_FULL`
+is rejected: all ten native USB3 endpoint assertions still pass, but native
+DRC rises to 845 violations with six shorts and 19 crossings. Rotation is
+therefore not promoted; FULL7 remains the active route basis.
+
 `phase24_usb3_negative_control.py` validates the accepted FULL7 audit against
 the saved PCB: baseline native connectivity passes, and removing one required
 CM5_USB3_RX_N track makes the audit fail as required. This hardens the
