@@ -92,6 +92,12 @@ JMS_REXT short/crossing and returns to the corrected cohort total of 811
 violations / 499 inherited unconnected items. The dedicated endpoint and
 trace-removal negative-control audit passes. V8 is retained as the current
 REXT subprimitive; full support release validation remains open.
+The accepted REXT V8 placement is now encoded in the live storage placement
+generator (`R80 = 148,130`) and regenerated into the current Path-A
+candidate. The refreshed seven-net cohort V10 remains at 811 violations /
+499 inherited unconnected items, while the native endpoint and trace-removal
+negative-control audit pass. This promotes placement authority only; full
+support routing and Phase 24 closure remain open.
 The two-via REXT corridor V1 was then rejected: its lower transition lands
 in the existing C90/R33 support field and its through-vias also incur the
 saved-board plane-clearance findings. Native DRC reports 824 violations /

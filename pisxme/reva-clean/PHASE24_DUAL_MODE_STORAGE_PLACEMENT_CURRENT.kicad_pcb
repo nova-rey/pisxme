@@ -26938,7 +26938,7 @@
 (footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
  
  (layer "F.Cu")
- (at 131 125)
+ (at 148 130)
   (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
   (property "Reference" "R80" (at 0 -0.9 0) (layer "F.SilkS") (effects (font (size 0.7 0.7) (thickness 0.12))))
   (property "Value" "R_0402_1005Metric" (at 0 0.9 0) (layer "F.Fab") (hide yes) (effects (font (size 0.7 0.7) (thickness 0.12))))

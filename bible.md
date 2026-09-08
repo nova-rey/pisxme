@@ -7032,6 +7032,13 @@ PCIe, C93, U12-EP, and AVDD33 corridor conflicts. Focused native DRC reports
 no JMS_REXT short/crossing, and the endpoint plus trace-removal negative
 control pass. The full JMS583 support/release gate remains open.
 
+2026-09-08: Promoted the validated JMS REXT V8 placement into the storage
+placement generator at R80=(148,130), regenerated the current Path-A
+candidate, and reran the seven-net cohort. Native connectivity and the
+trace-removal negative control pass; the V10 DRC remains 811 violations / 499
+inherited unconnected items. This is placement-authority progress, not full
+Phase 24 closure.
+
 2026-09-08: Rejected the JMS REXT two-via corridor V1. Native DRC found the
 lower transition in the C90/R33 support field and plane-clearance findings on
 the ordinary through-vias. It remains disposable route evidence only; the
