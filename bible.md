@@ -5857,3 +5857,7 @@ production CAD remain unchanged.
 SPISO3/SPISO and SPISO3/GND shorting classes plus an RTL_3V3 source-field
 crossing. This is a route-implementation failure; V278/V282 remain retained
 bases and the next SPI work must use coordinated channel allocation.
+2026-09-07: Rejected RTL9210B V284 high-north SPISO3 route. Native DRC found
+an SPISO3/GND short at the C1 crystal-support pad. This is a route-
+implementation failure; the next SPI work must allocate remaining channels
+together. Path A and production CAD remain unchanged.

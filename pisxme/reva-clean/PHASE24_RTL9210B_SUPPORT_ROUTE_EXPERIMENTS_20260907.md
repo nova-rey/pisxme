@@ -257,6 +257,13 @@ V102 is promoted only as the disposable 1V1 edge-group basis; remaining
 RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
 remain open.
 
+## V284 SPISO3 high-north trial — rejected implementation
+
+V284 moved the SPISO3 corridor above the lower SPI field, but its U1 north
+escape crosses the C1 ground pad in the crystal-support field. Native DRC
+reports a SPISO3/GND shorting class. This is a route-implementation failure;
+the next experiment must allocate the remaining SPI channels together.
+
 ## V103/V104 U1.34 RTL_3V3 handoff trials — rejected
 
 V103 attempted a left dogbone and B.Cu diagonal but targeted the wrong layer

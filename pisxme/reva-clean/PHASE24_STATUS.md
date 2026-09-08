@@ -6805,3 +6805,7 @@ and SPISO3/GND shorting classes and an RTL_3V3 source-field crossing. This is
 a route-implementation failure; the retained V278/V282 placement and bases
 remain valid. Remaining SPI channels must be allocated as one coordinated
 field.
+V284 is rejected: the high-north SPISO3 trial avoids the lower SPI crossings
+but creates a native SPISO3/GND short at the C1 crystal-support pad. This is
+another route-implementation failure; the next experiment must allocate
+SPISO3, SPICLK, and SPISI together around the source/support field.
