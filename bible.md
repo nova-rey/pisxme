@@ -7116,6 +7116,10 @@ connectivity stayed 10/10, but native DRC reported 843 violations, 7 shorts,
 and 21 crossings. The trial remains negative placement evidence; FULL7 stays
 active.
 
+2026-09-08: Rejected TX dogbone trials FULL12/FULL13. FULL12 reduced DRC to
+830 but left a local TXN/RXP-via short; FULL13 produced four shorts at 832
+violations. The generator was restored to the FULL7 geometry.
+
 2026-09-08: Rejected the U12 180-degree rotation trial. Native USB3 endpoint
 connectivity remained 10/10, but DRC rose to 845 with six shorts and 19
 crossings. The rotation is preserved as negative placement evidence; FULL7

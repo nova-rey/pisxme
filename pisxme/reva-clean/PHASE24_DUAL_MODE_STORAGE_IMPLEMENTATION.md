@@ -62,6 +62,10 @@ The U11 180-degree rotation trial is rejected on native DRC (843 violations,
 7 shorts, 21 crossings) despite 10/10 endpoint connectivity. It remains
 negative placement evidence, not an architecture conclusion.
 
+The FULL12/FULL13 TX dogbone trials are rejected route evidence: they did not
+produce a clean pad-field escape and introduced local shorts. The authoring
+path is restored to the FULL7 geometry.
+
 - The support-symbol authoring path emits canonical JMS583 support nets using
   the native KiCad label ordering. The endpoint-overlap repair removed stale
   generated label atoms at U11 pin 12/pin 39, and the shared-selector maps no
