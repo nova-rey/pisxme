@@ -1404,6 +1404,16 @@ rejects the handoff: it crosses retained RTL_3V3/XTAL_IN/XTAL_OUT B.Cu spines
 and contacts the adjacent U1.26 DEVSLP pad. This is a source-field allocation
 failure. The next credible class is coallocation of the upper QFN pad bank;
 Path A and production CAD remain unchanged.
+
+## Orientation-0 native source-field probe — retained basis
+
+The RTL9210B U1 footprint was natively reoriented to 0 degrees around its
+exposed pad, preserving the exposed-pad center and reporting transformed pad
+coordinates. All disposable local support tracks were removed. Native DRC
+reports six inherited warnings and no signal violations; the 45 unconnected
+items are expected because this is a placement/source-field probe. This is a
+new coordinated orientation class, not a support PASS. It is retained for
+full lower-QFN route regeneration; Path A and production CAD are unchanged.
 V504 relocates C4 to the left-side native RTL_1V1 source channel and joins
 U1.16/U1.36 to C4.1; native connectivity passes, but the approach clips
 C4's GND pad. V505 keeps the placement and approaches C4.1 from below;

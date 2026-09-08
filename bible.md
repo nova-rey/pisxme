@@ -651,6 +651,12 @@ It is route-implementation evidence only, not a macro-placement verdict.
 RTL_3V3, and XTAL_OUT from the V397 basis introduced two GND shorts at the
 oscillator transition. V397 remains the current basis; Path A and production
 CAD remain unchanged.
+2026-09-08: A native 0-degree RTL9210B U1 orientation probe was created around
+the exposed-pad center. With disposable local support copper removed, native
+DRC reports six inherited warnings and no signal violations; transformed pad
+coordinates are recorded for the next complete lower-QFN regeneration. This
+is a retained placement basis, not Path-B closure. Path A and production CAD
+remain unchanged.
 2026-09-08: RTL9210B V418 regenerated PEDET from current U1.8/R2.1/J1.69
 coordinates on a distinct source/return channel. Native DRC reports zero
 shorts/crossings and 20 opens; seven connectivity negative controls pass.

@@ -689,6 +689,13 @@ collided locally. This is a placement/route implementation failure; V69 still
 proves the U1.60 corridor when XTAL_IN is removed, and production CAD remains
 unchanged.
 
+A native 0-degree U1 orientation probe is now retained as the next coordinated
+source-field basis. It uses transformed native pad coordinates, removes only
+the disposable local support copper, and produces no signal DRC violations
+(six inherited warnings; 45 expected opens). This is not support closure, but
+it provides a materially different perimeter allocation for the complete
+lower-QFN regeneration.
+
 ## Current RTL9210B SPISO slice — V193
 
 `PHASE24_RTL9210B_SPISO_U123_U2_V193.kicad_pcb` is the promoted SPISO basis.
