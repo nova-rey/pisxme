@@ -349,6 +349,12 @@ records are donor-board artifacts. Retain this as the strongest JMS583
 analog/crystal support-field basis, but do not call the full storage island
 or Phase 24 closed.
 
+The dual-mode storage library audit was corrected to match the live JMS583
+authority: 64 numbered signal pads plus grounded exposed pad 65. The repaired
+audit now passes JMS583, both selector packages, and the TE M-key contact/key
+gap checks. This fixes validation coverage only; native ERC/DRC, physical
+routing, mode-state, and full storage integration gates remain open.
+
 The complete JMS583 support/co-author cohort now passes one native saved-board
 audit: reset, AVDD33, AVDDL, VCCO, VCCK, VDDREG, LXO, XAVDDH, XIN, XOUT, and
 reset-delay all reach their intended support pads. Removing the XIN copper

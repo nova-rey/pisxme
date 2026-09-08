@@ -7044,6 +7044,11 @@ connectivity and a trace-removal negative control across reset, rails, LXO,
 XAVDDH, crystal, and reset-delay branches. Native DRC remains non-clean from
 donor/integration findings; this is a support-field basis, not closure.
 
+2026-09-08: Corrected the dual-mode storage library audit to require the live
+JMS583 package's 64 signal pads plus grounded exposed pad 65. The repaired
+library, selector, and TE M-key checks pass; physical storage validation
+remains open.
+
 2026-09-08: Rejected the first combined JMS583 support/crystal cohort. The
 isolated production-width XIN/XOUT route conflicts with the retained XAVDDH
 diagonal when integrated, producing authored B.Cu crossings and an XOUT to
