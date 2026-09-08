@@ -6110,3 +6110,7 @@ evidence; no Path-A or production CAD changed.
 flagged the 0.10-mm tracks against the 0.20-mm board minimum and still found
 QFN source/exposed-pad conflicts. No rule relaxation was made; a complete
 co-regenerated QFN fanout remains required.
+2026-09-08: Rejected RTL9210B REFCLK V439 diverging-source probe. Native DRC
+confirmed the adjacent 0.40-mm U1 REFCLK pad-field conflict with 0.20-mm
+traces. A complete authoritative QFN fanout remains required; no rule
+relaxation or production-CAD change was made.

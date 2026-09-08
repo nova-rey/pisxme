@@ -2169,6 +2169,11 @@ source spacing. These are valid native-D RC failures of the current broad
 escape primitives, not Path-B closure. The next source allocation must use a
 complete co-regenerated QFN fanout (including lane/XTAL) with verified local
 clearance; no production CAD changed.
+V439 isolated only the REFCLK source fanout with diverging 0.20-mm traces.
+Native DRC still found the adjacent U1.61/U1.62 source-field conflict at the
+0.40-mm pitch. This confirms the package/rule interaction quantitatively;
+the next candidate must be a complete QFN fanout with authoritative escape
+geometry, not another isolated trunk adjustment.
 V438 tested a 0.10-mm reduced-width REFCLK fanout from the native U1 pads,
 widening after the proposed transitions. Native DRC still rejected it: the
 QFN P/N source separation remained below clearance, the N transition entered
