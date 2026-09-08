@@ -5999,6 +5999,10 @@ basis; no production CAD changed.
 right-side RTL_1V1 handoffs removed shorts but left three native crossings
 against the XTAL_OUT B.Cu spine. V364 remains the retained clean power-field
 basis; Path A and production CAD remain unchanged.
+2026-09-07: Retained RTL9210B V370/V372 XTAL_OUT relocation evidence. V370
+passes native support audit with zero shorts/crossings and 21 opens; V373
+lane-0 retry remains rejected with five shorts and three crossings where RXN
+shares RTL_1V1 transition channels. Path A and production CAD remain unchanged.
 2026-09-07: Retained RTL9210B V372 direct XTAL_OUT relocation basis. Native
 DRC reports zero shorting/crossing classes and 21 inherited opens. V373 lane-
 0 integration was rejected with five shorts and three crossings against

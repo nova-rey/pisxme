@@ -1996,6 +1996,14 @@ integration route: native DRC reports 5 shorting and 3 crossing classes,
 including lane RXN against the outboard XTAL_OUT riser and lane TXN/RXN
 against RTL_1V1 right-side launches. The next candidate must co-author the
 lane escape and 1V1 right-side channels; no Path-A or production CAD changed.
+V370 is retained as a clean XTAL_OUT reallocation candidate: native DRC
+reports 0 shorting items, 0 tracks-crossing items, and 21 unconnected items,
+and the coallocated support audit plus RTL_1V1/XTAL_OUT negative controls
+pass. V371 transplants V328 lane-0 onto the older V370 transition and is
+rejected with 6 shorting and 7 crossing classes. V372 removes the unnecessary
+XTAL_OUT intermediate via and is retained as the direct-riser basis; V373
+retries lane-0 against it and is rejected with 5 shorting and 3 crossing
+classes. The remaining problem is lane RXN/RTL_1V1 transition-channel sharing.
 V368 is retained as the first clean coallocated support basis. It keeps the
 retained RSET and XTAL_IN/XTAL_OUT primitives, routes the RTL_1V1 right-side
 branches on In2, and routes the top/left branches on B.Cu to avoid RTL_3V3.
