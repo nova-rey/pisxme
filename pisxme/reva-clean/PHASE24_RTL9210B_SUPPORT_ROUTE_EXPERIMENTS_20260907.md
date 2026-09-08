@@ -1123,6 +1123,11 @@ Native connectivity for U1.20/U1.34/U1.39/U1.52 to C3.1 and the exact
 U1.52 branch-removal negative control pass. Native DRC has no new local
 short, crossing, or clearance error; inherited incomplete-fixture findings
 remain. V535 is the current four-source RTL_3V3 primitive.
+V536 tests U1.40 RTL_1V1 through an outer B.Cu transition into the retained
+1V1 handoff. Native U1.40-to-C4.1 connectivity and the exact branch-removal
+negative control pass, but native DRC finds a real RTL_3V3/RTL_1V1 short at
+the U1.39 side-field route. V536 is rejected as a route implementation; the
+accepted V535 3V3 primitive is unchanged.
 V526 proves the U1.39-to-C3.1 graph with an exact branch-removal negative
 control, but its raised outer B.Cu return is rejected by native DRC for
 RTL_5V-via clearance/crossing and REFCLK corridor interaction (23 findings).

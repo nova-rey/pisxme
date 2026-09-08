@@ -6221,6 +6221,10 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V536 proves the U1.40 RTL_1V1 native graph and exact
+branch-removal negative control, but its outer transition shorts the adjacent
+RTL_3V3 field and is rejected by native DRC. V535 remains the accepted 3V3
+primitive; Path A and production CAD are unchanged.
 2026-09-08: RTL9210B V535 completes the disposable four-source RTL_3V3
 primitive. U1.20/U1.34/U1.39/U1.52 all reach C3.1 in the native graph and
 the exact U1.52 branch-removal negative control passes. Native DRC adds no
