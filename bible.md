@@ -6486,3 +6486,13 @@ the support baseline and RTL_5V remains open.
 the source vias against RTL_3V3 and native connectivity left the 5V branches
 disconnected. The plane-only approach is rejected; V562 remains the support
 baseline and RTL_5V remains open.
+2026-09-08: RTL9210B V566-V569 tested coherent local and perimeter RTL_5V
+ escapes from the V562 baseline. V566 introduced 5V/GND and 1V1 crossings;
+ V567 removed the shorts but retained crossings; V568 reduced the crossing
+ class to one; V569 crossed the lower 1V1 spine and RSET. All were rejected
+ as route implementations. V570 uses the upper perimeter loop: native
+ U1.17/U1.33/C5.1 connectivity and the trace-removal negative control pass,
+ with no native shorting or tracks-crossing classes, but 16 DRC findings
+ remain, including local QFN/pad-field clearance issues. V570 is not
+ production-clean or promoted. Path A, production CAD, and unrelated Phase
+ 24 work remain unchanged.

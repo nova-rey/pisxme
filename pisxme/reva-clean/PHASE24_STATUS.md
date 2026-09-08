@@ -1,5 +1,38 @@
 # Phase 24 acreage validation status
 
+## AUTHORITATIVE CURRENT STATE — 2026-09-08
+
+The active work item remains isolated RTL9210B Path-B support qualification;
+Path A, production/acreage CAD, and unrelated Phase 24 work are preserved.
+V562 is the retained corrected support baseline: its native saved-board audit
+connects the complete RTL_1V1 and RTL_3V3 support groups with a working
+trace/zone-removal negative control. V563, V564, and V565 are rejected
+RTL_5V route classes (west corridor, lower outboard, and In2 plane).
+V566–V569 are rejected local/perimeter RTL_5V trials; V570 is the current
+best RTL_5V candidate for further review, with native U1.17/U1.33/C5.1
+connectivity and a trace-removal negative control, but it is NOT a pass:
+native DRC reports 16 violations, including real QFN/pad-field and local
+clearance findings. It has no `shorting_items` or `tracks_crossing` in the
+report, but the remaining clearance/manufacturing/open-support findings keep
+RTL_5V and full Path-B support open. Do not promote V570 to production CAD.
+
+## CURRENT OPEN GATES
+
+Re-author the RTL9210B local QFN source field coherently at the strict
+0.20 mm routing basis, especially U1.33/U1.34 adjacency, the nearby 1V1,
+3V3, RSET, crystal, and exposed-ground fields. Then revalidate RTL_5V,
+REFCLK, lane-0, controls, SPI, USB, M.2, power, firmware, native DRC, and
+full Path-B comparison. The 5V candidate must clear native clearance rules;
+saved connectivity alone is insufficient.
+
+## SUPERSEDED / HISTORICAL FINDINGS
+
+The earlier V132–V154 prose below records valid historical experiments and
+must not be read as the current promoted basis. V562 supersedes the old V137
+rail narrative as the corrected support authoring baseline; V570 is only the
+latest disposable 5V field experiment. Raw boards and native reports remain
+immutable evidence.
+
 ## AUTHORITATIVE CURRENT STATE — 2026-09-07
 
 The active work item is isolated RTL9210B Path-B support qualification; Path A,

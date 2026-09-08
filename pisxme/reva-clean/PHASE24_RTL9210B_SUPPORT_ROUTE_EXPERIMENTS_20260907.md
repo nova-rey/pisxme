@@ -1,5 +1,22 @@
 # RTL9210B support-fixture route experiments — 2026-09-07
 
+## Current 2026-09-08 state — V562/V570
+
+V562 is the retained corrected support baseline. It regenerates the complete
+RTL_1V1 field from the saved V342 source without copying duplicate RSET or
+crystal copper; native connectivity and the route/zone negative control pass
+for all eight U1 1V1 pads plus C4.1. Its native DRC remains open.
+
+V563–V565 reject RTL_5V source classes: west outer F.Cu, lower outboard
+F.Cu/B.Cu, and local In2 plane. V566–V569 reject successive local,
+upper/lower, and bypass variations. V570 is the best current 5V topology:
+U1.17/U1.33/C5.1 are natively connected and the trace-removal negative
+control fails as required; native DRC has no shorting or crossing classes.
+It still reports 16 violations, including QFN/pad-field and other clearance
+findings, so it is not a production-clean candidate. The next action is a
+coherent reallocation of the shared QFN source field, not another long 5V
+collector. Path A and production CAD remain untouched.
+
 ## Current state and documentation hygiene
 
 The JMS583 support network is already instantiated in the live authoritative
