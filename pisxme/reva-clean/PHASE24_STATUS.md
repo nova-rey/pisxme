@@ -6800,6 +6800,10 @@ pass, both trace-removal negative controls pass, and native DRC has 366
 findings / 25 inherited opens with no shorting or crossing class and zero
 footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
 high-speed support remain open.
+V302 is rejected: the alternate CLKREQ launch shorts the PEDET R2 pad and
+the U1 ISOLATEB field. Although its native endpoint count is 18, the source
+geometry is invalid. The next CLKREQ repair must preserve R2 and ISOLATEB
+clearance while co-authoring the local sideband field.
 V301 is retained as a CLKREQ topology basis but not promoted. Native endpoint
 connectivity reduces the saved-board open count to 18, while DRC identifies
 CLKREQ/SPISO and CLKREQ/XTAL_IN crossings plus a CLKREQ/REFCLK_N short at the

@@ -257,6 +257,13 @@ V102 is promoted only as the disposable 1V1 edge-group basis; remaining
 RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
 remain open.
 
+## V302 CLKREQ alternate launch — rejected implementation
+
+V302 shifts the R3 launch west and transitions the U1-side branch below the
+PERST launch. Native DRC finds real CLKREQ/PEDET shorting at R2 and
+CLKREQ/ISOLATEB shorting at U1. It is rejected despite reducing the native
+open count to 18; the next implementation must preserve adjacent net fields.
+
 ## V299/V300 PEDET sideband correction — retained, not promoted
 
 V299 removes the PEDET/PERST crossing class with a U-shaped approach around
