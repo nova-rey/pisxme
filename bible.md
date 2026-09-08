@@ -7370,3 +7370,9 @@ endpoint and XIN-removal negative-control checks passed, but integrated DRC
 rejected it at 851 violations / 499 unconnected items with a real
 JMS_XAVDDH/CM5_USB3_TX_N collision. The remaining work is an in-place
 XAVDDH escape repair; the candidate is preserved as rejected evidence.
+
+2026-09-08: Promoted the in-place left/up XAVDDH repair as the current
+support/USB3 integration basis. Native XIN/XOUT/XAVDDH and USB3 endpoint
+audits pass, including the XIN-removal negative control. Native DRC reports
+853 violations / 499 inherited unconnected items with no authored shorts or
+track crossings; full Phase 24 closure remains open.

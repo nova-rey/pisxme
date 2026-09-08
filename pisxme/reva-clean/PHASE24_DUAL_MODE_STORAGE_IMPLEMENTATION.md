@@ -114,6 +114,12 @@ and its XIN negative control, but native DRC rejects the integrated route at
 with CM5_USB3_TX_N. The candidate is preserved as rejected evidence; the
 remaining work is an in-place XAVDDH escape repair.
 
+The left/up in-place XAVDDH repair is now the current support/USB3 integration
+basis. Its native XIN/XOUT/XAVDDH audit and XIN-removal negative control pass;
+the USB3 endpoint audit remains 10/10. Native DRC reports 853 violations /
+499 unconnected inherited items with no authored shorting or track-crossing
+class. It is a routing basis, not full Phase 24 closure.
+
 The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route
 evidence only; FULL7 is still the active basis.

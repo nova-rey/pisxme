@@ -1,9 +1,10 @@
 """Native saved-object audit for the transplanted XIN/XOUT/XAVDDH exits."""
 from pathlib import Path
+import os
 import pcbnew
 R=Path(__file__).resolve().parent
-PCB=R/'PHASE24_DUAL_MODE_STORAGE_FULL7_THREE_EXITS.kicad_pcb'
-NEG=R/'PHASE24_DUAL_MODE_STORAGE_FULL7_THREE_EXITS_NEGATIVE.kicad_pcb'
+PCB=R/os.environ.get('PISXME_THREE_EXIT_PCB','PHASE24_DUAL_MODE_STORAGE_FULL7_THREE_EXITS.kicad_pcb')
+NEG=R/os.environ.get('PISXME_THREE_EXIT_NEG','PHASE24_DUAL_MODE_STORAGE_FULL7_THREE_EXITS_NEGATIVE.kicad_pcb')
 PAIRS=(('U11','50','Y10','1'),('U11','51','Y10','2'),('U11','52','C84','1'))
 def connected(b,a,ap,z,zp):
     b.BuildConnectivity(); c=b.GetConnectivity()
