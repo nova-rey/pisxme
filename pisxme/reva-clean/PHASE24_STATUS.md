@@ -6974,3 +6974,9 @@ topology. Both reduced apparent DRC clutter but caused the native saved-board
 graph to disconnect U1.25, so neither is promotable. The original V368
 topology remains the evidence basis; cleanup is a tooling-risk item requiring
 connectivity-preserving regression coverage.
+V562 is the retained corrected Path-B support baseline. It regenerates the
+V368 RTL_1V1 field from V342 without duplicate support copper and passes the
+native all-eight 1V1/C4, 3V3, crystal, and RSET audit with a route-and-zone
+negative control. Native DRC has 11 findings / 21 unconnected pads, zero
+shorting/crossing classes, and zero footprint errors. Remaining open nets are
+RTL_5V, GND attachment, PEDET/CLKREQ/PERST, SPI, REFCLK, and lane-0.

@@ -2691,3 +2691,15 @@ preserving vias; it still disconnected U1.25. Both are rejected as unsafe
 authoring transformations. The original V368 all-eight RTL_1V1 topology is
 retained as evidence, and any future cleanup must preserve native connectivity
 with a dedicated before/after parity audit rather than geometry-key deletion.
+## V562 corrected V368 support regeneration — retained baseline
+
+V562 regenerates the V368 RTL_1V1 allocation directly from V342 and omits the
+original generator's duplicate RSET/XTAL copy step. Native saved-board audit
+passes all eight U1 RTL_1V1 pads plus C4.1, all nine RTL_3V3 support endpoints,
+XTAL_IN, XTAL_OUT, and RSET; a route-and-zone removal negative control fails
+as required. Native DRC reports 11 findings / 21 unconnected pads, with no
+shorting or tracks-crossing class and no footprint errors. The remaining
+unconnected nets are RTL_5V, GND attachment, PEDET/CLKREQ/PERST, SPI, REFCLK,
+and lane-0. V562 is retained as the current Path-B support baseline under
+0.2 mm tracks and 0.2 mm clearance. V546 remains historical topology
+evidence only; no Path-A or production CAD changed.

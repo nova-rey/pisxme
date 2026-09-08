@@ -6468,3 +6468,10 @@ production-clean evidence. Path A and production CAD remain unchanged.
 clutter but disconnected U1.25 in the native saved-board graph. Both were
 rejected. Preserve V368 as the all-eight 1V1 evidence basis and require
 connectivity-preserving cleanup tests; do not delete copper by geometry key.
+2026-09-08: RTL9210B V562 corrected the V368 authoring path by regenerating
+RTL_1V1 directly from V342 without duplicate RSET/XTAL copper. Native audit
+passes all eight 1V1 pads plus C4, 3V3, crystal, and RSET groups; the
+route-and-zone negative control passes. Native DRC has 11 findings / 21 opens
+with no shorting/crossing or footprint errors. V562 is the retained Path-B
+support baseline; remaining RTL_5V, GND, controls, SPI, REFCLK, and lane-0
+work remains open. Path A and production CAD are unchanged.
