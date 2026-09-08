@@ -2028,3 +2028,8 @@ together. It is rejected: native DRC reports 10 shorting and 2 crossing
 classes, including RXN/U1 REFCLK and RXN/RTL_1V1 lower-via contacts. The
 connector crossing was reduced, but the source escape still requires a
 co-authored U1 pad-field channel plan.
+V377 isolated the lane-0 source/corridor by removing RTL_1V1 copper, but its
+new RXN vias still contacted U1 REFCLK and adjacent QFN pad rows. Native DRC
+reported 6 shorts and 1 crossing. This candidate is rejected; the next pass
+retains the proven V328 source via positions and reallocates only the
+conflicting RTL_1V1 launches.

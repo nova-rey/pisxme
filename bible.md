@@ -6024,3 +6024,7 @@ Path A and production CAD remain unchanged.
 reported ten shorting and two crossing classes at the U1 REFCLK/RTL_1V1
 source field and lower via bus. Connector geometry improved, but source
 escape allocation remains open; Path A and production CAD remain unchanged.
+2026-09-07: Rejected RTL9210B V377 lane source-isolation trial. New RXN vias
+contacted U1 REFCLK/adjacent QFN pads and native DRC reported six shorts and
+one crossing. The V328 source via positions remain the valid starting point;
+only conflicting RTL_1V1 launches should be reallocated next.
