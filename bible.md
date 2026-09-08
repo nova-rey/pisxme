@@ -6227,6 +6227,11 @@ Native aggregation connectivity and one trace-removal negative control pass.
 Native DRC has zero errors; nine inherited incomplete-fixture warnings
 remain. Remaining source pads and support nets stay open; no Path-A or
 production-CAD change.
+2026-09-08: The latest RTL9210B V497 U1.52 variant still passes native
+connectivity and its negative control but native DRC rejects its lower-QFN
+escape against XTAL_IN and RSET. This narrows the next task to complete
+source-field co-allocation; isolated U1.52 detours are not a valid route
+class. No Path-A or production-CAD change.
 2026-09-08: RTL9210B V494 joins native U1.33 RTL_5V to the accepted U1.17/C5.1
 trunk before REFCLK. Native common-rail connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
