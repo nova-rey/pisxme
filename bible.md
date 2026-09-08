@@ -6028,3 +6028,10 @@ escape allocation remains open; Path A and production CAD remain unchanged.
 contacted U1 REFCLK/adjacent QFN pads and native DRC reported six shorts and
 one crossing. The V328 source via positions remain the valid starting point;
 only conflicting RTL_1V1 launches should be reallocated next.
+2026-09-07: Rejected RTL9210B V378 diagnostic because its manually recreated
+lane used incorrect RX source/connector launch geometry; native DRC reported
+two shorts and zero crossings. V380 reproduced the exact V328 lane geometry
+and, with RTL_1V1/RTL_3V3/crystal copper removed for isolation, native DRC
+reported zero shorts and zero crossings (37 intentional/inherited opens).
+This separates route-authoring failure from lane-topology failure; Path A and
+production CAD remain unchanged.

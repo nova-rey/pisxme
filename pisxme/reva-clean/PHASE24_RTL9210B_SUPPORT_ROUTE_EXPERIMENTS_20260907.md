@@ -2033,3 +2033,21 @@ new RXN vias still contacted U1 REFCLK and adjacent QFN pad rows. Native DRC
 reported 6 shorts and 1 crossing. This candidate is rejected; the next pass
 retains the proven V328 source via positions and reallocates only the
 conflicting RTL_1V1 launches.
+
+V378 was a diagnostic lane-only regeneration, but it did not faithfully
+reproduce V328: the RXP connector launch was routed through J1.41/RXN and the
+RX source vias were placed at the U1 pad-field exits rather than at V328's
+staggered transition points. Native DRC therefore reported 2 shorts and 0
+crossings. It is rejected as a route-authoring error, not as evidence against
+the lane topology.
+
+V380 repeats the diagnostic with the exact V328 lane geometry: RXP source
+transition at (110.6,66.5), RXN source transition at (111.5,64.5), connector
+returns at (132,66.5)/(132,64.5), and the authoritative J1 RXN/RXP launches
+to pads 41/43. RTL_1V1, RTL_3V3, XTAL_IN, and XTAL_OUT copper was removed only
+to isolate the lane from known support-channel conflicts. Native DRC reports
+0 shorting items and 0 tracks-crossing items, with 37 unconnected items from
+the intentionally incomplete support base. This proves the exact lane
+primitive remains geometrically valid; the remaining task is joint
+allocation of support rails/crystal and the lane source channels. Path A and
+production CAD remain unchanged.
