@@ -120,6 +120,12 @@ the USB3 endpoint audit remains 10/10. Native DRC reports 853 violations /
 499 unconnected inherited items with no authored shorting or track-crossing
 class. It is a routing basis, not full Phase 24 closure.
 
+The current basis now includes the native-pad-aware JMS_RESET_N repair after
+REXT. U11.15-to-R81.1-to-C85.1 connectivity and its trace-removal negative
+control pass; REXT, XIN/XOUT/XAVDDH, and USB3 remain passing. Native DRC is
+863 violations / 499 inherited unconnected items with no authored shorts or
+crossings. Remaining support rails and full storage validation are open.
+
 The current basis also includes the validated lateral REXT route. Native REXT
 and XIN/XOUT/XAVDDH audits pass with their trace-removal controls, and the
 USB3 endpoint audit remains 10/10. Native DRC is 853 violations / 499

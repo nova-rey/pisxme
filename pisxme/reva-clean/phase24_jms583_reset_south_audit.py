@@ -1,10 +1,11 @@
 """Native connectivity audit and negative control for the reset escape probe."""
 from pathlib import Path
+import os
 import pcbnew
 
 R=Path(__file__).resolve().parent
-PCB=R/'PHASE24_JMS583_RESET_SOUTH_PROBE.kicad_pcb'
-NEG=R/'PHASE24_JMS583_RESET_SOUTH_PROBE_NEGATIVE.kicad_pcb'
+PCB=R/os.environ.get('PISXME_RESET_AUDIT_PCB','PHASE24_JMS583_RESET_SOUTH_PROBE.kicad_pcb')
+NEG=R/os.environ.get('PISXME_RESET_AUDIT_NEG','PHASE24_JMS583_RESET_SOUTH_PROBE_NEGATIVE.kicad_pcb')
 def connected(b):
     b.BuildConnectivity(); c=b.GetConnectivity()
     a=b.FindFootprintByReference('U11').FindPadByNumber('15')

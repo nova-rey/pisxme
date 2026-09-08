@@ -156,6 +156,14 @@ shorting or track-crossing class. The report still contains 853 total
 violations / 499 unconnected inherited items, so this is not full Phase 24
 closure.
 
+The current support/USB3 basis now includes the native-pad-aware REXT and
+JMS_RESET_N repairs as `PHASE24_DUAL_MODE_STORAGE_FULL7_RESET`. Native
+U11.15-to-R81.1-to-C85.1 connectivity and the reset trace-removal negative
+control pass; REXT, XIN/XOUT/XAVDDH, and all ten USB3 endpoint checks remain
+passing. Native DRC reports 863 violations / 499 inherited unconnected items
+with no authored shorting or track-crossing class. Remaining support rails,
+SATA, mode-state, and full-board gates remain open.
+
 The current basis also includes the validated lateral REXT addition as
 `PHASE24_DUAL_MODE_STORAGE_FULL7_REXT`. Native U11.39-to-R80.1, XIN/XOUT/
 XAVDDH, and all ten USB3 endpoint checks pass with their trace-removal

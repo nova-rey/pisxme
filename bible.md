@@ -7388,3 +7388,9 @@ FULL7/XAVDDH basis. Native REXT, three-exit, and USB3 endpoint audits pass
 with trace-removal controls; native DRC remains 853 violations / 499 inherited
 unconnected items and no authored shorting/crossing class. Full support and
 Phase 24 closure remain open.
+
+2026-09-08: Promoted the west/north native-pad-aware JMS_RESET_N repair onto
+the current REXT/XAVDDH/USB3 basis. U11.15-to-R81.1-to-C85.1 connectivity and
+the trace-removal negative control passed. Native DRC remains 863 violations /
+499 inherited unconnected items with no authored shorts or crossings; support
+rails and full storage closure remain open.
