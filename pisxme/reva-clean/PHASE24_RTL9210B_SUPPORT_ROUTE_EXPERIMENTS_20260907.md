@@ -2149,3 +2149,9 @@ and the provisional control corridors themselves crossed existing lane,
 REFCLK, and each other. Native DRC reported 46 violations. This result is
 not a macro-placement verdict; it shows that a rotation trial must be
 regenerated as a complete local support/lane island before comparison.
+V432 isolated REFCLK but is rejected as a malformed first launch: its
+0.40-mm-separated transition vias violated the 0.60-mm via body clearance,
+and its straight connector dogbones contacted adjacent J1 MDI pads. The
+source/endpoint choice is not evidence against REFCLK; the next fixture must
+stagger both transitions and approach J1.53/J1.55 from clear connector-side
+corridors.

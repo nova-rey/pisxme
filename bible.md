@@ -559,6 +559,10 @@ an order-preserving two-layer SPI partition. Native KiCad reports 30
 violations / 40 opens; dominant failures remain the rotated U1 QFN source
 escape and retained XTAL_OUT region. U2 footprint coordinates are corrected;
 Path A and production CAD remain unchanged.
+2026-09-08: Rejected RTL9210B REFCLK isolation V432 as a malformed first
+launch. Native DRC caught overlapping transition-via bodies and connector
+dogbones entering adjacent J1 MDI pads. Preserve REFCLK net authority; the
+next trial must use staggered vias and explicit J1.53/J1.55 launch corridors.
 2026-09-07: V389 refilled native zones on the V388 candidate, reducing the
 stale zone-clearance flood to 17 DRC violations plus 25 opens. V390 widened
 all four imported lane nets to the board minimum 0.20 mm; native DRC retained
