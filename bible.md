@@ -6633,3 +6633,7 @@ source escapes and 1V1 departures next.
 lower 1V1 audits with no SPI crossings. Native DRC has eight findings, only
 two real local U1.55/XTAL_OUT conflicts plus six inherited warnings. Retain it
 as the coordinated basis; co-author the crystal drop and U1.55 escape next.
+2026-09-08: The V35/U2-left crystal co-author candidate passes native SPI,
+XTAL_IN/XTAL_OUT/RSET, and lower 1V1 audits with negative controls. Native DRC
+has six inherited warnings and no signal violations; 26 intended support/
+external opens remain. Retain it as the strongest disposable basis.

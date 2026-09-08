@@ -33,6 +33,11 @@ native SPI and lower 1V1 audits pass, with no SPI crossing/short. Native DRC
 has eight findings, reduced to two real local U1.55/XTAL_OUT conflicts plus
 six inherited warnings. The next repair must co-author that crystal drop and
 U1.55 escape.
+The crystal co-author candidate now passes native SPI, XTAL_IN/XTAL_OUT/RSET,
+and lower 1V1 audits with negative controls. Native DRC reports six inherited
+warnings and no signal violations; 26 intended external/support opens remain.
+Retain it as the strongest disposable basis while RTL_3V3/QFN, REFCLK, lane 0,
+USB, controls, power, firmware, and full Path-B validation remain open.
 V562 is the retained corrected support baseline: its native saved-board audit
 connects the complete RTL_1V1 and RTL_3V3 support groups with a working
 trace/zone-removal negative control. V563, V564, and V565 are rejected

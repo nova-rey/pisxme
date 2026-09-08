@@ -64,6 +64,14 @@ SPI crossing or short remains. Retain this as the current coordinated
 placement basis; the next repair must co-author the XTAL_OUT transition and
 U1.55 escape rather than abandon the U2 migration.
 
+The crystal co-author candidate relocates XTAL_IN's source transition to
+(93.8,76.5) mm and regenerates XTAL_IN/XTAL_OUT together around the U1.55
+escape. Native SPI, XTAL_IN/XTAL_OUT/RSET, and lower 1V1 audits all pass with
+negative controls. Native DRC reports six inherited warnings only, with no
+signal violations; 26 intended external/support opens remain. Retain
+`PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_U2_LEFT_CRYSTAL_COAUTHOR` as the
+current strongest disposable basis, not as production closure.
+
 ## Next implementation step
 
 Re-author the complete current support field from native pad coordinates on a
@@ -87,3 +95,5 @@ remaining work is coordinated route allocation and full Path-B validation.
 - `phase24_rtl9210b_v35_u2_left_reroute.py`
 - `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_U2_LEFT_SOURCE_PRESERVED-drc.rpt`
 - `phase24_rtl9210b_v35_u2_left_source_preserved.py`
+- `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_U2_LEFT_CRYSTAL_COAUTHOR-drc.rpt`
+- `phase24_rtl9210b_v35_u2_left_crystal_coauthor.py`
