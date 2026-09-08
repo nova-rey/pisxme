@@ -7188,3 +7188,8 @@ canonical corrected atoms are already present. Native re-export remains at
 the two-item R80.1/U11.39 association defect; U11-only, old-block, UUID, and
 endpoint serialization probes were rejected when they changed unrelated
 ownership or increased mismatches.
+
+2026-09-08: Rejected the correctly physically scoped U11-only label reauthor
+probe. Native export produced 20 mismatches, including unrelated
+`JMS_AVDDL`/`BRIDGE_USB_VBUS` ownership changes; the live source was restored
+to the stable two-item JMS_REXT association defect.

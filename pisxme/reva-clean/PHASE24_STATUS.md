@@ -18,6 +18,9 @@ The current native-pad support routing trial is rejected: native DRC reports
 support crossings. It remains disposable evidence only. The structural
 JMS583 support audit and its removed-R80 negative control both pass after
 updating the audit to the canonical `LXO`/`XIN`/`XOUT` names.
+The physically scoped U11-only reauthor probe is also rejected: native export
+produced 20 mismatches and merged unrelated `JMS_AVDDL`/`BRIDGE_USB_VBUS`
+ownership. The live source was restored to the stable two-mismatch state.
 
 The active work item is the protected Path-A dual-mode storage implementation
 and the remaining clean-board Phase 24 closure. RTL9210B Path B is rejected
