@@ -7039,6 +7039,12 @@ trace-removal negative control pass; the V10 DRC remains 811 violations / 499
 inherited unconnected items. This is placement-authority progress, not full
 Phase 24 closure.
 
+2026-09-08: Added `phase24_jms583_ground_return_audit.py`. It derives JMS583
+support-ground connectivity from native pads, tracks, vias, and filled zones,
+and passes a destructive-copy negative control after local ground copper is
+removed. The JMS583 support cohort remains open because the saved candidate
+still carries inherited donor DRC/open findings.
+
 2026-09-08: Validated the first JMS583 ground-return access template. Ordinary
 through-vias at C80.2 and U11.63, with native F.Cu pad escapes and refilled
 POWER_GND zones, connect C80 ground to the JMS583 ground domain in saved
