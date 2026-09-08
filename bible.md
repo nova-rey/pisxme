@@ -6513,6 +6513,11 @@ pads 31/32 but shorted the new via into the RTL_3V3 In2 spine. V574 moved the
 shorting or crossing classes, but its independent saved-board audit failed
 the complete 3V3 endpoint group. Both were rejected; V572 remains the
 retained electrically connected baseline.
+2026-09-08: RTL9210B V578 replaced the first U1.33 RTL_5V departure with an
+exact-horizontal segment. Native saved-board connectivity showed dangling 5V
+branches and native DRC still reported the pad-32 clearance violation. V578
+was rejected; V576 remains the best connected candidate and the strict QFN
+edge escape remains open.
 2026-09-08: RTL9210B V576 restored the two omitted physical RTL_3V3 In2
 bridges on the V574 coupled field. Native 5V and 3V3 endpoint audits pass with
 independent trace-removal negative controls. Native DRC remains at 12 findings

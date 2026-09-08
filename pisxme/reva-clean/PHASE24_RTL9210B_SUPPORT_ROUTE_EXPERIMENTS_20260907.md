@@ -41,6 +41,10 @@ field. Native audits pass complete 5V and 3V3 endpoint groups with independent
 trace-removal negative controls. Native DRC remains at 12 findings with no
 shorting or crossing classes; retain V576 as the current connected disposable
 candidate, not production closure.
+V578 replaced the first U1.33 5V departure with an exact-horizontal segment.
+Native saved-board connectivity showed dangling 5V branches and DRC still
+reported the pad-32 clearance violation. Reject V578; retain V576 as the best
+connected candidate. The strict QFN edge escape remains open.
 V577 edited the existing V576 U1.34 handoff natively by 0.05 mm. Native DRC
 rose to 13 findings and still reported the strict pad-33/pad-34 source-field
 clearance and pad-35 clearance. Reject V577; retain V576. The limiting
