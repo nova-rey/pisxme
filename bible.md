@@ -6204,3 +6204,10 @@ basis. All four MDI pairs and both REFCLK nets pass native saved-board
 connectivity and six negative controls; native DRC reports zero
 shorts/crossings/clearances. Support/control integration remains open; no
 Path-A or production-CAD change.
+2026-09-08: RTL9210B V488 adds the rotated-U1 crystal support from native
+XTAL_IN/XTAL_OUT pads through Y1/C1/C2 with ordinary through-via escapes and
+explicit local GND returns. Both crystal groups and two trace-removal negative
+controls pass native saved-board connectivity. Native DRC has zero shorts,
+crossings, clearance, solder-mask, and thermal errors; ten inherited
+incomplete-fixture warnings remain. Rails, SPI, reset, sideband, and control
+integration remain open; no Path-A or production-CAD change.

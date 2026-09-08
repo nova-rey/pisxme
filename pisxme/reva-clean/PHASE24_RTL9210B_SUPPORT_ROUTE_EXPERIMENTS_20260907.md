@@ -2318,3 +2318,12 @@ saved-board connectivity, six trace-removal negative controls, and native DRC
 zero shorts, crossings, and clearance violations. It uses the approved
 0.13208-mm high-speed width and ordinary through-vias. Support/control
 integration remains open; no Path-A or production CAD changed.
+V488 regenerated XTAL_IN and XTAL_OUT from the rotated U1's native pad
+coordinates to the existing crystal and load capacitors, with separate
+ordinary through-via escapes and explicit local GND returns for each load
+capacitor. Native saved-board connectivity passes both crystal groups and two
+trace-removal negative controls. Native DRC has zero shorts, crossings,
+clearance, solder-mask, and thermal errors; ten inherited dangling/support
+warnings remain on the incomplete parent fixture. V488 is retained as the
+clean crystal-support primitive; rails, SPI, reset, sideband, and control
+integration remain open. No Path-A or production CAD changed.
