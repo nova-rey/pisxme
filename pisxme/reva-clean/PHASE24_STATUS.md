@@ -121,6 +121,9 @@ RTL_5V route to the V35 U2-left crystal/1V1/upper-3V3 field. It still has 23
 unconnected pads and is not closure. The legacy RTL_5V negative-control helper
 is invalid for this redundant route because it removes only the first same-net
 track; it unexpectedly passes and is not used as evidence.
+The corrected V661 audit removes every duplicate instance of the unique
+RTL_5V trunk. The endpoint group passes and the trace-removal negative control
+now fails as required.
 V659 is rejected after a valid native rerun: the all-rail In2 collector on the
 fresh V35 basis produced 56 violations, including rail-to-rail, rail-to-SPI,
 and rail-to-crystal shorts/crossings. The helper defects encountered before

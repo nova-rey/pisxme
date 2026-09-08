@@ -2967,3 +2967,6 @@ lower support. The endpoint group is physically connected. The legacy V35
 RTL_5V negative-control helper is invalid here because removing its first
 selected track can leave a redundant same-net route; it unexpectedly passed.
 This is an audit-tool defect, not waived connectivity evidence.
+The corrected branch-specific V661 audit removes every duplicate instance of
+the unique RTL_5V trunk. The endpoint group passes and the negative control
+fails as required.

@@ -6853,3 +6853,6 @@ shorting/crossing class, but 23 support pads remain open. The legacy RTL_5V
 negative-control helper unexpectedly passed because it removed a redundant
 same-net track; do not treat that audit as valid. Preserve V661 as the next
 rail basis.
+2026-09-08: Corrected the V661 RTL_5V negative control to remove every
+duplicate instance of the unique trunk. The saved-board endpoint audit passes,
+and the corrected trace-removal control fails as required.
