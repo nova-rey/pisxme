@@ -6906,3 +6906,13 @@ items and USB3 parity remains PASS. Physical crystal escape remains open.
 2026-09-08: Added and ran a fail-closed native PCB audit for all 64 JMS583
 U11 pad nets against the live `JMS` authority map. It passes, preventing
 future routing probes from hiding another symbol/PCB net-name mismatch.
+## 2026-09-08 — Phase 24 JMS583 authoring reconciliation
+
+The live Path-A storage generator was corrected to reuse the reviewed JMS583
+64-pin schematic map and to keep generated support passives within the
+disposable acreage outline. Native U11 pad-authority and USB3 endpoint audits
+still pass; the regenerated placement remains open at 857 DRC violations and
+499 unconnected items. A stale divergent crystal probe was restored to the
+last short-free disposable basis while its later report remains rejected
+evidence. JMS583 package identity/pitch are documented, but final land-pattern
+pad geometry remains an explicit open production gate.

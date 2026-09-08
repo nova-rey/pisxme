@@ -15,7 +15,10 @@ OUT=ROOT/'PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb'
 LIB=ROOT/'PiSXMe_RevA_Clean.pretty'
 
 MAPS={
- 'JMS583_QFN64_8x8.kicad_mod':('U11',{16:'STORAGE_USB_VBUS',17:'STORAGE_USB_DN',18:'STORAGE_USB_DP',21:'JMS_USB_TXP1',22:'JMS_USB_TXN1',23:'JMS_USB_TXN2',24:'JMS_USB_TXP2',26:'JMS_USB_RXP1',27:'JMS_USB_RXN1',28:'JMS_USB_RXN2',29:'JMS_USB_RXP2',34:'JMS_PCIE_RXN1',35:'JMS_PCIE_RXP1',37:'JMS_PCIE_TXN1',38:'JMS_PCIE_TXP1',41:'JMS_PCIE_RXN0',42:'JMS_PCIE_RXP0',44:'JMS_PCIE_TXN0',45:'JMS_PCIE_TXP0',47:'JMS_REFCLK_N',48:'JMS_REFCLK_P',50:'JMS_XIN',51:'JMS_XOUT',54:'JMS_PERST_N',55:'JMS_CLKREQ_N',60:'GND',63:'POWER_GND',64:'JMS_LXO'}),
+ # Reuse the reviewed schematic pin maps.  Do not maintain a second partial
+ # U11 map here: it previously created stale JMS_XIN/JMS_LXO aliases that
+ # diverged from the native schematic nets.
+ 'JMS583_QFN64_8x8.kicad_mod':('U11',JMS),
  'HD3SS6126_RUA0042A.kicad_mod':('U12',{6:'USB_SEL_OE_N',7:'CM5_USB2_DN',8:'CM5_USB2_DP',9:'STORAGE_USB_SEL',10:'POWER_GND',11:'CM5_USB3_TXP',12:'CM5_USB3_TXN',15:'CM5_USB3_RXP',16:'CM5_USB3_RXN',22:'JMS_USB3_RXN',23:'JMS_USB3_RXP',24:'JMS_USB3_TXN',25:'JMS_USB3_TXP',26:'TUSB_USB3_RXN',27:'TUSB_USB3_RXP',28:'TUSB_USB3_TXN',29:'TUSB_USB3_TXP',31:'TUSB_USB2_DP',32:'TUSB_USB2_DN',33:'JMS_USB2_DP',34:'JMS_USB2_DN',13:'STORAGE_3V3',20:'STORAGE_3V3',30:'STORAGE_3V3'}),
  'HD3SS3412_RUA0042A.kicad_mod':('U13',{2:'M2_PCIE_TXP0',3:'M2_PCIE_RXP0',5:'STORAGE_3V3',6:'M2_PCIE_TXP1',7:'M2_PCIE_RXP1',9:'STORAGE_SEL',10:'POWER_GND',11:'M2_PCIE_TXP2',12:'M2_PCIE_RXP2',15:'M2_PCIE_TXP3',16:'M2_PCIE_RXP3',22:'JMS_PCIE_TXN0',23:'JMS_PCIE_TXP0',24:'JMS_PCIE_RXN0',25:'JMS_PCIE_RXP0',26:'TUSB_SATA_RXN',27:'TUSB_SATA_RXP',28:'TUSB_SATA_TXN',29:'TUSB_SATA_TXP',30:'STORAGE_3V3'}),
  'TE_1-2199230-4_MKEY.kicad_mod':('J3',{2:'M2_3V3',3:'POWER_GND',4:'M2_3V3',41:'M2_SATA_B_P_PCIE_RXN0',43:'M2_SATA_B_N_PCIE_RXP0',47:'M2_SATA_A_N_PCIE_TXN0',49:'M2_SATA_A_P_PCIE_TXP0',50:'M2_PERST_N',52:'M2_CLKREQ_N',53:'M2_REFCLK_N',54:'M2_PEWake_N',55:'M2_REFCLK_P',68:'M2_SUSCLK',70:'M2_3V3',71:'POWER_GND',72:'M2_3V3',73:'POWER_GND',74:'M2_3V3'}),
@@ -101,7 +104,11 @@ def main():
         additions.append(pcb_footprint(LIB/fname,ref,x,y,nets))
     for ref,nets in SUPPORT_PCB.items():
         fname = 'C_0603_1608Metric.kicad_mod' if ref == 'C44' else ('Crystal_3225_4Pad.kicad_mod' if ref == 'Y2' else ('L_2520_6332Metric.kicad_mod' if ref == 'L2' else ('R_0402_1005Metric.kicad_mod' if ref.startswith('R') else 'C_0402_1005Metric.kicad_mod')))
-        x=300+(len(additions)%6)*5; y=180+(len(additions)//6)*4
+        # Keep the generated support field inside the 300 x 180 mm acreage
+        # outline.  The former 300+ mm grid silently put C80..R33 outside
+        # the board, making every subsequent routing/DRC result misleading.
+        idx=len(additions)
+        x=120+(idx%6)*3.5; y=112+(idx//6)*2.5
         additions.append(pcb_footprint(LIB/fname,ref,x,y,nets))
     text=text.rstrip(); assert text.endswith(')')
     text=text[:-1]+'\n'+'\n'.join(additions)+'\n)\n'

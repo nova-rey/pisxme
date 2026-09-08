@@ -27,8 +27,9 @@ only.
   pass.
 - The current regenerated disposable placement candidate is
   `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb`; it is not
-  production authority. The current fresh native result is 876 DRC
-  violations and 499 unconnected items. The V3 disposable relocation
+  production authority. The current fresh native result is recorded in
+  `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT_FIXED_GRID-drc.rpt` as 857
+  DRC violations and 499 unconnected items. The V3 disposable relocation
   (`phase24_storage_candidate_v3.rpt`) is rejected evidence, not the current
   candidate. The older
   `PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb` remains historical evidence.
@@ -46,7 +47,10 @@ only.
   native DRC has zero shorting items, but eight crossings and 499 unconnected
   items remain. The dual-mode island remains open integration work; no
   placement experiment has been promoted to production authority.
-  A current-candidate support-routing trial is rejected evidence: five native
+  The placement generator now reuses the reviewed JMS583 pin map and places
+  generated support parts inside the acreage outline; this corrects an
+  authoring defect but does not close routing. A current-candidate
+  support-routing trial is rejected evidence: five native
   shorts and seven crossings result from stale distributed support placement,
   so the next support pass must co-locate the support parts with U11 before
   routing them.

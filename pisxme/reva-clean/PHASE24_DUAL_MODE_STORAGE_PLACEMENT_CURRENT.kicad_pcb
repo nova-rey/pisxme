@@ -26983,7 +26983,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 310 184)
+ (at 127 114.5)
   (property "Reference" "C80"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27012,7 +27012,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 315 184)
+ (at 130.5 114.5)
   (property "Reference" "C81"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27041,7 +27041,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 320 184)
+ (at 134 114.5)
   (property "Reference" "C82"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27070,7 +27070,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 325 184)
+ (at 137.5 114.5)
   (property "Reference" "C83"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27099,7 +27099,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 300 188)
+ (at 120 117)
   (property "Reference" "C84"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27126,7 +27126,7 @@
 (footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
  
  (layer "F.Cu")
- (at 305 188)
+ (at 123.5 117)
   (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
   (property "Reference" "R81" (at 0 -0.9 0) (layer "F.SilkS") (effects (font (size 0.7 0.7) (thickness 0.12))))
   (property "Value" "R_0402_1005Metric" (at 0 0.9 0) (layer "F.Fab") (hide yes) (effects (font (size 0.7 0.7) (thickness 0.12))))
@@ -27142,7 +27142,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 310 188)
+ (at 127 117)
   (property "Reference" "C85"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27169,7 +27169,7 @@
 (footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
  
  (layer "F.Cu")
- (at 315 188)
+ (at 130.5 117)
   (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
   (property "Reference" "R82" (at 0 -0.9 0) (layer "F.SilkS") (effects (font (size 0.7 0.7) (thickness 0.12))))
   (property "Value" "R_0402_1005Metric" (at 0 0.9 0) (layer "F.Fab") (hide yes) (effects (font (size 0.7 0.7) (thickness 0.12))))
@@ -27183,7 +27183,7 @@
 (footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
  
  (layer "F.Cu")
- (at 320 188)
+ (at 134 117)
   (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
   (property "Reference" "R83" (at 0 -0.9 0) (layer "F.SilkS") (effects (font (size 0.7 0.7) (thickness 0.12))))
   (property "Value" "R_0402_1005Metric" (at 0 0.9 0) (layer "F.Fab") (hide yes) (effects (font (size 0.7 0.7) (thickness 0.12))))
@@ -27199,7 +27199,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 325 188)
+ (at 137.5 117)
   (property "Reference" "C86"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27228,7 +27228,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 300 192)
+ (at 120 119.5)
   (property "Reference" "C87"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27257,7 +27257,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 305 192)
+ (at 123.5 119.5)
   (property "Reference" "C88"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27286,7 +27286,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 310 192)
+ (at 127 119.5)
   (property "Reference" "C89"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27315,7 +27315,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 315 192)
+ (at 130.5 119.5)
   (property "Reference" "C90"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27344,7 +27344,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 320 192)
+ (at 134 119.5)
   (property "Reference" "C91"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27373,7 +27373,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 325 192)
+ (at 137.5 119.5)
   (property "Reference" "C92"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27402,7 +27402,7 @@
   (generator pcbnew)
  
  (layer "F.Cu")
- (at 300 196)
+ (at 120 122)
   (property "Reference" "C93"
     (at 0 -1.1 0)
     (layer "F.SilkS")
@@ -27429,7 +27429,7 @@
 (footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
  
  (layer "F.Cu")
- (at 305 196)
+ (at 123.5 122)
   (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
   (property "Reference" "R24" (at 0 -0.9 0) (layer "F.SilkS") (effects (font (size 0.7 0.7) (thickness 0.12))))
   (property "Value" "R_0402_1005Metric" (at 0 0.9 0) (layer "F.Fab") (hide yes) (effects (font (size 0.7 0.7) (thickness 0.12))))
@@ -27443,7 +27443,7 @@
 (footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
  
  (layer "F.Cu")
- (at 310 196)
+ (at 127 122)
   (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
   (property "Reference" "R32" (at 0 -0.9 0) (layer "F.SilkS") (effects (font (size 0.7 0.7) (thickness 0.12))))
   (property "Value" "R_0402_1005Metric" (at 0 0.9 0) (layer "F.Fab") (hide yes) (effects (font (size 0.7 0.7) (thickness 0.12))))
@@ -27457,7 +27457,7 @@
 (footprint "R_0402_1005Metric" (version 20240108) (generator pcbnew)
  
  (layer "F.Cu")
- (at 315 196)
+ (at 130.5 122)
   (descr "IPC-7351 nominal 0402 resistor; 1.00 x 0.50 mm body; clean-project commodity passive")
   (property "Reference" "R33" (at 0 -0.9 0) (layer "F.SilkS") (effects (font (size 0.7 0.7) (thickness 0.12))))
   (property "Value" "R_0402_1005Metric" (at 0 0.9 0) (layer "F.Fab") (hide yes) (effects (font (size 0.7 0.7) (thickness 0.12))))

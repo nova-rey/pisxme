@@ -7,8 +7,12 @@ and the remaining clean-board Phase 24 closure. RTL9210B Path B is rejected
 for the current Rev-A package/DFM contract; its isolated artifacts remain
 qualification evidence only. Path A, production/acreage CAD, and unrelated
 Phase 24 work are preserved.
-The current Path-A storage placement candidate was freshly checked with native
-KiCad on 2026-09-08: 843 DRC violations and 499 unconnected items. The
+The accepted U11-west/J5-clear placement basis was checked with native KiCad
+on 2026-09-08 at 843 DRC violations and 499 unconnected items. The regenerated
+current candidate, after correcting the U11 map and moving support parts inside
+the acreage outline, is recorded in
+`PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT_FIXED_GRID-drc.rpt` at 857
+violations and 499 unconnected items. Neither is a Phase 24 pass. The
 U11-west/J5-clear placement removes the prior real storage short classes
 (`shorting_items` = 0); eight crossings and incomplete copper remain, so this
 is a routing basis, not a Phase 24 pass. The V3 and J5-clear predecessors are
@@ -29,8 +33,11 @@ support therefore remains open at the strict board rule; no rule relaxation
 or production promotion is claimed.
 An authority audit found and corrected a generator mismatch: Y10 had been
 assigned `JMS_XIN/JMS_XOUT` while U11 and the schematic use `XIN/XOUT`.
-After regeneration, the native crystal probe has zero shorting items and the
-USB3 endpoint audit remains PASS. Physical crystal escape clearance/crossing
+The generator now reuses the reviewed JMS map and keeps generated support
+parts inside the board outline. The restored short-free crystal probe is
+`phase24_jms583_crystal_netmap_fixed.rpt`; the later divergent probe remains
+rejected evidence (`phase24_jms583_crystal_divergent_escape.rpt`). The USB3
+endpoint audit remains PASS, while physical crystal escape clearance/crossing
 work remains open.
 The new `phase24_jms583_pcb_net_authority_audit.py` checks all 64 native U11
 pad nets against the live schematic authority and passes after regeneration.
