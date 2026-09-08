@@ -17,9 +17,10 @@ placements={'R81':(125,145),'C80':(148,143),'C81':(148,147),'C82':(120,147)}
 for ref,q in placements.items(): b.FindFootprintByReference(ref).SetPosition(P(*q))
 b.FindFootprintByReference('L10').SetPosition(P(136,125));b.FindFootprintByReference('L10').SetOrientationDegrees(180)
 b.FindFootprintByReference('Y10').SetPosition(P(150,115))
-placements['C84']=(150,120)
+placements['C83']=(155,147); placements['C84']=(150,120)
+b.FindFootprintByReference('C83').SetPosition(P(155,147))
 b.FindFootprintByReference('C84').SetPosition(P(150,120))
-for name in ('JMS_RESET_N','JMS_AVDD33','JMS_VCCO','JMS_VCCK','JMS_VDDREG_5V','LXO','JMS_XAVDDH'):
+for name in ('JMS_RESET_N','JMS_AVDD33','JMS_AVDDL','JMS_VCCO','JMS_VCCK','JMS_VDDREG_5V','LXO','JMS_XAVDDH'):
     n=b.FindNet(name)
     for x in list(b.GetTracks()):
         if x.GetNetCode()==n.GetNetCode(): b.RemoveNative(x)
@@ -29,6 +30,11 @@ route(b,'JMS_RESET_N','U11','15',[(133,137.6),(133,143),(122,143),(122,145)])
 route(b,'JMS_RESET_N','R81','1',[(122,145)])
 route(b,'JMS_AVDD33','U11','19',[(142.2,140),(147,140),(147,143)])
 route(b,'JMS_AVDD33','C80','1',[(147,143)])
+na=b.FindNet('JMS_AVDDL'); s=xy(u.FindPadByNumber('20').GetPosition()); d=xy(b.FindFootprintByReference('C83').FindPadByNumber('1').GetPosition())
+seg(b,na,s,(141.8,140.5)); via(b,na,(141.8,140.5))
+for a,z in [((141.8,140.5),(154.5,144))]:
+    t=pcbnew.PCB_TRACK(b);t.SetStart(P(*a));t.SetEnd(P(*z));t.SetLayer(pcbnew.B_Cu);t.SetWidth(pcbnew.FromMM(.20));t.SetNet(na);t.SetNetCode(na.GetNetCode());b.Add(t)
+via(b,na,(154.5,144));seg(b,na,(154.5,144),(154.5,147));seg(b,na,(154.5,147),d)
 n=b.FindNet('JMS_VCCO');s=xy(u.FindPadByNumber('6').GetPosition());d=xy(b.FindFootprintByReference('C81').FindPadByNumber('1').GetPosition())
 seg(b,n,s,(134.5,s[1]));via(b,n,(134.5,s[1]));
 for a,z in [((134.5,s[1]),(134.5,145)),((134.5,145),(147,145))]:

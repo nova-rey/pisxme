@@ -7039,6 +7039,12 @@ trace-removal negative control pass; the V10 DRC remains 811 violations / 499
 inherited unconnected items. This is placement-authority progress, not full
 Phase 24 closure.
 
+2026-09-08: Expanded the JMS583 native support cohort to eight nets by adding
+U11.20 JMS_AVDDL to C83.1 through a mixed-layer ordinary-via corridor. The
+native endpoint audit and combined trace-removal negative control pass; V14
+has 819 violations / 499 unconnected items, with no authored AVDDL
+short/crossing but recurring plane-clearance findings still open.
+
 2026-09-08: Rejected the JMS REXT two-via corridor V1. Native DRC found the
 lower transition in the C90/R33 support field and plane-clearance findings on
 the ordinary through-vias. It remains disposable route evidence only; the

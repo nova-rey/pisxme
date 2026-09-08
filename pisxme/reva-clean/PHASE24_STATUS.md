@@ -98,6 +98,13 @@ candidate. The refreshed seven-net cohort V10 remains at 811 violations /
 499 inherited unconnected items, while the native endpoint and trace-removal
 negative-control audit pass. This promotes placement authority only; full
 support routing and Phase 24 closure remain open.
+The cohort was expanded with the native U11.20-to-C83.1 `JMS_AVDDL` path.
+V14 preserves connectivity and the combined trace-removal negative control
+now passes for eight support nets. Its DRC reports 819 violations / 499
+unconnected items; the new mixed-layer route has no JMS_AVDDL short or
+crossing, but ordinary-via plane-clearance findings remain open with the
+board's inherited plane evidence. Full support and manufacturing closure
+remain open.
 The two-via REXT corridor V1 was then rejected: its lower transition lands
 in the existing C90/R33 support field and its through-vias also incur the
 saved-board plane-clearance findings. Native DRC reports 824 violations /
