@@ -165,6 +165,11 @@ V647's crystal-pair trials are rejected. The direct F.Cu path crosses the
 retained rail field; the staggered B.Cu retry removes XTAL_IN/XTAL_OUT contact
 but still conflicts with the U1.20 3V3 via and U1 1V1 corridor. The crystal
 source exits require coordinated allocation with those rails.
+V654 fixed the disposable helper's SWIG net-proxy ordering by assigning saved
+net codes before creating copper. The rerun remains a rejected route
+implementation: native DRC reports XTAL_IN/XTAL_OUT and retained-rail
+crossings plus a dangling 3V3 segment. This candidate does not invalidate the
+accepted 3V3 field.
 V648's first SPISI route is rejected because its B.Cu source corridor crosses
 the retained RTL_3V3 and RTL_5V collectors. The endpoint route class remains
 open; allocate SPI separately from the rail field.

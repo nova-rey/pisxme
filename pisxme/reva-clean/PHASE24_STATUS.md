@@ -115,6 +115,11 @@ V653's local Y1/C1/C2 relocation is rejected. It reduces the crystal span but
 creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
+V654 corrected the disposable KiCad net-assignment helper to capture net
+codes before adding tracks, eliminating its SWIG proxy failure. The rerun of
+the co-authored U1.52/crystal candidate is rejected by native DRC: XTAL_OUT
+crosses XTAL_IN and the retained 1V1 field, XTAL_IN crosses the shifted 3V3
+transition, and a residual 3V3 segment dangles. No production CAD changed.
 V648's first SPISI source-to-U2.5 channel is rejected: its B.Cu corridor
 crosses the retained RTL_3V3 source trunk and RTL_5V collector. Native DRC
 still validates the rest of the fixture, but SPISI remains open for a separate

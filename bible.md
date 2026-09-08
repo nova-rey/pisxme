@@ -6815,3 +6815,7 @@ support remains open.
 2026-09-08: V653 tested local Y1/C1/C2 relocation. Native DRC found C2 versus
 RTL_1V1 clearance/shorting and XTAL_IN versus the U1.20 RTL_3V3 transition;
 reject the relocation and co-author crystal support with the retained fields.
+2026-09-08: V654 fixed the disposable KiCad helper to capture net codes before
+SetNet, then reran the U1.52/crystal co-author candidate. Native DRC rejected
+it for XTAL pair/rail crossings and a dangling 3V3 segment; production CAD and
+accepted rail geometry remain unchanged.
