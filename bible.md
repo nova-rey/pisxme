@@ -7371,6 +7371,12 @@ rejected it at 851 violations / 499 unconnected items with a real
 JMS_XAVDDH/CM5_USB3_TX_N collision. The remaining work is an in-place
 XAVDDH escape repair; the candidate is preserved as rejected evidence.
 
+2026-09-08: Ran native per-net JMS583 support trials against the promoted
+FULL7/XAVDDH basis. Every direct-join trial introduced native shorts and/or
+crossings; VCCO/VCCK failed closed because the helper has no mappings. Saved
+the complete allocation matrix and raw reports; direct joins are rejected as
+an implementation class.
+
 2026-09-08: Promoted the in-place left/up XAVDDH repair as the current
 support/USB3 integration basis. Native XIN/XOUT/XAVDDH and USB3 endpoint
 audits pass, including the XIN-removal negative control. Native DRC reports
