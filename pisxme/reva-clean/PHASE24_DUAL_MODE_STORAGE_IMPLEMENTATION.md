@@ -499,3 +499,8 @@ The complete ten-net JMS583 support connectivity audit passes on the AVDDL
 local-zone basis, including the combined track/zone-removal negative control.
 Support connectivity is a validated primitive; USB3/SATA/mode/DRC/ERC and
 full-board gates remain open.
+
+The current support-route candidate was independently compared against the
+native schematic export and reports 111 expected-pad mismatches. It remains a
+disposable routing candidate until schematic-to-PCB authority is regenerated
+and the parity gate passes; no PCB-only ownership repair is accepted.

@@ -7439,3 +7439,9 @@ for all ten support nets, including zone-mediated AVDDL/VDDREG paths, and the
 combined negative control removed all support tracks and zones and failed as
 required. Native DRC remains 514 inherited findings; full storage and Phase
 24 closure remain open.
+
+2026-09-08: Independent parity audit of the current AVDDL support-route
+candidate reports 111 expected-pad mismatches, including M.2, Ethernet,
+service, mode-control, power, and support-passive ownership. The candidate
+remains disposable routing evidence; no mismatch was waived or repaired on
+the PCB side.

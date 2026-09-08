@@ -570,6 +570,12 @@ native pads/tracks/zones. Its combined negative control removes every support
 track and zone and fails as required. Native DRC remains 514 inherited
 findings; this closes the support connectivity primitive only.
 
+An independent parity run on the current AVDDL support-route candidate reports
+111 expected-pad mismatches. Examples include J3/M.2 ownership, J1/J2 power
+and Ethernet support, J4 service pins, J5 mode pins, and missing support
+passive pads. This candidate is therefore disposable support evidence, not an
+integrated schematic-authoritative board; no mismatch is waived.
+
 The retained production-width crystal discriminator uses the same native
 split-layer corridor but 0.20 mm tracks rather than the earlier sensitivity
 probe's 0.15 mm tracks. Both U11 crystal endpoints pass native connectivity
