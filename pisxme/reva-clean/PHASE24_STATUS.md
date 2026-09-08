@@ -10,6 +10,12 @@ four inherited warnings, and the U1.39-to-U2.8 RTL_3V3 corridor in
 `PHASE24_RTL9210B_ORIENTATION180_U139_PROBE.kicad_pcb` is natively connected
 with a trace-removal negative control. This closes only that route
 sub-primitive; no production promotion is claimed.
+V629 extends that basis with the second lower RTL_3V3 channel, U1.34-to-U2.3.
+Both lower channels are natively connected on
+`PHASE24_RTL9210B_ORIENTATION180_U134_PROBE.kicad_pcb`; removing all
+RTL_3V3 tracks breaks both connections. Native DRC remains four inherited
+warnings with no shorting or crossing class. This is still disposable
+source-field evidence, not full support closure.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus

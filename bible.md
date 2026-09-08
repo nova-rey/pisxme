@@ -6702,6 +6702,11 @@ exposed-pad datum preserved. The no-copper basis has four inherited DRC
 warnings; its U1.39-to-U2.8 RTL_3V3 probe is natively connected and its
 trace-removal negative control fails as required. Retain it as the next
 coherent source-field basis; Path A and production CAD remain unchanged.
+2026-09-08: V629 added the complementary U1.34-to-U2.3 RTL_3V3 corridor to
+the retained 180-degree RTL9210B basis. Both lower channels are natively
+connected; removing all RTL_3V3 tracks breaks both. Native DRC remains four
+inherited warnings with no shorting/crossing class. This remains disposable
+source-field evidence; Path A and production CAD remain unchanged.
 2026-09-08: Marked the older 2026-09-06 dual-mode checkpoint in
 PHASE24_STATUS.md as superseded historical evidence. Its former
 "instantiate support network" next-action wording now states that the work

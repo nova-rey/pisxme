@@ -94,6 +94,10 @@ discriminator. Its U1.39-to-U2.8 RTL_3V3 corridor passes saved-board native
 connectivity and fails the trace-removal negative control; native DRC remains
 at four inherited warnings before the rest of the field is authored. It is a
 route sub-primitive, not a full-support or production pass.
+V629 adds the complementary U1.34-to-U2.3 lower RTL_3V3 corridor. Both
+channels pass saved-board native connectivity, and removing all RTL_3V3
+tracks breaks both; native DRC remains at four inherited warnings with no
+shorting or crossing class.
 
 Re-author the complete current support field from native pad coordinates on a
 fresh V35-derived disposable board: first allocate all three rails and the
