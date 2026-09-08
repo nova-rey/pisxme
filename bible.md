@@ -6134,3 +6134,7 @@ V328 remain the retained isolated primitives; no production-CAD change.
 exact V328 lane and exposed the true shared QFN-field conflicts between
 REFCLK_N, RX_N, RX_P, and RTL_3V3. V452 is rejected; no Path-A or production
 CAD changed.
+2026-09-08: RTL9210B V454 is the strongest REFCLK/lane coallocation trial so
+far. Native DRC leaves one real RX_P/RX_N source-transition short, with the
+REFCLK overpass and connector launches otherwise clean. Preserve V454 as the
+coallocation basis; no production-CAD or Path-A change.

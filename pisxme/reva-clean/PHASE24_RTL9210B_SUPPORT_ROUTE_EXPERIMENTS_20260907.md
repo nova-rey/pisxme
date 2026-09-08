@@ -2208,3 +2208,10 @@ conflicts: RX_N intersects the REFCLK_N source/transition, RX_P approaches
 U1 RTL_3V3, and the lower REFCLK trunk approaches the RX_P transition. V452
 is rejected as a coallocation candidate, while V451 remains the clean
 REFCLK basis and V328 remains the lane authority.
+V453 added an upper REFCLK_N overpass but retained RX-source conflicts. V454
+coordinated the source and connector corridors: REFCLK_N descends outside
+the REFCLK_P B.Cu corridor, RX_N moves to the outer source transition, and
+RX_P uses an early ordinary-via transition. Native DRC reduced the candidate
+to one real RX_P/RX_N source-transition short, two inherited warnings, and
+22 inherited opens. V454 is retained as the current coallocation basis while
+that single RX transition is repaired.
