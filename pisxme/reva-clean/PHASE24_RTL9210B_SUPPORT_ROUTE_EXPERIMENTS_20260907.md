@@ -1080,6 +1080,12 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V497 tested U1.52 RTL_3V3 to the retained rail. The route passed native
+connectivity and its negative control, but the lower-edge escape crossed the
+retained XTAL_IN via/escape and RSET source-field tracks. Native DRC rejected
+the implementation for those clearance/crossing findings. V497 is retained
+as a rejected route experiment; U1.52 remains open for co-allocation with the
+completed support source field. No Path-A or production CAD changed.
 V496 adds native U1.39 RTL_3V3 to the retained C3 rail. A direct B.Cu
 route crossed the XTAL_IN vertical escape; the corrected branch uses a
 left-side F.Cu escape and joins the existing U1.34/C3 handoff at its native

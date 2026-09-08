@@ -6216,6 +6216,11 @@ avoids XTAL_IN. Native aggregation connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining rail source pads and support
 nets stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V497 connected U1.52 RTL_3V3 to the retained rail and
+passed its native negative control, but native DRC rejected the lower-edge
+escape for XTAL_IN and RSET source-field crossings/clearances. V497 is a
+rejected route experiment; U1.52 remains open for co-allocation with the
+completed support field. No Path-A or production-CAD change.
 2026-09-08: RTL9210B V495 adds native U1.20 RTL_3V3 to the retained C3.1
 rail. The final short F.Cu/left-side B.Cu handoff avoids RTL_5V and REFCLK.
 Native aggregation connectivity and one trace-removal negative control pass.
