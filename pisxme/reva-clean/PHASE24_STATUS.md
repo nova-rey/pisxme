@@ -60,6 +60,11 @@ is rejected: native USB3 endpoint assertions remain 10/10, but native DRC
 reports 843 violations, 7 shorts, and 21 crossings. It is negative placement
 evidence; FULL7 remains the active basis.
 
+The alternate CM5 source-layer trial `PHASE24_DUAL_MODE_STORAGE_NC39_USB3_ALT_FULL`
+is rejected: native USB3 endpoint assertions passed 10/10, but native DRC
+reported 851 violations, 4 shorts, and 18 crossings. The all-B.Cu source
+escape is restored and FULL7 remains active.
+
 TX dogbone trials FULL12/FULL13 are rejected route implementations. FULL12
 reduced the DRC count to 830 but retained a local TXN/RXP-via short; FULL13
 shifted the dogbone and produced four shorts with 832 DRC violations. The

@@ -58,6 +58,10 @@ The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route
 evidence only; FULL7 is still the active basis.
 
+The alternate source-layer trial passed 10/10 USB3 endpoints but is rejected
+on native DRC (851 violations, 4 shorts, 18 crossings). The source escape is
+restored to the all-B.Cu FULL7 basis.
+
 The U11 180-degree rotation trial is rejected on native DRC (843 violations,
 7 shorts, 21 crossings) despite 10/10 endpoint connectivity. It remains
 negative placement evidence, not an architecture conclusion.

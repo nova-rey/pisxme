@@ -7116,6 +7116,10 @@ connectivity stayed 10/10, but native DRC reported 843 violations, 7 shorts,
 and 21 crossings. The trial remains negative placement evidence; FULL7 stays
 active.
 
+2026-09-08: Rejected the alternate CM5 source-layer USB3 trial. Endpoint
+connectivity passed 10/10, but native DRC reported 851 violations, 4 shorts,
+and 18 crossings. The all-B.Cu FULL7 source escape was restored.
+
 2026-09-08: Rejected TX dogbone trials FULL12/FULL13. FULL12 reduced DRC to
 830 but left a local TXN/RXP-via short; FULL13 produced four shorts at 832
 violations. The generator was restored to the FULL7 geometry.
