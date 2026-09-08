@@ -81,6 +81,11 @@ retained B.Cu RTL_3V3 collector. The corrected delayed-bend V2 moves the
 inherited warnings only, with no signal short, crossing, or clearance class,
 and U1.36-to-C4.1 native connectivity passes. The local QFN 1V1 source field
 is now connected; remaining opens belong to other support groups.
+V642 adds ordinary outboard GND return vias for U1.69, U1.66, and U1.45.
+The first U1.45 via position was rejected for clearance to the retained
+U1.40 via; the corrected outboard position leaves only three inherited
+silkscreen warnings. Native zone refill connects all three QFN ground pads;
+this is a retained ground-return sub-primitive, not full support closure.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus

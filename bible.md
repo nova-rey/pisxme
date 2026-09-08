@@ -6770,3 +6770,7 @@ relaxing rules or changing architecture.
 collided with the retained B.Cu RTL_3V3 collector. V2 moves the via/trunk to
 the north-side channel; native DRC again has only four inherited warnings and
 U1.36-to-C4.1 connectivity passes. The local QFN 1V1 source set is connected.
+2026-09-08: V642 added ordinary outboard GND returns for U1.69/U1.66/U1.45.
+After moving the U1.45 via away from the retained U1.40 via, native DRC has
+only three inherited silkscreen warnings and filled-zone connectivity joins
+all three QFN ground pads. Continue with the remaining support opens.

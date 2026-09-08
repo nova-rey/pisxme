@@ -144,6 +144,12 @@ is rejected. V2 moves the via to x=92.5 mm, y=74.3 mm and uses a separate
 north-side B.Cu channel. Native DRC returns only the four inherited warnings;
 U1.36-to-C4.1 connectivity passes. The full local QFN RTL_1V1 source set is
 now connected without relaxing width, clearance, layer, or via rules.
+V642 adds ordinary outboard GND returns from U1.69 exposed-pad edge, U1.66,
+and U1.45. The first U1.45 via position conflicted with the U1.40 1V1 via and
+was rejected; the corrected via at (99.5,76.0) leaves native DRC with only
+three inherited silkscreen warnings. Native zone connectivity connects all
+three U1 ground pads. Retain this return sub-primitive and continue with the
+remaining control, clock, SPI, and external support opens.
 V636 extends the passing 1V1 trunk with a north-of-QFN U1.25 departure.
 Native U1.25-to-C4.1 connectivity and the trace-removal negative control
 pass; native DRC remains at four inherited warnings with no signal violation.
