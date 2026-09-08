@@ -6892,3 +6892,6 @@ U11-west/J5-clear placement. Reject the trial: five real shorts and seven
 crossings arise from stale distributed support coordinates and direct F.Cu
 joins through the QFN field. The support circuitry remains authoritative;
 coherent local placement/routing is the next Path-A task.
+2026-09-08: Retained the native-pad JMS583 RSET escape probe. U11.39 to
+R80.1 is connected on F.Cu with no native shorting items; the disposable
+board reports 840 total violations. This closes only the RSET sub-primitive.

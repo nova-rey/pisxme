@@ -18,6 +18,10 @@ rejected: it created five real shorts and seven crossings because support
 coordinates remain spread across the donor geometry. The support network is
 electrically instantiated; its physical placement/routing still requires a
 coherent local allocation.
+The retained RSET sub-primitive (`phase24_jms583_rset_escape_probe.py`) uses
+native U11.39/R80.1 pads and a short F.Cu escape. Native DRC reports no
+shorting items and the RSET endpoint is connected; this does not close the
+remaining support network.
 The new `PHASE24_RTL9210B_QFN_ORIENTATION180_PROBE.kicad_pcb` is the current
 disposable placement basis for the next QFN field pass: native DRC reports
 four inherited warnings, and the U1.39-to-U2.8 RTL_3V3 corridor in
