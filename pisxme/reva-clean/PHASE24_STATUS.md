@@ -115,6 +115,11 @@ V653's local Y1/C1/C2 relocation is rejected. It reduces the crystal span but
 creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
+V658 is rejected after a valid rerun: its coordinated XTAL_IN/XTAL_OUT/RSET
+field produced 31 native violations, including real XTAL pair, rail, and RSET
+shorts/crossings. The pre-authoring helper error was corrected; no result was
+taken from the malformed first run. The remaining Path-B issue is the complete
+QFN lower source-field allocation.
 V656/V657 are rejected disposable SPI allocation trials. V656 moved U2 east
 and regenerated all five SPI channels, but native DRC found 43 violations with
 real shorts/crossings. V657's single-net west SPICS discriminator found seven

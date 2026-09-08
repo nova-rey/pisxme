@@ -6827,3 +6827,7 @@ field; native DRC rejected 43 violations including shorts/crossings. V657
 tested a narrower SPICS west channel; native DRC rejected seven violations,
 including CLKREQ_N/SPICS shorting. Preserve both as route-implementation
 evidence only; Path A, production CAD, and validation rules remain unchanged.
+2026-09-08: V658 corrected its helper and validly reran a coordinated
+XTAL_IN/XTAL_OUT/RSET source field. Native DRC rejected 31 findings, including
+XTAL pair, rail, and RSET shorts/crossings. Preserve it as lower-QFN
+route-allocation evidence only; no Path-A or production-CAD artifact changed.

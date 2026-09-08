@@ -2936,3 +2936,10 @@ DRC rejected the route with 43 findings, including real shorts and crossings.
 V657 tested a narrower west-channel SPICS escape; native DRC rejected seven
 findings, including a real CLKREQ_N/SPICS short. These are route-implementation
 evidence only; Path A, production CAD, and validation rules remain unchanged.
+
+## V658 coherent XTAL/RSET field — rejected
+
+V658 corrected its helper and regenerated XTAL_IN, XTAL_OUT, and RSET together
+from the retained orientation-180/RSET basis. Native DRC rejected 31 findings,
+including XTAL pair, rail, and RSET shorts/crossings. This is lower-QFN
+route-allocation evidence only; no Path-A or production-CAD artifact changed.
