@@ -6761,3 +6761,8 @@ pad but crossed the retained U1.39 RTL_3V3 source departure and added a
 solder-mask bridge. Native endpoint connectivity and the trace-removal
 negative control pass, but the route is rejected. Co-author U1.39/U1.40
 adjacent-pad exits next without relaxing rules or changing architecture.
+2026-09-08: V640 retained the delayed-bend U1.40 RTL_1V1 escape. Native DRC
+has only the four inherited warnings, with no signal short, crossing, or
+clearance class. Native U1.40-to-C4.1 and U1.39-to-U2.8 connectivity pass.
+The adjacent source-field escape is valid; continue with U1.36 without
+relaxing rules or changing architecture.

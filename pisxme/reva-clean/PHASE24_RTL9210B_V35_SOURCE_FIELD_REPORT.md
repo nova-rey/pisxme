@@ -133,6 +133,12 @@ not evidence against the 180-degree placement or the RTL9210B architecture.
 The next experiment must jointly allocate the adjacent U1.39/U1.40 exits
 while preserving the already passing U1.34/U1.39 3V3 and U1.16/U1.25/U1.50/
 U1.55/U1.60/U1.63 1V1 channels.
+V640 is the passing delayed-bend implementation of that joint allocation.
+U1.39 retains its proven F.Cu-to-B.Cu exit; U1.40 stays on F.Cu until below
+the QFN pad-body envelope before turning to its own ordinary through-via and
+B.Cu corridor. Native DRC remains at four inherited warnings and has no new
+signal class. Native U1.40-to-C4.1 and U1.39-to-U2.8 connectivity pass. Retain
+this local sub-primitive and continue with the remaining U1.36 departure.
 V636 extends the passing 1V1 trunk with a north-of-QFN U1.25 departure.
 Native U1.25-to-C4.1 connectivity and the trace-removal negative control
 pass; native DRC remains at four inherited warnings with no signal violation.

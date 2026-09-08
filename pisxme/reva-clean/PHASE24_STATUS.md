@@ -68,6 +68,13 @@ departure. Native DRC reports one true crossing plus a solder-mask bridge;
 the saved-board U1.40-to-C4.1 path is connected, but this is an independent
 detour failure. U1.39/U1.40 must be co-authored as one adjacent-pad escape;
 no routing rule or architecture is relaxed.
+V640 retains a delayed-bend U1.40 departure beside the proven U1.39 exit.
+The route remains on F.Cu only through the cleared pad-body envelope, then
+uses ordinary through-vias and B.Cu to the existing 1V1 trunk. Native DRC
+returns only the four inherited warnings, with no signal short, crossing, or
+clearance violation; native U1.40-to-C4.1 and U1.39-to-U2.8 connectivity both
+pass. This closes the U1.39/U1.40 local escape sub-primitive, not the full
+RTL9210B support field; U1.36 remains the next open 1V1 source.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus
