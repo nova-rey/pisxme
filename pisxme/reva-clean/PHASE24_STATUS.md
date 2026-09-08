@@ -32,6 +32,8 @@ assigned `JMS_XIN/JMS_XOUT` while U11 and the schematic use `XIN/XOUT`.
 After regeneration, the native crystal probe has zero shorting items and the
 USB3 endpoint audit remains PASS. Physical crystal escape clearance/crossing
 work remains open.
+The new `phase24_jms583_pcb_net_authority_audit.py` checks all 64 native U11
+pad nets against the live schematic authority and passes after regeneration.
 The new `PHASE24_RTL9210B_QFN_ORIENTATION180_PROBE.kicad_pcb` is the current
 disposable placement basis for the next QFN field pass: native DRC reports
 four inherited warnings, and the U1.39-to-U2.8 RTL_3V3 corridor in

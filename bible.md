@@ -6903,3 +6903,6 @@ Stale zone/via-hole findings disappeared, but native DRC still rejects the
 JMS_XOUT nets to the authoritative XIN/XOUT nets used by U11 and STORAGE.
 Regenerated the candidate; the native crystal probe now has zero shorting
 items and USB3 parity remains PASS. Physical crystal escape remains open.
+2026-09-08: Added and ran a fail-closed native PCB audit for all 64 JMS583
+U11 pad nets against the live `JMS` authority map. It passes, preventing
+future routing probes from hiding another symbol/PCB net-name mismatch.
