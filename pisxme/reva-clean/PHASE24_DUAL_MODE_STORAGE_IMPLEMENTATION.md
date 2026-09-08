@@ -36,6 +36,10 @@ The inward source-launch relocation FULL10 was rejected after native DRC
 showed new shorts into J1 12V pads and the U11 ground pad. It remains a
 negative route experiment, not a placement or architecture finding.
 
+The saved-board USB3 negative control passes: FULL7 is connected at baseline,
+and removing a required RX_N track breaks the native endpoint assertion. This
+is validation-method evidence only; routing and DRC remain open.
+
 The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route
 evidence only; FULL7 is still the active basis.

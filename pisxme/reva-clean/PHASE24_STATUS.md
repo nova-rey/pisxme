@@ -40,6 +40,11 @@ is rejected: native connectivity still passed, but inward launch vias created
 new shorts into J1 12V pads and the U11 ground pad. It is preserved as a
 route-implementation negative result; FULL7 remains the active basis.
 
+`phase24_usb3_negative_control.py` validates the accepted FULL7 audit against
+the saved PCB: baseline native connectivity passes, and removing one required
+CM5_USB3_RX_N track makes the audit fail as required. This hardens the
+connectivity evidence without treating the route as closed.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

@@ -7101,6 +7101,11 @@ CM5_PERST corridor. Native USB3 endpoints remained connected, but DRC rose
 to 845 with additional local clearance/crossing findings; FULL7 remains the
 active route basis.
 
+2026-09-08: Added and ran the saved-board USB3 negative control. FULL7 passes
+baseline native connectivity, and removal of one required CM5_USB3_RX_N track
+causes the audit to fail as required. This confirms the audit derives from
+actual KiCad connectivity rather than synthetic edges.
+
 2026-09-08: Continued USB3 routing against the corrected source map. FULL7
 passes all ten native endpoint assertions and reduces native DRC to 827
 violations / 499 inherited opens; remaining local crossings and three
