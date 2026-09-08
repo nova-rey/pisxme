@@ -17,6 +17,12 @@ findings, so it is not a production-clean candidate. The next action is a
 coherent reallocation of the shared QFN source field, not another long 5V
 collector. Path A and production CAD remain untouched.
 
+V571 attempted that reallocation by rebuilding the RTL_3V3 field with U1.34
+handed east toward U1.39, then reused the V570 5V loop. The saved-board audit
+failed the complete 3V3 endpoint group, and native DRC retained QFN/pad-field
+clearance plus solder-mask findings. Reject V571; its failed audit is evidence
+against this specific east handoff, not against RTL9210B or Path A.
+
 ## Current state and documentation hygiene
 
 The JMS583 support network is already instantiated in the live authoritative

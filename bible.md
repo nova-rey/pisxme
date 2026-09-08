@@ -6482,6 +6482,11 @@ collisions. RTL_5V remains open and V562 remains the retained support basis.
 connectivity did not join both source branches, and DRC found RTL_5V/SPISI,
 RTL_5V/RTL_3V3, and RTL_5V/PEDET collisions. V564 was rejected; V562 remains
 the support baseline and RTL_5V remains open.
+2026-09-08: RTL9210B V571 attempted a coherent east-side U1.34 RTL_3V3
+reallocation to free the west 5V escape. The saved-board audit failed the
+complete 3V3 endpoint group, and native DRC retained QFN/pad-field clearance
+and solder-mask violations. V571 was rejected; V562 remains the support
+baseline and Path A/production CAD remain unchanged.
 2026-09-08: RTL9210B V565 tested a local In2 RTL_5V plane. Native DRC rejected
 the source vias against RTL_3V3 and native connectivity left the 5V branches
 disconnected. The plane-only approach is rejected; V562 remains the support

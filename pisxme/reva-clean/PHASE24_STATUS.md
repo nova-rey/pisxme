@@ -16,6 +16,11 @@ clearance findings. It has no `shorting_items` or `tracks_crossing` in the
 report, but the remaining clearance/manufacturing/open-support findings keep
 RTL_5V and full Path-B support open. Do not promote V570 to production CAD.
 
+V571 is rejected: the attempted east U1.34 reallocation did not preserve the
+complete 3V3 saved-board connectivity group and still retained QFN/pad-field
+clearance and solder-mask violations. Its audit failure is preserved as a
+negative result; V562 remains the retained baseline.
+
 ## CURRENT OPEN GATES
 
 Re-author the RTL9210B local QFN source field coherently at the strict
