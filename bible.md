@@ -7116,6 +7116,11 @@ connectivity stayed 10/10, but native DRC reported 843 violations, 7 shorts,
 and 21 crossings. The trial remains negative placement evidence; FULL7 stays
 active.
 
+2026-09-08: Rejected TX source-launch relocation FULL14. Native USB3
+connectivity remained 10/10, but inward columns produced 832 DRC violations,
+5 shorts, and 19 crossings, including new J1/U11 collisions. FULL7 launch
+columns were restored.
+
 2026-09-08: Rejected the alternate CM5 source-layer USB3 trial. Endpoint
 connectivity passed 10/10, but native DRC reported 851 violations, 4 shorts,
 and 18 crossings. The all-B.Cu FULL7 source escape was restored.

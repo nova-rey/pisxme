@@ -66,6 +66,10 @@ The U11 180-degree rotation trial is rejected on native DRC (843 violations,
 7 shorts, 21 crossings) despite 10/10 endpoint connectivity. It remains
 negative placement evidence, not an architecture conclusion.
 
+The FULL14 TX source-launch relocation is rejected on native DRC (832
+violations, 5 shorts, 19 crossings) despite 10/10 endpoint connectivity.
+The generator is restored to the FULL7 launch columns.
+
 The FULL12/FULL13 TX dogbone trials are rejected route evidence: they did not
 produce a clean pad-field escape and introduced local shorts. The authoring
 path is restored to the FULL7 geometry.

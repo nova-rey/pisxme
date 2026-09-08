@@ -60,6 +60,11 @@ is rejected: native USB3 endpoint assertions remain 10/10, but native DRC
 reports 843 violations, 7 shorts, and 21 crossings. It is negative placement
 evidence; FULL7 remains the active basis.
 
+The TX source-launch relocation FULL14 is rejected: native USB3 endpoint
+assertions remained 10/10, but moving the columns inward produced 832 DRC
+violations, 5 shorts, and 19 crossings, including new J1/U11 collisions.
+The source-launch generator is restored to the FULL7 columns.
+
 The alternate CM5 source-layer trial `PHASE24_DUAL_MODE_STORAGE_NC39_USB3_ALT_FULL`
 is rejected: native USB3 endpoint assertions passed 10/10, but native DRC
 reported 851 violations, 4 shorts, and 18 crossings. The all-B.Cu source
