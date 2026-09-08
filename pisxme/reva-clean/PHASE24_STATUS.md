@@ -111,6 +111,11 @@ was rejected; V16's corrected branch passes the native eight-net endpoint
 audit including R81.1-to-C85.1 and the combined trace-removal negative
 control. Native DRC remains 819 violations / 499 inherited unconnected
 items, so this is support progress rather than Phase 24 closure.
+The retained eight-net cohort was refilled with KiCad's native zone filler;
+the filled saved candidate reports 519 DRC violations / 499 inherited donor
+unconnected items. This materially removes the unfilled-zone via noise, but
+does not close the remaining inherited crossings, courtyard/silkscreen,
+support branches, or full-board Phase 24 gate.
 The two-via REXT corridor V1 was then rejected: its lower transition lands
 in the existing C90/R33 support field and its through-vias also incur the
 saved-board plane-clearance findings. Native DRC reports 824 violations /

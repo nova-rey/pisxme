@@ -7066,3 +7066,9 @@ removed the earlier source-pad cut, but the long B.Cu leg crossed the
 inherited V100 PCIe corridor and the F.Cu return crossed LXO/C93 support
 geometry. Native DRC reported 823 violations / 499 unconnected items; no
 production route or rule was promoted.
+
+2026-09-08: Refilled the retained JMS583 support cohort with KiCad's native
+zone filler and preserved the result as `PHASE24_JMS583_SUPPORT_COHORT_FILLED`.
+Native DRC dropped to 519 violations while the 499 inherited donor
+unconnected items remained. The filled result is stronger via evidence, not
+Phase 24 closure.
