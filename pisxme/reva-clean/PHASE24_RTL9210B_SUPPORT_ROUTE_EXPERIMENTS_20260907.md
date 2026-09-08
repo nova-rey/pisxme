@@ -1128,6 +1128,11 @@ V536 tests U1.40 RTL_1V1 through an outer B.Cu transition into the retained
 negative control pass, but native DRC finds a real RTL_3V3/RTL_1V1 short at
 the U1.39 side-field route. V536 is rejected as a route implementation; the
 accepted V535 3V3 primitive is unchanged.
+V537/V538 test native U1.40 RTL_1V1 escapes with exact branch-removal
+negative controls. V537 is rejected for clearance to U1 pad 41 and U1 pad
+43; V538 is rejected because its transition and B.Cu rise collide with the
+accepted RTL_3V3 source-field corridor. This confirms the remaining issue is
+source-field coallocation, not net ownership or audit methodology.
 V526 proves the U1.39-to-C3.1 graph with an exact branch-removal negative
 control, but its raised outer B.Cu return is rejected by native DRC for
 RTL_5V-via clearance/crossing and REFCLK corridor interaction (23 findings).
