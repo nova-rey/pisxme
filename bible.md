@@ -6210,6 +6210,10 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V513 tests an outside-envelope U1.40/U1.50 via escape.
+The transitive native audit fails to find one saved connectivity component,
+and native DRC reports exposed-GND-pad and RTL_3V3 source-field conflicts.
+V513 is rejected; complete local QFN support-field reallocation remains open.
 2026-09-08: Strengthened the RTL9210B V512 audit to traverse KiCad's saved
 native connectivity graph transitively. The corrected audit still fails to
 connect U1.40 to U1.50, confirming a real via-chain break; native DRC also

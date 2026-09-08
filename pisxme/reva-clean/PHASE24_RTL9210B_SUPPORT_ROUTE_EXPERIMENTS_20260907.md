@@ -1080,6 +1080,12 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V513 tests U1.40 RTL_1V1 with an outside-envelope F.Cu/B.Cu escape to the
+same-net U1.50 pad. The native audit (including transitive graph traversal)
+fails to find one saved connectivity component, and native DRC reports
+exposed-GND-pad contact/clearance plus an RTL_3V3 source-field conflict.
+V513 is rejected. The remaining U1.40 work requires a complete local QFN
+support-field reallocation; Path A and production CAD remain unchanged.
 V512's audit was strengthened to traverse KiCad's saved native connectivity
 graph transitively across tracks and vias. The corrected audit still fails to
 connect U1.40 to U1.50, confirming a real saved-board via-chain break; native
