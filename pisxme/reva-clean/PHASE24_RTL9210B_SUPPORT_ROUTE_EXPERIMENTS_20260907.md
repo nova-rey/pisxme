@@ -257,6 +257,16 @@ V102 is promoted only as the disposable 1V1 edge-group basis; remaining
 RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
 remain open.
 
+## V320 normalized M.2 footprint frame — retained authoring basis
+
+V320 normalizes the disposable J1 M.2 footprint coordinate frame. The prior
+fixture encoded its 13 pad locations as board-absolute positions while the
+footprint anchor was `(0,0)`. The generator now assigns a real `(127,66)`
+anchor and explicitly preserves the absolute pad centers; a native reload
+assertion passes for every pad. This is a valid authoring correction, not a
+routing or Path-B closure: native DRC remains the inherited V311 state with
+18 opens and no new signal short/crossing class. Production CAD is unchanged.
+
 ## V314–V317 coordinated-field probes — rejected implementations
 
 V314 tested RTL_1V1, V315 RTL_3V3, and V316/V317 lane-0 escapes from V311.

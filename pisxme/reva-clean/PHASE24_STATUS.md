@@ -6891,6 +6891,14 @@ implementation failures, not evidence against the RTL9210B support topology.
 V311 remains the current disposable reference; RTL_1V1, RTL_3V3, and lane-0
 support remain open.
 
+V320 corrects a disposable authoring defect in the RTL9210B M.2 fixture:
+J1's pad coordinates were board-absolute under a `(0,0)` footprint anchor.
+The normalization gives J1 a real `(127,66)` local anchor while a reload
+assertion proves every physical pad center is unchanged. Native DRC remains
+the inherited V311 result (18 opens, no new short/crossing class), so V320 is
+an authoring-basis correction, not a Path-B routing pass or production-CAD
+promotion.
+
 V314/V315 are rejected rail-field trials: V314 reduced opens to 13 but
 introduced four shorts and three crossings; V315 reduced opens to 16 but
 introduced four shorts and four crossings. V316/V317 are rejected lane-0

@@ -11,6 +11,11 @@ exposed real short/crossing classes despite reduced open counts. V311 remains
 the retained disposable sideband basis; Path A and production CAD are
 unchanged.
 
+2026-09-07: Retained RTL9210B V320 M.2 coordinate-frame correction. J1 now
+has a real local footprint anchor while native reload verification proves all
+physical pad centers are unchanged. This fixes disposable authoring geometry;
+it does not promote Path B or alter production CAD.
+
 2026-09-07: Rejected RTL9210B V318/V319 coordinated In2 rail trials. Native
 DRC found real shorts/crossings at proposed transitions despite fewer opens;
 inner-layer power remains a valid resource, but the next candidate must use a
