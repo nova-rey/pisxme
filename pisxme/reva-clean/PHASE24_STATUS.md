@@ -6800,6 +6800,10 @@ pass, both trace-removal negative controls pass, and native DRC has 366
 findings / 25 inherited opens with no shorting or crossing class and zero
 footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
 high-speed support remain open.
+V304 removes the V303 PEDET/R2 source-field shorts but crosses retained
+SPICLK/SPISI and XTAL_IN geometry. V305 separates the outer column with a
+layer transition, but still crosses the retained SPISI lane and XTAL_IN at
+the R3 launch. Both are route-implementation failures; CLKREQ remains open.
 V303 is rejected: the lower CLKREQ corridor avoids the prior SPI crossings,
 but its R3 launch overlaps the PEDET field and its source geometry creates
 CLKREQ/PEDET and CLKREQ/RTL_3V3 shorts. This remains a source-field route
