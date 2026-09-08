@@ -7030,3 +7030,9 @@ production rule was relaxed.
 lower transition in the C90/R33 support field and plane-clearance findings on
 the ordinary through-vias. It remains disposable route evidence only; the
 JMS583 support gate and active routing rules remain unchanged.
+
+2026-09-08: Rejected JMS REXT via-corridor V2. The orthogonal QFN departure
+removed the earlier source-pad cut, but the long B.Cu leg crossed the
+inherited V100 PCIe corridor and the F.Cu return crossed LXO/C93 support
+geometry. Native DRC reported 823 violations / 499 unconnected items; no
+production route or rule was promoted.
