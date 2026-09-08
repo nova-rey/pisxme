@@ -1080,6 +1080,12 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V512's audit was strengthened to traverse KiCad's saved native connectivity
+graph transitively across tracks and vias. The corrected audit still fails to
+connect U1.40 to U1.50, confirming a real saved-board via-chain break; native
+DRC independently reports the same branch's GND-pad/hole and XTAL_IN
+clearance violations. This replaces the earlier weaker direct-neighbor result
+and keeps V512 rejected.
 V512 initially exposed a disposable via-serialization defect: the generated
 vias lacked an explicit F.Cu/B.Cu layer pair, and the native audit correctly
 failed to join U1.40 to U1.50. The generator was corrected and the board was
