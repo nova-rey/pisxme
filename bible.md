@@ -6222,6 +6222,11 @@ finds 20 and 23 violations respectively from 3V3 conflicts with the 1V1 and
 XTAL_IN fields. V524 is retained: its native U1.20/U1.34-to-C3.1 connectivity
 and negative control pass, with no new local short, crossing, or clearance
 error; inherited incomplete-fixture opens and hole-rule findings remain.
+2026-09-08: RTL9210B V525 proves U1.39 can reach the 3V3 rail in the native
+graph with an exact branch-removal negative control, but the lower/right
+detour is rejected by 22 native DRC violations, including RTL_5V and REFCLK_P
+crossings. This remains a local route implementation failure; Path A and
+production CAD are unchanged.
 2026-09-08: RTL9210B V520 coallocates U1.25 RTL_1V1 and XTAL_IN after
 clearing local RTL_3V3/RSET conflicts. Native 1V1 and XTAL_IN connectivity,
 including C1.1, plus trace-removal negative controls pass; native DRC has no

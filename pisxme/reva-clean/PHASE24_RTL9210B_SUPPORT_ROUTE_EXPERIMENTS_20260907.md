@@ -1101,6 +1101,13 @@ negative control pass. Native DRC adds no local short, crossing, or clearance
 error; the report retains inherited incomplete-fixture opens and hole-rule
 findings. V524 is retained as the current U1.34 RTL_3V3 primitive, not as
 full Path-B closure. Path A and production CAD remain unchanged.
+V525 routes U1.39 from the existing outer 3V3 via around the lower/right
+acreage to the C3-side handoff. Native U1.20/U1.34/U1.39 connectivity and
+the exact branch-removal negative control pass, but native DRC finds 22
+violations including crossings with RTL_5V and REFCLK_P. V525 is rejected as
+a detour route; the next U1.39 attempt must coallocate the lower source field
+instead of crossing mature corridors. Path A and production CAD remain
+unchanged.
 V520 coallocates U1.25 RTL_1V1 and XTAL_IN after clearing the exact local
 RTL_3V3/RSET conflicts identified in V519. Native U1.16/U1.25/U1.36/C4.1
 and U1.53/Y1.1/C1.1 connectivity pass with stable-key graph traversal and
