@@ -327,6 +327,13 @@ crossings and an XOUT-to-XAVDDH short at the QFN-side transition. The crystal
 endpoint proof remains valid in isolation; the next route must co-allocate
 the crystal on the opposite side of the XAVDDH diagonal.
 
+The left-side crystal relocation with restored stepped QFN dogbones was also
+tested. It removes the crystal-corridor crossings, but native DRC still finds
+one XOUT-to-XAVDDH source-field short (`PHASE24_JMS583_CRYSTAL_LEFT_CORRIDOR`:
+527 violations / 499 inherited opens). Reject this route as a combined
+solution; the next implementation must co-author the XAVDDH transition and
+crystal escape rather than treating either source field as fixed.
+
 The earlier JMS583 crystal DRC receipts, including divergent, split-layer,
 pad-width, and net-name variants, are retained as raw historical evidence;
 they are not current acceptance criteria and do not override the production-

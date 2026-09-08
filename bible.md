@@ -7050,6 +7050,11 @@ for divergent, split-layer, pad-width, and net-name experiments. They remain
 immutable historical route evidence; the production-width discriminator is
 the current retained basis.
 
+2026-09-08: Rejected the JMS583 left-side crystal relocation because the
+restored XOUT QFN dogbone still shorts the retained XAVDDH transition. The
+result is preserved as route-allocation evidence; the next trial must
+co-author those two native source fields.
+
 2026-09-08: Retained a JMS583 crystal production-width discriminator using
 0.20 mm traces and ordinary 0.50/0.30 mm through-vias. Native XIN/XOUT
 connectivity and the trace-removal negative control pass; DRC remains 519
