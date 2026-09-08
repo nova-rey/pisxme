@@ -1712,3 +1712,24 @@ Native connectivity confirms U1.20→C3.1, U1.34→R3.2, U1.39→R2.2, and
 U1.52→U1.34. Native DRC reports 319 findings / 27 opens with no
 `shorting_items` or `tracks_crossing` class and zero footprint errors. SPI,
 PEDET, reset, remaining rail branches, and high-speed paths remain open.
+
+## V275–V277 SPICS corridor trials — rejected implementations
+
+V275 adds native U1.24→U2.1 SPICS connectivity, but its B.Cu horizontal
+corridor crosses both retained XTAL_IN and XTAL_OUT B.Cu trunks. V276 moves
+the corridor to F.Cu and crosses two retained RTL_3V3 branches. V277 moves
+below the crystal trunks but crosses the retained B.Cu REFCLK corridor. These
+are route-implementation failures; the support placement and existing
+crystal/RSET/rail basis remain valid.
+
+## V278 SPICS outer lower corridor — retained, not promoted
+
+V278 routes the actual U1.24=(98.8,58.05) to U2.1=(83.3,70.0) endpoints via
+an offset B.Cu corridor that avoids the retained crystal and REFCLK trunks,
+with ordinary through-vias and short F.Cu pad dogbones. Native KiCad DRC
+reports 335 findings / 26 unconnected items, with zero `tracks_crossing`,
+zero `shorting_items`, and zero footprint errors. The unconnected count is
+the inherited unfinished support field, not a SPICS failure. The native
+endpoint audit and its trace-removal negative control both pass. V278 is
+retained as the SPICS route basis; SPISO, SPISO3, SPICLK, SPISI, PEDET,
+reset, remaining rail branches, and high-speed paths remain open.

@@ -6787,3 +6787,9 @@ V274 is the retained combined crystal/RSET/RTL_3V3 support basis: native
 connectivity confirms four RTL_3V3 joins in addition to the V269 crystal and
 V270 RSET joins. DRC reports 319 findings / 27 opens with no shorts/crossings
 and zero footprint errors; the full Path-B support field remains open.
+V275–V277 are rejected SPICS route implementations: V275 crosses both crystal
+trunks, V276 crosses RTL_3V3, and V277 crosses B.Cu REFCLK. V278 is retained as
+the corrected SPICS basis: native U1.24/U2.1 connectivity and a trace-removal
+negative control pass; native DRC has 335 findings / 26 inherited opens, no
+shorting or crossing class, and zero footprint errors. Remaining SPI, PEDET,
+reset, rail, and high-speed support routes are still open.

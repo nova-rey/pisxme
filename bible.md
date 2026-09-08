@@ -5842,3 +5842,8 @@ connectivity passed U1.20/C3.1, U1.34/R3.2, U1.39/R2.2, and U1.52/U1.34;
 native DRC reported 319 findings / 27 opens with no shorting or crossing class
 and zero footprint errors. SPI, PEDET, reset, and remaining support routes
 remain open; Path A and production CAD remain unchanged.
+2026-09-07: Retained RTL9210B V278 SPICS route basis after rejecting V275–V277
+crossing implementations. Native U1.24/U2.1 connectivity and trace-removal
+negative control passed; DRC reported 335 findings / 26 inherited opens with
+no shorting or crossing class and zero footprint errors. Remaining support
+routes are open; Path A and production CAD remain unchanged.
