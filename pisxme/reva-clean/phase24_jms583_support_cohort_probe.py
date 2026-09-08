@@ -15,7 +15,9 @@ def route(b,name,ref,pad,points):
 b=pcbnew.LoadBoard(str(BASE));u=b.FindFootprintByReference('U11')
 placements={'R81':(125,145),'C80':(148,143),'C81':(148,147),'C82':(120,147)}
 for ref,q in placements.items(): b.FindFootprintByReference(ref).SetPosition(P(*q))
-for name in ('JMS_RESET_N','JMS_AVDD33','JMS_VCCO','JMS_VCCK'):
+b.FindFootprintByReference('L10').SetPosition(P(136,125));b.FindFootprintByReference('L10').SetOrientationDegrees(180)
+b.FindFootprintByReference('Y10').SetPosition(P(150,115))
+for name in ('JMS_RESET_N','JMS_AVDD33','JMS_VCCO','JMS_VCCK','JMS_VDDREG_5V','LXO'):
     n=b.FindNet(name)
     for x in list(b.GetTracks()):
         if x.GetNetCode()==n.GetNetCode(): b.RemoveNative(x)
@@ -32,4 +34,8 @@ for a,z in [((134.5,s[1]),(134.5,145)),((134.5,145),(147,145))]:
 via(b,n,(147,145));seg(b,n,(147,145),(147,d[1]));seg(b,n,(147,d[1]),d)
 route(b,'JMS_VCCK','U11','2',[(131,132.4),(131,142),(118,142),(118,147)])
 route(b,'JMS_VCCK','C82','1',[(118,147)])
+route(b,'JMS_VDDREG_5V','U11','1',[(133,132),(133,125)])
+route(b,'JMS_VDDREG_5V','L10','2',[(133,125)])
+route(b,'LXO','U11','64',[(146,131.4),(146,125)])
+route(b,'LXO','L10','1',[(146,125)])
 b.Save(str(OUT));print(OUT)

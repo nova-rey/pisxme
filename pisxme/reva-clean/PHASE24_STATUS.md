@@ -66,6 +66,11 @@ all remain natively connected with no authored shorting/crossing class, and
 the combined trace-removal negative control passes. Remaining findings are
 inherited donor/zone or JMS583 pad-field constraints; complete support-field
 release validation remains open.
+The expanded six-net cohort adds rotated-L10 `JMS_VDDREG_5V` and `LXO` to
+the four previously validated support paths. Its native endpoint audit and
+combined trace-removal negative control pass; `PHASE24_JMS583_SUPPORT_COHORT_V6-drc.rpt`
+contains no authored shorting/crossing class. It remains disposable because
+the complete support field and JMS583 production land pattern are not closed.
 The VCCK decoupler probe is retained in
 `PHASE24_JMS583_VCCK_PROBE-drc.rpt`: U11.2-to-C82.1 native connectivity and
 the trace-removal negative control pass, with no authored shorting/crossing

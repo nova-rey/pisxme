@@ -6962,6 +6962,11 @@ with separated departures and validated natively plus a combined trace-removal
 negative control. It has no authored shorting/crossing class; full support
 release validation remains open.
 
+The six-net JMS support cohort added rotated-L10 VDDREG and LXO to the
+validated reset/rail decoupler paths. All native endpoint checks and the
+combined trace-removal negative control pass; no authored shorting/crossing
+class remains in the saved cohort.
+
 The JMS_VCCO U11.6-to-C81.1 escape was moved north of the inherited CM5
 PERST corridor. Native connectivity and trace-removal negative control pass;
 the prior y=150 mm crossing variant remains rejected evidence.
