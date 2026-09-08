@@ -2235,3 +2235,9 @@ It removed the original V454 RX_P/RX_N transition short but crossed/shorted
 the existing REFCLK_N and RX_N transitions, so it is rejected. V454 remains
 the strongest combined basis while a complete clearance-aware QFN fanout is
 developed; no Path-A or production CAD changed.
+V459 kept V454's REFCLK/RX_N launches and moved only RX_P's source transition
+below the QFN edge. Native DRC removed the V454 source short, but the RX_P
+escape crossed both REFCLK source tracks and violated the adjacent no-net pad
+clearance. It is rejected as a local source-field implementation failure;
+the next attempt must regenerate all six source escapes as one clearance-aware
+fanout. No Path-A or production CAD changed.

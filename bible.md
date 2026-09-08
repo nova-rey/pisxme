@@ -6149,3 +6149,8 @@ monotonic via row was rejected for one short and four source-field clearance/
 mask errors. V458 removed the V454 RX_P/RX_N source short but created
 REFCLK_N/RX_N coallocation crossings/shorts. No production CAD or Path-A
 change; V454 remains the combined basis.
+2026-09-08: Rejected RTL9210B V459 lower RX_P transition. It removed the
+V454 RX_P/RX_N short, but native DRC found RX_P crossing both REFCLK source
+tracks and violating the adjacent no-net pad clearance. The remaining work
+is complete six-net QFN source-fanout regeneration; no production CAD or
+Path-A change.
