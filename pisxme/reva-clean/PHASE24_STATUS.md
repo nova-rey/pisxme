@@ -17,11 +17,17 @@ U11-west/J5-clear placement removes the prior real storage short classes
 (`shorting_items` = 0); eight crossings and incomplete copper remain, so this
 is a routing basis, not a Phase 24 pass. The V3 and J5-clear predecessors are
 preserved as rejected evidence.
-The current native-pad JMS583 support author was run against this basis and
-rejected: it created five real shorts and seven crossings because support
-coordinates remain spread across the donor geometry. The support network is
-electrically instantiated; its physical placement/routing still requires a
-coherent local allocation.
+The first native-pad JMS583 support author was rejected: it created five real
+shorts and seven crossings because support coordinates were spread across the
+donor geometry. The support parts have since been co-located beside U11; the
+follow-up local-anchor trial is separately rejected below. The support network
+is electrically instantiated, while physical routing still requires
+per-net native-pad escape allocation.
+The isolated `JMS_RESET_N` direct-join discriminator is also rejected in
+`PHASE24_JMS583_RESET_LOCAL_ESCAPE-drc.rpt`: the native path is present, but
+its straight F.Cu corridor enters the local USB coupling field at 0.0379 mm
+clearance. This confirms the next implementation must use an intentional
+through-via/layer corridor, not a direct pad-to-pad segment.
 The retained RSET sub-primitive (`phase24_jms583_rset_escape_probe.py`) uses
 native U11.39/R80.1 pads and a short F.Cu escape. Native DRC reports no
 shorting items and the RSET endpoint is connected; this does not close the

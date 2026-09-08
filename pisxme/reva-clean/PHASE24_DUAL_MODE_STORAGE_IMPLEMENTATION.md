@@ -49,14 +49,17 @@ only.
   placement experiment has been promoted to production authority.
   The placement generator now reuses the reviewed JMS583 pin map and places
   generated support parts inside the acreage outline; this corrects an
-  authoring defect but does not close routing. A current-candidate
-  support-routing trial is rejected evidence: five native
-  shorts and seven crossings result from stale distributed support placement,
-  so the next support pass must co-locate the support parts with U11 before
-  routing them.
+  authoring defect but does not close routing. The first current-candidate
+  support-routing trial is retained as rejected evidence: five native shorts
+  and seven crossings resulted from stale distributed support placement. A
+  subsequent local-anchor trial is also rejected below; the next support pass
+  is per-net native-pad escape allocation.
   The subsequent local-anchor trial is also rejected evidence: it reports one
   reset short and six crossings, showing that co-location alone is insufficient
   and that each support net needs a native-pad-aware escape corridor.
+  The isolated reset discriminator independently rejects a direct F.Cu join
+  because it enters the USB coupling field at 0.0379 mm clearance; the next
+  route must allocate a layer-transition corridor deliberately.
 
 ## CURRENT OPEN GATES
 

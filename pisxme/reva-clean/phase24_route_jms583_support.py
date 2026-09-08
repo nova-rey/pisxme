@@ -42,8 +42,12 @@ def main():
   ('JMS_RESET_N','U11','15','R81','1'),
   ('POWER_GND','U11','63','C85','2'),
   ('VBUS','U11','16','R82','1'),('JMS_VBUS_SENSE','R82','2','R83','1'),
-  ('POWER_GND','R83','2','U11','63'),
+ ('POWER_GND','R83','2','U11','63'),
  ]
+ only=os.environ.get('PISXME_SUPPORT_ONLY')
+ if only:
+  jobs=[job for job in jobs if job[0] == only]
+  if not jobs: raise RuntimeError('no support job matches PISXME_SUPPORT_ONLY='+only)
  for n,ra,pa,rb,pb in jobs: join(b,n,ra,pa,rb,pb)
  b.Save(str(OUT)); print(OUT, len(jobs))
 if __name__=='__main__': main()

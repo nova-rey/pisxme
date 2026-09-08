@@ -6917,6 +6917,11 @@ last short-free disposable basis while its later report remains rejected
 evidence. JMS583 package identity/pitch are documented, but final land-pattern
 pad geometry remains an explicit open production gate.
 
+The isolated JMS_RESET_N direct-join discriminator was rejected by native DRC:
+its saved path enters the local USB coupling field at 0.0379 mm clearance.
+This is route-allocation evidence and directs the next support pass to use a
+deliberate ordinary-via corridor.
+
 The next bounded support placement moved R80/L10/Y10 beside U11 and corrected
 the L10 LXO net alias. The all-net direct support trial was rejected at one
 real reset short and six crossings; co-location is retained as a better basis,
