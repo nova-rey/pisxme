@@ -532,6 +532,11 @@ Path A and production CAD remain unchanged.
 REFCLK crossing but retained PERST; V293 avoided PERST but introduced JTAG /
 undefined-field shorting and was rejected. PEDET remains open; Path A and
 production CAD remain unchanged.
+2026-09-07: Retained RTL9210B V311 CLKREQ basis after rejecting V309/V310.
+Native R3.1/U1.13/J1.52 connectivity passed; DRC reported 514 findings / 18
+inherited opens with no shorting, crossing, or footprint-error class. Reset,
+remaining rails, and high-speed support remain open; Path A and production
+CAD remain unchanged.
 2026-09-07: Recorded RTL9210B CLKREQ V306–V308 trials. V306/V307 removed
 source-field shorts but retained crystal geometry defects; V308 introduced
 real XTAL_IN/XTAL_OUT shorts at the shifted transition and was rejected.
