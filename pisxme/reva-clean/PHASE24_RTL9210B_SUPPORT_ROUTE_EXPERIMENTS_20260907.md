@@ -2094,6 +2094,20 @@ Path A and production CAD are unchanged.
 V399 co-authored RSET/RTL_3V3 and XTAL_OUT from the V397 basis but introduced
 two GND shorts at the XTAL_OUT transition, so it is rejected. V397 remains the
 current basis for the next repair; Path A and production CAD are unchanged.
+V409 direct PERST_N import from V311 was rejected: the historical source used
+different U1 coordinates and produced two shorts plus an RTL_3V3 conflict.
+V410 regenerated from the actual U1.14/J1.50 pads but used a crowded source
+via and sub-minimum 0.50/0.25 via geometry, so it was rejected. V411 moved
+the PERST source escape above the U1 row; V412 moved its B.Cu trunk outside
+the RTL_3V3 via field. V412 has 0 shorts/crossings and 24 opens.
+
+V413/V414 regenerated CLKREQ_N from the current U1.13/R3.1/J1.52 pads;
+V414 still shared/crossed the PERST trunk. V415 moved CLKREQ to a distinct
+y=76 trunk, and V416 moved its vertical leg outside PERST. V416 has 0
+shorts/crossings and 22 opens. The V416 native audit passes the existing
+lane/support nets plus PERST_N and CLKREQ_N, with six trace-removal negative
+controls passing. Remaining opens are PEDET, RTL_1V1, SPI, REFCLK, and other
+support connections; Path A and production CAD remain unchanged.
 V400 moved only the RSET endpoint and reduced the native non-open findings by
 one. V401 shifted the RXP source vertical and removed the remaining QFN-pad
 clearance error without changing pair ordering or connector launch. V402

@@ -579,6 +579,12 @@ production CAD remain unchanged.
 RTL_3V3, and XTAL_OUT from the V397 basis introduced two GND shorts at the
 oscillator transition. V397 remains the current basis; Path A and production
 CAD remain unchanged.
+2026-09-08: Rejected direct V311 PERST transplant as coordinate-stale. Native
+V412 regenerated PERST_N from current pads with zero shorts/crossings and 24
+opens. V416 regenerated CLKREQ_N on a distinct trunk with zero
+shorts/crossings and 22 opens; six native connectivity trace-removal negative
+controls pass. Remaining PEDET/RTL_1V1/SPI/REFCLK/support nets remain open;
+Path A and production CAD remain unchanged.
 2026-09-07: RTL9210B V400-V404 repaired local support allocation. V401 removed
 the RXP/QFN pad clearance issue; V402 removed the RSET/In2 clearance issue;
 V403 restored XTAL_OUT with standard vias; V404 connected the actual C1.1
