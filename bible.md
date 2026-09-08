@@ -580,6 +580,10 @@ identified actual source-field shorts, track crossings, or clearances. V424
 entered U1 no-connect pad 4; V425/V426 crossed PERST; V427 crossed PEDET and
 PERST. V418 remains the clean PEDET/control basis; Path A and production CAD
 remain unchanged.
+2026-09-08: RTL9210B V428 90-degree U1 control trial was rejected as an
+incomplete disposable regeneration: native DRC found 46 violations because
+legacy lane/crystal copper remained while provisional controls were added.
+It is route-implementation evidence only, not a macro-placement verdict.
 2026-09-07: Rejected RTL9210B V399 local-clearance trial. Reauthoring RSET,
 RTL_3V3, and XTAL_OUT from the V397 basis introduced two GND shorts at the
 oscillator transition. V397 remains the current basis; Path A and production

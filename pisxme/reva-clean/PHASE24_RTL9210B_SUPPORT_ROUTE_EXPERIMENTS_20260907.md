@@ -2135,3 +2135,10 @@ RTL_5V pad too closely. V426 has the same PERST crossing and an RTL_5V
 clearance error. V427 crosses the PEDET source and existing PERST trunk.
 These are route-implementation failures; V418 remains the best clean
 PEDET/control basis and no Path-A or production CAD was changed.
+V428 changed solution class by rotating U1 90 degrees and regenerating
+PEDET/CLKREQ/PERST from the transformed native pads. It is rejected as an
+early disposable trial: stale lane/crystal copper was not co-regenerated,
+and the provisional control corridors themselves crossed existing lane,
+REFCLK, and each other. Native DRC reported 46 violations. This result is
+not a macro-placement verdict; it shows that a rotation trial must be
+regenerated as a complete local support/lane island before comparison.
