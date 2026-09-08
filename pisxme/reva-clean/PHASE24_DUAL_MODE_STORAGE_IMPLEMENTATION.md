@@ -25,9 +25,11 @@ only.
   TI RUA0042A 17/4/17/4 selector packages with 0.60-mm perimeter pads, and
   the 67-contact TE M-key candidate. Library and selector geometry audits
   pass.
-- The current disposable placement/routing candidate is
-  `PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb`; it is not production
-  authority. The latest corrected-package USB3 fixture is
+- The current regenerated disposable placement candidate is
+  `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb`; it is not
+  production authority. The older
+  `PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb` remains historical evidence.
+  The latest corrected-package USB3 fixture is
   `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED.kicad_pcb`, with native report
   `PHASE24_DUAL_MODE_STORAGE_USB3_ISOLATED40-drc.rpt`: zero authored shorts,
   track-width findings, and track-crossing findings; 152 clearance, 4
@@ -96,21 +98,30 @@ U11/U12/U13 consistently.
 The next section records the earlier pre-integration snapshot. It is retained
 to explain prior checkpoints and must not be read as a current TODO list.
 
-## Historical implementation gates at that snapshot
+## SUPERSEDED historical implementation gates at that snapshot
 
-1. Add native symbols whose pin numbers exactly match the retained TI tables,
-   JMS583 datasheet, and TP-053 socket table.
-2. Replace the old B-key J3 in the authoritative `STORAGE.kicad_sch`; do not
-   patch a PCB-only connector.
-3. Add the two selector truth tables and a latched AUTO/FORCE SATA/FORCE NVMe
-   control circuit. Validate inactive-state isolation and PEDET-empty safety.
-4. Complete the JMS583 reference circuit: rails, 25-MHz crystal, REXT, reset,
-   VBUS detect, USB/PCIe AC coupling, internal-regulator inductor, and DNP
-   optional SPI NVRAM.
-5. Recalculate the storage 3.3-V budget for NVMe inrush/transient and both
-   bridges before PCB regeneration.
-6. Build and route a complete native fixture, then integrate only after forced
-   SATA, forced NVMe, AUTO, empty, reset, and inactive-state audits pass.
+The checklist below describes work that was outstanding at the earlier
+pre-integration snapshot. It is archaeological context only. It is not a
+current TODO list; the authoritative current state and open gates above take
+precedence.
+
+1. Native symbols were added and checked against the retained TI tables,
+   JMS583 evidence, and TP-053 socket table.
+2. The old B-key J3 was replaced in authoritative `STORAGE.kicad_sch` by the
+   TE M-key candidate; this was not a PCB-only connector patch.
+3. The two selector truth tables and latched AUTO/FORCE SATA/FORCE NVMe
+   control circuit were authored. Their mode-contract audit passes; the
+   state and release checks remain open as recorded above.
+4. The JMS583 support network was instantiated, including rails, 25-MHz
+   crystal, REXT, reset, VBUS detect, USB/PCIe AC coupling, internal-regulator
+   inductor, and optional DNP SPI NVRAM. Its support-network audit passes;
+   physical routing and release validation remain open.
+5. The storage 3.3-V budget was identified as an open release check for
+   NVMe inrush/transient and both bridges; it has not been silently declared
+   closed.
+6. Disposable native fixtures were built and partially validated. Complete
+   forced SATA, forced NVMe, AUTO, empty, reset, and inactive-state closure
+   remains open as stated in CURRENT OPEN GATES.
 
 No production PCB change is claimed by the footprint generation alone.
 

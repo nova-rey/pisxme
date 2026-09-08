@@ -35,6 +35,11 @@ SUPPORT_PCB = {
  'C91':{1:'PCIE_TXN0',2:'JMS_PCIE_TXN0'},'C92':{1:'PCIE_TXP1',2:'JMS_PCIE_TXP1'},
  'C93':{1:'PCIE_TXN1',2:'JMS_PCIE_TXN1'}
 }
+SUPPORT_PCB.update({
+ 'R24':{1:'BRIDGE_R1',2:'BRIDGE_R1RTN'},
+ 'R32':{1:'CM5_5V',2:'BRIDGE_USB_VBUS'},
+ 'R33':{1:'BRIDGE_USB_VBUS',2:'POWER_GND'},
+})
 
 # Use the same reviewed schematic maps for the disposable PCB metadata. The
 # earlier placement probe used abbreviated aliases and is not authority.
@@ -65,11 +70,26 @@ def pcb_footprint(mod, ref, x, y, nets):
     t=append_pad_metadata(t,nets,ref)
     t=t.rstrip(); t=t[:-1]+f'\n (uuid "{uuid.uuid5(uuid.NAMESPACE_URL,"PiSXMe:"+ref)}")\n)'
     return t
+def remove_existing_refs(text, refs):
+    """Remove donor footprints whose references are owned by this generator."""
+    spans=[]
+    for m in re.finditer(r'\(footprint ', text):
+        start=m.start(); block=text[start:start+len(balanced(text,start))]
+        if any(f'(property "Reference" "{ref}"' in block for ref in refs):
+            spans.append((start,start+len(block)))
+    for start,end in reversed(spans): text=text[:start]+text[end:]
+    return text
 def main():
     text=BASE.read_text()
+    owned=set(ref for _,(ref,_) in MAPS.items()) | set(SUPPORT_PCB)
+    text=remove_existing_refs(text, owned)
     # Replace only the old socket footprint; its old copper is retained as
     # historical context in this disposable candidate and is not promoted.
-    s=text.index('(footprint "JAE_SM3ZS067U410ABR1000_BKEY"'); text=text[:s]+pcb_footprint(LIB/'TE_1-2199230-4_MKEY.kicad_mod','J3',220,165,MAPS['TE_1-2199230-4_MKEY.kicad_mod'][1])+text[s+len(balanced(text,s)):]
+    legacy='(footprint "JAE_SM3ZS067U410ABR1000_BKEY"'
+    if legacy in text:
+        s=text.index(legacy); text=text[:s]+pcb_footprint(LIB/'TE_1-2199230-4_MKEY.kicad_mod','J3',220,165,MAPS['TE_1-2199230-4_MKEY.kicad_mod'][1])+text[s+len(balanced(text,s)):]
+    else:
+        text=text.rstrip()[:-1]+pcb_footprint(LIB/'TE_1-2199230-4_MKEY.kicad_mod','J3',220,165,MAPS['TE_1-2199230-4_MKEY.kicad_mod'][1])+'\n)\n'
     additions=[]
     for fname,(ref,nets) in MAPS.items():
         if ref=='J3': continue

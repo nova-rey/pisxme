@@ -183,6 +183,20 @@ REFCLK, lane-0, controls, SPI, USB, M.2, power, firmware, native DRC, and
 full Path-B comparison. The 5V candidate must clear native clearance rules;
 saved connectivity alone is insufficient.
 
+Documentation hygiene note: the live `STORAGE.kicad_sch` already contains the
+JMS583 support network and its support-network audit passes. Any older prose
+that says this network still needs to be instantiated is superseded
+historical evidence, not a current gate. Raw reports and rejected fixtures
+remain immutable evidence.
+
+The current storage placement regeneration is
+`PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb`, produced by
+`phase24_regenerate_storage_placement_current.py`. Its parity comparison has
+only been run against the stale `STORAGE.xml` export and therefore remains an
+open diagnostic, not a closure claim; native regeneration currently produces
+no usable fresh XML from the child sheet alone. Do not use that stale-export
+result to promote the placement.
+
 ## SUPERSEDED / HISTORICAL FINDINGS
 
 The earlier V132–V154 prose below records valid historical experiments and

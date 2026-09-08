@@ -6690,3 +6690,10 @@ hierarchical XML net paths against flattened PCB names. The current storage
 placement result is 64 actionable mismatches rather than 286 representational
 false positives. Real missing/incorrect support, selector, and M.2 ownership
 defects remain open; no connectivity was waived.
+2026-09-08: Reconciled Phase 24 storage status prose with the live design.
+The JMS583 support network is already instantiated and its support audit
+passes; older imperative wording is explicitly superseded historical context.
+The storage placement generator now owns R24/R32/R33 and removes donor
+duplicates before regenerating the disposable current placement. The result
+is not promoted: the available parity comparison still uses a stale XML
+export, and native DRC/connectivity closure remains open.
