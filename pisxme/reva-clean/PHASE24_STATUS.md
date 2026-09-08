@@ -200,6 +200,13 @@ VCCO-authored short/crossing class; the remaining short and crossing classes
 are inherited from the parent basis. This is power copper only, not a
 signal-plane exception.
 
+The VDDREG rail is now promoted on
+`PHASE24_DUAL_MODE_STORAGE_FULL7_VDDREG_local_zone.kicad_pcb` as a local
+F.Cu power-copper zone between native U11.1 and L10.2. The zone-aware native
+audit and zone-removal negative control pass. Native DRC remains 514 findings
+with no VDDREG-authored short/crossing class; the remaining support rails and
+full storage gates remain open.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

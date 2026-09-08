@@ -7420,3 +7420,9 @@ connectivity and the zone-removal negative control passed. Native DRC reports
 514 findings with no VCCO-authored short/crossing class; inherited shorts and
 crossings remain open. This is power copper only and does not relax the
 no-signal-on-plane policy.
+
+2026-09-08: Promoted the local F.Cu JMS_VDDREG_5V power-copper zone as
+PHASE24_DUAL_MODE_STORAGE_FULL7_VDDREG_local_zone. Native U11.1-to-L10.2
+connectivity and the zone-removal negative control passed using the
+zone-aware audit. Native DRC remains 514 findings with no VDDREG-authored
+short/crossing class; remaining rails and Phase 24 closure remain open.

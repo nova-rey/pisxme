@@ -47,6 +47,11 @@ the zone-removal negative control pass; native DRC is 514 findings with no
 VCCO-authored short/crossing class. This does not close the remaining AVDDL,
 VDDREG_5V, LXO, mode-control, or full-board gates.
 
+VDDREG_5V is promoted on `PHASE24_DUAL_MODE_STORAGE_FULL7_VDDREG_local_zone`
+as a local F.Cu power-copper zone between U11.1 and L10.2. Native zone-aware
+connectivity and zone-removal negative-control checks pass; native DRC remains
+514 findings with no VDDREG-authored short/crossing class.
+
 Fresh native ERC reports 927 violations on the current source. The post-fix
 report has no dangling M.2 entries; remaining findings are inherited
 off-grid/same-label and other source-quality warnings. ERC remains an
