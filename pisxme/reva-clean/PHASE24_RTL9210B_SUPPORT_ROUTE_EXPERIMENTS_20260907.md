@@ -1953,6 +1953,17 @@ RSET, XTAL_OUT, and RTL_3V3. It is rejected; the result supports using a
 power-region approach only after the package escapes and neighboring support
 channels are co-allocated with verified clearance.
 
+V362/V363/V364 are the coordinated power-field follow-up. V362 restored the
+authoritative V342 RTL_3V3 tracks onto the refilled V361 1V1 region and found
+two genuine 3V3/1V1 contacts. V363 corrected one QFN escape but was superseded
+after exposing a USB-pad contact. V364 rebuilt the 1V1 field with a
+down-then-out U1.40 escape and restored RTL_3V3 after removing only disposable
+neighbor routes. Native DRC reports 0 shorting items, 0 tracks-crossing items,
+and 26 unconnected items. A combined native endpoint audit passes all nine
+1V1 and nine 3V3 endpoints; independent trace-removal negative controls fail
+as required. V364 is retained as the coordinated power-field basis. RSET,
+crystal, USB, REFCLK, reset, lane, and M.2 work remain open.
+
 V360/V361 are retained as a coordinated 1V1-first basis. V360 removed only
 the disposable RTL_3V3/RSET/XTAL copper and authored native U1/C4 escapes plus
 an In2 RTL_1V1 region. Its first saved board had an unfilled zone, so its
