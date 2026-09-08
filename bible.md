@@ -6569,3 +6569,8 @@ Native saved-board connectivity and the trace-removal negative control pass;
 native DRC remains at 9 findings with no new crossing. V595 is retained as
 the current PEDET/CLKREQ-plus-rail disposable candidate, not production
 closure.
+2026-09-08: RTL9210B V596/V597 rejected two SPICS route classes. V596 used
+an occupied RTL_3V3 transition site; V597's all-F.Cu staircase crossed the
+1V1 escape and shorted SPICS into RTL_3V3. Preserve V594/V595 as the valid
+PEDET/CLKREQ-plus-rail basis; the next SPI attempt needs coordinated corridor
+allocation.

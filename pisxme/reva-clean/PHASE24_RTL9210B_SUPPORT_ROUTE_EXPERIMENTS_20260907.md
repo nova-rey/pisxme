@@ -85,6 +85,10 @@ V595 adds the local R3.1→U1.13 CLKREQ escape on F.Cu. Native saved-board
 connectivity and its trace-removal negative control pass; native DRC remains
 at 9 findings with no new crossing. Retain V595 as the current disposable
 PEDET/CLKREQ-plus-rail candidate, not production closure.
+V596 is rejected because its proposed SPICS transition occupied the existing
+RTL_3V3 via field. V597 is rejected because its all-F.Cu SPICS staircase
+crossed the 1V1 escape and shorted SPICS into RTL_3V3. These are route
+implementation failures; the next SPI attempt needs a real corridor allocation.
 V580 attempted ordinary-via returns for U1 ground pads 69, 45, and 66.
 Native DRC rejected the placement with true GND-to-USB/3V3 shorts and local
 QFN clearance violations. Reject V580; V579 remains the retained rail
