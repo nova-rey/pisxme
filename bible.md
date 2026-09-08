@@ -7111,6 +7111,11 @@ endpoint connectivity stayed 10/10, but native DRC reported 851 violations,
 8 shorts, and 15 crossings. The trial remains negative placement evidence;
 FULL7 remains active.
 
+2026-09-08: Rejected the U11 180-degree rotation trial. USB3 endpoint
+connectivity stayed 10/10, but native DRC reported 843 violations, 7 shorts,
+and 21 crossings. The trial remains negative placement evidence; FULL7 stays
+active.
+
 2026-09-08: Rejected the U12 180-degree rotation trial. Native USB3 endpoint
 connectivity remained 10/10, but DRC rose to 845 with six shorts and 19
 crossings. The rotation is preserved as negative placement evidence; FULL7

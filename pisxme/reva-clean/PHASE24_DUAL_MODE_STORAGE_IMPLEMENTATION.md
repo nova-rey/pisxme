@@ -58,6 +58,10 @@ The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route
 evidence only; FULL7 is still the active basis.
 
+The U11 180-degree rotation trial is rejected on native DRC (843 violations,
+7 shorts, 21 crossings) despite 10/10 endpoint connectivity. It remains
+negative placement evidence, not an architecture conclusion.
+
 - The support-symbol authoring path emits canonical JMS583 support nets using
   the native KiCad label ordering. The endpoint-overlap repair removed stale
   generated label atoms at U11 pin 12/pin 39, and the shared-selector maps no

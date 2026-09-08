@@ -55,6 +55,11 @@ is rejected: all ten native USB3 endpoint assertions still pass, but native
 DRC rises to 845 violations with six shorts and 19 crossings. Rotation is
 therefore not promoted; FULL7 remains the active route basis.
 
+The U11 180-degree rotation trial `PHASE24_DUAL_MODE_STORAGE_U11_ROT180_FULL`
+is rejected: native USB3 endpoint assertions remain 10/10, but native DRC
+reports 843 violations, 7 shorts, and 21 crossings. It is negative placement
+evidence; FULL7 remains the active basis.
+
 `phase24_usb3_negative_control.py` validates the accepted FULL7 audit against
 the saved PCB: baseline native connectivity passes, and removing one required
 CM5_USB3_RX_N track makes the audit fail as required. This hardens the
