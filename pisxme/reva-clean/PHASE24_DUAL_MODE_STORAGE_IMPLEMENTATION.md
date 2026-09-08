@@ -17,6 +17,20 @@ only.
 
 ## CURRENT STATE — authoritative now
 
+The native root schematic export resolves the CM5 USB3 source nets directly:
+`CM5_USB3_RX_N/P` are J7 128/130, U12 16/15, and U7 42/43; `CM5_USB3_TX_N/P`
+are J7 140/142, U12 12/11, and U7 45/46. The placement author normalizes
+donor hierarchy aliases before generating disposable PCB candidates. This
+closes the aliasing ambiguity in the authoring path, not the remaining
+physical USB3 routing or native DRC gates.
+
+The live U12 map was also reconciled at the source-authoring boundary:
+pins 24/25 use bridge-side `JMS_USB3_TXN/P` across the TX coupling capacitors,
+while pins 22/23 retain direct `USB_RXN1/P` bridge links. The resulting
+USB3_FULL5 disposable route passes all ten native endpoint assertions, but
+native DRC still has local crossing/short findings and inherited opens, so
+this is not closure.
+
 - The support-symbol authoring path emits canonical JMS583 support nets using
   the native KiCad label ordering. The endpoint-overlap repair removed stale
   generated label atoms at U11 pin 12/pin 39, and the shared-selector maps no

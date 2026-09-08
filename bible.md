@@ -7083,6 +7083,14 @@ trace-removal negative control pass; the V10 DRC remains 811 violations / 499
 inherited unconnected items. This is placement-authority progress, not full
 Phase 24 closure.
 
+2026-09-08: Reconciled live Phase 24 documentation with native evidence and
+fixed a real U12 USB3 source-map defect. U12 pins 24/25 now own the
+bridge-side JMS_USB3_TXN/P nets across C87/C86, while pins 22/23 remain the
+direct USB_RXN1/P links. The USB3_FULL5 disposable candidate passes all ten
+native endpoint assertions; native DRC remains open at 880 violations / 499
+inherited unconnected items. Root-native XML also proves canonical CM5 USB3
+ownership, and all prior contradictory prose is now explicitly superseded.
+
 2026-09-08: The complete JMS583 support/co-author cohort passed native
 connectivity and a trace-removal negative control across reset, rails, LXO,
 XAVDDH, crystal, and reset-delay branches. Native DRC remains non-clean from

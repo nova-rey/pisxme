@@ -19,6 +19,21 @@ two-item R80.1/U11.39 association mismatch is superseded by the endpoint
 overlap repair and NC39 map correction; its raw probes remain historical
 evidence. The migration is idempotent and fail-closed.
 
+The native root schematic export `PHASE24_ROOT_NATIVE.xml` independently
+resolves all four CM5 USB3 nets to canonical names and to J7 pins
+128/130/140/142, U12 pins 16/15/12/11, and U7 pins 42/43/45/46. The reusable
+PCB authoring path normalizes donor `/CORE_CM5/` aliases to those canonical
+names before placement. This closes the aliasing ambiguity in the authoring
+path; the disposable candidate is not claimed as fully connected.
+
+The live USB3 map audit then found and corrected a second source-authority
+defect: U12 TX pins 24/25 are the bridge-side `JMS_USB3_TXN/P` nets across
+C87/C86, while U12 RX pins 22/23 remain direct `USB_RXN1/P` bridge links.
+The regenerated `PHASE24_DUAL_MODE_STORAGE_NC39_USB3_FULL5` candidate passes
+all ten native USB3 endpoint assertions. Its native DRC still reports
+880 violations / 499 inherited unconnected items, with local track
+crossings/shorts remaining; it is routing evidence only.
+
 The current native-pad support routing trial is rejected: native DRC reports
 834 violations and 499 inherited unconnected items, including authored
 support crossings. It remains disposable evidence only. The structural
