@@ -2876,3 +2876,12 @@ clearance errors. The route class is rejected, not the RTL9210B architecture.
 The raw PCB and DRC receipt are retained;
 Path A and production CAD remain unchanged. The next attempt must co-author
 the complete lower QFN escape allocation rather than move one via or branch.
+
+## V623 complete lower RTL_3V3 generator rerun — rejected
+
+The existing coordinated lower-3V3 generator was rerun from the retained
+V35/U2-left upper field. Native DRC rejected it for an RTL_3V3/RSET short and
+track crossing at the U1.52/R1 source field, as well as the inherited
+U1.39/USB_DM clearance class. This is route-implementation evidence, not an
+architecture rejection. The saved PCB and DRC report are retained; Path A
+and production CAD remain unchanged.

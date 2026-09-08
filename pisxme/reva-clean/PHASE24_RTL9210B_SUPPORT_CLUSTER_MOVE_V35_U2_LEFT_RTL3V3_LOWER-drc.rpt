@@ -1,12 +1,12 @@
 ** Drc report for PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_U2_LEFT_RTL3V3_LOWER.kicad_pcb **
-** Created on 2026-09-08T09:46:38 **
+** Created on 2026-09-08T10:08:59 **
 ** Report includes: Errors, Warnings **
 
 ** Found 9 DRC violations **
-[shorting_items]: Items shorting two nets (nets RSET and RTL_3V3)
+[shorting_items]: Items shorting two nets (nets RTL_3V3 and RSET)
     Local override; error
-    @(94.0500 mm, 73.2000 mm): Track [RSET] on F.Cu, length 5.6870 mm
     @(93.2000 mm, 74.5000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+    @(94.0500 mm, 73.2000 mm): Track [RSET] on F.Cu, length 5.6870 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
     @(94.8000 mm, 73.9500 mm): Track [RTL_3V3] on F.Cu, length 1.6919 mm

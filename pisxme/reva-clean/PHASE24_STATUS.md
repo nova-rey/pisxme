@@ -7197,3 +7197,9 @@ failure. The candidate is preserved as raw V620/V621/V622 evidence; no productio
 CAD or Path A changed. The next trial must allocate the complete lower QFN
 source field coherently, with the active 0.20 mm width/clearance rules
 unchanged.
+
+The complete lower-3V3 V623 generator was also rerun as a coordinated
+comparison. Native DRC rejects it for an RTL_3V3/RSET short and crossing at
+U1.52/R1 plus the U1.39/USB_DM source-field clearance. It remains raw route
+evidence only; the next implementation must allocate the lower QFN field and
+RSET together rather than reuse these handoff coordinates.

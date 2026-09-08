@@ -30,6 +30,11 @@ connectivity and the trace-removal negative control passed, but native DRC
 found a real RTL_3V3-to-USB_DM short plus QFN/via hole and solder-mask
 clearance violations. The scalar U1.39 escape class is rejected; the next
 trial must regenerate the complete lower QFN field under unchanged rules.
+2026-09-08: V623 reran the coordinated lower RTL_3V3 generator. Native DRC
+rejected it for a real RTL_3V3/RSET short and crossing at U1.52/R1 plus the
+U1.39/USB_DM source-field clearance class. Preserve the raw route evidence;
+the lower QFN and RSET departures must be coallocated next. Path A and
+production CAD remain unchanged.
 2026-09-08: RTL9210B V549 proves U1.55/U1.60/U1.63 1V1 connectivity and the
 exact negative control, but native DRC rejects the shared return for REFCLK,
 RTL_3V3, and LANE0_RXP crossings. The outward shared-return class is
