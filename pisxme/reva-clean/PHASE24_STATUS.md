@@ -6800,6 +6800,11 @@ pass, both trace-removal negative controls pass, and native DRC has 366
 findings / 25 inherited opens with no shorting or crossing class and zero
 footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
 high-speed support remain open.
+V306/V307 removed the earlier CLKREQ/PEDET and CLKREQ/RTL_3V3 source-field
+defects, but V306 retained a crystal-field crossing. V308 shifted the R3
+departure and introduced real XTAL_IN/XTAL_OUT shorts at the vertical
+transition, so it is rejected. CLKREQ remains open at the R3-to-transition
+geometry; no architecture or production CAD changed.
 V304 removes the V303 PEDET/R2 source-field shorts but crosses retained
 SPICLK/SPISI and XTAL_IN geometry. V305 separates the outer column with a
 layer transition, but still crosses the retained SPISI lane and XTAL_IN at
