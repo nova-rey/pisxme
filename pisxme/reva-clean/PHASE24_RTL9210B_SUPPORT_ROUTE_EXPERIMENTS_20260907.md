@@ -2327,3 +2327,9 @@ clearance, solder-mask, and thermal errors; ten inherited dangling/support
 warnings remain on the incomplete parent fixture. V488 is retained as the
 clean crystal-support primitive; rails, SPI, reset, sideband, and control
 integration remain open. No Path-A or production CAD changed.
+V489 adds RSET from the rotated native U1.51 pad to R1.1 using two ordinary
+through-via transitions. The saved-board RSET connectivity audit and its
+trace-removal negative control pass. Native DRC has zero shorts, crossings,
+and clearance errors; ten inherited incomplete-fixture warnings remain.
+V489 is retained as the RSET support primitive; rail, SPI, reset, sideband,
+and control integration remain open. No Path-A or production CAD changed.

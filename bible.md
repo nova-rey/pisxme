@@ -6211,3 +6211,9 @@ controls pass native saved-board connectivity. Native DRC has zero shorts,
 crossings, clearance, solder-mask, and thermal errors; ten inherited
 incomplete-fixture warnings remain. Rails, SPI, reset, sideband, and control
 integration remain open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V489 adds RSET from rotated native U1.51 to R1.1 with
+ordinary through-via transitions. Native saved-board RSET connectivity and
+one trace-removal negative control pass. Native DRC has zero shorts,
+crossings, and clearance errors; ten inherited incomplete-fixture warnings
+remain. Rail, SPI, reset, sideband, and control integration remain open; no
+Path-A or production-CAD change.
