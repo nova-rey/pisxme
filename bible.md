@@ -7062,6 +7062,12 @@ coordinate/UUID repair trial was rejected after native export produced broad
 unconnected-net regressions; STORAGE.kicad_sch was restored to the checkpoint.
 The five JMS support-label ownership anomalies remain open and fail-closed.
 
+2026-09-08: Rejected the exact-UUID JMS support-label remap trial. Native
+parity regressed from five to eight mismatches, including new JMS rail and
+crystal ownership errors. The source was restored; label renaming alone is
+not an acceptable repair, and the five-mismatch native association defect
+remains open.
+
 2026-09-08: Documentation hygiene checkpoint for Phase 24 dual-mode storage.
 Reconciled the current implementation and status documents: Path A remains
 active, the JMS583 support network is instantiated, and the live native pad

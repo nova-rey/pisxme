@@ -376,6 +376,12 @@ live schematic was restored to the last checkpoint. These five remain
 fail-closed and require source-level reconciliation; no PCB-only alias is
 being used to manufacture a pass.
 
+A second exact-UUID support-label remap trial was also rejected: native export
+increased the mismatch set from five to eight by introducing new JMS rail and
+crystal ownership errors. It was reverted immediately. Label renaming alone
+is not an acceptable repair; the remaining defect requires native
+symbol-instance association repair.
+
 The complete JMS583 support/co-author cohort now passes one native saved-board
 audit: reset, AVDD33, AVDDL, VCCO, VCCK, VDDREG, LXO, XAVDDH, XIN, XOUT, and
 reset-delay all reach their intended support pads. Removing the XIN copper
