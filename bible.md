@@ -7170,3 +7170,10 @@ zone filler and preserved the result as `PHASE24_JMS583_SUPPORT_COHORT_FILLED`.
 Native DRC dropped to 519 violations while the 499 inherited donor
 unconnected items remained. The filled result is stronger via evidence, not
 Phase 24 closure.
+
+2026-09-08: Corrected the reusable JMS583 support-symbol authoring path to
+emit canonical `JMS_REXT`, `LXO`, `XIN`, and `XOUT` labels in the native KiCad
+serialization order. Native re-export reduced storage parity to two remaining
+items (`R80.1` and `U11.39` resolving as `JMS_GPIO7_NC`). Targeted duplicate-
+label cleanup and restoration probes were rejected after changing U12/U13
+ownership; no PCB alias repair or validation waiver was promoted.

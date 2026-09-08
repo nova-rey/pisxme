@@ -40,11 +40,11 @@ def definition(name, pinmap):
  (symbol "{name}_1_1" (rectangle (start -15 -8) (end 15 8) (stroke (width 0.254) (type default)) (fill (type background)))
  {' '.join(rows)}) (embedded_fonts no))'''
 
-def instance(name, ref, mpn, pinmap, uid, x, y, footprint):
+def instance(name, ref, mpn, pinmap, uid, x, y, footprint, label_y_sign=-1):
     labels=[]; pins=[]
     count=max(pinmap)
     for i in range(1,count+1):
-        py=y-(i-(count+1)/2)*1.27
+        py=y+label_y_sign*(i-(count+1)/2)*1.27
         net=pinmap.get(i,'NC_'+str(i))
         labels.append(f'(label "{net}" (at {x+20:g} {py:g} 0) (effects (font (size 0.8 0.8)) (justify left)) (uuid {make_uuid(uid+100+i)}))')
         pins.append(f'(pin "{i}" (uuid {make_uuid(uid+i)}))')
@@ -55,6 +55,19 @@ def instance(name, ref, mpn, pinmap, uid, x, y, footprint):
  (property "MPN" "{mpn}" (at {x:g} {y:g} 0) (effects (font (size 1 1)) (hide yes)))
  (property "Footprint" "{footprint}" (at {x:g} {y:g} 0) (effects (font (size 1 1)) (hide yes)))
  {' '.join(pins)} (instances (project "PiSXMe_RevA_Clean" (path "{PATH}" (reference "{ref}") (unit 1)))) )'''
+
+def support_instance(name, ref, mpn, pinmap, uid, x, y, footprint):
+    """Emit small support symbols with labels on their actual pin y-coordinates.
+
+    KiCad's native symbol-instance association consumes this generated label
+    frame in reverse order.  Reverse the map here so exported native netlists
+    assign the requested net to the requested pin.  The main IC/connector
+    instances retain their historical frame, so this is a deliberate separate
+    authoring path rather than a global serialization change.
+    """
+    count=max(pinmap)
+    native_map={i: pinmap[count+1-i] for i in range(1,count+1)}
+    return instance(name, ref, mpn, native_map, uid, x, y, footprint)
 
 def remove_block(text, needle):
     start=text.index(needle); return text[:start]+text[start+len(balanced(text,start)):]

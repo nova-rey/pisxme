@@ -2,6 +2,17 @@
 
 ## AUTHORITATIVE CURRENT STATE — 2026-09-08
 
+The JMS583 support-label authoring path was corrected and applied to the live
+source: support labels now use the canonical `JMS_REXT`, `LXO`, `XIN`, and
+`XOUT` nets with the native KiCad serialization order. A fresh native XML
+export reduced the actionable source-to-PCB parity failure to two items:
+`R80.1` and `U11.39`, both expected `JMS_REXT` but exported as
+`JMS_GPIO7_NC`. A targeted U11 duplicate-label cleanup fixed U11 while
+regressing U12/U13 ownership, and a duplicate restoration probe regressed 20
+items; both are rejected. The remaining two-item failure is therefore a
+native generated-label/duplicate-UUID association defect, not a reason to
+rewrite PCB aliases. Native ERC/DRC and complete routing remain open.
+
 The active work item is the protected Path-A dual-mode storage implementation
 and the remaining clean-board Phase 24 closure. RTL9210B Path B is rejected
 for the current Rev-A package/DFM contract; its isolated artifacts remain
