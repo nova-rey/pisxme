@@ -21,10 +21,11 @@ only.
   NVMe branch, both TI selectors, the TE M-key socket, the JMS583 support
   network, and J5/U14 mode control. The schematic and mode-contract audits
   pass; native ERC is still open.
-- The generated libraries now contain a real 64-pad JMS583 QFN perimeter,
-  TI RUA0042A 17/4/17/4 selector packages with 0.60-mm perimeter pads, and
-  the 67-contact TE M-key candidate. Library and selector geometry audits
-  pass.
+- The generated libraries contain a structurally audited 64-pad JMS583 QFN
+  package identity, TI RUA0042A selector packages, and the 67-contact TE
+  M-key candidate. Selector/contact-count audits pass; final JMS583
+  land-pattern pad, paste, mask, courtyard, and exposed-pad authority remains
+  open as documented in `PHASE24_JMS583_LAND_PATTERN_RECONCILIATION.md`.
 - The current regenerated disposable placement candidate is
   `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb`; it is not
   production authority. The current fresh native result is recorded in
@@ -60,6 +61,12 @@ only.
   The isolated reset discriminator independently rejects a direct F.Cu join
   because it enters the USB coupling field at 0.0379 mm clearance; the next
   route must allocate a layer-transition corridor deliberately.
+- The live native netlist is `PHASE24_STORAGE_LIVE_NETLIST.xml`. The current
+  schematic-to-PCB pad audit is fail-closed at five mismatches, limited to
+  JMS support-label ownership (`L10.1`, `R80.1`, `U11.39`, `Y10.1`, and
+  `Y10.2`). The intentional TE key gap and non-board X7 marker are the only
+  excluded cases. These five source-authority mismatches must be resolved
+  before the storage island can enter native routing closure.
 
 ## CURRENT OPEN GATES
 

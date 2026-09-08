@@ -7057,8 +7057,18 @@ repair.
 
 2026-09-08: Corrected the storage parity scope for the intentional TE M-key
 gap and non-board X7 contract marker, then regenerated complete U12/U13/U14
-support metadata. Native parity improved to 10 real mismatches; the remaining
-JMS support-label ownership anomalies stay open and fail-closed.
+support metadata. Native parity improved to five real mismatches. A bounded
+coordinate/UUID repair trial was rejected after native export produced broad
+unconnected-net regressions; STORAGE.kicad_sch was restored to the checkpoint.
+The five JMS support-label ownership anomalies remain open and fail-closed.
+
+2026-09-08: Documentation hygiene checkpoint for Phase 24 dual-mode storage.
+Reconciled the current implementation and status documents: Path A remains
+active, the JMS583 support network is instantiated, and the live native pad
+parity gate is five source-authority mismatches. Marked the older 65-to-32
+count as superseded history and retained the rejected coordinate/UUID trial
+as evidence. Focused native schematic, mode-contract, and library audits pass;
+full storage routing and release validation remain open.
 
 2026-09-08: Rejected the first combined JMS583 support/crystal cohort. The
 isolated production-width XIN/XOUT route conflicts with the retained XAVDDH

@@ -355,21 +355,26 @@ audit now passes JMS583, both selector packages, and the TE M-key contact/key
 gap checks. This fixes validation coverage only; native ERC/DRC, physical
 routing, mode-state, and full storage integration gates remain open.
 
-The live schematic netlist `PHASE24_STORAGE_LIVE_NETLIST.xml` was exported
+Historical snapshot (superseded count): the live schematic netlist
+`PHASE24_STORAGE_LIVE_NETLIST.xml` was exported
 with KiCad 10.0.5 and compared against a freshly regenerated placement. The
 complete M-key contact map and SATA coupling ownership reduced actionable
 pad mismatches from 65 to 32. The remaining findings are not waived: eight
 contacts are the intentional 59--66 M-key key gap, while the other findings
 are genuine selector/support/JMS control ownership mismatches requiring
-authoritative source repair.
+authoritative source repair. This 65-to-32 result is superseded by the
+following five-mismatch source-authority audit; it remains archaeology, not a
+current open-gate count.
 
 The parity checker now excludes only the intentional non-board X7 contract
 marker in addition to the TE key gap. With the complete U12/U13/U14 support
 metadata regenerated from the live netlist, the disposable placement reaches
-10 real mismatches: the unresolved set is confined to JMS support-label/net
-ownership (`L10`, `R80`, U11.39, `Y10`). These remain fail-closed and require
-source-level reconciliation; no PCB-only alias is being used to manufacture
-a pass.
+five real mismatches: the unresolved set is confined to JMS support-label/net
+ownership (`L10`, `R80`, U11.39, `Y10`). A coordinate/UUID repair trial was
+rejected after native export showed broad unconnected-net regressions; the
+live schematic was restored to the last checkpoint. These five remain
+fail-closed and require source-level reconciliation; no PCB-only alias is
+being used to manufacture a pass.
 
 The complete JMS583 support/co-author cohort now passes one native saved-board
 audit: reset, AVDD33, AVDDL, VCCO, VCCK, VDDREG, LXO, XAVDDH, XIN, XOUT, and
