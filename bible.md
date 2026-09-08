@@ -579,6 +579,11 @@ production CAD remain unchanged.
 RTL_3V3, and XTAL_OUT from the V397 basis introduced two GND shorts at the
 oscillator transition. V397 remains the current basis; Path A and production
 CAD remain unchanged.
+2026-09-08: RTL9210B V418 regenerated PEDET from current U1.8/R2.1/J1.69
+coordinates on a distinct source/return channel. Native DRC reports zero
+shorts/crossings and 20 opens; seven connectivity negative controls pass.
+RTL_1V1, SPI, REFCLK, and associated support remain open; Path A and
+production CAD remain unchanged.
 2026-09-08: Rejected direct V311 PERST transplant as coordinate-stale. Native
 V412 regenerated PERST_N from current pads with zero shorts/crossings and 24
 opens. V416 regenerated CLKREQ_N on a distinct trunk with zero

@@ -2118,3 +2118,10 @@ controls pass, and native DRC reports 0 shorts, 0 crossings, 25 opens, and
 only the inherited dangling/isolated-copper warnings. This is the current
 best Path-B local basis, not full closure; Path A and production CAD remain
 unchanged.
+V417 PEDET regeneration used current U1.8/R2.1/J1.69 coordinates but shared
+older trunks and was rejected. V418 moved PEDET to a distinct y=54.5 source
+channel and lower return. Native DRC reports 0 shorts/crossings and 20 opens;
+the V418 audit passes lane/support/control/PEDET connectivity with seven
+trace-removal negative controls. Remaining opens are RTL_1V1, SPI, REFCLK,
+and associated return/power support; Path A and production CAD remain
+unchanged.
