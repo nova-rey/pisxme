@@ -207,6 +207,12 @@ audit and zone-removal negative control pass. Native DRC remains 514 findings
 with no VDDREG-authored short/crossing class; the remaining support rails and
 full storage gates remain open.
 
+The shared inductor LXO path is promoted on
+`PHASE24_DUAL_MODE_STORAGE_FULL7_LXO_below_vddreg.kicad_pcb`. The native
+U11.64-to-L10.1 endpoint audit and trace-removal negative control pass. Native
+DRC remains 514 findings with no LXO-authored short/crossing class. The
+remaining support opening is AVDDL plus higher-level storage/mode/board gates.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

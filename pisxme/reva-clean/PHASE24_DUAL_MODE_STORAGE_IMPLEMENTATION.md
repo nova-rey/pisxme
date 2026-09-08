@@ -52,6 +52,11 @@ as a local F.Cu power-copper zone between U11.1 and L10.2. Native zone-aware
 connectivity and zone-removal negative-control checks pass; native DRC remains
 514 findings with no VDDREG-authored short/crossing class.
 
+The shared LXO path is promoted on
+`PHASE24_DUAL_MODE_STORAGE_FULL7_LXO_below_vddreg.kicad_pcb`. Native
+U11.64-to-L10.1 connectivity and the trace-removal negative control pass;
+native DRC remains 514 findings with no LXO-authored short/crossing class.
+
 Fresh native ERC reports 927 violations on the current source. The post-fix
 report has no dangling M.2 entries; remaining findings are inherited
 off-grid/same-label and other source-quality warnings. ERC remains an

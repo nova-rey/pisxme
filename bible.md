@@ -7426,3 +7426,9 @@ PHASE24_DUAL_MODE_STORAGE_FULL7_VDDREG_local_zone. Native U11.1-to-L10.2
 connectivity and the zone-removal negative control passed using the
 zone-aware audit. Native DRC remains 514 findings with no VDDREG-authored
 short/crossing class; remaining rails and Phase 24 closure remain open.
+
+2026-09-08: Promoted the shared-inductor LXO dogleg on the VDDREG/VCCO basis
+as PHASE24_DUAL_MODE_STORAGE_FULL7_LXO_below_vddreg. Native U11.64-to-L10.1
+connectivity and the trace-removal negative control passed. Native DRC remains
+514 findings with no LXO-authored short/crossing class; AVDDL and higher-level
+storage/Phase 24 gates remain open.
