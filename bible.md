@@ -6210,6 +6210,12 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V521 audit correction removed the exact newly-authored
+U1.34 RTL_3V3 branch for its negative control; native connectivity and the
+negative control both pass. The V521 route itself is rejected: native DRC
+reports 25 violations / 30 unconnected items, including RTL_3V3 conflicts
+with the adjacent RTL_5V and RTL_1V1 field. This is a route implementation
+failure; Path A and production CAD remain unchanged.
 2026-09-08: RTL9210B V520 coallocates U1.25 RTL_1V1 and XTAL_IN after
 clearing local RTL_3V3/RSET conflicts. Native 1V1 and XTAL_IN connectivity,
 including C1.1, plus trace-removal negative controls pass; native DRC has no

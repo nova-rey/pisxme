@@ -1080,6 +1080,13 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V521 connects U1.20/U1.34 RTL_3V3 into the existing C3.1 handoff using
+F.Cu/B.Cu ordinary-via transitions. The corrected audit removes the exact
+new U1.34 branch for its negative control; both native connectivity and the
+negative control pass. Native DRC reports 25 violations / 30 unconnected
+items, including real RTL_3V3 shorts/crossings against the adjacent RTL_5V
+and RTL_1V1 source field. V521 is rejected as a route implementation, not
+as a Path-B authority decision. Path A and production CAD remain unchanged.
 V520 coallocates U1.25 RTL_1V1 and XTAL_IN after clearing the exact local
 RTL_3V3/RSET conflicts identified in V519. Native U1.16/U1.25/U1.36/C4.1
 and U1.53/Y1.1/C1.1 connectivity pass with stable-key graph traversal and
