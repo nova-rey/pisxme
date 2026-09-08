@@ -349,6 +349,12 @@ records are donor-board artifacts. Retain this as the strongest JMS583
 analog/crystal support-field basis, but do not call the full storage island
 or Phase 24 closed.
 
+The complete JMS583 support/co-author cohort now passes one native saved-board
+audit: reset, AVDD33, AVDDL, VCCO, VCCK, VDDREG, LXO, XAVDDH, XIN, XOUT, and
+reset-delay all reach their intended support pads. Removing the XIN copper
+fails the complete-cohort negative control. This is the retained support-field
+basis; native DRC remains non-clean from donor/integration findings.
+
 The earlier JMS583 crystal DRC receipts, including divergent, split-layer,
 pad-width, and net-name variants, are retained as raw historical evidence;
 they are not current acceptance criteria and do not override the production-

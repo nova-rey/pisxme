@@ -7039,6 +7039,11 @@ trace-removal negative control pass; the V10 DRC remains 811 violations / 499
 inherited unconnected items. This is placement-authority progress, not full
 Phase 24 closure.
 
+2026-09-08: The complete JMS583 support/co-author cohort passed native
+connectivity and a trace-removal negative control across reset, rails, LXO,
+XAVDDH, crystal, and reset-delay branches. Native DRC remains non-clean from
+donor/integration findings; this is a support-field basis, not closure.
+
 2026-09-08: Rejected the first combined JMS583 support/crystal cohort. The
 isolated production-width XIN/XOUT route conflicts with the retained XAVDDH
 diagonal when integrated, producing authored B.Cu crossings and an XOUT to
