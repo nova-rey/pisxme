@@ -579,6 +579,12 @@ production CAD remain unchanged.
 RTL_3V3, and XTAL_OUT from the V397 basis introduced two GND shorts at the
 oscillator transition. V397 remains the current basis; Path A and production
 CAD remain unchanged.
+2026-09-07: RTL9210B V400-V404 repaired local support allocation. V401 removed
+the RXP/QFN pad clearance issue; V402 removed the RSET/In2 clearance issue;
+V403 restored XTAL_OUT with standard vias; V404 connected the actual C1.1
+endpoint. Native audit plus four negative controls pass; V404 DRC has zero
+shorts/crossings and 25 opens, with only inherited dangling/isolated-copper
+warnings. Path B remains open; Path A and production CAD remain unchanged.
 2026-09-07: Retained RTL9210B V311 CLKREQ basis after rejecting V309/V310.
 Native R3.1/U1.13/J1.52 connectivity passed; DRC reported 514 findings / 18
 inherited opens with no shorting, crossing, or footprint-error class. Reset,

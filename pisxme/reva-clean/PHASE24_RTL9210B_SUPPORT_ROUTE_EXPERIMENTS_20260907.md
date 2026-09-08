@@ -2094,3 +2094,13 @@ Path A and production CAD are unchanged.
 V399 co-authored RSET/RTL_3V3 and XTAL_OUT from the V397 basis but introduced
 two GND shorts at the XTAL_OUT transition, so it is rejected. V397 remains the
 current basis for the next repair; Path A and production CAD are unchanged.
+V400 moved only the RSET endpoint and reduced the native non-open findings by
+one. V401 shifted the RXP source vertical and removed the remaining QFN-pad
+clearance error without changing pair ordering or connector launch. V402
+lowered the RSET return and removed its In2 clearance error. V403 restored the
+oscillator with standard vias and had only three warnings plus 26 opens. V404
+connected the actual C1.1 endpoint; native support audit and four negative
+controls pass, and native DRC reports 0 shorts, 0 crossings, 25 opens, and
+only the inherited dangling/isolated-copper warnings. This is the current
+best Path-B local basis, not full closure; Path A and production CAD remain
+unchanged.
