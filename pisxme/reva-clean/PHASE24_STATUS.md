@@ -107,6 +107,8 @@ native connectivity because U12.24/U12.25 still carried stale USB_TXN1/P net
 ownership; no PCB-only ownership repair was applied. Re-running from FULL7
 passes all ten native endpoint assertions and reports 830 DRC violations / 499
 unconnected items. It is the current USB3 routing basis, not a Phase 24 pass.
+The same candidate passes the saved-board USB3 negative control: removing a
+required CM5_USB3_RX_N track makes the native connectivity check fail.
 
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and

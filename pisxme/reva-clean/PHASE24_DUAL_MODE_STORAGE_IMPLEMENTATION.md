@@ -76,6 +76,8 @@ U12.24/U12.25 retained stale USB_TXN1/P ownership. No PCB-only net repair was
 used. The corrected disposable `PHASE24_DUAL_MODE_STORAGE_USB3_LOCAL_FROM_FULL7`
 passes all ten endpoint assertions and reports 830 DRC violations / 499
 unconnected items; it is the current routing basis, not closure.
+The saved-board negative control also passes on this candidate: removing a
+required CM5_USB3_RX_N track breaks native endpoint connectivity.
 
 The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route

@@ -7328,6 +7328,8 @@ base failed native bridge-side TX endpoint connectivity due to U12.24/U12.25
 USB_TXN1/P ownership; no PCB-only net repair was used. The FULL7-based
 disposable route passes all ten endpoint assertions and records 830 DRC
 violations / 499 unconnected items, remaining open routing evidence.
+The saved-board negative control passes on that candidate: removing a required
+CM5_USB3_RX_N track breaks native endpoint connectivity as required.
 
 2026-09-08: Reconciled Phase 24 narrative status against the live dual-mode
 storage implementation. Current sections now identify Path A as active, record
