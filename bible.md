@@ -6701,3 +6701,7 @@ export, and native DRC/connectivity closure remains open.
 PHASE24_STATUS.md as superseded historical evidence. Its former
 "instantiate support network" next-action wording now states that the work
 was completed and that routing/release validation is the live open gate.
+2026-09-08: Corrected the live root schematic and its scaffold metadata from
+the obsolete SATA-only/NVMe-excluded description to the implemented dual-mode
+storage architecture. Historical fixture copies and legacy validation scripts
+were left unchanged as evidence and are not current authoring inputs.

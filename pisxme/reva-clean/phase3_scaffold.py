@@ -221,7 +221,7 @@ def main() -> None:
     (comment 1 "Phase 3 native hierarchy scaffold; no placement or routing")
     (comment 2 "PiSXMeRevAClean namespace")
     (comment 3 "Native KiCad connectivity authority")
-    (comment 4 "M.2 SATA ONLY - NVMe NOT SUPPORTED"))
+    (comment 4 "Dual-mode M.2 SATA/NVMe via storage-local bridge selection"))
   {lib_symbols}
 {''.join(sheet_block(name, index) for index, name in enumerate(SHEETS, 1))}
 {root_wires}{direct_wires}
