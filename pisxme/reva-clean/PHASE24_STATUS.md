@@ -116,6 +116,12 @@ the filled saved candidate reports 519 DRC violations / 499 inherited donor
 unconnected items. This materially removes the unfilled-zone via noise, but
 does not close the remaining inherited crossings, courtyard/silkscreen,
 support branches, or full-board Phase 24 gate.
+The paired ground-access probe adds ordinary through-vias at C80.2 and
+U11.63 with native F.Cu escapes. After native zone refill, C80.2 is connected
+to U11.63 in KiCad's saved connectivity; the focused DRC is 520 violations /
+499 inherited donor unconnected items with no new JMS support short class.
+This is the retained ground-return template; all remaining support returns
+and full-board closure remain open.
 The two-via REXT corridor V1 was then rejected: its lower transition lands
 in the existing C90/R33 support field and its through-vias also incur the
 saved-board plane-clearance findings. Native DRC reports 824 violations /

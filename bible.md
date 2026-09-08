@@ -7039,6 +7039,12 @@ trace-removal negative control pass; the V10 DRC remains 811 violations / 499
 inherited unconnected items. This is placement-authority progress, not full
 Phase 24 closure.
 
+2026-09-08: Validated the first JMS583 ground-return access template. Ordinary
+through-vias at C80.2 and U11.63, with native F.Cu pad escapes and refilled
+POWER_GND zones, connect C80 ground to the JMS583 ground domain in saved
+KiCad connectivity. Focused DRC is 520 violations / 499 inherited donor
+unconnected items; no new JMS support short class was introduced.
+
 2026-09-08: Expanded the JMS583 native support cohort to eight nets by adding
 U11.20 JMS_AVDDL to C83.1 through a mixed-layer ordinary-via corridor. The
 native endpoint audit and combined trace-removal negative control pass; V14
