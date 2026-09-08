@@ -120,6 +120,13 @@ the USB3 endpoint audit remains 10/10. Native DRC reports 853 violations /
 499 unconnected inherited items with no authored shorting or track-crossing
 class. It is a routing basis, not full Phase 24 closure.
 
+The current basis also includes the validated lateral REXT route. Native REXT
+and XIN/XOUT/XAVDDH audits pass with their trace-removal controls, and the
+USB3 endpoint audit remains 10/10. Native DRC is 853 violations / 499
+inherited unconnected items with no authored shorts or crossings. This is
+still only a support/USB3 routing primitive, not full storage or Phase 24
+closure.
+
 The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route
 evidence only; FULL7 is still the active basis.

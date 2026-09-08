@@ -156,6 +156,13 @@ shorting or track-crossing class. The report still contains 853 total
 violations / 499 unconnected inherited items, so this is not full Phase 24
 closure.
 
+The current basis also includes the validated lateral REXT addition as
+`PHASE24_DUAL_MODE_STORAGE_FULL7_REXT`. Native U11.39-to-R80.1, XIN/XOUT/
+XAVDDH, and all ten USB3 endpoint checks pass with their trace-removal
+controls. Native DRC remains 853 violations / 499 inherited unconnected
+items with no authored shorting or track-crossing class. This closes only the
+REXT/three-exit/USB3 primitive, not the full support network or Phase 24.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the
