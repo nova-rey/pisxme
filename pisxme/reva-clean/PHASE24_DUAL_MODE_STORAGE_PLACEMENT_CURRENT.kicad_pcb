@@ -26971,8 +26971,8 @@
   (property "Value" "25MHz" (at 0 2.0) (layer "F.Fab") hide (effects (font (size 0.8 0.8))))
   (fp_rect (start -1.6 -1.25) (end 1.6 1.25) (stroke (width 0.12) (type default)) (fill none) (layer "F.SilkS"))
   (fp_rect (start -1.7 -1.35) (end 1.7 1.35) (stroke (width 0.05) (type default)) (fill none) (layer "F.CrtYd"))
-  (pad "1" smd roundrect (at -1.1 -0.85) (size 1.2 0.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_XIN") (pinfunction "JMS_XIN") (pintype "passive") (uuid "9f5e3fe3-0390-5f02-9dde-9df0f8880b61"))
-  (pad "2" smd roundrect (at -1.1 0.85) (size 1.2 0.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "JMS_XOUT") (pinfunction "JMS_XOUT") (pintype "passive") (uuid "6b4094f6-4596-5ff2-9d42-e07591d02308"))
+  (pad "1" smd roundrect (at -1.1 -0.85) (size 1.2 0.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "XIN") (pinfunction "XIN") (pintype "passive") (uuid "9f5e3fe3-0390-5f02-9dde-9df0f8880b61"))
+  (pad "2" smd roundrect (at -1.1 0.85) (size 1.2 0.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "XOUT") (pinfunction "XOUT") (pintype "passive") (uuid "6b4094f6-4596-5ff2-9d42-e07591d02308"))
   (pad "3" smd roundrect (at 1.1 0.85) (size 1.2 0.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "b8f17b0f-c3e6-5811-bc69-1b002d8813c8"))
   (pad "4" smd roundrect (at 1.1 -0.85) (size 1.2 0.9) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.2) (net "POWER_GND") (pinfunction "POWER_GND") (pintype "passive") (uuid "db42f328-6cd1-5236-8298-c84678cf5c8d"))
 

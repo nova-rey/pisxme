@@ -23,7 +23,7 @@ MAPS={
  'MODE_JUMPER_1x04.kicad_mod':('J5',{1:'FORCE_SATA',2:'AUTO_PEDET',3:'FORCE_NVME',4:'MODE_IN'}),
  'R_0402_1005Metric.kicad_mod':('R80',{1:'JMS_REXT',2:'POWER_GND'}),
  'L_2520_6332Metric.kicad_mod':('L10',{1:'JMS_LXO',2:'JMS_VDDREG_5V'}),
- 'Crystal_3225_4Pad.kicad_mod':('Y10',{1:'JMS_XIN',2:'JMS_XOUT',3:'POWER_GND',4:'POWER_GND'})}
+ 'Crystal_3225_4Pad.kicad_mod':('Y10',{1:'XIN',2:'XOUT',3:'POWER_GND',4:'POWER_GND'})}
 SUPPORT_PCB = {
  'C80':{1:'JMS_AVDD33',2:'POWER_GND'},'C81':{1:'JMS_VCCO',2:'POWER_GND'},
  'C82':{1:'JMS_VCCK',2:'POWER_GND'},'C83':{1:'JMS_AVDDL',2:'POWER_GND'},

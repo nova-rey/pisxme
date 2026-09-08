@@ -6899,3 +6899,7 @@ board reports 840 total violations. This closes only the RSET sub-primitive.
 Stale zone/via-hole findings disappeared, but native DRC still rejects the
 0.20-mm traces leaving adjacent 0.4-mm-pitch U11 crystal pads at about
 0.19-mm clearance. Keep crystal support open; do not relax rules.
+2026-09-08: Corrected the live Y10 generator map from invented JMS_XIN/
+JMS_XOUT nets to the authoritative XIN/XOUT nets used by U11 and STORAGE.
+Regenerated the candidate; the native crystal probe now has zero shorting
+items and USB3 parity remains PASS. Physical crystal escape remains open.

@@ -36,8 +36,8 @@ if u11 is None or y10 is None:
     raise RuntimeError("missing U11/Y10")
 y10.SetPosition(mm(150.0, 125.0))
 for name, upad, ypad, f_bends, b_bends in (
-    ("JMS_XIN", "50", "1", ((137.4, 129.0), (134.0, 129.0)), ((147.0, 129.0), (147.0, 122.0))),
-    ("JMS_XOUT", "51", "2", ((137.8, 128.0), (140.0, 128.0)), ((146.0, 128.0), (146.0, 123.0))),
+    ("XIN", "50", "1", ((137.4, 129.0), (134.0, 129.0)), ((147.0, 129.0), (147.0, 122.0))),
+    ("XOUT", "51", "2", ((137.8, 128.0), (140.0, 128.0)), ((146.0, 128.0), (146.0, 123.0))),
 ):
     net = b.FindNet(name)
     if net is None: raise RuntimeError("missing " + name)
