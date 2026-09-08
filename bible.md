@@ -6195,3 +6195,7 @@ CAD or Path-A change.
 found one REFCLK_N/TX_P short and two REFCLK/lane crossings, while retaining
 zero clearance violations. V475 and V479 remain the isolated retained bases;
 the next attempt must regenerate their source fields together.
+2026-09-08: Rejected RTL9210B V482 combined REFCLK detours. Native DRC found
+REFCLK_N conflicts with XTAL_OUT/U1 support and REFCLK_P crossing the TX_N
+corridor. V475 and V479 remain the clean independent primitives; no
+production CAD or Path-A change.

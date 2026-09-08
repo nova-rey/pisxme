@@ -2306,3 +2306,8 @@ short and two crossings involving REFCLK_N/RXP and REFCLK_P/TXN. The
 isolated V479 REFCLK and V475 four-pair primitives remain valid; complete
 coallocation still requires regenerating the REFCLK and lane source field as
 one layer-aware escape.
+V482 attempted to combine V475 with separated REFCLK source detours. Native
+DRC rejected it for REFCLK_N/XTAL_OUT and U1-support shorts/clearances plus a
+REFCLK_P/TX_N corridor crossing. The failure confirms that REFCLK source and
+support geometry must be regenerated together with the complete QFN field;
+V475 and V479 remain the clean independent primitives.
