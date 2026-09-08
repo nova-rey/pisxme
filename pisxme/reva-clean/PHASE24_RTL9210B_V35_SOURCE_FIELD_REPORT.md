@@ -150,6 +150,11 @@ was rejected; the corrected via at (99.5,76.0) leaves native DRC with only
 three inherited silkscreen warnings. Native zone connectivity connects all
 three U1 ground pads. Retain this return sub-primitive and continue with the
 remaining control, clock, SPI, and external support opens.
+V643 adds the missing U1.20 RTL_3V3 branch to the lower field through an
+ordinary via at (92.0,67.6) and B.Cu; native DRC remains at three inherited
+silkscreen warnings. V644's R2/R3 source extension is rejected because its
+west-side B.Cu corridor crosses the retained RTL_5V segment at x=89.0. The
+source join must be co-authored around that collector.
 V636 extends the passing 1V1 trunk with a north-of-QFN U1.25 departure.
 Native U1.25-to-C4.1 connectivity and the trace-removal negative control
 pass; native DRC remains at four inherited warnings with no signal violation.

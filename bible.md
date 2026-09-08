@@ -6774,3 +6774,8 @@ U1.36-to-C4.1 connectivity passes. The local QFN 1V1 source set is connected.
 After moving the U1.45 via away from the retained U1.40 via, native DRC has
 only three inherited silkscreen warnings and filled-zone connectivity joins
 all three QFN ground pads. Continue with the remaining support opens.
+2026-09-08: V643 joined U1.20 RTL_3V3 into the lower physical field through
+an ordinary via and B.Cu corridor; native DRC remains at three inherited
+silkscreen warnings. V644's attempted R2/R3 source extension crossed the
+retained RTL_5V B.Cu collector and is rejected. Reallocate that source corridor
+without relaxing rules.

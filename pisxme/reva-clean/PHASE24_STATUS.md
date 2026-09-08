@@ -86,6 +86,11 @@ The first U1.45 via position was rejected for clearance to the retained
 U1.40 via; the corrected outboard position leaves only three inherited
 silkscreen warnings. Native zone refill connects all three QFN ground pads;
 this is a retained ground-return sub-primitive, not full support closure.
+V643 joins U1.20 RTL_3V3 into the lower same-net field using an ordinary
+through-via and B.Cu west-side corridor. Native DRC remains at three inherited
+silkscreen warnings. V644's first R2/R3 source extension is rejected because
+its B.Cu trunk crosses the retained RTL_5V collector; the source join remains
+open and requires a separate corridor allocation.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus
