@@ -55,6 +55,15 @@ crossing. Reject this route implementation. The experiment does show that U2
 migration clears the lower 1V1/U2 corridor; the next attempt must regenerate
 the U1 source escapes and 1V1 departures as one field.
 
+The source-preserving U2-left trial keeps V35's proven U1 SPI source escapes,
+moves U2 10 mm left, regenerates only the SPI destination legs, moves C4, and
+adds the lower 1V1 fanout. Native SPI and lower-1V1 audits both pass with
+trace-removal controls. Native DRC reports eight findings: six inherited
+ground/silkscreen warnings and two real U1.55/XTAL_OUT local conflicts. No
+SPI crossing or short remains. Retain this as the current coordinated
+placement basis; the next repair must co-author the XTAL_OUT transition and
+U1.55 escape rather than abandon the U2 migration.
+
 ## Next implementation step
 
 Re-author the complete current support field from native pad coordinates on a
@@ -76,3 +85,5 @@ remaining work is coordinated route allocation and full Path-B validation.
 - `phase24_rtl9210b_v35_rtl1v1_audit.py`
 - `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_U2_LEFT_REROUTE-drc.rpt`
 - `phase24_rtl9210b_v35_u2_left_reroute.py`
+- `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_U2_LEFT_SOURCE_PRESERVED-drc.rpt`
+- `phase24_rtl9210b_v35_u2_left_source_preserved.py`

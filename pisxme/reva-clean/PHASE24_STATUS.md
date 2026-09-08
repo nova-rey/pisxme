@@ -28,6 +28,11 @@ native SPI and 1V1 audits pass, but naïve regenerated SPI source channels
 produce 14 native DRC violations, including five QFN-source shorts and an
 XTAL_OUT crossing. It does clear the lower 1V1/U2 corridor; the next pass
 must co-author U1 SPI source escapes and 1V1 departures.
+The source-preserving U2-left candidate is now the retained coordinated basis:
+native SPI and lower 1V1 audits pass, with no SPI crossing/short. Native DRC
+has eight findings, reduced to two real local U1.55/XTAL_OUT conflicts plus
+six inherited warnings. The next repair must co-author that crystal drop and
+U1.55 escape.
 V562 is the retained corrected support baseline: its native saved-board audit
 connects the complete RTL_1V1 and RTL_3V3 support groups with a working
 trace/zone-removal negative control. V563, V564, and V565 are rejected
