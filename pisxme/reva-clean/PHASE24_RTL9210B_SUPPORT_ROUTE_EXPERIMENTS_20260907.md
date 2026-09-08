@@ -1080,6 +1080,13 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V517 regenerates XTAL_IN on the V516 coallocated 1V1 basis. Native saved-board
+audits pass the complete V516 1V1 group and XTAL_IN group, with independent
+trace-removal negative controls. Native DRC rejects the candidate because the
+fixed XTAL_IN B.Cu vertical at x=102.5 crosses the new U1.25 B.Cu channel and
+violates via clearance. V517 is rejected; XTAL_IN's return spine must be
+reallocated together with the 1V1 channel. Path A and production CAD remain
+unchanged.
 V516 audit correction: stable KiCad UUID/geometry keys and transitive native
 graph traversal now pass U1.16/U1.25/U1.36 to C4.1, with a corrected negative
 control that removes the U1.25 branch and fails as required. V516 therefore

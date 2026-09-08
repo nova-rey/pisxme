@@ -6210,6 +6210,11 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V517 regenerates XTAL_IN beside the V516 1V1 field.
+Native 1V1 and XTAL_IN audits plus trace-removal negative controls pass, but
+native DRC rejects the fixed XTAL_IN B.Cu vertical crossing the new U1.25
+channel. XTAL_IN's return spine must be coallocated with 1V1; Path A and
+production CAD remain unchanged.
 2026-09-08: Corrected the V516 native connectivity audit to use stable
 KiCad UUID/geometry keys and a transitive graph walk. V516 now passes native
 U1.16/U1.25/U1.36-to-C4.1 connectivity and a branch-removal negative control;
