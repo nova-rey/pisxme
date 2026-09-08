@@ -2254,6 +2254,13 @@ Native DRC reports zero shorts, crossings, and clearance violations; the
 saved-board audit proves all six source pads connect to their transition vias,
 and six trace-removal negative controls pass. V462 is the strongest source
 fanout primitive, but it is not a complete Path-B route or support closure.
+V465 isolated the RX pair endpoint corridor from the other high-speed nets.
+Native DRC reduced the pair trial to one 0.134-mm connector-transition
+clearance, with zero shorts/crossings. V466 moved RX_N's transition 0.5 mm
+outboard and achieved native DRC zero shorts/crossings/clearances; the saved
+board audit confirms U1.64/J1.43 and U1.65/J1.41 connectivity, and two
+trace-removal negative controls pass. V466 is a valid RX-pair endpoint
+primitive, not full RTL9210B closure.
 V463 connected the six V462 source transitions to the J1 endpoints using
 distinct B.Cu horizontal rows and F.Cu endpoint launches. Native DRC found
 one real RXN/RXP clearance issue; V464 reused the proven V448/V328 connector
