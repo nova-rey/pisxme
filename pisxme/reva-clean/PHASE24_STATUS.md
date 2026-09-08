@@ -88,6 +88,12 @@ clearance envelope; V607 moved inward and collided with the SPISI endpoint
 via. V608 coordinated two endpoint transitions but still collided at the U2
 SPICLK pad field. The next pass must allocate U1 source and U2 endpoint
 channels together.
+V609-V614 rejected successive coordinated SPISI/SPISO3 endpoint variants for
+U2 ground, occupied-via, or lower-field contact/clearance. V615 lifts the
+SPISI bottom dogbone; both SPISI and SPISO3 native connectivity audits and
+trace-removal negative controls pass, with DRC at 10 inherited/local findings
+and no new short/crossing. Retain V615 as the coordinated two-net SPI
+sub-primitive.
 V578 replaced the first U1.33 5V departure with an exact-horizontal segment.
 Native saved-board connectivity then showed dangling 5V branches and DRC
 still reported the pad-32 clearance violation. Reject V578; V576 remains the

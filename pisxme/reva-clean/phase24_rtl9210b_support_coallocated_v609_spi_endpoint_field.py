@@ -1,0 +1,16 @@
+"""V609: coordinated SPISI/SPISO3 source and U2 endpoint field."""
+from pathlib import Path
+import pcbnew
+H=Path(__file__).resolve().parent;base=H/'PHASE24_RTL9210B_SUPPORT_COALLOCATED_V595_CLKREQ_LOCAL.kicad_pcb';out=H/'PHASE24_RTL9210B_SUPPORT_COALLOCATED_V609_SPI_ENDPOINT_FIELD.kicad_pcb'
+F,B=pcbnew.F_Cu,pcbnew.B_Cu;W=pcbnew.FromMM(.20)
+def P(x,y):return pcbnew.VECTOR2I_MM(float(x),float(y))
+def s(b,n,l,a,z):
+ t=pcbnew.PCB_TRACK(b);t.SetStart(P(*a));t.SetEnd(P(*z));t.SetLayer(l);t.SetWidth(W);t.SetNet(n);t.SetNetCode(n.GetNetCode());b.Add(t)
+def v(b,n,q):
+ x=pcbnew.PCB_VIA(b);x.SetPosition(P(*q));x.SetWidth(pcbnew.FromMM(.60));x.SetDrill(pcbnew.FromMM(.30));x.SetLayerPair(F,B);x.SetNet(n);x.SetNetCode(n.GetNetCode());b.Add(x)
+b=pcbnew.LoadBoard(str(base))
+# SPISI: source transition retained, endpoint moved west and dogboned below U2.
+n=b.FindNet('SPISI');s(b,n,F,(102.05,58.8),(99.5,58.8));v(b,n,(99.5,58.8));s(b,n,B,(99.5,58.8),(94.5,58.8));s(b,n,B,(94.5,58.8),(94.5,68.5));v(b,n,(94.5,68.5));s(b,n,F,(94.5,68.5),(94.5,69.4));s(b,n,F,(94.5,69.4),(96.1,69.4));s(b,n,F,(96.1,69.4),(96.1,70.0))
+# SPISO3: separate source channel and right-hand endpoint dogbone.
+n=b.FindNet('SPISO3');s(b,n,F,(102.05,60.4),(99.5,60.4));v(b,n,(99.5,60.4));s(b,n,B,(99.5,60.4),(96.5,60.4));s(b,n,B,(96.5,60.4),(96.5,68.5));v(b,n,(96.5,68.5));s(b,n,F,(96.5,68.5),(98.5,69.4));s(b,n,F,(98.5,69.4),(98.5,70.0))
+b.BuildListOfNets();pcbnew.ZONE_FILLER(b).Fill(b.Zones());b.Save(str(out));print(out)

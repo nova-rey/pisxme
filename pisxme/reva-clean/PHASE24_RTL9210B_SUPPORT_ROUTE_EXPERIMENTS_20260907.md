@@ -106,6 +106,11 @@ V605/V606/V607/V608 reject successive SPISO3 channel allocations: the first
 crossed SPISI, the next two entered lower power or endpoint clearance, and
 V608 still collided at the U2 SPICLK pad launch. The remaining SPI task is a
 co-authored U1 source plus U2 endpoint dogbone field.
+V609-V614 rejected successive coordinated SPISI/SPISO3 endpoint variants for
+U2 ground, occupied-via, or lower-field contact/clearance. V615 lifts the
+SPISI bottom dogbone; both nets pass native connectivity and independent
+trace-removal negative controls, with DRC at 10 inherited/local findings and
+no new short/crossing. Retain V615 as the coordinated two-net sub-primitive.
 V580 attempted ordinary-via returns for U1 ground pads 69, 45, and 66.
 Native DRC rejected the placement with true GND-to-USB/3V3 shorts and local
 QFN clearance violations. Reject V580; V579 remains the retained rail

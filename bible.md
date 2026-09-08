@@ -6588,6 +6588,11 @@ the shared source and endpoint channels together.
 progressed from SPISI crossing to lower power-field clearance and finally a
 coordinated endpoint collision at the U2 SPICLK pad row. The next SPI pass
 must co-author both U1 source escapes and U2 endpoint dogbones.
+2026-09-08: RTL9210B V609-V614 rejected coordinated SPISI/SPISO3 endpoint
+variants for U2 ground, occupied-via, and lower-field contact/clearance.
+V615 lifts the SPISI bottom dogbone; both nets pass native connectivity and
+trace-removal negative controls with no new DRC short/crossing. V615 is the
+retained coordinated two-net SPI sub-primitive.
 2026-09-08: RTL9210B V598/V599 rejected two further SPICS route classes.
 V598 shorted its B.Cu transition into retained RTL_1V1/RTL_5V fields; V599's
 direct F.Cu outer departure crossed the PEDET/5V/3V3/CLKREQ source field.
