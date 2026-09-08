@@ -1080,6 +1080,13 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V516 audit correction: stable KiCad UUID/geometry keys and transitive native
+graph traversal now pass U1.16/U1.25/U1.36 to C4.1, with a corrected negative
+control that removes the U1.25 branch and fails as required. V516 therefore
+closes the disposable U1.25 1V1 coallocation primitive and has no new local
+DRC errors; it is not a full-support or production candidate because the
+conflicting XTAL/RTL_3V3 spine segments were intentionally removed for this
+experiment. The earlier weaker V516 rejection remains historical evidence.
 V516 removes the exact XTAL_IN, XTAL_OUT, and RTL_3V3 spine segments that
 blocked V514/V515, then coauthors the U1.25 RTL_1V1 escape. The resulting
 native DRC has no new short, crossing, clearance, mask, or thermal errors;
