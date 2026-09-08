@@ -1,5 +1,11 @@
 # Append-only project bible
 
+2026-09-08: Replayed the JMS583 support author against the corrected NC39
+candidate. Native DRC reports 836 violations / 499 unconnected items,
+including one real JMS_REXT-to-JMS_AVDDL short and authored crossings. The
+trial is rejected route evidence; source parity remains PASS and the next
+support route must allocate native-pad-aware per-net escape corridors.
+
 2026-09-08: Corrected the live JMS583 source/PCB association path. A native
 endpoint-overlap repair removed stale U11 generated label atoms, and the
 shared selector maps restored pin 39 to the schematic's `NC_39` instead of

@@ -36,6 +36,13 @@ only.
   M-key candidate. Selector/contact-count audits pass; final JMS583
   land-pattern pad, paste, mask, courtyard, and exposed-pad authority remains
   open as documented in `PHASE24_JMS583_LAND_PATTERN_RECONCILIATION.md`.
+- The corrected NC39 source/placement candidate passes native schematic-to-PCB
+  pad-net parity with zero expected-pad mismatches. Its direct support replay,
+  `PHASE24_DUAL_MODE_STORAGE_NC39_SUPPORT_TRIAL.kicad_pcb`, is rejected route
+  evidence: native DRC reports 836 violations / 499 unconnected items,
+  including a real `JMS_REXT`-to-`JMS_AVDDL` short and authored crossings.
+  The next support implementation must use native-pad-aware per-net escape
+  allocation.
 - The current regenerated disposable placement candidate is
   `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb`; it is not
   production authority. The current fresh native result is recorded in
