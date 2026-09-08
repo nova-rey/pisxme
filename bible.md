@@ -6942,6 +6942,10 @@ negative control both pass; the V3 DRC report has no local shorting or
 crossing findings, with remaining crossings inherited from the donor USB
 fixture.
 
+The JMS_AVDD33 U11.19-to-C80.1 south-east escape passed native connectivity
+and a trace-removal negative control with no authored shorting/crossing class.
+It is retained as a support sub-primitive; complete rail routing remains open.
+
 The JMS crystal pad-20 sensitivity candidate passed native XIN/XOUT endpoint
 connectivity and its trace-removal negative control. It remains disposable
 evidence only because final JMS583 land-pattern pad geometry is still open.

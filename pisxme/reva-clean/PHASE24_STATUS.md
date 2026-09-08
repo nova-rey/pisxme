@@ -41,6 +41,11 @@ native U11.15-to-R81.1 connectivity passes, the trace-removal negative
 control passes, and no local shorting/track-crossing class remains. The six
 crossings in that report are inherited USB fixture artifacts at the donor
 CM5 source region.
+The `JMS_AVDD33` decoupler escape is likewise retained as a valid
+sub-primitive in `PHASE24_JMS583_AVDD33_PROBE-drc.rpt`: U11.19-to-C80.1
+native connectivity and the trace-removal negative control pass, with no
+authored shorting/crossing class. Full rail and support-field routing remains
+open.
 The pad-width sensitivity candidate is recorded in
 `PHASE24_JMS583_CRYSTAL_PAD20_NARROW-drc.rpt`: the disposable runtime
 footprint uses 0.20 mm pitch-direction pads and 0.15 mm support traces, and
