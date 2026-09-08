@@ -2188,3 +2188,10 @@ crossings; only one source-transition interaction remained, with the
 REFCLK_P via 0.4 mm from the REFCLK_N fanout. The result is the strongest
 REFCLK primitive so far, but not closure. The remaining work is co-allocation
 of the two transitions with the lane escape under the active rule basis.
+V444-V447 explored REFCLK_N left-side staggering; each retained a local
+clearance or crystal/no-connect interaction. V448 removed both XTAL nets for
+a valid isolation test and moved REFCLK_N below the U1 no-connect field.
+Native DRC reports zero shorts/crossings with only the inherited dangling
+RTL_3V3 and isolated-GND warnings; the V448 audit passes both REFCLK endpoint
+groups and two trace-removal negative controls. V448 is the retained REFCLK
+primitive pending full lane/REFCLK co-allocation.

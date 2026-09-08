@@ -6123,3 +6123,7 @@ through-hole metadata artifact.
 eliminated connector-side errors; one 0.4-mm source-transition interaction
 remains. Preserve V443 as the best REFCLK primitive while co-allocating the
 transition vias with lane escape.
+2026-09-08: RTL9210B V448 is the first valid isolated REFCLK primitive:
+native DRC reports zero shorts/crossings with only inherited warnings, and
+the saved-board audit plus two trace-removal negative controls pass. REFCLK
+remains open for co-allocation with the lane source field and full support.
