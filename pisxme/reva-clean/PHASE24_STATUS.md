@@ -2,8 +2,15 @@
 
 ## AUTHORITATIVE CURRENT STATE — 2026-09-08
 
-The active work item remains isolated RTL9210B Path-B support qualification;
-Path A, production/acreage CAD, and unrelated Phase 24 work are preserved.
+The active work item is the protected Path-A dual-mode storage implementation
+and the remaining clean-board Phase 24 closure. RTL9210B Path B is rejected
+for the current Rev-A package/DFM contract; its isolated artifacts remain
+qualification evidence only. Path A, production/acreage CAD, and unrelated
+Phase 24 work are preserved.
+The current Path-A storage placement candidate was freshly checked with native
+KiCad on 2026-09-08: 876 DRC violations and 499 unconnected items, including
+real track crossings and M2_3V3/FORCE_NVME shorts. It is not a Phase 24 pass;
+the next work must regenerate/repair from authoritative storage connectivity.
 The new `PHASE24_RTL9210B_QFN_ORIENTATION180_PROBE.kicad_pcb` is the current
 disposable placement basis for the next QFN field pass: native DRC reports
 four inherited warnings, and the U1.39-to-U2.8 RTL_3V3 corridor in

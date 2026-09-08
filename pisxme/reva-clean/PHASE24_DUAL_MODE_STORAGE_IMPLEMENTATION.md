@@ -39,6 +39,9 @@ only.
   intended CM5/U12/U11/coupling-capacitor endpoint pairs on the regenerated
   candidate. This proves native endpoint connectivity only; it does not waive
   the physical DRC findings above.
+  Fresh native DRC of the current placement candidate reports 876 violations
+  and 499 unconnected items, including real crossings and M2_3V3/FORCE_NVME
+  shorts. The dual-mode island remains open integration work.
 
 ## CURRENT OPEN GATES
 

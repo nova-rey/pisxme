@@ -6868,3 +6868,7 @@ ordinary 0.60/0.30 mm via plus 0.20 mm clearance requires 0.95 mm separation.
 V663/V664 reproduce the source-field shorts/crossings. Reject RTL9210B Path B
 for the current Rev-A package/DFM contract; retain Path A and do not relax
 rules or alter production CAD.
+2026-09-08: Fresh native DRC of the current Path-A storage placement candidate
+reports 876 violations and 499 unconnected items, including real crossings
+and M2_3V3/FORCE_NVME shorts. Preserve this as the current open integration
+gate; do not infer closure from candidate names or historical fixtures.
