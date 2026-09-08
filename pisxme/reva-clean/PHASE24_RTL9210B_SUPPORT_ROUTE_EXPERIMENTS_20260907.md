@@ -2870,7 +2870,9 @@ The native saved-board audit passed the U1.39/U2.8 endpoint assertion and its
 trace-removal negative control. Native DRC rejected the trial: the first
 diagonal exit produced U1.38/U1.55 clearance conflicts; the revised exit
 still produced an RTL_1V1/RTL_3V3 short, adjacent USB-pad clearance and
-solder-mask conflicts, and inherited warnings. The route class is rejected,
-not the RTL9210B architecture. The raw PCB and DRC receipt are retained;
+solder-mask conflicts, and inherited warnings. V622's shallow dogbone also
+produced a native RTL_3V3/USB_DM short plus via hole and solder-mask
+clearance errors. The route class is rejected, not the RTL9210B architecture.
+The raw PCB and DRC receipt are retained;
 Path A and production CAD remain unchanged. The next attempt must co-author
 the complete lower QFN escape allocation rather than move one via or branch.

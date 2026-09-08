@@ -25,6 +25,11 @@ with an exact negative control, but native DRC rejects the below-REFCLK
 shared return for XTAL_OUT, LANE0_RXP, and RTL_3V3 conflicts. That route
 class is exhausted; coherent bottom source-field regeneration remains next.
 Path A and production CAD remain unchanged.
+2026-09-08: V622 tested a shallow upper-left U1.39 RTL_3V3 dogbone. Native
+connectivity and the trace-removal negative control passed, but native DRC
+found a real RTL_3V3-to-USB_DM short plus QFN/via hole and solder-mask
+clearance violations. The scalar U1.39 escape class is rejected; the next
+trial must regenerate the complete lower QFN field under unchanged rules.
 2026-09-08: RTL9210B V549 proves U1.55/U1.60/U1.63 1V1 connectivity and the
 exact negative control, but native DRC rejects the shared return for REFCLK,
 RTL_3V3, and LANE0_RXP crossings. The outward shared-return class is

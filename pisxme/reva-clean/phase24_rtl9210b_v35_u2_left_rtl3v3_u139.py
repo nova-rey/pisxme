@@ -20,5 +20,5 @@ for src,esc in [((94.05,67.20),(87.0,67.20)),((94.05,68.80),(90.0,68.80)),((94.0
 s(b,n1,B,(87,84),(104,84));v(b,n1,(104,84));s(b,n1,F,(104,84),(104,82))
 # U1.39 leaves on a steeper upper-left dogbone so the first segment clears
 # the adjacent USB_DM pad under the active 0.20 mm width/clearance rules.
-n3=b.FindNet('RTL_3V3');s(b,n3,F,(94.05,68.4),(92.0,67.6));v(b,n3,(92.0,67.6));s(b,n3,B,(92.0,67.6),(80.2,67.6));v(b,n3,(80.2,67.6));s(b,n3,F,(80.2,67.6),(80.2,80.0))
+n3=b.FindNet('RTL_3V3');s(b,n3,F,(94.05,68.4),(93.6,68.3));v(b,n3,(93.6,68.3));s(b,n3,B,(93.6,68.3),(80.2,68.3));v(b,n3,(80.2,68.3));s(b,n3,F,(80.2,68.3),(80.2,80.0))
 b.BuildListOfNets();pcbnew.ZONE_FILLER(b).Fill(b.Zones());b.Save(str(out));print(out)

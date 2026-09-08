@@ -1,20 +1,32 @@
 ** Drc report for PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_U2_LEFT_RTL3V3_U139.kicad_pcb **
-** Created on 2026-09-08T10:02:00 **
+** Created on 2026-09-08T10:05:34 **
 ** Report includes: Errors, Warnings **
 
-** Found 9 DRC violations **
-[shorting_items]: Items shorting two nets (nets RTL_1V1 and RTL_3V3)
+** Found 12 DRC violations **
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1145 mm)
     Local override; error
-    @(94.0500 mm, 67.2000 mm): Track [RTL_1V1] on F.Cu, length 7.0500 mm
-    @(92.0000 mm, 67.6000 mm): Via [RTL_3V3] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0454 mm)
-    Local override; error
-    @(94.0500 mm, 68.4000 mm): Track [RTL_3V3] on F.Cu, length 2.2006 mm
+    @(94.0500 mm, 68.4000 mm): Track [RTL_3V3] on F.Cu, length 0.4610 mm
     @(94.0500 mm, 68.0000 mm): Pad 38 [USB_DM] of U1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(94.0500 mm, 68.8000 mm): Track [RTL_1V1] on F.Cu, length 4.0500 mm
+    @(93.6000 mm, 68.3000 mm): Via [RTL_3V3] on F.Cu - B.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0669 mm)
     Local override; error
     @(96.0000 mm, 73.9500 mm): Track [RTL_1V1] on F.Cu, length 3.7473 mm
     @(96.4000 mm, 73.9500 mm): Pad 56 [<no net>] of U1 on F.Cu
+[shorting_items]: Items shorting two nets (nets USB_DM and RTL_3V3)
+    Local override; error
+    @(94.0500 mm, 68.0000 mm): Pad 38 [USB_DM] of U1 on F.Cu
+    @(93.6000 mm, 68.3000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0662 mm)
+    Rule: board setup constraints hole; error
+    @(94.0500 mm, 68.0000 mm): Pad 38 [USB_DM] of U1 on F.Cu
+    @(93.6000 mm, 68.3000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(93.6000 mm, 68.3000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+    @(94.0500 mm, 68.0000 mm): Pad 38 [USB_DM] of U1 on F.Cu
 [isolated_copper]: Isolated copper fill
     Local override; warning
     @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
@@ -69,14 +81,14 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(74.2000 mm, 80.0000 mm): Pad 3 [RTL_3V3] of U2 on F.Cu
-    @(80.2000 mm, 67.6000 mm): Track [RTL_3V3] on F.Cu, length 12.4000 mm
+    @(80.2000 mm, 68.3000 mm): Track [RTL_3V3] on F.Cu, length 11.7000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(94.0500 mm, 68.4000 mm): Track [RTL_3V3] on F.Cu, length 2.2006 mm
-    @(94.8000 mm, 66.0500 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(94.0500 mm, 68.4000 mm): Track [RTL_3V3] on F.Cu, length 0.4610 mm
+    @(94.8000 mm, 66.0500 mm): Track [RTL_3V3] on F.Cu, length 2.7281 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(94.0500 mm, 68.4000 mm): Track [RTL_3V3] on F.Cu, length 2.2006 mm
+    @(94.0500 mm, 68.4000 mm): Track [RTL_3V3] on F.Cu, length 0.4610 mm
     @(94.8000 mm, 73.9500 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error

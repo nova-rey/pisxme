@@ -7193,7 +7193,7 @@ RTL_3V3 clearance/solder-mask conflicts with adjacent USB pads, and inherited
 warnings. The earlier diagonal version reported eight violations; the revised
 exit reduced neither the root QFN escape constraint nor the shorting class.
 This is a route-implementation failure, not a Path-B architecture or Path-A
-failure. The candidate is preserved as raw V620/V621 evidence; no production
+failure. The candidate is preserved as raw V620/V621/V622 evidence; no production
 CAD or Path A changed. The next trial must allocate the complete lower QFN
 source field coherently, with the active 0.20 mm width/clearance rules
 unchanged.
