@@ -4,7 +4,7 @@ import pcbnew
 
 HERE = Path(__file__).resolve().parent
 BASE = HERE / 'PHASE24_RTL9210B_ORIENTATION180_U139_PROBE.kicad_pcb'
-OUT = HERE / 'PHASE24_RTL9210B_ORIENTATION180_U134_PROBE.kicad_pcb'
+OUT = HERE / 'PHASE24_RTL9210B_ORIENTATION180_U134_PROBE_V2.kicad_pcb'
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 W = pcbnew.FromMM(0.20)
 
@@ -19,7 +19,7 @@ def via(b, n, q):
 b = pcbnew.LoadBoard(str(BASE)); n = b.FindNet('RTL_3V3')
 # U1.34 leaves the west lower edge, crosses the open B.Cu corridor, and
 # returns beside the U2.3 endpoint without using a plane layer.
-seg(b, n, F, (94.05, 73.20), (92.00, 73.20)); via(b, n, (92.00, 73.20))
-seg(b, n, B, (92.00, 73.20), (74.20, 73.20)); via(b, n, (74.20, 73.20))
+seg(b, n, F, (94.05, 73.20), (90.00, 73.20)); via(b, n, (90.00, 73.20))
+seg(b, n, B, (90.00, 73.20), (74.20, 73.20)); via(b, n, (74.20, 73.20))
 seg(b, n, F, (74.20, 73.20), (74.20, 80.00))
 b.BuildListOfNets(); pcbnew.ZONE_FILLER(b).Fill(b.Zones()); b.Save(str(OUT)); print(OUT)

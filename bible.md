@@ -6721,3 +6721,8 @@ was completed and that routing/release validation is the live open gate.
 the obsolete SATA-only/NVMe-excluded description to the implemented dual-mode
 storage architecture. Historical fixture copies and legacy validation scripts
 were left unchanged as evidence and are not current authoring inputs.
+2026-09-08: V631 separated the RTL9210B 5V/3V3 transition field farther west.
+Native DRC returned to four inherited warnings with no shorting, crossing, or
+clearance class. U1.17/U1.33/C5.1 RTL_5V and both lower RTL_3V3 endpoint
+groups pass saved-board connectivity; removing all rail traces breaks all
+three. Retain V631 as disposable source-field evidence.

@@ -103,6 +103,11 @@ V630 attempted a separated U1.33 RTL_5V departure. It retained both lower
 but the U1.33 0.20-mm source track remains only 0.0769 mm from adjacent
 U1.32 no-connect pad geometry. Reject this route and evaluate an alternate
 authoritative land pattern/package; do not relax the active routing rule.
+V631 then separated the transition field farther west. It retains native
+connectivity for U1.17/U1.33/C5.1 RTL_5V and both lower RTL_3V3 endpoint
+groups, with all-rail trace removal breaking all three groups. Native DRC is
+four inherited warnings and has no shorting, crossing, or clearance class.
+Retain it as the current disposable coordinated rail basis.
 
 Re-author the complete current support field from native pad coordinates on a
 fresh V35-derived disposable board: first allocate all three rails and the

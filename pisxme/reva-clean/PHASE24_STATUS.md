@@ -23,6 +23,12 @@ The two lower RTL_3V3 channels remain connected, but the current QFN escape
 field is not manufacturable at the enforced width. Reject V630; this is now
 an alternate land-pattern/package authority problem, not a rule-relaxation
 opportunity.
+V631 is the retained coordinated rail field on the 180-degree basis. It
+routes U1.17/U1.33/C5.1 RTL_5V and the U1.34/U2.3 and U1.39/U2.8 lower
+RTL_3V3 channels with ordinary 0.60/0.30-mm vias. Native DRC reports only the
+four inherited warnings, with no shorting, crossing, or clearance class.
+Native connectivity passes all three endpoint groups, and removing all rail
+tracks breaks all three. This remains a disposable support-field pass.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus
