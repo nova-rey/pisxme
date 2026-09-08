@@ -1673,3 +1673,19 @@ to y=68.8 mm. It reduced the unconnected count to 13, but native DRC reported
 652 findings with real RTL_1V1 shorts into RTL_3V3, REFCLK_P/N, and XTAL_OUT.
 Reject; independent via placement cannot safely coexist with the existing
 clock field.
+
+## V267–V268 crystal escape trials — rejected
+
+V267 and V268 attempted first-pass crystal routes from the scrubbed V266
+placement. Their diagonal QFN exits and capacitor dogbones produced real
+XTAL/rail/ground conflicts or crossings and were rejected as implementations.
+
+## V269 corrected crystal field — retained, not promoted
+
+V269 preserves the corrected straight-out QFN exits, uses separated ordinary
+through-via corridors, and fixes the capacitor pad-side dogbones. Native
+connectivity confirms U1.53→Y1.1, U1.54→Y1.2, C1.1→Y1.1, and C2.1→Y1.2.
+Native DRC reports 293 findings / 32 opens with no `shorting_items` or
+`tracks_crossing` class and zero footprint errors. Rail, reset, SPI, and
+remaining support connections are still open, so V269 is retained as the
+crystal-field basis rather than promoted as a complete Path-B board.

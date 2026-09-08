@@ -5828,3 +5828,8 @@ regeneration; Path A and production CAD remain unchanged.
 baseline. Scrubbed native DRC found no shorting or track-crossing class and
 zero footprint errors; 228 findings / 36 opens are expected before route
 regeneration. Path A and production CAD remain unchanged.
+2026-09-07: Retained RTL9210B V269 as the corrected crystal-field basis.
+Native connectivity passed U1.53/Y1.1, U1.54/Y1.2, C1.1/Y1.1, and C2.1/Y1.2;
+native DRC reported 293 findings / 32 opens with no shorting or crossing class
+and zero footprint errors. V267/V268 were rejected; Path A and production CAD
+remain unchanged.

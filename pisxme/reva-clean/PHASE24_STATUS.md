@@ -6776,3 +6776,7 @@ V266 is the retained scrubbed placement baseline: after correcting the V265
 Y1/C1 overlap, native DRC reports 228 findings / 36 opens with no shorting or
 track-crossing class and zero footprint errors. Support copper is intentionally
 absent; route regeneration now starts from this placement.
+V269 is the retained crystal-field basis: four native net joins (U1/Y1/C1/C2)
+pass, while DRC reports 293 findings / 32 opens with no shorts/crossings and
+zero footprint errors. V267/V268 are rejected crystal route implementations;
+the remaining rail, reset, SPI, and high-speed support field is open.
