@@ -6672,3 +6672,8 @@ basis. Native DRC rejected the route implementation with 30 findings,
 including source-pad shorts/clearance, RSET adjacency, and edge-clearance
 violations. The 0-degree no-copper placement probe remains retained; Path A
 and production CAD remain unchanged.
+2026-09-08: V625 moved the U1.39 RTL_3V3 via farther outboard on the native
+0-degree orientation. Native DRC still found source-segment clearance and
+solder-mask bridging at adjacent USB_DP/USB_DM pads. The failure precedes the
+via corridor and confirms the intrinsic 0.4 mm QFN/strict-width constraint;
+V625 is rejected route evidence. Path A and production CAD remain unchanged.

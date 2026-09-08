@@ -2904,3 +2904,12 @@ QFN clearance/hole violations, RSET adjacency, and board-edge clearance
 errors. This is a route implementation failure; the no-copper 0-degree probe
 remains a valid placement basis. No rules, Path A artifacts, or production CAD
 were changed.
+## V625 farther-out U1.39 perimeter escape — rejected
+
+V625 moved the U1.39 RTL_3V3 via farther outboard on the native 0-degree
+orientation and kept the B.Cu destination corridor separate. Native DRC still
+found the F.Cu source segment entering adjacent USB_DP/USB_DM pad bodies and
+bridging their solder mask. The failure occurs before the via/destination
+geometry, so this route variant is rejected as implementation evidence. The
+0-degree placement probe remains retained, and Path A/production CAD are
+unchanged.

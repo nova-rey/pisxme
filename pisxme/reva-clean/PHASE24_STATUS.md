@@ -7215,3 +7215,9 @@ implementation (V624): native DRC reports 30 findings, including source-pad
 shorts/clearances, RSET adjacency, and edge-clearance violations. The clean
 0-degree no-copper probe remains retained; V624 does not reject its placement
 or the RTL9210B architecture.
+V625 tested a farther-out U1.39 perimeter escape on the native 0-degree
+basis. Native DRC still rejects the first F.Cu segment at adjacent USB_DP/DM
+pad bodies and solder-mask bridging, despite moving the via well outside the
+field. This confirms an intrinsic 0.4 mm-pitch QFN/strict-width source escape
+constraint; V625 is rejected route evidence. No Path A or production CAD
+changed.
