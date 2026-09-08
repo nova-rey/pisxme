@@ -6553,3 +6553,9 @@ RTL_3V3 field. Native 5V/3V3 audits and both trace-removal negative controls
 pass. Native DRC is 11 findings with 20 opens; the 5V source group is no
 longer open. V579 is retained as the current 5V/3V3 candidate, not full
 Path-B closure.
+2026-09-08: RTL9210B V589 attempted a local B.Cu PEDET route from R2.1 to
+U1.8. Native DRC reported 13 violations and 18 opens, including true PEDET
+crossings with the retained RTL_5V vertical corridor and RTL_1V1 field. V589
+is rejected; V583 remains the retained rail candidate. The live JMS583
+support network is already instantiated, so older support-network TODO prose
+is superseded by the current route-allocation/DRC gate.

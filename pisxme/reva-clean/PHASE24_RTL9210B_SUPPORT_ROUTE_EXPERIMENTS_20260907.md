@@ -72,6 +72,10 @@ clear the 3V3 via. Native 5V/3V3 audits and both trace-removal negative
 controls pass; native DRC falls to 9 findings with 19 opens and no 5V
 shorting/crossing or clearance class. Retain V583 as the current rail
 candidate, not full Path-B closure.
+V589 is rejected: the attempted local B.Cu PEDET route from R2.1 toward U1.8
+crossed the retained RTL_5V vertical corridor and RTL_1V1 field. Native DRC
+reported 13 violations and 18 opens. The lower open count does not outweigh
+the true crossings; PEDET needs a new local source/escape allocation.
 V580 attempted ordinary-via returns for U1 ground pads 69, 45, and 66.
 Native DRC rejected the placement with true GND-to-USB/3V3 shorts and local
 QFN clearance violations. Reject V580; V579 remains the retained rail

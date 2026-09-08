@@ -48,6 +48,11 @@ clear the 3V3 via. Native 5V/3V3 audits and both trace-removal negative
 controls pass; native DRC falls to 9 findings with 19 opens and no 5V
 shorting/crossing or clearance class. Retain V583 as the current rail
 candidate, not full Path-B closure.
+V589 is rejected: a local B.Cu PEDET route from R2.1 toward U1.8 reduced the
+saved-board open count by one, but native DRC found true PEDET crossings with
+the retained RTL_5V vertical corridor and RTL_1V1 field. It is not evidence
+against the PEDET function; the next valid experiment must relocate the local
+PEDET source/escape or allocate a legal corridor around both fields.
 V578 replaced the first U1.33 5V departure with an exact-horizontal segment.
 Native saved-board connectivity then showed dangling 5V branches and DRC
 still reported the pad-32 clearance violation. Reject V578; V576 remains the
@@ -78,7 +83,10 @@ the retained rail candidate.
 
 Re-author the RTL9210B local QFN source field coherently at the strict
 0.20 mm routing basis, especially U1.33/U1.34 adjacency, the nearby 1V1,
-3V3, RSET, crystal, and exposed-ground fields. Then revalidate RTL_5V,
+3V3, RSET, crystal, PEDET, and exposed-ground fields. The live JMS583
+support-network circuitry is already instantiated; the remaining issue is
+physical saved-board connectivity/DRC, not support-network creation. Then
+revalidate RTL_5V,
 REFCLK, lane-0, controls, SPI, USB, M.2, power, firmware, native DRC, and
 full Path-B comparison. The 5V candidate must clear native clearance rules;
 saved connectivity alone is insufficient.
