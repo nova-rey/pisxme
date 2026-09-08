@@ -494,3 +494,8 @@ current placement candidate still fails with 64 actionable mismatches,
 including missing R24/R32/R33 support pads, incorrect J3.69 PEDET ownership,
 selector pin-map mismatches, and missing/incorrect M.2 no-connect and power
 contacts. This remains an open source-authority/parity gate.
+
+The complete ten-net JMS583 support connectivity audit passes on the AVDDL
+local-zone basis, including the combined track/zone-removal negative control.
+Support connectivity is a validated primitive; USB3/SATA/mode/DRC/ERC and
+full-board gates remain open.

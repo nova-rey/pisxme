@@ -18,16 +18,21 @@ PAIRS=[
  ('JMS_VDDREG_5V','U11','1','L10','2'), ('LXO','U11','64','L10','1'),
 ]
 def conn(b,a,z):
- b.BuildConnectivity(); return z in b.GetConnectivity().GetConnectedItems(a)
+ b.BuildConnectivity();ca=b.GetConnectivity().GetConnectedItems(a);cz=b.GetConnectivity().GetConnectedItems(z)
+ return z in ca or any(x in cz for x in ca if isinstance(x,pcbnew.ZONE))
 b=pcbnew.LoadBoard(str(PCB));u=b.FindFootprintByReference('U11')
 checks=[]
 for name,ra,pa,rb,pb in PAIRS:
  a=b.FindFootprintByReference(ra).FindPadByNumber(pa);z=b.FindFootprintByReference(rb).FindPadByNumber(pb)
  if a is None or z is None or a.GetNetname()!=name or z.GetNetname()!=name: raise SystemExit('FAIL endpoint authority '+name)
  checks.append((a,z))
-if not all(conn(b,a,z) for a,z in checks): raise SystemExit('FAIL complete JMS583 support connectivity')
+if not all(conn(b,a,z) for a,z in checks):
+ for row,(a,z) in zip(PAIRS,checks): print(row[0],conn(b,a,z))
+ raise SystemExit('FAIL complete JMS583 support connectivity')
 codes={b.FindNet(name).GetNetCode() for name,*_ in PAIRS}
 for item in list(b.GetTracks()):
  if item.GetNetCode() in codes:b.RemoveNative(item)
+for zone in list(b.Zones()):
+ if zone.GetNetCode() in codes:b.RemoveNative(zone)
 if any(conn(b,a,z) for a,z in checks): raise SystemExit('FAIL complete support negative control')
 b.Save(str(NEG));print('PASS complete JMS583 support connectivity; PASS trace-removal negative control')

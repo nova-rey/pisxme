@@ -563,6 +563,13 @@ creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
 
+The complete ten-net JMS583 support audit passes on
+`PHASE24_DUAL_MODE_STORAGE_FULL7_AVDDL_local_zone.kicad_pcb`: REXT, XIN,
+XOUT, RESET_N, AVDD33, AVDDL, VCCO, VCCK, VDDREG_5V, and LXO connect by
+native pads/tracks/zones. Its combined negative control removes every support
+track and zone and fails as required. Native DRC remains 514 inherited
+findings; this closes the support connectivity primitive only.
+
 The retained production-width crystal discriminator uses the same native
 split-layer corridor but 0.20 mm tracks rather than the earlier sensitivity
 probe's 0.15 mm tracks. Both U11 crystal endpoints pass native connectivity

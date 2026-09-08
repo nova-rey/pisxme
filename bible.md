@@ -7432,3 +7432,10 @@ as PHASE24_DUAL_MODE_STORAGE_FULL7_LXO_below_vddreg. Native U11.64-to-L10.1
 connectivity and the trace-removal negative control passed. Native DRC remains
 514 findings with no LXO-authored short/crossing class; AVDDL and higher-level
 storage/Phase 24 gates remain open.
+
+2026-09-08: Closed the JMS583 support connectivity primitive on
+PHASE24_DUAL_MODE_STORAGE_FULL7_AVDDL_local_zone. Native connectivity passed
+for all ten support nets, including zone-mediated AVDDL/VDDREG paths, and the
+combined negative control removed all support tracks and zones and failed as
+required. Native DRC remains 514 inherited findings; full storage and Phase
+24 closure remain open.
