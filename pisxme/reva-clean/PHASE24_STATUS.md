@@ -105,6 +105,12 @@ unconnected items; the new mixed-layer route has no JMS_AVDDL short or
 crossing, but ordinary-via plane-clearance findings remain open with the
 board's inherited plane evidence. Full support and manufacturing closure
 remain open.
+The reset-delay branch was added to the same cohort with R81.1 exiting on
+its free side to C85.1. The first branch attempt shorted adjacent R81.2 and
+was rejected; V16's corrected branch passes the native eight-net endpoint
+audit including R81.1-to-C85.1 and the combined trace-removal negative
+control. Native DRC remains 819 violations / 499 inherited unconnected
+items, so this is support progress rather than Phase 24 closure.
 The two-via REXT corridor V1 was then rejected: its lower transition lands
 in the existing C90/R33 support field and its through-vias also incur the
 saved-board plane-clearance findings. Native DRC reports 824 violations /

@@ -13,7 +13,7 @@ def route(b,name,ref,pad,points):
     pts=[src]+points
     for a,z in zip(pts,pts[1:]): seg(b,n,a,z)
 b=pcbnew.LoadBoard(str(BASE));u=b.FindFootprintByReference('U11')
-placements={'R81':(125,145),'C80':(148,143),'C81':(148,147),'C82':(120,147)}
+placements={'R81':(125,145),'C85':(130,145),'C80':(148,143),'C81':(148,147),'C82':(120,147)}
 for ref,q in placements.items(): b.FindFootprintByReference(ref).SetPosition(P(*q))
 b.FindFootprintByReference('L10').SetPosition(P(136,125));b.FindFootprintByReference('L10').SetOrientationDegrees(180)
 b.FindFootprintByReference('Y10').SetPosition(P(150,115))
@@ -28,6 +28,8 @@ for name in ('JMS_RESET_N','JMS_AVDD33','JMS_AVDDL','JMS_VCCO','JMS_VCCK','JMS_V
 # passive from its free pad side, as proven in the individual probes.
 route(b,'JMS_RESET_N','U11','15',[(133,137.6),(133,143),(122,143),(122,145)])
 route(b,'JMS_RESET_N','R81','1',[(122,145)])
+route(b,'JMS_RESET_N','R81','1',[(124,146),(129.5,146),(129.5,145)])
+route(b,'JMS_RESET_N','C85','1',[(129.5,145)])
 route(b,'JMS_AVDD33','U11','19',[(142.2,140),(147,140),(147,143)])
 route(b,'JMS_AVDD33','C80','1',[(147,143)])
 na=b.FindNet('JMS_AVDDL'); s=xy(u.FindPadByNumber('20').GetPosition()); d=xy(b.FindFootprintByReference('C83').FindPadByNumber('1').GetPosition())

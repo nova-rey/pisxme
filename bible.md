@@ -7045,6 +7045,12 @@ native endpoint audit and combined trace-removal negative control pass; V14
 has 819 violations / 499 unconnected items, with no authored AVDDL
 short/crossing but recurring plane-clearance findings still open.
 
+2026-09-08: Corrected the JMS583 reset-delay cohort branch. The first branch
+left R81.1 through adjacent R81.2 and was rejected; V16 exits the free side
+of R81 and reaches C85.1. Native eight-net endpoint connectivity and the
+combined trace-removal negative control pass. DRC remains 819 violations /
+499 inherited unconnected items; no validation rule was relaxed.
+
 2026-09-08: Rejected the JMS REXT two-via corridor V1. Native DRC found the
 lower transition in the C90/R33 support field and plane-clearance findings on
 the ordinary through-vias. It remains disposable route evidence only; the

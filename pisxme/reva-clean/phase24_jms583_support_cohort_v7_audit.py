@@ -36,6 +36,9 @@ checks = [
     (u11.FindPadByNumber(pin), board.FindFootprintByReference(ref).FindPadByNumber(pad))
     for _net, pin, ref, pad in PAIRS
 ]
+r81 = board.FindFootprintByReference("R81")
+c85 = board.FindFootprintByReference("C85")
+checks.append((r81.FindPadByNumber("1"), c85.FindPadByNumber("1")))
 if not all(connected(board, src, dst) for src, dst in checks):
     raise SystemExit("FAIL eight-net JMS583 support cohort connectivity")
 
