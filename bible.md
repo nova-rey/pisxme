@@ -6210,6 +6210,11 @@ M.2 supply launch. Native saved-board connectivity and one trace-removal
 negative control pass. Native DRC has zero errors; nine inherited
 incomplete-fixture warnings remain. Remaining supply pins and support nets
 stay open; no Path-A or production-CAD change.
+2026-09-08: RTL9210B V509-V511 test U1.40 RTL_1V1 source-field escapes.
+Native connectivity and negative controls pass in each candidate, while DRC
+rejects successive corridors at U1.41/U1.42, GND pad 45, and no-connect pad
+48. The remaining U1.40 experiment must use a via escape outside the QFN
+envelope; Path A and production CAD remain unchanged.
 2026-09-08: RTL9210B V508 tests U1.25 RTL_1V1 with an early B.Cu/F.Cu return.
 Native connectivity and the trace-removal negative control pass, but native
 DRC rejects the route for DEVSLP/no-connect pad contact and crossings into

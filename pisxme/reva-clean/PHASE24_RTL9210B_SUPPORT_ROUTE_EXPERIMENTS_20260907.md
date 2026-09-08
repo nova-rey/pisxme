@@ -1080,6 +1080,14 @@ one trace-removal negative control pass. Native DRC has zero errors; nine
 inherited incomplete-fixture warnings remain. V491 is retained as the
 RTL_5V branch primitive; remaining supply pins and support nets stay open.
 No Path-A or production CAD changed.
+V509 tests U1.40 RTL_1V1 with a lower-left F.Cu dogleg into the V506 trunk;
+native connectivity and the negative control pass, but DRC contacts U1.41/
+U1.42 USB pads. V510 departs rightward and clears those pads, but its return
+corridor contacts U1 GND pad 45. V511 lowers that corridor; it then contacts
+U1 pad 48 (no-connect). These are rejected source-field geometries. The
+remaining U1.40 work therefore requires an explicit via escape outside the
+QFN envelope, not another same-layer lower-edge extension. Path A and
+production CAD remain unchanged.
 V508 tests U1.25 RTL_1V1 with an early B.Cu/F.Cu return into the V506
 left-side trunk. Native saved-board connectivity and the trace-removal
 negative control pass. Native DRC rejects the candidate because the U1.25
