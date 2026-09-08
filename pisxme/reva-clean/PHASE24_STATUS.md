@@ -120,6 +120,10 @@ codes before adding tracks, eliminating its SWIG proxy failure. The rerun of
 the co-authored U1.52/crystal candidate is rejected by native DRC: XTAL_OUT
 crosses XTAL_IN and the retained 1V1 field, XTAL_IN crosses the shifted 3V3
 transition, and a residual 3V3 segment dangles. No production CAD changed.
+V655's joint U1.52/crystal field is rejected: native DRC reports an XTAL_IN /
+XTAL_OUT source crossing, XTAL_OUT contact with the shifted 3V3 transition,
+and a 3V3 return collision with the retained U1.40 1V1 corridor. The source
+and support field now requires coherent local relocation/reauthoring.
 V648's first SPISI source-to-U2.5 channel is rejected: its B.Cu corridor
 crosses the retained RTL_3V3 source trunk and RTL_5V collector. Native DRC
 still validates the rest of the fixture, but SPISI remains open for a separate

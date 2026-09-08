@@ -170,6 +170,10 @@ net codes before creating copper. The rerun remains a rejected route
 implementation: native DRC reports XTAL_IN/XTAL_OUT and retained-rail
 crossings plus a dangling 3V3 segment. This candidate does not invalidate the
 accepted 3V3 field.
+V655's joint U1.52/crystal candidate is rejected. Native DRC reports the
+adjacent XTAL source crossing, XTAL_OUT versus shifted 3V3 transition, and
+3V3 return versus retained U1.40 1V1 corridor. Further scalar nudges are not
+credible; reauthor the local support field coherently.
 V648's first SPISI route is rejected because its B.Cu source corridor crosses
 the retained RTL_3V3 and RTL_5V collectors. The endpoint route class remains
 open; allocate SPI separately from the rail field.

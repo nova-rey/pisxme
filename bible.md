@@ -6819,3 +6819,6 @@ reject the relocation and co-author crystal support with the retained fields.
 SetNet, then reran the U1.52/crystal co-author candidate. Native DRC rejected
 it for XTAL pair/rail crossings and a dangling 3V3 segment; production CAD and
 accepted rail geometry remain unchanged.
+2026-09-08: V655 tested a joint U1.52/crystal and shifted-3V3 field. Native
+DRC rejected it for XTAL source crossing and 3V3/XTAL and 3V3/1V1 collisions.
+The next solution must coherently reauthor or relocate the local support field.
