@@ -1,19 +1,20 @@
 # Phase 24 storage-island upgrade blocker
 
-## AUTHORITATIVE CURRENT STATE — 2026-09-07
+## AUTHORITATIVE CURRENT STATE — 2026-09-08
 
 This is an open implementation-risk record, not a terminal blocker. The live
 JMS583 support network is already instantiated in the authoritative schematic
 and in the disposable routed-support candidates; older text below that says it
-“needs to be instantiated” is superseded historical wording. Current Path-B
-work is RTL9210B parallel qualification, with V100 the promoted disposable
-1V1/XTAL support basis. Path A remains preserved and is not being replaced.
+“needs to be instantiated” is superseded historical wording. Path A is the
+active implementation. Path-B RTL9210B artifacts remain preserved
+qualification evidence, but Path B is rejected for the current Rev-A
+package/DFM contract and is not an execution gate.
 
-Current open gates are complete RTL9210B support/control/USB/M.2/power and
-mode-aware routing/validation, plus procurement and firmware productization
-risks. Native reports, raw receipts, rejected footprints/routes, and negative
-controls remain immutable evidence. No production CAD or Path-A asset is
-authorized by this checkpoint.
+Current open gates are Path-A native storage routing, complete mode-aware
+validation, M-key mechanical/land-pattern parity, and NVMe power/procurement
+release checks. Native reports, raw receipts, rejected footprints/routes, and
+negative controls remain immutable evidence. No production CAD or Path-A
+asset is authorized by this checkpoint.
 
 Status: `OPEN — implementation authorized; procurement evidence remains HIGH
 risk` for the authorized SATA/NVMe upgrade only.

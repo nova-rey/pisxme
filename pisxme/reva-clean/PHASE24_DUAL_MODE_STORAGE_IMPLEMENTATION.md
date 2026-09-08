@@ -29,11 +29,12 @@ component pad counts and maps, selector truth table (`SATA=0`, `NVMe=1`),
 and the mode contract. Native copper, mode-aware switched connectivity, and
 DRC closure remain open.
 
-Fresh native ERC reports 927 violations on the current source, including
-dangling M.2 labels and inherited off-grid/same-label findings. ERC remains
-an independent open gate. The six isolated legacy M.2 labels were removed at
-the source boundary; post-fix ERC has no dangling-M.2 entries, but remains
-927 overall due to unrelated inherited findings.
+Fresh native ERC reports 927 violations on the current source. The post-fix
+report has no dangling M.2 entries; remaining findings are inherited
+off-grid/same-label and other source-quality warnings. ERC remains an
+independent open gate. The six isolated legacy M.2 labels were removed at the
+source boundary, while the total remains 927 due to unrelated inherited
+findings.
 
 FULL7 saved-copper metrics are retained in
 `PHASE24_DUAL_MODE_STORAGE_NC39_USB3_FULL7-metrics.txt`. They expose
@@ -174,8 +175,9 @@ path is restored to the FULL7 geometry.
   `PHASE24_STORAGE_NATIVE_FINAL.xml`; its schematic-to-PCB pad audit passes
   with zero expected-pad mismatches. The older five-mismatch and two-mismatch
   reports are superseded association evidence, not current open gates. The
-  corrected candidate still has native DRC/routing findings (797 violations /
-  499 unconnected items), and those physical findings remain open.
+  The earlier corrected candidate result (797 violations / 499 unconnected
+  items) is superseded. The current regenerated placement result is 857
+  violations / 499 unconnected items; those physical findings remain open.
 
 ## CURRENT OPEN GATES
 
@@ -212,15 +214,19 @@ against the TE DXF/application drawing and TI/JMicron package pages is signed
 off. The library audit is intentionally structural; it does not assert PCB
 connectivity.
 
-## Current evidence
+## SUPERSEDED HISTORICAL SNAPSHOT — pre-label-fix evidence
 
 `STORAGE.kicad_sch` now contains U7 plus native U8 JMS583, U9 HD3SS6126,
 U10 HD3SS3412, and J3 TE 1-2199230-4. The B-key J3 is removed. The saved
 sheet parses under KiCad 10.0.5, and `phase24_dual_mode_storage_schematic_audit.py`
 passes; its negative-control copy fails when a required M-key label is removed.
-Native ERC currently reports 205 violations, so this is not an ERC pass. The
-report is retained as evidence and includes inherited abstract-sheet issues,
-off-grid generated symbol endpoints, and isolated labels requiring cleanup.
+The pre-label-fix native ERC reported 205 violations, so that snapshot was
+not an ERC pass. The report is retained as immutable historical evidence and
+includes inherited abstract-sheet issues, off-grid generated symbol
+endpoints, and isolated labels that were subsequently removed or superseded.
+It must not be used as the current ERC count; the current post-fix report is
+`PHASE24_DUAL_MODE_STORAGE_ERC_AFTER_LABEL_FIX.rpt` with 927 violations and
+no dangling M.2 entries.
 
 `PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb` is a disposable native
 placement candidate derived from the selected storage macro ancestor. It

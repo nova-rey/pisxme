@@ -7321,3 +7321,11 @@ preserving every label atom. The bridge schematic backend now loads the live
 source; native parity remains at the two R80.1/U11.39 association mismatches.
 This closes duplicate-UUID validity as a structural issue but not the native
 association mapping.
+
+2026-09-08: Reconciled Phase 24 narrative status against the live dual-mode
+storage implementation. Current sections now identify Path A as active, record
+the current 857-violation placement baseline and 927-violation post-fix ERC,
+and explicitly state that the JMS583 support network is already instantiated.
+The pre-label-fix 205-violation ERC and earlier 797-violation placement result
+are marked as superseded historical snapshots; raw reports and rejected
+experiments were not modified.

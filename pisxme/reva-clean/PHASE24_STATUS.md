@@ -10,8 +10,10 @@ endpoints, and the shared-selector pin maps no longer override pin 39 with
 `JMS_GPIO7_NC`. The regenerated `PHASE24_DUAL_MODE_STORAGE_PLACEMENT_NC39`
 candidate now passes the native schematic-to-PCB pad-net parity audit with
 zero expected-pad mismatches. Native ERC/DRC and complete routing remain
-open; the candidate's native DRC is 797 violations / 499 unconnected items,
-so parity PASS is not a Phase 24 pass.
+open; the current regenerated placement candidate's native DRC is 857
+violations / 499 unconnected items, so parity PASS is not a Phase 24 pass.
+The earlier 797-violation result belongs to a superseded candidate and is not
+the current baseline.
 
 The 203 duplicate generated label UUIDs have now been reconciled uniquely in
 the live source. The schematic backend loads successfully. The earlier
@@ -32,12 +34,12 @@ maps, selector truth table (`SATA=0`, `NVMe=1`), and mode contract. These
 checks do not waive the still-open native copper/DRC closure.
 
 Fresh native schematic ERC on the current source reports 927 violations. The
-leading findings include dangling M.2 labels plus inherited off-grid and
-same-local/global-label warnings. The raw report is retained as an open ERC
-gate; the USB3 endpoint audit does not waive it. The six isolated legacy M.2
-labels named in the prior report were removed from the child-sheet source;
-the post-fix report has no such dangling labels, while the total remains 927
-because the independent inherited findings remain.
+post-fix report has no dangling M.2 labels; remaining findings are inherited
+off-grid, same-label, symbol, footprint-link, and connectivity warnings. The
+raw report is retained as an open ERC gate; the USB3 endpoint audit does not
+waive it. The six isolated legacy M.2 labels named in the prior report were
+removed from the child-sheet source, while the total remains 927 because the
+independent inherited findings remain.
 
 Saved-copper metrics for FULL7 are recorded in
 `PHASE24_DUAL_MODE_STORAGE_NC39_USB3_FULL7-metrics.txt`. The source legs have
