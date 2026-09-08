@@ -6564,3 +6564,8 @@ outer perimeter. Native saved-board connectivity and independent trace-removal
 negative controls pass; native DRC returns to 9 findings with no PEDET
 crossing. V594 is retained as the current PEDET-plus-rail disposable
 candidate, not production closure.
+2026-09-08: RTL9210B V595 added the local R3.1→U1.13 CLKREQ escape on F.Cu.
+Native saved-board connectivity and the trace-removal negative control pass;
+native DRC remains at 9 findings with no new crossing. V595 is retained as
+the current PEDET/CLKREQ-plus-rail disposable candidate, not production
+closure.

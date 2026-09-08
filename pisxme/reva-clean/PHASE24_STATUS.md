@@ -58,6 +58,10 @@ J1.69→R2.1→U1.8 is natively connected and the trace-removal negative control
 fails as required. Native DRC returns to 9 findings with no PEDET crossing;
 the remaining findings are inherited/local support findings. Retain V594 as
 the current PEDET-plus-rail disposable candidate, not production closure.
+V595 adds the local R3.1→U1.13 CLKREQ escape on F.Cu. Native saved-board
+connectivity and its trace-removal negative control pass; native DRC remains
+at 9 findings with no new crossing. Retain V595 as the current PEDET/CLKREQ
+plus-rail disposable candidate, not production closure.
 V578 replaced the first U1.33 5V departure with an exact-horizontal segment.
 Native saved-board connectivity then showed dangling 5V branches and DRC
 still reported the pad-32 clearance violation. Reject V578; V576 remains the
