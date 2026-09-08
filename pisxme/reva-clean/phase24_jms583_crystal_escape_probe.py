@@ -14,7 +14,7 @@ def add_track(b, net, a, z):
     if a == z: return
     t = pcbnew.PCB_TRACK(b)
     t.SetStart(mm(*a)); t.SetEnd(mm(*z)); t.SetLayer(pcbnew.F_Cu)
-    t.SetWidth(pcbnew.FromMM(0.20)); t.SetNet(net); t.SetNetCode(net.GetNetCode())
+    t.SetWidth(pcbnew.FromMM(0.15)); t.SetNet(net); t.SetNetCode(net.GetNetCode())
     b.Add(t)
 def add_via(b, net, p):
     v = pcbnew.PCB_VIA(b)
@@ -26,7 +26,7 @@ def add_path(b, net, points, layer):
         if a == z: continue
         t = pcbnew.PCB_TRACK(b)
         t.SetStart(mm(*a)); t.SetEnd(mm(*z)); t.SetLayer(layer)
-        t.SetWidth(pcbnew.FromMM(0.20)); t.SetNet(net); t.SetNetCode(net.GetNetCode())
+        t.SetWidth(pcbnew.FromMM(0.15)); t.SetNet(net); t.SetNetCode(net.GetNetCode())
         b.Add(t)
 
 b = pcbnew.LoadBoard(str(BASE))
@@ -35,6 +35,11 @@ y10 = b.FindFootprintByReference("Y10")
 if u11 is None or y10 is None:
     raise RuntimeError("missing U11/Y10")
 y10.SetPosition(mm(150.0, 125.0))
+# Disposable land-pattern sensitivity only.  The current fixture's 0.22 mm
+# pitch-direction pads inherently leave 0.18 mm between 0.40 mm-pitch pads;
+# test the 0.20 mm candidate without changing the production footprint.
+for pad in u11.Pads():
+    pad.SetSize(mm(0.70, 0.20))
 for name, upad, ypad, f_bends, b_bends in (
     ("XIN", "50", "1", ((137.4, 129.0), (134.0, 129.0)), ((147.0, 129.0), (147.0, 122.0))),
     ("XOUT", "51", "2", ((137.8, 128.0), (140.0, 128.0)), ((146.0, 128.0), (146.0, 123.0))),

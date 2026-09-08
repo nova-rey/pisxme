@@ -6941,3 +6941,7 @@ enter R81.1 from the free pad side. Native connectivity and a trace-removal
 negative control both pass; the V3 DRC report has no local shorting or
 crossing findings, with remaining crossings inherited from the donor USB
 fixture.
+
+The JMS crystal pad-20 sensitivity candidate passed native XIN/XOUT endpoint
+connectivity and its trace-removal negative control. It remains disposable
+evidence only because final JMS583 land-pattern pad geometry is still open.

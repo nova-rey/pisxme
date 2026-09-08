@@ -41,6 +41,12 @@ native U11.15-to-R81.1 connectivity passes, the trace-removal negative
 control passes, and no local shorting/track-crossing class remains. The six
 crossings in that report are inherited USB fixture artifacts at the donor
 CM5 source region.
+The pad-width sensitivity candidate is recorded in
+`PHASE24_JMS583_CRYSTAL_PAD20_NARROW-drc.rpt`: the disposable runtime
+footprint uses 0.20 mm pitch-direction pads and 0.15 mm support traces, and
+the XIN/XOUT endpoints pass the native audit plus trace-removal negative
+control. This is evidence that the prior local clearance was footprint/escape
+allocation driven; it is not production land-pattern approval.
 The refilled split-layer crystal probe removes stale-zone and via-hole
 diagnostics, but native DRC still finds the 0.20-mm source traces at adjacent
 0.4-mm-pitch U11 crystal pads at approximately 0.19 mm clearance. Crystal
