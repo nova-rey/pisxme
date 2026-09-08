@@ -6138,3 +6138,6 @@ CAD changed.
 far. Native DRC leaves one real RX_P/RX_N source-transition short, with the
 REFCLK overpass and connector launches otherwise clean. Preserve V454 as the
 coallocation basis; no production-CAD or Path-A change.
+2026-09-08: Rejected RTL9210B V455 RX_P source shift. Native DRC found source
+crossing and TX_N pad/solder-mask conflicts; V454 remains the best combined
+REFCLK/lane basis. Further work moves to complete QFN fanout regeneration.

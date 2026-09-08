@@ -2215,3 +2215,9 @@ RX_P uses an early ordinary-via transition. Native DRC reduced the candidate
 to one real RX_P/RX_N source-transition short, two inherited warnings, and
 22 inherited opens. V454 is retained as the current coallocation basis while
 that single RX transition is repaired.
+V455 moved the RX_P transition upward from V454. Native DRC rejected it with
+an RX_P/RX_N source crossing, RX_P clearance to TX_N, and solder-mask bridge
+errors. V454 therefore remains the best combined basis. The source-field
+gate has now been tested with straight, staggered, early-via, upper, lower,
+and diverging allocations; the next credible class is a complete
+rotated/re-authored QFN fanout, not another single-net coordinate tweak.
