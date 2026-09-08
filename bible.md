@@ -5995,3 +5995,7 @@ showed retained RSET/crystal primitives collide with the initial 1V1 channels.
 V366 reduced the complete coallocated fanout to three shorts and one crossing
 at C4/GND and the RTL_3V3 field. V364 remains the retained clean power-field
 basis; no production CAD changed.
+2026-09-07: Rejected RTL9210B V367 support coallocation trial. Moving C4 and
+right-side RTL_1V1 handoffs removed shorts but left three native crossings
+against the XTAL_OUT B.Cu spine. V364 remains the retained clean power-field
+basis; Path A and production CAD remain unchanged.

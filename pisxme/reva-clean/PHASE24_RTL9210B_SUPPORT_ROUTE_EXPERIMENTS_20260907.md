@@ -1981,3 +1981,8 @@ coallocated 1V1 fanout trial with the retained neighboring primitives. It
 reduced the problem to 3 shorting and 1 crossing class: a C4/GND handoff and
 one right-side 1V1 trunk at the RTL_3V3 field. V366 is rejected as a route
 implementation, while V364 remains the retained clean power-field basis.
+V367 is a follow-up coallocation trial that moves the C4 and right-side
+handoffs outward. It removes all shorting classes but retains three native
+tracks-crossing classes, all against the retained XTAL_OUT B.Cu spine. It is
+rejected pending either moving that crystal spine or assigning those 1V1
+branches to a different layer/channel.
