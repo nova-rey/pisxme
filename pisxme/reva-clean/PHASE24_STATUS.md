@@ -44,6 +44,11 @@ F.Cu only. Native DRC remains at four inherited warnings with no shorting,
 crossing, or clearance class; native connectivity passes and removing all
 RTL_1V1 traces breaks the endpoint connection. This does not close the
 remaining RTL_1V1 source-field group.
+V635 extends the valid right-side 1V1 channel with U1.16. The saved-board
+U1.16-to-C4.1 path is natively connected and its all-RTL_1V1 trace-removal
+negative control breaks the path. Native DRC remains four inherited warnings
+with no shorting, crossing, or clearance class. This is still a disposable
+sub-primitive while the remaining 1V1 pins are open.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus

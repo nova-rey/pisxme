@@ -115,6 +115,9 @@ the 3V3 field.
 V634 provides a clean right-side U1.60-to-C4.1 1V1 sub-primitive on F.Cu.
 Native connectivity and the all-RTL_1V1 trace-removal negative control pass;
 native DRC remains at four inherited warnings with no signal violation.
+V635 extends the passing U1.60-to-C4.1 1V1 channel with a north U1.16
+departure. Native connectivity and the trace-removal negative control pass;
+native DRC remains at four inherited warnings with no signal violation.
 The first all-1V1 perimeter collector derived from V631 is rejected. Native
 DRC found U1.16/U1.17 and U1.36/U1.35 source shorts, retained-rail crossings,
 and a C4 ground collision. The next 1V1 attempt must use source-side channel
