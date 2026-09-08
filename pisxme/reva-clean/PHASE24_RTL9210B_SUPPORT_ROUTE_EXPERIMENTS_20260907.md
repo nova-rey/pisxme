@@ -2082,3 +2082,12 @@ errors. V390 retains 0 shorts and 0 crossings, with 25 opens and localized
 clearance/hole-clearance, dangling-power, and isolated-copper findings. These
 remain open manufacturing/layout findings; no Path-A or production CAD
 changed.
+V391-V392 reallocated oscillator transitions with standard vias. V392 reduced
+the complete co-allocated candidate to 7 non-open native findings while
+retaining zero shorts/crossings; V393's smaller 0.40/0.20 mm vias were
+rejected by the native 0.50/0.30 mm fabrication minima. V394-V395 outboard
+XTAL_OUT routes introduced new conflicts and were rejected. V396/V397 moved
+XTAL_IN beyond the exposed-pad edge; V397 is the better basis with 6 native
+non-open findings and 26 opens. V398 moved XTAL_OUT rightward and regressed
+one local clearance, so it is rejected. All remain disposable Path-B work;
+Path A and production CAD are unchanged.

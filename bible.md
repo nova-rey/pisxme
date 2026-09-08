@@ -639,6 +639,12 @@ Native connectivity and the trace-removal negative control passed, but DRC
 found five crossings against RTL_5V, PEDET, RTL_3V3, REFCLK_P, and PERST_N.
 V242 remains the promoted disposable rail basis; Path A and production CAD
 remain unchanged.
+2026-09-07: RTL9210B V391-V398 oscillator-channel experiments preserved the
+exact lane and support topology. V393's smaller vias were rejected by native
+fabrication minima; V394/V395 outboard XTAL_OUT routes regressed. V397 is the
+best current oscillator basis with 6 non-open native findings and 26 opens;
+V398 regressed one clearance. Path B remains open; Path A and production CAD
+remain unchanged.
 2026-09-07: Rejected RTL9210B V251-V253 QFN source-field co-allocation
 trials. Native rail/REFCLK/RTL3V3 connectivity and negative controls passed,
 but the successive U1.52 handoffs retained XTAL_IN, source-field crossing,
