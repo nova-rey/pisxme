@@ -6800,6 +6800,10 @@ pass, both trace-removal negative controls pass, and native DRC has 366
 findings / 25 inherited opens with no shorting or crossing class and zero
 footprint errors. SPISO3, SPICLK, SPISI, PEDET, reset, remaining rails, and
 high-speed support remain open.
+V287 is rejected: the independent SPICLK trial crosses the retained
+RTL_3V3 source-field handoff at the U1 north escape. The high-north B.Cu
+destination corridor itself remains plausible, but the next pass must
+co-author SPICLK with SPISO3/SPISI and the RTL_3V3 source field.
 V285 is rejected because its SPISO3 B.Cu trunk crosses XTAL_IN. V286 is
 retained as the corrected SPISO3 basis: native U1.22/U2.7 connectivity and
 trace-removal negative control pass; DRC has 383 findings / 24 inherited

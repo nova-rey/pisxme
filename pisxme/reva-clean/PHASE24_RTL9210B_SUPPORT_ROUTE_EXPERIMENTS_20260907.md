@@ -257,6 +257,14 @@ V102 is promoted only as the disposable 1V1 edge-group basis; remaining
 RTL9210B controls, grounds, USB, M.2, power, firmware, and full validation
 remain open.
 
+## V287 SPICLK high-north trial — rejected implementation
+
+V287 attempted an isolated SPICLK corridor from U1.19=(100.8,58.05) to
+U2.6=(89.3,70.0). Its high-north B.Cu destination corridor did not add a
+new lower-field crossing, but the source escape crossed the retained
+RTL_3V3 handoff in the U1 pad field. It is rejected as a route-implementation
+trial; remaining SPI source escapes require coordinated allocation.
+
 ## V284 SPISO3 high-north trial — rejected implementation
 
 V284 moved the SPISO3 corridor above the lower SPI field, but its U1 north
