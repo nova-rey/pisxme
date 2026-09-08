@@ -382,6 +382,15 @@ crystal ownership errors. It was reverted immediately. Label renaming alone
 is not an acceptable repair; the remaining defect requires native
 symbol-instance association repair.
 
+The duplicate-label discriminator is retained as additional evidence. Keeping
+the first generated copy produced 19 parity mismatches; keeping the final
+generated copy returned five mismatches but changed their identities. A full
+label-block reauthor from the shared maps produced 77 mismatches because the
+legacy symbol-frame attachment semantics were lost. All three probes were
+reverted. The current source remains the five-mismatch checkpoint, and the
+next repair must be derived from a native KiCad-authored association fixture,
+not from further label-name or duplicate-removal guesses.
+
 The complete JMS583 support/co-author cohort now passes one native saved-board
 audit: reset, AVDD33, AVDDL, VCCO, VCCK, VDDREG, LXO, XAVDDH, XIN, XOUT, and
 reset-delay all reach their intended support pads. Removing the XIN copper

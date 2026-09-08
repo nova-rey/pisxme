@@ -7049,6 +7049,13 @@ JMS583 package's 64 signal pads plus grounded exposed pad 65. The repaired
 library, selector, and TE M-key checks pass; physical storage validation
 remains open.
 
+2026-09-08: Rejected three native-label serialization probes. First-copy
+deduplication produced 19 parity mismatches; final-copy deduplication changed
+the five-mismatch identities without closing parity; full block reauthoring
+produced 77 mismatches by losing legacy symbol-frame attachment semantics.
+All probes were reverted. Further repair requires a native KiCad-authored
+association fixture rather than additional label/duplicate guesses.
+
 2026-09-08: Regenerated the disposable storage placement from the complete
 M-key contact map and SATA coupling ownership. Native schematic-to-PCB pad
 parity improved from 65 to 32 actionable mismatches; intentional M-key
