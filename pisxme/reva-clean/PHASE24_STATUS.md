@@ -31,6 +31,11 @@ authority, exact JMS583/selector/M-key pad counts, authoritative component
 maps, selector truth table (`SATA=0`, `NVMe=1`), and mode contract. These
 checks do not waive the still-open native copper/DRC closure.
 
+Fresh native schematic ERC on the current source reports 927 violations. The
+leading findings include dangling M.2 labels plus inherited off-grid and
+same-local/global-label warnings. The raw report is retained as an open ERC
+gate; the USB3 endpoint audit does not waive it.
+
 The live USB3 map audit then found and corrected a second source-authority
 defect: U12 TX pins 24/25 are the bridge-side `JMS_USB3_TXN/P` nets across
 C87/C86, while U12 RX pins 22/23 remain direct `USB_RXN1/P` bridge links.

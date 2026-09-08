@@ -29,6 +29,10 @@ component pad counts and maps, selector truth table (`SATA=0`, `NVMe=1`),
 and the mode contract. Native copper, mode-aware switched connectivity, and
 DRC closure remain open.
 
+Fresh native ERC reports 927 violations on the current source, including
+dangling M.2 labels and inherited off-grid/same-label findings. ERC remains
+an independent open gate.
+
 The live U12 map was also reconciled at the source-authoring boundary:
 pins 24/25 use bridge-side `JMS_USB3_TXN/P` across the TX coupling capacitors,
 while pins 22/23 retain direct `USB_RXN1/P` bridge links. The resulting

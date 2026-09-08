@@ -7096,6 +7096,11 @@ authority, exact JMS583/selector/M-key pad counts, authoritative component
 maps, selector truth table (SATA=0, NVMe=1), and mode contract all pass.
 Native copper and DRC closure remain open.
 
+2026-09-08: Fresh native schematic ERC on the live source reports 927
+violations, led by dangling M.2 labels and inherited off-grid/same-label
+findings. The raw report is retained; endpoint and mode-audit passes do not
+waive ERC.
+
 2026-09-08: Rejected source-launch relocation FULL10. Although all ten USB3
 endpoints remained natively connected, inward vias introduced shorts to J1
 12V pads and U11 ground; the trial is preserved as negative route evidence
