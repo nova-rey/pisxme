@@ -334,6 +334,13 @@ one XOUT-to-XAVDDH source-field short (`PHASE24_JMS583_CRYSTAL_LEFT_CORRIDOR`:
 solution; the next implementation must co-author the XAVDDH transition and
 crystal escape rather than treating either source field as fixed.
 
+The follow-up left-corridor source-field regeneration preserves the stepped
+XIN dogbone and moves XOUT's transition farther west. It eliminates the
+XIN/XOUT crossing and the prior XAVDDH B.Cu crossings, but native DRC still
+reports one real XOUT-to-XAVDDH short at the adjacent QFN exits (527 total /
+499 inherited opens). Reject it; the next trial must co-allocate all three
+bottom-edge analog/crystal exits before any layer transition.
+
 The earlier JMS583 crystal DRC receipts, including divergent, split-layer,
 pad-width, and net-name variants, are retained as raw historical evidence;
 they are not current acceptance criteria and do not override the production-

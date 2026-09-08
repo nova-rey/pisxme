@@ -7055,6 +7055,11 @@ restored XOUT QFN dogbone still shorts the retained XAVDDH transition. The
 result is preserved as route-allocation evidence; the next trial must
 co-author those two native source fields.
 
+2026-09-08: Rejected the follow-up JMS583 left-corridor source regeneration.
+It removed the XIN/XOUT crossing and XAVDDH corridor crossings, but the
+adjacent QFN exits still produced one XOUT-to-XAVDDH short. The next trial
+must co-allocate all three bottom-edge analog/crystal exits before transition.
+
 2026-09-08: Retained a JMS583 crystal production-width discriminator using
 0.20 mm traces and ordinary 0.50/0.30 mm through-vias. Native XIN/XOUT
 connectivity and the trace-removal negative control pass; DRC remains 519
