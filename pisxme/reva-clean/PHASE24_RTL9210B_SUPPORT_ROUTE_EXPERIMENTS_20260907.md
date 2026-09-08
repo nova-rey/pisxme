@@ -1986,3 +1986,11 @@ handoffs outward. It removes all shorting classes but retains three native
 tracks-crossing classes, all against the retained XTAL_OUT B.Cu spine. It is
 rejected pending either moving that crystal spine or assigning those 1V1
 branches to a different layer/channel.
+V368 is retained as the first clean coallocated support basis. It keeps the
+retained RSET and XTAL_IN/XTAL_OUT primitives, routes the RTL_1V1 right-side
+branches on In2, and routes the top/left branches on B.Cu to avoid RTL_3V3.
+After native zone refill, DRC reports 0 shorting items, 0 tracks-crossing
+items, and 21 unconnected items. A native endpoint audit passes RTL_1V1,
+RTL_3V3, XTAL_IN, XTAL_OUT, and RSET; negative controls remove every route
+for RTL_1V1 and RSET and fail as required. This is a support-field basis,
+not Path-B closure; USB, REFCLK, reset, SPI, lane, and M.2 remain open.
