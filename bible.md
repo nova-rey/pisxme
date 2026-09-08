@@ -6793,6 +6793,10 @@ the route and preserve the rail field for a separate SPI allocation.
 2026-09-08: V649 tested a high B.Cu SPISI corridor. Its x=91 transition
 column crossed the retained RTL_3V3 and RTL_5V collectors; reject the route
 and preserve the accepted rail geometry.
+2026-09-08: V651 fresh native recheck of the retained RTL_3V3-field board
+reports 3 inherited silkscreen warnings and 25 opens. The saved-board native
+inventory confirms all 9 RTL_3V3 pads are joined; SPISI, RSET, and XTAL_IN
+remain open. This is the current reproducible Path-B baseline.
 2026-09-08: Corrected the native RTL9210B support inventory to include
 RTL_3V3. The saved C3-join board has all nine RTL_3V3 pads in one physical
 connectivity component; SPISI remains disconnected and SSD_3V3 has only M.2

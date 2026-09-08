@@ -101,6 +101,11 @@ the retained 1V1/3V3 transition field. A staggered B.Cu retry removes the
 pair-to-pair contact but still conflicts with the nearby 3V3 via and retained
 1V1 corridor. XTAL_IN/XTAL_OUT remain open for coordinated source allocation;
 no rules or accepted rail geometry changed.
+V651 is a fresh native reload/recheck of the retained RTL_3V3-field board:
+KiCad DRC reports 3 inherited silkscreen warnings and 25 unconnected items.
+The native inventory independently reports all 9 RTL_3V3 pads joined, while
+SPISI, RSET, and XTAL_IN remain incomplete. This is the current reproducible
+baseline for the next support-field pass.
 V648's first SPISI source-to-U2.5 channel is rejected: its B.Cu corridor
 crosses the retained RTL_3V3 source trunk and RTL_5V collector. Native DRC
 still validates the rest of the fixture, but SPISI remains open for a separate

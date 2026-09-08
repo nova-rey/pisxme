@@ -172,6 +172,10 @@ V649's high B.Cu SPISI corridor is rejected because its x=91 transition column
 crosses the retained RTL_3V3 source route and RTL_5V collector. The next SPI
 escape must place the transition west of both rails or co-author the source
 field with them.
+V651 freshly reloads the retained C3-join board through native KiCad. The
+saved-board DRC is 3 inherited silkscreen warnings / 25 unconnected items;
+the native inventory confirms all 9 RTL_3V3 pads are joined, while SPISI,
+RSET, and XTAL_IN remain open. Use this as the reproducible next-pass baseline.
 V650 is a documentation correction: the native C3-join board still has
 multiple RTL_3V3 physical components. Endpoint checks alone did not prove the
 same-net field; native DRC and the saved-board component inventory reopen this
