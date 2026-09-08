@@ -28,6 +28,9 @@ def connected(board, source, destination):
 
 board = pcbnew.LoadBoard(str(PCB))
 u11 = board.FindFootprintByReference("U11")
+ep = u11.FindPadByNumber("65")
+if ep is None or ep.GetNetname() != "POWER_GND":
+    raise SystemExit("FAIL JMS583 exposed-pad POWER_GND authority")
 checks = [
     (u11.FindPadByNumber(pin), board.FindFootprintByReference(ref).FindPadByNumber(pad))
     for _net, pin, ref, pad in PAIRS

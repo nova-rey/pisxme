@@ -7006,3 +7006,11 @@ real JMS_REXT/JMS_XAVDDH short. Relocating R80 in V2/V3 removes that short,
 but the 0.20 mm REXT escape still fails U11.39 adjacent-QFN clearance and
 the R80 approach. Preserve these as source-field/land-pattern evidence; do
 not promote the route or relax the active manufacturing rules.
+
+2026-09-08: Reconciled the live JMS583 QFN64 fixture against the saved
+JMicron Rev 2.1 Figure 4: changed terminal width from 0.22 to the allowed
+0.20 mm maximum, corrected the stale TI package description, and added the
+nominal 4.46 mm exposed pad on POWER_GND. The regenerated V9 seven-net
+cohort passes native connectivity and trace-removal negative control; its
+811-violation/499-unconnected DRC result remains open because paste/mask/
+courtyard review and inherited manufacturing findings are not closed.

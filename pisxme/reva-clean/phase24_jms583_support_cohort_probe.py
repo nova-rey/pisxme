@@ -40,7 +40,7 @@ route(b,'JMS_VDDREG_5V','U11','1',[(133,132),(133,125)])
 route(b,'JMS_VDDREG_5V','L10','2',[(133,125)])
 route(b,'LXO','U11','64',[(146,131.4),(146,125)])
 route(b,'LXO','L10','1',[(146,125)])
-src=xy(u.FindPadByNumber('52').GetPosition());d=xy(b.FindFootprintByReference('C84').FindPadByNumber('1').GetPosition());n=b.FindNet('JMS_XAVDDH');v1=(138.2,136.0);v2=(149,121.5)
+src=xy(u.FindPadByNumber('52').GetPosition());d=xy(b.FindFootprintByReference('C84').FindPadByNumber('1').GetPosition());n=b.FindNet('JMS_XAVDDH');v1=(138.2,130.0);v2=(149,121.5)
 seg(b,n,src,v1);via(b,n,v1)
 for a,z in [(v1,(138.2,140)),((138.2,140),v2)]:
     t=pcbnew.PCB_TRACK(b);t.SetStart(P(*a));t.SetEnd(P(*z));t.SetLayer(pcbnew.B_Cu);t.SetWidth(pcbnew.FromMM(.20));t.SetNet(n);t.SetNetCode(n.GetNetCode());b.Add(t)

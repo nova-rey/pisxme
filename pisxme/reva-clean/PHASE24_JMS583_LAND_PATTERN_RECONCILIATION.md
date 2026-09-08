@@ -20,17 +20,19 @@ release approval.
 - The [LCEDA footprint listing](https://lceda.cn/component/7ed4b3711810454eb69c8505d68afa0a)
   corroborates QFN-64, 8.0 x 8.0 mm, 0.40 mm pitch, and EP4.5.
 
-These sources establish package identity and pitch, but do not provide a
-complete manufacturer land-pattern drawing with pad length/width, paste,
-mask, courtyard, and exposed-pad treatment. The current local footprint is
-therefore a disposable routing fixture only; its old TI-package description
-must not be treated as authority. The pad-width sensitivity report remains
-experimental evidence, not a basis for changing the production footprint.
+The datasheet Figure 4 also establishes the package body as 8.0 mm BSC,
+terminal width `b = 0.15–0.20 mm`, exposed-pad nominal dimensions `D2/E2 =
+4.46 mm`, and a 0.40 mm terminal pitch. The local footprint was corrected to
+use a 0.20 mm terminal width, an 8.0 mm body courtyard basis, and a grounded
+4.46 mm exposed pad. The prior 0.22 mm terminals and TI RUA0042A description
+are preserved only in pre-reconciliation probe artifacts. Paste windowing,
+mask expansion, and a manufacturer-recommended courtyard remain unprovided;
+those fields are still review gates rather than silently inferred authority.
 
 ## Current decision
 
 Keep Path A and continue native routing/validation on disposable candidates.
-Before production promotion, recover a traceable JMicron/JLC land-pattern
-artifact or independently review and sign off a locally derived footprint
-against the package drawing. No DRC result from the current fixture closes
-this gate.
+The locally derived copper geometry is now tied to the manufacturer package
+drawing, but production promotion still requires explicit footprint review
+for paste/mask/courtyard treatment and native DRC/assembly suitability. No
+DRC result from the current fixture alone closes this gate.

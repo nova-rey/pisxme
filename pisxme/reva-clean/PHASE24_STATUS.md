@@ -72,6 +72,15 @@ and at the R80 approach. This is route/source-field evidence, not a pass:
 the active 0.20 mm support width cannot be claimed manufacturable until the
 JMS583 land-pattern/source-field authority is reconciled. Path A remains
 open and no production CAD was promoted.
+
+The JMS583 package-source reconciliation then corrected the local QFN64
+footprint from the contradicted 0.22 mm terminal width/TI description to the
+JMicron Rev 2.1 Figure 4 limits: 0.20 mm terminal width, 8.0 mm body basis,
+and a nominal 4.46 mm grounded exposed pad. Regenerated V9 includes the
+exposed pad and passes the seven-net native connectivity plus negative-control
+audit; native DRC reports 811 violations / 499 unconnected items, with the
+remaining zone/via and inherited donor findings still open. Paste/mask and
+full manufacturing review remain open; this is not production closure.
 The `JMS_AVDDL` decoupler probe is retained in
 `PHASE24_JMS583_AVDDL_PROBE-drc.rpt`: U11.20-to-C83.1 native connectivity
 and its trace-removal negative control pass, with no authored shorting/local
