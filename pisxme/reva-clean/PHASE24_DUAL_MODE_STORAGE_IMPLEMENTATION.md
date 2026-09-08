@@ -94,6 +94,13 @@ conflicts. This is preserved as placement/route evidence; the next support
 pass must use obstacle-aware native-pad allocation across the complete local
 field.
 
+The native-pad A* support allocator is rejected as a routing implementation:
+retaining all non-current endpoint pads caused the dense QFN to require a
+bounded terminal escape, but the resulting 2 mm halo admitted paths through
+neighboring QFN fields. Native DRC reports 1,013 violations and multiple real
+shorts. The candidate and report are preserved; the next implementation must
+encode legal per-pad escape corridors rather than a broad halo.
+
 The FULL11 TX layer-transition experiment is rejected after native DRC rose
 to 845 with additional local clearance/crossing findings. It remains route
 evidence only; FULL7 is still the active basis.

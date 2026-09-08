@@ -125,6 +125,14 @@ XAVDDH return conflicts. This confirms that support placement and USB3 escape
 must be allocated jointly with native obstacles; the north translation alone
 is not a viable route.
 
+The first native-pad A* support allocator was also rejected. After correcting
+its obstacle model to retain every non-current endpoint pad, the allocator
+needed a bounded 2 mm terminal halo to escape the dense QFN; native DRC then
+reported 1,013 violations with real support-to-pad shorts. This is a router
+model/escape-allocation failure, not an electrical or macro-placement result.
+The next allocator must use per-pad legal escape corridors and preserve
+neighboring QFN fields even within the active terminal halo.
+
 The FULL11 attempt to cross the CM5_PERST corridor with local TX vias is
 also rejected: it reduced some crossings but raised native DRC to 845 and
 introduced additional local clearance/crossing findings. FULL7 remains the

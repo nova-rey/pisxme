@@ -7351,3 +7351,9 @@ endpoint and negative-control audits passed, but DRC found 924 violations /
 499 unconnected items plus new support-to-USB, crystal/rail, and return-via
 conflicts. The placement-only translation is preserved as evidence; the next
 pass requires joint obstacle-aware allocation with the USB3 field.
+
+2026-09-08: Rejected the native-pad A* JMS583 support allocator after fixing
+its global-endpoint omission. Native DRC still found 1,013 violations and
+multiple real shorts because its bounded 2 mm terminal halo admitted routes
+through neighboring QFN fields. This is router-model evidence only; the next
+pass requires per-pad legal escape corridors.
