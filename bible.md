@@ -6685,3 +6685,8 @@ production rule was changed; V626 is rejected evidence.
 Native DRC found a real short to adjacent USB_DM and hole-clearance failures
 to neighboring QFN pads. Via-in-pad is rejected under the saved rules; Path A
 and production CAD remain unchanged.
+2026-09-08: Corrected the schematic-to-PCB parity audit to normalize only
+hierarchical XML net paths against flattened PCB names. The current storage
+placement result is 64 actionable mismatches rather than 286 representational
+false positives. Real missing/incorrect support, selector, and M.2 ownership
+defects remain open; no connectivity was waived.

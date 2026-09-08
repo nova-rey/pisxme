@@ -234,3 +234,12 @@ CM5-source TX pair onto F.Cu and the RX pair onto B.Cu and ordering the local
 bridge vias monotonically. Native clearance, board-edge, solder-mask, and
 intentional support-pad unconnected findings remain; it is not yet a complete
 storage pass.
+## Current parity audit correction — 2026-09-08
+
+The schematic-to-PCB pad audit now normalizes only hierarchical XML net names
+such as `/STORAGE/NET` to the PCB's flattened `NET` representation. This
+removes representational false positives without adding connectivity. The
+current placement candidate still fails with 64 actionable mismatches,
+including missing R24/R32/R33 support pads, incorrect J3.69 PEDET ownership,
+selector pin-map mismatches, and missing/incorrect M.2 no-connect and power
+contacts. This remains an open source-authority/parity gate.

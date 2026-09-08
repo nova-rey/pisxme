@@ -7232,3 +7232,12 @@ on the native 0-degree basis. Native DRC rejects via-in-pad here: the via
 shorts adjacent USB_DM and violates the 0.25 mm hole-clearance rule to both
 neighboring QFN pads. This authorized cross-class alternative is rejected;
 no production rule or Path A artifact changed.
+The storage parity audit was corrected to normalize only KiCad's hierarchical
+XML net paths to the PCB's flattened net names. On the current
+`PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb`, the fresh result is 64
+actionable mismatches (down from 286), not a pass. Genuine remaining defects
+include missing R24/R32/R33 pads, J3.69 `M2_PEDET` versus schematic
+`M2_CONFIG1`, selector pin-map mismatches, and missing/incorrect M.2
+no-connect/power contacts. The normalization change does not waive any
+ownership or connectivity failure; these must be repaired in the authoritative
+storage source before promotion.
