@@ -7210,3 +7210,8 @@ comparison. Native DRC rejects it for an RTL_3V3/RSET short and crossing at
 U1.52/R1 plus the U1.39/USB_DM source-field clearance. It remains raw route
 evidence only; the next implementation must allocate the lower QFN field and
 RSET together rather than reuse these handoff coordinates.
+The first copper implementation on the 0-degree basis is rejected as a route
+implementation (V624): native DRC reports 30 findings, including source-pad
+shorts/clearances, RSET adjacency, and edge-clearance violations. The clean
+0-degree no-copper probe remains retained; V624 does not reject its placement
+or the RTL9210B architecture.

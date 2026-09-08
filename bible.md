@@ -6667,3 +6667,8 @@ geometry variants for QFN-field clearance/shorting conflicts, including an
 RTL_1V1/RTL_3V3 short and adjacent USB-pad conflicts. Preserve the raw
 evidence; co-author the complete lower QFN field next. Path A and production
 CAD remain unchanged.
+2026-09-08: V624 added first copper to the native 0-degree RTL9210B placement
+basis. Native DRC rejected the route implementation with 30 findings,
+including source-pad shorts/clearance, RSET adjacency, and edge-clearance
+violations. The 0-degree no-copper placement probe remains retained; Path A
+and production CAD remain unchanged.

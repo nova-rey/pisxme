@@ -2895,3 +2895,12 @@ track crossing at the U1.52/R1 source field, as well as the inherited
 U1.39/USB_DM clearance class. This is route-implementation evidence, not an
 architecture rejection. The saved PCB and DRC report are retained; Path A
 and production CAD remain unchanged.
+## V624 0-degree rail source-field implementation — rejected
+
+V624 added initial RTL_3V3 and RTL_1V1 source escapes and separated B.Cu
+collector corridors on the native 0-degree U1 placement. Native DRC rejected
+the first implementation with 30 findings, including real source-pad shorts,
+QFN clearance/hole violations, RSET adjacency, and board-edge clearance
+errors. This is a route implementation failure; the no-copper 0-degree probe
+remains a valid placement basis. No rules, Path A artifacts, or production CAD
+were changed.
