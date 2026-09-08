@@ -89,6 +89,12 @@ route-allocation failures, not grounds to weaken the board rules.
 
 ## Next implementation step
 
+The 180-degree native orientation probe is now the preferred placement
+discriminator. Its U1.39-to-U2.8 RTL_3V3 corridor passes saved-board native
+connectivity and fails the trace-removal negative control; native DRC remains
+at four inherited warnings before the rest of the field is authored. It is a
+route sub-primitive, not a full-support or production pass.
+
 Re-author the complete current support field from native pad coordinates on a
 fresh V35-derived disposable board: first allocate all three rails and the
 QFN power/control departures around the proven five-net SPI/crystal field,

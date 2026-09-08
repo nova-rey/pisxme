@@ -4,6 +4,12 @@
 
 The active work item remains isolated RTL9210B Path-B support qualification;
 Path A, production/acreage CAD, and unrelated Phase 24 work are preserved.
+The new `PHASE24_RTL9210B_QFN_ORIENTATION180_PROBE.kicad_pcb` is the current
+disposable placement basis for the next QFN field pass: native DRC reports
+four inherited warnings, and the U1.39-to-U2.8 RTL_3V3 corridor in
+`PHASE24_RTL9210B_ORIENTATION180_U139_PROBE.kicad_pcb` is natively connected
+with a trace-removal negative control. This closes only that route
+sub-primitive; no production promotion is claimed.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus
@@ -173,7 +179,8 @@ the retained rail candidate.
 
 ## CURRENT OPEN GATES
 
-Re-author the RTL9210B local QFN source field coherently at the strict
+Use the 180-degree native placement as the current route-allocation basis and
+re-author the RTL9210B local QFN source field coherently at the strict
 0.20 mm routing basis, especially U1.33/U1.34 adjacency, the nearby 1V1,
 3V3, RSET, crystal, PEDET, and exposed-ground fields. The live JMS583
 support-network circuitry is already instantiated; the remaining issue is
