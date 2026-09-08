@@ -11,7 +11,7 @@ b.BuildConnectivity()
 q = {(f.GetReference(), str(p.GetNumber())): p
      for f in b.GetFootprints() for p in f.Pads() if p.GetNetCode()}
 lines = [f'BOARD {BOARD.name}']
-for name in ('PEDET', 'CLKREQ_N', 'PERST_N', 'SPISI', 'SPICLK', 'SPISO3',
+for name in ('PEDET', 'CLKREQ_N', 'PERST_N', 'RTL_3V3', 'SPISI', 'SPICLK', 'SPISO3',
              'SPISO', 'SPICS', 'RSET', 'XTAL_IN', 'XTAL_OUT', 'REFCLK_P',
              'REFCLK_N', 'LANE0_RXP', 'LANE0_RXN', 'LANE0_TXP', 'LANE0_TXN',
              'SSD_3V3'):

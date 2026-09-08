@@ -2,6 +2,7 @@ BOARD PHASE24_RTL9210B_ORIENTATION180_3V3_C3_JOIN_PROBE.kicad_pcb
 PEDET: pads=3 joined_from_first=1 endpoints=[('U1', '8'), ('R2', '1'), ('J1', '69')]
 CLKREQ_N: pads=3 joined_from_first=1 endpoints=[('U1', '13'), ('R3', '1'), ('J1', '52')]
 PERST_N: pads=2 joined_from_first=1 endpoints=[('U1', '14'), ('J1', '50')]
+RTL_3V3: pads=9 joined_from_first=9 endpoints=[('U1', '20'), ('U1', '34'), ('U1', '39'), ('U1', '52'), ('R2', '2'), ('C3', '1'), ('U2', '3'), ('U2', '8'), ('R3', '2')]
 SPISI: pads=2 joined_from_first=1 endpoints=[('U1', '18'), ('U2', '5')]
 SPICLK: pads=2 joined_from_first=1 endpoints=[('U1', '19'), ('U2', '6')]
 SPISO3: pads=2 joined_from_first=1 endpoints=[('U1', '22'), ('U2', '7')]
