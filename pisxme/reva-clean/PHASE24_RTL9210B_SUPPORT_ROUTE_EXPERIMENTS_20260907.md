@@ -2241,3 +2241,9 @@ escape crossed both REFCLK source tracks and violated the adjacent no-net pad
 clearance. It is rejected as a local source-field implementation failure;
 the next attempt must regenerate all six source escapes as one clearance-aware
 fanout. No Path-A or production CAD changed.
+V460 tested the rotated package with all six source transitions moved to a
+1-mm-spaced outboard row in source order. Native DRC rejected the direct
+diagonal fanout with seven source-field shorts/clearance and solder-mask
+errors. This is an invalid escape primitive, not a rejection of the package
+pin map; the retained basis remains V454 while a proper layer-aware fanout
+must be authored.

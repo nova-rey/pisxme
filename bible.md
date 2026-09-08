@@ -6154,3 +6154,7 @@ V454 RX_P/RX_N short, but native DRC found RX_P crossing both REFCLK source
 tracks and violating the adjacent no-net pad clearance. The remaining work
 is complete six-net QFN source-fanout regeneration; no production CAD or
 Path-A change.
+2026-09-08: Rejected RTL9210B V460 all-outboard rotated source row. The
+direct diagonal F.Cu escapes created seven QFN source-field shorts/clearance
+or solder-mask errors. This was a route-primitive failure; Path A and
+production CAD remain unchanged, with V454 retained as the combined basis.
