@@ -6119,3 +6119,7 @@ SMD QFN-style `RTL9210B-CG_QUALIFICATION` footprint: 0.9 x 0.2 mm peripheral
 SMD pads at 0.4 mm pitch and 4.8 x 4.8 mm exposed SMD pad 69. The current
 REFCLK failures are a real package/board-rule escape interaction, not a
 through-hole metadata artifact.
+2026-09-08: RTL9210B REFCLK V443 improved the straight outward fanout and
+eliminated connector-side errors; one 0.4-mm source-transition interaction
+remains. Preserve V443 as the best REFCLK primitive while co-allocating the
+transition vias with lane escape.

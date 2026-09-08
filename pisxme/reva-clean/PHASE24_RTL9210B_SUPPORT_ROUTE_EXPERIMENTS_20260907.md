@@ -2182,3 +2182,9 @@ both fanout tracks. This confirms that a reduced-width exception would be a
 design-rule relaxation, not an acceptable closure. The next effort remains a
 complete rotated/co-regenerated QFN fanout or another documented footprint
 escape solution; no Path-A or production CAD changed.
+V443 used straight outward U1.61/U1.62 fanouts and separated upper/lower
+connector launches. Native DRC removed the prior connector and source-pad
+crossings; only one source-transition interaction remained, with the
+REFCLK_P via 0.4 mm from the REFCLK_N fanout. The result is the strongest
+REFCLK primitive so far, but not closure. The remaining work is co-allocation
+of the two transitions with the lane escape under the active rule basis.
