@@ -6793,6 +6793,10 @@ the route and preserve the rail field for a separate SPI allocation.
 2026-09-08: V649 tested a high B.Cu SPISI corridor. Its x=91 transition
 column crossed the retained RTL_3V3 and RTL_5V collectors; reject the route
 and preserve the accepted rail geometry.
+2026-09-08: Corrected the native RTL9210B support inventory to include
+RTL_3V3. The saved C3-join board has all nine RTL_3V3 pads in one physical
+connectivity component; SPISI remains disconnected and SSD_3V3 has only M.2
+connector pads with no source in this disposable fixture.
 2026-09-08: V650 corrected the V645 RTL_3V3 closure claim. Native DRC and the
 saved-board inventory show multiple separate RTL_3V3 components; endpoint-only
 checks were insufficient. Reopen the rail until the complete same-net field
