@@ -62,6 +62,12 @@ V636 extends the 1V1 trunk with U1.25 using a north-of-QFN F.Cu departure.
 U1.25-to-C4.1 native connectivity and the all-RTL_1V1 trace-removal
 negative control pass; native DRC remains four inherited warnings with no
 shorting, crossing, or clearance class. Remaining 1V1 pins remain open.
+V639 is rejected: the first U1.40 continuation avoided the U1.41 USB_TXP0
+clearance violation only by moving into the retained U1.39 RTL_3V3 source
+departure. Native DRC reports one true crossing plus a solder-mask bridge;
+the saved-board U1.40-to-C4.1 path is connected, but this is an independent
+detour failure. U1.39/U1.40 must be co-authored as one adjacent-pad escape;
+no routing rule or architecture is relaxed.
 The historical V35 rotated-U1 support reference was re-saved through native
 zone refill as `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_NATIVE_REFILLED`.
 Current native DRC is 4 inherited warnings, and the native five-net SPI plus

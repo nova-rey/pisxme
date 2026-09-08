@@ -123,6 +123,16 @@ V638 resolves the U1.55/U1.63 portion with right-edge F.Cu extensions to the
 passing C4.1 trunk. Both native endpoints and the all-RTL_1V1 trace-removal
 negative controls pass; native DRC remains four inherited warnings with no
 signal violation. U1.36/U1.40 remain open.
+V639 is rejected. Its first U1.40 route was too close to adjacent U1.41
+USB_TXP0; the V2 departure clears that pad field but crosses the retained
+U1.39 RTL_3V3 source departure and creates a solder-mask bridge. Native DRC
+reports six findings total, with the crossing and mask bridge as the new
+signal/mechanical classes; the saved-board U1.40-to-C4.1 endpoint audit and
+trace-removal negative control pass. This is a route implementation failure,
+not evidence against the 180-degree placement or the RTL9210B architecture.
+The next experiment must jointly allocate the adjacent U1.39/U1.40 exits
+while preserving the already passing U1.34/U1.39 3V3 and U1.16/U1.25/U1.50/
+U1.55/U1.60/U1.63 1V1 channels.
 V636 extends the passing 1V1 trunk with a north-of-QFN U1.25 departure.
 Native U1.25-to-C4.1 connectivity and the trace-removal negative control
 pass; native DRC remains at four inherited warnings with no signal violation.

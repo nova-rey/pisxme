@@ -6755,3 +6755,9 @@ violation. Only U1.36/U1.40 remain in this local 1V1 allocation.
 Native connectivity passes, removing all RTL_1V1 traces breaks the path, and
 native DRC remains four inherited warnings with no signal violation. The
 U1.36/U1.40/U1.55/U1.63 source cluster remains open.
+2026-09-08: V639 tested U1.40 RTL_1V1 continuation from the retained V638
+field. The first departure violated U1.41 USB_TXP0 clearance; V2 cleared that
+pad but crossed the retained U1.39 RTL_3V3 source departure and added a
+solder-mask bridge. Native endpoint connectivity and the trace-removal
+negative control pass, but the route is rejected. Co-author U1.39/U1.40
+adjacent-pad exits next without relaxing rules or changing architecture.
