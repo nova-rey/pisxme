@@ -72,6 +72,13 @@ signal violations; 26 intended external/support opens remain. Retain
 `PHASE24_RTL9210B_SUPPORT_CLUSTER_MOVE_V35_U2_LEFT_CRYSTAL_COAUTHOR` as the
 current strongest disposable basis, not as production closure.
 
+On that basis, the upper RTL_3V3 field connects U1.20/U1.34/R2.2/R3.2/C3.1
+with a native trace-removal negative control. Native DRC remains at six
+inherited warnings and no signal violations. The first lower RTL_3V3 trial is
+rejected: it caused QFN/1V1/RSET contacts, and its 0.13208 mm traces violate
+the active 0.200 mm minimum-width rule. Lower 3V3 and remaining controls
+remain open; no DRC rule was relaxed.
+
 ## Next implementation step
 
 Re-author the complete current support field from native pad coordinates on a

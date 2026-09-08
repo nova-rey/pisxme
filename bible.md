@@ -6637,3 +6637,7 @@ as the coordinated basis; co-author the crystal drop and U1.55 escape next.
 XTAL_IN/XTAL_OUT/RSET, and lower 1V1 audits with negative controls. Native DRC
 has six inherited warnings and no signal violations; 26 intended support/
 external opens remain. Retain it as the strongest disposable basis.
+2026-09-08: The V35/U2-left upper RTL_3V3 field passes native endpoint and
+negative-control audits with no signal DRC violations. The lower RTL_3V3
+trial was rejected for QFN/1V1/RSET contacts and active minimum-width-rule
+violations; no DRC rule was relaxed.

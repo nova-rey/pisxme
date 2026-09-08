@@ -38,6 +38,9 @@ and lower 1V1 audits with negative controls. Native DRC reports six inherited
 warnings and no signal violations; 26 intended external/support opens remain.
 Retain it as the strongest disposable basis while RTL_3V3/QFN, REFCLK, lane 0,
 USB, controls, power, firmware, and full Path-B validation remain open.
+The upper RTL_3V3 field also passes its native endpoint audit and negative
+control with no signal DRC violations. Lower RTL_3V3 remains open: its trial
+caused QFN/1V1/RSET contacts and violated the active 0.200 mm minimum width.
 V562 is the retained corrected support baseline: its native saved-board audit
 connects the complete RTL_1V1 and RTL_3V3 support groups with a working
 trace/zone-removal negative control. V563, V564, and V565 are rejected
