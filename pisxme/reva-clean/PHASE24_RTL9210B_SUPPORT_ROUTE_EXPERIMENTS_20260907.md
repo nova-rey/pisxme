@@ -2261,6 +2261,13 @@ outboard and achieved native DRC zero shorts/crossings/clearances; the saved
 board audit confirms U1.64/J1.43 and U1.65/J1.41 connectivity, and two
 trace-removal negative controls pass. V466 is a valid RX-pair endpoint
 primitive, not full RTL9210B closure.
+V467 isolated the TX pair below the RX source area but crossed its two
+source-to-vertical B.Cu jogs and placed the endpoint transitions too close.
+V468 reversed the jog ordering into a separated upper corridor and removed
+those source crossings, but the F.Cu connector launches intersect the existing
+PERST corridor and violate connector-side clearance. Both are rejected as
+isolated TX route implementations; TX must be co-allocated with PERST/
+CLKREQ and the connector-side control field.
 V463 connected the six V462 source transitions to the J1 endpoints using
 distinct B.Cu horizontal rows and F.Cu endpoint launches. Native DRC found
 one real RXN/RXP clearance issue; V464 reused the proven V448/V328 connector

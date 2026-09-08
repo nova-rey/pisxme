@@ -559,6 +559,10 @@ an order-preserving two-layer SPI partition. Native KiCad reports 30
 violations / 40 opens; dominant failures remain the rotated U1 QFN source
 escape and retained XTAL_OUT region. U2 footprint coordinates are corrected;
 Path A and production CAD remain unchanged.
+2026-09-08: Rejected RTL9210B V467/V468 isolated TX-pair endpoint trials.
+V467 crossed TX source jogs; V468 removed those crossings but collided with
+the existing PERST corridor and connector-side clearances. TX remains open
+for coallocation with PERST/CLKREQ; no Path-A or production-CAD change.
 2026-09-08: Rejected RTL9210B REFCLK isolation V432 as a malformed first
 launch. Native DRC caught overlapping transition-via bodies and connector
 dogbones entering adjacent J1 MDI pads. Preserve REFCLK net authority; the
