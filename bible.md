@@ -6971,3 +6971,7 @@ a trace-removal negative control with no authored shorting/crossing class.
 The rotated L10 JMS_VDDREG_5V escape passed native U11.1-to-L10.2
 connectivity and a trace-removal negative control with no authored shorting or
 local crossing class. Coupled LXO support remains open.
+
+The rotated L10 LXO escape passed native U11.64-to-L10.1 connectivity and a
+trace-removal negative control after moving Y10 clear of the corridor. The
+prior Y10 collision remains rejected evidence.
