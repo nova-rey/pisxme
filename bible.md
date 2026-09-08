@@ -6106,3 +6106,7 @@ Path A and production CAD remain unchanged.
 DRC identified exposed-pad/XTAL interactions, adjacent J1 MDI contact entry,
 and 0.4-mm QFN P/N source-field conflicts. These remain route-authoring
 evidence; no Path-A or production CAD changed.
+2026-09-08: Rejected RTL9210B REFCLK V438 narrow-fanout probe. Native DRC
+flagged the 0.10-mm tracks against the 0.20-mm board minimum and still found
+QFN source/exposed-pad conflicts. No rule relaxation was made; a complete
+co-regenerated QFN fanout remains required.

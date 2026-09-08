@@ -2169,3 +2169,11 @@ source spacing. These are valid native-D RC failures of the current broad
 escape primitives, not Path-B closure. The next source allocation must use a
 complete co-regenerated QFN fanout (including lane/XTAL) with verified local
 clearance; no production CAD changed.
+V438 tested a 0.10-mm reduced-width REFCLK fanout from the native U1 pads,
+widening after the proposed transitions. Native DRC still rejected it: the
+QFN P/N source separation remained below clearance, the N transition entered
+U1's exposed-pad region, and the board's 0.20-mm minimum-width rule flagged
+both fanout tracks. This confirms that a reduced-width exception would be a
+design-rule relaxation, not an acceptable closure. The next effort remains a
+complete rotated/co-regenerated QFN fanout or another documented footprint
+escape solution; no Path-A or production CAD changed.
