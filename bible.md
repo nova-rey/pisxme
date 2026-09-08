@@ -564,6 +564,12 @@ an order-preserving two-layer SPI partition. Native KiCad reports 30
 violations / 40 opens; dominant failures remain the rotated U1 QFN source
 escape and retained XTAL_OUT region. U2 footprint coordinates are corrected;
 Path A and production CAD remain unchanged.
+2026-09-08: RTL9210B V530 is rejected because its coherent C3 relocation
+still crosses the retained XTAL_IN B.Cu return. V532 is retained: U1.20,
+U1.34, and U1.39 all reach C3.1 in the native graph, exact branch-removal
+negative controls pass, and native DRC has no new short, crossing, or
+clearance error. Inherited incomplete-fixture findings remain; Path A and
+production CAD are unchanged.
 2026-09-08: Rejected RTL9210B V467/V468 isolated TX-pair endpoint trials.
 V467 crossed TX source jogs; V468 removed those crossings but collided with
 the existing PERST corridor and connector-side clearances. TX remains open

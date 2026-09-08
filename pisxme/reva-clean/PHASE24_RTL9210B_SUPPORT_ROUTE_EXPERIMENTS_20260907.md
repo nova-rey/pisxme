@@ -1108,6 +1108,14 @@ violations including crossings with RTL_5V and REFCLK_P. V525 is rejected as
 a detour route; the next U1.39 attempt must coallocate the lower source field
 instead of crossing mature corridors. Path A and production CAD remain
 unchanged.
+V530 relocates C3 and regenerates the three RTL_3V3 joins in one native
+graph; all positive connectivity and both branch-removal negative controls
+pass, but one XTAL_IN B.Cu crossing remains, so it is rejected as a complete
+source-field candidate. V532 keeps the V524 C3 placement and routes U1.39
+through a mid-level B.Cu corridor beneath the QFN edge. All three source pads
+reach C3.1, the exact U1.39 negative control passes, and native DRC has no
+new short, crossing, or clearance error; inherited incomplete-fixture
+warnings/opens remain. V532 is the current 3V3 source-field primitive.
 V526 proves the U1.39-to-C3.1 graph with an exact branch-removal negative
 control, but its raised outer B.Cu return is rejected by native DRC for
 RTL_5V-via clearance/crossing and REFCLK corridor interaction (23 findings).
