@@ -8887,3 +8887,11 @@ route-implementation failure, not evidence against the rotated placement,
 RTL9210B, or Path A. V810 remains the last clean combined basis; the next
 trial must separate the source transitions and account for the U2 return
 geometry.
+
+V815/V817/V818/V819 tested separate SPISO layer transitions against retained
+V810 SPICS. They were rejected by native DRC with respectively 1, 2, 1, and
+1 real violations; the remaining failures are source-field crossing or
+QFN/via clearance, not missing-net assertions. V820 co-authored both
+departures but remains rejected with 3 native violations (one crossing and
+two dangling transition artifacts). These are implementation experiments;
+V810 remains the retained clean basis and complete SPI allocation is open.

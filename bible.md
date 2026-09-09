@@ -8423,3 +8423,9 @@ GND branch and PEDET shelf, and the SPISO transition via was too close to the
 SPICS lower jog. The result (3 violations, 40 expected incomplete
 connections) is preserved as rejected route-implementation evidence; V810
 remains the last clean combined basis and Path A/production CAD are unchanged.
+2026-09-09: V815/V817/V818/V819 tested separate SPISO transitions against
+V810 and were rejected by native DRC with 1, 2, 1, and 1 real violations.
+V820 co-authored both adjacent departures but was rejected with 3 native
+violations, including a crossing and dangling transition artifacts. These
+are preserved as route-implementation evidence; V810 remains the clean
+combined basis and complete SPI allocation is open.

@@ -604,3 +604,10 @@ SPISO transition via is too close to the SPICS lower jog. The report contains
 3 violations and 40 expected incomplete connections. V810 remains the last
 clean combined basis; V814 does not change the Path-B architecture decision
 and no production CAD or Path-A artifact changed.
+
+V815/V817/V818/V819 tested separate SPISO transitions against V810 and were
+rejected by native DRC (1, 2, 1, and 1 real violations). V820 co-authored the
+two adjacent departures and was rejected with 3 native violations: one
+crossing plus dangling SPICS transition artifacts. These results are saved
+route evidence only; they do not close SPI or reject Path B. V810 remains the
+last clean combined basis.
