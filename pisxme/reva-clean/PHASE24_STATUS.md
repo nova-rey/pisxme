@@ -39,6 +39,12 @@ JMS583 support audit plus its trace-removal negative control. Native DRC is
 outside the crystal repair. V23 is the current disposable source-field basis,
 not production authority or full-board closure.
 
+V22 is superseded by V23: its first physical-via placement created an
+XIN/XOUT transition-via short. V24 tested an all-F.Cu crystal escape to avoid
+the B.Cu SATA corridors; native DRC remained at 730 and introduced four
+shorting items. Both are rejected route implementations. V23 remains the
+best current crystal-transition basis.
+
 V13 is the retained local routing basis. Its upper P-leg detour preserves the
 V8 source ordering, reduces the USB_TXN1/USB_TXP1 skew proxy to 0.259 mm, and
 keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits

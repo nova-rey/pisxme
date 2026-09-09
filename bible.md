@@ -8049,3 +8049,8 @@ support connectivity and the trace-removal negative control pass. Native DRC
 improved to 724 findings with 400 unconnected items; two shorting items are
 inherited outside the crystal repair. V23 is retained as disposable routing
 basis only.
+
+V22's initial crystal transition-via placement shorted XIN/XOUT and was
+superseded by V23. V24 tested an all-F.Cu alternative; native DRC stayed at
+730 and four shorting items were introduced. Rejected both alternatives and
+retained V23 as the best current physical transition basis.

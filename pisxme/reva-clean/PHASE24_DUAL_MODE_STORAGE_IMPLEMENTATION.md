@@ -85,6 +85,11 @@ support audit and trace-removal negative control pass; native DRC reports 724
 findings and 400 unconnected items, with two inherited unrelated shorting
 items. V23 is a disposable source-field basis only.
 
+V22's first transition-via placement shorted XIN to XOUT and was superseded
+by V23. V24's all-F.Cu alternative avoided the B.Cu SATA corridor but added
+four native shorting items with no DRC improvement; both remain rejected
+route evidence.
+
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a
 0.000 mm clearance violation into U11 pad 23. No production authority changed.
