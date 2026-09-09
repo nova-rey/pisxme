@@ -8393,3 +8393,9 @@ three U1-side control departures. PERST_N remains open.
 departures. Both were rejected by native DRC for QFN-field control/SPI
 clearances and contacts. The outer PERST corridor remains usable; the QFN
 fanout is the unresolved local route class.
+
+2026-09-09: V793/V794/V795 rejected successive PERST_N QFN escape variants.
+The long outer corridor remains clear; native DRC localizes the repeated
+failures to interactions among the adjacent U1 control departures, PEDET,
+SPISO3, and no-connect pads. The next class must co-author all three QFN
+departures; Path A and production CAD remain unchanged.

@@ -56,6 +56,12 @@ The native reports preserve the result: the outer PERST_N corridor is not the
 limiting geometry, but the QFN departure fanout still needs a dedicated
 allocation.
 
+V793/V794/V795 are rejected PERST_N QFN-escape variants. Their outer route
+sections remain clear, but the local departure repeatedly contacts adjacent
+U1 no-connect/control pads or the retained SPI/PEDET field. This establishes
+the next experiment as a complete three-net QFN escape allocation, not a
+single-net PERST adjustment.
+
 V748 is the current positive placement basis for the remaining RTL9210B SPI
 allocation. Starting from the native-clean V730 U1-at-90-degree basis, U2 was
 rotated 90 degrees and placed with its SPI endpoint column at x=105 mm. The

@@ -71,6 +71,13 @@ PERST into the center gap, but native DRC found new PEDET/CLKREQ/ISOLATEB
 contacts and endpoint-field clearances. Both are rejected. The outer PERST
 corridor remains usable; only the QFN departure fanout is unresolved.
 
+V793/V794/V795 are rejected PERST/QFN escape trials. V793 touched U1 pad 15
+and SPISO3; V794 crossed the accepted CLKREQ_N/PEDET launches; V795 exposed
+additional QFN, SPISO3, PEDET, and CLKREQ_N interactions. The repeated
+failure is confined to the three adjacent right-edge U1 departures. No
+architecture or Path-A conclusion changes; the next class must allocate all
+three departures together.
+
 The earlier V702/V718/V735 checkpoints and V746/V747/V751/V752 failures are
 historical disposable evidence. V753 proved the adjacent SPICLK/SPISI
 dogbone class; V754 proved the complete source fan-out; V755/V757/V758/V759
