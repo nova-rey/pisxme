@@ -19,6 +19,14 @@ route-implementation evidence.  Continue from V981 with co-authored
 through-via placement and local support regeneration; do not compare these
 immature route counts to the mature Path-A acreage candidate.
 
+V982 is rejected as a source-via probe because its spread dogbones entered the
+nearby U2/RTL_3V3 field (15 native violations).  V983 is rejected as a remote
+endpoint trial (16 native violations): its source ladder was ordered, but its
+B.Cu endpoint corridors were not ordered against the transformed U2 endpoint
+field.  Both are route-implementation evidence only.  The next candidate must
+preserve the clean V981 source-row allocation and use a lane-order-preserving
+endpoint mapping before restoring the remaining RTL support circuitry.
+
 V760 is the current positive five-net SPI fixture. It uses the V748 vertical
 U2 endpoint field and the V754 source fan-out. Native KiCad 10.0.5 DRC reports
 0 violations and 40 unrelated expected opens. The saved-board audit

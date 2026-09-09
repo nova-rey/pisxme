@@ -124,6 +124,15 @@ raw boards and reports are preserved.  The next experiment must start from
 V981's orientation-0 source allocation and add separated transitions/support
 one route class at a time.
 
+V982 is rejected as a source-via probe because its spread dogbones entered the
+nearby U2/RTL_3V3 field (15 native violations).  V983 is rejected as a remote
+endpoint trial (16 native violations): the source ladder was ordered, but the
+chosen B.Cu endpoint corridors were not ordered against the moved U2 field.
+These are route-implementation failures, not a Path-B or orientation-0
+rejection.  The next candidate must preserve source-row ordering and allocate
+the B.Cu endpoint lanes in the same monotonic order as the transformed U2
+endpoint pads.
+
 V723/V724/V725 are rejected SPISO route implementations from V718. No Path-B
 architecture conclusion is changed; those are historical route evidence.
 

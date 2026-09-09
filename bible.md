@@ -8830,3 +8830,9 @@ all six adjacent source departures cleanly at the source row, with only
 intentional dangling ends and inherited incomplete connections.  Preserve
 V981 as the next local support-regeneration basis; Path A and production CAD
 remain unchanged.
+2026-09-09: V982/V983 RTL9210B transition diagnostics.  V982 showed that
+spread source vias still entered the near U2/RTL_3V3 field; V983 showed that
+an ordered source ladder is insufficient when B.Cu endpoint corridors are
+not ordered against the transformed U2 endpoint field.  Both are preserved
+as rejected route-implementation evidence.  V981 remains the active clean
+source-row basis; the next allocation must preserve lane ordering end to end.
