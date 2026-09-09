@@ -47,6 +47,18 @@ claimed. This is allocator/field saturation evidence, not an electrical or
 placement closure decision; the next class must permit deliberate mixed-layer
 transitions or relocate the control resistors locally.
 
+V784/V785 are rejected mixed-layer trials: they retained crossings at the
+control shelves, U1 launch, or resistor approaches. V786 reduced the failure
+to one PEDET/SPISO3 crossing and one CLKREQ_N clearance. V787 reduced it to a
+single PEDET/CLKREQ_N crossing. V788 is the retained disposable control
+basis: R2/R3 are moved to a separated top pocket, PEDET uses the lower
+endpoint-field jog, and CLKREQ_N uses an outer F.Cu return. Native KiCad DRC
+reports zero electrical violations and three inherited silkscreen warnings;
+the saved-board V788 audit passes both U1-to-resistor assertions and both
+track-removal negative controls. This closes only the PEDET/CLKREQ_N local
+control route; RTL9210B power, PERST_N, SPI flash, USB, lane, firmware, and
+integrated Path-B gates remain OPEN.
+
 The earlier V702/V718/V735 checkpoints and V746/V747/V751/V752 failures are
 historical disposable evidence. V753 proved the adjacent SPICLK/SPISI
 dogbone class; V754 proved the complete source fan-out; V755/V757/V758/V759

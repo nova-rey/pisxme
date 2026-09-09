@@ -8375,3 +8375,11 @@ the V777 placement. It found no legal PEDET path to R2 in the saved local
 field and emitted no PCB. This negative generator result is preserved as
 route-field evidence; mixed-layer control allocation or local resistor
 relocation remains open.
+
+2026-09-09: V784/V785 were rejected mixed-layer control trials. V786/V787
+reduced the native failures to one corridor interaction each. V788 is the
+first positive control allocation: moved R2/R3, a lower PEDET jog, and an
+outer CLKREQ_N return produce zero electrical DRC violations (three inherited
+silkscreen warnings). The saved-board audit and both track-removal negative
+controls pass. This closes only the disposable PEDET/CLKREQ_N local route;
+remaining RTL9210B and integrated Path-B gates stay open.

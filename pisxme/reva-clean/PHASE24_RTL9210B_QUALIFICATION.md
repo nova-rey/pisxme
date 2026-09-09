@@ -36,6 +36,15 @@ could not find a PEDET route to the V777 R2 endpoint in the saved field. It
 did not alter the board and is not a native DRC result. Mixed-layer routing
 and/or local control-resistor relocation remain the next bounded experiments.
 
+V784/V785 are rejected control-route variants. V786 and V787 progressively
+removed their crossings but retained one native control-corridor failure each.
+V788 is the current positive disposable control basis. It moves R2/R3 to a
+separated top pocket and uses distinct PEDET/CLKREQ_N return corridors.
+Native DRC has zero electrical violations and three inherited silkscreen
+warnings. `phase24_rtl9210b_controls_v788_audit.py` passes native U1-to-R2/R3
+connectivity and removal negative controls. This is local control closure
+only; it does not close the complete RTL9210B Path-B qualification.
+
 V748 is the current positive placement basis for the remaining RTL9210B SPI
 allocation. Starting from the native-clean V730 U1-at-90-degree basis, U2 was
 rotated 90 degrees and placed with its SPI endpoint column at x=105 mm. The
