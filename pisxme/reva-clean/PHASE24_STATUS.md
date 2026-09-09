@@ -19,6 +19,14 @@ or severity waiver is permitted.
 The older V2/V3 regeneration paragraphs below are retained as superseded
 route evidence only. They are not current TODOs or the current candidate.
 
+The U12 RX_N target-escape trials against V5 are also route evidence only.
+Trial 2 retained the U12 exposed-pad short; trial 3 moved the ordinary via
+outside the exposed pad but still shorted/crossed the existing XOUT corridor;
+trial 4's local B.Cu dogleg changed the conflict to an inherited USB3/SATA
+crossing. All three pass the ten-net native USB3 connectivity assertions but
+are rejected route implementations. The next attempt must change the local
+source/target escape corridor rather than add another narrow dogleg.
+
 ## CURRENT OPEN GATES — 2026-09-08
 
 ### Latest source-regenerated routing basis

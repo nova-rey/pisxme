@@ -15,6 +15,12 @@ The prior V2/V3 regeneration and escape-trial statements below are historical
 evidence. They remain useful for rejected-route archaeology but do not describe
 the current implementation state or an outstanding support-network TODO.
 
+The V5 RX_N escape follow-ups are likewise rejected implementation trials:
+moving the target via outside U12's grounded exposed pad removed that specific
+authority defect, but the remaining candidate corridors interact with XOUT
+and inherited USB3/SATA copper. Native USB3 endpoint assertions pass; native
+DRC remains the acceptance gate. No trial copper is promoted.
+
 ## CURRENT STATE — authoritative now (2026-09-08)
 
 The first generic netlist-driven PCB regeneration is retained as

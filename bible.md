@@ -7801,4 +7801,11 @@ mapping; native KiCad export places U12.43 on `POWER_GND`. The fresh V5
 source-regenerated PCB passes schematic-to-pad parity, dual-mode USB3, SATA,
 and JMS583 support audits with negative control. Native DRC remains open at
 685 violations / 403 unconnected items, so this is corrected routing basis
-evidence, not Phase 24 closure. Next work is a clean U12 source-field escape.
+  evidence, not Phase 24 closure. Next work is a clean U12 source-field escape.
+
+2026-09-08 — Follow-up route trials used the corrected U12 exposed-pad
+authority. Moving RX_N's ordinary target via outside the grounded thermal pad
+removed the former pad short, but trial 3 still interacted with XOUT and
+trial 4's B.Cu dogleg introduced an inherited USB3/SATA crossing. Both pass
+the topology-aware USB3 endpoint audit but are rejected route evidence; the
+next solution class must allocate a different local source/target corridor.
