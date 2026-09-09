@@ -8259,3 +8259,8 @@ the crystal field and V687 for the U1.39 RTL_3V3 branch.
 native KiCad DRC found 15 violations including crystal shorts and rail/control
 interference. Rejected the C2-only class; the next attempt must co-author the
 complete crystal/support micro-island.
+
+2026-09-09: V692 moved the C2 GND stitch and changed U1.52 to a B.Cu
+transition, but crossed the RSET collector. V693 stepped left of the RSET
+endpoint and passed native KiCad DRC with zero violations and 28 incomplete
+opens. Retained V693 as the positive U1.52 RTL_3V3 branch basis.
