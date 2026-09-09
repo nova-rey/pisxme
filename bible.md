@@ -6062,6 +6062,12 @@ controls pass, with zero native signal shorting/crossing classes. Path A and
 production CAD remain unchanged; CLKREQ/R3.1 and all remaining Path-B gates
 stay open.
 
+2026-09-08 — Coordinated selector plus USB3 regeneration was rejected:
+native endpoint connectivity passed, but DRC reported four true shorts,
+including STORAGE_SEL against SATA and inherited USB3 source-field crossings.
+No copper was promoted; the next class is clean source-owned corridor
+regeneration.
+
 2026-09-08 — An unchanged VBUS-basis round trip stayed zero-short, ruling out
 a generic save failure. The selector V2 probe, which avoided rebuilding the
 net table, still exposed three inherited crossing shorts after adding the

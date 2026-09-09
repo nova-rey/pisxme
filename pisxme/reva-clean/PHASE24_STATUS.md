@@ -69,6 +69,13 @@ V2 no-net-table-rebuild probe still exposes three inherited crossing shorts
 after adding the new corridor. V1 and V2 are rejected; the VBUS basis is
 unchanged and neighboring high-speed copper must be regenerated together.
 
+The coordinated `PHASE24_STORAGE_J8_V5_COAUTHORED_SEL_USB3_V1` transaction
+is rejected route evidence: USB3 endpoint connectivity passed, but native
+DRC reported four true shorts, including `STORAGE_SEL` against the SATA
+corridor and inherited USB3 source-field crossings. No copper was promoted;
+the next credible class is a clean source-owned storage high-speed corridor
+regeneration.
+
 The bounded `PHASE24_STORAGE_J8_V5_GROUND_ZONE_V1` probe adds a storage-only
 F.Cu `POWER_GND` zone and reduces native unconnected findings to 386 from
 400, with zero native shorts. It is retained as a ground-access experiment,
