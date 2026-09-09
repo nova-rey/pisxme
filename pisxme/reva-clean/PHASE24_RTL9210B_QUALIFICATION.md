@@ -1499,6 +1499,9 @@ V1272 is accepted incremental support evidence. U1.25 RTL_1V1 joins the
 collector through an F.Cu source drop and ordinary via without new native
 DRC errors; endpoint and negative-control audit pass. The identified
 RTL_1V1 supply-pad cohort is complete. Remaining support is OPEN.
+V1273 is accepted RTL_3V3 source-field evidence. U1.34-to-C3 connectivity
+passes the saved-board audit and negative control, and native DRC has no new
+errors. Remaining RTL_3V3 and other RTL9210B support remain OPEN.
 V1255 is an upper-corridor discriminator. The complete lane concept reaches
 the upper region, but native DRC identifies source-to-row same-layer weave
 crossings plus one REFCLK-via clearance interaction. The corridor itself is

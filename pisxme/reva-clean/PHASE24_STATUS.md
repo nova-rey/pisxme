@@ -10069,3 +10069,8 @@ F.Cu source drop and through-via to avoid the RXN B.Cu trunk. Native DRC
 retains inherited warnings only; the saved-board endpoint and negative-control
 audit pass. The identified RTL_1V1 supply-pad cohort is complete. Remaining
 RTL9210B support is OPEN.
+V1273 is accepted RTL_3V3 source-field evidence. U1.34 joins C3 through a
+dedicated F.Cu source drop, ordinary via, and B.Cu upper corridor after
+clearance corrections. Native DRC retains inherited warnings only; the
+saved-board endpoint and negative-control audit pass. Remaining RTL_3V3 and
+all other support remain OPEN.

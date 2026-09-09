@@ -9437,3 +9437,7 @@ U1.55/U1.60/U1.63.
 uses an F.Cu source drop and ordinary via to avoid the RXN B.Cu trunk.
 Native DRC retained inherited warnings only; endpoint and negative-control
 audit passed. The identified RTL_1V1 supply-pad cohort is complete.
+2026-09-09 — V1273 accepted RTL9210B RTL_3V3 source increment: U1.34 joins
+C3 through a dedicated F.Cu drop, ordinary via, and B.Cu corridor. Native
+DRC retained inherited warnings only; endpoint and negative-control audit
+passed. Remaining RTL_3V3 and other support are open.
