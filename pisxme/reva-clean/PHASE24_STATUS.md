@@ -76,6 +76,8 @@ V8 rerouted VCCK around the VCCO transition but introduced new CM5_5V and
 JMS_PCIE_TXP0 crossings/shorts and raised native DRC to 680; it is rejected.
 An all-F.Cu VCCO V1 trial reduced the aggregate DRC to 670 but introduced
 real U12 no-net/USB launch shorts and additional crossings; it is rejected.
+VCCO destination V2 moved the source via down the QFN edge but introduced a
+JMS_SPI_CS_N_DNP pad short and raised native DRC to 675; it is rejected.
 
 Selector-side V9 moved only the TXP corridor above the inherited support
 field; it removed the prior TXP/USB_RXN1 collision but introduced new XIN,

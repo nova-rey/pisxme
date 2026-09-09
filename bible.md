@@ -7635,6 +7635,11 @@ USB3-repaired basis. It retained the VCCO native endpoint proof and reduced
 the aggregate DRC to 670, but introduced real U12 no-net/USB launch shorts and
 additional crossings. Rejected; VCCO_DEST_V1 remains the current basis.
 
+2026-09-08: Tested VCCO destination V2 with the source transition moved to
+134.5,136.0 mm. Native VCCO proof remained valid, but the route shorted the
+adjacent JMS_SPI_CS_N_DNP pad and raised DRC to 675. Rejected; VCCO_DEST_V1
+remains the current basis.
+
 2026-09-08: Tested selector-side SATA escape V9 with a north TXP corridor.
 It passed the native SATA endpoint audit and removed the prior TXP/USB_RXN1
 collision, but introduced XIN, CM5_USB3, and support conflicts and raised
