@@ -34,6 +34,15 @@ route-implementation failure. The failure is localized to the QFN source
 field and return-shelf allocation; it does not invalidate the V748 placement
 or the clean V749/V750 channel proofs.
 
+V752 is an endpoint-free five-net QFN source-fanout probe. It confirms that
+the outer/source channels can be spread to ordinary transition locations,
+but native DRC reports two real 0.20 mm clearance failures between the
+adjacent SPICLK/SPISI escapes (actual clearance 0.1505 mm). Its five
+single-layer dangling-via warnings are expected because this fixture stops
+at the transitions. V752 is rejected as a complete source fan-out; the next
+attempt must co-author the adjacent SPICLK/SPISI dogbones before adding
+endpoint corridors.
+
 The earlier V702 U1.17 RTL_5V closure remains part of the inherited positive
 support lineage; it is not the current SPI checkpoint.
 

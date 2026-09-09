@@ -6044,6 +6044,11 @@ and also passed with zero DRC violations. These are isolated Path-B routing
 experiments; Path A and production CAD remain unchanged, and full SPI plus
 RTL9210B qualification remain open.
 
+2026-09-09: V752 tested a five-net endpoint-free QFN fan-out. Native DRC
+found two real 0.1505 mm clearances between SPICLK and SPISI against the
+0.20 mm rule; transition-only via-dangling warnings were expected. Reject
+V752 as a complete fan-out and co-author that adjacent source pair next.
+
 2026-09-09: V751 attempted to add SPICS and SPISO to the V749/V750 vertical
 U2 endpoint basis. Native KiCad DRC found five source-field/return-shelf
 violations, so V751 was rejected as a route implementation. V749 and V750
