@@ -9375,3 +9375,9 @@ DRC reports zero shorting, clearance, or track-crossing violations. It still
 has one isolated GND-zone warning and 40 incomplete fixture connections, so
 it is a promising local primitive, not a full DRC pass. Investigate the
 isolated GND zone before promoting the U1.40/3V3 coauthor.
+V1027 corrected V1026's 0.2 mm replacement-GND endpoint mismatch to the
+preserved (89.2,60.0) via, but native DRC still reports the same single
+isolated GND-zone warning. The co-authored U1.40/RTL_3V3 field continues to
+show zero shorting, clearance, or track-crossing violations. V1027 is
+retained as diagnostic evidence; the isolated-zone connectivity cause is
+still open and must be resolved before promoting the coauthor.

@@ -1059,3 +1059,7 @@ GND corridor and removes all short/clearance/crossing violations. Native DRC
 still reports one isolated GND-zone warning and 40 inherited/incomplete
 connections; therefore V1026 is not yet promoted as a clean support basis.
 The isolated-zone cause is the next focused validation item.
+V1027 corrects the V1026 GND path endpoint to the exact preserved via
+coordinate (89.2,60.0), but the isolated GND-zone warning persists. The
+U1.40/RTL_3V3 coauthor remains electrically free of shorts, clearances, and
+crossings, but is not promoted until the zone-connectivity cause is resolved.

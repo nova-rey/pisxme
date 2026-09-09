@@ -8922,3 +8922,7 @@ B.Cu GND diagonals. V1026 co-authored the 3V3 spine, U1.40 RTL_1V1 escape,
 and GND return; native DRC has no shorting, clearance, or crossing findings,
 but retains one isolated GND-zone warning and 40 incomplete fixture items.
 Retain V1026 as a promising, not-yet-promoted local primitive.
+2026-09-09: V1027 corrected the replacement GND path's 0.2 mm endpoint gap
+to the preserved (89.2,60.0) via, but native DRC retained one isolated
+GND-zone warning. U1.40/RTL_3V3 still has no shorts, clearances, or crossings;
+retain V1027 as diagnostic evidence pending zone-connectivity resolution.
