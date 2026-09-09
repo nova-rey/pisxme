@@ -1464,6 +1464,11 @@ U1.63 still intersects the accepted LANE0_RXN source transition at (92.8,
 architecture failure. Next experiment: relocate that one lane transition
 and the affected rail escape together, with native DRC and negative-control
 audits for both.
+V1263 is accepted coupled source-field evidence: the RXN source transition
+was rehomed to (91.0,69.8) and native DRC retained only inherited warnings.
+V1264 adds U1.63 RTL_1V1 on that base with no new DRC errors; its native
+U1.63-to-C4 endpoint and negative-control audit pass. This is the current
+support-routing basis; remaining RTL9210B support is OPEN.
 V1255 is an upper-corridor discriminator. The complete lane concept reaches
 the upper region, but native DRC identifies source-to-row same-layer weave
 crossings plus one REFCLK-via clearance interaction. The corridor itself is

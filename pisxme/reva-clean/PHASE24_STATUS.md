@@ -10027,3 +10027,10 @@ at (92.8,70.8), and the support branch is left incomplete. This identifies a
 coupled source-field constraint. The next valid class must co-author the
 single RXN source transition and the affected rail via, then re-audit both;
 do not copy V1243 geometry or treat this as Path-B rejection.
+V1263 is accepted coupled source-field evidence: moving only the LANE0_RXN
+source transition from (92.8,70.8) to (91.0,69.8) leaves native DRC with
+inherited warnings only, and the saved-board audit plus negative control pass.
+V1264 adds the U1.63 RTL_1V1 escape on that base with no new native DRC
+errors; its endpoint and negative-control audit pass. This is the accepted
+starting point for extending the live-pad rail cohort. Full support remains
+OPEN.

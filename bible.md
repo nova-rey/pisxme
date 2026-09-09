@@ -9398,3 +9398,10 @@ showed the U1.63 RTL_1V1 dogbone colliding with the accepted LANE0_RXN source
 via at (92.8,70.8). This is a coupled lane/support source-field constraint;
 next work co-authors that RXN transition and rail escape together. Path A,
 production CAD, and the accepted V1258 lane base remain unchanged.
+2026-09-09 — V1263/V1264 RTL9210B coupled source-field checkpoint:
+V1263 rehomes the LANE0_RXN source transition to (91.0,69.8), freeing the
+QFN rail escape window; native endpoint and negative-control audit pass with
+only inherited warnings. V1264 adds U1.63 RTL_1V1 on that base; native DRC
+adds no errors and the U1.63-to-C4 endpoint/negative-control audit passes.
+This is the accepted starting point for the remaining live-pad support
+coauthoring. Path A and production CAD remain untouched.
