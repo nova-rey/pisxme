@@ -11,10 +11,10 @@ track names, and applies native schematic node ownership including the EDAC
 J2 physical alias map. Its parity audit reports 0 expected-pad mismatches;
 dual-mode USB3 reports PASS, SATA reports PASS for all 12 endpoints, and the
 JMS583 support audit plus trace-removal negative control report PASS. Native
-DRC reports 700 violations / 399 unconnected items with zero shorting items.
-It is the current routing workbench, not a closure candidate. Continue route
-cleanup and revalidate all affected paths from this candidate; do not promote
-its DRC state as finished.
+DRC reports 700 violations / 399 unconnected items and 7 true
+`shorting_items`, caused by normalizing inherited hierarchical copper without
+rerouting the affected corridors. It is rejected route evidence, not a
+closure candidate; no V2 copper is promoted.
 
 ### Current source-authority repair
 

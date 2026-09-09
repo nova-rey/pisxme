@@ -7770,6 +7770,7 @@ no copper was promoted.
   local materializer hardening.
 - Added `phase24_regenerate_board_from_netlist.py`, a generic source-driven
   PCB pad/copper ownership regenerator. Its V2 disposable candidate passes
-  parity, dual-mode USB3, SATA, and JMS583 support audits; native DRC remains
-  open at 700 violations / 399 unconnected items and is explicitly retained
-  as an active routing gate.
+  parity, dual-mode USB3, SATA, and JMS583 support audits, but native DRC
+  exposes 7 true shorting items after inherited hierarchical copper is
+  normalized without rerouting. V2 is rejected route evidence; affected
+  corridors require clean rerouting before promotion.
