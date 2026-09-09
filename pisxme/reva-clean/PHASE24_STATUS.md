@@ -27,6 +27,15 @@ DRC reports three true shorts, including TUSB SATA copper entering the
 JMS_REXT/USB3 field. It is rejected route implementation evidence; no copper
 was promoted.
 
+The minimal TXN-via-spacing trial
+`PHASE24_STORAGE_SATA_TXN_VIA_SPACING_V1.kicad_pcb` passes all 12 native
+SATA endpoint assertions and reduces the aggregate DRC count to 575, but
+native DRC finds a true TXP/TXN short at the U7 source-field escape. It is
+rejected route implementation evidence; no copper was promoted. Repeated
+source-field via nudges are exhausted as a solution class, so the next trial
+must change the local escape topology or move the coherent U7/coupler
+sub-island.
+
 The latest integrated storage routing candidate is
 `PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`, derived from the corrected
 source-authoritative workbench with M.2 launch V6, selector-side SATA escape

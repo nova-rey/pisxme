@@ -359,6 +359,12 @@ endpoint assertions and lowers the aggregate DRC count to 583, but introduces
 three real shorts, including TUSB SATA copper into the JMS_REXT/USB3 field.
 It is rejected route evidence and does not replace the active no-short basis.
 
+The minimal TXN-via-spacing trial
+`PHASE24_STORAGE_SATA_TXN_VIA_SPACING_V1.kicad_pcb` passes all 12 SATA
+endpoint assertions and lowers DRC to 575, but creates a real TXP/TXN short
+at the U7 escape. It is rejected; further tiny source-via nudges are not the
+next solution class.
+
 1. The latest integrated candidate is
    `PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`. It combines the corrected CM5
    USB3 right-side launch with the selector-side SATA V4, M.2 V6, native mode

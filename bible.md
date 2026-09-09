@@ -7718,3 +7718,8 @@ dogbones while changing only B.Cu lanes. Native SATA endpoint assertions
 passed and aggregate DRC fell to 583, but three true shorts appeared,
 including TUSB SATA into the JMS_REXT/USB3 field. Rejected; no copper was
 promoted.
+
+2026-09-08: Tested the minimal TXN-via-spacing SATA trial. Native SATA
+connectivity passed 12/12 and DRC fell to 575, but a true TXP/TXN short
+appeared at the U7 source escape. Rejected; the next attempt must change the
+local escape topology or move the coherent U7/coupler sub-island.
