@@ -5417,6 +5417,15 @@ clearance output as stale fill state and kept production CAD unchanged.
  RESET_N/PERST_N route passes native DRC at 0 violations / 37 opens. Kept
  PEDET/CLKREQ open for a different layer assignment and production CAD
  unchanged.
+
+2026-09-08: Regenerated the storage workbench from the corrected live source
+instead of reusing stale U13 copper. The native-pad-anchored SATA author now
+passes all 12 SATA endpoints on
+PHASE24_STORAGE_AUTHORITY_CORRECTED_USB3_SATA. The USB3 promotion author was
+also hardened to resolve child `/CORE_CM5/` and canonical target net names
+and to assign native target net objects. CM5 source promotion is connected;
+bridge-side USB3 promotion remains open. Native DRC on the immature combined
+workbench is 1,027 violations / 499 unconnected items.
 2026-09-07 — PiSXMe Phase 24 documentation hygiene: marked the original
  RTL9210B bring-up fixture's 56-open count as historical baseline evidence
  and pointed current-state prose to the SPI V7 plus GND-plane candidate with

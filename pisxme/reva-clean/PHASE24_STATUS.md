@@ -15,6 +15,16 @@ Phase 24 closure candidate. Remaining gates include complete support-copper
 integration, mode-aware switched connectivity, native ERC/DRC cleanup, and
 full-board regression.
 
+The refreshed live-authority workbench is
+`PHASE24_STORAGE_AUTHORITY_CORRECTED_USB3_SATA.kicad_pcb`. It was regenerated
+after the U13 source fix, carries the native JMS583 support author, and passes
+all 12 SATA endpoint assertions. The native USB3 promotion path now resolves
+child `/CORE_CM5/` names against either target spelling; its CM5 source
+quartet is connected, while bridge-side USB3 endpoints still require the
+remaining route promotion. Native DRC is 1,027 violations / 499 unconnected
+items on this immature workbench. Do not compare that count to mature
+historical candidates as a floorplan judgment.
+
 ## AUTHORITATIVE CURRENT STATE — 2026-09-08
 
 The JMS583 support-label authoring path was corrected and applied to the live
