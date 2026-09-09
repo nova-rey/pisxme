@@ -8557,6 +8557,12 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: V974 exposed U1.21 SPISO2 at (100.0,66.05) as an additional
+source-field constraint; its proposed RTL_3V3 transition was rejected with
+eight native DRC findings. V975 routed RTL_3V3 right of that pad and returned
+on B.Cu, but was rejected with six findings for SPICLK/SPISI source crossings
+and SPISO3 shelf clearance. The next credible class is a full local RTL
+support-island move/regeneration, not another isolated jog.
 2026-09-09: V973 moved SPISO3 left around the best RTL_3V3 cell and was
 rejected with six native DRC findings. It introduced SPISO and RTL_1V1
 crossings and retained RTL_3V3 clearance failure. The proven V927 SPI
