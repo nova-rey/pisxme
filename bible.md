@@ -9424,3 +9424,7 @@ remaining support is open.
 added through an outward ordinary via to the live west collector. Native DRC
 retained inherited warnings only and the saved-board endpoint plus
 negative-control audit passed. Current cohort: U1.50/U1.55/U1.60/U1.63.
+2026-09-09 — V1269 accepted RTL9210B support increment: U1.40 RTL_1V1
+uses a direct outward normal escape to an ordinary via and joins the live
+collector. Native DRC retained inherited warnings only; endpoint and
+negative-control audit passed. Remaining support is open.

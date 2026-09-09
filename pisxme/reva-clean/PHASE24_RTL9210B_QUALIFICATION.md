@@ -1486,6 +1486,10 @@ V1268 is accepted incremental support evidence. U1.50 RTL_1V1 joins the live
 west collector through an ordinary outward via with no new native DRC errors;
 the saved-board endpoint and negative-control audit pass. The live rail cohort
 is now U1.50/U1.55/U1.60/U1.63. Remaining support is OPEN.
+V1269 is accepted incremental support evidence. U1.40 RTL_1V1 joins the
+live collector through a direct outward ordinary via with no new native DRC
+errors; the saved-board endpoint and negative-control audit pass. Remaining
+support is OPEN.
 V1255 is an upper-corridor discriminator. The complete lane concept reaches
 the upper region, but native DRC identifies source-to-row same-layer weave
 crossings plus one REFCLK-via clearance interaction. The corridor itself is

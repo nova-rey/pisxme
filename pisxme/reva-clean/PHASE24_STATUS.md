@@ -10054,3 +10054,7 @@ through an outward ordinary via to the live west collector. Native DRC retains
 inherited warnings only; the saved-board endpoint and negative-control audit
 pass. The live rail cohort now includes U1.50/U1.55/U1.60/U1.63. Remaining
 support is OPEN.
+V1269 is accepted incremental support evidence. U1.40 RTL_1V1 uses a
+direct outward normal escape to an ordinary through-via and joins the live
+collector. Native DRC retains inherited warnings only; its saved-board
+endpoint and negative-control audit pass. Remaining support is OPEN.
