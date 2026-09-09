@@ -44,3 +44,8 @@ V955 staggered: 14). U1-270 restored a horizontal field but a same-side
 parallel fanout still crossed later transitions (V956: 9 findings). The next
 candidate will use mixed-side source escapes and independent transitions;
 these probes do not alter production CAD.
+V957 tested mixed-side same-layer fanout after U1-270 rotation. It was
+rejected (15 native DRC violations): inner pad departures still cross
+outer-pad fields before reaching their side-specific transitions. The next
+escape class must separate inner departures by layer immediately at the QFN
+field; same-layer fanout is not sufficient.

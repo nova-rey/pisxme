@@ -8557,6 +8557,10 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: V957 rejected naïve mixed-side same-layer SPI fanout after the
+U1-270 probe (15 native DRC violations). Inner QFN pad departures crossed
+outer-pad fields. Next experiment requires immediate layer-separated inner
+escapes; this remains a disposable route-authoring issue.
 2026-09-09: V944 proved U1.20 RTL_3V3 can escape in a clean field when SPI
 copper is regenerated around it. V945/V946 added SPICS and SPICLK with native
 DRC limited to the inherited isolated-fill warning. V947/V948 SPISO3/SPISO
