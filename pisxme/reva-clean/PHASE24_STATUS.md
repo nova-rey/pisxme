@@ -9854,3 +9854,10 @@ return and retained 1V1 field; V1187's south transition produced 18 native
 violations. These are route-implementation failures. U1.52 remains the next
 open rail endpoint, and the next class will use an explicit power-layer
 handoff analysis rather than another direct surface corridor.
+V1188-V1191 tested designated upper-In2 and orthogonal lower-left U1.52
+handoffs. V1188 retained a RSET/via-clearance conflict and duplicate handoff;
+V1189 entered the QFN no-net/USB pad field; V1190 collided with the crystal
+and GND return; V1191 shorted or cleared against XTAL_IN/XTAL_OUT and the
+retained 1V1 field. All four are rejected route-implementation evidence. The
+next class must reauthor the local XTAL/3V3 departure allocation together,
+not add another U1.52 corridor around the same field.

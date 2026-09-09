@@ -9268,6 +9268,11 @@ identified XTAL_IN/1V1, RSET, GND-return, or south-field crossings and
 clearance failures. The direct surface corridor class is exhausted; preserve
 the four disposable boards/reports and evaluate a designated power-layer
 handoff next. V1183's accepted all-eight-pad 1V1 field remains unchanged.
+2026-09-09: V1188-V1191 rejected U1.52 RTL_3V3 power-layer handoff trials.
+Native DRC found RSET/via clearance, no-net/USB pad-field, crystal/GND-return,
+and XTAL/1V1 shorting or crossing failures. The next solution class must
+co-author the local XTAL/3V3 departure allocation; the accepted V1183 1V1
+field remains unchanged.
 2026-09-09: Reconciled current Path-B headers after V1183. PHASE24_STATUS and
 PHASE24_RTL9210B_QUALIFICATION now identify V1183's all-eight-pad 1V1 field as
 the live basis; earlier V1160-only wording remains historical context rather
