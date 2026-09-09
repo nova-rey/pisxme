@@ -9475,6 +9475,10 @@ the source field collided with U1.1V1.
 transition between or below the established launch fields still produced
 native clearance/short errors at U1.24/U1.1V1. SPICS remains open for a
 coupled source-field repair; DRC severity was not changed.
+2026-09-09 — V1285 rejected coupled-source evidence: both native endpoint and
+saved-board negative-control audits passed, but the co-authored U1.25/U1.24
+field still produced B.Cu trunk crossings and QFN source-field clearance/hole
+violations. Both nets remain open for a different escape-side topology.
 2026-09-09 — V1281 rejected SPICS route evidence: U1.24-to-U2.1 endpoint and
 saved-board negative-control audit passed, but native DRC found a crossing of
 the RXN B.Cu trunk, collision with the RTL_1V1 via field, and U2.2 clearance

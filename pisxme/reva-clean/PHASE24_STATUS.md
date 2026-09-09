@@ -10113,3 +10113,8 @@ V1283 and V1284 are rejected SPICS escape refinements. Moving the transition
 between or below the existing fields still produces native clearance/short
 errors at U1.24/U1.1V1. The SPICS net remains OPEN and requires a coupled
 U1.1V1/SPICS source-field repair; no DRC rule was relaxed.
+V1285 is rejected coupled-source evidence. U1.25-to-C4 RTL_1V1 and U1.24-to-
+U2.1 SPICS native endpoint/negative-control audits pass, but the proposed
+co-authored field still has native crossings between the B.Cu trunks and
+clearance/hole violations at the QFN source pad field. Both nets remain OPEN
+for a different escape-side topology.
