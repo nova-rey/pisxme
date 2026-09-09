@@ -9522,3 +9522,7 @@ the native SPISO B.Cu trunk. A bounded dogleg around that trunk then passed
 native endpoint and saved-board negative-control audits with zero native DRC
 violations; 40 unrelated fixture opens remain. V1296 is accepted as a rotated
 rail primitive only, not as full Path-B or production closure.
+2026-09-09 — V1297 SPI source-field evidence was rejected after native endpoint
+and saved-board negative-control audits passed but the combined SPISI/SPICLK
+escape introduced three real layer crossings against RTL_5V and SPISO and at
+the rotated QFN source field. Raw fixture and DRC evidence are preserved.

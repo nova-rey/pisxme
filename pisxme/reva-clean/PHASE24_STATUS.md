@@ -10175,3 +10175,9 @@ SPISO B.Cu trunk then passed the saved-board endpoint and source-removal
 negative-control audit. Native DRC reports zero violations with 40 expected
 unrelated fixture opens. V1296 is accepted as a rotated rail primitive only;
 the remaining QFN support, control, lane, and integration gates remain OPEN.
+V1297 is rejected SPI source-field evidence. Its native SPISI/SPICLK endpoint
+and saved-board negative-control audit pass, but the proposed combined escape
+has three native track crossings: SPISI with the accepted RTL_5V corridor,
+SPISI with SPICLK at the rotated QFN source field, and SPICLK with the existing
+SPISO escape. The raw fixture and DRC report are preserved; SPI data/clock
+remain OPEN for a coupled layer-allocation repair.
