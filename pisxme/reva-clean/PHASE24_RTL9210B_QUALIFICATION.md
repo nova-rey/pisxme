@@ -835,3 +835,9 @@ dogbones, separated XTAL_IN onto B.Cu, and reused the existing U1.52 via;
 native DRC is 0 with 25 expected incomplete items and the full saved-board
 support audit plus both crystal negative controls pass. V914 is the current
 accepted support base.
+V915 tested a two-pad RTL_1V1 In2.PWR attachment to C4 and was rejected by
+the existing RTL_3V3 source field and RTL_5V/SPI plane corridors. V916 moved
+the plane trunk north and tightened the escapes; native DRC reduced the result
+to two violations, specifically U1.36 crossing the existing 3V3 vertical
+departure and U1.40 shorting the adjacent 3V3 via. RTL_1V1 remains open; the
+next trial must use a different U1 pad-side escape.

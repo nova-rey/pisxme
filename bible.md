@@ -8642,3 +8642,7 @@ DRC passed with 0 violations and 25 expected incomplete items. The saved-board
 audit passed XTAL_IN/XTAL_OUT/RSET/GND/RTL_3V3 and independent source-trace
 negative controls for both crystal nets. V914 is the accepted complete
 relocated RTL support primitive for the next support rail.
+2026-09-09: V915/V916 tested two-pad RTL_1V1 In2.PWR attachments to C4.
+V916 reduced native DRC to two violations but still crossed/shorted the
+existing RTL_3V3 source field at U1.36/U1.40. RTL_1V1 remains open; the next
+trial will use a different U1 pad-side escape.
