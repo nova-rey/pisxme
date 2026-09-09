@@ -8646,6 +8646,11 @@ relocated RTL support primitive for the next support rail.
 V916 reduced native DRC to two violations but still crossed/shorted the
 existing RTL_3V3 source field at U1.36/U1.40. RTL_1V1 remains open; the next
 trial will use a different U1 pad-side escape.
+2026-09-09: V918/V919 tested U1.25 RTL_1V1 north escapes and were rejected by
+the inherited SPICS/DEVSLP field. V920 scrubbed only inherited SPI copper and
+the same U1.25/C4 In2.PWR attachment passed native DRC with 0 violations and
+29 expected incomplete items. The power escape is clean when its corridor is
+owned; SPI regeneration is the next implementation step.
 2026-09-09: V917 tested alternate U1.36/U1.40 RTL_1V1 pad-side escapes with
 an In2.PWR trunk. Native DRC rejected the candidate for RTL_3V3/USB_TXP0/GND
 field interactions. RTL_1V1 remains open; V914 remains the accepted base.

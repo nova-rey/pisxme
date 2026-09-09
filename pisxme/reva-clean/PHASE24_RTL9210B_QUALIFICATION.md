@@ -841,6 +841,13 @@ the plane trunk north and tightened the escapes; native DRC reduced the result
 to two violations, specifically U1.36 crossing the existing 3V3 vertical
 departure and U1.40 shorting the adjacent 3V3 via. RTL_1V1 remains open; the
 next trial must use a different U1 pad-side escape.
+V918 tested the U1.25 north-side RTL_1V1 escape and was rejected by the
+inherited SPICS fanout. V919 moved the via west but was still rejected by the
+adjacent DEVSLP pad and SPICS geometry. V920 scrubbed only the inherited SPI
+copper as a discriminator; the same U1.25/C4 In2.PWR attachment then passed
+native DRC with 0 violations and 29 expected incomplete items. This confirms
+the power escape is clean when its local corridor is owned; SPI regeneration
+around it is the next required implementation step.
 V917 tested alternate U1.36/U1.40 pad-side escapes with an In2.PWR trunk;
 native DRC rejected the candidate for the U1.36/RTL_3V3 field, the U1.40 /
 USB_TXP0 neighbor, and the relocated GND return. RTL_1V1 remains open; this
