@@ -9255,3 +9255,8 @@ RTL_3V3 warning. Its saved-board audit now uses native pad/track/via
 connectivity and list-based VECTOR2I equality; the U1.25 source-trace negative
 control and the three existing 1V1 source-trace controls pass. V1182 is the
 accepted U1.25 primitive; remaining RTL9210B support/control closure is open.
+2026-09-09: V1183 merged the accepted U1.16 south escape with the accepted
+U1.25 upper-east escape. Native DRC remained at the inherited RTL_3V3 warning
+plus expected unconnected items. The saved-board audit passed all five 1V1
+endpoint assertions and complete source-cohort trace-removal negative
+controls. This is the current combined 1V1 basis.
