@@ -9143,3 +9143,6 @@ CLKREQ remains open for complete control-field co-authoring.
 2026-09-09: Rejected V1133 PERST_N outer-corridor transition refinement.
 Native DRC found retained 1V1, SPISI, and RTL_5V geometry clashes. PERST
 remains open for complete control-field co-authoring.
+2026-09-09: V1134 removed the inherited dangling RTL_3V3 branch from the
+V1123 basis. Native DRC, the saved-board RTL_3V3 endpoint audit, and the U1.52
+source-trace negative control pass; full Path-B closure remains open.

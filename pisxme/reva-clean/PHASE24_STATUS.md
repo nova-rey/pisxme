@@ -1148,6 +1148,10 @@ connector-field via termination with a single useful transition at x=124 mm;
 native DRC retains only the inherited RTL_3V3 dangling warning. The saved
 board audit proves U1.8/R2.1/J1.69 PEDET connectivity and its source-trace
 negative control. This closes the disposable PEDET primitive only.
+V1134 scrubs only the inherited dangling RTL_3V3 branch from the V1123 basis.
+Native DRC reports zero violations; the saved-board RTL_3V3 endpoint audit and
+the U1.52 source-trace negative control pass. This is a valid cleaned rail
+primitive, not full Path-B closure.
 
 The current support/USB3 basis now includes the native-pad-aware REXT and
 JMS_RESET_N repairs as `PHASE24_DUAL_MODE_STORAGE_FULL7_RESET`. Native
