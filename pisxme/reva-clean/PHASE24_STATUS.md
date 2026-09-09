@@ -9069,3 +9069,9 @@ U1.34/U1.39 joins and were rejected for RTL_5V via clearance. V876's
 diagonal-left U1.34 departure passes native DRC with 0 violations and 26
 expected incomplete items. Its saved-board audit proves
 U1.34/U1.39/U2.3/U2.8/C3.1 and a source-trace negative control.
+V877/V878 tested U1.52 lower-side escapes and were rejected by the existing
+XTAL_IN and RSET support corridors. V879 scrubbed only those support routes as
+a placement discriminator; U1.52 then joins the 3V3 spine with native DRC 0,
+30 expected incomplete items, and a saved-board audit pass for
+U1.52/U1.39/U2.3/U2.8/C3.1 plus a source-trace negative control. The increased
+open count is deliberate crystal/RSET scrub evidence, not an accepted omission.
