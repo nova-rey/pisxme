@@ -15,8 +15,9 @@ The older opening paragraphs and historical sections that describe support
 circuitry as needing instantiation, use malformed pre-correction footprints,
 or refer to pre-J8/pre-parity routing are SUPERSEDED evidence, not current
 instructions. Raw receipts, negative controls, and rejected experiments are
-retained unchanged. The next implementation task is the co-authored
-USB_TXP/USB_TXN/JMS_AVDDL local field repair against the live VBUS basis.
+retained unchanged. V13 is the current disposable co-authored
+USB_TXP/USB_TXN/JMS_AVDDL local-field basis; complete storage-field
+regeneration, native DRC, and full-board closure remain open.
 
 The V3/V4 co-authored source-field experiments are superseded route evidence:
 V3 passes the focused USB3 and JMS583 support audits without a shorting class,
@@ -56,6 +57,11 @@ Native route metrics confirm V8 does not add USB TX vias or alter the CM5
 paths, but its USB_TXN1/USB_TXP1 skew proxy is 4.718 mm versus 4.400 mm on
 the VBUS parent. V8 therefore remains a source-escape basis, not a complete
 pair-balance or Phase 24 closure.
+
+V13 is the current disposable pair-balance basis. Its upper P-leg detour
+reduces the USB TX skew proxy to 0.259 mm without a native shorting class;
+focused storage audits and pad parity pass. Native DRC remains at 730
+findings, so V13 is not production authority.
 
 V10 is superseded route evidence: its local P-leg meander improves TX skew to
 0.259 mm, but creates two same-layer USB TX pair self-crossings. The next

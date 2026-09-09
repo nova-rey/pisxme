@@ -18,8 +18,16 @@ audit plus negative control pass; remaining support-field route cleanup is a
 routing gate, not an instantiation task. Likewise, old malformed footprint,
 pre-J8 mode-control, stale parity, obsolete connector, and rejected-route
 claims below are historical evidence only when explicitly labeled as such.
-The current next action is the bounded co-authored USB_TXP/USB_TXN/JMS_AVDDL
-source-field repair, followed by native DRC and the existing full-board gates.
+The current local routing basis is V13, the bounded co-authored
+USB_TXP/USB_TXN/JMS_AVDDL source-field repair. The next action is to carry
+this source-owned basis through complete storage-field regeneration, native
+DRC, and the existing full-board gates.
+
+V13 is the retained local routing basis. Its upper P-leg detour preserves the
+V8 source ordering, reduces the USB_TXN1/USB_TXP1 skew proxy to 0.259 mm, and
+keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits
+passing with no native shorting class. Native DRC remains 730 findings; full
+board closure is still open.
 
 The first co-authored source-field trials are retained as route evidence. V3
 kept USB3/SATA/mode/JMS583/parity focused gates passing and introduced no
