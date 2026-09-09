@@ -7983,3 +7983,10 @@ recorded the need for serialization-safe whole-net regeneration.
 Exercised the installed local USB3 router against V8. It passed focused USB3
 endpoint assertions but produced 734 native DRC findings and a real
 JMS_USB3_TXN/USB_RXP1 short. Rejected the fixed-channel router assumptions.
+
+## 2026-09-09 — Phase 24 current-state narrative reconciliation
+
+Marked the older VCCK-local integrated-candidate paragraph as superseded by
+the current VBUS/J8 parent and V13 disposable source-field basis. Preserved
+the older route metrics as historical evidence; no raw receipt or PCB artifact
+was rewritten.

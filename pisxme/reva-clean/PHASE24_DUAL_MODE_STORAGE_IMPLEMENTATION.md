@@ -525,23 +525,15 @@ endpoint assertions and lowers DRC to 575, but creates a real TXP/TXN short
 at the U7 escape. It is rejected; further tiny source-via nudges are not the
 next solution class.
 
-1. The latest integrated candidate is
-   `PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`. It combines the corrected CM5
-   USB3 right-side launch with the selector-side SATA V4, M.2 V6, native mode
-   control, and destination-only VCCO relocation. Its storage-local
-   JMS583 support, complete topology-aware USB3 path, SATA selector path, and
-   native mode-control path pass focused audits and negative controls. Native
-   DRC is still open at 669 violations / 499 unconnected items; this is not a
-   closure candidate. Finish the remaining
-   integrated route/DRC cleanup, then complete USB2, return, power, and
-   inactive-state validation without synthetic connectivity edges.
-2. The storage-local JMS583 support, complete USB3 path, and SATA selector
-   path now pass their focused native endpoint audits. The M.2 launch V6 and
-   selector-side SATA escape V3/V4 also pass the native saved-board SATA
-   endpoint audit; they are disposable route evidence, not yet promoted.
-   Finish the remaining
-   integrated route/DRC cleanup, then complete USB2, return, power, and
-   mode-aware inactive-state validation without synthetic connectivity edges.
+1. SUPERSEDED SNAPSHOT: the former `PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`
+   candidate combined an earlier CM5 USB3 launch with selector-side SATA and
+   destination-only VCCO work. Its focused audits were useful, but its 669
+   finding / 499 unconnected-item DRC result predates the VBUS/J8 correction
+   and it is not the current integrated parent.
+2. The storage-local JMS583 support, USB3, SATA, and mode-control endpoint
+   audits remain current evidence only when run against the saved board named
+   in CURRENT STATE. The older VCCK/V6/V3/V4 route snapshots are disposable
+   historical evidence, not current implementation instructions.
 3. Complete native ERC/DRC, mode-aware connectivity and inactive-state checks
    for forced SATA, forced NVMe, AUTO, empty socket, reset, and power-off
    states.
