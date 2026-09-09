@@ -26,6 +26,12 @@ storage decision. The V3 netlist-regenerated candidate remains the cleanest
 source-owned basis while the CM5 USB3 launch is re-authored with explicit
 non-via-in-pad dogbones.
 
+The follow-up `PHASE24_STORAGE_USB3_SELECTOR_ASTAR_V3.kicad_pcb` used explicit
+F.Cu dogbones to ordinary vias and passes the ten-net native USB3 audit, but
+native DRC still reports source-field via/adjacent-pad shorts (846 total
+violations / 402 unconnected items). It is rejected as route evidence; the
+next source escape must use the CM5IO-derived stagger/clearance geometry.
+
 `CORE_CM5.kicad_sch` now exposes its 51 CM5 ground labels as native global
 `POWER_GND` labels. This is a source-level repair for the previously observed
 `/CORE_CM5/POWER_GND` versus board-plane `POWER_GND` split; no PCB-only merge

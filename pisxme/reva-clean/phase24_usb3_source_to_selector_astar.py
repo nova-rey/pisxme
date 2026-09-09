@@ -4,7 +4,7 @@ from heapq import heappush, heappop
 import pcbnew
 
 R=Path(__file__).resolve().parent
-BASE=R/'PHASE24_STORAGE_NETLIST_REGENERATED_V3.kicad_pcb'; OUT=R/'PHASE24_STORAGE_USB3_SELECTOR_ASTAR_V1.kicad_pcb'
+BASE=R/'PHASE24_STORAGE_NETLIST_REGENERATED_V3.kicad_pcb'; OUT=R/'PHASE24_STORAGE_USB3_SELECTOR_ASTAR_V3.kicad_pcb'
 F,B=pcbnew.F_Cu,pcbnew.B_Cu; STEP=.5; W=.15
 JOBS=(('CM5_USB3_RX_N','128','16'),('CM5_USB3_RX_P','130','15'),('CM5_USB3_TX_N','140','12'),('CM5_USB3_TX_P','142','11'))
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)
@@ -31,8 +31,8 @@ def occupied(b, skip):
             a=xy(p); r=max(pcbnew.ToMM(p.GetSize().x),pcbnew.ToMM(p.GetSize().y))/2+.3
             for l in (F,B): mark(s,l,a,r=r)
     return s
-def route(blocked,start,goal):
-    a=(*q(start),F); z=(*q(goal),F); todo=[(0,a)]; cost={a:0}; prev={a:None}
+def route(blocked,start,goal,start_layer=B,goal_layer=B):
+    a=(*q(start),start_layer); z=(*q(goal),goal_layer); todo=[(0,a)]; cost={a:0}; prev={a:None}
     while todo:
         _,c=heappop(todo)
         if c==z: break
@@ -59,12 +59,19 @@ names={x[0] for x in JOBS}
 for t in list(b.GetTracks()):
     if t.GetNetname() in names: b.RemoveNative(t)
 blocked=occupied(b,names)
-for name,jp,up in JOBS:
-    n=b.FindNet(name); start=xy(j.FindPadByNumber(jp)); goal=xy(u.FindPadByNumber(up))
+for index,(name,jp,up) in enumerate(JOBS):
+    n=b.FindNet(name); pad_start=xy(j.FindPadByNumber(jp)); pad_goal=xy(u.FindPadByNumber(up))
+    offset=(-.8 if index%2==0 else .8)
+    start=(pad_start[0]+2.0,pad_start[1]+offset); goal=(pad_goal[0]-2.0,pad_goal[1]+offset)
     for l in (F,B):
         for dx in range(-3,4):
             for dy in range(-3,4): blocked[l].discard((q(start)[0]+dx,q(start)[1]+dy)); blocked[l].discard((q(goal)[0]+dx,q(goal)[1]+dy))
-    path=route(blocked,start,goal); emit(b,n,path)
+    # Explicit ordinary-via dogbones keep both vias outside the QFN/CM5 pads.
+    for a,z in ((pad_start,start),(goal,pad_goal)):
+        t=pcbnew.PCB_TRACK(b); t.SetStart(V(*a)); t.SetEnd(V(*z)); t.SetLayer(F); t.SetWidth(pcbnew.FromMM(W)); t.SetNet(n); t.SetNetCode(n.GetNetCode()); b.Add(t)
+    for a in (start,goal):
+        v=pcbnew.PCB_VIA(b); v.SetPosition(V(*a)); v.SetWidth(pcbnew.FromMM(.5)); v.SetDrill(pcbnew.FromMM(.3)); v.SetLayerPair(F,B); v.SetNet(n); v.SetNetCode(n.GetNetCode()); b.Add(v)
+    path=route(blocked,start,goal,B,B); emit(b,n,path)
     for a,z in zip(path,path[1:]):
         if a[2]==z[2]: mark(blocked,a[2],(mm(a[0]),mm(a[1])),(mm(z[0]),mm(z[1])))
     print(name,'transitions',sum(a[2]!=z[2] for a,z in zip(path,path[1:])))

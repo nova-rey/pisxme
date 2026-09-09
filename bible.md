@@ -7782,3 +7782,6 @@ no copper was promoted.
 - A disposable obstacle-aware J7-to-U12 A* launch trial was rejected after
   native DRC exposed disconnected pad escapes and multiple pad-field shorts;
   the invalid via/pad model was retained only as negative routing evidence.
+- The explicit-dogbone follow-up passed native USB3 endpoint connectivity but
+  still shorted adjacent CM5 source-field pads/vias under native DRC; it was
+  rejected and the CM5IO-derived escape geometry remains the next basis.
