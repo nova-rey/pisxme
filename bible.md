@@ -8274,3 +8274,12 @@ incomplete opens; retained V695 as the positive 3V3 load-field basis.
 via. V697/V698 developed a split overpass, and V699 removed the redundant
 via; native KiCad DRC reported zero violations and 25 incomplete opens.
 Retained V699 as the positive U1.33-to-C5 RTL_5V basis.
+
+2026-09-09: V700 connected U1.17 RTL_5V but failed native DRC at the
+3V3/1V1 barrier and was rejected. V701 moved the handoff to a two-via jog,
+but still conflicted with the nearby 1V1 via. V702 angled the initial escape
+past that via and passed native KiCad 10.0.5 DRC with zero violations and 24
+incomplete opens. The saved-board V702 audit passed, and removing the new
+RTL_5V handoff via failed connectivity as required. Retained V702 as the
+positive U1.17/U1.33/C5 RTL_5V support basis; full Path-B closure remains
+open.

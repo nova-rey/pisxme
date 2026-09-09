@@ -1,5 +1,18 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
+## Current checkpoint — V702 U1.17 RTL_5V closure (2026-09-09)
+
+The disposable saved-board lineage `PHASE24_RTL9210B_SUPPORT_RELOCATION_5V_U117_V702.kicad_pcb`
+is the current positive local support candidate. V702 adds a two-via F/B/F
+handoff from U1.17 around the existing 3V3/1V1 barrier, while retaining the
+V699 U1.33-to-C5 trunk. Native KiCad 10.0.5 DRC reports 0 violations and 24
+unconnected pads. The V702 native endpoint audit passes, including a targeted
+negative control that removes the new `(102.2,76.2)` handoff via and observes
+the required connectivity failure. This closes only the U1.17 RTL_5V local
+rail endpoint; the remaining RTL9210B source-field, control, SPI, reference,
+lane, power, firmware, and productization gates remain open.
+
+
 Status: **KEEP A / CONTINUE B**. Path A remains the protected production
 architecture and is not modified. Path B is an active isolated candidate,
 not authorized for destructive replacement or production integration.

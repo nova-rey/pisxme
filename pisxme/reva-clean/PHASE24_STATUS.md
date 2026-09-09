@@ -8749,3 +8749,11 @@ V653's local Y1/C1/C2 relocation is rejected. It reduces the crystal span but
 creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
+## CURRENT PATH-B CHECKPOINT — V702 (2026-09-09)
+
+V702 is the current disposable RTL9210B-CG support candidate. It preserves
+V699 and adds the U1.17 RTL_5V branch with an ordinary-via F.Cu/B.Cu/F.Cu
+handoff around the local 3V3/1V1 barrier. Native KiCad 10.0.5 DRC: 0
+violations, 24 unconnected pads. The saved-board V702 audit and targeted
+handoff-via negative control both pass. This is a local rail closure, not a
+complete Path-B or production-CAD pass; Path A remains intact and protected.
