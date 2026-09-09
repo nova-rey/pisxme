@@ -8905,3 +8905,8 @@ SPICS, places SPISO's transition above the adjacent U1 source field, and
 passes native DRC with 0 violations and 40 expected incomplete connections.
 The saved-board audit passes both SPICS and SPISO endpoint assertions and
 independent trace-removal negative controls. Full five-net SPI remains open.
+V824 added staggered transitions for SPISI, SPICLK, and SPISO3 to the V823
+pair. It was rejected by native DRC with 14 violations and 37 expected
+incomplete connections, including source-field crossings, PEDET interaction,
+and transition-via conflicts. V824 is rejected route evidence; no placement
+or architecture conclusion changes.

@@ -620,3 +620,7 @@ V823 is the first clean two-net source allocation after V810. Native DRC
 reports 0 violations and 40 expected incomplete connections; its saved-board
 audit passes SPICS and SPISO endpoint assertions and trace-removal negative
 controls. This is a positive routing primitive, not full SPI or Path-B closure.
+V824 added staggered source transitions for the remaining three SPI nets but
+was rejected by native DRC with 14 violations and 37 expected incomplete
+connections. The failures are source-field/corridor implementation issues;
+no Path-A or production artifact changed.
