@@ -7629,3 +7629,8 @@ the current integrated basis.
 corridor. It retained native VCCO endpoint and negative-control PASS but
 introduced CM5_5V/JMS_PCIE_TXP0 conflicts and raised DRC to 680. Rejected;
 the integrated V4_MODE basis is unchanged.
+
+2026-09-08: Tested selector-side SATA escape V9 with a north TXP corridor.
+It passed the native SATA endpoint audit and removed the prior TXP/USB_RXN1
+collision, but introduced XIN, CM5_USB3, and support conflicts and raised
+native DRC to 677. Rejected; V4_MODE remains the integrated basis.
