@@ -10197,6 +10197,12 @@ V1305 separately audits the V862 local PEDET and CLKREQ_N source-to-resistor
 paths from the saved PCB. Both endpoint assertions and both trace-removal
 negative controls pass. Native V862 DRC remains zero violations with 30
 incomplete items; far-side control and full Path-B integration remain OPEN.
+V1306 adds far-side PEDET and CLKREQ_N launches from R2.1/R3.1 to the
+authoritative M.2 contacts J1.69/J1.52. Native endpoint audits and both
+source-removal negative controls pass. Native DRC reports zero violations with
+28 remaining unrelated Path-B opens. This closes the local far-control
+routing primitive; lane, REFCLK, remaining rails, and integrated Path-B
+validation remain OPEN.
 V1300 tested transplanting the native V1195 RSET/XTAL_IN/XTAL_OUT route set
 onto the current V1279 four-lane basis. The saved-board endpoint audit and
 all three source-removal negative controls pass, but native DRC rejects the

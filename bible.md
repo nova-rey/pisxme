@@ -9540,6 +9540,10 @@ integration remains open.
 local control paths. Both endpoints and trace-removal negative controls pass;
 native V862 DRC remains zero with 30 incomplete items. Full Path-B integration
 remains open.
+2026-09-09 — V1306 added far-side PEDET/CLKREQ_N launches to M.2 contacts
+J1.69/J1.52. Both native endpoint groups and source-removal negative controls
+passed; native DRC reports zero violations with 28 unrelated Path-B opens.
+Local far-control routing is accepted; full Path-B validation remains open.
 2026-09-09 — V1300 transplanted the native V1195 RSET/XTAL route set onto the
 V1279 four-lane basis. Saved-board endpoints and negative controls passed, but
 native DRC rejected 29 integrated violations, including XTAL_OUT/RTL_1V1
