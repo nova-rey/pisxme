@@ -1,6 +1,6 @@
 # Phase 24 acreage validation status
 
-## CURRENT PATH-B CHECKPOINT — V1160 crystal source-field accepted; V1123 remains the clean GND basis (2026-09-09)
+## CURRENT PATH-B CHECKPOINT — V1183 combined crystal/GND/1V1 field accepted; V1123 remains the clean GND basis (2026-09-09)
 
 CURRENT UPDATE: V1135 tested a GND-diagonal XTAL_OUT overpass and was rejected
 by native DRC for an XTAL_OUT/GND short, RSET crossing, and XTAL_IN/U1.55

@@ -9263,3 +9263,7 @@ controls. This is the current combined 1V1 basis. The expanded audit also
 confirms U1.36/U1.40/U1.50 were already connected through the retained 1V1
 field; eight complete source-cohort negative controls pass, so no extra
 copper is required for those pads.
+2026-09-09: Reconciled current Path-B headers after V1183. PHASE24_STATUS and
+PHASE24_RTL9210B_QUALIFICATION now identify V1183's all-eight-pad 1V1 field as
+the live basis; earlier V1160-only wording remains historical context rather
+than a current open-pad requirement.

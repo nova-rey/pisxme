@@ -1,10 +1,11 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
 CURRENT IMPLEMENTATION SUMMARY (2026-09-09): the live disposable Path-B
-basis is the V1123 clean GND/rail starting basis plus the accepted V1160
-crystal source-field primitive. V1160 has native-clean XTAL_IN/XTAL_OUT
-connectivity and passes both source-trace negative controls; its sole native
-DRC finding is the inherited RTL_3V3 dangling warning. Full QFN rail,
+basis is the V1123 clean GND/rail starting basis plus accepted V1160/V1165
+crystal-field work and V1183's combined 1V1 field. V1183 passes native saved-
+board connectivity for all eight RTL9210B QFN 1V1 pads to C4.1 and eight
+complete source-trace negative controls; native DRC retains only the inherited
+RTL_3V3 dangling warning plus expected unconnected items. Full QFN rail,
 control, REFCLK, USB/SATA lane, firmware, and integrated Path-B closure remain
 OPEN. V1120, V1121, V1122, V1135-V1138, and V1145-V1159 are rejected
 XTAL/source-field route trials and remain historical evidence only. The
