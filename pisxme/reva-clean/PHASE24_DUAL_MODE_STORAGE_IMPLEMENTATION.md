@@ -70,6 +70,11 @@ V11 is superseded route evidence: shortening TXN improves its skew proxy to
 The candidate is not production authority; subsequent edits must use a
 serialization-safe whole-net regeneration path.
 
+The installed local USB3 router is superseded evidence: focused USB3 remains
+passing, but native DRC reports 734 findings and a JMS_USB3_TXN/USB_RXP1
+short. The router is not production authority; a source-owned corridor
+regeneration remains required.
+
 The V8 USB3 negative control independently passes: removing a required native
 trace breaks the asserted endpoint graph. The check strengthens evidence
 sensitivity but does not waive the open native DRC or full-board gates.

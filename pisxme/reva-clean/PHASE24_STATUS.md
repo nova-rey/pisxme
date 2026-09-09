@@ -81,6 +81,11 @@ adds a CM5_USB3_RX_N/CM5_USB3_RX_P short. No production copper changed; this
 also exposes serialization-safe whole-net regeneration as a prerequisite for
 further local edits.
 
+The installed storage USB3 router was also exercised against V8. Its focused
+USB3 endpoint audit passes, but native DRC reports 734 findings with a real
+`JMS_USB3_TXN`/`USB_RXP1` short. It is rejected route evidence; the router's
+fixed channel assumptions are not suitable for this inherited corridor.
+
 The USB3 negative-control run on V8 also passes: the intact native graph is
 accepted, and removal of a required CM5 USB3 trace makes the audit fail as
 required. This validates audit sensitivity, not Phase 24 closure.

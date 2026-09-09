@@ -7975,3 +7975,7 @@ remains open.
 V11 shortened TXN and reduced the USB TX skew proxy to 1.620 mm, but native
 DRC rose to 731 and added a CM5 USB RX pair short. Rejected the candidate and
 recorded the need for serialization-safe whole-net regeneration.
+
+Exercised the installed local USB3 router against V8. It passed focused USB3
+endpoint assertions but produced 734 native DRC findings and a real
+JMS_USB3_TXN/USB_RXP1 short. Rejected the fixed-channel router assumptions.
