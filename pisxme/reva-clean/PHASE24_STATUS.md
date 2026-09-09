@@ -54,6 +54,11 @@ departures. The corrected rerun has six native DRC violations: XTAL_IN still
 interacts with the GND/3V3/RSET source field, while XTAL_OUT remains clean.
 It is rejected; exact branch-removal assertions are retained for the next
 source-only trial.
+V1150 isolated XTAL_IN after removing and counting eight local 3V3/RSET
+objects. Its source-only native DRC result improved to four findings: the
+short B.Cu stub still crossed the accepted XTAL_OUT lane, plus three inherited
+dangling warnings. V1150 is rejected but reproducible; the next implementation
+will use a safer single-net removal method before exchanging lanes.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
 `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout lineage

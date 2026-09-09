@@ -1367,3 +1367,7 @@ V1149 corrected the track/via identity matcher, asserted stale 3V3-via
 removal, and retested staggered source vias. The corrected native DRC result
 has six violations, all localized to XTAL_IN versus the GND/3V3/RSET source
 field; XTAL_OUT remains clean. Rejected; exact removal assertions are retained.
+V1150 isolated XTAL_IN after counting removal of eight local 3V3/RSET
+objects. Native DRC improved to four findings; the remaining real issue was
+the short B.Cu stub crossing the accepted XTAL_OUT lane. Rejected but
+reproducible.

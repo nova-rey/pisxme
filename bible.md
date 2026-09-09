@@ -9194,3 +9194,7 @@ geometry. Rejected; future pruning will assert removal counts.
 staggered source-via trial. Native DRC reduced the result to six violations,
 localized to XTAL_IN versus the GND/3V3/RSET source field; XTAL_OUT remained
 clean. Rejected pending source-only refinement.
+2026-09-09: V1150 isolated XTAL_IN after counting removal of eight local
+3V3/RSET objects. Native DRC improved to four findings; the remaining real
+issue was the short B.Cu stub crossing accepted XTAL_OUT. Rejected but
+reproducible.
