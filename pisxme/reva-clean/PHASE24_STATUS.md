@@ -60,6 +60,10 @@ pad parity passing, with no native `shorting_items` class; native DRC reports
 730 findings. It is not closure: inherited crossing/open/clearance/width and
 full-board power/ground gates remain. No production copper changed.
 
+V9 is rejected as a micro-adjustment regression. Although focused USB3
+connectivity remains passing, native DRC rises to 731 and introduces a real
+`CM5_PET0_P`/`CM5_USB3_RX_N` short. V8 remains the retained parent.
+
 The USB3 negative-control run on V8 also passes: the intact native graph is
 accepted, and removal of a required CM5 USB3 trace makes the audit fail as
 required. This validates audit sensitivity, not Phase 24 closure.

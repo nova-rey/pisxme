@@ -7244,6 +7244,9 @@ JMS583 package's 64 signal pads plus grounded exposed pad 65. The repaired
 library, selector, and TE M-key checks pass; physical storage validation
 remains open.
 
+V9 micro-adjustment was rejected after native DRC rose to 731 and introduced
+a CM5_PET0_P/CM5_USB3_RX_N short. V8 remains the retained parent.
+
 V8 USB3 native negative control also passed: removing a required CM5 USB3
 trace broke the connectivity assertion as required. This confirms audit
 sensitivity while Phase 24 remains open.

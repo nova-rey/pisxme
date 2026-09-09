@@ -52,6 +52,10 @@ fanout preserves all focused connectivity/parity gates and introduces no
 native shorting class, but native DRC remains at 730 findings with inherited
 crossing/open/clearance/width debt. It is not production authority.
 
+The V9 TXN micro-adjustment is superseded route evidence: focused USB3 still
+passes, but native DRC rises to 731 and adds a real CM5_PET0_P/CM5_USB3_RX_N
+short. V8 remains the selected disposable parent.
+
 The V8 USB3 negative control independently passes: removing a required native
 trace breaks the asserted endpoint graph. The check strengthens evidence
 sensitivity but does not waive the open native DRC or full-board gates.
