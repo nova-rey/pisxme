@@ -44,6 +44,11 @@ V955 staggered: 14). U1-270 restored a horizontal field but a same-side
 parallel fanout still crossed later transitions (V956: 9 findings). The next
 candidate will use mixed-side source escapes and independent transitions;
 these probes do not alter production CAD.
+V958 attempted to transplant the older V736 separated-shelf routing onto the
+current V944 clean field. It was rejected with 13 native DRC violations,
+including SPISO/SPICLK and SPISO3/SPISO source crossings plus downstream
+SPICS/SPISO shelf crossings. Historical copper is therefore not being
+restored; current transformed pads require a fresh escape authoring pass.
 V957 tested mixed-side same-layer fanout after U1-270 rotation. It was
 rejected (15 native DRC violations): inner pad departures still cross
 outer-pad fields before reaching their side-specific transitions. The next
