@@ -8923,3 +8923,8 @@ first route is rejected by native DRC with 7 violations and 34 expected
 incomplete connections, including a CLKREQ_N/SPISI crossing, a PEDET/SPISO
 transition conflict, and a C5 GND interaction. The V772 SPI/support basis
 remains the preferred complete-SPI starting point; control routing is open.
+V828 tested outboard F.Cu control columns while retaining the complete V772
+SPI/support field. Native DRC rejected it with 4 violations and 33 expected
+incomplete connections: CLKREQ_N clearance to an existing SPI via, PEDET
+clearance to the U2 field, PEDET crossing the M.2 SSD_3V3 launch, and a U2
+GND thermal issue. It is rejected route evidence.

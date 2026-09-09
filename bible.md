@@ -8449,6 +8449,11 @@ approaches. Native DRC rejected the first route with 7 violations and 34
 expected incomplete connections, including CLKREQ_N/SPISI, PEDET/SPISO
 transition, and C5 GND interactions. V772 remains the preferred complete-SPI
 starting point; control routing remains open.
+2026-09-09: V828 tested outboard F.Cu PEDET/CLKREQ_N columns while retaining
+the V772 complete SPI/support field. Native DRC rejected it with 4 violations
+and 33 expected incomplete connections, including control-to-SPI clearance,
+PEDET/SSD_3V3 launch conflict, and a U2 GND thermal issue. It is route
+evidence only.
 2026-09-09: V826 tested B.Cu-separated PEDET/CLKREQ_N approaches on V777 and
 was rejected with 6 violations and 33 expected incomplete connections. V827
 moved the source transitions laterally and was rejected with 9 violations and
