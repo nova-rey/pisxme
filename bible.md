@@ -8489,3 +8489,8 @@ V837 reversed the control endpoint order and passed native DRC with 0
 violations and 33 expected incomplete connections; its saved-board audit
 passes PEDET/CLKREQ_N endpoints and trace-removal negative controls. PERST_N
 and remaining support validation remain open.
+2026-09-09: V840 reduced PERST_N to 2 native violations and 32 expected
+incomplete connections; its outer corridor is clear but the source track
+contacts U1 pad 15. V841 changed the dogbone direction and was rejected with
+4 violations. V840 remains the better candidate; PERST_N source escape stays
+open.

@@ -8961,3 +8961,9 @@ reduced this to one crossing plus endpoint warnings. V837 reverses the
 endpoint order for a monotonic F.Cu route and passes native DRC with 0
 violations and 33 expected incomplete connections; its saved-board audit
 passes PEDET/CLKREQ_N endpoints and both trace-removal negative controls.
+V840 tested a PERST_N transition beyond the occupied SPI-via columns and
+reduced the route to 2 native violations and 32 expected incomplete
+connections; the outer corridor is clear, but the source track contacts U1
+pad 15. V841 changed the dogbone direction and was rejected with 4
+violations. V840 remains the better candidate, while PERST_N source escape
+is still open.

@@ -655,6 +655,11 @@ native violations and 32 expected incomplete connections. V839 offset the
 source transition but was rejected with 4 violations and 32 expected
 incomplete connections, including SPISO/SPISO3 corridor shorts and adjacent
 U1 pad-field clearance. PERST_N remains open.
+V840 reduced the PERST_N route to 2 native violations and 32 expected
+incomplete connections; its outer corridor is clear but the source track
+contacts U1 pad 15. V841 changed the dogbone direction and was rejected with
+4 violations. V840 remains the better candidate; PERST_N source escape is
+still open.
 V834 is the corrected in-outline control placement probe and passes native
 DRC with 0 violations and 35 expected incomplete connections. V835 and V836
 are rejected route implementations with 5 and 3 violations respectively.
