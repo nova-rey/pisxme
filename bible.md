@@ -8254,3 +8254,8 @@ crystal micro-island.
 connections. Native KiCad DRC found 11 violations including
 XTAL_IN/XTAL_OUT/GND shorts and crossings. Rejected V689; retained V683 for
 the crystal field and V687 for the U1.39 RTL_3V3 branch.
+
+2026-09-09: V690 moved only C2 and rebuilt XTAL_OUT/GND alongside U1.52;
+native KiCad DRC found 15 violations including crystal shorts and rail/control
+interference. Rejected the C2-only class; the next attempt must co-author the
+complete crystal/support micro-island.

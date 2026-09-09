@@ -78,6 +78,9 @@ must co-author that branch with the crystal micro-island.
 V689's coherent left crystal translation was rejected at 11 native DRC
 violations, including XTAL_IN/XTAL_OUT/GND shorts and crossings. Retain V683
 for the crystal field and V687 for U1.39; U1.52 remains open.
+V690's C2-only move was rejected at 15 native DRC violations, including
+crystal shorts and rail/control interference. Do not move C2 independently;
+co-author the complete local crystal/support micro-island next.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native

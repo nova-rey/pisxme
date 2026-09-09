@@ -74,6 +74,10 @@ DRC violations due to the C2 GND return and CLKREQ pull-up geometry. The next
 V689 translated the complete crystal micro-island left and rebuilt its nets;
 native DRC found 11 real crystal-net shorts/crossings. Reject V689 as a route
 implementation and retain the V683 crystal basis plus V687 U1.39 branch.
+V690 moved only C2 and rebuilt XTAL_OUT/GND alongside U1.52; native DRC found
+15 violations including crystal shorts and 3V3/CLKREQ and 1V1/GND contact.
+Reject the C2-only class. The next experiment must co-author the complete
+crystal/support micro-island with verified pad geometry.
 
 V672 provides a positive interior RSET basis with nine inherited warnings and
 no signal DRC violations. V673 layered lower RTL_3V3 onto it and found 12
