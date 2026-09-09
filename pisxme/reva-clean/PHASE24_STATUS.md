@@ -9998,3 +9998,9 @@ PCIe-lane/SSD-power opens remain. V1241/V1242 are route-implementation
 evidence only. Keep the accepted V1226 control geometry; next regenerate the
 power returns on a dedicated clear corridor and revalidate the complete local
 field.
+V1256 is the first clean per-pair layer-swapped ascent discriminator. The
+saved-board audit proves all four lane pads reach their intended upper
+transition vias and four native source-cohort negative controls pass. Native
+DRC reports no new lane shorts, crossings, or clearance errors; remaining
+findings are intentionally incomplete non-lane support warnings/opens in the
+disposable scrub. The J1 transition network remains OPEN.

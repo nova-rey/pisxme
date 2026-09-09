@@ -9329,6 +9329,12 @@ crossings or shorts; support opens are intentional isolation artifacts, so
 V1240 is not final closure. The evidence changes the next action to
 coordinated rail/ground regeneration around proven REFCLK exits. Path A and
 production CAD remain untouched.
+2026-09-09 — PiSXMe V1256 per-pair ascent checkpoint. Native saved-board
+audit proves all four RTL9210B lane pads reach their intended upper
+transition vias and four source-cohort negative controls pass. Native DRC
+has no new lane shorts, crossings, or clearance errors; incomplete support
+warnings/opens are intentional disposable-fixture findings. J1 transitions
+remain open.
 2026-09-09 — PiSXMe V1255 upper-corridor discriminator. The upper lane
 region is largely clear, but a common-layer source ascent weaves across the
 four conductors and one REFCLK via. Preserve as route evidence; next use

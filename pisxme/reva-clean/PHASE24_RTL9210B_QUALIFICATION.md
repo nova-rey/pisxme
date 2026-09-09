@@ -1437,6 +1437,12 @@ long F.Cu launches remain incompatible with PERST/CLKREQ and reversed RX
 connector ordering. The middle-board B.Cu corridor remains viable. The next
 class staggers J1-side transitions on B.Cu and uses only short F.Cu connector
 dogbones.
+V1256 is the first clean per-pair layer-swapped ascent discriminator. Its
+saved-board audit proves all four lane pads reach their intended upper
+transition vias and four native source-cohort negative controls pass. Native
+DRC reports no new lane shorts, crossings, or clearance errors; remaining
+findings are intentionally incomplete non-lane support warnings/opens. The
+J1 transition network remains open.
 V1255 is an upper-corridor discriminator. The complete lane concept reaches
 the upper region, but native DRC identifies source-to-row same-layer weave
 crossings plus one REFCLK-via clearance interaction. The corridor itself is
