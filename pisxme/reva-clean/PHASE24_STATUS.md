@@ -18,6 +18,12 @@ audit plus negative control pass; remaining support-field route cleanup is a
 routing gate, not an instantiation task. Likewise, old malformed footprint,
 pre-J8 mode-control, stale parity, obsolete connector, and rejected-route
 claims below are historical evidence only when explicitly labeled as such.
+RTL9210B-CG Path B is an active parallel qualification candidate, not a
+rejected alternative. The current comparison and evidence ledger are in
+`PHASE24_RTL9210B_PATH_COMPARISON_20260909.md`; its corrected SMD package,
+shared lane-0/PEDET mapping, native support primitives, and JLC identity are
+retained, while authorized application-circuit/provisioning, complete
+mode-aware route, firmware rights, and integrated validation remain open.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native

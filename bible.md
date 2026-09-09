@@ -8109,3 +8109,14 @@ V34 regenerated the complete four-net CM5 USB3 source field with orthogonal
 staggered exits. Native DRC was 589 findings / 403 unconnected items, but five
 true shorts appeared, including a no-net J7 pad collision and RX/XOUT field
 collisions. Rejected V34; reference-derived escape allocation is next.
+
+2026-09-09: Introduced RTL9210B-CG as a serious isolated Path-B comparison
+candidate without disturbing Path A. Refreshed the live JLC identity and
+public firmware/reference evidence, preserved the corrected SMD QFN package
+and native support primitives, and recorded the shared lane-0/PEDET mapping,
+support audit, procurement/provenance limits, firmware distinction, and
+apples-to-apples decision matrix in
+`pisxme/reva-clean/PHASE24_RTL9210B_PATH_COMPARISON_20260909.md`. Updated the
+storage qualification and Phase 24 current-state narrative to classify Path B
+as `CONTINUE BOTH`, with authorized application-circuit, virgin provisioning,
+firmware rights, full route, and integrated mode-validation gates still open.
