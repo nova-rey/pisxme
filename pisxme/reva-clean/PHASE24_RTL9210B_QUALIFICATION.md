@@ -1317,6 +1317,10 @@ Native DRC leaves only the inherited RTL_3V3 dangling warning; the saved-board
 audit passes all three U1 GND endpoint assertions and both trace-removal
 negative controls. This is a retained local GND primitive, not full Path-B
 closure.
+V1131 is a rejected V788-inspired separated CLKREQ_N control trial. Its
+upper-pocket resistor move was retained, but native DRC found clashes with
+the preserved 1V1 B.Cu shelf, 3V3 corridor, and local U1 departure geometry.
+CLKREQ remains open and requires complete control-field co-authoring.
 V1127 is the accepted PEDET route refinement. It replaces the rejected
 connector-field via termination with a single useful transition at x=124 mm;
 native DRC retains only the inherited RTL_3V3 dangling warning. The saved
