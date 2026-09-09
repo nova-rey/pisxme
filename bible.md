@@ -8203,3 +8203,10 @@ with the adjacent RTL_1V1 departure.
 Native DRC found 13 violations and 24 opens, including a real RTL_3V3/
 RTL_1V1 short at the adjacent via/escape. Rejected V675; retain the clean
 standalone V674 U1.39 escape and allocate U1.40 through another corridor.
+
+2026-09-09: V676 tested the around-the-via source allocation from V672:
+U1.39 RTL_3V3 transitions west and U1.40 RTL_1V1 turns down to a separate
+ordinary via. Native KiCad DRC found 12 findings and 24 expected/incomplete
+opens, with no signal short, crossing, clearance, solder-mask, or footprint
+errors. Retained V676 as a source-field basis; its short B.Cu tails are not
+final support routing and must be extended to native rail collectors.

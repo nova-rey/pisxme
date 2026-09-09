@@ -30,6 +30,16 @@ warning and no pad short/crossing/clearance error; the other rotations added
 the standing rules. The integrated lower-3V3 work must now co-author the
 90° U1.39 escape with the adjacent RTL_1V1 departure.
 
+V676 is the retained adjacent-source basis for that co-authoring step. Starting
+from V672, it routes U1.39 RTL_3V3 west to an ordinary transition and turns
+U1.40 RTL_1V1 down to a separate transition. Native DRC found 12 findings and
+24 expected/incomplete unconnected items, with no signal short, crossing,
+clearance, solder-mask, or footprint errors. Its short B.Cu tails are
+disposable transition stubs, not completed support routing; extend them to
+their native rail collectors independently before treating the field as
+connected. The raw receipt is
+`PHASE24_RTL9210B_U139_U140_AROUND_V676.md`.
+
 V672 provides a positive interior RSET basis with nine inherited warnings and
 no signal DRC violations. V673 layered lower RTL_3V3 onto it and found 12
 violations/21 opens; it is rejected because the U1.52 departure contacts

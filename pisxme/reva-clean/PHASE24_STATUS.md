@@ -42,6 +42,12 @@ V674's all-pad rotation discriminator confirms the 90° U1.39 escape is clean
 at package level; its remaining integrated dependency is the adjacent
 RTL_1V1 departure. Other rotations are rejected by native DRC and are not
 preferred.
+V676 is the retained adjacent-source basis: U1.39 RTL_3V3 transitions west
+and U1.40 RTL_1V1 transitions down on separate ordinary vias. Native DRC found
+12 findings/24 expected incomplete opens with no signal short, crossing,
+clearance, solder-mask, or footprint errors. The short B.Cu tails are not
+final support routing; the next action is independent extension to the native
+rail collectors. See `PHASE24_RTL9210B_U139_U140_AROUND_V676.md`.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native
