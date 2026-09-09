@@ -8557,6 +8557,12 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: V959/V961 tested U1-0 source fanout with U2 displaced for a
+source-field-only discriminator. Direct horizontal and diagonal departures
+still collide with neighboring exits; staged V961 retained 10 native DRC
+violations. These are disposable evidence only. The next route pass must
+co-design immediate layer-separated escapes and first-layer corridors; no
+production CAD changed.
 2026-09-09: V957 rejected naïve mixed-side same-layer SPI fanout after the
 U1-270 probe (15 native DRC violations). Inner QFN pad departures crossed
 outer-pad fields. Next experiment requires immediate layer-separated inner
