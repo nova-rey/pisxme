@@ -9002,3 +9002,9 @@ warning. It is therefore a connectivity-positive, DRC-rejected candidate.
 V852 tested ordinary-via B.Cu separation for the lower pair and was rejected
 by a real SPISO/SPICS short at the source escape. These results bound the next
 experiment to a source-via stagger outside the adjacent F.Cu fanout.
+V853 attempted the staggered-via class and was rejected by six related
+SPICS-to-U1 exposed-GND pad/thermal/clearance violations, plus the inherited
+isolated-fill warning. It still reduced the incomplete count to 40 and did
+not create a new pair endpoint failure. The next source escape must leave the
+U1 field toward the left, with SPISO and SPICS vertically staggered before
+their B.Cu transitions.

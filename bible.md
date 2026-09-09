@@ -8525,3 +8525,8 @@ thermal-starvation error plus the inherited isolated B.Cu-fill warning.
 V852's ordinary-via B.Cu separation was rejected by a real SPISO/SPICS
 source-escape short. The next experiment must stagger source vias clear of
 the adjacent F.Cu fanout.
+2026-09-09: V853 tested staggered outward source vias for the lower SPI pair.
+It was rejected by six related SPICS-to-U1 exposed-GND pad/thermal/clearance
+violations plus the inherited isolated-fill warning. It retained 40
+incomplete items and no new endpoint failure. The next class staggers the
+source escapes left of U1 before the B.Cu transitions.

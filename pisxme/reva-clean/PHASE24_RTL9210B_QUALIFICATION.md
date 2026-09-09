@@ -706,3 +706,8 @@ warning. V852's ordinary-via B.Cu separation is rejected by a real
 SPISO/SPICS source-escape short. The five-net field is connectivity-positive,
 but not yet a DRC pass; the next class must stagger source vias outside the
 adjacent F.Cu fanout.
+V853 is rejected as a route implementation: its outward SPICS escape enters
+the U1 exposed GND pad/thermal field, producing six related GND/clearance
+violations and the inherited isolated-fill warning. It retains 40 incomplete
+items and no new endpoint failure. The next class must stagger the two source
+escapes left of the U1 field before dropping to B.Cu.
