@@ -9064,6 +9064,17 @@ and SPISO3/GND shorting classes and an RTL_3V3 source-field crossing. This is
 a route-implementation failure; the retained V278/V282 placement and bases
 remain valid. Remaining SPI channels must be allocated as one coordinated
 field.
+V1243 is the corrected rail/reference base: it preserves V1240's accepted
+CLKREQ_N/PERST_N/REFCLK geometry, regenerates RTL_1V1/RTL_3V3, and exits GND
+through a distinct QFN-side transition. Native DRC reports no new shorts,
+crossings, or clearance violations; the remaining four warnings are inherited
+dangling collector/support artifacts, and the seven expected lane/SSD-power
+opens remain. V1243 native rail/REFCLK assertions and three source-cohort
+negative controls pass. V1244 is rejected lane-0 route implementation
+evidence: the attempted source fanout and outer B.Cu rows cross adjacent QFN
+pads and retained support/control corridors. It does not reject the RTL9210B
+lane architecture. Next gate: co-author a lane source escape with the
+rail/reference field, then regenerate lane-0 and audit it.
 V284 is rejected: the high-north SPISO3 trial avoids the lower SPI crossings
 but creates a native SPISO3/GND short at the C1 crystal-support pad. This is
 another route-implementation failure; the next experiment must allocate
@@ -9940,3 +9951,15 @@ the local QFN rail field is regenerated around it. V1230-V1237 are rejected
 REFCLK route-implementation experiments. Next gate: rebuild the displaced
 1V1/3V3/GND support field around the V1240 exits, then revalidate REFCLK and
 all affected rail endpoints.
+V1241 restored the older V1195 rail copper onto the current V1240 basis and
+was rejected: its historical control-via coordinates are incompatible with
+the accepted V1226 field, producing native shorts/crossings. V1242 is the
+current rail-regeneration experiment. Its native saved-board assertions pass
+REFCLK_P/N, CLKREQ_N, PERST_N, the selected 1V1/3V3 endpoints, and GND pad
+joins with complete source-cohort negative controls. Native DRC rejects its
+GND return because the candidate crosses the existing control/PEDET source
+field and has inherited dangling collector warnings; the seven expected
+PCIe-lane/SSD-power opens remain. V1241/V1242 are route-implementation
+evidence only. Keep the accepted V1226 control geometry; next regenerate the
+power returns on a dedicated clear corridor and revalidate the complete local
+field.

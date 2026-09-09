@@ -9329,3 +9329,16 @@ crossings or shorts; support opens are intentional isolation artifacts, so
 V1240 is not final closure. The evidence changes the next action to
 coordinated rail/ground regeneration around proven REFCLK exits. Path A and
 production CAD remain untouched.
+2026-09-09 — PiSXMe Phase 24 Path-B rail regeneration review. V1241 rejected
+historical V1195 copper on the current basis. V1242 passed native endpoint
+assertions and source-cohort negative controls but failed native DRC at the
+GND/control-field interaction; it remains rejected route evidence. Preserve
+V1226 control geometry and continue with a dedicated power-return corridor.
+2026-09-09 — PiSXMe Phase 24 Path-B V1243/V1244 checkpoint. V1243 preserves
+V1226 control and V1240 REFCLK geometry, regenerates RTL_1V1/RTL_3V3, and
+restores GND through a distinct QFN-side transition. Native DRC reports no
+new shorts, crossings, or clearance violations; native rail/REFCLK
+assertions and negative controls pass. V1244's lane-0 source/outer-row
+implementation is rejected for QFN/support/control crossings. Preserve
+V1243 as the support base and co-author the next lane escape; Path A and
+production CAD remain untouched.

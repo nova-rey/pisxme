@@ -1398,3 +1398,19 @@ therefore V1240 is not full support closure. It establishes that REFCLK is
 geometrically viable and that the next task is coordinated rail/ground
 regeneration around the accepted source exits. V1230-V1237 remain rejected
 route-implementation evidence.
+V1241/V1242 are rejected rail-regeneration experiments. V1241 proves that
+copying V1195 historical copper is not valid on the current V1226 basis.
+V1242's native endpoint assertions and negative controls pass, but native DRC
+rejects the proposed GND return against the existing control/PEDET field and
+retains dangling collector warnings. No Path-A or production-CAD change was
+made; the next work remains coordinated power-return regeneration around the
+accepted REFCLK/control exits.
+V1243 is the corrected support-field base. It preserves the accepted V1226
+control and V1240 REFCLK geometry, regenerates the 1V1/3V3 collectors, and
+uses a distinct GND transition. Native DRC has no new shorts, crossings, or
+clearance errors; only inherited dangling support warnings and the expected
+lane/SSD-power opens remain. Native rail/REFCLK assertions and negative
+controls pass. V1244 is rejected lane-0 routing evidence because its source
+fanout and long B.Cu rows intersect QFN/support/control geometry. This is a
+route implementation failure, not an RTL9210B architecture failure. The next
+experiment must co-author the lane escape with the live support field.
