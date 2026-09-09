@@ -633,6 +633,11 @@ V828 tested outboard F.Cu control columns while retaining the complete V772
 SPI/support field. Native DRC rejected it with 4 violations and 33 expected
 incomplete connections, including control-to-SPI clearance, PEDET-to-M.2
 launch conflict, and a U2 GND thermal issue. It is route evidence only.
+V829 tested immediate local control-resistor placement beside U1 and was
+rejected with 4 native violations and 33 expected incomplete connections.
+V830 angled the launches but was rejected with 10 violations and 33 expected
+incomplete connections. These remain local control-route evidence only;
+V772 remains the complete-SPI/support basis.
 V826 tested B.Cu-separated PEDET/CLKREQ_N approaches on V777 and was rejected
 with 6 native violations and 33 expected incomplete connections. V827 moved
 the source transitions laterally and was rejected with 9 violations and 33

@@ -8928,3 +8928,9 @@ SPI/support field. Native DRC rejected it with 4 violations and 33 expected
 incomplete connections: CLKREQ_N clearance to an existing SPI via, PEDET
 clearance to the U2 field, PEDET crossing the M.2 SSD_3V3 launch, and a U2
 GND thermal issue. It is rejected route evidence.
+V829 tested immediate local control-resistor placement beside U1; native DRC
+reported 4 violations and 33 expected incomplete connections, limited to
+QFN-adjacent launch clearance and inherited support warnings. V830 angled the
+two dogbones away from the adjacent pads but increased the result to 10
+violations and 33 expected incomplete connections. Both are rejected route
+variants; V772 remains the complete-SPI basis.
