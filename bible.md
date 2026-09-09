@@ -8578,3 +8578,7 @@ a dangling In2 track caused by an incorrect junction coordinate. V862
 corrected the join to the actual V860 transition. Native DRC passed with 0
 violations and 30 expected incomplete items; the complete RTL_5V audit passed
 U1.17/U1.33/C5.1 and its trace-removal negative control.
+2026-09-09: V871 added U1.39 to the validated RTL_3V3 bridge spine. Native
+DRC passed with 0 violations and 27 expected incomplete items; the saved-board
+audit proved U1.39/U2.3/U2.8/C3.1 and a targeted U1.39 source-trace negative
+control. Remaining U1 RTL_3V3 pads and R2/R3 supply endpoints remain open.

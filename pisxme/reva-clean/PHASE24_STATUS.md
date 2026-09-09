@@ -9059,3 +9059,7 @@ V870 extends the clean V869 RTL_3V3 spine from U2.8 to U2.3. Native DRC
 passes with 0 violations and 28 expected incomplete items. The saved-board
 audit proves U2.3/U2.8/C3.1 and a trace-removal negative control. U1-side
 RTL_3V3 and the R2/R3 supply endpoints remain open.
+V871 adds U1.39 to the validated RTL_3V3 bridge spine. Native DRC passes
+with 0 violations and 27 expected incomplete items. The saved-board audit
+proves U1.39/U2.3/U2.8/C3.1 and a targeted U1.39 source-trace negative
+control. Remaining U1 RTL_3V3 pads and R2/R3 supply endpoints remain open.
