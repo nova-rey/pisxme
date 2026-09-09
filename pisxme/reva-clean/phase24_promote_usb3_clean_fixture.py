@@ -12,7 +12,11 @@ R = Path(__file__).resolve().parent
 BASE = Path(os.environ.get("P24_PROMOTE_BASE", str(R / "PHASE24_MACRO_FRESH_STORAGE_LOCAL_J3_EDGE.kicad_pcb")))
 FIX = Path(os.environ.get("P24_PROMOTE_FIXTURE", str(R / "PHASE24_USB3_CM5IO_SOURCE_ESCAPE_U7_ROT0_CLEANPASS.kicad_pcb")))
 OUT = Path(os.environ.get("P24_PROMOTE_OUT", str(R / "PHASE24_STORAGE_LOCAL_J3_EDGE_USB3_CLEANPASS.kicad_pcb")))
-USB3 = ("CM5_USB3_RX_N", "CM5_USB3_RX_P", "CM5_USB3_TX_N", "CM5_USB3_TX_P")
+USB3 = (
+    "CM5_USB3_RX_N", "CM5_USB3_RX_P", "CM5_USB3_TX_N", "CM5_USB3_TX_P",
+    "USB_TXP1", "USB_TXN1", "JMS_USB3_TXP", "JMS_USB3_TXN",
+    "USB_RXP1", "USB_RXN1",
+)
 
 def vec(p): return pcbnew.VECTOR2I(p.x, p.y)
 

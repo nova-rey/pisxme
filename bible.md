@@ -5426,6 +5426,12 @@ also hardened to resolve child `/CORE_CM5/` and canonical target net names
 and to assign native target net objects. CM5 source promotion is connected;
 bridge-side USB3 promotion remains open. Native DRC on the immature combined
 workbench is 1,027 violations / 499 unconnected items.
+
+2026-09-08: Expanded USB3 promotion to the complete ten-net contract and
+made target net resolution robust to KiCad hierarchy spelling. The source
+quartet copies successfully; the bridge-side pass remains open because the
+support-route parent relocates coupling capacitors and requires native-pad
+anchored local rerouting rather than blind historical copper transplant.
 2026-09-07 — PiSXMe Phase 24 documentation hygiene: marked the original
  RTL9210B bring-up fixture's 56-open count as historical baseline evidence
  and pointed current-state prose to the SPI V7 plus GND-plane candidate with
