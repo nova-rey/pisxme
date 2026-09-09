@@ -1,10 +1,11 @@
 """Materialize the production Ethernet support on the official MDI candidate."""
 from pathlib import Path
 import pcbnew
+import os
 
 R=Path(__file__).resolve().parent
-BASE=R/'PHASE24_OFFICIAL_ETH_TRANSPLANT_CORRECTED_BASIS.kicad_pcb'
-OUT=R/'PHASE24_OFFICIAL_ETH_SUPPORT_MATERIALIZED.kicad_pcb'
+BASE=R/os.environ.get('PISXME_ETH_BASE','PHASE24_OFFICIAL_ETH_TRANSPLANT_CORRECTED_BASIS.kicad_pcb')
+OUT=R/os.environ.get('PISXME_ETH_OUT','PHASE24_OFFICIAL_ETH_SUPPORT_MATERIALIZED.kicad_pcb')
 LIB=R/'PiSXMe_RevA_Clean.pretty'
 PARTS={
  'C48':('C_0603_1608Metric',{'1':'ETH_CT1','2':'ETH_CT_BRANCH_1'},(68,70)),

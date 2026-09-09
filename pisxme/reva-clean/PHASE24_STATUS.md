@@ -2,6 +2,20 @@
 
 ## CURRENT OPEN GATES — 2026-09-08
 
+### Latest source-regenerated routing basis
+
+`PHASE24_STORAGE_NETLIST_REGENERATED_V2.kicad_pcb` is the latest disposable
+source-regenerated storage candidate. It preserves the prior routed geometry,
+adds the source-required Ethernet support passives, normalizes hierarchical
+track names, and applies native schematic node ownership including the EDAC
+J2 physical alias map. Its parity audit reports 0 expected-pad mismatches;
+dual-mode USB3 reports PASS, SATA reports PASS for all 12 endpoints, and the
+JMS583 support audit plus trace-removal negative control report PASS. Native
+DRC reports 700 violations / 399 unconnected items with zero shorting items.
+It is the current routing workbench, not a closure candidate. Continue route
+cleanup and revalidate all affected paths from this candidate; do not promote
+its DRC state as finished.
+
 ### Current source-authority repair
 
 `CORE_CM5.kicad_sch` now exposes its 51 CM5 ground labels as native global

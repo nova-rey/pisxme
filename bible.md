@@ -7764,3 +7764,12 @@ no copper was promoted.
   genuinely absent current-candidate support refs instead of silently
   inventing placement. This keeps the stale/incomplete candidate distinction
   explicit for the next source-authority rebuild.
+- Remote `reva-clean` had already published the preceding checkpoint while
+  this local amendment was prepared; the histories were reconciled with a
+  non-destructive merge preserving both the published source repair and this
+  local materializer hardening.
+- Added `phase24_regenerate_board_from_netlist.py`, a generic source-driven
+  PCB pad/copper ownership regenerator. Its V2 disposable candidate passes
+  parity, dual-mode USB3, SATA, and JMS583 support audits; native DRC remains
+  open at 700 violations / 399 unconnected items and is explicitly retained
+  as an active routing gate.

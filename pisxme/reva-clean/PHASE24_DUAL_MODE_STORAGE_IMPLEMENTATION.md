@@ -2,6 +2,16 @@
 
 ## CURRENT STATE — authoritative now (2026-09-08)
 
+The first generic netlist-driven PCB regeneration is now available as
+`PHASE24_STORAGE_NETLIST_REGENERATED_V2.kicad_pcb`. It applies the saved
+schematic's actual node ownership to existing pads/copper, adds the explicitly
+missing source-required Ethernet support passives, and normalizes inherited
+hierarchical copper names without synthesizing connectivity. Pad parity is
+PASS (0 mismatches); native USB3, SATA, and JMS583 support audits pass, with
+the JMS583 trace-removal negative control passing. Native DRC remains open at
+700 violations / 399 unconnected items and zero shorting items, so this is a
+routing workbench rather than release authority.
+
 The CM5 ground-label authority has been repaired at source. All 51 local
 `POWER_GND` labels in `CORE_CM5.kicad_sch` are now native global labels, so
 the saved schematic export resolves CM5 ground contacts and the board plane
