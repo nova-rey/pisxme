@@ -532,3 +532,13 @@ items, and 0 footprint errors. No via-in-pad or rule relaxation was used. The
 complete integrated QFN field still requires coordinated allocation and
 native DRC/connectivity; V666 is not full Path-B closure. Path A remains the
 protected fallback; Path B remains a serious comparison candidate.
+## CURRENT ROUTING CHECKPOINT — V780–V782 (2026-09-09)
+
+The V780–V782 disposable route trials are rejected implementation variants,
+not architecture decisions. V780 shorted SPICS into the crystal-support GND
+pad; V781 avoided that pocket but failed native crossings/clearances near the
+QFN endpoint field and reference planes; V782 failed native crossings between
+the outboard PEDET/CLKREQ_N B.Cu corridors and retained SPISI, plus local U1
+pad and resistor-feed clearances. The last clean combined support basis is
+V772. Preserve all reports as raw evidence and continue with a new local
+control-channel allocation from V772/V777.

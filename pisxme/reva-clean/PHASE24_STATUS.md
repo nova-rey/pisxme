@@ -1,6 +1,6 @@
 # Phase 24 acreage validation status
 
-## CURRENT PATH-B CHECKPOINT — V760 five-net SPI fixture (2026-09-09)
+## CURRENT PATH-B CHECKPOINT — V772 support basis; V780–V782 control-route trials rejected (2026-09-09)
 
 V760 is the current disposable RTL9210B-CG SPI support candidate. It starts
 from the V748 U1/U2 placement basis, uses a monotonic five-net QFN source
@@ -28,6 +28,17 @@ V779 is a rejected split-corridor PEDET/CLKREQ_N route; it introduced real
 control/resistor crossings and a no-connect U1-pad contact. V772 remains the
 current clean combined support basis, with control resistor relocation still
 open.
+
+V780 is rejected: its SPICS/SPISO rechannel terminated the long B.Cu channels
+through the validated crystal-support pocket, producing an SPICS/GND short and
+multiple crossings. V781 moved the endpoint dogbones above that pocket but
+introduced crossings/clearances against XTAL_OUT, U1 endpoint pads, and the
+reference planes. V782 is also rejected: outboard B.Cu control corridors
+crossed retained SPISI channels and the two control vias were too close to U1
+pads; the shared RTL_3V3 resistor feed also crossed the control launches.
+These are route-implementation failures. V772 remains the last native-clean
+combined support basis; control routing is still OPEN and Path B is not
+promoted.
 
 The earlier V702/V718/V735 checkpoints and V746/V747/V751/V752 failures are
 historical disposable evidence. V753 proved the adjacent SPICLK/SPISI

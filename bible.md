@@ -8363,4 +8363,9 @@ shorts, and a no-connect U1-pad contact. Continue with control-only resistor
 relocation; V772 remains the clean support basis.
 
 2026-09-09: Reconciled the duplicated stale V702 Phase 24 status section by
-marking it historical; V760 is the sole current RTL9210B SPI checkpoint.
+marking it historical; V772 is the current combined RTL9210B support
+checkpoint. V780-V782 were bounded control/SPI rechannel trials. V780
+shorted SPICS to the crystal-support GND pocket; V781 and V782 were rejected
+by native DRC for endpoint, plane, U1-pad, and retained-SPI corridor
+interactions. Their raw boards and reports are preserved; no Path-A or
+production CAD was changed.
