@@ -90,6 +90,9 @@ M.2/mode/ground conflicts and raised native DRC to 670; both are rejected.
 U12 JMS USB3 TX fanout V1 retained the dual-mode USB3 endpoint audit but
 introduced multiple U12 no-net/USB/M.2 short classes despite a numerical DRC
 count of 664; it is rejected. The VCCK-local V1 basis remains current.
+USB3 skew-tune V1 reduced RX proxy skew to 2.123 mm and TX proxy skew to
+2.400 mm, but introduced real JMS support/selector shorts and crossings;
+it is rejected pending a reserved support-via corridor.
 
 Selector-side V9 moved only the TXP corridor above the inherited support
 field; it removed the prior TXP/USB_RXN1 collision but introduced new XIN,

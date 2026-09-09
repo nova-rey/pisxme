@@ -7674,3 +7674,8 @@ older 673-count references remain historical evidence only.
 dual-mode USB3 endpoint audit passed, but native DRC exposed multiple U12
 no-net/USB/M.2 shorts; the 664 aggregate count was not an improvement in
 electrical quality. Rejected; VCCK_LOCAL_V1 remains the current basis.
+
+2026-09-08: Tested USB3 skew-tune V1. RX proxy skew improved to 2.123 mm and
+TX proxy skew to 2.400 mm, but the added meanders entered JMS support and
+selector-via fields and created real shorts/crossings. Rejected; support-via
+reservation is required before another tuning pass.
