@@ -8979,6 +8979,11 @@ using an ordinary outboard transition. Native DRC stayed free of electrical
 violations with six intentional dangling warnings; fixture opens fell to 41.
 V1048 is the current supply/source basis while U2 and remaining RTL9210B
 support endpoints stay open.
+2026-09-09: V1059 rejected U2 3V3 at the rotated-U2 GND/1V1 geometry.
+V1060 rejected a diagonal bridge that shorted SPISI. V1061 orthogonalized the
+U2.3/U2.8 same-net join and passed native DRC with one inherited dangling
+warning and no new electrical violations. Retain V1061 as the U2 supply
+primitive; full QFN/resistor/C3 3V3 closure remains open.
 2026-09-09: V1051 rejected the U1.20-to-U2.3 transition at U2.7/SPISO3.
 V1052 moved U2 10 mm outboard and achieved a native-clean U1.20/U2.3 supply
 path with six intentional dangling warnings and 40 fixture opens. Retain it

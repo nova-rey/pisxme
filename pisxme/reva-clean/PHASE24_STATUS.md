@@ -171,6 +171,13 @@ crossings and one inherited 3V3 dangling warning. These are route-generation
 failures; V1055 remains the current placement basis and moved-U2 SPI routing
 is still open.
 
+V1059 is rejected because its U2 3V3 path entered the existing rotated-U2
+GND returns and crossed the 1V1 shelf. V1060 narrows the join but shorts the
+SPISI B.Cu lane. V1061 orthogonalizes the U2.3/U2.8 same-net bridge and
+passes native DRC with one inherited RTL_3V3 dangling warning and no new
+electrical violations. V1061 is the current U2 supply primitive; its join to
+the full QFN/resistor/C3 3V3 group remains open.
+
 V1058 regenerates all five SPI channels from the clean rotated-U2 basis.
 Native DRC reports one inherited RTL_3V3 dangling warning and no new
 electrical violations. The saved-board audit passes SPISI, SPICLK, SPISO3,

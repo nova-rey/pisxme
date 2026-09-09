@@ -57,6 +57,12 @@ dangling source warnings and 41 fixture opens. Retain V1048 as the current
 local supply basis; U2 supply attachment and the remaining RTL9210B support
 network are still OPEN.
 
+V1059 is rejected for U2 3V3/GND and 1V1-shelf conflicts. V1060 is rejected
+for a diagonal bridge shorting the SPISI B.Cu lane. V1061 orthogonalizes the
+rotated-U2.3/U2.8 same-net bridge and is native-clean apart from one inherited
+RTL_3V3 dangling warning. Retain V1061 as the current U2 supply primitive;
+the complete QFN/resistor/C3 3V3 group is not yet closed.
+
 V1049 is rejected for crossing the retained SPISO3 launch. V1050 avoids that
 F.Cu crossing but fails at the SPICLK-adjacent via and crosses the existing
 1V1 B.Cu shelf. Both are local route-implementation evidence only. U1.20
