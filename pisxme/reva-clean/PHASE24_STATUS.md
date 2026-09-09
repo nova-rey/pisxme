@@ -10134,3 +10134,8 @@ V1290 is rejected coupled escape evidence. Moving the 1V1 transition farther
 north still produces native crossings/shorts at the 3V3 B.Cu field and the
 RTL_5V source pad. SPICS remains OPEN; the next credible class is a verified
 QFN footprint-level escape change.
+The footprint-level review recovered V735 as a qualified comparison basis:
+U1 is rotated 90 degrees, the native DRC report records zero violations, and
+the independent SPICS/SPISO endpoint and source-removal audits pass. V735 is
+an isolated support-placement reference, not yet a replacement for the
+current four-lane V1279 lineage; full Path-B integration remains OPEN.

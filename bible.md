@@ -9495,3 +9495,7 @@ and mask rules. SPICS remains open.
 negative-control audits passed, but alternate RTL_1V1 transitions still
 crossed or shorted validated 3V3/5V source fields. SPICS remains open; use a
 verified QFN footprint-level escape class next.
+2026-09-09 — Footprint-level review recovered V735 as a qualified comparison
+basis: U1 at 90 degrees, native DRC zero violations, and independent
+SPICS/SPISO endpoint plus source-removal audits passed. It is isolated support
+placement evidence, not full Path-B closure or a production replacement.
