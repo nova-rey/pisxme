@@ -64,6 +64,11 @@ trace-removal negative control. Support/control/REFCLK remain open.
 exposed real short/crossing classes despite reduced open counts. V311 remains
 the retained disposable sideband basis; Path A and production CAD are
 unchanged.
+2026-09-09 — Phase 24 V1312 rejected: the attempted rotated-QFN split-source
+escape caused native pad-field shorts/crossings and failed its saved-board
+lane endpoint audit; DRC reported 45 violations. Preserved the disposable
+candidate as route-implementation evidence. Production and Path-A assets
+remain unchanged.
 2026-09-09: V1145 and V1146 tested XTAL_IN coexistence with accepted V1144
 XTAL_OUT. Native DRC found five and seven source-field violations; both were
 rejected. V1144 XTAL_OUT remains accepted, while XTAL_IN and full support
@@ -9578,3 +9583,13 @@ and raw DRC as rejected route-implementation evidence; no Path-A or
 production Path-B assets were changed. Next work must co-author the QFN
 source field and J1 launch allocation rather than add another isolated lane
 dogleg.
+2026-09-09 — Phase 24 V1310: began the rotated-QFN lane solution class from
+the V735 source-field oracle. A disposable four-lane U1-to-J1 launch with
+separate B.Cu rows was authored and saved-board endpoint/negative-control
+audits pass. Native DRC remains the acceptance discriminator; no production
+CAD or Path-A assets changed.
+2026-09-09 — Phase 24 V1312: refined the rotated-QFN lane fixture with split
+source escapes, staggered J1 transitions, and an explicit SPISO bypass.
+Native endpoint and four negative-control audits pass; native DRC remains
+open as the acceptance discriminator. Production CAD and Path-A assets are
+unchanged.

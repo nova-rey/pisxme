@@ -10250,3 +10250,19 @@ Path-B architecture rejection. It confirms that the next valid experiment
 must co-author the QFN source field and connector launch allocation together;
 the V1243 support/reference basis remains retained and no production CAD was
 changed.
+V1310 changed solution class to the rotated-QFN V735 source-field oracle and
+built a disposable four-lane U1-to-J1 launch with separate B.Cu rows. Native
+saved-board connectivity and four pair-removal negative controls pass. Native
+DRC evaluation is the next discriminator for this rotated lane candidate;
+it is not yet a production or integrated Path-B closure.
+V1312 refined V1311 with outward source escapes, staggered connector-side
+transition vias, and an explicit F.Cu bypass around the retained SPISO B.Cu
+trunk. Native endpoint connectivity and four source-removal controls pass;
+native DRC is the acceptance discriminator and the fixture remains disposable.
+V1312 is rejected source-escape evidence. Attempting to split the rotated
+QFN row by adding horizontal departures to x=97.5/103.0/104.5/96.5 caused
+native source-pad shorts/crossings and broke the saved-board endpoint audit;
+native DRC reported 45 violations. The experiment is preserved as a route
+implementation failure. A valid rotated continuation must leave each pad
+outward immediately with pad-adjacent orthogonal geometry; no production or
+Path-A assets were changed.
