@@ -10101,3 +10101,7 @@ V1280 is rejected XTAL_OUT routing evidence. The endpoint audit passed, but
 the first F.Cu/B.Cu escape crossed the accepted U1.1V1/RXN/RSET field and
 created native clearance/crossing errors. Its raw PCB and DRC report are
 preserved as a route-implementation rejection; XTAL_OUT remains OPEN.
+V1281 is rejected SPICS routing evidence. U1.24-to-U2.1 native endpoint and
+source-removal audit pass, but the proposed escape crosses the RXN B.Cu trunk,
+collides with the existing U1.1V1 via field, and violates the adjacent U2.2
+clearance. Its raw PCB and DRC report are preserved; SPICS remains OPEN.
