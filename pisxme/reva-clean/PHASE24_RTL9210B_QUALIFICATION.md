@@ -49,6 +49,11 @@ V679 and V680 tested two crystal-field implementations on that lineage. Both
 were rejected by native DRC for real crystal-field shorts/crossings; neither
 is evidence against the orientation-180 support placement itself. Their raw
 receipts are retained for the next co-authored crystal/source-field attempt.
+V681 tested a lower-shelf relocation with a dedicated B.Cu return corridor;
+native DRC found 17 violations including crystal shorts/crossings and
+board-edge/mounting-hole conflicts. Reject it as a placement implementation;
+the next experiment must keep the crystal inside the support envelope and
+co-author its escape with the existing fields.
 
 V672 provides a positive interior RSET basis with nine inherited warnings and
 no signal DRC violations. V673 layered lower RTL_3V3 onto it and found 12

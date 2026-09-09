@@ -8222,3 +8222,9 @@ found 12 native DRC violations including XTAL_IN/RTL_3V3 and crystal/RTL_1V1
 crossings. V680 relocated the crystal trio and found 11 violations including
 XTAL_IN shorts to RTL_3V3/GND and multiple crossings. Rejected both route
 implementations; retain the orientation-180 rail/RSET basis.
+
+2026-09-09: V681 moved the orientation-180 crystal trio to the lower shelf
+and attempted a dedicated B.Cu corridor. Native DRC found 17 violations,
+including crystal shorts/crossings, RTL_3V3 interference, and board-edge/
+mounting-hole conflicts. Rejected V681 as a placement implementation; retain
+the orientation-180 rail/RSET basis.
