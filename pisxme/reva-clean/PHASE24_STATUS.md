@@ -9682,3 +9682,8 @@ architecture or production CAD change. V1122 used a V938-inspired deep
 F.Cu/B.Cu return corridor and was rejected for XTAL_IN/XTAL_OUT crossing,
 GND-return crossing, and retained U1.1V1 clearance. The next class must
 change the XTAL_OUT lane allocation rather than extend this corridor.
+V1123 independently attaches U1.45 and U1.66 to the exposed-pad GND network.
+Native DRC leaves only the inherited RTL_3V3 dangling warning; the saved-board
+audit passes all three U1 GND endpoint assertions and both trace-removal
+negative controls. This is a retained local GND primitive, not full Path-B
+closure.

@@ -9131,3 +9131,6 @@ route-implementation evidence; production CAD and architecture are unchanged.
 2026-09-09: Rejected V1122, a V938-inspired deep XTAL_OUT return corridor.
 Native DRC found XTAL_IN/XTAL_OUT crossing, GND-return crossing, and retained
 U1.1V1 clearance. The next class must change XTAL_OUT lane allocation.
+2026-09-09: V1123 added direct U1.45/U1.66 connections to the RTL9210B
+exposed-pad GND network. Native DRC retained only the inherited RTL_3V3
+dangling warning; the saved-board audit and both negative controls passed.
