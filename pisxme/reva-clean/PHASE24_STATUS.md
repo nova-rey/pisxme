@@ -40,6 +40,13 @@ violations / 402 unconnected items with connector-body and inherited
 cross-net shorts. It is rejected as donor evidence; transformed target pads
 must be re-escaped locally using the same topology, not copied blindly.
 
+The shifted CM5IO-style trial
+`PHASE24_STORAGE_USB3_CM5IO_SHIFTED_V1.kicad_pcb` is rejected. It avoided
+the SXM2 body but crossed existing REFCLK/XIN/XOUT and SATA corridors; native
+DRC reports 708 violations / 402 unconnected items with true shorts. This
+confirms the remaining issue is local corridor allocation, not endpoint or
+source-net authority.
+
 `CORE_CM5.kicad_sch` now exposes its 51 CM5 ground labels as native global
 `POWER_GND` labels. This is a source-level repair for the previously observed
 `/CORE_CM5/POWER_GND` versus board-plane `POWER_GND` split; no PCB-only merge

@@ -7789,3 +7789,7 @@ no copper was promoted.
   passed the native USB3 endpoint audit but introduced incompatible donor
   connector/cross-net DRC shorts; it was rejected as copper and retained only
   as topology evidence.
+- A shifted CM5IO-style escape below the SXM2 body was tested and rejected:
+  it passed USB3 endpoint connectivity but crossed existing REFCLK/XIN/XOUT
+  and SATA corridors under native DRC. The remaining repair is corridor
+  allocation around those validated neighboring paths.
