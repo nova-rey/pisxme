@@ -8562,6 +8562,13 @@ rejected by an In2 crossing against RTL_5V plus U2/SPI clearance conflicts.
 V864 moved the collector outboard but was rejected by three real F.Cu/In2
 crossings against PEDET, CLKREQ_N, and RTL_5V. These are rail-route allocation
 failures; the next experiment isolates U2.8 before rebuilding a collector.
+2026-09-09: V865 reduced the RTL_3V3 bridge probe to one PEDET clearance
+violation. V866 exposed a PEDET crossing and CLKREQ clearance; V867 collided
+with SPISI and PERST_N B.Cu corridors; V868 reduced this to one PERST_N
+crossing. V869 lifted the B.Cu jog above PERST_N and passed native DRC with 0
+violations and 29 expected incomplete items. Its saved-board audit proved
+U2.8→C3.1 and a trace-removal negative control; remaining RTL_3V3 endpoints
+remain open.
 2026-09-09: V861 added U1.33 to the V860 RTL_5V network but was rejected for
 a dangling In2 track caused by an incorrect junction coordinate. V862
 corrected the join to the actual V860 transition. Native DRC passed with 0

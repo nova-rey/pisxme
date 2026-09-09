@@ -9048,3 +9048,10 @@ an In2 crossing against RTL_5V plus U2/SPI clearance conflicts. V864 moved the
 collector outboard but was rejected by three real F.Cu/In2 crossings against
 PEDET, CLKREQ_N, and RTL_5V. These are rail-route allocation failures; the
 next experiment isolates U2.8 before rebuilding a collector.
+V865 reduced the RTL_3V3 bridge probe to one PEDET clearance violation.
+V866 moved the transition but exposed a PEDET crossing and CLKREQ clearance;
+V867 then collided with the existing SPISI and PERST_N B.Cu corridors. V868
+reduced this to one PERST_N B.Cu crossing. V869 lifted the B.Cu jog above the
+PERST_N corridor and passes native DRC with 0 violations and 29 expected
+incomplete items. Its saved-board audit proves U2.8→C3.1 and a trace-removal
+negative control. Remaining RTL_3V3 endpoints are still open.
