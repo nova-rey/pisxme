@@ -8860,3 +8860,8 @@ remain. Preserve V988 as the transition-regeneration basis.
 11 native source-field crossings/clearances. V990 accepted a vertical
 RTL_3V3 escape to (100.4,60.8) with a B.Cu handoff; native DRC showed no new
 electrical violations. Preserve V990 as the 3V3 transition primitive.
+2026-09-09: V991/V992 rejected RTL_3V3 collector launches at the R2/R3
+PEDET/CLKREQ boundary. V993 moved the branches to the opposite side and
+V994 completed the C3 branch from the B.Cu collector; native DRC then showed
+only intentional dangling source ends and inherited opens. Preserve V994 as
+the accepted 3V3 collector primitive.

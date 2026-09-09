@@ -972,6 +972,13 @@ F.Cu. Native DRC reports only eight intentional dangling-track warnings and
 the inherited incomplete connections, with no electrical source-field
 violation. This is the transition-regeneration basis; it is not complete
 Path-B support closure.
+V991/V992 are rejected RTL_3V3 collector launches: V991 placed branch vias
+beside PEDET/CLKREQ pads, while V992 placed the F.Cu approach across those
+neighbor pads. V993 moved both branch launches to the opposite side of R2/R3
+and removed those electrical violations. V994 completed the C3 B.Cu branch;
+native DRC remains limited to the eight intentional dangling source tracks
+and inherited opens. V994 is the accepted disposable RTL_3V3 collector
+primitive, not full Path-B closure.
 V989 tested a right-jog RTL_3V3 transition from V988 and was rejected by 11
 native violations because it crossed SPISI/SPICLK. V990 instead keeps the
 RTL_3V3 departure vertical to (100.4,60.8), then hands off on B.Cu; native
