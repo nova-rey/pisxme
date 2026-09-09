@@ -826,3 +826,12 @@ violations and 25 expected incomplete items. The saved-board audit passes
 XTAL_IN, XTAL_OUT, RSET, GND, and RTL_3V3 support, with independent source
 trace-removal negative controls for both crystal nets. V914 is the accepted
 complete relocated RTL support primitive for the next support rail.
+V909/V910 tested east and staggered three-channel restorations and were
+rejected for QFN, XTAL, or inherited SPI-field interactions. V911 scrubbed
+only the inherited SPI copper as a discriminator and still exposed source
+lane separation issues. V912/V913 corrected route construction but retained
+duplicate-via or source-lane defects. V914 then used the native V772 source
+dogbones, separated XTAL_IN onto B.Cu, and reused the existing U1.52 via;
+native DRC is 0 with 25 expected incomplete items and the full saved-board
+support audit plus both crystal negative controls pass. V914 is the current
+accepted support base.

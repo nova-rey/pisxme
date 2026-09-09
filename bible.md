@@ -8615,6 +8615,13 @@ XTAL_OUT dogbone and the scrubbed U1.52 discriminator. Native DRC passed with
 XTAL_IN/XTAL_OUT/RSET/GND connectivity and both source-trace negative
 controls. V892 is the accepted complete relocated crystal-support primitive;
 U1.52 RTL_3V3 remains scrubbed for the next restoration trial.
+2026-09-09: V909-V910 tested east/staggered 3V3 and crystal restorations and
+were rejected for QFN, XTAL, or SPI-field interactions. V911 scrubbed only
+inherited SPI copper and still exposed source separation issues. V912-V913
+corrected construction but retained duplicate-via/source defects. V914 used
+the native V772 dogbones, separated XTAL_IN onto B.Cu, and reused the existing
+U1.52 via. Native DRC passed with 0 violations and 25 expected incomplete
+items; full support audit and both crystal negative controls passed.
 2026-09-09: V893-V896 tested restored U1.52 RTL_3V3 corridors and were
 rejected by crystal/RSET/JTAG/PEDET/SPI-field crossings. V897-V900 tested
 ordinary B.Cu XTAL_IN transitions and east-shifted variants; V901 separated
