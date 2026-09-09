@@ -59,6 +59,19 @@ objects. Its source-only native DRC result improved to four findings: the
 short B.Cu stub still crossed the accepted XTAL_OUT lane, plus three inherited
 dangling warnings. V1150 is rejected but reproducible; the next implementation
 will use a safer single-net removal method before exchanging lanes.
+V1152 used a safe precomputed single-net removal batch but was rejected because
+its first endpoint map used the wrong crystal-pad coordinate and its diagonals
+crossed. V1153 corrected the native Y1/C2 endpoints but retained 7 source-field
+violations. V1154 combined the V1150 pruned support-field base with corrected
+lanes; it was rejected with 12 violations because its outer B.Cu corridor
+crossed retained RTL_1V1/GND support. V1155 isolated the remaining V1150 stub
+and reversed it; native DRC still found four violations, now one GND crossing,
+two inherited RTL_3V3 dangling warnings, and the expected dangling proof stub.
+These are route-implementation experiments; no production CAD or Path-A
+artifact changed. The current next action is to reuse the known-clean V1119
+XTAL_IN corridor while allocating XTAL_OUT around it with exact native pad
+coordinates, or to re-place the local crystal pocket if that remains the only
+way to close the QFN field.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
 `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout lineage

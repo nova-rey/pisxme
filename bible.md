@@ -9202,3 +9202,10 @@ reproducible.
 and branch-pruning assertions. The saved native result improved to four
 violations; XTAL_IN source-field geometry was clean except for its short
 stub crossing the accepted XTAL_OUT lane. Rejected pending lane separation.
+2026-09-09: V1152-V1155 tested safer single-net XTAL lane allocation. V1152
+used precomputed XTAL_OUT removal but had an incorrect crystal endpoint map;
+V1153 corrected endpoints; V1154 exposed retained 1V1/GND corridor conflicts;
+V1155 isolated the V1150 source field but retained one GND crossing and the
+intentional proof-stub warning. All remain disposable route evidence; the
+next work reuses the V1119 clean XTAL_IN corridor or moves the local crystal
+pocket if required.
