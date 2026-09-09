@@ -7723,3 +7723,8 @@ promoted.
 connectivity passed 12/12 and DRC fell to 575, but a true TXP/TXN short
 appeared at the U7 source escape. Rejected; the next attempt must change the
 local escape topology or move the coherent U7/coupler sub-island.
+
+2026-09-08: Re-ran native KiCad DRC on the active
+PHASE24_STORAGE_VCCK_LOCAL_V1 basis. The saved-board baseline reproduces 669
+violations and 499 unconnected items with zero shorting_items; this fresh
+receipt does not waive any open gate.
