@@ -8086,3 +8086,7 @@ V27–V30 tested native repairs for storage-local post-fill shorts. V27 added
 seven shorts, V28 collided with USB_RXN1, V29 collided with JMS_AVDDL and
 failed mode control, and V30 added a CM5 USB TX pair short. Rejected all four;
 filled V23 remains the retained comparison basis.
+
+V31 tested an F.Cu-only VBUS detour. It removed the original TUSB_SATA_TXP /
+VBUS short but introduced three native short classes after refill. Rejected
+the isolated VBUS detour; coordinated corridor allocation remains required.

@@ -68,6 +68,12 @@ mode-control audit; V30 passed mode-control but introduced a CM5 USB TX
 pair short. All are rejected route implementations. The filled V23 board
 remains the comparison basis.
 
+V31 tested an F.Cu-only VBUS detour to remove the V23
+`TUSB_SATA_TXP`/`VBUS` short. After native zone refill it removed that class
+but introduced three other shorting classes (`MODE_IN`/`STORAGE_SEL`, CM5 USB
+RX polarity, and TUSB SATA TX polarity). It is rejected; VBUS requires
+coordinated local corridor allocation.
+
 V13 is the retained local routing basis. Its upper P-leg detour preserves the
 V8 source ordering, reduces the USB_TXN1/USB_TXP1 skew proxy to 0.259 mm, and
 keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits

@@ -109,6 +109,10 @@ short/clearance or mode/connectivity evidence; V30 additionally introduced a
 CM5 USB TX pair short. No production copper changed, and filled V23 remains
 the comparison basis.
 
+V31's F.Cu-only VBUS detour removed the original SATA/VBUS short but added
+three native short classes after refill. It is rejected route evidence; no
+production copper changed.
+
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a
 0.000 mm clearance violation into U11 pad 23. No production authority changed.
