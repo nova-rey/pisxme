@@ -678,6 +678,11 @@ and only 3 silkscreen warnings; its SPISI/SPICLK/SPISO3 order is monotonic
 relative to U1. V845's direct three-net probe was rejected with 9 native
 findings and 42 expected incomplete connections. The orientation remains a
 candidate routing basis.
+V846's ordered three-net 270-degree fanout was rejected with 10 native
+findings and 42 expected incomplete connections. V847 moved the controls
+clear and was rejected with 7 native violations and 42 expected incomplete
+connections, dominated by SPISI transition/reference-zone clearance. The
+270-degree placement remains a candidate source-field basis.
 V826 tested B.Cu-separated PEDET/CLKREQ_N approaches on V777 and was rejected
 with 6 native violations and 33 expected incomplete connections. V827 moved
 the source transitions laterally and was rejected with 9 violations and 33

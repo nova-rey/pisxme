@@ -8979,3 +8979,9 @@ only 3 silkscreen warnings, with SPISI/SPICLK/SPISO3 ordered monotonically
 from the U1 source. V845's direct three-net probe was rejected with 9 native
 findings and 42 expected incomplete connections. The 270-degree placement is
 a candidate, not a promoted route.
+V846's ordered three-net 270-degree fanout was rejected with 10 native
+findings and 42 expected incomplete connections; it intersected the retained
+GND branch and control-resistor pocket. V847 moved the controls clear and
+still failed with 7 native violations and 42 expected incomplete connections,
+dominated by SPISI transition/reference-zone clearance. The 270-degree
+placement remains a candidate source-field basis, not an accepted route.

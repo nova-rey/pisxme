@@ -8505,3 +8505,8 @@ connections. V844's 270-degree orientation had no electrical DRC violations
 and only 3 silkscreen warnings; SPISI/SPICLK/SPISO3 follow the U1 source
 order. V845's direct three-net probe was rejected with 9 native findings and
 42 expected incomplete connections. The 270-degree basis remains a candidate.
+2026-09-09: V846's ordered three-net 270-degree fanout was rejected with 10
+native findings and 42 expected incomplete connections. V847 moved the
+controls clear but was rejected with 7 native violations and 42 expected
+incomplete connections, dominated by SPISI transition/reference-zone
+clearance. The 270-degree placement remains a candidate source-field basis.
