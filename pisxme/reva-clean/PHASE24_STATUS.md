@@ -9867,3 +9867,11 @@ the moved XTAL_IN crossing the retained XTAL_OUT return, plus a 3V3-via
 proximity/clearance conflict and an orphaned old XTAL_IN branch. This confirms
 both crystal transitions must be reallocated together before U1.52 can be
 closed; no accepted V1183 1V1 or crystal electrical topology was changed.
+V1195 is the accepted paired XTAL/3V3 co-authoring primitive. It moves both
+near-QFN crystal transitions, adds U1.52 RTL_3V3 through a designated In2
+handoff, and preserves the downstream crystal endpoints. Native DRC retains
+only the inherited RTL_3V3 dangling warning and expected unconnected items.
+The saved-board audit passes U1.52/3V3, XTAL_IN, and XTAL_OUT endpoint groups
+with complete source-cohort negative controls. This closes the local U1.52
+and crystal departure primitive; PEDET, CLKREQ_N, PERST_N, REFCLK, lane,
+remaining support, and integrated Path-B closure remain OPEN.

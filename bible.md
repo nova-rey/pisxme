@@ -9278,6 +9278,11 @@ allocation. Moving XTAL_IN alone crossed XTAL_OUT and left a 3V3-via
 proximity conflict plus an orphaned old crystal branch. The next class must
 reallocate both crystal transitions together; accepted V1183 1V1/crystal
 topology remains unchanged.
+2026-09-09: V1195 accepted the paired XTAL_IN/XTAL_OUT transition allocation
+with U1.52 RTL_3V3. Native DRC retained only the inherited dangling warning;
+the saved-board audit passed U1.52/3V3 and both crystal endpoint groups with
+complete source-cohort negative controls. The remaining RTL9210B control,
+REFCLK, lane, support, and integrated Path-B gates remain open.
 2026-09-09: Reconciled current Path-B headers after V1183. PHASE24_STATUS and
 PHASE24_RTL9210B_QUALIFICATION now identify V1183's all-eight-pad 1V1 field as
 the live basis; earlier V1160-only wording remains historical context rather

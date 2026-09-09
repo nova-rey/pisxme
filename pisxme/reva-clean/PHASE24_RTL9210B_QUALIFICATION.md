@@ -8,6 +8,12 @@ complete source-trace negative controls; native DRC retains only the inherited
 RTL_3V3 dangling warning plus expected unconnected items. Full QFN rail,
 control, REFCLK, USB/SATA lane, firmware, and integrated Path-B closure remain
 OPEN. V1120, V1121, V1122, V1135-V1138, and V1145-V1159 are rejected
+XTAL/source-field route trials and remain historical evidence only.
+V1195 is now the accepted local QFN XTAL/3V3 co-authored basis: native DRC
+retains only the inherited RTL_3V3 dangling warning, and the saved-board
+audit passes U1.52/3V3 plus both crystal endpoint groups with complete
+source-cohort negative controls. The remaining control, REFCLK, lane,
+support, firmware, and integrated Path-B gates remain OPEN.
 XTAL/source-field route trials and remain historical evidence only. The
 V1135-V1137 files and reports are historical route evidence, not production
 CAD or a change to Path A. V1138 tested offset y=75/y=77 return lanes but
