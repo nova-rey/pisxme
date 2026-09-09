@@ -9847,3 +9847,10 @@ with eight complete source-cohort trace-removal negative controls. U1.36,
 U1.40, and U1.50 were already physically joined through the retained field;
 they do not require additional route copper. This is the current combined
 1V1 basis.
+V1184-V1187 are rejected U1.52 RTL_3V3 route trials. V1184 reused the old
+perimeter handoff and crossed the relocated XTAL_IN/1V1 field; V1185 crossed
+RSET and the retained 1V1 source field; V1186 collided with the crystal/GND
+return and retained 1V1 field; V1187's south transition produced 18 native
+violations. These are route-implementation failures. U1.52 remains the next
+open rail endpoint, and the next class will use an explicit power-layer
+handoff analysis rather than another direct surface corridor.

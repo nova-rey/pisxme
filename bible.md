@@ -9263,6 +9263,11 @@ controls. This is the current combined 1V1 basis. The expanded audit also
 confirms U1.36/U1.40/U1.50 were already connected through the retained 1V1
 field; eight complete source-cohort negative controls pass, so no extra
 copper is required for those pads.
+2026-09-09: V1184-V1187 rejected U1.52 RTL_3V3 route classes. Native DRC
+identified XTAL_IN/1V1, RSET, GND-return, or south-field crossings and
+clearance failures. The direct surface corridor class is exhausted; preserve
+the four disposable boards/reports and evaluate a designated power-layer
+handoff next. V1183's accepted all-eight-pad 1V1 field remains unchanged.
 2026-09-09: Reconciled current Path-B headers after V1183. PHASE24_STATUS and
 PHASE24_RTL9210B_QUALIFICATION now identify V1183's all-eight-pad 1V1 field as
 the live basis; earlier V1160-only wording remains historical context rather
