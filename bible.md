@@ -9517,3 +9517,8 @@ for QFN-field shorts and B.Cu crossings. A bounded source-side correction then
 passed native endpoint and saved-board negative-control audits with zero native
 DRC violations; the 41 unrelated fixture opens remain. V1295 is accepted as a
 rotated source-trio primitive only, not as full Path-B or production closure.
+2026-09-09 — V1296 first rejected an RTL_5V upper corridor because it crossed
+the native SPISO B.Cu trunk. A bounded dogleg around that trunk then passed
+native endpoint and saved-board negative-control audits with zero native DRC
+violations; 40 unrelated fixture opens remain. V1296 is accepted as a rotated
+rail primitive only, not as full Path-B or production closure.

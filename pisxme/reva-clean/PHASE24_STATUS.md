@@ -10169,3 +10169,9 @@ audit and source-removal negative controls pass and native DRC reports zero
 violations, with the fixture's 41 expected unrelated unconnected pads.
 V1295 is accepted only as a rotated source-trio primitive; it does not close
 the sparse V735 basis or replace the current V1279 production lineage.
+V1296 extends V1295 with the rotated U1.33 RTL_5V-to-C5.1 source rail. The
+first upper-corridor attempt crossed SPISO; a bounded dogleg around the native
+SPISO B.Cu trunk then passed the saved-board endpoint and source-removal
+negative-control audit. Native DRC reports zero violations with 40 expected
+unrelated fixture opens. V1296 is accepted as a rotated rail primitive only;
+the remaining QFN support, control, lane, and integration gates remain OPEN.
