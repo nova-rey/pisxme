@@ -141,6 +141,12 @@ dangling source warnings, no electrical violations, and 42 incomplete
 connections. V1047 is the current clean QFN-to-decoupling basis; remaining
 RTL9210B support and endpoint joins remain open.
 
+V1048 attaches U1.34 RTL_3V3 to the established C3-side 3V3 trunk through an
+ordinary outboard transition. Native DRC remains at six intentional dangling
+source warnings with no electrical violations; incomplete connections fall
+to 41. V1048 is the current clean QFN-to-decoupling/source basis. U2 supply
+pins and the remaining RTL9210B support endpoints remain open.
+
 ### Latest RTL_1V1 allocation evidence — V1004/V1005 (2026-09-09)
 
 V1004 is REJECTED. It transplanted the historical V930 eight-pad RTL_1V1

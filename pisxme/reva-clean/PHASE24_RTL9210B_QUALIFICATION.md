@@ -29,6 +29,12 @@ no electrical violations; 42 fixture opens remain. Retain V1047 as the
 current clean QFN-to-decoupling basis while the remaining support network is
 attached.
 
+V1048 adds the U1.34 RTL_3V3 escape to the already-clean C3-side trunk.
+Native KiCad DRC remains free of electrical violations, with six intentional
+dangling source warnings and 41 fixture opens. Retain V1048 as the current
+local supply basis; U2 supply attachment and the remaining RTL9210B support
+network are still OPEN.
+
 ## Current checkpoint — V981 orientation-0 source-field discriminator (2026-09-09)
 
 ### Latest 1V1 rail allocation evidence — V1004/V1005

@@ -8974,3 +8974,8 @@ C3 GND. V1047 corrected the capacitor-side transition and attached the clean
 orientation-0 QFN field to C3.1/C4.1. Native DRC has no electrical violations
 and six intentional dangling source warnings; 42 fixture opens remain.
 V1047 is the current QFN-to-decoupling basis, not full Path-B closure.
+2026-09-09: V1048 attached U1.34 RTL_3V3 to the established C3-side trunk
+using an ordinary outboard transition. Native DRC stayed free of electrical
+violations with six intentional dangling warnings; fixture opens fell to 41.
+V1048 is the current supply/source basis while U2 and remaining RTL9210B
+support endpoints stay open.
