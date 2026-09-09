@@ -13,10 +13,12 @@ MATRIX = ROOT / "PHASE24_DUAL_MODE_STORAGE_PIN_MATRIX.md"
 
 REQUIRED = {
     "USB_SEL", "STORAGE_SEL", "USB_OE_N", "STORAGE_3V3", "POWER_GND",
+    "CM5_STORAGE_USB2_DP", "CM5_STORAGE_USB2_DM", "USB_DP", "USB_DM",
+    "BRIDGE_USB_DP", "BRIDGE_USB_DM",
     "M2_SATA_A_P_PCIE_TXP0", "M2_SATA_A_N_PCIE_TXN0",
     "M2_SATA_B_P_PCIE_RXN0", "M2_SATA_B_N_PCIE_RXP0",
     "M2_REFCLK_P", "M2_REFCLK_N", "M2_PERST_N", "M2_CLKREQ_N",
-    "M2_PEWake_N", "M2_PEDET", "TUSB_SATA_TXP", "TUSB_SATA_TXN",
+    "M2_PEWake_N", "AUTO_PEDET", "TUSB_SATA_TXP", "TUSB_SATA_TXN",
     "TUSB_SATA_RXP", "TUSB_SATA_RXN", "JMS_PCIE_TXP0",
     "JMS_PCIE_TXN0", "JMS_PCIE_RXP0", "JMS_PCIE_RXN0",
 }
@@ -42,7 +44,7 @@ def main():
         failures.append("missing J5 AUTO / FORCE SATA / FORCE NVMe override")
     if 'AUTO / FORCE SATA / FORCE NVMe' not in text:
         failures.append("mode override value missing")
-    for label in ("MODE_IN", "M2_PEDET", "STORAGE_SEL"):
+    for label in ("MODE_IN", "AUTO_PEDET", "STORAGE_SEL"):
         if text.count(f'(label "{label}"') < 1:
             failures.append(f"missing mode-control label: {label}")
     if not MATRIX.exists():

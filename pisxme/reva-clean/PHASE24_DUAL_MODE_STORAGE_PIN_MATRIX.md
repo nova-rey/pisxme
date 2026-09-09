@@ -43,7 +43,7 @@ dual-use contacts, not permission to join unrelated sources.
 | 53/55 | REFCLK-/REFCLK+ | U11 only; routed as a differential pair |
 | 54 | PEWAKE# | U11 only; inactive in SATA mode |
 | 10 | DAS/DSS | SATA-side support only |
-| 69 | PEDET / CONFIG1 | SATA module grounds it; PCIe/NVMe module leaves it open; host pull-up and mode logic |
+| 69 | PEDET / CONFIG1 | Routed as `AUTO_PEDET` into the power-off mode strap; SATA module grounds it, PCIe/NVMe module leaves it open |
 | 2,4,12,14,16,18,70,72,74 | 3.3 V | storage SSD rail |
 | 3,9,15,27,33,39,45,51,57,71,73 | GND | local ground and return vias |
 
@@ -58,8 +58,9 @@ per-device polarity mapping. Mode changes are power-off operations.
 
 The older M.2 Socket 3 interface-detect definition identifies contact 69 as
 PEDET/CONFIG1: SATA grounds it and PCIe/NVMe leaves it open, with a platform
-pull-up. The retained TP-053 table names the same contact CONFIG1. Rev A will
-use that contact through a Schmitt-qualified input and a power-off mode latch;
+pull-up. The retained TP-053 table names the same contact CONFIG1. Rev A
+routes that contact on the native `AUTO_PEDET` net to the power-off mode
+strap; the Schmitt-qualified input/latch remains the next implementation gate;
 the signal selects protocol, not proof that a drive is functional. DAS/DSS is
 not used as the detector. The latch must treat an empty socket as PCIe/NVMe
 default and the manual override must force either mode. TI's selector truth

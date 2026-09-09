@@ -32,6 +32,12 @@ the complete ten-net USB3 audit and all 12 SATA endpoint assertions. Native
 DRC remains open at 669 violations / 499 unconnected items, including
 inherited crossings and shorts; this is not a closure candidate.
 
+Mode-control source ownership is now corrected: J3 contact 69 and J5's AUTO
+leg export on native `AUTO_PEDET`, and the regenerated mode-fix placement
+passes pad parity and the mode-contract audit. A native mode-aware fixture
+covering forced SATA, forced NVMe, AUTO, empty socket, reset, and inactive
+paths is still required.
+
 After the USB3 coupling-capacitor alignment, the ten-net native USB3 audit
 passes on the corrected support parent. The integrated
 `PHASE24_STORAGE_AUTHORITY_CORRECTED_USB3_SATA_V3` trial also passes all 12

@@ -7539,6 +7539,13 @@ ten-net USB3 audit and all 12 SATA endpoint checks. Native DRC remains open at
 669 violations / 499 unconnected items with inherited crossings/shorts; no
 Phase 24 closure was claimed.
 
+2026-09-08: Closed a live mode-detector net-ownership defect at the source
+boundary. M.2 contact 69 and the J5 AUTO leg now share native `AUTO_PEDET`
+ownership; the regenerated mode-fix placement has zero schematic-to-PCB pad
+parity mismatches and the mode-contract audit passes. The mode-aware native
+fixture and inactive-state validation remain open; no automatic-mode closure
+was claimed.
+
 2026-09-08: Focused storage endpoint gates are now current PASS evidence:
 JMS583 support, ten-net USB3, and 12-net SATA selector connectivity each
 pass with negative controls where implemented. Updated the live open-gate
