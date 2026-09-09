@@ -10058,3 +10058,9 @@ V1269 is accepted incremental support evidence. U1.40 RTL_1V1 uses a
 direct outward normal escape to an ordinary through-via and joins the live
 collector. Native DRC retains inherited warnings only; its saved-board
 endpoint and negative-control audit pass. Remaining support is OPEN.
+V1270 is accepted incremental support evidence: U1.36 RTL_1V1 uses a
+direct outward normal escape with no new native DRC errors; endpoint and
+negative-control audit pass. V1271 likewise accepts U1.16 on the same live
+collector with native DRC warnings only and a passing endpoint/negative
+control. The RTL_1V1 cohort now covers U1.16/U1.36/U1.40/U1.50/U1.55/U1.60/
+U1.63. Remaining support is OPEN.
