@@ -52,7 +52,7 @@ the Rev-A single-lane socket and requires an explicit no-connect review.
 | Mode selection | U1.8 PEDET/CONFIG1 and U1.12 isolation evidence | Feasible, but exact power-off sequencing and empty-socket behavior OPEN |
 | Reference/support | WIP HynixCJR native schematic/netlist plus retained local support audits | Corroborating only; application-circuit authority OPEN |
 | Firmware | bensuperpc/rtl9210 tools/config ecosystem and damnnfo binaries | Technical ecosystem exists; rights, exact image, and virgin programming OPEN |
-| Implementation | V35/V562/V661/V664 disposable source-field/rail work | Real progress; not a complete production or native-clean board |
+| Implementation | V35/V562/V661/V664/V666/V667 disposable source-field/rail work | V666 package discriminator passes; V667 SPI allocation rejected; not a complete production or native-clean board |
 
 Primary/corroborating sources are retained under
 `authority-inventory/rtl9210b/`. External receipts include:

@@ -8155,3 +8155,10 @@ rules, and no via-in-pad, native KiCad DRC reported 0 violations, 0
 unconnected items, and 0 footprint errors. Closed the package-impossibility
 claim; kept the complete integrated QFN source-field route, firmware,
 application-circuit, and mode-validation gates open. Preserved Path A.
+
+2026-09-09: Tested V667, a fresh five-net native SPI allocation on the
+retained RTL9210B V595 rail/PEDET/CLKREQ base. Native DRC reported 35
+violations and 11 opens, including real SPISO3/SPICS and SPI/rail shorts and
+source-field crossings. Rejected the route implementation; retained Path B,
+Path A, and all production CAD unchanged. The next SPI class must co-author
+source escapes with the rail field or coherently move isolated support.
