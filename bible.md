@@ -6062,6 +6062,11 @@ controls pass, with zero native signal shorting/crossing classes. Path A and
 production CAD remain unchanged; CLKREQ/R3.1 and all remaining Path-B gates
 stay open.
 
+2026-09-08 — A local USB_TXP1 escape at the active 0.20 mm width passed
+native USB3 connectivity with no new shorts, but added support-field
+crossings and was rejected. Width cleanup must co-author both USB TX nets
+with the adjacent JMS_AVDDL field.
+
 2026-09-08 — Coordinated selector plus USB3 regeneration was rejected:
 native endpoint connectivity passed, but DRC reported four true shorts,
 including STORAGE_SEL against SATA and inherited USB3 source-field crossings.

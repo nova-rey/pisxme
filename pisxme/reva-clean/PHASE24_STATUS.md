@@ -82,6 +82,11 @@ a real `JMS_AVDDL`/`USB_TXP1` short, so it is rejected. Global and selective
 widening are not promoted; width cleanup must be co-authored with each local
 support field and revalidated by native DRC.
 
+The local `USB_TXP1` 0.20 mm escape probe is rejected as a complete route:
+native USB3 connectivity passes and no shorting class is introduced, but the
+new dogleg adds support-field crossings. Width cleanup must co-author both
+USB_TXP/USB_TXN with the adjacent JMS_AVDDL field.
+
 The bounded `PHASE24_STORAGE_J8_V5_GROUND_ZONE_V1` probe adds a storage-only
 F.Cu `POWER_GND` zone and reduces native unconnected findings to 386 from
 400, with zero native shorts. It is retained as a ground-access experiment,
