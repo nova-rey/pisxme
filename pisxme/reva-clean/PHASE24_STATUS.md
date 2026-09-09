@@ -9678,4 +9678,7 @@ and GND-return contacts. Crystal closure therefore remains OPEN at XTAL_OUT.
 V1121 tested a split-lane XTAL_OUT route around the lower/upper support
 corridors and was rejected by native DRC for XTAL_IN/XTAL_OUT and retained
 GND crossings. It is preserved as route-implementation evidence; no
-architecture or production CAD change.
+architecture or production CAD change. V1122 used a V938-inspired deep
+F.Cu/B.Cu return corridor and was rejected for XTAL_IN/XTAL_OUT crossing,
+GND-return crossing, and retained U1.1V1 clearance. The next class must
+change the XTAL_OUT lane allocation rather than extend this corridor.

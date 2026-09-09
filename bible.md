@@ -9128,3 +9128,6 @@ summaries are historical evidence only.
 2026-09-09: Rejected V1121 split-lane XTAL_OUT routing. Native DRC found
 XTAL_IN/XTAL_OUT and retained-GND crossings. The experiment remains raw
 route-implementation evidence; production CAD and architecture are unchanged.
+2026-09-09: Rejected V1122, a V938-inspired deep XTAL_OUT return corridor.
+Native DRC found XTAL_IN/XTAL_OUT crossing, GND-return crossing, and retained
+U1.1V1 clearance. The next class must change XTAL_OUT lane allocation.
