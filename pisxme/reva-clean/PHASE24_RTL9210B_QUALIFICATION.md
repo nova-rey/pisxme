@@ -1380,3 +1380,12 @@ V1150 isolated XTAL_IN after counting removal of eight local 3V3/RSET
 objects. Native DRC improved to four findings; the remaining real issue was
 the short B.Cu stub crossing the accepted XTAL_OUT lane. Rejected but
 reproducible.
+Current disposable implementation checkpoint (2026-09-09): V1226 is the
+retained co-authored CLKREQ_N/PERST_N control-field basis. It passes native
+saved-board endpoint connectivity and complete source-cohort negative
+controls for U1.13->J1.52 and U1.14->J1.50. Native DRC retains only the
+inherited RTL_3V3 dangling warning plus expected incomplete connections.
+This is a local control-routing closure, not full RTL9210B qualification;
+REFCLK, PCIe lane, remaining support, firmware/productization, and integrated
+Path-B gates remain open. V1220-V1225 remain historical rejected route
+implementations.

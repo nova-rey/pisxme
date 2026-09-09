@@ -9916,3 +9916,15 @@ retained 5V trunk and bridge SPI field; V1209 cleared the source and 5V
 interaction but crossed the retained 3V3/1V1 upper field and did not complete
 the R3 handoff. The next class will use a dedicated control-only edge corridor;
 accepted PEDET, crystal, and 1V1 primitives remain unchanged.
+V1226 is the retained co-authored control-field basis. Starting from V1211,
+the CLKREQ_N source cohort was reallocated to a west-offset transition and
+PERST_N was given a straight QFN escape followed by a left-edge B.Cu wrap and
+north corridor to J1.50. Native KiCad 10.0.5 DRC reports only the inherited
+RTL_3V3 dangling warning; the fixture still has the expected unrelated open
+connections. The saved-board audit proves U1.13/J1.52 CLKREQ_N and
+U1.14/J1.50 PERST_N using native pad/track/via connectivity, and complete
+source-cohort removal negative controls fail as required. V1226 closes these
+two local control departures only. REFCLK, PCIe lane, remaining RTL9210B
+support, and integrated Path-B validation remain OPEN. V1220-V1225 are
+preserved route-implementation failures, not architecture or placement
+evidence.

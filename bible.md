@@ -9315,3 +9315,10 @@ rail/crystal primitives remain unchanged.
 showed retained 5V/SPI or 3V3/1V1 upper-field crossings and an incomplete R3
 handoff. Preserve the raw trials; the next class uses a dedicated control-only
 edge corridor without changing accepted local power/crystal primitives.
+2026-09-09 — PiSXMe Phase 24 RTL9210B Path-B checkpoint V1226. Preserved
+Path A and production CAD. V1226 co-authored the U1 CLKREQ_N/PERST_N source
+departures, with native KiCad connectivity audits and complete source-cohort
+negative controls passing; native DRC retains only the inherited RTL_3V3
+dangling warning and expected fixture opens. V1220-V1225 remain rejected
+route evidence. REFCLK, lane, remaining support, and integrated Path-B gates
+remain open.
