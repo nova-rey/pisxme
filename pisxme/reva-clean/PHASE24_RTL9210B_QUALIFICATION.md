@@ -22,6 +22,13 @@ beyond the 1V1 shelf and is native-clean apart from six intentional dangling
 source warnings and the inherited fixture opens. Promote V1045 as the next
 local support basis only; complete support endpoint attachment remains OPEN.
 
+V1046 is rejected for a C4-side transition short to adjacent C3 GND. V1047
+corrects the endpoint placement and attaches the QFN rail transitions to
+C3.1 and C4.1. Native DRC has six intentional dangling source warnings and
+no electrical violations; 42 fixture opens remain. Retain V1047 as the
+current clean QFN-to-decoupling basis while the remaining support network is
+attached.
+
 ## Current checkpoint — V981 orientation-0 source-field discriminator (2026-09-09)
 
 ### Latest 1V1 rail allocation evidence — V1004/V1005

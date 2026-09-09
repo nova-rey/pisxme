@@ -134,6 +134,13 @@ reports six intentional dangling source warnings and no electrical violations.
 V1045 is the current clean orientation-0 rail-transition basis; remaining
 support endpoints are still open.
 
+V1046 is rejected only for its C4-side via placement: the transition was too
+close to C3.2 GND. V1047 moves that transition into the C4-side gap and
+extends both 3V3→C3.1 and 1V1→C4.1. Native DRC reports six intentional
+dangling source warnings, no electrical violations, and 42 incomplete
+connections. V1047 is the current clean QFN-to-decoupling basis; remaining
+RTL9210B support and endpoint joins remain open.
+
 ### Latest RTL_1V1 allocation evidence — V1004/V1005 (2026-09-09)
 
 V1004 is REJECTED. It transplanted the historical V930 eight-pad RTL_1V1

@@ -8969,3 +8969,8 @@ allocations. V1045 moved the 3V3 transition beyond the 1V1 shelf and achieved
 native DRC with only six intentional dangling source warnings. Retain V1045
 as the current clean orientation-0 transition basis; support endpoint
 attachment and full Path-B closure remain open.
+2026-09-09: V1046 rejected a C4-side RTL_1V1 transition that shorted adjacent
+C3 GND. V1047 corrected the capacitor-side transition and attached the clean
+orientation-0 QFN field to C3.1/C4.1. Native DRC has no electrical violations
+and six intentional dangling source warnings; 42 fixture opens remain.
+V1047 is the current QFN-to-decoupling basis, not full Path-B closure.
