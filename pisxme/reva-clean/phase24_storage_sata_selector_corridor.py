@@ -56,6 +56,8 @@ if os.environ.get('PISXME_SELECTOR_MINIMAL')=='1':
  for z in list(b.Zones()): b.RemoveNative(z)
  for f in list(b.GetFootprints()):
   if f.GetReference() not in keep: b.RemoveNative(f)
+# In integrated mode, preserve the validated USB3/support copper, zones, and
+# unrelated footprints.  Only the superseded SATA channel is regenerated.
 all_sata=('BRIDGE_SATA_','TUSB_SATA_','M2_SATA_')
 for t in list(b.GetTracks()):
  if any(x in t.GetNetname() for x in all_sata): b.RemoveNative(t)

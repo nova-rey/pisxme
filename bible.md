@@ -5427,6 +5427,14 @@ and to assign native target net objects. CM5 source promotion is connected;
 bridge-side USB3 promotion remains open. Native DRC on the immature combined
 workbench is 1,027 violations / 499 unconnected items.
 
+2026-09-08: Aligned C86/C87 to the validated USB3 corridor and promoted the
+complete ten-net USB3 route onto a regenerated live-authority storage parent;
+the native USB3 audit passes. The integrated V3 SATA trial also passes all 12
+SATA endpoints. It remains disposable because the regenerated parent lacks
+the earlier zone-backed AVDDL/VCCO/VCCK support coverage. Corrected the SATA
+author so integrated runs preserve unrelated copper/zones; only explicit
+minimal fixtures scrub the board.
+
 2026-09-08: Expanded USB3 promotion to the complete ten-net contract and
 made target net resolution robust to KiCad hierarchy spelling. The source
 quartet copies successfully; the bridge-side pass remains open because the

@@ -19,6 +19,13 @@ boundary, and the SATA corridor; all 12 SATA endpoints pass. USB3 bridge-side
 promotion remains incomplete, and native DRC is 1,027 violations / 499
 unconnected items. This is active routing workbench evidence, not closure.
 
+The aligned USB3 promotion now passes the complete ten-net native audit, and
+the subsequent V3 SATA integration passes all 12 SATA endpoints. V3 remains
+disposable because its regenerated parent lacks the earlier zone-backed
+AVDDL/VCCO/VCCK support coverage. The SATA author now preserves unrelated
+integrated copper and zones; board scrubbing is limited to explicitly
+minimal fixtures.
+
 Status: `IN PROGRESS — support circuitry and mode-control authority are
 authored; native copper, mode-aware validation, and release checks remain
 open` (2026-09-06, live checkpoint).

@@ -25,6 +25,15 @@ remaining route promotion. Native DRC is 1,027 violations / 499 unconnected
 items on this immature workbench. Do not compare that count to mature
 historical candidates as a floorplan judgment.
 
+After the USB3 coupling-capacitor alignment, the ten-net native USB3 audit
+passes on the corrected support parent. The integrated
+`PHASE24_STORAGE_AUTHORITY_CORRECTED_USB3_SATA_V3` trial also passes all 12
+SATA endpoints. It is not promoted: the parent carries direct support routes
+but not the earlier zone-backed AVDDL/VCCO/VCCK coverage, so those support
+checks fail on missing physical copper. The SATA author was corrected to
+preserve all non-SATA tracks/zones in integrated mode; only `MINIMAL=1`
+fixtures scrub the board.
+
 ## AUTHORITATIVE CURRENT STATE — 2026-09-08
 
 The JMS583 support-label authoring path was corrected and applied to the live
