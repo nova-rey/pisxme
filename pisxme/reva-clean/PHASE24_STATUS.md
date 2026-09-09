@@ -9185,6 +9185,11 @@ QFN field. Native DRC is 0 electrical violations with the same two inherited
 isolated-fill warnings and 28 expected unrelated opens. V932 is the accepted
 1V1-plus-RSET support primitive; crystal, RTL_3V3, RTL_5V, and local GND
 restoration remain open.
+V935 attempted coordinated XTAL_IN/XTAL_OUT regeneration after the V933
+relocation. Native DRC rejected it for XTAL_IN/RTL_3V3 source overlap,
+XTAL_IN/XTAL_OUT B.Cu crossing, and an isolated C2 ground thermal. It is
+preserved as route-implementation evidence; V933 XTAL_IN and V932 RSET remain
+accepted.
 V934 tested the first relocated XTAL_OUT corridor and was rejected by native
 DRC for a U1 XTAL_IN source crossing, the RTL_1V1 transition, and a C2
 ground/via collision. It is preserved as route-implementation evidence only;

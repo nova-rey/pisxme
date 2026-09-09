@@ -8690,3 +8690,7 @@ Native DRC had no electrical violations (three inherited isolated-fill
 warnings and 26 expected unrelated opens); the saved audit and source-trace
 negative control passed. V933 is the accepted XTAL_IN primitive; XTAL_OUT,
 3V3, 5V, and local GND restoration remain open.
+2026-09-09: V935 attempted coordinated XTAL_IN/XTAL_OUT regeneration and was
+rejected by native DRC for XTAL_IN/RTL_3V3 source overlap, XTAL_IN/XTAL_OUT
+B.Cu crossing, and an isolated C2 ground thermal. It remains rejected route
+evidence; V933 XTAL_IN and V932 RSET remain accepted.
