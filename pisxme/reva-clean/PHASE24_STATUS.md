@@ -9541,3 +9541,11 @@ warning and the fixture has 28 unconnected items. The saved-board audit proves
 C5.1/U1.17/U1.33 are one RTL_5V component, with a C5-source trace-removal
 negative control. V1071 is the current 5V source basis; RTL_1V1 and remaining
 support/control endpoints remain open.
+
+V1072 attaches U1.50 RTL_1V1 to the established west source field at the
+existing native transition. Native DRC retains only the inherited RTL_3V3
+dangling warning and the fixture has 27 unconnected items. The saved-board
+audit proves U1.36/U1.40/U1.50/C4.1 are one physical RTL_1V1 component; the
+U1.50 source-trace negative control fails as required. V1072 is retained as
+the current 1V1 basis; U1.16/U1.25/U1.55/U1.60/U1.63 and remaining support
+endpoints remain open.

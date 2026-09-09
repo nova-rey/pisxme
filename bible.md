@@ -9026,6 +9026,11 @@ duplicated the source via. V1071 added the explicit C5.1 transition. Native
 DRC retains only the inherited RTL_3V3 dangling warning; saved connectivity
 proves C5.1/U1.17/U1.33 and the C5-source negative control passes. V1071 is
 retained while RTL_1V1 and remaining support/control gates stay open.
+2026-09-09: V1072 attached U1.50 RTL_1V1 to the existing west source field.
+Native DRC retains only the inherited RTL_3V3 dangling warning and the saved
+board proves U1.36/U1.40/U1.50/C4.1 connectivity. The U1.50 source-trace
+negative control fails as required; the fixture has 27 opens. V1072 is
+retained while remaining RTL_1V1 and support/control gates stay open.
 2026-09-09: V1065 rejected the direct U1.52 RTL_3V3 handoff because its B.Cu
 perimeter crossed the preserved GND return diagonal. V1066 changed the local
 corridor to join the existing V1064 transition field. Native DRC has only the

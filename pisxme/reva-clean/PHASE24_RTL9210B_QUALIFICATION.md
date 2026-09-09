@@ -397,6 +397,12 @@ duplicating the source via. V1071 adds the explicit C5.1 transition to the
 perimeter run. Native DRC has only the inherited RTL_3V3 dangling warning;
 saved-board connectivity and the C5-source negative control pass for
 C5.1/U1.17/U1.33. This is retained source-field evidence, not Path-B closure.
+
+V1072 adds U1.50 RTL_1V1 to the existing U1.36/U1.40/C4.1 source field.
+Native DRC has only the inherited RTL_3V3 dangling warning, and saved-board
+connectivity plus the U1.50 source-trace negative control pass. This is a
+local rail primitive; the other RTL_1V1 QFN endpoints and full Path-B gates
+remain open.
 V690 moved only C2 and rebuilt XTAL_OUT/GND alongside U1.52; native DRC found
 15 violations including crystal shorts and 3V3/CLKREQ and 1V1/GND contact.
 Reject the C2-only class. The next experiment must co-author the complete
