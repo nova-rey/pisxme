@@ -7612,3 +7612,9 @@ native SATA endpoint PASS because its multi-bend B.Cu allocation introduced
 additional same-layer crossings and via/track conflicts. It is retained as
 negative routing evidence; the V4 authoring basis remains the latest cleaner
 candidate.
+
+2026-09-08: Integrated selector-side SATA escape V4 with M.2 launch V6 and
+native mode-control routing. The saved candidate passes topology-aware USB3
+10/10, SATA 12/12, mode-control 4/4, schematic-to-PCB parity with zero
+mismatches, JMS VDDREG/REXT, and the mode negative control. Native DRC remains
+open at 673 violations / 499 unconnected items; no closure was claimed.

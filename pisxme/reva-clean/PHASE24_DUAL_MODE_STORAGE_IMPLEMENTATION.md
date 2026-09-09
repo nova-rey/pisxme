@@ -338,7 +338,15 @@ path is restored to the FULL7 geometry.
 
 ## CURRENT OPEN GATES
 
-1. The storage-local JMS583 support, complete USB3 path, and SATA selector
+1. The latest integrated candidate is
+   `PHASE24_STORAGE_SELECTOR_SATA_ESCAPE_V4_MODE.kicad_pcb`. Its storage-local
+   JMS583 support, complete topology-aware USB3 path, SATA selector path, and
+   native mode-control path pass focused audits and negative controls. Native
+   DRC is still open at 673 violations / 499 unconnected items; this is not a
+   closure candidate. Finish the remaining
+   integrated route/DRC cleanup, then complete USB2, return, power, and
+   inactive-state validation without synthetic connectivity edges.
+2. The storage-local JMS583 support, complete USB3 path, and SATA selector
    path now pass their focused native endpoint audits. The M.2 launch V6 and
    selector-side SATA escape V3/V4 also pass the native saved-board SATA
    endpoint audit; they are disposable route evidence, not yet promoted.

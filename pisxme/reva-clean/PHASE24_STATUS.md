@@ -2,6 +2,16 @@
 
 ## CURRENT OPEN GATES — 2026-09-08
 
+The latest integrated storage routing candidate is
+`PHASE24_STORAGE_SELECTOR_SATA_ESCAPE_V4_MODE.kicad_pcb`, derived from the
+corrected source-authoritative workbench with M.2 launch V6, selector-side
+SATA escape V4, and native mode-control routing. It passes the topology-aware
+dual-mode USB3 audit (10/10), SATA endpoint audit (12/12), mode-control audit
+(4/4), schematic-to-PCB pad parity (0 mismatches), and JMS583 VDDREG/REXT
+audits, with a saved-board MODE_IN negative control that fails as required.
+Native DRC remains open at 673 violations / 499 unconnected items; this is
+the current routing workbench, not a closure candidate.
+
 The live U13 source-authority regression is corrected. U13 pins 6/7 now own
 `M2_SATA_B_P_PCIE_RXN0` / `M2_SATA_B_N_PCIE_RXP0`, matching J3 contacts 41/43;
 the earlier lane-1 ownership was a superseded generator/source defect, not a
@@ -62,7 +72,9 @@ V1's ordinary-via escape removed the original U11.40/U11.39 short but
 introduced new QFN-ground/power clearances; V2's no-via perimeter escape
 retained the 669-count DRC and still contacted the adjacent POWER_GND field.
 Both are rejected route implementations. The integrated baseline is
-unchanged; the next storage-local repair class is the selector-to-M.2 launch.
+unchanged; the next storage-local action is to compare/promote the combined
+V6 M.2 launch plus selector-side V4 escape only after resolving their
+remaining local DRC classes.
 
 Mode-control source ownership is now corrected: J3 contact 69 and J5's AUTO
 leg export on native `AUTO_PEDET`, and the regenerated mode-fix placement
