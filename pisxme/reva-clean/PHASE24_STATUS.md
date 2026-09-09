@@ -32,6 +32,13 @@ the complete ten-net USB3 audit and all 12 SATA endpoint assertions. Native
 DRC remains open at 669 violations / 499 unconnected items, including
 inherited crossings and shorts; this is not a closure candidate.
 
+The integrated REXT repair discriminator is complete as a bounded experiment.
+V1's ordinary-via escape removed the original U11.40/U11.39 short but
+introduced new QFN-ground/power clearances; V2's no-via perimeter escape
+retained the 669-count DRC and still contacted the adjacent POWER_GND field.
+Both are rejected route implementations. The integrated baseline is
+unchanged; the next storage-local repair class is the selector-to-M.2 launch.
+
 Mode-control source ownership is now corrected: J3 contact 69 and J5's AUTO
 leg export on native `AUTO_PEDET`, and the regenerated mode-fix placement
 passes pad parity and the mode-contract audit. A native mode-aware fixture

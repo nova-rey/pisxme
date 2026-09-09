@@ -32,6 +32,12 @@ complete ten-net USB3 audit and all 12 SATA endpoint assertions. Native DRC
 remains open at 669 violations / 499 unconnected items, so the storage island
 is still in active route cleanup rather than closure.
 
+A bounded integrated REXT repair was tested and rejected. The via escape
+introduced QFN-ground/power conflicts, while the no-via perimeter escape
+left the adjacent POWER_GND short in place. Neither variant was promoted;
+the zone-backed integrated workbench remains the baseline for the next
+selector-to-M.2 launch repair.
+
 Mode-control ownership is now source-corrected: U12.9, U13.9, and U14.4 use
 the shared `STORAGE_SEL` net; J3.69 and J5.2 use `AUTO_PEDET`. The regenerated
 placement passes parity. A saved-board mode-control fixture connects those

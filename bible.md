@@ -7574,3 +7574,9 @@ rewritten.
 and gate counts with the live zone-backed integrated storage workbench. Older
 pre-zone USB3-incomplete wording remains historical evidence; no raw report
 or rejected candidate was changed.
+
+2026-09-08: Ran a bounded integrated JMS_REXT repair discriminator. The
+ordinary-via V1 escape removed the original AVDDL/REXT adjacency but created
+new QFN-ground/power conflicts; the no-via V2 perimeter escape retained the
+original DRC count and still contacted the POWER_GND field. Both remain
+rejected route evidence and the zone-backed integrated baseline is unchanged.
