@@ -9861,3 +9861,9 @@ and GND return; V1191 shorted or cleared against XTAL_IN/XTAL_OUT and the
 retained 1V1 field. All four are rejected route-implementation evidence. The
 next class must reauthor the local XTAL/3V3 departure allocation together,
 not add another U1.52 corridor around the same field.
+V1192 is a rejected co-authoring attempt that moved XTAL_IN's near-QFN
+transition and added U1.52 RTL_3V3 to the upper In2 field. Native DRC found
+the moved XTAL_IN crossing the retained XTAL_OUT return, plus a 3V3-via
+proximity/clearance conflict and an orphaned old XTAL_IN branch. This confirms
+both crystal transitions must be reallocated together before U1.52 can be
+closed; no accepted V1183 1V1 or crystal electrical topology was changed.

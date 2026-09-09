@@ -9273,6 +9273,11 @@ Native DRC found RSET/via clearance, no-net/USB pad-field, crystal/GND-return,
 and XTAL/1V1 shorting or crossing failures. The next solution class must
 co-author the local XTAL/3V3 departure allocation; the accepted V1183 1V1
 field remains unchanged.
+2026-09-09: V1192 rejected the first co-authored XTAL_IN/U1.52 RTL_3V3
+allocation. Moving XTAL_IN alone crossed XTAL_OUT and left a 3V3-via
+proximity conflict plus an orphaned old crystal branch. The next class must
+reallocate both crystal transitions together; accepted V1183 1V1/crystal
+topology remains unchanged.
 2026-09-09: Reconciled current Path-B headers after V1183. PHASE24_STATUS and
 PHASE24_RTL9210B_QUALIFICATION now identify V1183's all-eight-pad 1V1 field as
 the live basis; earlier V1160-only wording remains historical context rather
