@@ -9042,6 +9042,10 @@ Native DRC showed SPICS, RTL_5V, DEVSLP, no-net-pad, and adjacent-via
 conflicts. The independent-via class is exhausted; U1.25 needs coordinated
 QFN fanout allocation. No rejected copper was promoted and the RTL_1V1 rail
 authority remains valid.
+2026-09-09: Rejected V1081, a coupled RTL_5V/U1.25 RTL_1V1 fanout attempt.
+The relocated 5V corridor crossed retained SPI B.Cu lanes and the U1.25
+departure still violated SPICS clearance. Accepted rail authority remains
+unchanged; U1.25 requires broader coordinated QFN fanout allocation.
 2026-09-09: V1065 rejected the direct U1.52 RTL_3V3 handoff because its B.Cu
 perimeter crossed the preserved GND return diagonal. V1066 changed the local
 corridor to join the existing V1064 transition field. Native DRC has only the

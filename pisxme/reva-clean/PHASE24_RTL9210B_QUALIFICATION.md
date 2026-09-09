@@ -416,6 +416,12 @@ SPICS, RTL_5V, DEVSLP, no-net-pad, and adjacent-via conflicts across the
 variants. The failures characterize an exhausted independent-via class and
 require coordinated QFN fanout allocation; they do not reject the RTL_1V1
 rail or the Path-B architecture.
+
+V1081 is rejected coupled-fanout evidence. Relocating the 5V escape outward
+caused crossings with retained SPI B.Cu lanes, while the U1.25 1V1 departure
+still violated SPICS clearance. The failure does not invalidate the rail or
+architecture; it shows that U1.25 and the neighboring 5V/SPI fanout must be
+allocated together.
 V690 moved only C2 and rebuilt XTAL_OUT/GND alongside U1.52; native DRC found
 15 violations including crystal shorts and 3V3/CLKREQ and 1V1/GND contact.
 Reject the C2-only class. The next experiment must co-author the complete

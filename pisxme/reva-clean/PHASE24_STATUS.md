@@ -2023,6 +2023,12 @@ experiments, not a 1V1 authority failure. U1.25 now requires coordinated QFN
 fanout allocation with SPI/5V/no-net geometry; no accepted U1.25 copper has
 been promoted.
 
+V1081 co-authored a farther-out RTL_5V corridor with a U1.25 RTL_1V1
+transition. It is rejected: the relocated 5V field crossed retained SPI B.Cu
+lanes and the U1.25 departure still violated SPICS clearance. This is a
+coupled QFN fanout implementation failure; the accepted 3V3/5V-source/1V1
+fields remain unchanged and U1.25 remains open.
+
 V1073 is rejected: the lower-edge RTL_1V1 descent crossed the retained
 RTL_3V3 perimeter. V1074 is also rejected because its upper return crossed
 the existing RTL_3V3 source via field. V1075 routes U1.16 through a central
