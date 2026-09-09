@@ -8680,6 +8680,10 @@ RSET path from the left, avoiding the reserved 1V1 vias. Native DRC had zero
 electrical violations, with only the two inherited isolated-fill warnings and
 28 expected unrelated opens. V932 is the accepted 1V1/RSET primitive; crystal,
 3V3, 5V, and local GND restoration remain open.
+2026-09-09: V934 tested a relocated XTAL_OUT corridor and was rejected by
+native DRC for XTAL_IN/source-field crossing, RTL_1V1 proximity, and a C2
+ground/via collision. It remains rejected route evidence; V933 XTAL_IN and
+V932 RSET remain accepted.
 2026-09-09: V933 relocated Y1/C1/C2 north by 8 mm and regenerated XTAL_IN
 with ordinary vias outside component pads and an explicit Y1.1-to-C1.1 join.
 Native DRC had no electrical violations (three inherited isolated-fill
