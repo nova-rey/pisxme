@@ -64,6 +64,10 @@ trace-removal negative control. Support/control/REFCLK remain open.
 exposed real short/crossing classes despite reduced open counts. V311 remains
 the retained disposable sideband basis; Path A and production CAD are
 unchanged.
+2026-09-09: V1145 and V1146 tested XTAL_IN coexistence with accepted V1144
+XTAL_OUT. Native DRC found five and seven source-field violations; both were
+rejected. V1144 XTAL_OUT remains accepted, while XTAL_IN and full support
+closure remain open.
 
 2026-09-08: Strengthened the JMS583 VBUS audit to include U11.10
 JMS_VBUS_SENSE, then preserved V10 as rejected evidence. V10 passes all three

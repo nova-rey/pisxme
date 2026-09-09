@@ -33,6 +33,11 @@ then retained only the inherited warning; the saved-board U1.54/Y1.2/C2.1
 audit and both source-trace negative controls passed. V1144 is the accepted
 XTAL_OUT primitive. XTAL_IN and complete Path-B support/control closure remain
 OPEN.
+V1145 added the retained lower XTAL_IN primitive to V1144 and exposed five
+source-field violations. V1146 tested an upper XTAL_IN departure; native DRC
+found seven violations from the GND triangle and RSET/3V3 field. Both are
+rejected coexistence trials. XTAL_OUT remains accepted; the next trial will
+keep it unchanged and move only XTAL_IN's B.Cu corridor.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
 `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout lineage

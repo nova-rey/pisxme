@@ -20,6 +20,10 @@ evidence only.
 V1141 returned to the native V1123 board and used its real net registry and
 queried pad coordinates. Native DRC found 51 violations, so the candidate is
 rejected route evidence; it does not close or disprove the Path-B architecture.
+V1145 and V1146 tested coexistence of XTAL_IN with accepted V1144 XTAL_OUT;
+native DRC found five and seven source-field violations respectively. They
+are rejected route trials. V1144 XTAL_OUT remains accepted while XTAL_IN and
+complete support/control closure remain open.
 
 ## Current QFN-field correction — V1035–V1040 (2026-09-09)
 
