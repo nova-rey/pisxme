@@ -9549,3 +9549,7 @@ confirms a coupled source-field allocation issue; raw evidence is preserved.
 checks but native DRC rejected 22 violations, including crossings/shorts with
 XTAL_IN, LANE0_RXN, and RTL_1V1. RSET and crystal departures remain a coupled
 source-field allocation problem; raw evidence is preserved.
+2026-09-09 — V1303 transplanted the accepted V1165 crystal pair onto V1279;
+both crystal endpoint and negative-control audits passed, but native DRC
+rejected 27 conflicts against live lane/rail geometry. The donor is not
+directly compatible and the current four-lane basis remains unchanged.

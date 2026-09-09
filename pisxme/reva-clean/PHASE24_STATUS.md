@@ -10210,3 +10210,9 @@ saved-board endpoint and negative-control audit pass, but native DRC rejects
 22 violations, including RSET crossings/shorts with XTAL_IN, LANE0_RXN, and
 live RTL_1V1 source geometry. This route class is rejected; RSET and crystal
 departures must be co-authored with the lane/rail field.
+V1303 tested transplanting the accepted V1165 crystal pair onto V1279 while
+retaining the current RSET and lane/rail geometry. Both saved-board crystal
+endpoint and source-removal audits pass, but native DRC rejects 27 violations,
+including XTAL_OUT/RTL_1V1 conflicts and XTAL_IN clearance/crossings against
+the live lane transition field. The donor is therefore not directly
+compatible; the V1279 four-lane basis remains unchanged.
