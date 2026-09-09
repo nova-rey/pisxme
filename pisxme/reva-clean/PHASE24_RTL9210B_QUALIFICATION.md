@@ -954,3 +954,8 @@ findings localized to the actual U2 pad-5/pad-6/pad-7 ordering: the
 provisional SPISO3/SPISI endpoint assignment was reversed. This is rejected
 mapping evidence, not an orientation-0 source-field rejection. The next
 candidate must use transformed native U2 pad coordinates explicitly.
+V986 tested a lower-side RTL_3V3 escape against the accepted V927 SPI
+geometry and was rejected by 11 native violations: the source via entered the
+U1.15/U1.16 side-field and its B.Cu collector crossed SPISO3, SPICLK, and
+SPISI. The lower-drop class is rejected as route-implementation evidence;
+V927 remains the five-SPI baseline and V981 remains source-field evidence.

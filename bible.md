@@ -8842,3 +8842,8 @@ eight native violations, but the remaining errors localized to actual U2
 pad-5/pad-6/pad-7 ordering and exposed a reversed SPISO3/SPISI provisional
 assignment. Preserve this as rejected mapping evidence; future routes must
 use transformed native U2 pad coordinates explicitly.
+2026-09-09: V986 rejected the lower-side RTL_3V3 escape against V927. Native
+DRC found 11 violations, including source-via contact with U1.15/U1.16 and
+B.Cu crossings of SPISO3/SPICLK/SPISI. Preserve the result as route-class
+evidence; retain V927 as the SPI baseline and V981 as the clean source-field
+basis.
