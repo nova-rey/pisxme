@@ -9155,3 +9155,14 @@ pad-field clearance. V922 moved the source east to U1.24 -> ordinary via at
 V920. Native DRC reports 0 violations and 28 expected incomplete items; the
 saved-board audit passes both RTL_1V1 and SPICS plus a source-trace negative
 control. V922 is the accepted combined 1V1/SPICS local primitive.
+V923 added SPICLK around the accepted U1.25/SPICS escape; native DRC is 0
+with 27 expected incomplete items. V924 added SPISO3 with native DRC 0 and
+26 expected incomplete items. V925 was rejected for a real SPISO/SPICS
+crossing and remains historical evidence only. V926 moved the SPISO
+layer-transition/final dogbone below the SPICS endpoint; native DRC is 0 with
+25 expected incomplete items. V927 added SPISI using the same ordinary-via
+escape discipline; native DRC is 0 with 24 expected incomplete items. The
+saved-board V927 audit proves all five SPI nets and the U1.25 RTL_1V1-to-C4
+connection, and six source-trace negative controls pass. V927 is the current
+accepted SPI/1V1 primitive; the remaining RTL_1V1 package pads and other
+support-rail connections are still open.

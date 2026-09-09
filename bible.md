@@ -8659,3 +8659,12 @@ U1.28 clearance. V922 moved SPICS east to U1.24 -> via (100,67) -> U2.1 and
 retained the V920 U1.25 RTL_1V1 attachment. Native DRC passed with 0
 violations and 28 expected incomplete items; the saved-board audit and SPICS
 negative control passed. V922 is the accepted 1V1/SPICS primitive.
+2026-09-09: V923 added SPICLK and V924 added SPISO3 around the accepted
+U1.25/SPICS escape; native DRC remained 0 with 27 and 26 expected incomplete
+items. V925 was rejected for a real SPISO/SPICS crossing. V926 corrected the
+SPISO layer transition/final dogbone and passed native DRC with 0 violations
+and 25 expected incomplete items. V927 added SPISI and passed native DRC with
+0 violations and 24 expected incomplete items. The saved-board audit proved
+all five SPI nets plus U1.25 RTL_1V1-to-C4 and six source-trace negative
+controls. V927 is the accepted SPI/1V1 primitive; seven other RTL_1V1 package
+pads remain open for the next support-rail implementation step.
