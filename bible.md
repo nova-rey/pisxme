@@ -8240,3 +8240,8 @@ native DRC violations, including CLKREQ_N/QFN-field interference. V685
 separated the R2/R3 dogbones and approached outer U1.34 through an ordinary
 transition; native DRC reported zero violations and 30 incomplete opens.
 Retained V685 as the positive RTL_3V3 edge-source basis.
+
+2026-09-09: V686 extended U1.39 through the QFN field and contacted an
+existing RTL_1V1 via, so native DRC rejected it. V687 added a minimum 0.2 mm
+lateral jog around that via; native KiCad DRC reported zero violations and 29
+incomplete opens. Retained V687 as the positive U1.39 RTL_3V3 branch basis.

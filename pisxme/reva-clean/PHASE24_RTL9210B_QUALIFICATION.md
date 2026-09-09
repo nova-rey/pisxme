@@ -64,6 +64,10 @@ violations. V685 then separated the R2/R3 dogbones and approached outer U1.34
 through an ordinary transition; native DRC reports zero violations and 30
 remaining opens. Retain V685 as the positive RTL_3V3 edge-source basis; the
 inner QFN branches and downstream rail endpoints remain open.
+V686's first U1.39 inner branch contacted an existing RTL_1V1 via and was
+rejected. V687 added the minimum lateral jog; native DRC reports zero
+violations and 29 remaining opens. Retain V687 as the positive U1.39
+RTL_3V3 branch basis; the remaining 3V3 endpoints are still open.
 
 V672 provides a positive interior RSET basis with nine inherited warnings and
 no signal DRC violations. V673 layered lower RTL_3V3 onto it and found 12

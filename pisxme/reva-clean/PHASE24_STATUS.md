@@ -69,6 +69,9 @@ V685 is the positive edge-source basis: separated R2/R3 dogbones and an
 ordinary transition to outer U1.34 pass native DRC with zero violations and
 30 remaining opens. Inner QFN rail branches and downstream endpoints remain
 open.
+V686 was rejected for one RTL_1V1/RTL_3V3 via short. V687's 0.2 mm jog around
+that via passes native DRC with zero violations and 29 remaining opens; it is
+the current positive U1.39 RTL_3V3 branch basis.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native
