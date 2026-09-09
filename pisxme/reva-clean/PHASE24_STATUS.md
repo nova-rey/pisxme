@@ -102,6 +102,13 @@ and an In2 low-voltage power-layer collector. Native DRC again retained only
 the inherited RTL_3V3 dangling warning; the U1.55/C4.1 saved-board audit and
 source-trace negative control pass. V1167 is the current accepted 1V1 power
 primitive; U1.60/U1.63 and remaining support/control gates remain OPEN.
+V1169 extended the accepted In2 1V1 collector to U1.60 and U1.63 using
+separate F.Cu dogbones and ordinary through-vias, avoiding the no-connect and
+REFCLK pads between them. Native DRC retains only the inherited RTL_3V3
+dangling warning. The saved-board audit passes U1.55/U1.60/U1.63-to-C4.1
+connectivity and all three source-trace negative controls. V1169 is the
+current accepted 1V1 QFN extension; remaining RTL_1V1 pads and support gates
+remain OPEN.
 V1165 moved Y1/C1/C2 together 10 mm west, regenerated both crystal nets to
 their native transformed pads, and added explicit local GND-via access for the
 moved capacitors. After correcting the transformed XTAL_OUT pad endpoint and

@@ -9239,3 +9239,7 @@ XTAL_OUT endpoints. Native DRC retained only the inherited RTL_3V3 dangling
 warning; the saved-board audit passed XTAL_IN/XTAL_OUT/GND connectivity and
 both crystal trace-removal negative controls. Accepted as the current
 relocated crystal-pocket primitive.
+2026-09-09: V1169 extended the accepted In2 1V1 collector to U1.60/U1.63
+with separate ordinary-via dogbones. Native DRC retained only the inherited
+RTL_3V3 warning; the saved-board audit and three source-trace negative
+controls passed. Accepted as the current 1V1 QFN extension.
