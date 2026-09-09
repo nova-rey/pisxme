@@ -10034,3 +10034,8 @@ V1264 adds the U1.63 RTL_1V1 escape on that base with no new native DRC
 errors; its endpoint and negative-control audit pass. This is the accepted
 starting point for extending the live-pad rail cohort. Full support remains
 OPEN.
+V1265 is rejected pad-60 support evidence. The first via was too close to
+RXN; the farther y-stagger then crossed the live RXN source and violated the
+0.20 mm minimum trace-width rule when attempting a 0.10 mm QFN dogbone.
+This is a real package-escape/coauthoring constraint; validation severity is
+unchanged. The accepted V1263/V1264 source-field basis is retained.

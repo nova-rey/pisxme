@@ -9405,3 +9405,8 @@ only inherited warnings. V1264 adds U1.63 RTL_1V1 on that base; native DRC
 adds no errors and the U1.63-to-C4 endpoint/negative-control audit passes.
 This is the accepted starting point for the remaining live-pad support
 coauthoring. Path A and production CAD remain untouched.
+2026-09-09 — V1265 pad-60 RTL_1V1 support attempt rejected: the 0.4-mm QFN
+edge pitch cannot accept the proposed 0.10-mm dogbone under the 0.20-mm
+minimum trace-width rule, and the alternate route interacted with the live
+RXN source field. Do not weaken validation; co-author the package escape
+field next. V1263/V1264 remain the accepted basis.
