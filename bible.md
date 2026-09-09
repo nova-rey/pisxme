@@ -7538,3 +7538,9 @@ negative controls pass. The final combined USB3/SATA workbench passes the
 ten-net USB3 audit and all 12 SATA endpoint checks. Native DRC remains open at
 669 violations / 499 unconnected items with inherited crossings/shorts; no
 Phase 24 closure was claimed.
+
+2026-09-08: Focused storage endpoint gates are now current PASS evidence:
+JMS583 support, ten-net USB3, and 12-net SATA selector connectivity each
+pass with negative controls where implemented. Updated the live open-gate
+narrative so USB3/SATA endpoint work is no longer phrased as an unfinished
+TODO. Native DRC remains open at 669 violations / 499 unconnected items.

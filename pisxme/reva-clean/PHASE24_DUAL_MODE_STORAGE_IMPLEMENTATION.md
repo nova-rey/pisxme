@@ -312,9 +312,10 @@ path is restored to the FULL7 geometry.
 
 ## CURRENT OPEN GATES
 
-1. Finish the native USB3/source and selector copper, then complete the
-   remaining SATA/PCIe, USB2, support, return, and power routing without
-   synthetic connectivity edges.
+1. The storage-local JMS583 support, complete USB3 path, and SATA selector
+   path now pass their focused native endpoint audits. Finish the remaining
+   integrated route/DRC cleanup, then complete USB2, return, power, and
+   mode-aware inactive-state validation without synthetic connectivity edges.
 2. Complete native ERC/DRC, mode-aware connectivity and inactive-state checks
    for forced SATA, forced NVMe, AUTO, empty socket, reset, and power-off
    states.
