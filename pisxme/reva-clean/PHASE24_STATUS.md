@@ -9185,6 +9185,12 @@ QFN field. Native DRC is 0 electrical violations with the same two inherited
 isolated-fill warnings and 28 expected unrelated opens. V932 is the accepted
 1V1-plus-RSET support primitive; crystal, RTL_3V3, RTL_5V, and local GND
 restoration remain open.
+V940 restored RTL_5V from U1.17/U1.33 to C5 with staggered source and
+outboard transition geometry around the accepted crystal/1V1 field. Native
+DRC has 0 electrical violations with three inherited isolated-fill warnings
+and 22 expected unrelated opens. The saved-board RTL_5V audit and corrected
+C5-side trace-removal negative control pass. V940 is the accepted 1V1/RSET/
+crystal/5V primitive; RTL_3V3 and local GND restoration remain open.
 V939 restored U1.55 RTL_1V1 with a staggered outward dogbone and ordinary
 via at (97.5,76.0), while retaining V938's crystal pair and V932 RSET. Native
 DRC has 0 electrical violations with two inherited isolated-fill warnings and

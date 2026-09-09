@@ -909,3 +909,9 @@ at (97.5,76.0), retaining V938 crystal and V932 RSET support. Native DRC has
 unrelated opens). The saved-board audit passes all eight RTL_1V1 endpoints,
 both crystal nets, RSET, and four source-trace negative controls. V939 is the
 accepted local 1V1/crystal/RSET primitive; RTL_3V3, RTL_5V, and GND remain open.
+V940 restored RTL_5V from U1.17/U1.33 to C5 with staggered source and
+outboard transition geometry. Native DRC has 0 electrical violations (three
+inherited isolated-fill warnings; 22 expected unrelated opens). The saved
+RTL_5V audit and corrected C5-side trace-removal negative control pass. V940
+is the accepted 1V1/RSET/crystal/5V primitive; RTL_3V3 and local GND remain
+current implementation gates.
