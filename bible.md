@@ -9499,3 +9499,8 @@ verified QFN footprint-level escape class next.
 basis: U1 at 90 degrees, native DRC zero violations, and independent
 SPICS/SPISO endpoint plus source-removal audits passed. It is isolated support
 placement evidence, not full Path-B closure or a production replacement.
+2026-09-09 — Generated and verified the native geometry receipt
+`PHASE24_RTL9210B_V735_V1279_GEOMETRY_COMPARISON.md`. It records the rotated
+V735 top-row SPI source geometry versus the V1279 right-row source geometry;
+V735 remains support-placement evidence only because its unconnected-pad
+findings remain open.

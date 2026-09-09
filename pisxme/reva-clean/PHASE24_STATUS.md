@@ -10139,3 +10139,9 @@ U1 is rotated 90 degrees, the native DRC report records zero violations, and
 the independent SPICS/SPISO endpoint and source-removal audits pass. V735 is
 an isolated support-placement reference, not yet a replacement for the
 current four-lane V1279 lineage; full Path-B integration remains OPEN.
+The native geometry receipt `PHASE24_RTL9210B_V735_V1279_GEOMETRY_COMPARISON.md`
+quantifies the discriminator: V735 rotates U1 to 90 degrees, placing SPICS,
+SPISO, SPICLK, and SPISI on the top-side row, while V1279 leaves them on the
+right-side QFN row beside the 1V1/PCIe escape field. V735 remains an isolated
+support-placement oracle because its 43 unconnected-pad findings are still
+open.
