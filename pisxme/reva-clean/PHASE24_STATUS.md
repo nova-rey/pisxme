@@ -109,6 +109,13 @@ dangling warning. The saved-board audit passes U1.55/U1.60/U1.63-to-C4.1
 connectivity and all three source-trace negative controls. V1169 is the
 current accepted 1V1 QFN extension; remaining RTL_1V1 pads and support gates
 remain OPEN.
+V1170 tested an east U1.16 escape and was rejected at the adjacent RTL_5V
+pad field. V1171/V1172 tested south escapes; the latter retained an In2
+copper-sliver warning. V1173 simplified the In2 segment but retained source
+field clearance. V1174 uses the south F.Cu escape with a direct In2 handoff;
+native DRC retains only the inherited RTL_3V3 dangling warning. Its saved-board
+U1.16/C4.1 audit passes after a corrected cohort-removal negative control.
+V1174 is the current accepted U1.16 1V1 primitive.
 V1165 moved Y1/C1/C2 together 10 mm west, regenerated both crystal nets to
 their native transformed pads, and added explicit local GND-via access for the
 moved capacitors. After correcting the transformed XTAL_OUT pad endpoint and

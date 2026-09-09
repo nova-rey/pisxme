@@ -9243,3 +9243,7 @@ relocated crystal-pocket primitive.
 with separate ordinary-via dogbones. Native DRC retained only the inherited
 RTL_3V3 warning; the saved-board audit and three source-trace negative
 controls passed. Accepted as the current 1V1 QFN extension.
+2026-09-09: V1170-V1173 explored U1.16 1V1 escape classes; V1174 accepted
+the south F.Cu dogbone plus direct In2 handoff. Native DRC retained only the
+inherited RTL_3V3 warning. The saved-board U1.16/C4.1 audit passes with a
+corrected complete-source-cohort negative control.
