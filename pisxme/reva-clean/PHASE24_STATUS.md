@@ -8875,3 +8875,15 @@ handoff around the local 3V3/1V1 barrier. Native KiCad 10.0.5 DRC: 0
 violations, 24 unconnected pads. The saved-board V702 audit and targeted
 handoff-via negative control both pass. This is a local rail closure, not a
 complete Path-B or production-CAD pass; Path A remains intact and protected.
+
+## CURRENT ROUTING CHECKPOINT — V814 (2026-09-09)
+
+V814 is rejected route evidence. It paired the SPICS and SPISO source
+dogbones from the clean V810 basis, but native DRC found three real local
+conflicts: SPICS crosses the retained U2 GND branch and PEDET shelf, and the
+SPISO transition via is too close to the SPICS lower jog. Native DRC reports
+3 violations and 40 expected incomplete connections. This is a
+route-implementation failure, not evidence against the rotated placement,
+RTL9210B, or Path A. V810 remains the last clean combined basis; the next
+trial must separate the source transitions and account for the U2 return
+geometry.

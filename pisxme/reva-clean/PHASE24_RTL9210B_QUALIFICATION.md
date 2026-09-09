@@ -594,3 +594,13 @@ the outboard PEDET/CLKREQ_N B.Cu corridors and retained SPISI, plus local U1
 pad and resistor-feed clearances. The last clean combined support basis is
 V772. Preserve all reports as raw evidence and continue with a new local
 control-channel allocation from V772/V777.
+
+## CURRENT ROUTING CHECKPOINT — V814 (2026-09-09)
+
+V814 is rejected route evidence. It paired the SPICS and SPISO source
+dogbones from the clean V810 basis, but native DRC found three real local
+conflicts: SPICS crosses the retained U2 GND branch and PEDET shelf, and the
+SPISO transition via is too close to the SPICS lower jog. The report contains
+3 violations and 40 expected incomplete connections. V810 remains the last
+clean combined basis; V814 does not change the Path-B architecture decision
+and no production CAD or Path-A artifact changed.

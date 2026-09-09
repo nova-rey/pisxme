@@ -8417,3 +8417,9 @@ restored the U2 GND return, and passed native DRC with zero violations. The
 corrected saved-board audit and SPICS track-removal negative control pass.
 V811-V813 were rejected SPISO/SPICS source co-routing trials; remaining SPI
 source allocation is open.
+2026-09-09: V814 paired the SPICS and SPISO source dogbones from the clean
+V810 basis, but native DRC found three real conflicts: SPICS crossed the U2
+GND branch and PEDET shelf, and the SPISO transition via was too close to the
+SPICS lower jog. The result (3 violations, 40 expected incomplete
+connections) is preserved as rejected route-implementation evidence; V810
+remains the last clean combined basis and Path A/production CAD are unchanged.
