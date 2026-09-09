@@ -60,6 +60,12 @@ pad parity passing, with no native `shorting_items` class; native DRC reports
 730 findings. It is not closure: inherited crossing/open/clearance/width and
 full-board power/ground gates remain. No production copper changed.
 
+Saved-board route metrics show V8 leaves the CM5-side USB3 paths unchanged
+and uses zero additional vias for USB_TXP1/USB_TXN1. Its local TX skew proxy
+is 4.718 mm versus 4.400 mm on the VBUS V1 parent, so V8 is a clean-source
+basis but not yet a pair-balance closure. The next candidate must preserve its
+no-short local escape while co-authoring pair-length matching.
+
 V9 is rejected as a micro-adjustment regression. Although focused USB3
 connectivity remains passing, native DRC rises to 731 and introduces a real
 `CM5_PET0_P`/`CM5_USB3_RX_N` short. V8 remains the retained parent.

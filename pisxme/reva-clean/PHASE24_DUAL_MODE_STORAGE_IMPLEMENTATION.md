@@ -52,6 +52,11 @@ fanout preserves all focused connectivity/parity gates and introduces no
 native shorting class, but native DRC remains at 730 findings with inherited
 crossing/open/clearance/width debt. It is not production authority.
 
+Native route metrics confirm V8 does not add USB TX vias or alter the CM5
+paths, but its USB_TXN1/USB_TXP1 skew proxy is 4.718 mm versus 4.400 mm on
+the VBUS parent. V8 therefore remains a source-escape basis, not a complete
+pair-balance or Phase 24 closure.
+
 The V9 TXN micro-adjustment is superseded route evidence: focused USB3 still
 passes, but native DRC rises to 731 and adds a real CM5_PET0_P/CM5_USB3_RX_N
 short. V8 remains the selected disposable parent.

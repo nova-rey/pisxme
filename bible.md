@@ -7244,6 +7244,10 @@ JMS583 package's 64 signal pads plus grounded exposed pad 65. The repaired
 library, selector, and TE M-key checks pass; physical storage validation
 remains open.
 
+Measured V8 against the VBUS parent: CM5-side USB3 paths and USB TX via count
+are unchanged, while local USB TX skew proxy rises from 4.400 mm to 4.718 mm.
+Retained V8 as a clean-source basis pending pair-length co-authoring.
+
 V9 micro-adjustment was rejected after native DRC rose to 731 and introduced
 a CM5_PET0_P/CM5_USB3_RX_N short. V8 remains the retained parent.
 
