@@ -8947,3 +8947,7 @@ regeneration, not further single-via nudges.
 2026-09-09: V1032 rejected the upper U1.40 RTL_1V1 escape because it crossed
 the native U1.39 RTL_3V3 F.Cu branch. U1.40, U1.39, and the 3V3 collector
 must be regenerated together, with the parent GND plane attachment retained.
+2026-09-09: V1033 rejected the parent-GND-preserving RTL_3V3 reroute. Native
+DRC localized failures to U1.40 versus the parent 3V3 via field and the new
+3V3 upper-rail segment versus accepted U1.25 1V1 via (98.4,62.5). Future
+regeneration must co-author the remote 3V3 and local 1V1 fields together.

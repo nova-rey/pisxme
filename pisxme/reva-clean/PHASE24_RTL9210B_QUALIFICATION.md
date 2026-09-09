@@ -1086,3 +1086,7 @@ V1032 rejects the upper U1.40 escape because it crosses the native U1.39
 RTL_3V3 F.Cu branch. The U1.40/U1.39/RTL_3V3 QFN-edge field must be
 co-authored as one allocation, while preserving the parent's GND
 plane-attachment topology.
+V1033 is rejected despite preserving the parent GND geometry. Native DRC
+finds U1.40 contact with the parent 3V3 via field and a 3V3 upper-rail
+collision with the accepted U1.25 1V1 via at (98.4,62.5). The next class
+must co-author the remote 3V3 rail, 1V1 transition field, and U1.40 branch.

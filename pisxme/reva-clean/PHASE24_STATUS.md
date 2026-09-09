@@ -9407,3 +9407,8 @@ RTL_3V3 F.Cu branch. This confirms U1.40 cannot be allocated independently;
 U1.39, the RTL_3V3 collector, and U1.40 must be regenerated as one QFN-edge
 field. The parent GND plane-attachment topology remains a constraint for the
 next regeneration.
+V1033 is REJECTED as the parent-GND-preserving 3V3 reroute. Native DRC
+localized its remaining failures to U1.40 versus the parent RTL_3V3 via
+field and the new 3V3 upper-rail segment versus the accepted U1.25 1V1 via
+at (98.4,62.5). This confirms the next regeneration must co-author the
+3V3 remote rail with the existing 1V1 transition field as well as U1.40.
