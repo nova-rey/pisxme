@@ -93,6 +93,12 @@ shorting classes, including RX polarity and TX/RX source-field collisions.
 The lower count is not a valid improvement; V33 is rejected and the next
 class must regenerate the complete four-net CM5 USB3 source field.
 
+V34 regenerated all four CM5 USB3 source nets together with orthogonal
+staggered F.Cu exits and existing B.Cu trunks. Native DRC reported 589
+findings / 403 unconnected items but five true shorts, including a TX escape
+into an adjacent no-net J7 pad and RX/XOUT field collisions. V34 is rejected;
+the next source-field class must follow a reference-derived escape map.
+
 V13 is the retained local routing basis. Its upper P-leg detour preserves the
 V8 source ordering, reduces the USB_TXN1/USB_TXP1 skew proxy to 0.259 mm, and
 keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits

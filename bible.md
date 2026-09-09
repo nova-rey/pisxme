@@ -8104,3 +8104,8 @@ V33 tested an orthogonal staggered CM5 USB3 RX source escape. Native DRC was
 594 findings / 401 unconnected items, but six true shorting classes appeared,
 including RX polarity and TX/RX source-field collisions. Rejected V33; a
 complete four-net CM5 USB3 source-field regeneration is required.
+
+V34 regenerated the complete four-net CM5 USB3 source field with orthogonal
+staggered exits. Native DRC was 589 findings / 403 unconnected items, but five
+true shorts appeared, including a no-net J7 pad collision and RX/XOUT field
+collisions. Rejected V34; reference-derived escape allocation is next.

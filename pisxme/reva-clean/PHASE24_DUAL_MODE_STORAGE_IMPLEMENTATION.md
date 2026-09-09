@@ -126,6 +126,10 @@ V33's orthogonal CM5 USB3 RX escape reduced the raw DRC count but introduced
 six true shorting classes and one additional open. It is rejected route
 evidence; the complete CM5 USB3 source field must be co-authored.
 
+V34 co-authored all four CM5 USB3 source escapes but introduced five native
+shorting classes, including a no-net J7 pad collision. It is rejected route
+evidence despite the lower raw DRC count.
+
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a
 0.000 mm clearance violation into U11 pad 23. No production authority changed.
