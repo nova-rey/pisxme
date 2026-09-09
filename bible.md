@@ -8557,6 +8557,16 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: V944 proved U1.20 RTL_3V3 can escape in a clean field when SPI
+copper is regenerated around it. V945/V946 added SPICS and SPICLK with native
+DRC limited to the inherited isolated-fill warning. V947/V948 SPISO3/SPISO
+variants were rejected for source-field crossings and shared transitions.
+V949/V951 independently re-authored both nets; V952 swept four source cells
+(7-9 native DRC violations each). The remaining failure is the current U1
+orientation/exposed-pad source field at the active 0.20 mm rules, not a
+connectivity assertion or RTL9210B topology failure. Raw candidates and
+reports are retained; SPI remains open and the next experiment is a bounded
+U1 orientation/QFN source-field regeneration.
 2026-09-09: V870 extended the clean V869 RTL_3V3 spine from U2.8 to U2.3.
 Native DRC passed with 0 violations and 28 expected incomplete items; the
 saved-board audit proved U2.3/U2.8/C3.1 and a trace-removal negative control.
