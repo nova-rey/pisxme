@@ -8510,3 +8510,18 @@ native findings and 42 expected incomplete connections. V847 moved the
 controls clear but was rejected with 7 native violations and 42 expected
 incomplete connections, dominated by SPISI transition/reference-zone
 clearance. The 270-degree placement remains a candidate source-field basis.
+2026-09-09: V850 established a clean ordered three-net SPI source primitive
+for the 270-degree RTL9210B flash orientation. It scrubbed stale local
+SPI/GND copper, moved PEDET/CLKREQ_N controls clear, and routed SPISI,
+SPICLK, and SPISO3 monotonically to U2. Native DRC had no electrical
+violations (one isolated B.Cu GND-fill warning only); the saved-board audit
+passed all three endpoints and all three trace-removal negative controls.
+This is partial evidence only: SPISO, SPICS, PERST_N, and complete support
+validation remain open. Path A and production CAD remain unchanged.
+2026-09-09: V851 extended V850 through SPISO and SPICS. The saved-board
+audit passed all five SPI endpoint pairs and five trace-removal negative
+controls, with no signal short/crossing, but native DRC rejected one GND
+thermal-starvation error plus the inherited isolated B.Cu-fill warning.
+V852's ordinary-via B.Cu separation was rejected by a real SPISO/SPICS
+source-escape short. The next experiment must stagger source vias clear of
+the adjacent F.Cu fanout.

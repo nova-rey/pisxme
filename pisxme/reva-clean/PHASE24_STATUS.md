@@ -8985,3 +8985,20 @@ GND branch and control-resistor pocket. V847 moved the controls clear and
 still failed with 7 native violations and 42 expected incomplete connections,
 dominated by SPISI transition/reference-zone clearance. The 270-degree
 placement remains a candidate source-field basis, not an accepted route.
+V850 is the first clean ordered three-net source-field primitive for the
+270-degree flash orientation. It starts from V844, scrubs stale local SPI/GND
+copper, moves PEDET/CLKREQ_N controls out of the source field, and routes SPISI,
+SPICLK, and SPISO3 monotonically from U1 to U2. Native DRC reports 0 electrical
+violations; its only finding is the expected isolated B.Cu GND-fill warning.
+The saved-board audit passes all three endpoint checks and all three
+trace-removal negative controls. This is not complete five-net SPI or Path-B
+closure: SPISO, SPICS, PERST_N, and remaining support/control validation remain
+open. V850 is the active basis for the next two-net endpoint experiment.
+V851 extended the V850 basis through SPISO and SPICS. The saved-board audit
+passes all five endpoint pairs and five trace-removal negative controls, and
+the native report has no signal short/crossing; however, it reports one
+electrical GND thermal-starvation error plus the inherited isolated-fill
+warning. It is therefore a connectivity-positive, DRC-rejected candidate.
+V852 tested ordinary-via B.Cu separation for the lower pair and was rejected
+by a real SPISO/SPICS short at the source escape. These results bound the next
+experiment to a source-via stagger outside the adjacent F.Cu fanout.

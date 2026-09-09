@@ -688,3 +688,21 @@ with 6 native violations and 33 expected incomplete connections. V827 moved
 the source transitions laterally and was rejected with 9 violations and 33
 expected incomplete connections. These are local control-routing failures;
 V772 remains the valid complete-SPI/support basis.
+
+V850 is a valid partial routing primitive, not a closure result. It derives
+the board from V844, removes stale local SPI/GND tracks, relocates the local
+PEDET/CLKREQ_N controls, and routes SPISI, SPICLK, and SPISO3 in monotonic
+source-to-target order to the 270-degree U2 field. Native KiCad DRC reports no
+electrical violations (one isolated B.Cu GND-fill warning only), and the
+saved-board audit passes each endpoint plus a disposable trace-removal
+negative control for each net. SPISO, SPICS, PERST_N, and complete support
+validation are still open; Path A/production CAD are unchanged. The next
+experiment extends this clean basis to the remaining two SPI nets.
+V851 extends the three-net V850 primitive through SPISO and SPICS. Native
+saved-board connectivity and trace-removal negative controls pass for all five
+SPI nets, with no signal short/crossing, but native DRC rejects the candidate
+for one GND thermal-starvation error plus the inherited isolated B.Cu-fill
+warning. V852's ordinary-via B.Cu separation is rejected by a real
+SPISO/SPICS source-escape short. The five-net field is connectivity-positive,
+but not yet a DRC pass; the next class must stagger source vias outside the
+adjacent F.Cu fanout.
