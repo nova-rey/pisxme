@@ -8878,3 +8878,10 @@ fanout. V997/V998 tested west detours; V999 routed below the GND endpoint and
 then overhead, producing no electrical DRC violations beyond intentional
 dangling source ends and inherited opens. Preserve V999 as the accepted
 full RTL_3V3/GND-aware primitive.
+2026-09-09: Rejected V1004's bulk transplant of the V930 eight-pad RTL_1V1
+fanout onto the V999/V1003 rail field; native DRC reported 23 real
+1V1-to-3V3/5V violations. V1005 then proved an isolated U1.25-to-C4.1
+RTL_1V1 primitive using a separated ordinary-via/In2 corridor, with no
+electrical DRC violations beyond intentional dangling source tracks and
+inherited opens. Continue 1V1 allocation incrementally; Path A and
+production CAD remain unchanged.

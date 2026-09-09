@@ -2,6 +2,21 @@
 
 ## Current checkpoint — V981 orientation-0 source-field discriminator (2026-09-09)
 
+### Latest 1V1 rail allocation evidence — V1004/V1005
+
+V1004 is rejected: the V930 all-eight RTL_1V1 fanout cannot be copied as a
+bulk shelf onto the V999/V1003 support field. Native DRC found 23 violations,
+predominantly 1V1-to-3V3/5V contacts and clearances. This is preserved as
+negative route-class evidence.
+
+V1005 is the accepted next primitive: only U1.25 RTL_1V1 is routed to C4.1,
+using an isolated F.Cu departure, ordinary via, and separated In2 corridor.
+Native DRC has no electrical violations; its remaining eight dangling source
+warnings and 38 incomplete connections are intentional/inherited from the
+disposable fixture. V1005 does not close the 1V1 rail or Path B. Remaining
+RTL_1V1 endpoints must be added incrementally with native pad/layer-aware
+allocation.
+
 V981 is the newest positive source-field result.  It transforms U1 to
 orientation 0 about the native exposed pad and removes only the local
 RTL9210B support tracks, then exits SPISI, SPICLK, RTL_3V3, SPISO3, SPISO,

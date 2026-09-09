@@ -108,6 +108,22 @@ evidence in the qualification directory.
 
 ## CURRENT STATE — documentation authority (2026-09-09)
 
+### Latest RTL_1V1 allocation evidence — V1004/V1005 (2026-09-09)
+
+V1004 is REJECTED. It transplanted the historical V930 eight-pad RTL_1V1
+fanout wholesale onto the accepted V999/V1003 local rail field; native KiCad
+DRC reported 23 violations, including real RTL_1V1 interactions with the
+RTL_3V3 and RTL_5V support geometry. The saved PCB, author, and raw report
+are retained as route-implementation evidence only.
+
+V1005 is ACCEPTED as an isolated primitive, not as full Path-B closure. It
+starts from V999 and connects the actual U1.25 RTL_1V1 pad to C4.1 through a
+separate ordinary-via/In2 corridor. Native DRC reports no electrical
+short/clearance/crossing violations; the eight intentional dangling source
+tracks and 38 inherited incomplete connections remain. Continue from V1005
+one native endpoint at a time; do not repeat the rejected bulk V930
+transplant.
+
 V981 is the newest RTL9210B local source-field discriminator.  After
 orientation-0 transformation about the native exposed pad, all six adjacent
 source departures (SPISI, SPICLK, RTL_3V3, SPISO3, SPISO, SPICS) run
