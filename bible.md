@@ -72,6 +72,10 @@ closure remain open.
 GND triangle. Native DRC retained five first-millimeter QFN source-field
 violations; the downstream corridor was clean. Rejected pending staggered
 source-transition work.
+2026-09-09: Rejected V1148 staggered XTAL source-via trial. Native DRC found
+ten violations, including incomplete removal of inherited rail branches and
+a dangling XTAL_IN transition. Future staggered-via tests require native-safe
+bulk removal before evaluation; Path A and production CAD remain unchanged.
 
 2026-09-08: Strengthened the JMS583 VBUS audit to include U11.10
 JMS_VBUS_SENSE, then preserved V10 as rejected evidence. V10 passes all three

@@ -43,6 +43,11 @@ V1144 XTAL_OUT route unchanged. Its downstream/GND-avoidance corridor was
 clean, but native DRC retained five first-millimeter QFN source-field
 violations. It is rejected; the next class will stagger the source
 transitions themselves.
+V1148 attempted staggered XTAL source transitions with outboard 3V3/1V1
+departures. Native DRC found ten violations, including incomplete removal of
+inherited rail branches and a dangling XTAL_IN transition. It is rejected;
+the next source-field author must remove inherited branches with a native-safe
+bulk operation before evaluating staggered vias.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
 `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout lineage

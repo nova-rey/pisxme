@@ -24,6 +24,10 @@ V1145 and V1146 tested coexistence of XTAL_IN with accepted V1144 XTAL_OUT;
 native DRC found five and seven source-field violations respectively. They
 are rejected route trials. V1144 XTAL_OUT remains accepted while XTAL_IN and
 complete support/control closure remain open.
+V1148 tested staggered source vias with outboard rail departures but native
+DRC found ten violations, including inherited rail branches and a dangling
+XTAL_IN transition. Rejected as an authoring experiment; no Path-A or
+production artifact changed.
 V1147 retained accepted V1144 XTAL_OUT and moved XTAL_IN left below the GND
 triangle. Native DRC still found five first-millimeter QFN source-field
 violations, so it is rejected; the downstream corridor itself was clean.
