@@ -8694,3 +8694,10 @@ negative control passed. V933 is the accepted XTAL_IN primitive; XTAL_OUT,
 rejected by native DRC for XTAL_IN/RTL_3V3 source overlap, XTAL_IN/XTAL_OUT
 B.Cu crossing, and an isolated C2 ground thermal. It remains rejected route
 evidence; V933 XTAL_IN and V932 RSET remain accepted.
+2026-09-09: V936/V937 isolated alternate crystal departures and were rejected
+for source/B.Cu crossings. V938 scrubbed only the U1.55 RTL_1V1 departure,
+regenerated both crystal nets with monotonic B.Cu ordering, and joined C2.1
+to Y1.2. Native DRC had 0 electrical violations with two inherited isolated-
+fill warnings; the saved audit and two source-trace negative controls passed.
+V938 is the accepted crystal-pair primitive; U1.55 1V1 and remaining rail/GND
+restoration remain open.

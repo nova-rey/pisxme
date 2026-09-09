@@ -9190,6 +9190,13 @@ relocation. Native DRC rejected it for XTAL_IN/RTL_3V3 source overlap,
 XTAL_IN/XTAL_OUT B.Cu crossing, and an isolated C2 ground thermal. It is
 preserved as route-implementation evidence; V933 XTAL_IN and V932 RSET remain
 accepted.
+V936/V937 isolated alternate crystal departures and were rejected for source
+or B.Cu crossings. V938 scrubbed only the U1.55 RTL_1V1 departure, regenerated
+both crystal nets with monotonic B.Cu ordering, and explicitly joined C2.1 to
+Y1.2. Native DRC has 0 electrical violations with two inherited isolated-fill
+warnings; the saved-board audit proves both crystal nets and both source-trace
+negative controls. V938 is the accepted crystal-pair primitive; U1.55 1V1,
+RTL_3V3, RTL_5V, and local GND restoration remain open.
 V934 tested the first relocated XTAL_OUT corridor and was rejected by native
 DRC for a U1 XTAL_IN source crossing, the RTL_1V1 transition, and a C2
 ground/via collision. It is preserved as route-implementation evidence only;

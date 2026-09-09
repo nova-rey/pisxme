@@ -897,3 +897,9 @@ V935 attempted coordinated XTAL_IN/XTAL_OUT regeneration after the V933
 relocation and was rejected by native DRC for source overlap, a B.Cu crystal
 crossing, and an isolated C2 ground thermal. It remains rejected route
 evidence; V933 XTAL_IN and V932 RSET remain accepted.
+V936/V937 isolated alternate crystal departures and were rejected for source or
+B.Cu crossings. V938 scrubbed only U1.55's RTL_1V1 departure and regenerated
+both crystal nets with monotonic B.Cu ordering, including the C2.1-to-Y1.2
+join. Native DRC has 0 electrical violations (two inherited isolated-fill
+warnings); the saved audit and two source-trace negative controls pass. V938
+is the accepted crystal-pair primitive, not integrated support closure.
