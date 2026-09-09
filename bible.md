@@ -9050,6 +9050,11 @@ unchanged; U1.25 requires broader coordinated QFN fanout allocation.
 with the retained 5V via field; V1083/V1084 U1.55 left-perimeter escapes
 conflicted with preserved 3V3/GND return geometry. Independent perimeter
 nudges are exhausted for this field; coordinated QFN regeneration is required.
+2026-09-09: V1085 attached U1.60 RTL_1V1 through the lower validated
+transition. Native DRC retained only the inherited RTL_3V3 dangling warning;
+saved-board connectivity proves U1.16/U1.36/U1.40/U1.50/U1.60/C4.1 and the
+U1.60 source-trace negative control passes. The fixture has 25 opens; remaining
+QFN/support gates stay open.
 2026-09-09: V1065 rejected the direct U1.52 RTL_3V3 handoff because its B.Cu
 perimeter crossed the preserved GND return diagonal. V1066 changed the local
 corridor to join the existing V1064 transition field. Native DRC has only the

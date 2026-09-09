@@ -2036,6 +2036,13 @@ return diagonal. These results further bound the independent perimeter class.
 The accepted rail fields remain intact; the remaining QFN 1V1 pins require a
 co-authored support-field regeneration.
 
+V1085 attaches U1.60 RTL_1V1 through the lower validated transition. Native
+DRC retains only the inherited RTL_3V3 dangling warning and the fixture has
+25 unconnected items. The saved-board audit proves U1.16/U1.36/U1.40/U1.50/
+U1.60/C4.1 are one RTL_1V1 component; removing U1.60's source trace fails the
+negative control. V1085 is retained; U1.25/U1.55/U1.63 and remaining support
+endpoints remain open.
+
 V1073 is rejected: the lower-edge RTL_1V1 descent crossed the retained
 RTL_3V3 perimeter. V1074 is also rejected because its upper return crossed
 the existing RTL_3V3 source via field. V1075 routes U1.16 through a central
