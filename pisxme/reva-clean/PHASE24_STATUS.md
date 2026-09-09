@@ -2,6 +2,13 @@
 
 ## CURRENT OPEN GATES — 2026-09-08
 
+The endpoint-safe layer-aware search with selector-side copper retained,
+`PHASE24_STORAGE_SATA_SAFE_EXITS_V2.kicad_pcb`, passes all 12 native SATA
+endpoint assertions and avoids storage-local true shorts. It still has a U7
+source-field crossing; native DRC reports 676 violations / 499 unconnected
+items plus one inherited non-storage short. It is rejected as an integrated
+candidate, while the safe-exit authoring method is retained.
+
 The latest bounded SATA source-field experiment,
 `PHASE24_STORAGE_SATA_SOURCE_ORDER_V1.kicad_pcb`, is rejected route
 implementation evidence. It used native U7 pad coordinates and an

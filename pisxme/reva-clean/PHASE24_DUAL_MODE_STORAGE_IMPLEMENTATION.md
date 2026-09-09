@@ -338,6 +338,12 @@ path is restored to the FULL7 geometry.
 
 ## CURRENT OPEN GATES
 
+The endpoint-safe layer-aware SATA search with selector-side copper retained
+passes all 12 native SATA endpoint assertions, but leaves a U7 source-field
+crossing and reports 676 native DRC violations / 499 unconnected items,
+including one inherited non-storage short. It is rejected as a full-board
+candidate; its safe-exit routing method is retained.
+
 The reordered SATA source-field probe
 `PHASE24_STORAGE_SATA_SOURCE_ORDER_V1.kicad_pcb` is rejected route
 implementation evidence: its corrected native-net authoring passes all 12

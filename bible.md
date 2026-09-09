@@ -7728,3 +7728,9 @@ local escape topology or move the coherent U7/coupler sub-island.
 PHASE24_STORAGE_VCCK_LOCAL_V1 basis. The saved-board baseline reproduces 669
 violations and 499 unconnected items with zero shorting_items; this fresh
 receipt does not waive any open gate.
+
+2026-09-08: Tested endpoint-safe layer-aware SATA search V2 with existing
+selector-side copper retained. Native SATA passed 12/12 and storage-local
+true shorts were avoided, but a U7 source-field crossing remained; native
+DRC was 676 violations / 499 unconnected with one inherited non-storage
+short. Rejected as full-board candidate; method retained.
