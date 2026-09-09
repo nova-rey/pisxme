@@ -18,6 +18,13 @@ instructions. Raw receipts, negative controls, and rejected experiments are
 retained unchanged. The next implementation task is the co-authored
 USB_TXP/USB_TXN/JMS_AVDDL local field repair against the live VBUS basis.
 
+The V3/V4 co-authored source-field experiments are superseded route evidence:
+V3 passes the focused USB3 and JMS583 support audits without a shorting class,
+but creates two local TX-pair crossings at the U11 escape; V4 adds an
+asymmetric layer handoff and is worse at 734 native DRC findings. Neither is
+production authority. The VBUS V1 basis remains the live parent for the next
+source-field regeneration.
+
 ## CURRENT OPEN GATES — 2026-09-08
 
 The Y10 relocation trial is rejected implementation evidence: it preserved

@@ -21,6 +21,13 @@ claims below are historical evidence only when explicitly labeled as such.
 The current next action is the bounded co-authored USB_TXP/USB_TXN/JMS_AVDDL
 source-field repair, followed by native DRC and the existing full-board gates.
 
+The first co-authored source-field trials are retained as route evidence. V3
+kept USB3/SATA/mode/JMS583/parity focused gates passing and introduced no
+shorting class, but native DRC identified two new local USB_TXP1/USB_TXN1
+source-escape crossings. V4's asymmetric pair-layer handoff was worse at 734
+DRC findings and retained crossing classes. Both are rejected implementation
+variants; the VBUS V1 basis remains current and no production copper changed.
+
 ## CURRENT ROUTING BASIS — 2026-09-08
 
 The disposable `PHASE24_STORAGE_U12_EP_RX_PAIR_V6.kicad_pcb` is the latest

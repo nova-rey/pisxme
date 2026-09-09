@@ -7900,6 +7900,13 @@ negative control pass, as do USB3, SATA, mode, and JMS583 support audits.
 Native DRC reports 732 violations / 400 unconnected items with zero true
 shorts. This is the current storage basis; remaining DRC and full-board gates
 stay open.
+
+## 2026-09-09 — Phase 24 source-field discriminator
+
+Preserved V3/V4 disposable co-authored USB TX-pair plus JMS_AVDDL trials.
+V3 passed focused connectivity with no shorting class but introduced two
+local source-escape crossings; V4 was worse at 734 native DRC findings.
+Rejected both as route implementations and retained the VBUS V1 parent.
 ## 2026-09-08 — Phase 24 documentation hygiene
 
 Reconciled the current Phase 24 status and dual-mode storage implementation
