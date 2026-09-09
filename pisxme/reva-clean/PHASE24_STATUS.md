@@ -76,6 +76,12 @@ corridor and inherited USB3 source-field crossings. No copper was promoted;
 the next credible class is a clean source-owned storage high-speed corridor
 regeneration.
 
+Selective width normalization was tested on storage high-speed nets. It
+removed 34 width findings but left 147 inherited width findings and introduced
+a real `JMS_AVDDL`/`USB_TXP1` short, so it is rejected. Global and selective
+widening are not promoted; width cleanup must be co-authored with each local
+support field and revalidated by native DRC.
+
 The bounded `PHASE24_STORAGE_J8_V5_GROUND_ZONE_V1` probe adds a storage-only
 F.Cu `POWER_GND` zone and reduces native unconnected findings to 386 from
 400, with zero native shorts. It is retained as a ground-access experiment,

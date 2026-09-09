@@ -6068,6 +6068,11 @@ including STORAGE_SEL against SATA and inherited USB3 source-field crossings.
 No copper was promoted; the next class is clean source-owned corridor
 regeneration.
 
+2026-09-08 — Selective widening of storage high-speed tracks removed 34 width
+findings but left 147 inherited findings and introduced a real JMS_AVDDL/
+USB_TXP1 short. It was rejected; width cleanup must be co-authored with local
+support-field routing.
+
 2026-09-08 — An unchanged VBUS-basis round trip stayed zero-short, ruling out
 a generic save failure. The selector V2 probe, which avoided rebuilding the
 net table, still exposed three inherited crossing shorts after adding the
