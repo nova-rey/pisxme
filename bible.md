@@ -8557,6 +8557,12 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: V967 is retained as the best current co-authored RTL local
+partition (five native DRC findings). It moved SPISI east and used a compact
+SPICLK departure while leaving the V927 SPI shelves otherwise intact. V968
+then worsened the result and remains rejected. V967 is reference evidence,
+not closure; RTL_3V3 source transition and local rail interactions remain
+open.
 2026-09-09: V968 relocated SPICLK/SPISI transitions around V967 and was
 rejected with seven native DRC findings. The left SPICLK dogleg crossed
 SPISO3; the shifted SPISI via collided with PERST_N; RTL_3V3 still conflicted
