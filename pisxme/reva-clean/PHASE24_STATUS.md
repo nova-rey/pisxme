@@ -9166,3 +9166,16 @@ saved-board V927 audit proves all five SPI nets and the U1.25 RTL_1V1-to-C4
 connection, and six source-trace negative controls pass. V927 is the current
 accepted SPI/1V1 primitive; the remaining RTL_1V1 package pads and other
 support-rail connections are still open.
+V928 attempted a direct all-pad 1V1 fanout on the integrated V927 base and
+was rejected: native DRC found 17 local shorts/clearances against RTL_5V,
+RSET, RTL_3V3, XTAL, and SPI corridors. V929 refined U1.36 only and was also
+rejected by the existing crystal/GND field. V930 is the clean-field
+discriminator: after removing only neighboring support copper, all eight
+RTL_1V1 endpoints (U1.16/25/36/40/50/55/60/63 and C4.1) connect through
+ordinary vias into In2 power copper; native DRC has no electrical violations
+(only two inherited isolated-fill warnings), and the saved-board audit plus
+source-trace negative control pass. V931 restored the old support copper onto
+V930 and was rejected by 15 local conflicts, confirming the next task is
+support-rail regeneration around the reserved 1V1 allocation. V930 is the
+current accepted rail-feasibility primitive; it is not yet the integrated
+support solution.

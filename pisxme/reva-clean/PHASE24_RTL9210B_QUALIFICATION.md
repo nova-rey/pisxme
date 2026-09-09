@@ -868,3 +868,13 @@ SPICLK, SPISO3, SPISO, SPISI, and U1.25 RTL_1V1-to-C4, with six source-trace
 negative controls. V927 is the accepted SPI/1V1 primitive. RTL_1V1 pads
 U1.16/U1.36/U1.40/U1.50/U1.55/U1.60/U1.63 remain to be joined; this is a
 current implementation gate, not a closed support rail.
+V928 was rejected as an integrated all-pad RTL_1V1 fanout because native DRC
+found 17 concrete local conflicts. V929's single U1.36 refinement was also
+rejected by the crystal/GND field. V930 then removed only neighboring support
+copper as a discriminator and demonstrated a complete eight-pad RTL_1V1
+fanout to C4.1 through ordinary vias and In2 power copper: native DRC had no
+electrical violations (two inherited isolated-fill warnings), and the saved
+audit plus source-trace negative control passed. V931 restored the previous
+support routes and exposed 15 local conflicts. This separates rail feasibility
+from route implementation; support rails must now be regenerated around the
+V930 1V1 allocation.

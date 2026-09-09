@@ -8668,3 +8668,10 @@ and 25 expected incomplete items. V927 added SPISI and passed native DRC with
 all five SPI nets plus U1.25 RTL_1V1-to-C4 and six source-trace negative
 controls. V927 is the accepted SPI/1V1 primitive; seven other RTL_1V1 package
 pads remain open for the next support-rail implementation step.
+2026-09-09: V928/V929 rejected integrated RTL_1V1 fanout trials for concrete
+package-region conflicts. V930 clean-field discriminator proved all eight
+RTL_1V1 package endpoints to C4.1 with ordinary vias and In2 power copper;
+native DRC had no electrical violations and the saved audit/negative control
+passed. V931 restored prior support copper and exposed 15 local conflicts,
+so the next implementation step is regenerating RTL_3V3/5V/crystal/GND around
+the reserved 1V1 allocation. V930 is rail-feasibility evidence, not closure.
