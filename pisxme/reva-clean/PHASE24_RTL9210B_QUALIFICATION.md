@@ -391,6 +391,12 @@ field and passes with the inherited RTL_3V3 dangling warning only. Native
 saved-board connectivity and the U1.17 source-trace negative control pass
 for the U1.17/U1.33 RTL_5V pair. This remains a local endpoint primitive;
 source hookup and remaining Path-B support gates are open.
+V1069 and V1070 are rejected RTL_5V source candidates: the first crossed
+retained rail corridors and the second lacked a C5 pad transition while
+duplicating the source via. V1071 adds the explicit C5.1 transition to the
+perimeter run. Native DRC has only the inherited RTL_3V3 dangling warning;
+saved-board connectivity and the C5-source negative control pass for
+C5.1/U1.17/U1.33. This is retained source-field evidence, not Path-B closure.
 V690 moved only C2 and rebuilt XTAL_OUT/GND alongside U1.52; native DRC found
 15 violations including crystal shorts and 3V3/CLKREQ and 1V1/GND contact.
 Reject the C2-only class. The next experiment must co-author the complete

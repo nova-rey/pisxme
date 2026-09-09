@@ -9531,3 +9531,13 @@ The saved-board audit proves U1.17/U1.33 are physically connected on RTL_5V,
 and removal of the U1.17 source trace fails the negative control. V1068 is
 the current RTL_5V endpoint basis; source hookup and remaining support stay
 open.
+
+V1069 is rejected source evidence: a direct C5-to-QFN RTL_5V run crossed the
+retained RTL_1V1/RTL_3V3 corridors and duplicated a via. V1070 moved the run
+around the lower perimeter but left a dangling source endpoint and duplicated
+the existing transition. V1071 adds the actual C5.1-side transition to that
+perimeter run. Native DRC again has only the inherited RTL_3V3 dangling
+warning and the fixture has 28 unconnected items. The saved-board audit proves
+C5.1/U1.17/U1.33 are one RTL_5V component, with a C5-source trace-removal
+negative control. V1071 is the current 5V source basis; RTL_1V1 and remaining
+support/control endpoints remain open.
