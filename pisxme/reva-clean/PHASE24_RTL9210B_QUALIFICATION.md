@@ -23,6 +23,13 @@ V670 is rejected as a route implementation; the V35 SPI/crystal/RTL_5V
 basis remains the active source-field lineage. The next experiment must
 reallocate the local RSET/3V3 support field coherently.
 
+V672 provides a positive interior RSET basis with nine inherited warnings and
+no signal DRC violations. V673 layered lower RTL_3V3 onto it and found 12
+violations/21 opens; it is rejected because the U1.52 departure contacts
+RSET and the U1.39 departure violates adjacent USB_DM. The next experiment
+must co-author those two QFN source escapes with RSET, rather than add them
+independently.
+
 V671 tested the next bounded class by moving R1/RSET and re-authoring the
 U1.51 route. Native DRC found 15 violations and 24 opens: the proposed
 perimeter collided with lower RTL_1V1 and reached the board edge. V671 is

@@ -8184,3 +8184,10 @@ U1.51 with ordinary vias and unchanged 0.20-mm rules. Native DRC reported
 15 violations and 24 opens because the new perimeter collided with lower
 RTL_1V1 and reached the board edge. Rejected V671 as a route implementation;
 the next class is an interior co-authored RSET/lower-3V3 field.
+
+2026-09-09: V672 re-authored RSET through an interior west transition while
+retaining R1 and the V35/U2-left rail field. Native DRC reported nine
+inherited warnings and no signal violations, making V672 the positive RSET
+basis. V673 then added lower RTL_3V3 and was rejected at 12 violations/21
+opens: U1.52 contacted RSET and U1.39 violated adjacent USB_DM. The next
+Path-B class must co-author those QFN source escapes with RSET.

@@ -34,6 +34,10 @@ route-implementation results, not Path-B package or architecture rejections.
 V671 then moved the RSET endpoint; its 15-violation/24-open result is also
 rejected because the perimeter collided with lower RTL_1V1 and the board
 edge. The next Path-B class is an interior co-authored RSET/lower-3V3 field.
+V672 is the positive interior RSET basis (nine inherited warnings, no signal
+violations). V673's lower-3V3 overlay is rejected at 12 violations/21 opens;
+its remaining signal failures are the U1.52/RSET contact and U1.39/USB_DM
+source escape. The next implementation must co-author those QFN departures.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native
