@@ -616,3 +616,7 @@ probe passes native DRC with 0 violations and 42 expected incomplete
 connections. V822's direct five-net probe is rejected with 11 native
 violations and 37 expected incomplete connections. The move remains a
 candidate placement class, not a promoted route.
+V823 is the first clean two-net source allocation after V810. Native DRC
+reports 0 violations and 40 expected incomplete connections; its saved-board
+audit passes SPICS and SPISO endpoint assertions and trace-removal negative
+controls. This is a positive routing primitive, not full SPI or Path-B closure.

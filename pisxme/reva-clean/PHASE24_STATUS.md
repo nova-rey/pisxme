@@ -8900,3 +8900,8 @@ placement probe passes native DRC with 0 violations and 42 expected
 incomplete connections, but is not a routed acceptance. V822's direct
 five-net probe on that placement was rejected with 11 native violations and
 37 expected incomplete connections.
+V823 is the first clean two-net source allocation after V810: it retains
+SPICS, places SPISO's transition above the adjacent U1 source field, and
+passes native DRC with 0 violations and 40 expected incomplete connections.
+The saved-board audit passes both SPICS and SPISO endpoint assertions and
+independent trace-removal negative controls. Full five-net SPI remains open.
