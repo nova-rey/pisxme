@@ -9393,3 +9393,8 @@ shorts, crossings, clearance, duplicate-via, or adjacent-pad contact. These
 are disposable route-authoring failures, not Path-B rejection. Next support
 class: live-pad staggered dogbones to individual through-vias, then a separate
 B.Cu collector. No Path-A or production CAD changed.
+2026-09-09 — V1262 partial RTL9210B support escape rejected: native DRC
+showed the U1.63 RTL_1V1 dogbone colliding with the accepted LANE0_RXN source
+via at (92.8,70.8). This is a coupled lane/support source-field constraint;
+next work co-authors that RXN transition and rail escape together. Path A,
+production CAD, and the accepted V1258 lane base remain unchanged.

@@ -1458,6 +1458,12 @@ collector touched adjacent pads. The live V1258 lane path remains valid and
 audited. The next support implementation is staggered individual QFN
 dogbones/vias followed by a separated B.Cu collector; no Path-A or production
 CAD change was made.
+V1262 is rejected partial-support evidence. A staggered RTL_1V1 dogbone for
+U1.63 still intersects the accepted LANE0_RXN source transition at (92.8,
+70.8). The result is a real coupled QFN source-field constraint, not an
+architecture failure. Next experiment: relocate that one lane transition
+and the affected rail escape together, with native DRC and negative-control
+audits for both.
 V1255 is an upper-corridor discriminator. The complete lane concept reaches
 the upper region, but native DRC identifies source-to-row same-layer weave
 crossings plus one REFCLK-via clearance interaction. The corridor itself is

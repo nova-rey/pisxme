@@ -10021,3 +10021,9 @@ shared F.Cu collector touched adjacent QFN pads. These are route-authoring
 failures, not Path-B architecture failures. The next class uses staggered
 outward dogbones and individual through-vias before a separated B.Cu
 collector. V1258 remains the accepted lane-path base; support remains OPEN.
+V1262 is rejected as a partial staggered support escape: the live RTL_1V1
+dogbone for U1.63 still collides with the accepted LANE0_RXN transition via
+at (92.8,70.8), and the support branch is left incomplete. This identifies a
+coupled source-field constraint. The next valid class must co-author the
+single RXN source transition and the affected rail via, then re-audit both;
+do not copy V1243 geometry or treat this as Path-B rejection.
