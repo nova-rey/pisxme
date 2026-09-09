@@ -31,6 +31,9 @@ island reallocation. V670 then tested the consultant-recommended V35/U2-left
 lower-3V3 co-author and found 24 violations/21 opens from RSET/1V1/XTAL/SPI
 interactions; it is likewise a rejected route implementation. These are
 route-implementation results, not Path-B package or architecture rejections.
+V671 then moved the RSET endpoint; its 15-violation/24-open result is also
+rejected because the perimeter collided with lower RTL_1V1 and the board
+edge. The next Path-B class is an interior co-authored RSET/lower-3V3 field.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native

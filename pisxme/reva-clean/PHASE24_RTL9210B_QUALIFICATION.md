@@ -23,6 +23,12 @@ V670 is rejected as a route implementation; the V35 SPI/crystal/RTL_5V
 basis remains the active source-field lineage. The next experiment must
 reallocate the local RSET/3V3 support field coherently.
 
+V671 tested the next bounded class by moving R1/RSET and re-authoring the
+U1.51 route. Native DRC found 15 violations and 24 opens: the proposed
+perimeter collided with lower RTL_1V1 and reached the board edge. V671 is
+rejected as a route implementation; the next class is an interior,
+co-authored RSET/lower-3V3 field.
+
 ## Decision summary
 
 The retained RTL9210B-CG Rev. 1.1 document says the controller combines USB,

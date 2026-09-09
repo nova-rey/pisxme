@@ -8178,3 +8178,9 @@ RTL_1V1, RSET, XTAL, and SPI fields. Rejected the route implementation;
 retained the V35 SPI/crystal/RTL_5V lineage and Path A unchanged. The next
 class must coherently reallocate local RSET/3V3 support before routing the
 lower rail again.
+
+2026-09-09: Tested V671, moving the RTL9210B RSET endpoint and re-authoring
+U1.51 with ordinary vias and unchanged 0.20-mm rules. Native DRC reported
+15 violations and 24 opens because the new perimeter collided with lower
+RTL_1V1 and reached the board edge. Rejected V671 as a route implementation;
+the next class is an interior co-authored RSET/lower-3V3 field.
