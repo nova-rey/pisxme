@@ -32,6 +32,14 @@ native DRC still reports source-field via/adjacent-pad shorts (846 total
 violations / 402 unconnected items). It is rejected as route evidence; the
 next source escape must use the CM5IO-derived stagger/clearance geometry.
 
+The FULL7 geometry transplant
+`PHASE24_STORAGE_USB3_FULL7_SOURCE_REPAIRED_V1.kicad_pcb` was tested against
+the source-regenerated V3 basis. The four-net native USB3 audit passes, but
+donor geometry is not directly transplantable: native DRC reports 689
+violations / 402 unconnected items with connector-body and inherited
+cross-net shorts. It is rejected as donor evidence; transformed target pads
+must be re-escaped locally using the same topology, not copied blindly.
+
 `CORE_CM5.kicad_sch` now exposes its 51 CM5 ground labels as native global
 `POWER_GND` labels. This is a source-level repair for the previously observed
 `/CORE_CM5/POWER_GND` versus board-plane `POWER_GND` split; no PCB-only merge

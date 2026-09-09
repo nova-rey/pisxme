@@ -7785,3 +7785,7 @@ no copper was promoted.
 - The explicit-dogbone follow-up passed native USB3 endpoint connectivity but
   still shorted adjacent CM5 source-field pads/vias under native DRC; it was
   rejected and the CM5IO-derived escape geometry remains the next basis.
+- FULL7 CM5 USB3 source geometry was transplanted as a bounded experiment. It
+  passed the native USB3 endpoint audit but introduced incompatible donor
+  connector/cross-net DRC shorts; it was rejected as copper and retained only
+  as topology evidence.
