@@ -979,6 +979,11 @@ and removed those electrical violations. V994 completed the C3 B.Cu branch;
 native DRC remains limited to the eight intentional dangling source tracks
 and inherited opens. V994 is the accepted disposable RTL_3V3 collector
 primitive, not full Path-B closure.
+V995 connected U1.34/U1.39/U1.52 into the V994 RTL_3V3 collector and
+introduced one inherited GND-corridor crossing. V996's west shift introduced
+two GND interactions and is rejected. V995 is retained as the better
+fanout diagnostic, but neither is promoted; the next candidate must
+co-author the local GND return with the 3V3 fanout.
 V989 tested a right-jog RTL_3V3 transition from V988 and was rejected by 11
 native violations because it crossed SPISI/SPICLK. V990 instead keeps the
 RTL_3V3 departure vertical to (100.4,60.8), then hands off on B.Cu; native
