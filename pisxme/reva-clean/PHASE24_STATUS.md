@@ -1,6 +1,6 @@
 # Phase 24 acreage validation status
 
-## CURRENT PATH-B CHECKPOINT — V1139 whole-field regeneration rejected; V1123 remains the clean GND basis (2026-09-09)
+## CURRENT PATH-B CHECKPOINT — V1160 crystal source-field accepted; V1123 remains the clean GND basis (2026-09-09)
 
 CURRENT UPDATE: V1135 tested a GND-diagonal XTAL_OUT overpass and was rejected
 by native DRC for an XTAL_OUT/GND short, RSET crossing, and XTAL_IN/U1.55
@@ -83,12 +83,11 @@ XTAL_IN and XTAL_OUT endpoint connectivity, and both source-trace negative
 controls fail as required. V1160 is the current accepted crystal pair/source
 field primitive; full Path-B support integration remains OPEN.
 
-CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
-`PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout lineage
-through V1119. V1119 retains a native-clean XTAL_IN connection; V1120 is a
-rejected XTAL_OUT extension. The current open implementation gate is the
-coordinated XTAL_OUT/QFN fanout. V760/V772 and earlier control/SPI narratives
-below are historical evidence only.
+CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is V1123
+plus the accepted V1160 crystal source-field primitive. Full QFN rail,
+control, REFCLK, USB/SATA lane, firmware, and integrated Path-B closure remain
+OPEN. V760/V772 and earlier control/SPI narratives below are historical
+evidence only.
 
 V760 is the retained disposable RTL9210B-CG SPI support candidate. It starts
 from the V748 U1/U2 placement basis, uses a monotonic five-net QFN source

@@ -9216,3 +9216,7 @@ four exact RTL_3V3 source objects and achieved one inherited dangling warning,
 with native saved-board XTAL_IN/XTAL_OUT connectivity and both negative
 controls passing. Accepted as the current disposable crystal source-field
 primitive; full RTL9210B support remains open.
+2026-09-09: Reconciled the top-level Phase 24 qualification/status prose to
+the live V1160 state. Historical V1139/V1119 gate wording remains below only
+as archaeology; current open gates are full RTL9210B rail/control/REFCLK and
+integrated support closure. Raw receipts were not rewritten.

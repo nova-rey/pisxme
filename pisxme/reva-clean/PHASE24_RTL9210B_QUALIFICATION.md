@@ -1,11 +1,13 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
 CURRENT IMPLEMENTATION SUMMARY (2026-09-09): the live disposable Path-B
-basis is `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout
-lineage through V1123. V1119 retains native-clean XTAL_IN; V1120, V1121,
-V1122, V1135, V1136, V1137, and V1138 are rejected XTAL_OUT/source-field trials.
-The current open implementation gate is a coordinated native-clean
-XTAL_OUT/QFN fanout. V1123 remains the clean GND/rail starting basis. The
+basis is the V1123 clean GND/rail starting basis plus the accepted V1160
+crystal source-field primitive. V1160 has native-clean XTAL_IN/XTAL_OUT
+connectivity and passes both source-trace negative controls; its sole native
+DRC finding is the inherited RTL_3V3 dangling warning. Full QFN rail,
+control, REFCLK, USB/SATA lane, firmware, and integrated Path-B closure remain
+OPEN. V1120, V1121, V1122, V1135-V1138, and V1145-V1159 are rejected
+XTAL/source-field route trials and remain historical evidence only. The
 V1135-V1137 files and reports are historical route evidence, not production
 CAD or a change to Path A. V1138 tested offset y=75/y=77 return lanes but
 native DRC found 15 violations, including XTAL_IN/XTAL_OUT return crossings.
