@@ -1,38 +1,28 @@
 ** Drc report for PHASE24_RTL9210B_STAGGERED_SOURCE_CLEANFIELD_V1149.kicad_pcb **
-** Created on 2026-09-09T13:36:08 **
+** Created on 2026-09-09T13:38:32 **
 ** Report includes: Errors, Warnings **
 
-** Found 9 DRC violations **
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1153 mm)
-    Local override; error
-    @(92.0000 mm, 67.2000 mm): Track [XTAL_IN] on F.Cu, length 1.5524 mm
-    @(91.5000 mm, 67.6000 mm): Via [XTAL_OUT] on F.Cu - B.Cu
+** Found 6 DRC violations **
 [shorting_items]: Items shorting two nets (nets GND and XTAL_IN)
     Local override; error
     @(94.0000 mm, 62.0000 mm): Track [GND] on B.Cu, length 6.9311 mm
     @(90.5000 mm, 66.8000 mm): Track [XTAL_IN] on B.Cu, length 1.0000 mm
-[shorting_items]: Items shorting two nets (nets RTL_3V3 and XTAL_IN)
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
     Local override; error
-    @(93.0000 mm, 66.8000 mm): Via [RTL_3V3] on F.Cu - B.Cu
-    @(94.0500 mm, 67.2000 mm): Track [XTAL_IN] on F.Cu, length 1.0500 mm
+    @(92.0000 mm, 65.0000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+    @(92.5000 mm, 66.0500 mm): Track [RSET] on F.Cu, length 2.0500 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1865 mm)
     Local override; error
     @(92.0000 mm, 67.2000 mm): Track [XTAL_IN] on F.Cu, length 1.5524 mm
     @(94.0500 mm, 66.8000 mm): Track [RTL_3V3] on F.Cu, length 2.0500 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
-    Local override; error
-    @(92.5000 mm, 66.0500 mm): Track [RSET] on F.Cu, length 2.0500 mm
-    @(92.0000 mm, 65.0000 mm): Via [RTL_3V3] on F.Cu - B.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1865 mm)
     Local override; error
     @(92.0000 mm, 66.8000 mm): Track [RTL_3V3] on F.Cu, length 1.8000 mm
     @(92.0000 mm, 67.2000 mm): Track [XTAL_IN] on F.Cu, length 1.5524 mm
-[via_dangling]: Via is not connected or connected on only one layer
-    Local override; warning
-    @(93.0000 mm, 66.8000 mm): Via [RTL_3V3] on F.Cu - B.Cu
-[track_dangling]: Track has unconnected end
-    Local override; warning
-    @(100.9000 mm, 68.4000 mm): Track [RTL_3V3] on B.Cu, length 4.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1153 mm)
+    Local override; error
+    @(92.0000 mm, 67.2000 mm): Track [XTAL_IN] on F.Cu, length 1.5524 mm
+    @(91.5000 mm, 67.6000 mm): Via [XTAL_OUT] on F.Cu - B.Cu
 [track_dangling]: Track has unconnected end
     Local override; warning
     @(99.6000 mm, 62.8000 mm): Track [RTL_3V3] on B.Cu, length 1.3000 mm
@@ -61,7 +51,7 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(97.2000 mm, 66.0500 mm): Track [GND] on F.Cu, length 1.5500 mm
-    @(94.0000 mm, 62.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(94.0000 mm, 62.0000 mm): Track [GND] on B.Cu, length 6.9311 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(88.0000 mm, 59.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu

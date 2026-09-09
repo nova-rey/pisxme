@@ -9190,3 +9190,7 @@ XTAL_OUT primitive is accepted. XTAL_IN and full Path-B support remain open.
 staggered XTAL source vias. Native DRC still found nine violations because an
 inherited 3V3 via/branch remained and XTAL_IN was too close to residual rail
 geometry. Rejected; future pruning will assert removal counts.
+2026-09-09: Corrected V1149 asserted stale 3V3-via removal and reran the
+staggered source-via trial. Native DRC reduced the result to six violations,
+localized to XTAL_IN versus the GND/3V3/RSET source field; XTAL_OUT remained
+clean. Rejected pending source-only refinement.

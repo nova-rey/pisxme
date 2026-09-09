@@ -48,11 +48,12 @@ departures. Native DRC found ten violations, including incomplete removal of
 inherited rail branches and a dangling XTAL_IN transition. It is rejected;
 the next source-field author must remove inherited branches with a native-safe
 bulk operation before evaluating staggered vias.
-V1149 corrected the track/via identity matcher and retested staggered source
-vias with outboard rail departures. The result still had nine native DRC
-violations: an inherited 3V3 via/branch remained, and XTAL_IN was too close to
-residual rail geometry. It is rejected; the next author must report and assert
-exact branch-removal counts before routing.
+V1149 corrected the track/via identity matcher, asserted removal of the stale
+3V3 source via, and retested staggered source vias with outboard rail
+departures. The corrected rerun has six native DRC violations: XTAL_IN still
+interacts with the GND/3V3/RSET source field, while XTAL_OUT remains clean.
+It is rejected; exact branch-removal assertions are retained for the next
+source-only trial.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
 `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout lineage

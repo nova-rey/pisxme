@@ -21,9 +21,14 @@ b=pcbnew.LoadBoard(str(BASE)); codes={n:b.FindNet(n).GetNetCode() for n in ('RTL
 remove={
 codes['RTL_3V3']:{norm((94.05,66.8),(93.0,66.8)),norm((93.0,66.8),(93.5,64.8)),norm((93.5,64.8),(100.5,64.8)),norm((93.0,68.4),(100.9,68.4)),norm((93.0,66.8),(93.0,68.4)),norm((93.5,64.8),(93.5,64.8))},
 codes['RTL_1V1']:{norm((94.05,68.0),(92.8,68.0)),norm((92.8,68.0),(92.8,69.3)),norm((92.8,69.3),(92.8,75.0)),norm((92.8,69.3),(92.8,69.3))}}
+to_remove=[]
 for item in list(b.GetTracks()):
     code=item.GetNetCode(); a,z=ends(item)
-    if code in remove and norm(a,z) in remove[code]: b.Remove(item)
+    if code in remove and norm(a,z) in remove[code]: to_remove.append(item)
+    if type(item).__name__=='PCB_VIA' and code==codes['RTL_3V3'] and (round(item.GetX()/1e6,4),round(item.GetY()/1e6,4))==(93.0,66.8): to_remove.append(item)
+    if code==codes['RTL_3V3'] and type(item).__name__=='PCB_TRACK' and norm(a,z)==norm((100.9,68.4),(100.9,72.4)): to_remove.append(item)
+assert sum(1 for x in to_remove if type(x).__name__=='PCB_VIA' and x.GetNetCode()==codes['RTL_3V3'])==1, 'stale 3V3 source via was not uniquely identified'
+for item in to_remove: b.Remove(item)
 v3,v1,ni,no=(codes[n] for n in ('RTL_3V3','RTL_1V1','XTAL_IN','XTAL_OUT'))
 # Move rail transitions to leave the staggered crystal source vias room.
 tr(b,v3,F,[(94.05,66.8),(92.0,66.8),(92.0,65.0)]);via(b,v3,(92.0,65.0));tr(b,v3,B,[(92.0,65.0),(100.5,65.0),(100.5,64.0)])
