@@ -8545,3 +8545,8 @@ corridor. V857 doglegged upward before the via and passed native DRC with 0
 violations and 32 expected incomplete items. Its saved-board audit passed all
 five SPI endpoint pairs plus PERST_N and all six trace-removal negative
 controls. This is a local routing primitive, not full Path-B closure.
+2026-09-09: The V857 support re-audit passed XTAL_IN, XTAL_OUT, RSET, and
+plane-backed GND endpoint assertions; trace-removal negative controls passed
+for the three signal support nets. V857 is a native-clean local basis for
+SPI, PERST_N, crystal/RSET, and reviewed ground support, while its 32
+incomplete Path-B source/rail/control/CM5-side connections remain open.

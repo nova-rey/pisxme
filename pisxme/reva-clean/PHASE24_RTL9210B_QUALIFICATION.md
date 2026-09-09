@@ -728,3 +728,8 @@ expected incomplete items. Its saved-board audit passes all five SPI endpoint
 pairs plus PERST_N and all six trace-removal negative controls. This closes a
 local PERST_N routing primitive only; complete RTL9210B support/control and
 Path-B integration remain open.
+The V857 support re-audit passes XTAL_IN, XTAL_OUT, RSET, and plane-backed GND
+endpoint assertions, with trace-removal negative controls passing for the
+three signal support nets. V857 is consequently a native-clean local basis for
+SPI, PERST_N, crystal/RSET, and reviewed ground support. Its 32 incomplete
+items remain open Path-B source, rail, control, and CM5-side connections.
