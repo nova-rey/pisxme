@@ -7463,3 +7463,8 @@ native VBUS, complete JMS583-support, USB3 endpoint, and trace-removal
 negative-control audits, but native DRC still reports 509 findings / 499
 inherited unconnected items and an RX_N/refclk crossing. No production CAD or
 Path-B qualification was changed.
+
+2026-09-08: RX_N launch V4 was preserved as rejected evidence. The upper-J1
+B.Cu dogleg passes VBUS and USB3 endpoint audits but creates real RX_N/TX_N
+shorting/crossing classes in native DRC (512 findings / 499 inherited opens).
+The route was not promoted and validation rules were unchanged.

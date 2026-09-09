@@ -514,3 +514,8 @@ earlier RX_N-to-J1 short, but native DRC still reports 509 findings / 499
 inherited unconnected items and an RX_N/refclk crossing. This is rejected as
 route-implementation evidence only; no production authority or Path-B
 artifact changed.
+
+V4 is also rejected: it passes VBUS and USB3 endpoint connectivity, but
+native DRC reports 512 findings / 499 inherited unconnected items with real
+RX_N/TX_N shorting/crossing classes. It remains negative route evidence and
+does not change the selected support basis.

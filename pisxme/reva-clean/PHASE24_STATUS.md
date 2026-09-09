@@ -563,6 +563,11 @@ creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
 
+V4 is also rejected: its VBUS and USB3 endpoint audits pass, but native DRC
+reports 512 findings / 499 inherited unconnected items and real RX_N/TX_N
+shorting/crossing classes on the upper B.Cu detour. It remains negative route
+evidence; validation rules and production authority are unchanged.
+
 ## Current VBUS/RX_N launch discriminator — V3 rejected (2026-09-08)
 
 `PHASE24_DUAL_MODE_STORAGE_FULL7_VBUS_RXN_REPAIR_V3` is disposable
