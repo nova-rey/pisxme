@@ -7216,6 +7216,11 @@ preserving USB3 10/10, SATA 12/12, mode 4/4, parity, JMS support, and rail
 negative-control PASS. Native DRC is now 669 violations / 499 unconnected;
 closure remains open.
 
+2026-09-08: Tested selector-side SATA V10/V11 with separated upper TXN and
+lower RXN corridors. The saved SATA endpoint audit passed, but the outboard
+return field introduced M.2/mode/ground conflicts and raised native DRC to
+670. Both are rejected; the VCCK-local V1 candidate remains current.
+
 2026-09-08: Fresh native recheck of PHASE24_STORAGE_VCCK_LOCAL_V1 reproduced
 669 violations / 499 unconnected items and zero shorting_items. USB3, SATA,
 and mode-control native endpoint audits remained PASS; no DRC gate was waived.

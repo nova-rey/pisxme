@@ -84,6 +84,9 @@ VCCO destination V2 moved the source via down the QFN edge but introduced a
 JMS_SPI_CS_N_DNP pad short and raised native DRC to 675; it is rejected.
 The VCCK local V1 corridor removes the VCCO/VCCK and RESET_N/VCCK shorts,
 retains both rail endpoint negative controls, and reduces native DRC to 669.
+Selector-side V10/V11 tested separated upper/lower TXN/RXN corridors. They
+removed the original selector pair crossing but introduced outboard
+M.2/mode/ground conflicts and raised native DRC to 670; both are rejected.
 
 Selector-side V9 moved only the TXP corridor above the inherited support
 field; it removed the prior TXP/USB_RXN1 collision but introduced new XIN,
