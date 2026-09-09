@@ -9186,3 +9186,7 @@ V1144 moved the transition clear of adjacent rail vias. V1144 native DRC
 retained only the inherited RTL_3V3 dangling warning. Its saved-board
 U1.54/Y1.2/C2.1 audit and both source-trace negative controls passed, so the
 XTAL_OUT primitive is accepted. XTAL_IN and full Path-B support remain open.
+2026-09-09: V1149 corrected the track/via identity matcher and retested
+staggered XTAL source vias. Native DRC still found nine violations because an
+inherited 3V3 via/branch remained and XTAL_IN was too close to residual rail
+geometry. Rejected; future pruning will assert removal counts.
