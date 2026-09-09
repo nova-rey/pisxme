@@ -8948,6 +8948,11 @@ feasible; this route implementation is not.
 Correction: V832 placed the resistors at Y=90, outside the disposable Y=40–85
 outline. Its zero-violation result is only a coordinate probe, not mechanical
 feasibility evidence.
+V842 tested a 90-degree U2 SPI-flash rotation to change the endpoint pin
+order. Native DRC rejected the placement with 11 violations and 45 expected
+incomplete connections because the rotated U2 field overlaps retained R1/Y1
+support geometry and a GND thermal region. This is a local co-movement issue;
+no Path-A or production artifact changed.
 V838 tested a perimeter PERST_N route from the clean V837 control basis and
 was rejected with 3 native violations and 32 expected incomplete connections.
 V839 offset the source transition upward but was rejected with 4 violations

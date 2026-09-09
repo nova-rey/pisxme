@@ -8477,6 +8477,11 @@ corridors intersected retained SPI geometry and reached the board edge.
 Correction: V832's Y=90 resistor coordinates are outside the disposable
 Y=40–85 outline; its zero-violation result is not mechanical feasibility
 evidence.
+2026-09-09: V842 tested a 90-degree U2 SPI-flash rotation to change endpoint
+pin order. Native DRC rejected it with 11 violations and 45 expected
+incomplete connections because the rotated U2 field overlaps retained R1/Y1
+support geometry and a GND thermal region. It is local placement evidence
+only; Path A and production CAD remain unchanged.
 2026-09-09: V838 tested a perimeter PERST_N route from V837 and was rejected
 with 3 violations and 32 expected incomplete connections. V839 offset the
 source transition but was rejected with 4 violations and 32 expected

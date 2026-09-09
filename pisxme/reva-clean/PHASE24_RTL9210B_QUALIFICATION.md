@@ -650,6 +650,10 @@ edge. The placement remains feasible; the route is rejected.
 Correction: V832's Y=90 resistor coordinates are outside the disposable
 Y=40–85 outline, so its zero-violation result is not mechanical feasibility
 evidence.
+V842 tested a 90-degree U2 rotation for a pin-order alternative. Native DRC
+rejected the placement with 11 violations and 45 expected incomplete
+connections because the rotated flash field overlaps retained R1/Y1 support
+geometry and a GND thermal region. It remains local placement evidence only.
 V838 tested a perimeter PERST_N route from V837 and was rejected with 3
 native violations and 32 expected incomplete connections. V839 offset the
 source transition but was rejected with 4 violations and 32 expected
