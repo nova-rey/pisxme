@@ -1,6 +1,34 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
-## Current checkpoint — V702 U1.17 RTL_5V closure (2026-09-09)
+## Current checkpoint — V748 vertical U2 endpoint-field basis (2026-09-09)
+
+V748 is the current positive placement basis for the remaining RTL9210B SPI
+allocation. Starting from the native-clean V730 U1-at-90-degree basis, U2 was
+rotated 90 degrees and placed with its SPI endpoint column at x=105 mm. The
+native KiCad 10.0.5 DRC reports zero violations and 45 expected/incomplete
+connections. Its ordered endpoint field is U2.1 SPICS y=80.0, U2.2 SPISO
+y=78.8, U2.5 SPISI y=75.2, U2.6 SPICLK y=74.0, and U2.7 SPISO3 y=72.8.
+This is a placement discriminator only; no SPI channel is claimed closed by
+V748.
+
+V746 and V747 are rejected disposable three-channel allocations from the
+same U1/U2 placement family. V746 had a source-field SPISO/SPISO3 crossing
+and a clearance violation. V747's alternate B.Cu SPICS corridor produced
+two source-field shorts with SPISO and SPISO3. Both are route-implementation
+failures preserved as raw evidence, not package or architecture rejection.
+The next experiment should route against the V748 vertical endpoint field
+with a co-authored source escape, retaining the standing 0.20 mm track and
+ordinary-via rules.
+
+V749 routes SPISO3 alone from U1 to the vertical U2.7 endpoint with an
+ordinary F.Cu/B.Cu/F.Cu transition and reports zero native DRC violations and
+44 expected opens. V750 adds SPICLK through a separate outboard B.Cu channel;
+it also reports zero native DRC violations and 43 expected opens. These are
+positive channel-allocation evidence, not full SPI closure. SPICS, SPISO, and
+SPISI still require co-authored routing and saved-board connectivity audits.
+
+The earlier V702 U1.17 RTL_5V closure remains part of the inherited positive
+support lineage; it is not the current SPI checkpoint.
 
 The disposable saved-board lineage `PHASE24_RTL9210B_SUPPORT_RELOCATION_5V_U117_V702.kicad_pcb`
 is the current positive local support candidate. V702 adds a two-via F/B/F

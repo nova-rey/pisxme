@@ -6034,6 +6034,15 @@ produced native SPISO3 connectivity plus a passing trace-removal negative
 control and zero native signal shorting/crossing classes. Path A and
 production CAD remain unchanged; Path-B support and full validation remain
 open.
+
+2026-09-09: V746/V747 were rejected three-channel source-field allocations
+with native SPISO/SPISO3 and SPICS/SPISO interactions. V748 rotated U2 90
+degrees into a vertical SPI endpoint field and passed native KiCad DRC with
+zero violations and 45 incomplete opens. V749 routed SPISO3 on that basis
+with zero DRC violations; V750 added SPICLK through a separate B.Cu channel
+and also passed with zero DRC violations. These are isolated Path-B routing
+experiments; Path A and production CAD remain unchanged, and full SPI plus
+RTL9210B qualification remain open.
 2026-09-07: Promoted RTL9210B V212 PEDET U1.8-to-M.2 contact-69 sideband
 slice. Native connectivity and the trace-removal negative control pass, and
 native DRC has zero signal shorting/crossing classes. Path A and production
