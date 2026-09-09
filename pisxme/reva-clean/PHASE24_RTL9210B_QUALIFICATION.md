@@ -790,3 +790,10 @@ primitive: native DRC reports 0 violations and 29 expected incomplete items;
 the saved-board audit proves C1.2/C2.2/R1.2 connectivity through three local
 GND vias and passes a zone-independent trace-removal negative control. XTAL_IN
 and XTAL_OUT remain intentionally open for the next support-routing trial.
+V889 tested direct outer F.Cu crystal corridors and was rejected for the
+existing U1.52 RTL_3V3 escape and a far-side XTAL_IN pad landing. V890 and
+V891 repeated the trial with only the U1.52 departure scrubbed; V891 removed
+that conflict but still failed the U1.55-adjacent XTAL_OUT source escape and
+the residual RTL_3V3 corridor. These are route-implementation failures, not
+evidence against the relocated support placement. V888 remains the accepted
+GND-return base for the next U1 source-escape strategy.

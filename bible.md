@@ -8603,3 +8603,9 @@ GND-return crossings or pad clearance. V888 accepted the separated underside
 GND return: native DRC 0 violations, 29 expected incomplete items, and a
 saved-board audit pass for C1.2/C2.2/R1.2 with three local vias plus a
 zone-independent trace-removal negative control. Crystal nets remain open.
+2026-09-09: V889 tested direct outer F.Cu crystal corridors and was rejected
+for the U1.52 RTL_3V3 escape and far-side XTAL_IN landing. V890/V891 repeated
+the trial with U1.52 scrubbed; V891 removed that conflict but still failed the
+U1.55-adjacent XTAL_OUT source escape and residual 3V3 corridor. These remain
+route-implementation failures. V888 is the accepted GND-return base for the
+next U1 source-escape strategy; crystal nets remain open.
