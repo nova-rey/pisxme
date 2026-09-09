@@ -33,7 +33,8 @@ authority, exact JMS583/selector/M-key pad counts, authoritative component
 maps, selector truth table (`SATA=0`, `NVMe=1`), and mode contract. These
 checks do not waive the still-open native copper/DRC closure.
 
-Fresh native schematic ERC on the current source reports 927 violations. The
+Fresh native root schematic ERC on the current source reports 925 violations.
+The older 927 count is retained only as historical evidence. The
 post-fix report has no dangling M.2 labels; remaining findings are inherited
 off-grid, same-label, symbol, footprint-link, and connectivity warnings. The
 raw report is retained as an open ERC gate; the USB3 endpoint audit does not

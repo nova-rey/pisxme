@@ -71,6 +71,10 @@ divider endpoints and the trace-removal negative control, but native DRC
 reports 532 findings with a real VBUS/JMS_VBUS_SENSE handoff short. VBUS
 remains open and no route was promoted.
 
+2026-09-08: Fresh native root ERC after the U12 label correction reports 925
+violations. The prior 927-count report remains historical; no ERC severity
+was changed and the root ERC gate remains open.
+
 2026-09-08: VBUS sense V14 was preserved as the cleanest complete-endpoint
 trial so far. U11.16, U11.10, R82, and R83 plus the trace-removal negative
 control pass; native DRC has no VBUS/JMS_VBUS_SENSE shorting class, but still

@@ -57,11 +57,12 @@ The shared LXO path is promoted on
 U11.64-to-L10.1 connectivity and the trace-removal negative control pass;
 native DRC remains 514 findings with no LXO-authored short/crossing class.
 
-Fresh native ERC reports 927 violations on the current source. The post-fix
-report has no dangling M.2 entries; remaining findings are inherited
+Fresh native root ERC reports 925 violations on the current source. The older
+927-count report is historical. The current report has no dangling M.2
+entries; remaining findings are inherited
 off-grid/same-label and other source-quality warnings. ERC remains an
 independent open gate. The six isolated legacy M.2 labels were removed at the
-source boundary, while the total remains 927 due to unrelated inherited
+source boundary; unrelated inherited
 findings.
 
 FULL7 saved-copper metrics are retained in
