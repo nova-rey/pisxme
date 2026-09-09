@@ -8357,5 +8357,10 @@ placement variants. V775/V776/V778 were rejected control routes that crossed
 the validated SPI field. Preserve V772 as the current combined support basis
 and continue with an outboard control return class.
 
+2026-09-09: V779 tried split upper/lower F.Cu control corridors and was
+rejected by native DRC for PEDET/CLKREQ_N crossings, resistor approach
+shorts, and a no-connect U1-pad contact. Continue with control-only resistor
+relocation; V772 remains the clean support basis.
+
 2026-09-09: Reconciled the duplicated stale V702 Phase 24 status section by
 marking it historical; V760 is the sole current RTL9210B SPI checkpoint.
