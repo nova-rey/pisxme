@@ -38,6 +38,10 @@ V672 is the positive interior RSET basis (nine inherited warnings, no signal
 violations). V673's lower-3V3 overlay is rejected at 12 violations/21 opens;
 its remaining signal failures are the U1.52/RSET contact and U1.39/USB_DM
 source escape. The next implementation must co-author those QFN departures.
+V674's all-pad rotation discriminator confirms the 90° U1.39 escape is clean
+at package level; its remaining integrated dependency is the adjacent
+RTL_1V1 departure. Other rotations are rejected by native DRC and are not
+preferred.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native

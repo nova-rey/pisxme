@@ -1,0 +1,93 @@
+** Drc report for PHASE24_RTL9210B_U139_ROTATION_270_V674.kicad_pcb **
+** Created on 2026-09-09T02:28:40 **
+** Report includes: Errors, Warnings **
+
+** Found 6 DRC violations **
+[shorting_items]: Items shorting two nets (nets RTL_3V3 and GND)
+    Local override; error
+    @(-23.6500 mm, 231.6000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+    @(-26.0000 mm, 230.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[shorting_items]: Items shorting two nets (nets RTL_3V3 and GND)
+    Local override; error
+    @(-22.0500 mm, 231.6000 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+    @(-26.0000 mm, 230.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(-26.0000 mm, 230.0000 mm): Pad 69 [GND] of U1 on F.Cu
+    @(-23.6500 mm, 231.6000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-22.0500 mm, 231.6000 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+    @(-26.0000 mm, 230.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-23.6500 mm, 231.6000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+    @(-26.0000 mm, 230.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(-23.6500 mm, 231.6000 mm): Track [RTL_3V3] on B.Cu, length 5.0000 mm
+
+** Found 13 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-29.9500 mm, 232.8000 mm): Pad 16 [RTL_1V1] of U1 on F.Cu
+    @(-26.4000 mm, 233.9500 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-26.4000 mm, 233.9500 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+    @(-22.0500 mm, 232.8000 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-26.0000 mm, 226.0500 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+    @(-27.2000 mm, 226.0500 mm): Pad 63 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-24.0000 mm, 226.0500 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+    @(-26.0000 mm, 226.0500 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-22.0500 mm, 227.2000 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+    @(-24.0000 mm, 226.0500 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-22.0500 mm, 231.2000 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+    @(-22.0500 mm, 227.2000 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-22.0500 mm, 232.8000 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+    @(-22.0500 mm, 231.2000 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-29.9500 mm, 233.2000 mm): Pad 17 [RTL_5V] of U1 on F.Cu
+    @(-23.2000 mm, 233.9500 mm): Pad 33 [RTL_5V] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-23.6500 mm, 231.6000 mm): Track [RTL_3V3] on B.Cu, length 5.0000 mm
+    @(-28.4000 mm, 233.9500 mm): Pad 20 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-22.8000 mm, 233.9500 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(-22.0500 mm, 231.6000 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-22.0500 mm, 231.6000 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+    @(-22.8000 mm, 226.0500 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-28.4000 mm, 226.0500 mm): Pad 66 [GND] of U1 on F.Cu
+    @(-26.0000 mm, 230.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-26.0000 mm, 230.0000 mm): Pad 69 [GND] of U1 on F.Cu
+    @(-22.0500 mm, 229.2000 mm): Pad 45 [GND] of U1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

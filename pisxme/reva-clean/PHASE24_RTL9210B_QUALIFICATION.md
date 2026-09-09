@@ -23,6 +23,13 @@ V670 is rejected as a route implementation; the V35 SPI/crystal/RTL_5V
 basis remains the active source-field lineage. The next experiment must
 reallocate the local RSET/3V3 support field coherently.
 
+V674 retained every neighboring U1 pad net and compared four package
+rotations. The 90° orientation produced one intentional dangling-tail
+warning and no pad short/crossing/clearance error; the other rotations added
+6–11 DRC violations. This confirms the RTL9210B package is escapable under
+the standing rules. The integrated lower-3V3 work must now co-author the
+90° U1.39 escape with the adjacent RTL_1V1 departure.
+
 V672 provides a positive interior RSET basis with nine inherited warnings and
 no signal DRC violations. V673 layered lower RTL_3V3 onto it and found 12
 violations/21 opens; it is rejected because the U1.52 departure contacts

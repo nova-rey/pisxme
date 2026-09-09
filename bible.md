@@ -8191,3 +8191,10 @@ inherited warnings and no signal violations, making V672 the positive RSET
 basis. V673 then added lower RTL_3V3 and was rejected at 12 violations/21
 opens: U1.52 contacted RSET and U1.39 violated adjacent USB_DM. The next
 Path-B class must co-author those QFN source escapes with RSET.
+
+2026-09-09: V674 retained all neighboring RTL9210B U1 pad net identities and
+tested one native U1.39 escape at four rotations. The 90-degree orientation
+had one intentional dangling-tail warning and no pad short/crossing/
+clearance error; 0/180/270 degrees had 11/10/6 violations. Retained the
+90-degree package escape basis. The integrated work must co-author U1.39
+with the adjacent RTL_1V1 departure.

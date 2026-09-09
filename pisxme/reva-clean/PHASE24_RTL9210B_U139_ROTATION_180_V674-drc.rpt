@@ -1,0 +1,109 @@
+** Drc report for PHASE24_RTL9210B_U139_ROTATION_180_V674.kicad_pcb **
+** Created on 2026-09-09T02:28:37 **
+** Report includes: Errors, Warnings **
+
+** Found 10 DRC violations **
+[shorting_items]: Items shorting two nets (nets  and RTL_3V3)
+    Local override; error
+    @(-47.2000 mm, 91.9500 mm): Pad 35 [<no net>] of U1 on F.Cu
+    @(-45.6000 mm, 91.9500 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+[shorting_items]: Items shorting two nets (nets  and RTL_3V3)
+    Local override; error
+    @(-47.2000 mm, 91.9500 mm): Pad 35 [<no net>] of U1 on F.Cu
+    @(-47.2000 mm, 91.9500 mm): Via [RTL_3V3] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(-47.2000 mm, 91.9500 mm): Pad 35 [<no net>] of U1 on F.Cu
+    @(-47.2000 mm, 91.9500 mm): Via [RTL_3V3] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(-46.8000 mm, 91.9500 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+    @(-47.2000 mm, 91.9500 mm): Via [RTL_3V3] on F.Cu - B.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-45.6000 mm, 91.9500 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+    @(-47.2000 mm, 91.9500 mm): Pad 35 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-45.6000 mm, 91.9500 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+    @(-46.8000 mm, 91.9500 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-45.6000 mm, 91.9500 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+    @(-46.4000 mm, 91.9500 mm): Pad 37 [USB_DP] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-45.6000 mm, 91.9500 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+    @(-46.0000 mm, 91.9500 mm): Pad 38 [USB_DM] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(-47.2000 mm, 91.9500 mm): Via [RTL_3V3] on F.Cu - B.Cu
+    @(-47.2000 mm, 91.9500 mm): Pad 35 [<no net>] of U1 on F.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(-47.2000 mm, 91.9500 mm): Track [RTL_3V3] on B.Cu, length 5.0000 mm
+
+** Found 13 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-47.9500 mm, 87.6000 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+    @(-46.8000 mm, 91.9500 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-46.8000 mm, 84.0500 mm): Pad 16 [RTL_1V1] of U1 on F.Cu
+    @(-47.9500 mm, 87.6000 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-46.8000 mm, 91.9500 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+    @(-45.2000 mm, 91.9500 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-45.2000 mm, 91.9500 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+    @(-41.2000 mm, 91.9500 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-41.2000 mm, 91.9500 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+    @(-40.0500 mm, 90.0000 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-40.0500 mm, 88.0000 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+    @(-40.0500 mm, 86.8000 mm): Pad 63 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-40.0500 mm, 90.0000 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+    @(-40.0500 mm, 88.0000 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-47.9500 mm, 90.8000 mm): Pad 33 [RTL_5V] of U1 on F.Cu
+    @(-47.2000 mm, 84.0500 mm): Pad 17 [RTL_5V] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-47.9500 mm, 91.2000 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(-47.2000 mm, 91.9500 mm): Via [RTL_3V3] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-47.9500 mm, 91.2000 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(-47.9500 mm, 85.6000 mm): Pad 20 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-45.6000 mm, 91.9500 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+    @(-40.0500 mm, 91.2000 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-44.0000 mm, 88.0000 mm): Pad 69 [GND] of U1 on F.Cu
+    @(-43.2000 mm, 91.9500 mm): Pad 45 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(-40.0500 mm, 85.6000 mm): Pad 66 [GND] of U1 on F.Cu
+    @(-44.0000 mm, 88.0000 mm): Pad 69 [GND] of U1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

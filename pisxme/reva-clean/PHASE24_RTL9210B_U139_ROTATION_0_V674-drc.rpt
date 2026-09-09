@@ -1,0 +1,113 @@
+** Drc report for PHASE24_RTL9210B_U139_ROTATION_0_V674.kicad_pcb **
+** Created on 2026-09-09T02:28:31 **
+** Report includes: Errors, Warnings **
+
+** Found 11 DRC violations **
+[shorting_items]: Items shorting two nets (nets RTL_1V1 and RTL_3V3)
+    Local override; error
+    @(117.2000 mm, 208.0500 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+    @(117.6000 mm, 208.0500 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+[shorting_items]: Items shorting two nets (nets RTL_3V3 and USB_TXN0)
+    Local override; error
+    @(116.0000 mm, 208.0500 mm): Via [RTL_3V3] on F.Cu - B.Cu
+    @(116.4000 mm, 208.0500 mm): Pad 42 [USB_TXN0] of U1 on F.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(116.4000 mm, 208.0500 mm): Pad 42 [USB_TXN0] of U1 on F.Cu
+    @(116.0000 mm, 208.0500 mm): Via [RTL_3V3] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(116.0000 mm, 208.0500 mm): Pad 43 [<no net>] of U1 on F.Cu
+    @(116.0000 mm, 208.0500 mm): Via [RTL_3V3] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(115.6000 mm, 208.0500 mm): Pad 44 [<no net>] of U1 on F.Cu
+    @(116.0000 mm, 208.0500 mm): Via [RTL_3V3] on F.Cu - B.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(117.6000 mm, 208.0500 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+    @(117.2000 mm, 208.0500 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(117.6000 mm, 208.0500 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+    @(116.8000 mm, 208.0500 mm): Pad 41 [USB_TXP0] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(117.6000 mm, 208.0500 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+    @(116.4000 mm, 208.0500 mm): Pad 42 [USB_TXN0] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(117.6000 mm, 208.0500 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+    @(116.0000 mm, 208.0500 mm): Pad 43 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(116.0000 mm, 208.0500 mm): Via [RTL_3V3] on F.Cu - B.Cu
+    @(116.0000 mm, 208.0500 mm): Pad 43 [<no net>] of U1 on F.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(116.0000 mm, 208.0500 mm): Track [RTL_3V3] on B.Cu, length 5.0000 mm
+
+** Found 13 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(112.0500 mm, 210.0000 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+    @(112.0500 mm, 212.0000 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(112.0500 mm, 212.0000 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+    @(112.0500 mm, 213.2000 mm): Pad 63 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(113.2000 mm, 208.0500 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+    @(112.0500 mm, 210.0000 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(117.2000 mm, 208.0500 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+    @(113.2000 mm, 208.0500 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(118.8000 mm, 208.0500 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+    @(117.2000 mm, 208.0500 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(118.8000 mm, 215.9500 mm): Pad 16 [RTL_1V1] of U1 on F.Cu
+    @(119.9500 mm, 212.4000 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(119.9500 mm, 212.4000 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+    @(118.8000 mm, 208.0500 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(119.2000 mm, 215.9500 mm): Pad 17 [RTL_5V] of U1 on F.Cu
+    @(119.9500 mm, 209.2000 mm): Pad 33 [RTL_5V] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(116.0000 mm, 208.0500 mm): Track [RTL_3V3] on B.Cu, length 5.0000 mm
+    @(112.0500 mm, 208.8000 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(119.9500 mm, 208.8000 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(117.6000 mm, 208.0500 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(119.9500 mm, 214.4000 mm): Pad 20 [RTL_3V3] of U1 on F.Cu
+    @(119.9500 mm, 208.8000 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(112.0500 mm, 214.4000 mm): Pad 66 [GND] of U1 on F.Cu
+    @(116.0000 mm, 212.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(116.0000 mm, 212.0000 mm): Pad 69 [GND] of U1 on F.Cu
+    @(115.2000 mm, 208.0500 mm): Pad 45 [GND] of U1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
