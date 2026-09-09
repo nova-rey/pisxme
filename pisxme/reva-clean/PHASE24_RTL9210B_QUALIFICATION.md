@@ -10,7 +10,10 @@ V1135-V1137 files and reports are historical route evidence, not production
 CAD or a change to Path A. V1138 tested offset y=75/y=77 return lanes but
 native DRC found 15 violations, including XTAL_IN/XTAL_OUT return crossings.
 The V1135-V1138 files and reports are historical route evidence, not production
-CAD or a change to Path A. Earlier V760/V772 summaries are historical
+CAD or a change to Path A. V1139 scrubbed and regenerated the local
+RTL_3V3/RTL_1V1/RSET/GND/XTAL field but was rejected by native DRC with 22
+violations. The next experiment will derive all trial geometry from native
+transformed pad positions. Earlier V760/V772 summaries are historical
 evidence only.
 
 ## Current QFN-field correction — V1035–V1040 (2026-09-09)

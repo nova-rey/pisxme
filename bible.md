@@ -9154,3 +9154,8 @@ V1137 produced 14 native violations. V1138 tested the independent offset
 y=75/y=77 return-lane class; native DRC found 15 violations including
 XTAL_IN/XTAL_OUT return crossings. Path A, production CAD, and architecture
 remain unchanged; current Path-B gate is a native-clean XTAL_OUT/QFN fanout.
+2026-09-09: Rejected V1139 whole-field regeneration. The disposable scrub
+removed only local QFN-field copper and reallocated rails, RSET, crystal, and
+GND together, but native DRC found 22 violations, including source-field and
+support-return crossings. Next trials will derive geometry from native
+transformed pad positions; production CAD and Path A remain unchanged.

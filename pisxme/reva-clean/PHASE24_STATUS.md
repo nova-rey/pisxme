@@ -1,6 +1,6 @@
 # Phase 24 acreage validation status
 
-## CURRENT PATH-B CHECKPOINT — V1138 offset-return rejected; V1123 remains the clean GND basis (2026-09-09)
+## CURRENT PATH-B CHECKPOINT — V1139 whole-field regeneration rejected; V1123 remains the clean GND basis (2026-09-09)
 
 CURRENT UPDATE: V1135 tested a GND-diagonal XTAL_OUT overpass and was rejected
 by native DRC for an XTAL_OUT/GND short, RSET crossing, and XTAL_IN/U1.55
@@ -14,7 +14,11 @@ including XTAL_IN/XTAL_OUT return crossings and source-field conflicts. These
 are route-implementation failures,
 not evidence against the RTL9210B architecture. The current open Path-B gate
 is still a valid, native-clean XTAL_IN/XTAL_OUT source-and-support solution;
-V1123 is retained as the clean GND/rail starting basis. No production CAD or
+V1123 is retained as the clean GND/rail starting basis. V1139 scrubbed and
+regenerated the complete local RTL_3V3/RTL_1V1/RSET/GND/XTAL field, but native
+DRC found 22 violations, including source-field and support return crossings.
+The next class will use native-transformed pad coordinates in a rotated or
+repositioned local QFN fixture. No production CAD or
 Path-A artifacts were modified.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
