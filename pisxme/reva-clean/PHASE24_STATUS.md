@@ -160,6 +160,17 @@ Native DRC reports six intentional dangling source warnings and 40 fixture
 opens with no electrical violations. V1052 is the current local supply and
 support-placement basis; SPI channels must be regenerated for the moved U2.
 
+V1053 is rejected only for the moved U2 pad-4 GND thermal-spoke warning.
+V1054 is rejected because its added GND return retained stale vertical-U2
+3V3 copper and created real shorts. V1055 scrubs that stale geometry and
+restores a clean rotated-U2 placement with deliberate local GND returns.
+V1056 is rejected: same-lane SPI source vias on the original 0.4 mm pitch
+created multiple source-field shorts. V1057 uses staggered source transitions
+and parallel B.Cu lanes, reducing the failure to two source-side F.Cu
+crossings and one inherited 3V3 dangling warning. These are route-generation
+failures; V1055 remains the current placement basis and moved-U2 SPI routing
+is still open.
+
 ### Latest RTL_1V1 allocation evidence — V1004/V1005 (2026-09-09)
 
 V1004 is REJECTED. It transplanted the historical V930 eight-pad RTL_1V1

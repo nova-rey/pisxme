@@ -36,6 +36,14 @@ six intentional dangling warnings and 40 fixture opens. Retain V1052 as the
 current local supply basis; regenerate SPI channels for the moved U2 before
 promoting the support network.
 
+V1053/V1054 are rejected rotated-U2 trials: V1053 has a real U2.4 GND
+thermal-spoke error, while V1054 retained stale vertical-U2 3V3 copper and
+shorted it to the new GND return. V1055 removes the stale geometry and is the
+clean rotated-U2 placement basis. V1056 is rejected for same-pitch SPI source
+via shorts. V1057's staggered-transition regeneration reduces the SPI failure
+to two source-side F.Cu crossings; retain it as diagnostic evidence while
+V1055 remains the routing basis.
+
 V1048 adds the U1.34 RTL_3V3 escape to the already-clean C3-side trunk.
 Native KiCad DRC remains free of electrical violations, with six intentional
 dangling source warnings and 41 fixture opens. Retain V1048 as the current

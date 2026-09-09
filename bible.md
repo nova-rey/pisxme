@@ -8983,6 +8983,11 @@ support endpoints stay open.
 V1052 moved U2 10 mm outboard and achieved a native-clean U1.20/U2.3 supply
 path with six intentional dangling warnings and 40 fixture opens. Retain it
 as the current local support-placement basis; regenerate moved-U2 SPI routes.
+2026-09-09: V1053/V1054 rejected rotated-U2 GND/stale-3V3 variants. V1055
+scrubbed stale vertical-U2 copper and restored a clean rotated-U2 placement
+with local GND returns. V1056 rejected same-pitch SPI source vias; V1057's
+staggered source-transition method reduced the SPI failure to two F.Cu
+crossings. Preserve V1055 as the placement basis and continue SPI repair.
 2026-09-09: V1049 rejected the U1.20 RTL_3V3 F.Cu corridor at SPISO3.
 V1050 rejected the immediate B.Cu alternative at the SPICLK-adjacent via and
 1V1 shelf crossing. Preserve both as local route evidence; U1.20 remains
