@@ -9896,3 +9896,8 @@ source corridor but collided with the retained 1V1/PEDET fields, SPICLK, and
 source escape and retained lower support field. These are route-implementation
 failures; CLKREQ_N remains open. The next class will transition immediately
 at the source and use a dedicated upper/control lane.
+V1208/V1209 are rejected CLKREQ source-transition trials. V1208 crossed the
+retained 5V trunk and bridge SPI field; V1209 cleared the source and 5V
+interaction but crossed the retained 3V3/1V1 upper field and did not complete
+the R3 handoff. The next class will use a dedicated control-only edge corridor;
+accepted PEDET, crystal, and 1V1 primitives remain unchanged.

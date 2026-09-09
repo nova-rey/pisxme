@@ -9302,3 +9302,7 @@ reuse/crossing or shorting interactions with PEDET, 1V1, 3V3, SPICLK, and
 the lower QFN support field. The next class will use an immediate source
 transition and dedicated upper/control lane; accepted PEDET and V1183/V1195
 rail/crystal primitives remain unchanged.
+2026-09-09: V1208/V1209 rejected CLKREQ source-transition classes. Native DRC
+showed retained 5V/SPI or 3V3/1V1 upper-field crossings and an incomplete R3
+handoff. Preserve the raw trials; the next class uses a dedicated control-only
+edge corridor without changing accepted local power/crystal primitives.
