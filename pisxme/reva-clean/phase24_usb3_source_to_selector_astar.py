@@ -1,10 +1,12 @@
 """Disposable obstacle-aware CM5 J7 to storage USB-selector escape."""
 from pathlib import Path
+import argparse
 from heapq import heappush, heappop
 import pcbnew
 
 R=Path(__file__).resolve().parent
-BASE=R/'PHASE24_STORAGE_NETLIST_REGENERATED_V3.kicad_pcb'; OUT=R/'PHASE24_STORAGE_USB3_SELECTOR_ASTAR_V3.kicad_pcb'
+ap=argparse.ArgumentParser(); ap.add_argument('base'); ap.add_argument('output'); args=ap.parse_args()
+BASE=R/args.base; OUT=R/args.output
 F,B=pcbnew.F_Cu,pcbnew.B_Cu; STEP=.5; W=.15
 JOBS=(('CM5_USB3_RX_N','128','16'),('CM5_USB3_RX_P','130','15'),('CM5_USB3_TX_N','140','12'),('CM5_USB3_TX_P','142','11'))
 def V(x,y): return pcbnew.VECTOR2I_MM(x,y)

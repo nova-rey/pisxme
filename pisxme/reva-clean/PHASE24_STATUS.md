@@ -27,6 +27,12 @@ crossing. All three pass the ten-net native USB3 connectivity assertions but
 are rejected route implementations. The next attempt must change the local
 source/target escape corridor rather than add another narrow dogleg.
 
+The V5 all-four-net layer-aware A* trial is rejected route implementation
+evidence: native endpoint connectivity passed, but the generated transitions
+produced 841 DRC violations and 16 true shorts. Its clearance model is not
+suitable for this dense inherited corridor; this does not reject the corrected
+storage authority or macro-floorplan.
+
 ## CURRENT OPEN GATES — 2026-09-08
 
 ### Latest source-regenerated routing basis

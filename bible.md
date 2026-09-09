@@ -7809,3 +7809,8 @@ removed the former pad short, but trial 3 still interacted with XOUT and
 trial 4's B.Cu dogleg introduced an inherited USB3/SATA crossing. Both pass
 the topology-aware USB3 endpoint audit but are rejected route evidence; the
 next solution class must allocate a different local source/target corridor.
+
+2026-09-08 — The V5 all-four-net layer-aware A* USB3 trial was rejected after
+native endpoint connectivity passed but native DRC reported 841 violations and
+16 true shorts. Its clearance model is unsuitable for the inherited dense
+corridor; the experiment does not invalidate the corrected source authority.

@@ -21,6 +21,11 @@ authority defect, but the remaining candidate corridors interact with XOUT
 and inherited USB3/SATA copper. Native USB3 endpoint assertions pass; native
 DRC remains the acceptance gate. No trial copper is promoted.
 
+The V5 all-four-net A* trial is superseded route evidence: native USB3
+assertions passed, but native DRC reported 841 violations and 16 true
+shorts. Its search clearance model is rejected for this dense inherited
+corridor; this is not a storage schematic or U12 package-authority failure.
+
 ## CURRENT STATE — authoritative now (2026-09-08)
 
 The first generic netlist-driven PCB regeneration is retained as
