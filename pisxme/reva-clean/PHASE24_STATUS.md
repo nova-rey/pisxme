@@ -10049,3 +10049,8 @@ using a west-staggered ordinary through-via into the V1266 collector. Native
 DRC retains inherited warnings only; the saved-board audit proves the
 U1.55-to-C4 endpoint and its source negative control. The live rail cohort
 now includes U1.55/U1.60/U1.63. Remaining support is OPEN.
+V1268 is accepted incremental support evidence. U1.50 RTL_1V1 was added
+through an outward ordinary via to the live west collector. Native DRC retains
+inherited warnings only; the saved-board endpoint and negative-control audit
+pass. The live rail cohort now includes U1.50/U1.55/U1.60/U1.63. Remaining
+support is OPEN.

@@ -9420,3 +9420,7 @@ added to the V1266 live collector through a west-staggered ordinary via.
 Native DRC retained inherited warnings only and the saved-board endpoint plus
 negative-control audit passed. The current rail cohort is U1.55/U1.60/U1.63;
 remaining support is open.
+2026-09-09 — V1268 accepted RTL9210B support increment: U1.50 RTL_1V1 was
+added through an outward ordinary via to the live west collector. Native DRC
+retained inherited warnings only and the saved-board endpoint plus
+negative-control audit passed. Current cohort: U1.50/U1.55/U1.60/U1.63.
