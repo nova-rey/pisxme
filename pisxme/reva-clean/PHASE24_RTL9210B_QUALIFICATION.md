@@ -410,6 +410,12 @@ U1.16 to the central 1V1 source transition. Native DRC has only the inherited
 RTL_3V3 dangling warning; saved-board connectivity and the U1.16
 source-trace negative control pass for U1.16/U1.36/U1.40/U1.50/C4.1.
 Remaining RTL_1V1 endpoints and full Path-B support gates are open.
+
+V1076-V1080 are rejected U1.25 RTL_1V1 escape trials. Native DRC identified
+SPICS, RTL_5V, DEVSLP, no-net-pad, and adjacent-via conflicts across the
+variants. The failures characterize an exhausted independent-via class and
+require coordinated QFN fanout allocation; they do not reject the RTL_1V1
+rail or the Path-B architecture.
 V690 moved only C2 and rebuilt XTAL_OUT/GND alongside U1.52; native DRC found
 15 violations including crystal shorts and 3V3/CLKREQ and 1V1/GND contact.
 Reject the C2-only class. The next experiment must co-author the complete

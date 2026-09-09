@@ -2014,6 +2014,15 @@ native audit with no signal shorting/crossing. Promote V154 as the current
 REFCLK-ready local-support basis; XTAL_IN/REFCLK and remaining high-speed
 endpoints remain open.
 
+V1076 reduced the open count but shorted SPICS at the proposed via and
+violated clearance to the retained 5V field. V1077 and V1079 retained the
+same source-field concept but clipped the 5V corridor or a QFN no-net pad;
+V1078 additionally contacted DEVSLP and adjacent no-net pads. V1080 crossed
+SPICS and its nearby via field. These are rejected U1.25 route-implementation
+experiments, not a 1V1 authority failure. U1.25 now requires coordinated QFN
+fanout allocation with SPI/5V/no-net geometry; no accepted U1.25 copper has
+been promoted.
+
 V1073 is rejected: the lower-edge RTL_1V1 descent crossed the retained
 RTL_3V3 perimeter. V1074 is also rejected because its upper return crossed
 the existing RTL_3V3 source via field. V1075 routes U1.16 through a central

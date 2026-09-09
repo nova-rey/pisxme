@@ -9037,6 +9037,11 @@ transition and passed native DRC with only the inherited warning. Saved-board
 connectivity proves U1.16/U1.36/U1.40/U1.50/C4.1, and the source-trace
 negative control passes; the fixture has 26 opens. V1075 is retained while
 remaining RTL_1V1/support gates stay open.
+2026-09-09: Rejected RTL9210B U1.25 RTL_1V1 escape variants V1076-V1080.
+Native DRC showed SPICS, RTL_5V, DEVSLP, no-net-pad, and adjacent-via
+conflicts. The independent-via class is exhausted; U1.25 needs coordinated
+QFN fanout allocation. No rejected copper was promoted and the RTL_1V1 rail
+authority remains valid.
 2026-09-09: V1065 rejected the direct U1.52 RTL_3V3 handoff because its B.Cu
 perimeter crossed the preserved GND return diagonal. V1066 changed the local
 corridor to join the existing V1064 transition field. Native DRC has only the
