@@ -308,9 +308,11 @@ source-field allocations with real crossings/shorts; none is a clean complete
 QFN escape proof. V665's 37 violations were caused by the proposed
 RTL_3V3 channel colliding with retained 1V1/SPI geometry.
 
-Disposition: **DFM OPEN — ROUTE IMPLEMENTATION DISCRIMINATOR REQUIRED**. No
-manufacturing rule is relaxed, no via-in-pad is accepted, and no package
-rejection is declared. The next valid test is a fresh complete QFN source-field
-allocation with U1.39/U1.40 leaving on separated planar channels, followed by
-native DRC and a trace-removal connectivity control. Path A remains the
+Disposition: **PACKAGE DFM CLAIM CLOSED; COMPLETE SOURCE-FIELD ROUTE OPEN**.
+V666 is a clean native discriminator using the real audited footprint: U1.39
+and U1.40 leave on separated planar F.Cu channels under unchanged 0.20-mm
+width/clearance and ordinary-via rules, with 0 DRC violations, 0 unconnected
+items, and 0 footprint errors. No via-in-pad or rule relaxation was used. The
+complete integrated QFN field still requires coordinated allocation and
+native DRC/connectivity; V666 is not full Path-B closure. Path A remains the
 protected fallback; Path B remains a serious comparison candidate.

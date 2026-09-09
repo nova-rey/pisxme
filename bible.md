@@ -8138,3 +8138,9 @@ this rejects that route allocation, not the QFN package or Path-B
 architecture. Reconciled the qualification/comparison documents to keep the
 strict-QFN DFM gate OPEN and Path B active, with no manufacturing-rule
 relaxation or production-CAD change.
+2026-09-09: V666 cleanly discriminated the RTL9210B QFN DFM claim. Using the
+audited real footprint, separated U1.39/U1.40 F.Cu exits, unchanged 0.20-mm
+rules, and no via-in-pad, native KiCad DRC reported 0 violations, 0
+unconnected items, and 0 footprint errors. Closed the package-impossibility
+claim; kept the complete integrated QFN source-field route, firmware,
+application-circuit, and mode-validation gates open. Preserved Path A.

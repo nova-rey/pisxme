@@ -120,7 +120,8 @@ SPI support existence; native symbol/package/mapping/netlist audits; multiple
 native source-field and rail connectivity primitives with negative controls.
 
 **OPEN:** authorized package/application circuit; complete support-field route;
-strict complete-QFN source escape under ordinary-via rules;
+complete integrated QFN source-field route under ordinary-via rules (the
+isolated U1.39/U1.40 package discriminator now passes as V666);
 REFCLK/PERST/CLKREQ electrical states; SATA OOB and NVMe receiver-detect
 behavior; SSD 3.3-V transient/inrush/thermal budget; exact stock/price/lead
 time; traceable lot; virgin-chip programming; exact PiSXMe firmware/config;
