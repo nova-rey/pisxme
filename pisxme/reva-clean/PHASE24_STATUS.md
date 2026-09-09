@@ -38,6 +38,13 @@ passes pad parity and the mode-contract audit. A native mode-aware fixture
 covering forced SATA, forced NVMe, AUTO, empty socket, reset, and inactive
 paths is still required.
 
+The selector-control source ownership is also corrected: U12 pin 9 now uses
+the same `STORAGE_SEL` net as U13.9 and U14.4, eliminating the prior isolated
+`USB_SEL` control. Fresh native export, mode audit, and regenerated placement
+pad parity pass. The first physical mode-control fixture connects
+`AUTO_PEDET`, `MODE_IN`, and shared `STORAGE_SEL`; its direct F.Cu trial has
+one J5 local clearance/short finding and remains an open routing experiment.
+
 After the USB3 coupling-capacitor alignment, the ten-net native USB3 audit
 passes on the corrected support parent. The integrated
 `PHASE24_STORAGE_AUTHORITY_CORRECTED_USB3_SATA_V3` trial also passes all 12

@@ -7546,6 +7546,12 @@ parity mismatches and the mode-contract audit passes. The mode-aware native
 fixture and inactive-state validation remain open; no automatic-mode closure
 was claimed.
 
+2026-09-08: Corrected common mode-control ownership at the schematic source
+boundary. U12.9, U13.9, and U14.4 now share `STORAGE_SEL`; J3.69 and J5.2
+share `AUTO_PEDET`. Native export, mode audit, and regenerated placement
+parity pass. The physical mode fixture connects the three control paths, but
+its first direct F.Cu geometry has a J5 local DRC short and remains open.
+
 2026-09-08: Focused storage endpoint gates are now current PASS evidence:
 JMS583 support, ten-net USB3, and 12-net SATA selector connectivity each
 pass with negative controls where implemented. Updated the live open-gate

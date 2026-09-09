@@ -21,6 +21,7 @@ M2={1:'M2_CONFIG3',2:'M2_3V3',3:'POWER_GND',4:'M2_3V3',5:'M2_PCIE_RXN3',6:'JMS_V
 # netlist.  Keep these overrides beside the shared maps so the schematic and
 # disposable PCB generators consume one reviewed mapping source.
 M2[69] = 'AUTO_PEDET'
+USB[9] = 'STORAGE_SEL'
 USB.update({1:'JMS_VDDREG_5V',2:'JMS_VCCK',3:'JMS_SPI_SO_DNP',
             4:'JMS_SPI_SCK_DNP',5:'JMS_SPI_SI_DNP',36:'JMS_AVDDL',
             40:'JMS_AVDDL'})

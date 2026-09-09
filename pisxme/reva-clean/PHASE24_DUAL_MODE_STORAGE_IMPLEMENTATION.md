@@ -32,6 +32,11 @@ complete ten-net USB3 audit and all 12 SATA endpoint assertions. Native DRC
 remains open at 669 violations / 499 unconnected items, so the storage island
 is still in active route cleanup rather than closure.
 
+Mode-control ownership is now source-corrected: U12.9, U13.9, and U14.4 use
+the shared `STORAGE_SEL` net; J3.69 and J5.2 use `AUTO_PEDET`. The regenerated
+placement passes parity. A saved-board mode-control fixture connects those
+control paths, but its direct F.Cu geometry still needs local DRC cleanup.
+
 Status: `IN PROGRESS — support circuitry and mode-control authority are
 authored; native copper, mode-aware validation, and release checks remain
 open` (2026-09-06, live checkpoint).

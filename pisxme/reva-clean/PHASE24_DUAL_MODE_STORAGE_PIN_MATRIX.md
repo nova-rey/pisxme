@@ -111,3 +111,7 @@ Native root netlist evidence now confirms the three switched USB2 branches:
 This replaces the earlier unconnected `CM5_USB2_*`, `TUSB_USB2_*`, and
 `JMS_USB2_*` naming. The selector remains the sole USB2 owner; the two bridge
 ports are never paralleled.
+
+The high-speed selectors use the common `STORAGE_SEL` control from U14.4;
+U12.9 is no longer a separate `USB_SEL` net. J5.2 and M.2 contact 69 share
+`AUTO_PEDET` for the power-off AUTO strap, while J5.4 feeds U14.2 `MODE_IN`.
