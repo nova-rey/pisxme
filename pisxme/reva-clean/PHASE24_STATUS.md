@@ -19,6 +19,11 @@ the signal and GND endpoint assertions; negative controls pass for XTAL_IN,
 XTAL_OUT, and RSET. This remains disposable Path-B evidence and is not yet
 production integration.
 
+V774/V777 preserve electrically clean control-placement variants. V775/V776/
+V778 are rejected PEDET/CLKREQ_N route implementations because they cross the
+validated SPI field. Control routing remains open; do not treat the clean
+V772 support fixture as full RTL9210B closure.
+
 The earlier V702/V718/V735 checkpoints and V746/V747/V751/V752 failures are
 historical disposable evidence. V753 proved the adjacent SPICLK/SPISI
 dogbone class; V754 proved the complete source fan-out; V755/V757/V758/V759

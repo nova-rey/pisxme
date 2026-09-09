@@ -8351,5 +8351,11 @@ including signal negative controls, passes. It is still an isolated Path-B
 support fixture; production integration and remaining control/power/firmware
 gates are open.
 
+2026-09-09: V773-V778 explored the RTL9210B local rail/control pocket. V773
+was rejected for placement collisions; V774/V777 were electrically clean
+placement variants. V775/V776/V778 were rejected control routes that crossed
+the validated SPI field. Preserve V772 as the current combined support basis
+and continue with an outboard control return class.
+
 2026-09-09: Reconciled the duplicated stale V702 Phase 24 status section by
 marking it historical; V760 is the sole current RTL9210B SPI checkpoint.

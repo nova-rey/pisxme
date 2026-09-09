@@ -18,6 +18,13 @@ and V772 reports zero native DRC violations with 35 expected unrelated opens.
 The saved-board V772 support audit passes XTAL_IN, XTAL_OUT, RSET, and GND
 connectivity, with negative controls passing for the three signal nets.
 
+V773 is a rejected first rail/control placement: C3/RSET and R2/R3/SPI
+corridors collided. V774/V777 are electrically clean control-placement
+variants with only C4 silkscreen warnings. V775/V776/V778 are rejected
+control-route implementations; direct F.Cu and the first B.Cu handoff class
+cross the proven SPI source/endpoint field. The next control route must use
+an outboard return corridor or adjust only the control resistor placement.
+
 V748 is the current positive placement basis for the remaining RTL9210B SPI
 allocation. Starting from the native-clean V730 U1-at-90-degree basis, U2 was
 rotated 90 degrees and placed with its SPI endpoint column at x=105 mm. The
