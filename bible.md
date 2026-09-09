@@ -9086,3 +9086,7 @@ inherited RTL_3V3 dangling warning; saved-board connectivity proves the full
 U1.20/U1.34/U1.39/U1.52/U2.3/U2.8/R2.2/R3.2/C3.1 group and the U1.52
 source-trace negative control fails as required. V1066 is retained; remaining
 RTL9210B support and full Path-B validation remain open.
+2026-09-09: Rejected XTAL_IN candidates V1093-V1096. Native DRC found
+crossings/shorts with retained 3V3, RSET/1V1, or the U1 bottom no-net pad row.
+Crystal authority remains valid; coordinated QFN/crystal fanout allocation is
+required and no malformed crystal copper was promoted.

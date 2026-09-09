@@ -1333,6 +1333,13 @@ crossing, but ordinary-via plane-clearance findings remain open with the
 board's inherited plane evidence. Full support and manufacturing closure
 remain open.
 
+V1093 and V1095 are rejected XTAL_IN candidates because their U1.53 departure
+crossed the retained U1.52/RTL_3V3 transition field. V1094 additionally
+intersected the validated RSET/1V1 fanout, and V1096 clipped the U1 bottom
+no-net pad row. The crystal network remains electrically authoritative but
+requires coordinated QFN/crystal fanout allocation; no malformed crystal
+copper is promoted.
+
 V1091 is rejected RSET evidence: the straight approach crossed R1.2 GND.
 V1092 approaches R1.1 from above and passes native DRC with only the inherited
 RTL_3V3 dangling warning; the fixture has 21 unconnected items. The saved

@@ -1259,3 +1259,8 @@ clearance, or track-crossing errors, and its saved-board audit plus U1.52
 source-trace negative control pass. The result is still a local rail-field
 primitive; remaining rails, QFN support, control, and full Path-B gates are
 open.
+
+V1093-V1096 are rejected XTAL_IN route trials. Native DRC found crossings or
+shorts with the retained 3V3, RSET/1V1, and QFN no-net fields. The crystal
+authority remains valid; its remaining implementation requires coordinated
+QFN/crystal fanout allocation.
