@@ -8539,3 +8539,9 @@ field for a distinct control/source escape class.
 Native DRC rejected it with 5 violations: one true B.Cu crossing against the
 SPI corridor and four U1-field clearance/short/mask conflicts. It is rejected
 route evidence; V772/V837 remain the complete-SPI/control basis.
+2026-09-09: V856 made the PERST_N source escape straight right and reduced
+native DRC to one violation where its via touched the parallel CLKREQ_N
+corridor. V857 doglegged upward before the via and passed native DRC with 0
+violations and 32 expected incomplete items. Its saved-board audit passed all
+five SPI endpoint pairs plus PERST_N and all six trace-removal negative
+controls. This is a local routing primitive, not full Path-B closure.

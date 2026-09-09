@@ -721,3 +721,10 @@ V855 tested a V772/V837-based PERST_N left-side source dogbone. Native DRC
 rejected it with 5 violations, including one true B.Cu crossing against the
 SPI corridor and four U1-field clearance/short/mask conflicts. It is rejected
 route evidence; V772/V837 remain the complete-SPI/control basis.
+V856 made the PERST_N source escape straight right and reduced native DRC to
+one violation where its via touched the parallel CLKREQ_N corridor. V857
+doglegs upward before the via and passes native DRC with 0 violations and 32
+expected incomplete items. Its saved-board audit passes all five SPI endpoint
+pairs plus PERST_N and all six trace-removal negative controls. This closes a
+local PERST_N routing primitive only; complete RTL9210B support/control and
+Path-B integration remain open.
