@@ -7900,3 +7900,12 @@ negative control pass, as do USB3, SATA, mode, and JMS583 support audits.
 Native DRC reports 732 violations / 400 unconnected items with zero true
 shorts. This is the current storage basis; remaining DRC and full-board gates
 stay open.
+## 2026-09-08 — Phase 24 documentation hygiene
+
+Reconciled the current Phase 24 status and dual-mode storage implementation
+narratives with the live J8/VBUS basis and native focused audit evidence.
+Marked obsolete JMS583-instantiation, pre-J8, stale-parity, malformed-library,
+and superseded-route language as historical/superseded without modifying raw
+receipts or rejected experiments. Remaining work is native DRC/routing-quality
+and full-board closure; the next bounded route class is the co-authored
+USB_TXP/USB_TXN/JMS_AVDDL source field.

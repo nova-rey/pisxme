@@ -1,5 +1,26 @@
 # Phase 24 acreage validation status
 
+## CURRENT STATE — documentation authority (2026-09-08)
+
+This section is the current narrative authority for Phase 24. The live
+dual-mode storage routing basis is
+`PHASE24_STORAGE_J8_V5_VBUS_V1.kicad_pcb`; its source-owned J8 mode control,
+USB3, SATA, JMS583 support, VBUS/sense endpoints, and schematic-to-PCB pad
+parity are covered by the current native focused audits. Those focused gates
+pass, including the saved-board negative controls where applicable. Native
+full-board DRC and routing-quality closure remain OPEN: the latest accepted
+baseline is still not a production-clean board and retains inherited opens,
+clearance/width/crossing work, and complete Phase 24 power/ground closure.
+
+The previously described missing-JMS583-support-network TODO is
+SUPERSEDED. The support network has been authored and its native endpoint
+audit plus negative control pass; remaining support-field route cleanup is a
+routing gate, not an instantiation task. Likewise, old malformed footprint,
+pre-J8 mode-control, stale parity, obsolete connector, and rejected-route
+claims below are historical evidence only when explicitly labeled as such.
+The current next action is the bounded co-authored USB_TXP/USB_TXN/JMS_AVDDL
+source-field repair, followed by native DRC and the existing full-board gates.
+
 ## CURRENT ROUTING BASIS — 2026-09-08
 
 The disposable `PHASE24_STORAGE_U12_EP_RX_PAIR_V6.kicad_pcb` is the latest

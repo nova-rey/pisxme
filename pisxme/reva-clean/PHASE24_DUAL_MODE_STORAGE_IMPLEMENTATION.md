@@ -1,5 +1,23 @@
 # Phase 24 dual-mode storage implementation
 
+## CURRENT STATE — documentation authority (2026-09-08)
+
+The live Path-A dual-mode storage implementation includes the corrected
+J8 mode jumper, source-owned U12/U11 mappings, corrected TI selector and
+JMS583 QFN64 package authorities, the authored JMS583 support network, and
+the VBUS/sense divider. Current native focused audits pass USB3, SATA, mode
+control, complete JMS583 support, and schematic-to-PCB pad parity on the
+current regenerated basis. This does not close Phase 24: native DRC,
+complete copper quality, power/ground attachment, and integrated-board
+closure remain OPEN.
+
+The older opening paragraphs and historical sections that describe support
+circuitry as needing instantiation, use malformed pre-correction footprints,
+or refer to pre-J8/pre-parity routing are SUPERSEDED evidence, not current
+instructions. Raw receipts, negative controls, and rejected experiments are
+retained unchanged. The next implementation task is the co-authored
+USB_TXP/USB_TXN/JMS_AVDDL local field repair against the live VBUS basis.
+
 ## CURRENT OPEN GATES — 2026-09-08
 
 The Y10 relocation trial is rejected implementation evidence: it preserved
