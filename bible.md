@@ -9441,3 +9441,7 @@ audit passed. The identified RTL_1V1 supply-pad cohort is complete.
 C3 through a dedicated F.Cu drop, ordinary via, and B.Cu corridor. Native
 DRC retained inherited warnings only; endpoint and negative-control audit
 passed. Remaining RTL_3V3 and other support are open.
+2026-09-09 — V1275 accepted coupled RTL9210B rail evidence: U1.39 RTL_3V3
+and U1.40 RTL_1V1 were co-authored with separate source vias/corridors.
+Native DRC retained inherited warnings only; combined endpoints and two
+source-removal negative controls passed. Remaining rails/support are open.

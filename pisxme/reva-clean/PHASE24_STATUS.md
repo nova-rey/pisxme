@@ -10074,3 +10074,8 @@ dedicated F.Cu source drop, ordinary via, and B.Cu upper corridor after
 clearance corrections. Native DRC retains inherited warnings only; the
 saved-board endpoint and negative-control audit pass. Remaining RTL_3V3 and
 all other support remain OPEN.
+V1275 is accepted coupled rail evidence. U1.39 RTL_3V3 and U1.40
+RTL_1V1 were co-authored with separate source vias and corridors. Native DRC
+retains inherited warnings only; the combined saved-board audit proves both
+endpoints and two source-removal negative controls. Remaining RTL_3V3,
+RTL_5V, and non-rail support remain OPEN.
