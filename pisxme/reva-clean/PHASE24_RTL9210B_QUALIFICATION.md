@@ -59,6 +59,11 @@ V682 showed that stitching vias alone did not physically connect C1 GND;
 V683 added the missing same-net segment and passed native DRC with zero
 violations. Retain V683 as the positive crystal-field basis; its 32 remaining
 opens are outside the completed crystal network.
+V684's direct inner-pad source route was rejected at nine native DRC
+violations. V685 then separated the R2/R3 dogbones and approached outer U1.34
+through an ordinary transition; native DRC reports zero violations and 30
+remaining opens. Retain V685 as the positive RTL_3V3 edge-source basis; the
+inner QFN branches and downstream rail endpoints remain open.
 
 V672 provides a positive interior RSET basis with nine inherited warnings and
 no signal DRC violations. V673 layered lower RTL_3V3 onto it and found 12

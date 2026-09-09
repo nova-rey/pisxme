@@ -64,6 +64,11 @@ V682/V683 closed the crystal-field implementation on the orientation-180
 support-relocation lineage. V683's native KiCad DRC reports zero violations;
 the remaining 32 opens are outside the crystal field and remain expected
 Path-B support/sideband/endpoint work.
+V684's inner RTL_3V3 source route was rejected at nine native violations.
+V685 is the positive edge-source basis: separated R2/R3 dogbones and an
+ordinary transition to outer U1.34 pass native DRC with zero violations and
+30 remaining opens. Inner QFN rail branches and downstream endpoints remain
+open.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native

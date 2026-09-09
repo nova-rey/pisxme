@@ -8234,3 +8234,9 @@ and attempted a dedicated B.Cu corridor. Native DRC found 17 violations,
 including crystal shorts/crossings, RTL_3V3 interference, and board-edge/
 mounting-hole conflicts. Rejected V681 as a placement implementation; retain
 the orientation-180 rail/RSET basis.
+
+2026-09-09: V684 attempted a direct inner RTL_3V3 source and found nine
+native DRC violations, including CLKREQ_N/QFN-field interference. V685
+separated the R2/R3 dogbones and approached outer U1.34 through an ordinary
+transition; native DRC reported zero violations and 30 incomplete opens.
+Retained V685 as the positive RTL_3V3 edge-source basis.
