@@ -1,0 +1,8 @@
+PASS dual-mode mode contract
+PASS dual-mode schematic instances, footprints, and required net labels
+PASS JMS583 has 64 signal pads plus EP
+PASS JMS583 numbering is 1..64 plus EP 65
+PASS HD3SS6126_RUA0042A.kicad_mod has 42 signal pads plus EP
+PASS HD3SS3412_RUA0042A.kicad_mod has 42 signal pads plus EP
+PASS TE M-key has 67 contacts plus four mechanical pads
+PASS TE M-key preserves key gap 59..66
