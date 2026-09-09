@@ -8557,6 +8557,13 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: V964 tested U1.20 RTL_3V3 above-pad transition on the V927
+native-clean SPI base and exposed six local interactions, including B.Cu
+crossings with SPI shelves and source-via conflict. V965 co-authored local
+SPICLK/RTL_5V/RTL_3V3 departures and reduced the problem to eight findings,
+but was rejected for source-via, shelf, and XTAL/1V1 crossings. These are
+disposable interaction evidence; the next repair moves the 3V3 transition
+farther from the QFN and routes around the SPI shelves.
 2026-09-09: V963 reused the native-DRC-zero V927 five-SPI ancestor and added
 U1.20 RTL_3V3. It reduced the interaction to five local findings: the new
 3V3 vertical crosses SPISO3, and the shifted SPICLK conflicts with SPISI.
