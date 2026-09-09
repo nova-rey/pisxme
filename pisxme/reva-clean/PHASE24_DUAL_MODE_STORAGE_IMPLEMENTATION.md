@@ -77,6 +77,12 @@ V16 is superseded route evidence. Its wider planar TXN dogleg removes the
 pad-23 defect but leaves a 0.0925 mm native TXP/TXN clearance violation. It
 retains focused endpoint connectivity but is not production authority.
 
+V17 is superseded route evidence. Coordinated native A* regeneration of both
+USB TX nets preserved endpoint connectivity and introduced no shorting class,
+but native DRC rose to 781 findings with 33 crossings and 281 clearance
+findings. The router implementation is rejected for this dense QFN field; a
+complete hand-authored lower-field escape remains required.
+
 V10 is superseded route evidence: its local P-leg meander improves TX skew to
 0.259 mm, but creates two same-layer USB TX pair self-crossings. The next
 pair-balance attempt must remain layer-separated or shorten the opposite leg.

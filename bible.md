@@ -7989,6 +7989,11 @@ V16 wider planar TXN dogleg removed the pad-23 defect but retained a 0.0925 mm
 native TXP/TXN clearance violation. Rejected the candidate; coordinated
 lower-field regeneration remains the next routing class.
 
+V17 coordinated native A* TX regeneration preserved endpoint connectivity but
+raised native DRC to 781 with 33 crossings and 281 clearance findings. Rejected
+the router-generated field; complete hand-authored lower-field co-authoring
+remains required.
+
 V11 shortened TXN and reduced the USB TX skew proxy to 1.620 mm, but native
 DRC rose to 731 and added a CM5 USB RX pair short. Rejected the candidate and
 recorded the need for serialization-safe whole-net regeneration.
