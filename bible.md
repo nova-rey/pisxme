@@ -7641,3 +7641,7 @@ CM5 USB3 right-side launch and selector-side SATA V4 with M.2 V6, mode control,
 and destination-only VCCO relocation. USB3/SATA/mode/parity/VCCO focused
 audits pass; native DRC is 671 violations / 499 unconnected items, so closure
 remains open.
+
+2026-09-08: Reconciled the active dual-mode storage implementation gate to
+the live VCCO_DEST_V1 DRC count of 671 violations / 499 unconnected items;
+older 673-count references remain historical evidence only.

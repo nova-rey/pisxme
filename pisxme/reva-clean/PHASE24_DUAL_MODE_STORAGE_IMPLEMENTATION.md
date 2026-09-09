@@ -344,7 +344,7 @@ path is restored to the FULL7 geometry.
    control, and destination-only VCCO relocation. Its storage-local
    JMS583 support, complete topology-aware USB3 path, SATA selector path, and
    native mode-control path pass focused audits and negative controls. Native
-   DRC is still open at 673 violations / 499 unconnected items; this is not a
+   DRC is still open at 671 violations / 499 unconnected items; this is not a
    closure candidate. Finish the remaining
    integrated route/DRC cleanup, then complete USB2, return, power, and
    inactive-state validation without synthetic connectivity edges.
