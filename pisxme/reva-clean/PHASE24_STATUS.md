@@ -2014,6 +2014,14 @@ native audit with no signal shorting/crossing. Promote V154 as the current
 REFCLK-ready local-support basis; XTAL_IN/REFCLK and remaining high-speed
 endpoints remain open.
 
+V1087 attaches U1.55 RTL_1V1 through a lower left-edge transition, with the
+via moved from y=69.5 to y=69.3 mm to clear the existing U1.60 via's native
+hole-to-hole rule. Native DRC retains only the inherited RTL_3V3 dangling
+warning and the fixture has 23 unconnected items. The saved-board audit proves
+U1.16/U1.36/U1.40/U1.50/U1.55/U1.60/U1.63/C4.1 are one RTL_1V1 component;
+the U1.55 source-trace negative control passes. V1087 is retained; U1.25 and
+remaining support/control endpoints remain open.
+
 V1086 attaches U1.63 RTL_1V1 through the same lower transition as U1.60.
 Native DRC retains only the inherited RTL_3V3 dangling warning and the
 fixture has 24 unconnected items. The saved-board audit proves U1.16/U1.36/
