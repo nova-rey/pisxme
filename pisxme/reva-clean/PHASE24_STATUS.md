@@ -9402,3 +9402,8 @@ V1030/V1031 reject the near-pad U1.40 RTL_1V1 transition class. V1030
 violates native pad-39 clearance; V1031 collides with the parent RTL_3V3
 B.Cu spine and USB_TXP0 pad 41. U1.40 therefore requires a real coordinated
 QFN fanout regeneration; further single-via nudges are exhausted.
+V1032 is REJECTED: the upper U1.40 escape crosses the native U1.39
+RTL_3V3 F.Cu branch. This confirms U1.40 cannot be allocated independently;
+U1.39, the RTL_3V3 collector, and U1.40 must be regenerated as one QFN-edge
+field. The parent GND plane-attachment topology remains a constraint for the
+next regeneration.

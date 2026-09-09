@@ -8944,3 +8944,6 @@ valid fix.
 DRC localized the failures to pad-39 clearance, then the parent RTL_3V3
 B.Cu spine and USB_TXP0 pad 41. The next step is coordinated QFN fanout
 regeneration, not further single-via nudges.
+2026-09-09: V1032 rejected the upper U1.40 RTL_1V1 escape because it crossed
+the native U1.39 RTL_3V3 F.Cu branch. U1.40, U1.39, and the 3V3 collector
+must be regenerated together, with the parent GND plane attachment retained.

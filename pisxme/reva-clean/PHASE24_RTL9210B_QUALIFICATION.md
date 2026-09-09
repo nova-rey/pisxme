@@ -1082,3 +1082,7 @@ V1030/V1031 are rejected near-pad U1.40 trials. Native DRC found pad-39
 clearance in V1030, and RTL_3V3/USB_TXP0 interactions in V1031. The
 near-pad single-transition class is exhausted; a coordinated QFN fanout
 regeneration is required.
+V1032 rejects the upper U1.40 escape because it crosses the native U1.39
+RTL_3V3 F.Cu branch. The U1.40/U1.39/RTL_3V3 QFN-edge field must be
+co-authored as one allocation, while preserving the parent's GND
+plane-attachment topology.
