@@ -1,5 +1,24 @@
 # Phase 24 acreage validation status
 
+## CURRENT STATE — 2026-09-08
+
+The live source-authority repair for the HD3SS6126 USB selector is complete:
+its QFN exposed pad 43 is now an explicit schematic `POWER_GND` pin, with a
+matching U12 instance pin and source-generator mapping. Native KiCad export
+`PHASE24_U12_EP_GROUND_V6.kicadxml` contains U12.43 on `POWER_GND`; native ERC
+has no hierarchy-association errors. The corrected source-driven candidate
+`PHASE24_STORAGE_NETLIST_REGENERATED_V5.kicad_pcb` assigns U12 pad 43 to
+`POWER_GND`, has zero schematic-to-PCB pad-parity mismatches, and passes the
+complete dual-mode USB3, SATA, and JMS583 support audits including the saved
+board negative control. Its native DRC receipt reports 685 violations / 403
+unconnected items and remains open routing evidence. It is not yet the
+production acreage candidate. The next action is clean U12 source-field USB3
+escape/rerouting against this corrected authority; no synthetic connectivity
+or severity waiver is permitted.
+
+The older V2/V3 regeneration paragraphs below are retained as superseded
+route evidence only. They are not current TODOs or the current candidate.
+
 ## CURRENT OPEN GATES — 2026-09-08
 
 ### Latest source-regenerated routing basis

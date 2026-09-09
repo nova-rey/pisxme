@@ -1,5 +1,20 @@
 # Phase 24 dual-mode storage implementation
 
+## CURRENT OPEN GATES — 2026-09-08
+
+The U12 HD3SS6126 QFN exposed-pad authority defect is corrected in the live
+schematic source: pin/pad 43 is explicitly `POWER_GND` and is included in the
+source-driven PCB map. Native export `PHASE24_U12_EP_GROUND_V6.kicadxml`
+proves U12.43 membership; `PHASE24_STORAGE_NETLIST_REGENERATED_V5.kicad_pcb`
+has pad parity PASS and passes the USB3, SATA, and JMS583 support audits.
+Native DRC remains open at 685 violations / 403 unconnected items. The
+remaining gate is routing-quality repair, beginning with the U12 source-field
+USB3 escape. The V5 PCB is a disposable corrected routing basis, not closure.
+
+The prior V2/V3 regeneration and escape-trial statements below are historical
+evidence. They remain useful for rejected-route archaeology but do not describe
+the current implementation state or an outstanding support-network TODO.
+
 ## CURRENT STATE — authoritative now (2026-09-08)
 
 The first generic netlist-driven PCB regeneration is retained as

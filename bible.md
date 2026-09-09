@@ -7793,3 +7793,12 @@ no copper was promoted.
   it passed USB3 endpoint connectivity but crossed existing REFCLK/XIN/XOUT
   and SATA corridors under native DRC. The remaining repair is corridor
   allocation around those validated neighboring paths.
+
+2026-09-08 — Phase 24 source-authority checkpoint: corrected the HD3SS6126
+U12 exposed-pad defect generically. The QFN pad 43 is now an explicit
+schematic `POWER_GND` pin with a matching instance pin and source-generator
+mapping; native KiCad export places U12.43 on `POWER_GND`. The fresh V5
+source-regenerated PCB passes schematic-to-pad parity, dual-mode USB3, SATA,
+and JMS583 support audits with negative control. Native DRC remains open at
+685 violations / 403 unconnected items, so this is corrected routing basis
+evidence, not Phase 24 closure. Next work is a clean U12 source-field escape.
