@@ -78,6 +78,13 @@ failure is confined to the three adjacent right-edge U1 departures. No
 architecture or Path-A conclusion changes; the next class must allocate all
 three departures together.
 
+V808 is now the retained orientation-180/co-moved-support control basis.
+PEDET, CLKREQ_N, and PERST_N are natively connected to R2, R3, and J1.50,
+respectively; the saved-board audit passes all three endpoint assertions and
+track-removal negative controls. Native DRC reports zero violations and 42
+expected incomplete connections. This is a stronger local placement/escape
+basis, not complete RTL9210B or Path-B closure.
+
 V796/V797 tested the orientation-180 alternative. The unmodified direct
 fanout crossed PEDET/CLKREQ and clipped existing support; the reordered trial
 still contacted RSET/crystal/GND support and J1 lane pads. These are placement

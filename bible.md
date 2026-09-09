@@ -8405,3 +8405,9 @@ were rejected by native DRC because the rotated QFN was not co-moved with its
 crystal/RSET/GND support and the PERST top run clipped J1 lane pads. Preserve
 the orientation class only as a future co-authored placement experiment;
 production CAD and Path A remain unchanged.
+
+2026-09-09: V808 is the first positive orientation-180/co-moved-support
+control basis. Native DRC reports zero violations and the saved-board audit
+passes PEDET, CLKREQ_N, and PERST_N endpoint assertions plus all three
+track-removal negative controls. The fixture retains 42 expected incomplete
+connections; complete RTL9210B qualification remains open.

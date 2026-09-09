@@ -56,6 +56,14 @@ The native reports preserve the result: the outer PERST_N corridor is not the
 limiting geometry, but the QFN departure fanout still needs a dedicated
 allocation.
 
+V808 is the current positive orientation-180/co-moved-support control basis.
+It has zero native DRC violations, and
+`phase24_rtl9210b_orientation180_v808_audit.py` proves PEDET U1.8→R2.1,
+CLKREQ_N U1.13→R3.1, and PERST_N U1.14→J1.50 with independent track-removal
+negative controls. The 42 incomplete connections are inherited from the
+disposable, otherwise unrouted fixture. SPI, rails, USB, lane, flash, and
+firmware gates remain open.
+
 V793/V794/V795 are rejected PERST_N QFN-escape variants. Their outer route
 sections remain clear, but the local departure repeatedly contacts adjacent
 U1 no-connect/control pads or the retained SPI/PEDET field. This establishes
