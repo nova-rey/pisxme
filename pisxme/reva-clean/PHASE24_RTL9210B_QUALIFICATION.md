@@ -947,3 +947,10 @@ with three inherited isolated-fill warnings and 22 expected opens. V942 is
 the accepted U1.34 sub-primitive. V943's first U1.20 vertical escape was
 rejected by SPISO3/SPICLK crossings and via clearance; remaining 3V3 endpoints
 require coordinated regeneration.
+V984/V985 tested the orientation-0 U2 endpoint idea. V984 retained seven
+native violations from diagonal source/endpoint dogbones. V985 reduced the
+result to eight violations with orthogonal dogbones, but the remaining
+findings localized to the actual U2 pad-5/pad-6/pad-7 ordering: the
+provisional SPISO3/SPISI endpoint assignment was reversed. This is rejected
+mapping evidence, not an orientation-0 source-field rejection. The next
+candidate must use transformed native U2 pad coordinates explicitly.

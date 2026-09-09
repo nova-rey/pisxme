@@ -8836,3 +8836,9 @@ an ordered source ladder is insufficient when B.Cu endpoint corridors are
 not ordered against the transformed U2 endpoint field.  Both are preserved
 as rejected route-implementation evidence.  V981 remains the active clean
 source-row basis; the next allocation must preserve lane ordering end to end.
+2026-09-09: V984/V985 tested an orientation-0 U2 SPI endpoint allocation.
+Orthogonalizing the source and endpoint dogbones reduced the candidate to
+eight native violations, but the remaining errors localized to actual U2
+pad-5/pad-6/pad-7 ordering and exposed a reversed SPISO3/SPISI provisional
+assignment. Preserve this as rejected mapping evidence; future routes must
+use transformed native U2 pad coordinates explicitly.
