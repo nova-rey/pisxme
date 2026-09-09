@@ -8459,6 +8459,11 @@ was rejected with 4 violations and 33 expected incomplete connections. V830
 angled the dogbones but increased the result to 10 violations and 33 expected
 incomplete connections. Both are rejected local control variants; V772
 remains the complete-SPI/support basis.
+2026-09-09: V831 tested a vertically split local PEDET/CLKREQ_N control pair
+with opposing QFN dogbones. Native DRC rejected it with 6 violations and 33
+expected incomplete connections, including PERST_N/CLKREQ_N and RTL_3V3/PEDET
+shorts plus QFN-adjacent mask/clearance failures. The next class must move the
+control pair coherently away from the SPI field.
 2026-09-09: V826 tested B.Cu-separated PEDET/CLKREQ_N approaches on V777 and
 was rejected with 6 violations and 33 expected incomplete connections. V827
 moved the source transitions laterally and was rejected with 9 violations and

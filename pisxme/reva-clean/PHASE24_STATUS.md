@@ -8934,3 +8934,8 @@ QFN-adjacent launch clearance and inherited support warnings. V830 angled the
 two dogbones away from the adjacent pads but increased the result to 10
 violations and 33 expected incomplete connections. Both are rejected route
 variants; V772 remains the complete-SPI basis.
+V831 tested a vertically split local control pair with opposing QFN dogbones.
+Native DRC rejected it with 6 violations and 33 expected incomplete
+connections, including PERST_N/CLKREQ_N and RTL_3V3/PEDET shorts plus
+QFN-adjacent mask/clearance failures. The next credible class must move the
+control pair coherently farther from the SPI field.

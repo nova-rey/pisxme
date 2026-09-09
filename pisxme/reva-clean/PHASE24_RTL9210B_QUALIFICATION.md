@@ -638,6 +638,10 @@ rejected with 4 native violations and 33 expected incomplete connections.
 V830 angled the launches but was rejected with 10 violations and 33 expected
 incomplete connections. These remain local control-route evidence only;
 V772 remains the complete-SPI/support basis.
+V831 tested a vertically split local control pair with opposing QFN dogbones
+and was rejected by native DRC with 6 violations and 33 expected incomplete
+connections. The failures are local pad-field/mask/clearance interactions;
+the next class must move the control pair coherently away from the SPI field.
 V826 tested B.Cu-separated PEDET/CLKREQ_N approaches on V777 and was rejected
 with 6 native violations and 33 expected incomplete connections. V827 moved
 the source transitions laterally and was rejected with 9 violations and 33
