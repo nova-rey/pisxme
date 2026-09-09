@@ -9185,3 +9185,9 @@ QFN field. Native DRC is 0 electrical violations with the same two inherited
 isolated-fill warnings and 28 expected unrelated opens. V932 is the accepted
 1V1-plus-RSET support primitive; crystal, RTL_3V3, RTL_5V, and local GND
 restoration remain open.
+V933 relocated Y1/C1/C2 north by 8 mm and regenerated XTAL_IN using ordinary
+vias outside both component pads, with an explicit Y1.1-to-C1.1 join. Native
+DRC has no electrical violations (three inherited isolated-fill warnings and
+26 expected unrelated opens); the saved-board connectivity audit and source
+trace-removal negative control pass. V933 is the accepted XTAL_IN primitive;
+XTAL_OUT, RTL_3V3, RTL_5V, and local GND restoration remain open.

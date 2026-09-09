@@ -883,3 +883,9 @@ from a left-side approach. Native DRC remains free of electrical violations
 (two inherited isolated-fill warnings; 28 expected unrelated opens). V932 is
 the accepted RTL_1V1/RSET primitive; crystal, RTL_3V3, RTL_5V, and local GND
 restoration remain current implementation gates.
+V933 relocated Y1/C1/C2 north by 8 mm and regenerated XTAL_IN with ordinary
+vias outside the component pads plus an explicit Y1.1-to-C1.1 join. Native
+DRC has no electrical violations (three inherited isolated-fill warnings and
+26 expected unrelated opens); the saved-board audit and source-trace negative
+control pass. V933 is the accepted XTAL_IN primitive; XTAL_OUT, RTL_3V3,
+RTL_5V, and local GND restoration remain current implementation gates.
