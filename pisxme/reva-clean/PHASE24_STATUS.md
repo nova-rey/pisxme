@@ -9362,3 +9362,9 @@ DRC then showed contact/clearance with the actual RTL_3V3 collector. These
 results close the simple translation class for U1.40; the next experiment
 must co-author the U1.40 and adjacent 3V3 field. No Path-B or Path-A
 architecture conclusion changes.
+V1022/V1023/V1024 are rejected U1.40 local-slot probes. V1022 contacted the
+native GND pad 45, V1023 contacted no-connect pad 48, and V1024 remained
+0.1831 mm from native RSET pad 51. U1.40 therefore needs a coordinated
+QFN-edge regeneration with the adjacent RTL_3V3 collector; further isolated
+via nudges are not a credible class. The accepted 1V1 primitives and Path A
+remain unchanged.

@@ -8913,3 +8913,7 @@ fixture residue. U1.40 and complete RTL_1V1 support remain open.
 first violated clearance to native no-net pad 43; the second contacted the
 RTL_3V3 collector after moving west. Preserve both as evidence and co-author
 the U1.40/RTL_3V3 field next; no architecture conclusion changes.
+2026-09-09: V1022/V1023/V1024 rejected U1.40 local-slot probes. Native DRC
+localized them to GND pad 45, no-connect pad 48, and RSET pad 51. The next
+step is coordinated U1.40/RTL_3V3 QFN-edge regeneration; isolated via nudges
+are exhausted. Accepted 1V1 primitives and Path A remain unchanged.

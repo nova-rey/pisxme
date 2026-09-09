@@ -1048,3 +1048,8 @@ V1020/V1021 are rejected U1.40 probes. V1020 was too close to native no-net
 pad 43; V1021 moved west but contacted the existing RTL_3V3 collector. The
 simple U1.40 translation class is exhausted for this field. A co-authored
 U1.40/RTL_3V3 regeneration is required; Path B remains open, not rejected.
+V1022/V1023/V1024 are rejected U1.40 local-slot trials. Native DRC localized
+the failures successively to GND pad 45, no-connect pad 48, and RSET pad 51.
+The simple isolated-transition class is exhausted; U1.40 must be regenerated
+with the neighboring RTL_3V3 collector as one QFN-edge allocation. Accepted
+1V1 primitives and Path A are unchanged.
