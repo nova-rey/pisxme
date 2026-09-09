@@ -8469,3 +8469,8 @@ was rejected with 6 violations and 33 expected incomplete connections. V827
 moved the source transitions laterally and was rejected with 9 violations and
 33 expected incomplete connections, including no-connect-pad/via and SPI
 corridor conflicts. V772 remains the preferred complete-SPI basis.
+2026-09-09: V832 moved the PEDET/CLKREQ_N resistors as a coherent far-outboard
+island; placement-only native DRC passed with 0 violations and 35 expected
+incomplete connections. V833's first B.Cu route was rejected with 6
+violations and 33 expected incomplete connections because source vias and
+corridors intersected retained SPI geometry and reached the board edge.

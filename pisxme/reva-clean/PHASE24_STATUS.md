@@ -8939,3 +8939,9 @@ Native DRC rejected it with 6 violations and 33 expected incomplete
 connections, including PERST_N/CLKREQ_N and RTL_3V3/PEDET shorts plus
 QFN-adjacent mask/clearance failures. The next credible class must move the
 control pair coherently farther from the SPI field.
+V832 moved the PEDET/CLKREQ_N resistors as a coherent far-outboard island;
+the placement-only board passes native DRC with 0 violations and 35 expected
+incomplete connections. V833's first B.Cu route is rejected with 6 violations
+and 33 expected incomplete connections: source vias/corridors intersect the
+retained SPI field and the chosen path reaches the board edge. Placement is
+feasible; this route implementation is not.

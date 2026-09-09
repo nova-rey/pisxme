@@ -642,6 +642,11 @@ V831 tested a vertically split local control pair with opposing QFN dogbones
 and was rejected by native DRC with 6 violations and 33 expected incomplete
 connections. The failures are local pad-field/mask/clearance interactions;
 the next class must move the control pair coherently away from the SPI field.
+V832's far-outboard control-island placement passes native DRC with 0
+violations and 35 expected incomplete connections. V833's first B.Cu route
+is rejected with 6 violations and 33 expected incomplete connections because
+the source vias/corridors intersect retained SPI geometry and reach the board
+edge. The placement remains feasible; the route is rejected.
 V826 tested B.Cu-separated PEDET/CLKREQ_N approaches on V777 and was rejected
 with 6 native violations and 33 expected incomplete connections. V827 moved
 the source transitions laterally and was rejected with 9 violations and 33
