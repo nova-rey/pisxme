@@ -9545,3 +9545,7 @@ preserved as route-implementation evidence and V1279 remains authoritative.
 negative-control checks but native DRC rejected 20 violations, including three
 crossings between the new B.Cu RSET handoff and live RTL_1V1 tracks. This
 confirms a coupled source-field allocation issue; raw evidence is preserved.
+2026-09-09 — V1302 all-F.Cu RSET dogleg passed endpoint and negative-control
+checks but native DRC rejected 22 violations, including crossings/shorts with
+XTAL_IN, LANE0_RXN, and RTL_1V1. RSET and crystal departures remain a coupled
+source-field allocation problem; raw evidence is preserved.

@@ -10205,3 +10205,8 @@ endpoint and trace-removal negative-control audit pass, but native DRC rejects
 tracks in the source field, in addition to inherited warnings. This is
 rejected coupled allocation evidence; the accepted lane/rail lineage remains
 unchanged.
+V1302 tested an all-F.Cu RSET dogleg around the live crystal/rail field. The
+saved-board endpoint and negative-control audit pass, but native DRC rejects
+22 violations, including RSET crossings/shorts with XTAL_IN, LANE0_RXN, and
+live RTL_1V1 source geometry. This route class is rejected; RSET and crystal
+departures must be co-authored with the lane/rail field.
