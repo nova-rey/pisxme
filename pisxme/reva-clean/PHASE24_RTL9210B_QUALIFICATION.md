@@ -45,6 +45,10 @@ collectors. Native DRC found one real RTL_3V3/RTL_1V1 source-field crossing
 and single-layer source vias; reject it as a route implementation. The next
 bounded class is the separately authored orientation-180 support lineage,
 which has native-clean local support fields and different QFN pin ordering.
+V679 and V680 tested two crystal-field implementations on that lineage. Both
+were rejected by native DRC for real crystal-field shorts/crossings; neither
+is evidence against the orientation-180 support placement itself. Their raw
+receipts are retained for the next co-authored crystal/source-field attempt.
 
 V672 provides a positive interior RSET basis with nine inherited warnings and
 no signal DRC violations. V673 layered lower RTL_3V3 onto it and found 12

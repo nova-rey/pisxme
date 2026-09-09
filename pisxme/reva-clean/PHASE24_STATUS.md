@@ -52,6 +52,10 @@ V678 replaced the V676 tails with F.Cu collector joins and introduced one
 real RTL_3V3/RTL_1V1 source-field crossing plus single-layer source vias; it
 is rejected as a route implementation. The next bounded Path-B class pivots
 to the native-clean orientation-180 support lineage.
+V679 direct crystal routing and V680 relocated-crystal routing were both
+rejected by native DRC for real XTAL-field shorts/crossings. They are route
+implementation failures; the orientation-180 rail/RSET basis remains the
+active Path-B local-placement candidate.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native

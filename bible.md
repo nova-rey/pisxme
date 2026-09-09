@@ -8216,3 +8216,9 @@ collectors; native DRC found two real B.Cu crossings with SPI channels, so it
 was rejected. V678 changed to F.Cu collector joins; native DRC still found a
 real RTL_3V3/RTL_1V1 crossing and single-layer source vias. Rejected V678 and
 pivoted the next Path-B class to the native-clean orientation-180 lineage.
+
+2026-09-09: V679 direct crystal routing on the orientation-180 support basis
+found 12 native DRC violations including XTAL_IN/RTL_3V3 and crystal/RTL_1V1
+crossings. V680 relocated the crystal trio and found 11 violations including
+XTAL_IN shorts to RTL_3V3/GND and multiple crossings. Rejected both route
+implementations; retain the orientation-180 rail/RSET basis.
