@@ -18,4 +18,6 @@ q12=(151.8,135.0);q13=(176.5,135.0);q14=(212.5,153.0)
 via(n,q12);tr(n,xy('U12',9),q12,F)
 via(n,q13);tr(n,q12,q13,B);tr(n,q13,xy('U13',9),F)
 via(n,q14);tr(n,xy('U14',4),q14,F);tr(n,q14,(212.5,146.0),B);tr(n,(212.5,146.0),q13,B)
-b.BuildListOfNets();out=R/'PHASE24_STORAGE_J8_V5_STORAGE_SEL_V1.kicad_pcb';b.Save(str(out));print(out)
+# Preserve KiCad's existing net table during this probe; rebuilding it here
+# can reclassify inherited hierarchical copper before native reload audits it.
+out=R/'PHASE24_STORAGE_J8_V5_STORAGE_SEL_V2.kicad_pcb';b.Save(str(out));print(out)

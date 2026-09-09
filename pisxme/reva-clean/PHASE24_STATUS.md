@@ -63,6 +63,12 @@ single net on the inherited board is not a reliable closure method. The next
 repair must regenerate the affected source-owned selector and neighboring
 high-speed corridors together, with native post-save DRC as the authority.
 
+An unchanged `PHASE24_STORAGE_J8_V5_VBUS_ROUNDTRIP` remains zero-short after
+native save/reload, so this is not a generic serializer defect. The selector
+V2 no-net-table-rebuild probe still exposes three inherited crossing shorts
+after adding the new corridor. V1 and V2 are rejected; the VBUS basis is
+unchanged and neighboring high-speed copper must be regenerated together.
+
 The bounded `PHASE24_STORAGE_J8_V5_GROUND_ZONE_V1` probe adds a storage-only
 F.Cu `POWER_GND` zone and reduces native unconnected findings to 386 from
 400, with zero native shorts. It is retained as a ground-access experiment,

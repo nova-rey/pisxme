@@ -6062,6 +6062,12 @@ controls pass, with zero native signal shorting/crossing classes. Path A and
 production CAD remain unchanged; CLKREQ/R3.1 and all remaining Path-B gates
 stay open.
 
+2026-09-08 — An unchanged VBUS-basis round trip stayed zero-short, ruling out
+a generic save failure. The selector V2 probe, which avoided rebuilding the
+net table, still exposed three inherited crossing shorts after adding the
+new corridor. Both selector probes are rejected; neighboring high-speed
+copper must be regenerated together.
+
 2026-09-08 — A coherent STORAGE_SEL reroute passed the native 4/4 mode graph
 but was rejected after native reload exposed inherited CM5 RX and SATA/USB3
 short classes. The selector corridor itself was not the reported short;
