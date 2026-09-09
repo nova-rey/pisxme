@@ -65,6 +65,11 @@ The V9 TXN micro-adjustment is superseded route evidence: focused USB3 still
 passes, but native DRC rises to 731 and adds a real CM5_PET0_P/CM5_USB3_RX_N
 short. V8 remains the selected disposable parent.
 
+V11 is superseded route evidence: shortening TXN improves its skew proxy to
+1.620 mm, but native DRC reports 731 findings and a CM5 USB RX pair short.
+The candidate is not production authority; subsequent edits must use a
+serialization-safe whole-net regeneration path.
+
 The V8 USB3 negative control independently passes: removing a required native
 trace breaks the asserted endpoint graph. The check strengthens evidence
 sensitivity but does not waive the open native DRC or full-board gates.

@@ -75,6 +75,12 @@ V9 is rejected as a micro-adjustment regression. Although focused USB3
 connectivity remains passing, native DRC rises to 731 and introduces a real
 `CM5_PET0_P`/`CM5_USB3_RX_N` short. V8 remains the retained parent.
 
+The V11 shortened-TXN candidate is rejected: focused USB3 connectivity still
+passes and TX skew proxy falls to 1.620 mm, but native DRC rises to 731 and
+adds a CM5_USB3_RX_N/CM5_USB3_RX_P short. No production copper changed; this
+also exposes serialization-safe whole-net regeneration as a prerequisite for
+further local edits.
+
 The USB3 negative-control run on V8 also passes: the intact native graph is
 accepted, and removal of a required CM5 USB3 trace makes the audit fail as
 required. This validates audit sensitivity, not Phase 24 closure.

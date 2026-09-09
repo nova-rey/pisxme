@@ -7971,3 +7971,7 @@ V8 uses a staggered order-preserving U11 TX fanout. USB3/SATA/mode/JMS583 and
 pad-parity audits pass; native DRC reports 730 findings with no shorting class.
 Retained V8 as the disposable local routing basis while full-board closure
 remains open.
+
+V11 shortened TXN and reduced the USB TX skew proxy to 1.620 mm, but native
+DRC rose to 731 and added a CM5 USB RX pair short. Rejected the candidate and
+recorded the need for serialization-safe whole-net regeneration.
