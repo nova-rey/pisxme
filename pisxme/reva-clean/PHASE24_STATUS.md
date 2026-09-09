@@ -9356,3 +9356,9 @@ lower-row departures. Both native DRC reports contain no electrical
 violations; dangling tracks and inherited opens remain fixture residue. The
 accepted isolated set is U1.16/U1.25/U1.36/U1.50/U1.55/U1.60/U1.63. U1.40
 and full RTL_1V1 support remain OPEN.
+V1020 is REJECTED because its east-side U1.40 transition reached U1 pad 43
+with only 0.100 mm clearance. V1021 moved the transition west, but native
+DRC then showed contact/clearance with the actual RTL_3V3 collector. These
+results close the simple translation class for U1.40; the next experiment
+must co-author the U1.40 and adjacent 3V3 field. No Path-B or Path-A
+architecture conclusion changes.

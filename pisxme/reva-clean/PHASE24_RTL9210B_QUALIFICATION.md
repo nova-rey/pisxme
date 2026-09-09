@@ -1044,3 +1044,7 @@ V1018 and V1019 extend the accepted rail slice to U1.60 and U1.63 using
 separate lower-row departures. Both native DRC reports contain no electrical
 violations; only intentional dangling source tracks and inherited fixture
 opens remain. U1.40 and complete RTL_1V1 support remain open.
+V1020/V1021 are rejected U1.40 probes. V1020 was too close to native no-net
+pad 43; V1021 moved west but contacted the existing RTL_3V3 collector. The
+simple U1.40 translation class is exhausted for this field. A co-authored
+U1.40/RTL_3V3 regeneration is required; Path B remains open, not rejected.

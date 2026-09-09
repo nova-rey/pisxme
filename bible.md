@@ -8909,3 +8909,7 @@ RTL_1V1 closure remains open.
 U1.63 with separate lower-row departures. Native DRC found no electrical
 violations; dangling source tracks and inherited opens remain intentional
 fixture residue. U1.40 and complete RTL_1V1 support remain open.
+2026-09-09: V1020/V1021 rejected simple U1.40 RTL_1V1 translations. The
+first violated clearance to native no-net pad 43; the second contacted the
+RTL_3V3 collector after moving west. Preserve both as evidence and co-author
+the U1.40/RTL_3V3 field next; no architecture conclusion changes.
