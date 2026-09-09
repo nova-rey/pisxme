@@ -27,6 +27,13 @@ it also reports zero native DRC violations and 43 expected opens. These are
 positive channel-allocation evidence, not full SPI closure. SPICS, SPISO, and
 SPISI still require co-authored routing and saved-board connectivity audits.
 
+V751 attempted to add SPICS and SPISO to the V750 basis. Native DRC found
+five violations: source-transition shorts involving SPICS/SPISO and
+SPISO3/SPISO, plus one SPISO/SPICS B.Cu crossing. It is rejected as a
+route-implementation failure. The failure is localized to the QFN source
+field and return-shelf allocation; it does not invalidate the V748 placement
+or the clean V749/V750 channel proofs.
+
 The earlier V702 U1.17 RTL_5V closure remains part of the inherited positive
 support lineage; it is not the current SPI checkpoint.
 

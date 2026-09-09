@@ -6043,6 +6043,12 @@ with zero DRC violations; V750 added SPICLK through a separate B.Cu channel
 and also passed with zero DRC violations. These are isolated Path-B routing
 experiments; Path A and production CAD remain unchanged, and full SPI plus
 RTL9210B qualification remain open.
+
+2026-09-09: V751 attempted to add SPICS and SPISO to the V749/V750 vertical
+U2 endpoint basis. Native KiCad DRC found five source-field/return-shelf
+violations, so V751 was rejected as a route implementation. V749 and V750
+remain clean single/two-channel proofs; the next Path-B experiment must
+co-author the QFN source escapes instead of extending the left-side trunk.
 2026-09-07: Promoted RTL9210B V212 PEDET U1.8-to-M.2 contact-69 sideband
 slice. Native connectivity and the trace-removal negative control pass, and
 native DRC has zero signal shorting/crossing classes. Path A and production
