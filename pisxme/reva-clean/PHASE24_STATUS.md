@@ -98,6 +98,8 @@ Selector SATA RXN compact-jog V12 reduced the selector RX pair mismatch from
 remains a disposable geometry because pair balance and full DRC are open.
 V13's added upper-field meander created M2 SATA and USB/support shorts and
 was rejected.
+SATA RXN balance V14 achieved a 3.66 mm RX mismatch and native SATA PASS,
+but reintroduced two TUSB/USB-RX transition-via shorts; it is rejected.
 
 Selector-side V9 moved only the TXP corridor above the inherited support
 field; it removed the prior TXP/USB_RXN1 collision but introduced new XIN,

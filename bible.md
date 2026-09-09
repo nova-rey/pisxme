@@ -7684,3 +7684,8 @@ reservation is required before another tuning pass.
 with zero shorting_items and reduced selector RX pair mismatch from 31.46 mm
 to 13.53 mm. V13's added upper-field meander entered M2/USB support corridors
 and created shorts; V13 rejected, V12 retained as disposable evidence.
+
+2026-09-08: Tested SATA RXN balance V14. It achieved 99.70 mm RXP versus
+103.37 mm RXN (3.66 mm mismatch) with native SATA endpoint PASS, but
+reintroduced two TUSB/USB-RX transition-via shorts. Rejected; the no-short
+VCCK_LOCAL basis remains current.
