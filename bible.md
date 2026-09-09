@@ -8054,3 +8054,7 @@ V22's initial crystal transition-via placement shorted XIN/XOUT and was
 superseded by V23. V24 tested an all-F.Cu alternative; native DRC stayed at
 730 and four shorting items were introduced. Rejected both alternatives and
 retained V23 as the best current physical transition basis.
+
+V25 moved both XIN/XOUT B.Cu transition corridors outside the inherited SATA
+field. Native DRC rose to 745 and eight shorting items appeared. Rejected the
+outer-corridor class; V23 remains the disposable crystal basis.

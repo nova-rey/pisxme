@@ -45,6 +45,11 @@ the B.Cu SATA corridors; native DRC remained at 730 and introduced four
 shorting items. Both are rejected route implementations. V23 remains the
 best current crystal-transition basis.
 
+V25 moved both XIN/XOUT B.Cu transition corridors outside the inherited SATA
+B.Cu field before crossing above it. Native DRC worsened to 745 findings and
+introduced eight shorting items, so the outer-corridor class is rejected.
+V23 remains the retained disposable basis.
+
 V13 is the retained local routing basis. Its upper P-leg detour preserves the
 V8 source ordering, reduces the USB_TXN1/USB_TXP1 skew proxy to 0.259 mm, and
 keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits

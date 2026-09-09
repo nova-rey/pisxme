@@ -90,6 +90,10 @@ by V23. V24's all-F.Cu alternative avoided the B.Cu SATA corridor but added
 four native shorting items with no DRC improvement; both remain rejected
 route evidence.
 
+V25 tested outer B.Cu crystal corridors outside the SATA field. It worsened
+native DRC to 745 findings and introduced eight shorting items, so that
+structural route class is rejected.
+
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a
 0.000 mm clearance violation into U11 pad 23. No production authority changed.
