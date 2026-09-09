@@ -10193,3 +10193,9 @@ RTL_5V endpoint groups, with a trace-removal negative control for each. All
 assertions pass; the native V862 DRC report remains zero violations with 30
 unconnected items. This closes only the local V862 support primitive; the
 unconnected Path-B source/control/lane/integration gates remain OPEN.
+V1300 tested transplanting the native V1195 RSET/XTAL_IN/XTAL_OUT route set
+onto the current V1279 four-lane basis. The saved-board endpoint audit and
+all three source-removal negative controls pass, but native DRC rejects the
+combined transplant with 29 violations, including XTAL_OUT/RTL_1V1 shorts and
+XTAL_IN crossings into the live LANE0_RXN/RTL_1V1 fields. This is rejected
+route-implementation evidence; the V1279 lineage remains authoritative.
