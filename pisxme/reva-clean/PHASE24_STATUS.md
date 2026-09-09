@@ -25,6 +25,13 @@ remaining route promotion. Native DRC is 1,027 violations / 499 unconnected
 items on this immature workbench. Do not compare that count to mature
 historical candidates as a floorplan judgment.
 
+The corrected support-zone promotion now passes AVDDL, VCCO, VCCK, VDDREG,
+and LXO support checks with their negative controls. The resulting
+`PHASE24_STORAGE_AUTHORITY_CORRECTED_USB3_SATA_ZONES_FINAL` workbench passes
+the complete ten-net USB3 audit and all 12 SATA endpoint assertions. Native
+DRC remains open at 669 violations / 499 unconnected items, including
+inherited crossings and shorts; this is not a closure candidate.
+
 After the USB3 coupling-capacitor alignment, the ten-net native USB3 audit
 passes on the corrected support parent. The integrated
 `PHASE24_STORAGE_AUTHORITY_CORRECTED_USB3_SATA_V3` trial also passes all 12

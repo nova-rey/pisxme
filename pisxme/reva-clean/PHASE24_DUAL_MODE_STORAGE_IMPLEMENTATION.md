@@ -26,6 +26,12 @@ AVDDL/VCCO/VCCK support coverage. The SATA author now preserves unrelated
 integrated copper and zones; board scrubbing is limited to explicitly
 minimal fixtures.
 
+The corrected support-zone promotion now passes the complete JMS583 support
+audit and negative control. The final combined workbench also passes the
+complete ten-net USB3 audit and all 12 SATA endpoint assertions. Native DRC
+remains open at 669 violations / 499 unconnected items, so the storage island
+is still in active route cleanup rather than closure.
+
 Status: `IN PROGRESS — support circuitry and mode-control authority are
 authored; native copper, mode-aware validation, and release checks remain
 open` (2026-09-06, live checkpoint).
