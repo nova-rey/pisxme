@@ -35,6 +35,13 @@ native DRC found a 0.000 mm clearance violation from the diagonal escape into
 U11 pad 23. V14 is rejected route-implementation evidence; V13 remains the
 retained no-short local basis and no production copper changed.
 
+V15 tested an ordinary through-via and B.Cu TXN escape from the U11 field. Its
+focused USB3 endpoint audit passed, but native DRC rose to 746 and introduced
+six TXP/TXN shorting findings plus additional support-field conflicts. V15 is
+rejected route-implementation evidence. After the planar V14 and layer-
+transition V15 failures, further isolated TXN nudges are stopped; the next
+class must regenerate the complete native-pad-aware lower U11 field.
+
 The first co-authored source-field trials are retained as route evidence. V3
 kept USB3/SATA/mode/JMS583/parity focused gates passing and introduced no
 shorting class, but native DRC identified two new local USB_TXP1/USB_TXN1
