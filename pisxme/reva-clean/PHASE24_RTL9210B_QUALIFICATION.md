@@ -1177,3 +1177,11 @@ native shorting, clearance, or track-crossing errors. The saved-board audit
 proves the complete currently authored 3V3 endpoint group, with a source-trace
 removal negative control. This is a local supply-field primitive, not Path-B
 closure; U1.52 and remaining support/power/control gates are still open.
+
+V1065 is rejected native evidence: its otherwise connected U1.52 3V3 route
+crossed the preserved B.Cu GND return diagonal. V1066 is retained after
+changing only the local perimeter corridor. It has no native shorting,
+clearance, or track-crossing errors, and its saved-board audit plus U1.52
+source-trace negative control pass. The result is still a local rail-field
+primitive; remaining rails, QFN support, control, and full Path-B gates are
+open.

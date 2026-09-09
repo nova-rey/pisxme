@@ -9512,3 +9512,13 @@ The saved-board native audit confirms U1.20/U1.34/U1.39/U2.3/U2.8/R2.2/R3.2/
 C3.1 are one physical RTL_3V3 component, and removing the U1.20 source trace
 fails the audit as required. V1064 is retained as the current U1.20 basis;
 U1.52 and the remaining RTL9210B support endpoints remain open.
+
+V1065 tested a direct U1.52-to-source-via handoff but was rejected: its B.Cu
+perimeter crossed the preserved GND return diagonal. V1066 changed only that
+local corridor, joining U1.52 to the existing V1064 transition field. Native
+DRC again reports only the inherited RTL_3V3 dangling warning, with no
+shorting, clearance, or crossing errors; the fixture has 30 unconnected
+items. A saved-board audit proves U1.20/U1.34/U1.39/U1.52/U2.3/U2.8/R2.2/
+R3.2/C3.1 are one physical RTL_3V3 component, and removing the U1.52 source
+trace fails the audit. V1066 is the current 3V3 QFN-field basis; remaining
+RTL9210B rails/support/control remain open.

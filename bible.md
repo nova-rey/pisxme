@@ -9014,3 +9014,10 @@ only the inherited dangling warning. Saved-board connectivity proves the
 U1.20/U1.34/U1.39/U2.3/U2.8/R2.2/R3.2/C3.1 group, and the U1.20 source-trace
 negative control fails as required. V1064 is retained; remaining RTL9210B
 support endpoints and full Path-B validation remain open.
+2026-09-09: V1065 rejected the direct U1.52 RTL_3V3 handoff because its B.Cu
+perimeter crossed the preserved GND return diagonal. V1066 changed the local
+corridor to join the existing V1064 transition field. Native DRC has only the
+inherited RTL_3V3 dangling warning; saved-board connectivity proves the full
+U1.20/U1.34/U1.39/U1.52/U2.3/U2.8/R2.2/R3.2/C3.1 group and the U1.52
+source-trace negative control fails as required. V1066 is retained; remaining
+RTL9210B support and full Path-B validation remain open.
