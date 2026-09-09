@@ -7670,3 +7670,7 @@ remains open.
 2026-09-08: Reconciled the active dual-mode storage implementation gate to
 the live VCCO_DEST_V1 DRC count of 671 violations / 499 unconnected items;
 older 673-count references remain historical evidence only.
+2026-09-08: Tested an outboard F.Cu JMS_USB3_TXP/TXN fanout around U12. The
+dual-mode USB3 endpoint audit passed, but native DRC exposed multiple U12
+no-net/USB/M.2 shorts; the 664 aggregate count was not an improvement in
+electrical quality. Rejected; VCCK_LOCAL_V1 remains the current basis.
