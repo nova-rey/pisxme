@@ -8474,3 +8474,13 @@ island; placement-only native DRC passed with 0 violations and 35 expected
 incomplete connections. V833's first B.Cu route was rejected with 6
 violations and 33 expected incomplete connections because source vias and
 corridors intersected retained SPI geometry and reached the board edge.
+Correction: V832's Y=90 resistor coordinates are outside the disposable
+Y=40–85 outline; its zero-violation result is not mechanical feasibility
+evidence.
+2026-09-09: V834 is the corrected in-outline control placement probe and
+passed native DRC with 0 violations and 35 expected incomplete connections.
+V835/V836 were rejected route implementations with 5 and 3 violations.
+V837 reversed the control endpoint order and passed native DRC with 0
+violations and 33 expected incomplete connections; its saved-board audit
+passes PEDET/CLKREQ_N endpoints and trace-removal negative controls. PERST_N
+and remaining support validation remain open.

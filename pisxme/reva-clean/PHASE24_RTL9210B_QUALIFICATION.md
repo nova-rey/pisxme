@@ -647,6 +647,16 @@ violations and 35 expected incomplete connections. V833's first B.Cu route
 is rejected with 6 violations and 33 expected incomplete connections because
 the source vias/corridors intersect retained SPI geometry and reach the board
 edge. The placement remains feasible; the route is rejected.
+Correction: V832's Y=90 resistor coordinates are outside the disposable
+Y=40–85 outline, so its zero-violation result is not mechanical feasibility
+evidence.
+V834 is the corrected in-outline control placement probe and passes native
+DRC with 0 violations and 35 expected incomplete connections. V835 and V836
+are rejected route implementations with 5 and 3 violations respectively.
+V837 reverses the control endpoint order and passes native DRC with 0
+violations and 33 expected incomplete connections; its saved-board audit
+passes PEDET/CLKREQ_N endpoints and trace-removal negative controls. Full
+PERST_N and remaining support validation remain open.
 V826 tested B.Cu-separated PEDET/CLKREQ_N approaches on V777 and was rejected
 with 6 native violations and 33 expected incomplete connections. V827 moved
 the source transitions laterally and was rejected with 9 violations and 33
