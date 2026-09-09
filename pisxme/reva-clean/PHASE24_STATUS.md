@@ -10105,3 +10105,11 @@ V1281 is rejected SPICS routing evidence. U1.24-to-U2.1 native endpoint and
 source-removal audit pass, but the proposed escape crosses the RXN B.Cu trunk,
 collides with the existing U1.1V1 via field, and violates the adjacent U2.2
 clearance. Its raw PCB and DRC report are preserved; SPICS remains OPEN.
+V1282 corrected a disposable generator endpoint mismatch and then passed the
+native SPICS endpoint and negative-control audit. Its DRC still rejects the
+route because the first via lands on the existing TXP launch and the source
+field collides with U1.1V1.
+V1283 and V1284 are rejected SPICS escape refinements. Moving the transition
+between or below the existing fields still produces native clearance/short
+errors at U1.24/U1.1V1. The SPICS net remains OPEN and requires a coupled
+U1.1V1/SPICS source-field repair; no DRC rule was relaxed.

@@ -9467,6 +9467,14 @@ the endpoint and saved-board negative-control audit passed.
 passed, but the proposed F.Cu/B.Cu escape crossed the accepted RTL_1V1/RXN/
 RSET source field and produced native clearance/crossing errors. Raw PCB and
 DRC evidence are preserved; XTAL_OUT remains open for a new route class.
+2026-09-09 — V1282 corrected a disposable SPICS generator endpoint mismatch;
+the native U1.24-to-U2.1 endpoint and saved-board negative control then passed.
+The route remained rejected because its first via landed on the TXP launch and
+the source field collided with U1.1V1.
+2026-09-09 — V1283/V1284 rejected SPICS escape refinements: moving the first
+transition between or below the established launch fields still produced
+native clearance/short errors at U1.24/U1.1V1. SPICS remains open for a
+coupled source-field repair; DRC severity was not changed.
 2026-09-09 — V1281 rejected SPICS route evidence: U1.24-to-U2.1 endpoint and
 saved-board negative-control audit passed, but native DRC found a crossing of
 the RXN B.Cu trunk, collision with the RTL_1V1 via field, and U2.2 clearance
