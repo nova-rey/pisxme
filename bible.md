@@ -6061,6 +6061,11 @@ departures; both native endpoint audits and two trace-removal negative
 controls pass, with zero native signal shorting/crossing classes. Path A and
 production CAD remain unchanged; CLKREQ/R3.1 and all remaining Path-B gates
 stay open.
+
+2026-09-08 — A bounded storage-only F.Cu POWER_GND zone probe reduced native
+unconnected findings from 400 to 386 with zero shorts. It is preserved as
+evidence only pending reference-plane, impedance, clearance, and DFM review;
+the VBUS candidate remains the authoritative storage basis.
 2026-09-07: Rejected RTL9210B V228 complete CLKREQ routing: native endpoint
 connectivity and negative control pass, but CLKREQ crossed/shorted RSET,
 REFCLK_N, and PERST in the local corridor. V227 remains the promoted

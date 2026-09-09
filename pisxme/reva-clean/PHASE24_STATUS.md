@@ -55,6 +55,12 @@ audits also pass. Native DRC reports 732 violations / 400 unconnected items
 with zero `shorting_items`. It is not closure: remaining storage support
 opens, clearances, crossings, and full-board power/ground connectivity remain.
 
+The bounded `PHASE24_STORAGE_J8_V5_GROUND_ZONE_V1` probe adds a storage-only
+F.Cu `POWER_GND` zone and reduces native unconnected findings to 386 from
+400, with zero native shorts. It is retained as a ground-access experiment,
+not promoted yet: its effect on the approved reference-plane/layer contract,
+signal impedance, and remaining clearance/DFM findings must be reviewed.
+
 The source-driven J8 regeneration (`PHASE24_STORAGE_NETLIST_REGENERATED_J8_V1`
 and V2) confirms J8 is materialized with the correct four source nets and the
 native mode audit passes 4/4. Both are rejected routing candidates: V1 still
