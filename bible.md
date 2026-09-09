@@ -9164,3 +9164,8 @@ The authoring experiment exposed a blank-board construction defect: duplicated
 footprints retained source-local transforms and the new BOARD lacked the
 native outline/net registry. Native DRC found 24 tooling-fixture violations;
 this is not an electrical verdict and production CAD remains unchanged.
+2026-09-09: V1141 used the native V1123 board and queried transformed pad
+positions while reallocating the QFN field. Native DRC found 51 violations,
+chiefly XTAL source/support crossings and retained local pad/via interactions.
+The candidate is rejected route evidence; Path A and production CAD remain
+unchanged.

@@ -17,6 +17,9 @@ lost the native outline/net registry and produced 24 tooling-fixture
 violations; it is not an electrical verdict. The next experiment will derive all trial geometry from native
 transformed pad positions. Earlier V760/V772 summaries are historical
 evidence only.
+V1141 returned to the native V1123 board and used its real net registry and
+queried pad coordinates. Native DRC found 51 violations, so the candidate is
+rejected route evidence; it does not close or disprove the Path-B architecture.
 
 ## Current QFN-field correction — V1035–V1040 (2026-09-09)
 

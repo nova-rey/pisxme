@@ -22,6 +22,10 @@ repositioned local QFN fixture. V1140 attempted a blank-board duplicate
 fixture, but its missing native outline/net registry produced 24 tooling-
 fixture violations and is not an electrical verdict. No production CAD or
 Path-A artifacts were modified.
+V1141 used the native V1123 board/net registry and printed transformed U1 and
+support pad positions before routing. It is a valid rejected route experiment:
+native DRC found 51 violations, chiefly XTAL source/support crossings and
+retained local pad/via interactions. It is not a Path-B architecture verdict.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
 `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout lineage
