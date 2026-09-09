@@ -104,6 +104,11 @@ reports 607 findings / 399 unconnected items, while native JMS583 endpoint,
 USB3, SATA, and mode-control audits pass. Two inherited unrelated shorting
 items remain; full-board closure is still open.
 
+V27–V30 were bounded storage-local short repairs. Each was rejected by native
+short/clearance or mode/connectivity evidence; V30 additionally introduced a
+CM5 USB TX pair short. No production copper changed, and filled V23 remains
+the comparison basis.
+
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a
 0.000 mm clearance violation into U11 pad 23. No production authority changed.

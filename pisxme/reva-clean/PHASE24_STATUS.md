@@ -61,6 +61,13 @@ unconnected items, and the native JMS583 physical endpoint, USB3, SATA, and
 mode-control audits all pass. Two inherited unrelated shorting items remain;
 this does not close full-board routing or Phase 24.
 
+V27–V30 tested bounded repairs for the two storage-local shorts found after
+zone fill. V27 introduced seven native shorts; V28 removed the U13 pad-field
+short but collided with USB_RXN1; V29 collided with JMS_AVDDL and failed the
+mode-control audit; V30 passed mode-control but introduced a CM5 USB TX
+pair short. All are rejected route implementations. The filled V23 board
+remains the comparison basis.
+
 V13 is the retained local routing basis. Its upper P-leg detour preserves the
 V8 source ordering, reduces the USB_TXN1/USB_TXP1 skew proxy to 0.259 mm, and
 keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits
