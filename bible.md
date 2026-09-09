@@ -7634,3 +7634,10 @@ the integrated V4_MODE basis is unchanged.
 It passed the native SATA endpoint audit and removed the prior TXP/USB_RXN1
 collision, but introduced XIN, CM5_USB3, and support conflicts and raised
 native DRC to 677. Rejected; V4_MODE remains the integrated basis.
+
+2026-09-08: Promoted the best integrated storage workbench to
+PHASE24_STORAGE_VCCO_DEST_V1 for continued routing. It combines the corrected
+CM5 USB3 right-side launch and selector-side SATA V4 with M.2 V6, mode control,
+and destination-only VCCO relocation. USB3/SATA/mode/parity/VCCO focused
+audits pass; native DRC is 671 violations / 499 unconnected items, so closure
+remains open.

@@ -339,7 +339,9 @@ path is restored to the FULL7 geometry.
 ## CURRENT OPEN GATES
 
 1. The latest integrated candidate is
-   `PHASE24_STORAGE_SELECTOR_SATA_ESCAPE_V4_MODE.kicad_pcb`. Its storage-local
+   `PHASE24_STORAGE_VCCO_DEST_V1.kicad_pcb`. It combines the corrected CM5
+   USB3 right-side launch with the selector-side SATA V4, M.2 V6, native mode
+   control, and destination-only VCCO relocation. Its storage-local
    JMS583 support, complete topology-aware USB3 path, SATA selector path, and
    native mode-control path pass focused audits and negative controls. Native
    DRC is still open at 673 violations / 499 unconnected items; this is not a

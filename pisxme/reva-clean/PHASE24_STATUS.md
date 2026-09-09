@@ -3,13 +3,14 @@
 ## CURRENT OPEN GATES — 2026-09-08
 
 The latest integrated storage routing candidate is
-`PHASE24_STORAGE_SELECTOR_SATA_ESCAPE_V4_MODE.kicad_pcb`, derived from the
-corrected source-authoritative workbench with M.2 launch V6, selector-side
-SATA escape V4, and native mode-control routing. It passes the topology-aware
+`PHASE24_STORAGE_VCCO_DEST_V1.kicad_pcb`, derived from the corrected
+source-authoritative workbench with M.2 launch V6, selector-side SATA escape
+V4, native mode-control routing, corrected CM5 USB3 right-side launches, and
+destination-only VCCO relocation. It passes the topology-aware
 dual-mode USB3 audit (10/10), SATA endpoint audit (12/12), mode-control audit
 (4/4), schematic-to-PCB pad parity (0 mismatches), and JMS583 VDDREG/REXT
-audits, with a saved-board MODE_IN negative control that fails as required.
-Native DRC remains open at 673 violations / 499 unconnected items; this is
+audits, with saved-board MODE_IN and VCCO negative controls that fail as
+required. Native DRC remains open at 671 violations / 499 unconnected items; this is
 the current routing workbench, not a closure candidate.
 
 The live U13 source-authority regression is corrected. U13 pins 6/7 now own
