@@ -9109,3 +9109,10 @@ tested early and late XTAL_OUT B.Cu transitions; native DRC rejected each for
 QFN/via clearance or source-lane crossings. These remain route-implementation
 failures. V892 remains the accepted crystal/GND primitive, with U1.52
 restoration still open.
+V905/V906 tested staggered crystal source transitions with the known U1.52
+3V3 escape; native DRC rejected the pair for via clearance and a dangling
+relocated 3V3 transition. V907 moved the 3V3 join on B.Cu but collided with
+the inherited SPISO field and the XTAL_IN corridor. V908 moved the 3V3
+collector to low F.Cu; it was rejected by SPISO/XTAL_IN clearance and a
+dangling 3V3 via. The source-escape repair remains a package-region routing
+problem; no electrical topology or placement rejection is implied.

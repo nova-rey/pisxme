@@ -8622,3 +8622,9 @@ F.Cu lanes but still crossed at the source. V902-V904 tested XTAL_OUT B.Cu
 transitions and were rejected for QFN/via clearance or source crossings.
 These remain route-implementation failures. V892 is still the accepted
 crystal/GND primitive; U1.52 restoration remains open.
+2026-09-09: V905/V906 tested staggered crystal transitions with the known
+U1.52 3V3 escape and were rejected for via clearance/dangling transition.
+V907 moved the 3V3 join on B.Cu but collided with SPISO and XTAL_IN. V908
+moved the collector to low F.Cu and was rejected by SPISO/XTAL_IN clearance
+and a dangling via. The remaining issue is package-region routing, not an
+electrical-topology or placement rejection.
