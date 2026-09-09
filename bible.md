@@ -7689,3 +7689,8 @@ and created shorts; V13 rejected, V12 retained as disposable evidence.
 103.37 mm RXN (3.66 mm mismatch) with native SATA endpoint PASS, but
 reintroduced two TUSB/USB-RX transition-via shorts. Rejected; the no-short
 VCCK_LOCAL basis remains current.
+
+2026-09-08: Tested USB RX endpoint-via relocation V1/V2 around the V14 SATA
+geometry. USB and SATA endpoint audits passed, but U12 pad-43 and USB-RX
+pair shorts remained or appeared, with V2 at 681 native violations. Both
+rejected; VCCK_LOCAL_V1 remains current.

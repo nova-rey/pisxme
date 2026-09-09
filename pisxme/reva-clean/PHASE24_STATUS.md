@@ -100,6 +100,9 @@ V13's added upper-field meander created M2 SATA and USB/support shorts and
 was rejected.
 SATA RXN balance V14 achieved a 3.66 mm RX mismatch and native SATA PASS,
 but reintroduced two TUSB/USB-RX transition-via shorts; it is rejected.
+USB RX endpoint-via relocation V1/V2 preserved USB and SATA endpoint PASS but
+introduced U12 pad-43 and USB-RX pair shorts, raising native DRC to 681; both
+are rejected. The VCCK-local no-short basis remains current.
 
 Selector-side V9 moved only the TXP corridor above the inherited support
 field; it removed the prior TXP/USB_RXN1 collision but introduced new XIN,
