@@ -10159,3 +10159,13 @@ SPISO, SPICLK, and SPISI on the top-side row, while V1279 leaves them on the
 right-side QFN row beside the 1V1/PCIe escape field. V735 remains an isolated
 support-placement oracle because its 43 unconnected-pad findings are still
 open.
+
+V1295 extends the rotated V735 basis with native U1.25 RTL_1V1 and U1.34
+RTL_3V3 source escapes to C4.1/C3.1. The first generated escape was rejected
+for QFN-field shorts and B.Cu corridor crossings. After moving RTL_1V1 through
+the open side of the rotated source row (F.Cu to x=98.4,y=63.0, ordinary
+through-via, then a separated lower B.Cu corridor), the saved-board endpoint
+audit and source-removal negative controls pass and native DRC reports zero
+violations, with the fixture's 41 expected unrelated unconnected pads.
+V1295 is accepted only as a rotated source-trio primitive; it does not close
+the sparse V735 basis or replace the current V1279 production lineage.

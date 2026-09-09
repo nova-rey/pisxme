@@ -9512,3 +9512,8 @@ findings remain open.
 an inherited error-level XTAL_IN/RSET crossing. V1291’s single-net RSET repair
 passed endpoint and negative-control audits but still failed native DRC on the
 crossing and new RSET/GND conflicts; it is preserved as rejected evidence.
+2026-09-09 — V1295 first rejected a rotated RTL_1V1/RTL_3V3 source-trio escape
+for QFN-field shorts and B.Cu crossings. A bounded source-side correction then
+passed native endpoint and saved-board negative-control audits with zero native
+DRC violations; the 41 unrelated fixture opens remain. V1295 is accepted as a
+rotated source-trio primitive only, not as full Path-B or production closure.
