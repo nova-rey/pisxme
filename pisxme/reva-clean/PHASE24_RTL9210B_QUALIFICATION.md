@@ -733,3 +733,10 @@ endpoint assertions, with trace-removal negative controls passing for the
 three signal support nets. V857 is consequently a native-clean local basis for
 SPI, PERST_N, crystal/RSET, and reviewed ground support. Its 32 incomplete
 items remain open Path-B source, rail, control, and CM5-side connections.
+V858/V859 tested the RTL_5V source-to-C5 power-plane probe and were rejected
+for local source/via clearance and collisions with accepted SPI/PERST fields.
+V860 narrowed the source to 0.20 mm and moved its ordinary transition into
+the measured SPI-channel gap. Native DRC passes with 0 violations and 31
+expected incomplete items; the saved-board audit proves U1.17→C5.1 and a
+trace-removal negative control. U1.33 and the remaining RTL_5V/RTL_3V3/RTL_1V1
+endpoints remain open.
