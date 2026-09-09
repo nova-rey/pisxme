@@ -57,6 +57,10 @@ paths, but its USB_TXN1/USB_TXP1 skew proxy is 4.718 mm versus 4.400 mm on
 the VBUS parent. V8 therefore remains a source-escape basis, not a complete
 pair-balance or Phase 24 closure.
 
+V10 is superseded route evidence: its local P-leg meander improves TX skew to
+0.259 mm, but creates two same-layer USB TX pair self-crossings. The next
+pair-balance attempt must remain layer-separated or shorten the opposite leg.
+
 The V9 TXN micro-adjustment is superseded route evidence: focused USB3 still
 passes, but native DRC rises to 731 and adds a real CM5_PET0_P/CM5_USB3_RX_N
 short. V8 remains the selected disposable parent.

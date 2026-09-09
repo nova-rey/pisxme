@@ -7244,6 +7244,10 @@ JMS583 package's 64 signal pads plus grounded exposed pad 65. The repaired
 library, selector, and TE M-key checks pass; physical storage validation
 remains open.
 
+V10 pair-matching meander reduced USB TX skew proxy to 0.259 mm but introduced
+two native same-layer pair self-crossings. Rejected the weave and retained the
+V8 source-field basis.
+
 Measured V8 against the VBUS parent: CM5-side USB3 paths and USB TX via count
 are unchanged, while local USB TX skew proxy rises from 4.400 mm to 4.718 mm.
 Retained V8 as a clean-source basis pending pair-length co-authoring.

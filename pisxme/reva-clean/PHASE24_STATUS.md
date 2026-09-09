@@ -60,6 +60,11 @@ pad parity passing, with no native `shorting_items` class; native DRC reports
 730 findings. It is not closure: inherited crossing/open/clearance/width and
 full-board power/ground gates remain. No production copper changed.
 
+The V10 local P-leg meander reduced the USB_TXN1/USB_TXP1 skew proxy to
+0.259 mm, but native DRC found two real same-layer pair self-crossings. It is
+rejected as route implementation evidence; pair matching must use a
+layer-separated or shortened-leg corridor without weaving.
+
 Saved-board route metrics show V8 leaves the CM5-side USB3 paths unchanged
 and uses zero additional vias for USB_TXP1/USB_TXN1. Its local TX skew proxy
 is 4.718 mm versus 4.400 mm on the VBUS V1 parent, so V8 is a clean-source
