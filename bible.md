@@ -8094,3 +8094,8 @@ filled V23 remains the retained comparison basis.
 V31 tested an F.Cu-only VBUS detour. It removed the original TUSB_SATA_TXP /
 VBUS short but introduced three native short classes after refill. Rejected
 the isolated VBUS detour; coordinated corridor allocation remains required.
+
+V32 tested a left-exit VBUS corridor. After native refill it removed the
+storage SATA/VBUS short and reduced DRC to 604 findings / 399 unconnected
+items; one CM5 USB RX polarity short remains. All focused storage audits pass.
+Retained V32 as disposable corridor evidence only.

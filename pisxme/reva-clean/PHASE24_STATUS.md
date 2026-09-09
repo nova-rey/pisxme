@@ -79,6 +79,14 @@ but introduced three other shorting classes (`MODE_IN`/`STORAGE_SEL`, CM5 USB
 RX polarity, and TUSB SATA TX polarity). It is rejected; VBUS requires
 coordinated local corridor allocation.
 
+V32 is the best current disposable corridor basis for the storage-local
+VBUS repair. Its left-exit VBUS route removes the V23 SATA/VBUS short; after
+native zone refill, DRC reports 604 findings / 399 unconnected items and only
+one remaining shorting item, a CM5 USB RX polarity collision. Native JMS583
+physical endpoints, USB3, SATA, and mode-control audits pass. V32 is not
+production authority or Phase 24 closure until the remaining native short and
+full routing debt are resolved.
+
 V13 is the retained local routing basis. Its upper P-leg detour preserves the
 V8 source ordering, reduces the USB_TXN1/USB_TXP1 skew proxy to 0.259 mm, and
 keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits
