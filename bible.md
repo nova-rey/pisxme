@@ -70,6 +70,12 @@ JMS_VBUS_SENSE, then preserved V10 as rejected evidence. V10 passes all three
 divider endpoints and the trace-removal negative control, but native DRC
 reports 532 findings with a real VBUS/JMS_VBUS_SENSE handoff short. VBUS
 remains open and no route was promoted.
+
+2026-09-08: VBUS sense V14 was preserved as the cleanest complete-endpoint
+trial so far. U11.16, U11.10, R82, and R83 plus the trace-removal negative
+control pass; native DRC has no VBUS/JMS_VBUS_SENSE shorting class, but still
+reports 528 findings / 499 inherited opens with added clearance and crossing
+classes. It was not promoted.
 2026-09-08: RTL9210B V551 proves the bottom 1V1 group in the native graph
 with an exact negative control, but native DRC rejects the below-REFCLK
 shared return for XTAL_OUT, LANE0_RXP, and RTL_3V3 conflicts. That route

@@ -1,0 +1,14 @@
+Phase 24 VBUS sense V14 summary — 2026-09-08
+
+Base: PHASE24_DUAL_MODE_STORAGE_FULL7_VBUS_RXN_REPAIR_V3.kicad_pcb
+Candidate: PHASE24_DUAL_MODE_STORAGE_FULL7_VBUS_RXN_REPAIR_V14.kicad_pcb
+
+Native VBUS audit: PASS for U11.16 -> R82.1, U11.10 -> R82.2,
+R82.2 -> R83.1; trace-removal negative control: PASS.
+Native DRC: 528 findings, 499 unconnected items, 4 shorting classes,
+24 track-crossing classes. No shorting class involves VBUS or
+JMS_VBUS_SENSE; the added handoff still contributes clearance/zone findings
+and the candidate is not promoted.
+
+This is route-implementation evidence only. No production CAD or validation
+severity was changed.

@@ -534,3 +534,9 @@ U11.16, R82, and R83. V10 passes all three native endpoint assertions and the
 trace-removal negative control, but native DRC reports 532 findings with a
 real VBUS/JMS_VBUS_SENSE handoff short. VBUS remains open; no route has been
 promoted.
+
+V14 is the cleanest complete-endpoint VBUS trial so far: the strengthened
+audit passes U11.16, U11.10, R82, and R83 with its trace-removal negative
+control, and no DRC shorting class involves VBUS or JMS_VBUS_SENSE. It still
+adds QFN/zone clearance findings and 24 crossing classes overall, so it is
+retained evidence rather than a promoted route.
