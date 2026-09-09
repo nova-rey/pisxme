@@ -1389,3 +1389,12 @@ This is a local control-routing closure, not full RTL9210B qualification;
 REFCLK, PCIe lane, remaining support, firmware/productization, and integrated
 Path-B gates remain open. V1220-V1225 remain historical rejected route
 implementations.
+V1240 is the current REFCLK source-field discriminator. With only the local
+RTL_1V1/RTL_3V3/GND route objects in the REFCLK escape window removed, the
+REFCLK_P/N endpoint audit and complete source-cohort negative controls pass,
+and native DRC has no crossing or shorting findings. The remaining native
+findings are expected support opens caused by that deliberate isolation;
+therefore V1240 is not full support closure. It establishes that REFCLK is
+geometrically viable and that the next task is coordinated rail/ground
+regeneration around the accepted source exits. V1230-V1237 remain rejected
+route-implementation evidence.

@@ -9322,3 +9322,10 @@ negative controls passing; native DRC retains only the inherited RTL_3V3
 dangling warning and expected fixture opens. V1220-V1225 remain rejected
 route evidence. REFCLK, lane, remaining support, and integrated Path-B gates
 remain open.
+2026-09-09 — PiSXMe Phase 24 Path-B V1240 discriminator. REFCLK_P/N native
+endpoint connectivity and complete source-cohort negative controls pass after
+local QFN rail/ground route objects were isolated. Native DRC shows no
+crossings or shorts; support opens are intentional isolation artifacts, so
+V1240 is not final closure. The evidence changes the next action to
+coordinated rail/ground regeneration around proven REFCLK exits. Path A and
+production CAD remain untouched.

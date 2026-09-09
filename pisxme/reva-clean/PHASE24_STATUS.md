@@ -9928,3 +9928,15 @@ two local control departures only. REFCLK, PCIe lane, remaining RTL9210B
 support, and integrated Path-B validation remain OPEN. V1220-V1225 are
 preserved route-implementation failures, not architecture or placement
 evidence.
+V1240 is retained as a source-field discriminator, not as final support
+closure. It removes only local RTL_1V1/RTL_3V3/GND route objects occupying
+the REFCLK escape window, then gives REFCLK_P/N separated source exits and
+the V1226 boundary/topology corridors. Native saved-board REFCLK endpoint
+connectivity and complete source-cohort negative controls pass. Native DRC
+reports no crossings or shorts; its findings are only the intentionally
+disconnected rail/support objects left by the isolation experiment and the
+expected remaining opens. This proves the REFCLK route class is viable when
+the local QFN rail field is regenerated around it. V1230-V1237 are rejected
+REFCLK route-implementation experiments. Next gate: rebuild the displaced
+1V1/3V3/GND support field around the V1240 exits, then revalidate REFCLK and
+all affected rail endpoints.
