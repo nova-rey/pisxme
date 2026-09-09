@@ -1289,3 +1289,8 @@ U1.52 RTL_3V3 and U1.55 RTL_1V1 departures with XTAL_IN. V1113 left two USB
 pad-hole violations and dangling orphan stubs; V1114 reduced this to the
 U1.44 no-net pad clearance/hole pair plus inherited dangling warnings.
 V1114 is not promoted; V1115 will move only the 3V3 transition farther out.
+V1115/V1116 are rejected 3V3-transition refinements from the V1114
+co-authored fanout. Moving the transition inward or above the QFN still
+violates exposed-pad/no-net/USB pad clearance or the central GND field.
+The result confirms the next repair must allocate the complete QFN fanout,
+including the exposed-pad and remaining 1V1/3V3 departures, as one field.

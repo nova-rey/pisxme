@@ -9109,3 +9109,8 @@ crystal fanout. No production CAD was changed.
 departures with XTAL_IN. V1114 reduced the new native DRC to the U1.44 no-net
 pad clearance/hole pair plus inherited dangling warnings. It is not promoted;
 the next trial moves only the 3V3 transition beyond that pad-hole field.
+2026-09-09: Rejected V1115/V1116 3V3-transition refinements. Moving the
+co-authored transition within or above the QFN still violated exposed-pad,
+no-net/USB pad, or central-GND clearance. The next repair must allocate the
+complete QFN fanout, including exposed pad and remaining 1V1/3V3 departures,
+as one field.
