@@ -8847,3 +8847,7 @@ DRC found 11 violations, including source-via contact with U1.15/U1.16 and
 B.Cu crossings of SPISO3/SPICLK/SPISI. Preserve the result as route-class
 evidence; retain V927 as the SPI baseline and V981 as the clean source-field
 basis.
+2026-09-09: V987 rejected a three-net upper source allocation against V927.
+Native DRC found 17 violations involving the retained SPISO/RTL_1V1 shelf,
+SPICLK/SPISI, and the new 3V3 source via. The evidence requires full local
+1V1/SPISO/3V3 coauthoring; it does not reject Path B.

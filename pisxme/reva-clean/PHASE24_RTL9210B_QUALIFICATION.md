@@ -959,3 +959,9 @@ geometry and was rejected by 11 native violations: the source via entered the
 U1.15/U1.16 side-field and its B.Cu collector crossed SPISO3, SPICLK, and
 SPISI. The lower-drop class is rejected as route-implementation evidence;
 V927 remains the five-SPI baseline and V981 remains source-field evidence.
+V987 tested a co-authored upper source departure for SPISO3, RTL_3V3, and
+SPICLK against retained V927 copper and was rejected by 17 native violations.
+The findings include SPISO3/retained SPISO and RTL_1V1 conflicts, SPICLK/
+SPISI conflict, and source-via field contact. The three-net-only edit is not
+an adequate class; the next candidate must regenerate the neighboring
+1V1/SPISO shelf together with the 3V3 departure.
