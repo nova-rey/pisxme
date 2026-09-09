@@ -9094,3 +9094,9 @@ that conflict but still failed the U1.55-adjacent XTAL_OUT source escape and
 the residual RTL_3V3 corridor. These are route-implementation failures, not
 evidence against the relocated support placement. V888 remains the accepted
 GND-return base for the next U1 source-escape strategy.
+V892 corrected the source-escape shape using a perpendicular XTAL_OUT
+dogbone and the scrubbed U1.52 discriminator. Native DRC reports 0 violations
+and 26 expected incomplete items. The saved-board audit passes XTAL_IN,
+XTAL_OUT, RSET, and GND support connectivity and both source-trace negative
+controls. This is the accepted complete relocated crystal-support primitive;
+the scrubbed U1.52 RTL_3V3 departure remains to be restored without regression.

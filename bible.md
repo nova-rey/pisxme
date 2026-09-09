@@ -8609,3 +8609,9 @@ the trial with U1.52 scrubbed; V891 removed that conflict but still failed the
 U1.55-adjacent XTAL_OUT source escape and residual 3V3 corridor. These remain
 route-implementation failures. V888 is the accepted GND-return base for the
 next U1 source-escape strategy; crystal nets remain open.
+2026-09-09: V892 corrected the source-escape shape with a perpendicular
+XTAL_OUT dogbone and the scrubbed U1.52 discriminator. Native DRC passed with
+0 violations and 26 expected incomplete items. The saved-board audit passed
+XTAL_IN/XTAL_OUT/RSET/GND connectivity and both source-trace negative
+controls. V892 is the accepted complete relocated crystal-support primitive;
+U1.52 RTL_3V3 remains scrubbed for the next restoration trial.
