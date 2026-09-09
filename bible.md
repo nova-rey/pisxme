@@ -68,6 +68,10 @@ unchanged.
 XTAL_OUT. Native DRC found five and seven source-field violations; both were
 rejected. V1144 XTAL_OUT remains accepted, while XTAL_IN and full support
 closure remain open.
+2026-09-09: V1147 retained V1144 XTAL_OUT and moved XTAL_IN left below the
+GND triangle. Native DRC retained five first-millimeter QFN source-field
+violations; the downstream corridor was clean. Rejected pending staggered
+source-transition work.
 
 2026-09-08: Strengthened the JMS583 VBUS audit to include U11.10
 JMS_VBUS_SENSE, then preserved V10 as rejected evidence. V10 passes all three
