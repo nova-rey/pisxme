@@ -1332,6 +1332,13 @@ unconnected items; the new mixed-layer route has no JMS_AVDDL short or
 crossing, but ordinary-via plane-clearance findings remain open with the
 board's inherited plane evidence. Full support and manufacturing closure
 remain open.
+
+V1091 is rejected RSET evidence: the straight approach crossed R1.2 GND.
+V1092 approaches R1.1 from above and passes native DRC with only the inherited
+RTL_3V3 dangling warning; the fixture has 21 unconnected items. The saved
+native audit proves U1.51/R1.1 RSET connectivity, and the source-trace
+negative control passes. V1092 is retained; remaining support/control and
+QFN-side requirements remain open.
 The reset-delay branch was added to the same cohort with R81.1 exiting on
 its free side to C85.1. The first branch attempt shorted adjacent R81.2 and
 was rejected; V16's corrected branch passes the native eight-net endpoint

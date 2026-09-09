@@ -448,6 +448,11 @@ has only the inherited RTL_3V3 dangling warning; saved-board connectivity and
 the U1.25 source-trace negative control pass for the complete current 1V1
 endpoint group. Remaining RTL9210B support/control gates remain open.
 
+V1091 is rejected because its straight RSET approach crossed R1.2 GND.
+V1092 is retained after approaching R1.1 from above. Native DRC has only the
+inherited RTL_3V3 dangling warning; saved-board connectivity and the RSET
+source-trace negative control pass. Remaining support/control gates stay open.
+
 V1081 is rejected coupled-fanout evidence. Relocating the 5V escape outward
 caused crossings with retained SPI B.Cu lanes, while the U1.25 1V1 departure
 still violated SPICS clearance. The failure does not invalidate the rail or
