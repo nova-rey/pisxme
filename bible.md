@@ -9553,3 +9553,7 @@ source-field allocation problem; raw evidence is preserved.
 both crystal endpoint and negative-control audits passed, but native DRC
 rejected 27 conflicts against live lane/rail geometry. The donor is not
 directly compatible and the current four-lane basis remains unchanged.
+2026-09-09 — V1304 tested a 20 mm west/10 mm north coherent crystal/RSET
+pocket migration. Native DRC rejected 45 violations, including RXN crossings,
+source-pad shorts, and XTAL_IN-to-C1 GND contact; its RSET removal heuristic
+also failed to prove disconnection. The candidate is rejected and preserved.

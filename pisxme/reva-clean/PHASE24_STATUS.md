@@ -10216,3 +10216,9 @@ endpoint and source-removal audits pass, but native DRC rejects 27 violations,
 including XTAL_OUT/RTL_1V1 conflicts and XTAL_IN clearance/crossings against
 the live lane transition field. The donor is therefore not directly
 compatible; the V1279 four-lane basis remains unchanged.
+V1304 tested a coherent 20 mm west/10 mm north migration of Y1/C1/C2/R1 with
+new separate RSET, XTAL_IN, and XTAL_OUT corridors. Native DRC rejects 45
+violations, including RXN crossings, U1 source-pad shorts, lane/via clearance,
+and XTAL_IN-to-C1 GND contact. The audit also failed to establish an RSET
+negative-control disconnection under this malformed route. V1304 is rejected
+and provides no promotion evidence.
