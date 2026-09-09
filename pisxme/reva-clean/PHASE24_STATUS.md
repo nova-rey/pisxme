@@ -48,6 +48,12 @@ and the focused USB3 audit loses the unchanged RX paths because the complete
 local island was not regenerated. It does not alter Path A or the retained
 VBUS parent; rotation remains a placement experiment, not production authority.
 
+The QFN-neckdown V7 is rejected route evidence: a 0.15 mm package-edge
+neckdown followed by normal-width USB TX routing preserves focused USB3
+connectivity, but native DRC still finds a real USB_TXP1/JMS_AVDDL short at
+the unchanged AVDDL via. Width-only variation is exhausted for this local
+geometry; the next route must co-author the complete source-field/via map.
+
 ## SUPERSEDED ROUTING SNAPSHOT — pre-VBUS/J8 basis
 
 The following historical snapshot is retained for archaeology only. It is not
