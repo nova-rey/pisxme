@@ -9412,3 +9412,8 @@ localized its remaining failures to U1.40 versus the parent RTL_3V3 via
 field and the new 3V3 upper-rail segment versus the accepted U1.25 1V1 via
 at (98.4,62.5). This confirms the next regeneration must co-author the
 3V3 remote rail with the existing 1V1 transition field as well as U1.40.
+V1034 is REJECTED. Preserving the parent GND geometry while retaining a
+vertical RTL_3V3 spine leaves U1.40 touching the 3V3 via field; moving the
+3V3 remote detour above the accepted 1V1 field introduces two GND clearances.
+The next credible class is full local QFN support-field regeneration,
+including placement/transition allocation, not another remote rail jog.

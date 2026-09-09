@@ -1090,3 +1090,7 @@ V1033 is rejected despite preserving the parent GND geometry. Native DRC
 finds U1.40 contact with the parent 3V3 via field and a 3V3 upper-rail
 collision with the accepted U1.25 1V1 via at (98.4,62.5). The next class
 must co-author the remote 3V3 rail, 1V1 transition field, and U1.40 branch.
+V1034 is rejected: the parent-GND-preserving 3V3 topology still contacts the
+U1.40 transition, and its upper remote detour crosses the parent GND
+diagonal. This route class is exhausted. Complete local QFN support-field
+regeneration is required next.

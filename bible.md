@@ -8951,3 +8951,7 @@ must be regenerated together, with the parent GND plane attachment retained.
 DRC localized failures to U1.40 versus the parent 3V3 via field and the new
 3V3 upper-rail segment versus accepted U1.25 1V1 via (98.4,62.5). Future
 regeneration must co-author the remote 3V3 and local 1V1 fields together.
+2026-09-09: V1034 rejected the parent-GND-preserving RTL_3V3 reroute. The
+retained spine contacted U1.40, while the upper remote detour crossed two
+GND clearances. The next class is full QFN support-field regeneration with
+coordinated placement and transitions.
