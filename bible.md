@@ -8530,3 +8530,8 @@ It was rejected by six related SPICS-to-U1 exposed-GND pad/thermal/clearance
 violations plus the inherited isolated-fill warning. It retained 40
 incomplete items and no new endpoint failure. The next class staggers the
 source escapes left of U1 before the B.Cu transitions.
+2026-09-09: V854 tested a left-side vertically staggered B.Cu source escape
+and was rejected with 19 native violations, dominated by U1 exposed-pad,
+adjacent-pad, and zone-clearance conflicts. This is route-implementation
+evidence only. The next active basis returns to V772's complete-SPI/support
+field for a distinct control/source escape class.

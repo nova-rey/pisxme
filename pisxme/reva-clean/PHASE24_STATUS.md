@@ -9008,3 +9008,9 @@ isolated-fill warning. It still reduced the incomplete count to 40 and did
 not create a new pair endpoint failure. The next source escape must leave the
 U1 field toward the left, with SPISO and SPICS vertically staggered before
 their B.Cu transitions.
+V854 tested a left-side vertically staggered B.Cu source escape and was
+rejected with 19 native violations, dominated by U1 exposed-pad/adjacent-pad
+and zone-clearance conflicts. This is a route-implementation failure, not an
+endpoint or macro-placement result. The 270-degree orientation remains useful
+ordering evidence, but the next active basis returns to V772's complete-SPI
+support field for a different control/source escape class.

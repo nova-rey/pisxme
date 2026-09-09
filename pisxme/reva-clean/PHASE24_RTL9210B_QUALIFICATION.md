@@ -711,3 +711,9 @@ the U1 exposed GND pad/thermal field, producing six related GND/clearance
 violations and the inherited isolated-fill warning. It retains 40 incomplete
 items and no new endpoint failure. The next class must stagger the two source
 escapes left of the U1 field before dropping to B.Cu.
+V854 tested that left-side vertically staggered B.Cu source escape and was
+rejected with 19 native violations, dominated by U1 exposed-pad/adjacent-pad
+and zone-clearance conflicts. It is route-implementation evidence only. The
+270-degree placement retains useful endpoint-order information, but the next
+active basis returns to V772's complete-SPI/support field for a distinct
+control/source escape class.
