@@ -8557,6 +8557,10 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: V870 extended the clean V869 RTL_3V3 spine from U2.8 to U2.3.
+Native DRC passed with 0 violations and 28 expected incomplete items; the
+saved-board audit proved U2.3/U2.8/C3.1 and a trace-removal negative control.
+U1-side RTL_3V3 and R2/R3 supply endpoints remain open.
 2026-09-09: V863 tested a combined RTL_3V3 bridge/support collector and was
 rejected by an In2 crossing against RTL_5V plus U2/SPI clearance conflicts.
 V864 moved the collector outboard but was rejected by three real F.Cu/In2

@@ -9055,3 +9055,7 @@ reduced this to one PERST_N B.Cu crossing. V869 lifted the B.Cu jog above the
 PERST_N corridor and passes native DRC with 0 violations and 29 expected
 incomplete items. Its saved-board audit proves U2.8→C3.1 and a trace-removal
 negative control. Remaining RTL_3V3 endpoints are still open.
+V870 extends the clean V869 RTL_3V3 spine from U2.8 to U2.3. Native DRC
+passes with 0 violations and 28 expected incomplete items. The saved-board
+audit proves U2.3/U2.8/C3.1 and a trace-removal negative control. U1-side
+RTL_3V3 and the R2/R3 supply endpoints remain open.
