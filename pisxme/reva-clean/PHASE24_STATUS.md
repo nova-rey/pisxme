@@ -8895,3 +8895,8 @@ QFN/via clearance, not missing-net assertions. V820 co-authored both
 departures but remains rejected with 3 native violations (one crossing and
 two dangling transition artifacts). These are implementation experiments;
 V810 remains the retained clean basis and complete SPI allocation is open.
+V821 tested translating U2's SPI-flash endpoint 10 mm south. The saved-board
+placement probe passes native DRC with 0 violations and 42 expected
+incomplete connections, but is not a routed acceptance. V822's direct
+five-net probe on that placement was rejected with 11 native violations and
+37 expected incomplete connections.

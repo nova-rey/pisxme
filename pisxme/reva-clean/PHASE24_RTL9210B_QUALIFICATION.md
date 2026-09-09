@@ -611,3 +611,8 @@ two adjacent departures and was rejected with 3 native violations: one
 crossing plus dangling SPICS transition artifacts. These results are saved
 route evidence only; they do not close SPI or reject Path B. V810 remains the
 last clean combined basis.
+V821 tested translating U2's SPI-flash endpoint 10 mm south; its placement
+probe passes native DRC with 0 violations and 42 expected incomplete
+connections. V822's direct five-net probe is rejected with 11 native
+violations and 37 expected incomplete connections. The move remains a
+candidate placement class, not a promoted route.

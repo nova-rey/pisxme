@@ -8429,3 +8429,8 @@ V820 co-authored both adjacent departures but was rejected with 3 native
 violations, including a crossing and dangling transition artifacts. These
 are preserved as route-implementation evidence; V810 remains the clean
 combined basis and complete SPI allocation is open.
+2026-09-09: V821 tested translating the Path-B SPI-flash endpoint 10 mm south;
+the placement probe passed native DRC with 0 violations and 42 expected
+incomplete connections. V822's direct five-net probe was rejected with 11
+native violations and 37 expected incomplete connections. The placement is a
+candidate class, not a promoted route; V810 remains the retained clean basis.
