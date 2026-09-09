@@ -7599,3 +7599,10 @@ copper was promoted.
 escapes. V3 removed the connector-ground collision but retained a U13 source
 pair short; V4 crossed adjacent U13 pads. Both are rejected route evidence;
 the source-authoritative support workbench remains active.
+
+2026-09-08: Corrected the selector-side SATA escape authoring. C30--C33 pad 1
+are F.Cu-only, so a B.Cu segment beginning at those pads was not native
+connectivity; the repaired author adds an actual capacitor-side through-via
+before the B.Cu corridor. Selector escape V3 and V4 pass all 12 saved-board
+SATA endpoint assertions. V4 still has inherited USB3/support shorts and
+crossings, so no Phase 24 closure or copper promotion was claimed.

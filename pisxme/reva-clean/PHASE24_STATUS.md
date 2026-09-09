@@ -47,9 +47,13 @@ remains the active basis; no M.2 launch copper was promoted.
 
 Launch V3/V4 are additional rejected route implementations. V3 removed the
 connector-ground collision class but retained a source-field pair short; V4
-staggered source vias farther but crossed adjacent U13 pads. The active
-source-authoritative support workbench is unchanged, and the next launch pass
-must allocate the U13 0.4-mm escape field before selecting connector-side vias.
+staggered source vias farther but crossed adjacent U13 pads. The current
+disposable `PHASE24_STORAGE_M2_LAUNCH_V6` removes the M.2-specific short
+classes and passes the 12-endpoint SATA audit, but remains evidence only.
+The separate selector-side escape V3/V4 then reauthored all four C30--C33 to
+U13 branches with actual capacitor-side F.Cu-to-B.Cu vias. V3 passes the
+native 12-endpoint SATA audit; V4 is the latest candidate and still has
+unrelated inherited USB3/support shorts and crossings. Neither is promoted.
 
 The integrated REXT repair discriminator is complete as a bounded experiment.
 V1's ordinary-via escape removed the original U11.40/U11.39 short but

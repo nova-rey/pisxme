@@ -339,7 +339,10 @@ path is restored to the FULL7 geometry.
 ## CURRENT OPEN GATES
 
 1. The storage-local JMS583 support, complete USB3 path, and SATA selector
-   path now pass their focused native endpoint audits. Finish the remaining
+   path now pass their focused native endpoint audits. The M.2 launch V6 and
+   selector-side SATA escape V3/V4 also pass the native saved-board SATA
+   endpoint audit; they are disposable route evidence, not yet promoted.
+   Finish the remaining
    integrated route/DRC cleanup, then complete USB2, return, power, and
    mode-aware inactive-state validation without synthetic connectivity edges.
 2. Complete native ERC/DRC, mode-aware connectivity and inactive-state checks
