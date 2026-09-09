@@ -178,6 +178,14 @@ passes native DRC with one inherited RTL_3V3 dangling warning and no new
 electrical violations. V1061 is the current U2 supply primitive; its join to
 the full QFN/resistor/C3 3V3 group remains open.
 
+V1062 joins the rotated-U2 3V3 island to the established C3 trunk with an
+outboard B.Cu perimeter route. V1063 then attaches R2.2 and R3.2 using local
+ordinary transitions. Native DRC remains at one inherited 3V3 dangling
+warning with no new electrical violations; the saved-board audit passes
+U1.34/U1.39/U2.3/U2.8/R2.2/R3.2/C3.1 and a source-trace negative control.
+V1063 is the current clean supply basis; U1.20/U1.52, 1V1/5V, reset/control,
+USB, lane, and full Path-B gates remain open.
+
 V1058 regenerates all five SPI channels from the clean rotated-U2 basis.
 Native DRC reports one inherited RTL_3V3 dangling warning and no new
 electrical violations. The saved-board audit passes SPISI, SPICLK, SPISO3,

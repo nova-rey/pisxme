@@ -63,6 +63,13 @@ rotated-U2.3/U2.8 same-net bridge and is native-clean apart from one inherited
 RTL_3V3 dangling warning. Retain V1061 as the current U2 supply primitive;
 the complete QFN/resistor/C3 3V3 group is not yet closed.
 
+V1062 joins the rotated-U2 supply island to the C3 3V3 trunk without new
+electrical DRC findings. V1063 adds R2.2 and R3.2 through local ordinary
+transitions. Native DRC has one inherited dangling warning, and the saved
+board audit passes the complete current 3V3 endpoint group plus a source-trace
+negative control. V1063 is the current supply basis; remaining QFN rails and
+Path-B support gates are OPEN.
+
 V1049 is rejected for crossing the retained SPISO3 launch. V1050 avoids that
 F.Cu crossing but fails at the SPICLK-adjacent via and crosses the existing
 1V1 B.Cu shelf. Both are local route-implementation evidence only. U1.20

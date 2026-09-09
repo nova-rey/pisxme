@@ -9002,3 +9002,8 @@ remaining U2 supply/support endpoints stay open.
 V1050 rejected the immediate B.Cu alternative at the SPICLK-adjacent via and
 1V1 shelf crossing. Preserve both as local route evidence; U1.20 remains
 open for an outboard co-authored transition.
+2026-09-09: V1062 joined the rotated-U2 3V3 island to the C3 trunk. V1063
+attached R2.2/R3.2 with local ordinary transitions. Native DRC retained only
+one inherited dangling warning; saved-board connectivity and the source-trace
+negative control pass for the complete 3V3 endpoint group. V1063 is the
+current supply basis while remaining RTL9210B support stays open.
