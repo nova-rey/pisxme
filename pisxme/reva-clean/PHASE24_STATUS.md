@@ -71,6 +71,8 @@ removed the C86 launch collision but retained the VCCO/VCCK field conflict;
 V7 moved the source transition and increased native DRC to 677 while the
 same VCCO/VCCK short remained. The V4_MODE candidate remains the cleanest
 integrated storage basis.
+V8 rerouted VCCK around the VCCO transition but introduced new CM5_5V and
+ JMS_PCIE_TXP0 crossings/shorts and raised native DRC to 680; it is rejected.
 
 The integrated REXT repair discriminator is complete as a bounded experiment.
 V1's ordinary-via escape removed the original U11.40/U11.39 short but

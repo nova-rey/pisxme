@@ -7624,3 +7624,8 @@ V6 removed the C86/USB launch collision but retained the VCCO/VCCK field
 conflict; V7 moved the source transition and increased DRC to 677 while the
 same short remained. Both are rejected support-route evidence; V4_MODE stays
 the current integrated basis.
+
+2026-09-08: Tested VCCO/VCCK support-route V8 with a north F.Cu VCCK
+corridor. It retained native VCCO endpoint and negative-control PASS but
+introduced CM5_5V/JMS_PCIE_TXP0 conflicts and raised DRC to 680. Rejected;
+the integrated V4_MODE basis is unchanged.

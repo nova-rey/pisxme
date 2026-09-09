@@ -31,4 +31,17 @@ add_track(b, n, B, (132.0, 136.0), (132.0, 145.0))
 add_track(b, n, B, (132.0, 145.0), (147.0, 147.0))
 add_via(b, n, (147.0, 147.0))
 add_track(b, n, F, (147.0, 147.0), (147.5, 147.0))
+# Keep VCCK's source-to-cap branch out of the VCCO source transition.  This is
+# an isolated support-route experiment; both rail identities and endpoints
+# remain unchanged.
+k = b.FindNet("JMS_VCCK")
+if k is None: raise SystemExit("missing JMS_VCCK")
+for item in list(b.GetTracks()):
+    if item.GetNetCode() == k.GetNetCode(): b.RemoveNative(item)
+for a, z in (((136.35, 132.4), (131.0, 132.4)),
+             ((131.0, 132.4), (131.0, 110.0)),
+             ((131.0, 110.0), (119.5, 110.0)),
+             ((119.5, 110.0), (119.5, 147.0)),
+             ((119.5, 147.0), (119.5, 147.0))):
+    add_track(b, k, F, a, z)
 b.BuildListOfNets(); b.Save(str(out)); print(out)
