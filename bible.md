@@ -8264,3 +8264,8 @@ complete crystal/support micro-island.
 transition, but crossed the RSET collector. V693 stepped left of the RSET
 endpoint and passed native KiCad DRC with zero violations and 28 incomplete
 opens. Retained V693 as the positive U1.52 RTL_3V3 branch basis.
+
+2026-09-09: V694's U1.20-to-load corridor contacted SPISI and was rejected.
+V695 moved the descent outside the QFN pad field and connected U1.20, C3.1,
+U2.3, and U2.8 on RTL_3V3. Native KiCad DRC reported zero violations and 26
+incomplete opens; retained V695 as the positive 3V3 load-field basis.

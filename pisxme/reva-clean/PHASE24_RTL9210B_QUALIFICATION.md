@@ -77,6 +77,10 @@ implementation and retain the V683 crystal basis plus V687 U1.39 branch.
 V692's B.Cu U1.52 route crossed the RSET collector and was rejected. V693
 stepped left of that endpoint and passed native DRC with zero violations and
 28 remaining opens. Retain V693 as the positive U1.52 branch basis.
+V694's first load corridor contacted SPISI and was rejected. V695 moved the
+U1.20 descent outside the QFN pad field and passed native DRC with zero
+violations and 26 remaining opens, closing U1.20/C3/U2 RTL_3V3 load routing.
+Retain V695 as the positive 3V3 load basis.
 V690 moved only C2 and rebuilt XTAL_OUT/GND alongside U1.52; native DRC found
 15 violations including crystal shorts and 3V3/CLKREQ and 1V1/GND contact.
 Reject the C2-only class. The next experiment must co-author the complete
