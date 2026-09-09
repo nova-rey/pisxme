@@ -72,6 +72,9 @@ open.
 V686 was rejected for one RTL_1V1/RTL_3V3 via short. V687's 0.2 mm jog around
 that via passes native DRC with zero violations and 29 remaining opens; it is
 the current positive U1.39 RTL_3V3 branch basis.
+V688's U1.52 branch contacted the C2 GND return and CLKREQ pull-up pad and was
+rejected at three native DRC violations. U1.52 remains open; the next repair
+must co-author that branch with the crystal micro-island.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native

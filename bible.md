@@ -8245,3 +8245,7 @@ Retained V685 as the positive RTL_3V3 edge-source basis.
 existing RTL_1V1 via, so native DRC rejected it. V687 added a minimum 0.2 mm
 lateral jog around that via; native KiCad DRC reported zero violations and 29
 incomplete opens. Retained V687 as the positive U1.39 RTL_3V3 branch basis.
+2026-09-09: V688 attempted the U1.52 RTL_3V3 branch and native DRC found
+three violations where the route contacted the C2 GND return and CLKREQ
+pull-up pad. Rejected V688; the next class must co-author U1.52 with the
+crystal micro-island.
