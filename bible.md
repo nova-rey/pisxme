@@ -9159,3 +9159,8 @@ removed only local QFN-field copper and reallocated rails, RSET, crystal, and
 GND together, but native DRC found 22 violations, including source-field and
 support-return crossings. Next trials will derive geometry from native
 transformed pad positions; production CAD and Path A remain unchanged.
+2026-09-09: V1140 rotated a duplicated U1 in an isolated crystal fixture.
+The authoring experiment exposed a blank-board construction defect: duplicated
+footprints retained source-local transforms and the new BOARD lacked the
+native outline/net registry. Native DRC found 24 tooling-fixture violations;
+this is not an electrical verdict and production CAD remains unchanged.

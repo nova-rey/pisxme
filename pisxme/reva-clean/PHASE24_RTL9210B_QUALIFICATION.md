@@ -12,7 +12,9 @@ native DRC found 15 violations, including XTAL_IN/XTAL_OUT return crossings.
 The V1135-V1138 files and reports are historical route evidence, not production
 CAD or a change to Path A. V1139 scrubbed and regenerated the local
 RTL_3V3/RTL_1V1/RSET/GND/XTAL field but was rejected by native DRC with 22
-violations. The next experiment will derive all trial geometry from native
+violations. V1140 tested a rotated local fixture, but blank-board duplication
+lost the native outline/net registry and produced 24 tooling-fixture
+violations; it is not an electrical verdict. The next experiment will derive all trial geometry from native
 transformed pad positions. Earlier V760/V772 summaries are historical
 evidence only.
 

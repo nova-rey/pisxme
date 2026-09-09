@@ -18,7 +18,9 @@ V1123 is retained as the clean GND/rail starting basis. V1139 scrubbed and
 regenerated the complete local RTL_3V3/RTL_1V1/RSET/GND/XTAL field, but native
 DRC found 22 violations, including source-field and support return crossings.
 The next class will use native-transformed pad coordinates in a rotated or
-repositioned local QFN fixture. No production CAD or
+repositioned local QFN fixture. V1140 attempted a blank-board duplicate
+fixture, but its missing native outline/net registry produced 24 tooling-
+fixture violations and is not an electrical verdict. No production CAD or
 Path-A artifacts were modified.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
