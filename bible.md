@@ -8905,3 +8905,7 @@ inherited opens. Retain V1015 as the accepted U1.50 primitive.
 same-net In2 segment into the filled rail pocket. Native DRC then showed no
 electrical violations. Retain V1017 as the accepted U1.55 primitive; full
 RTL_1V1 closure remains open.
+2026-09-09: V1018/V1019 extended the accepted RTL_1V1 pocket to U1.60 and
+U1.63 with separate lower-row departures. Native DRC found no electrical
+violations; dangling source tracks and inherited opens remain intentional
+fixture residue. U1.40 and complete RTL_1V1 support remain open.

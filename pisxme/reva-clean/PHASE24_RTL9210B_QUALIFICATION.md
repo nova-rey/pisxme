@@ -1040,3 +1040,7 @@ V1016 exposed an unconnected U1.55 RTL_1V1 transition despite a clean F.Cu
 escape. V1017 adds the explicit same-net In2 pocket contact and is accepted
 as the U1.55 isolated primitive; native DRC has no electrical violations.
 Remaining 1V1 endpoints and full Path-B support remain open.
+V1018 and V1019 extend the accepted rail slice to U1.60 and U1.63 using
+separate lower-row departures. Both native DRC reports contain no electrical
+violations; only intentional dangling source tracks and inherited fixture
+opens remain. U1.40 and complete RTL_1V1 support remain open.

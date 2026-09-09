@@ -9351,3 +9351,8 @@ isolated from In2. V1017 adds the same-net In2 segment into the filled pocket;
 native DRC removes the via-isolated condition and reports no electrical
 short/clearance/crossing violations. U1.55 is accepted as an isolated
 primitive; the full RTL_1V1 rail remains open.
+V1018/V1019 extend the accepted rail slice to U1.60 and U1.63 using separate
+lower-row departures. Both native DRC reports contain no electrical
+violations; dangling tracks and inherited opens remain fixture residue. The
+accepted isolated set is U1.16/U1.25/U1.36/U1.50/U1.55/U1.60/U1.63. U1.40
+and full RTL_1V1 support remain OPEN.
