@@ -8654,3 +8654,8 @@ owned; SPI regeneration is the next implementation step.
 2026-09-09: V917 tested alternate U1.36/U1.40 RTL_1V1 pad-side escapes with
 an In2.PWR trunk. Native DRC rejected the candidate for RTL_3V3/USB_TXP0/GND
 field interactions. RTL_1V1 remains open; V914 remains the accepted base.
+2026-09-09: V921 regenerated SPICS from the west escape and was rejected by
+U1.28 clearance. V922 moved SPICS east to U1.24 -> via (100,67) -> U2.1 and
+retained the V920 U1.25 RTL_1V1 attachment. Native DRC passed with 0
+violations and 28 expected incomplete items; the saved-board audit and SPICS
+negative control passed. V922 is the accepted 1V1/SPICS primitive.

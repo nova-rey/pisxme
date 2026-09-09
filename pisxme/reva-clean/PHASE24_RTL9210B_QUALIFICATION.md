@@ -852,3 +852,9 @@ V917 tested alternate U1.36/U1.40 pad-side escapes with an In2.PWR trunk;
 native DRC rejected the candidate for the U1.36/RTL_3V3 field, the U1.40 /
 USB_TXP0 neighbor, and the relocated GND return. RTL_1V1 remains open; this
 candidate does not alter the accepted V914 support base.
+V921 regenerated SPICS from the original west escape and was rejected by U1.28
+pad-field clearance. V922 moved the source east to U1.24 -> ordinary via at
+(100,67) -> U2.1 while retaining the U1.25 RTL_1V1 power attachment from
+V920. Native DRC reports 0 violations and 28 expected incomplete items; the
+saved-board audit passes both RTL_1V1 and SPICS plus a source-trace negative
+control. V922 is the accepted combined 1V1/SPICS local primitive.
