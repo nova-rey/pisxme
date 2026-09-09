@@ -8557,6 +8557,12 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: V976 fully relocated the SPISO3 transition around the best V969
+RTL_3V3 cell and was rejected with five native DRC findings. The relocation
+shorted both the RTL_3V3 B.Cu trunk and the preserved SPISO shelf. This
+confirms the issue is a coupled local support-island allocation problem, not
+one transition coordinate; the next experiment co-authors SPI, 1V1, 5V, and
+3V3 shelves as one disposable island.
 2026-09-09: V974 exposed U1.21 SPISO2 at (100.0,66.05) as an additional
 source-field constraint; its proposed RTL_3V3 transition was rejected with
 eight native DRC findings. V975 routed RTL_3V3 right of that pad and returned
