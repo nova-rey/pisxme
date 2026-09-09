@@ -9339,3 +9339,10 @@ native violations because it crossed SPISI/SPICLK. V990 instead keeps the
 RTL_3V3 departure vertical to (100.4,60.8), then hands off on B.Cu; native
 DRC remains limited to the eight intentional dangling source ends and
 inherited opens. V990 is the accepted RTL_3V3 transition primitive.
+V1013 is REJECTED: the U1.40 lower-left route contacted the vertical
+RTL_3V3 collector at its actual via/track field. V1014 showed the same
+collector conflict for the nominal U1.50 transition. V1015 moves that
+transition west of the collector and passes native DRC with no electrical
+short/clearance/crossing violations; remaining findings are intentional
+dangling source tracks and inherited opens. U1.50 is an accepted isolated
+primitive; U1.40 and the remaining 1V1 rail remain OPEN.

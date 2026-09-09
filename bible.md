@@ -8896,3 +8896,8 @@ RTL_1V1 primitive using a separated ordinary-via/In2 corridor, with no
 electrical DRC violations beyond intentional dangling source tracks and
 inherited opens. Continue 1V1 allocation incrementally; Path A and
 production CAD remain unchanged.
+2026-09-09: V1013/V1014 rejected the nominal U1.40/U1.50 lower-left RTL_1V1
+transitions because the existing vertical RTL_3V3 collector occupied that
+via field. V1015 moved U1.50 west of the collector and passed native DRC with
+no electrical violations beyond intentional dangling source tracks and
+inherited opens. Retain V1015 as the accepted U1.50 primitive.
