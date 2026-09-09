@@ -504,3 +504,13 @@ The current support-route candidate was independently compared against the
 native schematic export and reports 111 expected-pad mismatches. It remains a
 disposable routing candidate until schematic-to-PCB authority is regenerated
 and the parity gate passes; no PCB-only ownership repair is accepted.
+
+## Current VBUS/RX_N launch discriminator — V3 rejected (2026-09-08)
+
+`PHASE24_DUAL_MODE_STORAGE_FULL7_VBUS_RXN_REPAIR_V3` passes native VBUS
+connectivity with a trace-removal negative control, the complete ten-net
+JMS583 support audit, and all ten USB3 endpoint assertions. It removes the
+earlier RX_N-to-J1 short, but native DRC still reports 509 findings / 499
+inherited unconnected items and an RX_N/refclk crossing. This is rejected as
+route-implementation evidence only; no production authority or Path-B
+artifact changed.

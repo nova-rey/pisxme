@@ -563,6 +563,17 @@ creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
 
+## Current VBUS/RX_N launch discriminator — V3 rejected (2026-09-08)
+
+`PHASE24_DUAL_MODE_STORAGE_FULL7_VBUS_RXN_REPAIR_V3` is disposable
+route-implementation evidence. It reroutes the CM5 USB3 RX_N launch around
+J1, removing the earlier RX_N-to-J1 shorting class. Native VBUS connectivity
+and its trace-removal negative control pass; complete JMS583 support and all
+ten USB3 endpoint assertions also pass. Native DRC reports 509 findings / 499
+inherited unconnected items, with an RX_N/refclk crossing, so it is rejected
+for promotion. No production authority, Path A artifact, or RTL9210B Path-B
+qualification changed.
+
 The complete ten-net JMS583 support audit passes on
 `PHASE24_DUAL_MODE_STORAGE_FULL7_AVDDL_local_zone.kicad_pcb`: REXT, XIN,
 XOUT, RESET_N, AVDD33, AVDDL, VCCO, VCCK, VDDREG_5V, and LXO connect by

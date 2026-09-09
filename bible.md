@@ -7456,3 +7456,10 @@ candidate reports 111 expected-pad mismatches, including M.2, Ethernet,
 service, mode-control, power, and support-passive ownership. The candidate
 remains disposable routing evidence; no mismatch was waived or repaired on
 the PCB side.
+
+2026-09-08: RX_N/J1 launch discriminator V3 was preserved as rejected route
+evidence. The around-J1 launch removes the earlier RX_N-to-J1 short and passes
+native VBUS, complete JMS583-support, USB3 endpoint, and trace-removal
+negative-control audits, but native DRC still reports 509 findings / 499
+inherited unconnected items and an RX_N/refclk crossing. No production CAD or
+Path-B qualification was changed.
