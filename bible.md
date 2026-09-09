@@ -9329,6 +9329,11 @@ crossings or shorts; support opens are intentional isolation artifacts, so
 V1240 is not final closure. The evidence changes the next action to
 coordinated rail/ground regeneration around proven REFCLK exits. Path A and
 production CAD remain untouched.
+2026-09-09 — PiSXMe V1251 outer-corridor trial rejected. Reusing a historical
+J1 launch without separate layer transitions caused native same-layer lane
+crossings and retained support conflicts. Preserve as route-implementation
+evidence; the next lane class uses independent B.Cu trunks and J1-side
+vias/dogbones.
 2026-09-09 — PiSXMe V1250 refinement checkpoint. The corrected source-only
 RTL9210B lane fanout terminates RXN before the lower pair row and keeps the
 lower pair escapes clear of the QFN side pads. Native DRC has no new

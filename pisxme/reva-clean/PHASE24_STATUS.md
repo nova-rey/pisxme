@@ -9064,6 +9064,12 @@ and SPISO3/GND shorting classes and an RTL_3V3 source-field crossing. This is
 a route-implementation failure; the retained V278/V282 placement and bases
 remain valid. Remaining SPI channels must be allocated as one coordinated
 field.
+V1251 is rejected outer-corridor implementation evidence. It adapted an older
+monotonic launch without preserving separate J1-side layer transitions, which
+caused native same-layer TX/RX crossings and conflicts with retained support
+fields. This is not evidence against the clean V1250 source escape or the
+RTL9210B lane architecture. The next class keeps all long lane trunks on B.Cu
+and uses independent J1-side vias/dogbones.
 V1249/V1250 isolated and refined the full RTL9210B side/source field. V1250
 uses diverging escapes: RXP/RXN transition before the lower pair row, while
 TXN/TXP leave on opposite sides of the lower edge, with TXP kept away from

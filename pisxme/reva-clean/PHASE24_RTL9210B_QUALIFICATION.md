@@ -1426,3 +1426,8 @@ still needs diverging, layer-aware escapes. V1248 improves the isolated
 pattern, but its outer TXP escape reaches the RTL9210B side-pad SPISI. These
 are route-implementation results only; the next class co-authors lane exits,
 side-pad clearance, and support restoration together.
+V1251 is rejected outer-corridor routing evidence: the adapted launch omitted
+independent J1-side layer transitions, producing native same-layer crossings
+and support-field conflicts. It does not reject the V1250 source escape or
+RTL9210B lane architecture. The next class uses independent B.Cu trunks and
+J1-side vias/dogbones.
