@@ -27,6 +27,13 @@ and `PHASE24_STORAGE_MODE_J8.kicadxml` proves J3.69 and J8.2 share
 `/STORAGE/AUTO_PEDET`. The next regenerated candidate must instantiate J8
 and route J3.69/J8.2 and J8.4/U14.2; no PCB-only net relabel is promoted.
 
+The first J8 materialization probes are rejected disposable implementations:
+V1 overlapped the power-input J5, while V2 moved J8 outboard but still
+introduced native mode/selector and inherited U12/connector short classes.
+The native 4/4 mode graph passed in both, confirming the source fix; neither
+route is promoted. V6 remains the clean routing basis while J8 and its mode
+routes are regenerated with collision-aware placement.
+
 ## CURRENT STATE — 2026-09-08
 
 The Y10 local-crystal relocation trial is rejected route evidence: it rebuilt

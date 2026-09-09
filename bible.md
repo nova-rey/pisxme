@@ -7840,3 +7840,9 @@ candidate carried the wrong footprint at that reference. The storage source
 symbol was corrected to J8, and native export `PHASE24_STORAGE_MODE_J8.kicadxml`
 proves J3.69/J8.2 are AUTO_PEDET. The next board regeneration must instantiate
 J8; no PCB-only relabel is accepted.
+
+2026-09-08 — Source-owned J8 mode-jumper materialization restored the native
+mode graph (4/4 plus trace-removal negative control), but V1 overlapped
+power-input J5 and V2 introduced native mode/selector and inherited
+U12/connector short classes. No route was promoted; V6 remains the clean
+USB3 RX-escape basis and J8 regeneration stays open.
