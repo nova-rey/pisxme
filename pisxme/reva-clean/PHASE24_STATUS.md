@@ -2013,6 +2013,15 @@ the XTAL_IN via and V153 contacts the 1V1 source field. V154 moves only the
 native audit with no signal shorting/crossing. Promote V154 as the current
 REFCLK-ready local-support basis; XTAL_IN/REFCLK and remaining high-speed
 endpoints remain open.
+
+V1073 is rejected: the lower-edge RTL_1V1 descent crossed the retained
+RTL_3V3 perimeter. V1074 is also rejected because its upper return crossed
+the existing RTL_3V3 source via field. V1075 routes U1.16 through a central
+source transition and passes native DRC with only the inherited RTL_3V3
+dangling warning; the fixture has 26 unconnected items. The saved-board
+audit proves U1.16/U1.36/U1.40/U1.50/C4.1 are one RTL_1V1 component, and
+removing U1.16's source trace fails the negative control. V1075 is retained;
+U1.25/U1.55/U1.60/U1.63 and remaining support remain open.
 V861 added U1.33 to the V860 RTL_5V source network; its first join ended at
 the wrong coordinate and was rejected for a dangling In2 track. V862 corrected
 that junction to the actual V860 transition. Native DRC passes with 0

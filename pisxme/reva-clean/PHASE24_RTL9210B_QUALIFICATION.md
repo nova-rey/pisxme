@@ -403,6 +403,13 @@ Native DRC has only the inherited RTL_3V3 dangling warning, and saved-board
 connectivity plus the U1.50 source-trace negative control pass. This is a
 local rail primitive; the other RTL_1V1 QFN endpoints and full Path-B gates
 remain open.
+
+V1073 and V1074 are rejected RTL_1V1 corridor candidates because they cross
+the retained 3V3 perimeter/source-via field. V1075 is retained after routing
+U1.16 to the central 1V1 source transition. Native DRC has only the inherited
+RTL_3V3 dangling warning; saved-board connectivity and the U1.16
+source-trace negative control pass for U1.16/U1.36/U1.40/U1.50/C4.1.
+Remaining RTL_1V1 endpoints and full Path-B support gates are open.
 V690 moved only C2 and rebuilt XTAL_OUT/GND alongside U1.52; native DRC found
 15 violations including crystal shorts and 3V3/CLKREQ and 1V1/GND contact.
 Reject the C2-only class. The next experiment must co-author the complete
