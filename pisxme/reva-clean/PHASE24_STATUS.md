@@ -28,6 +28,14 @@ source-escape crossings. V4's asymmetric pair-layer handoff was worse at 734
 DRC findings and retained crossing classes. Both are rejected implementation
 variants; the VBUS V1 basis remains current and no production copper changed.
 
+The consultant-recommended straight 0.20 mm pair test V5 removes the TX
+self-crossing, but native DRC still reports a real `USB_TXP1`/`JMS_AVDDL`
+short at the inherited AVDDL via. V6 moved that transition south and instead
+introduced `USB_TXP1`/`JMS_AVDDL` and `USB_RXP1`/`JMS_AVDDL` shorts. Both retain
+focused endpoint connectivity but are rejected route implementations. This
+confirms that the next repair must allocate the complete U11 lower pad field
+(USB2, USB TX/RX, AVDD33/AVDDL, and neighboring support) coherently.
+
 ## CURRENT ROUTING BASIS — 2026-09-08
 
 The disposable `PHASE24_STORAGE_U12_EP_RX_PAIR_V6.kicad_pcb` is the latest

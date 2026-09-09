@@ -7907,6 +7907,13 @@ Preserved V3/V4 disposable co-authored USB TX-pair plus JMS_AVDDL trials.
 V3 passed focused connectivity with no shorting class but introduced two
 local source-escape crossings; V4 was worse at 734 native DRC findings.
 Rejected both as route implementations and retained the VBUS V1 parent.
+
+## 2026-09-09 — Phase 24 lower-field continuation
+
+Tested straight 0.20 mm TX-pair V5 and south-shifted AVDDL V6. V5 retained
+focused connectivity but shorted TXP to the AVDDL via; V6 added TXP/AVDDL and
+RXP/AVDDL shorts. Rejected both and retained the VBUS V1 parent. The next
+route must co-author the complete U11 lower pad field.
 ## 2026-09-08 — Phase 24 documentation hygiene
 
 Reconciled the current Phase 24 status and dual-mode storage implementation

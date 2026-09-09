@@ -25,6 +25,13 @@ asymmetric layer handoff and is worse at 734 native DRC findings. Neither is
 production authority. The VBUS V1 basis remains the live parent for the next
 source-field regeneration.
 
+The subsequent straight-pair V5 and south-transition V6 experiments are also
+superseded route evidence. V5 removes the TX self-crossing but shorts the
+USB_TXP1 path to the AVDDL via; V6 moves the via and creates additional
+USB_TXP1/AVDDL and USB_RXP1/AVDDL shorts. Focused endpoint audits remain
+useful, but neither candidate is production authority. The required next
+class is complete lower U11 pad-field allocation.
+
 ## CURRENT OPEN GATES — 2026-09-08
 
 The Y10 relocation trial is rejected implementation evidence: it preserved
