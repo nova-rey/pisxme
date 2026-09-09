@@ -9530,3 +9530,9 @@ the rotated QFN source field. Raw fixture and DRC evidence are preserved.
 and saved-board negative-control audits passed but SPICLK still crossed SPISO,
 collided with SPISI at the source field, and violated the SPICS transition
 clearance. The disposable fixture and native DRC report remain preserved.
+2026-09-09 — V1299 consolidated the saved V862 native-clean support basis.
+Connectivity was derived from the loaded PCB rather than synthetic graph
+edges; SPIs, PERST_N, crystal/RSET/GND support, and RTL_5V all passed endpoint
+assertions and trace-removal negative controls. Native DRC remains zero with
+30 incomplete fixture items. This is local support closure only; Path-B
+integration remains open.

@@ -10186,3 +10186,10 @@ negative-control audit pass, but the SPICLK transition remains too close to
 SPISO and collides with the SPISI source departure. The proposed layer swap
 therefore does not yet provide a valid combined source field; native DRC and
 the disposable PCB are preserved for comparison.
+The consolidated V1299 audit rechecked the saved V862 native-clean support
+basis directly. It derives connectivity from the loaded PCB and verifies
+SPISI, SPICLK, SPISO3, SPISO, SPICS, PERST_N, XTAL_IN, XTAL_OUT, RSET, and
+RTL_5V endpoint groups, with a trace-removal negative control for each. All
+assertions pass; the native V862 DRC report remains zero violations with 30
+unconnected items. This closes only the local V862 support primitive; the
+unconnected Path-B source/control/lane/integration gates remain OPEN.
