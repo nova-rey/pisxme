@@ -8072,3 +8072,7 @@ Added a native KiCad `CONNECTIVITY_DATA` endpoint audit for the JMS583
 crystal/analog support nets. V23 passes 7/7 physical endpoint pairs, and a
 disposable negative control with one XIN trace removed fails exactly at XIN.
 This is stronger physical-connectivity evidence for the storage field.
+
+Added a second native negative control that removes the XIN transition via
+from V23. The same audit fails XIN while the other six endpoint pairs remain
+passing, proving that missing layer-transition hardware is detected as well.
