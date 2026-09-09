@@ -9225,3 +9225,7 @@ V1161 collided with the exposed-pad/remote power field; V1162 moved both
 transitions but still crossed crystal/rail geometry and the C3/C4 endpoint
 field. Rejected route evidence; the next trial separates the QFN source
 escape from the remote collector.
+2026-09-09: V1163/V1164 tested outboard 1V1 collectors with rechanneled
+XTAL_IN. V1163 found six native violations; V1164 found eight, including
+QFN-source, XTAL/1V1, and 5V-handoff interactions. Rejected route evidence;
+next solution class is local crystal-pocket relocation.

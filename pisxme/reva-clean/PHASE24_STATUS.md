@@ -88,6 +88,13 @@ moved the source transition west and the collector outboard; native DRC still
 found crystal/rail crossings and a C3/C4 endpoint-field collision. Both are
 route-implementation evidence only. The next 1V1 trial must allocate the
 QFN source escape and remote C4 handoff as separate corridors.
+V1163 moved the U1.55 source via west and used an outboard 1V1 collector;
+native DRC found six violations, including XTAL_IN and 5V crossings. V1164
+rechanneled XTAL_IN west and moved the collector below the 5V path, but native
+DRC still found eight violations from the adjacent QFN source field,
+XTAL/1V1 interaction, and the 5V handoff. These are rejected route-class
+experiments. The next class is local crystal-pocket relocation to decouple the
+QFN crystal lanes from the 1V1 source escape.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is V1123
 plus the accepted V1160 crystal source-field primitive. Full QFN rail,
