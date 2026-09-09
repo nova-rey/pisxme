@@ -37,3 +37,10 @@ field with a different U1 orientation or a co-designed QFN escape primitive,
 then re-run native DRC and the saved negative-control connectivity audit.
 
 Raw boards, scripts, and DRC reports are retained as rejected evidence.
+
+V953–V956 tested U1 orientation as the next solution class. U1-180 placed
+the SPI pads in a tighter 0.4 mm vertical source field (V954: 9 DRC findings;
+V955 staggered: 14). U1-270 restored a horizontal field but a same-side
+parallel fanout still crossed later transitions (V956: 9 findings). The next
+candidate will use mixed-side source escapes and independent transitions;
+these probes do not alter production CAD.

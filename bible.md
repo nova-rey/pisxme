@@ -8567,6 +8567,11 @@ orientation/exposed-pad source field at the active 0.20 mm rules, not a
 connectivity assertion or RTL9210B topology failure. Raw candidates and
 reports are retained; SPI remains open and the next experiment is a bounded
 U1 orientation/QFN source-field regeneration.
+2026-09-09: U1-180 V954/V955 and U1-270 V956 source-field probes were rejected
+as incomplete route implementations. U1-180 tightened the pad field; U1-270
+had horizontal pads but same-side parallel fanout vias crossed later exits.
+The next disposable class is mixed-side source escape with independent
+transitions. No production CAD changed.
 2026-09-09: U1-180 source-field probe V954/V955 was rejected. V954's simple
 escapes shorted adjacent SPI nets; V955's staggered escapes increased native
 DRC findings to 14 because the rotated 0.4 mm vertical pad ordering leaves a
