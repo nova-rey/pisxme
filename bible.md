@@ -7859,3 +7859,10 @@ plus negative control, mode control 4/4, and pad parity zero mismatches all
 pass. Native DRC reports 708 violations / 403 unconnected items with zero
 shorting classes. It is the current routing basis, not Phase 24 closure; open
 clearance/crossing/unconnected and full-board gates remain.
+
+2026-09-08 — VBUS/sense support was repaired on
+`PHASE24_STORAGE_J8_V5_VBUS_V1`: native VBUS connectivity and trace-removal
+negative control pass, as do USB3, SATA, mode, and JMS583 support audits.
+Native DRC reports 732 violations / 400 unconnected items with zero true
+shorts. This is the current storage basis; remaining DRC and full-board gates
+stay open.

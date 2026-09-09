@@ -46,6 +46,15 @@ violations / 403 unconnected items with zero `shorting_items`. This closes
 the prior U12/J5 authority and shorting classes but remains open for the
 unconnected-item, clearance, crossing, and full-board gates.
 
+The focused VBUS/sense repair candidate
+`PHASE24_STORAGE_J8_V5_VBUS_V1.kicad_pcb` is now the current storage basis
+for the next closure pass. It routes U11 VBUS/sense to the source-owned R82/R83
+divider with an explicit midpoint segment and passes the native VBUS audit plus
+trace-removal negative control. USB3, SATA, mode control, and JMS583 support
+audits also pass. Native DRC reports 732 violations / 400 unconnected items
+with zero `shorting_items`. It is not closure: remaining storage support
+opens, clearances, crossings, and full-board power/ground connectivity remain.
+
 The source-driven J8 regeneration (`PHASE24_STORAGE_NETLIST_REGENERATED_J8_V1`
 and V2) confirms J8 is materialized with the correct four source nets and the
 native mode audit passes 4/4. Both are rejected routing candidates: V1 still
