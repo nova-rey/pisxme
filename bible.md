@@ -9491,3 +9491,7 @@ evidence are preserved; SPICS remains open.
 saved-board negative-control audits passed, but the proposed RTL_1V1 source
 via/dogbone at the existing trunk violated the exposed-GND clearance, hole,
 and mask rules. SPICS remains open.
+2026-09-09 — V1289/V1290 rejected coupled escape evidence: native endpoint and
+negative-control audits passed, but alternate RTL_1V1 transitions still
+crossed or shorted validated 3V3/5V source fields. SPICS remains open; use a
+verified QFN footprint-level escape class next.

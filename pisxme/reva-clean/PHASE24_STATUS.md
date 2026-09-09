@@ -10127,3 +10127,10 @@ native endpoint/negative-control audits pass, but moving the 1V1 source via
 onto the existing trunk places it inside the exposed-GND clearance envelope;
 native DRC reports real short/hole/mask violations. SPICS and the coupled
 source field remain OPEN.
+V1289 is rejected coupled escape evidence. Native endpoint and negative-control
+audits pass, but the separated source-field attempt still places the 1V1 via
+near U1.31 and its return beside the 5V/3V3 fields.
+V1290 is rejected coupled escape evidence. Moving the 1V1 transition farther
+north still produces native crossings/shorts at the 3V3 B.Cu field and the
+RTL_5V source pad. SPICS remains OPEN; the next credible class is a verified
+QFN footprint-level escape change.
