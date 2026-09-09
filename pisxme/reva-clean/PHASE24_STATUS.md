@@ -40,6 +40,13 @@ These are route-implementation failures. V772 remains the last native-clean
 combined support basis; control routing is still OPEN and Path B is not
 promoted.
 
+V783 attempted a conservative saved-geometry obstacle-aware F.Cu-only search
+for PEDET and CLKREQ_N from the V777 placement. It found no legal PEDET path
+to R2 within the local board field, so no PCB was emitted and no PASS is
+claimed. This is allocator/field saturation evidence, not an electrical or
+placement closure decision; the next class must permit deliberate mixed-layer
+transitions or relocate the control resistors locally.
+
 The earlier V702/V718/V735 checkpoints and V746/V747/V751/V752 failures are
 historical disposable evidence. V753 proved the adjacent SPICLK/SPISI
 dogbone class; V754 proved the complete source fan-out; V755/V757/V758/V759

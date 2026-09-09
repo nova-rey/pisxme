@@ -8369,3 +8369,9 @@ shorted SPICS to the crystal-support GND pocket; V781 and V782 were rejected
 by native DRC for endpoint, plane, U1-pad, and retained-SPI corridor
 interactions. Their raw boards and reports are preserved; no Path-A or
 production CAD was changed.
+
+2026-09-09: V783 attempted an obstacle-aware F.Cu-only control allocator from
+the V777 placement. It found no legal PEDET path to R2 in the saved local
+field and emitted no PCB. This negative generator result is preserved as
+route-field evidence; mixed-layer control allocation or local resistor
+relocation remains open.

@@ -31,6 +31,11 @@ approaches, a no-connect U1-pad contact, and source-field interaction. It is
 rejected as a route implementation. The next class must move the control
 resistors farther from the QFN perimeter and U2 endpoint columns.
 
+V783 is a negative generator result: a conservative F.Cu-only obstacle search
+could not find a PEDET route to the V777 R2 endpoint in the saved field. It
+did not alter the board and is not a native DRC result. Mixed-layer routing
+and/or local control-resistor relocation remain the next bounded experiments.
+
 V748 is the current positive placement basis for the remaining RTL9210B SPI
 allocation. Starting from the native-clean V730 U1-at-90-degree basis, U2 was
 rotated 90 degrees and placed with its SPI endpoint column at x=105 mm. The
