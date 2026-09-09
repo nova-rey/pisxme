@@ -7734,3 +7734,9 @@ selector-side copper retained. Native SATA passed 12/12 and storage-local
 true shorts were avoided, but a U7 source-field crossing remained; native
 DRC was 676 violations / 499 unconnected with one inherited non-storage
 short. Rejected as full-board candidate; method retained.
+
+2026-09-08: Reauthored the coherent storage-island transplant against live
+Path-A capacitor net ownership. Native SATA failed at TUSB_SATA_RXP because
+the historical socket-side template missed current U13 geometry; native DRC
+was 802 violations / 499 unconnected with crossings and shorts. Rejected;
+no copper was promoted.

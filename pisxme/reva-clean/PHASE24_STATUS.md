@@ -9,6 +9,14 @@ source-field crossing; native DRC reports 676 violations / 499 unconnected
 items plus one inherited non-storage short. It is rejected as an integrated
 candidate, while the safe-exit authoring method is retained.
 
+The coherent storage-island transplant
+`PHASE24_STORAGE_COHERENT_ISLAND_V1.kicad_pcb` was reauthored against the
+live Path-A capacitor net ownership, but native SATA audit failed at
+`TUSB_SATA_RXP` because its historical socket-side template did not terminate
+on the current U13 pad geometry. Native DRC reports 802 violations / 499
+unconnected items with multiple crossings and shorts. It is rejected stale
+route evidence; no copper was promoted.
+
 The latest bounded SATA source-field experiment,
 `PHASE24_STORAGE_SATA_SOURCE_ORDER_V1.kicad_pcb`, is rejected route
 implementation evidence. It used native U7 pad coordinates and an

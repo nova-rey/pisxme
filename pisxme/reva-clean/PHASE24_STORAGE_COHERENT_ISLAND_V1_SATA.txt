@@ -1,0 +1,11 @@
+BRIDGE_SATA_TX_P: PASS (U7.57 <-> C30.2)
+BRIDGE_SATA_TX_N: PASS (U7.56 <-> C31.2)
+BRIDGE_SATA_RX_P: PASS (U7.60 <-> C32.2)
+BRIDGE_SATA_RX_N: PASS (U7.59 <-> C33.2)
+TUSB_SATA_TXP: PASS (C30.1 <-> U13.38)
+TUSB_SATA_TXN: PASS (C31.1 <-> U13.37)
+Traceback (most recent call last):
+  File "/home/nyx/PiSXMe/pisxme/reva-clean/phase24_sata_native_connectivity_audit.py", line 32, in <module>
+    if not set(ends)<=reached: raise AssertionError(f'{net} disconnected at {e}: {sorted(reached)}')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: TUSB_SATA_RXP disconnected at C32.1: ['C32.1']

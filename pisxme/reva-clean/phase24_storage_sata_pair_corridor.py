@@ -65,10 +65,12 @@ CAPS = {
     "RX_P": ("C32", (110.5, 116.0)),
 }
 CAP_SOCKET_NETS = {
-    "TX_N": "M2_SATA_A_N_PCIE_TXN0",
-    "TX_P": "M2_SATA_A_P_PCIE_TXP0",
-    "RX_N": "M2_SATA_B_P_PCIE_RXN0",
-    "RX_P": "M2_SATA_B_N_PCIE_RXP0",
+    # Current Path-A ownership: pad 2 is U7/bridge-side and pad 1 is the
+    # TUSB selector-side net. The U13-to-M.2 launch is a separate leg.
+    "TX_N": "TUSB_SATA_TXN",
+    "TX_P": "TUSB_SATA_TXP",
+    "RX_N": "TUSB_SATA_RXN",
+    "RX_P": "TUSB_SATA_RXP",
 }
 for ref, (x, y) in CAPS.values():
     f = board.FindFootprintByReference(ref)
@@ -140,10 +142,10 @@ socket = {
     "RX_P": ("C32", (112.0,116.0), B, [(112.0,116.0),(126.75,118.725)]),
 }
 socket_nets = {
-    "TX_P": "M2_SATA_A_P_PCIE_TXP0",
-    "TX_N": "M2_SATA_A_N_PCIE_TXN0",
-    "RX_P": "M2_SATA_B_N_PCIE_RXP0",
-    "RX_N": "M2_SATA_B_P_PCIE_RXN0",
+    "TX_P": "TUSB_SATA_TXP",
+    "TX_N": "TUSB_SATA_TXN",
+    "RX_P": "TUSB_SATA_RXP",
+    "RX_N": "TUSB_SATA_RXN",
 }
 # M-key Socket 3 authority: SATA A is contacts 49/47 and SATA B is
 # contacts 43/41.  The SATA B polarity is intentionally crossed by the

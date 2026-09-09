@@ -344,6 +344,12 @@ crossing and reports 676 native DRC violations / 499 unconnected items,
 including one inherited non-storage short. It is rejected as a full-board
 candidate; its safe-exit routing method is retained.
 
+The coherent storage-island transplant
+`PHASE24_STORAGE_COHERENT_ISLAND_V1.kicad_pcb` is rejected stale route
+evidence. After correcting its capacitor-side net assumptions, native SATA
+still failed at `TUSB_SATA_RXP` due to the historical U13 socket template;
+native DRC reported 802 violations / 499 unconnected items.
+
 The reordered SATA source-field probe
 `PHASE24_STORAGE_SATA_SOURCE_ORDER_V1.kicad_pcb` is rejected route
 implementation evidence: its corrected native-net authoring passes all 12
