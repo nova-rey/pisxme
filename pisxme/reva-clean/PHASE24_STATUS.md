@@ -9014,3 +9014,7 @@ and zone-clearance conflicts. This is a route-implementation failure, not an
 endpoint or macro-placement result. The 270-degree orientation remains useful
 ordering evidence, but the next active basis returns to V772's complete-SPI
 support field for a different control/source escape class.
+V855 tested a V772/V837-based PERST_N left-side source dogbone. Native DRC
+rejected it with 5 violations: a true B.Cu crossing against the SPI corridor
+and four U1-field clearance/short/mask conflicts. It is rejected route
+evidence; V772/V837 remain the complete-SPI/control basis.

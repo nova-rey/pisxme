@@ -8535,3 +8535,7 @@ and was rejected with 19 native violations, dominated by U1 exposed-pad,
 adjacent-pad, and zone-clearance conflicts. This is route-implementation
 evidence only. The next active basis returns to V772's complete-SPI/support
 field for a distinct control/source escape class.
+2026-09-09: V855 tested a V772/V837-based PERST_N left-side source dogbone.
+Native DRC rejected it with 5 violations: one true B.Cu crossing against the
+SPI corridor and four U1-field clearance/short/mask conflicts. It is rejected
+route evidence; V772/V837 remain the complete-SPI/control basis.
