@@ -1340,6 +1340,12 @@ no-net pad row. The crystal network remains electrically authoritative but
 requires coordinated QFN/crystal fanout allocation; no malformed crystal
 copper is promoted.
 
+V1097-V1099 are rejected XTAL_IN refinements. V1097/V1098 conflicted with
+the retained 3V3 and 1V1 return fields; V1099 additionally intersected RSET
+and the U1.52 edge field. The crystal escape is co-dependent with the QFN
+support allocation and must be regenerated as one field; no rejected crystal
+copper is promoted.
+
 V1091 is rejected RSET evidence: the straight approach crossed R1.2 GND.
 V1092 approaches R1.1 from above and passes native DRC with only the inherited
 RTL_3V3 dangling warning; the fixture has 21 unconnected items. The saved

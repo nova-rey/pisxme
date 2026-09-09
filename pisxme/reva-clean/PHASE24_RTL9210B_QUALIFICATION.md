@@ -1264,3 +1264,8 @@ V1093-V1096 are rejected XTAL_IN route trials. Native DRC found crossings or
 shorts with the retained 3V3, RSET/1V1, and QFN no-net fields. The crystal
 authority remains valid; its remaining implementation requires coordinated
 QFN/crystal fanout allocation.
+
+V1097-V1099 are rejected XTAL_IN refinements. Native DRC found 3V3/1V1
+return-field conflicts in V1097/V1098 and RSET/U1.52 edge conflicts in V1099.
+The crystal implementation remains authoritative but requires coordinated
+QFN/crystal support-field regeneration.

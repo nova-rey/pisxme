@@ -9090,3 +9090,7 @@ RTL9210B support and full Path-B validation remain open.
 crossings/shorts with retained 3V3, RSET/1V1, or the U1 bottom no-net pad row.
 Crystal authority remains valid; coordinated QFN/crystal fanout allocation is
 required and no malformed crystal copper was promoted.
+2026-09-09: Rejected XTAL_IN refinements V1097-V1099. Native DRC showed
+retained 3V3/1V1 return-field conflicts and then RSET/U1.52 edge conflicts.
+The crystal implementation remains authoritative; coordinated QFN/crystal
+support-field regeneration is required.
