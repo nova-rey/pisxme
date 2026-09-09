@@ -9116,3 +9116,10 @@ the inherited SPISO field and the XTAL_IN corridor. V908 moved the 3V3
 collector to low F.Cu; it was rejected by SPISO/XTAL_IN clearance and a
 dangling 3V3 via. The source-escape repair remains a package-region routing
 problem; no electrical topology or placement rejection is implied.
+V914 transplanted the native V772 source dogbones, moved XTAL_IN to B.Cu at
+the first clean escape, retained XTAL_OUT on its separate F.Cu corridor, and
+reused the existing U1.52 3V3 via without duplication. Native DRC reports 0
+violations and 25 expected incomplete items. The saved-board audit passes
+XTAL_IN, XTAL_OUT, RSET, GND, and RTL_3V3 support, with independent source
+trace-removal negative controls for both crystal nets. V914 is the accepted
+complete relocated RTL support primitive for the next support rail.
