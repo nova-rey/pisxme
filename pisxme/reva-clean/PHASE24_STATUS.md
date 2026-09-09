@@ -60,6 +60,10 @@ V681 tested a lower-shelf crystal relocation and was rejected at 17 native
 DRC violations, including crystal shorts/crossings and board-edge/mounting-
 hole conflicts. This is a placement implementation failure, not an
 architecture rejection.
+V682/V683 closed the crystal-field implementation on the orientation-180
+support-relocation lineage. V683's native KiCad DRC reports zero violations;
+the remaining 32 opens are outside the crystal field and remain expected
+Path-B support/sideband/endpoint work.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native

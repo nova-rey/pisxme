@@ -8223,6 +8223,12 @@ crossings. V680 relocated the crystal trio and found 11 violations including
 XTAL_IN shorts to RTL_3V3/GND and multiple crossings. Rejected both route
 implementations; retain the orientation-180 rail/RSET basis.
 
+2026-09-09: V682 added local GND stitching beside the relocated crystal but
+left C1's GND pad physically unconnected to its via. V683 added the missing
+same-net F.Cu segment; native KiCad DRC then reported zero violations with
+32 expected incomplete opens outside the crystal field. Retained V683 as the
+positive crystal-field basis for continued Path-B support closure.
+
 2026-09-09: V681 moved the orientation-180 crystal trio to the lower shelf
 and attempted a dedicated B.Cu corridor. Native DRC found 17 violations,
 including crystal shorts/crossings, RTL_3V3 interference, and board-edge/

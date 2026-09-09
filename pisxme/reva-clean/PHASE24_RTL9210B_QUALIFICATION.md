@@ -54,6 +54,11 @@ native DRC found 17 violations including crystal shorts/crossings and
 board-edge/mounting-hole conflicts. Reject it as a placement implementation;
 the next experiment must keep the crystal inside the support envelope and
 co-author its escape with the existing fields.
+V682/V683 then reused the native-clean support-relocation crystal geometry.
+V682 showed that stitching vias alone did not physically connect C1 GND;
+V683 added the missing same-net segment and passed native DRC with zero
+violations. Retain V683 as the positive crystal-field basis; its 32 remaining
+opens are outside the completed crystal network.
 
 V672 provides a positive interior RSET basis with nine inherited warnings and
 no signal DRC violations. V673 layered lower RTL_3V3 onto it and found 12
