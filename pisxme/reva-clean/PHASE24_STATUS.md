@@ -78,6 +78,13 @@ failure is confined to the three adjacent right-edge U1 departures. No
 architecture or Path-A conclusion changes; the next class must allocate all
 three departures together.
 
+V796/V797 tested the orientation-180 alternative. The unmodified direct
+fanout crossed PEDET/CLKREQ and clipped existing support; the reordered trial
+still contacted RSET/crystal/GND support and J1 lane pads. These are placement
+and route implementation failures of an incompletely co-authored rotated
+island, not an architecture rejection. The next class must move the support
+pocket and QFN controls as one rotated local island.
+
 The earlier V702/V718/V735 checkpoints and V746/V747/V751/V752 failures are
 historical disposable evidence. V753 proved the adjacent SPICLK/SPISI
 dogbone class; V754 proved the complete source fan-out; V755/V757/V758/V759

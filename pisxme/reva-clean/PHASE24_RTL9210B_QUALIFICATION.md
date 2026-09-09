@@ -62,6 +62,12 @@ U1 no-connect/control pads or the retained SPI/PEDET field. This establishes
 the next experiment as a complete three-net QFN escape allocation, not a
 single-net PERST adjustment.
 
+V796/V797 are rejected orientation-180 control experiments. V796 used
+uncoupled direct corridors; V797 reordered them but retained conflicts with
+the crystal/RSET pocket and J1 lane pads. The orientation class remains a
+credible next placement experiment only with its support pocket co-moved
+with the QFN; no Path-A or production conclusion changes.
+
 V748 is the current positive placement basis for the remaining RTL9210B SPI
 allocation. Starting from the native-clean V730 U1-at-90-degree basis, U2 was
 rotated 90 degrees and placed with its SPI endpoint column at x=105 mm. The

@@ -8399,3 +8399,9 @@ The long outer corridor remains clear; native DRC localizes the repeated
 failures to interactions among the adjacent U1 control departures, PEDET,
 SPISO3, and no-connect pads. The next class must co-author all three QFN
 departures; Path A and production CAD remain unchanged.
+
+2026-09-09: V796/V797 tested orientation-180 RTL9210B control fanouts. Both
+were rejected by native DRC because the rotated QFN was not co-moved with its
+crystal/RSET/GND support and the PERST top run clipped J1 lane pads. Preserve
+the orientation class only as a future co-authored placement experiment;
+production CAD and Path A remain unchanged.
