@@ -1340,6 +1340,12 @@ no-net pad row. The crystal network remains electrically authoritative but
 requires coordinated QFN/crystal fanout allocation; no malformed crystal
 copper is promoted.
 
+V1100/V1101 are rejected XTAL_IN pad-edge refinements. V1100 introduced
+3V3/1V1 return-field conflicts at the proposed transition; V1101 moved the
+via farther out but still clipped the adjacent 1V1 field and 3V3 via. The
+remaining XTAL_IN work requires coordinated relocation/regeneration of the
+QFN support field; no rejected crystal copper is promoted.
+
 V1097-V1099 are rejected XTAL_IN refinements. V1097/V1098 conflicted with
 the retained 3V3 and 1V1 return fields; V1099 additionally intersected RSET
 and the U1.52 edge field. The crystal escape is co-dependent with the QFN

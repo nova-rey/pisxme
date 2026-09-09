@@ -9094,3 +9094,7 @@ required and no malformed crystal copper was promoted.
 retained 3V3/1V1 return-field conflicts and then RSET/U1.52 edge conflicts.
 The crystal implementation remains authoritative; coordinated QFN/crystal
 support-field regeneration is required.
+2026-09-09: Rejected XTAL_IN pad-edge refinements V1100/V1101. Native DRC
+showed retained 3V3/1V1 return-field conflicts at the proposed transitions.
+Crystal authority remains valid; coordinated QFN/crystal support-field
+relocation is required.

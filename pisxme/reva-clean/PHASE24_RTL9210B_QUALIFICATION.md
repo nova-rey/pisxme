@@ -1269,3 +1269,8 @@ V1097-V1099 are rejected XTAL_IN refinements. Native DRC found 3V3/1V1
 return-field conflicts in V1097/V1098 and RSET/U1.52 edge conflicts in V1099.
 The crystal implementation remains authoritative but requires coordinated
 QFN/crystal support-field regeneration.
+
+V1100/V1101 are rejected XTAL_IN pad-edge refinements. Native DRC found
+3V3/1V1 return-field conflicts at both candidate transitions. The crystal
+net remains authoritative; coordinated QFN/crystal support-field relocation
+is required for the remaining implementation.
