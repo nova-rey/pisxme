@@ -563,6 +563,19 @@ creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
 
+## Current live source/parity correction — 2026-09-08
+
+The previous 64-mismatch placement result and the 111-mismatch support-route
+result are superseded historical probes. The authoritative U12.24/U12.25
+instance labels were corrected in `STORAGE.kicad_sch` from stale `USB_TXN1/P1`
+to `JMS_USB3_TXN/P`, matching the reviewed symbol/source map and C86/C87
+bridge-side nets. A fresh native export and regenerated
+`PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb` now produce zero
+expected-pad mismatches; the dual-mode mode contract also passes. Receipt:
+`PHASE24_STORAGE_LIVE_PARITY_20260908.rpt`. This closes source pad-net parity
+for the regenerated placement candidate, not copper routing, ERC, DRC, or
+full Phase 24.
+
 V4 is also rejected: its VBUS and USB3 endpoint audits pass, but native DRC
 reports 512 findings / 499 inherited unconnected items and real RX_N/TX_N
 shorting/crossing classes on the upper B.Cu detour. It remains negative route
@@ -7999,14 +8012,10 @@ shorts adjacent USB_DM and violates the 0.25 mm hole-clearance rule to both
 neighboring QFN pads. This authorized cross-class alternative is rejected;
 no production rule or Path A artifact changed.
 The storage parity audit was corrected to normalize only KiCad's hierarchical
-XML net paths to the PCB's flattened net names. On the current
-`PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb`, the fresh result is 64
-actionable mismatches (down from 286), not a pass. Genuine remaining defects
-include missing R24/R32/R33 pads, J3.69 `M2_PEDET` versus schematic
-`M2_CONFIG1`, selector pin-map mismatches, and missing/incorrect M.2
-no-connect/power contacts. The normalization change does not waive any
-ownership or connectivity failure; these must be repaired in the authoritative
-storage source before promotion.
+XML net paths to the PCB's flattened net names. The older 64-actionable-
+mismatch result on `PHASE24_DUAL_MODE_STORAGE_PLACEMENT.kicad_pcb` is
+superseded by the live U12 instance-label correction recorded below; its
+listed defects remain historical evidence, not current requirements.
 V653's local Y1/C1/C2 relocation is rejected. It reduces the crystal span but
 creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored

@@ -7469,6 +7469,13 @@ B.Cu dogleg passes VBUS and USB3 endpoint audits but creates real RX_N/TX_N
 shorting/crossing classes in native DRC (512 findings / 499 inherited opens).
 The route was not promoted and validation rules were unchanged.
 
+2026-09-08: Corrected the authoritative U12.24/U12.25 instance labels in
+STORAGE.kicad_sch from stale USB_TXN/P1 names to JMS_USB3_TXN/P. Fresh native
+export, regenerated storage placement, and mode audit pass with zero
+expected-pad mismatches. The prior 64/111 mismatch results are superseded
+historical probes; no PCB-only ownership repair was used. Copper, ERC, DRC,
+and full Phase 24 closure remain open.
+
 2026-09-08: Reran the isolated RTL9210B Path-B evidence suite. Authority,
 corroborating support, M-key mapping, native netlist, WIP-conflict, and PDF
 pin audits passed; both native-netlist and PDF negative controls failed as

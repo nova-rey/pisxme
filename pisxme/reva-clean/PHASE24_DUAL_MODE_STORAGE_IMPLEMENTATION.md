@@ -489,11 +489,9 @@ storage pass.
 
 The schematic-to-PCB pad audit now normalizes only hierarchical XML net names
 such as `/STORAGE/NET` to the PCB's flattened `NET` representation. This
-removes representational false positives without adding connectivity. The
-current placement candidate still fails with 64 actionable mismatches,
-including missing R24/R32/R33 support pads, incorrect J3.69 PEDET ownership,
-selector pin-map mismatches, and missing/incorrect M.2 no-connect and power
-contacts. This remains an open source-authority/parity gate.
+removes representational false positives without adding connectivity. Its
+older 64-mismatch result is superseded by the live U12 label correction below;
+it remains historical evidence and is not a current requirement.
 
 The complete ten-net JMS583 support connectivity audit passes on the AVDDL
 local-zone basis, including the combined track/zone-removal negative control.
@@ -504,6 +502,17 @@ The current support-route candidate was independently compared against the
 native schematic export and reports 111 expected-pad mismatches. It remains a
 disposable routing candidate until schematic-to-PCB authority is regenerated
 and the parity gate passes; no PCB-only ownership repair is accepted.
+
+## Current live source/parity correction — 2026-09-08
+
+`STORAGE.kicad_sch` now has authoritative `JMS_USB3_TXN/P` instance labels on
+U12.24/U12.25, matching the reviewed source map and C86/C87 bridge-side nets.
+Fresh native export plus regenerated
+`PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb` reports zero
+expected-pad mismatches and a passing dual-mode mode contract. The prior
+64/111 mismatch reports are superseded historical probes. This closes source
+pad-net parity for the regenerated placement candidate only; copper routing,
+ERC, DRC, and full Phase 24 remain open.
 
 ## Current VBUS/RX_N launch discriminator — V3 rejected (2026-09-08)
 

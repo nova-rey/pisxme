@@ -1,0 +1,22 @@
+Phase 24 live storage parity receipt — 2026-09-08
+
+Source: STORAGE.kicad_sch
+Native export: PHASE24_STORAGE_LIVE_CURRENT.xml
+PCB candidate: PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb
+
+Command:
+  phase24_dual_mode_storage_mode_audit.py STORAGE.kicad_sch
+  phase24_schematic_pcb_pad_parity_audit.py
+    PHASE24_DUAL_MODE_STORAGE_PLACEMENT_CURRENT.kicad_pcb
+    PHASE24_STORAGE_LIVE_CURRENT.xml
+
+Results:
+  dual-mode mode contract: PASS
+  authoritative schematic nodes: 331
+  PCB pads: 1237
+  expected-pad mismatches: 0
+  schematic-to-PCB pad-net parity: PASS
+
+The zero result follows the authoritative U12.24/U12.25 instance-label
+correction. No PCB-only ownership repair or expected-connectivity edge was
+added.
