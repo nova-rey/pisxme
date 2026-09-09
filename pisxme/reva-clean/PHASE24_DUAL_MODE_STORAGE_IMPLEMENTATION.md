@@ -94,6 +94,10 @@ V25 tested outer B.Cu crystal corridors outside the SATA field. It worsened
 native DRC to 745 findings and introduced eight shorting items, so that
 structural route class is rejected.
 
+V26 used orthogonal QFN departures with the same outer-corridor concept. It
+still produced 746 native DRC findings and six shorting items, so it is also
+rejected route evidence.
+
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a
 0.000 mm clearance violation into U11 pad 23. No production authority changed.

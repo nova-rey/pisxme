@@ -50,6 +50,11 @@ B.Cu field before crossing above it. Native DRC worsened to 745 findings and
 introduced eight shorting items, so the outer-corridor class is rejected.
 V23 remains the retained disposable basis.
 
+V26 corrected V25's diagonal QFN departures to orthogonal exits before trying
+outer crystal corridors. Native DRC still reported 746 findings and six
+shorting items, including collisions with inherited V100/USB/SATA copper.
+The corrected outer-corridor class is rejected; V23 remains current.
+
 V13 is the retained local routing basis. Its upper P-leg detour preserves the
 V8 source ordering, reduces the USB_TXN1/USB_TXP1 skew proxy to 0.259 mm, and
 keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits

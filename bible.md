@@ -8058,3 +8058,8 @@ retained V23 as the best current physical transition basis.
 V25 moved both XIN/XOUT B.Cu transition corridors outside the inherited SATA
 field. Native DRC rose to 745 and eight shorting items appeared. Rejected the
 outer-corridor class; V23 remains the disposable crystal basis.
+
+V26 corrected the QFN departures in the V25 outer-corridor experiment but
+still produced 746 native DRC findings and six shorting items against
+inherited V100/USB/SATA copper. Rejected the corrected outer-corridor class;
+V23 remains the current disposable basis.
