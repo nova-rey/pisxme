@@ -1,0 +1,3 @@
+authoritative schematic nodes: 811; PCB pads: 1259
+expected-pad mismatches: 0
+schematic-to-PCB pad-net parity: PASS

@@ -7774,3 +7774,8 @@ no copper was promoted.
   exposes 7 true shorting items after inherited hierarchical copper is
   normalized without rerouting. V2 is rejected route evidence; affected
   corridors require clean rerouting before promotion.
+- V3 extended the regenerator's normalization to inherited pads as well as
+  tracks/zones, reducing hierarchy-induced alias shorts to one real USB3
+  source-field pair short while retaining zero pad-parity mismatches and
+  passing SATA/USB3 endpoint audits. V3 remains rejected pending a clean
+  reroute of that transformed CM5 USB3 launch.

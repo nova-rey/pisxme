@@ -106,7 +106,7 @@ def main():
     # Copper inherited from a hierarchical donor may carry the old path
     # spelling.  Normalize only that spelling to the newly exported native
     # net object; geometry is untouched and no connectivity is synthesized.
-    for item in list(b.GetTracks()) + list(b.Zones()):
+    for item in list(b.GetPads()) + list(b.GetTracks()) + list(b.Zones()):
         old = item.GetNetname()
         if old and old != flat(old) and flat(old) in nets:
             item.SetNet(nets[flat(old)])
