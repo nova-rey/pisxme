@@ -1002,7 +1002,7 @@ V580 attempted ordinary-via returns for U1 exposed/ground pads 69, 45, and
 clearance violations near the QFN lower field; do not use it. V579 remains
 the retained rail candidate.
 
-## CURRENT OPEN GATES
+## SUPERSEDED CURRENT-STATE SNAPSHOT — HISTORICAL
 
 The active gate is Path-A storage-island integration: route and validate the
 live JMS583/TUSB9261 + selectors + M-key socket candidate from authoritative

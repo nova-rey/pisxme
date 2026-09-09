@@ -7565,3 +7565,7 @@ negative control fails after removing a required MODE_IN track. V3-V5 local
 mode-route variants remain rejected route evidence because native DRC still
 finds mode-route crossings/shorts and inherited fixture violations; no mode
 or Phase 24 closure was claimed.
+2026-09-08: Marked the duplicate mid-file Phase 24 status snapshot as
+superseded historical text so only the authoritative top current-state/open
+gates can govern execution. No raw reports or rejected experiments were
+rewritten.
