@@ -9381,3 +9381,9 @@ isolated GND-zone warning. The co-authored U1.40/RTL_3V3 field continues to
 show zero shorting, clearance, or track-crossing violations. V1027 is
 retained as diagnostic evidence; the isolated-zone connectivity cause is
 still open and must be resolved before promoting the coauthor.
+V1028 is a rejected GND-zone stitching probe. Adding one ordinary GND via at
+(70,45) removes the isolated-copper warning, proving that V1026/V1027's
+warning is a real plane-island condition, but it is an arbitrary remote
+attachment and leaves 39 incomplete items. It is not a production fix. The
+next repair must retain or replace the actual local GND attachment rather
+than suppressing the warning with a corner via.

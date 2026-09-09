@@ -8926,3 +8926,8 @@ Retain V1026 as a promising, not-yet-promoted local primitive.
 to the preserved (89.2,60.0) via, but native DRC retained one isolated
 GND-zone warning. U1.40/RTL_3V3 still has no shorts, clearances, or crossings;
 retain V1027 as diagnostic evidence pending zone-connectivity resolution.
+2026-09-09: V1028 added a disposable corner GND via and removed the isolated
+zone warning, proving the warning is a real plane-island condition. Because
+the remote attachment is not a valid production repair and 39 incomplete
+items remain, retain V1028 as diagnostic evidence only; trace the lost local
+GND attachment next.

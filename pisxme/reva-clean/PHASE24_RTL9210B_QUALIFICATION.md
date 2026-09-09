@@ -1063,3 +1063,8 @@ V1027 corrects the V1026 GND path endpoint to the exact preserved via
 coordinate (89.2,60.0), but the isolated GND-zone warning persists. The
 U1.40/RTL_3V3 coauthor remains electrically free of shorts, clearances, and
 crossings, but is not promoted until the zone-connectivity cause is resolved.
+V1028 confirms the isolated-copper warning is real: one disposable GND via
+removes it, but the remote via is not an acceptable design repair and the
+fixture still has 39 incomplete items. Preserve this as a discriminator only;
+the required next step is to identify the local GND attachment lost during
+the co-authored corridor regeneration.
