@@ -95,6 +95,13 @@ DRC still found eight violations from the adjacent QFN source field,
 XTAL/1V1 interaction, and the 5V handoff. These are rejected route-class
 experiments. The next class is local crystal-pocket relocation to decouple the
 QFN crystal lanes from the 1V1 source escape.
+V1165's corrected rerun moved the crystal pocket 10 mm west and restored the
+clean source escape; its native DRC and relocated-pocket audit pass. V1167
+then attached U1.55 to C4.1 using F.Cu source dogbone, ordinary through-vias,
+and an In2 low-voltage power-layer collector. Native DRC again retained only
+the inherited RTL_3V3 dangling warning; the U1.55/C4.1 saved-board audit and
+source-trace negative control pass. V1167 is the current accepted 1V1 power
+primitive; U1.60/U1.63 and remaining support/control gates remain OPEN.
 V1165 moved Y1/C1/C2 together 10 mm west, regenerated both crystal nets to
 their native transformed pads, and added explicit local GND-via access for the
 moved capacitors. After correcting the transformed XTAL_OUT pad endpoint and
