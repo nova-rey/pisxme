@@ -44,6 +44,11 @@ V955 staggered: 14). U1-270 restored a horizontal field but a same-side
 parallel fanout still crossed later transitions (V956: 9 findings). The next
 candidate will use mixed-side source escapes and independent transitions;
 these probes do not alter production CAD.
+V962 was corrected to apply the requested U1-0 transform before authoring
+tracks; the earlier unrotated run was invalid and is not evidence. The
+corrected native DRC result was 8 violations, with SPISO conflicting at the
+transformed SPICS/RTL_1V1 side-pad field. The accepted U1-90 field remains the
+better basis; orientation-0 is rejected as a source-field solution.
 V958 attempted to transplant the older V736 separated-shelf routing onto the
 current V944 clean field. It was rejected with 13 native DRC violations,
 including SPISO/SPICLK and SPISO3/SPISO source crossings plus downstream

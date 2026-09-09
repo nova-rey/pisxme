@@ -8557,6 +8557,11 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: Corrected V962 applied the U1-0 transform before routing; its
+native DRC result was 8 violations, with SPISO colliding at the transformed
+SPICS/RTL_1V1 side-pad field. The earlier unrotated V962 result is invalid and
+not used. U1-90 remains the better source-field basis; no production CAD
+changed.
 2026-09-09: V959/V961 tested U1-0 source fanout with U2 displaced for a
 source-field-only discriminator. Direct horizontal and diagonal departures
 still collide with neighboring exits; staged V961 retained 10 native DRC
