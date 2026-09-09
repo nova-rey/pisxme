@@ -8557,6 +8557,11 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: V963 reused the native-DRC-zero V927 five-SPI ancestor and added
+U1.20 RTL_3V3. It reduced the interaction to five local findings: the new
+3V3 vertical crosses SPISO3, and the shifted SPICLK conflicts with SPISI.
+This is the current interaction map for co-routed repair; it is not promoted
+and no production CAD changed.
 2026-09-09: Corrected V962 applied the U1-0 transform before routing; its
 native DRC result was 8 violations, with SPISO colliding at the transformed
 SPICS/RTL_1V1 side-pad field. The earlier unrotated V962 result is invalid and
