@@ -8067,3 +8067,8 @@ V26 corrected the QFN departures in the V25 outer-corridor experiment but
 still produced 746 native DRC findings and six shorting items against
 inherited V100/USB/SATA copper. Rejected the corrected outer-corridor class;
 V23 remains the current disposable basis.
+
+Added a native KiCad `CONNECTIVITY_DATA` endpoint audit for the JMS583
+crystal/analog support nets. V23 passes 7/7 physical endpoint pairs, and a
+disposable negative control with one XIN trace removed fails exactly at XIN.
+This is stronger physical-connectivity evidence for the storage field.
