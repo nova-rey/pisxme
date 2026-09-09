@@ -35,6 +35,11 @@ dangling source warnings and 41 fixture opens. Retain V1048 as the current
 local supply basis; U2 supply attachment and the remaining RTL9210B support
 network are still OPEN.
 
+V1049 is rejected for crossing the retained SPISO3 launch. V1050 avoids that
+F.Cu crossing but fails at the SPICLK-adjacent via and crosses the existing
+1V1 B.Cu shelf. Both are local route-implementation evidence only. U1.20
+RTL_3V3 remains OPEN pending a co-authored outboard transition/corridor.
+
 ## Current checkpoint — V981 orientation-0 source-field discriminator (2026-09-09)
 
 ### Latest 1V1 rail allocation evidence — V1004/V1005

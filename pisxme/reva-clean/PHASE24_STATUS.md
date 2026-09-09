@@ -147,6 +147,12 @@ source warnings with no electrical violations; incomplete connections fall
 to 41. V1048 is the current clean QFN-to-decoupling/source basis. U2 supply
 pins and the remaining RTL9210B support endpoints remain open.
 
+V1049 is rejected because the U1.20 right-edge F.Cu rail route crossed the
+retained SPISO3 launch. V1050 moves to an immediate B.Cu transition, but its
+via is too close to SPICLK and its B.Cu corridor crosses the 1V1 shelf. These
+are local route-allocation failures. U1.20 remains open; the next candidate
+must co-author an outboard transition and B.Cu corridor.
+
 ### Latest RTL_1V1 allocation evidence — V1004/V1005 (2026-09-09)
 
 V1004 is REJECTED. It transplanted the historical V930 eight-pad RTL_1V1
