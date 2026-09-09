@@ -8856,3 +8856,7 @@ removing inherited local copper. Eight native source departures (RTL_1V1,
 RTL_5V, SPICS, SPISO, SPISO3, RTL_3V3, SPICLK, SPISI) produced no electrical
 source-field DRC errors; only intentional dangling ends and inherited opens
 remain. Preserve V988 as the transition-regeneration basis.
+2026-09-09: V989 rejected a right-jog RTL_3V3 transition against V988 due to
+11 native source-field crossings/clearances. V990 accepted a vertical
+RTL_3V3 escape to (100.4,60.8) with a B.Cu handoff; native DRC showed no new
+electrical violations. Preserve V990 as the 3V3 transition primitive.

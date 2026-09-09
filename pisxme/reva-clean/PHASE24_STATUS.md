@@ -9277,3 +9277,8 @@ F.Cu. Native DRC reports only eight intentional dangling-track warnings and
 the inherited incomplete connections, with no electrical source-field
 violation. This is now the transition-regeneration basis; it is not complete
 Path-B support closure.
+V989 tested a right-jog RTL_3V3 transition from V988 and was rejected by 11
+native violations because it crossed SPISI/SPICLK. V990 instead keeps the
+RTL_3V3 departure vertical to (100.4,60.8), then hands off on B.Cu; native
+DRC remains limited to the eight intentional dangling source ends and
+inherited opens. V990 is the accepted RTL_3V3 transition primitive.
