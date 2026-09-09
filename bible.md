@@ -8276,6 +8276,14 @@ via; native KiCad DRC reported zero violations and 25 incomplete opens.
 Retained V699 as the positive U1.33-to-C5 RTL_5V basis.
 
 2026-09-09: V700 connected U1.17 RTL_5V but failed native DRC at the
+3V3/1V1 barrier. V701 used a two-via jog but conflicted with the nearby 1V1
+via. V702 angled the escape and passed native KiCad DRC with zero violations
+and 24 incomplete opens; its targeted handoff-via negative control passed.
+V703/V705/V706/V707 SPICS-only route trials were rejected by native DRC.
+Retain V702 as the positive U1.17/U1.33/C5 basis and co-author the next SPI
+source escape with the rail field.
+
+2026-09-09: V700 connected U1.17 RTL_5V but failed native DRC at the
 3V3/1V1 barrier and was rejected. V701 moved the handoff to a two-via jog,
 but still conflicted with the nearby 1V1 via. V702 angled the initial escape
 past that via and passed native KiCad 10.0.5 DRC with zero violations and 24

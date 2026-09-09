@@ -1,5 +1,15 @@
 # Phase 24 acreage validation status
 
+## CURRENT PATH-B CHECKPOINT — V702 (2026-09-09)
+
+V702 is the current disposable RTL9210B-CG support candidate. It preserves
+V699 and adds the U1.17 RTL_5V branch with an ordinary-via F.Cu/B.Cu/F.Cu
+handoff around the local 3V3/1V1 barrier. Native KiCad 10.0.5 DRC: 0
+violations, 24 unconnected pads; the saved-board V702 endpoint audit and
+targeted handoff-via negative control pass. V703/V705/V706/V707 are rejected
+SPICS-only route implementations from V702, with the detailed failures in
+the qualification report. Path A remains intact and protected.
+
 ## CURRENT STATE — documentation authority (2026-09-08)
 
 This section is the current narrative authority for Phase 24. The live

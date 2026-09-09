@@ -12,6 +12,13 @@ the required connectivity failure. This closes only the U1.17 RTL_5V local
 rail endpoint; the remaining RTL9210B source-field, control, SPI, reference,
 lane, power, firmware, and productization gates remain open.
 
+V703, V705, V706, and V707 are rejected disposable SPICS route trials from
+the V702 basis. They exposed, respectively, 1V1-via, 1V1/5V-corridor,
+upper-QFN/load-spine, and adjacent-SPISO conflicts. V707 reduced the result
+to three native DRC violations but is not promoted. These are route
+implementation failures, not package or architecture rejection; the next
+SPI attempt must co-author the QFN source escape and retained rail field.
+
 
 Status: **KEEP A / CONTINUE B**. Path A remains the protected production
 architecture and is not modified. Path B is an active isolated candidate,
