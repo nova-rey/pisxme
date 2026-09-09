@@ -7852,3 +7852,10 @@ footprint and native mode graph (4/4), but V1/V2 were rejected as copper
 implementations: inherited old-J5 routing and stale U12 pad-field/AUTO_PEDET
 collision classes remained. The source reference correction stands; the next
 attempt must co-author the affected U12 escape geometry instead of blaming J8.
+
+2026-09-08 — Coordinated source-regenerated J8 candidate V5 repaired the
+complete U12 CM5 USB3 quartet. Native USB3 10/10, SATA 12/12, JMS583 support
+plus negative control, mode control 4/4, and pad parity zero mismatches all
+pass. Native DRC reports 708 violations / 403 unconnected items with zero
+shorting classes. It is the current routing basis, not Phase 24 closure; open
+clearance/crossing/unconnected and full-board gates remain.

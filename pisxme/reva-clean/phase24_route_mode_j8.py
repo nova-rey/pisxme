@@ -12,6 +12,10 @@ for name in ('AUTO_PEDET','MODE_IN'):
  n=b.FindNet(name)
  for t in list(b.GetTracks()):
   if t.GetNetCode()==n.GetNetCode(): b.RemoveNative(t)
-tr(b.FindNet('AUTO_PEDET'),xy('J3',69),xy('J8',2))
-tr(b.FindNet('MODE_IN'),xy('J8',4),xy('U14',2))
+tr(b.FindNet('AUTO_PEDET'),xy('J3',69),(227.75,157.5))
+tr(b.FindNet('AUTO_PEDET'),(227.75,157.5),(255.0,157.5))
+tr(b.FindNet('AUTO_PEDET'),(255.0,157.5),xy('J8',2))
+tr(b.FindNet('MODE_IN'),xy('J8',4),(264.0,166.27))
+tr(b.FindNet('MODE_IN'),(264.0,166.27),(264.0,158.0))
+tr(b.FindNet('MODE_IN'),(264.0,158.0),xy('U14',2))
 b.BuildListOfNets(); b.Save(str(R/a.output)); print(R/a.output)

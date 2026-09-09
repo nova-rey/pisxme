@@ -34,6 +34,18 @@ The native 4/4 mode graph passed in both, confirming the source fix; neither
 route is promoted. V6 remains the clean routing basis while J8 and its mode
 routes are regenerated with collision-aware placement.
 
+The coordinated source-regenerated candidate
+`PHASE24_STORAGE_NETLIST_REGENERATED_J8_V5.kicad_pcb` is now the current
+storage routing basis. It materializes source-owned J8, routes AUTO_PEDET
+and MODE_IN to J8, and regenerates the complete U12 CM5 USB3 quartet with
+ordinary transitions outside the exposed-pad field. Native USB3 connectivity
+passes 10/10, SATA passes 12/12, JMS583 support and its negative control
+pass, mode control passes 4/4, and pad parity against
+`PHASE24_STORAGE_MODE_J8.xml` is zero mismatches. Native DRC reports 708
+violations / 403 unconnected items with zero `shorting_items`. This closes
+the prior U12/J5 authority and shorting classes but remains open for the
+unconnected-item, clearance, crossing, and full-board gates.
+
 The source-driven J8 regeneration (`PHASE24_STORAGE_NETLIST_REGENERATED_J8_V1`
 and V2) confirms J8 is materialized with the correct four source nets and the
 native mode audit passes 4/4. Both are rejected routing candidates: V1 still
