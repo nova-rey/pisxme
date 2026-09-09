@@ -7557,3 +7557,11 @@ JMS583 support, ten-net USB3, and 12-net SATA selector connectivity each
 pass with negative controls where implemented. Updated the live open-gate
 narrative so USB3/SATA endpoint work is no longer phrased as an unfinished
 TODO. Native DRC remains open at 669 violations / 499 unconnected items.
+
+2026-09-08: Added `phase24_mode_control_native_connectivity_audit.py`, which
+derives mode-control connectivity exclusively from KiCad's saved PCB graph.
+The V5 disposable fixture passes four asserted endpoint groups and its
+negative control fails after removing a required MODE_IN track. V3-V5 local
+mode-route variants remain rejected route evidence because native DRC still
+finds mode-route crossings/shorts and inherited fixture violations; no mode
+or Phase 24 closure was claimed.

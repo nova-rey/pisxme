@@ -41,9 +41,14 @@ paths is still required.
 The selector-control source ownership is also corrected: U12 pin 9 now uses
 the same `STORAGE_SEL` net as U13.9 and U14.4, eliminating the prior isolated
 `USB_SEL` control. Fresh native export, mode audit, and regenerated placement
-pad parity pass. The first physical mode-control fixture connects
-`AUTO_PEDET`, `MODE_IN`, and shared `STORAGE_SEL`; its direct F.Cu trial has
-one J5 local clearance/short finding and remains an open routing experiment.
+pad parity pass. The latest disposable physical mode-control fixture
+`PHASE24_STORAGE_MODEFIX_MODE_ROUTE_V5.kicad_pcb` has native saved-board
+connectivity for all four asserted control endpoint groups, and its negative
+control fails after removal of a required `MODE_IN` track. Its native DRC is
+still open at 832 violations / 499 unconnected items, including a genuine
+`MODE_IN`/`STORAGE_SEL` crossing and inherited fixture findings; it remains
+route evidence, not mode closure. The mode-aware inactive-state and full
+integrated-board checks remain open.
 
 After the USB3 coupling-capacitor alignment, the ten-net native USB3 audit
 passes on the corrected support parent. The integrated

@@ -10,15 +10,19 @@ b = pcbnew.LoadBoard(str(base))
 if b is None: raise SystemExit("target board load failed")
 def pad(ref, num): return b.FindFootprintByReference(ref).FindPadByNumber(str(num))
 def add(name, left, right, layer):
+    add_path(name, [pad(*left).GetPosition(), pad(*right).GetPosition()], layer)
+def add_path(name, points, layer):
     n = nets[name]
     t = pcbnew.PCB_TRACK(b)
-    t.SetStart(pad(*left).GetPosition()); t.SetEnd(pad(*right).GetPosition())
-    t.SetLayer(layer); t.SetWidth(pcbnew.FromMM(.20)); t.SetNet(n); t.SetNetCode(codes[name]); b.Add(t)
+    for start, end in zip(points, points[1:]):
+        t = pcbnew.PCB_TRACK(b); t.SetStart(start); t.SetEnd(end)
+        t.SetLayer(layer); t.SetWidth(pcbnew.FromMM(.20)); t.SetNet(n); t.SetNetCode(codes[name]); b.Add(t)
 nets = {name: b.FindNet(name) for name in ("AUTO_PEDET", "MODE_IN", "STORAGE_SEL")}
 if any(value is None for value in nets.values()): raise SystemExit("missing mode net")
 codes = {name: value.GetNetCode() for name, value in nets.items()}
 add("AUTO_PEDET", ("J3",69), ("J5",2), pcbnew.F_Cu)
-add("MODE_IN", ("J5",4), ("U14",2), pcbnew.F_Cu)
+add_path("MODE_IN", [pad("J5",4).GetPosition(), pcbnew.VECTOR2I_MM(250,155),
+                      pcbnew.VECTOR2I_MM(215,155), pad("U14",2).GetPosition()], pcbnew.F_Cu)
 add("STORAGE_SEL", ("U14",4), ("U13",9), pcbnew.F_Cu)
 add("STORAGE_SEL", ("U14",4), ("U12",9), pcbnew.F_Cu)
 b.BuildListOfNets(); b.Save(str(out)); print(out)
