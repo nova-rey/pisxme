@@ -1,0 +1,3 @@
+board: PHASE24_STORAGE_JMS583_CRYSTAL_VIAS_V23.kicad_pcb
+physical vias: 103
+layer transitions without via: 0

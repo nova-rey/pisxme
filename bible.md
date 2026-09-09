@@ -8041,14 +8041,14 @@ trace-removal negative control passed, but native DRC worsened from 730 to 778
 findings with 395 unconnected items. Rejected the direct support-join route;
 the next class remains coordinated lower-field regeneration.
 
-## 2026-09-09 — V23 physical crystal transitions
+## 2026-09-09 — V23 crystal route variant and audit correction
 
-V23 added separated ordinary through-vias to the inherited XIN/XOUT F.Cu to
-B.Cu layer changes, correcting a real authoring defect in V13. Focused JMS583
-support connectivity and the trace-removal negative control pass. Native DRC
-improved to 724 findings with 400 unconnected items; two shorting items are
-inherited outside the crystal repair. V23 is retained as disposable routing
-basis only.
+V23 changed the disposable XIN/XOUT route geometry and passes focused JMS583
+support connectivity plus the trace-removal negative control. A later native
+net-identity audit showed V13 already had same-net ordinary vias at all four
+XIN/XOUT layer changes, correcting the earlier false missing-via diagnosis.
+V23 remains disposable route evidence at 724 DRC findings / 400 unconnected
+items, with two inherited unrelated shorting items.
 
 V22's initial crystal transition-via placement shorted XIN/XOUT and was
 superseded by V23. V24 tested an all-F.Cu alternative; native DRC stayed at

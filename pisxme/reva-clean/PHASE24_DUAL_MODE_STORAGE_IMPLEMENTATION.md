@@ -79,11 +79,12 @@ negative control. Native DRC nevertheless rose from 730 to 778 findings with
 395 unconnected items, so the direct support-join route is rejected and no
 production authority changed.
 
-V23 corrects the inherited XIN/XOUT layer-change authoring defect by adding
-separated ordinary through-vias at native coordinates. The focused JMS583
-support audit and trace-removal negative control pass; native DRC reports 724
-findings and 400 unconnected items, with two inherited unrelated shorting
-items. V23 is a disposable source-field basis only.
+V23 is a disposable route variant with separated XOUT lower-field geometry.
+A later native net-identity audit confirms V13 already contained same-net
+ordinary XIN/XOUT through-vias at the layer changes, so V23 is not a missing-
+via authoring repair. Its focused JMS583 support audit and trace-removal
+negative control pass; native DRC reports 724 findings and 400 unconnected
+items, with two inherited unrelated shorting items.
 
 V22's first transition-via placement shorted XIN to XOUT and was superseded
 by V23. V24's all-F.Cu alternative avoided the B.Cu SATA corridor but added

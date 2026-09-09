@@ -18,11 +18,10 @@ audit plus negative control pass; remaining support-field route cleanup is a
 routing gate, not an instantiation task. Likewise, old malformed footprint,
 pre-J8 mode-control, stale parity, obsolete connector, and rejected-route
 claims below are historical evidence only when explicitly labeled as such.
-The current local routing basis is V23, the bounded co-authored
-USB_TXP/USB_TXN/JMS_AVDDL source-field repair plus physically present,
-separated XIN/XOUT through-via transitions. The next action is to carry this
-source-owned basis through complete storage-field regeneration, native DRC,
-and the existing full-board gates.
+The current local routing basis is V23, a bounded co-authored
+USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
+this source-owned basis through complete storage-field regeneration, native
+DRC, and the existing full-board gates.
 
 A disposable V13-plus-support trial on 2026-09-09 joined the complete
 JMS583 low-speed support cohort using native pad endpoints. Its focused
@@ -31,19 +30,19 @@ from 730 to 778 findings (395 unconnected items). It is rejected as a route
 implementation class; support connectivity passing does not justify adding
 the direct joins over the congested lower field.
 
-V23 repairs a real authoring defect in the inherited crystal routes: V13 had
-F.Cu/B.Cu XIN and XOUT segments at layer changes without vias. V23 adds
-ordinary through-vias at separated native coordinates and passes the focused
-JMS583 support audit plus its trace-removal negative control. Native DRC is
-724 findings / 400 unconnected items; two shorting items remain inherited
-outside the crystal repair. V23 is the current disposable source-field basis,
-not production authority or full-board closure.
+V23 is a disposable route variant with separated XOUT lower-field geometry.
+A later native net-identity audit confirms that V13 already contained same-net
+ordinary XIN/XOUT through-vias at the relevant layer changes; therefore V23
+did not correct a missing-via authoring defect. V23 still passes the focused
+JMS583 support audit and negative control, with native DRC at 724 findings /
+400 unconnected items and two inherited unrelated shorting items. It remains
+disposable evidence only, not production authority or full-board closure.
 
-V22 is superseded by V23: its first physical-via placement created an
+V22 is superseded route evidence: its changed crystal geometry created an
 XIN/XOUT transition-via short. V24 tested an all-F.Cu crystal escape to avoid
 the B.Cu SATA corridors; native DRC remained at 730 and introduced four
 shorting items. Both are rejected route implementations. V23 remains the
-best current crystal-transition basis.
+best disposable crystal-field variant, but not a via-authority repair.
 
 V25 moved both XIN/XOUT B.Cu transition corridors outside the inherited SATA
 B.Cu field before crossing above it. Native DRC worsened to 745 findings and
