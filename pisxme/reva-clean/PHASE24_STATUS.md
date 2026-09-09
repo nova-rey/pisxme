@@ -10039,3 +10039,8 @@ RXN; the farther y-stagger then crossed the live RXN source and violated the
 0.20 mm minimum trace-width rule when attempting a 0.10 mm QFN dogbone.
 This is a real package-escape/coauthoring constraint; validation severity is
 unchanged. The accepted V1263/V1264 source-field basis is retained.
+V1266 is accepted coupled source-field evidence. The RXN transition was
+rehomed farther west and the U1.60/U1.63 RTL_1V1 escapes were co-authored
+around it. Native DRC reports inherited warnings only; the saved-board audit
+proves U1.65 to J1.41 and both rail endpoints with three negative controls.
+This is the current RTL9210B support-routing basis. Remaining support is OPEN.

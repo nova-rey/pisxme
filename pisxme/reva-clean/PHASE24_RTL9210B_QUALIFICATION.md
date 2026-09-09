@@ -1473,6 +1473,11 @@ V1265 is rejected pad-60 evidence. The candidate required an undersized
 0.10 mm dogbone and still interacted with the live RXN source field. No
 minimum-width relaxation is permitted. The next class must co-author the
 QFN package escape field while preserving the accepted V1263/V1264 basis.
+V1266 is accepted coupled source-field evidence. Rehoming RXN farther west
+allows U1.60/U1.63 RTL_1V1 escapes without new native DRC errors. The
+saved-board audit proves the RXN and both rail endpoints plus three negative
+controls. This is the current support-routing basis; remaining support is
+OPEN.
 V1255 is an upper-corridor discriminator. The complete lane concept reaches
 the upper region, but native DRC identifies source-to-row same-layer weave
 crossings plus one REFCLK-via clearance interaction. The corridor itself is

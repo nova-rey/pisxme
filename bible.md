@@ -9410,3 +9410,8 @@ edge pitch cannot accept the proposed 0.10-mm dogbone under the 0.20-mm
 minimum trace-width rule, and the alternate route interacted with the live
 RXN source field. Do not weaken validation; co-author the package escape
 field next. V1263/V1264 remain the accepted basis.
+2026-09-09 — V1266 accepted coupled RTL9210B source-field basis: the RXN
+transition was rehomed farther west and U1.60/U1.63 RTL_1V1 escapes were
+co-authored around it. Native DRC retained inherited warnings only; the
+saved-board audit and three negative controls pass. Remaining support is
+open; Path A and production CAD remain untouched.
