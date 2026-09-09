@@ -9125,3 +9125,6 @@ evidence rather than the current checkpoint. No production CAD was changed.
 qualification documents. The live disposable basis is V1092 through V1119;
 V1119 retains XTAL_IN and V1120 rejects the XTAL_OUT extension. Older V760/V772
 summaries are historical evidence only.
+2026-09-09: Rejected V1121 split-lane XTAL_OUT routing. Native DRC found
+XTAL_IN/XTAL_OUT and retained-GND crossings. The experiment remains raw
+route-implementation evidence; production CAD and architecture are unchanged.
