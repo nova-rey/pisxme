@@ -1449,6 +1449,15 @@ four source-cohort negative controls pass. Native DRC reports no new lane
 shorts, crossings, or clearance errors; only inherited disposable support
 warnings and expected non-lane opens remain. Support restoration around this
 path remains open.
+
+V1259/V1260 are rejected static-support merge experiments. V1259 copied
+pre-lane donor copper and produced real shorts/crossings; V1260's geometric
+filter still missed real via/clearance conflicts and left broken chains.
+V1261 is rejected live-pad support evidence because a shared F.Cu QFN-edge
+collector touched adjacent pads. The live V1258 lane path remains valid and
+audited. The next support implementation is staggered individual QFN
+dogbones/vias followed by a separated B.Cu collector; no Path-A or production
+CAD change was made.
 V1255 is an upper-corridor discriminator. The complete lane concept reaches
 the upper region, but native DRC identifies source-to-row same-layer weave
 crossings plus one REFCLK-via clearance interaction. The corridor itself is

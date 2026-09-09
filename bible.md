@@ -9385,3 +9385,11 @@ assertions and negative controls pass. V1244's lane-0 source/outer-row
 implementation is rejected for QFN/support/control crossings. Preserve
 V1243 as the support base and co-author the next lane escape; Path A and
 production CAD remain untouched.
+2026-09-09 — Phase 24 RTL9210B V1259-V1261 support restoration evidence:
+V1258 remains the accepted, natively audited four-pair U1-to-J1 lane path.
+V1259 (bulk donor copper), V1260 (AABB-filtered donor copper), and V1261
+(shared F.Cu QFN collector) were rejected by native DRC for real support/lane
+shorts, crossings, clearance, duplicate-via, or adjacent-pad contact. These
+are disposable route-authoring failures, not Path-B rejection. Next support
+class: live-pad staggered dogbones to individual through-vias, then a separate
+B.Cu collector. No Path-A or production CAD changed.

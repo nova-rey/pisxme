@@ -10010,3 +10010,14 @@ four source-cohort negative controls pass. Native DRC reports no new lane
 shorts, crossings, or clearance errors; only inherited disposable support
 warnings and expected non-lane opens remain. Support restoration around this
 path remains OPEN.
+
+V1259 is rejected support-merge evidence. Copying the authoritative V1243
+RTL_1V1/RTL_3V3/GND tracks onto the later V1258 lane board creates real
+lane/support shorts and crossings because the donor corridors predate the
+accepted lane ascent. V1260 is also rejected: bounding-box filtering removes
+needed chain segments, misses via/clearance interactions, and duplicates
+existing vias. V1261 is a rejected first live-pad RTL_1V1 route because a
+shared F.Cu collector touched adjacent QFN pads. These are route-authoring
+failures, not Path-B architecture failures. The next class uses staggered
+outward dogbones and individual through-vias before a separated B.Cu
+collector. V1258 remains the accepted lane-path base; support remains OPEN.
