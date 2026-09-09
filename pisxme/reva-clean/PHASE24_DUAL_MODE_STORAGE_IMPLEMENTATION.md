@@ -26,6 +26,11 @@ ground collisions and TX pair/via conflicts, so both are rejected route
 implementations. The corrected source-authoritative support workbench remains
 the active basis; the launch copper was not promoted.
 
+Launch V3/V4 are retained as rejected route evidence: V3 still shorted the
+U13 source-field pair, and V4 crossed adjacent U13 pads while staggering its
+source vias. No launch copper was promoted; the source-authoritative support
+workbench remains the active basis.
+
 The aligned USB3 promotion now passes the complete ten-net native audit, and
 the subsequent V3 SATA integration passes all 12 SATA endpoints. V3 remains
 disposable because its regenerated parent lacks the earlier zone-backed

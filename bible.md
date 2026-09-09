@@ -7594,3 +7594,8 @@ replacement. V1/V2 reduced aggregate DRC but introduced true M.2 socket-ground
 collisions and B.Cu TX pair/via conflicts. Both are rejected route evidence;
 the source-authoritative support workbench remains active and no launch
 copper was promoted.
+
+2026-09-08: Tested M.2 launch V3/V4 with staggered connector and source-via
+escapes. V3 removed the connector-ground collision but retained a U13 source
+pair short; V4 crossed adjacent U13 pads. Both are rejected route evidence;
+the source-authoritative support workbench remains active.

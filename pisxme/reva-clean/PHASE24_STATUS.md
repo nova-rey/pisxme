@@ -45,6 +45,12 @@ variants are rejected route implementations. The corrected
 `PHASE24_STORAGE_MODEAUTH_USB3_ALIGNED_SATA_SUPPORT_ZONES_V1` workbench
 remains the active basis; no M.2 launch copper was promoted.
 
+Launch V3/V4 are additional rejected route implementations. V3 removed the
+connector-ground collision class but retained a source-field pair short; V4
+staggered source vias farther but crossed adjacent U13 pads. The active
+source-authoritative support workbench is unchanged, and the next launch pass
+must allocate the U13 0.4-mm escape field before selecting connector-side vias.
+
 The integrated REXT repair discriminator is complete as a bounded experiment.
 V1's ordinary-via escape removed the original U11.40/U11.39 short but
 introduced new QFN-ground/power clearances; V2's no-via perimeter escape
