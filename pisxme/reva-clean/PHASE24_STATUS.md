@@ -10122,3 +10122,8 @@ V1286 is rejected interior SPICS evidence. The U1.24 endpoint and saved-board
 negative control pass, but the interior transition is too close to the exposed
 GND pad and intersects the validated RXN/RTL_1V1/RTL_5V field on both layers.
 The raw PCB and DRC report are preserved; SPICS remains OPEN.
+V1288 is rejected coupled-source evidence. Both U1.25-to-C4 and U1.24-to-U2.1
+native endpoint/negative-control audits pass, but moving the 1V1 source via
+onto the existing trunk places it inside the exposed-GND clearance envelope;
+native DRC reports real short/hole/mask violations. SPICS and the coupled
+source field remain OPEN.
