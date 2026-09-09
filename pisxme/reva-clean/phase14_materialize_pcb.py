@@ -123,11 +123,21 @@ def main() -> None:
             components[comp.attrib["ref"]] = "USON-10_2.5x1.0mm_P0.5mm"
         elif fp.startswith("Capacitor_SMD:"):
             components[comp.attrib["ref"]] = "C_0805_2012Metric"
+    board = pcbnew.LoadBoard(str(BOARD_IN))
+    # Disposable re-materialization may deliberately use a saved integrated
+    # candidate as the placement donor.  This keeps the source/net authority
+    # test independent of the historical deterministic placement table while
+    # retaining the normal hard failure for production materialization.
+    if os.environ.get("PISXME_USE_SAVED_POSITIONS") == "1":
+        for fp in board.GetFootprints():
+            ref = fp.GetReference()
+            if ref in components and ref not in POSITIONS:
+                q = fp.GetPosition()
+                POSITIONS[ref] = (pcbnew.ToMM(q.x), pcbnew.ToMM(q.y))
     missing_positions = sorted(set(components) - set(POSITIONS))
     if missing_positions:
         raise SystemExit(f"no deterministic placement for refs: {missing_positions}")
 
-    board = pcbnew.LoadBoard(str(BOARD_IN))
     board.SetCopperLayerCount(6)
     for layer, name in ((pcbnew.F_Cu, "F.Cu"), (pcbnew.In1_Cu, "In1.GND"),
                         (pcbnew.In2_Cu, "In2.PWR"),

@@ -2,6 +2,15 @@
 
 ## CURRENT STATE — authoritative now (2026-09-08)
 
+The CM5 ground-label authority has been repaired at source. All 51 local
+`POWER_GND` labels in `CORE_CM5.kicad_sch` are now native global labels, so
+the saved schematic export resolves CM5 ground contacts and the board plane
+to one `POWER_GND` net. Receipt `PHASE24_CORE_CM5_GLOBAL_GROUND.xml` records
+154 nodes on that net and the companion ERC receipt has no hierarchy errors.
+This does not promote the disposable PCB net remap: the active routed board
+must still be regenerated through the source-authoritative path and then
+rechecked natively.
+
 The live schematic had a real U13 lane-ownership regression: pins 6/7 were
 overridden to M.2 PCIe lane 1, leaving the shared lane-0 SATA RX contacts
 unowned. The authoring map and live instance labels are corrected to
