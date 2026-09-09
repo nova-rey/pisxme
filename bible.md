@@ -9198,3 +9198,7 @@ clean. Rejected pending source-only refinement.
 3V3/RSET objects. Native DRC improved to four findings; the remaining real
 issue was the short B.Cu stub crossing accepted XTAL_OUT. Rejected but
 reproducible.
+2026-09-09: V1150 was rerun after correcting native track/via classification
+and branch-pruning assertions. The saved native result improved to four
+violations; XTAL_IN source-field geometry was clean except for its short
+stub crossing the accepted XTAL_OUT lane. Rejected pending lane separation.
