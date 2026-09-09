@@ -8865,6 +8865,10 @@ PEDET/CLKREQ boundary. V993 moved the branches to the opposite side and
 V994 completed the C3 branch from the B.Cu collector; native DRC then showed
 only intentional dangling source ends and inherited opens. Preserve V994 as
 the accepted 3V3 collector primitive.
+2026-09-09: V1000-V1002 rejected RTL_5V shelf routes against the 3V3
+collector/R2/R3 branch and C5 GND. V1003 routed below the branch and used a
+C5 via at (126.4,52.0); native DRC showed no new electrical violations.
+Preserve V1003 as the accepted RTL_5V primitive.
 2026-09-09: V995 connected the three remaining U1 RTL_3V3 pads into V994,
 but crossed one inherited GND corridor. V996's west shift crossed two GND
 routes and was rejected. Preserve V995 as the better fanout diagnostic and

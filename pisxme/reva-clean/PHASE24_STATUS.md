@@ -9277,6 +9277,12 @@ F.Cu. Native DRC reports only eight intentional dangling-track warnings and
 the inherited incomplete connections, with no electrical source-field
 violation. This is now the transition-regeneration basis; it is not complete
 Path-B support closure.
+V1000/V1001/V1002 are rejected RTL_5V shelves: the first crossed the 3V3
+collector, the second crossed the R2/R3 branch and approached C5 GND, and
+the third still crossed the 3V3 branch. V1003 routes below the complete
+R2/R3 branch and launches C5 from a via at (126.4,52.0); native DRC has only
+the eight intentional dangling source tracks and inherited opens. V1003 is
+the accepted disposable RTL_5V primitive.
 V991/V992 are rejected RTL_3V3 collector launches: V991 placed branch vias
 beside PEDET/CLKREQ pads, while V992 placed the F.Cu approach across those
 neighbor pads. V993 moved both branch launches to the opposite side of R2/R3
