@@ -1357,11 +1357,13 @@ was regenerated and its native XIN/XOUT endpoint audit passes with the required
 trace-removal negative control. Native DRC remains 519 violations / 499
 unconnected donor items; this is route evidence only, not a promoted crystal
 solution or Phase 24 closure.
-Native footprint geometry quantifies a bounded Path-B DFM blocker: U1.39/U1.40
-are 0.4 mm apart with 0.2 x 0.9 mm pads, while an ordinary 0.60/0.30 mm via
-plus 0.20 mm clearance requires 0.95 mm separation. V663/V664 reproduce the
-source-field shorts/crossings. Reject RTL9210B Path B for the current package
-and DFM contract; Path A remains protected.
+SUPERSEDED HISTORICAL DFM NOTE: Native footprint geometry showed that a via
+between U1.39/U1.40 cannot fit under the ordinary 0.60/0.30 mm via and
+0.20-mm clearance contract; V663/V664 reproduced shorts/crossings for their
+specific source-field allocations. V666 subsequently demonstrated a clean
+separated planar escape on the same audited package with 0 DRC violations,
+0 unconnected items, and 0 footprint errors. Do not read this older note as
+a Path-B rejection; the complete integrated source-field route remains open.
 V661 is the current retained rail-integration basis: native DRC has nine
 inherited warnings and no shorting/crossing class after adding the proven
 RTL_5V route to the V35 U2-left crystal/1V1/upper-3V3 field. It still has 23

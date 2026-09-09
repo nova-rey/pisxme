@@ -11,8 +11,9 @@ circuit experiment.** RTL9210B-CG is a serious candidate because it can
 collapse the two bridge devices and the storage-side high-speed selector into
 one USB-to-SATA/PCIe controller. It is not yet production authority: the
 remaining risks are provisioning and documentation provenance, not a quick
-rejection based on the unfinished community PCB. The separate strict-QFN DFM
-gate is also still open: V663/V664/V665 rejected route allocations, not the
+rejection based on the unfinished community PCB. The package-level strict-QFN
+DFM gate is closed by V666; the complete integrated source-field route is
+still open because V663/V664/V665 rejected specific allocations, not the
 package or architecture.
 
 ## Path-B proposed implementation

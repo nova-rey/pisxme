@@ -8143,6 +8143,12 @@ relaxation or production-CAD change.
 escape trace from a disposable copy produced one native unconnected item;
 the clean package discriminator therefore depends on saved physical copper,
 not expected connectivity or synthetic graph edges.
+
+2026-09-09: Reconciled the remaining Phase 24 status prose that still called
+the earlier V663/V664 lower-QFN route failures a Path-B package/DFM blocker.
+Marked that statement superseded and pointed it to V666's clean package-level
+escape result. The complete integrated RTL9210B source-field route remains
+open; Path A remains protected.
 2026-09-09: V666 cleanly discriminated the RTL9210B QFN DFM claim. Using the
 audited real footprint, separated U1.39/U1.40 F.Cu exits, unchanged 0.20-mm
 rules, and no via-in-pad, native KiCad DRC reported 0 violations, 0
