@@ -9292,6 +9292,15 @@ Native DRC retained only the inherited warning; the saved-board audit passed
 U1.8/R2.1/J1.69 and its complete source-cohort negative control. PEDET is
 locally closed; remaining RTL9210B control, REFCLK, lane, support, and
 integrated Path-B gates remain open.
+2026-09-09: V1211 accepted the CLKREQ_N edge-corridor primitive after V1210
+was rejected for 1V1 and PERST_N launch interactions. Native DRC retained
+only the inherited warning; the saved-board audit passed U1.13/R3.1/J1.52
+and its complete source-cohort negative control. CLKREQ_N is locally closed.
+2026-09-09: V1211 accepted the CLKREQ_N edge-corridor primitive. Native DRC
+retained only the inherited warning; the saved-board audit passed
+U1.13/R3.1/J1.52 and its complete source-cohort negative control. CLKREQ_N is
+locally closed; PERST_N, REFCLK, lane, support, and integrated Path-B gates
+remain open.
 2026-09-09: V1207 accepted the U1.16 1V1 east rechannel. Native DRC retained
 only the inherited warning; its saved-board audit and complete source-cohort
 negative control passed. The rechannel preserves the accepted 1V1 field while

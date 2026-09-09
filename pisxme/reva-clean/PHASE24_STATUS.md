@@ -9883,6 +9883,21 @@ unconnected items. The saved-board audit proves U1.8/R2.1/J1.69 connectivity
 and a complete source-cohort negative control. PEDET is locally closed;
 CLKREQ_N, PERST_N, REFCLK, lane, remaining support, and integrated Path-B
 closure remain OPEN.
+V1211 is the accepted CLKREQ_N edge-corridor primitive. It uses an immediate
+source transition, a dedicated west-edge B.Cu trunk, and separate F.Cu drops
+to R3.1 and J1.52; native DRC retains only the inherited RTL_3V3 dangling
+warning and expected remaining unconnected items. The saved-board audit proves
+U1.13/R3.1/J1.52 connectivity and a complete source-cohort negative control.
+CLKREQ_N is locally closed; PERST_N, REFCLK, lane, remaining support, and
+integrated Path-B closure remain OPEN.
+V1210 is rejected edge-corridor evidence: its outer transition hit the
+retained 1V1 field and its J1 diagonal contacted PERST_N. V1211 corrected the
+outer transition and used a vertical J1.52 launch. Native DRC retains only
+the inherited RTL_3V3 dangling warning and expected remaining unconnected
+items. The saved-board audit proves U1.13/R3.1/J1.52 CLKREQ_N connectivity
+with a complete source-cohort negative control. CLKREQ_N is locally closed;
+PERST_N, REFCLK, lane, remaining support, and integrated Path-B closure remain
+OPEN.
 V1207 is the accepted local U1.16 1V1 rechannel used to free the CLKREQ
 source escape. It removes the prior U1.16 source cohort and hands off east at
 (104.5,77.0) through In2. Native DRC retains only the inherited RTL_3V3
