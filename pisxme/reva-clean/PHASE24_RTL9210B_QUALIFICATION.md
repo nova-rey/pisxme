@@ -44,6 +44,13 @@ via shorts. V1057's staggered-transition regeneration reduces the SPI failure
 to two source-side F.Cu crossings; retain it as diagnostic evidence while
 V1055 remains the routing basis.
 
+V1058 regenerates the five SPI channels to the rotated U2 row using staggered
+F.Cu source dogbones, parallel B.Cu lanes, and separated endpoint dogbones.
+Native DRC has one inherited RTL_3V3 dangling warning and no electrical
+violations. The saved-board audit passes all five endpoint pairs and five
+source-track-removal negative controls. V1058 is the current SPI basis;
+remaining U2 supply/support endpoints remain OPEN.
+
 V1048 adds the U1.34 RTL_3V3 escape to the already-clean C3-side trunk.
 Native KiCad DRC remains free of electrical violations, with six intentional
 dangling source warnings and 41 fixture opens. Retain V1048 as the current

@@ -171,6 +171,13 @@ crossings and one inherited 3V3 dangling warning. These are route-generation
 failures; V1055 remains the current placement basis and moved-U2 SPI routing
 is still open.
 
+V1058 regenerates all five SPI channels from the clean rotated-U2 basis.
+Native DRC reports one inherited RTL_3V3 dangling warning and no new
+electrical violations. The saved-board audit passes SPISI, SPICLK, SPISO3,
+SPISO, and SPICS endpoint connectivity plus one source-track-removal negative
+control for each net. V1058 is the current SPI routing basis; remaining U2
+supplies, control, USB, lane, and full Path-B gates remain open.
+
 ### Latest RTL_1V1 allocation evidence — V1004/V1005 (2026-09-09)
 
 V1004 is REJECTED. It transplanted the historical V930 eight-pad RTL_1V1

@@ -8988,6 +8988,11 @@ scrubbed stale vertical-U2 copper and restored a clean rotated-U2 placement
 with local GND returns. V1056 rejected same-pitch SPI source vias; V1057's
 staggered source-transition method reduced the SPI failure to two F.Cu
 crossings. Preserve V1055 as the placement basis and continue SPI repair.
+2026-09-09: V1058 regenerated the five SPI channels to the rotated U2 row.
+Native DRC has one inherited RTL_3V3 dangling warning and no new electrical
+violations. Saved-board connectivity and source-track negative controls pass
+for SPISI, SPICLK, SPISO3, SPISO, and SPICS. V1058 is the current SPI basis;
+remaining U2 supply/support endpoints stay open.
 2026-09-09: V1049 rejected the U1.20 RTL_3V3 F.Cu corridor at SPISO3.
 V1050 rejected the immediate B.Cu alternative at the SPICLK-adjacent via and
 1V1 shelf crossing. Preserve both as local route evidence; U1.20 remains
