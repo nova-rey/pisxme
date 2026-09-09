@@ -1414,3 +1414,9 @@ controls pass. V1244 is rejected lane-0 routing evidence because its source
 fanout and long B.Cu rows intersect QFN/support/control geometry. This is a
 route implementation failure, not an RTL9210B architecture failure. The next
 experiment must co-author the lane escape with the live support field.
+V1245/V1247 reject naive staggered source fanouts against the live support
+field and adjacent QFN pads. V1246 confirms that the isolated source field
+still needs diverging, layer-aware escapes. V1248 improves the isolated
+pattern, but its outer TXP escape reaches the RTL9210B side-pad SPISI. These
+are route-implementation results only; the next class co-authors lane exits,
+side-pad clearance, and support restoration together.

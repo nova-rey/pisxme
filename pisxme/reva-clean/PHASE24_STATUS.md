@@ -9075,6 +9075,15 @@ evidence: the attempted source fanout and outer B.Cu rows cross adjacent QFN
 pads and retained support/control corridors. It does not reject the RTL9210B
 lane architecture. Next gate: co-author a lane source escape with the
 rail/reference field, then regenerate lane-0 and audit it.
+V1245 and V1247 are rejected source-only trials against the live support
+field: their staggered escapes collide with existing 1V1/REFCLK/control
+objects. V1246 isolates the source field but confirms that naive same-side
+fanout still crosses adjacent QFN pad geometry. V1248 improves the isolated
+pattern by transitioning RXN before the lower pair row and sending TXP
+outward, but the outer route meets RTL9210B side-pad SPISI. These remain route
+implementation experiments. The discriminating next class is a fully
+co-authored source/side-pad escape, with support and lane exits regenerated as
+one field.
 V284 is rejected: the high-north SPISO3 trial avoids the lower SPI crossings
 but creates a native SPISO3/GND short at the C1 crystal-support pad. This is
 another route-implementation failure; the next experiment must allocate

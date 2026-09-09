@@ -9329,6 +9329,12 @@ crossings or shorts; support opens are intentional isolation artifacts, so
 V1240 is not final closure. The evidence changes the next action to
 coordinated rail/ground regeneration around proven REFCLK exits. Path A and
 production CAD remain untouched.
+2026-09-09 — PiSXMe Phase 24 Path-B lane-source evidence V1245-V1248.
+V1245/V1247 failed against live QFN support geometry. V1246 isolated the
+source field and V1248 improved the diverging escape pattern, but the outer
+TXP path met the RTL9210B SPISI side pad. Preserve these as rejected routing
+experiments; V1243 remains the best rail/REFCLK/control support base. Next,
+co-author lane exits and side-pad clearance with support restoration.
 2026-09-09 — PiSXMe Phase 24 Path-B rail regeneration review. V1241 rejected
 historical V1195 copper on the current basis. V1242 passed native endpoint
 assertions and source-cohort negative controls but failed native DRC at the
