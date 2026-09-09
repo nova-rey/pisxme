@@ -18,6 +18,14 @@ closure candidate; no V2 copper is promoted.
 
 ### Current source-authority repair
 
+The disposable `PHASE24_STORAGE_USB3_SELECTOR_ASTAR_V1.kicad_pcb` trial is
+rejected. Its obstacle-aware source-to-U12 search produced disconnected
+launches and multiple pad-field shorts (802 native DRC violations); it used
+an invalid via/pad escape model. It does not alter the source-authoritative
+storage decision. The V3 netlist-regenerated candidate remains the cleanest
+source-owned basis while the CM5 USB3 launch is re-authored with explicit
+non-via-in-pad dogbones.
+
 `CORE_CM5.kicad_sch` now exposes its 51 CM5 ground labels as native global
 `POWER_GND` labels. This is a source-level repair for the previously observed
 `/CORE_CM5/POWER_GND` versus board-plane `POWER_GND` split; no PCB-only merge

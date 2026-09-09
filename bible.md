@@ -7779,3 +7779,6 @@ no copper was promoted.
   source-field pair short while retaining zero pad-parity mismatches and
   passing SATA/USB3 endpoint audits. V3 remains rejected pending a clean
   reroute of that transformed CM5 USB3 launch.
+- A disposable obstacle-aware J7-to-U12 A* launch trial was rejected after
+  native DRC exposed disconnected pad escapes and multiple pad-field shorts;
+  the invalid via/pad model was retained only as negative routing evidence.
