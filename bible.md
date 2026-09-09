@@ -9483,3 +9483,7 @@ violations. Both nets remain open for a different escape-side topology.
 saved-board negative-control audit passed, but native DRC found a crossing of
 the RXN B.Cu trunk, collision with the RTL_1V1 via field, and U2.2 clearance
 violations. Raw PCB/DRC evidence are preserved; SPICS remains open.
+2026-09-09 — V1286 rejected interior SPICS evidence: the U1.24 endpoint and
+saved-board negative control passed, but its transition was too close to the
+exposed GND pad and crossed validated RXN/RTL_1V1/RTL_5V fields. Raw PCB/DRC
+evidence are preserved; SPICS remains open.

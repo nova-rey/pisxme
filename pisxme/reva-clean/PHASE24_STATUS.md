@@ -10118,3 +10118,7 @@ U2.1 SPICS native endpoint/negative-control audits pass, but the proposed
 co-authored field still has native crossings between the B.Cu trunks and
 clearance/hole violations at the QFN source pad field. Both nets remain OPEN
 for a different escape-side topology.
+V1286 is rejected interior SPICS evidence. The U1.24 endpoint and saved-board
+negative control pass, but the interior transition is too close to the exposed
+GND pad and intersects the validated RXN/RTL_1V1/RTL_5V field on both layers.
+The raw PCB and DRC report are preserved; SPICS remains OPEN.
