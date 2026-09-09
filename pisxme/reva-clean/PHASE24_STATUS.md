@@ -93,6 +93,11 @@ count of 664; it is rejected. The VCCK-local V1 basis remains current.
 USB3 skew-tune V1 reduced RX proxy skew to 2.123 mm and TX proxy skew to
 2.400 mm, but introduced real JMS support/selector shorts and crossings;
 it is rejected pending a reserved support-via corridor.
+Selector SATA RXN compact-jog V12 reduced the selector RX pair mismatch from
+31.46 mm to 13.53 mm and passed native SATA with no shorting items, but it
+remains a disposable geometry because pair balance and full DRC are open.
+V13's added upper-field meander created M2 SATA and USB/support shorts and
+was rejected.
 
 Selector-side V9 moved only the TXP corridor above the inherited support
 field; it removed the prior TXP/USB_RXN1 collision but introduced new XIN,

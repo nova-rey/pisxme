@@ -7679,3 +7679,8 @@ electrical quality. Rejected; VCCK_LOCAL_V1 remains the current basis.
 TX proxy skew to 2.400 mm, but the added meanders entered JMS support and
 selector-via fields and created real shorts/crossings. Rejected; support-via
 reservation is required before another tuning pass.
+
+2026-09-08: Tested selector SATA RXN compact-jog V12. It passed native SATA
+with zero shorting_items and reduced selector RX pair mismatch from 31.46 mm
+to 13.53 mm. V13's added upper-field meander entered M2/USB support corridors
+and created shorts; V13 rejected, V12 retained as disposable evidence.
