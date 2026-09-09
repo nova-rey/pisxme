@@ -52,6 +52,10 @@ fanout preserves all focused connectivity/parity gates and introduces no
 native shorting class, but native DRC remains at 730 findings with inherited
 crossing/open/clearance/width debt. It is not production authority.
 
+The V8 USB3 negative control independently passes: removing a required native
+trace breaks the asserted endpoint graph. The check strengthens evidence
+sensitivity but does not waive the open native DRC or full-board gates.
+
 ## SUPERSEDED OPEN-GATE SNAPSHOT — pre-VBUS/J8 basis
 
 The following historical snapshot is retained for archaeology only. It is not

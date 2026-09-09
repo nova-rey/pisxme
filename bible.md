@@ -7244,6 +7244,10 @@ JMS583 package's 64 signal pads plus grounded exposed pad 65. The repaired
 library, selector, and TE M-key checks pass; physical storage validation
 remains open.
 
+V8 USB3 native negative control also passed: removing a required CM5 USB3
+trace broke the connectivity assertion as required. This confirms audit
+sensitivity while Phase 24 remains open.
+
 2026-09-08: Promoted the local VCCK corridor V1 as the current storage
 workbench. It removes the VCCO/VCCK and RESET_N/VCCK short classes while
 preserving USB3 10/10, SATA 12/12, mode 4/4, parity, JMS support, and rail

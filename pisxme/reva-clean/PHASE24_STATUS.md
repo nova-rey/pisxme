@@ -60,6 +60,10 @@ pad parity passing, with no native `shorting_items` class; native DRC reports
 730 findings. It is not closure: inherited crossing/open/clearance/width and
 full-board power/ground gates remain. No production copper changed.
 
+The USB3 negative-control run on V8 also passes: the intact native graph is
+accepted, and removal of a required CM5 USB3 trace makes the audit fail as
+required. This validates audit sensitivity, not Phase 24 closure.
+
 ## SUPERSEDED ROUTING SNAPSHOT — pre-VBUS/J8 basis
 
 The following historical snapshot is retained for archaeology only. It is not
