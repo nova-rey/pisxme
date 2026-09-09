@@ -10044,3 +10044,8 @@ rehomed farther west and the U1.60/U1.63 RTL_1V1 escapes were co-authored
 around it. Native DRC reports inherited warnings only; the saved-board audit
 proves U1.65 to J1.41 and both rail endpoints with three negative controls.
 This is the current RTL9210B support-routing basis. Remaining support is OPEN.
+V1267 is accepted incremental support evidence. U1.55 RTL_1V1 was added
+using a west-staggered ordinary through-via into the V1266 collector. Native
+DRC retains inherited warnings only; the saved-board audit proves the
+U1.55-to-C4 endpoint and its source negative control. The live rail cohort
+now includes U1.55/U1.60/U1.63. Remaining support is OPEN.

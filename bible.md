@@ -9415,3 +9415,8 @@ transition was rehomed farther west and U1.60/U1.63 RTL_1V1 escapes were
 co-authored around it. Native DRC retained inherited warnings only; the
 saved-board audit and three negative controls pass. Remaining support is
 open; Path A and production CAD remain untouched.
+2026-09-09 — V1267 accepted RTL9210B support increment: U1.55 RTL_1V1 was
+added to the V1266 live collector through a west-staggered ordinary via.
+Native DRC retained inherited warnings only and the saved-board endpoint plus
+negative-control audit passed. The current rail cohort is U1.55/U1.60/U1.63;
+remaining support is open.
