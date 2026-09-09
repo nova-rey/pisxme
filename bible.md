@@ -64,6 +64,12 @@ trace-removal negative control. Support/control/REFCLK remain open.
 exposed real short/crossing classes despite reduced open counts. V311 remains
 the retained disposable sideband basis; Path A and production CAD are
 unchanged.
+
+2026-09-08: Strengthened the JMS583 VBUS audit to include U11.10
+JMS_VBUS_SENSE, then preserved V10 as rejected evidence. V10 passes all three
+divider endpoints and the trace-removal negative control, but native DRC
+reports 532 findings with a real VBUS/JMS_VBUS_SENSE handoff short. VBUS
+remains open and no route was promoted.
 2026-09-08: RTL9210B V551 proves the bottom 1V1 group in the native graph
 with an exact negative control, but native DRC rejects the below-REFCLK
 shared return for XTAL_OUT, LANE0_RXP, and RTL_3V3 conflicts. That route

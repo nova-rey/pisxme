@@ -528,3 +528,9 @@ V4 is also rejected: it passes VBUS and USB3 endpoint connectivity, but
 native DRC reports 512 findings / 499 inherited unconnected items with real
 RX_N/TX_N shorting/crossing classes. It remains negative route evidence and
 does not change the selected support basis.
+
+The VBUS audit now requires the complete U11.10 sense endpoint as well as
+U11.16, R82, and R83. V10 passes all three native endpoint assertions and the
+trace-removal negative control, but native DRC reports 532 findings with a
+real VBUS/JMS_VBUS_SENSE handoff short. VBUS remains open; no route has been
+promoted.

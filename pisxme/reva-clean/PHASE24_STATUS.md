@@ -599,6 +599,12 @@ native pads/tracks/zones. Its combined negative control removes every support
 track and zone and fails as required. Native DRC remains 514 inherited
 findings; this closes the support connectivity primitive only.
 
+The VBUS audit was strengthened to require U11.10 (`JMS_VBUS_SENSE`) in
+addition to U11.16, R82, and R83. V10 is the latest complete-endpoint trial:
+all three assertions and the trace-removal negative control pass, but native
+DRC reports 532 findings with a real VBUS/JMS_VBUS_SENSE handoff short. VBUS
+remains open and no route is promoted.
+
 An independent parity run on the current AVDDL support-route candidate reports
 111 expected-pad mismatches. Examples include J3/M.2 ownership, J1/J2 power
 and Ethernet support, J4 service pins, J5 mode pins, and missing support
