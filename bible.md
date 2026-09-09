@@ -7569,3 +7569,8 @@ or Phase 24 closure was claimed.
 superseded historical text so only the authoritative top current-state/open
 gates can govern execution. No raw reports or rejected experiments were
 rewritten.
+
+2026-09-08: Reconciled the implementation narrative's active workbench name
+and gate counts with the live zone-backed integrated storage workbench. Older
+pre-zone USB3-incomplete wording remains historical evidence; no raw report
+or rejected candidate was changed.

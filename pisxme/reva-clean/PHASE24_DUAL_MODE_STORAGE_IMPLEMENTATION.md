@@ -12,12 +12,12 @@ coordinates. The corrected disposable V2 corridor passes all 12 SATA
 endpoint assertions. Native DRC is still open at 734 violations / 499
 unconnected items, and the candidate is not production authority.
 
-The current regenerated integration workbench is
-`PHASE24_STORAGE_AUTHORITY_CORRECTED_USB3_SATA.kicad_pcb`. It includes the
-live-authority placement, JMS583 support author, corrected USB3 promotion
-boundary, and the SATA corridor; all 12 SATA endpoints pass. USB3 bridge-side
-promotion remains incomplete, and native DRC is 1,027 violations / 499
-unconnected items. This is active routing workbench evidence, not closure.
+The current integrated workbench is
+`PHASE24_STORAGE_AUTHORITY_CORRECTED_USB3_SATA_ZONES_FINAL.kicad_pcb`. It
+includes the live-authority placement, zone-backed JMS583 support, complete
+USB3 promotion, and the SATA corridor; all ten USB3 and 12 SATA endpoint
+assertions pass. Native DRC remains open at 669 violations / 499 unconnected
+items. This is active routing workbench evidence, not closure.
 
 The aligned USB3 promotion now passes the complete ten-net native audit, and
 the subsequent V3 SATA integration passes all 12 SATA endpoints. V3 remains
