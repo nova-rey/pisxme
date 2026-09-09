@@ -8594,3 +8594,12 @@ placement discriminator; U1.52 then joined the 3V3 spine with native DRC 0,
 30 expected incomplete items, and a saved-board audit pass for
 U1.52/U1.39/U2.3/U2.8/C3.1 plus a source-trace negative control. The increased
 open count is deliberate support-scrub evidence, not an accepted omission.
+2026-09-09: V880 translated the complete Y1/C1/C2/R1 support block 8 mm west;
+V881 was rejected for crystal-field crossings and RSET/GND conflicts. V882
+moved the block a further 18 mm northwest; V883 was rejected for RSET
+proximity/crossing, and V884 isolated RSET while exposing the GND-return need.
+V885 scrubbed support and retained clean RSET. V886/V887 were rejected for
+GND-return crossings or pad clearance. V888 accepted the separated underside
+GND return: native DRC 0 violations, 29 expected incomplete items, and a
+saved-board audit pass for C1.2/C2.2/R1.2 with three local vias plus a
+zone-independent trace-removal negative control. Crystal nets remain open.

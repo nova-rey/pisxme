@@ -778,3 +778,15 @@ a placement discriminator; U1.52 then joins the 3V3 spine with native DRC 0,
 U1.52/U1.39/U2.3/U2.8/C3.1 plus a source-trace negative control. The increased
 open count is deliberate crystal/RSET scrub evidence, not an accepted
 omission.
+V880 translated the complete Y1/C1/C2/R1 support block 8 mm west without
+native violations. V881's first support route was rejected for crystal-field
+crossings and RSET/GND conflicts. V882 moved that block a further 18 mm
+northwest; V883 was rejected for RSET proximity/crossing, while V884 isolated
+the RSET geometry but exposed the relocated GND-return requirement. V885
+confirmed that support scrub plus the clean RSET route leaves only the expected
+GND return findings. V886's single-via return and V887's two-via return were
+rejected for crossings or pad clearance. V888 is the accepted GND-return
+primitive: native DRC reports 0 violations and 29 expected incomplete items;
+the saved-board audit proves C1.2/C2.2/R1.2 connectivity through three local
+GND vias and passes a zone-independent trace-removal negative control. XTAL_IN
+and XTAL_OUT remain intentionally open for the next support-routing trial.
