@@ -1,35 +1,32 @@
 # Phase 24 acreage validation status
 
-## CURRENT PATH-B CHECKPOINT — V702 (2026-09-09)
+## CURRENT PATH-B CHECKPOINT — V760 five-net SPI fixture (2026-09-09)
 
-V702 is the current disposable RTL9210B-CG support candidate. It preserves
-V699 and adds the U1.17 RTL_5V branch with an ordinary-via F.Cu/B.Cu/F.Cu
-handoff around the local 3V3/1V1 barrier. Native KiCad 10.0.5 DRC: 0
-violations, 24 unconnected pads; the saved-board V702 endpoint audit and
-targeted handoff-via negative control pass. V703/V705/V706/V707 are rejected
-SPICS-only route implementations from V702, with the detailed failures in
-the qualification report. Path A remains intact and protected.
+V760 is the current disposable RTL9210B-CG SPI support candidate. It starts
+from the V748 U1/U2 placement basis, uses a monotonic five-net QFN source
+fan-out and a vertical U2 endpoint field, and passes native KiCad 10.0.5 DRC
+with 0 violations and 40 unrelated expected opens. The saved-board V760
+audit proves all five U1/U2 SPI endpoint pairs; removing one necessary source
+track per net fails the corresponding negative control. This closes the
+isolated five-net SPI routing fixture only. Path A remains intact and
+protected; Path B control, reference, lane, power, firmware, and integrated
+validation gates remain open.
 
-The current source-field direction is the V712/V718 orientation branch, not
-the rejected V702 SPICS corridors. V712's refilled 180-degree U1 plus
-north/west U2 placement has zero native DRC violations; V718 adds a clean
-SPICS channel and local flash GND return with zero native DRC violations.
-The V718 saved-board audit and trace-removal negative control pass. This is
-still a disposable source-field basis, with 43/44 expected opens and the
-remaining SPI, control, reference, lane, power, firmware, and integration
-gates open.
+The earlier V702/V718/V735 checkpoints and V746/V747/V751/V752 failures are
+historical disposable evidence. V753 proved the adjacent SPICLK/SPISI
+dogbone class; V754 proved the complete source fan-out; V755/V757/V758/V759
+closed endpoint channels incrementally. Their raw reports remain immutable
+evidence in the qualification directory.
 
 ## CURRENT STATE — documentation authority (2026-09-08)
 
-V723/V724/V725 are rejected SPISO route implementations from V718: they
-exposed endpoint-shelf, source-via, and adjacent-QFN-pad conflicts. No Path-B
-architecture conclusion is changed. The next experiment is a complete
-five-net source-field allocation on the V712/V718 orientation basis.
+V723/V724/V725 are rejected SPISO route implementations from V718. No Path-B
+architecture conclusion is changed; those are historical route evidence.
 
-The active stronger basis is now V735: U1/U2 both rotated 90 degrees, with
-native-clean SPICS and SPISO channels and passing saved-board negative
-controls. V736-V745 are rejected three-channel implementations, not placement
-or architecture failures. Continue from V735 for SPISO3/SPICLK/SPISI.
+The active stronger basis is now V760. V736-V745 and V751/V752 are rejected
+route implementations, not placement or architecture failures. Continue from
+V760 for the remaining RTL9210B support and productization gates; do not
+promote this fixture into production CAD yet.
 
 This section is the current narrative authority for Phase 24. The live
 dual-mode storage routing basis is

@@ -1,6 +1,13 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
-## Current checkpoint — V748 vertical U2 endpoint-field basis (2026-09-09)
+## Current checkpoint — V760 five-net SPI fixture (2026-09-09)
+
+V760 is the current positive five-net SPI fixture. It uses the V748 vertical
+U2 endpoint field and the V754 source fan-out. Native KiCad 10.0.5 DRC reports
+0 violations and 40 unrelated expected opens. The saved-board audit
+`phase24_rtl9210b_spi_full_v760_audit.py` passes all five native endpoint
+connectivity assertions and five source-track negative controls. This closes
+the isolated SPI routing fixture, not the complete RTL9210B or Path-B gate.
 
 V748 is the current positive placement basis for the remaining RTL9210B SPI
 allocation. Starting from the native-clean V730 U1-at-90-degree basis, U2 was
