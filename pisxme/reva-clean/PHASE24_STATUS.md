@@ -29,6 +29,12 @@ keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits
 passing with no native shorting class. Native DRC remains 730 findings; full
 board closure is still open.
 
+Fresh native validation of the actual VBUS parent on 2026-09-09 reproduces
+USB3 10/10, SATA 12/12, mode-control 4/4, complete JMS583 support with its
+negative control, and pad parity with zero mismatches. Its fresh native DRC
+receipt reports 732 findings and 400 unconnected items; this is the current
+parent baseline, while V13 remains a disposable local source-field basis.
+
 V14 tested a small lateral shift of the TXN vertical leg. It retained all
 focused endpoint/parity audits and reduced the TX skew proxy to 0.096 mm, but
 native DRC found a 0.000 mm clearance violation from the diagonal escape into

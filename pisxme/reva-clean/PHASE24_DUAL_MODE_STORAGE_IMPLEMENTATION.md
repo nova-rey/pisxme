@@ -63,6 +63,11 @@ reduces the USB TX skew proxy to 0.259 mm without a native shorting class;
 focused storage audits and pad parity pass. Native DRC remains at 730
 findings, so V13 is not production authority.
 
+The fresh DRC receipt for the actual VBUS parent reports 732 findings and 400
+unconnected items. All focused storage audits and pad parity pass on that
+parent. This fresh baseline supersedes older parent report counts but does not
+close native routing, power/ground, or full-board validation.
+
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a
 0.000 mm clearance violation into U11 pad 23. No production authority changed.
