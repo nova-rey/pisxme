@@ -16,6 +16,13 @@ next experiment to coherent U1/U2/flash support-island relocation or complete
 source/rail regeneration. It does not change Path A or reject the RTL9210B
 package/architecture.
 
+V670 then applied the consultant-recommended V35/U2-left lower-3V3
+co-author class. Native DRC found 24 violations and 21 opens, with the new
+U1.39/U1.52 departures crossing retained RTL_1V1/RSET/XTAL/SPI geometry.
+V670 is rejected as a route implementation; the V35 SPI/crystal/RTL_5V
+basis remains the active source-field lineage. The next experiment must
+reallocate the local RSET/3V3 support field coherently.
+
 ## Decision summary
 
 The retained RTL9210B-CG Rev. 1.1 document says the controller combines USB,

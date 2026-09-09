@@ -27,8 +27,10 @@ mode-aware route, firmware rights, and integrated validation remain open.
 V667 and V668 are rejected SPI route allocations on the retained V595
 source/rail field; V668 specifically tested separated staggered B.Cu
 channels and confirms that the unchanged source/rail field needs coherent
-island reallocation. These are route-implementation results, not Path-B
-package or architecture rejections.
+island reallocation. V670 then tested the consultant-recommended V35/U2-left
+lower-3V3 co-author and found 24 violations/21 opens from RSET/1V1/XTAL/SPI
+interactions; it is likewise a rejected route implementation. These are
+route-implementation results, not Path-B package or architecture rejections.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native

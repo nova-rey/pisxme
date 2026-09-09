@@ -8170,3 +8170,11 @@ and 11 opens, including true source-field shorts/crossings and rail/channel
 conflicts. Rejected V668 as a route implementation, not as a package or
 architecture result. The next Path-B experiment must coherently reallocate
 the isolated U1/U2/flash support island and its rails.
+
+2026-09-09: Consultant-selected V35/U2-left V670 lower-3V3 co-author was
+tested from the clean RTL_5V-plus-3V3 basis. Native DRC reported 24
+violations and 21 opens, including true lower-3V3 crossings/shorts against
+RTL_1V1, RSET, XTAL, and SPI fields. Rejected the route implementation;
+retained the V35 SPI/crystal/RTL_5V lineage and Path A unchanged. The next
+class must coherently reallocate local RSET/3V3 support before routing the
+lower rail again.
