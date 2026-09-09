@@ -8557,6 +8557,10 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: V972 swept lower RTL_3V3 transition cells against V927. Best
+lower cells had three native DRC findings; no lower cell removed the
+RTL_3V3/SPISO3 source-field interaction. The result confirms that the next
+repair must co-author the source-field route itself, not only move the via.
 2026-09-09: V971 extended the RTL_3V3 transition sweep above the SPI shelves.
 The best tested cell was (100.0,64.6), with two native DRC findings; the
 upper sweep best was (100.0,63.5), with three. The remaining electrical short
