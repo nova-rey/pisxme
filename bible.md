@@ -7949,3 +7949,10 @@ implementation and retained the VBUS V1 parent.
 Tested 0.15 mm package-edge USB TX neckdowns with normal-width continuation.
 Focused connectivity passed, but native DRC retained the real TXP/AVDDL-via
 short. Rejected width-only variation and retained the VBUS V1 parent.
+
+## 2026-09-09 — Phase 24 staggered lower-field basis
+
+V8 uses a staggered order-preserving U11 TX fanout. USB3/SATA/mode/JMS583 and
+pad-parity audits pass; native DRC reports 730 findings with no shorting class.
+Retained V8 as the disposable local routing basis while full-board closure
+remains open.

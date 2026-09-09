@@ -47,6 +47,11 @@ connectivity but still creates a native USB_TXP1/JMS_AVDDL short at the
 AVDDL via. This does not change electrical authority or the selected parent;
 the next class is complete source-field/via allocation.
 
+V8 is the current disposable local source-field basis. Its staggered TX
+fanout preserves all focused connectivity/parity gates and introduces no
+native shorting class, but native DRC remains at 730 findings with inherited
+crossing/open/clearance/width debt. It is not production authority.
+
 ## SUPERSEDED OPEN-GATE SNAPSHOT — pre-VBUS/J8 basis
 
 The following historical snapshot is retained for archaeology only. It is not

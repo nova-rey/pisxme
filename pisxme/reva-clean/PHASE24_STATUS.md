@@ -54,6 +54,12 @@ connectivity, but native DRC still finds a real USB_TXP1/JMS_AVDDL short at
 the unchanged AVDDL via. Width-only variation is exhausted for this local
 geometry; the next route must co-author the complete source-field/via map.
 
+V8 is the retained local source-field basis. Its staggered, order-preserving
+USB_TXP1/USB_TXN1 fanout keeps USB3, SATA, mode-control, JMS583 support, and
+pad parity passing, with no native `shorting_items` class; native DRC reports
+730 findings. It is not closure: inherited crossing/open/clearance/width and
+full-board power/ground gates remain. No production copper changed.
+
 ## SUPERSEDED ROUTING SNAPSHOT — pre-VBUS/J8 basis
 
 The following historical snapshot is retained for archaeology only. It is not
