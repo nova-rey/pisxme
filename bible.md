@@ -8557,6 +8557,11 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: V973 moved SPISO3 left around the best RTL_3V3 cell and was
+rejected with six native DRC findings. It introduced SPISO and RTL_1V1
+crossings and retained RTL_3V3 clearance failure. The proven V927 SPI
+corridor is preserved; a broader local support-island regeneration is now
+required rather than another isolated SPISO3 jog.
 2026-09-09: V972 swept lower RTL_3V3 transition cells against V927. Best
 lower cells had three native DRC findings; no lower cell removed the
 RTL_3V3/SPISO3 source-field interaction. The result confirms that the next
