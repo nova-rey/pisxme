@@ -9569,3 +9569,12 @@ directly compatible and the current four-lane basis remains unchanged.
 pocket migration. Native DRC rejected 45 violations, including RXN crossings,
 source-pad shorts, and XTAL_IN-to-C1 GND contact; its RSET removal heuristic
 also failed to prove disconnection. The candidate is rejected and preserved.
+2026-09-09 — Phase 24 V1308: tested a fresh RTL9210B lane-0 co-authoring
+candidate from the accepted V1243 rail/REFCLK basis. Native endpoint and
+four source-cohort negative-control assertions passed, but DRC rejected 39
+violations from source-field crossings, retained control/rail B.Cu conflicts,
+and connector-side lane shorts/mask bridges. Preserved the disposable board
+and raw DRC as rejected route-implementation evidence; no Path-A or
+production Path-B assets were changed. Next work must co-author the QFN
+source field and J1 launch allocation rather than add another isolated lane
+dogleg.

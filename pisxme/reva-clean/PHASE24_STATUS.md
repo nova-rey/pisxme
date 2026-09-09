@@ -10238,3 +10238,15 @@ violations, including RXN crossings, U1 source-pad shorts, lane/via clearance,
 and XTAL_IN-to-C1 GND contact. The audit also failed to establish an RSET
 negative-control disconnection under this malformed route. V1304 is rejected
 and provides no promotion evidence.
+V1308 tested a fresh lane-0 co-authoring class from the native-clean V1243
+rail/reference field, using separated south F.Cu source departures, dedicated
+outer B.Cu rows, and independent J1 launches. The saved-board native audit
+proves all four U1-to-J1 lane endpoints and four complete source-cohort
+negative controls. Native DRC rejects 39 violations, however: the proposed
+source departures cross the retained REFCLK/RTL_1V1 field, the outer rows
+cross retained control/5V trunks, and the J1 launches short or mask-bridge
+adjacent lane pads. This is rejected route-implementation evidence, not a
+Path-B architecture rejection. It confirms that the next valid experiment
+must co-author the QFN source field and connector launch allocation together;
+the V1243 support/reference basis remains retained and no production CAD was
+changed.
