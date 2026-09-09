@@ -71,6 +71,9 @@ RTL_3V3 branch basis; the remaining 3V3 endpoints are still open.
 V688 attempted the U1.52 left-edge branch and was rejected at three native
 DRC violations due to the C2 GND return and CLKREQ pull-up geometry. The next
 3V3 class must co-author the crystal micro-island and U1.52 escape.
+V689 translated the complete crystal micro-island left and rebuilt its nets;
+native DRC found 11 real crystal-net shorts/crossings. Reject V689 as a route
+implementation and retain the V683 crystal basis plus V687 U1.39 branch.
 
 V672 provides a positive interior RSET basis with nine inherited warnings and
 no signal DRC violations. V673 layered lower RTL_3V3 onto it and found 12

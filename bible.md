@@ -8249,3 +8249,8 @@ incomplete opens. Retained V687 as the positive U1.39 RTL_3V3 branch basis.
 three violations where the route contacted the C2 GND return and CLKREQ
 pull-up pad. Rejected V688; the next class must co-author U1.52 with the
 crystal micro-island.
+
+2026-09-09: V689 translated Y1/C1/C2 left and rebuilt their crystal/GND
+connections. Native KiCad DRC found 11 violations including
+XTAL_IN/XTAL_OUT/GND shorts and crossings. Rejected V689; retained V683 for
+the crystal field and V687 for the U1.39 RTL_3V3 branch.
