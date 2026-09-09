@@ -38,8 +38,11 @@ parent baseline, while V13 remains a disposable local source-field basis.
 V21 tested an outboard F.Cu escape for CM5_PERST to avoid storage USB
 corridors. Native DRC rejected it: the new trunk terminates into no-net J1
 pads and creates two true shorts, despite reducing the crossing count. It is
-rejected low-speed route evidence; the PERST endpoint/source contract must be
-audited before another reroute.
+rejected low-speed route evidence. A native saved-board audit now confirms
+that the intended CM5_PERST ownership is J7.109, TP8.1, and J1.E18, and that
+the existing trunk already joins those three pads. V21 failed because its
+outboard path crossed the no-net J1 pad field before reaching J1.E18; this is
+not a source-authority defect and no further PERST reroute is needed.
 
 V14 tested a small lateral shift of the TXN vertical leg. It retained all
 focused endpoint/parity audits and reduced the TX skew proxy to 0.096 mm, but

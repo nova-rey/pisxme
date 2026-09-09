@@ -69,8 +69,9 @@ parent. This fresh baseline supersedes older parent report counts but does not
 close native routing, power/ground, or full-board validation.
 
 The V21 CM5_PERST outboard experiment is superseded evidence. It introduced
-true shorts into no-net J1 pads and is not a valid low-speed repair. No storage
-or PCIe authority changed.
+true shorts into no-net J1 pads and is not a valid low-speed repair. A native
+audit confirms the existing J7.109/TP8.1/J1.E18 endpoint mapping and continuous
+trunk; no storage or PCIe authority changed.
 
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a

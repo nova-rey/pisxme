@@ -8024,3 +8024,11 @@ Marked the older VCCK-local integrated-candidate paragraph as superseded by
 the current VBUS/J8 parent and V13 disposable source-field basis. Preserved
 the older route metrics as historical evidence; no raw receipt or PCB artifact
 was rewritten.
+
+## 2026-09-09 — CM5_PERST native endpoint reconciliation
+
+Audited the saved VBUS/J8 parent with KiCad's native PCB objects. Confirmed
+CM5_PERST is owned by J7.109, TP8.1, and J1.E18 and that the existing F.Cu
+trunk joins those pads. Clarified that V21 is rejected only because its new
+outboard path crossed no-net J1 pads; the endpoint contract is not an open
+authority task. Raw V21 evidence remains unchanged.
