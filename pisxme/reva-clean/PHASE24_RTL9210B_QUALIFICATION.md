@@ -1510,6 +1510,10 @@ V1275 is accepted coupled rail evidence. U1.39 RTL_3V3 and U1.40 RTL_1V1
 pass the combined saved-board endpoint audit and independent negative controls;
 native DRC has no new errors. Remaining RTL_3V3, RTL_5V, and other support
 remain OPEN.
+V1277 is accepted coupled rail evidence. U1.25 RTL_1V1 and U1.33 RTL_5V
+both pass native endpoint and source-removal negative-control audits with no
+new DRC errors. The 5V/1V1 source field is now co-authored; remaining
+RTL_3V3/RTL_5V and other support remain OPEN.
 V1255 is an upper-corridor discriminator. The complete lane concept reaches
 the upper region, but native DRC identifies source-to-row same-layer weave
 crossings plus one REFCLK-via clearance interaction. The corridor itself is

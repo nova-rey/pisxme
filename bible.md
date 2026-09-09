@@ -9449,3 +9449,8 @@ source-removal negative controls passed. Remaining rails/support are open.
 negative control passed, but native DRC found the source via/escape crossing
 and violating clearance to the live RTL_1V1 vertical. Co-author the 5V/1V1
 source field next; do not weaken rules.
+2026-09-09 — V1277 accepted coupled RTL9210B rail evidence: U1.25 RTL_1V1
+continues on B.Cu west of RXN while U1.33 RTL_5V uses a separate F.Cu/B.Cu
+corridor. Native DRC retained inherited warnings only; combined endpoints
+and two source-removal negative controls passed. Remaining rails/support are
+open.

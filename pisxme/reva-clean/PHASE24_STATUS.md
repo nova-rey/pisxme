@@ -10083,3 +10083,8 @@ V1276 is rejected RTL_5V source evidence. U1.33 endpoint connectivity and
 its negative control pass, but the proposed source via/escape intersects the
 live RTL_1V1 vertical at x=103 and produces native clearance/crossing errors.
 The 5V/1V1 source field must be co-authored; no rule relaxation is allowed.
+V1277 is accepted coupled rail evidence. U1.25 RTL_1V1 continues on B.Cu
+west of the RXN trunk while U1.33 RTL_5V uses a separate F.Cu/B.Cu
+corridor. Native DRC retains inherited warnings only; the combined
+saved-board audit and two source negative controls pass. Remaining
+RTL_3V3/RTL_5V support and non-rail support remain OPEN.
