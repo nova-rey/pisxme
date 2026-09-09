@@ -19,6 +19,14 @@ exposed-pad short without adding a native short; its raw PCB and DRC receipt
 are retained. Next action: repair the mode-control route and then continue
 native full-board closure from V6, preserving negative-control requirements.
 
+The mode-control audit also exposed a genuine reference-identity defect in
+the disposable integration: storage override J5 collided with the unrelated
+power-input J5, leaving the saved PCB's J5 as the power header rather than
+the mode jumper. The authoritative `STORAGE.kicad_sch` symbol is now J8,
+and `PHASE24_STORAGE_MODE_J8.kicadxml` proves J3.69 and J8.2 share
+`/STORAGE/AUTO_PEDET`. The next regenerated candidate must instantiate J8
+and route J3.69/J8.2 and J8.4/U14.2; no PCB-only net relabel is promoted.
+
 ## CURRENT STATE — 2026-09-08
 
 The Y10 local-crystal relocation trial is rejected route evidence: it rebuilt

@@ -24,7 +24,7 @@ MAPS={
  'HD3SS3412_RUA0042A.kicad_mod':('U13',{2:'M2_PCIE_TXP0',3:'M2_PCIE_RXP0',5:'STORAGE_3V3',6:'M2_PCIE_TXP1',7:'M2_PCIE_RXP1',9:'STORAGE_SEL',10:'POWER_GND',11:'M2_PCIE_TXP2',12:'M2_PCIE_RXP2',15:'M2_PCIE_TXP3',16:'M2_PCIE_RXP3',22:'JMS_PCIE_TXN0',23:'JMS_PCIE_TXP0',24:'JMS_PCIE_RXN0',25:'JMS_PCIE_RXP0',26:'TUSB_SATA_RXN',27:'TUSB_SATA_RXP',28:'TUSB_SATA_TXN',29:'TUSB_SATA_TXP',30:'STORAGE_3V3'}),
  'TE_1-2199230-4_MKEY.kicad_mod':('J3',{2:'M2_3V3',3:'POWER_GND',4:'M2_3V3',41:'M2_SATA_B_P_PCIE_RXN0',43:'M2_SATA_B_N_PCIE_RXP0',47:'M2_SATA_A_N_PCIE_TXN0',49:'M2_SATA_A_P_PCIE_TXP0',50:'M2_PERST_N',52:'M2_CLKREQ_N',53:'M2_REFCLK_N',54:'M2_PEWake_N',55:'M2_REFCLK_P',68:'M2_SUSCLK',70:'M2_3V3',71:'POWER_GND',72:'M2_3V3',73:'POWER_GND',74:'M2_3V3'}),
  'SOT-23-5.kicad_mod':('U14',{1:'JMS_VDDREG_5V',2:'MODE_IN',3:'POWER_GND',4:'STORAGE_SEL',5:'STORAGE_3V3'}),
- 'MODE_JUMPER_1x04.kicad_mod':('J5',{1:'FORCE_SATA',2:'AUTO_PEDET',3:'FORCE_NVME',4:'MODE_IN'}),
+ 'MODE_JUMPER_1x04.kicad_mod':('J8',{1:'FORCE_SATA',2:'AUTO_PEDET',3:'FORCE_NVME',4:'MODE_IN'}),
  'R_0402_1005Metric.kicad_mod':('R80',{1:'JMS_REXT',2:'POWER_GND'}),
  'L_2520_6332Metric.kicad_mod':('L10',{1:'LXO',2:'JMS_VDDREG_5V'}),
  'Crystal_3225_4Pad.kicad_mod':('Y10',{1:'XIN',2:'XOUT',3:'POWER_GND',4:'POWER_GND'})}
@@ -48,6 +48,19 @@ SUPPORT_PCB.update({
  'R32':{1:'CM5_5V',2:'BRIDGE_USB_VBUS'},
  'R33':{1:'BRIDGE_USB_VBUS',2:'POWER_GND'},
 })
+
+def normalize_root_usb3_aliases(text):
+    """Use the root-native canonical USB3 names in generated PCB objects.
+
+    The donor CM5 child board carries hierarchical `/CORE_CM5/` prefixes,
+    while the native root export resolves those same nets as CM5_USB3_*.
+    Leaving both names in the PCB creates false shorts when routing between
+    J7 and the storage child.  Normalize the donor aliases at the authoring
+    boundary; do not synthesize connectivity edges.
+    """
+    for name in ('CM5_USB3_RX_N','CM5_USB3_RX_P','CM5_USB3_TX_N','CM5_USB3_TX_P'):
+        text=text.replace('"/CORE_CM5/'+name+'"','"'+name+'"')
+    return text
 
 # Use the same reviewed schematic maps for the disposable PCB metadata. The
 # earlier placement probe used abbreviated aliases and is not authority.
@@ -89,6 +102,7 @@ def remove_existing_refs(text, refs):
     return text
 def main():
     text=BASE.read_text()
+    text=normalize_root_usb3_aliases(text)
     owned=set(ref for _,(ref,_) in MAPS.items()) | set(SUPPORT_PCB)
     text=remove_existing_refs(text, owned)
     # Replace only the old socket footprint; its old copper is retained as
@@ -104,9 +118,9 @@ def main():
         # J5 is deliberately outboard of the M-key socket.  At the former
         # (230,165) origin its FORCE_NVME pad landed in J3's M2_3V3 pad
         # column; this is a physical placement collision, not a net issue.
-        x={'U11':140,'U12':155,'U13':180,'U14':210,'J5':245,
+        x={'U11':140,'U12':155,'U13':180,'U14':210,'J8':245,
            'R80':148,'L10':136,'Y10':145}[ref]
-        y={'U11':135,'U12':135,'U13':135,'U14':150,'J5':150,
+        y={'U11':135,'U12':135,'U13':135,'U14':150,'J8':150,
            'R80':130,'L10':125,'Y10':125}[ref]
         additions.append(pcb_footprint(LIB/fname,ref,x,y,nets))
     for ref,nets in SUPPORT_PCB.items():

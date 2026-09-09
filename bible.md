@@ -7833,3 +7833,10 @@ schematic-to-PCB pad parity passed with zero mismatches. Native DRC improved
 to 684 violations / 403 unconnected items with no `shorting_items`. The
 candidate is retained as the current route basis; mode-control connectivity
 and the remaining full-board closure gates remain open.
+
+2026-09-08 — Native mode audit found a real duplicate-reference authority
+defect: storage override J5 collided with the power-input J5, so the saved
+candidate carried the wrong footprint at that reference. The storage source
+symbol was corrected to J8, and native export `PHASE24_STORAGE_MODE_J8.kicadxml`
+proves J3.69/J8.2 are AUTO_PEDET. The next board regeneration must instantiate
+J8; no PCB-only relabel is accepted.
