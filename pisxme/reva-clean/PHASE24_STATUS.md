@@ -42,6 +42,12 @@ the focused USB3 and JMS583 support audits passing, but native DRC rose to
 additional crossings. Moving the coupling capacitors alone is therefore not
 the complete-field solution; the VBUS V1 parent remains retained.
 
+The coherent 180-degree JMS583/TX-island discriminator V1 is rejected route
+evidence. Native DRC reports 805 findings with multiple QFN/support shorts,
+and the focused USB3 audit loses the unchanged RX paths because the complete
+local island was not regenerated. It does not alter Path A or the retained
+VBUS parent; rotation remains a placement experiment, not production authority.
+
 ## SUPERSEDED ROUTING SNAPSHOT — pre-VBUS/J8 basis
 
 The following historical snapshot is retained for archaeology only. It is not

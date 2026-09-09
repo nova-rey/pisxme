@@ -37,6 +37,11 @@ and JMS583 support checks pass, but native DRC reports 760 findings and real
 JMS_USB3_TXP/AVDD33 and JMS_USB3_TXN/USB_TXP1 shorts. It is not production
 authority and does not change the selected parent.
 
+The 180-degree JMS583/TX-island V1 is superseded route evidence. It reports
+805 native DRC findings, multiple QFN/support shorts, and disconnected RX
+endpoints after an incomplete full-island regeneration. No production
+authority changed; the VBUS V1 parent remains selected.
+
 ## SUPERSEDED OPEN-GATE SNAPSHOT — pre-VBUS/J8 basis
 
 The following historical snapshot is retained for archaeology only. It is not

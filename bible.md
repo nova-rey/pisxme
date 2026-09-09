@@ -7936,3 +7936,10 @@ and superseded-route language as historical/superseded without modifying raw
 receipts or rejected experiments. Remaining work is native DRC/routing-quality
 and full-board closure; the next bounded route class is the co-authored
 USB_TXP/USB_TXN/JMS_AVDDL source field.
+
+## 2026-09-09 — Phase 24 JMS583 rotation discriminator
+
+Tested a coherent 180-degree U11/C86/C87 TX-island placement. It produced
+805 native DRC findings, multiple QFN/support shorts, and disconnected RX
+endpoints because the full island was not regenerated. Rejected the placement
+implementation and retained the VBUS V1 parent.
