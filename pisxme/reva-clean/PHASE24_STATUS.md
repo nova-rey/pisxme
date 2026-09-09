@@ -26,6 +26,11 @@ exposed endpoint-shelf, source-via, and adjacent-QFN-pad conflicts. No Path-B
 architecture conclusion is changed. The next experiment is a complete
 five-net source-field allocation on the V712/V718 orientation basis.
 
+The active stronger basis is now V735: U1/U2 both rotated 90 degrees, with
+native-clean SPICS and SPISO channels and passing saved-board negative
+controls. V736-V745 are rejected three-channel implementations, not placement
+or architecture failures. Continue from V735 for SPISO3/SPICLK/SPISI.
+
 This section is the current narrative authority for Phase 24. The live
 dual-mode storage routing basis is
 `PHASE24_STORAGE_J8_V5_VBUS_V1.kicad_pcb`; its source-owned J8 mode control,

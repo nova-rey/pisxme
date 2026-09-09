@@ -8296,6 +8296,14 @@ KiCad rejected them for SPICS shelf conflict, SPISO handoff-via proximity,
 and adjacent SPISO3/SPISO2 QFN-pad interference. Retain V718 and allocate
 all five SPI source escapes together.
 
+2026-09-09: V726 rotated U2 90 degrees and passed native DRC after refill;
+V730 rotated U1 90 degrees with the rotated U2 and also passed native DRC.
+V731 proved a clean SPICS channel. V732-V734 exposed shelf/source conflicts;
+V735 co-authored SPICS and SPISO with zero native DRC violations, and its
+saved-board endpoint plus source-trace negative controls passed. V736-V745
+are rejected three-channel allocation trials. Retain V735 as the current
+positive two-channel source-field basis.
+
 2026-09-09: V700 connected U1.17 RTL_5V but failed native DRC at the
 3V3/1V1 barrier and was rejected. V701 moved the handoff to a two-via jog,
 but still conflicted with the nearby 1V1 via. V702 angled the initial escape

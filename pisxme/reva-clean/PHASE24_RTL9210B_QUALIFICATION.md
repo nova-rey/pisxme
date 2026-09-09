@@ -39,6 +39,14 @@ V725 moved it toward the QFN and clipped adjacent SPISO3/SPISO2 pads. These
 are route-implementation results; the remaining task is a complete QFN
 source-field allocation across all five SPI nets.
 
+The current positive multi-channel basis is V735: U1 at 90 degrees with U2
+at 90 degrees, SPICS and SPISO connected through separated F/B corridors,
+native DRC 0, and saved-board endpoint/trace-removal audits passing. V736,
+V737, V738, V739, V740, V741, V742, V743, V744, and V745 are rejected
+three-channel route allocations with documented source-via or corridor
+crossings. They do not reject the rotated placement; the next attempt must
+co-author source-via spacing and the remaining SPI channels.
+
 ## Latest implementation evidence — 2026-09-09
 
 V668 tested a distinct five-net source-field allocation on the native V595
