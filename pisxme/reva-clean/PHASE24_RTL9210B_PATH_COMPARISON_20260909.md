@@ -11,7 +11,9 @@ circuit experiment.** RTL9210B-CG is a serious candidate because it can
 collapse the two bridge devices and the storage-side high-speed selector into
 one USB-to-SATA/PCIe controller. It is not yet production authority: the
 remaining risks are provisioning and documentation provenance, not a quick
-rejection based on the unfinished community PCB.
+rejection based on the unfinished community PCB. The separate strict-QFN DFM
+gate is also still open: V663/V664/V665 rejected route allocations, not the
+package or architecture.
 
 ## Path-B proposed implementation
 
@@ -118,6 +120,7 @@ SPI support existence; native symbol/package/mapping/netlist audits; multiple
 native source-field and rail connectivity primitives with negative controls.
 
 **OPEN:** authorized package/application circuit; complete support-field route;
+strict complete-QFN source escape under ordinary-via rules;
 REFCLK/PERST/CLKREQ electrical states; SATA OOB and NVMe receiver-detect
 behavior; SSD 3.3-V transient/inrush/thermal budget; exact stock/price/lead
 time; traceable lot; virgin-chip programming; exact PiSXMe firmware/config;

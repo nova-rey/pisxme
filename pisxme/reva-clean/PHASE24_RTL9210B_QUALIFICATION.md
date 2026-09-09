@@ -1,8 +1,8 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
-Status: **KEEP A**. Path A remains the protected production architecture and
-is not modified. Path B was evaluated as an isolated candidate but is not
-authorized for destructive replacement or production integration.
+Status: **KEEP A / CONTINUE B**. Path A remains the protected production
+architecture and is not modified. Path B is an active isolated candidate,
+not authorized for destructive replacement or production integration.
 
 ## Decision summary
 
@@ -181,8 +181,7 @@ Required bring-up experiment before Path-B promotion:
 | Validation burden | Mode isolation across two switches/bridges | Firmware, mode, and unpowered-state behavior |
 | Productization | More conventional/documentable | Smaller but dependent on Realtek/OEM package rights |
 
-Historical recommendation (superseded by the bounded DFM decision below):
-**CONTINUE BOTH pending one narrowly defined experiment** —
+Current recommendation: **CONTINUE BOTH pending narrowly defined experiments** —
 traceable virgin-chip programming and mode bring-up, plus acquisition of the
 current Realtek application circuit. If that experiment closes, Path B is the
 preferred migration candidate because it removes both external high-speed
@@ -298,18 +297,20 @@ programmed and verified in both SATA and NVMe modes. This preserves Path A as
 the fallback while advancing the candidate on the evidence that can actually
 change the decision.
 
-## Path-B DFM decision — bounded rejection
+## Path-B DFM status — route allocation remains open
 
-The remaining lower-QFN escape blocker is quantified from the native footprint.
-U1.39 and U1.40 have 0.4 mm center spacing and 0.2 x 0.9 mm pads. Under the
-approved ordinary 0.60/0.30 mm via and 0.20 mm clearance contract, a neighboring
-pad requires 0.30 + 0.20 + 0.45 = 0.95 mm radial separation from a via. The
-ordinary-via escape envelope cannot fit between this adjacent pad pair.
-Native V663/V664 trials reproduce the resulting short/crossing classes.
+U1.39 and U1.40 have 0.4 mm center spacing and 0.2 x 0.9 mm pads. The strict
+ordinary-via/0.20-mm-clearance contract makes a via-between-pads escape
+unavailable, but that does not prove the package cannot be escaped: the pads
+may leave the QFN on separated F.Cu channels before transitioning elsewhere.
+V663, V664, and the 2026-09-09 V665 discriminator all rejected their specific
+source-field allocations with real crossings/shorts; none is a clean complete
+QFN escape proof. V665's 37 violations were caused by the proposed
+RTL_3V3 channel colliding with retained 1V1/SPI geometry.
 
-This is a concrete package/DFM constraint, not a documentation or firmware
-objection. Closing it would require qualified microvia/via-in-pad, a different
-package, or relaxed manufacturing rules outside the approved contract.
-RTL9210B Path B is rejected for this Rev-A implementation. Path A remains the
-protected production architecture; RTL9210B artifacts remain qualification
-evidence only.
+Disposition: **DFM OPEN — ROUTE IMPLEMENTATION DISCRIMINATOR REQUIRED**. No
+manufacturing rule is relaxed, no via-in-pad is accepted, and no package
+rejection is declared. The next valid test is a fresh complete QFN source-field
+allocation with U1.39/U1.40 leaving on separated planar channels, followed by
+native DRC and a trace-removal connectivity control. Path A remains the
+protected fallback; Path B remains a serious comparison candidate.

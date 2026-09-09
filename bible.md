@@ -8128,3 +8128,13 @@ removes the V36 CM5_REFCLK/USB3_TXN short without adding a shorting class.
 Native DRC remains 603 violations / 399 unconnected pads, so V37 is retained
 as a disposable routing basis only. Evidence is recorded in
 `pisxme/reva-clean/PHASE24_STORAGE_CM5_USB4_MONOTONIC_V37.md`.
+
+2026-09-09: Consultant review identified a contradiction between the active
+RTL9210B parallel-candidate record and an older lower-QFN DFM rejection.
+Tested V665 as a bounded U1.39/U1.40 escape discriminator under unchanged
+ordinary-via, 0.20-mm clearance rules. V665 failed with 37 native DRC
+violations from its RTL_3V3 route colliding with retained 1V1/SPI geometry;
+this rejects that route allocation, not the QFN package or Path-B
+architecture. Reconciled the qualification/comparison documents to keep the
+strict-QFN DFM gate OPEN and Path B active, with no manufacturing-rule
+relaxation or production-CAD change.
