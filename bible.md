@@ -9145,4 +9145,10 @@ Native DRC found retained 1V1, SPISI, and RTL_5V geometry clashes. PERST
 remains open for complete control-field co-authoring.
 2026-09-09: V1134 removed the inherited dangling RTL_3V3 branch from the
 V1123 basis. Native DRC, the saved-board RTL_3V3 endpoint audit, and the U1.52
-source-trace negative control pass; full Path-B closure remains open.
+ source-trace negative control pass; full Path-B closure remains open.
+2026-09-09: Rejected V1135 XTAL_OUT GND-diagonal overpass: native DRC found
+an XTAL_OUT/GND short, RSET crossing, and XTAL_IN/U1.55 clearance conflicts.
+Rejected V1136 crystal-pocket relocation and V1137 source-escape rehome as
+distinct route-implementation classes; V1136 retained QFN conflicts and
+V1137 produced 14 native violations. Path A, production CAD, and architecture
+remain unchanged; current Path-B gate is a native-clean XTAL_OUT/QFN fanout.

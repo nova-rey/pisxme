@@ -1,6 +1,18 @@
 # Phase 24 acreage validation status
 
-## CURRENT PATH-B CHECKPOINT — V1092 rail/RSET basis; V1113–V1116 coordinated QFN fanout trials rejected (2026-09-09)
+## CURRENT PATH-B CHECKPOINT — V1137 source-escape rehome rejected; V1123 remains the clean GND basis (2026-09-09)
+
+CURRENT UPDATE: V1135 tested a GND-diagonal XTAL_OUT overpass and was rejected
+by native DRC for an XTAL_OUT/GND short, RSET crossing, and XTAL_IN/U1.55
+clearance. V1136 relocated Y1/C1/C2 as a coherent support pocket but retained
+the same QFN source-field problem and was rejected. V1137 additionally
+reworked the U1.55 1V1 departure and used separate upper/lower XTAL lanes;
+native DRC found 14 violations, including source-pad shorts, RSET/3V3
+interactions, and a GND crossing. These are route-implementation failures,
+not evidence against the RTL9210B architecture. The current open Path-B gate
+is still a valid, native-clean XTAL_IN/XTAL_OUT source-and-support solution;
+V1123 is retained as the clean GND/rail starting basis. No production CAD or
+Path-A artifacts were modified.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
 `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout lineage

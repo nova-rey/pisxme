@@ -2,9 +2,12 @@
 
 CURRENT IMPLEMENTATION SUMMARY (2026-09-09): the live disposable Path-B
 basis is `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout
-lineage through V1119. V1119 retains native-clean XTAL_IN; V1120 is a
-rejected XTAL_OUT extension. The current open implementation gate is the
-coordinated XTAL_OUT/QFN fanout. Earlier V760/V772 summaries are historical
+lineage through V1123. V1119 retains native-clean XTAL_IN; V1120, V1121,
+V1122, V1135, V1136, and V1137 are rejected XTAL_OUT/source-field trials.
+The current open implementation gate is a coordinated native-clean
+XTAL_OUT/QFN fanout. V1123 remains the clean GND/rail starting basis. The
+V1135-V1137 files and reports are historical route evidence, not production
+CAD or a change to Path A. Earlier V760/V772 summaries are historical
 evidence only.
 
 ## Current QFN-field correction — V1035–V1040 (2026-09-09)
