@@ -8283,6 +8283,14 @@ V703/V705/V706/V707 SPICS-only route trials were rejected by native DRC.
 Retain V702 as the positive U1.17/U1.33/C5 basis and co-author the next SPI
 source escape with the rail field.
 
+2026-09-09: V708-V711 were orientation/placement probes; V711 corrected the
+zone-refill methodology and showed zero DRC for the 180-degree U1 with U2
+translated north/west. V713-V717 tested SPICS doglegs and were rejected until
+V718, which added a clean SPICS channel and ordinary U2 GND return. V718
+passed native DRC with zero violations, and its saved-board SPICS audit plus
+trunk-removal negative control passed. V719/V720/V722 were rejected
+two-channel allocations; retain V718 as the positive SPICS/orientation basis.
+
 2026-09-09: V700 connected U1.17 RTL_5V but failed native DRC at the
 3V3/1V1 barrier and was rejected. V701 moved the handoff to a two-via jog,
 but still conflicted with the nearby 1V1 via. V702 angled the initial escape

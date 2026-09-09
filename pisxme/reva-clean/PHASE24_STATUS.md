@@ -10,6 +10,15 @@ targeted handoff-via negative control pass. V703/V705/V706/V707 are rejected
 SPICS-only route implementations from V702, with the detailed failures in
 the qualification report. Path A remains intact and protected.
 
+The current source-field direction is the V712/V718 orientation branch, not
+the rejected V702 SPICS corridors. V712's refilled 180-degree U1 plus
+north/west U2 placement has zero native DRC violations; V718 adds a clean
+SPICS channel and local flash GND return with zero native DRC violations.
+The V718 saved-board audit and trace-removal negative control pass. This is
+still a disposable source-field basis, with 43/44 expected opens and the
+remaining SPI, control, reference, lane, power, firmware, and integration
+gates open.
+
 ## CURRENT STATE — documentation authority (2026-09-08)
 
 This section is the current narrative authority for Phase 24. The live

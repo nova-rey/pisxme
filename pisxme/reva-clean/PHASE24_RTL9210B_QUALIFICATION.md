@@ -19,6 +19,14 @@ to three native DRC violations but is not promoted. These are route
 implementation failures, not package or architecture rejection; the next
 SPI attempt must co-author the QFN source escape and retained rail field.
 
+The V712 orientation discriminator rotates U1 180 degrees about the exposed
+pad and moves U2 north/west, placing the SPI edge toward open acreage. After
+native zone refill it has zero DRC violations and 45 expected opens. V718
+adds SPICS plus an ordinary local GND return and still has zero native DRC
+violations; its saved-board SPICS endpoint audit and trunk-removal negative
+control pass. V713/V714/V715/V716/V719/V720/V722 remain rejected route
+implementations. V712/V718 are disposable placement/channel bases only.
+
 
 Status: **KEEP A / CONTINUE B**. Path A remains the protected production
 architecture and is not modified. Path B is an active isolated candidate,
