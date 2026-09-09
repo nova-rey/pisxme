@@ -2,6 +2,12 @@
 
 ## CURRENT STATE — 2026-09-08
 
+The Y10 local-crystal relocation trial is rejected route evidence: it rebuilt
+the live U11/XIN-XOUT-to-Y10 neighborhood but produced 695 native DRC
+violations and five true shorts. It passes the USB3 endpoint audit, but does
+not improve the integrated corridor. The live source remains U11/XIN-XOUT to
+Y10; no blind clock relocation is promoted.
+
 The live source-authority repair for the HD3SS6126 USB selector is complete:
 its QFN exposed pad 43 is now an explicit schematic `POWER_GND` pin, with a
 matching U12 instance pin and source-generator mapping. Native KiCad export

@@ -7819,4 +7819,9 @@ corridor; the experiment does not invalidate the corrected source authority.
 U11 XIN/XOUT are already authoritative to the live Y10 crystal. Y1 is a
 superseded separately aliased island and was not joined in parallel. The
 reconciled native export and regenerated board return to the 685/403 baseline,
-confirming the remaining defect is routing around U12 and neighboring copper.
+ confirming the remaining defect is routing around U12 and neighboring copper.
+
+2026-09-08 — A coordinated Y10 local-crystal relocation trial preserved the
+USB3 endpoint audit but worsened native DRC to 695 violations with five true
+shorts. It was rejected; the live clock source remains U11 XIN/XOUT to Y10,
+and further work must use a net-aware escape method.

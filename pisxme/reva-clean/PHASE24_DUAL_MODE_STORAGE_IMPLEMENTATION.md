@@ -2,6 +2,12 @@
 
 ## CURRENT OPEN GATES — 2026-09-08
 
+The Y10 relocation trial is rejected implementation evidence: it preserved
+USB3 endpoint assertions but produced 695 native DRC violations and five true
+shorts. The live clock topology remains U11/XIN-XOUT to Y10, and the next
+repair must be a net-aware escape method rather than an unvalidated support
+move.
+
 The U12 HD3SS6126 QFN exposed-pad authority defect is corrected in the live
 schematic source: pin/pad 43 is explicitly `POWER_GND` and is included in the
 source-driven PCB map. Native export `PHASE24_U12_EP_GROUND_V6.kicadxml`

@@ -1,10 +1,11 @@
 """Storage-local crystal placement/escape trial on the passing support cohort."""
 from pathlib import Path
+import argparse
 import pcbnew
 
 R=Path(__file__).resolve().parent
-BASE=R/'PHASE24_DUAL_MODE_STORAGE_NC39_SUPPORT_COHORT.kicad_pcb'
-OUT=R/'PHASE24_DUAL_MODE_STORAGE_NC39_LOCAL_CRYSTAL.kicad_pcb'
+ap=argparse.ArgumentParser(); ap.add_argument('base'); ap.add_argument('output'); args=ap.parse_args()
+BASE=R/args.base; OUT=R/args.output
 def P(x,y): return pcbnew.VECTOR2I_MM(float(x),float(y))
 def xy(p): return pcbnew.ToMM(p.GetPosition().x),pcbnew.ToMM(p.GetPosition().y)
 def seg(b,n,a,z,layer=pcbnew.F_Cu):
