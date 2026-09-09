@@ -1414,6 +1414,12 @@ controls pass. V1244 is rejected lane-0 routing evidence because its source
 fanout and long B.Cu rows intersect QFN/support/control geometry. This is a
 route implementation failure, not an RTL9210B architecture failure. The next
 experiment must co-author the lane escape with the live support field.
+V1249/V1250 isolate and refine the complete RTL9210B side/source field.
+V1250's diverging through-via escapes produce no new native DRC shorts,
+crossings, or clearance errors; its remaining findings are inherited
+isolation warnings and expected non-lane opens. The result establishes
+source-field feasibility, not full lane closure. The outer B.Cu pair corridor
+and J1 launch remain open.
 V1245/V1247 reject naive staggered source fanouts against the live support
 field and adjacent QFN pads. V1246 confirms that the isolated source field
 still needs diverging, layer-aware escapes. V1248 improves the isolated

@@ -9329,6 +9329,12 @@ crossings or shorts; support opens are intentional isolation artifacts, so
 V1240 is not final closure. The evidence changes the next action to
 coordinated rail/ground regeneration around proven REFCLK exits. Path A and
 production CAD remain untouched.
+2026-09-09 — PiSXMe Phase 24 Path-B V1250 source-field discriminator. A
+co-authored isolated RTL9210B QFN source pattern with diverging lane escapes
+and ordinary through-vias produces no new native DRC shorts, crossings, or
+clearance errors. Preserve V1250 as source-field evidence; the outer
+four-pair B.Cu corridor and J1 launch remain open. Path A and production CAD
+remain untouched.
 2026-09-09 — PiSXMe Phase 24 Path-B lane-source evidence V1245-V1248.
 V1245/V1247 failed against live QFN support geometry. V1246 isolated the
 source field and V1248 improved the diverging escape pattern, but the outer

@@ -9064,6 +9064,13 @@ and SPISO3/GND shorting classes and an RTL_3V3 source-field crossing. This is
 a route-implementation failure; the retained V278/V282 placement and bases
 remain valid. Remaining SPI channels must be allocated as one coordinated
 field.
+V1249/V1250 isolated and refined the full RTL9210B side/source field. V1250
+uses diverging escapes: RXP/RXN transition before the lower pair row, while
+TXN/TXP leave on opposite sides of the lower edge, with TXP kept away from
+the side-pad field. Native DRC shows no new shorts/crossings/clearance errors;
+remaining findings are inherited isolation warnings and expected unconnected
+non-lane support. This closes source-field feasibility only; the four-pair
+outer B.Cu corridor and J1 launch remain OPEN.
 V1243 is the corrected rail/reference base: it preserves V1240's accepted
 CLKREQ_N/PERST_N/REFCLK geometry, regenerates RTL_1V1/RTL_3V3, and exits GND
 through a distinct QFN-side transition. Native DRC reports no new shorts,
