@@ -9883,6 +9883,12 @@ unconnected items. The saved-board audit proves U1.8/R2.1/J1.69 connectivity
 and a complete source-cohort negative control. PEDET is locally closed;
 CLKREQ_N, PERST_N, REFCLK, lane, remaining support, and integrated Path-B
 closure remain OPEN.
+V1207 is the accepted local U1.16 1V1 rechannel used to free the CLKREQ
+source escape. It removes the prior U1.16 source cohort and hands off east at
+(104.5,77.0) through In2. Native DRC retains only the inherited RTL_3V3
+dangling warning and expected unconnected items; the saved-board audit and
+complete source-cohort negative control pass. The 1V1 field remains electrically
+continuous and accepted; CLKREQ_N remains open.
 V1201-V1203 are rejected CLKREQ_N route trials. V1201 reused PEDET and
 3V3/R3 corridors and produced 15 native violations. V1202 separated the
 source corridor but collided with the retained 1V1/PEDET fields, SPICLK, and
