@@ -1495,6 +1495,10 @@ join the live RTL_1V1 collector through direct outward ordinary vias with no
 new native DRC errors; both saved-board endpoint and negative-control audits
 pass. The current cohort is U1.16/U1.36/U1.40/U1.50/U1.55/U1.60/U1.63.
 Remaining support is OPEN.
+V1272 is accepted incremental support evidence. U1.25 RTL_1V1 joins the
+collector through an F.Cu source drop and ordinary via without new native
+DRC errors; endpoint and negative-control audit pass. The identified
+RTL_1V1 supply-pad cohort is complete. Remaining support is OPEN.
 V1255 is an upper-corridor discriminator. The complete lane concept reaches
 the upper region, but native DRC identifies source-to-row same-layer weave
 crossings plus one REFCLK-via clearance interaction. The corridor itself is

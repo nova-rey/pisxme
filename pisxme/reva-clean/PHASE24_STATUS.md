@@ -10064,3 +10064,8 @@ negative-control audit pass. V1271 likewise accepts U1.16 on the same live
 collector with native DRC warnings only and a passing endpoint/negative
 control. The RTL_1V1 cohort now covers U1.16/U1.36/U1.40/U1.50/U1.55/U1.60/
 U1.63. Remaining support is OPEN.
+V1272 is accepted incremental support evidence. U1.25 RTL_1V1 uses an
+F.Cu source drop and through-via to avoid the RXN B.Cu trunk. Native DRC
+retains inherited warnings only; the saved-board endpoint and negative-control
+audit pass. The identified RTL_1V1 supply-pad cohort is complete. Remaining
+RTL9210B support is OPEN.

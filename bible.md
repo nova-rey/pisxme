@@ -9433,3 +9433,7 @@ U1.16 RTL_1V1 join the live collector through direct outward ordinary vias.
 Native DRC retained inherited warnings only; both saved-board endpoint and
 negative-control audits passed. Current cohort: U1.16/U1.36/U1.40/U1.50/
 U1.55/U1.60/U1.63.
+2026-09-09 — V1272 accepted RTL9210B support increment: U1.25 RTL_1V1
+uses an F.Cu source drop and ordinary via to avoid the RXN B.Cu trunk.
+Native DRC retained inherited warnings only; endpoint and negative-control
+audit passed. The identified RTL_1V1 supply-pad cohort is complete.
