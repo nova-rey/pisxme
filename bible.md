@@ -9247,3 +9247,11 @@ controls passed. Accepted as the current 1V1 QFN extension.
 the south F.Cu dogbone plus direct In2 handoff. Native DRC retained only the
 inherited RTL_3V3 warning. The saved-board U1.16/C4.1 audit passes with a
 corrected complete-source-cohort negative control.
+2026-09-09: V1175-V1179 rejected U1.25 RTL_1V1 escape classes after native
+KiCad DRC exposed SPI/5V, exposed-pad GND, or SPISO field collisions. V1180
+and V1181 removed those crossings but retained an In2 copper-sliver finding.
+V1182 widened the upper-east In2 collector, restoring the single inherited
+RTL_3V3 warning. Its saved-board audit now uses native pad/track/via
+connectivity and list-based VECTOR2I equality; the U1.25 source-trace negative
+control and the three existing 1V1 source-trace controls pass. V1182 is the
+accepted U1.25 primitive; remaining RTL9210B support/control closure is open.

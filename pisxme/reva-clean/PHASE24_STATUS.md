@@ -9824,3 +9824,18 @@ CLKREQ remains open and requires complete control-field co-authoring.
 V1133 is a rejected PERST_N outer-corridor transition refinement. Moving the
 source transition beyond the 1V1 shelf still crossed retained 1V1, SPISI, and
 RTL_5V geometry. PERST remains open for complete control-field co-authoring.
+
+CURRENT PATH-B UPDATE (2026-09-09): V1175-V1179 are rejected U1.25
+RTL_1V1 escape classes. V1175-V1177 collided with the retained SPI/5V field;
+V1178 collided with the exposed-pad GND field; V1179 collided with SPISO.
+These are route-implementation failures, not placement or authority failures.
+V1180/V1181 cleared the electrical crossings but retained an In2 copper-sliver
+DRC error; both are rejected. V1182 widens the same upper-east U1.25 escape
+collector and removes that sliver. Native KiCad DRC reports only the inherited
+RTL_3V3 dangling warning plus the expected unconnected-item findings. The
+saved-board audit derives connectivity from actual pads/tracks/vias and its
+four source-trace negative controls fail as required. V1182 is accepted as the
+current U1.25 RTL_1V1 primitive; U1.16/U1.55/U1.60/U1.63 remain represented by
+their separately accepted primitives, and the remaining RTL9210B support/control
+field is still OPEN. The audit uses equality lists rather than synthetic graph
+edges or unhashable VECTOR2I set keys.
