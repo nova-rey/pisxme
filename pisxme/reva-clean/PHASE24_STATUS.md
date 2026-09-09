@@ -2,6 +2,23 @@
 
 ## CURRENT OPEN GATES — 2026-09-08
 
+### Current source-authority repair
+
+`CORE_CM5.kicad_sch` now exposes its 51 CM5 ground labels as native global
+`POWER_GND` labels. This is a source-level repair for the previously observed
+`/CORE_CM5/POWER_GND` versus board-plane `POWER_GND` split; no PCB-only merge
+was promoted. Native export receipt
+`PHASE24_CORE_CM5_GLOBAL_GROUND.xml` contains one `POWER_GND` net with 154
+nodes, including J7 ground contacts. The matching ERC receipt has zero
+hierarchy-error tokens and the same 23 pre-existing multiple-name warnings as
+`PHASE24_ROOT_ERC_LIVE.rpt`. Disposable board-side reconciliation
+`PHASE24_CM5_GROUND_FLATTENED_DISPOSABLE.kicad_pcb` retains zero shorting
+items, but still has 499 unconnected items because it is not regenerated
+authoritative copper. The remaining gate is to regenerate/validate the active
+storage workbench from this source authority and re-run native full-board
+connectivity; until then the ground repair is `SOURCE_VALIDATED,
+PCB_REGENERATION_OPEN`.
+
 The J7 ground-return-via probe `PHASE24_J7_GROUND_RETURN_VIAS_V1.kicad_pcb`
 is rejected. It added 51 ordinary offset vias, but J7 lands use native
 `/CORE_CM5/POWER_GND` while the existing planes use `POWER_GND`; PCB-only

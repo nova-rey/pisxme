@@ -7745,3 +7745,22 @@ Path-A capacitor net ownership. Native SATA failed at TUSB_SATA_RXP because
 the historical socket-side template missed current U13 geometry; native DRC
 was 802 violations / 499 unconnected with crossings and shorts. Rejected;
 no copper was promoted.
+## 2026-09-08 — Phase 24 CM5 ground authority repair
+
+- `CORE_CM5.kicad_sch` was corrected generically by promoting its 51 local
+  `POWER_GND` labels to native global labels. Native KiCad export now produces
+  one `POWER_GND` net with 154 nodes, including J7 CM5 ground contacts, and
+  the ERC comparison retains the prior warning set with no hierarchy errors.
+- Added the disposable source-authority/PCB-reconciliation harness
+  `phase24_validate_cm5_ground_flattening.py` and a saved candidate/report;
+  the PCB-side remap is evidence only and is not production authority.
+- Added an opt-in saved-position mode to `phase14_materialize_pcb.py` so
+  source/netlist regeneration can be tested against an integrated placement
+  without weakening the normal deterministic-placement gate.
+- Current gate remains open: regenerate the active routed storage workbench
+  from the corrected schematic and rerun native connectivity/DRC.
+- The saved-position materializer now resolves existing donor footprints by
+  reference directly; its disposable regeneration correctly stops on the
+  genuinely absent current-candidate support refs instead of silently
+  inventing placement. This keeps the stale/incomplete candidate distinction
+  explicit for the next source-authority rebuild.
