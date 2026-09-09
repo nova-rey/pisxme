@@ -7694,3 +7694,8 @@ VCCK_LOCAL basis remains current.
 geometry. USB and SATA endpoint audits passed, but U12 pad-43 and USB-RX
 pair shorts remained or appeared, with V2 at 681 native violations. Both
 rejected; VCCK_LOCAL_V1 remains current.
+
+2026-09-08: Reconciled stale Phase 24 narrative references to V4_MODE and the
+old selector-to-M.2 next action. The authoritative current basis is
+VCCK_LOCAL_V1; superseded prose remains historical and no raw evidence was
+rewritten.

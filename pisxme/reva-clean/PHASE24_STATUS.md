@@ -74,8 +74,8 @@ introduced additional same-layer route crossings and via/track conflicts.
 The integrated VCCO source-transition V6/V7 trials are also rejected: V6
 removed the C86 launch collision but retained the VCCO/VCCK field conflict;
 V7 moved the source transition and increased native DRC to 677 while the
-same VCCO/VCCK short remained. The V4_MODE candidate remains the cleanest
-integrated storage basis.
+same VCCO/VCCK short remained. V4_MODE is superseded by the later
+VCCK_LOCAL_V1 integrated workbench.
 V8 rerouted VCCK around the VCCO transition but introduced new CM5_5V and
 JMS_PCIE_TXP0 crossings/shorts and raised native DRC to 680; it is rejected.
 An all-F.Cu VCCO V1 trial reduced the aggregate DRC to 670 but introduced
@@ -112,10 +112,9 @@ The integrated REXT repair discriminator is complete as a bounded experiment.
 V1's ordinary-via escape removed the original U11.40/U11.39 short but
 introduced new QFN-ground/power clearances; V2's no-via perimeter escape
 retained the 669-count DRC and still contacted the adjacent POWER_GND field.
-Both are rejected route implementations. The integrated baseline is
-unchanged; the next storage-local action is to compare/promote the combined
-V6 M.2 launch plus selector-side V4 escape only after resolving their
-remaining local DRC classes.
+Both are rejected route implementations. This historical discriminator is
+superseded by the VCCK_LOCAL_V1 integrated workbench and its current open
+gates above.
 
 Mode-control source ownership is now corrected: J3 contact 69 and J5's AUTO
 leg export on native `AUTO_PEDET`, and the regenerated mode-fix placement
