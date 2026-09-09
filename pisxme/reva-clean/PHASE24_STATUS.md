@@ -9138,3 +9138,7 @@ the plane trunk north and tightened the escapes; native DRC reduced the result
 to two violations, specifically U1.36 crossing the existing 3V3 vertical
 departure and U1.40 shorting the adjacent 3V3 via. RTL_1V1 remains open; the
 next trial must use a different U1 pad-side escape.
+V917 tested alternate U1.36/U1.40 pad-side escapes with an In2.PWR trunk;
+native DRC rejected the candidate for the U1.36/RTL_3V3 field, the U1.40 /
+USB_TXP0 neighbor, and the relocated GND return. RTL_1V1 remains open; this
+candidate does not alter the accepted V914 support base.
