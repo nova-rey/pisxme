@@ -1431,3 +1431,9 @@ independent J1-side layer transitions, producing native same-layer crossings
 and support-field conflicts. It does not reject the V1250 source escape or
 RTL9210B lane architecture. The next class uses independent B.Cu trunks and
 J1-side vias/dogbones.
+V1252/V1253 tested complete four-pair B.Cu trunks from the V1250 source
+escapes. They are rejected route implementations: endpoint vias and the
+long F.Cu launches remain incompatible with PERST/CLKREQ and reversed RX
+connector ordering. The middle-board B.Cu corridor remains viable. The next
+class staggers J1-side transitions on B.Cu and uses only short F.Cu connector
+dogbones.

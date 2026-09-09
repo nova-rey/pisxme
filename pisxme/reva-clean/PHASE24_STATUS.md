@@ -9064,6 +9064,13 @@ and SPISO3/GND shorting classes and an RTL_3V3 source-field crossing. This is
 a route-implementation failure; the retained V278/V282 placement and bases
 remain valid. Remaining SPI channels must be allocated as one coordinated
 field.
+V1252/V1253 tested full four-pair B.Cu trunks from the V1250 source exits.
+Both are rejected implementation candidates: V1252 clustered endpoint vias
+and reused long F.Cu launches, while V1253 improved via spacing but still
+placed vertical F.Cu launches through PERST/CLKREQ and the reversed RX
+connector ordering. The middle-board B.Cu corridor remains viable; the next
+class must stagger each J1-side transition on B.Cu and retain only short
+connector dogbones on F.Cu.
 V1251 is rejected outer-corridor implementation evidence. It adapted an older
 monotonic launch without preserving separate J1-side layer transitions, which
 caused native same-layer TX/RX crossings and conflicts with retained support

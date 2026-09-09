@@ -9329,6 +9329,11 @@ crossings or shorts; support opens are intentional isolation artifacts, so
 V1240 is not final closure. The evidence changes the next action to
 coordinated rail/ground regeneration around proven REFCLK exits. Path A and
 production CAD remain untouched.
+2026-09-09 — PiSXMe V1252/V1253 full-lane corridor trials rejected. The
+middle-board B.Cu trunks are viable, but clustered endpoint vias and long
+F.Cu launches conflict with support/control routing and RX connector order.
+Preserve V1250 source evidence; next use staggered B.Cu J1 transitions with
+short F.Cu dogbones.
 2026-09-09 — PiSXMe V1251 outer-corridor trial rejected. Reusing a historical
 J1 launch without separate layer transitions caused native same-layer lane
 crossings and retained support conflicts. Preserve as route-implementation
