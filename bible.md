@@ -9209,3 +9209,10 @@ V1155 isolated the V1150 source field but retained one GND crossing and the
 intentional proof-stub warning. All remain disposable route evidence; the
 next work reuses the V1119 clean XTAL_IN corridor or moves the local crystal
 pocket if required.
+2026-09-09: V1156-V1160 completed the crystal lane discriminator. V1156
+combined V1119 IN and V1144 OUT; V1157/V1158 exposed QFN escape and inherited
+rail-field conflicts; V1159 moved the IN transition outboard. V1160 pruned
+four exact RTL_3V3 source objects and achieved one inherited dangling warning,
+with native saved-board XTAL_IN/XTAL_OUT connectivity and both negative
+controls passing. Accepted as the current disposable crystal source-field
+primitive; full RTL9210B support remains open.

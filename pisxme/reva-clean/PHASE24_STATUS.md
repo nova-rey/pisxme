@@ -72,6 +72,16 @@ artifact changed. The current next action is to reuse the known-clean V1119
 XTAL_IN corridor while allocating XTAL_OUT around it with exact native pad
 coordinates, or to re-place the local crystal pocket if that remains the only
 way to close the QFN field.
+V1156 combined the V1119 IN corridor with V1144 OUT and reduced source-field
+errors to four, but retained the 1V1 launch congestion. V1157 isolated that
+fanout and showed the adjacent QFN escapes were still the limiting geometry.
+V1158 was rejected because inherited rail vias remained. V1159 corrected the
+outboard transition but retained three RTL_3V3 interactions. V1160 removed
+four exact RTL_3V3 source-branch objects, after which native DRC reported only
+the inherited RTL_3V3 dangling warning. Its saved-board audit passes both
+XTAL_IN and XTAL_OUT endpoint connectivity, and both source-trace negative
+controls fail as required. V1160 is the current accepted crystal pair/source
+field primitive; full Path-B support integration remains OPEN.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
 `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout lineage
