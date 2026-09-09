@@ -18,10 +18,11 @@ audit plus negative control pass; remaining support-field route cleanup is a
 routing gate, not an instantiation task. Likewise, old malformed footprint,
 pre-J8 mode-control, stale parity, obsolete connector, and rejected-route
 claims below are historical evidence only when explicitly labeled as such.
-The current local routing basis is V13, the bounded co-authored
-USB_TXP/USB_TXN/JMS_AVDDL source-field repair. The next action is to carry
-this source-owned basis through complete storage-field regeneration, native
-DRC, and the existing full-board gates.
+The current local routing basis is V23, the bounded co-authored
+USB_TXP/USB_TXN/JMS_AVDDL source-field repair plus physically present,
+separated XIN/XOUT through-via transitions. The next action is to carry this
+source-owned basis through complete storage-field regeneration, native DRC,
+and the existing full-board gates.
 
 A disposable V13-plus-support trial on 2026-09-09 joined the complete
 JMS583 low-speed support cohort using native pad endpoints. Its focused
@@ -29,6 +30,14 @@ support audit and trace-removal negative control passed, but native DRC rose
 from 730 to 778 findings (395 unconnected items). It is rejected as a route
 implementation class; support connectivity passing does not justify adding
 the direct joins over the congested lower field.
+
+V23 repairs a real authoring defect in the inherited crystal routes: V13 had
+F.Cu/B.Cu XIN and XOUT segments at layer changes without vias. V23 adds
+ordinary through-vias at separated native coordinates and passes the focused
+JMS583 support audit plus its trace-removal negative control. Native DRC is
+724 findings / 400 unconnected items; two shorting items remain inherited
+outside the crystal repair. V23 is the current disposable source-field basis,
+not production authority or full-board closure.
 
 V13 is the retained local routing basis. Its upper P-leg detour preserves the
 V8 source ordering, reduces the USB_TXN1/USB_TXP1 skew proxy to 0.259 mm, and

@@ -8040,3 +8040,12 @@ the complete JMS583 support cohort. Focused support connectivity and its
 trace-removal negative control passed, but native DRC worsened from 730 to 778
 findings with 395 unconnected items. Rejected the direct support-join route;
 the next class remains coordinated lower-field regeneration.
+
+## 2026-09-09 — V23 physical crystal transitions
+
+V23 added separated ordinary through-vias to the inherited XIN/XOUT F.Cu to
+B.Cu layer changes, correcting a real authoring defect in V13. Focused JMS583
+support connectivity and the trace-removal negative control pass. Native DRC
+improved to 724 findings with 400 unconnected items; two shorting items are
+inherited outside the crystal repair. V23 is retained as disposable routing
+basis only.

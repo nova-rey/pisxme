@@ -79,6 +79,12 @@ negative control. Native DRC nevertheless rose from 730 to 778 findings with
 395 unconnected items, so the direct support-join route is rejected and no
 production authority changed.
 
+V23 corrects the inherited XIN/XOUT layer-change authoring defect by adding
+separated ordinary through-vias at native coordinates. The focused JMS583
+support audit and trace-removal negative control pass; native DRC reports 724
+findings and 400 unconnected items, with two inherited unrelated shorting
+items. V23 is a disposable source-field basis only.
+
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a
 0.000 mm clearance violation into U11 pad 23. No production authority changed.
