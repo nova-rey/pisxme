@@ -1,5 +1,24 @@
 # Phase 24 acreage validation status
 
+## CURRENT ROUTING BASIS — 2026-09-08
+
+The disposable `PHASE24_STORAGE_U12_EP_RX_PAIR_V6.kicad_pcb` is the latest
+USB3 escape discriminator. It preserves the authoritative U11/Y10 clock
+topology and re-escapes both U12 RX nets from ordinary B.Cu vias outside the
+HD3SS6126 exposed-pad field, with F.Cu dogbones to U12. Native USB3
+connectivity is PASS (10/10), SATA is PASS (12/12), JMS583 support is PASS,
+and schematic-to-PCB pad parity is PASS (0 mismatches) against
+`PHASE24_U12_EP_GROUND_V6.kicadxml`. Native DRC reports 684 violations / 403
+unconnected items and no `shorting_items`; it is retained as the current
+route basis, not yet a closure candidate. The mode-control native audit still
+reports the inherited J3.69-to-J5.2 open, so mode routing remains an open gate.
+
+The V1--V5 U12 RX escape and XOUT-corridor trials remain rejected route
+evidence. V6 is the first candidate in this sequence that removes the U12
+exposed-pad short without adding a native short; its raw PCB and DRC receipt
+are retained. Next action: repair the mode-control route and then continue
+native full-board closure from V6, preserving negative-control requirements.
+
 ## CURRENT STATE — 2026-09-08
 
 The Y10 local-crystal relocation trial is rejected route evidence: it rebuilt

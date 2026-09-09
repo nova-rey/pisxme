@@ -7825,3 +7825,11 @@ reconciled native export and regenerated board return to the 685/403 baseline,
 USB3 endpoint audit but worsened native DRC to 695 violations with five true
 shorts. It was rejected; the live clock source remains U11 XIN/XOUT to Y10,
 and further work must use a net-aware escape method.
+
+2026-09-08 — The U12 RX pair was re-escaped outside the HD3SS6126 exposed-pad
+field in disposable `PHASE24_STORAGE_U12_EP_RX_PAIR_V6`. Native USB3
+connectivity passed 10/10, SATA passed 12/12, JMS583 support passed, and
+schematic-to-PCB pad parity passed with zero mismatches. Native DRC improved
+to 684 violations / 403 unconnected items with no `shorting_items`. The
+candidate is retained as the current route basis; mode-control connectivity
+and the remaining full-board closure gates remain open.

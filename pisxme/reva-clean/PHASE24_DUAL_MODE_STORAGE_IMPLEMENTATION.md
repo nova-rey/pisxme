@@ -712,3 +712,13 @@ audit passes U11.16, U11.10, R82, and R83 with its trace-removal negative
 control, and no DRC shorting class involves VBUS or JMS_VBUS_SENSE. It still
 adds QFN/zone clearance findings and 24 crossing classes overall, so it is
 retained evidence rather than a promoted route.
+# Current implementation checkpoint — 2026-09-08
+
+The active disposable routing basis is `PHASE24_STORAGE_U12_EP_RX_PAIR_V6`.
+It keeps source-authoritative U11/Y10 XIN/XOUT unchanged and moves the U12
+USB3 RX transitions outside the HD3SS6126 exposed pad using ordinary
+through-vias. Native endpoint, SATA, JMS583-support, and pad-parity audits
+pass; native DRC is still open at 684 violations / 403 unconnected items,
+with no native shorting class. Mode-control connectivity remains open at the
+inherited J3.69-to-J5.2 route and is the next focused repair. V6 is not a
+production closure candidate yet.
