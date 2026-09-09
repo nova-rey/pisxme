@@ -8050,6 +8050,10 @@ XIN/XOUT layer changes, correcting the earlier false missing-via diagnosis.
 V23 remains disposable route evidence at 724 DRC findings / 400 unconnected
 items, with two inherited unrelated shorting items.
 
+Hardened the native layer-transition audit to require the same net on the
+F.Cu endpoint, B.Cu endpoint, and physical via. Parent, V13, and V23 each
+report zero un-viaed net-identity transitions under the corrected predicate.
+
 V22's initial crystal transition-via placement shorted XIN/XOUT and was
 superseded by V23. V24 tested an all-F.Cu alternative; native DRC stayed at
 730 and four shorting items were introduced. Rejected both alternatives and

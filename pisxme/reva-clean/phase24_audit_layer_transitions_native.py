@@ -16,8 +16,10 @@ for t in b.GetTracks():
 out=[]
 for (q,l),nets in sorted(ends.items()):
  other='B.Cu' if l=='F.Cu' else 'F.Cu' if l=='B.Cu' else None
- if other and (q,other) in ends and not (set(nets)|ends[(q,other)]) & vias.get(q,set()):
-  out.append((q,sorted(nets|ends[(q,other)])))
+ if other and (q,other) in ends:
+  common = set(nets) & ends[(q,other)] & vias.get(q,set())
+  if not common:
+   out.append((q,sorted(set(nets)|ends[(q,other)])))
 print('board:',P.name)
 print('physical vias:',len(vias))
 print('layer transitions without via:',len(out))
