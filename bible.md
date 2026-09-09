@@ -9063,6 +9063,12 @@ transition. Native DRC retained only the inherited RTL_3V3 dangling warning;
 saved-board connectivity proves U1.16/U1.36/U1.40/U1.50/U1.60/U1.63/C4.1
 and the U1.63 source-trace negative control passes. The fixture has 24 opens;
 remaining QFN/support gates stay open.
+2026-09-09: V1090 retained the coordinated U1.25 RTL_1V1 dogleg. It clears
+SPICS before the far-edge transition and returns to the existing 1V1 shelf.
+Native DRC retains only the inherited RTL_3V3 dangling warning; saved
+connectivity proves the complete U1.16/U1.25/U1.36/U1.40/U1.50/U1.55/U1.60/
+U1.63/C4.1 group and the U1.25 source-trace negative control passes. The
+fixture has 22 opens; remaining support gates stay open.
 2026-09-09: V1087 attached U1.55 RTL_1V1 through the lower left transition;
 the via was shifted to clear native hole-to-hole spacing. DRC retains only the
 inherited RTL_3V3 dangling warning, and saved connectivity proves the expanded

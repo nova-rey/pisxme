@@ -9607,3 +9607,12 @@ V1088 is rejected U1.25 evidence. The higher outboard transition reduced the
 fixture to 22 opens but native DRC found RTL_1V1 contact with the retained
 RTL_5V via and SPICS clearance violations. No V1088 copper is promoted; the
 remaining U1.25 route requires coordinated QFN/SPI/5V fanout regeneration.
+
+V1090 is the retained coordinated U1.25 RTL_1V1 escape. Its F.Cu dogleg
+clears the SPICS escape before transitioning at the far edge, and the B.Cu
+return joins the existing 1V1 shelf. Native DRC retains only the inherited
+RTL_3V3 dangling warning; the fixture has 22 unconnected items. The saved
+native audit proves U1.16/U1.25/U1.36/U1.40/U1.50/U1.55/U1.60/U1.63/C4.1
+are one physical RTL_1V1 component, and removing U1.25's source trace fails
+the negative control. V1090 is retained; remaining support/control endpoints
+remain open.

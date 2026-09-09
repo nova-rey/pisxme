@@ -442,6 +442,12 @@ dangling warning. Saved-board connectivity and the U1.55 source-trace negative
 control pass for U1.16/U1.36/U1.40/U1.50/U1.55/U1.60/U1.63/C4.1. U1.25 and
 remaining Path-B support gates remain open.
 
+V1090 is retained as the coordinated U1.25 RTL_1V1 escape. Its dogleg clears
+SPICS and its far-edge via returns to the established 1V1 shelf. Native DRC
+has only the inherited RTL_3V3 dangling warning; saved-board connectivity and
+the U1.25 source-trace negative control pass for the complete current 1V1
+endpoint group. Remaining RTL9210B support/control gates remain open.
+
 V1081 is rejected coupled-fanout evidence. Relocating the 5V escape outward
 caused crossings with retained SPI B.Cu lanes, while the U1.25 1V1 departure
 still violated SPICS clearance. The failure does not invalidate the rail or
