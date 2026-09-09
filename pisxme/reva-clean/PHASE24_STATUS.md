@@ -85,6 +85,14 @@ track-removal negative controls. Native DRC reports zero violations and 42
 expected incomplete connections. This is a stronger local placement/escape
 basis, not complete RTL9210B or Path-B closure.
 
+V809 initially transplanted the V718 SPICS dogleg but crossed the new PEDET
+shelf. V810 moves its upper leg to B.Cu and restores the validated U2 GND
+return. Native DRC reports zero violations and 41 expected incomplete
+connections; `phase24_rtl9210b_orientation180_spics_v810_audit.py` passes the
+U1.24→U2.1 endpoint assertion and its track-removal negative control. V811
+through V813 are rejected SPISO/SPICS source co-routing trials; the next
+class must separate the remaining source dogbones by layer or corridor.
+
 V796/V797 tested the orientation-180 alternative. The unmodified direct
 fanout crossed PEDET/CLKREQ and clipped existing support; the reordered trial
 still contacted RSET/crystal/GND support and J1 lane pads. These are placement

@@ -8411,3 +8411,9 @@ control basis. Native DRC reports zero violations and the saved-board audit
 passes PEDET, CLKREQ_N, and PERST_N endpoint assertions plus all three
 track-removal negative controls. The fixture retains 42 expected incomplete
 connections; complete RTL9210B qualification remains open.
+2026-09-09: V809/V810 extended the rotated RTL9210B basis with SPICS. V809
+was rejected for a PEDET-shelf crossing; V810 moved the upper leg to B.Cu,
+restored the U2 GND return, and passed native DRC with zero violations. The
+corrected saved-board audit and SPICS track-removal negative control pass.
+V811-V813 were rejected SPISO/SPICS source co-routing trials; remaining SPI
+source allocation is open.

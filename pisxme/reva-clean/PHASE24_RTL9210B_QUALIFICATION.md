@@ -64,6 +64,13 @@ negative controls. The 42 incomplete connections are inherited from the
 disposable, otherwise unrouted fixture. SPI, rails, USB, lane, flash, and
 firmware gates remain open.
 
+V809/V810 extend the V808 rotated basis with SPICS. V809 was rejected for a
+PEDET-shelf crossing; V810 moves the upper SPICS leg to B.Cu, includes the
+U2 GND return, and passes native DRC with zero violations. Its saved-board
+audit and track-removal negative control pass for U1.24→U2.1. V811–V813 are
+rejected SPISO/SPICS source co-routing attempts; the remaining SPI source
+allocation is still open.
+
 V793/V794/V795 are rejected PERST_N QFN-escape variants. Their outer route
 sections remain clear, but the local departure repeatedly contacts adjacent
 U1 no-connect/control pads or the retained SPI/PEDET field. This establishes
