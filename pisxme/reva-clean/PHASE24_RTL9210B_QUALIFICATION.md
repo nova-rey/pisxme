@@ -1437,3 +1437,8 @@ long F.Cu launches remain incompatible with PERST/CLKREQ and reversed RX
 connector ordering. The middle-board B.Cu corridor remains viable. The next
 class staggers J1-side transitions on B.Cu and uses only short F.Cu connector
 dogbones.
+V1255 is an upper-corridor discriminator. The complete lane concept reaches
+the upper region, but native DRC identifies source-to-row same-layer weave
+crossings plus one REFCLK-via clearance interaction. The corridor itself is
+not the structural failure; the next class uses per-pair layer swaps during
+the ascent.

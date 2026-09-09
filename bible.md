@@ -9329,6 +9329,10 @@ crossings or shorts; support opens are intentional isolation artifacts, so
 V1240 is not final closure. The evidence changes the next action to
 coordinated rail/ground regeneration around proven REFCLK exits. Path A and
 production CAD remain untouched.
+2026-09-09 — PiSXMe V1255 upper-corridor discriminator. The upper lane
+region is largely clear, but a common-layer source ascent weaves across the
+four conductors and one REFCLK via. Preserve as route evidence; next use
+per-pair layer swaps during ascent.
 2026-09-09 — PiSXMe V1252/V1253 full-lane corridor trials rejected. The
 middle-board B.Cu trunks are viable, but clustered endpoint vias and long
 F.Cu launches conflict with support/control routing and RX connector order.

@@ -9064,6 +9064,12 @@ and SPISO3/GND shorting classes and an RTL_3V3 source-field crossing. This is
 a route-implementation failure; the retained V278/V282 placement and bases
 remain valid. Remaining SPI channels must be allocated as one coordinated
 field.
+V1255 is a disposable upper-corridor discriminator. After clearing only the
+source/upper lane region, it carries the complete four-lane concept toward
+J1; native DRC leaves source-to-row same-layer weave crossings and one
+REFCLK-via clearance interaction, while the upper corridor itself is largely
+clear. This confirms the next implementation must use per-pair layer swaps
+during the source-to-upper ascent, not a common-layer vertical weave.
 V1252/V1253 tested full four-pair B.Cu trunks from the V1250 source exits.
 Both are rejected implementation candidates: V1252 clustered endpoint vias
 and reused long F.Cu launches, while V1253 improved via spacing but still
