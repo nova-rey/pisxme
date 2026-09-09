@@ -25,12 +25,17 @@ remaining route promotion. Native DRC is 1,027 violations / 499 unconnected
 items on this immature workbench. Do not compare that count to mature
 historical candidates as a floorplan judgment.
 
-The corrected support-zone promotion now passes AVDDL, VCCO, VCCK, VDDREG,
-and LXO support checks with their negative controls. The resulting
-`PHASE24_STORAGE_AUTHORITY_CORRECTED_USB3_SATA_ZONES_FINAL` workbench passes
-the complete ten-net USB3 audit and all 12 SATA endpoint assertions. Native
-DRC remains open at 669 violations / 499 unconnected items, including
+The corrected source-authoritative rebuild is now
+`PHASE24_STORAGE_MODEAUTH_USB3_ALIGNED_SATA_SUPPORT_ZONES_V1.kicad_pcb`.
+It has zero schematic-to-PCB pad-net parity mismatches and passes the complete
+ten-net USB3 audit, all 12 SATA endpoint assertions, and the complete JMS583
+support audit with its negative control. Native DRC remains open at 681
+violations / 499 unconnected items, including
 inherited crossings and shorts; this is not a closure candidate.
+
+The earlier 669-count workbench is superseded as a live basis because its
+J3.69 and U12.9 PCB ownership predated the corrected embedded symbol
+definitions.
 
 The integrated REXT repair discriminator is complete as a bounded experiment.
 V1's ordinary-via escape removed the original U11.40/U11.39 short but

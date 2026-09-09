@@ -7580,3 +7580,11 @@ ordinary-via V1 escape removed the original AVDDL/REXT adjacency but created
 new QFN-ground/power conflicts; the no-via V2 perimeter escape retained the
 original DRC count and still contacted the POWER_GND field. Both remain
 rejected route evidence and the zone-backed integrated baseline is unchanged.
+
+2026-09-08: Corrected the embedded storage symbol definitions for the live
+AUTO_PEDET and STORAGE_SEL authorities, not just their instance labels. A
+fresh native XML export and regenerated placement now pass pad-net parity with
+zero mismatches. Rebuilt USB3, SATA, and JMS583 support on that placement; all
+focused endpoint audits and negative control pass. Promoted the resulting
+681-violation workbench as the active routing basis; prior 669-count copper
+remains historical because its PCB ownership was stale.

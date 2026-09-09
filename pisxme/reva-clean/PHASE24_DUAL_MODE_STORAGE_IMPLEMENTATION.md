@@ -13,11 +13,12 @@ endpoint assertions. Native DRC is still open at 734 violations / 499
 unconnected items, and the candidate is not production authority.
 
 The current integrated workbench is
-`PHASE24_STORAGE_AUTHORITY_CORRECTED_USB3_SATA_ZONES_FINAL.kicad_pcb`. It
-includes the live-authority placement, zone-backed JMS583 support, complete
-USB3 promotion, and the SATA corridor; all ten USB3 and 12 SATA endpoint
-assertions pass. Native DRC remains open at 669 violations / 499 unconnected
-items. This is active routing workbench evidence, not closure.
+`PHASE24_STORAGE_MODEAUTH_USB3_ALIGNED_SATA_SUPPORT_ZONES_V1.kicad_pcb`. It
+was regenerated from the corrected embedded symbol definitions, has zero
+schematic-to-PCB pad-net parity mismatches, and passes all ten USB3, all 12
+SATA, and complete JMS583 support endpoint audits with negative control.
+Native DRC remains open at 681 violations / 499 unconnected items. This is
+active routing workbench evidence, not closure.
 
 The aligned USB3 promotion now passes the complete ten-net native audit, and
 the subsequent V3 SATA integration passes all 12 SATA endpoints. V3 remains
