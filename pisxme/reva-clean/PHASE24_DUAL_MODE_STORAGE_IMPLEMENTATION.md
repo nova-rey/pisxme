@@ -68,6 +68,10 @@ unconnected items. All focused storage audits and pad parity pass on that
 parent. This fresh baseline supersedes older parent report counts but does not
 close native routing, power/ground, or full-board validation.
 
+The V21 CM5_PERST outboard experiment is superseded evidence. It introduced
+true shorts into no-net J1 pads and is not a valid low-speed repair. No storage
+or PCIe authority changed.
+
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a
 0.000 mm clearance violation into U11 pad 23. No production authority changed.

@@ -7980,6 +7980,10 @@ Fresh VBUS-parent native validation passed all focused storage audits, the
 JMS583 negative control, and pad parity; the fresh DRC receipt reports 732
 findings and 400 unconnected items. Recorded as the current parent baseline.
 
+V21 CM5_PERST outboard reroute terminated on no-net J1 pads and introduced two
+native shorts. Rejected the low-speed implementation; endpoint authority must
+be audited before further PERST routing.
+
 V14 lateral TXN offset reduced the local skew proxy to 0.096 mm but introduced
 a 0.000 mm native clearance violation into U11 pad 23. Rejected the route
 implementation and retained V13 as the no-short basis.
