@@ -153,6 +153,13 @@ via is too close to SPICLK and its B.Cu corridor crosses the 1V1 shelf. These
 are local route-allocation failures. U1.20 remains open; the next candidate
 must co-author an outboard transition and B.Cu corridor.
 
+V1051 is rejected: its U1.20-to-U2.3 transition landed in the U2.7/SPISO3
+pad field. V1052 translates the storage-local SPI flash footprint 10 mm
+outboard and routes U1.20 to the moved U2.3 through an ordinary B.Cu path.
+Native DRC reports six intentional dangling source warnings and 40 fixture
+opens with no electrical violations. V1052 is the current local supply and
+support-placement basis; SPI channels must be regenerated for the moved U2.
+
 ### Latest RTL_1V1 allocation evidence — V1004/V1005 (2026-09-09)
 
 V1004 is REJECTED. It transplanted the historical V930 eight-pad RTL_1V1

@@ -8979,6 +8979,10 @@ using an ordinary outboard transition. Native DRC stayed free of electrical
 violations with six intentional dangling warnings; fixture opens fell to 41.
 V1048 is the current supply/source basis while U2 and remaining RTL9210B
 support endpoints stay open.
+2026-09-09: V1051 rejected the U1.20-to-U2.3 transition at U2.7/SPISO3.
+V1052 moved U2 10 mm outboard and achieved a native-clean U1.20/U2.3 supply
+path with six intentional dangling warnings and 40 fixture opens. Retain it
+as the current local support-placement basis; regenerate moved-U2 SPI routes.
 2026-09-09: V1049 rejected the U1.20 RTL_3V3 F.Cu corridor at SPISO3.
 V1050 rejected the immediate B.Cu alternative at the SPICLK-adjacent via and
 1V1 shelf crossing. Preserve both as local route evidence; U1.20 remains

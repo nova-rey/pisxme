@@ -29,6 +29,13 @@ no electrical violations; 42 fixture opens remain. Retain V1047 as the
 current clean QFN-to-decoupling basis while the remaining support network is
 attached.
 
+V1051 is rejected at the U2.7/SPISO3 endpoint field. V1052 moves U2 outboard
+within the storage support island and connects U1.20 to U2.3 cleanly through
+an ordinary B.Cu transition. Native DRC has no electrical violations, with
+six intentional dangling warnings and 40 fixture opens. Retain V1052 as the
+current local supply basis; regenerate SPI channels for the moved U2 before
+promoting the support network.
+
 V1048 adds the U1.34 RTL_3V3 escape to the already-clean C3-side trunk.
 Native KiCad DRC remains free of electrical violations, with six intentional
 dangling source warnings and 41 fixture opens. Retain V1048 as the current
