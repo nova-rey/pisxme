@@ -803,3 +803,12 @@ and 26 expected incomplete items. The saved-board audit passes XTAL_IN,
 XTAL_OUT, RSET, and GND support connectivity and both source-trace negative
 controls. This is the accepted complete relocated crystal-support primitive;
 the scrubbed U1.52 RTL_3V3 departure remains to be restored without regression.
+V893/V894/V895/V896 tested restored U1.52 RTL_3V3 corridors and were rejected
+by crystal, RSET, JTAG, PEDET, or existing SPI-field crossings. V897/V898
+tested ordinary B.Cu XTAL_IN transitions and were rejected by existing SPI
+vias or XTAL_OUT clearance. V899/V900 repeated east-shifted B.Cu variants;
+V901 separated the F.Cu lanes but still crossed at the source. V902/V903/V904
+tested early and late XTAL_OUT B.Cu transitions; native DRC rejected each for
+QFN/via clearance or source-lane crossings. These remain route-implementation
+failures. V892 remains the accepted crystal/GND primitive, with U1.52
+restoration still open.
