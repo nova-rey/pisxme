@@ -8269,3 +8269,8 @@ opens. Retained V693 as the positive U1.52 RTL_3V3 branch basis.
 V695 moved the descent outside the QFN pad field and connected U1.20, C3.1,
 U2.3, and U2.8 on RTL_3V3. Native KiCad DRC reported zero violations and 26
 incomplete opens; retained V695 as the positive 3V3 load-field basis.
+
+2026-09-09: V696's direct RTL_5V route crossed the RTL_1V1 field and a 3V3
+via. V697/V698 developed a split overpass, and V699 removed the redundant
+via; native KiCad DRC reported zero violations and 25 incomplete opens.
+Retained V699 as the positive U1.33-to-C5 RTL_5V basis.

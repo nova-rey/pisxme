@@ -84,6 +84,9 @@ opens; it is the current positive U1.52 RTL_3V3 branch basis.
 V694 was rejected for one SPISI/3V3 source-field short. V695's outer U1.20
 descent and C3/U2 load corridor pass native DRC with zero violations and 26
 remaining opens; the RTL_3V3 source/load field is the current positive basis.
+V696 was rejected for RTL_1V1 crossing and 3V3 clearance. V699's split
+RTL_5V overpass now connects U1.33 to C5 with native DRC zero violations and
+25 remaining opens. U1.17 RTL_5V remains open.
 V690's C2-only move was rejected at 15 native DRC violations, including
 crystal shorts and rail/control interference. Do not move C2 independently;
 co-author the complete local crystal/support micro-island next.

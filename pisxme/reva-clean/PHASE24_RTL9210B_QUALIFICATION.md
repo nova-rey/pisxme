@@ -81,6 +81,11 @@ V694's first load corridor contacted SPISI and was rejected. V695 moved the
 U1.20 descent outside the QFN pad field and passed native DRC with zero
 violations and 26 remaining opens, closing U1.20/C3/U2 RTL_3V3 load routing.
 Retain V695 as the positive 3V3 load basis.
+V696's direct RTL_5V route was rejected for an RTL_1V1 crossing and 3V3-via
+clearance. V697/V698 developed the split overpass; V699 removed the final
+redundant via and passes native DRC with zero violations and 25 remaining
+opens. Retain V699 as the positive U1.33-to-C5 RTL_5V basis; U1.17 remains
+open.
 V690 moved only C2 and rebuilt XTAL_OUT/GND alongside U1.52; native DRC found
 15 violations including crystal shorts and 3V3/CLKREQ and 1V1/GND contact.
 Reject the C2-only class. The next experiment must co-author the complete
