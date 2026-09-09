@@ -9544,6 +9544,10 @@ remains open.
 J1.69/J1.52. Both native endpoint groups and source-removal negative controls
 passed; native DRC reports zero violations with 28 unrelated Path-B opens.
 Local far-control routing is accepted; full Path-B validation remains open.
+2026-09-09 — V1307 REFCLK launch endpoints and negative controls passed, but
+native DRC rejected 9 violations against PEDET/CLKREQ_N, U2 support pads, and
+connector-side geometry. The pin-order reversal was handled with a layer
+transition; REFCLK corridor allocation remains open.
 2026-09-09 — V1300 transplanted the native V1195 RSET/XTAL route set onto the
 V1279 four-lane basis. Saved-board endpoints and negative controls passed, but
 native DRC rejected 29 integrated violations, including XTAL_OUT/RTL_1V1

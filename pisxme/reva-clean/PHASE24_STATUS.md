@@ -10203,6 +10203,12 @@ source-removal negative controls pass. Native DRC reports zero violations with
 28 remaining unrelated Path-B opens. This closes the local far-control
 routing primitive; lane, REFCLK, remaining rails, and integrated Path-B
 validation remain OPEN.
+V1307 tested REFCLK_P/REFCLK_N launches from U1.61/U1.62 to J1.55/J1.53
+with a layer transition to resolve the connector pin-order reversal. Both
+saved-board endpoint and source-removal audits pass, but native DRC rejects
+9 violations involving PEDET/CLKREQ_N crossings, U2 support-pad contacts,
+and connector-side clearance. REFCLK remains OPEN for a coupled corridor
+allocation.
 V1300 tested transplanting the native V1195 RSET/XTAL_IN/XTAL_OUT route set
 onto the current V1279 four-lane basis. The saved-board endpoint audit and
 all three source-removal negative controls pass, but native DRC rejects the
