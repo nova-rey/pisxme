@@ -32,6 +32,11 @@ USB_TXP1/AVDDL and USB_RXP1/AVDDL shorts. Focused endpoint audits remain
 useful, but neither candidate is production authority. The required next
 class is complete lower U11 pad-field allocation.
 
+The C86/C87 local-relocation V1 is superseded route evidence. Focused USB3
+and JMS583 support checks pass, but native DRC reports 760 findings and real
+JMS_USB3_TXP/AVDD33 and JMS_USB3_TXN/USB_TXP1 shorts. It is not production
+authority and does not change the selected parent.
+
 ## SUPERSEDED OPEN-GATE SNAPSHOT — pre-VBUS/J8 basis
 
 The following historical snapshot is retained for archaeology only. It is not

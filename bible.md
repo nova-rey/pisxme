@@ -7920,6 +7920,13 @@ Tested straight 0.20 mm TX-pair V5 and south-shifted AVDDL V6. V5 retained
 focused connectivity but shorted TXP to the AVDDL via; V6 added TXP/AVDDL and
 RXP/AVDDL shorts. Rejected both and retained the VBUS V1 parent. The next
 route must co-author the complete U11 lower pad field.
+
+## 2026-09-09 — Phase 24 TX capacitor relocation trial
+
+Preserved the C86/C87 coherent relocation V1 experiment. Focused endpoint
+audits passed, but native DRC reported 760 findings and real bridge-TXP/AVDD33
+and TXN/TXP shorts. Rejected the relocation-only class; retained the VBUS V1
+parent.
 ## 2026-09-08 — Phase 24 documentation hygiene
 
 Reconciled the current Phase 24 status and dual-mode storage implementation

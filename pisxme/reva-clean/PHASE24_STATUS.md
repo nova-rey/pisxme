@@ -36,6 +36,12 @@ focused endpoint connectivity but are rejected route implementations. This
 confirms that the next repair must allocate the complete U11 lower pad field
 (USB2, USB TX/RX, AVDD33/AVDDL, and neighboring support) coherently.
 
+The coherent C86/C87 relocation trial V1 is rejected route evidence. It kept
+the focused USB3 and JMS583 support audits passing, but native DRC rose to
+760 with real JMS_USB3_TXP/AVDD33 and JMS_USB3_TXN/USB_TXP1 shorts plus
+additional crossings. Moving the coupling capacitors alone is therefore not
+the complete-field solution; the VBUS V1 parent remains retained.
+
 ## SUPERSEDED ROUTING SNAPSHOT — pre-VBUS/J8 basis
 
 The following historical snapshot is retained for archaeology only. It is not
