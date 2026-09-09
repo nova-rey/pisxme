@@ -8291,6 +8291,11 @@ passed native DRC with zero violations, and its saved-board SPICS audit plus
 trunk-removal negative control passed. V719/V720/V722 were rejected
 two-channel allocations; retain V718 as the positive SPICS/orientation basis.
 
+2026-09-09: V723-V725 tested SPISO continuation routes from V718. Native
+KiCad rejected them for SPICS shelf conflict, SPISO handoff-via proximity,
+and adjacent SPISO3/SPISO2 QFN-pad interference. Retain V718 and allocate
+all five SPI source escapes together.
+
 2026-09-09: V700 connected U1.17 RTL_5V but failed native DRC at the
 3V3/1V1 barrier and was rejected. V701 moved the handoff to a two-via jog,
 but still conflicted with the nearby 1V1 via. V702 angled the initial escape

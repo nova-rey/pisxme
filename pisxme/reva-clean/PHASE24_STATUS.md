@@ -21,6 +21,11 @@ gates open.
 
 ## CURRENT STATE — documentation authority (2026-09-08)
 
+V723/V724/V725 are rejected SPISO route implementations from V718: they
+exposed endpoint-shelf, source-via, and adjacent-QFN-pad conflicts. No Path-B
+architecture conclusion is changed. The next experiment is a complete
+five-net source-field allocation on the V712/V718 orientation basis.
+
 This section is the current narrative authority for Phase 24. The live
 dual-mode storage routing basis is
 `PHASE24_STORAGE_J8_V5_VBUS_V1.kicad_pcb`; its source-owned J8 mode control,

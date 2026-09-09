@@ -32,6 +32,13 @@ Status: **KEEP A / CONTINUE B**. Path A remains the protected production
 architecture and is not modified. Path B is an active isolated candidate,
 not authorized for destructive replacement or production integration.
 
+V723, V724, and V725 are rejected SPISO-only continuations from V718.
+V723's B.Cu endpoint approach conflicted with the SPICS source shelf; V724
+reduced that conflict but placed the handoff too close to the SPICS source;
+V725 moved it toward the QFN and clipped adjacent SPISO3/SPISO2 pads. These
+are route-implementation results; the remaining task is a complete QFN
+source-field allocation across all five SPI nets.
+
 ## Latest implementation evidence — 2026-09-09
 
 V668 tested a distinct five-net source-field allocation on the native V595
