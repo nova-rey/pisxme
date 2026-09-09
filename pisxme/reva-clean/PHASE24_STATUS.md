@@ -55,6 +55,13 @@ to 781 findings with 33 crossings and 281 clearance findings. V17 is rejected
 route-implementation evidence; the A* method is not suitable for this dense
 field without a complete hand-authored pad-field escape plan.
 
+V18 relocated C86/C87 into the U11/U12 gap and regenerated both sides of the
+TX pair, but its direct U12 launch shorted into U12 POWER_GND pads; native DRC
+reported 740 findings. V18 is rejected. V19 retained the proven U12-side
+corridor while moving only the caps, but introduced real JMS_AVDD33/TX shorts
+and 736 findings. V19 is also rejected; cap relocation alone is not a valid
+escape class.
+
 The first co-authored source-field trials are retained as route evidence. V3
 kept USB3/SATA/mode/JMS583/parity focused gates passing and introduced no
 shorting class, but native DRC identified two new local USB_TXP1/USB_TXN1

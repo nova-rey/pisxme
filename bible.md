@@ -7994,6 +7994,10 @@ raised native DRC to 781 with 33 crossings and 281 clearance findings. Rejected
 the router-generated field; complete hand-authored lower-field co-authoring
 remains required.
 
+V18 direct U12 launch after C86/C87 relocation shorted U12 POWER_GND; V19
+retained the U12 corridor but shorted JMS_AVDD33 into TX copper. Rejected both
+cap-relocation classes; complete U11/U12 field co-authoring remains required.
+
 V11 shortened TXN and reduced the USB TX skew proxy to 1.620 mm, but native
 DRC rose to 731 and added a CM5 USB RX pair short. Rejected the candidate and
 recorded the need for serialization-safe whole-net regeneration.

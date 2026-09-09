@@ -83,6 +83,12 @@ but native DRC rose to 781 findings with 33 crossings and 281 clearance
 findings. The router implementation is rejected for this dense QFN field; a
 complete hand-authored lower-field escape remains required.
 
+V18 and V19 are superseded cap-relocation experiments. V18 introduced U12
+POWER_GND shorts during a direct launch (740 DRC findings); V19 retained the
+U12 corridor but introduced JMS_AVDD33/TX shorts (736 findings). Neither is
+production authority; moving the coupling capacitors alone does not solve the
+coordinated U11/U12 field.
+
 V10 is superseded route evidence: its local P-leg meander improves TX skew to
 0.259 mm, but creates two same-layer USB TX pair self-crossings. The next
 pair-balance attempt must remain layer-separated or shorten the opposite leg.
