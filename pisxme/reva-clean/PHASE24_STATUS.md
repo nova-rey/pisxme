@@ -10093,3 +10093,11 @@ resistor side, and R1.2 receives a deliberate local GND return spoke/via.
 Native DRC retains inherited warnings only; the saved-board RSET endpoint and
 source negative-control audit pass. Crystal, SPI, remaining rails, controls,
 and integrated Path-B closure remain OPEN.
+V1279 is accepted XTAL_IN support evidence. Stale XTAL_IN donor geometry was
+removed and U1.53 reaches Y1.1 through a live-pad F.Cu route entering the
+crystal from the nonadjacent side. Native DRC retains the inherited warning
+set; the saved-board endpoint and negative-control audit pass.
+V1280 is rejected XTAL_OUT routing evidence. The endpoint audit passed, but
+the first F.Cu/B.Cu escape crossed the accepted U1.1V1/RXN/RSET field and
+created native clearance/crossing errors. Its raw PCB and DRC report are
+preserved as a route-implementation rejection; XTAL_OUT remains OPEN.

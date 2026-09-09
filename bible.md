@@ -9459,3 +9459,11 @@ continues on B.Cu west of RXN while U1.33 RTL_5V uses a separate F.Cu/B.Cu
 corridor. Native DRC retained inherited warnings only; combined endpoints
 and two source-removal negative controls passed. Remaining rails/support are
 open.
+2026-09-09 — V1279 accepted XTAL_IN support evidence: stale donor geometry
+was removed and U1.53 was routed to Y1.1 using the live-pad F.Cu path with a
+nonadjacent crystal approach. Native DRC retained inherited warnings only;
+the endpoint and saved-board negative-control audit passed.
+2026-09-09 — V1280 rejected XTAL_OUT route evidence: endpoint connectivity
+passed, but the proposed F.Cu/B.Cu escape crossed the accepted RTL_1V1/RXN/
+RSET source field and produced native clearance/crossing errors. Raw PCB and
+DRC evidence are preserved; XTAL_OUT remains open for a new route class.
