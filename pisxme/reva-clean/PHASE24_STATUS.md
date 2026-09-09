@@ -125,6 +125,15 @@ therefore a valid clean QFN-field allocation primitive, not complete Path-B
 support closure. The next step is to extend this clean field to the nearby
 support endpoints while preserving the no-electrical-violation result.
 
+V1041/V1042 are rejected extensions: the proposed U1.40 dogbone entered the
+adjacent USB_TX pad field or the U1.39 transition barrel. V1043/V1044 test the
+already-positive orientation-0 source field; both are rejected because their
+1V1/3V3 transition allocation still crossed or shorted at the staggered
+top-edge pads. V1045 moves the 3V3 transition beyond that shelf. Native DRC
+reports six intentional dangling source warnings and no electrical violations.
+V1045 is the current clean orientation-0 rail-transition basis; remaining
+support endpoints are still open.
+
 ### Latest RTL_1V1 allocation evidence — V1004/V1005 (2026-09-09)
 
 V1004 is REJECTED. It transplanted the historical V930 eight-pad RTL_1V1

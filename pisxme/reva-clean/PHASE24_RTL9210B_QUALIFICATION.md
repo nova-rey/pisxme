@@ -15,6 +15,13 @@ because the fixture stops at the clean local primitive. This is positive
 route-implementation evidence, not closure of the full RTL9210B support
 network. Continue extending V1040 incrementally to support endpoints.
 
+V1041/V1042 are rejected U1.40/3V3 extensions: they entered the adjacent
+USB_TX pad field or violated the U1.39 transition clearance. V1043/V1044 are
+rejected orientation-0 staggered-field trials. V1045 moves the 3V3 transition
+beyond the 1V1 shelf and is native-clean apart from six intentional dangling
+source warnings and the inherited fixture opens. Promote V1045 as the next
+local support basis only; complete support endpoint attachment remains OPEN.
+
 ## Current checkpoint — V981 orientation-0 source-field discriminator (2026-09-09)
 
 ### Latest 1V1 rail allocation evidence — V1004/V1005

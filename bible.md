@@ -8963,3 +8963,9 @@ Native DRC then showed zero electrical violations, with only eight intentional
 dangling source warnings and 40 fixture-inherited incomplete connections.
 V1040 is retained as a clean local QFN-field primitive; extend it to support
 endpoints before claiming Path-B support closure.
+2026-09-09: V1041/V1042 rejected U1.40/3V3 extensions at the USB_TX pad field
+and U1.39 transition. V1043/V1044 rejected orientation-0 staggered-field
+allocations. V1045 moved the 3V3 transition beyond the 1V1 shelf and achieved
+native DRC with only six intentional dangling source warnings. Retain V1045
+as the current clean orientation-0 transition basis; support endpoint
+attachment and full Path-B closure remain open.
