@@ -9134,3 +9134,6 @@ U1.1V1 clearance. The next class must change XTAL_OUT lane allocation.
 2026-09-09: V1123 added direct U1.45/U1.66 connections to the RTL9210B
 exposed-pad GND network. Native DRC retained only the inherited RTL_3V3
 dangling warning; the saved-board audit and both negative controls passed.
+2026-09-09: V1127 accepted the PEDET route primitive. Native DRC retained
+only the inherited RTL_3V3 dangling warning; the saved-board U1.8/R2.1/J1.69
+audit and source-trace negative control passed. Full Path-B closure remains open.

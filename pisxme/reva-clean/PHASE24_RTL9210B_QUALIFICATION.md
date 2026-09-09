@@ -1317,3 +1317,8 @@ Native DRC leaves only the inherited RTL_3V3 dangling warning; the saved-board
 audit passes all three U1 GND endpoint assertions and both trace-removal
 negative controls. This is a retained local GND primitive, not full Path-B
 closure.
+V1127 is the accepted PEDET route refinement. It replaces the rejected
+connector-field via termination with a single useful transition at x=124 mm;
+native DRC retains only the inherited RTL_3V3 dangling warning. The saved
+board audit proves U1.8/R2.1/J1.69 PEDET connectivity and its source-trace
+negative control. This closes the disposable PEDET primitive only.

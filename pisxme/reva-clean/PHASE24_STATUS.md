@@ -1143,6 +1143,11 @@ ten USB3 endpoint assertions pass, and native DRC reports no authored
 shorting or track-crossing class. The report still contains 853 total
 violations / 499 unconnected inherited items, so this is not full Phase 24
 closure.
+V1127 is the accepted PEDET route refinement. It replaces the rejected
+connector-field via termination with a single useful transition at x=124 mm;
+native DRC retains only the inherited RTL_3V3 dangling warning. The saved
+board audit proves U1.8/R2.1/J1.69 PEDET connectivity and its source-trace
+negative control. This closes the disposable PEDET primitive only.
 
 The current support/USB3 basis now includes the native-pad-aware REXT and
 JMS_RESET_N repairs as `PHASE24_DUAL_MODE_STORAGE_FULL7_RESET`. Native
