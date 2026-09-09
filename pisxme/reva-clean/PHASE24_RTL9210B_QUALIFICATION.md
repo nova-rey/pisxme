@@ -1443,6 +1443,12 @@ transition vias and four native source-cohort negative controls pass. Native
 DRC reports no new lane shorts, crossings, or clearance errors; remaining
 findings are intentionally incomplete non-lane support warnings/opens. The
 J1 transition network remains open.
+V1258 is the first complete clean lane-path discriminator. Its native saved
+board audit proves all four RTL9210B lane pads reach the correct J1 pads and
+four source-cohort negative controls pass. Native DRC reports no new lane
+shorts, crossings, or clearance errors; only inherited disposable support
+warnings and expected non-lane opens remain. Support restoration around this
+path remains open.
 V1255 is an upper-corridor discriminator. The complete lane concept reaches
 the upper region, but native DRC identifies source-to-row same-layer weave
 crossings plus one REFCLK-via clearance interaction. The corridor itself is

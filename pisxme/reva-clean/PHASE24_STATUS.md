@@ -10004,3 +10004,9 @@ transition vias and four native source-cohort negative controls pass. Native
 DRC reports no new lane shorts, crossings, or clearance errors; remaining
 findings are intentionally incomplete non-lane support warnings/opens in the
 disposable scrub. The J1 transition network remains OPEN.
+V1258 is the first complete clean lane-path discriminator. Its native saved
+board audit proves all four RTL9210B lane pads reach the correct J1 pads and
+four source-cohort negative controls pass. Native DRC reports no new lane
+shorts, crossings, or clearance errors; only inherited disposable support
+warnings and expected non-lane opens remain. Support restoration around this
+path remains OPEN.
