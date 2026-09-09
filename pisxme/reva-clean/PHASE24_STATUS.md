@@ -26,6 +26,13 @@ V1141 used the native V1123 board/net registry and printed transformed U1 and
 support pad positions before routing. It is a valid rejected route experiment:
 native DRC found 51 violations, chiefly XTAL source/support crossings and
 retained local pad/via interactions. It is not a Path-B architecture verdict.
+V1143 routed XTAL_OUT around the native GND return triangle and reduced the
+candidate to three rail-via clearance findings plus the inherited RTL_3V3
+dangling warning. V1144 moved the transition clear of those rails. Native DRC
+then retained only the inherited warning; the saved-board U1.54/Y1.2/C2.1
+audit and both source-trace negative controls passed. V1144 is the accepted
+XTAL_OUT primitive. XTAL_IN and complete Path-B support/control closure remain
+OPEN.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
 `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout lineage

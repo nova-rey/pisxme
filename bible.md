@@ -9169,3 +9169,8 @@ positions while reallocating the QFN field. Native DRC found 51 violations,
 chiefly XTAL source/support crossings and retained local pad/via interactions.
 The candidate is rejected route evidence; Path A and production CAD remain
 unchanged.
+2026-09-09: V1143 routed XTAL_OUT around the native GND return triangle;
+V1144 moved the transition clear of adjacent rail vias. V1144 native DRC
+retained only the inherited RTL_3V3 dangling warning. Its saved-board
+U1.54/Y1.2/C2.1 audit and both source-trace negative controls passed, so the
+XTAL_OUT primitive is accepted. XTAL_IN and full Path-B support remain open.

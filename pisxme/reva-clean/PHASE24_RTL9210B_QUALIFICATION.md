@@ -1347,3 +1347,8 @@ primitive, not full Path-B closure.
 V1133 is a rejected PERST_N outer-corridor transition refinement. Moving the
 source transition beyond the 1V1 shelf still crossed retained 1V1, SPISI, and
 RTL_5V geometry. PERST remains open for complete control-field co-authoring.
+V1143 routed XTAL_OUT around the native GND return triangle; V1144 moved its
+transition clear of adjacent rail vias. V1144 native DRC retained only the
+inherited RTL_3V3 dangling warning, and its saved-board U1.54/Y1.2/C2.1
+physical audit plus both source-trace negative controls passed. V1144 is the
+accepted XTAL_OUT primitive; XTAL_IN and full support closure remain OPEN.
