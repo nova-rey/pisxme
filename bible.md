@@ -8443,3 +8443,9 @@ trace-removal negative controls. Full five-net SPI remains open.
 to the V823 pair but was rejected by native DRC with 14 violations and 37
 expected incomplete connections, including source-field crossings, PEDET
 interaction, and transition-via conflicts. It is route evidence only.
+2026-09-09: V825 returned to the V777/V772 placement class to retain the
+complete five-net SPI field while testing separated control-resistor
+approaches. Native DRC rejected the first route with 7 violations and 34
+expected incomplete connections, including CLKREQ_N/SPISI, PEDET/SPISO
+transition, and C5 GND interactions. V772 remains the preferred complete-SPI
+starting point; control routing remains open.

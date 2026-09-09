@@ -8910,3 +8910,9 @@ pair. It was rejected by native DRC with 14 violations and 37 expected
 incomplete connections, including source-field crossings, PEDET interaction,
 and transition-via conflicts. V824 is rejected route evidence; no placement
 or architecture conclusion changes.
+V825 returned to the V777/V772 placement class to preserve the complete
+five-net SPI field while testing separated control-resistor approaches. Its
+first route is rejected by native DRC with 7 violations and 34 expected
+incomplete connections, including a CLKREQ_N/SPISI crossing, a PEDET/SPISO
+transition conflict, and a C5 GND interaction. The V772 SPI/support basis
+remains the preferred complete-SPI starting point; control routing is open.

@@ -624,3 +624,8 @@ V824 added staggered source transitions for the remaining three SPI nets but
 was rejected by native DRC with 14 violations and 37 expected incomplete
 connections. The failures are source-field/corridor implementation issues;
 no Path-A or production artifact changed.
+V825 returned to the V777/V772 placement class to retain the complete SPI
+field while testing separated control-resistor approaches. Native DRC rejects
+the first route with 7 violations and 34 expected incomplete connections,
+including CLKREQ_N/SPISI, PEDET/SPISO-transition, and C5 GND interactions.
+It is route evidence only; the V772 complete-SPI/support basis remains valid.
