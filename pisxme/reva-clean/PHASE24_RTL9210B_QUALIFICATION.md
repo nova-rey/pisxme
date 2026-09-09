@@ -760,6 +760,12 @@ V871 adds U1.39 to the validated RTL_3V3 bridge spine. Native DRC passes with
 0 violations and 27 expected incomplete items; the saved-board audit proves
 U1.39/U2.3/U2.8/C3.1 and a targeted U1.39 source-trace negative control.
 Remaining U1 RTL_3V3 pads and R2/R3 supply endpoints remain open.
+V872/V873 tested U1.20 upward/stepped RTL_3V3 escapes and were rejected by
+SPI-field and RTL_5V-transition crossings. V874/V875 tested local U1.34/U1.39
+joins and were rejected for RTL_5V via clearance. V876's diagonal-left U1.34
+departure passes native DRC with 0 violations and 26 expected incomplete
+items; its saved-board audit proves U1.34/U1.39/U2.3/U2.8/C3.1 and a
+source-trace negative control.
 V861 added U1.33 to the V860 RTL_5V network but was rejected for a dangling
 In2 track caused by an incorrect junction coordinate. V862 corrected that
 join to the actual V860 transition. Native DRC passes with 0 violations and

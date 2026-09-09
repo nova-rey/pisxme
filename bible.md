@@ -8582,3 +8582,9 @@ U1.17/U1.33/C5.1 and its trace-removal negative control.
 DRC passed with 0 violations and 27 expected incomplete items; the saved-board
 audit proved U1.39/U2.3/U2.8/C3.1 and a targeted U1.39 source-trace negative
 control. Remaining U1 RTL_3V3 pads and R2/R3 supply endpoints remain open.
+2026-09-09: V872/V873 tested U1.20 upward/stepped RTL_3V3 escapes and were
+rejected by SPI-field and RTL_5V-transition crossings. V874/V875 tested local
+U1.34/U1.39 joins and were rejected for RTL_5V via clearance. V876's
+diagonal-left U1.34 departure passed native DRC with 0 violations and 26
+expected incomplete items; its saved-board audit proved
+U1.34/U1.39/U2.3/U2.8/C3.1 and a source-trace negative control.
