@@ -17,6 +17,14 @@ disposable fixture. V1005 does not close the 1V1 rail or Path B. Remaining
 RTL_1V1 endpoints must be added incrementally with native pad/layer-aware
 allocation.
 
+V1006/V1007/V1008 are rejected U1.16 escape implementations: they collide
+with the actual RTL_5V or CLKREQ_N QFN-edge departures. V1009 is accepted as
+an isolated U1.16-to-RTL_1V1 pocket primitive. It exits beyond the right pad
+field, drops below the QFN, and uses an ordinary via into the existing In2
+rail pocket. Native DRC has no electrical violations; dangling source tracks
+and inherited incomplete connections are intentional fixture residue. The
+remaining 1V1 endpoints and complete support audit remain open.
+
 V981 is the newest positive source-field result.  It transforms U1 to
 orientation 0 about the native exposed pad and removes only the local
 RTL9210B support tracks, then exits SPISI, SPICLK, RTL_3V3, SPISO3, SPISO,

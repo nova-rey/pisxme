@@ -95,6 +95,12 @@ rejected it for a real RTL_3V3/RSET short and crossing at U1.52/R1 plus the
 U1.39/USB_DM source-field clearance class. Preserve the raw route evidence;
 the lower QFN and RSET departures must be coallocated next. Path A and
 production CAD remain unchanged.
+2026-09-09: V1006/V1007/V1008 rejected U1.16 RTL_1V1 departures after native
+DRC localized their failures to the existing RTL_5V and CLKREQ_N QFN-edge
+fields. V1009 accepted the far-right orthogonal departure below that field
+and an ordinary-via handoff into the existing In2 1V1 pocket; native DRC
+reported no electrical violations beyond intentional dangling source tracks
+and inherited opens. Continue remaining 1V1 endpoints incrementally.
 2026-09-08: RTL9210B V549 proves U1.55/U1.60/U1.63 1V1 connectivity and the
 exact negative control, but native DRC rejects the shared return for REFCLK,
 RTL_3V3, and LANE0_RXP crossings. The outward shared-return class is

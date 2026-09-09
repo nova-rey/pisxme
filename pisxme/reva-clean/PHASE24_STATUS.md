@@ -124,6 +124,15 @@ tracks and 38 inherited incomplete connections remain. Continue from V1005
 one native endpoint at a time; do not repeat the rejected bulk V930
 transplant.
 
+V1006 and V1007 are REJECTED U1.16 escape probes: V1006's transition
+clearance violated the existing RTL_5V shelf, while V1007 entered the
+adjacent CLKREQ_N/pad field. V1008 also crossed the RTL_5V departure. V1009
+is ACCEPTED as the next isolated primitive: U1.16 exits laterally beyond the
+QFN right-edge field, drops below it, and hands off through an ordinary via
+to the existing RTL_1V1 In2 pocket. Native DRC reports no electrical
+short/clearance/crossing violations; only intentional dangling source tracks
+and inherited opens remain. The complete 1V1 rail is still OPEN.
+
 V981 is the newest RTL9210B local source-field discriminator.  After
 orientation-0 transformation about the native exposed pad, all six adjacent
 source departures (SPISI, SPICLK, RTL_3V3, SPISO3, SPISO, SPICS) run
