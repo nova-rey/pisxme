@@ -8076,3 +8076,8 @@ This is stronger physical-connectivity evidence for the storage field.
 Added a second native negative control that removes the XIN transition via
 from V23. The same audit fails XIN while the other six endpoint pairs remain
 passing, proving that missing layer-transition hardware is detected as well.
+
+Filled the V23 zones and reran native validation. The saved filled candidate
+reports 607 DRC findings and 399 unconnected items, down from 724/400 before
+fill. Native JMS583 endpoint, USB3, SATA, and mode-control audits remain
+passing; two inherited unrelated shorting items remain.

@@ -54,6 +54,13 @@ outer crystal corridors. Native DRC still reported 746 findings and six
 shorting items, including collisions with inherited V100/USB/SATA copper.
 The corrected outer-corridor class is rejected; V23 remains current.
 
+The filled-zone V23 candidate
+`PHASE24_STORAGE_JMS583_CRYSTAL_VIAS_V23_FILLED.kicad_pcb` is now the current
+saved-board validation basis. Native DRC reports 607 findings / 399
+unconnected items, and the native JMS583 physical endpoint, USB3, SATA, and
+mode-control audits all pass. Two inherited unrelated shorting items remain;
+this does not close full-board routing or Phase 24.
+
 V13 is the retained local routing basis. Its upper P-leg detour preserves the
 V8 source ordering, reduces the USB_TXN1/USB_TXP1 skew proxy to 0.259 mm, and
 keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits

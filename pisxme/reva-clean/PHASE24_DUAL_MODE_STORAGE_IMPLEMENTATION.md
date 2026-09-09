@@ -99,6 +99,11 @@ V26 used orthogonal QFN departures with the same outer-corridor concept. It
 still produced 746 native DRC findings and six shorting items, so it is also
 rejected route evidence.
 
+Filled-zone validation of V23 is the current saved-board basis: native DRC
+reports 607 findings / 399 unconnected items, while native JMS583 endpoint,
+USB3, SATA, and mode-control audits pass. Two inherited unrelated shorting
+items remain; full-board closure is still open.
+
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a
 0.000 mm clearance violation into U11 pad 23. No production authority changed.
