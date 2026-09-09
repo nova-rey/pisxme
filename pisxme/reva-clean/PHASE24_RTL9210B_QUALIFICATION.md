@@ -629,3 +629,8 @@ field while testing separated control-resistor approaches. Native DRC rejects
 the first route with 7 violations and 34 expected incomplete connections,
 including CLKREQ_N/SPISI, PEDET/SPISO-transition, and C5 GND interactions.
 It is route evidence only; the V772 complete-SPI/support basis remains valid.
+V826 tested B.Cu-separated PEDET/CLKREQ_N approaches on V777 and was rejected
+with 6 native violations and 33 expected incomplete connections. V827 moved
+the source transitions laterally and was rejected with 9 violations and 33
+expected incomplete connections. These are local control-routing failures;
+V772 remains the valid complete-SPI/support basis.
