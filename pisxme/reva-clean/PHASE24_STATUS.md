@@ -9179,3 +9179,9 @@ V930 and was rejected by 15 local conflicts, confirming the next task is
 support-rail regeneration around the reserved 1V1 allocation. V930 is the
 current accepted rail-feasibility primitive; it is not yet the integrated
 support solution.
+V932 moved R1 coherently outboard by 13 mm and regenerated U1.51-to-R1.1
+RSET from the left-side approach, avoiding the reserved 1V1 vias and bottom
+QFN field. Native DRC is 0 electrical violations with the same two inherited
+isolated-fill warnings and 28 expected unrelated opens. V932 is the accepted
+1V1-plus-RSET support primitive; crystal, RTL_3V3, RTL_5V, and local GND
+restoration remain open.

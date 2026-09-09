@@ -8675,3 +8675,8 @@ native DRC had no electrical violations and the saved audit/negative control
 passed. V931 restored prior support copper and exposed 15 local conflicts,
 so the next implementation step is regenerating RTL_3V3/5V/crystal/GND around
 the reserved 1V1 allocation. V930 is rail-feasibility evidence, not closure.
+2026-09-09: V932 moved R1 outboard by 13 mm and regenerated the U1.51-to-R1.1
+RSET path from the left, avoiding the reserved 1V1 vias. Native DRC had zero
+electrical violations, with only the two inherited isolated-fill warnings and
+28 expected unrelated opens. V932 is the accepted 1V1/RSET primitive; crystal,
+3V3, 5V, and local GND restoration remain open.

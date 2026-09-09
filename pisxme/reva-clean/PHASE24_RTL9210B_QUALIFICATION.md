@@ -878,3 +878,8 @@ audit plus source-trace negative control passed. V931 restored the previous
 support routes and exposed 15 local conflicts. This separates rail feasibility
 from route implementation; support rails must now be regenerated around the
 V930 1V1 allocation.
+V932 moved R1 outboard by 13 mm and regenerated the U1.51-to-R1.1 RSET route
+from a left-side approach. Native DRC remains free of electrical violations
+(two inherited isolated-fill warnings; 28 expected unrelated opens). V932 is
+the accepted RTL_1V1/RSET primitive; crystal, RTL_3V3, RTL_5V, and local GND
+restoration remain current implementation gates.
