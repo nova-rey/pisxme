@@ -55,6 +55,12 @@ to 781 findings with 33 crossings and 281 clearance findings. V17 is rejected
 route-implementation evidence; the A* method is not suitable for this dense
 field without a complete hand-authored pad-field escape plan.
 
+V20 moved the U11-to-C83 AVDDL branch through an ordinary-via B.Cu corridor.
+It removed the prior AVDDL/USB-TX corridor crossing, but the new transition
+via shorted to the existing USB_RXP1 B.Cu route; native DRC remained at 736.
+V20 is rejected route-implementation evidence. AVDDL must be co-authored
+with AVDD33 and the USB TX/RX escapes as one lower-field allocation.
+
 V18 relocated C86/C87 into the U11/U12 gap and regenerated both sides of the
 TX pair, but its direct U12 launch shorted into U12 POWER_GND pads; native DRC
 reported 740 findings. V18 is rejected. V19 retained the proven U12-side

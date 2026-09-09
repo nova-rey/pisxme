@@ -7994,6 +7994,10 @@ raised native DRC to 781 with 33 crossings and 281 clearance findings. Rejected
 the router-generated field; complete hand-authored lower-field co-authoring
 remains required.
 
+V20 AVDDL B.Cu relocation removed the former analog/TX crossing but introduced
+an AVDDL-to-USB_RXP1 short at the transition via. Rejected the independent
+AVDDL branch; AVDD33 and USB TX/RX must be co-authored in the lower field.
+
 V18 direct U12 launch after C86/C87 relocation shorted U12 POWER_GND; V19
 retained the U12 corridor but shorted JMS_AVDD33 into TX copper. Rejected both
 cap-relocation classes; complete U11/U12 field co-authoring remains required.

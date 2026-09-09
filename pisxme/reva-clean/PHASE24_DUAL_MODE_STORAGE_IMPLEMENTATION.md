@@ -83,6 +83,11 @@ but native DRC rose to 781 findings with 33 crossings and 281 clearance
 findings. The router implementation is rejected for this dense QFN field; a
 complete hand-authored lower-field escape remains required.
 
+V20 is superseded route evidence. Its B.Cu AVDDL branch removed the former
+AVDDL/USB-TX crossing but shorted the new transition via into USB_RXP1 and
+left native DRC at 736. AVDDL cannot be relocated independently; the next
+field must co-author AVDD33 and USB TX/RX with it.
+
 V18 and V19 are superseded cap-relocation experiments. V18 introduced U12
 POWER_GND shorts during a direct launch (740 DRC findings); V19 retained the
 U12 corridor but introduced JMS_AVDD33/TX shorts (736 findings). Neither is
