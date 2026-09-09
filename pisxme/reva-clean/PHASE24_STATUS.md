@@ -10088,3 +10088,8 @@ west of the RXN trunk while U1.33 RTL_5V uses a separate F.Cu/B.Cu
 corridor. Native DRC retains inherited warnings only; the combined
 saved-board audit and two source negative controls pass. Remaining
 RTL_3V3/RTL_5V support and non-rail support remain OPEN.
+V1278 is accepted RSET support evidence. U1.51 reaches R1.1 from the open
+resistor side, and R1.2 receives a deliberate local GND return spoke/via.
+Native DRC retains inherited warnings only; the saved-board RSET endpoint and
+source negative-control audit pass. Crystal, SPI, remaining rails, controls,
+and integrated Path-B closure remain OPEN.

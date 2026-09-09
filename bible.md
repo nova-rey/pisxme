@@ -6057,6 +6057,11 @@ produced native SPISO3 connectivity plus a passing trace-removal negative
 control and zero native signal shorting/crossing classes. Path A and
 production CAD remain unchanged; Path-B support and full validation remain
 open.
+2026-09-09 — V1278 accepted RTL9210B RSET support: U1.51 reaches R1.1 from
+the open resistor side and R1.2 receives a deliberate local GND return.
+Native DRC retained inherited warnings only; endpoint and negative-control
+audit passed. Crystal, SPI, remaining rails/controls, and Path-B closure are
+open.
 
 2026-09-09: V746/V747 were rejected three-channel source-field allocations
 with native SPISO/SPISO3 and SPICS/SPISO interactions. V748 rotated U2 90
