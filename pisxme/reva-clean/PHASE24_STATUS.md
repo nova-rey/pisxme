@@ -33,6 +33,14 @@ produced 841 DRC violations and 16 true shorts. Its clearance model is not
 suitable for this dense inherited corridor; this does not reject the corrected
 storage authority or macro-floorplan.
 
+Clock-source reconciliation is closed at the source level: native export
+`PHASE24_CLOCK_RECONCILED_V2.kicadxml` proves `U11.50/51` connect to the live
+`Y10.1/2` crystal, with Y10's return pads on `POWER_GND`. The older Y1 clock
+island remains separately aliased and is not paralleled. The regenerated V2
+clock-reconciled board returns to the 685/403 baseline with the known U12
+exposed-pad route short, so the attempted Y1 label join is rejected and is
+not a current routing requirement.
+
 ## CURRENT OPEN GATES — 2026-09-08
 
 ### Latest source-regenerated routing basis

@@ -7814,3 +7814,9 @@ next solution class must allocate a different local source/target corridor.
 native endpoint connectivity passed but native DRC reported 841 violations and
 16 true shorts. Its clearance model is unsuitable for the inherited dense
 corridor; the experiment does not invalidate the corrected source authority.
+
+2026-09-08 — Native source inspection resolved the apparent clock mismatch:
+U11 XIN/XOUT are already authoritative to the live Y10 crystal. Y1 is a
+superseded separately aliased island and was not joined in parallel. The
+reconciled native export and regenerated board return to the 685/403 baseline,
+confirming the remaining defect is routing around U12 and neighboring copper.

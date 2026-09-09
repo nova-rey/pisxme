@@ -26,6 +26,12 @@ assertions passed, but native DRC reported 841 violations and 16 true
 shorts. Its search clearance model is rejected for this dense inherited
 corridor; this is not a storage schematic or U12 package-authority failure.
 
+The live JMS583 clock authority is U11/XIN-XOUT to Y10. Native export and
+source-regenerated V2 evidence confirm that Y1 is a superseded, separate
+support island; it must not be joined in parallel. Clock-source cleanup is
+therefore complete, while native routing remains open at the U12/source-field
+and neighboring-corridor gate.
+
 ## CURRENT STATE — authoritative now (2026-09-08)
 
 The first generic netlist-driven PCB regeneration is retained as

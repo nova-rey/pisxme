@@ -108,9 +108,10 @@ def main():
     # net object; geometry is untouched and no connectivity is synthesized.
     for item in list(b.GetPads()) + list(b.GetTracks()) + list(b.Zones()):
         old = item.GetNetname()
-        if old and old != flat(old) and flat(old) in nets:
-            item.SetNet(nets[flat(old)])
-            item.SetNetCode(nets[flat(old)].GetNetCode())
+        key = flat(old) if old else ''
+        if old and old != flat(old) and key in nets:
+            item.SetNet(nets[key])
+            item.SetNetCode(nets[key].GetNetCode())
     b.BuildListOfNets(); b.Save(a.output)
     print(f'components={len(components)} assigned_nodes={len(expected)} '
           f'added={sorted(set(ADD)&set(components)-set(refs))} output={a.output}')
