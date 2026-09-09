@@ -29,6 +29,14 @@ USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native
 DRC, and the existing full-board gates.
 
+V37 is the current best disposable CM5 USB3 source-field experiment layered
+on the filled V32 VBUS basis. It regenerates all four J7 USB3 departures,
+preserves the B.Cu handoffs, passes USB3/SATA/mode/JMS583/parity focused
+audits, and has zero native shorting or footprint-error entries. Its 603 DRC
+violations and 399 unconnected pads keep it out of production authority; the
+full storage field still requires coordinated closure. See
+`PHASE24_STORAGE_CM5_USB4_MONOTONIC_V37.md` and its raw native receipt.
+
 A disposable V13-plus-support trial on 2026-09-09 joined the complete
 JMS583 low-speed support cohort using native pad endpoints. Its focused
 support audit and trace-removal negative control passed, but native DRC rose

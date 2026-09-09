@@ -8120,3 +8120,11 @@ apples-to-apples decision matrix in
 storage qualification and Phase 24 current-state narrative to classify Path B
 as `CONTINUE BOTH`, with authorized application-circuit, virgin provisioning,
 firmware rights, full route, and integrated mode-validation gates still open.
+
+2026-09-09: Repaired the Path-A CM5 USB3 source field with V37. The saved
+filled candidate preserves the existing B.Cu handoffs, passes USB3 10/10,
+SATA 12/12, mode-control 4/4, JMS583 endpoint 7/7, and pad-parity audits, and
+removes the V36 CM5_REFCLK/USB3_TXN short without adding a shorting class.
+Native DRC remains 603 violations / 399 unconnected pads, so V37 is retained
+as a disposable routing basis only. Evidence is recorded in
+`pisxme/reva-clean/PHASE24_STORAGE_CM5_USB4_MONOTONIC_V37.md`.
