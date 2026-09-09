@@ -1068,3 +1068,8 @@ removes it, but the remote via is not an acceptable design repair and the
 fixture still has 39 incomplete items. Preserve this as a discriminator only;
 the required next step is to identify the local GND attachment lost during
 the co-authored corridor regeneration.
+V1029 restores the exact local F.Cu GND segments present in the parent field,
+but the isolated GND-zone warning and 40 incomplete items persist. This
+rejects the hypothesis that the warning is caused solely by those deleted
+segments. Preserve V1029 as negative evidence; broader zone attachment still
+requires investigation.

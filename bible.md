@@ -8931,3 +8931,7 @@ zone warning, proving the warning is a real plane-island condition. Because
 the remote attachment is not a valid production repair and 39 incomplete
 items remain, retain V1028 as diagnostic evidence only; trace the lost local
 GND attachment next.
+2026-09-09: V1029 restored the three native local F.Cu GND attachment
+segments removed by the coauthor scrub. Native DRC retained one isolated
+GND-zone warning and 40 incomplete items, rejecting that narrow cause.
+Preserve V1029 as controlled negative evidence pending broader zone analysis.

@@ -9387,3 +9387,8 @@ warning is a real plane-island condition, but it is an arbitrary remote
 attachment and leaves 39 incomplete items. It is not a production fix. The
 next repair must retain or replace the actual local GND attachment rather
 than suppressing the warning with a corner via.
+V1029 restored the three native F.Cu GND attachment segments removed by the
+V1026 broad scrub. Native DRC still reports one isolated GND-zone warning and
+40 incomplete items, so the narrow deleted-F.Cu-attachment hypothesis is
+rejected. V1029 remains controlled negative evidence; the warning is tied to
+broader zone connectivity/attachment state.
