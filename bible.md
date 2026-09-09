@@ -9098,3 +9098,10 @@ support-field regeneration is required.
 showed retained 3V3/1V1 return-field conflicts at the proposed transitions.
 Crystal authority remains valid; coordinated QFN/crystal support-field
 relocation is required.
+2026-09-09: Rejected disposable XTAL_IN/crystal-support candidates V1102-V1112.
+The experiments covered alternate QFN departures, coordinated support-cell
+relocation, underside placement, and same-side routing. Native DRC rejected
+each for concrete QFN pad-field, retained rail/return, via-clearance, or
+crossing violations. V1092 remains the retained clean rail/RSET basis; the
+current open gate is coordinated regeneration of the QFN rail, RSET, and
+crystal fanout. No production CAD was changed.

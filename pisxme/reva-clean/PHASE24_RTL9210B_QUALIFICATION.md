@@ -1274,3 +1274,13 @@ V1100/V1101 are rejected XTAL_IN pad-edge refinements. Native DRC found
 3V3/1V1 return-field conflicts at both candidate transitions. The crystal
 net remains authoritative; coordinated QFN/crystal support-field relocation
 is required for the remaining implementation.
+
+CURRENT PATH-B STATE (2026-09-09): V1102-V1112 are rejected disposable
+XTAL_IN/crystal-support experiments. V1102 and V1106-V1110 tested alternate
+QFN departures; V1103-V1105 and V1111-V1112 tested coordinated relocation or
+underside/same-side support cells. Native DRC rejected each for concrete
+QFN-pad-field, retained rail/return, via-clearance, or crossing violations.
+These are route-implementation failures, not RTL9210B authority failures.
+V1092 remains the retained clean rail/RSET basis. CURRENT OPEN GATE:
+coordinated regeneration of the QFN rail, RSET, and crystal fanout together;
+no production CAD has been changed and no Path-B closure is claimed.
