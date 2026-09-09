@@ -24,10 +24,17 @@ rejected alternative. The current comparison and evidence ledger are in
 shared lane-0/PEDET mapping, native support primitives, and JLC identity are
 retained, while authorized application-circuit/provisioning, complete
 mode-aware route, firmware rights, and integrated validation remain open.
+V667 and V668 are rejected SPI route allocations on the retained V595
+source/rail field; V668 specifically tested separated staggered B.Cu
+channels and confirms that the unchanged source/rail field needs coherent
+island reallocation. These are route-implementation results, not Path-B
+package or architecture rejections.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native
-DRC, and the existing full-board gates.
+DRC, and the existing full-board gates. Path-B remains a separate isolated
+qualification track; its next action is coherent support-island
+reallocation, as recorded in `PHASE24_RTL9210B_SPI_CHANNELIZED_NATIVE_V668.md`.
 
 V37 is the current best disposable CM5 USB3 source-field experiment layered
 on the filled V32 VBUS basis. It regenerates all four J7 USB3 departures,

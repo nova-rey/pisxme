@@ -13,8 +13,10 @@ one USB-to-SATA/PCIe controller. It is not yet production authority: the
 remaining risks are provisioning and documentation provenance, not a quick
 rejection based on the unfinished community PCB. The package-level strict-QFN
 DFM gate is closed by V666; the complete integrated source-field route is
-still open because V663/V664/V665 rejected specific allocations, not the
-package or architecture.
+still open because V663/V664/V665/V667/V668 rejected specific allocations,
+not the package or architecture. V668's separated-channel attempt confirms
+that the retained V595 source/rail field must be reallocated coherently
+rather than patched channel-by-channel.
 
 ## Path-B proposed implementation
 
@@ -52,7 +54,7 @@ the Rev-A single-lane socket and requires an explicit no-connect review.
 | Mode selection | U1.8 PEDET/CONFIG1 and U1.12 isolation evidence | Feasible, but exact power-off sequencing and empty-socket behavior OPEN |
 | Reference/support | WIP HynixCJR native schematic/netlist plus retained local support audits | Corroborating only; application-circuit authority OPEN |
 | Firmware | bensuperpc/rtl9210 tools/config ecosystem and damnnfo binaries | Technical ecosystem exists; rights, exact image, and virgin programming OPEN |
-| Implementation | V35/V562/V661/V664/V666/V667 disposable source-field/rail work | V666 package discriminator passes; V667 SPI allocation rejected; not a complete production or native-clean board |
+| Implementation | V35/V562/V661/V664/V666/V667/V668 disposable source-field/rail work | V666 package discriminator passes; V667/V668 SPI allocations rejected; not a complete production or native-clean board |
 
 Primary/corroborating sources are retained under
 `authority-inventory/rtl9210b/`. External receipts include:
@@ -138,3 +140,7 @@ complete disposable RTL9210B fixture using the corrected footprint and the
 mapping above. If that experiment closes provisioning and the native fixture
 passes all modes, prepare a reviewed migration plan before any production-CAD
 replacement. Until then, Path B remains isolated qualification work.
+
+Immediate geometry follow-up: relocate the isolated U1/U2/flash support
+cluster coherently, preserving the corrected package and native pad mapping,
+then re-author rails and all five SPI nets as one source-field allocation.

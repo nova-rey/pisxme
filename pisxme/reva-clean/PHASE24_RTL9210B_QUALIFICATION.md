@@ -4,6 +4,18 @@ Status: **KEEP A / CONTINUE B**. Path A remains the protected production
 architecture and is not modified. Path B is an active isolated candidate,
 not authorized for destructive replacement or production integration.
 
+## Latest implementation evidence — 2026-09-09
+
+V668 tested a distinct five-net source-field allocation on the native V595
+support/rail base: staggered QFN escapes, separated B.Cu channels, and
+bottom-side U2 returns. Native KiCad DRC found 49 violations and 11 opens,
+including true source-field shorts/crossings. It is rejected as a route
+implementation and retained in
+`PHASE24_RTL9210B_SPI_CHANNELIZED_NATIVE_V668.md`. The result narrows the
+next experiment to coherent U1/U2/flash support-island relocation or complete
+source/rail regeneration. It does not change Path A or reject the RTL9210B
+package/architecture.
+
 ## Decision summary
 
 The retained RTL9210B-CG Rev. 1.1 document says the controller combines USB,

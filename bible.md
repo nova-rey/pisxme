@@ -8162,3 +8162,11 @@ violations and 11 opens, including real SPISO3/SPICS and SPI/rail shorts and
 source-field crossings. Rejected the route implementation; retained Path B,
 Path A, and all production CAD unchanged. The next SPI class must co-author
 source escapes with the rail field or coherently move isolated support.
+
+2026-09-09: Tested V668, a materially different five-net RTL9210B SPI class
+using staggered native QFN escapes, separated B.Cu channels, and bottom-side
+U2 returns on the V595 support/rail base. Native DRC reported 49 violations
+and 11 opens, including true source-field shorts/crossings and rail/channel
+conflicts. Rejected V668 as a route implementation, not as a package or
+architecture result. The next Path-B experiment must coherently reallocate
+the isolated U1/U2/flash support island and its rails.
