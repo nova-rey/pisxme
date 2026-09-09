@@ -432,6 +432,10 @@ only the inherited RTL_3V3 dangling warning; saved-board connectivity and the
 U1.63 source-trace negative control pass for the expanded U1.16/U1.36/U1.40/
 U1.50/U1.60/U1.63/C4.1 group. Remaining QFN and Path-B gates are open.
 
+V1088 is rejected U1.25 evidence: it reduced opens to 22 but native DRC found
+RTL_1V1/RTL_5V via contact and SPICS clearance violations. The remaining
+U1.25 endpoint requires coordinated QFN/SPI/5V fanout regeneration.
+
 V1087 is retained as a clean U1.55 RTL_1V1 extension. The final via spacing
 clears the native hole-to-hole rule; DRC has only the inherited RTL_3V3
 dangling warning. Saved-board connectivity and the U1.55 source-trace negative

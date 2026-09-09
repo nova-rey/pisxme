@@ -9602,3 +9602,8 @@ audit proves U1.36/U1.40/U1.50/C4.1 are one physical RTL_1V1 component; the
 U1.50 source-trace negative control fails as required. V1072 is retained as
 the current 1V1 basis; U1.16/U1.25/U1.55/U1.60/U1.63 and remaining support
 endpoints remain open.
+
+V1088 is rejected U1.25 evidence. The higher outboard transition reduced the
+fixture to 22 opens but native DRC found RTL_1V1 contact with the retained
+RTL_5V via and SPICS clearance violations. No V1088 copper is promoted; the
+remaining U1.25 route requires coordinated QFN/SPI/5V fanout regeneration.
