@@ -2014,6 +2014,13 @@ native audit with no signal shorting/crossing. Promote V154 as the current
 REFCLK-ready local-support basis; XTAL_IN/REFCLK and remaining high-speed
 endpoints remain open.
 
+V1086 attaches U1.63 RTL_1V1 through the same lower transition as U1.60.
+Native DRC retains only the inherited RTL_3V3 dangling warning and the
+fixture has 24 unconnected items. The saved-board audit proves U1.16/U1.36/
+U1.40/U1.50/U1.60/U1.63/C4.1 are one physical RTL_1V1 component; removing
+U1.63's source trace fails the negative control. V1086 is retained. U1.25,
+U1.55, and remaining support/control endpoints remain open.
+
 V1076 reduced the open count but shorted SPICS at the proposed via and
 violated clearance to the retained 5V field. V1077 and V1079 retained the
 same source-field concept but clipped the 5V corridor or a QFN no-net pad;

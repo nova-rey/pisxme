@@ -427,6 +427,11 @@ only the inherited RTL_3V3 dangling warning; saved-board connectivity and the
 U1.60 source-trace negative control pass for U1.16/U1.36/U1.40/U1.50/U1.60/
 C4.1. Remaining QFN endpoints and full Path-B support gates stay open.
 
+V1086 is retained as a clean U1.63 RTL_1V1 endpoint extension. Native DRC has
+only the inherited RTL_3V3 dangling warning; saved-board connectivity and the
+U1.63 source-trace negative control pass for the expanded U1.16/U1.36/U1.40/
+U1.50/U1.60/U1.63/C4.1 group. Remaining QFN and Path-B gates are open.
+
 V1081 is rejected coupled-fanout evidence. Relocating the 5V escape outward
 caused crossings with retained SPI B.Cu lanes, while the U1.25 1V1 departure
 still violated SPICS clearance. The failure does not invalidate the rail or
