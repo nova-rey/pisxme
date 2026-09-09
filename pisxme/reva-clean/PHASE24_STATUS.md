@@ -48,6 +48,10 @@ and U1.40 RTL_1V1 transitions down on separate ordinary vias. Native DRC found
 clearance, solder-mask, or footprint errors. The short B.Cu tails are not
 final support routing; the next action is independent extension to the native
 rail collectors. See `PHASE24_RTL9210B_U139_U140_AROUND_V676.md`.
+V678 replaced the V676 tails with F.Cu collector joins and introduced one
+real RTL_3V3/RTL_1V1 source-field crossing plus single-layer source vias; it
+is rejected as a route implementation. The next bounded Path-B class pivots
+to the native-clean orientation-180 support lineage.
 The current local routing basis is V23, a bounded co-authored
 USB_TXP/USB_TXN/JMS_AVDDL/crystal route variant. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native

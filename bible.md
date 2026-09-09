@@ -8210,3 +8210,9 @@ ordinary via. Native KiCad DRC found 12 findings and 24 expected/incomplete
 opens, with no signal short, crossing, clearance, solder-mask, or footprint
 errors. Retained V676 as a source-field basis; its short B.Cu tails are not
 final support routing and must be extended to native rail collectors.
+
+2026-09-09: V677 extended the V676 source transitions to existing same-net
+collectors; native DRC found two real B.Cu crossings with SPI channels, so it
+was rejected. V678 changed to F.Cu collector joins; native DRC still found a
+real RTL_3V3/RTL_1V1 crossing and single-layer source vias. Rejected V678 and
+pivoted the next Path-B class to the native-clean orientation-180 lineage.

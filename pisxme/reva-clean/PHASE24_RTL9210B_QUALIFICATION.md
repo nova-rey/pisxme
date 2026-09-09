@@ -40,6 +40,12 @@ their native rail collectors independently before treating the field as
 connected. The raw receipt is
 `PHASE24_RTL9210B_U139_U140_AROUND_V676.md`.
 
+V678 tested F.Cu joins from the V676 source transitions to the existing
+collectors. Native DRC found one real RTL_3V3/RTL_1V1 source-field crossing
+and single-layer source vias; reject it as a route implementation. The next
+bounded class is the separately authored orientation-180 support lineage,
+which has native-clean local support fields and different QFN pin ordering.
+
 V672 provides a positive interior RSET basis with nine inherited warnings and
 no signal DRC violations. V673 layered lower RTL_3V3 onto it and found 12
 violations/21 opens; it is rejected because the U1.52 departure contacts
