@@ -9292,3 +9292,8 @@ Native DRC retained only the inherited warning; the saved-board audit passed
 U1.8/R2.1/J1.69 and its complete source-cohort negative control. PEDET is
 locally closed; remaining RTL9210B control, REFCLK, lane, support, and
 integrated Path-B gates remain open.
+2026-09-09: V1201-V1203 rejected CLKREQ_N route classes. Native DRC found
+reuse/crossing or shorting interactions with PEDET, 1V1, 3V3, SPICLK, and
+the lower QFN support field. The next class will use an immediate source
+transition and dedicated upper/control lane; accepted PEDET and V1183/V1195
+rail/crystal primitives remain unchanged.

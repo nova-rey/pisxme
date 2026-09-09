@@ -9883,3 +9883,10 @@ unconnected items. The saved-board audit proves U1.8/R2.1/J1.69 connectivity
 and a complete source-cohort negative control. PEDET is locally closed;
 CLKREQ_N, PERST_N, REFCLK, lane, remaining support, and integrated Path-B
 closure remain OPEN.
+V1201-V1203 are rejected CLKREQ_N route trials. V1201 reused PEDET and
+3V3/R3 corridors and produced 15 native violations. V1202 separated the
+source corridor but collided with the retained 1V1/PEDET fields, SPICLK, and
+3V3 near R3. V1203 moved the source laterally and still crossed the PEDET
+source escape and retained lower support field. These are route-implementation
+failures; CLKREQ_N remains open. The next class will transition immediately
+at the source and use a dedicated upper/control lane.
