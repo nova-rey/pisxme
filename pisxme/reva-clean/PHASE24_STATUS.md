@@ -106,7 +106,23 @@ dogbone class; V754 proved the complete source fan-out; V755/V757/V758/V759
 closed endpoint channels incrementally. Their raw reports remain immutable
 evidence in the qualification directory.
 
-## CURRENT STATE — documentation authority (2026-09-08)
+## CURRENT STATE — documentation authority (2026-09-09)
+
+V981 is the newest RTL9210B local source-field discriminator.  After
+orientation-0 transformation about the native exposed pad, all six adjacent
+source departures (SPISI, SPICLK, RTL_3V3, SPISO3, SPISO, SPICS) run
+orthogonally from their actual QFN pad centers without native electrical DRC
+shorts or crossings.  The report contains only the intentional dangling
+source ends and inherited incomplete connections.  This is route-implementation
+evidence and a candidate orientation for the next co-authored support-island
+regeneration; it is not complete Path-B closure.
+
+V977 is rejected as a naïve same-field lateral fanout (18 native violations).
+V979/V980 are rejected transition allocations (15/9 native violations),
+including real B.Cu corridor crossings and side-band/via clearances.  Their
+raw boards and reports are preserved.  The next experiment must start from
+V981's orientation-0 source allocation and add separated transitions/support
+one route class at a time.
 
 V723/V724/V725 are rejected SPISO route implementations from V718. No Path-B
 architecture conclusion is changed; those are historical route evidence.

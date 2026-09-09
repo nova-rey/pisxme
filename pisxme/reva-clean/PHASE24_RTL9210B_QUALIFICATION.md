@@ -1,6 +1,23 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
-## Current checkpoint — V760 five-net SPI fixture (2026-09-09)
+## Current checkpoint — V981 orientation-0 source-field discriminator (2026-09-09)
+
+V981 is the newest positive source-field result.  It transforms U1 to
+orientation 0 about the native exposed pad and removes only the local
+RTL9210B support tracks, then exits SPISI, SPICLK, RTL_3V3, SPISO3, SPISO,
+and SPICS orthogonally from their actual QFN pad centers on F.Cu.  Native
+KiCad 10.0.5 DRC reports six intentional dangling-track warnings and no
+source-field short, clearance, or crossing violation; the remaining
+unconnected items are inherited from the deliberately incomplete fixture.
+This proves the orientation-0 source-row geometry is viable before transition
+allocation.  It does not close the complete RTL9210B support or Path-B gate.
+
+V977 is rejected as a naïve same-layer lateral source fanout (18 native
+violations).  V979 and V980 are rejected transition/corridor allocations
+(15 and 9 native violations); their saved boards and reports remain immutable
+route-implementation evidence.  Continue from V981 with co-authored
+through-via placement and local support regeneration; do not compare these
+immature route counts to the mature Path-A acreage candidate.
 
 V760 is the current positive five-net SPI fixture. It uses the V748 vertical
 U2 endpoint field and the V754 source fan-out. Native KiCad 10.0.5 DRC reports

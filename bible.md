@@ -8821,3 +8821,12 @@ three inherited isolated-fill warnings and 22 expected opens. V943's first
 U1.20 vertical escape was rejected by SPISO3/SPICLK crossings and via
 clearance. V942 is the accepted U1.34 sub-primitive; remaining 3V3 endpoints
 remain open.
+2026-09-09: Phase 24 RTL9210B Path-B V978/V981 source-field discriminators.
+V978 proved that orthogonal F.Cu dogbones can leave the orientation-90 QFN
+source row without source-field electrical violations; V979/V980 exposed
+transition/corridor crossings and side-band via clearances and were rejected.
+V981 transformed U1 to orientation 0 about the native exposed pad and proved
+all six adjacent source departures cleanly at the source row, with only
+intentional dangling ends and inherited incomplete connections.  Preserve
+V981 as the next local support-regeneration basis; Path A and production CAD
+remain unchanged.
