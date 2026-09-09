@@ -7618,3 +7618,9 @@ native mode-control routing. The saved candidate passes topology-aware USB3
 10/10, SATA 12/12, mode-control 4/4, schematic-to-PCB parity with zero
 mismatches, JMS VDDREG/REXT, and the mode negative control. Native DRC remains
 open at 673 violations / 499 unconnected items; no closure was claimed.
+
+2026-09-08: Tested integrated JMS_VCCO source-transition relocations V6/V7.
+V6 removed the C86/USB launch collision but retained the VCCO/VCCK field
+conflict; V7 moved the source transition and increased DRC to 677 while the
+same short remained. Both are rejected support-route evidence; V4_MODE stays
+the current integrated basis.

@@ -66,6 +66,11 @@ native 12-endpoint SATA audit; V4 is the latest candidate and still has
 unrelated inherited USB3/support shorts and crossings. Neither is promoted.
 V5 was a rejected multi-bend variant: it retained SATA endpoint PASS but
 introduced additional same-layer route crossings and via/track conflicts.
+The integrated VCCO source-transition V6/V7 trials are also rejected: V6
+removed the C86 launch collision but retained the VCCO/VCCK field conflict;
+V7 moved the source transition and increased native DRC to 677 while the
+same VCCO/VCCK short remained. The V4_MODE candidate remains the cleanest
+integrated storage basis.
 
 The integrated REXT repair discriminator is complete as a bounded experiment.
 V1's ordinary-via escape removed the original U11.40/U11.39 short but
