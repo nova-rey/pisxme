@@ -9526,3 +9526,7 @@ rail primitive only, not as full Path-B or production closure.
 and saved-board negative-control audits passed but the combined SPISI/SPICLK
 escape introduced three real layer crossings against RTL_5V and SPISO and at
 the rotated QFN source field. Raw fixture and DRC evidence are preserved.
+2026-09-09 — V1298 SPI layer-swap evidence was rejected after native endpoint
+and saved-board negative-control audits passed but SPICLK still crossed SPISO,
+collided with SPISI at the source field, and violated the SPICS transition
+clearance. The disposable fixture and native DRC report remain preserved.

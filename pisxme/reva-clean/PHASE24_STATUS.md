@@ -10181,3 +10181,8 @@ has three native track crossings: SPISI with the accepted RTL_5V corridor,
 SPISI with SPICLK at the rotated QFN source field, and SPICLK with the existing
 SPISO escape. The raw fixture and DRC report are preserved; SPI data/clock
 remain OPEN for a coupled layer-allocation repair.
+V1298 is also rejected SPI layer-swap evidence. Its native endpoint and
+negative-control audit pass, but the SPICLK transition remains too close to
+SPISO and collides with the SPISI source departure. The proposed layer swap
+therefore does not yet provide a valid combined source field; native DRC and
+the disposable PCB are preserved for comparison.
