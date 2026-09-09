@@ -8032,3 +8032,11 @@ CM5_PERST is owned by J7.109, TP8.1, and J1.E18 and that the existing F.Cu
 trunk joins those pads. Clarified that V21 is rejected only because its new
 outboard path crossed no-net J1 pads; the endpoint contract is not an open
 authority task. Raw V21 evidence remains unchanged.
+
+## 2026-09-09 — V13 support-join route rejection
+
+Tested a disposable V13-plus-support candidate using native pad endpoints for
+the complete JMS583 support cohort. Focused support connectivity and its
+trace-removal negative control passed, but native DRC worsened from 730 to 778
+findings with 395 unconnected items. Rejected the direct support-join route;
+the next class remains coordinated lower-field regeneration.

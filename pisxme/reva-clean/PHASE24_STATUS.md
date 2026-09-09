@@ -23,6 +23,13 @@ USB_TXP/USB_TXN/JMS_AVDDL source-field repair. The next action is to carry
 this source-owned basis through complete storage-field regeneration, native
 DRC, and the existing full-board gates.
 
+A disposable V13-plus-support trial on 2026-09-09 joined the complete
+JMS583 low-speed support cohort using native pad endpoints. Its focused
+support audit and trace-removal negative control passed, but native DRC rose
+from 730 to 778 findings (395 unconnected items). It is rejected as a route
+implementation class; support connectivity passing does not justify adding
+the direct joins over the congested lower field.
+
 V13 is the retained local routing basis. Its upper P-leg detour preserves the
 V8 source ordering, reduces the USB_TXN1/USB_TXP1 skew proxy to 0.259 mm, and
 keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits

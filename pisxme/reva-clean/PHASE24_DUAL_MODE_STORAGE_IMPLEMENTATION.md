@@ -73,6 +73,12 @@ true shorts into no-net J1 pads and is not a valid low-speed repair. A native
 audit confirms the existing J7.109/TP8.1/J1.E18 endpoint mapping and continuous
 trunk; no storage or PCIe authority changed.
 
+A disposable V13-plus-support trial joined the complete JMS583 support cohort
+from native pad endpoints and passed its focused audit plus trace-removal
+negative control. Native DRC nevertheless rose from 730 to 778 findings with
+395 unconnected items, so the direct support-join route is rejected and no
+production authority changed.
+
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a
 0.000 mm clearance violation into U11 pad 23. No production authority changed.
