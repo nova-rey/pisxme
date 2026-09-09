@@ -9368,3 +9368,10 @@ native GND pad 45, V1023 contacted no-connect pad 48, and V1024 remained
 QFN-edge regeneration with the adjacent RTL_3V3 collector; further isolated
 via nudges are not a credible class. The accepted 1V1 primitives and Path A
 remain unchanged.
+V1025 is REJECTED: the west-shifted 3V3 spine cleared the 1V1 branch but
+crossed the existing B.Cu GND diagonals three times. V1026 co-authors all
+three local neighborhoods and removes those short/crossing classes; native
+DRC reports zero shorting, clearance, or track-crossing violations. It still
+has one isolated GND-zone warning and 40 incomplete fixture connections, so
+it is a promising local primitive, not a full DRC pass. Investigate the
+isolated GND zone before promoting the U1.40/3V3 coauthor.

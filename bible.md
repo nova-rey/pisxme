@@ -8917,3 +8917,8 @@ the U1.40/RTL_3V3 field next; no architecture conclusion changes.
 localized them to GND pad 45, no-connect pad 48, and RSET pad 51. The next
 step is coordinated U1.40/RTL_3V3 QFN-edge regeneration; isolated via nudges
 are exhausted. Accepted 1V1 primitives and Path A remain unchanged.
+2026-09-09: V1025 rejected west-shifted RTL_3V3 because it crossed three local
+B.Cu GND diagonals. V1026 co-authored the 3V3 spine, U1.40 RTL_1V1 escape,
+and GND return; native DRC has no shorting, clearance, or crossing findings,
+but retains one isolated GND-zone warning and 40 incomplete fixture items.
+Retain V1026 as a promising, not-yet-promoted local primitive.

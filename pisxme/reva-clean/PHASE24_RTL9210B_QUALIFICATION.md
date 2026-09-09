@@ -1053,3 +1053,9 @@ the failures successively to GND pad 45, no-connect pad 48, and RSET pad 51.
 The simple isolated-transition class is exhausted; U1.40 must be regenerated
 with the neighboring RTL_3V3 collector as one QFN-edge allocation. Accepted
 1V1 primitives and Path A are unchanged.
+V1025 is rejected because the west-shifted 3V3 collector crossed the local
+B.Cu GND diagonals. V1026 co-authors the 3V3 spine, U1.40 1V1 escape, and
+GND corridor and removes all short/clearance/crossing violations. Native DRC
+still reports one isolated GND-zone warning and 40 inherited/incomplete
+connections; therefore V1026 is not yet promoted as a clean support basis.
+The isolated-zone cause is the next focused validation item.
