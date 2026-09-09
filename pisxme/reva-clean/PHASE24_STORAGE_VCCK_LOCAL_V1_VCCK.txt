@@ -1,0 +1,1 @@
+PASS VCCK native connectivity; PASS trace-removal negative control

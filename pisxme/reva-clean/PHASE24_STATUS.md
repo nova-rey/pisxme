@@ -3,14 +3,14 @@
 ## CURRENT OPEN GATES — 2026-09-08
 
 The latest integrated storage routing candidate is
-`PHASE24_STORAGE_VCCO_DEST_V1.kicad_pcb`, derived from the corrected
+`PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`, derived from the corrected
 source-authoritative workbench with M.2 launch V6, selector-side SATA escape
 V4, native mode-control routing, corrected CM5 USB3 right-side launches, and
-destination-only VCCO relocation. It passes the topology-aware
+destination-only VCCO relocation plus the local VCCK corridor repair. It passes the topology-aware
 dual-mode USB3 audit (10/10), SATA endpoint audit (12/12), mode-control audit
 (4/4), schematic-to-PCB pad parity (0 mismatches), and JMS583 VDDREG/REXT
 audits, with saved-board MODE_IN and VCCO negative controls that fail as
-required. Native DRC remains open at 671 violations / 499 unconnected items; this is
+required. Native DRC remains open at 669 violations / 499 unconnected items; this is
 the current routing workbench, not a closure candidate.
 
 The live U13 source-authority regression is corrected. U13 pins 6/7 now own
@@ -78,6 +78,8 @@ An all-F.Cu VCCO V1 trial reduced the aggregate DRC to 670 but introduced
 real U12 no-net/USB launch shorts and additional crossings; it is rejected.
 VCCO destination V2 moved the source via down the QFN edge but introduced a
 JMS_SPI_CS_N_DNP pad short and raised native DRC to 675; it is rejected.
+The VCCK local V1 corridor removes the VCCO/VCCK and RESET_N/VCCK shorts,
+retains both rail endpoint negative controls, and reduces native DRC to 669.
 
 Selector-side V9 moved only the TXP corridor above the inherited support
 field; it removed the prior TXP/USB_RXN1 collision but introduced new XIN,
