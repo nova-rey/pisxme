@@ -8567,6 +8567,12 @@ orientation/exposed-pad source field at the active 0.20 mm rules, not a
 connectivity assertion or RTL9210B topology failure. Raw candidates and
 reports are retained; SPI remains open and the next experiment is a bounded
 U1 orientation/QFN source-field regeneration.
+2026-09-09: U1-180 source-field probe V954/V955 was rejected. V954's simple
+escapes shorted adjacent SPI nets; V955's staggered escapes increased native
+DRC findings to 14 because the rotated 0.4 mm vertical pad ordering leaves a
+tighter source field. This is retained as a placement/orientation
+discriminator, not a promoted route. V953-V955 remain disposable Path-B
+evidence; no production CAD changed.
 2026-09-09: V870 extended the clean V869 RTL_3V3 spine from U2.8 to U2.3.
 Native DRC passed with 0 violations and 28 expected incomplete items; the
 saved-board audit proved U2.3/U2.8/C3.1 and a trace-removal negative control.
