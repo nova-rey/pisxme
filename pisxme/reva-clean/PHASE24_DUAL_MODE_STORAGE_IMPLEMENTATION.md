@@ -32,7 +32,11 @@ USB_TXP1/AVDDL and USB_RXP1/AVDDL shorts. Focused endpoint audits remain
 useful, but neither candidate is production authority. The required next
 class is complete lower U11 pad-field allocation.
 
-## CURRENT OPEN GATES — 2026-09-08
+## SUPERSEDED OPEN-GATE SNAPSHOT — pre-VBUS/J8 basis
+
+The following historical snapshot is retained for archaeology only. It is not
+the current implementation instruction; current state and next action are
+defined in the authority section above.
 
 The Y10 relocation trial is rejected implementation evidence: it preserved
 USB3 endpoint assertions but produced 695 native DRC violations and five true

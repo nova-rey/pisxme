@@ -36,7 +36,11 @@ focused endpoint connectivity but are rejected route implementations. This
 confirms that the next repair must allocate the complete U11 lower pad field
 (USB2, USB TX/RX, AVDD33/AVDDL, and neighboring support) coherently.
 
-## CURRENT ROUTING BASIS — 2026-09-08
+## SUPERSEDED ROUTING SNAPSHOT — pre-VBUS/J8 basis
+
+The following historical snapshot is retained for archaeology only. It is not
+the current routing parent; the current parent is identified in the authority
+section above.
 
 The disposable `PHASE24_STORAGE_U12_EP_RX_PAIR_V6.kicad_pcb` is the latest
 USB3 escape discriminator. It preserves the authoritative U11/Y10 clock
