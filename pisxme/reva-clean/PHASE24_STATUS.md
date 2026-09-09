@@ -9346,3 +9346,8 @@ transition west of the collector and passes native DRC with no electrical
 short/clearance/crossing violations; remaining findings are intentional
 dangling source tracks and inherited opens. U1.50 is an accepted isolated
 primitive; U1.40 and the remaining 1V1 rail remain OPEN.
+V1016 is a rejected U1.55 transition only because its via remained physically
+isolated from In2. V1017 adds the same-net In2 segment into the filled pocket;
+native DRC removes the via-isolated condition and reports no electrical
+short/clearance/crossing violations. U1.55 is accepted as an isolated
+primitive; the full RTL_1V1 rail remains open.

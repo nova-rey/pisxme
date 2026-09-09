@@ -8901,3 +8901,7 @@ transitions because the existing vertical RTL_3V3 collector occupied that
 via field. V1015 moved U1.50 west of the collector and passed native DRC with
 no electrical violations beyond intentional dangling source tracks and
 inherited opens. Retain V1015 as the accepted U1.50 primitive.
+2026-09-09: V1016 exposed an isolated U1.55 RTL_1V1 via; V1017 added the
+same-net In2 segment into the filled rail pocket. Native DRC then showed no
+electrical violations. Retain V1017 as the accepted U1.55 primitive; full
+RTL_1V1 closure remains open.
