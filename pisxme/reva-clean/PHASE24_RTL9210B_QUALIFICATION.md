@@ -45,6 +45,11 @@ warnings. `phase24_rtl9210b_controls_v788_audit.py` passes native U1-to-R2/R3
 connectivity and removal negative controls. This is local control closure
 only; it does not close the complete RTL9210B Path-B qualification.
 
+V789/V790 are rejected PERST_N route trials. Native DRC showed that the outer
+B.Cu corridor to J1.50 is not the limiting geometry; the source transition
+collides with the accepted CLKREQ_N launch or the retained SPICLK via. The
+next bounded class is a co-authored U1-side PERST_N/CLKREQ_N/SPI escape.
+
 V748 is the current positive placement basis for the remaining RTL9210B SPI
 allocation. Starting from the native-clean V730 U1-at-90-degree basis, U2 was
 rotated 90 degrees and placed with its SPI endpoint column at x=105 mm. The

@@ -59,6 +59,12 @@ track-removal negative controls. This closes only the PEDET/CLKREQ_N local
 control route; RTL9210B power, PERST_N, SPI flash, USB, lane, firmware, and
 integrated Path-B gates remain OPEN.
 
+V789/V790 tested the remaining PERST_N connection to CM5/J1 pad 50 using an
+outer B.Cu corridor. The long corridor itself is clear, but the U1-side
+transition conflicts with the CLKREQ_N launch or the retained SPICLK via.
+Both are rejected route implementations; the next experiment must co-author
+the three U1-side control departures. PERST_N remains OPEN.
+
 The earlier V702/V718/V735 checkpoints and V746/V747/V751/V752 failures are
 historical disposable evidence. V753 proved the adjacent SPICLK/SPISI
 dogbone class; V754 proved the complete source fan-out; V755/V757/V758/V759

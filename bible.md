@@ -8383,3 +8383,8 @@ outer CLKREQ_N return produce zero electrical DRC violations (three inherited
 silkscreen warnings). The saved-board audit and both track-removal negative
 controls pass. This closes only the disposable PEDET/CLKREQ_N local route;
 remaining RTL9210B and integrated Path-B gates stay open.
+
+2026-09-09: V789/V790 tested the RTL9210B PERST_N outer corridor. The long
+route was clear, but its U1 transition collided with CLKREQ_N or SPICLK.
+Both are preserved as rejected route evidence; the next class co-authors the
+three U1-side control departures. PERST_N remains open.
