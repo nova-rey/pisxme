@@ -9140,3 +9140,6 @@ audit and source-trace negative control passed. Full Path-B closure remains open
 2026-09-09: Rejected V1131 separated CLKREQ_N control routing. Native DRC
 found retained 1V1 B.Cu shelf, 3V3 corridor, and local U1 departure clashes.
 CLKREQ remains open for complete control-field co-authoring.
+2026-09-09: Rejected V1133 PERST_N outer-corridor transition refinement.
+Native DRC found retained 1V1, SPISI, and RTL_5V geometry clashes. PERST
+remains open for complete control-field co-authoring.

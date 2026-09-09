@@ -1326,3 +1326,6 @@ connector-field via termination with a single useful transition at x=124 mm;
 native DRC retains only the inherited RTL_3V3 dangling warning. The saved
 board audit proves U1.8/R2.1/J1.69 PEDET connectivity and its source-trace
 negative control. This closes the disposable PEDET primitive only.
+V1133 is a rejected PERST_N outer-corridor transition refinement. Moving the
+source transition beyond the 1V1 shelf still crossed retained 1V1, SPISI, and
+RTL_5V geometry. PERST remains open for complete control-field co-authoring.
