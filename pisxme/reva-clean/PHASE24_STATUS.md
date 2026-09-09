@@ -10122,6 +10122,14 @@ V1286 is rejected interior SPICS evidence. The U1.24 endpoint and saved-board
 negative control pass, but the interior transition is too close to the exposed
 GND pad and intersects the validated RXN/RTL_1V1/RTL_5V field on both layers.
 The raw PCB and DRC report are preserved; SPICS remains OPEN.
+V1292 is rejected XTAL_IN leg-shift evidence: the native endpoint and
+negative-control audit pass, but the inherited RSET/XTAL_IN crossing remains
+reported by native DRC.
+V1293 is rejected coupled XTAL_IN/RSET evidence. Both endpoints and negative
+controls pass, but the replacement RSET path creates native conflicts with
+GND, RXN, and the validated 1V1 source shelf.
+V1294 is rejected as a further minimal XTAL_IN shift; the native report still
+flags the RSET/XTAL_IN crossing. The inherited error remains OPEN.
 V1288 is rejected coupled-source evidence. Both U1.25-to-C4 and U1.24-to-U2.1
 native endpoint/negative-control audits pass, but moving the 1V1 source via
 onto the existing trunk places it inside the exposed-GND clearance envelope;

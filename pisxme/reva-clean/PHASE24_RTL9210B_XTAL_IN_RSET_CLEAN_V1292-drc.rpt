@@ -1,0 +1,190 @@
+** Drc report for PHASE24_RTL9210B_XTAL_IN_RSET_CLEAN_V1292.kicad_pcb **
+** Created on 2026-09-09T18:07:59 **
+** Report includes: Errors, Warnings **
+
+** Found 18 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(94.8000 mm, 66.0500 mm): Track [RSET] on F.Cu, length 2.8000 mm
+    @(92.5000 mm, 66.8000 mm): Track [XTAL_IN] on F.Cu, length 9.8000 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(102.0000 mm, 84.0000 mm): Track [PEDET] on B.Cu, length 17.0000 mm
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(136.5000 mm, 68.5000 mm): Via [CLKREQ_N] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(133.0000 mm, 72.0000 mm): Via [CLKREQ_N] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(100.0000 mm, 83.0000 mm): Via [PERST_N] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(138.0000 mm, 68.5000 mm): Via [PERST_N] on F.Cu - B.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(100.0000 mm, 83.0000 mm): Track [PERST_N] on B.Cu, length 32.0000 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(103.5000 mm, 82.0000 mm): Track [RTL_5V] on B.Cu, length 22.9000 mm
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(116.2000 mm, 75.2000 mm): Via [SPISI] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(117.4000 mm, 72.0000 mm): Via [SPICLK] on F.Cu - B.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(119.8000 mm, 74.0000 mm): Track [RTL_3V3] on B.Cu, length 3.7000 mm
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(118.6000 mm, 71.0000 mm): Via [SPISO3] on F.Cu - B.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(80.0000 mm, 68.0000 mm): Track [XTAL_OUT] on B.Cu, length 10.0000 mm
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(141.0000 mm, 60.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(72.0000 mm, 78.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(70.8000 mm, 79.2000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(139.8000 mm, 60.5000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[holes_co_located]: Drilled holes co-located
+    Local override; warning
+    @(103.0000 mm, 60.0000 mm): Via [RTL_1V1] on F.Cu - B.Cu
+    @(103.0000 mm, 60.0000 mm): Via [RTL_1V1] on F.Cu - B.Cu
+
+** Found 29 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(97.6000 mm, 73.9500 mm): Pad 8 [PEDET] of U1 on F.Cu
+    @(102.0000 mm, 84.0000 mm): Track [PEDET] on B.Cu, length 17.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.6000 mm, 73.9500 mm): Pad 13 [CLKREQ_N] of U1 on F.Cu
+    @(120.0000 mm, 75.0000 mm): Pad 1 [CLKREQ_N] of R3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(133.0000 mm, 72.0000 mm): Track [CLKREQ_N] on F.Cu, length 13.0000 mm
+    @(136.5000 mm, 70.2750 mm): Pad 52 [CLKREQ_N] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.0000 mm, 73.9500 mm): Pad 14 [PERST_N] of U1 on F.Cu
+    @(136.0000 mm, 71.5000 mm): Track [PERST_N] on F.Cu, length 1.2250 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.0000 mm, 83.0000 mm): Track [PERST_N] on B.Cu, length 32.0000 mm
+    @(100.0000 mm, 73.9500 mm): Pad 14 [PERST_N] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.2000 mm, 73.9500 mm): Pad 17 [RTL_5V] of U1 on F.Cu
+    @(103.5000 mm, 82.0000 mm): Track [RTL_5V] on B.Cu, length 22.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 67.2000 mm): Track [RTL_5V] on F.Cu, length 1.5500 mm
+    @(101.2000 mm, 73.9500 mm): Pad 17 [RTL_5V] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(116.2000 mm, 75.2000 mm): Track [SPISI] on F.Cu, length 1.2000 mm
+    @(101.9500 mm, 73.2000 mm): Pad 18 [SPISI] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(117.4000 mm, 72.0000 mm): Track [SPICLK] on F.Cu, length 4.4000 mm
+    @(101.9500 mm, 72.8000 mm): Pad 19 [SPICLK] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 66.8000 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
+    @(99.6000 mm, 66.0500 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 66.8000 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(99.6000 mm, 63.5000 mm): Track [RTL_3V3] on B.Cu, length 2.7857 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 66.8000 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(101.9500 mm, 72.4000 mm): Pad 20 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(113.8000 mm, 76.4000 mm): Pad 3 [RTL_3V3] of U2 on F.Cu
+    @(119.8000 mm, 78.0000 mm): Track [RTL_3V3] on F.Cu, length 1.6000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(119.8000 mm, 74.0000 mm): Track [RTL_3V3] on B.Cu, length 3.7000 mm
+    @(102.2000 mm, 64.5000 mm): Track [RTL_3V3] on B.Cu, length 18.2000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(118.6000 mm, 71.0000 mm): Via [SPISO3] on F.Cu - B.Cu
+    @(101.9500 mm, 71.6000 mm): Pad 22 [SPISO3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 71.2000 mm): Pad 23 [SPISO] of U1 on F.Cu
+    @(112.6000 mm, 76.4000 mm): Pad 2 [SPISO] of U2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 70.8000 mm): Pad 24 [SPICS] of U1 on F.Cu
+    @(111.4000 mm, 76.4000 mm): Pad 1 [SPICS] of U2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 72.4000 mm): Pad 66 [GND] of U1 on F.Cu
+    @(98.0000 mm, 70.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+    @(97.2000 mm, 66.0500 mm): Pad 45 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(97.2000 mm, 66.0500 mm): Pad 45 [GND] of U1 on F.Cu
+    @(98.0000 mm, 70.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(78.0000 mm, 57.0000 mm): Track [XTAL_IN] on F.Cu, length 2.0000 mm
+    @(78.0000 mm, 62.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(80.0000 mm, 68.0000 mm): Track [XTAL_OUT] on B.Cu, length 10.0000 mm
+    @(94.0500 mm, 67.6000 mm): Pad 54 [XTAL_OUT] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.4000 mm): Pad 61 [REFCLK_P] of U1 on F.Cu
+    @(72.0000 mm, 78.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.4000 mm): Pad 61 [REFCLK_P] of U1 on F.Cu
+    @(137.2500 mm, 61.5000 mm): Track [REFCLK_P] on F.Cu, length 1.2250 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.8000 mm): Pad 62 [REFCLK_N] of U1 on F.Cu
+    @(70.8000 mm, 79.2000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.8000 mm): Pad 62 [REFCLK_N] of U1 on F.Cu
+    @(136.7500 mm, 60.8000 mm): Track [REFCLK_N] on F.Cu, length 1.9250 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(114.7500 mm, 62.7250 mm): Pad 2 [SSD_3V3] of J1 on F.Cu
+    @(115.2500 mm, 62.7250 mm): Pad 4 [SSD_3V3] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(115.2500 mm, 62.7250 mm): Pad 4 [SSD_3V3] of J1 on F.Cu
+    @(115.7500 mm, 62.7250 mm): Pad 6 [SSD_3V3] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(115.7500 mm, 62.7250 mm): Pad 6 [SSD_3V3] of J1 on F.Cu
+    @(116.2500 mm, 62.7250 mm): Pad 8 [SSD_3V3] of J1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

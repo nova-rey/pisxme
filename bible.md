@@ -9487,6 +9487,10 @@ violations. Raw PCB/DRC evidence are preserved; SPICS remains open.
 saved-board negative control passed, but its transition was too close to the
 exposed GND pad and crossed validated RXN/RTL_1V1/RTL_5V fields. Raw PCB/DRC
 evidence are preserved; SPICS remains open.
+2026-09-09 — V1292/V1294 XTAL_IN leg shifts passed native endpoint and
+negative-control audits but did not clear the inherited RSET/XTAL_IN DRC
+crossing. V1293’s coupled RSET reroute was also rejected for new GND/RXN/1V1
+conflicts. The inherited error remains open and all raw evidence is preserved.
 2026-09-09 — V1288 rejected coupled-source evidence: both native endpoint and
 saved-board negative-control audits passed, but the proposed RTL_1V1 source
 via/dogbone at the existing trunk violated the exposed-GND clearance, hole,
