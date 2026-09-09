@@ -8082,6 +8082,10 @@ reports 607 DRC findings and 399 unconnected items, down from 724/400 before
 fill. Native JMS583 endpoint, USB3, SATA, and mode-control audits remain
 passing; two inherited unrelated shorting items remain.
 
+Fresh native DRC recheck reproduced the filled V23 baseline at 607 findings
+and 399 unconnected items. Retained the receipt as the stable comparison
+baseline for the next coordinated storage-corridor repair.
+
 V27–V30 tested native repairs for storage-local post-fill shorts. V27 added
 seven shorts, V28 collided with USB_RXN1, V29 collided with JMS_AVDDL and
 failed mode control, and V30 added a CM5 USB TX pair short. Rejected all four;

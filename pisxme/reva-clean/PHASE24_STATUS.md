@@ -61,6 +61,11 @@ unconnected items, and the native JMS583 physical endpoint, USB3, SATA, and
 mode-control audits all pass. Two inherited unrelated shorting items remain;
 this does not close full-board routing or Phase 24.
 
+Fresh native DRC recheck on 2026-09-09 reproduces the filled V23 baseline at
+607 findings and 399 unconnected items. This receipt supersedes no raw
+history; it establishes the stable comparison baseline for the next
+coordinated storage-corridor repair.
+
 V27–V30 tested bounded repairs for the two storage-local shorts found after
 zone fill. V27 introduced seven native shorts; V28 removed the U13 pad-field
 short but collided with USB_RXN1; V29 collided with JMS_AVDDL and failed the
