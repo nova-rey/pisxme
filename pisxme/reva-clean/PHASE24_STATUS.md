@@ -10193,6 +10193,10 @@ RTL_5V endpoint groups, with a trace-removal negative control for each. All
 assertions pass; the native V862 DRC report remains zero violations with 30
 unconnected items. This closes only the local V862 support primitive; the
 unconnected Path-B source/control/lane/integration gates remain OPEN.
+V1305 separately audits the V862 local PEDET and CLKREQ_N source-to-resistor
+paths from the saved PCB. Both endpoint assertions and both trace-removal
+negative controls pass. Native V862 DRC remains zero violations with 30
+incomplete items; far-side control and full Path-B integration remain OPEN.
 V1300 tested transplanting the native V1195 RSET/XTAL_IN/XTAL_OUT route set
 onto the current V1279 four-lane basis. The saved-board endpoint audit and
 all three source-removal negative controls pass, but native DRC rejects the

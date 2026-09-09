@@ -9536,6 +9536,10 @@ edges; SPIs, PERST_N, crystal/RSET/GND support, and RTL_5V all passed endpoint
 assertions and trace-removal negative controls. Native DRC remains zero with
 30 incomplete fixture items. This is local support closure only; Path-B
 integration remains open.
+2026-09-09 — V1305 added a saved-board audit for the V862 PEDET and CLKREQ_N
+local control paths. Both endpoints and trace-removal negative controls pass;
+native V862 DRC remains zero with 30 incomplete items. Full Path-B integration
+remains open.
 2026-09-09 — V1300 transplanted the native V1195 RSET/XTAL route set onto the
 V1279 four-lane basis. Saved-board endpoints and negative controls passed, but
 native DRC rejected 29 integrated violations, including XTAL_OUT/RTL_1V1
