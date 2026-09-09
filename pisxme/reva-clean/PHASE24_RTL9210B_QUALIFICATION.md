@@ -671,6 +671,13 @@ V837 reverses the control endpoint order and passes native DRC with 0
 violations and 33 expected incomplete connections; its saved-board audit
 passes PEDET/CLKREQ_N endpoints and trace-removal negative controls. Full
 PERST_N and remaining support validation remain open.
+V843 co-moved the crystal/RSET support from the 90-degree rotated U2 field
+and passes native DRC with 0 violations and 45 expected incomplete
+connections. V844's 270-degree orientation has no electrical DRC violations
+and only 3 silkscreen warnings; its SPISI/SPICLK/SPISO3 order is monotonic
+relative to U1. V845's direct three-net probe was rejected with 9 native
+findings and 42 expected incomplete connections. The orientation remains a
+candidate routing basis.
 V826 tested B.Cu-separated PEDET/CLKREQ_N approaches on V777 and was rejected
 with 6 native violations and 33 expected incomplete connections. V827 moved
 the source transitions laterally and was rejected with 9 violations and 33

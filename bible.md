@@ -8499,3 +8499,9 @@ incomplete connections; its outer corridor is clear but the source track
 contacts U1 pad 15. V841 changed the dogbone direction and was rejected with
 4 violations. V840 remains the better candidate; PERST_N source escape stays
 open.
+2026-09-09: V843 co-moved the crystal/RSET support away from the rotated U2
+field and passed native DRC with 0 violations and 45 expected incomplete
+connections. V844's 270-degree orientation had no electrical DRC violations
+and only 3 silkscreen warnings; SPISI/SPICLK/SPISO3 follow the U1 source
+order. V845's direct three-net probe was rejected with 9 native findings and
+42 expected incomplete connections. The 270-degree basis remains a candidate.
