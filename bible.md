@@ -9046,6 +9046,10 @@ authority remains valid.
 The relocated 5V corridor crossed retained SPI B.Cu lanes and the U1.25
 departure still violated SPICS clearance. Accepted rail authority remains
 unchanged; U1.25 requires broader coordinated QFN fanout allocation.
+2026-09-09: Rejected V1082-V1084 local RTL_1V1 fanout trials. V1082 collided
+with the retained 5V via field; V1083/V1084 U1.55 left-perimeter escapes
+conflicted with preserved 3V3/GND return geometry. Independent perimeter
+nudges are exhausted for this field; coordinated QFN regeneration is required.
 2026-09-09: V1065 rejected the direct U1.52 RTL_3V3 handoff because its B.Cu
 perimeter crossed the preserved GND return diagonal. V1066 changed the local
 corridor to join the existing V1064 transition field. Native DRC has only the

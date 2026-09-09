@@ -416,6 +416,11 @@ SPICS, RTL_5V, DEVSLP, no-net-pad, and adjacent-via conflicts across the
 variants. The failures characterize an exhausted independent-via class and
 require coordinated QFN fanout allocation; they do not reject the RTL_1V1
 rail or the Path-B architecture.
+V1082-V1084 are rejected local fanout evidence. V1082 collided with the
+retained 5V via field; V1083/V1084 tested the U1.55 left perimeter and found
+3V3/GND return conflicts. The independent perimeter transition class is
+exhausted for these pins. Rail authority and architecture remain valid;
+remaining QFN support requires coordinated regeneration.
 
 V1081 is rejected coupled-fanout evidence. Relocating the 5V escape outward
 caused crossings with retained SPI B.Cu lanes, while the U1.25 1V1 departure

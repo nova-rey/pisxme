@@ -2029,6 +2029,13 @@ lanes and the U1.25 departure still violated SPICS clearance. This is a
 coupled QFN fanout implementation failure; the accepted 3V3/5V-source/1V1
 fields remain unchanged and U1.25 remains open.
 
+V1082 is rejected: its U1.25 upper-edge transition collided with the retained
+5V via field. V1083/V1084 tested U1.55 left-perimeter RTL_1V1 escapes; V1083
+shorted the retained 3V3 via/track field and V1084 crossed the preserved GND
+return diagonal. These results further bound the independent perimeter class.
+The accepted rail fields remain intact; the remaining QFN 1V1 pins require a
+co-authored support-field regeneration.
+
 V1073 is rejected: the lower-edge RTL_1V1 descent crossed the retained
 RTL_3V3 perimeter. V1074 is also rejected because its upper return crossed
 the existing RTL_3V3 source via field. V1075 routes U1.16 through a central
