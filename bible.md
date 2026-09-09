@@ -7706,3 +7706,9 @@ bridge-side and selector-side nets and passes all 12 native SATA endpoint
 assertions, but the reordered coupling row creates real storage-field
 shorts/clearances (612 DRC violations, 499 unconnected items). Rejected as
 route implementation evidence; VCCK_LOCAL_V1 remains the no-short basis.
+
+2026-09-08: Corrected the SATA A* obstacle model to respect SMD pad layer
+sets, then generated PHASE24_STORAGE_SATA_ASTAR_V1. All 12 SATA native
+endpoint assertions passed, but native DRC found 822 violations with real
+SATA-to-power/support shorts and crossings. Rejected; the layer-aware search
+author remains reusable and no copper was promoted.

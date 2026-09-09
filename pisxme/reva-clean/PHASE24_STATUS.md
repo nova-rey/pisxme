@@ -11,6 +11,14 @@ reports 612 DRC violations / 499 unconnected items. Its raw PCB and DRC
 receipt are retained. It does not replace the active no-short
 `PHASE24_STORAGE_VCCK_LOCAL_V1` basis.
 
+The layer-aware native-pad A* SATA trial
+`PHASE24_STORAGE_SATA_ASTAR_V1.kicad_pcb` is also rejected route
+implementation evidence. It passes all 12 native SATA endpoint assertions
+and corrects the search model to block pads only on their saved copper layers,
+but native DRC reports 822 violations with real SATA-to-power/support shorts
+and crossings. No A* copper was promoted; its raw PCB, report, and author are
+retained for future routing work.
+
 The latest integrated storage routing candidate is
 `PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`, derived from the corrected
 source-authoritative workbench with M.2 launch V6, selector-side SATA escape

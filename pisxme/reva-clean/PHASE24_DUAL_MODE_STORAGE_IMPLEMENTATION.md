@@ -346,6 +346,13 @@ SATA endpoint assertions but introduces real same-field shorts/clearances
 preserved; the active no-short basis remains
 `PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`.
 
+The layer-aware native-pad A* trial
+`PHASE24_STORAGE_SATA_ASTAR_V1.kicad_pcb` is rejected route implementation
+evidence. It passes all 12 SATA endpoint assertions, but native DRC reports
+822 violations including real SATA-to-power/support shorts and crossings.
+The corrected pad-layer obstacle model and raw artifacts are preserved; no
+A* copper was promoted.
+
 1. The latest integrated candidate is
    `PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`. It combines the corrected CM5
    USB3 right-side launch with the selector-side SATA V4, M.2 V6, native mode
