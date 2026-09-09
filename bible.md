@@ -8138,6 +8138,11 @@ this rejects that route allocation, not the QFN package or Path-B
 architecture. Reconciled the qualification/comparison documents to keep the
 strict-QFN DFM gate OPEN and Path B active, with no manufacturing-rule
 relaxation or production-CAD change.
+
+2026-09-09: Added the V666 negative control. Removing its required RTL_3V3
+escape trace from a disposable copy produced one native unconnected item;
+the clean package discriminator therefore depends on saved physical copper,
+not expected connectivity or synthetic graph edges.
 2026-09-09: V666 cleanly discriminated the RTL9210B QFN DFM claim. Using the
 audited real footprint, separated U1.39/U1.40 F.Cu exits, unchanged 0.20-mm
 rules, and no via-in-pad, native KiCad DRC reported 0 violations, 0

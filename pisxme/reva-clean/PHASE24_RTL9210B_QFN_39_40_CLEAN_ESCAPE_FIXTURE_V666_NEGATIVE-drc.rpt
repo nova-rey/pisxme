@@ -1,0 +1,22 @@
+** Drc report for PHASE24_RTL9210B_QFN_39_40_CLEAN_ESCAPE_FIXTURE_V666_NEGATIVE.kicad_pcb **
+** Created on 2026-09-09T01:57:39 **
+** Report includes: Errors, Warnings **
+
+** Found 0 DRC violations **
+
+** Found 1 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(80.0000 mm, 68.4000 mm): Pad 1 [RTL_3V3] of R2 on F.Cu
+    @(94.0500 mm, 68.4000 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

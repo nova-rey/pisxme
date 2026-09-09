@@ -16,6 +16,10 @@ Native KiCad 10.0.5 DRC on
 - 0 unconnected items;
 - 0 footprint errors.
 
+Negative control `PHASE24_RTL9210B_QFN_39_40_CLEAN_ESCAPE_FIXTURE_V666_NEGATIVE.kicad_pcb`
+removes the RTL_3V3 escape trace. Native KiCad then reports 1 unconnected
+item, proving the result is sensitive to the required physical copper.
+
 This closes the narrow claim that U1.39/U1.40 cannot be escaped under the
 ordinary-via contract. It does not close the complete RTL9210B source-field
 allocation: the integrated candidate must still co-author the remaining QFN
