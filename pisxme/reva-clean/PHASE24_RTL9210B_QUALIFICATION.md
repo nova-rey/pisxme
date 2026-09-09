@@ -1073,3 +1073,8 @@ but the isolated GND-zone warning and 40 incomplete items persist. This
 rejects the hypothesis that the warning is caused solely by those deleted
 segments. Preserve V1029 as negative evidence; broader zone attachment still
 requires investigation.
+The parent/child DRC differential shows that the broad GND-zone↔U1 pad-66
+incomplete relationship is inherited from V1019. The isolated-copper warning
+appears only in V1027/V1029 after local B.Cu return replacement. This points
+to a lost plane-attachment topology, not a missing arbitrary via; preserve
+the parent attachment structure in the next coauthor.

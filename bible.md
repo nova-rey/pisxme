@@ -8935,3 +8935,8 @@ GND attachment next.
 segments removed by the coauthor scrub. Native DRC retained one isolated
 GND-zone warning and 40 incomplete items, rejecting that narrow cause.
 Preserve V1029 as controlled negative evidence pending broader zone analysis.
+2026-09-09: Parent/child DRC comparison showed the broad GND-zone to U1
+pad-66 incomplete relationship is inherited, while isolated copper appears
+only after local B.Cu return replacement in V1027/V1029. The next coauthor
+must preserve parent plane-attachment topology; arbitrary stitching is not a
+valid fix.

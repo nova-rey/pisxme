@@ -9392,3 +9392,9 @@ V1026 broad scrub. Native DRC still reports one isolated GND-zone warning and
 40 incomplete items, so the narrow deleted-F.Cu-attachment hypothesis is
 rejected. V1029 remains controlled negative evidence; the warning is tied to
 broader zone connectivity/attachment state.
+Parent/child DRC comparison adds an important discriminator: V1019 already
+contains the broad GND-zone↔U1 pad-66 incomplete relationship, but does not
+report isolated copper. V1027/V1029 introduce the isolated-zone warning only
+after the local B.Cu return geometry is replaced. The next repair must
+preserve the parent's plane-attachment topology; adding arbitrary same-net
+copper or a remote stitching via is insufficient.
