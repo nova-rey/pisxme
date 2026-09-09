@@ -8557,6 +8557,11 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+2026-09-09: V863 tested a combined RTL_3V3 bridge/support collector and was
+rejected by an In2 crossing against RTL_5V plus U2/SPI clearance conflicts.
+V864 moved the collector outboard but was rejected by three real F.Cu/In2
+crossings against PEDET, CLKREQ_N, and RTL_5V. These are rail-route allocation
+failures; the next experiment isolates U2.8 before rebuilding a collector.
 2026-09-09: V861 added U1.33 to the V860 RTL_5V network but was rejected for
 a dangling In2 track caused by an incorrect junction coordinate. V862
 corrected the join to the actual V860 transition. Native DRC passed with 0
