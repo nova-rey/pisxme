@@ -7729,6 +7729,11 @@ PHASE24_STORAGE_VCCK_LOCAL_V1 basis. The saved-board baseline reproduces 669
 violations and 499 unconnected items with zero shorting_items; this fresh
 receipt does not waive any open gate.
 
+2026-09-08: Tested 51 ordinary offset J7 ground-return vias. The probe was
+rejected because J7 pads are native /CORE_CM5/POWER_GND while the plane is
+POWER_GND; PCB-only flattened-net vias did not reduce the 499 opens and added
+DRC findings. No net merge or copper was promoted.
+
 2026-09-08: Tested endpoint-safe layer-aware SATA search V2 with existing
 selector-side copper retained. Native SATA passed 12/12 and storage-local
 true shorts were avoided, but a U7 source-field crossing remained; native

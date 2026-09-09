@@ -338,6 +338,11 @@ path is restored to the FULL7 geometry.
 
 ## CURRENT OPEN GATES
 
+The J7 ground-return-via probe is rejected: its 51 vias used flattened
+`POWER_GND` on pads owned by `/CORE_CM5/POWER_GND`, so it did not provide a
+valid native plane connection and introduced additional DRC findings. No
+PCB-only ground-net merge was made.
+
 The endpoint-safe layer-aware SATA search with selector-side copper retained
 passes all 12 native SATA endpoint assertions, but leaves a U7 source-field
 crossing and reports 676 native DRC violations / 499 unconnected items,

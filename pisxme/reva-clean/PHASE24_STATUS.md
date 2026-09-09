@@ -2,6 +2,13 @@
 
 ## CURRENT OPEN GATES — 2026-09-08
 
+The J7 ground-return-via probe `PHASE24_J7_GROUND_RETURN_VIAS_V1.kicad_pcb`
+is rejected. It added 51 ordinary offset vias, but J7 lands use native
+`/CORE_CM5/POWER_GND` while the existing planes use `POWER_GND`; PCB-only
+flattened-net vias were not a valid authority-preserving repair. Native DRC
+retained 499 unconnected items and added clearance/short findings. No ground
+net merge or copper was promoted.
+
 The endpoint-safe layer-aware search with selector-side copper retained,
 `PHASE24_STORAGE_SATA_SAFE_EXITS_V2.kicad_pcb`, passes all 12 native SATA
 endpoint assertions and avoids storage-local true shorts. It still has a U7
