@@ -42,6 +42,12 @@ rejected route-implementation evidence. After the planar V14 and layer-
 transition V15 failures, further isolated TXN nudges are stopped; the next
 class must regenerate the complete native-pad-aware lower U11 field.
 
+V16 tested a wider planar TXN dogleg. It removed the pad-23 clearance finding
+and retained focused USB3 connectivity, but native DRC still found a 0.0925 mm
+TXP/TXN source-field clearance violation. V16 is rejected route-implementation
+evidence; V13 remains the retained basis pending coordinated lower-field
+regeneration.
+
 The first co-authored source-field trials are retained as route evidence. V3
 kept USB3/SATA/mode/JMS583/parity focused gates passing and introduced no
 shorting class, but native DRC identified two new local USB_TXP1/USB_TXN1

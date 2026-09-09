@@ -73,6 +73,10 @@ raised native DRC to 746. Isolated TXN nudges are exhausted for now; the next
 route class must co-author the complete lower U11 field and its adjacent
 AVDDL/AVDD33/support escapes.
 
+V16 is superseded route evidence. Its wider planar TXN dogleg removes the
+pad-23 defect but leaves a 0.0925 mm native TXP/TXN clearance violation. It
+retains focused endpoint connectivity but is not production authority.
+
 V10 is superseded route evidence: its local P-leg meander improves TX skew to
 0.259 mm, but creates two same-layer USB TX pair self-crossings. The next
 pair-balance attempt must remain layer-separated or shorten the opposite leg.
