@@ -9502,3 +9502,13 @@ vertical RTL_3V3 spine leaves U1.40 touching the 3V3 via field; moving the
 3V3 remote detour above the accepted 1V1 field introduces two GND clearances.
 The next credible class is full local QFN support-field regeneration,
 including placement/transition allocation, not another remote rail jog.
+
+V1064 attaches RTL9210B U1.20 (RTL_3V3) to the established rotated-U2/C3
+3V3 island using an inward F.Cu-to-B.Cu transition before the SPI escape.
+The first outboard transition was rejected for SPICLK crossing/shorting; the
+final inward transition has no shorting, clearance, or crossing errors in
+native KiCad DRC and leaves only the inherited RTL_3V3 dangling warning.
+The saved-board native audit confirms U1.20/U1.34/U1.39/U2.3/U2.8/R2.2/R3.2/
+C3.1 are one physical RTL_3V3 component, and removing the U1.20 source trace
+fails the audit as required. V1064 is retained as the current U1.20 basis;
+U1.52 and the remaining RTL9210B support endpoints remain open.

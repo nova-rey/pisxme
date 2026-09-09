@@ -1169,3 +1169,11 @@ V1034 is rejected: the parent-GND-preserving 3V3 topology still contacts the
 U1.40 transition, and its upper remote detour crosses the parent GND
 diagonal. This route class is exhausted. Complete local QFN support-field
 regeneration is required next.
+
+V1064 is the retained U1.20 RTL_3V3 attachment. Its initial outboard via was
+rejected by native DRC for SPICLK crossing/shorting. Moving the transition
+inward before the SPI escape yields one inherited dangling warning and no
+native shorting, clearance, or track-crossing errors. The saved-board audit
+proves the complete currently authored 3V3 endpoint group, with a source-trace
+removal negative control. This is a local supply-field primitive, not Path-B
+closure; U1.52 and remaining support/power/control gates are still open.

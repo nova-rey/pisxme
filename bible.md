@@ -9007,3 +9007,10 @@ attached R2.2/R3.2 with local ordinary transitions. Native DRC retained only
 one inherited dangling warning; saved-board connectivity and the source-trace
 negative control pass for the complete 3V3 endpoint group. V1063 is the
 current supply basis while remaining RTL9210B support stays open.
+2026-09-09: RTL9210B V1064 attached U1.20 RTL_3V3 to the retained rotated-U2/C3
+3V3 island. The first outboard transition was rejected for SPICLK crossing and
+shorting; the inward transition before the SPI escape passed native DRC with
+only the inherited dangling warning. Saved-board connectivity proves the
+U1.20/U1.34/U1.39/U2.3/U2.8/R2.2/R3.2/C3.1 group, and the U1.20 source-trace
+negative control fails as required. V1064 is retained; remaining RTL9210B
+support endpoints and full Path-B validation remain open.
