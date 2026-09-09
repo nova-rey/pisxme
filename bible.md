@@ -7588,3 +7588,9 @@ zero mismatches. Rebuilt USB3, SATA, and JMS583 support on that placement; all
 focused endpoint audits and negative control pass. Promoted the resulting
 681-violation workbench as the active routing basis; prior 669-count copper
 remains historical because its PCB ownership was stale.
+
+2026-09-08: Tested the first native-pad-aware integrated U13-to-J3 launch
+replacement. V1/V2 reduced aggregate DRC but introduced true M.2 socket-ground
+collisions and B.Cu TX pair/via conflicts. Both are rejected route evidence;
+the source-authoritative support workbench remains active and no launch
+copper was promoted.

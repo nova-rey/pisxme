@@ -37,6 +37,14 @@ The earlier 669-count workbench is superseded as a live basis because its
 J3.69 and U12.9 PCB ownership predated the corrected embedded symbol
 definitions.
 
+The first native-pad-aware replacement of the four U13-to-J3 lane-0 launches
+was tested as `PHASE24_STORAGE_M2_LAUNCH_V1/V2`. V2 reduced the total DRC
+count to 647 but introduced true socket-ground collisions, a pair-to-pair
+short at the B.Cu TX escapes, and adjacent support-field conflicts. Both
+variants are rejected route implementations. The corrected
+`PHASE24_STORAGE_MODEAUTH_USB3_ALIGNED_SATA_SUPPORT_ZONES_V1` workbench
+remains the active basis; no M.2 launch copper was promoted.
+
 The integrated REXT repair discriminator is complete as a bounded experiment.
 V1's ordinary-via escape removed the original U11.40/U11.39 short but
 introduced new QFN-ground/power clearances; V2's no-via perimeter escape

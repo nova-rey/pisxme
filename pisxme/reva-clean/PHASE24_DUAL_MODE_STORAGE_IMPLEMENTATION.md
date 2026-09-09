@@ -20,6 +20,12 @@ SATA, and complete JMS583 support endpoint audits with negative control.
 Native DRC remains open at 681 violations / 499 unconnected items. This is
 active routing workbench evidence, not closure.
 
+The first native-pad-aware integrated M.2 launch replacement was tested in
+V1/V2. Although V2 lowered the aggregate DRC count, it created true socket
+ground collisions and TX pair/via conflicts, so both are rejected route
+implementations. The corrected source-authoritative support workbench remains
+the active basis; the launch copper was not promoted.
+
 The aligned USB3 promotion now passes the complete ten-net native audit, and
 the subsequent V3 SATA integration passes all 12 SATA endpoints. V3 remains
 disposable because its regenerated parent lacks the earlier zone-backed
