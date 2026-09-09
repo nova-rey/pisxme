@@ -13,10 +13,33 @@ def pos(p):
  q=p.GetPosition(); return pcbnew.ToMM(q.x),pcbnew.ToMM(q.y)
 def pad(b,r,n): return b.FindFootprintByReference(r).FindPadByNumber(str(n))
 def net(b,n):
- for x in (n,'/STORAGE/'+n):
+ # The regenerated storage pads retain KiCad's native hierarchical net
+ # objects. Prefer that object so authored tracks join the saved native graph;
+ # falling back to the flattened name is only for standalone fixtures.
+ for x in ('/STORAGE/'+n,n):
   q=b.FindNet(x)
   if q:return q
  raise RuntimeError('missing net '+n)
+def canonicalize_sata_pads(b):
+    """Make same-name storage pads share KiCad's native net object.
+
+    Generated support footprints may carry flattened names while donor U7
+    pads retain `/STORAGE/` names.  Display-name equality is insufficient for
+    native connectivity, so route-authoring resolves the existing
+    hierarchical object and reuses it; it does not invent or merge nets.
+    """
+    names=set()
+    for f in b.GetFootprints():
+        for p in f.Pads():
+            name=p.GetNetname().rsplit('/',1)[-1]
+            if name.startswith(('BRIDGE_SATA_','TUSB_SATA_','M2_SATA_')):
+                names.add(name)
+    for name in names:
+        n=net(b,name)
+        for f in b.GetFootprints():
+            for p in f.Pads():
+                if p.GetNetname().rsplit('/',1)[-1] == name:
+                    p.SetNet(n); p.SetNetCode(n.GetNetCode())
 def seg(b,n,a,z,l):
  t=pcbnew.PCB_TRACK(b);t.SetStart(V(*a));t.SetEnd(V(*z));t.SetLayer(l);t.SetWidth(W);t.SetNet(n);t.SetNetCode(n.GetNetCode());b.Add(t)
 def path(b,n,pts,l):
@@ -26,6 +49,7 @@ def via(b,n,p):
 def pinpos(b,r,n): return pos(pad(b,r,n))
 
 b=pcbnew.LoadBoard(str(BASE))
+canonicalize_sata_pads(b)
 if os.environ.get('PISXME_SELECTOR_MINIMAL')=='1':
  keep={'U7','U13','J3','C30','C31','C32','C33'}
  for t in list(b.GetTracks()): b.RemoveNative(t)
@@ -82,7 +106,10 @@ apaths={
  'RXP':('7','43',F,[(178.5,149.2),(177.3,150.8),(176.2,152.0),(196,158),(214,157)]),}
 for k,(up,jp,l,pts) in apaths.items():
  n=net(b, {'TXP':'M2_SATA_A_P_PCIE_TXP0','TXN':'M2_SATA_A_N_PCIE_TXN0','RXN':'M2_SATA_B_P_PCIE_RXN0','RXP':'M2_SATA_B_N_PCIE_RXP0'}[k])
+ src=pinpos(b,'U13',up); dst=pinpos(b,'J3',jp)
  if l==B:
-  path(b,n,pts[:3],F);via(b,n,pts[2]);path(b,n,pts[2:],B);via(b,n,pts[-1]);path(b,n,[pts[-1],pinpos(b,'J3',jp)],F)
- else:path(b,n,[pinpos(b,'U13',up)]+pts[1:]+[pinpos(b,'J3',jp)],F)
+  # The original trial assumed a fixed U13 position.  Anchor the escape to
+  # the native transformed pad, then transition outside the package field.
+  path(b,n,[src]+pts[:3],F);via(b,n,pts[2]);path(b,n,pts[2:],B);via(b,n,pts[-1]);path(b,n,[pts[-1],dst],F)
+ else:path(b,n,[src]+pts+[dst],F)
 b.BuildListOfNets();b.Save(str(OUT));print(OUT)

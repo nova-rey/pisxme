@@ -1,5 +1,20 @@
 # Phase 24 acreage validation status
 
+## CURRENT OPEN GATES — 2026-09-08
+
+The live U13 source-authority regression is corrected. U13 pins 6/7 now own
+`M2_SATA_B_P_PCIE_RXN0` / `M2_SATA_B_N_PCIE_RXP0`, matching J3 contacts 41/43;
+the earlier lane-1 ownership was a superseded generator/source defect, not a
+current SATA requirement. Fresh native export and regenerated PCB pad parity
+report zero expected-pad mismatches. The SATA corridor author was also
+corrected to anchor every selector escape at the saved native U13/J3 pads.
+The disposable `PHASE24_DUAL_MODE_STORAGE_U13FIX_SATA_V2` candidate passes all
+12 native SATA endpoint assertions. Its native DRC remains open at 734
+violations / 499 unconnected items, so it is routing evidence and not a
+Phase 24 closure candidate. Remaining gates include complete support-copper
+integration, mode-aware switched connectivity, native ERC/DRC cleanup, and
+full-board regression.
+
 ## AUTHORITATIVE CURRENT STATE — 2026-09-08
 
 The JMS583 support-label authoring path was corrected and applied to the live
@@ -186,12 +201,11 @@ Native DRC reports 877 violations / 499 inherited unconnected items, with no
 new VCCK short or crossing relative to the AVDD33 parent. Other support rails,
 mode control, storage routing, and full Phase 24 gates remain open.
 
-The native inventory `phase24_jms583_current_support_inventory.py` confirms
-that REXT, XIN, XOUT, RESET_N, AVDD33, and VCCK are connected on this basis;
-AVDDL, VCCO, VDDREG_5V, and LXO remain genuinely open with zero authored
-tracks. The first AVDDL all-F.Cu and east-via corridors are rejected: native
-DRC found shorts into existing USB3/PCIe geometry. These are
-route-implementation results only.
+The native inventory confirms REXT, XIN, XOUT, RESET_N, AVDD33, and VCCK are
+connected on this basis. The saved AVDDL/VCCO/VDDREG_5V/LXO support receipt
+and local-zone candidates now cover the remaining rail endpoints; their first
+failed corridors remain route-implementation evidence only. The support
+primitive is not yet promoted as integrated production copper.
 
 The VCCO path is now promoted through the local F.Cu power-copper candidate
 `PHASE24_DUAL_MODE_STORAGE_FULL7_VCCO_rectangle_zone.kicad_pcb`. Native U11.6

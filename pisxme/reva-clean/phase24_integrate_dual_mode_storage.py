@@ -23,8 +23,11 @@ M2={1:'M2_CONFIG3',2:'M2_3V3',3:'POWER_GND',4:'M2_3V3',5:'M2_PCIE_RXN3',6:'JMS_V
 USB.update({1:'JMS_VDDREG_5V',2:'JMS_VCCK',3:'JMS_SPI_SO_DNP',
             4:'JMS_SPI_SCK_DNP',5:'JMS_SPI_SI_DNP',36:'JMS_AVDDL',
             40:'JMS_AVDDL'})
-MUX.update({6:'M2_PCIE_TXP1',7:'M2_PCIE_TXN1',8:'JMS_GPIO4_NC',
-            40:'JMS_AVDDL'})
+# U13 pins 6/7 are the selector's lane-0 RX side and must own the shared
+# M.2 SATA-B / PCIe-RX0 contacts.  Do not overwrite them with the unused
+# lane-1 labels: that late override previously orphaned J3.41/J3.43 in the
+# native source netlist and made a PCB-only SATA escape impossible.
+MUX.update({8:'JMS_GPIO4_NC', 40:'JMS_AVDDL'})
 JMS[60] = 'POWER_GND'  # TME is strapped low per JMS583 Rev 2.1
 JMS[65] = 'POWER_GND'  # exposed QFN64 thermal pad; package pad, not a signal pin
 

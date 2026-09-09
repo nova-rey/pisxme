@@ -7494,7 +7494,17 @@ and full Phase 24 closure remain open.
 
 2026-09-08: Reran the isolated RTL9210B Path-B evidence suite. Authority,
 corroborating support, M-key mapping, native netlist, WIP-conflict, and PDF
-pin audits passed; both native-netlist and PDF negative controls failed as
-intended. Path B remains isolated with support-field, provisioning, firmware
-provenance, and hardware validation gates open; Path A and production CAD are
-unchanged.
+ pin audits passed; both native-netlist and PDF negative controls failed as
+ intended. Path B remains isolated with support-field, provisioning, firmware
+ provenance, and hardware validation gates open; Path A and production CAD are
+ unchanged.
+
+2026-09-08: Corrected a live Phase 24 U13 source-authority regression. The
+HD3SS3412 selector pins 6/7 had been overwritten with unused M.2 PCIe lane-1
+labels, orphaning the shared SATA lane-0 RX contacts. The authoring map and
+live STORAGE instance labels now match the M.2 authority; native export and
+PCB pad parity pass with zero mismatches. The SATA corridor author was also
+made native-pad anchored instead of coordinate-frozen. Disposable
+PHASE24_DUAL_MODE_STORAGE_U13FIX_SATA_V2 passes all 12 SATA endpoint checks
+and its trace-removal negative control; native DRC remains open at 734
+violations / 499 unconnected items, so Phase 24 is not closed.

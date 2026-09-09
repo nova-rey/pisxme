@@ -1,5 +1,17 @@
 # Phase 24 dual-mode storage implementation
 
+## CURRENT STATE — authoritative now (2026-09-08)
+
+The live schematic had a real U13 lane-ownership regression: pins 6/7 were
+overridden to M.2 PCIe lane 1, leaving the shared lane-0 SATA RX contacts
+unowned. The authoring map and live instance labels are corrected to
+`M2_SATA_B_P_PCIE_RXN0` / `M2_SATA_B_N_PCIE_RXP0`; fresh native export and
+schematic-to-PCB pad parity both pass. The SATA route author now resolves
+native transformed pad coordinates rather than relying on historical U13/J3
+coordinates. The corrected disposable V2 corridor passes all 12 SATA
+endpoint assertions. Native DRC is still open at 734 violations / 499
+unconnected items, and the candidate is not production authority.
+
 Status: `IN PROGRESS — support circuitry and mode-control authority are
 authored; native copper, mode-aware validation, and release checks remain
 open` (2026-09-06, live checkpoint).
@@ -36,10 +48,11 @@ DRC is 877 violations / 499 inherited unconnected items, with no new VCCK
 short or crossing relative to the AVDD33 parent. Other support rails,
 mode-control, storage routing, and full-board gates remain open.
 
-Native support inventory confirms AVDDL, VCCO, VDDREG_5V, and LXO remain open;
-REXT, crystal, reset, AVDD33, and VCCK are connected on the current basis.
-AVDDL corridor trials are retained as rejected route evidence because native
-DRC found shorts into existing USB3/PCIe copper.
+The saved support receipt and local-zone candidates cover AVDDL, VCCO,
+VDDREG_5V, and LXO; REXT, crystal, reset, AVDD33, and VCCK are connected on
+the current basis. The first AVDDL corridors are retained as rejected route
+evidence because native DRC found shorts into existing USB3/PCIe copper. The
+support primitive is not yet promoted as integrated production copper.
 
 VCCO is promoted on `PHASE24_DUAL_MODE_STORAGE_FULL7_VCCO_rectangle_zone`
 using a local F.Cu power-copper zone. Native U11.6-to-C81.1 connectivity and
