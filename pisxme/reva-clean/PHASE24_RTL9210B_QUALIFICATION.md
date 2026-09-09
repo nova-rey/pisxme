@@ -1284,3 +1284,8 @@ These are route-implementation failures, not RTL9210B authority failures.
 V1092 remains the retained clean rail/RSET basis. CURRENT OPEN GATE:
 coordinated regeneration of the QFN rail, RSET, and crystal fanout together;
 no production CAD has been changed and no Path-B closure is claimed.
+V1113/V1114 are the first coordinated QFN fanout candidates. They co-authored
+U1.52 RTL_3V3 and U1.55 RTL_1V1 departures with XTAL_IN. V1113 left two USB
+pad-hole violations and dangling orphan stubs; V1114 reduced this to the
+U1.44 no-net pad clearance/hole pair plus inherited dangling warnings.
+V1114 is not promoted; V1115 will move only the 3V3 transition farther out.

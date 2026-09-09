@@ -9105,3 +9105,7 @@ each for concrete QFN pad-field, retained rail/return, via-clearance, or
 crossing violations. V1092 remains the retained clean rail/RSET basis; the
 current open gate is coordinated regeneration of the QFN rail, RSET, and
 crystal fanout. No production CAD was changed.
+2026-09-09: V1113/V1114 co-authored the RTL9210B U1.52 3V3 and U1.55 1V1
+departures with XTAL_IN. V1114 reduced the new native DRC to the U1.44 no-net
+pad clearance/hole pair plus inherited dangling warnings. It is not promoted;
+the next trial moves only the 3V3 transition beyond that pad-hole field.
