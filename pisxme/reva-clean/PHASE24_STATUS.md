@@ -65,6 +65,12 @@ transition conflicts with the CLKREQ_N launch or the retained SPICLK via.
 Both are rejected route implementations; the next experiment must co-author
 the three U1-side control departures. PERST_N remains OPEN.
 
+V791/V792 were co-authored U1-side attempts. V791 retained a CLKREQ_N/PEDET
+crossing and PERST/SPICLK clearance failure. V792 moved CLKREQ_N downward and
+PERST into the center gap, but native DRC found new PEDET/CLKREQ/ISOLATEB
+contacts and endpoint-field clearances. Both are rejected. The outer PERST
+corridor remains usable; only the QFN departure fanout is unresolved.
+
 The earlier V702/V718/V735 checkpoints and V746/V747/V751/V752 failures are
 historical disposable evidence. V753 proved the adjacent SPICLK/SPISI
 dogbone class; V754 proved the complete source fan-out; V755/V757/V758/V759

@@ -8388,3 +8388,8 @@ remaining RTL9210B and integrated Path-B gates stay open.
 route was clear, but its U1 transition collided with CLKREQ_N or SPICLK.
 Both are preserved as rejected route evidence; the next class co-authors the
 three U1-side control departures. PERST_N remains open.
+
+2026-09-09: V791/V792 co-authored the RTL9210B U1-side PERST_N and CLKREQ_N
+departures. Both were rejected by native DRC for QFN-field control/SPI
+clearances and contacts. The outer PERST corridor remains usable; the QFN
+fanout is the unresolved local route class.

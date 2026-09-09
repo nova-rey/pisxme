@@ -50,6 +50,12 @@ B.Cu corridor to J1.50 is not the limiting geometry; the source transition
 collides with the accepted CLKREQ_N launch or the retained SPICLK via. The
 next bounded class is a co-authored U1-side PERST_N/CLKREQ_N/SPI escape.
 
+V791/V792 are rejected co-authored U1-side trials. V791 retained control/SPI
+clearances; V792 added PEDET, CLKREQ_N, and ISOLATEB contacts near the QFN.
+The native reports preserve the result: the outer PERST_N corridor is not the
+limiting geometry, but the QFN departure fanout still needs a dedicated
+allocation.
+
 V748 is the current positive placement basis for the remaining RTL9210B SPI
 allocation. Starting from the native-clean V730 U1-at-90-degree basis, U2 was
 rotated 90 degrees and placed with its SPI endpoint column at x=105 mm. The
