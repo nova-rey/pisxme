@@ -82,6 +82,12 @@ the inherited RTL_3V3 dangling warning. Its saved-board audit passes both
 XTAL_IN and XTAL_OUT endpoint connectivity, and both source-trace negative
 controls fail as required. V1160 is the current accepted crystal pair/source
 field primitive; full Path-B support integration remains OPEN.
+V1161 attempted a direct U1.55-to-C4.1 1V1 collector and was rejected for
+source GND/exposed-pad clearance and remote 5V/3V3 corridor crossings. V1162
+moved the source transition west and the collector outboard; native DRC still
+found crystal/rail crossings and a C3/C4 endpoint-field collision. Both are
+route-implementation evidence only. The next 1V1 trial must allocate the
+QFN source escape and remote C4 handoff as separate corridors.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is V1123
 plus the accepted V1160 crystal source-field primitive. Full QFN rail,

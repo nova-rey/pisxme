@@ -9220,3 +9220,8 @@ primitive; full RTL9210B support remains open.
 the live V1160 state. Historical V1139/V1119 gate wording remains below only
 as archaeology; current open gates are full RTL9210B rail/control/REFCLK and
 integrated support closure. Raw receipts were not rewritten.
+2026-09-09: V1161/V1162 tested U1.55 RTL_1V1 attachment to native C4.1.
+V1161 collided with the exposed-pad/remote power field; V1162 moved both
+transitions but still crossed crystal/rail geometry and the C3/C4 endpoint
+field. Rejected route evidence; the next trial separates the QFN source
+escape from the remote collector.
