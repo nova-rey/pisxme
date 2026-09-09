@@ -10199,3 +10199,9 @@ all three source-removal negative controls pass, but native DRC rejects the
 combined transplant with 29 violations, including XTAL_OUT/RTL_1V1 shorts and
 XTAL_IN crossings into the live LANE0_RXN/RTL_1V1 fields. This is rejected
 route-implementation evidence; the V1279 lineage remains authoritative.
+V1301 tested a source-local RSET reallocation on V1279. Its saved-board
+endpoint and trace-removal negative-control audit pass, but native DRC rejects
+20 violations: the new B.Cu RSET handoff crosses three live RTL_1V1 B.Cu
+tracks in the source field, in addition to inherited warnings. This is
+rejected coupled allocation evidence; the accepted lane/rail lineage remains
+unchanged.

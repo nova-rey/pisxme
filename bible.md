@@ -9541,3 +9541,7 @@ V1279 four-lane basis. Saved-board endpoints and negative controls passed, but
 native DRC rejected 29 integrated violations, including XTAL_OUT/RTL_1V1
 shorts and XTAL_IN crossings into live RXN/1V1 fields. The experiment is
 preserved as route-implementation evidence and V1279 remains authoritative.
+2026-09-09 — V1301 RSET source reallocation passed saved-board endpoint and
+negative-control checks but native DRC rejected 20 violations, including three
+crossings between the new B.Cu RSET handoff and live RTL_1V1 tracks. This
+confirms a coupled source-field allocation issue; raw evidence is preserved.
