@@ -6062,6 +6062,13 @@ controls pass, with zero native signal shorting/crossing classes. Path A and
 production CAD remain unchanged; CLKREQ/R3.1 and all remaining Path-B gates
 stay open.
 
+2026-09-08 — A coherent STORAGE_SEL reroute passed the native 4/4 mode graph
+but was rejected after native reload exposed inherited CM5 RX and SATA/USB3
+short classes. The selector corridor itself was not the reported short;
+single-net edits on inherited copper are therefore not a reliable closure
+method. Future repair must regenerate neighboring source-owned corridors
+together and re-run native post-save DRC.
+
 2026-09-08 — A bounded storage-only F.Cu POWER_GND zone probe reduced native
 unconnected findings from 400 to 386 with zero shorts. It is preserved as
 evidence only pending reference-plane, impedance, clearance, and DFM review;

@@ -55,6 +55,14 @@ audits also pass. Native DRC reports 732 violations / 400 unconnected items
 with zero `shorting_items`. It is not closure: remaining storage support
 opens, clearances, crossings, and full-board power/ground connectivity remain.
 
+The disposable `PHASE24_STORAGE_J8_V5_STORAGE_SEL_V1` reroute passes the
+4/4 native mode-control graph but is rejected: native reload exposes three
+inherited short classes in CM5 RX and SATA/USB3 copper, while no reported
+short is the intended selector corridor. This confirms that modifying a
+single net on the inherited board is not a reliable closure method. The next
+repair must regenerate the affected source-owned selector and neighboring
+high-speed corridors together, with native post-save DRC as the authority.
+
 The bounded `PHASE24_STORAGE_J8_V5_GROUND_ZONE_V1` probe adds a storage-only
 F.Cu `POWER_GND` zone and reduces native unconnected findings to 386 from
 400, with zero native shorts. It is retained as a ground-access experiment,
