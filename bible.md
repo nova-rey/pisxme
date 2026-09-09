@@ -7606,3 +7606,9 @@ connectivity; the repaired author adds an actual capacitor-side through-via
 before the B.Cu corridor. Selector escape V3 and V4 pass all 12 saved-board
 SATA endpoint assertions. V4 still has inherited USB3/support shorts and
 crossings, so no Phase 24 closure or copper promotion was claimed.
+
+2026-09-08: A further selector-side V5 corridor trial was rejected after
+native SATA endpoint PASS because its multi-bend B.Cu allocation introduced
+additional same-layer crossings and via/track conflicts. It is retained as
+negative routing evidence; the V4 authoring basis remains the latest cleaner
+candidate.

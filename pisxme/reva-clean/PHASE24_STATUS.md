@@ -54,6 +54,8 @@ The separate selector-side escape V3/V4 then reauthored all four C30--C33 to
 U13 branches with actual capacitor-side F.Cu-to-B.Cu vias. V3 passes the
 native 12-endpoint SATA audit; V4 is the latest candidate and still has
 unrelated inherited USB3/support shorts and crossings. Neither is promoted.
+V5 was a rejected multi-bend variant: it retained SATA endpoint PASS but
+introduced additional same-layer route crossings and via/track conflicts.
 
 The integrated REXT repair discriminator is complete as a bounded experiment.
 V1's ordinary-via escape removed the original U11.40/U11.39 short but
