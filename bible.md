@@ -9121,3 +9121,7 @@ crossings and GND-return contacts. Crystal closure remains open at XTAL_OUT.
 live Path-B evidence: V1092 is the retained rail/RSET basis, V1113-V1116 are
 rejected coordinated QFN/crystal fanout trials, and V760 is historical SPI
 evidence rather than the current checkpoint. No production CAD was changed.
+2026-09-09: Added an explicit current-state banner to the Phase 24 status and
+qualification documents. The live disposable basis is V1092 through V1119;
+V1119 retains XTAL_IN and V1120 rejects the XTAL_OUT extension. Older V760/V772
+summaries are historical evidence only.

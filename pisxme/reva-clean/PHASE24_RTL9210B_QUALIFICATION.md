@@ -1,5 +1,12 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
+CURRENT IMPLEMENTATION SUMMARY (2026-09-09): the live disposable Path-B
+basis is `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout
+lineage through V1119. V1119 retains native-clean XTAL_IN; V1120 is a
+rejected XTAL_OUT extension. The current open implementation gate is the
+coordinated XTAL_OUT/QFN fanout. Earlier V760/V772 summaries are historical
+evidence only.
+
 ## Current QFN-field correction — V1035–V1040 (2026-09-09)
 
 V1035–V1039 are rejected local QFN support-route implementations. The

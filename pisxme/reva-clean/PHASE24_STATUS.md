@@ -2,6 +2,13 @@
 
 ## CURRENT PATH-B CHECKPOINT — V1092 rail/RSET basis; V1113–V1116 coordinated QFN fanout trials rejected (2026-09-09)
 
+CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is
+`PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout lineage
+through V1119. V1119 retains a native-clean XTAL_IN connection; V1120 is a
+rejected XTAL_OUT extension. The current open implementation gate is the
+coordinated XTAL_OUT/QFN fanout. V760/V772 and earlier control/SPI narratives
+below are historical evidence only.
+
 V760 is the retained disposable RTL9210B-CG SPI support candidate. It starts
 from the V748 U1/U2 placement basis, uses a monotonic five-net QFN source
 fan-out and a vertical U2 endpoint field, and passes native KiCad 10.0.5 DRC
