@@ -9014,6 +9014,12 @@ only the inherited dangling warning. Saved-board connectivity proves the
 U1.20/U1.34/U1.39/U2.3/U2.8/R2.2/R3.2/C3.1 group, and the U1.20 source-trace
 negative control fails as required. V1064 is retained; remaining RTL9210B
 support endpoints and full Path-B validation remain open.
+2026-09-09: V1067 rejected the first RTL_5V bridge for a U1.34/RTL_3V3
+proximity short. V1068 moved the lower transition away from the SPI field and
+passed native DRC with only the inherited RTL_3V3 dangling warning. The saved
+board proves U1.17/U1.33 RTL_5V connectivity and the source-trace negative
+control fails as required; the fixture has 29 opens. V1068 is retained while
+source hookup and remaining RTL9210B support gates stay open.
 2026-09-09: V1065 rejected the direct U1.52 RTL_3V3 handoff because its B.Cu
 perimeter crossed the preserved GND return diagonal. V1066 changed the local
 corridor to join the existing V1064 transition field. Native DRC has only the

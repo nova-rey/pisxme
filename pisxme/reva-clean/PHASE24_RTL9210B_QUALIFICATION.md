@@ -384,6 +384,13 @@ clearance. V697/V698 developed the split overpass; V699 removed the final
 redundant via and passes native DRC with zero violations and 25 remaining
 opens. Retain V699 as the positive U1.33-to-C5 RTL_5V basis; U1.17 remains
 open.
+
+V1067 was rejected for a native U1.34/RTL_3V3 proximity short at the upper
+RTL_5V transition. V1068 moved only the lower transition away from the SPI
+field and passes with the inherited RTL_3V3 dangling warning only. Native
+saved-board connectivity and the U1.17 source-trace negative control pass
+for the U1.17/U1.33 RTL_5V pair. This remains a local endpoint primitive;
+source hookup and remaining Path-B support gates are open.
 V690 moved only C2 and rebuilt XTAL_OUT/GND alongside U1.52; native DRC found
 15 violations including crystal shorts and 3V3/CLKREQ and 1V1/GND contact.
 Reject the C2-only class. The next experiment must co-author the complete

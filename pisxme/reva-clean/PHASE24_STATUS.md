@@ -9522,3 +9522,12 @@ items. A saved-board audit proves U1.20/U1.34/U1.39/U1.52/U2.3/U2.8/R2.2/
 R3.2/C3.1 are one physical RTL_3V3 component, and removing the U1.52 source
 trace fails the audit. V1066 is the current 3V3 QFN-field basis; remaining
 RTL9210B rails/support/control remain open.
+
+V1067 is rejected evidence: its first RTL_5V bridge brought the top via too
+close to U1.34 RTL_3V3. V1068 retains the same two-transition concept with an
+adjusted lower transition, passing native DRC with only the inherited
+RTL_3V3 dangling warning and reducing the fixture to 29 unconnected items.
+The saved-board audit proves U1.17/U1.33 are physically connected on RTL_5V,
+and removal of the U1.17 source trace fails the negative control. V1068 is
+the current RTL_5V endpoint basis; source hookup and remaining support stay
+open.
