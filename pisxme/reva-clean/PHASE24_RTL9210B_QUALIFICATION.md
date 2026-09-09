@@ -9,6 +9,15 @@ U2 endpoint field and the V754 source fan-out. Native KiCad 10.0.5 DRC reports
 connectivity assertions and five source-track negative controls. This closes
 the isolated SPI routing fixture, not the complete RTL9210B or Path-B gate.
 
+V761 places Y1/C1/C2/R1 in an in-board support pocket on the V760 geometry.
+V762-V766 are rejected first-pass crystal routes; they exposed source-pad,
+transition, and corridor interactions. V767 routes XTAL_IN, XTAL_OUT, and
+RSET without signal DRC errors. V768/V769 are rejected GND branches; V770
+removes the final GND clearance issue. V771/V772 clean fixture annotation,
+and V772 reports zero native DRC violations with 35 expected unrelated opens.
+The saved-board V772 support audit passes XTAL_IN, XTAL_OUT, RSET, and GND
+connectivity, with negative controls passing for the three signal nets.
+
 V748 is the current positive placement basis for the remaining RTL9210B SPI
 allocation. Starting from the native-clean V730 U1-at-90-degree basis, U2 was
 rotated 90 degrees and placed with its SPI endpoint column at x=105 mm. The

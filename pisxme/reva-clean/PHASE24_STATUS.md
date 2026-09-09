@@ -12,6 +12,13 @@ isolated five-net SPI routing fixture only. Path A remains intact and
 protected; Path B control, reference, lane, power, firmware, and integrated
 validation gates remain open.
 
+V772 is the current combined local support fixture: V760's five-net SPI
+field plus the Y1/C1/C2/R1 crystal/RSET/GND pocket. Native DRC reports zero
+violations and 35 expected unrelated opens. Its native support audit passes
+the signal and GND endpoint assertions; negative controls pass for XTAL_IN,
+XTAL_OUT, and RSET. This remains disposable Path-B evidence and is not yet
+production integration.
+
 The earlier V702/V718/V735 checkpoints and V746/V747/V751/V752 failures are
 historical disposable evidence. V753 proved the adjacent SPICLK/SPISI
 dogbone class; V754 proved the complete source fan-out; V755/V757/V758/V759

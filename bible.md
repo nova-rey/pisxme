@@ -8343,5 +8343,13 @@ board audit passed all five native endpoint assertions and source-track
 negative controls. This closes the disposable five-net SPI fixture only;
 Path-B support, firmware, productization, and integrated gates remain open.
 
+2026-09-09: V761-V772 integrated the V760 SPI field with a local crystal,
+RSET, and GND support pocket. V762-V766 were rejected crystal-route trials;
+V767/V770/V772 progressively closed the signal and return geometry. V772
+passes native DRC with zero violations and its saved-board support audit,
+including signal negative controls, passes. It is still an isolated Path-B
+support fixture; production integration and remaining control/power/firmware
+gates are open.
+
 2026-09-09: Reconciled the duplicated stale V702 Phase 24 status section by
 marking it historical; V760 is the sole current RTL9210B SPI checkpoint.
