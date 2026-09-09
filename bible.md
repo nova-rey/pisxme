@@ -7699,3 +7699,10 @@ rejected; VCCK_LOCAL_V1 remains current.
 old selector-to-M.2 next action. The authoritative current basis is
 VCCK_LOCAL_V1; superseded prose remains historical and no raw evidence was
 rewritten.
+
+2026-09-08: Tested the native-pad-aware SATA source-order probe
+PHASE24_STORAGE_SATA_SOURCE_ORDER_V1. The corrected author uses separate
+bridge-side and selector-side nets and passes all 12 native SATA endpoint
+assertions, but the reordered coupling row creates real storage-field
+shorts/clearances (612 DRC violations, 499 unconnected items). Rejected as
+route implementation evidence; VCCK_LOCAL_V1 remains the no-short basis.

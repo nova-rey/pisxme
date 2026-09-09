@@ -338,6 +338,14 @@ path is restored to the FULL7 geometry.
 
 ## CURRENT OPEN GATES
 
+The reordered SATA source-field probe
+`PHASE24_STORAGE_SATA_SOURCE_ORDER_V1.kicad_pcb` is rejected route
+implementation evidence: its corrected native-net authoring passes all 12
+SATA endpoint assertions but introduces real same-field shorts/clearances
+(612 DRC violations / 499 unconnected items). The raw fixture and report are
+preserved; the active no-short basis remains
+`PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`.
+
 1. The latest integrated candidate is
    `PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`. It combines the corrected CM5
    USB3 right-side launch with the selector-side SATA V4, M.2 V6, native mode
@@ -355,7 +363,7 @@ path is restored to the FULL7 geometry.
    Finish the remaining
    integrated route/DRC cleanup, then complete USB2, return, power, and
    mode-aware inactive-state validation without synthetic connectivity edges.
-2. Complete native ERC/DRC, mode-aware connectivity and inactive-state checks
+3. Complete native ERC/DRC, mode-aware connectivity and inactive-state checks
    for forced SATA, forced NVMe, AUTO, empty socket, reset, and power-off
    states.
 3. Finish TE M-key pad-by-pad, courtyard, mask/paste, mechanical, and model

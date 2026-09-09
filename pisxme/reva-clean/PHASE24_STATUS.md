@@ -2,6 +2,15 @@
 
 ## CURRENT OPEN GATES — 2026-09-08
 
+The latest bounded SATA source-field experiment,
+`PHASE24_STORAGE_SATA_SOURCE_ORDER_V1.kicad_pcb`, is rejected route
+implementation evidence. It used native U7 pad coordinates and an
+order-preserving C30--C33 row; the corrected probe passes all 12 native SATA
+endpoint assertions, but creates real selector-field shorts/clearances and
+reports 612 DRC violations / 499 unconnected items. Its raw PCB and DRC
+receipt are retained. It does not replace the active no-short
+`PHASE24_STORAGE_VCCK_LOCAL_V1` basis.
+
 The latest integrated storage routing candidate is
 `PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`, derived from the corrected
 source-authoritative workbench with M.2 launch V6, selector-side SATA escape
