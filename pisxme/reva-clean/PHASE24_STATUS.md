@@ -87,6 +87,12 @@ physical endpoints, USB3, SATA, and mode-control audits pass. V32 is not
 production authority or Phase 24 closure until the remaining native short and
 full routing debt are resolved.
 
+V33 tested an orthogonal staggered CM5 USB3 RX source escape on the V32
+basis. Native DRC reported 594 findings / 401 unconnected items but six true
+shorting classes, including RX polarity and TX/RX source-field collisions.
+The lower count is not a valid improvement; V33 is rejected and the next
+class must regenerate the complete four-net CM5 USB3 source field.
+
 V13 is the retained local routing basis. Its upper P-leg detour preserves the
 V8 source ordering, reduces the USB_TXN1/USB_TXP1 skew proxy to 0.259 mm, and
 keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits

@@ -8099,3 +8099,8 @@ V32 tested a left-exit VBUS corridor. After native refill it removed the
 storage SATA/VBUS short and reduced DRC to 604 findings / 399 unconnected
 items; one CM5 USB RX polarity short remains. All focused storage audits pass.
 Retained V32 as disposable corridor evidence only.
+
+V33 tested an orthogonal staggered CM5 USB3 RX source escape. Native DRC was
+594 findings / 401 unconnected items, but six true shorting classes appeared,
+including RX polarity and TX/RX source-field collisions. Rejected V33; a
+complete four-net CM5 USB3 source-field regeneration is required.

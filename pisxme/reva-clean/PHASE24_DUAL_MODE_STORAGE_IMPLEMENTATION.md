@@ -122,6 +122,10 @@ DRC report 604 findings / 399 unconnected items with one remaining CM5 USB RX
 polarity short; JMS583 physical endpoint, USB3, SATA, and mode-control audits
 pass. It is not production authority.
 
+V33's orthogonal CM5 USB3 RX escape reduced the raw DRC count but introduced
+six true shorting classes and one additional open. It is rejected route
+evidence; the complete CM5 USB3 source field must be co-authored.
+
 V14 is superseded route evidence. Its lateral TXN offset reduced the skew
 proxy to 0.096 mm and preserved focused audits, but native DRC found a
 0.000 mm clearance violation into U11 pad 23. No production authority changed.
