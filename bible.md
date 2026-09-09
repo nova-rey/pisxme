@@ -8940,3 +8940,7 @@ pad-66 incomplete relationship is inherited, while isolated copper appears
 only after local B.Cu return replacement in V1027/V1029. The next coauthor
 must preserve parent plane-attachment topology; arbitrary stitching is not a
 valid fix.
+2026-09-09: V1030/V1031 rejected near-pad U1.40 RTL_1V1 transitions. Native
+DRC localized the failures to pad-39 clearance, then the parent RTL_3V3
+B.Cu spine and USB_TXP0 pad 41. The next step is coordinated QFN fanout
+regeneration, not further single-via nudges.

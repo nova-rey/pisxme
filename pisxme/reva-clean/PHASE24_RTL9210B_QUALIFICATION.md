@@ -1078,3 +1078,7 @@ incomplete relationship is inherited from V1019. The isolated-copper warning
 appears only in V1027/V1029 after local B.Cu return replacement. This points
 to a lost plane-attachment topology, not a missing arbitrary via; preserve
 the parent attachment structure in the next coauthor.
+V1030/V1031 are rejected near-pad U1.40 trials. Native DRC found pad-39
+clearance in V1030, and RTL_3V3/USB_TXP0 interactions in V1031. The
+near-pad single-transition class is exhausted; a coordinated QFN fanout
+regeneration is required.

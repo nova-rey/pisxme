@@ -9398,3 +9398,7 @@ report isolated copper. V1027/V1029 introduce the isolated-zone warning only
 after the local B.Cu return geometry is replaced. The next repair must
 preserve the parent's plane-attachment topology; adding arbitrary same-net
 copper or a remote stitching via is insufficient.
+V1030/V1031 reject the near-pad U1.40 RTL_1V1 transition class. V1030
+violates native pad-39 clearance; V1031 collides with the parent RTL_3V3
+B.Cu spine and USB_TXP0 pad 41. U1.40 therefore requires a real coordinated
+QFN fanout regeneration; further single-via nudges are exhausted.
