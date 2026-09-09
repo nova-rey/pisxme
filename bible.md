@@ -7712,3 +7712,9 @@ sets, then generated PHASE24_STORAGE_SATA_ASTAR_V1. All 12 SATA native
 endpoint assertions passed, but native DRC found 822 violations with real
 SATA-to-power/support shorts and crossings. Rejected; the layer-aware search
 author remains reusable and no copper was promoted.
+
+2026-09-08: Tested SATA post-escape corridor V1, preserving the validated U7
+dogbones while changing only B.Cu lanes. Native SATA endpoint assertions
+passed and aggregate DRC fell to 583, but three true shorts appeared,
+including TUSB SATA into the JMS_REXT/USB3 field. Rejected; no copper was
+promoted.

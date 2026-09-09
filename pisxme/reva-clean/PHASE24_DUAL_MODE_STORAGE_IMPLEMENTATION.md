@@ -353,6 +353,12 @@ evidence. It passes all 12 SATA endpoint assertions, but native DRC reports
 The corrected pad-layer obstacle model and raw artifacts are preserved; no
 A* copper was promoted.
 
+The post-escape SATA corridor trial
+`PHASE24_STORAGE_SATA_POST_ESCAPE_V1.kicad_pcb` passes all 12 native SATA
+endpoint assertions and lowers the aggregate DRC count to 583, but introduces
+three real shorts, including TUSB SATA copper into the JMS_REXT/USB3 field.
+It is rejected route evidence and does not replace the active no-short basis.
+
 1. The latest integrated candidate is
    `PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`. It combines the corrected CM5
    USB3 right-side launch with the selector-side SATA V4, M.2 V6, native mode

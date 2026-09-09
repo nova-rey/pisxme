@@ -19,6 +19,14 @@ but native DRC reports 822 violations with real SATA-to-power/support shorts
 and crossings. No A* copper was promoted; its raw PCB, report, and author are
 retained for future routing work.
 
+The post-escape SATA corridor trial
+`PHASE24_STORAGE_SATA_POST_ESCAPE_V1.kicad_pcb` preserves the known-good U7
+dogbones and changes only the B.Cu corridors. It passes all 12 native SATA
+endpoint assertions and reduces the aggregate DRC count to 583, but native
+DRC reports three true shorts, including TUSB SATA copper entering the
+JMS_REXT/USB3 field. It is rejected route implementation evidence; no copper
+was promoted.
+
 The latest integrated storage routing candidate is
 `PHASE24_STORAGE_VCCK_LOCAL_V1.kicad_pcb`, derived from the corrected
 source-authoritative workbench with M.2 launch V6, selector-side SATA escape
