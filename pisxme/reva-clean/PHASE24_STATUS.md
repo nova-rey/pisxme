@@ -74,6 +74,9 @@ same VCCO/VCCK short remained. The V4_MODE candidate remains the cleanest
 integrated storage basis.
 V8 rerouted VCCK around the VCCO transition but introduced new CM5_5V and
 JMS_PCIE_TXP0 crossings/shorts and raised native DRC to 680; it is rejected.
+An all-F.Cu VCCO V1 trial reduced the aggregate DRC to 670 but introduced
+real U12 no-net/USB launch shorts and additional crossings; it is rejected.
+
 Selector-side V9 moved only the TXP corridor above the inherited support
 field; it removed the prior TXP/USB_RXN1 collision but introduced new XIN,
 CM5_USB3, and support conflicts and raised DRC to 677. It is rejected.

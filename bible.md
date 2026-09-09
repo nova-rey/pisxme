@@ -7630,6 +7630,11 @@ corridor. It retained native VCCO endpoint and negative-control PASS but
 introduced CM5_5V/JMS_PCIE_TXP0 conflicts and raised DRC to 680. Rejected;
 the integrated V4_MODE basis is unchanged.
 
+2026-09-08: Tested an all-F.Cu JMS_VCCO support route from the integrated
+USB3-repaired basis. It retained the VCCO native endpoint proof and reduced
+the aggregate DRC to 670, but introduced real U12 no-net/USB launch shorts and
+additional crossings. Rejected; VCCO_DEST_V1 remains the current basis.
+
 2026-09-08: Tested selector-side SATA escape V9 with a north TXP corridor.
 It passed the native SATA endpoint audit and removed the prior TXP/USB_RXN1
 collision, but introduced XIN, CM5_USB3, and support conflicts and raised
