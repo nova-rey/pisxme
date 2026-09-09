@@ -7216,6 +7216,10 @@ preserving USB3 10/10, SATA 12/12, mode 4/4, parity, JMS support, and rail
 negative-control PASS. Native DRC is now 669 violations / 499 unconnected;
 closure remains open.
 
+2026-09-08: Fresh native recheck of PHASE24_STORAGE_VCCK_LOCAL_V1 reproduced
+669 violations / 499 unconnected items and zero shorting_items. USB3, SATA,
+and mode-control native endpoint audits remained PASS; no DRC gate was waived.
+
 2026-09-08: Rejected three native-label serialization probes. First-copy
 deduplication produced 19 parity mismatches; final-copy deduplication changed
 the five-mismatch identities without closing parity; full block reauthoring

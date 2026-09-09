@@ -1,0 +1,1 @@
+PASS native mode-control connectivity: 4/4 endpoint groups

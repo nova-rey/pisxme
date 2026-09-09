@@ -12,6 +12,10 @@ dual-mode USB3 audit (10/10), SATA endpoint audit (12/12), mode-control audit
 audits, with saved-board MODE_IN and VCCO negative controls that fail as
 required. Native DRC remains open at 669 violations / 499 unconnected items; this is
 the current routing workbench, not a closure candidate.
+Fresh native recheck reproduces 669 violations / 499 unconnected items with
+zero `shorting_items`; topology-aware USB3, SATA, and mode-control audits
+remain PASS. The remaining work is not waived: crossings, clearances,
+unconnected endpoints, and full-board closure remain open.
 
 The live U13 source-authority regression is corrected. U13 pins 6/7 now own
 `M2_SATA_B_P_PCIE_RXN0` / `M2_SATA_B_N_PCIE_RXP0`, matching J3 contacts 41/43;
