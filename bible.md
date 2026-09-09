@@ -8955,3 +8955,11 @@ regeneration must co-author the remote 3V3 and local 1V1 fields together.
 retained spine contacted U1.40, while the upper remote detour crossed two
 GND clearances. The next class is full QFN support-field regeneration with
 coordinated placement and transitions.
+2026-09-09: V1035-V1039 rejected successive U1.40/RTL_3V3 co-authoring
+attempts. V1039 also revealed the disposable scrub was incomplete: inherited
+local RTL_1V1 copper remained and contaminated the result. V1040 corrected
+the method by scrubbing both local 1V1 and 3V3 copper before allocation.
+Native DRC then showed zero electrical violations, with only eight intentional
+dangling source warnings and 40 fixture-inherited incomplete connections.
+V1040 is retained as a clean local QFN-field primitive; extend it to support
+endpoints before claiming Path-B support closure.

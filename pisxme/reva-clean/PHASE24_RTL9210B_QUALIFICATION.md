@@ -1,5 +1,20 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
+## Current QFN-field correction — V1035–V1040 (2026-09-09)
+
+V1035–V1039 are rejected local QFN support-route implementations. The
+failures are confined to U1.40/RTL_3V3 QFN-field allocation; V1039 also
+demonstrated that inherited RTL_1V1 copper must be removed before judging a
+co-authored field.
+
+V1040 is the corrected disposable experiment. It removes both local 1V1 and
+3V3 copper from the QFN/support acreage, then allocates the 3V3 spine and
+U1.40 transition together. Native KiCad DRC has no electrical violations;
+eight dangling source warnings and 40 incomplete connections are intentional
+because the fixture stops at the clean local primitive. This is positive
+route-implementation evidence, not closure of the full RTL9210B support
+network. Continue extending V1040 incrementally to support endpoints.
+
 ## Current checkpoint — V981 orientation-0 source-field discriminator (2026-09-09)
 
 ### Latest 1V1 rail allocation evidence — V1004/V1005

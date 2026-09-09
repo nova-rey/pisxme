@@ -108,6 +108,23 @@ evidence in the qualification directory.
 
 ## CURRENT STATE — documentation authority (2026-09-09)
 
+### Latest QFN-field evidence — V1035–V1040 (2026-09-09)
+
+V1035–V1039 are rejected route implementations. V1035–V1037 retained
+U1.40/RTL_3V3 contact or pad-field conflicts; V1039 additionally exposed
+that the experiment had not removed inherited local RTL_1V1 copper. Their
+native reports are preserved as historical route evidence, not as placement
+or architecture failures.
+
+V1040 corrects that experiment defect by scrubbing both local RTL_1V1 and
+RTL_3V3 tracks/vias before co-authoring the field. Native KiCad DRC reports
+zero electrical short, clearance, or crossing violations; the eight remaining
+track-dangling warnings and 40 incomplete connections are intentional fixture
+residue because remote support endpoints were not reattached. V1040 is
+therefore a valid clean QFN-field allocation primitive, not complete Path-B
+support closure. The next step is to extend this clean field to the nearby
+support endpoints while preserving the no-electrical-violation result.
+
 ### Latest RTL_1V1 allocation evidence — V1004/V1005 (2026-09-09)
 
 V1004 is REJECTED. It transplanted the historical V930 eight-pad RTL_1V1
