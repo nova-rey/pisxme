@@ -9875,3 +9875,11 @@ The saved-board audit passes U1.52/3V3, XTAL_IN, and XTAL_OUT endpoint groups
 with complete source-cohort negative controls. This closes the local U1.52
 and crystal departure primitive; PEDET, CLKREQ_N, PERST_N, REFCLK, lane,
 remaining support, and integrated Path-B closure remain OPEN.
+V1200 is the accepted PEDET layer-boundary primitive on the V1195 basis. Its
+source exits below U1, shifts to B.Cu at y=77.5, uses F.Cu around the retained
+5V vertical trunk, and reaches R2.1 and J1.69 without new DRC violations.
+Native DRC retains only the inherited RTL_3V3 dangling warning and expected
+unconnected items. The saved-board audit proves U1.8/R2.1/J1.69 connectivity
+and a complete source-cohort negative control. PEDET is locally closed;
+CLKREQ_N, PERST_N, REFCLK, lane, remaining support, and integrated Path-B
+closure remain OPEN.
