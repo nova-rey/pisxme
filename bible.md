@@ -8198,3 +8198,8 @@ had one intentional dangling-tail warning and no pad short/crossing/
 clearance error; 0/180/270 degrees had 11/10/6 violations. Retained the
 90-degree package escape basis. The integrated work must co-author U1.39
 with the adjacent RTL_1V1 departure.
+
+2026-09-09: V675 tested a co-authored U1.39/U1.40 source-via pair on V672.
+Native DRC found 13 violations and 24 opens, including a real RTL_3V3/
+RTL_1V1 short at the adjacent via/escape. Rejected V675; retain the clean
+standalone V674 U1.39 escape and allocate U1.40 through another corridor.
