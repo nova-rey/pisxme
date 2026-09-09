@@ -8701,3 +8701,9 @@ to Y1.2. Native DRC had 0 electrical violations with two inherited isolated-
 fill warnings; the saved audit and two source-trace negative controls passed.
 V938 is the accepted crystal-pair primitive; U1.55 1V1 and remaining rail/GND
 restoration remain open.
+2026-09-09: V939 restored U1.55 RTL_1V1 with a staggered dogbone and ordinary
+via at (97.5,76.0), retaining the V938 crystal pair and V932 RSET. Native DRC
+had zero electrical violations with two inherited isolated-fill warnings and
+24 expected unrelated opens. The saved audit passed all eight RTL_1V1 pads,
+both crystal nets, RSET, and four source-trace negative controls. V939 is the
+accepted local primitive; RTL_3V3, RTL_5V, and GND restoration remain open.

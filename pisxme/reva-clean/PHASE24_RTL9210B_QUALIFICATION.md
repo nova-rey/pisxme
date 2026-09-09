@@ -903,3 +903,9 @@ both crystal nets with monotonic B.Cu ordering, including the C2.1-to-Y1.2
 join. Native DRC has 0 electrical violations (two inherited isolated-fill
 warnings); the saved audit and two source-trace negative controls pass. V938
 is the accepted crystal-pair primitive, not integrated support closure.
+V939 restored U1.55 RTL_1V1 with a staggered outward dogbone and ordinary via
+at (97.5,76.0), retaining V938 crystal and V932 RSET support. Native DRC has
+0 electrical violations (two inherited isolated-fill warnings; 24 expected
+unrelated opens). The saved-board audit passes all eight RTL_1V1 endpoints,
+both crystal nets, RSET, and four source-trace negative controls. V939 is the
+accepted local 1V1/crystal/RSET primitive; RTL_3V3, RTL_5V, and GND remain open.
