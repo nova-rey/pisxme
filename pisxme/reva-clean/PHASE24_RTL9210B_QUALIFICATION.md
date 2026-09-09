@@ -915,3 +915,10 @@ inherited isolated-fill warnings; 22 expected unrelated opens). The saved
 RTL_5V audit and corrected C5-side trace-removal negative control pass. V940
 is the accepted 1V1/RSET/crystal/5V primitive; RTL_3V3 and local GND remain
 current implementation gates.
+V941's naïve complete RTL_3V3 fanout was rejected by 21 native DRC findings
+against SPI, 1V1, XTAL, and 5V. V942 isolated U1.34 and escaped it west/up to
+an ordinary via at (93.5,63.5); native DRC then had no electrical violations,
+with three inherited isolated-fill warnings and 22 expected opens. V942 is
+the accepted U1.34 sub-primitive. V943's first U1.20 vertical escape was
+rejected by SPISO3/SPICLK crossings and via clearance; remaining 3V3 endpoints
+require coordinated regeneration.

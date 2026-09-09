@@ -9220,3 +9220,10 @@ DRC has no electrical violations (three inherited isolated-fill warnings and
 26 expected unrelated opens); the saved-board connectivity audit and source
 trace-removal negative control pass. V933 is the accepted XTAL_IN primitive;
 XTAL_OUT, RTL_3V3, RTL_5V, and local GND restoration remain open.
+V941's naïve complete RTL_3V3 fanout was rejected by 21 native DRC findings
+against SPI, 1V1, XTAL, and 5V source fields. V942 then isolated U1.34 and
+escaped it west/up to an ordinary via at (93.5,63.5); native DRC reduced to
+the three inherited isolated-fill warnings and 22 expected opens. V942 is the
+accepted U1.34 3V3 sub-primitive. V943's first U1.20 vertical escape was
+rejected by SPISO3/SPICLK crossings and via clearance; U1.20 and the remaining
+3V3 endpoints still require coordinated regeneration.
