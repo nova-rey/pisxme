@@ -1,8 +1,8 @@
 # Phase 24 acreage validation status
 
-## CURRENT PATH-B CHECKPOINT — V772 support basis; V780–V782 control-route trials rejected (2026-09-09)
+## CURRENT PATH-B CHECKPOINT — V1092 rail/RSET basis; V1113–V1116 coordinated QFN fanout trials rejected (2026-09-09)
 
-V760 is the current disposable RTL9210B-CG SPI support candidate. It starts
+V760 is the retained disposable RTL9210B-CG SPI support candidate. It starts
 from the V748 U1/U2 placement basis, uses a monotonic five-net QFN source
 fan-out and a vertical U2 endpoint field, and passes native KiCad 10.0.5 DRC
 with 0 violations and 40 unrelated expected opens. The saved-board V760
@@ -254,10 +254,12 @@ endpoint pads.
 V723/V724/V725 are rejected SPISO route implementations from V718. No Path-B
 architecture conclusion is changed; those are historical route evidence.
 
-The active stronger basis is now V760. V736-V745 and V751/V752 are rejected
-route implementations, not placement or architecture failures. Continue from
-V760 for the remaining RTL9210B support and productization gates; do not
-promote this fixture into production CAD yet.
+V760 and the earlier V736-V745/V751/V752 records are historical SPI-field
+evidence, not the current Path-B basis. The current retained basis is V1092
+for rails/RSET, with V1113-V1116 rejected coordinated QFN/crystal fanout
+trials. Continue from V1092 for the remaining RTL9210B support and
+productization gates; do not promote any disposable fixture into production
+CAD yet.
 
 This section is the current narrative authority for Phase 24. The live
 dual-mode storage routing basis is
@@ -9662,3 +9664,7 @@ co-authored fanout. Moving the transition inward or above the QFN still
 violates exposed-pad/no-net/USB pad clearance or the central GND field.
 The result confirms the next repair must allocate the complete QFN fanout,
 including the exposed-pad and remaining 1V1/3V3 departures, as one field.
+V1119 is the retained XTAL_IN-only co-authored result: native DRC has only
+the three inherited dangling warnings, and XTAL_IN is physically joined to
+Y1.1/C1.1. V1120 adds XTAL_OUT but is rejected for XTAL_IN/XTAL_OUT crossings
+and GND-return contacts. Crystal closure therefore remains OPEN at XTAL_OUT.

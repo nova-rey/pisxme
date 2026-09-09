@@ -9114,3 +9114,10 @@ co-authored transition within or above the QFN still violated exposed-pad,
 no-net/USB pad, or central-GND clearance. The next repair must allocate the
 complete QFN fanout, including exposed pad and remaining 1V1/3V3 departures,
 as one field.
+2026-09-09: V1119 retained the co-authored XTAL_IN route with only inherited
+dangling warnings; V1120 added XTAL_OUT but was rejected for XTAL_IN/XTAL_OUT
+crossings and GND-return contacts. Crystal closure remains open at XTAL_OUT.
+2026-09-09: Reconciled the Phase 24 current-state header and narrative to the
+live Path-B evidence: V1092 is the retained rail/RSET basis, V1113-V1116 are
+rejected coordinated QFN/crystal fanout trials, and V760 is historical SPI
+evidence rather than the current checkpoint. No production CAD was changed.

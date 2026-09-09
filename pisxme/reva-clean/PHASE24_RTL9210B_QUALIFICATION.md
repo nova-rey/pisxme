@@ -1294,3 +1294,7 @@ co-authored fanout. Moving the transition inward or above the QFN still
 violates exposed-pad/no-net/USB pad clearance or the central GND field.
 The result confirms the next repair must allocate the complete QFN fanout,
 including the exposed-pad and remaining 1V1/3V3 departures, as one field.
+V1119 is the retained XTAL_IN-only co-authored result: native DRC has only
+the three inherited dangling warnings, and XTAL_IN is physically joined to
+Y1.1/C1.1. V1120 adds XTAL_OUT but is rejected for XTAL_IN/XTAL_OUT crossings
+and GND-return contacts. Crystal closure therefore remains OPEN at XTAL_OUT.
