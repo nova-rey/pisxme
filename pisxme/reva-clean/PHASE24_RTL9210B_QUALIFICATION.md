@@ -1495,6 +1495,10 @@ join the live RTL_1V1 collector through direct outward ordinary vias with no
 new native DRC errors; both saved-board endpoint and negative-control audits
 pass. The current cohort is U1.16/U1.36/U1.40/U1.50/U1.55/U1.60/U1.63.
 Remaining support is OPEN.
+V1276 is rejected RTL_5V source evidence. The U1.33-to-C5 endpoint audit
+passes, but native DRC finds a real source-via clearance/crossing conflict
+with the live RTL_1V1 vertical. The next class co-authors the 5V/1V1 source
+field without relaxing validation.
 V1272 is accepted incremental support evidence. U1.25 RTL_1V1 joins the
 collector through an F.Cu source drop and ordinary via without new native
 DRC errors; endpoint and negative-control audit pass. The identified

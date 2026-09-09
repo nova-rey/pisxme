@@ -10079,3 +10079,7 @@ RTL_1V1 were co-authored with separate source vias and corridors. Native DRC
 retains inherited warnings only; the combined saved-board audit proves both
 endpoints and two source-removal negative controls. Remaining RTL_3V3,
 RTL_5V, and non-rail support remain OPEN.
+V1276 is rejected RTL_5V source evidence. U1.33 endpoint connectivity and
+its negative control pass, but the proposed source via/escape intersects the
+live RTL_1V1 vertical at x=103 and produces native clearance/crossing errors.
+The 5V/1V1 source field must be co-authored; no rule relaxation is allowed.

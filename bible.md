@@ -9445,3 +9445,7 @@ passed. Remaining RTL_3V3 and other support are open.
 and U1.40 RTL_1V1 were co-authored with separate source vias/corridors.
 Native DRC retained inherited warnings only; combined endpoints and two
 source-removal negative controls passed. Remaining rails/support are open.
+2026-09-09 — V1276 RTL_5V source attempt rejected: U1.33-to-C5 endpoint and
+negative control passed, but native DRC found the source via/escape crossing
+and violating clearance to the live RTL_1V1 vertical. Co-author the 5V/1V1
+source field next; do not weaken rules.
