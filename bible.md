@@ -9259,4 +9259,7 @@ accepted U1.25 primitive; remaining RTL9210B support/control closure is open.
 U1.25 upper-east escape. Native DRC remained at the inherited RTL_3V3 warning
 plus expected unconnected items. The saved-board audit passed all five 1V1
 endpoint assertions and complete source-cohort trace-removal negative
-controls. This is the current combined 1V1 basis.
+controls. This is the current combined 1V1 basis. The expanded audit also
+confirms U1.36/U1.40/U1.50 were already connected through the retained 1V1
+field; eight complete source-cohort negative controls pass, so no extra
+copper is required for those pads.

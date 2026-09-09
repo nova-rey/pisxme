@@ -9841,6 +9841,9 @@ field is still OPEN. The audit uses equality lists rather than synthetic graph
 edges or unhashable VECTOR2I set keys.
 V1183 merges the accepted V1174 U1.16 primitive with V1182 U1.25 on one
 saved-board basis. Native DRC remains at the inherited RTL_3V3 dangling
-warning and expected unconnected items. The merged audit passes U1.16,
-U1.55/U1.60/U1.63, and U1.25 to C4.1, with five complete source-cohort
-trace-removal negative controls. This is the current combined 1V1 basis.
+warning and expected unconnected items. The merged audit passes all eight
+QFN 1V1 pads (U1.16/U1.25/U1.36/U1.40/U1.50/U1.55/U1.60/U1.63) to C4.1,
+with eight complete source-cohort trace-removal negative controls. U1.36,
+U1.40, and U1.50 were already physically joined through the retained field;
+they do not require additional route copper. This is the current combined
+1V1 basis.
