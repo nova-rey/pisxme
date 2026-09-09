@@ -9229,3 +9229,8 @@ escape from the remote collector.
 XTAL_IN. V1163 found six native violations; V1164 found eight, including
 QFN-source, XTAL/1V1, and 5V-handoff interactions. Rejected route evidence;
 next solution class is local crystal-pocket relocation.
+2026-09-09: V1165 relocated Y1/C1/C2 coherently and corrected transformed
+XTAL_OUT endpoints. Native DRC retained only the inherited RTL_3V3 dangling
+warning; the saved-board audit passed XTAL_IN/XTAL_OUT/GND connectivity and
+both crystal trace-removal negative controls. Accepted as the current
+relocated crystal-pocket primitive.

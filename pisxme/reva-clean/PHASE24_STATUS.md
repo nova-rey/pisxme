@@ -95,6 +95,13 @@ DRC still found eight violations from the adjacent QFN source field,
 XTAL/1V1 interaction, and the 5V handoff. These are rejected route-class
 experiments. The next class is local crystal-pocket relocation to decouple the
 QFN crystal lanes from the 1V1 source escape.
+V1165 moved Y1/C1/C2 together 10 mm west, regenerated both crystal nets to
+their native transformed pads, and added explicit local GND-via access for the
+moved capacitors. After correcting the transformed XTAL_OUT pad endpoint and
+restoring the clean V1159 source escape, native DRC reports only the inherited
+RTL_3V3 dangling warning. The saved-board audit passes XTAL_IN, XTAL_OUT, and
+moved-capacitor GND connectivity; both crystal trace-removal negative controls
+pass. V1165 is the current accepted relocated crystal-pocket primitive.
 
 CURRENT IMPLEMENTATION SUMMARY: the live disposable Path-B basis is V1123
 plus the accepted V1160 crystal source-field primitive. Full QFN rail,
