@@ -29,6 +29,12 @@ keeps focused USB3, SATA, mode-control, JMS583-support, and pad-parity audits
 passing with no native shorting class. Native DRC remains 730 findings; full
 board closure is still open.
 
+V14 tested a small lateral shift of the TXN vertical leg. It retained all
+focused endpoint/parity audits and reduced the TX skew proxy to 0.096 mm, but
+native DRC found a 0.000 mm clearance violation from the diagonal escape into
+U11 pad 23. V14 is rejected route-implementation evidence; V13 remains the
+retained no-short local basis and no production copper changed.
+
 The first co-authored source-field trials are retained as route evidence. V3
 kept USB3/SATA/mode/JMS583/parity focused gates passing and introduced no
 shorting class, but native DRC identified two new local USB_TXP1/USB_TXN1

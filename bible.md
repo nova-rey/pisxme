@@ -7976,6 +7976,10 @@ V13 upper P-leg detour preserved the clean V8 escape and reduced USB TX skew
 proxy to 0.259 mm. Focused storage audits and parity pass with no shorting
 class; native DRC remains 730 with inherited global closure debt.
 
+V14 lateral TXN offset reduced the local skew proxy to 0.096 mm but introduced
+a 0.000 mm native clearance violation into U11 pad 23. Rejected the route
+implementation and retained V13 as the no-short basis.
+
 V11 shortened TXN and reduced the USB TX skew proxy to 1.620 mm, but native
 DRC rose to 731 and added a CM5 USB RX pair short. Rejected the candidate and
 recorded the need for serialization-safe whole-net regeneration.

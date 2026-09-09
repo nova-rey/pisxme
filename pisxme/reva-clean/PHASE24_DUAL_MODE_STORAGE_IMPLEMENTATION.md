@@ -63,6 +63,10 @@ reduces the USB TX skew proxy to 0.259 mm without a native shorting class;
 focused storage audits and pad parity pass. Native DRC remains at 730
 findings, so V13 is not production authority.
 
+V14 is superseded route evidence. Its lateral TXN offset reduced the skew
+proxy to 0.096 mm and preserved focused audits, but native DRC found a
+0.000 mm clearance violation into U11 pad 23. No production authority changed.
+
 V10 is superseded route evidence: its local P-leg meander improves TX skew to
 0.259 mm, but creates two same-layer USB TX pair self-crossings. The next
 pair-balance attempt must remain layer-separated or shorten the opposite leg.
