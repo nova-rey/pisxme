@@ -17,6 +17,13 @@ disposable fixture. V1005 does not close the 1V1 rail or Path B. Remaining
 RTL_1V1 endpoints must be added incrementally with native pad/layer-aware
 allocation.
 
+V1010 is rejected because its U1.36 via occupied the existing RTL_3V3
+collector. V1011 moved the via clear of that collector but exposed an
+unconnected transition. V1012 adds the required same-net In2 contact to the
+filled rail pocket and is accepted as the U1.36 isolated primitive. Native
+DRC has no electrical violations; the fixture's intentional dangling source
+tracks and inherited opens remain. The full RTL_1V1 rail is still OPEN.
+
 V1006/V1007/V1008 are rejected U1.16 escape implementations: they collide
 with the actual RTL_5V or CLKREQ_N QFN-edge departures. V1009 is accepted as
 an isolated U1.16-to-RTL_1V1 pocket primitive. It exits beyond the right pad

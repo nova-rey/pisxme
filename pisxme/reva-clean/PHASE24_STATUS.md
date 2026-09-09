@@ -133,6 +133,14 @@ to the existing RTL_1V1 In2 pocket. Native DRC reports no electrical
 short/clearance/crossing violations; only intentional dangling source tracks
 and inherited opens remain. The complete 1V1 rail is still OPEN.
 
+V1010 is REJECTED: the direct U1.36 transition at (92.5,67.2) contacted
+the existing RTL_3V3 B.Cu collector. V1011 removed that short by moving the
+transition west, but its via was physically isolated from the In2 pocket.
+V1012 corrects that contact with a same-net In2 segment to the filled pocket;
+native DRC reports no electrical short/clearance/crossing violations and the
+U1.36 unconnected item is cleared. This is an accepted U1.36 primitive; the
+remaining RTL_1V1 endpoints and full rail closure remain OPEN.
+
 V981 is the newest RTL9210B local source-field discriminator.  After
 orientation-0 transformation about the native exposed pad, all six adjacent
 source departures (SPISI, SPICLK, RTL_3V3, SPISO3, SPISO, SPICS) run
