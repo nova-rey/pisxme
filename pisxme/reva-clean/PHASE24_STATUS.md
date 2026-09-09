@@ -9270,3 +9270,10 @@ The findings include SPISO3/retained SPISO and RTL_1V1 conflicts, SPICLK/
 SPISI conflict, and source-via field contact. The three-net-only edit is not
 an adequate class; the next candidate must regenerate the neighboring
 1V1/SPISO shelf together with the 3V3 departure.
+V988 is the first clean full adjacent source-field discriminator: after
+removing inherited local copper, RTL_1V1, RTL_5V, SPICS, SPISO, SPISO3,
+RTL_3V3, SPICLK, and SPISI each leave their native QFN pads orthogonally on
+F.Cu. Native DRC reports only eight intentional dangling-track warnings and
+the inherited incomplete connections, with no electrical source-field
+violation. This is now the transition-regeneration basis; it is not complete
+Path-B support closure.

@@ -8851,3 +8851,8 @@ basis.
 Native DRC found 17 violations involving the retained SPISO/RTL_1V1 shelf,
 SPICLK/SPISI, and the new 3V3 source via. The evidence requires full local
 1V1/SPISO/3V3 coauthoring; it does not reject Path B.
+2026-09-09: V988 proved the full adjacent RTL9210B source field clean after
+removing inherited local copper. Eight native source departures (RTL_1V1,
+RTL_5V, SPICS, SPISO, SPISO3, RTL_3V3, SPICLK, SPISI) produced no electrical
+source-field DRC errors; only intentional dangling ends and inherited opens
+remain. Preserve V988 as the transition-regeneration basis.
