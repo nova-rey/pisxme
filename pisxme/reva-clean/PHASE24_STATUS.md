@@ -10139,6 +10139,12 @@ U1 is rotated 90 degrees, the native DRC report records zero violations, and
 the independent SPICS/SPISO endpoint and source-removal audits pass. V735 is
 an isolated support-placement reference, not yet a replacement for the
 current four-lane V1279 lineage; full Path-B integration remains OPEN.
+Correction: the V1279 native DRC report contains an inherited error-level
+XTAL_IN/RSET crossing; it is not warning-only. V1291 attempted a single-net
+RSET repair, but native endpoint/negative-control checks passed while DRC
+still found the XTAL_IN crossing plus new RSET/GND conflicts. V1291 is
+rejected and the inherited crossing remains OPEN for a coupled crystal/RSET
+repair.
 The native geometry receipt `PHASE24_RTL9210B_V735_V1279_GEOMETRY_COMPARISON.md`
 quantifies the discriminator: V735 rotates U1 to 90 degrees, placing SPICS,
 SPISO, SPICLK, and SPISI on the top-side row, while V1279 leaves them on the

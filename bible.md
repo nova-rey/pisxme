@@ -9504,3 +9504,7 @@ placement evidence, not full Path-B closure or a production replacement.
 V735 top-row SPI source geometry versus the V1279 right-row source geometry;
 V735 remains support-placement evidence only because its unconnected-pad
 findings remain open.
+2026-09-09 — Corrected the V1279 status classification: its native DRC carries
+an inherited error-level XTAL_IN/RSET crossing. V1291’s single-net RSET repair
+passed endpoint and negative-control audits but still failed native DRC on the
+crossing and new RSET/GND conflicts; it is preserved as rejected evidence.
