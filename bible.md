@@ -8869,3 +8869,8 @@ the accepted 3V3 collector primitive.
 but crossed one inherited GND corridor. V996's west shift crossed two GND
 routes and was rejected. Preserve V995 as the better fanout diagnostic and
 co-author the local GND return with the next 3V3 repair.
+2026-09-09: V995/V996 exposed GND interactions in the remaining U1 3V3
+fanout. V997/V998 tested west detours; V999 routed below the GND endpoint and
+then overhead, producing no electrical DRC violations beyond intentional
+dangling source ends and inherited opens. Preserve V999 as the accepted
+full RTL_3V3/GND-aware primitive.

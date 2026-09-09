@@ -9284,6 +9284,12 @@ and removed those electrical violations. V994 completed the C3 B.Cu branch;
 native DRC remains limited to the eight intentional dangling source tracks
 and inherited opens. V994 is the accepted disposable RTL_3V3 collector
 primitive, not full Path-B closure.
+V995 connected the three remaining U1 RTL_3V3 pads but crossed one inherited
+GND corridor; V996 worsened that diagnostic. V997/V998 tested GND-aware west
+detours and retained one GND interaction. V999 routed below the GND endpoint
+before moving west and overhead; native DRC is limited to the eight
+intentional dangling source tracks and inherited opens. V999 is the accepted
+full RTL_3V3/GND-aware disposable primitive.
 V995 connected U1.34/U1.39/U1.52 into the V994 RTL_3V3 collector and
 introduced one inherited GND-corridor crossing. V996's west shift introduced
 two GND interactions and is rejected. V995 is retained as the better
