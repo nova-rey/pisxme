@@ -9150,5 +9150,7 @@ V1123 basis. Native DRC, the saved-board RTL_3V3 endpoint audit, and the U1.52
 an XTAL_OUT/GND short, RSET crossing, and XTAL_IN/U1.55 clearance conflicts.
 Rejected V1136 crystal-pocket relocation and V1137 source-escape rehome as
 distinct route-implementation classes; V1136 retained QFN conflicts and
-V1137 produced 14 native violations. Path A, production CAD, and architecture
+V1137 produced 14 native violations. V1138 tested the independent offset
+y=75/y=77 return-lane class; native DRC found 15 violations including
+XTAL_IN/XTAL_OUT return crossings. Path A, production CAD, and architecture
 remain unchanged; current Path-B gate is a native-clean XTAL_OUT/QFN fanout.

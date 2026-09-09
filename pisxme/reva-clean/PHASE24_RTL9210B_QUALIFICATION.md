@@ -3,10 +3,13 @@
 CURRENT IMPLEMENTATION SUMMARY (2026-09-09): the live disposable Path-B
 basis is `PHASE24_RTL9210B_RSET_V1092.kicad_pcb` plus the co-authored fanout
 lineage through V1123. V1119 retains native-clean XTAL_IN; V1120, V1121,
-V1122, V1135, V1136, and V1137 are rejected XTAL_OUT/source-field trials.
+V1122, V1135, V1136, V1137, and V1138 are rejected XTAL_OUT/source-field trials.
 The current open implementation gate is a coordinated native-clean
 XTAL_OUT/QFN fanout. V1123 remains the clean GND/rail starting basis. The
 V1135-V1137 files and reports are historical route evidence, not production
+CAD or a change to Path A. V1138 tested offset y=75/y=77 return lanes but
+native DRC found 15 violations, including XTAL_IN/XTAL_OUT return crossings.
+The V1135-V1138 files and reports are historical route evidence, not production
 CAD or a change to Path A. Earlier V760/V772 summaries are historical
 evidence only.
 
