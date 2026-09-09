@@ -650,6 +650,11 @@ edge. The placement remains feasible; the route is rejected.
 Correction: V832's Y=90 resistor coordinates are outside the disposable
 Y=40–85 outline, so its zero-violation result is not mechanical feasibility
 evidence.
+V838 tested a perimeter PERST_N route from V837 and was rejected with 3
+native violations and 32 expected incomplete connections. V839 offset the
+source transition but was rejected with 4 violations and 32 expected
+incomplete connections, including SPISO/SPISO3 corridor shorts and adjacent
+U1 pad-field clearance. PERST_N remains open.
 V834 is the corrected in-outline control placement probe and passes native
 DRC with 0 violations and 35 expected incomplete connections. V835 and V836
 are rejected route implementations with 5 and 3 violations respectively.

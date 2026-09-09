@@ -8477,6 +8477,11 @@ corridors intersected retained SPI geometry and reached the board edge.
 Correction: V832's Y=90 resistor coordinates are outside the disposable
 Y=40–85 outline; its zero-violation result is not mechanical feasibility
 evidence.
+2026-09-09: V838 tested a perimeter PERST_N route from V837 and was rejected
+with 3 violations and 32 expected incomplete connections. V839 offset the
+source transition but was rejected with 4 violations and 32 expected
+incomplete connections, including SPISO/SPISO3 corridor shorts and adjacent
+U1 pad-field clearance. PERST_N remains open.
 2026-09-09: V834 is the corrected in-outline control placement probe and
 passed native DRC with 0 violations and 35 expected incomplete connections.
 V835/V836 were rejected route implementations with 5 and 3 violations.
