@@ -205,6 +205,31 @@ its advertised files are treated as retrieved or authoritative.
 - [bensuperpc/rtl9210](https://github.com/bensuperpc/rtl9210), firmware/configuration and recovery evidence.
 - [damnnfo/rtl9210b-firmware](https://github.com/damnnfo/rtl9210b-firmware), firmware/config artifacts.
 
+## Current parallel-candidate checkpoint — 2026-09-08
+
+Path B remains isolated and is still not production-CAD authority. The
+current retained evidence was rerun against the live checkout:
+
+```text
+authority_audit.py                    PASS
+corroborating_support_audit.py       PASS
+m2_mapping_audit.py                   PASS
+native_netlist_audit.py               PASS
+native_netlist_audit.py --negative    PASS (fails as intended)
+wip_hierarchy_conflict_audit.py       PASS
+pdf_pin_audit.py                      PASS
+pdf_pin_audit.py --negative           PASS (fails as intended)
+```
+
+The isolated support-route sequence remains an implementation discriminator,
+not a promotion: V627 rejects via-in-pad at the strict QFN USB field, and the
+latest V653 crystal relocation is rejected for real crystal/rail clearance and
+shorting classes. These are route/support-field failures; Path A and the
+production storage source are unchanged. The remaining Path-B decision gates
+are the authorized application circuit/land-pattern review, complete
+support-field route, traceable virgin-part programming, firmware provenance,
+SSD power/inrush/thermal validation, and hardware mode testing.
+
 ## Live requalification checkpoint — 2026-09-06
 
 The live JLCPCB page was rechecked and its identity/assembly facts are now

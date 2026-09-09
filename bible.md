@@ -7468,3 +7468,10 @@ Path-B qualification was changed.
 B.Cu dogleg passes VBUS and USB3 endpoint audits but creates real RX_N/TX_N
 shorting/crossing classes in native DRC (512 findings / 499 inherited opens).
 The route was not promoted and validation rules were unchanged.
+
+2026-09-08: Reran the isolated RTL9210B Path-B evidence suite. Authority,
+corroborating support, M-key mapping, native netlist, WIP-conflict, and PDF
+pin audits passed; both native-netlist and PDF negative controls failed as
+intended. Path B remains isolated with support-field, provisioning, firmware
+provenance, and hardware validation gates open; Path A and production CAD are
+unchanged.
