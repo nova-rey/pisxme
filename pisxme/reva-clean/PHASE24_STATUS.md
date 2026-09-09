@@ -34,6 +34,14 @@ The native 4/4 mode graph passed in both, confirming the source fix; neither
 route is promoted. V6 remains the clean routing basis while J8 and its mode
 routes are regenerated with collision-aware placement.
 
+The source-driven J8 regeneration (`PHASE24_STORAGE_NETLIST_REGENERATED_J8_V1`
+and V2) confirms J8 is materialized with the correct four source nets and the
+native mode audit passes 4/4. Both are rejected routing candidates: V1 still
+carried the inherited old-J5 mode track, and V2's corrected mode routes
+re-exposed stale U12 TX pad-field shorts plus an AUTO_PEDET-to-socket-ground
+collision. These are copper regeneration/escape defects, not a reason to
+revert the source J8 correction or reject the storage architecture.
+
 ## CURRENT STATE — 2026-09-08
 
 The Y10 local-crystal relocation trial is rejected route evidence: it rebuilt

@@ -7846,3 +7846,9 @@ mode graph (4/4 plus trace-removal negative control), but V1 overlapped
 power-input J5 and V2 introduced native mode/selector and inherited
 U12/connector short classes. No route was promoted; V6 remains the clean
 USB3 RX-escape basis and J8 regeneration stays open.
+
+2026-09-08 — Source-driven J8 regeneration proved the corrected four-net
+footprint and native mode graph (4/4), but V1/V2 were rejected as copper
+implementations: inherited old-J5 routing and stale U12 pad-field/AUTO_PEDET
+collision classes remained. The source reference correction stands; the next
+attempt must co-author the affected U12 escape geometry instead of blaming J8.

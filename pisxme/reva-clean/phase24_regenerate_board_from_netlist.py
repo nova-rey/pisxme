@@ -31,6 +31,9 @@ PAD_ALIASES = {
            '5': ('A5',), '6': ('B5',)},
 }
 ADD = {
+    # Storage mode override was corrected from the colliding J5 reference to
+    # J8 in the authoritative STORAGE sheet.
+    'J8': ('MODE_JUMPER_1x04', (260, 165)),
     'C48': ('C_0603_1608Metric', (220, 180)),
     'C49': ('C_0603_1608Metric', (224, 180)),
     'C50': ('C_0603_1608Metric', (228, 180)),
