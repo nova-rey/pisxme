@@ -8342,3 +8342,6 @@ SPICS endpoint and passed native KiCad DRC with zero violations. Its saved
 board audit passed all five native endpoint assertions and source-track
 negative controls. This closes the disposable five-net SPI fixture only;
 Path-B support, firmware, productization, and integrated gates remain open.
+
+2026-09-09: Reconciled the duplicated stale V702 Phase 24 status section by
+marking it historical; V760 is the sole current RTL9210B SPI checkpoint.

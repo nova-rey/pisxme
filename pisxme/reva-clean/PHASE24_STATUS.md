@@ -8775,7 +8775,11 @@ V653's local Y1/C1/C2 relocation is rejected. It reduces the crystal span but
 creates C2/RTL_1V1 clearance and shorting findings, while XTAL_IN still
 contacts the nearby RTL_3V3 transition. Crystal routing requires co-authored
 source-field and capacitor placement.
-## CURRENT PATH-B CHECKPOINT — V702 (2026-09-09)
+## SUPERSEDED HISTORICAL PATH-B CHECKPOINT — V702 (2026-09-09)
+
+The following historical section is retained for evidence archaeology only.
+The authoritative current checkpoint is the V760 section at the top of this
+file; do not resume implementation from V702.
 
 V702 is the current disposable RTL9210B-CG support candidate. It preserves
 V699 and adds the U1.17 RTL_5V branch with an ordinary-via F.Cu/B.Cu/F.Cu
