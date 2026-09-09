@@ -1870,6 +1870,11 @@ the XTAL_IN via and V153 contacts the 1V1 source field. V154 moves only the
 native audit with no signal shorting/crossing. Promote V154 as the current
 REFCLK-ready local-support basis; XTAL_IN/REFCLK and remaining high-speed
 endpoints remain open.
+V861 added U1.33 to the V860 RTL_5V source network; its first join ended at
+the wrong coordinate and was rejected for a dangling In2 track. V862 corrected
+that junction to the actual V860 transition. Native DRC passes with 0
+violations and 30 expected incomplete items, and the complete RTL_5V audit
+passes U1.17/U1.33/C5.1 plus its trace-removal negative control.
 V155 is rejected: its split REFCLK_N escape still contacted U1 pad 65 and the
 outboard 1V1 handoff, while REFCLK_P contacted the XTAL_IN endpoint. V154
 remains the validated local-support basis; REFCLK requires a coordinated

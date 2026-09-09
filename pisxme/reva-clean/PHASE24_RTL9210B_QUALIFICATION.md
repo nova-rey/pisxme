@@ -740,3 +740,8 @@ the measured SPI-channel gap. Native DRC passes with 0 violations and 31
 expected incomplete items; the saved-board audit proves U1.17→C5.1 and a
 trace-removal negative control. U1.33 and the remaining RTL_5V/RTL_3V3/RTL_1V1
 endpoints remain open.
+V861 added U1.33 to the V860 RTL_5V network but was rejected for a dangling
+In2 track caused by an incorrect junction coordinate. V862 corrected that
+join to the actual V860 transition. Native DRC passes with 0 violations and
+30 expected incomplete items; the complete RTL_5V audit passes U1.17/U1.33/C5.1
+and its trace-removal negative control.
