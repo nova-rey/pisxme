@@ -7,8 +7,9 @@ JMS583 support network is already instantiated in the authoritative schematic
 and in the disposable routed-support candidates; older text below that says it
 “needs to be instantiated” is superseded historical wording. Path A is the
 active implementation. Path-B RTL9210B artifacts remain preserved
-qualification evidence, but Path B is rejected for the current Rev-A
-package/DFM contract and is not an execution gate.
+qualification evidence. Path B remains an isolated parallel candidate; its
+current execution gate is the open package/DFM and complete-support
+qualification, not a production promotion.
 
 Current open gates are Path-A native storage routing, complete mode-aware
 validation, M-key mechanical/land-pattern parity, and NVMe power/procurement

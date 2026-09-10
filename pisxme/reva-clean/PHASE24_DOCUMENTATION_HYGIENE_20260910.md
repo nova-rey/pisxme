@@ -15,7 +15,7 @@ historical receipts were not edited.
   retained as the accepted local primitive parent; the older V1195 header is
   no longer current.
 - RTL9210B remains a serious isolated parallel candidate, not a production
-  promotion or architecture rejection.
+  promotion or architecture rejection; V1461 is only a rejected route trial.
 - Current open gates are now stated explicitly: routing/source-field closure,
   mode-aware validation, M-key parity, NVMe power, firmware/programming,
   procurement, DFM, and integrated native closure.
