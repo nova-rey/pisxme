@@ -10442,3 +10442,9 @@ the prior short endpoint stub was replaced rather than overlaid. Native DRC
 reports zero violations, the open count falls from 22 to 21, and the saved-
 board audit passes U1.36/U1.40/U1.50/C4.1 with a U1.50 source-removal negative
 control. U1.16/U1.25/U1.55/U1.60/U1.63 remain open.
+
+V1377/V1378 are rejected U1.55 RTL_1V1 trials. V1377's jogged perimeter still
+crosses the existing GND field; V1378's F.Cu join enters the U1 exposed GND
+pad and the no-net U1.48 pad. These are preserved as route-implementation
+evidence. The accepted V1374/U1.50 basis remains authoritative; U1.55/U1.60/
+U1.63 require a co-authored escape that changes the source-field allocation.

@@ -140,6 +140,11 @@ native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
 
+2026-09-10 — Phase 24 V1377/V1378 rejected: U1.55 RTL_1V1 perimeter and F.Cu
+join attempts conflicted with the existing GND field and U1 exposed/no-net
+pads. Preserved the disposable evidence; the V1374 accepted basis remains
+unchanged and a different source-field allocation is required.
+
 2026-09-10 — Phase 24 V1371 rejected: the first RTL_1V1 split-bus attempt
 created 16 native DRC violations against the existing lane escape, U1.50
 neighboring USB pad, and RTL_3V3 corridor. Preserved as route evidence; the
