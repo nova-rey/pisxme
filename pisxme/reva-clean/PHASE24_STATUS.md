@@ -11169,3 +11169,12 @@ DRC is 146 violations / 499 unconnected items, exactly matching the V127
 ancestor; no new DRC class was introduced by the six-net transplant. This is
 accepted integrated support evidence, not Phase 24 closure. The remaining
 ancestor findings and broader storage/board gates remain OPEN.
+
+The V182 support primitive was then transplanted onto the more complete V75
+Path-A storage parent as `PHASE24_STORAGE_V75_WITH_V182_SUPPORT.kicad_pcb`.
+The candidate passes all ten USB3 endpoint assertions, complete SATA endpoint
+connectivity, 814-node/1263-pad parity with zero mismatches, and the saved-board
+removed-track negative control. Native DRC is 630/346 versus V75's 601/349:
+the three-open reduction is offset by 29 real inter-island route interactions.
+It is rejected as a production route but retained as the next coauthored
+storage basis. Receipt: `PHASE24_STORAGE_V75_WITH_V182_SUPPORT_RECEIPT.md`.

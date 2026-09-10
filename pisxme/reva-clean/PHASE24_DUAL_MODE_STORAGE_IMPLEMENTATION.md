@@ -928,6 +928,17 @@ The ten-net endpoint audit and removed-track negative control both pass. V182
 is therefore the current integrated USB3 support basis while full storage and
 Phase 24 closure remain open; it does not waive inherited findings.
 
+## Coordinated Path-A storage basis — V75 + V182
+
+The V182 support primitive was tested against the complete V75 Path-A storage
+parent. The disposable candidate passes native ten-net USB3 connectivity,
+complete SATA connectivity, schematic-to-PCB parity (814/1263/0), and the
+removed-track negative control. Its 630/346 DRC result is not a pass: it
+introduces 29 real inter-island route interactions despite reducing three
+opens. It is retained for obstacle-aware coauthoring; V75 remains the cleaner
+historical route parent until those interactions are regenerated. Receipt:
+`PHASE24_STORAGE_V75_WITH_V182_SUPPORT_RECEIPT.md`.
+
 ## Current live source/parity correction — 2026-09-08
 
 `STORAGE.kicad_sch` now has authoritative `JMS_USB3_TXN/P` instance labels on

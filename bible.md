@@ -10310,3 +10310,7 @@ the accepted local primitive. Receipt:
   integrated support candidate: ten endpoint assertions and the removed-track
   negative control pass; native DRC is 146/499, identical to the V127 ancestor.
   No inherited finding was waived and Phase 24 remains open.
+- A disposable transplant of V182 onto the complete V75 Path-A storage parent
+  passes USB3, SATA, parity (814/1263/0), and the negative control, but native
+  DRC is 630/346 versus V75's 601/349. It is retained for coauthoring and not
+  promoted because 29 real inter-island interactions were introduced.
