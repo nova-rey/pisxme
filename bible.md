@@ -9622,6 +9622,11 @@ source escapes, staggered J1 transitions, and an explicit SPISO bypass.
 Native endpoint and four negative-control audits pass; native DRC remains
 open as the acceptance discriminator. Production CAD and Path-A assets are
 unchanged.
+2026-09-09 — Phase 24 V1316 rejected: adding four RTL9210B lanes to the
+native-clean V850 rotated-support field passed endpoint and negative-control
+audits but native DRC reported 14 source-transition and outer-launch
+violations. Preserved the disposable evidence; V850 support and production/
+Path-A assets remain unchanged.
 2026-09-09 — Phase 24 V1316 rejected: adding four lanes to the native-clean
 V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
