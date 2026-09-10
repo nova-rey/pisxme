@@ -24,6 +24,10 @@ west handoff pads with native saved-board connectivity and six trace-removal
 negative controls. Native DRC has no shorts or crossings; its remaining
 warnings/opens are intentional stripped-support fixture findings. This local
 primitive is accepted, but full support/J1 launch integration remains OPEN.
+V1591 then searched from those handoffs to the actual J1/M.2 contacts and
+placed four nets before no legal remaining launch existed. The residual issue
+therefore follows the M.2/J1 launch field as well as the source-field
+coauthoring; no complete candidate was promoted.
 The active accepted local basis remains V1517 at 0° top-side orientation.
 The remaining technical task is a coordinated crystal/REFCLK/rail fanout
 that is authored against the actual saved pads and ordinary-via rules.
@@ -34,6 +38,7 @@ Path-A/Path-B comparison remain OPEN. Receipt:
 `PHASE24_RTL9210B_SOURCE_FIELD_ASTAR_DIAGNOSTIC_V1584_V1588_RECEIPT.md`.
 `PHASE24_RTL9210B_SOURCE_FIELD_COAUTHOR_REJECT_V1589_RECEIPT.md`.
 `PHASE24_RTL9210B_QFN_ESCAPE_HANDOFF_REJECT_V1590_RECEIPT.md`.
+`PHASE24_RTL9210B_HANDOFF_J1_ASTAR_REJECT_V1591_RECEIPT.md`.
 
 ## SUPERSEDED CURRENT-STATE HEADER — V1558
 

@@ -10694,3 +10694,11 @@ the accepted local primitive. Receipt:
   crossing, and footprint errors. Intentional stripped-support warnings and
   opens remain, so only the local source-escape primitive is accepted; full
   Path-B support and J1 launch remain open.
+
+## 2026-09-10 — rejected handoff-to-J1 launch diagnostic V1591
+
+- Starting from V1590 west handoffs, V1591 searched the six high-speed nets to
+  the actual J1/M.2 contacts. Four nets placed before no legal remaining
+  launch existed. No complete route was promoted; the remaining issue follows
+  the combined M.2/J1 launch field. Orientation, Path A, and rules remain
+  unchanged.

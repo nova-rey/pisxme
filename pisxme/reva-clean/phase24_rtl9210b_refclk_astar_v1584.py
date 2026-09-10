@@ -10,8 +10,8 @@ from math import hypot
 import pcbnew
 
 H=Path(__file__).resolve().parent
-BASE=H/'PHASE24_RTL9210B_U155_REHOME_V1517.kicad_pcb'
-OUT=H/'PHASE24_RTL9210B_SOURCE_FIELD_ASTAR_V1589.kicad_pcb'
+BASE=H/'PHASE24_RTL9210B_QFN_ESCAPE_HANDOFF_V1590.kicad_pcb'
+OUT=H/'PHASE24_RTL9210B_HANDOFF_TO_J1_ASTAR_V1591.kicad_pcb'
 F,B=pcbnew.F_Cu,pcbnew.B_Cu
 STEP=.25; X0,X1=84.,145.; Y0,Y1=38.,96.; W=.20; C=.20; VIA=.60
 LAYERS=(F,B)
@@ -92,23 +92,17 @@ def emit(board,net,path,source,target,reserved):
   if la==lb and a!=z:add_track(board,net,LAYERS[la],a,z)
 
 b=pcbnew.LoadBoard(str(BASE)); own={'REFCLK_P','REFCLK_N','LANE0_RXP','LANE0_RXN','LANE0_TXP','LANE0_TXN'}
-# Co-author the complete disposable U1 source field. Remove the six signal
-# nets globally and all local rail/return fanout inside the source envelope;
-# pads, footprints, and unrelated board geometry remain authoritative.
-def local(q):
- pts=[q.GetPosition()] if type(q).__name__=='PCB_VIA' else [q.GetStart(),q.GetEnd()]
- return any(87<=mm(p.x)<=106 and 63<=mm(p.y)<=80 for p in pts)
 for q in list(b.GetTracks()):
- if q.GetNetname() in own or local(q): b.RemoveNative(q)
+ if q.GetNetname() in own: b.RemoveNative(q)
 for pad in b.FindFootprintByReference('U1').Pads(): pad.SetLocalClearance(pcbnew.FromMM(.15))
 obs=obstacle_map(b,own); reserved={F:set(),B:set()}
 for name,source,target in (
- ('REFCLK_P',(94.05,70.4),(137.25,62.725)),
- ('LANE0_TXN',(94.05,72.8),(135.25,62.725)),
- ('LANE0_RXP',(94.05,71.6),(134.25,62.725)),
- ('LANE0_RXN',(94.05,72.0),(133.75,62.725)),
- ('REFCLK_N',(94.05,70.8),(136.75,62.725)),
- ('LANE0_TXP',(94.05,73.2),(135.75,62.725)),
+ ('REFCLK_P',(85.,70.4),(137.25,62.725)),
+ ('LANE0_TXN',(85.,72.8),(135.25,62.725)),
+ ('LANE0_RXP',(85.,71.6),(134.25,62.725)),
+ ('LANE0_RXN',(85.,72.0),(133.75,62.725)),
+ ('REFCLK_N',(85.,70.8),(136.75,62.725)),
+ ('LANE0_TXP',(85.,73.2),(135.75,62.725)),
 ):
  net=b.FindNet(name)
  # Permit only the exact endpoint cells; all other pads, including the

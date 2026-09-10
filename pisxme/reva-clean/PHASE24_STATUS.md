@@ -38,6 +38,12 @@ zero shorting/crossing and zero footprint errors; the remaining warnings and
 opens are intentional stripped-support fixture findings. Full support,
 REFCLK/crystal, and J1 launch integration remain OPEN.
 
+V1591 separately tested the launch from the accepted V1590 west handoffs to
+the actual J1/M.2 contacts. Four nets could be placed before no legal
+remaining launch existed; no complete route was saved or promoted. This
+confirms the remaining implementation issue includes the M.2/J1 launch
+field, not only U1 source escape.
+
 The current Path-A/Path-B storage comparison is recorded in
 `PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md`; it supersedes older status
 headers, not raw receipts. Path A remains protected. Path B is a serious
