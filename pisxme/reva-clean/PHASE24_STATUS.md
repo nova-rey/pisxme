@@ -11040,3 +11040,8 @@ finding. The y=150 support corridor is not transplantable through the live
 TP5/PERST geometry. The next candidate must shift that local corridor; no
 production support copper is promoted. Receipt:
 `PHASE24_STORAGE_TX_SUPPORT_V132_RECEIPT.md`.
+V133 shifted the TX support-cap corridor to y=160/165. Native DRC rejected it
+at 192/499 with real collisions into JMS_AVDD33, BRIDGE_1V1, and the U12
+support field. A downward translation is not sufficient; the next candidate
+must change local layer ownership or support-side corridor. Receipt:
+`PHASE24_STORAGE_TX_SUPPORT_V133_RECEIPT.md`.
