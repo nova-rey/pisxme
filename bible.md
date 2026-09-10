@@ -165,6 +165,11 @@ escape crossed R1 GND/RTL_1V1. V1428 remains accepted.
 crossed RTL_3V3/RTL_1V1 and shorted USB_RXN0. The trial is preserved; V1428
 remains the accepted composite base.
 
+2026-09-09 — Phase 24 V1442 added a net/layer-aware A* RSET search over the
+saved V1428 geometry. Both obstacle models found no path, so no PCB was
+generated and no architecture conclusion was drawn; native DRC remains the
+acceptance authority.
+
 2026-09-09 — Phase 24 V1432/V1433 rejected XTAL_IN southwest and offset
 routes from V1428. V1432 retained RTL_1V1 clearance and RTL_3V3 shorting;
 V1433 added LANE0_TXN crossing/shorting. XTAL_IN remains open; V1428 is

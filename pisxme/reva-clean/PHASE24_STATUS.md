@@ -10632,3 +10632,10 @@ V1440/V1441 are rejected westward R1 relocation trials. V1440's mixed-layer
 escape retained an RTL_3V3 clearance conflict and crossed the RTL_1V1 B.Cu
 run. V1441's direct F.Cu corridor crossed both the R1 GND lead and RTL_1V1.
 Neither relocation is promoted; the accepted V1428 composite is unchanged.
+
+V1442 introduced a net/layer-aware A* search over the saved V1428 pads,
+tracks, vias, and copper layers. The search produced no candidate under
+both the conservative and reduced obstacle models; therefore no PCB was
+written and no design conclusion is drawn from it. This is routing-tool
+evidence that the current grid abstraction cannot find a path, not a native
+DRC result or an architectural rejection.
