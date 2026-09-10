@@ -127,6 +127,7 @@ dangling warning. The saved-board audit passes U1.55/U1.60/U1.63-to-C4.1
 connectivity and all three source-trace negative controls. V1169 is the
 current accepted 1V1 QFN extension; remaining RTL_1V1 pads and support gates
 remain OPEN.
+
 V1170 tested an east U1.16 escape and was rejected at the adjacent RTL_5V
 pad field. V1171/V1172 tested south escapes; the latter retained an In2
 copper-sliver warning. V1173 simplified the In2 segment but retained source
@@ -11312,3 +11313,8 @@ violations) due GND-stitch and RTL_3V3-field collisions. Receipt:
 `PHASE24_RTL9210B_XTAL_FIELD_V1523_V1527_RECEIPT.md`. XTAL_IN and REFCLK_P/N
 remain the next Path-B local routing work; broader Path-B and Phase 24 gates
 remain OPEN.
+
+V1532 tested a layer-split crystal pair with XTAL_OUT on B.Cu and XTAL_IN on
+F.Cu. Native DRC rejected it with five QFN field/RSET/transition violations;
+it is preserved as route-class evidence. V1523/V1526 remain the accepted
+local basis.

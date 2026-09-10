@@ -10425,6 +10425,13 @@ the accepted local primitive. Receipt:
   and RTL_3V3-field collisions and is retained as route evidence.
 - XTAL_IN and REFCLK_P/N remain open; no Path-A or production CAD changed.
 
+## 2026-09-10 — Phase 24 RTL9210B V1532 crystal layer split
+
+- V1532 tested a layer-split crystal pair. Native DRC rejected five QFN
+  field/RSET/transition violations; it remains route evidence only.
+- V1523/V1526 remain the accepted isolated basis. No Path-A or production CAD
+  changed.
+
 ## 2026-09-10 — Phase 24 current-state documentation hygiene
 
 - Added explicit current-state overrides to the Phase 24 status, dual-mode
