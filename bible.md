@@ -10669,3 +10669,11 @@ the accepted local primitive. Receipt:
   REFCLK_N to LANE0_TXN shorting, and J1-side launch conflicts. Rejected as an
   isolated overlay; the next implementation must co-author crystal, REFCLK,
   rail, and adjacent lane fanout together. Orientation remains frozen.
+
+## 2026-09-10 — source-field obstacle-router diagnostic V1584–V1588
+
+- A native-geometry obstacle router searched the fixed V1517 field for all six
+  REFCLK/PCIe-lane nets after removing only their disposable local copper.
+  Individual pair-order trials found paths, but the best six-net ordering
+  placed five nets and had no legal path for the sixth. No incomplete route was
+  promoted; native rules and the Claude-selected orientation remain frozen.

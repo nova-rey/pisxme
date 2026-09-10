@@ -18,6 +18,13 @@ existing lane and J1 launch. This is additional route-implementation
 evidence, not a reason to reopen Claude's orientation decision. The next
 attempt must co-author the source field and adjacent lane fanout together.
 
+The V1584–V1588 obstacle-aware source-field diagnostic used actual saved
+pads/tracks/vias and ordinary F.Cu/B.Cu transitions. It found individual
+paths, but the six-net run could place only five nets before no legal sixth
+path remained. No incomplete result was promoted and native DRC rules were
+unchanged. Receipt:
+`PHASE24_RTL9210B_SOURCE_FIELD_ASTAR_DIAGNOSTIC_V1584_V1588_RECEIPT.md`.
+
 The current Path-A/Path-B storage comparison is recorded in
 `PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md`; it supersedes older status
 headers, not raw receipts. Path A remains protected. Path B is a serious
