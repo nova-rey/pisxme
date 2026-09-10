@@ -140,6 +140,11 @@ native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
 
+2026-09-10 — Phase 24 V1382 accepted: U1.16 RTL_1V1 descends to `(100.8,75.0)`
+and hands off on B.Cu to the existing `(102.0,64.8)` 1V1 trunk. Native DRC
+is zero; saved-board audit and source-removal negative control pass. U1.25/
+U1.60/U1.63 remain open.
+
 2026-09-10 — Phase 24 V1377/V1378 rejected: U1.55 RTL_1V1 perimeter and F.Cu
 join attempts conflicted with the existing GND field and U1 exposed/no-net
 pads. Preserved the disposable evidence; the V1374 accepted basis remains

@@ -10454,3 +10454,9 @@ exits left of the exposed pad, rises above the GND/3V3 B.Cu fields, and joins
 the accepted U1.50 corridor without a new via. Native DRC reports zero
 violations; the saved-board audit passes U1.36/U1.40/U1.50/U1.55/C4.1 and the
 U1.55 source-removal negative control. U1.16/U1.25/U1.60/U1.63 remain open.
+
+V1382 is accepted as the current U1.16 RTL_1V1 primitive. U1.16 descends
+straight on F.Cu, transitions at `(100.8,75.0)`, and uses a short B.Cu shelf
+to the established `(102.0,64.8)` 1V1 trunk without touching U1.17 or the
+accepted 3V3 field. Native DRC reports zero violations; the saved-board audit
+and U1.16 source-removal negative control pass. U1.25/U1.60/U1.63 remain open.
