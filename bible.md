@@ -10538,3 +10538,6 @@ the accepted local primitive. Receipt:
 - The V1562 board also passes the focused SATA, USB3, selector-geometry,
   JMS583-support, and JMS_REXT audits; these remain local regression checks,
   not full-board closure.
+- A fresh like-for-like V79 native DRC baseline is 602 violations / 351
+  unconnected items. V1562 is 610 / 342: nine opens are removed at the cost
+  of eight DRC findings, with no new storage-rail shorting/crossing section.
