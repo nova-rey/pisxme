@@ -10926,3 +10926,13 @@ the accepted local primitive. Receipt:
   fixture as the next gate. Updated the support-parity receipt to point to
   the same authoritative pin correction. Older checkpoint prose remains
   historical and was not rewritten.
+
+## 2026-09-10 — corrected MIC2545A disposable fixture passes native DRC
+
+- Built `PHASE24_MIC2545A_SUPPORT_FIXTURE.kicad_pcb` from the corrected
+  Microchip pin map. Physical duplicated `IN`/`OUT` joins, a deliberate
+  two-layer output escape, local bypass/ground return, and an actual-trace
+  negative control pass. Native KiCad DRC reports 0 violations, 0
+  unconnected items, and 0 footprint errors. This is disposable electrical
+  support evidence; final manufacturer land-pattern and production
+  integration gates remain open.

@@ -1,0 +1,26 @@
+{
+  "board": "PHASE24_MIC2545A_SUPPORT_FIXTURE.kicad_pcb",
+  "device": "MIC2545A-1YM",
+  "authoritative_pin_facts": {
+    "IN": [
+      5,
+      7
+    ],
+    "OUT": [
+      6,
+      8
+    ],
+    "GND": 3,
+    "ILIM": 4,
+    "EN": 1,
+    "FLG": 2
+  },
+  "native_physical_joins": {
+    "IN_5_7": "PASS",
+    "OUT_6_8": "PASS"
+  },
+  "negative_controls": {
+    "removed_IN_5_7_join": "PASS"
+  },
+  "verdict": "DISPOSABLE_ELECTRICAL_FIXTURE_PASS"
+}
