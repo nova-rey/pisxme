@@ -101,6 +101,11 @@ with a short F.Cu left escape, one ordinary via, and a B.Cu handoff. Native
 DRC remains zero and the open count falls to 26. V1360-V1364 rejected nearby
 U1.20 escapes against SPISO3/SPICLK/SPICS or the exposed-pad/GND envelope;
 preserved as route evidence for a co-authored source-field repair.
+
+2026-09-09 — Phase 24 V1365 rejected: extending the U1.20 RTL_3V3 dogbone
+past the SPICLK endpoint still conflicted with the adjacent SPICLK/SPISO via
+field. The next attempt must co-author the neighboring SPI source exits; no
+package, placement, or architecture conclusion was made.
 2026-09-09 — Phase 24 V1322: tested an F.Cu south-bridge allocation around the
 complete V1058 RTL9210B support field while retaining V1258 staggered source
 and connector primitives. Native DRC rejected 18 violations from QFN source

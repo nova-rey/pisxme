@@ -10386,6 +10386,12 @@ violates the exposed-pad/GND envelope. These are route-implementation evidence,
 not a placement or architecture failure. The accepted V1359 basis remains the
 current source for the next co-authored U1.20/SPI escape.
 
+V1365 is rejected. Extending the U1.20 F.Cu dogbone beyond the SPICLK endpoint
+still places the transition against the SPICLK/SPISO via field on the saved
+board. The result confirms that U1.20 must be co-authored with at least the
+neighboring SPI source exits; it does not invalidate the RTL_3V3 net or the
+RTL9210B package/placement.
+
 V1356 REFCLK left/upper trial is rejected as a route implementation failure:
 native DRC found source-field crossings/shorts against the existing lane and
 XTAL geometry and a P/N source-exit collision. It is retained as disposable
