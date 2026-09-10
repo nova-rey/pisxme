@@ -74,6 +74,12 @@ if os.environ.get("PISXME_ATTACH_STORAGE_SUPPORT") == "1":
                 (181.5, 135.0, 184.0, 135.0)],
         "R81": [(125.5, 145.0, 125.5, 147.0)],
     }
+    if os.environ.get("PISXME_SUPPORT_VARIANT") == "u12_separated":
+        support = {
+            "U12": [(153.5, 136.6, 147.5, 136.6),
+                    (154.8, 139.5, 157.0, 142.0),
+                    (156.5, 135.0, 161.5, 134.0)],
+        }
     spine = pt(188.0, 146.0)
     track(pt(232.0, 146.0), spine, pcbnew.In2_Cu, 0.60)
     for entries in support.values():

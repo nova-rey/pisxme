@@ -10561,6 +10561,13 @@ the accepted local primitive. Receipt:
   to 634/334 with real local crossings/shorts. Rejected the common-spine
   route class and retained V1562.
 
+## 2026-09-10 — U12 separated storage-power taps V1565
+
+- Tested only the three U12 `STORAGE_3V3` support pads with separated local
+  escapes. Opens improved 342 to 339, but native DRC worsened 603 to 610 and
+  introduced a real `STORAGE_3V3`/`CM5_USB3_RX_P` short. Rejected this escape
+  placement and preserved V1562.
+
 ## 2026-09-10 — Phase 24 status reconciliation V1562
 
 - Updated `PHASE24_STATUS.md` with the live V1562 focused storage result,
