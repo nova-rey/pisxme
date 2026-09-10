@@ -11074,3 +11074,8 @@ support nets, but native DRC retained six target crossing/clearance findings
 plus two silk warnings. V139 is rejected; the next candidate changes U12
 orientation and regenerates the local launch. Receipt:
 `PHASE24_STORAGE_SUPPORT_TARGET_ABOVE_V139_RECEIPT.md`.
+V140 tested a 90-degree U12 storage-local reorientation in a stripped local
+fixture. Native DRC rejected it at 19 violations, including real U12 pad-field
+shorts/crossings and corridor collisions. V140 is rejected; any orientation
+change requires transform-aware regeneration of both CM5 source and bridge
+launches. Receipt: `PHASE24_STORAGE_SUPPORT_U12_ROT90_V140_RECEIPT.md`.
