@@ -72,6 +72,12 @@ DRC reduced the fixture to 16 violations and 39 opens, but source-to-via-row
 diagonals still shorted/crossed TX/RX and REFCLK nets. No candidate was
 promoted; the next trial must assign source-side layers explicitly.
 
+V1599 tested a disposable RX/REFCLK polarity-remap hypothesis. Native DRC
+rejected it with 43 violations and 41 opens, including malformed/blank
+connector net ownership in the disposable remap. It provides no production
+polarity evidence and was not promoted; the baseline U1 orientation and V1590
+escape remain authoritative.
+
 V1592 corrected the endpoint rectangle model and generated complete paths for
 all six handoff-to-J1 nets, but native DRC rejected them with 594 clearance
 violations. No candidate was promoted; the corrected endpoint model remains

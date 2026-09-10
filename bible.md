@@ -10454,6 +10454,13 @@ the accepted local primitive. Receipt:
   diagonals still shorted/crossed TX/RX and REFCLK nets. Rejected; source-side
   layer assignment must be explicit in the next trial.
 
+## 2026-09-10 — rejected polarity-ordered RTL9210B launch V1599
+
+- V1599 tested a disposable RX/REFCLK polarity-remap hypothesis. Native DRC
+  found 43 violations and 41 fixture opens, including malformed/blank
+  connector net ownership in the remap. Rejected; no production pad remap or
+  architecture change was promoted.
+
 ## 2026-09-10 — Phase 24 RTL9210B V1547 crystal source sweep
 
 - V1547 generated and native-checked 16 crystal source variants from V1523.
