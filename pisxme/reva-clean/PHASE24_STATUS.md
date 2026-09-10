@@ -10575,6 +10575,10 @@ V1428 composite. V1429's long west shelf crossed the existing LANE0_RXN
 escape and duplicated a transition via. V1430's side drop shorted the
 LANE0_RXP and SPISI fields. These are route-implementation failures; U1.63
 remains OPEN and the V1428 accepted composite is retained.
+
+V1431 is a rejected U1.66 GND west-escape trial from V1428. Native DRC
+reported a short into U1 pad 44/no-net and multiple conflicts with the
+LANE0_RXN field. U1.66 ground remains OPEN; no accepted primitive changed.
 V1421 is a rejected RSET perimeter trial from V1415. Its short F.Cu route
 from U1.51 to R1.1 crossed the accepted U1.55/RTL_1V1 perimeter and contacted
 R1's GND pad; native DRC reported two violations. RSET remains OPEN and no

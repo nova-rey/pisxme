@@ -164,6 +164,10 @@ and two source-removal controls PASS, with ten unconnected pads remaining.
 the V1428 accepted composite: V1429 crossed LANE0_RXN and duplicated a via;
 V1430 shorted LANE0_RXP/SPISI fields. Preserved evidence and retained V1428
 as the active accepted-primitive base.
+
+2026-09-09 — Phase 24 V1431 rejected a U1.66 GND west escape from V1428;
+native DRC found a no-net pad short and LANE0_RXN conflicts. U1.66 remains
+open and V1428 remains the accepted composite base.
 2026-09-09 — Phase 24 V1422 rejected an outboard RSET B.Cu shelf. Native DRC
 reported 12 source-field, GND, and accepted-rail violations; RSET remains
 open and no production asset changed.
