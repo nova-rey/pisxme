@@ -11002,3 +11002,10 @@ RX shorts and crossings at 153/499 and is rejected. The next implementation
 must solve via/filled-plane compatibility while preserving the V121 source
 escape and V123 PERST result. Receipt:
 `PHASE24_USB3_INTEGRATION_V122_V124_RECEIPT.md`.
+V127 moved only storage-local R80 out of the V123 USB3 corridor. Native DRC
+improved to 146/499 with no `shorting_items`, `tracks_crossing`, or
+`track_width` findings; the four-endpoint U12 native audit still passes. The
+remaining first DRC findings are inherited CM5_REFCLK clearance and other
+unfinished-board findings. V127 is the best current integrated USB3
+route-development candidate, not Phase 18/24 closure. Receipt:
+`PHASE24_USB3_INTEGRATION_V127_RECEIPT.md`.

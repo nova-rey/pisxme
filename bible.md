@@ -10193,3 +10193,7 @@ removed all USB3 shorts/crossings; native DRC remained 300/499 from
 via/plane and other clearance findings. V124 reintroduced pair shorts and
 crossings and was rejected. The next candidate must keep the V123 PERST
 result while making the transitions compatible with filled planes.
+V127 moved storage-local R80 out of the USB3 corridor. Native DRC improved to
+146/499 with no shorts, crossings, or track-width findings, and all four
+J7-to-U12 endpoint assertions passed. Support routing and full-board closure
+remain open.
