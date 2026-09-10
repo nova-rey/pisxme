@@ -75,6 +75,12 @@ PCB: all eight pads are SMD/F.Cu with 1.55×0.60-mm dimensions, 1.27-mm pitch,
 silkscreen graphics. This closes the disposable footprint geometry audit;
 assembly-house review and production integration remain open.
 
+The first MIC2545A-to-Path-B integration trial is rejected as
+`REJECTED_ROUTE_IMPLEMENTATION`: native DRC found 22 violations and 4 opens
+from the attempted U1.12 and SSD_3V3 corridor geometry. It does not invalidate
+the corrected support circuit or frozen V1517/V1603 baseline. Receipt:
+`PHASE24_MIC2545A_INTEGRATION_TRIAL_REJECT.md`.
+
 ## Support parity consolidation — 2026-09-10
 
 Claude's bounded review identified the missing consolidated support audit.

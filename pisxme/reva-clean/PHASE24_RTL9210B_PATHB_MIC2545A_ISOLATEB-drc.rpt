@@ -1,0 +1,121 @@
+** Drc report for PHASE24_RTL9210B_PATHB_MIC2545A_ISOLATEB.kicad_pcb **
+** Created on 2026-09-10T13:41:27 **
+** Report includes: Errors, Warnings **
+
+** Found 22 DRC violations **
+[shorting_items]: Items shorting two nets (nets GND and SSD_3V3)
+    Local override; error
+    @(124.0000 mm, 90.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(134.0000 mm, 84.3650 mm): Track [SSD_3V3] on B.Cu, length 11.4784 mm
+[shorting_items]: Items shorting two nets (nets SSD_3V3 and GND)
+    Local override; error
+    @(116.0000 mm, 80.0000 mm): Track [SSD_3V3] on B.Cu, length 8.0000 mm
+    @(115.6000 mm, 78.0000 mm): Via [GND] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(116.0000 mm, 80.0000 mm): Track [SSD_3V3] on B.Cu, length 8.0000 mm
+    @(113.8000 mm, 77.2000 mm): Track [RTL_3V3] on B.Cu, length 7.2000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(108.0000 mm, 72.0000 mm): Track [SPICLK] on B.Cu, length 9.4000 mm
+    @(116.0000 mm, 80.0000 mm): Track [SSD_3V3] on B.Cu, length 8.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(109.0000 mm, 75.2000 mm): Track [SPISI] on B.Cu, length 7.2000 mm
+    @(116.0000 mm, 80.0000 mm): Track [SSD_3V3] on B.Cu, length 8.0000 mm
+[shorting_items]: Items shorting two nets (nets SPISI and SSD_3V3)
+    Local override; error
+    @(116.2000 mm, 75.2000 mm): Via [SPISI] on F.Cu - B.Cu
+    @(116.0000 mm, 80.0000 mm): Track [SSD_3V3] on B.Cu, length 8.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(110.0000 mm, 67.2000 mm): Track [RTL_5V] on F.Cu, length 11.0000 mm
+    @(116.0000 mm, 72.0000 mm): Track [SSD_3V3] on F.Cu, length 9.3589 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(101.9500 mm, 67.2000 mm): Track [RTL_5V] on F.Cu, length 19.0500 mm
+    @(116.0000 mm, 72.0000 mm): Track [SSD_3V3] on F.Cu, length 9.3589 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(124.0000 mm, 90.0000 mm): Track [SSD_3V3] on B.Cu, length 12.8062 mm
+    @(102.0000 mm, 81.0000 mm): Track [PERST_N] on B.Cu, length 32.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(136.0000 mm, 80.0000 mm): Track [RTL_3V3] on F.Cu, length 14.8000 mm
+    @(134.0000 mm, 81.0000 mm): Track [PERST_N] on F.Cu, length 10.7250 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(107.0000 mm, 74.0000 mm): Track [CLKREQ_N] on B.Cu, length 12.2000 mm
+    @(116.0000 mm, 80.0000 mm): Track [SSD_3V3] on B.Cu, length 8.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(101.8000 mm, 74.8000 mm): Track [ISOLATEB] on B.Cu, length 7.9076 mm
+    @(100.8000 mm, 75.0000 mm): Track [RTL_1V1] on B.Cu, length 1.2000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(99.6000 mm, 73.9500 mm): Track [CLKREQ_N] on F.Cu, length 1.0500 mm
+    @(99.2000 mm, 73.9500 mm): Track [ISOLATEB] on F.Cu, length 2.7354 mm
+[shorting_items]: Items shorting two nets (nets RTL_5V and ISOLATEB)
+    Local override; error
+    @(101.2000 mm, 73.9500 mm): Track [RTL_5V] on F.Cu, length 2.2611 mm
+    @(101.8000 mm, 74.8000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets RTL_1V1 and ISOLATEB)
+    Local override; error
+    @(100.8000 mm, 75.0000 mm): Track [RTL_1V1] on B.Cu, length 1.2000 mm
+    @(101.8000 mm, 74.8000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(101.8000 mm, 74.8000 mm): Track [ISOLATEB] on B.Cu, length 7.9076 mm
+    @(96.4000 mm, 79.5000 mm): Track [PEDET] on B.Cu, length 22.6000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(124.0000 mm, 90.0000 mm): Track [SSD_3V3] on B.Cu, length 12.8062 mm
+    @(106.0000 mm, 81.5000 mm): Track [ISOLATEB] on B.Cu, length 21.3596 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.2000 mm, 73.9500 mm): Track [ISOLATEB] on F.Cu, length 2.7354 mm
+    @(99.6000 mm, 73.9500 mm): Pad 13 [CLKREQ_N] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.2000 mm, 73.9500 mm): Track [ISOLATEB] on F.Cu, length 2.7354 mm
+    @(100.0000 mm, 73.9500 mm): Pad 14 [PERST_N] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.2000 mm, 73.9500 mm): Track [ISOLATEB] on F.Cu, length 2.7354 mm
+    @(100.4000 mm, 73.9500 mm): Pad 15 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.2000 mm, 73.9500 mm): Track [ISOLATEB] on F.Cu, length 2.7354 mm
+    @(100.8000 mm, 73.9500 mm): Pad 16 [RTL_1V1] of U1 on F.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(136.0000 mm, 92.0000 mm): Via [GND] on F.Cu - B.Cu
+
+** Found 4 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(124.0000 mm, 89.2000 mm): Pad 2 [GND] of R15 on F.Cu
+    @(127.3000 mm, 85.6350 mm): Pad 3 [GND] of U3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(127.3000 mm, 84.3650 mm): Pad 2 [GND] of U3 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(127.3000 mm, 85.6350 mm): Pad 3 [GND] of U3 on F.Cu
+    @(127.3000 mm, 84.3650 mm): Pad 2 [GND] of U3 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(127.3000 mm, 85.6350 mm): Pad 3 [GND] of U3 on F.Cu
+    @(136.0000 mm, 90.8000 mm): Pad 2 [GND] of C18 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

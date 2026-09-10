@@ -10968,3 +10968,11 @@ the accepted local primitive. Receipt:
   spacing and pad dimensions, explicit mask/paste settings, and present
   courtyard/silkscreen graphics. Production assembly-house review and
   RTL9210B integration remain open.
+
+## 2026-09-10 — rejected first MIC2545A integrated route trial
+
+- Preserved `PHASE24_RTL9210B_PATHB_MIC2545A_ISOLATEB.kicad_pcb` and its raw
+  native DRC report as a rejected disposable experiment. The trial had 22
+  violations and 4 opens caused by U1.12/SSD_3V3 corridor collisions with
+  existing support copper. Classified as route implementation failure only;
+  the corrected MIC2545A fixture and frozen V1517/V1603 baseline remain valid.
