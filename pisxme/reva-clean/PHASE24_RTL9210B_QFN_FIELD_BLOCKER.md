@@ -19,6 +19,11 @@ V1589 then removed the complete disposable local source-field rail/return
 copper and still found only four of six paths before REFCLK_N had no legal
 remaining path. This narrows the remaining issue to the combined QFN escape
 and J1 launch topology, not merely inherited rail congestion.
+V1590 isolates the package escape: all six U1 high-speed pads reach explicit
+west handoff pads with native saved-board connectivity and six trace-removal
+negative controls. Native DRC has no shorts or crossings; its remaining
+warnings/opens are intentional stripped-support fixture findings. This local
+primitive is accepted, but full support/J1 launch integration remains OPEN.
 The active accepted local basis remains V1517 at 0° top-side orientation.
 The remaining technical task is a coordinated crystal/REFCLK/rail fanout
 that is authored against the actual saved pads and ordinary-via rules.
@@ -28,6 +33,7 @@ Path-A/Path-B comparison remain OPEN. Receipt:
 `PHASE24_RTL9210B_REFCLK_OUTER_CORRIDOR_REJECT_V1583_RECEIPT.md`.
 `PHASE24_RTL9210B_SOURCE_FIELD_ASTAR_DIAGNOSTIC_V1584_V1588_RECEIPT.md`.
 `PHASE24_RTL9210B_SOURCE_FIELD_COAUTHOR_REJECT_V1589_RECEIPT.md`.
+`PHASE24_RTL9210B_QFN_ESCAPE_HANDOFF_REJECT_V1590_RECEIPT.md`.
 
 ## SUPERSEDED CURRENT-STATE HEADER — V1558
 

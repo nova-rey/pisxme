@@ -31,6 +31,13 @@ legal REFCLK_N path remained. This rules out inherited rail congestion as the
 sole cause and leaves the combined QFN source escape/J1 launch topology as
 the active route-implementation problem. No candidate was promoted.
 
+V1590 accepted the local QFN source-escape primitive: all six U1 high-speed
+net endpoints reach explicit west handoff pads, with native saved-board
+connectivity and six trace-removal negative controls passing. Native DRC has
+zero shorting/crossing and zero footprint errors; the remaining warnings and
+opens are intentional stripped-support fixture findings. Full support,
+REFCLK/crystal, and J1 launch integration remain OPEN.
+
 The current Path-A/Path-B storage comparison is recorded in
 `PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md`; it supersedes older status
 headers, not raw receipts. Path A remains protected. Path B is a serious

@@ -10685,3 +10685,12 @@ the accepted local primitive. Receipt:
   native saved geometry. Four paths were found before no legal REFCLK_N path
   remained. The result narrows the issue to the combined QFN escape/J1 launch
   topology; no rules, orientation, or Path-A assets changed.
+
+## 2026-09-10 — accepted local QFN escape primitive V1590
+
+- V1590 connected all six fixed-orientation U1 high-speed source pads to
+  explicit west handoff pads. Native saved-board connectivity and six
+  trace-removal negative controls passed; native DRC had zero shorting,
+  crossing, and footprint errors. Intentional stripped-support warnings and
+  opens remain, so only the local source-escape primitive is accepted; full
+  Path-B support and J1 launch remain open.
