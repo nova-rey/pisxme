@@ -10125,3 +10125,7 @@ probing the JMS583 QFN. Native schematic/mode, USB3, SATA, and nine-contact
 power-owner audits plus the trace-removal negative control pass. DRC is 607 /
 341 with only the inherited XOUT/JMS_XAVDDH shorting entry. V89 is the best
 disposable physical-power candidate; full-board gates remain open.
+2026-09-10 — Isolated the V89 native DRC anomaly: U14.5 source pickup alone
+does not reproduce the XOUT/JMS_XAVDDH short, while the J3-side drop class
+does. V89 remains rejected; connector-field power access needs a new route
+class. Evidence: `PHASE24_STORAGE_V89_ISOLATION_RECEIPT.md`.

@@ -10889,4 +10889,7 @@ mode, USB3, SATA, and 9-contact power-owner audits pass, including the
 trace-removal negative control. DRC is 607 / 341, but the regenerated board
 adds an XOUT/JMS_XAVDDH short absent from the freshly refilled V79 baseline.
 V89 is not accepted; it remains the best disposable physical-power candidate
-pending removal of that short and completion of full-board gates.
+pending removal of that short and completion of full-board gates. Matched
+isolation shows the U14.5 source pickup alone produces no shorting entry; the
+J3-side power drops reproduce it. See
+`PHASE24_STORAGE_V89_ISOLATION_RECEIPT.md`.

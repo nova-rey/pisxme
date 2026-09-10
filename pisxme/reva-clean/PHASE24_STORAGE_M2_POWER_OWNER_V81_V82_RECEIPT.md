@@ -66,4 +66,7 @@ ownership.
   regenerated board contains an `XOUT`/`JMS_XAVDDH` shorting entry not present
   in the freshly refilled V79 baseline. V89 is therefore not accepted; it is
   the best disposable physical-power candidate pending removal of that
-  regeneration-induced short and completion of the full-board gates.
+  regeneration-induced short and completion of the full-board gates. Isolation
+  evidence in `PHASE24_STORAGE_V89_ISOLATION_RECEIPT.md` shows the source
+  pickup alone does not reproduce the short; the J3-side drop class does. V89
+  remains rejected pending a different connector-field power-access method.
