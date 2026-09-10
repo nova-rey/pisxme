@@ -82,6 +82,10 @@ Native DRC reported six crossings/shorts against SPI/control and 1V1
 geometry. The disposable evidence is preserved; accepted V1392 and Path A
 remain unchanged.
 
+2026-09-09 — Phase 24 V1445-V1448 swept four U1.66 GND local launches.
+V1446 was best at two native violations but still shorted/mask-bridged
+LANE0_TXN at U1 pad 67. No ground candidate was promoted; U1.66 remains open.
+
 2026-09-09 — Phase 24 V1444 rejected a west/south R1 relocation trial. It
 exposed stale inherited local GND copper at the old footprint and retained
 an RTL_1V1 crossing; future relocation generation must move support return

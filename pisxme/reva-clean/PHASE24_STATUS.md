@@ -10650,3 +10650,8 @@ but inherited local GND copper remained at the old R1 coordinates and the
 direct replacement RSET corridor crossed the existing RTL_1V1 shelf. This
 also records a generator requirement: coherent support relocation must move
 or regenerate its local return copper with the footprint.
+
+V1445-V1448 are a four-variant U1.66 local GND sweep from V1428. Native DRC
+reported 9, 2, 11, and 15 violations respectively; V1446 was best but still
+shorted/mask-bridged U1 pad 67 LANE0_TXN at the QFN departure. No candidate is
+promoted; U1.66 remains OPEN and this is a coupled QFN-escape problem.
