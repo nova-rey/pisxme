@@ -10155,3 +10155,6 @@ V103/V104 demonstrated strict native source co-connectivity through an In2
 storage plane, but native DRC still found real shorts; neither is promoted.
 V105's selector-only outer-corridor re-route was also rejected at native
 614/341; no production routing was promoted.
+V106–V108 preserved selector-rotation diagnostics; the stripped fixture
+confirmed that future pin-9 routing requires explicit package/DFM rule
+authority, so no integrated rotation was promoted.

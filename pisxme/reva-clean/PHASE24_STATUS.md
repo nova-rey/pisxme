@@ -10930,6 +10930,10 @@ plane and passed the strict-source audit, but native DRC reported 612/333
 with real rail-to-signal/via shorts. V104 revised the U13/U14 escapes and
 reduced this to 610/337, with NC_26/STORAGE_SEL and latent XOUT shorts still
 present. Both are rejected; V94 remains the cleanest disposable parent.
+V106–V108 tested selector rotation and a stripped pin-9 escape fixture.
+Rotation invalidates the inherited copper, while the stripped fixture still
+shows the package's intrinsic sub-0.2-mm pad clearances. No rotation or local
+rule exception is promoted; the integrated source remains unchanged.
 V105 independently re-routed only `STORAGE_SEL` around the outer F.Cu
 corridor; native DRC was 614/341 with crossings and the recurring
 XOUT/JMS_XAVDDH short, so the selector route remains a route-implementation
