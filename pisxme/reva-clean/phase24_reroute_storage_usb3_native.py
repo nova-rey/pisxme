@@ -35,7 +35,10 @@ def line(o,l,a,z,r=.2):
 def occ(b):
     o={F:set(),B:set()}
     for t in b.GetTracks():
-        if 'CM5_USB3_' in t.GetNetname(): continue
+        # Native saves may serialize the same net as /CORE_CM5/CM5_USB3_*.
+        # Compare the canonical leaf so stale donor aliases do not block or
+        # survive a regenerated source escape.
+        if t.GetNetname().rsplit('/',1)[-1].startswith('CM5_USB3_'): continue
         if isinstance(t,pcbnew.PCB_VIA):
             p=xy(t.GetPosition());block(o,F,p,.35);block(o,B,p,.35)
         else: line(o,t.GetLayer(),xy(t.GetStart()),xy(t.GetEnd()),.22)
@@ -90,7 +93,7 @@ for name,jp,_up in jobs:
 terminals=[(name,xy(pad(b,'J7',jp).GetPosition()),xy(pad(b,target_ref,up).GetPosition())) for name,jp,up in jobs]
 o=occ(b)
 for t in list(b.GetTracks()):
-    if 'CM5_USB3_' in t.GetNetname():b.Remove(t)
+    if t.GetNetname().rsplit('/',1)[-1].startswith('CM5_USB3_'):b.Remove(t)
 for name,a,z in terminals:
     n=find_net(b,name);emit(b,n,astar(o,a,z),o);print(name,a,z)
 b.Save(str(OUT));print(OUT)

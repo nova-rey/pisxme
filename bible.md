@@ -10169,3 +10169,9 @@ stage is required before any placement candidate can be promoted.
 V114 implemented the storage-owned copper scrub; V115's native-pad USB3
 regeneration was rejected at 403/499 for source-field shorts/crossings. This
 is router/source-alias evidence and did not change production CAD.
+V116 corrected scrub ownership to use canonical hierarchical net leaves and
+verified zero remaining storage-owned tracks natively; its JLC-profile DRC
+was 262/499. V117 propagated the matcher into the USB3 rerouter but was
+rejected at 405/499 for true J7 source-field shorts/crossings. The A* endpoint
+halo is incompatible with the 0.4-mm connector pitch; the next route class is
+the existing explicit monotonic dogbone escape retargeted to U12.

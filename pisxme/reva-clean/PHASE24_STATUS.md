@@ -10961,3 +10961,13 @@ pad A* USB3 authoring path and was rejected at 403/499 with real CM5 source-
 field shorts and crossings. The failure is classified as router/source-alias
 implementation, not macro-placement; see
 `PHASE24_STORAGE_REGEN_V114_V115_RECEIPT.md`.
+V116 corrected the scrub boundary to canonicalize hierarchical net aliases;
+native inspection found zero remaining storage-owned tracks after the scrub.
+Its JLC-profile DRC is 262 / 499. V117 propagated the same alias-safe logic
+into the native USB3 rerouter, but its A* search still produced 405 / 499 with
+true J7 source-field shorts and crossings. V117 is rejected as a
+route-authoring failure: its 2 mm endpoint halo erases neighboring pads in
+the 0.4 mm-pitch connector field. V116 remains the honest regeneration base;
+the next experiment is the existing explicit monotonic dogbone escape
+retargeted to U12. Receipt:
+`PHASE24_STORAGE_SCRUB_V116_USB3_V117_RECEIPT.md`.
