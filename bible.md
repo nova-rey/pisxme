@@ -10441,6 +10441,15 @@ the accepted local primitive. Receipt:
   DRC has zero high-speed errors. This is a local launch primitive pending
   complete Path-B support and acreage integration.
 
+## 2026-09-10 — V1603 re-based on clean V1517 support baseline
+
+- Rebuilt the accepted six-net launch against the clean V1517 support board,
+  rather than carrying V1601's extra unfinished support copper. Native DRC
+  has zero high-speed errors; the remaining seven opens and two warnings are
+  localized RTL_1V1/XTAL_IN support work. Integrated saved-board connectivity
+  and six negative controls pass. Continue support-field closure without
+  reopening U1 orientation or launch topology.
+
 ## 2026-09-10 — rejected co-authored RTL9210B launch V1596
 
 - V1596 co-authored distinct-x disposable handoffs with the J1 launch, but its

@@ -35,6 +35,12 @@ support-field warnings/opens are still open and must be closed before Phase 24
 promotion. Orientation search remains closed and no validation severity or
 layer rule may be relaxed.
 
+The current baseline is now `PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED`:
+it applies the accepted launch to the clean V1517 support board. Native DRC
+has zero high-speed errors; seven support opens and two inherited warnings
+remain. Continue by repairing RTL_1V1/XTAL_IN support in this local field,
+then rerun the integrated audit.
+
 ## Resume point
 
 Resume from the pushed checkpoint containing this note. Historical rejected
