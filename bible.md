@@ -10854,3 +10854,12 @@ the accepted local primitive. Receipt:
   zero unconnected pads, and zero footprint errors. This is isolated CAD
   evidence; firmware, procurement, production parity, acreage integration,
   and full Phase 24 closure remain open.
+
+## 2026-09-10 — RTL9210B qualification current-state override
+
+- Reconciled the qualification narrative with the live V1603/V1523 isolated
+  candidate. The native-clean support/launch implementation and saved-board
+  census are now the current CAD evidence; pre-V1603 source-field failures
+  are explicitly historical. Production parity, application-circuit,
+  procurement, virgin-programming, firmware-provenance, SSD power/thermal,
+  and acreage gates remain open.

@@ -1,5 +1,25 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
+## CURRENT LIVE OVERRIDE — 2026-09-10 — V1603/V1523 isolated candidate
+
+The current isolated Path-B implementation baseline is
+`PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED.kicad_pcb`, generated from
+the V1523 support baseline. Claude's accepted U1 orientation remains closed:
+RTL9210B-CG, top side, 0 degrees, pin 1 southwest. The V1603 high-speed
+launch, V1523 support field, RTL_1V1 shelf, and crystal corridors are native
+DRC-clean. `phase24_rtl9210b_pathb_census.py` confirms the asserted U1/J1
+pad-net identities and native endpoint connectivity; six actual-trace-removal
+negative controls pass. The current DRC receipt reports 0 violations, 0
+unconnected pads, and 0 footprint errors.
+
+This closes the isolated CAD/support/launch implementation gate only. The
+current open gates are production schematic/PCB parity, authoritative
+application-circuit confirmation, traceable procurement, virgin-part
+firmware/configuration/programming, firmware provenance, SSD power/inrush/
+thermal proof, and acreage integration. The older V1560 and pre-V1603 route
+failure statements below are historical evidence and must not be read as
+current source-field TODOs. Path A remains preserved.
+
 ## CURRENT AUTHORITATIVE STATE — 2026-09-10 V1560
 
 Read `PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md` first for the current
