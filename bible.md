@@ -10909,3 +10909,12 @@ the accepted local primitive. Receipt:
   layer-transition, land-pattern, high-speed, and support-parity evidence,
   the intentionally preserved dirty experiment set, and the exact remaining
   Path-B gates. Only the checkpoint note and this append-only entry are staged.
+
+## 2026-09-10 — corrected MIC2545A support authority
+
+- Added `authority-inventory/rtl9210b/MIC2545A_ISOLATEB_SUPPORT_AUTHORITY.md`
+  from the Microchip/Micrel datasheet. It records the authoritative SOP-8
+  mapping (`IN` pins 5/7, `OUT` pins 6/8, `ILIM` pin 4, GND pin 3), the
+  current-limit/bypass requirements, and the rule that the retained community
+  XML cannot be promoted without correcting duplicated-pin joins and proving
+  them with native connectivity plus a negative control.
