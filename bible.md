@@ -82,6 +82,11 @@ remain unchanged.
 native endpoints and four negative controls but DRC reported 14 source,
 SPISO, pair-row, and connector-transition violations. Preserved the
 disposable evidence; production and Path-A assets remain unchanged.
+2026-09-09 — Phase 24 V1316 rejected: adding four lanes to the native-clean
+V850 rotated-support field passed endpoint and negative-control audits but
+native DRC reported 14 source-transition and outer-launch violations.
+Preserved the disposable evidence; V850 support and production/Path-A assets
+remain unchanged.
 2026-09-09 — Phase 24 V1312 rejected: the attempted rotated-QFN split-source
 escape caused native pad-field shorts/crossings and failed its saved-board
 lane endpoint audit; DRC reported 45 violations. Preserved the disposable
@@ -9611,3 +9616,8 @@ source escapes, staggered J1 transitions, and an explicit SPISO bypass.
 Native endpoint and four negative-control audits pass; native DRC remains
 open as the acceptance discriminator. Production CAD and Path-A assets are
 unchanged.
+2026-09-09 — Phase 24 V1316 rejected: adding four lanes to the native-clean
+V850 rotated-support field passed endpoint and negative-control audits but
+native DRC reported 14 source-transition and outer-launch violations.
+Preserved the disposable evidence; V850 support and production/Path-A assets
+remain unchanged.

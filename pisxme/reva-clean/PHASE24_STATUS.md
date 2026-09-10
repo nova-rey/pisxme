@@ -10288,3 +10288,10 @@ violations, including source-field crossings/shorts, REFCLK interaction, and
 pair transition clearances. This is route-implementation evidence; the
 rotated-QFN class remains under investigation and production assets are
 unchanged.
+V1316 tested adding all four RTL9210B lanes to the native-clean V850
+rotated-support field. Saved-board endpoint connectivity and four complete
+source-removal negative controls pass. Native DRC rejects 14 violations:
+adjacent-pitch source departures intersect transition vias, and the outer
+pair launches then collide/clearance-fail. This is route-implementation
+evidence only; V850 remains a support-field reference and production CAD and
+Path-A assets remain unchanged.
