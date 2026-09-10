@@ -10930,3 +10930,7 @@ plane and passed the strict-source audit, but native DRC reported 612/333
 with real rail-to-signal/via shorts. V104 revised the U13/U14 escapes and
 reduced this to 610/337, with NC_26/STORAGE_SEL and latent XOUT shorts still
 present. Both are rejected; V94 remains the cleanest disposable parent.
+V105 independently re-routed only `STORAGE_SEL` around the outer F.Cu
+corridor; native DRC was 614/341 with crossings and the recurring
+XOUT/JMS_XAVDDH short, so the selector route remains a route-implementation
+problem and V105 is rejected.

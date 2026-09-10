@@ -15,6 +15,7 @@ production PCB authority.
 | V102 | U13.30 around outer B.Cu/F.Cu perimeter to U14.5 | PASS, negative control PASS | 619 / 340 | REJECT: crossings and latent selector/XOUT findings |
 | V103 | U12/U13/U14/R81 into local In2 power plane | PASS, strict-source PASS | 612 / 333 | REJECT: rail-to-signal/via shorts |
 | V104 | U13/U14-only local In2 plane with revised escapes | PASS, focused PASS | 610 / 337 | REJECT: NC_26/STORAGE_SEL and latent XOUT shorts |
+| V105 | Removed existing selector copper; outer F.Cu re-route U12/U13/U14 | not applicable | 614 / 341 | REJECT: crossings and recurring XOUT/JMS_XAVDDH short |
 
 The focused audit proves the nine J3 contacts reach at least one
 `STORAGE_3V3` source through saved native copper. It does not waive the

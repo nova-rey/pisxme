@@ -10153,3 +10153,5 @@ saved pads/tracks/vias/zones and exposes the remaining fragmented source fanout
 on V94/V102.
 V103/V104 demonstrated strict native source co-connectivity through an In2
 storage plane, but native DRC still found real shorts; neither is promoted.
+V105's selector-only outer-corridor re-route was also rejected at native
+614/341; no production routing was promoted.
