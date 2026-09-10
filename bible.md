@@ -10432,6 +10432,14 @@ the accepted local primitive. Receipt:
 - V1523/V1526 remain the accepted isolated basis. No Path-A or production CAD
   changed.
 
+## 2026-09-10 — Phase 24 RTL9210B V1534/V1535 crystal coexistence
+
+- V1534 independently routes complete XTAL_IN on V1523 with native DRC 0 / 4
+  opens, proving the XIN route class when isolated.
+- V1535 retains XIN but rejects east/B.Cu XTAL_OUT coexistence with four local
+  RSET/RTL_3V3/crystal-field violations. Evidence is preserved; coordinated
+  crystal-field regeneration remains next and no production CAD changed.
+
 ## 2026-09-10 — Phase 24 current-state documentation hygiene
 
 - Added explicit current-state overrides to the Phase 24 status, dual-mode

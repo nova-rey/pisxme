@@ -128,6 +128,7 @@ connectivity and all three source-trace negative controls. V1169 is the
 current accepted 1V1 QFN extension; remaining RTL_1V1 pads and support gates
 remain OPEN.
 
+
 V1170 tested an east U1.16 escape and was rejected at the adjacent RTL_5V
 pad field. V1171/V1172 tested south escapes; the latter retained an In2
 copper-sliver warning. V1173 simplified the In2 segment but retained source
@@ -11318,3 +11319,9 @@ V1532 tested a layer-split crystal pair with XTAL_OUT on B.Cu and XTAL_IN on
 F.Cu. Native DRC rejected it with five QFN field/RSET/transition violations;
 it is preserved as route-class evidence. V1523/V1526 remain the accepted
 local basis.
+
+V1534 proves XTAL_IN independently on the V1523 field: native DRC is 0 / 4
+opens. V1535 retains that channel but rejects an east/B.Cu XTAL_OUT coexistence
+attempt with four RSET/RTL_3V3/crystal-field violations. Receipt:
+`PHASE24_RTL9210B_XTALIN_XTALOUT_V1534_V1535_RECEIPT.md`. These are routing
+class results; the next work remains coordinated crystal-field regeneration.
