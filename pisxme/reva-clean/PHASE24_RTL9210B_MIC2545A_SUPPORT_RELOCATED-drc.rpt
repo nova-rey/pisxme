@@ -1,0 +1,138 @@
+** Drc report for PHASE24_RTL9210B_MIC2545A_SUPPORT_RELOCATED.kicad_pcb **
+** Created on 2026-09-10T14:14:35 **
+** Report includes: Errors, Warnings **
+
+** Found 26 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(96.4000 mm, 79.5000 mm): Track [PEDET] on B.Cu, length 22.6000 mm
+    @(112.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 11.6930 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(114.0000 mm, 89.3650 mm): Track [RTL_3V3] on B.Cu, length 11.8128 mm
+    @(120.0000 mm, 80.0000 mm): Track [PEDET] on B.Cu, length 5.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(99.2000 mm, 73.5000 mm): Track [ISOLATEB] on F.Cu, length 10.5000 mm
+    @(99.6000 mm, 73.9500 mm): Track [CLKREQ_N] on F.Cu, length 1.0500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(101.9500 mm, 67.2000 mm): Track [RTL_5V] on F.Cu, length 19.0500 mm
+    @(114.7500 mm, 78.0000 mm): Track [SSD_3V3] on F.Cu, length 15.2750 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(114.0000 mm, 89.3650 mm): Track [RTL_3V3] on B.Cu, length 11.8128 mm
+    @(102.0000 mm, 81.0000 mm): Track [PERST_N] on B.Cu, length 32.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(110.0000 mm, 67.2000 mm): Track [RTL_5V] on F.Cu, length 11.0000 mm
+    @(114.7500 mm, 78.0000 mm): Track [SSD_3V3] on F.Cu, length 15.2750 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(114.7500 mm, 78.0000 mm): Track [SSD_3V3] on F.Cu, length 15.2750 mm
+    @(115.0000 mm, 76.4000 mm): Track [GND] on F.Cu, length 1.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1250 mm)
+    Local override; error
+    @(114.4000 mm, 77.2000 mm): Track [GND] on F.Cu, length 0.8000 mm
+    @(114.7500 mm, 78.0000 mm): Track [SSD_3V3] on F.Cu, length 15.2750 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0250 mm)
+    Local override; error
+    @(114.7500 mm, 78.0000 mm): Track [SSD_3V3] on F.Cu, length 15.2750 mm
+    @(115.0000 mm, 76.4000 mm): Track [GND] on F.Cu, length 1.0000 mm
+[shorting_items]: Items shorting two nets (nets SSD_3V3 and GND)
+    Local override; error
+    @(114.7500 mm, 78.0000 mm): Track [SSD_3V3] on F.Cu, length 15.2750 mm
+    @(114.4000 mm, 78.0000 mm): Via [GND] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets SSD_3V3 and GND)
+    Local override; error
+    @(112.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 11.6930 mm
+    @(114.4000 mm, 78.0000 mm): Via [GND] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets GND and SSD_3V3)
+    Local override; error
+    @(114.4000 mm, 78.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(114.7500 mm, 78.0000 mm): Via [SSD_3V3] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets GND and SSD_3V3)
+    Local override; error
+    @(114.4000 mm, 78.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(114.7500 mm, 78.0000 mm): Via [SSD_3V3] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets GND and SSD_3V3)
+    Local override; error
+    @(114.4000 mm, 78.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(114.7500 mm, 78.0000 mm): Via [SSD_3V3] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets GND and SSD_3V3)
+    Local override; error
+    @(114.4000 mm, 78.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(114.7500 mm, 78.0000 mm): Via [SSD_3V3] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets SSD_3V3 and GND)
+    Local override; error
+    @(114.7500 mm, 78.0000 mm): Track [SSD_3V3] on F.Cu, length 15.2750 mm
+    @(115.0000 mm, 76.4000 mm): Pad 4 [GND] of U2 on F.Cu
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0750 mm)
+    Rule: board setup constraints edge; error
+    @(64.9000 mm, 39.9000 mm): Rectangle on Edge.Cuts
+    @(115.0000 mm, 94.8000 mm): Track [GND] on F.Cu, length 2.0000 mm
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(64.9000 mm, 39.9000 mm): Rectangle on Edge.Cuts
+    @(117.0000 mm, 94.8000 mm): Via [GND] on F.Cu - B.Cu
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(64.9000 mm, 39.9000 mm): Rectangle on Edge.Cuts
+    @(115.0000 mm, 94.8000 mm): Pad 2 [GND] of C18 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(114.7500 mm, 78.0000 mm): Track [SSD_3V3] on F.Cu, length 15.2750 mm
+    @(115.0000 mm, 76.4000 mm): Pad 4 [GND] of U2 on F.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(114.0000 mm, 89.3650 mm): Track [RTL_3V3] on B.Cu, length 11.8128 mm
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(100.0000 mm, 90.0000 mm): Via [GND] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(100.0000 mm, 96.2000 mm): Via [GND] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(117.0000 mm, 94.8000 mm): Via [GND] on F.Cu - B.Cu
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(64.9000 mm, 39.9000 mm): Rectangle on Edge.Cuts
+    @(102.0000 mm, 95.0000 mm): Reference field of R15
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0250 mm)
+    Rule: board setup constraints; warning
+    @(114.4000 mm, 78.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(114.7500 mm, 78.0000 mm): Via [SSD_3V3] on F.Cu - B.Cu
+
+** Found 5 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(114.0000 mm, 89.3650 mm): Track [RTL_3V3] on B.Cu, length 11.8128 mm
+    @(114.0000 mm, 89.3650 mm): Track [RTL_3V3] on F.Cu, length 2.5400 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(114.0000 mm, 89.3650 mm): Track [RTL_3V3] on B.Cu, length 11.8128 mm
+    @(121.0000 mm, 77.2000 mm): Track [RTL_3V3] on F.Cu, length 2.8071 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(105.3000 mm, 90.6350 mm): Track [GND] on F.Cu, length 5.3000 mm
+    @(102.0000 mm, 96.2000 mm): Track [GND] on F.Cu, length 2.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(114.4000 mm, 77.2000 mm): Track [GND] on F.Cu, length 0.8000 mm
+    @(105.3000 mm, 89.3650 mm): Track [GND] on F.Cu, length 5.3000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(115.0000 mm, 94.8000 mm): Pad 2 [GND] of C18 on F.Cu
+    @(105.3000 mm, 90.6350 mm): Track [GND] on F.Cu, length 5.3000 mm
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

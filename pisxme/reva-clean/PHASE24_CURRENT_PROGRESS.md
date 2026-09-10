@@ -112,6 +112,14 @@ co-routed U1 south-row repair or, if that is not viable, relocation of only
 the nearest support/via field. No orientation or architecture decision is
 being reopened, and no rejected probe copper is authority.
 
+The first relocation-class probe is also rejected as
+`REJECTED_ROUTE_IMPLEMENTATION`: `PHASE24_RTL9210B_MIC2545A_SUPPORT_RELOCATED.kicad_pcb`
+has 26 native DRC violations and 5 unconnected items. It confirms that
+moving MIC2545A alone, without co-planning U1 south-row departures and the
+existing PEDET/power corridors, is insufficient. The next attempt must use
+one physical channel plan for those handoffs; orientation and architecture
+remain closed.
+
 The first coordinated local reroute of U1.12 `ISOLATEB`, `CLKREQ_N`,
 `PERST_N`, and `RTL_5V` is rejected: native DRC found 12 violations and zero
 opens. The exact conflicts are recorded in

@@ -11034,3 +11034,12 @@ the accepted local primitive. Receipt:
   records the local fallback analysis. The accepted RTL9210B orientation,
   high-speed launch, and Path-A fallback remain unchanged; no rejected probe
   copper is promoted.
+
+## 2026-09-10 — rejected MIC2545A support relocation probe
+
+- Tested the first materially different local-support placement class while
+  preserving U1 orientation and the accepted V1603 launch. Native DRC found
+  26 violations and 5 unconnected items: source-row clearance, PEDET/power
+  and ground-field collisions, incomplete rail/ground joins, and local
+  board-edge/via spacing defects. Classified as route implementation
+  evidence; the MIC2545A topology and frozen Path-B baseline remain valid.
