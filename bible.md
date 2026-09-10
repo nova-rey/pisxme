@@ -10400,3 +10400,10 @@ the accepted local primitive. Receipt:
   no rule relaxation or production change was made. The next repair remains
   coordinated support-field regeneration. XTAL_IN, XTAL_OUT, REFCLK, and full
   Path-B gates remain open.
+
+## 2026-09-10 — Phase 24 RTL9210B XTAL_OUT trials V1512-V1514
+
+- V1512-V1514 tested north, barrier-hop, and source-jog XTAL_OUT escapes on
+  V1508/V1502. Native DRC rejected all three for live RTL_1V1/RTL_3V3 source
+  field conflicts. They remain route evidence only; Path A and accepted Path-B
+  primitives are unchanged.

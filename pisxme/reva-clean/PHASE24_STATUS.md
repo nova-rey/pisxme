@@ -11277,3 +11277,7 @@ V1509-V1511 are rejected XTAL_IN routing trials. They tested southwest, north,
 and staggered source escapes but all collide with live RTL_1V1/RTL_3V3 or PCIe
 copper under native DRC. Receipt:
 `PHASE24_RTL9210B_XTALIN_V1509_V1511_RECEIPT.md`.
+
+V1512-V1514 are rejected XTAL_OUT source/escape trials. Native DRC found
+RTL_1V1/RTL_3V3 source-field conflicts in all three; no accepted geometry was
+changed. Receipt: `PHASE24_RTL9210B_XTALOUT_V1512_V1514_RECEIPT.md`.
