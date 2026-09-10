@@ -11,7 +11,7 @@ import pcbnew
 
 H=Path(__file__).resolve().parent
 BASE=H/'PHASE24_RTL9210B_QFN_ESCAPE_HANDOFF_V1590.kicad_pcb'
-OUT=H/'PHASE24_RTL9210B_HANDOFF_TO_J1_ASTAR_V1591.kicad_pcb'
+OUT=H/'PHASE24_RTL9210B_HANDOFF_TO_J1_ASTAR_V1592.kicad_pcb'
 F,B=pcbnew.F_Cu,pcbnew.B_Cu
 STEP=.25; X0,X1=84.,145.; Y0,Y1=38.,96.; W=.20; C=.20; VIA=.60
 LAYERS=(F,B)
@@ -19,6 +19,13 @@ def mm(v): return pcbnew.ToMM(v)
 def xy(v): return (mm(v.x),mm(v.y))
 def idx(x,y): return (round((x-X0)/STEP),round((y-Y0)/STEP))
 def pos(k): return (X0+k[0]*STEP,Y0+k[1]*STEP)
+def clear_pad(obs,pad):
+ px,py=xy(pad.GetPosition()); sx,sy=xy(pad.GetSize())
+ for ix in range(round((X1-X0)/STEP)+1):
+  for iy in range(round((Y1-Y0)/STEP)+1):
+   x,y=pos((ix,iy))
+   if abs(x-px)<=sx/2+.03 and abs(y-py)<=sy/2+.03:
+    for l in LAYERS: obs[l].discard((ix,iy))
 def segdist(px,py,ax,ay,bx,by):
  dx=bx-ax; dy=by-ay
  if dx==dy==0:return hypot(px-ax,py-ay)
@@ -105,10 +112,15 @@ for name,source,target in (
  ('LANE0_TXP',(85.,73.2),(135.75,62.725)),
 ):
  net=b.FindNet(name)
- # Permit only the exact endpoint cells; all other pads, including the
- # opposite REFCLK pad, remain obstacles in the native geometry map.
- obs[F].discard(idx(*source)); obs[B].discard(idx(*source))
- obs[F].discard(idx(*target)); obs[B].discard(idx(*target))
+ # Permit the actual endpoint pad rectangles only; neighboring connector
+ # pads remain physical obstacles in the native geometry map.
+ sp=next(p for fp in b.Footprints() for p in fp.Pads()
+         if p.GetNetname()==name and abs(mm(p.GetPosition().x)-source[0])<.01
+         and abs(mm(p.GetPosition().y)-source[1])<.01)
+ tp=next(p for fp in b.Footprints() for p in fp.Pads()
+         if p.GetNetname()==name and abs(mm(p.GetPosition().x)-target[0])<.01
+         and abs(mm(p.GetPosition().y)-target[1])<.01)
+ clear_pad(obs,sp); clear_pad(obs,tp)
  path=astar(obs,reserved,source,target); emit(b,net,path,source,target,reserved)
  # Diagnostic multi-net search: reserve the centerline only. Native DRC will
  # decide whether the resulting physical clearance is legal.

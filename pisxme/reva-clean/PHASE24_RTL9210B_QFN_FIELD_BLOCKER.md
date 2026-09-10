@@ -28,6 +28,10 @@ V1591 then searched from those handoffs to the actual J1/M.2 contacts and
 placed four nets before no legal remaining launch existed. The residual issue
 therefore follows the M.2/J1 launch field as well as the source-field
 coauthoring; no complete candidate was promoted.
+V1592 corrected the endpoint-pad model and found complete paths for all six
+nets, but native DRC rejected the resulting centerline/via geometry with 594
+clearance violations. The endpoint correction is retained; the planner's
+multi-net separation remains open.
 The active accepted local basis remains V1517 at 0° top-side orientation.
 The remaining technical task is a coordinated crystal/REFCLK/rail fanout
 that is authored against the actual saved pads and ordinary-via rules.
@@ -39,6 +43,7 @@ Path-A/Path-B comparison remain OPEN. Receipt:
 `PHASE24_RTL9210B_SOURCE_FIELD_COAUTHOR_REJECT_V1589_RECEIPT.md`.
 `PHASE24_RTL9210B_QFN_ESCAPE_HANDOFF_REJECT_V1590_RECEIPT.md`.
 `PHASE24_RTL9210B_HANDOFF_J1_ASTAR_REJECT_V1591_RECEIPT.md`.
+`PHASE24_RTL9210B_HANDOFF_J1_ASTAR_REJECT_V1592_RECEIPT.md`.
 
 ## SUPERSEDED CURRENT-STATE HEADER — V1558
 

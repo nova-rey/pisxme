@@ -1,0 +1,2527 @@
+** Drc report for PHASE24_RTL9210B_HANDOFF_TO_J1_ASTAR_V1592.kicad_pcb **
+** Created on 2026-09-10T09:25:57 **
+** Report includes: Errors, Warnings **
+
+** Found 594 DRC violations **
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(90.7500 mm, 70.5000 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+    @(91.2500 mm, 70.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(118.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(118.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(95.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(95.5000 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(110.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(105.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(105.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(93.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(92.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(92.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(92.5000 mm, 70.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(101.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(101.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(135.7500 mm, 62.7500 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+    @(135.2500 mm, 62.7250 mm): Pad 47 [LANE0_TXN] of J1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(108.5000 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(108.5000 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(129.0000 mm, 69.5000 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+    @(128.7500 mm, 69.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(93.2500 mm, 73.2500 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+    @(92.7500 mm, 72.7500 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(129.0000 mm, 69.5000 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+    @(129.0000 mm, 69.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(135.7500 mm, 62.7500 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+    @(135.2500 mm, 63.2500 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(93.2500 mm, 73.2500 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+    @(93.0000 mm, 72.7500 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1693 mm)
+    Local override; error
+    @(133.7500 mm, 62.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+    @(134.0000 mm, 64.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(135.7500 mm, 62.7500 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+    @(135.2500 mm, 63.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2750 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1693 mm)
+    Local override; error
+    @(134.2500 mm, 62.7250 mm): Pad 43 [LANE0_RXP] of J1 on F.Cu
+    @(134.5000 mm, 63.7500 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(134.2500 mm, 62.7250 mm): Pad 43 [LANE0_RXP] of J1 on F.Cu
+    @(134.2500 mm, 63.7500 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1693 mm)
+    Local override; error
+    @(134.0000 mm, 63.7500 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(133.7500 mm, 62.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(128.5000 mm, 69.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(129.0000 mm, 69.5000 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(92.5000 mm, 71.0000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(93.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(93.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(108.7500 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(108.7500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(111.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(111.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(117.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(116.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(93.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(93.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(98.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(98.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(119.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(119.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(104.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(103.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(110.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(96.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(96.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(114.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(114.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(94.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(95.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(116.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(116.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(119.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(119.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(108.7500 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(108.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(110.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(105.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(106.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(100.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(100.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(109.7500 mm, 68.7500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(110.0000 mm, 69.2500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(115.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(116.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(94.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(94.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(119.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(119.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(112.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(113.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(92.5000 mm, 70.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXN and LANE0_RXP)
+    Local override; error
+    @(122.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(116.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(116.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(115.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(115.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(107.5000 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(107.5000 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(98.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(98.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(92.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(93.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(96.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(96.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(109.7500 mm, 68.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(110.0000 mm, 68.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_RXN and LANE0_RXP)
+    Local override; error
+    @(92.5000 mm, 71.2500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(121.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(121.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(102.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(101.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(96.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(96.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(107.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(107.5000 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(108.0000 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(107.5000 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(111.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(111.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(102.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(103.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(99.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(99.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(115.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(115.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and LANE0_RXN)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(122.5000 mm, 68.5000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(134.2500 mm, 62.7250 mm): Pad 43 [LANE0_RXP] of J1 on F.Cu
+    @(133.7500 mm, 62.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and LANE0_RXN)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 68.5000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and LANE0_RXN)
+    Local override; error
+    @(85.0000 mm, 71.6000 mm): Pad 64 [LANE0_RXP] of JH1 on F.Cu
+    @(85.2500 mm, 72.0000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and LANE0_RXN)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 68.5000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and LANE0_RXN)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 68.5000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and LANE0_RXN)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 68.5000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and LANE0_RXN)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 68.5000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.7500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(122.5000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(111.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(111.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(111.2500 mm, 69.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(111.7500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(97.2500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(96.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(104.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(105.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(104.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(104.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(97.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(97.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.0000 mm, 69.0000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(109.7500 mm, 68.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(121.2500 mm, 69.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(121.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(97.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(97.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(120.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(120.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(105.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(105.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(115.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(114.7500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(102.0000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(101.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(107.5000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(107.2500 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(112.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(113.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(120.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(119.7500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(120.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(120.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(107.5000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(107.7500 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(114.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(113.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(109.0000 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(109.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(100.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(100.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(95.0000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(94.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(102.0000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(102.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(117.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(117.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(111.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(111.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(104.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(103.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(104.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(105.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(111.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(112.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(109.0000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(108.5000 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(121.7500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(106.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(106.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(104.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(104.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(104.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(104.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(107.5000 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(107.5000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(108.7500 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(108.2500 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(118.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(118.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(115.7500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(115.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(93.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(93.2500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(121.2500 mm, 69.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(121.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(114.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(114.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(98.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(99.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(106.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(105.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(109.5000 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(109.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(114.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(114.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(96.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(96.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(109.2500 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(109.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(116.7500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(116.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(105.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(105.0000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(102.0000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(101.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(110.5000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(110.2500 mm, 69.5000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(103.2500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(102.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(107.5000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(107.0000 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(118.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(117.7500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(115.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(115.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(101.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(101.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(116.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(116.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(116.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(116.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(102.0000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(102.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(121.2500 mm, 69.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(120.7500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(110.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(110.7500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(95.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(95.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(92.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(93.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(116.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(115.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and LANE0_TXN)
+    Local override; error
+    @(92.7500 mm, 70.5000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(118.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(118.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(92.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(92.5000 mm, 70.0000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(97.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(98.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(118.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(118.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.2500 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(110.2500 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(95.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(95.2500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(103.2500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(103.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(97.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(97.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(96.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(97.0000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(98.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(97.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(99.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(100.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(93.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(92.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(112.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(112.7500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(100.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(100.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(94.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(93.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(119.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(119.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(95.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(95.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(92.7500 mm, 70.2500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(115.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(115.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(99.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(100.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(94.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(94.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(115.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(115.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.2500 mm, 69.2500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(110.2500 mm, 68.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(99.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(99.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(108.0000 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(107.5000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(113.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(113.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(119.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(119.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(96.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(96.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(103.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(103.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(110.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(93.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(93.2500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(121.2500 mm, 69.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(121.2500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(98.0000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(98.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(103.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(104.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(119.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(119.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(117.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(118.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(114.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(114.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(112.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(112.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(113.7500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(114.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(100.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(100.2500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(95.5000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(95.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(100.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(100.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(108.7500 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(109.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(104.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(104.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(109.7500 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(109.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(102.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(102.0000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(112.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(111.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(104.0000 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(104.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(106.2500 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(106.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(111.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(111.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(106.7500 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(106.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(101.2500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(101.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(118.7500 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(118.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(97.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(97.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(94.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(95.2500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(117.0000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(117.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(93.0000 mm, 71.5000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(120.5000 mm, 68.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(120.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.0000 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(110.2500 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(93.0000 mm, 71.5000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(92.7500 mm, 71.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(133.7500 mm, 62.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+    @(134.2500 mm, 62.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(93.0000 mm, 71.5000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(92.7500 mm, 71.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(127.0000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(127.2500 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(110.5000 mm, 69.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(85.2500 mm, 72.0000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+    @(85.2500 mm, 71.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(125.5000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(125.7500 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(128.5000 mm, 69.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(128.2500 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.0000 mm, 65.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(131.2500 mm, 65.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.0000 mm, 66.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(130.2500 mm, 66.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.0000 mm, 65.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(131.0000 mm, 66.0000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.7500 mm, 66.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(129.7500 mm, 67.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(124.7500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(124.5000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(132.5000 mm, 63.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+    @(132.5000 mm, 64.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.2500 mm, 68.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(128.5000 mm, 68.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.5000 mm, 66.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(130.7500 mm, 66.0000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_RXN and LANE0_RXP)
+    Local override; error
+    @(132.5000 mm, 63.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+    @(132.7500 mm, 64.0000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(106.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(106.5000 mm, 69.7500 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_RXN and LANE0_RXP)
+    Local override; error
+    @(132.5000 mm, 63.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+    @(132.7500 mm, 63.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(124.7500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(124.2500 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.5000 mm, 64.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(132.0000 mm, 65.0000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(124.7500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(124.7500 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_RXN and LANE0_RXP)
+    Local override; error
+    @(132.5000 mm, 63.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+    @(132.7500 mm, 63.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(126.2500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(126.7500 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(123.5000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(124.0000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.0000 mm, 65.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(131.2500 mm, 65.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.0000 mm, 66.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(130.5000 mm, 66.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.2500 mm, 68.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(128.5000 mm, 68.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.5000 mm, 67.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(129.0000 mm, 68.0000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.2500 mm, 69.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+    @(110.2500 mm, 68.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.7500 mm, 66.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(129.7500 mm, 67.0000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(128.5000 mm, 69.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(128.0000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.5000 mm, 67.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(129.0000 mm, 67.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1236 mm)
+    Local override; error
+    @(133.7500 mm, 62.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+    @(134.0000 mm, 61.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.7500 mm, 66.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(130.0000 mm, 66.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.0000 mm, 66.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(130.5000 mm, 66.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.7500 mm, 65.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(131.2500 mm, 65.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.2500 mm, 67.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(129.2500 mm, 67.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.7500 mm, 64.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(132.2500 mm, 64.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.5000 mm, 64.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(132.0000 mm, 64.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and LANE0_RXP)
+    Local override; error
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(125.5000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(126.0000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(92.5000 mm, 71.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(93.0000 mm, 71.5000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.2500 mm, 68.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(128.2500 mm, 68.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.5000 mm, 65.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(131.2500 mm, 65.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(125.5000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(125.2500 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.7500 mm, 66.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(130.5000 mm, 66.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.5000 mm, 67.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(129.5000 mm, 67.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(132.5000 mm, 64.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(132.5000 mm, 63.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(125.5000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(125.5000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.7500 mm, 68.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(128.2500 mm, 68.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(126.2500 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(125.7500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1006 mm)
+    Local override; error
+    @(134.2500 mm, 62.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2250 mm
+    @(133.7500 mm, 62.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(126.2500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(126.5000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(133.7500 mm, 62.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+    @(133.7500 mm, 61.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.7500 mm, 66.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(130.0000 mm, 67.0000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(133.7500 mm, 62.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+    @(133.5000 mm, 61.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.2500 mm, 66.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(130.0000 mm, 66.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.2500 mm, 67.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(129.2500 mm, 67.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(123.0000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.5000 mm, 65.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(131.2500 mm, 65.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(85.5000 mm, 71.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(85.2500 mm, 72.0000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(122.7500 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(124.2500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(124.0000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.5000 mm, 67.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(129.5000 mm, 67.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.0000 mm, 65.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(131.0000 mm, 65.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.7500 mm, 65.0000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(131.2500 mm, 65.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(92.7500 mm, 71.0000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(93.0000 mm, 71.5000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(124.2500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(123.7500 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(122.7500 mm, 69.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(123.2500 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1236 mm)
+    Local override; error
+    @(133.2500 mm, 61.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(133.7500 mm, 62.7250 mm): Pad 41 [LANE0_RXN] of J1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(127.0000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(127.0000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and LANE0_RXN)
+    Local override; error
+    @(132.7500 mm, 64.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(132.5000 mm, 63.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(127.7500 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(128.0000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0642 mm)
+    Local override; error
+    @(85.0000 mm, 71.6000 mm): Track [LANE0_RXP] on F.Cu, length 0.2693 mm
+    @(85.2500 mm, 72.0000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(127.5000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(128.0000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(132.2500 mm, 64.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(131.7500 mm, 64.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(125.0000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(125.5000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(92.2500 mm, 70.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(122.5000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(105.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(105.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(97.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(96.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(112.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(112.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(111.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(112.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(111.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(111.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(120.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(121.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(122.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(121.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(113.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(113.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(111.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(111.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(120.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(119.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(110.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(101.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(102.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(112.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(113.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(117.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(117.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(104.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(103.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(100.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(100.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(97.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(97.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(100.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(100.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(120.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(120.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(97.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(97.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(94.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(93.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(116.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(116.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(115.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(115.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(100.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(99.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(94.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(94.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(109.7500 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(109.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(116.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(116.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(105.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(105.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(110.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(104.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(104.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(104.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(103.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(118.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(117.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(94.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(93.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(94.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(94.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(105.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(105.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.7500 mm, 68.0000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(128.2500 mm, 68.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(102.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(102.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(96.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(96.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(98.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(98.7500 mm, 70.0000 mm): Track [LANE0_RXP] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(116.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(116.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(106.0000 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(105.7500 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(92.2500 mm, 70.7500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(121.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(121.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(92.5000 mm, 70.0000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(92.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(114.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(114.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(93.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(92.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(95.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(95.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(109.0000 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(109.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(96.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(96.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(110.0000 mm, 68.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(119.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(119.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(120.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(120.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(104.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(104.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(113.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(114.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(106.0000 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(106.0000 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(100.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(101.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(92.5000 mm, 70.0000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(92.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(100.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(101.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(102.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(101.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(107.2500 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(107.7500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(118.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(118.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(107.5000 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(107.7500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(104.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(104.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(92.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(92.5000 mm, 70.0000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(95.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(95.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(107.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(106.7500 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(97.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(98.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(115.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(115.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(115.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(115.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(120.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(120.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(109.2500 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(109.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(99.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(100.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(118.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(118.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(104.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(104.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(100.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(100.0000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(121.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(122.5000 mm, 68.5000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(113.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(114.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(106.0000 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(106.2500 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(102.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(103.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(114.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(114.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(98.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(98.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(98.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(99.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(119.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(119.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(95.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(96.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(94.5000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(94.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(117.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(118.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(112.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(111.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(120.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(120.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(98.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(99.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(92.2500 mm, 69.7500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(92.5000 mm, 70.0000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(100.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(100.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(109.7500 mm, 69.0000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(110.0000 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(112.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(112.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(110.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(110.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(103.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(103.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(119.5000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(119.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(97.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(97.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(106.5000 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(106.0000 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(108.5000 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(108.0000 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(111.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(110.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(107.7500 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(108.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(116.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(115.5000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(92.2500 mm, 70.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(92.5000 mm, 70.0000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(96.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(97.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(94.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(95.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(108.7500 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(109.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(107.0000 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(106.7500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(118.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(118.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(101.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(101.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(98.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(97.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(109.5000 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(109.2500 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(115.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(114.7500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(109.7500 mm, 68.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(110.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(114.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(114.0000 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(97.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(97.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(117.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(116.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(95.0000 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(95.5000 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_N and LANE0_RXP)
+    Local override; error
+    @(92.2500 mm, 70.7500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(98.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(98.2500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(122.5000 mm, 68.2500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(111.2500 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(110.7500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(115.2500 mm, 68.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(115.0000 mm, 68.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.5000 mm, 66.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(130.5000 mm, 65.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and REFCLK_N)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 68.2500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(123.0000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(123.2500 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(134.0000 mm, 61.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(134.5000 mm, 61.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and REFCLK_N)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 68.2500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and REFCLK_N)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 68.2500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.5000 mm, 66.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(129.2500 mm, 66.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and REFCLK_N)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 68.2500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(126.2500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(126.5000 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and REFCLK_N)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 68.2500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(132.7500 mm, 62.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(132.5000 mm, 62.0000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(133.0000 mm, 61.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(133.0000 mm, 61.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.2500 mm, 65.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(131.2500 mm, 64.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.7500 mm, 64.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(131.7500 mm, 64.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.5000 mm, 66.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(130.2500 mm, 65.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(125.5000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(126.0000 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(103.2500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(103.7500 mm, 69.7500 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(92.2500 mm, 70.0000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(92.5000 mm, 70.0000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.2500 mm, 68.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(128.0000 mm, 68.0000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.5000 mm, 64.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(131.7500 mm, 64.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(134.0000 mm, 61.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(134.2500 mm, 61.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(85.0000 mm, 70.8000 mm): Track [REFCLK_N] on F.Cu, length 0.2550 mm
+    @(85.0000 mm, 70.4000 mm): Pad 61 [REFCLK_P] of JH1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.2500 mm, 65.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(130.7500 mm, 65.0000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.7500 mm, 66.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(129.2500 mm, 66.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.2500 mm, 65.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(131.0000 mm, 64.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(135.7500 mm, 62.7250 mm): Pad 49 [LANE0_TXP] of J1 on F.Cu
+    @(135.7500 mm, 61.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_N and LANE0_RXP)
+    Local override; error
+    @(92.2500 mm, 70.7500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1236 mm)
+    Local override; error
+    @(135.2500 mm, 62.7250 mm): Pad 47 [LANE0_TXN] of J1 on F.Cu
+    @(135.5000 mm, 61.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.2500 mm, 68.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(128.0000 mm, 67.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_N and LANE0_RXP)
+    Local override; error
+    @(92.2500 mm, 70.7500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(132.7500 mm, 62.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(132.5000 mm, 62.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(124.7500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(124.5000 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1236 mm)
+    Local override; error
+    @(135.7500 mm, 62.7250 mm): Pad 49 [LANE0_TXP] of J1 on F.Cu
+    @(136.0000 mm, 61.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_N and LANE0_RXP)
+    Local override; error
+    @(92.2500 mm, 70.7500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(124.2500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(123.7500 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.2500 mm, 67.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(128.5000 mm, 68.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(123.0000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(122.7500 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_N and LANE0_RXP)
+    Local override; error
+    @(92.2500 mm, 70.7500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets REFCLK_N and LANE0_RXP)
+    Local override; error
+    @(92.2500 mm, 70.7500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.5000 mm, 66.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(129.0000 mm, 66.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.7500 mm, 66.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(129.5000 mm, 66.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(134.0000 mm, 61.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(134.0000 mm, 61.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(124.2500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(124.0000 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(132.5000 mm, 61.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(132.7500 mm, 62.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(127.0000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(127.0000 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1236 mm)
+    Local override; error
+    @(135.5000 mm, 61.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(135.2500 mm, 62.7250 mm): Pad 47 [LANE0_TXN] of J1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.2500 mm, 66.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(130.2500 mm, 65.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.5000 mm, 64.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(131.5000 mm, 65.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.0000 mm, 67.0000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(129.2500 mm, 67.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(85.2500 mm, 70.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(85.0000 mm, 70.4000 mm): Pad 61 [REFCLK_P] of JH1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(132.5000 mm, 63.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+    @(131.7500 mm, 64.0000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(133.7500 mm, 61.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(134.0000 mm, 61.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(132.7500 mm, 62.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(132.5000 mm, 62.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(125.5000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(125.7500 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(126.2500 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(125.7500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(125.5000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(125.0000 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.7500 mm, 66.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(129.5000 mm, 66.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(132.7500 mm, 62.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(132.5000 mm, 62.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.2500 mm, 68.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(128.2500 mm, 67.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(133.5000 mm, 61.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(134.0000 mm, 61.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(123.0000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(123.0000 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.2500 mm, 64.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(131.5000 mm, 65.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(133.0000 mm, 61.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(133.2500 mm, 61.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.5000 mm, 67.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(128.5000 mm, 68.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(132.7500 mm, 61.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(132.7500 mm, 62.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.7500 mm, 67.0000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(129.2500 mm, 67.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(127.5000 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(128.0000 mm, 68.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.7500 mm, 66.0000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(130.0000 mm, 66.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.7500 mm, 65.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(131.0000 mm, 65.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(123.0000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(122.5000 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(124.7500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(124.2500 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(132.7500 mm, 62.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(132.5000 mm, 63.0000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.5000 mm, 67.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(129.0000 mm, 67.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(128.7500 mm, 67.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(129.0000 mm, 67.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_N and LANE0_RXN)
+    Local override; error
+    @(132.0000 mm, 63.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(132.5000 mm, 63.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(92.0000 mm, 70.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(125.5000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(125.5000 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.5000 mm, 65.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(131.0000 mm, 65.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(124.7500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(124.7500 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(132.7500 mm, 63.2500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(132.5000 mm, 63.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(125.5000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(125.2500 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(127.2500 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(127.0000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(132.0000 mm, 64.0000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(132.5000 mm, 63.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(126.2500 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+    @(126.7500 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.0000 mm, 65.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(130.2500 mm, 66.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(129.7500 mm, 66.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(129.7500 mm, 66.7500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(127.7500 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(128.0000 mm, 68.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(127.7500 mm, 68.0000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(128.2500 mm, 68.2500 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(123.5000 mm, 68.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(124.0000 mm, 68.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(131.0000 mm, 65.0000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(131.2500 mm, 65.0000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(132.7500 mm, 61.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(133.0000 mm, 61.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(89.2500 mm, 70.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(89.5000 mm, 70.5000 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(97.0000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(96.5000 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(101.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(101.0000 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(107.5000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(107.0000 mm, 70.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.2500 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(110.2500 mm, 70.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(132.5000 mm, 63.2500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(132.7500 mm, 62.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(107.5000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(107.2500 mm, 70.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(110.2500 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(110.7500 mm, 70.0000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(98.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(98.7500 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(106.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(106.5000 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(93.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(94.0000 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(111.2500 mm, 69.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(111.2500 mm, 69.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(112.2500 mm, 69.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(112.7500 mm, 69.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(111.7500 mm, 69.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(112.2500 mm, 69.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(107.5000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(108.0000 mm, 70.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(103.2500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(102.7500 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(109.2500 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(109.7500 mm, 70.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(96.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(96.2500 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(106.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(106.7500 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(130.0000 mm, 66.0000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(130.0000 mm, 66.5000 mm): Track [LANE0_RXN] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(110.5000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(110.7500 mm, 69.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(94.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(94.2500 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(97.5000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(98.0000 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(118.7500 mm, 69.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(119.2500 mm, 69.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(107.5000 mm, 70.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+    @(107.5000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(99.2500 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+    @(99.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(117.2500 mm, 69.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(117.5000 mm, 69.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(100.0000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(99.7500 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(95.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(95.7500 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(103.2500 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+    @(103.7500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(102.0000 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(102.5000 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(93.7500 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+    @(93.2500 mm, 70.2500 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(108.5000 mm, 69.5000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(108.2500 mm, 69.2500 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(132.5000 mm, 63.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(132.7500 mm, 63.7500 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1536 mm)
+    Local override; error
+    @(109.0000 mm, 70.0000 mm): Track [LANE0_TXN] on B.Cu, length 0.2500 mm
+    @(108.5000 mm, 70.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and REFCLK_P)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.0000 mm, 69.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_N and LANE0_RXN)
+    Local override; error
+    @(132.2500 mm, 63.7500 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(132.5000 mm, 63.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets REFCLK_N and LANE0_RXN)
+    Local override; error
+    @(132.2500 mm, 63.5000 mm): Track [REFCLK_N] on F.Cu, length 0.2500 mm
+    @(132.5000 mm, 63.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets REFCLK_P and LANE0_TXN)
+    Local override; error
+    @(93.2500 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets REFCLK_P and LANE0_TXN)
+    Local override; error
+    @(122.2500 mm, 69.2500 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and REFCLK_P)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(122.5000 mm, 69.2500 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets REFCLK_P and LANE0_RXP)
+    Local override; error
+    @(93.2500 mm, 70.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and REFCLK_P)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 69.2500 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_TXP and REFCLK_P)
+    Local override; error
+    @(129.0000 mm, 69.5000 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+    @(129.2500 mm, 69.2500 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_P and LANE0_RXP)
+    Local override; error
+    @(93.2500 mm, 70.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets REFCLK_N and REFCLK_P)
+    Local override; error
+    @(92.2500 mm, 70.7500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(91.7500 mm, 70.5000 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets LANE0_TXP and REFCLK_P)
+    Local override; error
+    @(129.0000 mm, 69.5000 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+    @(128.5000 mm, 69.2500 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_P and LANE0_RXP)
+    Local override; error
+    @(93.2500 mm, 70.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets REFCLK_P and LANE0_RXP)
+    Local override; error
+    @(93.2500 mm, 70.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets REFCLK_N and REFCLK_P)
+    Local override; error
+    @(92.2500 mm, 70.7500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(92.2500 mm, 70.5000 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_N and REFCLK_P)
+    Local override; error
+    @(92.2500 mm, 70.7500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(92.0000 mm, 70.5000 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_N and REFCLK_P)
+    Local override; error
+    @(92.2500 mm, 70.7500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(92.5000 mm, 70.5000 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_P and LANE0_RXP)
+    Local override; error
+    @(93.2500 mm, 70.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets REFCLK_P and LANE0_RXP)
+    Local override; error
+    @(92.7500 mm, 70.5000 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and REFCLK_P)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 69.2500 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_TXP and REFCLK_P)
+    Local override; error
+    @(129.0000 mm, 69.5000 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+    @(128.7500 mm, 69.2500 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_P and LANE0_RXP)
+    Local override; error
+    @(93.2500 mm, 70.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and REFCLK_P)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 69.2500 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and REFCLK_P)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 69.2500 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and REFCLK_P)
+    Local override; error
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 69.2500 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets LANE0_TXN and REFCLK_P)
+    Local override; error
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.7500 mm, 69.2500 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+[shorting_items]: Items shorting two nets (nets REFCLK_P and LANE0_RXP)
+    Local override; error
+    @(93.0000 mm, 70.5000 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets REFCLK_P and LANE0_TXP)
+    Local override; error
+    @(129.0000 mm, 69.2500 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+    @(129.0000 mm, 69.5000 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets REFCLK_P and LANE0_TXN)
+    Local override; error
+    @(122.5000 mm, 69.2500 mm): Track [REFCLK_P] on F.Cu, length 0.2500 mm
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(85.0000 mm, 71.6000 mm): Pad 64 [LANE0_RXP] of JH1 on F.Cu
+    @(85.2500 mm, 72.0000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2000 mm)
+    Rule: board setup constraints hole; error
+    @(134.2500 mm, 62.7250 mm): Pad 43 [LANE0_RXP] of J1 on F.Cu
+    @(133.7500 mm, 62.7500 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2000 mm)
+    Rule: board setup constraints hole; error
+    @(135.2500 mm, 62.7250 mm): Pad 47 [LANE0_TXN] of J1 on F.Cu
+    @(135.7500 mm, 62.7500 mm): Via [LANE0_TXP] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(119.0000 mm, 79.5000 mm): Via [PEDET] on F.Cu - B.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(107.0000 mm, 76.0000 mm): Track [CLKREQ_N] on B.Cu, length 2.0000 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(100.0000 mm, 81.0000 mm): Track [PERST_N] on F.Cu, length 2.0000 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(88.0000 mm, 58.0000 mm): Track [RTL_1V1] on B.Cu, length 11.0000 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(110.0000 mm, 75.8000 mm): Track [RTL_5V] on F.Cu, length 8.6000 mm
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(109.0000 mm, 75.2000 mm): Via [SPISI] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(108.0000 mm, 72.0000 mm): Via [SPICLK] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(99.6000 mm, 62.8000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(106.5000 mm, 71.6000 mm): Track [SPISO3] on F.Cu, length 0.6000 mm
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(112.6000 mm, 70.4000 mm): Via [SPISO] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(111.4000 mm, 69.8000 mm): Via [SPICS] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.2000 mm)
+    Rule: board setup constraints; warning
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 69.2500 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)
+    Rule: board setup constraints; warning
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.5000 mm, 69.2500 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0536 mm)
+    Rule: board setup constraints; warning
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(93.2500 mm, 70.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.2000 mm)
+    Rule: board setup constraints; warning
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 68.2500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)
+    Rule: board setup constraints; warning
+    @(122.5000 mm, 68.2500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(122.5000 mm, 68.5000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.2000 mm)
+    Rule: board setup constraints; warning
+    @(92.2500 mm, 70.7500 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)
+    Rule: board setup constraints; warning
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)
+    Rule: board setup constraints; warning
+    @(122.5000 mm, 68.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(122.5000 mm, 68.5000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.0000 mm)
+    Rule: board setup constraints; warning
+    @(93.0000 mm, 70.7500 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(92.7500 mm, 70.7500 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+[hole_to_hole]: Drilled hole too close to other hole (board setup constraints min 0.2495 mm; actual 0.2000 mm)
+    Rule: board setup constraints; warning
+    @(122.5000 mm, 69.0000 mm): Via [LANE0_TXN] on F.Cu - B.Cu
+    @(122.5000 mm, 68.5000 mm): Via [LANE0_RXN] on F.Cu - B.Cu
+
+** Found 36 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(97.6000 mm, 73.9500 mm): Pad 8 [PEDET] of U1 on F.Cu
+    @(119.0000 mm, 79.5000 mm): Track [PEDET] on F.Cu, length 1.1180 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(107.0000 mm, 74.0000 mm): Track [CLKREQ_N] on B.Cu, length 12.2000 mm
+    @(99.6000 mm, 73.9500 mm): Pad 13 [CLKREQ_N] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.0000 mm, 73.9500 mm): Pad 14 [PERST_N] of U1 on F.Cu
+    @(100.0000 mm, 81.0000 mm): Track [PERST_N] on F.Cu, length 2.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 68.0000 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+    @(95.2000 mm, 66.0500 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.0000 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+    @(94.0500 mm, 68.0000 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 71.2000 mm): Pad 63 [RTL_1V1] of U1 on F.Cu
+    @(94.0500 mm, 70.0000 mm): Pad 60 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.2000 mm, 66.0500 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+    @(95.2000 mm, 66.0500 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.2000 mm, 66.0500 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+    @(99.0000 mm, 60.5000 mm): Track [RTL_1V1] on F.Cu, length 13.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.8000 mm, 66.0500 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+    @(99.2000 mm, 66.0500 mm): Pad 40 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(100.8000 mm, 73.9500 mm): Pad 16 [RTL_1V1] of U1 on F.Cu
+    @(101.9500 mm, 70.4000 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 70.4000 mm): Pad 25 [RTL_1V1] of U1 on F.Cu
+    @(100.8000 mm, 66.0500 mm): Pad 36 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 67.2000 mm): Pad 33 [RTL_5V] of U1 on F.Cu
+    @(101.2000 mm, 73.9500 mm): Pad 17 [RTL_5V] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 67.2000 mm): Pad 33 [RTL_5V] of U1 on F.Cu
+    @(110.0000 mm, 67.2000 mm): Track [RTL_5V] on F.Cu, length 11.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 73.2000 mm): Pad 18 [SPISI] of U1 on F.Cu
+    @(109.0000 mm, 75.2000 mm): Track [SPISI] on B.Cu, length 7.2000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(108.0000 mm, 72.0000 mm): Track [SPICLK] on B.Cu, length 9.4000 mm
+    @(101.9500 mm, 72.8000 mm): Pad 19 [SPICLK] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 66.8000 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
+    @(99.6000 mm, 66.0500 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(99.6000 mm, 66.0500 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
+    @(99.6000 mm, 62.8000 mm): Track [RTL_3V3] on B.Cu, length 8.4000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 66.8000 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(99.6000 mm, 66.0500 mm): Pad 39 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 66.8000 mm): Pad 34 [RTL_3V3] of U1 on F.Cu
+    @(101.9500 mm, 72.4000 mm): Pad 20 [RTL_3V3] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(101.9500 mm, 71.6000 mm): Pad 22 [SPISO3] of U1 on F.Cu
+    @(106.5000 mm, 71.6000 mm): Track [SPISO3] on F.Cu, length 0.6000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(112.6000 mm, 70.4000 mm): Track [SPISO] on F.Cu, length 6.0000 mm
+    @(101.9500 mm, 71.2000 mm): Pad 23 [SPISO] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(111.4000 mm, 69.8000 mm): Track [SPICS] on F.Cu, length 6.6000 mm
+    @(101.9500 mm, 70.8000 mm): Pad 24 [SPICS] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+    @(94.0500 mm, 72.4000 mm): Pad 66 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(97.2000 mm, 66.0500 mm): Pad 45 [GND] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(97.2000 mm, 66.0500 mm): Pad 45 [GND] of U1 on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.0000 mm, 65.0000 mm): Pad 1 [RSET] of R1 on F.Cu
+    @(94.8000 mm, 66.0500 mm): Pad 51 [RSET] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.0000 mm, 59.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu
+    @(88.0000 mm, 62.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.0000 mm, 62.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+    @(94.0500 mm, 67.2000 mm): Pad 53 [XTAL_IN] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(89.4000 mm, 59.0000 mm): Pad 2 [XTAL_OUT] of Y1 on F.Cu
+    @(91.0000 mm, 62.0000 mm): Pad 1 [XTAL_OUT] of C2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(91.0000 mm, 62.0000 mm): Pad 1 [XTAL_OUT] of C2 on F.Cu
+    @(94.0500 mm, 67.6000 mm): Pad 54 [XTAL_OUT] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.4000 mm): Pad 61 [REFCLK_P] of U1 on F.Cu
+    @(93.7500 mm, 70.5000 mm): Track [REFCLK_P] on B.Cu, length 0.2500 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(93.7500 mm, 69.5000 mm): Track [REFCLK_N] on B.Cu, length 0.2500 mm
+    @(94.0500 mm, 70.8000 mm): Pad 62 [REFCLK_N] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.5000 mm, 71.5000 mm): Track [LANE0_RXP] on F.Cu, length 0.2500 mm
+    @(94.0500 mm, 71.6000 mm): Pad 64 [LANE0_RXP] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.2500 mm, 72.0000 mm): Track [LANE0_RXN] on B.Cu, length 0.2500 mm
+    @(94.0500 mm, 72.0000 mm): Pad 65 [LANE0_RXN] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(92.7500 mm, 72.7500 mm): Track [LANE0_TXN] on F.Cu, length 0.2500 mm
+    @(94.0500 mm, 72.8000 mm): Pad 67 [LANE0_TXN] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 73.2000 mm): Pad 68 [LANE0_TXP] of U1 on F.Cu
+    @(93.7500 mm, 73.2500 mm): Track [LANE0_TXP] on B.Cu, length 0.2500 mm
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

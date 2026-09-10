@@ -44,6 +44,11 @@ remaining launch existed; no complete route was saved or promoted. This
 confirms the remaining implementation issue includes the M.2/J1 launch
 field, not only U1 source escape.
 
+V1592 corrected the endpoint rectangle model and generated complete paths for
+all six handoff-to-J1 nets, but native DRC rejected them with 594 clearance
+violations. No candidate was promoted; the corrected endpoint model remains
+useful, while multi-net physical separation and connector launch remain OPEN.
+
 The current Path-A/Path-B storage comparison is recorded in
 `PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md`; it supersedes older status
 headers, not raw receipts. Path A remains protected. Path B is a serious

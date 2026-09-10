@@ -10702,3 +10702,10 @@ the accepted local primitive. Receipt:
   launch existed. No complete route was promoted; the remaining issue follows
   the combined M.2/J1 launch field. Orientation, Path A, and rules remain
   unchanged.
+
+## 2026-09-10 — rejected corrected handoff-to-J1 router V1592
+
+- V1592 exempted actual endpoint pad rectangles and found complete paths for
+  all six handoff-to-J1 nets. Native DRC rejected the centerline/via geometry
+  with 594 clearance violations. The endpoint model correction is retained,
+  but multi-net separation and connector launch remain open.
