@@ -10294,3 +10294,8 @@ native DRC remained 155 with a PERST/BRIDGE_3V3 short and source-field
 crossings. It is rejected integrated route evidence; V154 remains the
 accepted local primitive. Receipt:
 `PHASE24_STORAGE_SUPPORT_CAP_PERST_COAUTHORED_V157_RECEIPT.md`.
+V158 tested a coherent cap/PERST-aware support transplant. All ten endpoints
+passed, but native DRC remained 153 with source-field crossings and a
+PERST/BRIDGE_3V3 short. It is rejected integration evidence; V154 remains
+the accepted local primitive. Receipt:
+`PHASE24_STORAGE_SUPPORT_COHERENT_CAP_PERST_V158_RECEIPT.md`.
