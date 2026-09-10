@@ -43,6 +43,11 @@ one collision but introduced PERST and storage-support crossings/shorts. The
 accepted V154 local primitive remains available; this is a recoverable
 coauthoring/transplant gate, not an architecture blocker.
 
+V157 is the rejected broader coauthoring attempt: all ten endpoints pass, but
+native DRC retains a PERST/BRIDGE_3V3 short and source-field crossings. This
+does not invalidate the V154 local primitive or create a new architecture
+blocker.
+
 Status: `OPEN — implementation authorized; procurement evidence remains HIGH
 risk` for the authorized SATA/NVMe upgrade only.
 The prior SATA-only board is preserved.

@@ -42,6 +42,10 @@ V156 rejected the first integrated cap-shelf translation at 155 native DRC
 findings, despite ten-net endpoint parity. It is not evidence against V154;
 the next integration must coauthor C86/C87 with the affected PERST corridor.
 
+V157 performed that broader coauthoring attempt but retained 155 native DRC
+findings, including a PERST/BRIDGE_3V3 short and source-field crossings. It is
+rejected integrated evidence; V154 remains the accepted local primitive.
+
 ## CURRENT STATE — documentation authority (2026-09-08)
 
 The live Path-A dual-mode storage implementation includes the corrected

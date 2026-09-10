@@ -11140,3 +11140,9 @@ field. Both retained all ten endpoint assertions, but V156's native DRC was
 transplant/placement failure because the surrounding single-ended corridor
 was not coauthored; V154 remains the accepted local primitive. Receipt:
 `PHASE24_STORAGE_SUPPORT_CAP_CLEAR_V156_RECEIPT.md`.
+
+V157 coauthored the cap placement, TX/RX source transitions, and target
+trunks, while preserving the ten-net endpoint audit. Native DRC remained 155
+with a PERST/BRIDGE_3V3 short and source-field crossings, so it is rejected
+as a local route implementation. V154 remains the accepted local primitive.
+Receipt: `PHASE24_STORAGE_SUPPORT_CAP_PERST_COAUTHORED_V157_RECEIPT.md`.
