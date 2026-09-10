@@ -5,11 +5,12 @@ F.Cu dogbones, ordinary through vias, and a narrow In2 STORAGE_3V3 pocket.
 No signal-layer collector is authored through the SATA launch field.
 """
 from pathlib import Path
+import os
 import pcbnew
 
 ROOT = Path(__file__).resolve().parent
-BASE = ROOT / "PHASE24_STORAGE_V79_HARMLESS_ADD.kicad_pcb"
-OUT = ROOT / "PHASE24_STORAGE_M2_POWER_IN2_ZONE_V1562.kicad_pcb"
+BASE = ROOT / os.environ.get("PISXME_POWER_BASE", "PHASE24_STORAGE_V79_HARMLESS_ADD.kicad_pcb")
+OUT = ROOT / os.environ.get("PISXME_POWER_OUT", "PHASE24_STORAGE_M2_POWER_IN2_ZONE_V1562.kicad_pcb")
 b = pcbnew.LoadBoard(str(BASE))
 net = b.FindNet("STORAGE_3V3")
 assert net, "STORAGE_3V3 net missing"

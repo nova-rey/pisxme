@@ -10547,6 +10547,13 @@ the accepted local primitive. Receipt:
 - The final V1562 source handoff uses an upper F.Cu dogleg to avoid
   `AUTO_PEDET`; native power and SATA endpoint audits remain passing.
 
+## 2026-09-10 — stale Path-A parent discriminator V1563
+
+- Applying the V1562 handoff to older V196 correctly failed: V196 still uses
+  legacy `M2_3V3` ownership, yielding nine unreached J3 contacts and real
+  mixed-net shorts. Preserved as rejected evidence; V79 remains the valid
+  source-corrected parent.
+
 ## 2026-09-10 — Phase 24 status reconciliation V1562
 
 - Updated `PHASE24_STATUS.md` with the live V1562 focused storage result,
