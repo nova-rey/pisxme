@@ -120,6 +120,14 @@ existing PEDET/power corridors, is insufficient. The next attempt must use
 one physical channel plan for those handoffs; orientation and architecture
 remain closed.
 
+The staggered source-row funnel probe is preserved as
+`PHASE24_RTL9210B_SOURCE_ROW_STAGGERED_FUNNEL.md`. Its reserved 1.0-mm via
+rows and parallel B.Cu handoffs are separated, but native DRC still reports
+two real adjacent-U1 pad-end clearance violations (9 total fixture findings,
+4 intentional remote opens). This narrows the remaining capacity problem to
+the first QFN handoff; the next production-worthy repair must re-author that
+handoff geometry or use an explicitly approved finer local escape rule.
+
 The first coordinated local reroute of U1.12 `ISOLATEB`, `CLKREQ_N`,
 `PERST_N`, and `RTL_5V` is rejected: native DRC found 12 violations and zero
 opens. The exact conflicts are recorded in

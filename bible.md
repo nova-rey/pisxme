@@ -11044,6 +11044,15 @@ the accepted local primitive. Receipt:
   board-edge/via spacing defects. Classified as route implementation
   evidence; the MIC2545A topology and frozen Path-B baseline remain valid.
 
+## 2026-09-10 — source-row staggered funnel narrows handoff blocker
+
+- Reserved five separated 1.0-mm-spaced via rows and parallel B.Cu handoff
+  corridors for the U1 support departures. Native DRC found 9 fixture
+  violations and 4 intentional stripped-continuation opens; the lower
+  corridors were separable, while two real pad-end clearances remained at
+  the adjacent 0.4-mm U1 row. This narrows the structural capacity issue to
+  the first QFN handoff and preserves the accepted orientation/V1603 launch.
+
 ## 2026-09-10 — revalidated accepted Path-B baseline after pause checkpoint
 
 - Native KiCad DRC of the accepted V1603/V1523 integrated candidate reports
