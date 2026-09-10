@@ -157,6 +157,12 @@ control/resistor crossings and a no-connect U1-pad contact. V772 remains the
 current clean combined support basis, with control resistor relocation still
 open.
 
+V1375/V1376 are rejected U1.55 RTL_1V1 perimeter trials. V1375 overlaps the
+accepted RTL_3V3 B.Cu field at the left transition; shifting the transition
+outward in V1376 instead intersects the existing GND return field. Both
+remain route-implementation evidence only. The accepted U1.50/V1374 basis is
+unchanged, and U1.55/U1.60/U1.63 still require a different co-authored escape.
+
 V780 is rejected: its SPICS/SPISO rechannel terminated the long B.Cu channels
 through the validated crystal-support pocket, producing an SPICS/GND short and
 multiple crossings. V781 moved the endpoint dogbones above that pocket but

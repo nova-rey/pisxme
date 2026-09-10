@@ -8717,6 +8717,11 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+
+2026-09-10 — Phase 24 V1375/V1376 rejected: U1.55 RTL_1V1 perimeter escapes
+conflicted first with the accepted RTL_3V3 field and then with the existing
+GND return field after an outward shift. Preserved as routing evidence; the
+accepted V1374 rail basis and Path-A/production CAD remain unchanged.
 2026-09-09: V976 fully relocated the SPISO3 transition around the best V969
 RTL_3V3 cell and was rejected with five native DRC findings. The relocation
 shorted both the RTL_3V3 B.Cu trunk and the preserved SPISO shelf. This
