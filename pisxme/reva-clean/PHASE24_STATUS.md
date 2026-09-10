@@ -10517,6 +10517,11 @@ negative control passing. V1412 is accepted only as the U1.33-to-C5 RTL_5V
 F.Cu source corridor (native DRC zero); V1413's attempt to join U1.17 added
 six native violations and is rejected. RTL_5V fan-in, U1.63, and remaining
 support/control groups remain OPEN.
+V1414 is a rejected same-layer U1.17 RTL_5V fan-in with one SPISI crossing.
+V1415 is accepted as the complete RTL_5V fan-in: U1.17 joins the accepted
+U1.33-to-C5 outboard rail through an offset F.Cu right-side route. Native DRC
+reports zero violations with 14 remaining fixture opens; the saved-board
+U1.17/U1.33/C5.1 audit and source-removal negative control pass.
 
 V1406 is a rejected RTL_5V U1.33-to-C5 upper-corridor trial; native DRC
 reported four crossings/shorts against the accepted 1V1/3V3 field. V1407 is

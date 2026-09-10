@@ -166,6 +166,10 @@ native DRC and saved-board/source-removal audit passed. V1412 accepted the
 U1.33-to-C5 RTL_5V corridor with native DRC zero; V1413 rejected the U1.17
 fan-in with six native violations. V1409/V1410 remain rejected alternatives;
 Path A and production CAD remain unchanged.
+2026-09-09 — Phase 24 V1415 accepted the complete RTL_5V fan-in after native
+DRC reported zero violations and the saved-board U1.17/U1.33/C5.1 endpoint
+and source-removal audit passed. V1414 remains rejected for its SPISI
+crossing; Path A and production CAD remain unchanged.
 2026-09-09 — Phase 24 V1385-V1389 explored the remaining RTL_1V1 source-field
 class from V1384. V1385 coupled U1.60/U1.63 and was rejected at 10 native DRC
 violations; V1386 reduced U1.60 alone to 3; V1387 reduced it to one
