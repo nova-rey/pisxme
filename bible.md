@@ -10219,3 +10219,8 @@ V127 moved storage-local R80 out of the USB3 corridor. Native DRC improved to
 146/499 with no shorts, crossings, or track-width findings, and all four
 J7-to-U12 endpoint assertions passed. Support routing and full-board closure
 remain open.
+V134 moved only U13 outboard to test whether it occupied the natural support
+escape region. Native DRC remained 207/499 with real USB_DP/USB_RX/JMS_VCCO
+shorts and crossings, so U13 alone is not the root cause. V134 is rejected;
+the next support candidate must change layer/escape ownership. Receipt:
+`PHASE24_STORAGE_SUPPORT_U13_V134_RECEIPT.md`.

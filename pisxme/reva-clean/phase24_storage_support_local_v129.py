@@ -1,10 +1,11 @@
 """V129 disposable local U11-to-U12 support escape from native pads."""
 from pathlib import Path
+import os
 import pcbnew
 
 R = Path(__file__).resolve().parent
-BASE = R / 'PHASE24_STORAGE_USB3_R80_RELOCATED_V127.kicad_pcb'
-OUT = R / 'PHASE24_STORAGE_SUPPORT_LOCAL_V130.kicad_pcb'
+BASE = Path(os.environ.get('PISXME_STORAGE_SUPPORT_BASE', str(R / 'PHASE24_STORAGE_USB3_R80_RELOCATED_V127.kicad_pcb')))
+OUT = Path(os.environ.get('PISXME_STORAGE_SUPPORT_OUT', str(R / 'PHASE24_STORAGE_SUPPORT_LOCAL_V130.kicad_pcb')))
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 W = pcbnew.FromMM(.13208)
 
@@ -28,6 +29,10 @@ def via(b, net, p):
 
 
 b = pcbnew.LoadBoard(str(BASE))
+if os.environ.get('PISXME_MOVE_U13') == '1':
+    u13 = b.FindFootprintByReference('U13')
+    if u13 is None: raise RuntimeError('missing U13')
+    u13.SetPosition(V(200.0, 135.0))
 jobs = (
     ('USB_RXP1', '26', '23', (137, 137), (160, 139.5)),
     ('USB_RXN1', '27', '22', (137, 140), (161, 141)),

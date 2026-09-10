@@ -11045,3 +11045,8 @@ at 192/499 with real collisions into JMS_AVDD33, BRIDGE_1V1, and the U12
 support field. A downward translation is not sufficient; the next candidate
 must change local layer ownership or support-side corridor. Receipt:
 `PHASE24_STORAGE_TX_SUPPORT_V133_RECEIPT.md`.
+V134 moved only U13 outboard to test whether it occupied the natural support
+escape region. Native DRC remained 207/499 with real USB_DP/USB_RX/JMS_VCCO
+shorts and crossings, so U13 alone is not the root cause. V134 is rejected;
+the next support candidate must change layer/escape ownership. Receipt:
+`PHASE24_STORAGE_SUPPORT_U13_V134_RECEIPT.md`.
