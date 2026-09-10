@@ -10494,3 +10494,10 @@ top departures; native DRC retained 5, 5, and 5 violations respectively,
 including collisions with the existing PCIe source field. They are preserved
 as route-implementation evidence. V1392 remains the accepted U1.60 primitive;
 U1.63 and remaining support/control groups remain OPEN.
+
+V1399 is a rejected RTL_5V fan-in trial from V1392. It attempted to join
+U1.17/U1.33/C5 using F.Cu/B.Cu only, but native DRC reported 9 violations
+from crossings and clearances against the accepted RTL_1V1/RTL_3V3/SPI
+field. The trial is route-implementation evidence only; no accepted
+primitive or Path-A asset changed. RTL_5V, U1.63, and remaining support/
+control groups remain OPEN.

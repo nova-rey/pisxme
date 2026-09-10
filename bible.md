@@ -144,6 +144,10 @@ escapes from the accepted V1392 U1.60 basis. Jogged, lower-pocket, and
 diagonal-top departures retained five native DRC violations each, chiefly
 PCIe source-field collisions. Evidence is preserved; V1392 and Path-A remain
 unchanged and U1.63 remains open.
+2026-09-09 — Phase 24 V1399 rejected the first F.Cu/B.Cu RTL_5V fan-in
+trial from V1392. Native DRC reported 9 violations against accepted 1V1,
+3V3, and SPI geometry. The disposable board and report are preserved;
+accepted V1392 and Path-A remain unchanged.
 2026-09-09 — Phase 24 V1385-V1389 explored the remaining RTL_1V1 source-field
 class from V1384. V1385 coupled U1.60/U1.63 and was rejected at 10 native DRC
 violations; V1386 reduced U1.60 alone to 3; V1387 reduced it to one
