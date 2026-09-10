@@ -10284,3 +10284,8 @@ negative control fails as required. The 32 remaining opens are intentional
 stripped-fixture residue; V154 is accepted as a local primitive, not board
 closure. Receipt:
 `PHASE24_STORAGE_SUPPORT_U12_COAUTHOR_TX_RX_FAR_V154_RECEIPT.md`.
+V156 tested a coherent C86/C87 cap-shelf translation in the integrated V127
+descendant. All ten USB3/support endpoints passed, but native DRC found 155
+findings including PERST crossings and TX/support shorts. It is rejected as
+an uncoauthored transplant; V154 remains the accepted local primitive.
+Receipt: `PHASE24_STORAGE_SUPPORT_CAP_CLEAR_V156_RECEIPT.md`.
