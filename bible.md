@@ -10780,3 +10780,11 @@ the accepted local primitive. Receipt:
   crossings/shorts and J1-side via/clearance conflicts. Handoff-pad spacing
   and connector launch must be co-authored together; no rule or architecture
   changed.
+
+## 2026-09-10 — accepted V1603 Path-B integrated launch candidate
+
+- The physical-envelope-aware six-net RTL9210B-to-J1 launch was integrated
+  with the V1601 support candidate. Native saved-board connectivity and six
+  source-track-removal negative controls pass; the integrated native DRC has
+  zero launch errors. Twelve inherited support-field warnings remain open;
+  Phase 24 is not closed and the U1 orientation remains frozen.

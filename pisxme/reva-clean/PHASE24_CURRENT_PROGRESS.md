@@ -28,9 +28,11 @@ handoff-to-J1 launch diagnostic.
 The bounded physical-envelope launch experiment is now successful as the
 V1603 local primitive: all six U1-to-J1 high-speed nets are natively connected
 with zero high-speed DRC errors and negative controls pass. The next work is
-to integrate this launch with the complete Path-B support network and acreage
-candidate, then rerun native DRC, connectivity, return/reference, and support
-validation. Orientation search remains closed and no validation severity or
+integrating this launch with the complete Path-B support network and acreage
+candidate. The current integrated candidate has zero V1603 launch DRC errors;
+native integrated six-net connectivity and negative controls pass. Remaining
+support-field warnings/opens are still open and must be closed before Phase 24
+promotion. Orientation search remains closed and no validation severity or
 layer rule may be relaxed.
 
 ## Resume point
