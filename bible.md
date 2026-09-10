@@ -147,6 +147,10 @@ V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V1420 accepted the native J1 SSD_3V3 pad 2/4/6/8
+contact join. Native DRC is zero and the saved-board endpoint/source-removal
+audit passes; the fixture falls to 11 opens. Remaining Path-B support stays
+open and Path A is unchanged.
 2026-09-09 — Phase 24 V1419 rejected the direct U1.66-to-exposed-pad GND
 trial; native DRC retained one LANE0_RXP crossing. The U1.45 primitive remains
 accepted and U1.66 ground closure remains open.

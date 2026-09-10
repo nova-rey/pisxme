@@ -10559,3 +10559,9 @@ disposable comparison evidence. No production asset changed.
 V1419 is a rejected direct U1.66-to-exposed-pad GND trial. It retained one
 native LANE0_RXP crossing while reducing the fixture to 12 opens. The direct
 launch is not promoted; U1.66 ground attachment remains OPEN.
+
+V1420 is accepted as the J1 SSD_3V3 contact join. It links M.2 pads 2/4/6/8
+with short same-net F.Cu links, reports zero native DRC violations, and
+passes the saved-board endpoint/source-removal audit. The fixture falls to
+11 opens; RTL_1V1 U1.63, U1.66 ground, crystal/RSET, REFCLK, and remaining
+support remain OPEN.
