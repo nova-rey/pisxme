@@ -10901,3 +10901,11 @@ the accepted local primitive. Receipt:
   RTL9210B pin 12 enables the local SSD 3.3-V high-side switch. This remains
   corroborating evidence only; PiSXMe rail source, inrush/current budget,
   fault policy, and production application-circuit authority remain open.
+
+## 2026-09-10 — paused RTL9210B Path-B at safe GitHub checkpoint
+
+- Added `pisxme/reva-clean/PHASE24_PAUSE_CHECKPOINT_20260910.md`. It records
+  the authoritative V1517/0° orientation, V1603 launch, current native DRC,
+  layer-transition, land-pattern, high-speed, and support-parity evidence,
+  the intentionally preserved dirty experiment set, and the exact remaining
+  Path-B gates. Only the checkpoint note and this append-only entry are staged.
