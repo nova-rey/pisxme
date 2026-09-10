@@ -30,6 +30,12 @@ rail-budget review and PCB regeneration must be performed together. This is
 the current open gate; PCB-only copper is prohibited. See
 `PHASE24_STORAGE_M2_POWER_RECONCILIATION_20260910.md`.
 
+That source-level correction is now applied to the live root/child schematic.
+Native netlist export confirms the nine J3 power contacts are on
+`STORAGE_3V3`; V79 is the matching disposable PCB descendant and passes
+814-node / 1263-pad parity with zero mismatches. Its native DRC is 601 / 350
+with no shorting section. Full storage routing and Phase 24 remain open.
+
 V78 then tested a separated `BRIDGE_R1` escape from V75. Native DRC found
 `JMS_AVDDL`/`POWER_GND` and `BRIDGE_R1`/`BRIDGE_R1RTN` shorts at 605
 violations / 349 opens, so V78 is rejected route-implementation evidence.

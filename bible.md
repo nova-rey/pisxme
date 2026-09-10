@@ -10080,6 +10080,11 @@ Native DRC exposed JMS_AVDDL/POWER_GND and BRIDGE_R1/BRIDGE_R1RTN shorts at
 rules or production CAD changed.
 The blocker narrative was updated to include V78 as rejected evidence, keeping
 the current M.2 power-source gap and V75 preference explicit.
+2026-09-10 — Applied the source-level storage power-owner correction to the
+live root/child schematic. Native netlist export puts all nine J3 M.2 power
+contacts on STORAGE_3V3. V79 materialized that ownership on V75 and passed
+814-node / 1263-pad parity with zero mismatches; native DRC remained 601 / 350
+with no shorting section. Full storage routing and Phase 24 remain open.
 2026-09-10 — Live V75 inspection found a genuine M.2 power-source gap:
 J3's M2_3V3 contacts have no source-owned pad, track, or zone, while
 STORAGE_3V3 is the existing regulator-owned rail. A disposable source-level

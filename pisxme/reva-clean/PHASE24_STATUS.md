@@ -10714,6 +10714,15 @@ regeneration, rail-budget review, and native PCB revalidation must consume
 the correction together. V75 remains the preferred routing parent and Phase
 24 remains OPEN.
 
+The source correction is now applied to the live schematic authority: the
+storage child/root boundary is `STORAGE_3V3`, with an explicit source-level
+alias at J3's reviewed M2 power contact field. Native netlist export confirms
+all nine J3 power contacts share the regulator-owned `STORAGE_3V3` net.
+V79 materializes that source ownership on a V75 descendant and passes parity
+at 814 / 1263 / 0. Native DRC remains 601 / 350 with no shorting section.
+This closes the former M2 power-owner contradiction; full storage routing and
+Phase 24 remain open.
+
 V78 tested a separated `BRIDGE_R1` via column and B.Cu shelf against V75.
 Native DRC reported 605 violations / 349 opens and exposed real
 `JMS_AVDDL`/`POWER_GND` and `BRIDGE_R1`/`BRIDGE_R1RTN` shorts. V78 is rejected;

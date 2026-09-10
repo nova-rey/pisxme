@@ -552,7 +552,7 @@
     (at 5 16 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000002be))
-  (hierarchical_label "M2_3V3"
+  (hierarchical_label "STORAGE_3V3"
     (shape bidirectional)
     (at 5 19 180)
     (effects (font (size 1.27 1.27)) (justify right))
@@ -971,5 +971,8 @@
  (property "MPN" "220n PCIe TX1N" (at 324 209 0) (effects (font (size 1 1)) (hide yes)))
  (property "Footprint" "C_0402_1005Metric" (at 324 209 0) (effects (font (size 1 1)) (hide yes)))
  (pin "1" (uuid f1000000-0000-0000-0000-000000002901)) (pin "2" (uuid f1000000-0000-0000-0000-000000002902)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000007" (reference "C93") (unit 1)))) )
+  (global_label "STORAGE_3V3" (shape bidirectional) (at 240 210.72 0)
+    (effects (font (size 1 1)) (justify left))
+    (uuid f5000000-0000-0000-0000-000000000001))
   (sheet_instances (path "/" (page "7")))
 )
