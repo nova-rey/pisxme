@@ -939,6 +939,12 @@ opens. It is retained for obstacle-aware coauthoring; V75 remains the cleaner
 historical route parent until those interactions are regenerated. Receipt:
 `PHASE24_STORAGE_V75_WITH_V182_SUPPORT_RECEIPT.md`.
 
+V186 is the improved direct-on-V75 coauthoring candidate. It preserves the
+USB3/SATA/parity/negative-control passes and reduces native DRC to 628/346,
+but retains five real local shorts. It is route-development evidence only;
+the next repair must coauthor the CM5 RX-N handoff and adjacent SATA/mode
+fields against V75's actual geometry.
+
 ## Current live source/parity correction — 2026-09-08
 
 `STORAGE.kicad_sch` now has authoritative `JMS_USB3_TXN/P` instance labels on

@@ -139,7 +139,7 @@ for name, upad, target, source_via, target_via in (
         seg(b,n,shoulder,dst,F)
         continue
     if CAP_CLEAR:
-        sv = (150.0, 143.0) if name == 'USB_RXP1' else (151.0, 144.0)
+        sv = (150.0, 142.0) if name == 'USB_RXP1' else (151.0, 144.0)
     else:
         sv = source_via
     tv = ((170.0, 140.0) if name == 'USB_RXP1' else (171.0, 141.0)) if RX_FAR else (((160.0, 138.8) if name == 'USB_RXP1' else (161.0, 139.8)) if TARGET_STAGGER else target_via)
@@ -170,8 +170,13 @@ for name, upad, target, source_via, target_via in (
             # the east.  This avoids both the RXP lower shelf and CM5_PERST.
             bypass_y = 128.0
             bypass_x = 180.0
-            seg(b,n,sv,(sv[0],bypass_y),B)
-            seg(b,n,(sv[0],bypass_y),(bypass_x,bypass_y),B)
+            # Jog east before rising past the nearby CM5 USB3 RX-N via.
+            handoff_x = 152.0
+            handoff_y = 140.0
+            seg(b,n,sv,(sv[0],handoff_y),B)
+            seg(b,n,(sv[0],handoff_y),(handoff_x,handoff_y),B)
+            seg(b,n,(handoff_x,handoff_y),(handoff_x,bypass_y),B)
+            seg(b,n,(handoff_x,bypass_y),(bypass_x,bypass_y),B)
             seg(b,n,(bypass_x,bypass_y),(bypass_x,tv[1]),B)
             seg(b,n,(bypass_x,tv[1]),tv,B)
         else:

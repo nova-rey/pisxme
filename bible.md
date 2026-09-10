@@ -10314,3 +10314,6 @@ the accepted local primitive. Receipt:
   passes USB3, SATA, parity (814/1263/0), and the negative control, but native
   DRC is 630/346 versus V75's 601/349. It is retained for coauthoring and not
   promoted because 29 real inter-island interactions were introduced.
+- V186 regenerated the support directly on V75 and moved the RXP transition
+  north of AVDD33. USB3, SATA, parity, and the negative control pass; DRC is
+  628/346, but five real shorts remain. Retain as route-development evidence.

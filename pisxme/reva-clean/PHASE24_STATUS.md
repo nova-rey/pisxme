@@ -11178,3 +11178,11 @@ removed-track negative control. Native DRC is 630/346 versus V75's 601/349:
 the three-open reduction is offset by 29 real inter-island route interactions.
 It is rejected as a production route but retained as the next coauthored
 storage basis. Receipt: `PHASE24_STORAGE_V75_WITH_V182_SUPPORT_RECEIPT.md`.
+
+V186 regenerated the same support directly on V75 with the RXP source
+transition moved north of the local AVDD33 field. It passes USB3 ten-net
+connectivity, complete SATA connectivity, 814-node/1263-pad parity with zero
+mismatches, and the removed-track negative control. Native DRC improves to
+628/346, but five real shorts remain (CM5 RX-N handoff, XOUT/JMS_XAVDDH, SATA
+RXP/RXN, and STORAGE_SEL). V186 is retained as the next coauthoring basis,
+not promoted. Receipt: `PHASE24_STORAGE_V75_COAUTHORED_V186_RECEIPT.md`.
