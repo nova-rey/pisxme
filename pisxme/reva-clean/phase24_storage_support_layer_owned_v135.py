@@ -64,9 +64,13 @@ for name, upad, cap, target, corridor, target_x in (
     c_ref, c_num = cap.split('.')
     src = xy(pad(b,'U11',upad)); c1 = xy(pad(b,c_ref,c_num)); c2 = xy(pad(b,c_ref,'2'))
     dst = xy(pad(b,'U12',target)); cv = corridor; tv = (target_x, cv[1])
-    source_via = (141.4, 140.0) if name == 'USB_TXP1' else (141.0, 141.0)
+    source_via = (142.0, 139.6) if name == 'USB_TXP1' else (141.0, 141.0)
     source_lane = (143.0, 140.0) if name == 'USB_TXP1' else (139.0, 141.0)
-    seg(b,n,src,source_via,F); via(b,n,source_via)
+    if name == 'USB_TXP1':
+        seg(b,n,src,(141.4,139.6),F); seg(b,n,(141.4,139.6),source_via,F)
+    else:
+        seg(b,n,src,source_via,F)
+    via(b,n,source_via)
     seg(b,n,source_via,source_lane,B)
     cap_via = (145.0, c1[1])
     seg(b,n,source_lane,(source_lane[0],c1[1]),B)

@@ -11057,3 +11057,9 @@ regulator geometry. The reduced V136 local fixture then isolated the remaining
 issue to one U11 source-via clearance and one U12 target crossing under the
 active JLC clearance profile. V136 is rejected; no production copper is
 promoted. Receipt: `PHASE24_STORAGE_SUPPORT_LAYER_OWNED_V136_RECEIPT.md`.
+V137 staggered the U11 TXP source dogbone successfully, then tested an
+inner-side U12 TXN launch to avoid the adjacent RX launch crossing. Native DRC
+rejected the candidate at 9 local violations because the inner route collided
+with U12 POWER_GND/NC pads and other launches. V137 is rejected; the next
+candidate must change U12 launch ownership or regenerate the local U12/source
+geometry. Receipt: `PHASE24_STORAGE_SUPPORT_TARGET_LAUNCH_V137_RECEIPT.md`.

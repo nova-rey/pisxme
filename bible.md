@@ -10230,3 +10230,8 @@ connectivity, while native DRC retained one U11 source-via clearance and one
 U12 target crossing under the active JLC profile. V136 is rejected and remains
 disposable evidence; production support copper is not promoted. Receipt:
 `PHASE24_STORAGE_SUPPORT_LAYER_OWNED_V136_RECEIPT.md`.
+V137 tested an inner-side U12 TXN launch after the U11 source dogbone was
+staggered. Native DRC rejected the route at 9 local violations, including
+U12 POWER_GND/NC collisions; this is disposable route evidence, not a waiver
+or production promotion. Receipt:
+`PHASE24_STORAGE_SUPPORT_TARGET_LAUNCH_V137_RECEIPT.md`.
