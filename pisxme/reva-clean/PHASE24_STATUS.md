@@ -10,6 +10,15 @@ this is a route-implementation limitation of those classes, not a Path-A
 regression or a production-board pass. Path A remains the fallback/reference
 architecture and is untouched.
 
+## CURRENT VALIDATION UPDATE — 2026-09-10 V1559
+
+The live U5 layered-connectivity audit was rerun on
+`PHASE24_PGND_CLUSTER_CURRENT.kicad_pcb` using only native saved-board
+connectivity. U5.9 is connected to C44–C47.1 and the POWER_GND group passes;
+the necessary-trace removal negative control fails as required. Receipt:
+`PHASE24_U5_LAYER_CONNECTIVITY_V1559_RECEIPT.md`. This closes only the U5
+connectivity audit; Phase 24 native DRC and other full-board gates remain open.
+
 
 ## CURRENT STATE OVERRIDE — 2026-09-10
 

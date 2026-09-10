@@ -10490,6 +10490,14 @@ the accepted local primitive. Receipt:
   remains isolated; the next experiment requires a different package/fanout
   strategy, not another coordinate-only adjustment or rule relaxation.
 
+## 2026-09-10 — Phase 24 U5 connectivity revalidation V1559
+
+- Re-ran the saved-board U5 audit against native pads, tracks, vias, and zones.
+  U5.9-to-C44–C47.1 and the POWER_GND group pass; removing a necessary trace
+  fails the audit as required.
+- Preserved the result in `PHASE24_U5_LAYER_CONNECTIVITY_V1559_RECEIPT.md`.
+  KiCad's via-width binding warnings were observed and documented, not hidden.
+
 ## 2026-09-10 — RTL9210B crystal source class V1555–V1556
 
 - Tested two further 0-degree QFN escape topologies at the required 0.20-mm
