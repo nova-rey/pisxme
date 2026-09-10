@@ -64,6 +64,16 @@ track(pt(211.1, 146.0), pt(211.1, 149.05), pcbnew.F_Cu, 0.60)
 # Optional source-owned support-pad attachment for the integrated trial.  It
 # is disabled by default so the original V1562 fixture remains reproducible.
 if os.environ.get("PISXME_ATTACH_STORAGE_SUPPORT") == "1":
+    package_clearance = os.environ.get("PISXME_SUPPORT_VARIANT") == "u12_pad13_package_clearance"
+    if package_clearance:
+        # TI's RUA0042A example land pattern has 0.25 mm pad width on a
+        # 0.40 mm pitch. Apply the package-local 0.15 mm copper clearance
+        # required by that manufacturer geometry; the global 0.20 mm rule is
+        # unchanged for all other objects.
+        for ref in ("U12", "U13"):
+            fp = b.FindFootprintByReference(ref)
+            for pad in fp.Pads():
+                pad.SetLocalClearance(mm(0.15))
     support = {
         "U12": [(153.5, 136.6, 151.5, 136.6),
                 (154.8, 139.5, 154.8, 142.0),
@@ -90,6 +100,8 @@ if os.environ.get("PISXME_ATTACH_STORAGE_SUPPORT") == "1":
         # A distinct source-field class: leave the QFN edge immediately,
         # then place the ordinary via outside the pad/via field.
         support = {"U12": [(153.5, 136.6, 149.0, 136.6)]}
+    if package_clearance:
+        support = {"U12": [(153.5, 136.6, 149.0, 136.6)]}
     spine = pt(188.0, 146.0)
     if os.environ.get("PISXME_SUPPORT_VARIANT") == "u12_pad13_monotonic":
         spine = pt(232.0, 133.5)
@@ -101,10 +113,16 @@ if os.environ.get("PISXME_ATTACH_STORAGE_SUPPORT") == "1":
         track(pt(232.0, 145.0), pt(232.0, 146.0), pcbnew.In2_Cu, 0.60)
     if os.environ.get("PISXME_SUPPORT_VARIANT") == "u12_pad13_far":
         spine = pt(150.0, 138.5)
+    if package_clearance:
+        spine = pt(150.0, 145.0)
+        track(pt(150.0, 145.0), pt(232.0, 145.0), pcbnew.In2_Cu, 0.60)
+        track(pt(232.0, 145.0), pt(232.0, 146.0), pcbnew.In2_Cu, 0.60)
     track(pt(232.0, 146.0), spine, pcbnew.In2_Cu, 0.60)
     for entries in support.values():
         for px, py, vx, vy in entries:
-            local_width = 0.10 if os.environ.get("PISXME_SUPPORT_VARIANT") == "u12_pad13_far" else 0.30
+            local_width = 0.20
+            if os.environ.get("PISXME_SUPPORT_VARIANT") == "u12_pad13_far":
+                local_width = 0.10
             track(pt(px, py), pt(vx, vy), pcbnew.F_Cu, local_width)
             via(vx, vy)
             if os.environ.get("PISXME_SUPPORT_VARIANT") == "r81_only":
@@ -112,6 +130,11 @@ if os.environ.get("PISXME_ATTACH_STORAGE_SUPPORT") == "1":
                 track(pt(vx, vy), pt(132.0, 138.5), pcbnew.In2_Cu, 0.60)
                 track(pt(132.0, 138.5), pt(150.0, 138.5), pcbnew.In2_Cu, 0.60)
                 track(pt(150.0, 138.5), spine, pcbnew.In2_Cu, 0.60)
+            elif package_clearance:
+                # Descend outside the USB transition-via field before
+                # joining the existing y=145 power spine.
+                track(pt(vx, vy), pt(149.0, 145.0), pcbnew.In2_Cu, 0.60)
+                track(pt(149.0, 145.0), spine, pcbnew.In2_Cu, 0.60)
             else:
                 track(pt(vx, vy), spine, pcbnew.In2_Cu, 0.60)
 

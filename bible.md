@@ -10604,3 +10604,12 @@ the accepted local primitive. Receipt:
   problem and added a track-width violation plus CM5_PERST crossing (605/341).
   Rejected; a different footprint/source-field or coherent local regeneration
   is required.
+
+## 2026-09-10 — rejected U12 package-local fanout V1574
+
+- Applied TI RUA0042A's 0.25 mm pad / 0.40 mm pitch geometry with a package
+  local 0.15 mm clearance and a normal 0.20 mm escape to an ordinary via.
+  Native DRC fell to 460/335, but the route crossed CM5_PERST and omitted the
+  R81 branch by design. Rejected as an integrated candidate; retain the
+  package-local treatment as evidence for the next coherent source-field
+  regeneration.

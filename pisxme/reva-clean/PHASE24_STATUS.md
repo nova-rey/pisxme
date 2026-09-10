@@ -51,6 +51,12 @@ to 0.10 mm still added a track-width violation and a CM5_PERST crossing, while
 the QFN source-field clearance findings remained. This does not change the
 accepted V1570 R81 primitive or Path-A/Path-B decisions.
 
+V1574 tested the TI-authoritative RUA0042A package-local 0.15 mm clearance
+treatment with a 0.20 mm U12.13 escape. It reduced the disposable DRC to
+460/335 without changing the global 0.20 mm rule, but the selected corridor
+still crosses CM5_PERST and the fixture intentionally omits R81. Retain the
+package treatment as source-field evidence; reject this exact route candidate.
+
 The current Path-A storage repair has a focused V1562 primitive:
 `PHASE24_STORAGE_M2_POWER_IN2_ZONE_V1562.kicad_pcb`. Its native power-owner
 audit and trace-removal negative control pass for all nine J3
