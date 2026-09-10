@@ -20,6 +20,21 @@ Status: `OPEN — implementation authorized; procurement evidence remains HIGH
 risk` for the authorized SATA/NVMe upgrade only.
 The prior SATA-only board is preserved.
 
+## CURRENT PHYSICAL CONNECTIVITY CORRECTION — 2026-09-10
+
+V79's source ownership and schematic-to-PCB parity are correct, but native
+saved-board connectivity showed that its nine J3 `STORAGE_3V3` pads are still
+physically isolated from every source-owned storage-rail pad. This is now a
+route implementation gap, not a source-net contradiction. V81's F.Cu zone
+trial failed to reach the fine-pitch field. V82 connected all nine contacts
+with real copper and ordinary vias and passed the native audit plus its
+trace-removal negative control, but was rejected by native DRC for new
+storage-rail shorts/crossings. The rejected evidence and exact audit are in
+`PHASE24_STORAGE_M2_POWER_OWNER_V81_V82_RECEIPT.md` and
+`phase24_storage_m2_power_owner_audit.py`. The next accepted candidate must
+retain physical connectivity while eliminating those collisions; no DRC rule
+was weakened.
+
 The current preferred Path-A routed parent is V75. Live native inspection
 found a real source-authority gap: J3's power contacts are on `M2_3V3`, while
 that net has no source-owned pad, track, or zone. `STORAGE_3V3` is the existing

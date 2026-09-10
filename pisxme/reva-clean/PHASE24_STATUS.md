@@ -10859,3 +10859,14 @@ V80 tested co-locating and rotating R24 beside U7 with short monotonic F.Cu
 escapes. Native DRC reported 614 violations / 349 opens and exposed three
 real POWER_GND/support-net shorting classes. V80 is rejected; V79 remains the
 preferred power-owner-correct parent.
+2026-09-10 — Native saved-board audit corrected the interpretation of V79:
+all nine J3 contacts have the right `STORAGE_3V3` net name and parity, but
+none physically reaches a source-owned storage-rail pad. V81's broad F.Cu
+zone did not enter the fine-pitch field. V82's real pad escapes, ordinary
+through-vias, and B.Cu trunk connected all nine contacts, and the audit's
+trace-removal negative control passed, but native DRC rejected it at 628
+violations / 335 opens with new STORAGE_3V3 shorts/crossings. Both are
+disposable rejected route trials; the next task is a pad-aware, collision-free
+storage-rail implementation. See
+`PHASE24_STORAGE_M2_POWER_OWNER_V81_V82_RECEIPT.md` and
+`phase24_storage_m2_power_owner_audit.py`.

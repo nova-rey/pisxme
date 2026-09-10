@@ -10096,3 +10096,9 @@ boundary, passed the schematic/mode audits, and removed the M2 hierarchy
 finding in the fixture. It was not promoted pending coordinated source
 regeneration, rail-budget review, and native PCB revalidation; no PCB-only
 repair or validation waiver was made.
+2026-09-10 — Added a native saved-board M.2 power-owner audit with a real
+trace-removal negative control. It exposed that V79's nine correctly named J3
+power pads were not physically connected. V81 broad-zone and V82 ordinary-via
+trunk trials were preserved; V82 passed physical connectivity but was rejected
+by native DRC for new rail shorts/crossings. No rules were weakened. Receipt:
+`PHASE24_STORAGE_M2_POWER_OWNER_V81_V82_RECEIPT.md`.
