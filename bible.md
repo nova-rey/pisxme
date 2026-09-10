@@ -95,6 +95,12 @@ conclusion was made.
 RTL_3V3 stub from the RTL9210B disposable basis. Native DRC is now zero
 violations with 27 explicit unconnected support items still open. Path-A and
 production CAD remain unchanged.
+
+2026-09-09 — Phase 24 V1359 accepted: connected U1.52 to the RTL_3V3 trunk
+with a short F.Cu left escape, one ordinary via, and a B.Cu handoff. Native
+DRC remains zero and the open count falls to 26. V1360-V1364 rejected nearby
+U1.20 escapes against SPISO3/SPICLK/SPICS or the exposed-pad/GND envelope;
+preserved as route evidence for a co-authored source-field repair.
 2026-09-09 — Phase 24 V1322: tested an F.Cu south-bridge allocation around the
 complete V1058 RTL9210B support field while retaining V1258 staggered source
 and connector primitives. Native DRC rejected 18 violations from QFN source

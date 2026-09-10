@@ -10377,6 +10377,15 @@ supplies, and remaining RTL9210B support opens remain explicit; this is a
 Path-B routing primitive, not full Path-B or production closure. No Path-A or
 production CAD assets changed.
 
+V1359 is an accepted RTL_3V3 source repair: U1.52 escapes left on F.Cu,
+transitions once to B.Cu, and joins the existing RTL_3V3 trunk. Native DRC
+reports zero violations and the remaining open count drops from 27 to 26.
+V1360, V1361, V1362, V1363, and V1364 are rejected U1.20 source-escape trials:
+the direct/right paths interfere with SPISO3/SPICLK/SPICS, while the left path
+violates the exposed-pad/GND envelope. These are route-implementation evidence,
+not a placement or architecture failure. The accepted V1359 basis remains the
+current source for the next co-authored U1.20/SPI escape.
+
 V1356 REFCLK left/upper trial is rejected as a route implementation failure:
 native DRC found source-field crossings/shorts against the existing lane and
 XTAL geometry and a P/N source-exit collision. It is retained as disposable
