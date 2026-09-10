@@ -38,11 +38,19 @@ pad_y = 167.275
 via_y = 174.0
 for x in xs:
     track(pt(x, pad_y), pt(x, via_y), pcbnew.F_Cu)
-    via(x, via_y)
+
+# Cluster the tightly spaced socket contacts onto two ordinary vias rather
+# than violating the board's minimum drilled-hole spacing with one via/pad.
+via(213.0, via_y)
+via(228.5, via_y)
+for x in xs[:6]:
+    track(pt(x, via_y), pt(213.0, via_y), pcbnew.F_Cu)
+for x in xs[6:]:
+    track(pt(x, via_y), pt(228.5, via_y), pcbnew.F_Cu)
 
 # An explicit In2 power spine joins the ordinary through-vias.  This is a
 # designated low-voltage power-layer route, not an ordinary signal route.
-for x in xs:
+for x in (213.0, 228.5):
     track(pt(x, via_y), pt(232.0, via_y), pcbnew.In2_Cu, 0.60)
 track(pt(232.0, via_y), pt(232.0, 149.05), pcbnew.In2_Cu, 0.60)
 
@@ -50,6 +58,7 @@ track(pt(232.0, via_y), pt(232.0, 149.05), pcbnew.In2_Cu, 0.60)
 # collector traverses the M.2 signal launch field.
 via(232.0, via_y)
 via(232.0, 149.05)
+track(pt(232.0, 149.05), pt(232.0, via_y), pcbnew.F_Cu, 0.60)
 track(pt(232.0, 149.05), pt(211.1, 149.05), pcbnew.F_Cu, 0.60)
 
 pcbnew.ZONE_FILLER(b).Fill(b.Zones())

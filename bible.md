@@ -10541,6 +10541,9 @@ the accepted local primitive. Receipt:
 - A fresh like-for-like V79 native DRC baseline is 602 violations / 351
   unconnected items. V1562 is 610 / 342: nine opens are removed at the cost
   of eight DRC findings, with no new storage-rail shorting/crossing section.
+- V1562 was corrected to cluster the tightly spaced J3 contacts onto two
+  ordinary through-vias; the corrected rerun retains the audit PASS and has no
+  new via hole-spacing violation or storage-rail shorting section.
 
 ## 2026-09-10 — Phase 24 status reconciliation V1562
 

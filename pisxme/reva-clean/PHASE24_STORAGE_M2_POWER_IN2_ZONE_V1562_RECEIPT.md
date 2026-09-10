@@ -7,9 +7,9 @@ Status: **accepted focused power-connectivity primitive; not board promotion**
 ## Change
 
 The nine native J3 `STORAGE_3V3` pads are connected by pad-derived F.Cu
-dogbones to ordinary 0.8/0.4-mm through-vias. The vias join an explicit
-0.60-mm `STORAGE_3V3` spine on designated `In2.PWR`; a remote source via
-hands off to U14.5 without a B.Cu collector through the SATA launch field.
+dogbones to two clustered ordinary 0.8/0.4-mm through-vias. The vias join an
+explicit 0.60-mm `STORAGE_3V3` spine on designated `In2.PWR`; a remote source
+via hands off to U14.5 without a B.Cu collector through the SATA launch field.
 No signal net was added to a plane layer and no via-in-pad or microvia was
 used.
 
@@ -23,6 +23,7 @@ used.
 | Like-for-like V79 DRC baseline | 602 violations / 351 unconnected items; raw `PHASE24_STORAGE_V79_CURRENT_DRC.rpt` |
 | New storage-rail shorts | None found in the V1562 shorting sections |
 | New storage-rail crossings | None found in the V1562 shorting sections |
+| New via hole-spacing violations | None in the corrected clustered-via candidate |
 | Rule policy | unchanged; no severity relaxation |
 
 The same saved V1562 board also passed the focused SATA endpoint audit,
