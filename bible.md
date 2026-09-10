@@ -10135,3 +10135,7 @@ V91 is 596 / 350 with no shorting section. V92's no-via F.Cu perimeter rail
 connects all nine J3 power contacts; native USB3/SATA/parity/power audits and
 the trace-removal negative control pass. DRC is 597 / 341 with one added
 crossing. V92 is disposable; full gates remain open.
+2026-09-10 — V93 attempted complete storage-rail In1 plane access with
+ordinary-via dogbones. It failed J3 physical connectivity and introduced real
+STORAGE_3V3 shorts; native DRC 619 / 344. V93 was rejected, confirming that a
+broad plane needs a coordinated island/via redesign. V92 remains preferred.

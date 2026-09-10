@@ -10900,3 +10900,8 @@ power corridor from U14.5 to J3: parity, USB3, SATA, 9-contact power-owner,
 and negative-control audits pass; native DRC is 597 / 341 with one added
 crossing. V92 is the current disposable storage-power basis, not production
 closure. Receipt: `PHASE24_STORAGE_AUTHORITY_REGEN_V91_V92_RECEIPT.md`.
+V93 tested a complete In1 STORAGE_3V3 plane with ordinary-via dogbones from
+all storage-rail pads. It failed the native 9-contact J3 audit and produced
+619 / 344 DRC with real rail shorts to SATA/JMS_AVDDL/CM5 USB3 copper. V93 is
+rejected; a broad plane is not compatible with the current mixed-side island.
+Receipt: `PHASE24_STORAGE_STORAGE3V3_PLANE_V93_RECEIPT.md`.
