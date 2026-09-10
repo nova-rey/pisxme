@@ -10311,6 +10311,14 @@ rejected by 10/14/14 native DRC violations respectively. The next valid class
 is orientation-0 lane preservation with regenerated support/source fields;
 no rotated support copper is to be copied as if transformed-compatible.
 
+V1322 kept the complete V1058 support/SPI field, reused the V1258 staggered
+QFN escape and connector launch, and placed the long four-lane bridge rows on
+F.Cu south of the support field. Native DRC rejected 18 violations: source
+fanout interactions, connector-side adjacent-pad/transition conflicts, and
+fixture edge/transition findings. The B.Cu rail intersections were removed,
+so this class is informative route-allocation evidence rather than an
+architecture failure. No production CAD or Path-A assets changed.
+
 V1318 merged the complete orientation-0 V1058 RTL9210B support/SPI field with
 the unchanged-endpoint V1258 lane/control set. Native DRC rejected the merge
 with 31 violations: the V1058 SPI and rail fields intersect the inherited

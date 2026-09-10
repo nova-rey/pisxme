@@ -78,6 +78,12 @@ saved-board endpoint and negative-control audits but native DRC reported 17
 violations across source-field, SPISO, pair-transition, and connector-launch
 geometry. Preserved the disposable candidate; production and Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V1322: tested an F.Cu south-bridge allocation around the
+complete V1058 RTL9210B support field while retaining V1258 staggered source
+and connector primitives. Native DRC rejected 18 violations from QFN source
+fanout, adjacent connector-side transitions, and fixture edge/clearance
+interactions. Preserved the disposable board and raw report; no production
+CAD or Path-A assets changed.
 2026-09-09 — Phase 24 V1321: co-authored the proven V1258 QFN and connector
 escapes around the complete V1058 RTL9210B support field, using four south
 B.Cu bridge rows. Native DRC rejected 18 violations from rail/SPI B.Cu
