@@ -11107,3 +11107,12 @@ assertions pass, but it is rejected route-implementation evidence. The
 current open gate is a native-clean, transform-aware U12 target/source launch;
 Path A production CAD remains unchanged. The reconciliation receipt is
 `PHASE24_DOCUMENTATION_HYGIENE_20260910.md`.
+
+V145/V146 tested native normal-orientation U12 target launches with staggered
+ordinary vias. They reduced the local DRC class from V144's 13 electrical
+violations to 8, but retained real TX-pair shorts/crossings and are rejected.
+V147 tested RX without U12 target-side vias; its naive U11 same-row shoulders
+passed endpoint reachability but native DRC rejected 36 violations, including
+source-field crossings. This is a route-authoring failure, not a rejection of
+the underlying source-escape idea. Receipt:
+`PHASE24_STORAGE_SUPPORT_U12_TARGET_RX_FCU_V147_RECEIPT.md`.

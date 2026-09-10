@@ -14,7 +14,9 @@ BASE = R / 'PHASE24_STORAGE_USB3_R80_RELOCATED_V127.kicad_pcb'
 OUT = R / 'PHASE24_STORAGE_SUPPORT_LAYER_OWNED_V135.kicad_pcb'
 if len(sys.argv) > 1: BASE = R / sys.argv[1]
 if len(sys.argv) > 2: OUT = R / sys.argv[2]
-LOCAL_ONLY = len(sys.argv) > 3 and sys.argv[3] in {'local', 'local_rot180'}
+TARGET_STAGGER = len(sys.argv) > 3 and sys.argv[3] == 'local_target_stagger'
+RX_FCU = len(sys.argv) > 3 and sys.argv[3] == 'local_target_rx_fcu'
+LOCAL_ONLY = len(sys.argv) > 3 and sys.argv[3] in {'local', 'local_rot180', 'local_target_stagger', 'local_target_rx_fcu'}
 ROTATE_U12 = len(sys.argv) > 3 and sys.argv[3] == 'local_rot180'
 ROTATE_U12_90 = len(sys.argv) > 3 and sys.argv[3] == 'local_rot90'
 LOCAL_ONLY = LOCAL_ONLY or ROTATE_U12_90
@@ -72,7 +74,9 @@ for name, upad, cap, target, corridor, target_x in (
     src = xy(pad(b,'U11',upad)); c1 = xy(pad(b,c_ref,c_num)); c2 = xy(pad(b,c_ref,'2'))
     dst = xy(pad(b,'U12',target)); cv = corridor
     target_y = (133.0 if name == 'USB_TXP1' else 132.6) if ROTATE_U12 else ((132.0 if name == 'USB_TXP1' else 131.0) if ROTATE_U12_90 else (137.0 if name == 'USB_TXP1' else 137.4))
-    tv = (target_x, target_y)
+    tv = ((160.0, 135.2) if name == 'USB_TXP1' else (161.0, 138.0)) if TARGET_STAGGER else (target_x, target_y)
+    if TARGET_STAGGER:
+        cv = (149.0, c1[1])
     source_via = (142.0, 139.6) if name == 'USB_TXP1' else (141.0, 141.0)
     source_lane = (143.0, 140.0) if name == 'USB_TXP1' else (139.0, 141.0)
     if name == 'USB_TXP1':
@@ -88,30 +92,59 @@ for name, upad, cap, target, corridor, target_x in (
     seg(b,bridge_n,c2,cv,F); via(b,bridge_n,cv)
     lane_x = {'USB_TXP1':143.0, 'USB_TXN1':142.0}[name] if ROTATE_U12 else ({'USB_TXP1':152.0, 'USB_TXN1':153.0}[name])
     approach_y = {'USB_TXP1':132.5, 'USB_TXN1':132.1}[name] if ROTATE_U12 else ({'USB_TXP1':136.5, 'USB_TXN1':136.9}[name])
-    seg(b,bridge_n,cv,(lane_x,cv[1]),B)
-    seg(b,bridge_n,(lane_x,cv[1]),(lane_x,approach_y),B)
-    seg(b,bridge_n,(lane_x,approach_y),(tv[0],approach_y),B)
-    seg(b,bridge_n,(tv[0],approach_y),tv,B); via(b,bridge_n,tv)
-    seg(b,bridge_n,tv,dst,F)
+    if TARGET_STAGGER:
+        seg(b,bridge_n,cv,(cv[0],tv[1]),B)
+        seg(b,bridge_n,(cv[0],tv[1]),tv,B)
+    else:
+        seg(b,bridge_n,cv,(lane_x,cv[1]),B)
+        seg(b,bridge_n,(lane_x,cv[1]),(lane_x,approach_y),B)
+        seg(b,bridge_n,(lane_x,approach_y),(tv[0],approach_y),B)
+        seg(b,bridge_n,(tv[0],approach_y),tv,B)
+    via(b,bridge_n,tv)
+    if TARGET_STAGGER:
+        shoulder = (159.0, dst[1])
+        seg(b,bridge_n,dst,shoulder,F)
+        seg(b,bridge_n,shoulder,tv,F)
+    else:
+        seg(b,bridge_n,tv,dst,F)
 
 # U11 RX pads -> B.Cu corridors -> U12's bridge RX pads.  Their y corridors
 # are below the TX capacitor launches and their return vias are farther
 # outboard than the TX returns, avoiding the U12 pad-field funnel.
 for name, upad, target, source_via, target_via in (
-    ('USB_RXP1','26','23',(142.0,170.0),(151.0 if ROTATE_U12 else (161.0 if ROTATE_U12_90 else 155.0),132.2 if ROTATE_U12 else (132.0 if ROTATE_U12_90 else 137.8))),
-    ('USB_RXN1','27','22',(136.0,175.0),(149.0 if ROTATE_U12 else (163.5 if ROTATE_U12_90 else 161.0),131.8 if ROTATE_U12 else (131.0 if ROTATE_U12_90 else 138.2))),
+    ('USB_RXP1','26','23',((132.0,170.0) if TARGET_STAGGER else (142.0,170.0)),(151.0 if ROTATE_U12 else (160.0 if TARGET_STAGGER else (161.0 if ROTATE_U12_90 else 155.0)),139.2 if TARGET_STAGGER else (132.2 if ROTATE_U12 else (132.0 if ROTATE_U12_90 else 137.8)))),
+    ('USB_RXN1','27','22',((128.0,175.0) if TARGET_STAGGER else (136.0,175.0)),(161.0 if TARGET_STAGGER else (149.0 if ROTATE_U12 else (163.5 if ROTATE_U12_90 else 161.0)),140.2 if TARGET_STAGGER else (131.8 if ROTATE_U12 else (131.0 if ROTATE_U12_90 else 138.2)))),
 ):
     n = net(b,name); src = xy(pad(b,'U11',upad)); dst = xy(pad(b,'U12',target))
-    sv, tv = source_via, target_via
+    if RX_FCU:
+        # Both RX endpoints are native F.Cu pads. Keep the pair on F.Cu and
+        # use monotonic shoulders; this deliberately removes the otherwise
+        # impossible six-via QFN target-field requirement.
+        shoulder = (148.0, dst[1])
+        seg(b,n,src,(145.0,src[1]),F)
+        seg(b,n,(145.0,src[1]),shoulder,F)
+        seg(b,n,shoulder,dst,F)
+        continue
+    sv, tv = source_via, ((160.0, 138.8) if name == 'USB_RXP1' else (161.0, 139.8)) if TARGET_STAGGER else target_via
     seg(b,n,src,(src[0],sv[1]),F); seg(b,n,(src[0],sv[1]),sv,F)
     via(b,n,sv)
     lane_x = 141.0 if name == 'USB_RXP1' else 140.0 if ROTATE_U12 else (154.0 if name == 'USB_RXP1' else 155.0)
     approach_y = 131.7 if name == 'USB_RXP1' else 131.3 if ROTATE_U12 else (137.3 if name == 'USB_RXP1' else 138.0)
-    seg(b,n,sv,(lane_x,sv[1]),B)
-    seg(b,n,(lane_x,sv[1]),(lane_x,approach_y),B)
-    seg(b,n,(lane_x,approach_y),(tv[0],approach_y),B)
-    seg(b,n,(tv[0],approach_y),tv,B); via(b,n,tv)
-    seg(b,n,tv,dst,F)
+    if TARGET_STAGGER:
+        seg(b,n,sv,(sv[0],tv[1]),B)
+        seg(b,n,(sv[0],tv[1]),tv,B)
+    else:
+        seg(b,n,sv,(lane_x,sv[1]),B)
+        seg(b,n,(lane_x,sv[1]),(lane_x,approach_y),B)
+        seg(b,n,(lane_x,approach_y),(tv[0],approach_y),B)
+        seg(b,n,(tv[0],approach_y),tv,B)
+    via(b,n,tv)
+    if TARGET_STAGGER:
+        shoulder = (159.0, dst[1])
+        seg(b,n,dst,shoulder,F)
+        seg(b,n,shoulder,tv,F)
+    else:
+        seg(b,n,tv,dst,F)
 
 # Keep the validated V123-style single-ended PERST duck.  Its original
 # F.Cu y=150 trunk is exactly where the outboard support island now lives.

@@ -22,6 +22,12 @@ NVMe power/inrush review, firmware/programming provenance, authorized
 procurement, DFM, and integrated-board validation. Raw reports, negative
 controls, and rejected experiments remain immutable.
 
+Latest Path-A local routing evidence is V147, a rejected first implementation
+of an RX-without-target-vias source escape (36 native violations). Its failure
+is explicitly attributed to same-row U11 shoulder authoring and retained
+local TX geometry; it does not replace the current Path-A parent or close the
+storage route.
+
 ## CURRENT STATE — documentation authority (2026-09-08)
 
 The live Path-A dual-mode storage implementation includes the corrected

@@ -23,6 +23,11 @@ evidence, not an open gate. The current Path-B parallel candidate is tracked
 by `PHASE24_RTL9210B_QUALIFICATION.md`; its latest V1461 route result is
 rejected evidence, while V1428 remains the local primitive parent.
 
+The latest Path-A USB3 support probe V147 is also rejected route evidence:
+native connectivity passed its local assertions, but the naive RX F.Cu
+shoulders crossed the same-row U11 source field. It is not a new architecture
+or component blocker.
+
 Status: `OPEN — implementation authorized; procurement evidence remains HIGH
 risk` for the authorized SATA/NVMe upgrade only.
 The prior SATA-only board is preserved.
