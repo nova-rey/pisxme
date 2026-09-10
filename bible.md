@@ -10651,3 +10651,13 @@ the accepted local primitive. Receipt:
   F.Cu lanes. Native DRC found 17 violations / 2 REFCLK opens, including real
   crystal shorts to RTL_3V3, RSET, and RTL_1V1. Rejected; next work must use a
   separated layered crystal corridor and keep orientation frozen.
+
+## 2026-09-10 — rejected fixed-orientation REFCLK trials V1581–V1582
+
+- V1581 used a shared west-side REFCLK transition and failed native DRC with
+  6 violations / 4 opens, including REFCLK shorts to XTAL_OUT and between P/N.
+- V1582 separated the two west transitions but failed with 15 violations / 4
+  opens, including crossings through RSET, RTL_3V3, RTL_1V1, and a
+  REFCLK_N-to-RTL_1V1 short. Both remain immutable rejected implementation
+  evidence; Claude's accepted 0° RTL9210B orientation and Path-A fallback are
+  unchanged. The next implementation must co-author the full source field.
