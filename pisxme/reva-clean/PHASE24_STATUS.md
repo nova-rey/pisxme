@@ -44,6 +44,12 @@ remaining launch existed; no complete route was saved or promoted. This
 confirms the remaining implementation issue includes the M.2/J1 launch
 field, not only U1 source escape.
 
+V1594's exact-distance launch planner generated all six handoff-to-J1 paths,
+but native DRC rejected the saved candidate with 87 violations, including
+lane-0 P/N via shorting and sub-0.2 mm clearances. The next correction must
+model via diameter and connector-launch separation; no candidate was
+promoted.
+
 V1592 corrected the endpoint rectangle model and generated complete paths for
 all six handoff-to-J1 nets, but native DRC rejected them with 594 clearance
 violations. No candidate was promoted; the corrected endpoint model remains

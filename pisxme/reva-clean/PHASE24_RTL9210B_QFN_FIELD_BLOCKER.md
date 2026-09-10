@@ -32,6 +32,10 @@ V1592 corrected the endpoint-pad model and found complete paths for all six
 nets, but native DRC rejected the resulting centerline/via geometry with 594
 clearance violations. The endpoint correction is retained; the planner's
 multi-net separation remains open.
+V1594 improved centerline spacing and generated all six launch paths, but
+native DRC still reported 87 violations, including lane-0 P/N via shorting and
+sub-0.2 mm clearances. The remaining planner defect is via-diameter and
+connector-launch separation modeling; no route was promoted.
 The active accepted local basis remains V1517 at 0° top-side orientation.
 The remaining technical task is a coordinated crystal/REFCLK/rail fanout
 that is authored against the actual saved pads and ordinary-via rules.
@@ -44,6 +48,7 @@ Path-A/Path-B comparison remain OPEN. Receipt:
 `PHASE24_RTL9210B_QFN_ESCAPE_HANDOFF_REJECT_V1590_RECEIPT.md`.
 `PHASE24_RTL9210B_HANDOFF_J1_ASTAR_REJECT_V1591_RECEIPT.md`.
 `PHASE24_RTL9210B_HANDOFF_J1_ASTAR_REJECT_V1592_RECEIPT.md`.
+`PHASE24_RTL9210B_HANDOFF_J1_ASTAR_REJECT_V1594_RECEIPT.md`.
 
 ## SUPERSEDED CURRENT-STATE HEADER — V1558
 

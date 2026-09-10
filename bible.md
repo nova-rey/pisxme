@@ -10709,3 +10709,10 @@ the accepted local primitive. Receipt:
   all six handoff-to-J1 nets. Native DRC rejected the centerline/via geometry
   with 594 clearance violations. The endpoint model correction is retained,
   but multi-net separation and connector launch remain open.
+
+## 2026-09-10 — rejected clearance-aware handoff-to-J1 router V1594
+
+- V1594 generated all six handoff-to-J1 paths using actual endpoint rectangles
+  and a 0.4 mm centerline separation test. Native DRC found 87 violations,
+  including lane-0 P/N via shorting and sub-0.2 mm clearances. Rejected; via
+  diameter and connector-launch separation still need explicit modeling.

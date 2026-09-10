@@ -11,7 +11,7 @@ import pcbnew
 
 H=Path(__file__).resolve().parent
 BASE=H/'PHASE24_RTL9210B_QFN_ESCAPE_HANDOFF_V1590.kicad_pcb'
-OUT=H/'PHASE24_RTL9210B_HANDOFF_TO_J1_ASTAR_V1592.kicad_pcb'
+OUT=H/'PHASE24_RTL9210B_HANDOFF_TO_J1_ASTAR_V1594.kicad_pcb'
 F,B=pcbnew.F_Cu,pcbnew.B_Cu
 STEP=.25; X0,X1=84.,145.; Y0,Y1=38.,96.; W=.20; C=.20; VIA=.60
 LAYERS=(F,B)
@@ -26,6 +26,10 @@ def clear_pad(obs,pad):
    x,y=pos((ix,iy))
    if abs(x-px)<=sx/2+.03 and abs(y-py)<=sy/2+.03:
     for l in LAYERS: obs[l].discard((ix,iy))
+def near(cell, cells):
+ for c in cells:
+  if hypot(cell[0]-c[0],cell[1]-c[1])*STEP < 0.4: return True
+ return False
 def segdist(px,py,ax,ay,bx,by):
  dx=bx-ax; dy=by-ay
  if dx==dy==0:return hypot(px-ax,py-ay)
@@ -71,11 +75,11 @@ def astar(obs, reserved, start, goal):
   for dx,dy in ((1,0),(-1,0),(0,1),(0,-1)):
    n=(x+dx,y+dy); px,py=pos(n) if 0<=n[0]<=round((X1-X0)/STEP) and 0<=n[1]<=round((Y1-Y0)/STEP) else (999,999)
    if not (X0<=px<=X1 and Y0<=py<=Y1): continue
-   if n in obs[LAYERS[li]] or n in reserved[LAYERS[li]]: continue
+   if n in obs[LAYERS[li]] or near(n,reserved[LAYERS[li]]): continue
    ns=(n,li); nc=cost[state]+1
    if nc<cost.get(ns,10**9): prev[ns]=state;cost[ns]=nc;heappush(pq,(nc+hypot(n[0]-goal[0][0],n[1]-goal[0][1]),ns))
   nli=1-li; px,py=pos(cell)
-  if cell not in obs[LAYERS[nli]] and cell not in reserved[LAYERS[nli]]:
+  if cell not in obs[LAYERS[nli]] and not near(cell,reserved[LAYERS[nli]]):
    ns=(cell,nli); nc=cost[state]+8
    if nc<cost.get(ns,10**9): prev[ns]=state;cost[ns]=nc;heappush(pq,(nc+hypot(x-goal[0][0],y-goal[0][1]),ns))
  raise RuntimeError(f'no route {start}->{goal}')
@@ -104,12 +108,12 @@ for q in list(b.GetTracks()):
 for pad in b.FindFootprintByReference('U1').Pads(): pad.SetLocalClearance(pcbnew.FromMM(.15))
 obs=obstacle_map(b,own); reserved={F:set(),B:set()}
 for name,source,target in (
- ('REFCLK_P',(85.,70.4),(137.25,62.725)),
- ('LANE0_TXN',(85.,72.8),(135.25,62.725)),
- ('LANE0_RXP',(85.,71.6),(134.25,62.725)),
  ('LANE0_RXN',(85.,72.0),(133.75,62.725)),
- ('REFCLK_N',(85.,70.8),(136.75,62.725)),
+ ('LANE0_RXP',(85.,71.6),(134.25,62.725)),
+ ('LANE0_TXN',(85.,72.8),(135.25,62.725)),
  ('LANE0_TXP',(85.,73.2),(135.75,62.725)),
+ ('REFCLK_N',(85.,70.8),(136.75,62.725)),
+ ('REFCLK_P',(85.,70.4),(137.25,62.725)),
 ):
  net=b.FindNet(name)
  # Permit the actual endpoint pad rectangles only; neighboring connector
@@ -122,8 +126,7 @@ for name,source,target in (
          and abs(mm(p.GetPosition().y)-target[1])<.01)
  clear_pad(obs,sp); clear_pad(obs,tp)
  path=astar(obs,reserved,source,target); emit(b,net,path,source,target,reserved)
- # Diagnostic multi-net search: reserve the centerline only. Native DRC will
- # decide whether the resulting physical clearance is legal.
+ # Reserve centerline cells; A* applies the exact 0.4 mm distance test above.
  for cell,li in path:
   reserved[LAYERS[li]].add(cell)
  print(name,'steps',len(path),'transitions',sum(a[1]!=b[1] for a,b in zip(path,path[1:])))
