@@ -11068,3 +11068,9 @@ support routes. All six local support endpoints remained connected, but native
 DRC retained two target-via shorts and two silk warnings. V138 is rejected;
 the target launch still requires coordinated U12/source regeneration. Receipt:
 `PHASE24_STORAGE_SUPPORT_U12_ROT180_V138_RECEIPT.md`.
+V139 tested ordered B.Cu support lanes with target vias placed above the U12
+bridge-side pad row. Native connectivity remained present for all six local
+support nets, but native DRC retained six target crossing/clearance findings
+plus two silk warnings. V139 is rejected; the next candidate changes U12
+orientation and regenerates the local launch. Receipt:
+`PHASE24_STORAGE_SUPPORT_TARGET_ABOVE_V139_RECEIPT.md`.

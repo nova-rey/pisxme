@@ -10240,3 +10240,8 @@ connectivity remained present for all six local support nets, but DRC retained
 two target-via shorts and two silk warnings. V138 is rejected; production
 copper remains unchanged. Receipt:
 `PHASE24_STORAGE_SUPPORT_U12_ROT180_V138_RECEIPT.md`.
+V139 tested ordered B.Cu lanes and above-row U12 target vias. Native local
+support connectivity remained present, but DRC retained six target
+crossing/clearance findings and two silk warnings. V139 is rejected; the next
+candidate changes U12 orientation. Receipt:
+`PHASE24_STORAGE_SUPPORT_TARGET_ABOVE_V139_RECEIPT.md`.

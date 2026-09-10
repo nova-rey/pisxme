@@ -66,7 +66,9 @@ for name, upad, cap, target, corridor, target_x in (
     n = net(b, name); bridge_n = net(b, 'JMS_USB3_TXP' if name == 'USB_TXP1' else 'JMS_USB3_TXN')
     c_ref, c_num = cap.split('.')
     src = xy(pad(b,'U11',upad)); c1 = xy(pad(b,c_ref,c_num)); c2 = xy(pad(b,c_ref,'2'))
-    dst = xy(pad(b,'U12',target)); cv = corridor; tv = (target_x, cv[1])
+    dst = xy(pad(b,'U12',target)); cv = corridor
+    target_y = 136.5 if name == 'USB_TXP1' else 136.9
+    tv = (target_x, target_y)
     source_via = (142.0, 139.6) if name == 'USB_TXP1' else (141.0, 141.0)
     source_lane = (143.0, 140.0) if name == 'USB_TXP1' else (139.0, 141.0)
     if name == 'USB_TXP1':
@@ -79,21 +81,28 @@ for name, upad, cap, target, corridor, target_x in (
     seg(b,n,source_lane,(source_lane[0],c1[1]),B)
     seg(b,n,(source_lane[0],c1[1]),cap_via,B); via(b,n,cap_via)
     seg(b,n,cap_via,c1,F)
-    seg(b,bridge_n,c2,cv,F); via(b,bridge_n,cv); seg(b,bridge_n,cv,tv,B); via(b,bridge_n,tv)
+    seg(b,bridge_n,c2,cv,F); via(b,bridge_n,cv)
+    lane_x = {'USB_TXP1':149.0, 'USB_TXN1':150.0}[name]
+    seg(b,bridge_n,cv,(lane_x,cv[1]),B)
+    seg(b,bridge_n,(lane_x,cv[1]),(lane_x,tv[1]),B)
+    seg(b,bridge_n,(lane_x,tv[1]),tv,B); via(b,bridge_n,tv)
     seg(b,bridge_n,tv,(target_x,dst[1]),F); seg(b,bridge_n,(target_x,dst[1]),dst,F)
 
 # U11 RX pads -> B.Cu corridors -> U12's bridge RX pads.  Their y corridors
 # are below the TX capacitor launches and their return vias are farther
 # outboard than the TX returns, avoiding the U12 pad-field funnel.
 for name, upad, target, source_via, target_via in (
-    ('USB_RXP1','26','23',(142.0,157.0),(151.5 if ROTATE_U12 else 163.0,157.0)),
-    ('USB_RXN1','27','22',(136.0,162.0),(150.5 if ROTATE_U12 else 157.5,162.0)),
+    ('USB_RXP1','26','23',(142.0,157.0),(151.5 if ROTATE_U12 else 160.0,137.3)),
+    ('USB_RXN1','27','22',(136.0,162.0),(150.5 if ROTATE_U12 else 161.0,137.7)),
 ):
     n = net(b,name); src = xy(pad(b,'U11',upad)); dst = xy(pad(b,'U12',target))
     sv, tv = source_via, target_via
     seg(b,n,src,(src[0],sv[1]),F); seg(b,n,(src[0],sv[1]),sv,F)
     via(b,n,sv)
-    seg(b,n,sv,tv,B); via(b,n,tv)
+    lane_x = 152.0 if name == 'USB_RXP1' else 153.0
+    seg(b,n,sv,(lane_x,sv[1]),B)
+    seg(b,n,(lane_x,sv[1]),(lane_x,tv[1]),B)
+    seg(b,n,(lane_x,tv[1]),tv,B); via(b,n,tv)
     seg(b,n,tv,(tv[0],dst[1]),F); seg(b,n,(tv[0],dst[1]),dst,F)
 
 # Keep the validated V123-style single-ended PERST duck.  Its original
