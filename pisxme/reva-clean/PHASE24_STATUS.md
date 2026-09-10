@@ -10429,3 +10429,10 @@ violations, including conflicts with the existing LANE0_RXN escape, the
 U1.50 neighboring USB pad, and the V1368 RTL_3V3 corridor. It is retained as
 route-implementation evidence only; the next 1V1 repair must use the clear
 right/top rail corridor and avoid the lane-side left field.
+
+V1374 is accepted as the current U1.50 RTL_1V1 primitive. U1.50 rises above
+the USB pad row and reaches the established `(97.8,63.6)` transition field;
+the prior short endpoint stub was replaced rather than overlaid. Native DRC
+reports zero violations, the open count falls from 22 to 21, and the saved-
+board audit passes U1.36/U1.40/U1.50/C4.1 with a U1.50 source-removal negative
+control. U1.16/U1.25/U1.55/U1.60/U1.63 remain open.

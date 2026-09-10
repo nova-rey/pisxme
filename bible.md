@@ -145,6 +145,12 @@ created 16 native DRC violations against the existing lane escape, U1.50
 neighboring USB pad, and RTL_3V3 corridor. Preserved as route evidence; the
 next 1V1 repair must use the right/top rail corridor.
 
+2026-09-10 — Phase 24 V1374 accepted: U1.50 RTL_1V1 rises above the USB pad
+row and reaches the existing `(97.8,63.6)` transition. Native DRC is zero;
+saved-board audit and source-removal negative control pass for U1.36/U1.40/
+U1.50/C4.1. The disposable open count falls to 21; remaining 1V1 pads stay
+open.
+
 2026-09-09 — Phase 24 V1367 rejected: the co-authored U1.20/SPICLK source
 variant still shorted at the RTL_3V3 transition because the SPICLK F.Cu source
 row occupies its via clearance envelope. Preserved as local source-field
