@@ -17,7 +17,7 @@ def pad_map(board):
     return {(f.GetReference(), str(p.GetNumber())): p
             for f in board.GetFootprints() for p in f.Pads()}
 
-def audit(board):
+def audit(board, require_all_sources=False):
     board.BuildConnectivity()
     pads = pad_map(board)
     j3 = {("J3", n): pads[("J3", n)] for n in J3_POWER}
@@ -27,16 +27,22 @@ def audit(board):
     reach = {k: board.GetConnectivity().GetConnectedItems(p) for k, p in j3.items()}
     missing = [k for k, items in reach.items()
                if not any(sources[s] in items for s in sources)]
+    if require_all_sources and not missing:
+        anchor = next(iter(sources.values()))
+        anchor_items = board.GetConnectivity().GetConnectedItems(anchor)
+        missing += [k for k, p in sources.items() if p not in anchor_items]
     return not missing, missing
 
 def main(path):
     board = pcbnew.LoadBoard(str(path))
     if board is None:
         raise SystemExit(f"cannot load {path}")
-    ok, missing = audit(board)
+    strict = '--strict-sources' in sys.argv
+    ok, missing = audit(board, require_all_sources=strict)
     if missing:
         print("FAIL M.2 power owner native connectivity")
-        print("unreached J3 pads:", ", ".join(f"{r}.{p}" for r, p in missing))
+        label = "unreached J3/source pads" if strict else "unreached J3 pads"
+        print(label + ":", ", ".join(f"{r}.{p}" for r, p in missing))
         return 1
     print(f"PASS M.2 power owner native connectivity: {len(J3_POWER)} J3 contacts")
     # The disposable negative control removes one actual saved-board copper
@@ -53,7 +59,7 @@ def main(path):
         if index >= len(tracks):
             continue
         negative.RemoveNative(tracks[index])
-        neg_ok, _ = audit(negative)
+        neg_ok, _ = audit(negative, require_all_sources=strict)
         if not neg_ok:
             broken = True
             break

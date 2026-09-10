@@ -10921,3 +10921,7 @@ or crossings despite passing the focused J3 power-owner audit. The complete
 trial table and raw reports are in
 `PHASE24_STORAGE_RAIL_BRANCHES_V95_V101_RECEIPT.md`. V94 remains the best
 source-corrected disposable basis; no branch is accepted.
+V102 added an outer-acreage U13.30 branch and was rejected at native
+619/340. The storage power audit now has an opt-in `--strict-sources` mode
+requiring every assigned rail source pad to share one saved-board native
+connectivity component; current V94/V102 fail that assertion.

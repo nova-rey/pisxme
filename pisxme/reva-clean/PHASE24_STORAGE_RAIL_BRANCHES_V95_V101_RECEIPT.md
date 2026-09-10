@@ -12,11 +12,16 @@ production PCB authority.
 | V99 | U12/U13/U14/R81 vias into local In4 rail plane | PASS, negative control PASS | 617 / 334 | REJECT: via/pad and rail-to-signal shorts |
 | V100 | Exact V95 branch without zone refill | PASS, negative control PASS | 603 / 340 | REJECT: branch still crosses and exposes NC/selector shorts |
 | V101 | U13/U14 safe-offset vias into local In4 rail plane | PASS, negative control PASS | 606 / 337 | REJECT: storage-selector, SATA, and latent XOUT shorts |
+| V102 | U13.30 around outer B.Cu/F.Cu perimeter to U14.5 | PASS, negative control PASS | 619 / 340 | REJECT: crossings and latent selector/XOUT findings |
 
 The focused audit proves the nine J3 contacts reach at least one
 `STORAGE_3V3` source through saved native copper. It does not waive the
 remaining requirement that every regulator/support pad assigned to that net
 must physically join the rail. The trials therefore remain evidence only.
+
+The audit now also supports `--strict-sources`, requiring all listed source
+pads to share one native saved-board connectivity component. Current V94 and
+V102 fail this stricter assertion, as expected for the fragmented fanout.
 
 The next repair must address the fragmented source fanout with pad-aware
 clearance and a hardened `STORAGE_SEL` escape. No synthetic graph edges,
