@@ -10626,3 +10626,21 @@ the accepted local primitive. Receipt:
   documented endpoint opens, and 0 footprint errors. U1.55↔U1.63 connectivity
   and the source-removal negative control pass. This validates the baseline,
   not complete Path-B closure.
+
+## 2026-09-10 — Macro Placement Authority Path-B baseline
+
+- Recorded the first `macro_placement_authority` decision for RTL9210B-CG U1
+  in `analysis-artifacts/path-b-rtl9210b-qualification-20260906/`. The frozen
+  V1517 baseline is F.Cu, 0 degrees, pin 1 south-west; its explicit edge
+  ownership and structural-contradiction-only reopen protocol are machine-readable.
+- The retained 90-degree, 180-degree, and V1549-V1558 variants are explicitly
+  `REJECTED_DISPOSABLE`. Subsequent implementation must preserve the baseline;
+  normal routing immaturity does not reopen placement.
+
+## 2026-09-10 — fixed-orientation XTAL implementation cycle V1577–V1579
+
+- Kept Claude's accepted 0° RTL9210B orientation and tested coordinated
+  XTAL_IN/RTL_3V3 west-corridor implementations. V1578/V1579 removed the
+  prior XTAL_IN-to-RTL_3V3 short and reduced the result to local corridor
+  crossings plus the two REFCLK opens, but neither passed native DRC. Rejected
+  as route implementations; orientation remains frozen.

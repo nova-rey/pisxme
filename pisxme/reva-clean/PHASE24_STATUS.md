@@ -19,6 +19,13 @@ Orientation search is closed; remaining Path-B work is implementation and
 independent authority gates. Decision record:
 `PHASE24_RTL9210B_ORIENTATION_DECISION_CLAUDE_V1575.md`.
 
+The first fixed-orientation crystal implementation cycle V1577–V1579 is
+rejected route evidence, not an orientation regression. V1578/V1579 remove
+the prior XTAL_IN/RTL_3V3 short, but retain local corridor crossings and the
+two REFCLK endpoint opens. Preserve the 0° V1517 baseline and co-author the
+crystal, RTL_3V3 transition, and adjacent return/PCIe corridors next. Receipt:
+`PHASE24_RTL9210B_XTAL_IMPLEMENTATION_V1577_V1579_RECEIPT.md`.
+
 The selected V1575 baseline was rerun after the decision: native KiCad DRC is
 0 violations / 6 unconnected pads / 0 footprint errors, and the U1.55 native
 connectivity plus source-removal negative control pass. Receipt:
