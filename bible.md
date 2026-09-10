@@ -10797,3 +10797,11 @@ the accepted local primitive. Receipt:
   source-track-removal negative controls pass; the integrated native DRC has
   zero launch errors. Twelve inherited support-field warnings remain open;
   Phase 24 is not closed and the U1 orientation remains frozen.
+
+## 2026-09-10 — rejected local support reclosure after V1603/V1517
+
+- A disposable RTL_1V1 plus XTAL_IN/XTAL_OUT coauthor connected all seven
+  remaining support opens but introduced 13 native DRC errors, including
+  crystal-to-RTL_3V3/GND contacts and RTL_1V1/RSET/source-field conflicts.
+  It was rejected. The clean V1603/V1517 checkpoint remains authoritative;
+  support must be co-authored around the existing source-field geometry.
