@@ -212,6 +212,11 @@ shorts. USB3, complete SATA endpoint connectivity, and current J8 pad parity
 pass; native DRC remains 601 violations / 399 opens with zero shorting
 entries. Remaining storage routing/support and full-board closure are OPEN.
 
+V51 tested an upper selector-side `TUSB_SATA_TXP` detour. SATA endpoint
+connectivity passed with zero shorts, but DRC remained 601 / 399 and the
+detour added crossings and clearances against V100 power and the opposite
+TX path. It is rejected; V50 remains the preferred parent.
+
 ## CURRENT ROUTING STATE — 2026-09-09
 
 The current best disposable Path-A parent is V41, not the historical

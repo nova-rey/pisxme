@@ -9980,6 +9980,10 @@ parent. A right-side Manhattan U7 RX_N dogleg clears the local RX_N/TX_N
 crossing with zero native shorting entries; USB3/SATA/J8 parity audits pass
 and DRC remains 601 violations / 399 opens. No production PCB, validation
 rule, or layer contract changed.
+2026-09-09 — Phase 24 V51 rejected: upper selector-side TUSB_SATA_TXP detour
+passed SATA connectivity with zero shorts but remained 601 DRC / 399 opens
+and added V100-power/opposite-TX crossings and clearances. Preserved board,
+report, script, and receipt; V50 remains preferred.
 2026-09-09 — Phase 24 V46 accepted as the best coordinated disposable
 Path-A parent. It combines the V45 selector-side SATA corridors with a
 left-of-REFCLK CM5 USB3 TX_N source transition; USB3/SATA/native J8 parity
