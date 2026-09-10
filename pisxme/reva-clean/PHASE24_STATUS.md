@@ -78,6 +78,14 @@ connector net ownership in the disposable remap. It provides no production
 polarity evidence and was not promoted; the baseline U1 orientation and V1590
 escape remain authoritative.
 
+The three bounded physical-envelope-aware launch strategies are exhausted:
+Strategy 1 (pair-owned F/B channels) found 86 DRC violations, Strategy 2
+(north-perimeter funnel) found 15, and Strategy 3 (south-perimeter funnel)
+found 40. None passed native DRC. The measured structural issue is the
+0.4 mm U1 handoff row plus 0.5 mm J1 contact row under 0.60 mm ordinary-via,
+0.20 mm track, 0.20 mm clearance rules and a non-monotonic endpoint
+permutation. See `PHASE24_RTL9210B_ENVELOPE_BLOCKER.md`.
+
 V1592 corrected the endpoint rectangle model and generated complete paths for
 all six handoff-to-J1 nets, but native DRC rejected them with 594 clearance
 violations. No candidate was promoted; the corrected endpoint model remains

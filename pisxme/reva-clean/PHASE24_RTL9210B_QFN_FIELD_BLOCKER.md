@@ -54,6 +54,11 @@ diagonals still shorted/crossed TX/RX and REFCLK nets. No route was promoted.
 V1599 tested a disposable RX/REFCLK polarity-remap hypothesis. Native DRC
 rejected it with 43 violations and 41 opens, including malformed/blank
 connector net ownership in the remap. No route or pad remap was promoted.
+The three bounded physical-envelope-aware strategies required by the current
+routing gate are now exhausted: 86, 15, and 40 native DRC violations for
+pair-owned, north-perimeter, and south-perimeter funnels respectively. No
+candidate was promoted. The measured capacity blocker is documented in
+`PHASE24_RTL9210B_ENVELOPE_BLOCKER.md`.
 The active accepted local basis remains V1517 at 0° top-side orientation.
 The remaining technical task is a coordinated crystal/REFCLK/rail fanout
 that is authored against the actual saved pads and ordinary-via rules.

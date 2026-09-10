@@ -10461,6 +10461,16 @@ the accepted local primitive. Receipt:
   connector net ownership in the remap. Rejected; no production pad remap or
   architecture change was promoted.
 
+## 2026-09-10 — RTL9210B physical-envelope launch blocker
+
+- Three materially distinct physical-envelope-aware strategies were exhausted:
+  pair-owned F/B channels (86 DRC violations), north-perimeter funnel (15),
+  and south-perimeter funnel (40). None passed. The accepted 0.4 mm handoff
+  row and 0.5 mm J1 contact row cannot provide a legal two-layer permutation
+  under 0.60 mm ordinary vias, 0.20 mm tracks, and 0.20 mm clearance without
+  a dedicated staggered breakout/launch change. See
+  `PHASE24_RTL9210B_ENVELOPE_BLOCKER.md`; no production route or rule changed.
+
 ## 2026-09-10 — Phase 24 RTL9210B V1547 crystal source sweep
 
 - V1547 generated and native-checked 16 crystal source variants from V1523.
