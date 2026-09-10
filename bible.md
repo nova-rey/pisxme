@@ -10328,3 +10328,6 @@ the accepted local primitive. Receipt:
 - V194 replaced the XOUT route with a north-going native escape and verified
   U11.51-to-Y10.2 connectivity. USB3, SATA, parity, and the negative control
   pass; DRC remains 624/346 with one JMS_AVDDL/JMS_AVDD33 field short.
+- V196 coauthored the AVDDL handoff around the AVDD33 field and verified
+  U11.20-to-C83.1. USB3, SATA, parity, and the negative control pass; native
+  DRC is 617/347 with zero shorting items. Remaining opens/crossings stay open.

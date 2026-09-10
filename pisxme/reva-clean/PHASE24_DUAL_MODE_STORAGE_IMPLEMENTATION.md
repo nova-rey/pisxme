@@ -963,6 +963,12 @@ shorts from V193. USB3, SATA, parity, and negative-control checks pass; native
 DRC is 624/346 with one remaining JMS_AVDDL/JMS_AVDD33 support-field short.
 Continue local support-field coauthoring; V194 is not closure.
 
+V196 is the current support-field basis. Its native AVDDL handoff preserves
+U11.20-to-C83.1 and removes the remaining V194 shorting class. USB3, SATA,
+parity, and negative-control checks pass; native DRC is 617/347 with zero
+shorting items. Continue remaining routing/open/DFM closure; do not treat
+V196 as Phase 24 closure.
+
 ## Current live source/parity correction — 2026-09-08
 
 `STORAGE.kicad_sch` now has authoritative `JMS_USB3_TXN/P` instance labels on

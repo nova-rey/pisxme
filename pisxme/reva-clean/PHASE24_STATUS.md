@@ -11210,3 +11210,10 @@ control pass. Native DRC remains 624/346. The XOUT/JMS_XAVDDH and STORAGE_SEL
 shorts are absent; one real U11 JMS_AVDDL/JMS_AVDD33 support-field short
 remains. V194 is the current coauthoring basis, not closure. Receipt:
 `PHASE24_STORAGE_V75_COAUTHORED_V194_RECEIPT.md`.
+
+V196 coauthored the U11 JMS_AVDDL handoff around the adjacent JMS_AVDD33
+field. Saved native connectivity confirms U11.20-to-C83.1 and the prior
+U11.51-to-Y10.2 XOUT path. USB3, SATA, 814/1263/0 parity, and the
+removed-track negative control pass. Native DRC improves to 617/347 with zero
+shorting items; V196 is accepted as the current support-field basis, not
+Phase 24 closure. Receipt: `PHASE24_STORAGE_V75_COAUTHORED_V196_RECEIPT.md`.
