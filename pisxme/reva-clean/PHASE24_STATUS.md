@@ -10662,6 +10662,11 @@ Native DRC reported 27 violations, including crystal-net shorting/crossing,
 RSET-to-GND contact, and retained rail conflicts. The exact transplanted
 geometry is rejected; no accepted primitive changed.
 
+V1453 tested a coupled coherent R1 move plus local RTL_1V1 branch
+reallocation. Native DRC reported six violations, including the proposed
+RTL_1V1 transition colliding with U1 pad 69 GND and crossing RTL_3V3. The
+branch relocation is rejected; no accepted primitive changed.
+
 V1450 is a rejected outboard REFCLK pair transplant from V1428. Native DRC
 reported 24 violations, including QFN source-field shorts, REFCLK_N/GND and
 REFCLK_N/USB_RXN0 conflicts, and overlapping connector-side launches. The
