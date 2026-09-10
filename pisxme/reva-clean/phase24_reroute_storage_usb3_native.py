@@ -50,8 +50,11 @@ def occ(b):
 def astar(o,a,z):
     qocc={F:set(o[F]),B:set(o[B])};s=(*gr(a),F);t=(*gr(z),F)
     for l,p in ((F,s),(F,t)):
-        for i in range(-8,9):
-            for j in range(-8,9):qocc[l].discard((p[0]+i,p[1]+j))
+        # Only free the terminal cell and immediate grid neighborhood.  The
+        # previous 8-cell (2 mm) halo erased roughly five 0.4-mm-pitch J7
+        # pads and allowed the search to route through different-net pads.
+        for i in range(-1,2):
+            for j in range(-1,2):qocc[l].discard((p[0]+i,p[1]+j))
     q=[(0,s)];cost={s:0};prev={s:None}
     while q:
         _,c=heappop(q)

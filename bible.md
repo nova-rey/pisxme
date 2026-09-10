@@ -10179,3 +10179,8 @@ V118 retargeted that dogbone concept to U12 in a J7/U12-only fixture and was
 rejected at 14/63: source transitions shorted RX pair nets and TX corridors
 crossed. This remains route implementation evidence; the next candidate must
 separate pair transitions and layer corridors before U12 entry.
+V119 reduced the A* terminal halo to one grid cell. It stopped the false
+ pad-clearing behavior but found no route for the second CM5 USB3 source under
+ the coarse occupancy model; no output copper was accepted. The safe next
+ class is an explicit pair-aware source escape outside the dense connector
+ field, checked by native DRC.

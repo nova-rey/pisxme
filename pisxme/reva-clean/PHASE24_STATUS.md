@@ -10979,3 +10979,10 @@ route implementation failure, not a placement failure. The next bounded
 candidate must separate source vias by pair and use non-crossing permitted
 layer corridors. Receipt:
 `PHASE24_USB3_U12_MONOTONIC_V118_RECEIPT.md`.
+V119 reduced the A* endpoint halo to one grid cell. It eliminated the V117
+false-obstacle-clearing behavior but correctly found no route for the second
+CM5 USB3 source under the coarse two-layer model. V119 is rejected as an
+incomplete router implementation; it produced no accepted copper and no
+false connectivity claim. The next route class remains pair-aware explicit
+source escape outside the connector field. Receipt:
+`PHASE24_USB3_ASTAR_V119_RECEIPT.md`.
