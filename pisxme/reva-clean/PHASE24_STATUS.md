@@ -11028,3 +11028,8 @@ into USB_DP, JMS_VCCO, USB_RXN1, and the U12/U13 pad fields. V130 is rejected;
 V127's CM5 USB3 route remains intact. The next support route must use
 obstacle-aware pair escapes around the U12/U13 pad columns. Receipt:
 `PHASE24_STORAGE_SUPPORT_V129_V130_RECEIPT.md`.
+V131 tested an obstacle-aware native-pad A* escape for direct U11/U12 RX
+support. Native DRC rejected it at 177/499 with RX pair shorts/crossings into
+POWER_GND, each other, and JMS_AVDDL. The router class is retired for this
+dense package field; the next support route must use explicit package-aware
+pair transitions. Receipt: `PHASE24_STORAGE_RX_SUPPORT_V131_RECEIPT.md`.
