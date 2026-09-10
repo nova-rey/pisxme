@@ -15,7 +15,8 @@ architecture and is untouched.
 The live U5 layered-connectivity audit was rerun on
 `PHASE24_PGND_CLUSTER_CURRENT.kicad_pcb` using only native saved-board
 connectivity. U5.9 is connected to C44–C47.1 and the POWER_GND group passes;
-the necessary-trace removal negative control fails as required. Receipt:
+the necessary-trace removal negative control fails as required, now without
+the former via-width binding warnings. Receipt:
 `PHASE24_U5_LAYER_CONNECTIVITY_V1559_RECEIPT.md`. This closes only the U5
 connectivity audit; Phase 24 native DRC and other full-board gates remain open.
 

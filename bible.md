@@ -10496,7 +10496,8 @@ the accepted local primitive. Receipt:
   U5.9-to-C44–C47.1 and the POWER_GND group pass; removing a necessary trace
   fails the audit as required.
 - Preserved the result in `PHASE24_U5_LAYER_CONNECTIVITY_V1559_RECEIPT.md`.
-  KiCad's via-width binding warnings were observed and documented, not hidden.
+  The audit's via handling was corrected so the rerun no longer invokes the
+  KiCad via-width binding assertion path.
 
 ## 2026-09-10 — Phase 24 integrated native DRC V1559
 

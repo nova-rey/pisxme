@@ -12,7 +12,6 @@ Result: **PASS**.
 - `POWER_GND`: R20.2 and C44.2/C45.2/C46.2/C47.2 connected.
 - Negative control: removing a necessary U5.9 trace caused the audit to fail
   as required (`trace_removal_fails: True`).
-- Native KiCad binding emitted repeated `PCB_VIA::GetWidth` assertion warnings
-  from the audit's diagnostic signature path; the connectivity result and
-  negative control completed successfully. This warning is documented, not
-  suppressed or treated as a validation pass.
+- The audit was corrected to exclude via objects from track signatures and to
+  use safe native type/geometry discrimination. The rerun completes without
+  the former `PCB_VIA::GetWidth` assertion warnings.

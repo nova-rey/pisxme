@@ -49,8 +49,17 @@ def audit(board_path=DEFAULT_BOARD):
     return True
 
 def signature(item):
-    return (item.GetNetname(), int(item.GetLayer()), item.GetStart().x,
-            item.GetStart().y, item.GetEnd().x, item.GetEnd().y, item.GetWidth())
+    # KiCad 10's PCB_VIA inherits the track container but its zero-argument
+    # GetWidth() is an assertion path.  Negative-control victims are tracks;
+    # keep the signature total and layer-aware for any native item encountered.
+    if (hasattr(item, "GetStart") and hasattr(item, "GetEnd")
+            and not hasattr(item, "GetFrontWidth")):
+        return ("track", item.GetNetname(), int(item.GetLayer()), item.GetStart().x,
+                item.GetStart().y, item.GetEnd().x, item.GetEnd().y,
+                item.GetWidth())
+    pos = item.GetPosition()
+    return ("via", item.GetNetname(), int(item.GetLayer()), pos.x, pos.y,
+            item.GetFrontWidth(), item.GetDrill())
 
 def negative_controls(board_path=DEFAULT_BOARD):
     """Prove removing an actually connected trace makes the audit fail."""
@@ -61,12 +70,15 @@ def negative_controls(board_path=DEFAULT_BOARD):
     candidates = []
     for member in TARGET["/REGULATORS/BRIDGE_1V1"]:
         for item in source.GetConnectivity().GetConnectedItems(pads[member]):
-            if type(item).__name__ == "PCB_TRACK":
+            if (type(item).__name__ == "PCB_TRACK" and hasattr(item, "GetStart")
+                    and not hasattr(item, "GetFrontWidth")):
                 candidates.append((member, signature(item)))
     for member, wanted in candidates:
         trial = pcbnew.LoadBoard(str(board_path))
         victim = next((item for item in trial.GetTracks()
-                       if type(item).__name__ == "PCB_TRACK" and signature(item) == wanted), None)
+                       if (hasattr(item, "GetStart") and hasattr(item, "GetEnd")
+                       and not hasattr(item, "GetFrontWidth")
+                       and signature(item) == wanted)), None)
         if victim is None:
             continue
         trial.RemoveNative(victim)
