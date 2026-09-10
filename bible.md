@@ -64,6 +64,15 @@ trace-removal negative control. Support/control/REFCLK remain open.
 exposed real short/crossing classes despite reduced open counts. V311 remains
 the retained disposable sideband basis; Path A and production CAD are
 unchanged.
+2026-09-09 — Phase 24 V1313: authored a targeted rotated-QFN lane escape
+with pad-adjacent departures, an explicit SPISO bypass, and staggered J1
+transitions. Native endpoint, negative-control, and DRC evaluation remain
+required; production and Path-A assets are unchanged.
+2026-09-09 — Phase 24 V1313 rejected: the pad-adjacent rotated-QFN lane
+candidate passed saved-board endpoints and negative controls but produced
+23 native DRC violations, including source-field/REFCLK conflicts and pair
+transition clearances. Preserved as route-implementation evidence; no
+production or Path-A assets changed.
 2026-09-09 — Phase 24 V1312 rejected: the attempted rotated-QFN split-source
 escape caused native pad-field shorts/crossings and failed its saved-board
 lane endpoint audit; DRC reported 45 violations. Preserved the disposable
