@@ -1,16 +1,24 @@
 ** Drc report for PHASE24_RTL9210B_ISOLATEB_ESCAPE_PROBE.kicad_pcb **
-** Created on 2026-09-10T13:54:16 **
+** Created on 2026-09-10T14:04:33 **
 ** Report includes: Errors, Warnings **
 
-** Found 2 DRC violations **
+** Found 4 DRC violations **
+[shorting_items]: Items shorting two nets (nets ISOLATEB and PEDET)
+    Local override; error
+    @(98.0000 mm, 74.8000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+    @(97.6000 mm, 73.9500 mm): Track [PEDET] on F.Cu, length 2.0500 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(101.8000 mm, 74.6000 mm): Track [ISOLATEB] on F.Cu, length 3.9000 mm
-    @(101.2000 mm, 73.9500 mm): Track [RTL_5V] on F.Cu, length 2.2611 mm
-[tracks_crossing]: Tracks crossing
+    @(98.8000 mm, 76.0000 mm): Track [CLKREQ_N] on B.Cu, length 8.2000 mm
+    @(98.0000 mm, 74.8000 mm): Track [ISOLATEB] on B.Cu, length 8.8142 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1288 mm)
     Local override; error
-    @(100.0000 mm, 73.9500 mm): Track [PERST_N] on F.Cu, length 7.0500 mm
-    @(99.2000 mm, 74.6000 mm): Track [ISOLATEB] on F.Cu, length 2.6000 mm
+    @(98.8000 mm, 75.0000 mm): Track [CLKREQ_N] on F.Cu, length 1.0000 mm
+    @(99.2000 mm, 74.6000 mm): Track [ISOLATEB] on F.Cu, length 1.2166 mm
+[clearance]: Clearance violation (pad clearance 0.1500 mm; actual 0.1000 mm)
+    Local override; error
+    @(98.0000 mm, 73.9500 mm): Pad 9 [JTAG_TDO] of U1 on F.Cu
+    @(98.0000 mm, 74.8000 mm): Via [ISOLATEB] on F.Cu - B.Cu
 
 ** Found 0 unconnected pads **
 

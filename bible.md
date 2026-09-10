@@ -11016,3 +11016,11 @@ the accepted local primitive. Receipt:
   PEDET/PERST_N corridor overlap, CLKREQ_N/ISOLATEB via spacing, and
   RTL_5V collisions with SPI/RTL_1V1. Classified as route implementation
   evidence; accepted orientation and baseline remain untouched.
+
+## 2026-09-10 — rejected left-dogbone ISOLATEB escape
+
+- Tested and preserved a left-dogbone source escape with via (98.0, 74.8)
+  and handoff (106.0, 78.5). Native DRC found four violations: PEDET-via
+  collision, CLKREQ_N crossing, and JTAG_TDO/pad-row clearance failures. The
+  simple escape class is exhausted; the next repair must co-reroute the
+  source row or relocate local support.

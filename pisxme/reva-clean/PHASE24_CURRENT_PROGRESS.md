@@ -99,6 +99,11 @@ departures. The next in-scope repair is a coordinated local reroute of those
 adjacent departures around U1.12; no new MIC2545A topology or RTL9210B
 orientation search is warranted.
 
+The left-dogbone escape variant also fails native DRC with four violations
+(PEDET via collision, CLKREQ_N crossing, and JTAG_TDO/pad-row clearance).
+Simple ISOLATEB escape variants are exhausted; the next repair is coordinated
+source-row rerouting or a bounded local support relocation.
+
 The first coordinated local reroute of U1.12 `ISOLATEB`, `CLKREQ_N`,
 `PERST_N`, and `RTL_5V` is rejected: native DRC found 12 violations and zero
 opens. The exact conflicts are recorded in

@@ -56,6 +56,16 @@ confirms that the next repair must co-author those adjacent local departures
 around the `ISOLATEB` escape. Repeating point perturbations is no longer a
 useful route class.
 
+## Left-dogbone probe
+
+The final simple variant used a short F.Cu dogbone from pad 12 toward the
+west, a via at (98.0, 74.8), and a B.Cu handoff to (106.0, 78.5). Native DRC
+found four violations: the via collided with the existing PEDET departure,
+the B.Cu handoff crossed CLKREQ_N, and the dogbone/via violated JTAG_TDO and
+pad-row clearance. It is rejected. The next repair must co-reroute the
+source-row departures or relocate the local support block; further simple
+escape-coordinate variants are not justified.
+
 ## Final bounded escape probe in this class
 
 The probe was then jogged to the opposite side of the pad-row segment,
