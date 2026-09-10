@@ -18,6 +18,7 @@ Path A and the accepted Path-B V1523/V1526/V1534 evidence are unchanged.
 | V1555 F.OUT/B.IN split | 6 | 2 | source/shelf crossings against crystal/RSET/1V1 field | rejected |
 | V1556 east-offset B.IN | 11 | 2 | XIN source/transition conflicts with RTL_3V3 and existing B.Cu shelves | rejected |
 | V1557 outer-side escape | 17 | 4 | source row collides with top-row/RSET/rail field before legal transition | rejected |
+| V1558 far-outboard XIN | 11 | 5 | native source/rail/GND conflicts at far transition and upper return | rejected |
 
 The reports were produced by KiCad 10 native DRC. The 17 unconnected items
 are expected in these deliberately stripped fixtures and are not claimed as

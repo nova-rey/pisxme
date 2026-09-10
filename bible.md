@@ -10480,6 +10480,16 @@ the accepted local primitive. Receipt:
   step must change the authoritative fanout strategy, not repeat coordinate
   tuning or relax rules.
 
+## 2026-09-10 — RTL9210B far-outboard XIN V1558
+
+- Rebuilt the former far-outboard XTAL_IN idea from the current V1523 native
+  basis. KiCad 10 native DRC reported 11 violations / 5 opens, including
+  source-to-rail/GND conflicts and upper-return crossings; the candidate is
+  rejected.
+- Path-A focused audits continue to pass on its current basis. RTL9210B Path B
+  remains isolated; the next experiment requires a different package/fanout
+  strategy, not another coordinate-only adjustment or rule relaxation.
+
 ## 2026-09-10 — RTL9210B crystal source class V1555–V1556
 
 - Tested two further 0-degree QFN escape topologies at the required 0.20-mm

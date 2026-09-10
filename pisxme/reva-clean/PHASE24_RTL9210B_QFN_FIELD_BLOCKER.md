@@ -1,12 +1,13 @@
 # RTL9210B Path-B QFN field disposition
 
-## CURRENT STATE — 2026-09-10 V1557
+## CURRENT STATE — 2026-09-10 V1558
 
-V1549–V1557 are bounded, isolated crystal/source-escape experiments and are
+V1549–V1558 are bounded, isolated crystal/source-escape experiments and are
 all rejected. Native DRC remains the authority: V1553 reports four source-row
 shorts/mask failures, V1556 reports eleven local violations, and V1557
 reports seventeen local violations including source/top-row and rail-field
-collisions; none is a production layout. The stripped fixtures' two to 17
+collisions; V1558 reports eleven local violations / five opens at a far-
+outboard XIN transition; none is a production layout. The stripped fixtures' two to 17
 unconnected items are fixture limitations, not passes.
 
 Path A and the accepted Path-B support primitives remain preserved. Two

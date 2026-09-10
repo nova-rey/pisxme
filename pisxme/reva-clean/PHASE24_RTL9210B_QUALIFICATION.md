@@ -1,6 +1,6 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
-## CURRENT STATE — reconciled 2026-09-10
+## CURRENT STATE — reconciled 2026-09-10 V1558
 
 The earlier V1195 header is superseded by the later live experiment chain.
 The current coupled Path-B experiment is V1461 on the V1428 accepted
@@ -8,7 +8,9 @@ composite parent; V1461 is rejected at native DRC with 19 violations / 14
 opens, including lane-transition and exposed-pad GND conflicts. V1428 remains
 the accepted local primitive parent, not a complete Path-B pass.
 
-Remaining current gates are complete QFN/source-field routing, REFCLK and
+V1549–V1558 are rejected native-DCR source/crystal escape experiments; the
+best current class still fails at the QFN source/transition field. Remaining
+current gates are complete QFN/source-field routing, REFCLK and
 lane completion, mode-aware socket validation, firmware/configuration and
 virgin-programming proof, procurement, DFM, and integrated-board validation.
 Older route failures and malformed-footprint findings remain historical
