@@ -9963,3 +9963,9 @@ rule changed.
 preserved SATA endpoint connectivity but introduced real POWER_GND shorts in
 the U7 field. Native DRC reported 610 violations / 399 opens. Preserved the
 disposable board and receipt; V41 remains the best parent.
+2026-09-09 — Phase 24 V43 rejected after correcting a coordinate-authoring
+ typo. The corrected U7.57 TX_P source-field escape produced native DRC 605
+ violations / 400 opens, with real POWER_GND-to-TX_P shorts; SATA endpoint
+ connectivity failed at U7.57 while USB3 remained PASS. Preserved the board,
+ raw DRC, and receipt; V41 remains the best disposable parent and no
+ validation rule or production PCB changed.

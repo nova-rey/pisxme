@@ -176,6 +176,17 @@ pin authority but still needed
 This report therefore remains `OPEN`; no Phase 24 resumption or completion is
 claimed. The corrected JMS583 pin authority also supersedes any earlier
 intermediate map that called pin 12 REXT.
+
+## CURRENT ROUTING STATE — 2026-09-09
+
+The current best disposable Path-A parent is V41, not the historical
+placement-only state described above. V41 passes native USB3, SATA, and J8
+schematic-to-PCB parity audits, but remains incomplete at 599 DRC violations
+and 399 unconnected items. V42 and V43 are rejected route experiments. V43's
+initial traceback was a script typo; its corrected rerun produced 605 DRC
+violations / 400 opens and real U7 `POWER_GND` to `BRIDGE_SATA_TX_P`
+shorting entries. The current open gate is complete obstacle-aware storage
+routing and native closure; no production PCB or validation rule has changed.
 ## Follow-up implementation evidence — 2026-09-06
 
 Native inspection found inherited C44-C47 reference collisions in the
