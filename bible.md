@@ -11024,3 +11024,13 @@ the accepted local primitive. Receipt:
   collision, CLKREQ_N crossing, and JTAG_TDO/pad-row clearance failures. The
   simple escape class is exhausted; the next repair must co-reroute the
   source row or relocate local support.
+
+## 2026-09-10 — recorded recoverable ISOLATEB unblocker packet
+
+- Preserved `PHASE24_RTL9210B_ISOLATEB_UNBLOCKER_PACKET.md` with the exact
+  native DRC evidence and three bounded continuation paths after the source
+  escape and coupled-departure classes failed. The custom unblocker agent
+  could not be spawned because the thread limit was reached, so the packet
+  records the local fallback analysis. The accepted RTL9210B orientation,
+  high-speed launch, and Path-A fallback remain unchanged; no rejected probe
+  copper is promoted.

@@ -104,6 +104,14 @@ The left-dogbone escape variant also fails native DRC with four violations
 Simple ISOLATEB escape variants are exhausted; the next repair is coordinated
 source-row rerouting or a bounded local support relocation.
 
+The canonical blocker packet for this recoverable routing issue is
+`PHASE24_RTL9210B_ISOLATEB_UNBLOCKER_PACKET.md`. The custom unblocker agent
+was unavailable because the agent-thread limit was reached; local blocker
+analysis was performed instead. The next bounded implementation is a
+co-routed U1 south-row repair or, if that is not viable, relocation of only
+the nearest support/via field. No orientation or architecture decision is
+being reopened, and no rejected probe copper is authority.
+
 The first coordinated local reroute of U1.12 `ISOLATEB`, `CLKREQ_N`,
 `PERST_N`, and `RTL_5V` is rejected: native DRC found 12 violations and zero
 opens. The exact conflicts are recorded in
