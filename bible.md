@@ -86,6 +86,12 @@ inherited V1058 RTL_3V3 warning; saved-board endpoint audits and source-removal
 negative controls pass for PERST, CLKREQ, and PEDET. Remaining support/supply
 opens and REFCLK stay open; Path-A and production CAD are unchanged.
 
+2026-09-10 — Phase 24 V1370 accepted: completed the U2.3/U2.8/R2.2/R3.2
+RTL_3V3 local support join with direct U2.3 descent, U2.8 right escape, two
+ordinary vias, and a B.Cu join. Native DRC is zero and the saved-board audit
+plus source-removal negative control pass. The disposable open count falls to
+22; RTL_1V1/RTL_5V/GND/REFCLK and other support remain open.
+
 2026-09-09 — Phase 24 V1356 rejected: the first REFCLK left/upper escape
 crossed the existing lane/XTAL source field and shorted the pair at its source.
 Preserved as route-implementation evidence; no macro-placement or architecture

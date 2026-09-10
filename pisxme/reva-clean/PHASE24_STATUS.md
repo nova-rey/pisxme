@@ -10416,3 +10416,10 @@ reintroducing the current control/lane conflicts. Native DRC reports zero
 violations; the saved-board audit passes U1.20/U1.34/U1.39/U1.52/C3 and the
 U1.20 source-removal negative control. U2.3/U2.8/R2.2/R3.2 remain open and
 must be joined in a separate local support repair.
+
+V1370 closes the local RTL_3V3 support branch on the V1368 basis. U2.3 uses a
+direct F.Cu descent, U2.8 exits right, and the two ordinary vias join on B.Cu
+before short F.Cu drops reach R2.2 and R3.2. Native DRC reports zero violations;
+the saved-board audit passes U2.3/U2.8/R2.2/R3.2 connectivity and the U2.3
+source-removal negative control. The open count falls from 25 to 22. RTL_1V1,
+RTL_5V, GND, crystal/RSET, REFCLK, and other support remain open.
