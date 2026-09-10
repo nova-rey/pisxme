@@ -10855,3 +10855,7 @@ V1461 is a rejected broader coupled Path-B source-field experiment. It
 co-authored all four lane-0 source corridors with U1.66 GND, but native DRC
 reported 19 violations / 14 opens, including RXP/RXN and RTL_1V1/RTL_3V3
 conflicts. No rules, production CAD, or Path-A assets changed.
+V80 tested co-locating and rotating R24 beside U7 with short monotonic F.Cu
+escapes. Native DRC reported 614 violations / 349 opens and exposed three
+real POWER_GND/support-net shorting classes. V80 is rejected; V79 remains the
+preferred power-owner-correct parent.

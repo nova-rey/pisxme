@@ -10078,6 +10078,9 @@ native source-field shorts; V75 remains the clean parent.
 Native DRC exposed JMS_AVDDL/POWER_GND and BRIDGE_R1/BRIDGE_R1RTN shorts at
 605 violations / 349 opens. V78 was rejected; V75 remains preferred and no
 rules or production CAD changed.
+2026-09-10 — V80 tested co-locating/rotating R24 beside U7. Native DRC
+reported 614 violations / 349 opens and exposed POWER_GND/BRIDGE_R1 and
+POWER_GND/BRIDGE_R1RTN shorts. V80 was rejected; V79 remains preferred.
 The blocker narrative was updated to include V78 as rejected evidence, keeping
 the current M.2 power-source gap and V75 preference explicit.
 2026-09-10 — Applied the source-level storage power-owner correction to the
