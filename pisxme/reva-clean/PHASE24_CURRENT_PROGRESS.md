@@ -1,5 +1,32 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Safe pause / GitHub checkpoint — 2026-09-10
+
+The active RTL9210B Path-B routing work is paused at the validated local
+support/launch checkpoint. No route search is running. The latest committed
+checkpoint is `de452db4` (`phase24: record RTL9210B route policy metrics`).
+The accepted orientation remains U1 RTL9210B-CG, 0 degrees, top side, pin 1
+southwest, V1517 lineage; orientation search is closed.
+
+The current isolated candidate is
+`PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED.kicad_pcb` (generated from the
+V1523 support baseline). Native KiCad DRC reports 0 violations, 0
+unconnected items, and 0 footprint errors. The saved-board six-net audit
+passes all six U1-to-J1 high-speed mappings and six actual-trace-removal
+negative controls. The route-policy metrics are in
+`PHASE24_RTL9210B_PATHB_V1603_METRICS.json`.
+
+This is an isolated Path-B implementation checkpoint, not Phase 24 closure.
+Open gates are full Path-B authority/procurement/firmware/bring-up,
+production parity, acreage integration, and the remaining Phase 24 native
+validation. Path A remains preserved. Historical disposable experiments are
+not current routing authority.
+
+Resume from `de452db4` after this note is pushed. The next productive action
+is a focused Path-B candidate census/parity audit and reconciliation of its
+remaining authority gates, followed by only the native checks justified by
+that evidence. Do not reopen U1 orientation or revive rejected route bases.
+
 Date: 2026-09-10
 
 ## Paused state

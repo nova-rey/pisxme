@@ -10835,3 +10835,12 @@ the accepted local primitive. Receipt:
   routing on F.Cu/B.Cu only, 0.20 mm track width, ordinary 0.60/0.30 mm
   vias, and no plane-layer signals. It supplements rather than replaces
   native DRC, connectivity, and the still-open firmware/procurement gates.
+
+## 2026-09-10 — safe pause checkpoint published
+
+- Paused RTL9210B Path-B routing at the validated `de452db4` local
+  support/launch checkpoint and recorded the exact resume point in
+  `PHASE24_CURRENT_PROGRESS.md`. The isolated candidate remains native-DRC
+  clean with six-net connectivity and negative controls passing; full Path-B,
+  production-parity, acreage, and Phase 24 gates remain open. No orientation
+  search or rejected route base was revived.
