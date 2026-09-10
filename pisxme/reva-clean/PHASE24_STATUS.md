@@ -10278,6 +10278,14 @@ native DRC reports 14 violations: RXN still intersects the retained SPISO
 trunk, the TX pair outer rows interact, and the RX/TX connector transitions
 remain too close. This is route-implementation evidence; no production or
 Path-A assets changed.
+
+V1320 was refined into V1321, a co-authored lane experiment that retained the
+V1058 support field, used the V1258 staggered QFN escapes and connector launch
+segments, and bridged four south B.Cu rows between them. Native DRC still
+rejected V1321 with 18 violations, mainly collisions between the south rows
+and the V1058 rail/SPI B.Cu trunks, plus connector-side clearance and residual
+edge checks. This is a route implementation failure and confirms that simple
+row bridging is insufficient; no production CAD or Path-A assets changed.
 V1313 is a targeted pad-adjacent continuation of the rotated-QFN class. It
 allocates immediate source escapes, bypasses the SPISO trunk, and staggers
 J1 transitions. The candidate remains disposable pending native endpoint,

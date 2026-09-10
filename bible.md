@@ -78,6 +78,12 @@ saved-board endpoint and negative-control audits but native DRC reported 17
 violations across source-field, SPISO, pair-transition, and connector-launch
 geometry. Preserved the disposable candidate; production and Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V1321: co-authored the proven V1258 QFN and connector
+escapes around the complete V1058 RTL9210B support field, using four south
+B.Cu bridge rows. Native DRC rejected 18 violations from rail/SPI B.Cu
+intersections and connector/edge clearances. Preserved the disposable board
+and raw report as route-implementation evidence; no production CAD or Path-A
+assets changed.
 2026-09-09 — Phase 24 V1317: recorded the route-class comparison. V1258 is
 the accepted complete four-lane basis at U1 orientation 0 degrees; V857/V850
 are support/control primitives at incompatible 90/180 degree orientations.
