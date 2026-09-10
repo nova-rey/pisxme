@@ -10053,3 +10053,6 @@ remains isolated and unchanged.
 V69-V71 tested three `STORAGE_SEL` bypasses around U13/U14; none was promoted.
 V71 removed the selector NC-pad short but introduced a JMS_AVDDL/POWER_GND
 collision. V54 remains the preferred parent.
+Current RTL9210B marketplace checks added corroborating small-quantity leads,
+but did not close authorized lot, firmware-rights, or virgin-programming risk.
+Path B remains isolated and Path A remains preserved.

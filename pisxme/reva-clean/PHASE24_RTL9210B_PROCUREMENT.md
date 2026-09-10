@@ -2,6 +2,9 @@
 
 Date checked: 2026-09-06. A live-page receipt is retained at
 `authority-inventory/rtl9210b/RTL9210B_WEB_SOURCE_RECEIPT_20260906.md`.
+Follow-up marketplace corroboration checked 2026-09-09 is retained at
+`PHASE24_RTL9210B_PROCUREMENT_20260909.md`; it does not change the JLC
+identity or productization-risk disposition.
 
 Primary listing checked: https://jlcpcb.com/partdetail/RealtekSemicon-RTL9210BCG/C5143573
 The current page identifies Realtek `RTL9210B-CG`, JLC part `C5143573`,
