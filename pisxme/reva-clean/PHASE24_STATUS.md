@@ -10349,6 +10349,13 @@ control also passes. Native DRC retains only the inherited V1058 RTL_3V3
 dangling warning, with remaining CLKREQ/PERST/REFCLK and supply/support opens
 still explicit. No production CAD or Path-A assets changed.
 
+V1347 adds an accepted CLKREQ_N primitive to the V1340 PEDET/V1332 lane basis.
+The vertical-first U1.13 escape, B.Cu overpass around SPISI, R3.1 handoff, and
+outboard J1.52 launch pass native saved-board connectivity and the source
+removal negative control. Native DRC retains only the inherited V1058
+RTL_3V3 dangling warning; PERST, REFCLK, supplies, and remaining support stay
+open. No production CAD or Path-A assets changed.
+
 V1332 is the current original-J1 lane basis. It moves TXP's long corridor to a
 far-right B.Cu run, removing the final lane short/crossing from V1329 while
 retaining the V1058 support field and the V1258 QFN escape. Native DRC reports
