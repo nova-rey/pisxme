@@ -10166,3 +10166,6 @@ V112 preserved the V62-style selector reroute as rejected evidence at native
 V113 showed the placement generator still retains donor copper after storage
 component replacement (297/499, crossings); a targeted copper regeneration
 stage is required before any placement candidate can be promoted.
+V114 implemented the storage-owned copper scrub; V115's native-pad USB3
+regeneration was rejected at 403/499 for source-field shorts/crossings. This
+is router/source-alias evidence and did not change production CAD.

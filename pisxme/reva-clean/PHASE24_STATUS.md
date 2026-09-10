@@ -10955,3 +10955,9 @@ produced 297/499 with no shorting entries but retained donor-copper crossings.
 It is rejected as an integrated route; the generator requires a storage-copper
 scrub/regeneration stage before promotion. Receipt:
 `PHASE24_STORAGE_REGEN_JLC_V113_RECEIPT.md`.
+V114 implemented that scrub and removed 740 storage-owned donor copper
+objects, producing an honest fresh island baseline. V115 then ran the native
+pad A* USB3 authoring path and was rejected at 403/499 with real CM5 source-
+field shorts and crossings. The failure is classified as router/source-alias
+implementation, not macro-placement; see
+`PHASE24_STORAGE_REGEN_V114_V115_RECEIPT.md`.
