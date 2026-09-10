@@ -31,3 +31,12 @@ Both V67 and V68 pass:
 The selector-side short remains a native-board finding and must be resolved
 before a clock repair can be promoted. Path-B RTL9210B qualification remains
 isolated and is not changed by these Path-A experiments.
+
+## Follow-up selector trials — V69–V71
+
+V69 routes `STORAGE_SEL` north of U13 but introduces XOUT and U14 supply-field
+collisions. V70 uses a B.Cu bypass but places its U14 transition too close to
+`STORAGE_3V3`. V71 moves that transition outside the U14 pad row and removes
+the selector-side `NC_26` short, but native DRC reports a new
+`JMS_AVDDL`/`POWER_GND` collision. All are rejected; V54 remains the clean
+parent and no production routing changed.

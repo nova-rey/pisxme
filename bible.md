@@ -10050,3 +10050,6 @@ short, but native DRC still found a selector-side NC_26/STORAGE_SEL short;
 V68 confirmed the issue without zone refill. Neither candidate was promoted;
 V54 remains the preferred clean storage parent. Path-B RTL9210B qualification
 remains isolated and unchanged.
+V69-V71 tested three `STORAGE_SEL` bypasses around U13/U14; none was promoted.
+V71 removed the selector NC-pad short but introduced a JMS_AVDDL/POWER_GND
+collision. V54 remains the preferred parent.

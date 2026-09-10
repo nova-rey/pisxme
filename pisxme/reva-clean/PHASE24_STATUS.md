@@ -10782,3 +10782,8 @@ selector-side `NC_26`/`STORAGE_SEL` shorting item. V68 is the no-zone-refill
 control (602 / 350 with the same short). Raw boards, reports, and the
 `PHASE24_STORAGE_V63_V68_CLOCK_ESCAPE_RECEIPT.md` preserve this evidence;
 V54 remains the preferred clean parent.
+V69-V71 tested three net/layer-aware `STORAGE_SEL` bypasses around U13/U14.
+V69 introduced XOUT/U14 supply conflicts, V70 introduced a U14
+`STORAGE_3V3` transition short, and V71 removed the `NC_26` short but
+introduced a native `JMS_AVDDL`/`POWER_GND` collision. All are rejected;
+V54 remains the preferred clean parent and the storage gate remains OPEN.
