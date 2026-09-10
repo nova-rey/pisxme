@@ -10950,3 +10950,8 @@ same JLC profile and was rejected at 268/341 with crossings, latent
 XOUT/JMS_XAVDDH, and a selector-to-ground short. It is worse than V110's
 254/341 baseline; the next repair must regenerate the local selector/source
 field rather than add another long detour.
+V113 reran the native storage-placement generator under the JLC profile and
+produced 297/499 with no shorting entries but retained donor-copper crossings.
+It is rejected as an integrated route; the generator requires a storage-copper
+scrub/regeneration stage before promotion. Receipt:
+`PHASE24_STORAGE_REGEN_JLC_V113_RECEIPT.md`.

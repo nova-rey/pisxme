@@ -10163,3 +10163,6 @@ showed the selector package can be routed at the documented 0.15/0.13208-mm
 limits, but the integrated storage board still has real opens and shorts.
 V112 preserved the V62-style selector reroute as rejected evidence at native
 268/341; no long selector detour was promoted.
+V113 showed the placement generator still retains donor copper after storage
+component replacement (297/499, crossings); a targeted copper regeneration
+stage is required before any placement candidate can be promoted.
