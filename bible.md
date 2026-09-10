@@ -10056,3 +10056,7 @@ collision. V54 remains the preferred parent.
 Current RTL9210B marketplace checks added corroborating small-quantity leads,
 but did not close authorized lot, firmware-rights, or virgin-programming risk.
 Path B remains isolated and Path A remains preserved.
+The 2026-09-10 JMS583 support triage was corrected for each audit's actual
+input contract; support authority, VBUS divider, and VCCO zone now pass with
+negative controls against the V54 saved board. The apparent failures were
+tool invocation errors, not design evidence.

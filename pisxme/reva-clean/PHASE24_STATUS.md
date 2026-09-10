@@ -10787,3 +10787,9 @@ V69 introduced XOUT/U14 supply conflicts, V70 introduced a U14
 `STORAGE_3V3` transition short, and V71 removed the `NC_26` short but
 introduced a native `JMS_AVDDL`/`POWER_GND` collision. All are rejected;
 V54 remains the preferred clean parent and the storage gate remains OPEN.
+On 2026-09-10, the JMS583 support triage was corrected: the support audit was
+run against `STORAGE.kicad_sch`, and the VBUS/VCCO audits were run against V54
+through their required environment-selected PCB inputs. All three pass with
+negative controls, as recorded in
+`PHASE24_STORAGE_SUPPORT_AUDIT_20260910.md`. The earlier apparent failures
+were invocation errors, not live design defects.
