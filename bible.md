@@ -10362,3 +10362,18 @@ the accepted local primitive. Receipt:
 - These are route-implementation failures, not architecture evidence. V1469
   remains the accepted zero-DRC isolated lower-field basis; the next attempt
   must coauthor the plane/return field rather than add another long collector.
+
+## 2026-09-10 — Phase 24 RTL9210B V1491 GND return field
+
+- V1477–V1479 perimeter launches and V1480–V1487 direct-pocket variants were
+  rejected by native pad/support clearance or routing findings and remain
+  preserved as raw evidence.
+- V1491 coauthored the live RTL_3V3 B.Cu shelf and used the existing QFN GND
+  copper to launch one ordinary 0.50/0.30 mm through-via into an intentional
+  In1 GND return field. Native KiCad DRC reports 0 violations / 7 inherited
+  opens.
+- Native saved-board connectivity joins U1.45/U1.66/U1.69 to the remote GND
+  field. Removing the QFN-to-In1 stitch fails the independent negative
+  control. This is an accepted isolated Path-B primitive; RSET, crystal,
+  REFCLK, firmware, procurement, integration, and Path-A comparison remain
+  open. Path A is unchanged.

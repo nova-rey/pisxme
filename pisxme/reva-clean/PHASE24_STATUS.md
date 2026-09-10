@@ -11250,3 +11250,17 @@ Their raw PCBs/reports and consolidated receipt
 `PHASE24_RTL9210B_GND_RETURN_V1470_V1476_RECEIPT.md` are preserved. V1469
 remains the accepted isolated basis; the next GND task is coordinated
 plane/return-field regeneration, not rule relaxation.
+
+## CURRENT PATH-B GND RETURN FIELD — V1491 — 2026-09-10
+
+V1491 supersedes the V1470–V1476 GND-return trials as the accepted isolated
+QFN return primitive. It uses the existing GND copper above the exposed pad,
+one ordinary 0.50/0.30 mm through-via into an intentional In1 GND field, and
+a coauthored RTL_3V3 B.Cu shelf. Native DRC is 0 violations / 7 inherited
+opens. Native connectivity and the saved-board stitch-removal negative
+control pass. Receipt: `PHASE24_RTL9210B_GND_RETURN_V1488_V1491_RECEIPT.md`.
+
+The seven opens are current remaining Path-B work, not waived findings:
+RSET, XTAL_IN, XTAL_OUT, and REFCLK plus their associated endpoint groups.
+Full support, firmware/configuration, procurement, integrated mode validation,
+and Path-A/Path-B decision gates remain OPEN.

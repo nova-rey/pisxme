@@ -109,3 +109,13 @@ Receipt: `PHASE24_RTL9210B_U163_RXN_REHOME_V1469_RECEIPT.md`.
 V1469 supersedes V1466 as the current isolated QFN/lane/rail basis. This
 closes the lower-field primitive only; full Path-B support and integration
 remain open.
+
+## Current override — V1491
+
+The V1470–V1476 GND-return failures are historical rejected evidence, not the
+current implementation. V1491 is the current accepted isolated basis:
+`PHASE24_RTL9210B_GND_REROUTE_RTL3V3_V1491.kicad_pcb`. It has 0 native DRC
+violations, joins the QFN GND field to the remote return through an intentional
+In1 GND field, and passes a saved-board negative control. Remaining RSET,
+crystal, and REFCLK opens are genuine current work. Receipt:
+`PHASE24_RTL9210B_GND_RETURN_V1488_V1491_RECEIPT.md`.
