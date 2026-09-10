@@ -19,6 +19,9 @@ production PCB authority.
 | V106 | Rotate U12/U13 selector footprints 90 degrees | not applicable | geometry probe | REJECT as direct-board candidate: inherited copper is stale after rotation |
 | V107 | Rotated selectors with local pin-9 stubs | not applicable | 738 / 353 | REJECT as integrated candidate: stale copper/zone conflicts |
 | V108 | Stripped rotated-selector pin-9 escape fixture | not applicable | 275 / 489 | DIAGNOSTIC: package has intrinsic sub-0.2-mm pad clearances; no route-width error, but local rule treatment is unresolved |
+| V109 | Rotated selector pin-9 fixture under repository JLC rule profile | not applicable | 134 / 489 | ACCEPTED LOCAL GEOMETRY: no track-width or shorting findings; not integrated |
+| V110 | V94 under repository JLC rule profile | focused PASS | 254 / 341 | REJECT: NC_26/STORAGE_SEL short and 341 opens |
+| V111 | V104 under repository JLC rule profile | focused PASS, strict-source FAIL | 266 / 337 | REJECT: added crossings/shorts; not integrated |
 
 The focused audit proves the nine J3 contacts reach at least one
 `STORAGE_3V3` source through saved native copper. It does not waive the

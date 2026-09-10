@@ -10938,3 +10938,10 @@ V105 independently re-routed only `STORAGE_SEL` around the outer F.Cu
 corridor; native DRC was 614/341 with crossings and the recurring
 XOUT/JMS_XAVDDH short, so the selector route remains a route-implementation
 problem and V105 is rejected.
+V109 reran the stripped rotated-selector escape under the repository's JLC
+profile (0.15-mm clearance, 0.13208-mm minimum track) and found no track-width
+or shorting findings, establishing that the package is manufacturable under
+that profile. V110 applied the same profile to V94: DRC fell to 254/341 but
+the NC_26/STORAGE_SEL short and all opens remain. V111 applied it to V104:
+266/337 with added crossings/shorts and strict-source failure. These are
+rule-profile comparisons only; no production rule or PCB has changed.

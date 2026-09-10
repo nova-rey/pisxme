@@ -10158,3 +10158,6 @@ V105's selector-only outer-corridor re-route was also rejected at native
 V106–V108 preserved selector-rotation diagnostics; the stripped fixture
 confirmed that future pin-9 routing requires explicit package/DFM rule
 authority, so no integrated rotation was promoted.
+The V109–V111 comparison used the repository's existing JLC rule profile and
+showed the selector package can be routed at the documented 0.15/0.13208-mm
+limits, but the integrated storage board still has real opens and shorts.
