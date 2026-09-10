@@ -10682,3 +10682,8 @@ V1455 is a rejected left-first U1.66 GND escape with ordinary-via return.
 Native DRC reported 11 violations, including LANE0_RXP/TXP crossings and
 shorts/clearance conflicts with JTAG_TDI, PEDET, and adjacent QFN pads. No
 candidate is promoted; U1.66 remains OPEN.
+
+V1456 is a rejected orthogonal U1.66 GND escape below the QFN pad row.
+Native DRC reported four violations: JTAG_TDO short/mask bridge, PEDET
+crossing, and LANE0_TXN crossing. Direct, zone, left-first, and orthogonal
+U1.66 launches have now been separately preserved; no candidate is promoted.
