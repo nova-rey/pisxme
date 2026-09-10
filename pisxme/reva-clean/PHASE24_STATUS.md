@@ -50,6 +50,11 @@ lane-0 P/N via shorting and sub-0.2 mm clearances. The next correction must
 model via diameter and connector-launch separation; no candidate was
 promoted.
 
+V1595 applied deterministic monotonic handoff and J1 channels and reduced the
+ native DRC result to 34 violations, but source-handoff crossings/shorts and
+ J1-side via/clearance conflicts remain. Handoff-pad spacing and connector
+ launch must be co-authored together; no candidate was promoted.
+
 V1592 corrected the endpoint rectangle model and generated complete paths for
 all six handoff-to-J1 nets, but native DRC rejected them with 594 clearance
 violations. No candidate was promoted; the corrected endpoint model remains

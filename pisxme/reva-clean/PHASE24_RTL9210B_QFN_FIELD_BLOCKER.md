@@ -36,6 +36,10 @@ V1594 improved centerline spacing and generated all six launch paths, but
 native DRC still reported 87 violations, including lane-0 P/N via shorting and
 sub-0.2 mm clearances. The remaining planner defect is via-diameter and
 connector-launch separation modeling; no route was promoted.
+V1595 used deterministic monotonic channels and reduced the result to 34
+violations, but native DRC still found source-handoff crossings/shorts and
+J1-side via/clearance conflicts. Handoff-pad spacing and connector launch
+must now be co-authored together; no route was promoted.
 The active accepted local basis remains V1517 at 0° top-side orientation.
 The remaining technical task is a coordinated crystal/REFCLK/rail fanout
 that is authored against the actual saved pads and ordinary-via rules.
@@ -49,6 +53,7 @@ Path-A/Path-B comparison remain OPEN. Receipt:
 `PHASE24_RTL9210B_HANDOFF_J1_ASTAR_REJECT_V1591_RECEIPT.md`.
 `PHASE24_RTL9210B_HANDOFF_J1_ASTAR_REJECT_V1592_RECEIPT.md`.
 `PHASE24_RTL9210B_HANDOFF_J1_ASTAR_REJECT_V1594_RECEIPT.md`.
+`PHASE24_RTL9210B_MANUAL_J1_MONOTONIC_REJECT_V1595_RECEIPT.md`.
 
 ## SUPERSEDED CURRENT-STATE HEADER — V1558
 

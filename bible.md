@@ -10716,3 +10716,11 @@ the accepted local primitive. Receipt:
   and a 0.4 mm centerline separation test. Native DRC found 87 violations,
   including lane-0 P/N via shorting and sub-0.2 mm clearances. Rejected; via
   diameter and connector-launch separation still need explicit modeling.
+
+## 2026-09-10 — rejected deterministic monotonic J1 launch V1595
+
+- V1595 used staggered handoff transitions and separated B.Cu channels. Native
+  DRC reduced the candidate to 34 violations but found source-handoff
+  crossings/shorts and J1-side via/clearance conflicts. Handoff-pad spacing
+  and connector launch must be co-authored together; no rule or architecture
+  changed.
