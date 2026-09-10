@@ -11,6 +11,14 @@ source/transition route experiments. Open Path-B gates are the ordinary-via
 source-field route, authorized support/package evidence, virgin programming,
 firmware rights, procurement, and complete native/integrated validation.
 
+Claude decision V1575 is accepted for Path-B orientation: use U1 at 0°
+unrotated, top-side, pin 1 southwest, based on the V1517 lineage. Crystal/RSET
+stay west, SPI flash and decoupling/support stay east or north-east, controls
+stay south, and the accepted east-then-north lane/REFCLK escape is preserved.
+Orientation search is closed; remaining Path-B work is implementation and
+independent authority gates. Decision record:
+`PHASE24_RTL9210B_ORIENTATION_DECISION_CLAUDE_V1575.md`.
+
 ## SUPERSEDED STATUS HEADER — retained for history
 
 The former V1557 header below is historical context only.

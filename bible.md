@@ -10613,3 +10613,11 @@ the accepted local primitive. Receipt:
   R81 branch by design. Rejected as an integrated candidate; retain the
   package-local treatment as evidence for the next coherent source-field
   regeneration.
+
+## 2026-09-10 — accepted Claude RTL9210B orientation decision V1575
+
+- Accepted the delegated Claude decision to freeze Path-B RTL9210B-CG U1 at
+  0° unrotated on the top side, pin 1 southwest, using the V1517 lineage.
+  Preserved west crystal/RSET and lane corridors, east SPI/rail support,
+  north-east decoupling/control support, and south-side controls. Orientation
+  search is closed; remaining work is implementation and independent gates.
