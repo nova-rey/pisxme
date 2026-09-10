@@ -10893,3 +10893,10 @@ pending removal of that short and completion of full-board gates. Matched
 isolation shows the U14.5 source pickup alone produces no shorting entry; the
 J3-side power drops reproduce it. See
 `PHASE24_STORAGE_V89_ISOLATION_RECEIPT.md`.
+The source-authority regeneration then corrected U13 pad 43 to POWER_GND in
+V91 and retained the source-corrected J3 STORAGE_3V3 ownership. V91 native
+DRC is 596 / 350 with no shorting section. V92 adds a no-via F.Cu perimeter
+power corridor from U14.5 to J3: parity, USB3, SATA, 9-contact power-owner,
+and negative-control audits pass; native DRC is 597 / 341 with one added
+crossing. V92 is the current disposable storage-power basis, not production
+closure. Receipt: `PHASE24_STORAGE_AUTHORITY_REGEN_V91_V92_RECEIPT.md`.

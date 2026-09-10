@@ -10129,3 +10129,9 @@ disposable physical-power candidate; full-board gates remain open.
 does not reproduce the XOUT/JMS_XAVDDH short, while the J3-side drop class
 does. V89 remains rejected; connector-field power access needs a new route
 class. Evidence: `PHASE24_STORAGE_V89_ISOLATION_RECEIPT.md`.
+2026-09-10 — Regenerated the storage disposable parent with the reviewed U13
+exposed-pad POWER_GND authority and source-corrected J3 STORAGE_3V3 ownership.
+V91 is 596 / 350 with no shorting section. V92's no-via F.Cu perimeter rail
+connects all nine J3 power contacts; native USB3/SATA/parity/power audits and
+the trace-removal negative control pass. DRC is 597 / 341 with one added
+crossing. V92 is disposable; full gates remain open.
