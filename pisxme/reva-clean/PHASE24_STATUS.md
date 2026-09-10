@@ -10986,3 +10986,10 @@ incomplete router implementation; it produced no accepted copper and no
 false connectivity claim. The next route class remains pair-aware explicit
 source escape outside the connector field. Receipt:
 `PHASE24_USB3_ASTAR_V119_RECEIPT.md`.
+V120/V121 then tested the shifted CM5IO-style escape with pair-separated
+source transitions. In the J7/U12-only V121 fixture, native DRC reports zero
+violations and the four-endpoint native connectivity audit passes. Removing a
+saved RX-N segment in the negative-control copy makes that audit fail, so no
+synthetic graph edge is involved. V121 is the first clean isolated U12 route
+development result; integrated continuation and full-board gates remain open.
+Receipt: `PHASE24_USB3_SHIFTED_ESCAPE_V121_RECEIPT.md`.
