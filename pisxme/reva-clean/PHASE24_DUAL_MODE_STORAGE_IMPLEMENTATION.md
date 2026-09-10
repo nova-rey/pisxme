@@ -38,6 +38,10 @@ native DRC is zero, six endpoint assertions pass, and the removed-track
 negative control passes. It is not integrated-board closure; the fixture
 intentionally omits CM5 continuation and other support.
 
+V156 rejected the first integrated cap-shelf translation at 155 native DRC
+findings, despite ten-net endpoint parity. It is not evidence against V154;
+the next integration must coauthor C86/C87 with the affected PERST corridor.
+
 ## CURRENT STATE — documentation authority (2026-09-08)
 
 The live Path-A dual-mode storage implementation includes the corrected

@@ -38,6 +38,11 @@ zero, six endpoint assertions pass, and the removed-track negative control
 fails connectivity as required. Integration and intentionally omitted
 support opens remain current gates; no production promotion is implied.
 
+V156 is rejected integrated placement evidence: moving C86/C87 alone cleared
+one collision but introduced PERST and storage-support crossings/shorts. The
+accepted V154 local primitive remains available; this is a recoverable
+coauthoring/transplant gate, not an architecture blocker.
+
 Status: `OPEN — implementation authorized; procurement evidence remains HIGH
 risk` for the authorized SATA/NVMe upgrade only.
 The prior SATA-only board is preserved.

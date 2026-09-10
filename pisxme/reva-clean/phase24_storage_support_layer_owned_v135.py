@@ -17,6 +17,8 @@ if len(sys.argv) > 2: OUT = R / sys.argv[2]
 TARGET_STAGGER = len(sys.argv) > 3 and sys.argv[3] == 'local_target_stagger'
 RX_FCU = len(sys.argv) > 3 and sys.argv[3] == 'local_target_rx_fcu'
 RX_FAR = len(sys.argv) > 3 and sys.argv[3] == 'local_target_rx_far'
+CAP_CLEAR = len(sys.argv) > 3 and sys.argv[3] == 'integrated_cap_clear'
+RX_FAR = RX_FAR or CAP_CLEAR
 LOCAL_ONLY = len(sys.argv) > 3 and sys.argv[3] in {'local', 'local_rot180', 'local_target_stagger', 'local_target_rx_fcu', 'local_target_rx_far'}
 ROTATE_U12 = len(sys.argv) > 3 and sys.argv[3] == 'local_rot180'
 ROTATE_U12_90 = len(sys.argv) > 3 and sys.argv[3] == 'local_rot90'
@@ -60,7 +62,8 @@ for t in list(b.GetTracks()):
 # Put the series capacitors immediately below their actual U11 TX pads.  The
 # 90-degree orientation makes each pad's two terminals vertical and keeps the
 # source-to-cap legs monotonic in the open south escape.
-for ref, pos in {'C86': (146.0, 160.0), 'C87': (146.0, 165.0)}.items():
+cap_positions = {'C86': (146.0, 165.0), 'C87': (146.0, 170.0)} if CAP_CLEAR else {'C86': (146.0, 160.0), 'C87': (146.0, 165.0)}
+for ref, pos in cap_positions.items():
     f = b.FindFootprintByReference(ref)
     if f is None: raise RuntimeError('missing ' + ref)
     f.SetPosition(V(*pos)); f.SetOrientationDegrees(0)

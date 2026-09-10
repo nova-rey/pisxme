@@ -11133,3 +11133,10 @@ support endpoints pass, and the saved-board removed-track negative control
 correctly fails connectivity. V154 is accepted as a local support primitive;
 32 intentional stripped-fixture opens remain and integrated closure is OPEN.
 Receipt: `PHASE24_STORAGE_SUPPORT_U12_COAUTHOR_TX_RX_FAR_V154_RECEIPT.md`.
+
+V155/V156 tested coherent C86/C87 relocation to clear the live C26 support
+field. Both retained all ten endpoint assertions, but V156's native DRC was
+155 with new PERST crossings and TX/support-field shorts. This is a
+transplant/placement failure because the surrounding single-ended corridor
+was not coauthored; V154 remains the accepted local primitive. Receipt:
+`PHASE24_STORAGE_SUPPORT_CAP_CLEAR_V156_RECEIPT.md`.
