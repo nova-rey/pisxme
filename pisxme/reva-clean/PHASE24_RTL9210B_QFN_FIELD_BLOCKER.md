@@ -59,6 +59,11 @@ routing gate are now exhausted: 86, 15, and 40 native DRC violations for
 pair-owned, north-perimeter, and south-perimeter funnels respectively. No
 candidate was promoted. The measured capacity blocker is documented in
 `PHASE24_RTL9210B_ENVELOPE_BLOCKER.md`.
+The subsequent authorized staggered handoff primitive V1601 passes six native
+U1-to-handoff links and six trace-removal negative controls with no local
+source-breakout shorts/crossings/clearance errors. Its first integrated north
+launch V1602 was rejected with 25 DRC violations and 30 opens; see the
+V1601/V1602 receipts. No production route was promoted.
 The active accepted local basis remains V1517 at 0° top-side orientation.
 The remaining technical task is a coordinated crystal/REFCLK/rail fanout
 that is authored against the actual saved pads and ordinary-via rules.

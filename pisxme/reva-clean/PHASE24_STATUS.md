@@ -86,6 +86,13 @@ found 40. None passed native DRC. The measured structural issue is the
 0.20 mm track, 0.20 mm clearance rules and a non-monotonic endpoint
 permutation. See `PHASE24_RTL9210B_ENVELOPE_BLOCKER.md`.
 
+The authorized staggered-handoff repair is now locally validated as V1601:
+all six U1-to-handoff links and six native trace-removal negative controls
+pass, with no source-breakout shorts/crossings/clearance errors. The first
+launch integration from that handoff, V1602 north funnel, remains rejected
+with 25 DRC violations and 30 opens. Production integration remains open;
+see the V1601/V1602 receipts.
+
 V1592 corrected the endpoint rectangle model and generated complete paths for
 all six handoff-to-J1 nets, but native DRC rejected them with 594 clearance
 violations. No candidate was promoted; the corrected endpoint model remains

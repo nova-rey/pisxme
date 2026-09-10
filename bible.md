@@ -10471,6 +10471,14 @@ the accepted local primitive. Receipt:
   a dedicated staggered breakout/launch change. See
   `PHASE24_RTL9210B_ENVELOPE_BLOCKER.md`; no production route or rule changed.
 
+## 2026-09-10 — accepted staggered RTL9210B handoff V1601; rejected launch V1602
+
+- V1601 locally validated a 1.0 mm-pitched staggered U1 handoff: six native
+  links and six trace-removal negative controls passed, with no local source
+  shorts/crossings/clearance errors. V1602's first north-funnel integration
+  remained rejected with 25 native DRC violations and 30 opens. Production
+  routing remains open; no rule or closed orientation changed.
+
 ## 2026-09-10 — Phase 24 RTL9210B V1547 crystal source sweep
 
 - V1547 generated and native-checked 16 crystal source variants from V1523.
