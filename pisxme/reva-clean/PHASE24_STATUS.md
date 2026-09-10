@@ -19,6 +19,11 @@ the necessary-trace removal negative control fails as required. Receipt:
 `PHASE24_U5_LAYER_CONNECTIVITY_V1559_RECEIPT.md`. This closes only the U5
 connectivity audit; Phase 24 native DRC and other full-board gates remain open.
 
+Fresh native DRC on `PHASE24_PGND_CLUSTER_CURRENT.kicad_pcb` remains OPEN at
+443 violations / 254 unconnected items. Receipt:
+`PHASE24_PGND_CLUSTER_CURRENT_V1559_NATIVE_DRC_RECEIPT.md`; raw report:
+`PHASE24_PGND_CLUSTER_CURRENT-V1559-drc.rpt`.
+
 
 ## CURRENT STATE OVERRIDE — 2026-09-10
 

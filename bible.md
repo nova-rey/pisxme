@@ -10498,6 +10498,14 @@ the accepted local primitive. Receipt:
 - Preserved the result in `PHASE24_U5_LAYER_CONNECTIVITY_V1559_RECEIPT.md`.
   KiCad's via-width binding warnings were observed and documented, not hidden.
 
+## 2026-09-10 — Phase 24 integrated native DRC V1559
+
+- Fresh KiCad 10 native DRC on `PHASE24_PGND_CLUSTER_CURRENT.kicad_pcb`
+  reports 443 violations / 254 unconnected items. The board remains open;
+  no severity or rule was changed.
+- Preserved raw output in `PHASE24_PGND_CLUSTER_CURRENT-V1559-drc.rpt` and
+  summarized it in `PHASE24_PGND_CLUSTER_CURRENT_V1559_NATIVE_DRC_RECEIPT.md`.
+
 ## 2026-09-10 — RTL9210B crystal source class V1555–V1556
 
 - Tested two further 0-degree QFN escape topologies at the required 0.20-mm
