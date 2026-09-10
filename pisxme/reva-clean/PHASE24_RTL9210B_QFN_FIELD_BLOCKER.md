@@ -119,3 +119,10 @@ violations, joins the QFN GND field to the remote return through an intentional
 In1 GND field, and passes a saved-board negative control. Remaining RSET,
 crystal, and REFCLK opens are genuine current work. Receipt:
 `PHASE24_RTL9210B_GND_RETURN_V1488_V1491_RECEIPT.md`.
+
+## Current override — V1508 RSET
+
+V1508 is the current accepted RSET primitive on the coordinated V1502 ground
+field. Native DRC is 0 violations / 6 inherited opens, and native RSET
+connectivity plus the saved-board transition-removal negative control pass.
+Receipt: `PHASE24_RTL9210B_RSET_V1508_RECEIPT.md`.

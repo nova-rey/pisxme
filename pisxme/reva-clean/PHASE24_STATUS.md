@@ -11264,3 +11264,11 @@ The seven opens are current remaining Path-B work, not waived findings:
 RSET, XTAL_IN, XTAL_OUT, and REFCLK plus their associated endpoint groups.
 Full support, firmware/configuration, procurement, integrated mode validation,
 and Path-A/Path-B decision gates remain OPEN.
+
+## CURRENT PATH-B RSET — V1508 — 2026-09-10
+
+V1508 closes the isolated RSET primitive on top of V1502's single intentional
+In1 GND field. Native DRC is 0 violations / 6 inherited opens; native
+pad-connectivity and a saved-board RSET-transition negative control pass.
+Receipt: `PHASE24_RTL9210B_RSET_V1508_RECEIPT.md`. The six remaining opens are
+XTAL_IN, XTAL_OUT, and REFCLK endpoint groups; they remain OPEN.

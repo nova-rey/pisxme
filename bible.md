@@ -10377,3 +10377,17 @@ the accepted local primitive. Receipt:
   control. This is an accepted isolated Path-B primitive; RSET, crystal,
   REFCLK, firmware, procurement, integration, and Path-A comparison remain
   open. Path A is unchanged.
+
+## 2026-09-10 — Phase 24 RTL9210B V1508 coordinated RSET escape
+
+- Independent review identified the RSET failure as a support-field capacity
+  problem: the GND triangle, RTL_3V3 shelf, and RTL_1V1 lane were authored
+  independently and boxed in U1.51. Path B was not rejected.
+- V1502 replaced the obsolete GND triangle with one intentional In1 GND field
+  and retained native DRC at 0 violations / 7 inherited opens.
+- V1508 routed RSET from native U1.51 `(94.8,66.05)` to R1.1 `(88,65)` with
+  one ordinary through-via and a short F.Cu hop around the RTL_1V1 barrier.
+  Native DRC is 0 violations / 6 inherited opens; saved-board connectivity
+  and the RSET-transition negative control pass. Remaining crystal and
+  REFCLK groups, firmware, procurement, integration, and A/B comparison stay
+  open. Path A is unchanged.
