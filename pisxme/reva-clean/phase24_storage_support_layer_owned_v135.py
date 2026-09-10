@@ -14,7 +14,8 @@ BASE = R / 'PHASE24_STORAGE_USB3_R80_RELOCATED_V127.kicad_pcb'
 OUT = R / 'PHASE24_STORAGE_SUPPORT_LAYER_OWNED_V135.kicad_pcb'
 if len(sys.argv) > 1: BASE = R / sys.argv[1]
 if len(sys.argv) > 2: OUT = R / sys.argv[2]
-LOCAL_ONLY = len(sys.argv) > 3 and sys.argv[3] == 'local'
+LOCAL_ONLY = len(sys.argv) > 3 and sys.argv[3] in {'local', 'local_rot180'}
+ROTATE_U12 = len(sys.argv) > 3 and sys.argv[3] == 'local_rot180'
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 W = pcbnew.FromMM(.13208)
 
@@ -39,6 +40,8 @@ def via(b, n, p):
 
 b = pcbnew.LoadBoard(str(BASE))
 owned = {'USB_TXP1','USB_TXN1','JMS_USB3_TXP','JMS_USB3_TXN','USB_RXP1','USB_RXN1'}
+if ROTATE_U12:
+    b.FindFootprintByReference('U12').SetOrientationDegrees(180)
 if LOCAL_ONLY:
     for t in list(b.GetTracks()): b.RemoveNative(t)
     for z in list(b.Zones()): b.RemoveNative(z)
@@ -57,8 +60,8 @@ for ref, pos in {'C86': (146.0, 150.0), 'C87': (146.0, 155.0)}.items():
 
 # U11 TX pads -> AC caps -> B.Cu corridors -> U12 bridge TX pads.
 for name, upad, cap, target, corridor, target_x in (
-    ('USB_TXP1','21','C86.1','25',(148.0,150.0),159.0),
-    ('USB_TXN1','22','C87.1','24',(148.0,155.0),158.0),
+    ('USB_TXP1','21','C86.1','25',(148.0,150.0),151.5 if ROTATE_U12 else 159.0),
+    ('USB_TXN1','22','C87.1','24',(148.0,155.0),150.5 if ROTATE_U12 else 158.0),
 ):
     n = net(b, name); bridge_n = net(b, 'JMS_USB3_TXP' if name == 'USB_TXP1' else 'JMS_USB3_TXN')
     c_ref, c_num = cap.split('.')
@@ -83,8 +86,8 @@ for name, upad, cap, target, corridor, target_x in (
 # are below the TX capacitor launches and their return vias are farther
 # outboard than the TX returns, avoiding the U12 pad-field funnel.
 for name, upad, target, source_via, target_via in (
-    ('USB_RXP1','26','23',(142.0,157.0),(163.0,157.0)),
-    ('USB_RXN1','27','22',(136.0,162.0),(157.5,162.0)),
+    ('USB_RXP1','26','23',(142.0,157.0),(151.5 if ROTATE_U12 else 163.0,157.0)),
+    ('USB_RXN1','27','22',(136.0,162.0),(150.5 if ROTATE_U12 else 157.5,162.0)),
 ):
     n = net(b,name); src = xy(pad(b,'U11',upad)); dst = xy(pad(b,'U12',target))
     sv, tv = source_via, target_via

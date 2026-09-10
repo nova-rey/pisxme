@@ -10235,3 +10235,8 @@ staggered. Native DRC rejected the route at 9 local violations, including
 U12 POWER_GND/NC collisions; this is disposable route evidence, not a waiver
 or production promotion. Receipt:
 `PHASE24_STORAGE_SUPPORT_TARGET_LAUNCH_V137_RECEIPT.md`.
+V138 rotated U12 by 180 degrees as a distinct disposable launch class. Native
+connectivity remained present for all six local support nets, but DRC retained
+two target-via shorts and two silk warnings. V138 is rejected; production
+copper remains unchanged. Receipt:
+`PHASE24_STORAGE_SUPPORT_U12_ROT180_V138_RECEIPT.md`.

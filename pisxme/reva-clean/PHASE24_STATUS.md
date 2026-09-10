@@ -11063,3 +11063,8 @@ rejected the candidate at 9 local violations because the inner route collided
 with U12 POWER_GND/NC pads and other launches. V137 is rejected; the next
 candidate must change U12 launch ownership or regenerate the local U12/source
 geometry. Receipt: `PHASE24_STORAGE_SUPPORT_TARGET_LAUNCH_V137_RECEIPT.md`.
+V138 rotated storage-local U12 by 180 degrees and regenerated the disposable
+support routes. All six local support endpoints remained connected, but native
+DRC retained two target-via shorts and two silk warnings. V138 is rejected;
+the target launch still requires coordinated U12/source regeneration. Receipt:
+`PHASE24_STORAGE_SUPPORT_U12_ROT180_V138_RECEIPT.md`.
