@@ -199,6 +199,11 @@ V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 documentation hygiene: rechecked the live Path-A basis
+against the current J8 XML. `PHASE24_STORAGE_J8_V5_VBUS_V1.kicad_pcb` passes
+zero-mismatch pad parity; V37 fails against that current authority because its
+recorded XML was superseded. Marked V37 historical without altering raw
+receipts, and corrected the narrative current-candidate references.
 2026-09-09 — Phase 24 V1457/V1458 rejected two additional RTL9210B U1.66/
 U1.69 ordinary-via edge-access probes. Native DRC reported 13 and 5
 violations respectively, including real ground-to-signal shorts/clearance

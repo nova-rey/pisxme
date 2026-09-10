@@ -19,6 +19,12 @@ retained unchanged. V13 is the current disposable co-authored
 USB_TXP/USB_TXN/JMS_AVDDL local-field basis; complete storage-field
 regeneration, native DRC, and full-board closure remain open.
 
+The current integrated Path-A parity basis is
+`PHASE24_STORAGE_J8_V5_VBUS_V1.kicad_pcb`, checked against
+`PHASE24_STORAGE_MODE_J8.xml` with zero mismatches. V13/V23/V37 route
+snapshots remain disposable historical evidence; their older XML/parity
+claims do not override the current J8 basis.
+
 The V3/V4 co-authored source-field experiments are superseded route evidence:
 V3 passes the focused USB3 and JMS583 support audits without a shorting class,
 but creates two local TX-pair crossings at the U11 escape; V4 adds an

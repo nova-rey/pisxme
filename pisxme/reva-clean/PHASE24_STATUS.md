@@ -10704,3 +10704,15 @@ These are route-implementation failures, not evidence to relax the layer,
 clearance, or via policy. Raw candidates and receipts are preserved. The
 Path-B QFN field remains open; Path A remains preserved and is the fallback
 track for overall Phase 24 closure.
+
+## CURRENT STATE CORRECTION — authoritative Path-A parity basis (2026-09-09)
+
+The current Path-A storage basis is `PHASE24_STORAGE_J8_V5_VBUS_V1.kicad_pcb`.
+Its native schematic-to-PCB pad parity passes with zero mismatches against the
+current `PHASE24_STORAGE_MODE_J8.xml` (814 authoritative nodes, 1263 PCB
+pads). The older V37 narrative claimed parity against
+`PHASE24_STORAGE_NATIVE_FINAL.xml`; that XML is superseded and produces ten
+mismatches when applied to V37, including stale J5 and pre-normalization U12/
+U13 ownership. V37 and its raw DRC remain immutable historical route evidence,
+but V37 is no longer the current Path-A candidate. Native DRC/routing,
+mode-aware physical closure, and full-board Phase 24 remain OPEN.

@@ -26,3 +26,12 @@ The candidate removes the V36 CM5_REFCLK/USB3_TXN short without introducing a
 new shorting class. It remains a route implementation basis because the
 unconnected and inherited full-board Phase 24 debt is not closed. The native
 report and generated PCB are retained as raw experiment evidence.
+
+## Superseded status
+
+V37 is not the current Path-A candidate. Rechecking V37 against the current
+`PHASE24_STORAGE_MODE_J8.xml` gives ten pad-net mismatches, including stale J5
+mode ownership and pre-normalization U12/U13 names. The current candidate is
+`PHASE24_STORAGE_J8_V5_VBUS_V1.kicad_pcb`, which passes zero-mismatch parity
+against that current XML. The V37 PCB and original receipts remain unchanged
+for historical route comparison.
