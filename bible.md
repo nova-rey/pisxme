@@ -10106,3 +10106,9 @@ by native DRC for new rail shorts/crossings. No rules were weakened. Receipt:
 connectivity and the negative control passed, but ordinary through-vias still
 collided with existing B.Cu storage/SATA copper; native DRC reported 613 / 341
 with real STORAGE_3V3 shorts. V83 was rejected; no rule relaxation.
+2026-09-10 — V84–V86 moved M.2 power drops around the existing Ethernet CT
+support and were rejected for successive real rail shorts. V87 moved farther
+outboard: all nine J3 contacts and the improved native negative control pass,
+with no new STORAGE_3V3 shorting entry, but native DRC remains 608 / 341
+versus V79 601 / 350 due added source/QFN clearance findings. V87 remains
+disposable; no production promotion or rule relaxation.

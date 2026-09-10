@@ -10874,3 +10874,9 @@ V83 then moved the long trunk to In1 power copper, but its ordinary through
 vias collided with the existing B.Cu SATA field; native DRC reported 613
 violations / 341 opens and real STORAGE_3V3 shorts. V83 is rejected. Source
 ownership remains correct, while collision-free physical power access is open.
+V84–V86 moved the connector drops south/outboard but successively shorted
+Ethernet center-tap support. V87 moved beyond those pads: the native M.2
+power audit and its improved trace-removal negative control pass, and no new
+STORAGE_3V3 shorting entry appears. V87 is still disposable (608 violations /
+341 opens versus V79's 601 / 350); its added QFN/source-escape clearances need
+resolution before promotion.

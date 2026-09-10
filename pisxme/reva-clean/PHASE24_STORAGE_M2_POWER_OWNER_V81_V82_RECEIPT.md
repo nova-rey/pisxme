@@ -41,4 +41,16 @@ strategy.  No DRC rule was weakened.
   signal field made the through-via locations collide; native DRC reported 613
   violations / 341 unconnected items and real `STORAGE_3V3` shorts. V83 is
   rejected. This is a route-corridor failure, not evidence against source
-  ownership.
+ownership.
+
+* V84/V85 moved the drops to a south edge corridor. Both retained native
+  nine-contact connectivity. V84/V85 still introduced one real short each to
+  nearby Ethernet center-tap support (`ETH_CT_BRANCH_3`/`4`); rejected.
+* V86 moved the drop farther outboard, but the same class moved to
+  `ETH_CT_BRANCH_4`; it also exposed a weak negative-control choice in the
+  audit because the first removed segment was redundant.
+* V87 moved beyond that support pad. Native connectivity and the improved
+  negative control both pass; native DRC is 608 violations / 341 unconnected
+  items, with no new STORAGE_3V3 shorting entry. It is not yet accepted: the
+  remaining seven-vs-V79 added violations are principally QFN/source-escape
+  clearances and must be isolated before production promotion.

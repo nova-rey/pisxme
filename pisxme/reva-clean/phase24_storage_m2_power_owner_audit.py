@@ -41,14 +41,23 @@ def main(path):
     print(f"PASS M.2 power owner native connectivity: {len(J3_POWER)} J3 contacts")
     # The disposable negative control removes one actual saved-board copper
     # object; expected connectivity never supplies an edge.
-    negative = pcbnew.LoadBoard(str(path))
-    victim = next((x for x in negative.GetTracks()
-                   if x.GetNetname() == "STORAGE_3V3"), None)
-    if victim is None:
+    original = pcbnew.LoadBoard(str(path))
+    candidates = [i for i, x in enumerate(original.GetTracks())
+                  if x.GetNetname() == "STORAGE_3V3"]
+    if not candidates:
         raise SystemExit("FAIL no STORAGE_3V3 copper available for negative control")
-    negative.RemoveNative(victim)
-    neg_ok, _ = audit(negative)
-    if neg_ok:
+    broken = False
+    for index in candidates:
+        negative = pcbnew.LoadBoard(str(path))
+        tracks = list(negative.GetTracks())
+        if index >= len(tracks):
+            continue
+        negative.RemoveNative(tracks[index])
+        neg_ok, _ = audit(negative)
+        if not neg_ok:
+            broken = True
+            break
+    if not broken:
         raise SystemExit("FAIL trace-removal negative control did not fail")
     print("PASS trace-removal negative control")
     return 0
