@@ -10714,6 +10714,12 @@ regeneration, rail-budget review, and native PCB revalidation must consume
 the correction together. V75 remains the preferred routing parent and Phase
 24 remains OPEN.
 
+V78 tested a separated `BRIDGE_R1` via column and B.Cu shelf against V75.
+Native DRC reported 605 violations / 349 opens and exposed real
+`JMS_AVDDL`/`POWER_GND` and `BRIDGE_R1`/`BRIDGE_R1RTN` shorts. V78 is rejected;
+V75 remains the preferred disposable parent. This is a route-implementation
+failure, not evidence to relax the layer or clearance contract.
+
 ## CURRENT PATH-B FOLLOW-UP — V1457/V1458 (2026-09-09)
 
 V1457 and V1458 tested a new ordinary-through-via edge-access class for the
