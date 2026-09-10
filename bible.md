@@ -10139,3 +10139,7 @@ crossing. V92 is disposable; full gates remain open.
 ordinary-via dogbones. It failed J3 physical connectivity and introduced real
 STORAGE_3V3 shorts; native DRC 619 / 344. V93 was rejected, confirming that a
 broad plane needs a coordinated island/via redesign. V92 remains preferred.
+2026-09-10 — V94 replaced V92's J3 same-net horizontal joins with individual
+vertical F.Cu dogbones into a south bus. Native power/negative-control,
+parity, USB3, and SATA audits pass; DRC remains 597 / 341 with no rail shorts.
+V94 is now the preferred disposable storage-power basis; full gates remain.

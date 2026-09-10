@@ -10905,3 +10905,9 @@ all storage-rail pads. It failed the native 9-contact J3 audit and produced
 619 / 344 DRC with real rail shorts to SATA/JMS_AVDDL/CM5 USB3 copper. V93 is
 rejected; a broad plane is not compatible with the current mixed-side island.
 Receipt: `PHASE24_STORAGE_STORAGE3V3_PLANE_V93_RECEIPT.md`.
+V94 supersedes V92 as the simpler equivalent connector escape: individual J3
+power dogbones feed a common south F.Cu bus from U14.5, with no vias. Native
+9-contact power audit and negative control, parity, USB3, and SATA audits pass;
+native DRC remains 597 / 341 with no storage-rail shorting entry. V94 is the
+preferred disposable basis; full-board and manufacturing gates remain open.
+Receipt: `PHASE24_STORAGE_AUTHORITY_J3_VERTICAL_V94_RECEIPT.md`.
