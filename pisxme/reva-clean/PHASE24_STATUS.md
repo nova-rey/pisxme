@@ -10302,3 +10302,17 @@ V1311, V1315, and V1316 prove rotated lane endpoint connectivity but are
 rejected by 10/14/14 native DRC violations respectively. The next valid class
 is orientation-0 lane preservation with regenerated support/source fields;
 no rotated support copper is to be copied as if transformed-compatible.
+
+V1318 merged the complete orientation-0 V1058 RTL9210B support/SPI field with
+the unchanged-endpoint V1258 lane/control set. Native DRC rejected the merge
+with 31 violations: the V1058 SPI and rail fields intersect the inherited
+V1258 lane corridors and source transitions. This is a coupled route-allocation
+failure; it does not invalidate either the V1058 support authority or the V1258
+complete-lane basis. V1319 then tested a fresh monotonic allocation with four
+staggered B.Cu northbound lane corridors and separate F.Cu J1 launches. Native
+DRC rejected 36 violations, including source-field/exposed-pad conflicts,
+crossings with live 1V1/3V3 B.Cu trunks, connector-side pair ordering/clearance,
+and board-edge/transition clearances. Both disposable boards and raw reports
+are retained. The next valid experiment must co-author the U1 source field,
+support trunks, and connector launch allocation together; no production CAD or
+Path-A assets changed.

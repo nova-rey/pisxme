@@ -93,6 +93,14 @@ V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V1318/V1319: merged the complete orientation-0 V1058
+RTL9210B support/SPI field with the accepted V1258 lane basis, then tested a
+fresh four-row northbound lane allocation around the support field. Native DRC
+rejected V1318 (31 violations) and V1319 (36 violations) for coupled
+source-field, rail-trunk, connector-launch, and clearance interactions.
+Preserved both disposable boards and raw reports as route-implementation
+evidence; no production CAD or Path-A assets changed. Next work must co-author
+support, source escape, and connector launch allocation together.
 2026-09-09 — Phase 24 V1312 rejected: the attempted rotated-QFN split-source
 escape caused native pad-field shorts/crossings and failed its saved-board
 lane endpoint audit; DRC reported 45 violations. Preserved the disposable
