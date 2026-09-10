@@ -23,6 +23,7 @@ LOCAL_ONLY = len(sys.argv) > 3 and sys.argv[3] in {'local', 'local_rot180', 'loc
 ROTATE_U12 = len(sys.argv) > 3 and sys.argv[3] == 'local_rot180'
 ROTATE_U12_90 = len(sys.argv) > 3 and sys.argv[3] == 'local_rot90'
 LOCAL_ONLY = LOCAL_ONLY or ROTATE_U12_90
+LOCAL_ONLY = LOCAL_ONLY or (len(sys.argv) > 4 and sys.argv[4] == 'local')
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 W = pcbnew.FromMM(.13208)
 
@@ -138,19 +139,47 @@ for name, upad, target, source_via, target_via in (
         seg(b,n,shoulder,dst,F)
         continue
     if CAP_CLEAR:
-        sv = (154.0, 170.0) if name == 'USB_RXP1' else (155.0, 175.0)
+        sv = (150.0, 143.0) if name == 'USB_RXP1' else (151.0, 144.0)
     else:
         sv = source_via
     tv = ((170.0, 140.0) if name == 'USB_RXP1' else (171.0, 141.0)) if RX_FAR else (((160.0, 138.8) if name == 'USB_RXP1' else (161.0, 139.8)) if TARGET_STAGGER else target_via)
     if CAP_CLEAR:
-        y = 143.0 if name == 'USB_RXP1' else 144.0
-        seg(b,n,src,(src[0],y),F); seg(b,n,(src[0],y),(sv[0],y),F); seg(b,n,(sv[0],y),sv,F)
+        if name == 'USB_RXN1':
+            # The south transition leaves the dense U11 side row before the
+            # B.Cu corridor; keep the pad-to-via ownership explicit.
+            seg(b,n,src,(src[0],sv[1]),F)
+            seg(b,n,(src[0],sv[1]),sv,F)
+        else:
+            y = sv[1]
+            seg(b,n,src,(src[0],y),F); seg(b,n,(src[0],y),sv,F)
     else:
         seg(b,n,src,(src[0],sv[1]),F); seg(b,n,(src[0],sv[1]),sv,F)
     via(b,n,sv)
     lane_x = 141.0 if name == 'USB_RXP1' else 140.0 if ROTATE_U12 else (154.0 if name == 'USB_RXP1' else 155.0)
     approach_y = 131.7 if name == 'USB_RXP1' else 131.3 if ROTATE_U12 else (137.3 if name == 'USB_RXP1' else 138.0)
-    if RX_FAR:
+    if CAP_CLEAR:
+        low = 173.0 if name == 'USB_RXP1' else 178.0
+        # Keep RXN's far column to the right of the RXP column.  A one-mm
+        # parallel shelf offset is not sufficient here because the final
+        # target dogbones still enter the same native clearance envelope;
+        # the separated column makes the topology non-intersecting.
+        far = 170.0 if name == 'USB_RXP1' else 180.0
+        if name == 'USB_RXN1':
+            # Keep RXN entirely north of the PERST shelf: the source via
+            # rises to an outboard B.Cu lane, then approaches the target from
+            # the east.  This avoids both the RXP lower shelf and CM5_PERST.
+            bypass_y = 128.0
+            bypass_x = 180.0
+            seg(b,n,sv,(sv[0],bypass_y),B)
+            seg(b,n,(sv[0],bypass_y),(bypass_x,bypass_y),B)
+            seg(b,n,(bypass_x,bypass_y),(bypass_x,tv[1]),B)
+            seg(b,n,(bypass_x,tv[1]),tv,B)
+        else:
+            seg(b,n,sv,(sv[0],low),B)
+            seg(b,n,(sv[0],low),(far,low),B)
+        if name == 'USB_RXP1':
+            seg(b,n,(far,low),tv,B)
+    elif RX_FAR:
         seg(b,n,sv,(170.0 if name == 'USB_RXP1' else 171.0,sv[1]),B)
         seg(b,n,(170.0 if name == 'USB_RXP1' else 171.0,sv[1]),tv,B)
     elif TARGET_STAGGER or RX_FAR:
@@ -176,16 +205,16 @@ for name, upad, target, source_via, target_via in (
 # Keep the validated V123-style single-ended PERST duck.  Its original
 # F.Cu y=150 trunk is exactly where the outboard support island now lives.
 perst = b.FindNet('/CORE_CM5/CM5_PERST') or b.FindNet('CM5_PERST')
-for t in list(b.GetTracks()):
-    if leaf(t.GetNetname()) != 'CM5_PERST' or t.GetLayer() != F: continue
-    a, z = xy(t.GetStart()), xy(t.GetEnd())
-    if {round(a[0],2), round(z[0],2)} == {64.0,152.54} and abs(a[1]-150) < .02 and abs(z[1]-150) < .02:
-        width = t.GetWidth()
-        b.RemoveNative(t)
-        seg(b,perst,(64,150),(64,147),F); via(b,perst,(64,147))
-        seg(b,perst,(64,147),(152.54,147),B); via(b,perst,(152.54,147))
-        seg(b,perst,(152.54,147),(152.54,150),F)
-        break
+if not CAP_CLEAR:
+    for t in list(b.GetTracks()):
+        if leaf(t.GetNetname()) != 'CM5_PERST' or t.GetLayer() != F: continue
+        a, z = xy(t.GetStart()), xy(t.GetEnd())
+        if {round(a[0],2), round(z[0],2)} == {64.0,152.54} and abs(a[1]-150) < .02 and abs(z[1]-150) < .02:
+            b.RemoveNative(t)
+            seg(b,perst,(64,150),(64,147),F); via(b,perst,(64,147))
+            seg(b,perst,(64,147),(152.54,147),B); via(b,perst,(152.54,147))
+            seg(b,perst,(152.54,147),(152.54,150),F)
+            break
 
 b.BuildListOfNets(); pcbnew.ZONE_FILLER(b).Fill(b.Zones()); b.BuildConnectivity()
 b.Save(str(OUT)); print(OUT)

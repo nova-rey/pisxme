@@ -11153,3 +11153,19 @@ incomplete-board opens, including source-field crossings and a
 PERST/BRIDGE_3V3 short. It is rejected route/transplant evidence; V154 is
 still the accepted local primitive. Receipt:
 `PHASE24_STORAGE_SUPPORT_COHERENT_CAP_PERST_V158_RECEIPT.md`.
+
+## CURRENT SUPPORT INTEGRATION — V182 — 2026-09-10
+
+V159-V178 are retained route-implementation experiments. Their failures were
+not macro-placement evidence: the remaining defects were coupled RX shelf,
+U11 source-field, and CM5_PERST corridor interactions. V179/V180 corrected
+the source transition and changed RXN to a north/outboard B.Cu handoff. The
+stripped native fixture is DRC-clean with 32 intentional omitted-support
+opens. Receipt: `PHASE24_STORAGE_SUPPORT_COHERENT_CAP_PERST_V182_RECEIPT.md`.
+
+V182 is the current integrated support candidate. The ten-net native endpoint
+audit passes and the saved-board removed-track negative control passes. Native
+DRC is 146 violations / 499 unconnected items, exactly matching the V127
+ancestor; no new DRC class was introduced by the six-net transplant. This is
+accepted integrated support evidence, not Phase 24 closure. The remaining
+ancestor findings and broader storage/board gates remain OPEN.

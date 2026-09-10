@@ -916,6 +916,18 @@ native schematic export and reports 111 expected-pad mismatches. It remains a
 disposable routing candidate until schematic-to-PCB authority is regenerated
 and the parity gate passes; no PCB-only ownership repair is accepted.
 
+## Current integrated USB3 support candidate — V182
+
+The accepted local V154 support primitive is now transplanted as
+`PHASE24_STORAGE_SUPPORT_COHERENT_CAP_PERST_V182.kicad_pcb`. Its RXN source
+transition and B.Cu handoff were regenerated from native pads to avoid the
+ancestor PERST/RXP/TX corridors; the transplant leaves the schematic and
+approved layer contract unchanged. The stripped fixture V180 is native DRC
+clean, and V182 matches the V127 ancestor's 146 DRC violations / 499 opens.
+The ten-net endpoint audit and removed-track negative control both pass. V182
+is therefore the current integrated USB3 support basis while full storage and
+Phase 24 closure remain open; it does not waive inherited findings.
+
 ## Current live source/parity correction — 2026-09-08
 
 `STORAGE.kicad_sch` now has authoritative `JMS_USB3_TXN/P` instance labels on

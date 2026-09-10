@@ -10299,3 +10299,14 @@ passed, but native DRC remained 153 with source-field crossings and a
 PERST/BRIDGE_3V3 short. It is rejected integration evidence; V154 remains
 the accepted local primitive. Receipt:
 `PHASE24_STORAGE_SUPPORT_COHERENT_CAP_PERST_V158_RECEIPT.md`.
+## 2026-09-10 — Phase 24 V182 integrated USB3 support
+
+- Corrected the V154-derived U11/U12 storage USB3 support generator using
+  native pad-derived routing. The RXN source now hands off on a north/outboard
+  B.Cu lane, avoiding the RXP shelf, TX field, and CM5_PERST corridor.
+- `PHASE24_STORAGE_SUPPORT_U12_COAUTHOR_TX_RX_FAR_V180.kicad_pcb` is a native
+  DRC-clean stripped fixture (0 violations; 32 intentional opens).
+- `PHASE24_STORAGE_SUPPORT_COHERENT_CAP_PERST_V182.kicad_pcb` is the accepted
+  integrated support candidate: ten endpoint assertions and the removed-track
+  negative control pass; native DRC is 146/499, identical to the V127 ancestor.
+  No inherited finding was waived and Phase 24 remains open.
