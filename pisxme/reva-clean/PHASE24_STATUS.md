@@ -10266,6 +10266,12 @@ native DRC reported 45 violations. The experiment is preserved as a route
 implementation failure. A valid rotated continuation must leave each pad
 outward immediately with pad-adjacent orthogonal geometry; no production or
 Path-A assets were changed.
+V1314 is rejected rotated-QFN lane coauthoring evidence. Its saved-board
+four-pair endpoint audit and four source-removal negative controls pass, but
+native DRC reports 17 violations, including RXN/SPISO interaction,
+RXN/TXP and connector-launch conflicts, and source-field collisions with
+REFCLK/TXP. The candidate is preserved as route-implementation evidence;
+production CAD and Path-A assets remain unchanged.
 V1313 is a targeted pad-adjacent continuation of the rotated-QFN class. It
 allocates immediate source escapes, bypasses the SPISO trunk, and staggers
 J1 transitions. The candidate remains disposable pending native endpoint,
