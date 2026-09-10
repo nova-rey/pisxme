@@ -78,6 +78,13 @@ saved-board endpoint and negative-control audits but native DRC reported 17
 violations across source-field, SPISO, pair-transition, and connector-launch
 geometry. Preserved the disposable candidate; production and Path-A assets
 remain unchanged.
+
+2026-09-09 — Phase 24 V1355 accepted RTL9210B PERST_N primitive: co-authored
+the CLKREQ source transition, then placed PERST on a lower B.Cu shelf below
+PEDET with ordinary vias and an F.Cu J1.50 launch. Native DRC has only the
+inherited V1058 RTL_3V3 warning; saved-board endpoint audits and source-removal
+negative controls pass for PERST, CLKREQ, and PEDET. Remaining support/supply
+opens and REFCLK stay open; Path-A and production CAD are unchanged.
 2026-09-09 — Phase 24 V1322: tested an F.Cu south-bridge allocation around the
 complete V1058 RTL9210B support field while retaining V1258 staggered source
 and connector primitives. Native DRC rejected 18 violations from QFN source

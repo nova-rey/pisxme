@@ -10364,3 +10364,15 @@ passes all four U1-to-J1 endpoints and four source-removal negative controls.
 The result is accepted as a complete lane-routing primitive. PEDET, CLKREQ,
 PERST, REFCLK, remaining supplies, and other support opens remain outside this
 fixture's closure scope.
+
+V1355 is the accepted PERST_N control primitive on the V1347 lane/PEDET/CLKREQ
+basis. The CLKREQ source was co-authored onto a left transition shelf so U1.14
+can descend without touching its via; PERST then uses an ordinary-via B.Cu
+shelf below the PEDET support field and returns to F.Cu for the J1.50 launch.
+Native DRC reports only the inherited V1058 RTL_3V3 dangling warning; the
+previous PERST/CLKREQ/SPICLK/PEDET local shorts and crossings are absent.
+Native saved-board connectivity passes PERST U1.14-J1.50 plus CLKREQ and PEDET
+endpoints, and source-removal negative controls fail as expected. REFCLK,
+supplies, and remaining RTL9210B support opens remain explicit; this is a
+Path-B routing primitive, not full Path-B or production closure. No Path-A or
+production CAD assets changed.
