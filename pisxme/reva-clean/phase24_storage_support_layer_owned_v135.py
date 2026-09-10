@@ -16,7 +16,8 @@ if len(sys.argv) > 1: BASE = R / sys.argv[1]
 if len(sys.argv) > 2: OUT = R / sys.argv[2]
 TARGET_STAGGER = len(sys.argv) > 3 and sys.argv[3] == 'local_target_stagger'
 RX_FCU = len(sys.argv) > 3 and sys.argv[3] == 'local_target_rx_fcu'
-LOCAL_ONLY = len(sys.argv) > 3 and sys.argv[3] in {'local', 'local_rot180', 'local_target_stagger', 'local_target_rx_fcu'}
+RX_FAR = len(sys.argv) > 3 and sys.argv[3] == 'local_target_rx_far'
+LOCAL_ONLY = len(sys.argv) > 3 and sys.argv[3] in {'local', 'local_rot180', 'local_target_stagger', 'local_target_rx_fcu', 'local_target_rx_far'}
 ROTATE_U12 = len(sys.argv) > 3 and sys.argv[3] == 'local_rot180'
 ROTATE_U12_90 = len(sys.argv) > 3 and sys.argv[3] == 'local_rot90'
 LOCAL_ONLY = LOCAL_ONLY or ROTATE_U12_90
@@ -74,9 +75,9 @@ for name, upad, cap, target, corridor, target_x in (
     src = xy(pad(b,'U11',upad)); c1 = xy(pad(b,c_ref,c_num)); c2 = xy(pad(b,c_ref,'2'))
     dst = xy(pad(b,'U12',target)); cv = corridor
     target_y = (133.0 if name == 'USB_TXP1' else 132.6) if ROTATE_U12 else ((132.0 if name == 'USB_TXP1' else 131.0) if ROTATE_U12_90 else (137.0 if name == 'USB_TXP1' else 137.4))
-    tv = ((160.0, 135.2) if name == 'USB_TXP1' else (161.0, 138.0)) if TARGET_STAGGER else (target_x, target_y)
-    if TARGET_STAGGER:
-        cv = (149.0, c1[1])
+    tv = ((160.0, 134.5) if name == 'USB_TXP1' else (161.0, 138.5)) if (TARGET_STAGGER or RX_FAR) else (target_x, target_y)
+    if TARGET_STAGGER or RX_FAR:
+        cv = ((149.0 if name == 'USB_TXP1' else 151.0), c1[1])
     source_via = (142.0, 139.6) if name == 'USB_TXP1' else (141.0, 141.0)
     source_lane = (143.0, 140.0) if name == 'USB_TXP1' else (139.0, 141.0)
     if name == 'USB_TXP1':
@@ -92,7 +93,7 @@ for name, upad, cap, target, corridor, target_x in (
     seg(b,bridge_n,c2,cv,F); via(b,bridge_n,cv)
     lane_x = {'USB_TXP1':143.0, 'USB_TXN1':142.0}[name] if ROTATE_U12 else ({'USB_TXP1':152.0, 'USB_TXN1':153.0}[name])
     approach_y = {'USB_TXP1':132.5, 'USB_TXN1':132.1}[name] if ROTATE_U12 else ({'USB_TXP1':136.5, 'USB_TXN1':136.9}[name])
-    if TARGET_STAGGER:
+    if TARGET_STAGGER or RX_FAR:
         seg(b,bridge_n,cv,(cv[0],tv[1]),B)
         seg(b,bridge_n,(cv[0],tv[1]),tv,B)
     else:
@@ -125,12 +126,15 @@ for name, upad, target, source_via, target_via in (
         seg(b,n,(145.0,src[1]),shoulder,F)
         seg(b,n,shoulder,dst,F)
         continue
-    sv, tv = source_via, ((160.0, 138.8) if name == 'USB_RXP1' else (161.0, 139.8)) if TARGET_STAGGER else target_via
+    sv, tv = source_via, ((170.0, 136.0) if name == 'USB_RXP1' else (171.0, 140.0)) if RX_FAR else (((160.0, 138.8) if name == 'USB_RXP1' else (161.0, 139.8)) if TARGET_STAGGER else target_via)
     seg(b,n,src,(src[0],sv[1]),F); seg(b,n,(src[0],sv[1]),sv,F)
     via(b,n,sv)
     lane_x = 141.0 if name == 'USB_RXP1' else 140.0 if ROTATE_U12 else (154.0 if name == 'USB_RXP1' else 155.0)
     approach_y = 131.7 if name == 'USB_RXP1' else 131.3 if ROTATE_U12 else (137.3 if name == 'USB_RXP1' else 138.0)
-    if TARGET_STAGGER:
+    if RX_FAR:
+        seg(b,n,sv,(170.0 if name == 'USB_RXP1' else 171.0,sv[1]),B)
+        seg(b,n,(170.0 if name == 'USB_RXP1' else 171.0,sv[1]),tv,B)
+    elif TARGET_STAGGER or RX_FAR:
         seg(b,n,sv,(sv[0],tv[1]),B)
         seg(b,n,(sv[0],tv[1]),tv,B)
     else:
@@ -139,7 +143,11 @@ for name, upad, target, source_via, target_via in (
         seg(b,n,(lane_x,approach_y),(tv[0],approach_y),B)
         seg(b,n,(tv[0],approach_y),tv,B)
     via(b,n,tv)
-    if TARGET_STAGGER:
+    if RX_FAR:
+        shoulder = (159.0, dst[1])
+        seg(b,n,dst,shoulder,F)
+        seg(b,n,shoulder,tv,F)
+    elif TARGET_STAGGER:
         shoulder = (159.0, dst[1])
         seg(b,n,dst,shoulder,F)
         seg(b,n,shoulder,tv,F)

@@ -11116,3 +11116,12 @@ passed endpoint reachability but native DRC rejected 36 violations, including
 source-field crossings. This is a route-authoring failure, not a rejection of
 the underlying source-escape idea. Receipt:
 `PHASE24_STORAGE_SUPPORT_U12_TARGET_RX_FCU_V147_RECEIPT.md`.
+
+V148 preserved the proven U11 source escapes and moved RX transitions far
+outside the U12 field; it reduced the local result to 10 violations with RX
+shorts/crossings removed. V149 combined that RX class with a staggered TX
+target launch and retained 8 violations, while V150 separated the TX source
+via corridors and retained 9 violations with no native shorting entries.
+V150 is the best current route-development basis, not a pass. The remaining
+class is ordered, co-authored target-field geometry. Receipt:
+`PHASE24_STORAGE_SUPPORT_U12_COAUTHOR_TX_RX_FAR_V150_RECEIPT.md`.

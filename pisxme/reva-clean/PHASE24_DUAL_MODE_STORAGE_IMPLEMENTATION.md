@@ -28,6 +28,11 @@ is explicitly attributed to same-row U11 shoulder authoring and retained
 local TX geometry; it does not replace the current Path-A parent or close the
 storage route.
 
+The subsequent V148-V150 source-aware target-field experiments are now the
+latest routing evidence; V150 is the best basis at 9 native violations with
+no shorting entries, but remains rejected until the remaining target-field
+crossings and clearances are removed.
+
 ## CURRENT STATE — documentation authority (2026-09-08)
 
 The live Path-A dual-mode storage implementation includes the corrected

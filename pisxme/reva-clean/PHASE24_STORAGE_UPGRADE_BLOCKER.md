@@ -29,6 +29,10 @@ native connectivity passed its local assertions, but the naive RX F.Cu
 shoulders crossed the same-row U11 source field. It is not a new architecture
 or component blocker.
 
+V150 is the current best disposable USB3 support basis: native endpoint
+assertions pass and no shorting items remain, but target-field crossings and
+clearances remain open. This is a recoverable route-implementation gate.
+
 Status: `OPEN — implementation authorized; procurement evidence remains HIGH
 risk` for the authorized SATA/NVMe upgrade only.
 The prior SATA-only board is preserved.
