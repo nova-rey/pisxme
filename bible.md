@@ -147,6 +147,12 @@ V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
+
+2026-09-09 — Phase 24 V1423/V1424 rejected XTAL_OUT trials. V1423 retained
+seven native DRC violations in the QFN exposed-pad/3V3/1V1 field; V1424's
+west/top relocation retained one XTAL_OUT/RTL_1V1 crossing and one 0.100-mm
+clearance violation. Preserved both disposable fixtures and reports; no
+accepted Path-B primitive, production asset, or Path-A asset changed.
 2026-09-09 — Phase 24 V1422 rejected an outboard RSET B.Cu shelf. Native DRC
 reported 12 source-field, GND, and accepted-rail violations; RSET remains
 open and no production asset changed.

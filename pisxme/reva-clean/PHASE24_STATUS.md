@@ -10573,3 +10573,11 @@ V1421 is a rejected RSET perimeter trial from V1415. Its short F.Cu route
 from U1.51 to R1.1 crossed the accepted U1.55/RTL_1V1 perimeter and contacted
 R1's GND pad; native DRC reported two violations. RSET remains OPEN and no
 accepted primitive or Path-A asset changed.
+
+V1423/V1424 are rejected XTAL_OUT trials from the accepted V1415 support
+lineage. V1423's upper escape produced seven native DRC violations in the
+exposed-pad/3V3/1V1 field. V1424 moved the B.Cu corridor west/top but still
+produced two native violations: a crossing between XTAL_OUT and RTL_1V1 and a
+0.100-mm clearance violation at the XTAL_OUT via. Neither trial is promoted;
+the crystal OUT connection remains OPEN. Path A and all accepted Path-B
+primitives remain unchanged.
