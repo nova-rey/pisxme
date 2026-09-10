@@ -10568,6 +10568,12 @@ the accepted local primitive. Receipt:
   introduced a real `STORAGE_3V3`/`CM5_USB3_RX_P` short. Rejected this escape
   placement and preserved V1562.
 
+## 2026-09-10 — U12 single-pad source discriminator V1566
+
+- Tested one native U12 power pad with an offset through-via and monotonic In2
+  handoff. It removed one open but produced QFN/USB-field shorts and raised
+  native DRC to 620/341. Rejected the pad/via location; V1562 remains intact.
+
 ## 2026-09-10 — Phase 24 status reconciliation V1562
 
 - Updated `PHASE24_STATUS.md` with the live V1562 focused storage result,
