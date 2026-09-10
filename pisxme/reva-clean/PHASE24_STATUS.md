@@ -10745,3 +10745,9 @@ USB3, SATA, and current J8 pad-parity audits pass; native DRC reports 600
 violations / 399 opens with zero shorting entries. V40 is not production
 authority. The next route class is complete affected-pair corridor cleanup
 from this native-valid parent.
+V41 is the current best disposable Path-A storage route parent. It
+co-authors both U7 SATA TX source fields with separated ordinary transitions,
+passes USB3/SATA/current-J8-parity audits, and reports 599 native DRC
+violations / 399 opens, 199 clearance findings, and zero shorting entries.
+V41 is not production authority; complete storage routing and Phase 24
+closure remain open.

@@ -9954,3 +9954,8 @@ source-field parent so far. An early ordinary-via B.Cu transition for TX_N
 removed the V37 PER0 crossing without V39's shorts; USB3/SATA/parity audits
 pass and native DRC is 600 violations / 399 opens with zero shorting entries.
 No production copper or validation rule changed.
+2026-09-09 — Phase 24 V41 accepted as the best disposable Path-A storage
+route parent so far. Co-authored U7 SATA TX source transitions reduce native
+DRC to 599 violations / 399 opens and clearances to 199, with USB3/SATA/J8
+parity PASS and zero shorting entries. No production copper or validation
+rule changed.
