@@ -232,6 +232,12 @@ V52 tested a direct F.Cu `TUSB_SATA_TXP` corridor. SATA endpoint connectivity
 passed, but native DRC worsened to 604 / 399 and introduced real shorts in
 MODE_IN/STORAGE_SEL, XOUT/JMS_XAVDDH, and NC_26/STORAGE_SEL. It is rejected;
 V50's mixed-layer topology remains preferred.
+
+V53 tested a bounded storage F.Cu `POWER_GND` access zone. It reduced native
+opens from 399 to 355 with zero shorting entries while preserving USB3/SATA
+connectivity, but introduced 10 starved-thermal findings and raised total DRC
+to 611. It is preserved as a ground-return parent, not promoted; the next
+step is deliberate stitching/thermal cleanup.
 ## Follow-up implementation evidence — 2026-09-06
 
 Native inspection found inherited C44-C47 reference collisions in the
