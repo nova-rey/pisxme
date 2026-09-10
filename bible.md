@@ -10353,3 +10353,12 @@ the accepted local primitive. Receipt:
   independent rail/RXN trace-removal negative controls fail as required.
 - V1469 is the current accepted isolated Path-B lower-field basis. Full
   support, firmware/programming, integrated storage, and Phase 24 remain open.
+
+## 2026-09-10 — Phase 24 RTL9210B GND-return corridor discriminator
+
+- V1470–V1476 tested seven distinct local GND-return classes against the live
+  V1469 QFN/lane/rail field. All were rejected by native DRC; raw reports and
+  PCBs are preserved in the consolidated receipt.
+- These are route-implementation failures, not architecture evidence. V1469
+  remains the accepted zero-DRC isolated lower-field basis; the next attempt
+  must coauthor the plane/return field rather than add another long collector.

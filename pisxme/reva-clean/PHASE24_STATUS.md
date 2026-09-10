@@ -11242,3 +11242,11 @@ V1467/V1468 are rejected route evidence. Full QFN support, REFCLK/control,
 firmware/programming, integrated mode validation, and Path A/Path B decision
 gates remain OPEN. Receipt:
 `PHASE24_RTL9210B_U163_RXN_REHOME_V1469_RECEIPT.md`.
+
+V1470–V1476 are rejected GND-return corridor trials from V1469. They tested
+bottom/right, outboard, north, top-right, shelf, and F.Cu-overpass launches;
+all retained native DRC violations from the live support/SPI/rail field.
+Their raw PCBs/reports and consolidated receipt
+`PHASE24_RTL9210B_GND_RETURN_V1470_V1476_RECEIPT.md` are preserved. V1469
+remains the accepted isolated basis; the next GND task is coordinated
+plane/return-field regeneration, not rule relaxation.

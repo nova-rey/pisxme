@@ -70,6 +70,17 @@ transition collision and exposed-pad GND conflicts with RTL_1V1/RTL_3V3. It
 is rejected under the unchanged rules. The coupled source-field experiment
 and disposition are recorded in `PHASE24_RTL9210B_COUPLED_V1461_RECEIPT.md`.
 
+## GND-return corridor follow-up — V1470–V1476
+
+The V1470–V1476 edge, outboard, north, top-right, shelf, and F.Cu-overpass
+GND-return trials were rejected under the unchanged rules. Their native DRC
+results are preserved in the raw reports and
+`PHASE24_RTL9210B_GND_RETURN_V1470_V1476_RECEIPT.md`. These are
+route-implementation failures against the live support field, not evidence
+against RTL9210B or the accepted V1469 lower-field basis. The next GND work
+must coauthor the actual plane/return field; no severity or layer rule is
+waived.
+
 ## Follow-up native escape — V1466
 
 V1466 supersedes that local trial as the current QFN escape basis. It uses the
