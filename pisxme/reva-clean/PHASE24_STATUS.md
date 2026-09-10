@@ -2,7 +2,7 @@
 
 ## CURRENT AUTHORITATIVE STATE — 2026-09-10 V1560
 
-### Live Path-B update — V1582
+### Live Path-B update — V1583
 
 The Claude-selected V1575 RTL9210B orientation remains frozen. V1581 and
 V1582 were bounded REFCLK implementation trials on the V1517 basis and are
@@ -11,6 +11,12 @@ rejected by native DRC; they are not orientation candidates. V1581 reported
 source-field task remains a coordinated crystal/REFCLK/rail fanout problem.
 Raw artifacts and the rejection receipt are preserved; no Path-A or
 production-CAD change was made.
+
+V1583 tested an outer-board REFCLK overlay on the same fixed V1517 basis and
+was rejected with 27 native DRC violations, including conflicts with the
+existing lane and J1 launch. This is additional route-implementation
+evidence, not a reason to reopen Claude's orientation decision. The next
+attempt must co-author the source field and adjacent lane fanout together.
 
 The current Path-A/Path-B storage comparison is recorded in
 `PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md`; it supersedes older status

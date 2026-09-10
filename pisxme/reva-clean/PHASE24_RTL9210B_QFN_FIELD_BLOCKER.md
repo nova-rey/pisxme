@@ -1,6 +1,6 @@
 # RTL9210B Path-B QFN field disposition
 
-## CURRENT STATE — 2026-09-10 V1582
+## CURRENT STATE — 2026-09-10 V1583
 
 V1581 and V1582 are the latest fixed-orientation REFCLK trials and are both
 rejected. V1581 produced 6 native DRC violations / 4 opens, including two
@@ -10,12 +10,15 @@ boards and reports are retained in the repository. These are source-field
 implementation failures; they do not reopen the accepted Claude V1575
 orientation decision.
 
+V1583 also rejected an outer-board REFCLK overlay with 27 native DRC
+violations, including source/lane crossings and J1-side launch conflicts.
 The active accepted local basis remains V1517 at 0° top-side orientation.
 The remaining technical task is a coordinated crystal/REFCLK/rail fanout
 that is authored against the actual saved pads and ordinary-via rules.
 Complete QFN support, firmware/programming, procurement, integration, and
 Path-A/Path-B comparison remain OPEN. Receipt:
-`PHASE24_RTL9210B_REFCLK_IMPLEMENTATION_REJECT_V1581_V1582_RECEIPT.md`.
+`PHASE24_RTL9210B_REFCLK_IMPLEMENTATION_REJECT_V1581_V1582_RECEIPT.md` and
+`PHASE24_RTL9210B_REFCLK_OUTER_CORRIDOR_REJECT_V1583_RECEIPT.md`.
 
 ## SUPERSEDED CURRENT-STATE HEADER — V1558
 

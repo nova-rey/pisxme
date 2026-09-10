@@ -10661,3 +10661,11 @@ the accepted local primitive. Receipt:
   REFCLK_N-to-RTL_1V1 short. Both remain immutable rejected implementation
   evidence; Claude's accepted 0° RTL9210B orientation and Path-A fallback are
   unchanged. The next implementation must co-author the full source field.
+
+## 2026-09-10 — rejected outer REFCLK overlay V1583
+
+- V1583 routed REFCLK P/N through an outer board corridor on the fixed V1517
+  basis. Native DRC found 27 violations, including source/lane crossings,
+  REFCLK_N to LANE0_TXN shorting, and J1-side launch conflicts. Rejected as an
+  isolated overlay; the next implementation must co-author crystal, REFCLK,
+  rail, and adjacent lane fanout together. Orientation remains frozen.
