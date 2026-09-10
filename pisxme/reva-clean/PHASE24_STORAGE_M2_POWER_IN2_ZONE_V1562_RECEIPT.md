@@ -24,6 +24,11 @@ used.
 | New storage-rail crossings | None found in the V1562 shorting sections |
 | Rule policy | unchanged; no severity relaxation |
 
+The same saved V1562 board also passed the focused SATA endpoint audit,
+USB3 endpoint audit, TI selector geometry audit, complete JMS583 support
+cohort audit, and JMS_REXT V8 connectivity audit. These are focused
+regressions only; they do not convert the open native DRC into a board pass.
+
 The native DRC count is not a full-board pass. The candidate is retained as a
 focused power-connectivity primitive and is not promoted until the remaining
 board findings and the local DRC delta are reconciled.

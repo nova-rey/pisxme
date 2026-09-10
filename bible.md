@@ -10535,3 +10535,6 @@ the accepted local primitive. Receipt:
 - The candidate has 610 native DRC violations / 342 unconnected items from
   its open parent, with no new storage-rail shorting section. It is retained
   as a focused primitive, not promoted as a board pass.
+- The V1562 board also passes the focused SATA, USB3, selector-geometry,
+  JMS583-support, and JMS_REXT audits; these remain local regression checks,
+  not full-board closure.
