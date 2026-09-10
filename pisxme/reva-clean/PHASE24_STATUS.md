@@ -10617,3 +10617,8 @@ shorted the RSET shelf into R1's GND pad and crossed the existing RTL_1V1
 segment. V1435 moved the shelf farther north and removed the ground short,
 but retained one native RTL_1V1 crossing. RSET remains OPEN and V1428 remains
 the accepted composite base.
+
+V1436/V1437/V1438 are rejected RSET B.Cu bypass trials. V1436 reduced the
+RSET failure to one crossing with the existing B.Cu GND triangle. V1437 and
+V1438 routed north of that triangle but crossed the long RTL_1V1 B.Cu shelf.
+No route is promoted; the next bounded class is local R1 support relocation.
