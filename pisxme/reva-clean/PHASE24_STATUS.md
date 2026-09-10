@@ -11272,3 +11272,8 @@ In1 GND field. Native DRC is 0 violations / 6 inherited opens; native
 pad-connectivity and a saved-board RSET-transition negative control pass.
 Receipt: `PHASE24_RTL9210B_RSET_V1508_RECEIPT.md`. The six remaining opens are
 XTAL_IN, XTAL_OUT, and REFCLK endpoint groups; they remain OPEN.
+
+V1509-V1511 are rejected XTAL_IN routing trials. They tested southwest, north,
+and staggered source escapes but all collide with live RTL_1V1/RTL_3V3 or PCIe
+copper under native DRC. Receipt:
+`PHASE24_RTL9210B_XTALIN_V1509_V1511_RECEIPT.md`.

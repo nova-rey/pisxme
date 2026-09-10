@@ -10391,3 +10391,12 @@ the accepted local primitive. Receipt:
   and the RSET-transition negative control pass. Remaining crystal and
   REFCLK groups, firmware, procurement, integration, and A/B comparison stay
   open. Path A is unchanged.
+
+## 2026-09-10 — Phase 24 RTL9210B XTAL_IN trials V1509-V1511
+
+- V1509-V1511 tested southwest, north, and staggered two-layer XTAL_IN
+  departures against the accepted V1508/V1502 support field.
+- All were rejected by native DRC for live RTL_1V1/RTL_3V3 or PCIe crossings;
+  no rule relaxation or production change was made. The next repair remains
+  coordinated support-field regeneration. XTAL_IN, XTAL_OUT, REFCLK, and full
+  Path-B gates remain open.
