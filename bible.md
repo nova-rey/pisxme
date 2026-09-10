@@ -10541,3 +10541,9 @@ the accepted local primitive. Receipt:
 - A fresh like-for-like V79 native DRC baseline is 602 violations / 351
   unconnected items. V1562 is 610 / 342: nine opens are removed at the cost
   of eight DRC findings, with no new storage-rail shorting/crossing section.
+
+## 2026-09-10 — Phase 24 status reconciliation V1562
+
+- Updated `PHASE24_STATUS.md` with the live V1562 focused storage result,
+  focused audit set, and like-for-like DRC delta. Full-board closure remains
+  open and the primitive is not promoted.
