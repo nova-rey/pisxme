@@ -10805,3 +10805,11 @@ the accepted local primitive. Receipt:
   crystal-to-RTL_3V3/GND contacts and RTL_1V1/RSET/source-field conflicts.
   It was rejected. The clean V1603/V1517 checkpoint remains authoritative;
   support must be co-authored around the existing source-field geometry.
+
+## 2026-09-10 — rejected V1523 source-handoff integration
+
+- V1523's native-clean RTL_3V3 support baseline was tested with V1603. The
+  untouched RTL_1V1 corridor crosses REFCLK_P, and a near-QFN RXP via escape
+  shorts RXN/TXN under the active physical envelope. The candidate was
+  rejected; the next repair must co-author RTL_1V1 departure and the source
+  handoff together. The V1603 launch and U1 orientation remain accepted.

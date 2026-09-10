@@ -41,6 +41,13 @@ has zero high-speed errors; seven support opens and two inherited warnings
 remain. Continue by repairing RTL_1V1/XTAL_IN support in this local field,
 then rerun the integrated audit.
 
+The V1523-source-hand-off trial is rejected: preserving the old RTL_1V1
+corridor causes REFCLK_P crossings, while a near-QFN RXP via escape shorts
+RXN/TXN under the production via envelope. This is a local source-field
+implementation failure, not a contradiction of the frozen orientation or
+V1603 launch. Continue from `21b6c1f0` with a co-authored 1V1/source-field
+departure outside the QFN south-edge pair envelope.
+
 ## Resume point
 
 Resume from the pushed checkpoint containing this note. Historical rejected
