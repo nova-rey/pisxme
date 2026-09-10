@@ -1027,3 +1027,13 @@ inherited support opens; all four lane endpoints and the U1.66-to-U1.69 join
 pass. Removing either the GND join or RXP source segment fails its native
 connectivity assertion. This supersedes V1461 for the local escape only; full
 Path-B, production-CAD, and Phase 24 gates remain OPEN.
+
+## CURRENT PATH-B LOWER-FIELD BASIS — V1469 — 2026-09-10
+
+V1469 is the current isolated RTL9210B QFN/lane/rail primitive. It adds the
+native U1.63 RTL_1V1 branch and rehomes RXN while retaining the accepted
+V1466 RXP and exposed-pad GND joins. Native DRC is 0 violations / 8 inherited
+support opens; all four lane endpoints, U1.63→C4.1, and U1.66→U1.69 pass.
+Saved-board rail and RXN trace-removal negative controls fail as required.
+This supersedes V1466 only for the local lower field; full Path-B and Phase 24
+remain open.

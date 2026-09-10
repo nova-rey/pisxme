@@ -11230,3 +11230,15 @@ V1461 is superseded local failure evidence. V1466 is accepted as a Path-B
 escape primitive only; remaining support, firmware/programming, integrated
 mode validation, and Path-A/Path-B decision gates remain OPEN. Receipt:
 `PHASE24_RTL9210B_U166_JOIN_RXP_EAST_UP_V1466_RECEIPT.md`.
+
+## CURRENT PATH-B QFN / RAIL BASIS — V1469 — 2026-09-10
+
+V1469 supersedes V1466 as the current isolated RTL9210B lower-field basis.
+It retains U1.60, adds the native U1.63 RTL_1V1 departure, and rehomes RXN
+around the resulting rail transition. Native DRC is 0 violations / 8 inherited
+opens. U1.63→C4.1, U1.66→U1.69, and all four lane endpoints pass saved-board
+native connectivity; rail and RXN source-removal negative controls pass.
+V1467/V1468 are rejected route evidence. Full QFN support, REFCLK/control,
+firmware/programming, integrated mode validation, and Path A/Path B decision
+gates remain OPEN. Receipt:
+`PHASE24_RTL9210B_U163_RXN_REHOME_V1469_RECEIPT.md`.

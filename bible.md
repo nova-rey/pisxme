@@ -10343,3 +10343,13 @@ the accepted local primitive. Receipt:
 - V1466 supersedes V1461 for this local Path-B escape only. Full RTL9210B
   support, firmware/programming, integrated storage, and Phase 24 closure
   remain open; Path A is preserved.
+## 2026-09-10 — Phase 24 RTL9210B V1469 lower-field primitive
+
+- V1467/V1468 were rejected lower-field route attempts. V1469 retained U1.60,
+  added the true U1.63 RTL_1V1 departure, and rehomed RXN around the live QFN
+  source field.
+- Native KiCad DRC is 0 violations / 8 inherited opens. U1.63-to-C4.1,
+  U1.66-to-U1.69, and all four lane endpoints pass saved-board connectivity;
+  independent rail/RXN trace-removal negative controls fail as required.
+- V1469 is the current accepted isolated Path-B lower-field basis. Full
+  support, firmware/programming, integrated storage, and Phase 24 remain open.

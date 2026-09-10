@@ -84,3 +84,17 @@ controls fail as required. Receipt:
 This closes the specific U1.66 local escape experiment, not the full Path-B
 gate. Remaining QFN support, REFCLK/control, firmware/programming,
 procurement, integrated storage, and productization checks remain open.
+
+## Lower-field continuation — V1467/V1468/V1469
+
+V1467 and V1468 were rejected because their first U1.63 RTL_1V1 departure
+interacted with the existing U1.60/RXN source field. V1469 co-authored that
+field instead: it retained U1.60, added the true U1.63 pad departure, and
+rehomed RXN below the TXP transition. Native DRC is 0 violations / 8 inherited
+opens; U1.63-to-C4.1, all four lane endpoints, and U1.66-to-U1.69 pass native
+saved-board connectivity. Rail and RXN source-removal negative controls pass.
+Receipt: `PHASE24_RTL9210B_U163_RXN_REHOME_V1469_RECEIPT.md`.
+
+V1469 supersedes V1466 as the current isolated QFN/lane/rail basis. This
+closes the lower-field primitive only; full Path-B support and integration
+remain open.
