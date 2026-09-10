@@ -10074,3 +10074,11 @@ Fresh V54 native gate audit on 2026-09-10 recorded 601 DRC violations and
 pass with negative controls. No Phase 24 findings were waived.
 V76/V77 attempted the adjacent BRIDGE_R1 support pair and were rejected for
 native source-field shorts; V75 remains the clean parent.
+2026-09-10 — Live V75 inspection found a genuine M.2 power-source gap:
+J3's M2_3V3 contacts have no source-owned pad, track, or zone, while
+STORAGE_3V3 is the existing regulator-owned rail. A disposable source-level
+reconciliation renamed only the nine J3 instance labels and storage hierarchy
+boundary, passed the schematic/mode audits, and removed the M2 hierarchy
+finding in the fixture. It was not promoted pending coordinated source
+regeneration, rail-budget review, and native PCB revalidation; no PCB-only
+repair or validation waiver was made.

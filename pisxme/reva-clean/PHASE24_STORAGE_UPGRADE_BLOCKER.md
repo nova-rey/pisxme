@@ -1,6 +1,6 @@
 # Phase 24 storage-island upgrade blocker
 
-## AUTHORITATIVE CURRENT STATE — 2026-09-08
+## AUTHORITATIVE CURRENT STATE — 2026-09-10
 
 This is an open implementation-risk record, not a terminal blocker. The live
 JMS583 support network is already instantiated in the authoritative schematic
@@ -19,6 +19,16 @@ asset is authorized by this checkpoint.
 Status: `OPEN — implementation authorized; procurement evidence remains HIGH
 risk` for the authorized SATA/NVMe upgrade only.
 The prior SATA-only board is preserved.
+
+The current preferred Path-A routed parent is V75. Live native inspection
+found a real source-authority gap: J3's power contacts are on `M2_3V3`, while
+that net has no source-owned pad, track, or zone. `STORAGE_3V3` is the existing
+regulator-owned rail. A disposable source-level rename of the nine J3 power
+labels and storage hierarchy boundary passed the schematic/mode audits and
+removed the M2 hierarchy finding in the fixture, but was not promoted because
+rail-budget review and PCB regeneration must be performed together. This is
+the current open gate; PCB-only copper is prohibited. See
+`PHASE24_STORAGE_M2_POWER_RECONCILIATION_20260910.md`.
 
 ## CURRENT LIVE STATE — 2026-09-06
 

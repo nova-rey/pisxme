@@ -10693,6 +10693,27 @@ V1456 is a rejected orthogonal U1.66 GND escape below the QFN pad row.
 Native DRC reported four violations: JTAG_TDO short/mask bridge, PEDET
 crossing, and LANE0_TXN crossing. Direct, zone, left-first, and orthogonal
 U1.66 launches have now been separately preserved; no candidate is promoted.
+## CURRENT STATE — 2026-09-10 — M.2 power ownership audit
+
+The live preferred Path-A storage parent remains V75,
+`PHASE24_STORAGE_CM5_USB4_MONOTONIC_V75_BRIDGE_R1RTN_R24_SIDE.kicad_pcb`.
+Its USB3/SATA/parity/support checks pass, but native inspection found that
+`M2_3V3` is present only on J3 and has no source-owned pad, track, or zone.
+This is a genuine source-authority gap, not a stale blocker statement or a
+reason to add PCB-only copper. `STORAGE_3V3` is the existing regulator-owned
+storage rail.
+
+A disposable source-level reconciliation changed the nine J3 instance power
+labels plus the storage hierarchy boundary to `STORAGE_3V3`, preserving the
+embedded connector pin names. Schematic and mode audits pass; native root ERC
+still reports inherited project-wide hierarchy/label findings but no
+`M2_3V3` finding. Evidence is in
+`PHASE24_STORAGE_M2_POWER_RECONCILIATION_20260910.md` and
+`phase24_m2_power_reconcile_fixture/`. It is not promoted yet: source
+regeneration, rail-budget review, and native PCB revalidation must consume
+the correction together. V75 remains the preferred routing parent and Phase
+24 remains OPEN.
+
 ## CURRENT PATH-B FOLLOW-UP — V1457/V1458 (2026-09-09)
 
 V1457 and V1458 tested a new ordinary-through-via edge-access class for the
