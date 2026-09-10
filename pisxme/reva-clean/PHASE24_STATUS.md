@@ -10605,3 +10605,9 @@ zero violations and the saved-board audit passes both endpoint assertions and
 independent source-removal negative controls for each primitive. The combined
 fixture has ten remaining unconnected-pad findings; crystal, RSET, REFCLK,
 U1.63/U1.66, and remaining support are still OPEN.
+
+V1432/V1433 are rejected XTAL_IN southwest/offset trials from V1428. V1432
+retained a transition clearance violation against RTL_1V1 and shorted the
+RTL_3V3 source via. V1433 moved the transition but crossed/shorted the
+LANE0_TXN corridor and retained the source-field conflict. XTAL_IN remains
+OPEN; these are route-implementation failures.
