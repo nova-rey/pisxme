@@ -11325,3 +11325,11 @@ opens. V1535 retains that channel but rejects an east/B.Cu XTAL_OUT coexistence
 attempt with four RSET/RTL_3V3/crystal-field violations. Receipt:
 `PHASE24_RTL9210B_XTALIN_XTALOUT_V1534_V1535_RECEIPT.md`. These are routing
 class results; the next work remains coordinated crystal-field regeneration.
+
+V1547 swept 16 native saved-board crystal source variants. The best class
+uses an XTAL_OUT spine at x=91.4 mm and an XTAL_IN B.Cu middle section, but
+all four XIN transition positions retain one clearance violation at the
+adjacent XOUT source track. Receipt:
+`PHASE24_RTL9210B_CRYSTAL_SWEEP_V1547_RECEIPT.md`. Coordinate-only tuning is
+exhausted for this source class; the next repair must change a source
+departure/layer allocation. No production CAD changed.

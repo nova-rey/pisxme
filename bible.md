@@ -10432,6 +10432,14 @@ the accepted local primitive. Receipt:
 - V1523/V1526 remain the accepted isolated basis. No Path-A or production CAD
   changed.
 
+## 2026-09-10 — Phase 24 RTL9210B V1547 crystal source sweep
+
+- V1547 generated and native-checked 16 crystal source variants from V1523.
+- The best class uses XTAL_OUT x=91.4 mm plus a B.Cu XTAL_IN middle section,
+  but all four XIN transitions retain one adjacent-source clearance violation.
+- Coordinate-only tuning is exhausted for this class; source departure or
+  layer allocation must change. Path A and production CAD remain unchanged.
+
 ## 2026-09-10 — Phase 24 RTL9210B V1534/V1535 crystal coexistence
 
 - V1534 independently routes complete XTAL_IN on V1523 with native DRC 0 / 4
