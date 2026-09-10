@@ -38,6 +38,14 @@ Fresh native DRC on `PHASE24_PGND_CLUSTER_CURRENT.kicad_pcb` remains OPEN at
 `PHASE24_PGND_CLUSTER_CURRENT_V1559_NATIVE_DRC_RECEIPT.md`; raw report:
 `PHASE24_PGND_CLUSTER_CURRENT-V1559-drc.rpt`.
 
+The R81-only storage-support experiment V1570 is now an accepted focused
+primitive. Its native R81.2→U14.5 connectivity audit and saved-copper-removal
+negative control pass; native DRC is 604 / 341 with no new local
+`STORAGE_3V3`–`JMS_RESET_N` short. V1569's horizontal escape is rejected
+historical evidence. The V1570 receipt and board are not a full-board pass;
+U12/U13 QFN support-pad power fanout remains open after real ordinary-via
+clearance/crossing failures.
+
 The current Path-A storage repair has a focused V1562 primitive:
 `PHASE24_STORAGE_M2_POWER_IN2_ZONE_V1562.kicad_pcb`. Its native power-owner
 audit and trace-removal negative control pass for all nine J3

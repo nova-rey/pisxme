@@ -10586,3 +10586,13 @@ the accepted local primitive. Receipt:
 - Updated `PHASE24_STATUS.md` with the live V1562 focused storage result,
   focused audit set, and like-for-like DRC delta. Full-board closure remains
   open and the primitive is not promoted.
+
+## 2026-09-10 — accepted isolated R81 storage-power tap V1570
+
+- Replaced the rejected V1569 horizontal R81 `STORAGE_3V3` escape, which
+  crossed the adjacent C85/JMS_RESET_N launch, with a short diagonal F.Cu
+  escape to an ordinary through-via and an In2 corridor above the USB field.
+- Native R81.2→U14.5 connectivity and saved-copper-removal negative control
+  pass. Focused native DRC is 604/341, with no new local R81/reset short.
+  Accepted only as a focused primitive; U12/U13 QFN support fanout and
+  full-board Phase 24 closure remain open.

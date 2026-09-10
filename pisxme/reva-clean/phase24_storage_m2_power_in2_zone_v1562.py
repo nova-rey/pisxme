@@ -83,14 +83,16 @@ if os.environ.get("PISXME_ATTACH_STORAGE_SUPPORT") == "1":
     if os.environ.get("PISXME_SUPPORT_VARIANT") == "u12_pad13_monotonic":
         support = {"U12": [(153.5, 136.6, 153.5, 133.5)]}
     if os.environ.get("PISXME_SUPPORT_VARIANT") == "r81_only":
-        support = {"R81": [(125.5, 145.0, 125.5, 142.0)]}
+        # Escape diagonally into the open pocket above R81.  The prior
+        # horizontal escape crossed the adjacent C85/JMS_RESET_N launch.
+        support = {"R81": [(125.5, 145.0, 126.5, 144.2)]}
     spine = pt(188.0, 146.0)
     if os.environ.get("PISXME_SUPPORT_VARIANT") == "u12_pad13_monotonic":
         spine = pt(232.0, 133.5)
         track(pt(232.0, 133.5), pt(232.0, 146.0), pcbnew.In2_Cu, 0.60)
     if os.environ.get("PISXME_SUPPORT_VARIANT") == "r81_only":
-        spine = pt(150.0, 145.0)
-        track(pt(150.0, 142.0), pt(150.0, 145.0), pcbnew.In2_Cu, 0.60)
+        spine = pt(150.0, 138.5)
+        track(pt(150.0, 138.5), pt(150.0, 145.0), pcbnew.In2_Cu, 0.60)
         track(pt(150.0, 145.0), pt(232.0, 145.0), pcbnew.In2_Cu, 0.60)
         track(pt(232.0, 145.0), pt(232.0, 146.0), pcbnew.In2_Cu, 0.60)
     track(pt(232.0, 146.0), spine, pcbnew.In2_Cu, 0.60)
@@ -98,7 +100,13 @@ if os.environ.get("PISXME_ATTACH_STORAGE_SUPPORT") == "1":
         for px, py, vx, vy in entries:
             track(pt(px, py), pt(vx, vy), pcbnew.F_Cu)
             via(vx, vy)
-            track(pt(vx, vy), spine, pcbnew.In2_Cu, 0.60)
+            if os.environ.get("PISXME_SUPPORT_VARIANT") == "r81_only":
+                # Clear reset on F.Cu, then clear the known USB via field.
+                track(pt(vx, vy), pt(132.0, 138.5), pcbnew.In2_Cu, 0.60)
+                track(pt(132.0, 138.5), pt(150.0, 138.5), pcbnew.In2_Cu, 0.60)
+                track(pt(150.0, 138.5), spine, pcbnew.In2_Cu, 0.60)
+            else:
+                track(pt(vx, vy), spine, pcbnew.In2_Cu, 0.60)
 
 pcbnew.ZONE_FILLER(b).Fill(b.Zones())
 pcbnew.SaveBoard(str(OUT), b)
