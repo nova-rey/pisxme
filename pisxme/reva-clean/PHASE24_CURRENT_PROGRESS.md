@@ -87,6 +87,12 @@ Native pad inspection records the specific next escape class in
 width/clearance. The next repair must use a pad-end vertical escape and an
 outboard ordinary via before attaching the local support network.
 
+The first shifted-corridor source-escape probe is also rejected as a route
+implementation: native DRC found 17 violations, specifically crossings into
+PEDET/PERST_N and via/ground-zone clearance conflicts. Its raw board/report
+are preserved with the escape analysis; no copper from either probe is
+promoted.
+
 ## Support parity consolidation — 2026-09-10
 
 Claude's bounded review identified the missing consolidated support audit.

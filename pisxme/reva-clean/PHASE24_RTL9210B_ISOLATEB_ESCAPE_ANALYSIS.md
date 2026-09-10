@@ -38,3 +38,12 @@ The rejected full integration trial remains preserved in
 `PHASE24_MIC2545A_INTEGRATION_TRIAL_REJECT.md`. No additional route variant
 is promoted by this analysis.
 
+## Shifted-corridor probe
+
+`PHASE24_RTL9210B_ISOLATEB_ESCAPE_PROBE.kicad_pcb` tested the same pad-end
+escape with the first via shifted from (99.2, 76.0) to (99.2, 77.0) and the
+handoff moved to (107.0, 82.0). Native DRC still found 17 violations, but the
+failure class changed: the B.Cu handoff crosses the existing PEDET and
+PERST_N corridors, while the via locations violate the existing ground-zone
+and via-clearance envelope. This probe is rejected evidence, not a promoted
+route and not evidence that the frozen orientation is impossible.

@@ -1,0 +1,86 @@
+** Drc report for PHASE24_RTL9210B_ISOLATEB_ESCAPE_PROBE.kicad_pcb **
+** Created on 2026-09-10T13:49:12 **
+** Report includes: Errors, Warnings **
+
+** Found 17 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(96.4000 mm, 79.5000 mm): Track [PEDET] on B.Cu, length 22.6000 mm
+    @(107.0000 mm, 77.0000 mm): Track [ISOLATEB] on B.Cu, length 5.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(102.0000 mm, 81.0000 mm): Track [PERST_N] on B.Cu, length 32.0000 mm
+    @(107.0000 mm, 77.0000 mm): Track [ISOLATEB] on B.Cu, length 5.0000 mm
+[shorting_items]: Items shorting two nets (nets ISOLATEB and CLKREQ_N)
+    Local override; error
+    @(99.2000 mm, 73.5000 mm): Track [ISOLATEB] on F.Cu, length 3.5000 mm
+    @(98.8000 mm, 76.0000 mm): Via [CLKREQ_N] on F.Cu - B.Cu
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.2000 mm, 73.5000 mm): Track [ISOLATEB] on F.Cu, length 3.5000 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.2000 mm, 77.0000 mm): Track [ISOLATEB] on B.Cu, length 7.8000 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(107.0000 mm, 77.0000 mm): Track [ISOLATEB] on B.Cu, length 5.0000 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.2000 mm, 77.0000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(99.2000 mm, 77.0000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.2000 mm, 77.0000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(99.2000 mm, 77.0000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(99.2000 mm, 77.0000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+    @(87.5000 mm, 57.5000 mm): Zone 'RTL9210B_GND_RETURN_FIELD_WIDE' [GND] on In1.GND, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(99.2000 mm, 77.0000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+    @(87.5000 mm, 57.5000 mm): Zone 'RTL9210B_GND_RETURN_FIELD_WIDE' [GND] on In1.GND, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(107.0000 mm, 82.0000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(107.0000 mm, 82.0000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(107.0000 mm, 82.0000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(107.0000 mm, 82.0000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on B.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.0000 mm)
+    Local override; error
+    @(107.0000 mm, 82.0000 mm): Pad 1 [ISOLATEB] of TP_ISO on F.Cu
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

@@ -10985,3 +10985,11 @@ the accepted local primitive. Receipt:
   rules; the next implementation class is a pad-end vertical escape followed
   by an outboard ordinary via. This is a route-implementation constraint, not
   an orientation or architecture rejection.
+
+## 2026-09-10 — rejected shifted ISOLATEB escape probe
+
+- Preserved the second pad-end escape probe and native DRC report. Shifting
+  the via to (99.2, 77.0) and handoff to (107.0, 82.0) still produced 17
+  violations from PEDET/PERST_N crossings and ground-zone/via-clearance
+  conflicts. Classified as route implementation evidence; no probe copper is
+  promoted and the accepted orientation remains closed.
