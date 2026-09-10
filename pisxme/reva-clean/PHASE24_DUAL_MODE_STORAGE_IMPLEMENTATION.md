@@ -957,6 +957,12 @@ control passes while reducing native DRC to 624/346. Two real shorts remain
 at XOUT/JMS_XAVDDH and the STORAGE_SEL/U14/U12 field. Continue local
 coauthoring; V193 is not Phase 24 closure.
 
+V194 is the current support-field refinement. Its native XOUT north escape
+preserves U11.51-to-Y10.2 and removes the XOUT/JMS_XAVDDH and STORAGE_SEL
+shorts from V193. USB3, SATA, parity, and negative-control checks pass; native
+DRC is 624/346 with one remaining JMS_AVDDL/JMS_AVDD33 support-field short.
+Continue local support-field coauthoring; V194 is not closure.
+
 ## Current live source/parity correction — 2026-09-08
 
 `STORAGE.kicad_sch` now has authoritative `JMS_USB3_TXN/P` instance labels on

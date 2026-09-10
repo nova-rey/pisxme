@@ -10325,3 +10325,6 @@ the accepted local primitive. Receipt:
   north/outboard B.Cu trunk. USB3, SATA, parity, and the negative control pass;
   native DRC is 624/346 with two real shorts remaining at XOUT/JMS_XAVDDH and
   STORAGE_SEL/U14/U12.
+- V194 replaced the XOUT route with a north-going native escape and verified
+  U11.51-to-Y10.2 connectivity. USB3, SATA, parity, and the negative control
+  pass; DRC remains 624/346 with one JMS_AVDDL/JMS_AVDD33 field short.

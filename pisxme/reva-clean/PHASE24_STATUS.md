@@ -11202,3 +11202,11 @@ pass. Native DRC improves to 624/346; only two real shorts remain, at
 XOUT/JMS_XAVDDH and the STORAGE_SEL/U14/U12 field. V193 is the current
 coauthoring basis, not closure. Receipt:
 `PHASE24_STORAGE_V75_COAUTHORED_V193_RECEIPT.md`.
+
+V194 replaced the U11 XOUT escape with a north-going native pad-to-via path;
+saved connectivity confirms U11.51-to-Y10.2. USB3 ten-net connectivity,
+complete SATA connectivity, 814/1263/0 parity, and the removed-track negative
+control pass. Native DRC remains 624/346. The XOUT/JMS_XAVDDH and STORAGE_SEL
+shorts are absent; one real U11 JMS_AVDDL/JMS_AVDD33 support-field short
+remains. V194 is the current coauthoring basis, not closure. Receipt:
+`PHASE24_STORAGE_V75_COAUTHORED_V194_RECEIPT.md`.
