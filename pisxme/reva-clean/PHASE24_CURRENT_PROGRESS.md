@@ -99,6 +99,12 @@ departures. The next in-scope repair is a coordinated local reroute of those
 adjacent departures around U1.12; no new MIC2545A topology or RTL9210B
 orientation search is warranted.
 
+The first coordinated local reroute of U1.12 `ISOLATEB`, `CLKREQ_N`,
+`PERST_N`, and `RTL_5V` is rejected: native DRC found 12 violations and zero
+opens. The exact conflicts are recorded in
+`PHASE24_RTL9210B_LOCAL_DEPARTURE_REPAIR.md`; the accepted baseline remains
+untouched.
+
 ## Support parity consolidation — 2026-09-10
 
 Claude's bounded review identified the missing consolidated support audit.

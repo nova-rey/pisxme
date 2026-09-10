@@ -11008,3 +11008,11 @@ the accepted local primitive. Receipt:
   crossings, against the existing `RTL_5V` and `PERST_N` departures. The
   remaining repair is coordinated local rerouting of those neighboring
   departures with `ISOLATEB`; further point perturbation is not useful.
+
+## 2026-09-10 — rejected coordinated U1 local-departure repair
+
+- Preserved the first coupled reroute of `ISOLATEB`, `CLKREQ_N`, `PERST_N`,
+  and `RTL_5V`. Native DRC found 12 violations and zero opens. Conflicts were
+  PEDET/PERST_N corridor overlap, CLKREQ_N/ISOLATEB via spacing, and
+  RTL_5V collisions with SPI/RTL_1V1. Classified as route implementation
+  evidence; accepted orientation and baseline remain untouched.

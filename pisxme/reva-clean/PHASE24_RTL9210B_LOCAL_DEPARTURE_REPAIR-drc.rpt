@@ -1,0 +1,64 @@
+** Drc report for PHASE24_RTL9210B_LOCAL_DEPARTURE_REPAIR.kicad_pcb **
+** Created on 2026-09-10T14:00:43 **
+** Report includes: Errors, Warnings **
+
+** Found 12 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(96.4000 mm, 79.5000 mm): Track [PEDET] on B.Cu, length 22.6000 mm
+    @(100.0000 mm, 79.5000 mm): Track [PERST_N] on B.Cu, length 34.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(100.0000 mm, 79.5000 mm): Track [PERST_N] on B.Cu, length 34.0000 mm
+    @(125.0000 mm, 80.0000 mm): Track [PEDET] on B.Cu, length 1.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(120.0000 mm, 80.0000 mm): Via [PEDET] on F.Cu - B.Cu
+    @(100.0000 mm, 79.5000 mm): Track [PERST_N] on B.Cu, length 34.0000 mm
+[shorting_items]: Items shorting two nets (nets PEDET and PERST_N)
+    Local override; error
+    @(119.0000 mm, 79.5000 mm): Via [PEDET] on F.Cu - B.Cu
+    @(100.0000 mm, 79.5000 mm): Track [PERST_N] on B.Cu, length 34.0000 mm
+[shorting_items]: Items shorting two nets (nets CLKREQ_N and ISOLATEB)
+    Local override; error
+    @(99.6000 mm, 76.5000 mm): Via [CLKREQ_N] on F.Cu - B.Cu
+    @(99.2000 mm, 73.5000 mm): Track [ISOLATEB] on F.Cu, length 5.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(134.0000 mm, 79.5000 mm): Via [PERST_N] on F.Cu - B.Cu
+    @(125.0000 mm, 79.0000 mm): Track [PEDET] on B.Cu, length 10.0000 mm
+[shorting_items]: Items shorting two nets (nets PERST_N and CLKREQ_N)
+    Local override; error
+    @(100.0000 mm, 73.5000 mm): Track [PERST_N] on F.Cu, length 6.0000 mm
+    @(99.6000 mm, 76.5000 mm): Via [CLKREQ_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets RTL_5V and SPISI)
+    Local override; error
+    @(116.0000 mm, 82.0000 mm): Track [RTL_5V] on F.Cu, length 14.8000 mm
+    @(116.2000 mm, 75.2000 mm): Track [SPISI] on F.Cu, length 1.2000 mm
+[shorting_items]: Items shorting two nets (nets RTL_5V and RTL_1V1)
+    Local override; error
+    @(101.2000 mm, 73.5000 mm): Track [RTL_5V] on F.Cu, length 8.5000 mm
+    @(100.8000 mm, 75.0000 mm): Via [RTL_1V1] on F.Cu - B.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(116.0000 mm, 82.0000 mm): Track [RTL_5V] on F.Cu, length 14.8000 mm
+    @(116.2000 mm, 76.4000 mm): Pad 5 [SPISI] of U2 on F.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(99.2000 mm, 78.5000 mm): Track [ISOLATEB] on B.Cu, length 6.8000 mm
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(134.0000 mm, 81.0000 mm): Via [PERST_N] on F.Cu - B.Cu
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
