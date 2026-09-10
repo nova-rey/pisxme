@@ -1,0 +1,42 @@
+** Drc report for PHASE24_RTL9210B_XTALOUT_ON_U155_V1520.kicad_pcb **
+** Created on 2026-09-10T05:46:30 **
+** Report includes: Errors, Warnings **
+
+** Found 2 DRC violations **
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1488 mm)
+    Local override; error
+    @(92.8000 mm, 68.0000 mm): Track [RTL_1V1] on F.Cu, length 1.8000 mm
+    @(93.4000 mm, 67.6000 mm): Track [XTAL_OUT] on F.Cu, length 2.4083 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1488 mm)
+    Local override; error
+    @(94.0500 mm, 68.0000 mm): Track [RTL_1V1] on F.Cu, length 1.2500 mm
+    @(93.4000 mm, 67.6000 mm): Track [XTAL_OUT] on F.Cu, length 2.4083 mm
+
+** Found 4 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.0000 mm, 59.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu
+    @(88.0000 mm, 62.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.0000 mm, 62.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+    @(94.0500 mm, 67.2000 mm): Pad 53 [XTAL_IN] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.4000 mm): Pad 61 [REFCLK_P] of U1 on F.Cu
+    @(137.2500 mm, 62.7250 mm): Pad 55 [REFCLK_P] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.8000 mm): Pad 62 [REFCLK_N] of U1 on F.Cu
+    @(136.7500 mm, 62.7250 mm): Pad 53 [REFCLK_N] of J1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

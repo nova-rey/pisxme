@@ -10407,3 +10407,11 @@ the accepted local primitive. Receipt:
   V1508/V1502. Native DRC rejected all three for live RTL_1V1/RTL_3V3 source
   field conflicts. They remain route evidence only; Path A and accepted Path-B
   primitives are unchanged.
+
+## 2026-09-10 — Phase 24 RTL9210B V1517 U1.55 rail rehome
+
+- The live U1.55 RTL_1V1 escape was rehomed to the existing `(92.8,69.8)`
+  via pocket, removing its old leftward source field and dangling tail.
+- Native DRC is 0 violations / 6 inherited opens. Native U1.55/U1.63
+  connectivity and source-removal negative control pass. Crystal, REFCLK,
+  firmware, procurement, integration, and full Path-B gates remain open.

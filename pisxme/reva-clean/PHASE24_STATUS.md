@@ -11281,3 +11281,7 @@ copper under native DRC. Receipt:
 V1512-V1514 are rejected XTAL_OUT source/escape trials. Native DRC found
 RTL_1V1/RTL_3V3 source-field conflicts in all three; no accepted geometry was
 changed. Receipt: `PHASE24_RTL9210B_XTALOUT_V1512_V1514_RECEIPT.md`.
+
+V1517 is the current accepted U1.55 RTL_1V1 source rehome. Native DRC is 0
+violations / 6 inherited opens; U1.55↔U1.63 connectivity and the source
+removal negative control pass. Receipt: `PHASE24_RTL9210B_U155_V1517_RECEIPT.md`.
