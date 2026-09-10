@@ -9959,3 +9959,7 @@ route parent so far. Co-authored U7 SATA TX source transitions reduce native
 DRC to 599 violations / 399 opens and clearances to 199, with USB3/SATA/J8
 parity PASS and zero shorting entries. No production copper or validation
 rule changed.
+2026-09-09 — Phase 24 V42 rejected: farther-out U7 SATA TX source vias
+preserved SATA endpoint connectivity but introduced real POWER_GND shorts in
+the U7 field. Native DRC reported 610 violations / 399 opens. Preserved the
+disposable board and receipt; V41 remains the best parent.

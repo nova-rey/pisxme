@@ -10751,3 +10751,9 @@ passes USB3/SATA/current-J8-parity audits, and reports 599 native DRC
 violations / 399 opens, 199 clearance findings, and zero shorting entries.
 V41 is not production authority; complete storage routing and Phase 24
 closure remain open.
+V42 tested farther-out U7 SATA TX source vias from V41. SATA native
+connectivity still passes, but the new F.Cu escapes collide with U7
+POWER_GND/no-net field and native DRC reports 610 violations / 399 opens,
+including real POWER_GND shorts. V42 is rejected; V41 remains the best
+disposable parent and the next attempt must preserve its source-field
+allocation while addressing the selector-side corridor.
