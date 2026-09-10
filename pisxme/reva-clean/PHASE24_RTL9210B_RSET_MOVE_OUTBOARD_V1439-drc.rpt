@@ -1,0 +1,134 @@
+** Drc report for PHASE24_RTL9210B_RSET_MOVE_OUTBOARD_V1439.kicad_pcb **
+** Created on 2026-09-09T21:45:59 **
+** Report includes: Errors, Warnings **
+
+** Found 19 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(99.6000 mm, 66.8000 mm): Track [RTL_3V3] on B.Cu, length 4.0000 mm
+    @(96.0000 mm, 66.0500 mm): Track [RSET] on B.Cu, length 6.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(100.5000 mm, 72.4000 mm): Track [RTL_3V3] on B.Cu, length 8.4000 mm
+    @(96.0000 mm, 66.0500 mm): Track [RSET] on B.Cu, length 6.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(103.0000 mm, 64.0000 mm): Track [RTL_3V3] on F.Cu, length 5.0000 mm
+    @(105.0000 mm, 55.0000 mm): Track [RSET] on F.Cu, length 10.0000 mm
+[shorting_items]: Items shorting two nets (nets RSET and USB_RXN0)
+    Local override; error
+    @(96.0000 mm, 66.0500 mm): Via [RSET] on F.Cu - B.Cu
+    @(96.4000 mm, 66.0500 mm): Pad 47 [USB_RXN0] of U1 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(102.0000 mm, 75.0000 mm): Track [RTL_1V1] on B.Cu, length 10.2000 mm
+    @(102.0000 mm, 66.0500 mm): Track [RSET] on B.Cu, length 11.0500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(105.5000 mm, 64.8000 mm): Track [RTL_1V1] on B.Cu, length 3.5000 mm
+    @(102.0000 mm, 66.0500 mm): Track [RSET] on B.Cu, length 11.0500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(102.0000 mm, 64.8000 mm): Track [RTL_1V1] on B.Cu, length 10.0000 mm
+    @(102.0000 mm, 66.0500 mm): Track [RSET] on B.Cu, length 11.0500 mm
+[shorting_items]: Items shorting two nets (nets RTL_1V1 and RSET)
+    Local override; error
+    @(102.0000 mm, 64.8000 mm): Via [RTL_1V1] on F.Cu - B.Cu
+    @(102.0000 mm, 66.0500 mm): Track [RSET] on B.Cu, length 11.0500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(105.0000 mm, 55.0000 mm): Track [RSET] on F.Cu, length 10.0000 mm
+    @(99.0000 mm, 60.5000 mm): Track [RTL_1V1] on F.Cu, length 13.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(94.8000 mm, 66.0500 mm): Track [RSET] on F.Cu, length 1.2000 mm
+    @(95.2000 mm, 66.0500 mm): Track [RTL_1V1] on F.Cu, length 1.0500 mm
+[shorting_items]: Items shorting two nets (nets RSET and )
+    Local override; error
+    @(94.8000 mm, 66.0500 mm): Track [RSET] on F.Cu, length 1.2000 mm
+    @(96.0000 mm, 66.0500 mm): Pad 48 [<no net>] of U1 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(99.6000 mm, 62.8000 mm): Track [RTL_3V3] on B.Cu, length 8.4000 mm
+    @(102.0000 mm, 66.0500 mm): Track [RSET] on B.Cu, length 11.0500 mm
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(96.4000 mm, 66.0500 mm): Pad 47 [USB_RXN0] of U1 on F.Cu
+    @(96.0000 mm, 66.0500 mm): Via [RSET] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(96.0000 mm, 66.0500 mm): Pad 48 [<no net>] of U1 on F.Cu
+    @(96.0000 mm, 66.0500 mm): Via [RSET] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(95.6000 mm, 66.0500 mm): Pad 49 [<no net>] of U1 on F.Cu
+    @(96.0000 mm, 66.0500 mm): Via [RSET] on F.Cu - B.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.8000 mm, 66.0500 mm): Track [RSET] on F.Cu, length 1.2000 mm
+    @(96.0000 mm, 66.0500 mm): Pad 48 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.8000 mm, 66.0500 mm): Track [RSET] on F.Cu, length 1.2000 mm
+    @(95.6000 mm, 66.0500 mm): Pad 49 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.8000 mm, 66.0500 mm): Track [RSET] on F.Cu, length 1.2000 mm
+    @(95.2000 mm, 66.0500 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0000 mm, 66.0500 mm): Via [RSET] on F.Cu - B.Cu
+    @(96.0000 mm, 66.0500 mm): Pad 48 [<no net>] of U1 on F.Cu
+
+** Found 10 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.0000 mm): Track [RTL_1V1] on F.Cu, length 6.0500 mm
+    @(94.0500 mm, 71.2000 mm): Pad 63 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0000 mm, 62.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(97.2000 mm, 66.0500 mm): Pad 45 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 72.4000 mm): Pad 66 [GND] of U1 on F.Cu
+    @(98.0000 mm, 70.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(106.2000 mm, 65.0000 mm): Pad 2 [GND] of R1 on F.Cu
+    @(97.2000 mm, 66.0500 mm): Pad 45 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.0000 mm, 59.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu
+    @(88.0000 mm, 62.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.0000 mm, 62.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+    @(94.0500 mm, 67.2000 mm): Pad 53 [XTAL_IN] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(89.4000 mm, 59.0000 mm): Pad 2 [XTAL_OUT] of Y1 on F.Cu
+    @(91.0000 mm, 62.0000 mm): Pad 1 [XTAL_OUT] of C2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(91.0000 mm, 62.0000 mm): Pad 1 [XTAL_OUT] of C2 on F.Cu
+    @(94.0500 mm, 67.6000 mm): Pad 54 [XTAL_OUT] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.4000 mm): Pad 61 [REFCLK_P] of U1 on F.Cu
+    @(137.2500 mm, 62.7250 mm): Pad 55 [REFCLK_P] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.8000 mm): Pad 62 [REFCLK_N] of U1 on F.Cu
+    @(136.7500 mm, 62.7250 mm): Pad 53 [REFCLK_N] of J1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

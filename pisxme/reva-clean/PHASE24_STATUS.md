@@ -10622,3 +10622,8 @@ V1436/V1437/V1438 are rejected RSET B.Cu bypass trials. V1436 reduced the
 RSET failure to one crossing with the existing B.Cu GND triangle. V1437 and
 V1438 routed north of that triangle but crossed the long RTL_1V1 B.Cu shelf.
 No route is promoted; the next bounded class is local R1 support relocation.
+
+V1439 is a rejected eastward R1 relocation trial. Moving the footprint
+outboard preserved its two-pad topology but the attempted bypass introduced
+crossings with RTL_3V3 and RTL_1V1 and a short into USB_RXN0. The east shelf
+is not promoted; V1428 remains the accepted composite base.
