@@ -134,6 +134,15 @@ four U1 pad-clearance violations. The downstream channels remain separable;
 the remaining blocker is specifically the frozen 0.4-mm QFN source handoff
 under the production 0.20-mm trace/clearance envelope.
 
+The authorized local exception has now been implemented in
+`PHASE24_RTL9210B_FINE_QFN_ESCAPE_FIXTURE.kicad_pcb`: native DRC is 0/0/0,
+all five source-to-handoff connections and five actual trace-removal
+negative controls pass, and the scope guard proves 0.15-mm geometry is
+confined to the QFN window with 0.20-mm handoff tracks. The receipt records
+the selected rule and the earlier DFM rejection as superseded historical
+evidence. Apply this proven primitive to the integrated support field next;
+do not alter U1 orientation or V1603.
+
 The first coordinated local reroute of U1.12 `ISOLATEB`, `CLKREQ_N`,
 `PERST_N`, and `RTL_5V` is rejected: native DRC found 12 violations and zero
 opens. The exact conflicts are recorded in

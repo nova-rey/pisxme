@@ -34,6 +34,14 @@ The next action is full Path-B and integrated Phase 24 validation from this
 candidate. Do not resume the rejected V1523 source-handoff or old V1517
 crystal/REFCLK route experiments.
 
+The user-authorized local QFN exception is proven in a disposable native
+fixture. `PHASE24_RTL9210B_FINE_QFN_ESCAPE_RECEIPT.md` records the selected
+0.15/0.15-mm immediate escape, ordinary 0.60/0.30-mm vias, and explicit
+0.20-mm return to general routing. Native DRC, five physical source-to-
+handoff checks, five trace-removal negative controls, and the scope guard
+pass. This closes the isolated fine-breakout fixture gate only; fresh DFM
+sign-off and integrated U1 support-field routing remain open.
+
 The post-pause saved-board census
 `phase24_rtl9210b_pathb_census.py` is also passing. It derives assertions
 from native KiCad connectivity, confirms the U1/J1 pad-net mapping, and

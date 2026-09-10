@@ -11071,3 +11071,13 @@ the accepted local primitive. Receipt:
   `ISOLATEB`/`PERST_N` boundary findings remaining. This confirms the
   rejected relocation probe did not alter the accepted baseline; coordinated
   U1 south-row/support handoff work remains open.
+
+## 2026-09-10 — authorized local fine-pitch QFN escape proven
+
+- Implemented the user-authorized local exception as a native-clean fixture:
+  0.15/0.15-mm fine traces only in the QFN window, existing 0.60/0.30-mm
+  ordinary through-vias, and explicit 0.20-mm normal-width handoffs. Full
+  U1 package context, native DRC 0/0/0, five physical connectivity checks,
+  five trace-removal negative controls, and the scope guard pass. Earlier
+  DFM FAIL evidence is retained as superseded artifact history; fresh DFM
+  sign-off and integrated support routing remain open.

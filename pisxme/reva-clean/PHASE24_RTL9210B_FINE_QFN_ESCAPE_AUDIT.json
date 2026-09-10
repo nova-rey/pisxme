@@ -1,0 +1,24 @@
+{
+  "board": "PHASE24_RTL9210B_FINE_QFN_ESCAPE_FIXTURE.kicad_pcb",
+  "physical_saved_board": true,
+  "source_to_handoff": {
+    "ISOLATEB": "PASS",
+    "CLKREQ_N": "PASS",
+    "PERST_N": "PASS",
+    "RTL_1V1": "PASS",
+    "RTL_5V": "PASS"
+  },
+  "trace_removal_negative_controls": {
+    "ISOLATEB": "PASS",
+    "CLKREQ_N": "PASS",
+    "PERST_N": "PASS",
+    "RTL_1V1": "PASS",
+    "RTL_5V": "PASS"
+  },
+  "scope_guard": {
+    "fine_trace_count": 10,
+    "outside_window": 0,
+    "normal_handoff_tracks": 10
+  },
+  "verdict": "PASS"
+}
