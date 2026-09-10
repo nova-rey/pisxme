@@ -232,6 +232,10 @@ V52 tested a direct F.Cu `TUSB_SATA_TXP` corridor. SATA endpoint connectivity
 passed, but native DRC worsened to 604 / 399 and introduced real shorts in
 MODE_IN/STORAGE_SEL, XOUT/JMS_XAVDDH, and NC_26/STORAGE_SEL. It is rejected;
 V50's mixed-layer topology remains preferred.
+V55 added sparse storage `POWER_GND` stitching and reduced opens to 347, but
+introduced real shorts; V56 removed the stitch intersecting M.2 SATA and
+reduced DRC to 598 / 347, yet retained a real `MODE_IN`/`STORAGE_SEL` short.
+Both are rejected. V54 remains the clean zero-shorting ground-access parent.
 
 V53 tested a bounded storage F.Cu `POWER_GND` access zone. It reduced native
 opens from 399 to 355 with zero shorting entries while preserving USB3/SATA

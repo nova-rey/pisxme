@@ -10010,6 +10010,11 @@ script, and receipt; V46 remains the preferred parent.
 endpoint connectivity but worsened native DRC to 604 / 399 and introduced
 three real support-net shorts. Preserved board, report, script, and receipt;
 V50 mixed-layer routing remains preferred.
+2026-09-09 — Phase 24 V55/V56 ground-stitch experiments preserved and
+rejected. V55 reduced opens to 347 but introduced true shorts; V56 removed
+the M.2-colliding stitch and reached 598 DRC / 347 opens, but retained a
+MODE_IN/STORAGE_SEL short. V54 remains the clean zero-shorting parent; no
+production authority or validation rule changed.
 2026-09-09 — Phase 24 V53 preserved as a promising storage ground-return
 parent. A bounded F.Cu POWER_GND zone reduced native opens from 399 to 355
 with zero shorts and preserved USB3/SATA connectivity, but introduced 10
