@@ -10064,3 +10064,5 @@ The 2026-09-10 RTL9210B V1460 coupled QFN experiment co-authored U1.66 GND
 with LANE0_RXN and retained 15 native DRC violations against adjacent
 lane/JTAG copper. It was rejected without rule relaxation; Path A stayed
 intact.
+RTL9210B V1461 co-authored all four lane-0 source corridors with U1.66 GND;
+native DRC retained 19 violations, so it was rejected without rule relaxation.

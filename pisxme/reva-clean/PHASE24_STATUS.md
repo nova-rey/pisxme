@@ -10799,3 +10799,7 @@ remaining conflicts moving to LANE0_TXP, LANE0_TXN, and JTAG_TCK. It confirms
 the QFN field must be co-authored; no rule relaxation or production change
 was made. The consultant review and raw evidence are recorded in
 `PHASE24_RTL9210B_COUPLED_V1460_RECEIPT.md`.
+V1461 is a rejected broader coupled Path-B source-field experiment. It
+co-authored all four lane-0 source corridors with U1.66 GND, but native DRC
+reported 19 violations / 14 opens, including RXP/RXN and RTL_1V1/RTL_3V3
+conflicts. No rules, production CAD, or Path-A assets changed.

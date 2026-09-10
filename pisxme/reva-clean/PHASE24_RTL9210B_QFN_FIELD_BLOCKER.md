@@ -64,3 +64,8 @@ U1.66 GND escape instead of adding another isolated via. Native DRC reported
 failure but collided with LANE0_TXP, LANE0_TXN, and JTAG_TCK geometry. It is
 rejected under the unchanged rules. The coupled source-field class is the
 next required Path-B work; no production CAD or Path-A asset changed.
+V1461 then co-authored the U1.66 GND escape with all four lane-0 source
+corridors. Native DRC reported 19 violations / 14 opens, including an RXP/RXN
+transition collision and exposed-pad GND conflicts with RTL_1V1/RTL_3V3. It
+is rejected under the unchanged rules. The coupled source-field experiment
+and disposition are recorded in `PHASE24_RTL9210B_COUPLED_V1461_RECEIPT.md`.
