@@ -10188,3 +10188,8 @@ V121 provided that isolated source-escape result: native DRC had zero
 violations, all four J7-to-U12 USB3 endpoints passed saved-board
 BuildConnectivity, and a removed-segment negative control failed as required.
 It is route-development evidence only; integrated continuation remains open.
+V123 integrated the V121 source escape with a local CM5_PERST B.Cu duck and
+removed all USB3 shorts/crossings; native DRC remained 300/499 from
+via/plane and other clearance findings. V124 reintroduced pair shorts and
+crossings and was rejected. The next candidate must keep the V123 PERST
+result while making the transitions compatible with filled planes.

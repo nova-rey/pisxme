@@ -10993,3 +10993,12 @@ saved RX-N segment in the negative-control copy makes that audit fail, so no
 synthetic graph edge is involved. V121 is the first clean isolated U12 route
 development result; integrated continuation and full-board gates remain open.
 Receipt: `PHASE24_USB3_SHIFTED_ESCAPE_V121_RECEIPT.md`.
+V122 integrated the shifted escape without moving PERST and retained four
+final-mile PERST crossings. V123 ducked only the single-ended PERST trunk to
+B.Cu; it removed all USB3 shorts/crossings and passed the four-endpoint native
+U12 audit, but native DRC remained 300/499 with via/plane and other clearance
+findings, so it is not accepted. V124's endpoint-via rearrangement reintroduced
+RX shorts and crossings at 153/499 and is rejected. The next implementation
+must solve via/filled-plane compatibility while preserving the V121 source
+escape and V123 PERST result. Receipt:
+`PHASE24_USB3_INTEGRATION_V122_V124_RECEIPT.md`.
