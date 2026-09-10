@@ -8921,6 +8921,10 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+V128 translated the isolated U11/U12 support copper and passed all ten native
+endpoint assertions, but was rejected at 164/499 for real crossings/shorts
+into CM5_PERST, U13, and the M.2 field. Rigid translation is not valid for
+V127; local co-authoring remains required.
 V125 rebuilt V123's native net list before zone refill and reduced DRC to
 148/499 without USB3 shorts/crossings. V126's target-transition rearrangement
 reintroduced RX shorts/crossings and was rejected at 153/499.

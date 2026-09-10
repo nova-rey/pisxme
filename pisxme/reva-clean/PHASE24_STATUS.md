@@ -11014,3 +11014,10 @@ V125 rebuilt the V123 native net list before zone refill and reduced DRC to
 rearrangement reintroduced RX shorts/crossings at 153/499 and is rejected.
 V125 remains useful refill evidence, while V127 remains the best integrated
 USB3 candidate after moving R80.
+V128 translated the isolated U11/U12/C86/C87 support copper onto V127 and
+passed all ten native support/USB3 endpoint assertions, but native DRC
+rejected it at 164/499 with real CM5_PERST crossings and shorts into U13 and
+the M.2-area field. The isolated support coordinates cannot be rigidly
+transplanted into V127. This is a route/transplant failure; the next step is
+native co-authoring of the support-cap island at the live U11/U12/U13 pads.
+Receipt: `PHASE24_STORAGE_SUPPORT_V128_RECEIPT.md`.
