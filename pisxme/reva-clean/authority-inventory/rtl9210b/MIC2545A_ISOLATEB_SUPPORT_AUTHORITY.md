@@ -36,16 +36,22 @@ current limit is `I_LIMIT = 230 / R_SET`, with `R_SET` between 76.8 Ω and
 459 Ω; the existing 76.8 Ω value is therefore nominally about 3 A, subject
 to the datasheet tolerance and thermal checks.
 
-## Package-drawing limitation
+## Earlier package-drawing limitation — superseded
 
-The same document's package-information page identifies the 8-pin SOIC (M)
-body and 1.27 mm lead pitch, but it is a mechanical package drawing rather
-than a recommended PCB land-pattern table. It therefore establishes package
-identity and pin pitch, not the final pad length, toe/heel allowance,
-solder-mask expansion, paste reduction, or courtyard. The disposable fixture
-receipt records this limitation; a production footprint must be sourced from
-an explicit manufacturer recommendation or independently reviewed against the
-assembly-house rules before promotion.
+The older 2011 Micrel document linked above established the 8-pin SOIC body
+and pitch but did not publish a recommended PCB land-pattern table. That
+limitation is retained here only as historical provenance and is superseded
+for current work by Microchip DS20006921A.
+
+## Current recommended land pattern
+
+Microchip DS20006921A, Drawing C04-2057-3BX Rev K, publishes the recommended
+3BX SOIC land pattern: 1.27 mm contact pitch, 5.40 mm contact-pad spacing,
+1.55 mm contact-pad length, and 0.60 mm contact-pad width. The disposable
+fixture now uses those dimensions. Mask expansion, paste reduction,
+courtyard, and assembly-rule review remain separate CAD/DFM checks.
+
+Source: <https://www.microchip.com/content/dam/mchp/documents/APID/ProductDocuments/DataSheets/MIC2545A-49A-Programmable-Current-Limit-High-Side-Switch-DS20006921.pdf>
 
 ## Reconciliation against retained corroborating evidence
 

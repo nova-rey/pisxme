@@ -10944,3 +10944,11 @@ the accepted local primitive. Receipt:
   pattern. The disposable electrical fixture therefore remains valid for
   pin-join evidence only; production pad geometry, mask, paste, and courtyard
   still require a separately reviewed source.
+
+## 2026-09-10 — upgraded MIC2545A fixture to current recommended land pattern
+
+- Reconciled the earlier 2011-document limitation with Microchip DS20006921A
+  Rev A / Drawing C04-2057-3BX Rev K. The disposable fixture now uses the
+  published 5.40 mm row spacing, 1.55 x 0.60 mm contact pads, and 1.27 mm
+  pitch, while native DRC and the duplicated-pin negative control continue to
+  pass. Mask/paste/courtyard DFM and production integration remain open.

@@ -33,13 +33,10 @@ local input bypass/ground return.
 
 ## Scope and remaining gate
 
-This proves the corrected electrical pin ownership and a manufacturable
-routing pattern in a disposable board. Its hand-authored SOIC geometry is
-not the final manufacturer land-pattern authority. Before production
-promotion, replace it with the verified Microchip package land pattern and
-repeat native DRC, endpoint parity, and the duplicated-pin negative control.
-SSD 3.3-V source sizing, inrush/fault policy, and RTL9210B production
-integration remain open.
+This proves the corrected electrical pin ownership and a routing pattern in a
+disposable board. The fixture's 1.27-mm pitch, 5.40-mm row spacing, and
+1.55×0.60-mm pads match Microchip's current recommended 3BX SOIC land
+pattern. Mask/paste/courtyard and assembly-rule review remain open, as do SSD
+3.3-V source sizing, inrush/fault policy, and RTL9210B production integration.
 
 Source: <https://ww1.microchip.com/downloads/en/DeviceDoc/mic2545a.pdf>
-
