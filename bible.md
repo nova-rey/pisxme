@@ -11001,3 +11001,10 @@ the accepted local primitive. Receipt:
   useful implementation is a coordinated local reroute of those departures
   around U1.12; point perturbations, topology changes, and orientation search
   are not justified.
+
+## 2026-09-10 — exhausted simple ISOLATEB escape coordinate class
+
+- The final bounded pad-end jog left zero opens and exactly two native
+  crossings, against the existing `RTL_5V` and `PERST_N` departures. The
+  remaining repair is coordinated local rerouting of those neighboring
+  departures with `ISOLATEB`; further point perturbation is not useful.

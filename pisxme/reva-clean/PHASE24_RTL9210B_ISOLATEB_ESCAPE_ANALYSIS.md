@@ -55,3 +55,13 @@ at x=101.2 mm and the existing `PERST_N` departure at x=100.0 mm. This
 confirms that the next repair must co-author those adjacent local departures
 around the `ISOLATEB` escape. Repeating point perturbations is no longer a
 useful route class.
+
+## Final bounded escape probe in this class
+
+The probe was then jogged to the opposite side of the pad-row segment,
+through x=101.8 mm before the outboard via. After zone refill it had zero
+opens and exactly two native crossings: the existing `RTL_5V` departure from
+pad 17 and the existing `PERST_N` departure from pad 14. This exhausts the
+simple source-escape coordinate class. The smallest remaining repair is to
+reroute those neighboring local departures together with `ISOLATEB`, keeping
+their existing endpoints and nets intact.
