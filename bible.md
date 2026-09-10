@@ -10273,3 +10273,8 @@ rejected 36 violations / 32 fixture opens, including source-field crossings.
 It is rejected route-authoring evidence; the RX-without-target-vias class
 remains a valid next implementation hypothesis. Receipt:
 `PHASE24_STORAGE_SUPPORT_U12_TARGET_RX_FCU_V147_RECEIPT.md`.
+V148-V150 continued the source-aware target-field work. V150 combined far RX
+transitions with a staggered TX launch and reduced the local fixture to 9
+native violations with no shorting entries; target-field crossings and
+clearances remain. It is the best disposable basis, not a pass. Receipt:
+`PHASE24_STORAGE_SUPPORT_U12_COAUTHOR_TX_RX_FAR_V150_RECEIPT.md`.
