@@ -26,6 +26,12 @@ two REFCLK endpoint opens. Preserve the 0° V1517 baseline and co-author the
 crystal, RTL_3V3 transition, and adjacent return/PCIe corridors next. Receipt:
 `PHASE24_RTL9210B_XTAL_IMPLEMENTATION_V1577_V1579_RECEIPT.md`.
 
+V1580 tested same-layer coauthoring of XTAL_IN and XTAL_OUT on the fixed 0°
+baseline. Native DRC rose to 17 findings / 2 REFCLK opens with real crystal
+shorts to RTL_3V3, RSET, and RTL_1V1; reject this route class. The next pass
+must use a separated layered crystal corridor without reopening orientation.
+Receipt: `PHASE24_RTL9210B_CRYSTAL_COAUTHOR_REJECT_V1580_RECEIPT.md`.
+
 The selected V1575 baseline was rerun after the decision: native KiCad DRC is
 0 violations / 6 unconnected pads / 0 footprint errors, and the U1.55 native
 connectivity plus source-removal negative control pass. Receipt:

@@ -10644,3 +10644,10 @@ the accepted local primitive. Receipt:
   prior XTAL_IN-to-RTL_3V3 short and reduced the result to local corridor
   crossings plus the two REFCLK opens, but neither passed native DRC. Rejected
   as route implementations; orientation remains frozen.
+
+## 2026-09-10 — rejected same-layer crystal coauthor V1580
+
+- Co-authored XTAL_IN and XTAL_OUT on the fixed 0° baseline using separate
+  F.Cu lanes. Native DRC found 17 violations / 2 REFCLK opens, including real
+  crystal shorts to RTL_3V3, RSET, and RTL_1V1. Rejected; next work must use a
+  separated layered crystal corridor and keep orientation frozen.
