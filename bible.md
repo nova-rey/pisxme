@@ -10469,3 +10469,12 @@ the accepted local primitive. Receipt:
 - The tested escape class is closed as rejected; Path A and accepted Path-B
   primitives remain unchanged. Next work must use a new authoritative QFN
   fanout class without relaxing board rules.
+
+## 2026-09-10 — RTL9210B crystal source class V1555–V1556
+
+- Tested two further 0-degree QFN escape topologies at the required 0.20-mm
+  trace width. V1555 produced six native DRC violations; V1556 produced
+  eleven. Failures are local source/supply fanout and layer-shelf conflicts.
+- Closed this coordinate-only source class as rejected and preserved its raw
+  fixtures/reports. Next RTL9210B work must change the authoritative fanout
+  topology or footprint strategy; no design-rule relaxation is accepted.

@@ -143,17 +143,16 @@ V1508 is the current accepted RSET primitive on the coordinated V1502 ground
 field. Native DRC is 0 violations / 6 inherited opens, and native RSET
 connectivity plus the saved-board transition-removal negative control pass.
 Receipt: `PHASE24_RTL9210B_RSET_V1508_RECEIPT.md`.
-## CURRENT STATE — 2026-09-10 V1553
+## CURRENT STATE — 2026-09-10 V1556
 
-V1549–V1553 are bounded, isolated rotated-QFN crystal/source-escape
-experiments and are all rejected. Native DRC remains the authority: V1553
-reports 4 violations, specifically XTAL_IN shorting RTL_3V3 and XTAL_OUT
-shorting RTL_1V1 at the QFN source row, plus their mask bridges; it also has
-17 expected unconnected items because the fixture is intentionally stripped.
-The separated B.Cu shelf idea was not the limiting failure. Do not promote
-any of these PCBs. Path A and the accepted Path-B support primitives remain
-preserved. Next action is a new authoritative QFN source-escape class, not
-another coordinate-only tweak or a DRC-rule relaxation.
+V1549–V1556 are bounded, isolated crystal/source-escape experiments and are
+all rejected. Native DRC remains the authority: V1553 reports four source-row
+shorts/mask failures, while V1556 reports eleven local violations including
+the RTL_3V3 transition conflict; neither is a production layout. The stripped
+fixtures' two or 17 unconnected items are fixture limitations, not passes.
+Path A and the accepted Path-B support primitives remain preserved. Next
+action is a new authoritative QFN source-escape class, not another
+coordinate-only tweak or a DRC-rule relaxation.
 
 See `PHASE24_RTL9210B_CRYSTAL_ESCAPE_V1549_V1553_RECEIPT.md` and the native
 reports beside each fixture for raw evidence.

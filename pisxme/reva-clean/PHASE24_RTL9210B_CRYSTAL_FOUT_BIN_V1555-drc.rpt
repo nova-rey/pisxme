@@ -1,0 +1,50 @@
+** Drc report for PHASE24_RTL9210B_CRYSTAL_FOUT_BIN_V1555.kicad_pcb **
+** Created on 2026-09-10T06:42:32 **
+** Report includes: Errors, Warnings **
+
+** Found 6 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(93.4000 mm, 67.6000 mm): Track [XTAL_OUT] on F.Cu, length 4.8000 mm
+    @(94.0500 mm, 67.2000 mm): Track [XTAL_IN] on F.Cu, length 0.8500 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(94.8000 mm, 64.4000 mm): Track [RSET] on B.Cu, length 6.0299 mm
+    @(92.6000 mm, 66.2000 mm): Track [XTAL_IN] on B.Cu, length 4.8000 mm
+[shorting_items]: Items shorting two nets (nets XTAL_IN and XTAL_OUT)
+    Local override; error
+    @(93.2000 mm, 67.2000 mm): Track [XTAL_IN] on F.Cu, length 1.0000 mm
+    @(93.4000 mm, 67.6000 mm): Track [XTAL_OUT] on F.Cu, length 4.8000 mm
+[shorting_items]: Items shorting two nets (nets XTAL_OUT and XTAL_IN)
+    Local override; error
+    @(93.4000 mm, 67.6000 mm): Track [XTAL_OUT] on F.Cu, length 4.8000 mm
+    @(93.2000 mm, 66.2000 mm): Track [XTAL_IN] on F.Cu, length 0.6000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(93.4000 mm, 67.6000 mm): Track [XTAL_OUT] on F.Cu, length 4.8000 mm
+    @(94.0500 mm, 66.8000 mm): Pad 52 [RTL_3V3] of U1 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(88.0000 mm, 70.0000 mm): Track [RTL_1V1] on B.Cu, length 12.0000 mm
+    @(92.6000 mm, 61.4000 mm): Track [XTAL_IN] on B.Cu, length 4.6000 mm
+
+** Found 2 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.4000 mm): Pad 61 [REFCLK_P] of U1 on F.Cu
+    @(137.2500 mm, 62.7250 mm): Pad 55 [REFCLK_P] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.8000 mm): Pad 62 [REFCLK_N] of U1 on F.Cu
+    @(136.7500 mm, 62.7250 mm): Pad 53 [REFCLK_N] of J1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

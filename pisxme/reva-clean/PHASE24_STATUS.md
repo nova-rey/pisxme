@@ -11333,11 +11333,11 @@ adjacent XOUT source track. Receipt:
 `PHASE24_RTL9210B_CRYSTAL_SWEEP_V1547_RECEIPT.md`. Coordinate-only tuning is
 exhausted for this source class; the next repair must change a source
 departure/layer allocation. No production CAD changed.
-## CURRENT STATE — 2026-09-10 V1553
+## CURRENT STATE — 2026-09-10 V1556
 
 The latest RTL9210B work is isolated Path-B source-field experimentation.
-V1549–V1553 were rejected by native KiCad DRC and are not integrated. V1553
-has four native violations at the rotated QFN crystal source row and 17
-fixture-only unconnected items. This is a route-implementation limitation
-of the tested escape class, not a Path-A regression or a production-board
-pass. Path A remains the fallback/reference architecture and is untouched.
+V1549–V1556 were rejected by native KiCad DRC and are not integrated. The
+best results still fail locally at QFN source/supply fanout or its layer
+transitions. This is a route-implementation limitation of the tested escape
+classes, not a Path-A regression or a production-board pass. Path A remains
+the fallback/reference architecture and is untouched.
