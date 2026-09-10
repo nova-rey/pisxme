@@ -10331,3 +10331,15 @@ the accepted local primitive. Receipt:
 - V196 coauthored the AVDDL handoff around the AVDD33 field and verified
   U11.20-to-C83.1. USB3, SATA, parity, and the negative control pass; native
   DRC is 617/347 with zero shorting items. Remaining opens/crossings stay open.
+## 2026-09-10 — Phase 24 RTL9210B V1466 QFN escape primitive
+
+- Tested the native-loaded RTL9210B QFN coordinates rather than relying on
+  stale route assumptions. V1466 moves U1.64/RXP east/up to an ordinary
+  through-via and joins U1.66/GND directly to the bottom edge of exposed pad
+  U1.69, with no via-in-pad or rule relaxation.
+- Native KiCad 10.0.5 DRC is 0 violations / 9 inherited support opens. All
+  four lane-0 endpoints and U1.66-to-U1.69 connectivity pass; independent
+  saved-board removal of the GND join or RXP source trace fails as required.
+- V1466 supersedes V1461 for this local Path-B escape only. Full RTL9210B
+  support, firmware/programming, integrated storage, and Phase 24 closure
+  remain open; Path A is preserved.

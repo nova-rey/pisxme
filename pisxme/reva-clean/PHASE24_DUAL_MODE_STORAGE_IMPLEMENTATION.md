@@ -1016,3 +1016,14 @@ pass; native DRC is still open at 684 violations / 403 unconnected items,
 with no native shorting class. Mode-control connectivity remains open at the
 inherited J3.69-to-J5.2 route and is the next focused repair. V6 is not a
 production closure candidate yet.
+
+## CURRENT PATH-B LOCAL ESCAPE — V1466 — 2026-09-10
+
+The isolated RTL9210B candidate now has an accepted local U1.66 GND/RXP
+escape primitive in `PHASE24_RTL9210B_U166_JOIN_RXP_EAST_UP_V1466.kicad_pcb`.
+It uses native-loaded pad coordinates, ordinary through-vias only, and a
+direct U1.66-to-U1.69 exposed-pad join. Native DRC is 0 violations / 9
+inherited support opens; all four lane endpoints and the U1.66-to-U1.69 join
+pass. Removing either the GND join or RXP source segment fails its native
+connectivity assertion. This supersedes V1461 for the local escape only; full
+Path-B, production-CAD, and Phase 24 gates remain OPEN.

@@ -69,3 +69,18 @@ corridors. Native DRC reported 19 violations / 14 opens, including an RXP/RXN
 transition collision and exposed-pad GND conflicts with RTL_1V1/RTL_3V3. It
 is rejected under the unchanged rules. The coupled source-field experiment
 and disposition are recorded in `PHASE24_RTL9210B_COUPLED_V1461_RECEIPT.md`.
+
+## Follow-up native escape — V1466
+
+V1466 supersedes that local trial as the current QFN escape basis. It uses the
+actual native pad centers, moves U1.64/RXP east and then north before its
+ordinary through-via transition, and joins U1.66/GND directly to the bottom
+edge of exposed pad U1.69. Native KiCad DRC reports 0 violations / 9 inherited
+support opens. All four lane-0 endpoints and U1.66-to-U1.69 pass saved-board
+native connectivity; separate saved-board GND/RXP trace-removal negative
+controls fail as required. Receipt:
+`PHASE24_RTL9210B_U166_JOIN_RXP_EAST_UP_V1466_RECEIPT.md`.
+
+This closes the specific U1.66 local escape experiment, not the full Path-B
+gate. Remaining QFN support, REFCLK/control, firmware/programming,
+procurement, integrated storage, and productization checks remain open.

@@ -11217,3 +11217,16 @@ U11.51-to-Y10.2 XOUT path. USB3, SATA, 814/1263/0 parity, and the
 removed-track negative control pass. Native DRC improves to 617/347 with zero
 shorting items; V196 is accepted as the current support-field basis, not
 Phase 24 closure. Receipt: `PHASE24_STORAGE_V75_COAUTHORED_V196_RECEIPT.md`.
+
+## CURRENT PATH-B QFN ESCAPE — V1466 — 2026-09-10
+
+V1466 is the current isolated RTL9210B U1.66/RXP escape basis. It uses the
+actual native U1.64=(94.05,71.60), U1.66=(94.05,72.40), and exposed-pad
+U1.69 edge coordinates. RXP exits east/up to an ordinary through-via, while
+U1.66 joins directly to the exposed pad on F.Cu. Native DRC is 0 violations /
+9 inherited support opens. All four lane-0 endpoint assertions plus U1.66→U1.69
+pass, and separate saved-board GND/RXP trace-removal negative controls pass.
+V1461 is superseded local failure evidence. V1466 is accepted as a Path-B
+escape primitive only; remaining support, firmware/programming, integrated
+mode validation, and Path-A/Path-B decision gates remain OPEN. Receipt:
+`PHASE24_RTL9210B_U166_JOIN_RXP_EAST_UP_V1466_RECEIPT.md`.
