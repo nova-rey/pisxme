@@ -227,6 +227,11 @@ initial traceback was a script typo; its corrected rerun produced 605 DRC
 violations / 400 opens and real U7 `POWER_GND` to `BRIDGE_SATA_TX_P`
 shorting entries. The current open gate is complete obstacle-aware storage
 routing and native closure; no production PCB or validation rule has changed.
+
+V52 tested a direct F.Cu `TUSB_SATA_TXP` corridor. SATA endpoint connectivity
+passed, but native DRC worsened to 604 / 399 and introduced real shorts in
+MODE_IN/STORAGE_SEL, XOUT/JMS_XAVDDH, and NC_26/STORAGE_SEL. It is rejected;
+V50's mixed-layer topology remains preferred.
 ## Follow-up implementation evidence — 2026-09-06
 
 Native inspection found inherited C44-C47 reference collisions in the

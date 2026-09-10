@@ -10001,3 +10001,7 @@ script, and receipt; V46 remains the preferred parent.
  connectivity failed at U7.57 while USB3 remained PASS. Preserved the board,
  raw DRC, and receipt; V41 remains the best disposable parent and no
  validation rule or production PCB changed.
+2026-09-09 — Phase 24 V52 rejected: direct F.Cu TUSB_SATA_TXP passed SATA
+endpoint connectivity but worsened native DRC to 604 / 399 and introduced
+three real support-net shorts. Preserved board, report, script, and receipt;
+V50 mixed-layer routing remains preferred.
