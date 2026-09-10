@@ -81,6 +81,12 @@ from the attempted U1.12 and SSD_3V3 corridor geometry. It does not invalidate
 the corrected support circuit or frozen V1517/V1603 baseline. Receipt:
 `PHASE24_MIC2545A_INTEGRATION_TRIAL_REJECT.md`.
 
+Native pad inspection records the specific next escape class in
+`PHASE24_RTL9210B_ISOLATEB_ESCAPE_ANALYSIS.md`: U1.12 is in a 0.4-mm-pitch
+0.2×0.9-mm pad row, so lateral escape is not legal at the current route
+width/clearance. The next repair must use a pad-end vertical escape and an
+outboard ordinary via before attaching the local support network.
+
 ## Support parity consolidation — 2026-09-10
 
 Claude's bounded review identified the missing consolidated support audit.

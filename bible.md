@@ -10976,3 +10976,12 @@ the accepted local primitive. Receipt:
   violations and 4 opens caused by U1.12/SSD_3V3 corridor collisions with
   existing support copper. Classified as route implementation failure only;
   the corrected MIC2545A fixture and frozen V1517/V1603 baseline remain valid.
+
+## 2026-09-10 — isolated U1 ISOLATEB escape geometry
+
+- Recorded native U1 pad coordinates and dimensions in
+  `PHASE24_RTL9210B_ISOLATEB_ESCAPE_ANALYSIS.md`. The 0.4-mm-pitch,
+  0.2×0.9-mm south pad row makes lateral pad-12 escape illegal at the current
+  rules; the next implementation class is a pad-end vertical escape followed
+  by an outboard ordinary via. This is a route-implementation constraint, not
+  an orientation or architecture rejection.
