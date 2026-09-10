@@ -10495,6 +10495,14 @@ including collisions with the existing PCIe source field. They are preserved
 as route-implementation evidence. V1392 remains the accepted U1.60 primitive;
 U1.63 and remaining support/control groups remain OPEN.
 
+V1400/V1401 are rejected U1.63 diagonal-west/top escapes with one native
+RTL_1V1/LANE0_RXN conflict each. V1402 tested a bounded disposable relocation
+of the LANE0_RXN source transition to free U1.63; it instead produced four
+native violations involving the paired PCIe TXP transition, a dangling launch,
+and one remaining REFCLK clearance conflict. This confirms the open issue is
+coupled QFN/PCIe source-field geometry. No production PCIe or Path-A asset was
+changed; V1392 remains the accepted U1.60 primitive.
+
 V1399 is a rejected RTL_5V fan-in trial from V1392. It attempted to join
 U1.17/U1.33/C5 using F.Cu/B.Cu only, but native DRC reported 9 violations
 from crossings and clearances against the accepted RTL_1V1/RTL_3V3/SPI

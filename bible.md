@@ -144,6 +144,11 @@ escapes from the accepted V1392 U1.60 basis. Jogged, lower-pocket, and
 diagonal-top departures retained five native DRC violations each, chiefly
 PCIe source-field collisions. Evidence is preserved; V1392 and Path-A remain
 unchanged and U1.63 remains open.
+2026-09-09 — Phase 24 V1400-V1402 preserved further U1.63 source-field
+evidence. V1400/V1401 each retained one native conflict; V1402's disposable
+LANE0_RXN transition relocation produced four violations against the paired
+PCIe TXP launch and REFCLK field. This is coupled QFN/PCIe geometry, not a
+Path-A or production change. V1392 U1.60 remains accepted.
 2026-09-09 — Phase 24 V1399 rejected the first F.Cu/B.Cu RTL_5V fan-in
 trial from V1392. Native DRC reported 9 violations against accepted 1V1,
 3V3, and SPI geometry. The disposable board and report are preserved;
