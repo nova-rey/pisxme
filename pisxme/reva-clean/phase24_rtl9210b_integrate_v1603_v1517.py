@@ -45,6 +45,19 @@ for name in N:
         seg(net,(v,yy),(v,fy[name]),F); seg(net,(v,fy[name]),(target,fy[name]),F); seg(net,(target,fy[name]),(target,62.725),F)
 # Reclose RTL_1V1 on the east-side shelf between the QFN pads and exposed pad.
 one=b.FindNet('RTL_1V1'); seg(one,(94.05,68),(95.2,68),F); seg(one,(95.2,68),(95.2,66.05),F); seg(one,(94.05,70),(95.2,70),F); seg(one,(95.2,70),(95.2,68),F); seg(one,(94.05,71.2),(95.2,71.2),F); seg(one,(95.2,71.2),(95.2,70),F)
+# The V1523 support baseline has an RTL_3V3 B.Cu-to-F.Cu handoff at (99.6,
+# 66.05), but that point is inside the adjacent QFN pad envelope.  Replace
+# only those two baseline segments with an explicit outboard through-via;
+# same-net coincident endpoints are not a substitute for a physical layer
+# transition, and the via must clear the neighboring USB_DM/RTL_1V1 pads.
+three=b.FindNet('RTL_3V3')
+for q in list(b.GetTracks()):
+    if not isinstance(q,pcbnew.PCB_TRACK) or q.GetNetname()!='RTL_3V3': continue
+    a=(round(pcbnew.ToMM(q.GetStart().x),4),round(pcbnew.ToMM(q.GetStart().y),4))
+    z=(round(pcbnew.ToMM(q.GetEnd().x),4),round(pcbnew.ToMM(q.GetEnd().y),4))
+    if {a,z} in ({(99.6,65.8),(99.6,66.05)}, {(99.6,66.05),(99.6,62.8)}) or (99.6,65.8) in {a,z}:
+        b.RemoveNative(q)
+via(three,99.6,66.8); seg(three,(99.6,66.8),(99.6,62.8),F)
 # The old west collector was orphaned when the source field was cleared; it
 # is not connected to any live pad or support load and is removed explicitly.
 for q in list(b.GetTracks()):

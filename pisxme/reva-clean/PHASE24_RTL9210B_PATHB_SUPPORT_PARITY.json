@@ -1,0 +1,305 @@
+{
+  "board": "PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED.kicad_pcb",
+  "native_graph_only": true,
+  "closed_support_groups": {
+    "CLKREQ_N": {
+      "endpoints": [
+        [
+          "U1",
+          "13"
+        ],
+        [
+          "R3",
+          "1"
+        ],
+        [
+          "J1",
+          "52"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "PEDET": {
+      "endpoints": [
+        [
+          "U1",
+          "8"
+        ],
+        [
+          "R2",
+          "1"
+        ],
+        [
+          "J1",
+          "69"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "RSET": {
+      "endpoints": [
+        [
+          "U1",
+          "51"
+        ],
+        [
+          "R1",
+          "1"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "XTAL_IN": {
+      "endpoints": [
+        [
+          "U1",
+          "53"
+        ],
+        [
+          "Y1",
+          "1"
+        ],
+        [
+          "C1",
+          "1"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "XTAL_OUT": {
+      "endpoints": [
+        [
+          "U1",
+          "54"
+        ],
+        [
+          "Y1",
+          "2"
+        ],
+        [
+          "C2",
+          "1"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "RTL_1V1": {
+      "endpoints": [
+        [
+          "U1",
+          "16"
+        ],
+        [
+          "U1",
+          "25"
+        ],
+        [
+          "U1",
+          "36"
+        ],
+        [
+          "U1",
+          "40"
+        ],
+        [
+          "U1",
+          "50"
+        ],
+        [
+          "U1",
+          "55"
+        ],
+        [
+          "U1",
+          "60"
+        ],
+        [
+          "U1",
+          "63"
+        ],
+        [
+          "C4",
+          "1"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "RTL_3V3": {
+      "endpoints": [
+        [
+          "U1",
+          "20"
+        ],
+        [
+          "U1",
+          "34"
+        ],
+        [
+          "U1",
+          "39"
+        ],
+        [
+          "U1",
+          "52"
+        ],
+        [
+          "U2",
+          "3"
+        ],
+        [
+          "U2",
+          "8"
+        ],
+        [
+          "R2",
+          "2"
+        ],
+        [
+          "R3",
+          "2"
+        ],
+        [
+          "C3",
+          "1"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "RTL_5V": {
+      "endpoints": [
+        [
+          "U1",
+          "17"
+        ],
+        [
+          "U1",
+          "33"
+        ],
+        [
+          "C5",
+          "1"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "SPICS": {
+      "endpoints": [
+        [
+          "U1",
+          "24"
+        ],
+        [
+          "U2",
+          "1"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "SPISO": {
+      "endpoints": [
+        [
+          "U1",
+          "23"
+        ],
+        [
+          "U2",
+          "2"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "SPISI": {
+      "endpoints": [
+        [
+          "U1",
+          "18"
+        ],
+        [
+          "U2",
+          "5"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "SPICLK": {
+      "endpoints": [
+        [
+          "U1",
+          "19"
+        ],
+        [
+          "U2",
+          "6"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "SPISO3": {
+      "endpoints": [
+        [
+          "U1",
+          "22"
+        ],
+        [
+          "U2",
+          "7"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
+    "RESET_N": {
+      "endpoints": [
+        [
+          "U1",
+          "3"
+        ]
+      ],
+      "native_connectivity": "BOUNDARY_ONLY"
+    },
+    "ISOLATEB": {
+      "endpoints": [
+        [
+          "U1",
+          "12"
+        ]
+      ],
+      "native_connectivity": "BOUNDARY_ONLY"
+    },
+    "PERST_N": {
+      "endpoints": [
+        [
+          "U1",
+          "14"
+        ],
+        [
+          "J1",
+          "50"
+        ]
+      ],
+      "native_connectivity": "BOUNDARY_ONLY"
+    }
+  },
+  "boundary_only_open_groups": [
+    "ISOLATEB",
+    "PERST_N",
+    "RESET_N"
+  ],
+  "regression_flags": {
+    "RESET_N_missing_external_endpoint": true,
+    "ISOLATEB_missing_external_endpoint": true
+  },
+  "verdict": "PASS_WITH_EXPLICIT_OPEN_BOUNDARIES"
+}

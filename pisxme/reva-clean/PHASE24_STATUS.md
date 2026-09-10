@@ -32,6 +32,19 @@ These results close only the isolated Path-B CAD/connectivity check; the
 remaining Path-B authority, firmware/procurement, production-parity, acreage,
 and full Phase 24 gates remain OPEN.
 
+The consolidated support parity receipt passes 13 native support groups and
+explicitly records `RESET_N`, `ISOLATEB`, and `PERST_N` as open boundary or
+sequence findings. `RESET_N` is a concrete regression from the prior V12 TP6
+endpoint and must be repaired or re-authorized before Path-B promotion; the
+finding is not waived by the clean DRC result.
+
+The implementation generator also contains a reviewed RTL_3V3 transition
+correction: the previous B.Cu/F.Cu coincident endpoint lacked a via and was
+replaced with an outboard (99.6, 66.8) through-via after the original point
+was shown to violate QFN pad clearance. Regenerated native DRC is 0/0/0 and
+the native layer-transition audit reports zero un-viaed handoffs. This closes
+that local route defect only; broader Path-B and Phase 24 gates remain OPEN.
+
 The Path-B route-policy metrics are recorded in
 `PHASE24_RTL9210B_PATHB_V1603_METRICS.json`: all six nets are confined to
 F.Cu/B.Cu at 0.20 mm width with ordinary 0.60/0.30 mm vias and no plane-layer

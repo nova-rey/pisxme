@@ -44,6 +44,26 @@ The corrected local RTL9210B QFN land pattern also passes
 This is isolated CAD/DFM evidence; traceable production land-pattern
 confirmation remains open.
 
+## Generator transition correction — 2026-09-10
+
+The layer-transition audit found one real RTL_3V3 B.Cu/F.Cu handoff in the
+V1523 baseline without a via at (99.6, 66.05). The generator was corrected
+to remove that adjacent-QFN stub and place the through-via at (99.6, 66.8),
+outside the USB_DM/RTL_1V1 pad envelope. Regenerated native DRC is 0
+violations, 0 unconnected pads, and 0 footprint errors; the layer-transition
+audit reports zero un-viaed handoffs. Endpoint connectivity and all six
+negative controls remain passing. This is a local implementation correction,
+not an orientation or architecture change.
+
+## Support parity consolidation — 2026-09-10
+
+Claude's bounded review identified the missing consolidated support audit.
+The new native audit passes 13 mapped support groups against actual saved-
+board connectivity. It explicitly leaves `RESET_N`, `ISOLATEB`, and `PERST_N`
+open as boundary/control findings; `RESET_N` also records the regression from
+the older V12 TP6 basis. Receipt:
+`PHASE24_RTL9210B_PATHB_SUPPORT_PARITY_RECEIPT.md`.
+
 Date: 2026-09-10
 
 ## Paused state

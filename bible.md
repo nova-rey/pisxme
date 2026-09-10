@@ -10870,3 +10870,20 @@ the accepted local primitive. Receipt:
   The corrected QFN has 69 SMD/F.Cu pads, a 4.8 x 4.8 mm GND exposed pad,
   and no `through_hole` metadata. This closes isolated CAD/DFM evidence only;
   traceable production package confirmation remains open.
+
+## 2026-09-10 — corrected RTL_3V3 physical layer transition
+
+- The native layer-transition audit exposed an actual RTL_3V3 B.Cu/F.Cu
+  handoff without a via in the V1523 support baseline. The generator now
+  removes the orphaned adjacent-QFN stub and uses an outboard through-via at
+  (99.6, 66.8). Regenerated DRC is 0 violations / 0 unconnected pads / 0
+  footprint errors, with zero un-viaed layer handoffs; endpoint connectivity
+  and negative controls still pass.
+
+## 2026-09-10 — consolidated RTL9210B support parity
+
+- Added the native support-network parity audit and receipt. Thirteen mapped
+  support groups pass from actual saved-board connectivity. `RESET_N`,
+  `ISOLATEB`, and `PERST_N` remain explicit open boundaries; `RESET_N` is
+  recorded as a regression from the earlier V12 TP6 endpoint. No DRC or
+  validation severity was relaxed.
