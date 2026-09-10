@@ -10693,3 +10693,14 @@ V1456 is a rejected orthogonal U1.66 GND escape below the QFN pad row.
 Native DRC reported four violations: JTAG_TDO short/mask bridge, PEDET
 crossing, and LANE0_TXN crossing. Direct, zone, left-first, and orthogonal
 U1.66 launches have now been separately preserved; no candidate is promoted.
+## CURRENT PATH-B FOLLOW-UP — V1457/V1458 (2026-09-09)
+
+V1457 and V1458 tested a new ordinary-through-via edge-access class for the
+remaining RTL9210B U1.66/U1.69 GND continuity from the accepted V1428
+composite. They were both rejected by native DRC: V1457 reports 13
+violations, including LANE0_RXP/GND shorts and no-net pad clearance; V1458
+reports 5, including RESET_N/GND, LANE0_RXN/GND, and a source-field crossing.
+These are route-implementation failures, not evidence to relax the layer,
+clearance, or via policy. Raw candidates and receipts are preserved. The
+Path-B QFN field remains open; Path A remains preserved and is the fallback
+track for overall Phase 24 closure.

@@ -40,8 +40,11 @@ def main():
             failures.append(f"missing instance {ref}")
         if mpn not in text:
             failures.append(f"missing MPN {mpn}")
-    if 'property "Reference" "J5"' not in text:
-        failures.append("missing J5 AUTO / FORCE SATA / FORCE NVMe override")
+    # J5 was the superseded pre-correction reference and is also used by the
+    # unrelated power entry.  The live STORAGE authority is J8; accepting J5
+    # here would allow the stale mode-control association back into the gate.
+    if 'property "Reference" "J8"' not in text:
+        failures.append("missing J8 AUTO / FORCE SATA / FORCE NVMe override")
     if 'AUTO / FORCE SATA / FORCE NVMe' not in text:
         failures.append("mode override value missing")
     for label in ("MODE_IN", "AUTO_PEDET", "STORAGE_SEL"):

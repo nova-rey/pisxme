@@ -199,6 +199,11 @@ V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V1457/V1458 rejected two additional RTL9210B U1.66/
+U1.69 ordinary-via edge-access probes. Native DRC reported 13 and 5
+violations respectively, including real ground-to-signal shorts/clearance
+failures. Preserved both disposable boards and receipts; no layer, clearance,
+severity, Path-A, or production rule was changed.
 
 2026-09-09 — Phase 24 V1440/V1441 rejected westward R1 relocation trials:
 the mixed-layer escape conflicted with RTL_3V3/RTL_1V1, and the direct F.Cu

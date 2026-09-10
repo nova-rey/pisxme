@@ -44,3 +44,14 @@ approval and manufacturing review. Leaving U1.66 open is not acceptable.
 
 Path A remains preserved and available as the fallback architecture. This
 report is a Path-B disposition, not a waiver of the overall Phase 24 gate.
+
+## Follow-up native probes — V1457/V1458
+
+Two additional ordinary-through-via edge-access probes were run from the
+accepted V1428 composite and rejected on native KiCad 10.0.5 evidence. V1457
+used a near-bottom U1.66/U1.69 join and produced 13 violations, including
+lane/ground shorts and no-net pad clearance failures. V1458 moved the via
+farther below the field and produced 5 violations, including a RESET_N short,
+LANE0_RXN contact, and a source-field crossing. Neither probe changes the
+Path-B disposition or the approved clearance/layer contract. Their raw PCBs,
+generators, and DRC receipts are retained as route-implementation evidence.
