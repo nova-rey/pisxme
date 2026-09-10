@@ -81,6 +81,10 @@ V1392 and Path-A remain unchanged.
 Native DRC reported six crossings/shorts against SPI/control and 1V1
 geometry. The disposable evidence is preserved; accepted V1392 and Path A
 remain unchanged.
+
+2026-09-09 — Phase 24 V1443 compared the earlier V1123 RSET dogleg on V1428.
+It failed against the current RTL_1V1 shelf with one crossing and one short;
+the older route is not promoted and no accepted primitive changed.
 2026-09-09 — Phase 24 V1313: authored a targeted rotated-QFN lane escape
 with pad-adjacent departures, an explicit SPISO bypass, and staggered J1
 transitions. Native endpoint, negative-control, and DRC evaluation remain

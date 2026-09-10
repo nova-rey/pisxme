@@ -10639,3 +10639,8 @@ both the conservative and reduced obstacle models; therefore no PCB was
 written and no design conclusion is drawn from it. This is routing-tool
 evidence that the current grid abstraction cannot find a path, not a native
 DRC result or an architectural rejection.
+
+V1443 transplanted the earlier V1123 RSET dogleg onto V1428. The historical
+geometry fails on the current rail field with one RTL_1V1 crossing and one
+RSET/RTL_1V1 short at the `(92.5,66.05)` departure. It is retained as
+corroborating historical evidence only; no accepted primitive changed.
