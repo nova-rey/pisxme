@@ -10402,3 +10402,10 @@ inherited dangling RTL_3V3 stub identified by native DRC from the V1355 basis.
 Native DRC now reports zero violations (27 real unconnected support items
 remain). This does not close RTL9210B support; it removes stale copper without
 changing Path-A, production CAD, or the accepted control/lane primitives.
+
+V1367 is rejected by native DRC: co-authoring SPICLK with a right-side source
+transition still leaves the U1.20 transition within the SPICLK F.Cu source-row
+clearance envelope. The experiment preserved the full endpoint topology but
+did not produce an acceptable saved-board geometry. This remains a local
+source-field routing problem; no Path-B package, placement, or architecture
+decision changed.
