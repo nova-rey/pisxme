@@ -145,6 +145,12 @@ join attempts conflicted with the existing GND field and U1 exposed/no-net
 pads. Preserved the disposable evidence; the V1374 accepted basis remains
 unchanged and a different source-field allocation is required.
 
+2026-09-10 — Phase 24 V1379 accepted: U1.55 RTL_1V1 uses a same-layer F.Cu
+perimeter route around the exposed-pad/GND field and joins the accepted U1.50
+corridor. Native DRC is zero; saved-board audit and source-removal negative
+control pass for U1.36/U1.40/U1.50/U1.55/C4.1. U1.16/U1.25/U1.60/U1.63 remain
+open.
+
 2026-09-10 — Phase 24 V1371 rejected: the first RTL_1V1 split-bus attempt
 created 16 native DRC violations against the existing lane escape, U1.50
 neighboring USB pad, and RTL_3V3 corridor. Preserved as route evidence; the

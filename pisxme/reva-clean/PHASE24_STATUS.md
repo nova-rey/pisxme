@@ -10448,3 +10448,9 @@ crosses the existing GND field; V1378's F.Cu join enters the U1 exposed GND
 pad and the no-net U1.48 pad. These are preserved as route-implementation
 evidence. The accepted V1374/U1.50 basis remains authoritative; U1.55/U1.60/
 U1.63 require a co-authored escape that changes the source-field allocation.
+
+V1379 is accepted as the current U1.55 RTL_1V1 primitive. It stays on F.Cu,
+exits left of the exposed pad, rises above the GND/3V3 B.Cu fields, and joins
+the accepted U1.50 corridor without a new via. Native DRC reports zero
+violations; the saved-board audit passes U1.36/U1.40/U1.50/U1.55/C4.1 and the
+U1.55 source-removal negative control. U1.16/U1.25/U1.60/U1.63 remain open.
