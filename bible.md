@@ -10289,3 +10289,8 @@ descendant. All ten USB3/support endpoints passed, but native DRC found 155
 findings including PERST crossings and TX/support shorts. It is rejected as
 an uncoauthored transplant; V154 remains the accepted local primitive.
 Receipt: `PHASE24_STORAGE_SUPPORT_CAP_CLEAR_V156_RECEIPT.md`.
+V157 coauthored C86/C87, TX/RX source transitions, and target trunks, but
+native DRC remained 155 with a PERST/BRIDGE_3V3 short and source-field
+crossings. It is rejected integrated route evidence; V154 remains the
+accepted local primitive. Receipt:
+`PHASE24_STORAGE_SUPPORT_CAP_PERST_COAUTHORED_V157_RECEIPT.md`.
