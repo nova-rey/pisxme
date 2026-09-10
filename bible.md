@@ -138,6 +138,11 @@ remain unchanged.
 variant still shorted at the RTL_3V3 transition because the SPICLK F.Cu source
 row occupies its via clearance envelope. Preserved as local source-field
 evidence; Path-A and production CAD remain unchanged.
+
+2026-09-10 — Phase 24 V1368 accepted: transplanted the earlier native-clean
+RTL9210B U1.20 RTL_3V3 left dogbone/B.Cu escape onto the current V1359 basis.
+Native DRC is zero; saved-board audit and source-removal negative control pass
+for U1.20/U1.34/U1.39/U1.52/C3. U2/R2/R3 support joins remain open.
 2026-09-09 — Phase 24 V1347: accepted the RTL9210B CLKREQ_N primitive. Native
 U1.13-R3.1-J1.52 connectivity and the source-removal negative control passed;
 the overpass clears the lane and support fields. Native DRC retains only the

@@ -10409,3 +10409,10 @@ clearance envelope. The experiment preserved the full endpoint topology but
 did not produce an acceptable saved-board geometry. This remains a local
 source-field routing problem; no Path-B package, placement, or architecture
 decision changed.
+
+V1368 is accepted as the current U1.20 RTL_3V3 source primitive. It transplants
+the earlier V1064 left dogbone/B.Cu corridor onto the V1359 basis without
+reintroducing the current control/lane conflicts. Native DRC reports zero
+violations; the saved-board audit passes U1.20/U1.34/U1.39/U1.52/C3 and the
+U1.20 source-removal negative control. U2.3/U2.8/R2.2/R3.2 remain open and
+must be joined in a separate local support repair.
