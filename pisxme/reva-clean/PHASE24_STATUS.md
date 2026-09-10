@@ -10560,6 +10560,10 @@ V1419 is a rejected direct U1.66-to-exposed-pad GND trial. It retained one
 native LANE0_RXP crossing while reducing the fixture to 12 opens. The direct
 launch is not promoted; U1.66 ground attachment remains OPEN.
 
+V1422 is a rejected RSET outboard-shelf trial. Native DRC reported 12
+violations, including exposed-GND/no-net source-field conflicts and crossings
+against accepted RTL_1V1 geometry. RSET remains OPEN.
+
 V1420 is accepted as the J1 SSD_3V3 contact join. It links M.2 pads 2/4/6/8
 with short same-net F.Cu links, reports zero native DRC violations, and
 passes the saved-board endpoint/source-removal audit. The fixture falls to
