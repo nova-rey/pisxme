@@ -247,6 +247,10 @@ connection eliminated all 10 starved-thermal findings and reduced opens to
 350 while retaining zero shorting entries and passing USB3/SATA/J8 parity
 audits. V54 is the current preferred ground-return parent; remaining
 support/route closure is OPEN and no finding was waived.
+V58 added one corner POWER_GND stitch and exposed three true shorts after
+native refill; it is rejected at 601 / 349. V59 is a no-geometry refill
+control reproducing V54 at 601 / 350 with zero shorts, confirming V54 is
+stable and the V58 interaction is real.
 V57 tested a U14 `STORAGE_SEL` escape. The mode contract and SATA endpoint
 audits passed, but native DRC reported 614 / 350 and three real shorts to
 U12/U13 POWER_GND and TUSB_SATA_TXN. It is rejected; V54 remains the clean

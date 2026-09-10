@@ -10024,6 +10024,10 @@ parent. A bounded F.Cu POWER_GND zone reduced native opens from 399 to 355
 with zero shorts and preserved USB3/SATA connectivity, but introduced 10
 starved-thermal findings and raised total DRC to 611. No signal, authority,
 or validation rule changed; deliberate stitching/thermal cleanup remains.
+2026-09-09 — Phase 24 V58/V59 ground-stitch validation preserved. V58's
+single corner POWER_GND via exposed three real shorts after refill and was
+rejected; V59's no-geometry refill control reproduced V54 at 601 DRC / 350
+opens with zero shorts. V54 remains preferred; no validation rule changed.
 2026-09-09 — Reconciled PHASE24_STATUS.md with live storage routing evidence:
 V50 is the preferred disposable Path-A parent; V51 and V52 are rejected
 experiments; V50's USB3/SATA/parity PASS and native 601 DRC / 399 opens with
