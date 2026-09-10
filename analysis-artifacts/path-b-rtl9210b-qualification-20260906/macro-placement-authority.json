@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "AUTHORITATIVE",
+  "authority_agent": "macro_placement_authority",
+  "target": {
+    "reference": "U1",
+    "package": "RTL9210B-CG QFN-68",
+    "board_side": "F.Cu",
+    "rotation_degrees": 0,
+    "footprint_anchor_mm": [18.0, 8.0],
+    "exposed_pad_centroid_mm": [98.0, 70.0],
+    "pin_1_position_mm": [94.05, 68.0],
+    "pin_1_corner": "south-west"
+  },
+  "baseline": "pisxme/reva-clean/PHASE24_RTL9210B_U155_REHOME_V1517.kicad_pcb",
+  "edge_ownership": {
+    "west": ["XTAL_IN", "XTAL_OUT", "RSET", "REFCLK_P", "REFCLK_N", "LANE0_RX", "LANE0_TX"],
+    "east": ["SPI flash pins 18-24", "rail departures"],
+    "north_east": ["C3/C4/C5 decoupling", "PEDET/CLKREQ pull-ups"],
+    "south": ["RESET_N", "PEDET", "CLKREQ_N", "PERST_N", "ISOLATEB"]
+  },
+  "constraints": [
+    "ordinary through-vias only",
+    "no via-in-pad or microvias",
+    "no plane-layer signals",
+    "preserve the approved 0.20 mm global routing rule",
+    "keep XTAL_IN and XTAL_OUT separate",
+    "keep REFCLK away from crystal corridors"
+  ],
+  "rejected_variants": {
+    "status": "REJECTED_DISPOSABLE",
+    "families": ["90-degree orientation", "180-degree orientation", "V1549-V1558 local source/fanout experiments"]
+  },
+  "reopen": {
+    "allowed_only_for": "structural_physical_contradiction",
+    "requires": ["exact geometry", "manufacturing or channel rule", "affected mandatory interface", "shared-corridor or support-distance evidence", "multiple materially different failed methods"],
+    "does_not_reopen": ["immature DRC", "normal route failure", "another agent preference", "theoretical shorter alternative"]
+  }
+}
