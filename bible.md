@@ -10554,6 +10554,13 @@ the accepted local primitive. Receipt:
   mixed-net shorts. Preserved as rejected evidence; V79 remains the valid
   source-corrected parent.
 
+## 2026-09-10 — storage support-rail attachment V1564
+
+- Tested attaching U12/U13/R81 `STORAGE_3V3` pads to the V1562 In2 spine.
+  Connectivity improved by eight opens, but native DRC worsened from 603/342
+  to 634/334 with real local crossings/shorts. Rejected the common-spine
+  route class and retained V1562.
+
 ## 2026-09-10 — Phase 24 status reconciliation V1562
 
 - Updated `PHASE24_STATUS.md` with the live V1562 focused storage result,

@@ -61,6 +61,27 @@ via(232.0, 146.0)
 track(pt(232.0, 146.0), pt(211.1, 146.0), pcbnew.F_Cu, 0.60)
 track(pt(211.1, 146.0), pt(211.1, 149.05), pcbnew.F_Cu, 0.60)
 
+# Optional source-owned support-pad attachment for the integrated trial.  It
+# is disabled by default so the original V1562 fixture remains reproducible.
+if os.environ.get("PISXME_ATTACH_STORAGE_SUPPORT") == "1":
+    support = {
+        "U12": [(153.5, 136.6, 151.5, 136.6),
+                (154.8, 139.5, 154.8, 142.0),
+                (156.5, 135.0, 159.0, 135.0)],
+        "U13": [(178.5, 133.4, 176.0, 133.4),
+                (178.5, 136.6, 176.0, 136.6),
+                (179.8, 139.5, 179.8, 142.0),
+                (181.5, 135.0, 184.0, 135.0)],
+        "R81": [(125.5, 145.0, 125.5, 147.0)],
+    }
+    spine = pt(188.0, 146.0)
+    track(pt(232.0, 146.0), spine, pcbnew.In2_Cu, 0.60)
+    for entries in support.values():
+        for px, py, vx, vy in entries:
+            track(pt(px, py), pt(vx, vy), pcbnew.F_Cu)
+            via(vx, vy)
+            track(pt(vx, vy), spine, pcbnew.In2_Cu, 0.60)
+
 pcbnew.ZONE_FILLER(b).Fill(b.Zones())
 pcbnew.SaveBoard(str(OUT), b)
 print(OUT)
