@@ -9939,3 +9939,8 @@ V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V38 rejected: a left-side CM5 USB3 TX_N dogleg removed
+the original PER0_P crossing but disconnected J7.140-to-U12.12 and added an
+XOUT/JMS_XAVDDH short. Native DRC reported 623 violations / 400 opens.
+Preserved the disposable route and report; V37 remains the best valid Path-A
+candidate and no production copper changed.

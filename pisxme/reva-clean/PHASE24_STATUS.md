@@ -10724,3 +10724,11 @@ CORRECTION: V37 is not superseded by the paragraph above. The current
 with zero mismatches. V37 therefore remains a valid disposable 603-DRC/399-
 open route candidate with no shorting entries; its earlier comparison to
 `PHASE24_STORAGE_NATIVE_FINAL.xml` is historical only.
+items; no finding was waived.
+
+V38 tested a left-side CM5 USB3 TX_N dogleg from the valid V37 candidate. It
+removed the original TX_N/PER0_P crossing but failed native endpoint
+connectivity at J7.140-to-U12.12 and introduced an XOUT/JMS_XAVDDH short;
+native DRC reported 623 violations and 400 opens. V38 is rejected route
+implementation evidence. V37 remains the best valid disposable Path-A route
+candidate; no production copper changed.
