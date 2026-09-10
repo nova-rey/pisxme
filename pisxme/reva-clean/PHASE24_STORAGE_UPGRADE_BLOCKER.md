@@ -255,6 +255,11 @@ V57 tested a U14 `STORAGE_SEL` escape. The mode contract and SATA endpoint
 audits passed, but native DRC reported 614 / 350 and three real shorts to
 U12/U13 POWER_GND and TUSB_SATA_TXN. It is rejected; V54 remains the clean
 zero-shorting ground-access parent.
+V60/V61 tested ground-stitch and mode-support continuation. V60 exposed an
+NC26/STORAGE_SEL short after one outboard stitch. V61 moved STORAGE_SEL
+outboard, but native DRC still found U13 NC41/STORAGE_SEL and XOUT/JMS_XAVDDH
+shorts at 610 / 348. Both are rejected; V54 remains the clean parent and the
+next mode route must escape locally around U13.
 ## Follow-up implementation evidence — 2026-09-06
 
 Native inspection found inherited C44-C47 reference collisions in the

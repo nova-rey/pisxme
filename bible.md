@@ -10028,6 +10028,11 @@ or validation rule changed; deliberate stitching/thermal cleanup remains.
 single corner POWER_GND via exposed three real shorts after refill and was
 rejected; V59's no-geometry refill control reproduced V54 at 601 DRC / 350
 opens with zero shorts. V54 remains preferred; no validation rule changed.
+2026-09-09 — Phase 24 V60/V61 mode-support and ground-stitch continuations
+preserved and rejected. V60 exposed an NC26/STORAGE_SEL short after one
+outboard stitch; V61's right-corridor mode route exposed U13 NC41/STORAGE_SEL
+and XOUT/JMS_XAVDDH shorts at 610 DRC / 348 opens. V54 remains the clean
+parent; no production authority or validation rule changed.
 2026-09-09 — Reconciled PHASE24_STATUS.md with live storage routing evidence:
 V50 is the preferred disposable Path-A parent; V51 and V52 are rejected
 experiments; V50's USB3/SATA/parity PASS and native 601 DRC / 399 opens with
