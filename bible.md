@@ -10112,6 +10112,10 @@ outboard: all nine J3 contacts and the improved native negative control pass,
 with no new STORAGE_3V3 shorting entry, but native DRC remains 608 / 341
 versus V79 601 / 350 due added source/QFN clearance findings. V87 remains
 disposable; no production promotion or rule relaxation.
+2026-09-10 — Refilled V79 as a matched native baseline. V89's U14.5 power
+source trial still passes focused connectivity, but its regenerated board
+adds an XOUT/JMS_XAVDDH short absent from the matched V79 baseline. V89 is not
+accepted; the discrepancy is recorded for route/regeneration diagnosis.
 2026-09-10 — V88 tested a local F.Cu filled source pickup for the M.2 rail.
 The native nine-contact audit and negative control passed, but DRC stayed
 608 / 341 and added selector-field shorts. V88 was rejected; V87 remains

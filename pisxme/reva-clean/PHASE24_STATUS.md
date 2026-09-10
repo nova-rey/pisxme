@@ -10886,7 +10886,7 @@ V88 is rejected. V87 remains the best disposable physical-power trial.
 V89 instead sources the rail from existing non-QFN `U14.5`, with an ordinary
 through-via, In1 power trunk, and the outboard J3 drops. Native schematic,
 mode, USB3, SATA, and 9-contact power-owner audits pass, including the
-trace-removal negative control. DRC is 607 / 341 and retains only the
-inherited XOUT/JMS_XAVDDH shorting entry. V89 is the best disposable physical
-power candidate, not yet promoted while full-board DRC/manufacturing gates
-remain open.
+trace-removal negative control. DRC is 607 / 341, but the regenerated board
+adds an XOUT/JMS_XAVDDH short absent from the freshly refilled V79 baseline.
+V89 is not accepted; it remains the best disposable physical-power candidate
+pending removal of that short and completion of full-board gates.

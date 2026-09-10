@@ -62,7 +62,8 @@ ownership.
   through-via, an In1 power trunk, and the outboard J3 drops. Native storage
   schematic/mode audits, USB3 connectivity, SATA connectivity, and the
   nine-contact physical power audit (including trace-removal negative control)
-  pass. Native DRC is 607 violations / 341 unconnected items with only the
-  inherited `XOUT`/`JMS_XAVDDH` shorting entry; V89 is the best disposable
-  physical-power candidate, but is not yet promoted because the full-board
-  DRC and manufacturing gates remain open.
+  pass. Native DRC is 607 violations / 341 unconnected items, but the
+  regenerated board contains an `XOUT`/`JMS_XAVDDH` shorting entry not present
+  in the freshly refilled V79 baseline. V89 is therefore not accepted; it is
+  the best disposable physical-power candidate pending removal of that
+  regeneration-induced short and completion of the full-board gates.
