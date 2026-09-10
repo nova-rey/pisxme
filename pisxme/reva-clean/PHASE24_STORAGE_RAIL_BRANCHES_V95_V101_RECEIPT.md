@@ -22,6 +22,7 @@ production PCB authority.
 | V109 | Rotated selector pin-9 fixture under repository JLC rule profile | not applicable | 134 / 489 | ACCEPTED LOCAL GEOMETRY: no track-width or shorting findings; not integrated |
 | V110 | V94 under repository JLC rule profile | focused PASS | 254 / 341 | REJECT: NC_26/STORAGE_SEL short and 341 opens |
 | V111 | V104 under repository JLC rule profile | focused PASS, strict-source FAIL | 266 / 337 | REJECT: added crossings/shorts; not integrated |
+| V112 | V62-style left/top selector corridor on V94 under JLC profile | not applicable | 268 / 341 | REJECT: crossings, latent XOUT, selector-to-ground short |
 
 The focused audit proves the nine J3 contacts reach at least one
 `STORAGE_3V3` source through saved native copper. It does not waive the

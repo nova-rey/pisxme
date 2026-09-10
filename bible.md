@@ -10161,3 +10161,5 @@ authority, so no integrated rotation was promoted.
 The V109–V111 comparison used the repository's existing JLC rule profile and
 showed the selector package can be routed at the documented 0.15/0.13208-mm
 limits, but the integrated storage board still has real opens and shorts.
+V112 preserved the V62-style selector reroute as rejected evidence at native
+268/341; no long selector detour was promoted.

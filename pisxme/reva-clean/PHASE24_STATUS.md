@@ -10945,3 +10945,8 @@ that profile. V110 applied the same profile to V94: DRC fell to 254/341 but
 the NC_26/STORAGE_SEL short and all opens remain. V111 applied it to V104:
 266/337 with added crossings/shorts and strict-source failure. These are
 rule-profile comparisons only; no production rule or PCB has changed.
+V112 replayed the retained V62-style left/top selector corridor under the
+same JLC profile and was rejected at 268/341 with crossings, latent
+XOUT/JMS_XAVDDH, and a selector-to-ground short. It is worse than V110's
+254/341 baseline; the next repair must regenerate the local selector/source
+field rather than add another long detour.
