@@ -1,0 +1,14 @@
+{
+  "board": "PHASE24_MIC2545A_SUPPORT_FIXTURE.kicad_pcb",
+  "footprint": "U3",
+  "device": "MIC2545A-1YM",
+  "source": "Microchip DS20006921A, Drawing C04-2057-3BX Rev K",
+  "pitch_mm": 1.27,
+  "row_spacing_mm": 5.4,
+  "pad_length_mm": 1.55,
+  "pad_width_mm": 0.6,
+  "solder_mask_margin_mm": 0.0,
+  "paste_margin_mm": -0.05,
+  "courtyard_and_silkscreen": "PRESENT",
+  "verdict": "PASS"
+}

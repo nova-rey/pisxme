@@ -69,6 +69,12 @@ DFM geometry is now authored explicitly, but final assembly-house review and
 production RTL9210B integration remain open. Receipt:
 `PHASE24_MIC2545A_SUPPORT_FIXTURE_RECEIPT.md`.
 
+The independent `phase24_mic2545a_dfm_audit.py` now passes against the saved
+PCB: all eight pads are SMD/F.Cu with 1.55×0.60-mm dimensions, 1.27-mm pitch,
+5.40-mm row spacing, explicit mask/paste settings, and present courtyard and
+silkscreen graphics. This closes the disposable footprint geometry audit;
+assembly-house review and production integration remain open.
+
 ## Support parity consolidation — 2026-09-10
 
 Claude's bounded review identified the missing consolidated support audit.

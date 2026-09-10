@@ -10960,3 +10960,11 @@ the accepted local primitive. Receipt:
   remains clean. Final assembly-house review remains open because the native
   report's ignored no-courtyard category also covers other simple fixture
   footprints.
+
+## 2026-09-10 — closed disposable MIC2545A footprint DFM audit
+
+- Added `phase24_mic2545a_dfm_audit.py` and its saved-board JSON receipt. The
+  audit independently confirms all eight SMD/F.Cu pads, Microchip pitch/row
+  spacing and pad dimensions, explicit mask/paste settings, and present
+  courtyard/silkscreen graphics. Production assembly-house review and
+  RTL9210B integration remain open.

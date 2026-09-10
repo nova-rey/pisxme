@@ -4,14 +4,17 @@ Date: 2026-09-10
 
 Fixture: `PHASE24_MIC2545A_SUPPORT_FIXTURE.kicad_pcb`  
 Generator: `phase24_mic2545a_support_fixture.py`  
-Native DRC: `PHASE24_MIC2545A_SUPPORT_FIXTURE-drc.rpt`
+Native DRC: `PHASE24_MIC2545A_SUPPORT_FIXTURE-drc.rpt`  
+DFM audit: `PHASE24_MIC2545A_DFM_AUDIT.json`
 
 ## Result
 
 `DISPOSABLE_ELECTRICAL_FIXTURE_PASS`
 
 Native KiCad DRC reports zero violations, zero unconnected pads, and zero
-footprint errors. The fixture's saved-board audit uses native connectivity
+footprint errors. The independent saved-board DFM audit also passes all
+eight pad sizes, pitch, row spacing, layer, mask/paste settings, courtyard,
+and silkscreen assertions. The fixture's saved-board audit uses native connectivity
 from pads, tracks, vias, and zones; it does not synthesize graph edges.
 
 ## Verified physical ownership
