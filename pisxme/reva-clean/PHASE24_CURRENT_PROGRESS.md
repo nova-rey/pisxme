@@ -38,6 +38,12 @@ errors. This strengthens the isolated Path-B CAD gate only; it does not close
 firmware, procurement, production parity, acreage integration, or full Phase
 24 validation.
 
+The corrected local RTL9210B QFN land pattern also passes
+`phase24_rtl9210b_landpattern_audit.py`: 69 SMD/F.Cu pads, GND exposed pad
+69 at 4.8 x 4.8 mm, and no `through_hole` metadata in the source module.
+This is isolated CAD/DFM evidence; traceable production land-pattern
+confirmation remains open.
+
 Date: 2026-09-10
 
 ## Paused state

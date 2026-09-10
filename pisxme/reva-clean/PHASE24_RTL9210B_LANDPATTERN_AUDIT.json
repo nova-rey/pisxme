@@ -1,0 +1,19 @@
+{
+  "board": "PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED.kicad_pcb",
+  "footprint": "RTL9210B-CG",
+  "pad_count": 69,
+  "all_pads_smd": true,
+  "all_pads_fcu": true,
+  "exposed_pad": {
+    "number": "69",
+    "net": "GND",
+    "size_mm": [
+      4.8,
+      4.8
+    ]
+  },
+  "source_module": "RTL9210B-CG_QUALIFICATION.kicad_mod",
+  "source_attr_smd": true,
+  "source_through_hole_metadata_absent": true,
+  "verdict": "PASS_ISOLATED_LANDPATTERN_DFM"
+}

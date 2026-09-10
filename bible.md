@@ -10863,3 +10863,10 @@ the accepted local primitive. Receipt:
   are explicitly historical. Production parity, application-circuit,
   procurement, virgin-programming, firmware-provenance, SSD power/thermal,
   and acreage gates remain open.
+
+## 2026-09-10 — RTL9210B land-pattern DFM audit
+
+- Added the saved-board/source-module land-pattern audit and JSON receipt.
+  The corrected QFN has 69 SMD/F.Cu pads, a 4.8 x 4.8 mm GND exposed pad,
+  and no `through_hole` metadata. This closes isolated CAD/DFM evidence only;
+  traceable production package confirmation remains open.

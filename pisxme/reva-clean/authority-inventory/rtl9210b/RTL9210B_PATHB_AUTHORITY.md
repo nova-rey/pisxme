@@ -5,6 +5,17 @@ production-CAD authority**. Recommendation at V1560: **CONTINUE BOTH** with
 Path A protected as fallback.
 Updated 2026-09-10.
 
+## Live CAD update — 2026-09-10
+
+The corrected local QFN land pattern is now machine-audited against the
+native integrated Path-B candidate by
+`phase24_rtl9210b_landpattern_audit.py`: 69 pads are SMD on F.Cu, exposed
+pad 69 is GND at 4.8 x 4.8 mm, and the source module has explicit `attr smd`
+with no `through_hole` metadata. This closes the isolated CAD/DFM check for
+the local qualification footprint. It does not replace the still-open
+manufacturer/traceable-production land-pattern confirmation required before
+production promotion.
+
 ## Identity and package
 
 | Item | Current evidence | Status |
