@@ -10715,4 +10715,6 @@ pads). The older V37 narrative claimed parity against
 mismatches when applied to V37, including stale J5 and pre-normalization U12/
 U13 ownership. V37 and its raw DRC remain immutable historical route evidence,
 but V37 is no longer the current Path-A candidate. Native DRC/routing,
-mode-aware physical closure, and full-board Phase 24 remain OPEN.
+mode-aware physical closure, and full-board Phase 24 remain OPEN. A fresh
+native DRC receipt on this same saved basis reports 732 violations and 400
+unconnected items; no finding was waived.
