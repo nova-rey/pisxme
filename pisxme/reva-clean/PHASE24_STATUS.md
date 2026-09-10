@@ -10272,6 +10272,12 @@ native DRC reports 17 violations, including RXN/SPISO interaction,
 RXN/TXP and connector-launch conflicts, and source-field collisions with
 REFCLK/TXP. The candidate is preserved as route-implementation evidence;
 production CAD and Path-A assets remain unchanged.
+V1315 is rejected rotated-QFN lane-allocation evidence. Native saved-board
+connectivity and four complete source-removal negative controls pass, but
+native DRC reports 14 violations: RXN still intersects the retained SPISO
+trunk, the TX pair outer rows interact, and the RX/TX connector transitions
+remain too close. This is route-implementation evidence; no production or
+Path-A assets changed.
 V1313 is a targeted pad-adjacent continuation of the rotated-QFN class. It
 allocates immediate source escapes, bypasses the SPISO trunk, and staggers
 J1 transitions. The candidate remains disposable pending native endpoint,

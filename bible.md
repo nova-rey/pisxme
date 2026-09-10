@@ -78,6 +78,10 @@ saved-board endpoint and negative-control audits but native DRC reported 17
 violations across source-field, SPISO, pair-transition, and connector-launch
 geometry. Preserved the disposable candidate; production and Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V1315 rejected: rotated-QFN lane allocation passed
+native endpoints and four negative controls but DRC reported 14 source,
+SPISO, pair-row, and connector-transition violations. Preserved the
+disposable evidence; production and Path-A assets remain unchanged.
 2026-09-09 — Phase 24 V1312 rejected: the attempted rotated-QFN split-source
 escape caused native pad-field shorts/crossings and failed its saved-board
 lane endpoint audit; DRC reported 45 violations. Preserved the disposable
