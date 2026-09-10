@@ -10510,6 +10510,13 @@ field. The trial is route-implementation evidence only; no accepted
 primitive or Path-A asset changed. RTL_5V, U1.63, and remaining support/
 control groups remain OPEN.
 
+V1406 is a rejected RTL_5V U1.33-to-C5 upper-corridor trial; native DRC
+reported four crossings/shorts against the accepted 1V1/3V3 field. V1407 is
+a rejected RTL_3V3 localized B.Cu power-zone trial; its source via duplicated
+or conflicted with nearby ground support and native DRC reported seven
+clearance/overlap findings. Neither changes accepted Path-B primitives or
+Path-A.
+
 V1405 is a rejected RTL_3V3 support-join trial from V1392. It attempted to
 connect U2.3 to the accepted U1.20 rail through a lower B.Cu collector;
 native DRC reported 7 violations against LANE0_RXP, RTL_1V1, CLKREQ_N, and

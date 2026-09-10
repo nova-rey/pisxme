@@ -9787,6 +9787,10 @@ class. V1403 reached one local DRC crossing on a sparse rotated fixture;
 V1404's reroute introduced seven violations against the rotated lane/SPI
 field. Neither is production evidence; Path A and accepted V1392 remain
 unchanged.
+2026-09-09 — Phase 24 V1406/V1407 rejected independent rail implementations.
+V1406 RTL_5V upper routing retained four native crossings/shorts; V1407's
+localized RTL_3V3 B.Cu power zone retained seven via-clearance/overlap
+findings. Accepted V1392 and Path-A remain unchanged.
 2026-09-09 — Phase 24 V1316 rejected: adding four lanes to the native-clean
 V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
