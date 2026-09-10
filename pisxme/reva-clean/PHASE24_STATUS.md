@@ -19,6 +19,17 @@ production parity, acreage integration, and the remaining Phase 24 gates are
 still OPEN. Claude's U1 orientation remains CLOSED at 0 degrees, top side,
 pin 1 southwest.
 
+Post-checkpoint revalidation remains native-clean:
+`PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED-current-drc.rpt` reports
+0 violations, 0 unconnected pads, and 0 footprint errors; the saved-board
+census and support-parity audit also pass. This is not Phase 24 closure:
+`ISOLATEB` and `PERST_N` remain the two boundary-only support findings, and
+the MIC2545A relocation probe is rejected by its native receipt. The current
+implementation task is a coordinated U1 south-row/support handoff repair;
+the accepted 0-degree orientation and V1603 high-speed launch remain
+authoritative. The three physical-envelope launch strategies are historical
+rejected evidence, not a reason to generate more centerline variants.
+
 The next action is full Path-B and integrated Phase 24 validation from this
 candidate. Do not resume the rejected V1523 source-handoff or old V1517
 crystal/REFCLK route experiments.

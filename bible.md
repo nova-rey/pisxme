@@ -11043,3 +11043,12 @@ the accepted local primitive. Receipt:
   and ground-field collisions, incomplete rail/ground joins, and local
   board-edge/via spacing defects. Classified as route implementation
   evidence; the MIC2545A topology and frozen Path-B baseline remain valid.
+
+## 2026-09-10 — revalidated accepted Path-B baseline after pause checkpoint
+
+- Native KiCad DRC of the accepted V1603/V1523 integrated candidate reports
+  zero violations, zero unconnected pads, and zero footprint errors. The
+  saved-board census and support-parity audit pass, with only the explicit
+  `ISOLATEB`/`PERST_N` boundary findings remaining. This confirms the
+  rejected relocation probe did not alter the accepted baseline; coordinated
+  U1 south-row/support handoff work remains open.
