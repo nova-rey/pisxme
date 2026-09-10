@@ -10952,3 +10952,11 @@ the accepted local primitive. Receipt:
   published 5.40 mm row spacing, 1.55 x 0.60 mm contact pads, and 1.27 mm
   pitch, while native DRC and the duplicated-pin negative control continue to
   pass. Mask/paste/courtyard DFM and production integration remain open.
+
+## 2026-09-10 — authored explicit MIC2545A assembly geometry
+
+- Added explicit zero solder-mask expansion, -0.05 mm paste margin, and
+  F.CrtYd/F.SilkS graphics to the disposable MIC2545A footprint. Native DRC
+  remains clean. Final assembly-house review remains open because the native
+  report's ignored no-courtyard category also covers other simple fixture
+  footprints.

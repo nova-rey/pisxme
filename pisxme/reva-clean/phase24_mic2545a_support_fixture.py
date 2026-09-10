@@ -32,6 +32,9 @@ def pad(fp, number, x, y, n, size=(1.45, 0.65)):
     q.SetShape(pcbnew.PAD_SHAPE_ROUNDRECT)
     q.SetRoundRectRadiusRatio(0.18)
     q.SetAttribute(pcbnew.PAD_ATTRIB_SMD)
+    q.SetLocalSolderMaskMargin(pcbnew.FromMM(0.0))
+    q.SetLocalSolderPasteMargin(pcbnew.FromMM(-0.05))
+    q.SetLocalSolderPasteMarginRatio(0.0)
     layers = pcbnew.LSET(); layers.AddLayer(F); q.SetLayerSet(layers)
     q.SetNet(n); q.SetNetCode(n.GetNetCode())
     fp.Add(q)
@@ -63,6 +66,13 @@ def outline(board, x0, y0, x1, y1):
         q.SetShape(pcbnew.SHAPE_T_SEGMENT); q.SetStart(P(*a)); q.SetEnd(P(*z))
         q.SetLayer(pcbnew.Edge_Cuts); q.SetWidth(pcbnew.FromMM(0.05)); board.Add(q)
 
+def footprint_rect(fp, x0, y0, x1, y1, layer, width=0.05):
+    for a, z in [((x0, y0), (x1, y0)), ((x1, y0), (x1, y1)),
+                 ((x1, y1), (x0, y1)), ((x0, y1), (x0, y0))]:
+        q = pcbnew.PCB_SHAPE(fp)
+        q.SetShape(pcbnew.SHAPE_T_SEGMENT); q.SetStart(P(*a)); q.SetEnd(P(*z))
+        q.SetLayer(layer); q.SetWidth(pcbnew.FromMM(width)); fp.Add(q)
+
 def connected(board, a, z):
     board.BuildConnectivity()
     return z in board.GetConnectivity().GetConnectedItems(a)
@@ -86,6 +96,8 @@ u3p = {
     7: pad(u3, 7, ur, 99.365, nets["SSD_3V3_IN"], (1.55, 0.60)),
     8: pad(u3, 8, ur, 98.095, nets["SSD_3V3"], (1.55, 0.60)),
 }
+footprint_rect(u3, 97.05, 97.05, 102.95, 102.95, pcbnew.F_CrtYd)
+footprint_rect(u3, 97.15, 97.15, 102.85, 102.85, pcbnew.F_SilkS)
 
 src = footprint(b, "JIN", "SSD_3V3_SOURCE", 110, 100.635)
 srcp = pad(src, 1, 110, 100.635, nets["SSD_3V3_IN"], (1.0, 1.0))

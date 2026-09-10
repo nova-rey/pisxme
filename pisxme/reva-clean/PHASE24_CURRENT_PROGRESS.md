@@ -65,7 +65,8 @@ errors. Its saved-board audit proves physical duplicated-pin joins for
 MIC2545A `IN` 5/7 and `OUT` 6/8, and its trace-removal negative control passes.
 Its 1.27-mm pitch, 5.40-mm row spacing, and 1.55×0.60-mm pads match
 Microchip's current recommended 3BX SOIC land pattern; mask/paste/courtyard
-DFM review and production RTL9210B integration remain open. Receipt:
+DFM geometry is now authored explicitly, but final assembly-house review and
+production RTL9210B integration remain open. Receipt:
 `PHASE24_MIC2545A_SUPPORT_FIXTURE_RECEIPT.md`.
 
 ## Support parity consolidation — 2026-09-10

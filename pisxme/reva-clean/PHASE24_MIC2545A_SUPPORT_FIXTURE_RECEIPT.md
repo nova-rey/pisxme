@@ -36,7 +36,11 @@ local input bypass/ground return.
 This proves the corrected electrical pin ownership and a routing pattern in a
 disposable board. The fixture's 1.27-mm pitch, 5.40-mm row spacing, and
 1.55×0.60-mm pads match Microchip's current recommended 3BX SOIC land
-pattern. Mask/paste/courtyard and assembly-rule review remain open, as do SSD
-3.3-V source sizing, inrush/fault policy, and RTL9210B production integration.
+pattern. The fixture now authors explicit zero solder-mask expansion,
+−0.05-mm paste margin, and F.CrtYd/F.SilkS geometry. KiCad's report still
+lists generic no-courtyard checks among ignored checks for the other simple
+fixture footprints, so visual/assembly-house DFM review remains open, as do
+SSD 3.3-V source sizing, inrush/fault policy, and RTL9210B production
+integration.
 
 Source: <https://ww1.microchip.com/downloads/en/DeviceDoc/mic2545a.pdf>
