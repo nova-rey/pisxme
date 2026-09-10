@@ -153,6 +153,12 @@ seven native DRC violations in the QFN exposed-pad/3V3/1V1 field; V1424's
 west/top relocation retained one XTAL_OUT/RTL_1V1 crossing and one 0.100-mm
 clearance violation. Preserved both disposable fixtures and reports; no
 accepted Path-B primitive, production asset, or Path-A asset changed.
+
+2026-09-09 — Phase 24 V1425/V1426/V1427 rejected additional XTAL_OUT route
+classes; V1425 reduced the failure to one rail clearance, V1426 retained one
+rail crossing, and V1427 shorted RTL_3V3. V1428 then composed accepted V1418
+QFN-ground and V1420 SSD_3V3 primitives: native DRC zero, saved-board audit
+and two source-removal controls PASS, with ten unconnected pads remaining.
 2026-09-09 — Phase 24 V1422 rejected an outboard RSET B.Cu shelf. Native DRC
 reported 12 source-field, GND, and accepted-rail violations; RSET remains
 open and no production asset changed.

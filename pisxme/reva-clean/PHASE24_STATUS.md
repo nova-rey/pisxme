@@ -10581,3 +10581,17 @@ produced two native violations: a crossing between XTAL_OUT and RTL_1V1 and a
 0.100-mm clearance violation at the XTAL_OUT via. Neither trial is promoted;
 the crystal OUT connection remains OPEN. Path A and all accepted Path-B
 primitives remain unchanged.
+
+V1425/V1426/V1427 are rejected XTAL_OUT implementation trials. V1425's
+southwest corridor reduced the result to one clearance violation at the
+U1.55/RTL_1V1 rail; V1426's small transition move changed that to one native
+crossing; V1427 shorted U1.52/RTL_3V3 and retained additional field conflicts.
+These are route-implementation failures, not evidence against the RTL9210B
+topology.
+
+V1428 composes the independently accepted V1418 U1.45-to-exposed-pad GND
+launch with the accepted V1420 J1 SSD_3V3 contact join. Native DRC reports
+zero violations and the saved-board audit passes both endpoint assertions and
+independent source-removal negative controls for each primitive. The combined
+fixture has ten remaining unconnected-pad findings; crystal, RSET, REFCLK,
+U1.63/U1.66, and remaining support are still OPEN.

@@ -1,0 +1,1 @@
+PASS V1428 composed V1418 GND + V1420 SSD_3V3 native connectivity and two source-removal controls
