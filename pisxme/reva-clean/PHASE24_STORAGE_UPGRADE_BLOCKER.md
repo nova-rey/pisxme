@@ -200,6 +200,12 @@ entries, but remains 601 DRC / 399 opens and only relocates the local crossing.
 It is rejected as a non-improving route class; V46 remains the preferred
 disposable parent.
 
+V48 tested an upper `BRIDGE_SATA_RX_N` jog. Although the complete SATA audit
+passed, native DRC reported a real RX_N/TX_P short at the U7 transition via
+with 601 violations / 399 opens. It is rejected; V46 remains the preferred
+zero-shorting parent and the next class is coordinated U7 RX/TX source-field
+regeneration.
+
 ## CURRENT ROUTING STATE — 2026-09-09
 
 The current best disposable Path-A parent is V41, not the historical
