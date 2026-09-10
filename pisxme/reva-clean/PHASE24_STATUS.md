@@ -10510,6 +10510,12 @@ field. The trial is route-implementation evidence only; no accepted
 primitive or Path-A asset changed. RTL_5V, U1.63, and remaining support/
 control groups remain OPEN.
 
+V1405 is a rejected RTL_3V3 support-join trial from V1392. It attempted to
+connect U2.3 to the accepted U1.20 rail through a lower B.Cu collector;
+native DRC reported 7 violations against LANE0_RXP, RTL_1V1, CLKREQ_N, and
+PEDET geometry. The trial is route-implementation evidence only. No accepted
+Path-B primitive, PCIe route, or Path-A asset changed.
+
 V1403/V1404 tested the rotated-QFN V735 source-field class for U1.63. V1403
 reduced the local trial to one crossing but was based on a sparse, non-
 integrated rotated fixture; V1404's attempted barrier reroute introduced

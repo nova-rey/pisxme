@@ -64,6 +64,10 @@ trace-removal negative control. Support/control/REFCLK remain open.
 exposed real short/crossing classes despite reduced open counts. V311 remains
 the retained disposable sideband basis; Path A and production CAD are
 unchanged.
+2026-09-09 — Phase 24 V1405 rejected the first RTL_3V3 U2.3-to-U1.20 support
+join from V1392. The lower collector produced seven native DRC violations
+against existing lane/control/rail geometry. Evidence is preserved; accepted
+V1392 and Path-A remain unchanged.
 2026-09-09 — Phase 24 V1313: authored a targeted rotated-QFN lane escape
 with pad-adjacent departures, an explicit SPISO bypass, and staggered J1
 transitions. Native endpoint, negative-control, and DRC evaluation remain
