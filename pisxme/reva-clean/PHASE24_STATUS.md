@@ -10732,3 +10732,9 @@ connectivity at J7.140-to-U12.12 and introduced an XOUT/JMS_XAVDDH short;
 native DRC reported 623 violations and 400 opens. V38 is rejected route
 implementation evidence. V37 remains the best valid disposable Path-A route
 candidate; no production copper changed.
+V39 corrected V38's missing return-via authoring defect and restored native
+USB3 endpoint connectivity, but its left-side TX_N escape retained a long
+B.Cu continuation that introduced four real shorting classes. Native DRC
+reported 622 violations and 399 opens. V39 is rejected route-implementation
+evidence; the next attempt must regenerate the complete affected pair
+corridor rather than splice only the source segment.

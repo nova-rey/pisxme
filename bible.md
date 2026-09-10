@@ -9944,3 +9944,8 @@ the original PER0_P crossing but disconnected J7.140-to-U12.12 and added an
 XOUT/JMS_XAVDDH short. Native DRC reported 623 violations / 400 opens.
 Preserved the disposable route and report; V37 remains the best valid Path-A
 candidate and no production copper changed.
+2026-09-09 — Phase 24 V39 corrected the V38 endpoint-via authoring defect,
+restoring native USB3 connectivity, but introduced four real shorts in the
+long B.Cu TX_N continuation. Native DRC reported 622 violations / 399 opens.
+Preserved and rejected the disposable route; complete pair-corridor
+regeneration is required next.
