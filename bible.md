@@ -10415,3 +10415,13 @@ the accepted local primitive. Receipt:
 - Native DRC is 0 violations / 6 inherited opens. Native U1.55/U1.63
   connectivity and source-removal negative control pass. Crystal, REFCLK,
   firmware, procurement, integration, and full Path-B gates remain open.
+
+## 2026-09-10 — Phase 24 current-state documentation hygiene
+
+- Added explicit current-state overrides to the Phase 24 status, dual-mode
+  implementation, and RTL9210B QFN documents.
+- JMS583 support-network instantiation is now clearly current completed work;
+  older instantiation/TODO wording is marked superseded historical evidence.
+- RTL9210B V1517 is identified as the live accepted local basis, replacing
+  stale V1428/V1461 “latest” language; remaining crystal/REFCLK and broader
+  Path-B gates remain open. Raw evidence was not rewritten.

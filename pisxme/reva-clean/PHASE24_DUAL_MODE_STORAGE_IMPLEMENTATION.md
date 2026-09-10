@@ -1,5 +1,26 @@
 # Phase 24 dual-mode storage implementation
 
+## CURRENT STATE OVERRIDE — 2026-09-10
+
+This override is authoritative over the chronological history below. Path A's
+JMS583 support network is already instantiated in the authoritative schematic
+and current support-cohort artifacts; it is not a pending instantiation task.
+The current Path-A integrated support-field basis is V196, with native zero
+shorting items but remaining inherited opens, routing/DFM, and full-board
+closure gates.
+
+Path B remains isolated. Its current accepted local basis is V1517
+(`PHASE24_RTL9210B_U155_REHOME_V1517.kicad_pcb`), native DRC 0 violations /
+6 inherited opens, with U1.55/U1.63 connectivity and the source-removal
+negative control passing. XTAL_IN, XTAL_OUT, REFCLK/P/N, complete support,
+firmware/programming, procurement, integration, and A/B comparison remain
+OPEN. References to V1428/V1461 as the latest Path-B basis are superseded.
+
+Statements below about needing to instantiate JMS583 support, malformed
+pre-correction footprints, obsolete connector assumptions, or pre-parity
+routes are historical evidence only. Raw receipts, native reports, negative
+controls, and rejected experiments are retained unchanged.
+
 ## CURRENT STATE — reconciled 2026-09-10
 
 This section is the current narrative authority. Path A remains preserved and

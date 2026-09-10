@@ -1,5 +1,22 @@
 # RTL9210B Path-B QFN field disposition
 
+## CURRENT STATE OVERRIDE — 2026-09-10
+
+The active accepted local Path-B basis is now
+`PHASE24_RTL9210B_U155_REHOME_V1517.kicad_pcb`; the older V1428 composite and
+V1461 coupled-field descriptions below are historical baselines, not the
+current candidate. V1517 is native DRC clean at 0 violations / 6 inherited
+opens and passes U1.55↔U1.63 connectivity plus the saved-board source-removal
+negative control. The six remaining opens are XTAL_IN, XTAL_OUT, and REFCLK
+P/N endpoint groups. Complete QFN support, firmware/programming, procurement,
+integration, and Path-A/Path-B comparison remain OPEN.
+
+The earlier statement that Path B is not promoted because U1.66 cannot be
+escaped is superseded by V1466/V1469/V1491 and the V1517 continuation. The
+remaining issue is coordinated crystal/REFCLK support routing, not an
+unresolved U1.66 escape. Historical DRC reports and rejected trials remain
+immutable evidence.
+
 ## Current evidence
 
 The active saved-board base is `PHASE24_RTL9210B_ACCEPTED_PRIMITIVES_V1428.kicad_pcb`.

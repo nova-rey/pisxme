@@ -1,5 +1,23 @@
 # Phase 24 acreage validation status
 
+## CURRENT STATE OVERRIDE — 2026-09-10
+
+Read this section before the chronological experiment log. The live accepted
+Path-B local basis is `PHASE24_RTL9210B_U155_REHOME_V1517.kicad_pcb`, not the
+older V1183/V1428/V1461 summaries below. V1517 has native DRC 0 violations /
+6 inherited opens; U1.55↔U1.63 connectivity and the source-removal negative
+control pass. The remaining Path-B opens are XTAL_IN, XTAL_OUT, REFCLK_P/N.
+Full Path-B support, firmware/programming, procurement, integration, and the
+Path-A/Path-B decision remain OPEN.
+
+For Path A, the JMS583 support network is already instantiated in the live
+authoritative schematic and support-cohort artifacts. The current integrated
+support-field basis is V196 (`PHASE24_STORAGE_V75_COAUTHORED_V196.kicad_pcb`),
+which has zero native shorting items but remains open for inherited opens,
+routing/DFM, and full-board closure. Any older wording that says the JMS583
+network still needs instantiation is superseded historical evidence, not a
+current TODO. Raw reports and rejected experiments remain immutable.
+
 ## CURRENT PATH-B CHECKPOINT — V1183 combined crystal/GND/1V1 field accepted; V1123 remains the clean GND basis (2026-09-09)
 
 CURRENT UPDATE: V1135 tested a GND-diagonal XTAL_OUT overpass and was rejected
