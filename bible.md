@@ -10574,6 +10574,13 @@ the accepted local primitive. Receipt:
   handoff. It removed one open but produced QFN/USB-field shorts and raised
   native DRC to 620/341. Rejected the pad/via location; V1562 remains intact.
 
+## 2026-09-10 — isolated R81 storage-power tap V1567
+
+- Tested the low-density R81 lead separately. J3 connectivity and its
+  negative control remained passing; the revised In2 path removed the direct
+  `JMS_AVDDL` short but still added a USB-via clearance finding (605/341
+  versus V1562 603/342). Rejected the tested corridor and preserved V1562.
+
 ## 2026-09-10 — Phase 24 status reconciliation V1562
 
 - Updated `PHASE24_STATUS.md` with the live V1562 focused storage result,
