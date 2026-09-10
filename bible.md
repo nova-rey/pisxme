@@ -82,6 +82,11 @@ Native DRC reported six crossings/shorts against SPI/control and 1V1
 geometry. The disposable evidence is preserved; accepted V1392 and Path A
 remain unchanged.
 
+2026-09-09 — Phase 24 V1444 rejected a west/south R1 relocation trial. It
+exposed stale inherited local GND copper at the old footprint and retained
+an RTL_1V1 crossing; future relocation generation must move support return
+copper coherently.
+
 2026-09-09 — Phase 24 V1443 compared the earlier V1123 RSET dogleg on V1428.
 It failed against the current RTL_1V1 shelf with one crossing and one short;
 the older route is not promoted and no accepted primitive changed.
