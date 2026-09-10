@@ -9949,3 +9949,8 @@ restoring native USB3 connectivity, but introduced four real shorts in the
 long B.Cu TX_N continuation. Native DRC reported 622 violations / 399 opens.
 Preserved and rejected the disposable route; complete pair-corridor
 regeneration is required next.
+2026-09-09 — Phase 24 V40 accepted as the best disposable Path-A USB3
+source-field parent so far. An early ordinary-via B.Cu transition for TX_N
+removed the V37 PER0 crossing without V39's shorts; USB3/SATA/parity audits
+pass and native DRC is 600 violations / 399 opens with zero shorting entries.
+No production copper or validation rule changed.

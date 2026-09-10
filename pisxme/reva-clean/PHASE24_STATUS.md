@@ -10738,3 +10738,10 @@ B.Cu continuation that introduced four real shorting classes. Native DRC
 reported 622 violations and 399 opens. V39 is rejected route-implementation
 evidence; the next attempt must regenerate the complete affected pair
 corridor rather than splice only the source segment.
+V40 is the current best disposable Path-A USB3 source-field candidate. Its
+early B.Cu transition at `(72.0,106.3)` routes TX_N below the CM5 PER0_P F.Cu
+corridor and restores the original U12 endpoint through the native return via.
+USB3, SATA, and current J8 pad-parity audits pass; native DRC reports 600
+violations / 399 opens with zero shorting entries. V40 is not production
+authority. The next route class is complete affected-pair corridor cleanup
+from this native-valid parent.
