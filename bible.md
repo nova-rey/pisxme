@@ -157,6 +157,10 @@ native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
 
+2026-09-09 — Phase 24 V1440/V1441 rejected westward R1 relocation trials:
+the mixed-layer escape conflicted with RTL_3V3/RTL_1V1, and the direct F.Cu
+escape crossed R1 GND/RTL_1V1. V1428 remains accepted.
+
 2026-09-09 — Phase 24 V1439 rejected eastward R1 relocation: the RSET bypass
 crossed RTL_3V3/RTL_1V1 and shorted USB_RXN0. The trial is preserved; V1428
 remains the accepted composite base.

@@ -10627,3 +10627,8 @@ V1439 is a rejected eastward R1 relocation trial. Moving the footprint
 outboard preserved its two-pad topology but the attempted bypass introduced
 crossings with RTL_3V3 and RTL_1V1 and a short into USB_RXN0. The east shelf
 is not promoted; V1428 remains the accepted composite base.
+
+V1440/V1441 are rejected westward R1 relocation trials. V1440's mixed-layer
+escape retained an RTL_3V3 clearance conflict and crossed the RTL_1V1 B.Cu
+run. V1441's direct F.Cu corridor crossed both the R1 GND lead and RTL_1V1.
+Neither relocation is promoted; the accepted V1428 composite is unchanged.
