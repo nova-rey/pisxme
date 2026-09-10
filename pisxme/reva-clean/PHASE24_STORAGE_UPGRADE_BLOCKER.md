@@ -206,6 +206,12 @@ with 601 violations / 399 opens. It is rejected; V46 remains the preferred
 zero-shorting parent and the next class is coordinated U7 RX/TX source-field
 regeneration.
 
+V50 is the current best disposable local parent. Its right-side Manhattan
+`BRIDGE_SATA_RX_N` dogleg clears the V46 U7 RX_N/TX_N crossing without adding
+shorts. USB3, complete SATA endpoint connectivity, and current J8 pad parity
+pass; native DRC remains 601 violations / 399 opens with zero shorting
+entries. Remaining storage routing/support and full-board closure are OPEN.
+
 ## CURRENT ROUTING STATE — 2026-09-09
 
 The current best disposable Path-A parent is V41, not the historical

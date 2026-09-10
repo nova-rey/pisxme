@@ -9975,6 +9975,11 @@ endpoint connectivity but shorted RX_N to the existing BRIDGE_SATA_TX_P via.
 Native DRC remained 601 violations / 399 opens. Preserved board, report,
 script, and receipt; V46 remains the preferred parent and coordinated U7
 RX/TX source-field regeneration is required next.
+2026-09-09 — Phase 24 V50 accepted as the best disposable local storage
+parent. A right-side Manhattan U7 RX_N dogleg clears the local RX_N/TX_N
+crossing with zero native shorting entries; USB3/SATA/J8 parity audits pass
+and DRC remains 601 violations / 399 opens. No production PCB, validation
+rule, or layer contract changed.
 2026-09-09 — Phase 24 V46 accepted as the best coordinated disposable
 Path-A parent. It combines the V45 selector-side SATA corridors with a
 left-of-REFCLK CM5 USB3 TX_N source transition; USB3/SATA/native J8 parity
