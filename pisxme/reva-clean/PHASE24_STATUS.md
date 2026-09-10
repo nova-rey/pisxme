@@ -46,6 +46,11 @@ historical evidence. The V1570 receipt and board are not a full-board pass;
 U12/U13 QFN support-pad power fanout remains open after real ordinary-via
 clearance/crossing failures.
 
+V1572 is rejected historical evidence: narrowing the U12.13-to-far-via escape
+to 0.10 mm still added a track-width violation and a CM5_PERST crossing, while
+the QFN source-field clearance findings remained. This does not change the
+accepted V1570 R81 primitive or Path-A/Path-B decisions.
+
 The current Path-A storage repair has a focused V1562 primitive:
 `PHASE24_STORAGE_M2_POWER_IN2_ZONE_V1562.kicad_pcb`. Its native power-owner
 audit and trace-removal negative control pass for all nine J3

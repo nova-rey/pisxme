@@ -86,6 +86,10 @@ if os.environ.get("PISXME_ATTACH_STORAGE_SUPPORT") == "1":
         # Escape diagonally into the open pocket above R81.  The prior
         # horizontal escape crossed the adjacent C85/JMS_RESET_N launch.
         support = {"R81": [(125.5, 145.0, 126.5, 144.2)]}
+    if os.environ.get("PISXME_SUPPORT_VARIANT") == "u12_pad13_far":
+        # A distinct source-field class: leave the QFN edge immediately,
+        # then place the ordinary via outside the pad/via field.
+        support = {"U12": [(153.5, 136.6, 149.0, 136.6)]}
     spine = pt(188.0, 146.0)
     if os.environ.get("PISXME_SUPPORT_VARIANT") == "u12_pad13_monotonic":
         spine = pt(232.0, 133.5)
@@ -95,10 +99,13 @@ if os.environ.get("PISXME_ATTACH_STORAGE_SUPPORT") == "1":
         track(pt(150.0, 138.5), pt(150.0, 145.0), pcbnew.In2_Cu, 0.60)
         track(pt(150.0, 145.0), pt(232.0, 145.0), pcbnew.In2_Cu, 0.60)
         track(pt(232.0, 145.0), pt(232.0, 146.0), pcbnew.In2_Cu, 0.60)
+    if os.environ.get("PISXME_SUPPORT_VARIANT") == "u12_pad13_far":
+        spine = pt(150.0, 138.5)
     track(pt(232.0, 146.0), spine, pcbnew.In2_Cu, 0.60)
     for entries in support.values():
         for px, py, vx, vy in entries:
-            track(pt(px, py), pt(vx, vy), pcbnew.F_Cu)
+            local_width = 0.10 if os.environ.get("PISXME_SUPPORT_VARIANT") == "u12_pad13_far" else 0.30
+            track(pt(px, py), pt(vx, vy), pcbnew.F_Cu, local_width)
             via(vx, vy)
             if os.environ.get("PISXME_SUPPORT_VARIANT") == "r81_only":
                 # Clear reset on F.Cu, then clear the known USB via field.

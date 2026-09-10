@@ -10596,3 +10596,11 @@ the accepted local primitive. Receipt:
   pass. Focused native DRC is 604/341, with no new local R81/reset short.
   Accepted only as a focused primitive; U12/U13 QFN support fanout and
   full-board Phase 24 closure remain open.
+
+## 2026-09-10 — rejected U12 power fanout V1572
+
+- Tested a distinct far-via U12.13 source escape using a 0.10 mm local F.Cu
+  dogbone and ordinary through-via. Native DRC retained the QFN source-field
+  problem and added a track-width violation plus CM5_PERST crossing (605/341).
+  Rejected; a different footprint/source-field or coherent local regeneration
+  is required.
