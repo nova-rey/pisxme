@@ -10175,3 +10175,7 @@ was 262/499. V117 propagated the matcher into the USB3 rerouter but was
 rejected at 405/499 for true J7 source-field shorts/crossings. The A* endpoint
 halo is incompatible with the 0.4-mm connector pitch; the next route class is
 the existing explicit monotonic dogbone escape retargeted to U12.
+V118 retargeted that dogbone concept to U12 in a J7/U12-only fixture and was
+rejected at 14/63: source transitions shorted RX pair nets and TX corridors
+crossed. This remains route implementation evidence; the next candidate must
+separate pair transitions and layer corridors before U12 entry.

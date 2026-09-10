@@ -10971,3 +10971,11 @@ the 0.4 mm-pitch connector field. V116 remains the honest regeneration base;
 the next experiment is the existing explicit monotonic dogbone escape
 retargeted to U12. Receipt:
 `PHASE24_STORAGE_SCRUB_V116_USB3_V117_RECEIPT.md`.
+V118 tested the existing explicit dogbone concept against native U12 rather
+than U7, using a disposable J7/U12-only board. It was rejected at native
+14/63: the chosen source transitions shorted RX-N/RX-P, TX same-layer
+corridors crossed, and local transition clearance was insufficient. This is
+route implementation failure, not a placement failure. The next bounded
+candidate must separate source vias by pair and use non-crossing permitted
+layer corridors. Receipt:
+`PHASE24_USB3_U12_MONOTONIC_V118_RECEIPT.md`.
