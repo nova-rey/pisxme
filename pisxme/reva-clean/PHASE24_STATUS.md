@@ -10517,6 +10517,11 @@ negative control passing. V1412 is accepted only as the U1.33-to-C5 RTL_5V
 F.Cu source corridor (native DRC zero); V1413's attempt to join U1.17 added
 six native violations and is rejected. RTL_5V fan-in, U1.63, and remaining
 support/control groups remain OPEN.
+V1416/V1417 are rejected QFN-GND launch trials from V1415. V1416 reduced
+the support fixture to 12 opens but retained one native crossing with LANE0_RXP;
+V1417's lower re-route increased the native result to nine violations through
+RESET_N and no-net QFN-field interactions. Ground attachment remains OPEN;
+the accepted rail primitives and Path-A assets are unchanged.
 V1414 is a rejected same-layer U1.17 RTL_5V fan-in with one SPISI crossing.
 V1415 is accepted as the complete RTL_5V fan-in: U1.17 joins the accepted
 U1.33-to-C5 outboard rail through an offset F.Cu right-side route. Native DRC

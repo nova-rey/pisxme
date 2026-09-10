@@ -166,6 +166,10 @@ native DRC and saved-board/source-removal audit passed. V1412 accepted the
 U1.33-to-C5 RTL_5V corridor with native DRC zero; V1413 rejected the U1.17
 fan-in with six native violations. V1409/V1410 remain rejected alternatives;
 Path A and production CAD remain unchanged.
+2026-09-09 — Phase 24 V1416/V1417 preserved rejected QFN-GND launch trials.
+V1416 retained one LANE0_RXP crossing; V1417's lower route retained nine
+native violations against RESET_N and the QFN field. Ground closure remains
+open; accepted rail primitives and Path A are unchanged.
 2026-09-09 — Phase 24 V1415 accepted the complete RTL_5V fan-in after native
 DRC reported zero violations and the saved-board U1.17/U1.33/C5.1 endpoint
 and source-removal audit passed. V1414 remains rejected for its SPISI
