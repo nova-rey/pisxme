@@ -10936,3 +10936,11 @@ the accepted local primitive. Receipt:
   unconnected items, and 0 footprint errors. This is disposable electrical
   support evidence; final manufacturer land-pattern and production
   integration gates remain open.
+
+## 2026-09-10 — separated SOIC package drawing from land-pattern authority
+
+- Recorded that the official MIC2545A document establishes the 8-pin SOIC
+  identity and 1.27 mm pitch but does not publish a recommended PCB land
+  pattern. The disposable electrical fixture therefore remains valid for
+  pin-join evidence only; production pad geometry, mask, paste, and courtyard
+  still require a separately reviewed source.

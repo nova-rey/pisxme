@@ -36,6 +36,17 @@ current limit is `I_LIMIT = 230 / R_SET`, with `R_SET` between 76.8 Ω and
 459 Ω; the existing 76.8 Ω value is therefore nominally about 3 A, subject
 to the datasheet tolerance and thermal checks.
 
+## Package-drawing limitation
+
+The same document's package-information page identifies the 8-pin SOIC (M)
+body and 1.27 mm lead pitch, but it is a mechanical package drawing rather
+than a recommended PCB land-pattern table. It therefore establishes package
+identity and pin pitch, not the final pad length, toe/heel allowance,
+solder-mask expansion, paste reduction, or courtyard. The disposable fixture
+receipt records this limitation; a production footprint must be sourced from
+an explicit manufacturer recommendation or independently reviewed against the
+assembly-house rules before promotion.
+
 ## Reconciliation against retained corroborating evidence
 
 The retained community RTL9210B XML is useful evidence that pin 12
@@ -59,4 +70,3 @@ This closes the MIC2545A device pin/application fact needed for the
 support network, SSD power/inrush budget, or the final choice to promote
 MIC2545A. Those remain explicit downstream gates rather than hidden
 assumptions.
-
