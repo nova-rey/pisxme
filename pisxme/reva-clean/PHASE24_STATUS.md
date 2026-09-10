@@ -10870,3 +10870,7 @@ disposable rejected route trials; the next task is a pad-aware, collision-free
 storage-rail implementation. See
 `PHASE24_STORAGE_M2_POWER_OWNER_V81_V82_RECEIPT.md` and
 `phase24_storage_m2_power_owner_audit.py`.
+V83 then moved the long trunk to In1 power copper, but its ordinary through
+vias collided with the existing B.Cu SATA field; native DRC reported 613
+violations / 341 opens and real STORAGE_3V3 shorts. V83 is rejected. Source
+ownership remains correct, while collision-free physical power access is open.

@@ -10102,3 +10102,7 @@ power pads were not physically connected. V81 broad-zone and V82 ordinary-via
 trunk trials were preserved; V82 passed physical connectivity but was rejected
 by native DRC for new rail shorts/crossings. No rules were weakened. Receipt:
 `PHASE24_STORAGE_M2_POWER_OWNER_V81_V82_RECEIPT.md`.
+2026-09-10 — V83 moved the M.2 storage-rail trunk to In1 power copper. Native
+connectivity and the negative control passed, but ordinary through-vias still
+collided with existing B.Cu storage/SATA copper; native DRC reported 613 / 341
+with real STORAGE_3V3 shorts. V83 was rejected; no rule relaxation.

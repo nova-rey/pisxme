@@ -34,3 +34,11 @@ PASS trace-removal negative control
 The next route attempt must preserve that proof while moving the power trunk
 into an actually free storage corridor or using a reviewed power-plane access
 strategy.  No DRC rule was weakened.
+
+* V83 (`PHASE24_STORAGE_M2_POWER_PLANE_V83.kicad_pcb`) moved the long trunk to
+  In1 power copper while retaining F.Cu pad dogbones and ordinary through-vias.
+  Native connectivity and the negative control passed, but the existing B.Cu
+  signal field made the through-via locations collide; native DRC reported 613
+  violations / 341 unconnected items and real `STORAGE_3V3` shorts. V83 is
+  rejected. This is a route-corridor failure, not evidence against source
+  ownership.
