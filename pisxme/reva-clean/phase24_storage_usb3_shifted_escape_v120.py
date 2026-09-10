@@ -4,7 +4,7 @@ import pcbnew
 
 R = Path(__file__).resolve().parent
 BASE = R / 'PHASE24_STORAGE_COPPER_SCRUBBED_V116.kicad_pcb'
-OUT = R / 'PHASE24_STORAGE_USB3_SHIFTED_ESCAPE_V124.kicad_pcb'
+OUT = R / 'PHASE24_STORAGE_USB3_SHIFTED_ESCAPE_V126.kicad_pcb'
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 W = pcbnew.FromMM(.13208)
 JOBS = (

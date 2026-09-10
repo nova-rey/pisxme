@@ -11009,3 +11009,8 @@ remaining first DRC findings are inherited CM5_REFCLK clearance and other
 unfinished-board findings. V127 is the best current integrated USB3
 route-development candidate, not Phase 18/24 closure. Receipt:
 `PHASE24_USB3_INTEGRATION_V127_RECEIPT.md`.
+V125 rebuilt the V123 native net list before zone refill and reduced DRC to
+148/499 while retaining no USB3 shorts/crossings; V126's target-transition
+rearrangement reintroduced RX shorts/crossings at 153/499 and is rejected.
+V125 remains useful refill evidence, while V127 remains the best integrated
+USB3 candidate after moving R80.

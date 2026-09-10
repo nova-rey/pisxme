@@ -8921,6 +8921,9 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+V125 rebuilt V123's native net list before zone refill and reduced DRC to
+148/499 without USB3 shorts/crossings. V126's target-transition rearrangement
+reintroduced RX shorts/crossings and was rejected at 153/499.
 
 2026-09-10 — Phase 24 V1375/V1376 rejected: U1.55 RTL_1V1 perimeter escapes
 conflicted first with the accepted RTL_3V3 field and then with the existing

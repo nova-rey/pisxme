@@ -15,6 +15,13 @@ gate is not clean.
 V124 moved the endpoint transitions and refilled zones. Native DRC reported
 153 findings including RX pair shorts and crossings, so it is rejected.
 
+V125 rebuilt V123's native net list before zone refill. DRC improved from
+300 to 148 findings, with the USB3 shorts/crossings absent; the remaining
+local findings included the R80 corridor and inherited board issues. V126
+then moved target transitions to the U12-side final-mile rows, but DRC again
+reported 153 findings with RX shorts/crossings. V125 is retained as evidence
+of the refill improvement; V126 is rejected.
+
 The evidence separates the problems: V121 proves the pair-aware route in
 isolation; V123 proves the PERST crossing can be removed without USB3 shorts;
 the next candidate must use a via/plane-compatible local transition and then
