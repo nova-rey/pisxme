@@ -10072,3 +10072,5 @@ native DRC retained 19 violations, so it was rejected without rule relaxation.
 Fresh V54 native gate audit on 2026-09-10 recorded 601 DRC violations and
 350 opens with no shorts; focused USB3/SATA/parity/support/VBUS/VCCO audits
 pass with negative controls. No Phase 24 findings were waived.
+V76/V77 attempted the adjacent BRIDGE_R1 support pair and were rejected for
+native source-field shorts; V75 remains the clean parent.

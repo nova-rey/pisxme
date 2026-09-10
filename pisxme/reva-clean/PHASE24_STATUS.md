@@ -10810,6 +10810,11 @@ SATA endpoints, J8 pad parity (814 / 1263 / 0), JMS583 support cohorts, VBUS,
 and VCCO-zone checks pass with negative controls. This closes focused support
 authority only; all native routing/manufacturing findings remain open. Raw
 summary: `PHASE24_STORAGE_V54_CURRENT_GATE_AUDIT_20260910.md`.
+V76/V77 tested the adjacent `BRIDGE_R1` support pair. V76 added the missing
+net but introduced source-field shorts; V77 co-authored both pair nets and
+still reported native shorts to `JMS_VBUS_SENSE` and between R1/R1RTN. Both
+are rejected; V75 remains the preferred parent. Evidence:
+`PHASE24_STORAGE_V76_V77_R1_PAIR_RECEIPT.md`.
 V1461 is a rejected broader coupled Path-B source-field experiment. It
 co-authored all four lane-0 source corridors with U1.66 GND, but native DRC
 reported 19 violations / 14 opens, including RXP/RXN and RTL_1V1/RTL_3V3
