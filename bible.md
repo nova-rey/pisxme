@@ -10439,6 +10439,14 @@ the accepted local primitive. Receipt:
   lane-pair shorts/crossings and support-net conflicts. Rejected; the next
   trial must use orthogonal ordered transitions with explicit reservation.
 
+## 2026-09-10 — rejected stripped orthogonal RTL9210B launch V1597
+
+- V1597 removed unrelated support copper and tested six-net orthogonal launch
+  channels. Native DRC found 20 violations and 39 fixture opens; remaining
+  defects were connector-side via clearance at the 0.5 mm J1 pitch and
+  offset-dogbone/crossing geometry. Rejected; launch vias must move outside
+  the contact pitch.
+
 ## 2026-09-10 — Phase 24 RTL9210B V1547 crystal source sweep
 
 - V1547 generated and native-checked 16 crystal source variants from V1523.

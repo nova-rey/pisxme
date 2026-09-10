@@ -61,6 +61,12 @@ lane-pair shorts/crossings and support-net conflicts. It is preserved as a
 negative control; the next trial changes the transition geometry to
 orthogonal ordered channels without changing the fixed U1 orientation.
 
+V1597 stripped unrelated support copper and tested six-net orthogonal launch
+channels. Native DRC rejected it with 20 violations and 39 fixture opens.
+The remaining defects are localized to 0.6 mm connector-side vias against
+0.5 mm J1 pitch and offset dogbone/crossing geometry. No candidate was
+promoted; the next trial must move launch vias outside the contact pitch.
+
 V1592 corrected the endpoint rectangle model and generated complete paths for
 all six handoff-to-J1 nets, but native DRC rejected them with 594 clearance
 violations. No candidate was promoted; the corrected endpoint model remains
