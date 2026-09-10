@@ -139,6 +139,11 @@ V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V1396-V1398 rejected additional U1.63 RTL_1V1 source
+escapes from the accepted V1392 U1.60 basis. Jogged, lower-pocket, and
+diagonal-top departures retained five native DRC violations each, chiefly
+PCIe source-field collisions. Evidence is preserved; V1392 and Path-A remain
+unchanged and U1.63 remains open.
 2026-09-09 — Phase 24 V1385-V1389 explored the remaining RTL_1V1 source-field
 class from V1384. V1385 coupled U1.60/U1.63 and was rejected at 10 native DRC
 violations; V1386 reduced U1.60 alone to 3; V1387 reduced it to one

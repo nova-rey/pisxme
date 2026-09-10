@@ -10487,3 +10487,10 @@ negative control pass. V1393/V1394/V1395 are rejected U1.63 additions: they
 retain two, two, and four native violations respectively from lane-source or
 QFN clearance conflicts. U1.63 and remaining support/control groups remain
 OPEN.
+
+V1396/V1397/V1398 are rejected U1.63 source-field experiments from the
+accepted V1392 U1.60 basis. They attempted jogged, lower-pocket, and diagonal
+top departures; native DRC retained 5, 5, and 5 violations respectively,
+including collisions with the existing PCIe source field. They are preserved
+as route-implementation evidence. V1392 remains the accepted U1.60 primitive;
+U1.63 and remaining support/control groups remain OPEN.
