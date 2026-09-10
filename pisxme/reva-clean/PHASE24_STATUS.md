@@ -10555,3 +10555,7 @@ reduced the local trial to one crossing but was based on a sparse, non-
 integrated rotated fixture; V1404's attempted barrier reroute introduced
 seven native violations against the rotated lane/SPI field. Both remain
 disposable comparison evidence. No production asset changed.
+
+V1419 is a rejected direct U1.66-to-exposed-pad GND trial. It retained one
+native LANE0_RXP crossing while reducing the fixture to 12 opens. The direct
+launch is not promoted; U1.66 ground attachment remains OPEN.

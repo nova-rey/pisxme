@@ -147,6 +147,9 @@ V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V1419 rejected the direct U1.66-to-exposed-pad GND
+trial; native DRC retained one LANE0_RXP crossing. The U1.45 primitive remains
+accepted and U1.66 ground closure remains open.
 2026-09-09 — Phase 24 V1396-V1398 rejected additional U1.63 RTL_1V1 source
 escapes from the accepted V1392 U1.60 basis. Jogged, lower-pocket, and
 diagonal-top departures retained five native DRC violations each, chiefly
