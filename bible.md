@@ -139,6 +139,12 @@ V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V1385-V1389 explored the remaining RTL_1V1 source-field
+class from V1384. V1385 coupled U1.60/U1.63 and was rejected at 10 native DRC
+violations; V1386 reduced U1.60 alone to 3; V1387 reduced it to one
+RTL_1V1/RTL_3V3 B.Cu crossing; V1388 and V1389 were rejected at 10 and 4.
+All are preserved as disposable route evidence. The V1384 accepted U1.16/
+U1.25 basis and Path-A assets remain unchanged; U1.60/U1.63 remain open.
 2026-09-09 — Phase 24 V1384 accepted the U1.25 RTL_1V1 fanout on the complete
 V1382 U1.16 basis. Native DRC reports zero violations with 18 fixture opens.
 The corrected saved-board audit derives connectivity from KiCad's loaded

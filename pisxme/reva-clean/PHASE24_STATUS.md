@@ -10468,3 +10468,13 @@ escape to the established 1V1 trunk. Native DRC reports zero violations with
 U1.25, U1.36, U1.40, U1.50, U1.55, and C4.1; its source-segment removal
 negative control proves that C4.1 is not connected through an expected-only
 edge. U1.60/U1.63 and the remaining Path-B support/control groups remain open.
+
+V1385/V1386/V1387/V1388/V1389 are retained U1.60/U1.63 route-class evidence,
+not production closure. V1385's coupled lower shelves produced 10 native DRC
+violations. V1386's U1.60 upper shelf reduced the candidate to three, and
+V1387's far-west B.Cu shelf reduced it to one real RTL_1V1/RTL_3V3 crossing.
+V1388 and V1389 tested alternate layer and lower-west escapes and were
+rejected with 10 and 4 violations respectively. These are route
+implementation failures on the V1384 basis; the next trial must preserve the
+accepted U1.25/U1.16 work while routing around the RTL_3V3 barrier. U1.60,
+U1.63, and remaining support/control groups remain OPEN.
