@@ -10060,6 +10060,9 @@ The 2026-09-10 JMS583 support triage was corrected for each audit's actual
 input contract; support authority, VBUS divider, and VCCO zone now pass with
 negative controls against the V54 saved board. The apparent failures were
 tool invocation errors, not design evidence.
+V75 connected the native U7.39-to-R24.2 BRIDGE_R1RTN pads; DRC stayed at 601,
+opens fell to 349, and no shorts were introduced. USB3/SATA/parity remained
+passing, so V75 is the preferred disposable storage parent.
 The 2026-09-10 RTL9210B V1460 coupled QFN experiment co-authored U1.66 GND
 with LANE0_RXN and retained 15 native DRC violations against adjacent
 lane/JTAG copper. It was rejected without rule relaxation; Path A stayed

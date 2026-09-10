@@ -10793,6 +10793,11 @@ through their required environment-selected PCB inputs. All three pass with
 negative controls, as recorded in
 `PHASE24_STORAGE_SUPPORT_AUDIT_20260910.md`. The earlier apparent failures
 were invocation errors, not live design defects.
+V75 adds the missing native U7.39-to-R24.2 `BRIDGE_R1RTN` connection using a
+coordinated F.Cu/B.Cu route and ordinary through-vias. Native DRC remains 601
+but opens fall to 349 with zero shorting entries; USB3, SATA, and J8 parity
+remain PASS. V75 is now the preferred disposable storage parent. Receipt:
+`PHASE24_STORAGE_V75_R1RTN_RECEIPT.md`.
 V1460 is a rejected coupled Path-B experiment that regenerated LANE0_RXN with
 the U1.66 GND escape. Native DRC reported 15 violations / 10 opens, with the
 remaining conflicts moving to LANE0_TXP, LANE0_TXN, and JTAG_TCK. It confirms
