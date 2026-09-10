@@ -11033,3 +11033,10 @@ support. Native DRC rejected it at 177/499 with RX pair shorts/crossings into
 POWER_GND, each other, and JMS_AVDDL. The router class is retired for this
 dense package field; the next support route must use explicit package-aware
 pair transitions. Receipt: `PHASE24_STORAGE_RX_SUPPORT_V131_RECEIPT.md`.
+V132 selectively transplanted only the saved TX support legs and moved
+C86/C87, but native DRC rejected it at 150/499 with a real CM5_PERST to
+BRIDGE_3V3 short at TP5, a PERST crossing, and a local JMS TX-pair clearance
+finding. The y=150 support corridor is not transplantable through the live
+TP5/PERST geometry. The next candidate must shift that local corridor; no
+production support copper is promoted. Receipt:
+`PHASE24_STORAGE_TX_SUPPORT_V132_RECEIPT.md`.

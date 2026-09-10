@@ -8921,6 +8921,10 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+V132 selectively translated the isolated TX support legs and moved C86/C87,
+but native DRC rejected it at 150/499 for a CM5_PERST-to-BRIDGE_3V3 short at
+TP5, a PERST crossing, and local TX-pair clearance. The saved y=150 support
+corridor is not transplantable; local corridor shifting remains required.
 V131's RX-only obstacle-aware A* support escape was rejected at 177/499 for
 real RX shorts/crossings into POWER_GND and JMS_AVDDL. Coarse A* is retired
 for the dense support field; explicit package-aware transitions are next.
