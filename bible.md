@@ -82,6 +82,10 @@ Native DRC reported six crossings/shorts against SPI/control and 1V1
 geometry. The disposable evidence is preserved; accepted V1392 and Path A
 remain unchanged.
 
+2026-09-10 — Phase 24 V1454 corrected the local GND-zone priority/API and
+reached native DRC zero, but U1.66 remained an unconnected pad. DRC zero was
+not treated as connectivity closure; the zone candidate was rejected.
+
 2026-09-10 — Phase 24 V1453 rejected coupled RSET/RTL_1V1 reallocation:
 native DRC found six QFN-field violations, including U1 pad 69 GND and
 RTL_3V3 conflicts. No accepted primitive changed.

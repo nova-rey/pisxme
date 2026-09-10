@@ -10671,3 +10671,9 @@ V1450 is a rejected outboard REFCLK pair transplant from V1428. Native DRC
 reported 24 violations, including QFN source-field shorts, REFCLK_N/GND and
 REFCLK_N/USB_RXN0 conflicts, and overlapping connector-side launches. The
 route is not promoted; REFCLK remains OPEN and no accepted primitive changed.
+
+V1454 tested a priority-corrected local F.Cu GND zone around the QFN. Native
+DRC reports zero violations, but native unconnected analysis still reports
+U1.66 disconnected from the zone; therefore this is not an accepted ground
+solution. The first same-priority zone attempt was a tooling/API failure and
+was corrected before this result. No accepted primitive changed.
