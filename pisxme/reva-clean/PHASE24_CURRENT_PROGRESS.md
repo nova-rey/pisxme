@@ -64,6 +64,11 @@ endpoint for `RESET_N`; only `ISOLATEB` and `PERST_N` remain boundary/control
 findings. Receipt:
 `PHASE24_RTL9210B_PATHB_SUPPORT_PARITY_RECEIPT.md`.
 
+The retained RTL9210B reference XML narrows `ISOLATEB` to a documented
+corroborating pattern: U1.12 enables a MIC2545A-1YM SSD high-side switch.
+This is recorded in `RTL9210B_ISOLATEB_CORROBORATION.md`; it remains a
+candidate until PiSXMe rail/inrush/fault authority is reconciled.
+
 Date: 2026-09-10
 
 ## Paused state

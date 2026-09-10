@@ -21,6 +21,11 @@ Explicit open boundaries are `ISOLATEB` (U1.12 boundary-only) and `PERST_N`
 TP6 endpoint for `RESET_N` was restored and is now natively connected in the
 integrated candidate.
 
+`RTL9210B_ISOLATEB_CORROBORATION.md` records the retained community
+MIC2545A-1YM implementation as a candidate support direction. It is not
+promoted until the PiSXMe SSD-power source, inrush/current budget, and
+production application circuit are reconciled.
+
 These are support-authority/open-gate findings, not waived DRC errors. The
 isolated candidate remains native DRC-clean and the six high-speed endpoint
 and negative-control audits remain passing. No Path-A or production CAD was

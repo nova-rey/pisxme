@@ -10894,3 +10894,10 @@ the accepted local primitive. Receipt:
   generator. Native DRC remains 0/0/0; the support audit reports 14 closed
   groups, the integrated RESET_N trace-removal negative control passes, and
   only ISOLATEB/PERST_N remain explicit open boundaries.
+
+## 2026-09-10 — narrowed RTL9210B ISOLATEB support opening
+
+- Captured the retained community XML's concrete MIC2545A-1YM pattern:
+  RTL9210B pin 12 enables the local SSD 3.3-V high-side switch. This remains
+  corroborating evidence only; PiSXMe rail source, inrush/current budget,
+  fault policy, and production application-circuit authority remain open.
