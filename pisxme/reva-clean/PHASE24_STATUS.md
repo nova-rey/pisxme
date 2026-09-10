@@ -10683,6 +10683,12 @@ Native DRC reported 11 violations, including LANE0_RXP/TXP crossings and
 shorts/clearance conflicts with JTAG_TDI, PEDET, and adjacent QFN pads. No
 candidate is promoted; U1.66 remains OPEN.
 
+Path-B disposition: `PHASE24_RTL9210B_QFN_FIELD_BLOCKER.md` records the native
+pad geometry, active 0.2-mm clearance/track contract, completed local U1.66
+experiment classes, and shortest technical unblock. RTL9210B is not promoted
+to production CAD; Path A remains preserved. This is not a waiver of the
+overall Phase 24 gate.
+
 V1456 is a rejected orthogonal U1.66 GND escape below the QFN pad row.
 Native DRC reported four violations: JTAG_TDO short/mask bridge, PEDET
 crossing, and LANE0_TXN crossing. Direct, zone, left-first, and orthogonal

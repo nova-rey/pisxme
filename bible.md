@@ -82,6 +82,12 @@ Native DRC reported six crossings/shorts against SPI/control and 1V1
 geometry. The disposable evidence is preserved; accepted V1392 and Path A
 remain unchanged.
 
+2026-09-10 — Phase 24 recorded the RTL9210B Path-B QFN field disposition in
+`PHASE24_RTL9210B_QFN_FIELD_BLOCKER.md`. Native pad geometry and repeated
+U1.66 escape failures show no legal route under the current 0.2-mm
+clearance/track contract and ordinary-via policy. Path B is not promoted;
+Path A remains preserved and no validation rule was relaxed.
+
 2026-09-10 — Phase 24 V1456 rejected an orthogonal U1.66 GND escape with
 four native DRC violations involving JTAG_TDO, PEDET, and LANE0_TXN. No
 candidate was promoted.
