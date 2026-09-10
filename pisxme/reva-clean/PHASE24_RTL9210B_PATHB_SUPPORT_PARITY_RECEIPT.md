@@ -22,9 +22,12 @@ TP6 endpoint for `RESET_N` was restored and is now natively connected in the
 integrated candidate.
 
 `RTL9210B_ISOLATEB_CORROBORATION.md` records the retained community
-MIC2545A-1YM implementation as a candidate support direction. It is not
-promoted until the PiSXMe SSD-power source, inrush/current budget, and
-production application circuit are reconciled.
+MIC2545A-1YM implementation as a candidate support direction. The
+authoritative Microchip pin correction is recorded in
+`authority-inventory/rtl9210b/MIC2545A_ISOLATEB_SUPPORT_AUTHORITY.md`; the
+community export must not be promoted without explicit duplicated `IN` and
+`OUT` joins. Promotion also remains gated on the PiSXMe SSD-power source,
+inrush/current budget, and production application circuit.
 
 These are support-authority/open-gate findings, not waived DRC errors. The
 isolated candidate remains native DRC-clean and the six high-speed endpoint

@@ -10918,3 +10918,11 @@ the accepted local primitive. Receipt:
   current-limit/bypass requirements, and the rule that the retained community
   XML cannot be promoted without correcting duplicated-pin joins and proving
   them with native connectivity plus a negative control.
+
+## 2026-09-10 — reconciled current Path-B narrative
+
+- Updated the top current section of `PHASE24_CURRENT_PROGRESS.md` to point
+  at the live `21a3002c` checkpoint and the corrected MIC2545A disposable
+  fixture as the next gate. Updated the support-parity receipt to point to
+  the same authoritative pin correction. Older checkpoint prose remains
+  historical and was not rewritten.

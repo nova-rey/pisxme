@@ -4,7 +4,7 @@
 
 The active RTL9210B Path-B routing work is paused at the validated local
 support/launch checkpoint. No route search is running. The latest committed
-checkpoint is `de452db4` (`phase24: record RTL9210B route policy metrics`).
+checkpoint is `21a3002c` (`phase24: record MIC2545A support pin authority`).
 The accepted orientation remains U1 RTL9210B-CG, 0 degrees, top side, pin 1
 southwest, V1517 lineage; orientation search is closed.
 
@@ -22,10 +22,12 @@ production parity, acreage integration, and the remaining Phase 24 native
 validation. Path A remains preserved. Historical disposable experiments are
 not current routing authority.
 
-Resume from `de452db4` after this note is pushed. The next productive action
-is a focused Path-B candidate census/parity audit and reconciliation of its
-remaining authority gates, followed by only the native checks justified by
-that evidence. Do not reopen U1 orientation or revive rejected route bases.
+Resume from `21a3002c`. The next productive action is a corrected disposable
+MIC2545A support fixture: both duplicated `IN` pins and both duplicated `OUT`
+pins must be physically joined, with native connectivity and a negative
+control. The authoritative pin correction is recorded in
+`authority-inventory/rtl9210b/MIC2545A_ISOLATEB_SUPPORT_AUTHORITY.md`.
+Do not reopen U1 orientation or revive rejected route bases.
 
 ## Post-pause audit — 2026-09-10
 
