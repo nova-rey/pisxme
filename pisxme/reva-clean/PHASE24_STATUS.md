@@ -11079,3 +11079,8 @@ fixture. Native DRC rejected it at 19 violations, including real U12 pad-field
 shorts/crossings and corridor collisions. V140 is rejected; any orientation
 change requires transform-aware regeneration of both CM5 source and bridge
 launches. Receipt: `PHASE24_STORAGE_SUPPORT_U12_ROT90_V140_RECEIPT.md`.
+V141 repeated the 90-degree U12 orientation with explicitly separated
+transformed target-via coordinates. Native DRC rejected the local fixture at
+21 violations, including real B.Cu corridor crossings and U12 pad-field
+shorts. V141 is rejected; production CAD remains unchanged. Receipt:
+`PHASE24_STORAGE_SUPPORT_U12_ROT90_V141_RECEIPT.md`.

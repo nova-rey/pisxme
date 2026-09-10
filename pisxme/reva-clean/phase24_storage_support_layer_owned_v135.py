@@ -16,6 +16,8 @@ if len(sys.argv) > 1: BASE = R / sys.argv[1]
 if len(sys.argv) > 2: OUT = R / sys.argv[2]
 LOCAL_ONLY = len(sys.argv) > 3 and sys.argv[3] in {'local', 'local_rot180'}
 ROTATE_U12 = len(sys.argv) > 3 and sys.argv[3] == 'local_rot180'
+ROTATE_U12_90 = len(sys.argv) > 3 and sys.argv[3] == 'local_rot90'
+LOCAL_ONLY = LOCAL_ONLY or ROTATE_U12_90
 F, B = pcbnew.F_Cu, pcbnew.B_Cu
 W = pcbnew.FromMM(.13208)
 
@@ -42,6 +44,8 @@ b = pcbnew.LoadBoard(str(BASE))
 owned = {'USB_TXP1','USB_TXN1','JMS_USB3_TXP','JMS_USB3_TXN','USB_RXP1','USB_RXN1'}
 if ROTATE_U12:
     b.FindFootprintByReference('U12').SetOrientationDegrees(180)
+elif ROTATE_U12_90:
+    b.FindFootprintByReference('U12').SetOrientationDegrees(90)
 if LOCAL_ONLY:
     for t in list(b.GetTracks()): b.RemoveNative(t)
     for z in list(b.Zones()): b.RemoveNative(z)
@@ -60,14 +64,14 @@ for ref, pos in {'C86': (146.0, 150.0), 'C87': (146.0, 155.0)}.items():
 
 # U11 TX pads -> AC caps -> B.Cu corridors -> U12 bridge TX pads.
 for name, upad, cap, target, corridor, target_x in (
-    ('USB_TXP1','21','C86.1','25',(148.0,150.0),151.5 if ROTATE_U12 else 159.0),
-    ('USB_TXN1','22','C87.1','24',(148.0,155.0),150.5 if ROTATE_U12 else 158.0),
+    ('USB_TXP1','21','C86.1','25',(148.0,150.0),155.5 if ROTATE_U12_90 else (151.5 if ROTATE_U12 else 159.0)),
+    ('USB_TXN1','22','C87.1','24',(148.0,155.0),158.5 if ROTATE_U12_90 else (150.5 if ROTATE_U12 else 158.0)),
 ):
     n = net(b, name); bridge_n = net(b, 'JMS_USB3_TXP' if name == 'USB_TXP1' else 'JMS_USB3_TXN')
     c_ref, c_num = cap.split('.')
     src = xy(pad(b,'U11',upad)); c1 = xy(pad(b,c_ref,c_num)); c2 = xy(pad(b,c_ref,'2'))
     dst = xy(pad(b,'U12',target)); cv = corridor
-    target_y = 136.5 if name == 'USB_TXP1' else 136.9
+    target_y = (132.0 if name == 'USB_TXP1' else 131.0) if ROTATE_U12_90 else (136.5 if name == 'USB_TXP1' else 136.9)
     tv = (target_x, target_y)
     source_via = (142.0, 139.6) if name == 'USB_TXP1' else (141.0, 141.0)
     source_lane = (143.0, 140.0) if name == 'USB_TXP1' else (139.0, 141.0)
@@ -92,8 +96,8 @@ for name, upad, cap, target, corridor, target_x in (
 # are below the TX capacitor launches and their return vias are farther
 # outboard than the TX returns, avoiding the U12 pad-field funnel.
 for name, upad, target, source_via, target_via in (
-    ('USB_RXP1','26','23',(142.0,157.0),(151.5 if ROTATE_U12 else 160.0,137.3)),
-    ('USB_RXN1','27','22',(136.0,162.0),(150.5 if ROTATE_U12 else 161.0,137.7)),
+    ('USB_RXP1','26','23',(142.0,157.0),(160.5 if ROTATE_U12_90 else (151.5 if ROTATE_U12 else 160.0),132.0 if ROTATE_U12_90 else 137.3)),
+    ('USB_RXN1','27','22',(136.0,162.0),(162.5 if ROTATE_U12_90 else (150.5 if ROTATE_U12 else 161.0),131.0 if ROTATE_U12_90 else 137.7)),
 ):
     n = net(b,name); src = xy(pad(b,'U11',upad)); dst = xy(pad(b,'U12',target))
     sv, tv = source_via, target_via

@@ -10250,3 +10250,8 @@ DRC rejected the transform-reused launch at 19 violations, including real
 U12 pad-field shorts/crossings. V140 is rejected; production CAD remains
 unchanged. Receipt:
 `PHASE24_STORAGE_SUPPORT_U12_ROT90_V140_RECEIPT.md`.
+V141 repeated the 90-degree U12 orientation with separated transformed target
+vias. Native DRC rejected it at 21 violations, including real corridor and
+U12 pad-field shorts/crossings. It remains disposable evidence; production
+CAD is unchanged. Receipt:
+`PHASE24_STORAGE_SUPPORT_U12_ROT90_V141_RECEIPT.md`.

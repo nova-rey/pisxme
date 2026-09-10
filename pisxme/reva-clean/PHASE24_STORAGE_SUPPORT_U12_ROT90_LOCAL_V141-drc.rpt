@@ -1,0 +1,230 @@
+** Drc report for PHASE24_STORAGE_SUPPORT_U12_ROT90_LOCAL_V141.kicad_pcb **
+** Created on 2026-09-10T03:08:21 **
+** Report includes: Errors, Warnings **
+
+** Found 21 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(149.0000 mm, 132.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 6.5000 mm
+    @(150.0000 mm, 155.0000 mm): Track [JMS_USB3_TXN] on B.Cu, length 24.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(160.5000 mm, 132.0000 mm): Track [USB_RXP1] on F.Cu, length 1.5000 mm
+    @(162.5000 mm, 133.5000 mm): Track [USB_RXN1] on F.Cu, length 4.3000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(152.0000 mm, 132.0000 mm): Track [USB_RXP1] on B.Cu, length 8.5000 mm
+    @(153.0000 mm, 162.0000 mm): Track [USB_RXN1] on B.Cu, length 31.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(160.5000 mm, 133.5000 mm): Track [USB_RXP1] on F.Cu, length 2.7000 mm
+    @(158.5000 mm, 131.0000 mm): Track [JMS_USB3_TXN] on F.Cu, length 2.5000 mm
+[shorting_items]: Items shorting two nets (nets TUSB_SSRXP and JMS_USB3_TXP)
+    Local override; error
+    @(156.2000 mm, 133.5000 mm): Pad 27 [TUSB_SSRXP] of U12 on F.Cu
+    @(155.5000 mm, 133.5000 mm): Track [JMS_USB3_TXP] on F.Cu, length 1.5000 mm
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1090 mm)
+    Local override; error
+    @(158.2000 mm, 133.5000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+    @(158.5000 mm, 131.0000 mm): Track [JMS_USB3_TXN] on F.Cu, length 2.5000 mm
+[shorting_items]: Items shorting two nets (nets JMS_USB3_TXN and USB_RXN1)
+    Local override; error
+    @(158.5000 mm, 131.0000 mm): Via [JMS_USB3_TXN] on F.Cu - B.Cu
+    @(153.0000 mm, 131.0000 mm): Track [USB_RXN1] on B.Cu, length 9.5000 mm
+[shorting_items]: Items shorting two nets (nets USB_RXP1 and JMS_USB3_TXP)
+    Local override; error
+    @(152.0000 mm, 132.0000 mm): Track [USB_RXP1] on B.Cu, length 8.5000 mm
+    @(155.5000 mm, 132.0000 mm): Via [JMS_USB3_TXP] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(149.0000 mm, 132.0000 mm): Track [JMS_USB3_TXP] on B.Cu, length 6.5000 mm
+    @(152.0000 mm, 157.0000 mm): Track [USB_RXP1] on B.Cu, length 25.0000 mm
+[shorting_items]: Items shorting two nets (nets JMS_USB3_TXN and USB_RXN1)
+    Local override; error
+    @(158.5000 mm, 133.5000 mm): Track [JMS_USB3_TXN] on F.Cu, length 1.1000 mm
+    @(158.2000 mm, 133.5000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.1500 mm; actual 0.1090 mm)
+    Local override; error
+    @(155.8000 mm, 133.5000 mm): Pad 28 [TUSB_SSTXN] of U12 on F.Cu
+    @(155.5000 mm, 132.0000 mm): Track [JMS_USB3_TXP] on F.Cu, length 1.5000 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(160.5000 mm, 133.5000 mm): Track [USB_RXP1] on F.Cu, length 2.7000 mm
+    @(158.2000 mm, 133.5000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(158.5000 mm, 133.5000 mm): Track [JMS_USB3_TXN] on F.Cu, length 1.1000 mm
+    @(158.2000 mm, 133.5000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(158.5000 mm, 133.5000 mm): Track [JMS_USB3_TXN] on F.Cu, length 1.1000 mm
+    @(157.8000 mm, 133.5000 mm): Pad 23 [USB_RXP1] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(155.5000 mm, 133.5000 mm): Track [JMS_USB3_TXP] on F.Cu, length 1.5000 mm
+    @(156.6000 mm, 133.5000 mm): Pad 26 [TUSB_SSRXN] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(155.5000 mm, 133.5000 mm): Track [JMS_USB3_TXP] on F.Cu, length 1.5000 mm
+    @(156.2000 mm, 133.5000 mm): Pad 27 [TUSB_SSRXP] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(155.5000 mm, 133.5000 mm): Track [JMS_USB3_TXP] on F.Cu, length 1.5000 mm
+    @(155.8000 mm, 133.5000 mm): Pad 28 [TUSB_SSTXN] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(155.5000 mm, 133.5000 mm): Track [JMS_USB3_TXP] on F.Cu, length 1.5000 mm
+    @(155.4000 mm, 133.5000 mm): Pad 29 [TUSB_SSTXP] of U12 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(155.5000 mm, 132.0000 mm): Track [JMS_USB3_TXP] on F.Cu, length 1.5000 mm
+    @(155.4000 mm, 133.5000 mm): Pad 29 [TUSB_SSTXP] of U12 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(145.5500 mm, 149.6000 mm): Segment of C86 on f.silkscreen
+    @(145.5000 mm, 150.0000 mm): Pad 1 [USB_TXP1] of C86 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(145.5500 mm, 154.6000 mm): Segment of C87 on f.silkscreen
+    @(145.5000 mm, 155.0000 mm): Pad 1 [USB_TXN1] of C87 on F.Cu
+
+** Found 32 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.3500 mm, 132.0000 mm): Pad 1 [JMS_VDDREG_5V] of U11 on F.Cu
+    @(151.8000 mm, 136.5000 mm): Pad 1 [JMS_VDDREG_5V] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.3500 mm, 132.4000 mm): Pad 2 [JMS_VCCK] of U11 on F.Cu
+    @(137.4000 mm, 138.6000 mm): Pad 31 [JMS_VCCK] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(138.6000 mm, 131.4000 mm): Pad 53 [JMS_VCCK] of U11 on F.Cu
+    @(136.3500 mm, 132.4000 mm): Pad 2 [JMS_VCCK] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(152.2000 mm, 136.5000 mm): Pad 2 [JMS_VCCK] of U12 on F.Cu
+    @(138.6000 mm, 131.4000 mm): Pad 53 [JMS_VCCK] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.3500 mm, 132.8000 mm): Pad 3 [JMS_SPI_SO_DNP] of U11 on F.Cu
+    @(152.6000 mm, 136.5000 mm): Pad 3 [JMS_SPI_SO_DNP] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.3500 mm, 133.2000 mm): Pad 4 [JMS_SPI_SCK_DNP] of U11 on F.Cu
+    @(153.0000 mm, 136.5000 mm): Pad 4 [JMS_SPI_SCK_DNP] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.3500 mm, 133.6000 mm): Pad 5 [JMS_SPI_SI_DNP] of U11 on F.Cu
+    @(153.4000 mm, 136.5000 mm): Pad 5 [JMS_SPI_SI_DNP] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(141.4000 mm, 131.4000 mm): Pad 60 [POWER_GND] of U11 on F.Cu
+    @(140.0000 mm, 135.0000 mm): Pad 65 [POWER_GND] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(142.6000 mm, 131.4000 mm): Pad 63 [POWER_GND] of U11 on F.Cu
+    @(141.4000 mm, 131.4000 mm): Pad 60 [POWER_GND] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
+    @(155.4000 mm, 136.5000 mm): Pad 10 [POWER_GND] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
+    @(142.6000 mm, 131.4000 mm): Pad 63 [POWER_GND] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(155.4000 mm, 136.5000 mm): Pad 10 [POWER_GND] of U12 on F.Cu
+    @(157.0000 mm, 136.5000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(157.0000 mm, 136.5000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
+    @(158.2000 mm, 136.5000 mm): Pad 17 [POWER_GND] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(158.2000 mm, 136.5000 mm): Pad 17 [POWER_GND] of U12 on F.Cu
+    @(159.5000 mm, 135.6000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(159.5000 mm, 135.6000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+    @(159.5000 mm, 134.8000 mm): Pad 19 [POWER_GND] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(155.0000 mm, 133.5000 mm): Pad 30 [STORAGE_3V3] of U12 on F.Cu
+    @(156.6000 mm, 136.5000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(156.6000 mm, 136.5000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+    @(159.5000 mm, 135.2000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(142.6000 mm, 138.6000 mm): Pad 18 [USB_DP] of U11 on F.Cu
+    @(153.8000 mm, 133.5000 mm): Pad 33 [USB_DP] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(143.0000 mm, 138.6000 mm): Pad 17 [USB_DM] of U11 on F.Cu
+    @(153.4000 mm, 133.5000 mm): Pad 34 [USB_DM] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(137.8000 mm, 138.6000 mm): Pad 30 [JMS_AVDDL] of U11 on F.Cu
+    @(139.8000 mm, 138.6000 mm): Pad 25 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.8000 mm, 138.6000 mm): Pad 25 [JMS_AVDDL] of U11 on F.Cu
+    @(141.8000 mm, 138.6000 mm): Pad 20 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(141.8000 mm, 138.6000 mm): Pad 20 [JMS_AVDDL] of U11 on F.Cu
+    @(143.6500 mm, 138.0000 mm): Pad 33 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(143.6500 mm, 132.8000 mm): Pad 46 [JMS_AVDDL] of U11 on F.Cu
+    @(137.0000 mm, 131.4000 mm): Pad 49 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(143.6500 mm, 134.0000 mm): Pad 43 [JMS_AVDDL] of U11 on F.Cu
+    @(143.6500 mm, 132.8000 mm): Pad 46 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(143.6500 mm, 135.2000 mm): Pad 40 [JMS_AVDDL] of U11 on F.Cu
+    @(143.6500 mm, 134.0000 mm): Pad 43 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(143.6500 mm, 135.2000 mm): Pad 40 [JMS_AVDDL] of U11 on F.Cu
+    @(143.6500 mm, 136.8000 mm): Pad 36 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(143.6500 mm, 135.2000 mm): Pad 40 [JMS_AVDDL] of U11 on F.Cu
+    @(150.5000 mm, 135.2000 mm): Pad 40 [JMS_AVDDL] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(143.6500 mm, 138.0000 mm): Pad 33 [JMS_AVDDL] of U11 on F.Cu
+    @(143.6500 mm, 136.8000 mm): Pad 36 [JMS_AVDDL] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(150.5000 mm, 135.2000 mm): Pad 40 [JMS_AVDDL] of U12 on F.Cu
+    @(152.6000 mm, 133.5000 mm): Pad 36 [JMS_AVDDL] of U12 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.3500 mm, 134.0000 mm): Pad 6 [JMS_VCCO] of U11 on F.Cu
+    @(136.3500 mm, 136.0000 mm): Pad 11 [JMS_VCCO] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.3500 mm, 136.0000 mm): Pad 11 [JMS_VCCO] of U11 on F.Cu
+    @(137.0000 mm, 138.6000 mm): Pad 32 [JMS_VCCO] of U11 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.8000 mm, 131.4000 mm): Pad 56 [JMS_VCCO] of U11 on F.Cu
+    @(136.3500 mm, 134.0000 mm): Pad 6 [JMS_VCCO] of U11 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
