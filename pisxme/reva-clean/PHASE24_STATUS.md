@@ -10295,3 +10295,10 @@ adjacent-pitch source departures intersect transition vias, and the outer
 pair launches then collide/clearance-fail. This is route-implementation
 evidence only; V850 remains a support-field reference and production CAD and
 Path-A assets remain unchanged.
+V1317 records the native route-class comparison. V1258 remains the accepted
+complete lane basis at U1 orientation 0 degrees; V857/V850 are accepted
+support/control primitives at 90/180 degrees but are not directly compatible.
+V1311, V1315, and V1316 prove rotated lane endpoint connectivity but are
+rejected by 10/14/14 native DRC violations respectively. The next valid class
+is orientation-0 lane preservation with regenerated support/source fields;
+no rotated support copper is to be copied as if transformed-compatible.

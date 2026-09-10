@@ -78,6 +78,12 @@ saved-board endpoint and negative-control audits but native DRC reported 17
 violations across source-field, SPISO, pair-transition, and connector-launch
 geometry. Preserved the disposable candidate; production and Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V1317: recorded the route-class comparison. V1258 is
+the accepted complete four-lane basis at U1 orientation 0 degrees; V857/V850
+are support/control primitives at incompatible 90/180 degree orientations.
+Rotated lane candidates V1311/V1315/V1316 were rejected by native DRC.
+Next work returns to V1258 lane preservation with regenerated orientation-0
+support fields; no Path-A or production assets changed.
 2026-09-09 — Phase 24 V1315 rejected: rotated-QFN lane allocation passed
 native endpoints and four negative controls but DRC reported 14 source,
 SPISO, pair-row, and connector-transition violations. Preserved the
