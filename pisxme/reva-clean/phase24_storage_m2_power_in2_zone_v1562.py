@@ -56,9 +56,7 @@ track(pt(232.0, via_y), pt(232.0, 149.05), pcbnew.In2_Cu, 0.60)
 
 # A remote source column reaches the U14.5 source on In2, so no F.Cu power
 # collector traverses the M.2 signal launch field.
-via(232.0, via_y)
 via(232.0, 149.05)
-track(pt(232.0, 149.05), pt(232.0, via_y), pcbnew.F_Cu, 0.60)
 track(pt(232.0, 149.05), pt(211.1, 149.05), pcbnew.F_Cu, 0.60)
 
 pcbnew.ZONE_FILLER(b).Fill(b.Zones())

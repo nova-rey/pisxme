@@ -19,7 +19,7 @@ used.
 |---|---|
 | Native M.2 power-owner audit | PASS — all 9 J3 contacts reach the source-owned rail |
 | Necessary-trace removal negative control | PASS — removing one required trace fails the audit |
-| Native KiCad DRC | 610 violations / 342 unconnected items; inherited board remains open |
+| Native KiCad DRC | 603 violations / 342 unconnected items; inherited board remains open |
 | Like-for-like V79 DRC baseline | 602 violations / 351 unconnected items; raw `PHASE24_STORAGE_V79_CURRENT_DRC.rpt` |
 | New storage-rail shorts | None found in the V1562 shorting sections |
 | New storage-rail crossings | None found in the V1562 shorting sections |
@@ -32,7 +32,7 @@ cohort audit, and JMS_REXT V8 connectivity audit. These are focused
 regressions only; they do not convert the open native DRC into a board pass.
 
 The native DRC count is not a full-board pass. Against the freshly rerun V79
-baseline, V1562 removes nine required-open items but adds eight DRC findings;
+baseline, V1562 removes nine required-open items but adds one DRC finding;
 the added findings are not storage-rail shorts/crossings. The candidate is
 retained as a focused power-connectivity primitive and is not promoted until
 the remaining board findings and local DRC delta are reconciled.

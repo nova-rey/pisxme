@@ -1,48 +1,100 @@
 ** Drc report for PHASE24_STORAGE_M2_POWER_IN2_ZONE_V1562.kicad_pcb **
-** Created on 2026-09-10T07:23:36 **
+** Created on 2026-09-10T07:25:45 **
 ** Report includes: Errors, Warnings **
 
-** Found 604 DRC violations **
+** Found 603 DRC violations **
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(70.0400 mm, 101.5000 mm): Track [CM5_PER0_P] on F.Cu, length 10.4600 mm
-    @(74.5000 mm, 106.7000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 12.7000 mm
+    @(106.0000 mm, 120.0000 mm): Track [TUSB_SATA_RXP] on B.Cu, length 24.0832 mm
+    @(122.0000 mm, 114.0000 mm): Track [VBUS] on B.Cu, length 26.0000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(152.5400 mm, 150.0000 mm): Track [CM5_PERST] on F.Cu, length 61.2700 mm
-    @(151.0000 mm, 135.8000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 2.5000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(152.5400 mm, 150.0000 mm): Track [CM5_PERST] on F.Cu, length 61.2700 mm
-    @(151.9000 mm, 137.4000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 1.6000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
-    Local override; error
-    @(149.8000 mm, 136.2000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 3.7000 mm
-    @(151.0000 mm, 135.8000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0770 mm)
-    Local override; error
-    @(70.0400 mm, 106.7000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 4.4600 mm
-    @(70.0000 mm, 106.3000 mm): Via [CM5_USB3_TX_N] on F.Cu - B.Cu
+    @(174.0000 mm, 136.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on B.Cu, length 34.2345 mm
+    @(116.0000 mm, 145.0000 mm): Track [TUSB_SATA_TXN] on B.Cu, length 60.0000 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(47.0000 mm, 100.2500 mm): Track [SERVICE_USB2_DM] on F.Cu, length 3.0000 mm
-    @(49.0000 mm, 99.7500 mm): Via [SERVICE_USB2_DP] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1522 mm)
+    @(222.7500 mm, 156.5000 mm): Via [M2_SATA_A_P_PCIE_TXP0] on F.Cu - B.Cu
+    @(222.2500 mm, 155.5000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 4.2250 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0044 mm)
     Local override; error
-    @(94.6000 mm, 127.8000 mm): Track [BRIDGE_SATA_RX_P] on F.Cu, length 0.9000 mm
-    @(95.0000 mm, 128.7000 mm): Track [BRIDGE_SATA_RX_N] on F.Cu, length 1.4765 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0419 mm)
+    @(178.5000 mm, 134.2000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 7.5293 mm
+    @(178.5000 mm, 134.6000 mm): Pad 8 [JMS_GPIO4_NC] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(151.0000 mm, 135.8000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
+    @(221.2500 mm, 163.5000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 3.7750 mm
+    @(220.7500 mm, 162.5000 mm): Via [M2_SATA_B_P_PCIE_RXN0] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0322 mm)
+    Local override; error
+    @(178.5000 mm, 134.2000 mm): Pad 7 [M2_SATA_B_N_PCIE_RXP0] of U13 on F.Cu
+    @(178.5000 mm, 133.8000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 5.0090 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(172.0000 mm, 132.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on B.Cu, length 18.9737 mm
+    @(176.0000 mm, 110.0000 mm): Track [TUSB_SATA_TXP] on B.Cu, length 22.2854 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(205.0000 mm, 124.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 32.3120 mm
+    @(222.2500 mm, 150.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on B.Cu, length 5.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(174.0000 mm, 130.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 17.0880 mm
+    @(176.0000 mm, 110.0000 mm): Track [TUSB_SATA_TXP] on B.Cu, length 22.2854 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(79.0000 mm, 94.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 92.0393 mm
+    @(135.0000 mm, 135.6000 mm): Track [JMS_VBUS_SENSE] on B.Cu, length 20.6000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0322 mm)
+    Local override; error
+    @(178.5000 mm, 132.2000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 5.0090 mm
+    @(178.5000 mm, 131.8000 mm): Pad 1 [POWER_GND] of U13 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(122.0000 mm, 140.0000 mm): Track [VBUS] on B.Cu, length 14.3500 mm
+    @(134.5000 mm, 134.0000 mm): Track [JMS_VCCO] on B.Cu, length 11.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(222.2500 mm, 155.5000 mm): Via [M2_SATA_A_N_PCIE_TXN0] on F.Cu - B.Cu
+    @(222.7500 mm, 151.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 5.5000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(90.5000 mm, 118.0000 mm): Track [BRIDGE_R1RTN] on B.Cu, length 43.5000 mm
+    @(94.0000 mm, 126.0000 mm): Track [BRIDGE_SATA_TX_P] on B.Cu, length 10.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1506 mm)
+    Local override; error
+    @(178.5000 mm, 132.6000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 6.5276 mm
+    @(178.5000 mm, 132.2000 mm): Pad 2 [M2_SATA_A_P_PCIE_TXP0] of U13 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(100.0000 mm, 106.0000 mm): Track [V100_PET0_P] on B.Cu, length 70.0000 mm
     @(73.0000 mm, 88.0000 mm): Track [CM5_USB3_RX_N] on B.Cu, length 95.9377 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0515 mm)
+    Local override; error
+    @(139.0000 mm, 138.6000 mm): Track [USB_RXN1] on F.Cu, length 4.4000 mm
+    @(139.4000 mm, 142.0000 mm): Via [USB_RXP1] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0515 mm)
+    Local override; error
+    @(161.0000 mm, 138.2000 mm): Track [USB_RXN1] on F.Cu, length 4.5000 mm
+    @(159.0000 mm, 137.8000 mm): Via [USB_RXP1] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1921 mm)
+    Local override; error
+    @(184.0000 mm, 134.4000 mm): Via [TUSB_SATA_RXN] on F.Cu - B.Cu
+    @(176.0000 mm, 149.0000 mm): Track [TUSB_SATA_RXP] on B.Cu, length 17.7099 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(63.5000 mm, 174.7500 mm): Track [PG_CM5_5V] on F.Cu, length 6.5000 mm
+    @(66.0000 mm, 175.2500 mm): Via [RT_CM5_5V] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1963 mm)
+    Local override; error
+    @(264.0000 mm, 158.0000 mm): Track [MODE_IN] on F.Cu, length 55.6777 mm
+    @(211.1000 mm, 150.9500 mm): Pad 4 [STORAGE_SEL] of U14 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1522 mm)
     Local override; error
     @(94.6000 mm, 128.7000 mm): Track [BRIDGE_SATA_RX_P] on F.Cu, length 1.1402 mm
     @(95.0000 mm, 128.7000 mm): Track [BRIDGE_SATA_RX_N] on F.Cu, length 1.4765 mm
-[tracks_crossing]: Tracks crossing
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1522 mm)
     Local override; error
-    @(68.8000 mm, 104.3000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 14.3000 mm
-    @(70.0400 mm, 103.9000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 2.5400 mm
+    @(94.6000 mm, 127.8000 mm): Track [BRIDGE_SATA_RX_P] on F.Cu, length 0.9000 mm
+    @(95.0000 mm, 128.7000 mm): Track [BRIDGE_SATA_RX_N] on F.Cu, length 1.4765 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1389 mm)
     Local override; error
     @(96.0000 mm, 124.0000 mm): Pad 65 [POWER_GND] of U7 on F.Cu
@@ -50,11 +102,11 @@
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
     @(96.0000 mm, 124.0000 mm): Pad 65 [POWER_GND] of U7 on F.Cu
-    @(95.8000 mm, 127.8000 mm): Track [BRIDGE_SATA_TX_P] on F.Cu, length 1.8000 mm
+    @(95.8000 mm, 126.0000 mm): Track [BRIDGE_SATA_TX_P] on F.Cu, length 1.8000 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
     @(96.0000 mm, 124.0000 mm): Pad 65 [POWER_GND] of U7 on F.Cu
-    @(95.8000 mm, 126.0000 mm): Track [BRIDGE_SATA_TX_P] on F.Cu, length 1.8000 mm
+    @(95.8000 mm, 127.8000 mm): Track [BRIDGE_SATA_TX_P] on F.Cu, length 1.8000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
     @(152.5400 mm, 150.0000 mm): Track [CM5_PERST] on F.Cu, length 61.2700 mm
@@ -65,60 +117,52 @@
     @(98.0000 mm, 126.0000 mm): Via [BRIDGE_SATA_TX_N] on F.Cu - B.Cu
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(152.5400 mm, 150.0000 mm): Track [CM5_PERST] on F.Cu, length 61.2700 mm
-    @(147.5000 mm, 149.0000 mm): Track [JMS_USB3_TXN] on F.Cu, length 15.5000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
     @(163.0000 mm, 137.4000 mm): Track [JMS_USB3_TXN] on F.Cu, length 6.5000 mm
     @(162.0000 mm, 145.0000 mm): Track [JMS_USB3_TXP] on F.Cu, length 8.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(152.5400 mm, 150.0000 mm): Track [CM5_PERST] on F.Cu, length 61.2700 mm
+    @(147.5000 mm, 149.0000 mm): Track [JMS_USB3_TXN] on F.Cu, length 15.5000 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0515 mm)
     Local override; error
     @(163.0000 mm, 137.4000 mm): Track [JMS_USB3_TXN] on F.Cu, length 6.5000 mm
     @(159.0000 mm, 137.8000 mm): Via [USB_RXP1] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0750 mm)
-    Local override; error
-    @(151.9000 mm, 137.4000 mm): Via [CM5_USB3_RX_P] on F.Cu - B.Cu
-    @(150.9000 mm, 137.8000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 2.6000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0515 mm)
-    Local override; error
-    @(139.0000 mm, 138.6000 mm): Track [USB_RXN1] on F.Cu, length 4.4000 mm
-    @(139.4000 mm, 142.0000 mm): Via [USB_RXP1] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0515 mm)
-    Local override; error
-    @(161.0000 mm, 138.2000 mm): Track [USB_RXN1] on F.Cu, length 4.5000 mm
-    @(159.0000 mm, 137.8000 mm): Via [USB_RXP1] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0750 mm)
-    Local override; error
-    @(155.0000 mm, 137.8000 mm): Track [CM5_USB3_RX_N] on B.Cu, length 4.1000 mm
-    @(151.9000 mm, 137.4000 mm): Via [CM5_USB3_RX_P] on F.Cu - B.Cu
 [tracks_crossing]: Tracks crossing
     Local override; error
     @(152.5400 mm, 150.0000 mm): Track [CM5_PERST] on F.Cu, length 61.2700 mm
     @(150.9000 mm, 137.8000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 2.6000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1150 mm)
-    Local override; error
-    @(66.9600 mm, 98.7000 mm): Pad 101 [unconnected-(J7B-USB_OTG_ID-Pad101)] of J7 on F.Cu
-    @(67.5000 mm, 103.9000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 15.9000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(157.0000 mm, 137.4000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 5.1000 mm
-    @(73.0000 mm, 88.0000 mm): Track [CM5_USB3_RX_N] on B.Cu, length 95.9377 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1150 mm)
     Local override; error
     @(66.9600 mm, 103.9000 mm): Pad 127 [unconnected-(J7B-MIPI0_C_N-Pad127)] of J7 on F.Cu
     @(70.0400 mm, 103.9000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 2.5400 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
+    @(100.0000 mm, 106.0000 mm): Track [V100_PET0_P] on B.Cu, length 70.0000 mm
+    @(75.0000 mm, 90.0000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 94.7141 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1150 mm)
+    Local override; error
+    @(66.9600 mm, 98.7000 mm): Pad 101 [unconnected-(J7B-USB_OTG_ID-Pad101)] of J7 on F.Cu
+    @(67.5000 mm, 103.9000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 15.9000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(152.5400 mm, 150.0000 mm): Track [CM5_PERST] on F.Cu, length 61.2700 mm
+    @(151.9000 mm, 137.4000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 1.6000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(157.0000 mm, 137.4000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 5.1000 mm
+    @(73.0000 mm, 88.0000 mm): Track [CM5_USB3_RX_N] on B.Cu, length 95.9377 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
     @(75.0000 mm, 90.0000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 94.7141 mm
     @(159.0000 mm, 136.2000 mm): Track [CM5_USB3_TX_N] on B.Cu, length 9.2000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(100.0000 mm, 106.0000 mm): Track [V100_PET0_P] on B.Cu, length 70.0000 mm
-    @(75.0000 mm, 90.0000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 94.7141 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
     @(75.0000 mm, 90.0000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 94.7141 mm
     @(77.0000 mm, 92.0000 mm): Track [CM5_USB3_TX_N] on B.Cu, length 93.1539 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0750 mm)
+    Local override; error
+    @(151.9000 mm, 137.4000 mm): Via [CM5_USB3_RX_P] on F.Cu - B.Cu
+    @(150.9000 mm, 137.8000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 2.6000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
     @(149.8000 mm, 136.2000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 3.7000 mm
@@ -127,98 +171,118 @@
     Local override; error
     @(79.0000 mm, 94.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 92.0393 mm
     @(77.0000 mm, 92.0000 mm): Track [CM5_USB3_TX_N] on B.Cu, length 93.1539 mm
-[tracks_crossing]: Tracks crossing
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0750 mm)
     Local override; error
-    @(161.0000 mm, 135.8000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 10.0000 mm
-    @(77.0000 mm, 92.0000 mm): Track [CM5_USB3_TX_N] on B.Cu, length 93.1539 mm
+    @(155.0000 mm, 137.8000 mm): Track [CM5_USB3_RX_N] on B.Cu, length 4.1000 mm
+    @(151.9000 mm, 137.4000 mm): Via [CM5_USB3_RX_P] on F.Cu - B.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
     Local override; error
     @(70.0400 mm, 105.9000 mm): Pad 138 [POWER_GND] of J7 on F.Cu
     @(70.0000 mm, 106.3000 mm): Via [CM5_USB3_TX_N] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+[tracks_crossing]: Tracks crossing
     Local override; error
-    @(41.0000 mm, 97.0000 mm): Track [SERVICE_USB2_DP] on B.Cu, length 3.2500 mm
-    @(41.5000 mm, 99.6000 mm): Via [SERVICE_USB2_DM] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    @(68.8000 mm, 104.3000 mm): Track [CM5_USB3_RX_P] on F.Cu, length 14.3000 mm
+    @(70.0400 mm, 103.9000 mm): Track [CM5_USB3_RX_N] on F.Cu, length 2.5400 mm
+[tracks_crossing]: Tracks crossing
     Local override; error
-    @(39.5000 mm, 101.2500 mm): Track [SERVICE_VBUS_SENSE] on B.Cu, length 2.5000 mm
+    @(152.5400 mm, 150.0000 mm): Track [CM5_PERST] on F.Cu, length 61.2700 mm
+    @(151.0000 mm, 135.8000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 2.5000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(149.8000 mm, 136.2000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 3.7000 mm
+    @(151.0000 mm, 135.8000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(70.0400 mm, 101.5000 mm): Track [CM5_PER0_P] on F.Cu, length 10.4600 mm
+    @(74.5000 mm, 106.7000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 12.7000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0770 mm)
+    Local override; error
+    @(70.0400 mm, 106.7000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 4.4600 mm
+    @(70.0000 mm, 106.3000 mm): Via [CM5_USB3_TX_N] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0419 mm)
+    Local override; error
+    @(151.0000 mm, 135.8000 mm): Via [CM5_USB3_TX_P] on F.Cu - B.Cu
+    @(73.0000 mm, 88.0000 mm): Track [CM5_USB3_RX_N] on B.Cu, length 95.9377 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1571 mm)
+    Local override; error
+    @(39.5000 mm, 101.2500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
     @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1963 mm)
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1571 mm)
     Local override; error
-    @(264.0000 mm, 158.0000 mm): Track [MODE_IN] on F.Cu, length 55.6777 mm
-    @(211.1000 mm, 150.9500 mm): Pad 4 [STORAGE_SEL] of U14 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    @(39.5000 mm, 101.2500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
+    @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1571 mm)
     Local override; error
-    @(41.0000 mm, 100.2500 mm): Via [SERVICE_USB2_DP] on F.Cu - B.Cu
-    @(43.0000 mm, 100.7500 mm): Track [SERVICE_RD_A] on F.Cu, length 3.0000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(41.0000 mm, 100.2500 mm): Via [SERVICE_USB2_DP] on F.Cu - B.Cu
-    @(41.5000 mm, 106.0000 mm): Track [SERVICE_USB2_DM] on B.Cu, length 6.4000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0763 mm)
-    Local override; error
-    @(70.0400 mm, 100.3000 mm): Track [CM5_REFCLK_P] on F.Cu, length 2.3400 mm
-    @(70.0400 mm, 99.9000 mm): Pad 108 [POWER_GND] of J7 on F.Cu
+    @(39.5000 mm, 101.2500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
+    @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1891 mm)
     Local override; error
     @(141.0000 mm, 139.0000 mm): Track [USB_TXN1] on F.Cu, length 0.5657 mm
     @(140.6000 mm, 138.6000 mm): Pad 23 [USB_TXN2] of U11 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1571 mm)
+    Local override; error
+    @(39.5000 mm, 101.2500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
+    @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1571 mm)
+    Local override; error
+    @(39.5000 mm, 101.2500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
+    @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1571 mm)
+    Local override; error
+    @(39.5000 mm, 101.2500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
+    @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1473 mm)
     Local override; error
     @(70.0400 mm, 100.3000 mm): Pad 110 [CM5_REFCLK_P] of J7 on F.Cu
     @(70.0400 mm, 100.7000 mm): Track [CM5_REFCLK_N] on F.Cu, length 2.2171 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0763 mm)
+    Local override; error
+    @(70.0400 mm, 100.3000 mm): Track [CM5_REFCLK_P] on F.Cu, length 2.3400 mm
+    @(70.0400 mm, 99.9000 mm): Pad 108 [POWER_GND] of J7 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1410 mm)
     Local override; error
     @(141.4000 mm, 138.6000 mm): Track [USB_TXP1] on F.Cu, length 0.8246 mm
     @(141.0000 mm, 138.6000 mm): Track [USB_TXN1] on F.Cu, length 0.4000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
+    Local override; error
+    @(39.5000 mm, 101.2500 mm): Track [SERVICE_VBUS_SENSE] on B.Cu, length 2.5000 mm
+    @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(47.0000 mm, 99.2500 mm): Track [SERVICE_RD_B] on F.Cu, length 5.0000 mm
     @(51.0000 mm, 98.7500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1571 mm)
-    Local override; error
-    @(39.5000 mm, 101.2500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
-    @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1571 mm)
-    Local override; error
-    @(39.5000 mm, 101.2500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
-    @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
     Local override; error
     @(43.0000 mm, 101.2500 mm): Track [SERVICE_VBUS_SENSE] on F.Cu, length 3.5000 mm
     @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1571 mm)
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1590 mm)
     Local override; error
-    @(39.5000 mm, 101.2500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
-    @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1571 mm)
-    Local override; error
-    @(39.5000 mm, 101.2500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
-    @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1571 mm)
-    Local override; error
-    @(39.5000 mm, 101.2500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
-    @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1571 mm)
-    Local override; error
-    @(39.5000 mm, 101.2500 mm): Via [SERVICE_VBUS_SENSE] on F.Cu - B.Cu
-    @(40.0000 mm, 100.7500 mm): Via [SERVICE_RD_A] on F.Cu - B.Cu
+    @(41.0000 mm, 97.0000 mm): Track [SERVICE_USB2_DP] on B.Cu, length 3.2500 mm
+    @(41.5000 mm, 99.6000 mm): Via [SERVICE_USB2_DM] on F.Cu - B.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(63.5000 mm, 174.7500 mm): Track [PG_CM5_5V] on F.Cu, length 6.5000 mm
-    @(66.0000 mm, 175.2500 mm): Via [RT_CM5_5V] on F.Cu - B.Cu
+    @(47.0000 mm, 100.2500 mm): Track [SERVICE_USB2_DM] on F.Cu, length 3.0000 mm
+    @(49.0000 mm, 99.7500 mm): Via [SERVICE_USB2_DP] on F.Cu - B.Cu
 [tracks_crossing]: Tracks crossing
     Local override; error
     @(132.0000 mm, 129.2000 mm): Track [XOUT] on B.Cu, length 22.4964 mm
     @(79.0000 mm, 94.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 92.0393 mm
-[tracks_crossing]: Tracks crossing
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(79.0000 mm, 94.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 92.0393 mm
-    @(130.0000 mm, 129.8000 mm): Track [XIN] on B.Cu, length 25.7194 mm
+    @(41.0000 mm, 100.2500 mm): Via [SERVICE_USB2_DP] on F.Cu - B.Cu
+    @(43.0000 mm, 100.7500 mm): Track [SERVICE_RD_A] on F.Cu, length 3.0000 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1451 mm)
     Local override; error
     @(148.9000 mm, 114.1500 mm): Pad 1 [XIN] of Y10 on F.Cu
     @(146.5000 mm, 112.0000 mm): Track [XOUT] on F.Cu, length 4.5368 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(79.0000 mm, 94.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 92.0393 mm
+    @(130.0000 mm, 129.8000 mm): Track [XIN] on B.Cu, length 25.7194 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(41.0000 mm, 100.2500 mm): Via [SERVICE_USB2_DP] on F.Cu - B.Cu
+    @(41.5000 mm, 106.0000 mm): Track [SERVICE_USB2_DM] on B.Cu, length 6.4000 mm
 [shorting_items]: Items shorting two nets (nets XOUT and JMS_XAVDDH)
     Local override; error
     @(137.8000 mm, 131.4000 mm): Track [XOUT] on F.Cu, length 2.7803 mm
@@ -249,12 +313,12 @@
     @(148.5000 mm, 143.0000 mm): Pad 2 [POWER_GND] of C80 on F.Cu
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(106.0000 mm, 116.0000 mm): Track [TUSB_SATA_TXP] on B.Cu, length 11.6619 mm
-    @(79.0000 mm, 94.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 92.0393 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
     @(116.0000 mm, 110.0000 mm): Track [TUSB_SATA_TXP] on B.Cu, length 60.0000 mm
     @(100.0000 mm, 110.0000 mm): Track [V100_PET0_N] on B.Cu, length 80.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(106.0000 mm, 116.0000 mm): Track [TUSB_SATA_TXP] on B.Cu, length 11.6619 mm
+    @(79.0000 mm, 94.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 92.0393 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
     @(134.5000 mm, 134.0000 mm): Track [JMS_VCCO] on B.Cu, length 11.0000 mm
@@ -263,14 +327,18 @@
     Local override; error
     @(181.5000 mm, 132.2000 mm): Pad 37 [TUSB_SATA_TXN] of U13 on F.Cu
     @(184.0000 mm, 130.8000 mm): Track [TUSB_SATA_TXP] on F.Cu, length 2.6926 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1250 mm)
     Local override; error
-    @(184.0000 mm, 132.0000 mm): Track [TUSB_SATA_TXN] on F.Cu, length 2.5080 mm
-    @(181.5000 mm, 132.6000 mm): Pad 36 [TUSB_SATA_RXP] of U13 on F.Cu
+    @(135.0000 mm, 135.6000 mm): Via [JMS_VBUS_SENSE] on F.Cu - B.Cu
+    @(134.5000 mm, 134.0000 mm): Track [JMS_VCCO] on B.Cu, length 11.0000 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0045 mm)
     Local override; error
     @(75.0000 mm, 90.0000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 94.7141 mm
     @(130.0000 mm, 122.0000 mm): Track [TUSB_SATA_RXP] on B.Cu, length 53.3385 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(184.0000 mm, 132.0000 mm): Track [TUSB_SATA_TXN] on F.Cu, length 2.5080 mm
+    @(181.5000 mm, 132.6000 mm): Pad 36 [TUSB_SATA_RXP] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0045 mm)
     Local override; error
     @(75.0000 mm, 90.0000 mm): Track [CM5_USB3_RX_P] on B.Cu, length 94.7141 mm
@@ -283,94 +351,22 @@
     Local override; error
     @(184.0000 mm, 133.2000 mm): Track [TUSB_SATA_RXP] on F.Cu, length 2.5710 mm
     @(181.5000 mm, 133.0000 mm): Pad 35 [TUSB_SATA_RXN] of U13 on F.Cu
-[shorting_items]: Items shorting two nets (nets STORAGE_SEL and )
-    Local override; error
-    @(211.1000 mm, 150.9500 mm): Track [STORAGE_SEL] on F.Cu, length 36.2927 mm
-    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0114 mm)
-    Local override; error
-    @(181.5000 mm, 133.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
-    @(184.0000 mm, 134.4000 mm): Track [TUSB_SATA_RXN] on F.Cu, length 2.8653 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
     @(172.0000 mm, 138.0000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on B.Cu, length 34.2345 mm
     @(116.0000 mm, 145.0000 mm): Track [TUSB_SATA_TXN] on B.Cu, length 60.0000 mm
+[shorting_items]: Items shorting two nets (nets STORAGE_SEL and )
+    Local override; error
+    @(211.1000 mm, 150.9500 mm): Track [STORAGE_SEL] on F.Cu, length 36.2927 mm
+    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
 [shorting_items]: Items shorting two nets (nets MODE_IN and STORAGE_SEL)
     Local override; error
     @(208.9000 mm, 150.0000 mm): Pad 2 [MODE_IN] of U14 on F.Cu
     @(211.1000 mm, 150.9500 mm): Track [STORAGE_SEL] on F.Cu, length 59.7676 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1921 mm)
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0114 mm)
     Local override; error
-    @(184.0000 mm, 134.4000 mm): Via [TUSB_SATA_RXN] on F.Cu - B.Cu
-    @(176.0000 mm, 149.0000 mm): Track [TUSB_SATA_RXP] on B.Cu, length 17.7099 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(174.0000 mm, 136.0000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on B.Cu, length 34.2345 mm
-    @(116.0000 mm, 145.0000 mm): Track [TUSB_SATA_TXN] on B.Cu, length 60.0000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(221.2500 mm, 163.5000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 3.7750 mm
-    @(220.7500 mm, 162.5000 mm): Via [M2_SATA_B_P_PCIE_RXN0] on F.Cu - B.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0044 mm)
-    Local override; error
-    @(178.5000 mm, 134.2000 mm): Track [M2_SATA_B_N_PCIE_RXP0] on F.Cu, length 7.5293 mm
-    @(178.5000 mm, 134.6000 mm): Pad 8 [JMS_GPIO4_NC] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0322 mm)
-    Local override; error
-    @(178.5000 mm, 134.2000 mm): Pad 7 [M2_SATA_B_N_PCIE_RXP0] of U13 on F.Cu
-    @(178.5000 mm, 133.8000 mm): Track [M2_SATA_B_P_PCIE_RXN0] on F.Cu, length 5.0090 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(232.0000 mm, 149.0500 mm): Track [STORAGE_3V3] on F.Cu, length 24.9500 mm
-    @(227.7500 mm, 157.5000 mm): Track [AUTO_PEDET] on F.Cu, length 27.2500 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(172.0000 mm, 132.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on B.Cu, length 18.9737 mm
-    @(176.0000 mm, 110.0000 mm): Track [TUSB_SATA_TXP] on B.Cu, length 22.2854 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(205.0000 mm, 124.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 32.3120 mm
-    @(222.2500 mm, 150.0000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on B.Cu, length 5.5000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(174.0000 mm, 130.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 17.0880 mm
-    @(176.0000 mm, 110.0000 mm): Track [TUSB_SATA_TXP] on B.Cu, length 22.2854 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(79.0000 mm, 94.0000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 92.0393 mm
-    @(135.0000 mm, 135.6000 mm): Track [JMS_VBUS_SENSE] on B.Cu, length 20.6000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1506 mm)
-    Local override; error
-    @(178.5000 mm, 132.6000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 6.5276 mm
-    @(178.5000 mm, 132.2000 mm): Pad 2 [M2_SATA_A_P_PCIE_TXP0] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(222.2500 mm, 155.5000 mm): Via [M2_SATA_A_N_PCIE_TXN0] on F.Cu - B.Cu
-    @(222.7500 mm, 151.0000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on B.Cu, length 5.5000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(222.7500 mm, 156.5000 mm): Via [M2_SATA_A_P_PCIE_TXP0] on F.Cu - B.Cu
-    @(222.2500 mm, 155.5000 mm): Track [M2_SATA_A_N_PCIE_TXN0] on F.Cu, length 4.2250 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0322 mm)
-    Local override; error
-    @(178.5000 mm, 132.2000 mm): Track [M2_SATA_A_P_PCIE_TXP0] on F.Cu, length 5.0090 mm
-    @(178.5000 mm, 131.8000 mm): Pad 1 [POWER_GND] of U13 on F.Cu
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(106.0000 mm, 120.0000 mm): Track [TUSB_SATA_RXP] on B.Cu, length 24.0832 mm
-    @(122.0000 mm, 114.0000 mm): Track [VBUS] on B.Cu, length 26.0000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(122.0000 mm, 140.0000 mm): Track [VBUS] on B.Cu, length 14.3500 mm
-    @(134.5000 mm, 134.0000 mm): Track [JMS_VCCO] on B.Cu, length 11.0000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(90.5000 mm, 118.0000 mm): Track [BRIDGE_R1RTN] on B.Cu, length 43.5000 mm
-    @(94.0000 mm, 126.0000 mm): Track [BRIDGE_SATA_TX_P] on B.Cu, length 10.0000 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1250 mm)
-    Local override; error
-    @(135.0000 mm, 135.6000 mm): Via [JMS_VBUS_SENSE] on F.Cu - B.Cu
-    @(134.5000 mm, 134.0000 mm): Track [JMS_VCCO] on B.Cu, length 11.0000 mm
+    @(181.5000 mm, 133.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
+    @(184.0000 mm, 134.4000 mm): Track [TUSB_SATA_RXN] on F.Cu, length 2.8653 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0750 mm)
     Local override; error
     @(137.0000 mm, 119.5000 mm): Pad 1 [PCIE_TXP1] of C92 on F.Cu
@@ -381,8 +377,8 @@
     @(134.0000 mm, 118.0000 mm): Track [BRIDGE_R1RTN] on F.Cu, length 2.0000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(100.0000 mm, 106.0000 mm): Track [V100_PET0_P] on B.Cu, length 70.0000 mm
-    @(73.0000 mm, 88.0000 mm): Track [CM5_USB3_RX_N] on B.Cu, length 95.9377 mm
+    @(161.0000 mm, 135.8000 mm): Track [CM5_USB3_TX_P] on B.Cu, length 10.0000 mm
+    @(77.0000 mm, 92.0000 mm): Track [CM5_USB3_TX_N] on B.Cu, length 93.1539 mm
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(178.5000 mm, 131.8000 mm): Pad 1 [POWER_GND] of U13 on F.Cu
@@ -473,22 +469,6 @@
     @(178.5000 mm, 136.2000 mm): Pad 12 [M2_PCIE_TXN2] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
-    @(178.5000 mm, 136.2000 mm): Pad 12 [M2_PCIE_TXN2] of U13 on F.Cu
-    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(178.5000 mm, 136.2000 mm): Pad 12 [M2_PCIE_TXN2] of U13 on F.Cu
-    @(178.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
-    @(178.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
-    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(178.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
-    @(178.5000 mm, 137.0000 mm): Pad 14 [POWER_GND] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
     @(153.5000 mm, 131.8000 mm): Pad 1 [JMS_VDDREG_5V] of U12 on F.Cu
     @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
@@ -497,6 +477,34 @@
     @(153.5000 mm, 132.2000 mm): Pad 2 [JMS_VCCK] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
+    @(178.5000 mm, 136.2000 mm): Pad 12 [M2_PCIE_TXN2] of U13 on F.Cu
+    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 136.2000 mm): Pad 12 [M2_PCIE_TXN2] of U13 on F.Cu
+    @(178.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(153.5000 mm, 132.2000 mm): Pad 2 [JMS_VCCK] of U12 on F.Cu
+    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
+    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(178.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
+    @(178.5000 mm, 137.0000 mm): Pad 14 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(153.5000 mm, 132.2000 mm): Pad 2 [JMS_VCCK] of U12 on F.Cu
+    @(153.5000 mm, 132.6000 mm): Pad 3 [JMS_SPI_SO_DNP] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(153.5000 mm, 132.6000 mm): Pad 3 [JMS_SPI_SO_DNP] of U12 on F.Cu
+    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
     @(178.5000 mm, 137.0000 mm): Pad 14 [POWER_GND] of U13 on F.Cu
     @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
@@ -513,27 +521,7 @@
     @(178.5000 mm, 137.8000 mm): Pad 16 [M2_PCIE_TXN3] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
-    @(153.5000 mm, 132.2000 mm): Pad 2 [JMS_VCCK] of U12 on F.Cu
-    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(153.5000 mm, 132.2000 mm): Pad 2 [JMS_VCCK] of U12 on F.Cu
-    @(153.5000 mm, 132.6000 mm): Pad 3 [JMS_SPI_SO_DNP] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
     @(178.5000 mm, 137.8000 mm): Pad 16 [M2_PCIE_TXN3] of U13 on F.Cu
-    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(178.5000 mm, 137.8000 mm): Pad 16 [M2_PCIE_TXN3] of U13 on F.Cu
-    @(178.5000 mm, 138.2000 mm): Pad 17 [POWER_GND] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
-    @(153.5000 mm, 132.6000 mm): Pad 3 [JMS_SPI_SO_DNP] of U12 on F.Cu
-    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
-    @(178.5000 mm, 138.2000 mm): Pad 17 [POWER_GND] of U13 on F.Cu
     @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
@@ -541,8 +529,8 @@
     @(153.5000 mm, 133.0000 mm): Pad 4 [JMS_SPI_SCK_DNP] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(180.6000 mm, 139.5000 mm): Pad 18 [NC_18] of U13 on F.Cu
-    @(180.2000 mm, 139.5000 mm): Pad 19 [POWER_GND] of U13 on F.Cu
+    @(178.5000 mm, 137.8000 mm): Pad 16 [M2_PCIE_TXN3] of U13 on F.Cu
+    @(178.5000 mm, 138.2000 mm): Pad 17 [POWER_GND] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
     @(153.5000 mm, 133.0000 mm): Pad 4 [JMS_SPI_SCK_DNP] of U12 on F.Cu
@@ -551,6 +539,22 @@
     Local override; error
     @(153.5000 mm, 133.0000 mm): Pad 4 [JMS_SPI_SCK_DNP] of U12 on F.Cu
     @(153.5000 mm, 133.4000 mm): Pad 5 [JMS_SPI_SI_DNP] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(178.5000 mm, 138.2000 mm): Pad 17 [POWER_GND] of U13 on F.Cu
+    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(180.6000 mm, 139.5000 mm): Pad 18 [NC_18] of U13 on F.Cu
+    @(180.2000 mm, 139.5000 mm): Pad 19 [POWER_GND] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(153.5000 mm, 133.4000 mm): Pad 5 [JMS_SPI_SI_DNP] of U12 on F.Cu
+    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(153.5000 mm, 133.4000 mm): Pad 5 [JMS_SPI_SI_DNP] of U12 on F.Cu
+    @(153.5000 mm, 133.8000 mm): Pad 6 [USB_OE_N] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(180.2000 mm, 139.5000 mm): Pad 19 [POWER_GND] of U13 on F.Cu
@@ -561,12 +565,12 @@
     @(179.4000 mm, 139.5000 mm): Pad 21 [POWER_GND] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
-    @(153.5000 mm, 133.4000 mm): Pad 5 [JMS_SPI_SI_DNP] of U12 on F.Cu
+    @(153.5000 mm, 133.8000 mm): Pad 6 [USB_OE_N] of U12 on F.Cu
     @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(153.5000 mm, 133.4000 mm): Pad 5 [JMS_SPI_SI_DNP] of U12 on F.Cu
     @(153.5000 mm, 133.8000 mm): Pad 6 [USB_OE_N] of U12 on F.Cu
+    @(153.5000 mm, 134.2000 mm): Pad 7 [CM5_STORAGE_USB2_DM] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
     @(181.5000 mm, 138.2000 mm): Pad 22 [JMS_PCIE_RXN1] of U13 on F.Cu
@@ -577,23 +581,7 @@
     @(181.5000 mm, 137.8000 mm): Pad 23 [JMS_PCIE_RXP1] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
-    @(153.5000 mm, 133.8000 mm): Pad 6 [USB_OE_N] of U12 on F.Cu
-    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
     @(181.5000 mm, 137.8000 mm): Pad 23 [JMS_PCIE_RXP1] of U13 on F.Cu
-    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(153.5000 mm, 133.8000 mm): Pad 6 [USB_OE_N] of U12 on F.Cu
-    @(153.5000 mm, 134.2000 mm): Pad 7 [CM5_STORAGE_USB2_DM] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(181.5000 mm, 137.8000 mm): Pad 23 [JMS_PCIE_RXP1] of U13 on F.Cu
-    @(181.5000 mm, 137.4000 mm): Pad 24 [JMS_PCIE_TXN1] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
-    @(181.5000 mm, 137.4000 mm): Pad 24 [JMS_PCIE_TXN1] of U13 on F.Cu
     @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
@@ -601,23 +589,15 @@
     @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
+    @(181.5000 mm, 137.8000 mm): Pad 23 [JMS_PCIE_RXP1] of U13 on F.Cu
     @(181.5000 mm, 137.4000 mm): Pad 24 [JMS_PCIE_TXN1] of U13 on F.Cu
-    @(181.5000 mm, 137.0000 mm): Pad 25 [JMS_PCIE_TXP1] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(153.5000 mm, 134.2000 mm): Pad 7 [CM5_STORAGE_USB2_DM] of U12 on F.Cu
     @(153.5000 mm, 134.6000 mm): Pad 8 [CM5_STORAGE_USB2_DP] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
-    @(181.5000 mm, 137.0000 mm): Pad 25 [JMS_PCIE_TXP1] of U13 on F.Cu
-    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(181.5000 mm, 137.0000 mm): Pad 25 [JMS_PCIE_TXP1] of U13 on F.Cu
-    @(181.5000 mm, 136.6000 mm): Pad 26 [NC_26] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
-    @(181.5000 mm, 136.6000 mm): Pad 26 [NC_26] of U13 on F.Cu
+    @(181.5000 mm, 137.4000 mm): Pad 24 [JMS_PCIE_TXN1] of U13 on F.Cu
     @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
@@ -625,67 +605,147 @@
     @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(181.5000 mm, 136.6000 mm): Pad 26 [NC_26] of U13 on F.Cu
-    @(181.5000 mm, 136.2000 mm): Pad 27 [NC_27] of U13 on F.Cu
+    @(181.5000 mm, 137.4000 mm): Pad 24 [JMS_PCIE_TXN1] of U13 on F.Cu
+    @(181.5000 mm, 137.0000 mm): Pad 25 [JMS_PCIE_TXP1] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(153.5000 mm, 134.6000 mm): Pad 8 [CM5_STORAGE_USB2_DP] of U12 on F.Cu
     @(153.5000 mm, 135.0000 mm): Pad 9 [STORAGE_SEL] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
-    @(181.5000 mm, 136.2000 mm): Pad 27 [NC_27] of U13 on F.Cu
+    @(181.5000 mm, 137.0000 mm): Pad 25 [JMS_PCIE_TXP1] of U13 on F.Cu
     @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(181.5000 mm, 136.2000 mm): Pad 27 [NC_27] of U13 on F.Cu
-    @(181.5000 mm, 135.8000 mm): Pad 28 [NC_28] of U13 on F.Cu
+    @(181.5000 mm, 137.0000 mm): Pad 25 [JMS_PCIE_TXP1] of U13 on F.Cu
+    @(181.5000 mm, 136.6000 mm): Pad 26 [NC_26] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
     @(153.5000 mm, 135.0000 mm): Pad 9 [STORAGE_SEL] of U12 on F.Cu
     @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 136.6000 mm): Pad 26 [NC_26] of U13 on F.Cu
+    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(153.5000 mm, 135.0000 mm): Pad 9 [STORAGE_SEL] of U12 on F.Cu
     @(153.5000 mm, 135.4000 mm): Pad 10 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 136.6000 mm): Pad 26 [NC_26] of U13 on F.Cu
+    @(181.5000 mm, 136.2000 mm): Pad 27 [NC_27] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
-    @(181.5000 mm, 135.8000 mm): Pad 28 [NC_28] of U13 on F.Cu
+    @(181.5000 mm, 136.2000 mm): Pad 27 [NC_27] of U13 on F.Cu
     @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
+    @(181.5000 mm, 136.2000 mm): Pad 27 [NC_27] of U13 on F.Cu
     @(181.5000 mm, 135.8000 mm): Pad 28 [NC_28] of U13 on F.Cu
-    @(181.5000 mm, 135.4000 mm): Pad 29 [NC_29] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(153.5000 mm, 135.4000 mm): Pad 10 [POWER_GND] of U12 on F.Cu
     @(153.5000 mm, 135.8000 mm): Pad 11 [CM5_USB3_TX_P] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
-    @(181.5000 mm, 135.4000 mm): Pad 29 [NC_29] of U13 on F.Cu
+    @(181.5000 mm, 135.8000 mm): Pad 28 [NC_28] of U13 on F.Cu
     @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(181.5000 mm, 135.4000 mm): Pad 29 [NC_29] of U13 on F.Cu
-    @(181.5000 mm, 135.0000 mm): Pad 30 [STORAGE_3V3] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1746 mm)
-    Local override; error
-    @(99.8000 mm, 121.0000 mm): Pad 16 [<no net>] of U7 on F.Cu
-    @(99.0000 mm, 120.2000 mm): Pad 32 [BRIDGE_1V1] of U7 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(181.5000 mm, 135.0000 mm): Pad 30 [STORAGE_3V3] of U13 on F.Cu
-    @(181.5000 mm, 134.6000 mm): Pad 31 [JMS_PCIE_RXN0] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
     @(153.5000 mm, 135.8000 mm): Pad 11 [CM5_USB3_TX_P] of U12 on F.Cu
     @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 135.8000 mm): Pad 28 [NC_28] of U13 on F.Cu
+    @(181.5000 mm, 135.4000 mm): Pad 29 [NC_29] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(153.5000 mm, 135.8000 mm): Pad 11 [CM5_USB3_TX_P] of U12 on F.Cu
     @(153.5000 mm, 136.2000 mm): Pad 12 [CM5_USB3_TX_N] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
+    @(181.5000 mm, 135.4000 mm): Pad 29 [NC_29] of U13 on F.Cu
+    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 135.4000 mm): Pad 29 [NC_29] of U13 on F.Cu
     @(181.5000 mm, 135.0000 mm): Pad 30 [STORAGE_3V3] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(153.5000 mm, 136.2000 mm): Pad 12 [CM5_USB3_TX_N] of U12 on F.Cu
+    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(153.5000 mm, 136.2000 mm): Pad 12 [CM5_USB3_TX_N] of U12 on F.Cu
+    @(153.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 135.0000 mm): Pad 30 [STORAGE_3V3] of U13 on F.Cu
+    @(181.5000 mm, 134.6000 mm): Pad 31 [JMS_PCIE_RXN0] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 135.0000 mm): Pad 30 [STORAGE_3V3] of U13 on F.Cu
+    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(153.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 134.6000 mm): Pad 31 [JMS_PCIE_RXN0] of U13 on F.Cu
+    @(181.5000 mm, 134.2000 mm): Pad 32 [JMS_PCIE_RXP0] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(153.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+    @(153.5000 mm, 137.0000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 134.6000 mm): Pad 31 [JMS_PCIE_RXN0] of U13 on F.Cu
+    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 134.2000 mm): Pad 32 [JMS_PCIE_RXP0] of U13 on F.Cu
+    @(181.5000 mm, 133.8000 mm): Pad 33 [JMS_PCIE_TXN0] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 134.2000 mm): Pad 32 [JMS_PCIE_RXP0] of U13 on F.Cu
+    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(153.5000 mm, 137.0000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
+    @(153.5000 mm, 137.4000 mm): Pad 15 [CM5_USB3_RX_P] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1746 mm)
+    Local override; error
+    @(99.8000 mm, 121.0000 mm): Pad 16 [<no net>] of U7 on F.Cu
+    @(99.0000 mm, 120.2000 mm): Pad 32 [BRIDGE_1V1] of U7 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 133.8000 mm): Pad 33 [JMS_PCIE_TXN0] of U13 on F.Cu
+    @(181.5000 mm, 133.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(153.5000 mm, 137.4000 mm): Pad 15 [CM5_USB3_RX_P] of U12 on F.Cu
+    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(153.5000 mm, 137.4000 mm): Pad 15 [CM5_USB3_RX_P] of U12 on F.Cu
+    @(153.5000 mm, 137.8000 mm): Pad 16 [CM5_USB3_RX_N] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 133.8000 mm): Pad 33 [JMS_PCIE_TXN0] of U13 on F.Cu
+    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(181.5000 mm, 133.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
+    @(181.5000 mm, 133.0000 mm): Pad 35 [TUSB_SATA_RXN] of U13 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(153.5000 mm, 137.8000 mm): Pad 16 [CM5_USB3_RX_N] of U12 on F.Cu
+    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
+    Local override; error
+    @(181.5000 mm, 133.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
     @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1746 mm)
     Local override; error
@@ -693,72 +753,16 @@
     @(92.2000 mm, 121.0000 mm): Pad 33 [BRIDGE_1V1] of U7 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(181.5000 mm, 134.6000 mm): Pad 31 [JMS_PCIE_RXN0] of U13 on F.Cu
-    @(181.5000 mm, 134.2000 mm): Pad 32 [JMS_PCIE_RXP0] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
-    @(153.5000 mm, 136.2000 mm): Pad 12 [CM5_USB3_TX_N] of U12 on F.Cu
-    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
-    @(181.5000 mm, 134.6000 mm): Pad 31 [JMS_PCIE_RXN0] of U13 on F.Cu
-    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(153.5000 mm, 136.2000 mm): Pad 12 [CM5_USB3_TX_N] of U12 on F.Cu
-    @(153.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(181.5000 mm, 134.2000 mm): Pad 32 [JMS_PCIE_RXP0] of U13 on F.Cu
-    @(181.5000 mm, 133.8000 mm): Pad 33 [JMS_PCIE_TXN0] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
-    @(181.5000 mm, 134.2000 mm): Pad 32 [JMS_PCIE_RXP0] of U13 on F.Cu
-    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
-    @(153.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
-    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(153.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
-    @(153.5000 mm, 137.0000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(181.5000 mm, 133.8000 mm): Pad 33 [JMS_PCIE_TXN0] of U13 on F.Cu
-    @(181.5000 mm, 133.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
-    @(181.5000 mm, 133.8000 mm): Pad 33 [JMS_PCIE_TXN0] of U13 on F.Cu
-    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(181.5000 mm, 133.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
-    @(181.5000 mm, 133.0000 mm): Pad 35 [TUSB_SATA_RXN] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(153.5000 mm, 137.0000 mm): Pad 14 [POWER_GND] of U12 on F.Cu
-    @(153.5000 mm, 137.4000 mm): Pad 15 [CM5_USB3_RX_P] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
-    @(181.5000 mm, 133.4000 mm): Pad 34 [JMS_PCIE_TXP0] of U13 on F.Cu
-    @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
+    @(153.5000 mm, 137.8000 mm): Pad 16 [CM5_USB3_RX_N] of U12 on F.Cu
+    @(153.5000 mm, 138.2000 mm): Pad 17 [POWER_GND] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(181.5000 mm, 133.0000 mm): Pad 35 [TUSB_SATA_RXN] of U13 on F.Cu
     @(181.5000 mm, 132.6000 mm): Pad 36 [TUSB_SATA_RXP] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
-    @(153.5000 mm, 137.4000 mm): Pad 15 [CM5_USB3_RX_P] of U12 on F.Cu
-    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
     @(181.5000 mm, 133.0000 mm): Pad 35 [TUSB_SATA_RXN] of U13 on F.Cu
     @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(153.5000 mm, 137.4000 mm): Pad 15 [CM5_USB3_RX_P] of U12 on F.Cu
-    @(153.5000 mm, 137.8000 mm): Pad 16 [CM5_USB3_RX_N] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(181.5000 mm, 132.6000 mm): Pad 36 [TUSB_SATA_RXP] of U13 on F.Cu
@@ -767,10 +771,6 @@
     Local override; error
     @(181.5000 mm, 132.6000 mm): Pad 36 [TUSB_SATA_RXP] of U13 on F.Cu
     @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
-    Local override; error
-    @(153.5000 mm, 137.8000 mm): Pad 16 [CM5_USB3_RX_N] of U12 on F.Cu
-    @(155.0000 mm, 135.0000 mm): Pad 43 [POWER_GND] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(181.5000 mm, 132.2000 mm): Pad 37 [TUSB_SATA_TXN] of U13 on F.Cu
@@ -781,8 +781,8 @@
     @(180.0000 mm, 135.0000 mm): Pad 43 [<no net>] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(153.5000 mm, 137.8000 mm): Pad 16 [CM5_USB3_RX_N] of U12 on F.Cu
-    @(153.5000 mm, 138.2000 mm): Pad 17 [POWER_GND] of U12 on F.Cu
+    @(155.6000 mm, 139.5000 mm): Pad 18 [NC_18] of U12 on F.Cu
+    @(155.2000 mm, 139.5000 mm): Pad 19 [POWER_GND] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
     @(181.5000 mm, 131.8000 mm): Pad 38 [TUSB_SATA_TXP] of U13 on F.Cu
@@ -793,24 +793,20 @@
     @(179.8000 mm, 130.5000 mm): Pad 40 [JMS_AVDDL] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(155.6000 mm, 139.5000 mm): Pad 18 [NC_18] of U12 on F.Cu
     @(155.2000 mm, 139.5000 mm): Pad 19 [POWER_GND] of U12 on F.Cu
+    @(154.8000 mm, 139.5000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
     @(179.8000 mm, 130.5000 mm): Pad 40 [JMS_AVDDL] of U13 on F.Cu
     @(180.2000 mm, 130.5000 mm): Pad 41 [NC_41] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
     Local override; error
-    @(180.2000 mm, 130.5000 mm): Pad 41 [NC_41] of U13 on F.Cu
-    @(180.6000 mm, 130.5000 mm): Pad 42 [NC_42] of U13 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
-    @(155.2000 mm, 139.5000 mm): Pad 19 [POWER_GND] of U12 on F.Cu
-    @(154.8000 mm, 139.5000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
-    Local override; error
     @(154.8000 mm, 139.5000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
     @(154.4000 mm, 139.5000 mm): Pad 21 [POWER_GND] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1500 mm)
+    Local override; error
+    @(180.2000 mm, 130.5000 mm): Pad 41 [NC_41] of U13 on F.Cu
+    @(180.6000 mm, 130.5000 mm): Pad 42 [NC_42] of U13 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
     @(156.5000 mm, 138.2000 mm): Pad 22 [USB_RXN1] of U12 on F.Cu
@@ -907,10 +903,6 @@
     Local override; error
     @(156.5000 mm, 133.8000 mm): Pad 33 [USB_DP] of U12 on F.Cu
     @(156.5000 mm, 133.4000 mm): Pad 34 [USB_DM] of U12 on F.Cu
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1746 mm)
-    Local override; error
-    @(92.2000 mm, 127.0000 mm): Pad 48 [BRIDGE_3V3] of U7 on F.Cu
-    @(93.0000 mm, 127.8000 mm): Pad 64 [<no net>] of U7 on F.Cu
 [clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1750 mm)
     Local override; error
     @(156.5000 mm, 133.4000 mm): Pad 34 [USB_DM] of U12 on F.Cu
@@ -959,6 +951,10 @@
     Local override; error
     @(155.2000 mm, 130.5000 mm): Pad 41 [NC_41] of U12 on F.Cu
     @(155.6000 mm, 130.5000 mm): Pad 42 [NC_42] of U12 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1746 mm)
+    Local override; error
+    @(92.2000 mm, 127.0000 mm): Pad 48 [BRIDGE_3V3] of U7 on F.Cu
+    @(93.0000 mm, 127.8000 mm): Pad 64 [<no net>] of U7 on F.Cu
 [hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.2389 mm)
     Rule: board setup constraints hole; error
     @(96.0000 mm, 124.0000 mm): Pad 65 [POWER_GND] of U7 on F.Cu
@@ -2326,7 +2322,7 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(57.7500 mm, 165.7500 mm): Pad 6 [POWER_GND] of U3 on F.Cu
-    @(50.9000 mm, 165.2500 mm): Pad 2 [POWER_GND] of C6 on F.Cu
+    @(50.9000 mm, 163.0000 mm): Track [POWER_GND] on F.Cu, length 2.2500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(60.0000 mm, 164.6250 mm): Pad 18 [POWER_GND] of U3 on F.Cu
@@ -2485,7 +2481,7 @@
     @(75.0000 mm, 105.0000 mm): Zone [POWER_GND] on F.Cu, priority 0
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(78.9000 mm, 65.7000 mm): Track [POWER_GND] on B.Cu, length 2.2804 mm
+    @(81.1000 mm, 66.3000 mm): Via [POWER_GND] on F.Cu - B.Cu
     @(112.0000 mm, 72.0000 mm): Pad 2 [POWER_GND] of D2 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -2813,8 +2809,8 @@
     @(153.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(154.8000 mm, 139.5000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
     @(153.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U12 on F.Cu
+    @(154.8000 mm, 139.5000 mm): Pad 20 [STORAGE_3V3] of U12 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
     @(156.5000 mm, 135.0000 mm): Pad 30 [STORAGE_3V3] of U12 on F.Cu
@@ -2822,27 +2818,27 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(178.5000 mm, 133.4000 mm): Pad 5 [STORAGE_3V3] of U13 on F.Cu
-    @(178.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(178.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
-    @(179.8000 mm, 139.5000 mm): Pad 20 [STORAGE_3V3] of U13 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(178.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
     @(181.5000 mm, 135.0000 mm): Pad 30 [STORAGE_3V3] of U13 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(178.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
+    @(178.5000 mm, 133.4000 mm): Pad 5 [STORAGE_3V3] of U13 on F.Cu
     @(156.5000 mm, 135.0000 mm): Pad 30 [STORAGE_3V3] of U12 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(232.0000 mm, 149.0500 mm): Track [STORAGE_3V3] on F.Cu, length 20.9000 mm
-    @(179.8000 mm, 139.5000 mm): Pad 20 [STORAGE_3V3] of U13 on F.Cu
+    @(178.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
+    @(178.5000 mm, 133.4000 mm): Pad 5 [STORAGE_3V3] of U13 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(232.0000 mm, 174.0000 mm): Track [STORAGE_3V3] on In2.PWR, length 24.9500 mm
+    @(179.8000 mm, 139.5000 mm): Pad 20 [STORAGE_3V3] of U13 on F.Cu
+    @(178.5000 mm, 136.6000 mm): Pad 13 [STORAGE_3V3] of U13 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(179.8000 mm, 139.5000 mm): Pad 20 [STORAGE_3V3] of U13 on F.Cu
+    @(232.0000 mm, 149.0500 mm): Track [STORAGE_3V3] on F.Cu, length 20.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
     @(250.0000 mm, 100.0000 mm): Track [STORAGE_3V3] on F.Cu, length 1.0000 mm
+    @(232.0000 mm, 174.0000 mm): Track [STORAGE_3V3] on In2.PWR, length 24.9500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(178.5000 mm, 134.6000 mm): Pad 8 [JMS_GPIO4_NC] of U13 on F.Cu
@@ -2909,7 +2905,7 @@
     @(137.8000 mm, 138.6000 mm): Pad 30 [JMS_AVDDL] of U11 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(141.8000 mm, 138.6000 mm): Track [JMS_AVDDL] on F.Cu, length 1.9000 mm
+    @(141.8000 mm, 138.6000 mm): Track [JMS_AVDDL] on F.Cu, length 15.2266 mm
     @(139.8000 mm, 138.6000 mm): Pad 25 [JMS_AVDDL] of U11 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -2930,7 +2926,7 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(143.6500 mm, 138.0000 mm): Pad 33 [JMS_AVDDL] of U11 on F.Cu
-    @(141.8000 mm, 138.6000 mm): Track [JMS_AVDDL] on F.Cu, length 1.9000 mm
+    @(141.8000 mm, 138.6000 mm): Track [JMS_AVDDL] on F.Cu, length 15.2266 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(156.5000 mm, 132.6000 mm): Pad 36 [JMS_AVDDL] of U12 on F.Cu
@@ -2938,7 +2934,7 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(156.5000 mm, 132.6000 mm): Pad 36 [JMS_AVDDL] of U12 on F.Cu
-    @(141.8000 mm, 140.5000 mm): Track [JMS_AVDDL] on B.Cu, length 12.7883 mm
+    @(154.5000 mm, 142.0000 mm): Track [JMS_AVDDL] on F.Cu, length 5.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(179.8000 mm, 130.5000 mm): Pad 40 [JMS_AVDDL] of U13 on F.Cu
@@ -3273,11 +3269,11 @@
     @(153.5000 mm, 134.6000 mm): Pad 8 [CM5_STORAGE_USB2_DP] of U12 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(70.0400 mm, 106.7000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 4.4600 mm
+    @(74.5000 mm, 106.7000 mm): Track [CM5_USB3_TX_P] on F.Cu, length 12.7000 mm
     @(92.2000 mm, 126.2000 mm): Pad 46 [CM5_USB3_TX_P] of U7 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(70.0400 mm, 106.3000 mm): Pad 140 [CM5_USB3_TX_N] of J7 on F.Cu
+    @(70.0400 mm, 106.3000 mm): Track [CM5_USB3_TX_N] on F.Cu, length 0.0400 mm
     @(92.2000 mm, 125.8000 mm): Pad 45 [CM5_USB3_TX_N] of U7 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
@@ -3405,12 +3401,12 @@
     @(21.4500 mm, 76.4500 mm): Track [12V_IN_A] on F.Cu, length 4.5500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(233.6000 mm, 38.7500 mm): Track [12V_IN_A] on B.Cu, length 222.0262 mm
+    @(233.6000 mm, 38.7500 mm): PTH pad 1 [12V_IN_A] of F1
     @(237.1000 mm, 38.7500 mm): PTH pad 3 [12V_IN_A] of F1
 [unconnected_items]: Missing connection between items
     Local override; error
     @(233.6000 mm, 41.2500 mm): PTH pad 2 [12V_IN_A] of F1
-    @(233.6000 mm, 38.7500 mm): Track [12V_IN_A] on B.Cu, length 222.0262 mm
+    @(233.6000 mm, 38.7500 mm): PTH pad 1 [12V_IN_A] of F1
 [unconnected_items]: Missing connection between items
     Local override; error
     @(237.1000 mm, 41.2500 mm): PTH pad 4 [12V_IN_A] of F1
@@ -3454,7 +3450,7 @@
 [unconnected_items]: Missing connection between items
     Local override; error
     @(70.0000 mm, 166.0000 mm): Track [PG_CM5_5V] on B.Cu, length 10.5475 mm
-    @(62.2500 mm, 164.7500 mm): Track [PG_CM5_5V] on F.Cu, length 1.7500 mm
+    @(64.0000 mm, 164.7500 mm): Track [PG_CM5_5V] on F.Cu, length 4.7500 mm
 [unconnected_items]: Missing connection between items
     Local override; error
     @(32.9600 mm, 101.9000 mm): Pad 17 [ETH_LEDY] of J7 on F.Cu
@@ -3501,11 +3497,11 @@
     @(227.2500 mm, 105.2500 mm): Pad 12 [RT_BRIDGE_3V3] of U4 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(175.4000 mm, 85.0000 mm): Track [V100_PET0_P] on B.Cu, length 7.5400 mm
+    @(170.0000 mm, 85.0000 mm): Track [V100_PET0_P] on B.Cu, length 5.4000 mm
     @(235.9500 mm, 54.0000 mm): Pad 2 [V100_PET0_P] of C1 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(180.0000 mm, 100.0000 mm): Track [V100_PET0_N] on B.Cu, length 5.8700 mm
+    @(180.0000 mm, 110.0000 mm): Track [V100_PET0_N] on B.Cu, length 10.0000 mm
     @(245.9500 mm, 54.0000 mm): Pad 2 [V100_PET0_N] of C2 on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; error

@@ -42,7 +42,7 @@ The current Path-A storage repair has a focused V1562 primitive:
 `PHASE24_STORAGE_M2_POWER_IN2_ZONE_V1562.kicad_pcb`. Its native power-owner
 audit and trace-removal negative control pass for all nine J3
 `STORAGE_3V3` contacts. SATA, USB3, selector-geometry, JMS583-support, and
-JMS_REXT focused audits also pass. Fresh native DRC is 610 / 342 versus the
+JMS_REXT focused audits also pass. Fresh native DRC is 603 / 342 versus the
 like-for-like V79 baseline of 602 / 351; no new storage-rail shorting or
 crossing section is present. This is not a full-board pass or promotion.
 Receipt: `PHASE24_STORAGE_M2_POWER_IN2_ZONE_V1562_RECEIPT.md`.

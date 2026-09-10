@@ -10532,7 +10532,7 @@ the accepted local primitive. Receipt:
 - Added a disposable pad-derived `STORAGE_3V3` handoff using ordinary vias
   and a designated In2 power spine. The native power-owner audit and its
   necessary-trace negative control pass for all nine J3 power contacts.
-- The candidate has 610 native DRC violations / 342 unconnected items from
+- The candidate has 603 native DRC violations / 342 unconnected items from
   its open parent, with no new storage-rail shorting section. It is retained
   as a focused primitive, not promoted as a board pass.
 - The V1562 board also passes the focused SATA, USB3, selector-geometry,
