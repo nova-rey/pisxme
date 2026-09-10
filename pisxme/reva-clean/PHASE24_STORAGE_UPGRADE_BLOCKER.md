@@ -260,6 +260,9 @@ NC26/STORAGE_SEL short after one outboard stitch. V61 moved STORAGE_SEL
 outboard, but native DRC still found U13 NC41/STORAGE_SEL and XOUT/JMS_XAVDDH
 shorts at 610 / 348. Both are rejected; V54 remains the clean parent and the
 next mode route must escape locally around U13.
+V62 attempted that local-left mode escape, but native DRC remained 598 / 349
+with a real STORAGE_SEL/M2_SATA_B_PCIE_RXN0 short at U13 plus the independent
+XOUT/JMS_XAVDDH short. It is rejected; V54 remains the preferred parent.
 ## Follow-up implementation evidence — 2026-09-06
 
 Native inspection found inherited C44-C47 reference collisions in the

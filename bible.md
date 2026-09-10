@@ -502,6 +502,10 @@ design package required for implementation. The JAE U215 M-key variant
 identity/procurement path was strengthened, while exact land-pattern capture
 and the NVMe bridge design pack remain gated. No production KiCad assets were
 changed.
+2026-09-09 — Phase 24 V62 rejected: local STORAGE_SEL escape removed the U14
+MODE_IN collision but shorted the U13 transition into M2 SATA RX and retained
+the XOUT/JMS_XAVDDH short. Native DRC was 598 / 349. Preserved board, report,
+script, and receipt; V54 remains preferred.
 2026-09-09 — Phase 24 V54 accepted as the best disposable storage
 ground-return parent. Full F.Cu POWER_GND pad connection removed all 10
 starved-thermal findings and reduced native opens to 350 at 601 total DRC;
