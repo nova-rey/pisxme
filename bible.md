@@ -139,6 +139,12 @@ V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V1384 accepted the U1.25 RTL_1V1 fanout on the complete
+V1382 U1.16 basis. Native DRC reports zero violations with 18 fixture opens.
+The corrected saved-board audit derives connectivity from KiCad's loaded
+board objects and passes U1.16/U1.25/U1.36/U1.40/U1.50/U1.55/C4.1 plus a
+source-segment removal negative control. U1.60/U1.63 and remaining Path-B
+support/control groups remain open; no production CAD or Path-A asset changed.
 
 2026-09-10 — Phase 24 V1382 accepted: U1.16 RTL_1V1 descends to `(100.8,75.0)`
 and hands off on B.Cu to the existing `(102.0,64.8)` 1V1 trunk. Native DRC

@@ -10460,3 +10460,11 @@ straight on F.Cu, transitions at `(100.8,75.0)`, and uses a short B.Cu shelf
 to the established `(102.0,64.8)` 1V1 trunk without touching U1.17 or the
 accepted 3V3 field. Native DRC reports zero violations; the saved-board audit
 and U1.16 source-removal negative control pass. U1.25/U1.60/U1.63 remain open.
+
+V1384 is accepted as the complete U1.25 RTL_1V1 fanout on the V1382 basis.
+It preserves the native-clean U1.16 handoff and adds the U1.25 upper-right
+escape to the established 1V1 trunk. Native DRC reports zero violations with
+18 remaining fixture opens. The corrected saved-board audit covers U1.16,
+U1.25, U1.36, U1.40, U1.50, U1.55, and C4.1; its source-segment removal
+negative control proves that C4.1 is not connected through an expected-only
+edge. U1.60/U1.63 and the remaining Path-B support/control groups remain open.
