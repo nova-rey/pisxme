@@ -10278,3 +10278,9 @@ transitions with a staggered TX launch and reduced the local fixture to 9
 native violations with no shorting entries; target-field crossings and
 clearances remain. It is the best disposable basis, not a pass. Receipt:
 `PHASE24_STORAGE_SUPPORT_U12_COAUTHOR_TX_RX_FAR_V150_RECEIPT.md`.
+V154 completed the native-pad-derived U12 target field: native DRC is zero,
+all six local support endpoints pass, and a saved-board removed-track
+negative control fails as required. The 32 remaining opens are intentional
+stripped-fixture residue; V154 is accepted as a local primitive, not board
+closure. Receipt:
+`PHASE24_STORAGE_SUPPORT_U12_COAUTHOR_TX_RX_FAR_V154_RECEIPT.md`.
