@@ -10793,3 +10793,9 @@ through their required environment-selected PCB inputs. All three pass with
 negative controls, as recorded in
 `PHASE24_STORAGE_SUPPORT_AUDIT_20260910.md`. The earlier apparent failures
 were invocation errors, not live design defects.
+V1460 is a rejected coupled Path-B experiment that regenerated LANE0_RXN with
+the U1.66 GND escape. Native DRC reported 15 violations / 10 opens, with the
+remaining conflicts moving to LANE0_TXP, LANE0_TXN, and JTAG_TCK. It confirms
+the QFN field must be co-authored; no rule relaxation or production change
+was made. The consultant review and raw evidence are recorded in
+`PHASE24_RTL9210B_COUPLED_V1460_RECEIPT.md`.

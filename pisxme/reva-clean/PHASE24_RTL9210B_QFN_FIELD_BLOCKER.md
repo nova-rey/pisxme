@@ -55,3 +55,12 @@ farther below the field and produced 5 violations, including a RESET_N short,
 LANE0_RXN contact, and a source-field crossing. Neither probe changes the
 Path-B disposition or the approved clearance/layer contract. Their raw PCBs,
 generators, and DRC receipts are retained as route-implementation evidence.
+
+## Coupled corridor probe — V1460
+
+Following independent review, V1460 regenerated `LANE0_RXN` together with the
+U1.66 GND escape instead of adding another isolated via. Native DRC reported
+15 violations / 10 opens: the GND path avoided the original U1.66 direct
+failure but collided with LANE0_TXP, LANE0_TXN, and JTAG_TCK geometry. It is
+rejected under the unchanged rules. The coupled source-field class is the
+next required Path-B work; no production CAD or Path-A asset changed.

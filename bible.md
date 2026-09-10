@@ -10060,3 +10060,7 @@ The 2026-09-10 JMS583 support triage was corrected for each audit's actual
 input contract; support authority, VBUS divider, and VCCO zone now pass with
 negative controls against the V54 saved board. The apparent failures were
 tool invocation errors, not design evidence.
+The 2026-09-10 RTL9210B V1460 coupled QFN experiment co-authored U1.66 GND
+with LANE0_RXN and retained 15 native DRC violations against adjacent
+lane/JTAG copper. It was rejected without rule relaxation; Path A stayed
+intact.
