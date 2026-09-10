@@ -10151,3 +10151,5 @@ best disposable basis; production promotion is not authorized.
 The storage power audit was strengthened with `--strict-sources`; it uses only
 saved pads/tracks/vias/zones and exposes the remaining fragmented source fanout
 on V94/V102.
+V103/V104 demonstrated strict native source co-connectivity through an In2
+storage plane, but native DRC still found real shorts; neither is promoted.

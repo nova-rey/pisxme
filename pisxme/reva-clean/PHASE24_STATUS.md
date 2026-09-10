@@ -10925,3 +10925,8 @@ V102 added an outer-acreage U13.30 branch and was rejected at native
 619/340. The storage power audit now has an opt-in `--strict-sources` mode
 requiring every assigned rail source pad to share one saved-board native
 connectivity component; current V94/V102 fail that assertion.
+V103 connected the complete listed source set through a local In2 power
+plane and passed the strict-source audit, but native DRC reported 612/333
+with real rail-to-signal/via shorts. V104 revised the U13/U14 escapes and
+reduced this to 610/337, with NC_26/STORAGE_SEL and latent XOUT shorts still
+present. Both are rejected; V94 remains the cleanest disposable parent.

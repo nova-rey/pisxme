@@ -13,6 +13,8 @@ production PCB authority.
 | V100 | Exact V95 branch without zone refill | PASS, negative control PASS | 603 / 340 | REJECT: branch still crosses and exposes NC/selector shorts |
 | V101 | U13/U14 safe-offset vias into local In4 rail plane | PASS, negative control PASS | 606 / 337 | REJECT: storage-selector, SATA, and latent XOUT shorts |
 | V102 | U13.30 around outer B.Cu/F.Cu perimeter to U14.5 | PASS, negative control PASS | 619 / 340 | REJECT: crossings and latent selector/XOUT findings |
+| V103 | U12/U13/U14/R81 into local In2 power plane | PASS, strict-source PASS | 612 / 333 | REJECT: rail-to-signal/via shorts |
+| V104 | U13/U14-only local In2 plane with revised escapes | PASS, focused PASS | 610 / 337 | REJECT: NC_26/STORAGE_SEL and latent XOUT shorts |
 
 The focused audit proves the nine J3 contacts reach at least one
 `STORAGE_3V3` source through saved native copper. It does not waive the
@@ -21,7 +23,8 @@ must physically join the rail. The trials therefore remain evidence only.
 
 The audit now also supports `--strict-sources`, requiring all listed source
 pads to share one native saved-board connectivity component. Current V94 and
-V102 fail this stricter assertion, as expected for the fragmented fanout.
+V102 fail this stricter assertion, while V103/V104 pass it; V103/V104
+nevertheless fail native DRC and remain rejected.
 
 The next repair must address the fragmented source fanout with pad-aware
 clearance and a hardened `STORAGE_SEL` escape. No synthetic graph edges,
