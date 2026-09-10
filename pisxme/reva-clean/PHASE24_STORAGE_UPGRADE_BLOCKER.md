@@ -48,6 +48,11 @@ native DRC retains a PERST/BRIDGE_3V3 short and source-field crossings. This
 does not invalidate the V154 local primitive or create a new architecture
 blocker.
 
+V158 is the latest rejected integrated coauthoring trial: all ten endpoints
+pass, but native DRC retains 153 findings including source-field crossings
+and a PERST/BRIDGE_3V3 short. The V154 local-clean primitive remains valid;
+this is still a recoverable route-implementation gate.
+
 Status: `OPEN — implementation authorized; procurement evidence remains HIGH
 risk` for the authorized SATA/NVMe upgrade only.
 The prior SATA-only board is preserved.

@@ -88,13 +88,10 @@ for name, upad, cap, target, corridor, target_x in (
     target_y = (133.0 if name == 'USB_TXP1' else 132.6) if ROTATE_U12 else ((132.0 if name == 'USB_TXP1' else 131.0) if ROTATE_U12_90 else (137.0 if name == 'USB_TXP1' else 137.4))
     tv = ((163.0, 134.5) if name == 'USB_TXP1' else (164.0, 135.5)) if (TARGET_STAGGER or RX_FAR) else (target_x, target_y)
     if TARGET_STAGGER or RX_FAR:
-        cv = ((158.0 if name == 'USB_TXP1' else 159.0), c1[1]) if CAP_CLEAR else ((149.0 if name == 'USB_TXP1' else 151.0), c1[1])
-    source_via = ((154.0, 143.0) if name == 'USB_TXP1' else (155.0, 145.0)) if CAP_CLEAR else ((142.0, 139.6) if name == 'USB_TXP1' else (141.0, 141.0))
-    source_lane = source_via if CAP_CLEAR else ((143.0, 140.0) if name == 'USB_TXP1' else (139.0, 141.0))
-    if CAP_CLEAR:
-        y = 141.0 if name == 'USB_TXP1' else 142.0
-        seg(b,n,src,(src[0],y),F); seg(b,n,(src[0],y),(source_via[0],y),F); seg(b,n,(source_via[0],y),source_via,F)
-    elif name == 'USB_TXP1':
+        cv = ((154.0 if name == 'USB_TXP1' else 155.0), c1[1]) if CAP_CLEAR else ((149.0 if name == 'USB_TXP1' else 151.0), c1[1])
+    source_via = (142.0, 139.6) if name == 'USB_TXP1' else (141.0, 141.0)
+    source_lane = (143.0, 140.0) if name == 'USB_TXP1' else (139.0, 141.0)
+    if name == 'USB_TXP1':
         seg(b,n,src,(141.4,139.6),F); seg(b,n,(141.4,139.6),source_via,F)
     else:
         seg(b,n,src,source_via,F)

@@ -46,6 +46,11 @@ V157 performed that broader coauthoring attempt but retained 155 native DRC
 findings, including a PERST/BRIDGE_3V3 short and source-field crossings. It is
 rejected integrated evidence; V154 remains the accepted local primitive.
 
+V158 retained the complete ten-net endpoint audit but remained at 153 native
+DRC findings with source-field crossings and a PERST/BRIDGE_3V3 short. It is
+rejected integration evidence; the next route must coauthor the live PERST
+boundary at native coordinates.
+
 ## CURRENT STATE — documentation authority (2026-09-08)
 
 The live Path-A dual-mode storage implementation includes the corrected

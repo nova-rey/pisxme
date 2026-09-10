@@ -11146,3 +11146,10 @@ trunks, while preserving the ten-net endpoint audit. Native DRC remained 155
 with a PERST/BRIDGE_3V3 short and source-field crossings, so it is rejected
 as a local route implementation. V154 remains the accepted local primitive.
 Receipt: `PHASE24_STORAGE_SUPPORT_CAP_PERST_COAUTHORED_V157_RECEIPT.md`.
+
+V158 tested a bounded coherent cap/PERST-aware transplant. All ten USB3 and
+support endpoints pass, but native DRC remains 153 violations / 499
+incomplete-board opens, including source-field crossings and a
+PERST/BRIDGE_3V3 short. It is rejected route/transplant evidence; V154 is
+still the accepted local primitive. Receipt:
+`PHASE24_STORAGE_SUPPORT_COHERENT_CAP_PERST_V158_RECEIPT.md`.
