@@ -10526,3 +10526,12 @@ the accepted local primitive. Receipt:
   authority or an architecture rejection. Technical pin/mapping/netlist
   audits pass; source-field routing, authorized package/support evidence,
   provisioning, firmware rights, procurement, and full validation remain open.
+
+## 2026-09-10 — Path-A M.2 power handoff V1562
+
+- Added a disposable pad-derived `STORAGE_3V3` handoff using ordinary vias
+  and a designated In2 power spine. The native power-owner audit and its
+  necessary-trace negative control pass for all nine J3 power contacts.
+- The candidate has 610 native DRC violations / 342 unconnected items from
+  its open parent, with no new storage-rail shorting section. It is retained
+  as a focused primitive, not promoted as a board pass.
