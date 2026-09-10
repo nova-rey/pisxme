@@ -187,6 +187,13 @@ reports a real `CM5_USB3_TX_N` / `CM5_REFCLK_P` short at `(72.0,106.3)`.
 V41 remains the best disposable zero-shorting parent; the next valid class
 must coauthor the CM5 TX_N transition with the selector-side SATA corridor.
 
+V46 is now the best coordinated disposable parent. It combines the V45
+selector-side SATA pair with a left-of-REFCLK CM5 USB3 TX_N source transition.
+Native USB3, complete SATA endpoint connectivity, and current J8 pad parity
+all pass; native DRC reports 601 violations / 399 unconnected items and zero
+shorting entries. This is route progress, not Phase 24 closure; remaining
+storage high-speed/support routing and native full-board closure stay OPEN.
+
 ## CURRENT ROUTING STATE — 2026-09-09
 
 The current best disposable Path-A parent is V41, not the historical

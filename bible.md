@@ -9970,6 +9970,12 @@ short, reaching 601 DRC / 399 opens. V45 remains rejected because native DRC
 reports one real CM5_USB3_TX_N/CM5_REFCLK_P short at (72.0,106.3). Preserved
 boards, scripts, raw reports, and receipts; V41 remains the best disposable
 zero-shorting parent.
+2026-09-09 — Phase 24 V46 accepted as the best coordinated disposable
+Path-A parent. It combines the V45 selector-side SATA corridors with a
+left-of-REFCLK CM5 USB3 TX_N source transition; USB3/SATA/native J8 parity
+audits pass, native DRC is 601 violations / 399 opens, and shorting entries
+are zero. Remaining route/support closure is open; no production PCB,
+validation rule, or layer contract changed.
 2026-09-09 — Phase 24 V43 rejected after correcting a coordinate-authoring
  typo. The corrected U7.57 TX_P source-field escape produced native DRC 605
  violations / 400 opens, with real POWER_GND-to-TX_P shorts; SATA endpoint
