@@ -140,6 +140,11 @@ native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
 
+2026-09-10 — Phase 24 V1371 rejected: the first RTL_1V1 split-bus attempt
+created 16 native DRC violations against the existing lane escape, U1.50
+neighboring USB pad, and RTL_3V3 corridor. Preserved as route evidence; the
+next 1V1 repair must use the right/top rail corridor.
+
 2026-09-09 — Phase 24 V1367 rejected: the co-authored U1.20/SPICLK source
 variant still shorted at the RTL_3V3 transition because the SPICLK F.Cu source
 row occupies its via clearance envelope. Preserved as local source-field

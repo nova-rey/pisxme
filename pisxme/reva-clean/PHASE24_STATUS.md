@@ -10423,3 +10423,9 @@ before short F.Cu drops reach R2.2 and R3.2. Native DRC reports zero violations;
 the saved-board audit passes U2.3/U2.8/R2.2/R3.2 connectivity and the U2.3
 source-removal negative control. The open count falls from 25 to 22. RTL_1V1,
 RTL_5V, GND, crystal/RSET, REFCLK, and other support remain open.
+
+V1371 is rejected by native DRC. The proposed RTL_1V1 left bus creates 16
+violations, including conflicts with the existing LANE0_RXN escape, the
+U1.50 neighboring USB pad, and the V1368 RTL_3V3 corridor. It is retained as
+route-implementation evidence only; the next 1V1 repair must use the clear
+right/top rail corridor and avoid the lane-side left field.
