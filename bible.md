@@ -10260,3 +10260,16 @@ lanes. Native DRC rejected the reduced fixture at 17 violations, including
 real U12 ground/pad-field shorts. V143 is rejected and remains disposable
 evidence; production copper is unchanged. Receipt:
 `PHASE24_STORAGE_SUPPORT_DIRECT_U12_V143_RECEIPT.md`.
+V144 corrected the transformed 180-degree U12 target coordinates, but native
+DRC still found 13 violations / 32 fixture opens, including real pair
+crossings, TX-pair shorts, RX-pair shorting, and target-field clearances. It
+is rejected route-implementation evidence. A documentation-hygiene pass also
+reconciled current Path-A JMS583 support and Path-B RTL9210B state against
+live artifacts without editing raw evidence. Receipt:
+`PHASE24_DOCUMENTATION_HYGIENE_20260910.md`.
+V147 tested RX without U12 target-side vias using native endpoints. The naive
+same-row U11 F.Cu shoulders passed local endpoint reachability but native DRC
+rejected 36 violations / 32 fixture opens, including source-field crossings.
+It is rejected route-authoring evidence; the RX-without-target-vias class
+remains a valid next implementation hypothesis. Receipt:
+`PHASE24_STORAGE_SUPPORT_U12_TARGET_RX_FCU_V147_RECEIPT.md`.
