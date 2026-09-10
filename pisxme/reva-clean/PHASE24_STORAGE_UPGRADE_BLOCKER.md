@@ -177,6 +177,16 @@ This report therefore remains `OPEN`; no Phase 24 resumption or completion is
 claimed. The corrected JMS583 pin authority also supersedes any earlier
 intermediate map that called pin 12 REXT.
 
+## CURRENT ROUTING UPDATE — V44/V45 — 2026-09-09
+
+V44/V45 tested the selector-side `TUSB_SATA_TXP/TXN` corridor. V44 omitted
+transition vias initially and was corrected as an authoring issue. V45 then
+passed the complete SATA endpoint audit and reached 601 DRC / 399 opens,
+with the new VBUS short removed. It remains rejected because native DRC
+reports a real `CM5_USB3_TX_N` / `CM5_REFCLK_P` short at `(72.0,106.3)`.
+V41 remains the best disposable zero-shorting parent; the next valid class
+must coauthor the CM5 TX_N transition with the selector-side SATA corridor.
+
 ## CURRENT ROUTING STATE — 2026-09-09
 
 The current best disposable Path-A parent is V41, not the historical
