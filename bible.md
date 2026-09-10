@@ -10621,3 +10621,8 @@ the accepted local primitive. Receipt:
   Preserved west crystal/RSET and lane corridors, east SPI/rail support,
   north-east decoupling/control support, and south-side controls. Orientation
   search is closed; remaining work is implementation and independent gates.
+
+- Reran the selected V1517 baseline with native KiCad: 0 violations, 6
+  documented endpoint opens, and 0 footprint errors. U1.55↔U1.63 connectivity
+  and the source-removal negative control pass. This validates the baseline,
+  not complete Path-B closure.

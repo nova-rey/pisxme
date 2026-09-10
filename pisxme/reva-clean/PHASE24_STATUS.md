@@ -19,6 +19,11 @@ Orientation search is closed; remaining Path-B work is implementation and
 independent authority gates. Decision record:
 `PHASE24_RTL9210B_ORIENTATION_DECISION_CLAUDE_V1575.md`.
 
+The selected V1575 baseline was rerun after the decision: native KiCad DRC is
+0 violations / 6 unconnected pads / 0 footprint errors, and the U1.55 native
+connectivity plus source-removal negative control pass. Receipt:
+`PHASE24_RTL9210B_ORIENTATION_BASELINE_VALIDATION_V1575_RECEIPT.md`.
+
 ## SUPERSEDED STATUS HEADER — retained for history
 
 The former V1557 header below is historical context only.
