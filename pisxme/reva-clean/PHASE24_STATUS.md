@@ -11194,3 +11194,11 @@ pad parity, and the removed-track negative control pass. Native DRC remains
 remain at XOUT/JMS_XAVDDH and STORAGE_SEL/U13/U12. V192 is the current
 coauthoring basis, not closure. Receipt:
 `PHASE24_STORAGE_V75_COAUTHORED_V192_RECEIPT.md`.
+
+V193 replaced the long direct STORAGE_SEL branch with a local U12-to-U13
+branch and north/outboard B.Cu trunk. USB3 ten-net connectivity, complete
+SATA connectivity, 814/1263/0 parity, and the removed-track negative control
+pass. Native DRC improves to 624/346; only two real shorts remain, at
+XOUT/JMS_XAVDDH and the STORAGE_SEL/U14/U12 field. V193 is the current
+coauthoring basis, not closure. Receipt:
+`PHASE24_STORAGE_V75_COAUTHORED_V193_RECEIPT.md`.

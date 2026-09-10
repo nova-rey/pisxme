@@ -951,6 +951,12 @@ parity, and negative-control passes. Native DRC is 628/346 with three real
 shorts remaining: XOUT/JMS_XAVDDH and two STORAGE_SEL contacts. Continue
 coauthoring those local fields; do not treat V192 as Phase 24 closure.
 
+V193 is the current mode-route refinement: the local U12-to-U13 branch and
+north/outboard STORAGE_SEL trunk preserve USB3, SATA, parity, and negative
+control passes while reducing native DRC to 624/346. Two real shorts remain
+at XOUT/JMS_XAVDDH and the STORAGE_SEL/U14/U12 field. Continue local
+coauthoring; V193 is not Phase 24 closure.
+
 ## Current live source/parity correction — 2026-09-08
 
 `STORAGE.kicad_sch` now has authoritative `JMS_USB3_TXN/P` instance labels on

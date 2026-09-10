@@ -10321,3 +10321,7 @@ the accepted local primitive. Receipt:
   RXP shorts while preserving USB3, SATA, parity, and the negative control.
   Native DRC remains 628/346 with three real shorts at XOUT/JMS_XAVDDH and
   STORAGE_SEL/U13/U12; retain as the current coauthoring basis.
+- V193 replaced the direct STORAGE_SEL branch with a local U12/U13 handoff and
+  north/outboard B.Cu trunk. USB3, SATA, parity, and the negative control pass;
+  native DRC is 624/346 with two real shorts remaining at XOUT/JMS_XAVDDH and
+  STORAGE_SEL/U14/U12.
