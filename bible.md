@@ -10813,3 +10813,11 @@ the accepted local primitive. Receipt:
   shorts RXN/TXN under the active physical envelope. The candidate was
   rejected; the next repair must co-author RTL_1V1 departure and the source
   handoff together. The V1603 launch and U1 orientation remain accepted.
+
+## 2026-09-10 — accepted V1603/V1523 Path-B support closure
+
+- The accepted six-net V1603 launch was integrated with the V1523 RTL_3V3
+  baseline, east-side RTL_1V1 closure, and V1534/V1526-derived crystal
+  corridors. Native DRC reports 0 violations and 0 unconnected items; the
+  saved-board six-net audit and six negative controls pass. Full Path-B and
+  Phase 24 validation remain open; U1 orientation is unchanged.

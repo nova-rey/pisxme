@@ -41,6 +41,13 @@ has zero high-speed errors; seven support opens and two inherited warnings
 remain. Continue by repairing RTL_1V1/XTAL_IN support in this local field,
 then rerun the integrated audit.
 
+The current generated candidate now passes the local repair: native DRC is
+0 violations / 0 unconnected items, and the integrated six-net audit with
+six negative controls passes. The generator uses the V1523 RTL_3V3 support
+baseline, accepted V1603 launch, east-side RTL_1V1 closure, and V1534/V1526
+crystal corridors. Continue with broader Path-B support, production parity,
+and Phase 24 validation; do not reopen U1 orientation.
+
 The V1523-source-hand-off trial is rejected: preserving the old RTL_1V1
 corridor causes REFCLK_P crossings, while a near-QFN RXP via escape shorts
 RXN/TXN under the production via envelope. This is a local source-field

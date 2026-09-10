@@ -2,7 +2,7 @@
 from pathlib import Path
 import pcbnew
 
-H=Path(__file__).resolve().parent; BASE=H/'PHASE24_RTL9210B_U155_REHOME_V1517.kicad_pcb'; OUT=H/'PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED.kicad_pcb'
+H=Path(__file__).resolve().parent; BASE=H/'PHASE24_RTL9210B_RTL3V3_REHOME_U152_V1523.kicad_pcb'; OUT=H/'PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED.kicad_pcb'
 F,B=pcbnew.F_Cu,pcbnew.B_Cu; W=pcbnew.FromMM(.20); P=lambda x,y:pcbnew.VECTOR2I_MM(float(x),float(y))
 N=('REFCLK_P','REFCLK_N','LANE0_RXP','LANE0_RXN','LANE0_TXN','LANE0_TXP')
 src={'REFCLK_P':(61,70.4),'REFCLK_N':(62,70.8),'LANE0_RXP':(64,71.6),'LANE0_RXN':(65,72.0),'LANE0_TXN':(67,72.8),'LANE0_TXP':(68,73.2)}
@@ -23,6 +23,7 @@ def seg(n,a,z,l):
     if a==z:return
     q=pcbnew.PCB_TRACK(b); q.SetStart(P(*a)); q.SetEnd(P(*z)); q.SetLayer(l); q.SetWidth(W); q.SetNet(n); q.SetNetCode(n.GetNetCode()); b.Add(q)
 def via(n,x,y):
+    if any(isinstance(q,pcbnew.PCB_VIA) and q.GetNetCode()==n.GetNetCode() and q.GetPosition()==P(x,y) for q in b.GetTracks()): return
     q=pcbnew.PCB_VIA(b); q.SetPosition(P(x,y)); q.SetWidth(pcbnew.FromMM(.6)); q.SetDrill(pcbnew.FromMM(.3)); q.SetLayerPair(F,B); q.SetNet(n); q.SetNetCode(n.GetNetCode()); b.Add(q)
 for name in N:
     net=b.FindNet(name); num,_=src[name]; sy=handoff_y[name]; x=lane_x[name]; yy=channel[name]; v=vx[name]; target=tx[name]
@@ -36,9 +37,28 @@ for name in N:
         seg(net,(ax,ay),(92.5,72.8),F); seg(net,(92.5,72.8),(92.5,74),F); via(net,92.5,74); seg(net,(92.5,74),(86,74),B); via(net,86,74); seg(net,(86,74),(86,72),F); seg(net,(86,72),(85,72),F)
     else:
         seg(net,(ax,ay),(93.5,73.2),F); seg(net,(93.5,73.2),(93.5,75),F); via(net,93.5,75); seg(net,(93.5,75),(85,75),B); via(net,85,75); seg(net,(85,75),(85,73),F)
-    via(net,84,sy); seg(net,(85,sy),(84,sy),F); seg(net,(84,sy),(x,sy),B); via(net,x,sy); seg(net,(x,sy),(x,yy),F); via(net,x,yy); seg(net,(x,yy),(v,yy),B); via(net,v,yy)
+    via(net,84,sy); seg(net,(85,sy),(84,sy),F); seg(net,(84,sy),(x,sy),B); via(net,x,sy); seg(net,(x,sy),(x,yy),F); via(net,x,yy); seg(net,(x,yy),(v,yy),B)
+    if name != 'REFCLK_N': via(net,v,yy)
     if name=='REFCLK_N':
         seg(net,(v,yy),(v,fy[name]),B); seg(net,(v,fy[name]),(target,fy[name]),B); via(net,target,fy[name]); seg(net,(target,fy[name]),(target,62.725),F)
     else:
         seg(net,(v,yy),(v,fy[name]),F); seg(net,(v,fy[name]),(target,fy[name]),F); seg(net,(target,fy[name]),(target,62.725),F)
+# Reclose RTL_1V1 on the east-side shelf between the QFN pads and exposed pad.
+one=b.FindNet('RTL_1V1'); seg(one,(94.05,68),(95.2,68),F); seg(one,(95.2,68),(95.2,66.05),F); seg(one,(94.05,70),(95.2,70),F); seg(one,(95.2,70),(95.2,68),F); seg(one,(94.05,71.2),(95.2,71.2),F); seg(one,(95.2,71.2),(95.2,70),F)
+# The old west collector was orphaned when the source field was cleared; it
+# is not connected to any live pad or support load and is removed explicitly.
+for q in list(b.GetTracks()):
+    if q.GetNetname()=='RTL_1V1' and isinstance(q,pcbnew.PCB_TRACK) and q.GetLayer()==B and ((pcbnew.ToMM(q.GetStart().x),pcbnew.ToMM(q.GetStart().y))==(88.,58.) or (pcbnew.ToMM(q.GetEnd().x),pcbnew.ToMM(q.GetEnd().y))==(88.,58.)): b.RemoveNative(q)
+for q in list(b.GetTracks()):
+    if q.GetNetname()=='RTL_1V1' and isinstance(q,pcbnew.PCB_VIA) and (pcbnew.ToMM(q.GetPosition().x),pcbnew.ToMM(q.GetPosition().y))==(99.,58.): b.RemoveNative(q)
+for q in list(b.GetTracks()):
+    if q.GetNetname()=='RTL_1V1' and isinstance(q,pcbnew.PCB_TRACK) and q.GetLayer()==F and pcbnew.ToMM(q.GetStart().x)==99 and pcbnew.ToMM(q.GetStart().y)==58 and pcbnew.ToMM(q.GetEnd().x)==99 and pcbnew.ToMM(q.GetEnd().y)==60.5: b.RemoveNative(q)
+for q in list(b.GetTracks()):
+    if q.GetNetname()=='RTL_1V1' and isinstance(q,pcbnew.PCB_TRACK) and q.GetLayer()==F and pcbnew.ToMM(q.GetStart().x)==99 and pcbnew.ToMM(q.GetStart().y)==60.5 and pcbnew.ToMM(q.GetEnd().x)==112 and pcbnew.ToMM(q.GetEnd().y)==60.5: b.RemoveNative(q)
+for q in list(b.GetTracks()):
+    if q.GetNetname()=='RTL_1V1' and isinstance(q,pcbnew.PCB_TRACK) and q.GetLayer()==F and pcbnew.ToMM(q.GetStart().x)==112 and pcbnew.ToMM(q.GetStart().y)==60.5 and pcbnew.ToMM(q.GetEnd().x)==112 and pcbnew.ToMM(q.GetEnd().y)==64.8: b.RemoveNative(q)
+for q in list(b.GetTracks()):
+    if q.GetNetname()=='RTL_1V1' and isinstance(q,pcbnew.PCB_VIA) and (pcbnew.ToMM(q.GetPosition().x),pcbnew.ToMM(q.GetPosition().y))==(112.,64.8): b.RemoveNative(q)
+inn=b.FindNet('XTAL_IN'); seg(inn,(94.05,67.2),(92.6,67.2),F); seg(inn,(92.6,67.2),(92.6,66.2),F); via(inn,92.6,66.2); seg(inn,(92.6,66.2),(88,66.2),B); seg(inn,(88,66.2),(88,63.2),B); via(inn,88,63.2); seg(inn,(88,63.2),(88,62),F); seg(inn,(88,62),(88,59),F)
+out=b.FindNet('XTAL_OUT'); seg(out,(94.05,67.6),(92,67.6),F); seg(out,(92,67.6),(92,62.8),F); seg(out,(92,62.8),(91,62.8),F); seg(out,(91,62.8),(91,62),F); seg(out,(91,62),(91,60.5),F); seg(out,(91,60.5),(89.4,59),F)
 pcbnew.ZONE_FILLER(b).Fill(b.Zones()); b.Save(str(OUT)); print(OUT)
