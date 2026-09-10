@@ -10569,6 +10569,12 @@ with short same-net F.Cu links, reports zero native DRC violations, and
 passes the saved-board endpoint/source-removal audit. The fixture falls to
 11 opens; RTL_1V1 U1.63, U1.66 ground, crystal/RSET, REFCLK, and remaining
 support remain OPEN.
+
+V1429/V1430 are rejected U1.63 RTL_1V1 attachment trials from the accepted
+V1428 composite. V1429's long west shelf crossed the existing LANE0_RXN
+escape and duplicated a transition via. V1430's side drop shorted the
+LANE0_RXP and SPISI fields. These are route-implementation failures; U1.63
+remains OPEN and the V1428 accepted composite is retained.
 V1421 is a rejected RSET perimeter trial from V1415. Its short F.Cu route
 from U1.51 to R1.1 crossed the accepted U1.55/RTL_1V1 perimeter and contacted
 R1's GND pad; native DRC reported two violations. RSET remains OPEN and no

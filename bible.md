@@ -159,6 +159,11 @@ classes; V1425 reduced the failure to one rail clearance, V1426 retained one
 rail crossing, and V1427 shorted RTL_3V3. V1428 then composed accepted V1418
 QFN-ground and V1420 SSD_3V3 primitives: native DRC zero, saved-board audit
 and two source-removal controls PASS, with ten unconnected pads remaining.
+
+2026-09-09 — Phase 24 V1429/V1430 rejected U1.63 RTL_1V1 route trials from
+the V1428 accepted composite: V1429 crossed LANE0_RXN and duplicated a via;
+V1430 shorted LANE0_RXP/SPISI fields. Preserved evidence and retained V1428
+as the active accepted-primitive base.
 2026-09-09 — Phase 24 V1422 rejected an outboard RSET B.Cu shelf. Native DRC
 reported 12 source-field, GND, and accepted-rail violations; RSET remains
 open and no production asset changed.
