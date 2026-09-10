@@ -30,6 +30,11 @@ rail-budget review and PCB regeneration must be performed together. This is
 the current open gate; PCB-only copper is prohibited. See
 `PHASE24_STORAGE_M2_POWER_RECONCILIATION_20260910.md`.
 
+V78 then tested a separated `BRIDGE_R1` escape from V75. Native DRC found
+`JMS_AVDDL`/`POWER_GND` and `BRIDGE_R1`/`BRIDGE_R1RTN` shorts at 605
+violations / 349 opens, so V78 is rejected route-implementation evidence.
+V75 remains the preferred disposable parent.
+
 ## CURRENT LIVE STATE — 2026-09-06
 
 This file is an open-risk record, not a terminal blocker. The authoritative

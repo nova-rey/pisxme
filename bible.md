@@ -10078,6 +10078,8 @@ native source-field shorts; V75 remains the clean parent.
 Native DRC exposed JMS_AVDDL/POWER_GND and BRIDGE_R1/BRIDGE_R1RTN shorts at
 605 violations / 349 opens. V78 was rejected; V75 remains preferred and no
 rules or production CAD changed.
+The blocker narrative was updated to include V78 as rejected evidence, keeping
+the current M.2 power-source gap and V75 preference explicit.
 2026-09-10 — Live V75 inspection found a genuine M.2 power-source gap:
 J3's M2_3V3 contacts have no source-owned pad, track, or zone, while
 STORAGE_3V3 is the existing regulator-owned rail. A disposable source-level
