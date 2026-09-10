@@ -11050,3 +11050,10 @@ escape region. Native DRC remained 207/499 with real USB_DP/USB_RX/JMS_VCCO
 shorts and crossings, so U13 alone is not the root cause. V134 is rejected;
 the next support candidate must change layer/escape ownership. Receipt:
 `PHASE24_STORAGE_SUPPORT_U13_V134_RECEIPT.md`.
+V135 corrected the support-net ownership bug and authored a package-aware
+mixed-layer support candidate. All ten native USB3 endpoint assertions pass,
+but integrated DRC retained local crossings/clearances against PERST and
+regulator geometry. The reduced V136 local fixture then isolated the remaining
+issue to one U11 source-via clearance and one U12 target crossing under the
+active JLC clearance profile. V136 is rejected; no production copper is
+promoted. Receipt: `PHASE24_STORAGE_SUPPORT_LAYER_OWNED_V136_RECEIPT.md`.

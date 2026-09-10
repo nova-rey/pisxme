@@ -10224,3 +10224,9 @@ escape region. Native DRC remained 207/499 with real USB_DP/USB_RX/JMS_VCCO
 shorts and crossings, so U13 alone is not the root cause. V134 is rejected;
 the next support candidate must change layer/escape ownership. Receipt:
 `PHASE24_STORAGE_SUPPORT_U13_V134_RECEIPT.md`.
+V136 reduced the V135 package-aware support experiment to U11/U12/C86/C87.
+All six local support endpoint assertions passed from native saved-board
+connectivity, while native DRC retained one U11 source-via clearance and one
+U12 target crossing under the active JLC profile. V136 is rejected and remains
+disposable evidence; production support copper is not promoted. Receipt:
+`PHASE24_STORAGE_SUPPORT_LAYER_OWNED_V136_RECEIPT.md`.
