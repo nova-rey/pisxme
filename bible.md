@@ -10677,3 +10677,11 @@ the accepted local primitive. Receipt:
   Individual pair-order trials found paths, but the best six-net ordering
   placed five nets and had no legal path for the sixth. No incomplete route was
   promoted; native rules and the Claude-selected orientation remain frozen.
+
+## 2026-09-10 — rejected complete source-field coauthor V1589
+
+- V1589 removed all disposable local rail/return and six-net signal copper in
+  the U1 source envelope, then searched REFCLK and PCIe lane 0 together using
+  native saved geometry. Four paths were found before no legal REFCLK_N path
+  remained. The result narrows the issue to the combined QFN escape/J1 launch
+  topology; no rules, orientation, or Path-A assets changed.

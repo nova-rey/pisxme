@@ -25,6 +25,12 @@ path remained. No incomplete result was promoted and native DRC rules were
 unchanged. Receipt:
 `PHASE24_RTL9210B_SOURCE_FIELD_ASTAR_DIAGNOSTIC_V1584_V1588_RECEIPT.md`.
 
+V1589 removed the disposable local rail/return copper as well as the six
+signal nets and searched all six together. Four paths were found before no
+legal REFCLK_N path remained. This rules out inherited rail congestion as the
+sole cause and leaves the combined QFN source escape/J1 launch topology as
+the active route-implementation problem. No candidate was promoted.
+
 The current Path-A/Path-B storage comparison is recorded in
 `PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md`; it supersedes older status
 headers, not raw receipts. Path A remains protected. Path B is a serious
