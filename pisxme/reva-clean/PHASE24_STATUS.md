@@ -10517,6 +10517,11 @@ negative control passing. V1412 is accepted only as the U1.33-to-C5 RTL_5V
 F.Cu source corridor (native DRC zero); V1413's attempt to join U1.17 added
 six native violations and is rejected. RTL_5V fan-in, U1.63, and remaining
 support/control groups remain OPEN.
+V1418 is accepted as the isolated U1.45-to-exposed-pad GND primitive. It
+uses the native-clean short F.Cu launch, reports zero native DRC violations,
+and reduces the fixture to 13 opens. The saved-board U1.45/U1.69 endpoint
+audit and source-removal negative control pass. U1.66 ground attachment,
+crystal/RSET, REFCLK, U1.63, and remaining support remain OPEN.
 V1416/V1417 are rejected QFN-GND launch trials from V1415. V1416 reduced
 the support fixture to 12 opens but retained one native crossing with LANE0_RXP;
 V1417's lower re-route increased the native result to nine violations through

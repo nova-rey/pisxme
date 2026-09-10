@@ -161,6 +161,10 @@ Path-A or production change. V1392 U1.60 remains accepted.
 trial from V1392. Native DRC reported 9 violations against accepted 1V1,
 3V3, and SPI geometry. The disposable board and report are preserved;
 accepted V1392 and Path-A remain unchanged.
+2026-09-09 — Phase 24 V1418 accepted the isolated U1.45-to-exposed-pad GND
+primitive. Native DRC is zero and the saved-board endpoint/source-removal
+audit passes; the fixture falls to 13 opens. U1.66 and remaining support stay
+open, with Path A and production CAD unchanged.
 2026-09-09 — Phase 24 V1411 accepted the RTL_3V3 U2-to-U1 support join after
 native DRC and saved-board/source-removal audit passed. V1412 accepted the
 U1.33-to-C5 RTL_5V corridor with native DRC zero; V1413 rejected the U1.17
