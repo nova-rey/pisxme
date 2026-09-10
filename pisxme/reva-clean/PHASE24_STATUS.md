@@ -1,5 +1,16 @@
 # Phase 24 acreage validation status
 
+## CURRENT STATE — 2026-09-10 V1557
+
+The latest RTL9210B work is isolated Path-B source-field experimentation.
+V1549–V1557 were rejected by native KiCad DRC and are not integrated. The
+best results still fail locally at QFN source/supply/top-row fanout or its
+layer transitions. Two materially distinct escape classes have been tested;
+this is a route-implementation limitation of those classes, not a Path-A
+regression or a production-board pass. Path A remains the fallback/reference
+architecture and is untouched.
+
+
 ## CURRENT STATE OVERRIDE — 2026-09-10
 
 Read this section before the chronological experiment log. The live accepted

@@ -10470,6 +10470,16 @@ the accepted local primitive. Receipt:
   primitives remain unchanged. Next work must use a new authoritative QFN
   fanout class without relaxing board rules.
 
+## 2026-09-10 — RTL9210B outer-side crystal escape V1557
+
+- Tested an outer-side source escape that separated XTAL_IN and XTAL_OUT
+  around the QFN. Native DRC reported 17 violations / 4 opens, including
+  source/top-row and rail-field conflicts; it is rejected.
+- Two materially distinct source-escape classes are now exhausted under the
+  unchanged 0.20-mm trace/clearance and ordinary-via contract. The next Path-B
+  step must change the authoritative fanout strategy, not repeat coordinate
+  tuning or relax rules.
+
 ## 2026-09-10 — RTL9210B crystal source class V1555–V1556
 
 - Tested two further 0-degree QFN escape topologies at the required 0.20-mm
