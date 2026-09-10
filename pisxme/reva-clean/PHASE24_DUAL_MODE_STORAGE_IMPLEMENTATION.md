@@ -945,6 +945,12 @@ but retains five real local shorts. It is route-development evidence only;
 the next repair must coauthor the CM5 RX-N handoff and adjacent SATA/mode
 fields against V75's actual geometry.
 
+V192 is the current improved storage coauthoring basis. Its RXN north handoff
+clears the CM5 RX-N and SATA RXP interactions while preserving USB3, SATA,
+parity, and negative-control passes. Native DRC is 628/346 with three real
+shorts remaining: XOUT/JMS_XAVDDH and two STORAGE_SEL contacts. Continue
+coauthoring those local fields; do not treat V192 as Phase 24 closure.
+
 ## Current live source/parity correction — 2026-09-08
 
 `STORAGE.kicad_sch` now has authoritative `JMS_USB3_TXN/P` instance labels on

@@ -11186,3 +11186,11 @@ mismatches, and the removed-track negative control. Native DRC improves to
 628/346, but five real shorts remain (CM5 RX-N handoff, XOUT/JMS_XAVDDH, SATA
 RXP/RXN, and STORAGE_SEL). V186 is retained as the next coauthoring basis,
 not promoted. Receipt: `PHASE24_STORAGE_V75_COAUTHORED_V186_RECEIPT.md`.
+
+V192 then moved only the RXN north handoff column to clear the SATA RX
+corridor. USB3 ten-net connectivity, complete SATA connectivity, 814/1263/0
+pad parity, and the removed-track negative control pass. Native DRC remains
+628/346, but the CM5 RX-N and SATA RXP shorts are gone; three real shorts
+remain at XOUT/JMS_XAVDDH and STORAGE_SEL/U13/U12. V192 is the current
+coauthoring basis, not closure. Receipt:
+`PHASE24_STORAGE_V75_COAUTHORED_V192_RECEIPT.md`.

@@ -169,9 +169,9 @@ for name, upad, target, source_via, target_via in (
             # rises to an outboard B.Cu lane, then approaches the target from
             # the east.  This avoids both the RXP lower shelf and CM5_PERST.
             bypass_y = 128.0
-            bypass_x = 180.0
+            bypass_x = 165.0
             # Jog east before rising past the nearby CM5 USB3 RX-N via.
-            handoff_x = 152.0
+            handoff_x = 152.5
             handoff_y = 140.0
             seg(b,n,sv,(sv[0],handoff_y),B)
             seg(b,n,(sv[0],handoff_y),(handoff_x,handoff_y),B)

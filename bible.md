@@ -10317,3 +10317,7 @@ the accepted local primitive. Receipt:
 - V186 regenerated the support directly on V75 and moved the RXP transition
   north of AVDD33. USB3, SATA, parity, and the negative control pass; DRC is
   628/346, but five real shorts remain. Retain as route-development evidence.
+- V192 moved the RXN north handoff column left, removing the CM5 RX-N and SATA
+  RXP shorts while preserving USB3, SATA, parity, and the negative control.
+  Native DRC remains 628/346 with three real shorts at XOUT/JMS_XAVDDH and
+  STORAGE_SEL/U13/U12; retain as the current coauthoring basis.
