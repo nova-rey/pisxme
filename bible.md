@@ -11053,6 +11053,16 @@ the accepted local primitive. Receipt:
   the adjacent 0.4-mm U1 row. This narrows the structural capacity issue to
   the first QFN handoff and preserves the accepted orientation/V1603 launch.
 
+## 2026-09-10 — directional source-row fanout rejected
+
+- Tested the same separated funnel with directional pad-row exits:
+  `ISOLATEB` west and adjacent controls east. Native DRC found 11 findings,
+  including four U1 pad-clearance violations. Downstream channels remain
+  separable, confirming the remaining capacity blocker is the 0.4-mm QFN
+  handoff under the frozen 0.20-mm trace/clearance envelope. The smallest
+  required change is a documented legally spaced source breakout; no
+  orientation or architecture decision is reopened.
+
 ## 2026-09-10 — revalidated accepted Path-B baseline after pause checkpoint
 
 - Native KiCad DRC of the accepted V1603/V1523 integrated candidate reports

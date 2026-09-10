@@ -128,6 +128,12 @@ two real adjacent-U1 pad-end clearance violations (9 total fixture findings,
 the first QFN handoff; the next production-worthy repair must re-author that
 handoff geometry or use an explicitly approved finer local escape rule.
 
+The directional variant of the same funnel (ISOLATEB west, neighboring
+controls east) was also rejected: native DRC found 11 findings, including
+four U1 pad-clearance violations. The downstream channels remain separable;
+the remaining blocker is specifically the frozen 0.4-mm QFN source handoff
+under the production 0.20-mm trace/clearance envelope.
+
 The first coordinated local reroute of U1.12 `ISOLATEB`, `CLKREQ_N`,
 `PERST_N`, and `RTL_5V` is rejected: native DRC found 12 violations and zero
 opens. The exact conflicts are recorded in

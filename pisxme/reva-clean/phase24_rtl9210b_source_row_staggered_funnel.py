@@ -33,9 +33,9 @@ def handoff(name,x,y):
 # Reserve one complete B.Cu horizontal channel per net.  The via rows are
 # 1.0 mm apart, well outside the 0.4-mm QFN pitch and explicit 0.6-mm via
 # envelopes.  Handoffs are intentionally west of the QFN field.
-source={'ISOLATEB':(97.8,83.5,92.0),'CLKREQ_N':(98.8,84.5,93.0),
-        'PERST_N':(100.0,85.5,94.0),'RTL_1V1':(101.2,86.5,95.0),
-        'RTL_5V':(102.2,87.5,96.0)}
+source={'ISOLATEB':(97.8,83.5,92.0),'CLKREQ_N':(100.6,84.5,93.0),
+        'PERST_N':(101.4,85.5,94.0),'RTL_1V1':(102.2,86.5,95.0),
+        'RTL_5V':(103.0,87.5,96.0)}
 for name,(sx,vy,hx) in source.items():
     u=b.FindFootprintByReference('U1'); p=next(p for p in u.Pads() if p.GetNetname()==name)
     ax,ay=xy(p.GetPosition())

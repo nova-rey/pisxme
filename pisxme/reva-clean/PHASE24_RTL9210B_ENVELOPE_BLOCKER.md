@@ -59,3 +59,21 @@ six-net route exists under the current envelope.
 No production route, pad remap, design-rule relaxation, or closed upstream
 decision was changed. Phase 24 remains open at the RTL9210B Path-B launch
 gate.
+
+## Final bounded source-row discriminator
+
+The separated staggered-funnel probe reserved 1.0-mm-spaced via rows and
+parallel B.Cu corridors. Both monotonic and directional pad-row fan-outs
+were tried. The downstream corridor is adequate, but the first adjacent U1
+pad escapes remain below the required clearance (2 violations in the
+monotonic fan-out; 4 in the directional follow-up). This confirms the
+remaining capacity problem is the 0.4-mm QFN source handoff itself, not
+centerline search, downstream J1 capacity, or a missing board corridor.
+
+Smallest required upstream change: re-author the source breakout as a
+legally spaced staggered handoff using a documented manufacturable local
+escape geometry, then reconnect the already-accepted V1603 launch. Do not
+reopen U1 orientation or the Path-B architecture. If the existing 0.20-mm
+trace/clearance and 0.60/0.30-mm ordinary-via contract must remain absolute,
+this is a user-controlled handoff-rule/package-layout decision rather than
+an additional route variant.

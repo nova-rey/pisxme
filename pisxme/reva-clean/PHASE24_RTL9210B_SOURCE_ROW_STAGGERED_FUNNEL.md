@@ -32,3 +32,11 @@ geometry. It does not invalidate U1 orientation, the Path-B architecture,
 or the V1603 launch.
 
 Raw native report: `PHASE24_RTL9210B_SOURCE_ROW_STAGGERED_FUNNEL-drc.rpt`.
+
+## Directional fan-out follow-up
+
+The same reserved funnel was also tested with `ISOLATEB` exiting west and
+the neighboring controls exiting east. Native DRC then reported 11 findings,
+including four additional U1 pad-clearance violations. This does not improve
+the source row and is retained as a follow-up rejection of that fan-out
+direction, not as a new placement candidate.
