@@ -10432,6 +10432,13 @@ the accepted local primitive. Receipt:
 - V1523/V1526 remain the accepted isolated basis. No Path-A or production CAD
   changed.
 
+## 2026-09-10 — rejected co-authored RTL9210B launch V1596
+
+- V1596 co-authored distinct-x disposable handoffs with the J1 launch, but its
+  diagonal B.Cu transitions produced 50 native DRC violations, including
+  lane-pair shorts/crossings and support-net conflicts. Rejected; the next
+  trial must use orthogonal ordered transitions with explicit reservation.
+
 ## 2026-09-10 — Phase 24 RTL9210B V1547 crystal source sweep
 
 - V1547 generated and native-checked 16 crystal source variants from V1523.

@@ -55,6 +55,12 @@ V1595 applied deterministic monotonic handoff and J1 channels and reduced the
  J1-side via/clearance conflicts remain. Handoff-pad spacing and connector
  launch must be co-authored together; no candidate was promoted.
 
+V1596 co-authored distinct-x handoffs with the J1 launch but used diagonal
+B.Cu transitions. Native DRC rejected it with 50 violations, including
+lane-pair shorts/crossings and support-net conflicts. It is preserved as a
+negative control; the next trial changes the transition geometry to
+orthogonal ordered channels without changing the fixed U1 orientation.
+
 V1592 corrected the endpoint rectangle model and generated complete paths for
 all six handoff-to-J1 nets, but native DRC rejected them with 594 clearance
 violations. No candidate was promoted; the corrected endpoint model remains
