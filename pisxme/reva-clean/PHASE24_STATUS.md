@@ -10565,3 +10565,7 @@ with short same-net F.Cu links, reports zero native DRC violations, and
 passes the saved-board endpoint/source-removal audit. The fixture falls to
 11 opens; RTL_1V1 U1.63, U1.66 ground, crystal/RSET, REFCLK, and remaining
 support remain OPEN.
+V1421 is a rejected RSET perimeter trial from V1415. Its short F.Cu route
+from U1.51 to R1.1 crossed the accepted U1.55/RTL_1V1 perimeter and contacted
+R1's GND pad; native DRC reported two violations. RSET remains OPEN and no
+accepted primitive or Path-A asset changed.

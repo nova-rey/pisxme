@@ -151,6 +151,9 @@ remain unchanged.
 contact join. Native DRC is zero and the saved-board endpoint/source-removal
 audit passes; the fixture falls to 11 opens. Remaining Path-B support stays
 open and Path A is unchanged.
+2026-09-09 — Phase 24 V1421 rejected the first RSET perimeter route. Native
+DRC found two violations against the accepted 1V1 perimeter and R1 GND pad;
+RSET remains open and accepted Path-B/Path-A assets are unchanged.
 2026-09-09 — Phase 24 V1419 rejected the direct U1.66-to-exposed-pad GND
 trial; native DRC retained one LANE0_RXP crossing. The U1.45 primitive remains
 accepted and U1.66 ground closure remains open.
