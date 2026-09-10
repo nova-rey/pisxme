@@ -10116,3 +10116,8 @@ disposable; no production promotion or rule relaxation.
 The native nine-contact audit and negative control passed, but DRC stayed
 608 / 341 and added selector-field shorts. V88 was rejected; V87 remains
 the best disposable trial.
+2026-09-10 — V89 sourced the M.2 rail from existing non-QFN U14.5 instead of
+probing the JMS583 QFN. Native schematic/mode, USB3, SATA, and nine-contact
+power-owner audits plus the trace-removal negative control pass. DRC is 607 /
+341 with only the inherited XOUT/JMS_XAVDDH shorting entry. V89 is the best
+disposable physical-power candidate; full-board gates remain open.

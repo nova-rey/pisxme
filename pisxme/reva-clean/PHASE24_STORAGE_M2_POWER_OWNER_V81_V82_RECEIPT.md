@@ -58,3 +58,11 @@ ownership.
   feeding the same outboard In1 trunk. The nine-contact audit and negative
   control pass, but native DRC remains 608 / 341 and adds selector-field
   shorting around the local zone. V88 is rejected.
+* V89 sources the rail from existing non-QFN pad `U14.5`, uses an ordinary
+  through-via, an In1 power trunk, and the outboard J3 drops. Native storage
+  schematic/mode audits, USB3 connectivity, SATA connectivity, and the
+  nine-contact physical power audit (including trace-removal negative control)
+  pass. Native DRC is 607 violations / 341 unconnected items with only the
+  inherited `XOUT`/`JMS_XAVDDH` shorting entry; V89 is the best disposable
+  physical-power candidate, but is not yet promoted because the full-board
+  DRC and manufacturing gates remain open.

@@ -10883,3 +10883,10 @@ resolution before promotion.
 V88 tested a local F.Cu filled source pickup instead of the U13 dogbone. It
 did not improve the native 608 / 341 result and added selector-field shorts;
 V88 is rejected. V87 remains the best disposable physical-power trial.
+V89 instead sources the rail from existing non-QFN `U14.5`, with an ordinary
+through-via, In1 power trunk, and the outboard J3 drops. Native schematic,
+mode, USB3, SATA, and 9-contact power-owner audits pass, including the
+trace-removal negative control. DRC is 607 / 341 and retains only the
+inherited XOUT/JMS_XAVDDH shorting entry. V89 is the best disposable physical
+power candidate, not yet promoted while full-board DRC/manufacturing gates
+remain open.
