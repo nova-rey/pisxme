@@ -1,7 +1,9 @@
 # RTL9210B-CG Path-B design authority package
 
-Status: isolated qualification authority; **not production-CAD authority**.
-Updated 2026-09-06.
+Status: serious isolated parallel qualification candidate; **not
+production-CAD authority**. Recommendation at V1560: **CONTINUE BOTH** with
+Path A protected as fallback.
+Updated 2026-09-10.
 
 ## Identity and package
 

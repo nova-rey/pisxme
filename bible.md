@@ -10515,3 +10515,14 @@ the accepted local primitive. Receipt:
 - Closed this coordinate-only source class as rejected and preserved its raw
   fixtures/reports. Next RTL9210B work must change the authoritative fanout
   topology or footprint strategy; no design-rule relaxation is accepted.
+
+## 2026-09-10 — RTL9210B Path-B parallel comparison V1560
+
+- Added `PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md` as the current
+  apples-to-apples decision record. Path A is preserved; Path B is a serious
+  isolated candidate and the recommendation is `CONTINUE BOTH`.
+- Reconciled the qualification/status headers and Path-B authority package so
+  V1549–V1558 are clearly rejected route experiments rather than production
+  authority or an architecture rejection. Technical pin/mapping/netlist
+  audits pass; source-field routing, authorized package/support evidence,
+  provisioning, firmware rights, procurement, and full validation remain open.

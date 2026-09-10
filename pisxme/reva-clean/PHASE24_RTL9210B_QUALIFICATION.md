@@ -1,6 +1,19 @@
 # Phase 24 RTL9210B-CG Path-B qualification
 
-## CURRENT STATE — reconciled 2026-09-10 V1558
+## CURRENT AUTHORITATIVE STATE — 2026-09-10 V1560
+
+Read `PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md` first for the current
+Path-A/Path-B decision, live evidence boundary, and open gates. Path B is a
+serious isolated parallel candidate; Path A remains protected and unchanged.
+The latest source-field trials V1549–V1558 are rejected native-DCR route
+experiments. They do not reject the RTL9210B architecture and they do not
+authorize production-CAD promotion. The current recommendation is
+`CONTINUE BOTH` pending the narrowly defined QFN fanout/application-package
+and traceable virgin-programming experiments.
+
+## SUPERSEDED CHRONOLOGICAL HEADER — retained for history
+
+The earlier V1195 header is superseded by the V1560 comparison above.
 
 The earlier V1195 header is superseded by the later live experiment chain.
 The current coupled Path-B experiment is V1461 on the V1428 accepted

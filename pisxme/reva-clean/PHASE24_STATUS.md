@@ -1,6 +1,19 @@
 # Phase 24 acreage validation status
 
-## CURRENT STATE — 2026-09-10 V1557
+## CURRENT AUTHORITATIVE STATE — 2026-09-10 V1560
+
+The current Path-A/Path-B storage comparison is recorded in
+`PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md`; it supersedes older status
+headers, not raw receipts. Path A remains protected. Path B is a serious
+isolated RTL9210B-CG candidate and the recommendation is `CONTINUE BOTH`, but
+it is not production-CAD authority. V1549–V1558 are rejected QFN
+source/transition route experiments. Open Path-B gates are the ordinary-via
+source-field route, authorized support/package evidence, virgin programming,
+firmware rights, procurement, and complete native/integrated validation.
+
+## SUPERSEDED STATUS HEADER — retained for history
+
+The former V1557 header below is historical context only.
 
 The latest RTL9210B work is isolated Path-B source-field experimentation.
 V1549–V1557 were rejected by native KiCad DRC and are not integrated. The
