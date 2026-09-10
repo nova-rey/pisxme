@@ -48,6 +48,9 @@ V1597 stripped unrelated support copper and tested six-net orthogonal launch
 channels. Native DRC rejected it with 20 violations and 39 fixture opens;
 the remaining defects are connector-side via clearance at the 0.5 mm J1
 pitch plus offset dogbone/crossing geometry. No route was promoted.
+V1598 used a 1 mm-spaced connector via row and direct offset dogbones. Native
+DRC reduced the fixture to 16 violations and 39 opens, but source-to-via-row
+diagonals still shorted/crossed TX/RX and REFCLK nets. No route was promoted.
 The active accepted local basis remains V1517 at 0° top-side orientation.
 The remaining technical task is a coordinated crystal/REFCLK/rail fanout
 that is authored against the actual saved pads and ordinary-via rules.
@@ -64,6 +67,7 @@ Path-A/Path-B comparison remain OPEN. Receipt:
 `PHASE24_RTL9210B_MANUAL_J1_MONOTONIC_REJECT_V1595_RECEIPT.md`.
 `PHASE24_RTL9210B_COAUTHORED_LAUNCH_REJECT_V1596_RECEIPT.md`.
 `PHASE24_RTL9210B_ORTHOGONAL_LAUNCH_REJECT_V1597_RECEIPT.md`.
+`PHASE24_RTL9210B_CONNECTOR_OFFSET_REJECT_V1598_RECEIPT.md`.
 
 ## SUPERSEDED CURRENT-STATE HEADER — V1558
 

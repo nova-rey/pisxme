@@ -67,6 +67,11 @@ The remaining defects are localized to 0.6 mm connector-side vias against
 0.5 mm J1 pitch and offset dogbone/crossing geometry. No candidate was
 promoted; the next trial must move launch vias outside the contact pitch.
 
+V1598 used a 1 mm-spaced connector via row and direct offset dogbones. Native
+DRC reduced the fixture to 16 violations and 39 opens, but source-to-via-row
+diagonals still shorted/crossed TX/RX and REFCLK nets. No candidate was
+promoted; the next trial must assign source-side layers explicitly.
+
 V1592 corrected the endpoint rectangle model and generated complete paths for
 all six handoff-to-J1 nets, but native DRC rejected them with 594 clearance
 violations. No candidate was promoted; the corrected endpoint model remains

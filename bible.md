@@ -10447,6 +10447,13 @@ the accepted local primitive. Receipt:
   offset-dogbone/crossing geometry. Rejected; launch vias must move outside
   the contact pitch.
 
+## 2026-09-10 — rejected connector-offset RTL9210B launch V1598
+
+- V1598 used a 1 mm-spaced connector via row and direct offset dogbones.
+  Native DRC found 16 violations and 39 fixture opens; source-to-via-row
+  diagonals still shorted/crossed TX/RX and REFCLK nets. Rejected; source-side
+  layer assignment must be explicit in the next trial.
+
 ## 2026-09-10 — Phase 24 RTL9210B V1547 crystal source sweep
 
 - V1547 generated and native-checked 16 crystal source variants from V1523.
