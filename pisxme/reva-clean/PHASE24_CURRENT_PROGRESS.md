@@ -48,6 +48,9 @@ baseline, accepted V1603 launch, east-side RTL_1V1 closure, and V1534/V1526
 crystal corridors. Continue with broader Path-B support, production parity,
 and Phase 24 validation; do not reopen U1 orientation.
 
+`PHASE24_STATUS.md` now has a current-state override documenting this clean
+V1603/V1523 candidate; older V1517/V1583 prose remains historical evidence.
+
 The V1523-source-hand-off trial is rejected: preserving the old RTL_1V1
 corridor causes REFCLK_P crossings, while a near-QFN RXP via escape shorts
 RXN/TXN under the production via envelope. This is a local source-field

@@ -10821,3 +10821,10 @@ the accepted local primitive. Receipt:
   corridors. Native DRC reports 0 violations and 0 unconnected items; the
   saved-board six-net audit and six negative controls pass. Full Path-B and
   Phase 24 validation remain open; U1 orientation is unchanged.
+
+## 2026-09-10 — Phase 24 status authority reconciled
+
+- Added a current-state override to `PHASE24_STATUS.md` for the clean
+  V1603/V1523 integrated Path-B candidate: native DRC and connectivity are
+  both clean, while full Path-B and acreage gates remain open. Superseded
+  V1517/V1583 prose remains historical and is no longer a current TODO.

@@ -1,5 +1,28 @@
 # Phase 24 acreage validation status
 
+## CURRENT AUTHORITATIVE STATE — 2026-09-10 V1603/V1523
+
+The current isolated Path-B candidate is
+`PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED.kicad_pcb`. Its generator now
+uses the native V1523 RTL_3V3 support baseline, the accepted V1603
+physical-envelope RTL9210B-to-J1 launch, the east-side RTL_1V1 closure, and
+the V1534/V1526-derived crystal corridors. The historical filename retains
+V1517 for continuity; it is not the current generator base.
+
+Native KiCad 10.0.5 DRC is 0 violations / 0 unconnected items / 0 footprint
+errors. The saved-board audit
+`phase24_rtl9210b_v1603_v1517_audit.py` derives connectivity from actual
+pads/tracks/vias and passes all six U1-to-J1 mappings plus six source-track
+removal negative controls. This closes the isolated RTL9210B launch/support
+implementation gate only. Full Path-B authority/procurement/firmware,
+production parity, acreage integration, and the remaining Phase 24 gates are
+still OPEN. Claude's U1 orientation remains CLOSED at 0 degrees, top side,
+pin 1 southwest.
+
+The next action is full Path-B and integrated Phase 24 validation from this
+candidate. Do not resume the rejected V1523 source-handoff or old V1517
+crystal/REFCLK route experiments.
+
 ## CURRENT AUTHORITATIVE STATE — 2026-09-10 V1560
 
 ### Live Path-B update — V1583
