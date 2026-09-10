@@ -25,12 +25,13 @@ handoff-to-J1 launch diagnostic.
 
 ## Current open gate
 
-The remaining implementation problem is the combined RTL9210B source-field
-support and M.2/J1 launch topology. Orientation search is closed. The next
-authorized work is a coordinated local launch/source-field implementation or
-an evidence-backed package/launch alternative, followed by native DRC,
-connectivity, and support validation. No validation severity or layer rule
-may be relaxed.
+The bounded physical-envelope launch experiment is now successful as the
+V1603 local primitive: all six U1-to-J1 high-speed nets are natively connected
+with zero high-speed DRC errors and negative controls pass. The next work is
+to integrate this launch with the complete Path-B support network and acreage
+candidate, then rerun native DRC, connectivity, return/reference, and support
+validation. Orientation search remains closed and no validation severity or
+layer rule may be relaxed.
 
 ## Resume point
 

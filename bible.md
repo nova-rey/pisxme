@@ -10432,6 +10432,15 @@ the accepted local primitive. Receipt:
 - V1523/V1526 remain the accepted isolated basis. No Path-A or production CAD
   changed.
 
+## 2026-09-10 — accepted physical-envelope channel network V1603
+
+- V1603 co-authored the staggered RTL9210B handoff with an ordered J1 launch:
+  separated B.Cu channels, ordinary through-vias, and monotonic separated
+  F.Cu dogbones into the six native M.2 contacts. Native saved-board
+  connectivity and six source-track-removal negative controls pass; native
+  DRC has zero high-speed errors. This is a local launch primitive pending
+  complete Path-B support and acreage integration.
+
 ## 2026-09-10 — rejected co-authored RTL9210B launch V1596
 
 - V1596 co-authored distinct-x disposable handoffs with the J1 launch, but its
