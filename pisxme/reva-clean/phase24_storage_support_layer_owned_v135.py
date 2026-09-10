@@ -64,14 +64,14 @@ for ref, pos in {'C86': (146.0, 160.0), 'C87': (146.0, 165.0)}.items():
 
 # U11 TX pads -> AC caps -> B.Cu corridors -> U12 bridge TX pads.
 for name, upad, cap, target, corridor, target_x in (
-    ('USB_TXP1','21','C86.1','25',(148.0,160.0),155.0 if ROTATE_U12_90 else (151.5 if ROTATE_U12 else 155.0)),
-    ('USB_TXN1','22','C87.1','24',(148.0,165.0),158.5 if ROTATE_U12_90 else (150.5 if ROTATE_U12 else 160.0)),
+    ('USB_TXP1','21','C86.1','25',(148.0,160.0),145.0 if ROTATE_U12 else (155.0 if ROTATE_U12_90 else 155.0)),
+    ('USB_TXN1','22','C87.1','24',(148.0,165.0),147.0 if ROTATE_U12 else (158.5 if ROTATE_U12_90 else 160.0)),
 ):
     n = net(b, name); bridge_n = net(b, 'JMS_USB3_TXP' if name == 'USB_TXP1' else 'JMS_USB3_TXN')
     c_ref, c_num = cap.split('.')
     src = xy(pad(b,'U11',upad)); c1 = xy(pad(b,c_ref,c_num)); c2 = xy(pad(b,c_ref,'2'))
     dst = xy(pad(b,'U12',target)); cv = corridor
-    target_y = (132.0 if name == 'USB_TXP1' else 131.0) if ROTATE_U12_90 else (137.0 if name == 'USB_TXP1' else 137.4)
+    target_y = (133.0 if name == 'USB_TXP1' else 132.6) if ROTATE_U12 else ((132.0 if name == 'USB_TXP1' else 131.0) if ROTATE_U12_90 else (137.0 if name == 'USB_TXP1' else 137.4))
     tv = (target_x, target_y)
     source_via = (142.0, 139.6) if name == 'USB_TXP1' else (141.0, 141.0)
     source_lane = (143.0, 140.0) if name == 'USB_TXP1' else (139.0, 141.0)
@@ -86,8 +86,8 @@ for name, upad, cap, target, corridor, target_x in (
     seg(b,n,(source_lane[0],c1[1]),cap_via,B); via(b,n,cap_via)
     seg(b,n,cap_via,c1,F)
     seg(b,bridge_n,c2,cv,F); via(b,bridge_n,cv)
-    lane_x = {'USB_TXP1':152.0, 'USB_TXN1':153.0}[name]
-    approach_y = {'USB_TXP1':136.5, 'USB_TXN1':136.9}[name]
+    lane_x = {'USB_TXP1':143.0, 'USB_TXN1':142.0}[name] if ROTATE_U12 else ({'USB_TXP1':152.0, 'USB_TXN1':153.0}[name])
+    approach_y = {'USB_TXP1':132.5, 'USB_TXN1':132.1}[name] if ROTATE_U12 else ({'USB_TXP1':136.5, 'USB_TXN1':136.9}[name])
     seg(b,bridge_n,cv,(lane_x,cv[1]),B)
     seg(b,bridge_n,(lane_x,cv[1]),(lane_x,approach_y),B)
     seg(b,bridge_n,(lane_x,approach_y),(tv[0],approach_y),B)
@@ -98,15 +98,15 @@ for name, upad, cap, target, corridor, target_x in (
 # are below the TX capacitor launches and their return vias are farther
 # outboard than the TX returns, avoiding the U12 pad-field funnel.
 for name, upad, target, source_via, target_via in (
-    ('USB_RXP1','26','23',(142.0,170.0),(161.0 if ROTATE_U12_90 else (151.5 if ROTATE_U12 else 155.0),132.0 if ROTATE_U12_90 else 137.8)),
-    ('USB_RXN1','27','22',(136.0,175.0),(163.5 if ROTATE_U12_90 else (150.5 if ROTATE_U12 else 161.0),131.0 if ROTATE_U12_90 else 138.2)),
+    ('USB_RXP1','26','23',(142.0,170.0),(151.0 if ROTATE_U12 else (161.0 if ROTATE_U12_90 else 155.0),132.2 if ROTATE_U12 else (132.0 if ROTATE_U12_90 else 137.8))),
+    ('USB_RXN1','27','22',(136.0,175.0),(149.0 if ROTATE_U12 else (163.5 if ROTATE_U12_90 else 161.0),131.8 if ROTATE_U12 else (131.0 if ROTATE_U12_90 else 138.2))),
 ):
     n = net(b,name); src = xy(pad(b,'U11',upad)); dst = xy(pad(b,'U12',target))
     sv, tv = source_via, target_via
     seg(b,n,src,(src[0],sv[1]),F); seg(b,n,(src[0],sv[1]),sv,F)
     via(b,n,sv)
-    lane_x = 154.0 if name == 'USB_RXP1' else 155.0
-    approach_y = 137.3 if name == 'USB_RXP1' else 138.0
+    lane_x = 141.0 if name == 'USB_RXP1' else 140.0 if ROTATE_U12 else (154.0 if name == 'USB_RXP1' else 155.0)
+    approach_y = 131.7 if name == 'USB_RXP1' else 131.3 if ROTATE_U12 else (137.3 if name == 'USB_RXP1' else 138.0)
     seg(b,n,sv,(lane_x,sv[1]),B)
     seg(b,n,(lane_x,sv[1]),(lane_x,approach_y),B)
     seg(b,n,(lane_x,approach_y),(tv[0],approach_y),B)

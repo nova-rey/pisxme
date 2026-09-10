@@ -1,5 +1,19 @@
 # Phase 24 storage-island upgrade qualification
 
+## CURRENT STATE — reconciled 2026-09-10
+
+Path A is the preserved fallback implementation and its JMS583 support
+network is already authored; any earlier “instantiate support” language is
+superseded historical wording. Path B RTL9210B-CG is a serious isolated
+parallel candidate, not a rejected architecture. Its latest coupled QFN
+field experiment V1461 was rejected on native DRC (19 violations / 14 opens),
+while V1428 remains the accepted local primitive parent.
+
+Path-B documentation confidence is partial: pin/package and several support
+facts are corroborated, but complete source-field routing, virgin
+programming/configuration, firmware provenance, and reproducible procurement
+remain OPEN. No Path-B or production-CAD promotion is implied by this report.
+
 Checked 2026-09-06. This is a bounded qualification record, not a production
 schematic or PCB approval.
 

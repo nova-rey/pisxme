@@ -16,6 +16,13 @@ release checks. Native reports, raw receipts, rejected footprints/routes, and
 negative controls remain immutable evidence. No production CAD or Path-A
 asset is authorized by this checkpoint.
 
+Documentation hygiene correction: the current Path-A support network is
+already instantiated and audited. Any older sentence in this file or linked
+narrative that says it still needs instantiation is superseded historical
+evidence, not an open gate. The current Path-B parallel candidate is tracked
+by `PHASE24_RTL9210B_QUALIFICATION.md`; its latest V1461 route result is
+rejected evidence, while V1428 remains the local primitive parent.
+
 Status: `OPEN — implementation authorized; procurement evidence remains HIGH
 risk` for the authorized SATA/NVMe upgrade only.
 The prior SATA-only board is preserved.

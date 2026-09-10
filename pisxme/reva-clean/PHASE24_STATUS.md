@@ -11090,3 +11090,20 @@ fixture at 17 violations, including real U12 POWER_GND/pad-field shorts and
 target-via interactions. V143 is rejected; the next support authoring must
 use a fully coordinated launch/footprint geometry. Receipt:
 `PHASE24_STORAGE_SUPPORT_DIRECT_U12_V143_RECEIPT.md`.
+
+## CURRENT STATE — documentation reconciliation and V144 — 2026-09-10
+
+The live narrative was reconciled against the saved schematic, disposable
+PCB candidates, library files, native reports, and recent commits. JMS583
+support is already instantiated and audited in Path A; older instantiation
+TODO wording is superseded historical evidence. Path B RTL9210B-CG remains a
+serious isolated candidate and is not a production rejection.
+
+V144 corrected the 180-degree U12 transform coordinates but still failed
+native DRC at 13 violations / 32 unconnected pads, including real B.Cu
+crossings, USB_TXN1/JMS_USB3_TXN and USB_TXP1/JMS_USB3_TXP shorts, RX-pair
+shorting, and target-field clearances. Its six local support endpoint
+assertions pass, but it is rejected route-implementation evidence. The
+current open gate is a native-clean, transform-aware U12 target/source launch;
+Path A production CAD remains unchanged. The reconciliation receipt is
+`PHASE24_DOCUMENTATION_HYGIENE_20260910.md`.

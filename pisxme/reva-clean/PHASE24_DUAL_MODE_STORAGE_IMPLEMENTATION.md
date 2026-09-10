@@ -1,5 +1,27 @@
 # Phase 24 dual-mode storage implementation
 
+## CURRENT STATE — reconciled 2026-09-10
+
+This section is the current narrative authority. Path A remains preserved and
+actively routable; its JMS583 support network is already instantiated in the
+authoritative schematic and current support-cohort artifacts. Any older
+“support network needs instantiation” wording below is historical, not a
+current TODO. Malformed pre-correction footprints and routes are historical
+evidence only.
+
+The current Path-B RTL9210B-CG work remains an isolated parallel candidate,
+not production CAD. The latest coupled QFN experiment is V1461, rejected for
+19 native violations / 14 opens caused by the coupled lane/GND field. The
+latest accepted Path-B local primitive basis remains the V1428 composite;
+full QFN support, high-speed routing, mode-aware validation, firmware, and
+procurement remain OPEN.
+
+Current open gates are clean Path-A storage routing and native closure,
+Path-B QFN/source-field completion, M-key parity, switched-mode validation,
+NVMe power/inrush review, firmware/programming provenance, authorized
+procurement, DFM, and integrated-board validation. Raw reports, negative
+controls, and rejected experiments remain immutable.
+
 ## CURRENT STATE — documentation authority (2026-09-08)
 
 The live Path-A dual-mode storage implementation includes the corrected
