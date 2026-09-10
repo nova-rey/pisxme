@@ -10042,3 +10042,11 @@ V50 is the preferred disposable Path-A parent; V51 and V52 are rejected
 experiments; V50's USB3/SATA/parity PASS and native 601 DRC / 399 opens with
 zero shorts remain current. No production authority or validation rule
 changed.
+## 2026-09-09 — Phase 24 storage clock-field experiments
+
+V63–V68 preserved a bounded Path-A storage routing investigation. V67
+co-authored the U11 XOUT/JMS_XAVDDH transition and removed the prior clock
+short, but native DRC still found a selector-side NC_26/STORAGE_SEL short;
+V68 confirmed the issue without zone refill. Neither candidate was promoted;
+V54 remains the preferred clean storage parent. Path-B RTL9210B qualification
+remains isolated and unchanged.

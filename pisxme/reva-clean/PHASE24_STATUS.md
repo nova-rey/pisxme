@@ -10773,3 +10773,12 @@ V54 is the current preferred storage ground-return disposable parent. Full
 F.Cu `POWER_GND` pad connection removes the 10 starved-thermal findings and
 reduces native opens to 350 at 601 total DRC, with USB3/SATA/J8 parity passes
 and zero shorts. Phase 24 remains OPEN; no production PCB changed.
+V63-V66 tested four U11 `XOUT` pad-field escapes and were rejected because
+each introduced a native contact/crossing with adjacent U11 pads or vias.
+V67 co-authored the XOUT escape with a rehomed `JMS_XAVDDH` transition and
+removed the prior clock-net short, while preserving USB3/SATA endpoint PASS.
+It is not promoted: native DRC reports 597 violations / 350 opens and one
+selector-side `NC_26`/`STORAGE_SEL` shorting item. V68 is the no-zone-refill
+control (602 / 350 with the same short). Raw boards, reports, and the
+`PHASE24_STORAGE_V63_V68_CLOCK_ESCAPE_RECEIPT.md` preserve this evidence;
+V54 remains the preferred clean parent.

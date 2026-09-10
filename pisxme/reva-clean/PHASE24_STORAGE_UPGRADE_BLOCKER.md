@@ -263,6 +263,14 @@ next mode route must escape locally around U13.
 V62 attempted that local-left mode escape, but native DRC remained 598 / 349
 with a real STORAGE_SEL/M2_SATA_B_PCIE_RXN0 short at U13 plus the independent
 XOUT/JMS_XAVDDH short. It is rejected; V54 remains the preferred parent.
+V63-V66 are rejected U11 XOUT pad-field escapes. V67 is the first useful
+co-authored clock result: it rehomes the `JMS_XAVDDH` transition and removes
+the prior XOUT/JMS_XAVDDH short while retaining PASS on USB3 and complete SATA
+endpoint connectivity. It is rejected because native DRC reports one
+selector-side `NC_26`/`STORAGE_SEL` shorting item (597 total violations / 350
+opens). V68 is a no-refill control with the same short (602 / 350). V54
+remains the preferred Path-A parent. Full storage and Phase 24 closure remain
+OPEN; no production PCB or validation severity changed.
 ## Follow-up implementation evidence — 2026-09-06
 
 Native inspection found inherited C44-C47 reference collisions in the
