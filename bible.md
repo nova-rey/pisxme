@@ -10844,3 +10844,13 @@ the accepted local primitive. Receipt:
   clean with six-net connectivity and negative controls passing; full Path-B,
   production-parity, acreage, and Phase 24 gates remain open. No orientation
   search or rejected route base was revived.
+
+## 2026-09-10 — Path-B saved-board census revalidated
+
+- Added `phase24_rtl9210b_pathb_census.py` and its JSON receipt. The audit
+  uses KiCad's native saved-board connectivity graph, confirms U1/J1 pad-net
+  authority, passes six actual-trace-removal negative controls, and rejects
+  the legacy namespace. Native DRC independently reports zero violations,
+  zero unconnected pads, and zero footprint errors. This is isolated CAD
+  evidence; firmware, procurement, production parity, acreage integration,
+  and full Phase 24 closure remain open.

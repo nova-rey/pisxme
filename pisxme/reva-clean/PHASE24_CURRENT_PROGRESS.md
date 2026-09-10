@@ -27,6 +27,17 @@ is a focused Path-B candidate census/parity audit and reconciliation of its
 remaining authority gates, followed by only the native checks justified by
 that evidence. Do not reopen U1 orientation or revive rejected route bases.
 
+## Post-pause audit — 2026-09-10
+
+The saved-board census `phase24_rtl9210b_pathb_census.py` passes against the
+actual pads, tracks, vias, and zones: all asserted U1/J1 net identities and
+six endpoint connections pass, six actual-trace-removal negative controls
+fail as required, and no legacy `PiSXMe:` namespace is present. The current
+native DRC receipt reports 0 violations, 0 unconnected pads, and 0 footprint
+errors. This strengthens the isolated Path-B CAD gate only; it does not close
+firmware, procurement, production parity, acreage integration, or full Phase
+24 validation.
+
 Date: 2026-09-10
 
 ## Paused state
