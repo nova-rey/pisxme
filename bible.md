@@ -8921,6 +8921,10 @@ the measured SPI-channel gap. Native DRC passed with 0 violations and 31
 expected incomplete items; the saved-board audit proved U1.17→C5.1 and a
 trace-removal negative control. Remaining RTL_5V/RTL_3V3/RTL_1V1 endpoints
 remain open.
+V130 co-authored local U11/U12 TX coupling-cap legs and passed all ten native
+support/USB3 endpoint assertions, but was rejected at 207/499 for real
+support-net shorts/crossings into USB_DP, JMS_VCCO, USB_RXN1, and U12/U13.
+V127 remains the parent; obstacle-aware local support escapes are required.
 V128 translated the isolated U11/U12 support copper and passed all ten native
 endpoint assertions, but was rejected at 164/499 for real crossings/shorts
 into CM5_PERST, U13, and the M.2 field. Rigid translation is not valid for

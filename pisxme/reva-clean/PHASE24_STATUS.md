@@ -11021,3 +11021,10 @@ the M.2-area field. The isolated support coordinates cannot be rigidly
 transplanted into V127. This is a route/transplant failure; the next step is
 native co-authoring of the support-cap island at the live U11/U12/U13 pads.
 Receipt: `PHASE24_STORAGE_SUPPORT_V128_RECEIPT.md`.
+V129/V130 attempted native local U11/U12 support co-authoring. V130 moved
+C86/C87 into storage acreage and passed all ten native support/USB3 endpoint
+assertions, but native DRC rejected it at 207/499 with real shorts/crossings
+into USB_DP, JMS_VCCO, USB_RXN1, and the U12/U13 pad fields. V130 is rejected;
+V127's CM5 USB3 route remains intact. The next support route must use
+obstacle-aware pair escapes around the U12/U13 pad columns. Receipt:
+`PHASE24_STORAGE_SUPPORT_V129_V130_RECEIPT.md`.
