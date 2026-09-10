@@ -10544,6 +10544,8 @@ the accepted local primitive. Receipt:
 - V1562 was corrected to cluster the tightly spaced J3 contacts onto two
   ordinary through-vias; the corrected rerun retains the audit PASS and has no
   new via hole-spacing violation or storage-rail shorting section.
+- The final V1562 source handoff uses an upper F.Cu dogleg to avoid
+  `AUTO_PEDET`; native power and SATA endpoint audits remain passing.
 
 ## 2026-09-10 — Phase 24 status reconciliation V1562
 

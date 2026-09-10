@@ -9,7 +9,9 @@ Status: **accepted focused power-connectivity primitive; not board promotion**
 The nine native J3 `STORAGE_3V3` pads are connected by pad-derived F.Cu
 dogbones to two clustered ordinary 0.8/0.4-mm through-vias. The vias join an
 explicit 0.60-mm `STORAGE_3V3` spine on designated `In2.PWR`; a remote source
-via hands off to U14.5 without a B.Cu collector through the SATA launch field.
+via hands off to U14.5 through an upper F.Cu dogleg, avoiding the
+`AUTO_PEDET` corridor and without a B.Cu collector through the SATA launch
+field.
 No signal net was added to a plane layer and no via-in-pad or microvia was
 used.
 
