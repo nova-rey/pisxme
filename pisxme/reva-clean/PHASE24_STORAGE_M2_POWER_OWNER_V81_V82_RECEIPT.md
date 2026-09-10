@@ -54,3 +54,7 @@ ownership.
   items, with no new STORAGE_3V3 shorting entry. It is not yet accepted: the
   remaining seven-vs-V79 added violations are principally QFN/source-escape
   clearances and must be isolated before production promotion.
+* V88 replaced the U13 source dogbone with a local F.Cu filled pickup zone
+  feeding the same outboard In1 trunk. The nine-contact audit and negative
+  control pass, but native DRC remains 608 / 341 and adds selector-field
+  shorting around the local zone. V88 is rejected.

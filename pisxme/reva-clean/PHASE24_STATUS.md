@@ -10880,3 +10880,6 @@ power audit and its improved trace-removal negative control pass, and no new
 STORAGE_3V3 shorting entry appears. V87 is still disposable (608 violations /
 341 opens versus V79's 601 / 350); its added QFN/source-escape clearances need
 resolution before promotion.
+V88 tested a local F.Cu filled source pickup instead of the U13 dogbone. It
+did not improve the native 608 / 341 result and added selector-field shorts;
+V88 is rejected. V87 remains the best disposable physical-power trial.
