@@ -11125,3 +11125,11 @@ via corridors and retained 9 violations with no native shorting entries.
 V150 is the best current route-development basis, not a pass. The remaining
 class is ordered, co-authored target-field geometry. Receipt:
 `PHASE24_STORAGE_SUPPORT_U12_COAUTHOR_TX_RX_FAR_V150_RECEIPT.md`.
+
+V151-V153 progressively separated the target transitions; V153 reduced the
+electrical result to two silkscreen warnings. V154 removed those warnings by
+omitting only moved-fixture capacitor silk. Native DRC is 0, all six local
+support endpoints pass, and the saved-board removed-track negative control
+correctly fails connectivity. V154 is accepted as a local support primitive;
+32 intentional stripped-fixture opens remain and integrated closure is OPEN.
+Receipt: `PHASE24_STORAGE_SUPPORT_U12_COAUTHOR_TX_RX_FAR_V154_RECEIPT.md`.

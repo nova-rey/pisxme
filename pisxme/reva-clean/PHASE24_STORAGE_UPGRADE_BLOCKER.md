@@ -33,6 +33,11 @@ V150 is the current best disposable USB3 support basis: native endpoint
 assertions pass and no shorting items remain, but target-field crossings and
 clearances remain open. This is a recoverable route-implementation gate.
 
+V154 supersedes V150 as the accepted local support primitive: native DRC is
+zero, six endpoint assertions pass, and the removed-track negative control
+fails connectivity as required. Integration and intentionally omitted
+support opens remain current gates; no production promotion is implied.
+
 Status: `OPEN — implementation authorized; procurement evidence remains HIGH
 risk` for the authorized SATA/NVMe upgrade only.
 The prior SATA-only board is preserved.

@@ -33,6 +33,11 @@ latest routing evidence; V150 is the best basis at 9 native violations with
 no shorting entries, but remains rejected until the remaining target-field
 crossings and clearances are removed.
 
+V154 is the accepted native-clean local U11/U12 USB3 support primitive:
+native DRC is zero, six endpoint assertions pass, and the removed-track
+negative control passes. It is not integrated-board closure; the fixture
+intentionally omits CM5 continuation and other support.
+
 ## CURRENT STATE — documentation authority (2026-09-08)
 
 The live Path-A dual-mode storage implementation includes the corrected
