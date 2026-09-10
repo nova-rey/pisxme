@@ -10516,6 +10516,10 @@ a rejected RTL_3V3 localized B.Cu power-zone trial; its source via duplicated
 or conflicted with nearby ground support and native DRC reported seven
 clearance/overlap findings. Neither changes accepted Path-B primitives or
 Path-A.
+V1408 is a rejected upper RTL_3V3 join from the U2 support trunk to the
+established 108/62.8-mm rail junction. Native DRC reported six violations,
+including crossings against SPISO3, SPICLK, SPISI, CLKREQ_N, and RTL_1V1.
+The support join remains OPEN; no accepted primitive or Path-A asset changed.
 
 V1405 is a rejected RTL_3V3 support-join trial from V1392. It attempted to
 connect U2.3 to the accepted U1.20 rail through a lower B.Cu collector;

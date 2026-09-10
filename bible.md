@@ -68,6 +68,10 @@ unchanged.
 join from V1392. The lower collector produced seven native DRC violations
 against existing lane/control/rail geometry. Evidence is preserved; accepted
 V1392 and Path-A remain unchanged.
+2026-09-09 — Phase 24 V1408 rejected the upper U2 RTL_3V3 support join.
+Native DRC reported six crossings/shorts against SPI/control and 1V1
+geometry. The disposable evidence is preserved; accepted V1392 and Path A
+remain unchanged.
 2026-09-09 — Phase 24 V1313: authored a targeted rotated-QFN lane escape
 with pad-adjacent departures, an explicit SPISO bypass, and staggered J1
 transitions. Native endpoint, negative-control, and DRC evaluation remain
