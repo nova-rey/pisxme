@@ -9778,6 +9778,11 @@ native-clean V850 rotated-support field passed endpoint and negative-control
 audits but native DRC reported 14 source-transition and outer-launch
 violations. Preserved the disposable evidence; V850 support and production/
 Path-A assets remain unchanged.
+2026-09-09 — Phase 24 V1403/V1404 compared a rotated-QFN U1.63 source-field
+class. V1403 reached one local DRC crossing on a sparse rotated fixture;
+V1404's reroute introduced seven violations against the rotated lane/SPI
+field. Neither is production evidence; Path A and accepted V1392 remain
+unchanged.
 2026-09-09 — Phase 24 V1316 rejected: adding four lanes to the native-clean
 V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.

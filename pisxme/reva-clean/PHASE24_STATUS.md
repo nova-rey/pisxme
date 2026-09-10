@@ -10509,3 +10509,9 @@ from crossings and clearances against the accepted RTL_1V1/RTL_3V3/SPI
 field. The trial is route-implementation evidence only; no accepted
 primitive or Path-A asset changed. RTL_5V, U1.63, and remaining support/
 control groups remain OPEN.
+
+V1403/V1404 tested the rotated-QFN V735 source-field class for U1.63. V1403
+reduced the local trial to one crossing but was based on a sparse, non-
+integrated rotated fixture; V1404's attempted barrier reroute introduced
+seven native violations against the rotated lane/SPI field. Both remain
+disposable comparison evidence. No production asset changed.
