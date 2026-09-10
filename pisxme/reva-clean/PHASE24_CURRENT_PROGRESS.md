@@ -93,6 +93,12 @@ PEDET/PERST_N and via/ground-zone clearance conflicts. Its raw board/report
 are preserved with the escape analysis; no copper from either probe is
 promoted.
 
+The latest opposite-side jog reduces the isolated escape probe to two native
+crossings, specifically the existing `RTL_5V` and `PERST_N` pad-row
+departures. The next in-scope repair is a coordinated local reroute of those
+adjacent departures around U1.12; no new MIC2545A topology or RTL9210B
+orientation search is warranted.
+
 ## Support parity consolidation — 2026-09-10
 
 Claude's bounded review identified the missing consolidated support audit.

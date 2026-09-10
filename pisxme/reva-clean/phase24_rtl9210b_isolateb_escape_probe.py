@@ -14,8 +14,8 @@ u1 = b.FindFootprintByReference("U1"); p12 = u1.FindPadByNumber("12")
 assert p12 and p12.GetNetname() == "ISOLATEB"
 
 tp = pcbnew.FOOTPRINT(b); tp.SetReference("TP_ISO"); tp.SetValue("ISOLATEB_HANDOFF")
-tp.SetLayer(F); tp.SetPosition(P(107, 82)); b.Add(tp)
-pad = pcbnew.PAD(tp); pad.SetNumber("1"); pad.SetPosition(P(107, 82)); pad.SetSize(P(0.8, 0.8))
+tp.SetLayer(F); tp.SetPosition(P(105, 78.5)); b.Add(tp)
+pad = pcbnew.PAD(tp); pad.SetNumber("1"); pad.SetPosition(P(105, 78.5)); pad.SetSize(P(0.8, 0.8))
 pad.SetShape(pcbnew.PAD_SHAPE_CIRCLE); pad.SetAttribute(pcbnew.PAD_ATTRIB_SMD)
 ls = pcbnew.LSET(); ls.AddLayer(F); pad.SetLayerSet(ls); pad.SetNet(n); pad.SetNetCode(n.GetNetCode()); tp.Add(pad)
 
@@ -28,6 +28,9 @@ def via(x, y):
     q.SetLayerPair(F, B); q.SetNet(n); q.SetNetCode(n.GetNetCode()); b.Add(q)
 
 # Leave pad 12 through its south pad end, then transition outboard.
-track((99.2, 73.5), (99.2, 77), F); via(99.2, 77)
-track((99.2, 77), (107, 77), B); track((107, 77), (107, 82), B); via(107, 82)
+track((99.2, 73.5), (99.2, 74.6), F)
+track((99.2, 74.6), (101.8, 74.6), F)
+track((101.8, 74.6), (101.8, 78.5), F); via(101.8, 78.5)
+track((101.8, 78.5), (105, 78.5), B); via(105, 78.5)
+pcbnew.ZONE_FILLER(b).Fill(b.Zones())
 b.Save(str(OUT)); print(OUT)

@@ -47,3 +47,11 @@ failure class changed: the B.Cu handoff crosses the existing PEDET and
 PERST_N corridors, while the via locations violate the existing ground-zone
 and via-clearance envelope. This probe is rejected evidence, not a promoted
 route and not evidence that the frozen orientation is impossible.
+
+The latest opposite-side jog stayed vertical through the south pad-end exit,
+then moved to x=101.8 mm before the outboard via. After refilling zones it
+left zero opens and only two native crossings: the existing `RTL_5V` departure
+at x=101.2 mm and the existing `PERST_N` departure at x=100.0 mm. This
+confirms that the next repair must co-author those adjacent local departures
+around the `ISOLATEB` escape. Repeating point perturbations is no longer a
+useful route class.

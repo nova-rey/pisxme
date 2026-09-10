@@ -10993,3 +10993,11 @@ the accepted local primitive. Receipt:
   violations from PEDET/PERST_N crossings and ground-zone/via-clearance
   conflicts. Classified as route implementation evidence; no probe copper is
   promoted and the accepted orientation remains closed.
+
+## 2026-09-10 — narrowed ISOLATEB repair to adjacent local departures
+
+- The latest opposite-side jog left only two native crossings, against the
+  existing `RTL_5V` and `PERST_N` U1 pad-row departures. Recorded that the next
+  useful implementation is a coordinated local reroute of those departures
+  around U1.12; point perturbations, topology changes, and orientation search
+  are not justified.
