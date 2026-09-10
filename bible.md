@@ -9976,6 +9976,11 @@ left-of-REFCLK CM5 USB3 TX_N source transition; USB3/SATA/native J8 parity
 audits pass, native DRC is 601 violations / 399 opens, and shorting entries
 are zero. Remaining route/support closure is open; no production PCB,
 validation rule, or layer contract changed.
+2026-09-09 — Phase 24 V47 rejected as a non-improving U7 RX_N escape probe.
+Complete SATA endpoint connectivity passed and native shorting entries were
+zero, but DRC remained 601 violations / 399 opens and the local RX_N/TX_N
+crossing was only relocated. Preserved the disposable board, raw report,
+script, and receipt; V46 remains the preferred parent.
 2026-09-09 — Phase 24 V43 rejected after correcting a coordinate-authoring
  typo. The corrected U7.57 TX_P source-field escape produced native DRC 605
  violations / 400 opens, with real POWER_GND-to-TX_P shorts; SATA endpoint

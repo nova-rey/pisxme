@@ -194,6 +194,12 @@ all pass; native DRC reports 601 violations / 399 unconnected items and zero
 shorting entries. This is route progress, not Phase 24 closure; remaining
 storage high-speed/support routing and native full-board closure stay OPEN.
 
+V47 tested an isolated `BRIDGE_SATA_RX_N` escape around the U7 TX_N field.
+It passes complete SATA endpoint connectivity and has zero native shorting
+entries, but remains 601 DRC / 399 opens and only relocates the local crossing.
+It is rejected as a non-improving route class; V46 remains the preferred
+disposable parent.
+
 ## CURRENT ROUTING STATE — 2026-09-09
 
 The current best disposable Path-A parent is V41, not the historical
