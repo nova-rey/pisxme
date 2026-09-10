@@ -10509,6 +10509,14 @@ from crossings and clearances against the accepted RTL_1V1/RTL_3V3/SPI
 field. The trial is route-implementation evidence only; no accepted
 primitive or Path-A asset changed. RTL_5V, U1.63, and remaining support/
 control groups remain OPEN.
+V1409/V1410 are rejected U2 RTL_3V3 outboard joins with one and three native
+violations. V1411 is accepted: it completes the U2 support-to-U1 RTL_3V3 rail
+using the outboard B.Cu dogleg, with native DRC zero and the saved-board
+U2.3/U2.8/U1.20/U1.34/U1.39/U1.52/R2/R3/C3 audit plus source-removal
+negative control passing. V1412 is accepted only as the U1.33-to-C5 RTL_5V
+F.Cu source corridor (native DRC zero); V1413's attempt to join U1.17 added
+six native violations and is rejected. RTL_5V fan-in, U1.63, and remaining
+support/control groups remain OPEN.
 
 V1406 is a rejected RTL_5V U1.33-to-C5 upper-corridor trial; native DRC
 reported four crossings/shorts against the accepted 1V1/3V3 field. V1407 is
