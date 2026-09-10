@@ -10757,3 +10757,15 @@ POWER_GND/no-net field and native DRC reports 610 violations / 399 opens,
 including real POWER_GND shorts. V42 is rejected; V41 remains the best
 disposable parent and the next attempt must preserve its source-field
 allocation while addressing the selector-side corridor.
+
+## CURRENT STORAGE ROUTING STATE — 2026-09-09
+
+The current preferred disposable Path-A parent is V50,
+`PHASE24_STORAGE_CM5_USB4_MONOTONIC_V50_U7_RXN_RIGHTDOGLEG.kicad_pcb`.
+V50 passes native USB3 connectivity, complete SATA endpoint connectivity,
+and schematic-to-PCB pad parity against `PHASE24_STORAGE_MODE_J8.xml`
+(814 nodes / 1263 pads / 0 mismatches). Its native DRC reports 601
+violations / 399 unconnected items with zero shorting entries. V51 and V52
+are rejected selector-side route experiments; their raw boards/reports and
+receipts remain preserved. The storage and full-board Phase 24 gates remain
+OPEN; no production-authoritative PCB or validation rule has changed.

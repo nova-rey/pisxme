@@ -10005,3 +10005,8 @@ script, and receipt; V46 remains the preferred parent.
 endpoint connectivity but worsened native DRC to 604 / 399 and introduced
 three real support-net shorts. Preserved board, report, script, and receipt;
 V50 mixed-layer routing remains preferred.
+2026-09-09 — Reconciled PHASE24_STATUS.md with live storage routing evidence:
+V50 is the preferred disposable Path-A parent; V51 and V52 are rejected
+experiments; V50's USB3/SATA/parity PASS and native 601 DRC / 399 opens with
+zero shorts remain current. No production authority or validation rule
+changed.
