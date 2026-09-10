@@ -10341,3 +10341,12 @@ negative controls. Native DRC reports no lane electrical violations; one
 inherited V1058 RTL_3V3 dangling warning and 32 intentionally open support
 connections remain in the fixture. The lane geometry is accepted as a Path-B
 routing primitive, not full Path-B or production closure.
+
+V1332 is the current original-J1 lane basis. It moves TXP's long corridor to a
+far-right B.Cu run, removing the final lane short/crossing from V1329 while
+retaining the V1058 support field and the V1258 QFN escape. Native DRC reports
+only the inherited V1058 RTL_3V3 dangling warning; native saved-board audit
+passes all four U1-to-J1 endpoints and four source-removal negative controls.
+The result is accepted as a complete lane-routing primitive. PEDET, CLKREQ,
+PERST, REFCLK, remaining supplies, and other support opens remain outside this
+fixture's closure scope.

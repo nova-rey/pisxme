@@ -112,6 +112,12 @@ connectivity passed all four lane endpoints and four source-removal negative
 controls. Native DRC reported no lane electrical violations; inherited support
 warning/open support connections remain fixture scope. No production CAD or
 Path-A assets changed.
+2026-09-09 — Phase 24 V1332: accepted the current original-J1 RTL9210B lane
+basis. TXP was moved to a far-right B.Cu corridor; native DRC then showed only
+the inherited V1058 RTL_3V3 dangling warning. Native saved-board connectivity
+and four source-removal negative controls passed. This is a lane primitive,
+not full Path-B closure; support/control opens remain. No production CAD or
+Path-A assets changed.
 2026-09-09 — Phase 24 V1318/V1319: merged the complete orientation-0 V1058
 RTL9210B support/SPI field with the accepted V1258 lane basis, then tested a
 fresh four-row northbound lane allocation around the support field. Native DRC
