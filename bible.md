@@ -10143,3 +10143,8 @@ broad plane needs a coordinated island/via redesign. V92 remains preferred.
 vertical F.Cu dogbones into a south bus. Native power/negative-control,
 parity, USB3, and SATA audits pass; DRC remains 597 / 341 with no rail shorts.
 V94 is now the preferred disposable storage-power basis; full gates remain.
+2026-09-10 — Phase 24 storage rail branch trials V95–V101 were preserved as
+rejected evidence. The saved-board M.2 power-owner audit and trace-removal
+negative control passed on each trial, but native DRC retained true opens and
+introduced/retained rail, selector, SATA, or XOUT shorts. V94 remains the
+best disposable basis; production promotion is not authorized.

@@ -10911,3 +10911,13 @@ power dogbones feed a common south F.Cu bus from U14.5, with no vias. Native
 native DRC remains 597 / 341 with no storage-rail shorting entry. V94 is the
 preferred disposable basis; full-board and manufacturing gates remain open.
 Receipt: `PHASE24_STORAGE_AUTHORITY_J3_VERTICAL_V94_RECEIPT.md`.
+## Current storage rail branch status — 2026-09-10
+
+V95–V101 are rejected disposable storage-power experiments from V94. V95
+showed that a direct U13.30-to-U14.5 F.Cu branch reduces one open but enters
+the tight U13/selector field. V96–V101 tested B.Cu, perimeter F.Cu, local
+fanout, and local In4-plane alternatives; all retain real native DRC shorts
+or crossings despite passing the focused J3 power-owner audit. The complete
+trial table and raw reports are in
+`PHASE24_STORAGE_RAIL_BRANCHES_V95_V101_RECEIPT.md`. V94 remains the best
+source-corrected disposable basis; no branch is accepted.
