@@ -10828,3 +10828,10 @@ the accepted local primitive. Receipt:
   V1603/V1523 integrated Path-B candidate: native DRC and connectivity are
   both clean, while full Path-B and acreage gates remain open. Superseded
   V1517/V1583 prose remains historical and is no longer a current TODO.
+
+## 2026-09-10 — recorded Path-B route-policy metrics
+
+- Added the machine-readable V1603 metrics artifact. It confirms six-net
+  routing on F.Cu/B.Cu only, 0.20 mm track width, ordinary 0.60/0.30 mm
+  vias, and no plane-layer signals. It supplements rather than replaces
+  native DRC, connectivity, and the still-open firmware/procurement gates.

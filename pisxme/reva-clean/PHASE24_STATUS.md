@@ -23,6 +23,12 @@ The next action is full Path-B and integrated Phase 24 validation from this
 candidate. Do not resume the rejected V1523 source-handoff or old V1517
 crystal/REFCLK route experiments.
 
+The Path-B route-policy metrics are recorded in
+`PHASE24_RTL9210B_PATHB_V1603_METRICS.json`: all six nets are confined to
+F.Cu/B.Cu at 0.20 mm width with ordinary 0.60/0.30 mm vias and no plane-layer
+signals. This supplements native DRC/connectivity; firmware, procurement,
+hardware bring-up, and acreage integration remain open.
+
 ## CURRENT AUTHORITATIVE STATE — 2026-09-10 V1560
 
 ### Live Path-B update — V1583

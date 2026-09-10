@@ -21,3 +21,7 @@ The filename retains the historical V1517 label for continuity, but the
 generator source is now V1523. This closes the isolated support/launch
 implementation gate; full production Path-B integration and remaining Phase
 24 validation are still required.
+
+Route-policy metrics are captured in
+`PHASE24_RTL9210B_PATHB_V1603_METRICS.json`; all six high-speed nets use only
+F.Cu/B.Cu with the specified ordinary-via and track-width policy.
