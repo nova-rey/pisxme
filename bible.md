@@ -10255,3 +10255,8 @@ vias. Native DRC rejected it at 21 violations, including real corridor and
 U12 pad-field shorts/crossings. It remains disposable evidence; production
 CAD is unchanged. Receipt:
 `PHASE24_STORAGE_SUPPORT_U12_ROT90_V141_RECEIPT.md`.
+V143 tested direct U12 F.Cu exits with widely separated vias and ordered B.Cu
+lanes. Native DRC rejected the reduced fixture at 17 violations, including
+real U12 ground/pad-field shorts. V143 is rejected and remains disposable
+evidence; production copper is unchanged. Receipt:
+`PHASE24_STORAGE_SUPPORT_DIRECT_U12_V143_RECEIPT.md`.

@@ -11084,3 +11084,9 @@ transformed target-via coordinates. Native DRC rejected the local fixture at
 21 violations, including real B.Cu corridor crossings and U12 pad-field
 shorts. V141 is rejected; production CAD remains unchanged. Receipt:
 `PHASE24_STORAGE_SUPPORT_U12_ROT90_V141_RECEIPT.md`.
+V143 tested direct F.Cu exits from U12 bridge pads with widely separated
+through-vias and ordered B.Cu support lanes. Native DRC rejected the local
+fixture at 17 violations, including real U12 POWER_GND/pad-field shorts and
+target-via interactions. V143 is rejected; the next support authoring must
+use a fully coordinated launch/footprint geometry. Receipt:
+`PHASE24_STORAGE_SUPPORT_DIRECT_U12_V143_RECEIPT.md`.
