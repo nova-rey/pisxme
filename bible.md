@@ -145,6 +145,12 @@ violations; V1386 reduced U1.60 alone to 3; V1387 reduced it to one
 RTL_1V1/RTL_3V3 B.Cu crossing; V1388 and V1389 were rejected at 10 and 4.
 All are preserved as disposable route evidence. The V1384 accepted U1.16/
 U1.25 basis and Path-A assets remain unchanged; U1.60/U1.63 remain open.
+2026-09-09 — Phase 24 V1392 accepted the U1.60 RTL_1V1 source escape after
+native DRC reported zero violations and the saved-board/source-removal audit
+passed. V1393-V1395 tested coupled/staggered/near-via U1.63 additions and were
+rejected at 2, 2, and 4 native violations. The accepted V1392 primitive and
+all Path-A assets remain unchanged; U1.63 and other Path-B support remain
+open.
 2026-09-09 — Phase 24 V1384 accepted the U1.25 RTL_1V1 fanout on the complete
 V1382 U1.16 basis. Native DRC reports zero violations with 18 fixture opens.
 The corrected saved-board audit derives connectivity from KiCad's loaded

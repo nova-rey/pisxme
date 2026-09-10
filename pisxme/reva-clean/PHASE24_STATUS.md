@@ -10478,3 +10478,12 @@ rejected with 10 and 4 violations respectively. These are route
 implementation failures on the V1384 basis; the next trial must preserve the
 accepted U1.25/U1.16 work while routing around the RTL_3V3 barrier. U1.60,
 U1.63, and remaining support/control groups remain OPEN.
+
+V1392 is accepted as the U1.60 RTL_1V1 primitive. Its source leaves the QFN
+west on F.Cu, transitions at the far-west edge, passes above the native GND
+diagonal on B.Cu, and returns on F.Cu to the existing 1V1 trunk. Native DRC
+reports zero violations; the saved-board endpoint audit and source-removal
+negative control pass. V1393/V1394/V1395 are rejected U1.63 additions: they
+retain two, two, and four native violations respectively from lane-source or
+QFN clearance conflicts. U1.63 and remaining support/control groups remain
+OPEN.
