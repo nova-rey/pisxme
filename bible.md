@@ -105,6 +105,13 @@ V850 rotated-support field passed endpoint and negative-control audits but
 native DRC reported 14 source-transition and outer-launch violations.
 Preserved the disposable evidence; V850 support and production/Path-A assets
 remain unchanged.
+2026-09-09 — Phase 24 V1328: accepted the strongest RTL9210B lane primitive
+to date. The complete V1058 support/SPI field was combined with the V1258
+staggered QFN escape and an outboard translated J1 launch. Native saved-board
+connectivity passed all four lane endpoints and four source-removal negative
+controls. Native DRC reported no lane electrical violations; inherited support
+warning/open support connections remain fixture scope. No production CAD or
+Path-A assets changed.
 2026-09-09 — Phase 24 V1318/V1319: merged the complete orientation-0 V1058
 RTL9210B support/SPI field with the accepted V1258 lane basis, then tested a
 fresh four-row northbound lane allocation around the support field. Native DRC

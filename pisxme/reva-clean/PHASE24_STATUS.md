@@ -10332,3 +10332,12 @@ and board-edge/transition clearances. Both disposable boards and raw reports
 are retained. The next valid experiment must co-author the U1 source field,
 support trunks, and connector launch allocation together; no production CAD or
 Path-A assets changed.
+
+V1328 is the strongest RTL9210B lane result. It uses the complete V1058
+orientation-0 support/SPI field, the V1258 staggered QFN source escape, and an
+outboard translated J1 with separated launch corridors. Native saved-board
+connectivity passes all four U1-to-J1 endpoints and four source-trace removal
+negative controls. Native DRC reports no lane electrical violations; one
+inherited V1058 RTL_3V3 dangling warning and 32 intentionally open support
+connections remain in the fixture. The lane geometry is accepted as a Path-B
+routing primitive, not full Path-B or production closure.
