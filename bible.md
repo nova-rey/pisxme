@@ -502,6 +502,11 @@ design package required for implementation. The JAE U215 M-key variant
 identity/procurement path was strengthened, while exact land-pattern capture
 and the NVMe bridge design pack remain gated. No production KiCad assets were
 changed.
+2026-09-09 — Phase 24 V54 accepted as the best disposable storage
+ground-return parent. Full F.Cu POWER_GND pad connection removed all 10
+starved-thermal findings and reduced native opens to 350 at 601 total DRC;
+USB3/SATA/J8 parity audits pass and native shorts remain zero. No signal,
+production authority, validation rule, or layer contract changed.
 
 ## 2026-09-05 — Phase 24 clock orientation trial rejected
 

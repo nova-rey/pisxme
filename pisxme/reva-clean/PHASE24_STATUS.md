@@ -10769,3 +10769,7 @@ violations / 399 unconnected items with zero shorting entries. V51 and V52
 are rejected selector-side route experiments; their raw boards/reports and
 receipts remain preserved. The storage and full-board Phase 24 gates remain
 OPEN; no production-authoritative PCB or validation rule has changed.
+V54 is the current preferred storage ground-return disposable parent. Full
+F.Cu `POWER_GND` pad connection removes the 10 starved-thermal findings and
+reduces native opens to 350 at 601 total DRC, with USB3/SATA/J8 parity passes
+and zero shorts. Phase 24 remains OPEN; no production PCB changed.

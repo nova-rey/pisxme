@@ -238,6 +238,11 @@ opens from 399 to 355 with zero shorting entries while preserving USB3/SATA
 connectivity, but introduced 10 starved-thermal findings and raised total DRC
 to 611. It is preserved as a ground-return parent, not promoted; the next
 step is deliberate stitching/thermal cleanup.
+V54 completed that bounded thermal probe: full F.Cu `POWER_GND` pad
+connection eliminated all 10 starved-thermal findings and reduced opens to
+350 while retaining zero shorting entries and passing USB3/SATA/J8 parity
+audits. V54 is the current preferred ground-return parent; remaining
+support/route closure is OPEN and no finding was waived.
 ## Follow-up implementation evidence — 2026-09-06
 
 Native inspection found inherited C44-C47 reference collisions in the
