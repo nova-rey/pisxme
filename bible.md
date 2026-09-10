@@ -10066,3 +10066,6 @@ lane/JTAG copper. It was rejected without rule relaxation; Path A stayed
 intact.
 RTL9210B V1461 co-authored all four lane-0 source corridors with U1.66 GND;
 native DRC retained 19 violations, so it was rejected without rule relaxation.
+Fresh V54 native gate audit on 2026-09-10 recorded 601 DRC violations and
+350 opens with no shorts; focused USB3/SATA/parity/support/VBUS/VCCO audits
+pass with negative controls. No Phase 24 findings were waived.

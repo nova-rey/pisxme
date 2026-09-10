@@ -10799,6 +10799,12 @@ remaining conflicts moving to LANE0_TXP, LANE0_TXN, and JTAG_TCK. It confirms
 the QFN field must be co-authored; no rule relaxation or production change
 was made. The consultant review and raw evidence are recorded in
 `PHASE24_RTL9210B_COUPLED_V1460_RECEIPT.md`.
+The fresh V54 current gate audit on 2026-09-10 reproduces native DRC at 601
+violations / 350 unconnected items with no shorting entries. USB3, complete
+SATA endpoints, J8 pad parity (814 / 1263 / 0), JMS583 support cohorts, VBUS,
+and VCCO-zone checks pass with negative controls. This closes focused support
+authority only; all native routing/manufacturing findings remain open. Raw
+summary: `PHASE24_STORAGE_V54_CURRENT_GATE_AUDIT_20260910.md`.
 V1461 is a rejected broader coupled Path-B source-field experiment. It
 co-authored all four lane-0 source corridors with U1.66 GND, but native DRC
 reported 19 violations / 14 opens, including RXP/RXN and RTL_1V1/RTL_3V3
