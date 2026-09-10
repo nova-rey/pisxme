@@ -208,6 +208,10 @@ against the current J8 XML. `PHASE24_STORAGE_J8_V5_VBUS_V1.kicad_pcb` passes
 zero-mismatch pad parity; V37 fails against that current authority because its
 recorded XML was superseded. Marked V37 historical without altering raw
 receipts, and corrected the narrative current-candidate references.
+2026-09-09 — Phase 24 correction: V37 was incorrectly described as
+superseded because a stale XML oracle was used. Current J8 XML parity is zero
+mismatches; V37 remains disposable route evidence at 603 DRC/399 opens with
+no shorting entries. The earlier false comparison is superseded, not erased.
 2026-09-09 — Phase 24 V1457/V1458 rejected two additional RTL9210B U1.66/
 U1.69 ordinary-via edge-access probes. Native DRC reported 13 and 5
 violations respectively, including real ground-to-signal shorts/clearance

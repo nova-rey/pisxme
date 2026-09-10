@@ -10718,3 +10718,9 @@ but V37 is no longer the current Path-A candidate. Native DRC/routing,
 mode-aware physical closure, and full-board Phase 24 remain OPEN. A fresh
 native DRC receipt on this same saved basis reports 732 violations and 400
 unconnected items; no finding was waived.
+
+CORRECTION: V37 is not superseded by the paragraph above. The current
+`PHASE24_STORAGE_MODE_J8.xml` is the valid parity oracle, and V37 passes it
+with zero mismatches. V37 therefore remains a valid disposable 603-DRC/399-
+open route candidate with no shorting entries; its earlier comparison to
+`PHASE24_STORAGE_NATIVE_FINAL.xml` is historical only.

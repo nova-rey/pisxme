@@ -35,3 +35,9 @@ mode ownership and pre-normalization U12/U13 names. The current candidate is
 `PHASE24_STORAGE_J8_V5_VBUS_V1.kicad_pcb`, which passes zero-mismatch parity
 against that current XML. The V37 PCB and original receipts remain unchanged
 for historical route comparison.
+
+The preceding historical wording is superseded by the live recheck: V37
+passes zero-mismatch parity against `PHASE24_STORAGE_MODE_J8.xml`. It remains
+a valid disposable route candidate with 603 DRC violations, 399 opens, and
+no shorting entries. The ten-mismatch result applies only to the superseded
+`PHASE24_STORAGE_NATIVE_FINAL.xml` oracle.

@@ -25,6 +25,11 @@ The current integrated Path-A parity basis is
 snapshots remain disposable historical evidence; their older XML/parity
 claims do not override the current J8 basis.
 
+Live correction: V37 also passes zero-mismatch parity against the current J8
+XML and remains a valid disposable lower-DRC route candidate. Only its
+comparison against the superseded XML is rejected; the V37 raw PCB and native
+receipt remain preserved.
+
 The V3/V4 co-authored source-field experiments are superseded route evidence:
 V3 passes the focused USB3 and JMS583 support audits without a shorting class,
 but creates two local TX-pair crossings at the U11 escape; V4 adds an
