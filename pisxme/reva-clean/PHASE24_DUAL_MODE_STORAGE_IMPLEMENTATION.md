@@ -1058,3 +1058,13 @@ support opens; all four lane endpoints, U1.63→C4.1, and U1.66→U1.69 pass.
 Saved-board rail and RXN trace-removal negative controls fail as required.
 This supersedes V1466 only for the local lower field; full Path-B and Phase 24
 remain open.
+
+## CURRENT PATH-B CRYSTAL FIELD — V1523/V1526/V1527 — 2026-09-10
+
+V1523 rehomes U1.52 RTL_3V3 around the crystal pocket with native DRC 0 / 6
+opens. V1526 completes XTAL_OUT to C2.1/Y1.2 with native DRC 0 / 4 opens and
+saved-board connectivity plus trace-removal negative controls. V1527 is a
+rejected XTAL_IN outboard trial with 11 native violations; its GND-stitch and
+RTL_3V3-field collisions are route evidence, not an architecture verdict.
+Receipt: `PHASE24_RTL9210B_XTAL_FIELD_V1523_V1527_RECEIPT.md`. XTAL_IN,
+REFCLK_P/N, full Path-B support, and integrated closure remain OPEN.

@@ -10416,6 +10416,15 @@ the accepted local primitive. Receipt:
   connectivity and source-removal negative control pass. Crystal, REFCLK,
   firmware, procurement, integration, and full Path-B gates remain open.
 
+## 2026-09-10 — Phase 24 RTL9210B V1523/V1526 crystal-field progress
+
+- V1523 rehomed U1.52 RTL_3V3 around the crystal pocket with native DRC 0 / 6
+  opens; V1526 completed XTAL_OUT through C2.1/Y1.2 with native DRC 0 / 4.
+- Saved-board connectivity and independent trace-removal negative controls
+  pass for both accepted changes. V1527 was rejected for XTAL_IN GND-stitch
+  and RTL_3V3-field collisions and is retained as route evidence.
+- XTAL_IN and REFCLK_P/N remain open; no Path-A or production CAD changed.
+
 ## 2026-09-10 — Phase 24 current-state documentation hygiene
 
 - Added explicit current-state overrides to the Phase 24 status, dual-mode

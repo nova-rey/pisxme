@@ -11303,3 +11303,12 @@ changed. Receipt: `PHASE24_RTL9210B_XTALOUT_V1512_V1514_RECEIPT.md`.
 V1517 is the current accepted U1.55 RTL_1V1 source rehome. Native DRC is 0
 violations / 6 inherited opens; U1.55↔U1.63 connectivity and the source
 removal negative control pass. Receipt: `PHASE24_RTL9210B_U155_V1517_RECEIPT.md`.
+
+V1523 is the current accepted U1.52 RTL_3V3 source rehome: native DRC is 0
+violations / 6 opens. V1526 completes XTAL_OUT through C2.1/Y1.2 with native
+DRC 0 / 4 opens; saved-board connectivity and trace-removal negative controls
+pass for both changes. V1527 is rejected XTAL_IN evidence (11 native
+violations) due GND-stitch and RTL_3V3-field collisions. Receipt:
+`PHASE24_RTL9210B_XTAL_FIELD_V1523_V1527_RECEIPT.md`. XTAL_IN and REFCLK_P/N
+remain the next Path-B local routing work; broader Path-B and Phase 24 gates
+remain OPEN.
