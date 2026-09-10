@@ -31,6 +31,11 @@ geometry rather than copied unchanged. It must not be promoted until the
 package drawing and solder-land pattern are cross-checked with Realtek or a
 traceable assembly source.
 
+The isolated integrated candidate now also restores the V12-style `TP6`
+`RESET_N` bring-up endpoint. Its local F.Cu route passes native DRC and an
+actual-trace-removal negative control; this is fixture/support evidence and
+does not imply production schematic promotion.
+
 ## Pin and support facts
 
 | Function | RTL9210B-CG pins | Path-B treatment | Evidence/status |
@@ -43,7 +48,7 @@ traceable assembly source.
 | PCIe reset | 14 | Socket PERST# | Sideband ownership open pending application circuit |
 | PCIe clock request | 13 | Socket CLKREQ# | Pull-up/idle-state implementation open |
 | PEDET / CONFIG1 | 8 `GPIO6` | Socket contact 69 | Technical mode concept closed; empty-socket and exact pull network open |
-| Reset input | 3 | Local reset/test access | Support implementation open |
+| Reset input | 3 | Local reset/test access via TP6 in isolated candidate | TP6 topology closed in fixture; production application ownership open |
 | SPI flash | 18/19/21/22/23/24 | Local flash with accessible programming points | Ecosystem evidence exists; production image/provenance open |
 | Reference clock | 52–54 | 25-MHz crystal/reference network | Value/layout cross-check open |
 | RSET | 51 | Local resistor | Corroborating designs indicate 12 kOhm; authorized value/layout still open |

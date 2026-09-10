@@ -58,10 +58,10 @@ not an orientation or architecture change.
 ## Support parity consolidation — 2026-09-10
 
 Claude's bounded review identified the missing consolidated support audit.
-The new native audit passes 13 mapped support groups against actual saved-
-board connectivity. It explicitly leaves `RESET_N`, `ISOLATEB`, and `PERST_N`
-open as boundary/control findings; `RESET_N` also records the regression from
-the older V12 TP6 basis. Receipt:
+The new native audit passes 14 mapped support groups against actual saved-
+board connectivity. The integrated candidate now restores the V12 `TP6`
+endpoint for `RESET_N`; only `ISOLATEB` and `PERST_N` remain boundary/control
+findings. Receipt:
 `PHASE24_RTL9210B_PATHB_SUPPORT_PARITY_RECEIPT.md`.
 
 Date: 2026-09-10

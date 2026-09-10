@@ -13,6 +13,7 @@ BOARD = HERE / "PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED.kicad_pcb"
 REPORT = HERE / "PHASE24_RTL9210B_PATHB_SUPPORT_PARITY.json"
 
 GROUPS = {
+    "RESET_N": [("U1", "3"), ("TP6", "1")],
     "CLKREQ_N": [("U1", "13"), ("R3", "1"), ("J1", "52")],
     "PEDET": [("U1", "8"), ("R2", "1"), ("J1", "69")],
     "RSET": [("U1", "51"), ("R1", "1")],
@@ -27,7 +28,7 @@ GROUPS = {
     "SPICLK": [("U1", "19"), ("U2", "6")],
     "SPISO3": [("U1", "22"), ("U2", "7")],
 }
-BOUNDARY_ONLY = {"RESET_N": [("U1", "3")], "ISOLATEB": [("U1", "12")],
+BOUNDARY_ONLY = {"ISOLATEB": [("U1", "12")],
                  "PERST_N": [("U1", "14"), ("J1", "50")]}
 
 def getpad(board, ref, number):
@@ -56,17 +57,26 @@ for net, endpoints in BOUNDARY_ONLY.items():
     assert all(p.GetNetname() == net for p in pads), f"pad-net mismatch in {net}"
     results[net] = {"endpoints": endpoints, "native_connectivity": "BOUNDARY_ONLY"}
 
+negative = pcbnew.LoadBoard(str(BOARD))
+reset_tracks = [x for x in negative.GetTracks()
+                if isinstance(x, pcbnew.PCB_TRACK) and x.GetNetname() == "RESET_N"]
+assert reset_tracks, "RESET_N negative control found no copper"
+negative.RemoveNative(reset_tracks[0])
+assert not connected(negative, getpad(negative, "U1", "3"),
+                     getpad(negative, "TP6", "1"))
+
 report = {
     "board": BOARD.name,
     "native_graph_only": True,
     "closed_support_groups": results,
     "boundary_only_open_groups": sorted(BOUNDARY_ONLY),
-    "regression_flags": {"RESET_N_missing_external_endpoint": True,
+    "regression_flags": {"RESET_N_missing_external_endpoint": False,
                           "ISOLATEB_missing_external_endpoint": True},
+    "negative_controls": {"RESET_N_trace_removal": "PASS"},
     "verdict": "PASS_WITH_EXPLICIT_OPEN_BOUNDARIES",
 }
 REPORT.write_text(json.dumps(report, indent=2) + "\n")
 print("RTL9210B native support-network parity: PASS")
 print(f"closed support groups: {len(GROUPS)}; boundary-only open groups: {len(BOUNDARY_ONLY)}")
-print("OPEN boundary-only nets: RESET_N, ISOLATEB, PERST_N")
+print("OPEN boundary-only nets: " + ", ".join(sorted(BOUNDARY_ONLY)))
 print(f"wrote {REPORT}")

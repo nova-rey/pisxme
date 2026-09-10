@@ -10882,8 +10882,15 @@ the accepted local primitive. Receipt:
 
 ## 2026-09-10 — consolidated RTL9210B support parity
 
-- Added the native support-network parity audit and receipt. Thirteen mapped
-  support groups pass from actual saved-board connectivity. `RESET_N`,
-  `ISOLATEB`, and `PERST_N` remain explicit open boundaries; `RESET_N` is
-  recorded as a regression from the earlier V12 TP6 endpoint. No DRC or
-  validation severity was relaxed.
+- Added the native support-network parity audit and receipt. Fourteen mapped
+  support groups pass from actual saved-board connectivity. The V12 TP6
+  endpoint for `RESET_N` is restored in the integrated candidate; `ISOLATEB`
+  and `PERST_N` remain explicit open boundaries. No DRC or validation
+  severity was relaxed.
+
+## 2026-09-10 — restored integrated RESET_N test access
+
+- Promoted the bounded V12-style TP6 repair into the isolated Path-B
+  generator. Native DRC remains 0/0/0; the support audit reports 14 closed
+  groups, the integrated RESET_N trace-removal negative control passes, and
+  only ISOLATEB/PERST_N remain explicit open boundaries.

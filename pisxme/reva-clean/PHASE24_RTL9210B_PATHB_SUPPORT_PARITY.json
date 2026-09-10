@@ -2,6 +2,20 @@
   "board": "PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED.kicad_pcb",
   "native_graph_only": true,
   "closed_support_groups": {
+    "RESET_N": {
+      "endpoints": [
+        [
+          "U1",
+          "3"
+        ],
+        [
+          "TP6",
+          "1"
+        ]
+      ],
+      "pad_net_identity": "PASS",
+      "native_connectivity": "PASS"
+    },
     "CLKREQ_N": {
       "endpoints": [
         [
@@ -260,15 +274,6 @@
       "pad_net_identity": "PASS",
       "native_connectivity": "PASS"
     },
-    "RESET_N": {
-      "endpoints": [
-        [
-          "U1",
-          "3"
-        ]
-      ],
-      "native_connectivity": "BOUNDARY_ONLY"
-    },
     "ISOLATEB": {
       "endpoints": [
         [
@@ -294,12 +299,14 @@
   },
   "boundary_only_open_groups": [
     "ISOLATEB",
-    "PERST_N",
-    "RESET_N"
+    "PERST_N"
   ],
   "regression_flags": {
-    "RESET_N_missing_external_endpoint": true,
+    "RESET_N_missing_external_endpoint": false,
     "ISOLATEB_missing_external_endpoint": true
+  },
+  "negative_controls": {
+    "RESET_N_trace_removal": "PASS"
   },
   "verdict": "PASS_WITH_EXPLICIT_OPEN_BOUNDARIES"
 }

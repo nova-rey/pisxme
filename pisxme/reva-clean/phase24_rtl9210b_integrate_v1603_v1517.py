@@ -74,4 +74,9 @@ for q in list(b.GetTracks()):
     if q.GetNetname()=='RTL_1V1' and isinstance(q,pcbnew.PCB_VIA) and (pcbnew.ToMM(q.GetPosition().x),pcbnew.ToMM(q.GetPosition().y))==(112.,64.8): b.RemoveNative(q)
 inn=b.FindNet('XTAL_IN'); seg(inn,(94.05,67.2),(92.6,67.2),F); seg(inn,(92.6,67.2),(92.6,66.2),F); via(inn,92.6,66.2); seg(inn,(92.6,66.2),(88,66.2),B); seg(inn,(88,66.2),(88,63.2),B); via(inn,88,63.2); seg(inn,(88,63.2),(88,62),F); seg(inn,(88,62),(88,59),F)
 out=b.FindNet('XTAL_OUT'); seg(out,(94.05,67.6),(92,67.6),F); seg(out,(92,67.6),(92,62.8),F); seg(out,(92,62.8),(91,62.8),F); seg(out,(91,62.8),(91,62),F); seg(out,(91,62),(91,60.5),F); seg(out,(91,60.5),(89.4,59),F)
+# Restore the documented local RESET_N bring-up access from the V12 control
+# basis.  This is a one-pad SMD test point, not a synthetic connectivity edge.
+tp=pcbnew.FOOTPRINT(b); tp.SetReference('TP6'); tp.SetValue('RESET_TEST'); tp.SetLayer(F); tp.SetPosition(P(91,78))
+tpp=pcbnew.PAD(tp); tpp.SetNumber('1'); tpp.SetPosition(P(91,78)); tpp.SetSize(P(.8,.8)); tpp.SetShape(pcbnew.PAD_SHAPE_CIRCLE); tpp.SetAttribute(pcbnew.PAD_ATTRIB_SMD); tls=pcbnew.LSET(); tls.AddLayer(F); tpp.SetLayerSet(tls); tpp.SetNet(b.FindNet('RESET_N')); tpp.SetNetCode(b.FindNet('RESET_N').GetNetCode()); tp.Add(tpp); b.Add(tp)
+reset=b.FindNet('RESET_N'); seg(reset,(95.6,73.95),(95.6,77),F); seg(reset,(95.6,77),(91,77),F); seg(reset,(91,77),(91,78),F)
 pcbnew.ZONE_FILLER(b).Fill(b.Zones()); b.Save(str(OUT)); print(OUT)

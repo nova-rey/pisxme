@@ -32,11 +32,11 @@ These results close only the isolated Path-B CAD/connectivity check; the
 remaining Path-B authority, firmware/procurement, production-parity, acreage,
 and full Phase 24 gates remain OPEN.
 
-The consolidated support parity receipt passes 13 native support groups and
-explicitly records `RESET_N`, `ISOLATEB`, and `PERST_N` as open boundary or
-sequence findings. `RESET_N` is a concrete regression from the prior V12 TP6
-endpoint and must be repaired or re-authorized before Path-B promotion; the
-finding is not waived by the clean DRC result.
+The consolidated support parity receipt passes 14 native support groups and
+explicitly records `ISOLATEB` and `PERST_N` as open boundary or sequence
+findings. The prior V12 TP6 endpoint for `RESET_N` has been restored in the
+integrated generator and is natively connected; it is not waived by the clean
+DRC result.
 
 The implementation generator also contains a reviewed RTL_3V3 transition
 correction: the previous B.Cu/F.Cu coincident endpoint lacked a via and was
