@@ -1,0 +1,142 @@
+** Drc report for PHASE24_RTL9210B_QFN_FIELD_REGENERATE_V1449.kicad_pcb **
+** Created on 2026-09-09T21:59:12 **
+** Report includes: Errors, Warnings **
+
+** Found 27 DRC violations **
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(88.0000 mm, 70.0000 mm): Track [RTL_1V1] on B.Cu, length 12.0000 mm
+    @(91.5000 mm, 66.0000 mm): Track [XTAL_IN] on B.Cu, length 6.0000 mm
+[shorting_items]: Items shorting two nets (nets XTAL_IN and RTL_3V3)
+    Local override; error
+    @(93.5000 mm, 67.2000 mm): Track [XTAL_IN] on F.Cu, length 0.7810 mm
+    @(94.0500 mm, 66.8000 mm): Track [RTL_3V3] on F.Cu, length 0.6500 mm
+[shorting_items]: Items shorting two nets (nets XTAL_OUT and XTAL_IN)
+    Local override; error
+    @(85.5000 mm, 59.5000 mm): Track [XTAL_OUT] on F.Cu, length 3.9000 mm
+    @(88.0000 mm, 59.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(88.0000 mm, 62.0000 mm): Track [XTAL_IN] on F.Cu, length 3.0000 mm
+    @(85.5000 mm, 59.5000 mm): Track [XTAL_OUT] on F.Cu, length 3.9000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(94.0000 mm, 62.0000 mm): Track [GND] on B.Cu, length 6.9311 mm
+    @(91.5000 mm, 66.0000 mm): Track [XTAL_IN] on B.Cu, length 6.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1816 mm)
+    Local override; error
+    @(93.5000 mm, 67.6000 mm): Track [XTAL_OUT] on F.Cu, length 0.9434 mm
+    @(94.0500 mm, 68.0000 mm): Pad 55 [RTL_1V1] of U1 on F.Cu
+[shorting_items]: Items shorting two nets (nets XTAL_OUT and XTAL_IN)
+    Local override; error
+    @(85.5000 mm, 77.0000 mm): Track [XTAL_OUT] on B.Cu, length 17.5000 mm
+    @(85.5000 mm, 62.0000 mm): Via [XTAL_IN] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets RSET and GND)
+    Local override; error
+    @(94.0000 mm, 64.8000 mm): Track [RSET] on F.Cu, length 6.0000 mm
+    @(89.2000 mm, 65.0000 mm): Pad 2 [GND] of R1 on F.Cu
+[shorting_items]: Items shorting two nets (nets GND and RSET)
+    Local override; error
+    @(89.2000 mm, 65.0000 mm): Track [GND] on F.Cu, length 2.0000 mm
+    @(94.0000 mm, 64.8000 mm): Track [RSET] on F.Cu, length 6.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1226 mm)
+    Local override; error
+    @(97.2000 mm, 66.0500 mm): Track [GND] on F.Cu, length 4.0302 mm
+    @(97.6000 mm, 66.0500 mm): Pad 44 [<no net>] of U1 on F.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0933 mm)
+    Local override; error
+    @(95.0000 mm, 72.4000 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(94.0500 mm, 72.4000 mm): Track [GND] on F.Cu, length 4.6220 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(85.5000 mm, 59.5000 mm): Track [XTAL_OUT] on F.Cu, length 3.9000 mm
+    @(89.2000 mm, 60.0000 mm): Via [GND] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets XTAL_OUT and GND)
+    Local override; error
+    @(89.4000 mm, 59.0000 mm): Track [XTAL_OUT] on F.Cu, length 1.0000 mm
+    @(89.2000 mm, 62.0000 mm): Track [GND] on F.Cu, length 2.0000 mm
+[shorting_items]: Items shorting two nets (nets RSET and RTL_3V3)
+    Local override; error
+    @(94.0000 mm, 64.8000 mm): Track [RSET] on F.Cu, length 6.0000 mm
+    @(93.4000 mm, 65.0000 mm): Via [RTL_3V3] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets XTAL_IN and RTL_3V3)
+    Local override; error
+    @(93.5000 mm, 67.2000 mm): Track [XTAL_IN] on F.Cu, length 0.7810 mm
+    @(93.4000 mm, 66.8000 mm): Track [RTL_3V3] on F.Cu, length 1.8000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(95.0000 mm, 75.0000 mm): Track [RTL_1V1] on B.Cu, length 7.5000 mm
+    @(95.0000 mm, 72.4000 mm): Track [LANE0_RXP] on B.Cu, length 9.6000 mm
+[shorting_items]: Items shorting two nets (nets LANE0_RXP and RTL_1V1)
+    Local override; error
+    @(95.0000 mm, 72.4000 mm): Via [LANE0_RXP] on F.Cu - B.Cu
+    @(95.0000 mm, 68.0000 mm): Track [RTL_1V1] on B.Cu, length 7.0000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(91.5000 mm, 69.5000 mm): Track [XTAL_OUT] on B.Cu, length 6.0000 mm
+    @(88.0000 mm, 70.0000 mm): Via [RTL_1V1] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(94.0500 mm, 70.0000 mm): Track [RTL_1V1] on F.Cu, length 6.0500 mm
+    @(91.5000 mm, 69.5000 mm): Via [XTAL_OUT] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(85.5000 mm, 77.0000 mm): Track [XTAL_OUT] on B.Cu, length 17.5000 mm
+    @(91.5000 mm, 66.0000 mm): Track [XTAL_IN] on B.Cu, length 6.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(85.5000 mm, 77.0000 mm): Track [XTAL_OUT] on B.Cu, length 17.5000 mm
+    @(85.5000 mm, 66.0000 mm): Track [XTAL_IN] on B.Cu, length 4.0000 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0000 mm, 64.8000 mm): Track [RSET] on F.Cu, length 6.0000 mm
+    @(89.2000 mm, 65.0000 mm): Pad 2 [GND] of R1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 72.4000 mm): Track [GND] on F.Cu, length 4.6220 mm
+    @(94.0500 mm, 72.0000 mm): Pad 65 [LANE0_RXN] of U1 on F.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(92.0000 mm, 64.0000 mm): Track [RTL_1V1] on F.Cu, length 5.8138 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(95.2000 mm, 65.0000 mm): Track [RTL_1V1] on F.Cu, length 2.6000 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(95.0000 mm, 75.0000 mm): Track [RTL_1V1] on B.Cu, length 7.5000 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(93.0000 mm, 66.8000 mm): Track [RTL_3V3] on B.Cu, length 6.6000 mm
+
+** Found 5 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 71.2000 mm): Pad 63 [RTL_1V1] of U1 on F.Cu
+    @(94.0500 mm, 70.0000 mm): Track [RTL_1V1] on F.Cu, length 6.0500 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(95.2000 mm, 65.0000 mm): Track [RTL_1V1] on F.Cu, length 2.6000 mm
+    @(95.2000 mm, 66.0500 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0000 mm, 62.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(97.2000 mm, 66.0500 mm): Pad 45 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.4000 mm): Pad 61 [REFCLK_P] of U1 on F.Cu
+    @(137.2500 mm, 62.7250 mm): Pad 55 [REFCLK_P] of J1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.8000 mm): Pad 62 [REFCLK_N] of U1 on F.Cu
+    @(136.7500 mm, 62.7250 mm): Pad 53 [REFCLK_N] of J1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

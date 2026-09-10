@@ -10655,3 +10655,9 @@ V1445-V1448 are a four-variant U1.66 local GND sweep from V1428. Native DRC
 reported 9, 2, 11, and 15 violations respectively; V1446 was best but still
 shorted/mask-bridged U1 pad 67 LANE0_TXN at the QFN departure. No candidate is
 promoted; U1.66 remains OPEN and this is a coupled QFN-escape problem.
+
+V1449 attempted coupled regeneration of the RTL_3V3/RTL_1V1/RSET/GND/
+XTAL_IN/XTAL_OUT QFN field on V1428, based on the earlier V1139 method.
+Native DRC reported 27 violations, including crystal-net shorting/crossing,
+RSET-to-GND contact, and retained rail conflicts. The exact transplanted
+geometry is rejected; no accepted primitive changed.
