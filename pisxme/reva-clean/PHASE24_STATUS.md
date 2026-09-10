@@ -10376,3 +10376,14 @@ endpoints, and source-removal negative controls fail as expected. REFCLK,
 supplies, and remaining RTL9210B support opens remain explicit; this is a
 Path-B routing primitive, not full Path-B or production closure. No Path-A or
 production CAD assets changed.
+
+V1356 REFCLK left/upper trial is rejected as a route implementation failure:
+native DRC found source-field crossings/shorts against the existing lane and
+XTAL geometry and a P/N source-exit collision. It is retained as disposable
+evidence only; no placement or architecture conclusion is drawn.
+
+V1357 is an accepted disposable support-field cleanup. It removes exactly the
+inherited dangling RTL_3V3 stub identified by native DRC from the V1355 basis.
+Native DRC now reports zero violations (27 real unconnected support items
+remain). This does not close RTL9210B support; it removes stale copper without
+changing Path-A, production CAD, or the accepted control/lane primitives.

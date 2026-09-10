@@ -85,6 +85,16 @@ PEDET with ordinary vias and an F.Cu J1.50 launch. Native DRC has only the
 inherited V1058 RTL_3V3 warning; saved-board endpoint audits and source-removal
 negative controls pass for PERST, CLKREQ, and PEDET. Remaining support/supply
 opens and REFCLK stay open; Path-A and production CAD are unchanged.
+
+2026-09-09 — Phase 24 V1356 rejected: the first REFCLK left/upper escape
+crossed the existing lane/XTAL source field and shorted the pair at its source.
+Preserved as route-implementation evidence; no macro-placement or architecture
+conclusion was made.
+
+2026-09-09 — Phase 24 V1357 accepted: removed the single inherited dangling
+RTL_3V3 stub from the RTL9210B disposable basis. Native DRC is now zero
+violations with 27 explicit unconnected support items still open. Path-A and
+production CAD remain unchanged.
 2026-09-09 — Phase 24 V1322: tested an F.Cu south-bridge allocation around the
 complete V1058 RTL9210B support field while retaining V1258 staggered source
 and connector primitives. Native DRC rejected 18 violations from QFN source
