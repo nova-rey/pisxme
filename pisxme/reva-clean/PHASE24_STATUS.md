@@ -10661,3 +10661,8 @@ XTAL_IN/XTAL_OUT QFN field on V1428, based on the earlier V1139 method.
 Native DRC reported 27 violations, including crystal-net shorting/crossing,
 RSET-to-GND contact, and retained rail conflicts. The exact transplanted
 geometry is rejected; no accepted primitive changed.
+
+V1450 is a rejected outboard REFCLK pair transplant from V1428. Native DRC
+reported 24 violations, including QFN source-field shorts, REFCLK_N/GND and
+REFCLK_N/USB_RXN0 conflicts, and overlapping connector-side launches. The
+route is not promoted; REFCLK remains OPEN and no accepted primitive changed.

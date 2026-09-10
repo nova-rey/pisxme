@@ -82,6 +82,10 @@ Native DRC reported six crossings/shorts against SPI/control and 1V1
 geometry. The disposable evidence is preserved; accepted V1392 and Path A
 remain unchanged.
 
+2026-09-10 — Phase 24 V1450 rejected the outboard REFCLK transplant with 24
+native DRC violations, including QFN source-field and connector-launch
+conflicts. REFCLK remains open; no accepted primitive changed.
+
 2026-09-09 — Phase 24 V1449 rejected a coupled QFN-field regeneration on
 V1428 with 27 native DRC violations, including XTAL_IN/XTAL_OUT shorting,
 RSET/GND contact, and rail conflicts. No accepted primitive changed.

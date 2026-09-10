@@ -1,0 +1,146 @@
+** Drc report for PHASE24_RTL9210B_REFCLK_OUTBOARD_V1450.kicad_pcb **
+** Created on 2026-09-09T22:03:20 **
+** Report includes: Errors, Warnings **
+
+** Found 24 DRC violations **
+[shorting_items]: Items shorting two nets (nets REFCLK_N and GND)
+    Local override; error
+    @(94.0500 mm, 70.8000 mm): Track [REFCLK_N] on F.Cu, length 1.9500 mm
+    @(98.0000 mm, 70.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[shorting_items]: Items shorting two nets (nets REFCLK_N and USB_RXN0)
+    Local override; error
+    @(96.0000 mm, 66.2000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(96.4000 mm, 66.0500 mm): Pad 47 [USB_RXN0] of U1 on F.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(94.0000 mm, 62.0000 mm): Track [GND] on B.Cu, length 6.9311 mm
+    @(95.2000 mm, 65.5000 mm): Track [REFCLK_P] on B.Cu, length 23.2000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(139.8000 mm, 60.5000 mm): Track [REFCLK_N] on F.Cu, length 3.0500 mm
+    @(141.0000 mm, 60.5000 mm): Track [REFCLK_P] on F.Cu, length 3.7500 mm
+[shorting_items]: Items shorting two nets (nets  and REFCLK_N)
+    Local override; error
+    @(96.0000 mm, 66.0500 mm): Pad 48 [<no net>] of U1 on F.Cu
+    @(96.0000 mm, 70.8000 mm): Track [REFCLK_N] on F.Cu, length 4.6000 mm
+[shorting_items]: Items shorting two nets (nets RTL_1V1 and REFCLK_P)
+    Local override; error
+    @(95.2000 mm, 66.0500 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+    @(95.2000 mm, 70.4000 mm): Track [REFCLK_P] on F.Cu, length 4.9000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(95.2000 mm, 66.0500 mm): Track [RTL_1V1] on F.Cu, length 1.0500 mm
+    @(95.2000 mm, 70.4000 mm): Track [REFCLK_P] on F.Cu, length 4.9000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(141.0000 mm, 60.5000 mm): Track [REFCLK_P] on F.Cu, length 3.7500 mm
+    @(138.0000 mm, 58.0000 mm): Track [CLKREQ_N] on F.Cu, length 10.5000 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0472 mm)
+    Local override; error
+    @(95.6000 mm, 66.0500 mm): Pad 49 [<no net>] of U1 on F.Cu
+    @(95.2000 mm, 65.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1000 mm)
+    Local override; error
+    @(95.2000 mm, 65.0000 mm): Track [RTL_1V1] on F.Cu, length 2.6000 mm
+    @(95.2000 mm, 65.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(139.8000 mm, 60.5000 mm): Track [REFCLK_N] on F.Cu, length 3.0500 mm
+    @(137.2500 mm, 60.5000 mm): Track [REFCLK_P] on F.Cu, length 2.2250 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(88.0000 mm, 70.0000 mm): Track [RTL_1V1] on B.Cu, length 12.0000 mm
+    @(95.2000 mm, 65.5000 mm): Track [REFCLK_P] on B.Cu, length 23.2000 mm
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(96.4000 mm, 66.0500 mm): Pad 47 [USB_RXN0] of U1 on F.Cu
+    @(96.0000 mm, 66.2000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(96.0000 mm, 66.0500 mm): Pad 48 [<no net>] of U1 on F.Cu
+    @(96.0000 mm, 66.2000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(95.6000 mm, 66.0500 mm): Pad 49 [<no net>] of U1 on F.Cu
+    @(96.0000 mm, 66.2000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1972 mm)
+    Rule: board setup constraints hole; error
+    @(95.6000 mm, 66.0500 mm): Pad 49 [<no net>] of U1 on F.Cu
+    @(95.2000 mm, 65.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.0000 mm)
+    Rule: board setup constraints hole; error
+    @(95.2000 mm, 66.0500 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+    @(95.2000 mm, 65.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1972 mm)
+    Rule: board setup constraints hole; error
+    @(94.8000 mm, 66.0500 mm): Pad 51 [RSET] of U1 on F.Cu
+    @(95.2000 mm, 65.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(95.2000 mm, 65.5000 mm): Via [REFCLK_P] on F.Cu - B.Cu
+    @(95.2000 mm, 66.0500 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(94.0500 mm, 70.8000 mm): Track [REFCLK_N] on F.Cu, length 1.9500 mm
+    @(98.0000 mm, 70.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0000 mm, 70.8000 mm): Track [REFCLK_N] on F.Cu, length 4.6000 mm
+    @(98.0000 mm, 70.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0000 mm, 70.8000 mm): Track [REFCLK_N] on F.Cu, length 4.6000 mm
+    @(96.0000 mm, 66.0500 mm): Pad 48 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(95.2000 mm, 70.4000 mm): Track [REFCLK_P] on F.Cu, length 4.9000 mm
+    @(95.2000 mm, 66.0500 mm): Pad 50 [RTL_1V1] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(96.0000 mm, 66.2000 mm): Via [REFCLK_N] on F.Cu - B.Cu
+    @(96.0000 mm, 66.0500 mm): Pad 48 [<no net>] of U1 on F.Cu
+
+** Found 8 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 70.0000 mm): Track [RTL_1V1] on F.Cu, length 6.0500 mm
+    @(94.0500 mm, 71.2000 mm): Pad 63 [RTL_1V1] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0000 mm, 62.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(97.2000 mm, 66.0500 mm): Track [GND] on F.Cu, length 1.5500 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(94.0500 mm, 72.4000 mm): Pad 66 [GND] of U1 on F.Cu
+    @(98.0000 mm, 70.0000 mm): Pad 69 [GND] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.0000 mm, 65.0000 mm): Pad 1 [RSET] of R1 on F.Cu
+    @(94.8000 mm, 66.0500 mm): Pad 51 [RSET] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.0000 mm, 59.0000 mm): Pad 1 [XTAL_IN] of Y1 on F.Cu
+    @(88.0000 mm, 62.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(88.0000 mm, 62.0000 mm): Pad 1 [XTAL_IN] of C1 on F.Cu
+    @(94.0500 mm, 67.2000 mm): Pad 53 [XTAL_IN] of U1 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(89.4000 mm, 59.0000 mm): Pad 2 [XTAL_OUT] of Y1 on F.Cu
+    @(91.0000 mm, 62.0000 mm): Pad 1 [XTAL_OUT] of C2 on F.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(91.0000 mm, 62.0000 mm): Pad 1 [XTAL_OUT] of C2 on F.Cu
+    @(94.0500 mm, 67.6000 mm): Pad 54 [XTAL_OUT] of U1 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
