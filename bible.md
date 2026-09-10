@@ -10457,3 +10457,15 @@ the accepted local primitive. Receipt:
 - RTL9210B V1517 is identified as the live accepted local basis, replacing
   stale V1428/V1461 “latest” language; remaining crystal/REFCLK and broader
   Path-B gates remain open. Raw evidence was not rewritten.
+
+## 2026-09-10 — RTL9210B crystal escape V1549–V1553
+
+- Ran five isolated rotated-QFN crystal/source-escape fixtures with native
+  KiCad DRC. All were rejected: the best V1553 still has four violations,
+  with XTAL_IN/XTAL_OUT shorting adjacent RTL_3V3/RTL_1V1 source pads; the
+  stripped fixtures intentionally retain 17 unconnected items.
+- Preserved raw PCBs/reports and recorded the result in
+  `PHASE24_RTL9210B_CRYSTAL_ESCAPE_V1549_V1553_RECEIPT.md`.
+- The tested escape class is closed as rejected; Path A and accepted Path-B
+  primitives remain unchanged. Next work must use a new authoritative QFN
+  fanout class without relaxing board rules.
