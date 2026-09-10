@@ -10677,3 +10677,8 @@ DRC reports zero violations, but native unconnected analysis still reports
 U1.66 disconnected from the zone; therefore this is not an accepted ground
 solution. The first same-priority zone attempt was a tooling/API failure and
 was corrected before this result. No accepted primitive changed.
+
+V1455 is a rejected left-first U1.66 GND escape with ordinary-via return.
+Native DRC reported 11 violations, including LANE0_RXP/TXP crossings and
+shorts/clearance conflicts with JTAG_TDI, PEDET, and adjacent QFN pads. No
+candidate is promoted; U1.66 remains OPEN.
