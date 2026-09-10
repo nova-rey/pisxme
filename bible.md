@@ -112,6 +112,11 @@ connectivity passed all four lane endpoints and four source-removal negative
 controls. Native DRC reported no lane electrical violations; inherited support
 warning/open support connections remain fixture scope. No production CAD or
 Path-A assets changed.
+2026-09-09 — Phase 24 V1340: accepted the PEDET support primitive on the
+V1332 RTL9210B lane basis. Native U1.8-R2.1-J1.69 connectivity and the
+source-removal negative control passed; native DRC retained only the inherited
+V1058 support warning. Remaining controls and support are still open. No
+production CAD or Path-A assets changed.
 2026-09-09 — Phase 24 V1332: accepted the current original-J1 RTL9210B lane
 basis. TXP was moved to a far-right B.Cu corridor; native DRC then showed only
 the inherited V1058 RTL_3V3 dangling warning. Native saved-board connectivity

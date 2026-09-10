@@ -10342,6 +10342,13 @@ inherited V1058 RTL_3V3 dangling warning and 32 intentionally open support
 connections remain in the fixture. The lane geometry is accepted as a Path-B
 routing primitive, not full Path-B or production closure.
 
+V1340 adds an accepted PEDET support primitive to the V1332 lane basis. The
+vertical-first U1.8 escape, B.Cu support handoff, R2.1 connection, and J1.69
+launch pass native saved-board connectivity; the source-removal negative
+control also passes. Native DRC retains only the inherited V1058 RTL_3V3
+dangling warning, with remaining CLKREQ/PERST/REFCLK and supply/support opens
+still explicit. No production CAD or Path-A assets changed.
+
 V1332 is the current original-J1 lane basis. It moves TXP's long corridor to a
 far-right B.Cu run, removing the final lane short/crossing from V1329 while
 retaining the V1058 support field and the V1258 QFN escape. Native DRC reports
