@@ -64,6 +64,10 @@ trace-removal negative control. Support/control/REFCLK remain open.
 exposed real short/crossing classes despite reduced open counts. V311 remains
 the retained disposable sideband basis; Path A and production CAD are
 unchanged.
+
+2026-09-09 — Phase 24 V1434/V1435 rejected RSET north-shelf routes. V1434
+shorted R1 GND and crossed RTL_1V1; V1435 removed the GND short but retained
+one RTL_1V1 crossing. RSET remains open and V1428 remains accepted.
 2026-09-09 — Phase 24 V1405 rejected the first RTL_3V3 U2.3-to-U1.20 support
 join from V1392. The lower collector produced seven native DRC violations
 against existing lane/control/rail geometry. Evidence is preserved; accepted

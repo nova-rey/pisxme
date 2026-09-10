@@ -10611,3 +10611,9 @@ retained a transition clearance violation against RTL_1V1 and shorted the
 RTL_3V3 source via. V1433 moved the transition but crossed/shorted the
 LANE0_TXN corridor and retained the source-field conflict. XTAL_IN remains
 OPEN; these are route-implementation failures.
+
+V1434/V1435 are rejected RSET north-departure trials from V1428. V1434
+shorted the RSET shelf into R1's GND pad and crossed the existing RTL_1V1
+segment. V1435 moved the shelf farther north and removed the ground short,
+but retained one native RTL_1V1 crossing. RSET remains OPEN and V1428 remains
+the accepted composite base.
