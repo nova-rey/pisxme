@@ -1,5 +1,14 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — stale CM5 USB3 no-connects removed — 2026-09-11
+
+Removed exactly four stale `No Connect` records from the required CM5 USB3
+pins in `CORE_CM5.kicad_sch`. Fresh native ERC fell from 871 to 867 warnings
+with zero errors; all four corresponding `no_connect_connected` findings
+disappeared, and the native authority regression still passes. The remaining
+five connected-NC findings are unrelated Ethernet/GND records and remain
+open. Receipt: `PHASE24_USB3_NC_REPAIR_RECEIPT_20260911.md`.
+
 ## Current checkpoint — storage library audit passes — 2026-09-11
 
 The native-storage library audit passes for JMS583, both USB/SATA selector

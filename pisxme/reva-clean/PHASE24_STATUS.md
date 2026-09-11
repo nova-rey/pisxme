@@ -1,5 +1,13 @@
 # Phase 24 acreage validation status
 
+## CURRENT SOURCE REPAIR — CM5 USB3 NO-CONNECTS — 2026-09-11
+
+Four stale no-connect markers on required CM5 USB3 pins were removed from
+`CORE_CM5.kicad_sch`. Native ERC now reports 867 warnings / 0 errors, and
+the four corresponding connected-NC findings are gone. The remaining five
+connected-NC findings are unrelated Ethernet/GND records and remain open and
+unwaived. See `PHASE24_USB3_NC_REPAIR_RECEIPT_20260911.md`.
+
 ## CURRENT VALIDATION SUBGATE — STORAGE LIBRARY — 2026-09-11
 
 The focused native storage-library audit passes for JMS583, HD3SS6126,
