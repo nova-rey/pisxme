@@ -11211,6 +11211,15 @@ the accepted local primitive. Receipt:
   library audit passes. This closes only the library-resolution subgate, not
   schematic authority or full Phase 24.
 
+## 2026-09-11 — schematic ERC class/source correlation
+
+- Classified the remaining canonical ERC warning classes and correlated the
+  repeated off-grid locations with the 3 mm metric contract geometry emitted
+  by `phase3_scaffold.py`; also identified the independent root-row pitch
+  mismatch candidate (`row * 30` versus sheet `row * 65`). No production
+  hierarchy was changed. The next step is a disposable consistent-grid/root-
+  wiring experiment before any source repair.
+
 ## 2026-09-11 — current-state status override
 
 - Added a top-of-file Phase 24 status override identifying the actual current
