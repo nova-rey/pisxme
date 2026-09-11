@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — stale CM5 Ethernet no-connects removed — 2026-09-11
+
+Removed exactly four stale no-connect markers from required CM5 Ethernet pins.
+Fresh native ERC fell from 867 to 863 warnings with zero errors, and all four
+corresponding connected-NC findings disappeared. One unrelated connected-NC
+GND finding remains open. Receipt:
+`PHASE24_ETHERNET_NC_REPAIR_RECEIPT_20260911.md`.
+
 ## Current checkpoint — stale CM5 USB3 no-connects removed — 2026-09-11
 
 Removed exactly four stale `No Connect` records from the required CM5 USB3

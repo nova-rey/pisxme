@@ -1,5 +1,13 @@
 # Phase 24 acreage validation status
 
+## CURRENT SOURCE REPAIR — CM5 ETHERNET NO-CONNECTS — 2026-09-11
+
+Four stale no-connect markers on required CM5 Ethernet pins were removed from
+`CORE_CM5.kicad_sch`. Native ERC now reports 863 warnings / 0 errors, and
+the four corresponding connected-NC findings are gone. One unrelated GND
+connected-NC finding remains open and unwaived. See
+`PHASE24_ETHERNET_NC_REPAIR_RECEIPT_20260911.md`.
+
 ## CURRENT SOURCE REPAIR — CM5 USB3 NO-CONNECTS — 2026-09-11
 
 Four stale no-connect markers on required CM5 USB3 pins were removed from

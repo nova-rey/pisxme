@@ -11361,3 +11361,10 @@ the accepted local primitive. Receipt:
   Native ERC fell from 871 to 867 warnings with zero errors; the native
   authority regression remained passing. Unrelated connected-NC findings
   remain open and unwaived.
+
+## 2026-09-11 — Removed stale CM5 Ethernet no-connect markers
+
+- Removed only four no-connect records on required CM5 Ethernet pins. Native
+  ERC fell from 867 to 863 warnings with zero errors; all four connected-NC
+  findings disappeared and the native authority regression remained passing.
+  One unrelated GND connected-NC finding remains open.
