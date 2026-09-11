@@ -11217,3 +11217,12 @@ the accepted local primitive. Receipt:
   disposable Path-B candidate and separating its native-clean local support
   result from older overlay counts. It explicitly keeps production parity,
   remaining ERC warnings, full Path-B authority, and Phase 24 closure open.
+
+## 2026-09-11 — fresh Path-B candidate native revalidation
+
+- Re-ran KiCad 10.0.5 native DRC on the saved open-acreage MIC2545A support
+  candidate: 0 violations and 0 unconnected items. Re-ran its saved-board
+  native support audit inside the KiCad Flatpak Python environment: support
+  connectivity and two actual trace-removal negative controls pass. This
+  remains a disposable Path-B candidate; full support authority, production
+  parity, and Phase 24 closure remain open.
