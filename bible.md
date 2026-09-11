@@ -11388,3 +11388,11 @@ the accepted local primitive. Receipt:
 - Native RTL9210B/M.2 netlist assertions passed with the PEDET-removal
   negative control. Pinned source hashes were recorded; production parity,
   firmware/procurement, and full-board Phase 24 remain open.
+
+## 2026-09-11 — Rejected legacy root hierarchy rewriter
+
+- Tested the old root-stub rewriter only in a disposable workspace probe.
+  Native ERC rejected it at 997 findings: off-grid warnings were unchanged,
+  isolated-label findings increased, and footprint-link findings appeared.
+  Production CAD was untouched; the coherent native-grid generator remains
+  the active authoring path.

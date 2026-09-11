@@ -1,5 +1,13 @@
 # Phase 24 acreage validation status
 
+## CURRENT AUTHORING EXPERIMENT — ROOT REWRITER REJECTED — 2026-09-11
+
+The legacy root-stub rewriter was rejected in a disposable KiCad-visible
+probe: native ERC remained at 416 off-grid findings and total findings rose
+to 997 with new isolated-label and footprint-link issues. No production CAD
+was changed. The coherent native-grid generator path remains the only active
+root-authoring route; full ERC and Phase 24 remain OPEN.
+
 ## CURRENT VALIDATION SUBGATE — RTL9210B NETLIST AUTHORITY — 2026-09-11
 
 The native RTL9210B/M.2 netlist assertions pass, including the PEDET-removal

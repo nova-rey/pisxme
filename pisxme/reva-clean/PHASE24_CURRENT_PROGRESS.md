@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — legacy root rewriter rejected — 2026-09-11
+
+The old root-stub rewriter was tested only in a disposable workspace probe.
+Native ERC rejected it at 997 findings: the 416 off-grid findings remained,
+isolated-label findings increased, and footprint-link findings appeared. It
+is not a production repair path. Receipt:
+`PHASE24_ROOT_REPAIR_PROBE_REJECT_RECEIPT_20260911.md`.
+
 ## Current checkpoint — RTL9210B native netlist authority passes — 2026-09-11
 
 The saved native RTL9210B/M.2 netlist authority audit passes, including its
