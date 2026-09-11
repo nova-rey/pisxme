@@ -21,6 +21,12 @@ control, and DFM pass. The prior combined-placement trial is rejected with
 fresh co-routed U1.12-to-U3.1 support candidate next, retaining the frozen
 RTL9210B orientation, local QFN rule, and V1603 launch.
 
+The disposable combined U1/MIC2545A fixture now passes native KiCad DRC
+0/0/0 and its saved-board audit: U1.12→U3.1, IN 5/7, OUT 6/8, rail, ILIM,
+and ground ownership are physically connected; U3.2/FLG is netless; and the
+ISOLATEB trace-removal negative control fails as required. This is a geometry
+and authority proof only; full-board promotion remains the next gate.
+
 ## Safe pause / GitHub checkpoint — 2026-09-10
 
 The active RTL9210B Path-B routing work is paused at the validated local

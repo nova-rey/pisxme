@@ -11100,3 +11100,12 @@ the accepted local primitive. Receipt:
   negative-control, and saved-board DFM audits pass. The first combined
   placement trial remains rejected evidence; fresh co-routed ISOLATEB support
   integration is the next open implementation gate.
+
+## 2026-09-11 — combined ISOLATEB support geometry proof
+
+- Built a disposable combined U1/MIC2545A fixture using the corrected FLG
+  ownership and local QFN exception. Native DRC is 0/0/0; saved-board
+  connectivity proves U1.12→U3.1, duplicated IN/OUT joins, rail, ILIM, and
+  GND ownership; U3.2 remains netless; and removal of the actual ISOLATEB
+  source trace fails the negative control. The full-board support overlay is
+  still not promoted; this fixture establishes the next implementation basis.
