@@ -2,11 +2,12 @@
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-11
 
-The live canonical schematic is at **485 native ERC warnings / 0 errors**.
+The live canonical schematic is at **483 native ERC warnings / 0 errors**.
 The current actionable ERC census is 197 `endpoint_off_grid`, 232
 `isolated_pin_label`, 30 `same_local_global_label`, 24
-`multiple_net_names`, and 2 `lib_symbol_mismatch`; the duplicate POWER_INPUT
-wire family is closed with exact native netlist parity. Older counts below
+`multiple_net_names`, and 0 `lib_symbol_mismatch`; the duplicate POWER_INPUT
+wire family and PWR_FLAG namespace mismatch are closed with exact native
+netlist parity. Older counts below
 are historical snapshots and are not current open work.
 
 The accepted isolated Path-B RTL9210B V1603 candidate currently passes native

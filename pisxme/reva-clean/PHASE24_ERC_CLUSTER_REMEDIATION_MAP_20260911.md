@@ -30,8 +30,8 @@ preserved electrical intent.
 ## Current remediation state
 
 The identity-preserving repair closed the native hierarchy-error defect and
-the promoted regulator-stub and duplicate-wire repairs reduced the live census from 777 to 485
-without changing
+the promoted regulator-stub, duplicate-wire, and PWR_FLAG namespace repairs
+reduced the live census from 777 to 483 without changing
 the 338-net native netlist. The remaining 197 endpoint findings are not
 evidence that the promoted association is wrong: the root-x-only disposable
 normalization increased total findings and reintroduced hierarchy errors;

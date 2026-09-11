@@ -11649,3 +11649,12 @@ gates section ahead of the older 2026-09-08 routing log. It identifies the
 489-warning canonical ERC state, the closed regulator stub families, and the
 still-open production PCB/parity/DRC/PI/DFM/acreage gates so historical route
 experiments cannot be mistaken for current authority.
+
+2026-09-11 — Phase 24 concurrent-gate refresh: native current evidence reports
+483 schematic warnings/0 errors (197 endpoint_off_grid, 232 isolated_pin_label,
+30 same_local_global_label, 24 multiple_net_names, 0 lib_symbol_mismatch).
+Hierarchy structure, dual-mode storage contract, and isolated RTL9210B V1603
+audits pass; the full-board storage power-owner candidate still fails because
+the selected fixture lacks the expected J3 power contacts. Corrected stale
+current-progress and ERC-map prose so the PWR_FLAG namespace repair is recorded
+as closed while older counts remain historical.
