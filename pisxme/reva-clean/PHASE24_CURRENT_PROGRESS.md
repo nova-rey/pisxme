@@ -1,5 +1,29 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — authoritative ERC receipt and gate map — 2026-09-11
+
+Fresh native KiCad 10.0.5 ERC on the live clean schematic found 871 warnings
+and zero errors. The hashable report is
+`PHASE24_CLEAN_SCHEMATIC_ERC_AUTHORITATIVE_20260911.rpt` (SHA-256
+`78f89b43551773f3a2f763bde9bb172a96f6d91981572e23e1036dc9d3f1ae61`); the
+schematic hash is `e3327d274738551ba143d138452d816f8ee5cdb52dee2283e63e39eb9a994b5c`.
+The remaining warning classes are still open and unwaived.
+
+The hardware-auditor gate map confirms the earliest advanceable gate is
+controlled schematic truth/ERC/netlist/parity. It also confirms the accepted
+RTL9210B placement has no structural contradiction. The current Path-B
+census is now target-selectable so exact candidate-specific evidence can be
+generated rather than silently using the older integrated filename.
+
+## Current checkpoint — native authority regression passes — 2026-09-11
+
+The repository Phase 24 native-authority regression passed against the clean
+schematic. KiCad 10.0.5 native ERC with `--severity-error` found zero errors.
+This closes the severity-error/native-authority subgate only; the full ERC
+warning set, matched integrated Path-B parity, acreage integration, and the
+remaining Phase 24 gates remain open. Receipt:
+`PHASE24_NATIVE_AUTHORITY_TEST_RECEIPT_20260911.md`.
+
 ## Current checkpoint — parity scope corrected — 2026-09-11
 
 The generic pad-parity audit was run against the historical

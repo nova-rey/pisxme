@@ -1,5 +1,22 @@
 # Phase 24 acreage validation status
 
+## CURRENT AUTHORITATIVE ERC RECEIPT — 2026-09-11
+
+Fresh native KiCad 10.0.5 ERC on `PiSXMe_RevA_Clean.kicad_sch` reports 871
+warnings and zero errors. Canonical receipt:
+`PHASE24_CLEAN_SCHEMATIC_ERC_AUTHORITATIVE_20260911.rpt`, SHA-256
+`78f89b43551773f3a2f763bde9bb172a96f6d91981572e23e1036dc9d3f1ae61`.
+Warnings remain open and unwaived; this receipt replaces ambiguous older
+counts for current-state reporting.
+
+## CURRENT VALIDATION SUBGATE — NATIVE AUTHORITY — 2026-09-11
+
+The clean-schematic Phase 24 native-authority regression passes. KiCad 10.0.5
+native ERC at severity `error` reports zero findings. This is not full ERC
+closure: the complete report still has unwaived warnings, and integrated
+Path-B parity, acreage integration, and the remaining Phase 24 gates stay
+OPEN. See `PHASE24_NATIVE_AUTHORITY_TEST_RECEIPT_20260911.md`.
+
 ## CURRENT VALIDATION SCOPE — PAD PARITY — 2026-09-11
 
 The generic pad-parity audit was intentionally run against the historical

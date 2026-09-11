@@ -6,11 +6,16 @@ they never add graph edges.
 """
 from pathlib import Path
 import json
+import sys
 import pcbnew
 
 HERE = Path(__file__).resolve().parent
-BOARD = HERE / "PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED.kicad_pcb"
-REPORT = HERE / "PHASE24_RTL9210B_PATHB_CENSUS.json"
+BOARD = Path(sys.argv[1]) if len(sys.argv) > 1 else HERE / "PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED.kicad_pcb"
+if not BOARD.is_absolute():
+    BOARD = HERE / BOARD
+REPORT = Path(sys.argv[2]) if len(sys.argv) > 2 else HERE / "PHASE24_RTL9210B_PATHB_CENSUS.json"
+if not REPORT.is_absolute():
+    REPORT = HERE / REPORT
 
 U1_PADS = {
     "REFCLK_P": "61", "REFCLK_N": "62",

@@ -11333,3 +11333,18 @@ the accepted local primitive. Receipt:
   pre-Path-B. Recorded the result as a wrong-baseline diagnostic rather than
   a Path-B verdict. Ethernet support parity independently passed. Integrated
   Path-B production parity remains open.
+
+## 2026-09-11 — Native authority regression passes
+
+- Ran the clean-schematic Phase 24 native-authority regression under KiCad
+  10.0.5. Structural authority assertions passed and native ERC at severity
+  `error` found zero findings. Full ERC warnings and integrated Path-B/Phase
+  24 closure remain open.
+
+## 2026-09-11 — Authoritative ERC receipt and target-selectable census
+
+- Established a fresh hashable native KiCad ERC receipt for the live clean
+  schematic: 871 warnings, zero errors; older conflicting counts are no
+  longer current-state authority. Updated the RTL9210B saved-board census to
+  accept an explicit PCB target, preventing an older integrated filename from
+  being mistaken for the current open-acreage candidate.
