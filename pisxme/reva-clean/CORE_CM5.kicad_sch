@@ -105,7 +105,7 @@
               (font
                 (size 1.27 1.27))))))
       (embedded_fonts no))
-    (symbol "power:PWR_FLAG"
+    (symbol "PiSXMeRevAClean:PWR_FLAG"
       (pin_numbers
         (hide yes))
       (pin_names
@@ -4790,7 +4790,7 @@
 (no_connect (at 209.22 158.42) (uuid e3000000-0000-0000-0000-0000000002b7))
 (no_connect (at 270.18 163.5) (uuid e3000000-0000-0000-0000-0000000002ba))
 (no_connect (at 209.22 163.5) (uuid e3000000-0000-0000-0000-0000000002bb))
-(symbol (lib_id "power:PWR_FLAG") (at 127.94 140.64 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid e3000000-0000-0000-0000-0000000002bc)
+(symbol (lib_id "PiSXMeRevAClean:PWR_FLAG") (at 127.94 140.64 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid e3000000-0000-0000-0000-0000000002bc)
  (property "Reference" "#FLG01" (at 127.94 138.1 0) (effects (font (size 1 1)) (hide yes)))
  (property "Value" "PWR_FLAG" (at 127.94 143.18 0) (effects (font (size 1 1)) (hide yes)))
  (pin "1" (uuid e3000000-0000-0000-0000-0000000002bd)) (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000001" (reference "#FLG01") (unit 1)))) )

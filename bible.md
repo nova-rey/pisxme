@@ -64,6 +64,13 @@ contract audits pass; Path-B V1603 native DRC and six-net negative controls
 pass; clean namespace scan finds no legacy PiSXMe library identifiers. Raw
 ERC: pisxme/reva-clean/PHASE24_CURRENT_CANONICAL_erc.rpt.
 
+2026-09-11: Closed the embedded PWR_FLAG library-integrity root cause by
+promoting the validated PiSXMeRevAClean:PWR_FLAG namespace to all embedded
+definitions and live instances. Native ERC improved from 485 to 483 warnings
+with zero errors; both mismatches disappeared and exact netlist name/node
+parity held. Receipt:
+pisxme/reva-clean/PHASE24_PWRFLAG_LOCAL_NAMESPACE_REPAIR_RECEIPT_20260911.md.
+
 2026-09-08: Parameterized the retained V3 JMS583 QFN escape author for an
 explicit disposable base/output, enabling controlled integration with later
 storage candidates without mutating the Path-A basis. The earlier complete-

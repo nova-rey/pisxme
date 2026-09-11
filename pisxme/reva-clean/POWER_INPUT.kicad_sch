@@ -105,7 +105,7 @@
               (font
                 (size 1.27 1.27))))))
       (embedded_fonts no))
-    (symbol "power:PWR_FLAG"
+    (symbol "PiSXMeRevAClean:PWR_FLAG"
       (pin_numbers
         (hide yes))
       (pin_names
@@ -588,7 +588,7 @@
 (instances (project "PiSXMe_RevA_Clean" (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000004" (reference "Q1") (unit 1)))) )(label "FUSED_12V_B" (at 110 80 0) (effects (font (size 1 1)) (justify left)) (uuid f4000000-0000-0000-0000-000000000064))
 (label "12V_PROTECTED" (at 150 80 0) (effects (font (size 1 1)) (justify left)) (uuid f4000000-0000-0000-0000-000000000065))
 (label "GATE_B" (at 150 75 0) (effects (font (size 1 1)) (justify left)) (uuid f4000000-0000-0000-0000-000000000066))
-(symbol (lib_id "power:PWR_FLAG") (at 70 96.5 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid f7000000-0000-0000-0000-000000000010)
+(symbol (lib_id "PiSXMeRevAClean:PWR_FLAG") (at 70 96.5 0) (unit 1) (exclude_from_sim no) (in_bom no) (on_board no) (dnp no) (uuid f7000000-0000-0000-0000-000000000010)
  (property "Reference" "#FLG02" (at 70 94 0) (effects (font (size 1 1)) (hide yes)))
  (property "Value" "PWR_FLAG" (at 70 99 0) (effects (font (size 1 1)) (hide yes)))
  (pin "1" (uuid f7000000-0000-0000-0000-000000000011))

@@ -3,8 +3,8 @@
 ## Current authoritative census
 
 Fresh native KiCad 10.0.5 full-severity ERC on the canonical clean schematic
-reports **485 warnings and 0 errors** after the duplicate POWER_INPUT wire
-repair. The
+reports **483 warnings and 0 errors** after the PWR_FLAG namespace repair.
+The
 current raw receipt is `PHASE24_CLEAN_SCHEMATIC_ERC_REGULATOR_PIN_STUB_PROMOTED_20260911.rpt`
 (SHA-256 `1acb82e1ac8e4abf1afac4fabc9762579b8aebe88e811d40f62dc03c041200c2`).
 The 777-warning receipt below is retained as historical pre-stub-repair
@@ -19,7 +19,7 @@ No findings are waived.
 | same_local_global_label | 30 | Repeated boundary names in root and child sheets | Deliberate-looking boundary aliases are serialized as both local and global labels | High | Review ownership; rename/remove only with exact netlist parity |
 | multiple_net_names | 24 | Mostly STORAGE aliases and NC/support labels | Superseded storage edits left multiple names on common items | Medium | Resolve only proven aliases; preserve intentional isolation |
 | no_connect_dangling | 0 | CORE_CM5 stale duplicate records | Closed by native-correlated removal of 11 stale records | High | No further repair; regression remains required |
-| lib_symbol_mismatch | 2 | Embedded standard PWR_FLAG copies | Embedded symbol copy differs from installed `power` library | High | Unit-compatible native repair, with netlist and pin checks |
+| lib_symbol_mismatch | 0 | Former embedded standard PWR_FLAG copies | Closed by project-local namespace repair with exact netlist parity | High | Regression only; do not reintroduce `power:PWR_FLAG` instances |
 
 The first three classes form a **433-warning residual hierarchy geometry/contract
 cluster**. The naming cluster is 54 warnings and two PWR_FLAG library
