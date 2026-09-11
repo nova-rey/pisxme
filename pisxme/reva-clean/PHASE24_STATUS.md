@@ -1445,7 +1445,22 @@ clock-reconciled board returns to the 685/403 baseline with the known U12
 exposed-pad route short, so the attempted Y1 label join is rejected and is
 not a current routing requirement.
 
-## CURRENT OPEN GATES — 2026-09-08
+## CURRENT OPEN GATES — 2026-09-11
+
+The current source-authoritative ERC state is the promoted canonical
+schematic: 489 warnings / 0 errors, with 201 `endpoint_off_grid`, 232
+`isolated_pin_label`, 30 `same_local_global_label`, 24
+`multiple_net_names`, and 2 `lib_symbol_mismatch` findings. The two regulator
+wire-stub families are closed with exact 338-net/node parity. Remaining ERC
+findings are open and unwaived.
+
+The current production PCB is not yet promoted: the accepted RTL9210B/V1603
+isolated candidate remains the implementation baseline, while full
+schematic-to-PCB parity, integrated acreage routing, DRC/return/PI/DFM/3D
+review, acreage freeze, and final review remain open. Historical routing
+candidate results in the section below do not supersede this state.
+
+## HISTORICAL OPEN-GATE LOG — 2026-09-08
 
 ### Latest source-regenerated routing basis
 

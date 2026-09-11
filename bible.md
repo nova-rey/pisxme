@@ -11566,3 +11566,9 @@ stubs from REGULATORS. Native ERC improved from 777 to 657 warnings/0 errors;
 native netlist remained exactly 338 nets with zero changed node sets, and the
 hierarchy structure audit passed. Repair promoted as source-authoritative;
 remaining warnings stay open and unwaived.
+
+2026-09-11 — Phase 24 current-state hygiene: added an explicit current open
+gates section ahead of the older 2026-09-08 routing log. It identifies the
+489-warning canonical ERC state, the closed regulator stub families, and the
+still-open production PCB/parity/DRC/PI/DFM/acreage gates so historical route
+experiments cannot be mistaken for current authority.
