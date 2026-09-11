@@ -11226,3 +11226,10 @@ the accepted local primitive. Receipt:
   connectivity and two actual trace-removal negative controls pass. This
   remains a disposable Path-B candidate; full support authority, production
   parity, and Phase 24 closure remain open.
+
+## 2026-09-11 — storage-library native netlist export
+
+- KiCad 10.0.5 successfully exported the canonical clean schematic netlist
+  after the namespace repair. The saved `current-library-repaired.net`
+  contains the M-key connector, JMS583, both selectors, and mode-control
+  parts; export success is a parse/authority check, not proof of PCB parity.
