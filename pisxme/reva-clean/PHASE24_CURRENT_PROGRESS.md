@@ -1,5 +1,15 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — combined live-port grid probe rejected — 2026-09-11
+
+The combined live-port reconciliation plus coherent-grid transform was tested
+only in a disposable copy and rejected by native ERC at 749 findings,
+including seven hierarchy pin-not-connected errors. Canonical sources were
+untouched. Receipt: `PHASE24_LIVE_PORT_GRID_PROBE_REJECT_RECEIPT_20260911.md`.
+
+The next hierarchy repair must be native-authored and live-port complete; no
+further text-level coordinate mutation is being promoted.
+
 ## Current checkpoint — partial coherent-grid transform rejected — 2026-09-11
 
 The fresh disposable coherent-grid probe was rejected by native KiCad ERC at

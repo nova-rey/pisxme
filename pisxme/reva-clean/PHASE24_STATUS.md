@@ -1,5 +1,12 @@
 # Phase 24 acreage validation status
 
+## CURRENT AUTHORING EXPERIMENT — LIVE-PORT GRID REJECTED — 2026-09-11
+
+The combined live-port/coordinate transform was rejected in a disposable
+native KiCad test at 749 findings, including seven hierarchy pin-not-connected
+errors. Canonical sources were untouched. Native-authored live-port hierarchy
+regeneration remains required; full ERC and Phase 24 stay OPEN.
+
 ## CURRENT AUTHORING EXPERIMENT — PARTIAL COHERENT GRID REJECTED — 2026-09-11
 
 The fresh disposable coherent-grid transform was rejected at 746 native ERC

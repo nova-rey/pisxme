@@ -11403,3 +11403,10 @@ the accepted local primitive. Receipt:
   Native ERC reported 746 findings, including two hierarchy pin-not-connected
   errors. Canonical sources were untouched; a complete live-port-aware
   root/child regeneration remains required.
+
+## 2026-09-11 — Rejected combined live-port grid transform
+
+- Combined live contract-port reconciliation with coherent grid movement in a
+  disposable copy. Native ERC reported 749 findings, including seven
+  hierarchy pin-not-connected errors. Canonical sources were untouched; a
+  native-authored live-port regeneration remains required.
