@@ -97,3 +97,16 @@ removed the synthetic contract libparts from the exported netlist. Receipt:
 **Disposition: REJECTED.** Simply deleting the generated contract layer
 discards required connectivity and changes the netlist. The live child
 circuitry and port associations must be re-authored coherently.
+
+## Residual endpoint probe — root-x-only normalization
+
+After the identity repair was promoted, a disposable root-x-only normalization
+was tested against the remaining endpoint cluster. Native ERC produced 867
+findings, including four hierarchy `pin_not_connected` errors, three
+`label_dangling` findings, and increased isolated/unconnected counts. Receipt:
+`.phase24_native_contract_identity_probe/identity-erc9.rpt` (SHA-256
+`96f595467beff500d7622a18af0acec22eecffe9676731bd937e10f3a6e85c33`).
+
+**Disposition: REJECTED.** Root wires cannot be normalized independently of
+sheet geometry and direct-link ownership. The promoted canonical source is
+unchanged by this experiment.

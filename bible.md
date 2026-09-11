@@ -11511,3 +11511,9 @@ and synchronized the project-local symbol library. Native KiCad ERC on the
 canonical source is 777 warnings/0 errors, with no hierarchy errors. Semantic
 netlist comparison is exact at 338 nets with zero changed node sets. The
 remaining warnings stay open and unwaived; Phase 24 is not yet closed.
+
+2026-09-11 — Phase 24 residual endpoint probe: root-x-only normalization was
+rejected at 867 findings with four hierarchy pin-not-connected errors and new
+dangling-label findings. Canonical CAD remains at the validated identity
+repair; root wires cannot be normalized independently of sheet geometry and
+direct-link ownership.

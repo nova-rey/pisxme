@@ -27,6 +27,11 @@ extra names, and zero changed node sets. Receipt:
 `PHASE24_HIERARCHY_CONTRACT_REPAIR_RECEIPT_20260911.md`. Remaining warnings
 are open and unwaived; Phase 24 remains OPEN.
 
+The follow-up root-x-only endpoint normalization was rejected at 867 findings
+with four hierarchy `pin_not_connected` errors and new dangling-label
+findings. It did not alter the promoted canonical source; endpoint repair must
+remain a complete sheet/label/direct-link transformation.
+
 ## CURRENT EXPERIMENT — IDENTITY-DRIVEN CONTRACT REGENERATION REJECTED — 2026-09-11
 
 The disposable live-contract regeneration preserved all ten root/child
