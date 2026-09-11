@@ -1,5 +1,13 @@
 # Phase 24 acreage validation status
 
+## CURRENT EXPERIMENT — PWR_FLAG AUTHORITY SUBSTITUTION REJECTED — 2026-09-11
+
+The helper now handles all four embedded PWR_FLAG definitions, but replacing
+them with the installed library caused 115 footprint-link issues, 75
+library-symbol issues, and two real pin-to-pin errors in a disposable native
+ERC probe. No canonical source changed; embedded definitions remain current.
+See `PHASE24_PWR_FLAG_REPAIR_PROBE_REJECT_RECEIPT_20260911.md`.
+
 ## CURRENT VALIDATION RECHECK — LIVE SCHEMATIC ERC — 2026-09-11
 
 Fresh native KiCad 10.0.5 full-severity ERC against the canonical clean root

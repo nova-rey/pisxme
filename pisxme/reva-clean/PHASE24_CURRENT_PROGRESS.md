@@ -1,5 +1,14 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — PWR_FLAG authority substitution rejected — 2026-09-11
+
+The repair helper was corrected to process all four embedded PWR_FLAG copies,
+but the installed-library substitution probe was rejected by native ERC: it
+introduced 115 footprint-link issues, 75 library-symbol issues, and two real
+pin-to-pin errors. The original embedded definitions remain canonical; the
+probe and details are preserved in
+`PHASE24_PWR_FLAG_REPAIR_PROBE_REJECT_RECEIPT_20260911.md`.
+
 ## Current checkpoint — live ERC recheck pinned — 2026-09-11
 
 Fresh native KiCad 10.0.5 full-severity ERC on the canonical clean root reports

@@ -11425,6 +11425,12 @@ hierarchy fixture pass is not promoted to live Phase 24 closure.
 
 2026-09-11 — ERC root-cause map recorded: the 862 live warnings cluster into
 795 hierarchy geometry/contract findings, 54 naming/net-name findings, 11
-CM5 no-connect records, and 2 PWR_FLAG library mismatches. The highest-leverage
-next action is one explicit live-port hierarchy regeneration in a disposable
-copy; no warnings were waived and canonical electrical sources were unchanged.
+ CM5 no-connect records, and 2 PWR_FLAG library mismatches. The highest-leverage
+ next action is one explicit live-port hierarchy regeneration in a disposable
+ copy; no warnings were waived and canonical electrical sources were unchanged.
+
+2026-09-11 — PWR_FLAG substitution probe rejected: the repair helper was made
+to process all four embedded definitions, but installed-library replacement
+caused 115 footprint-link issues, 75 library-symbol issues, and 2 real
+pin-to-pin errors. Canonical embedded definitions remain unchanged; the
+disposable rejection receipt preserves the evidence.
