@@ -11467,3 +11467,9 @@ the canonical root/child contract still serializes repeated 3 mm coordinates,
 while the current scaffold defines a 2.54 mm grid. The 416 endpoint findings
 are not all contract geometry, so partial snapping remains rejected; a complete
 identity-driven contract regeneration is the only safe promotion boundary.
+
+2026-09-11 — Complete-grid hierarchy probe v4 rejected: identity-ordered sparse
+port remapping reduced endpoint-off-grid findings 416 to 280 in a disposable
+copy, but native KiCad exposed four dangling labels and three disconnected
+hierarchy pins. The canonical source remains unchanged; the next repair must
+map every root/child/direct-link endpoint by identity.
