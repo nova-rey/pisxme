@@ -45,6 +45,12 @@ changed the `/STORAGE/JMS_VDDREG_5V` node set. No canonical source changed.
 Receipt:
 `PHASE24_MULTIPLE_NET_NAME_PROBE_REJECT_RECEIPT_20260911.md`.
 
+The complete root-coordinate grid probe was also rejected. It preserved native
+hierarchy structure and exact 338-net/node parity but left ERC unchanged at
+489 warnings, proving that the residual endpoint findings are not solved by
+an indiscriminate root-x/grid transform. Receipt:
+`PHASE24_ROOT_GRID_PROBE_REJECT_RECEIPT_20260911.md`.
+
 ## Structural evidence
 
 `validation/phase3/phase24_hierarchy_structure_audit.py` now inventories the

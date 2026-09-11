@@ -6095,6 +6095,11 @@ disposable V4/V5 candidates. V5 reports 17 violations / 26 opens after one
 attached test stub is removed; combined SPI/crystal/rail endpoint audit
 passes, while required crossings, rail/QFN fanout, and manufacturing findings
 remain open and unwaived.
+
+2026-09-11 — Phase 24 root-grid probe: a complete root sheet/pin/label/wire
+coordinate transform preserved hierarchy structure and exact 338-net/node
+parity but left native ERC unchanged at 489 warnings/0 errors. The transform
+was rejected and not promoted; canonical CAD is unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: tested disposable QFN rail-fanout probe
 V6. Native opens fell 26 to 20, but DRC rose to 20 with real
 RTL_1V1/XTAL_OUT and RTL_1V1/USB_TXP0 shorts. Rejected as route
