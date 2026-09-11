@@ -11081,3 +11081,13 @@ the accepted local primitive. Receipt:
   five trace-removal negative controls, and the scope guard pass. Earlier
   DFM FAIL evidence is retained as superseded artifact history; fresh DFM
   sign-off and integrated support routing remain open.
+
+## 2026-09-10 — local fine-pitch QFN exception integrated
+
+- Corrected the fixture assembly graphics so the courtyard encloses the body
+  silk and pin 1 has a distinct polarity marker. Applied the authorized
+  0.15-mm immediate U1 departure to the accepted V1603/V1517 integration,
+  returning to 0.20-mm routing downstream and retaining ordinary 0.60/0.30-mm
+  through-vias. Native integrated DRC is 0/0/0; the saved-board six-net audit
+  and six trace-removal negative controls pass. Overall Phase 24 remains open
+  for full Path-B, acreage, and production validation.

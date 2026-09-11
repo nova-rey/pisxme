@@ -1,5 +1,17 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — local QFN exception integrated — 2026-09-10
+
+The accepted RTL9210B orientation and V1603 downstream launch are unchanged.
+The six U1 high-speed departures now use the authorized local 0.15 mm
+trace/clearance exception, returning immediately to the normal 0.20 mm
+board routing. Existing ordinary 0.60/0.30 mm through-vias were retained.
+Native integrated DRC is 0/0/0, and the saved-board six-net audit plus six
+trace-removal negative controls pass. The corrected standalone fixture also
+passes native DRC and its physical scope/connectivity audit. Fine-breakout
+implementation is closed; overall Phase 24 remains open for the independent
+Path-B and full-board gates.
+
 ## Safe pause / GitHub checkpoint — 2026-09-10
 
 The active RTL9210B Path-B routing work is paused at the validated local

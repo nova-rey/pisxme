@@ -28,9 +28,13 @@ for p in list(u.Pads()):
 def rect(layer,x0,y0,x1,y1,w=.05):
     for a,z in [((x0,y0),(x1,y0)),((x1,y0),(x1,y1)),((x1,y1),(x0,y1)),((x0,y1),(x0,y0))]:
         s=pcbnew.PCB_SHAPE(u); s.SetShape(pcbnew.SHAPE_T_SEGMENT); s.SetStart(P(*a)); s.SetEnd(P(*z)); s.SetLayer(layer); s.SetWidth(pcbnew.FromMM(w)); u.Add(s)
-rect(pcbnew.F_CrtYd,93.0,63.6,103.0,75.0); rect(pcbnew.F_SilkS,92.8,63.2,103.2,75.4)
-# Pin-1 marker outside the pad envelope.
-for a,z in [((92.8,63.2),(93.5,63.2)),((92.8,63.2),(92.8,63.9))]:
+# Keep the courtyard outside the body outline.  The body is inset from the
+# outer pad envelope by >0.15 mm, and the polarity marker is a separate
+# triangle rather than a line coincident with the body.
+rect(pcbnew.F_CrtYd,92.8,64.0,103.2,75.5)
+rect(pcbnew.F_SilkS,93.3,64.8,102.7,74.8)
+# Distinct pin-1 triangle, clear of both the body line and copper.
+for a,z in [((92.95,64.35),(93.25,64.35)),((92.95,64.35),(92.95,64.65)),((92.95,64.35),(93.25,64.65))]:
     s=pcbnew.PCB_SHAPE(u); s.SetShape(pcbnew.SHAPE_T_SEGMENT); s.SetStart(P(*a)); s.SetEnd(P(*z)); s.SetLayer(pcbnew.F_SilkS); s.SetWidth(pcbnew.FromMM(.05)); u.Add(s)
 for z in list(b.Zones()): b.RemoveNative(z)
 

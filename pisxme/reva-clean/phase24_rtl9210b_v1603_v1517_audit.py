@@ -7,6 +7,17 @@ D={'REFCLK_P':'55','REFCLK_N':'53','LANE0_RXP':'43','LANE0_RXN':'41','LANE0_TXN'
 def pad(b,r,n): return b.FindFootprintByReference(r).FindPadByNumber(n)
 def join(b,a,z): b.BuildConnectivity(); return z in b.GetConnectivity().GetConnectedItems(a)
 b=pcbnew.LoadBoard(str(P))
+fine=[]
+for item in b.GetTracks():
+    if isinstance(item, pcbnew.PCB_TRACK) and not isinstance(item, pcbnew.PCB_VIA) and round(pcbnew.ToMM(item.GetWidth()), 4) == 0.15:
+        pts=(item.GetStart(), item.GetEnd())
+        xy=[(pcbnew.ToMM(p.x), pcbnew.ToMM(p.y)) for p in pts]
+        assert item.GetNetname() in S and all(92.4 <= x <= 94.2 and 70.2 <= y <= 73.4 for x,y in xy)
+        fine.append(item)
+assert len(fine) == 6
+assert all(round(pcbnew.ToMM(item.GetWidth()), 4) == 0.20
+           for item in b.GetTracks() if isinstance(item, pcbnew.PCB_TRACK) and not isinstance(item, pcbnew.PCB_VIA)
+           and item.GetNetname() in S and item not in fine)
 for net,sn in S.items():
  a,z=pad(b,'U1',sn),pad(b,'J1',D[net]); assert a.GetNetname()==net and z.GetNetname()==net and join(b,a,z),net
  b.BuildConnectivity(); v=next(x for x in b.GetConnectivity().GetConnectedItems(a) if isinstance(x,pcbnew.PCB_TRACK) and x.GetNetname()==net)

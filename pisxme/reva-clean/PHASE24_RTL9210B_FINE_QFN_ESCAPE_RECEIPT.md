@@ -2,7 +2,7 @@
 
 Date: 2026-09-10  
 Candidate: `PHASE24_RTL9210B_FINE_QFN_ESCAPE_FIXTURE.kicad_pcb`  
-Status: `FIXTURE_PASS_PRODUCTION_INTEGRATION_OPEN`
+Status: `FIXTURE_AND_INTEGRATION_PASS`
 
 ## Accepted local rule
 
@@ -28,9 +28,20 @@ explicit QFN source window. Ten 0.20-mm handoff tracks are present.
   `authority-inventory/rtl9210b/RTL9210B_QFN_LOCAL_ESCAPE_MANUFACTURING_BASIS.md`.
 
 The earlier DFM FAIL receipt is retained as historical evidence of defects in
-the first proof artifact. Those defects were corrected; a fresh independent
-DFM sign-off is still a release gate, as is applying this primitive to the
-integrated support routing without disturbing V1603.
+the first proof artifact. Those defects were corrected. The fresh DFM review
+passes the saved fixture: courtyard contains the body, the pin-1 marker is
+distinct, handoff courtyards are separated, and fine geometry is confined to
+the named QFN escape nets/window. The accepted primitive is also applied to
+the integrated V1603 support/launch without disturbing its downstream route.
+
+## Integrated evidence
+
+`PHASE24_RTL9210B_PATHB_V1603_V1517_INTEGRATED.kicad_pcb` contains exactly
+six 0.15-mm source-departure segments, all inside the declared QFN window;
+all remaining high-speed track segments are 0.20 mm and all vias remain
+0.60/0.30 mm ordinary through-vias. Native DRC is 0/0/0. The integrated
+saved-board audit passes six endpoint mappings, six trace-removal negative
+controls, and the local-rule scope assertions.
 
 Raw native DRC: `PHASE24_RTL9210B_FINE_QFN_ESCAPE_FIXTURE-drc.rpt`.  
 Saved-board audit: `PHASE24_RTL9210B_FINE_QFN_ESCAPE_AUDIT.json`.

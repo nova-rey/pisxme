@@ -1,5 +1,25 @@
 # Phase 24 acreage validation status
 
+## CURRENT AUTHORITATIVE STATE — 2026-09-10 LOCAL QFN EXCEPTION INTEGRATED
+
+The authorized RTL9210B QFN source-breakout exception is now applied to the
+accepted V1603/V1517 Path-B candidate. Only the immediate six-net U1 departure
+segments use 0.15 mm copper; all downstream V1603 corridors remain 0.20 mm,
+with the existing 0.60/0.30 mm ordinary through-vias unchanged. The matching
+board-local `.kicad_dru` rule is width- and net-gated, and the fixture's scope
+audit proves no fine-width leakage outside the declared escape region.
+
+Native KiCad 10.0.5 DRC for the integrated candidate is 0 violations, 0
+unconnected items, and 0 footprint errors. The saved-board V1603 audit passes
+all six U1-to-J1 mappings and six actual-trace-removal negative controls.
+The corrected disposable fixture independently passes the same native DRC
+gate and its five-net connectivity/negative-control audit; its corrected
+courtyard, body silk, and distinct pin-1 marker are present in the saved PCB.
+
+This closes the local fine-escape implementation gate. It does not close
+overall Phase 24: full Path-B authority/procurement/firmware, production
+parity, acreage integration, and remaining Phase 24 validation remain OPEN.
+
 ## CURRENT AUTHORITATIVE STATE — 2026-09-10 V1603/V1523
 
 The current isolated Path-B candidate is
@@ -34,13 +54,13 @@ The next action is full Path-B and integrated Phase 24 validation from this
 candidate. Do not resume the rejected V1523 source-handoff or old V1517
 crystal/REFCLK route experiments.
 
-The user-authorized local QFN exception is proven in a disposable native
-fixture. `PHASE24_RTL9210B_FINE_QFN_ESCAPE_RECEIPT.md` records the selected
-0.15/0.15-mm immediate escape, ordinary 0.60/0.30-mm vias, and explicit
-0.20-mm return to general routing. Native DRC, five physical source-to-
-handoff checks, five trace-removal negative controls, and the scope guard
-pass. This closes the isolated fine-breakout fixture gate only; fresh DFM
-sign-off and integrated U1 support-field routing remain open.
+### Superseded historical note — initial fixture checkpoint
+
+The earlier wording below described the pre-integration state, when fresh
+DFM sign-off and integrated U1 support-field routing were still open. The
+fixture was subsequently corrected, independently DFM-reviewed, and applied
+to the integrated V1603 candidate. The immutable earlier evidence remains
+useful archaeology but is not a current TODO.
 
 The post-pause saved-board census
 `phase24_rtl9210b_pathb_census.py` is also passing. It derives assertions
