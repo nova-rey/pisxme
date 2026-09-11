@@ -11450,3 +11450,9 @@ REGULATORS/STORAGE support ports. Canonical sources were untouched.
 reported 0 violations and 0 unconnected items on the accepted U1LOCAL015
 candidate; dual-mode storage, storage-library, and U5 native connectivity
 audits also passed. Integrated parity and full Phase 24 remain open.
+
+2026-09-11 — Phase 24 CM5 no-connect serialization repair: a disposable native
+probe proved 11 stale duplicate no-connect records could be removed without
+ERC errors or electrical changes. The canonical child was repaired and the
+fresh native ERC fell from 862 to 851 warnings, with no-connect-dangling 11 to
+0; remaining warning clusters remain open.

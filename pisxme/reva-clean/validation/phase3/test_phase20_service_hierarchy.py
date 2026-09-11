@@ -9,7 +9,7 @@ def main():
     out = ROOT / ".phase20-service-netlist.xml"
     try:
         subprocess.run([
-            "xvfb-run", "-a", "kicad-cli", "sch", "export", "netlist",
+            "kicad-cli", "sch", "export", "netlist",
             "--format", "kicadxml", "--output", str(out),
             "PiSXMe_RevA_Clean.kicad_sch",
         ], cwd=ROOT, check=True)
@@ -21,10 +21,11 @@ def main():
                             for x in n.findall("node")}
         for n in root.findall(".//nets/net")
     }
-    assert nets["/CORE_CM5/SERVICE_USB2_DP"] >= {
+    # The current native XML exporter emits the promoted root net name.
+    assert nets["SERVICE_USB2_DP"] >= {
         ("J4", "1"), ("J7", "105"), ("U8", "1")
     }
-    assert nets["/CORE_CM5/SERVICE_USB2_DM"] >= {
+    assert nets["SERVICE_USB2_DM"] >= {
         ("J4", "2"), ("J7", "103"), ("U8", "2")
     }
     print("Phase 20 SERVICE native hierarchy: PASS; J7.103=DM, J7.105=DP")
