@@ -1,5 +1,17 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — coherent generator grid path isolated — 2026-09-11
+
+The generic `phase3_scaffold.py` authoring path now emits 2.54 mm contract
+pitch and native-grid sheet anchors/connection stubs. A fresh disposable
+native KiCad hierarchy generated from that path reports 9 off-grid findings,
+but 59 disconnected pins remain because legacy direct-root links were not
+transformed to the new sheet coordinate map. This is not promoted production
+authority. The next implementation target is to transform those links by
+the same coordinate map, then rerun native hierarchy/ERC and netlist
+comparison. The canonical clean source and its 872-warning report remain
+unchanged.
+
 ## Current checkpoint — hierarchy grid discriminator classified — 2026-09-11
 
 The disposable native KiCad grid probe did not justify a production

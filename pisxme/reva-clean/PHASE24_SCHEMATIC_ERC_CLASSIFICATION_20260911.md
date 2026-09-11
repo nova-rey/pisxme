@@ -63,3 +63,14 @@ The next valid experiment is a coherent generator-level regeneration of the
 contract symbol definition, child contract geometry, and parent sheet
 connection geometry, followed by native hierarchy reopen/ERC and netlist
 comparison.
+
+## Coherent generator probe — 2026-09-11
+
+The generator source was updated in the disposable authoring path to use
+2.54 mm contract pitch and native-grid sheet anchors. A fresh generated
+hierarchy produced 341 native ERC findings, including only 9
+`endpoint_off_grid` findings, but 59 `pin_not_connected` findings. The
+remaining disconnects are attributable to direct root links still using the
+old metric sheet coordinates; those links are not yet transformed by the
+same mapping. The source correction is therefore an unpromoted intermediate
+checkpoint, not a closure of the production ERC gate.

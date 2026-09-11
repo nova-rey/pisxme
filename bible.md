@@ -11251,6 +11251,15 @@ the accepted local primitive. Receipt:
   contains the M-key connector, JMS583, both selectors, and mode-control
   parts; export success is a parse/authority check, not proof of PCB parity.
 
+## 2026-09-11 — coherent hierarchy generator probe
+
+- Updated the generic Phase 3 scaffold to emit 2.54 mm contract pitch and
+  native-grid sheet anchors/stubs. A fresh disposable generated hierarchy
+  reduced off-grid findings to 9, but retained 59 disconnected pins because
+  legacy direct-root links still use the old coordinate map. This is an
+  unpromoted authoring-path checkpoint; canonical schematic and reports were
+  unchanged.
+
 ## 2026-09-11 — hierarchy grid discriminator
 
 - Ran two disposable native KiCad 10.0.5 ERC probes against the current clean

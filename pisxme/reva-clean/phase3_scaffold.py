@@ -12,6 +12,7 @@ from uuid import UUID
 ROOT = Path(__file__).resolve().parent
 TEMPLATE = Path(__file__).resolve().parents[2] / "work" / "skidl_spike" / "golden_hierarchy.kicad_sch"
 ROOT_UUID = str(UUID(int=0x30000000000000000000000000000000))
+GRID = 2.54
 SHEETS = (
     "CORE_CM5", "V100_PCIE", "V100_POWER", "POWER_INPUT", "REGULATORS",
     "ETHERNET", "STORAGE", "SERVICE", "COOLING", "DEBUG",
@@ -75,13 +76,13 @@ def contract_symbol(name: str, ports: tuple[str, ...]) -> str:
     symbol_name = f"PiSXMeRevAClean:{name}_Contract"
     pins = "".join(
         f'''\n        (pin passive line
-          (at -5.08 {-index * 3} 0)
+          (at -5.08 {-index * GRID} 0)
           (length 3.81)
           (name "{port}" (effects (font (size 1.27 1.27))))
           (number "{index + 1}" (effects (font (size 1.27 1.27)))))'''
         for index, port in enumerate(ports)
     )
-    height = max(2.54, (len(ports) - 1) * 3 + 2.54)
+    height = max(2.54, (len(ports) - 1) * GRID + GRID)
     return f'''\n    (symbol "{symbol_name}"
       (pin_names (offset 1.0))
       (exclude_from_sim no)
@@ -109,12 +110,12 @@ def contract_symbol(name: str, ports: tuple[str, ...]) -> str:
 
 def sheet_block(name: str, number: int) -> str:
     uid = make_uuid(0x10000000000000000000000000000000 + number)
-    x = 35 + ((number - 1) % 5) * 35
+    x = 35.56 + ((number - 1) % 5) * 35.56
     # Keep the second row clear of the tall PCIe/core sheets.  The old 30 mm
     # pitch caused root-sheet graphics (and therefore native connectivity) to
     # overlap when the first-row sheets had many ports.
-    y = 45 + ((number - 1) // 5) * 65
-    sheet_height = max(18, len(PORTS[name]) * 3 + 4)
+    y = 45.72 + ((number - 1) // 5) * 82.55
+    sheet_height = max(18, len(PORTS[name]) * GRID + 2 * GRID)
     pins = "".join(
         f'''\n    (pin "{port}" bidirectional (at {x} {y + 2 + (index * 3)} 180)\n      (effects (font (size 1.27 1.27)) (justify left))\n      (uuid {make_uuid(0x40000000000000000000000000000000 + number * 100 + index)}))'''
         for index, port in enumerate(PORTS[name])
@@ -140,7 +141,7 @@ def sheet_block(name: str, number: int) -> str:
 def child(name: str, number: int, lib_symbols: str) -> str:
     sheet_path = f"{ROOT_UUID}/{make_uuid(0x10000000000000000000000000000000 + number)}"
     labels = "".join(
-        f'''\n  (hierarchical_label "{port}"\n    (shape bidirectional)\n    (at 5 {10 + index * 3} 180)\n    (effects (font (size 1.27 1.27)) (justify right))\n    (uuid {make_uuid(0x50000000000000000000000000000000 + number * 100 + index)}))'''
+        f'''\n  (hierarchical_label "{port}"\n    (shape bidirectional)\n    (at 5.08 {10.16 + index * GRID} 180)\n    (effects (font (size 1.27 1.27)) (justify right))\n    (uuid {make_uuid(0x50000000000000000000000000000000 + number * 100 + index)}))'''
         for index, port in enumerate(PORTS[name])
     )
     contract = contract_symbol(name, PORTS[name])
@@ -151,7 +152,7 @@ def child(name: str, number: int, lib_symbols: str) -> str:
     )
     contract_instance = f'''\n  (symbol
     (lib_id "PiSXMeRevAClean:{name}_Contract")
-    (at 25 10 0)
+    (at 25.4 10.16 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom no)
@@ -176,7 +177,7 @@ def child(name: str, number: int, lib_symbols: str) -> str:
   )'''
     contract_wires = "".join(
         f'''\n  (wire
-    (pts (xy 5 {10 + index * 3}) (xy 19.92 {10 + index * 3}))
+    (pts (xy 5.08 {10.16 + index * GRID}) (xy 20.32 {10.16 + index * GRID}))
     (stroke (width 0) (type default))
     (uuid {make_uuid(0xa0000000000000000000000000000000 + number * 100 + index)}))'''
         for index, _port in enumerate(PORTS[name])
@@ -199,8 +200,8 @@ def main() -> None:
     lib_symbols = balanced(source, start)
     root_wires = "".join(
         f'''\n  (wire
-    (pts (xy {35 + ((number - 1) % 5) * 35} {45 + ((number - 1) // 5) * 30 + 2 + index * 3})
-         (xy {35 + ((number - 1) % 5) * 35 + 10} {45 + ((number - 1) // 5) * 30 + 2 + index * 3}))
+    (pts (xy {35.56 + ((number - 1) % 5) * 35.56 - 10.16} {45.72 + ((number - 1) // 5) * 82.55 + GRID + index * GRID})
+         (xy {35.56 + ((number - 1) % 5) * 35.56} {45.72 + ((number - 1) // 5) * 82.55 + GRID + index * GRID}))
     (stroke (width 0) (type default))
     (uuid {make_uuid(0xb0000000000000000000000000000000 + number * 100 + index)}))'''
         for number, name in enumerate(SHEETS, 1)
