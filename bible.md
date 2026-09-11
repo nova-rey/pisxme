@@ -1,5 +1,12 @@
 # Append-only project bible
 
+2026-09-11: Closed the duplicate POWER_INPUT wire serialization root cause.
+A disposable native-project probe removed one of each four duplicate 3-mm
+wires, reducing KiCad 10.0.5 ERC from 489 to 485 warnings with zero errors
+and exact exported netlist name/node parity. Promoted the repair in
+POWER_INPUT.kicad_sch; receipt:
+pisxme/reva-clean/PHASE24_POWER_DUPLICATE_WIRE_REPAIR_RECEIPT_20260911.md.
+
 2026-09-08: Parameterized the retained V3 JMS583 QFN escape author for an
 explicit disposable base/output, enabling controlled integration with later
 storage candidates without mutating the Path-A basis. The earlier complete-

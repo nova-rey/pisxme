@@ -3,7 +3,8 @@
 ## Current authoritative census
 
 Fresh native KiCad 10.0.5 full-severity ERC on the canonical clean schematic
-reports **489 warnings and 0 errors** after the regulator pin-stub repair. The
+reports **485 warnings and 0 errors** after the duplicate POWER_INPUT wire
+repair. The
 current raw receipt is `PHASE24_CLEAN_SCHEMATIC_ERC_REGULATOR_PIN_STUB_PROMOTED_20260911.rpt`
 (SHA-256 `1acb82e1ac8e4abf1afac4fabc9762579b8aebe88e811d40f62dc03c041200c2`).
 The 777-warning receipt below is retained as historical pre-stub-repair
@@ -12,7 +13,7 @@ No findings are waived.
 
 | Cluster | Count | Scope/signature | Shared cause hypothesis | Confidence | Safe next repair |
 |---|---:|---|---|---|---|
-| endpoint_off_grid | 201 | Root and child hierarchy endpoints; repeated 2.54/3 mm coordinates | Residual legacy grid geometry remains after hierarchy association repair; the rejected root-x-only probe shows geometry cannot be normalized independently | High | One complete sheet/label/direct-link transformation, or retain as bounded ERC cleanup work |
+| endpoint_off_grid | 197 | Root and child hierarchy endpoints; repeated 2.54/3 mm coordinates | Residual legacy grid geometry remains after hierarchy association repair; duplicate POWER_INPUT wire serialization is closed | High | One complete sheet/label/direct-link transformation, or retain as bounded ERC cleanup work |
 | isolated_pin_label | 232 | Root/child boundary labels, especially repeated contract ports | Residual contract labels are electrically associated but still reported as isolated by native ERC; removal/renaming is intent-sensitive | High | Analyze by identity and native netlist parity; no suppression |
 | unconnected_wire_endpoint | 0 | Root/child contract wire families | Closed by removal of 84 unowned 1 mm regulator pin stubs after exact native netlist parity | High | Regression only; do not remove owned contract wires |
 | same_local_global_label | 30 | Repeated boundary names in root and child sheets | Deliberate-looking boundary aliases are serialized as both local and global labels | High | Review ownership; rename/remove only with exact netlist parity |
@@ -29,7 +30,7 @@ preserved electrical intent.
 ## Current remediation state
 
 The identity-preserving repair closed the native hierarchy-error defect and
-the promoted regulator-stub repairs reduced the live census from 777 to 489
+the promoted regulator-stub and duplicate-wire repairs reduced the live census from 777 to 485
 without changing
 the 338-net native netlist. The remaining 201 endpoint findings are not
 evidence that the promoted association is wrong: the root-x-only disposable
