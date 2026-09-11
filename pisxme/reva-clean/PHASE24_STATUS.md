@@ -1,5 +1,13 @@
 # Phase 24 acreage validation status
 
+## CURRENT SOURCE REPAIR — POWER_GND NO-CONNECTS — 2026-09-11
+
+The 14 no-connect records co-located with required `POWER_GND` global labels
+were removed from `CORE_CM5.kicad_sch`. Native ERC now reports 862 warnings /
+0 errors and no `no_connect_connected` findings. Eleven unrelated dangling NC
+warnings remain open and unwaived. See
+`PHASE24_POWER_GND_NC_REPAIR_RECEIPT_20260911.md`.
+
 ## CURRENT SOURCE REPAIR — CM5 ETHERNET NO-CONNECTS — 2026-09-11
 
 Four stale no-connect markers on required CM5 Ethernet pins were removed from

@@ -11368,3 +11368,10 @@ the accepted local primitive. Receipt:
   ERC fell from 867 to 863 warnings with zero errors; all four connected-NC
   findings disappeared and the native authority regression remained passing.
   One unrelated GND connected-NC finding remains open.
+
+## 2026-09-11 — Removed POWER_GND no-connect contradictions
+
+- Removed the exact 14 no-connect records co-located with authoritative
+  `POWER_GND` labels. Native ERC fell from 863 to 862 warnings with zero
+  errors and no connected-NC findings; unrelated dangling NC warnings remain
+  open and unwaived.
