@@ -24,8 +24,9 @@ The MIC2545A support fixture authority was corrected on 2026-09-11 after
 review found that U3.2/FLG had been incorrectly assigned to GND. The saved
 fixture now leaves FLG physically present but netless, retains the documented
 U3.1 EN, duplicated IN 5/7 and OUT 6/8, GND, and ILIM ownership, and passes
-native DRC 0/0/0 plus the DFM audit. A combined support-placement trial is
-rejected and remains historical evidence; the next implementation is a fresh
+native DRC 0/0/0 plus the DFM audit. The first full-board support-placement
+trial is rejected with 36 native DRC violations and 6 unconnected items; it
+remains historical evidence. The next implementation is a fresh
 co-routed U1.12-to-U3.1 support candidate using this corrected authority.
 
 ## CURRENT AUTHORITATIVE STATE — 2026-09-10 V1603/V1523

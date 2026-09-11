@@ -11109,3 +11109,10 @@ the accepted local primitive. Receipt:
   GND ownership; U3.2 remains netless; and removal of the actual ISOLATEB
   source trace fails the negative control. The full-board support overlay is
   still not promoted; this fixture establishes the next implementation basis.
+
+## 2026-09-11 — reconciled combined-support trial receipt
+
+- Corrected the current narrative to match the saved rejected overlay: the
+  full-board MIC2545A support trial has 36 native DRC violations and 6
+  unconnected items. It remains historical evidence; the clean combined
+  fixture is the current support geometry basis.
