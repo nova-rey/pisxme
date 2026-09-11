@@ -317,6 +317,24 @@ crossing section is present. This is not a full-board pass or promotion.
 Receipt: `PHASE24_STORAGE_M2_POWER_IN2_ZONE_V1562_RECEIPT.md`.
 
 
+## CURRENT STATE OVERRIDE — 2026-09-11
+
+The canonical clean library namespace was repaired from live storage
+schematic definitions. `phase24_reconcile_storage_library.py` preserves the
+HEAD library and adds only the eight missing storage symbols under the
+existing `PiSXMeRevAClean` nickname. Native ERC on the canonical clean
+schematic now has zero `lib_symbol_issues` and no missing-library-symbol
+messages; the saved report contains 892 warnings and 0 errors. Remaining
+warnings are still open and are not waived. The storage package-library audit
+passes. This closes the library-resolution subgate only; schematic authority,
+production parity, Path-B integration, and full Phase 24 remain OPEN.
+
+The live accepted Path-B local basis is `PHASE24_RTL9210B_U155_REHOME_V1517.kicad_pcb`, not the older V1183/V1428/V1461 summaries below. V1517 has native DRC 0 violations /
+6 inherited opens; U1.55↔U1.63 connectivity and the source-removal negative
+control pass. The remaining Path-B opens are XTAL_IN, XTAL_OUT, REFCLK P/N.
+Full Path-B support, firmware/programming, procurement, integration, and the
+Path-A/Path-B decision remain OPEN.
+
 ## CURRENT STATE OVERRIDE — 2026-09-10
 
 Read this section before the chronological experiment log. The live accepted

@@ -11197,3 +11197,16 @@ the accepted local primitive. Receipt:
   report `PHASE24_CLEAN_SCHEMATIC_ERC_CURRENT.rpt`: 918 warnings, 0 native
   errors. The strict Phase 24 ERC gate remains open; findings are classified
   in `PHASE24_STATUS.md` and are not waived.
+
+## 2026-09-11 — canonical storage-library namespace repair
+
+- Preserved the HEAD `PiSXMe_RevA_Clean_complete.kicad_sym` contents and added
+  only the eight storage symbol definitions embedded by `STORAGE.kicad_sch`,
+  under the existing `PiSXMeRevAClean` nickname. The reusable
+  `phase24_reconcile_storage_library.py` script refuses to replace existing
+  definitions, preventing source-precedence regressions.
+- Native KiCad ERC rerun reports zero `lib_symbol_issues` and no missing
+  library-symbol messages; the saved report has 892 warnings and 0 errors.
+  The remaining ERC warnings remain open and unwaived. The storage package
+  library audit passes. This closes only the library-resolution subgate, not
+  schematic authority or full Phase 24.

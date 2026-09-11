@@ -1,5 +1,21 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — canonical storage-library namespace repaired — 2026-09-11
+
+The canonical `PiSXMe_RevA_Clean_complete.kicad_sym` now contains the eight
+storage definitions embedded by `STORAGE.kicad_sch`, added by the auditable
+`phase24_reconcile_storage_library.py` path. Existing canonical symbol
+definitions were preserved; the earlier broad rebuild that replaced an
+unrelated Ethernet-contract variant was discarded. Native KiCad ERC now
+reports zero `lib_symbol_issues` and zero missing-library-symbol messages.
+The remaining report is 892 warnings (0 errors), consisting of existing
+off-grid, isolated-label, endpoint, naming, no-connect, footprint-link, and
+two power-symbol plus one Ethernet-contract mismatch findings. These remain
+open authority work; no severity was waived. Storage library package audit
+passes, and Path-B routing/support work continues from the accepted candidate.
+
+Receipt: `PHASE24_CLEAN_SCHEMATIC_ERC_LIBRARY_REPAIRED.rpt`.
+
 ## Current checkpoint — local QFN exception integrated — 2026-09-10
 
 The accepted RTL9210B orientation and V1603 downstream launch are unchanged.
