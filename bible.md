@@ -11673,3 +11673,11 @@ power pads. This confirms the remaining storage issue is physical power-fanout
 implementation, not a mode-contract failure. Four requested specialist
 dispatches were refused by the installed registry thread ceiling; the root
 Foreman continued non-overlapping read-only validation locally.
+
+2026-09-11 — Phase 24 storage power V93 disposable: a channel-reserved common
+same-net F.Cu bus from all nine J3 `STORAGE_3V3` contacts to one ordinary In2
+via passed native source connectivity and the trace-removal negative control.
+Native DRC remained failing at 606 violations/341 unconnected items versus the
+601/351 V79 baseline and added two crossings, so V93 was rejected and no
+canonical PCB changed. The topology is retained as evidence for coordinated
+storage regeneration.
