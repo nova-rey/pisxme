@@ -2,15 +2,18 @@
 
 ## CURRENT ROOT-CAUSE WORK — ERC CLUSTER MAP AND IDENTITY PROBE — 2026-09-11
 
-The live native ERC census remains 851 warnings / 0 errors.  The repeated
-findings are now grouped in `PHASE24_ERC_CLUSTER_REMEDIATION_MAP_20260911.md`.
-The structural hierarchy audit confirms concrete root/child contract
-definition and serialized-instance omissions/order differences.  A new
-identity-driven disposable regeneration was rejected at 919 findings with
-four native hierarchy `pin_not_connected` errors; the canonical schematic was
-untouched.  The next repair must preserve the complete native port identity
-mapping and prove exact netlist parity before promotion.  Phase 24 remains
-OPEN; no warning is waived.
+The current canonical native KiCad 10.0.5 ERC census is **777 warnings / 0
+errors**, from `PHASE24_CLEAN_SCHEMATIC_ERC_PROMOTED_20260911.rpt` (SHA-256
+`905ba9d744eb21de81f676f998f36c49acefdf9de27b5b681ff7c363379c0156`).  The
+repeated findings are grouped in `PHASE24_ERC_CLUSTER_REMEDIATION_MAP_20260911.md`.
+The identity-preserving hierarchy repair is promoted and has exact native
+netlist parity: 338 nets, zero missing/extra names, and zero changed node
+sets. Phase 24 remains **OPEN**; all remaining warnings are unwaived.
+
+The earlier 851-warning census and 919-warning identity probe below are
+historical pre-promotion evidence, not the current count or an outstanding
+TODO. The corrected synthetic-contract-removal and root-x-only probes remain
+rejected evidence; neither changed canonical CAD.
 
 The corrected synthetic-contract-removal probe was also rejected: 826 total
 warnings included 87 new `label_dangling` findings and the exported netlist

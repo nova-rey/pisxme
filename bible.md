@@ -11517,3 +11517,10 @@ rejected at 867 findings with four hierarchy pin-not-connected errors and new
 dangling-label findings. Canonical CAD remains at the validated identity
 repair; root wires cannot be normalized independently of sheet geometry and
 direct-link ownership.
+
+2026-09-11 — Phase 24 ERC documentation hygiene and current census: reconciled
+the status and remediation map to the promoted canonical native ERC receipt,
+777 warnings/0 errors, 345 endpoint_off_grid, 232 isolated_pin_label, 144
+unconnected_wire_endpoint, 30 same_local_global_label, 24 multiple_net_names,
+and two lib_symbol_mismatch findings. The prior 851-warning census is now
+explicitly historical; remaining findings are open and unwaived.
