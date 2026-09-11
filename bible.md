@@ -11456,3 +11456,8 @@ probe proved 11 stale duplicate no-connect records could be removed without
 ERC errors or electrical changes. The canonical child was repaired and the
 fresh native ERC fell from 862 to 851 warnings, with no-connect-dangling 11 to
 0; remaining warning clusters remain open.
+
+2026-09-11 — Phase 24 status/root-cause documentation reconciled to the CM5
+repair: the live ERC receipt is v3 at 851 warnings/0 errors, and the dangling
+no-connect cluster is recorded CLOSED while hierarchy, labels, net names, and
+library-integrity clusters remain open.

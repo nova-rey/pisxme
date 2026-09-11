@@ -8,6 +8,15 @@ four native `pin_not_connected` errors on sparse `REGULATORS` and `STORAGE`
 support ports. No canonical source changed. See
 `PHASE24_LIVE_CONTRACT_REGEN_PROBE_REJECT_RECEIPT_20260911.md`.
 
+## CURRENT SOURCE REPAIR — STALE CM5 NO-CONNECT RECORDS — 2026-09-11
+
+The eleven `CORE_CM5` `no_connect_dangling` warnings were proven to be stale
+duplicate serialization records. They were removed from the authoritative
+child after a disposable native probe passed. Fresh full-severity ERC now
+reports 851 warnings and zero errors; `no_connect_dangling` is 0 and all other
+warning classes are unchanged. See
+`PHASE24_CM5_NO_CONNECT_CLEANUP_RECEIPT_20260911.md`.
+
 ## CURRENT EXPERIMENT — PWR_FLAG AUTHORITY SUBSTITUTION REJECTED — 2026-09-11
 
 The helper now handles all four embedded PWR_FLAG definitions, but replacing
@@ -19,8 +28,9 @@ See `PHASE24_PWR_FLAG_REPAIR_PROBE_REJECT_RECEIPT_20260911.md`.
 ## CURRENT VALIDATION RECHECK — LIVE SCHEMATIC ERC — 2026-09-11
 
 Fresh native KiCad 10.0.5 full-severity ERC against the canonical clean root
-reports 862 warnings and zero errors. Raw report and SHA-256 are recorded in
-`PHASE24_LIVE_ERC_RECHECK_RECEIPT_20260911.md`; warnings remain open and
+reports 851 warnings and zero errors. Raw report and SHA-256 are recorded in
+`PHASE24_CLEAN_SCHEMATIC_ERC_LIVE_RECHECK_20260911_v3.rpt` and
+`PHASE24_CM5_NO_CONNECT_CLEANUP_RECEIPT_20260911.md`; warnings remain open and
 unwaived. The next actionable gate is controlled live contract/source
 authoring, then matching netlist export and exact-candidate PCB parity.
 

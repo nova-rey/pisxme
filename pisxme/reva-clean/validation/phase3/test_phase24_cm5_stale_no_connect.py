@@ -42,15 +42,10 @@ def remove_stale(text: str) -> tuple[str, int]:
 
 def main() -> None:
     child = ROOT / "CORE_CM5.kicad_sch"
-    original = child.read_bytes()
-    text, removed = remove_stale(original.decode())
-    assert removed == len(STALE), (removed, len(STALE))
     report = ROOT / ".phase24-cm5-nc-probe.rpt"
     try:
-        # KiCad resolves the project's complete native hierarchy from its
-        # original checkout.  Mutate only this disposable child in memory and
-        # restore it unconditionally before the probe returns.
-        child.write_text(text)
+        text = child.read_text()
+        assert remove_stale(text)[1] == 0, "stale NC record reintroduced"
         result = subprocess.run(
             ["kicad-cli", "sch", "erc", "--output", str(report),
              "--exit-code-violations", str(ROOT / "PiSXMe_RevA_Clean.kicad_sch")],
@@ -63,9 +58,8 @@ def main() -> None:
         assert not errors, errors
         assert dangling == 0, dangling
         assert result.returncode != 0, "fixture unexpectedly has no ERC violations"
-        print("CM5 stale no-connect cleanup probe: PASS; 11 records removed, no errors")
+        print("CM5 stale no-connect regression: PASS; stale records absent, no errors")
     finally:
-        child.write_bytes(original)
         report.unlink(missing_ok=True)
 
 

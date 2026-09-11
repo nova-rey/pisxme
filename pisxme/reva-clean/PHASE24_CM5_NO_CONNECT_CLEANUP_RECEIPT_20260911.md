@@ -10,9 +10,11 @@ two-unit CM5 symbol.
 
 ## Evidence and repair
 
-`validation/phase3/test_phase24_cm5_stale_no_connect.py` removes exactly the
-11 identified `(coordinate, UUID)` records in a disposable probe. The probe
-passed with no ERC errors and zero remaining `no_connect_dangling` findings.
+An earlier disposable probe removed exactly the 11 identified
+`(coordinate, UUID)` records. The probe passed with no ERC errors and zero
+remaining `no_connect_dangling` findings. The committed
+`validation/phase3/test_phase24_cm5_stale_no_connect.py` is the regression
+guard: it rejects reintroduction of those stale records and reruns native ERC.
 
 The same bounded deletion was then applied to the authoritative
 `CORE_CM5.kicad_sch`. No pins, labels, wires, units, or electrical nets were
