@@ -1,5 +1,12 @@
 # Phase 24 acreage validation status
 
+## CURRENT VALIDATION SUBGATE — RTL9210B NETLIST AUTHORITY — 2026-09-11
+
+The native RTL9210B/M.2 netlist assertions pass, including the PEDET-removal
+negative control. This is focused authority evidence only; production parity,
+firmware/procurement, integrated routing, and full Phase 24 remain OPEN. See
+`PHASE24_RTL9210B_NETLIST_AUTHORITY_RECEIPT_20260911.md`.
+
 ## CURRENT SOURCE CLEANUP — REQUIRED-NET NO-CONNECTS — 2026-09-11
 
 Required-net no-connect contradictions are now cleared for CM5 USB3,

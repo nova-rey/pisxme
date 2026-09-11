@@ -1,5 +1,15 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — RTL9210B native netlist authority passes — 2026-09-11
+
+The saved native RTL9210B/M.2 netlist authority audit passes, including its
+PEDET-removal negative control. RTL9210B and M.2 XML source hashes are pinned
+in the receipt. This closes only the focused Path-B netlist assertion gate;
+production parity, firmware/procurement, integrated routing, and full Phase
+24 remain open.
+
+Receipt: `PHASE24_RTL9210B_NETLIST_AUTHORITY_RECEIPT_20260911.md`.
+
 ## Current checkpoint — CM5 required-net NC cleanup consolidated — 2026-09-11
 
 The source cleanup has removed only required-net contradictions: four USB3,

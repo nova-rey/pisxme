@@ -11382,3 +11382,9 @@ the accepted local primitive. Receipt:
   `POWER_GND` no-connect contradictions. Native ERC is 862 warnings / 0
   errors with zero connected-NC findings; 11 standalone dangling NC records
   remain open. Saved a fresh native netlist receipt.
+
+## 2026-09-11 — RTL9210B native netlist authority passes
+
+- Native RTL9210B/M.2 netlist assertions passed with the PEDET-removal
+  negative control. Pinned source hashes were recorded; production parity,
+  firmware/procurement, and full-board Phase 24 remain open.
