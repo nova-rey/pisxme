@@ -11681,3 +11681,8 @@ Native DRC remained failing at 606 violations/341 unconnected items versus the
 601/351 V79 baseline and added two crossings, so V93 was rejected and no
 canonical PCB changed. The topology is retained as evidence for coordinated
 storage regeneration.
+
+2026-09-11 — Phase 24 gate map: storage power workstream now names V93 as the
+latest rejected common-bus candidate. Its nine-contact native connectivity and
+negative-control PASS are separated from its 606/341 native DRC failure, so
+future work will not mistake logical reachability for physical closure.
