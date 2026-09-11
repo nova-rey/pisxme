@@ -46,3 +46,20 @@ circuit geometry or remove labels/no-connect flags until that experiment
 separates grid/wiring artifacts from genuine electrical findings.
 
 This classification is evidence only; it does not close the Phase 24 ERC gate.
+
+## Discriminator result — 2026-09-11
+
+Two disposable probes were run with native KiCad 10.0.5 ERC:
+
+| Probe | Result | Interpretation |
+|---|---:|---|
+| broad root coordinate snap | 1132 violations | independent root snapping detached hierarchy-associated geometry |
+| child contract label/wire snap | 946 violations, including 56 `pin_not_connected` | child geometry cannot be changed without regenerating the embedded contract symbol pin pitch |
+
+The first probe is retained only as a failed discriminator. The second probe
+included the project/library namespace and still failed. Neither probe
+modified the canonical source. The evidence rejects coordinate-only repair.
+The next valid experiment is a coherent generator-level regeneration of the
+contract symbol definition, child contract geometry, and parent sheet
+connection geometry, followed by native hierarchy reopen/ERC and netlist
+comparison.

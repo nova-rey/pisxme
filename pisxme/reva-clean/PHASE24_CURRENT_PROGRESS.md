@@ -1,5 +1,22 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — hierarchy grid discriminator classified — 2026-09-11
+
+The disposable native KiCad grid probe did not justify a production
+coordinate rewrite. A broad root-graph snap increased ERC findings from the
+canonical 872 warnings to 1132 by detaching hierarchy-associated geometry.
+A child-contract-only snap, with the root graph preserved, produced 946
+findings and 56 `pin_not_connected` results because the embedded contract
+symbol still used its original 3 mm pin pitch. These are route/authoring
+experiment results, not production-board changes.
+
+The discriminator closes the narrow hypothesis that labels or wires can be
+snapped independently. Any repair must regenerate the contract symbol pin
+geometry, child labels/wires, and parent sheet pins/wires as one coherent
+native-grid authoring path, then compare hierarchy connectivity and netlist
+before promotion. The canonical schematic and its 872-warning report remain
+unchanged; the Phase 24 ERC gate remains open and unwaived.
+
 ## Current checkpoint — canonical storage-library namespace repaired — 2026-09-11
 
 The canonical `PiSXMe_RevA_Clean_complete.kicad_sym` now contains the eight

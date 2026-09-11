@@ -11250,3 +11250,13 @@ the accepted local primitive. Receipt:
   after the namespace repair. The saved `current-library-repaired.net`
   contains the M-key connector, JMS583, both selectors, and mode-control
   parts; export success is a parse/authority check, not proof of PCB parity.
+
+## 2026-09-11 — hierarchy grid discriminator
+
+- Ran two disposable native KiCad 10.0.5 ERC probes against the current clean
+  hierarchy. Broad root snapping increased the canonical 872 warnings to
+  1132; child contract label/wire snapping with the root preserved produced
+  946 findings including 56 unconnected pins. The evidence shows that the
+  generated contract symbol pin geometry must be regenerated together with
+  child and parent connection geometry; independent coordinate snapping is
+  rejected. Canonical schematic and reports were not modified.
