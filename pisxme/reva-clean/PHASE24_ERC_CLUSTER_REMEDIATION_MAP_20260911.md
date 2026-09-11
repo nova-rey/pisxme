@@ -36,10 +36,11 @@ The next discriminator is therefore a complete owner-aware grid transform,
 not coordinate-only edits. Naming and PWR_FLAG clusters remain independent
 and must be handled with the same netlist-parity guard.
 
-The first bounded STORAGE alias-removal probe was rejected: removing one
-co-located `NC_*` label reduced `multiple_net_names` by one but introduced 115
-footprint-link findings in the disposable project copy, raising native ERC to
-891 warnings. No canonical source changed. Receipt:
+The corrected bounded STORAGE alias-removal probe was rejected: removing one
+co-located `NC_*` label reduced `multiple_net_names` by one and native ERC to
+776 warnings, but changed the exported netlist from 338 to 339 nets and
+changed the `/STORAGE/JMS_VDDREG_5V` node set. No canonical source changed.
+Receipt:
 `PHASE24_MULTIPLE_NET_NAME_PROBE_REJECT_RECEIPT_20260911.md`.
 
 ## Structural evidence

@@ -11529,8 +11529,8 @@ explicitly historical; remaining findings are open and unwaived.
 pre-promotion ERC counts as historical in the current-state override and
 identified the promoted 777-warning receipt as the sole current census.
 
-2026-09-11 — Phase 24 multiple-net-name probe: a disposable STORAGE test
-removed one co-located NC alias and reduced that warning class by one, but
-native ERC gained 115 footprint-link findings because the copied project did
-not reproduce canonical library resolution. Probe reached 891 warnings/0
-errors and was rejected; no canonical source changed.
+2026-09-11 — Phase 24 multiple-net-name probe: the corrected disposable
+STORAGE test removed one co-located NC alias and reduced native ERC to 776
+warnings, but exact netlist comparison failed (338 canonical nets versus 339
+probe nets, with changed STORAGE node ownership). The alias repair was
+rejected; no canonical source changed.
