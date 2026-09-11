@@ -11287,3 +11287,12 @@ the accepted local primitive. Receipt:
   produced five native `pin_not_connected` errors and was rejected. No
   canonical schematic was changed; explicit label-to-instance mapping is
   still required.
+
+## 2026-09-11 — scaffold port authority aligned to live hierarchy
+
+- Updated the generic Phase 3 scaffold's CORE_CM5, REGULATORS, and STORAGE
+  port sets to include the live hierarchical interface names. Fresh native
+  KiCad generation/ERC retained zero hierarchy `pin_not_connected` and zero
+  `endpoint_off_grid` findings. The live canonical child sheets remain
+  unchanged; their stale embedded contract instances still require explicit
+  mapping before production repair.
