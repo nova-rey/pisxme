@@ -11434,3 +11434,9 @@ to process all four embedded definitions, but installed-library replacement
 caused 115 footprint-link issues, 75 library-symbol issues, and 2 real
 pin-to-pin errors. Canonical embedded definitions remain unchanged; the
 disposable rejection receipt preserves the evidence.
+
+2026-09-11 — Live hierarchy identity map passes: all ten root sheet pin sets
+exactly match their child hierarchical-label sets by signal name. This narrows
+the 795-warning cluster to embedded contract-symbol/instance serialization and
+coordinate termination; no synthetic edges were added and canonical electrical
+identity remains unchanged.

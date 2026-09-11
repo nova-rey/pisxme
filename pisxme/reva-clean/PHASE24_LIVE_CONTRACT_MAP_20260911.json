@@ -1,0 +1,431 @@
+{
+  "schema": 1,
+  "source_root": "/home/nyx/PiSXMe/pisxme/reva-clean/PiSXMe_RevA_Clean.kicad_sch",
+  "children": [
+    {
+      "child": "CORE_CM5",
+      "root_sheet_pin_count": 15,
+      "child_label_count": 15,
+      "identity_match": true,
+      "root_pins": [
+        {
+          "name": "CM5_PER0_P",
+          "root_pin_index": 1
+        },
+        {
+          "name": "CM5_PER0_N",
+          "root_pin_index": 2
+        },
+        {
+          "name": "CM5_PET0_P",
+          "root_pin_index": 3
+        },
+        {
+          "name": "CM5_PET0_N",
+          "root_pin_index": 4
+        },
+        {
+          "name": "CM5_REFCLK_P",
+          "root_pin_index": 5
+        },
+        {
+          "name": "CM5_REFCLK_N",
+          "root_pin_index": 6
+        },
+        {
+          "name": "CM5_PERST",
+          "root_pin_index": 7
+        },
+        {
+          "name": "CM5_USB3",
+          "root_pin_index": 8
+        },
+        {
+          "name": "CM5_STORAGE_USB2_DP",
+          "root_pin_index": 9
+        },
+        {
+          "name": "CM5_STORAGE_USB2_DM",
+          "root_pin_index": 10
+        },
+        {
+          "name": "CM5_GBE",
+          "root_pin_index": 11
+        },
+        {
+          "name": "SERVICE_USB2_DP",
+          "root_pin_index": 12
+        },
+        {
+          "name": "SERVICE_USB2_DM",
+          "root_pin_index": 13
+        },
+        {
+          "name": "CM5_POWER",
+          "root_pin_index": 14
+        },
+        {
+          "name": "CM5_5V",
+          "root_pin_index": 15
+        }
+      ],
+      "child_labels": [
+        "CM5_PER0_P",
+        "CM5_PER0_N",
+        "CM5_PET0_P",
+        "CM5_PET0_N",
+        "CM5_REFCLK_P",
+        "CM5_REFCLK_N",
+        "CM5_PERST",
+        "CM5_USB3",
+        "CM5_STORAGE_USB2_DP",
+        "CM5_STORAGE_USB2_DM",
+        "CM5_GBE",
+        "SERVICE_USB2_DP",
+        "SERVICE_USB2_DM",
+        "CM5_POWER",
+        "CM5_5V"
+      ]
+    },
+    {
+      "child": "V100_PCIE",
+      "root_sheet_pin_count": 14,
+      "child_label_count": 14,
+      "identity_match": true,
+      "root_pins": [
+        {
+          "name": "CM5_PER0_P",
+          "root_pin_index": 1
+        },
+        {
+          "name": "CM5_PER0_N",
+          "root_pin_index": 2
+        },
+        {
+          "name": "CM5_PET0_P",
+          "root_pin_index": 3
+        },
+        {
+          "name": "CM5_PET0_N",
+          "root_pin_index": 4
+        },
+        {
+          "name": "CM5_REFCLK_P",
+          "root_pin_index": 5
+        },
+        {
+          "name": "CM5_REFCLK_N",
+          "root_pin_index": 6
+        },
+        {
+          "name": "CM5_PERST",
+          "root_pin_index": 7
+        },
+        {
+          "name": "V100_PER0_P",
+          "root_pin_index": 8
+        },
+        {
+          "name": "V100_PER0_N",
+          "root_pin_index": 9
+        },
+        {
+          "name": "V100_PET0_P",
+          "root_pin_index": 10
+        },
+        {
+          "name": "V100_PET0_N",
+          "root_pin_index": 11
+        },
+        {
+          "name": "V100_REFCLK_P",
+          "root_pin_index": 12
+        },
+        {
+          "name": "V100_REFCLK_N",
+          "root_pin_index": 13
+        },
+        {
+          "name": "V100_PERST",
+          "root_pin_index": 14
+        }
+      ],
+      "child_labels": [
+        "CM5_PER0_P",
+        "CM5_PER0_N",
+        "CM5_PET0_P",
+        "CM5_PET0_N",
+        "CM5_REFCLK_P",
+        "CM5_REFCLK_N",
+        "CM5_PERST",
+        "V100_PER0_P",
+        "V100_PER0_N",
+        "V100_PET0_P",
+        "V100_PET0_N",
+        "V100_REFCLK_P",
+        "V100_REFCLK_N",
+        "V100_PERST"
+      ]
+    },
+    {
+      "child": "V100_POWER",
+      "root_sheet_pin_count": 3,
+      "child_label_count": 3,
+      "identity_match": true,
+      "root_pins": [
+        {
+          "name": "V100_POWER_12V",
+          "root_pin_index": 1
+        },
+        {
+          "name": "V100_GND",
+          "root_pin_index": 2
+        },
+        {
+          "name": "V100_THERMAL",
+          "root_pin_index": 3
+        }
+      ],
+      "child_labels": [
+        "V100_POWER_12V",
+        "V100_GND",
+        "V100_THERMAL"
+      ]
+    },
+    {
+      "child": "POWER_INPUT",
+      "root_sheet_pin_count": 4,
+      "child_label_count": 4,
+      "identity_match": true,
+      "root_pins": [
+        {
+          "name": "12V_IN_A",
+          "root_pin_index": 1
+        },
+        {
+          "name": "12V_IN_B",
+          "root_pin_index": 2
+        },
+        {
+          "name": "12V_PROTECTED",
+          "root_pin_index": 3
+        },
+        {
+          "name": "POWER_PG_FAULT",
+          "root_pin_index": 4
+        }
+      ],
+      "child_labels": [
+        "12V_IN_A",
+        "12V_IN_B",
+        "12V_PROTECTED",
+        "POWER_PG_FAULT"
+      ]
+    },
+    {
+      "child": "REGULATORS",
+      "root_sheet_pin_count": 6,
+      "child_label_count": 6,
+      "identity_match": true,
+      "root_pins": [
+        {
+          "name": "12V_PROTECTED",
+          "root_pin_index": 1
+        },
+        {
+          "name": "CM5_5V",
+          "root_pin_index": 2
+        },
+        {
+          "name": "STORAGE_3V3",
+          "root_pin_index": 3
+        },
+        {
+          "name": "BRIDGE_1V1_3V3",
+          "root_pin_index": 4
+        },
+        {
+          "name": "BRIDGE_3V3",
+          "root_pin_index": 5
+        },
+        {
+          "name": "BRIDGE_1V1",
+          "root_pin_index": 6
+        }
+      ],
+      "child_labels": [
+        "BRIDGE_3V3",
+        "BRIDGE_1V1",
+        "12V_PROTECTED",
+        "CM5_5V",
+        "STORAGE_3V3",
+        "BRIDGE_1V1_3V3"
+      ]
+    },
+    {
+      "child": "ETHERNET",
+      "root_sheet_pin_count": 3,
+      "child_label_count": 3,
+      "identity_match": true,
+      "root_pins": [
+        {
+          "name": "CM5_GBE",
+          "root_pin_index": 1
+        },
+        {
+          "name": "GBE_SHIELD",
+          "root_pin_index": 2
+        },
+        {
+          "name": "ETH_POWER",
+          "root_pin_index": 3
+        }
+      ],
+      "child_labels": [
+        "CM5_GBE",
+        "GBE_SHIELD",
+        "ETH_POWER"
+      ]
+    },
+    {
+      "child": "STORAGE",
+      "root_sheet_pin_count": 7,
+      "child_label_count": 7,
+      "identity_match": true,
+      "root_pins": [
+        {
+          "name": "CM5_USB3",
+          "root_pin_index": 1
+        },
+        {
+          "name": "BRIDGE_SATA",
+          "root_pin_index": 2
+        },
+        {
+          "name": "M2_SATA",
+          "root_pin_index": 3
+        },
+        {
+          "name": "STORAGE_3V3",
+          "root_pin_index": 4
+        },
+        {
+          "name": "BRIDGE_CFG",
+          "root_pin_index": 5
+        },
+        {
+          "name": "BRIDGE_3V3",
+          "root_pin_index": 6
+        },
+        {
+          "name": "BRIDGE_1V1",
+          "root_pin_index": 7
+        }
+      ],
+      "child_labels": [
+        "CM5_USB3",
+        "BRIDGE_SATA",
+        "M2_SATA",
+        "STORAGE_3V3",
+        "BRIDGE_CFG",
+        "BRIDGE_3V3",
+        "BRIDGE_1V1"
+      ]
+    },
+    {
+      "child": "SERVICE",
+      "root_sheet_pin_count": 5,
+      "child_label_count": 5,
+      "identity_match": true,
+      "root_pins": [
+        {
+          "name": "SERVICE_USB2_DP",
+          "root_pin_index": 1
+        },
+        {
+          "name": "SERVICE_USB2_DM",
+          "root_pin_index": 2
+        },
+        {
+          "name": "SERVICE_VBUS_SENSE",
+          "root_pin_index": 3
+        },
+        {
+          "name": "SERVICE_RD",
+          "root_pin_index": 4
+        },
+        {
+          "name": "SERVICE_GND",
+          "root_pin_index": 5
+        }
+      ],
+      "child_labels": [
+        "SERVICE_USB2_DP",
+        "SERVICE_USB2_DM",
+        "SERVICE_VBUS_SENSE",
+        "SERVICE_RD",
+        "SERVICE_GND"
+      ]
+    },
+    {
+      "child": "COOLING",
+      "root_sheet_pin_count": 4,
+      "child_label_count": 4,
+      "identity_match": true,
+      "root_pins": [
+        {
+          "name": "COOLING_12V",
+          "root_pin_index": 1
+        },
+        {
+          "name": "COOLING_PWM",
+          "root_pin_index": 2
+        },
+        {
+          "name": "COOLING_TACH",
+          "root_pin_index": 3
+        },
+        {
+          "name": "THERMAL_ALERT",
+          "root_pin_index": 4
+        }
+      ],
+      "child_labels": [
+        "COOLING_12V",
+        "COOLING_PWM",
+        "COOLING_TACH",
+        "THERMAL_ALERT"
+      ]
+    },
+    {
+      "child": "DEBUG",
+      "root_sheet_pin_count": 4,
+      "child_label_count": 4,
+      "identity_match": true,
+      "root_pins": [
+        {
+          "name": "UART",
+          "root_pin_index": 1
+        },
+        {
+          "name": "RECOVERY",
+          "root_pin_index": 2
+        },
+        {
+          "name": "POWER_PG_FAULT",
+          "root_pin_index": 3
+        },
+        {
+          "name": "DEBUG_GND",
+          "root_pin_index": 4
+        }
+      ],
+      "child_labels": [
+        "UART",
+        "RECOVERY",
+        "POWER_PG_FAULT",
+        "DEBUG_GND"
+      ]
+    }
+  ]
+}
