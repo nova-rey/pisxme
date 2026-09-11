@@ -4,6 +4,10 @@
 
 ## CURRENT VALIDATION UPDATE — 2026-09-11 SUPPORT OVERLAY
 
+The best current disposable overlay relocates the coherent U3 support island
+outboard and reports 31 native DRC violations / 2 unconnected items. It is
+still rejected; the accepted U1/V1603 baseline remains clean.
+
 The latest real-pad MIC2545A support overlay is rejected at 38 native DRC
 violations and 3 unconnected items. It is an implementation experiment, not
 an authority change. The accepted RTL9210B/V1603 baseline remains 0/0; the

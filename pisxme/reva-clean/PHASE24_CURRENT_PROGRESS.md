@@ -14,6 +14,12 @@ Path-B and full-board gates.
 
 ## Current next action — corrected ISOLATEB support authority — 2026-09-11
 
+The latest coherent outboard U3 relocation trial is rejected at 31 native DRC
+violations and 2 unconnected items, improving the prior 38/3 trial. Remaining
+failures are localized to occupied B.Cu corridors and two local ground joins;
+this is disposable route evidence, not a change to the frozen RTL9210B/V1603
+authority.
+
 The latest real-pad full-board support attempt is rejected at 38 native DRC
 violations and 3 unconnected items. It improved the prior 6-open result but
 still crosses occupied SPI/control/power corridors. This is route-implementation

@@ -1,108 +1,84 @@
 ** Drc report for PHASE24_RTL9210B_PATHB_ISOLATEB_SUPPORT_INTEGRATED.kicad_pcb **
-** Created on 2026-09-11T08:46:15 **
+** Created on 2026-09-11T08:52:58 **
 ** Report includes: Errors, Warnings **
 
-** Found 38 DRC violations **
-[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.4308 mm)
-    Local override; error
-    @(94.0500 mm, 70.4000 mm): Track [REFCLK_P] on F.Cu, length 1.0500 mm
-    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
-[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.2142 mm)
-    Local override; error
-    @(94.0500 mm, 73.2000 mm): Track [LANE0_TXP] on F.Cu, length 1.0500 mm
-    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+** Found 31 DRC violations **
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(104.0000 mm, 84.0000 mm): Track [GND] on B.Cu, length 10.4000 mm
-    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
-    @(105.0000 mm, 69.8000 mm): Track [SPICS] on B.Cu, length 6.4000 mm
-[shorting_items]: Items shorting two nets (nets SPICS and SSD_3V3)
-    Local override; error
-    @(111.4000 mm, 69.8000 mm): Via [SPICS] on F.Cu - B.Cu
-    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(106.0000 mm, 70.4000 mm): Track [SPISO] on B.Cu, length 6.6000 mm
-    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(107.0000 mm, 71.0000 mm): Track [SPISO3] on B.Cu, length 11.6000 mm
-    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(102.0000 mm, 81.0000 mm): Track [PERST_N] on B.Cu, length 32.0000 mm
-    @(112.0000 mm, 91.9050 mm): Track [RTL_3V3] on B.Cu, length 13.4050 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(114.4000 mm, 84.0000 mm): Track [GND] on B.Cu, length 6.8000 mm
-    @(113.8000 mm, 77.2000 mm): Track [RTL_3V3] on B.Cu, length 7.2000 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(114.0000 mm, 66.0000 mm): Track [RTL_3V3] on B.Cu, length 6.0000 mm
-    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(108.0000 mm, 72.0000 mm): Track [SPICLK] on B.Cu, length 9.4000 mm
-    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(109.0000 mm, 75.2000 mm): Track [SPISI] on B.Cu, length 7.2000 mm
-    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(102.0000 mm, 64.8000 mm): Track [RTL_1V1] on B.Cu, length 10.0000 mm
-    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
-[tracks_crossing]: Tracks crossing
-    Local override; error
-    @(114.4000 mm, 84.0000 mm): Track [GND] on B.Cu, length 6.8000 mm
+    @(120.0000 mm, 86.6350 mm): Track [GND] on B.Cu, length 8.6350 mm
     @(102.0000 mm, 81.0000 mm): Track [PERST_N] on B.Cu, length 32.0000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(107.0000 mm, 74.0000 mm): Track [CLKREQ_N] on B.Cu, length 12.2000 mm
-    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
-[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
-    Local override; error
-    @(98.3500 mm, 74.8000 mm): Track [ISOLATEB] on B.Cu, length 12.0000 mm
-    @(98.8000 mm, 76.0000 mm): Via [CLKREQ_N] on F.Cu - B.Cu
-[shorting_items]: Items shorting two nets (nets GND and ISOLATEB)
-    Local override; error
-    @(104.0000 mm, 90.6350 mm): Track [GND] on B.Cu, length 6.6350 mm
-    @(104.2000 mm, 86.8000 mm): Via [ISOLATEB] on F.Cu - B.Cu
-[clearance]: Clearance violation (pad clearance 0.1500 mm; actual 0.1432 mm)
-    Local override; error
-    @(98.4000 mm, 73.9500 mm): Pad 10 [<no net>] of U1 on F.Cu
-    @(99.2000 mm, 73.9500 mm): Track [ISOLATEB] on F.Cu, length 1.2021 mm
+    @(128.7000 mm, 85.3650 mm): Track [RTL_3V3] on B.Cu, length 7.3650 mm
+    @(125.0000 mm, 79.0000 mm): Track [PEDET] on B.Cu, length 10.0000 mm
 [tracks_crossing]: Tracks crossing
     Local override; error
-    @(98.3500 mm, 74.8000 mm): Track [ISOLATEB] on B.Cu, length 12.0000 mm
+    @(128.7000 mm, 84.0950 mm): Track [SSD_3V3] on F.Cu, length 1.3000 mm
+    @(128.7000 mm, 87.9050 mm): Track [RTL_3V3] on F.Cu, length 9.9050 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(121.0000 mm, 67.2000 mm): Track [RTL_5V] on F.Cu, length 14.2000 mm
+    @(130.0000 mm, 64.0000 mm): Track [SSD_3V3] on F.Cu, length 15.3032 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(130.0000 mm, 85.3650 mm): Track [SSD_3V3] on B.Cu, length 21.3650 mm
+    @(102.0000 mm, 81.0000 mm): Track [PERST_N] on B.Cu, length 32.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(122.2000 mm, 86.8000 mm): Track [ISOLATEB] on F.Cu, length 2.9201 mm
+    @(123.3000 mm, 86.6350 mm): Track [GND] on F.Cu, length 3.3000 mm
+[shorting_items]: Items shorting two nets (nets ISOLATEB and GND)
+    Local override; error
+    @(98.3500 mm, 86.8000 mm): Track [ISOLATEB] on B.Cu, length 23.8500 mm
+    @(120.0000 mm, 86.6350 mm): Via [GND] on F.Cu - B.Cu
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(130.0000 mm, 85.3650 mm): Track [SSD_3V3] on B.Cu, length 21.3650 mm
+    @(125.0000 mm, 79.0000 mm): Track [PEDET] on B.Cu, length 10.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
     @(96.4000 mm, 79.5000 mm): Track [PEDET] on B.Cu, length 22.6000 mm
-[tracks_crossing]: Tracks crossing
+    @(98.3500 mm, 74.8000 mm): Track [ISOLATEB] on B.Cu, length 12.0000 mm
+[shorting_items]: Items shorting two nets (nets SPISI and GND)
     Local override; error
-    @(104.0000 mm, 90.6350 mm): Track [GND] on B.Cu, length 6.6350 mm
-    @(95.5000 mm, 86.8000 mm): Track [ISOLATEB] on B.Cu, length 8.7000 mm
+    @(116.2000 mm, 76.4000 mm): Pad 5 [SPISI] of U2 on F.Cu
+    @(120.0000 mm, 78.0000 mm): Track [GND] on F.Cu, length 5.2498 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.1657 mm)
+    Local override; error
+    @(120.0000 mm, 78.0000 mm): Track [GND] on F.Cu, length 5.2498 mm
+    @(116.2000 mm, 75.2000 mm): Track [SPISI] on F.Cu, length 1.2000 mm
+[shorting_items]: Items shorting two nets (nets ISOLATEB and GND)
+    Local override; error
+    @(122.2000 mm, 86.8000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+    @(123.3000 mm, 86.6350 mm): Track [GND] on F.Cu, length 3.3000 mm
 [clearance]: Clearance violation (pad clearance 0.1500 mm; actual 0.0525 mm)
     Local override; error
     @(98.4000 mm, 73.9500 mm): Pad 10 [<no net>] of U1 on F.Cu
     @(98.3500 mm, 74.8000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(98.3500 mm, 74.8000 mm): Track [ISOLATEB] on B.Cu, length 12.0000 mm
+    @(98.8000 mm, 76.0000 mm): Via [CLKREQ_N] on F.Cu - B.Cu
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.4308 mm)
+    Local override; error
+    @(94.0500 mm, 70.4000 mm): Track [REFCLK_P] on F.Cu, length 1.0500 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (pad clearance 0.1500 mm; actual 0.1432 mm)
+    Local override; error
+    @(98.4000 mm, 73.9500 mm): Pad 10 [<no net>] of U1 on F.Cu
+    @(99.2000 mm, 73.9500 mm): Track [ISOLATEB] on F.Cu, length 1.2021 mm
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.2142 mm)
+    Local override; error
+    @(94.0500 mm, 73.2000 mm): Track [LANE0_TXP] on F.Cu, length 1.0500 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
 [hole_clearance]: Hole clearance violation (board minimum hole clearance 0.2500 mm; actual 0.2275 mm)
     Local override; error
     @(98.4000 mm, 73.9500 mm): Pad 10 [<no net>] of U1 on F.Cu
     @(98.3500 mm, 74.8000 mm): Via [ISOLATEB] on F.Cu - B.Cu
-[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.1000 mm)
-    Rule: board setup constraints edge; error
-    @(64.9000 mm, 39.9000 mm): Rectangle on Edge.Cuts
-    @(115.0000 mm, 94.8000 mm): Track [GND] on F.Cu, length 2.0000 mm
-[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
-    Rule: board setup constraints edge; error
-    @(64.9000 mm, 39.9000 mm): Rectangle on Edge.Cuts
-    @(117.0000 mm, 94.8000 mm): Via [GND] on F.Cu - B.Cu
-[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
-    Rule: board setup constraints edge; error
-    @(64.9000 mm, 39.9000 mm): Rectangle on Edge.Cuts
-    @(115.0000 mm, 94.8000 mm): Pad 2 [GND] of C18 on F.Cu
+[hole_clearance]: Hole clearance violation (board setup constraints hole clearance 0.2500 mm; actual 0.1500 mm)
+    Rule: board setup constraints hole; error
+    @(123.3000 mm, 86.6350 mm): Pad 3 [GND] of U3 on F.Cu
+    @(122.2000 mm, 86.8000 mm): Via [ISOLATEB] on F.Cu - B.Cu
 [track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
     Rule: netclass 'Default' (diff pair); error
     @(94.0500 mm, 70.4000 mm): Track [REFCLK_P] on F.Cu, length 1.0500 mm
@@ -128,36 +104,29 @@
     Rule: board setup solder mask min width; error
     @(99.2000 mm, 73.9500 mm): Track [ISOLATEB] on F.Cu, length 1.2021 mm
     @(98.8000 mm, 73.9500 mm): Pad 11 [<no net>] of U1 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(120.0000 mm, 78.0000 mm): Track [GND] on F.Cu, length 5.2498 mm
+    @(116.2000 mm, 76.4000 mm): Pad 5 [SPISI] of U2 on F.Cu
 [track_dangling]: Track has unconnected end
     Local override; warning
-    @(95.5000 mm, 86.8000 mm): Track [ISOLATEB] on B.Cu, length 8.7000 mm
-[track_dangling]: Track has unconnected end
-    Local override; warning
-    @(114.0000 mm, 93.2000 mm): Track [RTL_3V3] on F.Cu, length 1.2950 mm
+    @(128.7000 mm, 85.3650 mm): Track [RTL_3V3] on B.Cu, length 7.3650 mm
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(117.0000 mm, 94.8000 mm): Via [GND] on F.Cu - B.Cu
+    @(132.0000 mm, 90.8000 mm): Via [GND] on F.Cu - B.Cu
 [via_dangling]: Via is not connected or connected on only one layer
     Local override; warning
-    @(100.0000 mm, 96.2000 mm): Via [GND] on F.Cu - B.Cu
-[silk_edge_clearance]: Silkscreen clipped by board edge
-    Rule: board setup constraints silk; warning
-    @(64.9000 mm, 39.9000 mm): Rectangle on Edge.Cuts
-    @(102.0000 mm, 95.0000 mm): Reference field of R15
+    @(120.0000 mm, 92.2000 mm): Via [GND] on F.Cu - B.Cu
 
-** Found 3 unconnected pads **
+** Found 2 unconnected pads **
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(112.0000 mm, 91.9050 mm): Track [RTL_3V3] on B.Cu, length 13.4050 mm
-    @(114.0000 mm, 93.2000 mm): Track [RTL_3V3] on F.Cu, length 1.2950 mm
+    @(120.0000 mm, 86.6350 mm): Track [GND] on B.Cu, length 8.6350 mm
+    @(121.0000 mm, 92.2000 mm): Track [GND] on F.Cu, length 1.0000 mm
 [unconnected_items]: Missing connection between items
     Local override; error
-    @(102.0000 mm, 96.2000 mm): Pad 2 [GND] of R15 on F.Cu
-    @(104.0000 mm, 90.6350 mm): Track [GND] on B.Cu, length 6.6350 mm
-[unconnected_items]: Missing connection between items
-    Local override; error
-    @(105.3000 mm, 90.6350 mm): Track [GND] on F.Cu, length 1.3000 mm
-    @(115.0000 mm, 94.8000 mm): Pad 2 [GND] of C18 on F.Cu
+    @(123.3000 mm, 86.6350 mm): Track [GND] on F.Cu, length 3.3000 mm
+    @(130.0000 mm, 90.8000 mm): Pad 2 [GND] of C18 on F.Cu
 
 ** Found 0 Footprint errors **
 

@@ -11130,3 +11130,10 @@ the accepted local primitive. Receipt:
   six to three, but native DRC rose to 38 due to occupied SPI/control/power
   corridors. It remains disposable route-implementation evidence; U1
   orientation and V1603 launch authority are unchanged.
+
+## 2026-09-11 — outboard support relocation trial
+
+- Relocated the coherent MIC2545A support island outboard as a bounded trial.
+  Native DRC improved from 38 violations/3 opens to 31/2, but occupied B.Cu
+  corridor crossings and two ground joins remain. The trial is rejected
+  evidence; RTL9210B orientation and V1603 launch authority remain frozen.
