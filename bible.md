@@ -11396,3 +11396,10 @@ the accepted local primitive. Receipt:
   isolated-label findings increased, and footprint-link findings appeared.
   Production CAD was untouched; the coherent native-grid generator remains
   the active authoring path.
+
+## 2026-09-11 — Rejected partial coherent-grid transform
+
+- Re-ran the coherent-grid disposable transform against current sources.
+  Native ERC reported 746 findings, including two hierarchy pin-not-connected
+  errors. Canonical sources were untouched; a complete live-port-aware
+  root/child regeneration remains required.

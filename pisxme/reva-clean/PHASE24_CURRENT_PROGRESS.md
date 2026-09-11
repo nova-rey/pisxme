@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — partial coherent-grid transform rejected — 2026-09-11
+
+The fresh disposable coherent-grid probe was rejected by native KiCad ERC at
+746 findings, including two hierarchy `pin_not_connected` errors. It did not
+modify production sources. Partial coordinate transformation is insufficient;
+the next authoring repair must include explicit current live port-set mapping.
+Receipt: `PHASE24_COHERENT_GRID_PROBE_REJECT_RECEIPT_20260911.md`.
+
 ## Current checkpoint — legacy root rewriter rejected — 2026-09-11
 
 The old root-stub rewriter was tested only in a disposable workspace probe.

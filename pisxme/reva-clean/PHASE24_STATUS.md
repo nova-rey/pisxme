@@ -1,5 +1,12 @@
 # Phase 24 acreage validation status
 
+## CURRENT AUTHORING EXPERIMENT — PARTIAL COHERENT GRID REJECTED — 2026-09-11
+
+The fresh disposable coherent-grid transform was rejected at 746 native ERC
+findings, including two hierarchy pin-not-connected errors. Production
+sources were untouched. A complete live-port-aware root/child regeneration is
+still required; full ERC and Phase 24 remain OPEN.
+
 ## CURRENT AUTHORING EXPERIMENT — ROOT REWRITER REJECTED — 2026-09-11
 
 The legacy root-stub rewriter was rejected in a disposable KiCad-visible
