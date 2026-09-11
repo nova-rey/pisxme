@@ -11699,3 +11699,9 @@ escapes around the RUA0042A fields avoided the V94 immediate-via short class.
 The native audit reached all nine J3 contacts but failed strict source ownership
 for eight source pads; native DRC was 627/337. V95 was rejected with no
 canonical PCB change.
+
+2026-09-11 — Phase 24 storage-power evidence reconciliation: repository review
+confirmed V1562 is the accepted focused J3 handoff parent (nine-contact native
+connectivity/negative control PASS, no storage-rail shorts or crossings in its
+delta). V93–V95 are retained as later rejected source-attachment experiments;
+the open problem is U12/U13 support-pad attachment, not the J3 handoff itself.
