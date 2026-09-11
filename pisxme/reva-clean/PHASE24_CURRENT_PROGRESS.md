@@ -8,13 +8,16 @@ storage definitions embedded by `STORAGE.kicad_sch`, added by the auditable
 definitions were preserved; the earlier broad rebuild that replaced an
 unrelated Ethernet-contract variant was discarded. Native KiCad ERC now
 reports zero `lib_symbol_issues` and zero missing-library-symbol messages.
-The remaining report is 892 warnings (0 errors), consisting of existing
-off-grid, isolated-label, endpoint, naming, no-connect, footprint-link, and
-two power-symbol plus one Ethernet-contract mismatch findings. These remain
-open authority work; no severity was waived. Storage library package audit
-passes, and Path-B routing/support work continues from the accepted candidate.
+The remaining report is now 872 warnings (0 errors), after qualifying the 20
+storage passive/crystal footprint references against the registered local
+library. It consists of existing off-grid, isolated-label, endpoint, naming,
+no-connect, and power/Ethernet symbol-mismatch findings; the footprint-link
+class is absent. These remain open authority work; no severity was waived.
+Storage library package audit passes, and Path-B routing/support work
+continues from the accepted candidate.
 
-Receipt: `PHASE24_CLEAN_SCHEMATIC_ERC_LIBRARY_REPAIRED.rpt`.
+Receipts: `PHASE24_CLEAN_SCHEMATIC_ERC_LIBRARY_REPAIRED.rpt` and
+`PHASE24_CLEAN_SCHEMATIC_ERC_FOOTPRINTS_REPAIRED.rpt`.
 
 ## Current checkpoint — local QFN exception integrated — 2026-09-10
 

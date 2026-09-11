@@ -14,8 +14,10 @@ is not production authority or full Phase 24 closure.
 The canonical clean-library namespace repair is checkpoint `7b06b6ca`:
 `phase24_reconcile_storage_library.py` preserved the existing library and
 added the eight storage definitions under `PiSXMeRevAClean`. Native ERC now
-reports zero missing-library-symbol / `lib_symbol_issues` findings, with 892
-warnings and 0 errors in the saved report. Remaining ERC warnings, production
+reports zero missing-library-symbol / `lib_symbol_issues` findings. A second
+source-level repair qualified the 20 storage passive/crystal footprint
+references against `PiSXMeRevAClean`; native ERC now has 872 warnings and 0
+errors in the saved report. Remaining ERC warnings, production
 schematic/PCB parity, complete Path-B support/procurement/firmware, acreage
 promotion, and the remaining Phase 24 gates are OPEN and unwaived. Do not
 interpret older top-of-log overlay counts as the current candidate result.

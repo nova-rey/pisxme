@@ -11218,6 +11218,14 @@ the accepted local primitive. Receipt:
   result from older overlay counts. It explicitly keeps production parity,
   remaining ERC warnings, full Path-B authority, and Phase 24 closure open.
 
+## 2026-09-11 — storage footprint-library qualification
+
+- Qualified the 20 bare storage passive/crystal footprint references in the
+  authoritative `STORAGE.kicad_sch` against the registered local footprint
+  library, with a count-asserting repair script. Native KiCad ERC fell from
+  892 to 872 warnings with 0 errors; the footprint-link warning class is now
+  absent. Remaining warnings stay open and unwaived.
+
 ## 2026-09-11 — fresh Path-B candidate native revalidation
 
 - Re-ran KiCad 10.0.5 native DRC on the saved open-acreage MIC2545A support
