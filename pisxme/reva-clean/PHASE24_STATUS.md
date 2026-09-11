@@ -1,5 +1,15 @@
 # Phase 24 acreage validation status
 
+## CURRENT VALIDATION SCOPE — PAD PARITY — 2026-09-11
+
+The generic pad-parity audit was intentionally run against the historical
+`ACREAGE_CANDIDATE.kicad_pcb` as a baseline check and found 109 mismatches.
+This board is pre-Path-B and is not the accepted RTL9210B candidate; the
+result is therefore a wrong-baseline diagnostic, not a Path-B failure. See
+`PHASE24_PAD_PARITY_SCOPE_RECEIPT_20260911.md`. The Ethernet support parity
+audit independently passes. Production parity remains OPEN pending a matched
+integrated Path-B schematic/netlist/PCB audit.
+
 ## CURRENT VALIDATION RECEIPT — PATH-B CANDIDATE RECHECK — 2026-09-11
 
 The accepted isolated RTL9210B Path-B candidate

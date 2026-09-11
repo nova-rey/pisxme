@@ -1,5 +1,16 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — parity scope corrected — 2026-09-11
+
+The generic pad-parity audit was run against the historical
+`ACREAGE_CANDIDATE.kicad_pcb` and correctly reported 109 mismatches. That
+board is not the accepted RTL9210B Path-B candidate, so the result is a
+wrong-baseline diagnostic rather than a Path-B verdict. The result and exact
+failure class are recorded in
+`PHASE24_PAD_PARITY_SCOPE_RECEIPT_20260911.md`. The independent Ethernet
+support parity audit passes. Production parity remains OPEN until an
+integrated Path-B board and matching native netlist are audited together.
+
 ## Current checkpoint — Path-B candidate revalidated — 2026-09-11
 
 Fresh KiCad 10.0.5 native DRC on the accepted isolated RTL9210B candidate

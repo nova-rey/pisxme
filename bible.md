@@ -11325,3 +11325,11 @@ the accepted local primitive. Receipt:
   candidate: 0 violations, 0 unconnected items, and 0 footprint errors. The
   saved-board support audit and two actual trace-removal negative controls
   passed. Full-board parity and Phase 24 remain open.
+
+## 2026-09-11 — Pad parity scope corrected
+
+- Ran the generic native schematic-to-PCB pad/net audit against the historical
+  `ACREAGE_CANDIDATE.kicad_pcb`; it found 109 mismatches because that board is
+  pre-Path-B. Recorded the result as a wrong-baseline diagnostic rather than
+  a Path-B verdict. Ethernet support parity independently passed. Integrated
+  Path-B production parity remains open.
