@@ -11116,3 +11116,10 @@ the accepted local primitive. Receipt:
   full-board MIC2545A support trial has 36 native DRC violations and 6
   unconnected items. It remains historical evidence; the clean combined
   fixture is the current support geometry basis.
+
+## 2026-09-11 — corrected latest support-overlay status
+
+- Reconciled Phase 24 status prose with the newest saved native report: the
+  latest full-board MIC2545A overlay has 37 DRC violations and 6 unconnected
+  items, while the preceding overlay had 36 and 6. Neither overlay is
+  production authority; the accepted U1/V1603 baseline remains clean.

@@ -16,9 +16,11 @@ Path-B and full-board gates.
 
 The MIC2545A fixture correction is complete: U3.2/FLG is netless rather than
 incorrectly tied to GND. Native DRC, physical duplicated-pin joins, negative
-control, and DFM pass. The prior combined-placement trial is rejected with
-36 DRC violations and 6 unconnected items; it is not production authority. Build one
-fresh co-routed U1.12-to-U3.1 support candidate next, retaining the frozen
+control, and DFM pass. The prior combined-placement trial is rejected. The
+latest full-board overlay reports 37 native DRC violations and 6 unconnected
+items; the preceding overlay reported 36 violations and 6 opens. Neither is
+production authority. Build one fresh co-routed U1.12-to-U3.1 support candidate
+next, retaining the frozen
 RTL9210B orientation, local QFN rule, and V1603 launch.
 
 The disposable combined U1/MIC2545A fixture now passes native KiCad DRC
