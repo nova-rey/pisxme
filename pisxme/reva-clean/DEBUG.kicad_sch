@@ -385,74 +385,73 @@
         (at 0 0 0)
         (effects (font (size 1.27 1.27)) (hide yes)))
       (symbol "DEBUG_Contract_1_1"
-        (rectangle (start -1.27 -5.77) (end 1.27 5.77)
-          (stroke (width 0.254) (type default)) (fill (type background)))
-
-        (pin passive line
-          (at -5.08 0 0)
-          (length 3.81)
-          (name "UART" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27)))))
-        (pin passive line
-          (at -5.08 -3 0)
-          (length 3.81)
-          (name "RECOVERY" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27)))))
-        (pin passive line
-          (at -5.08 -6 0)
-          (length 3.81)
-          (name "POWER_PG_FAULT" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27)))))
-        (pin passive line
-          (at -5.08 -9 0)
-          (length 3.81)
-          (name "DEBUG_GND" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27)))))
-      )
+  (rectangle (start -1.27 -7.27) (end 1.27 1.27)
+    (stroke (width 0.254) (type default)) (fill (type background)))
+  (pin passive line
+    (at -5.08 -0 0)
+    (length 3.81)
+    (name "UART" (effects (font (size 1.27 1.27))))
+    (number "1" (effects (font (size 1.27 1.27)))))
+  (pin passive line
+    (at -5.08 -2.54 0)
+    (length 3.81)
+    (name "RECOVERY" (effects (font (size 1.27 1.27))))
+    (number "2" (effects (font (size 1.27 1.27)))))
+  (pin passive line
+    (at -5.08 -5.08 0)
+    (length 3.81)
+    (name "POWER_PG_FAULT" (effects (font (size 1.27 1.27))))
+    (number "3" (effects (font (size 1.27 1.27)))))
+  (pin passive line
+    (at -5.08 -7.62 0)
+    (length 3.81)
+    (name "DEBUG_GND" (effects (font (size 1.27 1.27))))
+    (number "4" (effects (font (size 1.27 1.27)))))
+)
     )
   )
 
   (hierarchical_label "UART"
     (shape bidirectional)
-    (at 5 10 180)
+    (at 5.08 10.16 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000003e8))
   (hierarchical_label "RECOVERY"
     (shape bidirectional)
-    (at 5 13 180)
+    (at 5.08 12.7 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000003e9))
   (hierarchical_label "POWER_PG_FAULT"
     (shape bidirectional)
-    (at 5 16 180)
+    (at 5.08 15.24 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000003ea))
   (hierarchical_label "DEBUG_GND"
     (shape bidirectional)
-    (at 5 19 180)
+    (at 5.08 17.78 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-0000000003eb))
 
   (wire
-    (pts (xy 5 10) (xy 19.92 10))
+    (pts (xy 5.08 10.16) (xy 20.32 10.16))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-0000000003e8))
   (wire
-    (pts (xy 5 13) (xy 19.92 13))
+    (pts (xy 5.08 12.7) (xy 20.32 12.7))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-0000000003e9))
   (wire
-    (pts (xy 5 16) (xy 19.92 16))
+    (pts (xy 5.08 15.24) (xy 20.32 15.24))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-0000000003ea))
   (wire
-    (pts (xy 5 19) (xy 19.92 19))
+    (pts (xy 5.08 17.78) (xy 20.32 17.78))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-0000000003eb))
 
   (symbol
     (lib_id "PiSXMeRevAClean:DEBUG_Contract")
-    (at 25 10 0)
+    (at 25.4 10.16 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom no)
@@ -466,16 +465,16 @@
       (at 25 18 0)
       (effects (font (size 1.27 1.27))))
     (property "Footprint" ""
-      (at 25 10 0)
+      (at 25.4 10.16 0)
       (effects (font (size 1.27 1.27)) (hide yes)))
     (property "Datasheet" "~"
-      (at 25 10 0)
+      (at 25.4 10.16 0)
       (effects (font (size 1.27 1.27)) (hide yes)))
-    (pin "1" (uuid 90000000-0000-0000-0000-0000000003e8))
+
+        (pin "1" (uuid 90000000-0000-0000-0000-0000000003e8))
     (pin "2" (uuid 90000000-0000-0000-0000-0000000003e9))
     (pin "3" (uuid 90000000-0000-0000-0000-0000000003ea))
     (pin "4" (uuid 90000000-0000-0000-0000-0000000003eb))
-
     (instances (project "PiSXMe_RevA_Clean"
       (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-00000000000a" (reference "X10" ) (unit 1))))
   )

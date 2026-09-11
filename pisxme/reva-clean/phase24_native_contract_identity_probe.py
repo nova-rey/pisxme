@@ -72,6 +72,11 @@ def replace_xy(block: str, old_x: float, old_y: float, new_x: float, new_y: floa
     block = block.replace(f"(xy {ox} {oy})", f"(xy {nx} {ny})")
     block = block.replace(f"(at {ox} {oy} 180)", f"(at {nx} {ny} 180)")
     block = block.replace(f"(at {ox} {oy})", f"(at {nx} {ny})")
+    block = re.sub(
+        rf'\(at {re.escape(ox)} {re.escape(oy)} ([0-9.+-]+)\)',
+        f'(at {nx} {ny} \\1)',
+        block,
+    )
     return block
 
 
@@ -128,14 +133,35 @@ def contract_block(text: str, child: str) -> tuple[int, int, str]:
     return start, stop, text[start:stop]
 
 
+def boundary_label_coord(text: str, name: str) -> tuple[float, float]:
+    """Select the label occurrence attached to the generated contract wire.
+
+    Some live children also use the same hierarchical-label name for an
+    internal support connection.  A name-only dictionary therefore selects
+    the wrong occurrence.  The boundary occurrence is the one whose point is
+    also the endpoint of the native contract marker wire.
+    """
+    pattern = rf'\(hierarchical_label "{re.escape(name)}"[\s\S]*?\(at ([0-9.+-]+) ([0-9.+-]+) 180\)'
+    candidates = [(float(x), float(y)) for x, y in re.findall(pattern, text)]
+    for x, y in candidates:
+        if f'(xy {x:g} {y:g})' in text and f'(xy 19.92 {y:g})' in text:
+            return x, y
+    raise ValueError(f'no contract boundary label {name}: {candidates}')
+
+
 def regenerate_child(text: str, child: str, root_names: list[str]) -> str:
     labels, uuids, coords = label_data(text)
     missing = [name for name in root_names if name not in labels]
-    extra = [name for name in labels if name not in root_names]
-    if missing or extra:
-        raise ValueError(f"{child}: root/child name mismatch missing={missing} extra={extra}")
+    if missing:
+        raise ValueError(f"{child}: root labels missing={missing}")
 
     dstart, dstop, old_def = contract_block(text, child)
+    old_names = {
+        int(number): name
+        for name, number in re.findall(
+            r'\(name "([^"]+)"[\s\S]*?\(number "([^"]+)"', old_def
+        )
+    }
     rectangle = re.search(r'\(rectangle[\s\S]*?\n\s*\)', old_def)
     if not rectangle:
         raise ValueError(f"{child}: contract rectangle missing")
@@ -161,22 +187,44 @@ def regenerate_child(text: str, child: str, root_names: list[str]) -> str:
     istart = text.rfind('(symbol', 0, lib_pos)
     istop = end_expr(text, istart)
     instance = text[istart:istop]
+    old_instance = {
+        int(number): uuid
+        for number, uuid in re.findall(
+            r'\(pin "([0-9]+)" \(uuid "?([^\)" ]+)', instance
+        )
+    }
+    uuid_by_name = {
+        old_names[number]: uuid
+        for number, uuid in old_instance.items()
+        if number in old_names
+    }
     instance = re.sub(r'\n\s*\(pin "[^"]+" \(uuid "?[^") ]+"?\)\)', '', instance)
     pin_lines = "\n".join(
-        f'    (pin "{index + 1}" (uuid {uuids[name]}))'
+        f'    (pin "{index + 1}" (uuid {uuid_by_name.get(name, f"90000000-0000-0000-0000-{index + 1:012x}")}))'
         for index, name in enumerate(root_names)
     )
     insertion = instance.index('(instances')
     instance = instance[:insertion] + pin_lines + "\n    " + instance[insertion:]
     text = text[:istart] + instance + text[istop:]
 
-    for index, name in enumerate(labels):
-        old_x, old_y = coords[name]
+    additions = []
+    for index, name in enumerate(root_names):
         new_y = 10.16 + 2.54 * index
+        try:
+            old_x, old_y = boundary_label_coord(text, name)
+        except ValueError:
+            label_uuid = f'50000000-0000-0000-0000-{index + 1:012x}'
+            wire_uuid = f'a0000000-0000-0000-0000-{index + 1:012x}'
+            additions.append(
+                f'  (hierarchical_label "{name}" (shape bidirectional) '
+                f'(at 5.08 {new_y:g} 180) '
+                f'(effects (font (size 1.27 1.27)) (justify right)) '
+                f'(uuid {label_uuid}))\n'
+                f'  (wire (pts (xy 5.08 {new_y:g}) (xy 20.32 {new_y:g})) '
+                f'(stroke (width 0) (type default)) (uuid {wire_uuid}))\n'
+            )
+            continue
         text = replace_xy(text, old_x, old_y, 5.08, new_y)
-        # Contract pins are at x=20.32 after the instance is translated to
-        # the native 2.54-mm origin.  Keep the complete contract wire attached
-        # to its pin rather than moving only the label endpoint.
         text = replace_xy(text, 19.92, old_y, 20.32, new_y)
     # Move the placed contract instance with its regenerated definition.  The
     # instance UUID and serialized pin UUIDs remain untouched.
@@ -186,6 +234,8 @@ def regenerate_child(text: str, child: str, root_names: list[str]) -> str:
     istop = end_expr(text, istart)
     instance = text[istart:istop].replace('(at 25 10 0)', '(at 25.4 10.16 0)')
     text = text[:istart] + instance + text[istop:]
+    if additions:
+        text = text[:istart] + "".join(additions) + text[istart:]
     return text
 
 
@@ -195,11 +245,13 @@ def main() -> None:
     OUT.mkdir()
     source_root = (HERE / ROOT_NAME).read_text()
     root = transform_root(source_root)
+    transformed_children = {}
     for child in CHILDREN:
         _, _, root_names = root_sheet(source_root, child)
         names = [name for name, _, _ in root_names]
         source = (HERE / f"{child}.kicad_sch").read_text()
-        (OUT / f"{child}.kicad_sch").write_text(regenerate_child(source, child, names))
+        transformed_children[child] = regenerate_child(source, child, names)
+        (OUT / f"{child}.kicad_sch").write_text(transformed_children[child])
     (OUT / ROOT_NAME).write_text(root)
     for name in (
         "sym-lib-table", "fp-lib-table", "PiSXMe_RevA_Clean_complete.kicad_sym",
@@ -208,6 +260,18 @@ def main() -> None:
         source = HERE / name
         if source.exists():
             shutil.copy2(source, OUT / name)
+    library = OUT / "PiSXMe_RevA_Clean_complete.kicad_sym"
+    if library.exists():
+        library_text = library.read_text()
+        for child, child_text in transformed_children.items():
+            marker = f'(symbol "PiSXMeRevAClean:{child}_Contract"'
+            child_pos = child_text.index(marker)
+            child_end = end_expr(child_text, child_pos)
+            child_symbol = child_text[child_pos:child_end]
+            lib_pos = library_text.index(marker)
+            lib_end = end_expr(library_text, lib_pos)
+            library_text = library_text[:lib_pos] + child_symbol + library_text[lib_end:]
+        library.write_text(library_text)
     pretty = HERE / "PiSXMe_RevA_Clean.pretty"
     if pretty.exists():
         shutil.copytree(pretty, OUT / pretty.name)

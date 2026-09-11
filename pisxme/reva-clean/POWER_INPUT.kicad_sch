@@ -385,30 +385,29 @@
         (at 0 0 0)
         (effects (font (size 1.27 1.27)) (hide yes)))
       (symbol "POWER_INPUT_Contract_1_1"
-        (rectangle (start -1.27 -5.77) (end 1.27 5.77)
-          (stroke (width 0.254) (type default)) (fill (type background)))
-
-        (pin passive line
-          (at -5.08 0 0)
-          (length 3.81)
-          (name "12V_IN_A" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27)))))
-        (pin passive line
-          (at -5.08 -3 0)
-          (length 3.81)
-          (name "12V_IN_B" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27)))))
-        (pin passive line
-          (at -5.08 -6 0)
-          (length 3.81)
-          (name "12V_PROTECTED" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27)))))
-        (pin passive line
-          (at -5.08 -9 0)
-          (length 3.81)
-          (name "POWER_PG_FAULT" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27)))))
-      )
+  (rectangle (start -1.27 -7.27) (end 1.27 1.27)
+    (stroke (width 0.254) (type default)) (fill (type background)))
+  (pin passive line
+    (at -5.08 -0 0)
+    (length 3.81)
+    (name "12V_IN_A" (effects (font (size 1.27 1.27))))
+    (number "1" (effects (font (size 1.27 1.27)))))
+  (pin passive line
+    (at -5.08 -2.54 0)
+    (length 3.81)
+    (name "12V_IN_B" (effects (font (size 1.27 1.27))))
+    (number "2" (effects (font (size 1.27 1.27)))))
+  (pin passive line
+    (at -5.08 -5.08 0)
+    (length 3.81)
+    (name "12V_PROTECTED" (effects (font (size 1.27 1.27))))
+    (number "3" (effects (font (size 1.27 1.27)))))
+  (pin passive line
+    (at -5.08 -7.62 0)
+    (length 3.81)
+    (name "POWER_PG_FAULT" (effects (font (size 1.27 1.27))))
+    (number "4" (effects (font (size 1.27 1.27)))))
+)
     )
 (symbol "PiSXMeRevAClean:LM74700Q1" (pin_names (offset 0.8)) (exclude_from_sim no) (in_bom yes) (on_board yes)
  (property "Reference" "U" (at 0 -10 0) (effects (font (size 1 1))))
@@ -451,45 +450,45 @@
 
   (hierarchical_label "12V_IN_A"
     (shape bidirectional)
-    (at 5 10 180)
+    (at 5.08 10.16 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000190))
   (hierarchical_label "12V_IN_B"
     (shape bidirectional)
-    (at 5 13 180)
+    (at 5.08 12.7 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000191))
   (hierarchical_label "12V_PROTECTED"
     (shape bidirectional)
-    (at 5 16 180)
+    (at 5.08 15.24 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000192))
   (hierarchical_label "POWER_PG_FAULT"
     (shape bidirectional)
-    (at 5 19 180)
+    (at 5.08 17.78 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-000000000193))
 
   (wire
-    (pts (xy 5 10) (xy 19.92 10))
+    (pts (xy 5.08 10.16) (xy 20.32 10.16))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-000000000190))
   (wire
-    (pts (xy 5 13) (xy 19.92 13))
+    (pts (xy 5.08 12.7) (xy 20.32 12.7))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-000000000191))
   (wire
-    (pts (xy 5 16) (xy 19.92 16))
+    (pts (xy 5.08 15.24) (xy 20.32 15.24))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-000000000192))
   (wire
-    (pts (xy 5 19) (xy 19.92 19))
+    (pts (xy 5.08 17.78) (xy 20.32 17.78))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-000000000193))
 
   (symbol
     (lib_id "PiSXMeRevAClean:POWER_INPUT_Contract")
-    (at 25 10 0)
+    (at 25.4 10.16 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom no)
@@ -503,16 +502,16 @@
       (at 25 18 0)
       (effects (font (size 1.27 1.27))))
     (property "Footprint" ""
-      (at 25 10 0)
+      (at 25.4 10.16 0)
       (effects (font (size 1.27 1.27)) (hide yes)))
     (property "Datasheet" "~"
-      (at 25 10 0)
+      (at 25.4 10.16 0)
       (effects (font (size 1.27 1.27)) (hide yes)))
-    (pin "1" (uuid 90000000-0000-0000-0000-000000000190))
+
+        (pin "1" (uuid 90000000-0000-0000-0000-000000000190))
     (pin "2" (uuid 90000000-0000-0000-0000-000000000191))
     (pin "3" (uuid 90000000-0000-0000-0000-000000000192))
     (pin "4" (uuid 90000000-0000-0000-0000-000000000193))
-
     (instances (project "PiSXMe_RevA_Clean"
       (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000004" (reference "X4" ) (unit 1))))
   )

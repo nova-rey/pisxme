@@ -385,60 +385,59 @@
         (at 0 0 0)
         (effects (font (size 1.27 1.27)) (hide yes)))
       (symbol "V100_POWER_Contract_1_1"
-        (rectangle (start -1.27 -4.27) (end 1.27 4.27)
-          (stroke (width 0.254) (type default)) (fill (type background)))
-
-        (pin passive line
-          (at -5.08 0 0)
-          (length 3.81)
-          (name "V100_POWER_12V" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27)))))
-        (pin passive line
-          (at -5.08 -3 0)
-          (length 3.81)
-          (name "V100_GND" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27)))))
-        (pin passive line
-          (at -5.08 -6 0)
-          (length 3.81)
-          (name "V100_THERMAL" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27)))))
-      )
+  (rectangle (start -1.27 -7.27) (end 1.27 1.27)
+    (stroke (width 0.254) (type default)) (fill (type background)))
+  (pin passive line
+    (at -5.08 -0 0)
+    (length 3.81)
+    (name "V100_POWER_12V" (effects (font (size 1.27 1.27))))
+    (number "1" (effects (font (size 1.27 1.27)))))
+  (pin passive line
+    (at -5.08 -2.54 0)
+    (length 3.81)
+    (name "V100_GND" (effects (font (size 1.27 1.27))))
+    (number "2" (effects (font (size 1.27 1.27)))))
+  (pin passive line
+    (at -5.08 -5.08 0)
+    (length 3.81)
+    (name "V100_THERMAL" (effects (font (size 1.27 1.27))))
+    (number "3" (effects (font (size 1.27 1.27)))))
+)
     )
   )
 
   (hierarchical_label "V100_POWER_12V"
     (shape bidirectional)
-    (at 5 10 180)
+    (at 5.08 10.16 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-00000000012c))
   (hierarchical_label "V100_GND"
     (shape bidirectional)
-    (at 5 13 180)
+    (at 5.08 12.7 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-00000000012d))
   (hierarchical_label "V100_THERMAL"
     (shape bidirectional)
-    (at 5 16 180)
+    (at 5.08 15.24 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 50000000-0000-0000-0000-00000000012e))
 
   (wire
-    (pts (xy 5 10) (xy 19.92 10))
+    (pts (xy 5.08 10.16) (xy 20.32 10.16))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-00000000012c))
   (wire
-    (pts (xy 5 13) (xy 19.92 13))
+    (pts (xy 5.08 12.7) (xy 20.32 12.7))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-00000000012d))
   (wire
-    (pts (xy 5 16) (xy 19.92 16))
+    (pts (xy 5.08 15.24) (xy 20.32 15.24))
     (stroke (width 0) (type default))
     (uuid a0000000-0000-0000-0000-00000000012e))
 
   (symbol
     (lib_id "PiSXMeRevAClean:V100_POWER_Contract")
-    (at 25 10 0)
+    (at 25.4 10.16 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom no)
@@ -452,15 +451,15 @@
       (at 25 18 0)
       (effects (font (size 1.27 1.27))))
     (property "Footprint" ""
-      (at 25 10 0)
+      (at 25.4 10.16 0)
       (effects (font (size 1.27 1.27)) (hide yes)))
     (property "Datasheet" "~"
-      (at 25 10 0)
+      (at 25.4 10.16 0)
       (effects (font (size 1.27 1.27)) (hide yes)))
-    (pin "1" (uuid 90000000-0000-0000-0000-00000000012c))
+
+        (pin "1" (uuid 90000000-0000-0000-0000-00000000012c))
     (pin "2" (uuid 90000000-0000-0000-0000-00000000012d))
     (pin "3" (uuid 90000000-0000-0000-0000-00000000012e))
-
     (instances (project "PiSXMe_RevA_Clean"
       (path "/30000000-0000-0000-0000-000000000000/10000000-0000-0000-0000-000000000003" (reference "X3" ) (unit 1))))
   )

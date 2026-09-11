@@ -11504,3 +11504,10 @@ and marker wires. Native ERC fell to 826 warnings but added 87 label-dangling
 findings and removed contract libparts from the netlist, so it was rejected.
 Canonical CAD remains unchanged; synthetic contracts cannot be deleted without
 re-authoring live child connections.
+
+2026-09-11 — Phase 24 hierarchy contract repair promoted: preserved contract
+pin UUIDs by signal identity, restored missing sparse boundary labels/wires,
+and synchronized the project-local symbol library. Native KiCad ERC on the
+canonical source is 777 warnings/0 errors, with no hierarchy errors. Semantic
+netlist comparison is exact at 338 nets with zero changed node sets. The
+remaining warnings stay open and unwaived; Phase 24 is not yet closed.
