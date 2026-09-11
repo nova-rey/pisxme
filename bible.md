@@ -6108,6 +6108,12 @@ symbol/label endpoints. Confirmed REGULATORS no longer contains the repaired
 5 mm/1 mm unowned families. The next repair is per-instance owner mapping;
 global root-coordinate normalization is ruled out by the native disposable
 probe.
+
+2026-09-11 — Phase 24 PWR_FLAG library probe: replacing the two embedded
+power:PWR_FLAG definitions with KiCad 10.0.5's installed power library left
+native ERC unchanged at 489 warnings/0 errors and both lib_symbol_mismatch
+findings present. The direct substitution was rejected; canonical CAD is
+unchanged.
 2026-09-07 — PiSXMe Phase 24 Path B: tested disposable QFN rail-fanout probe
 V6. Native opens fell 26 to 20, but DRC rose to 20 with real
 RTL_1V1/XTAL_OUT and RTL_1V1/USB_TXP0 shorts. Rejected as route

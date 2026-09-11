@@ -51,6 +51,11 @@ hierarchy structure and exact 338-net/node parity but left ERC unchanged at
 an indiscriminate root-x/grid transform. Receipt:
 `PHASE24_ROOT_GRID_PROBE_REJECT_RECEIPT_20260911.md`.
 
+The direct KiCad 10 installed-library substitution for the two embedded
+`PWR_FLAG` definitions was rejected: native ERC remained at 489 warnings and
+both `lib_symbol_mismatch` findings remained. Receipt:
+`PHASE24_PWRFLAG_LIBRARY_PROBE_REJECT_RECEIPT_20260911.md`.
+
 ## Structural evidence
 
 `validation/phase3/phase24_hierarchy_structure_audit.py` now inventories the
