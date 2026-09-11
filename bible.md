@@ -11311,3 +11311,10 @@ the accepted local primitive. Receipt:
   Native ERC remained 872 warnings / 0 errors, and the disposable netlist
   diff contained only the intended pin-name change. No PCB or topology was
   changed; broader Phase 24 gates remain open.
+
+## 2026-09-11 — PWR_FLAG normalization rejected
+
+- Tested replacing embedded PWR_FLAG definitions with the installed KiCad
+  authority in disposable copies. It reduced one mismatch but introduced a
+  real pin-to-pin warning due to unit serialization differences. The
+  canonical source remains unchanged; standard PWR_FLAG mismatches stay open.

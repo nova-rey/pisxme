@@ -1,5 +1,14 @@
 # Phase 24 schematic ERC classification — 2026-09-11
 
+## PWR_FLAG normalization experiment — 2026-09-11
+
+Replacing embedded `power:PWR_FLAG` definitions with the installed KiCad
+library was tested in disposable copies. It reduced one mismatch but created
+a real `pin_to_pin` warning because the official library's unit serialization
+does not match the existing child instances. The experiment is rejected;
+canonical source and electrical ownership remain unchanged. The remaining
+standard PWR_FLAG mismatches require a unit-compatible native repair.
+
 ## Ethernet contract-library repair — 2026-09-11
 
 The canonical custom Ethernet contract symbol was synchronized to the live

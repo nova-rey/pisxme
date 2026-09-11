@@ -1,5 +1,14 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — PWR_FLAG normalization rejected — 2026-09-11
+
+A disposable attempt to replace embedded `PWR_FLAG` definitions with the
+installed KiCad `power.kicad_sym` authority was rejected. Although it removed
+one library mismatch, it introduced a real `pin_to_pin` warning from the
+different KiCad unit serialization. The canonical source remains unchanged;
+the two standard PWR_FLAG mismatches are still open and unwaived pending a
+unit-compatible native repair.
+
 ## Current checkpoint — Ethernet contract library synchronized — 2026-09-11
 
 The canonical `PiSXMeRevAClean:ETHERNET_Contract` library symbol had a stale
