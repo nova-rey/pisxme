@@ -2,6 +2,13 @@
 
 ## CURRENT AUTHORITATIVE STATE — 2026-09-10 LOCAL QFN EXCEPTION INTEGRATED
 
+## CURRENT VALIDATION UPDATE — 2026-09-11 SUPPORT OVERLAY
+
+The latest real-pad MIC2545A support overlay is rejected at 38 native DRC
+violations and 3 unconnected items. It is an implementation experiment, not
+an authority change. The accepted RTL9210B/V1603 baseline remains 0/0; the
+next bounded repair is coherent support-island translation.
+
 The authorized RTL9210B QFN source-breakout exception is now applied to the
 accepted V1603/V1517 Path-B candidate. Only the immediate six-net U1 departure
 segments use 0.15 mm copper; all downstream V1603 corridors remain 0.20 mm,

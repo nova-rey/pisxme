@@ -1,0 +1,171 @@
+** Drc report for PHASE24_RTL9210B_PATHB_ISOLATEB_SUPPORT_INTEGRATED.kicad_pcb **
+** Created on 2026-09-11T08:46:15 **
+** Report includes: Errors, Warnings **
+
+** Found 38 DRC violations **
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.4308 mm)
+    Local override; error
+    @(94.0500 mm, 70.4000 mm): Track [REFCLK_P] on F.Cu, length 1.0500 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[clearance]: Clearance violation (zone clearance 0.5000 mm; actual 0.2142 mm)
+    Local override; error
+    @(94.0500 mm, 73.2000 mm): Track [LANE0_TXP] on F.Cu, length 1.0500 mm
+    @(65.5000 mm, 40.5000 mm): Zone [GND] on F.Cu, priority 0
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(104.0000 mm, 84.0000 mm): Track [GND] on B.Cu, length 10.4000 mm
+    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
+    @(105.0000 mm, 69.8000 mm): Track [SPICS] on B.Cu, length 6.4000 mm
+[shorting_items]: Items shorting two nets (nets SPICS and SSD_3V3)
+    Local override; error
+    @(111.4000 mm, 69.8000 mm): Via [SPICS] on F.Cu - B.Cu
+    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(106.0000 mm, 70.4000 mm): Track [SPISO] on B.Cu, length 6.6000 mm
+    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(107.0000 mm, 71.0000 mm): Track [SPISO3] on B.Cu, length 11.6000 mm
+    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(102.0000 mm, 81.0000 mm): Track [PERST_N] on B.Cu, length 32.0000 mm
+    @(112.0000 mm, 91.9050 mm): Track [RTL_3V3] on B.Cu, length 13.4050 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(114.4000 mm, 84.0000 mm): Track [GND] on B.Cu, length 6.8000 mm
+    @(113.8000 mm, 77.2000 mm): Track [RTL_3V3] on B.Cu, length 7.2000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(114.0000 mm, 66.0000 mm): Track [RTL_3V3] on B.Cu, length 6.0000 mm
+    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(108.0000 mm, 72.0000 mm): Track [SPICLK] on B.Cu, length 9.4000 mm
+    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(109.0000 mm, 75.2000 mm): Track [SPISI] on B.Cu, length 7.2000 mm
+    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(102.0000 mm, 64.8000 mm): Track [RTL_1V1] on B.Cu, length 10.0000 mm
+    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(114.4000 mm, 84.0000 mm): Track [GND] on B.Cu, length 6.8000 mm
+    @(102.0000 mm, 81.0000 mm): Track [PERST_N] on B.Cu, length 32.0000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(107.0000 mm, 74.0000 mm): Track [CLKREQ_N] on B.Cu, length 12.2000 mm
+    @(111.0000 mm, 89.3650 mm): Track [SSD_3V3] on B.Cu, length 25.3650 mm
+[clearance]: Clearance violation ( clearance 0.2000 mm; actual 0.0500 mm)
+    Local override; error
+    @(98.3500 mm, 74.8000 mm): Track [ISOLATEB] on B.Cu, length 12.0000 mm
+    @(98.8000 mm, 76.0000 mm): Via [CLKREQ_N] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets GND and ISOLATEB)
+    Local override; error
+    @(104.0000 mm, 90.6350 mm): Track [GND] on B.Cu, length 6.6350 mm
+    @(104.2000 mm, 86.8000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+[clearance]: Clearance violation (pad clearance 0.1500 mm; actual 0.1432 mm)
+    Local override; error
+    @(98.4000 mm, 73.9500 mm): Pad 10 [<no net>] of U1 on F.Cu
+    @(99.2000 mm, 73.9500 mm): Track [ISOLATEB] on F.Cu, length 1.2021 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(98.3500 mm, 74.8000 mm): Track [ISOLATEB] on B.Cu, length 12.0000 mm
+    @(96.4000 mm, 79.5000 mm): Track [PEDET] on B.Cu, length 22.6000 mm
+[tracks_crossing]: Tracks crossing
+    Local override; error
+    @(104.0000 mm, 90.6350 mm): Track [GND] on B.Cu, length 6.6350 mm
+    @(95.5000 mm, 86.8000 mm): Track [ISOLATEB] on B.Cu, length 8.7000 mm
+[clearance]: Clearance violation (pad clearance 0.1500 mm; actual 0.0525 mm)
+    Local override; error
+    @(98.4000 mm, 73.9500 mm): Pad 10 [<no net>] of U1 on F.Cu
+    @(98.3500 mm, 74.8000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+[hole_clearance]: Hole clearance violation (board minimum hole clearance 0.2500 mm; actual 0.2275 mm)
+    Local override; error
+    @(98.4000 mm, 73.9500 mm): Pad 10 [<no net>] of U1 on F.Cu
+    @(98.3500 mm, 74.8000 mm): Via [ISOLATEB] on F.Cu - B.Cu
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.1000 mm)
+    Rule: board setup constraints edge; error
+    @(64.9000 mm, 39.9000 mm): Rectangle on Edge.Cuts
+    @(115.0000 mm, 94.8000 mm): Track [GND] on F.Cu, length 2.0000 mm
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(64.9000 mm, 39.9000 mm): Rectangle on Edge.Cuts
+    @(117.0000 mm, 94.8000 mm): Via [GND] on F.Cu - B.Cu
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)
+    Rule: board setup constraints edge; error
+    @(64.9000 mm, 39.9000 mm): Rectangle on Edge.Cuts
+    @(115.0000 mm, 94.8000 mm): Pad 2 [GND] of C18 on F.Cu
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(94.0500 mm, 70.4000 mm): Track [REFCLK_P] on F.Cu, length 1.0500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(94.0500 mm, 70.8000 mm): Track [REFCLK_N] on F.Cu, length 1.0500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(94.0500 mm, 71.6000 mm): Track [LANE0_RXP] on F.Cu, length 1.0500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(94.0500 mm, 72.0000 mm): Track [LANE0_RXN] on F.Cu, length 1.0500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(94.0500 mm, 72.8000 mm): Track [LANE0_TXN] on F.Cu, length 1.0500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default' (diff pair); error
+    @(94.0500 mm, 73.2000 mm): Track [LANE0_TXP] on F.Cu, length 1.0500 mm
+[track_width]: Track width (board setup constraints min width 0.2000 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(99.2000 mm, 73.9500 mm): Track [ISOLATEB] on F.Cu, length 1.2021 mm
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(99.2000 mm, 73.9500 mm): Track [ISOLATEB] on F.Cu, length 1.2021 mm
+    @(98.8000 mm, 73.9500 mm): Pad 11 [<no net>] of U1 on F.Cu
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(95.5000 mm, 86.8000 mm): Track [ISOLATEB] on B.Cu, length 8.7000 mm
+[track_dangling]: Track has unconnected end
+    Local override; warning
+    @(114.0000 mm, 93.2000 mm): Track [RTL_3V3] on F.Cu, length 1.2950 mm
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(117.0000 mm, 94.8000 mm): Via [GND] on F.Cu - B.Cu
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(100.0000 mm, 96.2000 mm): Via [GND] on F.Cu - B.Cu
+[silk_edge_clearance]: Silkscreen clipped by board edge
+    Rule: board setup constraints silk; warning
+    @(64.9000 mm, 39.9000 mm): Rectangle on Edge.Cuts
+    @(102.0000 mm, 95.0000 mm): Reference field of R15
+
+** Found 3 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(112.0000 mm, 91.9050 mm): Track [RTL_3V3] on B.Cu, length 13.4050 mm
+    @(114.0000 mm, 93.2000 mm): Track [RTL_3V3] on F.Cu, length 1.2950 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(102.0000 mm, 96.2000 mm): Pad 2 [GND] of R15 on F.Cu
+    @(104.0000 mm, 90.6350 mm): Track [GND] on B.Cu, length 6.6350 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(105.3000 mm, 90.6350 mm): Track [GND] on F.Cu, length 1.3000 mm
+    @(115.0000 mm, 94.8000 mm): Pad 2 [GND] of C18 on F.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

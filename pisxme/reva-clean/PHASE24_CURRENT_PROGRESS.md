@@ -14,6 +14,12 @@ Path-B and full-board gates.
 
 ## Current next action — corrected ISOLATEB support authority — 2026-09-11
 
+The latest real-pad full-board support attempt is rejected at 38 native DRC
+violations and 3 unconnected items. It improved the prior 6-open result but
+still crosses occupied SPI/control/power corridors. This is route-implementation
+evidence only; the next bounded repair is coherent local support-island
+translation, with U1 orientation and V1603 launch frozen.
+
 The MIC2545A fixture correction is complete: U3.2/FLG is netless rather than
 incorrectly tied to GND. Native DRC, physical duplicated-pin joins, negative
 control, and DFM pass. The prior combined-placement trial is rejected. The

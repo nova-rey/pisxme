@@ -11123,3 +11123,10 @@ the accepted local primitive. Receipt:
   latest full-board MIC2545A overlay has 37 DRC violations and 6 unconnected
   items, while the preceding overlay had 36 and 6. Neither overlay is
   production authority; the accepted U1/V1603 baseline remains clean.
+
+## 2026-09-11 — real-pad support overlay remains rejected
+
+- A bounded overlay using real U2/J1 endpoints reduced unconnected items from
+  six to three, but native DRC rose to 38 due to occupied SPI/control/power
+  corridors. It remains disposable route-implementation evidence; U1
+  orientation and V1603 launch authority are unchanged.
