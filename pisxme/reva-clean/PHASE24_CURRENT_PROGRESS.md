@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — identity-driven contract probe rejected — 2026-09-11
+
+The identity-driven disposable regeneration preserved all live root/child port
+sets and reduced `unconnected_wire_endpoint` findings from 147 to 144, but
+native ERC reported four real `pin_not_connected` errors on sparse regulator
+and storage support ports. It was not promoted. Receipt:
+`PHASE24_LIVE_CONTRACT_REGEN_PROBE_REJECT_RECEIPT_20260911.md`.
+
 ## Current checkpoint — PWR_FLAG authority substitution rejected — 2026-09-11
 
 The repair helper was corrected to process all four embedded PWR_FLAG copies,

@@ -11440,3 +11440,8 @@ exactly match their child hierarchical-label sets by signal name. This narrows
 the 795-warning cluster to embedded contract-symbol/instance serialization and
 coordinate termination; no synthetic edges were added and canonical electrical
 identity remains unchanged.
+
+2026-09-11 — Identity-driven live contract regeneration probe rejected: the
+disposable v2 preserved all ten identity sets and reduced dangling wire endpoints
+147 to 144, but native ERC added four pin-not-connected errors on sparse
+REGULATORS/STORAGE support ports. Canonical sources were untouched.

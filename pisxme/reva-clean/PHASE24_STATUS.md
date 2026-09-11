@@ -1,5 +1,13 @@
 # Phase 24 acreage validation status
 
+## CURRENT EXPERIMENT — IDENTITY-DRIVEN CONTRACT REGENERATION REJECTED — 2026-09-11
+
+The disposable live-contract regeneration preserved all ten root/child
+identity sets and reduced dangling wire endpoints from 147 to 144, but added
+four native `pin_not_connected` errors on sparse `REGULATORS` and `STORAGE`
+support ports. No canonical source changed. See
+`PHASE24_LIVE_CONTRACT_REGEN_PROBE_REJECT_RECEIPT_20260911.md`.
+
 ## CURRENT EXPERIMENT — PWR_FLAG AUTHORITY SUBSTITUTION REJECTED — 2026-09-11
 
 The helper now handles all four embedded PWR_FLAG definitions, but replacing
