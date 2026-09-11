@@ -11658,3 +11658,10 @@ audits pass; the full-board storage power-owner candidate still fails because
 the selected fixture lacks the expected J3 power contacts. Corrected stale
 current-progress and ERC-map prose so the PWR_FLAG namespace repair is recorded
 as closed while older counts remain historical.
+
+2026-09-11 — Phase 24 documentation guard: marked the older endpoint-grid and
+ERC-classification analyses as historical snapshots and added current-state
+overrides. They now point to the live 483-warning/0-error census and explicitly
+identify the closed unconnected-wire, no-connect-dangling, and library-mismatch
+classes. The workstream table records the latest candidate-scoped PCB DRC as
+180 violations/477 unconnected items without misrepresenting it as canonical.

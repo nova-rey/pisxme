@@ -1,5 +1,14 @@
 # Phase 24 schematic ERC classification — 2026-09-11
 
+> **CURRENT-STATE OVERRIDE:** This classification contains historical
+> experiments. The live canonical ERC is **483 warnings / 0 errors** after the
+> promoted regulator-stub, duplicate-wire, and PWR_FLAG namespace repairs.
+> Current open classes are 197 `endpoint_off_grid`, 232
+> `isolated_pin_label`, 30 `same_local_global_label`, and 24
+> `multiple_net_names`; `unconnected_wire_endpoint`, `no_connect_dangling`,
+> and `lib_symbol_mismatch` are currently zero. Historical counts and rejected
+> probes below remain evidence only.
+
 ## PWR_FLAG normalization experiment — 2026-09-11
 
 Replacing embedded `power:PWR_FLAG` definitions with the installed KiCad

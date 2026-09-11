@@ -1,5 +1,13 @@
 # Phase 24 endpoint-grid cluster analysis — 2026-09-11
 
+> **CURRENT-STATE OVERRIDE:** This analysis is historical evidence. The live
+> canonical ERC census after the promoted regulator-stub, duplicate-wire, and
+> PWR_FLAG namespace repairs is **483 warnings / 0 errors**, comprising 197
+> `endpoint_off_grid`, 232 `isolated_pin_label`, 30
+> `same_local_global_label`, and 24 `multiple_net_names`. Counts below that
+> describe 416/147/851 findings are pre-repair snapshots and are not current
+> open-gate values.
+
 ## Current evidence
 
 Native KiCad 10.0.5 full ERC v3 reports 416 `endpoint_off_grid` warnings,

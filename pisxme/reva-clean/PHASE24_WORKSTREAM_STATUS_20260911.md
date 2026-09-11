@@ -16,7 +16,7 @@ an engineering blocker.
 | Path-B native PCB | Root Foreman / native KiCad | PASS for isolated candidate | Current V1603 candidate: native DRC 0/0 and integrated six-net audit plus six negative controls PASS. Production parity remains open. |
 | Dual-mode storage contract | Root Foreman / focused audit | PASS for mode contract | `phase24_dual_mode_storage_mode_audit.py`: PASS. |
 | Storage power/physical connectivity | Root Foreman / focused audit | OPEN | V88/V89/V90 preserved nine-contact connectivity but failed physical policy/DRC. V91 also passed connectivity but created a real J3 `STORAGE_3V3`↔`JMS_AVDDL` short (621/341 DRC). Dense same-side fanout is rejected; future repair must reserve connector channels first. |
-| DFM/native PCB | Root Foreman / native KiCad | OPEN | Native DRC evidence is candidate-scoped; run integrated candidate DRC and manufacturing-rule audit after parity target is selected. |
+| DFM/native PCB | Root Foreman / native KiCad | OPEN | Current disposable `ACREAGE_CANDIDATE.kicad_pcb` check is 180 violations / 477 unconnected items; this is candidate-scoped evidence, not a canonical closure claim. Run the selected integrated candidate DRC and manufacturing-rule audit after parity target is selected. |
 
 ## Integration rule
 
