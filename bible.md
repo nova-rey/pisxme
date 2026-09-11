@@ -11445,3 +11445,8 @@ identity remains unchanged.
 disposable v2 preserved all ten identity sets and reduced dangling wire endpoints
 147 to 144, but native ERC added four pin-not-connected errors on sparse
 REGULATORS/STORAGE support ports. Canonical sources were untouched.
+
+2026-09-11 — Path-B candidate validation recheck: native KiCad 10.0.5 DRC
+reported 0 violations and 0 unconnected items on the accepted U1LOCAL015
+candidate; dual-mode storage, storage-library, and U5 native connectivity
+audits also passed. Integrated parity and full Phase 24 remain open.
