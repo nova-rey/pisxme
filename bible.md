@@ -11144,3 +11144,10 @@ the accepted local primitive. Receipt:
   for U3/R15/C18. Native DRC improved the disposable overlay to 24 violations
   and 1 unconnected item. The remaining open is the physical join to the
   existing board-GND via at (115.6,78.0); production support remains OPEN.
+
+## 2026-09-11 — board-ground transition closed in disposable overlay
+
+- Added an outboard B.Cu perimeter return from the local U3/R15/C18 ground
+  spine to the existing board-GND transition at (115.6,78.0). Native
+  connectivity now reports 0 unconnected items; 24 physical DRC findings
+  remain, so the overlay is not promoted.

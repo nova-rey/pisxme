@@ -72,5 +72,9 @@ seg(ilim,(123.3,87.905),(121,89.8))
 seg(gnd,(123.3,86.635),(124.5,86.635)); seg(gnd,(124.5,86.635),(124.5,94))
 seg(gnd,(124.5,94),(121,94)); seg(gnd,(121,94),(121,92.2))
 seg(gnd,(124.5,94),(130,94)); seg(gnd,(130,94),(130,90.8)); via(gnd,124.5,94)
+# Return along the outboard B.Cu perimeter to the existing authoritative
+# board-GND transition; this avoids the occupied inner control corridors.
+seg(gnd,(124.5,94),(140,94),B); seg(gnd,(140,94),(140,78),B)
+seg(gnd,(140,78),(115.6,78),B)
 
 pcbnew.ZONE_FILLER(b).Fill(b.Zones()); b.Save(str(OUT)); print(OUT)

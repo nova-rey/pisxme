@@ -20,10 +20,11 @@ failures are localized to occupied B.Cu corridors and two local ground joins;
 this is disposable route evidence, not a change to the frozen RTL9210B/V1603
 authority.
 
-The subsequent local ground-spine repair improved the same candidate to 24
-native DRC violations and 1 unconnected item. The sole open is the local
-ground spine to the existing board-GND via at (115.6,78.0); this remains
-disposable implementation evidence.
+The subsequent local ground-spine repair, including an outboard B.Cu perimeter
+return to the existing board-GND transition at (115.6,78.0), improved the same
+candidate to 24 native DRC violations and 0 unconnected items. The remaining
+findings are physical corridor/clearance issues; this remains disposable
+implementation evidence.
 
 The latest real-pad full-board support attempt is rejected at 38 native DRC
 violations and 3 unconnected items. It improved the prior 6-open result but
