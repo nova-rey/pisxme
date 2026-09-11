@@ -7,6 +7,11 @@ and exact exported netlist name/node parity. Promoted the repair in
 POWER_INPUT.kicad_sch; receipt:
 pisxme/reva-clean/PHASE24_POWER_DUPLICATE_WIRE_REPAIR_RECEIPT_20260911.md.
 
+2026-09-11: Reconciled Phase 24 narrative documents so the current ERC
+census is 485 warnings / 0 errors and the 197 remaining endpoint findings
+exclude the closed duplicate POWER_INPUT wire family. Historical 489/777
+counts remain only where identified as pre-repair evidence.
+
 2026-09-08: Parameterized the retained V3 JMS583 QFN escape author for an
 explicit disposable base/output, enabling controlled integration with later
 storage candidates without mutating the Path-A basis. The earlier complete-

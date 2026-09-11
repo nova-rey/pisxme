@@ -32,8 +32,8 @@ cannot simply be deleted; live child connections must be re-authored.
 ## CURRENT SOURCE REPAIR — NATIVE IDENTITY CONTRACT PROMOTED — 2026-09-11
 
 The corrected identity-driven repair is now in the canonical root, all ten
-children, and the project-local symbol library. Native ERC reports 777
-warnings / 0 errors; the structural hierarchy audit and native authority test
+children, and the project-local symbol library. Its pre-regulator-repair
+native ERC reported 777 warnings / 0 errors; the structural hierarchy audit and native authority test
 pass. Semantic native netlist comparison is exact: 338 nets, zero missing or
 extra names, and zero changed node sets. Receipt:
 `PHASE24_HIERARCHY_CONTRACT_REPAIR_RECEIPT_20260911.md`. Remaining warnings

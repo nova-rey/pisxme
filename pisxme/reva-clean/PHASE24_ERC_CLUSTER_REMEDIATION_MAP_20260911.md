@@ -32,9 +32,10 @@ preserved electrical intent.
 The identity-preserving repair closed the native hierarchy-error defect and
 the promoted regulator-stub and duplicate-wire repairs reduced the live census from 777 to 485
 without changing
-the 338-net native netlist. The remaining 201 endpoint findings are not
+the 338-net native netlist. The remaining 197 endpoint findings are not
 evidence that the promoted association is wrong: the root-x-only disposable
-normalization increased total findings and reintroduced hierarchy errors.
+normalization increased total findings and reintroduced hierarchy errors;
+the later duplicate POWER_INPUT wire repair is separately promoted.
 The next discriminator is therefore a complete owner-aware grid transform,
 not coordinate-only edits. Naming and PWR_FLAG clusters remain independent
 and must be handled with the same netlist-parity guard.
