@@ -10,7 +10,7 @@ an engineering blocker.
 | Workstream | Scope / owner | State | Evidence / next action |
 |---|---|---|---|
 | ERC grid/geometry | Root Foreman, read-only/source-owner analysis | OPEN | 197 `endpoint_off_grid`; duplicate POWER_INPUT wire family is CLOSED. Map remaining endpoint owners before any transform. |
-| ERC labels/hierarchy | Root Foreman, isolated probe development | OPEN | 232 `isolated_pin_label`, 30 `same_local_global_label`; root-label removal and root-to-hierarchical-label substitution both added real connectivity findings. Continue contract-aware analysis; no suppression. |
+| ERC labels/hierarchy | Root Foreman, isolated probe development | OPEN | 232 `isolated_pin_label`, 30 `same_local_global_label`; root-label and root-to-hierarchical substitutions added real connectivity findings, and duplicate child rail-label removal added four unconnected endpoints. Treat repeated labels as source-owned contract locations; no suppression. |
 | ERC aliases/names | Root Foreman, read-only census | OPEN | 24 `multiple_net_names`; prior NC alias removal changed netlist and remains rejected. Preserve intent. |
 | Library integrity | Root Foreman | OPEN | 2 embedded PWR_FLAG mismatches remain; direct installed-library substitution is rejected. |
 | Path-B native PCB | Root Foreman / native KiCad | PASS for isolated candidate | Current V1603 candidate: native DRC 0/0 and integrated six-net audit plus six negative controls PASS. Production parity remains open. |

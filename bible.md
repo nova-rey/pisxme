@@ -52,6 +52,12 @@ root global label with a hierarchical label changed native ERC from 485/0 to
 reducing isolated labels. The current global-label contract remains intact;
 receipt: pisxme/reva-clean/PHASE24_ROOT_HIERARCHICAL_LABEL_PROBE_REJECT_RECEIPT_20260911.md.
 
+2026-09-11: Rejected removing repeated child `BRIDGE_3V3`/`BRIDGE_1V1`
+hierarchical labels from REGULATORS and STORAGE. Native ERC rose from 485 to
+489 with four real unconnected-wire findings, proving the locations are
+source-owned contract endpoints rather than harmless duplicates. Receipt:
+pisxme/reva-clean/PHASE24_DUPLICATE_CHILD_LABEL_PROBE_REJECT_RECEIPT_20260911.md.
+
 2026-09-08: Parameterized the retained V3 JMS583 QFN escape author for an
 explicit disposable base/output, enabling controlled integration with later
 storage candidates without mutating the Path-A basis. The earlier complete-
