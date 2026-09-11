@@ -35,6 +35,11 @@ on B.Cu instead of forbidden In1.GND. All nine J3 contacts and the real
 trace-removal negative control passed, but native DRC was 609/341; V89 is
 rejected route evidence and no canonical CAD changed.
 
+2026-09-11: V90 repeated the storage power repair on designated In2 power
+layer. All nine J3 contacts and the real negative control passed, but native
+DRC remained 608/341 with physical crossing/clearance problems. V90 is
+rejected route evidence; no canonical CAD changed.
+
 2026-09-11: Rejected a bounded root hierarchy-label experiment. Replacing one
 root global label with a hierarchical label changed native ERC from 485/0 to
 486 findings, adding pin-not-connected and unconnected-wire findings without

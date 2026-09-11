@@ -15,7 +15,7 @@ an engineering blocker.
 | Library integrity | Root Foreman | OPEN | 2 embedded PWR_FLAG mismatches remain; direct installed-library substitution is rejected. |
 | Path-B native PCB | Root Foreman / native KiCad | PASS for isolated candidate | Current V1603 candidate: native DRC 0/0 and integrated six-net audit plus six negative controls PASS. Production parity remains open. |
 | Dual-mode storage contract | Root Foreman / focused audit | PASS for mode contract | `phase24_dual_mode_storage_mode_audit.py`: PASS. |
-| Storage power/physical connectivity | Root Foreman / focused audit | OPEN | V88 reached all nine J3 contacts but used forbidden In1 signal routing; V89 moved the trunk to B.Cu and still reached all contacts, but native DRC is 609/341. Both are rejected route evidence; preserve connectivity topology and repair physical conflicts. |
+| Storage power/physical connectivity | Root Foreman / focused audit | OPEN | V88 reached all nine J3 contacts but used forbidden In1 routing; V89 used B.Cu (609/341 DRC) and V90 used designated In2 (608/341 DRC). All preserve saved-board connectivity, but all are rejected route evidence; repair physical conflicts without plane-layer signals. |
 | DFM/native PCB | Root Foreman / native KiCad | OPEN | Native DRC evidence is candidate-scoped; run integrated candidate DRC and manufacturing-rule audit after parity target is selected. |
 
 ## Integration rule
