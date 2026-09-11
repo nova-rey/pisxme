@@ -1,5 +1,25 @@
 # Phase 24 acreage validation status
 
+## CURRENT STATE OVERRIDE — 2026-09-11
+
+Read this section before the chronological experiment log. The current
+disposable Path-B support candidate is
+`PHASE24_RTL9210B_PATHB_V1603_V1517_MIC2545A_OPEN_ACREAGE_U1LOCAL015_CANDIDATE.kicad_pcb`.
+Its saved native KiCad DRC is 0 violations, 0 unconnected items, and 0
+footprint errors; the MIC2545A support audit and its two actual trace-removal
+negative controls pass. The accepted U1 0-degree/top-side/pin-1-southwest
+V1517 orientation and V1603 downstream launch remain frozen. This candidate
+is not production authority or full Phase 24 closure.
+
+The canonical clean-library namespace repair is checkpoint `7b06b6ca`:
+`phase24_reconcile_storage_library.py` preserved the existing library and
+added the eight storage definitions under `PiSXMeRevAClean`. Native ERC now
+reports zero missing-library-symbol / `lib_symbol_issues` findings, with 892
+warnings and 0 errors in the saved report. Remaining ERC warnings, production
+schematic/PCB parity, complete Path-B support/procurement/firmware, acreage
+promotion, and the remaining Phase 24 gates are OPEN and unwaived. Do not
+interpret older top-of-log overlay counts as the current candidate result.
+
 ## CURRENT AUTHORITATIVE STATE — 2026-09-10 LOCAL QFN EXCEPTION INTEGRATED
 
 ## CURRENT VALIDATION UPDATE — 2026-09-11 SUPPORT OVERLAY

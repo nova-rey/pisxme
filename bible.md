@@ -11210,3 +11210,10 @@ the accepted local primitive. Receipt:
   The remaining ERC warnings remain open and unwaived. The storage package
   library audit passes. This closes only the library-resolution subgate, not
   schematic authority or full Phase 24.
+
+## 2026-09-11 — current-state status override
+
+- Added a top-of-file Phase 24 status override identifying the actual current
+  disposable Path-B candidate and separating its native-clean local support
+  result from older overlay counts. It explicitly keeps production parity,
+  remaining ERC warnings, full Path-B authority, and Phase 24 closure open.
