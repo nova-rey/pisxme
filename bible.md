@@ -65,6 +65,12 @@ exposed real short/crossing classes despite reduced open counts. V311 remains
 the retained disposable sideband basis; Path A and production CAD are
 unchanged.
 
+2026-09-11 — Phase 24 regulator long-wire probe: removing the two remaining
+65 mm regulator rail wires in a disposable copy replaced two endpoint-grid
+findings with two label-dangling findings, leaving native ERC at 489 warnings
+/ 0 errors while exact 338-net/node parity held. The wires are owned rail
+connections; removal was rejected and canonical CAD was unchanged.
+
 2026-09-09 — Phase 24 V1436/V1437/V1438 rejected RSET B.Cu bypass classes:
 V1436 left one GND-triangle crossing, while V1437/V1438 crossed the long
 RTL_1V1 B.Cu shelf. RSET remains open; local R1 support relocation is the

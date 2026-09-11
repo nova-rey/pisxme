@@ -56,6 +56,12 @@ The direct KiCad 10 installed-library substitution for the two embedded
 both `lib_symbol_mismatch` findings remained. Receipt:
 `PHASE24_PWRFLAG_LIBRARY_PROBE_REJECT_RECEIPT_20260911.md`.
 
+The two remaining 65 mm `REGULATORS` wires were tested as a separate removal
+class. Native ERC stayed at 489 warnings and replaced the two endpoint-grid
+findings with two `label_dangling` findings; exact 338-net/node parity held.
+The wires are therefore owned rail connections and were not removed. Receipt:
+`PHASE24_REGULATOR_LONG_WIRE_PROBE_REJECT_RECEIPT_20260911.md`.
+
 ## Structural evidence
 
 `validation/phase3/phase24_hierarchy_structure_audit.py` now inventories the
