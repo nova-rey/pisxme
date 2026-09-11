@@ -3013,606 +3013,66 @@
 		)
 		(uuid "a0000000-0000-0000-0000-0000000001f7")
 	)
-	(wire
-		(pts
-			(xy 70 115) (xy 65 115)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-00000000003d")
-	)
-	(wire
-		(pts
-			(xy 70 113) (xy 65 113)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-00000000003e")
-	)
-	(wire
-		(pts
-			(xy 70 111) (xy 65 111)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-00000000003f")
-	)
-	(wire
-		(pts
-			(xy 70 109) (xy 65 109)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-000000000040")
-	)
-	(wire
-		(pts
-			(xy 70 107) (xy 65 107)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-000000000041")
-	)
-	(wire
-		(pts
-			(xy 70 105) (xy 65 105)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-000000000042")
-	)
-	(wire
-		(pts
-			(xy 70 103) (xy 65 103)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-000000000043")
-	)
-	(wire
-		(pts
-			(xy 70 101) (xy 65 101)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-000000000044")
-	)
-	(wire
-		(pts
-			(xy 70 99) (xy 65 99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-000000000045")
-	)
-	(wire
-		(pts
-			(xy 70 97) (xy 65 97)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-000000000046")
-	)
-	(wire
-		(pts
-			(xy 70 95) (xy 65 95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-000000000047")
-	)
-	(wire
-		(pts
-			(xy 70 93) (xy 65 93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-000000000048")
-	)
-	(wire
-		(pts
-			(xy 70 91) (xy 65 91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-000000000049")
-	)
-	(wire
-		(pts
-			(xy 70 89) (xy 65 89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-00000000004a")
-	)
-	(wire
-		(pts
-			(xy 70 87) (xy 65 87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-00000000004b")
-	)
-	(wire
-		(pts
-			(xy 70 85) (xy 65 85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-00000000004c")
-	)
-	(wire
-		(pts
-			(xy 70 83) (xy 65 83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-00000000004d")
-	)
-	(wire
-		(pts
-			(xy 70 81) (xy 65 81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-00000000004e")
-	)
-	(wire
-		(pts
-			(xy 70 79) (xy 65 79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-00000000004f")
-	)
-	(wire
-		(pts
-			(xy 70 77) (xy 65 77)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d5000000-0000-0000-0000-000000000050")
-	)
-	(wire
-		(pts
-			(xy 70 165) (xy 65 165)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-00000000003d")
-	)
-	(wire
-		(pts
-			(xy 70 163) (xy 65 163)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-00000000003e")
-	)
-	(wire
-		(pts
-			(xy 70 161) (xy 65 161)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-00000000003f")
-	)
-	(wire
-		(pts
-			(xy 70 159) (xy 65 159)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-000000000040")
-	)
-	(wire
-		(pts
-			(xy 70 157) (xy 65 157)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-000000000041")
-	)
-	(wire
-		(pts
-			(xy 70 155) (xy 65 155)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-000000000042")
-	)
-	(wire
-		(pts
-			(xy 70 153) (xy 65 153)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-000000000043")
-	)
-	(wire
-		(pts
-			(xy 70 151) (xy 65 151)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-000000000044")
-	)
-	(wire
-		(pts
-			(xy 70 149) (xy 65 149)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-000000000045")
-	)
-	(wire
-		(pts
-			(xy 70 147) (xy 65 147)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-000000000046")
-	)
-	(wire
-		(pts
-			(xy 70 145) (xy 65 145)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-000000000047")
-	)
-	(wire
-		(pts
-			(xy 70 143) (xy 65 143)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-000000000048")
-	)
-	(wire
-		(pts
-			(xy 70 141) (xy 65 141)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-000000000049")
-	)
-	(wire
-		(pts
-			(xy 70 139) (xy 65 139)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-00000000004a")
-	)
-	(wire
-		(pts
-			(xy 70 137) (xy 65 137)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-00000000004b")
-	)
-	(wire
-		(pts
-			(xy 70 135) (xy 65 135)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-00000000004c")
-	)
-	(wire
-		(pts
-			(xy 70 133) (xy 65 133)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-00000000004d")
-	)
-	(wire
-		(pts
-			(xy 70 131) (xy 65 131)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-00000000004e")
-	)
-	(wire
-		(pts
-			(xy 70 129) (xy 65 129)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-00000000004f")
-	)
-	(wire
-		(pts
-			(xy 70 127) (xy 65 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d6000000-0000-0000-0000-000000000050")
-	)
-	(wire
-		(pts
-			(xy 70 215) (xy 65 215)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-00000000003d")
-	)
-	(wire
-		(pts
-			(xy 70 213) (xy 65 213)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-00000000003e")
-	)
-	(wire
-		(pts
-			(xy 70 211) (xy 65 211)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-00000000003f")
-	)
-	(wire
-		(pts
-			(xy 70 209) (xy 65 209)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-000000000040")
-	)
-	(wire
-		(pts
-			(xy 70 207) (xy 65 207)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-000000000041")
-	)
-	(wire
-		(pts
-			(xy 70 205) (xy 65 205)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-000000000042")
-	)
-	(wire
-		(pts
-			(xy 70 203) (xy 65 203)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-000000000043")
-	)
-	(wire
-		(pts
-			(xy 70 201) (xy 65 201)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-000000000044")
-	)
-	(wire
-		(pts
-			(xy 70 199) (xy 65 199)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-000000000045")
-	)
-	(wire
-		(pts
-			(xy 70 197) (xy 65 197)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-000000000046")
-	)
-	(wire
-		(pts
-			(xy 70 195) (xy 65 195)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-000000000047")
-	)
-	(wire
-		(pts
-			(xy 70 193) (xy 65 193)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-000000000048")
-	)
-	(wire
-		(pts
-			(xy 70 191) (xy 65 191)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-000000000049")
-	)
-	(wire
-		(pts
-			(xy 70 189) (xy 65 189)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-00000000004a")
-	)
-	(wire
-		(pts
-			(xy 70 187) (xy 65 187)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-00000000004b")
-	)
-	(wire
-		(pts
-			(xy 70 185) (xy 65 185)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-00000000004c")
-	)
-	(wire
-		(pts
-			(xy 70 183) (xy 65 183)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-00000000004d")
-	)
-	(wire
-		(pts
-			(xy 70 181) (xy 65 181)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-00000000004e")
-	)
-	(wire
-		(pts
-			(xy 70 179) (xy 65 179)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-00000000004f")
-	)
-	(wire
-		(pts
-			(xy 70 177) (xy 65 177)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7000000-0000-0000-0000-000000000050")
-	)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	(wire
 		(pts
 			(xy 115 71.19) (xy 114 71.19)
