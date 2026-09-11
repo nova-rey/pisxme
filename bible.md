@@ -11478,3 +11478,8 @@ map every root/child/direct-link endpoint by identity.
 Phase 5 power-authority tests were updated from unavailable xvfb-run wrappers
 to native KiCad 10.0.5 invocation and current promoted-versus-hierarchical net
 names. Both pass; no schematic or electrical intent changed.
+
+2026-09-11 — Phase 16 PCIe authority harness reconciled: removed a stale UUID
+count assertion, accepted the current native exporter’s promoted root net
+names, and retained semantic direct-link/PET0-split assertions. The current
+PCIe net-authority test passes without changing PCIe CAD.

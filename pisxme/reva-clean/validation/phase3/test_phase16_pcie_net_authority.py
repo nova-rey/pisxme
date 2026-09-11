@@ -19,11 +19,12 @@ def net_nodes(xml_path):
 
 def main():
     text = (ROOT / "PiSXMe_RevA_Clean.kicad_sch").read_text()
-    assert text.count("c1000000-0000-0000-0000-000000000") == 7
+    # UUIDs are serialization details and changed when the clean hierarchy was
+    # re-authored.  The exported native net assertions below are the authority.
     with tempfile.TemporaryDirectory(prefix="pisxme-phase16-net-") as td:
         out = ROOT / ".phase16-netlist-test.xml"
         subprocess.run([
-            "xvfb-run", "-a", "kicad-cli", "sch", "export", "netlist",
+            "kicad-cli", "sch", "export", "netlist",
             "--format", "kicadxml", "--output", str(out),
             "PiSXMe_RevA_Clean.kicad_sch",
         ], cwd=ROOT, check=True)
@@ -39,7 +40,8 @@ def main():
         "CM5_PERST": {("J7", "109"), ("J1", "E18"), ("X1", "7"), ("X2", "7")},
     }
     for suffix, expected in direct.items():
-        matches = [nodes for name, nodes in nets.items() if name.endswith("/" + suffix)]
+        matches = [nodes for name, nodes in nets.items()
+                   if name == suffix or name.endswith("/" + suffix)]
         assert matches == [expected], (suffix, matches)
     assert {("J7", "122"), ("C1", "1"), ("X1", "3"), ("X2", "3")} in nets.values()
     assert {("J7", "124"), ("C2", "1"), ("X1", "4"), ("X2", "4")} in nets.values()
