@@ -11700,6 +11700,13 @@ The native audit reached all nine J3 contacts but failed strict source ownership
 for eight source pads; native DRC was 627/337. V95 was rejected with no
 canonical PCB change.
 
+2026-09-11 — Phase 24 storage focused revalidation: V1562 passed native
+USB3 endpoint continuity (10/10), JMS583 support endpoints (7/7), TI selector
+geometry, SATA trace-removal negative control, and all nine J3 power contacts
+with its negative control. V1570 separately passed R81.2-to-U14.5 connectivity
+and negative control. Native V1562 DRC remains 603/342, so these are focused
+subgates only and do not close Phase 24.
+
 2026-09-11 — Phase 24 storage-power evidence reconciliation: repository review
 confirmed V1562 is the accepted focused J3 handoff parent (nine-contact native
 connectivity/negative control PASS, no storage-rail shorts or crossings in its
