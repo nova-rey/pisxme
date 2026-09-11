@@ -11173,3 +11173,13 @@ the accepted local primitive. Receipt:
   and removed two vias that had copper on only one layer. Native DRC now
   reports 10 findings and 0 unconnected items under the candidate-local QFN
   rule; the remaining ten findings are same-layer corridor crossings.
+
+## 2026-09-11 — local CLKREQ QFN handoff closure
+
+- Tested the remaining U1 `ISOLATEB`/`CLKREQ_N` source-field crossing using a
+  local 0.40/0.20 mm ordinary through-via for `CLKREQ_N`, while retaining the
+  authorized 0.15 mm immediate QFN escape and normal 0.20 mm downstream rules.
+- Native KiCad DRC reports 0 violations and 0 unconnected items on the saved
+  open-acreage MIC2545A candidate. The saved-board support audit passes with
+  two actual trace-removal negative controls; GND is confirmed through the
+  filled zone. This is a candidate checkpoint, not Phase 24 closure.

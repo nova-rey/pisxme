@@ -89,6 +89,17 @@ def via(board, assigned_net, x, y):
     board.Add(item)
 
 
+def via_small(board, assigned_net, x, y):
+    item = pcbnew.PCB_VIA(board)
+    item.SetPosition(P(x, y))
+    item.SetWidth(pcbnew.FromMM(0.40))
+    item.SetDrill(pcbnew.FromMM(0.20))
+    item.SetLayerPair(F, B)
+    item.SetNet(assigned_net)
+    item.SetNetCode(assigned_net.GetNetCode())
+    board.Add(item)
+
+
 def rectangle(parent, layer, x0, y0, x1, y1):
     for start, end in [((x0, y0), (x1, y0)), ((x1, y0), (x1, y1)),
                        ((x1, y1), (x0, y1)), ((x0, y1), (x0, y0))]:
@@ -112,6 +123,7 @@ rtl_3v3 = net(board, "RTL_3V3")
 ssd_3v3 = net(board, "SSD_3V3")
 gnd = net(board, "GND")
 ilim = net(board, "MIC2545_ILIM")
+clkreq = net(board, "CLKREQ_N")
 
 # Authorized local exception applies only to the immediate U1 source escape.
 # The adjacent south-row pads are local context; the global board rule is not
@@ -119,6 +131,20 @@ ilim = net(board, "MIC2545_ILIM")
 u1 = board.FindFootprintByReference("U1")
 for number in ("9", "10", "11", "12", "13", "14", "15", "16", "17"):
     u1.FindPadByNumber(number).SetLocalClearance(pcbnew.FromMM(0.15))
+
+# Disposable local source-funnel trial: move the inherited CLKREQ_N F.Cu jog
+# to a 0.40/0.20 mm through-via just outside the QFN pad field.  The general
+# board via remains 0.60/0.30 mm; this smaller via is local to the QFN escape.
+for item in list(board.GetTracks()):
+    if item.GetNetCode() != clkreq.GetNetCode() or item.GetLayer() != F:
+        continue
+    a, z = item.GetStart(), item.GetEnd()
+    coords = tuple(pcbnew.ToMM(v) for v in (a.x, a.y, z.x, z.y))
+    if max(coords[0], coords[2]) <= 100.1 and min(coords[1], coords[3]) >= 73.8 and max(coords[1], coords[3]) <= 76.1:
+        board.Remove(item)
+segment(board, clkreq, (99.6, 73.95), (99.6, 72.8), F, NORMAL)
+via_small(board, clkreq, 99.6, 72.8)
+segment(board, clkreq, (99.6, 72.8), (98.8, 76.0), B)
 
 # U3 is in the measured vacant interior pocket, centered at (151.5, 82.0).
 # The pad coordinates are the native 3BX pattern: 5.40 mm row spacing,
@@ -155,10 +181,10 @@ rectangle(c18, pcbnew.F_CrtYd, 159.9, 87.4, 161.1, 90.2)
 segment(board, isolateb, (99.2, 73.95), (99.2, 84.0), F, LOCAL)
 via(board, isolateb, 99.2, 84.0)
 segment(board, isolateb, (99.2, 84.0), (104.2, 86.8), B)
-segment(board, isolateb, (104.2, 86.8), (146.5, 86.8), B)
-via(board, isolateb, 146.5, 86.8)
-segment(board, isolateb, (146.5, 86.8), (146.5, 80.095), F)
-segment(board, isolateb, (146.5, 80.095), (148.8, 80.095), F)
+segment(board, isolateb, (104.2, 86.8), (146.8, 86.8), B)
+segment(board, isolateb, (146.8, 86.8), (146.8, 80.095), B)
+via(board, isolateb, 146.8, 80.095)
+segment(board, isolateb, (146.8, 80.095), (148.8, 80.095), F)
 
 # Source rail from U3.5/U3.7 to C18 and the existing RTL_3V3 pad R2.2.
 segment(board, rtl_3v3, (154.2, 83.905), (158.0, 83.905), F)
@@ -168,20 +194,23 @@ segment(board, rtl_3v3, (158.0, 88.0), (160.5, 88.0), F)
 via(board, rtl_3v3, 158.0, 88.0)
 segment(board, rtl_3v3, (158.0, 88.0), (158.0, 90.0), B)
 segment(board, rtl_3v3, (158.0, 90.0), (122.5, 90.0), B)
-segment(board, rtl_3v3, (122.5, 90.0), (122.5, 82.0), B)
-via(board, rtl_3v3, 122.5, 82.0)
+via(board, rtl_3v3, 122.5, 90.0)
+segment(board, rtl_3v3, (122.5, 90.0), (122.5, 82.0), F)
 segment(board, rtl_3v3, (122.5, 82.0), (121.2, 80.0), F)
 
 # Switched output: explicit U3.6/U3.8 B.Cu join, then a clear right-side
 # corridor to a normal-width F.Cu access into the existing SSD_3V3 J1 pad bus.
 segment(board, ssd_3v3, (154.2, 82.635), (156.0, 82.635), F)
 segment(board, ssd_3v3, (154.2, 80.095), (156.0, 80.095), F)
-segment(board, ssd_3v3, (156.0, 80.095), (156.0, 82.635), F)
+via(board, ssd_3v3, 156.0, 80.095)
+segment(board, ssd_3v3, (156.0, 80.095), (156.0, 82.635), B)
 via(board, ssd_3v3, 156.0, 82.635)
-segment(board, ssd_3v3, (156.0, 82.635), (156.0, 70.5), B)
-segment(board, ssd_3v3, (156.0, 70.5), (120.0, 70.5), B)
-via(board, ssd_3v3, 120.0, 70.5)
-segment(board, ssd_3v3, (120.0, 70.5), (114.75, 62.725), F)
+segment(board, ssd_3v3, (156.0, 82.635), (156.0, 66.0), B)
+segment(board, ssd_3v3, (156.0, 66.0), (140.0, 66.0), B)
+segment(board, ssd_3v3, (140.0, 66.0), (140.0, 54.0), B)
+segment(board, ssd_3v3, (140.0, 54.0), (114.75, 54.0), B)
+via(board, ssd_3v3, 114.75, 54.0)
+segment(board, ssd_3v3, (114.75, 54.0), (114.75, 62.725), F)
 
 # ILIM and ground support.  Ground vias are tied by explicit copper to a
 # ground-zone-covered stitch at (142,84); no synthetic graph edge is used.
@@ -191,7 +220,10 @@ via(board, gnd, 142.0, 92.0)
 segment(board, gnd, (142.0, 92.0), (160.5, 92.0), B)
 via(board, gnd, 160.5, 92.0)
 segment(board, gnd, (160.5, 89.6), (160.5, 92.0), F)
-segment(board, gnd, (142.0, 92.0), (142.0, 84.0), B)
+segment(board, gnd, (142.0, 92.0), (97.5, 92.0), B)
+segment(board, gnd, (97.5, 92.0), (97.5, 83.0), B)
+segment(board, gnd, (97.5, 83.0), (142.0, 83.0), B)
+segment(board, gnd, (142.0, 83.0), (142.0, 84.0), B)
 via(board, gnd, 142.0, 84.0)
 segment(board, gnd, (142.0, 84.0), (142.0, 78.0), B)
 segment(board, gnd, (142.0, 78.0), (115.6, 78.0), B)

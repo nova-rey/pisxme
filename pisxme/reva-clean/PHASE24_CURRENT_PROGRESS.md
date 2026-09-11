@@ -289,3 +289,21 @@ departure outside the QFN south-edge pair envelope.
 Resume from the pushed checkpoint containing this note. Historical rejected
 experiments and raw evidence remain immutable; do not use the old V1517
 overlay routes as current production authority.
+
+## CURRENT PATH-B SUPPORT CANDIDATE — 2026-09-11
+
+The disposable open-acreage MIC2545A support candidate now has native KiCad
+DRC 0 violations and 0 unconnected items. The remaining QFN source handoff
+uses the authorized local exception: 0.15 mm immediate escape geometry and a
+single local 0.40/0.20 mm ordinary through-via for `CLKREQ_N`; normal board
+geometry remains 0.20 mm trace/clearance and 0.60/0.30 mm vias. The candidate
+sidecar rule records the local via exception; it does not change validation
+severity or global board rules.
+
+Saved-board support connectivity passes for U3/MIC2545A, R15, C18, the U1
+`ISOLATEB` handoff, both switched-output pins, and the existing J1 rail. Two
+actual trace-removal negative controls pass; GND is independently retained by
+the filled-zone connection and is audited as such. This is an integrated
+Path-B candidate checkpoint, not Phase 24 closure: schematic parity, full
+support-field authority, production integration, and broader Phase 24 gates
+remain OPEN.

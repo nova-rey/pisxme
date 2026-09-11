@@ -1,48 +1,8 @@
 ** Drc report for PHASE24_RTL9210B_PATHB_V1603_V1517_MIC2545A_OPEN_ACREAGE_U1LOCAL015_CANDIDATE.kicad_pcb **
-** Created on 2026-09-11T09:29:07 **
+** Created on 2026-09-11T10:15:24 **
 ** Report includes: Errors, Warnings **
 
-** Found 10 DRC violations **
-[tracks_crossing]: Tracks crossing
-    Rule: netclass 'Default'; error
-    @(158.0000 mm, 90.0000 mm): Track [RTL_3V3] on B.Cu, length 35.5000 mm
-    @(142.0000 mm, 92.0000 mm): Track [GND] on B.Cu, length 8.0000 mm
-[tracks_crossing]: Tracks crossing
-    Rule: netclass 'Default'; error
-    @(156.0000 mm, 70.5000 mm): Track [SSD_3V3] on B.Cu, length 36.0000 mm
-    @(123.0000 mm, 77.2000 mm): Track [RTL_3V3] on B.Cu, length 14.4000 mm
-[tracks_crossing]: Tracks crossing
-    Rule: netclass 'Default'; error
-    @(120.0000 mm, 70.5000 mm): Track [SSD_3V3] on F.Cu, length 9.3815 mm
-    @(110.0000 mm, 67.2000 mm): Track [RTL_5V] on F.Cu, length 11.0000 mm
-[tracks_crossing]: Tracks crossing
-    Rule: netclass 'Default'; error
-    @(120.0000 mm, 70.5000 mm): Track [SSD_3V3] on F.Cu, length 9.3815 mm
-    @(101.9500 mm, 67.2000 mm): Track [RTL_5V] on F.Cu, length 19.0500 mm
-[tracks_crossing]: Tracks crossing
-    Rule: netclass 'Default'; error
-    @(156.0000 mm, 80.0950 mm): Track [SSD_3V3] on F.Cu, length 2.5400 mm
-    @(154.2000 mm, 81.3650 mm): Track [RTL_3V3] on F.Cu, length 3.8000 mm
-[tracks_crossing]: Tracks crossing
-    Rule: netclass 'Default'; error
-    @(146.5000 mm, 86.8000 mm): Track [ISOLATEB] on F.Cu, length 6.7050 mm
-    @(148.8000 mm, 83.9050 mm): Track [MIC2545_ILIM] on F.Cu, length 5.8018 mm
-[tracks_crossing]: Tracks crossing
-    Rule: netclass 'Default'; error
-    @(146.5000 mm, 86.8000 mm): Track [ISOLATEB] on F.Cu, length 6.7050 mm
-    @(148.8000 mm, 82.6350 mm): Track [GND] on F.Cu, length 6.9356 mm
-[tracks_crossing]: Tracks crossing
-    Rule: netclass 'Default'; error
-    @(156.0000 mm, 70.5000 mm): Track [SSD_3V3] on B.Cu, length 36.0000 mm
-    @(128.0000 mm, 72.0000 mm): Track [CLKREQ_N] on B.Cu, length 14.0000 mm
-[tracks_crossing]: Tracks crossing
-    Rule: rtl9210b local qfn escape; error
-    @(99.2000 mm, 73.9500 mm): Track [ISOLATEB] on F.Cu, length 10.0500 mm
-    @(99.6000 mm, 75.0000 mm): Track [CLKREQ_N] on F.Cu, length 0.8000 mm
-[tracks_crossing]: Tracks crossing
-    Rule: netclass 'Default'; error
-    @(104.2000 mm, 86.8000 mm): Track [ISOLATEB] on B.Cu, length 42.3000 mm
-    @(142.0000 mm, 92.0000 mm): Track [GND] on B.Cu, length 8.0000 mm
+** Found 0 DRC violations **
 
 ** Found 0 unconnected pads **
 

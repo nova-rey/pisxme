@@ -11658,3 +11658,21 @@ best results still fail locally at QFN source/supply fanout or its layer
 transitions. This is a route-implementation limitation of the tested escape
 classes, not a Path-A regression or a production-board pass. Path A remains
 the fallback/reference architecture and is untouched.
+
+## CURRENT STATE — 2026-09-11 OPEN-ACREAGE MIC2545A CANDIDATE
+
+The current disposable candidate is generated from the accepted V1603/V1517
+board with the MIC2545A support island in open acreage. Native KiCad DRC is
+0 violations / 0 unconnected items. The immediate U1 QFN source field uses
+the authorized local 0.15 mm escape rule plus one local 0.40 mm diameter /
+0.20 mm drill ordinary through-via on `CLKREQ_N`; all downstream routing and
+the frozen U1 orientation/V1603 launch are unchanged. The candidate-local
+rule is explicit in
+`PHASE24_RTL9210B_PATHB_V1603_V1517_MIC2545A_OPEN_ACREAGE_U1LOCAL015_CANDIDATE.kicad_dru`.
+
+The saved-board MIC2545A audit passes native support connectivity and two
+trace-removal negative controls; GND continuity is through the actual filled
+zone. This closes the previously tested local implementation defect for this
+candidate only. Full schematic-to-PCB parity, production support authority,
+integrated Path-B validation, and Phase 24 closure remain OPEN. Do not treat
+this candidate PASS as production-board or final-plan READY evidence.
