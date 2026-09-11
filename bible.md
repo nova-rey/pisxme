@@ -11278,3 +11278,12 @@ the accepted local primitive. Receipt:
   `pin_not_connected` and zero `endpoint_off_grid` findings; 110 residual
   scaffold/library warnings remain. The live canonical hierarchy was not
   rewritten; controlled production comparison remains open.
+
+## 2026-09-11 — live contract-port audit rejects blind merge
+
+- Compared live child hierarchical labels to embedded contract definitions:
+  CORE_CM5 15/12, REGULATORS 6/4, STORAGE 7/5. The added labels occupy
+  separately wired local regions, so order-based contract pin augmentation
+  produced five native `pin_not_connected` errors and was rejected. No
+  canonical schematic was changed; explicit label-to-instance mapping is
+  still required.

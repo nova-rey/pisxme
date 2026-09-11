@@ -1,5 +1,21 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — live contract-port audit prevents blind promotion — 2026-09-11
+
+The live source was compared by native-loaded hierarchy names and embedded
+contract definitions. `CORE_CM5` has 15 hierarchical labels but its embedded
+contract definition has 12 pins; `REGULATORS` has 6 versus 4; and `STORAGE`
+has 7 versus 5. The added live labels are not simply missing wires at the old
+contract body: storage rail labels are separately authored with local wires
+at y=157/207. A disposable order-based repair produced five real native
+`pin_not_connected` errors and was rejected.
+
+No production contract merge was made. The remaining repair must map each
+live hierarchical label and intended instance explicitly, then regenerate
+the corresponding contract definition/instance without moving actual circuit
+geometry. The canonical source remains unchanged; the ERC gate remains open
+and unwaived.
+
 ## Current checkpoint — generator hierarchy association discriminator passes — 2026-09-11
 
 The corrected disposable generator probe now emits the contract symbol,

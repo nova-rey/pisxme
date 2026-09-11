@@ -1,5 +1,15 @@
 # Phase 24 schematic ERC classification — 2026-09-11
 
+## Live contract-port audit — 2026-09-11
+
+Native-source comparison found stale embedded contract pin sets: `CORE_CM5`
+15 labels/12 contract pins, `REGULATORS` 6/4, and `STORAGE` 7/5. The added
+labels are separately placed in the live children rather than being a simple
+continuation of the old contract body's y-order; `STORAGE` includes wired
+rail labels at y=157 and y=207. A disposable order-based pin augmentation
+created five native `pin_not_connected` errors and was rejected. Production
+repair remains open pending explicit label-to-instance mapping.
+
 ## Corrected generator discriminator — 2026-09-11
 
 After transforming the legacy direct-root links with the same native-grid
