@@ -72,6 +72,16 @@ def make_uuid(number: int) -> str:
     return str(UUID(int=number))
 
 
+def native_root_point(x: float, y: float) -> tuple[float, float]:
+    """Map legacy direct-link coordinates onto the generated native grid."""
+    col = round((x - 35) / 35)
+    row = 1 if y >= 100 else 0
+    old_base = 145 if row else 45
+    index = round((y - old_base - 2) / 3)
+    return (35.56 + col * 35.56,
+            45.72 + row * 82.55 + GRID + index * GRID)
+
+
 def contract_symbol(name: str, ports: tuple[str, ...]) -> str:
     symbol_name = f"PiSXMeRevAClean:{name}_Contract"
     pins = "".join(
@@ -117,7 +127,7 @@ def sheet_block(name: str, number: int) -> str:
     y = 45.72 + ((number - 1) // 5) * 82.55
     sheet_height = max(18, len(PORTS[name]) * GRID + 2 * GRID)
     pins = "".join(
-        f'''\n    (pin "{port}" bidirectional (at {x} {y + 2 + (index * 3)} 180)\n      (effects (font (size 1.27 1.27)) (justify left))\n      (uuid {make_uuid(0x40000000000000000000000000000000 + number * 100 + index)}))'''
+        f'''\n    (pin "{port}" bidirectional (at {x} {y + GRID + (index * GRID)} 180)\n      (effects (font (size 1.27 1.27)) (justify left))\n      (uuid {make_uuid(0x40000000000000000000000000000000 + number * 100 + index)}))'''
         for index, port in enumerate(PORTS[name])
     )
     return f'''  (sheet
@@ -209,7 +219,7 @@ def main() -> None:
     )
     direct_wires = "".join(
         f'''\n  (wire
-    (pts {''.join(f'(xy {x} {y}) ' for x, y in points).rstrip()})
+    (pts {''.join(f'(xy {native_root_point(x, y)[0]:g} {native_root_point(x, y)[1]:g}) ' for x, y in points).rstrip()})
     (stroke (width 0) (type default))
     (uuid {make_uuid(0xc0000000000000000000000000000000 + index)}))'''
         for index, points in enumerate(PCIE_DIRECT_ROOT_LINKS)

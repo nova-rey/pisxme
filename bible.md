@@ -11269,3 +11269,12 @@ the accepted local primitive. Receipt:
   generated contract symbol pin geometry must be regenerated together with
   child and parent connection geometry; independent coordinate snapping is
   rejected. Canonical schematic and reports were not modified.
+
+## 2026-09-11 — hierarchy generator association discriminator passes
+
+- Regenerated the disposable hierarchy with one coherent native-grid map for
+  contract symbols, child labels/wires, parent sheet pins/wires, and
+  direct-root links. Native KiCad 10.0.5 ERC reports zero hierarchy
+  `pin_not_connected` and zero `endpoint_off_grid` findings; 110 residual
+  scaffold/library warnings remain. The live canonical hierarchy was not
+  rewritten; controlled production comparison remains open.

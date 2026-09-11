@@ -1,5 +1,18 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — generator hierarchy association discriminator passes — 2026-09-11
+
+The corrected disposable generator probe now emits the contract symbol,
+child labels/wires, sheet pins/wires, and direct-root links on one coherent
+2.54 mm/native-grid coordinate map. Native KiCad 10.0.5 ERC reports zero
+`pin_not_connected` and zero `endpoint_off_grid` hierarchy findings. Its 110
+remaining findings are scaffold-level `unconnected_wire_endpoint`,
+`isolated_pin_label`, and library-symbol warnings; no root/child association
+error remains. This closes the authoring-path discriminator, not the live
+production ERC gate. The canonical clean hierarchy is still unchanged at 872
+warnings and 0 errors. A controlled live-source regeneration/merge with
+netlist and native hierarchy comparison remains required.
+
 ## Current checkpoint — coherent generator grid path isolated — 2026-09-11
 
 The generic `phase3_scaffold.py` authoring path now emits 2.54 mm contract

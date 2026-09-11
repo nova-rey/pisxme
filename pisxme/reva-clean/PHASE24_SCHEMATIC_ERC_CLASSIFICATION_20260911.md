@@ -1,5 +1,17 @@
 # Phase 24 schematic ERC classification — 2026-09-11
 
+## Corrected generator discriminator — 2026-09-11
+
+After transforming the legacy direct-root links with the same native-grid
+coordinate map, the fresh generated hierarchy reports 110 native ERC
+findings: 59 scaffold `unconnected_wire_endpoint`, 41 scaffold
+`isolated_pin_label`, and 10 library-symbol warnings. It reports zero
+`pin_not_connected` and zero `endpoint_off_grid` findings. This demonstrates
+that the contract family and direct root links can be serialized coherently.
+The residual scaffold warnings are not a production pass; live child
+circuitry and project-specific symbol authorities still require a controlled
+merge and comparison.
+
 ## Current evidence
 
 Native KiCad 10.0.5 ERC on the canonical clean root after the library and
