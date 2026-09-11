@@ -11159,3 +11159,10 @@ the accepted local primitive. Receipt:
   with 0 unconnected items and 20 DRC findings remain. The candidate is
   retained as the best disposable integration basis while corridor ownership
   is repaired.
+
+## 2026-09-11 — local rule applied to open-acreage candidate
+
+- Added the candidate-local RTL9210B QFN rule matching the already-approved
+  0.15-mm escape exception. Native DRC changed from 20 findings to 11, with
+  one unconnected item exposed; no check severity was waived. Remaining
+  findings are real corridor crossings and the board-GND transition.

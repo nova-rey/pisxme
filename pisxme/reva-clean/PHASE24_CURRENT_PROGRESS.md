@@ -20,6 +20,11 @@ native DRC findings. The remaining failures are identifiable physical
 corridor crossings/local-rule receipts; it is not promoted, but is the best
 current disposable integration basis.
 
+With the candidate-local QFN rule applied, the same saved candidate reports 11
+native DRC violations and 1 unconnected item. The rule removes only the
+authorized local 0.15-mm width/clearance accounting; the remaining findings
+are real corridor crossings and one board-GND transition.
+
 The latest coherent outboard U3 relocation trial is rejected at 31 native DRC
 violations and 2 unconnected items, improving the prior 38/3 trial. Remaining
 failures are localized to occupied B.Cu corridors and two local ground joins;

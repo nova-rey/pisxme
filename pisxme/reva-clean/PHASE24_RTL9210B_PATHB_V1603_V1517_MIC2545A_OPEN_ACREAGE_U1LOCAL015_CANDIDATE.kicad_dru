@@ -1,0 +1,5 @@
+(version 1)
+(rule "rtl9210b local qfn escape"
+  (condition "(A.Width == 0.15mm || B.Width == 0.15mm) && (A.NetName == 'REFCLK_P' || A.NetName == 'REFCLK_N' || A.NetName == 'LANE0_RXP' || A.NetName == 'LANE0_RXN' || A.NetName == 'LANE0_TXN' || A.NetName == 'LANE0_TXP' || A.NetName == 'ISOLATEB' || B.NetName == 'REFCLK_P' || B.NetName == 'REFCLK_N' || B.NetName == 'LANE0_RXP' || B.NetName == 'LANE0_RXN' || B.NetName == 'LANE0_TXN' || B.NetName == 'LANE0_TXP' || B.NetName == 'ISOLATEB')")
+  (constraint clearance (min 0.15mm))
+  (constraint track_width (min 0.15mm)))
