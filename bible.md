@@ -11422,3 +11422,9 @@ on the canonical clean root reports 862 warnings and zero errors; raw report
 SHA-256 is d49840cb1f70c9f581560b1e0b3b8ee6dabda0175f45a64cbe32fb8c55b0efc3.
 The live schematic truth/ERC/netlist/parity gate remains open; the native
 hierarchy fixture pass is not promoted to live Phase 24 closure.
+
+2026-09-11 — ERC root-cause map recorded: the 862 live warnings cluster into
+795 hierarchy geometry/contract findings, 54 naming/net-name findings, 11
+CM5 no-connect records, and 2 PWR_FLAG library mismatches. The highest-leverage
+next action is one explicit live-port hierarchy regeneration in a disposable
+copy; no warnings were waived and canonical electrical sources were unchanged.
