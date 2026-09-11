@@ -58,6 +58,12 @@ hierarchical labels from REGULATORS and STORAGE. Native ERC rose from 485 to
 source-owned contract endpoints rather than harmless duplicates. Receipt:
 pisxme/reva-clean/PHASE24_DUPLICATE_CHILD_LABEL_PROBE_REJECT_RECEIPT_20260911.md.
 
+2026-09-11: Refreshed concurrent Phase 24 validation. Canonical native ERC
+remains 485 warnings / 0 errors; hierarchy structure and dual-mode storage
+contract audits pass; Path-B V1603 native DRC and six-net negative controls
+pass; clean namespace scan finds no legacy PiSXMe library identifiers. Raw
+ERC: pisxme/reva-clean/PHASE24_CURRENT_CANONICAL_erc.rpt.
+
 2026-09-08: Parameterized the retained V3 JMS583 QFN escape author for an
 explicit disposable base/output, enabling controlled integration with later
 storage candidates without mutating the Path-A basis. The earlier complete-
