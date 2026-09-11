@@ -96,6 +96,9 @@ u3p = {
     7: pad(u3, 7, ur, 99.365, nets["SSD_3V3_IN"], (1.55, 0.60)),
     8: pad(u3, 8, ur, 98.095, nets["SSD_3V3"], (1.55, 0.60)),
 }
+# MIC2545A FLG is intentionally unused in this support design.  Keep the
+# physical pad in the footprint, but do not mis-author it as a ground pad.
+u3p[2].SetNet(None); u3p[2].SetNetCode(0)
 footprint_rect(u3, 97.05, 97.05, 102.95, 102.95, pcbnew.F_CrtYd)
 footprint_rect(u3, 97.15, 97.15, 102.85, 102.85, pcbnew.F_SilkS)
 
@@ -136,9 +139,7 @@ wire(b, nets["SSD_3V3"], (104, 99.365), (106, 97.0), pcbnew.B_Cu)
 via(b, nets["SSD_3V3"], 106, 97.0)
 wire(b, nets["SSD_3V3"], (106, 97.0), (108, 96.5))
 wire(b, nets["ISOLATEB"], (ul, 98.095), (94, 98.095))
-wire(b, nets["GND"], (ul, 99.365), (94, 99.365))
 wire(b, nets["GND"], (ul, 100.635), (94, 100.635))
-wire(b, nets["GND"], (94, 99.365), (94, 100.635))
 wire(b, nets["MIC_ILIM"], (ul, 101.905), (95, 101.8))
 wire(b, nets["GND"], (95, 104.2), (94, 104.2))
 wire(b, nets["GND"], (94, 104.2), (94, 100.635))

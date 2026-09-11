@@ -12,6 +12,15 @@ passes native DRC and its physical scope/connectivity audit. Fine-breakout
 implementation is closed; overall Phase 24 remains open for the independent
 Path-B and full-board gates.
 
+## Current next action — corrected ISOLATEB support authority — 2026-09-11
+
+The MIC2545A fixture correction is complete: U3.2/FLG is netless rather than
+incorrectly tied to GND. Native DRC, physical duplicated-pin joins, negative
+control, and DFM pass. The prior combined-placement trial is rejected with
+35 DRC violations and 5 opens; it is not production authority. Build one
+fresh co-routed U1.12-to-U3.1 support candidate next, retaining the frozen
+RTL9210B orientation, local QFN rule, and V1603 launch.
+
 ## Safe pause / GitHub checkpoint — 2026-09-10
 
 The active RTL9210B Path-B routing work is paused at the validated local

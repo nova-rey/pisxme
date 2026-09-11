@@ -26,7 +26,8 @@ The fixture uses the Microchip/Micrel MIC2545A/2549A datasheet mapping:
 - pins 6 and 8 `OUT` → common `SSD_3V3` load rail;
 - pin 3 `GND` → ground return;
 - pin 4 `ILIM` → 76.8 Ω current-limit resistor to ground;
-- pin 2 `FLG` intentionally left unused in this electrical fixture.
+- pin 2 `FLG` intentionally left unused and electrically netless in this
+  fixture; it is not a GND connection.
 
 Both duplicated `IN` pins and both duplicated `OUT` pins are joined by
 physical copper. The negative control removes the physical `IN` 5↔7 join;

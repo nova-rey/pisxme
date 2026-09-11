@@ -11091,3 +11091,12 @@ the accepted local primitive. Receipt:
   through-vias. Native integrated DRC is 0/0/0; the saved-board six-net audit
   and six trace-removal negative controls pass. Overall Phase 24 remains open
   for full Path-B, acreage, and production validation.
+
+## 2026-09-11 — corrected MIC2545A FLG ownership
+
+- Fixed the MIC2545A support fixture authority contradiction: U3.2/FLG is
+  retained as a physical but netless pad instead of being incorrectly tied
+  to GND. Regenerated native DRC is 0/0/0; the physical IN/OUT join,
+  negative-control, and saved-board DFM audits pass. The first combined
+  placement trial remains rejected evidence; fresh co-routed ISOLATEB support
+  integration is the next open implementation gate.
