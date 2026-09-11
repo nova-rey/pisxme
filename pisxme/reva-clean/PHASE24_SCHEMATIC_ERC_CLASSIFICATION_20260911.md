@@ -1,5 +1,13 @@
 # Phase 24 schematic ERC classification — 2026-09-11
 
+## Ethernet contract-library repair — 2026-09-11
+
+The canonical custom Ethernet contract symbol was synchronized to the live
+child's three-port definition, removing the stale `GBE_LED` library pin.
+Native ERC fell from 872 to 871 warnings with 0 errors and reduced
+`lib_symbol_mismatch` from 3 to 2. No child/root/PCB geometry changed. The
+remaining two library mismatches are standard `PWR_FLAG` symbols.
+
 ## STORAGE contract-name repair — 2026-09-11
 
 The embedded `STORAGE_Contract` pin 4 was corrected from `M2_3V3` to

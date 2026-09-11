@@ -1,5 +1,16 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — Ethernet contract library synchronized — 2026-09-11
+
+The canonical `PiSXMeRevAClean:ETHERNET_Contract` library symbol had a stale
+`GBE_LED` pin not present in the live ETHERNET child contract. A fail-closed
+source repair synchronized the canonical library to the live three-port
+contract (`CM5_GBE`, `GBE_SHIELD`, `ETH_POWER`) without changing the child,
+root, PCB, or Ethernet topology. Disposable and live native KiCad ERC both
+report 871 warnings / 0 errors, down from 872; `lib_symbol_mismatch` fell
+from 3 to 2. The Ethernet authority audit remains CLOSED. The two remaining
+library mismatches are standard `PWR_FLAG` evidence and remain open.
+
 ## Current checkpoint — STORAGE contract pin authority repaired — 2026-09-11
 
 The live `STORAGE_Contract` embedded symbol had one stale pin name: pin 4 was

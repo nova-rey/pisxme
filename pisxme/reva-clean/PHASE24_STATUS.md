@@ -1,5 +1,13 @@
 # Phase 24 acreage validation status
 
+## CURRENT UPDATE — ETHERNET CONTRACT LIBRARY SYNCHRONIZED — 2026-09-11
+
+The canonical custom Ethernet contract now matches the live child contract's
+three ports; the stale library-only `GBE_LED` pin was removed. Native ERC is
+871 warnings / 0 errors, with two remaining standard `PWR_FLAG` mismatches.
+The Ethernet authority audit remains CLOSED. No PCB, root-sheet, or Ethernet
+topology change was made; full ERC and Phase 24 gates remain open.
+
 ## CURRENT UPDATE — STORAGE CONTRACT NAME REPAIRED — 2026-09-11
 
 The live `STORAGE_Contract` embedded symbol pin 4 now uses `STORAGE_3V3`,

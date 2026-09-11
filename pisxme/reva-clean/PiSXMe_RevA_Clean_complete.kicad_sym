@@ -3975,11 +3975,7 @@
           (length 3.81)
           (name "CM5_GBE" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27)))))
-        (pin passive line
-          (at -5.08 -3 0)
-          (length 3.81)
-          (name "GBE_LED" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27)))))
+        
         (pin passive line
           (at -5.08 -6 0)
           (length 3.81)

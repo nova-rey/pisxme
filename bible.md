@@ -11288,6 +11288,13 @@ the accepted local primitive. Receipt:
   canonical schematic was changed; explicit label-to-instance mapping is
   still required.
 
+## 2026-09-11 — Ethernet contract library synchronized
+
+- Removed the stale `GBE_LED` pin from the canonical custom Ethernet contract
+  to match the live three-port child contract. Native ERC fell from 872 to
+  871 warnings / 0 errors; the Ethernet authority audit stayed CLOSED. The
+  two remaining library mismatches are standard PWR_FLAG symbols.
+
 ## 2026-09-11 — scaffold port authority aligned to live hierarchy
 
 - Updated the generic Phase 3 scaffold's CORE_CM5, REGULATORS, and STORAGE
