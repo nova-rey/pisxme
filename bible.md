@@ -30,6 +30,12 @@ and the actual trace-removal negative control failed as expected, but native
 DRC regressed to 608 violations / 341 unconnected items from the 601/397 V79
 source. V88 is retained as rejected route evidence, not promoted.
 
+2026-09-11: Rejected a bounded root hierarchy-label experiment. Replacing one
+root global label with a hierarchical label changed native ERC from 485/0 to
+486 findings, adding pin-not-connected and unconnected-wire findings without
+reducing isolated labels. The current global-label contract remains intact;
+receipt: pisxme/reva-clean/PHASE24_ROOT_HIERARCHICAL_LABEL_PROBE_REJECT_RECEIPT_20260911.md.
+
 2026-09-08: Parameterized the retained V3 JMS583 QFN escape author for an
 explicit disposable base/output, enabling controlled integration with later
 storage candidates without mutating the Path-A basis. The earlier complete-
