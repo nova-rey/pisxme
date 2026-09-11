@@ -11483,3 +11483,8 @@ names. Both pass; no schematic or electrical intent changed.
 count assertion, accepted the current native exporter’s promoted root net
 names, and retained semantic direct-link/PET0-split assertions. The current
 PCIe net-authority test passes without changing PCIe CAD.
+
+2026-09-11 — Phase 24 hierarchy authoring: added a read-only balanced
+S-expression structure audit for the root and all ten children. It establishes
+the safe transformation boundary for contract geometry and guards against the
+child-specific top-level ordering that defeated regex-based probes.
