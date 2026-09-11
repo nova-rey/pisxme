@@ -5545,6 +5545,10 @@ local native signal gate with no SPI shorts, crossings, or clearance
 violations; native endpoint audit passes all five U1/U2 pairs and its SPISI
 negative control fails as required. One inherited isolated-GND warning and
 40 unrelated support opens remain, so full Path-B closure is still open.
+2026-09-11 — Added a bounded power/protection brief to the Library component and
+subsystem index; it preserves selected-part, inrush, thermal, and protection-policy
+gates as authority-owned work.
+
 2026-09-11 — Created the private companion Library branch with provenance metadata,
 structured assertions, and task-sized briefs for PiSXMe Rev A, RTL9210B Path-B,
 MIC2545A, storage/M.2/USB3, and fine-pitch QFN escape. The corpus retains the
