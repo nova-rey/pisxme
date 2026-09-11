@@ -11375,3 +11375,10 @@ the accepted local primitive. Receipt:
   `POWER_GND` labels. Native ERC fell from 863 to 862 warnings with zero
   errors and no connected-NC findings; unrelated dangling NC warnings remain
   open and unwaived.
+
+## 2026-09-11 — Consolidated required-net no-connect cleanup
+
+- Consolidated the source repair of four USB3, four Ethernet, and 15 required
+  `POWER_GND` no-connect contradictions. Native ERC is 862 warnings / 0
+  errors with zero connected-NC findings; 11 standalone dangling NC records
+  remain open. Saved a fresh native netlist receipt.

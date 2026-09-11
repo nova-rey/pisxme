@@ -1,5 +1,13 @@
 # Phase 24 acreage validation status
 
+## CURRENT SOURCE CLEANUP — REQUIRED-NET NO-CONNECTS — 2026-09-11
+
+Required-net no-connect contradictions are now cleared for CM5 USB3,
+Ethernet, and `POWER_GND`. Native ERC reports 862 warnings / 0 errors and
+zero `no_connect_connected` findings. Eleven standalone dangling NC warnings
+remain open and unwaived. A fresh native netlist export is retained with the
+consolidated receipt; integrated Path-B parity and full Phase 24 remain OPEN.
+
 ## CURRENT SOURCE REPAIR — POWER_GND NO-CONNECTS — 2026-09-11
 
 The 14 no-connect records co-located with required `POWER_GND` global labels

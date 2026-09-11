@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — CM5 required-net NC cleanup consolidated — 2026-09-11
+
+The source cleanup has removed only required-net contradictions: four USB3,
+four Ethernet, and 15 `POWER_GND` no-connect records. Native ERC is now 862
+warnings / 0 errors with zero connected-NC findings; 11 standalone dangling
+NC records remain open. A fresh native netlist export is also saved. Receipt:
+`PHASE24_CM5_NC_REPAIR_CONSOLIDATED_RECEIPT_20260911.md`.
+
 ## Current checkpoint — POWER_GND no-connect contradictions removed — 2026-09-11
 
 Removed the exact 14 `No Connect` records co-located with authoritative
