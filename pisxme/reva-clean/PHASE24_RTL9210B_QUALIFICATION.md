@@ -1572,3 +1572,24 @@ the upper region, but native DRC identifies source-to-row same-layer weave
 crossings plus one REFCLK-via clearance interaction. The corridor itself is
 not the structural failure; the next class uses per-pair layer swaps during
 the ascent.
+
+## Current implementation addendum — 2026-09-11
+
+The immediate QFN source-fanout blocker is closed in a disposable open-acreage
+support candidate without changing the accepted RTL9210B orientation or V1603
+downstream launch. The candidate uses 0.15 mm trace/clearance only in the
+immediate QFN escape, then returns to normal 0.20 mm board routing. One
+`CLKREQ_N` source transition uses a local 0.40 mm diameter by 0.20 mm drill
+ordinary through-via; the global 0.60/0.30 mm via rule is unchanged. No
+microvias, blind/buried vias, or via-in-pad are used.
+
+Native KiCad DRC reports 0 violations, 0 unconnected items, and 0 footprint
+errors. The saved-board MIC2545A support audit passes native connectivity and
+two actual trace-removal negative controls; GND is verified through the
+filled zone. Receipt:
+`PHASE24_RTL9210B_MIC2545A_OPEN_ACREAGE_RECEIPT.md`.
+
+This supersedes the prior statement that the QFN source escape was still
+unresolved, but does not close production schematic parity, final support
+authority, firmware/procurement gates, or overall Phase 24. Path A remains
+protected and the candidate remains isolated from production CAD.

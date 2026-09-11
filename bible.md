@@ -11183,3 +11183,10 @@ the accepted local primitive. Receipt:
   open-acreage MIC2545A candidate. The saved-board support audit passes with
   two actual trace-removal negative controls; GND is confirmed through the
   filled zone. This is a candidate checkpoint, not Phase 24 closure.
+
+## 2026-09-11 — Path-B qualification addendum
+
+- Reconciled the RTL9210B qualification record with the validated local QFN
+  handoff checkpoint. The former QFN source-fanout blocker is closed for the
+  disposable candidate; production parity, support authority, and full Phase
+  24 gates remain explicitly open.
