@@ -8,6 +8,10 @@ The best current disposable overlay relocates the coherent U3 support island
 outboard and reports 31 native DRC violations / 2 unconnected items. It is
 still rejected; the accepted U1/V1603 baseline remains clean.
 
+The latest ground-spine refinement reports 24 native DRC violations / 1
+unconnected item. Its remaining open is the local GND-to-board-GND transition
+at the existing via (115.6,78.0); no authority decision has changed.
+
 The latest real-pad MIC2545A support overlay is rejected at 38 native DRC
 violations and 3 unconnected items. It is an implementation experiment, not
 an authority change. The accepted RTL9210B/V1603 baseline remains 0/0; the

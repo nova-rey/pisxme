@@ -11137,3 +11137,10 @@ the accepted local primitive. Receipt:
   Native DRC improved from 38 violations/3 opens to 31/2, but occupied B.Cu
   corridor crossings and two ground joins remain. The trial is rejected
   evidence; RTL9210B orientation and V1603 launch authority remain frozen.
+
+## 2026-09-11 — local ground-spine refinement
+
+- Replaced the temporary scattered ground fanout with a local shared GND spine
+  for U3/R15/C18. Native DRC improved the disposable overlay to 24 violations
+  and 1 unconnected item. The remaining open is the physical join to the
+  existing board-GND via at (115.6,78.0); production support remains OPEN.
