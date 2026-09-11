@@ -40,6 +40,12 @@ layer. All nine J3 contacts and the real negative control passed, but native
 DRC remained 608/341 with physical crossing/clearance problems. V90 is
 rejected route evidence; no canonical CAD changed.
 
+2026-09-11: V91 tested short F.Cu dogbones from all nine J3 power contacts
+to staggered through-vias and an In2 local zone. Connectivity and the real
+negative control passed, but native DRC found a real STORAGE_3V3 to JMS_AVDDL
+short at the connector launch (621/341 total). V91 is rejected; future power
+fanout must reserve launch channels before adding copper.
+
 2026-09-11: Rejected a bounded root hierarchy-label experiment. Replacing one
 root global label with a hierarchical label changed native ERC from 485/0 to
 486 findings, adding pin-not-connected and unconnected-wire findings without
