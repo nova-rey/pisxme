@@ -4,7 +4,7 @@ import pcbnew
 
 R=Path(__file__).resolve().parent
 base=R/'PHASE24_STORAGE_CM5_USB4_MONOTONIC_V79_M2_POWER_OWNER.kicad_pcb'
-out=R/'PHASE24_STORAGE_M2_POWER_COMMON_BUS_V93.kicad_pcb'
+out=R/'PHASE24_STORAGE_M2_POWER_SOURCE_TREE_V94.kicad_pcb'
 b=pcbnew.LoadBoard(str(base)); net=b.FindNet('STORAGE_3V3'); assert net
 def P(x,y): return pcbnew.VECTOR2I_MM(float(x),float(y))
 def track(layer,a,z,w=.20):
@@ -17,7 +17,26 @@ def via(x,y):
 # One source pickup, outside U13's pad field, then the designated In2 trunk.
 track(pcbnew.F_Cu,(181.5,135.0),(182.5,135.0))
 via(182.5,135.0); via(209.0,170.2)
-track(pcbnew.In2_Cu,(182.5,135.0),(209.0,170.2),.35)
+
+# Escape every actual source pad before entering the common In2 tree. These
+# are outside-pad ordinary through-vias; no via-in-pad is used.
+source_escapes={
+    (178.5,133.4):(177.5,133.4), (178.5,136.6):(177.5,136.6),
+    (179.8,139.5):(179.8,140.5),
+    (153.5,136.6):(152.5,136.6), (154.8,139.5):(154.8,140.5),
+    (156.5,135.0):(157.5,135.0), (125.5,145.0):(124.5,145.0),
+    (211.1,149.05):(212.1,149.05),
+}
+for a,z in source_escapes.items(): track(pcbnew.F_Cu,a,z); via(*z)
+
+# In2 is the low-voltage power layer. Reserve a tree joining every source
+# escape to the launch pickup; this is power copper, not signal routing.
+anchor=(182.5,135.0)
+for z in ((177.5,133.4),(177.5,136.6),(179.8,140.5),
+          (157.5,135.0),(152.5,136.6),(154.8,140.5),(124.5,145.0)):
+    track(pcbnew.In2_Cu,z,anchor,.35)
+track(pcbnew.In2_Cu,anchor,(209.0,170.2),.35)
+track(pcbnew.In2_Cu,(212.1,149.05),(209.0,170.2),.35)
 
 # Reserve the connector launch channel first. Every contact is the same net;
 # adjacent non-power contacts remain physically outside the .20 mm corridor.

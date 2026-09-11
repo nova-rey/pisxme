@@ -11686,3 +11686,10 @@ storage regeneration.
 latest rejected common-bus candidate. Its nine-contact native connectivity and
 negative-control PASS are separated from its 606/341 native DRC failure, so
 future work will not mistake logical reachability for physical closure.
+
+2026-09-11 — Phase 24 storage power V94 disposable: connecting every listed
+U12/U13/U14/R81 source pad to the V93 common J3 bus passed strict native
+source/J3 connectivity and the trace-removal negative control, but native DRC
+reported nine real shorts from ordinary vias entering dense QFN fields
+(626/333). V94 was rejected; standard-rule source-via fanout is exhausted and
+the next valid repair must reserve an authoritative local QFN breakout.
