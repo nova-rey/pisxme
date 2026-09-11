@@ -11473,3 +11473,8 @@ port remapping reduced endpoint-off-grid findings 416 to 280 in a disposable
 copy, but native KiCad exposed four dangling labels and three disconnected
 hierarchy pins. The canonical source remains unchanged; the next repair must
 map every root/child/direct-link endpoint by identity.
+
+2026-09-11 — Validation harness reconciliation: Phase 3 netlist export and
+Phase 5 power-authority tests were updated from unavailable xvfb-run wrappers
+to native KiCad 10.0.5 invocation and current promoted-versus-hierarchical net
+names. Both pass; no schematic or electrical intent changed.

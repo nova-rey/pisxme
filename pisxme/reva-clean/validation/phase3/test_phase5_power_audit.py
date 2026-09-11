@@ -42,7 +42,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix='phase5-netlist-', dir=ROOT) as tmp:
         out = Path(tmp) / 'power.xml'
         result = subprocess.run([
-            'xvfb-run', '-a', 'kicad-cli', 'sch', 'export', 'netlist',
+            'kicad-cli', 'sch', 'export', 'netlist',
             '--format', 'kicadxml', '--output', out.name,
             str(ROOT / 'PiSXMe_RevA_Clean.kicad_sch')],
             cwd=tmp, capture_output=True, text=True, check=False)
@@ -53,8 +53,10 @@ def main():
                 (node.attrib.get('ref'), node.attrib.get('pin'))
                 for node in net.findall('node')
             }
-        assert {('J5', '1'), ('F1', '1')} <= nets['/POWER_INPUT/12V_IN_A']
-        assert {('J6', '1'), ('F2', '1')} <= nets['/POWER_INPUT/12V_IN_B']
+        # The current native XML exporter promotes these root power nets;
+        # regulator-local feedback nets retain their hierarchical names.
+        assert {('J5', '1'), ('F1', '1')} <= nets['12V_IN_A']
+        assert {('J6', '1'), ('F2', '1')} <= nets['12V_IN_B']
         assert {('Q1', '1'), ('U1', '6')} <= nets['/POWER_INPUT/FUSED_12V_A']
         assert {('Q2', '1'), ('U2', '6')} <= nets['/POWER_INPUT/FUSED_12V_B']
         # J1.A3 is the PCIe lane-negative signal.  The abstract connector's

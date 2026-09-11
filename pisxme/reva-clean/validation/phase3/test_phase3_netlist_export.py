@@ -8,7 +8,7 @@ def main() -> None:
     with tempfile.TemporaryDirectory(prefix='phase3-netlist-', dir=ROOT) as work:
         out = Path(work) / 'PiSXMe_RevA_Clean.net'
         result = subprocess.run(
-            ['xvfb-run', '-a', 'kicad-cli', 'sch', 'export', 'netlist',
+            ['kicad-cli', 'sch', 'export', 'netlist',
              '--format', 'kicadsexpr', '--output', out.name,
              str(ROOT / 'PiSXMe_RevA_Clean.kicad_sch')],
             cwd=work, capture_output=True, text=True, timeout=120,
