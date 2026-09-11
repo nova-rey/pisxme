@@ -1,5 +1,17 @@
 # Phase 24 acreage validation status
 
+## CURRENT ROOT-CAUSE WORK — ERC CLUSTER MAP AND IDENTITY PROBE — 2026-09-11
+
+The live native ERC census remains 851 warnings / 0 errors.  The repeated
+findings are now grouped in `PHASE24_ERC_CLUSTER_REMEDIATION_MAP_20260911.md`.
+The structural hierarchy audit confirms concrete root/child contract
+definition and serialized-instance omissions/order differences.  A new
+identity-driven disposable regeneration was rejected at 919 findings with
+four native hierarchy `pin_not_connected` errors; the canonical schematic was
+untouched.  The next repair must preserve the complete native port identity
+mapping and prove exact netlist parity before promotion.  Phase 24 remains
+OPEN; no warning is waived.
+
 ## CURRENT EXPERIMENT — IDENTITY-DRIVEN CONTRACT REGENERATION REJECTED — 2026-09-11
 
 The disposable live-contract regeneration preserved all ten root/child

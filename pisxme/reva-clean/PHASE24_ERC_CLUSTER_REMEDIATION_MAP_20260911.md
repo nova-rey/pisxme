@@ -1,0 +1,85 @@
+# Phase 24 ERC cluster remediation map — 2026-09-11
+
+## Current authoritative census
+
+Fresh native KiCad 10.0.5 full-severity ERC on the canonical clean schematic
+reports **851 warnings and 0 errors**.  The raw receipt is
+`PHASE24_CLEAN_SCHEMATIC_ERC_LIVE_RECHECK_20260911_v3.rpt` (SHA-256
+`53efcb9244ebe6e77f93d95713f54666f3f133c509ea73f79b4896d05ed9308a`).
+No findings are waived.
+
+| Cluster | Count | Scope/signature | Shared cause hypothesis | Confidence | Safe next repair |
+|---|---:|---|---|---|---|
+| endpoint_off_grid | 416 | Root and child hierarchy endpoints; repeated legacy 3 mm coordinates | Root/child hierarchy geometry was emitted by separate coordinate formulas while the current generator uses a different grid | High | One identity-driven native contract regeneration |
+| isolated_pin_label | 232 | Root/child boundary labels, especially repeated contract ports | Contract labels, embedded contract definitions, and serialized instance pins are not a complete one-to-one live-port contract | High | Reconcile by signal identity, preserving UUIDs and netlist membership |
+| unconnected_wire_endpoint | 147 | Root/child contract wire families | Wire endpoints were emitted independently from the corresponding sheet/label/instance coordinates | High | Transform complete wire families with their owning port identity |
+| same_local_global_label | 30 | Repeated boundary names in root and child sheets | Deliberate-looking boundary aliases are serialized as both local and global labels | High | Review ownership; rename/remove only with exact netlist parity |
+| multiple_net_names | 24 | Mostly STORAGE aliases and NC/support labels | Superseded storage edits left multiple names on common items | Medium | Resolve only proven aliases; preserve intentional isolation |
+| no_connect_dangling | 0 | CORE_CM5 stale duplicate records | Closed by native-correlated removal of 11 stale records | High | No further repair; regression remains required |
+| lib_symbol_mismatch | 2 | Embedded standard PWR_FLAG copies | Embedded symbol copy differs from installed `power` library | High | Unit-compatible native repair, with netlist and pin checks |
+
+The first three classes form a **795-warning hierarchy geometry/contract
+cluster**.  The naming cluster is 54 warnings.  A lower count is not
+acceptance: the required checks are native ERC, exact netlist parity, and
+preserved electrical intent.
+
+## Structural evidence
+
+`validation/phase3/phase24_hierarchy_structure_audit.py` now inventories the
+actual root sheet-pin order, child hierarchical-label order, embedded contract
+pin names/numbers, and serialized contract-instance pin UUIDs.  It confirms
+that these sequences are not interchangeable:
+
+* `REGULATORS` root order is `12V_PROTECTED, CM5_5V, STORAGE_3V3,
+  BRIDGE_1V1_3V3, BRIDGE_3V3, BRIDGE_1V1`, while the child labels begin with
+  `BRIDGE_3V3, BRIDGE_1V1` and the embedded definition/instance currently
+  serialize only the first four ports.
+* `CORE_CM5` has 15 labels/root pins but its embedded contract definition and
+  instance serialize 12 pins.
+* `ETHERNET` has 3 labels/root pins but its embedded contract definition and
+  instance serialize pins 1, 3, and 4.
+* `STORAGE` has 7 labels/root pins but its embedded contract definition and
+  instance serialize only the first five.
+
+These are concrete source-authoring facts, not inferred graph edges.  Any
+repair must use a per-child name/UUID table and preserve the native instance
+association semantics.
+
+## Bounded experiment and disposition
+
+`phase24_native_contract_identity_probe.py` created a disposable output that
+regenerated all contract definitions/instances from root names and child
+label UUIDs, while moving hierarchy geometry together.  Native KiCad ERC on
+the actual disposable path produced 919 findings, including four
+`pin_not_connected` hierarchy errors and additional `label_dangling` and
+`lib_symbol_mismatch` findings.  Receipt:
+`.phase24_native_contract_identity_probe/identity-erc3.rpt` (SHA-256
+`c2cb6f3271426e0078bc9fc3b9fff02af91e5c1b3222db2357f62bf2b53c97ce`).
+
+**Disposition: REJECTED.**  The canonical schematic was not modified.  The
+probe proves that changing contract pin order/definition and geometry in one
+pass is still insufficient when the native association semantics are guessed;
+the next experiment must obtain/compare the exact native-authored association
+or preserve the complete existing association records while repairing only
+the validated geometric owner mapping.  Earlier partial coordinate and
+contract-order probes remain historical rejected evidence.
+
+## Next bounded repair
+
+Use the structural inventory to build one native-authoring-equivalent,
+identity-driven transformation.  For every port, explicitly preserve the
+mapping:
+
+`root sheet pin ↔ root wire/endpoint ↔ child label ↔ embedded contract pin ↔
+contract-instance pin UUID ↔ child wire endpoint`.
+
+Do not edit the canonical source until the disposable result has:
+
+1. native reopen and full ERC with no new hierarchy errors;
+2. exact exported netlist name/node parity with the canonical source;
+3. no new pin-not-connected findings;
+4. unchanged real circuit symbols and net names; and
+5. a regression fixture that rejects a missing/altered association.
+
+The PWR_FLAG and 54-name clusters remain independent side work, but neither
+should be used to mask the hierarchy contract defect.

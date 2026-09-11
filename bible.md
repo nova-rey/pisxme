@@ -11488,3 +11488,12 @@ PCIe net-authority test passes without changing PCIe CAD.
 S-expression structure audit for the root and all ten children. It establishes
 the safe transformation boundary for contract geometry and guards against the
 child-specific top-level ordering that defeated regex-based probes.
+
+2026-09-11 — Phase 24 ERC root-cause clustering: recorded the live 851-warning
+native census as repeated hierarchy geometry/contract, label/net-name, and
+library-integrity clusters. The structural audit now reports root pin order,
+child label order, embedded contract pins, and instance UUID records by
+identity. A disposable complete contract regeneration was rejected at 919
+findings with four native hierarchy pin-not-connected errors; canonical CAD
+was untouched. The next repair requires native association semantics and
+exact exported-netlist parity, not further coordinate-only variants.
