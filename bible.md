@@ -11693,3 +11693,9 @@ source/J3 connectivity and the trace-removal negative control, but native DRC
 reported nine real shorts from ordinary vias entering dense QFN fields
 (626/333). V94 was rejected; standard-rule source-via fanout is exhausted and
 the next valid repair must reserve an authoritative local QFN breakout.
+
+2026-09-11 — Phase 24 storage power V95 disposable: perimeter-only F.Cu
+escapes around the RUA0042A fields avoided the V94 immediate-via short class.
+The native audit reached all nine J3 contacts but failed strict source ownership
+for eight source pads; native DRC was 627/337. V95 was rejected with no
+canonical PCB change.

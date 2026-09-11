@@ -4,7 +4,7 @@ import pcbnew
 
 R=Path(__file__).resolve().parent
 base=R/'PHASE24_STORAGE_CM5_USB4_MONOTONIC_V79_M2_POWER_OWNER.kicad_pcb'
-out=R/'PHASE24_STORAGE_M2_POWER_SOURCE_TREE_V94.kicad_pcb'
+out=R/'PHASE24_STORAGE_M2_POWER_PERIMETER_ESCAPE_V95.kicad_pcb'
 b=pcbnew.LoadBoard(str(base)); net=b.FindNet('STORAGE_3V3'); assert net
 def P(x,y): return pcbnew.VECTOR2I_MM(float(x),float(y))
 def track(layer,a,z,w=.20):
@@ -21,19 +21,31 @@ via(182.5,135.0); via(209.0,170.2)
 # Escape every actual source pad before entering the common In2 tree. These
 # are outside-pad ordinary through-vias; no via-in-pad is used.
 source_escapes={
-    (178.5,133.4):(177.5,133.4), (178.5,136.6):(177.5,136.6),
-    (179.8,139.5):(179.8,140.5),
-    (153.5,136.6):(152.5,136.6), (154.8,139.5):(154.8,140.5),
-    (156.5,135.0):(157.5,135.0), (125.5,145.0):(124.5,145.0),
-    (211.1,149.05):(212.1,149.05),
+    (178.5,133.4):(176.5,133.4), (178.5,136.6):(176.5,136.6),
+    (179.8,139.5):(179.8,141.5), (181.5,135.0):(183.5,135.0),
+    (153.5,136.6):(151.5,136.6), (154.8,139.5):(154.8,141.5),
+    (156.5,135.0):(158.5,135.0), (125.5,145.0):(123.5,145.0),
+    (211.1,149.05):(213.0,149.05),
 }
-for a,z in source_escapes.items(): track(pcbnew.F_Cu,a,z); via(*z)
+for a,z in source_escapes.items(): track(pcbnew.F_Cu,a,z)
+# Perimeter-only joins. The RUA0042A fields are not crossed by these traces;
+# each selector enters the In2 tree through one via outside its courtyard.
+for a,z in (((176.5,133.4),(176.5,142.0)),
+            ((176.5,136.6),(176.5,142.0)),
+            ((179.8,141.5),(183.5,142.0)),
+            ((183.5,135.0),(183.5,142.0)),
+            ((151.5,136.6),(151.5,142.0)),
+            ((154.8,141.5),(158.5,142.0)),
+            ((158.5,135.0),(158.5,142.0)),
+            ((123.5,145.0),(123.5,142.0))):
+    track(pcbnew.F_Cu,a,z)
+for z in ((183.5,142.0),(158.5,142.0),(123.5,142.0),(213.0,149.05)):
+    via(*z)
 
 # In2 is the low-voltage power layer. Reserve a tree joining every source
 # escape to the launch pickup; this is power copper, not signal routing.
 anchor=(182.5,135.0)
-for z in ((177.5,133.4),(177.5,136.6),(179.8,140.5),
-          (157.5,135.0),(152.5,136.6),(154.8,140.5),(124.5,145.0)):
+for z in ((183.5,142.0),(158.5,142.0),(123.5,142.0)):
     track(pcbnew.In2_Cu,z,anchor,.35)
 track(pcbnew.In2_Cu,anchor,(209.0,170.2),.35)
 track(pcbnew.In2_Cu,(212.1,149.05),(209.0,170.2),.35)
