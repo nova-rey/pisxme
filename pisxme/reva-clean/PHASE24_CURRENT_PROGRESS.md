@@ -25,6 +25,11 @@ native DRC violations and 1 unconnected item. The rule removes only the
 authorized local 0.15-mm width/clearance accounting; the remaining findings
 are real corridor crossings and one board-GND transition.
 
+After adding the real board-GND continuation and removing two redundant
+single-layer vias, the candidate reports 10 native DRC violations and 0
+unconnected items. All remaining findings are explicit same-layer corridor
+crossings.
+
 The latest coherent outboard U3 relocation trial is rejected at 31 native DRC
 violations and 2 unconnected items, improving the prior 38/3 trial. Remaining
 failures are localized to occupied B.Cu corridors and two local ground joins;

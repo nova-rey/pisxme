@@ -12,6 +12,10 @@ The candidate-local QFN rule now yields 11 DRC findings and 1 unconnected
 item. This is a validation-accounting correction only; no severity was waived,
 and the remaining physical findings remain open.
 
+The latest saved candidate closes the board-GND transition and removes the two
+redundant dangling vias: native DRC is 10 findings / 0 unconnected items.
+The candidate is still rejected pending the ten remaining corridor crossings.
+
 The best current disposable overlay relocates the coherent U3 support island
 outboard and reports 31 native DRC violations / 2 unconnected items. It is
 still rejected; the accepted U1/V1603 baseline remains clean.

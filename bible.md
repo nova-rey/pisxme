@@ -11166,3 +11166,10 @@ the accepted local primitive. Receipt:
   0.15-mm escape exception. Native DRC changed from 20 findings to 11, with
   one unconnected item exposed; no check severity was waived. Remaining
   findings are real corridor crossings and the board-GND transition.
+
+## 2026-09-11 — support candidate connectivity and via cleanup
+
+- Added the real board-GND continuation to the open-acreage support candidate
+  and removed two vias that had copper on only one layer. Native DRC now
+  reports 10 findings and 0 unconnected items under the candidate-local QFN
+  rule; the remaining ten findings are same-layer corridor crossings.
