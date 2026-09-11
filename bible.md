@@ -11461,3 +11461,9 @@ fresh native ERC fell from 862 to 851 warnings, with no-connect-dangling 11 to
 repair: the live ERC receipt is v3 at 851 warnings/0 errors, and the dangling
 no-connect cluster is recorded CLOSED while hierarchy, labels, net names, and
 library-integrity clusters remain open.
+
+2026-09-11 — Phase 24 endpoint-grid cluster analysis: native evidence confirms
+the canonical root/child contract still serializes repeated 3 mm coordinates,
+while the current scaffold defines a 2.54 mm grid. The 416 endpoint findings
+are not all contract geometry, so partial snapping remains rejected; a complete
+identity-driven contract regeneration is the only safe promotion boundary.
