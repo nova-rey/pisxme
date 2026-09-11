@@ -11524,3 +11524,7 @@ the status and remediation map to the promoted canonical native ERC receipt,
 unconnected_wire_endpoint, 30 same_local_global_label, 24 multiple_net_names,
 and two lib_symbol_mismatch findings. The prior 851-warning census is now
 explicitly historical; remaining findings are open and unwaived.
+
+2026-09-11 — Phase 24 status hygiene follow-up: marked the older 871/872
+pre-promotion ERC counts as historical in the current-state override and
+identified the promoted 777-warning receipt as the sole current census.

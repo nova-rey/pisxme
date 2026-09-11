@@ -185,8 +185,10 @@ schematic/PCB parity, acreage integration, and Phase 24 remain open.
 ## CURRENT UPDATE — ETHERNET CONTRACT LIBRARY SYNCHRONIZED — 2026-09-11
 
 The canonical custom Ethernet contract now matches the live child contract's
-three ports; the stale library-only `GBE_LED` pin was removed. Native ERC is
-871 warnings / 0 errors, with two remaining standard `PWR_FLAG` mismatches.
+three ports; the stale library-only `GBE_LED` pin was removed. At that
+pre-promotion checkpoint native ERC was 871 warnings / 0 errors, with two
+remaining standard `PWR_FLAG` mismatches. This count is historical; the
+promoted identity repair is the current 777-warning receipt above.
 The Ethernet authority audit remains CLOSED. No PCB, root-sheet, or Ethernet
 topology change was made; full ERC and Phase 24 gates remain open.
 
@@ -195,9 +197,10 @@ topology change was made; full ERC and Phase 24 gates remain open.
 The live `STORAGE_Contract` embedded symbol pin 4 now uses `STORAGE_3V3`,
 matching the root sheet pin, child hierarchical label, and current storage
 rail ownership. Only the five-byte symbol name changed; no geometry, UUID,
-wire, PCB, or storage-topology change was made. Native KiCad ERC remains 872
-warnings / 0 errors and the netlist comparison shows only the intended pin
-name change. This specific authority contradiction is closed; the broader
+wire, PCB, or storage-topology change was made. At that pre-promotion
+checkpoint native KiCad ERC was 872 warnings / 0 errors and the netlist
+comparison showed only the intended pin name change. This specific authority
+contradiction is closed; the broader
 Phase 24 ERC, parity, Path-B, acreage, and manufacturing gates remain open.
 
 ## CURRENT STATE OVERRIDE — 2026-09-11
@@ -216,8 +219,9 @@ The canonical clean-library namespace repair is checkpoint `7b06b6ca`:
 added the eight storage definitions under `PiSXMeRevAClean`. Native ERC now
 reports zero missing-library-symbol / `lib_symbol_issues` findings. A second
 source-level repair qualified the 20 storage passive/crystal footprint
-references against `PiSXMeRevAClean`; native ERC now has 872 warnings and 0
-errors in the saved report. Remaining ERC warnings, production
+references against `PiSXMeRevAClean`; that pre-promotion checkpoint had 872
+warnings and 0 errors in the saved report. The current promoted report has
+777 warnings / 0 errors. Remaining ERC warnings, production
 schematic/PCB parity, complete Path-B support/procurement/firmware, acreage
 promotion, and the remaining Phase 24 gates are OPEN and unwaived. Do not
 interpret older top-of-log overlay counts as the current candidate result.
