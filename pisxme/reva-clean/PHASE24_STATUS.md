@@ -1,5 +1,13 @@
 # Phase 24 acreage validation status
 
+## CURRENT VALIDATION RECHECK — LIVE SCHEMATIC ERC — 2026-09-11
+
+Fresh native KiCad 10.0.5 full-severity ERC against the canonical clean root
+reports 862 warnings and zero errors. Raw report and SHA-256 are recorded in
+`PHASE24_LIVE_ERC_RECHECK_RECEIPT_20260911.md`; warnings remain open and
+unwaived. The next actionable gate is controlled live contract/source
+authoring, then matching netlist export and exact-candidate PCB parity.
+
 ## CURRENT VALIDATION SUBGATE — NATIVE HIERARCHY REGRESSION — 2026-09-11
 
 The generic native hierarchy authoring regression passes under the installed

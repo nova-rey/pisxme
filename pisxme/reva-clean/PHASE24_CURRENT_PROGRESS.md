@@ -1,5 +1,14 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — live ERC recheck pinned — 2026-09-11
+
+Fresh native KiCad 10.0.5 full-severity ERC on the canonical clean root reports
+862 warnings and zero errors. The raw report and hash are pinned in
+`PHASE24_LIVE_ERC_RECHECK_RECEIPT_20260911.md`. This does not close Phase 24;
+the warning classes remain open and unwaived. The next actionable gate is a
+controlled live contract/source-authoring repair followed by matching netlist
+export and PCB parity.
+
 ## Current checkpoint — native hierarchy regression repaired and passing — 2026-09-11
 
 The generic native hierarchy regression now passes end-to-end under the
