@@ -3,24 +3,24 @@
 ## Current authoritative census
 
 Fresh native KiCad 10.0.5 full-severity ERC on the canonical clean schematic
-reports **657 warnings and 0 errors** after the regulator-stub repair. The
-current raw receipt is `PHASE24_CLEAN_SCHEMATIC_ERC_REGULATOR_STUB_PROMOTED_20260911.rpt`
-(SHA-256 `878cfbbb1b4356bdbe791cbe2f338938cc924baa74d07b50bd3f5af0d37b651a`).
+reports **489 warnings and 0 errors** after the regulator pin-stub repair. The
+current raw receipt is `PHASE24_CLEAN_SCHEMATIC_ERC_REGULATOR_PIN_STUB_PROMOTED_20260911.rpt`
+(SHA-256 `1acb82e1ac8e4abf1afac4fabc9762579b8aebe88e811d40f62dc03c041200c2`).
 The 777-warning receipt below is retained as historical pre-stub-repair
 evidence.
 No findings are waived.
 
 | Cluster | Count | Scope/signature | Shared cause hypothesis | Confidence | Safe next repair |
 |---|---:|---|---|---|---|
-| endpoint_off_grid | 285 | Root and child hierarchy endpoints; repeated 2.54/3 mm coordinates | Residual legacy grid geometry remains after hierarchy association repair; the rejected root-x-only probe shows geometry cannot be normalized independently | High | One complete sheet/label/direct-link transformation, or retain as bounded ERC cleanup work |
+| endpoint_off_grid | 201 | Root and child hierarchy endpoints; repeated 2.54/3 mm coordinates | Residual legacy grid geometry remains after hierarchy association repair; the rejected root-x-only probe shows geometry cannot be normalized independently | High | One complete sheet/label/direct-link transformation, or retain as bounded ERC cleanup work |
 | isolated_pin_label | 232 | Root/child boundary labels, especially repeated contract ports | Residual contract labels are electrically associated but still reported as isolated by native ERC; removal/renaming is intent-sensitive | High | Analyze by identity and native netlist parity; no suppression |
-| unconnected_wire_endpoint | 84 | Root/child contract wire families | Residual wire endpoints are legacy geometry findings after the complete identity repair | High | Repair only complete owning wire families in a disposable native probe |
+| unconnected_wire_endpoint | 0 | Root/child contract wire families | Closed by removal of 84 unowned 1 mm regulator pin stubs after exact native netlist parity | High | Regression only; do not remove owned contract wires |
 | same_local_global_label | 30 | Repeated boundary names in root and child sheets | Deliberate-looking boundary aliases are serialized as both local and global labels | High | Review ownership; rename/remove only with exact netlist parity |
 | multiple_net_names | 24 | Mostly STORAGE aliases and NC/support labels | Superseded storage edits left multiple names on common items | Medium | Resolve only proven aliases; preserve intentional isolation |
 | no_connect_dangling | 0 | CORE_CM5 stale duplicate records | Closed by native-correlated removal of 11 stale records | High | No further repair; regression remains required |
 | lib_symbol_mismatch | 2 | Embedded standard PWR_FLAG copies | Embedded symbol copy differs from installed `power` library | High | Unit-compatible native repair, with netlist and pin checks |
 
-The first three classes form a **601-warning residual hierarchy geometry/contract
+The first three classes form a **433-warning residual hierarchy geometry/contract
 cluster**. The naming cluster is 54 warnings and two PWR_FLAG library
 findings remain. A lower count is not
 acceptance: the required checks are native ERC, exact netlist parity, and
@@ -29,9 +29,9 @@ preserved electrical intent.
 ## Current remediation state
 
 The identity-preserving repair closed the native hierarchy-error defect and
-the promoted regulator-stub repair reduced the live census from 777 to 657
+the promoted regulator-stub repairs reduced the live census from 777 to 489
 without changing
-the 338-net native netlist. The remaining 345 endpoint findings are not
+the 338-net native netlist. The remaining 201 endpoint findings are not
 evidence that the promoted association is wrong: the root-x-only disposable
 normalization increased total findings and reintroduced hierarchy errors.
 The next discriminator is therefore a complete owner-aware grid transform,

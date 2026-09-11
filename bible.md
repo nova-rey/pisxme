@@ -11535,6 +11535,13 @@ warnings, but exact netlist comparison failed (338 canonical nets versus 339
 probe nets, with changed STORAGE node ownership). The alias repair was
 rejected; no canonical source changed.
 
+2026-09-11 — Phase 24 second systemic ERC repair: removed 84 exact unowned
+1 mm regulator pin-stub wires. Native ERC improved from 657 to 489 warnings/0
+errors; native netlist remained exactly 338 nets with zero changed node sets,
+and the hierarchy structure audit passed. Repair promoted as
+source-authoritative; 201 endpoint-grid and 232 isolated-label findings
+remain open and unwaived.
+
 2026-09-11 — Phase 24 systemic ERC repair: removed 60 exact unowned 5 mm wire
 stubs from REGULATORS. Native ERC improved from 777 to 657 warnings/0 errors;
 native netlist remained exactly 338 nets with zero changed node sets, and the

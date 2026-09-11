@@ -6,17 +6,18 @@ The pre-stub-repair canonical native KiCad 10.0.5 ERC census was **777
 warnings / 0 errors**, from `PHASE24_CLEAN_SCHEMATIC_ERC_PROMOTED_20260911.rpt`
 (SHA-256 `905ba9d744eb21de81f676f998f36c49acefdf9de27b5b681ff7c363379c0156`). The
 repeated findings are grouped in `PHASE24_ERC_CLUSTER_REMEDIATION_MAP_20260911.md`.
-The current canonical census is **657 warnings / 0 errors** after the
-promoted regulator-stub repair below. The identity-preserving hierarchy repair is promoted and has exact native
+The current canonical census is **489 warnings / 0 errors** after the
+promoted regulator pin-stub repair below. The identity-preserving hierarchy repair is promoted and has exact native
 netlist parity: 338 nets, zero missing/extra names, and zero changed node
 sets. Phase 24 remains **OPEN**; all remaining warnings are unwaived.
 
-The latest promoted systemic repair removed 60 unowned `REGULATORS` wire
-stubs with exact native netlist parity. Current native ERC is **657 warnings /
-0 errors**: 285 `endpoint_off_grid`, 232 `isolated_pin_label`, 84
-`unconnected_wire_endpoint`, 30 `same_local_global_label`, 24
-`multiple_net_names`, and 2 `lib_symbol_mismatch`. Receipt:
-`PHASE24_REGULATOR_STUB_REPAIR_RECEIPT_20260911.md`.
+The latest promoted systemic repairs removed 60 unowned 5 mm and 84 unowned
+1 mm `REGULATORS` wire stubs with exact native netlist parity. Current native
+ERC is **489 warnings / 0 errors**: 201 `endpoint_off_grid`, 232
+`isolated_pin_label`, 0 `unconnected_wire_endpoint`, 30
+`same_local_global_label`, 24 `multiple_net_names`, and 2
+`lib_symbol_mismatch`. Receipt:
+`PHASE24_REGULATOR_PIN_STUB_REPAIR_RECEIPT_20260911.md`.
 
 The earlier 851-warning census and 919-warning identity probe below are
 historical pre-promotion evidence, not the current count or an outstanding

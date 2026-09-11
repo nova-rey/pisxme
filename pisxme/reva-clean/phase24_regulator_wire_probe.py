@@ -30,6 +30,15 @@ while True:
  m=re.search(r'\(wire\s*\(pts\s*\(xy 70 ([0-9.+-]+)\)\s*\(xy 65 \1\)',s[pos:])
  if not m:break
  st=pos+m.start();spans.append((st,end(s,st)));pos=st+1
+one=[];pos=0
+while True:
+ m=re.search(r'\(wire\s*\(pts\s*\(xy ([0-9.+-]+) ([0-9.+-]+)\)\s*\(xy ([0-9.+-]+) ([0-9.+-]+)\)',s[pos:])
+ if not m:break
+ x1,y1,x2,y2=map(float,m.groups())
+ if abs(((x2-x1)**2+(y2-y1)**2)**.5-1.0)<1e-7:
+  st=pos+m.start();one.append((st,end(s,st)))
+ pos=pos+m.start()+1
+spans.extend(one)
 for a,b in reversed(spans):s=s[:a]+s[b:]
 p.write_text(s);print(f'removed={len(spans)} output={OUT}')
 report=OUT/'no-regulator-stubs-erc.rpt'
