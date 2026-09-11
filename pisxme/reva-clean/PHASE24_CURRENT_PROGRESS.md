@@ -14,6 +14,12 @@ Path-B and full-board gates.
 
 ## Current next action — corrected ISOLATEB support authority — 2026-09-11
 
+An open-acreage U3 support candidate was evaluated using the accepted U1/V1603
+baseline. It has complete native connectivity (0 unconnected items) and 20
+native DRC findings. The remaining failures are identifiable physical
+corridor crossings/local-rule receipts; it is not promoted, but is the best
+current disposable integration basis.
+
 The latest coherent outboard U3 relocation trial is rejected at 31 native DRC
 violations and 2 unconnected items, improving the prior 38/3 trial. Remaining
 failures are localized to occupied B.Cu corridors and two local ground joins;

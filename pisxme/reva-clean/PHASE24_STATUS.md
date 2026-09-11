@@ -4,6 +4,10 @@
 
 ## CURRENT VALIDATION UPDATE — 2026-09-11 SUPPORT OVERLAY
 
+The current best disposable support integration is the open-acreage candidate:
+native connectivity is complete (0 unconnected items) with 20 DRC findings.
+It remains rejected pending removal of the identified corridor crossings.
+
 The best current disposable overlay relocates the coherent U3 support island
 outboard and reports 31 native DRC violations / 2 unconnected items. It is
 still rejected; the accepted U1/V1603 baseline remains clean.

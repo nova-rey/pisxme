@@ -11151,3 +11151,11 @@ the accepted local primitive. Receipt:
   spine to the existing board-GND transition at (115.6,78.0). Native
   connectivity now reports 0 unconnected items; 24 physical DRC findings
   remain, so the overlay is not promoted.
+
+## 2026-09-11 — open-acreage support candidate
+
+- Evaluated the existing open-acreage MIC2545A candidate without changing the
+  frozen RTL9210B orientation or V1603 launch. Native connectivity is complete
+  with 0 unconnected items and 20 DRC findings remain. The candidate is
+  retained as the best disposable integration basis while corridor ownership
+  is repaired.
