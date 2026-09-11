@@ -11296,3 +11296,11 @@ the accepted local primitive. Receipt:
   `endpoint_off_grid` findings. The live canonical child sheets remain
   unchanged; their stale embedded contract instances still require explicit
   mapping before production repair.
+
+## 2026-09-11 — STORAGE contract pin authority repaired
+
+- Corrected the live embedded STORAGE contract pin 4 from `M2_3V3` to
+  `STORAGE_3V3`, matching the root sheet, child label, and rail ownership.
+  Native ERC remained 872 warnings / 0 errors, and the disposable netlist
+  diff contained only the intended pin-name change. No PCB or topology was
+  changed; broader Phase 24 gates remain open.

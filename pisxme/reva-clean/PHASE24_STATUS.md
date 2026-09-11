@@ -1,5 +1,15 @@
 # Phase 24 acreage validation status
 
+## CURRENT UPDATE — STORAGE CONTRACT NAME REPAIRED — 2026-09-11
+
+The live `STORAGE_Contract` embedded symbol pin 4 now uses `STORAGE_3V3`,
+matching the root sheet pin, child hierarchical label, and current storage
+rail ownership. Only the five-byte symbol name changed; no geometry, UUID,
+wire, PCB, or storage-topology change was made. Native KiCad ERC remains 872
+warnings / 0 errors and the netlist comparison shows only the intended pin
+name change. This specific authority contradiction is closed; the broader
+Phase 24 ERC, parity, Path-B, acreage, and manufacturing gates remain open.
+
 ## CURRENT STATE OVERRIDE — 2026-09-11
 
 Read this section before the chronological experiment log. The current

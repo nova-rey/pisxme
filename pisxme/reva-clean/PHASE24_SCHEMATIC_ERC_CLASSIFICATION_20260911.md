@@ -1,5 +1,14 @@
 # Phase 24 schematic ERC classification — 2026-09-11
 
+## STORAGE contract-name repair — 2026-09-11
+
+The embedded `STORAGE_Contract` pin 4 was corrected from `M2_3V3` to
+`STORAGE_3V3`, matching the root sheet pin, child hierarchical label, and
+current rail ownership. The repair is limited to the embedded symbol name;
+native ERC remains 872 warnings / 0 errors. Disposable-copy netlist comparison
+shows no change beyond the intended pin-function name. This contradiction is
+closed; the remaining ERC classes are not waived.
+
 ## Live contract-port audit — 2026-09-11
 
 Native-source comparison found stale embedded contract pin sets: `CORE_CM5`

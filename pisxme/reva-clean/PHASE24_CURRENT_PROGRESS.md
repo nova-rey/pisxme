@@ -1,5 +1,19 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — STORAGE contract pin authority repaired — 2026-09-11
+
+The live `STORAGE_Contract` embedded symbol had one stale pin name: pin 4 was
+`M2_3V3` while the root sheet pin, child hierarchical label, and current
+storage rail use `STORAGE_3V3`. The fail-closed
+`phase24_repair_storage_contract_name.py` changed only that five-byte name;
+UUIDs, placement, wires, bridge-rail labels, PCB assets, and storage
+architecture are unchanged.
+
+The disposable copy produced the same 872-warning/0-error native ERC result,
+and the exported netlist diff contains only the intended pin-4 name change.
+This closes the identified contract-name contradiction, not the overall ERC
+or Phase 24 gates. Remaining warnings are still open and unwaived.
+
 ## Current checkpoint — live contract-port audit prevents blind promotion — 2026-09-11
 
 The live source was compared by native-loaded hierarchy names and embedded
