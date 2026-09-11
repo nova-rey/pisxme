@@ -7,6 +7,7 @@ import subprocess
 import tempfile
 import re
 import shutil
+import os
 from pathlib import Path
 
 
@@ -45,20 +46,30 @@ def main() -> None:
         shutil.copytree(ROOT, isolated)
         # Preserve the generator's historical fixture lookup relative to its
         # temporary copy without depending on the live workspace path.
-        fixture = Path("/tmp/work/skidl_spike/golden_hierarchy.kicad_sch")
-        fixture.parent.mkdir(parents=True, exist_ok=True)
+        fixture = isolated / "golden_hierarchy.kicad_sch"
         shutil.copy2(ROOT.parents[1] / "work/skidl_spike/golden_hierarchy.kicad_sch", fixture)
         generator = isolated / GENERATOR.name
         root_schematic = isolated / "PiSXMe_RevA_Clean.kicad_sch"
-        child_schematics = sorted(
-            path for path in isolated.glob("*.kicad_sch") if path != root_schematic
+        child_names = (
+            "CORE_CM5", "V100_PCIE", "V100_POWER", "POWER_INPUT",
+            "REGULATORS", "ETHERNET", "STORAGE", "SERVICE", "COOLING",
+            "DEBUG",
         )
-        subprocess.run(["python3", str(generator)], cwd=isolated, check=True)
+        child_schematics = [isolated / f"{name}.kicad_sch" for name in child_names]
+        generator_env = os.environ.copy()
+        generator_env["PISXME_GOLDEN_HIERARCHY"] = str(fixture)
+        subprocess.run(["python3", str(generator)], cwd=isolated,
+                       env=generator_env, check=True)
 
         root_text = root_schematic.read_text()
-        assert root_text.count('(wire\n') == sum(
-            child.read_text().count('(hierarchical_label "') for child in child_schematics
+        contract_wire_count = sum(
+            child.read_text().count('(hierarchical_label "')
+            for child in child_schematics
         )
+        # The root also contains direct signal links (PCIe/service), so its
+        # total wire count is intentionally greater than the contract count.
+        assert root_text.count('(wire\n') >= contract_wire_count
+        assert contract_wire_count > 0
         assert root_text.count('(sheet_instances (path "/" (page "1")))') == 1
 
         for child in child_schematics:
@@ -75,7 +86,7 @@ def main() -> None:
             report = Path(erc_tmp) / "erc.rpt"
             result = subprocess.run(
                 [
-                    "xvfb-run", "-a", "kicad-cli", "sch", "erc",
+                    "kicad-cli", "sch", "erc",
                     "--exit-code-violations", "--severity-error",
                     "--output", str(report), str(ROOT / "PiSXMe_RevA_Clean.kicad_sch"),
                 ], cwd=ROOT, check=False,

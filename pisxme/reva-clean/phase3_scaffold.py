@@ -8,9 +8,13 @@ real Phase 3 symbols/sheets are authored.
 
 from pathlib import Path
 from uuid import UUID
+import os
 
 ROOT = Path(__file__).resolve().parent
-TEMPLATE = Path(__file__).resolve().parents[2] / "work" / "skidl_spike" / "golden_hierarchy.kicad_sch"
+TEMPLATE = Path(os.environ.get(
+    "PISXME_GOLDEN_HIERARCHY",
+    str(Path(__file__).resolve().parents[2] / "work" / "skidl_spike" / "golden_hierarchy.kicad_sch"),
+))
 ROOT_UUID = str(UUID(int=0x30000000000000000000000000000000))
 GRID = 2.54
 SHEETS = (

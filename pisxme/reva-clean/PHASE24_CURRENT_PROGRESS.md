@@ -1,5 +1,15 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — native hierarchy regression repaired and passing — 2026-09-11
+
+The generic native hierarchy regression now passes end-to-end under the
+installed Flatpak KiCad toolchain. Its disposable generated hierarchy has
+zero severity-error ERC findings and no hierarchy mismatch. The test now
+handles the explicit fixture path, the ten authoritative child sheets, and
+direct root signal links correctly. This does not promote generated output or
+close live full ERC. Receipt:
+`PHASE24_NATIVE_HIERARCHY_REGRESSION_RECEIPT_20260911.md`.
+
 ## Current checkpoint — combined live-port grid probe rejected — 2026-09-11
 
 The combined live-port reconciliation plus coherent-grid transform was tested

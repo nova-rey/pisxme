@@ -11410,3 +11410,10 @@ the accepted local primitive. Receipt:
   disposable copy. Native ERC reported 749 findings, including seven
   hierarchy pin-not-connected errors. Canonical sources were untouched; a
   native-authored live-port regeneration remains required.
+
+## 2026-09-11 — Native hierarchy regression repaired
+
+- Repaired the generic hierarchy regression's fixture-path, child-discovery,
+  direct-root-link, and Flatpak command assumptions. The disposable generated
+  hierarchy now passes native KiCad severity-error ERC with no hierarchy
+  mismatch. Live full ERC and Phase 24 remain open.

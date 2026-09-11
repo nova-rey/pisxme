@@ -1,5 +1,12 @@
 # Phase 24 acreage validation status
 
+## CURRENT VALIDATION SUBGATE — NATIVE HIERARCHY REGRESSION — 2026-09-11
+
+The generic native hierarchy authoring regression passes under the installed
+Flatpak KiCad toolchain. Disposable generated output has zero severity-error
+ERC findings and no hierarchy mismatch. This does not promote generated output
+or close the live schematic's full ERC warnings; Phase 24 remains OPEN.
+
 ## CURRENT AUTHORING EXPERIMENT — LIVE-PORT GRID REJECTED — 2026-09-11
 
 The combined live-port/coordinate transform was rejected in a disposable
