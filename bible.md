@@ -11190,3 +11190,10 @@ the accepted local primitive. Receipt:
   handoff checkpoint. The former QFN source-fanout blocker is closed for the
   disposable candidate; production parity, support authority, and full Phase
   24 gates remain explicitly open.
+
+## 2026-09-11 — canonical clean schematic ERC evidence
+
+- Ran native KiCad ERC on `PiSXMe_RevA_Clean.kicad_sch` and preserved the raw
+  report `PHASE24_CLEAN_SCHEMATIC_ERC_CURRENT.rpt`: 918 warnings, 0 native
+  errors. The strict Phase 24 ERC gate remains open; findings are classified
+  in `PHASE24_STATUS.md` and are not waived.

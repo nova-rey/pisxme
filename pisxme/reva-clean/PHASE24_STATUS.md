@@ -11676,3 +11676,19 @@ zone. This closes the previously tested local implementation defect for this
 candidate only. Full schematic-to-PCB parity, production support authority,
 integrated Path-B validation, and Phase 24 closure remain OPEN. Do not treat
 this candidate PASS as production-board or final-plan READY evidence.
+
+## CURRENT PRODUCTION ERC GATE — 2026-09-11
+
+Native KiCad ERC was run on the canonical clean schematic
+`PiSXMe_RevA_Clean.kicad_sch`; the raw receipt is
+`PHASE24_CLEAN_SCHEMATIC_ERC_CURRENT.rpt`. The run reports 918 warnings and
+no native ERC errors. Findings are 416 off-grid endpoints, 232 isolated pin
+labels, 147 unconnected wire endpoints, 30 same-local/global-label conflicts,
+26 library-symbol issues, 24 multiple-net-name findings, 20 footprint-link
+issues, 11 no-connect dangling findings, 9 no-connect-connected findings, and
+3 library-symbol mismatches.
+
+This is an OPEN production-authority gate. It is not evidence against the
+validated isolated RTL9210B candidate, and no severity was changed or waived.
+The next production task is to classify and repair the schematic-authoring
+path/source hierarchy in coherent groups, then rerun native ERC and parity.
