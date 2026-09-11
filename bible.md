@@ -24,6 +24,12 @@ historical J3 storage-power fixture failure from the partial-J1 isolated
 RTL9210B candidate. The nine-pad result is not promoted as a verdict on that
 different baseline; full storage production parity remains open.
 
+2026-09-11: Storage power workstream tested V88 local F.Cu pickup/In1 trunk
+repair. Native saved-board connectivity reached all nine M.2 power contacts
+and the actual trace-removal negative control failed as expected, but native
+DRC regressed to 608 violations / 341 unconnected items from the 601/397 V79
+source. V88 is retained as rejected route evidence, not promoted.
+
 2026-09-08: Parameterized the retained V3 JMS583 QFN escape author for an
 explicit disposable base/output, enabling controlled integration with later
 storage candidates without mutating the Path-A basis. The earlier complete-
