@@ -12,6 +12,11 @@ untouched.  The next repair must preserve the complete native port identity
 mapping and prove exact netlist parity before promotion.  Phase 24 remains
 OPEN; no warning is waived.
 
+The corrected synthetic-contract-removal probe was also rejected: 826 total
+warnings included 87 new `label_dangling` findings and the exported netlist
+lost the generated contract libparts. This confirms that contract scaffolding
+cannot simply be deleted; live child connections must be re-authored.
+
 ## CURRENT EXPERIMENT — IDENTITY-DRIVEN CONTRACT REGENERATION REJECTED — 2026-09-11
 
 The disposable live-contract regeneration preserved all ten root/child

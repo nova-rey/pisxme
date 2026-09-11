@@ -83,3 +83,17 @@ Do not edit the canonical source until the disposable result has:
 
 The PWR_FLAG and 54-name clusters remain independent side work, but neither
 should be used to mask the hierarchy contract defect.
+
+## Representation probe — synthetic contract removal
+
+A corrected disposable probe copied the local symbol/footprint tables before
+removing only the embedded `_Contract_1_1` definitions, their placed contract
+instances, and the generated label-to-contract marker wires. Native KiCad
+reported 826 warnings, but introduced 87 `label_dangling` findings and
+removed the synthetic contract libparts from the exported netlist. Receipt:
+`.phase24_no_synthetic_contract_probe2/no-contract-erc.rpt` (SHA-256
+`e3e2845c5a5b2a3132bdc8246e623e5afa89312d7e536942dc85d0ec02282c8a`).
+
+**Disposition: REJECTED.** Simply deleting the generated contract layer
+discards required connectivity and changes the netlist. The live child
+circuitry and port associations must be re-authored coherently.

@@ -11497,3 +11497,10 @@ identity. A disposable complete contract regeneration was rejected at 919
 findings with four native hierarchy pin-not-connected errors; canonical CAD
 was untouched. The next repair requires native association semantics and
 exact exported-netlist parity, not further coordinate-only variants.
+
+2026-09-11 — Phase 24 representation probe: a corrected disposable copy with
+local libraries present removed generated child contract definitions, instances,
+and marker wires. Native ERC fell to 826 warnings but added 87 label-dangling
+findings and removed contract libparts from the netlist, so it was rejected.
+Canonical CAD remains unchanged; synthetic contracts cannot be deleted without
+re-authoring live child connections.
