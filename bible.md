@@ -6100,6 +6100,14 @@ remain open and unwaived.
 coordinate transform preserved hierarchy structure and exact 338-net/node
 parity but left native ERC unchanged at 489 warnings/0 errors. The transform
 was rejected and not promoted; canonical CAD is unchanged.
+
+2026-09-11 — Phase 24 residual endpoint-owner audit: classified the 201
+remaining endpoint_off_grid findings as 66 ten-millimetre, 8 three-millimetre,
+4 sixty-five-millimetre, 2 2.06-millimetre wire records, and 121
+symbol/label endpoints. Confirmed REGULATORS no longer contains the repaired
+5 mm/1 mm unowned families. The next repair is per-instance owner mapping;
+global root-coordinate normalization is ruled out by the native disposable
+probe.
 2026-09-07 — PiSXMe Phase 24 Path B: tested disposable QFN rail-fanout probe
 V6. Native opens fell 26 to 20, but DRC rose to 20 with real
 RTL_1V1/XTAL_OUT and RTL_1V1/USB_TXP0 shorts. Rejected as route
