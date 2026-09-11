@@ -1,5 +1,15 @@
 # Phase 24 acreage validation status
 
+## CURRENT VALIDATION RECEIPT — PATH-B CANDIDATE RECHECK — 2026-09-11
+
+The accepted isolated RTL9210B Path-B candidate
+`PHASE24_RTL9210B_PATHB_V1603_V1517_MIC2545A_OPEN_ACREAGE_U1LOCAL015_CANDIDATE.kicad_pcb`
+was rechecked with KiCad 10.0.5: native DRC found 0 violations, 0
+unconnected items, and 0 footprint errors. The saved-board MIC2545A support
+audit passed, including two actual trace-removal negative controls. This
+reconfirms the closed local U1/QFN/support implementation; production
+schematic/PCB parity, acreage integration, and Phase 24 remain open.
+
 ## CURRENT UPDATE — ETHERNET CONTRACT LIBRARY SYNCHRONIZED — 2026-09-11
 
 The canonical custom Ethernet contract now matches the live child contract's

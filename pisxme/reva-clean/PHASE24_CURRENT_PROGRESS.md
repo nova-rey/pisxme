@@ -1,5 +1,15 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — Path-B candidate revalidated — 2026-09-11
+
+Fresh KiCad 10.0.5 native DRC on the accepted isolated RTL9210B candidate
+reports 0 violations, 0 unconnected items, and 0 footprint errors. The
+MIC2545A saved-board audit passes its support connectivity checks and two
+actual trace-removal negative controls. U1 orientation, local QFN rule, and
+V1603 downstream launch remain closed. This is a revalidation receipt only;
+production parity, acreage integration, and the remaining Phase 24 gates stay
+open.
+
 ## Current checkpoint — PWR_FLAG normalization rejected — 2026-09-11
 
 A disposable attempt to replace embedded `PWR_FLAG` definitions with the

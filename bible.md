@@ -11318,3 +11318,10 @@ the accepted local primitive. Receipt:
   authority in disposable copies. It reduced one mismatch but introduced a
   real pin-to-pin warning due to unit serialization differences. The
   canonical source remains unchanged; standard PWR_FLAG mismatches stay open.
+
+## 2026-09-11 — Path-B candidate revalidated
+
+- Re-ran native KiCad 10.0.5 DRC on the accepted isolated RTL9210B/MIC2545A
+  candidate: 0 violations, 0 unconnected items, and 0 footprint errors. The
+  saved-board support audit and two actual trace-removal negative controls
+  passed. Full-board parity and Phase 24 remain open.
