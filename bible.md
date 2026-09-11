@@ -19,6 +19,11 @@ passed, and the dual-mode storage contract passed. The storage M.2 power-owner
 audit remains open on nine unreached J3 pads. Workstream snapshot:
 pisxme/reva-clean/PHASE24_WORKSTREAM_STATUS_20260911.md.
 
+2026-09-11: Corrected the current-progress narrative to distinguish the
+historical J3 storage-power fixture failure from the partial-J1 isolated
+RTL9210B candidate. The nine-pad result is not promoted as a verdict on that
+different baseline; full storage production parity remains open.
+
 2026-09-08: Parameterized the retained V3 JMS583 QFN escape author for an
 explicit disposable base/output, enabling controlled integration with later
 storage candidates without mutating the Path-A basis. The earlier complete-

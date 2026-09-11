@@ -1,5 +1,23 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-11
+
+The live canonical schematic is at **485 native ERC warnings / 0 errors**.
+The current actionable ERC census is 197 `endpoint_off_grid`, 232
+`isolated_pin_label`, 30 `same_local_global_label`, 24
+`multiple_net_names`, and 2 `lib_symbol_mismatch`; the duplicate POWER_INPUT
+wire family is closed with exact native netlist parity. Older counts below
+are historical snapshots and are not current open work.
+
+The accepted isolated Path-B RTL9210B V1603 candidate currently passes native
+KiCad DRC with 0 violations and 0 unconnected items, plus its six-net audit
+and six copper-removal negative controls. The dual-mode storage mode-contract
+audit passes. The M.2 power-owner audit must be run against a full storage
+candidate with the correct connector reference; its default historical J3
+fixture reported nine unreached pads and is not a verdict on the isolated
+V1603 board, which contains a partial J1 launch rather than that full storage
+power population. Production parity and full-board validation remain open.
+
 ## Current checkpoint — identity-driven contract probe rejected — 2026-09-11
 
 The identity-driven disposable regeneration preserved all live root/child port
