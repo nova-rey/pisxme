@@ -15,7 +15,7 @@ an engineering blocker.
 | Library integrity | Root Foreman | CLOSED | Project-local PWR_FLAG namespace repair removed both mismatches with exact netlist parity; receipt `PHASE24_PWRFLAG_LOCAL_NAMESPACE_REPAIR_RECEIPT_20260911.md`. |
 | Path-B native PCB | Root Foreman / native KiCad | PASS for isolated candidate | Current V1603 candidate: native DRC 0/0 and integrated six-net audit plus six negative controls PASS. Production parity remains open. |
 | Dual-mode storage contract | Root Foreman / focused audit | PASS for mode contract | `phase24_dual_mode_storage_mode_audit.py`: PASS. |
-| Storage power/physical connectivity | Root Foreman / focused audit | OPEN | V88/V89/V90 preserved nine-contact connectivity but failed physical policy/DRC. V91 also passed connectivity but created a real J3 `STORAGE_3V3`↔`JMS_AVDDL` short (621/341 DRC). Dense same-side fanout is rejected; future repair must reserve connector channels first. |
+| Storage power/physical connectivity | Root Foreman / focused audit | OPEN | Current full-storage audit reproduces nine unreached J3 power pads (`2,4,12,14,16,18,70,72,74`). V88/V89/V90 preserved nine-contact connectivity but failed physical policy/DRC; V91 also created a real J3 `STORAGE_3V3`↔`JMS_AVDDL` short (621/341 DRC). Dense same-side fanout is rejected; next repair must reserve connector channels first. |
 | DFM/native PCB | Root Foreman / native KiCad | OPEN | Current disposable `ACREAGE_CANDIDATE.kicad_pcb` check is 180 violations / 477 unconnected items; this is candidate-scoped evidence, not a canonical closure claim. Run the selected integrated candidate DRC and manufacturing-rule audit after parity target is selected. |
 
 ## Integration rule
