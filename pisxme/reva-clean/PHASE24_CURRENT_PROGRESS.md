@@ -1,5 +1,14 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## Current checkpoint — storage library audit passes — 2026-09-11
+
+The native-storage library audit passes for JMS583, both USB/SATA selector
+footprints, and the TE M-key connector. Contact numbering and the M-key gap
+are correct in the saved local footprints. This closes only the focused
+library shape/numbering subgate; integrated Path-B parity, switched-mode
+connectivity, firmware, power/inrush, and full Phase 24 remain open.
+Receipt: `PHASE24_STORAGE_LIBRARY_AUDIT_RECEIPT_20260911.md`.
+
 ## Current checkpoint — authoritative ERC receipt and gate map — 2026-09-11
 
 Fresh native KiCad 10.0.5 ERC on the live clean schematic found 871 warnings

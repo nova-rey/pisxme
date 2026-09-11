@@ -1,5 +1,13 @@
 # Phase 24 acreage validation status
 
+## CURRENT VALIDATION SUBGATE — STORAGE LIBRARY — 2026-09-11
+
+The focused native storage-library audit passes for JMS583, HD3SS6126,
+HD3SS3412, and the TE M-key connector. M-key contact numbering and the
+59–66 key gap are correct. This is not integrated Path-B closure; parity,
+mode-aware connectivity, firmware, power/inrush, and the remaining Phase 24
+gates stay OPEN. See `PHASE24_STORAGE_LIBRARY_AUDIT_RECEIPT_20260911.md`.
+
 ## CURRENT AUTHORITATIVE ERC RECEIPT — 2026-09-11
 
 Fresh native KiCad 10.0.5 ERC on `PiSXMe_RevA_Clean.kicad_sch` reports 871
