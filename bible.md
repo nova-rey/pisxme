@@ -30,6 +30,11 @@ and the actual trace-removal negative control failed as expected, but native
 DRC regressed to 608 violations / 341 unconnected items from the 601/397 V79
 source. V88 is retained as rejected route evidence, not promoted.
 
+2026-09-11: V89 repeated the storage power repair with the long signal trunk
+on B.Cu instead of forbidden In1.GND. All nine J3 contacts and the real
+trace-removal negative control passed, but native DRC was 609/341; V89 is
+rejected route evidence and no canonical CAD changed.
+
 2026-09-11: Rejected a bounded root hierarchy-label experiment. Replacing one
 root global label with a hierarchical label changed native ERC from 485/0 to
 486 findings, adding pin-not-connected and unconnected-wire findings without
