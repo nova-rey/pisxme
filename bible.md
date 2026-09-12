@@ -11728,6 +11728,11 @@ multiple-net-name); dangling-wire, no-connect, and library-mismatch families
 are absent. Analysis may proceed concurrently, but canonical integration and
 authoritative ERC/netlist/parity validation remain serialized.
 
+2026-09-11 — Phase 24 worker-baseline correction: qualified the isolated
+KiCad Light ERC result as 539 total including 53 library-symbol and 3
+footprint-link findings, unlike the live dirty 483/0 report. The reports are
+not treated as like-for-like until library resolution is reconciled.
+
 2026-09-11 — Phase 24 isolated EDA workers: prepared three KiCad Light
 workspaces from committed ref `70bbb8f1` for ERC-grid, ERC-label, and DFM
 workstreams. Independent workers reproduced 539 ERC warnings/0 errors and
