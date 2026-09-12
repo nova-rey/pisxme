@@ -22,3 +22,7 @@ After three consecutive execution turns and independent PI, source, package-auth
 ## Phase 24 SXM2 public evidence acquisition — 2026-09-12
 
 The external-information escalation was reopened. Private Library commit 7d822166 now records the Benchoff article and complete KiCad implementation, the manufacturer 74221 Rev-W geometry source, CN108280004B topology corroboration, and the pinned xiaoyu repository result (README-only). Mechanical comparison found PiSXMe J1 A1-K40 coordinates identical to the Benchoff 74221 footprint. The indexed contact map classifies 130 12-V, 170 GND, 64 PCIe data, 2 REFCLK, 1 PERST, 31 NC/project-unknown, and 2 protection-unknown contacts. Electrical net promotion remains under explicit authority review; unknown contacts remain unassigned.
+
+## Phase 24 J1 mechanical cross-check — 2026-09-12
+
+A deterministic parser compared the selected J1 footprint with the pinned Benchoff AMPHENOL_74221-101LF footprint. All 400 A1-K40 identifiers were shared and the identity coordinate transform had 0.0 mm mean and maximum error. The selected PCB currently carries seven named nets only; this receipt proves package/contact identity and preserves the rule that public electrical assignments require explicit authority.

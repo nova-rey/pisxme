@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "selected_commit": "f581568e",
+  "local_footprint": "PiSXMeRevAClean_SXM2_74221_101LF",
+  "reference_file_sha256": "4ce457338f36b60a55fcce5f77f4688807e2a13b3dccc3a82c739d4de33ad436",
+  "pad_counts": {
+    "local": 400,
+    "reference": 400,
+    "shared": 400
+  },
+  "identity_transform": {
+    "model": "x_local=x_ref,y_local=y_ref",
+    "mean_error_mm": 0.0,
+    "max_error_mm": 0.0
+  },
+  "current_named_nets": {
+    "A1": "CM5_PER0_P",
+    "A3": "CM5_PER0_N",
+    "A4": "CM5_REFCLK_P",
+    "E8": "CM5_PERST",
+    "E19": "CM5_REFCLK_N",
+    "F8": "V100_PET0_P",
+    "G2": "V100_PET0_N"
+  },
+  "current_named_net_count": 7,
+  "classification": "package/contact-ID transform proven; electrical net assignment remains authority-controlled",
+  "unknown_policy": "31 source-declared NC/project-unknown and 2 protection-unknown remain unassigned"
+}
