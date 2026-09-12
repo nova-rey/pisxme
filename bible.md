@@ -11882,3 +11882,8 @@ Fresh KiCad Light validation reproduced the four endpoint assertions and the
 focused serialized-track negative control, while reporting 520 violations /
 427 unconnected items. This confirms the rejected status is a physical route
 failure, not a producer-workspace-only result.
+
+The V150 support-field native graft was also rejected: it preserved J7/U12
+and RX support connectivity but left four TX/support endpoint groups open and
+produced 617 DRC violations / 425 unconnected items. Historical support
+copper is placement-specific and remains reference evidence only.
