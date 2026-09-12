@@ -336,3 +336,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-12: Reproduced exact-head native ERC from `70248ce8` in a fresh Light checkout. KiCad 10.0.6 reported 351 warnings and 0 errors; raw JSON/checksum are retained under `validation-receipts/erc-exact-head-70248ce8/`, and findings remain open.
 
 - 2026-09-12: Regenerated the native KiCad XML netlist at exact head `70248ce8` in a fresh Light checkout. The retained `validation-receipts/netlist-exact-head-70248ce8/` artifact is the current parity input; stale SATA-era exports remain non-authoritative.
+
+- 2026-09-12: Fresh Light validation of exact integrated head `09c15cf8` produced a durable power/return census under `validation-receipts/power-native-census-09c15cf8/`. Native DRC remains 314/499 with zero shorting items; the serialized board has no Branch-B 12 V/FUSED copper, only 6 protected-12 V segments for 151 pads, 325 POWER_GND pads with 47 segments/17 vias across three zones, and no BRIDGE_3V3/BRIDGE_1V1 segments. Current/transient/thermal closure remains open.
