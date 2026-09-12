@@ -37,6 +37,9 @@ stay open.
 The width-normalized successor
 `PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb` is fresh-validated at
 440/265 with source-to-pad parity PASS and is the current repair basis.
+An additional full-acreage `BRIDGE_1V1` F.Cu plane probe made no change to
+440/265 and was rejected; see
+`PHASE24_BRIDGE_1V1_PLANE_PROBE_REJECT_RECEIPT_20260912.md`.
 
 The generic Phase 3 hierarchy authoring probe is corrected and validated:
 root child-sheet objects now carry native KiCad project/page `instances`

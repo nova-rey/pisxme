@@ -12529,3 +12529,9 @@ Only 32 undersized ground tracks were widened; producer DRC improved from
 Fresh Light reproduced the normalized candidate at 440 DRC violations / 265
 unconnected items, while fresh source-to-pad parity passed with zero
 mismatches. It is the current repair basis, not Phase 24 closure.
+
+# 2026-09-12 - Phase 24 BRIDGE_1V1 plane probe rejection
+
+Rejected a disposable full-acreage BRIDGE_1V1 F.Cu power plane because native
+DRC and unconnected counts did not change from 440/265. No canonical power
+architecture or PCB was changed.
