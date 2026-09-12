@@ -1,0 +1,152 @@
+{
+  "kicad": "10.0.6",
+  "class_names": [
+    "Default",
+    "HS_PCIE_90R",
+    "HS_USB3_90R",
+    "PCIE_PERST_CONTROL"
+  ],
+  "patterns": {
+    "HS_PCIE_90R": [
+      "CM5_PER0_N",
+      "CM5_PER0_P",
+      "CM5_PET0_N",
+      "CM5_PET0_P",
+      "CM5_REFCLK_N",
+      "CM5_REFCLK_P",
+      "V100_PET0_N",
+      "V100_PET0_P"
+    ],
+    "HS_USB3_90R": [
+      "CM5_USB3_RX_N",
+      "CM5_USB3_RX_P",
+      "CM5_USB3_TX_N",
+      "CM5_USB3_TX_P"
+    ],
+    "PCIE_PERST_CONTROL": [
+      "CM5_PERST"
+    ]
+  },
+  "track_count": 72,
+  "via_count": 23,
+  "widths_nm": {
+    "CM5_USB3_TX_P": [
+      132080
+    ],
+    "CM5_USB3_TX_N": [
+      132080
+    ],
+    "CM5_USB3_RX_P": [
+      132080
+    ],
+    "CM5_USB3_RX_N": [
+      132080
+    ],
+    "CM5_PER0_P": [
+      132080
+    ],
+    "CM5_PER0_N": [
+      132080
+    ],
+    "CM5_REFCLK_P": [
+      132080
+    ],
+    "CM5_PERST": [
+      132080
+    ],
+    "CM5_REFCLK_N": [
+      132080
+    ],
+    "V100_PET0_P": [
+      132080
+    ],
+    "V100_PET0_N": [
+      132080
+    ],
+    "CM5_PET0_P": [
+      132080
+    ],
+    "CM5_PET0_N": [
+      132080
+    ]
+  },
+  "layers": {
+    "CM5_USB3_TX_P": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "CM5_USB3_TX_N": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "CM5_USB3_RX_P": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "CM5_USB3_RX_N": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "CM5_PER0_P": [
+      "F.Cu"
+    ],
+    "CM5_PER0_N": [
+      "F.Cu"
+    ],
+    "CM5_REFCLK_P": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "CM5_PERST": [
+      "F.Cu"
+    ],
+    "CM5_REFCLK_N": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "V100_PET0_P": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "V100_PET0_N": [
+      "B.Cu",
+      "F.Cu"
+    ],
+    "CM5_PET0_P": [
+      "F.Cu"
+    ],
+    "CM5_PET0_N": [
+      "F.Cu"
+    ]
+  },
+  "power_gnd_via_count": 17,
+  "target_via_nearest_power_gnd_mm": [
+    45.9881,
+    83.5135,
+    87.0042,
+    41.8392,
+    87.6012,
+    79.6825,
+    84.1457,
+    38.9929,
+    88.2032,
+    83.7598,
+    75.9217,
+    72.242,
+    37.8147,
+    83.468,
+    88.8074,
+    83.1528,
+    33.3135,
+    34.1107,
+    82.4164,
+    39.8058,
+    74.7469,
+    43.7961,
+    75.9643
+  ],
+  "all_scoped_tracks_132080nm": true,
+  "all_scoped_tracks_fcu_bcu": true,
+  "default_class_track_width": 0.2,
+  "board_global_min_untouched": "sidecar has no board.design_settings.rules override"
+}

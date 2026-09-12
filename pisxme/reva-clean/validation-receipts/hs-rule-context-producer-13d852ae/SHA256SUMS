@@ -1,4 +1,12 @@
+e3620708bac1a3949b5a78bb245e1313197b14459050dd5a4cd734f38b937528  pisxme/reva-clean/validation-receipts/hs-rule-context-producer-13d852ae/RECEIPT.md
+27723c3cea6449d801254eb67b56678d7b79823ebe82ca7d5ac34ad771b13a81  pisxme/reva-clean/validation-receipts/hs-rule-context-producer-13d852ae/SHA256SUMS
+5c8425138f29e2e0cbc44e65455297a8f2279da018e22f3cc0763cd46669d1e4  pisxme/reva-clean/validation-receipts/hs-rule-context-producer-13d852ae/fresh-light-drc-report.stdout
+da70a9382f3336b5ebd9caf6a609ae42c15f714b5329cd6dbd07edc918ac0c64  pisxme/reva-clean/validation-receipts/hs-rule-context-producer-13d852ae/fresh-light-drc.json
+f63a4d1a56036b1492f1c9724a2f4acf65408ea48cad9ff498a41e8fe9c2ac74  pisxme/reva-clean/validation-receipts/hs-rule-context-producer-13d852ae/fresh-light-drc.rpt
+fd9b5b0efd9eb6996c9fc31d384bef68cc4c504557b3ad0ddc68bb0dc0c90b67  pisxme/reva-clean/validation-receipts/hs-rule-context-producer-13d852ae/fresh-light-hs-audit.json
 5d9a1a01836e7fc5bdb57923a2801bf1dc082693440a75ebe11cab0c0562dec2  pisxme/reva-clean/validation-receipts/hs-rule-context-producer-13d852ae/negative-control-reference.rpt
 fb986fb564979a76ffd86ef650f5ffd9d92aa9d5bee5b3b12e55157fa62616f2  pisxme/reva-clean/validation-receipts/hs-rule-context-producer-13d852ae/negative-control-reference.stdout
+6e0697764b497b64ba38dfc30cdc7385116ed7b4a36bf6b0f7cd1919b19e61ad  pisxme/reva-clean/validation-receipts/hs-rule-context-producer-13d852ae/producer-baseline-drc.json
+90e1af8658936030cccdb267c76375078cd503d8236af6e81feb2578388385d5  pisxme/reva-clean/validation-receipts/hs-rule-context-producer-13d852ae/producer-baseline-drc.stdout
 06289e7c84c6f6ff26bea981c6ac16ba2562e8787e48ec9febe9879f5a5bd34d  pisxme/reva-clean/validation-receipts/hs-rule-context-producer-13d852ae/scoped5-drc.json
 d9bd477fb6ec15b73fdccfd3cf402ceeffda90c45ce016b276a037cd6e4e8815  pisxme/reva-clean/validation-receipts/hs-rule-context-producer-13d852ae/scoped5-drc.stdout
