@@ -1,0 +1,2071 @@
+{
+  "schema_version": 1,
+  "record_id": "sxm2-benchoff-contact-map-20260912",
+  "retrieved": "2026-09-12",
+  "scope": "Published reverse-engineering map for one 40x10 SXM2/MEG-Array connector; evidence, not NVIDIA official documentation.",
+  "coordinate_convention": {
+    "columns": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "J",
+      "K"
+    ],
+    "rows": "1..40",
+    "contact": "<column><row>",
+    "matrix_size": 400,
+    "power_field_rows": [
+      22,
+      23,
+      25,
+      26,
+      28,
+      29,
+      31,
+      32,
+      34,
+      35,
+      37,
+      38,
+      40
+    ],
+    "ground_field_rows": [
+      21,
+      24,
+      27,
+      30,
+      33,
+      36,
+      39
+    ]
+  },
+  "source_ids": [
+    "sxm2-benchoff-article-20260912",
+    "sxm2-benchoff-repo-3173b02c",
+    "amphenol-74221-drawing-w",
+    "cn108280004b",
+    "xiaoyu-sxm2-pinout-definition-c05541e"
+  ],
+  "source_family_note": "The article and Benchoff repository are one reverse-engineering family, not independent corroboration.",
+  "contacts": [
+    {
+      "contact": "A1",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B1",
+      "published_value": "PERp1",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "C1",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D1",
+      "published_value": "PERp2",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "E1",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F1",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G1",
+      "published_value": "PETp0",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "H1",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J1",
+      "published_value": "PETp2",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "K1",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A2",
+      "published_value": "PERp0",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "B2",
+      "published_value": "PERn1",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "C2",
+      "published_value": "PERp3",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "D2",
+      "published_value": "PERn2",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "E2",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F2",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G2",
+      "published_value": "PETn0",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "H2",
+      "published_value": "PETp1",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "J2",
+      "published_value": "PETn2",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "K2",
+      "published_value": "PETp3",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "A3",
+      "published_value": "PERn0",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "B3",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C3",
+      "published_value": "PERn3",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "D3",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E3",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F3",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G3",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H3",
+      "published_value": "PETn1",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "J3",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K3",
+      "published_value": "PETn3",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "A4",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B4",
+      "published_value": "PERp4",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "C4",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D4",
+      "published_value": "PERp5",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "E4",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F4",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G4",
+      "published_value": "PETp4",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "H4",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J4",
+      "published_value": "PETp5",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "K4",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A5",
+      "published_value": "PERp7",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "B5",
+      "published_value": "PERn4",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "C5",
+      "published_value": "PERp6",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "D5",
+      "published_value": "PERn5",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "E5",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F5",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G5",
+      "published_value": "PETn4",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "H5",
+      "published_value": "PETp7",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "J5",
+      "published_value": "PETn5",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "K5",
+      "published_value": "PETp6",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "A6",
+      "published_value": "PERn7",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "B6",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C6",
+      "published_value": "PERn6",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "D6",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E6",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F6",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G6",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H6",
+      "published_value": "PETn7",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "J6",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K6",
+      "published_value": "PETn6",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "A7",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B7",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C7",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D7",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E7",
+      "published_value": "REFCLK+",
+      "classification": "pcie_refclk"
+    },
+    {
+      "contact": "F7",
+      "published_value": "REFCLK-",
+      "classification": "pcie_refclk"
+    },
+    {
+      "contact": "G7",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H7",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J7",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K7",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A8",
+      "published_value": "PERp8",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "B8",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C8",
+      "published_value": "PERp10",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "D8",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E8",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F8",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G8",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H8",
+      "published_value": "PETp9",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "J8",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K8",
+      "published_value": "PETp10",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "A9",
+      "published_value": "PERn8",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "B9",
+      "published_value": "PERp9",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "C9",
+      "published_value": "PERn10",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "D9",
+      "published_value": "PERp11",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "E9",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F9",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G9",
+      "published_value": "PETp8",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "H9",
+      "published_value": "PETn9",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "J9",
+      "published_value": "PETp11",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "K9",
+      "published_value": "PETn10",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "A10",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B10",
+      "published_value": "PERn9",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "C10",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D10",
+      "published_value": "PERn11",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "E10",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F10",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G10",
+      "published_value": "PETn8",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "H10",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J10",
+      "published_value": "PETn11",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "K10",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A11",
+      "published_value": "PERp12",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "B11",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C11",
+      "published_value": "PERp13",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "D11",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E11",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F11",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G11",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H11",
+      "published_value": "PETp12",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "J11",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K11",
+      "published_value": "PETp13",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "A12",
+      "published_value": "PERn12",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "B12",
+      "published_value": "PERp15",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "C12",
+      "published_value": "PERn13",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "D12",
+      "published_value": "PERp14",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "E12",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F12",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G12",
+      "published_value": "PETp15",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "H12",
+      "published_value": "PETn12",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "J12",
+      "published_value": "PETp14",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "K12",
+      "published_value": "PETn13",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "A13",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B13",
+      "published_value": "PERn15",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "C13",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D13",
+      "published_value": "PERn14",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "E13",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F13",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G13",
+      "published_value": "PETn15",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "H13",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J13",
+      "published_value": "PETn14",
+      "classification": "pcie_data"
+    },
+    {
+      "contact": "K13",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A14",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B14",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C14",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D14",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E14",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F14",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G14",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H14",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J14",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K14",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A15",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "B15",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C15",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "D15",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E15",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F15",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G15",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H15",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "J15",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K15",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "A16",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "B16",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "C16",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "D16",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "E16",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F16",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G16",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "H16",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "J16",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "K16",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "A17",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B17",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "C17",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D17",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "E17",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F17",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G17",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "H17",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J17",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "K17",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A18",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "B18",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C18",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "D18",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E18",
+      "published_value": "/PERST",
+      "classification": "pcie_reset"
+    },
+    {
+      "contact": "F18",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "G18",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H18",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "J18",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K18",
+      "published_value": "Prot/Cathode",
+      "classification": "auxiliary_or_protection_unknown"
+    },
+    {
+      "contact": "A19",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B19",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C19",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D19",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E19",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F19",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G19",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H19",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "J19",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K19",
+      "published_value": "Prot/GND",
+      "classification": "auxiliary_or_protection_unknown"
+    },
+    {
+      "contact": "A20",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "B20",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "C20",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "D20",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "E20",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "F20",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "G20",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "H20",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "J20",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "K20",
+      "published_value": "NC",
+      "classification": "source_declared_nc_project_unknown"
+    },
+    {
+      "contact": "A21",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B21",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C21",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D21",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E21",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F21",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G21",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H21",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J21",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K21",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A22",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B22",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C22",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D22",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E22",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F22",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G22",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H22",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J22",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K22",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "A23",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B23",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C23",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D23",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E23",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F23",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G23",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H23",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J23",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K23",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "A24",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B24",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C24",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D24",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E24",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F24",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G24",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H24",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J24",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K24",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A25",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B25",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C25",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D25",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E25",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F25",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G25",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H25",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J25",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K25",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "A26",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B26",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C26",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D26",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E26",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F26",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G26",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H26",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J26",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K26",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "A27",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B27",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C27",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D27",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E27",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F27",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G27",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H27",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J27",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K27",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A28",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B28",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C28",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D28",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E28",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F28",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G28",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H28",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J28",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K28",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "A29",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B29",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C29",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D29",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E29",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F29",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G29",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H29",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J29",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K29",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "A30",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B30",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C30",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D30",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E30",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F30",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G30",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H30",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J30",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K30",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A31",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B31",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C31",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D31",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E31",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F31",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G31",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H31",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J31",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K31",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "A32",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B32",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C32",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D32",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E32",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F32",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G32",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H32",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J32",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K32",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "A33",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B33",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C33",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D33",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E33",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F33",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G33",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H33",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J33",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K33",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A34",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B34",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C34",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D34",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E34",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F34",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G34",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H34",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J34",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K34",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "A35",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B35",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C35",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D35",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E35",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F35",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G35",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H35",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J35",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K35",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "A36",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B36",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C36",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D36",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E36",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F36",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G36",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H36",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J36",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K36",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A37",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B37",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C37",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D37",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E37",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F37",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G37",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H37",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J37",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K37",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "A38",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B38",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C38",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D38",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E38",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F38",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G38",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H38",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J38",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K38",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "A39",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "B39",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "C39",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "D39",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "E39",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "F39",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "G39",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "H39",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "J39",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "K39",
+      "published_value": "GND",
+      "classification": "ground"
+    },
+    {
+      "contact": "A40",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "B40",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "C40",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "D40",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "E40",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "F40",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "G40",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "H40",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "J40",
+      "published_value": "12V",
+      "classification": "power_12v"
+    },
+    {
+      "contact": "K40",
+      "published_value": "12V",
+      "classification": "power_12v"
+    }
+  ],
+  "counts": {
+    "ground": 170,
+    "power_12v": 130,
+    "pcie_data": 64,
+    "pcie_refclk": 2,
+    "pcie_reset": 1,
+    "source_declared_nc_project_unknown": 31,
+    "auxiliary_or_protection_unknown": 2
+  },
+  "limits": [
+    "Author reports continuity probing and electrical measurement of a commercial carrier; no NVIDIA NDA source was used.",
+    "The article states 31 contacts remain unmapped/probably unconnected; published NC labels therefore remain unknown for PiSXMe until independently contracted.",
+    "No voltage/current assignment beyond the published 12V/GND field is inferred."
+  ]
+}

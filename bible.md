@@ -5558,3 +5558,5 @@ manufacturer-confirmation gap for RTL9210B and does not alter production CAD.
 V3 at 14 native violations / 37 opens; XTAL_IN/RSET connected but XTAL_OUT
 disconnected, with transitions entering the U1 power field. V2 remains the
 better support-placement reference; Path A and production CAD unchanged.
+
+- 2026-09-12: Librarian indexed the bounded public SXM2/J1 evidence set. Benchoff article and `SXM2toPCIe` main @ `3173b02c085218d66c4a2a9e5492853fb53ee097` provide one reverse-engineering family and a 40x10 contact map; Amphenol drawing 74221 Rev W establishes 400-position 10x40 1.27-mm 4-mm receptacle geometry; CN108280004B corroborates connector use/topology; `xiaoyu9733/sxm2-pinout-definition` @ `c05541e1846b47f51d05a2149ff044d4d2eba727` contained only README and is insufficient as independent pin data. Active PiSXMe J1 pad IDs and Benchoff footprint coordinates match by identity; contact electrical assignments remain authority input, with source-declared unknowns preserved.
