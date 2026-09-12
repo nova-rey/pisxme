@@ -10,10 +10,26 @@
   "selected_pcb": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
   "storage_selection": "Path A protected/current production implementation; RTL9210B Path B isolated unpromoted alternative; Path-B production integration disposed for this campaign",
   "storage_authority_records": [
-    {"path": "PHASE24_DUAL_MODE_STORAGE_PIN_MATRIX.md", "revision": "a7d98223e7533cf94e28d4245c56255d8cdf5c63", "sha256": "b6a9c520d68636a2d99904ccc9a1aa253d216bdff0eda7ce7e74468ba9711876"},
-    {"path": "PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md", "revision": "aa11e340d7f9e9c39dbf86a6197656bee06e16c4", "sha256": "2e1d3c3ee99bc14b1ef7304ca02890bfbab54065cac43a57231a4f92b5354c80"},
-    {"path": "PHASE24_RTL9210B_QUALIFICATION.md", "revision": "df206677fc2c42ff726ca4992359742a52ddbbed", "sha256": "4a628b13bd27bfc95af1f448d8a504c3bc236fe8b5631a75dc52e68a5be6cf25"},
-    {"path": "authority-inventory/rtl9210b/RTL9210B_PATHB_AUTHORITY.md", "revision": "8fc3b4edaf0f943e3f4962076289083130459c61", "sha256": "428f30154052ca89a7dbd166b38efcfa8e918874976a6307dc2efad00474645f"}
+    {
+      "path": "PHASE24_DUAL_MODE_STORAGE_PIN_MATRIX.md",
+      "revision": "a7d98223e7533cf94e28d4245c56255d8cdf5c63",
+      "sha256": "b6a9c520d68636a2d99904ccc9a1aa253d216bdff0eda7ce7e74468ba9711876"
+    },
+    {
+      "path": "PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md",
+      "revision": "aa11e340d7f9e9c39dbf86a6197656bee06e16c4",
+      "sha256": "2e1d3c3ee99bc14b1ef7304ca02890bfbab54065cac43a57231a4f92b5354c80"
+    },
+    {
+      "path": "PHASE24_RTL9210B_QUALIFICATION.md",
+      "revision": "df206677fc2c42ff726ca4992359742a52ddbbed",
+      "sha256": "4a628b13bd27bfc95af1f448d8a504c3bc236fe8b5631a75dc52e68a5be6cf25"
+    },
+    {
+      "path": "authority-inventory/rtl9210b/RTL9210B_PATHB_AUTHORITY.md",
+      "revision": "8fc3b4edaf0f943e3f4962076289083130459c61",
+      "sha256": "428f30154052ca89a7dbd166b38efcfa8e918874976a6307dc2efad00474645f"
+    }
   ],
   "storage_authority_disposition": "Records agree on Path A protected/current production and Path B unpromoted/non-production CAD. They recommend continuing isolated Path-B qualification, which is outside this approved campaign; retain evidence and do not integrate both alternatives.",
   "worker_launcher": "/home/nyx/pisxme-eda-workers/scripts/pisxme-worker",
@@ -28,32 +44,85 @@
     "runtime": "runtime_commission",
     "archive": "archive_delta_inspect"
   },
-  "cad_policy": {"initial_active_containers": 1, "cpu": 1, "memory": "1g", "pids": 256, "host_headroom_required": "1g available"},
-  "milestones": {"M0": "open", "M1": "open", "M2": "open", "M3": "open", "M4": "open"},
+  "cad_policy": {
+    "initial_active_containers": 1,
+    "cpu": 1,
+    "memory": "1g",
+    "pids": 256,
+    "host_headroom_required": "1g available"
+  },
+  "milestones": {
+    "M0": "open",
+    "M1": "open",
+    "M2": "open",
+    "M3": "open",
+    "M4": "open"
+  },
   "evidence": {
     "baseline": {
       "status": "REPRODUCED_OPEN",
-      "workspace": "/home/nyx/eda-workspaces/phase24-baseline-exec",
+      "workspace": "validation-receipts/baseline-d0ef22b6",
       "tool": "KiCad 10.0.6",
       "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
       "erc_findings": 355,
       "drc_violations": 440,
       "drc_unconnected": 265,
       "parity": "814 authoritative nodes / 1262 PCB pads / 0 mismatches",
-      "receipt": "phase24-baseline-exec/receipts/PHASE24_BASELINE_REPRODUCTION_RECEIPT_20260912.md"
+      "receipt": "phase24-baseline-exec/receipts/PHASE24_BASELINE_REPRODUCTION_RECEIPT_20260912.md",
+      "raw_retention": "retained native ERC, DRC, XML, hierarchy contract, and reproduction receipt; producer workspace may be released after commit"
     },
-    "rule_context": {"status": "PROVEN_AND_INTEGRATED", "candidate": "3edc4f94e0bf40667c5a03449c51168880eb8950", "integrated_commit": "d044316c", "evidence": "KiCad 10.0.6 positive/negative/outside probes and fresh Light candidate validation; local fine rule effective and normal POWER_GND constraint retained.", "raw_retention": "with-context report/log and patch copied; duplicate-named negative/outside reports were not separately copied before disposable workspace release and must be regenerated if needed for final manifest"},
+    "rule_context": {
+      "status": "PROVEN_AND_INTEGRATED",
+      "candidate": "3edc4f94e0bf40667c5a03449c51168880eb8950",
+      "integrated_commit": "d044316c",
+      "evidence": "KiCad 10.0.6 positive/negative/outside probes and fresh Light candidate validation; local fine rule effective and normal POWER_GND constraint retained.",
+      "raw_retention": "with-context report/log and patch copied; duplicate-named negative/outside reports were not separately copied before disposable workspace release and must be regenerated if needed for final manifest"
+    },
     "integration_candidate": "bc137a8f82ae258129704700a39e01fa8ef07cc2",
-    "validation": {"status": "OPEN_NOT_CLOSURE", "workspace": "/home/nyx/eda-workspaces/validation-tusb-integrated-validate-20260912T174403Z", "drc": "433 violations / 265 unconnected", "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9", "receipt": "validation.json", "scope": "TUSB footprint plus integrated DRC; Phase24 remains incomplete"}
+    "validation": {
+      "status": "OPEN_NOT_CLOSURE",
+      "workspace": "/home/nyx/eda-workspaces/validation-tusb-integrated-validate-20260912T174403Z",
+      "drc": "433 violations / 265 unconnected",
+      "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+      "receipt": "validation.json",
+      "scope": "TUSB footprint plus integrated DRC; Phase24 remains incomplete"
+    }
   },
   "blockers": [
-    {"id": "J1_POWER_PAD_MAPPING", "class": "SPECIFICATION_DECISION", "scope": "integrated power/return acceptance", "evidence": "J1 has 400 PCB pads but only 7 named signals; 393 no-net and zero 12V_PROTECTED/POWER_GND pads, while fresh native XML assigns J1 PWR/GND and V100 contacts. No authoritative pad-name mapping found in selected footprint.", "required": "authoritative SXM2 package pad mapping/footprint or an approved source correction", "independent_work": ["source ERC classification", "storage local analysis", "DFM/reference evidence"]},
-    {"id": "HOST_FILESYSTEM_CAPACITY", "class": "ENVIRONMENTAL", "scope": "fresh candidate validation", "evidence": "pisxme-worker validate clone failed with No space left on device; cleanup recovered 3.5 GiB but reserve remains tight", "required": "sufficient free space for a fresh detached checkout and 1 GiB Light container", "independent_work": ["read-only analyses", "source contract work"]}
+    {
+      "id": "J1_POWER_PAD_MAPPING",
+      "class": "SPECIFICATION_DECISION",
+      "scope": "integrated power/return acceptance",
+      "evidence": "J1 has 400 PCB pads but only 7 named signals; 393 no-net and zero 12V_PROTECTED/POWER_GND pads, while fresh native XML assigns J1 PWR/GND and V100 contacts. No authoritative pad-name mapping found in selected footprint.",
+      "required": "authoritative SXM2 package pad mapping/footprint or an approved source correction",
+      "independent_work": [
+        "source ERC classification",
+        "storage local analysis",
+        "DFM/reference evidence"
+      ]
+    },
+    {
+      "id": "HOST_FILESYSTEM_CAPACITY",
+      "class": "ENVIRONMENTAL",
+      "scope": "fresh candidate validation",
+      "evidence": "pisxme-worker validate clone failed with No space left on device; cleanup recovered 3.5 GiB but reserve remains tight",
+      "required": "sufficient free space for a fresh detached checkout and 1 GiB Light container",
+      "independent_work": [
+        "read-only analyses",
+        "source contract work"
+      ]
+    }
   ],
-  "next_action": "Repair selected integrated Path A source/copper; prioritize absent J1 power ownership, unrouted 12V branch B, BRIDGE_3V3/1V1 and CM5_5V feed contracts after source/context reconciliation",
+  "next_action": "Reconcile source/power ownership and select one bounded integrated repair; retain J1 mapping as a specification blocker until authoritative package mapping is available",
   "open_evidence": {
     "integrated_power": "Selected PCB has J1 400 pads but only 7 named signals, 393 no-net, zero 12V_PROTECTED/POWER_GND contacts; historical Phase14 power evidence is a different candidate",
-    "unrouted_rails": ["12V_IN_B", "FUSED_12V_B", "BRIDGE_3V3", "BRIDGE_1V1", "U4/U5 VIN/FB/RT/PG"],
+    "unrouted_rails": [
+      "12V_IN_B",
+      "FUSED_12V_B",
+      "BRIDGE_3V3",
+      "BRIDGE_1V1",
+      "U4/U5 VIN/FB/RT/PG"
+    ],
     "storage": "STORAGE_3V3 and JMS local returns remain open on integrated board",
     "dfm": "Selector archive geometry is unapproved; TUSB rotation correction is authoritative generator output; current DFM/model/BOM/release evidence remains incomplete",
     "archive_disposition": "Do not import HD3SS3412/HD3SS6126 archive pad shifts; recover TUSB rotations only through authoritative generator after scoped validation"
