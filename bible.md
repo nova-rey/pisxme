@@ -11809,3 +11809,22 @@ canonical 132/126/30/24 classes plus version-specific library/link classes),
 acreage DRC 180 violations/468 unconnected, and U5 native connectivity plus
 trace-removal negative control PASS. Strict M.2 owner audit on historical
 V1570 failed eight source-pad joins; no waiver or canonical CAD change.
+2026-09-12 — Phase 24 storage audit tooling correction: generalized the
+native M.2 power-owner audit to select an explicit `--connector=J1` or
+`--connector=J3`, auto-selecting J1 when present, while preserving actual
+pads/tracks/vias/zones as the only connectivity source. This removes the
+hard-coded J3 KeyError on the current J1 acreage candidate without changing
+validation severity or waiving disconnected source pads.
+2026-09-12 — Phase 24 storage audit identity correction: removed unsafe
+automatic J1 selection from the M.2 power-owner audit after native inspection
+confirmed J1 is SXM2 and J3 is the M.2 socket on the acreage board. The audit
+now defaults to reviewed J3 and requires an explicit connector override; no
+electrical or validation gate was relaxed.
+2026-09-12 — Phase 24 storage audit robustness: changed the M.2 power-owner
+audit to fail closed with explicit missing serialized connector/source pads
+instead of raising a KeyError when a candidate uses the wrong connector
+footprint or an incomplete M-key pad field. Native connectivity remains the
+sole source of graph edges and no gate was relaxed.
+2026-09-12 — Phase 24 storage audit smoke test: corrected the fail-closed
+missing-pad reporting path so malformed or wrong-connector candidates emit a
+deterministic failure list rather than a secondary tuple-format exception.

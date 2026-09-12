@@ -17,13 +17,19 @@ def pad_map(board):
     return {(f.GetReference(), str(p.GetNumber())): p
             for f in board.GetFootprints() for p in f.Pads()}
 
-def audit(board, require_all_sources=False):
+def audit(board, connector_ref="J3", require_all_sources=False):
     board.BuildConnectivity()
     pads = pad_map(board)
-    j3 = {("J3", n): pads[("J3", n)] for n in J3_POWER}
+    missing_pads = [(connector_ref, n) for n in J3_POWER
+                    if (connector_ref, n) not in pads]
+    j3 = {(connector_ref, n): pads[(connector_ref, n)] for n in J3_POWER
+          if (connector_ref, n) in pads}
     sources = {k: pads[k] for k in SOURCE_PADS if k in pads}
-    if len(j3) != len(J3_POWER) or not sources:
-        return False, ["missing pads/source"]
+    if missing_pads or not sources:
+        missing = [f"missing serialized pad {r}.{n}" for r, n in missing_pads]
+        if not sources:
+            missing.append("missing serialized source pads")
+        return False, missing
     reach = {k: board.GetConnectivity().GetConnectedItems(p) for k, p in j3.items()}
     missing = [k for k, items in reach.items()
                if not any(sources[s] in items for s in sources)]
@@ -38,13 +44,19 @@ def main(path):
     if board is None:
         raise SystemExit(f"cannot load {path}")
     strict = '--strict-sources' in sys.argv
-    ok, missing = audit(board, require_all_sources=strict)
+    requested = next((x.split('=', 1)[1] for x in sys.argv
+                      if x.startswith('--connector=')), None)
+    # J1 is the SXM2 connector on the acreage board.  Never infer the M.2
+    # socket from a generic reference; use the reviewed J3 default or an
+    # explicit connector override.
+    connector = requested or "J3"
+    ok, missing = audit(board, connector_ref=connector, require_all_sources=strict)
     if missing:
         print("FAIL M.2 power owner native connectivity")
         label = "unreached J3/source pads" if strict else "unreached J3 pads"
-        print(label + ":", ", ".join(f"{r}.{p}" for r, p in missing))
+        print(label + ":", ", ".join(map(str, missing)))
         return 1
-    print(f"PASS M.2 power owner native connectivity: {len(J3_POWER)} J3 contacts")
+    print(f"PASS M.2 power owner native connectivity: {len(J3_POWER)} {connector} contacts")
     # The disposable negative control removes one actual saved-board copper
     # object; expected connectivity never supplies an edge.
     original = pcbnew.LoadBoard(str(path))
@@ -59,7 +71,7 @@ def main(path):
         if index >= len(tracks):
             continue
         negative.RemoveNative(tracks[index])
-        neg_ok, _ = audit(negative, require_all_sources=strict)
+        neg_ok, _ = audit(negative, connector_ref=connector, require_all_sources=strict)
         if not neg_ok:
             broken = True
             break
