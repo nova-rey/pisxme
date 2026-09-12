@@ -12696,3 +12696,7 @@ Canonical pointer advanced to `f3e51270`, which retains the rejected SERVICE USB
 ## Phase 24 SERVICE USB2 width candidate — 2026-09-13
 
 A materially different producer widened 30 `SERVICE_USB2_DP/DM` track segments to the normal 0.20 mm minimum. Native producer DRC improved from 433 to 431 violations with 499 unconnected items unchanged; no high-speed or rule geometry was changed. The candidate is integrated pending fresh validation, with raw evidence under `validation-receipts/service-usb2-width-f2113c/`.
+
+## Phase 24 integrated SERVICE USB2 width validation — 2026-09-13
+
+Fresh Light validation of `22d25b04` produced 351 ERC findings / 0 errors and 424 DRC violations / 499 unconnected items. Widening 30 SERVICE USB2 tracks removed 30 width findings and added 21 clearance findings, a net nine-violation improvement with no connectivity reduction. The scoped change is retained; full Phase 24 closure remains open.
