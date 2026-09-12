@@ -12112,3 +12112,5 @@ with its separate 367-violation version delta.
 The 20-label STORAGE duplicate-name canonicalization probe was rejected:
 multiple_net_names fell 23->6 but isolated_pin_label rose 126->149, for 317
 warnings versus the canonical 311. No canonical change was promoted.
+Current-status prose was reconciled to the promoted 311-warning ERC receipt;
+the earlier 312-warning census is explicitly historical/pre-alias.

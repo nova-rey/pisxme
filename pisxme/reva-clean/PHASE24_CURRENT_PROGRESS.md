@@ -128,7 +128,7 @@ route evidence (617/410). No VDDREG copper was promoted.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
-The live canonical schematic is at **312 native ERC warnings / 0 errors**.
+The live canonical schematic is at **311 native ERC warnings / 0 errors**.
 The current actionable ERC census is 132 `endpoint_off_grid`, 126
 `isolated_pin_label`, 30 `same_local_global_label`, 24
 `multiple_net_names`, and 0 `lib_symbol_mismatch`; the duplicate POWER_INPUT
@@ -137,7 +137,7 @@ netlist parity. Older counts below
 are historical snapshots and are not current open work.
 The coordinate-exact STORAGE `NC_*` label probe reduced ERC to 305 warnings
 but changed exported netlist structure (11 extra names / 11 changed node
-sets), so it is rejected evidence; canonical ERC remains 312/0. Receipt:
+sets), so it is rejected evidence; canonical ERC remains 311/0. Receipt:
 `PHASE24_STORAGE_REDUNDANT_NC_LABEL_REJECT_RECEIPT_20260912.md`.
 
 The accepted isolated Path-B RTL9210B V1603 candidate currently passes native
@@ -156,7 +156,7 @@ The reproducible cluster census is saved in
 `phase24_erc_cluster_census.py` from
 `PHASE24_CURRENT_LIVE_AFTER_ROOT_GRID_erc.rpt`. It records
 132 `endpoint_off_grid`, 126 `isolated_pin_label`, 30
-`same_local_global_label`, and 24 `multiple_net_names` warnings after the
+`same_local_global_label`, and 23 `multiple_net_names` warnings after the
 promoted STORAGE duplicate-label repair. Findings are
 sheet- and coordinate-clustered there; no current `unconnected_wire_endpoint`,
 `no_connect_dangling`, or `lib_symbol_mismatch` cluster remains. These four
