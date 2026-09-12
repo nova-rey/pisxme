@@ -72,6 +72,10 @@ See `PHASE24_STORAGE_ALIAS_RENAME_PROBE_REJECT_RECEIPT_20260912.md`.
 The committed reference-set audit also passes: 78 schematic references,
 101 PCB references, and exactly 23 documented mechanical/test-point extras;
 see `PHASE24_REFERENCE_SET_RECHECK_RECEIPT_20260912.md`.
+The isolated Path-B DFM/native-DRC recheck also passes: MIC2545A land-pattern
+audit PASS and RTL9210B V1603 integrated candidate 0 DRC violations / 0
+unconnected items. Receipt:
+`PHASE24_PATHB_DFM_FINAL_RECHECK_RECEIPT_20260912.md`.
 
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 
