@@ -4922,7 +4922,7 @@
 		(uuid "2e7ea79f-f7dc-4741-8e42-c3b9acd3f84a")
 		(at 158 168)
 		(property "Reference" "C35"
-			(at 0 0 0)
+			(at 0 2.5 0)
 			(layer "F.SilkS")
 			(uuid "4c19bdb2-5033-4ba8-b82f-6ffded393248")
 			(effects

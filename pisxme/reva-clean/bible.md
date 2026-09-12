@@ -272,3 +272,6 @@ A bounded C41 reference move from local (0,0) to (0,2.5) removed two silk-over-c
 
 ### 2026-09-12 — Phase 24 C41 integrated validation
 Fresh detached Light validation of the C41 repair confirmed 330 DRC violations and 499 unconnected items on commit `53184b9d`. The two silk findings removed by the producer remain absent; integrated closure is still open.
+
+### 2026-09-12 — Phase 24 C35 silkscreen repair
+A bounded C35 reference move from local (0,0) to (0,2.5) removed two silk-over-copper findings without changing copper or connectivity. Producer DRC was 328/499 versus the 330/499 base; the repair is integrated pending fresh exact-head validation.
