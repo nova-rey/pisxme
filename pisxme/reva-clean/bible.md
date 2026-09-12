@@ -14,3 +14,7 @@ The read-only integrated recheck at 76873ea8 confirms that no safe Path A power/
 ## Phase 24 commissioning closure and bounded blocker — 2026-09-12
 
 Commissioning is closed for this campaign: Path A authority is recorded, Path B production integration is disposed, the archive delta was inspected, runtime/nesting capability was measured, the d0ef22b6 baseline was reproduced, and the local rule context was proven. Substantive integrated repair is now blocked at the smallest affected scope by the unresolved J1/SXM2/V100 package mapping; no synthetic power contacts or fabricated V100 footprint will be introduced. Independent source hygiene may proceed only where it does not depend on that specification.
+
+## Phase 24 external authority block — 2026-09-12
+
+After three consecutive execution turns and independent PI, source, package-authority, and one-shot Unblocker attempts, the J1/SXM2/V100 mapping remains unavailable. The selected Path A cannot be repaired or accepted without an authoritative pad contract; the campaign is therefore externally blocked at Phase 24 M1. Phase 25 freeze and all Phase 26 work remain prohibited until that authority input exists.

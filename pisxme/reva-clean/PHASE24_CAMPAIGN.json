@@ -1,6 +1,6 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
-  "status": "REPAIR_BLOCKED_ON_SPECIFICATION",
+  "status": "BLOCKED_EXTERNAL_AUTHORITY",
   "scope": "Phase 24 and Phase 25 only; Phase 26 prohibited",
   "repository": "nova-rey/pisxme",
   "branch": "reva-clean",
@@ -53,7 +53,7 @@
   },
   "milestones": {
     "M0": "closed: authority, archive, runtime, baseline, and rule-context commissioning evidence retained",
-    "M1": "blocked: source/ERC and integrated power ownership cannot close without authoritative J1/SXM2/V100 mapping",
+    "M1": "blocked: authoritative J1/SXM2/V100 mapping unavailable after PI, source, package, and bounded unblocker review attempts",
     "M2": "open",
     "M3": "open",
     "M4": "open"
@@ -116,6 +116,12 @@
         "source ERC classification",
         "storage local analysis",
         "DFM/reference evidence"
+      ],
+      "attempts": [
+        "PI/storage read-only census at 76873ea8",
+        "bounded source/ERC review",
+        "bounded package-authority search",
+        "one-shot Unblocker review attempted; no usable result before runtime stop"
       ]
     },
     {
@@ -130,7 +136,7 @@
       ]
     }
   ],
-  "next_action": "Obtain or authoritatively resolve J1/SXM2/V100 package mapping; until then continue only independent source hygiene work with no fabricated connectivity",
+  "next_action": "Resume only when an authoritative SXM2/J1/V100 package pad mapping or approved schematic/footprint correction is supplied; then repair and fresh-validate integrated Path A",
   "open_evidence": {
     "integrated_power": "Selected PCB has J1 400 pads but only 7 named signals, 393 no-net, zero 12V_PROTECTED/POWER_GND contacts; historical Phase14 power evidence is a different candidate",
     "unrouted_rails": [
