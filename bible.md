@@ -12376,3 +12376,10 @@ the inherited acreage baseline; full-board Phase 24 closure remains open.
 Fresh KiCad Light passed all ten saved-board dual-mode storage USB3 endpoint
 pairs from `481435f9`. This focused gate remains distinct from full-board DRC
 and Phase 24 closure.
+
+# 2026-09-12 — Phase 24 current ERC cluster map
+
+Re-censused the canonical native KiCad 10.0.5 ERC at 311 warnings / 0 errors:
+132 endpoint-grid, 126 isolated-label, 30 local/global-label, and 23
+multiple-net-name findings. Added a live sheet/class remediation map and kept
+all repairs subject to native ERC and exact netlist-parity validation.

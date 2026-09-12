@@ -2,7 +2,7 @@
 
 ## CURRENT STATE OVERRIDE — 2026-09-12
 
-The current committed Phase 24 checkpoint is `837940e1`. Native KiCad 10.0.5
+The current committed Phase 24 checkpoint is `dad809ec`. Native KiCad 10.0.5
 ERC is 311 warnings / 0 errors: 132 `endpoint_off_grid`, 126
 `isolated_pin_label`, 30 `same_local_global_label`, and 23
 `multiple_net_names`. The corrected JMS583 support audit passes REXT, reset,
@@ -59,6 +59,10 @@ baseline; this is not a local-escape failure or a full-board closure. The
 same fresh worker confirms the corrected U5 native connectivity audit and its
 trace-removal negative control. No canonical production acreage copper was
 silently replaced.
+
+The current live ERC cluster map is recorded in
+`PHASE24_CURRENT_ERC_CLUSTER_MAP_20260912.md`; it is based on the canonical
+311-warning report and supersedes older 862/777/485 census prose.
 
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 
