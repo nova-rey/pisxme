@@ -12333,6 +12333,11 @@ four native errors and lost 168 netlist nodes; local-label demotion preserved
 exact 361-net parity and zero severity errors but left the warning census
 unchanged, so neither was promoted.
 
+2026-09-12 — Added a third bounded duplicate-label representation probe: keep
+the original boundary hierarchical labels authoritative and demote only the
+later circuit-facing duplicates to local labels. This is isolated test logic;
+no canonical schematic change is implied.
+
 2026-09-12 — The balanced removal probe showed the early duplicate boundary
 labels carry contract-symbol connectivity and cannot simply be deleted. Added
 a second disposable strategy that demotes only those duplicate boundary labels

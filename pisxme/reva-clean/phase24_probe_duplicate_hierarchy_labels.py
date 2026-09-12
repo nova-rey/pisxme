@@ -18,6 +18,10 @@ TARGETS = {
     "REGULATORS": {"BRIDGE_3V3": "20.32", "BRIDGE_1V1": "22.86"},
     "STORAGE": {"BRIDGE_3V3": "22.86", "BRIDGE_1V1": "25.4"},
 }
+LATER_Y = {
+    "REGULATORS": {"BRIDGE_3V3": "157", "BRIDGE_1V1": "207"},
+    "STORAGE": {"BRIDGE_3V3": "101.25", "BRIDGE_1V1": "103.75"},
+}
 
 
 def end_of_expr(text: str, start: int) -> int:
@@ -85,11 +89,33 @@ def localize_boundary(text: str, name: str, y: str) -> str:
     return text[:lib_end] + "\n" + "\n".join(kept) + "\n" + text[tail:]
 
 
+def localize_circuit(text: str, name: str, y: str) -> str:
+    """Keep the boundary hierarchy label; demote the later circuit label."""
+    lib_end = end_of_expr(text, text.index("(lib_symbols"))
+    tail = text.index("(sheet_instances", lib_end)
+    expressions = top_level(text, lib_end, tail)
+    label_re = re.compile(rf'\(hierarchical_label "{re.escape(name)}"[\s\S]*?\(at 5 {re.escape(y)} 180\)')
+    kept = []; found = 0
+    for expr in expressions:
+        if expr.startswith("(hierarchical_label ") and label_re.search(expr) and found == 0:
+            uuid = re.search(r"\(uuid ([^)]+)\)", expr).group(1)
+            kept.append(
+                f'  (label "{name}" (at 5 {y} 180) '
+                f'(effects (font (size 1 1)) (justify right)) (uuid {uuid}))'
+            )
+            found += 1
+        else:
+            kept.append(expr)
+    if found != 1:
+        raise ValueError(f"{name}@{y}: expected one circuit label, found {found}")
+    return text[:lib_end] + "\n" + "\n".join(kept) + "\n" + text[tail:]
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--source", type=Path, default=Path(__file__).resolve().parent)
     ap.add_argument("--output", type=Path, required=True)
-    ap.add_argument("--mode", choices=("remove", "local"), default="remove")
+    ap.add_argument("--mode", choices=("remove", "local", "circuit-local"), default="remove")
     args = ap.parse_args()
     src = args.source.resolve(); out = args.output.resolve()
     if out.exists():
@@ -106,8 +132,12 @@ def main() -> None:
         path = out / f"{child}.kicad_sch"
         text = path.read_text()
         for name, y in rails.items():
-            transform = localize_boundary if args.mode == "local" else remove_boundary
-            text = transform(text, name, y)
+            if args.mode == "local":
+                text = localize_boundary(text, name, y)
+            elif args.mode == "circuit-local":
+                text = localize_circuit(text, name, LATER_Y[child][name])
+            else:
+                text = remove_boundary(text, name, y)
         path.write_text(text)
     print(out)
 
