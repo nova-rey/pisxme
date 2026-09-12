@@ -41,8 +41,9 @@ fp(b, 'L10').SetPosition(P(142.00, 130.00))
 # adjacent XOUT pad or the VDDREG B.Cu corridor.
 n = clear(b, 'XIN')
 src = pos(b, 'U11', '50'); dst = pos(b, 'Y10', '1')
-track(b, n, src, (135.00,130.00), F, .10)
-track(b, n, (135.00,130.00), (135.00,125.55), F, .10)
+track(b, n, src, (137.40,130.60), F, .10)
+track(b, n, (137.40,130.60), (135.00,130.60), F, .10)
+track(b, n, (135.00,130.60), (135.00,125.55), F, .10)
 track(b, n, (135.00,125.55), dst, F, .10)
 path(b, 'XOUT', ('U11','51'), ('Y10','2'),
      [(138.40,130.00),(138.40,127.25)], width=.10)

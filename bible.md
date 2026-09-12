@@ -12273,3 +12273,6 @@ The first B.Cu transition variant removed the crystal-pad mask bridge but
 introduced a new XIN/VDDREG corridor crossing and local via-to-plane findings.
 It was superseded by a same-layer west-side XIN corridor, retaining the
 ordinary-via policy and avoiding that new crossing.
+
+The remaining XIN departure was reworked to leave U11 pad 50 north before
+turning west, preventing the westward segment from crossing adjacent pad 49.
