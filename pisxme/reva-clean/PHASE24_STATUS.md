@@ -72,6 +72,12 @@ See `PHASE24_STORAGE_ALIAS_RENAME_PROBE_REJECT_RECEIPT_20260912.md`.
 The committed reference-set audit also passes: 78 schematic references,
 101 PCB references, and exactly 23 documented mechanical/test-point extras;
 see `PHASE24_REFERENCE_SET_RECHECK_RECEIPT_20260912.md`.
+The separately named all-authoritative PCB baseline
+`PHASE24_ALL_AUTHORITATIVE_PARTS.kicad_pcb` was rechecked in fresh Light at
+680 DRC violations / 406 unconnected items. Its reference-set parity passes,
+but its manufacturing and connectivity findings remain open; see
+`PHASE24_ALL_AUTHORITATIVE_DRC_RECHECK_RECEIPT_20260912.md`. This does not
+replace the retained 612/409 result for the other acreage candidate.
 The isolated Path-B DFM/native-DRC recheck also passes: MIC2545A land-pattern
 audit PASS and RTL9210B V1603 integrated candidate 0 DRC violations / 0
 unconnected items. Receipt:

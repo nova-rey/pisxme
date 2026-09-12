@@ -12417,6 +12417,13 @@ The committed reference-set audit passed with 78 schematic references, 101
 PCB references, and exactly 23 documented mechanical/test-point extras. Full
 connectivity and DRC closure remain open.
 
+# 2026-09-12 — Phase 24 all-authoritative DRC baseline
+
+Fresh Light measured the committed `PHASE24_ALL_AUTHORITATIVE_PARTS` PCB at
+680 DRC violations / 406 unconnected items. Reference-set parity passes, but
+manufacturing and connectivity findings remain open. This is a distinct
+candidate baseline and does not replace the retained 612/409 evidence.
+
 # 2026-09-12 — Phase 24 Path-B DFM/native DRC recheck
 
 The writable Light producer passed the MIC2545A land-pattern DFM audit and
