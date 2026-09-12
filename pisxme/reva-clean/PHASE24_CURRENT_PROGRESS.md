@@ -2,7 +2,7 @@
 
 ## CURRENT CHECKPOINT POINTER — 2026-09-12
 
-The live committed source is `9b56e3d9`. The JMS583 bounded local fine escape
+The live committed source is `fc44ebca`. The JMS583 bounded local fine escape
 is validated as an isolated implementation (scope, full support, REXT, and
 negative controls pass); full-board DRC remains open at the inherited 612/409
 baseline. U5 native connectivity and its trace-removal negative control also
@@ -13,6 +13,10 @@ The validated next board-repair basis is
 `PHASE24_FCU_POWER_GND_PLANE_PROBE.kicad_pcb`: fresh native DRC 472/265 and
 fresh schematic-to-pad parity 0 mismatches. It remains a non-closure candidate
 until the remaining board DRC/connectivity and manufacturing findings pass.
+
+The width-normalized successor is now the current repair basis: fresh Light
+reproduces 440 DRC violations / 265 unconnected items, and fresh source-to-pad
+parity remains 0 mismatches. Remaining board DRC/connectivity is open.
 
 The Ethernet C48-C52/R26-R31 support-group grid repair is promoted and
 fresh-Light validated. Electrical ERC is 300 warnings / 0 errors (121

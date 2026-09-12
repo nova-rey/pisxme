@@ -12523,3 +12523,9 @@ parity passed with zero mismatches. It is the next repair basis, not closure.
 Saved the combined F.Cu POWER_GND plane plus normal-width return candidate.
 Only 32 undersized ground tracks were widened; producer DRC improved from
 472/265 to 440/265 with zero shorts and unchanged inherited crossings.
+
+# 2026-09-12 - Phase 24 normalized ground returns fresh validation
+
+Fresh Light reproduced the normalized candidate at 440 DRC violations / 265
+unconnected items, while fresh source-to-pad parity passed with zero
+mismatches. It is the current repair basis, not Phase 24 closure.

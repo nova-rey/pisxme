@@ -13,3 +13,8 @@ two inherited crossings.
 This is a repair basis, not a Phase 24 pass. Fresh validator, power/SI,
 manufacturing, and remaining connectivity checks are required before any
 promotion decision.
+
+Fresh KiCad Light validation from `fc44ebca` reproduces 440 violations / 265
+unconnected items. Fresh native XML source-to-pad parity also passes with 814
+authoritative schematic nodes, 1,262 PCB pads, and 0 mismatches. The candidate
+is the current bounded repair basis; it is not closure.

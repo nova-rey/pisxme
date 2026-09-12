@@ -34,6 +34,9 @@ The reproducible F.Cu `POWER_GND` plane candidate
 with source-to-pad parity PASS. It is the next bounded repair basis, not a
 final-board pass; its remaining DRC/connectivity and manufacturing findings
 stay open.
+The width-normalized successor
+`PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb` is fresh-validated at
+440/265 with source-to-pad parity PASS and is the current repair basis.
 
 The generic Phase 3 hierarchy authoring probe is corrected and validated:
 root child-sheet objects now carry native KiCad project/page `instances`
