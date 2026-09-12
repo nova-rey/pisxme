@@ -102,3 +102,7 @@ The legacy stale-M.2-label cleanup script was run once against the current commi
 ## Phase 24 integrated C14 reference placement repair — 2026-09-13
 
 The C14 reference field was moved from local `(0,0)` to `(6,0)` mm to clear the CM5 J7 outline. This DFM-only edit reduced native DRC from 382 to 379 violations, with unconnected items unchanged at 499; no electrical or copper data changed. Fresh integrated validation remains required.
+
+## Phase 24 fresh C14 reference validation — 2026-09-13
+
+Fresh KiCad Light validation of integrated commit `be2fc476` reproduced DRC `379 violations / 499 unconnected items` after moving the C14 reference field clear of J7 silkscreen. Raw fresh report and tool identity are retained under `validation-receipts/c14-reference-placement-integrated/`.
