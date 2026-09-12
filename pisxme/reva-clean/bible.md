@@ -388,3 +388,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Reproduced the untouched `28ab8fc1` candidate in a fresh isolated `pisxme-kicad-light:v1` checkout from `/workspace/project/pisxme/reva-clean`: KiCad 10.0.6 reports 312 violations and 499 unconnected items. This binds the authoritative Light baseline; the direct-host 310 count is context variance only.
 
 - 2026-09-13: Reproduced the untouched schematic at `1ff9b715` in fresh isolated Light: KiCad 10.0.6 reports 351 ERC findings with zero errors in the native summary. Findings remain open; no source edits were made.
+
+- 2026-09-13: Regenerated and retained the native KiCad XML netlist from the canonical schematic in fresh Light at `ac3f45d9`; the stale checked-in SATA-era XML remains untouched.
