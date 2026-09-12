@@ -12490,3 +12490,11 @@ Fresh KiCad XML export paired with the retained acreage board passed the
 schematic-to-pad parity audit: 814 authoritative nodes, 1,262 PCB pads, and
 zero mismatches. The prior 79-mismatch result was isolated to a stale checked-
 in XML export and was not used for PCB repair.
+
+# 2026-09-12 - Phase 24 zone-refill discriminator
+
+Native `pcbnew` zone refill on a disposable retained-board copy reduced DRC
+from 612 to 472 but left all 409 unconnected items and added track-width and
+via-dangling findings. The probe was rejected as a closure candidate and
+preserved as evidence that saved zone fills must be normalized for future
+comparisons.
