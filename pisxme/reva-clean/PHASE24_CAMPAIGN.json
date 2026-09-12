@@ -189,7 +189,7 @@
     "silk_u14_segments_integrated": "validation-receipts/silk-u14-segments-integrated/RECEIPT.md"
   },
   "blockers": [],
-  "next_action": "Continue bounded Phase 24 repair from C14/C15 DFM candidate; fresh DRC 340/499 and zero shorts. Power copper and storage U11/U12 authority remain open.",
+  "next_action": "Continue bounded Phase 24 repair from integrated candidate fc2b79f8; fresh DRC 340/499 and zero shorts. Power copper and storage U11/U12 authority remain open.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
@@ -203,7 +203,7 @@
     "dfm": "Fresh integrated DRC 382/499 after scoped DFM repairs; six courtyard overlaps, five PTH-inside-courtyard, 16 edge-clearance, and model/assembly evidence remain open.",
     "archive_disposition": "Do not import HD3SS3412/HD3SS6126 archive pad shifts; recover TUSB rotations only through authoritative generator after scoped validation"
   },
-  "integration_candidate": "HEAD",
+  "integration_candidate": "fc2b79f8",
   "active_workstreams": {
     "power_return_lane": {
       "owner": "Root-mediated /root/power_native_census_run",
@@ -240,7 +240,7 @@
   },
   "validation": {
     "current_recheck": {
-      "candidate": "HEAD",
+      "candidate": "fc2b79f8",
       "dr_json": "validation-receipts/dfm-silk-c14c15-20260912/fresh-drc.json",
       "drc_violations": 340,
       "unconnected_items": 499
