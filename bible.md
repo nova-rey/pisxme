@@ -12464,3 +12464,8 @@ Promoted the exact-count-guarded rename of the 11 ordinary STORAGE
 `M2_GND` labels to `POWER_GND`. Fresh native ERC retained zero errors and
 reduced `multiple_net_names` from 23 to 22; normalized native netlist parity
 passed. Remaining ERC and acreage DRC work stays open.
+
+# 2026-09-12 - Phase 24 current-pointer reconciliation
+
+Updated the Phase 24 current-state documents to point at the verified
+`097de6a4` source, preserving historical counts below the current override.

@@ -2,7 +2,7 @@
 
 ## CURRENT CHECKPOINT POINTER — 2026-09-12
 
-The live committed source is `9e001c33`. The JMS583 bounded local fine escape
+The live committed source is `097de6a4`. The JMS583 bounded local fine escape
 is validated as an isolated implementation (scope, full support, REXT, and
 negative controls pass); full-board DRC remains open at the inherited 612/409
 baseline. U5 native connectivity and its trace-removal negative control also
@@ -11,10 +11,15 @@ checkpoint; do not confuse fixture-level validation with acreage closure.
 
 The Ethernet C48-C52/R26-R31 support-group grid repair is promoted and
 fresh-Light validated. Electrical ERC is 300 warnings / 0 errors (121
-endpoint-off-grid, 126 isolated-label, 30 same-label, 23 multiple-name),
+endpoint-off-grid, 126 isolated-label, 30 same-label, 22 multiple-name),
 with the worker's 356 total including environment/library classifications.
 The ten-child live contract map passes. See
 `PHASE24_ETHERNET_GRID_REPAIR_PROMOTION_RECEIPT_20260912.md`.
+
+The 11 ordinary STORAGE `M2_GND` labels are now normalized to `POWER_GND`.
+Fresh Light native ERC remains at zero errors and 355 total findings, with
+`multiple_net_names` reduced to 22; native netlist parity is preserved. See
+`PHASE24_M2_GND_ALIAS_PROMOTION_RECEIPT_20260912.md`.
 
 Fresh Light also reconfirmed all ten saved-board dual-mode storage USB3
 endpoint pairs from `481435f9`; see
