@@ -13,6 +13,9 @@ authoritative board.
 CM5 J7-to-U12 USB3 endpoint pairs using KiCad's saved pads, tracks, and vias.
 The selector-to-JMS583 legs were intentionally not authored by this probe.
 
+The focused `phase24_storage_mkey_usb3_actual_pad_audit.py` also passes these
+four links and its serialized-track removal negative control.
+
 ## Why it was rejected
 
 Native KiCad 10.0.5 DRC reported **518 violations / 427 unconnected items**.
@@ -21,6 +24,8 @@ vias too close to the 0.4 mm USB3 pad pitch, and created real pair-to-pair
 short/clearance and plane-zone/hole-clearance violations.
 
 Raw report: `PHASE24_STORAGE_MKEY_USB3_ACTUAL_PAD_PROBE_20260912-drc.rpt`.
+Detached KiCad Light reproduced the endpoint PASS and reported 520 violations
+/ 427 unconnected items; the local KiCad 10.0.5 run reported 518 / 427.
 
 ## Engineering classification
 

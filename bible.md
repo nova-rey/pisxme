@@ -11877,3 +11877,8 @@ saved-board native connectivity audit, but KiCad DRC rejected the disposable
 route with 518 violations / 427 unconnected items, including pair-via
 clearance/shorts and inherited-copper crossings. Classified as route
 implementation evidence only; no production copper was promoted.
+
+Fresh KiCad Light validation reproduced the four endpoint assertions and the
+focused serialized-track negative control, while reporting 520 violations /
+427 unconnected items. This confirms the rejected status is a physical route
+failure, not a producer-workspace-only result.
