@@ -11803,3 +11803,9 @@ authoritative native KiCad 10.0.5 census is 312 warnings/0 errors with 132
 endpoint-off-grid, 126 isolated-label, 30 same-local/global, and 24
 multiple-net-name findings. Older 377/197 and 489-count statements remain
 explicitly historical; raw receipts were not modified.
+2026-09-12 — Phase 24 rolling isolated-worker validation: from committed
+f3d70555, fresh KiCad Light 10.0.6 reported schematic ERC 368/0 (matching
+canonical 132/126/30/24 classes plus version-specific library/link classes),
+acreage DRC 180 violations/468 unconnected, and U5 native connectivity plus
+trace-removal negative control PASS. Strict M.2 owner audit on historical
+V1570 failed eight source-pad joins; no waiver or canonical CAD change.
