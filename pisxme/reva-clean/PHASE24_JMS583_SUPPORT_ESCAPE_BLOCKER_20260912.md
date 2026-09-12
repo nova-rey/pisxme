@@ -2,7 +2,16 @@
 
 Date: 2026-09-12  
 Blocker ID: `PHASE24_JMS583_LOCAL_ESCAPE`  
-Status: `SCOPED_USER_DECISION_REQUIRED` (not terminal goal status)
+Status: `SUPERSEDED_BY_LOCAL_ESCAPE_PASS` (historical blocker evidence)
+
+## CURRENT STATE — 2026-09-12
+
+The user-authorized bounded exception is implemented and passes the local
+JMS583 escape discriminator in fresh KiCad Light. See
+`PHASE24_JMS583_FINE_ESCAPE_RECEIPT_20260912.md` and
+`PHASE24_JMS583_FINE_QFN_ESCAPE.kicad_pcb`. The decision boundary below is
+historical: the local rule is now selected, not awaiting authorization. The
+full-acreage DRC and remaining Phase 24 gates are still open.
 
 ## Placement-authority implementation result — 2026-09-12
 

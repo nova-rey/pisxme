@@ -50,8 +50,9 @@ baseline, not a claim that routing or native DRC has passed.
 1. Clear and re-author only `XIN`, `XOUT`, `JMS_VDDREG_5V`, and `LXO` in the
    disposable candidate; preserve all other accepted support copper.
 2. Use saved native pad positions and ordinary through-vias only.
-3. Keep the XIN/XOUT pair together and return to the normal 0.20 mm rule as
-   soon as the immediate QFN/pad field allows.
+3. Keep the XIN/XOUT pair together, use the selected 0.10/0.10 mm local
+   exception only in the immediate QFN/Y10 field, and return to the normal
+   0.20 mm board rule at the handoff.
 4. Reserve the VDDREG/LXO corridor before adding secondary support copper.
 5. Validate all ten JMS support branches, USB3, native DRC, and actual-object
    negative controls in a fresh KiCad Light workspace.

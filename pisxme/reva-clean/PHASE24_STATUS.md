@@ -2,15 +2,18 @@
 
 ## CURRENT STATE OVERRIDE — 2026-09-12
 
-The current committed Phase 24 checkpoint is `817acb6b`. Native KiCad 10.0.5
+The current committed Phase 24 checkpoint is `12974416`. Native KiCad 10.0.5
 ERC is 311 warnings / 0 errors: 132 `endpoint_off_grid`, 126
 `isolated_pin_label`, 30 `same_local_global_label`, and 23
 `multiple_net_names`. The corrected JMS583 support audit passes REXT, reset,
-AVDD33, AVDDL, VCCO, VCCK, and LXO; XIN, XOUT, and JMS_VDDREG_5V remain open.
-The scoped local-escape decision boundary is recorded in
-`PHASE24_JMS583_SUPPORT_ESCAPE_BLOCKER_20260912.md`. This override is the
-current instruction and supersedes older counts and candidate labels below;
-historical sections and raw receipts remain evidence only.
+AVDD33, AVDDL, VCCO, VCCK, and LXO; the XIN, XOUT, and JMS_VDDREG_5V local
+escape is now connected under the selected bounded fine rule. Fresh Light
+validates the complete ten-branch support field and USB3 storage links. The
+full-acreage DRC remains open at 612/409 on the retained candidate; the
+JMS583 local escape blocker is superseded by
+`PHASE24_JMS583_FINE_ESCAPE_RECEIPT_20260912.md`. This override is current and
+supersedes older counts and labels below; historical sections and raw receipts
+remain evidence only.
 
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 

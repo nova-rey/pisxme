@@ -12292,3 +12292,9 @@ without silently relying on a false footprint predicate.
 The west VDDREG via experiment was rejected because its ordinary via contacted
 the existing JMS_VCCK route. The accepted local geometry returns to the
 original VDDREG via and places the XIN turn above the VDDREG departure instead.
+
+The JMS583 local fine-escape decision is now integrated as a validated
+candidate: fresh KiCad Light passes scope, ten-branch support connectivity,
+native endpoint, USB3 storage, and negative-control checks. Full-acreage DRC
+remains open with inherited findings; the prior user-decision blocker is
+superseded by the fine-escape receipt.

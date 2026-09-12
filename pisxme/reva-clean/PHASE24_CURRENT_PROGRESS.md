@@ -1,5 +1,16 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT JMS583 LOCAL ESCAPE — 2026-09-12
+
+The frozen U11/Y10 support placement now uses a tightly scoped 0.10 mm
+XIN/XOUT escape rule. Fresh KiCad Light passes the complete ten-branch support
+audit, native endpoint audit, saved-board scope audit, trace-removal negative
+control, and dual-mode storage USB3 connectivity. Native DRC reports 612/409
+on the inherited acreage baseline with no shorting, solder-mask-bridge, or
+JMS583-local crossing findings; the two remaining crossing records are the
+pre-existing JMS_AVDDL/USB_RXN1 full-board route. Receipt:
+`PHASE24_JMS583_FINE_ESCAPE_RECEIPT_20260912.md`.
+
 ## CURRENT PATH-B AUTHORITY LIGHT RECHECK — 2026-09-12
 
 Fresh KiCad Light validation passes the RTL9210B authority audit, V1603
