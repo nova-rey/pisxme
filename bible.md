@@ -12043,6 +12043,11 @@ tool-version DRC delta.
 Fresh `kicad-light` validation from committed ref `95c600bb` reproduces the
 JMS_REXT and USB3 audit passes. KiCad 10.0.6 reports 546/416 inherited DRC
 findings; the version delta is retained and does not constitute closure.
+The first combined XIN/XOUT crystal trial from the REXT base was rejected:
+native endpoint connectivity passed, but the QFN escape and solder-mask
+geometry introduced local DRC conflicts. The second bounded arrangement also
+passed endpoint connectivity but was rejected at 566/414 for the same local
+route-implementation class. No crystal copper was promoted.
 The JMS_REXT local support primitive rehomes R80 to the east storage pocket
 and connects U11.39 to R80.1 without changing accepted USB3 copper. Native
 JMS_REXT connectivity and trace-removal negative control pass, as does the
