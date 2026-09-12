@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT STORAGE SUPPORT PROBE — THREE-CORRIDOR V2 REJECTED — 2026-09-12
+
+The V2 three-corridor trial passes the complete JMS support endpoint audit and
+negative control, but native KiCad 10.0.5 DRC is 644/409 with source-field
+shorts/crossings involving reset and adjacent U11 support pads. It is rejected
+route evidence; canonical copper is unchanged. Receipt:
+`PHASE24_JMS_THREE_CORRIDORS_V2_REJECT_RECEIPT_20260912.md`.
+
 ## CURRENT PATH-B AUDIT — V1603 NEGATIVE CONTROL CORRECTION — 2026-09-12
 
 The V1603 six-net audit now removes all actual saved copper for each

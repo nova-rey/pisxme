@@ -8272,6 +8272,9 @@ support candidate; prior default-board PASS results are not current evidence.
 Fresh Light validation from 7c67d297 reproduces the corrected baseline audit
 against the explicit cumulative PCB path: XIN/XOUT/VDDREG fail and the other
 support branches pass. The audit fails closed before negative control.
+The three-corridor V2 storage support trial passes endpoint/negative-control
+checks but creates source-field shorts/crossings and native DRC 644/409. It is
+rejected route evidence; canonical copper remains unchanged.
 The V1603 six-net audit negative control was corrected to remove all actual
 saved copper objects for each tested net, because redundant/zero-length
 reference-clock segments made single-segment removal non-discriminating.
