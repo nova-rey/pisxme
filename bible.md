@@ -12676,3 +12676,7 @@ Fresh KiCad Light schematic BOM export for `ee0ee5db` produced 117 references ag
 ## Phase 24 BOM exclusion disposition — 2026-09-13
 
 The 14 PCB references absent from the regenerated BOM are source-dispositioned: TP1–TP13 carry explicit `exclude_from_bom` and `exclude_from_pos_files` attributes; `MECH_M2_2280` carries `board_only`, `exclude_from_bom`, and `exclude_from_pos_files`. The BOM mismatch therefore does not indicate stale generator coverage, while DFM and placement conflicts remain open.
+
+## Phase 24 canonical pointer update — 2026-09-13
+
+The campaign integration pointer now names canonical `93c690d8`, which includes the validated USB3 label source change, Path-A census, DFM census, and BOM exclusion disposition. No physical closure claim is implied.
