@@ -30,6 +30,11 @@ sheet- and coordinate-clustered there; no current `unconnected_wire_endpoint`,
 `no_connect_dangling`, or `lib_symbol_mismatch` cluster remains. These four
 ERC families are independent analysis workstreams, while canonical source
 integration and authoritative ERC/netlist/parity validation remain serialized.
+The census now also records duplicate warning coordinates; 53 repeated
+isolated-label coordinate/name signatures are present in the live report.
+Source inspection separately confirms repeated storage label records at the
+same connector coordinates, a bounded label-authoring hypothesis that still
+requires a disposable native probe before promotion.
 
 ## Current checkpoint — identity-driven contract probe rejected — 2026-09-11
 

@@ -389,6 +389,12 @@ passed. V1393-V1395 tested coupled/staggered/near-via U1.63 additions and were
 rejected at 2, 2, and 4 native violations. The accepted V1392 primitive and
 all Path-A assets remain unchanged; U1.63 and other Path-B support remain
 open.
+
+2026-09-12 — Phase 24 ERC census refinement: the reproducible census now
+records duplicate warning coordinate/name signatures. It identifies 53
+repeated isolated-label signatures in the live report, and source inspection
+found repeated STORAGE connector-label records at identical coordinates. This
+is a disposable label-authoring hypothesis, not yet a promoted repair.
 2026-09-09 — Phase 24 V1384 accepted the U1.25 RTL_1V1 fanout on the complete
 V1382 U1.16 basis. Native DRC reports zero violations with 18 fixture opens.
 The corrected saved-board audit derives connectivity from KiCad's loaded

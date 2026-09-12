@@ -6,7 +6,7 @@ import json, re, sys
 
 def census(path: Path):
     lines=path.read_text(encoding='utf-8').splitlines()
-    sheet='/'; typ=None; counts=Counter(); by_sheet=Counter(); xs=defaultdict(Counter); labels=defaultdict(Counter)
+    sheet='/'; typ=None; counts=Counter(); by_sheet=Counter(); xs=defaultdict(Counter); labels=defaultdict(Counter); label_coords=defaultdict(Counter)
     for line in lines:
         if 'Sheet ' in line and line.startswith('*'):
             sheet=line.split('Sheet ',1)[1].strip() or '/'
@@ -16,12 +16,19 @@ def census(path: Path):
             m=re.search(r'@\(([-+0-9.]+) mm,',line)
             if m: xs[typ][m.group(1)]+=1
             m=re.search(r"(?:Global Label|Label) '([^']+)'",line)
-            if m: labels[typ][m.group(1)]+=1
+            if m:
+                labels[typ][m.group(1)]+=1
+                xy=re.search(r'@\(([-+0-9.]+) mm,\s*([-+0-9.]+) mm\)',line)
+                if xy: label_coords[typ][(m.group(1),xy.group(1),xy.group(2))]+=1
     return {
         'report': str(path), 'counts': dict(counts),
         'by_sheet': {f'{s}|{t}': n for (s,t),n in sorted(by_sheet.items())},
         'coordinate_x_top': {t: xs[t].most_common(20) for t in sorted(xs)},
         'label_top': {t: labels[t].most_common(40) for t in sorted(labels)},
+        'duplicate_label_coordinates': {
+            t: [[list(k), n] for k,n in label_coords[t].most_common() if n > 1][:80]
+            for t in sorted(label_coords)
+        },
     }
 
 if __name__ == '__main__':
