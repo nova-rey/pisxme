@@ -78,7 +78,7 @@
       "evidence": "KiCad 10.0.6 positive/negative/outside probes and fresh Light candidate validation; local fine rule effective and normal POWER_GND constraint retained.",
       "raw_retention": "with-context report/log and patch copied; duplicate-named negative/outside reports were not separately copied before disposable workspace release and must be regenerated if needed for final manifest"
     },
-    "integration_candidate": "74a86103",
+    "integration_candidate": "75f8a101",
     "validation": {
       "status": "OPEN_NOT_CLOSURE",
       "workspace": "/home/nyx/eda-workspaces/validation-tusb-integrated-validate-20260912T174403Z",
@@ -87,12 +87,12 @@
       "receipt": "validation.json",
       "scope": "TUSB footprint plus integrated DRC; Phase24 remains incomplete",
       "current_recheck": {
-        "base_commit": "76873ea8",
+        "base_commit": "75f8a101",
         "tool": "KiCad 10.0.6",
-        "drc": "433 violations / 265 unconnected",
+        "drc": "395 violations / 499 unconnected",
         "shorting_items": 0,
         "result": "open_not_closure",
-        "raw": "counts observed; retained integrated TUSB raw receipt remains authoritative for same candidate geometry"
+        "raw": "validation-receipts/resistor-reference-height-integrated/fresh-drc.json"
       }
     },
     "pi_storage_recheck": {
@@ -180,10 +180,11 @@
     "service_usb2_width_integrated": "validation-receipts/service-usb2-width-integrated-22d25b/RECEIPT.md",
     "service_vbus_width_rejected": "validation-receipts/service-vbus-width-rejected/RECEIPT.md",
     "jms_reset_width_rejected": "validation-receipts/jms-reset-width-rejected/RECEIPT.md",
-    "width_family_jms_avdd33_integrated": "validation-receipts/width-family-jms-avdd33-segment2-integrated/RECEIPT.md"
+    "width_family_jms_avdd33_integrated": "validation-receipts/width-family-jms-avdd33-segment2-integrated/RECEIPT.md",
+    "resistor_reference_height_integrated": "validation-receipts/resistor-reference-height-integrated/RECEIPT.md"
   },
   "blockers": [],
-  "next_action": "Continue bounded repair on a materially distinct open acceptance family; preserve 74a86103 as current integrated candidate.",
+  "next_action": "Continue bounded repair on a materially distinct open acceptance family; preserve 75f8a101 as current integrated candidate.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
@@ -197,7 +198,7 @@
     "dfm": "Selector archive geometry is unapproved; TUSB rotation correction is authoritative generator output; current DFM/model/BOM/release evidence remains incomplete",
     "archive_disposition": "Do not import HD3SS3412/HD3SS6126 archive pad shifts; recover TUSB rotations only through authoritative generator after scoped validation"
   },
-  "integration_candidate": "74a86103",
+  "integration_candidate": "75f8a101",
   "active_workstreams": {
     "source_erc_lane": {
       "owner": "/root/source_erc_lane",

@@ -70,3 +70,7 @@ Fresh KiCad Light validation of integrated commit `74a86103` reproduced DRC `423
 ## Phase 24 integrated resistor reference text-height repair — 2026-09-13
 
 A DFM-only candidate raised the 28 affected resistor reference fields from 0.70 mm to the active 0.80 mm minimum. The bounded Light producer reduced native DRC from 423 to 395 violations with unconnected items unchanged at 499; no copper, connectivity, or rule data changed. Fresh integrated validation remains required.
+
+## Phase 24 fresh resistor reference validation — 2026-09-13
+
+Fresh KiCad Light validation of integrated commit `75f8a101` reproduced DRC `395 violations / 499 unconnected items` after raising the 28 resistor reference fields to 0.80 mm. The reduction is confined to the prior text-height class; raw fresh report, stdout, and tool identity are retained under `validation-receipts/resistor-reference-height-integrated/`.
