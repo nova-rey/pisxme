@@ -146,3 +146,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: recorded runtime commissioning: active app-server, 24 configured threads, constrained host resources, and unavailable nested delegation; Root-mediated dispatch remains required.
 - 2026-09-12: retained storage USB3 Unblocker reassessment; blocker is internal domain authority for a local U11/U12 geometry window, with V6 as the sole next discriminator basis.
 - 2026-09-12: retained root-mediated native Light power census baseline at 364 DRC/499 unconnected with full class counts and hashes; no CAD mutation.
+- 2026-09-12: appended V6 storage blocker metrics (native 428/421, fresh 430/421) and exact U11/U12 geometry questions; same-class USB3 variants remain paused pending authority.
