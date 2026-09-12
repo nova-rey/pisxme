@@ -40,6 +40,10 @@ The AVDD33 local join passes its dedicated audit and the USB3 ten-link audit,
 but is rejected because its x=148 mm transition corridor crosses existing
 CM5 USB3 channels on both copper layers; native DRC is 435/419. Receipt:
 `PHASE24_JMS_AVDD33_LOCAL_REJECT_RECEIPT_20260912.md`.
+The AVDD33 rehome moves C80 into the storage island and provides an outward
+U11 escape with no short/crossing findings. Its AVDD33 audit and negative
+control pass, all ten USB3 links pass, and native DRC is 431/419. Receipt:
+`PHASE24_JMS_AVDD33_REHOME_RECEIPT_20260912.md`.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 

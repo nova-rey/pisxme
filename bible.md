@@ -12010,6 +12010,10 @@ The AVDD33 local support join passed its native endpoint audit and negative
 control but was rejected as route implementation: its x=148 mm transition
 corridor crosses existing CM5 USB3 channels on both layers, with native DRC
 435/419. The USB3 topology remains passing and unchanged.
+The AVDD33 rehome then moved C80 into the storage island and routed U11 pad 19
+outward, avoiding CM5 USB3 corridors. Its native audit and negative control
+pass, all ten USB3 links pass, and native DRC is 431/419; it is retained as a
+support primitive pending cohort integration.
 The VCCK local primitive then connected U11 pad 2 to C82, passed its native
 audit and trace-removal negative control, and kept all ten USB3 links passing.
 Native DRC is 426/420 with no new short/crossing class; remaining board
