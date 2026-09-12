@@ -12370,3 +12370,9 @@ bounded JMS583 0.10 mm local escape, complete support/REXT connectivity, and
 trace-removal negative controls. The corrected U5 native saved-copper audit
 and its negative control also passed. The 612/409 native DRC result belongs to
 the inherited acreage baseline; full-board Phase 24 closure remains open.
+
+# 2026-09-12 — Phase 24 storage USB3 fresh recheck
+
+Fresh KiCad Light passed all ten saved-board dual-mode storage USB3 endpoint
+pairs from `481435f9`. This focused gate remains distinct from full-board DRC
+and Phase 24 closure.

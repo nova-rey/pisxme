@@ -9,6 +9,10 @@ baseline. U5 native connectivity and its trace-removal negative control also
 pass in fresh KiCad Light. Continue full-board Phase 24 closure from this
 checkpoint; do not confuse fixture-level validation with acreage closure.
 
+Fresh Light also reconfirmed all ten saved-board dual-mode storage USB3
+endpoint pairs from `481435f9`; see
+`PHASE24_FRESH_LIGHT_STORAGE_USB3_RECHECK_RECEIPT_20260912.md`.
+
 ## CURRENT HIERARCHY AUTHORING PROBE — 2026-09-12
 
 The generic Phase 3 scaffold now emits native KiCad root child-sheet
