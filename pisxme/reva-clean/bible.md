@@ -110,3 +110,7 @@ Fresh KiCad Light validation of integrated commit `be2fc476` reproduced DRC `379
 ## Phase 24 integrated C15 reference placement repair — 2026-09-13
 
 The C15 reference field was moved from local `(0,0)` to `(2,0)` mm to clear the C14 reference. This DFM-only edit reduced native DRC from 379 to 377 violations, with unconnected items unchanged at 499 and no new violation class. Fresh integrated validation remains required.
+
+## Phase 24 fresh C15 reference validation — 2026-09-13
+
+Fresh KiCad Light validation of integrated commit `6bdc15f9` reproduced DRC `377 violations / 499 unconnected items` after moving the C15 reference field clear of C14. Raw fresh report and tool identity are retained under `validation-receipts/c15-reference-placement-integrated/`.
