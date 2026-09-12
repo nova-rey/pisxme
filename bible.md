@@ -12314,3 +12314,6 @@ asserts all ten page associations. No production CAD was changed.
 isolated-root hierarchy regression. Phase 24 status/current-progress pointers
 now identify this checkpoint while keeping the live 311-warning ERC census and
 open full-board gates explicit.
+
+2026-09-12 — Fresh Light validation receipt saved for `fe60d303`: the corrected
+isolated generated-root hierarchy test passed with zero native ERC violations.
