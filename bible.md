@@ -12315,5 +12315,10 @@ isolated-root hierarchy regression. Phase 24 status/current-progress pointers
 now identify this checkpoint while keeping the live 311-warning ERC census and
 open full-board gates explicit.
 
+2026-09-12 — Refreshed current-state pointers to `7165ea11`, the latest
+hierarchy-validation documentation checkpoint. Native canonical ERC remains
+311 warnings / 0 errors; the hierarchy authoring regression and structural
+audit pass, while Phase 24 remains open.
+
 2026-09-12 — Fresh Light validation receipt saved for `fe60d303`: the corrected
 isolated generated-root hierarchy test passed with zero native ERC violations.
