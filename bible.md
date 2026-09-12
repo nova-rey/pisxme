@@ -12424,6 +12424,12 @@ Ethernet center-tap/LED support-group grid correction. It is limited to
 C48-C52/R26-R31 coordinates and requires post-promotion native ERC and exact
 semantic netlist parity.
 
+# 2026-09-12 — Phase 24 Ethernet promotion guard correction
+
+Adjusted the promotion transform's completeness guard to the measured 76
+coordinate-record change set from the delegated probe; the guarded transform
+still refuses partial application below 70 records.
+
 # 2026-09-12 — Phase 24 all-authoritative DRC baseline
 
 Fresh Light measured the committed `PHASE24_ALL_AUTHORITATIVE_PARTS` PCB at

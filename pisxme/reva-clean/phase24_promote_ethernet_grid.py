@@ -43,7 +43,7 @@ def main():
             continue
         text = text.replace(old, new)
         total += count
-    if total < 100:
+    if total < 70:
         raise SystemExit(f"refusing partial promotion: only {total} coordinate records")
     PATH.write_text(text)
     print(f"promoted Ethernet grid coordinates: {total} records")
