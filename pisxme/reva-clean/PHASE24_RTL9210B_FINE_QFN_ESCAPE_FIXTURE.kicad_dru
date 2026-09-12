@@ -1,6 +1,5 @@
 (version 1)
-(rule "rtl9210b local qfn escape"
-  (condition "(A.Width == 0.15mm || B.Width == 0.15mm) && (A.NetName == 'ISOLATEB' || A.NetName == 'CLKREQ_N' || A.NetName == 'PERST_N' || A.NetName == 'RTL_1V1' || A.NetName == 'RTL_5V' || B.NetName == 'ISOLATEB' || B.NetName == 'CLKREQ_N' || B.NetName == 'PERST_N' || B.NetName == 'RTL_1V1' || B.NetName == 'RTL_5V')")
-  (constraint clearance (min 0.15mm))
-  (constraint track_width (min 0.15mm))
-  (constraint hole_size (min 0.20mm)))
+(rule "jms583 local qfn escape"
+  (condition "(A.NetName == 'XIN' || A.NetName == 'XOUT' || B.NetName == 'XIN' || B.NetName == 'XOUT') && (A.Footprint == 'U11' || B.Footprint == 'U11' || A.Footprint == 'Y10' || B.Footprint == 'Y10')")
+  (constraint clearance (min 0.10mm))
+  (constraint track_width (min 0.10mm)))
