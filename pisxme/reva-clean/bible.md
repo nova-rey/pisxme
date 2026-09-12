@@ -360,3 +360,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: High-speed authority approved preserving existing 0.13208-mm CM5/V100 geometry under scoped HS_USB3_90R, HS_PCIE_90R, and PCIE_PERST_CONTROL context, with negative-control proof required. New Amphenol Rev-W/GS-12-100/GS-20-033 public evidence was acquired; binary/3D licensing limits remain explicit.
 
 - 2026-09-13: Librarian indexed the bounded Amphenol Rev-W/GS-12-100/GS-20-033 corpus in private Library commit `2f5a1584b0fd86e9beba90bc32d5be5b713c60ad`; public PDFs remain browser-extracted with direct binary HTTP403 limitations and no restricted copies.
+
+- 2026-09-13: Preserved the scoped high-speed rule-context producer baseline: fresh Light DRC remains 312 violations and 499 unconnected items before any rule-context change.
