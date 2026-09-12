@@ -11999,3 +11999,6 @@ its native cohort audit and negative control, keeps all ten USB3 links passing,
 and reduces unconnected items to 401. Native DRC is 453, so the cohort is
 preserved as evidence but not promoted; its moved support placement needs
 clearance/routing repair.
+Fresh EDA Light validation from committed ref `b29c2ae8` reports 455/401 under
+KiCad 10.0.6, reproducing the cohort's connectivity result with the expected
+tool-version DRC delta.

@@ -14,3 +14,7 @@ cohort reduces open connectivity but is not promoted because its moved support
 placement creates additional clearance/route findings. It is retained as
 implementation evidence for the next support repair; no architecture,
 RTL9210B orientation, or USB3 topology changed.
+
+Fresh EDA Light validation from committed ref `b29c2ae8` reports 455 violations
+and 401 unconnected items under KiCad 10.0.6. The two-count delta is retained
+as a tool-version difference; the cohort's connectivity result is reproduced.
