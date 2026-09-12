@@ -215,3 +215,6 @@ A bounded audit confirmed that none of the 13 acceptance rows can be honestly cl
 
 ### 2026-09-12 — Phase 24 TI U12 package authority
 Targeted research acquired TI package drawing QFND142D (SHA256 `eca6feeeca7a6e7a069aa988091d067664a55cd88413acf0b5b599fb6a353e2f`), directly confirming RUA0042A's 0.50 mm pitch, 42 perimeter pins, and exposed pad 43. The retained 0.40 mm footprint is therefore not authoritative absent an exact package explanation; restricted Ultra Librarian CAD was not copied.
+
+### 2026-09-12 — Phase 24 hostile integrated review
+A bounded hostile review kept the hostile-review row open: required Path-A opens and two unresolved crossings remain, DRC ignored-check dispositions are not yet authorized for closure, and prior rule-context/netlist references were stale or candidate-mismatched. Campaign metadata was corrected to the fresh 340/499 current-head evidence.
