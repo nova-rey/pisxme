@@ -403,3 +403,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Fresh Light pad-net parity audit passed within scope: 814 expected schematic nodes against 1,262 PCB pads, zero expected-pad mismatches; exclusions and aliases are enumerated. Surplus-pad correctness and native KiCad parity conflicts remain open.
 
 - 2026-09-13: Complementary surplus-pad audit found 448 actual PCB pad keys beyond the 814 schematic expected keys: 313 net-assigned and 135 no-net. Most assigned surplus pads are J1's approved power field; explicit surplus/unknown classification remains required for bidirectional coverage closure.
+
+- 2026-09-13: Bound the campaign manifest to the complementary surplus-pad audit; bidirectional coverage remains open pending explicit classification of 448 surplus pads and no-net contacts.
