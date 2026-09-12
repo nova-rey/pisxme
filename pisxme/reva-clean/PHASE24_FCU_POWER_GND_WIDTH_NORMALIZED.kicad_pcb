@@ -5560,7 +5560,7 @@
 		(uuid "3a670e85-5b29-411d-abfa-5a04028606ee")
 		(at 150 168)
 		(property "Reference" "C34"
-			(at 0 0 0)
+			(at 0 2.5 0)
 			(layer "F.SilkS")
 			(uuid "c30a4b4e-d2e4-4afc-b154-62d45079f724")
 			(effects
