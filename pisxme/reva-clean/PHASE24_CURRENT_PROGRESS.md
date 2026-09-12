@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT PATH-B DFM/NATIVE-DRC RECHECK — 2026-09-12
+
+Fresh KiCad Light validation of the committed RTL9210B V1603/V1517 integrated
+candidate reports 0 native DRC violations and 0 unconnected items, with no
+shorting or track-crossing findings. The MIC2545A DFM audit remains PASS.
+Receipt: `PHASE24_PATHB_DFM_RECHECK_RECEIPT_20260912.md`. This is an isolated
+Path-B gate, not full-acreage or JMS583 closure.
+
 ## CURRENT FRESH-LIGHT ERC CROSS-CHECK — 2026-09-12
 
 Fresh KiCad Light 10.0.6 ERC from ref `4d31c1bc` reports 367 findings, with

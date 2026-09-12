@@ -1,5 +1,11 @@
 # Append-only project bible
 
+2026-09-12: Fresh KiCad Light rechecked the accepted RTL9210B V1603/V1517
+integrated candidate. Native DRC reports 0 violations / 0 unconnected items,
+with zero shorting and crossing findings; the MIC2545A DFM audit remains PASS.
+Preserved the result in PHASE24_PATHB_DFM_RECHECK_RECEIPT_20260912.md. This is
+an isolated gate; full-acreage and JMS583 support closure remain open.
+
 2026-09-12: Refreshed the Phase 24 current-state checkpoint pointer from the
 older documentation-only ref `dce46015` to the latest committed live-state
 ref `817acb6b`. No schematic or PCB source changed.
