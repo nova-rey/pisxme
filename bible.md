@@ -11887,3 +11887,8 @@ The V150 support-field native graft was also rejected: it preserved J7/U12
 and RX support connectivity but left four TX/support endpoint groups open and
 produced 617 DRC violations / 425 unconnected items. Historical support
 copper is placement-specific and remains reference evidence only.
+
+The V2 actual-pad USB3 route also failed: direct B.Cu fanout cannot attach to
+the top-side-only J7 pads without a local escape, and the separated corridor
+still collides with the existing V100 PET0 corridor. Native DRC was 475/431;
+the candidate remains rejected route evidence.
