@@ -11946,6 +11946,10 @@ Support V2 also passed all ten saved-board USB3 connectivity assertions but
 was rejected by native DRC at 464/421 for U11 fine-pitch escape, U12 returns,
 and support-pair geometry. No promotion or rule relaxation was made; the next
 attempt requires a true local pad-escape fanout.
+Support V3 passed all ten saved-board USB3 connectivity assertions but was
+rejected by native DRC at 456/421 for U11 fine-pitch escape and RX support-pair
+geometry. The east source handoff and all closed architecture decisions remain
+unchanged; next work scopes the local U11 escape rule.
 Fresh detached KiCad Light validation from `3db38be8` independently reports
 466/421 for support V2, confirming the same rejected route class.
 The first complete east-island support graft passed all ten native USB3

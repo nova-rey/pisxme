@@ -19,6 +19,9 @@ support network; receipt `PHASE24_STORAGE_MKEY_USB3_EAST_HANDOFF_RECEIPT_2026091
 Support V2 also passes all ten saved-board USB3 connectivity assertions but is
 rejected by native DRC at 464/421 for U11 pad escape, U12 return, and support
 pair geometry. Receipt `PHASE24_STORAGE_MKEY_USB3_SUPPORT_V2_RECEIPT_20260912.md`.
+Support V3 passes all ten connectivity links but remains rejected at native
+DRC 456/421 for U11 escape and RX support-pair geometry; receipt
+`PHASE24_STORAGE_MKEY_USB3_SUPPORT_V3_RECEIPT_20260912.md`.
 Fresh KiCad Light validation independently reports 466/421 for the same V2
 candidate and confirms the rejection class.
 The first complete ten-link support graft is rejected as route implementation:
