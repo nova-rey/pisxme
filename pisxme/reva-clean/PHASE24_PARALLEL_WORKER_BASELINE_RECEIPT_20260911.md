@@ -11,6 +11,10 @@ Three independent read-only workstreams were prepared from committed ref
 | ERC labels | `erc-labels-20260911` / KiCad Light | Native ERC completed: 539 warnings, 0 errors |
 | DFM/full-board | `phase24-dfm-20260911` / KiCad Light | Native DRC completed: 180 violations, 468 unconnected items |
 
+The worker image reports KiCad **10.0.6**. The local authoritative Flatpak is
+KiCad **10.0.5**. Version differences are therefore part of the evidence and
+must be controlled in any like-for-like comparison.
+
 The two ERC reports were independently generated in separate workspaces and
 have different hashes (`2abae4817e660a34fb0e8d92654f88c281fd9136ecc15b154c363761c2477042`
 and `29b255de9c363a56c287bd1847c435430128063946aa8575a35b7ab79003c0e7`),
@@ -27,10 +31,11 @@ explained. The DRC report hash is
 
 The live dirty worktree's 483/0 ERC census and 477 unconnected DRC count are
 not reproducible from committed ref `70bbb8f1`; they depend on additional
-uncommitted state. This is a provenance distinction, not evidence that either
+uncommitted state and were generated with KiCad 10.0.5 rather than the worker
+image's 10.0.6. This is a provenance distinction, not evidence that either
 result is correct or incorrect. Canonical integration must first identify and
-validate the uncommitted delta. No worker edited canonical sources and no
-worker candidate was promoted.
+validate both the uncommitted delta and version effect. No worker edited
+canonical sources and no worker candidate was promoted.
 
 ## Next action
 

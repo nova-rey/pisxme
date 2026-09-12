@@ -11739,3 +11739,9 @@ workstreams. Independent workers reproduced 539 ERC warnings/0 errors and
 180 DRC violations/468 unconnected items. The live dirty worktree remains
 483/0 ERC and 180/477 DRC; the baseline split is recorded rather than hidden,
 and no worker edited or promoted canonical CAD.
+
+2026-09-11 — Phase 24 worker baseline qualification: the EDA worker image is
+KiCad 10.0.6 while the local authoritative Flatpak is KiCad 10.0.5. The
+committed-ref worker ERC/DRC counts therefore remain version-controlled
+evidence, not a like-for-like replacement for the local live baseline; this
+distinction is recorded in the worker receipt.
