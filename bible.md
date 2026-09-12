@@ -12640,3 +12640,7 @@ A serialized Light producer tested a two-segment U4-to-C18 `BRIDGE_3V3` link fro
 ## Phase 24 bounded BRIDGE_3V3 U7 return stitch rejection — 2026-09-12
 
 A fresh Light context test joined native U7.30/U7.31 pads on `BRIDGE_3V3`; DRC stayed at 433 and unconnected items at 499, with the open moving to U7.24. The candidate was rejected and not integrated. Raw DRC JSON and candidate metadata are retained under `pisxme/reva-clean/validation-receipts/bridge3v3-u7-rejected/`.
+
+## Phase 24 SXM2 corpus provenance refresh — 2026-09-12
+
+Librarian refreshed the private corpus at Library commit `01326bd8b6a3190ea07b2504405ea8696e55e858`, correcting Benchoff provenance to the observed main HEAD `3173b02c` (no v1.0.0 tag), preserving the 400-contact structured classification, and recording that the Xiaoyu repository contains no usable pin map. Public development history remains free of restricted reference material.

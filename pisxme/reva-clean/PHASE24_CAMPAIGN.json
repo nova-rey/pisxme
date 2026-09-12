@@ -105,7 +105,7 @@
       "census_sha256": "83dbc72e8b88ee21b540ab3821027905e3746694294f155e4045406284620dc8"
     },
     "sxm2_external_research": {
-      "private_library_commit": "7d822166",
+      "private_library_commit": "01326bd8b6a3190ea07b2504405ea8696e55e858",
       "private_library_paths": [
         "Library/briefs/sxm2-j1-unblock-20260912.md",
         "Library/indexes/sxm2-benchoff-contact-map.json",
@@ -123,7 +123,8 @@
         "source_declared_nc_project_unknown": 31,
         "auxiliary_or_protection_unknown": 2
       },
-      "electrical_authority": "pending bounded reassessment"
+      "electrical_authority": "approved bounded contract; REV_A_EMPIRICAL_RISK retained; unknown/protection contacts remain untouched",
+      "benchoff_provenance_note": "main HEAD 3173b02c; no v1.0.0 tag"
     },
     "j1_contract_integration": {
       "integration_commit": "2b49006b",
