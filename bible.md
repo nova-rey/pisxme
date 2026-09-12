@@ -8265,6 +8265,9 @@ dogbones while changing only B.Cu lanes. Native SATA endpoint assertions
 passed and aggregate DRC fell to 583, but three true shorts appeared,
 including TUSB SATA into the JMS_REXT/USB3 field. Rejected; no copper was
 promoted.
+The ERC cluster census was regenerated from the post-alias live report as
+PHASE24_ERC_CLUSTER_CENSUS_20260912.json; the 20260911 census remains
+historical and is no longer the current clustering input.
 The current-progress authoritative override was corrected from the stale
 24 to the measured 23 `multiple_net_names` warnings in the post-alias ERC
 receipt; no raw evidence or CAD was changed.
