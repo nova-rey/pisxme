@@ -13,5 +13,6 @@ items, with no JMS support short or track-crossing finding. The 0.15 mm local
 support traces and plane/via-rule findings remain explicit manufacturing work,
 not waived closure.
 
-Fresh Light validation is recorded separately before promotion as the active
-support basis.
+Fresh `kicad-light` validation from committed ref `42a68b11` reproduces the
+accumulated-support and USB3 audit passes. KiCad 10.0.6 reports 557 DRC
+violations / 415 unconnected items; the version delta is retained.

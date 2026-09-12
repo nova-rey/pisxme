@@ -78,6 +78,8 @@ base, rehomes C80 to `(155,146)`, and uses an ordinary-via B.Cu corridor to
 avoid CM5_PERST. The accumulated JMS support audit and negative control pass;
 native DRC is 555/415 with no JMS support short/crossing finding. Receipt:
 `PHASE24_JMS_SUPPORT_ACCUMULATED_AVDD33_RECEIPT_20260912.md`.
+Fresh `kicad-light` validation from committed ref `42a68b11` reproduces the
+accumulated JMS-support and USB3 audit passes at 557/415 under KiCad 10.0.6.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 

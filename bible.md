@@ -12065,3 +12065,6 @@ The cumulative JMS support correction added the missing AVDD33 join to the
 current REXT/VCCO/VCCK/reset base, moving C80 to `(155,146)` and using a
 B.Cu corridor around CM5_PERST. The accumulated support audit and negative
 control pass; native DRC is 555/415 with no JMS support short/crossing class.
+Fresh `kicad-light` validation from committed ref `42a68b11` reproduces the
+accumulated JMS-support and USB3 audit passes; KiCad 10.0.6 reports 557/415,
+with the tool-version delta retained as evidence.
