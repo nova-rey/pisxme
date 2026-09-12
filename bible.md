@@ -11994,3 +11994,8 @@ STORAGE_3V3 detour, not the superseded U12-TX blocker. All ten USB3 links pass
 with no USB3-specific short/crossing; the current native candidate is 426/421
 and the remaining open gate is storage support/power/control connectivity plus
 inherited board findings. Earlier route failures remain historical evidence.
+The first complete JMS583 support-cohort graft on the U14-repaired base passes
+its native cohort audit and negative control, keeps all ten USB3 links passing,
+and reduces unconnected items to 401. Native DRC is 453, so the cohort is
+preserved as evidence but not promoted; its moved support placement needs
+clearance/routing repair.

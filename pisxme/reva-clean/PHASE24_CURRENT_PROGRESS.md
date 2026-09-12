@@ -22,6 +22,12 @@ TX-channel, and U12 migration failures remain historical route evidence only;
 they do not describe the current blocker. Their raw reports and receipts are
 preserved for archaeology.
 
+The first full JMS583 support-cohort graft on the repaired base passes its
+support audit, including negative control, and reduces unconnected items to
+401; the USB3 ten-link audit remains passing. It is not promoted because
+native DRC rises to 453 from placement/clearance defects. Receipt:
+`PHASE24_JMS583_SUPPORT_COHORT_V1_RECEIPT_20260912.md`.
+
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
 The live canonical schematic is at **312 native ERC warnings / 0 errors**.
