@@ -284,6 +284,17 @@
       "receipt": "validation-receipts/dfm-c7-c25-integrated-final-17dd81d2/integrated-drc.json",
       "status": "OPEN",
       "result": "312 violations / 499 unconnected; dominant remaining families are clearance 138 and track width 118; high-speed width rule context requires authority"
+    },
+    "j1_mechanical_gap": {
+      "status": "OPEN_MISSING_KNOWLEDGE",
+      "classification": "MISSING_KNOWLEDGE",
+      "receipt": "authority-inventory/primary-docs/sxm2/SXM2_J1_AUTHORITY_REASSESSMENT_20260912.md",
+      "next": "lawful Amphenol Rev-W geometry/paste/mask/assembly evidence and authority overlay; restricted STEP stays private"
+    },
+    "high_speed_width_authority": {
+      "status": "PENDING",
+      "scope": "72 CM5/V100 width findings",
+      "next": "net-class/impedance authority before any rule or copper change"
     }
   },
   "blockers": [],

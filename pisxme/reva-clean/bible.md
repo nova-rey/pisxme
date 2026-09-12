@@ -354,3 +354,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-12: Completed the bounded SHA-256 inspection of the retained succession archive tar (`99aa058e6795bb6e41dd904aedb104bddc9e84a030c058fd3a2317e0202bf11b`); archive remains outside Git and was not restored or deleted.
 
 - 2026-09-12: Recorded the bounded DRC-family audit: 118 track-width, 138 clearance, 16 edge-clearance, 9 co-located-hole, 16 dangling, 6 courtyard/PTH, 2 crossing, and 2 library-footprint findings remain at the integrated 312/499 result. High-speed width repair is held for explicit net-class/impedance authority; no global minimum was changed.
+
+- 2026-09-13: J1 electrical contract is closed, while mechanical/DFM remains a bounded missing-knowledge lane requiring lawful Rev-W geometry/assembly evidence. High-speed CM5/V100 width findings are held for explicit net-class and impedance authority; no global rule relaxation is permitted.
