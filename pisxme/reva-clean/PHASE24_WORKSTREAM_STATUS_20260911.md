@@ -36,6 +36,7 @@ baseline are intentionally tracked separately in
 | M-key USB3 support graft | Root Foreman / native KiCad 10.0.5 | REJECTED route implementation | All ten USB3 links pass native saved-board connectivity, but support graft DRC is 452/421 with real U11 TX escape, PERST, U12 support-pad, and RX convergence violations. Next: obstacle-aware local fanout with B.Cu transitions. Receipt `PHASE24_STORAGE_MKEY_USB3_SUPPORT_GRAFT_RECEIPT_20260912.md`. |
 | M-key USB3 support V2 | Root Foreman / native KiCad 10.0.5 | REJECTED route implementation | All ten USB3 links pass, but native DRC is 464/421 with new U11 pad-escape, U12 return, and support-pair conflicts. Next: true pad-escape-aware local fanout. Receipt `PHASE24_STORAGE_MKEY_USB3_SUPPORT_V2_RECEIPT_20260912.md`. |
 | M-key USB3 support V3 | Root Foreman / native KiCad 10.0.5 | REJECTED route implementation | All ten links pass; DRC 456/421 remains due U11 fine escape and RX support-pair geometry. Next: explicit local U11 escape rule/repair; east source handoff remains fixed. Receipt `PHASE24_STORAGE_MKEY_USB3_SUPPORT_V3_RECEIPT_20260912.md`. |
+| M-key USB3 support V4 | Root Foreman / native KiCad 10.0.5 | REJECTED route implementation | All ten links pass; DRC 459/421 remains due U11 pad escape, RX return convergence, and support crossing. Next: local U11 fanout and reserved U12 returns. Receipt `PHASE24_STORAGE_MKEY_USB3_SUPPORT_V4_RECEIPT_20260912.md`. |
 
 ## Integration rule
 
