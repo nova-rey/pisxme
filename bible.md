@@ -1,5 +1,11 @@
 # Append-only project bible
 
+2026-09-12: Fresh KiCad Light rechecked the storage contract from ref
+`7add3433`: dual-mode control, JMS583/selector/TE M-key library authority, and
+dual-mode schematic instance/footprint/net-label audits all PASS. Preserved
+the receipt in PHASE24_STORAGE_CONTRACT_LIGHT_RECHECK_RECEIPT_20260912.md;
+JMS583 physical support routing and full-acreage validation remain open.
+
 2026-09-12: Fresh KiCad Light rechecked the accepted RTL9210B V1603/V1517
 integrated candidate. Native DRC reports 0 violations / 0 unconnected items,
 with zero shorting and crossing findings; the MIC2545A DFM audit remains PASS.

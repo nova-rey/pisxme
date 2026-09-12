@@ -1,5 +1,12 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT STORAGE-CONTRACT LIGHT RECHECK — 2026-09-12
+
+Fresh KiCad Light validation passes the dual-mode mode-control contract, the
+JMS583/selector/TE M-key library audit, and the dual-mode schematic audit.
+Receipt: `PHASE24_STORAGE_CONTRACT_LIGHT_RECHECK_RECEIPT_20260912.md`. These
+focused gates do not close the remaining JMS583 physical support escape.
+
 ## CURRENT PATH-B DFM/NATIVE-DRC RECHECK — 2026-09-12
 
 Fresh KiCad Light validation of the committed RTL9210B V1603/V1517 integrated
