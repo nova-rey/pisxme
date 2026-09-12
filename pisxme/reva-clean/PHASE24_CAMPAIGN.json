@@ -292,9 +292,20 @@
       "next": "lawful Amphenol Rev-W geometry/paste/mask/assembly evidence and authority overlay; restricted STEP stays private"
     },
     "high_speed_width_authority": {
-      "status": "PENDING",
-      "scope": "72 CM5/V100 width findings",
-      "next": "net-class/impedance authority before any rule or copper change"
+      "status": "APPROVED_RULE_CONTEXT_PENDING_INTEGRATION",
+      "receipt": "validation-receipts/dfm-c7-c25-integrated-final-17dd81d2/integrated-drc.json",
+      "scope": "CM5 USB3 27; CM5/V100 PCIe/REFCLK/PET0 40; CM5_PERST 5",
+      "decision": "preserve 0.13208 mm geometry under scoped HS_USB3_90R, HS_PCIE_90R, and PCIE_PERST_CONTROL; ordinary nets remain 0.20 mm",
+      "next": "producer context, negative control, fresh integrated validation"
+    },
+    "j1_rev_w_research": {
+      "status": "PUBLIC_EVIDENCE_INDEXED_PENDING_PRIVATE_LIBRARY_UPDATE",
+      "sources": [
+        "Amphenol 74221.pdf Rev W ELX-V-40495-1",
+        "GS-12-100 Rev E/PDS Rev R",
+        "GS-20-033 Rev H/J mirrors"
+      ],
+      "limitation": "CDN binary/3D downloads HTTP403 or authenticated terms; no restricted artifacts copied"
     }
   },
   "blockers": [],
