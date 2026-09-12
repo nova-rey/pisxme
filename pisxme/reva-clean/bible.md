@@ -90,3 +90,7 @@ The DFM lane has two integrated, fresh-validated scoped repairs: 28 resistor ref
 ## Phase 24 acceptance matrix instantiated — 2026-09-13
 
 `PHASE24_ACCEPTANCE_MATRIX.json` now binds every Phase 24 acceptance row to integrated candidate `d7a8ddfa`, KiCad Light 10.0.6, the pinned image, selected schematic, and rules file. The matrix records current evidence and keeps all unresolved rows open; it is not a completion or freeze claim.
+
+## Phase 24 selector-label experiment retained — 2026-09-13
+
+The existing storage selector-label generator was run once from the current committed base. Its one-line U13 source-contract diff produced fresh Light ERC `351 findings`, unchanged from baseline, and was not promoted. The candidate diff and raw ERC are retained under `validation-receipts/selector-labels-current-rejected/`; no selector topology change is accepted without a measurable parity or authority benefit.
