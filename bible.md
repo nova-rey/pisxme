@@ -12592,3 +12592,13 @@ corrected 65-pad TUSB footprint and reported 433 DRC violations / 265
 unconnected items with the approved local rule context. This is a material
 candidate result, not Phase 24 closure; power, connectivity, ERC, DFM and
 mechanical gates remain open.
+
+# 2026-09-12 - Phase 24 integrated power mapping blocker
+
+The selected integrated PCB still assigns no named power or ground pads to J1:
+393 of 400 SXM2 pads are no-net while the native schematic requires J1 PWR,
+GND and V100 contacts. Protected branch B and bridge 3V3/1V1 delivery are also
+unrouted. This is a specification/footprint mapping blocker requiring an
+authoritative SXM2 package mapping; no synthetic pad names or connectivity were
+added. A fresh validator clone also hit host `No space left on device`; only
+explicit disposable failed workspaces were released.

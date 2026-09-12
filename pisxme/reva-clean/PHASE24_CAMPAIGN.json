@@ -46,7 +46,10 @@
     "integration_candidate": "bc137a8f82ae258129704700a39e01fa8ef07cc2",
     "validation": {"status": "OPEN_NOT_CLOSURE", "workspace": "/home/nyx/eda-workspaces/validation-tusb-integrated-validate-20260912T174403Z", "drc": "433 violations / 265 unconnected", "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9", "receipt": "validation.json", "scope": "TUSB footprint plus integrated DRC; Phase24 remains incomplete"}
   },
-  "blockers": [],
+  "blockers": [
+    {"id": "J1_POWER_PAD_MAPPING", "class": "SPECIFICATION_DECISION", "scope": "integrated power/return acceptance", "evidence": "J1 has 400 PCB pads but only 7 named signals; 393 no-net and zero 12V_PROTECTED/POWER_GND pads, while fresh native XML assigns J1 PWR/GND and V100 contacts. No authoritative pad-name mapping found in selected footprint.", "required": "authoritative SXM2 package pad mapping/footprint or an approved source correction", "independent_work": ["source ERC classification", "storage local analysis", "DFM/reference evidence"]},
+    {"id": "HOST_FILESYSTEM_CAPACITY", "class": "ENVIRONMENTAL", "scope": "fresh candidate validation", "evidence": "pisxme-worker validate clone failed with No space left on device; cleanup recovered 3.5 GiB but reserve remains tight", "required": "sufficient free space for a fresh detached checkout and 1 GiB Light container", "independent_work": ["read-only analyses", "source contract work"]}
+  ],
   "next_action": "Repair selected integrated Path A source/copper; prioritize absent J1 power ownership, unrouted 12V branch B, BRIDGE_3V3/1V1 and CM5_5V feed contracts after source/context reconciliation",
   "open_evidence": {
     "integrated_power": "Selected PCB has J1 400 pads but only 7 named signals, 393 no-net, zero 12V_PROTECTED/POWER_GND contacts; historical Phase14 power evidence is a different candidate",
