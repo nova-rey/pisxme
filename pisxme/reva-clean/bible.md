@@ -86,3 +86,7 @@ Fresh KiCad Light validation of integrated commit `d7a8ddfa` reproduced DRC `382
 ## Phase 24 DFM workstream state — 2026-09-13
 
 The DFM lane has two integrated, fresh-validated scoped repairs: 28 resistor reference fields now meet the 0.80 mm text minimum, and 13 capacitor silkscreen segments clipping pad 1 were removed. The selected integrated candidate is `d7a8ddfa` with DRC `382/499`; courtyard, edge-clearance, model, and assembly requirements remain open.
+
+## Phase 24 acceptance matrix instantiated — 2026-09-13
+
+`PHASE24_ACCEPTANCE_MATRIX.json` now binds every Phase 24 acceptance row to integrated candidate `d7a8ddfa`, KiCad Light 10.0.6, the pinned image, selected schematic, and rules file. The matrix records current evidence and keeps all unresolved rows open; it is not a completion or freeze claim.
