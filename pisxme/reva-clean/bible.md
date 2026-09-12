@@ -166,3 +166,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: rejected C7/C8 second reference relocation probe; alternate offsets left DRC at 351/499 with no reduction, so no candidate was integrated.
 - 2026-09-12: integrated bounded U11 reference-text move; fresh Light DRC 350/499 with one silk finding removed and zero shorts.
 - 2026-09-12: acceptance/campaign metadata rebound to latest U11 DFM candidate; fresh DRC is 350/499.
+- 2026-09-12: corrected metadata to physical U11 DFM integration commit `3353aac4`.
