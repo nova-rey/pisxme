@@ -12644,3 +12644,7 @@ A fresh Light context test joined native U7.30/U7.31 pads on `BRIDGE_3V3`; DRC s
 ## Phase 24 SXM2 corpus provenance refresh — 2026-09-12
 
 Librarian refreshed the private corpus at Library commit `01326bd8b6a3190ea07b2504405ea8696e55e858`, correcting Benchoff provenance to the observed main HEAD `3173b02c` (no v1.0.0 tag), preserving the 400-contact structured classification, and recording that the Xiaoyu repository contains no usable pin map. Public development history remains free of restricted reference material.
+
+## Phase 24 adaptive lane dispatch — 2026-09-13
+
+Root dispatched four bounded workstreams from canonical base `19a1390a`: source/ERC, selected Path A storage, power/return, and DFM/mechanics. CAD remains serialized; each lane must return an exact base, candidate or evidence artifact, scope, and validation result. Phase 25 remains gated.
