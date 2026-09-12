@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT STORAGE AUDIT — CORRECTED LIGHT BASELINE — 2026-09-12
+
+Fresh Light validation from committed ref `7c67d297` confirms the corrected
+audit now targets the cumulative candidate: XIN, XOUT, and JMS_VDDREG_5V are
+open while the other required JMS support branches pass. The audit fails
+closed before its negative-control phase, as required. Receipt:
+`PHASE24_STORAGE_SUPPORT_AUDIT_LIGHT_V3_RECEIPT_20260912.md`.
+
 ## CURRENT STORAGE SUPPORT PROBE — STRAIGHT CRYSTAL + VDDREG V1 REJECTED — 2026-09-12
 
 The fixed-Y10 straight crystal escape combined with the outer VDDREG route
