@@ -8343,7 +8343,7 @@
 		(uuid "8db2d8e6-257d-4394-879a-c393c8d08dc2")
 		(at 136 170)
 		(property "Reference" "C25"
-			(at 0 0 0)
+			(at 3 0 0)
 			(layer "F.SilkS")
 			(uuid "677d68f4-d5f4-466f-904a-0790981cab22")
 			(effects
