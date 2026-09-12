@@ -12555,3 +12555,13 @@ Stopped new engineering by explicit user direction. Archived pre-existing
 uncommitted and untracked worktree material outside the repository, left the
 authoritative branch clean, and finalized the self-contained successor packet.
 Phase 24 remains incomplete; Phase 25 was not started.
+
+# 2026-09-12 - Phase 24 selected-project rule context
+
+Added a target-basename KiCad project sidecar and copied the approved local
+JMS583 XIN/XOUT 0.10 mm rule beside the normalized ground-width board. The
+existing sibling `sym-lib-table` and `fp-lib-table` resolve to the checked-in
+local symbol and footprint libraries. Native KiCad 10.0.6 probes showed the
+rule removes all seven fine-escape width violations while retaining the
+ordinary 0.20 mm rule for a POWER_GND outside-normal probe; the board and
+schematic geometry were unchanged.

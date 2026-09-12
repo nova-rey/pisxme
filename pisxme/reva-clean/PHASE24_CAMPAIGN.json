@@ -1,0 +1,51 @@
+{
+  "campaign": "Phase24 completion -> Phase25 acreage freeze",
+  "status": "COMMISSIONING",
+  "scope": "Phase 24 and Phase 25 only; Phase 26 prohibited",
+  "repository": "nova-rey/pisxme",
+  "branch": "reva-clean",
+  "starting_sha": "d0ef22b6076c5ceb43cba5024e4b27f192ec8b27",
+  "design_checkpoint_sha": "772b342c3107340abcfcc381ac83031d90f8035d",
+  "schematic": "PiSXMe_RevA_Clean.kicad_sch",
+  "selected_pcb": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "storage_selection": "Path A protected/current production implementation; RTL9210B Path B isolated unpromoted alternative; Path-B production integration disposed for this campaign",
+  "storage_authority_records": [
+    {"path": "PHASE24_DUAL_MODE_STORAGE_PIN_MATRIX.md", "revision": "a7d98223e7533cf94e28d4245c56255d8cdf5c63", "sha256": "b6a9c520d68636a2d99904ccc9a1aa253d216bdff0eda7ce7e74468ba9711876"},
+    {"path": "PHASE24_RTL9210B_PARALLEL_COMPARISON_V1560.md", "revision": "aa11e340d7f9e9c39dbf86a6197656bee06e16c4", "sha256": "2e1d3c3ee99bc14b1ef7304ca02890bfbab54065cac43a57231a4f92b5354c80"},
+    {"path": "PHASE24_RTL9210B_QUALIFICATION.md", "revision": "df206677fc2c42ff726ca4992359742a52ddbbed", "sha256": "4a628b13bd27bfc95af1f448d8a504c3bc236fe8b5631a75dc52e68a5be6cf25"},
+    {"path": "authority-inventory/rtl9210b/RTL9210B_PATHB_AUTHORITY.md", "revision": "8fc3b4edaf0f943e3f4962076289083130459c61", "sha256": "428f30154052ca89a7dbd166b38efcfa8e918874976a6307dc2efad00474645f"}
+  ],
+  "storage_authority_disposition": "Records agree on Path A protected/current production and Path B unpromoted/non-production CAD. They recommend continuing isolated Path-B qualification, which is outside this approved campaign; retain evidence and do not integrate both alternatives.",
+  "worker_launcher": "/home/nyx/pisxme-eda-workers/scripts/pisxme-worker",
+  "kicad_light_image": "pisxme-kicad-light:v1",
+  "kicad_light_image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+  "publication_policy": "private-only; public origin unchanged",
+  "owners": {
+    "root": "canonical integration, acceptance matrix, freeze",
+    "source": "pending baseline and source/ERC lane",
+    "storage": "pending authority verification and selected Path A integration",
+    "power": "pending PI lane",
+    "runtime": "runtime_commission",
+    "archive": "archive_delta_inspect"
+  },
+  "cad_policy": {"initial_active_containers": 1, "cpu": 1, "memory": "1g", "pids": 256, "host_headroom_required": "1g available"},
+  "milestones": {"M0": "open", "M1": "open", "M2": "open", "M3": "open", "M4": "open"},
+  "evidence": {
+    "baseline": {
+      "status": "REPRODUCED_OPEN",
+      "workspace": "/home/nyx/eda-workspaces/phase24-baseline-exec",
+      "tool": "KiCad 10.0.6",
+      "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+      "erc_findings": 355,
+      "drc_violations": 440,
+      "drc_unconnected": 265,
+      "parity": "814 authoritative nodes / 1262 PCB pads / 0 mismatches",
+      "receipt": "phase24-baseline-exec/receipts/PHASE24_BASELINE_REPRODUCTION_RECEIPT_20260912.md"
+    },
+    "rule_context": {"status": "BLOCKED_PENDING_CONTEXT_CANDIDATE", "evidence": "Selected board same-directory PiSXMe_RevA_Clean.kicad_pro is {} and same-stem .kicad_dru is placeholder; approved fine rule is PHASE24_JMS583_FINE_QFN_ESCAPE.kicad_dru. No physical repair authorized until native rule loading is proven."},
+    "integration_candidate": null,
+    "validation": null
+  },
+  "blockers": [],
+  "next_action": "Complete bounded baseline, authority, archive, runtime and rule-context commissioning before substantive repair"
+}
