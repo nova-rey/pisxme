@@ -170,10 +170,11 @@
     "bridge3v3_u7_rejected": "validation-receipts/bridge3v3-u7-rejected/RECEIPT.md",
     "patha_native_storage_census": "validation-receipts/patha-native-storage-census-19a1390a/RECEIPT.md",
     "dfm_mechanics_19a": "validation-receipts/dfm-mechanics-19a/RECEIPT.json",
-    "source_erc_usb3_global_labels": "validation-receipts/source-erc-usb3-global-labels/RECEIPT.md"
+    "source_erc_usb3_global_labels": "validation-receipts/source-erc-usb3-global-labels/RECEIPT.md",
+    "source_erc_integrated_0396": "validation-receipts/source-erc-integrated-0396/RECEIPT.md"
   },
   "blockers": [],
-  "next_action": "Validate integrated STORAGE USB3 label candidate from current canonical SHA, then continue unresolved ERC and storage branches.",
+  "next_action": "Continue remaining ERC generating-cause families and resolve integrated storage/mechanical/power rows; preserve exact candidate SHA.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
@@ -187,15 +188,15 @@
     "dfm": "Selector archive geometry is unapproved; TUSB rotation correction is authoritative generator output; current DFM/model/BOM/release evidence remains incomplete",
     "archive_disposition": "Do not import HD3SS3412/HD3SS6126 archive pad shifts; recover TUSB rotations only through authoritative generator after scoped validation"
   },
-  "integration_candidate": "4932dcb8",
+  "integration_candidate": "0396a068",
   "active_workstreams": {
     "source_erc_lane": {
       "owner": "/root/source_erc_lane",
       "base": "19a1390a",
-      "state": "INTEGRATION_READY",
+      "state": "INTEGRATED_VALIDATED",
       "cad_budget": "research first; one Light container if candidate exists",
       "next": "identify generating-cause repair and return candidate or evidence",
-      "result": "four STORAGE USB3 labels promoted local to global; fresh ERC 351 findings, zero errors; integrated revalidation pending"
+      "result": "351 ERC findings / 0 errors; same-local/global reduced to 26; integrated DRC remains 433/499"
     },
     "storage_patha_lane": {
       "owner": "/root/storage_patha_lane",

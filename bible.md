@@ -12664,3 +12664,7 @@ The integrated candidate has six courtyard overlaps, five PTH-inside-courtyard e
 ## Phase 24 STORAGE USB3 label candidate integrated — 2026-09-13
 
 Integrated the bounded source-hygiene candidate into the current canonical tree: four existing STORAGE USB3 fanout labels are globalized without changing symbols, wires, coordinates, pins, or net names. Producer and fresh Light validation recorded 351 ERC findings with zero errors and unchanged semantic netlist nodes; integrated revalidation is required before any acceptance-row update.
+
+## Phase 24 integrated USB3 label validation — 2026-09-13
+
+Fresh Light validation of canonical `0396a068` reproduced 351 ERC findings with zero errors and 433 DRC violations / 499 unconnected items. The four USB3 labels reduced same-local/global findings to 26 without changing semantic netlist nodes. The source candidate is accepted within scope; integrated closure remains open.
