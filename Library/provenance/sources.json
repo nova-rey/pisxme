@@ -74,7 +74,7 @@
       "title": "SXM2toPCIe complete KiCad implementation",
       "publisher": "Brian Benchoff / GitHub",
       "url": "https://github.com/bbenchoff/SXM2toPCIe",
-      "revision": "main @ 3173b02c085218d66c4a2a9e5492853fb53ee097; tag v1.0.0; commit date 2025-09-21",
+      "revision": "main @ 3173b02c085218d66c4a2a9e5492853fb53ee097; commit date 2025-09-21",
       "retrieved": "2026-09-12",
       "tier": 3,
       "evidence_class": "public implementation precedent",
@@ -92,7 +92,11 @@
         "symbol": "f034de3ff449b5772b0edcc0f7bbb11138c557596156e4e7ee026277f023f3bc",
         "step": "ed42ffb4ccf3bb511f4b5525fd416b98571d4f3a2b0d735136b80500a30c047b"
       },
-      "license_disposition": "metadata and extracted facts only; SnapMagic model terms prohibit redistribution of individual model files; no source files copied into current Library"
+      "license_disposition": "metadata and extracted facts only; SnapMagic model terms prohibit redistribution of individual model files; no source files copied into current Library",
+      "remote_refs_verified": [
+        "refs/heads/main"
+      ],
+      "verification_note": "git ls-remote on 2026-09-12 returned main/HEAD only; no v1.0.0 tag was advertised."
     },
     {
       "id": "xiaoyu-sxm2-pinout-definition-c05541e",
@@ -109,7 +113,33 @@
       "local_readme_sha256": "cc9920792af34f995706c1864bb728af7464c58ae8617ed0246abbcb4d306e20",
       "status": "insufficient-as-fetched",
       "finding": "Pinned public commit contains only a two-line README; no schematic, pin table, or contact data was available to cross-correlate. Do not treat repository title as corroboration.",
-      "license_disposition": "citation and retrieval metadata only"
+      "license_disposition": "citation and retrieval metadata only",
+      "remote_refs_verified": [
+        "refs/heads/main",
+        "refs/tags/v1.0.0"
+      ],
+      "verification_note": "git ls-remote on 2026-09-12 returned main/HEAD/tag v1.0.0 at the pinned commit; git ls-tree showed README.md only."
+    },
+    {
+      "id": "amphenol-74221101lf-product",
+      "title": "74221-101LF MEG-ARRAY product page",
+      "publisher": "Amphenol Communications Solutions / FCI",
+      "url": "https://www.amphenol-cs.com/product/74221101lf.html",
+      "revision": "Current product page; retrieved 2026-09-12",
+      "retrieved": "2026-09-12",
+      "tier": 1,
+      "evidence_class": "manufacturer product authority",
+      "observed_facts": [
+        "active part status",
+        "400 contacts",
+        "10-row 1.27-mm array",
+        "4.00-mm receptacle height",
+        "0.45-A current rating",
+        "30 microinch gold contact plating",
+        "-40 C to +85 C operating range"
+      ],
+      "status": "accessible",
+      "license_disposition": "link and extracted facts only; no page or model files copied"
     },
     {
       "id": "amphenol-74221-drawing-w",
@@ -129,7 +159,9 @@
       ],
       "status": "remote_only",
       "local_sha256": null,
-      "license_disposition": "link and extracted facts only; PDF download returned HTTP 403 in this environment"
+      "license_disposition": "link and extracted facts only; PDF download returned HTTP 403 in this environment",
+      "related_product_url": "https://www.amphenol-cs.com/product/74221101lf.html",
+      "verification_note": "Manufacturer product page was checked on 2026-09-12 and confirms active 74221-101LF, 400 contacts, 10-row 1.27-mm array, 4-mm receptacle, and 0.45-A current rating."
     },
     {
       "id": "cn108280004b",
