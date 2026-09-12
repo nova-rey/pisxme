@@ -12081,3 +12081,7 @@ shared U12/J3 AVDDL branch remains open.
 Fresh `kicad-light` validation from committed ref `3aa5994f` reproduces the
 AVDDL, accumulated-support, and USB3 audit passes; KiCad 10.0.6 reports
 583/413, with the tool-version delta retained.
+The JMS_AVDDL U12.36 branch was added to the U11/C83 support primitive using
+ordinary through-vias. Native endpoint and trace-removal negative control pass;
+native DRC is 578/413 with no AVDDL short/crossing class. Broader same-net
+fanout remains open.
