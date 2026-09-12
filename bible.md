@@ -11933,3 +11933,8 @@ No candidate was promoted and no closed architecture/orientation was reopened.
 Fresh detached KiCad Light validation from pushed commit `319edcfd` independently
 reproduced the west-return candidate at 408 DRC violations / 427 unconnected
 items, confirming the blocker is not producer-workspace-specific.
+Additional coordinated U12 migrations were tested after publication: west
+overlapped U11/support, north collided with source escape/V100_PET0, and south
+crossed CM5_PERST. The south candidate retained four-link/negative-control
+PASS but native DRC remained 436/427. These are preserved as route/placement
+evidence; no frozen architecture or orientation was reopened.

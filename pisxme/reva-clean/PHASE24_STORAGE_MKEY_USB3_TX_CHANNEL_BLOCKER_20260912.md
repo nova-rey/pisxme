@@ -34,6 +34,15 @@ Fresh detached `pisxme-worker` KiCad Light validation from commit `319edcfd`
 independently reproduced the west-return candidate at 408 DRC violations /
 427 unconnected items (`validation-storage-usb3-tx-blocker-drc-20260912T030304Z`).
 
+As a bounded follow-up to the blocker, a coordinated 5 mm west U12 migration
+and a coordinated 20 mm north migration were also tested. The west move
+overlapped U11/support geometry; the north move put source vias over U12
+no-connect pads and crossed the existing B.Cu V100_PET0 corridor. A south
+acreage migration kept U12 clear of U11 but crossed the frozen CM5_PERST
+corridor and still produced TX via/pad conflicts. The south candidate passed
+the four-link audit and negative control but remained at 436/427 native DRC.
+These are placement/handoff evidence, not promotions.
+
 ## Exact missing resource
 
 The present U12 handoff has no legal two-conductor TX corridor between the
