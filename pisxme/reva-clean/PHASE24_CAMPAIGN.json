@@ -158,22 +158,28 @@
       "base": "e226bbe3",
       "result": "no_candidate",
       "reason": "prepared isolated workspace; no CAD mutation or container execution completed; workspace released"
+    },
+    "bridge3v3_attempt": {
+      "result": "no_candidate",
+      "workspace": "bridge3v3_u4_vin_route",
+      "tool": "KiCad 10.0.6",
+      "reason": "launcher container-name conflict during bounded attempt; workspace released; no CAD mutation"
     }
   },
   "blockers": [
     {
-      "id": "HOST_FILESYSTEM_CAPACITY",
+      "id": "CAD_RUNTIME_CONTAINER_CONFLICT",
       "class": "ENVIRONMENTAL",
-      "scope": "fresh candidate validation",
-      "evidence": "Fresh validation clones previously failed on host capacity; after releasing completed workspaces, 3.2 GiB remained and one-container validation reproduced 433/265 counts.",
-      "required": "sufficient free space for a fresh detached checkout and 1 GiB Light container",
+      "scope": "next isolated repair worker",
+      "evidence": "bounded BRIDGE_3V3 worker prepared and ran KiCad 10.0.6, then launcher reported existing container-name conflict; no candidate or mutation",
+      "required": "unique disposable Light container can start without shared-server restart",
       "independent_work": [
-        "read-only analyses",
-        "source contract work"
+        "acceptance evidence",
+        "DFM/source analysis"
       ]
     }
   ],
-  "next_action": "Resume with one bounded, executable CAD repair lane now that host headroom is available; do not claim Phase24 closure from J1 contract alone",
+  "next_action": "Retry one unique Light worker only after confirming launcher cleanup; otherwise retain runtime blocker and continue read-only acceptance analysis",
   "open_evidence": {
     "integrated_power": "Selected PCB has J1 400 pads but only 7 named signals, 393 no-net, zero 12V_PROTECTED/POWER_GND contacts; historical Phase14 power evidence is a different candidate",
     "unrouted_rails": [

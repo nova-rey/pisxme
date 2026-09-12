@@ -42,3 +42,7 @@ The J1 mapping blocker is closed for bounded implementation, with the public rev
 ## Phase 24 post-contract repair attempt — 2026-09-12
 
 The corrected J1 contract is reproducible and fresh-validated, but the first queued power and Path A storage repair attempts produced no CAD candidate. Their isolated workspaces were released after preserving evidence. Integrated power, return, storage, DRC, ERC, and acceptance rows remain open; the campaign continues with host headroom restored.
+
+## Phase 24 CAD runtime conflict — 2026-09-12
+
+A bounded BRIDGE_3V3/U4 repair worker prepared from c362d926 and confirmed KiCad 10.0.6, but launcher container-name conflict prevented the route attempt. No CAD mutation occurred and the workspace was released. This environmental blocker is scoped to the next disposable CAD turn; acceptance and research work remain independent.
