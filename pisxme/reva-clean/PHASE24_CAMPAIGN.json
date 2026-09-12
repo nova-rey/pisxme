@@ -279,6 +279,11 @@
       "validation": "45ea2523",
       "result": "silk_over_copper 0; integrated DRC 312/499",
       "receipt": "validation-receipts/dfm-c7-c25-integrated-final-17dd81d2/RECEIPT.md"
+    },
+    "drc_family_audit": {
+      "receipt": "validation-receipts/dfm-c7-c25-integrated-final-17dd81d2/integrated-drc.json",
+      "status": "OPEN",
+      "result": "312 violations / 499 unconnected; dominant remaining families are clearance 138 and track width 118; high-speed width rule context requires authority"
     }
   },
   "blockers": [],
