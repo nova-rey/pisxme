@@ -1,0 +1,13 @@
+diff --git a/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb b/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb
+index 7e38c886..904ae067 100644
+--- a/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb
++++ b/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb
+@@ -16447,7 +16447,7 @@
+ 		(at 140 135)
+ 		(descr "JMS583_QFN64_8x8; JMicron JMS583 QFN64 8 x 8 mm; datasheet Rev 2.1 Figure 4")
+ 		(property "Reference" "U11"
+-			(at 0 -5.4 0)
++			(at -5.0 -5.4 0)
+ 			(layer "F.SilkS")
+ 			(uuid "1b54526a-af6e-4229-b069-951afb73b6b4")
+ 			(effects
