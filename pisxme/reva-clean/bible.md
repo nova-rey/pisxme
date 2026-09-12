@@ -54,3 +54,7 @@ A unique Light worker prepared from c362d926 and retained baseline ERC/DRC JSON,
 ## Phase 24 canonical queue update — 2026-09-12
 
 Canonical evidence now includes the J1 authority contract, reproducibility proof, fresh integrated validation, and the bounded BRIDGE_3V3 lane baseline. No copper candidate has yet been promoted; the next attempt requires a materially different, evidence-backed route method and a fresh Light check.
+
+## Phase 24 reset-width receipt provenance correction — 2026-09-13
+
+The rejected `JMS_RESET_N` width candidate remains non-promoted: widening six normal-net tracks to 0.20 mm produced native DRC 431/499 from the integrated 424/499 base. The disposable producer workspace was released after rejection and did not retain a candidate PCB artifact; the receipt now records that limitation explicitly rather than presenting a blank hash.
