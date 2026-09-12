@@ -1,5 +1,15 @@
 # Append-only project bible
 
+2026-09-12: Fresh KiCad Light validation reproduced the current cumulative
+JMS583 support result: JMS_REXT, reset, AVDD33, AVDDL, VCCO, VCCK, and LXO pass;
+XIN, XOUT, and JMS_VDDREG_5V remain open. After materially distinct full
+support route/placement attempts were rejected for native shorts/crossings or
+collateral branch loss, recorded the precise local QFN escape resource gap and
+three bounded continuation options in
+pisxme/reva-clean/PHASE24_JMS583_SUPPORT_ESCAPE_BLOCKER_20260912.md. This is a
+scoped user-decision boundary, not terminal goal status; canonical copper is
+unchanged.
+
 2026-09-11: Closed the duplicate POWER_INPUT wire serialization root cause.
 A disposable native-project probe removed one of each four duplicate 3-mm
 wires, reducing KiCad 10.0.5 ERC from 489 to 485 warnings with zero errors

@@ -1,5 +1,17 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT DEPENDENT GATE — JMS583 LOCAL SUPPORT ESCAPE — 2026-09-12
+
+Fresh KiCad Light validation of the committed cumulative storage baseline
+reproduces the corrected audit result: `XIN`, `XOUT`, and `JMS_VDDREG_5V` are
+open; the other seven required JMS583 support branches pass. Multiple
+materially different full-support route/placement classes have been rejected
+for native shorts/crossings or collateral loss of accepted branches. This is
+a scoped local QFN escape/manufacturability decision, not a Path-B orientation,
+macro-floorplan, or storage-architecture blocker. See
+`PHASE24_JMS583_SUPPORT_ESCAPE_BLOCKER_20260912.md` for the exact evidence and
+bounded continuation options. Canonical copper remains unchanged.
+
 ## CURRENT STORAGE SUPPORT PROBE — THREE-CORRIDOR V2 REJECTED — 2026-09-12
 
 The V2 three-corridor trial passes the complete JMS support endpoint audit and
