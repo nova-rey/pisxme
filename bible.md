@@ -11914,6 +11914,11 @@ USB3 endpoint links and the negative control pass; refilled native DRC is
 384/427. Intrinsic U12 pad-field errors are removed, but real launch crossings
 remain, so no production promotion was made.
 
+Moving only the long CM5_PERST segment to B.Cu was rejected: it preserved
+USB3 endpoint connectivity but crossed frozen V100_PET0_P on B.Cu. Refilled
+DRC was 380/427, an insufficient improvement and not a valid PCIe-sideband
+repair. No frozen PCIe copper was changed.
+
 Fresh KiCad Light reproduced the local-pad candidate's four endpoint passes
 and negative control, reporting 418/427. The candidate remains rejected for
 the unresolved integrated launch crossings.
