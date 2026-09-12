@@ -34,8 +34,10 @@ fp(b, 'Y10').SetPosition(P(138.20, 126.40))
 fp(b, 'L10').SetPosition(P(141.00, 128.00))
 
 # The crystal pair is kept together in the immediate U11 north escape.
-path(b, 'XIN', ('U11','50'), ('Y10','1'), [(137.40,129.60),(137.10,128.40)])
-path(b, 'XOUT', ('U11','51'), ('Y10','2'), [(137.80,129.20),(137.10,127.80)])
+path(b, 'XIN', ('U11','50'), ('Y10','1'),
+     [(136.80,130.00),(136.80,128.00),(137.10,127.25)])
+path(b, 'XOUT', ('U11','51'), ('Y10','2'),
+     [(138.40,130.00),(138.40,126.80),(137.10,125.55)])
 
 # Use separated local corridors for the two L10 terminations. The VDDREG
 # branch transitions outside both pads; no via-in-pad is used.
@@ -44,9 +46,9 @@ src = pos(b, 'U11', '1'); dst = pos(b, 'L10', '2')
 track(b, n, src, (135.60,130.20), F, .15)
 via(b, n, (135.60,130.20))
 track(b, n, (135.60,130.20), (135.60,128.80), B, .15)
-track(b, n, (135.60,128.80), (140.60,128.00), B, .15)
-via(b, n, (140.60,128.00))
-track(b, n, (140.60,128.00), dst, F, .15)
+track(b, n, (135.60,128.80), (142.80,128.80), B, .15)
+via(b, n, (142.80,128.80))
+track(b, n, (142.80,128.80), dst, F, .15)
 path(b, 'LXO', ('U11','64'), ('L10','1'),
      [(144.00,130.20),(144.00,127.20),(139.85,127.20)], F, .15)
 

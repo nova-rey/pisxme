@@ -6,6 +6,12 @@ without transitions, leaving VDDREG open. XIN/XOUT passed under the selected
 placement. Corrected the disposable author to add ordinary through-vias outside
 the pads; placement and canonical copper remain unchanged.
 
+2026-09-12: The first valid execution of the frozen JMS583 local placement
+connected XIN/XOUT and all required support branches except for two local route
+defects: crossed crystal dogbones and a VDDREG transition via shorting L10 LXO.
+Corrected those disposable route coordinates while keeping placement,
+orientation, architecture, and canonical copper unchanged.
+
 2026-09-12: Established one bounded JMS583 local support-cohort placement
 baseline from native saved-pad geometry: U11 remains at (140,135), Y10 moves
 to (138.2,126.4), and L10 moves to (141,128). Added the deterministic
