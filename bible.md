@@ -11865,3 +11865,7 @@ STORAGE_3V3 probe connected all nine TE M-key J3 power contacts to U14.5;
 native owner audit and real trace-removal negative control both pass. The
 isolated candidate remains DRC-open at 544/431 and was not promoted to the
 canonical acreage board.
+2026-09-12 — Phase 24 fresh detached validation confirmed the actual-pad
+STORAGE_3V3 handoff independently: all nine J3 contacts pass native owner
+connectivity and the real trace-removal negative control. Full storage DRC and
+high-speed routing remain open.
