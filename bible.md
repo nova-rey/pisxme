@@ -12328,6 +12328,11 @@ labels in REGULATORS and STORAGE (`BRIDGE_3V3`, `BRIDGE_1V1`), contradicting an
 older exact-set receipt. Recorded the diagnostic and preserved all source
 labels pending native net-ownership mapping; no speculative repair was made.
 
+2026-09-12 — The balanced removal probe showed the early duplicate boundary
+labels carry contract-symbol connectivity and cannot simply be deleted. Added
+a second disposable strategy that demotes only those duplicate boundary labels
+to local labels while retaining their wires and contract symbols.
+
 2026-09-12 — Added a disposable duplicate-hierarchy-label discriminator for
 REGULATORS/STORAGE. It removes only the redundant early boundary label/wire
 records in an isolated copy, retains contract symbols and circuit wiring, and

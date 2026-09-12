@@ -63,10 +63,33 @@ def remove_boundary(text: str, name: str, y: str) -> str:
     return text[:lib_end] + "\n" + "\n".join(kept) + "\n" + text[tail:]
 
 
+def localize_boundary(text: str, name: str, y: str) -> str:
+    """Keep the contract connection but demote its duplicate label to local."""
+    lib_end = end_of_expr(text, text.index("(lib_symbols"))
+    tail = text.index("(sheet_instances", lib_end)
+    expressions = top_level(text, lib_end, tail)
+    label_re = re.compile(rf'\(hierarchical_label "{re.escape(name)}"[\s\S]*?\(at 5\.08 {re.escape(y)} 180\)')
+    kept = []; found = 0
+    for expr in expressions:
+        if expr.startswith("(hierarchical_label ") and label_re.search(expr) and found == 0:
+            uuid = re.search(r"\(uuid ([^)]+)\)", expr).group(1)
+            kept.append(
+                f'  (label "{name}" (at 5.08 {y} 180) '
+                f'(effects (font (size 1.27 1.27)) (justify right)) (uuid {uuid}))'
+            )
+            found += 1
+        else:
+            kept.append(expr)
+    if found != 1:
+        raise ValueError(f"{name}@{y}: expected one boundary label, found {found}")
+    return text[:lib_end] + "\n" + "\n".join(kept) + "\n" + text[tail:]
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--source", type=Path, default=Path(__file__).resolve().parent)
     ap.add_argument("--output", type=Path, required=True)
+    ap.add_argument("--mode", choices=("remove", "local"), default="remove")
     args = ap.parse_args()
     src = args.source.resolve(); out = args.output.resolve()
     if out.exists():
@@ -82,7 +105,9 @@ def main() -> None:
     for child, rails in TARGETS.items():
         path = out / f"{child}.kicad_sch"
         text = path.read_text()
-        for name, y in rails.items(): text = remove_boundary(text, name, y)
+        for name, y in rails.items():
+            transform = localize_boundary if args.mode == "local" else remove_boundary
+            text = transform(text, name, y)
         path.write_text(text)
     print(out)
 
