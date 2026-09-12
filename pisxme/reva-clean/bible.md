@@ -197,3 +197,6 @@ Fresh detached Light validation of the integrated current head reproduced 340 DR
 
 ### 2026-09-12 — Phase 24 current-head metadata
 The campaign record now points to the fresh current-head Light census at `b58201e8` (340 DRC violations / 499 unconnected items), preserving the distinction between validated evidence and closure.
+
+### 2026-09-12 — Phase 24 power/return object census
+A bounded source census recorded named power/return segment and via counts on the canonical PCB. `12V_PROTECTED` has 6 segments/1 via, `POWER_GND` 47/17, and `STORAGE_3V3` 22/4; this remains object-level evidence only and does not close continuity, current, transient, or thermal acceptance rows.
