@@ -16172,7 +16172,7 @@
 		(uuid "f7d611e1-f100-4616-a0c9-baf11d40db51")
 		(at 78 120)
 		(property "Reference" "C15"
-			(at 0 0 0)
+			(at 2 0 0)
 			(layer "F.SilkS")
 			(uuid "2eea7150-e2c8-4efb-8416-817c62c78d0c")
 			(effects
