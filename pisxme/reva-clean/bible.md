@@ -134,3 +134,5 @@ Fresh KiCad Light validation of integrated commit `b17f7f2d` reproduced DRC `370
 ## Phase 24 acceptance matrix candidate synchronization — 2026-09-13
 
 The machine acceptance matrix now references integrated candidate `b17f7f2d` and its fresh DRC result `370/499`, incorporating the current scoped DFM receipts. All required rows remain explicitly open until integrated electrical, connectivity, power, SI, mechanical, provenance, and hostile-review closure is proven.
+
+- 2026-09-12: retained fresh KiCad Light 10.0.6 validation for exact current HEAD 9b214aae; ERC 351/0, DRC 370/499, hashes and raw JSON preserved under validation-receipts/current-head-light-9b214aae.
