@@ -12276,3 +12276,6 @@ ordinary-via policy and avoiding that new crossing.
 
 The remaining XIN departure was reworked to leave U11 pad 50 north before
 turning west, preventing the westward segment from crossing adjacent pad 49.
+
+The U11.1 VDDREG source was shifted west to its own F.Cu/B.Cu transition so
+the new XIN horizontal escape does not cross the VDDREG departure.

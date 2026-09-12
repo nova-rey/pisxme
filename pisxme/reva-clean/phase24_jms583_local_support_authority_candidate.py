@@ -52,10 +52,10 @@ path(b, 'XOUT', ('U11','51'), ('Y10','2'),
 # branch transitions outside both pads; no via-in-pad is used.
 n = clear(b, 'JMS_VDDREG_5V')
 src = pos(b, 'U11', '1'); dst = pos(b, 'L10', '2')
-track(b, n, src, (135.60,130.20), F, .15)
-via(b, n, (135.60,130.20))
-track(b, n, (135.60,130.20), (135.60,128.80), B, .15)
-track(b, n, (135.60,128.80), (142.00,128.80), B, .15)
+track(b, n, src, (134.80,132.00), F, .15)
+via(b, n, (134.80,132.00))
+track(b, n, (134.80,132.00), (134.80,128.80), B, .15)
+track(b, n, (134.80,128.80), (142.00,128.80), B, .15)
 via(b, n, (142.00,128.80))
 track(b, n, (142.00,128.80), dst, F, .15)
 
