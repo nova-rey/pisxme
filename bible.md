@@ -12006,6 +12006,9 @@ tree is a support primitive, not Phase 24 closure.
 Fresh EDA Light validation from committed ref `dbd09cbc` reproduces the VDDREG
 audit under KiCad 10.0.6 at 433/421; the DRC count delta is retained as a tool
 version difference.
+The VCCO rehome then moved C81 to (150,148), cleared CM5_PERST, and passed its
+native audit and negative control with all ten USB3 links still passing. Native
+DRC is 430/419 with no new short/crossing class; it remains a support primitive.
 The AVDD33 local support join passed its native endpoint audit and negative
 control but was rejected as route implementation: its x=148 mm transition
 corridor crosses existing CM5 USB3 channels on both layers, with native DRC

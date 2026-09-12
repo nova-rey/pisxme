@@ -44,6 +44,10 @@ The AVDD33 rehome moves C80 into the storage island and provides an outward
 U11 escape with no short/crossing findings. Its AVDD33 audit and negative
 control pass, all ten USB3 links pass, and native DRC is 431/419. Receipt:
 `PHASE24_JMS_AVDD33_REHOME_RECEIPT_20260912.md`.
+The VCCO rehome moves C81 to (150,148) and clears the CM5_PERST collision.
+Its native audit and negative control pass, all ten USB3 links pass, and
+native DRC is 430/419 with no new short/crossing class. Receipt:
+`PHASE24_JMS_VCCO_REHOME_RECEIPT_20260912.md`.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
