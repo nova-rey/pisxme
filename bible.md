@@ -12584,3 +12584,11 @@ physical J1/V100 power ownership and has unrouted protected/bridge rails;
 these are integrated repair requirements, not inherited waivers. Archive review
 rejected unapproved selector pad shifts and retained only the authoritative
 TUSB rotation correction as a candidate source for later scoped repair.
+
+# 2026-09-12 - Phase 24 TUSB integrated candidate validation
+
+Fresh Light validation of integrated candidate `bc137a8f` retained the
+corrected 65-pad TUSB footprint and reported 433 DRC violations / 265
+unconnected items with the approved local rule context. This is a material
+candidate result, not Phase 24 closure; power, connectivity, ERC, DFM and
+mechanical gates remain open.

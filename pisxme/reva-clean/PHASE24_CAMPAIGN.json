@@ -43,8 +43,8 @@
       "receipt": "phase24-baseline-exec/receipts/PHASE24_BASELINE_REPRODUCTION_RECEIPT_20260912.md"
     },
     "rule_context": {"status": "PROVEN_AND_INTEGRATED", "candidate": "3edc4f94e0bf40667c5a03449c51168880eb8950", "integrated_commit": "d044316c", "evidence": "KiCad 10.0.6 positive/negative/outside probes and fresh Light candidate validation; local fine rule effective and normal POWER_GND constraint retained."},
-    "integration_candidate": "working-tree after TUSB footprint correction; pending commit and integrated validation",
-    "validation": null
+    "integration_candidate": "bc137a8f82ae258129704700a39e01fa8ef07cc2",
+    "validation": {"status": "OPEN_NOT_CLOSURE", "workspace": "/home/nyx/eda-workspaces/validation-tusb-integrated-validate-20260912T174403Z", "drc": "433 violations / 265 unconnected", "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9", "receipt": "validation.json", "scope": "TUSB footprint plus integrated DRC; Phase24 remains incomplete"}
   },
   "blockers": [],
   "next_action": "Repair selected integrated Path A source/copper; prioritize absent J1 power ownership, unrouted 12V branch B, BRIDGE_3V3/1V1 and CM5_5V feed contracts after source/context reconciliation",
