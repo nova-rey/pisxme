@@ -12601,6 +12601,13 @@ workspace. The duplicate-named negative and outside-normal raw reports were
 not separately copied and must be regenerated if required for the final
 manifest; their observed counts remain recorded in the campaign receipt.
 
+# 2026-09-12 - Phase 24 baseline ERC census retained
+
+Ran the existing ERC cluster census against the fresh Light baseline report
+and retained its machine-readable output under `validation-receipts`. Counts
+remain 121 endpoint-off-grid, 126 isolated-pin-label, 30 same-local/global,
+22 multiple-net-name, 53 library-symbol, and 3 footprint-link findings.
+
 # 2026-09-12 - Phase 24 integrated power mapping blocker
 
 The selected integrated PCB still assigns no named power or ground pads to J1:
