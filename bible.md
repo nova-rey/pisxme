@@ -11961,3 +11961,9 @@ connectivity assertions but was rejected by native DRC at 452/421 for real
 U11 escape, CM5_PERST, U12 support-pad, and RX-pair geometry defects. It is
 preserved as route evidence; next work is an obstacle-aware support reroute
 with local B.Cu transitions, not a change to the storage topology.
+
+2026-09-12 — Documentation correction: direct review of the project-local
+`JMS583_QFN64_8x8.kicad_mod` confirms its side pads have the intended 90-degree
+rotation. The earlier apparent overlap was caused by interpreting unrotated
+native pad-size fields, not by malformed footprint authority. The V4 support
+candidate remains rejected for actual U11 escape and RX/support route geometry.

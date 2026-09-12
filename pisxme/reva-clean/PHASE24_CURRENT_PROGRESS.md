@@ -25,6 +25,10 @@ DRC 456/421 for U11 escape and RX support-pair geometry; receipt
 Support V4 passes all ten connectivity links but is rejected at native DRC
 459/421 for U11 pad escape, RX return convergence, and one support-channel
 crossing; receipt `PHASE24_STORAGE_MKEY_USB3_SUPPORT_V4_RECEIPT_20260912.md`.
+The U11 footprint audit has been corrected: `JMS583_QFN64_8x8.kicad_mod` uses
+rotated side pads as intended. The earlier apparent pad overlap came from an
+unrotated native size-field inspection and is superseded; the remaining V4
+failure is route geometry, not footprint authority.
 Fresh KiCad Light validation independently reports 466/421 for the same V2
 candidate and confirms the rejection class.
 The first complete ten-link support graft is rejected as route implementation:

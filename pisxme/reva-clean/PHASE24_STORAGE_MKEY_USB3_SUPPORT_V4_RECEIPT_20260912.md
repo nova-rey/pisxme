@@ -15,3 +15,13 @@ orientation, layer contract, or accepted source handoff changed.
 
 Next work remains confined to a genuinely pad-escape-aware local U11 fanout
 and separately reserved U12 support return channels.
+
+## Footprint inspection correction
+
+The project-local `JMS583_QFN64_8x8` footprint is not malformed. Its side-pad
+row uses the intended 90-degree pad rotation; an earlier native inspection
+looked at unrotated pad-size fields and therefore made the pads appear to
+overlap. That inspection was misleading and is superseded by direct review of
+`PiSXMe_RevA_Clean.pretty/JMS583_QFN64_8x8.kicad_mod`. V4 remains rejected for
+its actual U11 escape and RX/support routing geometry, not for footprint
+authority.
