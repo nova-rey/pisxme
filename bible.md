@@ -12279,3 +12279,7 @@ turning west, preventing the westward segment from crossing adjacent pad 49.
 
 The U11.1 VDDREG source was shifted west to its own F.Cu/B.Cu transition so
 the new XIN horizontal escape does not cross the VDDREG departure.
+
+The native rule condition was simplified to net identity because KiCad track
+objects do not carry footprint identity; this preserves the local-net scope
+without silently relying on a false footprint predicate.
