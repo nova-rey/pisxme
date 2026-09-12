@@ -98,3 +98,7 @@ The existing storage selector-label generator was run once from the current comm
 ## Phase 24 stale M.2 cleanup script check — 2026-09-13
 
 The legacy stale-M.2-label cleanup script was run once against the current committed source and refused because its expected anchor was absent. No CAD or schematic mutation occurred; the evidence is retained under `validation-receipts/stale-m2-label-script-current/` and the obsolete script remains out of the repair path.
+
+## Phase 24 integrated C14 reference placement repair — 2026-09-13
+
+The C14 reference field was moved from local `(0,0)` to `(6,0)` mm to clear the CM5 J7 outline. This DFM-only edit reduced native DRC from 382 to 379 violations, with unconnected items unchanged at 499; no electrical or copper data changed. Fresh integrated validation remains required.

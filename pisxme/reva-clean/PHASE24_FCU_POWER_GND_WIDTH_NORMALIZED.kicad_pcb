@@ -12525,7 +12525,7 @@
 		(uuid "9f9347b9-9fcc-4b63-893e-dd0de8a9c6f1")
 		(at 70 120)
 		(property "Reference" "C14"
-			(at 0 0 0)
+			(at 6 0 0)
 			(layer "F.SilkS")
 			(uuid "632d74b0-f033-4d35-9ee2-0a25b15dc7a2")
 			(effects
