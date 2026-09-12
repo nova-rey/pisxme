@@ -11892,3 +11892,9 @@ The V2 actual-pad USB3 route also failed: direct B.Cu fanout cannot attach to
 the top-side-only J7 pads without a local escape, and the separated corridor
 still collides with the existing V100 PET0 corridor. Native DRC was 475/431;
 the candidate remains rejected route evidence.
+
+Recovered 28 serialized USB3 segment/via records from the isolated V121
+reference into the current M-key candidate. All four J7-to-U12 links and a
+real track-removal negative control pass, but integrated DRC remains 505/427
+because the U12 launch crosses current CM5_PERST and clearance/plane geometry.
+This is the preferred source-escape basis, not production copper.
