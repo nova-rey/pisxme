@@ -1,0 +1,25 @@
+{
+  "candidate": "ee0ee5db",
+  "tool": "KiCad Light 10.0.6",
+  "bom_reference_count": 117,
+  "pcb_reference_count": 131,
+  "missing_from_bom": [
+    "MECH_M2_2280",
+    "TP1",
+    "TP10",
+    "TP11",
+    "TP12",
+    "TP13",
+    "TP2",
+    "TP3",
+    "TP4",
+    "TP5",
+    "TP6",
+    "TP7",
+    "TP8",
+    "TP9"
+  ],
+  "obsolete_bom_refs": [],
+  "bom_sha256": "76379829f7bf9391e9bf187ae6d642e1c05d8727014751da67b59e4c7c48f80b",
+  "disposition": "BOM regenerated; missing TP1-TP13 and MECH_M2_2280 require explicit assembly/BOM disposition before DFM closure"
+}

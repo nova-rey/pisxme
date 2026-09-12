@@ -12668,3 +12668,7 @@ Integrated the bounded source-hygiene candidate into the current canonical tree:
 ## Phase 24 integrated USB3 label validation — 2026-09-13
 
 Fresh Light validation of canonical `0396a068` reproduced 351 ERC findings with zero errors and 433 DRC violations / 499 unconnected items. The four USB3 labels reduced same-local/global findings to 26 without changing semantic netlist nodes. The source candidate is accepted within scope; integrated closure remains open.
+
+## Phase 24 integrated BOM regeneration — 2026-09-13
+
+Fresh KiCad Light schematic BOM export for `ee0ee5db` produced 117 references against 131 PCB references, with no obsolete BOM references. The 14 missing PCB references are TP1–TP13 and the mechanical marker `MECH_M2_2280`; these require explicit assembly/BOM disposition before DFM closure. BOM CSV and machine receipt are retained under `pisxme/reva-clean/validation-receipts/bom-integrated-ee0ee5db/`.

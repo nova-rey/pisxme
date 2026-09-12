@@ -171,10 +171,11 @@
     "patha_native_storage_census": "validation-receipts/patha-native-storage-census-19a1390a/RECEIPT.md",
     "dfm_mechanics_19a": "validation-receipts/dfm-mechanics-19a/RECEIPT.json",
     "source_erc_usb3_global_labels": "validation-receipts/source-erc-usb3-global-labels/RECEIPT.md",
-    "source_erc_integrated_0396": "validation-receipts/source-erc-integrated-0396/RECEIPT.md"
+    "source_erc_integrated_0396": "validation-receipts/source-erc-integrated-0396/RECEIPT.md",
+    "bom_integrated_ee0ee5db": "validation-receipts/bom-integrated-ee0ee5db/RECEIPT.json"
   },
   "blockers": [],
-  "next_action": "Continue remaining ERC generating-cause families and resolve integrated storage/mechanical/power rows; preserve exact candidate SHA.",
+  "next_action": "Resolve TP1-TP13 and MECH_M2_2280 BOM disposition, then continue remaining ERC, storage copper, mechanical, and power closure.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
