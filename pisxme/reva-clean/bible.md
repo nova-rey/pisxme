@@ -230,3 +230,6 @@ The existing parity audit now reports excluded contract placeholders and alias-m
 
 ### 2026-09-12 — Phase 24 fresh parity/exclusion audit
 A fresh Light run regenerated the schematic netlist as KicadXML and passed the instrumented ownership audit: 814 authoritative nodes, 1262 PCB pads, zero mismatches, with 65 nonphysical X nodes, 2 J1 placeholders, 8 J3 key-gap placeholders, and explicit J2/F1/F2/J4 alias contracts reported. This closes only bounded ownership/parity evidence, not physical connectivity or DRC.
+
+### 2026-09-12 — Phase 24 C25 silkscreen probe rejected
+A bounded C25 reference relocation probe did not change the integrated DRC census (340/499), so it was rejected and not promoted. Raw output is retained under `validation-receipts/dfm-c25-reference-direct-20260912/`.
