@@ -382,3 +382,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Retained durable rejection record for the first South-Band Path-A storage attempt; 12 shorts and wrong U13 pad origin require a materially corrected method before any retry.
 
 - 2026-09-13: Refreshed `PHASE24_CAMPAIGN.json` to reflect current integrated SHA `c8710a84`, active bounded repair lanes, explicit rejected candidates, and the still-open 13-row acceptance contract.
+
+- 2026-09-13: Retained a current-head direct native DRC check at `28ab8fc1`: 310 violations and 499 unconnected items, with no shorting_items. The count difference from retained 312-count Light validation is explicitly unresolved as rule/project-context variance and does not close DRC.
