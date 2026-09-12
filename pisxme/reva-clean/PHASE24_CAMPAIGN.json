@@ -178,10 +178,11 @@
     "service_usb2_labels_rejected": "validation-receipts/service-usb2-labels-rejected/RECEIPT.md",
     "service_usb2_width_producer": "validation-receipts/service-usb2-width-f2113c/RECEIPT.md",
     "service_usb2_width_integrated": "validation-receipts/service-usb2-width-integrated-22d25b/RECEIPT.md",
-    "service_vbus_width_rejected": "validation-receipts/service-vbus-width-rejected/RECEIPT.md"
+    "service_vbus_width_rejected": "validation-receipts/service-vbus-width-rejected/RECEIPT.md",
+    "jms_reset_width_rejected": "validation-receipts/jms-reset-width-rejected/RECEIPT.md"
   },
   "blockers": [],
-  "next_action": "Stop replaying SERVICE normal-net width families after the zero-net-change result; target a different DRC or acceptance family.",
+  "next_action": "Respect fixed J3/M2 authority; obtain bounded J8 target or move to a different DRC/acceptance family.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
@@ -228,5 +229,8 @@
       "next": "integrated DFM/mechanics evidence or correction",
       "result": "6 courtyard overlaps, 5 PTH-inside-courtyard, 9 co-located holes, 16 edge-clearance; local USON alias rejected"
     }
+  },
+  "authority": {
+    "mechanical_placement": "J3 and MECH_M2_2280 fixed by macro authority; J8 movement requires bounded DFM target and is not yet authorized"
   }
 }

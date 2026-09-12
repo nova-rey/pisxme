@@ -12704,3 +12704,11 @@ Fresh Light validation of `22d25b04` produced 351 ERC findings / 0 errors and 42
 ## Phase 24 SERVICE_VBUS_SENSE width rejection — 2026-09-13
 
 A bounded normal-net width candidate widened nine `SERVICE_VBUS_SENSE` segments, but native DRC remained 424/499: two width findings were exchanged for two clearance findings. The candidate was rejected and not integrated; no further replay of this family is planned.
+
+## Phase 24 JMS_RESET_N width rejection — 2026-09-13
+
+Widening six `JMS_RESET_N` tracks to the normal 0.20 mm minimum worsened native DRC from 424 to 431 violations with 499 opens. The candidate was rejected and the family is retired from this width method.
+
+## Phase 24 J3/M2 placement authority — 2026-09-13
+
+Macro Placement Authority fixed J3 at `(220,165)` and the `MECH_M2_2280` datum at `(260,160)`; shrinking or moving the envelope and translating J3 are unauthorized. J8 movement requires a separate bounded DFM target decision before any producer edit.
