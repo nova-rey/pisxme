@@ -36,8 +36,16 @@ fp(b, 'L10').SetPosition(P(142.00, 130.00))
 # The crystal pair is kept together in the immediate U11 north escape.  The
 # 0.4-mm-pitch JMS583 field needs a local 0.10-mm trace/clearance exception;
 # the route hands back to the normal 0.15/0.20-mm profile outside this field.
-path(b, 'XIN', ('U11','50'), ('Y10','1'),
-     [(136.60,130.00),(136.60,125.55)], width=.10)
+# XIN changes layer before reaching the Y10 pad field so its solder-mask
+# aperture cannot sweep across the adjacent XOUT pad.  The two vias are
+# ordinary through-vias, placed outside both SMD pad fields.
+n = clear(b, 'XIN')
+src = pos(b, 'U11', '50'); dst = pos(b, 'Y10', '1')
+track(b, n, src, (136.40,130.00), F, .10)
+via(b, n, (136.40,130.00))
+track(b, n, (136.40,130.00), (136.40,125.55), B, .10)
+via(b, n, (136.40,125.55))
+track(b, n, (136.40,125.55), dst, F, .10)
 path(b, 'XOUT', ('U11','51'), ('Y10','2'),
      [(138.40,130.00),(138.40,127.25)], width=.10)
 

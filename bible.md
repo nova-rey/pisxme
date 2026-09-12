@@ -12264,3 +12264,7 @@ candidate.
 The fine-escape route was changed to two monotonic side corridors around the
 Y10 pad pair: XIN west and XOUT east, avoiding the prior diagonal approach
 through the mate pad.
+
+The XIN side corridor now transitions to B.Cu before the Y10 field and back
+to the crystal pad with ordinary through-vias; this is a local escape measure,
+not a board-wide via or layer-policy change.
