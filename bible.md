@@ -12057,3 +12057,7 @@ and connects U11.39 to R80.1 without changing accepted USB3 copper. Native
 JMS_REXT connectivity and trace-removal negative control pass, as does the
 CM5-to-U12 USB3 actual-pad audit. The candidate remains support evidence, not
 full-board closure, with 544/416 inherited native DRC findings.
+The JMS_XAVDDH V3 support primitive uses a local 0.15 mm QFN escape before
+returning to 0.20 mm routing and ordinary through-vias. Native connectivity
+and negative control pass; the 560/415 candidate report shows no XAVDDH-
+specific conflict. It remains pending independent worker validation.
