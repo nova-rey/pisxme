@@ -22283,7 +22283,7 @@
 	(segment
 		(start 46 100.25)
 		(end 43 100.25)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "199428e5-c40d-4fa9-9d59-df6c9c905386")
@@ -22291,7 +22291,7 @@
 	(segment
 		(start 54 102.5)
 		(end 46 102.5)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "1ea76a25-fbe2-484d-8512-c06ede4356a0")
@@ -22299,7 +22299,7 @@
 	(segment
 		(start 59 100.35)
 		(end 59 101)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "63ab428a-5ae7-479c-ba44-718cd114b5a6")
@@ -22307,7 +22307,7 @@
 	(segment
 		(start 47 99.75)
 		(end 49 99.75)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "94779df2-c1a8-49d5-b370-46bf8f50870f")
@@ -22315,7 +22315,7 @@
 	(segment
 		(start 41 100.25)
 		(end 43 100.25)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "a388a270-7144-43c8-bdd8-9030c4d4fc57")
@@ -22323,7 +22323,7 @@
 	(segment
 		(start 64 99.5)
 		(end 61 100.35)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "af42b144-5a80-42e8-8dbe-b8198c32e3d0")
@@ -22331,7 +22331,7 @@
 	(segment
 		(start 66.959999 99.5)
 		(end 64 99.5)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "ba97e91a-a9eb-48ed-a457-50015820f53b")
@@ -22339,7 +22339,7 @@
 	(segment
 		(start 54 101)
 		(end 54 102.5)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "c2c1f230-81f1-4f94-b40a-f536dd0985e2")
@@ -22347,7 +22347,7 @@
 	(segment
 		(start 61 100.35)
 		(end 58.425 100.35)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "dccb7f79-2b22-4ff4-a2a4-1685c89cff23")
@@ -22355,7 +22355,7 @@
 	(segment
 		(start 46 102.5)
 		(end 46 100.25)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "eb1d0b5a-a760-43fc-8ca3-3fd380f270b5")
@@ -22363,7 +22363,7 @@
 	(segment
 		(start 58.425 100.35)
 		(end 59 100.35)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "f47bc111-85c5-431a-b22b-f246fb616bee")
@@ -22371,7 +22371,7 @@
 	(segment
 		(start 59 101)
 		(end 54 101)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "f4f4e164-af8c-4b32-9bda-aed0b13e1b6c")
@@ -22395,7 +22395,7 @@
 	(segment
 		(start 41 97)
 		(end 41 100.25)
-		(width 0.13208)
+		(width 0.2)
 		(layer "B.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "4cf77d7d-e778-4930-ae5c-0dd06e649f3a")
@@ -22403,7 +22403,7 @@
 	(segment
 		(start 49 99.75)
 		(end 49 97)
-		(width 0.13208)
+		(width 0.2)
 		(layer "B.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "be0ee9e0-4312-4546-afcb-939874808bd9")
@@ -22411,7 +22411,7 @@
 	(segment
 		(start 49 97)
 		(end 41 97)
-		(width 0.13208)
+		(width 0.2)
 		(layer "B.Cu")
 		(net "SERVICE_USB2_DP")
 		(uuid "d1d2bcde-69ac-4678-aa9d-1f2c930fb1d3")
@@ -22419,7 +22419,7 @@
 	(segment
 		(start 53 97.5)
 		(end 46 97.5)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "23e28c84-bb20-4577-b593-327e29ed49df")
@@ -22427,7 +22427,7 @@
 	(segment
 		(start 59 99)
 		(end 54 99)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "44f6abbd-d269-4bb0-b619-28fe0b92ea0f")
@@ -22435,7 +22435,7 @@
 	(segment
 		(start 59 99.65)
 		(end 59 99)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "5524ad0c-5847-48e0-bdbe-559b7768a8a9")
@@ -22443,7 +22443,7 @@
 	(segment
 		(start 66.959999 99.1)
 		(end 64 99.1)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "811d0895-fa5f-4464-9fc6-9804e204a46c")
@@ -22451,7 +22451,7 @@
 	(segment
 		(start 46 99.75)
 		(end 43 99.75)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "830277c2-3b48-4645-91f6-4519eb1008b3")
@@ -22459,7 +22459,7 @@
 	(segment
 		(start 54 99)
 		(end 53 97.5)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "8da129b1-4176-4c31-90d2-6c8c95cea495")
@@ -22467,7 +22467,7 @@
 	(segment
 		(start 61 99.65)
 		(end 58.425 99.65)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "9b1a0802-8bdd-4ede-843a-fd4f7c7c55e5")
@@ -22475,7 +22475,7 @@
 	(segment
 		(start 64 99.1)
 		(end 61 99.65)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "af42685f-cb9f-42ae-8d63-71fdacf807a1")
@@ -22483,7 +22483,7 @@
 	(segment
 		(start 46 97.5)
 		(end 46 99.75)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "c2c9127f-73b2-49ab-816e-1da4507ed22a")
@@ -22491,7 +22491,7 @@
 	(segment
 		(start 47 100.25)
 		(end 50 100.25)
-		(width 0.15)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "d6babdef-e454-4f5d-adb4-a881836ceb8f")
@@ -22499,7 +22499,7 @@
 	(segment
 		(start 41.5 99.6)
 		(end 43 99.75)
-		(width 0.15)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "ec2c71fc-b929-4d83-9342-22c21513c4fe")
@@ -22507,7 +22507,7 @@
 	(segment
 		(start 58.425 99.65)
 		(end 59 99.65)
-		(width 0.13208)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "fc776ae6-2e03-41cc-849e-6b35a235073e")
@@ -22531,7 +22531,7 @@
 	(segment
 		(start 50 100.25)
 		(end 50 106)
-		(width 0.15)
+		(width 0.2)
 		(layer "B.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "0266389d-b837-4049-a554-5ef4b3669d6d")
@@ -22539,7 +22539,7 @@
 	(segment
 		(start 50 106)
 		(end 41.5 106)
-		(width 0.15)
+		(width 0.2)
 		(layer "B.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "5595e692-a43e-42bc-b91a-bbf831fb1e8b")
@@ -22547,7 +22547,7 @@
 	(segment
 		(start 41.5 106)
 		(end 41.5 99.6)
-		(width 0.15)
+		(width 0.2)
 		(layer "B.Cu")
 		(net "SERVICE_USB2_DM")
 		(uuid "7f99589a-e277-4168-9ae3-9e562194d5a0")
