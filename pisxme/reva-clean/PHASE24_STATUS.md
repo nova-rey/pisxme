@@ -39,6 +39,12 @@ parity and zero native severity errors, but did not reduce the warning census,
 so it is not promoted. See
 `PHASE24_DUPLICATE_LABEL_PROBE_RECEIPT_20260912.md`.
 
+The circuit-facing duplicate labels are now corrected in the canonical source:
+each affected child retains one authoritative boundary hierarchical label and
+uses a local label for the circuit cohort. Native 10.0.5 severity-error ERC,
+structural audit, live contract map, and exact 361-net parity all pass. Receipt:
+`PHASE24_DUPLICATE_LABEL_PROMOTION_RECEIPT_20260912.md`.
+
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 
 Two exact STORAGE aliases are promoted with exact native netlist parity:

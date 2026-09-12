@@ -20,6 +20,12 @@ the older exact-set receipt and is now the next source-authority investigation;
 no label repair has been promoted. See
 `PHASE24_LIVE_CONTRACT_DUPLICATE_LABEL_DIAGNOSTIC_20260912.md`.
 
+The validated repair is now promoted: the later circuit-facing duplicate
+labels in `REGULATORS` and `STORAGE` are local labels, while the original
+boundary labels remain hierarchical. Netlist parity and native severity-error
+ERC pass; full ERC remains 311 warnings / 0 errors. See
+`PHASE24_DUPLICATE_LABEL_PROMOTION_RECEIPT_20260912.md`.
+
 ## CURRENT JMS583 LOCAL ESCAPE — 2026-09-12
 
 The frozen U11/Y10 support placement now uses a tightly scoped 0.10 mm

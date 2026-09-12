@@ -12353,3 +12353,8 @@ the hypothesis.
 transform: it produced collateral deletions and 24 native errors. Reworked the
 disposable probe to remove only balanced top-level label/wire expressions before
 rerunning it; canonical sources remain untouched.
+
+2026-09-12 — Promoted the validated duplicate-label repair in REGULATORS and
+STORAGE. Boundary hierarchy labels remain authoritative; later circuit-facing
+duplicates are local labels. Native 10.0.5 severity-error ERC, structural map,
+and exact 361-net parity pass. Full ERC remains 311 warnings / 0 errors.
