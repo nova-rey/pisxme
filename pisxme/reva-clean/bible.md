@@ -399,3 +399,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Fresh Light schematic-parity validation at `31d1e428` failed its preflight because the schematic is not fully annotated; fallback native DRC remained 312/499. Bidirectional parity acceptance stays OPEN and no CAD changes were made.
 
 - 2026-09-13: Corrected the schematic-parity validation context in a writable disposable Light worker by matching the PCB/schematic basename. KiCad then executed parity and reported 528 real parity issues (plus 312/499 native DRC), proving the prior preflight was a lookup-context failure rather than an annotation waiver.
+
+- 2026-09-13: Fresh Light pad-net parity audit passed within scope: 814 expected schematic nodes against 1,262 PCB pads, zero expected-pad mismatches; exclusions and aliases are enumerated. Surplus-pad correctness and native KiCad parity conflicts remain open.
