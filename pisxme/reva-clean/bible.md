@@ -173,3 +173,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: corrected metadata to physical J7 DFM integration commit `2234c594`.
 - 2026-09-12: integrated bounded C5/C6 reference-text moves; fresh Light DRC 344/499 with four silk findings removed and zero shorts.
 - 2026-09-12: acceptance/campaign metadata rebound to C5/C6 integrated candidate; fresh DRC is 344/499.
+- 2026-09-12: corrected metadata to physical C5/C6 integration commit `f791c45f`.
