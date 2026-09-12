@@ -30,3 +30,7 @@ A deterministic parser compared the selected J1 footprint with the pinned Bencho
 ## Phase 24 J1 contract fresh validation — 2026-09-12
 
 Fresh Light validation of integrated commit 2b49006b (image sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9) reported 433 DRC violations and 499 unconnected items, 355 ERC findings, and a retained native netlist export. The topology change is explained by assigning 130 `12V_PROTECTED` and 170 `POWER_GND` J1 contacts; the 33 unknown/protection contacts remain unassigned. The J1 mapping blocker is cleared for bounded repair, while integrated power, returns, routing, and acceptance remain open.
+
+## Phase 24 J1 contract regeneration proof — 2026-09-12
+
+The corrected helper was run from the pre-contract base f581568e in a clean producer workspace. It generated exactly 130 `12V_PROTECTED`, 170 `POWER_GND`, seven existing named contacts, and 93 unassigned pads. The regenerated PCB SHA256 `db621a9c017dadb8611d3b5684f9866eb6cb45b6b5835439841a6e5b7f12d146` exactly matches the integrated candidate, proving generator reproducibility and preserving unknown contacts.

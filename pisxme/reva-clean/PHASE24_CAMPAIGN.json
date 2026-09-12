@@ -135,7 +135,15 @@
       "fresh_light_netlist": "retained",
       "tool": "KiCad 10.0.6",
       "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
-      "raw_dir": "validation-receipts/j1-integrated-final-2b49006b"
+      "raw_dir": "validation-receipts/j1-integrated-final-2b49006b",
+      "generator_reproducibility": {
+        "generator_commit": "8ce0663a",
+        "base": "f581568e",
+        "regenerated_sha256": "db621a9c017dadb8611d3b5684f9866eb6cb45b6b5835439841a6e5b7f12d146",
+        "integrated_sha256": "db621a9c017dadb8611d3b5684f9866eb6cb45b6b5835439841a6e5b7f12d146",
+        "counts": "130 power / 170 ground / 7 existing named / 93 unassigned",
+        "result": "PASS"
+      }
     }
   },
   "blockers": [
@@ -151,7 +159,7 @@
       ]
     }
   ],
-  "next_action": "Repair integrated power/return and unrouted rail families using the now-authoritative J1 contract; validate each material candidate in fresh Light",
+  "next_action": "Queue one serialized Path A power or storage copper repair from e226bbe3; current prepared workers are waiting and no CAD container is active",
   "open_evidence": {
     "integrated_power": "Selected PCB has J1 400 pads but only 7 named signals, 393 no-net, zero 12V_PROTECTED/POWER_GND contacts; historical Phase14 power evidence is a different candidate",
     "unrouted_rails": [
