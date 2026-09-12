@@ -12410,3 +12410,9 @@ Added a disposable, exact-coordinate probe for renaming co-located STORAGE
 `NC_*` labels to their already-selected authoritative names. It is not a
 production repair; native ERC and semantic netlist preservation are required
 before any promotion.
+
+# 2026-09-12 — Phase 24 reference-set parity recheck
+
+The committed reference-set audit passed with 78 schematic references, 101
+PCB references, and exactly 23 documented mechanical/test-point extras. Full
+connectivity and DRC closure remain open.
