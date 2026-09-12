@@ -13,3 +13,8 @@ USB3 ten-link audit PASS, and 431 DRC violations / 419 unconnected items.
 No shorting or track-crossing finding is introduced by the AVDD33 primitive.
 It remains a support primitive pending full support-cohort integration and
 board-level DRC closure.
+
+Fresh EDA Light validation from committed ref `f4776359` reports 433
+violations / 419 unconnected items under KiCad 10.0.6, reproducing the
+AVDD33 and USB3 connectivity results; the DRC delta is retained as a
+tool-version difference.

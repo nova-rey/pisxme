@@ -12014,6 +12014,9 @@ The AVDD33 rehome then moved C80 into the storage island and routed U11 pad 19
 outward, avoiding CM5 USB3 corridors. Its native audit and negative control
 pass, all ten USB3 links pass, and native DRC is 431/419; it is retained as a
 support primitive pending cohort integration.
+Fresh EDA Light validation from committed ref `f4776359` reproduces the AVDD33
+rehome at 433/419 under KiCad 10.0.6; the count delta is retained as a tool
+version difference.
 The VCCK local primitive then connected U11 pad 2 to C82, passed its native
 audit and trace-removal negative control, and kept all ten USB3 links passing.
 Native DRC is 426/420 with no new short/crossing class; remaining board
