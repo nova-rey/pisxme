@@ -317,3 +317,6 @@ Fresh detached Light validation of the C36 repair confirmed 316 DRC violations a
 
 ### 2026-09-12 — Phase 24 C7 silkscreen repair
 A materially different C7 reference move outside the capacitor row removed one silk-over-copper finding without changing copper or connectivity. Producer DRC was 315/499 versus the 316/499 base; the repair is integrated pending fresh exact-head validation.
+
+### 2026-09-12 — Phase 24 C7 integrated validation
+Fresh detached Light validation of the C7 repair confirmed 315 DRC violations and 499 unconnected items on commit `849c60e5`; integrated closure remains open.
