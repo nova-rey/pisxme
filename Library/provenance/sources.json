@@ -146,22 +146,28 @@
       "title": "74221 MEG-Array 4mm receptacle assembly drawing",
       "publisher": "Amphenol FCI / Amphenol Communications Solutions",
       "url": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/74221.pdf",
-      "revision": "Drawing 74221 Rev W; released title block observed by browser; 2021-04-13 approval; retrieved 2026-09-12",
+      "revision": "Drawing 74221 Rev W; Released; EC ELX-V-40495-1; approval 2021-04-13; document extraction retrieved 2026-09-12",
       "tier": 1,
       "evidence_class": "manufacturer mechanical/product authority",
       "observed_facts": [
-        "400 positions",
-        "10 x 40",
-        "receptacle family 74221",
-        "1.27 mm array pitch",
-        "4 mm receptacle assembly",
-        "74221-101LF listed with 30 microinch gold and SnAgCu lead-free solder balls"
+        "released 4mm RECEPTACLE ASSEMBLY drawing for MEG-ARRAY family",
+        "10 x 40 = 400 positions",
+        "drawing number 74221, size A2, units millimetres",
+        "drawing revision W and status Released; EC ELX-V-40495-1",
+        "approval dates visible in title block include 2018-02-15, 2021-03-26, and 2021-04-13",
+        "74221-101LF appears in the product-number table with lead-free solder balls"
       ],
       "status": "remote_only",
       "local_sha256": null,
       "license_disposition": "link and extracted facts only; PDF download returned HTTP 403 in this environment",
       "related_product_url": "https://www.amphenol-cs.com/product/74221101lf.html",
-      "verification_note": "Manufacturer product page was checked on 2026-09-12 and confirms active 74221-101LF, 400 contacts, 10-row 1.27-mm array, 4-mm receptacle, and 0.45-A current rating."
+      "verification_note": "Manufacturer product page was checked on 2026-09-12 and confirms active 74221-101LF, 400 contacts, 10-row 1.27-mm array, 4-mm receptacle, and 0.45-A current rating.",
+      "access_evidence": {
+        "browser_text_extraction": "accessible and parsed 2026-09-12",
+        "direct_curl_http_status": 403,
+        "local_sha256": null,
+        "local_retention": "not retained; metadata and extracted facts only"
+      }
     },
     {
       "id": "jlcpcb-capabilities-20260912",
@@ -298,6 +304,60 @@
       ],
       "status": "not_pin_map",
       "license_disposition": "citation and extracted facts only; no patent mirror copied"
+    },
+    {
+      "id": "amphenol-gs-12-100-rev-r",
+      "title": "MEG-Array 81, 100, 200, 240, 300, 400 & 528 Positions",
+      "publisher": "FCI / Amphenol Communications Solutions",
+      "url": "https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/gs-12-100.pdf",
+      "revision": "GS-12-100 Rev R; authorized 2013-10-14; printed 2013-10-16; retrieved 2026-09-12",
+      "tier": 1,
+      "evidence_class": "manufacturer product specification",
+      "component_tags": ["74221-101LF", "MEG-Array", "400-position", "connector"],
+      "observed_facts": [
+        "unrestricted FCI product specification for the 1.27 mm x 1.27 mm MEG-Array grid",
+        "400-position 10 x 40, 4.0 mm mated-height pairing is plug 84740 and receptacle 74221",
+        "4.0 mm mated-height initial low-level contact resistance is 20 milliohms maximum",
+        "current-rating test criterion is 0.45 A with no more than 30 C temperature rise when all contacts are energized, or 2.0 A for one energized contact",
+        "400-position and 74221 applicability are connector-family facts, not SXM2 electrical pin assignments"
+      ],
+      "status": "browser_accessible_direct_fetch_blocked",
+      "access_evidence": {
+        "browser_text_extraction": "accessible and parsed 2026-09-12",
+        "direct_curl_http_status": 403,
+        "local_sha256": null,
+        "local_retention": "not retained; metadata and extracted facts only"
+      },
+      "license_disposition": "unrestricted classification recorded by source; retain citation and extracted facts only; do not copy PDF into public repository"
+    },
+    {
+      "id": "amphenol-gs-20-033-rev-j",
+      "title": "MEG-Array High Speed Mezzanine Connectors",
+      "publisher": "FCI / Amphenol Communications Solutions",
+      "url": "https://cdn.amphenol-cs.com/media/wysiwyg/files/documentation/gs-20-033.pdf",
+      "revision": "GS-20-033 Rev J; verified 2016-04-27; printed 2016-05-04; retrieved 2026-09-12",
+      "tier": 1,
+      "evidence_class": "manufacturer application specification",
+      "component_tags": ["74221-101LF", "MEG-Array", "BGA", "PCB-assembly", "high-speed"],
+      "observed_facts": [
+        "unrestricted FCI application specification for MEG-Array BGA connector application and process guidance",
+        "400-position 10 x 40, 4.0 mm mated-height receptacle is 74221 with plug 84740",
+        "drawing and product specification take precedence if application guidance conflicts with them",
+        "recommended PCB pad diameter is 0.584 to 0.635 mm with copper-defined pads",
+        "solder-mask opening must provide at least 0.15 mm clearance around the pad",
+        "vias should not be included in BGA solder pads; connector-side via must be fully solder-mask covered",
+        "5.10 mm perimeter keepout is generally recommended for rework equipment",
+        "A1 is identified by a triangle and connector keying controls mating orientation",
+        "the document reports 4 mm and 6 mm stack-height testing to 28 Gb/s, a performance datum rather than a PiSXMe guarantee"
+      ],
+      "status": "browser_accessible_direct_fetch_blocked",
+      "access_evidence": {
+        "browser_text_extraction": "accessible and parsed 2026-09-12",
+        "direct_curl_http_status": 403,
+        "local_sha256": null,
+        "local_retention": "not retained; metadata and extracted facts only"
+      },
+      "license_disposition": "unrestricted classification recorded by source; retain citation and extracted facts only; do not copy PDF into public repository"
     }
   ]
 }

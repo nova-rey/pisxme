@@ -128,6 +128,21 @@
         "fabrication",
         "package-authority"
       ]
+    },
+    {
+      "id": "brief-sxm2-j1-amphenol-rev-w-corpus",
+      "kind": "component-authority-brief",
+      "path": "Library/briefs/sxm2-j1-amphenol-rev-w-corpus-20260912.md",
+      "tags": [
+        "SXM2",
+        "J1",
+        "74221-101LF",
+        "Rev-W",
+        "GS-12-100",
+        "GS-20-033",
+        "DFM",
+        "package-authority"
+      ]
     }
   ]
 }
