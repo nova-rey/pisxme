@@ -12010,6 +12010,9 @@ The VCCK local primitive then connected U11 pad 2 to C82, passed its native
 audit and trace-removal negative control, and kept all ten USB3 links passing.
 Native DRC is 426/420 with no new short/crossing class; remaining board
 findings are still open.
+Fresh EDA Light validation from committed ref `fe36fb10` reproduces the VCCK
+primitive at 428/420 under KiCad 10.0.6; the DRC delta is retained as a tool
+version difference.
 Fresh EDA Light validation from committed ref `b29c2ae8` reports 455/401 under
 KiCad 10.0.6, reproducing the cohort's connectivity result with the expected
 tool-version DRC delta.
