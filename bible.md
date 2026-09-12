@@ -12720,3 +12720,9 @@ Corrected the validation-only Path-A native storage census so its second
 contract and existing route evidence. No CAD, net assignment, or acceptance
 status changed; the prior census receipt remains historical and a fresh
 current-head receipt is required.
+
+Fresh KiCad Light execution from `f3d09c3c` completed with exit code 0,
+covering 292 storage-island pads and 26 required endpoints. The corrected
+`U14.4 -> U13.9` branch is explicitly retained as OPEN in
+`validation-receipts/patha-native-storage-census-f3d09c3c/`; the integrated
+Path-A route remains incomplete.
