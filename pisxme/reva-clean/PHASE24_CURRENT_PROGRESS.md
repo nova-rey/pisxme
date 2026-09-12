@@ -196,7 +196,7 @@ route evidence (617/410). No VDDREG copper was promoted.
 
 The live canonical schematic is at **311 native ERC warnings / 0 errors**.
 The current actionable ERC census is 132 `endpoint_off_grid`, 126
-`isolated_pin_label`, 30 `same_local_global_label`, 24
+`isolated_pin_label`, 30 `same_local_global_label`, 23
 `multiple_net_names`, and 0 `lib_symbol_mismatch`; the duplicate POWER_INPUT
 wire family and PWR_FLAG namespace mismatch are closed with exact native
 netlist parity. Older counts below

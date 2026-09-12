@@ -8265,6 +8265,9 @@ dogbones while changing only B.Cu lanes. Native SATA endpoint assertions
 passed and aggregate DRC fell to 583, but three true shorts appeared,
 including TUSB SATA into the JMS_REXT/USB3 field. Rejected; no copper was
 promoted.
+The current-progress authoritative override was corrected from the stale
+24 to the measured 23 `multiple_net_names` warnings in the post-alias ERC
+receipt; no raw evidence or CAD was changed.
 The complete JMS583 support audit was corrected to honor its positional PCB
 argument and optional negative-output path. It now correctly fails the
 cumulative baseline on XIN/XOUT/VDDREG and passes the disposable complete
