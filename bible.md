@@ -11745,3 +11745,9 @@ KiCad 10.0.6 while the local authoritative Flatpak is KiCad 10.0.5. The
 committed-ref worker ERC/DRC counts therefore remain version-controlled
 evidence, not a like-for-like replacement for the local live baseline; this
 distinction is recorded in the worker receipt.
+
+2026-09-12 — Phase 24 storage-power worker: isolated KiCad Light validation
+from `8587a0f2` reconfirmed V96 R81 connectivity and its trace-removal
+negative control. KiCad 10.0.6 reported 605/341 DRC versus local KiCad 10.0.5
+603/341; V96 remains focused evidence and U12/U13 source breakout remains
+open.
