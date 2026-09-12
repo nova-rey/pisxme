@@ -12,6 +12,13 @@ defects: crossed crystal dogbones and a VDDREG transition via shorting L10 LXO.
 Corrected those disposable route coordinates while keeping placement,
 orientation, architecture, and canonical copper unchanged.
 
+2026-09-12: Native DRC inspection of the JMS583 placement candidate exposed
+reversed crystal pad approach points and an LXO corridor through the crystal's
+ground pad field. Corrected the local author to use the native XIN/XOUT pad
+ordering, moved L10 to (142,130) within the same pocket, and assigned LXO its
+own ordinary-via B.Cu corridor. This remains disposable implementation work;
+canonical copper is unchanged.
+
 2026-09-12: Established one bounded JMS583 local support-cohort placement
 baseline from native saved-pad geometry: U11 remains at (140,135), Y10 moves
 to (138.2,126.4), and L10 moves to (141,128). Added the deterministic

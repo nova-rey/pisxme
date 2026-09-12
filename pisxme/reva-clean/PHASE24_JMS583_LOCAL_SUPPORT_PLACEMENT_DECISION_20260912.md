@@ -12,7 +12,7 @@ Move the directly related support as follows:
 | Ref | Position | Rotation | Reason |
 |---|---:|---:|---|
 | `Y10` | `(138.20, 126.40)` | 0° | places crystal pads directly north of U11 XIN/XOUT pads |
-| `L10` | `(141.00, 128.00)` | 0° | keeps VDDREG/LXO support in the north-east U11 pocket |
+| `L10` | `(142.00, 130.00)` | 0° | keeps VDDREG/LXO support in the north-east U11 pocket |
 
 The remaining accepted support components stay at their current locations for
 this bounded implementation. No RTL9210B orientation, USB3 corridor,
@@ -31,9 +31,9 @@ support exits:
 | 64 | `LXO` | `(143.00,131.40)` |
 
 At the selected Y10 position, its XIN/XOUT pads are approximately
-`(137.10,127.25)` and `(137.10,125.55)`, respectively. At the selected L10
-position, its LXO/VDDREG pads are approximately `(139.85,128.00)` and
-`(142.15,128.00)`. These are saved native-pad transforms, not schematic
+`(137.10,125.55)` and `(137.10,127.25)`, respectively. At the selected L10
+position, its LXO/VDDREG pads are approximately `(140.85,130.00)` and
+`(143.15,130.00)`. These are saved native-pad transforms, not schematic
 drawing coordinates or pin-list ordering.
 
 ## Physical/topological rationale
