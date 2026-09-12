@@ -1,5 +1,14 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT STORAGE SUPPORT PROBE — CRYSTAL V1 REJECTED — 2026-09-12
+
+The local Y10 relocation trial reconnects both `XIN` and `XOUT`, but the
+explicit full-support audit still fails `JMS_VDDREG_5V`; native KiCad 10.0.5
+DRC is 637 violations / 410 unconnected items, including a local LXO-via
+clearance defect. The candidate is rejected route evidence and is not current
+authority. Receipt:
+`PHASE24_JMS_CRYSTAL_LOCAL_V1_REJECT_RECEIPT_20260912.md`.
+
 ## CURRENT ERC PROBE — DUPLICATE STORAGE LABELS REJECTED — 2026-09-12
 
 Replacing 20 exact duplicate STORAGE `NC_*` labels with named JMS labels was
