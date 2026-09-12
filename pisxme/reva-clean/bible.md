@@ -34,3 +34,7 @@ Fresh Light validation of integrated commit 2b49006b (image sha256:37d60e6797eaa
 ## Phase 24 J1 contract regeneration proof — 2026-09-12
 
 The corrected helper was run from the pre-contract base f581568e in a clean producer workspace. It generated exactly 130 `12V_PROTECTED`, 170 `POWER_GND`, seven existing named contacts, and 93 unassigned pads. The regenerated PCB SHA256 `db621a9c017dadb8611d3b5684f9866eb6cb45b6b5835439841a6e5b7f12d146` exactly matches the integrated candidate, proving generator reproducibility and preserving unknown contacts.
+
+## Phase 24 post-authority queue state — 2026-09-12
+
+The J1 mapping blocker is closed for bounded implementation, with the public reverse-engineering risk boundary retained. Generator identity is proven. The next acceptance work is integrated copper and return repair; one CAD lane remains serialized at a time, with power and Path A storage candidates queued independently.
