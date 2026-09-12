@@ -12660,3 +12660,7 @@ Integrated the Path-A authority/native census evidence at canonical commit `1360
 ## Phase 24 integrated DFM/mechanics census — 2026-09-13
 
 The integrated candidate has six courtyard overlaps, five PTH-inside-courtyard errors, nine co-located drilled holes, and sixteen board-edge clearance errors. J3/J8 conflict with the M.2 2280 envelope; the envelope is fixed and requires placement/routing coordination. A local USON library alias candidate worsened DRC and was rejected. Missing connector 3D models and a stale BOM remain open evidence rows. Raw DFM evidence is retained under `pisxme/reva-clean/validation-receipts/dfm-mechanics-19a/`.
+
+## Phase 24 STORAGE USB3 label candidate integrated — 2026-09-13
+
+Integrated the bounded source-hygiene candidate into the current canonical tree: four existing STORAGE USB3 fanout labels are globalized without changing symbols, wires, coordinates, pins, or net names. Producer and fresh Light validation recorded 351 ERC findings with zero errors and unchanged semantic netlist nodes; integrated revalidation is required before any acceptance-row update.
