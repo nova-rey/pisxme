@@ -390,3 +390,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Reproduced the untouched schematic at `1ff9b715` in fresh isolated Light: KiCad 10.0.6 reports 351 ERC findings with zero errors in the native summary. Findings remain open; no source edits were made.
 
 - 2026-09-13: Regenerated and retained the native KiCad XML netlist from the canonical schematic in fresh Light at `ac3f45d9`; the stale checked-in SATA-era XML remains untouched.
+
+- 2026-09-13: Bound the campaign manifest to fresh Light ERC, native netlist, and untouched PCB baseline receipts; current documentation head is `563b5769`, while physical acceptance remains open.

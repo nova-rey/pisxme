@@ -319,10 +319,14 @@
       "validation-receipts/power-delivery-rejected-20260912/RECEIPT.md",
       "validation-receipts/clearance-repair-producer-rejected-c8710a84/RECEIPT.md",
       "validation-receipts/service-vbus-width-rejected/RECEIPT.md"
-    ]
+    ],
+    "fresh_light_baseline": "validation-receipts/baseline-fresh-light-28ab8fc1/RECEIPT.md",
+    "fresh_light_erc": "validation-receipts/erc-fresh-light-1ff9b715/RECEIPT.md",
+    "fresh_native_netlist": "validation-receipts/netlist-fresh-light-ac3f45d9/RECEIPT.md",
+    "direct_head_drc_context": "validation-receipts/current-head-direct-check-28ab8fc1/RECEIPT.md"
   },
   "blockers": [],
-  "next_action": "Continue bounded materially distinct Path-A storage, power/return, service-width, and clearance methods; serialize any candidate through fresh Light validation. Phase 24 remains OPEN.",
+  "next_action": "Continue bounded integrated physical repairs from 563b5769; any material candidate requires serialized fresh Light validation and updated acceptance-row evidence.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
@@ -400,6 +404,20 @@
       "unconnected_items": 499,
       "receipt": "validation-receipts/current-head-fresh-light-20260912/RECEIPT.md",
       "status": "OPEN_NOT_CLOSURE"
+    },
+    "current_light_baseline": {
+      "source_sha": "28ab8fc1",
+      "violations": 312,
+      "unconnected_items": 499,
+      "toolchain": "KiCad 10.0.6 / pisxme-kicad-light:v1",
+      "scope": "fresh isolated untouched candidate"
+    },
+    "current_erc_baseline": {
+      "source_sha": "1ff9b715",
+      "findings": 351,
+      "errors": 0,
+      "toolchain": "KiCad 10.0.6 / pisxme-kicad-light:v1",
+      "scope": "fresh isolated untouched schematic"
     }
   },
   "external_evidence": {
@@ -409,8 +427,8 @@
     "xiaoyu_repo_head": "c05541e1846b47f51d05a2149ff044d4d2eba727",
     "disposition": "Path A remains selected production; RTL9210B Path B isolated and out of production scope."
   },
-  "current_integrated_sha": "c8710a84",
-  "current_candidate": "c8710a84",
+  "current_integrated_sha": "563b5769",
+  "current_candidate": "563b5769",
   "archive": {
     "path": "/home/nyx/PiSXMe-succession-archive-20260912",
     "contents": [
