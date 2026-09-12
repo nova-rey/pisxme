@@ -12087,3 +12087,6 @@ native DRC is 578/413 with no AVDDL short/crossing class. Broader same-net
 fanout remains open. The first U12 generator version dropped the prior U11
 branch; that source defect was corrected, and the regenerated cumulative
 candidate now passes both endpoint audits and negative controls at 592/412.
+Fresh `kicad-light` validation from committed ref `7f822b9f` reproduces both
+AVDDL endpoint audits, accumulated JMS support, and USB3, including negative
+controls; KiCad 10.0.6 reports 594/412 and the version delta is retained.

@@ -99,6 +99,9 @@ U12 endpoint audits and negative controls; native DRC is 592/412. The first
 generated version dropped the U11 branch and is rejected evidence. Broader
 same-net fanout remains open. Receipt:
 `PHASE24_JMS_AVDDL_U12_LOCAL_RECEIPT_20260912.md`.
+Fresh `kicad-light` validation from committed ref `7f822b9f` reproduces both
+AVDDL endpoint audits, accumulated support, and USB3 at 594/412 under KiCad
+10.0.6; the corrected cumulative candidate is the current support basis.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 

@@ -16,3 +16,7 @@ closure.
 The first generated version accidentally removed the existing U11 branch while
 adding U12. That generator defect is corrected in the saved candidate and in
 `phase24_route_jms_avddl_u12.py`; the earlier file state is rejected evidence.
+Fresh `kicad-light` validation from committed ref `7f822b9f` reproduces both
+AVDDL endpoint audits, the accumulated JMS-support audit, and the USB3 audit,
+including negative controls. KiCad 10.0.6 reports 594 DRC violations / 412
+unconnected items; the tool-version delta is retained.
