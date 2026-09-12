@@ -256,6 +256,15 @@
       "return_code": 5,
       "ignored_checks": 5,
       "status": "OPEN_NOT_CLOSURE"
+    },
+    "rule_context_current": {
+      "receipt": "validation-receipts/rule-context-current-direct-20260912/RECEIPT.md",
+      "candidate": "4a5d1279",
+      "status": "PASS_LOCAL_SCOPE",
+      "fine_tracks": 7,
+      "fine_track_width_violations": 0,
+      "drc": "340 violations / 499 unconnected",
+      "global_rule_preserved": true
     }
   },
   "blockers": [],

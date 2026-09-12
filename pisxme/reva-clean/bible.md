@@ -239,3 +239,6 @@ A clean Light run with `--format json --severity-all` retained a machine-readabl
 
 ### 2026-09-12 — Phase 24 native DRC matrix pointer
 The native DRC acceptance row now points to the exact-head machine-readable JSON receipt while remaining OPEN at 340 violations and 499 unconnected items.
+
+### 2026-09-12 — Phase 24 current rule-context proof
+Fresh Light validation on the current integrated head passed the existing JMS583 fine-escape scope audit: seven 0.10 mm XIN/XOUT tracks remain within the approved window with no fine-net vias, and native DRC reports no fine-net width violations while ordinary board-wide constraints remain active. Raw reports and hashes are retained under `validation-receipts/rule-context-current-direct-20260912/`.
