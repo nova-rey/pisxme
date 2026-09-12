@@ -159,3 +159,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: acceptance/campaign metadata rebound to the latest JMS_AVDDL integrated candidate; DRC evidence is 352/499.
 - 2026-09-12: corrected metadata to physical JMS_AVDDL integration commit `7a47e5f2` rather than the documentation follow-up.
 - 2026-09-12: rejected and reverted the JMS_AVDDL width candidate after fresh DRC exposed a real USB_TXP1↔JMS_AVDDL shorting item; no permissive rule or synthetic repair applied.
+- 2026-09-12: restored campaign/acceptance metadata to safe integrated candidate `7ad72207` after rejecting the JMS_AVDDL width regression; restored fresh DRC is 353/499 with zero shorts.
