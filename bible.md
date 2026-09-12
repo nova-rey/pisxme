@@ -8268,6 +8268,9 @@ promoted.
 The north support V1 replay connected VDDREG but dropped accepted XIN/XOUT,
 AVDD33, VCCO, and VCCK branches; native DRC was 611/404. It is rejected
 route evidence and the cumulative AVDDL-U12 baseline remains authoritative.
+The fixed-Y10 straight-crystal plus outer-VDDREG trial passes all ten JMS
+support joins and its negative control, but native DRC is 641/409 with five
+shorts and four crossings. It is rejected physical route evidence.
 Fresh Light validation from 218533a1 reproduces the cumulative storage
 baseline: XIN, XOUT, and VDDREG remain open while the other retained support
 branches pass; the complete-support negative-control path ran successfully.

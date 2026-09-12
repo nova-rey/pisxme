@@ -1,5 +1,14 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT STORAGE SUPPORT PROBE — STRAIGHT CRYSTAL + VDDREG V1 REJECTED — 2026-09-12
+
+The fixed-Y10 straight crystal escape combined with the outer VDDREG route
+passes all ten JMS support endpoint checks and the negative control, but native
+KiCad 10.0.5 DRC is 641/409 with five shorts and four crossings. It is
+rejected physical route evidence; the cumulative AVDDL-U12 baseline remains
+authoritative. Receipt:
+`PHASE24_JMS_STRAIGHT_VDDREG_V1_REJECT_RECEIPT_20260912.md`.
+
 ## CURRENT STORAGE SUPPORT PROBE — NORTH V1 REJECTED — 2026-09-12
 
 Replaying the co-located north support strategy against the live cumulative
