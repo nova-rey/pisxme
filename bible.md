@@ -11833,3 +11833,13 @@ confirmed the corrected audit fails closed on the current acreage candidate:
 missing J3.12/.14/.16/.18 and source pads are reported explicitly. J1 was
 not misidentified as M.2; no synthetic connectivity or severity waiver was
 introduced.
+2026-09-12 — Phase 24 storage footprint-authority correction: the J3 refresh
+path now loads the reviewed TE 1-2199230-4 M-key footprint instead of the
+obsolete JAE B-key footprint and fails closed if legacy PCB pad ownership is
+missing. This is a source-path correction only; the current incomplete
+candidate was not promoted.
+2026-09-12 — Phase 24 J3 authority probe: corrected the refresh path to use
+the project-local TE 1-2199230-4 M-key footprint. A disposable PCB-only swap
+against the acreage candidate failed closed because legacy J3.12 has no
+source-owned pad. No board was promoted; authoritative schematic regeneration
+is required before the M-key routing field can be validated.

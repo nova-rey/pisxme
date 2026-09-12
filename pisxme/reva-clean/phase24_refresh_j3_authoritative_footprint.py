@@ -14,10 +14,10 @@ if old is None:
 io = pcbnew.PCB_IO_KICAD_SEXPR()
 new = io.FootprintLoad(
     str(ROOT / "PiSXMe_RevA_Clean.pretty"),
-    "JAE_SM3ZS067U410ABR1000_BKEY",
+    "TE_1-2199230-4_MKEY",
 )
 if new is None:
-    raise RuntimeError("authoritative J3 footprint could not be loaded")
+    raise RuntimeError("authoritative TE M-key J3 footprint could not be loaded")
 new.SetReference("J3")
 new.SetValue(old.GetValue())
 new.SetPosition(old.GetPosition())
@@ -31,7 +31,10 @@ board.Add(new)
 for pad in new.Pads():
     prior = old.FindPadByNumber(pad.GetNumber())
     if prior is None:
-        raise RuntimeError(f"authority footprint added unknown pad {pad.GetNumber()}")
+        raise RuntimeError(
+            f"legacy J3 has no source-owned pad {pad.GetNumber()}; "
+            "regenerate from the authoritative M-key schematic before refresh"
+        )
     name = prior.GetNetname()
     resolved = board.FindNet(name) if name else None
     pad.SetNet(resolved)
