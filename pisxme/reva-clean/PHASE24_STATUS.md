@@ -63,6 +63,9 @@ silently replaced.
 The current live ERC cluster map is recorded in
 `PHASE24_CURRENT_ERC_CLUSTER_MAP_20260912.md`; it is based on the canonical
 311-warning report and supersedes older 862/777/485 census prose.
+The latest live-source recheck also passes the ten-child contract map and
+JMS583 support-authority audit; see
+`PHASE24_LIVE_SOURCE_RECHECK_RECEIPT_20260912.md`.
 
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 

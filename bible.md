@@ -12377,6 +12377,13 @@ Fresh KiCad Light passed all ten saved-board dual-mode storage USB3 endpoint
 pairs from `481435f9`. This focused gate remains distinct from full-board DRC
 and Phase 24 closure.
 
+# 2026-09-12 — Phase 24 live source recheck
+
+Rechecked the canonical source: the ten-child live contract map and JMS583
+support-authority audit pass, while native ERC remains 311 warnings / 0
+errors. The STORAGE NC/alias removal probe remains rejected because it changed
+semantic net structure.
+
 # 2026-09-12 — Phase 24 current ERC cluster map
 
 Re-censused the canonical native KiCad 10.0.5 ERC at 311 warnings / 0 errors:
