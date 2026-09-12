@@ -41,9 +41,9 @@ fp(b, 'L10').SetPosition(P(142.00, 130.00))
 # adjacent XOUT pad or the VDDREG B.Cu corridor.
 n = clear(b, 'XIN')
 src = pos(b, 'U11', '50'); dst = pos(b, 'Y10', '1')
-track(b, n, src, (137.40,130.60), F, .10)
-track(b, n, (137.40,130.60), (135.00,130.60), F, .10)
-track(b, n, (135.00,130.60), (135.00,125.55), F, .10)
+track(b, n, src, (137.40,129.80), F, .10)
+track(b, n, (137.40,129.80), (135.00,129.80), F, .10)
+track(b, n, (135.00,129.80), (135.00,125.55), F, .10)
 track(b, n, (135.00,125.55), dst, F, .10)
 path(b, 'XOUT', ('U11','51'), ('Y10','2'),
      [(138.40,130.00),(138.40,127.25)], width=.10)
@@ -52,10 +52,10 @@ path(b, 'XOUT', ('U11','51'), ('Y10','2'),
 # branch transitions outside both pads; no via-in-pad is used.
 n = clear(b, 'JMS_VDDREG_5V')
 src = pos(b, 'U11', '1'); dst = pos(b, 'L10', '2')
-track(b, n, src, (134.80,132.00), F, .15)
-via(b, n, (134.80,132.00))
-track(b, n, (134.80,132.00), (134.80,128.80), B, .15)
-track(b, n, (134.80,128.80), (142.00,128.80), B, .15)
+track(b, n, src, (135.60,130.20), F, .15)
+via(b, n, (135.60,130.20))
+track(b, n, (135.60,130.20), (135.60,128.80), B, .15)
+track(b, n, (135.60,128.80), (142.00,128.80), B, .15)
 via(b, n, (142.00,128.80))
 track(b, n, (142.00,128.80), dst, F, .15)
 

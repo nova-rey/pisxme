@@ -12283,3 +12283,7 @@ the new XIN horizontal escape does not cross the VDDREG departure.
 The native rule condition was simplified to net identity because KiCad track
 objects do not carry footprint identity; this preserves the local-net scope
 without silently relying on a false footprint predicate.
+
+The west VDDREG via experiment was rejected because its ordinary via contacted
+the existing JMS_VCCK route. The accepted local geometry returns to the
+original VDDREG via and places the XIN turn above the VDDREG departure instead.
