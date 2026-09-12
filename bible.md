@@ -11967,3 +11967,10 @@ with local B.Cu transitions, not a change to the storage topology.
 rotation. The earlier apparent overlap was caused by interpreting unrotated
 native pad-size fields, not by malformed footprint authority. The V4 support
 candidate remains rejected for actual U11 escape and RX/support route geometry.
+
+2026-09-12 — Support V6 route evidence: a physically different coupled-channel
+topology assigns TX and RX to separate ordered B.Cu corridors, escapes U11
+outward, and staggers U12 returns. Native actual-pad USB3 connectivity passes
+all ten links with no USB3-specific short or crossing. Full DRC remains open at
+431 violations / 421 unconnected items, including inherited findings and the
+local 0.10 mm escape-width exception; V6 is not promoted.

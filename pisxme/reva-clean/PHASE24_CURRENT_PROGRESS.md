@@ -29,6 +29,12 @@ The U11 footprint audit has been corrected: `JMS583_QFN64_8x8.kicad_mod` uses
 rotated side pads as intended. The earlier apparent pad overlap came from an
 unrotated native size-field inspection and is superseded; the remaining V4
 failure is route geometry, not footprint authority.
+Support V6 is the next physical-envelope topology: TX and RX use separate
+ordered B.Cu channels, with outward U11 escape and staggered U12 returns. All
+ten actual-pad USB3 links pass and V6 has no USB3-specific short or crossing,
+but native DRC remains 431/421 because inherited board findings and the local
+0.10 mm escape width are still open. Receipt:
+`PHASE24_STORAGE_MKEY_USB3_SUPPORT_V6_RECEIPT_20260912.md`.
 Fresh KiCad Light validation independently reports 466/421 for the same V2
 candidate and confirms the rejection class.
 The first complete ten-link support graft is rejected as route implementation:
