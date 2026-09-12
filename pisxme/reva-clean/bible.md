@@ -221,3 +221,6 @@ A bounded hostile review kept the hostile-review row open: required Path-A opens
 
 ### 2026-09-12 — Phase 24 U12 corrected footprint rejected
 A producer candidate applying TI's 0.50 mm perimeter pitch was fresh-validated in Light at 401 DRC violations / 499 unconnected items and introduced solder-mask bridge errors, including JMS_AVDDL to U12 pad 35 `NC_35`. The candidate was rejected and not integrated; the canonical 0.40 mm footprint remains unchanged pending a package-aware pad/copper reallocation.
+
+### 2026-09-12 — Phase 24 U12 rejection metadata
+Campaign metadata records the rejected TI-pitch footprint candidate and its fresh 401/499 Light result. No corrected footprint is integrated; the next method must address pad/copper interactions rather than replaying the same perimeter-only shift.

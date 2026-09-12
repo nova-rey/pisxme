@@ -220,6 +220,14 @@
       "receipt": "PHASE24_HOSTILE_REVIEW_RECEIPT_20260912.md",
       "status": "FAIL_OPEN",
       "required_next": "fresh exact-head validation with ignored-check disposition and regenerated netlist binding"
+    },
+    "u12_corrected_footprint_candidate": {
+      "producer_commit": "26192244de387ce921200f2841713291a2af00f7",
+      "status": "REJECTED",
+      "fresh_light": "401 DRC violations / 499 unconnected items",
+      "reason": "solder-mask bridge errors including JMS_AVDDL to U12 pad 35 NC_35",
+      "receipt": "validation-receipts/u12-corrected-footprint-validation-20260912/RECEIPT.md",
+      "next": "package-aware pad/copper reallocation; do not repeat same perimeter-only shift"
     }
   },
   "blockers": [],
