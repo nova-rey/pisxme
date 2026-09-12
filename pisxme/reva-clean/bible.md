@@ -62,3 +62,7 @@ The rejected `JMS_RESET_N` width candidate remains non-promoted: widening six no
 ## Phase 24 integrated JMS_AVDD33 width repair — 2026-09-13
 
 A single existing non-controlled-impedance `JMS_AVDD33` F.Cu segment (UUID `57d5726b-fa39-4286-b48e-63f5ee85e1ac`) was widened from 0.15 mm to 0.20 mm. Rebased from the current integrated candidate, the bounded Light producer result improved native DRC from 424 to 423 violations with unconnected items unchanged at 499, no shorting items, and no new violation class. Fresh isolated validation remains required.
+
+## Phase 24 fresh JMS_AVDD33 validation — 2026-09-13
+
+Fresh KiCad Light validation of integrated commit `74a86103` reproduced DRC `423 violations / 499 unconnected items` after the single-segment width repair. Native ERC remains open at the existing source findings. Raw producer and fresh-validator reports, stdout, and tool identity are retained under `validation-receipts/width-family-jms-avdd33-segment2-integrated/`.

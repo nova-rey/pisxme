@@ -5,3 +5,5 @@
 - No pads, vias, nets, rules, high-speed corridors, or schematic files changed.
 - Producer Light DRC: `423 violations / 499 unconnected`; prior integrated base: `424 / 499`; no shorting items and no new violation class.
 - This is an integrated candidate result, not Phase 24 closure. Fresh checkout validation is required before acceptance.
+- Fresh Light checkout from integrated commit `74a86103`: DRC `423 / 499`, ERC findings remain the existing open source result; raw reports and stdout are retained beside this receipt.
+- Toolchain: KiCad Light 10.0.6, image `sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9`.
