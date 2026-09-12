@@ -314,3 +314,6 @@ A bounded C36 reference move removed two silk-over-copper findings without chang
 
 ### 2026-09-12 — Phase 24 C36 integrated validation
 Fresh detached Light validation of the C36 repair confirmed 316 DRC violations and 499 unconnected items on commit `61dcf553`; integrated closure remains open.
+
+### 2026-09-12 — Phase 24 C7 silkscreen repair
+A materially different C7 reference move outside the capacitor row removed one silk-over-copper finding without changing copper or connectivity. Producer DRC was 315/499 versus the 316/499 base; the repair is integrated pending fresh exact-head validation.
