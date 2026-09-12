@@ -12246,3 +12246,11 @@ The storage-local crystal V1 trial reconnects XIN/XOUT but leaves VDDREG
 disconnected and raises native DRC to 637/410 with a local LXO-via clearance
 defect. It is rejected route evidence; no crystal or VDDREG copper was
 promoted.
+# 2026-09-12 — Phase 24 JMS583 local fine-pitch escape authorization
+
+The JMS583 support escape is now authorized to use a tightly scoped
+0.10 mm trace / 0.10 mm clearance rule in the immediate U11/Y10 QFN escape
+field, with ordinary 0.60/0.30 mm through-vias retained and normal 0.20 mm
+board routing restored outside the local field. The implementation candidate
+and companion KiCad rule are disposable until native DRC and fresh-Light
+validation pass.
