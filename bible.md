@@ -12303,3 +12303,9 @@ The committed JMS583 fine-escape candidate was rechecked as a storage
 integration artifact: dual-mode USB3, M.2 power ownership, library, schematic,
 and mode-contract audits pass; the full native DRC report is retained for the
 remaining Phase 24 closure work.
+
+2026-09-12 — Native hierarchy serialization probe: the generic Phase 3
+scaffold now emits KiCad root-child sheet `(instances)` project/page records,
+matching the native fixture. The regression test validates the isolated
+generated root rather than accidentally checking the live canonical root, and
+asserts all ten page associations. No production CAD was changed.

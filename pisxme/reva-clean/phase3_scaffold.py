@@ -134,6 +134,9 @@ def sheet_block(name: str, number: int) -> str:
         f'''\n    (pin "{port}" bidirectional (at {x} {y + GRID + (index * GRID)} 180)\n      (effects (font (size 1.27 1.27)) (justify left))\n      (uuid {make_uuid(0x40000000000000000000000000000000 + number * 100 + index)}))'''
         for index, port in enumerate(PORTS[name])
     )
+    # Native KiCad writes this project/page association on each root child
+    # sheet. It is separate from the root-level sheet_instances table.
+    instance = f'''\n    (instances\n      (project "PiSXMe_RevA_Clean"\n        (path "/{ROOT_UUID}" (page "{number}"))\n      )\n    )'''
     return f'''  (sheet
     (at {x} {y})
     (size 25 {sheet_height})
@@ -148,7 +151,7 @@ def sheet_block(name: str, number: int) -> str:
     (property "Sheetname" "{name}" (at {x} {y - 1.27} 0)
       (effects (font (size 1.27 1.27)) (justify left bottom)))
     (property "Sheetfile" "{name}.kicad_sch" (at {x} {y + sheet_height + 1.27} 0)
-      (effects (font (size 1.27 1.27)) (justify left top))){pins})
+      (effects (font (size 1.27 1.27)) (justify left top))){pins}{instance})
 '''
 
 

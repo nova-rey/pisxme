@@ -62,6 +62,7 @@ def main() -> None:
                        env=generator_env, check=True)
 
         root_text = root_schematic.read_text()
+        root_uuid = re.search(r'^\s*\(uuid ([^)]+)\)', root_text, re.MULTILINE).group(1)
         contract_wire_count = sum(
             child.read_text().count('(hierarchical_label "')
             for child in child_schematics
@@ -71,6 +72,9 @@ def main() -> None:
         assert root_text.count('(wire\n') >= contract_wire_count
         assert contract_wire_count > 0
         assert root_text.count('(sheet_instances (path "/" (page "1")))') == 1
+        assert root_text.count('(instances\n      (project "PiSXMe_RevA_Clean"') == len(child_schematics)
+        for page in range(1, len(child_schematics) + 1):
+            assert f'(path "/{root_uuid}" (page "{page}")' in root_text
 
         for child in child_schematics:
             text = child.read_text()
@@ -88,8 +92,8 @@ def main() -> None:
                 [
                     "kicad-cli", "sch", "erc",
                     "--exit-code-violations", "--severity-error",
-                    "--output", str(report), str(ROOT / "PiSXMe_RevA_Clean.kicad_sch"),
-                ], cwd=ROOT, check=False,
+                    "--output", str(report), str(root_schematic),
+                ], cwd=isolated, check=False,
             )
             assert result.returncode == 0, report.read_text() if report.exists() else result
             assert "[hier_label_mismatch]" not in report.read_text()
