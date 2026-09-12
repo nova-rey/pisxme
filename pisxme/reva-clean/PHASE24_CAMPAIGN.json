@@ -1,6 +1,6 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
-  "status": "RESEARCH_REOPENED",
+  "status": "REPAIR_ACTIVE",
   "scope": "Phase 24 and Phase 25 only; Phase 26 prohibited",
   "repository": "nova-rey/pisxme",
   "branch": "reva-clean",
@@ -53,8 +53,8 @@
   },
   "milestones": {
     "M0": "closed: authority, archive, runtime, baseline, and rule-context commissioning evidence retained",
-    "M1": "blocked: authoritative J1/SXM2/V100 mapping unavailable after PI, source, package, and bounded unblocker review attempts",
-    "M2": "open",
+    "M1": "closed: J1 package identity and bounded public net contract integrated and fresh Light-validated",
+    "M2": "open: integrated power/return/copper closure",
     "M3": "open",
     "M4": "open"
   },
@@ -124,27 +124,21 @@
         "auxiliary_or_protection_unknown": 2
       },
       "electrical_authority": "pending bounded reassessment"
+    },
+    "j1_contract_integration": {
+      "integration_commit": "2b49006b",
+      "producer_base": "f581568e",
+      "contract": "130 12V_PROTECTED + 170 POWER_GND; existing lane-0/refclk/reset; 33 unknown/protection untouched",
+      "producer_drc": "431 violations / 499 unconnected",
+      "fresh_light_drc": "433 violations / 499 unconnected",
+      "fresh_light_erc": "355 findings",
+      "fresh_light_netlist": "retained",
+      "tool": "KiCad 10.0.6",
+      "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+      "raw_dir": "validation-receipts/j1-integrated-final-2b49006b"
     }
   },
   "blockers": [
-    {
-      "id": "J1_POWER_PAD_MAPPING",
-      "class": "SPECIFICATION_DECISION",
-      "scope": "integrated power/return acceptance",
-      "evidence": "Read-only PI/storage recheck confirms J1 400 pads with 393 no-net and zero required 12V/ground contacts; V100 footprint absent while schematic declares V100 power/ground/thermal. Narrow parity 814/1262/0 does not cover source-only contacts.",
-      "required": "authoritative SXM2/J1/V100 package pad mapping or approved schematic/footprint source correction",
-      "independent_work": [
-        "source ERC classification",
-        "storage local analysis",
-        "DFM/reference evidence"
-      ],
-      "attempts": [
-        "PI/storage read-only census at 76873ea8",
-        "bounded source/ERC review",
-        "bounded package-authority search",
-        "one-shot Unblocker review attempted; no usable result before runtime stop"
-      ]
-    },
     {
       "id": "HOST_FILESYSTEM_CAPACITY",
       "class": "ENVIRONMENTAL",
@@ -157,7 +151,7 @@
       ]
     }
   ],
-  "next_action": "Have electrical authority decide whether corroborated partial contact contract can be approved while preserving 33 unknown contacts; no CAD mutation until decision",
+  "next_action": "Repair integrated power/return and unrouted rail families using the now-authoritative J1 contract; validate each material candidate in fresh Light",
   "open_evidence": {
     "integrated_power": "Selected PCB has J1 400 pads but only 7 named signals, 393 no-net, zero 12V_PROTECTED/POWER_GND contacts; historical Phase14 power evidence is a different candidate",
     "unrouted_rails": [

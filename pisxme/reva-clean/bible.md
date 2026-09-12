@@ -26,3 +26,7 @@ The external-information escalation was reopened. Private Library commit 7d82216
 ## Phase 24 J1 mechanical cross-check — 2026-09-12
 
 A deterministic parser compared the selected J1 footprint with the pinned Benchoff AMPHENOL_74221-101LF footprint. All 400 A1-K40 identifiers were shared and the identity coordinate transform had 0.0 mm mean and maximum error. The selected PCB currently carries seven named nets only; this receipt proves package/contact identity and preserves the rule that public electrical assignments require explicit authority.
+
+## Phase 24 J1 contract fresh validation — 2026-09-12
+
+Fresh Light validation of integrated commit 2b49006b (image sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9) reported 433 DRC violations and 499 unconnected items, 355 ERC findings, and a retained native netlist export. The topology change is explained by assigning 130 `12V_PROTECTED` and 170 `POWER_GND` J1 contacts; the 33 unknown/protection contacts remain unassigned. The J1 mapping blocker is cleared for bounded repair, while integrated power, returns, routing, and acceptance remain open.
