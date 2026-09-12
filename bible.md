@@ -11763,3 +11763,8 @@ from `8587a0f2` reconfirmed V96 R81 connectivity and its trace-removal
 negative control. KiCad 10.0.6 reported 605/341 DRC versus local KiCad 10.0.5
 603/341; V96 remains focused evidence and U12/U13 source breakout remains
 open.
+2026-09-12 — Phase 24 fresh DFM validation: committed ref `5148df63` was
+validated in a detached KiCad Light checkout. Native DRC independently
+reported 180 violations and 468 unconnected items for `ACREAGE_CANDIDATE`.
+This confirms candidate evidence only; the integrated board and DFM gates
+remain open.

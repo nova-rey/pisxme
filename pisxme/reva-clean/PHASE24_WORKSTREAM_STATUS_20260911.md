@@ -16,7 +16,7 @@ baseline are intentionally tracked separately in
 | Path-B native PCB | Root Foreman / native KiCad | PASS for isolated candidate | Current V1603 candidate: native DRC 0/0 and integrated six-net audit plus six negative controls PASS. Production parity remains open. |
 | Dual-mode storage contract | Root Foreman / focused audit | PASS for mode contract | `phase24_dual_mode_storage_mode_audit.py`: PASS. |
 | Storage power/physical connectivity | Isolated KiCad Light worker `storage-power-20260911` plus Root Foreman integration | OPEN | V96 composes accepted V1562 J3 handoff + V1570 R81 branch. Worker KiCad 10.0.6 confirms R81 native connectivity and negative control; worker DRC 605/341 versus local 10.0.5 603/341. The remaining gate is complete U12/U13 support-pad attachment under an authoritative local breakout, plus inherited board DRC closure. |
-| DFM/native PCB | Isolated KiCad Light worker `phase24-dfm-20260911` plus Root Foreman integration | OPEN | KiCad 10.0.6 committed-ref native DRC is 180 violations / 468 unconnected; KiCad 10.0.5 live dirty-tree check was 180/477. Both are candidate-scoped evidence, not closure. Reconcile version and source/copper delta before selecting target. |
+| DFM/native PCB | Isolated KiCad Light worker `phase24-dfm-20260911` plus fresh validator `dfm-validate-20260912` | OPEN | KiCad 10.0.6 committed-ref native DRC is 180 violations / 468 unconnected, independently reproduced by fresh detached validation. KiCad 10.0.5 live dirty-tree check was 180/477. Candidate-scoped evidence only; manufacturing and integrated-board closure remain open. |
 
 ## Integration rule
 
