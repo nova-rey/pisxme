@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT PATH-B AUDIT — V1603 NEGATIVE CONTROL CORRECTION — 2026-09-12
+
+The V1603 six-net audit now removes all actual saved copper for each
+disposable negative control, handling redundant/zero-length REFCLK segments.
+Local KiCad 10.0.5 and fresh Light validation pass all six native links and
+all six negative controls. Receipt:
+`PHASE24_RTL9210B_V1603_AUDIT_FIX_RECEIPT_20260912.md`.
+
 ## CURRENT STORAGE AUDIT — CORRECTED LIGHT BASELINE — 2026-09-12
 
 Fresh Light validation from committed ref `7c67d297` confirms the corrected

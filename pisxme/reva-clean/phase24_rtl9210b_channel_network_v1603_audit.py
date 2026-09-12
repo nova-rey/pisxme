@@ -32,19 +32,22 @@ for net, (j1_number, _) in NETS.items():
     assert src.GetNetname() == net and dst.GetNetname() == net, net
     assert connected(board, src, dst), f"native connectivity missing: {net}"
 
-    # Select a real source-attached track, then remove only that item in a
-    # disposable saved copy.  This proves the audit is sensitive to copper.
+    # Select a real source-attached track, then remove the complete saved-board
+    # copper set for this net in a disposable copy.  Some reference-clock
+    # paths contain redundant/zero-length segments, so removing one segment is
+    # not a reliable negative control.
     board.BuildConnectivity()
     victim = next((x for x in board.GetConnectivity().GetConnectedItems(src)
                    if isinstance(x, pcbnew.PCB_TRACK) and x.GetNetname() == net), None)
     assert victim is not None, f"no source track for negative control: {net}"
     neg = pcbnew.LoadBoard(str(PCB))
-    neg_victim = next(x for x in neg.GetTracks()
-                      if x.GetNetname() == net and
-                      x.GetStart() == victim.GetStart() and
-                      x.GetEnd() == victim.GetEnd() and
-                      x.GetLayer() == victim.GetLayer())
-    neg.RemoveNative(neg_victim)
+    assert any(x.GetNetname() == net for x in neg.GetTracks())
+    for item in list(neg.GetTracks()):
+        if item.GetNetname() == net:
+            neg.RemoveNative(item)
+    for item in list(neg.Zones()):
+        if item.GetNetname() == net:
+            neg.RemoveNative(item)
     neg_src = pad(neg, "U1", {"REFCLK_P":"61", "REFCLK_N":"62",
                                "LANE0_RXP":"64", "LANE0_RXN":"65",
                                "LANE0_TXN":"67", "LANE0_TXP":"68"}[net])
