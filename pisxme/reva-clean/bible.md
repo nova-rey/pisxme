@@ -284,3 +284,6 @@ A bounded C34 reference move removed two silk-over-copper findings without chang
 
 ### 2026-09-12 — Phase 24 C34 integrated validation
 Fresh detached Light validation of the C34 repair confirmed 326 DRC violations and 499 unconnected items on commit `13cffc38`; integrated closure remains open.
+
+### 2026-09-12 — Phase 24 C29 silkscreen repair
+A bounded C29 reference move removed two silk-over-copper findings without changing copper or connectivity. Producer DRC was 324/499 versus the 326/499 base; the repair is integrated pending fresh exact-head validation.

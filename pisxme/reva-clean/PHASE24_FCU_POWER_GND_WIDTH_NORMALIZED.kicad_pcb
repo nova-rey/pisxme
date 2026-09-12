@@ -14300,7 +14300,7 @@
 		(uuid "d8270751-949f-4d7c-8561-5e7e0c8f5974")
 		(at 174 160)
 		(property "Reference" "C29"
-			(at 0 0 0)
+			(at 0 2.5 0)
 			(layer "F.SilkS")
 			(uuid "3576c5ec-f703-4e3e-ab27-229efd5691da")
 			(effects
