@@ -12253,4 +12253,6 @@ The JMS583 support escape is now authorized to use a tightly scoped
 field, with ordinary 0.60/0.30 mm through-vias retained and normal 0.20 mm
 board routing restored outside the local field. The implementation candidate
 and companion KiCad rule are disposable until native DRC and fresh-Light
-validation pass.
+validation pass. The disposable proof also uses a same-basename KiCad project
+so native DRC loads the companion rule; the exception remains scoped to the
+candidate.
