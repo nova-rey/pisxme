@@ -407,3 +407,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Bound the campaign manifest to the complementary surplus-pad audit; bidirectional coverage remains open pending explicit classification of 448 surplus pads and no-net contacts.
 
 - 2026-09-13: Classified all 448 surplus actual pads by footprint/net family. J1 contributes 393 surplus contacts (170 POWER_GND, 130 12V_PROTECTED, 93 no-net/unknown), reconciling with seven schematic-expected J1 signal contacts to the 400-position package. Remaining no-net connector/IC contacts require explicit disposition.
+
+- 2026-09-13: Retained no-net pad type census: J1 has 93 SMD no-net/unknown contacts; U7 has 24 no-net SMD pads; remaining no-net pads are key/mechanical, NPTH, thermal, or NC families. No assignments were invented; authority disposition remains open.
