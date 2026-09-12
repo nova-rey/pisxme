@@ -1,0 +1,1983 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-12T18:36:08",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/22c473ba-84db-4421-89bc-63e2a894c9ff",
+            "violations": [
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol J1 [SXM2_74221_101LF]",
+                            "pos": {
+                                "x": 0.5588,
+                                "y": 0.9652
+                            },
+                            "uuid": "27fc80ba-d72f-40f2-97a5-105c77c3eee9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol J3 [POWER8]",
+                            "pos": {
+                                "x": 0.5588,
+                                "y": 2.1082
+                            },
+                            "uuid": "98d58e09-e459-4d83-a72a-2a15162993ff"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol J4 [POWER8]",
+                            "pos": {
+                                "x": 0.5588,
+                                "y": 2.3622
+                            },
+                            "uuid": "0872ba04-c285-4181-b651-2c9d33ccc3a3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol J5 [FAN4]",
+                            "pos": {
+                                "x": 0.9144,
+                                "y": 2.794
+                            },
+                            "uuid": "cdb230a8-6629-4e98-8c4f-7589a29b6b1a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol F1 [FUSE_BLOCK]",
+                            "pos": {
+                                "x": 1.143,
+                                "y": 2.1082
+                            },
+                            "uuid": "cfe9e518-0d4a-46c0-83f6-1e9405fc22ec"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol F2 [FUSE_BLOCK]",
+                            "pos": {
+                                "x": 1.143,
+                                "y": 2.3622
+                            },
+                            "uuid": "af01bdce-7072-4e2a-ad12-3757cf32ef62"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C1 [PASSIVE_2]",
+                            "pos": {
+                                "x": 1.3462,
+                                "y": 1.1176
+                            },
+                            "uuid": "27115711-1447-4971-a5e0-d7abf5156968"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C2 [PASSIVE_2]",
+                            "pos": {
+                                "x": 1.3462,
+                                "y": 1.2192
+                            },
+                            "uuid": "07701056-6d1b-4432-937d-29add60610d5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R1 [ZERO_R]",
+                            "pos": {
+                                "x": 1.3462,
+                                "y": 2.8956
+                            },
+                            "uuid": "5896914b-fb58-4706-b16f-78bb4caee787"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol J6 [FAN4]",
+                            "pos": {
+                                "x": 1.5748,
+                                "y": 2.794
+                            },
+                            "uuid": "828017d8-fced-4f4a-8c8f-0478a015bc76"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Package_TO_SOT_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol U2 [LM74700]",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 2.1082
+                            },
+                            "uuid": "f67c3346-c4f0-4dfd-a974-caa636825f48"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Package_TO_SOT_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol U3 [LM74700]",
+                            "pos": {
+                                "x": 1.7018,
+                                "y": 2.6162
+                            },
+                            "uuid": "b176f34d-c80a-45da-923e-7f184a3bfba8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Package_TO_SOT_THT'",
+                    "items": [
+                        {
+                            "description": "Symbol Q1 [MOSFET_3]",
+                            "pos": {
+                                "x": 2.0066,
+                                "y": 2.1082
+                            },
+                            "uuid": "d96e530f-bcdf-4237-8f5a-6e2c5ae2ed83"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Package_TO_SOT_THT'",
+                    "items": [
+                        {
+                            "description": "Symbol Q2 [MOSFET_3]",
+                            "pos": {
+                                "x": 2.0066,
+                                "y": 2.6162
+                            },
+                            "uuid": "b968eb75-e969-4c99-a636-1f4bd49cd198"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol J7 [FAN4]",
+                            "pos": {
+                                "x": 2.2352,
+                                "y": 2.794
+                            },
+                            "uuid": "1de121e7-b4c2-4529-aad8-2d633d15cd5e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [TPSM63606]",
+                            "pos": {
+                                "x": 2.413,
+                                "y": 2.3622
+                            },
+                            "uuid": "8de7449b-7ef0-4349-b023-8d3db97963fb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol J2 [CM5_B2B_100]",
+                            "pos": {
+                                "x": 2.54,
+                                "y": 0.9652
+                            },
+                            "uuid": "f4ab5d2c-a6a2-4bbf-8910-351e03401304"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'SW_NODE_KEEP_OUT'",
+                            "pos": {
+                                "x": 2.6416,
+                                "y": 2.2733
+                            },
+                            "uuid": "910bd68e-b5f8-41e0-8d38-f43a762c2a1f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'CM5_5V_PGOOD'",
+                            "pos": {
+                                "x": 2.6416,
+                                "y": 2.3495
+                            },
+                            "uuid": "b809b837-cae8-48e8-b6d9-719e870b7c1a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'CM5_USB_OTG_ID'",
+                            "pos": {
+                                "x": 2.7686,
+                                "y": 1.143
+                            },
+                            "uuid": "8ffa8867-ce20-42f9-ad77-050cfa539611"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C3 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.1082
+                            },
+                            "uuid": "19625053-c52f-47b9-8d99-55f17e893681"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C4 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.1844
+                            },
+                            "uuid": "63cf4c23-0537-4019-8ee9-83e209d1ae36"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C5 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.2606
+                            },
+                            "uuid": "ba441bc1-67fc-4854-8d14-4800cbd31396"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C6 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.3368
+                            },
+                            "uuid": "597b6b8b-25de-4f7e-b92c-7dd5934845e8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C7 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.413
+                            },
+                            "uuid": "1aa59dbc-3c2c-4fd6-8c64-025868deba73"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R2 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.4892
+                            },
+                            "uuid": "90e8938b-6849-4609-af59-8cc7edb80dc2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R3 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.5654
+                            },
+                            "uuid": "b9b9e1cd-9c8c-4947-8a11-7e374f017618"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R4 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.6416
+                            },
+                            "uuid": "bfd0eb68-bb8d-44d6-a5e2-00196a03dada"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C8 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.7178
+                            },
+                            "uuid": "33d304e1-c1fb-4313-9fa7-32266fa61ab8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C9 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8448,
+                                "y": 2.794
+                            },
+                            "uuid": "4a591ff0-f9d7-4199-bd28-440fd29f9d9c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol J8 [UART4]",
+                            "pos": {
+                                "x": 2.8702,
+                                "y": 2.794
+                            },
+                            "uuid": "84017b6e-9003-42de-bc02-cb24e1fd7ee3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R5 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8956,
+                                "y": 0.508
+                            },
+                            "uuid": "c37af069-daa4-4996-93a6-4fbb0b25dc6f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R6 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8956,
+                                "y": 1.2954
+                            },
+                            "uuid": "7d8a23f9-0d84-4f38-b5d2-8e133d170e49"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R7 [PASSIVE_2]",
+                            "pos": {
+                                "x": 2.8956,
+                                "y": 2.2606
+                            },
+                            "uuid": "a9f305c3-00a7-4e77-8a97-b1b74b8404de"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'USB_SERVICE_DRP'",
+                            "pos": {
+                                "x": 2.921,
+                                "y": 2.1844
+                            },
+                            "uuid": "e7869933-9887-4786-a22f-a683f9c32251"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U4 [TPS2553]",
+                            "pos": {
+                                "x": 3.1496,
+                                "y": 0.508
+                            },
+                            "uuid": "9a4db7b0-b34d-4494-847a-2be9b4bdbbac"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol 'TPS2553' doesn't match copy in library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U4 [TPS2553]",
+                            "pos": {
+                                "x": 3.1496,
+                                "y": 0.508
+                            },
+                            "uuid": "9a4db7b0-b34d-4494-847a-2be9b4bdbbac"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U8 [TPS2553]",
+                            "pos": {
+                                "x": 3.1496,
+                                "y": 1.2954
+                            },
+                            "uuid": "8ea462a9-d2d3-4320-babf-5a5784d25f34"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol 'TPS2553' doesn't match copy in library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U8 [TPS2553]",
+                            "pos": {
+                                "x": 3.1496,
+                                "y": 1.2954
+                            },
+                            "uuid": "8ea462a9-d2d3-4320-babf-5a5784d25f34"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U12 [USB2_DRP]",
+                            "pos": {
+                                "x": 3.1496,
+                                "y": 2.2606
+                            },
+                            "uuid": "7a1ce47f-99ac-4bdc-9fbd-b612c77f3ef1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Unconnected \"no connection\" flag",
+                    "items": [
+                        {
+                            "description": "No Connect",
+                            "pos": {
+                                "x": 3.302,
+                                "y": 0.7874
+                            },
+                            "uuid": "e5997b09-f35a-4da1-b2aa-23dd792dfa7c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "no_connect_dangling"
+                },
+                {
+                    "description": "Unconnected \"no connection\" flag",
+                    "items": [
+                        {
+                            "description": "No Connect",
+                            "pos": {
+                                "x": 3.302,
+                                "y": 1.397
+                            },
+                            "uuid": "dffa13e9-38d3-4192-b28e-da1d461a8d2f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "no_connect_dangling"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'SERVICE_INT_N'",
+                            "pos": {
+                                "x": 3.3782,
+                                "y": 2.2352
+                            },
+                            "uuid": "357470b7-5cc4-4133-8891-d5b836f79dc7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'USB_SERVICE_ORIENT'",
+                            "pos": {
+                                "x": 3.3782,
+                                "y": 2.2606
+                            },
+                            "uuid": "08f705a7-9b6b-46c0-b9dc-6e5cf1dc8238"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U13 [TPS2553]",
+                            "pos": {
+                                "x": 3.4036,
+                                "y": 2.2606
+                            },
+                            "uuid": "0a4c2f71-c201-4def-9819-a21fe8ca7a25"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol 'TPS2553' doesn't match copy in library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U13 [TPS2553]",
+                            "pos": {
+                                "x": 3.4036,
+                                "y": 2.2606
+                            },
+                            "uuid": "0a4c2f71-c201-4def-9819-a21fe8ca7a25"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol TP3 [TESTPOINT_1]",
+                            "pos": {
+                                "x": 3.4036,
+                                "y": 2.794
+                            },
+                            "uuid": "2c4c5be6-bda8-47b1-bd50-0e25c4f344f4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U6 [TPD4EUSB30]",
+                            "pos": {
+                                "x": 3.5052,
+                                "y": 0.889
+                            },
+                            "uuid": "5eaffbc7-1f76-46bc-b6a9-5136f8b1aabc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U17 [USB2_ESD]",
+                            "pos": {
+                                "x": 3.5052,
+                                "y": 1.2954
+                            },
+                            "uuid": "e4317d52-f8c1-4750-818e-0e0f0400436f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol 'USB2_ESD' doesn't match copy in library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U17 [USB2_ESD]",
+                            "pos": {
+                                "x": 3.5052,
+                                "y": 1.2954
+                            },
+                            "uuid": "e4317d52-f8c1-4750-818e-0e0f0400436f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U10 [TPD4EUSB30]",
+                            "pos": {
+                                "x": 3.5052,
+                                "y": 1.4986
+                            },
+                            "uuid": "1719e9e3-c53e-4068-8c6d-4347c1ab04ff"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U18 [USB2_ESD]",
+                            "pos": {
+                                "x": 3.5052,
+                                "y": 1.905
+                            },
+                            "uuid": "fcb8546f-4bb5-4177-9f0b-8295877892d4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol 'USB2_ESD' doesn't match copy in library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U18 [USB2_ESD]",
+                            "pos": {
+                                "x": 3.5052,
+                                "y": 1.905
+                            },
+                            "uuid": "fcb8546f-4bb5-4177-9f0b-8295877892d4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U14 [INVERTER]",
+                            "pos": {
+                                "x": 3.5052,
+                                "y": 2.4384
+                            },
+                            "uuid": "0a2d1de0-2a46-4ac9-8729-f18c3f380a6e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U15 [USB2_ESD]",
+                            "pos": {
+                                "x": 3.5052,
+                                "y": 2.6416
+                            },
+                            "uuid": "1e69f16e-a1f8-44dd-bc9f-64c9c235eef7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol 'USB2_ESD' doesn't match copy in library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U15 [USB2_ESD]",
+                            "pos": {
+                                "x": 3.5052,
+                                "y": 2.6416
+                            },
+                            "uuid": "1e69f16e-a1f8-44dd-bc9f-64c9c235eef7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_mismatch"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'SERVICE_FAULT'",
+                            "pos": {
+                                "x": 3.6322,
+                                "y": 2.2479
+                            },
+                            "uuid": "05420674-1851-480d-9d8f-6488f343ace7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol U16 [TPSM63606]",
+                            "pos": {
+                                "x": 3.6576,
+                                "y": 2.0574
+                            },
+                            "uuid": "4d1c40b9-2ef1-4fe7-99b1-ad21d17c3cc9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Unconnected \"no connection\" flag",
+                    "items": [
+                        {
+                            "description": "No Connect",
+                            "pos": {
+                                "x": 3.7084,
+                                "y": 0.8128
+                            },
+                            "uuid": "d31584e7-e4eb-49bc-b8e6-e3eed2e26d0d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "no_connect_dangling"
+                },
+                {
+                    "description": "Unconnected \"no connection\" flag",
+                    "items": [
+                        {
+                            "description": "No Connect",
+                            "pos": {
+                                "x": 3.7084,
+                                "y": 0.8382
+                            },
+                            "uuid": "2356f449-4316-4110-9325-d454a96adfdd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "no_connect_dangling"
+                },
+                {
+                    "description": "Unconnected \"no connection\" flag",
+                    "items": [
+                        {
+                            "description": "No Connect",
+                            "pos": {
+                                "x": 3.7084,
+                                "y": 1.4224
+                            },
+                            "uuid": "6f954490-316b-4b88-ad24-c5b42dfb70bb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "no_connect_dangling"
+                },
+                {
+                    "description": "Unconnected \"no connection\" flag",
+                    "items": [
+                        {
+                            "description": "No Connect",
+                            "pos": {
+                                "x": 3.7084,
+                                "y": 1.4478
+                            },
+                            "uuid": "5037c97e-f2e9-4101-9b25-10323af9c06d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "no_connect_dangling"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol J9 [USB_A_FAST]",
+                            "pos": {
+                                "x": 3.7592,
+                                "y": 0.508
+                            },
+                            "uuid": "2b6acce0-0a7c-4a7c-9bbc-d30bb0916fae"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol J10 [USB_A_FAST]",
+                            "pos": {
+                                "x": 3.7592,
+                                "y": 1.2954
+                            },
+                            "uuid": "cf411faa-6a5c-407d-a833-50a6bc944c3e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'PiSXMe'",
+                    "items": [
+                        {
+                            "description": "Symbol J11 [USB_C_SERVICE]",
+                            "pos": {
+                                "x": 3.7592,
+                                "y": 2.3114
+                            },
+                            "uuid": "d98a96dc-b1e6-4097-8988-a67854af02b8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Label 'USB_SW_NODE_KEEP_OUT'",
+                            "pos": {
+                                "x": 3.8862,
+                                "y": 2.1463
+                            },
+                            "uuid": "ea9cb00b-c513-43b5-8c9a-8cfcd8aa6b69"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C10 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 1.85
+                            },
+                            "uuid": "0318d09c-5214-4879-996b-f89323637761"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 1.85
+                            },
+                            "uuid": "54e22063-8d18-4c0c-bc6e-c5a08aa911de"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C11 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 1.9262
+                            },
+                            "uuid": "783e004f-4801-41de-9260-2a969fb777f0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 1.9262
+                            },
+                            "uuid": "e848f9d3-7202-485d-8587-1243ee88b80e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.0024
+                            },
+                            "uuid": "9a2df492-32ac-4049-b824-c651bbd1f954"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C12 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.0024
+                            },
+                            "uuid": "b1245d46-12ce-4e75-bbb6-59acc108e74c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C13 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.0786
+                            },
+                            "uuid": "8874e48a-f80f-4e03-93db-348ea0c9f00f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.0786
+                            },
+                            "uuid": "da20bfe1-d424-476d-83b8-284d6e9bd635"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.1548
+                            },
+                            "uuid": "26543460-2413-4cb8-aa89-bad6b83abe63"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C14 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.1548
+                            },
+                            "uuid": "94c64de7-4e0e-4233-8b70-1d82c22a0bde"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.231
+                            },
+                            "uuid": "17976708-e79e-457b-bdf3-dfb2a54d9d58"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R8 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.231
+                            },
+                            "uuid": "d68a4653-4834-48ea-8c0d-998d35100341"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.3072
+                            },
+                            "uuid": "a285e622-b2b1-4df7-9b6f-ba6d74e8fdea"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R9 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.3072
+                            },
+                            "uuid": "ca788f9a-a585-4fe0-ba25-894ab47b0a4b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R10 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.3834
+                            },
+                            "uuid": "187b95d4-a7e2-458a-9f09-4ab057988940"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.3834
+                            },
+                            "uuid": "c7046502-7de6-4248-be95-5f1ed7881cfc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.4596
+                            },
+                            "uuid": "68075cab-4dc1-44c3-93be-ad2d95e24c04"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R11 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.0968,
+                                "y": 2.4596
+                            },
+                            "uuid": "8da2f6aa-47b0-4284-9c43-d357155d46a0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C10 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.3,
+                                "y": 1.85
+                            },
+                            "uuid": "14d806a1-731c-41f4-9d07-6b07efa73679"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C11 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.3,
+                                "y": 1.9262
+                            },
+                            "uuid": "facfe814-19cc-483d-aed0-ad16f425378f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C12 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.3,
+                                "y": 2.0024
+                            },
+                            "uuid": "2c0b739c-fa15-48c1-98e3-36b46ca9ba46"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C13 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.3,
+                                "y": 2.0786
+                            },
+                            "uuid": "e9eca592-2c2e-4bd3-b32f-d3e9ebfd31f0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C14 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.3,
+                                "y": 2.1548
+                            },
+                            "uuid": "8b7b6cb5-bc55-4f0a-87df-731a1249b8e3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R8 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.3,
+                                "y": 2.231
+                            },
+                            "uuid": "760f8bf4-0507-4124-8025-ca9bde558f4d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R9 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.3,
+                                "y": 2.3072
+                            },
+                            "uuid": "cc9bf685-7c48-44b7-9deb-ad3a4daed54a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R10 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.3,
+                                "y": 2.3834
+                            },
+                            "uuid": "ba80ac63-2349-41c1-8e7b-38226bb76fef"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R11 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.3,
+                                "y": 2.4596
+                            },
+                            "uuid": "20eaada7-da63-4df2-b69b-6e723c631609"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C15 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 1.85
+                            },
+                            "uuid": "37ada195-0847-45ae-9db4-ffc2be20f9fc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 1.85
+                            },
+                            "uuid": "dac54b2e-210e-4614-ae62-3a11375afd9c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C16 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 1.9262
+                            },
+                            "uuid": "99c4dcd8-ac68-4a94-8243-83296172d39d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 1.9262
+                            },
+                            "uuid": "c2a705ea-77a0-4b8a-a6be-77b5c4e27396"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C17 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 2.0024
+                            },
+                            "uuid": "38c2f948-5e15-47ed-9e27-ae0cd67a49af"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 2.0024
+                            },
+                            "uuid": "717d5505-500f-4189-90a6-c2a5e6eba504"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 2.0786
+                            },
+                            "uuid": "05c9416c-fc6f-4f7e-84af-acd462ba425f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C18 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 2.0786
+                            },
+                            "uuid": "a6f4e1fb-c590-4ecd-be79-05537f751427"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R4 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 2.6
+                            },
+                            "uuid": "d2ce2c2a-b81f-4e3d-9296-0385bb15a12e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 2.6
+                            },
+                            "uuid": "e59f67c5-1745-4d4a-ac37-a8cd38f6010f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 2.6762
+                            },
+                            "uuid": "71eed92a-0d33-471f-8fd1-7e1423fc3ca5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R4 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 2.6762
+                            },
+                            "uuid": "e085aeb8-f1d5-4384-a09d-3692230aa1ee"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C5 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 2.7524
+                            },
+                            "uuid": "26a880d5-83d5-48f3-8969-34fef1438299"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.4968,
+                                "y": 2.7524
+                            },
+                            "uuid": "4ba73d83-e841-48c3-9c12-33f5cd89426b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.5032,
+                                "y": 1.85
+                            },
+                            "uuid": "d3647b28-1280-4ea3-9c8c-d3a2677b9d12"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.5032,
+                                "y": 1.9262
+                            },
+                            "uuid": "d30f046c-0687-4fd0-9d7e-09de746afb12"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.5032,
+                                "y": 2.0024
+                            },
+                            "uuid": "5a2277c2-15c8-4ec5-bf4f-a119cdf4ee31"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.5032,
+                                "y": 2.0786
+                            },
+                            "uuid": "f3a15938-3e5f-4c91-90e8-266295d296aa"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.5032,
+                                "y": 2.1548
+                            },
+                            "uuid": "d4980720-06e9-4876-a437-d3cc95387184"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.5032,
+                                "y": 2.231
+                            },
+                            "uuid": "b6b89817-bb22-458f-907b-aedc987fe778"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.5032,
+                                "y": 2.3072
+                            },
+                            "uuid": "87897bdd-a907-4727-9561-af560eea6b23"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.5032,
+                                "y": 2.3834
+                            },
+                            "uuid": "ed838b18-e992-4bdd-87e7-025f924b282c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.5032,
+                                "y": 2.4596
+                            },
+                            "uuid": "350b34cb-7889-4985-814a-64507ba171d2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C15 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.7,
+                                "y": 1.85
+                            },
+                            "uuid": "a430544c-90f7-4029-8bd1-a48841d489c4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C16 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.7,
+                                "y": 1.9262
+                            },
+                            "uuid": "ef8ffa0b-b05c-4575-b6f0-c6b14aedb27c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C17 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.7,
+                                "y": 2.0024
+                            },
+                            "uuid": "80d9009c-a2c9-4975-8790-cf596f14ab33"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C18 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.7,
+                                "y": 2.0786
+                            },
+                            "uuid": "1cf01dee-2b3f-44da-b47d-c2423a5dcf0f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R4 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.7,
+                                "y": 2.6
+                            },
+                            "uuid": "7f554826-8609-4134-a2d7-73a4ecd77453"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Resistor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol R4 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.7,
+                                "y": 2.6762
+                            },
+                            "uuid": "b5737c60-b08a-44d1-892f-303ed18340c6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "The current configuration does not include the footprint library 'Capacitor_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol C5 [PASSIVE_2]",
+                            "pos": {
+                                "x": 4.7,
+                                "y": 2.7524
+                            },
+                            "uuid": "1a29720c-ee94-489e-bd4a-e295f98e74a3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.9032,
+                                "y": 1.85
+                            },
+                            "uuid": "65af2b70-bf1b-4b4e-a6d4-405d181b710f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.9032,
+                                "y": 1.9262
+                            },
+                            "uuid": "819f9899-9300-4294-9d14-f29ff27bd3da"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.9032,
+                                "y": 2.0024
+                            },
+                            "uuid": "d1d75af9-7789-447b-aef1-216b3b4b2f37"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.9032,
+                                "y": 2.0786
+                            },
+                            "uuid": "3c58d173-717d-4661-8d87-39d2ebe441ab"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.9032,
+                                "y": 2.6
+                            },
+                            "uuid": "d0ccadb1-2b1f-4cc3-8a6e-1e732d55c6e0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.9032,
+                                "y": 2.6762
+                            },
+                            "uuid": "1925f79d-ffec-4013-becd-a8acf7581706"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0254 mm",
+                            "pos": {
+                                "x": 4.9032,
+                                "y": 2.7524
+                            },
+                            "uuid": "783b75c0-bee9-47f2-86e7-b4c00fb636e0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                }
+            ]
+        }
+    ],
+    "source": "PiSXMe.kicad_sch"
+}
