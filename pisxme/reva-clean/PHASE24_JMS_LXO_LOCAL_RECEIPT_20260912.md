@@ -11,3 +11,8 @@ Native KiCad 10.0.5: LXO endpoint connectivity PASS and trace-removal negative
 control PASS. Native DRC is 564 violations / 414 unconnected items; no LXO
 short/crossing finding is present. The candidate remains cumulative support
 evidence, not full-board closure.
+
+Fresh `kicad-light` validation from committed ref `c11202b3` reproduces the
+LXO audit, accumulated JMS-support audit, and USB3 audit. KiCad 10.0.6
+reports 566 DRC violations / 414 unconnected items; the tool-version delta
+is retained.

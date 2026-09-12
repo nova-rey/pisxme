@@ -84,6 +84,8 @@ The LXO primitive adds the native U11.64-to-L10.1 join with an ordinary-via
 transition and local 0.15 mm escape. Its endpoint and negative-control audits
 pass; native DRC is 564/414 with no LXO short/crossing finding. Receipt:
 `PHASE24_JMS_LXO_LOCAL_RECEIPT_20260912.md`.
+Fresh `kicad-light` validation from committed ref `c11202b3` reproduces the
+LXO, accumulated-support, and USB3 audit passes at 566/414 under KiCad 10.0.6.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
