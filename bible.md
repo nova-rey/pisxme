@@ -12465,6 +12465,13 @@ Promoted the exact-count-guarded rename of the 11 ordinary STORAGE
 reduced `multiple_net_names` from 23 to 22; normalized native netlist parity
 passed. Remaining ERC and acreage DRC work stays open.
 
+# 2026-09-12 - Phase 24 ERC cluster-map refresh
+
+Refreshed the live ERC cluster map after the Ethernet grid and M2_GND alias
+promotions. The current electrical census is 300 warnings / 0 errors; worker
+environment classifications are explicitly separated, and historical 311
+counts remain evidence only.
+
 # 2026-09-12 - Phase 24 current-pointer reconciliation
 
 Updated the Phase 24 current-state documents to point at the verified

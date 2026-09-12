@@ -1,25 +1,27 @@
 # Phase 24 current ERC cluster map
 
 Date: 2026-09-12  
-Source: native KiCad 10.0.5 report `PiSXMe_RevA_Clean-erc.rpt` generated from
-the canonical clean root at committed checkpoint `dad809ec`.
+Source: fresh native KiCad Light report generated from the canonical clean root
+at committed checkpoint `097de6a4`; worker environment classifications are
+listed separately from project electrical warnings.
 
 ## Live census
 
 | Class | Root | CORE_CM5 | STORAGE | Total | Current interpretation |
 |---|---:|---:|---:|---:|---|
-| `endpoint_off_grid` | 132 | 0 | 0 | 132 | repeated generated-coordinate/grid contract; investigate transformation before hand edits |
+| `endpoint_off_grid` | 121 | 0 | 0 | 121 | repeated generated-coordinate/grid contract; Ethernet support-group grid repair is promoted |
 | `isolated_pin_label` | 126 | 0 | 0 | 126 | mixed intentional single-pin labels and authoring patterns; classify by label role before repair |
 | `same_local_global_label` | 23 | 5 | 2 | 30 | remaining repeated boundary/circuit naming pattern; must preserve net identity |
-| `multiple_net_names` | 0 | 0 | 23 | 23 | STORAGE alias/ownership cluster; resolve from pin/net contracts, never by deleting labels for count reduction |
-| **Total** | **155** | **5** | **25** | **311** | zero native severity-error findings |
+| `multiple_net_names` | 0 | 0 | 22 | 22 | STORAGE alias/ownership cluster; one safe M2_GND normalization is promoted |
+| **Total electrical** | **143** | **5** | **25** | **300** | zero native severity-error findings |
+
+Fresh Light additionally reports 53 `lib_symbol_issues` and 3
+`footprint_link_issues` from the worker environment, for 356 total findings.
 
 ## Remediation order
 
-1. `endpoint_off_grid`: highest leverage if one generator/coordinate cause is
-   confirmed. Use a disposable source transformation, native ERC, and exact
-   netlist parity before promotion. Do not normalize coordinates by warning
-   count alone.
+1. `endpoint_off_grid`: the Ethernet support-group coordinate cause is now
+   repaired and validated; the remaining 121 require separate classification.
 2. `isolated_pin_label`: classify local labels, global labels, hierarchy
    contracts, and no-connect intent. Promote only identity-preserving repairs;
    isolated labels attached to an intentional single pin are not automatically
