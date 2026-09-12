@@ -11898,3 +11898,7 @@ reference into the current M-key candidate. All four J7-to-U12 links and a
 real track-removal negative control pass, but integrated DRC remains 505/427
 because the U12 launch crosses current CM5_PERST and clearance/plane geometry.
 This is the preferred source-escape basis, not production copper.
+
+Fresh KiCad Light independently reproduced the V121 graft's four endpoint
+passes and negative control, with 507/427 integrated DRC/open findings. The
+candidate remains rejected pending a local U12 launch repair.

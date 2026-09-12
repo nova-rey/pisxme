@@ -17,6 +17,10 @@ DRC reports **505 violations / 427 unconnected items**. The new launch has
 real crossings and clearance/hole-clearance interactions at U12, including
 crossing the existing `CM5_PERST` corridor; it is not production-ready.
 
+Fresh detached KiCad Light validation reproduced all four endpoint passes and
+the negative control, and reported **507 violations / 427 unconnected items**.
+The two-count tool-version delta is recorded; it does not alter the rejection.
+
 ## Classification
 
 This is a **route integration failure**, not a failure of the V121 source
