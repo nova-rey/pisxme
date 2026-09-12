@@ -242,3 +242,6 @@ The native DRC acceptance row now points to the exact-head machine-readable JSON
 
 ### 2026-09-12 — Phase 24 current rule-context proof
 Fresh Light validation on the current integrated head passed the existing JMS583 fine-escape scope audit: seven 0.10 mm XIN/XOUT tracks remain within the approved window with no fine-net vias, and native DRC reports no fine-net width violations while ordinary board-wide constraints remain active. Raw reports and hashes are retained under `validation-receipts/rule-context-current-direct-20260912/`.
+
+### 2026-09-12 — Phase 24 C38 silkscreen repair
+A bounded C38 reference move from local (0,0) to (0,2.5) removed two silk-over-copper findings without changing copper or connectivity. Producer DRC was 338/499 versus the 340/499 base; the repair is integrated pending fresh exact-head validation.

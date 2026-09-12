@@ -985,7 +985,7 @@
 		(uuid "0240941b-9e62-4b98-bfb0-ca40827a5793")
 		(at 182 168)
 		(property "Reference" "C38"
-			(at 0 0 0)
+			(at 0 2.5 0)
 			(layer "F.SilkS")
 			(uuid "0b18f9b0-3546-4eeb-a552-8dad0a5404cf")
 			(effects
