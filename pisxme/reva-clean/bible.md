@@ -180,3 +180,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: integrated bounded C14/C15 reference-text moves; fresh Light DRC 340/499 with two silk findings removed and zero shorts.
 - 2026-09-12: acceptance/campaign metadata rebound to C14/C15 integrated candidate; fresh DRC is 340/499.
 - 2026-09-12: corrected metadata to physical C14/C15 integration commit `fc2b79f8`.
+- 2026-09-12: retained fresh integrated schematic-parity DRC and native schematic netlist export; DRC 340/499, netlist RC 0, hashes preserved.
