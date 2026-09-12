@@ -11860,3 +11860,8 @@ from the current native root XML. All 814 expected schematic nodes match PCB
 pad/net ownership exactly; the nine J3 power pads are present and correctly
 owned but intentionally unrouted. Native DRC is 814/440 and the power-owner
 audit fails only on absent copper. No canonical board was promoted.
+2026-09-12 — Phase 24 storage power handoff: an actual-pad-derived
+STORAGE_3V3 probe connected all nine TE M-key J3 power contacts to U14.5;
+native owner audit and real trace-removal negative control both pass. The
+isolated candidate remains DRC-open at 544/431 and was not promoted to the
+canonical acreage board.
