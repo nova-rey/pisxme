@@ -42,7 +42,7 @@
       "parity": "814 authoritative nodes / 1262 PCB pads / 0 mismatches",
       "receipt": "phase24-baseline-exec/receipts/PHASE24_BASELINE_REPRODUCTION_RECEIPT_20260912.md"
     },
-    "rule_context": {"status": "PROVEN_AND_INTEGRATED", "candidate": "3edc4f94e0bf40667c5a03449c51168880eb8950", "integrated_commit": "d044316c", "evidence": "KiCad 10.0.6 positive/negative/outside probes and fresh Light candidate validation; local fine rule effective and normal POWER_GND constraint retained."},
+    "rule_context": {"status": "PROVEN_AND_INTEGRATED", "candidate": "3edc4f94e0bf40667c5a03449c51168880eb8950", "integrated_commit": "d044316c", "evidence": "KiCad 10.0.6 positive/negative/outside probes and fresh Light candidate validation; local fine rule effective and normal POWER_GND constraint retained.", "raw_retention": "with-context report/log and patch copied; duplicate-named negative/outside reports were not separately copied before disposable workspace release and must be regenerated if needed for final manifest"},
     "integration_candidate": "bc137a8f82ae258129704700a39e01fa8ef07cc2",
     "validation": {"status": "OPEN_NOT_CLOSURE", "workspace": "/home/nyx/eda-workspaces/validation-tusb-integrated-validate-20260912T174403Z", "drc": "433 violations / 265 unconnected", "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9", "receipt": "validation.json", "scope": "TUSB footprint plus integrated DRC; Phase24 remains incomplete"}
   },

@@ -12593,6 +12593,14 @@ unconnected items with the approved local rule context. This is a material
 candidate result, not Phase 24 closure; power, connectivity, ERC, DFM and
 mechanical gates remain open.
 
+# 2026-09-12 - Phase 24 rule probe artifact retention note
+
+Retained the context-positive DRC report/log and producer patch under
+`validation-receipts/rule-context-d044316c` before releasing the disposable
+workspace. The duplicate-named negative and outside-normal raw reports were
+not separately copied and must be regenerated if required for the final
+manifest; their observed counts remain recorded in the campaign receipt.
+
 # 2026-09-12 - Phase 24 integrated power mapping blocker
 
 The selected integrated PCB still assigns no named power or ground pads to J1:

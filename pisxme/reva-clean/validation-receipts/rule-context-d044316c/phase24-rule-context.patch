@@ -1,0 +1,52 @@
+From 3edc4f94e0bf40667c5a03449c51168880eb8950 Mon Sep 17 00:00:00 2001
+From: Nyx <nyx@local>
+Date: Sat, 12 Sep 2026 12:30:02 -0500
+Subject: [PATCH] phase24: establish normalized board rule context
+
+---
+ bible.md                                               | 10 ++++++++++
+ .../PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru   |  5 +++++
+ .../PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pro   |  1 +
+ 3 files changed, 16 insertions(+)
+ create mode 100644 pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru
+ create mode 100644 pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pro
+
+diff --git a/bible.md b/bible.md
+index 5dde3f45..c2d084f5 100644
+--- a/bible.md
++++ b/bible.md
+@@ -12555,3 +12555,13 @@ Stopped new engineering by explicit user direction. Archived pre-existing
+ uncommitted and untracked worktree material outside the repository, left the
+ authoritative branch clean, and finalized the self-contained successor packet.
+ Phase 24 remains incomplete; Phase 25 was not started.
++
++# 2026-09-12 - Phase 24 selected-project rule context
++
++Added a target-basename KiCad project sidecar and copied the approved local
++JMS583 XIN/XOUT 0.10 mm rule beside the normalized ground-width board. The
++existing sibling `sym-lib-table` and `fp-lib-table` resolve to the checked-in
++local symbol and footprint libraries. Native KiCad 10.0.6 probes showed the
++rule removes all seven fine-escape width violations while retaining the
++ordinary 0.20 mm rule for a POWER_GND outside-normal probe; the board and
++schematic geometry were unchanged.
+diff --git a/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru b/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru
+new file mode 100644
+index 00000000..7d41d7db
+--- /dev/null
++++ b/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru
+@@ -0,0 +1,5 @@
++(version 1)
++(rule "jms583 local qfn escape"
++  (condition "A.NetName == 'XIN' || A.NetName == 'XOUT' || B.NetName == 'XIN' || B.NetName == 'XOUT'")
++  (constraint clearance (min 0.10mm))
++  (constraint track_width (min 0.10mm)))
+diff --git a/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pro b/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pro
+new file mode 100644
+index 00000000..0967ef42
+--- /dev/null
++++ b/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pro
+@@ -0,0 +1 @@
++{}
+-- 
+2.43.0
+
