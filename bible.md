@@ -12449,3 +12449,11 @@ candidate baseline and does not replace the retained 612/409 evidence.
 The writable Light producer passed the MIC2545A land-pattern DFM audit and
 native DRC for the isolated RTL9210B V1603 candidate at 0 violations / 0
 unconnected items. Full acreage integration remains open.
+
+# 2026-09-12 - Phase 24 Ethernet grid repair validation
+
+Fresh KiCad Light validation of the promoted Ethernet support-group grid
+repair passed live hierarchy-contract mapping and native ERC with zero
+errors. The electrical warning census fell from 311 to 300, with
+endpoint_off_grid reduced from 132 to 121 and no new electrical warning
+class. Full Phase 24 remains open for the remaining ERC and acreage DRC work.
