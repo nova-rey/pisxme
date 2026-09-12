@@ -15,3 +15,5 @@ Findings:
 Required next bounded work: reconcile one approved current envelope, then generate a native rail/pad/track/via/zone census with negative controls, followed by owned power-corridor repair and fresh Light validation. Historical Phase 14 geometry cannot close current-candidate power evidence. The power acceptance row remains OPEN.
 
 Rejected candidate: widening JMS_AVDDL segment UUID `9b2560e2-5de6-4bee-a602-e30e5f51e8b3` introduced a native `shorting_items` error between `USB_TXP1` and `JMS_AVDDL`; the width change is reverted and must not be reused without a new pad-aware route hypothesis.
+
+Rejected candidate: widening JMS_VCCO segment UUID `6a146454-e8fb-4fc9-aca2-735413e38240` reduced the width count but introduced one native shorting item; no integration performed.
