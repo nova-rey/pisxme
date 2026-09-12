@@ -12535,3 +12535,10 @@ mismatches. It is the current repair basis, not Phase 24 closure.
 Rejected a disposable full-acreage BRIDGE_1V1 F.Cu power plane because native
 DRC and unconnected counts did not change from 440/265. No canonical power
 architecture or PCB was changed.
+
+# 2026-09-12 - Phase 24 JMS583 local ground escape rejections
+
+Rejected two native-D RC-tested local U11/Y10 POWER_GND escape attempts:
+the zone version exposed one USB_TXP1/JMS_AVDDL short, and explicit
+pad-to-via links exposed nine pad-field shorts. Preserved the evidence and
+kept the U11 placement/architecture closed.
