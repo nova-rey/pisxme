@@ -228,6 +228,25 @@
       "reason": "solder-mask bridge errors including JMS_AVDDL to U12 pad 35 NC_35",
       "receipt": "validation-receipts/u12-corrected-footprint-validation-20260912/RECEIPT.md",
       "next": "package-aware pad/copper reallocation; do not repeat same perimeter-only shift"
+    },
+    "parity_exclusion_audit": {
+      "receipt": "validation-receipts/parity-exclusion-direct-20260912/RECEIPT.md",
+      "status": "PASS_BOUNDED",
+      "nodes": 814,
+      "pcb_pads": 1262,
+      "mismatches": 0,
+      "excluded_contract_nodes": {
+        "nonphysical_x": 65,
+        "j1_placeholder": 2,
+        "j3_key_gap": 8
+      },
+      "aliases": [
+        "J2",
+        "F1",
+        "F2",
+        "J4"
+      ],
+      "limitations": "does not prove physical routed connectivity or DRC closure"
     }
   },
   "blockers": [],

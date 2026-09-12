@@ -227,3 +227,6 @@ Campaign metadata records the rejected TI-pitch footprint candidate and its fres
 
 ### 2026-09-12 — Phase 24 parity audit instrumentation
 The existing parity audit now reports excluded contract placeholders and alias-map coverage explicitly while preserving its exact pad-net comparison. This is a validation-tool change only; no CAD, rules, or net assignments changed.
+
+### 2026-09-12 — Phase 24 fresh parity/exclusion audit
+A fresh Light run regenerated the schematic netlist as KicadXML and passed the instrumented ownership audit: 814 authoritative nodes, 1262 PCB pads, zero mismatches, with 65 nonphysical X nodes, 2 J1 placeholders, 8 J3 key-gap placeholders, and explicit J2/F1/F2/J4 alias contracts reported. This closes only bounded ownership/parity evidence, not physical connectivity or DRC.
