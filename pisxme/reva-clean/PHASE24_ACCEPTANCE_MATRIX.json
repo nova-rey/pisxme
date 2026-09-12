@@ -20,13 +20,13 @@
       "status": "OPEN",
       "requirement": "0 unintended violations and 0 unconnected required items",
       "evidence": {
-        "receipt": "validation-receipts/drc-json-direct-20260912/RECEIPT.md",
-        "candidate": "ebcf9fdb",
-        "violations": 340,
+        "receipt": "validation-receipts/dfm-c7-c25-integrated-final-17dd81d2/RECEIPT.md",
+        "candidate": "45ea2523",
+        "violations": 312,
         "unconnected_items": 499,
         "status": "OPEN"
       },
-      "current": "370 violations / 499 unconnected items"
+      "current": "312 violations / 499 unconnected items"
     },
     {
       "id": "physical_opens_shorts",
