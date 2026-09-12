@@ -12396,3 +12396,10 @@ all repairs subject to native ERC and exact netlist-parity validation.
 Marked stale JMS583 three-branch blocker wording in the historical workstream
 table as superseded by validated local fine-escape evidence. Raw rejected route
 reports remain unchanged.
+
+# 2026-09-12 — Phase 24 STORAGE alias rename probe
+
+Added a disposable, exact-coordinate probe for renaming co-located STORAGE
+`NC_*` labels to their already-selected authoritative names. It is not a
+production repair; native ERC and semantic netlist preservation are required
+before any promotion.
