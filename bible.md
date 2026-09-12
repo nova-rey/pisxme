@@ -12628,3 +12628,7 @@ violations and 265 unconnected items; Phase 24 remains open.
 ## Phase 24 J1 contract integration — 2026-09-12
 
 Integrated producer candidate from base f581568e into the canonical branch. The candidate assigns the 130 indexed public 12-V contacts to `12V_PROTECTED` and all 170 indexed grounds to `POWER_GND`; existing lane-0/refclk/reset nets remain unchanged and 33 unknown/protection contacts remain unassigned. Producer DRC recorded 431 violations and 499 unconnected pads, demonstrating the topology change and leaving copper closure open. Raw producer output is retained under `pisxme/reva-clean/validation-receipts/j1-contract-producer-2096b8d8`.
+
+## Phase 24 J1 generator reproducibility correction — 2026-09-12
+
+The contract helper now enumerates the complete indexed 170-contact ground set, including signal-region grounds, instead of only the 70 dedicated power-field rows. A dry parse verifies 130 power and 170 ground identifiers; this correction prevents generator drift before any further copper repair.
