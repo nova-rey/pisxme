@@ -58,3 +58,7 @@ Canonical evidence now includes the J1 authority contract, reproducibility proof
 ## Phase 24 reset-width receipt provenance correction — 2026-09-13
 
 The rejected `JMS_RESET_N` width candidate remains non-promoted: widening six normal-net tracks to 0.20 mm produced native DRC 431/499 from the integrated 424/499 base. The disposable producer workspace was released after rejection and did not retain a candidate PCB artifact; the receipt now records that limitation explicitly rather than presenting a blank hash.
+
+## Phase 24 integrated JMS_AVDD33 width repair — 2026-09-13
+
+A single existing non-controlled-impedance `JMS_AVDD33` F.Cu segment (UUID `57d5726b-fa39-4286-b48e-63f5ee85e1ac`) was widened from 0.15 mm to 0.20 mm. Rebased from the current integrated candidate, the bounded Light producer result improved native DRC from 424 to 423 violations with unconnected items unchanged at 499, no shorting items, and no new violation class. Fresh isolated validation remains required.
