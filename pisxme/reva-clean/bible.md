@@ -206,3 +206,6 @@ The campaign record links the retained power/return object census and keeps the 
 
 ### 2026-09-12 — Phase 24 U12 footprint pitch census
 Direct source inspection confirms the integrated `HD3SS6126_RUA0042A` footprint uses 0.40 mm pad increments on its 42 perimeter pads. This corroborates the private Library package discrepancy against TI's 0.50 mm RUA0042A pitch and keeps U12 authority open; no CAD or rule change was made.
+
+### 2026-09-12 — Phase 24 U12 pitch blocker classification
+Unblocker classified the demonstrated 0.40 mm versus 0.50 mm U12 pitch conflict as a domain-authority issue requiring exact coordinate comparison. U12 routing and fanout edits remain frozen until that authority packet is resolved.

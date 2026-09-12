@@ -204,6 +204,12 @@
       "receipt": "validation-receipts/power-return-net-census-20260912.md",
       "status": "OBJECT_CENSUS_ONLY",
       "critical_limit": "does not prove continuity/current/transient/thermal closure"
+    },
+    "u12_pitch_unblocker": {
+      "receipt": "PHASE24_U12_PITCH_UNBLOCKER_RECEIPT_20260912.md",
+      "classification": "DOMAIN_AUTHORITY",
+      "status": "OPEN",
+      "next": "exact coordinate comparison against TI or authoritative CAD"
     }
   },
   "blockers": [],
