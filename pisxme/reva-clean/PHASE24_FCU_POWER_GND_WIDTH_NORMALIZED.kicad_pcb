@@ -12917,7 +12917,7 @@
 		(uuid "a57a3f44-2d10-4351-a765-40c17997601b")
 		(at 166 168)
 		(property "Reference" "C36"
-			(at 0 0 0)
+			(at 0 2.5 0)
 			(layer "F.SilkS")
 			(uuid "01f25867-95bb-450c-bf54-fbecac658055")
 			(effects
