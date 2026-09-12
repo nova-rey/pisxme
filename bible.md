@@ -12101,3 +12101,6 @@ The narrowed STORAGE alias probe tested only TME->POWER_GND and
 M2_CONFIG1->AUTO_PEDET. Native ERC is 311 warnings with zero errors and the
 exported 361-net endpoint netlist is identical to canonical; M2_3V3 remains
 rejected because it splits M.2 power ownership.
+The alias probe was made worker-portable by selecting native kicad-cli when
+available and retaining the Flatpak fallback; the committed probe remains
+disposable and does not mutate canonical schematic authority.

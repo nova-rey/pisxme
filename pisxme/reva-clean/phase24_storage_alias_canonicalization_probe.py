@@ -32,4 +32,5 @@ for start,end,rec in reversed(list(records(s))):
   if f'(label "{old}"' in rec and f'(at {at}' in rec:
    s=s[:start]+rec.replace(f'(label "{old}"',f'(label "{new}"',1)+s[end:];done.append((old,new,at));break
 p.write_text(s);print('changes',done)
-r=subprocess.run(['flatpak','run','--command=kicad-cli','org.kicad.KiCad','sch','erc','--severity-all','--output',str(OUT/'erc.rpt'),str(OUT/'PiSXMe_RevA_Clean.kicad_sch')],cwd=OUT,text=True,capture_output=True);print(r.stdout.strip());print(r.stderr.strip());print('erc_rc',r.returncode)
+kicad=['kicad-cli'] if shutil.which('kicad-cli') else ['flatpak','run','--command=kicad-cli','org.kicad.KiCad']
+r=subprocess.run(kicad+['sch','erc','--severity-all','--output',str(OUT/'erc.rpt'),str(OUT/'PiSXMe_RevA_Clean.kicad_sch')],cwd=OUT,text=True,capture_output=True);print(r.stdout.strip());print(r.stderr.strip());print('erc_rc',r.returncode)
