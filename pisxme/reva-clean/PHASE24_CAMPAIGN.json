@@ -319,10 +319,12 @@
   },
   "validation": {
     "current_recheck": {
-      "candidate": "fc2b79f8",
-      "dr_json": "validation-receipts/dfm-silk-c14c15-20260912/fresh-drc.json",
-      "drc_violations": 340,
-      "unconnected_items": 499
+      "candidate": "3f44ce1e",
+      "drc_violations": 338,
+      "unconnected_items": 499,
+      "shorting_items": 0,
+      "raw": "validation-receipts/dfm-c38-integrated-validate-20260912/c38-integrated.json",
+      "status": "OPEN_NOT_CLOSURE"
     },
     "current_head_fresh_light": {
       "candidate": "b58201e81947dcc7032117480eecaf57b68c53a6",
