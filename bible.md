@@ -1,5 +1,11 @@
 # Append-only project bible
 
+2026-09-12: Preserved the latest fresh KiCad Light ERC cross-check. Ref
+`4d31c1bc` reports 367 findings under KiCad 10.0.6, while the canonical four
+warning classes remain exactly 132 endpoint-off-grid, 126 isolated-label, 30
+same-local-global, and 23 multiple-net-name findings. The additional findings
+are version-specific library/link classifications; no source changed.
+
 2026-09-12: Tested the single bounded JMS583 support-cohort placement from
 native pad geometry in a fresh KiCad Light worker. All ten support endpoint
 checks and the negative control pass, while standard 0.15 mm local escapes

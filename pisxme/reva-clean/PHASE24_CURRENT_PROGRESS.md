@@ -1,5 +1,12 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT FRESH-LIGHT ERC CROSS-CHECK — 2026-09-12
+
+Fresh KiCad Light 10.0.6 ERC from ref `4d31c1bc` reports 367 findings, with
+the same canonical classes and counts 132/126/30/23 as local KiCad 10.0.5.
+The additional findings are version-specific library/link classifications.
+Receipt: `PHASE24_ERC_LATEST_LIGHT_RECEIPT_20260912.md`.
+
 ## CURRENT JMS583 PLACEMENT TEST — STANDARD RULES INSUFFICIENT — 2026-09-12
 
 The bounded native-pad local support placement (U11 fixed; Y10 north-west;
