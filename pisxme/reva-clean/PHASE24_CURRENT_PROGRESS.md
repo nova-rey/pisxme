@@ -2,7 +2,7 @@
 
 ## CURRENT CHECKPOINT POINTER — 2026-09-12
 
-The live committed source is `e84208e9`. The JMS583 bounded local fine escape
+The live committed source is `16bfc785`. The JMS583 bounded local fine escape
 is validated as an isolated implementation (scope, full support, REXT, and
 negative controls pass); full-board DRC remains open at the inherited 612/409
 baseline. U5 native connectivity and its trace-removal negative control also
@@ -25,7 +25,9 @@ Fresh native XML export resolves the source-to-PCB parity discriminator:
 814 authoritative schematic nodes versus 1,262 PCB pads, with 0 mismatches
 on the retained acreage board. The earlier 79-mismatch result used a stale
 checked-in XML export and is superseded; no PCB-only repair is warranted.
-Receipt: `PHASE24_FRESH_SOURCE_PCB_PARITY_RECEIPT_20260912.md`.
+Receipt: `PHASE24_FRESH_SOURCE_PCB_PARITY_RECEIPT_20260912.md`. The stale
+root-level XML must not be used for current parity; the committed current
+native export is `PHASE24_CURRENT_NATIVE_NETLIST_20260912.xml`.
 
 Fresh Light also reconfirmed all ten saved-board dual-mode storage USB3
 endpoint pairs from `481435f9`; see

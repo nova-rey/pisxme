@@ -12498,3 +12498,9 @@ from 612 to 472 but left all 409 unconnected items and added track-width and
 via-dangling findings. The probe was rejected as a closure candidate and
 preserved as evidence that saved zone fills must be normalized for future
 comparisons.
+
+# 2026-09-12 - Phase 24 parity input hygiene
+
+Recorded that current schematic-to-PCB parity must use the native dual-mode
+XML export `PHASE24_CURRENT_NATIVE_NETLIST_20260912.xml`; the root XML is a
+stale SATA-only export. Fresh Light pairing passes with zero mismatches.

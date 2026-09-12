@@ -13,7 +13,9 @@ against that export reported 814 authoritative schematic nodes, 1,262 PCB
 pads, and 0 expected-pad mismatches.
 
 This run also classifies the earlier 79-mismatch result correctly: that run
-used the checked-in `PiSXMe_RevA_Clean.xml`, which is a stale export artifact.
+used the checked-in `PiSXMe_RevA_Clean.xml`, a SATA-only export artifact dated
+2026-08-30. The committed current native export
+`PHASE24_CURRENT_NATIVE_NETLIST_20260912.xml` is the valid parity input.
 The current native schematic export passes; no PCB-only net repair is
 authorized by the stale artifact. The three KiCad enum assertions are the
 known library-environment diagnostics and did not affect the parity result.
