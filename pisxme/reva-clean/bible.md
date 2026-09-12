@@ -122,3 +122,7 @@ Five additional capacitor `F.SilkS` body segments (C80, C81, C83, C86, C87) that
 ## Phase 24 fresh second capacitor silkscreen validation — 2026-09-13
 
 Fresh KiCad Light validation of integrated commit `42eed090` reproduced DRC `372 violations / 499 unconnected items` after removing five targeted capacitor silkscreen segments. Raw fresh report and tool identity are retained under `validation-receipts/silk-cap-segments2-integrated/`.
+
+## Phase 24 integrated U14 silkscreen repair — 2026-09-13
+
+Two U14 silkscreen outline segments clipping its `JMS_VDDREG_5V` pad were removed. The bounded Light producer reduced DRC from 372 to 370 violations with unconnected items unchanged at 499 and no new class; regulator electrical geometry was untouched. Fresh integrated validation remains required.
