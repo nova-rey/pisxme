@@ -12684,3 +12684,7 @@ The campaign integration pointer now names canonical `93c690d8`, which includes 
 ## Phase 24 native route/layer census — 2026-09-13
 
 Fresh KiCad Light inspection of canonical `93c690d8` counted 330 tracks and 98 vias: 217 F.Cu tracks and 113 B.Cu tracks. Per-net lengths and object counts are retained in `validation-receipts/route-layer-census-93c690d8/census.json`; these metrics do not close impedance, return, or connectivity requirements.
+
+## Phase 24 SERVICE USB2 label promotion rejection — 2026-09-13
+
+A bounded candidate promoted four SERVICE USB2 local labels to global scope, but fresh KiCad Light ERC remained at 351 findings. The candidate was rejected and not integrated; raw ERC is retained under `validation-receipts/service-usb2-labels-rejected/`.

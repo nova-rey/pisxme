@@ -174,10 +174,11 @@
     "source_erc_integrated_0396": "validation-receipts/source-erc-integrated-0396/RECEIPT.md",
     "bom_integrated_ee0ee5db": "validation-receipts/bom-integrated-ee0ee5db/RECEIPT.json",
     "bom_exclusion_disposition": "validation-receipts/bom-integrated-ee0ee5db/EXCLUSION_DISPOSITION.json",
-    "route_layer_census_93c690d8": "validation-receipts/route-layer-census-93c690d8/RECEIPT.md"
+    "route_layer_census_93c690d8": "validation-receipts/route-layer-census-93c690d8/RECEIPT.md",
+    "service_usb2_labels_rejected": "validation-receipts/service-usb2-labels-rejected/RECEIPT.md"
   },
   "blockers": [],
-  "next_action": "Use native route/layer metrics with focused return and connectivity audits; unresolved ERC, storage branches, mechanical DRC, and power evidence remain.",
+  "next_action": "Do not replay label promotion as a generic fix; continue with an independent ERC family or physical closure candidate.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
