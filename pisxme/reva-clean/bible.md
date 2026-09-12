@@ -350,3 +350,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-12: Updated acceptance-matrix provenance pointers to the current integrated validation candidate `45ea2523` and 312/499 DRC census while preserving every row as OPEN.
 
 - 2026-09-12: Corrected the native-DRC acceptance row to point to the fresh integrated `45ea2523` receipt (312 violations / 499 unconnected); row remains OPEN.
+
+- 2026-09-12: Completed the bounded SHA-256 inspection of the retained succession archive tar (`99aa058e6795bb6e41dd904aedb104bddc9e84a030c058fd3a2317e0202bf11b`); archive remains outside Git and was not restored or deleted.

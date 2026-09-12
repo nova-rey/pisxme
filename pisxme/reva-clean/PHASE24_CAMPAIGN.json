@@ -364,7 +364,8 @@
       "untracked-files.tar"
     ],
     "tracked_patch_sha256": "aac6232db24e9574ed3a4bf0e225d22b0fd00480e9b71fd5fd77689c319040c1",
-    "untracked_tar_sha256": "not computed (8.2G; bounded inspection only)",
-    "disposition": "retained outside Git; no wholesale restore/delete; tar listing shows historical probes and no authority change established"
+    "untracked_tar_sha256": "99aa058e6795bb6e41dd904aedb104bddc9e84a030c058fd3a2317e0202bf11b",
+    "disposition": "retained outside Git; no wholesale restore/delete; tar listing shows historical probes and no authority change established",
+    "checksum_method": "sha256sum completed 2026-09-12"
   }
 }
