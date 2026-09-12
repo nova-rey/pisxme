@@ -36,6 +36,10 @@ The VCCK local primitive connects U11 to C82 and passes its native audit plus
 negative control; all ten USB3 links remain passing. Native DRC is 426/420,
 with no new shorting or crossing class. Receipt:
 `PHASE24_JMS_VCCK_LOCAL_RECEIPT_20260912.md`.
+The AVDD33 local join passes its dedicated audit and the USB3 ten-link audit,
+but is rejected because its x=148 mm transition corridor crosses existing
+CM5 USB3 channels on both copper layers; native DRC is 435/419. Receipt:
+`PHASE24_JMS_AVDD33_LOCAL_REJECT_RECEIPT_20260912.md`.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
