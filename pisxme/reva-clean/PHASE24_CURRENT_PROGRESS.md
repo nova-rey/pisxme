@@ -68,9 +68,10 @@ pass, but fresh Light validation finds a local solder-mask bridge at the QFN
 escape (562/415 under KiCad 10.0.6), so it is rejected route evidence.
 Receipt:
 `PHASE24_JMS_XAVDDH_LOCAL_RECEIPT_20260912.md`.
-The V3 XAVDDH trial corrects the QFN escape with a local 0.15 mm segment,
-then returns to normal 0.20 mm routing. Native endpoint and negative-control
-audits pass; native DRC is 560/415 with no XAVDDH-specific conflict. Receipt:
+The V3 XAVDDH trial used a local 0.15 mm segment, then returned to normal
+0.20 mm routing. Endpoint and negative-control audits pass, but fresh Light
+validation finds an XAVDDH-to-XIN QFN short and a B.Cu crossing of accepted
+USB3 copper (562/415); it is rejected route evidence. Receipt:
 `PHASE24_JMS_XAVDDH_LOCAL_V3_RECEIPT_20260912.md`.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
