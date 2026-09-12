@@ -48,6 +48,11 @@ The VCCO rehome moves C81 to (150,148) and clears the CM5_PERST collision.
 Its native audit and negative control pass, all ten USB3 links pass, and
 native DRC is 430/419 with no new short/crossing class. Receipt:
 `PHASE24_JMS_VCCO_REHOME_RECEIPT_20260912.md`.
+The corrected reset branch uses a dedicated B.Cu low-speed channel and returns
+to C85/R81 without crossing accepted support or USB3 routes. Its native audit
+and negative control pass, all ten USB3 links pass, and native DRC is 437/417
+with no short/crossing class. Receipt:
+`PHASE24_JMS_RESET_LOCAL_RECEIPT_20260912.md`.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
