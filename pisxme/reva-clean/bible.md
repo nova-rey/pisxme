@@ -209,3 +209,6 @@ Direct source inspection confirms the integrated `HD3SS6126_RUA0042A` footprint 
 
 ### 2026-09-12 — Phase 24 U12 pitch blocker classification
 Unblocker classified the demonstrated 0.40 mm versus 0.50 mm U12 pitch conflict as a domain-authority issue requiring exact coordinate comparison. U12 routing and fanout edits remain frozen until that authority packet is resolved.
+
+### 2026-09-12 — Phase 24 acceptance gap audit
+A bounded audit confirmed that none of the 13 acceptance rows can be honestly closed by metadata correction alone. Power/return, Path-A storage branches, integrated DRC/connectivity, unresolved library/model issues, and hostile review remain substantive open requirements.
