@@ -12268,3 +12268,8 @@ through the mate pad.
 The XIN side corridor now transitions to B.Cu before the Y10 field and back
 to the crystal pad with ordinary through-vias; this is a local escape measure,
 not a board-wide via or layer-policy change.
+
+The first B.Cu transition variant removed the crystal-pad mask bridge but
+introduced a new XIN/VDDREG corridor crossing and local via-to-plane findings.
+It was superseded by a same-layer west-side XIN corridor, retaining the
+ordinary-via policy and avoiding that new crossing.
