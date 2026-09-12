@@ -392,3 +392,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Regenerated and retained the native KiCad XML netlist from the canonical schematic in fresh Light at `ac3f45d9`; the stale checked-in SATA-era XML remains untouched.
 
 - 2026-09-13: Bound the campaign manifest to fresh Light ERC, native netlist, and untouched PCB baseline receipts; current documentation head is `563b5769`, while physical acceptance remains open.
+
+- 2026-09-13: Corrected campaign metadata to distinguish documentation head `8da89a21` from the unchanged physical CAD candidate `c8710a84`; fresh validation receipts remain bound to their exact source commits.

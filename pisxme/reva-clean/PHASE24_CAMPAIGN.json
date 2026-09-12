@@ -326,7 +326,7 @@
     "direct_head_drc_context": "validation-receipts/current-head-direct-check-28ab8fc1/RECEIPT.md"
   },
   "blockers": [],
-  "next_action": "Continue bounded integrated physical repairs from 563b5769; any material candidate requires serialized fresh Light validation and updated acceptance-row evidence.",
+  "next_action": "Continue bounded integrated physical repairs from current committed documentation head 8da89a21 against CAD candidate c8710a84; material candidates require serialized fresh Light validation.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
@@ -427,8 +427,8 @@
     "xiaoyu_repo_head": "c05541e1846b47f51d05a2149ff044d4d2eba727",
     "disposition": "Path A remains selected production; RTL9210B Path B isolated and out of production scope."
   },
-  "current_integrated_sha": "563b5769",
-  "current_candidate": "563b5769",
+  "current_integrated_sha": "c8710a84",
+  "current_candidate": "c8710a84",
   "archive": {
     "path": "/home/nyx/PiSXMe-succession-archive-20260912",
     "contents": [
