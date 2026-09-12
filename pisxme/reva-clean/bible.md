@@ -218,3 +218,6 @@ Targeted research acquired TI package drawing QFND142D (SHA256 `eca6feeeca7a6e7a
 
 ### 2026-09-12 — Phase 24 hostile integrated review
 A bounded hostile review kept the hostile-review row open: required Path-A opens and two unresolved crossings remain, DRC ignored-check dispositions are not yet authorized for closure, and prior rule-context/netlist references were stale or candidate-mismatched. Campaign metadata was corrected to the fresh 340/499 current-head evidence.
+
+### 2026-09-12 — Phase 24 U12 corrected footprint rejected
+A producer candidate applying TI's 0.50 mm perimeter pitch was fresh-validated in Light at 401 DRC violations / 499 unconnected items and introduced solder-mask bridge errors, including JMS_AVDDL to U12 pad 35 `NC_35`. The candidate was rejected and not integrated; the canonical 0.40 mm footprint remains unchanged pending a package-aware pad/copper reallocation.
