@@ -126,3 +126,7 @@ Fresh KiCad Light validation of integrated commit `42eed090` reproduced DRC `372
 ## Phase 24 integrated U14 silkscreen repair — 2026-09-13
 
 Two U14 silkscreen outline segments clipping its `JMS_VDDREG_5V` pad were removed. The bounded Light producer reduced DRC from 372 to 370 violations with unconnected items unchanged at 499 and no new class; regulator electrical geometry was untouched. Fresh integrated validation remains required.
+
+## Phase 24 fresh U14 silkscreen validation — 2026-09-13
+
+Fresh KiCad Light validation of integrated commit `b17f7f2d` reproduced DRC `370 violations / 499 unconnected items` after removing the two targeted U14 silkscreen segments. Raw fresh report and tool identity are retained under `validation-receipts/silk-u14-segments-integrated/`.
