@@ -313,10 +313,16 @@
       "receipt": "validation-receipts/patha-native-storage-census-f3d09c3c/RECEIPT.md",
       "result": "26 required endpoint pairs; 15 open; corrected STORAGE_SEL endpoint U13.9",
       "status": "OPEN"
-    }
+    },
+    "rejections": [
+      "validation-receipts/storage-south-band-rejected-933205d0/RECEIPT.md",
+      "validation-receipts/power-delivery-rejected-20260912/RECEIPT.md",
+      "validation-receipts/clearance-repair-producer-rejected-c8710a84/RECEIPT.md",
+      "validation-receipts/service-vbus-width-rejected/RECEIPT.md"
+    ]
   },
   "blockers": [],
-  "next_action": "Continue Phase 24 physical closure: Path-A SATA/mode opens, integrated power/return continuity, remaining clearance/width defects, J1 mechanical DFM, and SI evidence. Scoped high-speed rule context is integrated but does not close DRC.",
+  "next_action": "Continue bounded materially distinct Path-A storage, power/return, service-width, and clearance methods; serialize any candidate through fresh Light validation. Phase 24 remains OPEN.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
@@ -332,32 +338,46 @@
   },
   "integration_candidate": "fc2b79f8",
   "active_workstreams": {
-    "power_return_lane": {
-      "owner": "Root-mediated /root/power_native_census_run",
-      "base": "dbec6047",
-      "state": "BASELINE_RETAINED",
-      "next": "reconcile current power envelope, then bounded branch-B/protected-12V census and repair",
-      "result": "Fresh Light baseline retained at 364 DRC/499 unconnected; physical power gaps remain open."
-    },
     "storage_patha_lane": {
-      "owner": "Root-mediated /root/storage_usb3_unblock_run",
-      "base": "dbec6047",
-      "state": "BLOCKED_DOMAIN_AUTHORITY",
-      "next": "obtain numeric U11/U12 local geometry limits via Librarian/DFM authority; then one V6 discriminator",
-      "result": "V6 native 428/421, fresh 430/421; no same-class variants pending authority."
+      "owner": "Root-mediated /root/south_band_storage_corrected",
+      "base": "973039f3",
+      "state": "OPEN_REPAIR_METHOD_PENDING",
+      "next": "derive native U13.2/.3/.6/.7 route with obstacle-aware transitions; prior wrong-pad attempt rejected",
+      "result": "First south-band attempt rejected at 454/499 with 12 shorts; no CAD integrated."
     },
-    "dfm_mechanics_lane": {
+    "power_return_lane": {
+      "owner": "Root-mediated /root/power_delivery_producer",
+      "base": "c8710a84",
+      "state": "REPAIR_METHOD_PENDING",
+      "next": "obstacle-aware side-entry dogbones and separate-layer handoffs",
+      "result": "Bounded candidate rejected at 336/378 with 13 shorts and 13 solder-mask bridges."
+    },
+    "clearance_lane": {
+      "owner": "Root-mediated /root/clearance_repair_producer",
+      "base": "c8710a84",
+      "state": "REPAIR_METHOD_PENDING",
+      "next": "select a geometry-aware clearance repair distinct from via removal",
+      "result": "Bounded via-removal candidate rejected after introducing USB_TXP1/JMS_AVDDL short."
+    },
+    "service_width_lane": {
+      "owner": "Root-mediated /root/service_vbus_width_repair2",
+      "base": "933205d0",
+      "state": "REPAIR_METHOD_PENDING",
+      "next": "reroute or relocate adjacent clearance constraints",
+      "result": "Widening removed nine width findings but added clearance defects; rejected."
+    },
+    "j1_mechanical_lane": {
+      "owner": "Librarian/package authority",
+      "base": "c8710a84",
+      "state": "MISSING_KNOWLEDGE",
+      "next": "lawful Rev-W geometry/paste/3D overlay or explicit authority disposition",
+      "result": "Electrical/package-net contract approved; mechanical/DFM evidence remains open."
+    },
+    "acceptance_lane": {
       "owner": "Root",
-      "base": "d398f649",
+      "base": "c8710a84",
       "state": "OPEN",
-      "next": "bounded silkscreen/DFM family only when disjoint from power/storage ownership",
-      "result": "Latest integrated candidate 364/499; courtyard, edge, model, and assembly gaps remain."
-    },
-    "acceptance_provenance_lane": {
-      "owner": "Root-mediated /root/acceptance_gap_run",
-      "base": "dbec6047",
-      "state": "OPEN",
-      "next": "row-by-row evidence audit and rule-context/hostile-review prerequisites",
+      "next": "close every acceptance row against one integrated candidate",
       "result": "All 13 acceptance rows remain OPEN."
     }
   },

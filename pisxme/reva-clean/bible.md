@@ -380,3 +380,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Preserved bounded SERVICE_VBUS_SENSE width rejection: widening nine segments removed width findings but added clearance defects; no canonical CAD integration.
 
 - 2026-09-13: Retained durable rejection record for the first South-Band Path-A storage attempt; 12 shorts and wrong U13 pad origin require a materially corrected method before any retry.
+
+- 2026-09-13: Refreshed `PHASE24_CAMPAIGN.json` to reflect current integrated SHA `c8710a84`, active bounded repair lanes, explicit rejected candidates, and the still-open 13-row acceptance contract.
