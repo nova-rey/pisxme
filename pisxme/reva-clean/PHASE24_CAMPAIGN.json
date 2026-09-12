@@ -210,6 +210,12 @@
       "classification": "DOMAIN_AUTHORITY",
       "status": "OPEN",
       "next": "exact coordinate comparison against TI or authoritative CAD"
+    },
+    "u12_ti_package_drawing": {
+      "receipt": "PHASE24_U12_TI_PACKAGE_DRAWING_RECEIPT_20260912.md",
+      "artifact_sha256": "eca6feeeca7a6e7a069aa988091d067664a55cd88413acf0b5b599fb6a353e2f",
+      "status": "PITCH_CONFIRMED_FOOTPRINT_REQUIRES_CORRECTION_OR_AUTHORITY_EXPLANATION",
+      "restricted_cad": "Ultra Librarian inaccessible in bounded acquisition; not copied"
     }
   },
   "blockers": [],
