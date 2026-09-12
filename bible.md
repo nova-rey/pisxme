@@ -12565,3 +12565,15 @@ local symbol and footprint libraries. Native KiCad 10.0.6 probes showed the
 rule removes all seven fine-escape width violations while retaining the
 ordinary 0.20 mm rule for a POWER_GND outside-normal probe; the board and
 schematic geometry were unchanged.
+
+# 2026-09-12 - Phase 24 commissioning and integrated gap census
+
+Reproduced the untouched selected acreage baseline in KiCad Light 10.0.6:
+355 ERC findings, 440 DRC violations, 265 unconnected items, fresh native XML,
+hierarchy PASS, and narrow 814/1262/0 parity PASS. Verified storage authority
+keeps Path A as current production implementation and Path B unpromoted
+isolated evidence for this campaign. Recorded that the selected PCB lacks
+physical J1/V100 power ownership and has unrouted protected/bridge rails;
+these are integrated repair requirements, not inherited waivers. Archive review
+rejected unapproved selector pad shifts and retained only the authoritative
+TUSB rotation correction as a candidate source for later scoped repair.

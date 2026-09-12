@@ -1,6 +1,6 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
-  "status": "COMMISSIONING",
+  "status": "REPAIR_ACTIVE",
   "scope": "Phase 24 and Phase 25 only; Phase 26 prohibited",
   "repository": "nova-rey/pisxme",
   "branch": "reva-clean",
@@ -42,10 +42,17 @@
       "parity": "814 authoritative nodes / 1262 PCB pads / 0 mismatches",
       "receipt": "phase24-baseline-exec/receipts/PHASE24_BASELINE_REPRODUCTION_RECEIPT_20260912.md"
     },
-    "rule_context": {"status": "BLOCKED_PENDING_CONTEXT_CANDIDATE", "evidence": "Selected board same-directory PiSXMe_RevA_Clean.kicad_pro is {} and same-stem .kicad_dru is placeholder; approved fine rule is PHASE24_JMS583_FINE_QFN_ESCAPE.kicad_dru. No physical repair authorized until native rule loading is proven."},
+    "rule_context": {"status": "PROVEN_AND_INTEGRATED", "candidate": "3edc4f94e0bf40667c5a03449c51168880eb8950", "integrated_commit": "d044316c", "evidence": "KiCad 10.0.6 positive/negative/outside probes and fresh Light candidate validation; local fine rule effective and normal POWER_GND constraint retained."},
     "integration_candidate": null,
     "validation": null
   },
   "blockers": [],
-  "next_action": "Complete bounded baseline, authority, archive, runtime and rule-context commissioning before substantive repair"
+  "next_action": "Repair selected integrated Path A source/copper; prioritize absent J1 power ownership, unrouted 12V branch B, BRIDGE_3V3/1V1 and CM5_5V feed contracts after source/context reconciliation",
+  "open_evidence": {
+    "integrated_power": "Selected PCB has J1 400 pads but only 7 named signals, 393 no-net, zero 12V_PROTECTED/POWER_GND contacts; historical Phase14 power evidence is a different candidate",
+    "unrouted_rails": ["12V_IN_B", "FUSED_12V_B", "BRIDGE_3V3", "BRIDGE_1V1", "U4/U5 VIN/FB/RT/PG"],
+    "storage": "STORAGE_3V3 and JMS local returns remain open on integrated board",
+    "dfm": "Selector archive geometry is unapproved; TUSB rotation correction is authoritative generator output; current DFM/model/BOM/release evidence remains incomplete",
+    "archive_disposition": "Do not import HD3SS3412/HD3SS6126 archive pad shifts; recover TUSB rotations only through authoritative generator after scoped validation"
+  }
 }
