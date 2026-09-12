@@ -330,3 +330,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-12: Reproduced the untouched canonical Phase 24 baseline from `d0af3cc8` in a clean `pisxme-kicad-light:v1` worker using KiCad 10.0.6. Native DRC returned 314 violations and 499 unconnected items (RC 5); raw JSON and checksum are retained under `validation-receipts/baseline-reproduce-d0af3cc8/`. This is baseline evidence only.
 
 - 2026-09-12: Revalidated native DRC context at exact campaign head `c0d4682b` in a fresh Light detached checkout. The board-local `PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru` loaded with the selected PCB; native result remained 314 violations and 499 unconnected items. Local XIN/XOUT fine-escape scope remains bounded by the existing focused audit; no defects were suppressed.
+
+- 2026-09-12: Corrected the exact-head rule-context receipt after shell-safe regeneration; evidence remains the fresh c0d4682b Light run and no physical checks were waived.
