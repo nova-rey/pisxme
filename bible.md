@@ -390,6 +390,12 @@ rejected at 2, 2, and 4 native violations. The accepted V1392 primitive and
 all Path-A assets remain unchanged; U1.63 and other Path-B support remain
 open.
 
+2026-09-12 — Phase 24 worker/source reconciliation: canonical root, CORE_CM5,
+and STORAGE schematic hashes are byte-identical in the live and isolated
+worker checkouts. Local KiCad 10.0.5 reproduces 483/0; KiCad 10.0.6 adds
+library/link report classes in the worker result. The discrepancy is a tool
+version/report-class boundary, not an untracked schematic change.
+
 2026-09-12 — Phase 24 ERC census refinement: the reproducible census now
 records duplicate warning coordinate/name signatures. It identifies 53
 repeated isolated-label signatures in the live report, and source inspection

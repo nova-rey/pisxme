@@ -37,6 +37,13 @@ result is correct or incorrect. Canonical integration must first identify and
 validate both the uncommitted delta and version effect. No worker edited
 canonical sources and no worker candidate was promoted.
 
+The canonical schematic hashes for `PiSXMe_RevA_Clean.kicad_sch`,
+`CORE_CM5.kicad_sch`, and `STORAGE.kicad_sch` are byte-identical between the
+live worktree and the worker checkout. A local KiCad 10.0.5 rerun reproduces
+483/0 from that same source. The count difference is therefore attributable
+to the KiCad 10.0.6 worker's additional library/link report classes, not an
+untracked schematic mutation.
+
 ## Next action
 
 Keep ERC grid, ERC labels, ERC aliases, storage power, and DFM as concurrent
