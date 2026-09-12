@@ -32,6 +32,13 @@ two serialized label cohorts and their coordinates are recorded in
 `PHASE24_LIVE_CONTRACT_DUPLICATE_LABEL_DIAGNOSTIC_20260912.md`; native net
 ownership must be mapped before any label repair is promoted.
 
+The bounded follow-up probe rejected deletion of the early boundary records
+because it caused four native `pin_not_connected` errors and lost 168 netlist
+nodes. Demoting those records to local labels preserved exact 361-net netlist
+parity and zero native severity errors, but did not reduce the warning census,
+so it is not promoted. See
+`PHASE24_DUPLICATE_LABEL_PROBE_RECEIPT_20260912.md`.
+
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 
 Two exact STORAGE aliases are promoted with exact native netlist parity:
