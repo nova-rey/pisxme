@@ -319,11 +319,11 @@
   },
   "validation": {
     "current_recheck": {
-      "candidate": "43fdbdda",
-      "drc_violations": 332,
+      "candidate": "53184b9d",
+      "drc_violations": 330,
       "unconnected_items": 499,
       "shorting_items": 0,
-      "raw": "validation-receipts/dfm-c40-integrated-validate-20260912/c40-integrated.json",
+      "raw": "validation-receipts/dfm-c41-integrated-validate-20260912/c41-integrated.json",
       "status": "OPEN_NOT_CLOSURE"
     },
     "current_head_fresh_light": {
