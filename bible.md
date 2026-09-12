@@ -11938,3 +11938,7 @@ overlapped U11/support, north collided with source escape/V100_PET0, and south
 crossed CM5_PERST. The south candidate retained four-link/negative-control
 PASS but native DRC remained 436/427. These are preserved as route/placement
 evidence; no frozen architecture or orientation was reopened.
+The east-pocket coordinated U12 handoff is accepted as a local source
+primitive: four actual-pad J7→U12 links and the negative control pass, and no
+USB3 crossings/shorts remain in that handoff. The six U11/C86/C87/U12 support
+links remain open; see `PHASE24_STORAGE_MKEY_USB3_EAST_HANDOFF_RECEIPT_20260912.md`.
