@@ -7440,7 +7440,7 @@
 		(uuid "7b55b212-f6d7-464e-a218-534205c8664e")
 		(at 150 160)
 		(property "Reference" "C26"
-			(at 0 0 0)
+			(at 0 2.5 0)
 			(layer "F.SilkS")
 			(uuid "e8c35cfb-86f1-4f56-88fd-d371e6725888")
 			(effects
