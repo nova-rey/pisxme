@@ -1,5 +1,12 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT PATH-B AUTHORITY LIGHT RECHECK — 2026-09-12
+
+Fresh KiCad Light validation passes the RTL9210B authority audit, V1603
+six-net connectivity and six negative controls, and loads the stored Path-B
+parity/metrics artifacts. Receipt:
+`PHASE24_PATHB_AUTHORITY_LIGHT_RECHECK_RECEIPT_20260912.md`.
+
 ## CURRENT STORAGE-CONTRACT LIGHT RECHECK — 2026-09-12
 
 Fresh KiCad Light validation passes the dual-mode mode-control contract, the

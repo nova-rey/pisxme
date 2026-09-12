@@ -1,5 +1,11 @@
 # Append-only project bible
 
+2026-09-12: Fresh KiCad Light rechecked Path-B authority and implementation:
+the 69-pin/69-pad RTL9210B audit, V1603 six-net connectivity, six negative
+controls, and stored parity/metrics artifacts all pass or load correctly.
+Preserved PHASE24_PATHB_AUTHORITY_LIGHT_RECHECK_RECEIPT_20260912.md; full
+acreage and JMS583 support closure remain open.
+
 2026-09-12: Fresh KiCad Light rechecked the storage contract from ref
 `7add3433`: dual-mode control, JMS583/selector/TE M-key library authority, and
 dual-mode schematic instance/footprint/net-label audits all PASS. Preserved
