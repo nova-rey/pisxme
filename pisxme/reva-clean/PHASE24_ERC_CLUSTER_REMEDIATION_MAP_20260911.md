@@ -1,4 +1,15 @@
-# Phase 24 ERC cluster remediation map — current through 2026-09-12
+# Phase 24 ERC cluster remediation map — historical map with current override
+
+## CURRENT OVERRIDE — 2026-09-12
+
+The live post-alias canonical census is **311 warnings / 0 errors**: 132
+`endpoint_off_grid`, 126 `isolated_pin_label`, 30
+`same_local_global_label`, and 23 `multiple_net_names`. The authoritative
+raw report is `PHASE24_CURRENT_LIVE_AFTER_ALIAS_PROMOTION_erc.rpt`, and the
+machine-readable census is `PHASE24_ERC_CLUSTER_CENSUS_20260912.json`. The
+older 312/24 and 377/338 figures below are historical checkpoints, not live
+instructions. The current storage-support decision boundary is recorded in
+`PHASE24_JMS583_SUPPORT_ESCAPE_BLOCKER_20260912.md`.
 
 ## Current authoritative census
 

@@ -8,6 +8,11 @@ the scoped escape decision is recorded in
 pisxme/reva-clean/PHASE24_JMS583_SUPPORT_ESCAPE_BLOCKER_20260912.md. Historical
 rows and raw evidence remain unchanged.
 
+2026-09-12: Corrected the top-level census in the retained ERC remediation map
+to point at the live 311-warning / 0-error, 23-alias post-promotion report;
+older 312/24 and pre-repair counts remain explicitly historical. No schematic
+or PCB source changed.
+
 2026-09-12: Fresh KiCad Light validation reproduced the current cumulative
 JMS583 support result: JMS_REXT, reset, AVDD33, AVDDL, VCCO, VCCK, and LXO pass;
 XIN, XOUT, and JMS_VDDREG_5V remain open. After materially distinct full
