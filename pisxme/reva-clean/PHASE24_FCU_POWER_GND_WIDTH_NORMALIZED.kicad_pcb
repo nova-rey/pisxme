@@ -2336,7 +2336,7 @@
 		(uuid "0b390929-b3f9-4733-a182-03be41b6c34a")
 		(at 198 168)
 		(property "Reference" "C40"
-			(at 0 0 0)
+			(at 0 2.5 0)
 			(layer "F.SilkS")
 			(uuid "d2b3cf4d-e050-4359-aa50-b287bac4bfd5")
 			(effects
