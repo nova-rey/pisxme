@@ -12006,6 +12006,10 @@ tree is a support primitive, not Phase 24 closure.
 Fresh EDA Light validation from committed ref `dbd09cbc` reproduces the VDDREG
 audit under KiCad 10.0.6 at 433/421; the DRC count delta is retained as a tool
 version difference.
+The VCCK local primitive then connected U11 pad 2 to C82, passed its native
+audit and trace-removal negative control, and kept all ten USB3 links passing.
+Native DRC is 426/420 with no new short/crossing class; remaining board
+findings are still open.
 Fresh EDA Light validation from committed ref `b29c2ae8` reports 455/401 under
 KiCad 10.0.6, reproducing the cohort's connectivity result with the expected
 tool-version DRC delta.

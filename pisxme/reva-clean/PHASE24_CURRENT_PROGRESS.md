@@ -32,6 +32,10 @@ its native audit plus negative control without shorts/crossings; the USB3
 ten-link audit remains passing. Native DRC is 431/421, so it is retained as a
 support primitive rather than promoted. Receipt:
 `PHASE24_JMS_VDDREG_TREE_RECEIPT_20260912.md`.
+The VCCK local primitive connects U11 to C82 and passes its native audit plus
+negative control; all ten USB3 links remain passing. Native DRC is 426/420,
+with no new shorting or crossing class. Receipt:
+`PHASE24_JMS_VCCK_LOCAL_RECEIPT_20260912.md`.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
