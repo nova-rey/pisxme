@@ -334,3 +334,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-12: Corrected the exact-head rule-context receipt after shell-safe regeneration; evidence remains the fresh c0d4682b Light run and no physical checks were waived.
 
 - 2026-09-12: Reproduced exact-head native ERC from `70248ce8` in a fresh Light checkout. KiCad 10.0.6 reported 351 warnings and 0 errors; raw JSON/checksum are retained under `validation-receipts/erc-exact-head-70248ce8/`, and findings remain open.
+
+- 2026-09-12: Regenerated the native KiCad XML netlist at exact head `70248ce8` in a fresh Light checkout. The retained `validation-receipts/netlist-exact-head-70248ce8/` artifact is the current parity input; stale SATA-era exports remain non-authoritative.
