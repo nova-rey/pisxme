@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT STORAGE BASELINE — FRESH LIGHT VALIDATION — 2026-09-12
+
+Fresh Light validation from committed ref `218533a1` reproduces the current
+storage baseline: JMS_REXT, reset, AVDD33, AVDDL, VCCO, VCCK, and LXO pass;
+XIN, XOUT, and JMS_VDDREG_5V remain open. The complete-support audit and
+negative-control path ran under KiCad 10.0.6. Receipt:
+`PHASE24_STORAGE_BASELINE_LIGHT_V2_RECEIPT_20260912.md`.
+
 ## CURRENT STORAGE SUPPORT PROBE — OUTER VDDREG V1 REJECTED — 2026-09-12
 
 An outer two-layer ordinary-via escape connects the complete JMS support audit

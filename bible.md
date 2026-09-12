@@ -8265,6 +8265,9 @@ dogbones while changing only B.Cu lanes. Native SATA endpoint assertions
 passed and aggregate DRC fell to 583, but three true shorts appeared,
 including TUSB SATA into the JMS_REXT/USB3 field. Rejected; no copper was
 promoted.
+Fresh Light validation from 218533a1 reproduces the cumulative storage
+baseline: XIN, XOUT, and VDDREG remain open while the other retained support
+branches pass; the complete-support negative-control path ran successfully.
 The outer VDDREG V1 trial connects all ten JMS support endpoint joins and its
 negative control, but native DRC is 653/409 versus the 594/412 cumulative
 baseline. It is rejected physical route evidence and no VDDREG copper was
