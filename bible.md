@@ -12390,3 +12390,9 @@ Re-censused the canonical native KiCad 10.0.5 ERC at 311 warnings / 0 errors:
 132 endpoint-grid, 126 isolated-label, 30 local/global-label, and 23
 multiple-net-name findings. Added a live sheet/class remediation map and kept
 all repairs subject to native ERC and exact netlist-parity validation.
+
+# 2026-09-12 — Phase 24 workstream narrative hygiene
+
+Marked stale JMS583 three-branch blocker wording in the historical workstream
+table as superseded by validated local fine-escape evidence. Raw rejected route
+reports remain unchanged.
