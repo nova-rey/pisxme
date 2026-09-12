@@ -1,5 +1,14 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT CHECKPOINT POINTER — 2026-09-12
+
+The live committed source is `837940e1`. The JMS583 bounded local fine escape
+is validated as an isolated implementation (scope, full support, REXT, and
+negative controls pass); full-board DRC remains open at the inherited 612/409
+baseline. U5 native connectivity and its trace-removal negative control also
+pass in fresh KiCad Light. Continue full-board Phase 24 closure from this
+checkpoint; do not confuse fixture-level validation with acreage closure.
+
 ## CURRENT HIERARCHY AUTHORING PROBE — 2026-09-12
 
 The generic Phase 3 scaffold now emits native KiCad root child-sheet

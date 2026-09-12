@@ -12363,3 +12363,10 @@ and exact 361-net parity pass. Full ERC remains 311 warnings / 0 errors.
 map, structural hierarchy audit, and native severity-error ERC. Full Light ERC
 reports 367 findings from the retained electrical classes plus version-specific
 library configuration warnings; Phase 24 remains open.
+# 2026-09-12 — Phase 24 fresh JMS583/U5 recheck
+
+Fresh KiCad Light validation from committed `837940e1` reconfirmed the
+bounded JMS583 0.10 mm local escape, complete support/REXT connectivity, and
+trace-removal negative controls. The corrected U5 native saved-copper audit
+and its negative control also passed. The 612/409 native DRC result belongs to
+the inherited acreage baseline; full-board Phase 24 closure remains open.

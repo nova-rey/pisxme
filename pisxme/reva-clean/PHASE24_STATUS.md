@@ -2,7 +2,7 @@
 
 ## CURRENT STATE OVERRIDE — 2026-09-12
 
-The current committed Phase 24 checkpoint is `2abdfec0`. Native KiCad 10.0.5
+The current committed Phase 24 checkpoint is `837940e1`. Native KiCad 10.0.5
 ERC is 311 warnings / 0 errors: 132 `endpoint_off_grid`, 126
 `isolated_pin_label`, 30 `same_local_global_label`, and 23
 `multiple_net_names`. The corrected JMS583 support audit passes REXT, reset,
@@ -50,6 +50,15 @@ structural hierarchy audit, and severity-error ERC with zero errors. Full
 KiCad 10.0.6 ERC reports 367 findings because of its library-configuration
 classification; the electrical warning classes remain 132/126/30/23. Receipt:
 `PHASE24_CONTRACT_LABEL_FRESH_LIGHT_RECEIPT_20260912.md`.
+
+Fresh KiCad Light revalidation from `837940e1` confirms the committed JMS583
+local fine-escape fixture: native scope audit, complete support-cohort audit,
+REXT audit, and trace-removal negative controls all pass. Its native DRC is
+612 violations / 409 unconnected items, matching the inherited acreage
+baseline; this is not a local-escape failure or a full-board closure. The
+same fresh worker confirms the corrected U5 native connectivity audit and its
+trace-removal negative control. No canonical production acreage copper was
+silently replaced.
 
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 
