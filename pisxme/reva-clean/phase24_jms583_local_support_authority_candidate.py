@@ -37,9 +37,9 @@ fp(b, 'L10').SetPosition(P(142.00, 130.00))
 # 0.4-mm-pitch JMS583 field needs a local 0.10-mm trace/clearance exception;
 # the route hands back to the normal 0.15/0.20-mm profile outside this field.
 path(b, 'XIN', ('U11','50'), ('Y10','1'),
-     [(136.80,130.00),(136.80,127.00),(137.10,125.55)], width=.10)
+     [(136.60,130.00),(136.60,125.55)], width=.10)
 path(b, 'XOUT', ('U11','51'), ('Y10','2'),
-     [(138.40,130.00),(138.40,128.00),(137.10,127.25)], width=.10)
+     [(138.40,130.00),(138.40,127.25)], width=.10)
 
 # Use separated local corridors for the two L10 terminations. The VDDREG
 # branch transitions outside both pads; no via-in-pad is used.

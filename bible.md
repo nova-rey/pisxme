@@ -12260,3 +12260,7 @@ and companion KiCad rule are disposable until native DRC and fresh-Light
 validation pass. The disposable proof also uses a same-basename KiCad project
 so native DRC loads the companion rule; the exception remains scoped to the
 candidate.
+
+The fine-escape route was changed to two monotonic side corridors around the
+Y10 pad pair: XIN west and XOUT east, avoiding the prior diagonal approach
+through the mate pad.
