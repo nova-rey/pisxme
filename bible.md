@@ -12322,3 +12322,8 @@ audit pass, while Phase 24 remains open.
 
 2026-09-12 — Fresh Light validation receipt saved for `fe60d303`: the corrected
 isolated generated-root hierarchy test passed with zero native ERC violations.
+
+2026-09-12 — The live contract identity audit exposed duplicated hierarchical
+labels in REGULATORS and STORAGE (`BRIDGE_3V3`, `BRIDGE_1V1`), contradicting an
+older exact-set receipt. Recorded the diagnostic and preserved all source
+labels pending native net-ownership mapping; no speculative repair was made.

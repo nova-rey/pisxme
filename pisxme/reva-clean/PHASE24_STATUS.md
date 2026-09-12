@@ -23,6 +23,15 @@ findings; the validation details are in
 `PHASE24_NATIVE_HIERARCHY_LIGHT_VALIDATION_RECEIPT_20260912.md`. This fixes the authoring/regression path only; it does not rewrite
 the live production hierarchy or close the remaining ERC warnings.
 
+## CURRENT LIVE-CONTRACT DIAGNOSTIC — 2026-09-12
+
+The fail-closed live contract map currently stops on duplicate hierarchical
+labels `BRIDGE_3V3` and `BRIDGE_1V1` in both `REGULATORS` and `STORAGE`. The
+older exact-set map receipt is therefore historical, not current proof. The
+two serialized label cohorts and their coordinates are recorded in
+`PHASE24_LIVE_CONTRACT_DUPLICATE_LABEL_DIAGNOSTIC_20260912.md`; native net
+ownership must be mapped before any label repair is promoted.
+
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 
 Two exact STORAGE aliases are promoted with exact native netlist parity:

@@ -12,6 +12,14 @@ findings. Receipt:
 This is an authoring-path correction, not full ERC closure; the canonical clean
 schematic remains at 311 warnings / 0 errors and Phase 24 remains OPEN.
 
+## CURRENT LIVE-CONTRACT DIAGNOSTIC — 2026-09-12
+
+The fail-closed live contract map found duplicate hierarchical labels
+`BRIDGE_3V3` and `BRIDGE_1V1` in `REGULATORS` and `STORAGE`. This contradicts
+the older exact-set receipt and is now the next source-authority investigation;
+no label repair has been promoted. See
+`PHASE24_LIVE_CONTRACT_DUPLICATE_LABEL_DIAGNOSTIC_20260912.md`.
+
 ## CURRENT JMS583 LOCAL ESCAPE — 2026-09-12
 
 The frozen U11/Y10 support placement now uses a tightly scoped 0.10 mm
