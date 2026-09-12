@@ -12476,3 +12476,10 @@ counts remain evidence only.
 
 Updated the Phase 24 current-state documents to point at the verified
 `097de6a4` source, preserving historical counts below the current override.
+
+# 2026-09-12 - Phase 24 fresh source-to-PCB parity
+
+Fresh KiCad XML export paired with the retained acreage board passed the
+schematic-to-pad parity audit: 814 authoritative nodes, 1,262 PCB pads, and
+zero mismatches. The prior 79-mismatch result was isolated to a stale checked-
+in XML export and was not used for PCB repair.

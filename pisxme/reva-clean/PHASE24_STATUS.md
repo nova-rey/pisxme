@@ -2,7 +2,7 @@
 
 ## CURRENT STATE OVERRIDE — 2026-09-12
 
-The current committed Phase 24 checkpoint is `097de6a4`. Native KiCad 10.0.5
+The current committed Phase 24 checkpoint is `e84208e9`. Native KiCad 10.0.5
 electrical ERC is 300 warnings / 0 errors: 121 `endpoint_off_grid`, 126
 `isolated_pin_label`, 30 `same_local_global_label`, and 23
 `multiple_net_names` (22 after the verified M2_GND alias normalization). Fresh
@@ -11,6 +11,10 @@ errors because its environment adds 53 `lib_symbol_issues` and 3
 `footprint_link_issues`. The Ethernet grid repair is promoted and fresh-Light
 validated; see `PHASE24_ETHERNET_GRID_REPAIR_PROMOTION_RECEIPT_20260912.md` and
 `PHASE24_M2_GND_ALIAS_PROMOTION_RECEIPT_20260912.md`.
+Fresh-native-netlist schematic-to-PCB pad parity also passes with 814
+authoritative schematic nodes, 1,262 PCB pads, and 0 mismatches; the prior
+79-mismatch result was caused by the stale checked-in XML export. See
+`PHASE24_FRESH_SOURCE_PCB_PARITY_RECEIPT_20260912.md`.
 The corrected JMS583 support audit passes REXT, reset,
 AVDD33, AVDDL, VCCO, VCCK, and LXO; the XIN, XOUT, and JMS_VDDREG_5V local
 escape is now connected under the selected bounded fine rule. Fresh Light
