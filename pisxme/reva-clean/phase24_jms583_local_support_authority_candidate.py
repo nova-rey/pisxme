@@ -37,10 +37,16 @@ fp(b, 'L10').SetPosition(P(141.00, 128.00))
 path(b, 'XIN', ('U11','50'), ('Y10','1'), [(137.40,129.60),(137.10,128.40)])
 path(b, 'XOUT', ('U11','51'), ('Y10','2'), [(137.80,129.20),(137.10,127.80)])
 
-# Use separated local corridors for the two L10 terminations.  No plane-layer
-# signal routing and no via-in-pad are introduced by this candidate.
-path(b, 'JMS_VDDREG_5V', ('U11','1'), ('L10','2'),
-     [(135.60,130.20),(135.60,128.80),(140.60,128.00)], B, .15)
+# Use separated local corridors for the two L10 terminations. The VDDREG
+# branch transitions outside both pads; no via-in-pad is used.
+n = clear(b, 'JMS_VDDREG_5V')
+src = pos(b, 'U11', '1'); dst = pos(b, 'L10', '2')
+track(b, n, src, (135.60,130.20), F, .15)
+via(b, n, (135.60,130.20))
+track(b, n, (135.60,130.20), (135.60,128.80), B, .15)
+track(b, n, (135.60,128.80), (140.60,128.00), B, .15)
+via(b, n, (140.60,128.00))
+track(b, n, (140.60,128.00), dst, F, .15)
 path(b, 'LXO', ('U11','64'), ('L10','1'),
      [(144.00,130.20),(144.00,127.20),(139.85,127.20)], F, .15)
 

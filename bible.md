@@ -1,5 +1,11 @@
 # Append-only project bible
 
+2026-09-12: The first execution of the JMS583 local-placement author exposed
+an implementation defect: its B.Cu VDDREG path started and ended on F.Cu pads
+without transitions, leaving VDDREG open. XIN/XOUT passed under the selected
+placement. Corrected the disposable author to add ordinary through-vias outside
+the pads; placement and canonical copper remain unchanged.
+
 2026-09-12: Established one bounded JMS583 local support-cohort placement
 baseline from native saved-pad geometry: U11 remains at (140,135), Y10 moves
 to (138.2,126.4), and L10 moves to (141,128). Added the deterministic
