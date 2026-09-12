@@ -13,3 +13,9 @@ No production rule was relaxed and no architecture or closed placement
 decision was changed. The next support implementation must use a pad-escape-
 aware local fanout at U11, separately planned B.Cu channels, and return vias
 at U12.
+
+Fresh detached KiCad Light validation from commit `3db38be8` independently
+reproduced the rejected class at 466 violations / 421 unconnected items
+(`validation-storage-usb3-support-v2-drc-20260912T033133Z`). The small count
+difference from local KiCad 10.0.5 is a tool-version reporting delta; the
+same support-route defect class remains present.
