@@ -11780,3 +11780,8 @@ validated in a detached KiCad Light checkout. Native DRC independently
 reported 180 violations and 468 unconnected items for `ACREAGE_CANDIDATE`.
 This confirms candidate evidence only; the integrated board and DFM gates
 remain open.
+
+2026-09-12 — Phase 24 current-state documentation reconciliation: updated
+the ERC remediation map and status to the promoted 377-warning/0-error
+baseline, while retaining all older counts as historical evidence. Remaining
+warnings are still unwaived and Phase 24 remains open.
