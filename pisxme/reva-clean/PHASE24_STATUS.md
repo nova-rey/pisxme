@@ -2,7 +2,7 @@
 
 ## CURRENT STATE OVERRIDE — 2026-09-12
 
-The current committed Phase 24 checkpoint is `375604ef`. Native KiCad 10.0.5
+The current committed Phase 24 checkpoint is `dce46015`. Native KiCad 10.0.5
 ERC is 311 warnings / 0 errors: 132 `endpoint_off_grid`, 126
 `isolated_pin_label`, 30 `same_local_global_label`, and 23
 `multiple_net_names`. The corrected JMS583 support audit passes REXT, reset,

@@ -1,5 +1,8 @@
 # Append-only project bible
 
+2026-09-12: Updated the Phase 24 current-state override to name the latest
+committed checkpoint `dce46015`; no design source or validation result changed.
+
 2026-09-12: Added current-state overrides to the Phase 24 status and
 workstream documents so historical ERC/workstream counts cannot be mistaken
 for live instructions. Current authority is 311 native ERC warnings / 0
