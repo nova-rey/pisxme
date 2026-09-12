@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT ERC PROBE — DUPLICATE STORAGE LABELS REJECTED — 2026-09-12
+
+Replacing 20 exact duplicate STORAGE `NC_*` labels with named JMS labels was
+tested in isolation and rejected: native ERC changed from 311 to 317 warnings
+because `multiple_net_names` fell 23->6 while `isolated_pin_label` rose
+126->149. No canonical source changed. Receipt:
+`PHASE24_STORAGE_DUPLICATE_LABEL_REJECT_RECEIPT_20260912.md`.
+
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 
 The authoritative `STORAGE.kicad_sch` now uses the identity-preserving aliases

@@ -12109,3 +12109,6 @@ TME->POWER_GND and M2_CONFIG1->AUTO_PEDET. Native ERC is 311/0 locally;
 M2_3V3->STORAGE_3V3 remains rejected because it changes M.2 power ownership.
 Fresh Light validation from 820c71b1 reproduces the probe under KiCad 10.0.6
 with its separate 367-violation version delta.
+The 20-label STORAGE duplicate-name canonicalization probe was rejected:
+multiple_net_names fell 23->6 but isolated_pin_label rose 126->149, for 317
+warnings versus the canonical 311. No canonical change was promoted.
