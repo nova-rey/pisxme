@@ -326,3 +326,5 @@ A horizontal C25 reference move removed the final two silk-over-copper findings 
 
 ### 2026-09-12 — Phase 24 C25 integrated validation
 Fresh detached Light validation of the final C25 silkscreen repair confirmed 314 DRC violations and 499 unconnected items on commit `994a78e8`; all targeted silk-over-copper findings are closed, while integrated electrical closure remains open.
+
+- 2026-09-12: Reproduced the untouched canonical Phase 24 baseline from `d0af3cc8` in a clean `pisxme-kicad-light:v1` worker using KiCad 10.0.6. Native DRC returned 314 violations and 499 unconnected items (RC 5); raw JSON and checksum are retained under `validation-receipts/baseline-reproduce-d0af3cc8/`. This is baseline evidence only.
