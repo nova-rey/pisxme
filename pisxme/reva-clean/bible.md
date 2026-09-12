@@ -194,3 +194,6 @@ Campaign metadata now links the retained clearance DFM probe and private storage
 
 ### 2026-09-12 — Phase 24 fresh current-head Light validation
 Fresh detached Light validation of the integrated current head reproduced 340 DRC violations and 499 unconnected items with zero evidence of closure. Raw DRC and command context are retained under `validation-receipts/current-head-fresh-light-20260912/`; Phase 24 remains open.
+
+### 2026-09-12 — Phase 24 current-head metadata
+The campaign record now points to the fresh current-head Light census at `b58201e8` (340 DRC violations / 499 unconnected items), preserving the distinction between validated evidence and closure.

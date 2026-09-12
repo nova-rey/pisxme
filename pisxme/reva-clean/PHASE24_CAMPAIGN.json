@@ -257,6 +257,13 @@
       "dr_json": "validation-receipts/dfm-silk-c14c15-20260912/fresh-drc.json",
       "drc_violations": 340,
       "unconnected_items": 499
+    },
+    "current_head_fresh_light": {
+      "candidate": "b58201e81947dcc7032117480eecaf57b68c53a6",
+      "drc_violations": 340,
+      "unconnected_items": 499,
+      "receipt": "validation-receipts/current-head-fresh-light-20260912/RECEIPT.md",
+      "status": "OPEN_NOT_CLOSURE"
     }
   },
   "external_evidence": {
