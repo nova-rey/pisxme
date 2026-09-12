@@ -95,7 +95,7 @@
       "census_sha256": "83dbc72e8b88ee21b540ab3821027905e3746694294f155e4045406284620dc8"
     },
     "sxm2_external_research": {
-      "private_library_commit": "6ec7505f113f7fc7e80348a92c3f96d824467f53",
+      "private_library_commit": "2f5a1584b0fd86e9beba90bc32d5be5b713c60ad",
       "private_library_paths": [
         "Library/briefs/sxm2-j1-unblock-20260912.md",
         "Library/indexes/sxm2-benchoff-contact-map.json",
@@ -115,7 +115,8 @@
       },
       "electrical_authority": "approved bounded contract; REV_A_EMPIRICAL_RISK retained; unknown/protection contacts remain untouched",
       "benchoff_provenance_note": "main HEAD 3173b02c; no v1.0.0 tag",
-      "authority_receipt": "authority-inventory/primary-docs/sxm2/SXM2_J1_AUTHORITY_REASSESSMENT_20260912.md"
+      "authority_receipt": "authority-inventory/primary-docs/sxm2/SXM2_J1_AUTHORITY_REASSESSMENT_20260912.md",
+      "amphenol_corpus": "private Library brief sxm2-j1-amphenol-rev-w-corpus-20260912.md; browser-extracted Rev-W/GS-12-100/GS-20-033 with HTTP403 binary limitation"
     },
     "j1_contract_integration": {
       "integration_commit": "2b49006b",

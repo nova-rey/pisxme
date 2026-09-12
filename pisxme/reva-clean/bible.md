@@ -358,3 +358,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: J1 electrical contract is closed, while mechanical/DFM remains a bounded missing-knowledge lane requiring lawful Rev-W geometry/assembly evidence. High-speed CM5/V100 width findings are held for explicit net-class and impedance authority; no global rule relaxation is permitted.
 
 - 2026-09-13: High-speed authority approved preserving existing 0.13208-mm CM5/V100 geometry under scoped HS_USB3_90R, HS_PCIE_90R, and PCIE_PERST_CONTROL context, with negative-control proof required. New Amphenol Rev-W/GS-12-100/GS-20-033 public evidence was acquired; binary/3D licensing limits remain explicit.
+
+- 2026-09-13: Librarian indexed the bounded Amphenol Rev-W/GS-12-100/GS-20-033 corpus in private Library commit `2f5a1584b0fd86e9beba90bc32d5be5b713c60ad`; public PDFs remain browser-extracted with direct binary HTTP403 limitations and no restricted copies.
