@@ -3457,17 +3457,6 @@
 		)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
-			(start -1.6 -1.25)
-			(end 1.6 1.25)
-			(stroke
-				(width 0.12)
-				(type default)
-			)
-			(fill no)
-			(layer "F.SilkS")
-			(uuid "4515e1c0-941b-4b5d-9d0c-5213ddf94228")
-		)
-		(fp_rect
 			(start -1.7 -1.35)
 			(end 1.7 1.35)
 			(stroke
@@ -19986,17 +19975,6 @@
 		)
 		(attr exclude_from_pos_files exclude_from_bom)
 		(duplicate_pad_numbers_are_jumpers no)
-		(fp_circle
-			(center 0 0)
-			(end 0 0.7)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(fill no)
-			(layer "F.SilkS")
-			(uuid "0245a362-b98f-4f41-a78f-0f8aea0aea6c")
-		)
 		(fp_circle
 			(center 0 0)
 			(end 1 0)
