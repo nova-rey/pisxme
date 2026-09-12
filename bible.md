@@ -11849,3 +11849,9 @@ all 67 electrical contacts, four mechanical pads, and reviewed J3
 SATA/PCIe/sideband/power ownership. Native DRC is intentionally unrouted at
 798/499; the power audit reports nine absent copper joins. No canonical PCB
 was promoted.
+2026-09-12 — Phase 24 J3 source-net probe: complete-root native netlist
+exports before/after scoped instance-label reconciliation were exactly
+361-net identical, and all nine J3 power contacts resolved to STORAGE_3V3
+with the reviewed bridge/regulator source pads. The remaining storage owner
+defect is PCB pad/copper regeneration, not schematic net ownership; no
+canonical schematic was changed.
