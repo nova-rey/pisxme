@@ -94,6 +94,15 @@
         "result": "open_not_closure",
         "raw": "counts observed; retained integrated TUSB raw receipt remains authoritative for same candidate geometry"
       }
+    },
+    "pi_storage_recheck": {
+      "base_commit": "76873ea8",
+      "tool": "KiCad 10.0.6",
+      "erc": "355 findings",
+      "drc": "433 violations / 265 unconnected",
+      "netlist_rc": 0,
+      "raw_dir": "validation-receipts/pi-storage-76873ea8",
+      "census_sha256": "83dbc72e8b88ee21b540ab3821027905e3746694294f155e4045406284620dc8"
     }
   },
   "blockers": [
@@ -101,8 +110,8 @@
       "id": "J1_POWER_PAD_MAPPING",
       "class": "SPECIFICATION_DECISION",
       "scope": "integrated power/return acceptance",
-      "evidence": "J1 has 400 PCB pads but only 7 named signals; 393 no-net and zero 12V_PROTECTED/POWER_GND pads, while fresh native XML assigns J1 PWR/GND and V100 contacts. No authoritative pad-name mapping found in selected footprint.",
-      "required": "authoritative SXM2 package pad mapping/footprint or an approved source correction",
+      "evidence": "Read-only PI/storage recheck confirms J1 400 pads with 393 no-net and zero required 12V/ground contacts; V100 footprint absent while schematic declares V100 power/ground/thermal. Narrow parity 814/1262/0 does not cover source-only contacts.",
+      "required": "authoritative SXM2/J1/V100 package pad mapping or approved schematic/footprint source correction",
       "independent_work": [
         "source ERC classification",
         "storage local analysis",
@@ -121,7 +130,7 @@
       ]
     }
   ],
-  "next_action": "Await bounded source/ERC and PI/storage lane results; integrate only a committed candidate with fresh Light validation and preserved raw outputs",
+  "next_action": "Continue bounded source/ERC repair if a generating-cause candidate is safe; otherwise preserve blocker and do not fabricate J1 or V100 connectivity",
   "open_evidence": {
     "integrated_power": "Selected PCB has J1 400 pads but only 7 named signals, 393 no-net, zero 12V_PROTECTED/POWER_GND contacts; historical Phase14 power evidence is a different candidate",
     "unrouted_rails": [
