@@ -38,15 +38,15 @@
       "id": "schematic_pad_reference_coverage",
       "status": "OPEN",
       "requirement": "bidirectional coverage including exclusion/alias audit",
-      "evidence": "validation-receipts/baseline-d0ef22b6",
-      "current": "narrow parity pass; bounded exclusions require final closure"
+      "evidence": "validation-receipts/baseline-d0ef22b6; authority-inventory/primary-docs/sxm2/SXM2_J1_AUTHORITY_REASSESSMENT_20260912.md",
+      "current": "narrow parity pass and J1 package contract accepted; bounded exclusions/alias coverage require final closure"
     },
     {
       "id": "library_pin_mapping",
       "status": "OPEN",
       "requirement": "project-library isolation and pin mapping",
-      "evidence": "validation-receipts/dfm-mechanics-19a/RECEIPT.json",
-      "current": "library/model context warnings remain"
+      "evidence": "validation-receipts/dfm-mechanics-19a/RECEIPT.json; authority-inventory/primary-docs/sxm2/SXM2_J1_AUTHORITY_REASSESSMENT_20260912.md",
+      "current": "J1 package identity accepted; other library/model context warnings remain"
     },
     {
       "id": "layers_routes_impedance_return",
