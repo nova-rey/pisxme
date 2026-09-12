@@ -30,6 +30,10 @@ through-vias, no plane-layer signals, and the 0.13208 mm V121 local escape
 width. The focused endpoint audit passed for each and the negative control
 failed closed as expected. Full storage closure was not claimed.
 
+Fresh detached `pisxme-worker` KiCad Light validation from commit `319edcfd`
+independently reproduced the west-return candidate at 408 DRC violations /
+427 unconnected items (`validation-storage-usb3-tx-blocker-drc-20260912T030304Z`).
+
 ## Exact missing resource
 
 The present U12 handoff has no legal two-conductor TX corridor between the

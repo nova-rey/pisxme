@@ -11930,3 +11930,6 @@ but native DRC remained 405, 408, and 406 violations with 427 unconnected
 items. The exact blocker and smallest bounded U12 four-pair handoff reopening
 are recorded in `PHASE24_STORAGE_MKEY_USB3_TX_CHANNEL_BLOCKER_20260912.md`.
 No candidate was promoted and no closed architecture/orientation was reopened.
+Fresh detached KiCad Light validation from pushed commit `319edcfd` independently
+reproduced the west-return candidate at 408 DRC violations / 427 unconnected
+items, confirming the blocker is not producer-workspace-specific.

@@ -10,6 +10,8 @@ links and negative controls pass, but native DRC remains 405–408 violations /
 return-via/pad envelope. Do not generate more same-class TX coordinate
 variants. Exact evidence and the bounded local repair are in
 `PHASE24_STORAGE_MKEY_USB3_TX_CHANNEL_BLOCKER_20260912.md`.
+Fresh KiCad Light validation from pushed commit `319edcfd` independently
+reproduces the west-return result at 408/427.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
