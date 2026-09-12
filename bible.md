@@ -8265,6 +8265,9 @@ dogbones while changing only B.Cu lanes. Native SATA endpoint assertions
 passed and aggregate DRC fell to 583, but three true shorts appeared,
 including TUSB SATA into the JMS_REXT/USB3 field. Rejected; no copper was
 promoted.
+The north support V1 replay connected VDDREG but dropped accepted XIN/XOUT,
+AVDD33, VCCO, and VCCK branches; native DRC was 611/404. It is rejected
+route evidence and the cumulative AVDDL-U12 baseline remains authoritative.
 Fresh Light validation from 218533a1 reproduces the cumulative storage
 baseline: XIN, XOUT, and VDDREG remain open while the other retained support
 branches pass; the complete-support negative-control path ran successfully.

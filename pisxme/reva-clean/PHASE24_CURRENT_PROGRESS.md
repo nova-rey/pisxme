@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT STORAGE SUPPORT PROBE — NORTH V1 REJECTED — 2026-09-12
+
+Replaying the co-located north support strategy against the live cumulative
+candidate connects VDDREG but drops already-accepted XIN, XOUT, AVDD33, VCCO,
+and VCCK branches. Native KiCad 10.0.5 DRC is 611/404. It is rejected
+route/placement evidence; the cumulative AVDDL-U12 baseline remains current.
+Receipt: `PHASE24_JMS_SUPPORT_NORTH_V1_REJECT_RECEIPT_20260912.md`.
+
 ## CURRENT STORAGE BASELINE — FRESH LIGHT VALIDATION — 2026-09-12
 
 Fresh Light validation from committed ref `218533a1` reproduces the current
