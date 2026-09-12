@@ -251,3 +251,6 @@ Fresh detached Light validation of the C38 repair confirmed 338 DRC violations a
 
 ### 2026-09-12 — Phase 24 C37 silkscreen repair
 A bounded C37 reference move from local (0,0) to (0,2.5) removed two silk-over-copper findings without changing copper or connectivity. Producer DRC was 336/499 versus the 338/499 base; the repair is integrated pending fresh exact-head validation.
+
+### 2026-09-12 — Phase 24 C37 integrated validation
+Fresh detached Light validation of the C37 repair confirmed 336 DRC violations and 499 unconnected items on commit `6a0484de`. The two silk findings removed by the producer remain absent; integrated closure is still open.
