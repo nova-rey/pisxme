@@ -11712,3 +11712,10 @@ confirmed V1562 is the accepted focused J3 handoff parent (nine-contact native
 connectivity/negative control PASS, no storage-rail shorts or crossings in its
 delta). V93–V95 are retained as later rejected source-attachment experiments;
 the open problem is U12/U13 support-pad attachment, not the J3 handoff itself.
+
+2026-09-11 — Phase 24 storage V96 composition: combined accepted V1562 J3
+power handoff with accepted V1570 R81.2-to-U14.5 branch. Both native audits
+and trace-removal negative controls passed; native DRC was 603/341 versus
+V1562 603/342 with no new storage-rail short/crossing class. V96 is retained
+as the focused storage-power parent; U12/U13 source-pad breakout and full-board
+DRC remain open.
