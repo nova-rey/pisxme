@@ -12632,3 +12632,7 @@ Integrated producer candidate from base f581568e into the canonical branch. The 
 ## Phase 24 J1 generator reproducibility correction — 2026-09-12
 
 The contract helper now enumerates the complete indexed 170-contact ground set, including signal-region grounds, instead of only the 70 dedicated power-field rows. A dry parse verifies 130 power and 170 ground identifiers; this correction prevents generator drift before any further copper repair.
+
+## Phase 24 bounded BRIDGE_3V3 route rejection — 2026-09-12
+
+A serialized Light producer tested a two-segment U4-to-C18 `BRIDGE_3V3` link from base `9ab4a9f4`. Native DRC returned 442 violations and 499 unconnected items versus the 433/499 integrated baseline, so the candidate was rejected and not merged. Raw evidence is retained under `pisxme/reva-clean/validation-receipts/bridge3v3-u4-rejected/`; a return-aware route family or different method is required.
