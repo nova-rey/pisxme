@@ -66,3 +66,7 @@ A single existing non-controlled-impedance `JMS_AVDD33` F.Cu segment (UUID `57d5
 ## Phase 24 fresh JMS_AVDD33 validation — 2026-09-13
 
 Fresh KiCad Light validation of integrated commit `74a86103` reproduced DRC `423 violations / 499 unconnected items` after the single-segment width repair. Native ERC remains open at the existing source findings. Raw producer and fresh-validator reports, stdout, and tool identity are retained under `validation-receipts/width-family-jms-avdd33-segment2-integrated/`.
+
+## Phase 24 integrated resistor reference text-height repair — 2026-09-13
+
+A DFM-only candidate raised the 28 affected resistor reference fields from 0.70 mm to the active 0.80 mm minimum. The bounded Light producer reduced native DRC from 423 to 395 violations with unconnected items unchanged at 499; no copper, connectivity, or rule data changed. Fresh integrated validation remains required.
