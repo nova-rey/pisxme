@@ -1,0 +1,22 @@
+diff --git a/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb b/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb
+index 9852639a..7e38c886 100644
+--- a/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb
++++ b/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb
+@@ -828,7 +828,7 @@
+ 		(uuid "0045f9cc-0afc-4ab8-8c03-202f55e66bc3")
+ 		(at 65 168.5)
+ 		(property "Reference" "C7"
+-			(at 0 0 0)
++			(at 0 2.5000 0)
+ 			(layer "F.SilkS")
+ 			(uuid "318667fc-f1af-4ada-b13a-bba9c790e43b")
+ 			(effects
+@@ -2412,7 +2412,7 @@
+ 		(uuid "0ed87e57-80a6-4ba0-be22-0955eff82175")
+ 		(at 65 170.5)
+ 		(property "Reference" "C8"
+-			(at 0 0 0)
++			(at 0 2.5000 0)
+ 			(layer "F.SilkS")
+ 			(uuid "03a79347-c0f8-41f7-8f62-576a33f40f0c")
+ 			(effects
