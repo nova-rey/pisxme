@@ -12602,3 +12602,10 @@ unrouted. This is a specification/footprint mapping blocker requiring an
 authoritative SXM2 package mapping; no synthetic pad names or connectivity were
 added. A fresh validator clone also hit host `No space left on device`; only
 explicit disposable failed workspaces were released.
+
+# 2026-09-12 - Phase 24 TUSB validation evidence retained
+
+Copied the fresh Light integrated-candidate DRC report, stdout, return code,
+and validator identity into `pisxme/reva-clean/validation-receipts/` before
+releasing the completed disposable validator. The retained result is 433 DRC
+violations and 265 unconnected items; Phase 24 remains open.
