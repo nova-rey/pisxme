@@ -200,3 +200,6 @@ The campaign record now points to the fresh current-head Light census at `b58201
 
 ### 2026-09-12 — Phase 24 power/return object census
 A bounded source census recorded named power/return segment and via counts on the canonical PCB. `12V_PROTECTED` has 6 segments/1 via, `POWER_GND` 47/17, and `STORAGE_3V3` 22/4; this remains object-level evidence only and does not close continuity, current, transient, or thermal acceptance rows.
+
+### 2026-09-12 — Phase 24 power census metadata
+The campaign record links the retained power/return object census and keeps the power acceptance row open pending continuity, delivery, transient, and thermal evidence.

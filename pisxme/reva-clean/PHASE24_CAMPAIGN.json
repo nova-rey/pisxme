@@ -199,6 +199,11 @@
       "receipt": "validation-receipts/clearance-dfm-probe-20260912/RECEIPT.md",
       "drc": "340 violations / 499 unconnected",
       "result": "no safe text/silk/mechanical clearance candidate; first 20 clearance findings are copper/routing/pad/via/edge"
+    },
+    "power_return_object_census": {
+      "receipt": "validation-receipts/power-return-net-census-20260912.md",
+      "status": "OBJECT_CENSUS_ONLY",
+      "critical_limit": "does not prove continuity/current/transient/thermal closure"
     }
   },
   "blockers": [],
