@@ -137,3 +137,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 
 - 2026-09-12: retained fresh KiCad Light 10.0.6 validation for exact current HEAD 9b214aae; ERC 351/0, DRC 370/499, hashes and raw JSON preserved under validation-receipts/current-head-light-9b214aae.
 - 2026-09-12: integrated bounded C16/C17/C19 F.SilkS reference repair from producer `bbd8c8cb`; fresh KiCad Light DRC 364/499 with six silk-over-copper findings removed and no connectivity change. Campaign and acceptance metadata now bind this candidate; Phase 24 remains open.
+- 2026-09-12: corrected campaign and acceptance metadata to the canonical cherry-picked integration commit `d398f649` (producer source was `bbd8c8cb`); physical candidate and retained fresh validation are unchanged.
