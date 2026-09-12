@@ -11922,3 +11922,11 @@ repair. No frozen PCIe copper was changed.
 Fresh KiCad Light reproduced the local-pad candidate's four endpoint passes
 and negative control, reporting 418/427. The candidate remains rejected for
 the unresolved integrated launch crossings.
+
+2026-09-12 — Phase 24 storage USB3 TX channel blocker: three materially
+different physical-envelope-aware TX handoff strategies from the accepted
+U12-left/R80 baseline preserved the four endpoint links and negative control,
+but native DRC remained 405, 408, and 406 violations with 427 unconnected
+items. The exact blocker and smallest bounded U12 four-pair handoff reopening
+are recorded in `PHASE24_STORAGE_MKEY_USB3_TX_CHANNEL_BLOCKER_20260912.md`.
+No candidate was promoted and no closed architecture/orientation was reopened.

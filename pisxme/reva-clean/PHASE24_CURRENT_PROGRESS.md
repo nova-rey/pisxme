@@ -1,5 +1,16 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT OPEN ROUTING BLOCKER — 2026-09-12
+
+The current storage USB3 integration route is blocked at the U12 TX handoff,
+not at architecture or connectivity authority. Three materially different
+physical-envelope-aware TX strategies were tested; all four J7→U12 endpoint
+links and negative controls pass, but native DRC remains 405–408 violations /
+427 unconnected with decisive failures confined to the RX_P corridor and U12
+return-via/pad envelope. Do not generate more same-class TX coordinate
+variants. Exact evidence and the bounded local repair are in
+`PHASE24_STORAGE_MKEY_USB3_TX_CHANNEL_BLOCKER_20260912.md`.
+
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
 The live canonical schematic is at **312 native ERC warnings / 0 errors**.
