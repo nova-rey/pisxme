@@ -12043,6 +12043,10 @@ tool-version DRC delta.
 Fresh `kicad-light` validation from committed ref `95c600bb` reproduces the
 JMS_REXT and USB3 audit passes. KiCad 10.0.6 reports 546/416 inherited DRC
 findings; the version delta is retained and does not constitute closure.
+The corrected JMS_XAVDDH west-side escape from U11.52 to rehomed C84 passes
+native saved-copper connectivity and its trace-removal negative control. It
+uses ordinary through-vias and introduces no XAVDDH short/crossing finding;
+the candidate census is 560/415 and remains support evidence only.
 The first combined XIN/XOUT crystal trial from the REXT base was rejected:
 native endpoint connectivity passed, but the QFN escape and solder-mask
 geometry introduced local DRC conflicts. The second bounded arrangement also

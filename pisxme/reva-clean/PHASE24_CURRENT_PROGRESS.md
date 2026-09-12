@@ -62,6 +62,11 @@ closure; its native board census is 544/416. Receipt:
 Fresh `kicad-light` validation from committed ref `95c600bb` reproduces both
 audits; KiCad 10.0.6 reports 546/416 for the inherited candidate census. The
 worker result is retained as independent validation, not closure.
+The corrected JMS_XAVDDH primitive now escapes west from U11.52, uses ordinary
+through-vias, and returns to a rehomed C84. Its native endpoint audit and
+trace-removal negative control pass; native DRC is 560/415 and no XAVDDH
+short/crossing finding is present. Receipt:
+`PHASE24_JMS_XAVDDH_LOCAL_RECEIPT_20260912.md`.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
