@@ -8265,6 +8265,10 @@ dogbones while changing only B.Cu lanes. Native SATA endpoint assertions
 passed and aggregate DRC fell to 583, but three true shorts appeared,
 including TUSB SATA into the JMS_REXT/USB3 field. Rejected; no copper was
 promoted.
+The outer VDDREG V1 trial connects all ten JMS support endpoint joins and its
+negative control, but native DRC is 653/409 versus the 594/412 cumulative
+baseline. It is rejected physical route evidence and no VDDREG copper was
+promoted.
 
 2026-09-08: Tested the minimal TXN-via-spacing SATA trial. Native SATA
 connectivity passed 12/12 and DRC fell to 575, but a true TXP/TXN short

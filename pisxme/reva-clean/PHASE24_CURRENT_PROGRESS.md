@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT STORAGE SUPPORT PROBE — OUTER VDDREG V1 REJECTED — 2026-09-12
+
+An outer two-layer ordinary-via escape connects the complete JMS support audit
+and negative control, including `JMS_VDDREG_5V`, but native KiCad 10.0.5 DRC
+remains 653 violations / 409 unconnected items. It is worse than the
+594/412 cumulative baseline and is rejected route evidence. Receipt:
+`PHASE24_JMS_VDDREG_OUTER_V1_REJECT_RECEIPT_20260912.md`.
+
 ## CURRENT STORAGE SUPPORT PROBE — CRYSTAL V1 REJECTED — 2026-09-12
 
 The local Y10 relocation trial reconnects both `XIN` and `XOUT`, but the
