@@ -148,3 +148,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: retained root-mediated native Light power census baseline at 364 DRC/499 unconnected with full class counts and hashes; no CAD mutation.
 - 2026-09-12: appended V6 storage blocker metrics (native 428/421, fresh 430/421) and exact U11/U12 geometry questions; same-class USB3 variants remain paused pending authority.
 - 2026-09-12: refreshed campaign workstream graph for root-mediated execution; power baseline, storage domain-authority gate, DFM, and acceptance lanes are explicitly tracked.
+- 2026-09-12: campaign next action refined after bounded storage reassessment; U11/U12 geometry authority is a local dependency, while power and acceptance evidence remain independently runnable.

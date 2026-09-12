@@ -189,7 +189,7 @@
     "silk_u14_segments_integrated": "validation-receipts/silk-u14-segments-integrated/RECEIPT.md"
   },
   "blockers": [],
-  "next_action": "Continue bounded Phase 24 repair from canonical integrated candidate d398f649. Power-envelope authority and storage USB3 blocker review are active; preserve J1 contract and RTL9210B Path B isolation.",
+  "next_action": "Continue Phase 24 from integrated candidate d398f649. Root-mediated CAD is paused only for serialized ownership; storage USB3 awaits bounded U11/U12 DFM geometry authority, while power rail completion and remaining acceptance evidence proceed independently.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
