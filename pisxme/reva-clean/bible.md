@@ -293,3 +293,6 @@ Fresh detached Light validation of the C29 repair confirmed 324 DRC violations a
 
 ### 2026-09-12 — Phase 24 C28 silkscreen repair
 A bounded C28 reference move removed two silk-over-copper findings without changing copper or connectivity. Producer DRC was 322/499 versus the 324/499 base; the repair is integrated pending fresh exact-head validation.
+
+### 2026-09-12 — Phase 24 C28 integrated validation
+Fresh detached Light validation of the C28 repair confirmed 322 DRC violations and 499 unconnected items on commit `89b55194`; integrated closure remains open.
