@@ -12648,3 +12648,7 @@ Librarian refreshed the private corpus at Library commit `01326bd8b6a3190ea07b25
 ## Phase 24 adaptive lane dispatch — 2026-09-13
 
 Root dispatched four bounded workstreams from canonical base `19a1390a`: source/ERC, selected Path A storage, power/return, and DFM/mechanics. CAD remains serialized; each lane must return an exact base, candidate or evidence artifact, scope, and validation result. Phase 25 remains gated.
+
+## 2026-09-12 — Path-A storage authority and native census
+
+From committed base `19a1390a`, the four existing Path-A/Path-B authority records were reconciled and agree: Path A remains the protected/current production storage implementation; RTL9210B Path B remains an isolated unpromoted alternative and its production-integration gate is out of scope for this campaign. A fresh KiCad Light native census of the selected integrated PCB is retained under `pisxme/reva-clean/validation-receipts/patha-native-storage-census-19a1390a/`: 292 storage-island pads, 26 required endpoint pairs, 11 connected JMS583/CM5 USB3 source branches, and 15 open SATA/mode-control branches. The same-source native DRC is 433 violations / 499 unconnected items, so this evidence advances the repair queue but does not close Phase 24.
