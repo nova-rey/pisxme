@@ -11797,3 +11797,9 @@ open and unwaived.
 deduplication, the canonical KiCad 10.0.5 grid baseline is 377/0 with 197
 endpoint-off-grid findings. The KiCad 10.0.6 worker's 539 total remains
 version-qualified evidence only; it is not the current canonical baseline.
+2026-09-12 — Phase 24 current-state documentation hygiene: reconciled the
+ERC status and remediation map with the promoted root-graph grid repair. The
+authoritative native KiCad 10.0.5 census is 312 warnings/0 errors with 132
+endpoint-off-grid, 126 isolated-label, 30 same-local/global, and 24
+multiple-net-name findings. Older 377/197 and 489-count statements remain
+explicitly historical; raw receipts were not modified.

@@ -3,17 +3,17 @@
 ## Current authoritative census
 
 Fresh native KiCad 10.0.5 full-severity ERC on the canonical clean schematic
-reports **377 warnings and 0 errors** after the promoted STORAGE duplicate-
-label repair. The current raw receipt is
-`PHASE24_CURRENT_LIVE_AFTER_LABEL_DEDUP_erc.rpt` (SHA-256
-`073595a9a51df1c97033d917000143c35e3330468ca4e378ba786729d058e698`).
+reports **312 warnings and 0 errors** after the promoted STORAGE duplicate-
+label repair and root-graph grid normalization. The current raw receipt is
+`PHASE24_CURRENT_LIVE_AFTER_ROOT_GRID_erc.rpt` (SHA-256
+`c512581ad1a91f0f62b5615ae740acb964b638cca32a4be0679a5e1533d03`).
 The 777-warning receipt below is retained as historical pre-stub-repair
 evidence.
 No findings are waived.
 
 | Cluster | Count | Scope/signature | Shared cause hypothesis | Confidence | Safe next repair |
 |---|---:|---|---|---|---|
-| endpoint_off_grid | 197 | Root and child hierarchy endpoints; repeated 2.54/3 mm coordinates | Residual legacy grid geometry remains after hierarchy association repair; duplicate POWER_INPUT wire serialization is closed | High | One complete sheet/label/direct-link transformation, or retain as bounded ERC cleanup work |
+| endpoint_off_grid | 132 | Root and child hierarchy endpoints; residual legacy coordinates | Remaining endpoint geometry is intent-sensitive after coherent root-graph normalization; duplicate POWER_INPUT wire serialization is closed | High | Analyze remaining signatures in a disposable source transform with exact netlist parity |
 | isolated_pin_label | 126 | Root/child boundary labels, especially repeated contract ports | 106 duplicate STORAGE label warnings were removed by exact name/coordinate deduplication with exact netlist parity; remaining labels are intent-sensitive | High | Analyze by identity and native netlist parity; no suppression |
 | unconnected_wire_endpoint | 0 | Root/child contract wire families | Closed by removal of 84 unowned 1 mm regulator pin stubs after exact native netlist parity | High | Regression only; do not remove owned contract wires |
 | same_local_global_label | 30 | Repeated boundary names in root and child sheets | Deliberate-looking boundary aliases are serialized as both local and global labels | High | Review ownership; rename/remove only with exact netlist parity |
@@ -21,7 +21,7 @@ No findings are waived.
 | no_connect_dangling | 0 | CORE_CM5 stale duplicate records | Closed by native-correlated removal of 11 stale records | High | No further repair; regression remains required |
 | lib_symbol_mismatch | 0 | Former embedded standard PWR_FLAG copies | Closed by project-local namespace repair with exact netlist parity | High | Regression only; do not reintroduce `power:PWR_FLAG` instances |
 
-The first three classes form a **353-warning residual hierarchy geometry/contract
+The first three classes form a **258-warning residual hierarchy geometry/contract
 cluster**. The naming cluster is 54 warnings and no current PWR_FLAG library
 findings remain. A lower count is not
 acceptance: the required checks are native ERC, exact netlist parity, and
@@ -31,14 +31,16 @@ preserved electrical intent.
 
 The identity-preserving repair closed the native hierarchy-error defect and
 the promoted regulator-stub, duplicate-wire, and PWR_FLAG namespace repairs
-reduced the live census from 777 to 377 without changing
-the 338-net native netlist. The remaining 197 endpoint findings are not
+reduced the live census from 777 to 312 without changing
+the 338-net native netlist. The remaining 132 endpoint findings are not
 evidence that the promoted association is wrong: the root-x-only disposable
 normalization increased total findings and reintroduced hierarchy errors;
 the later duplicate POWER_INPUT wire repair is separately promoted.
-The next discriminator is therefore a complete owner-aware grid transform,
-not coordinate-only edits. Naming and PWR_FLAG clusters remain independent
-and must be handled with the same netlist-parity guard.
+The promoted owner-aware root-graph grid transform is now complete: it reduced
+endpoint findings 197→132 and total warnings 377→312 with exact 338-net
+semantic parity. Remaining endpoint findings require a new bounded source
+analysis; naming and PWR_FLAG clusters remain independent and must be handled
+with the same netlist-parity guard.
 
 The corrected bounded STORAGE alias-removal probe was rejected: removing one
 co-located `NC_*` label reduced `multiple_net_names` by one and native ERC to
@@ -47,10 +49,10 @@ changed the `/STORAGE/JMS_VDDREG_5V` node set. No canonical source changed.
 Receipt:
 `PHASE24_MULTIPLE_NET_NAME_PROBE_REJECT_RECEIPT_20260911.md`.
 
-The complete root-coordinate grid probe was also rejected. It preserved native
-hierarchy structure and exact 338-net/node parity but left ERC unchanged at
-489 warnings, proving that the residual endpoint findings are not solved by
-an indiscriminate root-x/grid transform. Receipt:
+An earlier complete root-coordinate grid probe was rejected. It preserved
+native hierarchy structure and exact 338-net/node parity but left ERC at 489
+warnings; that historical result predates the promoted owner-aware transform
+and is not the current state. Receipt:
 `PHASE24_ROOT_GRID_PROBE_REJECT_RECEIPT_20260911.md`.
 
 The direct KiCad 10 installed-library substitution for the two embedded
