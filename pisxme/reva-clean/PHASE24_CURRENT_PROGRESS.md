@@ -16,6 +16,10 @@ The east-pocket U12 migration is now the accepted source-handoff baseline:
 all four J7→U12 links and the negative control pass with no USB3 crossings or
 USB3 shorts. The remaining open USB3 gate is the six-link U11/C86/C87/U12
 support network; receipt `PHASE24_STORAGE_MKEY_USB3_EAST_HANDOFF_RECEIPT_20260912.md`.
+The first complete ten-link support graft is rejected as route implementation:
+connectivity passes, but native DRC is 452/421 with U11 escape, PERST,
+U12-support launch, and RX convergence defects. Receipt
+`PHASE24_STORAGE_MKEY_USB3_SUPPORT_GRAFT_RECEIPT_20260912.md`.
 Bounded coordinated U12 west/north/south migrations remain rejected: west
 overlaps U11/support, north collides with source escape/V100_PET0, and south
 crosses CM5_PERST; the south four-link audit passes but native DRC is 436/427.

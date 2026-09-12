@@ -11942,3 +11942,8 @@ The east-pocket coordinated U12 handoff is accepted as a local source
 primitive: four actual-pad J7→U12 links and the negative control pass, and no
 USB3 crossings/shorts remain in that handoff. The six U11/C86/C87/U12 support
 links remain open; see `PHASE24_STORAGE_MKEY_USB3_EAST_HANDOFF_RECEIPT_20260912.md`.
+The first complete east-island support graft passed all ten native USB3
+connectivity assertions but was rejected by native DRC at 452/421 for real
+U11 escape, CM5_PERST, U12 support-pad, and RX-pair geometry defects. It is
+preserved as route evidence; next work is an obstacle-aware support reroute
+with local B.Cu transitions, not a change to the storage topology.
