@@ -12003,6 +12003,9 @@ The corrected VDDREG_5V north-side tree connects both bridge pads to L10 and
 passes its native connectivity audit and negative control with no short/cross;
 the earlier LXO collision is removed. Full native DRC remains 431/421, so the
 tree is a support primitive, not Phase 24 closure.
+Fresh EDA Light validation from committed ref `dbd09cbc` reproduces the VDDREG
+audit under KiCad 10.0.6 at 433/421; the DRC count delta is retained as a tool
+version difference.
 Fresh EDA Light validation from committed ref `b29c2ae8` reports 455/401 under
 KiCad 10.0.6, reproducing the cohort's connectivity result with the expected
 tool-version DRC delta.

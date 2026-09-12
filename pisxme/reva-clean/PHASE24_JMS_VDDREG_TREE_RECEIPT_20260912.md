@@ -12,3 +12,7 @@ dedicated VDDREG actual-connectivity audit and trace-removal negative control
 pass, and no shorting or track-crossing findings are introduced by this tree.
 The ten-link USB3 audit also passes. This is support evidence, not full-board
 promotion; inherited open and manufacturing findings remain unwaived.
+
+Fresh EDA Light validation from committed ref `dbd09cbc` reports 433 violations
+and 421 unconnected items under KiCad 10.0.6. The dedicated VDDREG audit result
+is reproduced; the DRC delta is retained as a tool-version difference.
