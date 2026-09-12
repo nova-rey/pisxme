@@ -1,6 +1,6 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
-  "candidate": "f791c45f",
+  "candidate": "HEAD",
   "toolchain": {
     "kicad": "10.0.6",
     "image": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
@@ -20,9 +20,9 @@
       "status": "OPEN",
       "requirement": "0 unintended violations and 0 unconnected required items",
       "evidence": {
-        "violations": 344,
+        "violations": 342,
         "unconnected_items": 499,
-        "receipt": "validation-receipts/dfm-silk-c5c6-20260912/fresh-drc.json",
+        "receipt": "validation-receipts/dfm-silk-c23-20260912/fresh-drc.json",
         "toolchain": "KiCad Light 10.0.6"
       },
       "current": "370 violations / 499 unconnected items"
