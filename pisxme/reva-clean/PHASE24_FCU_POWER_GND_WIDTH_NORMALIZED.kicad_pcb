@@ -5810,7 +5810,7 @@
 		(uuid "48dd40b9-6e0a-465b-846e-2179905b71a1")
 		(at 158 160)
 		(property "Reference" "C27"
-			(at 0 0 0)
+			(at 0 2.5 0)
 			(layer "F.SilkS")
 			(uuid "103269dd-a6a2-4888-90e1-592af08bde31")
 			(effects
