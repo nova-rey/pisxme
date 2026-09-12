@@ -224,3 +224,6 @@ A producer candidate applying TI's 0.50 mm perimeter pitch was fresh-validated i
 
 ### 2026-09-12 — Phase 24 U12 rejection metadata
 Campaign metadata records the rejected TI-pitch footprint candidate and its fresh 401/499 Light result. No corrected footprint is integrated; the next method must address pad/copper interactions rather than replaying the same perimeter-only shift.
+
+### 2026-09-12 — Phase 24 parity audit instrumentation
+The existing parity audit now reports excluded contract placeholders and alias-map coverage explicitly while preserving its exact pad-net comparison. This is a validation-tool change only; no CAD, rules, or net assignments changed.

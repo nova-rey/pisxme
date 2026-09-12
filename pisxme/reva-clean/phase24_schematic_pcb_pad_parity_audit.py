@@ -32,6 +32,7 @@ def norm_net(name):
 
 def expected(xml):
     out = {}
+    excluded = {'nonphysical_x': [], 'j1_placeholder': [], 'j3_key_gap': []}
     root = ET.parse(xml).getroot()
     for net in root.findall('.//nets/net'):
         name = net.get('name')
@@ -39,8 +40,10 @@ def expected(xml):
             # X7 is the non-BOM, non-board storage contract marker in the
             # schematic; it intentionally has no PCB footprint.
             if node.get('ref', '').startswith('X'):
+                excluded['nonphysical_x'].append((node.get('ref'), node.get('pin'), name))
                 continue
             if node.get('ref') == 'J1' and node.get('pin') in {'PWR', 'GND'}:
+                excluded['j1_placeholder'].append((node.get('ref'), node.get('pin'), name))
                 continue
             # TE M-key Socket 3 intentionally has no physical contacts 59..66
             # at the key gap.  Those schematic placeholders are mechanical
@@ -48,16 +51,17 @@ def expected(xml):
             # remains a hard parity failure below.
             if node.get('ref') == 'J3' and node.get('pin', '').isdigit() \
                     and 59 <= int(node.get('pin')) <= 66:
+                excluded['j3_key_gap'].append((node.get('ref'), node.get('pin'), name))
                 continue
             ref, pin = node.get('ref'), node.get('pin')
             pads = PAD_ALIASES.get(ref, {}).get(pin, (pin,))
             for pad in pads:
                 out[(ref, pad)] = norm_net(name)
-    return out
+    return out, excluded
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('pcb'); ap.add_argument('xml'); a=ap.parse_args()
-    exp=expected(a.xml); b=pcbnew.LoadBoard(a.pcb)
+    exp, excluded=expected(a.xml); b=pcbnew.LoadBoard(a.pcb)
     actual={(f.GetReference(), str(p.GetNumber())): norm_net(p.GetNetname())
             for f in b.GetFootprints() for p in f.Pads()}
     mismatches=[]
@@ -65,6 +69,8 @@ def main():
         if key not in actual: mismatches.append(f'MISSING {key[0]}.{key[1]} expected {name}')
         elif actual[key] != name: mismatches.append(f'WRONG {key[0]}.{key[1]}: {actual[key]!r} != {name!r}')
     print(f'authoritative schematic nodes: {len(exp)}; PCB pads: {len(actual)}')
+    print('excluded contract nodes: ' + ', '.join(f'{k}={len(v)}' for k,v in excluded.items()))
+    print('alias contracts: ' + ', '.join(f'{k}={len(v)}' for k,v in PAD_ALIASES.items()))
     print(f'expected-pad mismatches: {len(mismatches)}')
     for line in mismatches[:200]: print(line)
     if mismatches: raise SystemExit(1)
