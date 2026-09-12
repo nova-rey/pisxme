@@ -16,6 +16,11 @@ unconnected items**. The intrinsic U12 0.4 mm-pitch pad-field clearance
 findings are removed by the footprint-local clearance, but real USB3 launch
 crossings and inherited-board findings remain.
 
+Fresh KiCad Light independently reproduced all four endpoint passes and the
+negative control; its KiCad 10.0.6 DRC reported **418 violations / 427
+unconnected items**. The version delta is recorded and does not change the
+candidate rejection.
+
 ## Classification
 
 This is a **route integration experiment**, not a waiver or global rule

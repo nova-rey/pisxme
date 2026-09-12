@@ -11913,3 +11913,7 @@ tracks to 0.20 mm, and set only U12 pads to 0.15 mm local clearance. Four
 USB3 endpoint links and the negative control pass; refilled native DRC is
 384/427. Intrinsic U12 pad-field errors are removed, but real launch crossings
 remain, so no production promotion was made.
+
+Fresh KiCad Light reproduced the local-pad candidate's four endpoint passes
+and negative control, reporting 418/427. The candidate remains rejected for
+the unresolved integrated launch crossings.
