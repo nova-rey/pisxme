@@ -2,7 +2,7 @@
 
 ## CURRENT STATE OVERRIDE — 2026-09-12
 
-The current committed Phase 24 checkpoint is `12974416`. Native KiCad 10.0.5
+The current committed Phase 24 checkpoint is `fd909adc`. Native KiCad 10.0.5
 ERC is 311 warnings / 0 errors: 132 `endpoint_off_grid`, 126
 `isolated_pin_label`, 30 `same_local_global_label`, and 23
 `multiple_net_names`. The corrected JMS583 support audit passes REXT, reset,
@@ -14,6 +14,13 @@ JMS583 local escape blocker is superseded by
 `PHASE24_JMS583_FINE_ESCAPE_RECEIPT_20260912.md`. This override is current and
 supersedes older counts and labels below; historical sections and raw receipts
 remain evidence only.
+
+The generic Phase 3 hierarchy authoring probe is corrected and validated:
+root child-sheet objects now carry native KiCad project/page `instances`
+records, and the regression runs ERC against the isolated generated root.
+Fresh KiCad Light validation from `fd909adc` passes with zero severity-error
+findings. This fixes the authoring/regression path only; it does not rewrite
+the live production hierarchy or close the remaining ERC warnings.
 
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 

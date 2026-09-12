@@ -1,5 +1,17 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT HIERARCHY AUTHORING PROBE — 2026-09-12
+
+The generic Phase 3 scaffold now emits native KiCad root child-sheet
+project/page `instances` records that were absent from its generated root
+objects. The regression validates the isolated generated root directly, and
+fresh KiCad Light validation from `fd909adc` passes with zero severity-error
+findings. Receipt:
+`PHASE24_NATIVE_HIERARCHY_SERIALIZATION_PROBE_RECEIPT_20260912.md`.
+
+This is an authoring-path correction, not full ERC closure; the canonical clean
+schematic remains at 311 warnings / 0 errors and Phase 24 remains OPEN.
+
 ## CURRENT JMS583 LOCAL ESCAPE — 2026-09-12
 
 The frozen U11/Y10 support placement now uses a tightly scoped 0.10 mm

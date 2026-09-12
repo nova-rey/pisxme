@@ -12309,3 +12309,8 @@ scaffold now emits KiCad root-child sheet `(instances)` project/page records,
 matching the native fixture. The regression test validates the isolated
 generated root rather than accidentally checking the live canonical root, and
 asserts all ten page associations. No production CAD was changed.
+
+2026-09-12 — Fresh KiCad Light validation from `fd909adc` passed the corrected
+isolated-root hierarchy regression. Phase 24 status/current-progress pointers
+now identify this checkpoint while keeping the live 311-warning ERC census and
+open full-board gates explicit.
