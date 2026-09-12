@@ -12417,6 +12417,13 @@ The committed reference-set audit passed with 78 schematic references, 101
 PCB references, and exactly 23 documented mechanical/test-point extras. Full
 connectivity and DRC closure remain open.
 
+# 2026-09-12 — Phase 24 Ethernet grid repair promotion path
+
+Added a fail-closed promotion transform for the delegated, parity-proven
+Ethernet center-tap/LED support-group grid correction. It is limited to
+C48-C52/R26-R31 coordinates and requires post-promotion native ERC and exact
+semantic netlist parity.
+
 # 2026-09-12 — Phase 24 all-authoritative DRC baseline
 
 Fresh Light measured the committed `PHASE24_ALL_AUTHORITATIVE_PARTS` PCB at
