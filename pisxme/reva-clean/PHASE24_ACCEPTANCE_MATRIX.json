@@ -1,6 +1,6 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
-  "candidate": "d398f649",
+  "candidate": "cb3ff974",
   "toolchain": {
     "kicad": "10.0.6",
     "image": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
@@ -20,9 +20,9 @@
       "status": "OPEN",
       "requirement": "0 unintended violations and 0 unconnected required items",
       "evidence": {
-        "violations": 364,
+        "violations": 358,
         "unconnected_items": 499,
-        "receipt": "validation-receipts/silk-capacitor-cluster-c16-c17-c19/fresh-drc.json",
+        "receipt": "validation-receipts/dfm-silk-body-j5-j6-20260912/fresh-drc.json",
         "toolchain": "KiCad Light 10.0.6"
       },
       "current": "370 violations / 499 unconnected items"
@@ -94,8 +94,8 @@
       "id": "dfm",
       "status": "OPEN",
       "requirement": "manufacturing checks with explicit dispositions",
-      "evidence": "validation-receipts/resistor-reference-height-integrated/RECEIPT.md; validation-receipts/silk-cap-segments-integrated/RECEIPT.md; validation-receipts/c14-reference-placement-integrated/RECEIPT.md; validation-receipts/c15-reference-placement-integrated/RECEIPT.md; validation-receipts/silk-cap-segments2-integrated/RECEIPT.md; validation-receipts/silk-u14-segments-integrated/RECEIPT.md",
-      "current": "scoped DFM repairs fresh-validated; courtyard, edge-clearance, and model/assembly rows remain open"
+      "evidence": "validation-receipts/dfm-silk-body-j5-j6-20260912/RECEIPT.md; validation-receipts/dfm-mechanics-19a/RECEIPT.json",
+      "current": "J5/J6 silk overlaps removed; courtyard, edge-clearance, model, and assembly gaps remain OPEN"
     },
     {
       "id": "hostile_review",

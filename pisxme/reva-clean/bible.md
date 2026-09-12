@@ -151,3 +151,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: campaign next action refined after bounded storage reassessment; U11/U12 geometry authority is a local dependency, while power and acceptance evidence remain independently runnable.
 - 2026-09-12: retained fresh current-head Light recheck at e110e774; ERC 351/0 and DRC 364/499 with raw reports and source/rules hashes.
 - 2026-09-12: integrated bounded DFM candidate removing only J5/J6 optional F.SilkS body rectangles; fresh Light DRC 358/499, six silk findings removed, no connectivity change.
+- 2026-09-12: rebound campaign and acceptance metadata to integrated candidate `cb3ff974`; fresh DRC evidence is 358/499 after J5/J6 silk-body repair.
