@@ -53,6 +53,12 @@ to C85/R81 without crossing accepted support or USB3 routes. Its native audit
 and negative control pass, all ten USB3 links pass, and native DRC is 437/417
 with no short/crossing class. Receipt:
 `PHASE24_JMS_RESET_LOCAL_RECEIPT_20260912.md`.
+The JMS_REXT support primitive rehomes R80 to the east storage pocket and
+connects U11.39 to R80.1 without changing USB3 copper. Its native endpoint
+audit and trace-removal negative control pass, and the USB3 actual-pad audit
+passes. It remains a support primitive pending complete JMS583 support
+closure; its native board census is 544/416. Receipt:
+`PHASE24_JMS_REXT_LOCAL_RECEIPT_20260912.md`.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
