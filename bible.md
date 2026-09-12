@@ -390,6 +390,12 @@ rejected at 2, 2, and 4 native violations. The accepted V1392 primitive and
 all Path-A assets remain unchanged; U1.63 and other Path-B support remain
 open.
 
+2026-09-12 — Phase 24 STORAGE alias negative control: deleting co-located
+`NC_*` labels reduced multiple-net-name warnings but changed the semantic
+netlist from 338 to 354 nets, added 16 names and 11 node-set changes, and
+increased isolated-label warnings. The probe was rejected; no canonical alias
+labels were removed.
+
 2026-09-12 — Phase 24 worker/source reconciliation: canonical root, CORE_CM5,
 and STORAGE schematic hashes are byte-identical in the live and isolated
 worker checkouts. Local KiCad 10.0.5 reproduces 483/0; KiCad 10.0.6 adds
