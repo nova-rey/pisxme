@@ -11828,3 +11828,8 @@ sole source of graph edges and no gate was relaxed.
 2026-09-12 — Phase 24 storage audit smoke test: corrected the fail-closed
 missing-pad reporting path so malformed or wrong-connector candidates emit a
 deterministic failure list rather than a secondary tuple-format exception.
+2026-09-12 — Phase 24 fresh detached storage-owner validation from e5430089
+confirmed the corrected audit fails closed on the current acreage candidate:
+missing J3.12/.14/.16/.18 and source pads are reported explicitly. J1 was
+not misidentified as M.2; no synthetic connectivity or severity waiver was
+introduced.
