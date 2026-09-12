@@ -16145,7 +16145,7 @@
 		(uuid "f826d92a-62b0-4095-992a-620ea8fb1df7")
 		(at 206 168)
 		(property "Reference" "C41"
-			(at 0 0 0)
+			(at 0 2.5 0)
 			(layer "F.SilkS")
 			(uuid "ac51e4d9-90ff-44f9-b7cc-acc146aa9623")
 			(effects
