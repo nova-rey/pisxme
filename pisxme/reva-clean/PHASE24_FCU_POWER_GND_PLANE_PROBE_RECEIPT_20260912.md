@@ -25,3 +25,11 @@ This is a candidate for fresh-validator review, not a Phase 24 pass. The
 remaining opens and manufacturing findings must be resolved, and the plane's
 signal-integrity, thermal, and manufacturability effects must be reviewed
 before promotion. The retained board was not modified.
+
+## Fresh validation
+
+Fresh KiCad Light validation from `9b56e3d9` reproduces 472 violations / 265
+unconnected items. A fresh native `kicadxml` export paired with the candidate
+also passes schematic-to-PCB pad parity: 814 authoritative schematic nodes,
+1,262 PCB pads, and 0 mismatches. The candidate is suitable as the next
+bounded board-repair basis, but is not a Phase 24 closure pass.

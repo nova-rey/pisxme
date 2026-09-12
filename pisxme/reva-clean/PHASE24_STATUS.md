@@ -29,6 +29,11 @@ JMS583 local escape blocker is superseded by
 `PHASE24_JMS583_FINE_ESCAPE_RECEIPT_20260912.md`. This override is current and
 supersedes older counts and labels below; historical sections and raw receipts
 remain evidence only.
+The reproducible F.Cu `POWER_GND` plane candidate
+`PHASE24_FCU_POWER_GND_PLANE_PROBE.kicad_pcb` is fresh-validated at 472/265
+with source-to-pad parity PASS. It is the next bounded repair basis, not a
+final-board pass; its remaining DRC/connectivity and manufacturing findings
+stay open.
 
 The generic Phase 3 hierarchy authoring probe is corrected and validated:
 root child-sheet objects now carry native KiCad project/page `instances`
