@@ -12457,3 +12457,10 @@ repair passed live hierarchy-contract mapping and native ERC with zero
 errors. The electrical warning census fell from 311 to 300, with
 endpoint_off_grid reduced from 132 to 121 and no new electrical warning
 class. Full Phase 24 remains open for the remaining ERC and acreage DRC work.
+
+# 2026-09-12 - Phase 24 M2_GND alias normalization
+
+Promoted the exact-count-guarded rename of the 11 ordinary STORAGE
+`M2_GND` labels to `POWER_GND`. Fresh native ERC retained zero errors and
+reduced `multiple_net_names` from 23 to 22; normalized native netlist parity
+passed. Remaining ERC and acreage DRC work stays open.
