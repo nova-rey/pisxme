@@ -233,3 +233,6 @@ A fresh Light run regenerated the schematic netlist as KicadXML and passed the i
 
 ### 2026-09-12 — Phase 24 C25 silkscreen probe rejected
 A bounded C25 reference relocation probe did not change the integrated DRC census (340/499), so it was rejected and not promoted. Raw output is retained under `validation-receipts/dfm-c25-reference-direct-20260912/`.
+
+### 2026-09-12 — Phase 24 exact-head DRC JSON
+A clean Light run with `--format json --severity-all` retained a machine-readable exact-head report: 340 violations, 499 unconnected items, return code 5, and five explicitly listed ignored checks. The report is suitable for final closure accounting but does not itself close any acceptance row.

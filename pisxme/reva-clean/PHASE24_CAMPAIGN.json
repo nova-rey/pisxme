@@ -247,6 +247,15 @@
         "J4"
       ],
       "limitations": "does not prove physical routed connectivity or DRC closure"
+    },
+    "exact_head_drc_json": {
+      "candidate": "ebcf9fdb",
+      "receipt": "validation-receipts/drc-json-direct-20260912/RECEIPT.md",
+      "drc_violations": 340,
+      "unconnected_items": 499,
+      "return_code": 5,
+      "ignored_checks": 5,
+      "status": "OPEN_NOT_CLOSURE"
     }
   },
   "blockers": [],
