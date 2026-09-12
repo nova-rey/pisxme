@@ -12061,3 +12061,7 @@ The JMS_XAVDDH V3 trial used a local 0.15 mm QFN escape before returning to
 0.20 mm routing. Native endpoint and negative control passed, but fresh Light
 validation exposed an XAVDDH-to-XIN QFN short and a B.Cu crossing of accepted
 USB3 copper (562/415). It is rejected route evidence.
+The cumulative JMS support correction added the missing AVDD33 join to the
+current REXT/VCCO/VCCK/reset base, moving C80 to `(155,146)` and using a
+B.Cu corridor around CM5_PERST. The accumulated support audit and negative
+control pass; native DRC is 555/415 with no JMS support short/crossing class.

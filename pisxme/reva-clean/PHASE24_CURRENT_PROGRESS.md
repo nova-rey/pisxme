@@ -73,6 +73,11 @@ The V3 XAVDDH trial used a local 0.15 mm segment, then returned to normal
 validation finds an XAVDDH-to-XIN QFN short and a B.Cu crossing of accepted
 USB3 copper (562/415); it is rejected route evidence. Receipt:
 `PHASE24_JMS_XAVDDH_LOCAL_V3_RECEIPT_20260912.md`.
+The cumulative-support correction adds missing AVDD33 to the current REXT
+base, rehomes C80 to `(155,146)`, and uses an ordinary-via B.Cu corridor to
+avoid CM5_PERST. The accumulated JMS support audit and negative control pass;
+native DRC is 555/415 with no JMS support short/crossing finding. Receipt:
+`PHASE24_JMS_SUPPORT_ACCUMULATED_AVDD33_RECEIPT_20260912.md`.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
