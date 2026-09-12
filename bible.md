@@ -12712,3 +12712,11 @@ Widening six `JMS_RESET_N` tracks to the normal 0.20 mm minimum worsened native 
 ## Phase 24 J3/M2 placement authority — 2026-09-13
 
 Macro Placement Authority fixed J3 at `(220,165)` and the `MECH_M2_2280` datum at `(260,160)`; shrinking or moving the envelope and translating J3 are unauthorized. J8 movement requires a separate bounded DFM target decision before any producer edit.
+
+## Phase 24 Path-A census endpoint correction — 2026-09-13
+
+Corrected the validation-only Path-A native storage census so its second
+`STORAGE_SEL` endpoint checks `U13.9`, matching the current schematic/PCB
+contract and existing route evidence. No CAD, net assignment, or acceptance
+status changed; the prior census receipt remains historical and a fresh
+current-head receipt is required.

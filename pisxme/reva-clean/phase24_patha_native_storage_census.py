@@ -122,7 +122,7 @@ def main():
         ("U11.19", "C80.1", "JMS_AVDD33"),
         ("U11.20", "C83.1", "JMS_AVDDL"),
         ("U14.4", "U12.9", "STORAGE_SEL"),
-        ("U14.4", "U13.12", "STORAGE_SEL"),
+        ("U14.4", "U13.9", "STORAGE_SEL"),
         ("J3.69", "U14.2", "AUTO_PEDET"),
     ]
     endpoint_results = []
