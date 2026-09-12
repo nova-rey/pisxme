@@ -205,36 +205,33 @@
   },
   "integration_candidate": "d398f649",
   "active_workstreams": {
-    "source_erc_lane": {
-      "owner": "/root/source_erc_lane",
-      "base": "93c690d8",
-      "state": "INTEGRATED_VALIDATED",
-      "cad_budget": "research first; one Light container if candidate exists",
-      "next": "identify generating-cause repair and return candidate or evidence",
-      "result": "Fresh integrated DRC 424/499; 30 width findings removed, 21 clearance added; net -9 DRC"
+    "power_return_lane": {
+      "owner": "Root-mediated /root/power_native_census_run",
+      "base": "dbec6047",
+      "state": "BASELINE_RETAINED",
+      "next": "reconcile current power envelope, then bounded branch-B/protected-12V census and repair",
+      "result": "Fresh Light baseline retained at 364 DRC/499 unconnected; physical power gaps remain open."
     },
     "storage_patha_lane": {
-      "owner": "/root/storage_patha_lane",
-      "base": "93c690d8",
-      "state": "EVIDENCE_INTEGRATED",
-      "cad_budget": "one serialized Light producer",
-      "next": "Path A integrated storage/returns bounded task",
-      "result": "15 required branches remain open; no CAD mutation"
-    },
-    "power_return_lane": {
-      "owner": "/root/power_return_lane",
-      "base": "93c690d8",
-      "state": "DISPATCHED",
-      "cad_budget": "research first; no repeated BRIDGE_3V3 stitch",
-      "next": "return-aware power evidence or materially different candidate"
+      "owner": "Root-mediated /root/storage_usb3_unblock_run",
+      "base": "dbec6047",
+      "state": "BLOCKED_DOMAIN_AUTHORITY",
+      "next": "obtain numeric U11/U12 local geometry limits via Librarian/DFM authority; then one V6 discriminator",
+      "result": "V6 native 428/421, fresh 430/421; no same-class variants pending authority."
     },
     "dfm_mechanics_lane": {
-      "owner": "/root/dfm_mechanics_lane2",
-      "base": "fb3adab0",
-      "state": "INTEGRATED_VALIDATED",
-      "cad_budget": "research/read-only unless scoped candidate",
-      "next": "continue bounded DFM family only after current acceptance dependencies; J3/M2 fixed",
-      "result": "Integrated resistor reference height and capacitor silkscreen repairs are fresh Light-validated; DRC now 382/499. Courtyard, edge-clearance, model, and assembly rows remain open."
+      "owner": "Root",
+      "base": "d398f649",
+      "state": "OPEN",
+      "next": "bounded silkscreen/DFM family only when disjoint from power/storage ownership",
+      "result": "Latest integrated candidate 364/499; courtyard, edge, model, and assembly gaps remain."
+    },
+    "acceptance_provenance_lane": {
+      "owner": "Root-mediated /root/acceptance_gap_run",
+      "base": "dbec6047",
+      "state": "OPEN",
+      "next": "row-by-row evidence audit and rule-context/hostile-review prerequisites",
+      "result": "All 13 acceptance rows remain OPEN."
     }
   },
   "authority": {
