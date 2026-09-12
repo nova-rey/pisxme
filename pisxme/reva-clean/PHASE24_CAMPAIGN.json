@@ -238,7 +238,8 @@
     }
   },
   "authority": {
-    "mechanical_placement": "J3 and MECH_M2_2280 fixed by macro authority; J8 movement requires bounded DFM target and is not yet authorized"
+    "mechanical_placement": "J3 and MECH_M2_2280 fixed by macro authority; J8 movement requires bounded DFM target and is not yet authorized",
+    "j1_package": "Bounded 74221-101LF contract accepted; private Library 01326bd8; reassessment authority-inventory/primary-docs/sxm2/SXM2_J1_AUTHORITY_REASSESSMENT_20260912.md; no CAD correction required; unknown contacts preserved."
   },
   "validation": {
     "current_recheck": {
@@ -247,5 +248,12 @@
       "drc_violations": 364,
       "unconnected_items": 499
     }
+  },
+  "external_evidence": {
+    "private_library_commit": "01326bd8b6a3190ea07b2504405ea8696e55e858",
+    "benchoff_article_sha256": "9fa2b322672dcb01eb6f59c3ae0375299b7e72bc5e053959517508894d1cf8e4",
+    "benchoff_repo_head": "3173b02c085218d66c4a2a9e5492853fb53ee097",
+    "xiaoyu_repo_head": "c05541e1846b47f51d05a2149ff044d4d2eba727",
+    "disposition": "Path A remains selected production; RTL9210B Path B isolated and out of production scope."
   }
 }

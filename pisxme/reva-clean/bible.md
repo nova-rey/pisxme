@@ -141,3 +141,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: retained read-only integrated power/return gap audit; raw branch-B/protected-12V/bridge rails and J1 return remain physically open, and current-envelope/IR/transient/thermal evidence is unresolved. Receipt `PHASE24_POWER_RETURN_GAP_AUDIT_20260912.md`.
 - 2026-09-12: J1 package/footprint authority reassessment accepted the existing bounded 74221-101LF contract using private Library `01326bd8`; parsed A1..K40 identity and 130/170 power-ground classification are sufficient, with no CAD correction required and unknown contacts preserved.
 - 2026-09-12: acceptance matrix now links the formal J1 package authority reassessment while keeping coverage and library rows OPEN pending full integrated closure.
+- 2026-09-12: campaign authority metadata records the private SXM2 evidence commit, J1 package reassessment, and Path A/RTL9210B disposition; no architecture reopening.
