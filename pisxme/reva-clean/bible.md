@@ -378,3 +378,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Preserved bounded clearance repair rejection: removing the GATE_B co-located via reduced violations by two but introduced a USB_TXP1/JMS_AVDDL short; no canonical CAD integration.
 
 - 2026-09-13: Preserved bounded SERVICE_VBUS_SENSE width rejection: widening nine segments removed width findings but added clearance defects; no canonical CAD integration.
+
+- 2026-09-13: Retained durable rejection record for the first South-Band Path-A storage attempt; 12 shorts and wrong U13 pad origin require a materially corrected method before any retry.
