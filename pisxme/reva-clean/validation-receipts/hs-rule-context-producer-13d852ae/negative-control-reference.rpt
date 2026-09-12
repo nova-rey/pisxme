@@ -1,0 +1,78 @@
+** Drc report for SP3019_ETHERNET_FIXTURE_BASE.kicad_pcb **
+** Created on 2026-09-12T23:02:11 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 6 DRC violations **
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(262.0500 mm, 34.3250 mm): Rectangle of J2 on f.silkscreen
+    @(277.8750 mm, 41.9500 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(262.0500 mm, 34.3250 mm): Rectangle of J2 on f.silkscreen
+    @(278.2000 mm, 45.0000 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(262.0500 mm, 34.3250 mm): Rectangle of J2 on f.silkscreen
+    @(278.2000 mm, 55.7500 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(262.0500 mm, 34.3250 mm): Rectangle of J2 on f.silkscreen
+    @(261.8000 mm, 55.7500 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(262.0500 mm, 34.3250 mm): Rectangle of J2 on f.silkscreen
+    @(262.1250 mm, 41.9500 mm): NPTH pad of J2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(262.0500 mm, 34.3250 mm): Rectangle of J2 on f.silkscreen
+    @(261.8000 mm, 45.0000 mm): NPTH pad of J2
+
+** Found 9 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(264.2850 mm, 36.1100 mm): PTH pad 1 [/ETHERNET/GBE_SHIELD] of J2
+    @(265.5550 mm, 38.6500 mm): PTH pad 2 [/ETHERNET/GBE_SHIELD] of J2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 99.5000 mm): Pad 5 [CM5_GBE_TD3_N] of J7 on F.Cu
+    @(264.2850 mm, 41.1700 mm): PTH pad 11 [CM5_GBE_TD3_N] of J2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 99.1000 mm): Pad 3 [CM5_GBE_TD3_P] of J7 on F.Cu
+    @(266.8250 mm, 42.4400 mm): PTH pad 12 [CM5_GBE_TD3_P] of J2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 100.3000 mm): Pad 9 [CM5_GBE_TD2_N] of J7 on F.Cu
+    @(273.1750 mm, 42.4400 mm): PTH pad 13 [CM5_GBE_TD2_N] of J2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(32.9600 mm, 100.7000 mm): Pad 11 [CM5_GBE_TD2_P] of J7 on F.Cu
+    @(275.7150 mm, 41.1700 mm): PTH pad 14 [CM5_GBE_TD2_P] of J2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 99.5000 mm): Pad 6 [CM5_GBE_TD1_N] of J7 on F.Cu
+    @(263.3700 mm, 49.0600 mm): PTH pad 15 [CM5_GBE_TD1_N] of J2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 99.1000 mm): Pad 4 [CM5_GBE_TD1_P] of J7 on F.Cu
+    @(265.9100 mm, 49.0600 mm): PTH pad 16 [CM5_GBE_TD1_P] of J2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 100.3000 mm): Pad 10 [CM5_GBE_TD0_N] of J7 on F.Cu
+    @(274.0900 mm, 49.0600 mm): PTH pad 17 [CM5_GBE_TD0_N] of J2
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(36.0400 mm, 100.7000 mm): Pad 12 [CM5_GBE_TD0_P] of J7 on F.Cu
+    @(276.6300 mm, 49.0600 mm): PTH pad 18 [CM5_GBE_TD0_P] of J2
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

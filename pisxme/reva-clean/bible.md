@@ -364,3 +364,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Preserved the scoped high-speed rule-context producer baseline: fresh Light DRC remains 312 violations and 499 unconnected items before any rule-context change.
 
 - 2026-09-13: Corrected the Path-A native storage census to inspect `U13.9` for `STORAGE_SEL` (not `U13.12`) and regenerated fresh Light evidence: 15 of 26 required endpoint pairs remain open. Historical receipt preserved unchanged.
+
+- 2026-09-13: Integrated the scoped high-speed netclass producer context from `13d852ae` as a candidate. Exact CM5/V100 cohorts use 0.13208-mm classes with 0.2032-mm differential gap; ordinary Default remains 0.20 mm. Producer DRC is 201/499 with raw and negative-control outputs retained. Full integrated validation is pending.
