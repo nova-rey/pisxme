@@ -10,3 +10,7 @@ A fresh Light validation checkout at canonical commit 76873ea8 reproduced the in
 ## Phase 24 PI/storage gate recheck — 2026-09-12
 
 The read-only integrated recheck at 76873ea8 confirms that no safe Path A power/copper repair can be promoted: J1 retains 393 no-net pads and no required 12 V or POWER_GND contacts, while the schematic declares V100 power/ground/thermal contacts without a corresponding PCB footprint. Raw ERC, DRC, XML, contract, and blocker census outputs are retained under validation-receipts/pi-storage-76873ea8. This is a specification blocker, not a waiver.
+
+## Phase 24 commissioning closure and bounded blocker — 2026-09-12
+
+Commissioning is closed for this campaign: Path A authority is recorded, Path B production integration is disposed, the archive delta was inspected, runtime/nesting capability was measured, the d0ef22b6 baseline was reproduced, and the local rule context was proven. Substantive integrated repair is now blocked at the smallest affected scope by the unresolved J1/SXM2/V100 package mapping; no synthetic power contacts or fabricated V100 footprint will be introduced. Independent source hygiene may proceed only where it does not depend on that specification.
