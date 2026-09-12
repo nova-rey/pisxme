@@ -12680,3 +12680,7 @@ The 14 PCB references absent from the regenerated BOM are source-dispositioned: 
 ## Phase 24 canonical pointer update — 2026-09-13
 
 The campaign integration pointer now names canonical `93c690d8`, which includes the validated USB3 label source change, Path-A census, DFM census, and BOM exclusion disposition. No physical closure claim is implied.
+
+## Phase 24 native route/layer census — 2026-09-13
+
+Fresh KiCad Light inspection of canonical `93c690d8` counted 330 tracks and 98 vias: 217 F.Cu tracks and 113 B.Cu tracks. Per-net lengths and object counts are retained in `validation-receipts/route-layer-census-93c690d8/census.json`; these metrics do not close impedance, return, or connectivity requirements.
