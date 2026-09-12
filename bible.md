@@ -12333,3 +12333,8 @@ REGULATORS/STORAGE. It removes only the redundant early boundary label/wire
 records in an isolated copy, retains contract symbols and circuit wiring, and
 will be accepted only if native hierarchy, netlist, and ERC evidence support
 the hypothesis.
+
+2026-09-12 — Rejected the first duplicate-label probe as a malformed regex
+transform: it produced collateral deletions and 24 native errors. Reworked the
+disposable probe to remove only balanced top-level label/wire expressions before
+rerunning it; canonical sources remain untouched.

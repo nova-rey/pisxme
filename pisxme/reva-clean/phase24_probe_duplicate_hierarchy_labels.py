@@ -20,20 +20,47 @@ TARGETS = {
 }
 
 
+def end_of_expr(text: str, start: int) -> int:
+    depth = 0; quoted = escaped = False
+    for i in range(start, len(text)):
+        c = text[i]
+        if quoted and escaped: escaped = False
+        elif quoted and c == "\\": escaped = True
+        elif c == '"': quoted = not quoted
+        elif not quoted:
+            if c == "(": depth += 1
+            elif c == ")":
+                depth -= 1
+                if depth == 0: return i + 1
+    raise ValueError("unbalanced expression")
+
+
+def top_level(text: str, start: int, stop: int) -> list[str]:
+    result = []; pos = start
+    while pos < stop:
+        opening = text.find("(", pos, stop)
+        if opening < 0: break
+        closing = end_of_expr(text, opening)
+        result.append(text[opening:closing]); pos = closing
+    return result
+
+
 def remove_boundary(text: str, name: str, y: str) -> str:
-    label = re.compile(
-        rf'\s*\(hierarchical_label "{re.escape(name)}"[^\n]*\(at 5\.08 {re.escape(y)} 180\)[\s\S]*?\)\n?'
-    )
-    text, labels = label.subn("\n", text, count=1)
-    if labels != 1:
-        raise ValueError(f"{name}@{y}: expected one boundary label, found {labels}")
-    wire = re.compile(
-        rf'\s*\(wire \(pts \(xy 5\.08 {re.escape(y)}\) \(xy 20\.32 {re.escape(y)}\)\)[\s\S]*?\)\n?'
-    )
-    text, wires = wire.subn("\n", text, count=1)
-    if wires != 1:
-        raise ValueError(f"{name}@{y}: expected one boundary wire, found {wires}")
-    return text
+    lib_end = end_of_expr(text, text.index("(lib_symbols"))
+    tail = text.index("(sheet_instances", lib_end)
+    expressions = top_level(text, lib_end, tail)
+    label_re = re.compile(rf'\(hierarchical_label "{re.escape(name)}"[\s\S]*?\(at 5\.08 {re.escape(y)} 180\)')
+    wire_re = re.compile(rf'\(wire[\s\S]*?\(xy 5\.08 {re.escape(y)}\)[\s\S]*?\(xy 20\.32 {re.escape(y)}\)')
+    kept = []; labels = wires = 0
+    for expr in expressions:
+        if expr.startswith("(hierarchical_label ") and label_re.search(expr) and labels == 0:
+            labels += 1; continue
+        if expr.startswith("(wire ") and wire_re.search(expr) and wires == 0:
+            wires += 1; continue
+        kept.append(expr)
+    if labels != 1 or wires != 1:
+        raise ValueError(f"{name}@{y}: expected one boundary label/wire, found {labels}/{wires}")
+    return text[:lib_end] + "\n" + "\n".join(kept) + "\n" + text[tail:]
 
 
 def main() -> None:
