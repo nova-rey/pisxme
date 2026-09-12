@@ -1,5 +1,9 @@
 # Append-only project bible
 
+2026-09-12: Refreshed the Phase 24 current-state checkpoint pointer from the
+older documentation-only ref `dce46015` to the latest committed live-state
+ref `817acb6b`. No schematic or PCB source changed.
+
 2026-09-12: Preserved the latest fresh KiCad Light ERC cross-check. Ref
 `4d31c1bc` reports 367 findings under KiCad 10.0.6, while the canonical four
 warning classes remain exactly 132 endpoint-off-grid, 126 isolated-label, 30
