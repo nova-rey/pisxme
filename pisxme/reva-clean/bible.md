@@ -191,3 +191,6 @@ Librarian indexed JLCPCB fabrication limits and TI HD3SS6126 package evidence in
 
 ### 2026-09-12 — Phase 24 campaign metadata refresh
 Campaign metadata now links the retained clearance DFM probe and private storage-geometry authority packet, with U12 pitch reconciliation explicitly open. The physical candidate remains `fc2b79f8`; no alternative storage implementation is selected.
+
+### 2026-09-12 — Phase 24 fresh current-head Light validation
+Fresh detached Light validation of the integrated current head reproduced 340 DRC violations and 499 unconnected items with zero evidence of closure. Raw DRC and command context are retained under `validation-receipts/current-head-fresh-light-20260912/`; Phase 24 remains open.
