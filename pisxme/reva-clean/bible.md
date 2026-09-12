@@ -405,3 +405,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Complementary surplus-pad audit found 448 actual PCB pad keys beyond the 814 schematic expected keys: 313 net-assigned and 135 no-net. Most assigned surplus pads are J1's approved power field; explicit surplus/unknown classification remains required for bidirectional coverage closure.
 
 - 2026-09-13: Bound the campaign manifest to the complementary surplus-pad audit; bidirectional coverage remains open pending explicit classification of 448 surplus pads and no-net contacts.
+
+- 2026-09-13: Classified all 448 surplus actual pads by footprint/net family. J1 contributes 393 surplus contacts (170 POWER_GND, 130 12V_PROTECTED, 93 no-net/unknown), reconciling with seven schematic-expected J1 signal contacts to the 400-position package. Remaining no-net connector/IC contacts require explicit disposition.

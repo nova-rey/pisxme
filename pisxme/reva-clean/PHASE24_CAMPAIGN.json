@@ -325,7 +325,8 @@
     "fresh_native_netlist": "validation-receipts/netlist-fresh-light-ac3f45d9/RECEIPT.md",
     "direct_head_drc_context": "validation-receipts/current-head-direct-check-28ab8fc1/RECEIPT.md",
     "fresh_pad_parity": "validation-receipts/pad-parity-fresh-light-12e02468/RECEIPT.md",
-    "pad_parity_bidirectional": "validation-receipts/pad-parity-bidirectional-20260912/RECEIPT.md"
+    "pad_parity_bidirectional": "validation-receipts/pad-parity-bidirectional-20260912/RECEIPT.md",
+    "pad_surplus_classification": "validation-receipts/pad-surplus-classification-139e2100/RECEIPT.md"
   },
   "blockers": [],
   "next_action": "Continue bounded integrated physical repairs from current committed documentation head 8da89a21 against CAD candidate c8710a84; material candidates require serialized fresh Light validation.",
@@ -342,7 +343,7 @@
     "dfm": "Fresh integrated DRC 382/499 after scoped DFM repairs; six courtyard overlaps, five PTH-inside-courtyard, 16 edge-clearance, and model/assembly evidence remain open.",
     "archive_disposition": "Do not import HD3SS3412/HD3SS6126 archive pad shifts; recover TUSB rotations only through authoritative generator after scoped validation",
     "pad_parity_scope": "Fresh Light audit passes 814 expected schematic nodes against 1262 PCB pads with 0 expected mismatches; exclusion and alias counts retained. Surplus-pad correctness and native KiCad parity metadata/net conflicts remain open.",
-    "pad_parity_surplus": "448 surplus actual pads (313 net-assigned, 135 no-net) were measured in fresh Light; J1 power-field assignments are covered by authority, while remaining surplus/no-net classification is open."
+    "pad_parity_surplus": "448 surplus pads classified by footprint/net family; J1 393-contact surplus reconciles with 400-position package and authority. Remaining no-net connector/IC contacts need explicit no-connect/unknown disposition."
   },
   "integration_candidate": "fc2b79f8",
   "active_workstreams": {

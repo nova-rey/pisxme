@@ -1,0 +1,79 @@
+{
+  "F1": {
+    "<no-net>": 1
+  },
+  "F2": {
+    "<no-net>": 1
+  },
+  "J1": {
+    "POWER_GND": 170,
+    "<no-net>": 93,
+    "12V_PROTECTED": 130
+  },
+  "J2": {
+    "<no-net>": 8
+  },
+  "J3": {
+    "<no-net>": 4
+  },
+  "J4": {
+    "<no-net>": 4
+  },
+  "J5": {
+    "<no-net>": 1
+  },
+  "J6": {
+    "<no-net>": 1
+  },
+  "J7": {
+    "<no-net>": 4
+  },
+  "TP1": {
+    "12V_IN_A": 1
+  },
+  "TP10": {
+    "/DEBUG/UART": 1
+  },
+  "TP11": {
+    "/DEBUG/RECOVERY": 1
+  },
+  "TP12": {
+    "/DEBUG/POWER_PG_FAULT": 1
+  },
+  "TP13": {
+    "/DEBUG/DEBUG_GND": 1
+  },
+  "TP2": {
+    "FUSED_12V_A": 1
+  },
+  "TP3": {
+    "12V_PROTECTED": 1
+  },
+  "TP4": {
+    "CM5_5V": 1
+  },
+  "TP5": {
+    "BRIDGE_3V3": 1
+  },
+  "TP6": {
+    "PG_BRIDGE_3V3": 1
+  },
+  "TP7": {
+    "PG_BRIDGE_1V1": 1
+  },
+  "TP8": {
+    "CM5_PERST": 1
+  },
+  "TP9": {
+    "POWER_GND": 1
+  },
+  "U11": {
+    "<no-net>": 1
+  },
+  "U13": {
+    "<no-net>": 1
+  },
+  "U7": {
+    "<no-net>": 24
+  }
+}
