@@ -162,3 +162,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: restored campaign/acceptance metadata to safe integrated candidate `7ad72207` after rejecting the JMS_AVDDL width regression; restored fresh DRC is 353/499 with zero shorts.
 - 2026-09-12: integrated bounded C7/C8 reference-text move; fresh Light DRC 351/499 with two silk findings removed and zero shorts.
 - 2026-09-12: acceptance/campaign metadata rebound to latest C7/C8 DFM candidate; fresh DRC is 351/499.
+- 2026-09-12: corrected metadata to physical C7/C8 integration commit `d453ac41`.
