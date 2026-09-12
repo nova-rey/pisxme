@@ -368,3 +368,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Integrated the scoped high-speed netclass producer context from `13d852ae` as a candidate. Exact CM5/V100 cohorts use 0.13208-mm classes with 0.2032-mm differential gap; ordinary Default remains 0.20 mm. Producer DRC is 201/499 with raw and negative-control outputs retained. Full integrated validation is pending.
 
 - 2026-09-13: Refined high-speed rule-context evidence: fresh Light still reports 312/499 but labels all 72 affected segments with the approved scoped classes while `SERVICE_VBUS_SENSE` remains a Default-class width violation. This is context proof, not a DRC-count waiver or closure.
+
+- 2026-09-13: Bound the integrated candidate to `c8710a84` after scoped high-speed netclass context integration. Fresh Light context validation remains 312/499 with 72 width findings class-scoped and ordinary negative control retained; native DRC acceptance remains OPEN.

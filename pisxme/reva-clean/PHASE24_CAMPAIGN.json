@@ -77,12 +77,12 @@
     "integration_candidate": "b17f7f2d",
     "validation": {
       "status": "OPEN_NOT_CLOSURE",
-      "candidate": "45ea2523",
-      "drc": "312 violations / 499 unconnected",
+      "candidate": "c8710a84",
+      "drc": "312 violations / 499 unconnected (72 width findings correctly scoped; ordinary negative control remains)",
       "shorting_items": 0,
       "tool": "KiCad 10.0.6",
       "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
-      "receipt": "validation-receipts/dfm-c7-c25-integrated-final-17dd81d2/RECEIPT.md",
+      "receipt": "validation-receipts/hs-rule-context-producer-13d852ae/RECEIPT.md",
       "raw": "validation-receipts/dfm-c7-c25-integrated-final-17dd81d2/integrated-drc.json"
     },
     "pi_storage_recheck": {
@@ -316,7 +316,7 @@
     }
   },
   "blockers": [],
-  "next_action": "Continue Phase 24 integrated power/return and Path-A storage closure; J1 bounded contract approved, RTL9210B Path B out of scope; no Phase 25 until all acceptance rows close.",
+  "next_action": "Continue Phase 24 physical closure: Path-A SATA/mode opens, integrated power/return continuity, remaining clearance/width defects, J1 mechanical DFM, and SI evidence. Scoped high-speed rule context is integrated but does not close DRC.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
@@ -389,8 +389,8 @@
     "xiaoyu_repo_head": "c05541e1846b47f51d05a2149ff044d4d2eba727",
     "disposition": "Path A remains selected production; RTL9210B Path B isolated and out of production scope."
   },
-  "current_integrated_sha": "45ea2523",
-  "current_candidate": "45ea2523",
+  "current_integrated_sha": "c8710a84",
+  "current_candidate": "c8710a84",
   "archive": {
     "path": "/home/nyx/PiSXMe-succession-archive-20260912",
     "contents": [
