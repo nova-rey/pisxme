@@ -85,7 +85,15 @@
       "drc": "433 violations / 265 unconnected",
       "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
       "receipt": "validation.json",
-      "scope": "TUSB footprint plus integrated DRC; Phase24 remains incomplete"
+      "scope": "TUSB footprint plus integrated DRC; Phase24 remains incomplete",
+      "current_recheck": {
+        "base_commit": "76873ea8",
+        "tool": "KiCad 10.0.6",
+        "drc": "433 violations / 265 unconnected",
+        "shorting_items": 0,
+        "result": "open_not_closure",
+        "raw": "counts observed; retained integrated TUSB raw receipt remains authoritative for same candidate geometry"
+      }
     }
   },
   "blockers": [
@@ -105,7 +113,7 @@
       "id": "HOST_FILESYSTEM_CAPACITY",
       "class": "ENVIRONMENTAL",
       "scope": "fresh candidate validation",
-      "evidence": "pisxme-worker validate clone failed with No space left on device; cleanup recovered 3.5 GiB but reserve remains tight",
+      "evidence": "Fresh validation clones previously failed on host capacity; after releasing completed workspaces, 3.2 GiB remained and one-container validation reproduced 433/265 counts.",
       "required": "sufficient free space for a fresh detached checkout and 1 GiB Light container",
       "independent_work": [
         "read-only analyses",
@@ -113,7 +121,7 @@
       ]
     }
   ],
-  "next_action": "Reconcile source/power ownership and select one bounded integrated repair; retain J1 mapping as a specification blocker until authoritative package mapping is available",
+  "next_action": "Await bounded source/ERC and PI/storage lane results; integrate only a committed candidate with fresh Light validation and preserved raw outputs",
   "open_evidence": {
     "integrated_power": "Selected PCB has J1 400 pads but only 7 named signals, 393 no-net, zero 12V_PROTECTED/POWER_GND contacts; historical Phase14 power evidence is a different candidate",
     "unrouted_rails": [
