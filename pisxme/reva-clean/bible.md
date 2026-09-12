@@ -155,3 +155,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: integrated second bounded DFM repair removing only Y10 silk rectangle and TP1 silk circle; fresh Light DRC 353/499 with five silk findings removed and no connectivity change.
 - 2026-09-12: rebound acceptance and campaign metadata to the latest integrated DFM candidate; fresh DRC is 353/499.
 - 2026-09-12: corrected metadata to canonical physical DFM integration commit `7ad72207` rather than the later documentation commit.
+- 2026-09-12: integrated one bounded JMS_AVDDL width repair; fresh Light DRC 352/499 with no new classes or connectivity changes.

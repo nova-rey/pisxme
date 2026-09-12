@@ -21802,7 +21802,7 @@
 	(segment
 		(start 141.8 138.6)
 		(end 141.8 140)
-		(width 0.15)
+		(width 0.2)
 		(layer "F.Cu")
 		(net "JMS_AVDDL")
 		(uuid "9b2560e2-5de6-4bee-a602-e30e5f51e8b3")
