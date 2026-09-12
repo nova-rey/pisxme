@@ -11855,3 +11855,8 @@ exports before/after scoped instance-label reconciliation were exactly
 with the reviewed bridge/regulator source pads. The remaining storage owner
 defect is PCB pad/copper regeneration, not schematic net ownership; no
 canonical schematic was changed.
+2026-09-12 — Phase 24 M-key PCB authority: regenerated the storage candidate
+from the current native root XML. All 814 expected schematic nodes match PCB
+pad/net ownership exactly; the nine J3 power pads are present and correctly
+owned but intentionally unrouted. Native DRC is 814/440 and the power-owner
+audit fails only on absent copper. No canonical board was promoted.
