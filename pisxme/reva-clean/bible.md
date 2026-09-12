@@ -74,3 +74,7 @@ A DFM-only candidate raised the 28 affected resistor reference fields from 0.70 
 ## Phase 24 fresh resistor reference validation — 2026-09-13
 
 Fresh KiCad Light validation of integrated commit `75f8a101` reproduced DRC `395 violations / 499 unconnected items` after raising the 28 resistor reference fields to 0.80 mm. The reduction is confined to the prior text-height class; raw fresh report, stdout, and tool identity are retained under `validation-receipts/resistor-reference-height-integrated/`.
+
+## Phase 24 integrated capacitor silkscreen repair — 2026-09-13
+
+A bounded DFM candidate removed 13 individual capacitor `F.SilkS` line segments that clipped pad 1, preserving reference identification and all copper/net geometry. The Light producer reduced DRC from 395 to 382 violations with unconnected items unchanged at 499. Fresh integrated validation remains required.
