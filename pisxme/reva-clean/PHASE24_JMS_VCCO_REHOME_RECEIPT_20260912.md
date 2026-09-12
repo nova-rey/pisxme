@@ -10,3 +10,8 @@ y=150 trial is retained as rejected evidence.
 Native KiCad 10.0.5: VCCO audit PASS, trace-removal negative control PASS,
 USB3 ten-link audit PASS, and 430 DRC violations / 419 unconnected items.
 No shorting or track-crossing finding is introduced by this primitive.
+
+Fresh EDA Light validation from committed ref `c8833d56` reports 432
+violations / 419 unconnected items under KiCad 10.0.6, reproducing the VCCO
+and USB3 connectivity results; the DRC delta is retained as a tool-version
+difference.
