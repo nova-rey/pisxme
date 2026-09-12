@@ -1,0 +1,17 @@
+--- /home/nyx/eda-workspaces/clearance-repair-producer/project/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb	2026-09-12 18:18:30.611100743 -0500
++++ /home/nyx/eda-workspaces/clearance-repair-producer/output/candidate-board-rejected.kicad_pcb	2026-09-12 18:19:04.215687357 -0500
+@@ -23260,14 +23260,6 @@
+ 		(uuid "b948d6b6-fd7b-4552-84aa-12d206c89d08")
+ 	)
+ 	(via
+-		(at 12.54 108)
+-		(size 0.55)
+-		(drill 0.3)
+-		(layers "F.Cu" "B.Cu")
+-		(net "GATE_B")
+-		(uuid "1e3bc3eb-a350-4fff-8eeb-557e90b4d4bd")
+-	)
+-	(via
+ 		(at 14 98.5)
+ 		(size 0.55)
+ 		(drill 0.3)

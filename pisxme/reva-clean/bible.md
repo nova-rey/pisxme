@@ -370,3 +370,11 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Refined high-speed rule-context evidence: fresh Light still reports 312/499 but labels all 72 affected segments with the approved scoped classes while `SERVICE_VBUS_SENSE` remains a Default-class width violation. This is context proof, not a DRC-count waiver or closure.
 
 - 2026-09-13: Bound the integrated candidate to `c8710a84` after scoped high-speed netclass context integration. Fresh Light context validation remains 312/499 with 72 width findings class-scoped and ordinary negative control retained; native DRC acceptance remains OPEN.
+
+- 2026-09-13: Preserved bounded South-Band Path-A storage rejection: fresh Light rose from 312/499 to 454/499 with 12 real shorts and an incorrect U13 pad origin; no canonical CAD integration.
+
+- 2026-09-13: Preserved bounded power-delivery rejection from `c8710a84`: candidate produced 13 real shorts and 13 solder-mask bridges; no canonical CAD integration.
+
+- 2026-09-13: Preserved bounded clearance repair rejection: removing the GATE_B co-located via reduced violations by two but introduced a USB_TXP1/JMS_AVDDL short; no canonical CAD integration.
+
+- 2026-09-13: Preserved bounded SERVICE_VBUS_SENSE width rejection: widening nine segments removed width findings but added clearance defects; no canonical CAD integration.
