@@ -12688,3 +12688,7 @@ Fresh KiCad Light inspection of canonical `93c690d8` counted 330 tracks and 98 v
 ## Phase 24 SERVICE USB2 label promotion rejection — 2026-09-13
 
 A bounded candidate promoted four SERVICE USB2 local labels to global scope, but fresh KiCad Light ERC remained at 351 findings. The candidate was rejected and not integrated; raw ERC is retained under `validation-receipts/service-usb2-labels-rejected/`.
+
+## Phase 24 campaign pointer after SERVICE test — 2026-09-13
+
+Canonical pointer advanced to `f3e51270`, which retains the rejected SERVICE USB2 label experiment and all prior validated evidence. No source or PCB candidate from that experiment was promoted.
