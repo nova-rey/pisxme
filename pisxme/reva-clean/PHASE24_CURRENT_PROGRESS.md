@@ -94,8 +94,11 @@ Fresh `kicad-light` validation from committed ref `3aa5994f` reproduces the
 AVDDL, accumulated-support, and USB3 audit passes at 583/413 under KiCad 10.0.6.
 The U12.36-to-C83.1 AVDDL branch is now added to the U11 AVDDL primitive;
 its native endpoint and negative-control audits pass, with no AVDDL
-short/crossing finding. Native DRC is 578/413; broader same-net fanout remains
-open. Receipt: `PHASE24_JMS_AVDDL_U12_LOCAL_RECEIPT_20260912.md`.
+short/crossing finding. The corrected cumulative candidate passes both U11 and
+U12 endpoint audits and negative controls; native DRC is 592/412. The first
+generated version dropped the U11 branch and is rejected evidence. Broader
+same-net fanout remains open. Receipt:
+`PHASE24_JMS_AVDDL_U12_LOCAL_RECEIPT_20260912.md`.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 

@@ -12084,4 +12084,6 @@ AVDDL, accumulated-support, and USB3 audit passes; KiCad 10.0.6 reports
 The JMS_AVDDL U12.36 branch was added to the U11/C83 support primitive using
 ordinary through-vias. Native endpoint and trace-removal negative control pass;
 native DRC is 578/413 with no AVDDL short/crossing class. Broader same-net
-fanout remains open.
+fanout remains open. The first U12 generator version dropped the prior U11
+branch; that source defect was corrected, and the regenerated cumulative
+candidate now passes both endpoint audits and negative controls at 592/412.
