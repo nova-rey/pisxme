@@ -12672,3 +12672,7 @@ Fresh Light validation of canonical `0396a068` reproduced 351 ERC findings with 
 ## Phase 24 integrated BOM regeneration — 2026-09-13
 
 Fresh KiCad Light schematic BOM export for `ee0ee5db` produced 117 references against 131 PCB references, with no obsolete BOM references. The 14 missing PCB references are TP1–TP13 and the mechanical marker `MECH_M2_2280`; these require explicit assembly/BOM disposition before DFM closure. BOM CSV and machine receipt are retained under `pisxme/reva-clean/validation-receipts/bom-integrated-ee0ee5db/`.
+
+## Phase 24 BOM exclusion disposition — 2026-09-13
+
+The 14 PCB references absent from the regenerated BOM are source-dispositioned: TP1–TP13 carry explicit `exclude_from_bom` and `exclude_from_pos_files` attributes; `MECH_M2_2280` carries `board_only`, `exclude_from_bom`, and `exclude_from_pos_files`. The BOM mismatch therefore does not indicate stale generator coverage, while DFM and placement conflicts remain open.

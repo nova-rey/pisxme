@@ -1,0 +1,119 @@
+{
+  "candidate": "ee0ee5db",
+  "pcb_sha256": "db621a9c017dadb8611d3b5684f9866eb6cb45b6b5835439841a6e5b7f12d146",
+  "missing_bom_references": [
+    {
+      "reference": "TP1",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "TP2",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "TP3",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "TP4",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "TP5",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "TP6",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "TP7",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "TP8",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "TP9",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "TP10",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "TP11",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "TP12",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "TP13",
+      "attributes": [
+        "exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": false
+    },
+    {
+      "reference": "MECH_M2_2280",
+      "attributes": [
+        "board_only exclude_from_pos_files exclude_from_bom"
+      ],
+      "exclude_from_bom": true,
+      "board_only": true
+    }
+  ],
+  "disposition": "All 13 TP references are explicit probe/test points excluded from BOM and position files; MECH_M2_2280 is board-only and excluded from BOM and position files. The BOM mismatch is source-dispositioned, not stale-generator evidence."
+}
