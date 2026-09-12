@@ -1,5 +1,17 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT ERC ALIAS REPAIR — 2026-09-12
+
+The authoritative `STORAGE.kicad_sch` now uses the identity-preserving aliases
+`POWER_GND` for the exact former `TME` label and `AUTO_PEDET` for the exact
+former `M2_CONFIG1` label. Local native KiCad 10.0.5 ERC is 311 violations / 0
+errors, and the exported 361-net netlist is exactly unchanged. Receipt:
+`PHASE24_STORAGE_ALIAS_PROMOTION_RECEIPT_20260912.md`.
+
+The `M2_3V3` to `STORAGE_3V3` rename was tested separately and rejected because
+it split eight M.2 power pads into a distinct net. It remains historical
+rejected evidence, not a current TODO or a permitted cleanup.
+
 ## CURRENT STORAGE USB3 STATE — 2026-09-12
 
 The east-pocket U12 source handoff and V6 coupled support topology are the

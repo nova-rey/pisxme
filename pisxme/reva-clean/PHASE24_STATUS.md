@@ -1,5 +1,14 @@
 # Phase 24 acreage validation status
 
+## CURRENT ERC ALIAS REPAIR — 2026-09-12
+
+Two exact STORAGE aliases are promoted with exact native netlist parity:
+`TME` at `(70,130.075)` is now `POWER_GND`, and `M2_CONFIG1` at
+`(240,125.63)` is now `AUTO_PEDET`. Local KiCad 10.0.5 ERC is 311 violations
+and zero errors; the 361-net endpoint set is unchanged. The separate
+`M2_3V3`/`STORAGE_3V3` probe is rejected because it changed M.2 power net
+ownership. See `PHASE24_STORAGE_ALIAS_PROMOTION_RECEIPT_20260912.md`.
+
 ## CURRENT ROOT-CAUSE WORK — ERC CLUSTER MAP AND IDENTITY PROBE — 2026-09-11
 
 The pre-stub-repair canonical native KiCad 10.0.5 ERC census was **777

@@ -12104,3 +12104,8 @@ rejected because it splits M.2 power ownership.
 The alias probe was made worker-portable by selecting native kicad-cli when
 available and retaining the Flatpak fallback; the committed probe remains
 disposable and does not mutate canonical schematic authority.
+The safe STORAGE alias pair was promoted after exact local netlist parity:
+TME->POWER_GND and M2_CONFIG1->AUTO_PEDET. Native ERC is 311/0 locally;
+M2_3V3->STORAGE_3V3 remains rejected because it changes M.2 power ownership.
+Fresh Light validation from 820c71b1 reproduces the probe under KiCad 10.0.6
+with its separate 367-violation version delta.
