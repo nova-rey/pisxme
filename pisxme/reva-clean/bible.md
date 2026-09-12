@@ -169,3 +169,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: corrected metadata to physical U11 DFM integration commit `3353aac4`.
 - 2026-09-12: rejected JMS_VCCO width probe after native DRC exposed a shorting item; retained failure evidence and preserved the zero-short integrated candidate.
 - 2026-09-12: integrated bounded J7 silkscreen segment removal; fresh Light DRC 348/499 with two silk findings removed and zero shorts.
+- 2026-09-12: acceptance/campaign metadata rebound to latest J7 DFM candidate; fresh DRC is 348/499.
