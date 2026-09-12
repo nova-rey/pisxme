@@ -11974,6 +11974,11 @@ outward, and staggers U12 returns. Native actual-pad USB3 connectivity passes
 all ten links with no USB3-specific short or crossing. Full DRC remains open at
 428 violations / 421 unconnected items, including inherited findings and the
 local 0.15 mm escape-width exception; V6 is not promoted.
+The next storage-local audit found a genuine inherited U14 defect: the
+STORAGE_3V3 trunk passed through the STORAGE_SEL pad. A three-segment east
+detour removed that short without changing the USB3 topology; native DRC is
+426/421 and all ten USB3 links still pass. The repair remains a candidate,
+with other inherited opens and manufacturing findings still open.
 Fresh EDA Light validation from committed ref `8375090b` reproduced the V6
 result under KiCad 10.0.6 at 430 violations / 421 unconnected items versus
 428/421 locally. The worker report retains the inherited STORAGE_SEL/

@@ -35,6 +35,11 @@ ten actual-pad USB3 links pass and V6 has no USB3-specific short or crossing,
 but native DRC remains 428/421 because inherited board findings and the local
 0.15 mm escape-width exception are still open. Receipt:
 `PHASE24_STORAGE_MKEY_USB3_SUPPORT_V6_RECEIPT_20260912.md`.
+The storage-local U14 repair candidate removes a real `STORAGE_3V3` trunk
+through the `STORAGE_SEL` pad using a short east-side detour. All ten USB3
+links remain passing; native DRC improves to 426/421 and the prior
+STORAGE_SEL/3V3 short is absent. Receipt:
+`PHASE24_U14_STORAGE_SEL_SHORT_REPAIR_RECEIPT_20260912.md`.
 Fresh KiCad Light validation independently reports 466/421 for the same V2
 candidate and confirms the rejection class.
 The first complete ten-link support graft is rejected as route implementation:
