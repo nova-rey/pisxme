@@ -8,8 +8,10 @@ mm through-vias, crosses the storage pocket on B.Cu, and returns to C84.1.
 The earlier eastward escape is rejected because it crossed adjacent U11 pads.
 
 Native KiCad 10.0.5: endpoint authority, saved-copper connectivity, and
-trace-removal negative control pass. Native DRC is 560 violations / 415
-unconnected items; this is support evidence, not full-board closure.
+trace-removal negative control pass. The candidate is rejected for a local
+solder-mask bridge at the U11.52 escape; fresh Light validation reports 562
+violations / 415 unconnected items under KiCad 10.0.6. This is not support
+closure. The REXT base remains the active basis.
 
-Fresh Light validation is required before this primitive is treated as an
-independent implementation checkpoint.
+The failure is a route-implementation/manufacturing-rule issue, not evidence
+against the JMS_XAVDDH circuit or the frozen RTL9210B placement.
