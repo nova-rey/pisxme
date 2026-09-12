@@ -12430,6 +12430,13 @@ Adjusted the promotion transform's completeness guard to the measured 76
 coordinate-record change set from the delegated probe; the guarded transform
 still refuses partial application below 70 records.
 
+# 2026-09-12 — Phase 24 Ethernet grid repair promoted
+
+Promoted the delegated identity-preserving Ethernet support-group coordinate
+repair for C48-C52/R26-R31. The canonical child now matches the disposable
+probe byte-for-byte; native ERC, semantic netlist parity, and clean-project
+hierarchy validation remain the promotion checks.
+
 # 2026-09-12 — Phase 24 all-authoritative DRC baseline
 
 Fresh Light measured the committed `PHASE24_ALL_AUTHORITATIVE_PARTS` PCB at
