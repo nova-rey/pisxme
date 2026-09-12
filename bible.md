@@ -12040,6 +12040,9 @@ version difference.
 Fresh EDA Light validation from committed ref `b29c2ae8` reports 455/401 under
 KiCad 10.0.6, reproducing the cohort's connectivity result with the expected
 tool-version DRC delta.
+Fresh `kicad-light` validation from committed ref `95c600bb` reproduces the
+JMS_REXT and USB3 audit passes. KiCad 10.0.6 reports 546/416 inherited DRC
+findings; the version delta is retained and does not constitute closure.
 The JMS_REXT local support primitive rehomes R80 to the east storage pocket
 and connects U11.39 to R80.1 without changing accepted USB3 copper. Native
 JMS_REXT connectivity and trace-removal negative control pass, as does the

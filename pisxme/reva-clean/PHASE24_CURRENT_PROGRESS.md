@@ -59,6 +59,9 @@ audit and trace-removal negative control pass, and the USB3 actual-pad audit
 passes. It remains a support primitive pending complete JMS583 support
 closure; its native board census is 544/416. Receipt:
 `PHASE24_JMS_REXT_LOCAL_RECEIPT_20260912.md`.
+Fresh `kicad-light` validation from committed ref `95c600bb` reproduces both
+audits; KiCad 10.0.6 reports 546/416 for the inherited candidate census. The
+worker result is retained as independent validation, not closure.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 

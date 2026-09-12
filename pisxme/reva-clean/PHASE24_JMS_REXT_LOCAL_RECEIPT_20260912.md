@@ -15,3 +15,7 @@ support primitive and not a full-board closure result.
 The REXT audit derives connectivity from saved pads/tracks and requires the
 trace-removal negative control to fail as intended. No new short/crossing
 claim is made from this primitive alone.
+
+Fresh `kicad-light` validation from committed ref `95c600bb` reproduces the
+REXT and USB3 audit passes. KiCad 10.0.6 reports 546 inherited DRC violations
+and 416 unconnected items; the version delta from local 10.0.5 is retained.
