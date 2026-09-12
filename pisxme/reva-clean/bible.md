@@ -177,3 +177,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: integrated bounded C23 reference-text move; fresh Light DRC 342/499 with two silk findings removed and zero shorts.
 - 2026-09-12: acceptance/campaign metadata rebound to latest C23 DFM candidate; fresh DRC is 342/499.
 - 2026-09-12: corrected metadata to physical C23 integration commit `11b829ca`.
+- 2026-09-12: integrated bounded C14/C15 reference-text moves; fresh Light DRC 340/499 with two silk findings removed and zero shorts.
