@@ -144,3 +144,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: campaign authority metadata records the private SXM2 evidence commit, J1 package reassessment, and Path A/RTL9210B disposition; no architecture reopening.
 - 2026-09-12: campaign next action corrected to canonical integrated candidate `d398f649`; active dependencies are power-envelope authority and bounded storage USB3 blocker review.
 - 2026-09-12: recorded runtime commissioning: active app-server, 24 configured threads, constrained host resources, and unavailable nested delegation; Root-mediated dispatch remains required.
+- 2026-09-12: retained storage USB3 Unblocker reassessment; blocker is internal domain authority for a local U11/U12 geometry window, with V6 as the sole next discriminator basis.
