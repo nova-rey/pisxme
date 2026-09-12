@@ -188,3 +188,6 @@ A committed-base KiCad Light probe at `1ea6671211b884e710789fd37f2f8d5186f72a57`
 
 ### 2026-09-12 — Phase 24 storage geometry authority evidence
 Librarian indexed JLCPCB fabrication limits and TI HD3SS6126 package evidence in private Library commit `6ec7505f`. The U12 footprint pitch mismatch (retained 0.40 mm versus TI 0.50 mm) remains an explicit package-authority blocker; no local-rule waiver or USB3 route promotion was made.
+
+### 2026-09-12 — Phase 24 campaign metadata refresh
+Campaign metadata now links the retained clearance DFM probe and private storage-geometry authority packet, with U12 pitch reconciliation explicitly open. The physical candidate remains `fc2b79f8`; no alternative storage implementation is selected.

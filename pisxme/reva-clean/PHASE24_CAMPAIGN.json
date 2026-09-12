@@ -186,10 +186,23 @@
     "c14_reference_placement_integrated": "validation-receipts/c14-reference-placement-integrated/RECEIPT.md",
     "c15_reference_placement_integrated": "validation-receipts/c15-reference-placement-integrated/RECEIPT.md",
     "silk_cap_segments2_integrated": "validation-receipts/silk-cap-segments2-integrated/RECEIPT.md",
-    "silk_u14_segments_integrated": "validation-receipts/silk-u14-segments-integrated/RECEIPT.md"
+    "silk_u14_segments_integrated": "validation-receipts/silk-u14-segments-integrated/RECEIPT.md",
+    "storage_geometry_authority": {
+      "private_library_commit": "6ec7505f",
+      "receipt": "PHASE24_STORAGE_GEOMETRY_AUTHORITY_RECEIPT_20260912.md",
+      "status": "OPEN_PACKAGE_PITCH_RECONCILIATION",
+      "u12_pitch_conflict": "retained footprint 0.40 mm vs TI RUA0042A 0.50 mm",
+      "usb3_route_disposition": "no route promoted pending authority"
+    },
+    "clearance_dfm_probe": {
+      "base_commit": "1ea6671211b884e710789fd37f2f8d5186f72a57",
+      "receipt": "validation-receipts/clearance-dfm-probe-20260912/RECEIPT.md",
+      "drc": "340 violations / 499 unconnected",
+      "result": "no safe text/silk/mechanical clearance candidate; first 20 clearance findings are copper/routing/pad/via/edge"
+    }
   },
   "blockers": [],
-  "next_action": "Continue bounded Phase 24 repair from integrated candidate fc2b79f8; fresh DRC 340/499 and zero shorts. Power copper and storage U11/U12 authority remain open.",
+  "next_action": "Continue bounded Phase 24 repair from integrated candidate fc2b79f8; storage U12 pitch authority and integrated power/return closure remain open.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
