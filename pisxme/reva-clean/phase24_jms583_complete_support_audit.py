@@ -6,6 +6,7 @@ negative control removes every authored support track and must fail.
 from pathlib import Path
 import os
 import pcbnew
+import argparse
 
 R=Path(__file__).resolve().parent
 PCB=R/os.environ.get('PISXME_COMPLETE_SUPPORT_AUDIT_PCB','PHASE24_DUAL_MODE_STORAGE_NC39_QFN_ESCAPE_REPAIR_V3.kicad_pcb')
@@ -20,6 +21,13 @@ PAIRS=[
 def conn(b,a,z):
  b.BuildConnectivity();ca=b.GetConnectivity().GetConnectedItems(a);cz=b.GetConnectivity().GetConnectedItems(z)
  return z in ca or any(x in cz for x in ca if isinstance(x,pcbnew.ZONE))
+ap=argparse.ArgumentParser(description='Audit complete saved JMS583 support')
+ap.add_argument('pcb',nargs='?',help='saved PCB to audit')
+ap.add_argument('--negative-output',help='saved negative-control PCB output')
+args=ap.parse_args()
+if args.pcb:
+ PCB=Path(args.pcb)
+NEG=Path(args.negative_output) if args.negative_output else NEG
 b=pcbnew.LoadBoard(str(PCB));u=b.FindFootprintByReference('U11')
 checks=[]
 for name,ra,pa,rb,pb in PAIRS:

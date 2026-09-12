@@ -8265,6 +8265,10 @@ dogbones while changing only B.Cu lanes. Native SATA endpoint assertions
 passed and aggregate DRC fell to 583, but three true shorts appeared,
 including TUSB SATA into the JMS_REXT/USB3 field. Rejected; no copper was
 promoted.
+The complete JMS583 support audit was corrected to honor its positional PCB
+argument and optional negative-output path. It now correctly fails the
+cumulative baseline on XIN/XOUT/VDDREG and passes the disposable complete
+support candidate; prior default-board PASS results are not current evidence.
 The north support V1 replay connected VDDREG but dropped accepted XIN/XOUT,
 AVDD33, VCCO, and VCCK branches; native DRC was 611/404. It is rejected
 route evidence and the cumulative AVDDL-U12 baseline remains authoritative.
