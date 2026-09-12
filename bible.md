@@ -12465,6 +12465,13 @@ Promoted the exact-count-guarded rename of the 11 ordinary STORAGE
 reduced `multiple_net_names` from 23 to 22; normalized native netlist parity
 passed. Remaining ERC and acreage DRC work stays open.
 
+# 2026-09-12 - Phase 24 DRC provenance correction
+
+Fresh Light reproduced the all-authoritative candidate at source commit
+`436f4625`: 680 DRC violations and 406 unconnected items. Corrected the
+receipt's stale `78532426` citation; manufacturing and connectivity findings
+remain open and unwaived.
+
 # 2026-09-12 - Phase 24 ERC cluster-map refresh
 
 Refreshed the live ERC cluster map after the Ethernet grid and M2_GND alias

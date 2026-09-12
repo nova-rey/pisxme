@@ -4,6 +4,9 @@ Date: 2026-09-12
 Source: fresh native KiCad Light report generated from the canonical clean root
 at committed checkpoint `097de6a4`; worker environment classifications are
 listed separately from project electrical warnings.
+The older checked-in raw report and JSON retain the pre-promotion 311-count
+census as historical evidence; the live counts below are from the fresh
+post-promotion validation receipts.
 
 ## Live census
 

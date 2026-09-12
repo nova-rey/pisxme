@@ -11,6 +11,8 @@ errors because its environment adds 53 `lib_symbol_issues` and 3
 `footprint_link_issues`. The Ethernet grid repair is promoted and fresh-Light
 validated; see `PHASE24_ETHERNET_GRID_REPAIR_PROMOTION_RECEIPT_20260912.md` and
 `PHASE24_M2_GND_ALIAS_PROMOTION_RECEIPT_20260912.md`.
+The older committed ERC raw report still contains the pre-promotion 311-count
+census and is historical; use the fresh validation receipts for the live count.
 Fresh-native-netlist schematic-to-PCB pad parity also passes with 814
 authoritative schematic nodes, 1,262 PCB pads, and 0 mismatches; the prior
 79-mismatch result was caused by the stale checked-in XML export. See
