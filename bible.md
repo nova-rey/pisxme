@@ -11785,3 +11785,8 @@ remain open.
 the ERC remediation map and status to the promoted 377-warning/0-error
 baseline, while retaining all older counts as historical evidence. Remaining
 warnings are still unwaived and Phase 24 remains open.
+
+2026-09-12 — Phase 24 workstream status correction: after STORAGE label
+deduplication, the canonical KiCad 10.0.5 grid baseline is 377/0 with 197
+endpoint-off-grid findings. The KiCad 10.0.6 worker's 539 total remains
+version-qualified evidence only; it is not the current canonical baseline.
