@@ -182,3 +182,6 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: corrected metadata to physical C14/C15 integration commit `fc2b79f8`.
 - 2026-09-12: retained fresh integrated schematic-parity DRC and native schematic netlist export; DRC 340/499, netlist RC 0, hashes preserved.
 - 2026-09-12: linked fresh schematic-parity/native-netlist evidence to the acceptance matrix; parity/export evidence passes its bounded scope while full coverage remains open.
+
+### 2026-09-12 — Phase 24 clearance DFM probe
+A committed-base KiCad Light probe at `1ea6671211b884e710789fd37f2f8d5186f72a57` reproduced 340 DRC violations and 499 unconnected items. The first 20 clearance findings were all copper/routing, pad, via, or Edge.Cuts issues; no text/silk/mechanical-only clearance repair was justified. Raw reports are retained under `validation-receipts/clearance-dfm-probe-20260912/`. No candidate was promoted.
