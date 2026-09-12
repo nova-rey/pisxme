@@ -43,7 +43,7 @@
       "receipt": "phase24-baseline-exec/receipts/PHASE24_BASELINE_REPRODUCTION_RECEIPT_20260912.md"
     },
     "rule_context": {"status": "PROVEN_AND_INTEGRATED", "candidate": "3edc4f94e0bf40667c5a03449c51168880eb8950", "integrated_commit": "d044316c", "evidence": "KiCad 10.0.6 positive/negative/outside probes and fresh Light candidate validation; local fine rule effective and normal POWER_GND constraint retained."},
-    "integration_candidate": null,
+    "integration_candidate": "working-tree after TUSB footprint correction; pending commit and integrated validation",
     "validation": null
   },
   "blockers": [],

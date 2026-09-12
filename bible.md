@@ -12566,6 +12566,13 @@ rule removes all seven fine-escape width violations while retaining the
 ordinary 0.20 mm rule for a POWER_GND outside-normal probe; the board and
 schematic geometry were unchanged.
 
+# 2026-09-12 - Phase 24 TUSB9261 footprint correction
+
+Promoted the authoritative TI-generator TUSB9261 PVP0064A pad rotations from
+an isolated producer candidate after a fresh Light validator confirmed the
+65-pad footprint and corrected orientation. Selector archive pad shifts were
+not imported; integrated board validation remains open.
+
 # 2026-09-12 - Phase 24 commissioning and integrated gap census
 
 Reproduced the untouched selected acreage baseline in KiCad Light 10.0.6:
