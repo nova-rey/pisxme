@@ -12517,3 +12517,9 @@ stale SATA-only export. Fresh Light pairing passes with zero mismatches.
 Fresh Light reproduced the committed F.Cu POWER_GND plane candidate at
 472 DRC violations / 265 unconnected items, and fresh native source-to-pad
 parity passed with zero mismatches. It is the next repair basis, not closure.
+
+# 2026-09-12 - Phase 24 ground return width candidate
+
+Saved the combined F.Cu POWER_GND plane plus normal-width return candidate.
+Only 32 undersized ground tracks were widened; producer DRC improved from
+472/265 to 440/265 with zero shorts and unchanged inherited crossings.
