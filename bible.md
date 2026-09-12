@@ -11843,3 +11843,9 @@ the project-local TE 1-2199230-4 M-key footprint. A disposable PCB-only swap
 against the acreage candidate failed closed because legacy J3.12 has no
 source-owned pad. No board was promoted; authoritative schematic regeneration
 is required before the M-key routing field can be validated.
+2026-09-12 — Phase 24 storage source regeneration: produced a disposable
+selected-macro storage candidate with the TE 1-2199230-4 M-key footprint,
+all 67 electrical contacts, four mechanical pads, and reviewed J3
+SATA/PCIe/sideband/power ownership. Native DRC is intentionally unrouted at
+798/499; the power audit reports nine absent copper joins. No canonical PCB
+was promoted.

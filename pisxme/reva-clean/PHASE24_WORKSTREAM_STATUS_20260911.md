@@ -20,6 +20,7 @@ baseline are intentionally tracked separately in
 
 | Fresh worker validation | KiCad Light 10.0.6 from committed `f3d70555` and fresh detached audit from `e5430089` | OPEN | Fresh ERC is 368/0 with the canonical 132/126/30/24 classes plus worker-only library/link classifications. U5 native audit and trace-removal negative control PASS. Strict historical V1570 M.2 power audit FAILs eight disconnected source pads; fresh current-acreage audit now fails closed on missing J3 contacts/source pads. Receipts `PHASE24_ROLLING_WORKER_VALIDATION_RECEIPT_20260912.md` and `PHASE24_STORAGE_OWNER_AUDIT_FRESH_VALIDATION_20260912.md`. |
 | J3 M-key authority refresh | Root Foreman, source-regeneration prerequisite | OPEN | Corrected refresh path now uses TE `1-2199230-4_MKEY`; disposable PCB-only swap fails closed because the current candidate lacks source ownership for J3.12. Regenerate J3 from authoritative `STORAGE.kicad_sch` before routing. Receipt `PHASE24_J3_MKEY_REFRESH_PROBE_RECEIPT_20260912.md`. |
+| Storage M-key source regeneration | Root Foreman / storage authoring | OPEN | Fresh disposable source regeneration now has all 67 TE M-key contacts and reviewed J3 net ownership. It is unrouted (798/499 native DRC) and its nine-contact power audit fails on absent copper as expected. Receipt `PHASE24_STORAGE_MKEY_SOURCE_REGEN_RECEIPT_20260912.md`. |
 
 ## Integration rule
 
