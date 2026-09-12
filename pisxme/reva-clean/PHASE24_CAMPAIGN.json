@@ -165,10 +165,11 @@
       "tool": "KiCad 10.0.6",
       "reason": "launcher container-name conflict during bounded attempt; workspace released; no CAD mutation"
     },
-    "bridge3v3_u4_rejected": "validation-receipts/bridge3v3-u4-rejected/RECEIPT.md"
+    "bridge3v3_u4_rejected": "validation-receipts/bridge3v3-u4-rejected/RECEIPT.md",
+    "bridge3v3_u7_rejected": "validation-receipts/bridge3v3-u7-rejected/RECEIPT.md"
   },
   "blockers": [],
-  "next_action": "Use a bounded method change for copper repair: select one return-aware unrouted family from native connectivity census, then validate in one fresh Light worker.",
+  "next_action": "Select a materially different return-aware route family or advance non-CAD acceptance evidence; do not replay rejected local BRIDGE_3V3 stitches.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [

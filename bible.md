@@ -12636,3 +12636,7 @@ The contract helper now enumerates the complete indexed 170-contact ground set, 
 ## Phase 24 bounded BRIDGE_3V3 route rejection — 2026-09-12
 
 A serialized Light producer tested a two-segment U4-to-C18 `BRIDGE_3V3` link from base `9ab4a9f4`. Native DRC returned 442 violations and 499 unconnected items versus the 433/499 integrated baseline, so the candidate was rejected and not merged. Raw evidence is retained under `pisxme/reva-clean/validation-receipts/bridge3v3-u4-rejected/`; a return-aware route family or different method is required.
+
+## Phase 24 bounded BRIDGE_3V3 U7 return stitch rejection — 2026-09-12
+
+A fresh Light context test joined native U7.30/U7.31 pads on `BRIDGE_3V3`; DRC stayed at 433 and unconnected items at 499, with the open moving to U7.24. The candidate was rejected and not integrated. Raw DRC JSON and candidate metadata are retained under `pisxme/reva-clean/validation-receipts/bridge3v3-u7-rejected/`.
