@@ -114,3 +114,7 @@ The C15 reference field was moved from local `(0,0)` to `(2,0)` mm to clear the 
 ## Phase 24 fresh C15 reference validation — 2026-09-13
 
 Fresh KiCad Light validation of integrated commit `6bdc15f9` reproduced DRC `377 violations / 499 unconnected items` after moving the C15 reference field clear of C14. Raw fresh report and tool identity are retained under `validation-receipts/c15-reference-placement-integrated/`.
+
+## Phase 24 integrated second capacitor silkscreen repair — 2026-09-13
+
+Five additional capacitor `F.SilkS` body segments (C80, C81, C83, C86, C87) that clipped pad 1 were removed. The bounded Light producer reduced DRC from 377 to 372 violations with unconnected items unchanged at 499 and no new class; references and electrical geometry were preserved. Fresh integrated validation remains required.

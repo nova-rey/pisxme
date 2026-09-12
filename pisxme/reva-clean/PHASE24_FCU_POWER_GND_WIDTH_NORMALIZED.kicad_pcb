@@ -5772,16 +5772,6 @@
 			)
 		)
 		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start -0.45 -0.4)
-			(end -0.45 0.4)
-			(stroke
-				(width 0.12)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "0a1801a2-60a7-41ea-8087-a57754ccb9ed")
-		)
 		(fp_rect
 			(start -0.8 -0.55)
 			(end 0.8 0.55)
@@ -8806,16 +8796,6 @@
 			)
 		)
 		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start -0.45 -0.4)
-			(end -0.45 0.4)
-			(stroke
-				(width 0.12)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "efdbe609-7369-43bd-976f-5639632b3dfe")
-		)
 		(fp_rect
 			(start -0.8 -0.55)
 			(end 0.8 0.55)
@@ -9064,16 +9044,6 @@
 			)
 		)
 		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start -0.45 -0.4)
-			(end -0.45 0.4)
-			(stroke
-				(width 0.12)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "b01e89a1-9334-47f8-92d2-c5ad3fa9a343")
-		)
 		(fp_rect
 			(start -0.8 -0.55)
 			(end 0.8 0.55)
@@ -15215,16 +15185,6 @@
 			)
 		)
 		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start -0.45 -0.4)
-			(end -0.45 0.4)
-			(stroke
-				(width 0.12)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "c19c6fa8-00a0-4801-832c-bd3967cad57f")
-		)
 		(fp_rect
 			(start -0.8 -0.55)
 			(end 0.8 0.55)
@@ -15855,16 +15815,6 @@
 			)
 		)
 		(duplicate_pad_numbers_are_jumpers no)
-		(fp_line
-			(start -0.45 -0.4)
-			(end -0.45 0.4)
-			(stroke
-				(width 0.12)
-				(type default)
-			)
-			(layer "F.SilkS")
-			(uuid "032d6df7-9ef8-4731-8d9a-0a42c9131c6b")
-		)
 		(fp_rect
 			(start -0.8 -0.55)
 			(end 0.8 0.55)
