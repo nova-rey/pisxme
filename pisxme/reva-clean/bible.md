@@ -149,3 +149,4 @@ The machine acceptance matrix now references integrated candidate `b17f7f2d` and
 - 2026-09-12: appended V6 storage blocker metrics (native 428/421, fresh 430/421) and exact U11/U12 geometry questions; same-class USB3 variants remain paused pending authority.
 - 2026-09-12: refreshed campaign workstream graph for root-mediated execution; power baseline, storage domain-authority gate, DFM, and acceptance lanes are explicitly tracked.
 - 2026-09-12: campaign next action refined after bounded storage reassessment; U11/U12 geometry authority is a local dependency, while power and acceptance evidence remain independently runnable.
+- 2026-09-12: retained fresh current-head Light recheck at e110e774; ERC 351/0 and DRC 364/499 with raw reports and source/rules hashes.
