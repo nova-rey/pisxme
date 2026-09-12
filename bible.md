@@ -1,5 +1,13 @@
 # Append-only project bible
 
+2026-09-12: Added current-state overrides to the Phase 24 status and
+workstream documents so historical ERC/workstream counts cannot be mistaken
+for live instructions. Current authority is 311 native ERC warnings / 0
+errors and the corrected JMS583 result: XIN, XOUT, and JMS_VDDREG_5V open;
+the scoped escape decision is recorded in
+pisxme/reva-clean/PHASE24_JMS583_SUPPORT_ESCAPE_BLOCKER_20260912.md. Historical
+rows and raw evidence remain unchanged.
+
 2026-09-12: Fresh KiCad Light validation reproduced the current cumulative
 JMS583 support result: JMS_REXT, reset, AVDD33, AVDDL, VCCO, VCCK, and LXO pass;
 XIN, XOUT, and JMS_VDDREG_5V remain open. After materially distinct full

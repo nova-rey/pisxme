@@ -1,5 +1,17 @@
 # Phase 24 acreage validation status
 
+## CURRENT STATE OVERRIDE — 2026-09-12
+
+The current committed Phase 24 checkpoint is `375604ef`. Native KiCad 10.0.5
+ERC is 311 warnings / 0 errors: 132 `endpoint_off_grid`, 126
+`isolated_pin_label`, 30 `same_local_global_label`, and 23
+`multiple_net_names`. The corrected JMS583 support audit passes REXT, reset,
+AVDD33, AVDDL, VCCO, VCCK, and LXO; XIN, XOUT, and JMS_VDDREG_5V remain open.
+The scoped local-escape decision boundary is recorded in
+`PHASE24_JMS583_SUPPORT_ESCAPE_BLOCKER_20260912.md`. This override is the
+current instruction and supersedes older counts and candidate labels below;
+historical sections and raw receipts remain evidence only.
+
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 
 Two exact STORAGE aliases are promoted with exact native netlist parity:

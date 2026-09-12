@@ -1,5 +1,16 @@
 # Phase 24 concurrent workstream status — 2026-09-11
 
+## CURRENT OVERRIDE — 2026-09-12
+
+This coordination snapshot contains historical workstream counts. Current
+authority is the 311-warning / zero-error ERC census and the JMS583 support
+result in `PHASE24_STATUS.md` and `PHASE24_CURRENT_PROGRESS.md`. Fresh KiCad
+Light validation reproduces the three open JMS583 branches (`XIN`, `XOUT`,
+`JMS_VDDREG_5V`) and seven passing branches. The scoped escape decision is in
+`PHASE24_JMS583_SUPPORT_ESCAPE_BLOCKER_20260912.md`; no canonical PCB copper
+was changed by the rejected support probes. Rows below are historical unless
+reaffirmed by a newer current-state section.
+
 This is the current coordination snapshot. Canonical schematic integration and
 authoritative receipts remain serialized; disposable analysis and independent
 validation run concurrently. The EDA worker launcher now provides isolated
