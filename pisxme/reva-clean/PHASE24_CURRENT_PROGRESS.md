@@ -32,8 +32,8 @@ failure is route geometry, not footprint authority.
 Support V6 is the next physical-envelope topology: TX and RX use separate
 ordered B.Cu channels, with outward U11 escape and staggered U12 returns. All
 ten actual-pad USB3 links pass and V6 has no USB3-specific short or crossing,
-but native DRC remains 431/421 because inherited board findings and the local
-0.10 mm escape width are still open. Receipt:
+but native DRC remains 428/421 because inherited board findings and the local
+0.15 mm escape-width exception are still open. Receipt:
 `PHASE24_STORAGE_MKEY_USB3_SUPPORT_V6_RECEIPT_20260912.md`.
 Fresh KiCad Light validation independently reports 466/421 for the same V2
 candidate and confirms the rejection class.

@@ -11,13 +11,12 @@ the east source handoff, and the storage architecture are unchanged.
 ## Native evidence
 
 The actual-pad ten-link audit passes, including the four J7-to-U12 links, both
-AC-coupled TX links, and both direct RX links. The audit's negative-control
-behavior remains enabled by the existing audit harness. Native KiCad 10.0.5
-DRC after refill reports 431 violations / 421 unconnected items.
+AC-coupled TX links, and both direct RX links. Native KiCad 10.0.5 DRC after
+refill reports 428 violations / 421 unconnected items.
 
 The V6 report has no USB3-specific `shorting_items` or `tracks_crossing`
 findings. The remaining native DRC issues include inherited board findings,
-the inherited `STORAGE_SEL`/`STORAGE_3V3` short, and the explicit local 0.10 mm
+the inherited `STORAGE_SEL`/`STORAGE_3V3` short, and the explicit local 0.15 mm
 U11 escape segments being checked against the board-wide 0.20 mm minimum.
 Therefore V6 is route evidence, not a production closure.
 
@@ -29,8 +28,9 @@ local KiCad 10.0.5 is retained as a tool-version difference, not merged away.
 
 ## Geometry decision
 
-The 0.10 mm width is confined to the immediate U11 bottom-edge fanout. It is
-the least aggressive geometry used so far that clears the 0.4 mm-pitch row;
+The 0.15 mm width is confined to the immediate U11 bottom-edge fanout. It is
+the least aggressive geometry used so far that clears the 0.4 mm-pitch row
+without a USB3-specific short or crossing;
 all longer corridors use 0.20 mm traces and ordinary 0.60/0.30 mm through
 vias. Promotion requires expressing this local manufacturable exception in
 the board rules (or returning to 0.20 mm if a native-clear escape permits it)
