@@ -12097,3 +12097,7 @@ The coordinate-exact STORAGE NC-label probe reduced native ERC from 312 to
 305 warnings with zero errors, but changed exported netlist structure (11
 extra names and 11 changed node sets). It is rejected evidence; no canonical
 schematic change was promoted.
+The narrowed STORAGE alias probe tested only TME->POWER_GND and
+M2_CONFIG1->AUTO_PEDET. Native ERC is 311 warnings with zero errors and the
+exported 361-net endpoint netlist is identical to canonical; M2_3V3 remains
+rejected because it splits M.2 power ownership.
