@@ -12499,6 +12499,13 @@ via-dangling findings. The probe was rejected as a closure candidate and
 preserved as evidence that saved zone fills must be normalized for future
 comparisons.
 
+# 2026-09-12 - Phase 24 top-side ground-plane candidate
+
+Saved a reproducible disposable full-acreage F.Cu `POWER_GND` plane probe.
+Native producer DRC reduced the retained baseline from 612/409 to 472/265
+without shorts or new crossings; remaining track-width and via-dangling
+findings keep it unpromoted pending fresh validation and power/SI review.
+
 # 2026-09-12 - Phase 24 parity input hygiene
 
 Recorded that current schematic-to-PCB parity must use the native dual-mode
