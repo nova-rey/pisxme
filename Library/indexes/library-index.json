@@ -98,6 +98,36 @@
         "GND",
         "pinout"
       ]
+    },
+    {
+      "id": "index-storage-geometry-u11-u12",
+      "kind": "structured-geometry-index",
+      "path": "Library/indexes/storage-geometry-u11-u12-20260912.json",
+      "tags": [
+        "U11",
+        "U12",
+        "JMS583",
+        "HD3SS6126",
+        "QFN",
+        "WQFN",
+        "6-layer",
+        "JLCPCB",
+        "geometry-conflict"
+      ]
+    },
+    {
+      "id": "brief-storage-geometry-u11-u12",
+      "kind": "working-brief",
+      "path": "Library/briefs/storage-geometry-u11-u12-20260912.md",
+      "tags": [
+        "U11",
+        "U12",
+        "JMS583",
+        "HD3SS6126",
+        "storage",
+        "fabrication",
+        "package-authority"
+      ]
     }
   ]
 }

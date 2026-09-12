@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "id": "storage-geometry-u11-u12-20260912",
+  "question": "Which public fabrication and package numbers bound the PiSXMe U11/U12 storage geometry, and do the retained footprints match their package authorities?",
+  "scope": ["U11 JMS583-QHFA3A", "U12 HD3SS6126RUAR", "6-layer FR-4 fabrication", "local QFN/WQFN geometry"],
+  "retrieved": "2026-09-12",
+  "source_ids": [
+    "jlcpcb-capabilities-20260912",
+    "jlcpcb-6layer-20260912",
+    "ti-hd3ss6126-ds-slas975a",
+    "ti-hd3ss6126-product-20260912",
+    "pisxme-storage-u11-u12-project-state-20260912"
+  ],
+  "project_components": {
+    "U11": {
+      "mpn": "JMS583-QHFA3A",
+      "retained_footprint": "PiSXMeRevAClean:JMS583_QFN64_8x8",
+      "project_derived_package_numbers": {
+        "body_mm": "8.0 x 8.0",
+        "signal_pads": 64,
+        "pad_pitch_mm": 0.40,
+        "terminal_width_mm": "0.15-0.20",
+        "exposed_pad_mm": "4.46 x 4.46",
+        "courtyard_basis_mm": "9.2 x 9.2"
+      },
+      "local_footprint_sha256": "11918576998884d5885debb500966b20804f7d14394212379fad31d0e5669c05",
+      "authority_status": "project package basis established; paste/mask/courtyard production review remains open",
+      "relevance": "JLC multilayer 0.09/0.09 mm minimum and 0.10 mm pad-to-track minimum bound the selected local 0.10/0.10 mm crystal escape; ordinary 0.60/0.30 mm through-vias remain above the published minimum."
+    },
+    "U12": {
+      "mpn": "HD3SS6126RUAR",
+      "retained_footprint": "PiSXMeRevAClean:HD3SS6126_RUA0042A",
+      "ti_package_numbers": {
+        "package": "RUA WQFN",
+        "signal_pins": 42,
+        "nominal_body_mm": "9.00 x 3.50",
+        "body_limits_mm": "8.9-9.1 x 3.4-3.6",
+        "height_limits_mm": "0.6-0.8",
+        "generic_pitch_mm": 0.50,
+        "thermal_pad_number": 43,
+        "example_signal_land_mm": "0.60 x 0.25",
+        "example_thermal_land_mm": "2.05 x 7.55",
+        "example_via_mm": "0.20 typical",
+        "stencil_thickness_mm": 0.125,
+        "stencil_coverage_percent": 69
+      },
+      "retained_local_numbers": {
+        "signal_pads": 42,
+        "signal_land_mm": "0.60 x 0.25",
+        "pad_center_pitch_mm": 0.40,
+        "thermal_pad_number": 43,
+        "thermal_land_mm": "2.05 x 7.55",
+        "courtyard_basis_mm": "4.2 x 9.2"
+      },
+      "local_footprint_sha256": "9490928521cf2d8677da7bf188fc265664095d99978ae7c1f038da07adf33ffd",
+      "authority_status": "critical pitch conflict open",
+      "relevance": "The local land dimensions and thermal pad match the TI example values, but local pad-center pitch is 0.40 mm while TI's generic package view states 0.50 mm pitch. JLC capability cannot resolve package identity."
+    }
+  },
+  "fabrication_constraints": {
+    "jlcpcb_general_multilayer": {
+      "trace_width_spacing_mm_1oz": "0.09/0.09",
+      "trace_width_spacing_mm_2oz": "0.15/0.15",
+      "min_drill_mm": 0.15,
+      "min_via_diameter_mm": 0.25,
+      "min_via_hole_to_hole_mm": 0.20,
+      "min_pad_to_track_mm": 0.10,
+      "min_different_net_smd_pad_spacing_mm": 0.15,
+      "min_via_to_track_mm": 0.20,
+      "pth_annular_ring_mm": {"recommended": 0.20, "absolute_minimum": 0.15},
+      "blind_buried_vias": "not supported on stated standard process",
+      "impedance_tolerance_percent": 10
+    },
+    "jlcpcb_6layer_page": {
+      "stackup_example": "SIG/GND/PWR/SIG/GND/SIG",
+      "board_thickness_mm": [0.8, 1.0, 1.2, 1.6, 2.0],
+      "thickness_tolerance": "±10% at >=1.0 mm; ±0.1 mm below 1.0 mm",
+      "trace_width_spacing_mm": 0.09,
+      "min_drill_via_mm": "0.15/0.25",
+      "via_in_pad": "supported",
+      "outer_copper_oz": [1, 2],
+      "inner_copper_oz": [0.5, 1, 2]
+    }
+  },
+  "conflicts": [
+    {
+      "id": "u12-package-pitch",
+      "subject": "U12 HD3SS6126 RUA0042A pad pitch",
+      "authority_assertion": "TI generic package view states 0.50 mm pitch; package outline includes 42X 0.5 and 38X 0.5 callouts.",
+      "project_assertion": "Retained PiSXMeRevAClean:HD3SS6126_RUA0042A footprint uses 0.40 mm pad-center increments on all four sides.",
+      "evidence_tiers": {"authority": 1, "project": 3},
+      "status": "unresolved",
+      "implication": "Do not treat the retained U12 footprint as package-authoritative or authorize routing from it until package authority reconciles the pitch."
+    },
+    {
+      "id": "jlc-6layer-board-max-dimensions",
+      "subject": "advertised 6-layer maximum board dimensions",
+      "capabilities_page": "656 x 586 mm for 6-layer-and-above FR-4 at thickness >=0.8 mm",
+      "six_layer_page": "660 x 475 mm",
+      "status": "conflicting manufacturer web-page values",
+      "implication": "Not material to U11/U12 local geometry; obtain a stackup/DFM review if board dimensions approach either advertised limit."
+    }
+  ],
+  "limits": [
+    "JLC pages are capability statements, not a fabrication acceptance for this board or a guarantee of yield for the U11/U12 escapes.",
+    "TI example land and stencil dimensions are package design references; they do not replace an assembly house review.",
+    "No independent public source in this task reconciles the U12 0.40-vs-0.50 mm pitch conflict.",
+    "No conclusion about U11 package authority is added beyond the existing project-derived JMicron record."
+  ]
+}
