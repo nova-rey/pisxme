@@ -21,6 +21,12 @@ the inherited `STORAGE_SEL`/`STORAGE_3V3` short, and the explicit local 0.10 mm
 U11 escape segments being checked against the board-wide 0.20 mm minimum.
 Therefore V6 is route evidence, not a production closure.
 
+Fresh EDA Light validation from committed ref `32ccba3a` reproduces the same
+class under KiCad 10.0.6: 433 violations / 421 unconnected items. Its only
+shorting-class finding is the inherited `STORAGE_SEL`/`STORAGE_3V3` issue; no
+USB3-specific short or crossing is reported. The two-count DRC delta from
+local KiCad 10.0.5 is retained as a tool-version difference, not merged away.
+
 ## Geometry decision
 
 The 0.10 mm width is confined to the immediate U11 bottom-edge fanout. It is

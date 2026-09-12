@@ -11974,3 +11974,8 @@ outward, and staggers U12 returns. Native actual-pad USB3 connectivity passes
 all ten links with no USB3-specific short or crossing. Full DRC remains open at
 431 violations / 421 unconnected items, including inherited findings and the
 local 0.10 mm escape-width exception; V6 is not promoted.
+Fresh EDA Light validation from committed ref `32ccba3a` reproduced the V6
+result under KiCad 10.0.6 at 433 violations / 421 unconnected items versus
+431/421 locally. The worker report retains the inherited STORAGE_SEL/
+STORAGE_3V3 short and no USB3-specific short/crossing, confirming the V6
+route evidence is producer-workspace independent.
