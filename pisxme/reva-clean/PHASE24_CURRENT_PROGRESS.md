@@ -1,5 +1,13 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT PARALLEL-RESUME VALIDATION — 2026-09-12
+
+Fresh KiCad Light validation from committed ref `65240bf6` reproduces the
+JMS583 three-branch failure (`XIN`, `XOUT`, `JMS_VDDREG_5V`) and passes the
+other seven support branches. The same worker passes the RTL9210B V1603
+six-net audit and all six negative controls. Receipt:
+`PHASE24_PARALLEL_RESUME_VALIDATION_RECEIPT_20260912.md`.
+
 ## CURRENT DEPENDENT GATE — JMS583 LOCAL SUPPORT ESCAPE — 2026-09-12
 
 Fresh KiCad Light validation of the committed cumulative storage baseline

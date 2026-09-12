@@ -1,5 +1,11 @@
 # Append-only project bible
 
+2026-09-12: Preserved the resumed Phase 24 fresh KiCad Light validation as
+`PHASE24_PARALLEL_RESUME_VALIDATION_RECEIPT_20260912.md`. It reproduces the
+JMS583 XIN/XOUT/JMS_VDDREG_5V opens, passes the other seven support branches,
+and passes the RTL9210B V1603 six-net audit with six negative controls. No
+canonical CAD or closed architecture changed.
+
 2026-09-12: Updated the Phase 24 current-state override to name the latest
 committed checkpoint `dce46015`; no design source or validation result changed.
 
