@@ -346,3 +346,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-12: Fresh Light validation of integrated candidate `17dd81d2` after geometry-derived C7/C25 silk repair reports 312 DRC violations and 499 unconnected items. Silk-over-copper count is zero; required physical, storage, power, and connectivity gates remain open.
 
 - 2026-09-12: Reconciled `PHASE24_CAMPAIGN.json` to the single current integrated candidate `45ea2523`, exact-head ERC/netlist/rule-context receipts, clean-worker baseline, private SXM2 Library HEAD `6ec7505f`, retained succession archive, power census, rejected STORAGE_SEL hypothesis, and final C7/C25 silk validation. All Phase 24 acceptance rows remain open; Phase 25 is not started.
+
+- 2026-09-12: Updated acceptance-matrix provenance pointers to the current integrated validation candidate `45ea2523` and 312/499 DRC census while preserving every row as OPEN.
