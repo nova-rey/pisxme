@@ -12358,3 +12358,8 @@ rerunning it; canonical sources remain untouched.
 STORAGE. Boundary hierarchy labels remain authoritative; later circuit-facing
 duplicates are local labels. Native 10.0.5 severity-error ERC, structural map,
 and exact 361-net parity pass. Full ERC remains 311 warnings / 0 errors.
+
+2026-09-12 — Fresh Light validation from `2abdfec0` passed the live contract
+map, structural hierarchy audit, and native severity-error ERC. Full Light ERC
+reports 367 findings from the retained electrical classes plus version-specific
+library configuration warnings; Phase 24 remains open.

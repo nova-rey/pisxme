@@ -2,7 +2,7 @@
 
 ## CURRENT STATE OVERRIDE — 2026-09-12
 
-The current committed Phase 24 checkpoint is `7165ea11`. Native KiCad 10.0.5
+The current committed Phase 24 checkpoint is `2abdfec0`. Native KiCad 10.0.5
 ERC is 311 warnings / 0 errors: 132 `endpoint_off_grid`, 126
 `isolated_pin_label`, 30 `same_local_global_label`, and 23
 `multiple_net_names`. The corrected JMS583 support audit passes REXT, reset,
@@ -44,6 +44,12 @@ each affected child retains one authoritative boundary hierarchical label and
 uses a local label for the circuit cohort. Native 10.0.5 severity-error ERC,
 structural audit, live contract map, and exact 361-net parity all pass. Receipt:
 `PHASE24_DUPLICATE_LABEL_PROMOTION_RECEIPT_20260912.md`.
+
+Fresh KiCad Light validation from `2abdfec0` passes the live contract map,
+structural hierarchy audit, and severity-error ERC with zero errors. Full
+KiCad 10.0.6 ERC reports 367 findings because of its library-configuration
+classification; the electrical warning classes remain 132/126/30/23. Receipt:
+`PHASE24_CONTRACT_LABEL_FRESH_LIGHT_RECEIPT_20260912.md`.
 
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 

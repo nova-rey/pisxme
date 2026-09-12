@@ -5,7 +5,7 @@
 The generic Phase 3 scaffold now emits native KiCad root child-sheet
 project/page `instances` records that were absent from its generated root
 objects. The regression validates the isolated generated root directly, and
-fresh KiCad Light validation from `7165ea11` passes with zero severity-error
+ fresh KiCad Light validation from `2abdfec0` passes with zero severity-error
 findings. Receipt:
 `PHASE24_NATIVE_HIERARCHY_SERIALIZATION_PROBE_RECEIPT_20260912.md`.
 
