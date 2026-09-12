@@ -12298,3 +12298,8 @@ candidate: fresh KiCad Light passes scope, ten-branch support connectivity,
 native endpoint, USB3 storage, and negative-control checks. Full-acreage DRC
 remains open with inherited findings; the prior user-decision blocker is
 superseded by the fine-escape receipt.
+
+The committed JMS583 fine-escape candidate was rechecked as a storage
+integration artifact: dual-mode USB3, M.2 power ownership, library, schematic,
+and mode-contract audits pass; the full native DRC report is retained for the
+remaining Phase 24 closure work.

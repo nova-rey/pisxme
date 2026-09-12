@@ -36,6 +36,12 @@ Saved-object checks all pass:
 | Fine-net via policy | PASS, none present |
 | USB3/storage architecture | unchanged; recheck required at integration |
 
+The subsequent fresh-Light storage-integrated recheck also passes the
+dual-mode USB3 endpoint set (10/10), M.2 power-owner connectivity (9 contacts)
+and its negative control, the JMS583/selector library audit, the dual-mode
+schematic audit, and the AUTO/FORCE mode contract. Its raw native DRC is
+retained as `PHASE24_STORAGE_AFTER_JMS_FINE_ESCAPE-drc.rpt`.
+
 Known KiCad 10.0.6 enum-property assertions during load are the same tool
 noise recorded by prior fresh-Light receipts; they do not alter the saved
 board or the audit result.
