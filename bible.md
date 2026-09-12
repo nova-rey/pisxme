@@ -12078,3 +12078,6 @@ The U11-to-C83 JMS_AVDDL local support leg was added from the cumulative
 support base using ordinary through-vias. Its native endpoint and negative
 control pass; native DRC is 581/413 with no AVDDL short/crossing class. The
 shared U12/J3 AVDDL branch remains open.
+Fresh `kicad-light` validation from committed ref `3aa5994f` reproduces the
+AVDDL, accumulated-support, and USB3 audit passes; KiCad 10.0.6 reports
+583/413, with the tool-version delta retained.

@@ -10,3 +10,7 @@ U11/U12/J3 AVDDL net remains open.
 Native KiCad 10.0.5: U11-to-C83 endpoint connectivity and trace-removal
 negative control PASS. Native DRC is 581 violations / 413 unconnected items,
 with no AVDDL short/crossing finding. This is support evidence, not closure.
+
+Fresh `kicad-light` validation from committed ref `3aa5994f` reproduces the
+AVDDL, accumulated-support, and USB3 audit passes. KiCad 10.0.6 reports 583
+DRC violations / 413 unconnected items; the tool-version delta is retained.
