@@ -38,3 +38,7 @@ The corrected helper was run from the pre-contract base f581568e in a clean prod
 ## Phase 24 post-authority queue state — 2026-09-12
 
 The J1 mapping blocker is closed for bounded implementation, with the public reverse-engineering risk boundary retained. Generator identity is proven. The next acceptance work is integrated copper and return repair; one CAD lane remains serialized at a time, with power and Path A storage candidates queued independently.
+
+## Phase 24 post-contract repair attempt — 2026-09-12
+
+The corrected J1 contract is reproducible and fresh-validated, but the first queued power and Path A storage repair attempts produced no CAD candidate. Their isolated workspaces were released after preserving evidence. Integrated power, return, storage, DRC, ERC, and acceptance rows remain open; the campaign continues with host headroom restored.

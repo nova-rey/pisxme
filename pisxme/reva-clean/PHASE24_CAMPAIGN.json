@@ -142,10 +142,22 @@
         "regenerated_sha256": "db621a9c017dadb8611d3b5684f9866eb6cb45b6b5835439841a6e5b7f12d146",
         "integrated_sha256": "db621a9c017dadb8611d3b5684f9866eb6cb45b6b5835439841a6e5b7f12d146",
         "counts": "130 power / 170 ground / 7 existing named / 93 unassigned",
-        "result": "PASS"
+        "result": "PASS",
+        "helper_sha256": "6097ac6ed37acf47e52a901adc33dc50bc65e6deda30ceb23a86dd9f05503894"
       },
       "generator_commit": "8ce0663a",
-      "authority_decision": "sxm2_electrical_authority: bounded contract approved; REV_A_EMPIRICAL_RISK retained; final power/continuity/sequence open"
+      "authority_decision": "sxm2_electrical_authority: bounded contract approved; REV_A_EMPIRICAL_RISK retained; final power/continuity/sequence open",
+      "latest_commit": "42a05a0c"
+    },
+    "power_lane_attempt": {
+      "base": "e226bbe3",
+      "result": "no_candidate",
+      "reason": "bounded producer performed census only; no safe route selected; workspace released after preserving prior evidence"
+    },
+    "storage_lane_attempt": {
+      "base": "e226bbe3",
+      "result": "no_candidate",
+      "reason": "prepared isolated workspace; no CAD mutation or container execution completed; workspace released"
     }
   },
   "blockers": [
@@ -161,7 +173,7 @@
       ]
     }
   ],
-  "next_action": "Advance one serialized CAD repair lane; power candidate is currently read-only/no candidate, storage candidate prepared and queued",
+  "next_action": "Resume with one bounded, executable CAD repair lane now that host headroom is available; do not claim Phase24 closure from J1 contract alone",
   "open_evidence": {
     "integrated_power": "Selected PCB has J1 400 pads but only 7 named signals, 393 no-net, zero 12V_PROTECTED/POWER_GND contacts; historical Phase14 power evidence is a different candidate",
     "unrouted_rails": [
