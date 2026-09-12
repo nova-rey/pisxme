@@ -11902,3 +11902,8 @@ This is the preferred source-escape basis, not production copper.
 Fresh KiCad Light independently reproduced the V121 graft's four endpoint
 passes and negative control, with 507/427 integrated DRC/open findings. The
 candidate remains rejected pending a local U12 launch repair.
+
+Fresh KiCad Light validation of the original V121 reference confirmed 0 DRC
+violations / 63 unconnected items and USB3 endpoint PASS. The reference's
+clean result uses its project-local 0.13208 mm / 0.15 mm rules, which remain
+an explicit scoped-rule question rather than a global board relaxation.

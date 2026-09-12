@@ -27,3 +27,9 @@ This is a **route integration failure**, not a failure of the V121 source
 escape topology or the M-key storage architecture. The recovered V121
 geometry is the preferred starting basis for the next local U12 launch
 repair, with actual current-board obstacles explicitly reserved.
+
+The original V121 project was independently validated in a fresh KiCad Light
+worker: **0 DRC violations / 63 unconnected items**, with the USB3 endpoint
+audit passing. Its clean DRC depends on the project-local 0.13208 mm minimum
+trace width and 0.15 mm clearance; those rules are not silently adopted
+board-wide.
