@@ -236,3 +236,6 @@ A bounded C25 reference relocation probe did not change the integrated DRC censu
 
 ### 2026-09-12 — Phase 24 exact-head DRC JSON
 A clean Light run with `--format json --severity-all` retained a machine-readable exact-head report: 340 violations, 499 unconnected items, return code 5, and five explicitly listed ignored checks. The report is suitable for final closure accounting but does not itself close any acceptance row.
+
+### 2026-09-12 — Phase 24 native DRC matrix pointer
+The native DRC acceptance row now points to the exact-head machine-readable JSON receipt while remaining OPEN at 340 violations and 499 unconnected items.

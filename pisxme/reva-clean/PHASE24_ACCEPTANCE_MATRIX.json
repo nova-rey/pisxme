@@ -20,10 +20,11 @@
       "status": "OPEN",
       "requirement": "0 unintended violations and 0 unconnected required items",
       "evidence": {
+        "receipt": "validation-receipts/drc-json-direct-20260912/RECEIPT.md",
+        "candidate": "ebcf9fdb",
         "violations": 340,
         "unconnected_items": 499,
-        "receipt": "validation-receipts/dfm-silk-c14c15-20260912/fresh-drc.json",
-        "toolchain": "KiCad Light 10.0.6"
+        "status": "OPEN"
       },
       "current": "370 violations / 499 unconnected items"
     },
