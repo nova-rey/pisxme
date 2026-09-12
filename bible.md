@@ -11979,6 +11979,9 @@ STORAGE_3V3 trunk passed through the STORAGE_SEL pad. A three-segment east
 detour removed that short without changing the USB3 topology; native DRC is
 426/421 and all ten USB3 links still pass. The repair remains a candidate,
 with other inherited opens and manufacturing findings still open.
+Fresh EDA Light validation from committed ref `f7070343` reports 428/421 under
+KiCad 10.0.6 and retains no STORAGE_SEL/3V3 short; the count delta is a tool
+version difference, not a relaxed gate.
 Fresh EDA Light validation from committed ref `8375090b` reproduced the V6
 result under KiCad 10.0.6 at 430 violations / 421 unconnected items versus
 428/421 locally. The worker report retains the inherited STORAGE_SEL/

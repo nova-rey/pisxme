@@ -14,3 +14,7 @@ items, down from 428/421. The actual-pad ten-link USB3 audit passes unchanged,
 and the shorting-class `STORAGE_SEL`/`STORAGE_3V3` finding is absent. Remaining
 DRC/open findings are not waived; this is a storage-local repair candidate,
 not full Phase 24 closure.
+
+Fresh EDA Light validation from committed ref `f7070343` reports 428 violations
+and 421 unconnected items under KiCad 10.0.6. The version delta is retained;
+the repaired short remains absent in the worker report.
