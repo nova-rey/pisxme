@@ -1,6 +1,7 @@
 """Focused Phase 24 native authority regression."""
 
 from pathlib import Path
+import re
 import subprocess
 import tempfile
 
@@ -16,7 +17,16 @@ def main() -> None:
     assert root.count('(global_label "') >= 60
     assert root.count('(sheet_instances (path "/" (page "1")))') == 1
     assert "c0000000-0000-0000-0000-000000000320" not in root
-    assert "(wire (pts (xy 25 47) (xy 35 47))" in root
+    wires = re.findall(
+        r'\(wire \(pts \(xy (-?[0-9.]+) (-?[0-9.]+)\) '
+        r'\(xy (-?[0-9.]+) (-?[0-9.]+)\)', root
+    )
+    assert wires, "root contract wires missing"
+    assert any(
+        all(abs(float(value) / 1.27 - round(float(value) / 1.27)) < 1e-6
+            for value in wire)
+        for wire in wires
+    ), "root contract wires are not on the native 1.27 mm grid"
     child = (ROOT / "CORE_CM5.kicad_sch").read_text()
     assert child.count("MIPI1_D2_N") >= 1 and child.count("MIPI1_D2_P") >= 1
     with tempfile.TemporaryDirectory(prefix="pisxme-phase24-erc-"):

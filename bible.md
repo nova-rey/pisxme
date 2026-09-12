@@ -11786,6 +11786,13 @@ the ERC remediation map and status to the promoted 377-warning/0-error
 baseline, while retaining all older counts as historical evidence. Remaining
 warnings are still unwaived and Phase 24 remains open.
 
+2026-09-12 — Phase 24 root-grid repair: coherently snapped the root sheet
+graphical domain to KiCad's 1.27 mm grid. Disposable native ERC reduced
+endpoint warnings 197→132 and total warnings 377→312 with zero errors; exact
+338-net semantic parity and native hierarchy/final-authority checks passed.
+The generic transform and raw receipts are retained; remaining warnings stay
+open and unwaived.
+
 2026-09-12 — Phase 24 workstream status correction: after STORAGE label
 deduplication, the canonical KiCad 10.0.5 grid baseline is 377/0 with 197
 endpoint-off-grid findings. The KiCad 10.0.6 worker's 539 total remains
