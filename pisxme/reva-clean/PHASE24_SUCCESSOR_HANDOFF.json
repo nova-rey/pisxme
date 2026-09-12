@@ -1,0 +1,20 @@
+{
+  "repository": "nova-rey/pisxme-private",
+  "branch": "reva-clean",
+  "phase": 24,
+  "status": "INCOMPLETE_ACTIVE",
+  "phase25_started": false,
+  "design_checkpoint_sha": "772b342c3107340abcfcc381ac83031d90f8035d",
+  "final_succession_sha": "SELF_RECORDED_IN_FINAL_RESPONSE",
+  "authoritative_candidate": "pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "schematic": "pisxme/reva-clean/PiSXMe_RevA_Clean.kicad_sch",
+  "erc": {"tool": "KiCad 10.0.6 Light", "errors": 0, "total_findings": 355, "electrical_warnings": 299, "classes": {"endpoint_off_grid": 121, "isolated_pin_label": 126, "same_local_global_label": 30, "multiple_net_names": 22, "lib_symbol_issues": 53, "footprint_link_issues": 3}},
+  "drc": {"tool": "KiCad 10.0.6 Light", "violations": 440, "unconnected": 265, "candidate": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb", "shorting_items": 0, "inherited_track_crossings": 2},
+  "passing_gates": ["ten-child hierarchy contract", "schematic-to-PCB pad parity 814/1262/0", "U5 actual layered connectivity and negative controls", "isolated storage USB3 10/10", "isolated JMS583 support and trace-removal negative control", "isolated RTL9210B Path-B authority/DFM", "Phase 16 PCIe ancestor with bounded Rev-A risk"],
+  "open_gates": ["integrated PCB DRC/connectivity", "power-ground-PDN delivery", "integrated JMS583 support/escape/returns", "integrated storage routing and mode-aware validation", "full Path-B RTL9210B integration and provenance", "canonical ERC warning closure", "footprint-land-pattern-impedance closure", "mechanical/serviceability/assembly closure", "final reference-set and release readiness", "source/export hygiene"],
+  "frozen_decisions": ["SWAP_ETH_STORAGE macro-floorplan", "six-layer/no-plane-signal layer contract", "PCIe Phase 16 corridor", "dual-mode storage architecture", "RTL9210B top 0 degree pin-1 southwest V1517", "JMS583 U11/support-cohort placement", "CM5IO-derived Ethernet topology", "power architecture and regulator choices", "V100/SXM2 and CM5 anchors"],
+  "validation_receipts": ["PHASE24_FRESH_SOURCE_PCB_PARITY_RECEIPT_20260912.md", "PHASE24_FRESH_LIGHT_STORAGE_USB3_RECHECK_RECEIPT_20260912.md", "PHASE24_JMS583_FINE_ESCAPE_RECEIPT_20260912.md", "PHASE24_PATHB_AUTHORITY_LIGHT_RECHECK_RECEIPT_20260912.md", "PHASE24_PATHB_DFM_FINAL_RECHECK_RECEIPT_20260912.md", "PHASE24_JMS_LOCAL_GROUND_ESCAPE_REJECT_RECEIPT_20260912.md"],
+  "recommended_initial_workstreams": ["ERC grid geometry", "ERC labels and hierarchy", "ERC aliases/net names", "integrated DRC/unconnected and JMS583 returns", "power/PDN/DFM", "storage mode-aware parity", "footprint/impedance/mechanical review"],
+  "validation_workspace": "validation-phase24-successor-freeze-validation-20260912T153259Z",
+  "phase25_note": "Do not begin compression or Phase 25 from this handoff."
+}
