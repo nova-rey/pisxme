@@ -397,3 +397,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-12: Rejected the bounded B.Cu JMS_AVDDL detour crossing repair after fresh Light DRC found a real JMS_AVDDL-to-JMS_AVDD33 short; preserved candidate and raw evidence under validation-receipts/crossing-repair-producer-rejected-563b5769.
 
 - 2026-09-13: Fresh Light schematic-parity validation at `31d1e428` failed its preflight because the schematic is not fully annotated; fallback native DRC remained 312/499. Bidirectional parity acceptance stays OPEN and no CAD changes were made.
+
+- 2026-09-13: Corrected the schematic-parity validation context in a writable disposable Light worker by matching the PCB/schematic basename. KiCad then executed parity and reported 528 real parity issues (plus 312/499 native DRC), proving the prior preflight was a lookup-context failure rather than an annotation waiver.
