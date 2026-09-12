@@ -61,38 +61,29 @@
   "evidence": {
     "baseline": {
       "status": "REPRODUCED_OPEN",
-      "workspace": "validation-receipts/baseline-d0ef22b6",
+      "source_commit": "d0af3cc8",
+      "receipt": "validation-receipts/baseline-reproduce-d0af3cc8/RECEIPT.md",
+      "drc": "314 violations / 499 unconnected",
       "tool": "KiCad 10.0.6",
       "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
-      "erc_findings": 355,
-      "drc_violations": 440,
-      "drc_unconnected": 265,
-      "parity": "814 authoritative nodes / 1262 PCB pads / 0 mismatches",
-      "receipt": "phase24-baseline-exec/receipts/PHASE24_BASELINE_REPRODUCTION_RECEIPT_20260912.md",
-      "raw_retention": "retained native ERC, DRC, XML, hierarchy contract, and reproduction receipt; producer workspace may be released after commit"
+      "raw": "validation-receipts/baseline-reproduce-d0af3cc8/baseline-drc.json"
     },
     "rule_context": {
-      "status": "PROVEN_AND_INTEGRATED",
-      "candidate": "3edc4f94e0bf40667c5a03449c51168880eb8950",
-      "integrated_commit": "d044316c",
-      "evidence": "KiCad 10.0.6 positive/negative/outside probes and fresh Light candidate validation; local fine rule effective and normal POWER_GND constraint retained.",
-      "raw_retention": "with-context report/log and patch copied; duplicate-named negative/outside reports were not separately copied before disposable workspace release and must be regenerated if needed for final manifest"
+      "status": "PROVEN_EXACT_HEAD",
+      "candidate": "70248ce8",
+      "receipt": "validation-receipts/rule-context-exact-head-c0d4682b/RECEIPT.md",
+      "result": "board-local .kicad_dru loaded; localized XIN/XOUT rule bounded; ordinary constraints active"
     },
     "integration_candidate": "b17f7f2d",
     "validation": {
       "status": "OPEN_NOT_CLOSURE",
-      "workspace": "/home/nyx/eda-workspaces/validation-tusb-integrated-validate-20260912T174403Z",
-      "drc": "433 violations / 265 unconnected",
+      "candidate": "45ea2523",
+      "drc": "312 violations / 499 unconnected",
+      "shorting_items": 0,
+      "tool": "KiCad 10.0.6",
       "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
-      "receipt": "validation.json",
-      "scope": "TUSB footprint plus integrated DRC; Phase24 remains incomplete",
-      "current_recheck": {
-        "candidate": "48ff2c48439ca911c144a7c6b5392bb0b1659337",
-        "drc": "340 violations / 499 unconnected",
-        "shorting_items": 0,
-        "result": "open_not_closure",
-        "raw": "validation-receipts/current-head-fresh-light-20260912/current-head-drc.json"
-      }
+      "receipt": "validation-receipts/dfm-c7-c25-integrated-final-17dd81d2/RECEIPT.md",
+      "raw": "validation-receipts/dfm-c7-c25-integrated-final-17dd81d2/integrated-drc.json"
     },
     "pi_storage_recheck": {
       "base_commit": "76873ea8",
@@ -104,7 +95,7 @@
       "census_sha256": "83dbc72e8b88ee21b540ab3821027905e3746694294f155e4045406284620dc8"
     },
     "sxm2_external_research": {
-      "private_library_commit": "01326bd8b6a3190ea07b2504405ea8696e55e858",
+      "private_library_commit": "6ec7505f113f7fc7e80348a92c3f96d824467f53",
       "private_library_paths": [
         "Library/briefs/sxm2-j1-unblock-20260912.md",
         "Library/indexes/sxm2-benchoff-contact-map.json",
@@ -123,7 +114,8 @@
         "auxiliary_or_protection_unknown": 2
       },
       "electrical_authority": "approved bounded contract; REV_A_EMPIRICAL_RISK retained; unknown/protection contacts remain untouched",
-      "benchoff_provenance_note": "main HEAD 3173b02c; no v1.0.0 tag"
+      "benchoff_provenance_note": "main HEAD 3173b02c; no v1.0.0 tag",
+      "authority_receipt": "authority-inventory/primary-docs/sxm2/SXM2_J1_AUTHORITY_REASSESSMENT_20260912.md"
     },
     "j1_contract_integration": {
       "integration_commit": "2b49006b",
@@ -265,10 +257,32 @@
       "fine_track_width_violations": 0,
       "drc": "340 violations / 499 unconnected",
       "global_rule_preserved": true
+    },
+    "erc_exact_head": {
+      "candidate": "2c5597da",
+      "result": "351 warnings / 0 errors",
+      "receipt": "validation-receipts/erc-exact-head-70248ce8/RECEIPT.md"
+    },
+    "netlist_exact_head": {
+      "candidate": "09c15cf8",
+      "format": "kicadxml",
+      "receipt": "validation-receipts/netlist-exact-head-70248ce8/RECEIPT.md"
+    },
+    "power_native_census": {
+      "receipt": "validation-receipts/power-native-census-09c15cf8/RECEIPT.md",
+      "status": "OPEN",
+      "result": "protected 12V/return/regulator continuity and current/transient/thermal evidence incomplete"
+    },
+    "storage_sel_rejected": "validation-receipts/storage-sel-bcu-corridor-rejected-20260912/RECEIPT.md",
+    "dfm_residual_silk": {
+      "candidate": "17dd81d2",
+      "validation": "45ea2523",
+      "result": "silk_over_copper 0; integrated DRC 312/499",
+      "receipt": "validation-receipts/dfm-c7-c25-integrated-final-17dd81d2/RECEIPT.md"
     }
   },
   "blockers": [],
-  "next_action": "Continue bounded Phase 24 repair from integrated candidate fc2b79f8; storage U12 pitch authority and integrated power/return closure remain open.",
+  "next_action": "Continue Phase 24 integrated power/return and Path-A storage closure; J1 bounded contract approved, RTL9210B Path B out of scope; no Phase 25 until all acceptance rows close.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
@@ -340,5 +354,17 @@
     "benchoff_repo_head": "3173b02c085218d66c4a2a9e5492853fb53ee097",
     "xiaoyu_repo_head": "c05541e1846b47f51d05a2149ff044d4d2eba727",
     "disposition": "Path A remains selected production; RTL9210B Path B isolated and out of production scope."
+  },
+  "current_integrated_sha": "45ea2523",
+  "current_candidate": "45ea2523",
+  "archive": {
+    "path": "/home/nyx/PiSXMe-succession-archive-20260912",
+    "contents": [
+      "tracked-worktree.patch",
+      "untracked-files.tar"
+    ],
+    "tracked_patch_sha256": "aac6232db24e9574ed3a4bf0e225d22b0fd00480e9b71fd5fd77689c319040c1",
+    "untracked_tar_sha256": "not computed (8.2G; bounded inspection only)",
+    "disposition": "retained outside Git; no wholesale restore/delete; tar listing shows historical probes and no authority change established"
   }
 }
