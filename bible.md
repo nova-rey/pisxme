@@ -12090,3 +12090,6 @@ candidate now passes both endpoint audits and negative controls at 592/412.
 Fresh `kicad-light` validation from committed ref `7f822b9f` reproduces both
 AVDDL endpoint audits, accumulated JMS support, and USB3, including negative
 controls; KiCad 10.0.6 reports 594/412 and the version delta is retained.
+The first cumulative JMS_VDDREG restoration was rejected: endpoint and
+negative-control audits passed, but native DRC found a USB_TXP1 short and a
+VCCK B.Cu crossing (617/410). No VDDREG copper was promoted.

@@ -102,6 +102,9 @@ same-net fanout remains open. Receipt:
 Fresh `kicad-light` validation from committed ref `7f822b9f` reproduces both
 AVDDL endpoint audits, accumulated support, and USB3 at 594/412 under KiCad
 10.0.6; the corrected cumulative candidate is the current support basis.
+The attempted VDDREG restoration connected U11/U12 to L10 in isolation but
+created a native USB_TXP1 short and VCCK B.Cu crossing, so it is rejected
+route evidence (617/410). No VDDREG copper was promoted.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
