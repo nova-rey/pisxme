@@ -342,3 +342,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-12: Retained the rejected Path-A `STORAGE_SEL` outboard B.Cu corridor probe. It closed three mode-control opens in isolation but fresh Light DRC introduced two real shorts and four crossings (361 violations / 499 unconnected); no CAD was promoted. The hypothesis is closed for this placement.
 
 - 2026-09-12: Librarian-indexed SXM2 evidence was reconciled with package authority. The current private Library HEAD is `6ec7505f113f7fc7e80348a92c3f96d824467f53`; J1 is Amphenol/FCI 74221-101LF with an identity A1-K40 mapping to the Benchoff footprint, 130 protected-12V contacts, 170 grounds, selected x1/reference/reset contacts A2/A3/G1/G2/E7/F7/E18, and unknown/NC contacts preserved. Path A is selected; RTL9210B Path B is out of production scope.
+
+- 2026-09-12: Fresh Light validation of integrated candidate `17dd81d2` after geometry-derived C7/C25 silk repair reports 312 DRC violations and 499 unconnected items. Silk-over-copper count is zero; required physical, storage, power, and connectivity gates remain open.
