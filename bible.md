@@ -11987,3 +11987,10 @@ result under KiCad 10.0.6 at 430 violations / 421 unconnected items versus
 428/421 locally. The worker report retains the inherited STORAGE_SEL/
 STORAGE_3V3 short and no USB3-specific short/crossing, confirming the V6
 route evidence is producer-workspace independent.
+
+2026-09-12 — Reconciled the current Phase 24 progress narrative: the active
+storage USB3 candidate is now the V6 east-pocket topology plus the U14
+STORAGE_3V3 detour, not the superseded U12-TX blocker. All ten USB3 links pass
+with no USB3-specific short/crossing; the current native candidate is 426/421
+and the remaining open gate is storage support/power/control connectivity plus
+inherited board findings. Earlier route failures remain historical evidence.

@@ -1,54 +1,26 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
-## CURRENT OPEN ROUTING BLOCKER — 2026-09-12
+## CURRENT STORAGE USB3 STATE — 2026-09-12
 
-The current storage USB3 integration route is blocked at the U12 TX handoff,
-not at architecture or connectivity authority. Three materially different
-physical-envelope-aware TX strategies were tested; all four J7→U12 endpoint
-links and negative controls pass, but native DRC remains 405–408 violations /
-427 unconnected with decisive failures confined to the RX_P corridor and U12
-return-via/pad envelope. Do not generate more same-class TX coordinate
-variants. Exact evidence and the bounded local repair are in
-`PHASE24_STORAGE_MKEY_USB3_TX_CHANNEL_BLOCKER_20260912.md`.
-Fresh KiCad Light validation from pushed commit `319edcfd` independently
-reproduces the west-return result at 408/427.
-The east-pocket U12 migration is now the accepted source-handoff baseline:
-all four J7→U12 links and the negative control pass with no USB3 crossings or
-USB3 shorts. The remaining open USB3 gate is the six-link U11/C86/C87/U12
-support network; receipt `PHASE24_STORAGE_MKEY_USB3_EAST_HANDOFF_RECEIPT_20260912.md`.
-Support V2 also passes all ten saved-board USB3 connectivity assertions but is
-rejected by native DRC at 464/421 for U11 pad escape, U12 return, and support
-pair geometry. Receipt `PHASE24_STORAGE_MKEY_USB3_SUPPORT_V2_RECEIPT_20260912.md`.
-Support V3 passes all ten connectivity links but remains rejected at native
-DRC 456/421 for U11 escape and RX support-pair geometry; receipt
-`PHASE24_STORAGE_MKEY_USB3_SUPPORT_V3_RECEIPT_20260912.md`.
-Support V4 passes all ten connectivity links but is rejected at native DRC
-459/421 for U11 pad escape, RX return convergence, and one support-channel
-crossing; receipt `PHASE24_STORAGE_MKEY_USB3_SUPPORT_V4_RECEIPT_20260912.md`.
-The U11 footprint audit has been corrected: `JMS583_QFN64_8x8.kicad_mod` uses
-rotated side pads as intended. The earlier apparent pad overlap came from an
-unrotated native size-field inspection and is superseded; the remaining V4
-failure is route geometry, not footprint authority.
-Support V6 is the next physical-envelope topology: TX and RX use separate
-ordered B.Cu channels, with outward U11 escape and staggered U12 returns. All
-ten actual-pad USB3 links pass and V6 has no USB3-specific short or crossing,
-but native DRC remains 428/421 because inherited board findings and the local
-0.15 mm escape-width exception are still open. Receipt:
+The east-pocket U12 source handoff and V6 coupled support topology are the
+current storage USB3 implementation candidates. The actual-pad audit passes
+all ten required links, and native KiCad 10.0.5 reports no USB3-specific
+shorts or track crossings. V6's U11 fanout uses a documented local 0.15 mm
+trace exception; longer corridors use 0.20 mm traces and ordinary 0.60/0.30
+mm through vias. Receipt:
 `PHASE24_STORAGE_MKEY_USB3_SUPPORT_V6_RECEIPT_20260912.md`.
-The storage-local U14 repair candidate removes a real `STORAGE_3V3` trunk
-through the `STORAGE_SEL` pad using a short east-side detour. All ten USB3
-links remain passing; native DRC improves to 426/421 and the prior
-STORAGE_SEL/3V3 short is absent. Receipt:
-`PHASE24_U14_STORAGE_SEL_SHORT_REPAIR_RECEIPT_20260912.md`.
-Fresh KiCad Light validation independently reports 466/421 for the same V2
-candidate and confirms the rejection class.
-The first complete ten-link support graft is rejected as route implementation:
-connectivity passes, but native DRC is 452/421 with U11 escape, PERST,
-U12-support launch, and RX convergence defects. Receipt
-`PHASE24_STORAGE_MKEY_USB3_SUPPORT_GRAFT_RECEIPT_20260912.md`.
-Bounded coordinated U12 west/north/south migrations remain rejected: west
-overlaps U11/support, north collides with source escape/V100_PET0, and south
-crosses CM5_PERST; the south four-link audit passes but native DRC is 436/427.
+
+The current storage-local U14 repair removes a genuine `STORAGE_3V3` trunk
+through `STORAGE_SEL` with an east-side detour. All ten USB3 links remain
+passing; native DRC is 426 violations / 421 unconnected items and the former
+U14 short is absent. Fresh Light validation reports 428/421 under KiCad
+10.0.6. Receipt: `PHASE24_U14_STORAGE_SEL_SHORT_REPAIR_RECEIPT_20260912.md`.
+
+The open gate is now completion of the remaining storage support/power/control
+connections and reconciliation of inherited board findings. Earlier V2–V4,
+TX-channel, and U12 migration failures remain historical route evidence only;
+they do not describe the current blocker. Their raw reports and receipts are
+preserved for archaeology.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 
