@@ -1,6 +1,6 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
-  "status": "BLOCKED_EXTERNAL_AUTHORITY",
+  "status": "RESEARCH_REOPENED",
   "scope": "Phase 24 and Phase 25 only; Phase 26 prohibited",
   "repository": "nova-rey/pisxme",
   "branch": "reva-clean",
@@ -103,6 +103,27 @@
       "netlist_rc": 0,
       "raw_dir": "validation-receipts/pi-storage-76873ea8",
       "census_sha256": "83dbc72e8b88ee21b540ab3821027905e3746694294f155e4045406284620dc8"
+    },
+    "sxm2_external_research": {
+      "private_library_commit": "7d822166",
+      "private_library_paths": [
+        "Library/briefs/sxm2-j1-unblock-20260912.md",
+        "Library/indexes/sxm2-benchoff-contact-map.json",
+        "Library/provenance/sources.json"
+      ],
+      "benchoff_repo_head": "3173b02c085218d66c4a2a9e5492853fb53ee097",
+      "xiaoyu_repo_head": "c05541e1846b47f51d05a2149ff044d4d2eba727",
+      "mechanical_transform": "J1 A1-K40 to Benchoff AMPHENOL_74221-101LF identity; 0.0 mm coordinate error",
+      "contact_classes": {
+        "power_12v": 130,
+        "ground": 170,
+        "pcie_data": 64,
+        "pcie_refclk": 2,
+        "pcie_reset": 1,
+        "source_declared_nc_project_unknown": 31,
+        "auxiliary_or_protection_unknown": 2
+      },
+      "electrical_authority": "pending bounded reassessment"
     }
   },
   "blockers": [
@@ -136,7 +157,7 @@
       ]
     }
   ],
-  "next_action": "Resume only when an authoritative SXM2/J1/V100 package pad mapping or approved schematic/footprint correction is supplied; then repair and fresh-validate integrated Path A",
+  "next_action": "Have electrical authority decide whether corroborated partial contact contract can be approved while preserving 33 unknown contacts; no CAD mutation until decision",
   "open_evidence": {
     "integrated_power": "Selected PCB has J1 400 pads but only 7 named signals, 393 no-net, zero 12V_PROTECTED/POWER_GND contacts; historical Phase14 power evidence is a different candidate",
     "unrouted_rails": [

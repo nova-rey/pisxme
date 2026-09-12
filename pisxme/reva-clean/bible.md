@@ -18,3 +18,7 @@ Commissioning is closed for this campaign: Path A authority is recorded, Path B 
 ## Phase 24 external authority block — 2026-09-12
 
 After three consecutive execution turns and independent PI, source, package-authority, and one-shot Unblocker attempts, the J1/SXM2/V100 mapping remains unavailable. The selected Path A cannot be repaired or accepted without an authoritative pad contract; the campaign is therefore externally blocked at Phase 24 M1. Phase 25 freeze and all Phase 26 work remain prohibited until that authority input exists.
+
+## Phase 24 SXM2 public evidence acquisition — 2026-09-12
+
+The external-information escalation was reopened. Private Library commit 7d822166 now records the Benchoff article and complete KiCad implementation, the manufacturer 74221 Rev-W geometry source, CN108280004B topology corroboration, and the pinned xiaoyu repository result (README-only). Mechanical comparison found PiSXMe J1 A1-K40 coordinates identical to the Benchoff 74221 footprint. The indexed contact map classifies 130 12-V, 170 GND, 64 PCIe data, 2 REFCLK, 1 PERST, 31 NC/project-unknown, and 2 protection-unknown contacts. Electrical net promotion remains under explicit authority review; unknown contacts remain unassigned.
