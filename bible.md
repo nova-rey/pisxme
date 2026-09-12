@@ -11907,3 +11907,9 @@ Fresh KiCad Light validation of the original V121 reference confirmed 0 DRC
 violations / 63 unconnected items and USB3 endpoint PASS. The reference's
 clean result uses its project-local 0.13208 mm / 0.15 mm rules, which remain
 an explicit scoped-rule question rather than a global board relaxation.
+
+The U12 local pad-clearance probe retained the V121 escape, restored USB3
+tracks to 0.20 mm, and set only U12 pads to 0.15 mm local clearance. Four
+USB3 endpoint links and the negative control pass; refilled native DRC is
+384/427. Intrinsic U12 pad-field errors are removed, but real launch crossings
+remain, so no production promotion was made.
