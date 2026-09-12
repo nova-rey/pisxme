@@ -1,0 +1,7 @@
+a0b8d3e3d68db1c5943ac9980f1b8127aaebddfcbd23b4b4527944ec90cd9184  pisxme/reva-clean/validation-receipts/crossing-repair-producer-rejected-563b5769/PHASE24_CROSSING_REPAIR_CANDIDATE.kicad_pcb
+b11739484c1f372a2506d7c52c9429aa2e8396013073b5e5f66fd9cef00c0c10  pisxme/reva-clean/validation-receipts/crossing-repair-producer-rejected-563b5769/RECEIPT.md
+50f991bb4df37da5436edfddcbb5ab886fc1b4205d472710f97e43bdbcf7046b  pisxme/reva-clean/validation-receipts/crossing-repair-producer-rejected-563b5769/base-drc.json
+fff6d0674e56fc5142f9c4f38e7953bef81d237c11a6f8c6c0c269b780890b0e  pisxme/reva-clean/validation-receipts/crossing-repair-producer-rejected-563b5769/base-drc.stdout
+87bc0baecc5c1fad3c8fb980bb2fd936bffab1a9fece770ca99aa5b1e26b800d  pisxme/reva-clean/validation-receipts/crossing-repair-producer-rejected-563b5769/candidate-drc.json
+385df86e20d75c9630f7577e2dc3f3da37e24e960bf25c5506f2077ea8d896db  pisxme/reva-clean/validation-receipts/crossing-repair-producer-rejected-563b5769/candidate-drc.stdout
+1f5b6f7903ca09052f24c864c0985e8db7b8c0bdb2265d6fb536a98d9018b226  pisxme/reva-clean/validation-receipts/crossing-repair-producer-rejected-563b5769/make_candidate.py

@@ -394,3 +394,4 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Bound the campaign manifest to fresh Light ERC, native netlist, and untouched PCB baseline receipts; current documentation head is `563b5769`, while physical acceptance remains open.
 
 - 2026-09-13: Corrected campaign metadata to distinguish documentation head `8da89a21` from the unchanged physical CAD candidate `c8710a84`; fresh validation receipts remain bound to their exact source commits.
+- 2026-09-12: Rejected the bounded B.Cu JMS_AVDDL detour crossing repair after fresh Light DRC found a real JMS_AVDDL-to-JMS_AVDD33 short; preserved candidate and raw evidence under validation-receipts/crossing-repair-producer-rejected-563b5769.
