@@ -384,3 +384,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Refreshed `PHASE24_CAMPAIGN.json` to reflect current integrated SHA `c8710a84`, active bounded repair lanes, explicit rejected candidates, and the still-open 13-row acceptance contract.
 
 - 2026-09-13: Retained a current-head direct native DRC check at `28ab8fc1`: 310 violations and 499 unconnected items, with no shorting_items. The count difference from retained 312-count Light validation is explicitly unresolved as rule/project-context variance and does not close DRC.
+
+- 2026-09-13: Reproduced the untouched `28ab8fc1` candidate in a fresh isolated `pisxme-kicad-light:v1` checkout from `/workspace/project/pisxme/reva-clean`: KiCad 10.0.6 reports 312 violations and 499 unconnected items. This binds the authoritative Light baseline; the direct-host 310 count is context variance only.
