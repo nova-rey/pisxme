@@ -307,6 +307,12 @@
         "GS-20-033 Rev H/J mirrors"
       ],
       "limitation": "CDN binary/3D downloads HTTP403 or authenticated terms; no restricted artifacts copied"
+    },
+    "patha_native_storage_census_corrected": {
+      "commit": "95e1a1c7",
+      "receipt": "validation-receipts/patha-native-storage-census-f3d09c3c/RECEIPT.md",
+      "result": "26 required endpoint pairs; 15 open; corrected STORAGE_SEL endpoint U13.9",
+      "status": "OPEN"
     }
   },
   "blockers": [],
