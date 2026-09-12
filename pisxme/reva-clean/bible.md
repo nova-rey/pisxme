@@ -323,3 +323,6 @@ Fresh detached Light validation of the C7 repair confirmed 315 DRC violations an
 
 ### 2026-09-12 — Phase 24 C25 silkscreen repair
 A horizontal C25 reference move removed the final two silk-over-copper findings without changing copper or connectivity. Producer DRC was 314/499 versus the 315/499 base; the repair is integrated pending fresh exact-head validation.
+
+### 2026-09-12 — Phase 24 C25 integrated validation
+Fresh detached Light validation of the final C25 silkscreen repair confirmed 314 DRC violations and 499 unconnected items on commit `994a78e8`; all targeted silk-over-copper findings are closed, while integrated electrical closure remains open.
