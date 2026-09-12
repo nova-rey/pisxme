@@ -12700,3 +12700,7 @@ A materially different producer widened 30 `SERVICE_USB2_DP/DM` track segments t
 ## Phase 24 integrated SERVICE USB2 width validation — 2026-09-13
 
 Fresh Light validation of `22d25b04` produced 351 ERC findings / 0 errors and 424 DRC violations / 499 unconnected items. Widening 30 SERVICE USB2 tracks removed 30 width findings and added 21 clearance findings, a net nine-violation improvement with no connectivity reduction. The scoped change is retained; full Phase 24 closure remains open.
+
+## Phase 24 SERVICE_VBUS_SENSE width rejection — 2026-09-13
+
+A bounded normal-net width candidate widened nine `SERVICE_VBUS_SENSE` segments, but native DRC remained 424/499: two width findings were exchanged for two clearance findings. The candidate was rejected and not integrated; no further replay of this family is planned.

@@ -177,10 +177,11 @@
     "route_layer_census_93c690d8": "validation-receipts/route-layer-census-93c690d8/RECEIPT.md",
     "service_usb2_labels_rejected": "validation-receipts/service-usb2-labels-rejected/RECEIPT.md",
     "service_usb2_width_producer": "validation-receipts/service-usb2-width-f2113c/RECEIPT.md",
-    "service_usb2_width_integrated": "validation-receipts/service-usb2-width-integrated-22d25b/RECEIPT.md"
+    "service_usb2_width_integrated": "validation-receipts/service-usb2-width-integrated-22d25b/RECEIPT.md",
+    "service_vbus_width_rejected": "validation-receipts/service-vbus-width-rejected/RECEIPT.md"
   },
   "blockers": [],
-  "next_action": "Continue acceptance-row-first from 22d25b04: choose the next independent non-high-speed defect family and preserve exact DRC deltas.",
+  "next_action": "Stop replaying SERVICE normal-net width families after the zero-net-change result; target a different DRC or acceptance family.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
