@@ -50,3 +50,7 @@ A bounded BRIDGE_3V3/U4 repair worker prepared from c362d926 and confirmed KiCad
 ## Phase 24 bounded BRIDGE_3V3 lane status — 2026-09-12
 
 A unique Light worker prepared from c362d926 and retained baseline ERC/DRC JSON, but no BRIDGE_3V3 route candidate was produced within the bounded turn. The workspace was released. This does not alter the integrated candidate or acceptance state; a future CAD turn may resume from the current canonical commit.
+
+## Phase 24 canonical queue update — 2026-09-12
+
+Canonical evidence now includes the J1 authority contract, reproducibility proof, fresh integrated validation, and the bounded BRIDGE_3V3 lane baseline. No copper candidate has yet been promoted; the next attempt requires a materially different, evidence-backed route method and a fresh Light check.
