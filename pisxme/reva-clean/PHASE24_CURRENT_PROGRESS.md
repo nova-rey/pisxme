@@ -115,6 +115,10 @@ The current actionable ERC census is 132 `endpoint_off_grid`, 126
 wire family and PWR_FLAG namespace mismatch are closed with exact native
 netlist parity. Older counts below
 are historical snapshots and are not current open work.
+The coordinate-exact STORAGE `NC_*` label probe reduced ERC to 305 warnings
+but changed exported netlist structure (11 extra names / 11 changed node
+sets), so it is rejected evidence; canonical ERC remains 312/0. Receipt:
+`PHASE24_STORAGE_REDUNDANT_NC_LABEL_REJECT_RECEIPT_20260912.md`.
 
 The accepted isolated Path-B RTL9210B V1603 candidate currently passes native
 KiCad DRC with 0 violations and 0 unconnected items, plus its six-net audit

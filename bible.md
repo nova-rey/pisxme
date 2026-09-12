@@ -12093,3 +12093,7 @@ controls; KiCad 10.0.6 reports 594/412 and the version delta is retained.
 The first cumulative JMS_VDDREG restoration was rejected: endpoint and
 negative-control audits passed, but native DRC found a USB_TXP1 short and a
 VCCK B.Cu crossing (617/410). No VDDREG copper was promoted.
+The coordinate-exact STORAGE NC-label probe reduced native ERC from 312 to
+305 warnings with zero errors, but changed exported netlist structure (11
+extra names and 11 changed node sets). It is rejected evidence; no canonical
+schematic change was promoted.
