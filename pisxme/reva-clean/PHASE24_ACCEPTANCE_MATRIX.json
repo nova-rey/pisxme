@@ -1,6 +1,6 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
-  "candidate": "b17f7f2d",
+  "candidate": "bbd8c8cbb0d3dd6909a3e076c4c649752628e229",
   "toolchain": {
     "kicad": "10.0.6",
     "image": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
@@ -19,7 +19,12 @@
       "id": "native_drc",
       "status": "OPEN",
       "requirement": "0 unintended violations and 0 unconnected required items",
-      "evidence": "validation-receipts/silk-u14-segments-integrated/fresh-drc.json",
+      "evidence": {
+        "violations": 364,
+        "unconnected_items": 499,
+        "receipt": "validation-receipts/silk-capacitor-cluster-c16-c17-c19/fresh-drc.json",
+        "toolchain": "KiCad Light 10.0.6"
+      },
       "current": "370 violations / 499 unconnected items"
     },
     {

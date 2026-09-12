@@ -189,7 +189,7 @@
     "silk_u14_segments_integrated": "validation-receipts/silk-u14-segments-integrated/RECEIPT.md"
   },
   "blockers": [],
-  "next_action": "Continue bounded repair on a materially distinct open acceptance family; preserve b17f7f2d as current integrated candidate.",
+  "next_action": "Continue bounded Phase 24 repair; retain bbd8c8cb as current integrated candidate. J1 Path A contract is authoritative under private Library 01326bd8; RTL9210B Path B remains isolated and out of production scope.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
@@ -203,7 +203,7 @@
     "dfm": "Fresh integrated DRC 382/499 after scoped DFM repairs; six courtyard overlaps, five PTH-inside-courtyard, 16 edge-clearance, and model/assembly evidence remain open.",
     "archive_disposition": "Do not import HD3SS3412/HD3SS6126 archive pad shifts; recover TUSB rotations only through authoritative generator after scoped validation"
   },
-  "integration_candidate": "b17f7f2d",
+  "integration_candidate": "bbd8c8cbb0d3dd6909a3e076c4c649752628e229",
   "active_workstreams": {
     "source_erc_lane": {
       "owner": "/root/source_erc_lane",
@@ -239,5 +239,13 @@
   },
   "authority": {
     "mechanical_placement": "J3 and MECH_M2_2280 fixed by macro authority; J8 movement requires bounded DFM target and is not yet authorized"
+  },
+  "validation": {
+    "current_recheck": {
+      "candidate": "bbd8c8cbb0d3dd6909a3e076c4c649752628e229",
+      "dr_json": "validation-receipts/silk-capacitor-cluster-c16-c17-c19/fresh-drc.json",
+      "drc_violations": 364,
+      "unconnected_items": 499
+    }
   }
 }
