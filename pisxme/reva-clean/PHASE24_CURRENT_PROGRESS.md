@@ -1,5 +1,16 @@
 # PiSXMe Rev A Clean — current progress checkpoint
 
+## CURRENT JMS583 PLACEMENT TEST — STANDARD RULES INSUFFICIENT — 2026-09-12
+
+The bounded native-pad local support placement (U11 fixed; Y10 north-west;
+L10 north-east) passes all ten JMS583 support endpoint checks and the negative
+control in fresh KiCad Light. The standard-geometry route still has concrete
+XIN/XOUT QFN pad-field shorts/crossings and an inherited AVDDL/USB3 B.Cu
+crossing. The tightest local native pad clearance is 0.0754 mm versus the
+0.10 mm pad requirement. This is now an evidence-backed local JMS583 QFN
+escape-rule boundary, not an untested placement hypothesis. See
+`PHASE24_JMS583_SUPPORT_ESCAPE_BLOCKER_20260912.md`.
+
 ## CURRENT PARALLEL-RESUME VALIDATION — 2026-09-12
 
 Fresh KiCad Light validation from committed ref `65240bf6` reproduces the

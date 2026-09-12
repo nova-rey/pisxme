@@ -4,6 +4,34 @@ Date: 2026-09-12
 Blocker ID: `PHASE24_JMS583_LOCAL_ESCAPE`  
 Status: `SCOPED_USER_DECISION_REQUIRED` (not terminal goal status)
 
+## Placement-authority implementation result — 2026-09-12
+
+The bounded local placement decision is now implemented by
+`phase24_jms583_local_support_authority_candidate.py` and independently run
+from committed ref `df6f9867` in a fresh KiCad Light workspace. The corrected
+candidate passes all ten support endpoint assertions and the trace-removal
+negative control. Native KiCad DRC reports 625 violations / 409 unconnected
+items, including these local implementation failures:
+
+* XIN/XOUT dogbones short/cross at the Y10/U11 pad field. The native DRC
+  identifies XOUT pad 2 at `(137.10,127.25)` against the XIN track and XIN/XOUT
+  tracks against the adjacent U11 pads 49/52. The route uses 0.15 mm copper;
+  the tightest adjacent-pad clearance is 0.0754 mm against a 0.10 mm pad
+  clearance requirement.
+* The inherited AVDDL branch still crosses the existing USB3 B.Cu corridor;
+  this is outside the three-branch local escape and is not a placement proof
+  against the U11 support pocket.
+
+The first valid standard-geometry test therefore closes the specialist/local
+placement discriminator: the support endpoints can be placed coherently, but
+the immediate 0.4 mm-pitch QFN escape cannot satisfy the current general
+0.20/0.20 rule. The accepted placement remains frozen.
+
+The smallest next experiment is a local JMS583 exception using 0.10 mm trace
+and 0.10 mm clearance (or a less aggressive documented equivalent), with
+ordinary 0.60/0.30 mm vias retained and normal 0.20 mm routing restored outside
+the immediate pad escape. This exception is not yet authorized for JMS583.
+
 ## Exact failed gate
 
 The current committed storage baseline is

@@ -1,5 +1,13 @@
 # Append-only project bible
 
+2026-09-12: Tested the single bounded JMS583 support-cohort placement from
+native pad geometry in a fresh KiCad Light worker. All ten support endpoint
+checks and the negative control pass, while standard 0.15 mm local escapes
+produce native XIN/XOUT QFN pad-field shorts/crossings (tightest clearance
+0.0754 mm versus 0.10 mm required) and the inherited AVDDL/USB3 corridor
+crossing remains. Recorded this as the evidence-backed point for a JMS583-local
+fine-pitch rule decision; no canonical copper changed.
+
 2026-09-12: The first execution of the JMS583 local-placement author exposed
 an implementation defect: its B.Cu VDDREG path started and ended on F.Cu pads
 without transitions, leaving VDDREG open. XIN/XOUT passed under the selected
