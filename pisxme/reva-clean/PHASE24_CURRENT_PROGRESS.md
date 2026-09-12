@@ -27,6 +27,11 @@ support audit, including negative control, and reduces unconnected items to
 401; the USB3 ten-link audit remains passing. It is not promoted because
 native DRC rises to 453 from placement/clearance defects. Receipt:
 `PHASE24_JMS583_SUPPORT_COHORT_V1_RECEIPT_20260912.md`.
+The corrected shared `JMS_VDDREG_5V` tree connects U11/U12 to L10 and passes
+its native audit plus negative control without shorts/crossings; the USB3
+ten-link audit remains passing. Native DRC is 431/421, so it is retained as a
+support primitive rather than promoted. Receipt:
+`PHASE24_JMS_VDDREG_TREE_RECEIPT_20260912.md`.
 
 ## CURRENT AUTHORITATIVE OVERRIDE — 2026-09-12
 

@@ -11999,6 +11999,10 @@ its native cohort audit and negative control, keeps all ten USB3 links passing,
 and reduces unconnected items to 401. Native DRC is 453, so the cohort is
 preserved as evidence but not promoted; its moved support placement needs
 clearance/routing repair.
+The corrected VDDREG_5V north-side tree connects both bridge pads to L10 and
+passes its native connectivity audit and negative control with no short/cross;
+the earlier LXO collision is removed. Full native DRC remains 431/421, so the
+tree is a support primitive, not Phase 24 closure.
 Fresh EDA Light validation from committed ref `b29c2ae8` reports 455/401 under
 KiCad 10.0.6, reproducing the cohort's connectivity result with the expected
 tool-version DRC delta.
