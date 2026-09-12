@@ -12397,6 +12397,13 @@ Marked stale JMS583 three-branch blocker wording in the historical workstream
 table as superseded by validated local fine-escape evidence. Raw rejected route
 reports remain unchanged.
 
+# 2026-09-12 — Phase 24 STORAGE alias probe rejected
+
+The distinct co-located `NC_*`-to-authoritative-name probe reduced alias
+warnings but changed the semantic netlist from 338 to 349 nets, including 11
+extra NC nets and 11 changed node sets. It remains rejected; canonical source
+and validation severity are unchanged.
+
 # 2026-09-12 — Phase 24 STORAGE alias rename probe
 
 Added a disposable, exact-coordinate probe for renaming co-located STORAGE

@@ -66,6 +66,9 @@ The current live ERC cluster map is recorded in
 The latest live-source recheck also passes the ten-child contract map and
 JMS583 support-authority audit; see
 `PHASE24_LIVE_SOURCE_RECHECK_RECEIPT_20260912.md`.
+The distinct STORAGE alias-rename probe is rejected: it reduced
+`multiple_net_names` but changed the semantic netlist from 338 to 349 nets.
+See `PHASE24_STORAGE_ALIAS_RENAME_PROBE_REJECT_RECEIPT_20260912.md`.
 
 ## CURRENT ERC ALIAS REPAIR — 2026-09-12
 
