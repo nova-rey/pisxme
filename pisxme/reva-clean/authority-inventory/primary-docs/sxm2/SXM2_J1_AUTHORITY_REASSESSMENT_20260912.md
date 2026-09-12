@@ -1,6 +1,6 @@
 # SXM2 J1 package/net authority reassessment — 2026-09-12
 
-Authority basis: private Library refresh `01326bd8b6a3190ea07b2504405ea8696e55e858`, including `Library/briefs/sxm2-j1-unblock-20260912.md`, `Library/indexes/sxm2-benchoff-contact-map.json`, and `Library/provenance/sources.json`; manufacturer identity remains Amphenol/FCI `74221-101LF` and Rev-W drawing authority in `SXM2_74221-101LF_AUTHORITY.md`.
+Authority basis: private Library refresh `6ec7505f113f7fc7e80348a92c3f96d824467f53`, including `Library/briefs/sxm2-j1-unblock-20260912.md`, `Library/indexes/sxm2-benchoff-contact-map.json`, and `Library/provenance/sources.json`; manufacturer identity remains Amphenol/FCI `74221-101LF` and Rev-W drawing authority in `SXM2_74221-101LF_AUTHORITY.md`.
 
 Mechanical result: PiSXMe J1 contains exactly 400 pads named `A1..K40`. Parsed pad identifiers and relative coordinates match the Benchoff 74221 implementation by identity transformation (zero coordinate error), including A1, A2, B1, B2, and K40. This is a parsed correspondence, not visual inference.
 

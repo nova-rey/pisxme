@@ -828,7 +828,7 @@
 		(uuid "0045f9cc-0afc-4ab8-8c03-202f55e66bc3")
 		(at 65 168.5)
 		(property "Reference" "C7"
-			(at -3 0 0)
+			(at 0 -2.5 0)
 			(layer "F.SilkS")
 			(uuid "318667fc-f1af-4ada-b13a-bba9c790e43b")
 			(effects
@@ -8343,7 +8343,7 @@
 		(uuid "8db2d8e6-257d-4394-879a-c393c8d08dc2")
 		(at 136 170)
 		(property "Reference" "C25"
-			(at 3 0 0)
+			(at 0 -2.5 0)
 			(layer "F.SilkS")
 			(uuid "677d68f4-d5f4-466f-904a-0790981cab22")
 			(effects
