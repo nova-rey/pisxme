@@ -11763,6 +11763,12 @@ from `8587a0f2` reconfirmed V96 R81 connectivity and its trace-removal
 negative control. KiCad 10.0.6 reported 605/341 DRC versus local KiCad 10.0.5
 603/341; V96 remains focused evidence and U12/U13 source breakout remains
 open.
+
+2026-09-12 — Phase 24 STORAGE label-authoring repair: deduplicating 289
+identical ordinary label records across 146 exact name/coordinate keys was
+proven in disposable native ERC/netlist comparison, then promoted. Native ERC
+fell 483→377 warnings with no errors; isolated-label warnings fell 232→126,
+and semantic netlist parity remained exact across 338 nets.
 2026-09-12 — Phase 24 fresh DFM validation: committed ref `5148df63` was
 validated in a detached KiCad Light checkout. Native DRC independently
 reported 180 violations and 468 unconnected items for `ACREAGE_CANDIDATE`.
