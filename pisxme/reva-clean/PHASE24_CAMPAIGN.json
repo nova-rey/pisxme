@@ -168,10 +168,11 @@
     },
     "bridge3v3_u4_rejected": "validation-receipts/bridge3v3-u4-rejected/RECEIPT.md",
     "bridge3v3_u7_rejected": "validation-receipts/bridge3v3-u7-rejected/RECEIPT.md",
-    "patha_native_storage_census": "validation-receipts/patha-native-storage-census-19a1390a/RECEIPT.md"
+    "patha_native_storage_census": "validation-receipts/patha-native-storage-census-19a1390a/RECEIPT.md",
+    "dfm_mechanics_19a": "validation-receipts/dfm-mechanics-19a/RECEIPT.json"
   },
   "blockers": [],
-  "next_action": "Use Path-A census to select one bounded multi-branch storage repair or advance independent acceptance evidence; preserve serialized integration.",
+  "next_action": "Resolve J3/J8 M.2 envelope conflicts and stale BOM/model provenance through bounded mechanical corrections while source/ERC and power lanes continue.",
   "open_evidence": {
     "integrated_power": "J1 contract now assigns 130 indexed contacts to 12V_PROTECTED and 170 to POWER_GND; rail delivery, return continuity, transient and thermal closure remain open.",
     "unrouted_rails": [
@@ -212,9 +213,10 @@
     "dfm_mechanics_lane": {
       "owner": "/root/dfm_mechanics_lane2",
       "base": "19a1390a",
-      "state": "DISPATCHED",
+      "state": "EVIDENCE_INTEGRATED",
       "cad_budget": "research/read-only unless scoped candidate",
-      "next": "integrated DFM/mechanics evidence or correction"
+      "next": "integrated DFM/mechanics evidence or correction",
+      "result": "6 courtyard overlaps, 5 PTH-inside-courtyard, 9 co-located holes, 16 edge-clearance; local USON alias rejected"
     }
   }
 }

@@ -12656,3 +12656,7 @@ From committed base `19a1390a`, the four existing Path-A/Path-B authority record
 ## Phase 24 Path-A census integration — 2026-09-13
 
 Integrated the Path-A authority/native census evidence at canonical commit `13607a28`. The selected implementation remains Path A; the census identifies 15 concrete integrated storage branches still open. No Path-B production integration occurred.
+
+## Phase 24 integrated DFM/mechanics census — 2026-09-13
+
+The integrated candidate has six courtyard overlaps, five PTH-inside-courtyard errors, nine co-located drilled holes, and sixteen board-edge clearance errors. J3/J8 conflict with the M.2 2280 envelope; the envelope is fixed and requires placement/routing coordination. A local USON library alias candidate worsened DRC and was rejected. Missing connector 3D models and a stale BOM remain open evidence rows. Raw DFM evidence is retained under `pisxme/reva-clean/validation-receipts/dfm-mechanics-19a/`.

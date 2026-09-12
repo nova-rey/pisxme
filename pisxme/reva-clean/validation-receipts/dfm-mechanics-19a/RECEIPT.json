@@ -1,0 +1,407 @@
+{
+  "receipt": "DFM/mechanics integrated candidate inspection",
+  "generated_utc": "2026-09-12T19:00:00Z",
+  "candidate": {
+    "sha256": "db621a9c017dadb8611d3b5684f9866eb6cb45b6b5835439841a6e5b7f12d146",
+    "git_ref": "19a1390a",
+    "path": "pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+    "state": "integrated candidate under inspection"
+  },
+  "validator": {
+    "tool": "KiCad 10.0.6",
+    "worker_image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+    "command": "kicad-cli pcb drc --severity-all --format json --output dfm-integrated-19a-drc.json PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+    "return_code": 0
+  },
+  "native_drc": {
+    "violations": 433,
+    "unconnected_items": 499,
+    "classes": {
+      "track_width": 149,
+      "copper_edge_clearance": 16,
+      "courtyards_overlap": 6,
+      "pth_inside_courtyard": 5,
+      "tracks_crossing": 2,
+      "clearance": 117,
+      "silk_overlap": 3,
+      "silk_over_copper": 80,
+      "text_height": 28,
+      "lib_footprint_issues": 2,
+      "holes_co_located": 9,
+      "track_dangling": 9,
+      "via_dangling": 7
+    },
+    "shorting_items": 0
+  },
+  "mechanical_findings": {
+    "courtyard_conflicts": [
+      {
+        "class": "courtyards_overlap",
+        "refs": [
+          "C7",
+          "C8"
+        ],
+        "positions_mm": [
+          [
+            65.0,
+            168.5
+          ],
+          [
+            65.0,
+            170.5
+          ]
+        ],
+        "severity": "error",
+        "disposition": "open; component placement/assembly clearance decision required"
+      },
+      {
+        "class": "courtyards_overlap",
+        "refs": [
+          "C5",
+          "C6"
+        ],
+        "positions_mm": [
+          [
+            52.0,
+            163.0
+          ],
+          [
+            52.0,
+            165.25
+          ]
+        ],
+        "severity": "error",
+        "disposition": "open; component placement/assembly clearance decision required"
+      },
+      {
+        "class": "courtyards_overlap",
+        "refs": [
+          "J3",
+          "MECH_M2_2280"
+        ],
+        "positions_mm": [
+          [
+            220.0,
+            165.0
+          ],
+          [
+            260.0,
+            160.0
+          ]
+        ],
+        "severity": "error",
+        "disposition": "open; PTH inside M.2 envelope; do not shrink envelope"
+      },
+      {
+        "class": "courtyards_overlap",
+        "refs": [
+          "J8",
+          "MECH_M2_2280"
+        ],
+        "positions_mm": [
+          [
+            245.0,
+            150.0
+          ],
+          [
+            260.0,
+            160.0
+          ]
+        ],
+        "severity": "error",
+        "disposition": "open; mode header intersects M.2 envelope"
+      },
+      {
+        "class": "courtyards_overlap",
+        "refs": [
+          "J7",
+          "C14"
+        ],
+        "positions_mm": [
+          [
+            35.0,
+            130.0
+          ],
+          [
+            70.0,
+            120.0
+          ]
+        ],
+        "severity": "error",
+        "disposition": "open; verify CM5 body/underside clearance before disposition"
+      },
+      {
+        "class": "courtyards_overlap",
+        "refs": [
+          "L10",
+          "U11"
+        ],
+        "positions_mm": [
+          [
+            142.0,
+            130.0
+          ],
+          [
+            140.0,
+            135.0
+          ]
+        ],
+        "severity": "error",
+        "disposition": "open; power/storage placement coordination required"
+      }
+    ],
+    "pth_inside_courtyard": [
+      {
+        "ref": "J3",
+        "pad": "M2",
+        "pos_mm": [
+          230.35,
+          163.5
+        ]
+      },
+      {
+        "ref": "J8",
+        "pad": "1",
+        "pos_mm": [
+          243.73,
+          148.73
+        ]
+      },
+      {
+        "ref": "J8",
+        "pad": "2",
+        "pos_mm": [
+          246.27,
+          148.73
+        ]
+      },
+      {
+        "ref": "J8",
+        "pad": "3",
+        "pos_mm": [
+          243.73,
+          151.27
+        ]
+      },
+      {
+        "ref": "J8",
+        "pad": "4",
+        "pos_mm": [
+          246.27,
+          151.27
+        ]
+      }
+    ],
+    "holes_colocated_count": 9,
+    "edge_clearance_count": 16
+  },
+  "footprint_scope": {
+    "important": [
+      {
+        "ref": "U13",
+        "footprint_name": "HD3SS3412_RUA0042A",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 43
+      },
+      {
+        "ref": "J3",
+        "footprint_name": "TE_1-2199230-4_MKEY",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 71
+      },
+      {
+        "ref": "U12",
+        "footprint_name": "HD3SS6126_RUA0042A",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 43
+      },
+      {
+        "ref": "U7",
+        "footprint_name": "TUSB9261IPVP_PVP0064A",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 65
+      },
+      {
+        "ref": "F2",
+        "footprint_name": "ATO_FuseHolder_17861650001",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 9
+      },
+      {
+        "ref": "F1",
+        "footprint_name": "ATO_FuseHolder_17861650001",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 9
+      },
+      {
+        "ref": "J8",
+        "footprint_name": "MODE_JUMPER_1x04",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 4
+      },
+      {
+        "ref": "J4",
+        "footprint_name": "USB_C_SERVICE_10171746",
+        "models": [],
+        "has_f_courtyard": false,
+        "pad_count": 18
+      },
+      {
+        "ref": "J5",
+        "footprint_name": "Molex_0039300020_5569_2P_RA",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 3
+      },
+      {
+        "ref": "J1",
+        "footprint_name": "PiSXMeRevAClean_SXM2_74221_101LF",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 400
+      },
+      {
+        "ref": "J2",
+        "footprint_name": "EDAC_A70_112_331N126",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 26
+      },
+      {
+        "ref": "J6",
+        "footprint_name": "Molex_0039300020_5569_2P_RA",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 3
+      },
+      {
+        "ref": "U14",
+        "footprint_name": "SOT-23-5",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 5
+      },
+      {
+        "ref": "U11",
+        "footprint_name": "JMS583_QFN64_8x8",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 65
+      },
+      {
+        "ref": "MECH_M2_2280",
+        "footprint_name": "M2_2280_RETENTION_ENVELOPE",
+        "models": [],
+        "has_f_courtyard": true,
+        "pad_count": 0
+      }
+    ],
+    "source_tests": {
+      "phase9_mechanics": "PASS",
+      "phase14_footprint_authority": "PASS"
+    },
+    "board_embedded_footprints": 131,
+    "board_embedded_pads": 1270
+  },
+  "models": {
+    "board_model_records": [
+      "${KICAD8_3DMODEL_DIR}/Package_SON.3dshapes/USON-10_2.5x1.0mm_P0.5mm.wrl",
+      "${KICAD8_3DMODEL_DIR}/Package_SON.3dshapes/USON-10_2.5x1.0mm_P0.5mm.wrl",
+      "${KIPRJMOD}/PiSXMe_RevA_Clean.3dshapes/10164227-1001a1rlf.stp",
+      "${KIPRJMOD}/PiSXMe_RevA_Clean.3dshapes/10164227-1001a1rlf.stp"
+    ],
+    "board_model_record_count": 4,
+    "project_local_3d_files": [
+      "PiSXMe_RevA_Clean.3dshapes/10164227-1001a1rlf.stp"
+    ],
+    "required_connector_model_status": {
+      "J1": "missing",
+      "J2": "missing",
+      "J3": "missing",
+      "J4": "missing",
+      "J5": "missing",
+      "J6": "missing",
+      "J8": "missing",
+      "MECH_M2_2280": "not_applicable_envelope_datum"
+    },
+    "CM5_J7": "present",
+    "U6_U9": "reference external KICAD8 Package_SON model records; library context warning remains"
+  },
+  "bom": {
+    "path": "manufacturing/release/generated/assembly/PiSXMe-RevA-BOM.csv",
+    "sha256": "272ff32c7c14bd96b96bd44b99f194d232e933b456a751a86e60feb8a3fefd2d",
+    "bom_reference_count": 50,
+    "board_reference_count": 0,
+    "board_not_in_bom": [],
+    "bom_not_on_board": [
+      "C1",
+      "C2",
+      "C3",
+      "C4",
+      "C5",
+      "C6",
+      "C7",
+      "C8",
+      "C9",
+      "F1",
+      "F2",
+      "J1",
+      "J10",
+      "J11",
+      "J2",
+      "J3",
+      "J4",
+      "J5",
+      "J6",
+      "J7",
+      "J8",
+      "J9",
+      "Q1",
+      "Q2",
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "TP3",
+      "U1",
+      "U10",
+      "U11",
+      "U12",
+      "U13",
+      "U14",
+      "U15",
+      "U16",
+      "U17",
+      "U18",
+      "U2",
+      "U3",
+      "U4",
+      "U5",
+      "U6",
+      "U7",
+      "U8",
+      "U9"
+    ],
+    "status": "STALE_MISMATCH_FOR_CURRENT_CANDIDATE"
+  },
+  "candidate_attempts": {
+    "local_uson_library_alias": {
+      "candidate_sha256": "c40e07b840c68c6a9661371a7699fbf3456d0f7a08b7e799abe2424e56e80541",
+      "scope": "metadata-only rename of U6/U9 embedded footprint name to local USON footprint; no geometry edits",
+      "native_drc": "438 violations / 499 unconnected vs baseline 433 / 499",
+      "delta_classes": "+7 track_width, -2 lib_footprint_issues",
+      "decision": "REJECTED; local footprint geometry changes rule result and is not interchangeable with embedded external geometry"
+    }
+  },
+  "verdict": "DFM/mechanics lane open; no candidate promoted. Source geometry tests pass, integrated physical conflicts and current-candidate release evidence remain unresolved."
+}
