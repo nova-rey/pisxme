@@ -1,5 +1,12 @@
 # Append-only project bible
 
+2026-09-12: Established one bounded JMS583 local support-cohort placement
+baseline from native saved-pad geometry: U11 remains at (140,135), Y10 moves
+to (138.2,126.4), and L10 moves to (141,128). Added the deterministic
+disposable author `phase24_jms583_local_support_authority_candidate.py`; no
+canonical copper changed. Standard geometry must be tested on this placement
+before any JMS583 fine-pitch exception is considered.
+
 2026-09-12: Preserved the resumed Phase 24 fresh KiCad Light validation as
 `PHASE24_PARALLEL_RESUME_VALIDATION_RECEIPT_20260912.md`. It reproduces the
 JMS583 XIN/XOUT/JMS_VDDREG_5V opens, passes the other seven support branches,
