@@ -12068,3 +12068,6 @@ control pass; native DRC is 555/415 with no JMS support short/crossing class.
 Fresh `kicad-light` validation from committed ref `42a68b11` reproduces the
 accumulated JMS-support and USB3 audit passes; KiCad 10.0.6 reports 557/415,
 with the tool-version delta retained as evidence.
+The JMS583 LXO primitive then connected U11.64 to L10.1 using a local 0.15 mm
+escape and ordinary through-vias. Native endpoint and trace-removal negative
+control pass; native DRC is 564/414 with no LXO short/crossing class.
