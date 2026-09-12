@@ -11869,3 +11869,11 @@ canonical acreage board.
 STORAGE_3V3 handoff independently: all nine J3 contacts pass native owner
 connectivity and the real trace-removal negative control. Full storage DRC and
 high-speed routing remain open.
+## 2026-09-12 — Phase 24 M-key USB3 actual-pad probe
+
+Generated `PHASE24_STORAGE_MKEY_USB3_ACTUAL_PAD_PROBE_20260912.kicad_pcb` from
+native saved J7/U12 pads. The four CM5-to-selector USB3 endpoints passed the
+saved-board native connectivity audit, but KiCad DRC rejected the disposable
+route with 518 violations / 427 unconnected items, including pair-via
+clearance/shorts and inherited-copper crossings. Classified as route
+implementation evidence only; no production copper was promoted.
