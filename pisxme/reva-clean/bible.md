@@ -338,3 +338,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-12: Regenerated the native KiCad XML netlist at exact head `70248ce8` in a fresh Light checkout. The retained `validation-receipts/netlist-exact-head-70248ce8/` artifact is the current parity input; stale SATA-era exports remain non-authoritative.
 
 - 2026-09-12: Fresh Light validation of exact integrated head `09c15cf8` produced a durable power/return census under `validation-receipts/power-native-census-09c15cf8/`. Native DRC remains 314/499 with zero shorting items; the serialized board has no Branch-B 12 V/FUSED copper, only 6 protected-12 V segments for 151 pads, 325 POWER_GND pads with 47 segments/17 vias across three zones, and no BRIDGE_3V3/BRIDGE_1V1 segments. Current/transient/thermal closure remains open.
+
+- 2026-09-12: Retained the rejected Path-A `STORAGE_SEL` outboard B.Cu corridor probe. It closed three mode-control opens in isolation but fresh Light DRC introduced two real shorts and four crossings (361 violations / 499 unconnected); no CAD was promoted. The hypothesis is closed for this placement.
