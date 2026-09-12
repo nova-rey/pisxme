@@ -82,3 +82,7 @@ A bounded DFM candidate removed 13 individual capacitor `F.SilkS` line segments 
 ## Phase 24 fresh capacitor silkscreen validation — 2026-09-13
 
 Fresh KiCad Light validation of integrated commit `d7a8ddfa` reproduced DRC `382 violations / 499 unconnected items` after removing the 13 targeted capacitor silkscreen segments. No connectivity or shorting change was observed; raw fresh report and tool identity are retained under `validation-receipts/silk-cap-segments-integrated/`.
+
+## Phase 24 DFM workstream state — 2026-09-13
+
+The DFM lane has two integrated, fresh-validated scoped repairs: 28 resistor reference fields now meet the 0.80 mm text minimum, and 13 capacitor silkscreen segments clipping pad 1 were removed. The selected integrated candidate is `d7a8ddfa` with DRC `382/499`; courtyard, edge-clearance, model, and assembly requirements remain open.

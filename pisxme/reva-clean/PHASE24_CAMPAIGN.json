@@ -196,7 +196,7 @@
       "U4/U5 VIN/FB/RT/PG"
     ],
     "storage": "STORAGE_3V3 and JMS local returns remain open on integrated board",
-    "dfm": "Selector archive geometry is unapproved; TUSB rotation correction is authoritative generator output; current DFM/model/BOM/release evidence remains incomplete",
+    "dfm": "Fresh integrated DRC 382/499 after scoped DFM repairs; six courtyard overlaps, five PTH-inside-courtyard, 16 edge-clearance, and model/assembly evidence remain open.",
     "archive_disposition": "Do not import HD3SS3412/HD3SS6126 archive pad shifts; recover TUSB rotations only through authoritative generator after scoped validation"
   },
   "integration_candidate": "d7a8ddfa",
@@ -226,11 +226,11 @@
     },
     "dfm_mechanics_lane": {
       "owner": "/root/dfm_mechanics_lane2",
-      "base": "93c690d8",
-      "state": "EVIDENCE_INTEGRATED",
+      "base": "fb3adab0",
+      "state": "INTEGRATED_VALIDATED",
       "cad_budget": "research/read-only unless scoped candidate",
-      "next": "integrated DFM/mechanics evidence or correction",
-      "result": "6 courtyard overlaps, 5 PTH-inside-courtyard, 9 co-located holes, 16 edge-clearance; local USON alias rejected"
+      "next": "continue bounded DFM family only after current acceptance dependencies; J3/M2 fixed",
+      "result": "Integrated resistor reference height and capacitor silkscreen repairs are fresh Light-validated; DRC now 382/499. Courtyard, edge-clearance, model, and assembly rows remain open."
     }
   },
   "authority": {
