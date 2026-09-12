@@ -6257,6 +6257,11 @@ the current rail candidate, not full Path-B closure.
 clearance violations. V580 was rejected; V579 remains the retained rail
 candidate.
 
+The JMS583 local escape discriminator passes in fresh KiCad Light with saved
+0.10 mm XIN/XOUT tracks, no fine-net vias, all ten support branches connected,
+and a passing trace-removal negative control. Full-board DRC remains open and
+is recorded as inherited evidence in the local escape receipt.
+
 The first candidate DRC invocation exposed that a bare board invocation did
 not load the local custom rule. A same-basename fixture project/rule pair is
 therefore retained for the authoritative native-D RC invocation.
