@@ -1,21 +1,104 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
-  "candidate": "d7a8ddfa",
-  "toolchain": {"kicad": "10.0.6", "image": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9", "rules": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru", "schematic": "PiSXMe_RevA_Clean.kicad_sch"},
+  "candidate": "b17f7f2d",
+  "toolchain": {
+    "kicad": "10.0.6",
+    "image": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+    "rules": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru",
+    "schematic": "PiSXMe_RevA_Clean.kicad_sch"
+  },
   "rows": [
-    {"id":"native_erc", "status":"OPEN", "requirement":"0 full-severity errors/findings", "evidence":"validation-receipts/source-erc-integrated-0396/RECEIPT.md", "current":"351 findings / 0 errors"},
-    {"id":"native_drc", "status":"OPEN", "requirement":"0 unintended violations and 0 unconnected required items", "evidence":"validation-receipts/silk-cap-segments-integrated/fresh-drc.json", "current":"382 violations / 499 unconnected"},
-    {"id":"physical_opens_shorts", "status":"OPEN", "requirement":"no required opens or shorts", "evidence":"validation-receipts/patha-native-storage-census-19a1390a/RECEIPT.md", "current":"15 Path A storage branches open; no shorting_items reported"},
-    {"id":"schematic_pad_reference_coverage", "status":"OPEN", "requirement":"bidirectional coverage including exclusion/alias audit", "evidence":"validation-receipts/baseline-d0ef22b6", "current":"narrow parity pass; bounded exclusions require final closure"},
-    {"id":"library_pin_mapping", "status":"OPEN", "requirement":"project-library isolation and pin mapping", "evidence":"validation-receipts/dfm-mechanics-19a/RECEIPT.json", "current":"library/model context warnings remain"},
-    {"id":"layers_routes_impedance_return", "status":"OPEN", "requirement":"six-layer roles, route metrics, impedance and return evidence", "evidence":"validation-receipts/route-layer-census-93c690d8/RECEIPT.md", "current":"census retained; SI/return closure absent"},
-    {"id":"power_current_transient_thermal", "status":"OPEN", "requirement":"rail delivery, current/voltage-drop, transient, return and thermal evidence", "evidence":"PHASE24_CAMPAIGN.json", "current":"required rails and regulator paths remain open"},
-    {"id":"regulator_reference_overlays", "status":"OPEN", "requirement":"reference-layout overlays and compliance", "evidence":"PHASE24_CAMPAIGN.json", "current":"not retained"},
-    {"id":"storage_mode_behavior", "status":"OPEN", "requirement":"Path A storage branches, mode isolation and behavior", "evidence":"validation-receipts/patha-native-storage-census-19a1390a/RECEIPT.md", "current":"15 required branches open; Path B out of scope"},
-    {"id":"component_firmware_provenance", "status":"OPEN", "requirement":"critical component, firmware, programming and procurement authority", "evidence":"PHASE24_PROCUREMENT_MATRIX.md", "current":"external authorization/readiness evidence incomplete"},
-    {"id":"mechanical_3d_assembly_service", "status":"OPEN", "requirement":"outline, envelopes, models, assembly and service access", "evidence":"validation-receipts/dfm-mechanics-19a/RECEIPT.json", "current":"6 courtyard, 5 PTH/courtyard, 16 edge-clearance findings; model gaps"},
-    {"id":"dfm", "status":"OPEN", "requirement":"manufacturing checks with explicit dispositions", "evidence":"validation-receipts/resistor-reference-height-integrated/RECEIPT.md; validation-receipts/silk-cap-segments-integrated/RECEIPT.md", "current":"scoped DFM repairs validated; remaining classes open"},
-    {"id":"hostile_review", "status":"OPEN", "requirement":"focused independent review of integrated candidate", "evidence":"not_retained", "current":"not yet performed"}
+    {
+      "id": "native_erc",
+      "status": "OPEN",
+      "requirement": "0 full-severity errors/findings",
+      "evidence": "validation-receipts/source-erc-integrated-0396/RECEIPT.md",
+      "current": "351 findings / 0 errors"
+    },
+    {
+      "id": "native_drc",
+      "status": "OPEN",
+      "requirement": "0 unintended violations and 0 unconnected required items",
+      "evidence": "validation-receipts/silk-u14-segments-integrated/fresh-drc.json",
+      "current": "370 violations / 499 unconnected items"
+    },
+    {
+      "id": "physical_opens_shorts",
+      "status": "OPEN",
+      "requirement": "no required opens or shorts",
+      "evidence": "validation-receipts/patha-native-storage-census-19a1390a/RECEIPT.md",
+      "current": "15 Path A storage branches open; no shorting_items reported"
+    },
+    {
+      "id": "schematic_pad_reference_coverage",
+      "status": "OPEN",
+      "requirement": "bidirectional coverage including exclusion/alias audit",
+      "evidence": "validation-receipts/baseline-d0ef22b6",
+      "current": "narrow parity pass; bounded exclusions require final closure"
+    },
+    {
+      "id": "library_pin_mapping",
+      "status": "OPEN",
+      "requirement": "project-library isolation and pin mapping",
+      "evidence": "validation-receipts/dfm-mechanics-19a/RECEIPT.json",
+      "current": "library/model context warnings remain"
+    },
+    {
+      "id": "layers_routes_impedance_return",
+      "status": "OPEN",
+      "requirement": "six-layer roles, route metrics, impedance and return evidence",
+      "evidence": "validation-receipts/route-layer-census-93c690d8/RECEIPT.md",
+      "current": "census retained; SI/return closure absent"
+    },
+    {
+      "id": "power_current_transient_thermal",
+      "status": "OPEN",
+      "requirement": "rail delivery, current/voltage-drop, transient, return and thermal evidence",
+      "evidence": "PHASE24_CAMPAIGN.json",
+      "current": "required rails and regulator paths remain open"
+    },
+    {
+      "id": "regulator_reference_overlays",
+      "status": "OPEN",
+      "requirement": "reference-layout overlays and compliance",
+      "evidence": "PHASE24_CAMPAIGN.json",
+      "current": "not retained"
+    },
+    {
+      "id": "storage_mode_behavior",
+      "status": "OPEN",
+      "requirement": "Path A storage branches, mode isolation and behavior",
+      "evidence": "validation-receipts/patha-native-storage-census-19a1390a/RECEIPT.md",
+      "current": "15 required branches open; Path B out of scope"
+    },
+    {
+      "id": "component_firmware_provenance",
+      "status": "OPEN",
+      "requirement": "critical component, firmware, programming and procurement authority",
+      "evidence": "PHASE24_PROCUREMENT_MATRIX.md",
+      "current": "external authorization/readiness evidence incomplete"
+    },
+    {
+      "id": "mechanical_3d_assembly_service",
+      "status": "OPEN",
+      "requirement": "outline, envelopes, models, assembly and service access",
+      "evidence": "validation-receipts/dfm-mechanics-19a/RECEIPT.json",
+      "current": "6 courtyard, 5 PTH/courtyard, 16 edge-clearance findings; model gaps"
+    },
+    {
+      "id": "dfm",
+      "status": "OPEN",
+      "requirement": "manufacturing checks with explicit dispositions",
+      "evidence": "validation-receipts/resistor-reference-height-integrated/RECEIPT.md; validation-receipts/silk-cap-segments-integrated/RECEIPT.md; validation-receipts/c14-reference-placement-integrated/RECEIPT.md; validation-receipts/c15-reference-placement-integrated/RECEIPT.md; validation-receipts/silk-cap-segments2-integrated/RECEIPT.md; validation-receipts/silk-u14-segments-integrated/RECEIPT.md",
+      "current": "scoped DFM repairs fresh-validated; courtyard, edge-clearance, and model/assembly rows remain open"
+    },
+    {
+      "id": "hostile_review",
+      "status": "OPEN",
+      "requirement": "focused independent review of integrated candidate",
+      "evidence": "not_retained",
+      "current": "not yet performed"
+    }
   ],
   "freeze_gate": "Every row must be PASS or have an already-authorized applicable disposition on one exact integrated SHA; Phase25 prohibited while any required row is OPEN."
 }

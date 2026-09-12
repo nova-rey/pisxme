@@ -130,3 +130,7 @@ Two U14 silkscreen outline segments clipping its `JMS_VDDREG_5V` pad were remove
 ## Phase 24 fresh U14 silkscreen validation — 2026-09-13
 
 Fresh KiCad Light validation of integrated commit `b17f7f2d` reproduced DRC `370 violations / 499 unconnected items` after removing the two targeted U14 silkscreen segments. Raw fresh report and tool identity are retained under `validation-receipts/silk-u14-segments-integrated/`.
+
+## Phase 24 acceptance matrix candidate synchronization — 2026-09-13
+
+The machine acceptance matrix now references integrated candidate `b17f7f2d` and its fresh DRC result `370/499`, incorporating the current scoped DFM receipts. All required rows remain explicitly open until integrated electrical, connectivity, power, SI, mechanical, provenance, and hostile-review closure is proven.
