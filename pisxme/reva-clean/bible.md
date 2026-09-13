@@ -854,3 +854,7 @@ Consolidated all acceptance rows into `validation-receipts/phase24-workstream-re
 ## 2026-09-13 — Mechanical envelope census retained
 
 Fresh native `pcbnew` inspection at `0b65731e` recorded the board edge envelope and immutable connector/M.2 anchor bounding boxes and orientations. Raw geometry is retained under `validation-receipts/mechanics-envelope-current-0b65731e-20260913/`; fit and service-access acceptance remain open.
+
+## 2026-09-13 — Phase 24 hard-block audit retained
+
+After four bounded MPA dispatches and one Unblocker dispatch returned no authority decision, and all independent evidence lanes were exercised, recorded the current hard-block condition: integrated storage/power acceptance cannot advance without a binding placement/corridor authority plan. Resume requires functioning MPA dispatch followed by one producer and fresh integrated validation; Phase 25/26 remain prohibited.
