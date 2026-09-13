@@ -639,3 +639,10 @@ Fresh Light execution of the repaired Phase 5 power audit at `2100f0c2`
 passed schematic connectivity and design-envelope calculations with RC 0.
 Physical rail routing, transient/current/thermal evidence, and hardware proof
 remain open; receipt and raw output are retained.
+
+## 2026-09-13 — Phase 24 storage F.Cu route rejected
+
+A normal-width F.Cu dogleg for one Path A SATA pair was rejected after Light
+DRC rose 302→313 with six added clearance and five solder-mask findings and no
+connectivity reduction. Raw evidence is retained under
+`validation-receipts/storage-pair3-rejected-20260913/`.
