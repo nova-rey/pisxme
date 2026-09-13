@@ -894,3 +894,5 @@ Reconciled the private Library's Path-A component, firmware, programming, and pr
 ## 2026-09-13 — ERC and schematic-pad coverage package completed
 
 The bounded `P24-ERC-COVERAGE` package completed against tested head `cd9b127223e987ade64b39680ce14d74e79d18be` in a fresh qualified KiCad Light 10.0.6 checkout. Native ERC returned 293 findings with zero error-severity findings; native netlist export succeeded; expected-pad ownership parity passed for 814 schematic nodes against 1,262 PCB pads with zero expected mismatches. Three nonfatal `PROPERTY_ENUM` assertions were retained. No source or PCB candidate was produced, and both acceptance rows remain OPEN for their broader criteria. Raw outputs, source/tool/rule/library hashes, return codes, and limitations are retained under `validation-receipts/erc-coverage-current-cd9b1272-20260913/`.
+
+- 2026-09-13: P24-ERC-COVERAGE supervisor package closed with refreshed FAIL_OPEN evidence; no source candidate promoted.
