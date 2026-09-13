@@ -1,7 +1,7 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
   "schema": "work-package queue v1",
-  "updated": "2026-09-13T22:45:00Z",
+  "updated": "2026-09-14T00:10:00Z",
   "canonical_branch": "reva-clean",
   "canonical_head": "d66a9462",
   "resource_policy": {
@@ -201,6 +201,42 @@
         "dfm",
         "hostile_review"
       ]
+    },
+    {
+      "id": "P24-POWER-ENVELOPE-REASSESS",
+      "requirements": [
+        "power_current_transient_thermal",
+        "native_drc",
+        "physical_opens_shorts",
+        "storage_mode_behavior"
+      ],
+      "priority": 0,
+      "dependencies": [
+        "Issue #2 external-blocker evidence packet",
+        "existing private Library and authoritative component/interface sources"
+      ],
+      "status": "RUNNING",
+      "owner": "sup_power_envelope_reassessment",
+      "resources": [
+        "Librarian",
+        "Researcher if corpus gaps",
+        "Power Integrity Engineer",
+        "Power Authority review",
+        "no CAD container until table binds"
+      ],
+      "blocking_issue": null,
+      "criterion": "Field-by-field A/B/C/D classification; internally reviewed signed/versioned Branch-B envelope for all A/B/C fields; only retain external-blocker for indispensable D fields.",
+      "fields": [
+        "connector/harness limits",
+        "continuous current",
+        "peak current",
+        "branch imbalance",
+        "shutdown behavior",
+        "surge/load-dump limits",
+        "thermal limits",
+        "current sharing",
+        "load-step requirements"
+      ]
     }
   ],
   "states": [
@@ -219,10 +255,10 @@
   "notes": "Issue #2 investigation is not duplicated here. Queue records ownership, capacity, and returned evidence; Root performs serialized integration only.",
   "census": {
     "READY": 0,
-    "RUNNING": 0,
+    "RUNNING": 1,
     "VALIDATING": 0,
     "WAITING": 2,
     "DONE": 5,
-    "hard_block_proof": "No permitted action remains until listed external/authority inputs arrive; queue remains active and not yet goal-terminated."
+    "hard_block_proof": "Reassessment running; external-blocker classification is provisional pending authority synthesis."
   }
 }
