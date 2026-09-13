@@ -663,3 +663,12 @@ outputs, Path-A and power censuses, regenerated KicadXML, parity, commands,
 versions, return codes, and hashes. The integrated candidate remains OPEN at
 302 DRC violations, 499 unconnected items, 15 required Path-A opens, and
 unrouted Branch-B power; no acceptance row or freeze gate closes.
+
+## 2026-09-13 — Phase 24 MPA storage/power corridor decision
+
+Macro Placement Authority reclassified the repeated routing failures as local
+physical congestion and issued one binding plan: rotate U13 to 180 degrees,
+move C30-C33 as a coherent vertical cohort, relocate F2/D2, preserve all
+anchors and validated high-speed copper, and reserve explicit storage and
+Branch-B corridors. A single isolated producer must implement this plan;
+structural contradiction returns to MPA and does not authorize variant search.
