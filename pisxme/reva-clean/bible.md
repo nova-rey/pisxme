@@ -680,3 +680,11 @@ VIN/VOUT/FB/RT/PG corridors against the approved regulator reference layout.
 U3 is locally placed; U4/U5 support is stranded and their bridge rails have
 no serialized tracks/vias. The row remains open and the retained artifact is
 not a closure claim.
+
+## 2026-09-13 — Phase 24 MPA placement candidate produced
+
+The qualified Light producer materialized the single MPA placement decision:
+U13 rotated 180 degrees, C30-C33 moved as the specified vertical cohort, and
+F2/D2 relocated. No routes or rules changed. Targeted post-placement DRC is
+494 violations / 499 unconnected items; this is an implementation candidate,
+not a closure claim. Raw candidate, script, DRC, and hashes are retained.
