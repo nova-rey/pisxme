@@ -776,3 +776,5 @@ speculative route variant.
 - 2026-09-13: Fresh qualified Light baseline after disposable-workspace cleanup reproduced ERC 293, DRC 300/499 with zero reported shorts, and native netlist export on base `9e72fde1`; raw outputs retained under `validation-receipts/fresh-baseline-after-disk-9e72fde1-20260913/`.
 
 - 2026-09-13: MPA-authorized native placement producer `1dda0afa` materialized U13/C30-C33/F2/D2 transforms; targeted DRC 391/499 with zero reported shorts. Candidate retained for authority review and not integrated.
+
+- 2026-09-13: Fresh Light validation of the bounded V100 label producer reproduced ERC 293 and native netlist export; candidate remains unpromoted because integrated ERC findings were unchanged.
