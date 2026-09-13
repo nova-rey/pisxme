@@ -1,0 +1,266 @@
+{
+  "method": "inboard-bottom-edge-translation",
+  "base_board_sha256": "ef3d2901c3f3f6c164e6d5d8cd0b5b34cc4cb461be092e765fd77b0036c0cd2c",
+  "moved_tracks": [
+    {
+      "kind": "PCB_TRACK",
+      "net": "CM5_5V",
+      "before": [
+        [
+          83.0,
+          164.0
+        ],
+        [
+          83.0,
+          179.0
+        ]
+      ],
+      "after": [
+        [
+          83.0,
+          164.0
+        ],
+        [
+          83.0,
+          179.0
+        ]
+      ],
+      "width": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "kind": "PCB_TRACK",
+      "net": "CM5_5V",
+      "before": [
+        [
+          63.65,
+          170.5
+        ],
+        [
+          60.0,
+          179.0
+        ]
+      ],
+      "after": [
+        [
+          63.65,
+          170.5
+        ],
+        [
+          60.0,
+          179.0
+        ]
+      ],
+      "width": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "kind": "PCB_TRACK",
+      "net": "CM5_5V",
+      "before": [
+        [
+          81.5,
+          179.0
+        ],
+        [
+          81.5,
+          171.0
+        ]
+      ],
+      "after": [
+        [
+          81.5,
+          179.0
+        ],
+        [
+          81.5,
+          171.0
+        ]
+      ],
+      "width": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "kind": "PCB_TRACK",
+      "net": "CM5_5V",
+      "before": [
+        [
+          83.0,
+          179.0
+        ],
+        [
+          78.0,
+          179.0
+        ]
+      ],
+      "after": [
+        [
+          83.0,
+          179.0
+        ],
+        [
+          78.0,
+          179.0
+        ]
+      ],
+      "width": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "kind": "PCB_TRACK",
+      "net": "CM5_5V",
+      "before": [
+        [
+          78.0,
+          179.0
+        ],
+        [
+          81.5,
+          179.0
+        ]
+      ],
+      "after": [
+        [
+          78.0,
+          179.0
+        ],
+        [
+          81.5,
+          179.0
+        ]
+      ],
+      "width": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "kind": "PCB_VIA",
+      "net": "CM5_5V",
+      "before": [
+        [
+          60.0,
+          179.0
+        ],
+        [
+          60.0,
+          179.0
+        ]
+      ],
+      "after": [
+        [
+          60.0,
+          179.0
+        ],
+        [
+          60.0,
+          179.0
+        ]
+      ],
+      "width": 0.5,
+      "layer": "F.Cu"
+    },
+    {
+      "kind": "PCB_VIA",
+      "net": "CM5_5V",
+      "before": [
+        [
+          78.0,
+          179.0
+        ],
+        [
+          78.0,
+          179.0
+        ]
+      ],
+      "after": [
+        [
+          78.0,
+          179.0
+        ],
+        [
+          78.0,
+          179.0
+        ]
+      ],
+      "width": 0.5,
+      "layer": "F.Cu"
+    },
+    {
+      "kind": "PCB_TRACK",
+      "net": "CM5_5V",
+      "before": [
+        [
+          60.0,
+          179.0
+        ],
+        [
+          78.0,
+          179.0
+        ]
+      ],
+      "after": [
+        [
+          60.0,
+          179.0
+        ],
+        [
+          78.0,
+          179.0
+        ]
+      ],
+      "width": 0.25,
+      "layer": "B.Cu"
+    }
+  ],
+  "moved_footprints": [
+    {
+      "ref": "C51",
+      "before": [
+        232.0,
+        180.0
+      ],
+      "after": [
+        232.0,
+        179.0
+      ],
+      "locked": false
+    },
+    {
+      "ref": "C50",
+      "before": [
+        228.0,
+        180.0
+      ],
+      "after": [
+        228.0,
+        179.0
+      ],
+      "locked": false
+    },
+    {
+      "ref": "C49",
+      "before": [
+        224.0,
+        180.0
+      ],
+      "after": [
+        224.0,
+        179.0
+      ],
+      "locked": false
+    },
+    {
+      "ref": "C48",
+      "before": [
+        220.0,
+        180.0
+      ],
+      "after": [
+        220.0,
+        179.0
+      ],
+      "locked": false
+    }
+  ],
+  "board_path": "/workspace/project/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "kicad": "10.0.6-10.0.6~ubuntu24.04.1"
+}

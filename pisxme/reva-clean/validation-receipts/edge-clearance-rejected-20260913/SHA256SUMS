@@ -1,0 +1,7 @@
+69d6454490f2895dc7e7f501ec9f53ba66c93cf6237b7bd4109f36bc05cf331c  pisxme/reva-clean/validation-receipts/edge-clearance-rejected-20260913/RECEIPT.md
+b7b9d57528ba1a8207be624f3c8f32d2db7a0553e10557ae2c1af82a4737c80e  pisxme/reva-clean/validation-receipts/edge-clearance-rejected-20260913/baseline-drc.json
+76d706d95be7f131c9103bae5d2354f1af465d263d02dc9a2fd41a834f626e59  pisxme/reva-clean/validation-receipts/edge-clearance-rejected-20260913/baseline.stdout
+615c3ff5312e1740e6e0cf69b4d39b7e24e10f2935dac9ef83d4d672ddba9211  pisxme/reva-clean/validation-receipts/edge-clearance-rejected-20260913/candidate-board.sha256
+098c98578fff5a3d5a830fcfbff48f8ba61c9371732996ca00547004ac640177  pisxme/reva-clean/validation-receipts/edge-clearance-rejected-20260913/candidate-drc.json
+93c273f38f467ace0129c5729ca7357a931401587047ce9b44a532f8d85fd556  pisxme/reva-clean/validation-receipts/edge-clearance-rejected-20260913/candidate.stdout
+a51022364ec9b5339ae53465f32f5e7bdc0edabb04826a32f45eda347add974d  pisxme/reva-clean/validation-receipts/edge-clearance-rejected-20260913/edge-repair-mutation.json
