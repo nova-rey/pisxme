@@ -578,3 +578,9 @@ is a real via-in-PTH overlap at Q2 pad 3, connected to its support route, not a
 same-net duplicate. The prior relocation/removal method is rejected after a
 real short; no new GATE_B mutation was made. Geometry receipt retained under
 `validation-receipts/gateb-geometry-probe-20260913/`.
+
+## 2026-09-13 — Phase 24 GATE_B probe head rebind
+
+Campaign metadata is rebound to `386191ea`, which adds only the retained
+GATE_B geometry probe after the last validated CAD candidate. No schematic,
+PCB, rules, or libraries changed in this rebind.

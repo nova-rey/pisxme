@@ -74,7 +74,7 @@
       "receipt": "validation-receipts/rule-context-exact-head-c0d4682b/RECEIPT.md",
       "result": "board-local .kicad_dru loaded; localized XIN/XOUT rule bounded; ordinary constraints active"
     },
-    "integration_candidate": "c12f5e11",
+    "integration_candidate": "386191ea",
     "validation": {
       "status": "OPEN_NOT_CLOSURE",
       "candidate": "522b1bff",
@@ -363,7 +363,7 @@
     "pad_parity_surplus": "448 surplus pads classified by footprint/net family; J1 393-contact surplus reconciles with 400-position package and authority. Remaining no-net connector/IC contacts need explicit no-connect/unknown disposition.",
     "pad_no_net_disposition": "J1 no-net census reconciles as 60 intentionally unassigned non-product PCIe contacts, 31 source-declared NC/project-unknown contacts, and K18/K19 auxiliary/protection unknowns; no assignments were invented. Other no-net mechanical/NC pads remain scoped open where required."
   },
-  "integration_candidate": "c12f5e11",
+  "integration_candidate": "386191ea",
   "active_workstreams": {
     "storage_patha_lane": {
       "owner": "Root-mediated /root/south_band_storage_corrected",
@@ -452,8 +452,8 @@
     "xiaoyu_repo_head": "c05541e1846b47f51d05a2149ff044d4d2eba727",
     "disposition": "Path A remains selected production; RTL9210B Path B isolated and out of production scope."
   },
-  "current_integrated_sha": "c12f5e11",
-  "current_candidate": "c12f5e11",
+  "current_integrated_sha": "386191ea",
+  "current_candidate": "386191ea",
   "archive": {
     "path": "/home/nyx/PiSXMe-succession-archive-20260912",
     "contents": [
