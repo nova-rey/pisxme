@@ -744,3 +744,5 @@ integrated ERC acceptance row remains open.
 - 2026-09-13: acceptance matrix now points to fresh current-head pad ownership receipt.
 
 - 2026-09-13: retained fresh USB3 route/layer census with lengths, vias, layers, and skew proxies; impedance/return closure remains open.
+
+- 2026-09-13: acceptance matrix points SI/layer row to fresh USB3 route census.

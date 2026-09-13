@@ -53,8 +53,8 @@
       "id": "layers_routes_impedance_return",
       "status": "OPEN",
       "requirement": "six-layer roles, route metrics, impedance and return evidence",
-      "evidence": "validation-receipts/route-layer-census-93c690d8/RECEIPT.md",
-      "current": "census retained; SI/return closure absent"
+      "evidence": "validation-receipts/si-layer-census-current-head-20260913/RECEIPT.md",
+      "current": "Fresh saved-geometry USB3 length/layer/via census retained; controlled impedance and return-path closure remain OPEN"
     },
     {
       "id": "power_current_transient_thermal",
