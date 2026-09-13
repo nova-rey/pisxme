@@ -806,3 +806,7 @@ Corrected the receipt metadata formatting for the fresh Light netlist export; th
 ## 2026-09-13 — Fresh schematic↔PCB pad parity PASS
 
 At `0b5340b4`, a fresh qualified Light checkout regenerated the native schematic netlist and ran the parity audit: 814 authoritative nodes, 1,262 PCB pads, and zero expected-pad mismatches. Exclusion and alias counts are recorded in `validation-receipts/pad-parity-fresh-0b5340b4-20260913/`. The result is scoped to pad ownership and does not close physical routing or power/SI rows.
+
+## 2026-09-13 — Rule-context scope verified and qualified
+
+Fresh Light DRC at `acacc3a9` loaded the approved custom rule file and retained raw context. The XIN/XOUT 0.10-mm exception is net-scoped; a native geometry probe found every such segment inside the localized envelope, with no out-of-region use. This is recorded as a context qualification/correction and does not waive physical DRC defects.
