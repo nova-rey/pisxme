@@ -939,3 +939,7 @@ power acceptance rows remain OPEN.
 ## 2026-09-14 — Foundational invariant gate established
 
 Phase 24 paused broad physical implementation for a bounded foundational audit. The governing contract is in `PROJECT_INVARIANTS.md/.json` and its current-design audit in `INVARIANT_COMPLIANCE_MATRIX.md/.json`, based on the product decision for 300 W sustained V100 operation and retained 330 W peak allowance. The selected two-circuit 8 A-per-circuit input basis is a real FAIL and is superseded wherever it conflicts with the product invariant; Path A remains selected storage and RTL9210B Path B remains unpromoted. Power, storage connectivity, copper/return, impedance/fabrication, mechanical/thermal, and firmware/provenance gaps are explicitly owned in the Main Work Queue. Future projects require this invariant/engineering-budget gate before broad implementation.
+
+## 2026-09-14 — Foundational audit specialist packets
+
+Thermal/mechanical and SI/fabrication specialist packets were retained as scoped evidence. They preserve the distinction between declared design basis and fabricated-board proof; no CAD implementation was resumed.

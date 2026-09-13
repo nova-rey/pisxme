@@ -1,0 +1,125 @@
+{
+  "package_id": "P24-SI-FAB",
+  "packet_type": "bounded_foundational_si_fabrication_evidence",
+  "created_utc": "2026-09-13T22:53:01Z",
+  "base_commit": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+  "canonical_pcb": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "canonical_pcb_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+  "toolchain": {
+    "kicad": "10.0.6",
+    "image": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9"
+  },
+  "scope": [
+    "stack and layer roles",
+    "controlled impedance targets and netclass geometry",
+    "ground reference and return paths",
+    "via and fabrication geometry",
+    "fab coupon and tolerance evidence"
+  ],
+  "edit_boundary": "Evidence packet only; no CAD, schematic, rules, queue, or final invariant matrix edits.",
+  "design_observations": {
+    "segments": 329,
+    "through_vias": 90,
+    "front_cu_segments": 216,
+    "back_cu_segments": 113,
+    "inner_layer_signal_segments": 0,
+    "power_gnd_segments": 47,
+    "power_gnd_vias": 11,
+    "power_gnd_zones": 3,
+    "source": "validation-receipts/si-power-reference-current-head-61085fe0/RECEIPT.md"
+  },
+  "invariants": [
+    {
+      "id": "SI-FAB-STACK-001",
+      "statement": "Use the selected six-layer JLC06161H-7628 design basis with nominal 1.6 mm board, 1 oz outer copper, 0.5 oz inner copper, and ordinary through-vias.",
+      "numeric_value_or_range": "6 layers; 1.6 mm nominal; 0.035 mm outer copper; 0.0152 mm inner copper model",
+      "authority_class": "B/C",
+      "provenance": ["PHASE13_STACK_RECEIPT.md", "authority-inventory/primary-docs/jlc/JLC06161H-7628_IMPEDANCE_INPUTS.md"],
+      "current_design_satisfaction": "PASS_DESIGN_DECLARATION_ONLY",
+      "verification_method": "Parse PCB stack and reconcile actual fab order",
+      "responsible_authority": "Fabrication Authority"
+    },
+    {
+      "id": "SI-FAB-IMP-001",
+      "statement": "PCIe/USB3/USB2 use 90 ohm differential targets and SATA/1000BASE-T use 100 ohm targets with the released starting geometry.",
+      "numeric_value_or_range": "0.13208 mm width and 0.2032 mm pair gap for the released outer-layer basis",
+      "authority_class": "B/D",
+      "provenance": ["PHASE13_STACK_RECEIPT.md", "authority-inventory/primary-docs/jlc/JLC06161H-7628-stack-api-20260830.json"],
+      "current_design_satisfaction": "UNPROVEN",
+      "verification_method": "Exact integrated route/netclass audit plus order-specific coupon or field-solver evidence",
+      "responsible_authority": "SI and Fabrication Authorities"
+    },
+    {
+      "id": "SI-FAB-REF-001",
+      "statement": "Critical pairs route on outer layers over adjacent solid ground references; inner-layer signal routing is excluded by policy.",
+      "numeric_value_or_range": "F.Cu over In1.GND; B.Cu over In4.GND",
+      "authority_class": "D/B",
+      "provenance": ["PHASE13_STACK_RECEIPT.md", "validation-receipts/si-power-reference-current-head-61085fe0/RECEIPT.md"],
+      "current_design_satisfaction": "UNPROVEN",
+      "verification_method": "Native refill and transition/return-via audit on exact integrated SHA",
+      "responsible_authority": "SI/Return Authority"
+    },
+    {
+      "id": "SI-FAB-GEO-001",
+      "statement": "Normal trace/clearance geometry is at least 0.20 mm; 0.10 mm fine escape is limited to JMS583 XIN/XOUT.",
+      "numeric_value_or_range": "Normal >=0.20 mm; local authorized escape 0.10 mm",
+      "authority_class": "D/B",
+      "provenance": ["PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru", "PHASE24_JMS583_FINE_ESCAPE_RECEIPT_20260912.md"],
+      "current_design_satisfaction": "FAIL",
+      "contradiction": "Retained integrated evidence records U11 0.15 mm fanout outside the authorized XIN/XOUT region.",
+      "verification_method": "Native rule-scope audit and DRC on integrated candidate",
+      "responsible_authority": "Fabrication/DFM Authority with Storage Authority"
+    },
+    {
+      "id": "SI-FAB-NETCLASS-001",
+      "statement": "PCIe/USB3 controlled channels and storage USB3 routes must be bound to approved controlled geometry before SI closure.",
+      "numeric_value_or_range": "Approved starting width 0.13208 mm; targets 90 ohm PCIe/USB3",
+      "authority_class": "B/D",
+      "provenance": ["PHASE13_STACK_RECEIPT.md", "validation-receipts/si-layer-census-current-head-20260913/RECEIPT.md"],
+      "current_design_satisfaction": "UNPROVEN",
+      "contradiction_or_gap": "Several USB3 paths are recorded at 0.15/0.20 mm; width alone does not prove impedance.",
+      "verification_method": "Exact netclass binding and route-width audit, then integrated SI evidence",
+      "responsible_authority": "SI Authority"
+    },
+    {
+      "id": "SI-FAB-VIA-001",
+      "statement": "Via drill, diameter, annular ring, land clearance and return-via geometry remain within fab/package capability; no unapproved via-in-pad.",
+      "numeric_value_or_range": "Current ordinary basis commonly 0.50/0.30 mm; order limits must be reconciled",
+      "authority_class": "B/D",
+      "provenance": ["PHASE13_STACK_RECEIPT.md", "validation-receipts/si-power-reference-current-head-61085fe0/RECEIPT.md"],
+      "current_design_satisfaction": "UNPROVEN",
+      "verification_method": "Native pad/via parser, DRC, package overlay and fab order review",
+      "responsible_authority": "Package/DFM Authority"
+    },
+    {
+      "id": "SI-FAB-COUPON-001",
+      "statement": "Release requires order-specific controlled-impedance coupon and retained actual stack/copper/dielectric tolerances.",
+      "numeric_value_or_range": "Coupon required for 90 ohm and 100 ohm classes",
+      "authority_class": "B/D",
+      "provenance": ["PHASE13_STACK_RECEIPT.md", "authority-inventory/primary-docs/jlc/JLC06161H-7628_IMPEDANCE_INPUTS.md"],
+      "current_design_satisfaction": "UNPROVEN",
+      "verification_method": "Retain fab order and coupon results in freeze manifest",
+      "responsible_authority": "Fabrication Authority"
+    },
+    {
+      "id": "SI-FAB-RETURN-001",
+      "statement": "Each critical transition must retain a continuous reference plane and adequate local return path.",
+      "numeric_value_or_range": "No plane split or uncontrolled reference transition",
+      "authority_class": "A/D",
+      "provenance": ["PHASE13_STACK_RECEIPT.md", "validation-receipts/si-power-reference-current-head-61085fe0/RECEIPT.md"],
+      "current_design_satisfaction": "UNPROVEN",
+      "verification_method": "Native refill, transition graph and return-via review on exact integrated SHA",
+      "responsible_authority": "SI/Return Authority"
+    }
+  ],
+  "acceptance_impact": {
+    "failures": ["SI-FAB-GEO-001"],
+    "unproven": ["SI-FAB-IMP-001", "SI-FAB-REF-001", "SI-FAB-NETCLASS-001", "SI-FAB-VIA-001", "SI-FAB-COUPON-001", "SI-FAB-RETURN-001"],
+    "reusable_scoped_evidence": ["SI-FAB-STACK-001"],
+    "affected_acceptance_rows": ["layers_routes_impedance_return", "dfm", "physical_opens_shorts", "native_drc"],
+    "cad_changed": false,
+    "hardware_or_fabrication_measurement_claimed": false
+  },
+  "return_state": "CANDIDATE_READY",
+  "next_action": "Root integrates this packet into the foundational invariant synthesis; downstream SI/fab work waits for power/J1/corridor decisions where routing assumptions change."
+}
