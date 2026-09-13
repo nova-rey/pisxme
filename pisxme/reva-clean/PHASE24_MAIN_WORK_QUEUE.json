@@ -1,7 +1,7 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
   "schema": "work-package queue v1",
-  "updated": "2026-09-13T19:45:00Z",
+  "updated": "2026-09-13T20:47:00Z",
   "canonical_branch": "reva-clean",
   "canonical_head": "61085fe0",
   "resource_policy": {
@@ -23,14 +23,24 @@
       "dependencies": [
         "current canonical schematic/netlist"
       ],
-      "status": "RUNNING",
+      "status": "DONE",
       "owner": "sup_erc_coverage",
       "resources": [
         "model specialist",
         "read-only Light if needed"
       ],
       "blocking_issue": null,
-      "criterion": "Current-head native ERC/source hygiene and bidirectional coverage evidence with no concealed net changes; candidate only if safe."
+      "criterion": "Current-head native ERC/source hygiene and bidirectional coverage evidence with no concealed net changes; candidate only if safe.",
+      "returned_evidence": [
+        "validation-receipts/erc-coverage-current-cd9b1272-20260913/RECEIPT.md",
+        "validation-receipts/erc-coverage-current-cd9b1272-20260913/validation.json",
+        "validation-receipts/erc-coverage-current-cd9b1272-20260913/SHA256SUMS"
+      ],
+      "base_sha_tested": "cd9b127223e987ade64b39680ce14d74e79d18be",
+      "candidate": null,
+      "changed_scope": [],
+      "result": "FAIL_OPEN: fresh native ERC reports 293 findings; native netlist/parity pass within scope (814 nodes, 1262 pads, 0 expected mismatches); no safe source candidate.",
+      "next_action": "Root retains native_erc and schematic_pad_reference_coverage acceptance rows OPEN; no source changes promoted."
     },
     {
       "id": "P24-LIBRARY-PACKAGE",

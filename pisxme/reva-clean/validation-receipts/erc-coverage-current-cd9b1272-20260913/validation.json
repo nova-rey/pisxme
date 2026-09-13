@@ -1,0 +1,38 @@
+{
+  "assertions": "three nonfatal PROPERTY_ENUM assertions emitted by pcbnew parity load",
+  "candidate_commit": "cd9b127223e987ade64b39680ce14d74e79d18be",
+  "erc": {
+    "findings": 293,
+    "return_code": 5,
+    "type_counts": {
+      "endpoint_off_grid": 121,
+      "isolated_pin_label": 126,
+      "multiple_net_names": 22,
+      "same_local_global_label": 24
+    }
+  },
+  "netlist": {
+    "return_code": 0,
+    "sha256": "deda7d3c02ac0e6ae88e477035fc1da03516604db1db0d9ba973082677be16c6"
+  },
+  "parity": {
+    "return_code": 0,
+    "summary": "./kicad/include/properties/property.h(607): assert \"m_choices.GetCount() > 0\" failed in PROPERTY_ENUM(): No enum choices defined\n./kicad/include/properties/property.h(607): assert \"m_choices.GetCount() > 0\" failed in PROPERTY_ENUM(): No enum choices defined\n./kicad/include/properties/property.h(607): assert \"m_choices.GetCount() > 0\" failed in PROPERTY_ENUM(): No enum choices defined\nauthoritative schematic nodes: 814; PCB pads: 1262\nexcluded contract nodes: nonphysical_x=65, j1_placeholder=2, j3_key_gap=8\nalias contracts: J2=18, F1=2, F2=2, J4=6\nexpected-pad mismatches: 0\nschematic-to-PCB pad-net parity: PASS\n"
+  },
+  "scope": "Fresh exact-head ERC, native netlist export, and expected-pad ownership parity. No source or PCB mutation.",
+  "source_sha256": {
+    "fp_lib_table": "864698c14e65cd70a5b5a08d23a22477919bf29f167d26fc0eda73dd43b3be61",
+    "pcb": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+    "project": "f965a4a405f1f2c0fa54a96a22d4bffaa0ee04e5787ad21db31c9c3bcf990143",
+    "rules": "d5473e6262fdf3b53d5de051626f0ed76dedf7257ba591f79ab8ad55f5b411ec",
+    "schematic": "6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1",
+    "sym_lib_table": "3bb180e251be1f62b2be5bbe486b29263c56c6a49b7a26103a27bef29b80c311"
+  },
+  "status": "FAIL_OPEN",
+  "toolchain": {
+    "image": "pisxme-kicad-light:v1",
+    "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+    "kicad_cli": "10.0.6"
+  },
+  "workstream": "P24-ERC-COVERAGE"
+}
