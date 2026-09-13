@@ -508,3 +508,10 @@ Canonical head `6ef19b9b` retains the sixth exact duplicate
 errors` and DRC `306 violations / 499 unconnected`; only duplicate-hole
 findings reduced, with no shorts or collateral family changes. Phase 24 remains
 open.
+
+## 2026-09-13 — Phase 24 metadata-only head rebind
+
+The current head is `1c7bc4fd`, a documentation-only correction after the
+sixth duplicate-via validation. The validated CAD candidate remains
+`6ef19b9b`; no schematic, PCB, rules, or library content changed in this
+rebind. Physical acceptance remains open.
