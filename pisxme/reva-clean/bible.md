@@ -884,3 +884,5 @@ Fresh qualified Light checks at current HEAD `e1de060962b76eabcfd4e83612326c708b
 Reconciled the private Library's Path-A component, firmware, programming, and procurement brief against the current integrated source. Path A remains selected and RTL9210B Path B remains an isolated, unpromoted alternative. Identity and baseline JMS583 mask-ROM evidence are present, while authorized JMS583 sourcing, TUSB9261 provisioning access/programming records, release-time procurement traceability, and hardware behavior remain open. The scoped receipt is retained under `validation-receipts/firmware-provenance-independent-20260913/`; no CAD or architecture changed.
 
 - 2026-09-13: Recorded Issue #2 as the current queue-wait blocker after repeated bounded independent lanes; resume only on a terminal queue packet.
+
+- 2026-09-13: Materialized PHASE24_MAIN_WORK_QUEUE.json with dependency-aware packages and Issue #2 waiting subtree.
