@@ -957,3 +957,7 @@ J1 package/net authority, firmware/provenance, SI/fabrication, and thermal/mecha
 ## 2026-09-14 — Clean baseline reproduced; power authority candidate under correction
 
 The exact-head Light baseline was reproduced in a clean worker at KiCad 10.0.6 with the pinned image, yielding 293 ERC findings, 300 DRC violations, 499 unconnected items, 0 reported shorting items, 814/1262 parity, and 15 open Path-A pairs. The six-loop power architecture candidate is retained as provisional evidence pending Power Authority corrections and exact connector/harness qualification.
+
+## 2026-09-14 — Power envelope drop-budget correction
+
+The V2.2 power-envelope candidate separates sustained and peak drop budgets using explicit branch-current bases and identifies Molex PS-5556-004-001 Rev B1 and the phosphor-bronze 5556 terminal class. Its source PDF byte hash remains a Librarian provenance item; no CAD implementation is authorized until the authority signature and Package Authority qualification close.
