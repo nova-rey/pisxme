@@ -419,3 +419,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Rejected a corrected Path-A storage producer from `c8710a84`: native U13 SATA pads were used, but full Light DRC worsened from 312/499 to 973/499 with 67 shorts and 35 crossings. Focused endpoint coverage cannot override integrated defects; all artifacts are retained under `validation-receipts/patha-storage-corrected-rejected-20260913/`.
 
 - 2026-09-13: Rejected the disposable project-library resolver context candidate: official Device/Capacitor_SMD/Package_TO_SOT_SMD paths changed ERC from 351 to 410 findings and changed the native netlist bytes. Reports, tables, environment, and return codes are retained under `validation-receipts/project-library-resolver-rejected-20260913/`; no canonical tables changed.
+
+- 2026-09-13: Corrected the campaign manifest's stale DFM count to the authoritative current-head Light result, 312 violations / 499 unconnected; residual DFM classes and mechanical evidence remain open.
