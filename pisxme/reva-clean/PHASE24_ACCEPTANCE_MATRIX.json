@@ -1,6 +1,6 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
-  "candidate": "c020b4f9",
+  "candidate": "a5de71a3",
   "toolchain": {
     "kicad": "10.0.6",
     "image": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
@@ -12,7 +12,7 @@
       "id": "native_erc",
       "status": "OPEN",
       "requirement": "0 full-severity errors/findings",
-      "evidence": "validation-receipts/fresh-exact-current-c020b4f9/RECEIPT.md",
+      "evidence": "validation-receipts/fresh-duplicate-via-a5de71a3/RECEIPT.md",
       "current": "296 findings / 0 errors"
     },
     {
@@ -20,13 +20,13 @@
       "status": "OPEN",
       "requirement": "0 unintended violations and 0 unconnected required items",
       "evidence": {
-        "receipt": "validation-receipts/fresh-exact-current-c020b4f9/RECEIPT.md",
-        "candidate": "c020b4f9",
-        "violations": 312,
+        "receipt": "validation-receipts/fresh-duplicate-via-a5de71a3/RECEIPT.md",
+        "candidate": "a5de71a3",
+        "violations": 311,
         "unconnected_items": 499,
         "status": "OPEN"
       },
-      "current": "312 violations / 499 unconnected items; physical DRC remains OPEN"
+      "current": "311 violations / 499 unconnected items; physical DRC remains OPEN"
     },
     {
       "id": "physical_opens_shorts",

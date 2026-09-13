@@ -465,3 +465,10 @@ Fresh isolated Light validation of exact current head `c020b4f9` reports ERC
 `296 findings / 0 errors` and DRC `312 violations / 499 unconnected`. Raw
 outputs and hashes are retained under `validation-receipts/`; no closure claim
 is made.
+
+## 2026-09-13 — Phase 24 duplicate-via integration validated
+
+Canonical integration `a5de71a3` retains the single duplicate `POWER_GND` via
+removal. Fresh Light validation reports ERC `296 findings / 0 errors` and DRC
+`311 violations / 499 unconnected`; only duplicate-hole findings reduced, with
+no shorts or collateral family changes. Phase 24 acceptance remains open.
