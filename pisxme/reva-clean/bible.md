@@ -768,3 +768,5 @@ speculative route variant.
 - 2026-09-13: Unblocker reclassified storage/power as an internal physical-congestion/domain-authority issue; MPA packet and no-speculative-routing gate retained in `validation-receipts/unblocker-mpa-escalation-20260913/RECEIPT.md`.
 
 - 2026-09-13: Macro Placement Authority issued one binding storage/power placement and corridor plan; producer basis and protected structures are recorded in `validation-receipts/mpa-binding-storage-corridor-20260913/RECEIPT.md`.
+
+- 2026-09-13: First MPA producer attempt aborted after an unbounded custom parser produced no CAD artifact; method failure receipt `validation-receipts/mpa-producer-parser-abort-20260913/RECEIPT.md` retained before native-tool retry.
