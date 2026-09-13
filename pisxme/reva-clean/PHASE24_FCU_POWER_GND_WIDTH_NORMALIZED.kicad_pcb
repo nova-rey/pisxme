@@ -20981,14 +20981,7 @@
 		(net "POWER_GND")
 		(uuid "9d8b6258-3b78-455b-9b3f-1d864e3bf9c1")
 	)
-	(via
-		(at 75.1 64.099999)
-		(size 0.5)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(net "POWER_GND")
-		(uuid "9e253ae4-d690-4736-afb3-94711c379312")
-	)
+
 	(via
 		(at 256.8 126.65)
 		(size 0.5)

@@ -12748,3 +12748,10 @@ An isolated producer from `5ba33c28` removed one additional exact duplicate
 `POWER_GND` via. Light DRC improved 310→309 with unconnected items unchanged
 at 499 and no collateral family changes or shorts. Receipt and raw report are
 retained; canonical integration remains pending.
+
+## 2026-09-13 — Phase 24 fourth duplicate POWER_GND via producer
+
+An isolated producer from `0ee5c0f4` removed one additional exact duplicate
+`POWER_GND` via. Light DRC improved 309→308 with unconnected items unchanged
+at 499 and no collateral family changes or shorts. Receipt and raw report are
+retained; canonical integration remains pending.
