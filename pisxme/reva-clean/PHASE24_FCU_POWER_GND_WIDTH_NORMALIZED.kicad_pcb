@@ -21305,14 +21305,7 @@
 		(net "CM5_5V")
 		(uuid "b99aa04a-6f53-46b4-8618-a1997f398776")
 	)
-	(segment
-		(start 81.5 180)
-		(end 81.5 171)
-		(width 0.25)
-		(layer "F.Cu")
-		(net "CM5_5V")
-		(uuid "bc600462-4f95-4d70-b600-904b46f40053")
-	)
+
 	(segment
 		(start 83 180)
 		(end 78 180)

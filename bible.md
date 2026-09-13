@@ -12783,3 +12783,10 @@ A committed-base Light probe added the qualified system `Package_SON.pretty`
 entry to the project footprint table. DRC improved 305→303 by removing two
 library-footprint context findings, with 499 unconnected items and no physical
 PCB edits. Raw evidence is retained; canonical integration remains pending.
+
+## 2026-09-13 — Phase 24 dangling CM5_5V track producer
+
+A bounded producer removed one isolated 9 mm dangling `CM5_5V` segment. Light
+DRC improved 303→302 and copper-edge-clearance findings 16→15, with 499
+unconnected items, no shorts, and no connectivity-count change. Receipt and
+raw report are retained; canonical integration remains pending.
