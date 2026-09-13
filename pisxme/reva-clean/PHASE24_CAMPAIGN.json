@@ -74,10 +74,10 @@
       "receipt": "validation-receipts/rule-context-exact-head-c0d4682b/RECEIPT.md",
       "result": "board-local .kicad_dru loaded; localized XIN/XOUT rule bounded; ordinary constraints active"
     },
-    "integration_candidate": "17dd81d2",
+    "integration_candidate": "8a8dde37",
     "validation": {
       "status": "OPEN_NOT_CLOSURE",
-      "candidate": "17dd81d2",
+      "candidate": "8a8dde37",
       "drc": "312 violations / 499 unconnected (72 width findings correctly scoped; ordinary negative control remains)",
       "shorting_items": 0,
       "tool": "KiCad 10.0.6",
@@ -327,7 +327,7 @@
       "validation-receipts/service-vbus-width-rejected/RECEIPT.md"
     ],
     "fresh_light_baseline": "validation-receipts/baseline-fresh-light-28ab8fc1/RECEIPT.md",
-    "fresh_light_erc": "validation-receipts/erc-fresh-light-1ff9b715/RECEIPT.md",
+    "fresh_light_erc": "validation-receipts/fresh-after-bridge-labels-8a8dde37/RECEIPT.md",
     "fresh_native_netlist": "validation-receipts/netlist-fresh-light-ac3f45d9/RECEIPT.md",
     "direct_head_drc_context": "validation-receipts/current-head-direct-check-28ab8fc1/RECEIPT.md",
     "fresh_pad_parity": "validation-receipts/pad-parity-fresh-light-12e02468/RECEIPT.md",
@@ -335,7 +335,8 @@
     "pad_surplus_classification": "validation-receipts/pad-surplus-classification-139e2100/RECEIPT.md",
     "pad_no_net_types": "validation-receipts/pad-no-net-types-139e2100/RECEIPT.md",
     "archive_bounded_inspection": "validation-receipts/succession-archive-bounded-inspection-20260912/RECEIPT.md",
-    "j1_no_net_authority_reconciliation": "validation-receipts/j1-no-net-authority-reconciliation-20260912/RECEIPT.md"
+    "j1_no_net_authority_reconciliation": "validation-receipts/j1-no-net-authority-reconciliation-20260912/RECEIPT.md",
+    "fresh_after_bridge_labels": "validation-receipts/fresh-after-bridge-labels-8a8dde37/RECEIPT.md"
   },
   "blockers": [],
   "next_action": "Continue bounded integrated physical repairs from current committed documentation head 8da89a21 against CAD candidate c8710a84; material candidates require serialized fresh Light validation.",
@@ -442,8 +443,8 @@
     "xiaoyu_repo_head": "c05541e1846b47f51d05a2149ff044d4d2eba727",
     "disposition": "Path A remains selected production; RTL9210B Path B isolated and out of production scope."
   },
-  "current_integrated_sha": "17dd81d2",
-  "current_candidate": "17dd81d2",
+  "current_integrated_sha": "8a8dde37",
+  "current_candidate": "8a8dde37",
   "archive": {
     "path": "/home/nyx/PiSXMe-succession-archive-20260912",
     "contents": [
