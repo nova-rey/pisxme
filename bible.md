@@ -12776,3 +12776,10 @@ An isolated producer from `2d0dd2da` removed one exact duplicate `JMS_AVDDL`
 via while retaining its same-net mate. Light DRC improved 306→305 with
 unconnected items unchanged at 499 and no collateral family changes or shorts.
 Receipt and raw report are retained; canonical integration remains pending.
+
+## 2026-09-13 — Phase 24 Package_SON context probe
+
+A committed-base Light probe added the qualified system `Package_SON.pretty`
+entry to the project footprint table. DRC improved 305→303 by removing two
+library-footprint context findings, with 499 unconnected items and no physical
+PCB edits. Raw evidence is retained; canonical integration remains pending.
