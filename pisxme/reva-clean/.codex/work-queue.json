@@ -1,0 +1,480 @@
+{
+  "campaign": "phase24-phase25-acreage",
+  "created_at": "2026-09-13T22:41:37.011173Z",
+  "dependencies": {
+    "hpq:#2": {
+      "created_at": "2026-09-13T22:51:52.392594Z",
+      "kind": "hpq",
+      "receipt": null,
+      "reference": "https://github.com/nova-rey/codex-config-backup/issues/2",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    }
+  },
+  "hard_problem_repo": "nova-rey/codex-config-backup",
+  "packages": [
+    {
+      "attempt_state": {},
+      "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": {
+        "artifact": null,
+        "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+        "returned_at": "2026-09-13T22:48:47.141705Z",
+        "returned_by": "sup_fab_mech_invariants",
+        "sha": "c06876d2bb3c244d29ad04e883a253eefd35c265"
+      },
+      "completion_criterion": "Evidence packet classifies fab/mechanical/thermal invariants A-F and identifies contradictions.",
+      "created_at": "2026-09-13T22:42:02.807805Z",
+      "dependencies": [],
+      "domain": "fab/mechanics",
+      "edit_boundaries": [
+        "write only validation-receipts/foundational-invariants/fab-mech-20260914/",
+        "no CAD or canonical queue edits"
+      ],
+      "evidence_refs": [
+        "validation-receipts/foundational-invariants/fab-mech-20260914/FAB_MECH_INVARIANT_PACKET.md"
+      ],
+      "id": "P24-FOUNDATIONAL-FAB-MECH",
+      "notes": "",
+      "owner": null,
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "foundational_invariants",
+        "fabrication",
+        "mechanics",
+        "thermal"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Audit PCB current capability, stackup/impedance, grounding, thermal/cooling, anchors/envelopes and DFM limits.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Foundational fabrication, thermal, grounding and mechanical audit",
+      "updated_at": "2026-09-13T22:48:47.238285Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "foundational-audit"
+    },
+    {
+      "attempt_state": {},
+      "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": {
+        "artifact": null,
+        "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+        "returned_at": "2026-09-13T22:48:47.278888Z",
+        "returned_by": "sup_interface_invariants",
+        "sha": "c06876d2bb3c244d29ad04e883a253eefd35c265"
+      },
+      "completion_criterion": "Evidence packet classifies interface/storage invariants A-F with provenance and current compliance.",
+      "created_at": "2026-09-13T22:42:02.849357Z",
+      "dependencies": [],
+      "domain": "interfaces",
+      "edit_boundaries": [
+        "write only validation-receipts/foundational-invariants/interfaces-20260914/",
+        "no CAD or canonical queue edits"
+      ],
+      "evidence_refs": [
+        "validation-receipts/foundational-invariants/interfaces-20260914/INTERFACE_INVARIANTS_PACKET.md"
+      ],
+      "id": "P24-FOUNDATIONAL-INTERFACES",
+      "notes": "",
+      "owner": null,
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "foundational_invariants",
+        "interface_contracts",
+        "storage_modes"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Audit V100/SXM2, CM5, PCIe, USB/storage/Ethernet, logic levels, firmware dependencies.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Foundational interface and storage invariant audit",
+      "updated_at": "2026-09-13T22:48:47.359045Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "foundational-audit"
+    },
+    {
+      "attempt_state": {},
+      "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": {
+        "artifact": null,
+        "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+        "returned_at": "2026-09-13T22:47:15.054203Z",
+        "returned_by": "sup_product_power_invariants",
+        "sha": "c06876d2bb3c244d29ad04e883a253eefd35c265"
+      },
+      "completion_criterion": "Evidence packet classifies all power/product invariants A-F and identifies current satisfaction and contradictions.",
+      "created_at": "2026-09-13T22:42:02.892829Z",
+      "dependencies": [],
+      "domain": "power/product",
+      "edit_boundaries": [
+        "write only validation-receipts/foundational-invariants/product-power-20260914/",
+        "no CAD or canonical queue edits"
+      ],
+      "evidence_refs": [
+        "validation-receipts/foundational-invariants/product-power-20260914/PRODUCT_POWER_INVARIANT_PACKET.md"
+      ],
+      "id": "P24-FOUNDATIONAL-POWER",
+      "notes": "",
+      "owner": null,
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "foundational_invariants",
+        "power_envelope",
+        "thermal_power"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Audit product envelope, source/input/protection/rails/sequencing and power thermal budgets.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Foundational product and power invariant audit",
+      "updated_at": "2026-09-13T22:47:21.462218Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "foundational-audit"
+    },
+    {
+      "attempt_state": {},
+      "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": {
+        "artifact": null,
+        "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+        "returned_at": "2026-09-13T22:51:57.369595Z",
+        "returned_by": "sup_invariant_synthesis",
+        "sha": "c06876d2bb3c244d29ad04e883a253eefd35c265"
+      },
+      "completion_criterion": "Machine-readable governing contract and current-design audit committed with all high-impact FAIL/UNPROVEN owners and queue dependencies updated.",
+      "created_at": "2026-09-13T22:42:11.753049Z",
+      "dependencies": [
+        "package:P24-FOUNDATIONAL-POWER",
+        "package:P24-FOUNDATIONAL-INTERFACES",
+        "package:P24-FOUNDATIONAL-FAB-MECH"
+      ],
+      "domain": "root-synthesis",
+      "edit_boundaries": [
+        "write PROJECT_INVARIANTS.md/json and INVARIANT_COMPLIANCE_MATRIX.md/json",
+        "append bible with same commit",
+        "no CAD edits"
+      ],
+      "evidence_refs": [
+        "PROJECT_INVARIANTS.json"
+      ],
+      "id": "P24-FOUNDATIONAL-SYNTHESIS",
+      "notes": "",
+      "owner": null,
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "foundational_invariants",
+        "invariant_compliance_matrix"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Merge packets into compact PROJECT_INVARIANTS and INVARIANT_COMPLIANCE_MATRIX; update dependent queue gates.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Synthesize governing invariant contract and compliance matrix",
+      "updated_at": "2026-09-13T22:51:57.479902Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "foundational-audit"
+    },
+    {
+      "attempt_state": {},
+      "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Package authority approves exact J1 mapping and net contract, preserving unknown contacts as NC.",
+      "created_at": "2026-09-13T22:49:25.791797Z",
+      "dependencies": [],
+      "domain": "package-authority",
+      "edit_boundaries": [
+        "evidence/library and bounded schematic/footprint correction only after authority",
+        "no routing"
+      ],
+      "evidence_refs": [],
+      "id": "P24-J1-CONTRACT",
+      "notes": "Independent of blocked power corridor.",
+      "owner": "sup_j1_contract",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-SXM2-CONTACT"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Mechanically map 393 J1 pads to A1-K40 and close authoritative contact/net contract.",
+      "session_ids": [
+        "root-j1-20260914"
+      ],
+      "status": "RUNNING",
+      "title": "SXM2 J1 package and net contract authority",
+      "updated_at": "2026-09-13T22:49:34.369911Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "foundational-audit"
+    },
+    {
+      "attempt_state": {},
+      "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Authority-approved evidence and current-head integrated validation for listed invariants.",
+      "created_at": "2026-09-13T22:51:35.863505Z",
+      "dependencies": [
+        "package:P24-FOUNDATIONAL-SYNTHESIS"
+      ],
+      "domain": "SI/Fab closure",
+      "edit_boundaries": [
+        "no work until invariant dependencies resolved",
+        "no Phase 26"
+      ],
+      "evidence_refs": [],
+      "id": "P24-SI-FAB",
+      "notes": "Created by foundational invariant audit.",
+      "owner": "sup_si_fab",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PCIE",
+        "INV-STACKUP",
+        "INV-IMPEDANCE",
+        "INV-FAB"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "SI, impedance and fabrication evidence",
+      "session_ids": [
+        "root-si-20260914"
+      ],
+      "status": "RUNNING",
+      "title": "SI, impedance and fabrication evidence",
+      "updated_at": "2026-09-13T22:52:14.081643Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24"
+    },
+    {
+      "attempt_state": {},
+      "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Authority-approved evidence and current-head integrated validation for listed invariants.",
+      "created_at": "2026-09-13T22:51:35.917773Z",
+      "dependencies": [
+        "package:P24-FOUNDATIONAL-SYNTHESIS"
+      ],
+      "domain": "Thermal/Mechanical closure",
+      "edit_boundaries": [
+        "no work until invariant dependencies resolved",
+        "no Phase 26"
+      ],
+      "evidence_refs": [],
+      "id": "P24-THERMAL-MECHANICS",
+      "notes": "Created by foundational invariant audit.",
+      "owner": "sup_thermal_mechanics",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-THERMAL",
+        "INV-MECHANICAL"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Thermal, cooler, mechanical and DFM closure",
+      "session_ids": [
+        "root-thermal-20260914"
+      ],
+      "status": "RUNNING",
+      "title": "Thermal, cooler, mechanical and DFM closure",
+      "updated_at": "2026-09-13T22:52:14.122231Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24"
+    },
+    {
+      "attempt_state": {},
+      "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Authority-approved evidence and current-head integrated validation for listed invariants.",
+      "created_at": "2026-09-13T22:51:35.962454Z",
+      "dependencies": [
+        "package:P24-FOUNDATIONAL-SYNTHESIS"
+      ],
+      "domain": "Provenance/Firmware closure",
+      "edit_boundaries": [
+        "no work until invariant dependencies resolved",
+        "no Phase 26"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROVENANCE-FIRMWARE",
+      "notes": "Created by foundational invariant audit.",
+      "owner": "sup_provenance_firmware",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-FIRMWARE",
+        "INV-SEQUENCING"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Firmware/configuration/procurement evidence",
+      "session_ids": [
+        "root-prov-20260914"
+      ],
+      "status": "RUNNING",
+      "title": "Firmware/configuration/procurement evidence",
+      "updated_at": "2026-09-13T22:52:14.161965Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24"
+    },
+    {
+      "attempt_state": {},
+      "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Authority-approved evidence and current-head integrated validation for listed invariants.",
+      "created_at": "2026-09-13T22:51:52.348707Z",
+      "dependencies": [
+        "package:P24-FOUNDATIONAL-SYNTHESIS",
+        "hpq:#2"
+      ],
+      "domain": "Power Authority redesign",
+      "edit_boundaries": [
+        "no work until invariant dependencies resolved",
+        "no Phase 26"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-INPUT-ARCHITECTURE",
+      "notes": "Created by foundational invariant audit.",
+      "owner": null,
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PRODUCT-V100-300W",
+        "INV-PRODUCT-V100-330W-PEAK",
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Power input/protection architecture for product envelope",
+      "session_ids": [],
+      "status": "WAITING",
+      "title": "Power input/protection architecture for product envelope",
+      "updated_at": "2026-09-13T22:51:52.392616Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [
+        "hpq:#2"
+      ],
+      "workstream": "phase24"
+    }
+  ],
+  "project": "nova-rey/pisxme",
+  "resources": {
+    "canonical-integration": {
+      "capacity": 1,
+      "exclusive": true
+    },
+    "model-agent": {
+      "capacity": 4,
+      "exclusive": false
+    }
+  },
+  "schema_version": 1,
+  "updated_at": "2026-09-13T22:52:14.162027Z"
+}

@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-FOUNDATIONAL-INTERFACES",
+  "base_commit": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+  "produced": "2026-09-14",
+  "scope": "interface and storage contracts; no CAD, queue, or final-matrix edits",
+  "library": {
+    "status": "sufficient_existing_corpus",
+    "private_root": "/home/nyx/PiSXMe-Library/Library",
+    "briefs": [
+      "briefs/sxm2-j1-refresh-20260913.md",
+      "indexes/sxm2-benchoff-contact-map.json"
+    ],
+    "researcher_commissioned": false
+  },
+  "selected_implementation": "Path A TUSB9261 + JMS583 dual-mode storage",
+  "unpromoted_alternative": "RTL9210B Path B",
+  "inputs": {
+    "schematic": {
+      "path": "PiSXMe_RevA_Clean.kicad_sch",
+      "sha256": "6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1"
+    },
+    "pcb": {
+      "path": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+      "sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c"
+    },
+    "project": {
+      "path": "PiSXMe_RevA_Clean.kicad_pro",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+    }
+  },
+  "status_definition": {
+    "PASS": "bounded authoring/source contract is established",
+    "FAIL": "current implementation contradicts the interface invariant",
+    "UNPROVEN": "required integrated, measured, firmware, procurement, or endpoint evidence is missing",
+    "NOT_APPLICABLE": "not part of selected production implementation"
+  },
+  "invariants": [
+    {
+      "id": "IF-V100-PCIe-X1",
+      "statement": "One CM5-to-V100 lane-0 PCIe link only: PER0 P/N, PET0 P/N with source-side AC coupling, one differential REFCLK, active-low PERST; no expansion lanes, NVLink, switch, or redriver.",
+      "values": {"lanes": 1, "refclk_pairs": 1, "reset_polarity": "active_low", "ac_coupled_tx_pairs": 1},
+      "authority_class": "B/C",
+      "provenance": ["validation/phase3/PHASE4_V100_RECEIPT.md", "validation/phase3/PHASE16_NET_AUTHORITY_RECEIPT.md", "PiSXMe_RevA_Clean.kicad_sch"],
+      "rationale": "Matches the selected Rev A product scope and CM5 endpoint topology.",
+      "affected_subsystems": ["CM5", "J7", "J1", "PCIe"],
+      "verification": ["native netlist", "pad/net audit", "fresh integrated DRC/connectivity", "endpoint bring-up where available"],
+      "responsible_authority": "PCIe/source authority",
+      "current_state": "UNPROVEN",
+      "contradiction": "Schematic intent exists; board-wide route/opens and endpoint enumeration remain open."
+    },
+    {
+      "id": "IF-SXM2-J1-CONTACT-BOUNDARY",
+      "statement": "J1 is Amphenol/FCI 74221-101LF, 400 contacts, 40x10, 1.27 mm pitch, 0.45 A/contact; bounded PiSXMe contract assigns 130 12V_PROTECTED, 170 POWER_GND, and A2/A3, G1/G2, E7/F7, E18 to selected x1/control signals; other contacts stay unknown/NC where unproven.",
+      "values": {"contacts": 400, "pitch_mm": 1.27, "contact_rating_A": 0.45, "protected_12v_contacts": 130, "ground_contacts": 170, "selected_signal_contacts": ["A2", "A3", "G1", "G2", "E7", "F7", "E18"]},
+      "authority_class": "B",
+      "provenance": ["authority-inventory/primary-docs/sxm2/SXM2_74221-101LF_AUTHORITY.md", "authority-inventory/primary-docs/sxm2/SXM2_J1_AUTHORITY_REASSESSMENT_20260912.md", "private Library/briefs/sxm2-j1-refresh-20260913.md", "private Library/indexes/sxm2-benchoff-contact-map.json"],
+      "rationale": "Separates manufacturer mechanical identity from reverse-engineered electrical evidence and preserves unknown contacts.",
+      "affected_subsystems": ["J1", "V100 power/ground", "PCIe"],
+      "verification": ["pad identity transform", "schematic-to-PCB contact/net audit", "physical endpoint review"],
+      "responsible_authority": "Package/footprint and V100/SXM2 authority",
+      "current_state": "PASS_BOUNDED_SOURCE_CONTRACT_UNPROVEN_FULL_ENDPOINT",
+      "contradiction": "Reverse-engineering evidence is not NVIDIA-official; K18/K19, 31 NC/project-unknown contacts, and undocumented endpoint behavior remain unproven."
+    },
+    {
+      "id": "IF-V100-POWER-DOMAIN",
+      "statement": "V100/SXM2 endpoint uses a 12 V power domain; product-level 300 W sustained and 330 W design peak are governed by the separate product/power invariant audit.",
+      "values": {"nominal_input_V": 12, "sustained_endpoint_W": 300, "design_peak_W": 330},
+      "authority_class": "C/B",
+      "provenance": ["authority-inventory/primary-docs/NVIDIA-Tesla-V100-datasheet.pdf", "current product decision", "power authority package"],
+      "rationale": "Prevents source-capacity assumptions from being inferred from J1 contact count.",
+      "affected_subsystems": ["J1 power", "input/protection", "cooling"],
+      "verification": ["signed power envelope", "rail/current/transient/thermal analysis", "integrated validation"],
+      "responsible_authority": "Power Authority with Root product authority",
+      "current_state": "UNPROVEN_IN_THIS_PACKET",
+      "contradiction": "Source topology and margin are outside this interface packet and remain a foundational dependency."
+    },
+    {
+      "id": "IF-CM5-PCIe-AND-POWER",
+      "statement": "CM5 side must provide the required PCIe x1, USB, service USB, and 5 V/logic domains; CM5IO reference supports PCIe Gen 2 x1, while Gen 3 x1 is experimental/unsupported.",
+      "values": {"supported_pcie_generation": 2, "lanes": 1, "cm5io_reference_input_V": 5, "cm5io_reference_input_A": 5},
+      "authority_class": "B",
+      "provenance": ["authority-inventory/primary-docs/cm5io-datasheet.pdf", "private Library official CM5IO source"],
+      "rationale": "Sets the supported interface generation and prevents an unsupported Gen 3 claim.",
+      "affected_subsystems": ["CM5 J7", "PCIe", "USB", "service", "5 V rail"],
+      "verification": ["source netlist", "integrated interface validation", "configuration and power tests"],
+      "responsible_authority": "CM5 interface authority",
+      "current_state": "UNPROVEN",
+      "contradiction": "Source topology exists; physical closure and actual operating configuration are not demonstrated."
+    },
+    {
+      "id": "IF-PCIE-CLOCK-RESET",
+      "statement": "REFCLK is differential and PERST is active-low fundamental reset; no high-speed stub or extra lane/control is allowed; exact V100 reset/power timing remains empirical.",
+      "values": {"refclk_pairs": 1, "reset_polarity": "active_low", "high_speed_stubs": 0},
+      "authority_class": "B/F",
+      "provenance": ["validation/phase3/PHASE4_SXM2_MAPPING_RECEIPT.md", "validation/phase3/PHASE4_V100_RECEIPT.md", "validation/phase3/PHASE16_NET_AUTHORITY_RECEIPT.md"],
+      "rationale": "Preserves the selected PCIe endpoint contract without inventing undocumented reset behavior.",
+      "affected_subsystems": ["CM5 clock/reset", "J1 E7/F7/E18", "endpoint sequencing"],
+      "verification": ["native connectivity", "skew/return review", "endpoint sequencing test"],
+      "responsible_authority": "PCIe/V100 authority",
+      "current_state": "UNPROVEN",
+      "contradiction": "Named nets are present; timing and endpoint enumeration remain undocumented."
+    },
+    {
+      "id": "IF-CM5-USB3",
+      "statement": "CM5 USB3 is a 5 Gb/s-class SuperSpeed differential RX/TX interface; P/N naming swaps are allowed only as explicit polarity-preserving routing convention.",
+      "values": {"nominal_rate_Gbps": 5, "pairs": 2},
+      "authority_class": "B",
+      "provenance": ["private Library audit/CM5IO_USB3_IMPLEMENTATION.md", "official CM5IO source", "validation-receipts/si-layer-census-current-head-20260913/RECEIPT.md"],
+      "rationale": "Defines USB3 source capability and keeps naming convention distinct from electrical inversion.",
+      "affected_subsystems": ["CM5 USB3", "selectors", "storage bridge"],
+      "verification": ["native pair audit", "impedance/return analysis", "fresh DRC", "hardware SI/functional test"],
+      "responsible_authority": "SI/interface authority",
+      "current_state": "UNPROVEN",
+      "contradiction": "Saved pair metrics exist; no field solver, coupon, TDR, eye, or integrated closure exists."
+    },
+    {
+      "id": "IF-USB-SELECTOR-DOMAIN",
+      "statement": "HD3SS6126/HD3SS3412 operate at 3.0-3.6 V nominal 3.3 V; control VIH >=2.0 V, VIL <=0.8 V; differential I/O 0-1.8 Vp-p, common mode 0-2 V; inactive paths must isolate.",
+      "values": {"VDD_V": [3.0, 3.6], "VIH_min_V": 2.0, "VIL_max_V": 0.8, "diff_max_Vpp": 1.8, "common_mode_V": [0, 2.0]},
+      "authority_class": "B",
+      "provenance": ["authority-inventory/primary-docs/storage-upgrade/ti-switches/HD3SS6126-datasheet.pdf", "authority-inventory/primary-docs/storage-upgrade/ti-switches/HD3SS3412-datasheet.pdf", "authority-inventory/primary-docs/storage-upgrade/DUAL_MODE_STORAGE_PIN_MODE_MATRIX.md"],
+      "rationale": "Binds the storage switch electrical domain and mode isolation behavior.",
+      "affected_subsystems": ["USB3", "SATA/PCIe storage", "3V3 rails", "mode controls"],
+      "verification": ["pin/net audit", "rail measurement", "truth table in powered-off modes", "integrated isolation check"],
+      "responsible_authority": "Storage/interface authority",
+      "current_state": "UNPROVEN",
+      "contradiction": "Schematic mode contract is explicit; integrated route and powered-state isolation are open."
+    },
+    {
+      "id": "IF-PATH-A-SATA",
+      "statement": "Selected SATA bridge is TUSB9261IPVP: USB3 up to 5 Gb/s, SATA Gen1/Gen2 up to 3 Gb/s, 1.1 V/3.3 V rails, reset held at least 2 ms after supplies valid; M-key lane uses 49/47/43/41.",
+      "values": {"usb_rate_Gbps": 5, "sata_rate_Gbps": 3, "sata_generations": [1, 2], "reset_min_ms": 2, "m2_contacts": [49, 47, 43, 41]},
+      "authority_class": "B",
+      "provenance": ["authority-inventory/primary-docs/bridge/SATA_BRIDGE_AUTHORITY.md", "PHASE24_PATHA_SATA_CONTACT_AUTHORITY_20260906.md", "authority-inventory/primary-docs/tusb9261/TUSB9261-datasheet-revI.pdf"],
+      "rationale": "Binds selected Path-A bridge and corrected M-key contact mapping.",
+      "affected_subsystems": ["CM5 USB3", "TUSB9261", "selectors", "M-key"],
+      "verification": ["source/pad audit", "reset/rail check", "SATA endpoint/connectivity", "SSD functional test"],
+      "responsible_authority": "Storage authority",
+      "current_state": "UNPROVEN",
+      "contradiction": "Source mapping is corrected; integrated route, inactive isolation, SSD behavior, and procurement remain open."
+    },
+    {
+      "id": "IF-PATH-A-NVME-JMS583",
+      "statement": "Selected NVMe bridge is JMS583-QHFA3A; PCIe lane-0 pins 41/42 and 44/45, clock 47/48, reset 54, CLKREQ 55; PCIe TX coupling 220 nF and USB3 TX coupling 100 nF; never shares a bridge port with TUSB9261.",
+      "values": {"pcie_lane": 1, "pcie_tx_coupling_nF": 220, "usb3_tx_coupling_nF": 100, "pcie_rx_pins": [41, 42], "pcie_tx_pins": [44, 45], "clock_pins": [47, 48], "reset_pin": 54, "clkreq_pin": 55},
+      "authority_class": "B",
+      "provenance": ["authority-inventory/primary-docs/storage-upgrade/DUAL_MODE_STORAGE_PIN_MODE_MATRIX.md", "authority-inventory/primary-docs/storage-upgrade/jms583/JMS583_DESIGN_AUTHORITY.md", "authority-inventory/primary-docs/storage-upgrade/jms583/JMS583-datasheet-rev2.1.pdf"],
+      "rationale": "Binds selected dual-mode NVMe implementation and prevents both alternatives being built as production.",
+      "affected_subsystems": ["JMS583", "USB3", "PCIe storage", "M-key"],
+      "verification": ["pin/rail/coupling audit", "native connectivity", "NVMe mode test", "inrush/thermal/procurement/firmware checks"],
+      "responsible_authority": "Storage authority and Librarian provenance",
+      "current_state": "UNPROVEN",
+      "contradiction": "Source contract exists; integrated route, module inrush/thermal, authorized supply, and release firmware evidence are open."
+    },
+    {
+      "id": "IF-STORAGE-MODE-ISOLATION",
+      "statement": "FORCE SATA, FORCE NVMe, AUTO, and empty are power-off mode states; USB2/USB3 switch together; SATA OOB and PCIe electrical-idle/detect isolate; empty makes no drive-presence claim.",
+      "values": {"mode_change": "power_off_only", "modes": ["FORCE_SATA", "FORCE_NVME", "AUTO", "EMPTY"]},
+      "authority_class": "B/D",
+      "provenance": ["authority-inventory/primary-docs/storage-upgrade/DUAL_MODE_STORAGE_PIN_MODE_MATRIX.md", "PHASE24_STORAGE_UPGRADE_BLOCKER.md"],
+      "rationale": "Prevents inactive bridge contention and ambiguous storage ownership.",
+      "affected_subsystems": ["M-key", "selectors", "TUSB9261", "JMS583", "PEDET"],
+      "verification": ["native mode audit", "removed-track controls", "powered mode tests", "integrated DRC/connectivity"],
+      "responsible_authority": "Storage Mode Authority",
+      "current_state": "UNPROVEN",
+      "contradiction": "Truth table is authoritative; complete integrated switched-mode candidate has not passed."
+    },
+    {
+      "id": "IF-M2-CONTACT-CONTRACT",
+      "statement": "M-key shared SATA/PCIe lane uses contacts 49/47/43/41; configuration and power contacts remain explicit; stale SATA-only/B-key mapping is invalid.",
+      "values": {"shared_lane_contacts": [49, 47, 43, 41]},
+      "authority_class": "B",
+      "provenance": ["PHASE24_PATHA_SATA_CONTACT_AUTHORITY_20260906.md", "authority-inventory/primary-docs/storage-upgrade/DUAL_MODE_STORAGE_PIN_MODE_MATRIX.md", "TE/SATA-IO records under authority-inventory/primary-docs/storage-upgrade/"],
+      "rationale": "Keeps physical contact mapping separate from stale route artifacts.",
+      "affected_subsystems": ["J3", "storage selector", "bridge endpoints"],
+      "verification": ["footprint/contact parity", "native net ownership", "fresh integrated connectivity"],
+      "responsible_authority": "Package/footprint and storage authority",
+      "current_state": "PASS_SOURCE_MAPPING_UNPROVEN_INTEGRATION",
+      "contradiction": "Earlier route probes targeted wrong contacts; rejected probes are not authority."
+    },
+    {
+      "id": "IF-SERVICE-USB2",
+      "statement": "Service/recovery USB2 is separate from storage USB3 and retains explicit D+/D- plus recovery/control role.",
+      "values": {"usb2_pairs": 1, "role": "service_recovery"},
+      "authority_class": "B/C",
+      "provenance": ["CM5_ACCIDENTAL_OVERIMPLEMENTATION_AUDIT.md", "PHASE20_SERVICE_RECEIPT.md", "PiSXMe_RevA_Clean.kicad_sch"],
+      "rationale": "Protects required service function from storage selector coupling.",
+      "affected_subsystems": ["CM5", "J4", "ESD", "recovery"],
+      "verification": ["native endpoint/pad audit", "USB2 DRC/width review", "service bring-up"],
+      "responsible_authority": "CM5/service authority",
+      "current_state": "UNPROVEN",
+      "contradiction": "Schematic role is recorded; integrated connectivity and bring-up remain open."
+    },
+    {
+      "id": "IF-ETHERNET-GIGABIT",
+      "statement": "CM5 Ethernet is a 1:1 Gigabit path with selected magnetics, ESD, center-tap, shield, and LED support; exact TRJG0926HENL procurement/manufacturer authority is not closed.",
+      "values": {"link_rate_Gbps": 1, "magnetics": "TRJG0926HENL_reference"},
+      "authority_class": "B",
+      "provenance": ["PHASE24_ETHERNET_SUPPORT_AUTHORITY_RECEIPT.md", "PHASE17_ETHERNET_AUTHORITY_RECEIPT.md", "authority-inventory/primary-docs/cm5io-component-authority.md", "official CM5IO source"],
+      "rationale": "Separates closed schematic support topology from open physical/procurement release evidence.",
+      "affected_subsystems": ["CM5 GBE", "J2", "ESD", "magnetics", "LEDs"],
+      "verification": ["source/pad parity", "integrated DRC", "1 Gb/s link test", "exact component review"],
+      "responsible_authority": "Ethernet/package authority",
+      "current_state": "UNPROVEN",
+      "contradiction": "Support schematic is closed; PCB materialization, exact part provenance, procurement, and link behavior remain open."
+    },
+    {
+      "id": "IF-VOLTAGE-LOGIC-COMPATIBILITY",
+      "statement": "3.3 V CM5 controls are compatible with selector thresholds VIH >=2.0 V and VIL <=0.8 V at selector VDD 3.0-3.6 V; 1.8 V controls require explicit level-translation authority.",
+      "values": {"selector_vdd_V": [3.0, 3.6], "vih_min_V": 2.0, "vil_max_V": 0.8, "cm5_assumed_logic_V": 3.3},
+      "authority_class": "B/D",
+      "provenance": ["HD3SS6126-datasheet.pdf", "HD3SS3412-datasheet.pdf", "official CM5IO datasheet Vref section"],
+      "rationale": "Prevents silent logic-domain mismatch.",
+      "affected_subsystems": ["CM5 GPIO/control", "selectors", "reset/mode"],
+      "verification": ["source voltage-domain audit", "rail measurement", "mode/control functional test"],
+      "responsible_authority": "SI/power and storage authorities",
+      "current_state": "PASS_THRESHOLD_CALCULATION_UNPROVEN_RAILS",
+      "contradiction": "No authority supports silently using 1.8 V controls on the 3.3 V selector inputs."
+    },
+    {
+      "id": "IF-FIRMWARE-CONFIG-BASELINE",
+      "statement": "TUSB9261 requires a documented TI image/config path and reset/SPI behavior; JMS583 baseline is factory mask-ROM with optional documented SPI customization; RTL9210B is not a production dependency.",
+      "values": {"jms583_baseline": "factory_mask_rom", "rtl9210b_production": false},
+      "authority_class": "B/F",
+      "provenance": ["authority-inventory/primary-docs/bridge/SATA_BRIDGE_AUTHORITY.md", "authority-inventory/primary-docs/bridge/TUSB9261_FIRMWARE_RECEIPT.md", "PHASE24_STORAGE_UPGRADE_BLOCKER.md", "authority-inventory/rtl9210b/RTL9210B_PATHB_AUTHORITY.md"],
+      "rationale": "Keeps firmware/procurement claims bounded and prevents hidden alternative architecture.",
+      "affected_subsystems": ["TUSB9261 SPI/reset", "JMS583 optional SPI", "BOM/procurement", "RTL9210B"],
+      "verification": ["exact image/config hash", "programming path", "USB/SATA/NVMe functional tests"],
+      "responsible_authority": "Librarian and storage/firmware authority",
+      "current_state": "UNPROVEN",
+      "contradiction": "Default/credible operation is not release proof; exact image provenance and functional validation remain open."
+    },
+    {
+      "id": "IF-RTL9210B-PATHB-SCOPE",
+      "statement": "RTL9210B Path B is isolated qualification evidence and not selected production implementation or a Path-A closure prerequisite.",
+      "values": {"selected_for_production": false},
+      "authority_class": "E",
+      "provenance": ["authority-inventory/rtl9210b/RTL9210B_PATHB_AUTHORITY.md", "PHASE24_RTL9210B_QUALIFICATION.md"],
+      "rationale": "Prevents building mutually exclusive alternatives and using isolated evidence as integrated proof.",
+      "affected_subsystems": ["storage architecture", "queue dependencies"],
+      "verification": ["authority/queue review"],
+      "responsible_authority": "Root and storage authority",
+      "current_state": "NOT_APPLICABLE",
+      "contradiction": "None for selected Path A; retain isolated evidence only."
+    }
+  ],
+  "high_impact_unproven": ["IF-V100-PCIe-X1", "IF-SXM2-J1-CONTACT-BOUNDARY", "IF-V100-POWER-DOMAIN", "IF-CM5-PCIe-AND-POWER", "IF-PCIE-CLOCK-RESET", "IF-CM5-USB3", "IF-USB-SELECTOR-DOMAIN", "IF-PATH-A-SATA", "IF-PATH-A-NVME-JMS583", "IF-STORAGE-MODE-ISOLATION", "IF-FIRMWARE-CONFIG-BASELINE"],
+  "queue_implications": ["Keep route-dependent packages behind foundational invariant gate and Issue #2 where applicable.", "Do not promote local-fixture PASS to integrated closure.", "Keep RTL9210B Path B out of selected production queue.", "Route power, SI/PCIe, storage, and Ethernet open rows to their named authorities after matrix integration."]
+}

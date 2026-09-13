@@ -1,0 +1,468 @@
+{
+  "package_id": "P24-FOUNDATIONAL-FAB-MECH",
+  "packet_type": "bounded_foundational_invariant_audit_evidence",
+  "created_utc": "2026-09-14",
+  "base_commit": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+  "canonical_board": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "board_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+  "scope": [
+    "PCB copper/current/temperature rise",
+    "fabrication stackup/trace-space/vias/impedance",
+    "ground/reference planes",
+    "thermal/cooling assumptions",
+    "mechanical anchors/envelopes",
+    "DFM/release",
+    "protection/safety"
+  ],
+  "edit_boundary": "Evidence packet only. No CAD, schematic, rules, queue, final invariant matrices, Library corpus, or authority decision files edited.",
+  "library_checked": [
+    "/home/nyx/PiSXMe-Library/Library/briefs/pisxme-reva-a.md",
+    "/home/nyx/PiSXMe-Library/Library/briefs/power-envelope-authority-reassessment-20260913.md",
+    "/home/nyx/PiSXMe-Library/Library/briefs/sxm2-j1-amphenol-rev-w-corpus-20260912.md",
+    "/home/nyx/PiSXMe-Library/Library/subsystems/power-protection.md"
+  ],
+  "research_needed": "No additional Researcher commission was necessary for this bounded package: indexed Library and repository authority records contain the relevant fabrication/mechanical source facts. Missing fab coupon, exact assembly, proprietary cooler, model and hardware measurements are recorded UNPROVEN rather than inferred.",
+  "current_toolchain": "KiCad Light 10.0.6; image sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+  "invariants": [
+    {
+      "id": "PWR-ENV-001",
+      "statement": "PiSXMe Rev A shall support the documented V100/SXM2 300 W sustained operating envelope at the product input, retaining 330 W as the design peak allowance unless a higher authoritative requirement is found.",
+      "numeric_value_or_range": "300 W sustained; 330 W peak allowance; 12 V product input; with board loads and declared conversion margin",
+      "authority_class": "C",
+      "exact_provenance": [
+        "Current user product decision in audit request (2026-09-14)",
+        "/home/nyx/PiSXMe-Library/Library/briefs/researcher-power-envelope-gap-20260913.md (cached NVIDIA V100 datasheet, 300 W maximum)",
+        "validation-receipts/power-envelope-authority-20260914/POWER_ENVELOPE_AUTHORITY_V1.1.md (prior 250 W basis; superseded for product envelope)"
+      ],
+      "rationale": "The product capability is higher-order than the existing input implementation. At 12 V and the retained 90% conversion screen, 300 W is 25.0 A before board loads and 330 W is 27.5 A before board loads.",
+      "affected_subsystems": [
+        "input architecture",
+        "protection",
+        "PCB copper",
+        "V100/SXM2 contact field",
+        "thermal"
+      ],
+      "verification_method": "Power Authority signs the system envelope and validates input/copper/thermal calculations against one integrated candidate.",
+      "responsible_authority": "Power Authority with Root product decision recorded",
+      "current_design_satisfaction": "FAIL",
+      "contradiction_or_evidence": "Current exact J5/J6 assembly is documented at 8 A per circuit for the standard two-circuit 16/18-AWG application; 2 x 8 A is below the product envelope before board loads and derating. Current Branch-B copper is absent in the selected PCB.",
+      "supersession_disposition": "SUPERSEDES historical 250 W DESIGN_ENVELOPE and any frozen two-circuit 8 A implementation constraint where they conflict.",
+      "foundational": true,
+      "notes": "User product decision is binding; this packet does not redesign the input."
+    },
+    {
+      "id": "FAB-STACK-001",
+      "statement": "The PCB design basis shall use the selected six-layer JLC06161H-7628 stack: nominal 1.6 mm finished board, 1 oz outer copper, 0.5 oz inner copper, with ordinary through-vias.",
+      "numeric_value_or_range": "6 signal layers; 1.6 mm nominal; 0.035 mm outer copper; 0.0152 mm inner copper model; ordinary through-vias",
+      "authority_class": "B/C",
+      "exact_provenance": [
+        "authority-inventory/primary-docs/jlc/JLC06161H-7628_IMPEDANCE_BASIS.md",
+        "PHASE13_STACK_RECEIPT.md",
+        "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb SHA256 75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c"
+      ],
+      "rationale": "This is the selected fabricator/material basis; it governs impedance and available layer roles.",
+      "affected_subsystems": [
+        "PCB layer stack",
+        "vias",
+        "controlled impedance",
+        "DFM"
+      ],
+      "verification_method": "Parse PCB layer/setup and compare order request/coupon to the authority record.",
+      "responsible_authority": "Fabrication/DFM Authority",
+      "current_design_satisfaction": "PASS",
+      "contradiction_or_evidence": "PCB metadata declares thickness 1.6 and six signal layers F.Cu/In1/In2/In3/In4/B.Cu; actual fabricated thickness and copper tolerance are not proven.",
+      "supersession_disposition": "",
+      "foundational": true,
+      "notes": "PASS is limited to design declaration, not fabricated-board evidence."
+    },
+    {
+      "id": "FAB-STACK-002",
+      "statement": "Fabrication tolerances and controlled-impedance values shall be verified with the selected fab order and coupon before release.",
+      "numeric_value_or_range": "90 ohm PCIe/USB3/USB2; 100 ohm SATA/1000BASE-T; fab-returned coupon and dielectric/copper tolerances required",
+      "authority_class": "B/D",
+      "exact_provenance": [
+        "authority-inventory/primary-docs/jlc/JLC06161H-7628_IMPEDANCE_BASIS.md",
+        "PHASE13_STACK_RECEIPT.md",
+        "validation-receipts/layer-route-census-current-3709bbea-20260913/RECEIPT.md"
+      ],
+      "rationale": "Calculator geometry is a design target and does not prove order-specific impedance.",
+      "affected_subsystems": [
+        "PCIe",
+        "USB3",
+        "SATA",
+        "Ethernet",
+        "return paths"
+      ],
+      "verification_method": "Fresh Light route census plus fab-returned coupon/field-solver result and order record.",
+      "responsible_authority": "SI Authority / Fabrication Authority",
+      "current_design_satisfaction": "UNPROVEN",
+      "contradiction_or_evidence": "No current fab coupon/order package is retained; current SI acceptance row remains open.",
+      "supersession_disposition": "",
+      "foundational": true,
+      "notes": ""
+    },
+    {
+      "id": "FAB-GEO-001",
+      "statement": "Normal routes shall meet the approved 0.20 mm trace/clearance basis; the authorized 0.10 mm fine escape is limited to the named JMS583 XIN/XOUT region and normal geometry resumes outside it.",
+      "numeric_value_or_range": "Normal width and clearance >=0.20 mm; JMS583 XIN/XOUT local width/clearance 0.10 mm only",
+      "authority_class": "D/B",
+      "exact_provenance": [
+        "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru",
+        "PHASE24_JMS583_FINE_ESCAPE_RECEIPT_20260912.md",
+        "PHASE24_STORAGE_USB3_UNBLOCKER_REASSESSMENT_20260912.md",
+        "validation-receipts/current-head-rule-context-inspection-20260913/RECEIPT.md"
+      ],
+      "rationale": "Local fabrication-capable geometry is an approved exception only within a bounded component region; generic relaxation would hide manufacturability defects.",
+      "affected_subsystems": [
+        "storage USB3",
+        "JMS583 support",
+        "all routed copper",
+        "DFM"
+      ],
+      "verification_method": "Native DRC rule-context check, scope audit, and no out-of-window sub-0.20 mm geometry.",
+      "responsible_authority": "Fabrication/DFM Authority with Storage Authority",
+      "current_design_satisfaction": "FAIL",
+      "contradiction_or_evidence": "The retained integrated storage evidence records U11 0.15 mm fanout outside the current authorized XIN/XOUT local rule and current DRC has width/clearance violations. The local 0.10 mm escape itself is authorized only in its named region.",
+      "supersession_disposition": "SUPERSEDES any historical global 0.15/0.10 mm relaxation proposal.",
+      "foundational": true,
+      "notes": ""
+    },
+    {
+      "id": "FAB-VIA-001",
+      "statement": "Ordinary through-vias and connector/package land rules shall remain within the selected fabrication and package contract: no unapproved via-in-pad in SXM2 BGA lands, covered connector-side vias where required, and package-specific drill/annular limits.",
+      "numeric_value_or_range": "Current ordinary via basis commonly 0.50/0.30 mm; JLC capability record includes min drill 0.15 mm, min via diameter 0.25 mm; J1 lands 0.584-0.635 mm with >=0.15 mm mask clearance and no vias in lands",
+      "authority_class": "B/D",
+      "exact_provenance": [
+        "/home/nyx/PiSXMe-Library/Library/briefs/sxm2-j1-amphenol-rev-w-corpus-20260912.md",
+        "/home/nyx/PiSXMe-Library/Library/briefs/storage-geometry-u11-u12-20260912.md",
+        "PHASE13_STACK_RECEIPT.md",
+        "validation-receipts/mechanics-dfm-consolidated-61085fe0-20260913/RECEIPT.json"
+      ],
+      "rationale": "Connector land/via rules are manufacturer/application constraints, while via dimensions must be checked against the actual order stack.",
+      "affected_subsystems": [
+        "J1/SXM2",
+        "QFN storage",
+        "PCIe",
+        "DFM"
+      ],
+      "verification_method": "Pad/via geometry parser, native DRC, package overlay, and fab capability/order review.",
+      "responsible_authority": "Package/DFM Authority",
+      "current_design_satisfaction": "UNPROVEN",
+      "contradiction_or_evidence": "J1 identity is accepted, but local mask/paste/courtyard/hidden-joint assembly overlay and complete via/DFM release are not closed.",
+      "supersession_disposition": "",
+      "foundational": true,
+      "notes": ""
+    },
+    {
+      "id": "REF-PLANE-001",
+      "statement": "High-speed pairs shall route on outer layers over the adjacent solid GND reference planes: L1 over L2 and L6 over L5; inner-layer signal routing is excluded by the selected policy.",
+      "numeric_value_or_range": "L2=In1.GND; L5=In4.GND; PCIe/USB3/SATA/Ethernet targets 90/100 ohm as above",
+      "authority_class": "D/B",
+      "exact_provenance": [
+        "PHASE13_STACK_RECEIPT.md",
+        "authority-inventory/primary-docs/jlc/JLC06161H-7628_IMPEDANCE_BASIS.md",
+        "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb SHA256 75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c"
+      ],
+      "rationale": "Adjacent reference continuity and geometry are required for the impedance targets; layer names alone do not prove return continuity.",
+      "affected_subsystems": [
+        "PCIe",
+        "USB3",
+        "SATA",
+        "Ethernet",
+        "ground return"
+      ],
+      "verification_method": "Fresh saved-geometry layer census, return-via/zone continuity audit, and extracted impedance evidence.",
+      "responsible_authority": "SI/Return Authority",
+      "current_design_satisfaction": "UNPROVEN",
+      "contradiction_or_evidence": "Layer-role declarations match the selected basis, but current return and integrated routing closure remain open.",
+      "supersession_disposition": "",
+      "foundational": true,
+      "notes": ""
+    },
+    {
+      "id": "PWR-CU-001",
+      "statement": "The input and protected-rail copper, vias, fuses, connectors, and returns shall be sized for PWR-ENV-001 with explicit current sharing, voltage-drop, temperature-rise, and transient margin.",
+      "numeric_value_or_range": "At 12 V, 300 W=25.0 A V100 load before board loads; 330 W=27.5 A before board loads; prior 90% worksheet including 22.7 W low-voltage loads gives 29.8796 A and 32.6574 A total respectively",
+      "authority_class": "A/B/C/D",
+      "exact_provenance": [
+        "Current user product decision",
+        "validation-receipts/power-envelope-authority-20260914/POWER_ENVELOPE_AUTHORITY_V1.1.md",
+        "PHASE5_POWER_CALCULATIONS.md",
+        "validation-receipts/power-return-net-census-20260912.md"
+      ],
+      "rationale": "Current capacity is a physics/safety and system-budget requirement, not a cosmetic DRC rule.",
+      "affected_subsystems": [
+        "input branches",
+        "protected 12 V",
+        "POWER_GND",
+        "V100 contact field",
+        "regulators",
+        "thermal"
+      ],
+      "verification_method": "Power Authority calculation using actual copper geometry, path resistance, source/harness, fuse I2t, connector derating, transient model and thermal model; fresh Light connectivity check.",
+      "responsible_authority": "Power Authority / Power Integrity Engineer",
+      "current_design_satisfaction": "FAIL",
+      "contradiction_or_evidence": "Exact two-circuit Molex application evidence gives 8 A/circuit (16 A screen before derating), while the selected board has only 6 12V_PROTECTED segments/1 via and zero serialized Branch-B input/fused copper in the retained census. Existing 250 W/25.25 A worksheet was not a product guarantee.",
+      "supersession_disposition": "SUPERSEDES implementation-derived 250 W/dual-8 A capacity assumption.",
+      "foundational": true,
+      "notes": ""
+    },
+    {
+      "id": "THERM-REG-001",
+      "statement": "Regulator and power-switch junction temperatures shall remain below the selected component operating limits under the signed current, ambient, airflow, and transient budgets.",
+      "numeric_value_or_range": "TPSM63606 design screen: 125 C junction limit; prior 50 C ambient/90% screen margins 19.8 C (U3), 50.7 C (U4), 71.0 C (U5); CSD19536KCS -55..175 C operating range and prior theta-JA screen",
+      "authority_class": "A/B/D",
+      "exact_provenance": [
+        "PHASE15_REGULATOR_LAYOUT_RECEIPT.md",
+        "PHASE15_TI_LAYOUT_OVERLAY.md",
+        "PHASE14_POWER_ROUTE_RECEIPT.md",
+        "authority-inventory/primary-docs/power/"
+      ],
+      "rationale": "Part ratings and an analytical screen are inputs; they do not establish board-specific thermal behavior.",
+      "affected_subsystems": [
+        "TPSM63606 rails",
+        "LM74700/FET branches",
+        "input fuses",
+        "V100 power"
+      ],
+      "verification_method": "Power thermal analysis with exact BOM, copper/thermal-via geometry, ambient/airflow, and fresh candidate validation; bench thermal evidence remains separate.",
+      "responsible_authority": "Power Authority / Thermal Authority",
+      "current_design_satisfaction": "UNPROVEN",
+      "contradiction_or_evidence": "Existing screens are design calculations on earlier candidates; current integrated rails/Branch-B and exact capacitor DC-bias/temperature remain open.",
+      "supersession_disposition": "",
+      "foundational": true,
+      "notes": ""
+    },
+    {
+      "id": "THERM-MECH-001",
+      "statement": "Rev A cooling shall be module-mounted air or liquid cooling on the V100/SXM2; no undocumented carrier-board cooler/backplate or generic underside keepout may be assumed.",
+      "numeric_value_or_range": "V100 module cooling datum retained; carrier-mounted cooler geometry unavailable; underside is available except verified board hardware/access constraints",
+      "authority_class": "C/E",
+      "exact_provenance": [
+        "authority-inventory/primary-docs/mechanics/V100_COOLER_BACKPLATE_AUTHORITY.md",
+        "PHASE9_MECHANICS_RECEIPT.md",
+        "PHASE17_MECHANICAL_REOPEN_RECEIPT.md"
+      ],
+      "rationale": "This is the current product mechanical contract and prevents a historical soft rectangle from silently constraining copper.",
+      "affected_subsystems": [
+        "V100/SXM2",
+        "board underside",
+        "thermal",
+        "mechanical access"
+      ],
+      "verification_method": "Check exact cooler/module/standoff/access evidence for release; do not treat the datum as thermal measurement.",
+      "responsible_authority": "Mechanical Authority / Thermal Authority",
+      "current_design_satisfaction": "UNPROVEN",
+      "contradiction_or_evidence": "The contract is recorded, but no proprietary cooler model, fabricated thermal result, or complete service/access closure exists.",
+      "supersession_disposition": "SUPERSEDES the former generic 150 x 95 mm carrier cooler/backplate keepout as a universal constraint.",
+      "foundational": true,
+      "notes": ""
+    },
+    {
+      "id": "MECH-ENV-001",
+      "statement": "All selected connectors, mounting features, SSD envelope, SXM2 package, and service-access envelopes shall be manufacturable and mutually clear on the integrated board.",
+      "numeric_value_or_range": "Board envelope approximately -0.05..300.05 x -0.05..180.05 mm; J1 at (150,90); M.2 2280 envelope bbox 219.95..300.05 x 148.95..171.05 mm; J3 at (220,165); manufacturer J1 perimeter rework recommendation 5.10 mm",
+      "authority_class": "B/C/D",
+      "exact_provenance": [
+        "validation-receipts/mechanics-dfm-consolidated-61085fe0-20260913/mechanics-envelope.txt",
+        "validation-receipts/mechanics-dfm-consolidated-61085fe0-20260913/RECEIPT.json",
+        "/home/nyx/PiSXMe-Library/Library/briefs/sxm2-j1-amphenol-rev-w-corpus-20260912.md",
+        "authority-inventory/primary-docs/mechanics/V100_COOLER_BACKPLATE_AUTHORITY.md"
+      ],
+      "rationale": "Physical envelope and service access can invalidate the candidate even when electrical connectivity is correct.",
+      "affected_subsystems": [
+        "J1",
+        "J3/M.2",
+        "J5/J6",
+        "J7 Ethernet",
+        "cooler/access",
+        "assembly"
+      ],
+      "verification_method": "Native DRC plus exact footprint/body/connector mating and assembly access review on one integrated candidate.",
+      "responsible_authority": "Mechanical/DFM Authority",
+      "current_design_satisfaction": "FAIL",
+      "contradiction_or_evidence": "Current retained census reports 6 courtyard overlaps, 5 PTH-in-courtyard findings, and 16 edge-clearance findings; 128 of 131 footprints lack 3D models; release/fab/assembly artifacts are absent.",
+      "supersession_disposition": "",
+      "foundational": true,
+      "notes": ""
+    },
+    {
+      "id": "DFM-REL-001",
+      "statement": "Phase 24/25 release shall include a reproducible manufacturing package: Gerbers, drills, BOM, CPL, assembly drawings, panel/fab job, models and explicit dispositions.",
+      "numeric_value_or_range": "Required package artifacts must exist and hash to one validated integrated PCB SHA",
+      "authority_class": "D",
+      "exact_provenance": [
+        "validation-receipts/mechanics-dfm-consolidated-61085fe0-20260913/RECEIPT.json",
+        "PHASE24_ACCEPTANCE_MATRIX.json"
+      ],
+      "rationale": "DFM closure is an acceptance requirement, not a warning-count target.",
+      "affected_subsystems": [
+        "fabrication",
+        "assembly",
+        "procurement",
+        "service"
+      ],
+      "verification_method": "Fresh checkout generation, artifact hash manifest, and independent package review.",
+      "responsible_authority": "DFM/Release Authority",
+      "current_design_satisfaction": "UNPROVEN",
+      "contradiction_or_evidence": "Current release audit records no Gerbers, drills, BOM/CPL, assembly drawings, panelization, or fab job in the canonical tree.",
+      "supersession_disposition": "",
+      "foundational": true,
+      "notes": ""
+    },
+    {
+      "id": "SAFE-PROT-001",
+      "statement": "Input protection shall include independently protected branches, reverse-current/reverse-polarity control, surge/TVS policy, fuse coordination, shutdown/inhibit behavior, and a declared supported source environment.",
+      "numeric_value_or_range": "Selected schematic families: 15 A fuse candidates, SMBJ18A candidates, LM74700-Q1 branches; regulated current-limited 12 V cold-plug boundary; no automotive load-dump claim without declared waveform/energy",
+      "authority_class": "A/B/C/D",
+      "exact_provenance": [
+        "PHASE5_POWER_NETWORK_SPEC.md",
+        "PHASE5_POWER_RECEIPT.md",
+        "validation-receipts/power-envelope-authority-20260914/POWER_ENVELOPE_AUTHORITY_V1.1.md",
+        "/home/nyx/PiSXMe-Library/Library/subsystems/power-protection.md"
+      ],
+      "rationale": "Protection ratings and system policy must be proven together; fuse ampere label alone does not close I2t, thermal, or transient behavior.",
+      "affected_subsystems": [
+        "J5/J6",
+        "fuses/TVS",
+        "LM74700/FETs",
+        "V100 inhibit/reset"
+      ],
+      "verification_method": "Power Authority review of exact parts/harness/source, I2t/SOA/transient calculations, fault-injection or approved simulation, and fresh validation.",
+      "responsible_authority": "Power/Safety Authority",
+      "current_design_satisfaction": "UNPROVEN",
+      "contradiction_or_evidence": "Schematic component families exist, but exact assembly, branch fault policy, transient waveform/energy, thermal path and physical Branch-B route remain open.",
+      "supersession_disposition": "",
+      "foundational": true,
+      "notes": ""
+    },
+    {
+      "id": "J1-MECH-001",
+      "statement": "SXM2 J1 package geometry shall follow Amphenol/FCI 74221-101LF manufacturer land, mask, orientation, via and assembly constraints; electrical unknowns remain unknown.",
+      "numeric_value_or_range": "400 contacts; 10 x 40; 1.27 mm pitch; 4.0 mm mated height; 0.584..0.635 mm copper-defined lands; >=0.15 mm mask clearance; no vias in lands; 5.10 mm perimeter rework recommendation",
+      "authority_class": "B",
+      "exact_provenance": [
+        "authority-inventory/primary-docs/sxm2/SXM2_74221-101LF_AUTHORITY.md",
+        "/home/nyx/PiSXMe-Library/Library/briefs/sxm2-j1-amphenol-rev-w-corpus-20260912.md",
+        "validation-receipts/mechanics-dfm-consolidated-61085fe0-20260913/RECEIPT.json"
+      ],
+      "rationale": "Manufacturer package/assembly limits are foundational for manufacturability; they do not authorize electrical pin invention.",
+      "affected_subsystems": [
+        "J1 footprint",
+        "SXM2 assembly",
+        "DFM",
+        "V100 contact field"
+      ],
+      "verification_method": "Pad-by-pad footprint overlay, mask/paste/courtyard and hidden-joint access review against Rev W/GS-20-033.",
+      "responsible_authority": "Package/DFM Authority",
+      "current_design_satisfaction": "UNPROVEN",
+      "contradiction_or_evidence": "J1 identity is accepted, but the retained authority explicitly says local mask/paste, A1 orientation, courtyard, hidden-joint access and full overlay remain required.",
+      "supersession_disposition": "",
+      "foundational": true,
+      "notes": ""
+    },
+    {
+      "id": "HIST-IMPLEMENTATION-001",
+      "statement": "Historical coordinates, generic cooler rectangles, prior trace widths and the 250 W dual-8 A input are implementation choices unless independently supported by A-D evidence.",
+      "numeric_value_or_range": "No independent numeric authority; retain only as provenance and candidate history",
+      "authority_class": "E/F",
+      "exact_provenance": [
+        "PHASE24_SUCCESSOR_HANDOFF.md",
+        "PHASE5_POWER_CALCULATIONS.md",
+        "authority-inventory/primary-docs/mechanics/V100_COOLER_BACKPLATE_AUTHORITY.md",
+        "current audit request"
+      ],
+      "rationale": "The invariant hierarchy prevents implementation convenience from overriding product, physics, external contract or approved engineering budgets.",
+      "affected_subsystems": [
+        "floorplan",
+        "power input",
+        "copper/routing",
+        "cooling",
+        "DFM"
+      ],
+      "verification_method": "At every package assignment, check referenced invariant IDs and supersession dispositions.",
+      "responsible_authority": "Root Foreman with relevant domain authority",
+      "current_design_satisfaction": "NOT_APPLICABLE",
+      "contradiction_or_evidence": "No E/F historical item becomes foundational by wording such as frozen/approved/authoritative alone.",
+      "supersession_disposition": "SUPERSEDED_BY_INVARIANT PWR-ENV-001 where the 250 W/dual-8 A assumption conflicts; SUPERSEDED_BY_INVARIANT THERM-MECH-001 for generic carrier cooler reservation.",
+      "foundational": false,
+      "notes": ""
+    }
+  ],
+  "summary": {
+    "count": 14,
+    "fail": [
+      "PWR-ENV-001",
+      "FAB-GEO-001",
+      "PWR-CU-001",
+      "MECH-ENV-001"
+    ],
+    "unproven": [
+      "FAB-STACK-002",
+      "FAB-VIA-001",
+      "REF-PLANE-001",
+      "THERM-REG-001",
+      "THERM-MECH-001",
+      "DFM-REL-001",
+      "SAFE-PROT-001",
+      "J1-MECH-001"
+    ],
+    "pass": [
+      "FAB-STACK-001"
+    ],
+    "not_applicable": [
+      "HIST-IMPLEMENTATION-001"
+    ]
+  },
+  "recommended_work_packages": [
+    {
+      "id": "P24-POWER-ARCHITECTURE-CORRECTION",
+      "priority": "P0",
+      "depends_on": [
+        "PWR-ENV-001",
+        "PWR-CU-001",
+        "SAFE-PROT-001"
+      ],
+      "owner": "Power Authority + Power Integrity Engineer",
+      "criterion": "signed input/protection/distribution design satisfying 300 W sustained and 330 W peak, or evidence-backed Root escalation of a user-owned product decision"
+    },
+    {
+      "id": "P24-FAB-SI-CONTRACT-CLOSURE",
+      "priority": "P1",
+      "depends_on": [
+        "FAB-STACK-002",
+        "FAB-GEO-001",
+        "FAB-VIA-001",
+        "REF-PLANE-001"
+      ],
+      "owner": "SI/Fabrication Authority",
+      "criterion": "one integrated candidate with rule-context, geometry, return and impedance/coupon plan"
+    },
+    {
+      "id": "P24-MECH-DFM-CLOSURE",
+      "priority": "P1",
+      "depends_on": [
+        "MECH-ENV-001",
+        "J1-MECH-001",
+        "THERM-MECH-001",
+        "DFM-REL-001"
+      ],
+      "owner": "Mechanical/DFM Authority",
+      "criterion": "closed body/access/model/assembly/fab package on one integrated candidate"
+    },
+    {
+      "id": "P24-INVARIANT-GATE",
+      "priority": "P0",
+      "depends_on": [
+        "all packet rows"
+      ],
+      "owner": "Root Foreman",
+      "criterion": "final PROJECT_INVARIANTS and compliance matrices recorded; downstream packages reference IDs"
+    }
+  ],
+  "high_impact_contradictions": [
+    "PWR-ENV-001/PWR-CU-001: current 2 x 8 A input application basis cannot support 300 W sustained plus board loads; current Branch-B copper is absent.",
+    "FAB-GEO-001: U11 0.15 mm fanout is outside the named 0.10 mm JMS583 escape and normal 0.20 mm contract.",
+    "MECH-ENV-001: current integrated candidate retains courtyard/PTH/edge-clearance findings and lacks required 3D/release evidence."
+  ]
+}

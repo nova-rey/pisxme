@@ -1,9 +1,9 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
   "schema": "work-package queue v1",
-  "updated": "2026-09-14T00:10:00Z",
+  "updated": "2026-09-14T00:00:00Z",
   "canonical_branch": "reva-clean",
-  "canonical_head": "d66a9462",
+  "canonical_head": "c06876d2",
   "resource_policy": {
     "initial_model_slots": 4,
     "reusable_sessions": 16,
@@ -145,7 +145,8 @@
       ],
       "priority": 0,
       "dependencies": [
-        "Issue #2 resolution-ready packet and MPA reconciliation"
+        "Issue #2 resolution-ready packet and MPA reconciliation",
+        "P24-FOUNDATIONAL-SYNTHESIS invariant gate"
       ],
       "status": "WAITING",
       "owner": "Hard Problem Task Force Issue #2",
@@ -175,7 +176,8 @@
         "P24-SI-POWER-REFERENCE",
         "P24-MECHANICS-DFM",
         "P24-PROVENANCE-REVIEW",
-        "P24-INTEGRATED-CORRIDOR"
+        "P24-INTEGRATED-CORRIDOR",
+        "P24-FOUNDATIONAL-SYNTHESIS invariant gate"
       ],
       "status": "WAITING",
       "owner": "Root integration",
@@ -242,6 +244,162 @@
         "current sharing",
         "load-step requirements"
       ]
+    },
+    {
+      "id": "P24-FOUNDATIONAL-INVARIANT-AUDIT",
+      "requirements": [
+        "foundational_invariants",
+        "invariant_compliance_matrix"
+      ],
+      "priority": 0,
+      "dependencies": [],
+      "status": "DONE",
+      "owner": "sup_invariant_synthesis + Root",
+      "resources": [
+        "Librarian/Researcher packets",
+        "domain authorities",
+        "no CAD"
+      ],
+      "blocking_issue": null,
+      "criterion": "Compact governing invariant contract and current-design compliance matrix identify every high-impact FAIL/UNPROVEN with an owner before broad implementation.",
+      "returned_evidence": [
+        "PROJECT_INVARIANTS.md",
+        "PROJECT_INVARIANTS.json",
+        "INVARIANT_COMPLIANCE_MATRIX.md",
+        "INVARIANT_COMPLIANCE_MATRIX.json",
+        "validation-receipts/foundational-invariants/"
+      ],
+      "result": "DONE_WITH_FOUNDATIONAL_FAILS_AND_UNPROVEN_ROWS",
+      "next_action": "Open explicit correction packages; keep dependent physical implementation WAITING on invariant IDs."
+    },
+    {
+      "id": "P24-POWER-INPUT-ARCHITECTURE",
+      "requirements": [
+        "INV-PRODUCT-V100-300W",
+        "INV-INPUT-CAPACITY",
+        "INV-INPUT-PROTECTION"
+      ],
+      "priority": 0,
+      "dependencies": [
+        "P24-FOUNDATIONAL-INVARIANT-AUDIT",
+        "hpq:#2"
+      ],
+      "status": "WAITING",
+      "owner": "Power Authority + sup_power_input_architecture",
+      "resources": [
+        "Power Authority",
+        "one CAD Light only after decision"
+      ],
+      "blocking_issue": "hpq:#2 plus invariant FAIL",
+      "criterion": "Authority-approved input/protection/harness topology meets 300W sustained/330W peak with derating and documented margins.",
+      "returned_evidence": [],
+      "result": null,
+      "next_action": "Resolve authority/product architecture; do not route speculative variants."
+    },
+    {
+      "id": "P24-POWER-RAIL-CLOSURE",
+      "requirements": [
+        "INV-RAIL-LOADS",
+        "INV-COPPER-CURRENT",
+        "INV-GROUND-RETURN"
+      ],
+      "priority": 0,
+      "dependencies": [
+        "P24-FOUNDATIONAL-INVARIANT-AUDIT",
+        "P24-POWER-INPUT-ARCHITECTURE"
+      ],
+      "status": "WAITING",
+      "owner": "PI/PCB Supervisor",
+      "resources": [
+        "PI specialist",
+        "serialized CAD Light"
+      ],
+      "blocking_issue": "foundational power invariants",
+      "criterion": "All required rail/return copper physically connected and validated for current/drop/thermal/transient margins.",
+      "returned_evidence": [],
+      "result": null,
+      "next_action": "Wait for input architecture then implement/validate."
+    },
+    {
+      "id": "P24-J1-CONTRACT",
+      "requirements": [
+        "INV-SXM2-CONTACT"
+      ],
+      "priority": 1,
+      "dependencies": [
+        "P24-FOUNDATIONAL-INVARIANT-AUDIT"
+      ],
+      "status": "READY",
+      "owner": null,
+      "resources": [
+        "package authority",
+        "Librarian",
+        "no CAD until contract"
+      ],
+      "blocking_issue": null,
+      "criterion": "Mechanically prove 393 pad IDs to A1-K40 convention and approve J1 net contract, preserving unknown contacts NC.",
+      "returned_evidence": [],
+      "result": null,
+      "next_action": "Dispatch package authority; independent of power corridor."
+    },
+    {
+      "id": "P24-SI-FAB",
+      "requirements": [
+        "INV-IMPEDANCE",
+        "INV-FAB"
+      ],
+      "priority": 1,
+      "dependencies": [
+        "P24-FOUNDATIONAL-INVARIANT-AUDIT"
+      ],
+      "status": "RUNNING",
+      "owner": "sup_si_fab",
+      "resources": [
+        "model-agent"
+      ],
+      "blocking_issue": null,
+      "criterion": "Close assigned invariant evidence with provenance and current-head validation.",
+      "returned_evidence": [],
+      "result": null
+    },
+    {
+      "id": "P24-THERMAL-MECHANICS",
+      "requirements": [
+        "INV-THERMAL",
+        "INV-MECHANICAL"
+      ],
+      "priority": 1,
+      "dependencies": [
+        "P24-FOUNDATIONAL-INVARIANT-AUDIT"
+      ],
+      "status": "RUNNING",
+      "owner": "sup_thermal_mechanics",
+      "resources": [
+        "model-agent"
+      ],
+      "blocking_issue": null,
+      "criterion": "Close assigned invariant evidence with provenance and current-head validation.",
+      "returned_evidence": [],
+      "result": null
+    },
+    {
+      "id": "P24-PROVENANCE-FIRMWARE",
+      "requirements": [
+        "INV-FIRMWARE"
+      ],
+      "priority": 1,
+      "dependencies": [
+        "P24-FOUNDATIONAL-INVARIANT-AUDIT"
+      ],
+      "status": "RUNNING",
+      "owner": "sup_provenance_firmware",
+      "resources": [
+        "model-agent"
+      ],
+      "blocking_issue": null,
+      "criterion": "Close assigned invariant evidence with provenance and current-head validation.",
+      "returned_evidence": [],
+      "result": null
     }
   ],
   "states": [
@@ -257,7 +415,7 @@
     "power_current_transient_thermal",
     "storage_mode_behavior"
   ],
-  "notes": "Issue #2 investigation is not duplicated here. Queue records ownership, capacity, and returned evidence; Root performs serialized integration only.",
+  "notes": "Foundational gate established; broad CAD remains parked where high-impact invariants FAIL/UNPROVEN.",
   "census": {
     "READY": 0,
     "RUNNING": 0,

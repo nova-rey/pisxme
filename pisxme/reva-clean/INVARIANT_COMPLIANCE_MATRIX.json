@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+  "states": [
+    "PASS",
+    "FAIL",
+    "UNPROVEN",
+    "NOT_APPLICABLE"
+  ],
+  "rows": [
+    {
+      "id": "INV-PRODUCT-V100-300W",
+      "state": "FAIL",
+      "evidence": "Current selected input is 16 A pre-derating versus 29.87963 A screen.",
+      "owner": "Product/Power Authority"
+    },
+    {
+      "id": "INV-PRODUCT-V100-330W-PEAK",
+      "state": "FAIL",
+      "evidence": "Current input cannot support 32.65741 A screen.",
+      "owner": "Product/Power Authority"
+    },
+    {
+      "id": "INV-INPUT-12V",
+      "state": "UNPROVEN",
+      "evidence": "Source/harness installation and tolerance not closed.",
+      "owner": "Power Authority"
+    },
+    {
+      "id": "INV-INPUT-CAPACITY",
+      "state": "FAIL",
+      "evidence": "Molex assembly 8 A/circuit, 16 A pre-derating.",
+      "owner": "Power Authority"
+    },
+    {
+      "id": "INV-MOLEX-8A",
+      "state": "PASS",
+      "evidence": "Component limit passes itself; system envelope does not.",
+      "owner": "Package/Power Authority"
+    },
+    {
+      "id": "INV-BRANCH-SHARING",
+      "state": "UNPROVEN",
+      "evidence": "No qualified sharing/monitoring implementation.",
+      "owner": "Power Authority"
+    },
+    {
+      "id": "INV-PROTECTION",
+      "state": "UNPROVEN",
+      "evidence": "No complete transient energy and shutdown evidence.",
+      "owner": "Power Authority"
+    },
+    {
+      "id": "INV-RAIL-5V",
+      "state": "UNPROVEN",
+      "evidence": "Physical copper/effective C/thermal open.",
+      "owner": "PI Authority"
+    },
+    {
+      "id": "INV-RAIL-3V3",
+      "state": "UNPROVEN",
+      "evidence": "Current integrated serialized copper absent.",
+      "owner": "PI Authority"
+    },
+    {
+      "id": "INV-RAIL-1V1",
+      "state": "FAIL",
+      "evidence": "253.44 uF conservative screen is below 300 uF.",
+      "owner": "PI Authority"
+    },
+    {
+      "id": "INV-SEQUENCING",
+      "state": "UNPROVEN",
+      "evidence": "No integrated sequencing proof.",
+      "owner": "Power/Firmware Authority"
+    },
+    {
+      "id": "INV-SXM2-J1-PACKAGE",
+      "state": "PASS",
+      "evidence": "Integrated endpoint/assembly remains separate.",
+      "owner": "Package Authority"
+    },
+    {
+      "id": "INV-SXM2-J1-INTEGRATION",
+      "state": "UNPROVEN",
+      "evidence": "Current integrated opens/returns remain.",
+      "owner": "PCB/Package Authority"
+    },
+    {
+      "id": "INV-CM5",
+      "state": "UNPROVEN",
+      "evidence": "Integrated route/return evidence incomplete.",
+      "owner": "Interface Authority"
+    },
+    {
+      "id": "INV-PCIE",
+      "state": "UNPROVEN",
+      "evidence": "Route and return closure absent.",
+      "owner": "SI Authority"
+    },
+    {
+      "id": "INV-STORAGE-PATHA",
+      "state": "FAIL",
+      "evidence": "15 open required Path-A pairs.",
+      "owner": "Storage Authority"
+    },
+    {
+      "id": "INV-STORAGE-PATHB",
+      "state": "NOT_APPLICABLE",
+      "evidence": "Must not enter production critical path.",
+      "owner": "Storage Authority"
+    },
+    {
+      "id": "INV-STACKUP",
+      "state": "PASS",
+      "evidence": "Design-basis PASS only.",
+      "owner": "SI/Fab Authority"
+    },
+    {
+      "id": "INV-IMPEDANCE",
+      "state": "UNPROVEN",
+      "evidence": "No coupon/tolerance closure.",
+      "owner": "SI/Fab Authority"
+    },
+    {
+      "id": "INV-COPPER",
+      "state": "FAIL",
+      "evidence": "Branch-B and bridge nets zero serialized copper/vias.",
+      "owner": "PI/PCB Authority"
+    },
+    {
+      "id": "INV-RETURN",
+      "state": "UNPROVEN",
+      "evidence": "325 pads/47 segments/17 vias do not prove closure; unresolved returns.",
+      "owner": "SI/PI Authority"
+    },
+    {
+      "id": "INV-THERMAL",
+      "state": "UNPROVEN",
+      "evidence": "No carrier thermal validation.",
+      "owner": "Thermal Authority"
+    },
+    {
+      "id": "INV-MECHANICAL",
+      "state": "FAIL",
+      "evidence": "Courtyard/PTH/edge and missing-model findings.",
+      "owner": "Mechanical Authority"
+    },
+    {
+      "id": "INV-FAB",
+      "state": "FAIL",
+      "evidence": "U11 0.15 mm fanout outside authorized local escape; release artifacts absent.",
+      "owner": "Fab Authority"
+    },
+    {
+      "id": "INV-FIRMWARE",
+      "state": "UNPROVEN",
+      "evidence": "No hardware operation or vendor authorization claimed.",
+      "owner": "Firmware/Provenance Authority"
+    }
+  ],
+  "gate": "Every FAIL/UNPROVEN high-impact row has an explicit owner/package before broad physical implementation."
+}

@@ -1,0 +1,644 @@
+{
+  "schema": "pisxme.foundational-invariant-packet.v1",
+  "package_id": "P24-FOUNDATIONAL-POWER",
+  "audit_date": "2026-09-14",
+  "repository": "nova-rey/pisxme",
+  "branch": "reva-clean",
+  "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+  "selected_pcb": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "selected_pcb_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+  "schematic": "PiSXMe_RevA_Clean.kicad_sch",
+  "schematic_sha256": "6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1",
+  "cad_changed": false,
+  "product_decisions": {
+    "v100_sustained_w": 300,
+    "design_peak_w": 330,
+    "selected_input_topology_authoritative": false,
+    "supersession": "INV-PWR-INPUT-TOPOLOGY and INV-PWR-LEGACY-250W are superseded by INV-PWR-PRODUCT-300W where they constrain capacity"
+  },
+  "calculation_basis": {
+    "input_nominal_v": 12.0,
+    "efficiency_screen": 0.9,
+    "low_voltage_power_w": 22.7,
+    "continuous_input_a": 29.87963,
+    "peak_input_a": 32.65741,
+    "selected_connector_screen_a": 16.0,
+    "continuous_shortfall_a": 13.87963,
+    "peak_shortfall_a": 16.65741
+  },
+  "invariants": [
+    {
+      "id": "INV-PWR-PRODUCT-300W",
+      "statement": "Rev A shall support a V100/SXM2 endpoint at 300 W sustained.",
+      "numeric": {
+        "sustained_endpoint_w": 300
+      },
+      "authority_class": [
+        "C"
+      ],
+      "provenance": [
+        "user foundational audit decision 2026-09-14",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "J1/SXM2",
+        "input",
+        "protected 12 V",
+        "copper",
+        "thermal",
+        "sequencing"
+      ],
+      "verification": "Power envelope, path drop/current/thermal, transient and integrated validation.",
+      "responsible_authority": "Root + Power Authority",
+      "current_status": "FAIL",
+      "contradiction": "(300+22.7)/(12*0.90)=29.87963 A; current two-branch screen is 16 A before derating.",
+      "disposition": "Foundational; current topology cannot remain a product-capacity constraint."
+    },
+    {
+      "id": "INV-PWR-PRODUCT-330W-PEAK",
+      "statement": "Retain 330 W as Rev A design peak allowance unless authoritative evidence requires different/higher.",
+      "numeric": {
+        "peak_design_allowance_w": 330,
+        "screen_input_current_a": 32.65741
+      },
+      "authority_class": [
+        "C"
+      ],
+      "provenance": [
+        "user foundational audit decision 2026-09-14",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "source",
+        "protection",
+        "PDN",
+        "thermal",
+        "shutdown"
+      ],
+      "verification": "Signed envelope and load-step/transient acceptance table.",
+      "responsible_authority": "Root + Power Authority",
+      "current_status": "FAIL/UNPROVEN",
+      "contradiction": "(330+22.7)/(12*0.90)=32.65741 A; no module peak waveform is retained and current entry is 16 A screen.",
+      "disposition": "Retain as governing design target; no hardware pass claimed."
+    },
+    {
+      "id": "INV-PWR-INPUT-NOMINAL",
+      "statement": "Use a regulated current-limited 12 V cold-plug source; tolerance/current limit/source impedance remain to be bound.",
+      "numeric": {
+        "nominal_v": 12.0,
+        "efficiency_screen": 0.9
+      },
+      "authority_class": [
+        "F",
+        "D",
+        "C-pending"
+      ],
+      "provenance": [
+        "PHASE5_POWER_CALCULATIONS.md",
+        "PHASE5_POWER_NETWORK_SPEC.md"
+      ],
+      "affected_subsystems": [
+        "J5/J6",
+        "fuses",
+        "protection",
+        "regulators",
+        "harness"
+      ],
+      "verification": "Power Authority input/source/harness/derating table.",
+      "responsible_authority": "Power Authority",
+      "current_status": "UNPROVEN",
+      "contradiction": "Complete source tolerance, current limit, impedance and installation are absent."
+    },
+    {
+      "id": "INV-PWR-CONNECTOR-8A-CIRCUIT",
+      "statement": "Selected standard Molex 5556 two-circuit 16/18 AWG assembly is limited to 8 A/circuit at its 30 C temperature-rise table before derating; current sharing is not qualified.",
+      "numeric": {
+        "a_per_circuit": 8.0,
+        "circuits": 2,
+        "pre_derating_total_a": 16.0,
+        "temperature_rise_c": 30
+      },
+      "authority_class": [
+        "A",
+        "B"
+      ],
+      "provenance": [
+        "Molex PS-43879-001-001 section 4.3",
+        "MOLEX_0039300020_AUTHORITY.md",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "J5/J6",
+        "mating terminals",
+        "wire/crimp",
+        "fuses",
+        "harness"
+      ],
+      "verification": "Exact assembly qualification and derating calculation.",
+      "responsible_authority": "Package/Power Authority",
+      "current_status": "PASS component limit; FAIL system capacity",
+      "contradiction": "16 A pre-derating is below 29.87963 A continuous and 32.65741 A peak."
+    },
+    {
+      "id": "INV-PWR-INPUT-TOPOLOGY",
+      "statement": "Current J5/J6 topology is two branches, each one 12 V contact plus one return.",
+      "numeric": {
+        "branches": 2,
+        "power_contacts_per_branch": 1,
+        "return_contacts_per_branch": 1
+      },
+      "authority_class": [
+        "E"
+      ],
+      "provenance": [
+        "PiSXMe_RevA_Clean.kicad_sch",
+        "PHASE5_POWER_NETWORK_SPEC.md"
+      ],
+      "affected_subsystems": [
+        "input",
+        "protection",
+        "Branch-A/B copper",
+        "return"
+      ],
+      "verification": "Native schematic/PCB topology census and new Power Authority design.",
+      "responsible_authority": "Root + Power Authority",
+      "current_status": "SUPERSEDED_BY_INVARIANT",
+      "disposition": "SUPERSEDED_BY_INVARIANT INV-PWR-PRODUCT-300W"
+    },
+    {
+      "id": "INV-PWR-BRANCH-IMBALANCE",
+      "statement": "No passive current sharing may be assumed; branches require independent current, fault and imbalance limits.",
+      "numeric": {
+        "sharing_assumption": false
+      },
+      "authority_class": [
+        "A",
+        "C",
+        "D"
+      ],
+      "provenance": [
+        "Molex current-sharing warning",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "fuses",
+        "TVS",
+        "LM74700",
+        "MOSFETs",
+        "connector/harness",
+        "shutdown"
+      ],
+      "verification": "Resistance/impedance model, fuse I2t/SOA and branch fault evidence.",
+      "responsible_authority": "Power Authority",
+      "current_status": "UNPROVEN"
+    },
+    {
+      "id": "INV-PWR-CONTINUOUS-PATH",
+      "statement": "Protected source, copper, vias, return, connectors and harness shall carry 29.87963 A continuous at declared margins.",
+      "numeric": {
+        "required_continuous_input_a": 29.87963,
+        "calculation": "(300+22.7)/(12*0.90)"
+      },
+      "authority_class": [
+        "D"
+      ],
+      "provenance": [
+        "INV-PWR-PRODUCT-300W",
+        "INV-PWR-CONNECTOR-8A-CIRCUIT",
+        "power-return-census-current-a56b4399-20260913/RECEIPT.md"
+      ],
+      "affected_subsystems": [
+        "J5/J6",
+        "Branch-B",
+        "12V_PROTECTED",
+        "planes/returns",
+        "thermal"
+      ],
+      "verification": "Resistance/drop extraction or measurement; current density and temperature-rise analysis.",
+      "responsible_authority": "Power Integrity + Power Authority",
+      "current_status": "FAIL",
+      "contradiction": "Current census: 12V_IN_B/FUSED_12V_B zero segments/vias; 12V_PROTECTED six segments/one via; no path resistance or thermal closure."
+    },
+    {
+      "id": "INV-PWR-PEAK-PATH",
+      "statement": "Input/protection/distribution shall survive 32.65741 A peak without unsafe collapse or protection violation.",
+      "numeric": {
+        "required_peak_input_a": 32.65741,
+        "calculation": "(330+22.7)/(12*0.90)"
+      },
+      "authority_class": [
+        "D"
+      ],
+      "provenance": [
+        "INV-PWR-PRODUCT-330W-PEAK",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "source",
+        "fuses",
+        "TVS",
+        "MOSFET SOA",
+        "PDN",
+        "shutdown"
+      ],
+      "verification": "Declared waveform, source impedance, I2t/SOA and PDN/load-step analysis.",
+      "responsible_authority": "Power Authority",
+      "current_status": "UNPROVEN/FAIL under present topology",
+      "contradiction": "No peak waveform or qualified assembly; connector screen is 16 A."
+    },
+    {
+      "id": "INV-PWR-PROTECTION",
+      "statement": "Reverse blocking, OV/UV, surge, inrush, fuse and thermal protection shall be sized to declared envelope; component ratings do not alone qualify system.",
+      "numeric": {
+        "lm74700_input_range_v": [
+          3.2,
+          65.0
+        ],
+        "tvs_standoff_v": 18.0,
+        "tvs_clamp_v": 29.2
+      },
+      "authority_class": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "provenance": [
+        "LM74700-Q1.pdf",
+        "CSD19536KCS.pdf",
+        "SMBJ18A authority",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "input",
+        "fuses",
+        "TVS",
+        "MOSFETs",
+        "shutdown"
+      ],
+      "verification": "E=integral(VI dt), source impedance, fuse I2t, MOSFET SOA, clamp and thermal margins.",
+      "responsible_authority": "Power Authority",
+      "current_status": "UNPROVEN"
+    },
+    {
+      "id": "INV-PWR-CM5-5V",
+      "statement": "CM5 rail is 5.0 V, 3 A design load, TPSM63606 6 A capability and 30 uF minimum effective COUT.",
+      "numeric": {
+        "nominal_v": 5.0,
+        "load_a": 3.0,
+        "regulator_a": 6.0,
+        "min_effective_cout_uf": 30.0
+      },
+      "authority_class": [
+        "B",
+        "D"
+      ],
+      "provenance": [
+        "TPSM63606.pdf",
+        "PHASE5_POWER_CALCULATIONS.md",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "U3",
+        "CM5",
+        "input",
+        "caps",
+        "return",
+        "thermal"
+      ],
+      "verification": "Native net audit, vendor overlay, effective C, load-step and thermal validation.",
+      "responsible_authority": "Power Integrity",
+      "current_status": "UNPROVEN",
+      "contradiction": "50% nominal utilization is not route/transient/thermal closure."
+    },
+    {
+      "id": "INV-PWR-BRIDGE-3V3",
+      "statement": "Bridge rail is 3.3 V, 2 A load, 6 A capability and 50 uF minimum effective COUT.",
+      "numeric": {
+        "nominal_v": 3.3,
+        "load_a": 2.0,
+        "regulator_a": 6.0,
+        "min_effective_cout_uf": 50.0
+      },
+      "authority_class": [
+        "B",
+        "D"
+      ],
+      "provenance": [
+        "TPSM63606.pdf",
+        "PHASE5_POWER_CALCULATIONS.md",
+        "power-return-census-current-a56b4399-20260913/RECEIPT.md"
+      ],
+      "affected_subsystems": [
+        "U4",
+        "storage bridge",
+        "3V3 distribution",
+        "return",
+        "thermal"
+      ],
+      "verification": "Native continuity, vendor overlay, effective C, thermal/transient validation.",
+      "responsible_authority": "Power Integrity",
+      "current_status": "UNPROVEN",
+      "contradiction": "Current census reports zero BRIDGE_3V3 segments/vias."
+    },
+    {
+      "id": "INV-PWR-BRIDGE-1V1",
+      "statement": "Bridge rail is 1.1 V, 1 A load, 6 A capability and conservative 300 uF effective COUT screen.",
+      "numeric": {
+        "nominal_v": 1.1,
+        "load_a": 1.0,
+        "regulator_a": 6.0,
+        "screen_effective_cout_uf": 300.0,
+        "tolerance_floor_uf": 253.44
+      },
+      "authority_class": [
+        "B",
+        "D"
+      ],
+      "provenance": [
+        "TPSM63606.pdf",
+        "PHASE5_POWER_CALCULATIONS.md",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "U5",
+        "storage bridge",
+        "1V1 distribution",
+        "return",
+        "thermal"
+      ],
+      "verification": "Exact capacitor DC-bias/tolerance/temp, vendor overlay, route/thermal/transient validation.",
+      "responsible_authority": "Power Integrity",
+      "current_status": "FAIL against screen; UNPROVEN overall",
+      "contradiction": "16*22uF*0.90*0.80=253.44uF, 46.56uF below 300uF; current census reports zero rail segments/vias."
+    },
+    {
+      "id": "INV-PWR-SEQUENCING-SHUTDOWN",
+      "statement": "EN/UVLO, PG, reset/inhibit and branch-fault behavior shall prevent invalid operation during cold plug, brownout, overcurrent and protection faults.",
+      "numeric": {
+        "state_table_required": true
+      },
+      "authority_class": [
+        "B",
+        "C",
+        "D"
+      ],
+      "provenance": [
+        "LM74700-Q1/TPSM63606 datasheets",
+        "PHASE5_POWER_NETWORK_SPEC.md",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "LM74700",
+        "regulators",
+        "CM5",
+        "J1 reset/enable",
+        "firmware"
+      ],
+      "verification": "Schematic state table, timing analysis, ERC and permitted bring-up test.",
+      "responsible_authority": "Power Authority + Board Bring-up",
+      "current_status": "UNPROVEN"
+    },
+    {
+      "id": "INV-PWR-TRANSIENT-LOADSTEP",
+      "statement": "Carrier shall define and meet load-step requirements spanning 300 W sustained and 330 W peak.",
+      "numeric": {
+        "sustained_w": 300,
+        "peak_w": 330,
+        "required_waveform": true
+      },
+      "authority_class": [
+        "C",
+        "D"
+      ],
+      "provenance": [
+        "user product decision",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "source/PDN",
+        "J1",
+        "regulators",
+        "decoupling",
+        "returns",
+        "inhibit"
+      ],
+      "verification": "Signed waveform/acceptance table and labeled calculation/simulation/measurement.",
+      "responsible_authority": "Power Authority",
+      "current_status": "UNPROVEN",
+      "contradiction": "No V100/SXM2 amplitude/slew, harness/package inductance, PDN impedance or control-loop evidence."
+    },
+    {
+      "id": "INV-PWR-THERMAL",
+      "statement": "Connector/harness and power components shall remain within declared temperature limits; Molex 30 C rise is a limit, not a measurement.",
+      "numeric": {
+        "connector_rise_limit_c": 30
+      },
+      "authority_class": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "provenance": [
+        "Molex PS-43879-001-001",
+        "TI component datasheets",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "connector",
+        "wires",
+        "fuses",
+        "MOSFETs",
+        "regulators",
+        "copper",
+        "cooling"
+      ],
+      "verification": "Loss/rise model with ambient/airflow/derating and permitted thermal validation.",
+      "responsible_authority": "Thermal + Power Authority",
+      "current_status": "UNPROVEN"
+    },
+    {
+      "id": "INV-PWR-RETURN-IMPEDANCE",
+      "statement": "High-current return/reference planes shall provide documented continuity and impedance sufficient for drop, droop and ground-bounce limits.",
+      "numeric": {
+        "equation": "Vbounce=I*Zreturn"
+      },
+      "authority_class": [
+        "A",
+        "D"
+      ],
+      "provenance": [
+        "PHASE5_POWER_NETWORK_SPEC.md",
+        "power-return-census-current-a56b4399-20260913/RECEIPT.md"
+      ],
+      "affected_subsystems": [
+        "POWER_GND",
+        "J1",
+        "input returns",
+        "regulators",
+        "reference planes"
+      ],
+      "verification": "Stackup-aware extraction/simulation or approved measurement plus continuity validation.",
+      "responsible_authority": "Power Integrity",
+      "current_status": "UNPROVEN",
+      "contradiction": "Census has 325 pads/47 segments/17 vias/3 zones but no impedance or bounce evidence."
+    },
+    {
+      "id": "INV-PWR-ISOLATION",
+      "statement": "Raw 12 V shall not reach M.2/storage or low-voltage rails.",
+      "numeric": {
+        "raw_12v_to_low_voltage": false
+      },
+      "authority_class": [
+        "B",
+        "D"
+      ],
+      "provenance": [
+        "PHASE5_POWER_NETWORK_SPEC.md",
+        "native power schematic audit",
+        "current native netlist"
+      ],
+      "affected_subsystems": [
+        "input/protection",
+        "storage",
+        "U3/U4/U5",
+        "J1/J3"
+      ],
+      "verification": "Native netlist/pad audit plus physical copper/DRC.",
+      "responsible_authority": "Power Integrity + Storage Authority",
+      "current_status": "PASS bounded schematic ownership; UNPROVEN physical"
+    },
+    {
+      "id": "INV-PWR-EFFICIENCY-SCREEN",
+      "statement": "90% conversion efficiency is a calculation screen only until exact operating-point efficiency is established.",
+      "numeric": {
+        "screen_efficiency": 0.9
+      },
+      "authority_class": [
+        "D"
+      ],
+      "provenance": [
+        "PHASE5_POWER_CALCULATIONS.md",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "source sizing",
+        "current budget",
+        "thermal",
+        "transient"
+      ],
+      "verification": "Exact converter data/model and sensitivity with margin.",
+      "responsible_authority": "Power Authority",
+      "current_status": "UNPROVEN"
+    },
+    {
+      "id": "INV-PWR-LEGACY-250W",
+      "statement": "Historical 250 W V100 allowance and 25.25 A total are implementation-era evidence only.",
+      "numeric": {
+        "historical_v100_w": 250,
+        "historical_total_input_a": 25.25
+      },
+      "authority_class": [
+        "E"
+      ],
+      "provenance": [
+        "PHASE5_POWER_CALCULATIONS.md",
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md"
+      ],
+      "affected_subsystems": [
+        "all power/input/copper work citing 250 W"
+      ],
+      "verification": "Queue prerequisite audit and replacement with current IDs.",
+      "responsible_authority": "Root",
+      "current_status": "SUPERSEDED_BY_INVARIANT",
+      "disposition": "SUPERSEDED_BY_INVARIANT INV-PWR-PRODUCT-300W"
+    },
+    {
+      "id": "INV-PWR-LEGACY-28.5-34.3A",
+      "statement": "Historical 28.5/34.3 A values remain provenance only until reconciled to current product and exact input architecture.",
+      "numeric": {
+        "historical_continuous_a": 28.5,
+        "historical_peak_a": 34.3
+      },
+      "authority_class": [
+        "E",
+        "F"
+      ],
+      "provenance": [
+        "POWER_ENVELOPE_AUTHORITY_V1.1.md legacy disposition",
+        "prior design artifacts"
+      ],
+      "affected_subsystems": [
+        "input copper",
+        "fuses",
+        "source/harness",
+        "thermal",
+        "routing"
+      ],
+      "verification": "Power Authority republishes one versioned envelope.",
+      "responsible_authority": "Root + Power Authority",
+      "current_status": "UNPROVEN as governing budget"
+    }
+  ],
+  "high_impact_findings": [
+    {
+      "id": "INV-PWR-PRODUCT-300W",
+      "state": "FAIL",
+      "owner_package": "P24-POWER-INPUT-ARCHITECTURE",
+      "reason": "Current two-branch 8 A screen cannot carry continuous envelope."
+    },
+    {
+      "id": "INV-PWR-PRODUCT-330W-PEAK",
+      "state": "FAIL/UNPROVEN",
+      "owner_package": "P24-POWER-INPUT-ARCHITECTURE",
+      "reason": "Current entry cannot carry retained peak screen; transient contract absent."
+    },
+    {
+      "id": "INV-PWR-CONTINUOUS-PATH",
+      "state": "FAIL",
+      "owner_package": "P24-POWER-INPUT-ARCHITECTURE",
+      "reason": "Branch-B physical path absent and protected path not capacity-qualified."
+    },
+    {
+      "id": "INV-PWR-BRIDGE-1V1",
+      "state": "FAIL/UNPROVEN",
+      "owner_package": "P24-POWER-RAIL-CLOSURE",
+      "reason": "Conservative COUT screen misses by 46.56 uF and physical rail is absent."
+    },
+    {
+      "id": "INV-PWR-PROTECTION",
+      "state": "UNPROVEN",
+      "owner_package": "P24-POWER-RAIL-CLOSURE",
+      "reason": "Component ratings do not close system energy/thermal protection."
+    },
+    {
+      "id": "INV-PWR-TRANSIENT-LOADSTEP",
+      "state": "UNPROVEN",
+      "owner_package": "P24-POWER-RAIL-CLOSURE",
+      "reason": "Peak waveform, PDN and load-step acceptance are missing."
+    }
+  ],
+  "evidence_gaps": [
+    "qualified mating harness assembly and derating",
+    "source tolerance/current limit/impedance",
+    "V100/SXM2 peak/load-step and sequencing contract",
+    "fuse I2t/TVS energy/MOSFET SOA",
+    "board copper/return impedance and temperature rise",
+    "exact capacitor effective C and regulator thermal overlay"
+  ],
+  "source_hashes": {
+    "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+    "PiSXMe_RevA_Clean.kicad_sch": "6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1",
+    "PHASE5_POWER_CALCULATIONS.md": "82c34b6a4b2b4878f7e74c7f7873ad68ba4d10ebfa6a7c33d742fa2a632b60e6",
+    "PHASE5_POWER_NETWORK_SPEC.md": "9e29ef646d4af5199a9e745a0fe8d6a140144acc67540c5956b98d0579e446df",
+    "authority-inventory/primary-docs/power/MOLEX_0039300020_AUTHORITY.md": "37d7642bf413385e3980aabb6b63ef758b9d3398a69f500a45b0bf2b861608c3",
+    "authority-inventory/primary-docs/LM74700-Q1.pdf": "e16b3a8c0023201fafa5825436f5f2dd6f885b92b84e65602b3f50d741c58b6f",
+    "authority-inventory/primary-docs/CSD19536KCS.pdf": "046e4114e22acea247ff45074005c749c498012656cd69f2c79922549df0534e",
+    "authority-inventory/primary-docs/TPSM63606.pdf": "e34f4986fb0081f2b37846933a7a6ecd4aab15f6e89e66fb3ab59a2bb2048465",
+    "validation-receipts/power-envelope-authority-20260914/POWER_ENVELOPE_AUTHORITY_V1.1.md": "4a4ef28ce61c24afcfbdf4443d79045778f85e9e88e7b309623c4357f132c5eb",
+    "validation-receipts/power-envelope-authority-20260914/POWER_ENVELOPE_AUTHORITY_V1.1.json": "df908406a20d18607bbe8a5e126e8a11c90712b62d7758e01960ba6c66ca9edd",
+    "validation-receipts/power-return-census-current-a56b4399-20260913/RECEIPT.md": "cabb8d0a93aa9ba2cd6345611413970ae8108167cad93d63b87c201071b1f002"
+  },
+  "result": "CANDIDATE_READY_FOR_ROOT_INVARIANT_SYNTHESIS"
+}
