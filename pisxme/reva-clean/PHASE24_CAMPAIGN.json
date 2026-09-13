@@ -490,8 +490,17 @@
       "dfm",
       "hostile_review_preparation"
     ],
-    "resume_condition": "When product/system authority supplies the signed power-envelope table, return it through Power Authority, issue numeric corridor constraints, then implement and fresh-Light validate.",
+    "resume_condition": "Resolve the two D fields continuous_current and peak_current through product/architecture authority; then return the resulting envelope through Power Authority, issue numeric corridor constraints, and implement/fresh-Light validate.",
     "blocked_reason": "Issue #2 queue runner has remained live without terminal result across repeated bounded turns; all independent acceptance lanes exhausted without promotable changes.",
-    "external_blocker": "Signed, versioned Branch-B product/system power-envelope table required: connector/mating terminal, harness, ambient/airflow, contact temperature rise, continuous/peak load, A/B imbalance/shutdown, PSU surge/load-dump, path resistance/current sharing, load-step magnitude/slew/voltage deviation."
+    "external_blocker": "Only continuous_current and peak_current remain D: the selected one-contact-per-branch J5/J6 topology is below the documented full V100 product envelope. All other fields are A/B/C and are captured in the reassessment receipt.",
+    "power_envelope_reassessment": {
+      "status": "EXTERNAL_BLOCKER_NARROWED",
+      "receipt": "validation-receipts/power-envelope-reassessment-20260914/RECEIPT.md",
+      "json": "validation-receipts/power-envelope-reassessment-20260914/REASSESSMENT.json",
+      "d_fields": ["continuous_current", "peak_current"],
+      "selected_branch_limit": "8 A per circuit under exact Molex 5556/5557/5569 two-circuit 16/18-AWG manufacturer table; 16 A for two branches before derating",
+      "full_product_screen": "300 W V100 SXM2 = 25 A at 12 V before CM5/board load; 330 W allowance = 27.5 A before auxiliary load",
+      "cad_changed": false
+    }
   }
 }

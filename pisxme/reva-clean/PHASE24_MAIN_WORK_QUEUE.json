@@ -215,7 +215,7 @@
         "Issue #2 external-blocker evidence packet",
         "existing private Library and authoritative component/interface sources"
       ],
-      "status": "RUNNING",
+      "status": "WAITING",
       "owner": "sup_power_envelope_reassessment",
       "resources": [
         "Librarian",
@@ -224,8 +224,13 @@
         "Power Authority review",
         "no CAD container until table binds"
       ],
-      "blocking_issue": null,
+      "blocking_issue": "Issue #2 external-blocker narrowed to D fields continuous_current and peak_current",
       "criterion": "Field-by-field A/B/C/D classification; internally reviewed signed/versioned Branch-B envelope for all A/B/C fields; only retain external-blocker for indispensable D fields.",
+      "returned_evidence": [
+        "validation-receipts/power-envelope-reassessment-20260914/RECEIPT.md",
+        "validation-receipts/power-envelope-reassessment-20260914/REASSESSMENT.json"
+      ],
+      "result": "EXTERNAL_BLOCKER_NARROWED: continuous_current and peak_current require product/architecture decision because selected two-contact branches are connector-limited below the full V100 envelope",
       "fields": [
         "connector/harness limits",
         "continuous current",
@@ -255,10 +260,10 @@
   "notes": "Issue #2 investigation is not duplicated here. Queue records ownership, capacity, and returned evidence; Root performs serialized integration only.",
   "census": {
     "READY": 0,
-    "RUNNING": 1,
+    "RUNNING": 0,
     "VALIDATING": 0,
-    "WAITING": 2,
+    "WAITING": 3,
     "DONE": 5,
-    "hard_block_proof": "Reassessment running; external-blocker classification is provisional pending authority synthesis."
+    "hard_block_proof": "Reassessment complete; Issue #2 remains external-blocker only for the two D fields continuous_current and peak_current."
   }
 }

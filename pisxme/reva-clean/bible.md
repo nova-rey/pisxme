@@ -931,3 +931,5 @@ power acceptance rows remain OPEN.
 - 2026-09-13: All independent work packages terminal; queue census records zero READY/RUNNING/VALIDATING and acceptance closure waiting on explicit external/authority inputs.
 
 - 2026-09-14: Reopened Issue #2 external-blocker for Librarian/Researcher/Power Authority field-by-field reassessment.
+
+- 2026-09-14: Power-envelope reassessment narrowed Issue #2 to the product/architecture decisions for continuous and peak current; exact selected Mini-Fit branch limits and all A/B/C field evidence are retained in `validation-receipts/power-envelope-reassessment-20260914/`.
