@@ -23204,14 +23204,6 @@
 		(uuid "b948d6b6-fd7b-4552-84aa-12d206c89d08")
 	)
 	(via
-		(at 12.54 108)
-		(size 0.55)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(net "GATE_B")
-		(uuid "1e3bc3eb-a350-4fff-8eeb-557e90b4d4bd")
-	)
-	(via
 		(at 14 98.5)
 		(size 0.55)
 		(drill 0.3)

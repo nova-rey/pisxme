@@ -746,3 +746,5 @@ integrated ERC acceptance row remains open.
 - 2026-09-13: retained fresh USB3 route/layer census with lengths, vias, layers, and skew proxies; impedance/return closure remains open.
 
 - 2026-09-13: acceptance matrix points SI/layer row to fresh USB3 route census.
+
+- 2026-09-13: integrated bounded GATE_B redundant-via deletion; preserves Q2 PTH connectivity and removes co-located-hole findings.
