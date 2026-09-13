@@ -730,3 +730,5 @@ integrated ERC acceptance row remains open.
 - 2026-09-13: corrected Path-A census source to use AUTO_PEDET J3.69↔J8.2; U14.2 is MODE_IN.
 
 - 2026-09-13: retained regulator/power authority packet; U4/U5 support and protected-12V physical closure remain open with disjoint producer boundary recorded.
+
+- 2026-09-13: synchronized Phase 24 acceptance matrix to corrected Path-A, ERC, regulator-authority, provenance, and hostile-review receipts.
