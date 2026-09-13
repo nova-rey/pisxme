@@ -16,6 +16,7 @@ The following sources were fetched or resolved again on 2026-09-13:
 | `amphenol-74221101lf-product` | Amphenol/FCI `74221-101LF` product page, current page retrieved 2026-09-13 | manufacturer product authority, Tier 1 | URL and extracted facts only |
 | `amphenol-74221-drawing-w` | Amphenol/FCI drawing `74221`, Rev W, Released, EC `ELX-V-40495-1`, approval 2021-04-13 | manufacturer mechanical authority, Tier 1 | URL and extracted facts only; direct CDN capture remains HTTP 403 |
 | `cn108280004b` | CN108280004B, priority 2018-01-22, grant/publication 2021-10-29 | public patent corroboration, Tier 2 | citation and extracted facts only |
+| `3890p-sxm2-to-pcie-riser-85b0e24` | `3890p/SXM2-to-PCIE-Riser-card`, `HEAD` `85b0e248923ec4114ff464c2400e7cb6de5af40c`, latest commit 2025-02-10 | unverified public implementation, Tier 4 | metadata and hashes only; Altium PCBdoc files not copied |
 
 The repository's actual retained implementation-file hashes are recorded in
 `Library/provenance/sources.json`; no upstream file is copied here.
@@ -23,6 +24,17 @@ The repository's actual retained implementation-file hashes are recorded in
 Live repository checks returned Benchoff `HEAD=main=3173b02c...` and Xiaoyu
 `HEAD=main=v1.0.0=c05541e...`. The Xiaoyu repository tree contains only
 `README.md`, so its title/description is not independent contact evidence.
+
+A broader identifier search also found `3890p/SXM2-to-PCIE-Riser-card`. Its
+README explicitly calls the project unverified. The 400-pad connector record
+in `4090ovo(003).pcbdoc` was parsed as a separate public implementation
+signal source: 130 `+12V`, 168 `GND`, 5 `+5V`, 16 unassigned, and the rest
+signal/auxiliary nets. It disagrees with the Benchoff contact map at 65
+contacts, including A2/A3, E7/F7, E18, multiple PCIe lanes, J7/J39, and
+K18/K19. The file names a `84740-002LF` plug and does not establish the
+orientation/side transformation or hardware provenance needed to resolve the
+differences. It is retained as a conflicting, low-confidence warning and
+cannot corroborate or override the Benchoff map.
 
 ## Mechanical correspondence
 
@@ -75,7 +87,12 @@ identity, 400-position 10×40 geometry, 1.27-mm pitch, 4-mm receptacle, and
 patent independently corroborates an SXM2 test-board use of FCI 74221-101LF
 and a PCIe/NVLink test topology, but publishes no contact map. Xiaoyu provides
 no usable second dataset at its pinned revision. No contact-level conflict was
-established; the absence of a second map is a limitation, not corroboration.
+established between the selected Benchoff map and the manufacturer/patent
+records. The 3890p implementation is an explicit low-confidence conflicting
+dataset, so the overall evidence set contains unresolved conflicts outside
+the bounded selected x1/power contract. The absence of a documented connector
+orientation and source hardware prevents treating those conflicts as a valid
+reassignment.
 
 ## Authority disposition
 

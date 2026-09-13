@@ -121,6 +121,32 @@
       "verification_note": "git ls-remote on 2026-09-12 returned main/HEAD/tag v1.0.0 at the pinned commit; git ls-tree showed README.md only."
     },
     {
+      "id": "3890p-sxm2-to-pcie-riser-85b0e24",
+      "title": "SXM2-to-PCIE-Riser-card",
+      "publisher": "3890p / GitHub",
+      "url": "https://github.com/3890p/SXM2-to-PCIE-Riser-card",
+      "revision": "default branch HEAD at 85b0e248923ec4114ff464c2400e7cb6de5af40c; latest commit 2025-02-10",
+      "retrieved": "2026-09-13",
+      "tier": 4,
+      "evidence_class": "public unverified implementation; conflicting contact evidence",
+      "observed_files": [
+        "4090ovo(003).pcbdoc",
+        "ovo.pcbdoc",
+        "oxo.pcbdoc",
+        "README.md"
+      ],
+      "file_sha256": {
+        "4090ovo(003).pcbdoc": "5789df24d9ef6b4252f4571aa6116c04e3c41f3d9886f015f4a234dc3977a097",
+        "ovo.pcbdoc": "5ad9692c79d56a2238eac32f974b597a6273e59a9b55fc2fca76be75c6de6810",
+        "oxo.pcbdoc": "d307a3641c860f7bf4a21031276524b055241d27497093c281d64e479047317a",
+        "README.md": "94b057d41d8a83f9864b1437b9ccfea2c73344f4ce79b2cffbe41eca331ba4eb"
+      },
+      "status": "insufficient-and-conflicting",
+      "finding": "4090ovo(003).pcbdoc contains a 400-pad 84740-002LF connector component with 130 +12V and 168 GND assignments, but its signal/auxiliary assignments conflict with the Benchoff map at 65 contacts. The README explicitly calls the project unverified. Preserve as a conflict record; do not use it as production net authority.",
+      "license_disposition": "metadata and extracted facts only; no Altium/PCBdoc files copied into the private Library",
+      "verification_note": "Fetched and parsed on 2026-09-13. Component 48 is pattern CONN-SMD_400P-P1.27_84740-002LF; component 40 is a separate SXM2 module/mechanical component. Connector-side convention and source hardware are not documented sufficiently to resolve the conflicts."
+    },
+    {
       "id": "amphenol-74221101lf-product",
       "title": "74221-101LF MEG-ARRAY product page",
       "publisher": "Amphenol Communications Solutions / FCI",

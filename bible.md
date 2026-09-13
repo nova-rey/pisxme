@@ -5571,3 +5571,5 @@ better support-placement reference; Path A and production CAD unchanged.
 - Re-resolved the named Benchoff, Xiaoyu, Amphenol, and CN108280004B sources and added the bounded Librarian refresh at `Library/briefs/sxm2-j1-refresh-20260913.md`.
 - Parsed the current integrated J1 footprint against Benchoff's pinned 74221 footprint: 400/400 identifiers, zero coordinate mismatches, identity transform. Current PCB evidence is 400 physical pads, 307 named nets, and 93 unassigned pads; the conflicting “393 identifiers” wording is preserved as an evidence correction.
 - Confirmed the existing J1 authority disposition: 130 `12V_PROTECTED`, 170 `POWER_GND`, selected x1 PCIe/REFCLK/PERST contacts, and unknown/NC contacts retained. No public CAD correction is authorized by this evidence refresh.
+
+- Broadened the search to `3890p/SXM2-to-PCIE-Riser-card` at `85b0e248923ec4114ff464c2400e7cb6de5af40c`. Its unverified Altium design provides a conflicting 400-pad connector record at 65 contacts; the source is indexed as low-confidence conflicting evidence and does not override the selected Benchoff contract.
