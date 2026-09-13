@@ -435,3 +435,12 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Fresh Light validation of integrated source head `8a8dde37` reproduced 349 ERC findings with unchanged native net semantics; campaign current candidate is now this integrated source/PCB lineage head.
 
 - 2026-09-13: Rebound the acceptance matrix to integrated head `8a8dde37`; ERC evidence now reports 349 findings and DRC evidence remains the exact-head 312/499 result. Both rows remain OPEN.
+
+## 2026-09-13 — Phase 24 project-library context correction
+
+A committed-base Light probe at `8a8dde37` added the qualified KiCad system
+`Device.kicad_sym` entry to the project `sym-lib-table`. Fresh ERC changed from
+349 to 296 findings with zero errors, removing all 53 missing-Device library
+findings while leaving the schematic and PCB untouched. The probe netlist and
+raw ERC report are retained under `validation-receipts/`; physical repair and
+integrated acceptance remain open.
