@@ -423,3 +423,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Corrected the campaign manifest's stale DFM count to the authoritative current-head Light result, 312 violations / 499 unconnected; residual DFM classes and mechanical evidence remain open.
 
 - 2026-09-13: Inspected current-head project/rule context and recorded hashes for the selected schematic, PCB, sidecar, and `.kicad_dru`. No explicit exclusions were found in the sidecar; hostile-review ignored checker classes remain open and require exact-head fresh validation.
+
+- 2026-09-13: Reproduced exact-head `17dd81d2` in fresh Light with explicit violation exit handling: DRC 312/499 (`DRC_RC=5`), ERC 351 findings, and native netlist export retained. KiCad reported five ignored DRC checks; these remain open acceptance gaps.

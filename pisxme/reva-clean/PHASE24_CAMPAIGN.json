@@ -82,8 +82,9 @@
       "shorting_items": 0,
       "tool": "KiCad 10.0.6",
       "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
-      "receipt": "validation-receipts/hs-rule-context-producer-13d852ae/RECEIPT.md",
-      "raw": "validation-receipts/dfm-c7-c25-integrated-final-17dd81d2/integrated-drc.json"
+      "receipt": "validation-receipts/exact-head-fresh-light-17dd81d2-20260913/RECEIPT.md",
+      "raw": "validation-receipts/exact-head-fresh-light-17dd81d2-20260913/drc.json",
+      "ignored_checks": ["missing_courtyard", "track_not_centered_on_via", "tuning_profile_track_geometries", "footprint_filters_mismatch", "footprint_type_mismatch"]
     },
     "pi_storage_recheck": {
       "base_commit": "76873ea8",
@@ -189,6 +190,7 @@
     "patha_storage_corrected_rejected": "validation-receipts/patha-storage-corrected-rejected-20260913/RECEIPT.md",
     "project_library_resolver_rejected": "validation-receipts/project-library-resolver-rejected-20260913/RECEIPT.md",
     "current_head_rule_context_inspection": "validation-receipts/current-head-rule-context-inspection-20260913/RECEIPT.md",
+    "exact_head_fresh_light": "validation-receipts/exact-head-fresh-light-17dd81d2-20260913/RECEIPT.md",
     "clearance_dfm_probe": {
       "base_commit": "1ea6671211b884e710789fd37f2f8d5186f72a57",
       "receipt": "validation-receipts/clearance-dfm-probe-20260912/RECEIPT.md",
