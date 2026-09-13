@@ -722,3 +722,5 @@ integrated ERC acceptance row remains open.
 - 2026-09-13: Unblocker classified bounded MPA producer failure as implementation-method; corrected stale AUTO_PEDET U14.2 endpoint (U14.2 is MODE_IN; AUTO_PEDET is J3.69/J8.2).
 
 - 2026-09-13: retained exact-pad KiCad 10.0.6 retry as rejected (760 DRC, 499 unconnected, 22 shorts); scoped connectivity does not override native legality.
+
+- 2026-09-13: native single-branch discriminating experiment produced no route artifact; runtime capability insufficient, not physical impossibility.
