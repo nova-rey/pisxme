@@ -1,0 +1,168 @@
+{
+  "decision_id": "PISXME-REV-A-POWER-ENVELOPE-001",
+  "candidate_version": "2.1.0-candidate",
+  "base_source_sha": "90420b83",
+  "status": "CANDIDATE_READY_FOR_POWER_AUTHORITY_SIGNATURE",
+  "cad_modified": false,
+  "scope": "source/contact/harness/protection/distribution authority; no CAD or routing",
+  "supersedes": {
+    "prior_version": "1.1.0",
+    "fields": [
+      "continuous_current",
+      "peak_current",
+      "incompatible_two_connector_implementation"
+    ],
+    "preserve_prior_as_provenance": true
+  },
+  "product_boundary": {
+    "v100_sustained_w": 300.0,
+    "design_peak_w": 330.0,
+    "low_voltage_load_w": 22.7,
+    "efficiency_screen": 0.9,
+    "input_nominal_v": 12.0,
+    "input_min_v": 11.4,
+    "input_max_v": 12.6,
+    "input_current_a": {
+      "sustained_nominal": 29.87962963,
+      "peak_nominal": 32.65740741,
+      "sustained_low_voltage": 31.45224172,
+      "peak_low_voltage": 34.37621832
+    },
+    "protected_bus_min_v": {
+      "sustained": 11.15,
+      "peak": 11.05
+    },
+    "protected_bus_max_v": {
+      "sustained": 12.6,
+      "peak": 12.6
+    },
+    "source_min_v": 11.4
+  },
+  "proposed_input_architecture": {
+    "circuits": 6,
+    "preferred_connector": "6 x Molex 0039300020/39-30-0020 5569 two-position right-angle headers; each header is one 12-V/return loop",
+    "alternative": "mechanically equivalent six-circuit assembly only after Package Authority qualification",
+    "connector_table_limit_a_per_circuit": 8.0,
+    "derating_factor": 0.8,
+    "hard_branch_limit_a": 6.4,
+    "normal_sustained_branch_target_a": 5.8,
+    "derated_total_capacity_a": 38.4,
+    "capacity_margin_at_peak_low_voltage_a": 4.02378168,
+    "capacity_margin_at_peak_low_voltage_percent": 11.713,
+    "harness_wire_minimum": "16 AWG per circuit",
+    "harness_loop_resistance_max_ohm": 0.02,
+    "source_continuous_a": 40.0,
+    "source_peak_a": 45.0,
+    "source_peak_interval_ms": 100.0,
+    "protected_bus_drop_max_v": {
+      "sustained": 0.25,
+      "peak": 0.35
+    },
+    "connector_housings": 6,
+    "dc_power_loops": 6,
+    "return_loops": 6,
+    "connector_specification": "Molex PS-5556-004-001 Rev B1 (exact 5569 header family); conservative 8 A/circuit screen retained",
+    "connector_specification_url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/555/5556/PS-5556-004-001.pdf",
+    "connector_specification_hash": null,
+    "harness_resistance_basis": "maximum complete harness loop at declared length, 16 AWG minimum, specified ambient/temperature rise; exact length and thermal qualification remain Package Authority work",
+    "drop_budget_v": {
+      "harness_loop": 0.1,
+      "connector_contacts": 0.05,
+      "branch_protection_fet": 0.05,
+      "pcb_branch": 0.05,
+      "common_bus": 0.1,
+      "total_sustained_max": 0.25,
+      "total_peak_max": 0.35
+    },
+    "source_requirement_class": "C/D internal PiSXMe interface requirement pending source/procurement authority"
+  },
+  "branch_policy": {
+    "passive_sharing_allowed": false,
+    "balance_spread_max_fraction_of_mean": 0.2,
+    "startup_settle_ms": 100.0,
+    "fault_action": "deassert V100 enable, hold reset/inhibit, latch until controlled restart",
+    "single_branch_full_power_tolerance": false,
+    "faults": [
+      "overcurrent",
+      "open_branch",
+      "overtemperature",
+      "reverse_current",
+      "power_good_loss"
+    ],
+    "topology_note": "Six physical loops; no passive sharing; each loop independently current-limited and fault isolated."
+  },
+  "transient_policy": {
+    "peak_step_from_w": 300.0,
+    "peak_step_to_w": 330.0,
+    "bounded_peak_duration_ms": 100.0,
+    "delta_current_nominal_a": 2.77777778,
+    "delta_current_low_voltage_a": 2.92397661,
+    "steady_input_window_v": [
+      11.4,
+      12.6
+    ],
+    "recovery_time_max_ms": 1.0,
+    "evidence_required": [
+      "harness/package inductance",
+      "PDN ESR/ESL over bias and temperature",
+      "converter control response",
+      "return impedance",
+      "source transient waveform or conservative system screen"
+    ],
+    "carrier_screen_class": "D",
+    "v100_endpoint_waveform_class": "F",
+    "protected_bus_window_v": {
+      "sustained": [
+        11.15,
+        12.6
+      ],
+      "peak": [
+        11.05,
+        12.6
+      ]
+    }
+  },
+  "corridor_inputs": {
+    "branch_current_limit_a": 6.4,
+    "branch_count": 6,
+    "common_bus_current_limit_a": 38.4,
+    "return_count": 6,
+    "preserve_high_speed_corridors": true,
+    "no_passive_merge_assumption": true,
+    "no_synthetic_connectivity": true,
+    "exact_route_layers_and_vias": "deferred to Package/Power/MPA implementation authority"
+  },
+  "authority_classes": {
+    "product_envelope": "C",
+    "connector_limit": "B",
+    "six_loop_topology": "D",
+    "derating_and_drop_budgets": "D",
+    "fault_policy": "D",
+    "source_capability": "C",
+    "carrier_transient_screen": "D",
+    "v100_endpoint_waveform": "F"
+  },
+  "required_follow_up": [
+    "Power Authority signature/version acceptance",
+    "Package Authority exact mating terminal/wire/crimp/length/thermal qualification and source PDF hash",
+    "MPA placement/corridor decision",
+    "isolated producer and serialized integration",
+    "targeted native connectivity/DRC and fresh Light validation"
+  ],
+  "sources": [
+    "PROJECT_INVARIANTS.json at c06876d2bb3c244d29ad04e883a253eefd35c265",
+    "validation-receipts/power-envelope-authority-20260914/POWER_ENVELOPE_AUTHORITY_V1.1.json",
+    "authority-inventory/primary-docs/power/MOLEX_0039300020_AUTHORITY.md",
+    "PHASE5_POWER_CALCULATIONS.md",
+    "PHASE5_POWER_NETWORK_SPEC.md",
+    "validation-receipts/power-return-census-current-a56b4399-20260913/RECEIPT.md"
+  ],
+  "signature": null,
+  "correction_basis": [
+    "Power Authority review: six actual power/return loops",
+    "Molex PS-5556-004-001 Rev B1 applies to 5569 header",
+    "source/bus voltage windows are separated",
+    "drop budget partitions harness/connector/protection/PCB/common bus",
+    "authority classes normalized to single primary class"
+  ]
+}

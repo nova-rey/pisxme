@@ -969,3 +969,7 @@ Power Authority conditionally signed the corrected six-loop numerical architectu
 ## 2026-09-14 — Connector qualification evidence parked
 
 The six-loop connector/harness qualification packet records exact 5569/5556 parts, material, current and contact-resistance screens, and every remaining assembly qualification field. It is scoped evidence only; HPQ-dependent integrated routing remains waiting and no CAD was changed.
+
+## 2026-09-14 — Power candidate supersession record
+
+The V2.1 conditional candidate is retained as superseded provenance under the corrected V2.2 architecture; no routing or source CAD was derived from it.
