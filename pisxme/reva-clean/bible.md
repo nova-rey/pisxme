@@ -503,7 +503,7 @@ no shorts or collateral family changes. Phase 24 remains open.
 
 ## 2026-09-13 — Phase 24 sixth duplicate-via integration validated
 
-Canonical head `$(git rev-parse --short HEAD)` retains the sixth exact duplicate
+Canonical head `6ef19b9b` retains the sixth exact duplicate
 `POWER_GND` via removal. Fresh Light validation reports ERC `296 findings / 0
 errors` and DRC `306 violations / 499 unconnected`; only duplicate-hole
 findings reduced, with no shorts or collateral family changes. Phase 24 remains
