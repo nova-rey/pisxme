@@ -39,8 +39,8 @@
       "id": "schematic_pad_reference_coverage",
       "status": "OPEN",
       "requirement": "bidirectional coverage including exclusion/alias audit",
-      "evidence": "validation-receipts/baseline-d0ef22b6; authority-inventory/primary-docs/sxm2/SXM2_J1_AUTHORITY_REASSESSMENT_20260912.md; validation-receipts/acceptance-parity-20260912/RECEIPT.md",
-      "current": "fresh native netlist export RC 0 and schematic-parity DRC retained; full bidirectional coverage/exclusion audit remains OPEN"
+      "evidence": "validation-receipts/fresh-parity-98137ff5/RECEIPT.md",
+      "current": "Fresh kicadxml export RC 0; parity PASS (814 nodes / 1262 pads / 0 mismatches); exclusion coverage documented; full bidirectional coverage remains OPEN"
     },
     {
       "id": "library_pin_mapping",
