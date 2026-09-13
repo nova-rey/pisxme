@@ -925,3 +925,5 @@ routes and local PGND thermal-via arrays remain open; no placement, route,
 schematic, library, or rule changes were made. Storage-dependent route closure
 remains parked on Hard Problem Issue #2, and the SI, regulator-overlay, and
 power acceptance rows remain OPEN.
+
+- 2026-09-13: P24-SI-POWER-REFERENCE closed with current-head SI and regulator-overlay evidence; closure rows remain open.
