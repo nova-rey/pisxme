@@ -557,3 +557,11 @@ Campaign metadata is rebound to current head `48134169`. The head contains
 only the fresh parity receipt and acceptance bookkeeping after validated CAD
 head `522b1bff`; schematic, PCB, rules, and libraries are unchanged. Phase 24
 acceptance remains open.
+
+## 2026-09-13 — Phase 24 current power/return census
+
+Read-only native serialization census confirms `12V_IN_B` and
+`FUSED_12V_B` each have seven pads and zero segments/vias, while
+`12V_PROTECTED` has six segments and one via. Raw JSON and hashes are retained
+under `validation-receipts/power-return-census-20260913/`; power acceptance
+remains open.
