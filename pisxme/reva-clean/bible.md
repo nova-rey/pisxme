@@ -850,3 +850,7 @@ Recorded the current six-layer contract and copper distribution at `3709bbea`: 3
 ## 2026-09-13 — Compact Phase 24 workstream record
 
 Consolidated all acceptance rows into `validation-receipts/phase24-workstream-record-2e5b5290-20260913/WORKSTREAM_RECORD.json`, with dependency classification and latest evidence pointers. The record keeps MPA-dependent geometry distinct from independent or partial lanes and preserves the Phase 25 freeze gate.
+
+## 2026-09-13 — Mechanical envelope census retained
+
+Fresh native `pcbnew` inspection at `0b65731e` recorded the board edge envelope and immutable connector/M.2 anchor bounding boxes and orientations. Raw geometry is retained under `validation-receipts/mechanics-envelope-current-0b65731e-20260913/`; fit and service-access acceptance remain open.

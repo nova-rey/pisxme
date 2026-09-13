@@ -1,0 +1,12 @@
+board_edges_mm -0.05 -0.05 300.05 180.05
+J1 pos 150.0 90.0 bbox 116.475 76.205 183.525 103.795 orient 0.0 layer F.Cu
+J3 pos 220.0 165.0 bbox 208.825 157.5214 250.525 170.525 orient 0.0 layer F.Cu
+J5 pos 12.0 25.0 bbox 10.45 16.15 14.961429 31.7 orient 0.0 layer F.Cu
+J6 pos 12.0 45.0 bbox 10.45 36.15 14.961429 51.7 orient 0.0 layer F.Cu
+J7 pos 35.0 130.0 bbox 31.44 78.44 71.56 133.56 orient 0.0 layer B.Cu
+J8 pos 245.0 150.0 bbox 242.88 146.3214 247.12 152.12 orient 0.0 layer F.Cu
+MECH_M2_2280 pos 260.0 160.0 bbox 219.95 148.95 300.05 171.05 orient 0.0 layer B.Cu
+U1 pos 20.0 75.0 bbox 18.275 71.8714 21.725 76.725 orient 0.0 layer F.Cu
+U7 pos 96.0 124.0 bbox 91.6 119.6 100.4 130.1786 orient 180.0 layer F.Cu
+U13 pos 180.0 135.0 bbox 177.875 128.9214 182.125 139.8 orient 0.0 layer F.Cu
+U14 pos 210.0 150.0 bbox 208.275 146.9214 211.725 151.425 orient 0.0 layer F.Cu
