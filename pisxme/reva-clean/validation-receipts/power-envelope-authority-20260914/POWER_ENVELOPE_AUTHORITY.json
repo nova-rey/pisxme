@@ -1,0 +1,107 @@
+{
+  "decision_id": "PISXME-REV-A-POWER-ENVELOPE-001",
+  "version": "1.0.0",
+  "decision_date": "2026-09-14",
+  "authority_role": "Power Authority",
+  "review_agent": "/root/power_authority_review_envelope",
+  "scope": "PiSXMe Rev-A selected Path-A implementation, dual 12-V Branch A/B input and protected rail",
+  "cad_modified": false,
+  "external_blocker_supported": false,
+  "d_class_fields": [],
+  "binding_envelope": {
+    "input_nominal_v": 12.0,
+    "v100_design_allowance_w": 250.0,
+    "total_protected_input_max_a": 25.25,
+    "branch_a_max_a": 13.0,
+    "branch_b_max_a": 13.0,
+    "equal_share_target_a": 12.625,
+    "combined_capacity_a": 26.0,
+    "combined_margin_a": 0.75,
+    "combined_margin_percent": 2.9703,
+    "fuse_rating_a_per_branch": 15.0,
+    "loss_of_branch_policy": "inhibit V100 enable and hold reset policy; never continue full envelope through one branch"
+  },
+  "calculation": {
+    "efficiency_factor": 0.9,
+    "v100_input_current_a": 23.14814815,
+    "low_voltage_loads": {
+      "cm5_5v": {"voltage_v": 5.0, "current_a": 3.0, "power_w": 15.0},
+      "bridge_3v3": {"voltage_v": 3.3, "current_a": 2.0, "power_w": 6.6},
+      "bridge_1v1": {"voltage_v": 1.1, "current_a": 1.0, "power_w": 1.1}
+    },
+    "low_voltage_power_w": 22.7,
+    "low_voltage_input_current_a": 2.10185185,
+    "total_input_current_a": 25.25,
+    "branch_imbalance_max_a_at_full_envelope": 0.75,
+    "branch_imbalance_percent_of_equal_share": 5.9406,
+    "fet_loss_w": {
+      "equal_share_12_625_a": 0.4303,
+      "hard_cap_13_a": 0.4563,
+      "unsupported_single_branch_25_25_a": 1.7222
+    },
+    "regulator_current_utilization_percent": {
+      "cm5_5v": 50.0,
+      "bridge_3v3": 33.3333,
+      "bridge_1v1": 16.6667
+    },
+    "one_point_one_v_effective_c_nominal_uF": 316.8,
+    "one_point_one_v_effective_c_with_tolerance_uF": 253.44,
+    "one_point_one_v_vendor_screen_min_uF": 300.0
+  },
+  "field_classification": {
+    "connector_harness_limits": {"class": ["A", "C"], "d": false},
+    "continuous_current": {"class": ["B", "C"], "d": false},
+    "peak_current": {"class": ["C"], "d": false},
+    "branch_imbalance": {"class": ["B", "C"], "d": false},
+    "shutdown_behavior": {"class": ["A", "C"], "d": false},
+    "surge_load_dump_limits": {"class": ["A", "C"], "d": false},
+    "thermal_limits": {"class": ["A", "B", "C"], "d": false},
+    "current_sharing": {"class": ["A", "B", "C"], "d": false},
+    "load_step_requirements": {"class": ["B", "C"], "d": false}
+  },
+  "load_step_requirement": {
+    "total_step_a": 25.25,
+    "branch_corner_a": {"branch_a": 13.0, "branch_b": 12.25},
+    "edge_rate_range_a_per_us": [0.1, 1.0],
+    "plateau_min_ms": 10.0,
+    "protected_entry_voltage_band_v": [11.4, 12.6],
+    "hardware_status": "requirement only; no measured hardware claim"
+  },
+  "legacy_disposition": {
+    "v100_300_w": {
+      "derived_total_input_a": 29.87962963,
+      "equal_branch_a": 14.93981481,
+      "status": "historical product maximum/stress reference; rejected as Rev-A operating envelope"
+    },
+    "preliminary_330_w": {
+      "derived_total_input_a": 32.65740741,
+      "equal_branch_a": 16.3287037,
+      "status": "superseded preliminary budget; rejected as binding requirement"
+    },
+    "preliminary_28_5_a_34_3_a": {
+      "status": "superseded by 25.25-A total and dual-13-A branch limits"
+    }
+  },
+  "known_validation_limits": [
+    "current integrated PCB has zero serialized Branch-B copper/vias",
+    "current integrated PCB has zero BRIDGE_1V1 and BRIDGE_3V3 copper/vias",
+    "current protected-12-V distribution and POWER_GND continuity are open",
+    "1.1-V 16-capacitor population is 253.44 uF at nominal tolerance floor, below 300 uF vendor screen",
+    "V100 transient waveform and exact mating harness are not claimed as externally specified",
+    "no fabricated-hardware, load-step, PDN, thermal, or sequencing result is claimed"
+  ],
+  "inputs": {
+    "private_librarian_brief_sha256": "eabb119fee38a4d4efd97744f85cc31594aa0efac7c38754aa944a4b64558542",
+    "private_researcher_sack_sha256": "e3f8bc9c2e588f38caddc8166f405b399f5a5ff3afff6419c491888984610368",
+    "private_sources_index_sha256": "c88e2ffacac3a3f23b56700a9616eb31f4f22ef12aab544bd1c07e83531bdbff",
+    "phase5_calculations_sha256": "82c34b6a4b2b4878f7e74c7f7873ad68ba4d10ebfa6a7c33d742fa2a632b60e6",
+    "phase5_network_spec_sha256": "9e29ef646d4af5199a9e745a0fe8d6a140144acc67540c5956b98d0579e446df",
+    "integrated_pcb_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+    "integrated_schematic_sha256": "6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1"
+  },
+  "signature": {
+    "method": "role-signed project decision plus SHA-256 artifact manifest",
+    "signer_role": "Power Authority",
+    "requires_new_version_for_change": true
+  }
+}
