@@ -605,3 +605,9 @@ Removing a second short `CM5_5V` dangling segment traded one track-dangling
 finding for one via-dangling finding, leaving DRC unchanged at 302/499. The
 candidate was rejected and raw evidence is retained under
 `validation-receipts/dangling-track2-rejected-20260913/`.
+
+## 2026-09-13 — Phase 24 dangling FUSED_12V_A cleanup rejected
+
+Removing the isolated 5 mm `FUSED_12V_A` dangling segment did not change DRC
+(302/499) or any violation family, so the candidate was rejected. Raw evidence
+is retained under `validation-receipts/dangling-fused12a-rejected-20260913/`.
