@@ -1,0 +1,16 @@
+git status --porcelain
+?? pisxme/reva-clean/validation-receipts/hostile-review-independent-20260913/
+git rev-parse HEAD
+042f3e1932da4b762ca2fc2f45c4cc96386382a9
+git branch --show-current
+reva-clean
+git ls-remote origin refs/heads/reva-clean
+042f3e1932da4b762ca2fc2f45c4cc96386382a9	refs/heads/reva-clean
+git diff-tree --no-commit-id --name-status -r HEAD
+M	pisxme/reva-clean/bible.md
+A	pisxme/reva-clean/validation-receipts/firmware-provenance-independent-20260913/RECEIPT.md
+sha256 canonical inputs
+75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c  pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb
+6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1  pisxme/reva-clean/PiSXMe_RevA_Clean.kicad_sch
+ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356  pisxme/reva-clean/PiSXMe_RevA_Clean.kicad_pro
+38e5c7521d964bfa91ee610dc6b7ca39b767b04b8990e94ea91dfe826d21f6a3  pisxme/reva-clean/PiSXMe_RevA_Clean.kicad_dru

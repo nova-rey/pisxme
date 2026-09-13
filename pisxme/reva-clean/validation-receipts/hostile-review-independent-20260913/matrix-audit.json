@@ -1,0 +1,91 @@
+{
+  "matrix_candidate": "47364e6d",
+  "actual_head": "042f3e1932da4b762ca2fc2f45c4cc96386382a9",
+  "origin_head": "042f3e1932da4b762ca2fc2f45c4cc96386382a9",
+  "candidate_field_is_head": false,
+  "row_count": 13,
+  "status_counts": {
+    "OPEN": 13
+  },
+  "rows": [
+    {
+      "id": "native_erc",
+      "status": "OPEN",
+      "evidence": "validation-receipts/erc-context-737b8191-20260913/RECEIPT.md",
+      "evidence_exists": true
+    },
+    {
+      "id": "native_drc",
+      "status": "OPEN",
+      "evidence": "validation-receipts/gateb-integrated-validation-47364e6d-20260913/RECEIPT.md",
+      "evidence_exists": true
+    },
+    {
+      "id": "physical_opens_shorts",
+      "status": "OPEN",
+      "evidence": "validation-receipts/gateb-integrated-validation-47364e6d-20260913/RECEIPT.md",
+      "evidence_exists": true
+    },
+    {
+      "id": "schematic_pad_reference_coverage",
+      "status": "OPEN",
+      "evidence": "validation-receipts/parity-current-head-20260913/RECEIPT.md",
+      "evidence_exists": true
+    },
+    {
+      "id": "library_pin_mapping",
+      "status": "OPEN",
+      "evidence": "validation-receipts/dfm-mechanics-19a/RECEIPT.json",
+      "evidence_exists": true
+    },
+    {
+      "id": "layers_routes_impedance_return",
+      "status": "OPEN",
+      "evidence": "validation-receipts/si-layer-census-current-head-20260913/RECEIPT.md",
+      "evidence_exists": true
+    },
+    {
+      "id": "power_current_transient_thermal",
+      "status": "OPEN",
+      "evidence": "validation-receipts/fresh-power-audit-2100f0c2/RECEIPT.md",
+      "evidence_exists": true
+    },
+    {
+      "id": "regulator_reference_overlays",
+      "status": "OPEN",
+      "evidence": "validation-receipts/regulator-power-authority-20260913/RECEIPT.md",
+      "evidence_exists": true
+    },
+    {
+      "id": "storage_mode_behavior",
+      "status": "OPEN",
+      "evidence": "validation-receipts/patha-native-storage-census-corrected-20260913/RECEIPT.md",
+      "evidence_exists": true
+    },
+    {
+      "id": "component_firmware_provenance",
+      "status": "OPEN",
+      "evidence": "private Library commit ae9132d6072f1557a709f47c542fe3c6d9baac38",
+      "evidence_exists": null
+    },
+    {
+      "id": "mechanical_3d_assembly_service",
+      "status": "OPEN",
+      "evidence": "validation-receipts/dfm-mechanics-19a/RECEIPT.json",
+      "evidence_exists": true
+    },
+    {
+      "id": "dfm",
+      "status": "OPEN",
+      "evidence": "validation-receipts/gateb-integrated-validation-47364e6d-20260913/RECEIPT.md",
+      "evidence_exists": true
+    },
+    {
+      "id": "hostile_review",
+      "status": "OPEN",
+      "evidence": "validation-receipts/hostile-review-cdd5a381-20260913/RECEIPT.md",
+      "evidence_exists": true
+    }
+  ],
+  "freeze_gate": "Every row must be PASS or have an already-authorized applicable disposition on one exact integrated SHA; Phase25 prohibited while any required row is OPEN."
+}
