@@ -458,3 +458,10 @@ Campaign metadata is rebound to integrated head `350611dd`, which includes the
 qualified Device symbol-library context and fresh Light validation receipt.
 Path A remains the selected storage implementation; Path B production
 integration remains disposed for this campaign.
+
+## 2026-09-13 — Phase 24 exact current-head validation
+
+Fresh isolated Light validation of exact current head `c020b4f9` reports ERC
+`296 findings / 0 errors` and DRC `312 violations / 499 unconnected`. Raw
+outputs and hashes are retained under `validation-receipts/`; no closure claim
+is made.
