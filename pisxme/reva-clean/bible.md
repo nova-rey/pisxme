@@ -433,3 +433,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Integrated the identity-preserving STORAGE bridge USB label-scope candidate from producer base `584b549e`; two local labels became global, with no PCB/topology edits. Fresh producer ERC improved 351 to 349 and native net node sets remained identical.
 
 - 2026-09-13: Fresh Light validation of integrated source head `8a8dde37` reproduced 349 ERC findings with unchanged native net semantics; campaign current candidate is now this integrated source/PCB lineage head.
+
+- 2026-09-13: Rebound the acceptance matrix to integrated head `8a8dde37`; ERC evidence now reports 349 findings and DRC evidence remains the exact-head 312/499 result. Both rows remain OPEN.

@@ -1,6 +1,6 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
-  "candidate": "c8710a84",
+  "candidate": "8a8dde37",
   "toolchain": {
     "kicad": "10.0.6",
     "image": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
@@ -12,16 +12,16 @@
       "id": "native_erc",
       "status": "OPEN",
       "requirement": "0 full-severity errors/findings",
-      "evidence": "validation-receipts/source-erc-integrated-0396/RECEIPT.md",
-      "current": "351 findings / 0 errors"
+      "evidence": "validation-receipts/fresh-after-bridge-labels-8a8dde37/RECEIPT.md",
+      "current": "349 findings / 0 errors"
     },
     {
       "id": "native_drc",
       "status": "OPEN",
       "requirement": "0 unintended violations and 0 unconnected required items",
       "evidence": {
-        "receipt": "validation-receipts/hs-rule-context-producer-13d852ae/RECEIPT.md",
-        "candidate": "c8710a84",
+        "receipt": "validation-receipts/exact-head-fresh-light-17dd81d2-20260913/RECEIPT.md",
+        "candidate": "8a8dde37",
         "violations": 312,
         "unconnected_items": 499,
         "status": "OPEN"
