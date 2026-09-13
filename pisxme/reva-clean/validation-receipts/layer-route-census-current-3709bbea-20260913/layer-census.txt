@@ -1,0 +1,17 @@
+pcb_sha256 75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c
+layer_contract:
+(0 "F.Cu" signal)
+(4 "In1.Cu" signal "In1.GND")
+(6 "In2.Cu" signal "In2.PWR")
+(8 "In3.Cu" signal "In3.PROTECTED_12V")
+(10 "In4.Cu" signal "In4.GND")
+(2 "B.Cu" signal)
+(25 "Edge.Cuts" user)
+segments 329
+F.Cu segments 216
+In1.Cu segments 0
+In2.Cu segments 0
+In3.Cu segments 0
+In4.Cu segments 0
+B.Cu segments 113
+vias 90

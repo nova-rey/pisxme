@@ -842,3 +842,7 @@ Recorded the prescribed one-shot Unblocker invocation for the MPA corridor stall
 ## 2026-09-13 — CAD input integrity confirmed
 
 Verified at documentation head `3709bbea` that the canonical PCB hash remains the recorded integrated baseline `75d2d370...181bf7c`; schematic hash is recorded alongside it. Evidence-only commits have not altered CAD bytes. Manifest retained under `validation-receipts/cad-input-integrity-3709bbea-20260913/`.
+
+## 2026-09-13 — Six-layer route census retained
+
+Recorded the current six-layer contract and copper distribution at `3709bbea`: 329 segments (216 F.Cu, 113 B.Cu), 90 vias, and no inner-layer segments. Raw census is under `validation-receipts/layer-route-census-current-3709bbea-20260913/`; SI and return-path closure remain open.
