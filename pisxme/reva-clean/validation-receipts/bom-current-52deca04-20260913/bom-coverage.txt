@@ -1,0 +1,3 @@
+bom_rows 117 bom_refs 117 pcb_refs 131
+missing_from_bom ['MECH_M2_2280', 'TP1', 'TP10', 'TP11', 'TP12', 'TP13', 'TP2', 'TP3', 'TP4', 'TP5', 'TP6', 'TP7', 'TP8', 'TP9']
+bom_not_on_pcb []

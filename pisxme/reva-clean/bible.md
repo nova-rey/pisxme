@@ -810,3 +810,7 @@ At `0b5340b4`, a fresh qualified Light checkout regenerated the native schematic
 ## 2026-09-13 — Rule-context scope verified and qualified
 
 Fresh Light DRC at `acacc3a9` loaded the approved custom rule file and retained raw context. The XIN/XOUT 0.10-mm exception is net-scoped; a native geometry probe found every such segment inside the localized envelope, with no out-of-region use. This is recorded as a context qualification/correction and does not waive physical DRC defects.
+
+## 2026-09-13 — Current-source BOM coverage confirmed
+
+Fresh Light export at `52deca04` produced 117 BOM references against 131 PCB references, with no BOM-only items. The 14 PCB-only references (`MECH_M2_2280`, `TP1`–`TP13`) are retained as explicit assembly/DFM disposition items under `validation-receipts/bom-current-52deca04-20260913/`.
