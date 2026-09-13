@@ -1,9 +1,9 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
   "schema": "work-package queue v1",
-  "updated": "2026-09-13T20:50:00Z",
+  "updated": "2026-09-13T21:35:00Z",
   "canonical_branch": "reva-clean",
-  "canonical_head": "6e3beed8",
+  "canonical_head": "8df4f1d7",
   "resource_policy": {
     "initial_model_slots": 4,
     "reusable_sessions": 16,
@@ -94,14 +94,19 @@
       "dependencies": [
         "current PCB geometry and fab authority"
       ],
-      "status": "RUNNING",
+      "status": "DONE",
       "owner": "sup_mechanics_dfm",
       "resources": [
         "mechanical/DFM specialists",
         "read-only Light"
       ],
       "blocking_issue": null,
-      "criterion": "Current-head mechanical/DFM receipt with explicit dispositions and release-input gaps; no fabricated PASS."
+      "criterion": "Current-head mechanical/DFM receipt with explicit dispositions and release-input gaps; no fabricated PASS.",
+      "returned_evidence": [
+        "validation-receipts/mechanics-dfm-consolidated-61085fe0-20260913/",
+        "8df4f1d7"
+      ],
+      "result": "DONE_WITH_OPEN_DFM_GAPS"
     },
     {
       "id": "P24-PROVENANCE-REVIEW",
