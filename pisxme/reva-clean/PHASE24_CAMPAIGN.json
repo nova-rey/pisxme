@@ -1,6 +1,6 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
-  "status": "REPAIR_ACTIVE",
+  "status": "REPAIR_ACTIVE_EXTERNAL_INPUT_WAIT",
   "scope": "Phase 24 and Phase 25 only; Phase 26 prohibited",
   "repository": "nova-rey/pisxme",
   "branch": "reva-clean",
@@ -471,13 +471,13 @@
     "url": "https://github.com/nova-rey/codex-config-backup/issues/2",
     "label": "hard-blocker",
     "packet": "8f2311db593eb382",
-    "state": "ADMITTED_WAITING",
+    "state": "EXTERNAL_BLOCKER",
     "waiting_subtree": [
-      "storage",
-      "power",
-      "integrated_drc",
+      "native_drc",
       "physical_opens_shorts",
-      "storage_mode_behavior"
+      "power_current_transient_thermal",
+      "storage_mode_behavior",
+      "layers_routes_impedance_return"
     ],
     "waiting_state": "WAITING_ON #2",
     "independent_work": [
@@ -490,7 +490,8 @@
       "dfm",
       "hostile_review_preparation"
     ],
-    "resume_condition": "When Issue #2 reaches resolution-ready/external-blocker/terminal state, inspect packet; if resolution-ready reconcile base SHA, integrate through MPA/serialized workflow, then fresh Light validate.",
-    "blocked_reason": "Issue #2 queue runner has remained live without terminal result across repeated bounded turns; all independent acceptance lanes exhausted without promotable changes."
+    "resume_condition": "When product/system authority supplies the signed power-envelope table, return it through Power Authority, issue numeric corridor constraints, then implement and fresh-Light validate.",
+    "blocked_reason": "Issue #2 queue runner has remained live without terminal result across repeated bounded turns; all independent acceptance lanes exhausted without promotable changes.",
+    "external_blocker": "Signed, versioned Branch-B product/system power-envelope table required: connector/mating terminal, harness, ambient/airflow, contact temperature rise, continuous/peak load, A/B imbalance/shutdown, PSU surge/load-dump, path resistance/current sharing, load-step magnitude/slew/voltage deviation."
   }
 }

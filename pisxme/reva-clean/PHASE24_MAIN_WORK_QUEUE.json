@@ -1,9 +1,9 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
   "schema": "work-package queue v1",
-  "updated": "2026-09-13T19:10:00Z",
+  "updated": "2026-09-13T19:45:00Z",
   "canonical_branch": "reva-clean",
-  "canonical_head": "d61fca8f",
+  "canonical_head": "61085fe0",
   "resource_policy": {
     "initial_model_slots": 4,
     "reusable_sessions": 16,
@@ -130,8 +130,14 @@
         "MPA",
         "PI/storage specialists"
       ],
-      "blocking_issue": "WAITING_ON #2",
-      "criterion": "One reconciled integrated candidate with zero required opens/shorts and required DRC/power closure after fresh Light validation."
+      "blocking_issue": "Issue #2 external-blocker",
+      "criterion": "One reconciled integrated candidate with zero required opens/shorts and required DRC/power closure after fresh Light validation.",
+      "completion_criterion": "Signed versioned Branch-B power-envelope table, then MPA/PI numeric corridor plan, serialized candidate integration, and fresh Light validation.",
+      "returned_evidence": [
+        "Issue #2 result packet: external-blocker",
+        "taskforce-output/ISSUE2_SOL_AUTHORITY_EVIDENCE.md",
+        "No full integrable candidate; AUTO_PEDET partial only"
+      ]
     },
     {
       "id": "P24-ACCEPTANCE-CLOSURE",
