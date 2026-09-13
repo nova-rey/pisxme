@@ -1,9 +1,9 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
   "schema": "work-package queue v1",
-  "updated": "2026-09-13T19:00:00Z",
+  "updated": "2026-09-13T19:10:00Z",
   "canonical_branch": "reva-clean",
-  "canonical_head": "db3d9cfa588536b453852bc3247f4c1ee227481f",
+  "canonical_head": "d61fca8f",
   "resource_policy": {
     "initial_model_slots": 4,
     "reusable_sessions": 16,
@@ -23,8 +23,8 @@
       "dependencies": [
         "current canonical schematic/netlist"
       ],
-      "status": "READY",
-      "owner": null,
+      "status": "RUNNING",
+      "owner": "sup_erc_coverage",
       "resources": [
         "model specialist",
         "read-only Light if needed"
@@ -41,8 +41,8 @@
       "dependencies": [
         "P24-ERC-COVERAGE evidence context"
       ],
-      "status": "READY",
-      "owner": null,
+      "status": "RUNNING",
+      "owner": "sup_library_package",
       "resources": [
         "footprint/library authority",
         "private Library"
@@ -60,8 +60,8 @@
       "dependencies": [
         "selected PCB/rules context"
       ],
-      "status": "READY",
-      "owner": null,
+      "status": "RUNNING",
+      "owner": "sup_si_power_reference",
       "resources": [
         "SI/PI specialists",
         "Librarian",
@@ -80,8 +80,8 @@
       "dependencies": [
         "current PCB geometry and fab authority"
       ],
-      "status": "READY",
-      "owner": null,
+      "status": "RUNNING",
+      "owner": "sup_mechanics_dfm",
       "resources": [
         "mechanical/DFM specialists",
         "read-only Light"
