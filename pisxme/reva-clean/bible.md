@@ -451,3 +451,10 @@ Fresh isolated Light validation of `73c348ef` reproduced the context result:
 ERC `296 findings / 0 errors`; DRC `312 violations / 499 unconnected`; native
 netlist export completed. The acceptance manifest now names this exact head and
 receipt; all physical and integrated closure rows remain open.
+
+## 2026-09-13 — Phase 24 campaign head rebind
+
+Campaign metadata is rebound to integrated head `350611dd`, which includes the
+qualified Device symbol-library context and fresh Light validation receipt.
+Path A remains the selected storage implementation; Path B production
+integration remains disposed for this campaign.
