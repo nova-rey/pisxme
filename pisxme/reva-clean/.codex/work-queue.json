@@ -455,7 +455,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-ARCHITECTURE",
       "notes": "Original HPQ external-envelope dependency superseded by internal product/Power Authority evidence; wait only on exact assembly qualification and MPA plan.",
-      "owner": null,
+      "owner": "sup_power_storage_producer",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -473,17 +473,17 @@
         }
       ],
       "scope": "Power input/protection architecture for product envelope",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "root-power-storage-producer-20260914"
+      ],
+      "status": "RUNNING",
       "title": "Power input/protection architecture for product envelope",
-      "updated_at": "2026-09-13T23:36:34.717632Z",
+      "updated_at": "2026-09-13T23:46:29.783016Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "package:P24-MPA-CORRIDOR-AUTHORITY"
-      ],
+      "waiting_on": [],
       "workstream": "phase24"
     },
     {
@@ -708,7 +708,13 @@
       "attempt_state": {},
       "base_sha": "4e38ecf3",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "4e38ecf3",
+        "returned_at": "2026-09-13T23:44:40.171083Z",
+        "returned_by": "sup_mpa_corridor_authority",
+        "sha": "4e38ecf3"
+      },
       "completion_criterion": "MPA plan identifies changed/fixed components, six power loops, reserved corridors, layers, protected copper and rationale tied to congestion evidence.",
       "created_at": "2026-09-14T02:00:00Z",
       "dependencies": [
@@ -723,11 +729,12 @@
       "evidence_refs": [
         "PROJECT_INVARIANTS.json",
         "validation-receipts/power-envelope-authority-redesign-20260914/POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json",
-        "https://github.com/nova-rey/codex-config-backup/issues/2"
+        "https://github.com/nova-rey/codex-config-backup/issues/2",
+        "validation-receipts/mpa-binding-six-loop-reconciliation-20260914/MPA_DECISION.json"
       ],
       "id": "P24-MPA-CORRIDOR-AUTHORITY",
       "notes": "HPQ investigation remains retained evidence; no duplicate Task Force route search.",
-      "owner": "sup_mpa_corridor_authority",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -746,12 +753,10 @@
         }
       ],
       "scope": "One current-HEAD binding placement/corridor plan for six-loop power and Path-A storage, preserving anchors and validated high-speed corridors.",
-      "session_ids": [
-        "root-mpa-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Binding six-loop placement and corridor plan",
-      "updated_at": "2026-09-13T23:36:54.052064Z",
+      "updated_at": "2026-09-13T23:44:40.250102Z",
       "validation": {
         "required": [],
         "results": {}
@@ -772,5 +777,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-13T23:36:54.052164Z"
+  "updated_at": "2026-09-13T23:46:29.783190Z"
 }

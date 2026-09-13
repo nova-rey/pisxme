@@ -977,3 +977,7 @@ The V2.1 conditional candidate is retained as superseded provenance under the co
 ## 2026-09-14 — HPQ blocker narrowed to internal authority path
 
 Unblocker reassessment determined the original Issue #2 external power-envelope premise is resolved by the internal Class-C product decision and conditional V2.2 Power Authority architecture. The remaining path is exact assembly qualification followed by one binding Macro Placement Authority corridor plan; the HPQ issue remains open evidence and is not marked resolution-ready.
+
+## 2026-09-14 — Foundational invariant gate and binding corridor handoff
+
+The Rev A foundational invariant audit is now the governing contract: 300 W sustained and 330 W peak V100 product requirements are Class-C invariants, while the legacy two-branch ~192 W input implementation is superseded where contradictory. PASS/FAIL/UNPROVEN compliance is recorded in PROJECT_INVARIANTS and INVARIANT_COMPLIANCE_MATRIX. A current-HEAD six-loop MPA corridor decision is retained as the sole producer basis; dependent power/storage implementation is RUNNING in the main queue, with no speculative route variants authorized.
