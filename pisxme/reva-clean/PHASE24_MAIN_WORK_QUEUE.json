@@ -1,9 +1,9 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
   "schema": "work-package queue v1",
-  "updated": "2026-09-13T20:20:00Z",
+  "updated": "2026-09-13T20:50:00Z",
   "canonical_branch": "reva-clean",
-  "canonical_head": "d44a2a37",
+  "canonical_head": "6e3beed8",
   "resource_policy": {
     "initial_model_slots": 4,
     "reusable_sessions": 16,
@@ -50,14 +50,19 @@
       "dependencies": [
         "P24-ERC-COVERAGE evidence context"
       ],
-      "status": "RUNNING",
+      "status": "DONE",
       "owner": "sup_library_package",
       "resources": [
         "footprint/library authority",
         "private Library"
       ],
       "blocking_issue": null,
-      "criterion": "Current-head project-library isolation and non-J1 package/pin mapping receipt; J1 authority preserved."
+      "criterion": "Current-head project-library isolation and non-J1 package/pin mapping receipt; J1 authority preserved.",
+      "returned_evidence": [
+        "validation-receipts/library-package-current-head-20260913/",
+        "6e3beed8"
+      ],
+      "result": "DONE_WITH_OPEN_CONTEXT_GAPS"
     },
     {
       "id": "P24-SI-POWER-REFERENCE",
