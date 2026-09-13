@@ -411,3 +411,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Retained no-net pad type census: J1 has 93 SMD no-net/unknown contacts; U7 has 24 no-net SMD pads; remaining no-net pads are key/mechanical, NPTH, thermal, or NC families. No assignments were invented; authority disposition remains open.
 
 - 2026-09-13: Reconciled J1's 93 no-net contacts against the approved SXM2 authority: 60 intentionally unassigned non-product PCIe contacts, 31 source-declared NC/project-unknown contacts, and K18/K19 auxiliary/protection unknowns. The 400-pad arithmetic closes the J1 bidirectional scope without inventing nets; integrated acceptance remains open.
+
+- 2026-09-13: Performed bounded inspection of `/home/nyx/PiSXMe-succession-archive-20260912`; retained patch and 8.2 GiB untracked tar checksums in a receipt. Archive remains outside Git and is neither restored nor treated as design authority.

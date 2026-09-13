@@ -328,6 +328,7 @@
     "pad_parity_bidirectional": "validation-receipts/pad-parity-bidirectional-20260912/RECEIPT.md",
     "pad_surplus_classification": "validation-receipts/pad-surplus-classification-139e2100/RECEIPT.md",
     "pad_no_net_types": "validation-receipts/pad-no-net-types-139e2100/RECEIPT.md",
+    "archive_bounded_inspection": "validation-receipts/succession-archive-bounded-inspection-20260912/RECEIPT.md",
     "j1_no_net_authority_reconciliation": "validation-receipts/j1-no-net-authority-reconciliation-20260912/RECEIPT.md"
   },
   "blockers": [],
