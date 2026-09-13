@@ -870,3 +870,7 @@ Recorded scoped six-layer role closure and the storage USB3 netclass/geometry mi
 ## 2026-09-13 — Independent ERC lane rejected candidate
 
 The bounded ERC lane tested removal of the exact `NC_62` label and rejected it after semantic netlist parity failed and total findings increased 293→294. Raw outcome is retained under `validation-receipts/erc-independent-cleanup-after-issue2-20260913/`; canonical schematic remains unchanged.
+
+## 2026-09-13 — Independent DFM release audit
+
+The bounded DFM lane confirmed current fabrication/release inputs remain incomplete: 300 DRC violations, 499 unconnected items, no current Gerbers/drills/CPL/assembly package, and substantial model/assembly evidence gaps. The result is retained under `validation-receipts/dfm-open-findings-after-issue2-20260913/`; no CAD edits occurred.
