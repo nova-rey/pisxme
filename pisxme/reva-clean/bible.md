@@ -993,3 +993,7 @@ The authorized producer performed one clean Light read-only census and found tha
 ## 2026-09-14 — Acceptance matrix converted to dependency graph
 
 The queue now contains explicit closure packages for rail integrity, CM5/PCIe/SI/return evidence, thermal/mechanical/fabrication, and firmware/sequencing. Each remains WAITING on the integrated power-input package; scoped foundational receipts are not being treated as integrated acceptance closure.
+
+## 2026-09-14 — Invariant closure packages made explicit
+
+Acceptance-row reconciliation is complete. All 8 FAIL and 13 UNPROVEN rows now map to named owners, dependencies, and required integrated evidence; none were promoted to PASS. Four downstream closure packages are explicitly waiting on the power-input package, while the source-contract authority package remains the only active authority path.

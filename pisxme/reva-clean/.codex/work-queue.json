@@ -780,7 +780,13 @@
       },
       "base_sha": "adbda0a2",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/acceptance-row-reconciliation-20260914/ACCEPTANCE_ROW_RECONCILIATION.json",
+        "base_sha": "adbda0a2",
+        "returned_at": "2026-09-13T23:54:36.745260Z",
+        "returned_by": "sup_acceptance_row_reconciliation",
+        "sha": "bc5ceeff1762c236d6b43f51db63ab3bca4c98e2"
+      },
       "completion_criterion": "Every FAIL/UNPROVEN invariant has an explicit closure owner, dependency, acceptance evidence and queue state; dependent CAD work is WAITING or READY according to actual prerequisites.",
       "created_at": "2026-09-13T23:48:13.897191Z",
       "dependencies": [
@@ -792,10 +798,12 @@
         "no schematic or PCB edits",
         "do not downgrade or waive rows"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/acceptance-row-reconciliation-20260914/RECEIPT.md"
+      ],
       "id": "P24-ACCEPTANCE-ROW-RECONCILIATION",
       "notes": "",
-      "owner": "sup_acceptance_row_reconciliation",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -811,12 +819,10 @@
         }
       ],
       "scope": "Map every FAIL and UNPROVEN invariant to a concrete owner, dependency, validation artifact, and executable queue package without changing CAD.",
-      "session_ids": [
-        "root-acceptance-row-reconciliation-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Reconcile invariant compliance rows into executable closure packages",
-      "updated_at": "2026-09-13T23:48:13.940708Z",
+      "updated_at": "2026-09-13T23:54:40.914549Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1124,5 +1130,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-13T23:51:59.144536Z"
+  "updated_at": "2026-09-13T23:54:40.914674Z"
 }

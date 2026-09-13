@@ -1,0 +1,111 @@
+{
+  "receipt_type": "phase24_acceptance_row_reconciliation",
+  "package_id": "P24-ACCEPTANCE-ROW-RECONCILIATION",
+  "base_state": {
+    "source_head": "bc5ceeff1762c236d6b43f51db63ab3bca4c98e2",
+    "invariant_contract_source": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+    "queue_file": ".codex/work-queue.json",
+    "queue_head_context": "Current HEAD is a descendant of the assigned adbda0a2 state; intervening commits are queue/authority state and the power producer was parked on authority:power-source-contract. No CAD was edited by this package."
+  },
+  "scope": {
+    "invariant_rows_total": 25,
+    "fail_rows": 8,
+    "unproven_rows": 13,
+    "pass_rows": 3,
+    "not_applicable_rows": 1,
+    "unresolved_rows_mapped": 21,
+    "cad_edits": false,
+    "evidence_claim": "Mapping only; no unresolved row is promoted to PASS and no prior scoped evidence is extended beyond its scope."
+  },
+  "queue_policy": {
+    "hpq_issue_2": "Retained as evidence for the integrated corridor history; not attached as a current queue dependency after internal MPA reassessment.",
+    "authority_power_source_contract": "Current unresolved dependency for P24-POWER-INPUT-ARCHITECTURE.",
+    "cad_serialization": "Power/source authority must resolve before the dependent integrated producer; downstream closure packages wait on the producer.",
+    "path_b": "INV-STORAGE-PATHB remains NOT_APPLICABLE and has no production closure package."
+  },
+  "closure_packages": [
+    {
+      "package_id": "P24-POWER-SOURCE-CONTRACT",
+      "owner": "sup_power_source_contract_authority",
+      "state": "RUNNING",
+      "role": "Bind six-loop source/net/component contract and resolve the product/input/copper contradiction before CAD implementation.",
+      "artifact": "validation-receipts/power-source-contract-20260914/",
+      "depends_on": ["P24-FOUNDATIONAL-SYNTHESIS", "P24-POWER-ENVELOPE-AUTHORITY-REDESIGN", "P24-POWER-CONNECTOR-QUALIFICATION", "P24-MPA-CORRIDOR-AUTHORITY"]
+    },
+    {
+      "package_id": "P24-POWER-INPUT-ARCHITECTURE",
+      "owner": null,
+      "state": "WAITING",
+      "role": "Implement and validate the selected six-loop input/protection and owned Path-A corridor work after the binding source contract.",
+      "artifact": "validation-receipts/power-input-architecture-20260914/",
+      "depends_on": ["P24-MPA-CORRIDOR-AUTHORITY", "authority:power-source-contract"]
+    },
+    {
+      "package_id": "P24-POWER-RAIL-CLOSURE",
+      "owner": null,
+      "state": "WAITING",
+      "role": "Close 5 V, 3.3 V and 1.1 V current, effective capacitance, drop, thermal and load-step evidence on the integrated candidate.",
+      "artifact": "validation-receipts/power-rail-closure-20260914/",
+      "depends_on": ["P24-POWER-INPUT-ARCHITECTURE"]
+    },
+    {
+      "package_id": "P24-INTERFACE-SI-CLOSURE",
+      "owner": null,
+      "state": "WAITING",
+      "role": "Close CM5, PCIe Gen2 x1, controlled impedance and return continuity against the integrated candidate.",
+      "artifact": "validation-receipts/interface-si-closure-20260914/",
+      "depends_on": ["P24-POWER-INPUT-ARCHITECTURE"]
+    },
+    {
+      "package_id": "P24-THERMAL-FAB-MECH-CLOSURE",
+      "owner": null,
+      "state": "WAITING",
+      "role": "Close thermal, mechanical/assembly and fabrication/DFM rows using current integrated geometry and effective rule context.",
+      "artifact": "validation-receipts/thermal-fab-mech-closure-20260914/",
+      "depends_on": ["P24-POWER-INPUT-ARCHITECTURE"]
+    },
+    {
+      "package_id": "P24-FIRMWARE-SEQUENCING-CLOSURE",
+      "owner": null,
+      "state": "WAITING",
+      "role": "Close sequencing and reproducible firmware/configuration/provenance evidence for the selected Path-A implementation.",
+      "artifact": "validation-receipts/firmware-sequencing-closure-20260914/",
+      "depends_on": ["P24-POWER-INPUT-ARCHITECTURE", "P24-POWER-RAIL-CLOSURE"]
+    }
+  ],
+  "rows": [
+    {"id":"INV-PRODUCT-V100-300W","state":"FAIL","owner":"Product/Power Authority","closure_package":"P24-POWER-SOURCE-CONTRACT","queue_state":"RUNNING","dependency":"source/net contract before input implementation","artifact":"validation-receipts/power-source-contract-20260914/ plus integrated power/thermal validation","closure":"300 W sustained at product input with declared source, derating, drop and thermal margins."},
+    {"id":"INV-PRODUCT-V100-330W-PEAK","state":"FAIL","owner":"Product/Power Authority","closure_package":"P24-POWER-SOURCE-CONTRACT","queue_state":"RUNNING","dependency":"source/net contract before input implementation","artifact":"validation-receipts/power-source-contract-20260914/ plus peak/transient validation","closure":"330 W design peak is supported with bounded transient and protection evidence."},
+    {"id":"INV-INPUT-12V","state":"UNPROVEN","owner":"Power Authority","closure_package":"P24-POWER-INPUT-ARCHITECTURE","queue_state":"WAITING","dependency":"authority:power-source-contract","artifact":"validation-receipts/power-input-architecture-20260914/","closure":"12 V source tolerance, harness installation and current limit are bound and validated."},
+    {"id":"INV-INPUT-CAPACITY","state":"FAIL","owner":"Power Authority","closure_package":"P24-POWER-SOURCE-CONTRACT","queue_state":"RUNNING","dependency":"source/net contract before CAD","artifact":"validation-receipts/power-source-contract-20260914/ plus integrated copper/drop/thermal receipt","closure":"Six-loop capacity, derating, drop and temperature margins meet the product envelope."},
+    {"id":"INV-BRANCH-SHARING","state":"UNPROVEN","owner":"Power Authority","closure_package":"P24-POWER-INPUT-ARCHITECTURE","queue_state":"WAITING","dependency":"authority:power-source-contract","artifact":"validation-receipts/power-input-architecture-20260914/","closure":"Each branch has an explicit limit/fault policy; no unqualified passive sharing is assumed."},
+    {"id":"INV-PROTECTION","state":"UNPROVEN","owner":"Power Authority","closure_package":"P24-POWER-SOURCE-CONTRACT","queue_state":"RUNNING","dependency":"source/net/protection contract before CAD","artifact":"validation-receipts/power-source-contract-20260914/ plus targeted protection validation","closure":"Reverse block, OVP/UVLO, TVS, fuse I2t, MOSFET SOA and shutdown inhibit are bounded."},
+    {"id":"INV-RAIL-5V","state":"UNPROVEN","owner":"PI Authority","closure_package":"P24-POWER-RAIL-CLOSURE","queue_state":"WAITING","dependency":"package:P24-POWER-INPUT-ARCHITECTURE","artifact":"validation-receipts/power-rail-closure-20260914/","closure":"5 V current, effective capacitance, drop, thermal and load-step evidence pass."},
+    {"id":"INV-RAIL-3V3","state":"UNPROVEN","owner":"PI Authority","closure_package":"P24-POWER-RAIL-CLOSURE","queue_state":"WAITING","dependency":"package:P24-POWER-INPUT-ARCHITECTURE","artifact":"validation-receipts/power-rail-closure-20260914/","closure":"3.3 V current, effective capacitance, drop, thermal and load-step evidence pass."},
+    {"id":"INV-RAIL-1V1","state":"FAIL","owner":"PI Authority","closure_package":"P24-POWER-RAIL-CLOSURE","queue_state":"WAITING","dependency":"package:P24-POWER-INPUT-ARCHITECTURE","artifact":"validation-receipts/power-rail-closure-20260914/","closure":"1.1 V capacitance is corrected to at least the approved screen with bias, thermal and load-step proof."},
+    {"id":"INV-SEQUENCING","state":"UNPROVEN","owner":"Power/Firmware Authority","closure_package":"P24-FIRMWARE-SEQUENCING-CLOSURE","queue_state":"WAITING","dependency":"package:P24-POWER-INPUT-ARCHITECTURE; package:P24-POWER-RAIL-CLOSURE","artifact":"validation-receipts/firmware-sequencing-closure-20260914/","closure":"Enable/PG/reset/V100 inhibit thresholds and timing are documented and validated."},
+    {"id":"INV-SXM2-J1-INTEGRATION","state":"UNPROVEN","owner":"PCB/Package Authority","closure_package":"P24-POWER-INPUT-ARCHITECTURE","queue_state":"WAITING","dependency":"authority:power-source-contract and serialized integrated producer","artifact":"validation-receipts/power-input-architecture-20260914/ plus fresh Light J1 endpoint/pad/DRC receipt","closure":"Required J1 power, return and selected signal contacts are physically closed with no invented contacts."},
+    {"id":"INV-CM5","state":"UNPROVEN","owner":"Interface Authority","closure_package":"P24-INTERFACE-SI-CLOSURE","queue_state":"WAITING","dependency":"package:P24-POWER-INPUT-ARCHITECTURE","artifact":"validation-receipts/interface-si-closure-20260914/","closure":"CM5 power/interface/pad/reference coverage and integrated route validation pass."},
+    {"id":"INV-PCIE","state":"UNPROVEN","owner":"SI Authority","closure_package":"P24-INTERFACE-SI-CLOSURE","queue_state":"WAITING","dependency":"package:P24-POWER-INPUT-ARCHITECTURE","artifact":"validation-receipts/interface-si-closure-20260914/","closure":"Gen2 x1 lane, REFCLK, PERST, skew, impedance and return evidence pass."},
+    {"id":"INV-STORAGE-PATHA","state":"FAIL","owner":"Storage Authority","closure_package":"P24-POWER-INPUT-ARCHITECTURE","queue_state":"WAITING","dependency":"authority:power-source-contract and serialized MPA corridor implementation","artifact":"validation-receipts/power-input-architecture-20260914/ plus fresh Light Path-A mode/connectivity receipt","closure":"All required Path-A pairs and inactive-state isolation are physically closed."},
+    {"id":"INV-IMPEDANCE","state":"UNPROVEN","owner":"SI/Fab Authority","closure_package":"P24-INTERFACE-SI-CLOSURE","queue_state":"WAITING","dependency":"package:P24-POWER-INPUT-ARCHITECTURE","artifact":"validation-receipts/interface-si-closure-20260914/","closure":"Controlled-impedance routes have extracted/fab-tolerance/coupon evidence or an approved design-basis disposition."},
+    {"id":"INV-COPPER","state":"FAIL","owner":"PI/PCB Authority","closure_package":"P24-POWER-SOURCE-CONTRACT","queue_state":"RUNNING","dependency":"binding six-loop source/net contract","artifact":"validation-receipts/power-source-contract-20260914/ plus integrated copper/drop/thermal receipt","closure":"Input and protected-rail copper/vias/planes/returns meet current, drop, rise and transient budgets."},
+    {"id":"INV-RETURN","state":"UNPROVEN","owner":"SI/PI Authority","closure_package":"P24-INTERFACE-SI-CLOSURE","queue_state":"WAITING","dependency":"package:P24-POWER-INPUT-ARCHITECTURE","artifact":"validation-receipts/interface-si-closure-20260914/","closure":"POWER_GND and high-speed reference returns are continuous and meet extracted limits."},
+    {"id":"INV-THERMAL","state":"UNPROVEN","owner":"Thermal Authority","closure_package":"P24-THERMAL-FAB-MECH-CLOSURE","queue_state":"WAITING","dependency":"package:P24-POWER-INPUT-ARCHITECTURE","artifact":"validation-receipts/thermal-fab-mech-closure-20260914/","closure":"Connector, protection, regulators, copper and cooling stay within sustained/peak temperature limits."},
+    {"id":"INV-MECHANICAL","state":"FAIL","owner":"Mechanical Authority","closure_package":"P24-THERMAL-FAB-MECH-CLOSURE","queue_state":"WAITING","dependency":"package:P24-POWER-INPUT-ARCHITECTURE","artifact":"validation-receipts/thermal-fab-mech-closure-20260914/","closure":"3D/assembly/service envelopes, courtyards, PTH, edge and required models close on integrated geometry."},
+    {"id":"INV-FAB","state":"FAIL","owner":"Fab Authority","closure_package":"P24-THERMAL-FAB-MECH-CLOSURE","queue_state":"WAITING","dependency":"package:P24-POWER-INPUT-ARCHITECTURE","artifact":"validation-receipts/thermal-fab-mech-closure-20260914/","closure":"Effective rule context, authorized fine escape, trace/space, via/drill and release artifacts meet qualified fab capability."},
+    {"id":"INV-FIRMWARE","state":"UNPROVEN","owner":"Firmware/Provenance Authority","closure_package":"P24-FIRMWARE-SEQUENCING-CLOSURE","queue_state":"WAITING","dependency":"package:P24-POWER-INPUT-ARCHITECTURE; package:P24-POWER-RAIL-CLOSURE","artifact":"validation-receipts/firmware-sequencing-closure-20260914/","closure":"Selected Path-A images/configuration/procurement provenance are exact, reproducible and functionally bounded."}
+  ],
+  "excluded_rows": [
+    {"id":"INV-MOLEX-8A","state":"PASS","reason":"Component-level limit only; system capacity remains assigned above."},
+    {"id":"INV-SXM2-J1-PACKAGE","state":"PASS","reason":"Bounded package mapping only; integrated physical closure remains assigned above."},
+    {"id":"INV-STACKUP","state":"PASS","reason":"Design-basis stack declaration only; integrated SI/fab row remains assigned above."},
+    {"id":"INV-STORAGE-PATHB","state":"NOT_APPLICABLE","reason":"RTL9210B remains isolated unpromoted evidence and is excluded from production closure."}
+  ],
+  "result": "DONE_SCOPED_RECONCILIATION",
+  "limitations": [
+    "This receipt does not close any FAIL or UNPROVEN invariant.",
+    "No CAD, schematic, rules or library files were modified.",
+    "Fresh Light validation, canonical integration and authority signatures remain required for every downstream package."
+  ]
+}
