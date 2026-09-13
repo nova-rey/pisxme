@@ -732,3 +732,5 @@ integrated ERC acceptance row remains open.
 - 2026-09-13: retained regulator/power authority packet; U4/U5 support and protected-12V physical closure remain open with disjoint producer boundary recorded.
 
 - 2026-09-13: synchronized Phase 24 acceptance matrix to corrected Path-A, ERC, regulator-authority, provenance, and hostile-review receipts.
+
+- 2026-09-13: aborted ERC producer after unrelated V100/source edits; disposable workspace released, canonical tree unchanged.
