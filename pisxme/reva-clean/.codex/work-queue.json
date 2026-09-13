@@ -880,6 +880,236 @@
       },
       "waiting_on": [],
       "workstream": "phase24"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "10e9b2671412d8ebe9baacb6d86bcc5078fbb9fa",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Power Authority and PI Authority sign all three rail rows with exact rail loads, effective capacitance under bias, copper/drop/temperature margins, and fresh integrated Light evidence.",
+      "created_at": "2026-09-13T23:51:59.013747Z",
+      "dependencies": [
+        "package:P24-POWER-INPUT-ARCHITECTURE"
+      ],
+      "domain": "power-integrity",
+      "edit_boundaries": [
+        "no Phase 26",
+        "no global rule relaxation",
+        "preserve six-loop power authority and MPA corridors",
+        "CAD edits only in isolated producer then serialized integration"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-RAIL-CLOSURE",
+      "notes": "Foundational packets are scoped evidence only; current matrix rows remain UNPROVEN.",
+      "owner": null,
+      "priority": 2,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-RAIL-5V",
+        "INV-RAIL-3V3",
+        "INV-RAIL-1V1"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Close 5 V, 3.3 V and 1.1 V rail current, effective capacitance, voltage-drop, thermal and load-step evidence on the selected integrated candidate after the power-input producer is reconciled.",
+      "session_ids": [],
+      "status": "WAITING",
+      "title": "Integrated rail current, capacitance and return closure",
+      "updated_at": "2026-09-13T23:51:59.013747Z",
+      "validation": {
+        "required": [
+          "native netlist/pad coverage",
+          "fresh Light rail and DRC/DRC-context receipt",
+          "power/thermal/load-step calculation receipt"
+        ],
+        "results": {}
+      },
+      "waiting_on": [
+        "package:P24-POWER-INPUT-ARCHITECTURE"
+      ],
+      "workstream": "phase24"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "10e9b2671412d8ebe9baacb6d86bcc5078fbb9fa",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "SI/Interface authorities sign CM5, PCIe, impedance and return rows with integrated endpoint/pad coverage, route/return evidence, and exact validation artifacts.",
+      "created_at": "2026-09-13T23:51:59.057353Z",
+      "dependencies": [
+        "package:P24-POWER-INPUT-ARCHITECTURE"
+      ],
+      "domain": "interface/SI",
+      "edit_boundaries": [
+        "no Path-B production work",
+        "preserve J1 package contract and validated high-speed corridors",
+        "no fabricated measurements or unsupported Gen3 claim",
+        "CAD edits only in isolated producer then serialized integration"
+      ],
+      "evidence_refs": [],
+      "id": "P24-INTERFACE-SI-CLOSURE",
+      "notes": "Local or isolated SI passes do not close the integrated rows.",
+      "owner": null,
+      "priority": 2,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-CM5",
+        "INV-PCIE",
+        "INV-IMPEDANCE",
+        "INV-RETURN"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Close CM5 interface contracts, PCIe Gen2 x1 clock/reset, controlled impedance and return continuity against the current integrated candidate after power/corridor integration.",
+      "session_ids": [],
+      "status": "WAITING",
+      "title": "Integrated CM5, PCIe, impedance and return closure",
+      "updated_at": "2026-09-13T23:51:59.057353Z",
+      "validation": {
+        "required": [
+          "native source/pad/reference coverage",
+          "fresh Light DRC/connectivity and layer/return census",
+          "impedance/stack/coupon or explicit approved design-basis receipt"
+        ],
+        "results": {}
+      },
+      "waiting_on": [
+        "package:P24-POWER-INPUT-ARCHITECTURE"
+      ],
+      "workstream": "phase24"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "10e9b2671412d8ebe9baacb6d86bcc5078fbb9fa",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Thermal, Mechanical and Fab authorities sign all three rows with current integrated geometry, rule-context proof, assembly/DFM evidence and explicit margins.",
+      "created_at": "2026-09-13T23:51:59.104778Z",
+      "dependencies": [
+        "package:P24-POWER-INPUT-ARCHITECTURE"
+      ],
+      "domain": "thermal/mechanics/fabrication",
+      "edit_boundaries": [
+        "preserve immutable anchors and approved local fine escape",
+        "no global rule relaxation or blanket exclusions",
+        "no Phase 26",
+        "CAD edits only in isolated producer then serialized integration"
+      ],
+      "evidence_refs": [],
+      "id": "P24-THERMAL-FAB-MECH-CLOSURE",
+      "notes": "Foundational thermal/mechanical/fab packets are evidence inputs; they do not close current implementation rows.",
+      "owner": null,
+      "priority": 2,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-THERMAL",
+        "INV-MECHANICAL",
+        "INV-FAB"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Close carrier thermal limits, connector/cooler/mechanical envelopes, DFM geometry and authorized rule context on the validated integrated candidate.",
+      "session_ids": [],
+      "status": "WAITING",
+      "title": "Integrated thermal, mechanical and fabrication closure",
+      "updated_at": "2026-09-13T23:51:59.104778Z",
+      "validation": {
+        "required": [
+          "fresh Light DRC with effective rules",
+          "3D/assembly/service envelope receipt",
+          "copper/thermal/fab capability receipt"
+        ],
+        "results": {}
+      },
+      "waiting_on": [
+        "package:P24-POWER-INPUT-ARCHITECTURE"
+      ],
+      "workstream": "phase24"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "10e9b2671412d8ebe9baacb6d86bcc5078fbb9fa",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Power/Firmware and Provenance authorities sign sequencing and firmware rows with exact configuration provenance, timing requirements, and an honest hardware-test boundary.",
+      "created_at": "2026-09-13T23:51:59.144361Z",
+      "dependencies": [
+        "package:P24-POWER-INPUT-ARCHITECTURE",
+        "package:P24-POWER-RAIL-CLOSURE"
+      ],
+      "domain": "power/firmware/provenance",
+      "edit_boundaries": [
+        "Path B remains isolated and unpromoted",
+        "no fabricated hardware operation or vendor authorization",
+        "no Phase 26",
+        "configuration/evidence changes only unless an authority-approved bounded source correction is required"
+      ],
+      "evidence_refs": [],
+      "id": "P24-FIRMWARE-SEQUENCING-CLOSURE",
+      "notes": "The foundational provenance packet remains scoped evidence; this is the closure package.",
+      "owner": null,
+      "priority": 2,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-SEQUENCING",
+        "INV-FIRMWARE"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Close rail enable/PG/reset/V100 inhibit timing and reproducible firmware/configuration/procurement provenance for selected Path-A implementation.",
+      "session_ids": [],
+      "status": "WAITING",
+      "title": "Integrated sequencing and firmware/provenance closure",
+      "updated_at": "2026-09-13T23:51:59.144361Z",
+      "validation": {
+        "required": [
+          "native sequencing net audit",
+          "exact image/config hashes and provenance",
+          "fresh integrated timing/configuration validation where hardware is explicitly deferred"
+        ],
+        "results": {}
+      },
+      "waiting_on": [
+        "package:P24-POWER-INPUT-ARCHITECTURE",
+        "package:P24-POWER-RAIL-CLOSURE"
+      ],
+      "workstream": "phase24"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -894,5 +1124,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-13T23:51:44.505431Z"
+  "updated_at": "2026-09-13T23:51:59.144536Z"
 }

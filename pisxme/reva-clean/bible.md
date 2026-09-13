@@ -989,3 +989,7 @@ The foundational compliance matrix is now being translated into executable closu
 ## 2026-09-14 — Six-loop source contract contradiction isolated
 
 The authorized producer performed one clean Light read-only census and found that the current canonical source contains only two qualified input headers, A/B branch nets, and two protection paths. The six-loop authority cannot be implemented by PCB-only edits. The producer was released with no candidate; a bounded Power/MPA/Package source-contract authority package now owns definition of the four missing loops and protection stages.
+
+## 2026-09-14 — Acceptance matrix converted to dependency graph
+
+The queue now contains explicit closure packages for rail integrity, CM5/PCIe/SI/return evidence, thermal/mechanical/fabrication, and firmware/sequencing. Each remains WAITING on the integrated power-input package; scoped foundational receipts are not being treated as integrated acceptance closure.
