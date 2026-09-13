@@ -1,0 +1,100 @@
+{
+  "source_commit": "2e5b5290",
+  "pcb_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+  "rows": [
+    {
+      "id": "native_erc",
+      "status": "OPEN",
+      "dependency": "independent",
+      "latest_evidence": "validation-receipts/erc-v100-label-fresh-02ba324b-20260913/",
+      "current": "293 findings / 0 errors; ERC remains OPEN"
+    },
+    {
+      "id": "native_drc",
+      "status": "OPEN",
+      "dependency": "geometry-dependent",
+      "latest_evidence": "validation-receipts/rules-context-fresh-acacc3a9-20260913/",
+      "current": "300 violations / 499 unconnected; two co-located-hole findings removed; physical DRC remains OPEN"
+    },
+    {
+      "id": "physical_opens_shorts",
+      "status": "OPEN",
+      "dependency": "geometry-dependent",
+      "latest_evidence": "validation-receipts/mpa-autopedet-corridor-producer-20260913/",
+      "current": "15 corrected Path-A endpoint pairs open; zero shorting_items in validated candidate"
+    },
+    {
+      "id": "schematic_pad_reference_coverage",
+      "status": "OPEN",
+      "dependency": "independent",
+      "latest_evidence": "validation-receipts/pad-parity-fresh-0b5340b4-20260913/",
+      "current": "Expected-pad ownership PASS (814 nodes / 1262 pads / 0 mismatches); surplus-pad disposition and full bidirectional coverage remain OPEN"
+    },
+    {
+      "id": "library_pin_mapping",
+      "status": "OPEN",
+      "dependency": "independent",
+      "latest_evidence": "authority-inventory/",
+      "current": "J1 package identity accepted; other library/model context warnings remain"
+    },
+    {
+      "id": "layers_routes_impedance_return",
+      "status": "OPEN",
+      "dependency": "partially-independent",
+      "latest_evidence": "validation-receipts/layer-route-census-current-3709bbea-20260913/",
+      "current": "Fresh saved-geometry USB3 length/layer/via census retained; controlled impedance and return-path closure remain OPEN"
+    },
+    {
+      "id": "power_current_transient_thermal",
+      "status": "OPEN",
+      "dependency": "geometry-dependent",
+      "latest_evidence": "validation-receipts/power-return-census-current-a56b4399-20260913/",
+      "current": "Native schematic/design-envelope power audit PASS; physical rail routing, current/transient/thermal closure OPEN"
+    },
+    {
+      "id": "regulator_reference_overlays",
+      "status": "OPEN",
+      "dependency": "geometry-dependent",
+      "latest_evidence": "validation-receipts/si-provenance-72df93fc-20260913/",
+      "current": "U4/U5 support, FB/RT/PG and protected-12V physical closure open"
+    },
+    {
+      "id": "storage_mode_behavior",
+      "status": "OPEN",
+      "dependency": "geometry-dependent",
+      "latest_evidence": "validation-receipts/mpa-binding-storage-corridor-20260913/",
+      "current": "15 corrected required branches open; Path B out of scope"
+    },
+    {
+      "id": "component_firmware_provenance",
+      "status": "OPEN",
+      "dependency": "partially-independent",
+      "latest_evidence": "validation-receipts/provenance-current-075b557b-20260913/",
+      "current": "Path A authority agrees; release/provisioning evidence remains open"
+    },
+    {
+      "id": "mechanical_3d_assembly_service",
+      "status": "OPEN",
+      "dependency": "partially-independent",
+      "latest_evidence": "validation-receipts/mechanical-model-census-3a811eac-20260913/",
+      "current": "6 courtyard, 5 PTH/courtyard, 16 edge-clearance findings; model gaps"
+    },
+    {
+      "id": "dfm",
+      "status": "OPEN",
+      "dependency": "partially-independent",
+      "latest_evidence": "validation-receipts/bom-disposition-current-3a811eac-20260913/",
+      "current": "Co-located GATE_B via findings removed; clearance, width, courtyard, edge, assembly and model gaps remain OPEN"
+    },
+    {
+      "id": "hostile_review",
+      "status": "OPEN",
+      "dependency": "geometry-dependent",
+      "latest_evidence": "validation-receipts/hostile-review-cdd5a381-20260913/",
+      "current": "Integrated hostile review retained; result FAIL / OPEN"
+    }
+  ],
+  "freeze_gate": "Every row must be PASS or have an already-authorized applicable disposition on one exact integrated SHA; Phase25 prohibited while any required row is OPEN.",
+  "next_action": "binding MPA corridor decision; independent evidence lanes continue",
+  "phase25_permitted": false
+}

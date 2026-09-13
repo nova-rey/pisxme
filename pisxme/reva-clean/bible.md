@@ -846,3 +846,7 @@ Verified at documentation head `3709bbea` that the canonical PCB hash remains th
 ## 2026-09-13 — Six-layer route census retained
 
 Recorded the current six-layer contract and copper distribution at `3709bbea`: 329 segments (216 F.Cu, 113 B.Cu), 90 vias, and no inner-layer segments. Raw census is under `validation-receipts/layer-route-census-current-3709bbea-20260913/`; SI and return-path closure remain open.
+
+## 2026-09-13 — Compact Phase 24 workstream record
+
+Consolidated all acceptance rows into `validation-receipts/phase24-workstream-record-2e5b5290-20260913/WORKSTREAM_RECORD.json`, with dependency classification and latest evidence pointers. The record keeps MPA-dependent geometry distinct from independent or partial lanes and preserves the Phase 25 freeze gate.
