@@ -943,3 +943,7 @@ Phase 24 paused broad physical implementation for a bounded foundational audit. 
 ## 2026-09-14 — Foundational audit specialist packets
 
 Thermal/mechanical and SI/fabrication specialist packets were retained as scoped evidence. They preserve the distinction between declared design basis and fabricated-board proof; no CAD implementation was resumed.
+
+## 2026-09-14 — Thermal packet receipt correction
+
+The thermal/mechanics specialist receipt is now part of the invariant audit evidence set; CAD remains unchanged and downstream physical work remains gated by the contract.
