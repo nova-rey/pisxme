@@ -1,0 +1,31 @@
+{
+  "source_commit": "72df93fc8ec6af6ee595df13d6e9b30369676550",
+  "board": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "board_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+  "parse_method": "read-only KiCad 10 s-expression segment/via/zone census",
+  "counts": {"segments": 329, "vias": 90, "zones": 3},
+  "segments_by_layer": {"F.Cu": 216, "B.Cu": 113},
+  "signal_layers_observed": ["F.Cu", "B.Cu"],
+  "power_ground": {
+    "segments": 47,
+    "vias": 11,
+    "track_length_mm": 173.491568,
+    "zone_layers": ["F.Cu", "In1.Cu", "In4.Cu"]
+  },
+  "controlled_pairs_saved_geometry": {
+    "CM5_PER0": {"P": {"segments": 5, "vias": 0, "width_mm": 0.13208, "layers": ["F.Cu"]}, "N": {"segments": 5, "vias": 0, "width_mm": 0.13208, "layers": ["F.Cu"]}},
+    "CM5_REFCLK": {"P": {"segments": 6, "vias": 2, "width_mm": 0.13208, "layers": ["F.Cu", "B.Cu"]}, "N": {"segments": 6, "vias": 2, "width_mm": 0.13208, "layers": ["F.Cu", "B.Cu"]}},
+    "CM5_PET0": {"P": {"segments": 2, "vias": 0, "width_mm": 0.13208, "layers": ["F.Cu"]}, "N": {"segments": 2, "vias": 0, "width_mm": 0.13208, "layers": ["F.Cu"]}},
+    "V100_PET0": {"P": {"segments": 7, "vias": 2, "width_mm": 0.13208, "layers": ["F.Cu", "B.Cu"]}, "N": {"segments": 7, "vias": 2, "width_mm": 0.13208, "layers": ["F.Cu", "B.Cu"]}},
+    "CM5_USB3_RX": {"P": {"segments": 8, "vias": 4, "width_mm": 0.13208, "layers": ["F.Cu", "B.Cu"]}, "N": {"segments": 6, "vias": 4, "width_mm": 0.13208, "layers": ["F.Cu", "B.Cu"]}},
+    "CM5_USB3_TX": {"P": {"segments": 6, "vias": 3, "width_mm": 0.13208, "layers": ["F.Cu", "B.Cu"]}, "N": {"segments": 7, "vias": 4, "width_mm": 0.13208, "layers": ["F.Cu", "B.Cu"]}},
+    "USB_RX1": {"P": {"segments": 5, "vias": 2, "widths_mm": [0.15, 0.2], "layers": ["F.Cu", "B.Cu"]}, "N": {"segments": 5, "vias": 2, "widths_mm": [0.15, 0.2], "layers": ["F.Cu", "B.Cu"]}},
+    "USB_TX1": {"P": {"segments": 3, "vias": 0, "widths_mm": [0.15, 0.2], "layers": ["F.Cu"]}, "N": {"segments": 3, "vias": 0, "widths_mm": [0.15, 0.2], "layers": ["F.Cu"]}},
+    "JMS_USB3_TX": {"P": {"segments": 4, "vias": 2, "width_mm": 0.2, "layers": ["F.Cu", "B.Cu"]}, "N": {"segments": 4, "vias": 2, "width_mm": 0.2, "layers": ["F.Cu", "B.Cu"]}}
+  },
+  "limits": [
+    "Geometry counts describe saved copper only.",
+    "Zones are serialized declarations; filled-copper continuity and local return-via effectiveness require native Light validation.",
+    "No impedance, eye-margin, PDN, transient, thermal, or fabricated-hardware measurement is claimed."
+  ]
+}

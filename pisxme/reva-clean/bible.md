@@ -770,3 +770,5 @@ speculative route variant.
 - 2026-09-13: Macro Placement Authority issued one binding storage/power placement and corridor plan; producer basis and protected structures are recorded in `validation-receipts/mpa-binding-storage-corridor-20260913/RECEIPT.md`.
 
 - 2026-09-13: First MPA producer attempt aborted after an unbounded custom parser produced no CAD artifact; method failure receipt `validation-receipts/mpa-producer-parser-abort-20260913/RECEIPT.md` retained before native-tool retry.
+
+- 2026-09-13: SI/reference/provenance lane recorded exact `72df93fc` board geometry, six-layer and scoped-rule source identities, F.Cu/B.Cu signal routing with POWER_GND zones on F.Cu/In1/In4, Path-A component/firmware provenance, and private Library HEAD `b521af19`. J1 evidence linkage remains bounded-closed; SI/return and full component/procurement acceptance rows remain open. Fresh Light context rerun was blocked before KiCad by host disk exhaustion; no validation result was promoted.
