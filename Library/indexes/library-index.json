@@ -143,6 +143,22 @@
         "DFM",
         "package-authority"
       ]
+    },
+    {
+      "id": "brief-pisxme-component-firmware-provenance-20260913",
+      "kind": "acceptance-evidence-brief",
+      "path": "Library/briefs/pisxme-component-firmware-provenance-20260913.md",
+      "tags": [
+        "PiSXMe",
+        "Phase24",
+        "component-provenance",
+        "firmware",
+        "programming",
+        "procurement",
+        "Path-A",
+        "TUSB9261",
+        "JMS583"
+      ]
     }
   ]
 }

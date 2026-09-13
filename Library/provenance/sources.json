@@ -178,7 +178,15 @@
       "retrieved": "2026-09-12",
       "tier": 1,
       "evidence_class": "manufacturer fabrication capability authority",
-      "component_tags": ["JMS583", "HD3SS6126", "U11", "U12", "6-layer", "QFN", "WQFN"],
+      "component_tags": [
+        "JMS583",
+        "HD3SS6126",
+        "U11",
+        "U12",
+        "6-layer",
+        "QFN",
+        "WQFN"
+      ],
       "observed_facts": [
         "multilayer minimum trace width/spacing 0.09/0.09 mm at 1 oz",
         "multilayer minimum trace width/spacing 0.15/0.15 mm at 2 oz",
@@ -190,7 +198,7 @@
         "multilayer 1 oz PTH annular ring 0.20 mm recommended and 0.15 mm absolute minimum",
         "blind and buried vias not supported on the stated standard process",
         "6-layer-and-above FR-4 maximum dimensions 656 x 586 mm for thickness at least 0.8 mm",
-        "impedance tolerance ±10%"
+        "impedance tolerance \u00b110%"
       ],
       "status": "accessible",
       "local_sha256": null,
@@ -205,12 +213,20 @@
       "retrieved": "2026-09-12",
       "tier": 1,
       "evidence_class": "manufacturer fabrication capability authority",
-      "component_tags": ["JMS583", "HD3SS6126", "U11", "U12", "6-layer", "QFN", "WQFN"],
+      "component_tags": [
+        "JMS583",
+        "HD3SS6126",
+        "U11",
+        "U12",
+        "6-layer",
+        "QFN",
+        "WQFN"
+      ],
       "observed_facts": [
         "typical stackup SIG/GND/PWR/SIG/GND/SIG",
         "maximum dimensions 660 x 475 mm",
         "board thickness options 0.8/1.0/1.2/1.6/2.0 mm",
-        "thickness tolerance ±10% for thickness at least 1.0 mm and ±0.1 mm below 1.0 mm",
+        "thickness tolerance \u00b110% for thickness at least 1.0 mm and \u00b10.1 mm below 1.0 mm",
         "minimum trace width and spacing 0.09 mm (3.5 mil)",
         "minimum via hole/diameter 0.15/0.25 mm",
         "minimum BGA pad dimension 0.25 mm",
@@ -231,7 +247,12 @@
       "retrieved": "2026-09-12",
       "tier": 1,
       "evidence_class": "manufacturer package authority",
-      "component_tags": ["HD3SS6126", "U12", "WQFN", "RUA0042A"],
+      "component_tags": [
+        "HD3SS6126",
+        "U12",
+        "WQFN",
+        "RUA0042A"
+      ],
       "observed_facts": [
         "RUA WQFN package has 42 signal pins and nominal body 9.00 x 3.50 mm",
         "generic package view specifies 0.50 mm pitch and 0.8 mm maximum height",
@@ -258,7 +279,12 @@
       "retrieved": "2026-09-12",
       "tier": 1,
       "evidence_class": "manufacturer product authority",
-      "component_tags": ["HD3SS6126", "U12", "WQFN", "RUA"],
+      "component_tags": [
+        "HD3SS6126",
+        "U12",
+        "WQFN",
+        "RUA"
+      ],
       "observed_facts": [
         "package listing WQFN (RUA), 42 pins",
         "package size 3.5 x 9 mm",
@@ -278,7 +304,15 @@
       "retrieved": "2026-09-12",
       "tier": 3,
       "evidence_class": "project-derived",
-      "component_tags": ["U11", "U12", "JMS583", "HD3SS6126", "QFN", "WQFN", "storage"],
+      "component_tags": [
+        "U11",
+        "U12",
+        "JMS583",
+        "HD3SS6126",
+        "QFN",
+        "WQFN",
+        "storage"
+      ],
       "observed_facts": [
         "U11 is JMS583-QHFA3A with PiSXMeRevAClean:JMS583_QFN64_8x8",
         "retained U11 package basis is QFN64, 8.0 x 8.0 mm, 0.40 mm pitch, 0.15-0.20 mm terminal width, and 4.46 mm exposed pad",
@@ -313,7 +347,12 @@
       "revision": "GS-12-100 Rev R; authorized 2013-10-14; printed 2013-10-16; retrieved 2026-09-12",
       "tier": 1,
       "evidence_class": "manufacturer product specification",
-      "component_tags": ["74221-101LF", "MEG-Array", "400-position", "connector"],
+      "component_tags": [
+        "74221-101LF",
+        "MEG-Array",
+        "400-position",
+        "connector"
+      ],
       "observed_facts": [
         "unrestricted FCI product specification for the 1.27 mm x 1.27 mm MEG-Array grid",
         "400-position 10 x 40, 4.0 mm mated-height pairing is plug 84740 and receptacle 74221",
@@ -338,7 +377,13 @@
       "revision": "GS-20-033 Rev J; verified 2016-04-27; printed 2016-05-04; retrieved 2026-09-12",
       "tier": 1,
       "evidence_class": "manufacturer application specification",
-      "component_tags": ["74221-101LF", "MEG-Array", "BGA", "PCB-assembly", "high-speed"],
+      "component_tags": [
+        "74221-101LF",
+        "MEG-Array",
+        "BGA",
+        "PCB-assembly",
+        "high-speed"
+      ],
       "observed_facts": [
         "unrestricted FCI application specification for MEG-Array BGA connector application and process guidance",
         "400-position 10 x 40, 4.0 mm mated-height receptacle is 74221 with plug 84740",
@@ -358,6 +403,38 @@
         "local_retention": "not retained; metadata and extracted facts only"
       },
       "license_disposition": "unrestricted classification recorded by source; retain citation and extracted facts only; do not copy PDF into public repository"
+    },
+    {
+      "id": "ti-e2e-tusb9261-flashburner-538818",
+      "title": "TUSB9261 Flash Burner",
+      "publisher": "Texas Instruments E2E / Jorge Llamas (TI expert response)",
+      "url": "https://e2e.ti.com/support/interface-group/interface/f/interface-forum/538818/tusb9261-flash-burner",
+      "revision": "Thread 538818; response retrieved 2026-09-13; original thread over 9 years old",
+      "retrieved": "2026-09-13",
+      "tier": 2,
+      "evidence_class": "manufacturer support engineering guidance",
+      "component_tags": [
+        "TUSB9261",
+        "U7",
+        "SLLC416",
+        "SLLC414",
+        "firmware",
+        "programming",
+        "SATA"
+      ],
+      "observed_facts": [
+        "TUSB9261 EVM is not required for SPI programming if the image is correctly programmed",
+        "the SLLC416 firmware binary lacks the header needed for device recognition",
+        "FlashBurner SLLC414 can generate a formatted image for other SPI programming methods",
+        "SATA TX polarity in the image must match the board routing"
+      ],
+      "status": "accessible",
+      "license_disposition": "citation and extracted facts only; no forum or firmware payload copied",
+      "limits": [
+        "support response is not a current product-specific production authorization",
+        "does not provide a PiSXMe formatted-image hash or prove a board programming run",
+        "download rights and export-gated payload access remain separate"
+      ]
     }
   ]
 }
