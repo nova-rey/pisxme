@@ -421,3 +421,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Rejected the disposable project-library resolver context candidate: official Device/Capacitor_SMD/Package_TO_SOT_SMD paths changed ERC from 351 to 410 findings and changed the native netlist bytes. Reports, tables, environment, and return codes are retained under `validation-receipts/project-library-resolver-rejected-20260913/`; no canonical tables changed.
 
 - 2026-09-13: Corrected the campaign manifest's stale DFM count to the authoritative current-head Light result, 312 violations / 499 unconnected; residual DFM classes and mechanical evidence remain open.
+
+- 2026-09-13: Inspected current-head project/rule context and recorded hashes for the selected schematic, PCB, sidecar, and `.kicad_dru`. No explicit exclusions were found in the sidecar; hostile-review ignored checker classes remain open and require exact-head fresh validation.
