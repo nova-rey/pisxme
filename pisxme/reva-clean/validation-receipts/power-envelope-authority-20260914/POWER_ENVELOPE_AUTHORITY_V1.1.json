@@ -1,0 +1,145 @@
+{
+  "decision_id": "PISXME-REV-A-POWER-ENVELOPE-001",
+  "version": "1.1.0",
+  "status": "CONTROLLING_SUPERSEDES_V1.0.0",
+  "decision_date": "2026-09-14",
+  "authority_role": "Power Authority",
+  "review_agent": "/root/power_authority_review_envelope",
+  "cad_modified": false,
+  "d_fields": ["continuous_current", "peak_current"],
+  "binding_250w_25_25a_dual_13a": false,
+  "exact_selected_assembly_evidence": {
+    "header": "Molex 0039300020 / 39-30-0020 5569 two-position right-angle header",
+    "standard_mating_terminal_system": "Molex 5556 Mini-Fit Jr wire-to-board",
+    "manufacturer_application_limit_a_per_circuit": 8.0,
+    "application": "two-circuit 16/18-AWG assembly",
+    "test_basis": "30 C maximum temperature rise; application derating required",
+    "current_sharing": "Molex says system was not designed or tested for current sharing",
+    "source": "Molex PS-43879-001-001 section 4.3"
+  },
+  "requested_design_envelope_calculation": {
+    "input_nominal_v": 12.0,
+    "efficiency_factor": 0.9,
+    "v100_design_allowance_w": 250.0,
+    "v100_input_current_a": 23.14814815,
+    "low_voltage_power_w": 22.7,
+    "low_voltage_input_current_a": 2.10185185,
+    "total_input_current_a": 25.25,
+    "exact_two_circuit_table_screen_a": 16.0,
+    "shortfall_before_derating_a": 9.25,
+    "illustrative_v100_allowance_at_16a_screen_w": 150.1
+  },
+  "field_classification": {
+    "connector_harness_limits": {"class": ["A", "C"], "d": false},
+    "continuous_current": {"class": ["D"], "d": true},
+    "peak_current": {"class": ["D"], "d": true},
+    "branch_imbalance": {"class": ["A", "C"], "d": false},
+    "shutdown_behavior": {"class": ["A", "C"], "d": false},
+    "surge_load_dump_limits": {"class": ["A", "B", "C"], "d": false},
+    "thermal_limits": {"class": ["A", "B", "C"], "d": false},
+    "current_sharing": {"class": ["A", "C"], "d": false},
+    "load_step_requirements": {"class": ["C"], "d": false}
+  },
+  "d_field_disposition": {
+    "continuous_current": "Product authority must lower the V100 envelope or authorize changed input contact/harness topology and package contract.",
+    "peak_current": "Product authority must choose the peak envelope and compatible input architecture; no V100/SXM2 transient contract was found."
+  },
+  "rail_review": {
+    "source_and_branches": {
+      "basis": "12-V current-limited cold-plug source; two Molex branches with 15-A fuse candidates, SMBJ18A, LM74700-Q1 and CSD19536KCS per branch",
+      "connector_screen_a_per_circuit": 8.0,
+      "requested_equal_share_a_per_branch": 12.625,
+      "excess_over_connector_screen_a": 4.625,
+      "excess_over_connector_screen_percent": 57.8125,
+      "missing": ["source current limit", "mating terminal/wire/crimp/length", "ambient and harness derating", "fuse I2t", "TVS energy", "branch thermal path"],
+      "status": "OPEN"
+    },
+    "protected_12v_to_v100": {
+      "requested_total_current_a": 25.25,
+      "two_circuit_table_screen_a": 16.0,
+      "shortfall_a": 9.25,
+      "static_drop_equation": "Vdrop = I * Rpath",
+      "missing": ["Branch-B copper/vias", "Rpath extraction or measurement", "plane impedance", "loop inductance", "endpoint return contract"],
+      "status": "OPEN"
+    },
+    "CM5_5V": {
+      "nominal_v": 5.0,
+      "design_load_a": 3.0,
+      "regulator_authority_a": 6.0,
+      "utilization_percent": 50.0,
+      "minimum_effective_output_cap_uF": 30.0,
+      "status": "OPEN_PHYSICAL_AND_TRANSIENT_VALIDATION"
+    },
+    "BRIDGE_3V3": {
+      "nominal_v": 3.3,
+      "design_load_a": 2.0,
+      "regulator_authority_a": 6.0,
+      "utilization_percent": 33.33333333,
+      "minimum_effective_output_cap_uF": 50.0,
+      "serialized_segments": 0,
+      "serialized_vias": 0,
+      "status": "OPEN_PHYSICAL_AND_TRANSIENT_VALIDATION"
+    },
+    "BRIDGE_1V1": {
+      "nominal_v": 1.1,
+      "design_load_a": 1.0,
+      "regulator_authority_a": 6.0,
+      "utilization_percent": 16.66666667,
+      "nominal_effective_cap_uF": 316.8,
+      "tolerance_floor_effective_cap_uF": 253.44,
+      "conservative_screen_uF": 300.0,
+      "screen_deficit_uF": 46.56,
+      "screen_deficit_percent": 15.52,
+      "serialized_segments": 0,
+      "serialized_vias": 0,
+      "status": "OPEN_CAPACITANCE_PHYSICAL_AND_TRANSIENT_VALIDATION"
+    },
+    "POWER_GND": {
+      "pads": 325,
+      "segments": 47,
+      "vias": 17,
+      "zones": 3,
+      "impedance_equation": "Vbounce = I * Zreturn",
+      "missing": ["extracted return impedance", "ground bounce evidence", "high-current return continuity"],
+      "status": "OPEN"
+    },
+    "protection_control_and_shutdown": {
+      "LM74700_input_range_v": [3.2, 65.0],
+      "TVS_standoff_v": 18.0,
+      "TVS_clamp_v": 29.2,
+      "transient_energy_equation": "E = integral(V(t) * I(t) dt)",
+      "missing": ["declared transient waveform", "source impedance", "fuse I2t", "MOSFET SOA", "UV/OV thresholds", "enable/reset/brownout timing", "hardware clamp measurement"],
+      "status": "OPEN_SYSTEM_VALIDATION"
+    },
+    "transient_model": {
+      "equation": "deltaV ~= deltaI * ESR + Lloop * dI/dt + deltaV_control",
+      "missing": ["V100/SXM2 step amplitude", "slew", "harness/package inductance", "PDN impedance", "capacitor ESR/ESL over bias and temperature", "converter loop response"],
+      "status": "CONFIDENCE_LIMIT_ONLY"
+    }
+  },
+  "legacy_disposition": {
+    "v100_300_w": "historical NVIDIA maximum/stress reference; not a binding Rev-A current requirement",
+    "preliminary_330_w": "superseded preliminary budget; not a binding Rev-A peak requirement",
+    "preliminary_28_5_a_34_3_a": "historical design allowances; do not widen copper or relax connector evidence"
+  },
+  "validation_limits": [
+    "no hardware result",
+    "no V100 load-step waveform",
+    "no exact mating harness qualification",
+    "Branch-B and bridge-rail copper remain physically open",
+    "return, PDN, static IR drop, transient droop, thermal and sequencing evidence remain open"
+  ],
+  "sources": {
+    "molex_exact_application_spec": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/438/43879/PS-43879-001-001.pdf",
+    "molex_generic_part_page": "https://www.molex.com/ja-jp/products/part-detail/39300020",
+    "private_librarian_brief_sha256": "eabb119fee38a4d4efd97744f85cc31594aa0efac7c38754aa944a4b64558542",
+    "private_researcher_sack_sha256": "e3f8bc9c2e588f38caddc8166f405b399f5a5ff3afff6419c491888984610368",
+    "phase5_calculations_sha256": "82c34b6a4b2b4878f7e74c7f7873ad68ba4d10ebfa6a7c33d742fa2a632b60e6",
+    "phase5_network_spec_sha256": "9e29ef646d4af5199a9e745a0fe8d6a140144acc67540c5956b98d0579e446df"
+  },
+  "signature": {
+    "method": "role-signed project decision plus SHA-256 manifest",
+    "signer_role": "Power Authority",
+    "requires_new_version_for_change": true
+  }
+}

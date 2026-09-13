@@ -934,4 +934,4 @@ power acceptance rows remain OPEN.
 
 - 2026-09-14: Power-envelope reassessment narrowed Issue #2 to the product/architecture decisions for continuous and peak current; exact selected Mini-Fit branch limits and all A/B/C field evidence are retained in `validation-receipts/power-envelope-reassessment-20260914/`.
 
-- 2026-09-14: Power Authority bound `PISXME-REV-A-POWER-ENVELOPE-001` v1.0.0 at 250 W / 25.25 A total with dual 13 A branch limits; all nine fields are A/B/C with no indispensable D, and the signed/versioned receipt is retained under `validation-receipts/power-envelope-authority-20260914/`. This decision does not close physical routing, PDN, thermal, load-step, or hardware evidence.
+- 2026-09-14: Power Authority superseded v1.0.0 after exact Molex `PS-43879-001-001` application evidence; controlling v1.1.0 retains indispensable D fields `continuous_current` and `peak_current`, and makes no unsupported 13 A / 25.25 A binding. The receipt and source conflict are retained under `validation-receipts/power-envelope-authority-20260914/`; physical routing, PDN, thermal, load-step, and hardware evidence remain open.
