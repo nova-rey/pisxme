@@ -900,3 +900,5 @@ The bounded `P24-ERC-COVERAGE` package completed against tested head `cd9b127223
 ## 2026-09-13 — Current-head library and package mapping package
 
 The bounded P24-LIBRARY-PACKAGE audit recorded current-head project-library and non-J1 footprint/pad evidence under `validation-receipts/library-package-current-head-20260913/`. Across 130 non-J1 PCB instances, 115 resolve to exact project-local footprint files, two use the declared Package_SON system-library reference, and 13 probe-only testpoints remain embedded and BOM/position-excluded without a project TestPoint source entry. Electrical pad identifiers match local project sources; four F1/F2/J5/J6 groups omit only source MP1 non-plated mechanical pads. U12's existing 0.40-vs-0.50-mm package conflict and U11 production land-pattern review remain open; no CAD or table mutation was made.
+
+- 2026-09-13: P24-LIBRARY-PACKAGE closed with current-head mapping evidence; U12/U11 context gaps remain open.
