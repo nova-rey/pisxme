@@ -672,3 +672,11 @@ move C30-C33 as a coherent vertical cohort, relocate F2/D2, preserve all
 anchors and validated high-speed copper, and reserve explicit storage and
 Branch-B corridors. A single isolated producer must implement this plan;
 structural contradiction returns to MPA and does not authorize variant search.
+
+## 2026-09-13 — Phase 24 regulator overlay audit retained
+
+A read-only Light geometry audit compared U3/U4/U5 support placement and
+VIN/VOUT/FB/RT/PG corridors against the approved regulator reference layout.
+U3 is locally placed; U4/U5 support is stranded and their bridge rails have
+no serialized tracks/vias. The row remains open and the retained artifact is
+not a closure claim.
