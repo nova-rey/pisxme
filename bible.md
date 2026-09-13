@@ -12726,3 +12726,11 @@ covering 292 storage-island pads and 26 required endpoints. The corrected
 `U14.4 -> U13.9` branch is explicitly retained as OPEN in
 `validation-receipts/patha-native-storage-census-f3d09c3c/`; the integrated
 Path-A route remains incomplete.
+
+## 2026-09-13 — Phase 24 duplicate POWER_GND via producer
+
+An isolated producer from `5a34b9a0` removed one geometrically duplicate
+`POWER_GND` via while retaining its identical same-net mate. Light DRC improved
+312→311 with unconnected items unchanged at 499 and no collateral family
+changes or shorts. Receipt and raw report are retained under
+`validation-receipts/`; canonical integration remains pending.
