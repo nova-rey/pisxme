@@ -491,7 +491,13 @@
       "attempt_state": {},
       "base_sha": "dd4b2c80",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "dd4b2c80",
+        "returned_at": "2026-09-13T23:01:39.595134Z",
+        "returned_by": "sup_power_envelope_architecture",
+        "sha": "dd4b2c80785ca1fc82c84bd0da48ff612147690a"
+      },
       "completion_criterion": "Versioned Power Authority decision gives connector/harness topology, branch limits, derating, protection, current sharing/fault policy, transient/load-step bounds, and numeric corridor inputs sufficient to unblock a future integrated producer.",
       "created_at": "2026-09-13T22:56:56.524363Z",
       "dependencies": [
@@ -506,7 +512,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-ENVELOPE-AUTHORITY-REDESIGN",
       "notes": "Product decision resolves missing envelope authority; integrated corridor remains hpq:#2 waiting.",
-      "owner": "sup_power_envelope_architecture",
+      "owner": "root",
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -528,15 +534,70 @@
       "session_ids": [
         "root-power-arch-20260914"
       ],
-      "status": "RUNNING",
+      "status": "VALIDATING",
       "title": "Bind a 300 W / 330 W qualified input and protection architecture",
-      "updated_at": "2026-09-13T22:57:05.935490Z",
+      "updated_at": "2026-09-13T23:01:39.642591Z",
       "validation": {
         "required": [],
         "results": {}
       },
       "waiting_on": [],
       "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {},
+      "base_sha": "61b45be3",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": {
+        "artifact": null,
+        "base_sha": "61b45be3",
+        "returned_at": "2026-09-13T23:05:06.492699Z",
+        "returned_by": "sup_baseline_reproduce",
+        "sha": "811eafd7"
+      },
+      "completion_criterion": "Receipt reproduces baseline once in a clean worker and proves effective project/rule/library context, distinguishing rule-context findings from physical findings.",
+      "created_at": "2026-09-13T23:00:05.741963Z",
+      "dependencies": [
+        "package:P24-FOUNDATIONAL-SYNTHESIS"
+      ],
+      "domain": "KiCad Light validation",
+      "edit_boundaries": [
+        "read-only validation checkout",
+        "no CAD edits or rule changes"
+      ],
+      "evidence_refs": [
+        "validation-receipts/baseline-reproduce-61b45be3-20260913/RECEIPT.md"
+      ],
+      "id": "P24-BASELINE-REPRODUCE",
+      "notes": "First execution stage; no bulk repair.",
+      "owner": null,
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "baseline_reproduction",
+        "rule_context",
+        "native_drc",
+        "native_erc"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Clean-checkout reproduction of selected schematic/PCB with pinned KiCad Light image, project libraries and rules; capture commands, versions, hashes, return codes and native ERC/DRC/connectivity census.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Reproduce selected integrated baseline in a clean Light worker",
+      "updated_at": "2026-09-13T23:05:06.578455Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "validation-baseline"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -551,5 +612,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-13T22:57:05.935556Z"
+  "updated_at": "2026-09-13T23:05:06.578545Z"
 }

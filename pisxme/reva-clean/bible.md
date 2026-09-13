@@ -953,3 +953,7 @@ The thermal/mechanics specialist receipt is now part of the invariant audit evid
 J1 package/net authority, firmware/provenance, SI/fabrication, and thermal/mechanics packets are now validated scoped evidence. The remaining HPQ-dependent integrated corridor stays parked, while a separate Power Authority package is active to bind an input architecture for the product envelope.
 
 - 2026-09-13: P24-BASELINE-REPRODUCE reproduced the exact `61b45be3` selected integrated baseline in a clean qualified KiCad Light worker (`sha256:37d60e...` / KiCad 10.0.6). Native ERC reports 293 findings, DRC reports 300 violations and 499 unconnected items with zero reported shorting-items, Path-A native census reports 11/26 endpoint pairs closed and 15 open, and schematic/pad ownership parity remains 814/1262/0. Raw commands, return codes, hashes, and context evidence are retained under `validation-receipts/baseline-reproduce-61b45be3-20260913/`; no CAD or rule mutation occurred.
+
+## 2026-09-14 — Clean baseline reproduced; power authority candidate under correction
+
+The exact-head Light baseline was reproduced in a clean worker at KiCad 10.0.6 with the pinned image, yielding 293 ERC findings, 300 DRC violations, 499 unconnected items, 0 reported shorting items, 814/1262 parity, and 15 open Path-A pairs. The six-loop power architecture candidate is retained as provisional evidence pending Power Authority corrections and exact connector/harness qualification.
