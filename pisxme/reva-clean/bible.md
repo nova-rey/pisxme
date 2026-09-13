@@ -522,3 +522,11 @@ Canonical head `ea10ab42` retains the duplicate `JMS_AVDDL` via removal. Fresh
 Light validation reports ERC `296 findings / 0 errors` and DRC `305 violations /
 499 unconnected`; only duplicate-hole findings reduced, with no shorts or
 collateral family changes. Phase 24 remains open.
+
+## 2026-09-13 — Phase 24 branch-B route rejected
+
+A bounded single-branch-B `12V_IN_B` route from J6.1 to F2.1 was tested from
+`d7f0455b` and rejected after Light DRC found a real J6.2 `POWER_GND` to
+`12V_IN_B` short. Raw evidence is retained under
+`validation-receipts/power-branchb-single-rejected-20260913/`; canonical copper
+was unchanged.
