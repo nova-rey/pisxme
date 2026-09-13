@@ -2,7 +2,7 @@
   "decision_id": "PISXME-REV-A-POWER-ENVELOPE-001",
   "candidate_version": "2.2.0-candidate",
   "base_source_sha": "90420b83b7b67f5b6f7ed0f5a2cae220e1bead8d7d81013d5be264690fc73c9f",
-  "status": "CANDIDATE_READY_FOR_POWER_AUTHORITY_SIGNATURE",
+  "status": "CONDITIONALLY_SIGNED_NUMERICAL_ARCHITECTURE",
   "cad_modified": false,
   "scope": "source/contact/harness/protection/distribution authority; no CAD or routing",
   "supersedes": {
@@ -55,8 +55,8 @@
     "source_peak_a": 45.0,
     "source_peak_interval_ms": 100.0,
     "protected_bus_drop_max_v": {
-      "sustained": 0.25,
-      "peak": 0.35
+      "sustained": 0.35,
+      "peak": 0.4
     },
     "connector_housings": 6,
     "dc_power_loops": 6,
@@ -86,7 +86,7 @@
         "current_basis_a": 6.4
       }
     },
-    "source_requirement_class": "C/D internal PiSXMe interface requirement pending source/procurement authority",
+    "source_requirement_class": "C",
     "terminal_material": "phosphor bronze (selected 5556 terminal class; tin-plated interface per exact assembly record)",
     "connector_specification_revision": "B1",
     "connector_specification_date": "2026-03-24"
@@ -128,11 +128,11 @@
     "v100_endpoint_waveform_class": "F",
     "protected_bus_window_v": {
       "sustained": [
-        11.15,
+        11.05,
         12.6
       ],
       "peak": [
-        11.05,
+        11.0,
         12.6
       ]
     }
@@ -170,9 +170,19 @@
     "authority-inventory/primary-docs/power/MOLEX_0039300020_AUTHORITY.md",
     "PHASE5_POWER_CALCULATIONS.md",
     "PHASE5_POWER_NETWORK_SPEC.md",
-    "validation-receipts/power-return-census-current-a56b4399-20260913/RECEIPT.md"
+    "validation-receipts/power-return-census-current-a56b4399-20260913/RECEIPT.md",
+    "private Library brief c27ee33f: molex-5556-ps004-v21-20260913"
   ],
-  "signature": null,
+  "signature": {
+    "authority": "Power Authority",
+    "status": "CONDITIONAL",
+    "basis": "V2.2 corrected six-loop/drop-budget architecture",
+    "conditions": [
+      "exact Molex PDF byte hash unavailable; Library preserves URL/revision/ECM and records no substitute hash",
+      "Package Authority must qualify exact mating assembly before CAD implementation"
+    ],
+    "signed_at": "2026-09-14"
+  },
   "correction_basis": [
     "Power Authority review: six actual power/return loops",
     "Molex PS-5556-004-001 Rev B1 applies to 5569 header",
@@ -180,5 +190,16 @@
     "drop budget partitions harness/connector/protection/PCB/common bus",
     "authority classes normalized to single primary class",
     "Separate 0.350 V sustained and 0.400 V peak drop allocations use 5.8 A/6.4 A branch bases and explicit resistance equivalents; protected-bus minima revised accordingly."
-  ]
+  ],
+  "provenance_condition": {
+    "source_pdf_hash": null,
+    "reason": "Direct NYX fetch returned non-equivalent response; no substitute hash claimed",
+    "library_brief": "private Library/briefs/molex-5556-ps004-v21-20260913.md",
+    "library_commit": "c27ee33f",
+    "terminal_parts": [
+      "39000079",
+      "39000080"
+    ],
+    "terminal_material": "phosphor bronze; tin plating"
+  }
 }

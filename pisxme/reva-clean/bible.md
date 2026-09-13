@@ -961,3 +961,7 @@ The exact-head Light baseline was reproduced in a clean worker at KiCad 10.0.6 w
 ## 2026-09-14 — Power envelope drop-budget correction
 
 The V2.2 power-envelope candidate separates sustained and peak drop budgets using explicit branch-current bases and identifies Molex PS-5556-004-001 Rev B1 and the phosphor-bronze 5556 terminal class. Its source PDF byte hash remains a Librarian provenance item; no CAD implementation is authorized until the authority signature and Package Authority qualification close.
+
+## 2026-09-14 — Conditional power authority and qualification split
+
+Power Authority conditionally signed the corrected six-loop numerical architecture. The exact Molex PDF byte hash is unavailable and is recorded without substitution; Librarian indexed revision, ECM, terminal material and part numbers in the private Library. Exact connector/harness qualification is now a separate queued package; integrated HPQ corridor work remains parked.
