@@ -550,3 +550,10 @@ Fresh Light `kicadxml` netlist export and schematic-to-PCB pad audit at
 `98137ff5` passed: 814 authoritative schematic nodes, 1,262 PCB pads, and
 zero expected-pad mismatches. Exclusion and alias counts are retained in the
 receipt; full surplus-pad and physical-connectivity acceptance remains open.
+
+## 2026-09-13 — Phase 24 exact campaign-head bookkeeping
+
+Campaign metadata is rebound to current head `48134169`. The head contains
+only the fresh parity receipt and acceptance bookkeeping after validated CAD
+head `522b1bff`; schematic, PCB, rules, and libraries are unchanged. Phase 24
+acceptance remains open.
