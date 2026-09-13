@@ -646,3 +646,12 @@ A normal-width F.Cu dogleg for one Path A SATA pair was rejected after Light
 DRC rose 302→313 with six added clearance and five solder-mask findings and no
 connectivity reduction. Raw evidence is retained under
 `validation-receipts/storage-pair3-rejected-20260913/`.
+
+## 2026-09-13 — Phase 24 routing authority blocker recorded
+
+After multiple distinct bounded routing classes failed by real shorts or
+collateral DRC, the remaining integrated storage/power closure requires a new
+authority-reviewed physical corridor hypothesis. The precise blocker,
+evidence,
+and resumption conditions are recorded in
+`PHASE24_BLOCKED_ROUTING_AUTHORITY_20260913.md`; Phase 25 remains prohibited.
