@@ -724,3 +724,5 @@ integrated ERC acceptance row remains open.
 - 2026-09-13: retained exact-pad KiCad 10.0.6 retry as rejected (760 DRC, 499 unconnected, 22 shorts); scoped connectivity does not override native legality.
 
 - 2026-09-13: native single-branch discriminating experiment produced no route artifact; runtime capability insufficient, not physical impossibility.
+
+- 2026-09-13: qualified Heavy launched pcbnew but produced no native route artifact; interactive control tooling remains unavailable.

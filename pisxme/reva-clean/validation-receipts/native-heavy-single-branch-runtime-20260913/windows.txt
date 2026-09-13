@@ -1,0 +1,60 @@
+--- i=1 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=2 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=3 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=4 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=5 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=6 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=7 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=8 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=9 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=10 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=11 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=12 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=13 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=14 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=15 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=16 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=17 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=18 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=19 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=20 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=21 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=22 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=23 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=24 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=25 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=26 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=27 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=28 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=29 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
+--- i=30 ---
+/workspace/output/gui_probe.sh: line 12: xwininfo: command not found
