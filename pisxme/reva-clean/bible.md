@@ -762,3 +762,5 @@ The receipt distinguishes work waiting on MPA storage/power geometry from
 independent ERC-source, provenance/SI, Ethernet-edge authority, and BOM/model
 preparation lanes. It does not close any acceptance row or authorize another
 speculative route variant.
+
+- 2026-09-13: Independent DFM/assembly census retained in `validation-receipts/dfm-independent-census-20260913/RECEIPT.md`; assembly release artifacts remain open and disjoint from MPA storage/power work.
