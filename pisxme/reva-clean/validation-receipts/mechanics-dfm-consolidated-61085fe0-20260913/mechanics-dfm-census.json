@@ -1,0 +1,767 @@
+{
+  "receipt": "Phase 24 mechanics / 3D / assembly / DFM consolidated package",
+  "generated_utc": "2026-09-13T20:47:00Z",
+  "state": "DONE_PACKAGE_EVIDENCE_OPEN_ACCEPTANCE",
+  "source": {
+    "repository": "nova-rey/pisxme",
+    "branch": "reva-clean",
+    "commit": "61085fe0",
+    "pcb": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+    "pcb_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+    "schematic": "PiSXMe_RevA_Clean.kicad_sch",
+    "schematic_sha256": "6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1",
+    "rules": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru",
+    "rules_sha256": "d5473e6262fdf3b53d5de051626f0ed76dedf7257ba591f79ab8ad55f5b411ec"
+  },
+  "toolchain": {
+    "workstream": "mech-dfm-current-61085fe0c",
+    "candidate_commit": "61085fe076d83e356900ce8703e773308fb2397f",
+    "image": "pisxme-kicad-light:v1",
+    "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9"
+  },
+  "native_drc": {
+    "return_code": 5,
+    "violations": 300,
+    "unconnected_items": 499,
+    "shorting_items": 0,
+    "classes": {
+      "clearance": 138,
+      "copper_edge_clearance": 15,
+      "courtyards_overlap": 6,
+      "pth_inside_courtyard": 5,
+      "track_dangling": 9,
+      "track_width": 118,
+      "tracks_crossing": 2,
+      "via_dangling": 7
+    },
+    "raw": "current-drc.json",
+    "raw_sha256": "bbdc9d730ed103ed7f923040e16aae848126e5fbffccce8c412f5f52f69bb359"
+  },
+  "mechanical_drc": {
+    "courtyards_overlap": 6,
+    "pth_inside_courtyard": 5,
+    "copper_edge_clearance": 15,
+    "mechanical_items": [
+      {
+        "description": "Courtyards overlap",
+        "items": [
+          {
+            "description": "Footprint C7",
+            "pos": {
+              "x": 65.0,
+              "y": 168.5
+            },
+            "uuid": "0045f9cc-0afc-4ab8-8c03-202f55e66bc3"
+          },
+          {
+            "description": "Footprint C8",
+            "pos": {
+              "x": 65.0,
+              "y": 170.5
+            },
+            "uuid": "0ed87e57-80a6-4ba0-be22-0955eff82175"
+          }
+        ],
+        "severity": "error",
+        "type": "courtyards_overlap"
+      },
+      {
+        "description": "Courtyards overlap",
+        "items": [
+          {
+            "description": "Footprint J3",
+            "pos": {
+              "x": 220.0,
+              "y": 165.0
+            },
+            "uuid": "0ffa76e3-a771-5729-955f-1770a4ad1896"
+          },
+          {
+            "description": "Footprint MECH_M2_2280",
+            "pos": {
+              "x": 260.0,
+              "y": 160.0
+            },
+            "uuid": "7e566239-95b1-4fd4-9b2a-f6833f5766ea"
+          }
+        ],
+        "severity": "error",
+        "type": "courtyards_overlap"
+      },
+      {
+        "description": "Courtyards overlap",
+        "items": [
+          {
+            "description": "Footprint J8",
+            "pos": {
+              "x": 245.0,
+              "y": 150.0
+            },
+            "uuid": "50dea3ba-2b8a-5278-8404-ba8950c0dd63"
+          },
+          {
+            "description": "Footprint MECH_M2_2280",
+            "pos": {
+              "x": 260.0,
+              "y": 160.0
+            },
+            "uuid": "7e566239-95b1-4fd4-9b2a-f6833f5766ea"
+          }
+        ],
+        "severity": "error",
+        "type": "courtyards_overlap"
+      },
+      {
+        "description": "Courtyards overlap",
+        "items": [
+          {
+            "description": "Footprint J7",
+            "pos": {
+              "x": 35.0,
+              "y": 130.0
+            },
+            "uuid": "82632e33-bd63-4073-bc6f-2e670c3ea0da"
+          },
+          {
+            "description": "Footprint C14",
+            "pos": {
+              "x": 70.0,
+              "y": 120.0
+            },
+            "uuid": "9f9347b9-9fcc-4b63-893e-dd0de8a9c6f1"
+          }
+        ],
+        "severity": "error",
+        "type": "courtyards_overlap"
+      },
+      {
+        "description": "Courtyards overlap",
+        "items": [
+          {
+            "description": "Footprint C5",
+            "pos": {
+              "x": 52.0,
+              "y": 163.0
+            },
+            "uuid": "d199dc9d-b8df-42a7-aa85-fc49b4bc7617"
+          },
+          {
+            "description": "Footprint C6",
+            "pos": {
+              "x": 52.0,
+              "y": 165.25
+            },
+            "uuid": "d9931280-5064-4f63-b7d0-1aa1ca4c768b"
+          }
+        ],
+        "severity": "error",
+        "type": "courtyards_overlap"
+      },
+      {
+        "description": "Courtyards overlap",
+        "items": [
+          {
+            "description": "Footprint L10",
+            "pos": {
+              "x": 142.0,
+              "y": 130.0
+            },
+            "uuid": "d56a22f3-01f7-5102-a7b1-485ffbeeb59e"
+          },
+          {
+            "description": "Footprint U11",
+            "pos": {
+              "x": 140.0,
+              "y": 135.0
+            },
+            "uuid": "fd605012-369a-5bde-adc3-85653b69c122"
+          }
+        ],
+        "severity": "error",
+        "type": "courtyards_overlap"
+      },
+      {
+        "description": "PTH inside courtyard",
+        "items": [
+          {
+            "description": "PTH pad M2 [<no net>] of J3",
+            "pos": {
+              "x": 230.35,
+              "y": 163.5
+            },
+            "uuid": "90df0bc8-d3b6-413c-87e1-477ee5379ec8"
+          },
+          {
+            "description": "Footprint MECH_M2_2280",
+            "pos": {
+              "x": 260.0,
+              "y": 160.0
+            },
+            "uuid": "7e566239-95b1-4fd4-9b2a-f6833f5766ea"
+          }
+        ],
+        "severity": "error",
+        "type": "pth_inside_courtyard"
+      },
+      {
+        "description": "PTH inside courtyard",
+        "items": [
+          {
+            "description": "PTH pad 1 [FORCE_SATA] of J8",
+            "pos": {
+              "x": 243.73,
+              "y": 148.73
+            },
+            "uuid": "553ad0fa-88ab-5ec8-8e98-9ae32ca9b6df"
+          },
+          {
+            "description": "Footprint MECH_M2_2280",
+            "pos": {
+              "x": 260.0,
+              "y": 160.0
+            },
+            "uuid": "7e566239-95b1-4fd4-9b2a-f6833f5766ea"
+          }
+        ],
+        "severity": "error",
+        "type": "pth_inside_courtyard"
+      },
+      {
+        "description": "PTH inside courtyard",
+        "items": [
+          {
+            "description": "PTH pad 2 [AUTO_PEDET] of J8",
+            "pos": {
+              "x": 246.27,
+              "y": 148.73
+            },
+            "uuid": "8764a00e-52c7-52d1-a819-3d3983d940e5"
+          },
+          {
+            "description": "Footprint MECH_M2_2280",
+            "pos": {
+              "x": 260.0,
+              "y": 160.0
+            },
+            "uuid": "7e566239-95b1-4fd4-9b2a-f6833f5766ea"
+          }
+        ],
+        "severity": "error",
+        "type": "pth_inside_courtyard"
+      },
+      {
+        "description": "PTH inside courtyard",
+        "items": [
+          {
+            "description": "PTH pad 3 [FORCE_NVME] of J8",
+            "pos": {
+              "x": 243.73,
+              "y": 151.27
+            },
+            "uuid": "fd09bd27-f2cc-5ff5-80bb-c290903c12a2"
+          },
+          {
+            "description": "Footprint MECH_M2_2280",
+            "pos": {
+              "x": 260.0,
+              "y": 160.0
+            },
+            "uuid": "7e566239-95b1-4fd4-9b2a-f6833f5766ea"
+          }
+        ],
+        "severity": "error",
+        "type": "pth_inside_courtyard"
+      },
+      {
+        "description": "PTH inside courtyard",
+        "items": [
+          {
+            "description": "PTH pad 4 [MODE_IN] of J8",
+            "pos": {
+              "x": 246.27,
+              "y": 151.27
+            },
+            "uuid": "1ec60485-65bb-5dc8-8e64-00ffcaec9f18"
+          },
+          {
+            "description": "Footprint MECH_M2_2280",
+            "pos": {
+              "x": 260.0,
+              "y": 160.0
+            },
+            "uuid": "7e566239-95b1-4fd4-9b2a-f6833f5766ea"
+          }
+        ],
+        "severity": "error",
+        "type": "pth_inside_courtyard"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Track [CM5_5V] on F.Cu, length 16.0000 mm",
+            "pos": {
+              "x": 83.0,
+              "y": 164.0
+            },
+            "uuid": "0f93320f-3366-4843-a2c6-beb120668371"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Track [CM5_5V] on F.Cu, length 10.1771 mm",
+            "pos": {
+              "x": 63.65,
+              "y": 170.5
+            },
+            "uuid": "4cc4a06d-b827-4c19-b8ed-579084228c7d"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Track [CM5_5V] on F.Cu, length 5.0000 mm",
+            "pos": {
+              "x": 83.0,
+              "y": 180.0
+            },
+            "uuid": "c16d6ab9-0b0f-483c-a6a3-383270f3c4b4"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Track [CM5_5V] on F.Cu, length 3.5000 mm",
+            "pos": {
+              "x": 78.0,
+              "y": 180.0
+            },
+            "uuid": "c2017f5e-435d-45fc-9885-bf50c7496367"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Via [CM5_5V] on F.Cu - B.Cu",
+            "pos": {
+              "x": 60.0,
+              "y": 180.0
+            },
+            "uuid": "4a9f86c7-ed2e-49c5-9a07-99ecfd105fd5"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Via [CM5_5V] on F.Cu - B.Cu",
+            "pos": {
+              "x": 78.0,
+              "y": 180.0
+            },
+            "uuid": "d0e5327d-a8c1-4708-8dc9-0f0eb64d0813"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Track [CM5_5V] on B.Cu, length 18.0000 mm",
+            "pos": {
+              "x": 60.0,
+              "y": 180.0
+            },
+            "uuid": "ff85e063-11fa-4fb0-9cd8-6d62202665c2"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Pad 1 [ETH_CT4] of C51 on F.Cu",
+            "pos": {
+              "x": 231.2,
+              "y": 180.0
+            },
+            "uuid": "33bcab62-38a8-4261-9a64-29d9a2faf0ad"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Pad 2 [ETH_CT_BRANCH_4] of C51 on F.Cu",
+            "pos": {
+              "x": 232.8,
+              "y": 180.0
+            },
+            "uuid": "72f05cdf-68cb-4cc6-9073-d5d6fc2861c7"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Pad 1 [ETH_CT3] of C50 on F.Cu",
+            "pos": {
+              "x": 227.2,
+              "y": 180.0
+            },
+            "uuid": "6ca94caf-da47-44dc-9fab-255f6690d0a5"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Pad 2 [ETH_CT_BRANCH_3] of C50 on F.Cu",
+            "pos": {
+              "x": 228.8,
+              "y": 180.0
+            },
+            "uuid": "de02b4d3-030f-4f88-84fe-12f58ecb8274"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Pad 1 [ETH_CT2] of C49 on F.Cu",
+            "pos": {
+              "x": 223.2,
+              "y": 180.0
+            },
+            "uuid": "e668a639-bb6d-4b4e-89c8-16ce66d3ff89"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Pad 2 [ETH_CT_BRANCH_2] of C49 on F.Cu",
+            "pos": {
+              "x": 224.8,
+              "y": 180.0
+            },
+            "uuid": "408bc3ce-9953-4ff1-82c4-6db30e6ab1f2"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Pad 1 [ETH_CT1] of C48 on F.Cu",
+            "pos": {
+              "x": 219.2,
+              "y": 180.0
+            },
+            "uuid": "df3279d0-54fa-4253-8650-3870cce6a7bd"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      },
+      {
+        "description": "Board edge clearance violation (board setup constraints edge clearance 0.5000 mm; actual 0.0000 mm)",
+        "items": [
+          {
+            "description": "Rectangle on Edge.Cuts",
+            "pos": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "uuid": "67eeb643-57ba-4669-8067-6af36e922ead"
+          },
+          {
+            "description": "Pad 2 [ETH_CT_BRANCH_1] of C48 on F.Cu",
+            "pos": {
+              "x": 220.8,
+              "y": 180.0
+            },
+            "uuid": "11d6ff8a-3147-40b7-91ad-d1e3b419206a"
+          }
+        ],
+        "severity": "error",
+        "type": "copper_edge_clearance"
+      }
+    ]
+  },
+  "geometry_evidence": {
+    "mechanical_model_census": "mechanical-census.txt",
+    "mechanical_model_census_basis_commit": "3a811eac8283187e53ce395ad833274bb5a246c7",
+    "mechanical_model_census_board_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+    "footprints": 131,
+    "with_3d_models": 3,
+    "without_3d_models": 128,
+    "envelope": "mechanics-envelope.txt",
+    "envelope_basis_commit": "0b65731e-20260913",
+    "board_edges_mm": [
+      -0.05,
+      -0.05,
+      300.05,
+      180.05
+    ]
+  },
+  "authority_basis": [
+    {
+      "path": "authority-inventory/PHASE2_AUTHORITY_INVENTORY.md",
+      "disposition": "PHASE2_AUTHORITY_CLOSED; J1 identity closed; M.2/JLC/CM5/MagJack selections recorded"
+    },
+    {
+      "path": "authority-inventory/primary-docs/sxm2/SXM2_74221-101LF_AUTHORITY.md",
+      "disposition": "connector identity closed; local land-pattern overlay and hidden-joint access remain required"
+    },
+    {
+      "path": "authority-inventory/primary-docs/m2-jse/M2_SOCKET_AUTHORITY.md",
+      "disposition": "JAE SM3ZS067U410ABR1000 closed; 2280 datum and assembly details retained"
+    },
+    {
+      "path": "authority-inventory/primary-docs/power/MOLEX_0039300020_AUTHORITY.md",
+      "disposition": "dual 12 V header closed; THT/selective-wave/hand solder path"
+    },
+    {
+      "path": "authority-inventory/primary-docs/power/LITTELFUSE_0297015U_17861650001_AUTHORITY.md",
+      "disposition": "fuse/holder land pattern closed; THT/serviceable; electrical/thermal validation remains open"
+    },
+    {
+      "path": "authority-inventory/primary-docs/mechanics/V100_COOLER_BACKPLATE_AUTHORITY.md",
+      "disposition": "Rev-A cooler/backplate contract closed; proprietary carrier-mounted geometry unavailable and not silently assumed"
+    },
+    {
+      "path": "authority-inventory/primary-docs/jlc/JLC06161H-7628_IMPEDANCE_BASIS.md",
+      "disposition": "six-layer stack closed; fabrication coupon/tolerance evidence remains required"
+    }
+  ],
+  "release_input_audit": [
+    {
+      "path": "Gerbers/fabrication output",
+      "exists": false,
+      "kind": null
+    },
+    {
+      "path": "manufacturing/fab",
+      "exists": false,
+      "kind": null
+    },
+    {
+      "path": "manufacturing/release",
+      "exists": false,
+      "kind": null
+    },
+    {
+      "path": "manufacturing/release/generated",
+      "exists": false,
+      "kind": null
+    },
+    {
+      "path": "manufacturing/release/generated/assembly/PiSXMe-RevA-BOM.csv",
+      "exists": false,
+      "kind": null
+    },
+    {
+      "path": "PiSXMe-RevA-CPL.csv",
+      "exists": false,
+      "kind": null
+    },
+    {
+      "path": "PiSXMe-RevA-Gerbers.zip",
+      "exists": false,
+      "kind": null
+    },
+    {
+      "path": "PiSXMe-RevA-drills.zip",
+      "exists": false,
+      "kind": null
+    },
+    {
+      "path": "assembly-drawings",
+      "exists": false,
+      "kind": null
+    },
+    {
+      "path": "panelization",
+      "exists": false,
+      "kind": null
+    },
+    {
+      "path": "fab-job",
+      "exists": false,
+      "kind": null
+    }
+  ],
+  "dispositions": {
+    "outline_and_anchors": "MEASURED_OPEN: edge-clearance findings remain; no outline/anchor mutation authorized by this package",
+    "courtyard_overlaps": "OPEN: C5/C6, C7/C8, J3/MECH_M2_2280, J8/MECH_M2_2280, J7/C14, L10/U11 require placement/assembly disposition; M.2 envelope is not shrunk",
+    "pth_courtyard": "OPEN: J3 M2 and J8 pads 1-4 intersect the explicit MECH_M2_2280 envelope; no waiver",
+    "edge_clearance": "OPEN: 15 native copper-edge findings require coordinated routing/edge decision; no generic global rule relaxation",
+    "width_clearance_crossing": "OPEN: 118 width, 138 clearance, 2 crossing findings remain; controlled-impedance/high-speed geometry is not widened blindly",
+    "dangling_connectivity": "OPEN: 9 track-dangling + 7 via-dangling and 499 unconnected items remain; physical opens are handled by corridor owner",
+    "models": "OPEN: 128/131 footprints lack 3D model records; required exact model acquisition/geometry verification remains",
+    "bom_and_assembly": "OPEN: current canonical release package lacks regenerable current BOM/CPL/fab/assembly artifacts; TP1-TP13 and MECH_M2_2280 require explicit final disposition; THT and hidden-joint operations require assembly plan",
+    "service_access": "OPEN: cooler/backplate, SSD/cable, connector, fuse replacement and CM5 access require exact package/envelope/assembly evidence",
+    "fabrication": "OPEN: current native DRC is not a fabrication release; no Gerbers/drills/CPL/panel/fab job/package in canonical tree"
+  },
+  "acceptance_rows": {
+    "mechanical_3d_assembly_service": "OPEN",
+    "dfm": "OPEN",
+    "reason": "This package closes the current-state census and explicit dispositions only; no mechanical/DFM PASS or waiver is claimed."
+  },
+  "phase25_gate": "BLOCKED until all required Phase 24 rows close on one exact integrated candidate SHA",
+  "phase26": "PROHIBITED"
+}
