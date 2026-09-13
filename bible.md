@@ -12769,3 +12769,10 @@ An isolated producer from `1192dcfc` removed the final exact duplicate
 `POWER_GND` via in the reviewed cluster. Light DRC improved 307→306 with
 unconnected items unchanged at 499 and no collateral family changes or shorts.
 Receipt and raw report are retained; canonical integration remains pending.
+
+## 2026-09-13 — Phase 24 duplicate JMS_AVDDL via producer
+
+An isolated producer from `2d0dd2da` removed one exact duplicate `JMS_AVDDL`
+via while retaining its same-net mate. Light DRC improved 306→305 with
+unconnected items unchanged at 499 and no collateral family changes or shorts.
+Receipt and raw report are retained; canonical integration remains pending.

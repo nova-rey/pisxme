@@ -21769,14 +21769,7 @@
 		(net "JMS_AVDDL")
 		(uuid "3c6f0361-6420-48c9-8c9e-5e072327c7df")
 	)
-	(via
-		(at 154.5 150.5)
-		(size 0.6)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(net "JMS_AVDDL")
-		(uuid "7065ab8b-11f1-40da-9398-e06ea6537223")
-	)
+
 	(via
 		(at 168 132.6)
 		(size 0.6)
