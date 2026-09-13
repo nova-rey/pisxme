@@ -159,6 +159,36 @@
         "TUSB9261",
         "JMS583"
       ]
+    },
+    {
+      "id": "brief-power-envelope-authority-reassessment-20260913",
+      "kind": "authority-evidence-brief",
+      "path": "Library/briefs/power-envelope-authority-reassessment-20260913.md",
+      "tags": [
+        "PiSXMe",
+        "Phase24",
+        "Branch-B",
+        "power-envelope",
+        "LM74700",
+        "Molex",
+        "current-sharing",
+        "load-step",
+        "authority"
+      ]
+    },
+    {
+      "id": "brief-researcher-power-envelope-gap-20260913",
+      "kind": "researcher-evidence-sack",
+      "path": "Library/briefs/researcher-power-envelope-gap-20260913.md",
+      "tags": [
+        "Phase24",
+        "Branch-B",
+        "power-envelope",
+        "researcher",
+        "evidence-gap",
+        "V100",
+        "Molex"
+      ]
     }
   ]
 }

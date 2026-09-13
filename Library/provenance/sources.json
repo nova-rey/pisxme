@@ -461,6 +461,157 @@
         "does not provide a PiSXMe formatted-image hash or prove a board programming run",
         "download rights and export-gated payload access remain separate"
       ]
+    },
+    {
+      "id": "molex-0039300020-product-20260913",
+      "title": "39-30-0020 / 0039300020 Mini-Fit Jr 2-position right-angle header",
+      "publisher": "Molex",
+      "url": "https://www.molex.com/ja-jp/products/part-detail/39300020",
+      "revision": "Current part-detail page; retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer connector authority",
+      "observed_facts": [
+        "current maximum per contact 13.0 A",
+        "maximum voltage 600 V",
+        "part aliases 39-30-0020 and 0039300020"
+      ],
+      "status": "accessible",
+      "license_disposition": "link and extracted facts only; no page or CAD material copied"
+    },
+    {
+      "id": "ti-lm74700-q1-ds-snosd17g",
+      "title": "LM74700-Q1 Low IQ Reverse Battery Protection Ideal Diode Controller datasheet",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/lm74700-q1.pdf",
+      "revision": "SNOSD17G; revised December 2020; retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer component authority",
+      "observed_facts": [
+        "reverse-current blocking threshold typical -11 mV",
+        "regulated forward drop threshold typical 20 mV",
+        "application section identifies input operating voltage including load dump and nominal/maximum load current as design considerations",
+        "external MOSFET carries high-current path",
+        "LM74700 application section states customer must validate system implementation"
+      ],
+      "status": "accessible",
+      "license_disposition": "citation and extracted facts only; no PDF copied into Library"
+    },
+    {
+      "id": "ti-lm74700-q1-product-20260913",
+      "title": "LM74700-Q1 product page",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/product/LM74700-Q1",
+      "revision": "Current product page; retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer product authority",
+      "observed_facts": [
+        "3.2 V to 65 V input range",
+        "automotive load-dump compatibility feature",
+        "reverse-current blocking and reverse-polarity protection",
+        "operating temperature -40 C to +125 C"
+      ],
+      "status": "accessible",
+      "license_disposition": "link and extracted facts only; no page copied"
+    },
+    {
+      "id": "ti-lm74700-load-sharing-sszt272",
+      "title": "Redundant supply topologies using ideal diode controllers",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/document-viewer/lit/html/SSZT272/GUID-62939FE6-18F2-4234-B7F4-2B0C3AF7590B",
+      "revision": "SSZT272; June 2023; retrieved 2026-09-13",
+      "tier": 2,
+      "evidence_class": "manufacturer engineering article",
+      "observed_facts": [
+        "two LM74700-Q1 controllers can be used for load sharing between multiple supplies",
+        "FET selection affects conduction loss and transient response",
+        "article is topology guidance, not a PiSXMe numeric branch-imbalance specification"
+      ],
+      "status": "accessible",
+      "license_disposition": "link and extracted facts only"
+    },
+    {
+      "id": "ti-csd19536kcs-ds-slps485c",
+      "title": "CSD19536KCS 100-V N-Channel NexFET power MOSFET datasheet",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/csd19536kcs.pdf",
+      "revision": "SLPS485C; revised May 2024; retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer component authority",
+      "observed_facts": [
+        "100 V VDS rating",
+        "2.7 mOhm maximum RDS(on) at VGS=10 V and ID=100 A",
+        "TO-220 package-limited current 150 A on product data",
+        "operating temperature range -55 C to +175 C",
+        "thermal metrics include theta JC 0.4 C/W in datasheet"
+      ],
+      "status": "accessible",
+      "license_disposition": "citation and extracted facts only; no PDF copied"
+    },
+    {
+      "id": "littelfuse-0297015-ato-holder-20260913",
+      "title": "ATO/automotive fuse holder and fuse catalog material",
+      "publisher": "Littelfuse",
+      "url": "https://m.littelfuse.com/~/media/commercial-vehicle/datasheets/automotive-fuse-holders/ato/littelfuse-fuse-holder-ato-flr-pcb-datasheet.pdf",
+      "revision": "Current catalog/datasheet retrieval; retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer protection component authority",
+      "observed_facts": [
+        "catalog table identifies 0297015 as a 15 A ATO fuse option",
+        "holder/fuse rating is not a board current-sharing or transient specification"
+      ],
+      "status": "accessible",
+      "license_disposition": "citation and extracted facts only; no PDF copied"
+    },
+    {
+      "id": "nvidia-v100-datasheet-2019",
+      "title": "NVIDIA Tesla V100 datasheet",
+      "publisher": "NVIDIA Corporation",
+      "url": "private:pisxme/reva-clean/authority-inventory/primary-docs/NVIDIA-Tesla-V100-datasheet.pdf",
+      "revision": "December 2019; local authority copy retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer product authority",
+      "local_sha256": "ca694a4789eae7feb9ce9090f2207cbe82f5da1448922d4855e346680c59d3",
+      "observed_facts": [
+        "maximum power consumption V100 SXM2 300 W",
+        "no rail breakdown or load-step specification in the two-page datasheet"
+      ],
+      "status": "local-authority-copy",
+      "license_disposition": "private authority inventory; do not copy into public development repository"
+    },
+    {
+      "id": "pisxme-phase5-power-envelope-20260830",
+      "title": "PiSXMe Phase 5 power calculation record",
+      "publisher": "PiSXMe project",
+      "url": "private:pisxme/reva-clean/PHASE5_POWER_CALCULATIONS.md",
+      "revision": "checked 2026-08-30; source commit eab799b1f12d8b0cad8a6db31add18576eb8056a",
+      "tier": 3,
+      "evidence_class": "project-derived engineering synthesis",
+      "local_sha256": "82c34b6a4b2b4878f7e74c7f7873ad68ba4d10ebfa6a7c33d742fa2a632b60e6",
+      "observed_facts": [
+        "250 W V100 design envelope at 12 V",
+        "25.25 A calculated total input design envelope including CM5 and bridge loads",
+        "12.81 A minimum per branch under recorded sharing policy",
+        "all values explicitly labelled design assumptions, not measured hardware"
+      ],
+      "status": "active-design-basis",
+      "license_disposition": "private/project-derived record"
+    },
+    {
+      "id": "researcher-power-envelope-gap-20260913",
+      "title": "Researcher evidence sack \u2014 Branch-B power-envelope gaps",
+      "publisher": "PiSXMe Researcher commission",
+      "url": "private:pisxme-library/Library/briefs/researcher-power-envelope-gap-20260913.md",
+      "revision": "session d3dd71d7-b412-435d-8dbb-a12cac7174bd; completed 2026-09-13",
+      "tier": 2,
+      "evidence_class": "bounded evidence acquisition report",
+      "status": "search-limited-gap-report",
+      "observed_facts": [
+        "cached NVIDIA datasheet provides 300 W SXM2 maximum power only",
+        "cached Molex authority note closes identity/mechanics only",
+        "worker lacked live web/search permission",
+        "no field classified D from this limitation"
+      ],
+      "license_disposition": "private metadata and factual gap summary"
     }
   ]
 }
