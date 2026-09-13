@@ -611,3 +611,10 @@ candidate was rejected and raw evidence is retained under
 Removing the isolated 5 mm `FUSED_12V_A` dangling segment did not change DRC
 (302/499) or any violation family, so the candidate was rejected. Raw evidence
 is retained under `validation-receipts/dangling-fused12a-rejected-20260913/`.
+
+## 2026-09-13 — Phase 24 routing blocker reassessment
+
+The bounded routing probes and safe cleanup attempts are consolidated in
+`PHASE24_ROUTING_BLOCKER_REASSESSMENT_20260913.md`. Integrated storage,
+branch-B power, clearance/width, and GATE_B pad-aware routing remain open;
+future work requires a materially new authority-reviewed corridor hypothesis.
