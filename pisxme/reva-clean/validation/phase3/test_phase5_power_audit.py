@@ -39,7 +39,7 @@ def main():
         assert net in power
     for net in ('CM5_5V', 'BRIDGE_3V3', 'BRIDGE_1V1'):
         assert net in regs
-    with tempfile.TemporaryDirectory(prefix='phase5-netlist-', dir=ROOT) as tmp:
+    with tempfile.TemporaryDirectory(prefix='phase5-netlist-') as tmp:
         out = Path(tmp) / 'power.xml'
         result = subprocess.run([
             'kicad-cli', 'sch', 'export', 'netlist',
