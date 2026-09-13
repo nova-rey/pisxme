@@ -471,7 +471,7 @@
     "url": "https://github.com/nova-rey/codex-config-backup/issues/2",
     "label": "hard-blocker",
     "packet": "8f2311db593eb382",
-    "state": "ADMITTED",
+    "state": "ADMITTED_WAITING",
     "waiting_subtree": [
       "storage",
       "power",
@@ -490,6 +490,7 @@
       "dfm",
       "hostile_review_preparation"
     ],
-    "resume_condition": "resolution-ready candidate; reconcile base SHA, integrate through MPA/serialized workflow, fresh Light validation"
+    "resume_condition": "When Issue #2 reaches resolution-ready/external-blocker/terminal state, inspect packet; if resolution-ready reconcile base SHA, integrate through MPA/serialized workflow, then fresh Light validate.",
+    "blocked_reason": "Issue #2 queue runner has remained live without terminal result across repeated bounded turns; all independent acceptance lanes exhausted without promotable changes."
   }
 }
