@@ -591,3 +591,10 @@ A bounded B.Cu dogleg for only `M2_SATA_A_P_PCIE_TXP0` from U13.2 to J3.49 was
 rejected: Light DRC rose 303→309, unconnected items stayed at 499, and four
 width plus two dangling-track findings were added. No shorts occurred; raw
 reports are retained under `validation-receipts/storage-pair2-rejected-20260913/`.
+
+## 2026-09-13 — Phase 24 dangling CM5_5V integration validated
+
+Canonical head `cdd5a381` retains removal of one isolated dangling `CM5_5V`
+segment. Fresh Light validation reports ERC `296 findings / 0 errors` and DRC
+`302 violations / 499 unconnected`; copper-edge-clearance fell by one, with no
+shorts or connectivity-count changes. Phase 24 remains open.
