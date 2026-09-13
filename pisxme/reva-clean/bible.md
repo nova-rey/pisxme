@@ -778,3 +778,7 @@ speculative route variant.
 - 2026-09-13: MPA-authorized native placement producer `1dda0afa` materialized U13/C30-C33/F2/D2 transforms; targeted DRC 391/499 with zero reported shorts. Candidate retained for authority review and not integrated.
 
 - 2026-09-13: Fresh Light validation of the bounded V100 label producer reproduced ERC 293 and native netlist export; candidate remains unpromoted because integrated ERC findings were unchanged.
+
+## 2026-09-13 — MPA AUTO_PEDET corridor producer retained
+
+Retained the bounded MPA-authorized AUTO_PEDET J3.69↔J8.2 producer candidate and rejection receipt under `validation-receipts/mpa-autopedet-corridor-producer-20260913/`. Native connectivity removes that specific open, but DRC remains non-clean (312 violations, 499 unconnected, zero shorts) due to clearance against the existing top POWER_GND zone; candidate is unintegrated and requires MPA disposition.
