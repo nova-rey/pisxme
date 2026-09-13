@@ -862,3 +862,7 @@ After four bounded MPA dispatches and one Unblocker dispatch returned no authori
 ## 2026-09-13 — Hard Problem Queue admission
 
 Submitted the Phase 24 storage/power corridor blocker through the private Hard Problem Queue. Issue #2 in `nova-rey/codex-config-backup` was admitted with `hard-blocker` (packet `8f2311db593eb382`). Only the dependent storage/power subtree is `WAITING_ON #2`; independent acceptance lanes remain active. Resolution-ready candidates must be reconciled against current HEAD and fresh Light-validated before canonical integration.
+
+## 2026-09-13 — Independent SI lane result
+
+Recorded scoped six-layer role closure and the storage USB3 netclass/geometry mismatch under `WAITING_ON #2`. Raw board counts and authority references are retained in `validation-receipts/si-reference-independent-3b70587d-20260913/`; no CAD edits occurred.
