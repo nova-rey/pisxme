@@ -794,3 +794,7 @@ Retained the second bounded MPA authority reassessment and independent DFM probe
 ## 2026-09-13 — Follow-up v3 dispatch status
 
 Recorded a fresh MPA decision dispatch and independent acceptance probe that returned no result within their bounded windows. Both stopped without CAD edits; the campaign remains active and the AUTO_PEDET corridor remains authority-frozen.
+
+## 2026-09-13 — Fresh native netlist regenerated
+
+Regenerated the native KiCad XML netlist from `PiSXMe_RevA_Clean.kicad_sch` at `0d62a8f3` in a fresh qualified Light checkout. Raw output and tool metadata are retained under `validation-receipts/native-netlist-fresh-0d62a8f3-20260913/`; the stale checked-in SATA-era export remains non-authoritative.
