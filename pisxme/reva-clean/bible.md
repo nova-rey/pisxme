@@ -981,3 +981,7 @@ Unblocker reassessment determined the original Issue #2 external power-envelope 
 ## 2026-09-14 — Foundational invariant gate and binding corridor handoff
 
 The Rev A foundational invariant audit is now the governing contract: 300 W sustained and 330 W peak V100 product requirements are Class-C invariants, while the legacy two-branch ~192 W input implementation is superseded where contradictory. PASS/FAIL/UNPROVEN compliance is recorded in PROJECT_INVARIANTS and INVARIANT_COMPLIANCE_MATRIX. A current-HEAD six-loop MPA corridor decision is retained as the sole producer basis; dependent power/storage implementation is RUNNING in the main queue, with no speculative route variants authorized.
+
+## 2026-09-14 — Acceptance-row reconciliation dispatched
+
+The foundational compliance matrix is now being translated into executable closure packages. A queue supervisor is mapping every FAIL and UNPROVEN invariant to an owner, dependency, and required evidence while the bounded six-loop power/storage producer remains active; this is queue reconciliation only and does not authorize CAD rule relaxation or speculative routing.
