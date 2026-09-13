@@ -790,3 +790,7 @@ Recorded bounded MPA reassessment and DFM/mechanics follow-up attempts that retu
 ## 2026-09-13 — Follow-up v2 bounded non-result
 
 Retained the second bounded MPA authority reassessment and independent DFM probe status. Neither produced CAD edits or a decision within the execution window; storage/power geometry remains frozen and no speculative routing was launched.
+
+## 2026-09-13 — Follow-up v3 dispatch status
+
+Recorded a fresh MPA decision dispatch and independent acceptance probe that returned no result within their bounded windows. Both stopped without CAD edits; the campaign remains active and the AUTO_PEDET corridor remains authority-frozen.
