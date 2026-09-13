@@ -906,3 +906,5 @@ The bounded P24-LIBRARY-PACKAGE audit recorded current-head project-library and 
 ## 2026-09-13 — Mechanics/DFM package completed at current head
 
 The bounded mechanics, 3D, assembly/service, and DFM package completed a fresh qualified Light current-head census at `61085fe0`. The selected PCB remains byte-identical at SHA-256 `75d2d370...181bf7c`; native DRC reports 300 violations, 499 unconnected items, and zero shorting items, including six courtyard overlaps, five PTH/courtyard findings, and 15 edge-clearance findings. The consolidated receipt under `validation-receipts/mechanics-dfm-consolidated-61085fe0-20260913/` records explicit open dispositions, authority constraints, missing release inputs and models, and confirms that `mechanical_3d_assembly_service` and `dfm` remain OPEN. No CAD or configuration was modified; Phase 25 remains gated.
+
+- 2026-09-13: P24-MECHANICS-DFM package closed with explicit OPEN DFM/model/release gaps.
