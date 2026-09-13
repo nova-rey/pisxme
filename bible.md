@@ -12734,3 +12734,10 @@ An isolated producer from `5a34b9a0` removed one geometrically duplicate
 312→311 with unconnected items unchanged at 499 and no collateral family
 changes or shorts. Receipt and raw report are retained under
 `validation-receipts/`; canonical integration remains pending.
+
+## 2026-09-13 — Phase 24 second duplicate POWER_GND via producer
+
+An isolated producer from `e0d128eb` removed one additional exact duplicate
+`POWER_GND` via. Light DRC improved 311→310 with unconnected items unchanged
+at 499 and no collateral family changes or shorts. Receipt and raw report are
+retained; canonical integration remains pending.
