@@ -1,6 +1,6 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
-  "candidate": "cdd5a381",
+  "candidate": "47364e6d",
   "toolchain": {
     "kicad": "10.0.6",
     "image": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
@@ -19,21 +19,15 @@
       "id": "native_drc",
       "status": "OPEN",
       "requirement": "0 unintended violations and 0 unconnected required items",
-      "evidence": {
-        "receipt": "validation-receipts/fresh-dangling-cm5-cdd5a381/RECEIPT.md",
-        "candidate": "cdd5a381",
-        "violations": 302,
-        "unconnected_items": 499,
-        "status": "OPEN"
-      },
-      "current": "302 violations / 499 unconnected items; physical DRC remains OPEN"
+      "evidence": "validation-receipts/gateb-integrated-validation-47364e6d-20260913/RECEIPT.md",
+      "current": "300 violations / 499 unconnected; two co-located-hole findings removed; physical DRC remains OPEN"
     },
     {
       "id": "physical_opens_shorts",
       "status": "OPEN",
       "requirement": "no required opens or shorts",
-      "evidence": "validation-receipts/patha-native-storage-census-corrected-20260913/RECEIPT.md",
-      "current": "15 corrected Path-A endpoint pairs open; no integrated closure"
+      "evidence": "validation-receipts/gateb-integrated-validation-47364e6d-20260913/RECEIPT.md",
+      "current": "15 corrected Path-A endpoint pairs open; zero shorting_items in validated candidate"
     },
     {
       "id": "schematic_pad_reference_coverage",
@@ -95,8 +89,8 @@
       "id": "dfm",
       "status": "OPEN",
       "requirement": "manufacturing checks with explicit dispositions",
-      "evidence": "validation-receipts/dfm-silk-body-y10-tp1-20260912/RECEIPT.md; validation-receipts/dfm-silk-body-j5-j6-20260912/RECEIPT.md",
-      "current": "J5/J6/Y10/TP1 silk overlaps removed; courtyard, edge-clearance, model, and assembly gaps remain OPEN"
+      "evidence": "validation-receipts/gateb-integrated-validation-47364e6d-20260913/RECEIPT.md",
+      "current": "Co-located GATE_B via findings removed; clearance, width, courtyard, edge, assembly and model gaps remain OPEN"
     },
     {
       "id": "hostile_review",
