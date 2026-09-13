@@ -415,3 +415,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Performed bounded inspection of `/home/nyx/PiSXMe-succession-archive-20260912`; retained patch and 8.2 GiB untracked tar checksums in a receipt. Archive remains outside Git and is neither restored nor treated as design authority.
 
 - 2026-09-13: Reconciled campaign candidate identity to the last CAD-changing commit `17dd81d2` (residual silk/J1 authority integration); earlier `c8710a84` remains the preceding scoped-rule integration base, not the current PCB head.
+
+- 2026-09-13: Rejected a corrected Path-A storage producer from `c8710a84`: native U13 SATA pads were used, but full Light DRC worsened from 312/499 to 973/499 with 67 shorts and 35 crossings. Focused endpoint coverage cannot override integrated defects; all artifacts are retained under `validation-receipts/patha-storage-corrected-rejected-20260913/`.

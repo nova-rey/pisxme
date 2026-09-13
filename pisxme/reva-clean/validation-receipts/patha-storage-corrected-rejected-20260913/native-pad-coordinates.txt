@@ -1,0 +1,28 @@
+U7 at 96.0 124.0 rot 180.0
+  57 xy= 95.8 127.8 net= BRIDGE_SATA_TX_P layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a17b240> >
+  56 xy= 96.2 127.8 net= BRIDGE_SATA_TX_N layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a17b210> >
+  60 xy= 94.6 127.8 net= BRIDGE_SATA_RX_P layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a17b180> >
+  59 xy= 95.0 127.8 net= BRIDGE_SATA_RX_N layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a17b270> >
+U13 at 180.0 135.0 rot 0.0
+  2 xy= 178.5 132.2 net= M2_SATA_A_P_PCIE_TXP0 layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a17b1e0> >
+  3 xy= 178.5 132.6 net= M2_SATA_A_N_PCIE_TXN0 layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a63c1e0> >
+  6 xy= 178.5 133.8 net= M2_SATA_B_P_PCIE_RXN0 layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f3459c00630> >
+  7 xy= 178.5 134.2 net= M2_SATA_B_N_PCIE_RXP0 layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a17b210> >
+J3 at 220.0 165.0 rot 0.0
+  49 xy= 222.75 159.725 net= M2_SATA_A_P_PCIE_TXP0 layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a63c1e0> >
+  47 xy= 222.25 159.725 net= M2_SATA_A_N_PCIE_TXN0 layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f3459c00630> >
+  41 xy= 220.75 159.725 net= M2_SATA_B_P_PCIE_RXN0 layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a17b240> >
+  43 xy= 221.25 159.725 net= M2_SATA_B_N_PCIE_RXP0 layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a63c1e0> >
+C30 at 123.5 122.0 rot 0.0
+  1 xy= 123.0 122.0 net= TUSB_SATA_TXP layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f3459c00630> >
+  2 xy= 124.0 122.0 net= BRIDGE_SATA_TX_P layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a17b210> >
+C31 at 127.0 122.0 rot 0.0
+  1 xy= 126.5 122.0 net= TUSB_SATA_TXN layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a17b1e0> >
+  2 xy= 127.5 122.0 net= BRIDGE_SATA_TX_N layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f3459c00630> >
+C32 at 130.5 122.0 rot 0.0
+  1 xy= 130.0 122.0 net= TUSB_SATA_RXP layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f3459b97990> >
+  2 xy= 131.0 122.0 net= BRIDGE_SATA_RX_P layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a17b1b0> >
+C33 at 134.0 122.0 rot 0.0
+  1 xy= 133.5 122.0 net= TUSB_SATA_RXN layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f345a17b240> >
+  2 xy= 134.5 122.0 net= BRIDGE_SATA_RX_N layers= <pcbnew.LSET; proxy of <Swig Object of type 'LSET *' at 0x7f3459b97990> >
+existing storage tracks:

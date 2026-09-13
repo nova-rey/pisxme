@@ -186,6 +186,7 @@
       "u12_pitch_conflict": "retained footprint 0.40 mm vs TI RUA0042A 0.50 mm",
       "usb3_route_disposition": "no route promoted pending authority"
     },
+    "patha_storage_corrected_rejected": "validation-receipts/patha-storage-corrected-rejected-20260913/RECEIPT.md",
     "clearance_dfm_probe": {
       "base_commit": "1ea6671211b884e710789fd37f2f8d5186f72a57",
       "receipt": "validation-receipts/clearance-dfm-probe-20260912/RECEIPT.md",
