@@ -818,3 +818,7 @@ Fresh Light export at `52deca04` produced 117 BOM references against 131 PCB ref
 ## 2026-09-13 — Fresh mechanical/model census
 
 A fresh Light footprint census at `3a811eac` found 131 footprints, only 3 with 3D models, and 128 without. Current DRC family counts include 6 courtyard overlaps, 5 PTH-inside-courtyard, and 15 copper-edge-clearance findings. Raw evidence is retained under `validation-receipts/mechanical-model-census-3a811eac-20260913/`.
+
+## 2026-09-13 — Current provenance inventory retained
+
+Recorded a source-bound inventory of Path A bridge/storage authority, isolated RTL9210B Path B evidence, SXM2 J1 authority, and firmware configuration artifacts at `075b557b`. Exact hashes are retained under `validation-receipts/provenance-current-075b557b-20260913/`; no architecture promotion or CAD change occurred.
