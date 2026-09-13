@@ -1,0 +1,119 @@
+[
+  {
+    "net": "BRIDGE_SATA_TX_P",
+    "a": "U7.57",
+    "b": "C30.2",
+    "pass": true
+  },
+  {
+    "net": "BRIDGE_SATA_TX_N",
+    "a": "U7.56",
+    "b": "C31.2",
+    "pass": true
+  },
+  {
+    "net": "BRIDGE_SATA_RX_P",
+    "a": "U7.60",
+    "b": "C32.2",
+    "pass": true
+  },
+  {
+    "net": "BRIDGE_SATA_RX_N",
+    "a": "U7.59",
+    "b": "C33.2",
+    "pass": true
+  },
+  {
+    "net": "TUSB_SATA_TXP",
+    "a": "C30.1",
+    "b": "U13.38",
+    "pass": true
+  },
+  {
+    "net": "TUSB_SATA_TXN",
+    "a": "C31.1",
+    "b": "U13.37",
+    "pass": true
+  },
+  {
+    "net": "TUSB_SATA_RXP",
+    "a": "C32.1",
+    "b": "U13.36",
+    "pass": true
+  },
+  {
+    "net": "TUSB_SATA_RXN",
+    "a": "C33.1",
+    "b": "U13.35",
+    "pass": true
+  },
+  {
+    "net": "M2_SATA_A_P_PCIE_TXP0",
+    "a": "U13.2",
+    "b": "J3.49",
+    "pass": true
+  },
+  {
+    "net": "M2_SATA_A_N_PCIE_TXN0",
+    "a": "U13.3",
+    "b": "J3.47",
+    "pass": true
+  },
+  {
+    "net": "M2_SATA_B_P_PCIE_RXN0",
+    "a": "U13.6",
+    "b": "J3.41",
+    "pass": true
+  },
+  {
+    "net": "M2_SATA_B_N_PCIE_RXP0",
+    "a": "U13.7",
+    "b": "J3.43",
+    "pass": true
+  },
+  {
+    "net": "STORAGE_SEL",
+    "a": "U14.4",
+    "b": "U12.9",
+    "pass": true
+  },
+  {
+    "net": "STORAGE_SEL",
+    "a": "U14.4",
+    "b": "U13.9",
+    "pass": false
+  },
+  {
+    "net": "AUTO_PEDET",
+    "a": "J3.69",
+    "b": "U14.2",
+    "pass": true
+  },
+  {
+    "net": "12V_IN_B",
+    "endpoints": [
+      "J6.1",
+      "F2.1",
+      "F2.2",
+      "F2.3",
+      "F2.4",
+      "U2.3",
+      "C4.2"
+    ],
+    "pass": false
+  },
+  {
+    "net": "FUSED_12V_B",
+    "endpoints": [
+      "F2.5",
+      "F2.6",
+      "F2.7",
+      "F2.8",
+      "D2.1",
+      "U2.6",
+      "Q2.1"
+    ],
+    "pass": false
+  }
+]
+PASS 14 / 17

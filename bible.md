@@ -12792,3 +12792,5 @@ unconnected items, no shorts, and no connectivity-count change. Receipt and
 raw report are retained; canonical integration remains pending.
 
 - 2026-09-13: MPA bounded revision rejected structural-contradiction claim; binding F2/D2 relocation and exact-pad storage/power corridors for one producer attempt.
+
+- 2026-09-13: retained rejected bounded MPA revision producer (782 DRC violations, 499 unconnected, 31 shorts); no structural contradiction established.
