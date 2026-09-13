@@ -711,3 +711,10 @@ Added qualified KiCad system footprint-library entries for Capacitor_SMD and
 Package_TO_SOT_SMD. This source-context correction preserves the project
 footprints and electrical intent; fresh Light ERC/netlist validation is the
 next required check.
+
+## 2026-09-13 — Phase 24 fresh ERC after footprint context correction
+
+Fresh qualified Light ERC on commit 737b8191 reports 293 violations (RC 5),
+removing the three footprint-link findings while preserving the remaining
+warning classes. The result is retained as source-context validation; the
+integrated ERC acceptance row remains open.
