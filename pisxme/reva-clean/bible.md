@@ -565,3 +565,8 @@ Read-only native serialization census confirms `12V_IN_B` and
 `12V_PROTECTED` has six segments and one via. Raw JSON and hashes are retained
 under `validation-receipts/power-return-census-20260913/`; power acceptance
 remains open.
+
+## 2026-09-13 — Phase 24 power census head rebind
+
+Campaign metadata is rebound to current head `c12f5e11`, which adds only the
+read-only power/return census receipt after the last validated CAD candidate.
