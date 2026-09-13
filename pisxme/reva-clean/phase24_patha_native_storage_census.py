@@ -123,7 +123,9 @@ def main():
         ("U11.20", "C83.1", "JMS_AVDDL"),
         ("U14.4", "U12.9", "STORAGE_SEL"),
         ("U14.4", "U13.9", "STORAGE_SEL"),
-        ("J3.69", "U14.2", "AUTO_PEDET"),
+        # AUTO_PEDET is the J3/J8 strap; U14.2 is MODE_IN (see corrected
+        # native netlist/parity audit retained 2026-09-13).
+        ("J3.69", "J8.2", "AUTO_PEDET"),
     ]
     endpoint_results = []
     for left, right, name in required:

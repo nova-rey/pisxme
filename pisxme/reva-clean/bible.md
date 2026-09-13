@@ -726,3 +726,5 @@ integrated ERC acceptance row remains open.
 - 2026-09-13: native single-branch discriminating experiment produced no route artifact; runtime capability insufficient, not physical impossibility.
 
 - 2026-09-13: qualified Heavy launched pcbnew but produced no native route artifact; interactive control tooling remains unavailable.
+
+- 2026-09-13: corrected Path-A census source to use AUTO_PEDET J3.69↔J8.2; U14.2 is MODE_IN.
