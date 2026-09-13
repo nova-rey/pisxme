@@ -1,0 +1,3 @@
+PiSXMe_RevA_Clean.kicad_sym
+PiSXMe_RevA_Clean_complete.kicad_sym
+Storage_DualMode.kicad_sym
