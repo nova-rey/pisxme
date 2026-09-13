@@ -973,3 +973,7 @@ The six-loop connector/harness qualification packet records exact 5569/5556 part
 ## 2026-09-14 — Power candidate supersession record
 
 The V2.1 conditional candidate is retained as superseded provenance under the corrected V2.2 architecture; no routing or source CAD was derived from it.
+
+## 2026-09-14 — HPQ blocker narrowed to internal authority path
+
+Unblocker reassessment determined the original Issue #2 external power-envelope premise is resolved by the internal Class-C product decision and conditional V2.2 Power Authority architecture. The remaining path is exact assembly qualification followed by one binding Macro Placement Authority corridor plan; the HPQ issue remains open evidence and is not marked resolution-ready.

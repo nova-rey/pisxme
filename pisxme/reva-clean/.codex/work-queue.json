@@ -445,8 +445,7 @@
       "completion_criterion": "Authority-approved evidence and current-head integrated validation for listed invariants.",
       "created_at": "2026-09-13T22:51:52.348707Z",
       "dependencies": [
-        "package:P24-FOUNDATIONAL-SYNTHESIS",
-        "hpq:#2"
+        "package:P24-MPA-CORRIDOR-AUTHORITY"
       ],
       "domain": "Power Authority redesign",
       "edit_boundaries": [
@@ -455,7 +454,7 @@
       ],
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-ARCHITECTURE",
-      "notes": "Created by foundational invariant audit.",
+      "notes": "Original HPQ external-envelope dependency superseded by internal product/Power Authority evidence; wait only on exact assembly qualification and MPA plan.",
       "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
@@ -477,13 +476,13 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Power input/protection architecture for product envelope",
-      "updated_at": "2026-09-13T22:51:52.392616Z",
+      "updated_at": "2026-09-13T23:36:34.717632Z",
       "validation": {
         "required": [],
         "results": {}
       },
       "waiting_on": [
-        "hpq:#2"
+        "package:P24-MPA-CORRIDOR-AUTHORITY"
       ],
       "workstream": "phase24"
     },
@@ -653,6 +652,112 @@
       },
       "waiting_on": [],
       "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {},
+      "base_sha": "4e38ecf3",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": {
+        "artifact": null,
+        "base_sha": "4e38ecf3",
+        "returned_at": "2026-09-13T23:36:13.426464Z",
+        "returned_by": "unblock_issue2_reassess",
+        "sha": "4e38ecf3"
+      },
+      "completion_criterion": "Canonical blocker packet identifies exact remaining dependency and whether integrated corridor can return READY; no duplicate Task Force work.",
+      "created_at": "2026-09-13T23:33:37.821907Z",
+      "dependencies": [],
+      "domain": "Unblocker",
+      "edit_boundaries": [
+        "read-only evidence and queue classification",
+        "no CAD or HPQ model execution"
+      ],
+      "evidence_refs": [
+        "https://github.com/nova-rey/codex-config-backup/issues/2"
+      ],
+      "id": "P24-HPQ-REASSESS",
+      "notes": "New evidence may narrow original external blocker; leave only dependent corridor waiting.",
+      "owner": null,
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "blocker_classification",
+        "power_corridor_dependency"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Classify whether Issue #2 external blocker survives the new product decision and V2.2 power authority evidence; no routing investigation.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Reassess Issue #2 after internal power authority evidence",
+      "updated_at": "2026-09-13T23:36:13.513523Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "blocker-reassessment"
+    },
+    {
+      "attempt_state": {},
+      "base_sha": "4e38ecf3",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "MPA plan identifies changed/fixed components, six power loops, reserved corridors, layers, protected copper and rationale tied to congestion evidence.",
+      "created_at": "2026-09-14T02:00:00Z",
+      "dependencies": [
+        "package:P24-POWER-CONNECTOR-QUALIFICATION"
+      ],
+      "domain": "Macro Placement Authority",
+      "edit_boundaries": [
+        "authority plan only before producer",
+        "no speculative route variants",
+        "no CAD edit in authority package"
+      ],
+      "evidence_refs": [
+        "PROJECT_INVARIANTS.json",
+        "validation-receipts/power-envelope-authority-redesign-20260914/POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json",
+        "https://github.com/nova-rey/codex-config-backup/issues/2"
+      ],
+      "id": "P24-MPA-CORRIDOR-AUTHORITY",
+      "notes": "HPQ investigation remains retained evidence; no duplicate Task Force route search.",
+      "owner": "sup_mpa_corridor_authority",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-COPPER",
+        "INV-STORAGE-PATHA",
+        "native_drc",
+        "physical_opens_shorts"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "One current-HEAD binding placement/corridor plan for six-loop power and Path-A storage, preserving anchors and validated high-speed corridors.",
+      "session_ids": [
+        "root-mpa-20260914"
+      ],
+      "status": "RUNNING",
+      "title": "Binding six-loop placement and corridor plan",
+      "updated_at": "2026-09-13T23:36:54.052064Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "integrated-corridor"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -667,5 +772,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-13T23:32:49.211567Z"
+  "updated_at": "2026-09-13T23:36:54.052164Z"
 }
