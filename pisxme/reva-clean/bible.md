@@ -740,3 +740,5 @@ integrated ERC acceptance row remains open.
 - 2026-09-13: retained current integrated DRC/DFM family census for repair queue (302 violations, 499 unconnected).
 
 - 2026-09-13: fresh current-head pad ownership audit PASS (814 nodes, 1262 pads, zero expected mismatches); surplus and physical connectivity remain open.
+
+- 2026-09-13: acceptance matrix now points to fresh current-head pad ownership receipt.

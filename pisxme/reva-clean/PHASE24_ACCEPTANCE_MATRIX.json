@@ -39,8 +39,8 @@
       "id": "schematic_pad_reference_coverage",
       "status": "OPEN",
       "requirement": "bidirectional coverage including exclusion/alias audit",
-      "evidence": "validation-receipts/fresh-parity-98137ff5/RECEIPT.md",
-      "current": "Fresh kicadxml export RC 0; parity PASS (814 nodes / 1262 pads / 0 mismatches); exclusion coverage documented; full bidirectional coverage remains OPEN"
+      "evidence": "validation-receipts/parity-current-head-20260913/RECEIPT.md",
+      "current": "Expected-pad ownership PASS (814 nodes / 1262 pads / 0 mismatches); surplus-pad disposition and full bidirectional coverage remain OPEN"
     },
     {
       "id": "library_pin_mapping",
