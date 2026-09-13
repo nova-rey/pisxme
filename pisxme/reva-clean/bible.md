@@ -734,3 +734,5 @@ integrated ERC acceptance row remains open.
 - 2026-09-13: synchronized Phase 24 acceptance matrix to corrected Path-A, ERC, regulator-authority, provenance, and hostile-review receipts.
 
 - 2026-09-13: aborted ERC producer after unrelated V100/source edits; disposable workspace released, canonical tree unchanged.
+
+- 2026-09-13: fresh current-head Light baseline retained: ERC 293, DRC 302/499, Path-A 11/26, netlist RC 0.

@@ -1,0 +1,14 @@
+34d28f5f4162f50c29f3e07d930fd1f6059ec5b28ad1290069b11b75a8d40a3f  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/RECEIPT.md
+a94b36e10957a21a5b11dd0041cfdbd33e824095bc22310ec1b41a12f79c1067  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/drc.json
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/drc.rc
+6592073f0c313afb68b5c7cc967778a2ddf1975d9471f2544134f97f485731ab  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/drc.stdout
+2887250056efb05a397219465865a19d590b85f3806968de170d32e70606435c  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/erc.json
+f0b5c2c2211c8d67ed15e75e656c7862d086e9245420892a7de62cd9ec582a06  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/erc.rc
+803c5b5580dd54e1d2769ea8194cad5465e31048e4ec116a794cf56ac87d91a7  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/erc.stdout
+f75f45edce3e4e65ac512ec54a0077430b31d689272e0c9a2c8e84c313e93bfe  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/inputs.sha256
+dd7b70e5d3ba935e13406fb9118f3e243051432fe165e3b49b32bc4e32f9bf6c  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/native.xml
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/netlist.rc
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/netlist.stdout
+805a9bbb0aab2c2c0d038b6e29764051292973824a9fdf44da1548d7c87de51b  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/patha.json
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/patha.rc
+0da2245eaa538a4a0de07683a24bb71ec7cd49d6c8f673ad7154556e480cf4ac  pisxme/reva-clean/validation-receipts/baseline-current-head-0cc8230f-20260913/patha.stdout
