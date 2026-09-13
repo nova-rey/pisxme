@@ -866,3 +866,7 @@ Submitted the Phase 24 storage/power corridor blocker through the private Hard P
 ## 2026-09-13 — Independent SI lane result
 
 Recorded scoped six-layer role closure and the storage USB3 netclass/geometry mismatch under `WAITING_ON #2`. Raw board counts and authority references are retained in `validation-receipts/si-reference-independent-3b70587d-20260913/`; no CAD edits occurred.
+
+## 2026-09-13 — Independent ERC lane rejected candidate
+
+The bounded ERC lane tested removal of the exact `NC_62` label and rejected it after semantic netlist parity failed and total findings increased 293→294. Raw outcome is retained under `validation-receipts/erc-independent-cleanup-after-issue2-20260913/`; canonical schematic remains unchanged.
