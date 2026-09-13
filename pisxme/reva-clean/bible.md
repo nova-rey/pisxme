@@ -830,3 +830,7 @@ Recorded the fourth bounded MPA corridor decision dispatch; no authority decisio
 ## 2026-09-13 — Current power/return census retained
 
 The read-only native power census at `a56b4399` recorded required rail/return pad, segment, via, and zone ownership. It confirms zero copper for Branch-B `12V_IN_B`/`FUSED_12V_B` and bridge rails `BRIDGE_1V1`/`BRIDGE_3V3`, while preserving measured counts for `POWER_GND`, `12V_PROTECTED`, storage, and JMS rails. Raw JSON is under `validation-receipts/power-return-census-current-a56b4399-20260913/`.
+
+## 2026-09-13 — BOM-only references explicitly dispositioned
+
+Native PCB attributes confirm `TP1`–`TP13` are excluded test probes and `MECH_M2_2280` is a board-only mechanical envelope, all excluded from BOM and position outputs. The machine-readable disposition is retained under `validation-receipts/bom-disposition-current-3a811eac-20260913/`.

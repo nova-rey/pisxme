@@ -1,0 +1,117 @@
+{
+  "board": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "references": [
+    {
+      "reference": "MECH_M2_2280",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP1",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP2",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP3",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP4",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP5",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP6",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP7",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP8",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP9",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP10",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP11",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP12",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    },
+    {
+      "reference": "TP13",
+      "found": true,
+      "value": "TPD4EUSB30",
+      "attributes": [
+        "smd"
+      ]
+    }
+  ]
+}
