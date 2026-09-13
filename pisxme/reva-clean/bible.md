@@ -802,3 +802,7 @@ Regenerated the native KiCad XML netlist from `PiSXMe_RevA_Clean.kicad_sch` at `
 ## 2026-09-13 — Fresh native netlist receipt corrected
 
 Corrected the receipt metadata formatting for the fresh Light netlist export; the generated XML and validation metadata are unchanged.
+
+## 2026-09-13 — Fresh schematic↔PCB pad parity PASS
+
+At `0b5340b4`, a fresh qualified Light checkout regenerated the native schematic netlist and ran the parity audit: 814 authoritative nodes, 1,262 PCB pads, and zero expected-pad mismatches. Exclusion and alias counts are recorded in `validation-receipts/pad-parity-fresh-0b5340b4-20260913/`. The result is scoped to pad ownership and does not close physical routing or power/SI rows.

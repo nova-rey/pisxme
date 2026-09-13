@@ -1,0 +1,5 @@
+authoritative schematic nodes: 814; PCB pads: 1262
+excluded contract nodes: nonphysical_x=65, j1_placeholder=2, j3_key_gap=8
+alias contracts: J2=18, F1=2, F2=2, J4=6
+expected-pad mismatches: 0
+schematic-to-PCB pad-net parity: PASS
