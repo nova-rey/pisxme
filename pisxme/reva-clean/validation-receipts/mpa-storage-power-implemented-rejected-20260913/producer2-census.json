@@ -1,0 +1,3239 @@
+{
+  "net_summaries": {
+    "<no-net>": {
+      "pad_keys": [
+        "J3.M1",
+        "J3.M2",
+        "J3.S1",
+        "J3.S2",
+        "U11.65",
+        "U13.43",
+        "U7.10",
+        "U7.11",
+        "U7.13",
+        "U7.14",
+        "U7.15",
+        "U7.16",
+        "U7.17",
+        "U7.18",
+        "U7.2",
+        "U7.20",
+        "U7.22",
+        "U7.23",
+        "U7.25",
+        "U7.26",
+        "U7.27",
+        "U7.28",
+        "U7.29",
+        "U7.3",
+        "U7.37",
+        "U7.5",
+        "U7.6",
+        "U7.64",
+        "U7.8",
+        "U7.9"
+      ],
+      "storage_component_count": 30,
+      "storage_component_sizes": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "storage_components": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "storage_pad_count": 30,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "AUTO_PEDET": {
+      "pad_keys": [
+        "J3.69"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.69"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 7,
+      "via_count": 2
+    },
+    "BRIDGE_1V1": {
+      "pad_keys": [
+        "U7.1",
+        "U7.12",
+        "U7.19",
+        "U7.32",
+        "U7.33",
+        "U7.41",
+        "U7.47",
+        "U7.49",
+        "U7.55",
+        "U7.61",
+        "U7.63"
+      ],
+      "storage_component_count": 11,
+      "storage_component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.1"
+        ],
+        [
+          "U7.12"
+        ],
+        [
+          "U7.19"
+        ],
+        [
+          "U7.32"
+        ],
+        [
+          "U7.33"
+        ],
+        [
+          "U7.41"
+        ],
+        [
+          "U7.47"
+        ],
+        [
+          "U7.49"
+        ],
+        [
+          "U7.55"
+        ],
+        [
+          "U7.61"
+        ],
+        [
+          "U7.63"
+        ]
+      ],
+      "storage_pad_count": 11,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "BRIDGE_3V3": {
+      "pad_keys": [
+        "U7.24",
+        "U7.30",
+        "U7.31",
+        "U7.34",
+        "U7.40",
+        "U7.48",
+        "U7.51",
+        "U7.62",
+        "U7.7"
+      ],
+      "storage_component_count": 9,
+      "storage_component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.7"
+        ],
+        [
+          "U7.24"
+        ],
+        [
+          "U7.30"
+        ],
+        [
+          "U7.31"
+        ],
+        [
+          "U7.34"
+        ],
+        [
+          "U7.40"
+        ],
+        [
+          "U7.48"
+        ],
+        [
+          "U7.51"
+        ],
+        [
+          "U7.62"
+        ]
+      ],
+      "storage_pad_count": 9,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "BRIDGE_CFG": {
+      "pad_keys": [
+        "U7.21"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.21"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "BRIDGE_R1": {
+      "pad_keys": [
+        "U7.38"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.38"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "BRIDGE_R1RTN": {
+      "pad_keys": [
+        "U7.39"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.39"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "BRIDGE_RESET": {
+      "pad_keys": [
+        "U7.4"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.4"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "BRIDGE_SATA_RX_N": {
+      "pad_keys": [
+        "U7.59"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.59"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 7,
+      "via_count": 2
+    },
+    "BRIDGE_SATA_RX_P": {
+      "pad_keys": [
+        "U7.60"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.60"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 7,
+      "via_count": 2
+    },
+    "BRIDGE_SATA_TX_N": {
+      "pad_keys": [
+        "U7.56"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.56"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 7,
+      "via_count": 2
+    },
+    "BRIDGE_SATA_TX_P": {
+      "pad_keys": [
+        "U7.57"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.57"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 7,
+      "via_count": 2
+    },
+    "BRIDGE_USB_DM": {
+      "pad_keys": [
+        "U12.32",
+        "U7.35"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.32"
+        ],
+        [
+          "U7.35"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "BRIDGE_USB_DP": {
+      "pad_keys": [
+        "U12.31",
+        "U7.36"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.31"
+        ],
+        [
+          "U7.36"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "BRIDGE_USB_VBUS": {
+      "pad_keys": [
+        "U7.50"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.50"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "BRIDGE_VSSOSC": {
+      "pad_keys": [
+        "U7.53"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.53"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "BRIDGE_XI": {
+      "pad_keys": [
+        "U7.52"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.52"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "BRIDGE_XO": {
+      "pad_keys": [
+        "U7.54"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U7.54"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "CM5_STORAGE_USB2_DM": {
+      "pad_keys": [
+        "U12.7"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.7"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "CM5_STORAGE_USB2_DP": {
+      "pad_keys": [
+        "U12.8"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.8"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "CM5_USB3_RX_N": {
+      "pad_keys": [
+        "U12.16",
+        "U7.42"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.16"
+        ],
+        [
+          "U7.42"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 10,
+      "via_count": 4
+    },
+    "CM5_USB3_RX_P": {
+      "pad_keys": [
+        "U12.15",
+        "U7.43"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.15"
+        ],
+        [
+          "U7.43"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 12,
+      "via_count": 4
+    },
+    "CM5_USB3_TX_N": {
+      "pad_keys": [
+        "U12.12",
+        "U7.45"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.12"
+        ],
+        [
+          "U7.45"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 11,
+      "via_count": 4
+    },
+    "CM5_USB3_TX_P": {
+      "pad_keys": [
+        "U12.11",
+        "U7.46"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.11"
+        ],
+        [
+          "U7.46"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 9,
+      "via_count": 3
+    },
+    "JMS_AVDD33": {
+      "pad_keys": [
+        "U11.19"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.19"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 5,
+      "via_count": 2
+    },
+    "JMS_AVDDL": {
+      "pad_keys": [
+        "J3.20",
+        "J3.30",
+        "J3.36",
+        "J3.40",
+        "J3.46",
+        "U11.20",
+        "U11.25",
+        "U11.30",
+        "U11.33",
+        "U11.36",
+        "U11.40",
+        "U11.43",
+        "U11.46",
+        "U11.49",
+        "U12.36",
+        "U12.40",
+        "U13.40"
+      ],
+      "storage_component_count": 16,
+      "storage_component_sizes": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.40"
+        ],
+        [
+          "J3.20"
+        ],
+        [
+          "J3.30"
+        ],
+        [
+          "J3.36"
+        ],
+        [
+          "J3.40"
+        ],
+        [
+          "J3.46"
+        ],
+        [
+          "U11.20",
+          "U12.36"
+        ],
+        [
+          "U12.40"
+        ],
+        [
+          "U11.25"
+        ],
+        [
+          "U11.30"
+        ],
+        [
+          "U11.33"
+        ],
+        [
+          "U11.36"
+        ],
+        [
+          "U11.40"
+        ],
+        [
+          "U11.43"
+        ],
+        [
+          "U11.46"
+        ],
+        [
+          "U11.49"
+        ]
+      ],
+      "storage_pad_count": 17,
+      "track_count": 10,
+      "via_count": 3
+    },
+    "JMS_CC1_NC": {
+      "pad_keys": [
+        "U11.62"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.62"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_CC2_NC": {
+      "pad_keys": [
+        "U11.61"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.61"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_GPIO10_NC": {
+      "pad_keys": [
+        "U11.59"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.59"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_GPIO11_NC": {
+      "pad_keys": [
+        "U11.58"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.58"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_GPIO12_NC": {
+      "pad_keys": [
+        "U11.57"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.57"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_GPIO4_NC": {
+      "pad_keys": [
+        "J3.8",
+        "U11.8",
+        "U13.8"
+      ],
+      "storage_component_count": 3,
+      "storage_component_sizes": [
+        1,
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.8"
+        ],
+        [
+          "J3.8"
+        ],
+        [
+          "U11.8"
+        ]
+      ],
+      "storage_pad_count": 3,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_GPIO5_NC": {
+      "pad_keys": [
+        "U11.9"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.9"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_GPIO7_NC": {
+      "pad_keys": [
+        "U11.12"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.12"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_GPIO8_NC": {
+      "pad_keys": [
+        "U11.13"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.13"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_GPIO9_NC": {
+      "pad_keys": [
+        "U11.14"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.14"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_PCIE_RXN0": {
+      "pad_keys": [
+        "U13.31"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.31"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_PCIE_RXN1": {
+      "pad_keys": [
+        "U13.22"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.22"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_PCIE_RXP0": {
+      "pad_keys": [
+        "U13.32"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.32"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_PCIE_RXP1": {
+      "pad_keys": [
+        "U13.23"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.23"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_PCIE_TXN0": {
+      "pad_keys": [
+        "U13.33"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.33"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_PCIE_TXN1": {
+      "pad_keys": [
+        "U13.24"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.24"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_PCIE_TXP0": {
+      "pad_keys": [
+        "U13.34"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.34"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_PCIE_TXP1": {
+      "pad_keys": [
+        "U13.25"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.25"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_RESET_N": {
+      "pad_keys": [
+        "U11.15"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.15"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 10,
+      "via_count": 2
+    },
+    "JMS_REXT": {
+      "pad_keys": [
+        "U11.39"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.39"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 3,
+      "via_count": 0
+    },
+    "JMS_SPI_CS_N_DNP": {
+      "pad_keys": [
+        "U11.7"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.7"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_SPI_SCK_DNP": {
+      "pad_keys": [
+        "U11.4",
+        "U12.4"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.4"
+        ],
+        [
+          "U11.4"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_SPI_SI_DNP": {
+      "pad_keys": [
+        "U11.5",
+        "U12.5"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.5"
+        ],
+        [
+          "U11.5"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_SPI_SO_DNP": {
+      "pad_keys": [
+        "U11.3",
+        "U12.3"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.3"
+        ],
+        [
+          "U11.3"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_USB3_TXN": {
+      "pad_keys": [
+        "U12.24"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.24"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 6,
+      "via_count": 2
+    },
+    "JMS_USB3_TXP": {
+      "pad_keys": [
+        "U12.25"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.25"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 6,
+      "via_count": 2
+    },
+    "JMS_VBUS_SENSE": {
+      "pad_keys": [
+        "U11.10"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.10"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "JMS_VCCK": {
+      "pad_keys": [
+        "U11.2",
+        "U11.31",
+        "U11.53",
+        "U12.2"
+      ],
+      "storage_component_count": 4,
+      "storage_component_sizes": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.2"
+        ],
+        [
+          "U11.2"
+        ],
+        [
+          "U11.31"
+        ],
+        [
+          "U11.53"
+        ]
+      ],
+      "storage_pad_count": 4,
+      "track_count": 5,
+      "via_count": 2
+    },
+    "JMS_VCCO": {
+      "pad_keys": [
+        "J3.32",
+        "J3.6",
+        "U11.11",
+        "U11.32",
+        "U11.56",
+        "U11.6"
+      ],
+      "storage_component_count": 6,
+      "storage_component_sizes": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.6"
+        ],
+        [
+          "J3.32"
+        ],
+        [
+          "U11.6"
+        ],
+        [
+          "U11.11"
+        ],
+        [
+          "U11.32"
+        ],
+        [
+          "U11.56"
+        ]
+      ],
+      "storage_pad_count": 6,
+      "track_count": 4,
+      "via_count": 0
+    },
+    "JMS_VDDREG_5V": {
+      "pad_keys": [
+        "U11.1",
+        "U12.1",
+        "U14.1"
+      ],
+      "storage_component_count": 3,
+      "storage_component_sizes": [
+        1,
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.1"
+        ],
+        [
+          "U14.1"
+        ],
+        [
+          "U11.1"
+        ]
+      ],
+      "storage_pad_count": 3,
+      "track_count": 6,
+      "via_count": 2
+    },
+    "JMS_XAVDDH": {
+      "pad_keys": [
+        "U11.52"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.52"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "LXO": {
+      "pad_keys": [
+        "U11.64"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.64"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 6,
+      "via_count": 2
+    },
+    "M2_CLKREQ_N": {
+      "pad_keys": [
+        "J3.52"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.52"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_CONFIG0": {
+      "pad_keys": [
+        "J3.21"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.21"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_CONFIG2": {
+      "pad_keys": [
+        "J3.75"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.75"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_CONFIG3": {
+      "pad_keys": [
+        "J3.1"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.1"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_DAS_DSS": {
+      "pad_keys": [
+        "J3.10"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.10"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_DEVSLP": {
+      "pad_keys": [
+        "J3.38"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.38"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_MFG1": {
+      "pad_keys": [
+        "J3.56"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.56"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_MFG2": {
+      "pad_keys": [
+        "J3.58"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.58"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PCIE_RXN1": {
+      "pad_keys": [
+        "J3.29"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.29"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PCIE_RXN2": {
+      "pad_keys": [
+        "J3.17"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.17"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PCIE_RXN3": {
+      "pad_keys": [
+        "J3.5"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.5"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PCIE_RXP1": {
+      "pad_keys": [
+        "J3.31"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.31"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PCIE_RXP2": {
+      "pad_keys": [
+        "J3.19"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.19"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PCIE_RXP3": {
+      "pad_keys": [
+        "J3.7"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.7"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PCIE_TXN1": {
+      "pad_keys": [
+        "J3.35"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.35"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PCIE_TXN2": {
+      "pad_keys": [
+        "J3.23",
+        "U13.12"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.12"
+        ],
+        [
+          "J3.23"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PCIE_TXN3": {
+      "pad_keys": [
+        "J3.11",
+        "U13.16"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.16"
+        ],
+        [
+          "J3.11"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PCIE_TXP1": {
+      "pad_keys": [
+        "J3.37"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.37"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PCIE_TXP2": {
+      "pad_keys": [
+        "J3.25",
+        "U13.11"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.11"
+        ],
+        [
+          "J3.25"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PCIE_TXP3": {
+      "pad_keys": [
+        "J3.13",
+        "U13.15"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.15"
+        ],
+        [
+          "J3.13"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PERST_N": {
+      "pad_keys": [
+        "J3.50"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.50"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_PEWake_N": {
+      "pad_keys": [
+        "J3.54"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.54"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_REFCLK_N": {
+      "pad_keys": [
+        "J3.53"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.53"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_REFCLK_P": {
+      "pad_keys": [
+        "J3.55"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.55"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "M2_SATA_A_N_PCIE_TXN0": {
+      "pad_keys": [
+        "J3.47",
+        "U13.3"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        2
+      ],
+      "storage_components": [
+        [
+          "J3.47",
+          "U13.3"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 8,
+      "via_count": 2
+    },
+    "M2_SATA_A_P_PCIE_TXP0": {
+      "pad_keys": [
+        "J3.49",
+        "U13.2"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        2
+      ],
+      "storage_components": [
+        [
+          "J3.49",
+          "U13.2"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 8,
+      "via_count": 2
+    },
+    "M2_SATA_B_N_PCIE_RXP0": {
+      "pad_keys": [
+        "J3.43",
+        "U13.7"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        2
+      ],
+      "storage_components": [
+        [
+          "J3.43",
+          "U13.7"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 8,
+      "via_count": 2
+    },
+    "M2_SATA_B_P_PCIE_RXN0": {
+      "pad_keys": [
+        "J3.41",
+        "U13.6"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        2
+      ],
+      "storage_components": [
+        [
+          "J3.41",
+          "U13.6"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 8,
+      "via_count": 2
+    },
+    "M2_SUSCLK": {
+      "pad_keys": [
+        "J3.68"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.68"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "MODE_IN": {
+      "pad_keys": [
+        "U14.2"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U14.2"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_18": {
+      "pad_keys": [
+        "U12.18",
+        "U13.18"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.18"
+        ],
+        [
+          "U12.18"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_22": {
+      "pad_keys": [
+        "J3.22"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.22"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_24": {
+      "pad_keys": [
+        "J3.24"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.24"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_26": {
+      "pad_keys": [
+        "J3.26",
+        "U13.26"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.26"
+        ],
+        [
+          "J3.26"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_27": {
+      "pad_keys": [
+        "U13.27"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.27"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_28": {
+      "pad_keys": [
+        "J3.28",
+        "U13.28"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.28"
+        ],
+        [
+          "J3.28"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_29": {
+      "pad_keys": [
+        "U13.29"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.29"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_34": {
+      "pad_keys": [
+        "J3.34"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.34"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_35": {
+      "pad_keys": [
+        "U12.35"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.35"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_37": {
+      "pad_keys": [
+        "U12.37"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.37"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_38": {
+      "pad_keys": [
+        "U12.38"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.38"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_39": {
+      "pad_keys": [
+        "U12.39",
+        "U13.39"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.39"
+        ],
+        [
+          "U12.39"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_41": {
+      "pad_keys": [
+        "U12.41",
+        "U13.41"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.41"
+        ],
+        [
+          "U12.41"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_42": {
+      "pad_keys": [
+        "J3.42",
+        "U12.42",
+        "U13.42"
+      ],
+      "storage_component_count": 3,
+      "storage_component_sizes": [
+        1,
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.42"
+        ],
+        [
+          "J3.42"
+        ],
+        [
+          "U12.42"
+        ]
+      ],
+      "storage_pad_count": 3,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_44": {
+      "pad_keys": [
+        "J3.44"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.44"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_48": {
+      "pad_keys": [
+        "J3.48"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.48"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "NC_67": {
+      "pad_keys": [
+        "J3.67"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "J3.67"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "PCIE_CLKREQ_N": {
+      "pad_keys": [
+        "U11.55"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.55"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "PCIE_RESET_N": {
+      "pad_keys": [
+        "U11.54"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.54"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "PCIE_RXN0": {
+      "pad_keys": [
+        "U11.41"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.41"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "PCIE_RXN1": {
+      "pad_keys": [
+        "U11.34"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.34"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "PCIE_RXP0": {
+      "pad_keys": [
+        "U11.42"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.42"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "PCIE_RXP1": {
+      "pad_keys": [
+        "U11.35"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.35"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "PCIE_TXN0": {
+      "pad_keys": [
+        "U11.44"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.44"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "PCIE_TXN1": {
+      "pad_keys": [
+        "U11.37"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.37"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "PCIE_TXP0": {
+      "pad_keys": [
+        "U11.45"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.45"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "PCIE_TXP1": {
+      "pad_keys": [
+        "U11.38"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.38"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "POWER_GND": {
+      "pad_keys": [
+        "J3.15",
+        "J3.27",
+        "J3.3",
+        "J3.33",
+        "J3.39",
+        "J3.45",
+        "J3.51",
+        "J3.57",
+        "J3.71",
+        "J3.73",
+        "J3.9",
+        "U11.60",
+        "U11.63",
+        "U12.10",
+        "U12.14",
+        "U12.17",
+        "U12.19",
+        "U12.21",
+        "U12.43",
+        "U13.1",
+        "U13.10",
+        "U13.14",
+        "U13.17",
+        "U13.19",
+        "U13.21",
+        "U13.4",
+        "U14.3",
+        "U7.44",
+        "U7.58",
+        "U7.65"
+      ],
+      "storage_component_count": 9,
+      "storage_component_sizes": [
+        21,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.1"
+        ],
+        [
+          "U13.4"
+        ],
+        [
+          "U13.10"
+        ],
+        [
+          "U13.14"
+        ],
+        [
+          "U13.17"
+        ],
+        [
+          "U13.19"
+        ],
+        [
+          "U13.21"
+        ],
+        [
+          "J3.15",
+          "J3.27",
+          "J3.3",
+          "J3.33",
+          "J3.39",
+          "J3.45",
+          "J3.51",
+          "J3.57",
+          "J3.71",
+          "J3.73",
+          "J3.9",
+          "U12.10",
+          "U12.14",
+          "U12.17",
+          "U12.19",
+          "U12.21",
+          "U12.43",
+          "U14.3",
+          "U7.44",
+          "U7.58",
+          "U7.65"
+        ],
+        [
+          "U11.60",
+          "U11.63"
+        ]
+      ],
+      "storage_pad_count": 30,
+      "track_count": 58,
+      "via_count": 11
+    },
+    "REFCLK_N": {
+      "pad_keys": [
+        "U11.47"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.47"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "REFCLK_P": {
+      "pad_keys": [
+        "U11.48"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.48"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "STORAGE_3V3": {
+      "pad_keys": [
+        "J3.12",
+        "J3.14",
+        "J3.16",
+        "J3.18",
+        "J3.2",
+        "J3.4",
+        "J3.70",
+        "J3.72",
+        "J3.74",
+        "U12.13",
+        "U12.20",
+        "U12.30",
+        "U13.13",
+        "U13.20",
+        "U13.30",
+        "U13.5",
+        "U14.5"
+      ],
+      "storage_component_count": 8,
+      "storage_component_sizes": [
+        10,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.5"
+        ],
+        [
+          "U13.13"
+        ],
+        [
+          "U13.20"
+        ],
+        [
+          "U13.30"
+        ],
+        [
+          "J3.12",
+          "J3.14",
+          "J3.16",
+          "J3.18",
+          "J3.2",
+          "J3.4",
+          "J3.70",
+          "J3.72",
+          "J3.74",
+          "U14.5"
+        ],
+        [
+          "U12.13"
+        ],
+        [
+          "U12.20"
+        ],
+        [
+          "U12.30"
+        ]
+      ],
+      "storage_pad_count": 17,
+      "track_count": 26,
+      "via_count": 4
+    },
+    "STORAGE_SEL": {
+      "pad_keys": [
+        "U12.9",
+        "U13.9",
+        "U14.4"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        3
+      ],
+      "storage_components": [
+        [
+          "U12.9",
+          "U13.9",
+          "U14.4"
+        ]
+      ],
+      "storage_pad_count": 3,
+      "track_count": 10,
+      "via_count": 3
+    },
+    "TUSB_SATA_RXN": {
+      "pad_keys": [
+        "U13.35"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.35"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 7,
+      "via_count": 2
+    },
+    "TUSB_SATA_RXP": {
+      "pad_keys": [
+        "U13.36"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.36"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 7,
+      "via_count": 2
+    },
+    "TUSB_SATA_TXN": {
+      "pad_keys": [
+        "U13.37"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.37"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 7,
+      "via_count": 2
+    },
+    "TUSB_SATA_TXP": {
+      "pad_keys": [
+        "U13.38"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U13.38"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 7,
+      "via_count": 2
+    },
+    "TUSB_SSRXN": {
+      "pad_keys": [
+        "U12.26"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.26"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "TUSB_SSRXP": {
+      "pad_keys": [
+        "U12.27"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.27"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "TUSB_SSTXN": {
+      "pad_keys": [
+        "U12.28"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.28"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "TUSB_SSTXP": {
+      "pad_keys": [
+        "U12.29"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.29"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "USB_DM": {
+      "pad_keys": [
+        "U11.17",
+        "U12.34"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.34"
+        ],
+        [
+          "U11.17"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "USB_DP": {
+      "pad_keys": [
+        "U11.18",
+        "U12.33"
+      ],
+      "storage_component_count": 2,
+      "storage_component_sizes": [
+        1,
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.33"
+        ],
+        [
+          "U11.18"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "USB_OE_N": {
+      "pad_keys": [
+        "U12.6"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U12.6"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "USB_RXN1": {
+      "pad_keys": [
+        "U11.27",
+        "U12.22"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        2
+      ],
+      "storage_components": [
+        [
+          "U11.27",
+          "U12.22"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 7,
+      "via_count": 2
+    },
+    "USB_RXN2": {
+      "pad_keys": [
+        "U11.28"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.28"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "USB_RXP1": {
+      "pad_keys": [
+        "U11.26",
+        "U12.23"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        2
+      ],
+      "storage_components": [
+        [
+          "U11.26",
+          "U12.23"
+        ]
+      ],
+      "storage_pad_count": 2,
+      "track_count": 7,
+      "via_count": 2
+    },
+    "USB_RXP2": {
+      "pad_keys": [
+        "U11.29"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.29"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "USB_TXN1": {
+      "pad_keys": [
+        "U11.22"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.22"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 3,
+      "via_count": 0
+    },
+    "USB_TXN2": {
+      "pad_keys": [
+        "U11.23"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.23"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "USB_TXP1": {
+      "pad_keys": [
+        "U11.21"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.21"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 3,
+      "via_count": 0
+    },
+    "USB_TXP2": {
+      "pad_keys": [
+        "U11.24"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.24"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "VBUS": {
+      "pad_keys": [
+        "U11.16"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.16"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 0,
+      "via_count": 0
+    },
+    "XIN": {
+      "pad_keys": [
+        "U11.50"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.50"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 4,
+      "via_count": 0
+    },
+    "XOUT": {
+      "pad_keys": [
+        "U11.51"
+      ],
+      "storage_component_count": 1,
+      "storage_component_sizes": [
+        1
+      ],
+      "storage_components": [
+        [
+          "U11.51"
+        ]
+      ],
+      "storage_pad_count": 1,
+      "track_count": 3,
+      "via_count": 0
+    }
+  },
+  "pcb": "PHASE24_MPA_STORAGE_POWER_IMPLEMENTED_CANDIDATE.kicad_pcb",
+  "required_endpoint_results": [
+    {
+      "left": "U7.57",
+      "left_component_size": 2,
+      "left_net": "BRIDGE_SATA_TX_P",
+      "net": "BRIDGE_SATA_TX_P",
+      "right": "C30.2",
+      "right_net": "BRIDGE_SATA_TX_P",
+      "status": "PASS"
+    },
+    {
+      "left": "U7.56",
+      "left_component_size": 2,
+      "left_net": "BRIDGE_SATA_TX_N",
+      "net": "BRIDGE_SATA_TX_N",
+      "right": "C31.2",
+      "right_net": "BRIDGE_SATA_TX_N",
+      "status": "PASS"
+    },
+    {
+      "left": "U7.60",
+      "left_component_size": 2,
+      "left_net": "BRIDGE_SATA_RX_P",
+      "net": "BRIDGE_SATA_RX_P",
+      "right": "C32.2",
+      "right_net": "BRIDGE_SATA_RX_P",
+      "status": "PASS"
+    },
+    {
+      "left": "U7.59",
+      "left_component_size": 2,
+      "left_net": "BRIDGE_SATA_RX_N",
+      "net": "BRIDGE_SATA_RX_N",
+      "right": "C33.2",
+      "right_net": "BRIDGE_SATA_RX_N",
+      "status": "PASS"
+    },
+    {
+      "left": "C30.1",
+      "left_component_size": 2,
+      "left_net": "TUSB_SATA_TXP",
+      "net": "TUSB_SATA_TXP",
+      "right": "U13.38",
+      "right_net": "TUSB_SATA_TXP",
+      "status": "PASS"
+    },
+    {
+      "left": "C31.1",
+      "left_component_size": 2,
+      "left_net": "TUSB_SATA_TXN",
+      "net": "TUSB_SATA_TXN",
+      "right": "U13.37",
+      "right_net": "TUSB_SATA_TXN",
+      "status": "PASS"
+    },
+    {
+      "left": "C32.1",
+      "left_component_size": 2,
+      "left_net": "TUSB_SATA_RXP",
+      "net": "TUSB_SATA_RXP",
+      "right": "U13.36",
+      "right_net": "TUSB_SATA_RXP",
+      "status": "PASS"
+    },
+    {
+      "left": "C33.1",
+      "left_component_size": 2,
+      "left_net": "TUSB_SATA_RXN",
+      "net": "TUSB_SATA_RXN",
+      "right": "U13.35",
+      "right_net": "TUSB_SATA_RXN",
+      "status": "PASS"
+    },
+    {
+      "left": "U13.2",
+      "left_component_size": 2,
+      "left_net": "M2_SATA_A_P_PCIE_TXP0",
+      "net": "M2_SATA_A_P_PCIE_TXP0",
+      "right": "J3.49",
+      "right_net": "M2_SATA_A_P_PCIE_TXP0",
+      "status": "PASS"
+    },
+    {
+      "left": "U13.3",
+      "left_component_size": 2,
+      "left_net": "M2_SATA_A_N_PCIE_TXN0",
+      "net": "M2_SATA_A_N_PCIE_TXN0",
+      "right": "J3.47",
+      "right_net": "M2_SATA_A_N_PCIE_TXN0",
+      "status": "PASS"
+    },
+    {
+      "left": "U13.6",
+      "left_component_size": 2,
+      "left_net": "M2_SATA_B_P_PCIE_RXN0",
+      "net": "M2_SATA_B_P_PCIE_RXN0",
+      "right": "J3.41",
+      "right_net": "M2_SATA_B_P_PCIE_RXN0",
+      "status": "PASS"
+    },
+    {
+      "left": "U13.7",
+      "left_component_size": 2,
+      "left_net": "M2_SATA_B_N_PCIE_RXP0",
+      "net": "M2_SATA_B_N_PCIE_RXP0",
+      "right": "J3.43",
+      "right_net": "M2_SATA_B_N_PCIE_RXP0",
+      "status": "PASS"
+    },
+    {
+      "left": "J7.128",
+      "left_component_size": 2,
+      "left_net": "CM5_USB3_RX_N",
+      "net": "CM5_USB3_RX_N",
+      "right": "U12.16",
+      "right_net": "CM5_USB3_RX_N",
+      "status": "PASS"
+    },
+    {
+      "left": "J7.130",
+      "left_component_size": 2,
+      "left_net": "CM5_USB3_RX_P",
+      "net": "CM5_USB3_RX_P",
+      "right": "U12.15",
+      "right_net": "CM5_USB3_RX_P",
+      "status": "PASS"
+    },
+    {
+      "left": "J7.140",
+      "left_component_size": 2,
+      "left_net": "CM5_USB3_TX_N",
+      "net": "CM5_USB3_TX_N",
+      "right": "U12.12",
+      "right_net": "CM5_USB3_TX_N",
+      "status": "PASS"
+    },
+    {
+      "left": "J7.142",
+      "left_component_size": 2,
+      "left_net": "CM5_USB3_TX_P",
+      "net": "CM5_USB3_TX_P",
+      "right": "U12.11",
+      "right_net": "CM5_USB3_TX_P",
+      "status": "PASS"
+    },
+    {
+      "left": "U11.50",
+      "left_component_size": 2,
+      "left_net": "XIN",
+      "net": "XIN",
+      "right": "Y10.1",
+      "right_net": "XIN",
+      "status": "PASS"
+    },
+    {
+      "left": "U11.51",
+      "left_component_size": 2,
+      "left_net": "XOUT",
+      "net": "XOUT",
+      "right": "Y10.2",
+      "right_net": "XOUT",
+      "status": "PASS"
+    },
+    {
+      "left": "U11.39",
+      "left_component_size": 2,
+      "left_net": "JMS_REXT",
+      "net": "JMS_REXT",
+      "right": "R80.1",
+      "right_net": "JMS_REXT",
+      "status": "PASS"
+    },
+    {
+      "left": "U11.64",
+      "left_component_size": 2,
+      "left_net": "LXO",
+      "net": "LXO",
+      "right": "L10.1",
+      "right_net": "LXO",
+      "status": "PASS"
+    },
+    {
+      "left": "U11.1",
+      "left_component_size": 2,
+      "left_net": "JMS_VDDREG_5V",
+      "net": "JMS_VDDREG_5V",
+      "right": "L10.2",
+      "right_net": "JMS_VDDREG_5V",
+      "status": "PASS"
+    },
+    {
+      "left": "U11.19",
+      "left_component_size": 2,
+      "left_net": "JMS_AVDD33",
+      "net": "JMS_AVDD33",
+      "right": "C80.1",
+      "right_net": "JMS_AVDD33",
+      "status": "PASS"
+    },
+    {
+      "left": "U11.20",
+      "left_component_size": 3,
+      "left_net": "JMS_AVDDL",
+      "net": "JMS_AVDDL",
+      "right": "C83.1",
+      "right_net": "JMS_AVDDL",
+      "status": "PASS"
+    },
+    {
+      "left": "U14.4",
+      "left_component_size": 3,
+      "left_net": "STORAGE_SEL",
+      "net": "STORAGE_SEL",
+      "right": "U12.9",
+      "right_net": "STORAGE_SEL",
+      "status": "PASS"
+    },
+    {
+      "left": "U14.4",
+      "left_component_size": 3,
+      "left_net": "STORAGE_SEL",
+      "net": "STORAGE_SEL",
+      "right": "U13.9",
+      "right_net": "STORAGE_SEL",
+      "status": "PASS"
+    },
+    {
+      "left": "J3.69",
+      "left_component_size": 1,
+      "left_net": "AUTO_PEDET",
+      "net": "AUTO_PEDET",
+      "right": "U14.2",
+      "right_net": "MODE_IN",
+      "status": "OPEN"
+    }
+  ],
+  "schema": "pisxme.phase24.patha.native-storage-census.v1",
+  "storage_pad_total": 292,
+  "storage_refs": [
+    "U7",
+    "U11",
+    "U12",
+    "U13",
+    "U14",
+    "J3"
+  ],
+  "tool": "KiCad pcbnew native connectivity"
+}

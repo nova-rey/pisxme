@@ -688,3 +688,12 @@ U13 rotated 180 degrees, C30-C33 moved as the specified vertical cohort, and
 F2/D2 relocated. No routes or rules changed. Targeted post-placement DRC is
 494 violations / 499 unconnected items; this is an implementation candidate,
 not a closure claim. Raw candidate, script, DRC, and hashes are retained.
+
+## 2026-09-13 — Phase 24 MPA storage/power implementation rejected
+
+An isolated Light producer implemented the binding MPA placement and one
+bounded storage/power routing attempt. Some Branch-B sublinks passed, but
+required endpoints remained open and fresh DRC worsened to 1083 violations /
+499 unconnected items. The candidate is retained as rejected evidence; this
+implementation failure triggers one bounded MPA reassessment and no variant
+campaign.
