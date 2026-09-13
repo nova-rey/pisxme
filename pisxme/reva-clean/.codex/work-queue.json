@@ -230,7 +230,13 @@
       "attempt_state": {},
       "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+        "returned_at": "2026-09-13T22:56:13.102481Z",
+        "returned_by": "sup_j1_contract",
+        "sha": "c06876d2bb3c244d29ad04e883a253eefd35c265"
+      },
       "completion_criterion": "Package authority approves exact J1 mapping and net contract, preserving unknown contacts as NC.",
       "created_at": "2026-09-13T22:49:25.791797Z",
       "dependencies": [],
@@ -239,10 +245,12 @@
         "evidence/library and bounded schematic/footprint correction only after authority",
         "no routing"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/j1-contract-authority-c06876d2/J1_CONTRACT_AUTHORITY_PACKET.json"
+      ],
       "id": "P24-J1-CONTRACT",
       "notes": "Independent of blocked power corridor.",
-      "owner": "sup_j1_contract",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -257,12 +265,10 @@
         }
       ],
       "scope": "Mechanically map 393 J1 pads to A1-K40 and close authoritative contact/net contract.",
-      "session_ids": [
-        "root-j1-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "SXM2 J1 package and net contract authority",
-      "updated_at": "2026-09-13T22:49:34.369911Z",
+      "updated_at": "2026-09-13T22:56:13.196549Z",
       "validation": {
         "required": [],
         "results": {}
@@ -274,7 +280,13 @@
       "attempt_state": {},
       "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+        "returned_at": "2026-09-13T22:55:20.937784Z",
+        "returned_by": "sup_si_fab",
+        "sha": "c06876d2bb3c244d29ad04e883a253eefd35c265"
+      },
       "completion_criterion": "Authority-approved evidence and current-head integrated validation for listed invariants.",
       "created_at": "2026-09-13T22:51:35.863505Z",
       "dependencies": [
@@ -285,10 +297,12 @@
         "no work until invariant dependencies resolved",
         "no Phase 26"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/foundational-invariants/si-fab-20260913/SI_FAB_INVARIANT_PACKET.json"
+      ],
       "id": "P24-SI-FAB",
       "notes": "Created by foundational invariant audit.",
-      "owner": "sup_si_fab",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -306,12 +320,10 @@
         }
       ],
       "scope": "SI, impedance and fabrication evidence",
-      "session_ids": [
-        "root-si-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "SI, impedance and fabrication evidence",
-      "updated_at": "2026-09-13T22:52:14.081643Z",
+      "updated_at": "2026-09-13T22:55:21.023869Z",
       "validation": {
         "required": [],
         "results": {}
@@ -323,7 +335,13 @@
       "attempt_state": {},
       "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+        "returned_at": "2026-09-13T22:55:21.065848Z",
+        "returned_by": "sup_thermal_mechanics",
+        "sha": "c06876d2bb3c244d29ad04e883a253eefd35c265"
+      },
       "completion_criterion": "Authority-approved evidence and current-head integrated validation for listed invariants.",
       "created_at": "2026-09-13T22:51:35.917773Z",
       "dependencies": [
@@ -334,10 +352,12 @@
         "no work until invariant dependencies resolved",
         "no Phase 26"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/foundational-invariants/thermal-mechanics-20260914/THERMAL_MECHANICS_PACKET.json"
+      ],
       "id": "P24-THERMAL-MECHANICS",
       "notes": "Created by foundational invariant audit.",
-      "owner": "sup_thermal_mechanics",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -353,12 +373,10 @@
         }
       ],
       "scope": "Thermal, cooler, mechanical and DFM closure",
-      "session_ids": [
-        "root-thermal-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Thermal, cooler, mechanical and DFM closure",
-      "updated_at": "2026-09-13T22:52:14.122231Z",
+      "updated_at": "2026-09-13T22:55:21.145411Z",
       "validation": {
         "required": [],
         "results": {}
@@ -370,7 +388,13 @@
       "attempt_state": {},
       "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+        "returned_at": "2026-09-13T22:55:59.685414Z",
+        "returned_by": "sup_provenance_firmware",
+        "sha": "c06876d2bb3c244d29ad04e883a253eefd35c265"
+      },
       "completion_criterion": "Authority-approved evidence and current-head integrated validation for listed invariants.",
       "created_at": "2026-09-13T22:51:35.962454Z",
       "dependencies": [
@@ -381,10 +405,12 @@
         "no work until invariant dependencies resolved",
         "no Phase 26"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/foundational-invariants/firmware-provenance-20260914/SHA256SUMS"
+      ],
       "id": "P24-PROVENANCE-FIRMWARE",
       "notes": "Created by foundational invariant audit.",
-      "owner": "sup_provenance_firmware",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -400,12 +426,10 @@
         }
       ],
       "scope": "Firmware/configuration/procurement evidence",
-      "session_ids": [
-        "root-prov-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Firmware/configuration/procurement evidence",
-      "updated_at": "2026-09-13T22:52:14.161965Z",
+      "updated_at": "2026-09-13T22:55:59.772813Z",
       "validation": {
         "required": [],
         "results": {}
@@ -462,6 +486,57 @@
         "hpq:#2"
       ],
       "workstream": "phase24"
+    },
+    {
+      "attempt_state": {},
+      "base_sha": "dd4b2c80",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Versioned Power Authority decision gives connector/harness topology, branch limits, derating, protection, current sharing/fault policy, transient/load-step bounds, and numeric corridor inputs sufficient to unblock a future integrated producer.",
+      "created_at": "2026-09-13T22:56:56.524363Z",
+      "dependencies": [
+        "package:P24-FOUNDATIONAL-SYNTHESIS"
+      ],
+      "domain": "Power Authority",
+      "edit_boundaries": [
+        "authority artifacts and calculations only",
+        "no CAD or routing",
+        "do not duplicate Issue #2 corridor investigation"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-ENVELOPE-AUTHORITY-REDESIGN",
+      "notes": "Product decision resolves missing envelope authority; integrated corridor remains hpq:#2 waiting.",
+      "owner": "sup_power_envelope_architecture",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PRODUCT-V100-300W",
+        "INV-PRODUCT-V100-330W-PEAK",
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION",
+        "INV-BRANCH-SHARING"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Derive and approve the minimum source/contact/harness/protection/distribution architecture that can meet the binding 300 W sustained and 330 W peak product envelope. Do not route the integrated board.",
+      "session_ids": [
+        "root-power-arch-20260914"
+      ],
+      "status": "RUNNING",
+      "title": "Bind a 300 W / 330 W qualified input and protection architecture",
+      "updated_at": "2026-09-13T22:57:05.935490Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -476,5 +551,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-13T22:52:14.162027Z"
+  "updated_at": "2026-09-13T22:57:05.935556Z"
 }

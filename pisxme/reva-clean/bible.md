@@ -947,3 +947,7 @@ Thermal/mechanical and SI/fabrication specialist packets were retained as scoped
 ## 2026-09-14 — Thermal packet receipt correction
 
 The thermal/mechanics specialist receipt is now part of the invariant audit evidence set; CAD remains unchanged and downstream physical work remains gated by the contract.
+
+## 2026-09-14 — Independent closure lanes and power authority restart
+
+J1 package/net authority, firmware/provenance, SI/fabrication, and thermal/mechanics packets are now validated scoped evidence. The remaining HPQ-dependent integrated corridor stays parked, while a separate Power Authority package is active to bind an input architecture for the product envelope.

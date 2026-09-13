@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-J1-CONTRACT",
+  "result": "CANDIDATE_READY",
+  "base_commit": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+  "scope": "J1 connector/footprint provenance and contact contract only; no CAD edits, routing, or net-assignment changes",
+  "selected_component": {
+    "reference": "J1",
+    "part": "Amphenol/FCI 74221-101LF",
+    "manufacturer_contract": "400-position 10-row x 40-column MEG-Array receptacle; 1.27 mm pitch; 4.0 mm class; 0.45 A/contact product rating"
+  },
+  "source_revision_records": [
+    {
+      "id": "sxm2-benchoff-article-20260912",
+      "title": "Reverse Engineering the NVIDIA SXM2 Socket",
+      "publisher": "Brian Benchoff",
+      "url": "https://bbenchoff.com/pages/SXM2PCIe.html",
+      "revision": "HTML retrieved 2026-09-12; article states mid-2025 context",
+      "retrieved": "2026-09-12",
+      "tier": 3,
+      "evidence_class": "public reverse-engineering / author-reported",
+      "local_retrieval_sha256": "9fa2b322672dcb01eb6f59c3ae0375299b7e72bc5e053959517508894d1cf8e4",
+      "license_disposition": "retain citation and extracted facts only; article states CC-BY-SA-4.0; no page mirror"
+    },
+    {
+      "id": "sxm2-benchoff-repo-3173b02c",
+      "title": "SXM2toPCIe complete KiCad implementation",
+      "publisher": "Brian Benchoff / GitHub",
+      "url": "https://github.com/bbenchoff/SXM2toPCIe",
+      "revision": "main @ 3173b02c085218d66c4a2a9e5492853fb53ee097; commit date 2025-09-21",
+      "retrieved": "2026-09-12",
+      "tier": 3,
+      "evidence_class": "public implementation precedent",
+      "files_observed": [
+        "SXMtoPCIe/SXMtoPCIe.kicad_pcb",
+        "SXMtoPCIe/SXMtoPCIe.kicad_sch",
+        "SXMtoPCIe/74221-101LF/AMPHENOL_74221-101LF.kicad_mod",
+        "SXMtoPCIe/74221-101LF/74221-101LF.kicad_sym",
+        "SXMtoPCIe/74221-101LF/74221-101LF.step"
+      ],
+      "file_sha256": {
+        "pcb": "341b028c0e9baaad633133cdf7dde5192d0b96abdd0ce7edba9e1028d6755d1c",
+        "schematic": "03ec4a66ac269f91c0fb7c2e5c747eb5916ecffcb9f8ed70cc2161befdea28fe",
+        "footprint": "4ce457338f36b60a55fcce5f77f4688807e2a13b3dccc3a82c739d4de33ad436",
+        "symbol": "f034de3ff449b5772b0edcc0f7bbb11138c557596156e4e7ee026277f023f3bc",
+        "step": "ed42ffb4ccf3bb511f4b5525fd416b98571d4f3a2b0d735136b80500a30c047b"
+      },
+      "license_disposition": "metadata and extracted facts only; SnapMagic model terms prohibit redistribution of individual model files; no source files copied into current Library",
+      "remote_refs_verified": [
+        "refs/heads/main"
+      ],
+      "verification_note": "git ls-remote on 2026-09-12 returned main/HEAD only; no v1.0.0 tag was advertised."
+    },
+    {
+      "id": "xiaoyu-sxm2-pinout-definition-c05541e",
+      "title": "sxm2-pinout-definition",
+      "publisher": "xiaoyu9733 / GitHub",
+      "url": "https://github.com/xiaoyu9733/sxm2-pinout-definition",
+      "revision": "main @ c05541e1846b47f51d05a2149ff044d4d2eba727; tag v1.0.0; commit date 2025-02-09",
+      "retrieved": "2026-09-12",
+      "tier": 4,
+      "evidence_class": "claimed independent public dataset",
+      "observed_files": [
+        "README.md"
+      ],
+      "local_readme_sha256": "cc9920792af34f995706c1864bb728af7464c58ae8617ed0246abbcb4d306e20",
+      "status": "insufficient-as-fetched",
+      "finding": "Pinned public commit contains only a two-line README; no schematic, pin table, or contact data was available to cross-correlate. Do not treat repository title as corroboration.",
+      "license_disposition": "citation and retrieval metadata only",
+      "remote_refs_verified": [
+        "refs/heads/main",
+        "refs/tags/v1.0.0"
+      ],
+      "verification_note": "git ls-remote on 2026-09-12 returned main/HEAD/tag v1.0.0 at the pinned commit; git ls-tree showed README.md only."
+    },
+    {
+      "id": "3890p-sxm2-to-pcie-riser-85b0e24",
+      "title": "SXM2-to-PCIE-Riser-card",
+      "publisher": "3890p / GitHub",
+      "url": "https://github.com/3890p/SXM2-to-PCIE-Riser-card",
+      "revision": "default branch HEAD at 85b0e248923ec4114ff464c2400e7cb6de5af40c; latest commit 2025-02-10",
+      "retrieved": "2026-09-13",
+      "tier": 4,
+      "evidence_class": "public unverified implementation; conflicting contact evidence",
+      "observed_files": [
+        "4090ovo(003).pcbdoc",
+        "ovo.pcbdoc",
+        "oxo.pcbdoc",
+        "README.md"
+      ],
+      "file_sha256": {
+        "4090ovo(003).pcbdoc": "5789df24d9ef6b4252f4571aa6116c04e3c41f3d9886f015f4a234dc3977a097",
+        "ovo.pcbdoc": "5ad9692c79d56a2238eac32f974b597a6273e59a9b55fc2fca76be75c6de6810",
+        "oxo.pcbdoc": "d307a3641c860f7bf4a21031276524b055241d27497093c281d64e479047317a",
+        "README.md": "94b057d41d8a83f9864b1437b9ccfea2c73344f4ce79b2cffbe41eca331ba4eb"
+      },
+      "status": "insufficient-and-conflicting",
+      "finding": "4090ovo(003).pcbdoc contains a 400-pad 84740-002LF connector component with 130 +12V and 168 GND assignments, but its signal/auxiliary assignments conflict with the Benchoff map at 65 contacts. The README explicitly calls the project unverified. Preserve as a conflict record; do not use it as production net authority.",
+      "license_disposition": "metadata and extracted facts only; no Altium/PCBdoc files copied into the private Library",
+      "verification_note": "Fetched and parsed on 2026-09-13. Component 48 is pattern CONN-SMD_400P-P1.27_84740-002LF; component 40 is a separate SXM2 module/mechanical component. Connector-side convention and source hardware are not documented sufficiently to resolve the conflicts."
+    },
+    {
+      "id": "amphenol-74221101lf-product",
+      "title": "74221-101LF MEG-ARRAY product page",
+      "publisher": "Amphenol Communications Solutions / FCI",
+      "url": "https://www.amphenol-cs.com/product/74221101lf.html",
+      "revision": "Current product page; retrieved 2026-09-12",
+      "retrieved": "2026-09-12",
+      "tier": 1,
+      "evidence_class": "manufacturer product authority",
+      "observed_facts": [
+        "active part status",
+        "400 contacts",
+        "10-row 1.27-mm array",
+        "4.00-mm receptacle height",
+        "0.45-A current rating",
+        "30 microinch gold contact plating",
+        "-40 C to +85 C operating range"
+      ],
+      "status": "accessible",
+      "license_disposition": "link and extracted facts only; no page or model files copied"
+    },
+    {
+      "id": "amphenol-74221-drawing-w",
+      "title": "74221 MEG-Array 4mm receptacle assembly drawing",
+      "publisher": "Amphenol FCI / Amphenol Communications Solutions",
+      "url": "https://cdn.amphenol-cs.com/media/wysiwyg/files/drawing/74221.pdf",
+      "revision": "Drawing 74221 Rev W; Released; EC ELX-V-40495-1; approval 2021-04-13; document extraction retrieved 2026-09-12",
+      "tier": 1,
+      "evidence_class": "manufacturer mechanical/product authority",
+      "observed_facts": [
+        "released 4mm RECEPTACLE ASSEMBLY drawing for MEG-ARRAY family",
+        "10 x 40 = 400 positions",
+        "drawing number 74221, size A2, units millimetres",
+        "drawing revision W and status Released; EC ELX-V-40495-1",
+        "approval dates visible in title block include 2018-02-15, 2021-03-26, and 2021-04-13",
+        "74221-101LF appears in the product-number table with lead-free solder balls"
+      ],
+      "status": "remote_only",
+      "local_sha256": null,
+      "license_disposition": "link and extracted facts only; PDF download returned HTTP 403 in this environment",
+      "related_product_url": "https://www.amphenol-cs.com/product/74221101lf.html",
+      "verification_note": "Manufacturer product page was checked on 2026-09-12 and confirms active 74221-101LF, 400 contacts, 10-row 1.27-mm array, 4-mm receptacle, and 0.45-A current rating.",
+      "access_evidence": {
+        "browser_text_extraction": "accessible and parsed 2026-09-12",
+        "direct_curl_http_status": 403,
+        "local_sha256": null,
+        "local_retention": "not retained; metadata and extracted facts only"
+      }
+    },
+    {
+      "id": "cn108280004b",
+      "title": "A kind of SXM2 GPU link test board and test method",
+      "publisher": "CN patent authority / Google Patents mirror",
+      "url": "https://patents.google.com/patent/CN108280004B/en",
+      "revision": "CN108280004B; priority 2018-01-22; grant/publication 2021-10-29; retrieved 2026-09-12",
+      "tier": 2,
+      "evidence_class": "public patent / corroborating topology evidence",
+      "observed_facts": [
+        "test board uses same FCI 74221-101LF connector model as SXM2 module",
+        "describes PCIe x16 and NVLink test functions",
+        "describes 5V-to-3.3V conversion in test-board embodiment"
+      ],
+      "status": "not_pin_map",
+      "license_disposition": "citation and extracted facts only; no patent mirror copied"
+    }
+  ],
+  "inputs": {
+    "selected_pcb": {
+      "path": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+      "sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c"
+    },
+    "project_footprint": {
+      "path": "PiSXMe_RevA_Clean.pretty/PiSXMeRevAClean_SXM2_74221_101LF.kicad_mod",
+      "sha256": "d67e826c787d498b8459d51197d300904504ec3ace7c505fc08821d3c4d99305"
+    },
+    "library_contact_index": {
+      "path": "/home/nyx/PiSXMe-Library/Library/indexes/sxm2-benchoff-contact-map.json",
+      "sha256": "e22be34f61e8a094fcaa5dea051f76d7ae1df3fef29d5b805f793134b0180ca2"
+    },
+    "mechanical_crosscheck": {
+      "path": "validation-receipts/sxm2-j1-mechanical-crosscheck.json",
+      "sha256": "644ebd8750421d035db723c94f0ad32803a05957fc62c6f1c1d561bab6de2af0"
+    },
+    "j1_authority": {
+      "path": "authority-inventory/primary-docs/sxm2/SXM2_J1_AUTHORITY_REASSESSMENT_20260912.md",
+      "sha256": "3761d4fc71529fdd8529784759969a526fd977df96f6d9092aabf7a2179d6f85"
+    },
+    "sxm2_source_receipt": {
+      "path": "authority-inventory/primary-docs/sxm2/SXM2_SOURCE_RECEIPT.md",
+      "sha256": "bceef67e6e0688ea8a8e365d90b5d91aac7cbd0f3c95c2ab340aacf822f817d9"
+    },
+    "library_refresh_brief": {
+      "path": "/home/nyx/PiSXMe-Library/Library/briefs/sxm2-j1-refresh-20260913.md",
+      "sha256": "1e5d2a556e56f950c05fe5ec05586079650b98a99c1d332da92f10f048aac2de"
+    },
+    "library_provenance": {
+      "path": "/home/nyx/PiSXMe-Library/Library/provenance/sources.json",
+      "sha256": "c88e2ffacac3a3f23b56700a9616eb31f4f22ef12aab544bd1c07e83531bdbff"
+    }
+  },
+  "mechanical_correspondence": {
+    "requested_393_interpretation": "The selected PCB has 400 physical contacts. Seven are currently named product signal contacts, leaving 393 remaining physical contacts; the contract maps all 400, rather than silently dropping seven.",
+    "reference_convention": "letters A,B,C,D,E,F,G,H,J,K and numbers 1..40; contact identifier is <letter><number>",
+    "transformation": "identity: local x = reference x; local y = reference y; no mirror/rotation/translation in footprint-local coordinates",
+    "local_grid_origin_mm": {
+      "A1": [
+        24.765,
+        -5.715
+      ]
+    },
+    "pitch_mm": 1.27,
+    "proof": "400/400 shared identifiers, 0 coordinate mismatches, zero-error identity transform in retained crosscheck; current selected PCB independently reproduces the 10x40 nominal grid with max error 0.0 mm",
+    "retained_reference_sha256": "4ce457338f36b60a55fcce5f77f4688807e2a13b3dccc3a82c739d4de33ad436"
+  },
+  "contact_statistics": {
+    "physical_pad_count": 400,
+    "unique_pad_identifier_count": 400,
+    "expected_matrix_count": 400,
+    "remaining_after_7_named_signal_contacts": 393,
+    "current_net_counts": {
+      "12V_PROTECTED": 130,
+      "<no-net>": 93,
+      "CM5_PER0_N": 1,
+      "CM5_PER0_P": 1,
+      "CM5_PERST": 1,
+      "CM5_REFCLK_N": 1,
+      "CM5_REFCLK_P": 1,
+      "POWER_GND": 170,
+      "V100_PET0_N": 1,
+      "V100_PET0_P": 1
+    },
+    "reference_class_counts": {
+      "auxiliary_or_protection_unknown": 2,
+      "ground": 170,
+      "pcie_data": 64,
+      "pcie_refclk": 2,
+      "pcie_reset": 1,
+      "power_12v": 130,
+      "source_declared_nc_project_unknown": 31
+    },
+    "contract_disposition_counts": {
+      "corroborated_12v": 130,
+      "corroborated_ground": 170,
+      "corroborated_selected_x1": 7,
+      "preserved_auxiliary_unknown": 2,
+      "preserved_unknown_nc": 31,
+      "unimplemented_pcie_unassigned": 60
+    },
+    "geometry_grid_max_error_mm": 0.0,
+    "geometry_identity_crosscheck": {
+      "model": "x_local=x_ref,y_local=y_ref",
+      "mean_error_mm": 0.0,
+      "max_error_mm": 0.0
+    }
+  },
+  "selected_signal_contract": [
+    {
+      "contact": "A2",
+      "current_net": "CM5_PER0_P",
+      "published_value": "PERp0",
+      "classification": "pcie_data",
+      "disposition": "corroborated selected x1 contact"
+    },
+    {
+      "contact": "A3",
+      "current_net": "CM5_PER0_N",
+      "published_value": "PERn0",
+      "classification": "pcie_data",
+      "disposition": "corroborated selected x1 contact"
+    },
+    {
+      "contact": "E7",
+      "current_net": "CM5_REFCLK_P",
+      "published_value": "REFCLK+",
+      "classification": "pcie_refclk",
+      "disposition": "corroborated selected x1 contact"
+    },
+    {
+      "contact": "F7",
+      "current_net": "CM5_REFCLK_N",
+      "published_value": "REFCLK-",
+      "classification": "pcie_refclk",
+      "disposition": "corroborated selected x1 contact"
+    },
+    {
+      "contact": "E18",
+      "current_net": "CM5_PERST",
+      "published_value": "/PERST",
+      "classification": "pcie_reset",
+      "disposition": "corroborated selected x1 contact"
+    },
+    {
+      "contact": "G1",
+      "current_net": "V100_PET0_P",
+      "published_value": "PETp0",
+      "classification": "pcie_data",
+      "disposition": "corroborated selected x1 contact"
+    },
+    {
+      "contact": "G2",
+      "current_net": "V100_PET0_N",
+      "published_value": "PETn0",
+      "classification": "pcie_data",
+      "disposition": "corroborated selected x1 contact"
+    }
+  ],
+  "classification_disposition": {
+    "corroborated_contacts": "All 130 current 12V_PROTECTED pads match the indexed 12V row set; all 170 current POWER_GND pads match the indexed ground set; seven selected signal pads match the indexed x1/reference/reset contacts.",
+    "conflicting_contacts": "No authoritative contact-level conflict for the bounded selected x1/power/ground contract. The 3890p/4090ovo PCBdoc is retained as low-confidence conflicting evidence: it lacks documented connector orientation/source hardware and is not used to reassign PiSXMe.",
+    "genuinely_unknown_unmapped": "31 source-declared NC/project-unknown contacts and K18/K19 auxiliary/protection contacts remain no-net; 60 additional published PCIe contacts are unimplemented by the selected x1 product and remain unassigned.",
+    "12v_contacts": "Rows 22,23,25,26,28,29,31,32,34,35,37,38,40 across all ten columns; 130 total; current net 12V_PROTECTED.",
+    "gnd_contacts": "Rows 21,24,27,30,33,36,39 plus indexed signal-region grounds; 170 total; current net POWER_GND.",
+    "pcie_reference_reset": "64 published PCIe data contacts (4 selected for x1, 60 intentionally unimplemented), E7/F7 REFCLK, E18 PERST; current selected assignments only those required x1 contacts.",
+    "auxiliary_thermal": "K18 Prot/Cathode and K19 Prot/GND are auxiliary/protection unknowns; no thermal contact assignment is invented."
+  },
+  "authority_disposition": {
+    "status": "SUFFICIENT_FOR_BOUNDED_J1_CONTRACT",
+    "authority_record": "authority-inventory/primary-docs/sxm2/SXM2_J1_AUTHORITY_REASSESSMENT_20260912.md",
+    "decision": "No schematic, footprint, or net correction is required from this package. Preserve unknown/no-net contacts. Existing J1 contract is mechanically and electrically bounded for the selected x1/power/ground scope.",
+    "responsible_authority": "package/footprint authority with electrical interface authority; Root records disposition",
+    "limits": "This does not prove undocumented V100 auxiliary behavior, fabricated-hardware continuity, connector assembly yield, power adequacy, procurement, or integrated-board DRC/connectivity."
+  },
+  "validation": {
+    "checks": [
+      "400 unique pad IDs exact A-K40 matrix",
+      "nominal footprint grid max coordinate error 0.0 mm",
+      "retained 400/400 identity crosscheck",
+      "current net/category cross-correlation against indexed map",
+      "unknown-contact preservation",
+      "no source CAD modified"
+    ],
+    "expected_results": {
+      "physical_pad_count": 400,
+      "unique_pad_ids": 400,
+      "geometry_max_error_mm": 0.0,
+      "current_contract_mismatch_count": 0
+    },
+    "raw_artifacts": [
+      "J1_CONTACT_MAP.csv",
+      "J1_CONTRACT_AUTHORITY_PACKET.json",
+      "J1_CONTRACT_AUTHORITY_PACKET.md"
+    ]
+  },
+  "records_not_authority": "Benchoff article/repo are one reverse-engineering evidence family, not NVIDIA official documentation; Xiaoyu pinned repository has README only and supplies no usable map; manufacturer and patent establish connector identity/topology, not contact functions."
+}

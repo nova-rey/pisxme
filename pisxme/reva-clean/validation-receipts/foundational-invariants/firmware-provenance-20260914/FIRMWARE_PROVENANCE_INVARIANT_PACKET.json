@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "package_id": "P24-PROVENANCE-FIRMWARE",
+  "base_commit": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+  "scope": "firmware configuration procurement licensing provenance empirical risk",
+  "cad_modified": false,
+  "result": "CANDIDATE_READY_WITH_UNPROVEN_RELEASE_ROWS",
+  "selected_production": "Path A: TUSB9261IPVP SATA + JMS583-QHFA3A NVMe",
+  "path_b_disposition": "RTL9210B remains isolated and unpromoted; not a Path-A acceptance dependency",
+  "source_artifacts": {
+    "schematic": {"path": "PiSXMe_RevA_Clean.kicad_sch", "sha256": "6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1"},
+    "pcb": {"path": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb", "sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c"},
+    "project": {"path": "PiSXMe_RevA_Clean.kicad_pro", "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"},
+    "rules": {"path": "PiSXMe_RevA_Clean.kicad_dru", "sha256": "38e5c7521d964bfa91ee610dc6b7ca39b767b04b8990e94ea91dfe826d21f6a3"}
+  },
+  "prior_private_library_provenance": {
+    "repository": "PiSXMe-Library",
+    "branch": "Library",
+    "head": "b521af194da4e1455c776132e77f282f5247841c",
+    "brief_commit": "ae9132d6072f1557a709f47c542fe3c6d9baac38",
+    "availability": "not checked out in this worker; retained from prior receipt"
+  },
+  "invariants": [
+    {
+      "id": "IF-FIRMWARE-CONFIG-BASELINE",
+      "statement": "Path-A TUSB9261 uses a traceable TI firmware/configuration path; selected policy SLLC416 01.00.00.0M U1/U2 disabled; SLLC414 01.00.00.0E is FlashBurner.",
+      "authority_class": "B",
+      "provenance": [
+        "authority-inventory/primary-docs/bridge/SATA_BRIDGE_AUTHORITY.md sha256=87b1ba01924480d2c8dbbe086d02bc979a780f5355ec1243f89177fd3ddc2fc1",
+        "authority-inventory/primary-docs/bridge/TUSB9261_FIRMWARE_RECEIPT.md sha256=297154baa6ebfffd4230739081d0b5db5bc38c70d5b5712551ceee431731e04e"
+      ],
+      "state": "UNPROVEN",
+      "contradiction": "Gated image, formatted hash, lawful access/rights, polarity/config record, exact tool run, and board programming receipt are absent.",
+      "owner": "Firmware/Provenance Authority",
+      "verification": ["lawful image/config acquisition", "sha256 and tool/version record", "programming receipt", "USB/SATA functional validation"]
+    },
+    {
+      "id": "IF-FIRMWARE-JMS583-MASKROM",
+      "statement": "JMS583-QHFA3A factory mask-ROM is the Rev-A baseline; optional SPI NVRAM is DNP and not a boot dependency.",
+      "authority_class": "B",
+      "provenance": ["authority-inventory/primary-docs/storage-upgrade/jms583/JMS583_DESIGN_AUTHORITY.md sha256=5285cdf2e0e894970aee4565fe24d6f0d7b80b376bba6e51ceb58c3bd50f290a", "validation-receipts/firmware-provenance-independent-20260913/RECEIPT.md"],
+      "state": "PASS_FOR_BASELINE_POLICY",
+      "release_state": "UNPROVEN",
+      "contradiction": "Exact suffix/lifecycle/prototype lot and actual SSD behavior remain open.",
+      "owner": "Storage/Firmware Authority",
+      "verification": ["exact MPN/suffix/lot record", "UASP/BOT/TRIM/reset/suspend/cold-cycle test where claimed"]
+    },
+    {
+      "id": "INV-PATHA-PROCUREMENT-TRACEABILITY",
+      "statement": "Selected critical parts require exact MPN/suffix, lifecycle/source, lot or authorized prototype procurement, and release BOM/assembly records; dated distributor snapshots are planning evidence only.",
+      "authority_class": "B/C",
+      "provenance": ["validation-receipts/firmware-provenance-independent-20260913/RECEIPT.md", "authority-inventory/PHASE2_PROCUREMENT_MATRIX.md"],
+      "state": "UNPROVEN",
+      "contradiction": "No current purchase/lot/assembly record; JMS583 captured stock was zero and several records are dated snapshots.",
+      "owner": "Procurement/Release Authority",
+      "verification": ["release-time distributor/manufacturer refresh", "exact MPN and lot traceability", "approved BOM/assembly record"]
+    },
+    {
+      "id": "INV-FIRMWARE-RIGHTS",
+      "statement": "Only firmware/configuration with documented lawful access and release rights may be redistributed or treated as production material.",
+      "authority_class": "B/C",
+      "provenance": ["authority-inventory/primary-docs/bridge/TUSB9261_FIRMWARE_RECEIPT.md", "authority-inventory/rtl9210b/RTL9210B_FIRMWARE_PROGRAMMING_MATRIX.md sha256=4a8ab55bbcc908fe4b8e88ad1f372bf39a1bb4251b4d3595846332c37198e3f0"],
+      "state": "UNPROVEN",
+      "contradiction": "TI payloads are export-gated and community RTL9210B artifacts have no established redistribution chain; no proprietary binary is copied here.",
+      "owner": "Librarian + Release Authority",
+      "verification": ["license/access disposition", "release artifact review"]
+    },
+    {
+      "id": "INV-EMPIRICAL-V100-BEHAVIOR",
+      "statement": "Undocumented V100/SXM2 endpoint power/reset/enumeration, thermal/cold-cycle, and other behavior remains REV_A_EMPIRICAL_RISK until bounded hardware validation or authoritative evidence exists.",
+      "authority_class": "B/F/C",
+      "provenance": ["validation/phase3/PHASE4_V100_RECEIPT.md", "validation/phase3/PHASE4_SXM2_MAPPING_RECEIPT.md", "PHASE14_MATERIALIZATION_STATUS.md", "authority-inventory/primary-docs/mechanics/V100_COOLER_BACKPLATE_AUTHORITY.md"],
+      "state": "UNPROVEN",
+      "contradiction": "No fabricated V100 carrier, vendor authorization, or bench measurement is present in this lane.",
+      "owner": "V100/PCIe + Power/Thermal Authorities",
+      "verification": ["bounded hardware bring-up and thermal/power tests when hardware exists", "explicit risk disposition"]
+    },
+    {
+      "id": "INV-STORAGE-BRINGUP-BEHAVIOR",
+      "statement": "Path-A storage behavior must be tested on the actual CM5 image and selected SSD for declared enumeration, UASP/BOT, TRIM/discard where claimed, reset, suspend/resume, and cold-cycle recovery.",
+      "authority_class": "B/D",
+      "provenance": ["authority-inventory/primary-docs/bridge/TUSB9261_FIRMWARE_RECEIPT.md", "authority-inventory/primary-docs/storage-upgrade/jms583/JMS583_DESIGN_AUTHORITY.md", "PHASE24_STORAGE_UPGRADE_QUALIFICATION.md"],
+      "state": "UNPROVEN",
+      "contradiction": "Manufacturer capability statements and baseline policy are not an integrated or fabricated-board result.",
+      "owner": "Storage/Bring-up Authority",
+      "verification": ["image/software identity", "functional logs", "reset/suspend/cold-cycle and storage behavior records"]
+    },
+    {
+      "id": "INV-RTL9210B-PATHB-FIRMWARE",
+      "statement": "RTL9210B firmware/configuration/procurement is not a dependency of selected Path-A production closure.",
+      "authority_class": "E",
+      "provenance": ["authority-inventory/rtl9210b/RTL9210B_PATHB_AUTHORITY.md sha256=428f30154052ca89a7dbd166b38efcfa8e918874976a6307dc2efad00474645f", "authority-inventory/rtl9210b/RTL9210B_FIRMWARE_PROGRAMMING_MATRIX.md"],
+      "state": "NOT_APPLICABLE",
+      "owner": "Root + Storage Authority",
+      "verification": ["scope/queue review"]
+    }
+  ],
+  "closed_facts": ["Path-A identity and selected topology", "TUSB9261 baseline policy", "JMS583 mask-ROM baseline policy", "Path-B non-promotion", "no automatic firmware redistribution claim"],
+  "open_acceptance_dependencies": ["lawful TUSB9261 image/config/provisioning record", "JMS583 exact procurement and lifecycle/suffix traceability", "release-time critical-part lot/BOM records", "integrated storage behavior", "empirical V100/SXM2 behavior"],
+  "non_claims": ["no fabricated hardware operation", "no vendor authorization", "no current purchase transaction", "no firmware redistribution rights", "no Phase 24 or Phase 25 completion"],
+  "recommended_queue_effect": "Keep component_firmware_provenance and IF-FIRMWARE-CONFIG-BASELINE open with these scoped owners; do not make Path-A CAD READY from this packet alone; keep RTL9210B production work out of scope."
+}
