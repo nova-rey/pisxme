@@ -429,3 +429,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Rebound the campaign workstream and validation metadata to exact integrated PCB head `17dd81d2`; stale 314/340/370-era pointers no longer represent current validation authority.
 
 - 2026-09-13: Rejected an inboard-bottom-edge clearance producer: CM5_5V/C48–C51 translation worsened Light DRC from 312 to 327 violations with unchanged 499 unconnected items. Raw reports and mutation metadata are retained under `validation-receipts/edge-clearance-rejected-20260913/`.
+
+- 2026-09-13: Integrated the identity-preserving STORAGE bridge USB label-scope candidate from producer base `584b549e`; two local labels became global, with no PCB/topology edits. Fresh producer ERC improved 351 to 349 and native net node sets remained identical.

@@ -1,0 +1,2 @@
+baseline total 351 classes {'endpoint_off_grid': 121, 'footprint_link_issues': 3, 'isolated_pin_label': 126, 'lib_symbol_issues': 53, 'multiple_net_names': 22, 'same_local_global_label': 26}
+candidate total 349 classes {'endpoint_off_grid': 121, 'footprint_link_issues': 3, 'isolated_pin_label': 126, 'lib_symbol_issues': 53, 'multiple_net_names': 22, 'same_local_global_label': 24}

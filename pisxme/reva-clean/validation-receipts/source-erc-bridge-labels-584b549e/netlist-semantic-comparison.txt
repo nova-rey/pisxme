@@ -1,0 +1,6 @@
+baseline_nets 361
+candidate_nets 361
+missing_names []
+extra_names []
+changed_node_sets []
+semantic_equal True
