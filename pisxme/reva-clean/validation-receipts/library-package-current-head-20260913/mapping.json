@@ -1,0 +1,560 @@
+{
+  "schema": "pisxme.library-package.current-head.v1",
+  "source_commit": "be0c6dbce84e3a20effd9dab60d9e33316afeb8b",
+  "pcb": {
+    "path": "pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+    "sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c"
+  },
+  "schematic": {
+    "path": "pisxme/reva-clean/PiSXMe_RevA_Clean.kicad_sch",
+    "sha256": "6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1"
+  },
+  "project_context": {
+    "fp_lib_table_sha256": "864698c14e65cd70a5b5a08d23a22477919bf29f167d26fc0eda73dd43b3be61",
+    "sym_lib_table_sha256": "3bb180e251be1f62b2be5bbe486b29263c56c6a49b7a26103a27bef29b80c311",
+    "fp_lib_table_entries": {
+      "Package_SON": [
+        "${KICAD10_FOOTPRINT_DIR}/Package_SON.pretty",
+        "KiCad Package SON footprints"
+      ],
+      "Capacitor_SMD": [
+        "${KICAD10_FOOTPRINT_DIR}/Capacitor_SMD.pretty",
+        "KiCad capacitor footprints"
+      ],
+      "Package_TO_SOT_SMD": [
+        "${KICAD10_FOOTPRINT_DIR}/Package_TO_SOT_SMD.pretty",
+        "KiCad SOT SMD footprints"
+      ],
+      "PiSXMeRevAClean": [
+        "${KIPRJMOD}/PiSXMe_RevA_Clean.pretty",
+        "PiSXMe Rev A Clean isolated project footprints"
+      ]
+    },
+    "project_footprint_directory": "PiSXMe_RevA_Clean.pretty",
+    "project_footprint_file_count": 36
+  },
+  "private_library": {
+    "repository": "/home/nyx/PiSXMe-Library",
+    "visibility": "private-companion; no third-party/reference CAD copied into public history",
+    "indexed_records": [
+      {
+        "path": "Library/indexes/library-index.json",
+        "role": "corpus index"
+      },
+      {
+        "path": "Library/provenance/sources.json",
+        "role": "source revisions and license dispositions"
+      },
+      {
+        "path": "Library/indexes/storage-geometry-u11-u12-20260912.json",
+        "role": "U11/U12 package geometry"
+      },
+      {
+        "path": "Library/briefs/storage-geometry-u11-u12-20260912.md",
+        "role": "U11/U12 authority limits"
+      },
+      {
+        "path": "Library/briefs/sxm2-j1-refresh-20260913.md",
+        "role": "J1-only evidence, explicitly excluded from this package gate"
+      }
+    ],
+    "authority_boundary": "J1 and storage architecture were not reopened; U12 pitch conflict and U11 production land-pattern review remain open as already recorded."
+  },
+  "counts": {
+    "pcb_footprint_instances_total": 131,
+    "non_j1_instances": 130,
+    "unique_non_j1_footprints": 28,
+    "project_local_exact_instances": 115,
+    "system_declared_instances": 2,
+    "embedded_missing_project_source_instances": 13,
+    "electrical_pad_mismatches": 0,
+    "mechanical_pad_omission_groups": 2,
+    "testpoint_embedded_instances": 13
+  },
+  "mapping": [
+    {
+      "footprint": "ATO_FuseHolder_17861650001",
+      "refs": [
+        "F2",
+        "F1"
+      ],
+      "instance_pad_counts": [
+        8
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "b42ed1b96373e93a9ff1b42cc974d444330595a3093d10b3be8cf07d4955098b",
+      "expected_mechanical_omissions": [
+        "MP1"
+      ]
+    },
+    {
+      "footprint": "CSD19536KCS_TO220",
+      "refs": [
+        "Q2",
+        "Q1"
+      ],
+      "instance_pad_counts": [
+        3
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "2f8c9bc9a748336638992f0677215f69124b47aa07a27dd346cf08ad382fa66b",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "C_0402_1005Metric",
+      "refs": [
+        "C88",
+        "C84",
+        "C80",
+        "C42",
+        "C85",
+        "C30",
+        "C43",
+        "C93",
+        "C31",
+        "C82",
+        "C83",
+        "C86",
+        "C89",
+        "C33",
+        "C91",
+        "C32",
+        "C92",
+        "C87",
+        "C81",
+        "C90"
+      ],
+      "instance_pad_counts": [
+        2
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "cd57c7ce01483d3a0c69d6f4d7fbd6a3c9d20a96b3d0f0656a9ce3562bcc58fa",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "C_0603_1608Metric",
+      "refs": [
+        "C51",
+        "C4",
+        "C3",
+        "C50",
+        "C49",
+        "C48"
+      ],
+      "instance_pad_counts": [
+        2
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "9b7e630a21ff78249d187a07d7f6cef21daeff235573ddf60915990e25bdd246",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "C_0805_2012Metric",
+      "refs": [
+        "C24",
+        "C9",
+        "C18",
+        "C1",
+        "C2"
+      ],
+      "instance_pad_counts": [
+        2
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "30da070d213c2a51bd6571cf2312778a73575988cb9ca0a75e7e9f8b412bc478",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "C_1206_3216Metric",
+      "refs": [
+        "C23",
+        "C25",
+        "C52",
+        "C14",
+        "C5",
+        "C6",
+        "C15"
+      ],
+      "instance_pad_counts": [
+        2
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "648268be72b548b9e0462239970622407f48c047287afab3fe60325ac58ad179",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "C_1210_3225Metric",
+      "refs": [
+        "C7",
+        "C38",
+        "C46",
+        "C17",
+        "C40",
+        "C8",
+        "C47",
+        "C35",
+        "C34",
+        "C27",
+        "C19",
+        "C28",
+        "C39",
+        "C26",
+        "C37",
+        "C36",
+        "C44",
+        "C29",
+        "C16",
+        "C45",
+        "C41"
+      ],
+      "instance_pad_counts": [
+        2
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "58d3fac324e41188081982a966becaad645042c508159e43ae7317cd97728e2d",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "Crystal_3225_4Pad",
+      "refs": [
+        "Y10",
+        "Y1"
+      ],
+      "instance_pad_counts": [
+        4
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "0b84cdb22e86b3726f9bf3141025f67fc67f470edf029507b259145f450b9719",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "EDAC_A70_112_331N126",
+      "refs": [
+        "J2"
+      ],
+      "instance_pad_counts": [
+        20
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "28892930a8090b9889e27bd4e86ca50a9e3b41392fbb3fceb114d5d066ced8f2",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "HD3SS3412_RUA0042A",
+      "refs": [
+        "U13"
+      ],
+      "instance_pad_counts": [
+        43
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "b08bbf124876cb5e121a83f9290548c234d4b062a315423532f2aac2036433e0",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "HD3SS6126_RUA0042A",
+      "refs": [
+        "U12"
+      ],
+      "instance_pad_counts": [
+        43
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "9490928521cf2d8677da7bf188fc265664095d99978ae7c1f038da07adf33ffd",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "JMS583_QFN64_8x8",
+      "refs": [
+        "U11"
+      ],
+      "instance_pad_counts": [
+        65
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "11918576998884d5885debb500966b20804f7d14394212379fad31d0e5669c05",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "LM74700QDBVRQ1_SOT23_6",
+      "refs": [
+        "U2",
+        "U1"
+      ],
+      "instance_pad_counts": [
+        6
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "483445a0b24fd6792b7dd9f943c6bab3106e3b9c84f55298bb0a9990ec09db8b",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "L_2520_6332Metric",
+      "refs": [
+        "L10"
+      ],
+      "instance_pad_counts": [
+        2
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "a71a2dc788e309bb2a4b8c08240a80db9a635d853510d75ccda9e56e23d9abe0",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "M2_2280_RETENTION_ENVELOPE",
+      "refs": [
+        "MECH_M2_2280"
+      ],
+      "instance_pad_counts": [
+        0
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "418d9219ef445b2ce6924702aacf991ea351c067a169eff4b94ba0ce4fe69926",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "MODE_JUMPER_1x04",
+      "refs": [
+        "J8"
+      ],
+      "instance_pad_counts": [
+        4
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "9ee164299f424ab359deef2a3f8ee978f36d403c1f6c133e0bf6a2ee99065e20",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "Molex_0039300020_5569_2P_RA",
+      "refs": [
+        "J5",
+        "J6"
+      ],
+      "instance_pad_counts": [
+        2
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "9500cf508ada89dfcf5cca8ea9e208f199c1f843450b45b97c8f3f4c747b9ea8",
+      "expected_mechanical_omissions": [
+        "MP1"
+      ]
+    },
+    {
+      "footprint": "Package_SON:USON-10_2.5x1.0mm_P0.5mm",
+      "refs": [
+        "U9",
+        "U6"
+      ],
+      "instance_pad_counts": [
+        10
+      ],
+      "resolution": "declared_library_table_system_or_project",
+      "disposition": "system_library_declared_in_fp_lib_table; native resolution must remain tied to qualified Light context",
+      "local_sha256": null,
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "PiSXMeRevAClean_Raspberry_Pi_5_Compute_Module",
+      "refs": [
+        "J7"
+      ],
+      "instance_pad_counts": [
+        200
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "fb568dc3ebbc38cf2e54c12ba9d65b75461451c5241a113bbabfff7b6d3e6570",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "R_0402_1005Metric",
+      "refs": [
+        "R31",
+        "R24",
+        "R82",
+        "R11",
+        "R33",
+        "R20",
+        "R3",
+        "R22",
+        "R6",
+        "R19",
+        "R30",
+        "R26",
+        "R81",
+        "R29",
+        "R5",
+        "R12",
+        "R13",
+        "R2",
+        "R21",
+        "R28",
+        "R83",
+        "R1",
+        "R32",
+        "R14",
+        "R23",
+        "R4",
+        "R80",
+        "R27"
+      ],
+      "instance_pad_counts": [
+        2
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "d7956917b87ecdc5159507af215a615cb1bb50dc74e47a4382d3cd00861e1c6f",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "SOT-23-5",
+      "refs": [
+        "U14"
+      ],
+      "instance_pad_counts": [
+        5
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "c584d3c5c51babba9a28910406f658cc831e83af6cceb1d5e48453a73fb21e57",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "TE_1-2199230-4_MKEY",
+      "refs": [
+        "J3"
+      ],
+      "instance_pad_counts": [
+        71
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "a370a3406738f21ec4c9724c16bdd98e24d5312845730f4300704df104b737c9",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "TPSM63606RDLR_RDL0020",
+      "refs": [
+        "U5",
+        "U3",
+        "U4"
+      ],
+      "instance_pad_counts": [
+        20
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "be0541e2a1de26e301ebdc9e1e42930a0ee16e5e6f43a7b515753d0a7bd7c152",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "TUSB9261IPVP_PVP0064A",
+      "refs": [
+        "U7"
+      ],
+      "instance_pad_counts": [
+        65
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "00b9475bc4e01d286f99d331e1b2aa4e6df8cce228cdc262936b5f56b5885c3a",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "TVS_SMBJ18A_DO214AA",
+      "refs": [
+        "D2",
+        "D1"
+      ],
+      "instance_pad_counts": [
+        2
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "3d2bd7ae0b72c4a0ccc6f5782d50d8fcf9170063785ea11c9e0333593fb70586",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+      "refs": [
+        "TP8",
+        "TP5",
+        "TP3",
+        "TP6",
+        "TP4",
+        "TP12",
+        "TP2",
+        "TP1",
+        "TP13",
+        "TP9",
+        "TP10",
+        "TP11",
+        "TP7"
+      ],
+      "instance_pad_counts": [
+        1
+      ],
+      "resolution": "project_file_missing",
+      "disposition": "embedded_board_footprint_without_project_mod_or_TestPoint_table_entry; all 13 are probe-only and excluded from BOM/position",
+      "local_sha256": null,
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "Texas_DRT_3",
+      "refs": [
+        "U8"
+      ],
+      "instance_pad_counts": [
+        3
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "9ea0af697d7d715ff4e87b74dd00c022fdd33ed938e68a9f077487d0e5338fb0",
+      "expected_mechanical_omissions": []
+    },
+    {
+      "footprint": "USB_C_SERVICE_10171746",
+      "refs": [
+        "J4"
+      ],
+      "instance_pad_counts": [
+        18
+      ],
+      "resolution": "project_file_exact",
+      "disposition": "project_library_file_exact; compare electrical pads against local source; mechanical MP1 omissions are dispositioned",
+      "local_sha256": "7a0079eee1f8f782881d46c263368f745d2fa208a4fdca4258a3603d0eb63ee0",
+      "expected_mechanical_omissions": []
+    }
+  ],
+  "authority_findings": [
+    "U11 JMS583_QFN64_8x8: 65 board pads (64 signal plus EP 65), local source hash 11918576998884d5885debb500966b20804f7d14394212379fad31d0e5669c05; package basis established, paste/mask/courtyard production review remains open.",
+    "U12 HD3SS6126_RUA0042A: 43 board pads (42 signal plus EP 43), local source hash 9490928521cf2d8677da7bf188fc265664095d99978ae7c1f038da07adf33ffd; retained 0.40-mm pitch conflicts with TI RUA0042A 0.50-mm published pitch; no correction made.",
+    "U13 HD3SS3412_RUA0042A: 43 board pads; project-local geometry recorded, with storage architecture unchanged.",
+    "U7 TUSB9261IPVP_PVP0064A: 65 board pads; project-local 64-pin plus exposed-pad geometry recorded; pin/net contract remains subject to integrated acceptance.",
+    "U6/U9 Package_SON:USON-10_2.5x1.0mm_P0.5mm: 10 pads each; table-declared system library reference, no table mutation made.",
+    "TP1-TP13: one pad each, embedded in PCB, marked exclude_from_bom and exclude_from_pos_files; missing external TestPoint table/source is a context/documentation gap, not a net assignment change."
+  ],
+  "scope_limits": [
+    "Static parser proves identifier/file/hash correspondence and electrical pad-set correspondence for project-local footprints; it does not prove native ERC/DRC closure or package manufacturing acceptance.",
+    "Existing fresh Light validation receipt remains the authoritative native-checker evidence for unchanged CAD; no CAD or library-table mutation was performed by this package.",
+    "Schematic-to-PCB semantic coverage remains bounded by the existing fresh parity/netlist receipts and is not re-labeled as closed here."
+  ],
+  "result": "DONE_WITH_OPEN_CONTEXT_GAPS"
+}
