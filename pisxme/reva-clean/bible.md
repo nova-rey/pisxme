@@ -584,3 +584,10 @@ real short; no new GATE_B mutation was made. Geometry receipt retained under
 Campaign metadata is rebound to `386191ea`, which adds only the retained
 GATE_B geometry probe after the last validated CAD candidate. No schematic,
 PCB, rules, or libraries changed in this rebind.
+
+## 2026-09-13 — Phase 24 storage pair route rejected
+
+A bounded B.Cu dogleg for only `M2_SATA_A_P_PCIE_TXP0` from U13.2 to J3.49 was
+rejected: Light DRC rose 303→309, unconnected items stayed at 499, and four
+width plus two dangling-track findings were added. No shorts occurred; raw
+reports are retained under `validation-receipts/storage-pair2-rejected-20260913/`.
