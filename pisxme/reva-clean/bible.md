@@ -1001,3 +1001,7 @@ Acceptance-row reconciliation is complete. All 8 FAIL and 13 UNPROVEN rows now m
 ## 2026-09-14 — Six-loop source contract authority escalation
 
 The canonical `POWER_INPUT.kicad_sch` still contains only J5/J6, A/B source nets, 15-A fuse candidates, LM74700/Q protection paths, and no active 6.4-A branch limiter. A bounded source-contract review therefore returned `BLOCKED_INTERNAL_AUTHORITY` without CAD changes: Power Authority must select an exact 12-V current-limit/protection MPN and Package Authority must close the six-loop mating assembly before the producer can resume. The proposed A-F net/return contract and queue dependencies are retained under `validation-receipts/power-source-contract-20260914/`; the 300 W/330 W envelope and MPA anchors remain unchanged.
+
+## 2026-09-14 — Source contract escalated to exact limiter and assembly authorities
+
+The source-contract review found the existing 15 A fuses cannot guarantee the required 6.4 A branch maximum; TI TPS1663 at a nominal 6 A setting has a 6.42 A upper limit and is therefore not silently adopted. The source package is parked on exact limiter authority and six-loop assembly qualification. Two bounded authority packages now own those decisions; the 300 W/330 W envelope remains unchanged.

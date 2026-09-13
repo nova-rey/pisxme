@@ -2,6 +2,14 @@
   "campaign": "phase24-phase25-acreage",
   "created_at": "2026-09-13T22:41:37.011173Z",
   "dependencies": {
+    "authority:power-current-limiter-selection": {
+      "created_at": "2026-09-13T23:57:42.658508Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/power-source-contract-20260914/POWER_SOURCE_CONTRACT_ESCALATION.json",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:power-source-contract": {
       "created_at": "2026-09-13T23:51:25.865856Z",
       "kind": "authority",
@@ -454,7 +462,8 @@
       "created_at": "2026-09-13T22:51:52.348707Z",
       "dependencies": [
         "package:P24-MPA-CORRIDOR-AUTHORITY",
-        "authority:power-source-contract"
+        "authority:power-source-contract",
+        "package:P24-POWER-CONNECTOR-QUALIFICATION"
       ],
       "domain": "Power Authority redesign",
       "edit_boundaries": [
@@ -485,7 +494,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Power input/protection architecture for product envelope",
-      "updated_at": "2026-09-13T23:51:25.865876Z",
+      "updated_at": "2026-09-13T23:57:54.519298Z",
       "validation": {
         "required": [],
         "results": {}
@@ -844,7 +853,8 @@
         "package:P24-FOUNDATIONAL-SYNTHESIS",
         "package:P24-POWER-ENVELOPE-AUTHORITY-REDESIGN",
         "package:P24-POWER-CONNECTOR-QUALIFICATION",
-        "package:P24-MPA-CORRIDOR-AUTHORITY"
+        "package:P24-MPA-CORRIDOR-AUTHORITY",
+        "authority:power-current-limiter-selection"
       ],
       "domain": "power/source-contract",
       "edit_boundaries": [
@@ -855,7 +865,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-SOURCE-CONTRACT",
       "notes": "",
-      "owner": "sup_power_source_contract_authority",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -874,17 +884,17 @@
         }
       ],
       "scope": "Resolve the structural contradiction by defining authoritative C-F branch nets, four additional connector instances, independent protection/current-limit stages, qualified package geometry, and source/schematic ownership for the six-loop contract.",
-      "session_ids": [
-        "root-power-source-contract-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Bind six-loop source/net/component contract",
-      "updated_at": "2026-09-13T23:51:44.505327Z",
+      "updated_at": "2026-09-13T23:57:54.475720Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:power-current-limiter-selection"
+      ],
       "workstream": "phase24"
     },
     {
@@ -1116,6 +1126,112 @@
         "package:P24-POWER-RAIL-CLOSURE"
       ],
       "workstream": "phase24"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "37a8a975",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Power Authority signs one limiter/protection contract or records an exact irreducible authority gap with a resumed path; no unqualified MPN is promoted.",
+      "created_at": "2026-09-13T23:58:13.162798Z",
+      "dependencies": [
+        "package:P24-FOUNDATIONAL-SYNTHESIS",
+        "package:P24-POWER-ENVELOPE-AUTHORITY-REDESIGN"
+      ],
+      "domain": "power authority",
+      "edit_boundaries": [
+        "authority receipt only under validation-receipts/power-current-limiter-authority-20260914/",
+        "no CAD edits",
+        "no product-envelope reduction"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-CURRENT-LIMITER-AUTHORITY",
+      "notes": "",
+      "owner": "sup_power_current_limiter_authority",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION",
+        "INV-BRANCH-SHARING"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Bind one qualified active limiter/protection MPN and per-loop contract for six independent 6.4 A branches, including thresholds, fault inhibit, SOA/I2t and evidence.",
+      "session_ids": [
+        "root-power-current-limiter-20260914"
+      ],
+      "status": "RUNNING",
+      "title": "Select qualified per-loop current limiter and protection contract",
+      "updated_at": "2026-09-13T23:58:13.250760Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "37a8a975",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Package and Power authorities close all listed qualification fields or document exact irreducible gaps and resume dependency.",
+      "created_at": "2026-09-13T23:58:13.210027Z",
+      "dependencies": [
+        "package:P24-POWER-CONNECTOR-QUALIFICATION",
+        "package:P24-POWER-ENVELOPE-AUTHORITY-REDESIGN"
+      ],
+      "domain": "package/power authority",
+      "edit_boundaries": [
+        "authority receipt only under validation-receipts/power-connector-qualification-closure-20260914/",
+        "no CAD edits",
+        "preserve exact Molex provenance and unknowns"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-CONNECTOR-QUALIFICATION-CLOSURE",
+      "notes": "",
+      "owner": "sup_power_connector_qualification_closure",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Resolve mating housing/plating, crimp acceptance, harness loop resistance/length/temperature, fuse I2t, ambient/airflow and six-header installation limits for the six-loop contract.",
+      "session_ids": [
+        "root-power-connector-qualification-closure-20260914"
+      ],
+      "status": "RUNNING",
+      "title": "Close six-loop connector and harness assembly qualification",
+      "updated_at": "2026-09-13T23:58:13.291102Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -1130,5 +1246,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-13T23:54:40.914674Z"
+  "updated_at": "2026-09-13T23:58:13.291206Z"
 }
