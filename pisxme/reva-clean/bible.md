@@ -965,3 +965,7 @@ The V2.2 power-envelope candidate separates sustained and peak drop budgets usin
 ## 2026-09-14 — Conditional power authority and qualification split
 
 Power Authority conditionally signed the corrected six-loop numerical architecture. The exact Molex PDF byte hash is unavailable and is recorded without substitution; Librarian indexed revision, ECM, terminal material and part numbers in the private Library. Exact connector/harness qualification is now a separate queued package; integrated HPQ corridor work remains parked.
+
+## 2026-09-14 — Connector qualification evidence parked
+
+The six-loop connector/harness qualification packet records exact 5569/5556 parts, material, current and contact-resistance screens, and every remaining assembly qualification field. It is scoped evidence only; HPQ-dependent integrated routing remains waiting and no CAD was changed.

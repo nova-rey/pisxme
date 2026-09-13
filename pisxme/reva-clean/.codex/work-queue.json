@@ -603,7 +603,13 @@
       "attempt_state": {},
       "base_sha": "937fac20",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "937fac20",
+        "returned_at": "2026-09-13T23:32:49.121316Z",
+        "returned_by": "sup_power_connector_qualification",
+        "sha": "daaf6d3b"
+      },
       "completion_criterion": "Versioned package authority record proves exact connector/terminal/harness assembly and derating assumptions or records the irreducible external qualification gap.",
       "created_at": "2026-09-13T23:28:29.544394Z",
       "dependencies": [
@@ -614,10 +620,12 @@
         "authority/procurement evidence only",
         "no CAD until qualification and corridor authority"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-connector-qualification-20260914/QUALIFICATION_PACKET.json"
+      ],
       "id": "P24-POWER-CONNECTOR-QUALIFICATION",
       "notes": "Numeric architecture conditionally signed; qualification is separate.",
-      "owner": "sup_power_connector_qualification",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -635,12 +643,10 @@
         }
       ],
       "scope": "Close exact 0039300020/5569 header, 5556 terminal, mating housing, 16 AWG wire, crimp, length, ambient and thermal installation qualification; preserve unavailable PDF hash as explicit provenance condition.",
-      "session_ids": [
-        "root-power-qual-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Qualify exact six-loop connector and harness assembly",
-      "updated_at": "2026-09-13T23:28:38.999709Z",
+      "updated_at": "2026-09-13T23:32:49.211491Z",
       "validation": {
         "required": [],
         "results": {}
@@ -661,5 +667,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-13T23:28:38.999788Z"
+  "updated_at": "2026-09-13T23:32:49.211567Z"
 }
