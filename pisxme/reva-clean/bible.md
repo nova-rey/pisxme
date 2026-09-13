@@ -838,3 +838,7 @@ Native PCB attributes confirm `TP1`–`TP13` are excluded test probes and `MECH_
 ## 2026-09-13 — Unblocker MPA runtime dispatch status
 
 Recorded the prescribed one-shot Unblocker invocation for the MPA corridor stall. No packet returned within the bounded attempt and no CAD edits occurred; the domain-authority dependency remains open while independent acceptance work continues.
+
+## 2026-09-13 — CAD input integrity confirmed
+
+Verified at documentation head `3709bbea` that the canonical PCB hash remains the recorded integrated baseline `75d2d370...181bf7c`; schematic hash is recorded alongside it. Evidence-only commits have not altered CAD bytes. Manifest retained under `validation-receipts/cad-input-integrity-3709bbea-20260913/`.

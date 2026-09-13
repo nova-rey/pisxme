@@ -1,0 +1,6 @@
+source_commit=3709bbea
+schematic=PiSXMe_RevA_Clean.kicad_sch
+schematic_sha256=6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1
+pcb=PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb
+pcb_sha256=75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c
+comparison=pcb hash matches recorded integrated baseline; evidence-only commits did not change CAD bytes
