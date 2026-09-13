@@ -697,3 +697,10 @@ required endpoints remained open and fresh DRC worsened to 1083 violations /
 499 unconnected items. The candidate is retained as rejected evidence; this
 implementation failure triggers one bounded MPA reassessment and no variant
 campaign.
+
+## 2026-09-13 — Phase 24 MPA route inspection retained
+
+A native Light inspection captured the MPA candidate's exact local pad
+coordinates, orientations, and net names, including rotated U13 and the
+STORAGE_SEL control pads. The raw inspection is retained to support the
+bounded authority reassessment after the rejected routing implementation.
