@@ -1,0 +1,51 @@
+CORE_CM5: labels=15 contract_def=1 contract_instance=1
+  root_names=['CM5_PER0_P', 'CM5_PER0_N', 'CM5_PET0_P', 'CM5_PET0_N', 'CM5_REFCLK_P', 'CM5_REFCLK_N', 'CM5_PERST', 'CM5_USB3', 'CM5_STORAGE_USB2_DP', 'CM5_STORAGE_USB2_DM', 'CM5_GBE', 'SERVICE_USB2_DP', 'SERVICE_USB2_DM', 'CM5_POWER', 'CM5_5V']
+  label_names=['CM5_PER0_P', 'CM5_PER0_N', 'CM5_PET0_P', 'CM5_PET0_N', 'CM5_REFCLK_P', 'CM5_REFCLK_N', 'CM5_PERST', 'CM5_USB3', 'CM5_STORAGE_USB2_DP', 'CM5_STORAGE_USB2_DM', 'CM5_GBE', 'SERVICE_USB2_DP', 'SERVICE_USB2_DM', 'CM5_POWER', 'CM5_5V']
+  contract_pins=['CM5_PER0_P#1', 'CM5_PER0_N#2', 'CM5_PET0_P#3', 'CM5_PET0_N#4', 'CM5_REFCLK_P#5', 'CM5_REFCLK_N#6', 'CM5_PERST#7', 'CM5_USB3#8', 'CM5_STORAGE_USB2_DP#9', 'CM5_STORAGE_USB2_DM#10', 'CM5_GBE#11', 'SERVICE_USB2_DP#12', 'SERVICE_USB2_DM#13', 'CM5_POWER#14', 'CM5_5V#15']
+  instance_pins=['1:00000064', '2:00000065', '3:00000066', '4:00000067', '5:00000068', '6:00000069', '7:0000006a', '8:0000006b', '9:00000009', '10:0000000a', '11:0000006c', '12:0000006d', '13:00000070', '14:0000006e', '15:0000000f']
+V100_PCIE: labels=14 contract_def=1 contract_instance=1
+  root_names=['CM5_PER0_P', 'CM5_PER0_N', 'CM5_PET0_P', 'CM5_PET0_N', 'CM5_REFCLK_P', 'CM5_REFCLK_N', 'CM5_PERST', 'V100_PER0_P', 'V100_PER0_N', 'V100_PET0_P', 'V100_PET0_N', 'V100_REFCLK_P', 'V100_REFCLK_N', 'V100_PERST']
+  label_names=['CM5_PER0_P', 'CM5_PER0_N', 'CM5_PET0_P', 'CM5_PET0_N', 'CM5_REFCLK_P', 'CM5_REFCLK_N', 'CM5_PERST', 'V100_PER0_P', 'V100_PER0_N', 'V100_PET0_P', 'V100_PET0_N', 'V100_REFCLK_P', 'V100_REFCLK_N', 'V100_PERST']
+  contract_pins=['CM5_PER0_P#1', 'CM5_PER0_N#2', 'CM5_PET0_P#3', 'CM5_PET0_N#4', 'CM5_REFCLK_P#5', 'CM5_REFCLK_N#6', 'CM5_PERST#7', 'V100_PER0_P#8', 'V100_PER0_N#9', 'V100_PET0_P#10', 'V100_PET0_N#11', 'V100_REFCLK_P#12', 'V100_REFCLK_N#13', 'V100_PERST#14']
+  instance_pins=['1:000000c8', '2:000000c9', '3:000000ca', '4:000000cb', '5:000000cc', '6:000000cd', '7:000000ce', '8:000000cf', '9:000000d0', '10:000000d1', '11:000000d2', '12:000000d3', '13:000000d4', '14:000000d5']
+V100_POWER: labels=3 contract_def=1 contract_instance=1
+  root_names=['V100_POWER_12V', 'V100_GND', 'V100_THERMAL']
+  label_names=['V100_POWER_12V', 'V100_GND', 'V100_THERMAL']
+  contract_pins=['V100_POWER_12V#1', 'V100_GND#2', 'V100_THERMAL#3']
+  instance_pins=['1:0000012c', '2:0000012d', '3:0000012e']
+POWER_INPUT: labels=4 contract_def=1 contract_instance=1
+  root_names=['12V_IN_A', '12V_IN_B', '12V_PROTECTED', 'POWER_PG_FAULT']
+  label_names=['12V_IN_A', '12V_IN_B', '12V_PROTECTED', 'POWER_PG_FAULT']
+  contract_pins=['12V_IN_A#1', '12V_IN_B#2', '12V_PROTECTED#3', 'POWER_PG_FAULT#4']
+  instance_pins=['1:00000190', '2:00000191', '3:00000192', '4:00000193']
+REGULATORS: labels=6 contract_def=1 contract_instance=1
+  root_names=['12V_PROTECTED', 'CM5_5V', 'STORAGE_3V3', 'BRIDGE_1V1_3V3', 'BRIDGE_3V3', 'BRIDGE_1V1']
+  label_names=['BRIDGE_3V3', 'BRIDGE_1V1', '12V_PROTECTED', 'CM5_5V', 'STORAGE_3V3', 'BRIDGE_1V1_3V3']
+  contract_pins=['12V_PROTECTED#1', 'CM5_5V#2', 'STORAGE_3V3#3', 'BRIDGE_1V1_3V3#4', 'BRIDGE_3V3#5', 'BRIDGE_1V1#6']
+  instance_pins=['1:000001f4', '2:000001f5', '3:000001f6', '4:000001f7', '5:00000005', '6:00000006']
+ETHERNET: labels=3 contract_def=1 contract_instance=1
+  root_names=['CM5_GBE', 'GBE_SHIELD', 'ETH_POWER']
+  label_names=['CM5_GBE', 'GBE_SHIELD', 'ETH_POWER']
+  contract_pins=['CM5_GBE#1', 'GBE_SHIELD#2', 'ETH_POWER#3']
+  instance_pins=['1:00000258', '2:0000025a', '3:0000025b']
+STORAGE: labels=7 contract_def=1 contract_instance=1
+  root_names=['CM5_USB3', 'BRIDGE_SATA', 'M2_SATA', 'STORAGE_3V3', 'BRIDGE_CFG', 'BRIDGE_3V3', 'BRIDGE_1V1']
+  label_names=['CM5_USB3', 'BRIDGE_SATA', 'M2_SATA', 'STORAGE_3V3', 'BRIDGE_CFG', 'BRIDGE_3V3', 'BRIDGE_1V1']
+  contract_pins=['CM5_USB3#1', 'BRIDGE_SATA#2', 'M2_SATA#3', 'STORAGE_3V3#4', 'BRIDGE_CFG#5', 'BRIDGE_3V3#6', 'BRIDGE_1V1#7']
+  instance_pins=['1:000002bc', '2:000002bd', '3:000002be', '4:000002bf', '5:000002c0', '6:00000006', '7:00000007']
+SERVICE: labels=5 contract_def=1 contract_instance=1
+  root_names=['SERVICE_USB2_DP', 'SERVICE_USB2_DM', 'SERVICE_VBUS_SENSE', 'SERVICE_RD', 'SERVICE_GND']
+  label_names=['SERVICE_USB2_DP', 'SERVICE_USB2_DM', 'SERVICE_VBUS_SENSE', 'SERVICE_RD', 'SERVICE_GND']
+  contract_pins=['SERVICE_USB2_DP#1', 'SERVICE_USB2_DM#2', 'SERVICE_VBUS_SENSE#3', 'SERVICE_RD#4', 'SERVICE_GND#5']
+  instance_pins=['1:00000320', '2:00000324', '3:00000321', '4:00000322', '5:00000323']
+COOLING: labels=4 contract_def=1 contract_instance=1
+  root_names=['COOLING_12V', 'COOLING_PWM', 'COOLING_TACH', 'THERMAL_ALERT']
+  label_names=['COOLING_12V', 'COOLING_PWM', 'COOLING_TACH', 'THERMAL_ALERT']
+  contract_pins=['COOLING_12V#1', 'COOLING_PWM#2', 'COOLING_TACH#3', 'THERMAL_ALERT#4']
+  instance_pins=['1:00000384', '2:00000385', '3:00000386', '4:00000387']
+DEBUG: labels=4 contract_def=1 contract_instance=1
+  root_names=['UART', 'RECOVERY', 'POWER_PG_FAULT', 'DEBUG_GND']
+  label_names=['UART', 'RECOVERY', 'POWER_PG_FAULT', 'DEBUG_GND']
+  contract_pins=['UART#1', 'RECOVERY#2', 'POWER_PG_FAULT#3', 'DEBUG_GND#4']
+  instance_pins=['1:000003e8', '2:000003e9', '3:000003ea', '4:000003eb']
+Phase 24 structural hierarchy audit: PASS; balanced native expressions

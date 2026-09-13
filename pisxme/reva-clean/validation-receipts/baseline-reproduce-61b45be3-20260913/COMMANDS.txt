@@ -1,0 +1,11 @@
+# Executed inside qualified pisxme-kicad-light:v1 worker, cwd /workspace/project/pisxme/reva-clean
+sha256sum PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb PiSXMe_RevA_Clean.kicad_sch PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pro PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru sym-lib-table fp-lib-table PiSXMe_RevA_Clean_complete.kicad_sym > /workspace/output/source-input-sha256sums.txt
+kicad-cli version --format plain > /workspace/output/kicad-version.txt 2>&1
+kicad-cli sch erc --severity-all --format json --output /workspace/output/baseline-erc.json --exit-code-violations PiSXMe_RevA_Clean.kicad_sch > /workspace/output/baseline-erc.stdout 2>&1
+kicad-cli sch export netlist --format kicadxml --output /workspace/output/baseline-native.xml PiSXMe_RevA_Clean.kicad_sch > /workspace/output/baseline-netlist.stdout 2>&1
+kicad-cli pcb drc --severity-all --format json --output /workspace/output/baseline-drc.json --exit-code-violations PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb > /workspace/output/baseline-drc.stdout 2>&1
+python3 phase24_live_contract_map.py --root PiSXMe_RevA_Clean.kicad_sch --output /workspace/output/live-contract.json > /workspace/output/live-contract.stdout 2>&1
+python3 validation/phase3/phase24_hierarchy_structure_audit.py > /workspace/output/hierarchy-audit.stdout 2>&1
+python3 phase24_schematic_pcb_pad_parity_audit.py PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb /workspace/output/baseline-native.xml > /workspace/output/pad-parity.stdout 2>&1
+python3 phase24_patha_native_storage_census.py PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb /workspace/output/patha-native-census.json > /workspace/output/patha-native-census.stdout 2>&1
+python3 validation/phase24_power_return_census.py PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb > /workspace/output/power-return-census.json 2>/workspace/output/power-return-census.stderr
