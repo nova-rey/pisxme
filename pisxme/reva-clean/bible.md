@@ -874,3 +874,7 @@ The bounded ERC lane tested removal of the exact `NC_62` label and rejected it a
 ## 2026-09-13 — Independent DFM release audit
 
 The bounded DFM lane confirmed current fabrication/release inputs remain incomplete: 300 DRC violations, 499 unconnected items, no current Gerbers/drills/CPL/assembly package, and substantial model/assembly evidence gaps. The result is retained under `validation-receipts/dfm-open-findings-after-issue2-20260913/`; no CAD edits occurred.
+
+## 2026-09-13 — Independent component and firmware provenance lane
+
+Reconciled the private Library's Path-A component, firmware, programming, and procurement brief against the current integrated source. Path A remains selected and RTL9210B Path B remains an isolated, unpromoted alternative. Identity and baseline JMS583 mask-ROM evidence are present, while authorized JMS583 sourcing, TUSB9261 provisioning access/programming records, release-time procurement traceability, and hardware behavior remain open. The scoped receipt is retained under `validation-receipts/firmware-provenance-independent-20260913/`; no CAD or architecture changed.
