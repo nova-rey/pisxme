@@ -826,3 +826,7 @@ Recorded a source-bound inventory of Path A bridge/storage authority, isolated R
 ## 2026-09-13 — MPA dispatch v4 status
 
 Recorded the fourth bounded MPA corridor decision dispatch; no authority decision returned and no CAD edits occurred. The AUTO_PEDET producer remains rejected and storage/power geometry remains frozen while independent Phase 24 evidence work continues.
+
+## 2026-09-13 — Current power/return census retained
+
+The read-only native power census at `a56b4399` recorded required rail/return pad, segment, via, and zone ownership. It confirms zero copper for Branch-B `12V_IN_B`/`FUSED_12V_B` and bridge rails `BRIDGE_1V1`/`BRIDGE_3V3`, while preserving measured counts for `POWER_GND`, `12V_PROTECTED`, storage, and JMS rails. Raw JSON is under `validation-receipts/power-return-census-current-a56b4399-20260913/`.
