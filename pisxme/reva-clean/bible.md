@@ -570,3 +570,11 @@ remains open.
 
 Campaign metadata is rebound to current head `c12f5e11`, which adds only the
 read-only power/return census receipt after the last validated CAD candidate.
+
+## 2026-09-13 — Phase 24 GATE_B overlap geometry confirmed
+
+A disposable Light geometry probe confirmed the remaining GATE_B hole finding
+is a real via-in-PTH overlap at Q2 pad 3, connected to its support route, not a
+same-net duplicate. The prior relocation/removal method is rejected after a
+real short; no new GATE_B mutation was made. Geometry receipt retained under
+`validation-receipts/gateb-geometry-probe-20260913/`.
