@@ -752,3 +752,13 @@ integrated ERC acceptance row remains open.
 - 2026-09-13: fresh Light validation of integrated GATE_B via repair: DRC 300/499, zero shorts; ERC 293; Path-A 11/26; parity PASS.
 
 - 2026-09-13: acceptance matrix advanced to integrated GATE_B repair candidate 47364e6d and fresh validation receipt.
+
+## 2026-09-13 — Phase 24 independent acceptance-lane census
+
+Retained a current-head read-only acceptance-lane census for `acdc52c4`: ERC
+remains 293 findings, integrated DRC remains 300 violations/499 unconnected
+with zero shorts, and mechanical/edge findings were classified by dependency.
+The receipt distinguishes work waiting on MPA storage/power geometry from
+independent ERC-source, provenance/SI, Ethernet-edge authority, and BOM/model
+preparation lanes. It does not close any acceptance row or authorize another
+speculative route variant.
