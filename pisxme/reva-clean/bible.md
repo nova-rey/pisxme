@@ -764,3 +764,5 @@ preparation lanes. It does not close any acceptance row or authorize another
 speculative route variant.
 
 - 2026-09-13: Independent DFM/assembly census retained in `validation-receipts/dfm-independent-census-20260913/RECEIPT.md`; assembly release artifacts remain open and disjoint from MPA storage/power work.
+
+- 2026-09-13: Unblocker reclassified storage/power as an internal physical-congestion/domain-authority issue; MPA packet and no-speculative-routing gate retained in `validation-receipts/unblocker-mpa-escalation-20260913/RECEIPT.md`.
