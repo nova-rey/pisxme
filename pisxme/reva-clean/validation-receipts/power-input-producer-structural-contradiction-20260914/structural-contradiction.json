@@ -1,0 +1,59 @@
+{
+  "audit": "P24-POWER-INPUT-ARCHITECTURE",
+  "base_commit": "adbda0a2692837f4e3bcc9ca1d967190044fd366",
+  "pcb_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+  "toolchain": "KiCad pcbnew 10.0.6",
+  "mpa_required": {
+    "physical_loops": 6,
+    "branch_limit_a": 6.4,
+    "returns": 6,
+    "required_header_family": "Molex 0039300020 / 5569 two-position right-angle",
+    "independent_current_limiting": true,
+    "no_passive_sharing": true
+  },
+  "current_board": {
+    "connector_refs": [
+      "J5",
+      "J6"
+    ],
+    "connector_count": 2,
+    "input_net_names": [
+      "12V_IN_A",
+      "12V_IN_B"
+    ],
+    "fused_net_names": [
+      "FUSED_12V_A",
+      "FUSED_12V_B"
+    ],
+    "protection_refs": [
+      "F1",
+      "F2",
+      "U1",
+      "U2",
+      "Q1",
+      "Q2",
+      "D1",
+      "D2"
+    ],
+    "required_net_pad_counts": {
+      "12V_IN_A": 8,
+      "12V_IN_B": 7,
+      "FUSED_12V_A": 8,
+      "FUSED_12V_B": 7,
+      "12V_PROTECTED": 151,
+      "POWER_GND": 325
+    },
+    "board_net_count": 338,
+    "board_footprint_count": 131
+  },
+  "structural_findings": [
+    "Only J5 and J6 are Molex 0039300020 two-position input headers; the board has no four additional qualified header footprints required for six physical loops.",
+    "Only 12V_IN_A/12V_IN_B and FUSED_12V_A/FUSED_12V_B exist; no authoritative C-F branch nets exist.",
+    "Only U1/U2 LM74700 protection stages and Q1/Q2 high-side paths exist; four independent current-limited protection stages are absent.",
+    "Adding C-F nets, headers, protection parts, or tracks in PCB only would create connectivity absent from the canonical schematic/source contract and violate the no-synthetic-connectivity rule.",
+    "Package qualification packet still lists exact mating assembly, harness length/resistance/temperature, fuse I2t, six-header thermal installation, and PDF hash as open conditions; the MPA decision names connector qualification as a dependency."
+  ],
+  "classification": "STRUCTURAL_CONTRADICTION",
+  "recommended_escalation": "Return one bounded evidence packet to Macro Placement Authority / Package Authority. Do not launch route variants or mutate CAD until an authority-approved source/net/component contract identifies six authoritative loops and qualified connector/protection implementation.",
+  "schematic_symbol_instances_marker": false
+}

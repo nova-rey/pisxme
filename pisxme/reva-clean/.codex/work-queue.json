@@ -2,6 +2,14 @@
   "campaign": "phase24-phase25-acreage",
   "created_at": "2026-09-13T22:41:37.011173Z",
   "dependencies": {
+    "authority:power-source-contract": {
+      "created_at": "2026-09-13T23:51:25.865856Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/power-input-producer-structural-contradiction-20260914/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "hpq:#2": {
       "created_at": "2026-09-13T22:51:52.392594Z",
       "kind": "hpq",
@@ -445,7 +453,8 @@
       "completion_criterion": "Authority-approved evidence and current-head integrated validation for listed invariants.",
       "created_at": "2026-09-13T22:51:52.348707Z",
       "dependencies": [
-        "package:P24-MPA-CORRIDOR-AUTHORITY"
+        "package:P24-MPA-CORRIDOR-AUTHORITY",
+        "authority:power-source-contract"
       ],
       "domain": "Power Authority redesign",
       "edit_boundaries": [
@@ -455,7 +464,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-ARCHITECTURE",
       "notes": "Original HPQ external-envelope dependency superseded by internal product/Power Authority evidence; wait only on exact assembly qualification and MPA plan.",
-      "owner": "sup_power_storage_producer",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -473,17 +482,17 @@
         }
       ],
       "scope": "Power input/protection architecture for product envelope",
-      "session_ids": [
-        "root-power-storage-producer-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Power input/protection architecture for product envelope",
-      "updated_at": "2026-09-13T23:46:29.783016Z",
+      "updated_at": "2026-09-13T23:51:25.865876Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:power-source-contract"
+      ],
       "workstream": "phase24"
     },
     {
@@ -814,6 +823,63 @@
       },
       "waiting_on": [],
       "workstream": "phase24"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "adbda0a2",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Power/MPA/Package authorities issue one binding source/net/component contract or a precise irreducible escalation; all affected invariant rows and the waiting producer dependency are updated.",
+      "created_at": "2026-09-13T23:51:44.461149Z",
+      "dependencies": [
+        "package:P24-FOUNDATIONAL-SYNTHESIS",
+        "package:P24-POWER-ENVELOPE-AUTHORITY-REDESIGN",
+        "package:P24-POWER-CONNECTOR-QUALIFICATION",
+        "package:P24-MPA-CORRIDOR-AUTHORITY"
+      ],
+      "domain": "power/source-contract",
+      "edit_boundaries": [
+        "write only authority decision and validation receipt under validation-receipts/power-source-contract-20260914/",
+        "no PCB routing or speculative variants",
+        "do not silently change product envelope or synthesize PCB-only connectivity"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-SOURCE-CONTRACT",
+      "notes": "",
+      "owner": "sup_power_source_contract_authority",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PRODUCT-V100-300W",
+        "INV-PRODUCT-V100-330W-PEAK",
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION",
+        "INV-COPPER"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Resolve the structural contradiction by defining authoritative C-F branch nets, four additional connector instances, independent protection/current-limit stages, qualified package geometry, and source/schematic ownership for the six-loop contract.",
+      "session_ids": [
+        "root-power-source-contract-20260914"
+      ],
+      "status": "RUNNING",
+      "title": "Bind six-loop source/net/component contract",
+      "updated_at": "2026-09-13T23:51:44.505327Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -828,5 +894,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-13T23:48:13.940800Z"
+  "updated_at": "2026-09-13T23:51:44.505431Z"
 }

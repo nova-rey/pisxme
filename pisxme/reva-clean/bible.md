@@ -985,3 +985,7 @@ The Rev A foundational invariant audit is now the governing contract: 300 W sust
 ## 2026-09-14 — Acceptance-row reconciliation dispatched
 
 The foundational compliance matrix is now being translated into executable closure packages. A queue supervisor is mapping every FAIL and UNPROVEN invariant to an owner, dependency, and required evidence while the bounded six-loop power/storage producer remains active; this is queue reconciliation only and does not authorize CAD rule relaxation or speculative routing.
+
+## 2026-09-14 — Six-loop source contract contradiction isolated
+
+The authorized producer performed one clean Light read-only census and found that the current canonical source contains only two qualified input headers, A/B branch nets, and two protection paths. The six-loop authority cannot be implemented by PCB-only edits. The producer was released with no candidate; a bounded Power/MPA/Package source-contract authority package now owns definition of the four missing loops and protection stages.
