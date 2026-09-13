@@ -1,0 +1,174 @@
+{
+  "campaign": "Phase24 completion -> Phase25 acreage freeze",
+  "schema": "work-package queue v1",
+  "updated": "2026-09-13T19:00:00Z",
+  "canonical_branch": "reva-clean",
+  "canonical_head": "db3d9cfa588536b453852bc3247f4c1ee227481f",
+  "resource_policy": {
+    "initial_model_slots": 4,
+    "reusable_sessions": 16,
+    "cad_containers": 1,
+    "cad_memory": "1g",
+    "host_headroom_required": "1g",
+    "nested_delegation": "unavailable; root-mediated dispatch"
+  },
+  "packages": [
+    {
+      "id": "P24-ERC-COVERAGE",
+      "requirements": [
+        "native_erc",
+        "schematic_pad_reference_coverage"
+      ],
+      "priority": 1,
+      "dependencies": [
+        "current canonical schematic/netlist"
+      ],
+      "status": "READY",
+      "owner": null,
+      "resources": [
+        "model specialist",
+        "read-only Light if needed"
+      ],
+      "blocking_issue": null,
+      "criterion": "Current-head native ERC/source hygiene and bidirectional coverage evidence with no concealed net changes; candidate only if safe."
+    },
+    {
+      "id": "P24-LIBRARY-PACKAGE",
+      "requirements": [
+        "library_pin_mapping"
+      ],
+      "priority": 1,
+      "dependencies": [
+        "P24-ERC-COVERAGE evidence context"
+      ],
+      "status": "READY",
+      "owner": null,
+      "resources": [
+        "footprint/library authority",
+        "private Library"
+      ],
+      "blocking_issue": null,
+      "criterion": "Current-head project-library isolation and non-J1 package/pin mapping receipt; J1 authority preserved."
+    },
+    {
+      "id": "P24-SI-POWER-REFERENCE",
+      "requirements": [
+        "layers_routes_impedance_return",
+        "regulator_reference_overlays"
+      ],
+      "priority": 2,
+      "dependencies": [
+        "selected PCB/rules context"
+      ],
+      "status": "READY",
+      "owner": null,
+      "resources": [
+        "SI/PI specialists",
+        "Librarian",
+        "one queued CAD container only if producer required"
+      ],
+      "blocking_issue": null,
+      "criterion": "Close any independent layer/reference-overlay sub-items with exact evidence; route-dependent work explicitly WAITING_ON #2."
+    },
+    {
+      "id": "P24-MECHANICS-DFM",
+      "requirements": [
+        "mechanical_3d_assembly_service",
+        "dfm"
+      ],
+      "priority": 2,
+      "dependencies": [
+        "current PCB geometry and fab authority"
+      ],
+      "status": "READY",
+      "owner": null,
+      "resources": [
+        "mechanical/DFM specialists",
+        "read-only Light"
+      ],
+      "blocking_issue": null,
+      "criterion": "Current-head mechanical/DFM receipt with explicit dispositions and release-input gaps; no fabricated PASS."
+    },
+    {
+      "id": "P24-PROVENANCE-REVIEW",
+      "requirements": [
+        "component_firmware_provenance",
+        "hostile_review"
+      ],
+      "priority": 3,
+      "dependencies": [
+        "private Library authority and current-head evidence"
+      ],
+      "status": "DONE",
+      "owner": "firmware_provenance_phase24 + hostile_review_phase24",
+      "resources": [
+        "Librarian/verifier"
+      ],
+      "blocking_issue": null,
+      "criterion": "Already satisfied by pushed receipts; overall rows remain OPEN where external/procurement or integrated closure evidence is missing.",
+      "returned_evidence": [
+        "042f3e19",
+        "83b868a0"
+      ]
+    },
+    {
+      "id": "P24-INTEGRATED-CORRIDOR",
+      "requirements": [
+        "native_drc",
+        "physical_opens_shorts",
+        "power_current_transient_thermal",
+        "storage_mode_behavior"
+      ],
+      "priority": 0,
+      "dependencies": [
+        "Issue #2 resolution-ready packet and MPA reconciliation"
+      ],
+      "status": "WAITING",
+      "owner": "Hard Problem Task Force Issue #2",
+      "resources": [
+        "serialized CAD Light",
+        "MPA",
+        "PI/storage specialists"
+      ],
+      "blocking_issue": "WAITING_ON #2",
+      "criterion": "One reconciled integrated candidate with zero required opens/shorts and required DRC/power closure after fresh Light validation."
+    },
+    {
+      "id": "P24-ACCEPTANCE-CLOSURE",
+      "requirements": [
+        "all acceptance rows and fresh-checkout closure"
+      ],
+      "priority": 4,
+      "dependencies": [
+        "P24-ERC-COVERAGE",
+        "P24-LIBRARY-PACKAGE",
+        "P24-SI-POWER-REFERENCE",
+        "P24-MECHANICS-DFM",
+        "P24-PROVENANCE-REVIEW",
+        "P24-INTEGRATED-CORRIDOR"
+      ],
+      "status": "WAITING",
+      "owner": "Root integration",
+      "resources": [
+        "fresh Light validation checkout",
+        "hostile review"
+      ],
+      "blocking_issue": "depends on P24-INTEGRATED-CORRIDOR and all READY packages",
+      "criterion": "Every matrix row PASS/authorized disposition on one exact integrated SHA; then unlock Phase25."
+    }
+  ],
+  "states": [
+    "READY",
+    "RUNNING",
+    "WAITING",
+    "VALIDATING",
+    "DONE"
+  ],
+  "waiting_subtree": [
+    "native_drc",
+    "physical_opens_shorts",
+    "power_current_transient_thermal",
+    "storage_mode_behavior"
+  ],
+  "notes": "Issue #2 investigation is not duplicated here. Queue records ownership, capacity, and returned evidence; Root performs serialized integration only."
+}
