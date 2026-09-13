@@ -782,3 +782,7 @@ speculative route variant.
 ## 2026-09-13 — MPA AUTO_PEDET corridor producer retained
 
 Retained the bounded MPA-authorized AUTO_PEDET J3.69↔J8.2 producer candidate and rejection receipt under `validation-receipts/mpa-autopedet-corridor-producer-20260913/`. Native connectivity removes that specific open, but DRC remains non-clean (312 violations, 499 unconnected, zero shorts) due to clearance against the existing top POWER_GND zone; candidate is unintegrated and requires MPA disposition.
+
+## 2026-09-13 — Bounded follow-up non-results retained
+
+Recorded bounded MPA reassessment and DFM/mechanics follow-up attempts that returned no result before their limits; both were stopped without CAD edits. Storage/power remains authority-frozen, while independent acceptance work continues.
