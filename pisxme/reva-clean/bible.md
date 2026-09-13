@@ -718,3 +718,5 @@ Fresh qualified Light ERC on commit 737b8191 reports 293 violations (RC 5),
 removing the three footprint-link findings while preserving the remaining
 warning classes. The result is retained as source-context validation; the
 integrated ERC acceptance row remains open.
+
+- 2026-09-13: Unblocker classified bounded MPA producer failure as implementation-method; corrected stale AUTO_PEDET U14.2 endpoint (U14.2 is MODE_IN; AUTO_PEDET is J3.69/J8.2).
