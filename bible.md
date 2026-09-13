@@ -12790,3 +12790,5 @@ A bounded producer removed one isolated 9 mm dangling `CM5_5V` segment. Light
 DRC improved 303→302 and copper-edge-clearance findings 16→15, with 499
 unconnected items, no shorts, and no connectivity-count change. Receipt and
 raw report are retained; canonical integration remains pending.
+
+- 2026-09-13: MPA bounded revision rejected structural-contradiction claim; binding F2/D2 relocation and exact-pad storage/power corridors for one producer attempt.
