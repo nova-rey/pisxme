@@ -1,0 +1,12 @@
+054eb737125635cca891f9bcb74a408d7e1395878906b0a9f744f63c7a3ed123  pisxme/reva-clean/validation-receipts/hostile-review-cdd5a381-20260913/RECEIPT.md
+992d1fcca97013a752e44895c394b01e4b1d57db5182dd05a08df234cf16d8fd  pisxme/reva-clean/validation-receipts/hostile-review-cdd5a381-20260913/hostile-drc.json
+f0b5c2c2211c8d67ed15e75e656c7862d086e9245420892a7de62cd9ec582a06  pisxme/reva-clean/validation-receipts/hostile-review-cdd5a381-20260913/hostile-drc.rc
+cf2e2efbd00257341ba7e12d70440de7cf422d8fe5b5f6209da849a0c9aee7cb  pisxme/reva-clean/validation-receipts/hostile-review-cdd5a381-20260913/hostile-drc.stdout
+7e594a8789bf987dc9262ea0420be931c285289c8fd35754ada637abdd204deb  pisxme/reva-clean/validation-receipts/hostile-review-cdd5a381-20260913/hostile-native-netlist.xml
+6b4a5d3042cdf799b0921ed538ecf0b871a9d9357f3e6f9c05659f7511a49205  pisxme/reva-clean/validation-receipts/hostile-review-cdd5a381-20260913/hostile-patha-census.json
+b622f54c5769740f782bff60686b8e65d7c08b3220396c706d6958b117514006  pisxme/reva-clean/validation-receipts/hostile-review-cdd5a381-20260913/hostile-power-census.json
+79903cfb5fce27bbddaa3cda8e3265c336d8053b799426ca9cfc835ed648c85c  pisxme/reva-clean/validation-receipts/hostile-review-cdd5a381-20260913/kicad-version.txt
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  pisxme/reva-clean/validation-receipts/hostile-review-cdd5a381-20260913/netlist.rc
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  pisxme/reva-clean/validation-receipts/hostile-review-cdd5a381-20260913/netlist.stdout
+9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa  pisxme/reva-clean/validation-receipts/hostile-review-cdd5a381-20260913/parity.rc
+93a9cc42d3d97448d122477b40f5bc73fb36f2c7712e885bfda462fc213ad223  pisxme/reva-clean/validation-receipts/hostile-review-cdd5a381-20260913/parity.stdout

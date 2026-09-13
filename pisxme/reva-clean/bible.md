@@ -655,3 +655,11 @@ authority-reviewed physical corridor hypothesis. The precise blocker,
 evidence,
 and resumption conditions are recorded in
 `PHASE24_BLOCKED_ROUTING_AUTHORITY_20260913.md`; Phase 25 remains prohibited.
+
+## 2026-09-13 — Phase 24 hostile review retained
+
+A fresh exact-head KiCad Light hostile review retained native DRC/ERC-adjacent
+outputs, Path-A and power censuses, regenerated KicadXML, parity, commands,
+versions, return codes, and hashes. The integrated candidate remains OPEN at
+302 DRC violations, 499 unconnected items, 15 required Path-A opens, and
+unrouted Branch-B power; no acceptance row or freeze gate closes.
