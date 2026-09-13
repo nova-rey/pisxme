@@ -486,3 +486,10 @@ Canonical head `cdb212f5` retains the third exact duplicate `POWER_GND` via
 removal. Fresh Light validation reports ERC `296 findings / 0 errors` and DRC
 `309 violations / 499 unconnected`; only duplicate-hole findings reduced, with
 no shorts or collateral family changes. Phase 24 remains open.
+
+## 2026-09-13 — Phase 24 fourth duplicate-via integration validated
+
+Canonical head `9a36d915` retains the fourth exact duplicate `POWER_GND` via
+removal. Fresh Light validation reports ERC `296 findings / 0 errors` and DRC
+`308 violations / 499 unconnected`; only duplicate-hole findings reduced, with
+no shorts or collateral family changes. Phase 24 remains open.
