@@ -358,42 +358,42 @@
   "active_workstreams": {
     "storage_patha_lane": {
       "owner": "Root-mediated /root/south_band_storage_corrected",
-      "base": "973039f3",
+      "base": "17dd81d2",
       "state": "OPEN_REPAIR_METHOD_PENDING",
       "next": "derive native U13.2/.3/.6/.7 route with obstacle-aware transitions; prior wrong-pad attempt rejected",
-      "result": "First south-band attempt rejected at 454/499 with 12 shorts; no CAD integrated."
+      "result": "Corrected native-pad attempt rejected at 973/499 with 67 shorts and 35 crossings; no CAD integrated."
     },
     "power_return_lane": {
       "owner": "Root-mediated /root/power_delivery_producer",
-      "base": "c8710a84",
+      "base": "17dd81d2",
       "state": "REPAIR_METHOD_PENDING",
       "next": "obstacle-aware side-entry dogbones and separate-layer handoffs",
       "result": "Bounded candidate rejected at 336/378 with 13 shorts and 13 solder-mask bridges."
     },
     "clearance_lane": {
       "owner": "Root-mediated /root/clearance_repair_producer",
-      "base": "c8710a84",
+      "base": "17dd81d2",
       "state": "REPAIR_METHOD_PENDING",
       "next": "select a geometry-aware clearance repair distinct from via removal",
       "result": "Bounded via-removal candidate rejected after introducing USB_TXP1/JMS_AVDDL short."
     },
     "service_width_lane": {
       "owner": "Root-mediated /root/service_vbus_width_repair2",
-      "base": "933205d0",
+      "base": "17dd81d2",
       "state": "REPAIR_METHOD_PENDING",
       "next": "reroute or relocate adjacent clearance constraints",
       "result": "Widening removed nine width findings but added clearance defects; rejected."
     },
     "j1_mechanical_lane": {
       "owner": "Librarian/package authority",
-      "base": "c8710a84",
+      "base": "17dd81d2",
       "state": "MISSING_KNOWLEDGE",
       "next": "lawful Rev-W geometry/paste/3D overlay or explicit authority disposition",
       "result": "Electrical/package-net contract approved; mechanical/DFM evidence remains open."
     },
     "acceptance_lane": {
       "owner": "Root",
-      "base": "c8710a84",
+      "base": "17dd81d2",
       "state": "OPEN",
       "next": "close every acceptance row against one integrated candidate",
       "result": "All 13 acceptance rows remain OPEN."
@@ -405,18 +405,18 @@
   },
   "validation": {
     "current_recheck": {
-      "candidate": "994a78e8",
-      "drc_violations": 314,
+      "candidate": "17dd81d2",
+      "drc_violations": 312,
       "unconnected_items": 499,
       "shorting_items": 0,
-      "raw": "validation-receipts/dfm-c25-integrated-validate-20260912/c25-integrated.json",
+      "raw": "validation-receipts/exact-head-fresh-light-17dd81d2-20260913/drc.json",
       "status": "OPEN_NOT_CLOSURE"
     },
     "current_head_fresh_light": {
-      "candidate": "b58201e81947dcc7032117480eecaf57b68c53a6",
-      "drc_violations": 340,
+      "candidate": "17dd81d2",
+      "drc_violations": 312,
       "unconnected_items": 499,
-      "receipt": "validation-receipts/current-head-fresh-light-20260912/RECEIPT.md",
+      "receipt": "validation-receipts/exact-head-fresh-light-17dd81d2-20260913/RECEIPT.md",
       "status": "OPEN_NOT_CLOSURE"
     },
     "current_light_baseline": {
