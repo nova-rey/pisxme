@@ -530,3 +530,9 @@ A bounded single-branch-B `12V_IN_B` route from J6.1 to F2.1 was tested from
 `12V_IN_B` short. Raw evidence is retained under
 `validation-receipts/power-branchb-single-rejected-20260913/`; canonical copper
 was unchanged.
+
+## 2026-09-13 — Phase 24 rejection-evidence head rebind
+
+Current head `7815824f` contains only the retained rejected branch-B producer
+receipt and metadata; the validated integrated CAD remains unchanged from the
+preceding clean head. Phase 24 acceptance remains open.
