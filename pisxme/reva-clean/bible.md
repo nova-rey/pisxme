@@ -858,3 +858,7 @@ Fresh native `pcbnew` inspection at `0b65731e` recorded the board edge envelope 
 ## 2026-09-13 — Phase 24 hard-block audit retained
 
 After four bounded MPA dispatches and one Unblocker dispatch returned no authority decision, and all independent evidence lanes were exercised, recorded the current hard-block condition: integrated storage/power acceptance cannot advance without a binding placement/corridor authority plan. Resume requires functioning MPA dispatch followed by one producer and fresh integrated validation; Phase 25/26 remain prohibited.
+
+## 2026-09-13 — Hard Problem Queue admission
+
+Submitted the Phase 24 storage/power corridor blocker through the private Hard Problem Queue. Issue #2 in `nova-rey/codex-config-backup` was admitted with `hard-blocker` (packet `8f2311db593eb382`). Only the dependent storage/power subtree is `WAITING_ON #2`; independent acceptance lanes remain active. Resolution-ready candidates must be reconciled against current HEAD and fresh Light-validated before canonical integration.

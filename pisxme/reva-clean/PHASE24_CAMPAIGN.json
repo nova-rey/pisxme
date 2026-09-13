@@ -464,5 +464,32 @@
     "untracked_tar_sha256": "99aa058e6795bb6e41dd904aedb104bddc9e84a030c058fd3a2317e0202bf11b",
     "disposition": "retained outside Git; no wholesale restore/delete; tar listing shows historical probes and no authority change established",
     "checksum_method": "sha256sum completed 2026-09-12"
+  },
+  "hard_problem_queue": {
+    "repository": "nova-rey/codex-config-backup",
+    "issue": 2,
+    "url": "https://github.com/nova-rey/codex-config-backup/issues/2",
+    "label": "hard-blocker",
+    "packet": "8f2311db593eb382",
+    "state": "ADMITTED",
+    "waiting_subtree": [
+      "storage",
+      "power",
+      "integrated_drc",
+      "physical_opens_shorts",
+      "storage_mode_behavior"
+    ],
+    "waiting_state": "WAITING_ON #2",
+    "independent_work": [
+      "native_erc",
+      "schematic_pad_reference_coverage",
+      "library_pin_mapping",
+      "layers_routes_impedance_return",
+      "component_firmware_provenance",
+      "mechanical_3d_assembly_service",
+      "dfm",
+      "hostile_review_preparation"
+    ],
+    "resume_condition": "resolution-ready candidate; reconcile base SHA, integrate through MPA/serialized workflow, fresh Light validation"
   }
 }
