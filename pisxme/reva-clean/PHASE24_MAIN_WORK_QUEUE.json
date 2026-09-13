@@ -1,9 +1,9 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
   "schema": "work-package queue v1",
-  "updated": "2026-09-13T21:35:00Z",
+  "updated": "2026-09-13T22:10:00Z",
   "canonical_branch": "reva-clean",
-  "canonical_head": "8df4f1d7",
+  "canonical_head": "4a0c289c",
   "resource_policy": {
     "initial_model_slots": 4,
     "reusable_sessions": 16,
@@ -74,7 +74,7 @@
       "dependencies": [
         "selected PCB/rules context"
       ],
-      "status": "RUNNING",
+      "status": "DONE",
       "owner": "sup_si_power_reference",
       "resources": [
         "SI/PI specialists",
@@ -82,7 +82,12 @@
         "one queued CAD container only if producer required"
       ],
       "blocking_issue": null,
-      "criterion": "Close any independent layer/reference-overlay sub-items with exact evidence; route-dependent work explicitly WAITING_ON #2."
+      "criterion": "Close any independent layer/reference-overlay sub-items with exact evidence; route-dependent work explicitly WAITING_ON #2.",
+      "returned_evidence": [
+        "validation-receipts/si-power-reference-current-head-61085fe0/",
+        "4a0c289c"
+      ],
+      "result": "DONE_WITH_OPEN_SI_POWER_REFERENCE_GAPS"
     },
     {
       "id": "P24-MECHANICS-DFM",
