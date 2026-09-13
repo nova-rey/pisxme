@@ -908,3 +908,20 @@ The bounded P24-LIBRARY-PACKAGE audit recorded current-head project-library and 
 The bounded mechanics, 3D, assembly/service, and DFM package completed a fresh qualified Light current-head census at `61085fe0`. The selected PCB remains byte-identical at SHA-256 `75d2d370...181bf7c`; native DRC reports 300 violations, 499 unconnected items, and zero shorting items, including six courtyard overlaps, five PTH/courtyard findings, and 15 edge-clearance findings. The consolidated receipt under `validation-receipts/mechanics-dfm-consolidated-61085fe0-20260913/` records explicit open dispositions, authority constraints, missing release inputs and models, and confirms that `mechanical_3d_assembly_service` and `dfm` remain OPEN. No CAD or configuration was modified; Phase 25 remains gated.
 
 - 2026-09-13: P24-MECHANICS-DFM package closed with explicit OPEN DFM/model/release gaps.
+
+## 2026-09-13 — SI, power-return, and regulator-reference package
+
+The bounded `P24-SI-POWER-REFERENCE` package refreshed exact-current-head
+evidence at `61085fe0` in a fresh qualified KiCad Light checkout. The selected
+PCB remains byte-identical at SHA-256 `75d2d370...181bf7c`; native KiCad 10.0.6
+reported 300 DRC violations and 499 unconnected items, with ignored-check keys
+retained as open acceptance gaps. The serialized six-layer census records 329
+segments, 90 through-vias, 216 F.Cu and 113 B.Cu segments, and POWER_GND with
+47 segments/11 vias. Controlled channel lengths and widths, adjacent ground
+reference declarations, and current TPSM63606 U3/U4/U5 support distances are
+recorded in `validation-receipts/si-power-reference-current-head-61085fe0/`.
+U4/U5 regulator support remains physically stranded and their output/control
+routes and local PGND thermal-via arrays remain open; no placement, route,
+schematic, library, or rule changes were made. Storage-dependent route closure
+remains parked on Hard Problem Issue #2, and the SI, regulator-overlay, and
+power acceptance rows remain OPEN.

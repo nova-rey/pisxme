@@ -1,0 +1,1037 @@
+{
+  "board": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "board_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+  "counts": {
+    "footprints": 131,
+    "segments": 329,
+    "vias": 90,
+    "zones": 3
+  },
+  "layers": {
+    "B.Cu": "signal",
+    "F.Cu": "signal",
+    "In1.Cu": "signal / In1.GND",
+    "In2.Cu": "signal / In2.PWR",
+    "In3.Cu": "signal / In3.PROTECTED_12V",
+    "In4.Cu": "signal / In4.GND"
+  },
+  "net_summary": {
+    "12V_IN_A": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 228.576175,
+      "segments": 3,
+      "vias": 1,
+      "widths_mm": [
+        0.25,
+        2.0
+      ]
+    },
+    "12V_PROTECTED": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 23.6,
+      "segments": 6,
+      "vias": 1,
+      "widths_mm": [
+        0.25,
+        0.3
+      ]
+    },
+    "CM5_5V": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 225.029145,
+      "segments": 37,
+      "vias": 9,
+      "widths_mm": [
+        0.2,
+        0.25
+      ]
+    },
+    "CM5_PER0_N": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 123.57,
+      "segments": 5,
+      "vias": 0,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "CM5_PER0_P": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 125.24,
+      "segments": 5,
+      "vias": 0,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "CM5_PERST": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 203.368024,
+      "segments": 5,
+      "vias": 0,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "CM5_PET0_N": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 14.510585,
+      "segments": 2,
+      "vias": 0,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "CM5_PET0_P": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 11.99262,
+      "segments": 2,
+      "vias": 0,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "CM5_REFCLK_N": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 111.228418,
+      "segments": 6,
+      "vias": 2,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "CM5_REFCLK_P": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 114.614296,
+      "segments": 6,
+      "vias": 2,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "CM5_USB3_RX_N": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 131.364104,
+      "segments": 6,
+      "vias": 4,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "CM5_USB3_RX_P": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 127.769999,
+      "segments": 8,
+      "vias": 4,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "CM5_USB3_TX_N": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 123.36,
+      "segments": 7,
+      "vias": 4,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "CM5_USB3_TX_P": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 122.56,
+      "segments": 6,
+      "vias": 3,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "FUSED_12V_A": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 66.99,
+      "segments": 7,
+      "vias": 1,
+      "widths_mm": [
+        0.25,
+        2.0
+      ]
+    },
+    "GATE_A": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 18.49,
+      "segments": 4,
+      "vias": 2,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "GATE_B": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 18.51,
+      "segments": 4,
+      "vias": 1,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "JMS_AVDD33": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 19.7,
+      "segments": 3,
+      "vias": 2,
+      "widths_mm": [
+        0.15,
+        0.2
+      ]
+    },
+    "JMS_AVDDL": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 53.778471,
+      "segments": 7,
+      "vias": 3,
+      "widths_mm": [
+        0.15,
+        0.2
+      ]
+    },
+    "JMS_RESET_N": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 40.95,
+      "segments": 8,
+      "vias": 2,
+      "widths_mm": [
+        0.15,
+        0.2
+      ]
+    },
+    "JMS_REXT": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 9.45,
+      "segments": 3,
+      "vias": 0,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "JMS_USB3_TXN": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 32.425832,
+      "segments": 4,
+      "vias": 2,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "JMS_USB3_TXP": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 29.713285,
+      "segments": 4,
+      "vias": 2,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "JMS_VCCK": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 21.331139,
+      "segments": 3,
+      "vias": 2,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "JMS_VCCO": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 30.85,
+      "segments": 4,
+      "vias": 0,
+      "widths_mm": [
+        0.15
+      ]
+    },
+    "JMS_VDDREG_5V": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 11.412077,
+      "segments": 4,
+      "vias": 2,
+      "widths_mm": [
+        0.15
+      ]
+    },
+    "LXO": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 7.55,
+      "segments": 4,
+      "vias": 2,
+      "widths_mm": [
+        0.15
+      ]
+    },
+    "PG_CM5_5V": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 36.597512,
+      "segments": 7,
+      "vias": 2,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "POWER_GND": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 173.491568,
+      "segments": 47,
+      "vias": 11,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "RT_CM5_5V": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 18.242582,
+      "segments": 3,
+      "vias": 2,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "SERVICE_RD_A": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 67.75,
+      "segments": 5,
+      "vias": 2,
+      "widths_mm": [
+        0.15
+      ]
+    },
+    "SERVICE_RD_B": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 79.25,
+      "segments": 4,
+      "vias": 2,
+      "widths_mm": [
+        0.15
+      ]
+    },
+    "SERVICE_USB2_DM": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 54.020256,
+      "segments": 15,
+      "vias": 2,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "SERVICE_USB2_DP": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 47.628091,
+      "segments": 15,
+      "vias": 2,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "SERVICE_VBUS_SENSE": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 39.0,
+      "segments": 9,
+      "vias": 4,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "STORAGE_3V3": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 76.029196,
+      "segments": 22,
+      "vias": 4,
+      "widths_mm": [
+        0.2,
+        0.6
+      ]
+    },
+    "USB_RXN1": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 52.92421,
+      "segments": 5,
+      "vias": 2,
+      "widths_mm": [
+        0.15,
+        0.2
+      ]
+    },
+    "USB_RXP1": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 50.284303,
+      "segments": 5,
+      "vias": 2,
+      "widths_mm": [
+        0.15,
+        0.2
+      ]
+    },
+    "USB_TXN1": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 8.502255,
+      "segments": 3,
+      "vias": 0,
+      "widths_mm": [
+        0.15,
+        0.2
+      ]
+    },
+    "USB_TXP1": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 5.678505,
+      "segments": 3,
+      "vias": 0,
+      "widths_mm": [
+        0.15,
+        0.2
+      ]
+    },
+    "V100_PET0_N": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 121.278026,
+      "segments": 7,
+      "vias": 2,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "V100_PET0_P": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 121.888026,
+      "segments": 7,
+      "vias": 2,
+      "widths_mm": [
+        0.13208
+      ]
+    },
+    "VCAP_A": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 5.614713,
+      "segments": 1,
+      "vias": 0,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "VCAP_B": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 5.614713,
+      "segments": 1,
+      "vias": 0,
+      "widths_mm": [
+        0.2
+      ]
+    },
+    "XIN": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 10.35,
+      "segments": 4,
+      "vias": 0,
+      "widths_mm": [
+        0.1
+      ]
+    },
+    "XOUT": {
+      "layers": [
+        "F.Cu"
+      ],
+      "length_mm": 5.573155,
+      "segments": 3,
+      "vias": 0,
+      "widths_mm": [
+        0.1
+      ]
+    }
+  },
+  "parse_method": "read-only serialized KiCad 10 s-expression segment/via/zone/footprint census",
+  "power_return": {
+    "12V_PROTECTED": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 23.6,
+      "segments": 6,
+      "vias": 1,
+      "widths_mm": [
+        0.25,
+        0.3
+      ]
+    },
+    "BRIDGE_1V1": {
+      "length_mm": 0.0,
+      "segments": 0,
+      "vias": 0
+    },
+    "BRIDGE_3V3": {
+      "length_mm": 0.0,
+      "segments": 0,
+      "vias": 0
+    },
+    "CM5_5V": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 225.029145,
+      "segments": 37,
+      "vias": 9,
+      "widths_mm": [
+        0.2,
+        0.25
+      ]
+    },
+    "POWER_GND": {
+      "layers": [
+        "B.Cu",
+        "F.Cu"
+      ],
+      "length_mm": 173.491568,
+      "segments": 47,
+      "vias": 11,
+      "widths_mm": [
+        0.2
+      ]
+    }
+  },
+  "regulator_packages": {
+    "U3": {
+      "footprint": "TPSM63606RDLR_RDL0020",
+      "origin": [
+        60.0,
+        165.0
+      ],
+      "pad_count": 20,
+      "rotation_deg": 0.0
+    },
+    "U4": {
+      "footprint": "TPSM63606RDLR_RDL0020",
+      "origin": [
+        225.0,
+        105.0
+      ],
+      "pad_count": 20,
+      "rotation_deg": 0.0
+    },
+    "U5": {
+      "footprint": "TPSM63606RDLR_RDL0020",
+      "origin": [
+        235.0,
+        105.0
+      ],
+      "pad_count": 20,
+      "rotation_deg": 0.0
+    }
+  },
+  "regulator_support_distances": {
+    "U3": {
+      "max_distance_mm": 30.01666203960727,
+      "members": [
+        {
+          "distance_mm": 8.246211251235321,
+          "position": [
+            52.0,
+            163.0
+          ],
+          "reference": "C5"
+        },
+        {
+          "distance_mm": 8.00390529679106,
+          "position": [
+            52.0,
+            165.25
+          ],
+          "reference": "C6"
+        },
+        {
+          "distance_mm": 6.103277807866851,
+          "position": [
+            65.0,
+            168.5
+          ],
+          "reference": "C7"
+        },
+        {
+          "distance_mm": 7.433034373659253,
+          "position": [
+            65.0,
+            170.5
+          ],
+          "reference": "C8"
+        },
+        {
+          "distance_mm": 21.02379604162864,
+          "position": [
+            81.0,
+            164.0
+          ],
+          "reference": "C9"
+        },
+        {
+          "distance_mm": 26.019223662515376,
+          "position": [
+            86.0,
+            164.0
+          ],
+          "reference": "R3"
+        },
+        {
+          "distance_mm": 30.01666203960727,
+          "position": [
+            90.0,
+            164.0
+          ],
+          "reference": "R4"
+        },
+        {
+          "distance_mm": 9.486832980505138,
+          "position": [
+            69.0,
+            168.0
+          ],
+          "reference": "R5"
+        },
+        {
+          "distance_mm": 9.433981132056603,
+          "position": [
+            68.0,
+            160.0
+          ],
+          "reference": "R6"
+        }
+      ],
+      "module_position": [
+        60.0,
+        165.0
+      ]
+    },
+    "U4": {
+      "max_distance_mm": 155.72411502397438,
+      "members": [
+        {
+          "distance_mm": 155.72411502397438,
+          "position": [
+            70.0,
+            120.0
+          ],
+          "reference": "C14"
+        },
+        {
+          "distance_mm": 147.763324272297,
+          "position": [
+            78.0,
+            120.0
+          ],
+          "reference": "C15"
+        },
+        {
+          "distance_mm": 130.18832512940628,
+          "position": [
+            95.0,
+            112.0
+          ],
+          "reference": "C16"
+        },
+        {
+          "distance_mm": 124.19742348374221,
+          "position": [
+            101.0,
+            112.0
+          ],
+          "reference": "C17"
+        },
+        {
+          "distance_mm": 118.20744477400736,
+          "position": [
+            107.0,
+            112.0
+          ],
+          "reference": "C19"
+        },
+        {
+          "distance_mm": 11.180339887498949,
+          "position": [
+            220.0,
+            95.0
+          ],
+          "reference": "C18"
+        },
+        {
+          "distance_mm": 14.142135623730951,
+          "position": [
+            215.0,
+            95.0
+          ],
+          "reference": "R11"
+        },
+        {
+          "distance_mm": 11.180339887498949,
+          "position": [
+            215.0,
+            100.0
+          ],
+          "reference": "R12"
+        },
+        {
+          "distance_mm": 12.206555615733702,
+          "position": [
+            218.0,
+            115.0
+          ],
+          "reference": "R13"
+        },
+        {
+          "distance_mm": 11.180339887498949,
+          "position": [
+            220.0,
+            115.0
+          ],
+          "reference": "R14"
+        }
+      ],
+      "module_position": [
+        225.0,
+        105.0
+      ]
+    },
+    "U5": {
+      "max_distance_mm": 132.09844813622905,
+      "members": [
+        {
+          "distance_mm": 132.09844813622905,
+          "position": [
+            120.0,
+            170.0
+          ],
+          "reference": "C23"
+        },
+        {
+          "distance_mm": 125.19584657647394,
+          "position": [
+            128.0,
+            170.0
+          ],
+          "reference": "C24"
+        },
+        {
+          "distance_mm": 118.43141475132347,
+          "position": [
+            136.0,
+            170.0
+          ],
+          "reference": "C25"
+        },
+        {
+          "distance_mm": 101.24228365658294,
+          "position": [
+            150.0,
+            160.0
+          ],
+          "reference": "C26"
+        },
+        {
+          "distance_mm": 94.62557793746889,
+          "position": [
+            158.0,
+            160.0
+          ],
+          "reference": "C27"
+        },
+        {
+          "distance_mm": 88.23831367382311,
+          "position": [
+            166.0,
+            160.0
+          ],
+          "reference": "C28"
+        },
+        {
+          "distance_mm": 82.13403679352427,
+          "position": [
+            174.0,
+            160.0
+          ],
+          "reference": "C29"
+        },
+        {
+          "distance_mm": 105.80170130957252,
+          "position": [
+            150.0,
+            168.0
+          ],
+          "reference": "C34"
+        },
+        {
+          "distance_mm": 99.48869282486326,
+          "position": [
+            158.0,
+            168.0
+          ],
+          "reference": "C35"
+        },
+        {
+          "distance_mm": 93.43446901438462,
+          "position": [
+            166.0,
+            168.0
+          ],
+          "reference": "C36"
+        },
+        {
+          "distance_mm": 87.69264507357501,
+          "position": [
+            174.0,
+            168.0
+          ],
+          "reference": "C37"
+        },
+        {
+          "distance_mm": 82.3286098510111,
+          "position": [
+            182.0,
+            168.0
+          ],
+          "reference": "C38"
+        },
+        {
+          "distance_mm": 77.42092740338364,
+          "position": [
+            190.0,
+            168.0
+          ],
+          "reference": "C39"
+        },
+        {
+          "distance_mm": 73.06161783043132,
+          "position": [
+            198.0,
+            168.0
+          ],
+          "reference": "C40"
+        },
+        {
+          "distance_mm": 69.35416353759881,
+          "position": [
+            206.0,
+            168.0
+          ],
+          "reference": "C41"
+        },
+        {
+          "distance_mm": 27.459060435491963,
+          "position": [
+            250.0,
+            128.0
+          ],
+          "reference": "C44"
+        },
+        {
+          "distance_mm": 32.526911934581186,
+          "position": [
+            258.0,
+            128.0
+          ],
+          "reference": "C45"
+        },
+        {
+          "distance_mm": 36.24913792078372,
+          "position": [
+            250.0,
+            138.0
+          ],
+          "reference": "C46"
+        },
+        {
+          "distance_mm": 40.22437072223753,
+          "position": [
+            258.0,
+            138.0
+          ],
+          "reference": "C47"
+        },
+        {
+          "distance_mm": 14.7648230602334,
+          "position": [
+            242.0,
+            118.0
+          ],
+          "reference": "R19"
+        },
+        {
+          "distance_mm": 17.029386365926403,
+          "position": [
+            246.0,
+            118.0
+          ],
+          "reference": "R20"
+        },
+        {
+          "distance_mm": 18.601075237738275,
+          "position": [
+            246.0,
+            90.0
+          ],
+          "reference": "R21"
+        },
+        {
+          "distance_mm": 11.180339887498949,
+          "position": [
+            240.0,
+            115.0
+          ],
+          "reference": "R22"
+        }
+      ],
+      "module_position": [
+        235.0,
+        105.0
+      ]
+    }
+  },
+  "segments_by_layer": {
+    "B.Cu": 113,
+    "F.Cu": 216
+  },
+  "zones": [
+    {
+      "layer": "F.Cu",
+      "net": "POWER_GND",
+      "net_id": null
+    },
+    {
+      "layer": "In1.Cu",
+      "net": "POWER_GND",
+      "net_id": null
+    },
+    {
+      "layer": "In4.Cu",
+      "net": "POWER_GND",
+      "net_id": null
+    }
+  ]
+}

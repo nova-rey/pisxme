@@ -1,0 +1,8 @@
+74096ba4dfec69cb545c2e0246f9b6a7cca5b1044c7ffb47564464867ee004ce  validation-receipts/si-power-reference-current-head-61085fe0/drc.json
+ce9b9bbc5b0d51a529ac2111299386fe2be93540a77d368c0db1392080f49c33  validation-receipts/si-power-reference-current-head-61085fe0/geometry.json
+cbac7e5b54a5bb4b9925d27ff0915a764e3428f9c764e4a0b9718b1e8b1372c6  validation-receipts/si-power-reference-current-head-61085fe0/drc.stdout
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  validation-receipts/si-power-reference-current-head-61085fe0/drc.stderr
+79903cfb5fce27bbddaa3cda8e3265c336d8053b799426ca9cfc835ed648c85c  validation-receipts/si-power-reference-current-head-61085fe0/kicad-version.txt
+7ce61ebe83130e9f57920b602fe5d8258316a2355ce6ccd00814bd565d363896  validation-receipts/si-power-reference-current-head-61085fe0/returncodes.txt
+156e1fd3d68cd41602dff07ccc83c28d2f3b374e97719be060303c2fdb51b052  validation-receipts/si-power-reference-current-head-61085fe0/census_geometry.py
+cad7bb9e4060994bc0a84bb15817fc2eaf3e3c3b19d82ddba08369e5c71e9344  validation-receipts/si-power-reference-current-head-61085fe0/validation.json
