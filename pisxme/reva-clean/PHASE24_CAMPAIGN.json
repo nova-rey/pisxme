@@ -74,10 +74,10 @@
       "receipt": "validation-receipts/rule-context-exact-head-c0d4682b/RECEIPT.md",
       "result": "board-local .kicad_dru loaded; localized XIN/XOUT rule bounded; ordinary constraints active"
     },
-    "integration_candidate": "a5de71a3",
+    "integration_candidate": "5700ddb0",
     "validation": {
       "status": "OPEN_NOT_CLOSURE",
-      "candidate": "a5de71a3",
+      "candidate": "5700ddb0",
       "drc": "312 violations / 499 unconnected (72 width findings correctly scoped; ordinary negative control remains)",
       "shorting_items": 0,
       "tool": "KiCad 10.0.6",
@@ -362,7 +362,7 @@
     "pad_parity_surplus": "448 surplus pads classified by footprint/net family; J1 393-contact surplus reconciles with 400-position package and authority. Remaining no-net connector/IC contacts need explicit no-connect/unknown disposition.",
     "pad_no_net_disposition": "J1 no-net census reconciles as 60 intentionally unassigned non-product PCIe contacts, 31 source-declared NC/project-unknown contacts, and K18/K19 auxiliary/protection unknowns; no assignments were invented. Other no-net mechanical/NC pads remain scoped open where required."
   },
-  "integration_candidate": "a5de71a3",
+  "integration_candidate": "5700ddb0",
   "active_workstreams": {
     "storage_patha_lane": {
       "owner": "Root-mediated /root/south_band_storage_corrected",
@@ -413,17 +413,17 @@
   },
   "validation": {
     "current_recheck": {
-      "candidate": "a5de71a3",
-      "drc_violations": 311,
+      "candidate": "5700ddb0",
+      "drc_violations": 310,
       "unconnected_items": 499,
       "shorting_items": 0,
-      "raw": "validation-receipts/fresh-duplicate-via-a5de71a3/drc.json",
+      "raw": "validation-receipts/fresh-duplicate-via2-5700ddb0/drc.json",
       "status": "OPEN_NOT_CLOSURE"
     },
     "current_head_fresh_light": {
-      "candidate": "a5de71a3",
-      "receipt": "validation-receipts/fresh-duplicate-via-a5de71a3/RECEIPT.md",
-      "drc_violations": 311,
+      "candidate": "5700ddb0",
+      "receipt": "validation-receipts/fresh-duplicate-via2-5700ddb0/RECEIPT.md",
+      "drc_violations": 310,
       "unconnected_items": 499,
       "erc_findings": 296,
       "erc_errors": 0,
@@ -451,8 +451,8 @@
     "xiaoyu_repo_head": "c05541e1846b47f51d05a2149ff044d4d2eba727",
     "disposition": "Path A remains selected production; RTL9210B Path B isolated and out of production scope."
   },
-  "current_integrated_sha": "a5de71a3",
-  "current_candidate": "a5de71a3",
+  "current_integrated_sha": "5700ddb0",
+  "current_candidate": "5700ddb0",
   "archive": {
     "path": "/home/nyx/PiSXMe-succession-archive-20260912",
     "contents": [

@@ -472,3 +472,10 @@ Canonical integration `a5de71a3` retains the single duplicate `POWER_GND` via
 removal. Fresh Light validation reports ERC `296 findings / 0 errors` and DRC
 `311 violations / 499 unconnected`; only duplicate-hole findings reduced, with
 no shorts or collateral family changes. Phase 24 acceptance remains open.
+
+## 2026-09-13 — Phase 24 second duplicate-via integration validated
+
+Canonical head `5700ddb0` retains a second exact duplicate `POWER_GND` via
+removal. Fresh Light validation reports ERC `296 findings / 0 errors` and DRC
+`310 violations / 499 unconnected`; only duplicate-hole findings reduced, with
+no shorts or collateral family changes. Phase 24 remains open.
