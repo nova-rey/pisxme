@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-POWER-SOURCE-CONTRACT",
+  "status": "BLOCKED_INTERNAL_AUTHORITY",
+  "package_base_sha": "adbda0a2692837f4e3bcc9ca1d967190044fd366",
+  "inspection_head_sha": "bc5ceeff1762c236d6b43f51db63ab3bca4c98e2",
+  "cad_changed": false,
+  "pcb_routing_changed": false,
+  "decision": "Current canonical source cannot implement the conditionally signed six-loop V2.2 envelope without an authority-approved source/net/component correction.",
+  "product_envelope": {
+    "v100_sustained_w": 300,
+    "design_peak_w": 330,
+    "source_window_v": [11.4, 12.6],
+    "normal_branch_target_a": 5.8,
+    "hard_branch_limit_a": 6.4,
+    "branch_count": 6,
+    "source_continuous_a": 40,
+    "source_bounded_peak_a": 45
+  },
+  "current_source": {
+    "schematic": "POWER_INPUT.kicad_sch",
+    "sha256": "075ae680e3754e06bf995739db15cf30774432f8cf9fb487b5df20b3034c286b",
+    "headers": ["J5", "J6"],
+    "raw_nets": ["12V_IN_A", "12V_IN_B"],
+    "fused_nets": ["FUSED_12V_A", "FUSED_12V_B"],
+    "protection": ["F1", "F2", "U1", "U2", "Q1", "Q2", "D1", "D2"],
+    "missing": ["12V_IN_C..F", "FUSED_12V_C..F", "four headers", "four active current-limit stages", "six distinct post-limiter nets", "six distinct return nets"]
+  },
+  "required_source_contract": {
+    "loops": ["A", "B", "C", "D", "E", "F"],
+    "raw_net_pattern": "12V_IN_<loop>",
+    "fused_net_pattern": "FUSED_12V_<loop>",
+    "limited_net_pattern": "12V_PROTECTED_<loop>",
+    "return_net_pattern": "POWER_RETURN_<loop>",
+    "common_bus_join": "Only after independent limiting, fault handling, reverse-current policy and thermal qualification",
+    "maximum_branch_current_a": 6.4,
+    "passive_sharing": false,
+    "exact_mpn_and_footprint_required": true
+  },
+  "authority_dependencies": [
+    {
+      "owner": "Power Authority",
+      "need": "Select one 12-V-rated active current-limit/protection stage for A-F and prove its worst-case maximum is <=6.4 A; decide LM74700/Q retention or replacement."
+    },
+    {
+      "owner": "Package Authority",
+      "need": "Qualify exact six-header/mating assembly, wire/crimp/length/loop resistance, thermal installation and fuse I2t coordination."
+    },
+    {
+      "owner": "Macro Placement Authority",
+      "need": "Assign collision-free C-F source references and component cohorts/positions within the current fixed-anchor/corridor plan."
+    },
+    {
+      "owner": "Librarian",
+      "need": "Index/provenance the authoritative current-limiter and exact package evidence before authority signature."
+    }
+  ],
+  "research_lead_not_selection": {
+    "component": "TI TPS1663 family",
+    "official_url": "https://www.ti.com/product/TPS1663",
+    "datasheet_url": "https://www.ti.com/lit/ds/symlink/tps1663.pdf",
+    "facts": "4.5-60 V operation, adjustable 0.6-6 A current limit, +/-7%, 31 mOhm typical integrated FET, 20-pin HTSSOP option",
+    "reason_not_closed": "6 A setting upper limit is 6.42 A, so it does not by itself prove a guaranteed <=6.4 A branch limit."
+  },
+  "affected_invariants": [
+    "INV-PRODUCT-V100-300W",
+    "INV-PRODUCT-V100-330W-PEAK",
+    "INV-INPUT-12V",
+    "INV-INPUT-CAPACITY",
+    "INV-MOLEX-8A",
+    "INV-BRANCH-SHARING",
+    "INV-PROTECTION",
+    "INV-COPPER",
+    "INV-RETURN",
+    "INV-THERMAL"
+  ],
+  "producer_resume": {
+    "package": "P24-POWER-INPUT-ARCHITECTURE",
+    "ready": false,
+    "waiting_on": ["authority:power-source-contract", "package:P24-POWER-CONNECTOR-QUALIFICATION"],
+    "resume_when": "Exact source/net/component contract and exact assembly qualification are recorded; then one isolated producer may modify source and PCB."
+  },
+  "evidence_refs": [
+    "POWER_INPUT.kicad_sch",
+    "validation-receipts/power-input-producer-structural-contradiction-20260914/RECEIPT.md",
+    "validation-receipts/power-envelope-authority-redesign-20260914/POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json",
+    "validation-receipts/mpa-binding-six-loop-reconciliation-20260914/MPA_DECISION.json",
+    "validation-receipts/power-connector-qualification-20260914/QUALIFICATION_PACKET.json",
+    "authority-inventory/primary-docs/power/MOLEX_0039300020_AUTHORITY.md",
+    "authority-inventory/primary-docs/power/LITTELFUSE_0297015U_17861650001_AUTHORITY.md"
+  ]
+}

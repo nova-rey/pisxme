@@ -997,3 +997,7 @@ The queue now contains explicit closure packages for rail integrity, CM5/PCIe/SI
 ## 2026-09-14 — Invariant closure packages made explicit
 
 Acceptance-row reconciliation is complete. All 8 FAIL and 13 UNPROVEN rows now map to named owners, dependencies, and required integrated evidence; none were promoted to PASS. Four downstream closure packages are explicitly waiting on the power-input package, while the source-contract authority package remains the only active authority path.
+
+## 2026-09-14 — Six-loop source contract authority escalation
+
+The canonical `POWER_INPUT.kicad_sch` still contains only J5/J6, A/B source nets, 15-A fuse candidates, LM74700/Q protection paths, and no active 6.4-A branch limiter. A bounded source-contract review therefore returned `BLOCKED_INTERNAL_AUTHORITY` without CAD changes: Power Authority must select an exact 12-V current-limit/protection MPN and Package Authority must close the six-loop mating assembly before the producer can resume. The proposed A-F net/return contract and queue dependencies are retained under `validation-receipts/power-source-contract-20260914/`; the 300 W/330 W envelope and MPA anchors remain unchanged.
