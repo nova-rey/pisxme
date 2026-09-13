@@ -1,0 +1,3 @@
+# Phase 24 authority/independent follow-up status — 2026-09-13
+
+After the rejected AUTO_PEDET corridor producer, Root commissioned exactly one bounded Macro Placement Authority reassessment and one independent DFM acceptance probe. Neither returned a decision or artifact within the bounded execution window; both were stopped without CAD edits or speculative routing. The rejected producer and its raw DRC remain retained in `mpa-autopedet-corridor-producer-20260913/`. Storage/power geometry remains frozen pending a binding MPA decision. This is not a campaign hard block: the acceptance matrix still has independently actionable evidence and release work, and the next action is another supported MPA dispatch when runtime is available.
