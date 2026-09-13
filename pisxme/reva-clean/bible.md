@@ -618,3 +618,10 @@ The bounded routing probes and safe cleanup attempts are consolidated in
 `PHASE24_ROUTING_BLOCKER_REASSESSMENT_20260913.md`. Integrated storage,
 branch-B power, clearance/width, and GATE_B pad-aware routing remain open;
 future work requires a materially new authority-reviewed corridor hypothesis.
+
+## 2026-09-13 — Phase 24 GATE_B relocation rejected
+
+A bounded pad-aware GATE_B via relocation from Q2 pad 3 to `(10,110)` was
+rejected after Light DRC found a real `GATE_B` to `12V_PROTECTED` short and
+collateral clearance/hole/mask findings. Raw evidence is retained under
+`validation-receipts/gateb-relocation-rejected-20260913/`.
