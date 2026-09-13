@@ -738,3 +738,5 @@ integrated ERC acceptance row remains open.
 - 2026-09-13: fresh current-head Light baseline retained: ERC 293, DRC 302/499, Path-A 11/26, netlist RC 0.
 
 - 2026-09-13: retained current integrated DRC/DFM family census for repair queue (302 violations, 499 unconnected).
+
+- 2026-09-13: fresh current-head pad ownership audit PASS (814 nodes, 1262 pads, zero expected mismatches); surplus and physical connectivity remain open.
