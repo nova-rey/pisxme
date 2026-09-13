@@ -413,3 +413,5 @@ Fresh detached Light validation of the final C25 silkscreen repair confirmed 314
 - 2026-09-13: Reconciled J1's 93 no-net contacts against the approved SXM2 authority: 60 intentionally unassigned non-product PCIe contacts, 31 source-declared NC/project-unknown contacts, and K18/K19 auxiliary/protection unknowns. The 400-pad arithmetic closes the J1 bidirectional scope without inventing nets; integrated acceptance remains open.
 
 - 2026-09-13: Performed bounded inspection of `/home/nyx/PiSXMe-succession-archive-20260912`; retained patch and 8.2 GiB untracked tar checksums in a receipt. Archive remains outside Git and is neither restored nor treated as design authority.
+
+- 2026-09-13: Reconciled campaign candidate identity to the last CAD-changing commit `17dd81d2` (residual silk/J1 authority integration); earlier `c8710a84` remains the preceding scoped-rule integration base, not the current PCB head.
