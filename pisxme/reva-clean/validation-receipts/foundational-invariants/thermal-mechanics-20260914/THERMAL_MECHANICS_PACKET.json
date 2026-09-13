@@ -1,0 +1,39 @@
+{
+  "package_id": "P24-THERMAL-MECHANICS",
+  "packet_type": "bounded_thermal_mechanical_dfm_evidence",
+  "base_commit": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+  "board": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "board_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+  "toolchain": {
+    "kicad": "10.0.6",
+    "image": "pisxme-kicad-light:v1",
+    "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9"
+  },
+  "edit_boundary": "Evidence only; no CAD, schematic, rules, library, queue, or Phase 26 edits.",
+  "status": "DONE_EVIDENCE_OPEN_ACCEPTANCE",
+  "rows": [
+    {"id":"INV-THERMAL","state":"UNPROVEN","evidence":"50 C/90% screen leaves 19.8 C U3, 50.7 C U4, 71.0 C U5 to 125 C Tj; board-specific copper, capacitor derating, ambient/airflow, harness/fuse/connector rise and transient behavior remain open.","owner":"Power/PI + Thermal Authority"},
+    {"id":"THERM-MECH-001","state":"UNPROVEN","evidence":"Module-mounted air/liquid cooler contract is closed; no carrier cooler CAD, carrier thermal result, or exact module/standoff/access assembly proof.","owner":"Mechanical/Thermal Authority"},
+    {"id":"INV-MECHANICAL","state":"FAIL","evidence":"Fresh Light DRC: 6 courtyard overlaps, 5 PTH-inside-courtyard, 15 copper-edge-clearance; explicit M.2 envelope intersects J3/J8; board assembly/service geometry not closed.","owner":"Mechanical/DFM Authority"},
+    {"id":"J1-MECH-001","state":"UNPROVEN","evidence":"74221-101LF package basis is known, but exact local pad/mask/paste/courtyard/hidden-joint access/3D overlay is open.","owner":"Package/DFM Authority"},
+    {"id":"INV-MECHANICAL-MODELS","state":"UNPROVEN","evidence":"131 footprints, only 3 with 3D model records, 128 without; major connectors and most active/passive parts lack exact model evidence.","owner":"Mechanical/DFM Authority"},
+    {"id":"INV-FAB","state":"FAIL","evidence":"U11 0.15 mm fanout is outside the authorized JMS XIN/XOUT exception; normal basis is >=0.20 mm and current DRC has 118 width/138 clearance violations.","owner":"Storage + Fabrication/DFM Authority"},
+    {"id":"FAB-STACK-001","state":"PASS","scope":"design basis only","evidence":"Declared six-layer 1.6 mm JLC06161H-7628 basis with ordinary through-vias; fabrication result remains separate.","owner":"Fabrication/DFM Authority"},
+    {"id":"FAB-STACK-002","state":"UNPROVEN","evidence":"No order-specific impedance coupon, returned stack tolerance, or integrated return/field-solver closure.","owner":"SI/Fabrication Authority"},
+    {"id":"DFM-REL-001","state":"UNPROVEN","evidence":"Current integrated Gerbers, drills, CPL, assembly drawings, panel/fab job, and complete model/revision set are absent.","owner":"DFM/Release Authority"},
+    {"id":"SAFE-PROT-001-THERMAL","state":"UNPROVEN","evidence":"Protection part families exist but fuse I2t, TVS energy, MOSFET SOA, branch thermal path, harness derating and shutdown are not jointly closed.","owner":"Power/Safety + Thermal Authority"}
+  ],
+  "drc_census": {"violations":300,"unconnected_items":499,"shorting_items":0,"courtyards_overlap":6,"pth_inside_courtyard":5,"copper_edge_clearance":15,"track_width":118,"clearance":138},
+  "source_receipts": [
+    "validation-receipts/mechanics-dfm-consolidated-61085fe0-20260913/RECEIPT.md",
+    "validation-receipts/mechanical-model-census-3a811eac-20260913/mechanical-census.txt",
+    "validation-receipts/mechanics-envelope-current-0b65731e-20260913/RECEIPT.md",
+    "validation-receipts/dfm-independent-census-20260913/RECEIPT.md",
+    "authority-inventory/primary-docs/mechanics/V100_COOLER_BACKPLATE_AUTHORITY.md",
+    "authority-inventory/primary-docs/jlc/JLC06161H-7628_IMPEDANCE_BASIS.md",
+    "PHASE15_REGULATOR_LAYOUT_RECEIPT.md",
+    "PHASE17_MECHANICAL_REOPEN_RECEIPT.md"
+  ],
+  "user_decision_required": false,
+  "next_action": "Keep correction package owned; revalidate thermal/mechanical/DFM rows against the final integrated candidate after power and placement authority decisions."
+}
