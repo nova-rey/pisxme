@@ -444,3 +444,10 @@ A committed-base Light probe at `8a8dde37` added the qualified KiCad system
 findings while leaving the schematic and PCB untouched. The probe netlist and
 raw ERC report are retained under `validation-receipts/`; physical repair and
 integrated acceptance remain open.
+
+## 2026-09-13 — Phase 24 fresh context-corrected validation
+
+Fresh isolated Light validation of `73c348ef` reproduced the context result:
+ERC `296 findings / 0 errors`; DRC `312 violations / 499 unconnected`; native
+netlist export completed. The acceptance manifest now names this exact head and
+receipt; all physical and integrated closure rows remain open.

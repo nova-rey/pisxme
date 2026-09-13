@@ -84,7 +84,13 @@
       "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
       "receipt": "validation-receipts/exact-head-fresh-light-17dd81d2-20260913/RECEIPT.md",
       "raw": "validation-receipts/exact-head-fresh-light-17dd81d2-20260913/drc.json",
-      "ignored_checks": ["missing_courtyard", "track_not_centered_on_via", "tuning_profile_track_geometries", "footprint_filters_mismatch", "footprint_type_mismatch"]
+      "ignored_checks": [
+        "missing_courtyard",
+        "track_not_centered_on_via",
+        "tuning_profile_track_geometries",
+        "footprint_filters_mismatch",
+        "footprint_type_mismatch"
+      ]
     },
     "pi_storage_recheck": {
       "base_commit": "76873ea8",
@@ -407,18 +413,18 @@
   },
   "validation": {
     "current_recheck": {
-      "candidate": "17dd81d2",
+      "candidate": "73c348ef",
       "drc_violations": 312,
       "unconnected_items": 499,
       "shorting_items": 0,
-      "raw": "validation-receipts/exact-head-fresh-light-17dd81d2-20260913/drc.json",
+      "raw": "validation-receipts/fresh-context-corrected-73c348ef/drc.json",
       "status": "OPEN_NOT_CLOSURE"
     },
     "current_head_fresh_light": {
-      "candidate": "17dd81d2",
+      "candidate": "73c348ef",
       "drc_violations": 312,
       "unconnected_items": 499,
-      "receipt": "validation-receipts/exact-head-fresh-light-17dd81d2-20260913/RECEIPT.md",
+      "receipt": "validation-receipts/fresh-context-corrected-73c348ef/RECEIPT.md",
       "status": "OPEN_NOT_CLOSURE"
     },
     "current_light_baseline": {
@@ -429,11 +435,11 @@
       "scope": "fresh isolated untouched candidate"
     },
     "current_erc_baseline": {
-      "source_sha": "1ff9b715",
-      "findings": 351,
+      "source_sha": "73c348ef",
+      "findings": 296,
       "errors": 0,
       "toolchain": "KiCad 10.0.6 / pisxme-kicad-light:v1",
-      "scope": "fresh isolated untouched schematic"
+      "scope": "fresh isolated committed integrated head with qualified Device symbol library"
     }
   },
   "external_evidence": {
