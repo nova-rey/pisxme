@@ -798,3 +798,7 @@ Recorded a fresh MPA decision dispatch and independent acceptance probe that ret
 ## 2026-09-13 — Fresh native netlist regenerated
 
 Regenerated the native KiCad XML netlist from `PiSXMe_RevA_Clean.kicad_sch` at `0d62a8f3` in a fresh qualified Light checkout. Raw output and tool metadata are retained under `validation-receipts/native-netlist-fresh-0d62a8f3-20260913/`; the stale checked-in SATA-era export remains non-authoritative.
+
+## 2026-09-13 — Fresh native netlist receipt corrected
+
+Corrected the receipt metadata formatting for the fresh Light netlist export; the generated XML and validation metadata are unchanged.
