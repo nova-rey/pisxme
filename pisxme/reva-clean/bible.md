@@ -774,3 +774,5 @@ speculative route variant.
 - 2026-09-13: SI/reference/provenance lane recorded exact `72df93fc` board geometry, six-layer and scoped-rule source identities, F.Cu/B.Cu signal routing with POWER_GND zones on F.Cu/In1/In4, Path-A component/firmware provenance, and private Library HEAD `b521af19`. J1 evidence linkage remains bounded-closed; SI/return and full component/procurement acceptance rows remain open. Fresh Light context rerun was blocked before KiCad by host disk exhaustion; no validation result was promoted.
 
 - 2026-09-13: Fresh qualified Light baseline after disposable-workspace cleanup reproduced ERC 293, DRC 300/499 with zero reported shorts, and native netlist export on base `9e72fde1`; raw outputs retained under `validation-receipts/fresh-baseline-after-disk-9e72fde1-20260913/`.
+
+- 2026-09-13: MPA-authorized native placement producer `1dda0afa` materialized U13/C30-C33/F2/D2 transforms; targeted DRC 391/499 with zero reported shorts. Candidate retained for authority review and not integrated.
