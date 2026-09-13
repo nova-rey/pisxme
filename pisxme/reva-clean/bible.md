@@ -822,3 +822,7 @@ A fresh Light footprint census at `3a811eac` found 131 footprints, only 3 with 3
 ## 2026-09-13 — Current provenance inventory retained
 
 Recorded a source-bound inventory of Path A bridge/storage authority, isolated RTL9210B Path B evidence, SXM2 J1 authority, and firmware configuration artifacts at `075b557b`. Exact hashes are retained under `validation-receipts/provenance-current-075b557b-20260913/`; no architecture promotion or CAD change occurred.
+
+## 2026-09-13 — MPA dispatch v4 status
+
+Recorded the fourth bounded MPA corridor decision dispatch; no authority decision returned and no CAD edits occurred. The AUTO_PEDET producer remains rejected and storage/power geometry remains frozen while independent Phase 24 evidence work continues.
