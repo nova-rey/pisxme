@@ -1,9 +1,9 @@
 {
   "campaign": "Phase24 completion -> Phase25 acreage freeze",
   "schema": "work-package queue v1",
-  "updated": "2026-09-13T22:10:00Z",
+  "updated": "2026-09-13T22:45:00Z",
   "canonical_branch": "reva-clean",
-  "canonical_head": "4a0c289c",
+  "canonical_head": "d66a9462",
   "resource_policy": {
     "initial_model_slots": 4,
     "reusable_sessions": 16,
@@ -183,8 +183,24 @@
         "fresh Light validation checkout",
         "hostile review"
       ],
-      "blocking_issue": "depends on P24-INTEGRATED-CORRIDOR and all READY packages",
-      "criterion": "Every matrix row PASS/authorized disposition on one exact integrated SHA; then unlock Phase25."
+      "blocking_issue": "Issue #2 external-blocker plus unresolved release/procurement/hardware evidence",
+      "criterion": "Every matrix row PASS/authorized disposition on one exact integrated SHA; then unlock Phase25.",
+      "waiting_on": [
+        "Issue #2 external power-envelope table",
+        "final integrated candidate after corridor resolution",
+        "authorized firmware/procurement and fabrication/assembly evidence"
+      ],
+      "open_rows": [
+        "native_drc",
+        "physical_opens_shorts",
+        "power_current_transient_thermal",
+        "storage_mode_behavior",
+        "layers_routes_impedance_return",
+        "component_firmware_provenance",
+        "mechanical_3d_assembly_service",
+        "dfm",
+        "hostile_review"
+      ]
     }
   ],
   "states": [
@@ -200,5 +216,13 @@
     "power_current_transient_thermal",
     "storage_mode_behavior"
   ],
-  "notes": "Issue #2 investigation is not duplicated here. Queue records ownership, capacity, and returned evidence; Root performs serialized integration only."
+  "notes": "Issue #2 investigation is not duplicated here. Queue records ownership, capacity, and returned evidence; Root performs serialized integration only.",
+  "census": {
+    "READY": 0,
+    "RUNNING": 0,
+    "VALIDATING": 0,
+    "WAITING": 2,
+    "DONE": 5,
+    "hard_block_proof": "No permitted action remains until listed external/authority inputs arrive; queue remains active and not yet goal-terminated."
+  }
 }
