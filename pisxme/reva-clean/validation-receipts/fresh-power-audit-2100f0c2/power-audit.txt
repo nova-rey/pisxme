@@ -1,0 +1,1 @@
+Phase 5 power audit: schematic connectivity and design-envelope calculations PASS; residual physical risk recorded

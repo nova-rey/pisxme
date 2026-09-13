@@ -60,8 +60,8 @@
       "id": "power_current_transient_thermal",
       "status": "OPEN",
       "requirement": "rail delivery, current/voltage-drop, transient, return and thermal evidence",
-      "evidence": "PHASE24_CAMPAIGN.json",
-      "current": "required rails and regulator paths remain open"
+      "evidence": "validation-receipts/fresh-power-audit-2100f0c2/RECEIPT.md",
+      "current": "Native schematic/design-envelope power audit PASS; physical rail routing, current/transient/thermal closure OPEN"
     },
     {
       "id": "regulator_reference_overlays",

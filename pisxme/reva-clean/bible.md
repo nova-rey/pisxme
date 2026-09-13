@@ -632,3 +632,10 @@ The existing Phase 5 power audit incorrectly created temporary netlist output
 inside the repository, preventing execution in the read-only Light validator.
 The minimal tool-only correction uses the system temporary directory; no CAD or
 net contract changed.
+
+## 2026-09-13 — Phase 24 fresh power audit
+
+Fresh Light execution of the repaired Phase 5 power audit at `2100f0c2`
+passed schematic connectivity and design-envelope calculations with RC 0.
+Physical rail routing, transient/current/thermal evidence, and hardware proof
+remain open; receipt and raw output are retained.
