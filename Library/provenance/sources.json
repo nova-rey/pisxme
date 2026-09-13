@@ -612,6 +612,81 @@
         "no field classified D from this limitation"
       ],
       "license_disposition": "private metadata and factual gap summary"
+    },
+    {
+      "id": "molex-ps-5556-004-001-rev-b1-20260913",
+      "title": "Mini-Fit Jr. reflow capable headers product specification PS-5556-004-001",
+      "publisher": "Molex",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/555/5556/PS-5556-004-001.pdf?inline=",
+      "revision": "B1; ECM 851282; dated 2026-03-24; 17 pages; retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer connector specification",
+      "observed_facts": [
+        "scope covers Mini-Fit Jr. RTC headers and 5556/5557/5569 wire-to-board family",
+        "16 AWG stranded copper is an applicable wire size",
+        "16 AWG maximum-current table is 8 A/circuit for phosphor bronze at 2-3 circuits and 9 A/circuit for brass at 2-3 circuits",
+        "ratings use a 30 C maximum temperature-rise basis and require application derating",
+        "600 VAC RMS or 600 VDC maximum is listed; exact end-use voltage/creepage remains application dependent",
+        "temperature section lists phosphor bronze operating range -40 C to +105 C"
+      ],
+      "status": "accessible via browser PDF extraction; exact bytes not locally retained",
+      "hash_status": "unavailable; direct NYX fetch returned a different four-page product-detail response and no substitute hash is claimed",
+      "license_disposition": "retain metadata, citation, and extracted facts only; no PDF copy"
+    },
+    {
+      "id": "molex-5556-series-chart-20260913",
+      "title": "5556 Mini-Fit female crimp terminal series chart",
+      "publisher": "Molex",
+      "url": "https://www.molex.com/en-us/products/series-chart/5556",
+      "revision": "Current series chart; retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer terminal product authority",
+      "observed_facts": [
+        "39000079 is a 16 AWG reel terminal with phosphor bronze base metal and tin mating/termination plating",
+        "39000080 is the 16 AWG bag counterpart with phosphor bronze base metal and tin mating/termination plating",
+        "39000077/39000078 are 16 AWG reel/bag brass terminals with tin mating/termination plating",
+        "packaging alternatives pair 39000079 with 39000080 and 39000077 with 39000078"
+      ],
+      "status": "accessible",
+      "license_disposition": "link and extracted facts only; no page copied"
+    },
+    {
+      "id": "molex-39000079-product-20260913",
+      "title": "Molex 39000079 Mini-Fit female crimp terminal",
+      "publisher": "Molex",
+      "url": "https://www.molex.com/en-us/products/part-detail/39000079",
+      "revision": "Current part-detail page; retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer component authority",
+      "observed_facts": [
+        "phosphor bronze base metal",
+        "tin mating and termination plating",
+        "16 AWG-capable",
+        "reel packaging",
+        "39000080 bag is the packaging alternative",
+        "9 A generic maximum per contact on page"
+      ],
+      "status": "accessible",
+      "license_disposition": "link and extracted facts only; no page copied"
+    },
+    {
+      "id": "molex-39000080-product-20260913",
+      "title": "Molex 39000080 Mini-Fit female crimp terminal",
+      "publisher": "Molex",
+      "url": "https://www.molex.com/en-us/products/part-detail/39000080",
+      "revision": "Current part-detail page; retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer component authority",
+      "observed_facts": [
+        "phosphor bronze base metal",
+        "tin mating and termination plating",
+        "16 AWG",
+        "bag packaging",
+        "39000079 reel is the packaging alternative",
+        "9 A generic maximum per contact on page"
+      ],
+      "status": "accessible",
+      "license_disposition": "link and extracted facts only; no page copied"
     }
   ]
 }

@@ -189,6 +189,36 @@
         "V100",
         "Molex"
       ]
+    },
+    {
+      "id": "brief-molex-5556-ps004-v21-20260913",
+      "kind": "component-authority-brief",
+      "path": "Library/briefs/molex-5556-ps004-v21-20260913.md",
+      "tags": [
+        "Molex",
+        "5556",
+        "5569",
+        "39000079",
+        "39000080",
+        "phosphor-bronze",
+        "power-envelope",
+        "16-AWG",
+        "V2.1"
+      ]
+    },
+    {
+      "id": "source-molex-ps-5556-004-001-rev-b1-20260913",
+      "kind": "provenance-source",
+      "path": "Library/provenance/sources.json",
+      "tags": [
+        "Molex",
+        "PS-5556-004-001",
+        "Rev-B1",
+        "5556",
+        "5569",
+        "connector",
+        "power"
+      ]
     }
   ]
 }
