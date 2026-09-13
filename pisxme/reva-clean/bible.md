@@ -598,3 +598,10 @@ Canonical head `cdd5a381` retains removal of one isolated dangling `CM5_5V`
 segment. Fresh Light validation reports ERC `296 findings / 0 errors` and DRC
 `302 violations / 499 unconnected`; copper-edge-clearance fell by one, with no
 shorts or connectivity-count changes. Phase 24 remains open.
+
+## 2026-09-13 — Phase 24 second dangling-track cleanup rejected
+
+Removing a second short `CM5_5V` dangling segment traded one track-dangling
+finding for one via-dangling finding, leaving DRC unchanged at 302/499. The
+candidate was rejected and raw evidence is retained under
+`validation-receipts/dangling-track2-rejected-20260913/`.
