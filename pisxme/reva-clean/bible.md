@@ -1076,3 +1076,7 @@ The Librarian qualification attempt produced no bounded artifact and was release
 2026-09-14 — Unblocker routed exact nFET work back to Power Authority
 
 Unblocker classified the remaining issue as internal domain authority and recorded the minimum service: one bounded qualification calculation. The capability-change package is closed; the existing exact-nFET authority package is re-dispatched without CAD or footprint authorization.
+
+2026-09-14 — Exact nFET qualification admitted to Hard Problem Queue
+
+After Librarian, Power Integrity, and Unblocker escalation, HPQ Issue #3 was admitted as `hard-blocker` for the exact reverse-nFET and six-loop fault-energy qualification. Only the dependent authority/protection subtree is parked; Issue #2 remains separate.

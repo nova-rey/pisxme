@@ -74,6 +74,22 @@
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
+    "hpq:#3": {
+      "created_at": "2026-09-14T00:57:20.257541Z",
+      "kind": "hpq",
+      "receipt": null,
+      "reference": "https://github.com/nova-rey/codex-config-backup/issues/3",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
+    "hpq:nova-rey/codex-config-backup#3": {
+      "created_at": "2026-09-14T00:57:10.810250Z",
+      "kind": "hpq",
+      "receipt": null,
+      "reference": "https://github.com/nova-rey/codex-config-backup/issues/3",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "knowledge:exact-nfet-energy-dossier": {
       "created_at": "2026-09-14T00:37:15.126508Z",
       "kind": "knowledge",
@@ -1609,7 +1625,9 @@
         "package:P24-PROTECTION-DOSSIER",
         "package:P24-POWER-CURRENT-LIMITER-AUTHORITY",
         "knowledge:exact-nfet-energy-dossier",
-        "authority:exact-nfet-energy-qualification"
+        "authority:exact-nfet-energy-qualification",
+        "hpq:nova-rey/codex-config-backup#3",
+        "hpq:#3"
       ],
       "domain": "Power Integrity Authority",
       "edit_boundaries": [
@@ -1620,7 +1638,7 @@
       "evidence_refs": [],
       "id": "P24-EXACT-NFET-ENERGY-AUTHORITY",
       "notes": "",
-      "owner": "power_integrity_engineer",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1637,17 +1655,18 @@
         }
       ],
       "scope": "Select a production reverse-protection nFET guaranteed at MAX17527A gate drive; calculate worst-case fuse/TVS/FET/harness fast-trip SOA/I2t and sign six-loop FLAG/inhibit/reset policy.",
-      "session_ids": [
-        "/root/exact_nfet_energy_authority_v4"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Select exact reverse nFET and sign fault-energy coordination",
-      "updated_at": "2026-09-14T00:53:39.062863Z",
+      "updated_at": "2026-09-14T00:57:20.257586Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "hpq:nova-rey/codex-config-backup#3",
+        "hpq:#3"
+      ],
       "workstream": "power-authority"
     },
     {
@@ -1892,5 +1911,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T00:53:39.062992Z"
+  "updated_at": "2026-09-14T00:57:20.257801Z"
 }
