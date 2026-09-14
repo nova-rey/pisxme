@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-EXACT-NFET-ENERGY-AUTHORITY",
+  "status": "BLOCKED_INTERNAL_QUALIFICATION_GAPS",
+  "base_sha": "ae0469bb",
+  "branch": "reva-clean",
+  "cad_changed": false,
+  "product_envelope_changed": false,
+  "production_mpn_selected": null,
+  "candidate_assessment": {
+    "STL125N10LF8AG": {
+      "status": "strongest_unqualified_candidate",
+      "vds_v": 100,
+      "rds_on_max_mohm_at_vgs_4p5": 5.8,
+      "rds_test_current_a": 30,
+      "tj_range_c": [-55, 175],
+      "exact_vgs_4p45_guarantee": false,
+      "high_temperature_rds_guarantee_at_4p45": false
+    },
+    "BSC096N10LS5": {
+      "status": "lower_margin_unqualified_comparator",
+      "vds_v": 100,
+      "rds_on_max_mohm_at_vgs_4p5": 12.5,
+      "exact_vgs_4p45_guarantee": false
+    },
+    "CSD18536KCS": {
+      "status": "not_default_qualified",
+      "vds_v": 60,
+      "exact_vgs_4p45_guarantee": false
+    },
+    "DMT6007LFG": {
+      "status": "not_default_qualified",
+      "vds_v": 60,
+      "exact_vgs_4p45_guarantee": false
+    },
+    "CSD19536KCS": {
+      "status": "not_qualified_at_controller_gate",
+      "rds_spec_gate_v": [6, 10],
+      "exact_vgs_4p45_guarantee": false
+    }
+  },
+  "gates": [
+    {"id":"PA-NFET-GATE-001","state":"UNPROVEN","need":"Guaranteed RDS(on) at MAX17527A 4.45 V minimum or a binding gate-drive qualification at the actual minimum over temperature."},
+    {"id":"PA-NFET-VDS-002","state":"UNPROVEN","need":"PiSXMe source/reverse/transient VDS envelope including harness L/R and TVS clamp."},
+    {"id":"PA-NFET-ENERGY-003","state":"UNPROVEN","need":"Six-loop fast-fault waveform and nFET SOA/I2t, TVS pulse, fuse clearing and protected-copper coordination."},
+    {"id":"PA-NFET-INSTALL-004","state":"UNPROVEN","need":"Exact harness hot-loop and installation thermal/package qualification."},
+    {"id":"PA-NFET-ADI-PROVENANCE-005","state":"UNPROVEN","need":"Private Library exact hash for official MAX17527A source if retained as a provenance gate."}
+  ],
+  "controller_facts": {
+    "max17527a_gate_drive_v": {"min": 4.45, "typ": 4.75, "max": 4.95},
+    "fast_trip_a": {"min": 20, "typ": 26, "max": 32},
+    "fast_trip_response_us": {"typ": 3},
+    "blanking_ms": {"min": 22.5, "typ": 24.0, "max": 25.5},
+    "illustrative_screen_i2t_a2s": 0.003072,
+    "illustrative_screen_is_not_closure": true
+  },
+  "recommended_queue_dependency": "authority:exact-nfet-energy-qualification",
+  "source_records": [
+    "validation-receipts/exact-nfet-energy-dossier-20260914/EXACT_NFET_ENERGY_DOSSIER.json@4e0852a3",
+    "validation-receipts/power-authority-signoff-20260914/POWER_AUTHORITY_SIGNOFF.json",
+    "validation-receipts/power-current-limiter-authority-20260914/POWER_CURRENT_LIMITER_AUTHORITY.json",
+    "validation-receipts/power-connector-qualification-closure-20260914/QUALIFICATION_CLOSURE.json",
+    "validation-receipts/power-envelope-authority-redesign-20260914/POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json"
+  ]
+}

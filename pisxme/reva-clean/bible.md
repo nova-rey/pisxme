@@ -1060,3 +1060,7 @@ The PROJECT_INVARIANTS and INVARIANT_COMPLIANCE_MATRIX remain the binding gate: 
 2026-09-14 — Exact nFET energy authority dispatched
 
 The provenance dossier resolved the knowledge dependency. Power Integrity Authority now owns the bounded MPN, minimum-gate, transient VDS, SOA/I2t, and installation qualification review; no CAD changes are authorized.
+
+2026-09-14 — Exact nFET authority retained explicit internal qualification gaps
+
+Power Integrity Authority reviewed the provenance dossier and did not promote an MPN. The 4.45 V minimum-gate, temperature, transient VDS, fast-fault SOA/I2t, fuse/TVS/harness coordination, and installation gates remain an internal authority dependency; no CAD changed.

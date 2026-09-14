@@ -10,6 +10,14 @@
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
+    "authority:exact-nfet-energy-qualification": {
+      "created_at": "2026-09-14T00:48:31.991272Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/exact-nfet-energy-authority-20260914/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:harness-installation-thermal-qualification": {
       "created_at": "2026-09-14T00:29:05.144830Z",
       "kind": "authority",
@@ -1600,7 +1608,8 @@
       "dependencies": [
         "package:P24-PROTECTION-DOSSIER",
         "package:P24-POWER-CURRENT-LIMITER-AUTHORITY",
-        "knowledge:exact-nfet-energy-dossier"
+        "knowledge:exact-nfet-energy-dossier",
+        "authority:exact-nfet-energy-qualification"
       ],
       "domain": "Power Integrity Authority",
       "edit_boundaries": [
@@ -1611,7 +1620,7 @@
       "evidence_refs": [],
       "id": "P24-EXACT-NFET-ENERGY-AUTHORITY",
       "notes": "",
-      "owner": "power_integrity_engineer",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1628,17 +1637,17 @@
         }
       ],
       "scope": "Select a production reverse-protection nFET guaranteed at MAX17527A gate drive; calculate worst-case fuse/TVS/FET/harness fast-trip SOA/I2t and sign six-loop FLAG/inhibit/reset policy.",
-      "session_ids": [
-        "/root/exact_nfet_energy_authority_v3"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Select exact reverse nFET and sign fault-energy coordination",
-      "updated_at": "2026-09-14T00:46:44.749118Z",
+      "updated_at": "2026-09-14T00:48:31.991296Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:exact-nfet-energy-qualification"
+      ],
       "workstream": "power-authority"
     },
     {
@@ -1823,5 +1832,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T00:46:44.749248Z"
+  "updated_at": "2026-09-14T00:48:31.991412Z"
 }
