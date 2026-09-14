@@ -130,6 +130,22 @@
       "resolved_at": "2026-09-14T00:26:01.457389Z",
       "status": "RESOLVED"
     },
+    "knowledge:hpq4-calculator-artifact": {
+      "created_at": "2026-09-14T14:41:57.941940Z",
+      "kind": "knowledge",
+      "receipt": null,
+      "reference": "Issue #4 declared POWER_BUDGET_CALC.py hash 82a3f904... but candidate patch/working tree omitted it; recover exact authorized file or reconcile packet manifest",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
+    "knowledge:hpq4-power-budget-calculator": {
+      "created_at": "2026-09-14T14:41:11.567982Z",
+      "kind": "knowledge",
+      "receipt": null,
+      "reference": "HPQ4 resolution packet 3b6295788ef83d2c; declared POWER_BUDGET_CALC.py absent from candidate.patch and retained run/worktree; sha256sum -c fails on missing file",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "knowledge:protection-assembly-dossier": {
       "created_at": "2026-09-14T00:18:46.377604Z",
       "kind": "knowledge",
@@ -1927,13 +1943,21 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.json",
+        "base_sha": "cb2cebf525dbb6fbe29f3bed8d7762ead0b2b831",
+        "returned_at": "2026-09-14T14:41:11.508679Z",
+        "returned_by": "power_budget_reconcile",
+        "sha": null
+      },
       "completion_criterion": "Product/Power Authority signs a machine-readable corrected budget with source revisions, calculations, assumptions, margins, and explicit downstream gates.",
       "created_at": "2026-09-14T12:59:50.271898Z",
       "dependencies": [
         "authority:power-budget-correction-signature",
         "hpq:nova-rey/codex-config-backup#4",
-        "hpq:#4"
+        "hpq:#4",
+        "knowledge:hpq4-power-budget-calculator",
+        "knowledge:hpq4-calculator-artifact"
       ],
       "domain": "Product / Power Authority",
       "edit_boundaries": [
@@ -1945,7 +1969,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-BUDGET-CORRECTION",
       "notes": "HPQ resolution-ready requires this correction before exact nFET qualification or CAD.",
-      "owner": "power_budget_reconcile",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1963,17 +1987,18 @@
         }
       ],
       "scope": "Using the reconciled HPQ Issue #3 result, establish a signed corrected source-voltage, per-loop branch-current, protected-bus, and complete end-to-end resistance/drop contract preserving 300 W sustained, 330 W peak, six independent no-sharing loops. Include limiter tolerance, fuse/holder, nFET allowance, connector/crimp, harness, PCB, common-bus, efficiency, derating, and margins.",
-      "session_ids": [
-        "/root/power_budget_reconcile"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Establish corrected source and complete-path power budget",
-      "updated_at": "2026-09-14T14:38:52.887416Z",
+      "updated_at": "2026-09-14T14:41:57.941964Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "knowledge:hpq4-power-budget-calculator",
+        "knowledge:hpq4-calculator-artifact"
+      ],
       "workstream": "power-authority"
     }
   ],
@@ -1989,5 +2014,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T14:38:52.887580Z"
+  "updated_at": "2026-09-14T14:41:57.942126Z"
 }

@@ -1121,3 +1121,7 @@ Issue #4 reached `resolution-ready`; its Product/Power Authority packet was reco
 2026-09-14 — HPQ4 dependency resolved and power-budget package dispatched
 
 `sync-hpq` observed Issue #4 `resolution-ready`; the signed numerical contract is reconciled at current HEAD and `P24-POWER-BUDGET-CORRECTION` is RUNNING under Supervisor `power_budget_reconcile`. Downstream physical qualification remains gated on this package result; no CAD work is released.
+
+2026-09-14 — HPQ4 packet completeness discrepancy parked
+
+The signed Issue #4 JSON/Markdown/receipt artifacts reconcile against current HEAD, but the declared `POWER_BUDGET_CALC.py` (SHA-256 `82a3f904…`) is absent from the retained candidate patch and working tree while still referenced by `SHA256SUMS`. `P24-POWER-BUDGET-CORRECTION` is WAITING on recovery or authoritative reconciliation of that exact artifact; no signed hash was altered and no CAD was released.
