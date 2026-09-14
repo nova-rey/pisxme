@@ -1024,3 +1024,7 @@ Power Authority conditionally accepted the MAX17527A six-loop numerical candidat
 ## 2026-09-14 — Protection and thermal evidence capability change
 
 Two direct authority attempts returned no artifacts within their bounded run. Their dependent packages are parked on explicit knowledge gaps, and Librarian evidence packages now own targeted acquisition for protection assembly and harness/installation thermal data. This preserves the internal escalation path without opening CAD or inventing qualification values.
+
+## 2026-09-14 — Harness and installation thermal evidence indexed
+
+Librarian indexed bounded official Molex, Belden, Southwire and NIST evidence for the six-loop harness qualification. Molex establishes the 16-AWG phosphor-bronze 8 A application screen, 30 C terminal-rise basis, and required derating; manufacturer family records establish 5569/5557 temperature and installation facts; wire records and NIST provide resistance references and temperature correction. Exact PiSXMe cable lengths, complete loop scope, ambient/airflow, six-header installation and temperature margins remain Package/Power Authority fields. No CAD changed, no fabricated measurement was claimed, and no restricted source material was copied.

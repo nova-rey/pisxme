@@ -1,0 +1,114 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-HARNESS-THERMAL-DOSSIER",
+  "prepared": "2026-09-14",
+  "status": "EVIDENCE_PACKET_READY_WITH_PRODUCT_ASSEMBLY_GAPS",
+  "cad_changed": false,
+  "fabricated_measurements_claimed": false,
+  "library_first": true,
+  "library_commit": "c27ee33f",
+  "evidence_sources": [
+    {
+      "id": "molex-ps-5556-001-001-current-20260914",
+      "tier": 1,
+      "class": "primary-manufacturer",
+      "title": "Molex Mini-Fit Jr. Connector System Product Specification PS-5556-001",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/555/5556/PS-5556-001-001.pdf?inline=",
+      "revision_or_date": "PS-5556-001; current extraction dated 2026-06-22; 23 pages",
+      "retrieved": "2026-09-14",
+      "local_hash": null,
+      "facts": ["16 AWG stranded copper; maximum insulation diameter 3.15 mm", "phosphor-bronze 16 AWG 8 A at 2-3 circuits, 7 A at 4-6, 6 A at 7-10, 5 A at 12-24", "30 C maximum rise over ambient test basis", "derating required for ambient, PCB copper, adjacent heat, wire length, stranding and crimp quality"]
+    },
+    {
+      "id": "molex-ps-5556-004-001-b1-20260914",
+      "tier": 1,
+      "class": "primary-manufacturer",
+      "title": "Molex Mini-Fit Jr. Reflow Capable Headers PS-5556-004-001",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/555/5556/PS-5556-004-001.pdf?inline=",
+      "revision_or_date": "B1; ECM 851282; 2026-03-24; 17 pages",
+      "retrieved": "2026-09-14",
+      "local_hash": null,
+      "facts": ["16 AWG application", "phosphor-bronze 8 A at 2-3 circuits", "30 C rise basis", "phosphor-bronze operating -40 to +105 C"]
+    },
+    {
+      "id": "molex-55560010-ts-000-20191101",
+      "tier": 1,
+      "class": "primary-manufacturer-test-summary",
+      "title": "Mini-Fit Jr. Dual-Wire Termination Test Summary",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/testsummarypdf/555/5556/55560010-TS-000.pdf",
+      "revision_or_date": "ECR 625162; 2019-11-01; 6 pages",
+      "retrieved": "2026-09-14",
+      "local_hash": null,
+      "scope_limit": "18-22 AWG test samples; tested header 39281023, not selected 0039300020",
+      "facts": ["39012020 housing and 39000079 sample in tested family", "initial contact resistance requirement 10 mOhm maximum; sample maximum 5.791 mOhm"]
+    },
+    {
+      "id": "molex-5569-series-20260914",
+      "tier": 1,
+      "class": "primary-manufacturer-product-record",
+      "title": "Molex 5569 Series Chart",
+      "url": "https://www.molex.com/en-us/products/series-chart/5569",
+      "revision_or_date": "current chart",
+      "retrieved": "2026-09-14",
+      "local_hash": null,
+      "facts": ["right-angle through-hole family", "4.20 mm pitch", "recommended PCB thickness 1.78 mm", "operating -40 to +105 C"]
+    },
+    {
+      "id": "belden-39116-20260914",
+      "tier": 1,
+      "class": "primary-manufacturer-wire-reference",
+      "title": "Belden 39116 16 AWG Lead Wire",
+      "url": "https://catalog.belden.com/index.cfm?event=pd&p=PF_39116&rs=",
+      "revision_or_date": "current product record",
+      "retrieved": "2026-09-14",
+      "local_hash": null,
+      "facts": ["26x30 tinned copper", "nominal DCR 4.0 ohm/1000 ft", "600 V RMS", "105 C UL; -40 to +105 C dry"]
+    },
+    {
+      "id": "southwire-p50002-1a-20260914",
+      "tier": 1,
+      "class": "primary-manufacturer-wire-reference",
+      "title": "Southwire P50002-1A 16-19 CU 2/C",
+      "url": "https://www.southwire.com/wire-cable/hvac/cu-300v-hvac-wire-shielded-thermostat-plenum-rated/p/P50002-1A",
+      "revision_or_date": "SPEC 10095 current product record",
+      "retrieved": "2026-09-14",
+      "local_hash": null,
+      "facts": ["19-strand 16 AWG copper", "4.181 ohm/1000 ft DC resistance at 25 C", "two conductors", "approx 0.185 in OD"]
+    },
+    {
+      "id": "nist-copper-wire-tables-20260914",
+      "tier": 1,
+      "class": "government-reference",
+      "title": "NIST Copper Wire Tables",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/hb/nbshandbook100.pdf",
+      "revision_or_date": "Handbook 100 PDF",
+      "retrieved": "2026-09-14",
+      "local_hash": null,
+      "facts": ["standard copper temperature coefficient 0.00393 per C at 20 C over cited 10-100 C range"]
+    }
+  ],
+  "screening_calculation": {
+    "scope": "Southwire reference cable only; wire-only loop; excludes contacts/crimps/splices",
+    "formula": "R(T)=R25*[1+0.00393*(T-20)]/[1+0.00393*(25-20)]",
+    "r25_ohm_per_kft": 4.181,
+    "r70_ohm_per_kft": 4.9061604472,
+    "r85_ohm_per_kft": 5.1478805963,
+    "r105_ohm_per_kft": 5.4701741284,
+    "max_wire_loop_ohm": 0.02,
+    "max_one_way_length_ft": {"25C": 2.39177, "70C": 2.03825, "85C": 1.94255, "105C": 1.82810},
+    "dissipation_w_per_loop": {"5.8A": 0.6728, "6.4A": 0.8192},
+    "interpretation": "Screen only; exact six-loop harness must be selected and qualified. If 20 mOhm includes contacts/crimps, cable allowance is lower. V2.2 separately lists a 20 mOhm connector-loop screen; authority must bind scope explicitly."
+  },
+  "open_fields": [
+    "exact cable MPN and insulation/temperature class",
+    "one-way length for each A-F branch",
+    "whether 20 mOhm harness limit excludes connector contacts/crimps",
+    "hot loop resistance for each A-F branch",
+    "ambient temperature and airflow class",
+    "six header locations, spacing, solder access, and protected copper",
+    "connector/copper/limiter/fuse temperature margins at sustained and peak current",
+    "six-row authority signoff"
+  ],
+  "resume_condition": "Signed six-loop harness schedule and installation/thermal authority packet; then clear only this package dependency and proceed through normal source/PCB producer and fresh-Light validation."
+}
+sha256sum "$out"/* > "$out/SHA256SUMS"
