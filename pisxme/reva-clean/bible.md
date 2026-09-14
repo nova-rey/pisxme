@@ -1056,3 +1056,7 @@ The live Librarian evidence acquisition is represented as `P24-EXACT-NFET-DOSSIE
 2026-09-14 — Foundational invariant audit remains governing; exact nFET dossier closed
 
 The PROJECT_INVARIANTS and INVARIANT_COMPLIANCE_MATRIX remain the binding gate: 8 real FAILs and 13 UNPROVEN rows are retained without waiver. Librarian closed the exact nFET evidence package with primary-source candidates and explicit 4.45-V, transient, SOA/I2t, and installation gaps; Power Authority now owns the next bounded reassessment. No CAD changed.
+
+2026-09-14 — Exact nFET energy authority dispatched
+
+The provenance dossier resolved the knowledge dependency. Power Integrity Authority now owns the bounded MPN, minimum-gate, transient VDS, SOA/I2t, and installation qualification review; no CAD changes are authorized.

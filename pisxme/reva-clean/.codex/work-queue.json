@@ -1611,7 +1611,7 @@
       "evidence_refs": [],
       "id": "P24-EXACT-NFET-ENERGY-AUTHORITY",
       "notes": "",
-      "owner": null,
+      "owner": "power_integrity_engineer",
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1628,10 +1628,12 @@
         }
       ],
       "scope": "Select a production reverse-protection nFET guaranteed at MAX17527A gate drive; calculate worst-case fuse/TVS/FET/harness fast-trip SOA/I2t and sign six-loop FLAG/inhibit/reset policy.",
-      "session_ids": [],
-      "status": "READY",
+      "session_ids": [
+        "/root/exact_nfet_energy_authority_v3"
+      ],
+      "status": "RUNNING",
       "title": "Select exact reverse nFET and sign fault-energy coordination",
-      "updated_at": "2026-09-14T00:46:05.608736Z",
+      "updated_at": "2026-09-14T00:46:44.749118Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1821,5 +1823,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T00:46:05.608872Z"
+  "updated_at": "2026-09-14T00:46:44.749248Z"
 }
