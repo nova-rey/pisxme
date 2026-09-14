@@ -1,48 +1,165 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
+  "result_type": "BINDING_DECISION",
   "package_id": "P24-POWER-BUDGET-CORRECTION",
-  "status": "PROVISIONAL_CANDIDATE_PENDING_POWER_AUTHORITY_SIGNATURE",
-  "base_sha": "3af770b9",
+  "hpq_issue": 4,
+  "decision": {
+    "id": "PISXME-P24-POWER-BUDGET-HPQ4",
+    "version": "2.0.0",
+    "date": "2026-09-14",
+    "status": "SIGNED_NUMERICAL_CONTRACT_DOWNSTREAM_QUALIFICATION_GATED",
+    "authority_identity": "Product/Power Authority",
+    "authority_level": "BINDING_WITHIN_DELEGATED_SCOPE",
+    "base_sha": "cb2cebf525dbb6fbe29f3bed8d7762ead0b2b831",
+    "cad_change_authorized": false,
+    "product_envelope_changed": false
+  },
   "product_constraints": {
-    "v100_sustained_w": 300,
-    "design_peak_w": 330,
-    "loops": 6,
-    "passive_sharing": false,
-    "protected_bus_min_v": {
-      "sustained": 11.05,
-      "peak": 11.0
-    }
+    "v100_sustained_w": 300.0,
+    "v100_peak_w": 330.0,
+    "auxiliary_functional_load_w": 22.7,
+    "efficiency_floor": 0.90,
+    "peak_duration_ms": 100.0,
+    "independent_loop_count": 6,
+    "passive_sharing_credit_allowed": false,
+    "protected_bus_min_v": {"sustained": 11.05, "peak": 11.00},
+    "protected_bus_max_v": 12.60
+  },
+  "reference_planes": {
+    "L0": "V100 and auxiliary functional loads; stated functional watts are measured here.",
+    "P0": "Worst-case 12V_PROTECTED load entry measured to local POWER_GND, after branch convergence and common-bus loss.",
+    "S0": "Regulated source output measured across each source positive and paired return immediately upstream of the six harness loops.",
+    "branch_path": "Each A-F loop from S0 through harness, connector/crimp, fuse/holder, limiter, external nFET, branch PCB positive and dedicated return to branch convergence.",
+    "common_bus_path": "Shared positive and return impedance from branch convergence to worst-case P0.",
+    "rule": "Every cap includes the stated return contribution; returns may not be omitted or double-counted."
+  },
+  "load_accounting": {
+    "efficiency_definition": "The 0.90 floor applies from P0 delivered electrical power to combined L0 functional load power; source-to-P0 conduction loss is separate.",
+    "equations": {
+      "bus_power_w": "(v100_w + 22.7) / 0.90",
+      "total_current_a": "bus_power_w / protected_bus_min_v",
+      "per_loop_requirement_a": "total_current_a / 6"
+    },
+    "sustained": {"bus_power_w": 358.555555556, "total_current_a": 32.448466566, "per_loop_a": 5.408077761},
+    "peak": {"bus_power_w": 391.888888889, "total_current_a": 35.626262626, "per_loop_a": 5.937710438}
   },
   "source_contract": {
-    "minimum_v": 12.05,
-    "peak_minimum_v": 12.1,
-    "maximum_v": 12.6,
-    "continuous_a": 40,
-    "bounded_peak_a": 45,
-    "peak_duration_ms": 100
+    "sustained_voltage_at_S0_v": {"min": 12.05, "max": 12.60},
+    "peak_voltage_at_S0_v": {"min": 12.10, "max": 12.60, "duration_ms": 100.0},
+    "continuous_current_capability_min_a": 40.0,
+    "bounded_peak_current_capability_min_a": 45.0,
+    "bounded_peak_duration_ms": 100.0,
+    "overshoot_limit_v": 12.60,
+    "current_margin_a": {"sustained": 7.551533434, "peak": 9.373737374},
+    "old_minima_disposition": {"11.40_v": "SUPERSEDED", "12.00_v": "SUPERSEDED"}
   },
-  "branch_contract": {
-    "limiter": "MAX17527AATP+T",
-    "seti_ohm": 6250,
-    "minimum_a": 5.754245754,
-    "maximum_a": 6.24625,
-    "six_loop_minimum_a": 34.5254745,
-    "low_voltage_peak_screen_a": 34.37621832,
-    "margin_a": 0.14925618
+  "independent_loop_contract": {
+    "loops": ["A", "B", "C", "D", "E", "F"],
+    "guaranteed_delivery_floor_a_per_loop": 6.000,
+    "full_tolerance_operational_ceiling_a_per_loop": 6.400,
+    "six_loop_floor_a": 36.000,
+    "six_loop_ceiling_a": 38.400,
+    "peak_per_loop_margin_a": 0.062289562,
+    "peak_six_loop_margin_a": 0.373737374,
+    "proof_rule": "Each loop must meet the 6.000 A floor independently over tolerance and temperature; unused capacity on another loop is inadmissible.",
+    "ceiling_scope": "The 6.400 A ceiling is the full-tolerance non-fault ceiling; fault transients require separate maximum waveform, clamp, SOA and I2t proof."
   },
-  "complete_path_drop_v": {
-    "sustained": 0.951,
-    "peak": 1.028
+  "limiter_disposition": {
+    "MAX17527AATP+T_6250ohm_0.1percent": "REJECTED_AS_PRODUCTION_CURRENT_CONTRACT",
+    "nominal_a": 6.000000000,
+    "guaranteed_min_a": 5.754245754,
+    "guaranteed_max_a": 6.246246246,
+    "shortfall_to_required_floor_a": 0.245754246,
+    "reason": "The guaranteed minimum is below the independent 6.000 A floor; six-loop aggregate capacity cannot cure one deficient loop.",
+    "6200ohm_alternate": "NOT_AUTHORIZED_OUTSIDE_DOCUMENTED_6A_PROGRAMMABLE_RANGE",
+    "replacement_requirement": "Select a limiter guaranteed at 6.000-6.400 A over full tolerance and temperature with hot resistance no greater than 57 mOhm."
   },
-  "equivalent_complete_path_resistance_mohm": {
-    "sustained": 165.27,
-    "peak": 164.58
+  "derating": {
+    "manufacturer_contact_screen_a": 8.0,
+    "factor": 0.80,
+    "derated_operational_ceiling_a_per_loop": 6.4,
+    "scope": "Selected two-circuit 16-AWG phosphor-bronze connector application screen; installed thermal qualification remains mandatory."
   },
-  "authority_required": [
-    "replace provisional component terms with guaranteed hot values",
-    "sign source range and branch allocation",
-    "close nFET gate/VDS/SOA, fuse/TVS, harness, thermal, FLAG/reset"
+  "static_ir_budget": {
+    "basis": "Worst-case hot/installed resistance allocation caps, not claims that current candidate parts meet them.",
+    "per_branch_caps": [
+      {"term": "limiter", "resistance_cap_mohm": 57.000, "drop_sustained_v": 0.308260432, "drop_peak_v": 0.338449495},
+      {"term": "fuse_and_holder", "resistance_cap_mohm": 20.000, "drop_sustained_v": 0.108161555, "drop_peak_v": 0.118754209},
+      {"term": "external_nfet", "resistance_cap_mohm": 15.625, "drop_sustained_v": 0.084501215, "drop_peak_v": 0.092776726},
+      {"term": "connector_and_crimp_complete_loop", "resistance_cap_mohm": 20.000, "drop_sustained_v": 0.108161555, "drop_peak_v": 0.118754209},
+      {"term": "harness_wire_only_complete_loop", "resistance_cap_mohm": 20.000, "drop_sustained_v": 0.108161555, "drop_peak_v": 0.118754209},
+      {"term": "pcb_branch_positive_and_dedicated_return", "resistance_cap_mohm": 15.625, "drop_sustained_v": 0.084501215, "drop_peak_v": 0.092776726}
+    ],
+    "per_branch_total_resistance_cap_mohm": 148.250,
+    "per_branch_total_resistance_cap_ohm_exact": "0.148250",
+    "common_bus_positive_and_return_cap_mohm_at_aggregate": 1.333333333,
+    "common_bus_positive_and_return_cap_ohm_exact": "0.001333333333333333333333333333",
+    "common_bus_positive_and_return_cap_rational_ohm": "1/750",
+    "balanced_complete_path_equivalent_mohm": 156.250,
+    "balanced_complete_path_equivalent_ohm_exact": "0.156250",
+    "precision_rule": "Fields suffixed _ohm_exact control calculations; mOhm fields are rounded displays.",
+    "drop_equation": "Vdrop = Ibranch*0.148250 + Itotal*0.001333333333333",
+    "sustained": {"branch_drop_v": 0.801747528, "common_drop_v": 0.043264622, "total_drop_v": 0.845012150, "protected_bus_lower_bound_v": 11.204987850, "margin_over_minimum_v": 0.154987850},
+    "peak": {"branch_drop_v": 0.880265572, "common_drop_v": 0.047501684, "total_drop_v": 0.927767256, "protected_bus_lower_bound_v": 11.172232744, "margin_over_minimum_v": 0.172232744},
+    "full_derated_ceiling": {"branch_current_a": 6.4, "aggregate_current_a": 38.4, "branch_drop_v": 0.9488, "common_drop_v": 0.0512, "complete_drop_v": 1.0000}
+  },
+  "transient_pdn_contract": {
+    "current_step_total_a": 3.177796060,
+    "current_step_per_loop_a": 0.529632677,
+    "additional_dynamic_droop_budget_at_peak_v": 0.172232744,
+    "additional_dynamic_impedance_upper_bound_ohm": 0.054198803,
+    "recovery_to_valid_window_max_ms": 1.0,
+    "qualification_note": "This is a ceiling after the hot static-IR caps while S0 remains at least 12.10 V; extracted or measured inductance, ESR/ESL, control response and ground bounce remain required."
+  },
+  "downstream_gates": [
+    "Exact limiter meeting the full-temperature 6.000-6.400 A and 57 mOhm caps.",
+    "Exact fuse and holder meeting 20 mOhm hot plus worst-case time-current and I2t coordination.",
+    "Exact nFET meeting 15.625 mOhm hot at actual minimum gate drive plus VDS, reverse-current and SOA limits.",
+    "Exact TVS/clamp and fault waveform coordinated with limiter, nFET, harness inductance and PCB copper.",
+    "Six connector/crimp and wire-only harness schedules, each separately proving its 20 mOhm hot cap, 6.4 A derating, bundling, ambient and temperature rise.",
+    "Extracted or measured PCB branch/return no greater than 15.625 mOhm and shared common positive/return no greater than 1.333333333 mOhm.",
+    "PDN and return continuity, ground bounce, ESR/ESL and 300-to-330 W load-step proof.",
+    "Six fail-safe FLAG paths, V100 inhibit/reset, brownout and controlled restart timing.",
+    "MPA and thermal qualification of all six installed protection paths.",
+    "Exact component and manufacturer-document provenance.",
+    "No CAD release before these gates; later serialized CAD requires independent current-HEAD ERC, DRC, connectivity and qualified KiCad Light validation."
   ],
-  "cad_changed": false,
-  "sha256_markdown": "63d56d3499023427ed1c023cb02e6ca400b3bf7480fe62f8929625e5257e09a1"
+  "acceptance_impacts": {
+    "P24_POWER_BUDGET_CORRECTION": "AUTHORITY_CONTRACT_CLOSED",
+    "power_current_arithmetic": "PASS_AT_CONTRACT_LEVEL",
+    "power_current_transient_thermal": "OPEN_FOR_PHYSICAL_QUALIFICATION",
+    "source_hardware_capability": "OPEN",
+    "protection_energy": "OPEN",
+    "component_provenance": "OPEN",
+    "native_drc": "UNCHANGED_OPEN",
+    "physical_opens_shorts": "UNCHANGED_OPEN",
+    "layers_routes_impedance_return": "UNCHANGED_OPEN",
+    "dfm": "UNCHANGED_OPEN",
+    "cad_producer_release": false
+  },
+  "assumptions_and_confidence_limits": [
+    "The 22.7 W auxiliary figure covers all non-V100 functional loads in both cases.",
+    "The 0.90 efficiency floor is downstream of P0 and does not hide S0-to-P0 loss.",
+    "Resistance values are allocation caps, not measured or qualified current-part values.",
+    "Each loop is sized independently; no branch may depend on another branch's unused capacity.",
+    "No fabricated temperature, load-step, PDN impedance or fault waveform is claimed."
+  ],
+  "source_revisions_and_hashes": [
+    {"path": "validation-receipts/exact-nfet-energy-authority-20260914/HPQ3_SOL_RESOLUTION.json", "sha256": "6f9c83fdd8ca24ed601100c3a95e0225c033b98fa1c935b076aaa5c118f7f4ff", "role": "verified HPQ3 contradiction"},
+    {"historical_path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.json", "sha256_at_admitted_base": "085a0ba71da1e0dd93a3429496d4f023b47598c62753bce24137241c764b4615", "role": "superseded provisional input at cb2cebf525dbb6fbe29f3bed8d7762ead0b2b831"},
+    {"historical_path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.md", "sha256_at_admitted_base": "63d56d3499023427ed1c023cb02e6ca400b3bf7480fe62f8929625e5257e09a1", "role": "superseded provisional input at cb2cebf525dbb6fbe29f3bed8d7762ead0b2b831"},
+    {"path": "validation-receipts/power-authority-signoff-20260914/POWER_AUTHORITY_SIGNOFF.json", "sha256": "a61c08696683700a92f329a5d6f8b62101cbfa973b5fdbb4380a6340262a493e", "role": "prior conditional authority partly superseded by HPQ3"},
+    {"path": "validation-receipts/power-envelope-authority-redesign-20260914/POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json", "sha256": "669a050c61023399866d37e7fea1b8eb926ff570812611eb1c6658d3d1e056a1", "role": "superseded numerical architecture"},
+    {"path": "validation-receipts/power-current-limiter-authority-20260914/POWER_CURRENT_LIMITER_AUTHORITY.json", "sha256": "9af451e23f46ac5e7f9c28fb5a8d53b3a1e3884833431127bf416cfecf8c7a45", "role": "ADI limiter calculation"},
+    {"path": "validation-receipts/protection-dossier-20260914/PROTECTION_DOSSIER.json", "sha256": "a0507d1d0bcf7ccd7b02cc721549adecdd25ef73f196c7b6487630fd3d419e9d", "role": "Library-indexed manufacturer protection evidence"},
+    {"path": "validation-receipts/harness-thermal-dossier-20260914/HARNESS_THERMAL_DOSSIER.md", "sha256": "2b8d15fe7d1af154c2b859538bc0ede331866482d596ce97461fb4aeb1f83e4d", "role": "Library-indexed harness and thermal evidence"},
+    {"path": "validation-receipts/exact-nfet-energy-dossier-20260914/EXACT_NFET_ENERGY_DOSSIER.json", "sha256": "c8bc2a07d2e8c751645ee11effb779c8263b952c0b424343f7570189a358ef4f", "role": "Library 4e0852a3 nFET evidence"},
+    {"path": "PROJECT_INVARIANTS.json", "sha256": "e3d7e405cd8528aa22f7cebcfc1b47c54bc502b5c9892af1be60e76ecfce383c", "role": "governing product invariants at c06876d2"}
+  ],
+  "signature": {
+    "authority": "Product/Power Authority (HPQ Issue #4 Sol binding decision)",
+    "authority_level": "BINDING_WITHIN_DELEGATED_SCOPE",
+    "signed_at": "2026-09-14",
+    "signature_basis": "Frozen product envelope, protected-bus minima, independent-loop rule, corrected reference planes, HPQ3 contradiction, and hashed Library/manufacturer evidence."
+  }
 }

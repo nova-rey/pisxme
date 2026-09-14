@@ -1112,3 +1112,8 @@ The independent Power Integrity review returned no verdict after a bounded run. 
 2026-09-14 — Corrected power budget escalated to HPQ Issue #4
 
 After repeated bounded Product/Power authority attempts failed to return a signature, the provisional corrected budget was admitted to the durable Hard Problem Queue as Issue #4. Only its dependent power subtree is parked; Issue #3 remains resolved evidence and no CAD changed.
+
+
+2026-09-14 — HPQ4 resolution reconciled at current HEAD
+
+Issue #4 reached `resolution-ready`; its Product/Power Authority packet was reconciled against current `reva-clean` HEAD `031deb0917b0bf5541573f954d1912a0d0053f3e`. The signed `PISXME-P24-POWER-BUDGET-HPQ4` v2.0.0 contract is imported without CAD changes: 12.05/12.10–12.60 V source limits, 40/45 A source capability, six independent 6.000–6.400 A loops, protected-bus and complete hot resistance/drop caps. MAX17527AATP+T at 6.25 kOhm is rejected. Numerical authority is closed; physical component, harness, PDN, thermal, sequencing, DRC, connectivity and DFM gates remain open.
