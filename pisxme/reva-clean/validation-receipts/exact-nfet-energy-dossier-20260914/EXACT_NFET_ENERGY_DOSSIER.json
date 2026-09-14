@@ -6,7 +6,7 @@
   "private_library": {
     "repository": "nova-rey/pisxme-private",
     "branch": "Library",
-    "commit": "49f09eea500e52e639da7ed33da46ca279024631",
+    "commit": "4e0852a3",
     "brief": "Library/briefs/exact-nfet-energy-dossier-p24-20260914.md"
   },
   "sources": [
@@ -14,6 +14,8 @@
     {"id":"st-stl125n10lf8ag-ds-ds14632-rev3-20260914","tier":1,"url":"https://www.st.com/resource/en/datasheet/stl125n10lf8ag.pdf","revision":"DS14632 Rev 3; May 2026","role":"strongest low-voltage nFET candidate"},
     {"id":"infineon-bsc096n10ls5-ds-rev2p1-20260914","tier":1,"url":"https://www.infineon.com/assets/row/public/documents/24/49/infineon-bsc096n10ls5-datasheet-en.pdf","revision":"Final Data Sheet Rev 2.1; 2019-09-02","role":"comparator candidate"},
     {"id":"ti-lm74700-q1-sn0sd17g-rev-g-local-20260914","tier":1,"url":"https://www.ti.com/lit/ds/symlink/lm74700-q1.pdf","revision":"SNOSD17G; revised December 2020","role":"local selection guidance, different controller","local_sha256":"e16b3a8c0023201fafa5825436f5f2dd6f885b92b84e65602b3f50d741c58b6f"},
+    {"id":"diodes-dmt6007lfg-ds37335-rev2-2-20260914","tier":1,"role":"4.5-V candidate with 60-V VDS and 150-C SOA/temperature evidence","transient_retrieval_sha256":"9e75ecab96b0a77b2ff31d61bdf5eba63d6bec5986a29dfc55053e4f253669bc"},
+    {"id":"ti-csd18536kcs-slps532c-20260914","tier":1,"role":"4.5-V candidate with 60-V VDS and 175-C SOA/temperature evidence","transient_retrieval_sha256":"758f69698b7bfd64196cdb23c03f598d1be8097a53ef1305dd1ca581b2956fae"},
     {"id":"ti-csd19536kcs-ds-slps485c","tier":1,"role":"existing candidate; no 4.5 V RDS(on) guarantee"},
     {"id":"littelfuse-0297015-mini-ds-20260913","tier":1,"role":"existing fuse/I2t/time-current evidence"},
     {"id":"littelfuse-smbj-series-ds-20260913","tier":1,"role":"existing TVS clamp/standoff evidence"},

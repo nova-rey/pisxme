@@ -3,7 +3,7 @@
 Status: `EVIDENCE_PACKET_READY_WITH_EXACT_GATE_AND_SYSTEM_COORDINATION_GAPS`  
 Queue package: `P24-EXACT-NFET-DOSSIER`  
 Owner: Librarian  
-Private Library: `nova-rey/pisxme-private`, branch `Library`, commit `49f09eea`  
+Private Library: `nova-rey/pisxme-private`, branch `Library`, commit `4e0852a3`  
 Indexed brief: `Library/briefs/exact-nfet-energy-dossier-p24-20260914.md`
 
 ## Scope
@@ -35,6 +35,16 @@ not change CAD, product requirements, or public restricted/reference material.
   controller uses a charge-pump gate drive up to about 13 V and has a different
   reverse-protection contract. Local PDF SHA-256:
   `e16b3a8c0023201fafa5825436f5f2dd6f885b92b84e65602b3f50d741c58b6f`.
+- Researcher-returned Diodes `DMT6007LFG`, DS37335 Rev. 2-2 (November 2015),
+  specifies 60 V, 8.5 mOhm maximum at VGS=4.5 V and ID=15 A, -55 to +150 C,
+  AEC-Q101/100% UIS, EAS 20 mJ at the stated 0.1-mH test, SOA at TJ max 150 C,
+  and a 4.5-V RDS(on)-temperature graph.
+- Researcher-returned TI `CSD18536KCS`, SLPS532C revised March 2024, specifies
+  60 V, 2.2 mOhm maximum at VGS=4.5 V and ID=100 A, -55 to +175 C, 0.4 C/W
+  junction-to-case, and SOA/normalized RDS(on) curves including 4.5-V gate data.
+  Both are candidates only: their 60-V VDS ratings may be insufficient for the
+  declared negative-input/transient envelope, and 4.5-V data remains 50 mV above
+  the MAX17527A guaranteed minimum.
 - Existing indexed Littelfuse 0297015 and SMBJ18A manufacturer records provide
   fuse rating/time/I2t and TVS standoff/breakdown/clamp facts. Existing Molex
   records provide 16-AWG 8 A/circuit and 30 C rise test basis with derating.
