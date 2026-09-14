@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-POWER-CURRENT-LIMITER-AUTHORITY",
+  "status": "CANDIDATE_READY_FOR_POWER_AUTHORITY_REVIEW",
+  "base_sha": "37a8a975",
+  "cad_changed": false,
+  "product_envelope": {
+    "branch_count": 6,
+    "source_min_v": 11.4,
+    "source_max_v": 12.6,
+    "normal_branch_target_a": 5.8,
+    "hard_branch_limit_a": 6.4,
+    "peak_low_voltage_demand_a": 34.37621832,
+    "peak_duration_ms": 100
+  },
+  "selected_candidate": {
+    "vendor": "Analog Devices (Maxim)",
+    "mpn": "MAX17527AATP+T",
+    "lifecycle": "PRODUCTION",
+    "package": "20 TQFN-EP",
+    "package_code": "T2055+6C",
+    "package_size_mm": "5 x 5",
+    "instances": 6,
+    "loop_assignment": ["A", "B", "C", "D", "E", "F"],
+    "input_range_v": [5.5, 60.0],
+    "ron_typ_mohm": 30,
+    "ron_max_specified_mohm": 57,
+    "seti_resistor_ohm": 6250,
+    "seti_resistor_tolerance_percent": 0.1,
+    "seti_nominal_limit_a": 6.0,
+    "current_limit_accuracy_percent": 4.0,
+    "min_limit_a": 5.7542457542,
+    "max_limit_a": 6.2462462462,
+    "max_limit_margin_to_6_4_a": 0.1537537538,
+    "aggregate_min_limit_a": 34.5254745255,
+    "aggregate_margin_to_peak_demand_a": 0.1492562055,
+    "absolute_max_dc_input_current_a": 6.3,
+    "margin_to_absolute_max_a": 0.0537537538,
+    "clmode": "latch-off; 220 kOhm resistor to GND",
+    "plim": "disabled by connection to GND, subject to Power Authority confirmation",
+    "fault_output": "open-drain FLAG per loop, aggregated to V100 inhibit/reset supervisor",
+    "reset": "EN below 0.4 V for at least 30 us typ or input cycle",
+    "thermal_behavior": "thermal foldback around 150 degC typ; shutdown above 165 degC typ; latch-off retained in latch-off mode",
+    "reverse_protection": "external nFET required for reverse polarity and reverse current protection"
+  },
+  "calculation": {
+    "formula": "RSETI(kOhm) = 37.5 / ILIM(A)",
+    "nominal_a": 6.0,
+    "min_a": "6.0 * 0.96 / 1.001",
+    "max_a": "6.0 * 1.04 / 0.999",
+    "six_loop_min_a": "6 * min_limit_a",
+    "short_energy_screen": "32^2 * 3 us = 0.003072 A^2 s before retry/parasitic effects"
+  },
+  "protection_evidence": {
+    "fast_trip_threshold_a": {"min": 20, "typ": 26, "max": 32},
+    "fast_trip_response_us_typ": 3,
+    "blanking_us": {"min": 22500, "typ": 24000, "max": 25500},
+    "flag_faults": ["overcurrent", "thermal", "UVLO", "OVLO", "invalid SETI", "switch drop"],
+    "fault_modes": ["continuous", "auto-retry", "latch-off"],
+    "external_nfet_and_fuse_soai2t": "OPEN_SYSTEM_QUALIFICATION"
+  },
+  "authority_state": {
+    "power_authority_signature": "PENDING",
+    "package_authority_external_nfet_fuse_thermal": "PENDING",
+    "librarian_private_library_index": "PENDING",
+    "instantaneous_sub_3us_6_4a_interpretation": "PENDING_SYSTEM_AUTHORITY"
+  },
+  "exact_gap": [
+    "Select and qualify the external reverse-protection nFET and its SOA/gate-drive behavior.",
+    "Coordinate fuse I2t, TVS/clamp, harness inductance and PCB copper with the MAX17527A fast-trip/retry behavior.",
+    "Decide whether the 6.4 A invariant is a post-blanking regulated limit or an instantaneous transient bound.",
+    "Index official ADI source and retain its exact byte hash in private Library."
+  ],
+  "sources": [
+    {"kind": "official_product", "url": "https://www.analog.com/en/products/MAX17527A.html", "facts": ["recommended for new designs", "MAX17527AATP+T production", "5.5-60 V", "6 A", "plus_or_minus_4_percent from 3 to 6 A"]},
+    {"kind": "official_datasheet", "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/max17527a.pdf", "revision": "Rev 0, 19-101626, 2022-11", "byte_hash": "UNAVAILABLE_IN_BOUNDED_PASS"},
+    {"kind": "project", "path": "validation-receipts/power-envelope-authority-redesign-20260914/POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json"},
+    {"kind": "project", "path": "validation-receipts/power-source-contract-20260914/POWER_SOURCE_CONTRACT_ESCALATION.json"}
+  ],
+  "resume_condition": "Power Authority signature plus system/package closure of external nFET, fuse I2t, thermal installation and fault aggregation; then source-contract authority may bind six loops and producer may resume."
+}
