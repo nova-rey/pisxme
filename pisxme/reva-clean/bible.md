@@ -1068,3 +1068,7 @@ Power Integrity Authority reviewed the provenance dossier and did not promote an
 2026-09-14 — Capability-change package dispatched for exact nFET qualification
 
 The blocked Power Authority review triggered a capability change. Librarian now owns targeted provenance acquisition and Researcher commissioning for the exact 4.45 V gate, temperature, transient, SOA/I2t, and installation gaps; no CAD changed.
+
+2026-09-14 — Exact nFET qualification changed capability level
+
+The Librarian qualification attempt produced no bounded artifact and was released. Unblocker now owns one read-only Tier-2 classification using the retained authority receipts; no CAD changed and no external blocker was declared.

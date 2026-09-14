@@ -1842,7 +1842,7 @@
       "evidence_refs": [],
       "id": "P24-EXACT-NFET-ENERGY-QUALIFICATION",
       "notes": "Capability change after exact-nFET authority review; Librarian may commission Researcher under hierarchy.",
-      "owner": "librarian",
+      "owner": "unblocker",
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1860,11 +1860,11 @@
       ],
       "scope": "Acquire or derive authoritative evidence for MAX17527A 4.45 V minimum-gate RDS(on), temperature bound, PiSXMe VDS/transient envelope, fast-fault SOA/I2t, fuse/TVS/harness coordination, and installation assumptions.",
       "session_ids": [
-        "/root/exact_nfet_energy_qualification_librarian"
+        "/root/exact_nfet_qualification_unblocker"
       ],
       "status": "RUNNING",
       "title": "Close exact low-voltage nFET and six-loop fault-energy qualification",
-      "updated_at": "2026-09-14T00:49:21.030629Z",
+      "updated_at": "2026-09-14T00:51:24.671465Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1885,5 +1885,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T00:49:21.030863Z"
+  "updated_at": "2026-09-14T00:51:24.671702Z"
 }
