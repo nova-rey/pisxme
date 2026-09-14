@@ -252,6 +252,24 @@
         "16-AWG",
         "power"
       ]
+    },
+    {
+      "id": "brief-exact-nfet-energy-dossier-p24-20260914",
+      "kind": "acceptance-evidence-brief",
+      "path": "Library/briefs/exact-nfet-energy-dossier-p24-20260914.md",
+      "tags": [
+        "PiSXMe",
+        "Phase24",
+        "MAX17527A",
+        "nFET",
+        "STL125N10LF8AG",
+        "BSC096N10LS5",
+        "reverse-protection",
+        "SOA",
+        "I2t",
+        "TVS",
+        "harness"
+      ]
     }
   ]
 }
