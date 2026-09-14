@@ -1016,3 +1016,7 @@ The six-loop current-limiter candidate uses one MAX17527AATP+T per branch with a
 ## 2026-09-14 — Power signoff capability changed
 
 The initial signoff Supervisor exceeded its bounded attempt without returning a disposition. Its work was released and reassigned directly to the Power Integrity Authority, preserving the same candidate packets and scope. This is a capability-level change, not a new limiter campaign.
+
+## 2026-09-14 — Power signoff retained with bounded qualification gates
+
+Power Authority conditionally accepted the MAX17527A six-loop numerical candidate but retained protection-assembly, harness-resistance, FLAG/inhibit, fast-trip, MPA and thermal installation gates. Those gates are now explicit authority work packages; no source contract or CAD producer has been released prematurely.

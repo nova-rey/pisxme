@@ -34,6 +34,14 @@
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
+    "authority:protection-assembly-qualification": {
+      "created_at": "2026-09-14T00:14:46.580743Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/power-authority-signoff-20260914/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "hpq:#2": {
       "created_at": "2026-09-13T22:51:52.392594Z",
       "kind": "hpq",
@@ -1270,10 +1278,18 @@
       },
       "base_sha": "b87bdeae",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/power-authority-signoff-20260914/POWER_AUTHORITY_SIGNOFF.json",
+        "base_sha": "b87bdeae",
+        "returned_at": "2026-09-14T00:14:46.541333Z",
+        "returned_by": "power_integrity_engineer",
+        "sha": "28454d94"
+      },
       "completion_criterion": "Power Authority signs or rejects the candidate with evidence, resolves dependency states, and records exact resume conditions for the source contract and producer.",
       "created_at": "2026-09-14T00:05:13.957708Z",
-      "dependencies": [],
+      "dependencies": [
+        "authority:protection-assembly-qualification"
+      ],
       "domain": "power authority",
       "edit_boundaries": [
         "authority receipt only under validation-receipts/power-authority-signoff-20260914/",
@@ -1283,7 +1299,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-AUTHORITY-SIGNOFF",
       "notes": "",
-      "owner": "power_integrity_engineer",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1301,12 +1317,112 @@
         }
       ],
       "scope": "Review the MAX17527A six-loop limiter candidate and connector qualification candidate; issue the binding Power Authority disposition, exact remaining dependencies, and whether the power source contract can return READY.",
+      "session_ids": [],
+      "status": "WAITING",
+      "title": "Review limiter and six-loop qualification candidates",
+      "updated_at": "2026-09-14T00:14:46.580762Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [
+        "authority:protection-assembly-qualification"
+      ],
+      "workstream": "phase24"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "454de823",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Power Authority signs the protection assembly contract or records exact remaining authority gaps and resume conditions.",
+      "created_at": "2026-09-14T00:15:02.596726Z",
+      "dependencies": [],
+      "domain": "power/protection",
+      "edit_boundaries": [
+        "authority receipt only under validation-receipts/protection-assembly-qualification-20260914/",
+        "no CAD edits",
+        "preserve 300W/330W envelope"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTECTION-ASSEMBLY-QUALIFICATION",
+      "notes": "",
+      "owner": "power_integrity_engineer",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PROTECTION",
+        "INV-INPUT-CAPACITY",
+        "INV-SEQUENCING"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Select exact reverse-protection nFET, fuse/TVS and I2t/SOA coordination, six-loop FLAG/inhibit/reset aggregation, and binding fast-trip interpretation for the MAX17527A candidate.",
       "session_ids": [
-        "root-power-authority-signoff-direct-20260914"
+        "root-protection-assembly-direct-20260914"
       ],
       "status": "RUNNING",
-      "title": "Review limiter and six-loop qualification candidates",
-      "updated_at": "2026-09-14T00:10:14.972810Z",
+      "title": "Close six-loop limiter, FET, fuse, TVS and inhibit contract",
+      "updated_at": "2026-09-14T00:15:02.696155Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "373ed806",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Harness/thermal/MPA authorities sign the six-loop installation contract or record exact missing inputs and resume conditions.",
+      "created_at": "2026-09-14T00:15:02.646447Z",
+      "dependencies": [],
+      "domain": "harness/thermal/mechanics",
+      "edit_boundaries": [
+        "authority receipt only under validation-receipts/harness-installation-thermal-qualification-20260914/",
+        "no CAD edits",
+        "no fabricated measurements"
+      ],
+      "evidence_refs": [],
+      "id": "P24-HARNESS-INSTALLATION-THERMAL-QUALIFICATION",
+      "notes": "",
+      "owner": "thermal_hardware_engineer",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-THERMAL",
+        "INV-INPUT-CAPACITY",
+        "INV-MECHANICAL"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Bind six harness part/length and hot loop-resistance values under 20 mOhm, ambient/airflow, six-header installation, and thermal margins.",
+      "session_ids": [
+        "root-harness-installation-direct-20260914"
+      ],
+      "status": "RUNNING",
+      "title": "Close six-loop harness resistance and installation thermal contract",
+      "updated_at": "2026-09-14T00:15:02.739934Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1327,5 +1443,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T00:10:14.972947Z"
+  "updated_at": "2026-09-14T00:15:02.740058Z"
 }

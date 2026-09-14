@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-POWER-AUTHORITY-SIGNOFF",
+  "status": "WAITING_ON_PROTECTION_ASSEMBLY_AND_INSTALLATION_QUALIFICATION",
+  "cad_changed": false,
+  "reviewed_candidates": {
+    "limiter_packet": "454de823",
+    "connector_packet": "373ed806",
+    "v2_2_power_architecture": "daaf6d3b"
+  },
+  "disposition": {
+    "source_contract_ready": false,
+    "limiter_candidate": "MAX17527AATP+T",
+    "limiter_candidate_status": "conditionally_accepted_as_qualification_basis",
+    "cad_selection_authorized": false,
+    "product_envelope_reduced": false,
+    "legacy_15a_fuse_promoted": false,
+    "producer_resume": "WAITING"
+  },
+  "accepted_numeric_claims": {
+    "v100_sustained_w": 300.0,
+    "v100_design_peak_w": 330.0,
+    "source_window_v": [11.4, 12.6],
+    "source_requirement_a": {"continuous": 40.0, "bounded_peak": 45.0},
+    "loop_count": 6,
+    "connector_manufacturer_screen_a": 8.0,
+    "derating_factor": 0.8,
+    "hard_branch_screen_a": 6.4,
+    "normal_branch_target_a": 5.8,
+    "peak_low_voltage_demand_a": 34.37621832,
+    "max17527a": {
+      "input_range_v": [5.5, 60.0],
+      "nominal_limit_a": 6.0,
+      "accuracy_percent": 4.0,
+      "seti_ohm": 6250.0,
+      "seti_tolerance_percent": 0.1,
+      "calculated_limit_a": {"min": 5.7542457542, "max": 6.2462462462},
+      "aggregate_minimum_a": 34.5254745255,
+      "margin_to_hard_branch_a": 0.1537537538,
+      "margin_to_absolute_max_dc_input_a": 0.0537537538,
+      "fast_trip_threshold_a": {"min": 20.0, "typ": 26.0, "max": 32.0},
+      "fast_trip_response_us_typ": 3.0,
+      "blanking_us": {"min": 22500.0, "typ": 24000.0, "max": 25500.0}
+    },
+    "drop_screen_v": {"sustained": 0.35, "peak": 0.4},
+    "protected_bus_min_v": {"sustained": 11.05, "peak": 11.0},
+    "harness_loop_resistance_max_ohm": 0.02
+  },
+  "accepted_scope": [
+    "V2.2 product and source-window arithmetic",
+    "six-loop/no-passive-sharing architecture requirement",
+    "MAX17527A candidate and SETI calculation",
+    "Molex housing/terminal/crimp contract fields",
+    "drop and protected-bus design screens"
+  ],
+  "remaining_dependencies": [
+    {
+      "id": "PA-SIGN-NFET-001",
+      "owner": "Package/Power Authority",
+      "need": "Exact external reverse-protection nFET and reverse-polarity/reverse-current SOA and gate-drive qualification"
+    },
+    {
+      "id": "PA-SIGN-I2T-002",
+      "owner": "Package/Power Authority",
+      "need": "Exact fuse and TVS/clamp with worst-case I2t/SOA coordination across fast-trip, blanking/retry/latch, harness inductance and PCB copper"
+    },
+    {
+      "id": "PA-SIGN-FLAG-003",
+      "owner": "System/Power Authority",
+      "need": "Six FLAG aggregation paths, truth table, V100 inhibit/reset, EN timing and controlled restart"
+    },
+    {
+      "id": "PA-SIGN-FASTTRIP-004",
+      "owner": "System Authority",
+      "need": "Binding interpretation of 6.4 A as post-blanking regulated limit versus a separate sub-3-us transient requirement"
+    },
+    {
+      "id": "PA-SIGN-HARNESS-005",
+      "owner": "Package Authority",
+      "need": "Six identified 16-AWG harnesses with hot complete-loop resistance <=20 mOhm"
+    },
+    {
+      "id": "PA-SIGN-MPA-THERMAL-006",
+      "owner": "Macro Placement and Thermal Authorities",
+      "need": "Six header/limiter installation positions, protected corridors, assembly access, ambient/airflow and temperature margins"
+    },
+    {
+      "id": "PA-SIGN-ADI-HASH-007",
+      "owner": "Librarian",
+      "need": "Private Library indexing and exact byte hash for official MAX17527A source; provenance condition, not sole technical gate"
+    }
+  ],
+  "source_contract_resume": {
+    "ready": false,
+    "reason": "Dependencies PA-SIGN-NFET-001 through PA-SIGN-MPA-THERMAL-006 remain unresolved; exact source/net/component contract cannot be bound without them",
+    "resume_when": "Signed exact six-loop source/net/component/protection/installation contract is recorded"
+  },
+  "source_records": [
+    "validation-receipts/power-current-limiter-authority-20260914/POWER_CURRENT_LIMITER_AUTHORITY.json@454de823",
+    "validation-receipts/power-connector-qualification-closure-20260914/QUALIFICATION_CLOSURE.json@373ed806",
+    "validation-receipts/power-envelope-authority-redesign-20260914/POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json@daaf6d3b"
+  ]
+}
