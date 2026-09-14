@@ -224,7 +224,7 @@
         "multilayer 1 oz PTH annular ring 0.20 mm recommended and 0.15 mm absolute minimum",
         "blind and buried vias not supported on the stated standard process",
         "6-layer-and-above FR-4 maximum dimensions 656 x 586 mm for thickness at least 0.8 mm",
-        "impedance tolerance \u00b110%"
+        "impedance tolerance ±10%"
       ],
       "status": "accessible",
       "local_sha256": null,
@@ -252,7 +252,7 @@
         "typical stackup SIG/GND/PWR/SIG/GND/SIG",
         "maximum dimensions 660 x 475 mm",
         "board thickness options 0.8/1.0/1.2/1.6/2.0 mm",
-        "thickness tolerance \u00b110% for thickness at least 1.0 mm and \u00b10.1 mm below 1.0 mm",
+        "thickness tolerance ±10% for thickness at least 1.0 mm and ±0.1 mm below 1.0 mm",
         "minimum trace width and spacing 0.09 mm (3.5 mil)",
         "minimum via hole/diameter 0.15/0.25 mm",
         "minimum BGA pad dimension 0.25 mm",
@@ -598,7 +598,7 @@
     },
     {
       "id": "researcher-power-envelope-gap-20260913",
-      "title": "Researcher evidence sack \u2014 Branch-B power-envelope gaps",
+      "title": "Researcher evidence sack — Branch-B power-envelope gaps",
       "publisher": "PiSXMe Researcher commission",
       "url": "private:pisxme-library/Library/briefs/researcher-power-envelope-gap-20260913.md",
       "revision": "session d3dd71d7-b412-435d-8dbb-a12cac7174bd; completed 2026-09-13",
@@ -700,14 +700,14 @@
       "local_material_retained": false,
       "observed_facts": [
         "5.5 V to 60 V input range",
-        "0.6 A to 6.0 A programmable current limit; \u00b14% accuracy from 3 A to 6 A across temperature",
+        "0.6 A to 6.0 A programmable current limit; ±4% accuracy from 3 A to 6 A across temperature",
         "external nFET source to SN, drain to IN, gate to GN for reverse-polarity and reverse-current protection",
         "external gate drive 4.45 V minimum, 4.75 V typical, 4.95 V maximum under EN=5 V with no reverse condition",
-        "internal fast-trip IOCP 20 A minimum, 26 A typical, 32 A maximum; 3 \u00b5s typical response; external nFET remains on during output short fast trip",
+        "internal fast-trip IOCP 20 A minimum, 26 A typical, 32 A maximum; 3 µs typical response; external nFET remains on during output short fast trip",
         "FLAG open-drain fault indicator; 4 mA protection; reverse-current-only event does not assert FLAG",
         "22.5 ms to 25.5 ms blanking and 654 ms to 792 ms autoretry ranges",
-        "thermal foldback 150 \u00b0C and thermal shutdown 165 \u00b0C typical; 10 \u00b0C hysteresis",
-        "absolute maximum DC IN current 6.3 A; minimum 1 \u00b5F IN bypass and 4.7 \u00b5F SN bypass"
+        "thermal foldback 150 °C and thermal shutdown 165 °C typical; 10 °C hysteresis",
+        "absolute maximum DC IN current 6.3 A; minimum 1 µF IN bypass and 4.7 µF SN bypass"
       ],
       "status": "accessible-no-local-copy",
       "license_disposition": "citation and extracted facts only; no PDF copied into private Library; transient retrieval digest retained as provenance metadata"
@@ -722,10 +722,10 @@
       "evidence_class": "manufacturer protection component authority",
       "observed_facts": [
         "0297015._ is 15 A, 32 V DC, 1000 A interrupting at 32 V DC",
-        "0297015._ typical cold resistance 4.58 m\u03a9 and typical I\u00b2t 308 A\u00b2s",
-        "manufacturer defines typical I\u00b2t as average melting time before arcing from breaking-capacity tests",
-        "15 A time-current opening ranges: 0.15\u20135 s at 200%, 0.08\u20130.5 s at 350%, 0.03\u20130.1 s at 600%",
-        "recommended environment -40 \u00b0C to +125 \u00b0C; typical derating table shows 13 A at 20 \u00b0C and 9 A at 100 \u00b0C for 15 A item"
+        "0297015._ typical cold resistance 4.58 mΩ and typical I²t 308 A²s",
+        "manufacturer defines typical I²t as average melting time before arcing from breaking-capacity tests",
+        "15 A time-current opening ranges: 0.15–5 s at 200%, 0.08–0.5 s at 350%, 0.03–0.1 s at 600%",
+        "recommended environment -40 °C to +125 °C; typical derating table shows 13 A at 20 °C and 9 A at 100 °C for 15 A item"
       ],
       "status": "accessible",
       "license_disposition": "citation and extracted facts only; no PDF copied into Library"
@@ -741,12 +741,153 @@
       "observed_facts": [
         "SMBJ18A unidirectional 600 W class",
         "18.0 V reverse standoff",
-        "20.0\u201322.1 V breakdown at 1 mA",
+        "20.0–22.1 V breakdown at 1 mA",
         "29.2 V maximum clamp at 20.6 A peak-pulse current",
-        "1 \u00b5A maximum reverse leakage at standoff"
+        "1 µA maximum reverse leakage at standoff"
       ],
       "status": "accessible",
       "license_disposition": "citation and extracted facts only; no PDF copied into Library"
+    },
+    {
+      "id": "molex-ps-5556-001-001-current-20260914",
+      "title": "Molex Mini-Fit Jr. Connector System Product Specification PS-5556-001",
+      "publisher": "Molex",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/555/5556/PS-5556-001-001.pdf?inline=",
+      "revision": "PS-5556-001; current extraction dated 2026-06-22; 23 pages",
+      "retrieved": "2026-09-14",
+      "tier": 1,
+      "evidence_class": "primary manufacturer specification",
+      "status": "browser-extracted; exact bytes unavailable",
+      "observed_facts": [
+        "16 AWG stranded copper; maximum insulation diameter 3.15 mm",
+        "phosphor-bronze 16 AWG 8 A at 2-3 circuits, 7 A at 4-6, 6 A at 7-10, 5 A at 12-24",
+        "30 C maximum rise over ambient test basis",
+        "derating required for ambient, PCB copper, adjacent heat, wire length, stranding and crimp quality"
+      ],
+      "license_disposition": "metadata, citation and extracted facts only; no PDF copy"
+    },
+    {
+      "id": "molex-ps-5556-004-001-b1-20260914",
+      "title": "Molex Mini-Fit Jr. Reflow Capable Headers PS-5556-004-001",
+      "publisher": "Molex",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/555/5556/PS-5556-004-001.pdf?inline=",
+      "revision": "B1; ECM 851282; 2026-03-24; 17 pages",
+      "retrieved": "2026-09-14",
+      "tier": 1,
+      "evidence_class": "primary manufacturer specification",
+      "status": "browser-extracted; exact bytes unavailable",
+      "observed_facts": [
+        "16 AWG stranded copper applicability",
+        "phosphor-bronze 8 A at 2-3 circuits",
+        "30 C rise basis",
+        "phosphor-bronze operating -40 to +105 C"
+      ],
+      "license_disposition": "metadata, citation and extracted facts only; no PDF copy"
+    },
+    {
+      "id": "molex-55560010-ts-000-20191101",
+      "title": "Mini-Fit Jr. Dual-Wire Termination Test Summary",
+      "publisher": "Molex",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/testsummarypdf/555/5556/55560010-TS-000.pdf",
+      "revision": "ECR 625162; 2019-11-01; 6 pages",
+      "retrieved": "2026-09-14",
+      "tier": 1,
+      "evidence_class": "primary manufacturer test summary",
+      "status": "browser-extracted; scope limited to 18-22 AWG samples",
+      "observed_facts": [
+        "5569 family and 39012020 housing tested",
+        "39000079 sample included",
+        "initial contact resistance requirement 10 mOhm maximum",
+        "tested header 39281023, not selected 0039300020"
+      ],
+      "license_disposition": "metadata, citation and extracted facts only; no PDF copy"
+    },
+    {
+      "id": "molex-5569-series-20260914",
+      "title": "Molex 5569 Series Chart",
+      "publisher": "Molex",
+      "url": "https://www.molex.com/en-us/products/series-chart/5569",
+      "revision": "current series chart",
+      "retrieved": "2026-09-14",
+      "tier": 1,
+      "evidence_class": "primary manufacturer product record",
+      "status": "accessible",
+      "observed_facts": [
+        "right-angle through-hole family",
+        "4.20 mm pitch",
+        "recommended PCB thickness 1.78 mm",
+        "operating -40 to +105 C"
+      ],
+      "license_disposition": "link and extracted facts only"
+    },
+    {
+      "id": "molex-5557-series-39012020-20260914",
+      "title": "Molex 5557 Series Chart / 39012020",
+      "publisher": "Molex",
+      "url": "https://www.molex.com/en-us/products/series-chart/5557",
+      "revision": "current series chart",
+      "retrieved": "2026-09-14",
+      "tier": 1,
+      "evidence_class": "primary manufacturer product record",
+      "status": "accessible",
+      "observed_facts": [
+        "39012020 two-circuit dual-row housing",
+        "4.20 mm pitch",
+        "polarized and locking family",
+        "operating -40 to +105 C"
+      ],
+      "license_disposition": "link and extracted facts only"
+    },
+    {
+      "id": "belden-39116-20260914",
+      "title": "Belden 39116 16 AWG Lead Wire",
+      "publisher": "Belden",
+      "url": "https://catalog.belden.com/index.cfm?event=pd&p=PF_39116&rs=",
+      "revision": "current product record",
+      "retrieved": "2026-09-14",
+      "tier": 1,
+      "evidence_class": "primary manufacturer wire reference",
+      "status": "accessible; reference only",
+      "observed_facts": [
+        "26x30 tinned copper 16 AWG",
+        "nominal DCR 4.0 ohm/1000 ft",
+        "600 V RMS",
+        "105 C UL and -40 to +105 C dry"
+      ],
+      "license_disposition": "link and extracted facts only"
+    },
+    {
+      "id": "southwire-p50002-1a-20260914",
+      "title": "Southwire P50002-1A 16-19 CU 2/C",
+      "publisher": "Southwire",
+      "url": "https://www.southwire.com/wire-cable/hvac/cu-300v-hvac-wire-shielded-thermostat-plenum-rated/p/P50002-1A",
+      "revision": "SPEC 10095 current product record",
+      "retrieved": "2026-09-14",
+      "tier": 1,
+      "evidence_class": "primary manufacturer wire reference",
+      "status": "accessible; reference only",
+      "observed_facts": [
+        "19-strand 16 AWG copper",
+        "4.181 ohm/1000 ft DC resistance at 25 C",
+        "two conductors",
+        "approx 0.185 in OD"
+      ],
+      "license_disposition": "link and extracted facts only"
+    },
+    {
+      "id": "nist-copper-wire-tables-20260914",
+      "title": "NIST Copper Wire Tables",
+      "publisher": "National Institute of Standards and Technology",
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/hb/nbshandbook100.pdf",
+      "revision": "Handbook 100 PDF",
+      "retrieved": "2026-09-14",
+      "tier": 1,
+      "evidence_class": "government reference",
+      "status": "browser-extracted; exact bytes unavailable",
+      "observed_facts": [
+        "standard copper temperature coefficient 0.00393 per C at 20 C over cited 10-100 C range"
+      ],
+      "license_disposition": "citation and extracted facts only; no PDF copy"
     }
   ]
 }

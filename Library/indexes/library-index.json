@@ -235,6 +235,23 @@
         "FLAG",
         "protection"
       ]
+    },
+    {
+      "id": "brief-harness-thermal-dossier-p24-20260914",
+      "kind": "acceptance-evidence-brief",
+      "path": "Library/briefs/harness-thermal-dossier-p24-20260914.md",
+      "tags": [
+        "PiSXMe",
+        "Phase24",
+        "harness",
+        "thermal",
+        "Molex",
+        "5569",
+        "5557",
+        "5556",
+        "16-AWG",
+        "power"
+      ]
     }
   ]
 }
