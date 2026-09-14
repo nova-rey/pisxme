@@ -1036,3 +1036,7 @@ Librarian indexed local/authoritative MAX17527A, CSD19536KCS, MINI fuse and SMBJ
 ## 2026-09-14 — Qualification gaps converted to internal authority work
 
 Protection and harness installation reviews found no external blocker: exact low-voltage nFET/energy coordination, six-loop fault policy, harness schedule, hot-loop scope, airflow and installation margins remain internal authority fields. The queue parks only dependent packages and adds bounded authority packages for limiter signature and harness installation; no CAD changed.
+
+## 2026-09-14 — Limiter signature resolved; remaining protection and harness gates stay internal
+
+Power Authority conditionally signed the six MAX17527A limiter selection, resolving its queue dependency while retaining fast-trip transient qualification. The exact reverse-nFET/energy and harness-installation authority packages remain explicitly owned or waiting; no six-loop CAD insertion or route repair is authorized before those gates close.

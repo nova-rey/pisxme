@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-POWER-CURRENT-LIMITER-AUTHORITY",
+  "status": "CONDITIONALLY_SIGNED_SELECTION",
+  "cad_changed": false,
+  "product_envelope_reduced": false,
+  "queue_dependency_resolved": "authority:power-current-limiter-signature",
+  "selection": {
+    "vendor": "Analog Devices (Maxim)",
+    "mpn": "MAX17527AATP+T",
+    "instances": 6,
+    "loops": ["A", "B", "C", "D", "E", "F"],
+    "seti_resistor_ohm": 6250.0,
+    "seti_tolerance_percent": 0.1,
+    "nominal_regulated_limit_a": 6.0,
+    "device_limit_accuracy_percent": 4.0,
+    "calculated_regulated_limit_a": {
+      "min": 5.7542457542,
+      "max": 6.2462462462
+    },
+    "clmode": "latch-off; 220 kOhm resistor to GND",
+    "flag": "one open-drain FLAG per loop; fail-safe aggregate to V100 inhibit/reset",
+    "plim": "disabled only subject to the V2.2 authority contract; not a substitute for branch limiting"
+  },
+  "screen_calculation": {
+    "hard_branch_screen_a": 6.4,
+    "max_branch_margin_a": 0.1537537538,
+    "six_loop_minimum_a": 34.5254745255,
+    "v2_2_low_voltage_peak_screen_a": 34.37621832,
+    "aggregate_margin_a": 0.1492562055
+  },
+  "fast_trip": {
+    "hard_branch_screen_scope": "post-blanking regulated branch limit",
+    "instantaneous_fault_current_bound_a": "not established as <=6.4 A",
+    "internal_threshold_a": {"min": 20.0, "typ": 26.0, "max": 32.0},
+    "response_us_typ": 3.0,
+    "blanking_us": {"min": 22500.0, "typ": 24000.0, "max": 25500.0},
+    "external_nfet_state_during_fast_trip": "remains on per indexed device evidence",
+    "required_system_proof": "nFET/fuse/TVS-clamp/harness-inductance/PCB-copper SOA and I2t coordination"
+  },
+  "remaining_dependencies": [
+    "exact external reverse-protection nFET qualified at 4.45-4.95 V gate drive",
+    "exact fuse and TVS/clamp with worst-case fast-trip and latch/blanking I2t/SOA coordination",
+    "six-loop FLAG aggregation, V100 inhibit/reset, EN timing and controlled restart",
+    "six actual harness loop and MPA/thermal installation qualification",
+    "private Library provenance record for the official ADI source; transient retrieval hash retained"
+  ],
+  "evidence": {
+    "limiter_candidate_commit": "454de823",
+    "v2_2_candidate_commit": "daaf6d3b",
+    "protection_dossier_library_commit": "989e7b8c4e101f9d5a4be7841de2078aba8c9624",
+    "adi_source_transient_retrieval_sha256": "dc96bb134570f41409d3b1ff6f8d6ea128c035eecc2944a4eaa95950469b59cd",
+    "adi_local_vendor_pdf_retained": false
+  },
+  "authorization_boundary": "Binding limiter selection input only; no CAD insertion or whole source-contract authorization"
+}

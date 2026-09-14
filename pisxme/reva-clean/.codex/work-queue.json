@@ -37,10 +37,10 @@
     "authority:power-current-limiter-signature": {
       "created_at": "2026-09-14T00:04:52.752266Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "/home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/power-current-limiter-signature-20260914/RECEIPT.md",
       "reference": "validation-receipts/power-current-limiter-authority-20260914/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-14T00:32:03.552615Z",
+      "status": "RESOLVED"
     },
     "authority:power-source-contract": {
       "created_at": "2026-09-13T23:51:25.865856Z",
@@ -1191,10 +1191,10 @@
       "base_sha": "37a8a975",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": "validation-receipts/power-current-limiter-authority-20260914/POWER_CURRENT_LIMITER_AUTHORITY.json",
+        "artifact": "validation-receipts/power-current-limiter-signature-20260914/LIMITER_SELECTION_SIGNED_RECEIPT.json",
         "base_sha": "37a8a975",
-        "returned_at": "2026-09-14T00:04:52.706220Z",
-        "returned_by": "sup_power_current_limiter_authority",
+        "returned_at": "2026-09-14T00:32:10.520651Z",
+        "returned_by": "power_integrity_engineer",
         "sha": "454de823"
       },
       "completion_criterion": "Power Authority signs one limiter/protection contract or records an exact irreducible authority gap with a resumed path; no unqualified MPN is promoted.",
@@ -1210,7 +1210,9 @@
         "no CAD edits",
         "no product-envelope reduction"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-current-limiter-signature-20260914/RECEIPT.md"
+      ],
       "id": "P24-POWER-CURRENT-LIMITER-AUTHORITY",
       "notes": "",
       "owner": null,
@@ -1231,16 +1233,14 @@
       ],
       "scope": "Bind one qualified active limiter/protection MPN and per-loop contract for six independent 6.4 A branches, including thresholds, fault inhibit, SOA/I2t and evidence.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Select qualified per-loop current limiter and protection contract",
-      "updated_at": "2026-09-14T00:04:52.752288Z",
+      "updated_at": "2026-09-14T00:32:10.599869Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:power-current-limiter-signature"
-      ],
+      "waiting_on": [],
       "workstream": "phase24"
     },
     {
@@ -1602,7 +1602,7 @@
       "evidence_refs": [],
       "id": "P24-EXACT-NFET-ENERGY-AUTHORITY",
       "notes": "",
-      "owner": null,
+      "owner": "power_integrity_engineer",
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1619,17 +1619,17 @@
         }
       ],
       "scope": "Select a production reverse-protection nFET guaranteed at MAX17527A gate drive; calculate worst-case fuse/TVS/FET/harness fast-trip SOA/I2t and sign six-loop FLAG/inhibit/reset policy.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "root-direct-nfet-authority-20260914"
+      ],
+      "status": "RUNNING",
       "title": "Select exact reverse nFET and sign fault-energy coordination",
-      "updated_at": "2026-09-14T00:29:27.819542Z",
+      "updated_at": "2026-09-14T00:32:18.512501Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "package:P24-POWER-CURRENT-LIMITER-AUTHORITY"
-      ],
+      "waiting_on": [],
       "workstream": "power-authority"
     },
     {
@@ -1644,7 +1644,8 @@
       "created_at": "2026-09-14T00:29:27.867238Z",
       "dependencies": [
         "package:P24-HARNESS-THERMAL-DOSSIER",
-        "package:P24-MPA-CORRIDOR-AUTHORITY"
+        "package:P24-MPA-CORRIDOR-AUTHORITY",
+        "authority:harness-installation-thermal-qualification"
       ],
       "domain": "Power/Package/Thermal Authority",
       "edit_boundaries": [
@@ -1655,7 +1656,7 @@
       "evidence_refs": [],
       "id": "P24-HARNESS-INSTALLATION-AUTHORITY",
       "notes": "",
-      "owner": "power_integrity_engineer",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1672,17 +1673,17 @@
         }
       ],
       "scope": "Bind six-row cable MPN/length/loop scope, ambient/airflow class, MPA header positions, conservative thermal margins and measurement closure requirements.",
-      "session_ids": [
-        "root-direct-harness-authority-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Bind six-loop harness and installation thermal authority",
-      "updated_at": "2026-09-14T00:29:33.071227Z",
+      "updated_at": "2026-09-14T00:32:59.035270Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:harness-installation-thermal-qualification"
+      ],
       "workstream": "harness-thermal-authority"
     },
     {
@@ -1692,7 +1693,13 @@
       },
       "base_sha": "36e61cd5",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/power-current-limiter-signature-20260914/LIMITER_SELECTION_SIGNED_RECEIPT.json",
+        "base_sha": "36e61cd5",
+        "returned_at": "2026-09-14T00:32:18.371151Z",
+        "returned_by": "power_integrity_engineer",
+        "sha": "454de823"
+      },
       "completion_criterion": "Power Authority signs or precisely conditions the limiter selection and current-limit interpretation.",
       "created_at": "2026-09-14T00:29:46.927463Z",
       "dependencies": [
@@ -1704,7 +1711,9 @@
         "authority receipt only under validation-receipts/limiter-signature-authority-20260914/",
         "no CAD edits"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-current-limiter-signature-20260914/RECEIPT.md"
+      ],
       "id": "P24-LIMITER-SIGNATURE-AUTHORITY",
       "notes": "",
       "owner": null,
@@ -1724,16 +1733,14 @@
       ],
       "scope": "Review MAX17527AATP+T six-loop candidate, 6.25k SETI calculation, 6.4A hard limit and source evidence; issue signed selection or exact remaining condition.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Sign MAX17527A six-loop limiter selection",
-      "updated_at": "2026-09-14T00:29:46.927463Z",
+      "updated_at": "2026-09-14T00:32:18.467026Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "package:P24-POWER-CURRENT-LIMITER-AUTHORITY"
-      ],
+      "waiting_on": [],
       "workstream": "power-authority"
     }
   ],
@@ -1749,5 +1756,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T00:29:46.927717Z"
+  "updated_at": "2026-09-14T00:32:59.035392Z"
 }
