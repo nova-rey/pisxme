@@ -1092,3 +1092,7 @@ Issue #3 resolution-ready evidence was reconciled at current HEAD and imported w
 2026-09-14 — Corrected power-budget authority method changed
 
 The first Product/Power budget run produced no artifact after bounded execution and was released. A narrower direct authority calculation is now dispatched to bind source voltage, per-loop current, protected-bus, and complete-path drop fields from the HPQ3 contradiction. No CAD changed.
+
+2026-09-14 — Corrected power budget escalated to stronger authority capability
+
+Two bounded Product/Power attempts produced no artifact and were released. A stronger direct Power Integrity Authority run is now limited to the HPQ3 numerical contradiction and the corrected source/current/drop contract. No CAD changed.
