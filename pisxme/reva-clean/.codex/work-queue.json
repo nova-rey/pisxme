@@ -13,10 +13,10 @@
     "authority:exact-nfet-energy-qualification": {
       "created_at": "2026-09-14T00:48:31.991272Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/exact-nfet-qualification-unblocker-20260914/RECEIPT.md",
       "reference": "validation-receipts/exact-nfet-energy-authority-20260914/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-14T00:53:06.091425Z",
+      "status": "RESOLVED"
     },
     "authority:harness-installation-thermal-qualification": {
       "created_at": "2026-09-14T00:29:05.144830Z",
@@ -1620,7 +1620,7 @@
       "evidence_refs": [],
       "id": "P24-EXACT-NFET-ENERGY-AUTHORITY",
       "notes": "",
-      "owner": null,
+      "owner": "power_integrity_engineer",
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1637,17 +1637,17 @@
         }
       ],
       "scope": "Select a production reverse-protection nFET guaranteed at MAX17527A gate drive; calculate worst-case fuse/TVS/FET/harness fast-trip SOA/I2t and sign six-loop FLAG/inhibit/reset policy.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "/root/exact_nfet_energy_authority_v4"
+      ],
+      "status": "RUNNING",
       "title": "Select exact reverse nFET and sign fault-energy coordination",
-      "updated_at": "2026-09-14T00:48:31.991296Z",
+      "updated_at": "2026-09-14T00:53:39.062863Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:exact-nfet-energy-qualification"
-      ],
+      "waiting_on": [],
       "workstream": "power-authority"
     },
     {
@@ -1826,11 +1826,18 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/exact-nfet-qualification-unblocker-20260914/UNBLOCKER_REASSESSMENT.json",
+        "base_sha": "0b911ecc",
+        "returned_at": "2026-09-14T00:53:25.676332Z",
+        "returned_by": "unblocker",
+        "sha": "eda5fd03"
+      },
       "completion_criterion": "Power Authority signs an exact MPN and coordinated fault-energy/install contract, or returns a bounded evidence gap with the minimum next authority action.",
       "created_at": "2026-09-14T00:48:52.966289Z",
       "dependencies": [
-        "package:P24-EXACT-NFET-DOSSIER"
+        "package:P24-EXACT-NFET-DOSSIER",
+        "authority:exact-nfet-energy-qualification"
       ],
       "domain": "Power Integrity / Librarian",
       "edit_boundaries": [
@@ -1839,10 +1846,12 @@
         "no invented measurements",
         "no product-envelope reduction"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/exact-nfet-qualification-unblocker-20260914/RECEIPT.md"
+      ],
       "id": "P24-EXACT-NFET-ENERGY-QUALIFICATION",
       "notes": "Capability change after exact-nFET authority review; Librarian may commission Researcher under hierarchy.",
-      "owner": "unblocker",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1859,12 +1868,10 @@
         }
       ],
       "scope": "Acquire or derive authoritative evidence for MAX17527A 4.45 V minimum-gate RDS(on), temperature bound, PiSXMe VDS/transient envelope, fast-fault SOA/I2t, fuse/TVS/harness coordination, and installation assumptions.",
-      "session_ids": [
-        "/root/exact_nfet_qualification_unblocker"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Close exact low-voltage nFET and six-loop fault-energy qualification",
-      "updated_at": "2026-09-14T00:51:24.671465Z",
+      "updated_at": "2026-09-14T00:53:25.764685Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1885,5 +1892,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T00:51:24.671702Z"
+  "updated_at": "2026-09-14T00:53:39.062992Z"
 }

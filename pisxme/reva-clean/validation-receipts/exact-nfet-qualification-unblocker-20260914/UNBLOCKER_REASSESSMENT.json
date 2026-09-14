@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-EXACT-NFET-ENERGY-QUALIFICATION",
+  "outcome": "INTERNAL_ROUTE",
+  "classification": "DOMAIN_AUTHORITY",
+  "dependency": "authority:exact-nfet-energy-qualification",
+  "library_commit": "4e0852a3",
+  "cad_changed": false,
+  "product_requirement_changed": false,
+  "sha256": "00a5f96879f15b39062ce69d7d3d233830c9dee78d08609785eaff96bfe0613a"
+}

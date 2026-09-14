@@ -1072,3 +1072,7 @@ The blocked Power Authority review triggered a capability change. Librarian now 
 2026-09-14 — Exact nFET qualification changed capability level
 
 The Librarian qualification attempt produced no bounded artifact and was released. Unblocker now owns one read-only Tier-2 classification using the retained authority receipts; no CAD changed and no external blocker was declared.
+
+2026-09-14 — Unblocker routed exact nFET work back to Power Authority
+
+Unblocker classified the remaining issue as internal domain authority and recorded the minimum service: one bounded qualification calculation. The capability-change package is closed; the existing exact-nFET authority package is re-dispatched without CAD or footprint authorization.
