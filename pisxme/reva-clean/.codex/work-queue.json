@@ -1917,7 +1917,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-BUDGET-CORRECTION",
       "notes": "HPQ resolution-ready requires this correction before exact nFET qualification or CAD.",
-      "owner": "power_integrity_engineer",
+      "owner": "supervisor",
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1936,11 +1936,11 @@
       ],
       "scope": "Using the reconciled HPQ Issue #3 result, establish a signed corrected source-voltage, per-loop branch-current, protected-bus, and complete end-to-end resistance/drop contract preserving 300 W sustained, 330 W peak, six independent no-sharing loops. Include limiter tolerance, fuse/holder, nFET allowance, connector/crimp, harness, PCB, common-bus, efficiency, derating, and margins.",
       "session_ids": [
-        "/root/power_budget_correction_authority_v3"
+        "/root/power_budget_correction_supervisor"
       ],
       "status": "RUNNING",
       "title": "Establish corrected source and complete-path power budget",
-      "updated_at": "2026-09-14T13:03:39.662681Z",
+      "updated_at": "2026-09-14T13:06:16.278891Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1961,5 +1961,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T13:03:39.662819Z"
+  "updated_at": "2026-09-14T13:06:16.279028Z"
 }

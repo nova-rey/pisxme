@@ -1096,3 +1096,7 @@ The first Product/Power budget run produced no artifact after bounded execution 
 2026-09-14 — Corrected power budget escalated to stronger authority capability
 
 Two bounded Product/Power attempts produced no artifact and were released. A stronger direct Power Integrity Authority run is now limited to the HPQ3 numerical contradiction and the corrected source/current/drop contract. No CAD changed.
+
+2026-09-14 — Power budget authority moved to Supervisor package
+
+Three direct Product/Power attempts produced no artifact. The package was released and re-claimed by a Supervisor for one compact authority deliverable using the retained HPQ3 numeric evidence; no CAD changed.
