@@ -1044,3 +1044,7 @@ Power Authority conditionally signed the six MAX17527A limiter selection, resolv
 ## 2026-09-14 — Exact nFET authority escalated to Librarian evidence
 
 The bounded exact-nFET/energy authority attempt returned no receipt, so the package was parked on `knowledge:exact-nfet-energy-dossier` and escalated to Librarian for provenance-indexed evidence. No CAD changed and the campaign remains active.
+
+## 2026-09-14 — Librarian exact-nFET dossier made explicit in queue
+
+The live Librarian evidence acquisition is represented as `P24-EXACT-NFET-DOSSIER` and claimed with a model-agent slot. Queue census now records one RUNNING internal knowledge package instead of a false hard-idle state; no CAD changed.
