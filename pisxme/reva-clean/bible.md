@@ -1012,3 +1012,7 @@ The bounded source-contract review identified Analog Devices `MAX17527AATP+T` as
 ## 2026-09-14 — Limiter and connector candidates staged for authority signoff
 
 The six-loop current-limiter candidate uses one MAX17527AATP+T per branch with a calculated 6.24625 A worst-case limit and latch-off behavior. Connector qualification closed the manufacturer-defined housing, terminal, crimp-tool and pull-test contract, while retaining open harness resistance, fuse coordination and installation/thermal fields. Both remain candidates pending one Power Authority signoff; no CAD implementation is authorized yet.
+
+## 2026-09-14 — Power signoff capability changed
+
+The initial signoff Supervisor exceeded its bounded attempt without returning a disposition. Its work was released and reassigned directly to the Power Integrity Authority, preserving the same candidate packets and scope. This is a capability-level change, not a new limiter campaign.

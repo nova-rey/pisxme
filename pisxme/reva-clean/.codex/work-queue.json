@@ -1283,7 +1283,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-AUTHORITY-SIGNOFF",
       "notes": "",
-      "owner": "sup_power_authority_signoff",
+      "owner": "power_integrity_engineer",
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1302,11 +1302,11 @@
       ],
       "scope": "Review the MAX17527A six-loop limiter candidate and connector qualification candidate; issue the binding Power Authority disposition, exact remaining dependencies, and whether the power source contract can return READY.",
       "session_ids": [
-        "root-power-authority-signoff-20260914"
+        "root-power-authority-signoff-direct-20260914"
       ],
       "status": "RUNNING",
       "title": "Review limiter and six-loop qualification candidates",
-      "updated_at": "2026-09-14T00:05:14.000799Z",
+      "updated_at": "2026-09-14T00:10:14.972810Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1327,5 +1327,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T00:05:14.000963Z"
+  "updated_at": "2026-09-14T00:10:14.972947Z"
 }
