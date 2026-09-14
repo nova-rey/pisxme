@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-POWER-CONNECTOR-QUALIFICATION-CLOSURE",
+  "status": "CANDIDATE_READY_WITH_BOUNDED_OPEN_ASSEMBLY_QUALIFICATION",
+  "base_sha": "b87bdeae87e9641bba7d0858ba69ae9d080239bb",
+  "cad_changed": false,
+  "authority_classification": {
+    "closed_contract": [
+      "mating housing/family",
+      "terminal material/plating",
+      "crimp tooling and acceptance"
+    ],
+    "open_assembly_qualification": [
+      "harness length and hot loop resistance",
+      "ambient/airflow installation",
+      "six-header installation thermal margins"
+    ],
+    "open_authority_dependency": [
+      "fuse I2t coordination with selected active limiter"
+    ],
+    "provenance_condition": [
+      "exact public PDF byte hash unavailable; URL/revision/ECM retained"
+    ]
+  },
+  "assembly": {
+    "headers": 6,
+    "header_mpn": "0039300020 / 39-30-0020",
+    "header_family": "5569",
+    "housing_mpn": "39012020",
+    "housing_series": "5557-02R",
+    "terminal_mpn_bag": "39000080",
+    "terminal_mpn_reel": "39000079",
+    "terminal_series": "5556",
+    "terminal_material": "phosphor bronze",
+    "mating_plating": "tin",
+    "termination_plating": "tin",
+    "wire_minimum": "16 AWG stranded copper",
+    "loops": 6
+  },
+  "closed_requirements": {
+    "housing_operating_range_c": "-40..105",
+    "terminal_plating_min_um": {
+      "mating": 0.889,
+      "termination": 0.914
+    },
+    "connector_family_current_screen_a_per_circuit": 8.0,
+    "v2_2_branch_limit_a": 6.4,
+    "harness_loop_resistance_max_ohm": 0.02,
+    "crimp_tool": "63819-0900",
+    "crimp_class": "IPC/WHMA-A-620 Class 2",
+    "strip_length_mm": [
+      3.0,
+      3.3
+    ],
+    "conductor_crimp_height_mm": [
+      1.06,
+      1.16
+    ],
+    "conductor_crimp_width_ref_mm": 1.92,
+    "insulation_crimp_height_mm": 2.82,
+    "insulation_crimp_width_ref_mm": 2.89,
+    "wire_pull_min_n": 68.5
+  },
+  "fuse_evidence": {
+    "mpn": "0297015.U",
+    "rating_a": 15,
+    "rating_vdc": 32,
+    "typical_melting_i2t_a2s": 270,
+    "cold_resistance_ohm": 0.00458,
+    "status": "legacy/provisional; not six-loop qualification"
+  },
+  "open_gaps": [
+    {
+      "id": "CONN-CLOSE-HARNESS-001",
+      "field": "harness length and hot loop resistance",
+      "reason": "No selected cable part/length or hot resistance record exists",
+      "resume_when": "signed harness schedule and six measured or conservative hot loop values <=0.020 ohm"
+    },
+    {
+      "id": "CONN-CLOSE-FUSE-001",
+      "field": "fuse I2t coordination",
+      "reason": "active 6.4-A limiter not yet selected; legacy 15-A fuse alone cannot close branch protection",
+      "resume_when": "Power Authority exact limiter/fuse/holder packet with worst-case I2t, fault-time and SOA coordination"
+    },
+    {
+      "id": "CONN-CLOSE-THERMAL-001",
+      "field": "ambient/airflow and six-header installation",
+      "reason": "six positions and PiSXMe thermal environment are not bound",
+      "resume_when": "MPA positions plus Thermal Authority ambient/airflow and temperature margin receipt"
+    }
+  ],
+  "sources": [
+    {
+      "id": "LIB-MOLEX-5556",
+      "ref": "private Library commit c27ee33f, molex-5556-ps004-v21-20260913.md"
+    },
+    {
+      "id": "MOLEX-39012020",
+      "url": "https://www.molex.com/en-us/products/part-detail/39012020"
+    },
+    {
+      "id": "MOLEX-39000080",
+      "url": "https://www.molex.com/en-us/products/part-detail/39000080"
+    },
+    {
+      "id": "MOLEX-PS-5556-001",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/555/5556/PS-5556-001-001.pdf?inline="
+    },
+    {
+      "id": "MOLEX-ATS-638190900",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/applicationtoolingspecificationpdf/638/63819/ATS-638190900-001.pdf?inline="
+    },
+    {
+      "id": "MOLEX-55560010-TS",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/testsummarypdf/555/5556/55560010-TS-000.pdf"
+    },
+    {
+      "id": "MOLEX-5569-DRAWING",
+      "url": "https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/556/5569/039303045_sd.pdf"
+    },
+    {
+      "id": "PISXME-V2.2",
+      "ref": "validation-receipts/power-envelope-authority-redesign-20260914/POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json"
+    }
+  ],
+  "resume_conditions": [
+    "Package Authority harness schedule/measurements",
+    "Power Authority current-limiter and I2t coordination",
+    "MPA/Thermal installation/airflow receipt"
+  ],
+  "next_action": "Return CANDIDATE_READY to Root; keep CAD/source producer dependent on listed authority records."
+}

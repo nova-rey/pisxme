@@ -1008,3 +1008,7 @@ The source-contract review found the existing 15 A fuses cannot guarantee the re
 
 ## 2026-09-14 — bounded current-limiter authority candidate
 The bounded source-contract review identified Analog Devices `MAX17527AATP+T` as the exact active 20-pin TQFN-EP power-limiter candidate for one instance per six-loop branch. With a 6.25 kOhm 0.1% SETI resistor, the vendor's full-temperature +/-4% limit accuracy yields a calculated 5.75425–6.24625 A regulated range; this is below the 6.4 A hard branch ceiling and gives a 34.52547 A six-loop lower aggregate against the 34.37622 A low-voltage peak screen. The receipt remains candidate-ready pending Power Authority signature, Librarian source indexing, external reverse-protection nFET and fuse/TVS I2t/SOA qualification, thermal installation evidence, system FLAG-to-V100 inhibit aggregation, and a decision on whether the 6.4 A invariant covers sub-3 us fast-trip transients. No CAD was changed and no product-envelope reduction was made.
+
+## 2026-09-14 — Limiter and connector candidates staged for authority signoff
+
+The six-loop current-limiter candidate uses one MAX17527AATP+T per branch with a calculated 6.24625 A worst-case limit and latch-off behavior. Connector qualification closed the manufacturer-defined housing, terminal, crimp-tool and pull-test contract, while retaining open harness resistance, fuse coordination and installation/thermal fields. Both remain candidates pending one Power Authority signoff; no CAD implementation is authorized yet.

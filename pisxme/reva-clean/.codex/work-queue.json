@@ -2,11 +2,27 @@
   "campaign": "phase24-phase25-acreage",
   "created_at": "2026-09-13T22:41:37.011173Z",
   "dependencies": {
+    "authority:power-assembly-qualification": {
+      "created_at": "2026-09-14T00:04:59.886421Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/power-connector-qualification-closure-20260914/QUALIFICATION_CLOSURE.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:power-current-limiter-selection": {
       "created_at": "2026-09-13T23:57:42.658508Z",
       "kind": "authority",
       "receipt": null,
       "reference": "validation-receipts/power-source-contract-20260914/POWER_SOURCE_CONTRACT_ESCALATION.json",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
+    "authority:power-current-limiter-signature": {
+      "created_at": "2026-09-14T00:04:52.752266Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/power-current-limiter-authority-20260914/RECEIPT.md",
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
@@ -1134,12 +1150,19 @@
       },
       "base_sha": "37a8a975",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/power-current-limiter-authority-20260914/POWER_CURRENT_LIMITER_AUTHORITY.json",
+        "base_sha": "37a8a975",
+        "returned_at": "2026-09-14T00:04:52.706220Z",
+        "returned_by": "sup_power_current_limiter_authority",
+        "sha": "454de823"
+      },
       "completion_criterion": "Power Authority signs one limiter/protection contract or records an exact irreducible authority gap with a resumed path; no unqualified MPN is promoted.",
       "created_at": "2026-09-13T23:58:13.162798Z",
       "dependencies": [
         "package:P24-FOUNDATIONAL-SYNTHESIS",
-        "package:P24-POWER-ENVELOPE-AUTHORITY-REDESIGN"
+        "package:P24-POWER-ENVELOPE-AUTHORITY-REDESIGN",
+        "authority:power-current-limiter-signature"
       ],
       "domain": "power authority",
       "edit_boundaries": [
@@ -1150,7 +1173,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-CURRENT-LIMITER-AUTHORITY",
       "notes": "",
-      "owner": "sup_power_current_limiter_authority",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1167,17 +1190,17 @@
         }
       ],
       "scope": "Bind one qualified active limiter/protection MPN and per-loop contract for six independent 6.4 A branches, including thresholds, fault inhibit, SOA/I2t and evidence.",
-      "session_ids": [
-        "root-power-current-limiter-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Select qualified per-loop current limiter and protection contract",
-      "updated_at": "2026-09-13T23:58:13.250760Z",
+      "updated_at": "2026-09-14T00:04:52.752288Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:power-current-limiter-signature"
+      ],
       "workstream": "phase24"
     },
     {
@@ -1187,12 +1210,19 @@
       },
       "base_sha": "37a8a975",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/power-connector-qualification-closure-20260914/QUALIFICATION_CLOSURE.json",
+        "base_sha": "37a8a975",
+        "returned_at": "2026-09-14T00:04:59.847106Z",
+        "returned_by": "sup_power_connector_qualification_closure",
+        "sha": "b87bdeae"
+      },
       "completion_criterion": "Package and Power authorities close all listed qualification fields or document exact irreducible gaps and resume dependency.",
       "created_at": "2026-09-13T23:58:13.210027Z",
       "dependencies": [
         "package:P24-POWER-CONNECTOR-QUALIFICATION",
-        "package:P24-POWER-ENVELOPE-AUTHORITY-REDESIGN"
+        "package:P24-POWER-ENVELOPE-AUTHORITY-REDESIGN",
+        "authority:power-assembly-qualification"
       ],
       "domain": "package/power authority",
       "edit_boundaries": [
@@ -1203,7 +1233,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-CONNECTOR-QUALIFICATION-CLOSURE",
       "notes": "",
-      "owner": "sup_power_connector_qualification_closure",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1220,12 +1250,63 @@
         }
       ],
       "scope": "Resolve mating housing/plating, crimp acceptance, harness loop resistance/length/temperature, fuse I2t, ambient/airflow and six-header installation limits for the six-loop contract.",
+      "session_ids": [],
+      "status": "WAITING",
+      "title": "Close six-loop connector and harness assembly qualification",
+      "updated_at": "2026-09-14T00:04:59.886442Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [
+        "authority:power-assembly-qualification"
+      ],
+      "workstream": "phase24"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "b87bdeae",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Power Authority signs or rejects the candidate with evidence, resolves dependency states, and records exact resume conditions for the source contract and producer.",
+      "created_at": "2026-09-14T00:05:13.957708Z",
+      "dependencies": [],
+      "domain": "power authority",
+      "edit_boundaries": [
+        "authority receipt only under validation-receipts/power-authority-signoff-20260914/",
+        "no CAD edits",
+        "do not lower the 300W/330W envelope or waive open assembly evidence"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-AUTHORITY-SIGNOFF",
+      "notes": "",
+      "owner": "sup_power_authority_signoff",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION",
+        "INV-THERMAL",
+        "INV-COPPER"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Review the MAX17527A six-loop limiter candidate and connector qualification candidate; issue the binding Power Authority disposition, exact remaining dependencies, and whether the power source contract can return READY.",
       "session_ids": [
-        "root-power-connector-qualification-closure-20260914"
+        "root-power-authority-signoff-20260914"
       ],
       "status": "RUNNING",
-      "title": "Close six-loop connector and harness assembly qualification",
-      "updated_at": "2026-09-13T23:58:13.291102Z",
+      "title": "Review limiter and six-loop qualification candidates",
+      "updated_at": "2026-09-14T00:05:14.000799Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1246,5 +1327,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-13T23:58:13.291206Z"
+  "updated_at": "2026-09-14T00:05:14.000963Z"
 }
