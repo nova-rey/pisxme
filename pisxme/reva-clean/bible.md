@@ -1084,3 +1084,7 @@ After Librarian, Power Integrity, and Unblocker escalation, HPQ Issue #3 was adm
 2026-09-14 — HPQ Issue #3 resolution reconciled
 
 Sol resolution-ready evidence was reconciled at current HEAD `12caa542` against admitted base `9377e88f2b4659dc027c12242350fbc49134802e`. The retained result proves the V2.2 per-loop current and complete-path drop budget is inconsistent before nFET qualification. No CAD or product-envelope change was authorized. Product/Power Authority now owns the corrected source-voltage, branch-current, protected-bus, and end-to-end resistance/drop contract.
+
+2026-09-14 — HPQ3 contradiction routed to corrected power-budget authority
+
+Issue #3 resolution-ready evidence was reconciled at current HEAD and imported without CAD changes. Product/Power Authority now owns a bounded corrected source-voltage, per-loop current, protected-bus, and complete-path resistance/drop contract; exact nFET and downstream CAD remain gated on that artifact.

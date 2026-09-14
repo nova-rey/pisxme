@@ -1626,8 +1626,7 @@
         "package:P24-POWER-CURRENT-LIMITER-AUTHORITY",
         "knowledge:exact-nfet-energy-dossier",
         "authority:exact-nfet-energy-qualification",
-        "hpq:nova-rey/codex-config-backup#3",
-        "hpq:#3"
+        "package:P24-POWER-BUDGET-CORRECTION"
       ],
       "domain": "Power Integrity Authority",
       "edit_boundaries": [
@@ -1656,14 +1655,16 @@
       ],
       "scope": "Select a production reverse-protection nFET guaranteed at MAX17527A gate drive; calculate worst-case fuse/TVS/FET/harness fast-trip SOA/I2t and sign six-loop FLAG/inhibit/reset policy.",
       "session_ids": [],
-      "status": "READY",
+      "status": "WAITING",
       "title": "Select exact reverse nFET and sign fault-energy coordination",
       "updated_at": "2026-09-14T12:58:17.483940Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "package:P24-POWER-BUDGET-CORRECTION"
+      ],
       "workstream": "power-authority"
     },
     {
@@ -1894,6 +1895,58 @@
       },
       "waiting_on": [],
       "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Product/Power Authority signs a machine-readable corrected budget with source revisions, calculations, assumptions, margins, and explicit downstream gates.",
+      "created_at": "2026-09-14T12:59:50.271898Z",
+      "dependencies": [],
+      "domain": "Product / Power Authority",
+      "edit_boundaries": [
+        "validation-receipts/power-budget-correction-20260914/ only",
+        "no CAD or footprint edits",
+        "no product-envelope reduction",
+        "no synthetic connectivity"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-BUDGET-CORRECTION",
+      "notes": "HPQ resolution-ready requires this correction before exact nFET qualification or CAD.",
+      "owner": "power_integrity_engineer",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PRODUCT-V100-300W",
+        "INV-PRODUCT-V100-330W-PEAK",
+        "INV-INPUT-CAPACITY",
+        "INV-COPPER",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Using the reconciled HPQ Issue #3 result, establish a signed corrected source-voltage, per-loop branch-current, protected-bus, and complete end-to-end resistance/drop contract preserving 300 W sustained, 330 W peak, six independent no-sharing loops. Include limiter tolerance, fuse/holder, nFET allowance, connector/crimp, harness, PCB, common-bus, efficiency, derating, and margins.",
+      "session_ids": [
+        "/root/power_budget_correction_authority"
+      ],
+      "status": "RUNNING",
+      "title": "Establish corrected source and complete-path power budget",
+      "updated_at": "2026-09-14T13:00:18.893968Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -1908,5 +1961,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T12:58:17.484137Z"
+  "updated_at": "2026-09-14T13:00:18.894111Z"
 }
