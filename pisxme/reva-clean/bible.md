@@ -1088,3 +1088,7 @@ Sol resolution-ready evidence was reconciled at current HEAD `12caa542` against 
 2026-09-14 — HPQ3 contradiction routed to corrected power-budget authority
 
 Issue #3 resolution-ready evidence was reconciled at current HEAD and imported without CAD changes. Product/Power Authority now owns a bounded corrected source-voltage, per-loop current, protected-bus, and complete-path resistance/drop contract; exact nFET and downstream CAD remain gated on that artifact.
+
+2026-09-14 — Corrected power-budget authority method changed
+
+The first Product/Power budget run produced no artifact after bounded execution and was released. A narrower direct authority calculation is now dispatched to bind source voltage, per-loop current, protected-bus, and complete-path drop fields from the HPQ3 contradiction. No CAD changed.
