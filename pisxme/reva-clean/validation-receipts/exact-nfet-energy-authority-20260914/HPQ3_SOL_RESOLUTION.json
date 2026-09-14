@@ -1,0 +1,56 @@
+{
+  "outcome": "resolution-ready",
+  "summary": "A provenance-backed authority packet precisely identifies the irreducible residual allowed by Issue #3. No production nFET is promoted: the existing V2.2/MAX17527A branch contract is numerically inconsistent before nFET qualification begins. No CAD, footprint, rule, connectivity, queue, or product-envelope change was made.",
+  "proposed_decision": "Keep P24-EXACT-NFET-ENERGY-AUTHORITY and downstream CAD work parked. Product/Power Authority must first issue a corrected per-loop current and complete-path drop contract preserving the 300 W sustained, 330 W peak, six-loop/no-sharing requirements. Only then qualify an exact nFET, fuse/TVS coordination, harness, thermal installation, and FLAG/reset behavior.",
+  "evidence": [
+    "MAX17527A maximum RON plus provisional fuse cold resistance is 61.58 mOhm, exceeding the entire 60.345 mOhm sustained path allowance before external nFET, connector, harness, PCB, or common-bus resistance.",
+    "With STL125N10LF8AG and the retained V2.2 allocations, sustained drop is at least 0.710804 V, yielding only 10.689196 V from an 11.4 V source versus the required 11.05 V.",
+    "The 6.25 kOhm SETI contract guarantees 5.754245754 A minimum per loop, 45.754246 mA below the 5.8 A target. Aggregate margin cannot qualify independent no-sharing branches.",
+    "STL125N10LF8AG already drops 33.64 mV at its guaranteed 4.5 V, 25 C point versus a 30 mV allocation; no guaranteed 4.45 V hot RDS(on) exists.",
+    "MAX17527A contributes up to 1.91748 W per loop at 5.8 A, or 11.50488 W across six loops, before hot-resistance correction.",
+    "MAX17527A fast-trip response is only 3 us typical; SMBJ18A clamp data is specified at 20.6 A rather than the 32 A trip ceiling; fuse evidence conflicts between 270 A2s melting and 308 A2s pre-arcing definitions. No worst-case waveform coordination is possible.",
+    "The bounded manufacturer-source search found no suitable modern low-milliohm, at least 100 V nFET with guaranteed maximum RDS(on) at VGS no greater than 4.45 V. IRL540PbF meets the gate discriminator but would drop 0.638 V and dissipate 3.70 W at 5.8 A.",
+    "Power Integrity Authority returned AUTHORITY_LEVEL_FAILURE_WITH_PRECISE_RESIDUAL; Librarian, Supervisor, electrical, thermal, and independent verifier findings concurred."
+  ],
+  "candidate": "Base 9377e88f2b4659dc027c12242350fbc49134802e. Candidate artifacts are under pisxme/reva-clean/validation-receipts/exact-nfet-energy-authority-20260914/: HPQ3_SOL_RESOLUTION.json, INTEGRATED_NUMERICAL_EXHAUSTION_V2.md, RECEIPT_V2.md, integrated_nfet_exhaustion_calc.py, and updated SHA256SUMS. The required append-only entry was added to pisxme/reva-clean/bible.md. No candidate commit exists because the disposable checkout's Git index is read-only.",
+  "validation": [
+    "Independent verifier verdict: PASS.",
+    "Fresh calculation-script execution passed all contradiction assertions.",
+    "Independent Decimal recomputation confirmed 60.3448276 mOhm allowance, 61.58 mOhm limiter-plus-fuse resistance, 5.754245754 A limiter minimum, and 0.710804 V reconstructed drop.",
+    "HPQ3_SOL_RESOLUTION.json parsed and passed contract-field checks.",
+    "All seven SHA256SUMS entries and all ten embedded source-receipt hashes matched.",
+    "git diff --check passed.",
+    "HEAD exactly matched the admitted base SHA.",
+    "Scope audit confirmed only the authority receipt artifacts, checksum manifest, and append-only bible entry changed; no CAD or queue files changed."
+  ],
+  "changed_assumptions": [
+    "V2.2's 0.350/0.400 V totals are not complete branch-path budgets because they omit MAX17527A and fuse losses.",
+    "The previous six-loop aggregate-current comparison cannot prove each independent branch's delivery requirement.",
+    "Further same-class nFET searching is not the next action because even an ideal zero-ohm external nFET cannot repair the current branch-contract contradiction.",
+    "STL125N10LF8AG is retained only as the strongest unqualified comparison candidate, not a production selection."
+  ],
+  "integration_instructions": [
+    "Compare base SHA 9377e88f2b4659dc027c12242350fbc49134802e with current reva-clean HEAD and import only the candidate receipt artifacts, updated checksum manifest, and append-only bible entry.",
+    "Route the corrected branch-current, source-voltage, protected-bus, and complete resistance/drop budget through Product/Power Authority; do not release a CAD producer from this packet.",
+    "The corrected contract must reconcile 5.8 A per-loop delivery with limiter tolerance without passive redistribution and include worst-case hot limiter, fuse/holder, nFET, connector/crimp, harness, PCB, and common-bus losses.",
+    "After correction, bind an exact production nFET at VGS no greater than 4.45 V and declared hot junction temperature, maximum fault timing and R/L waveform, TVS/fuse/SOA coordination, six harness schedules, installation thermal limits, and fail-safe FLAG/reset timing.",
+    "Only after signed component and installation authority exists may serialized CAD integration begin; independently validate any later integrated candidate in fresh qualified KiCad Light before closing Issue #3."
+  ],
+  "risks": [
+    "No production nFET, fuse/TVS coordination, transient waveform, thermal installation, or sequencing closure exists yet.",
+    "Several retained values are typical or cold rather than guaranteed hot bounds; the calculations disprove the current budget but do not predict final safe hardware temperatures.",
+    "HARNESS_THERMAL_DOSSIER.json contains a retained trailing shell command and is not valid JSON. Its byte hash is preserved and the matching Markdown dossier remains readable.",
+    "The candidate is uncommitted because .git is read-only; Main Root must import and commit it during current-HEAD reconciliation.",
+    "Resolving the contradiction may require revising the protected-bus/drop/source architecture or the limiter choice; the frozen 300 W/330 W product envelope and six independent loops must remain intact."
+  ],
+  "acceptance_rows": [
+    "power_current_transient_thermal: OPEN; current/drop requirements now have quantified FAIL conditions, while transient and thermal installation remain UNPROVEN.",
+    "component_firmware_provenance: OPEN; no exact production nFET was promoted and FLAG/reset behavior remains unbound.",
+    "native_drc: unchanged OPEN because no CAD changed.",
+    "physical_opens_shorts: unchanged OPEN because no CAD changed.",
+    "layers_routes_impedance_return: unchanged OPEN; return and PDN requirements remain inputs to later integration.",
+    "dfm: unchanged OPEN; exact package, land pattern, installation, and release evidence are not selected.",
+    "hostile_review: unchanged OPEN; this packet is an input to later current-HEAD hostile review."
+  ],
+  "exhaustion": []
+}

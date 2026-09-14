@@ -1080,3 +1080,7 @@ Unblocker classified the remaining issue as internal domain authority and record
 2026-09-14 — Exact nFET qualification admitted to Hard Problem Queue
 
 After Librarian, Power Integrity, and Unblocker escalation, HPQ Issue #3 was admitted as `hard-blocker` for the exact reverse-nFET and six-loop fault-energy qualification. Only the dependent authority/protection subtree is parked; Issue #2 remains separate.
+
+2026-09-14 — HPQ Issue #3 resolution reconciled
+
+Sol resolution-ready evidence was reconciled at current HEAD `12caa542` against admitted base `9377e88f2b4659dc027c12242350fbc49134802e`. The retained result proves the V2.2 per-loop current and complete-path drop budget is inconsistent before nFET qualification. No CAD or product-envelope change was authorized. Product/Power Authority now owns the corrected source-voltage, branch-current, protected-bus, and end-to-end resistance/drop contract.
