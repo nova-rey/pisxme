@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-EXACT-NFET-DOSSIER",
+  "status": "EVIDENCE_PACKET_READY_WITH_EXACT_GATE_AND_SYSTEM_COORDINATION_GAPS",
+  "owner": "librarian",
+  "private_library": {
+    "repository": "nova-rey/pisxme-private",
+    "branch": "Library",
+    "commit": "49f09eea500e52e639da7ed33da46ca279024631",
+    "brief": "Library/briefs/exact-nfet-energy-dossier-p24-20260914.md"
+  },
+  "sources": [
+    {"id":"adi-max17527a-ds-20260913","tier":1,"url":"https://www.analog.com/media/en/technical-documentation/data-sheets/max17527a.pdf","revision":"Rev. 0; 2023-03-20","role":"active controller contract"},
+    {"id":"st-stl125n10lf8ag-ds-ds14632-rev3-20260914","tier":1,"url":"https://www.st.com/resource/en/datasheet/stl125n10lf8ag.pdf","revision":"DS14632 Rev 3; May 2026","role":"strongest low-voltage nFET candidate"},
+    {"id":"infineon-bsc096n10ls5-ds-rev2p1-20260914","tier":1,"url":"https://www.infineon.com/assets/row/public/documents/24/49/infineon-bsc096n10ls5-datasheet-en.pdf","revision":"Final Data Sheet Rev 2.1; 2019-09-02","role":"comparator candidate"},
+    {"id":"ti-lm74700-q1-sn0sd17g-rev-g-local-20260914","tier":1,"url":"https://www.ti.com/lit/ds/symlink/lm74700-q1.pdf","revision":"SNOSD17G; revised December 2020","role":"local selection guidance, different controller","local_sha256":"e16b3a8c0023201fafa5825436f5f2dd6f885b92b84e65602b3f50d741c58b6f"},
+    {"id":"ti-csd19536kcs-ds-slps485c","tier":1,"role":"existing candidate; no 4.5 V RDS(on) guarantee"},
+    {"id":"littelfuse-0297015-mini-ds-20260913","tier":1,"role":"existing fuse/I2t/time-current evidence"},
+    {"id":"littelfuse-smbj-series-ds-20260913","tier":1,"role":"existing TVS clamp/standoff evidence"},
+    {"id":"molex-ps-5556-001-001-current-20260914","tier":1,"role":"existing harness/current/derating evidence"}
+  ],
+  "candidate_assessment": {
+    "STL125N10LF8AG": {"status":"strongest_candidate_unqualified","vds_v":100,"rds_on_max_mohm_at_4p5v":5.8,"rds_test_id_a":30,"tj_range_c":[-55,175],"avalanche_tested":true,"exact_4p45_guarantee":false},
+    "BSC096N10LS5": {"status":"comparator_unqualified","vds_v":100,"rds_on_max_mohm_at_4p5v":12.5,"rds_test_id_a":10,"tj_range_c":[-55,175],"avalanche_tested":true,"exact_4p45_guarantee":false},
+    "CSD19536KCS": {"status":"not_qualified_at_controller_gate","rds_spec_gate_v":[6,10],"exact_4p45_guarantee":false}
+  },
+  "authority_gaps": [
+    "exact VGS=4.45 V RDS(on) guarantee or binding gate-drive qualification",
+    "temperature-bound RDS(on) at actual gate drive and declared TJ",
+    "PiSXMe VDS/reverse/transient envelope and TVS margin",
+    "six-loop nFET SOA/I2t, TVS pulse, fuse clearing, harness L/R and copper coordination",
+    "exact harness installation and thermal qualification",
+    "production FET package and protected-input thermal/copper integration"
+  ],
+  "cad_changed": false,
+  "product_requirements_changed": false
+}

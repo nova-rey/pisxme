@@ -1048,3 +1048,5 @@ The bounded exact-nFET/energy authority attempt returned no receipt, so the pack
 ## 2026-09-14 — Librarian exact-nFET dossier made explicit in queue
 
 The live Librarian evidence acquisition is represented as `P24-EXACT-NFET-DOSSIER` and claimed with a model-agent slot. Queue census now records one RUNNING internal knowledge package instead of a false hard-idle state; no CAD changed.
+
+2026-09-14 — Librarian returned `P24-EXACT-NFET-DOSSIER`: ST STL125N10LF8AG is the strongest 100-V, 4.5-V-gated, AEC-Q101 candidate, while Infineon BSC096N10LS5 remains a lower-margin comparator. Local TI LM74700-Q1 guidance is precedent only because its charge-pump contract differs from MAX17527A. Exact 4.45-V/temperature-bound RDS(on), PiSXMe transient VDS margin, six-loop fast-trip SOA/I2t, and harness installation remain explicit Power Authority gates. No CAD or product requirement changed.
