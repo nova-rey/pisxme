@@ -1040,3 +1040,7 @@ Protection and harness installation reviews found no external blocker: exact low
 ## 2026-09-14 — Limiter signature resolved; remaining protection and harness gates stay internal
 
 Power Authority conditionally signed the six MAX17527A limiter selection, resolving its queue dependency while retaining fast-trip transient qualification. The exact reverse-nFET/energy and harness-installation authority packages remain explicitly owned or waiting; no six-loop CAD insertion or route repair is authorized before those gates close.
+
+## 2026-09-14 — Exact nFET authority escalated to Librarian evidence
+
+The bounded exact-nFET/energy authority attempt returned no receipt, so the package was parked on `knowledge:exact-nfet-energy-dossier` and escalated to Librarian for provenance-indexed evidence. No CAD changed and the campaign remains active.

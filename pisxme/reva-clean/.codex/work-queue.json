@@ -66,6 +66,14 @@
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
+    "knowledge:exact-nfet-energy-dossier": {
+      "created_at": "2026-09-14T00:37:15.126508Z",
+      "kind": "knowledge",
+      "receipt": null,
+      "reference": "validation-receipts/protection-dossier-20260914/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "knowledge:harness-thermal-dossier": {
       "created_at": "2026-09-14T00:18:46.422830Z",
       "kind": "knowledge",
@@ -1591,7 +1599,8 @@
       "created_at": "2026-09-14T00:29:27.819542Z",
       "dependencies": [
         "package:P24-PROTECTION-DOSSIER",
-        "package:P24-POWER-CURRENT-LIMITER-AUTHORITY"
+        "package:P24-POWER-CURRENT-LIMITER-AUTHORITY",
+        "knowledge:exact-nfet-energy-dossier"
       ],
       "domain": "Power Integrity Authority",
       "edit_boundaries": [
@@ -1602,7 +1611,7 @@
       "evidence_refs": [],
       "id": "P24-EXACT-NFET-ENERGY-AUTHORITY",
       "notes": "",
-      "owner": "power_integrity_engineer",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1619,17 +1628,17 @@
         }
       ],
       "scope": "Select a production reverse-protection nFET guaranteed at MAX17527A gate drive; calculate worst-case fuse/TVS/FET/harness fast-trip SOA/I2t and sign six-loop FLAG/inhibit/reset policy.",
-      "session_ids": [
-        "root-direct-nfet-authority-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Select exact reverse nFET and sign fault-energy coordination",
-      "updated_at": "2026-09-14T00:32:18.512501Z",
+      "updated_at": "2026-09-14T00:37:15.126558Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "knowledge:exact-nfet-energy-dossier"
+      ],
       "workstream": "power-authority"
     },
     {
@@ -1756,5 +1765,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T00:32:59.035392Z"
+  "updated_at": "2026-09-14T00:37:15.126759Z"
 }
