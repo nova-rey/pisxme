@@ -1104,3 +1104,7 @@ Three direct Product/Power attempts produced no artifact. The package was releas
 2026-09-14 — Provisional corrected power budget exposed for authority review
 
 After repeated nonproductive authority runs, Root recorded the HPQ3-derived corrected source/current/drop contract as an explicitly provisional candidate. It removes the unsupported 5.8-A guarantee, reserves complete component path losses, and preserves the 300 W/330 W six-loop invariants. Independent Power Integrity review is required before any downstream release; no CAD changed.
+
+2026-09-14 — Provisional power budget parked pending signature
+
+The independent Power Integrity review returned no verdict after a bounded run. The HPQ3-derived corrected budget remains a provisional candidate and is parked on `authority:power-budget-correction-signature`; no downstream nFET or CAD work is released.

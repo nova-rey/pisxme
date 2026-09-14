@@ -34,6 +34,14 @@
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
+    "authority:power-budget-correction-signature": {
+      "created_at": "2026-09-14T13:10:49.125667Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/power-budget-correction-20260914/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:power-current-limiter-selection": {
       "created_at": "2026-09-13T23:57:42.658508Z",
       "kind": "authority",
@@ -1906,7 +1914,9 @@
       "candidate": null,
       "completion_criterion": "Product/Power Authority signs a machine-readable corrected budget with source revisions, calculations, assumptions, margins, and explicit downstream gates.",
       "created_at": "2026-09-14T12:59:50.271898Z",
-      "dependencies": [],
+      "dependencies": [
+        "authority:power-budget-correction-signature"
+      ],
       "domain": "Product / Power Authority",
       "edit_boundaries": [
         "validation-receipts/power-budget-correction-20260914/ only",
@@ -1917,7 +1927,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-BUDGET-CORRECTION",
       "notes": "HPQ resolution-ready requires this correction before exact nFET qualification or CAD.",
-      "owner": "power_integrity_engineer",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1935,17 +1945,17 @@
         }
       ],
       "scope": "Using the reconciled HPQ Issue #3 result, establish a signed corrected source-voltage, per-loop branch-current, protected-bus, and complete end-to-end resistance/drop contract preserving 300 W sustained, 330 W peak, six independent no-sharing loops. Include limiter tolerance, fuse/holder, nFET allowance, connector/crimp, harness, PCB, common-bus, efficiency, derating, and margins.",
-      "session_ids": [
-        "/root/power_budget_correction_review"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Establish corrected source and complete-path power budget",
-      "updated_at": "2026-09-14T13:08:34.081596Z",
+      "updated_at": "2026-09-14T13:10:49.125701Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:power-budget-correction-signature"
+      ],
       "workstream": "power-authority"
     }
   ],
@@ -1961,5 +1971,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T13:08:34.081836Z"
+  "updated_at": "2026-09-14T13:10:49.125928Z"
 }
