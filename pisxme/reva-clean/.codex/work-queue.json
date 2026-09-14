@@ -53,18 +53,18 @@
     "knowledge:harness-thermal-dossier": {
       "created_at": "2026-09-14T00:18:46.422830Z",
       "kind": "knowledge",
-      "receipt": null,
+      "receipt": "/home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/harness-thermal-dossier-20260914/RECEIPT.md",
       "reference": "validation-receipts/power-connector-qualification-closure-20260914/QUALIFICATION_CLOSURE.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-14T00:26:01.457389Z",
+      "status": "RESOLVED"
     },
     "knowledge:protection-assembly-dossier": {
       "created_at": "2026-09-14T00:18:46.377604Z",
       "kind": "knowledge",
-      "receipt": null,
+      "receipt": "/home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protection-dossier-20260914/RECEIPT.md",
       "reference": "validation-receipts/power-authority-signoff-20260914/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-14T00:26:01.405961Z",
+      "status": "RESOLVED"
     }
   },
   "hard_problem_repo": "nova-rey/codex-config-backup",
@@ -1368,7 +1368,7 @@
       "evidence_refs": [],
       "id": "P24-PROTECTION-ASSEMBLY-QUALIFICATION",
       "notes": "",
-      "owner": null,
+      "owner": "power_integrity_engineer",
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1385,17 +1385,17 @@
         }
       ],
       "scope": "Select exact reverse-protection nFET, fuse/TVS and I2t/SOA coordination, six-loop FLAG/inhibit/reset aggregation, and binding fast-trip interpretation for the MAX17527A candidate.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "root-direct-protection-20260914"
+      ],
+      "status": "RUNNING",
       "title": "Close six-loop limiter, FET, fuse, TVS and inhibit contract",
-      "updated_at": "2026-09-14T00:18:46.377641Z",
+      "updated_at": "2026-09-14T00:26:07.562751Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "knowledge:protection-assembly-dossier"
-      ],
+      "waiting_on": [],
       "workstream": "phase24"
     },
     {
@@ -1420,7 +1420,7 @@
       "evidence_refs": [],
       "id": "P24-HARNESS-INSTALLATION-THERMAL-QUALIFICATION",
       "notes": "",
-      "owner": null,
+      "owner": "thermal_hardware_engineer",
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1437,17 +1437,17 @@
         }
       ],
       "scope": "Bind six harness part/length and hot loop-resistance values under 20 mOhm, ambient/airflow, six-header installation, and thermal margins.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "root-direct-harness-20260914"
+      ],
+      "status": "RUNNING",
       "title": "Close six-loop harness resistance and installation thermal contract",
-      "updated_at": "2026-09-14T00:18:46.422848Z",
+      "updated_at": "2026-09-14T00:26:07.617084Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "knowledge:harness-thermal-dossier"
-      ],
+      "waiting_on": [],
       "workstream": "phase24"
     },
     {
@@ -1562,5 +1562,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T00:19:01.933403Z"
+  "updated_at": "2026-09-14T00:26:07.617251Z"
 }

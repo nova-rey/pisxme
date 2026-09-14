@@ -1028,3 +1028,7 @@ Two direct authority attempts returned no artifacts within their bounded run. Th
 ## 2026-09-14 — Harness and installation thermal evidence indexed
 
 Librarian indexed bounded official Molex, Belden, Southwire and NIST evidence for the six-loop harness qualification. Molex establishes the 16-AWG phosphor-bronze 8 A application screen, 30 C terminal-rise basis, and required derating; manufacturer family records establish 5569/5557 temperature and installation facts; wire records and NIST provide resistance references and temperature correction. Exact PiSXMe cable lengths, complete loop scope, ambient/airflow, six-header installation and temperature margins remain Package/Power Authority fields. No CAD changed, no fabricated measurement was claimed, and no restricted source material was copied.
+
+## 2026-09-14 — Protection dossier indexed and qualification work resumed
+
+Librarian indexed local/authoritative MAX17527A, CSD19536KCS, MINI fuse and SMBJ TVS evidence in the private Library, retaining explicit gate-drive, SOA/I2t, energy-coordination and fault-aggregation gaps. The protection and harness installation qualification packages were returned to READY and claimed by their domain authorities; no CAD changed.
