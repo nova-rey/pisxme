@@ -1117,3 +1117,7 @@ After repeated bounded Product/Power authority attempts failed to return a signa
 2026-09-14 — HPQ4 resolution reconciled at current HEAD
 
 Issue #4 reached `resolution-ready`; its Product/Power Authority packet was reconciled against current `reva-clean` HEAD `031deb0917b0bf5541573f954d1912a0d0053f3e`. The signed `PISXME-P24-POWER-BUDGET-HPQ4` v2.0.0 contract is imported without CAD changes: 12.05/12.10–12.60 V source limits, 40/45 A source capability, six independent 6.000–6.400 A loops, protected-bus and complete hot resistance/drop caps. MAX17527AATP+T at 6.25 kOhm is rejected. Numerical authority is closed; physical component, harness, PDN, thermal, sequencing, DRC, connectivity and DFM gates remain open.
+
+2026-09-14 — HPQ4 dependency resolved and power-budget package dispatched
+
+`sync-hpq` observed Issue #4 `resolution-ready`; the signed numerical contract is reconciled at current HEAD and `P24-POWER-BUDGET-CORRECTION` is RUNNING under Supervisor `power_budget_reconcile`. Downstream physical qualification remains gated on this package result; no CAD work is released.
