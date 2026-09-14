@@ -1020,3 +1020,7 @@ The initial signoff Supervisor exceeded its bounded attempt without returning a 
 ## 2026-09-14 — Power signoff retained with bounded qualification gates
 
 Power Authority conditionally accepted the MAX17527A six-loop numerical candidate but retained protection-assembly, harness-resistance, FLAG/inhibit, fast-trip, MPA and thermal installation gates. Those gates are now explicit authority work packages; no source contract or CAD producer has been released prematurely.
+
+## 2026-09-14 — Protection and thermal evidence capability change
+
+Two direct authority attempts returned no artifacts within their bounded run. Their dependent packages are parked on explicit knowledge gaps, and Librarian evidence packages now own targeted acquisition for protection assembly and harness/installation thermal data. This preserves the internal escalation path without opening CAD or inventing qualification values.
