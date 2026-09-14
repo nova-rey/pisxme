@@ -69,10 +69,10 @@
     "knowledge:exact-nfet-energy-dossier": {
       "created_at": "2026-09-14T00:37:15.126508Z",
       "kind": "knowledge",
-      "receipt": null,
+      "receipt": "validation-receipts/exact-nfet-energy-dossier-20260914/RECEIPT.md",
       "reference": "validation-receipts/protection-dossier-20260914/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-14T00:46:05.608676Z",
+      "status": "RESOLVED"
     },
     "knowledge:harness-thermal-dossier": {
       "created_at": "2026-09-14T00:18:46.422830Z",
@@ -1629,16 +1629,14 @@
       ],
       "scope": "Select a production reverse-protection nFET guaranteed at MAX17527A gate drive; calculate worst-case fuse/TVS/FET/harness fast-trip SOA/I2t and sign six-loop FLAG/inhibit/reset policy.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "READY",
       "title": "Select exact reverse nFET and sign fault-energy coordination",
-      "updated_at": "2026-09-14T00:37:15.126558Z",
+      "updated_at": "2026-09-14T00:46:05.608736Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "knowledge:exact-nfet-energy-dossier"
-      ],
+      "waiting_on": [],
       "workstream": "power-authority"
     },
     {
@@ -1759,7 +1757,13 @@
       },
       "base_sha": "c6e182a0",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/exact-nfet-energy-dossier-20260914/EXACT_NFET_ENERGY_DOSSIER.json",
+        "base_sha": "5033f13a",
+        "returned_at": "2026-09-14T00:45:57.980072Z",
+        "returned_by": "librarian",
+        "sha": "87eec344"
+      },
       "completion_criterion": "Provenance-indexed dossier identifies a qualified candidate or records exact irreducible evidence gaps.",
       "created_at": "2026-09-14T00:38:51.735462Z",
       "dependencies": [
@@ -1771,10 +1775,12 @@
         "no CAD edits",
         "no invented measurements"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/exact-nfet-energy-dossier-20260914/RECEIPT.md"
+      ],
       "id": "P24-EXACT-NFET-DOSSIER",
       "notes": "",
-      "owner": "librarian",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1791,12 +1797,10 @@
         }
       ],
       "scope": "Index or acquire authoritative MPN evidence for MAX17527A 4.45V-gate reverse nFET, temperature-rated RDS(on), VDS/SOA, and fuse/TVS/harness fast-trip energy coordination.",
-      "session_ids": [
-        "root-exact-nfet-dossier-20260914"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Acquire exact low-voltage nFET and fault-energy evidence",
-      "updated_at": "2026-09-14T00:38:51.784146Z",
+      "updated_at": "2026-09-14T00:46:05.548451Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1817,5 +1821,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T00:38:51.784297Z"
+  "updated_at": "2026-09-14T00:46:05.608872Z"
 }
