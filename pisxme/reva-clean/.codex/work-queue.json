@@ -90,6 +90,14 @@
       "resolved_at": "2026-09-14T12:58:17.104701Z",
       "status": "RESOLVED"
     },
+    "hpq:#4": {
+      "created_at": "2026-09-14T13:11:52.658756Z",
+      "kind": "hpq",
+      "receipt": null,
+      "reference": "https://github.com/nova-rey/codex-config-backup/issues/4",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "hpq:nova-rey/codex-config-backup#3": {
       "created_at": "2026-09-14T00:57:10.810250Z",
       "kind": "hpq",
@@ -97,6 +105,14 @@
       "reference": "https://github.com/nova-rey/codex-config-backup/issues/3",
       "resolved_at": "2026-09-14T12:58:17.483860Z",
       "status": "RESOLVED"
+    },
+    "hpq:nova-rey/codex-config-backup#4": {
+      "created_at": "2026-09-14T13:11:42.494846Z",
+      "kind": "hpq",
+      "receipt": null,
+      "reference": "https://github.com/nova-rey/codex-config-backup/issues/4",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
     },
     "knowledge:exact-nfet-energy-dossier": {
       "created_at": "2026-09-14T00:37:15.126508Z",
@@ -1915,7 +1931,9 @@
       "completion_criterion": "Product/Power Authority signs a machine-readable corrected budget with source revisions, calculations, assumptions, margins, and explicit downstream gates.",
       "created_at": "2026-09-14T12:59:50.271898Z",
       "dependencies": [
-        "authority:power-budget-correction-signature"
+        "authority:power-budget-correction-signature",
+        "hpq:nova-rey/codex-config-backup#4",
+        "hpq:#4"
       ],
       "domain": "Product / Power Authority",
       "edit_boundaries": [
@@ -1948,13 +1966,15 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Establish corrected source and complete-path power budget",
-      "updated_at": "2026-09-14T13:10:49.125701Z",
+      "updated_at": "2026-09-14T13:11:52.658783Z",
       "validation": {
         "required": [],
         "results": {}
       },
       "waiting_on": [
-        "authority:power-budget-correction-signature"
+        "authority:power-budget-correction-signature",
+        "hpq:nova-rey/codex-config-backup#4",
+        "hpq:#4"
       ],
       "workstream": "power-authority"
     }
@@ -1971,5 +1991,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T13:10:49.125928Z"
+  "updated_at": "2026-09-14T13:11:52.658934Z"
 }

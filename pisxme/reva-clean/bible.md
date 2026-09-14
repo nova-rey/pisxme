@@ -1108,3 +1108,7 @@ After repeated nonproductive authority runs, Root recorded the HPQ3-derived corr
 2026-09-14 — Provisional power budget parked pending signature
 
 The independent Power Integrity review returned no verdict after a bounded run. The HPQ3-derived corrected budget remains a provisional candidate and is parked on `authority:power-budget-correction-signature`; no downstream nFET or CAD work is released.
+
+2026-09-14 — Corrected power budget escalated to HPQ Issue #4
+
+After repeated bounded Product/Power authority attempts failed to return a signature, the provisional corrected budget was admitted to the durable Hard Problem Queue as Issue #4. Only its dependent power subtree is parked; Issue #3 remains resolved evidence and no CAD changed.
