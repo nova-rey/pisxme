@@ -1664,8 +1664,7 @@
         "results": {}
       },
       "waiting_on": [
-        "hpq:nova-rey/codex-config-backup#3",
-        "hpq:#3"
+        "hpq:nova-rey/codex-config-backup#3"
       ],
       "workstream": "power-authority"
     },
