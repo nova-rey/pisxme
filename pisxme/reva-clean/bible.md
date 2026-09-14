@@ -1100,3 +1100,7 @@ Two bounded Product/Power attempts produced no artifact and were released. A str
 2026-09-14 — Power budget authority moved to Supervisor package
 
 Three direct Product/Power attempts produced no artifact. The package was released and re-claimed by a Supervisor for one compact authority deliverable using the retained HPQ3 numeric evidence; no CAD changed.
+
+2026-09-14 — Provisional corrected power budget exposed for authority review
+
+After repeated nonproductive authority runs, Root recorded the HPQ3-derived corrected source/current/drop contract as an explicitly provisional candidate. It removes the unsupported 5.8-A guarantee, reserves complete component path losses, and preserves the 300 W/330 W six-loop invariants. Independent Power Integrity review is required before any downstream release; no CAD changed.

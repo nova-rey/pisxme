@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-POWER-BUDGET-CORRECTION",
+  "status": "PROVISIONAL_CANDIDATE_PENDING_POWER_AUTHORITY_SIGNATURE",
+  "base_sha": "3af770b9",
+  "product_constraints": {
+    "v100_sustained_w": 300,
+    "design_peak_w": 330,
+    "loops": 6,
+    "passive_sharing": false,
+    "protected_bus_min_v": {
+      "sustained": 11.05,
+      "peak": 11.0
+    }
+  },
+  "source_contract": {
+    "minimum_v": 12.05,
+    "peak_minimum_v": 12.1,
+    "maximum_v": 12.6,
+    "continuous_a": 40,
+    "bounded_peak_a": 45,
+    "peak_duration_ms": 100
+  },
+  "branch_contract": {
+    "limiter": "MAX17527AATP+T",
+    "seti_ohm": 6250,
+    "minimum_a": 5.754245754,
+    "maximum_a": 6.24625,
+    "six_loop_minimum_a": 34.5254745,
+    "low_voltage_peak_screen_a": 34.37621832,
+    "margin_a": 0.14925618
+  },
+  "complete_path_drop_v": {
+    "sustained": 0.951,
+    "peak": 1.028
+  },
+  "equivalent_complete_path_resistance_mohm": {
+    "sustained": 165.27,
+    "peak": 164.58
+  },
+  "authority_required": [
+    "replace provisional component terms with guaranteed hot values",
+    "sign source range and branch allocation",
+    "close nFET gate/VDS/SOA, fuse/TVS, harness, thermal, FLAG/reset"
+  ],
+  "cad_changed": false,
+  "sha256_markdown": "63d56d3499023427ed1c023cb02e6ca400b3bf7480fe62f8929625e5257e09a1"
+}
