@@ -1064,3 +1064,7 @@ The provenance dossier resolved the knowledge dependency. Power Integrity Author
 2026-09-14 — Exact nFET authority retained explicit internal qualification gaps
 
 Power Integrity Authority reviewed the provenance dossier and did not promote an MPN. The 4.45 V minimum-gate, temperature, transient VDS, fast-fault SOA/I2t, fuse/TVS/harness coordination, and installation gates remain an internal authority dependency; no CAD changed.
+
+2026-09-14 — Capability-change package dispatched for exact nFET qualification
+
+The blocked Power Authority review triggered a capability change. Librarian now owns targeted provenance acquisition and Researcher commissioning for the exact 4.45 V gate, temperature, transient, SOA/I2t, and installation gaps; no CAD changed.
