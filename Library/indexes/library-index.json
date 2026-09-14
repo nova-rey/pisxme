@@ -219,6 +219,22 @@
         "connector",
         "power"
       ]
+    },
+    {
+      "id": "brief-protection-assembly-dossier-20260914",
+      "kind": "working-brief",
+      "path": "Library/briefs/protection-assembly-dossier-20260914.md",
+      "tags": [
+        "MAX17527A",
+        "CSD19536KCS",
+        "nFET",
+        "fuse",
+        "TVS",
+        "I2t",
+        "SOA",
+        "FLAG",
+        "protection"
+      ]
     }
   ]
 }

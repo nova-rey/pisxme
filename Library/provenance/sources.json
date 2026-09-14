@@ -687,6 +687,66 @@
       ],
       "status": "accessible",
       "license_disposition": "link and extracted facts only; no page copied"
+    },
+    {
+      "id": "adi-max17527a-ds-20260913",
+      "title": "MAX17527A 5.5V to 60V, 6A Power Limiter with OV, UV, Reverse Polarity, Loss of Ground Protection datasheet",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/max17527a.pdf",
+      "revision": "Rev. 0; 03/20/2023; retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer component authority",
+      "transient_retrieval_sha256": "dc96bb134570f41409d3b1ff6f8d6ea128c035eecc2944a4eaa95950469b59cd",
+      "local_material_retained": false,
+      "observed_facts": [
+        "5.5 V to 60 V input range",
+        "0.6 A to 6.0 A programmable current limit; \u00b14% accuracy from 3 A to 6 A across temperature",
+        "external nFET source to SN, drain to IN, gate to GN for reverse-polarity and reverse-current protection",
+        "external gate drive 4.45 V minimum, 4.75 V typical, 4.95 V maximum under EN=5 V with no reverse condition",
+        "internal fast-trip IOCP 20 A minimum, 26 A typical, 32 A maximum; 3 \u00b5s typical response; external nFET remains on during output short fast trip",
+        "FLAG open-drain fault indicator; 4 mA protection; reverse-current-only event does not assert FLAG",
+        "22.5 ms to 25.5 ms blanking and 654 ms to 792 ms autoretry ranges",
+        "thermal foldback 150 \u00b0C and thermal shutdown 165 \u00b0C typical; 10 \u00b0C hysteresis",
+        "absolute maximum DC IN current 6.3 A; minimum 1 \u00b5F IN bypass and 4.7 \u00b5F SN bypass"
+      ],
+      "status": "accessible-no-local-copy",
+      "license_disposition": "citation and extracted facts only; no PDF copied into private Library; transient retrieval digest retained as provenance metadata"
+    },
+    {
+      "id": "littelfuse-0297015-mini-ds-20260913",
+      "title": "MINI Series Blade Fuses Rated 32V official datasheet",
+      "publisher": "Littelfuse",
+      "url": "https://www.littelfuse.com/assetdocs/littelfuse-datasheet-297-mini32v?assetguid=42c9dd21-a88e-4328-8e67-2f832444faf1",
+      "revision": "Revised 2024-09-27; retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer protection component authority",
+      "observed_facts": [
+        "0297015._ is 15 A, 32 V DC, 1000 A interrupting at 32 V DC",
+        "0297015._ typical cold resistance 4.58 m\u03a9 and typical I\u00b2t 308 A\u00b2s",
+        "manufacturer defines typical I\u00b2t as average melting time before arcing from breaking-capacity tests",
+        "15 A time-current opening ranges: 0.15\u20135 s at 200%, 0.08\u20130.5 s at 350%, 0.03\u20130.1 s at 600%",
+        "recommended environment -40 \u00b0C to +125 \u00b0C; typical derating table shows 13 A at 20 \u00b0C and 9 A at 100 \u00b0C for 15 A item"
+      ],
+      "status": "accessible",
+      "license_disposition": "citation and extracted facts only; no PDF copied into Library"
+    },
+    {
+      "id": "littelfuse-smbj-series-ds-20260913",
+      "title": "SMBJ Series Surface Mount 600W TVS Diodes official datasheet",
+      "publisher": "Littelfuse",
+      "url": "https://www.littelfuse.com/assetdocs/tvs-diodes-smbj-series-datasheet?assetguid=ba555e99-a12d-4f72-a0b6-86b06c67171e",
+      "revision": "Current datasheet retrieval; retrieved 2026-09-13",
+      "tier": 1,
+      "evidence_class": "manufacturer protection component authority",
+      "observed_facts": [
+        "SMBJ18A unidirectional 600 W class",
+        "18.0 V reverse standoff",
+        "20.0\u201322.1 V breakdown at 1 mA",
+        "29.2 V maximum clamp at 20.6 A peak-pulse current",
+        "1 \u00b5A maximum reverse leakage at standoff"
+      ],
+      "status": "accessible",
+      "license_disposition": "citation and extracted facts only; no PDF copied into Library"
     }
   ]
 }
