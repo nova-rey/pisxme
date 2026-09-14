@@ -34,6 +34,12 @@ The project-local TI `LM74700-Q1` datasheet (`SNOSD17G`, revised December 2020; 
 
 This does not close PiSXMe's MAX17527A contract. LM74700-Q1 drives its FET with a charge pump up to approximately 13 V and has a different reverse-current controller. The example is a 3-A nominal 12-V design and supplies no PiSXMe six-loop SOA, fuse/TVS/harness energy proof. `DMT6007LFG` is therefore a useful precedent for a 4.5-V-rated FET requirement, not a selected or qualified PiSXMe MPN. It also does not remove the 4.45-V minimum gap.
 
+### Researcher-returned 4.5-V candidates
+
+The bounded Researcher sack also returned two primary datasheets. TI `CSD18536KCS`, SLPS532C revised March 2024, specifies 60 V VDS, 2.2 mOhm maximum at VGS=4.5 V and ID=100 A, -55 to +175 C operation, 0.4 C/W junction-to-case, an SOA through the stated thermal boundary, and normalized RDS(on) curves explicitly including VGS=4.5 V. Diodes Inc. `DMT6007LFG`, DS37335 Rev. 2-2 (November 2015), specifies 60 V, 8.5 mOhm maximum at VGS=4.5 V and ID=15 A, -55 to +150 C, AEC-Q101/100% UIS, EAS 20 mJ at the stated 0.1-mH test, SOA at TJ max 150 C, and an RDS(on)-temperature graph at 4.5 V/15 A.
+
+Both improve the evidence over CSD19536KCS but remain candidates, not PiSXMe selections. Their 60-V VDS ratings may be insufficient for the declared negative-input/transient envelope, and their 4.5-V specifications remain 50 mV above the MAX17527A guaranteed minimum. The temperature curves support a calculation but do not by themselves provide a guaranteed maximum RDS(on) at 4.45 V and the declared hot operating point.
+
 ### Existing CSD19536KCS
 
 The existing TI record remains a rejected/unqualified candidate for this gate. Its published RDS(on) values are at 6 V and 10 V, not at the MAX17527A 4.45–4.95-V guaranteed drive. Do not infer 4.45-V suitability from threshold voltage or a typical transfer graph.

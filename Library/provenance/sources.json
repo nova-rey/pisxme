@@ -953,6 +953,49 @@
       ],
       "status": "locally retained in project authority inventory; exact hash verified",
       "license_disposition": "project-local authority copy; cite and do not redistribute outside approved private/public boundary"
+    },
+    {
+      "id": "diodes-dmt6007lfg-ds37335-rev2-2-20260914",
+      "title": "DMT6007LFG 60-V N-channel enhancement MOSFET datasheet",
+      "publisher": "Diodes Incorporated",
+      "url": "https://www.diodes.com/datasheet/download/DMT6007LFG.pdf",
+      "revision": "DS37335 Rev. 2-2; November 2015",
+      "retrieved": "2026-09-14",
+      "tier": 1,
+      "evidence_class": "primary manufacturer component authority",
+      "transient_retrieval_sha256": "9e75ecab96b0a77b2ff31d61bdf5eba63d6bec5986a29dfc55053e4f253669bc",
+      "observed_facts": [
+        "60 V BVDSS",
+        "RDS(on) max 8.5 mOhm at VGS=4.5 V and ID=15 A",
+        "-55 C to +150 C operating/storage temperature",
+        "AEC-Q101 qualified and 100% UIS avalanche rated",
+        "IAS 20 A and EAS 20 mJ at L=0.1 mH",
+        "SOA provided at TJ max 150 C",
+        "RDS(on) temperature graph at VGS=4.5 V, ID=15 A"
+      ],
+      "status": "researcher-acquired primary source; exact local copy not retained in Library",
+      "license_disposition": "metadata, citation and extracted facts only; no PDF copy"
+    },
+    {
+      "id": "ti-csd18536kcs-slps532c-20260914",
+      "title": "CSD18536KCS 60-V N-channel NexFET power MOSFET datasheet",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/slps532c/slps532c.pdf",
+      "revision": "SLPS532C; revised March 2024",
+      "retrieved": "2026-09-14",
+      "tier": 1,
+      "evidence_class": "primary manufacturer component authority",
+      "transient_retrieval_sha256": "758f69698b7bfd64196cdb23c03f598d1be8097a53ef1305dd1ca581b2956fae",
+      "observed_facts": [
+        "60 V VDS",
+        "RDS(on) max 2.2 mOhm at VGS=4.5 V and ID=100 A",
+        "-55 C to +175 C operating range",
+        "TO-220 KCS, theta JC 0.4 C/W",
+        "avalanche rated",
+        "SOA and normalized RDS(on) temperature curves include 4.5-V gate data"
+      ],
+      "status": "researcher-acquired primary source; exact local copy not retained in Library",
+      "license_disposition": "metadata, citation and extracted facts only; no PDF copy"
     }
   ]
 }
