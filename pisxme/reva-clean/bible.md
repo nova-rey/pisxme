@@ -1284,3 +1284,7 @@ The bounded Unblocker classified the protected-bus producer stall as an internal
 ## 2026-09-17 — Power Integrity advisory bound for protected-bus MPA
 
 Power Integrity reviewed the current PCB against the signed protected-bus contract. The 11.4 V corner requires 31.452 A sustained and 34.376 A for 100 ms peak with auxiliary load; the 10 mOhm complete path budget permits only 314.5/343.8 mV drop. The present 222 mm 12V_IN_A segment, open `12V_IN_B`/`FUSED_12V_B`, absent `12V_PROTECTED` bus zone, and open `BRIDGE_3V3`/`BRIDGE_1V1` rails are retained as authority evidence. Existing one-contact J5/J6 footprints cannot receive 40/45 A credit without exact source-assembly qualification. The advisory is indexed for MPA; no CAD or hardware result is claimed.
+
+## 2026-09-17 — MPA protected-bus corridor plan resolved
+
+Macro Placement Authority issued the sole binding plan `PISXME-P24-PROTECTED-BUS-MPA-20260917`. J5/J6 and J1 remain fixed; the F1/F2, D1/D2, U1/U2, and Q1/Q2 cohorts are fixed at the authority coordinates, with separate A/B paths merging only after Q1/Q2 at x >= 66 mm. The plan reserves an In3 protected-bus plane and ordinary-via arrays to J1, preserves ground/high-speed corridors, and rejects the existing long input run and incomplete protected stubs. The producer dependency `authority:protected-bus-mpa` resolved; the producer is claimed by `protected_bus_kicad_producer_authority_plan` for isolated implementation. Source-assembly capacity remains an explicit acceptance dependency and is not silently waived.

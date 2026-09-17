@@ -1,0 +1,178 @@
+{
+  "package_id": "P24-PROTOTYPE-POWER-BUS-PRODUCER",
+  "decision_id": "PISXME-P24-PROTOTYPE-POWER-BUS-MPA-20260917-R1",
+  "authority": "Macro Placement Authority",
+  "status": "BINDING_DECISION",
+  "base_commit": "31b30dc0ccb28fe341f9bffb26005b5f50cd7641",
+  "pcb": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "pcb_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+  "baseline": {
+    "drc_violations": 300,
+    "unconnected_items": 499,
+    "branch_b_segments": {
+      "12V_IN_B": 0,
+      "FUSED_12V_B": 0
+    },
+    "protected_bus": {
+      "segments": 0,
+      "zones": 0
+    }
+  },
+  "fixed": {
+    "J5": {
+      "x": 12.0,
+      "y": 25.0,
+      "rotation": 0,
+      "side": "F.Cu"
+    },
+    "J6": {
+      "x": 12.0,
+      "y": 45.0,
+      "rotation": 0,
+      "side": "F.Cu"
+    },
+    "J1": {
+      "x": 150.0,
+      "y": 90.0,
+      "rotation": 0,
+      "side": "F.Cu"
+    }
+  },
+  "movable": {
+    "F1": {
+      "x": 32.0,
+      "y": 22.0,
+      "rotation": 0,
+      "side": "F.Cu"
+    },
+    "F2": {
+      "x": 32.0,
+      "y": 54.0,
+      "rotation": 0,
+      "side": "F.Cu"
+    },
+    "D1": {
+      "x": 49.0,
+      "y": 8.0,
+      "rotation": 0,
+      "side": "F.Cu"
+    },
+    "D2": {
+      "x": 49.0,
+      "y": 70.0,
+      "rotation": 0,
+      "side": "F.Cu"
+    },
+    "U1": {
+      "x": 49.0,
+      "y": 22.0,
+      "rotation": 0,
+      "side": "F.Cu"
+    },
+    "U2": {
+      "x": 49.0,
+      "y": 54.0,
+      "rotation": 0,
+      "side": "F.Cu"
+    },
+    "Q1": {
+      "x": 61.0,
+      "y": 22.0,
+      "rotation": 0,
+      "side": "F.Cu"
+    },
+    "Q2": {
+      "x": 61.0,
+      "y": 54.0,
+      "rotation": 0,
+      "side": "F.Cu"
+    }
+  },
+  "topology": {
+    "raw_paths": [
+      "J5.1->12V_IN_A->F1",
+      "J6.1->12V_IN_B->F2"
+    ],
+    "fused_paths": [
+      "F1->FUSED_12V_A->D1/U1/Q1",
+      "F2->FUSED_12V_B->D2/U2/Q2"
+    ],
+    "merge": "only after Q1/Q2 protected outputs at x>=66 mm",
+    "positive_plane": "In3.Cu / In3.PROTECTED_12V",
+    "return_layers": [
+      "F.Cu POWER_GND",
+      "In1.Cu GND",
+      "In4.Cu GND"
+    ]
+  },
+  "corridors": {
+    "local_rows": "eastward source/protection rows at y=22 and y=54",
+    "protected_bus": "In3.Cu polygon approx x=66..124,y=14..74",
+    "j1_approach": "In3.Cu field approx x=122..149,y=83..98, clipped around signal/contact keepouts",
+    "high_speed_preserve": [
+      "CM5_REFCLK around B.Cu y=76/80",
+      "CM5_PER0 around F.Cu y=82",
+      "J1 PCIe/reference",
+      "USB3",
+      "Ethernet",
+      "storage differential and return fields"
+    ]
+  },
+  "constraints": {
+    "source_window_v": {
+      "min": 11.4,
+      "max": 12.6
+    },
+    "source_capability_a": {
+      "continuous_min": 40.0,
+      "peak_100ms_min": 45.0
+    },
+    "protected_bus_min_v": {
+      "sustained": 11.05,
+      "peak_100ms": 11.0
+    },
+    "complete_path_resistance_mohm_max": 10.0,
+    "external_lane_start_width_mm": 2.0,
+    "via_policy": "ordinary through-via arrays; no single-via 40 A path; no via-in-pad without separate authority",
+    "thermal_rise_c_max": 30.0,
+    "q1_q2_junction_margin_c_min": 20.0,
+    "current_checks_a": {
+      "continuous": 39.3153021,
+      "peak_100ms": 37.8138401
+    }
+  },
+  "protected_copper": [
+    "J5/J6/J1 anchors and pad/net identity",
+    "board outline and six-layer contract",
+    "POWER_GND zones F.Cu/In1.Cu/In4.Cu",
+    "validated high-speed/timing routes and return structures",
+    "unrelated component placements"
+  ],
+  "replaceable_copper": [
+    "long 12V_IN_A run",
+    "six short 12V_PROTECTED stubs",
+    "incomplete branch/fused objects"
+  ],
+  "evidence": [
+    "validation-receipts/prototype-source-bus-contract-20260917/PROTOTYPE_SOURCE_BUS_CONTRACT.md",
+    "validation-receipts/protected-bus-producer-unblocker-20260917/UNBLOCKER_REPORT.md",
+    "validation-receipts/power-native-census-09c15cf8/RECEIPT.md",
+    "validation-receipts/si-power-reference-current-head-61085fe0/geometry.json"
+  ],
+  "power_integrity_advisory": {
+    "load_screen_a": {
+      "sustained_11_4v": 31.4522417,
+      "peak_100ms_11_4v": 34.3762183
+    },
+    "protected_bus_min_v": {
+      "sustained": 11.085,
+      "peak_100ms": 11.056
+    },
+    "existing_12V_IN_A_length_mm": 222.0,
+    "existing_12V_IN_A_estimated_mohm": {
+      "1oz": 54.6,
+      "2oz": 27.3
+    },
+    "source_qualification": "J5/J6 each exposes one 12-V contact and one return; no 40/45 A or equal-split credit without exact connector/harness/crimp/fuse/protection qualification; unresolved source assembly must be owned by Product/Power/Package Authority"
+  }
+}

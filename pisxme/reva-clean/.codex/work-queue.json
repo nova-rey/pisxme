@@ -77,10 +77,10 @@
     "authority:protected-bus-mpa": {
       "created_at": "2026-09-17T22:27:00.106570Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/protected-bus-mpa-binding-20260917/RECEIPT.md",
       "reference": "validation-receipts/protected-bus-producer-unblocker-20260917.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-17T22:37:12.040995Z",
+      "status": "RESOLVED"
     },
     "authority:protection-assembly-qualification": {
       "created_at": "2026-09-14T00:14:46.580743Z",
@@ -2926,7 +2926,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-PRODUCER",
       "notes": "",
-      "owner": null,
+      "owner": "protected_bus_kicad_producer_authority_plan",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2943,17 +2943,17 @@
         }
       ],
       "scope": "Implement the signed protected/distributed prototype power architecture in an isolated KiCad producer workspace, preserving anchors and unrelated validated circuitry. Use ordinary protection and adequately rated bus/return geometry; no six-loop precision limiter insertion.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "root-20260917-producer-mpa-plan"
+      ],
+      "status": "RUNNING",
       "title": "Implement protected distributed V100 power bus",
-      "updated_at": "2026-09-17T22:27:00.106608Z",
+      "updated_at": "2026-09-17T22:37:27.556354Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:protected-bus-mpa"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -3027,5 +3027,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T22:27:00.106780Z"
+  "updated_at": "2026-09-17T22:37:27.556561Z"
 }
