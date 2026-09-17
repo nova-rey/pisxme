@@ -1173,3 +1173,7 @@ The exact nFET package is parked on `authority:power-current-limiter-selection` 
 2026-09-17 — HPQ4 production limiter options rejected on current-window authority
 
 Product/Power Authority reconciled the signed HPQ4 v2.0.0 contract against the retained limiter, protection, harness, and nFET evidence. `MAX17527AATP+T` at 6.25 kOhm is rejected because its guaranteed minimum is 5.7542457542 A, below the independent 6.000 A floor. The retained TPS1663 research option is rejected because its 6-A setting screens at 5.58–6.42 A and its 31 mOhm value is typical rather than a hot maximum. Reverse controllers, nFETs, fuses, and TVS parts are not limiter substitutes. No production MPN or CAD change is authorized; `P24-POWER-SOURCE-CONTRACT` and exact-nFET qualification remain scoped to `knowledge:authoritative-6A-window-limiter`.
+
+2026-09-17 — Limiter selection evidence dependency dispatched
+
+Product/Power Authority found no retained MPN satisfying the HPQ4 6.000–6.400 A independent-loop window and <=57 mOhm hot limiter allocation. `P24-POWER-SOURCE-CONTRACT` and exact-nFET work remain parked on `knowledge:authoritative-6A-window-limiter`; Librarian now owns a bounded private-corpus search and Researcher escalation package.

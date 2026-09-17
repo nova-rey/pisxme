@@ -114,6 +114,14 @@
       "resolved_at": "2026-09-14T14:35:29.108151Z",
       "status": "RESOLVED"
     },
+    "knowledge:authoritative-6A-window-limiter": {
+      "created_at": "2026-09-17T13:38:27.792517Z",
+      "kind": "knowledge",
+      "receipt": null,
+      "reference": "validation-receipts/power-current-limiter-authority-20260917/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "knowledge:exact-nfet-energy-dossier": {
       "created_at": "2026-09-14T00:37:15.126508Z",
       "kind": "knowledge",
@@ -982,7 +990,8 @@
         "package:P24-POWER-ENVELOPE-AUTHORITY-REDESIGN",
         "package:P24-POWER-CONNECTOR-QUALIFICATION",
         "package:P24-MPA-CORRIDOR-AUTHORITY",
-        "authority:power-current-limiter-selection"
+        "authority:power-current-limiter-selection",
+        "knowledge:authoritative-6A-window-limiter"
       ],
       "domain": "power/source-contract",
       "edit_boundaries": [
@@ -1015,13 +1024,14 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Bind six-loop source/net/component contract",
-      "updated_at": "2026-09-13T23:57:54.475720Z",
+      "updated_at": "2026-09-17T13:38:27.792546Z",
       "validation": {
         "required": [],
         "results": {}
       },
       "waiting_on": [
-        "authority:power-current-limiter-selection"
+        "authority:power-current-limiter-selection",
+        "knowledge:authoritative-6A-window-limiter"
       ],
       "workstream": "phase24"
     },
@@ -2123,7 +2133,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/power-current-limiter-authority-20260917/RECEIPT.md",
+        "base_sha": "a5572d6a02e94cf349e4619c5c07bae9bc31ca78",
+        "returned_at": "2026-09-17T13:38:12.064568Z",
+        "returned_by": "power_current_limiter_authority",
+        "sha": null
+      },
       "completion_criterion": "Binding Power Authority receipt selects an exact limiter satisfying HPQ4 or identifies the minimum unresolved authority/evidence dependency; downstream packages are updated accordingly.",
       "created_at": "2026-09-17T13:34:31.800635Z",
       "dependencies": [],
@@ -2133,10 +2149,12 @@
         "no CAD/footprint/rule edits",
         "no product-envelope reduction"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-current-limiter-authority-20260917/RECEIPT.md"
+      ],
       "id": "P24-POWER-LIMITER-SELECTION-AUTHORITY",
       "notes": "",
-      "owner": "power_current_limiter_authority",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2153,12 +2171,60 @@
         }
       ],
       "scope": "Select one exact production limiter or record a precise unresolved evidence dependency against signed HPQ4 v2.0.0. Require six independent 6.000\u20136.400 A loops, <=57 mOhm hot limiter allocation, 300 W sustained/330 W peak envelope, gate-drive compatibility, thermal/fault/protection coordination, and provenance. No CAD edits.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Bind production current limiter for HPQ4 loops",
+      "updated_at": "2026-09-17T13:38:12.157739Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Librarian returns authoritative evidence sufficient for Product/Power Authority to issue a new binding limiter selection, or a precise residual evidence gap after bounded search/research.",
+      "created_at": "2026-09-17T13:38:27.740214Z",
+      "dependencies": [],
+      "domain": "Librarian / Research",
+      "edit_boundaries": [
+        "private Library corpus and provenance records",
+        "sanitized evidence receipt if needed",
+        "no CAD/footprint/rule edits",
+        "no product-envelope change"
+      ],
+      "evidence_refs": [],
+      "id": "P24-AUTHORITATIVE-6A-LIMITER-EVIDENCE",
+      "notes": "",
+      "owner": "authoritative_6a_limiter_evidence",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Search the private Library first, then commission bounded Researcher acquisition if needed, for an exact production MPN or controller-plus-external-limiter design compatible with HPQ4: six independent 6.000\u20136.400 A full-tolerance/temperature window, <=57 mOhm hot limiter allocation, 12 V source range, fault timing, thermal/reverse behavior, and manufacturer provenance. Return an indexed evidence packet; do not select architecture or edit CAD.",
       "session_ids": [
-        "/root/power_current_limiter_authority"
+        "/root/authoritative_6a_limiter_evidence"
       ],
       "status": "RUNNING",
-      "title": "Bind production current limiter for HPQ4 loops",
-      "updated_at": "2026-09-17T13:34:35.794864Z",
+      "title": "Acquire authoritative 6 A limiter-window evidence",
+      "updated_at": "2026-09-17T13:38:40.217134Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2179,5 +2245,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T13:34:35.795120Z"
+  "updated_at": "2026-09-17T13:38:40.217410Z"
 }
