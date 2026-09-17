@@ -1229,3 +1229,7 @@ The admitted limiter-system hard problem remains open with no `resolution-ready`
 ## 2026-09-17 — Bounded V100 power-architecture provenance audit reopened
 
 The prior six-loop limiter rabbit hole is frozen as evidence, not governing architecture, pending a first-principles provenance audit. Three independent packages are running: `P24-POWER-CONSTRAINT-PROVENANCE-AUDIT`, `P24-POWER-CARRIER-SANITY-CHECK`, and `P24-POWER-SXM2-AUTHORITY-AUDIT`. They will distinguish NVIDIA/SXM2, physics/safety, product, derived engineering, implementation, and legacy assumptions; compare high-level public carrier practice without copying protected expression; and establish the prototype-appropriate power contract. HPQ Issue #5 remains historical/admitted evidence and is not being extended during this bounded intervention.
+
+## 2026-09-17 — Public carrier sanity evidence indexed
+
+The bounded carrier comparison completed in private Library commit `c882dfe3a3dfb26eab66c54f83f611c7800bde59`. Benchoff, Tongde/OSHWHub, LiuXinyu, AI-Cooling, 3890p, and V100 product records show high-level external 12-V input/common-distribution practice but no public requirement for six precision 6 A loops or a 57 mOhm limiter allocation. The evidence is comparison only; no third-party CAD or expressive material was copied, and Product/Power Authority must still decide PiSXMe architecture.

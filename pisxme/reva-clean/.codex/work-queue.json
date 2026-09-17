@@ -2651,7 +2651,13 @@
       },
       "base_sha": "668807f0",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "668807f0",
+        "returned_at": "2026-09-17T21:53:27.143292Z",
+        "returned_by": "carrier_architecture_sanity_check",
+        "sha": "c882dfe3a3dfb26eab66c54f83f611c7800bde59"
+      },
       "completion_criterion": "Provenance-indexed high-level carrier comparison with source limitations and applicability notes.",
       "created_at": "2026-09-17T21:49:40.261508Z",
       "dependencies": [],
@@ -2662,10 +2668,12 @@
         "no CAD edits",
         "no architecture selection"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-carrier-sanity-check-20260917.md"
+      ],
       "id": "P24-POWER-CARRIER-SANITY-CHECK",
       "notes": "",
-      "owner": "carrier_architecture_sanity_check",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2681,12 +2689,10 @@
         }
       ],
       "scope": "Compare high-level power architecture of public working V100/SXM2 carriers, including Tongde Version 3/OSHWHub references, without copying protected expression. Record connector/input topology, direct distribution vs precision branches, ordinary protection/sensing, copper/planes, and stated capability.",
-      "session_ids": [
-        "/root/carrier_architecture_sanity_check"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Compare prototype V100 carrier power practice",
-      "updated_at": "2026-09-17T21:49:46.355779Z",
+      "updated_at": "2026-09-17T21:53:27.256197Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2757,5 +2763,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T21:49:46.406327Z"
+  "updated_at": "2026-09-17T21:53:27.256427Z"
 }
