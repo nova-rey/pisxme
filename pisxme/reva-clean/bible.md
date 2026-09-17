@@ -1348,3 +1348,7 @@ The isolated corrected-input producer loaded the committed six-layer baseline in
 ## 2026-09-18 — Geometry blocker routed to bounded evidence research
 
 Unblocker classified the corrective power-input stop as missing knowledge, not an external campaign blocker. The logical route is Librarian → one bounded Researcher search → Package/Power Authority → producer. Only the corrected source assembly and its dependent protected-bus implementation wait; no footprint will be synthesized from proprietary drawings.
+
+## 2026-09-18 — Footprint authority confirms residual vendor-geometry gap
+
+Package/Footprint Authority reviewed the Samtec PowerStrip/40 and Anderson PP15/45 candidates. Both have adequate electrical screening but neither has an authorized project footprint, configured pad/NPTH and polarity convention, 3D/mating envelope, or complete cable/crimp contract. The existing Molex footprint remains legacy-only and electrically disqualified. One bounded Researcher search is now running for license-compatible geometry; no proprietary drawing will be copied and no guessed footprint will enter CAD.
