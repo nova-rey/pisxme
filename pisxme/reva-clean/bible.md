@@ -1328,3 +1328,7 @@ The protected/distributed power-bus candidate integrated at `20c9cb12` was valid
 ## 2026-09-18 — Six-loop authority audit opened
 
 The six-loop precision-limiter workstream is frozen pending a bounded provenance and architecture audit. A new queue package `P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT` owns the authority decision; the failed integrated power-bus package waits only on that authority. Existing six-loop and HPQ evidence is retained as historical evidence and is not treated as a product veto.
+
+## 2026-09-18 — Protected-bus correction authority queued
+
+The failed integrated candidate exposed a source-assembly and complete-path contradiction: its exact Light validation retained shorts/unconnected power items and segment-only positive/return resistance far above the 10 mOhm contract. Integration is parked behind `P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY`, which must bind one source/input assembly and implementation-ready path budget without reviving six-loop regulation.

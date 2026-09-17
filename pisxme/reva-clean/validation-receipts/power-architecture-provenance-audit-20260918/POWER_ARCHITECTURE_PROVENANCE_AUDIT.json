@@ -1,0 +1,24 @@
+{
+  "decision_id":"PISXME-P24-POWER-ARCH-20260917",
+  "revision":"1.1-consolidated",
+  "assurance":"prototype/open-hardware carrier; no fabricated-hardware or production-qualification claim",
+  "provenance_sources":[
+    {"requirement":"six independent 12V loops","earliest":"937fac20 POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json","class":"E","status":"superseded"},
+    {"requirement":"no passive sharing between six loops","earliest":"937fac20","class":"E","status":"superseded"},
+    {"requirement":"6.000A minimum per loop","earliest":"0a97f3e4 POWER_BUDGET_CORRECTION.json","class":"E","status":"superseded"},
+    {"requirement":"6.400A maximum per loop","earliest":"937fac20; formalized 0a97f3e4","class":"E","status":"superseded"},
+    {"requirement":"independent precision regulation/limiting","earliest":"937fac20","class":"E","status":"superseded"},
+    {"requirement":"57mOhm hot limiter allocation","earliest":"454de823 component datum; 0a97f3e4 system allocation","class":"E","status":"superseded"},
+    {"requirement":"prescribed current per SXM2 power-contact group","earliest":"none located","class":"F","status":"unproven"}
+  ],
+  "external_product_facts":{"v100_sxm2_power":"300W maximum evidence","pisxme_product":"300W sustained; 330W bounded peak for 100ms"},
+  "selected_architecture":"protected_distributed_12V_common_bus",
+  "refinement":"multiple separately protected input paths permitted only when exact assembly requires; no passive-sharing credit before qualification",
+  "source_screen":{"nominal_voltage":"12.0V","range":"11.4-12.6V","continuous":"40A","peak":"45A for 100ms"},
+  "protected_bus":{"min_sustained":"11.05V","min_peak":"11.00V","max":"12.60V","complete_positive_return_resistance":"10mOhm maximum"},
+  "constraint_dispositions":{"PWR-LOOP-001":"SUPERSEDED","PWR-LOOP-002":"SUPERSEDED_AS_SIX_LOOP_HARD_FOR_UNQUALIFIED_PARALLEL_INPUTS","PWR-LOOP-003":"SUPERSEDED","PWR-LOOP-004":"SUPERSEDED","PWR-LOOP-005":"SUPERSEDED","PWR-LOOP-006":"SUPERSEDED","PWR-LOOP-007":"UNPROVEN","PWR-BUS-001":"HARD","PWR-BUS-002":"HARD","PWR-BUS-003":"UNPROVEN_REQUIRES_PROTOTYPE_VALIDATION"},
+  "hpq_5":"historical evidence; six-loop limiter dependency superseded/reframed; do not continue limiter qualification",
+  "cad_changed":false,
+  "phase25_started":false,
+  "phase26_started":false
+}

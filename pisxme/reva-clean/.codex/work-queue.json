@@ -13,8 +13,16 @@
     "authority:P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT": {
       "created_at": "2026-09-17T23:28:57.421215Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/power-architecture-provenance-audit-20260918/RECEIPT.md",
       "reference": "validation-receipts/power-architecture-provenance-audit-20260918",
+      "resolved_at": "2026-09-17T23:30:52.135279Z",
+      "status": "RESOLVED"
+    },
+    "authority:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY": {
+      "created_at": "2026-09-17T23:31:12.748834Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/protected-bus-corrective-authority-20260918",
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
@@ -2988,7 +2996,8 @@
       "created_at": "2026-09-17T22:05:50.056039Z",
       "dependencies": [
         "package:P24-PROTOTYPE-POWER-BUS-PRODUCER",
-        "authority:P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT"
+        "authority:P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT",
+        "authority:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY"
       ],
       "domain": "Root / KiCad Validation",
       "edit_boundaries": [
@@ -3025,7 +3034,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Integrate and fresh-Light validate prototype power bus",
-      "updated_at": "2026-09-17T23:28:57.421253Z",
+      "updated_at": "2026-09-17T23:31:12.748859Z",
       "validation": {
         "required": [
           "native_drc",
@@ -3057,7 +3066,7 @@
         }
       },
       "waiting_on": [
-        "authority:P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT"
+        "authority:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY"
       ],
       "workstream": "canonical-integration"
     },
@@ -3068,7 +3077,13 @@
       },
       "base_sha": "e25af494",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/power-architecture-provenance-audit-20260918/RECEIPT.md",
+        "base_sha": "e25af494",
+        "returned_at": "2026-09-17T23:30:51.819139Z",
+        "returned_by": "prototype_power_architecture",
+        "sha": "e1959ba1"
+      },
       "completion_criterion": "Signed/versioned authority artifacts establish provenance classifications, real interface requirements, selected simplest defensible prototype architecture, and explicit HPQ #5 disposition.",
       "created_at": "2026-09-17T23:28:53.439303Z",
       "dependencies": [],
@@ -3079,10 +3094,12 @@
         "no new limiter-family or precision-loop implementation",
         "preserve historical HPQ evidence"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-architecture-provenance-audit-20260918/RECEIPT.md"
+      ],
       "id": "P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT",
       "notes": "",
-      "owner": "prototype_power_architecture",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3099,18 +3116,93 @@
         }
       ],
       "scope": "Trace six-loop and per-loop current constraints to earliest authority; determine real V100/SXM2 power requirements; compare six-loop, protected distributed 12V, and any justified intermediate architecture; issue binding prototype architecture decision and corrected constraint ledger. Preserve 300W sustained and bounded 330W peak unless higher authority contradicts.",
-      "session_ids": [
-        "root-20260918-power-architecture-audit"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Audit six-loop authority and select simplest defensible prototype power architecture",
-      "updated_at": "2026-09-17T23:29:05.784481Z",
+      "updated_at": "2026-09-17T23:30:52.091719Z",
       "validation": {
         "required": [
           "provenance_table",
           "sxm2_requirements",
           "architecture_decision",
           "constraint_ledger"
+        ],
+        "results": {
+          "architecture_decision": {
+            "receipt": "validation-receipts/power-architecture-provenance-audit-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:30:52.005837Z",
+            "status": "PASS"
+          },
+          "constraint_ledger": {
+            "receipt": "validation-receipts/power-architecture-provenance-audit-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:30:52.051248Z",
+            "status": "PASS"
+          },
+          "provenance_table": {
+            "receipt": "validation-receipts/power-architecture-provenance-audit-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:30:51.912114Z",
+            "status": "PASS"
+          },
+          "sxm2_requirements": {
+            "receipt": "validation-receipts/power-architecture-provenance-audit-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:30:51.961634Z",
+            "status": "PASS"
+          }
+        }
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "e1959ba1",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Authority packet resolves the failed candidate's source/path contradiction with one bounded implementation scope and explicit prototype-validation limits.",
+      "created_at": "2026-09-17T23:31:12.693610Z",
+      "dependencies": [],
+      "domain": "Power Integrity / Product Authority",
+      "edit_boundaries": [
+        "authority and constraint artifacts only",
+        "no six-loop limiter work",
+        "no CAD edits",
+        "preserve failed candidate and raw reports"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY",
+      "notes": "",
+      "owner": "sxm2_power_authority",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PROTECTED-BUS",
+        "INV-INPUT-CAPACITY",
+        "INV-COPPER",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Use the selected protected common-bus architecture and exact integrated failure evidence to bind a source connector/input assembly, complete positive-plus-return path, protection, voltage-drop, connector/copper/thermal constraints. Decide whether J5/J6 topology must yield. Provide one implementation-ready authority packet; do not reopen six-loop architecture.",
+      "session_ids": [
+        "root-20260918-power-corrective-authority"
+      ],
+      "status": "RUNNING",
+      "title": "Correct source assembly and complete protected-bus contract after failed candidate",
+      "updated_at": "2026-09-17T23:31:12.789876Z",
+      "validation": {
+        "required": [
+          "source_assembly",
+          "complete_path_budget",
+          "connector_thermal",
+          "implementation_scope"
         ],
         "results": {}
       },
@@ -3130,5 +3222,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T23:29:05.784681Z"
+  "updated_at": "2026-09-17T23:31:12.790046Z"
 }
