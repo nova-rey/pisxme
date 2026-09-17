@@ -1316,3 +1316,7 @@ The accepted Macro Placement Authority protected-bus producer was integrated ser
 ## 2026-09-17 — Direct canonical integration capability change
 
 The first canonical integration worker stopped at baseline-only output without merging or validating the protected-bus candidate. It was released without changing canonical CAD. `protected_bus_direct_canonical_integration` now owns the exclusive integration slot for one direct reconciliation of candidate `8dddf504` against current HEAD, followed by fresh Light ERC/DRC/connectivity and power-specific extraction. No acceptance closure or waiver is implied.
+
+## 2026-09-17 — Protected-bus canonical integration validation failed
+
+The exact serialized integration candidate is commit `20c9cb12d8f0cc9c63274a07b8b9a887b29585bf`, with the producer board hash retained under `validation-receipts/protected-bus-producer-candidate-20260917/`. A fresh detached KiCad Light 10.0.6 run using the pinned project, rules, and library hashes returned native command success but failed acceptance: 307 DRC violations, 250 unconnected items, 4 shorting findings, and 293 ERC findings. Power-net extraction retained under `protected-bus-integrated-validation-20c9cb12/` shows unresolved source/protected/return connectivity and conservative segment-only resistance already above the 10 mOhm contract before pads, contacts, vias, plane spreading, and thermal effects. No waiver or Phase 25/26 action is authorized; the result returns to the power/authority correction path.

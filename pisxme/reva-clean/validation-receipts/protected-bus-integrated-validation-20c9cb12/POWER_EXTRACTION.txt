@@ -1,0 +1,8 @@
+Source SHA-256: 4160dd609cfba58dcb03ae241d4c62f0a768c1276f7602f43eb1f90a4557c33b
+Method: regex extraction of native segment/via/zone records; 35um 1oz conservative copper-only estimate; excludes pads, plane spreading, contacts, vias, temperature, and current sharing.
+12V_IN_A: segments=13 length_mm=71.200 width_mm=0.45..2.0 vias=1 zones=0 copper_only_ohm=0.0277154
+12V_IN_B: segments=13 length_mm=80.100 width_mm=0.45..2.0 vias=1 zones=0 copper_only_ohm=0.0274472
+FUSED_12V_A: segments=15 length_mm=83.760 width_mm=0.65..2.0 vias=3 zones=0 copper_only_ohm=0.0255394
+FUSED_12V_B: segments=15 length_mm=83.760 width_mm=0.65..2.0 vias=3 zones=0 copper_only_ohm=0.0250279
+12V_PROTECTED: segments=23 length_mm=212.795 width_mm=0.35..1.0 vias=31 zones=1 copper_only_ohm=0.278699
+POWER_GND: segments=51 length_mm=318.540 width_mm=0.2..0.35 vias=15 zones=3 copper_only_ohm=0.631419

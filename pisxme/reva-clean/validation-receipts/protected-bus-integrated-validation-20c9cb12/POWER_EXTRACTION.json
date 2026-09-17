@@ -1,0 +1,193 @@
+{
+  "source": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "pcb_sha256": "4160dd609cfba58dcb03ae241d4c62f0a768c1276f7602f43eb1f90a4557c33b",
+  "assumptions": {
+    "copper_thickness_m": 3.5e-05,
+    "resistivity_ohm_m": 1.724e-08,
+    "note": "segment-only copper estimate; excludes pads, planes, contacts, vias, temperature coefficient, and current distribution; not acceptance closure"
+  },
+  "nets": {
+    "12V_IN_A": {
+      "segment_count": 13,
+      "total_segment_length_mm": 71.19999999999999,
+      "min_segment_width_mm": 0.45,
+      "max_segment_width_mm": 2.0,
+      "via_count": 1,
+      "via_drills_mm": [
+        0.45
+      ],
+      "zones": [],
+      "by_layer": {
+        "F.Cu": {
+          "segments": 3,
+          "length_mm": 11.999999999999996,
+          "min_width_mm": 0.45,
+          "max_width_mm": 0.45,
+          "estimated_ohm": 0.013135238095238092
+        },
+        "B.Cu": {
+          "segments": 10,
+          "length_mm": 59.2,
+          "min_width_mm": 2.0,
+          "max_width_mm": 2.0,
+          "estimated_ohm": 0.014580114285714287
+        }
+      },
+      "segment_only_resistance_ohm": 0.027715352380952383
+    },
+    "12V_IN_B": {
+      "segment_count": 13,
+      "total_segment_length_mm": 80.1,
+      "min_segment_width_mm": 0.45,
+      "max_segment_width_mm": 2.0,
+      "via_count": 1,
+      "via_drills_mm": [
+        0.45
+      ],
+      "zones": [],
+      "by_layer": {
+        "F.Cu": {
+          "segments": 3,
+          "length_mm": 9.099999999999994,
+          "min_width_mm": 0.45,
+          "max_width_mm": 0.45,
+          "estimated_ohm": 0.009960888888888884
+        },
+        "B.Cu": {
+          "segments": 10,
+          "length_mm": 71.0,
+          "min_width_mm": 2.0,
+          "max_width_mm": 2.0,
+          "estimated_ohm": 0.017486285714285718
+        }
+      },
+      "segment_only_resistance_ohm": 0.027447174603174602
+    },
+    "FUSED_12V_A": {
+      "segment_count": 15,
+      "total_segment_length_mm": 83.75999999999999,
+      "min_segment_width_mm": 0.65,
+      "max_segment_width_mm": 2.0,
+      "via_count": 3,
+      "via_drills_mm": [
+        0.6
+      ],
+      "zones": [],
+      "by_layer": {
+        "F.Cu": {
+          "segments": 5,
+          "length_mm": 9.599999999999998,
+          "min_width_mm": 0.65,
+          "max_width_mm": 0.65,
+          "estimated_ohm": 0.007274901098901098
+        },
+        "B.Cu": {
+          "segments": 10,
+          "length_mm": 74.16,
+          "min_width_mm": 2.0,
+          "max_width_mm": 2.0,
+          "estimated_ohm": 0.018264548571428577
+        }
+      },
+      "segment_only_resistance_ohm": 0.025539449670329673
+    },
+    "FUSED_12V_B": {
+      "segment_count": 15,
+      "total_segment_length_mm": 83.75999999999999,
+      "min_segment_width_mm": 0.65,
+      "max_segment_width_mm": 2.0,
+      "via_count": 3,
+      "via_drills_mm": [
+        0.6
+      ],
+      "zones": [],
+      "by_layer": {
+        "F.Cu": {
+          "segments": 5,
+          "length_mm": 8.599999999999994,
+          "min_width_mm": 0.65,
+          "max_width_mm": 0.65,
+          "estimated_ohm": 0.006517098901098898
+        },
+        "B.Cu": {
+          "segments": 10,
+          "length_mm": 75.16,
+          "min_width_mm": 2.0,
+          "max_width_mm": 2.0,
+          "estimated_ohm": 0.01851083428571429
+        }
+      },
+      "segment_only_resistance_ohm": 0.02502793318681319
+    },
+    "12V_PROTECTED": {
+      "segment_count": 23,
+      "total_segment_length_mm": 212.79500000000004,
+      "min_segment_width_mm": 0.35,
+      "max_segment_width_mm": 1.0,
+      "via_count": 31,
+      "via_drills_mm": [
+        0.45
+      ],
+      "zones": [
+        {
+          "net": "12V_PROTECTED",
+          "layer": "In3.Cu"
+        }
+      ],
+      "by_layer": {
+        "F.Cu": {
+          "segments": 23,
+          "length_mm": 212.79500000000004,
+          "min_width_mm": 0.35,
+          "max_width_mm": 1.0,
+          "estimated_ohm": 0.2786988333951763
+        }
+      },
+      "segment_only_resistance_ohm": 0.2786988333951763
+    },
+    "POWER_GND": {
+      "segment_count": 51,
+      "total_segment_length_mm": 318.54043977988465,
+      "min_segment_width_mm": 0.2,
+      "max_segment_width_mm": 0.35,
+      "via_count": 15,
+      "via_drills_mm": [
+        0.3,
+        0.5
+      ],
+      "zones": [
+        {
+          "net": "POWER_GND",
+          "layer": "F.Cu"
+        },
+        {
+          "net": "POWER_GND",
+          "layer": "In1.Cu"
+        },
+        {
+          "net": "POWER_GND",
+          "layer": "In4.Cu"
+        }
+      ],
+      "by_layer": {
+        "F.Cu": {
+          "segments": 34,
+          "length_mm": 183.62503276935465,
+          "min_width_mm": 0.2,
+          "max_width_mm": 0.35,
+          "estimated_ohm": 0.2991416591201961
+        },
+        "B.Cu": {
+          "segments": 17,
+          "length_mm": 134.91540701052998,
+          "min_width_mm": 0.2,
+          "max_width_mm": 0.2,
+          "estimated_ohm": 0.3322773738373625
+        }
+      },
+      "segment_only_resistance_ohm": 0.6314190329575583
+    }
+  },
+  "all_named_power_segment_count": 130,
+  "all_named_power_via_count": 54
+}

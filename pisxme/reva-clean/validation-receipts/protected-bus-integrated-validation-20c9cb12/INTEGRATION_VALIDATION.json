@@ -1,0 +1,159 @@
+{
+  "package_id": "P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
+  "state": "INTEGRATED_CANDIDATE_VALIDATION_RESULT",
+  "validation_status": "FAIL",
+  "integration_commit": "20c9cb12d8f0cc9c63274a07b8b9a887b29585bf",
+  "producer_commit": "8dddf504",
+  "producer_base_commit": "31b30dc0ccb28fe341f9bffb26005b5f50cd7641",
+  "board": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "schematic": "PiSXMe_RevA_Clean.kicad_sch",
+  "rules": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru",
+  "toolchain": {
+    "kicad": "10.0.6",
+    "image": "pisxme-kicad-light:v1",
+    "image_id": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+    "worker": "protected-bus-integrated-fresh-light-20c9cb12",
+    "timestamp_utc": "2026-09-17T23:22:55"
+  },
+  "input_hashes": {
+    "pcb": "4160dd609cfba58dcb03ae241d4c62f0a768c1276f7602f43eb1f90a4557c33b",
+    "schematic": "6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1",
+    "project": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "rules": "d5473e6262fdf3b53d5de051626f0ed76dedf7257ba591f79ab8ad55f5b411ec",
+    "fp_lib_table": "864698c14e65cd70a5b5a08d23a22477919bf29f167d26fc0eda73dd43b3be61",
+    "sym_lib_table": "3bb180e251be1f62b2be5bbe486b29263c56c6a49b7a26103a27bef29b80c311",
+    "project_symbol_lib": "516a8ab0bec68f47d88e8831c4bcfead0b50fdd26000f4c9a860d2310049503f",
+    "complete_symbol_lib": "3a2cd3a070ac18c8d60a5399a0220c4898651250b197df8d2d9329636e6ed963",
+    "storage_symbol_lib": "4b75f60391881356f9b0428480648603c5eda20e127c2d8598c3222f116df2af"
+  },
+  "report_hashes": {
+    "DRC.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "DRC.stdout": "28842ca3cb157a585150910a8e0d21a905e24dc5da5a88ba01a20dde5d63bd3b",
+    "ERC.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ERC.stdout": "8cd02547cd799073aa082a699046bf62af1c3de75cddd465e65cfa0286f43082",
+    "INTEGRATED_DRC.json": "c18d0b9697d126157b774904420e852803b9a091e09134b4576ee068eaea887f",
+    "INTEGRATED_ERC.json": "4ba6b2981993126e9c5308b1e2f81502b4543aa2205e7b42b70ec6cd91fed8c4",
+    "INTEGRATED_NATIVE_NETLIST.xml": "acda6ccfe138c4cfaab7d51eb11823c59165c88e5943c84b4cbd443fd5cb17a9",
+    "KICAD_VERSION.txt": "79903cfb5fce27bbddaa3cda8e3265c336d8053b799426ca9cfc835ed648c85c",
+    "NETLIST.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "NETLIST.stdout": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "POWER_EXTRACTION.json": "7cb2264612fedf2aae526adcda059ce2067f98afccaab5715348bc50e6e61c1a",
+    "POWER_EXTRACTION.txt": "6d3a4348a8a370e408d31f1b444752c4a04ad098a9b028df2857a7194f8c7168",
+    "RECEIPT.md": "180a51126a5efeeea2783b79a4bd67c320d0b1ef8b96beaaf259ec64ff09f1ff",
+    "RETURNCODES.txt": "647da0c820542936dbd732889a9e8e037aff033579a62c0d7b85d24223f42c5a",
+    "WORKER_VALIDATION.json": "7b02d7af418478689b96ff35d1b97a7b35b61b989d4aa55ba09c191409f40f57",
+    "power_extract.py": "3449db99c9dae2ee0c1cfabdce5ab246cb39d94c363d2dbb52d9616b20cdde72"
+  },
+  "native_results": {
+    "drc_return_code": 0,
+    "drc_violations": 307,
+    "drc_unconnected_items": 250,
+    "drc_classes": {
+      "solder_mask_bridge": 2,
+      "track_width": 118,
+      "copper_edge_clearance": 15,
+      "courtyards_overlap": 6,
+      "pth_inside_courtyard": 5,
+      "clearance": 121,
+      "shorting_items": 4,
+      "tracks_crossing": 8,
+      "hole_clearance": 1,
+      "track_dangling": 8,
+      "via_dangling": 19
+    },
+    "erc_return_code": 0,
+    "erc_findings": 0,
+    "netlist_return_code": 0,
+    "native_netlist": "INTEGRATED_NATIVE_NETLIST.xml"
+  },
+  "power_results": {
+    "power_net_violations": {
+      "12V_IN_A": 2,
+      "12V_IN_B": 8,
+      "FUSED_12V_A": 2,
+      "FUSED_12V_B": 6,
+      "12V_PROTECTED": 13,
+      "POWER_GND": 19
+    },
+    "power_net_unconnected_items": {
+      "12V_IN_A": 2,
+      "12V_IN_B": 1,
+      "FUSED_12V_A": 1,
+      "FUSED_12V_B": 0,
+      "12V_PROTECTED": 19,
+      "POWER_GND": 1
+    },
+    "extraction": "POWER_EXTRACTION.json",
+    "method": "segment-only copper estimate; excludes pads, planes, contacts, vias, temperature coefficient, and current distribution; not acceptance closure",
+    "source_sha256": "4160dd609cfba58dcb03ae241d4c62f0a768c1276f7602f43eb1f90a4557c33b",
+    "contract_cap_ohm": 0.01,
+    "segment_only_resistance_ohm": {
+      "12V_IN_A": 0.027715352380952383,
+      "12V_IN_B": 0.027447174603174602,
+      "FUSED_12V_A": 0.025539449670329673,
+      "FUSED_12V_B": 0.02502793318681319,
+      "12V_PROTECTED": 0.2786988333951763,
+      "POWER_GND": 0.6314190329575583
+    },
+    "minimum_segment_width_mm": {
+      "12V_IN_A": 0.45,
+      "12V_IN_B": 0.45,
+      "FUSED_12V_A": 0.65,
+      "FUSED_12V_B": 0.65,
+      "12V_PROTECTED": 0.35,
+      "POWER_GND": 0.2
+    }
+  },
+  "acceptance_rows": [
+    {
+      "row": "native ERC",
+      "status": "FAIL",
+      "evidence": "INTEGRATED_ERC.json",
+      "reason": "293 findings remain; return code is clean but findings are not closure."
+    },
+    {
+      "row": "native DRC",
+      "status": "FAIL",
+      "evidence": "INTEGRATED_DRC.json",
+      "reason": "307 violations remain, including 4 shorting_items and 250 unconnected items."
+    },
+    {
+      "row": "physical opens/shorts",
+      "status": "FAIL",
+      "evidence": "INTEGRATED_DRC.json",
+      "reason": "250 unconnected items and 4 shorting_items."
+    },
+    {
+      "row": "power source/protected bus connectivity",
+      "status": "FAIL",
+      "evidence": "INTEGRATED_DRC.json",
+      "reason": "Power nets retain unconnected items and shorting/crossing/solder-mask findings."
+    },
+    {
+      "row": "power resistance/drop",
+      "status": "FAIL",
+      "evidence": "POWER_EXTRACTION.json",
+      "reason": "Conservative 1oz segment-only estimates already exceed 10 mOhm on each named branch and protected/return net; excludes additional contacts/vias/plane spreading."
+    },
+    {
+      "row": "thermal/current capability",
+      "status": "UNPROVEN",
+      "evidence": "POWER_EXTRACTION.json",
+      "reason": "No validated copper stack/thickness/via thermal model or component qualification in this package."
+    },
+    {
+      "row": "effective tool/rule/library context",
+      "status": "PASS",
+      "evidence": "WORKER_VALIDATION.json and input_hashes",
+      "reason": "Fresh KiCad Light 10.0.6 run at exact integration commit with pinned project, rules, and library hashes."
+    },
+    {
+      "row": "mechanical/high-speed preservation",
+      "status": "UNPROVEN",
+      "evidence": "INTEGRATION_SCOPE.md",
+      "reason": "Scope manifest records preservation; complete integrated closure remains open."
+    }
+  ],
+  "no_waivers_or_exclusions": true,
+  "next_action": "Return failed integrated result to owning power-bus workstream/authority. Do not mark DONE or proceed to Phase 25."
+}
