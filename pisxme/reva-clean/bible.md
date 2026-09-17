@@ -1304,3 +1304,7 @@ The qualified KiCad actual-mutation retry again produced only the base DRC censu
 ## 2026-09-17 — Protected-bus producer candidate returned
 
 `P24-PROTOTYPE-POWER-BUS-PRODUCER` returned an actual isolated CAD candidate at producer commit `8dddf504`, based on `31b30dc0`. The candidate asserts all ten MPA placements, keeps J5/J6/J1 anchors fixed, creates separate A/B source and fused paths, adds the In3 protected-bus plane and 31 ordinary vias toward 13 J1 power columns, and preserves schematic/rule scope. Producer DRC v3 remains diagnostic at 338 violations and 250 unconnected items; no shorting/crossing category was reported, and this is not integrated closure. The candidate and raw reports are preserved under `validation-receipts/protected-bus-producer-candidate-20260917/`. The queue marks the producer DONE and unlocks serialized canonical integration/fresh Light validation; source-assembly resistance/thermal qualification remains open.
+
+## 2026-09-17 — Canonical protected-bus integration dispatched
+
+The producer candidate unlocked the serialized canonical integration package. `protected_bus_canonical_integration_validator` now owns the exclusive canonical-integration resource to reconcile the isolated protected-bus candidate against current `reva-clean` HEAD and run fresh KiCad Light validation with exact rules, libraries, and toolchain identity. The candidate's 338/250 isolated DRC census remains diagnostic; no integrated closure is claimed.
