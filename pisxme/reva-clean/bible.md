@@ -1141,3 +1141,7 @@ A dedicated independent `P24-JMS581DL-MANUFACTURER-RECONCILIATION` work package 
 2026-09-17 — HPQ4 replacement calculator authority accepted
 
 Product/Power Authority accepted `PISXME-P24-POWER-BUDGET-CALCULATOR-REPLACEMENT-AUTHORITY-ACCEPTED` as a new fail-closed Decimal artifact. It verifies the signed HPQ4 input hash, remains valid under `python3 -O`, derives the complete balanced resistance, and passes 26 assertions. The historical `POWER_BUDGET_CALC.py` remains explicitly missing; no recovery claim, CAD change, or product-envelope change is made.
+
+2026-09-17 — HPQ4 corrected-budget dependency released
+
+The accepted replacement calculator closed the missing-artifact knowledge dependency. `P24-POWER-BUDGET-CORRECTION` is reopened and RUNNING under `power_budget_current_head_reconcile` for current-HEAD reconciliation; the historical HPQ source remains unrecovered and all physical/CAD gates remain closed.

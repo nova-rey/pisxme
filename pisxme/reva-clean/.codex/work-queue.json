@@ -133,18 +133,18 @@
     "knowledge:hpq4-calculator-artifact": {
       "created_at": "2026-09-14T14:41:57.941940Z",
       "kind": "knowledge",
-      "receipt": null,
+      "receipt": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CALC_REPLACEMENT_AUTHORITY_DISPOSITION.md",
       "reference": "Issue #4 declared POWER_BUDGET_CALC.py hash 82a3f904... but candidate patch/working tree omitted it; recover exact authorized file or reconcile packet manifest",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-17T13:23:53.254562Z",
+      "status": "RESOLVED"
     },
     "knowledge:hpq4-power-budget-calculator": {
       "created_at": "2026-09-14T14:41:11.567982Z",
       "kind": "knowledge",
-      "receipt": null,
+      "receipt": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CALC_REPLACEMENT_RECEIPT.md",
       "reference": "HPQ4 resolution packet 3b6295788ef83d2c; declared POWER_BUDGET_CALC.py absent from candidate.patch and retained run/worktree; sha256sum -c fails on missing file",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-17T13:23:53.269617Z",
+      "status": "RESOLVED"
     },
     "knowledge:protection-assembly-dossier": {
       "created_at": "2026-09-14T00:18:46.377604Z",
@@ -1969,7 +1969,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-BUDGET-CORRECTION",
       "notes": "HPQ resolution-ready requires this correction before exact nFET qualification or CAD.",
-      "owner": null,
+      "owner": "power_budget_current_head_reconcile",
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1987,18 +1987,17 @@
         }
       ],
       "scope": "Using the reconciled HPQ Issue #3 result, establish a signed corrected source-voltage, per-loop branch-current, protected-bus, and complete end-to-end resistance/drop contract preserving 300 W sustained, 330 W peak, six independent no-sharing loops. Include limiter tolerance, fuse/holder, nFET allowance, connector/crimp, harness, PCB, common-bus, efficiency, derating, and margins.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "/root/power_budget_current_head_reconcile"
+      ],
+      "status": "RUNNING",
       "title": "Establish corrected source and complete-path power budget",
-      "updated_at": "2026-09-14T14:41:57.941964Z",
+      "updated_at": "2026-09-17T13:24:01.932510Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "knowledge:hpq4-power-budget-calculator",
-        "knowledge:hpq4-calculator-artifact"
-      ],
+      "waiting_on": [],
       "workstream": "power-authority"
     },
     {
@@ -2025,10 +2024,12 @@
         "no product-envelope change",
         "no global rule changes"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CALC_REPLACEMENT_AUTHORITY_DISPOSITION.md"
+      ],
       "id": "P24-POWER-BUDGET-CALCULATOR-REPLACEMENT",
       "notes": "",
-      "owner": "power_budget_replacement",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2044,12 +2045,10 @@
         }
       ],
       "scope": "Create a transparent replacement calculator from the already imported signed HPQ4 JSON, reproduce the recorded numeric assertions, and obtain Product/Power Authority review with a replacement manifest. This is a new artifact, not recovery of the missing HPQ file. No CAD edits.",
-      "session_ids": [
-        "/root/power_budget_replacement"
-      ],
-      "status": "VALIDATING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Create authority-reviewed replacement for missing HPQ4 calculator",
-      "updated_at": "2026-09-17T13:18:28.963574Z",
+      "updated_at": "2026-09-17T13:23:46.414576Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2123,5 +2122,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T13:18:58.590238Z"
+  "updated_at": "2026-09-17T13:24:01.932677Z"
 }
