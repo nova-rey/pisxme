@@ -1,0 +1,72 @@
+{
+  "artifact_status": "REPLACEMENT_AUTHORITY_ACCEPTED_NOT_RECOVERED_HPQ_SOURCE",
+  "authority_input": {
+    "authority": "Product/Power Authority (HPQ Issue #4 Sol binding decision)",
+    "decision_id": "PISXME-P24-POWER-BUDGET-HPQ4",
+    "decision_version": "2.0.0",
+    "path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.json",
+    "product_envelope_changed": false,
+    "sha256": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae"
+  },
+  "campaign": "phase24-phase25-acreage",
+  "candidate_base_sha": "4cead01ea4f89b4f4a89a1bdef365062ea4df4ad",
+  "manifest_identity": "PISXME-P24-POWER-BUDGET-CALCULATOR-REPLACEMENT-MANIFEST",
+  "missing_historical_artifact": {
+    "disposition": "retained as missing historical HPQ source; replacement has a new identity",
+    "expected_sha256_from_historical_SHA256SUMS": "82a3f904dfecf5773b26202c77d10fe9e177d6d7bb42aaf8c67a8cd17e0f3e8b",
+    "path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CALC.py",
+    "present": false,
+    "recovered": false
+  },
+  "package_id": "P24-POWER-BUDGET-CALCULATOR-REPLACEMENT",
+  "preserved_downstream_gates": [
+    "Exact limiter meeting the full-temperature 6.000-6.400 A and 57 mOhm caps.",
+    "Exact fuse and holder meeting 20 mOhm hot plus worst-case time-current and I2t coordination.",
+    "Exact nFET meeting 15.625 mOhm hot at actual minimum gate drive plus VDS, reverse-current and SOA limits.",
+    "Exact TVS/clamp and fault waveform coordinated with limiter, nFET, harness inductance and PCB copper.",
+    "Six connector/crimp and wire-only harness schedules, each separately proving its 20 mOhm hot cap, 6.4 A derating, bundling, ambient and temperature rise.",
+    "Extracted or measured PCB branch/return no greater than 15.625 mOhm and shared common positive/return no greater than 1.333333333 mOhm.",
+    "PDN and return continuity, ground bounce, ESR/ESL and 300-to-330 W load-step proof.",
+    "Six fail-safe FLAG paths, V100 inhibit/reset, brownout and controlled restart timing.",
+    "MPA and thermal qualification of all six installed protection paths.",
+    "Exact component and manufacturer-document provenance.",
+    "No CAD release before these gates; later serialized CAD requires independent current-HEAD ERC, DRC, connectivity and qualified KiCad Light validation."
+  ],
+  "replacement_artifacts": [
+    {
+      "path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CALC_REPLACEMENT.py",
+      "role": "new transparent Decimal calculator",
+      "sha256": "3fe4e0b416b0eba10044baf1b1dd4e2b55457cc5a0d64e30ff84bf556ba4d5d2"
+    },
+    {
+      "path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CALC_REPLACEMENT_OUTPUT.json",
+      "role": "deterministic calculation and assertion report",
+      "sha256": "1b1ce2d71431a3924826e26452068749a1529715c939d12e93c7bcdfd2ee03b7"
+    },
+    {
+      "path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CALC_REPLACEMENT_RECEIPT.md",
+      "role": "reproduction receipt",
+      "sha256": "c9faf8d8a1c30381aaf8b37d1e4bf8f246e24b84c722c5117d9ce52193c09e6f"
+    }
+  ],
+  "reproduction": {
+    "arithmetic": "Python Decimal precision 50",
+    "assertion_count": 26,
+    "assertion_status": "PASS",
+    "command": "python3 validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CALC_REPLACEMENT.py --json > validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CALC_REPLACEMENT_OUTPUT.json",
+    "scope": "signed HPQ4 JSON only; no CAD, footprint, rule, or product-envelope edits"
+  },
+  "review": {
+    "required_action": "Product/Power Authority review and signoff completed for this new replacement artifact; downstream physical gates remain required",
+    "self_authorized": false,
+    "status": "ACCEPTED_AS_NEW_REPLACEMENT_ARTIFACT",
+    "authority": "Product/Power Authority",
+    "reviewed_at": "2026-09-17",
+    "disposition_path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CALC_REPLACEMENT_AUTHORITY_DISPOSITION.md",
+    "disposition_sha256": "b1540095bf8fda4c0555133897669d81502f812756f7d13fd3290dd1461b0bfe",
+    "input_sha256_pinned_at_runtime": true,
+    "fail_closed_under_python_optimized": true,
+    "derived_complete_path_resistance_check": true
+  },
+  "schema_version": 1
+}

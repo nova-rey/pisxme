@@ -1137,3 +1137,7 @@ The independent replacement package supersedes the duplicate dependency-bound re
 2026-09-17 — JMS581DL manufacturer reference reconciliation dispatched
 
 A dedicated independent `P24-JMS581DL-MANUFACTURER-RECONCILIATION` work package is running under Storage Supervisor `jms581_manufacturer_reconciliation`. The supplied JMicron/SmartCube packet will be preserved and indexed in the private Library; only sanitized provenance and reconciliation evidence may enter this repository. Existing power-budget validation continues independently.
+
+2026-09-17 — HPQ4 replacement calculator authority accepted
+
+Product/Power Authority accepted `PISXME-P24-POWER-BUDGET-CALCULATOR-REPLACEMENT-AUTHORITY-ACCEPTED` as a new fail-closed Decimal artifact. It verifies the signed HPQ4 input hash, remains valid under `python3 -O`, derives the complete balanced resistance, and passes 26 assertions. The historical `POWER_BUDGET_CALC.py` remains explicitly missing; no recovery claim, CAD change, or product-envelope change is made.

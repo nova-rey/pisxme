@@ -1,0 +1,286 @@
+{
+  "artifact_identity": "PISXME-P24-POWER-BUDGET-CALCULATOR-REPLACEMENT",
+  "artifact_status": "NEW_REPLACEMENT_NOT_RECOVERED_HPQ_SOURCE",
+  "assertions": {
+    "checks": [
+      {
+        "actual": "358.555555556",
+        "difference": "0.000000000",
+        "expected": "358.555555556",
+        "name": "load_accounting.sustained.bus_power_w",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "32.448466566",
+        "difference": "0.000000000",
+        "expected": "32.448466566",
+        "name": "load_accounting.sustained.total_current_a",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "5.408077761",
+        "difference": "0.000000000",
+        "expected": "5.408077761",
+        "name": "load_accounting.sustained.per_loop_a",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "7.551533434",
+        "difference": "0.000000000",
+        "expected": "7.551533434",
+        "name": "source_contract.current_margin_a.sustained",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.801747528",
+        "difference": "0.000000000",
+        "expected": "0.801747528",
+        "name": "static_ir_budget.sustained.branch_drop_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.043264622",
+        "difference": "0.000000000",
+        "expected": "0.043264622",
+        "name": "static_ir_budget.sustained.common_drop_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.845012150",
+        "difference": "0.000000000",
+        "expected": "0.845012150",
+        "name": "static_ir_budget.sustained.total_drop_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "11.204987850",
+        "difference": "0.000000000",
+        "expected": "11.204987850",
+        "name": "static_ir_budget.sustained.protected_bus_lower_bound_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.154987850",
+        "difference": "0.000000000",
+        "expected": "0.154987850",
+        "name": "static_ir_budget.sustained.margin_over_minimum_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "391.888888889",
+        "difference": "0.000000000",
+        "expected": "391.888888889",
+        "name": "load_accounting.peak.bus_power_w",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "35.626262626",
+        "difference": "0.000000000",
+        "expected": "35.626262626",
+        "name": "load_accounting.peak.total_current_a",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "5.937710438",
+        "difference": "0.000000000",
+        "expected": "5.937710438",
+        "name": "load_accounting.peak.per_loop_a",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "9.373737374",
+        "difference": "0.000000000",
+        "expected": "9.373737374",
+        "name": "source_contract.current_margin_a.peak",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.880265572",
+        "difference": "0.000000000",
+        "expected": "0.880265572",
+        "name": "static_ir_budget.peak.branch_drop_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.047501684",
+        "difference": "0.000000000",
+        "expected": "0.047501684",
+        "name": "static_ir_budget.peak.common_drop_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.927767256",
+        "difference": "0.000000000",
+        "expected": "0.927767256",
+        "name": "static_ir_budget.peak.total_drop_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "11.172232744",
+        "difference": "0.000000000",
+        "expected": "11.172232744",
+        "name": "static_ir_budget.peak.protected_bus_lower_bound_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.172232744",
+        "difference": "0.000000000",
+        "expected": "0.172232744",
+        "name": "static_ir_budget.peak.margin_over_minimum_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.948800000",
+        "difference": "0.000000000",
+        "expected": "0.948800000",
+        "name": "static_ir_budget.full_derated_ceiling.branch_drop_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.051200000",
+        "difference": "0.000000000",
+        "expected": "0.051200000",
+        "name": "static_ir_budget.full_derated_ceiling.common_drop_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "1.000000000",
+        "difference": "0.000000000",
+        "expected": "1.000000000",
+        "name": "static_ir_budget.full_derated_ceiling.complete_drop_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.156250000000",
+        "difference": "0.000000000000",
+        "expected": "0.156250000000",
+        "name": "static_ir_budget.derived_balanced_complete_path_equivalent_ohm",
+        "status": "PASS",
+        "tolerance": "0.000000000001"
+      },
+      {
+        "actual": "156.250000",
+        "difference": "0.000000",
+        "expected": "156.250000",
+        "name": "static_ir_budget.balanced_complete_path_equivalent_mohm",
+        "status": "PASS",
+        "tolerance": "0.000001"
+      },
+      {
+        "actual": "3.177796060",
+        "difference": "0.000000000",
+        "expected": "3.177796060",
+        "name": "transient_pdn_contract.current_step_total_a",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.172232744",
+        "difference": "0.000000000",
+        "expected": "0.172232744",
+        "name": "transient_pdn_contract.additional_dynamic_droop_budget_at_peak_v",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      },
+      {
+        "actual": "0.054198803",
+        "difference": "0.000000000",
+        "expected": "0.054198803",
+        "name": "transient_pdn_contract.additional_dynamic_impedance_upper_bound_ohm",
+        "status": "PASS",
+        "tolerance": "0.000000001"
+      }
+    ],
+    "count": 26,
+    "status": "PASS"
+  },
+  "downstream_gates_preserved": [
+    "Exact limiter meeting the full-temperature 6.000-6.400 A and 57 mOhm caps.",
+    "Exact fuse and holder meeting 20 mOhm hot plus worst-case time-current and I2t coordination.",
+    "Exact nFET meeting 15.625 mOhm hot at actual minimum gate drive plus VDS, reverse-current and SOA limits.",
+    "Exact TVS/clamp and fault waveform coordinated with limiter, nFET, harness inductance and PCB copper.",
+    "Six connector/crimp and wire-only harness schedules, each separately proving its 20 mOhm hot cap, 6.4 A derating, bundling, ambient and temperature rise.",
+    "Extracted or measured PCB branch/return no greater than 15.625 mOhm and shared common positive/return no greater than 1.333333333 mOhm.",
+    "PDN and return continuity, ground bounce, ESR/ESL and 300-to-330 W load-step proof.",
+    "Six fail-safe FLAG paths, V100 inhibit/reset, brownout and controlled restart timing.",
+    "MPA and thermal qualification of all six installed protection paths.",
+    "Exact component and manufacturer-document provenance.",
+    "No CAD release before these gates; later serialized CAD requires independent current-HEAD ERC, DRC, connectivity and qualified KiCad Light validation."
+  ],
+  "full_derated_ceiling": {
+    "aggregate_current_a": "38.4",
+    "branch_current_a": "6.4",
+    "branch_drop_v": "0.9488000",
+    "common_drop_v": "0.0511999999999999999999999999872",
+    "complete_drop_v": "0.9999999999999999999999999999872"
+  },
+  "generated_by": "POWER_BUDGET_CALC_REPLACEMENT.py",
+  "method": {
+    "arithmetic": "Python Decimal, precision 50",
+    "branch_drop_equation": "Ibranch*0.148250 + Itotal*0.001333333333333333333333333333",
+    "passive_sharing_credit": false,
+    "returns_included_in_every_cap": true,
+    "source_to_p0_loss_separate": true
+  },
+  "scenarios": {
+    "peak": {
+      "branch_drop_v": "0.88026557239057239057239057239057239057239057239058",
+      "bus_power_w": "391.88888888888888888888888888888888888888888888889",
+      "common_drop_v": "0.047501683501683501683501683489808080808080808080809",
+      "margin_over_minimum_v": "0.172232744107744107744107744119619528619528619529",
+      "per_loop_a": "5.9377104377104377104377104377104377104377104377105",
+      "protected_bus_lower_bound_v": "11.172232744107744107744107744119619528619528619529",
+      "source_current_margin_a": "9.373737373737373737373737373737373737373737373737",
+      "total_current_a": "35.626262626262626262626262626262626262626262626263",
+      "total_drop_v": "0.92776725589225589225589225588038047138047138047139"
+    },
+    "sustained": {
+      "branch_drop_v": "0.80174752807105748282218870454164571811630635160048",
+      "bus_power_w": "358.55555555555555555555555555555555555555555555556",
+      "common_drop_v": "0.043264622088151499916205798547923579688285570638513",
+      "margin_over_minimum_v": "0.154987849840791017261605496910430702195408077761",
+      "per_loop_a": "5.4080777610189374895257248198424669012904307021955",
+      "protected_bus_lower_bound_v": "11.204987849840791017261605496910430702195408077761",
+      "source_current_margin_a": "7.551533433886375062845651080945198592257415786827",
+      "total_current_a": "32.448466566113624937154348919054801407742584213173",
+      "total_drop_v": "0.84501215015920898273839450308956929780459192223899"
+    }
+  },
+  "schema_version": 1,
+  "source": {
+    "base_sha": "cb2cebf525dbb6fbe29f3bed8d7762ead0b2b831",
+    "decision_id": "PISXME-P24-POWER-BUDGET-HPQ4",
+    "decision_version": "2.0.0",
+    "historical_missing_path": "POWER_BUDGET_CALC.py",
+    "historical_missing_path_recovered": false,
+    "path": "POWER_BUDGET_CORRECTION.json",
+    "sha256": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae"
+  },
+  "transient": {
+    "additional_dynamic_droop_budget_at_peak_v": "0.172232744107744107744107744119619528619528619529",
+    "additional_dynamic_impedance_upper_bound_ohm": "0.054198803462443846754977682534744137769020188799678",
+    "current_step_total_a": "3.177796060149001325471913707207824854883678413090",
+    "recovery_to_valid_window_max_ms": 1.0
+  }
+}
