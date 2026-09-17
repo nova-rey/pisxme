@@ -1272,3 +1272,7 @@ The signed source-bus and first-power contracts are now DONE in the Phase 24 que
 ## 2026-09-17 — Protected-bus producer capability change
 
 The initial protected-bus producer Supervisor was released after a bounded liveness check found no active CAD process, no candidate SHA, and only a stale baseline report in its isolated workspace. The package was returned to READY and reassigned directly to `protected_bus_kicad_producer_retry` (`kicad_engineer`) for one capability-changed, bounded producer attempt. The retry remains limited to the signed protected/distributed 12-V source/bus contract; no six-loop limiter or global rule relaxation is permitted.
+
+## 2026-09-17 — Protected-bus producer escalated to bounded Unblocker review
+
+Two materially different producer attempts failed to return a CAD candidate: the initial Supervisor had no live CAD process and only a stale baseline report, while the direct KiCad retry produced only baseline/render artifacts before its bounded slot was released. The producer package is now owned temporarily by `protected_bus_producer_unblocker` for one read-only Tier-2 classification of implementation, knowledge, authority, or structural blockers. No CAD result was promoted and no six-loop architecture was restored.
