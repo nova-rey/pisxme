@@ -1,0 +1,43 @@
+{
+  "package_id": "P24-POWER-SXM2-AUTHORITY-AUDIT",
+  "assigned_base_sha": "668807f0",
+  "audited_head": "8626eee2a42bfb6f183c796045bd8be008d98884",
+  "date": "2026-09-17",
+  "cad_changed": false,
+  "assurance_level": "prototype_open_hardware_carrier",
+  "conclusion": "Public NVIDIA evidence binds 300 W maximum SXM2 power and NVLink interface, but no six-loop, per-group, independent-regulation, current-window, or limiter-resistance contract was found. Contact multiplicity is not independent regulation.",
+  "sources": [
+    {"id":"NVIDIA-V100-DS-2019","authority":"A","url":"https://images.nvidia.com/content/technologies/volta/pdf/tesla-volta-v100-datasheet.pdf","retrieved":"2026-09-17","sha256":"ca694a4789eae7feb9ce909fe0f2207cbe82f5da1448922d4855e346680c59d3","supports":["V100 SXM2 max power 300 W","SXM2 system interface NVIDIA NVLink","passive thermal solution"],"does_not_support":["rail voltage","contact group limits","independent regulation","sequencing"]},
+    {"id":"NVIDIA-V100-PRODUCT","authority":"A","url":"https://www.nvidia.com/en-gb/data-center/tesla-v100/","retrieved":"2026-09-17","supports":["V100 SXM2 300 W maximum power"],"does_not_support":["standalone SXM2 electrical contract"]},
+    {"id":"AMPHENOL-74221","authority":"B","library_brief":"sxm2-j1-amphenol-rev-w-corpus-20260912.md","supports":["400 position 10-row 1.27 mm geometry","generic 0.45 A/contact rating under manufacturer conditions"],"does_not_support":["SXM2 power grouping","independent regulation"]},
+    {"id":"BENCHOFF-ARTICLE","authority":"secondary_reverse_engineering","url":"https://bbenchoff.com/pages/SXM2PCIe.html","retrieved":"2026-09-12","sha256":"9fa2b322672dcb01eb6f59c3ae0375299b7e72bc5e053959517508894d1cf8e4","supports":["empirical map","two 2x3 PCIe power headers in carrier","PCIe/REFCLK/PERST observations"],"does_not_support":["NVIDIA authority","six loop requirement","per-group current limit"]},
+    {"id":"BENCHOFF-KICAD","authority":"secondary_implementation","url":"https://github.com/bbenchoff/SXM2toPCIe","revision":"3173b02c085218d66c4a2a9e5492853fb53ee097","supports":["public schematic/PCB/footprint reference"],"does_not_support":["permission to copy expressive CAD","production qualification"]},
+    {"id":"XIAOYU-PINOUT","authority":"independent_check_insufficient","url":"https://github.com/xiaoyu9733/sxm2-pinout-definition","revision":"c05541e1846b47f51d05a2149ff044d4d2eba727","supports":[],"does_not_support":["usable independent contact table at pinned revision"]},
+    {"id":"CN108280004B","authority":"corroborating_public_patent","supports":["FCI 74221-101LF use in SXM2 test-board context"],"does_not_support":["V100 rail/sequence/branch contract"]},
+    {"id":"PISXME-POWER-V2","authority":"E/F","commit":"90420b83ff54f5a3db9633482bc16627671c07f3","supports":["origin of internal six-loop and 6.4 A screens"],"does_not_support":["external or user authority"]},
+    {"id":"PISXME-LIMITER","authority":"E/F","commits":["454de8236a2bbcfbf40f9b4a525a56adafba20da","1a39f6b2c3be9d310c601604d3b0efc3b8cc9b20","dd2e7eed7cdd6bb04d98225c691c127171b9ff5a"],"supports":["downstream limiter contract lineage"],"does_not_support":["independent origin"]}
+  ],
+  "requirements": [
+    {"id":"V100-SXM2-MAX-POWER","statement":"V100 SXM2 maximum power is 300 W","authority_class":"A","status":"BOUND","source_ids":["NVIDIA-V100-DS-2019","NVIDIA-V100-PRODUCT"]},
+    {"id":"V100-SXM2-INTERFACE","statement":"V100 SXM2 system interface is NVIDIA NVLink","authority_class":"A","status":"BOUND","source_ids":["NVIDIA-V100-DS-2019"]},
+    {"id":"SAFE-PRODUCT-DELIVERY","statement":"PiSXMe must safely deliver its declared 300 W sustained prototype product envelope with bounded peak margin","authority_class":"B/C","status":"BOUND_OBJECTIVE","source_ids":["NVIDIA-V100-DS-2019"]},
+    {"id":"AMPHENOL-CONTACT","statement":"74221-101LF generic contact rating is 0.45 A/contact under stated manufacturer conditions","authority_class":"B","status":"BOUND_WITH_APPLICATION_DERATING","source_ids":["AMPHENOL-74221"]},
+    {"id":"SXM2-INPUT-VOLTAGE","statement":"Standalone NVIDIA-authoritative input rail voltage","authority_class":"F","status":"UNKNOWN","source_ids":[]},
+    {"id":"SXM2-SEQUENCE-AUX","statement":"Standalone SXM2 auxiliary rails, enables and sequencing","authority_class":"F","status":"UNKNOWN","source_ids":[]},
+    {"id":"SXM2-GROUP-CURRENT","statement":"Prescribed current per SXM2 contact/group","authority_class":"F","status":"UNKNOWN","source_ids":[]},
+    {"id":"SXM2-INDEPENDENT-REGULATION","statement":"Independent current regulation/current limiting is required","authority_class":"F","status":"UNPROVEN","source_ids":[]}
+  ],
+  "six_loop_provenance": [
+    {"id":"six_independent_loops","earliest_origin":"90420b83ff54f5a3db9633482bc16627671c07f3","classification":"E/F","status":"UNPROVEN","recommendation":"Demote from foundational invariant pending Product/Power re-derivation"},
+    {"id":"no_passive_current_sharing","earliest_origin":"90420b83ff54f5a3db9633482bc16627671c07f3 lineage","classification":"E/D candidate","status":"UNPROVEN","recommendation":"Do not infer from contact count"},
+    {"id":"loop_min_6A","earliest_origin":"454de8236a2bbcfbf40f9b4a525a56adafba20da limiter lineage","classification":"E/F","status":"UNPROVEN","recommendation":"Downstream component screen cannot establish product origin"},
+    {"id":"loop_max_6_4A","earliest_origin":"90420b83ff54f5a3db9633482bc16627671c07f3","classification":"E/D candidate","status":"UNPROVEN","recommendation":"Re-derive only from real protection/product constraints"},
+    {"id":"precision_current_regulation","earliest_origin":"90420b83ff54f5a3db9633482bc16627671c07f3 lineage","classification":"E/F","status":"UNPROVEN","recommendation":"No NVIDIA/SXM2 evidence found"},
+    {"id":"hot_limiter_57mohm","earliest_origin":"454de8236a2bbcfbf40f9b4a525a56adafba20da","classification":"E/F","status":"UNPROVEN","recommendation":"Downstream loss allocation cannot govern architecture"},
+    {"id":"prescribed_current_per_contact_group","earliest_origin":"none located","classification":"F","status":"UNKNOWN","recommendation":"Preserve unknown contacts; require bring-up evidence"}
+  ],
+  "contact_vs_regulation": {"published_benchoff_counts":{"12V_contacts":130,"GND_contacts":170},"meaning":"parallel physical distribution evidence","not_implied":["one regulator per group","equal current per group","six independent channels","current limit per contact"]},
+  "prototype_boundary": {"required_before_fabrication":["worst-case calculations","component/connector/copper/thermal ratings","protection and return analysis","ERC/DRC/connectivity closure","first-power limits and procedure"],"deferred":"Undocumented SXM2 sequence/auxiliary behavior and empirical load/thermal measurements require prototype validation; no fabricated measurement is claimed."},
+  "recommendation":"Product/Power Authority should compare a conventional adequately-rated protected 12 V distribution architecture against any intermediate option and remove six-loop precision limiting from the critical path unless independently re-derived from A-D evidence.",
+  "validation": {"cad_changed":false,"queue_changed":false,"hpq_changed":false,"checks":["git log -S origin tracing","NVIDIA PDF hash check","private Library brief review","Xiaoyu pinned tree inspection"]}
+}

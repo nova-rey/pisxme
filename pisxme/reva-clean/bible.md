@@ -1236,3 +1236,7 @@ The bounded carrier comparison completed in private Library commit `c882dfe3a3df
 ## 2026-09-17 — Six-loop power-constraint provenance audit
 
 `P24-POWER-CONSTRAINT-PROVENANCE-AUDIT` traced the current six-loop, no-passive-sharing, 6.000/6.400 A, precision-limiter, 57 mOhm, and SXM2-group-current claims to their earliest located records. The six-loop claims originate in the internal Phase 24 candidate `937fac20` and later signed records repeat that implementation choice; they are not NVIDIA/SXM2 requirements. The earlier Phase 5 two-branch no-single-branch-load conclusion remains scoped engineering/safety evidence. The 300 W/330 W product requirements remain separate governing inputs. Receipt and machine-readable table are under `validation-receipts/power-constraint-provenance-audit-20260917/`; no CAD, queue, HPQ, or architecture changed.
+
+## 2026-09-17 — V100/SXM2 power-authority provenance audit
+
+`P24-POWER-SXM2-AUTHORITY-AUDIT` returned a source matrix at `validation-receipts/power-sxm2-authority-audit-20260917/`. NVIDIA evidence binds 300 W maximum SXM2 power and NVLink, while Amphenol and reverse-engineered sources provide connector/map evidence only. No authoritative six-loop, per-group current, independent-regulation, 6.000--6.400 A, or 57 mOhm limiter requirement was found. Contact multiplicity is not independent regulation; the six-loop limiter lineage remains unproven internal architecture evidence pending Product/Power disposition. No CAD or queue state changed.
