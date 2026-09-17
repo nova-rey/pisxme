@@ -2366,7 +2366,13 @@
       },
       "base_sha": "578b55d7",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "578b55d7",
+        "returned_at": "2026-09-17T14:04:11.137331Z",
+        "returned_by": "adm1175_limiter_authority",
+        "sha": "b3edd1fb"
+      },
       "completion_criterion": "Product/Power Authority signs ADM1175 as satisfying HPQ4 or records a precise residual gap with calculations and evidence.",
       "created_at": "2026-09-17T13:58:46.046154Z",
       "dependencies": [],
@@ -2377,10 +2383,12 @@
         "private vendor evidence stays private",
         "append bible entry on public disposition"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/adm1175-limiter-authority-20260917/RECEIPT.md"
+      ],
       "id": "P24-ADM1175-LIMITER-AUTHORITY-REASSESSMENT",
       "notes": "",
-      "owner": "adm1175_limiter_authority",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2396,12 +2404,61 @@
         }
       ],
       "scope": "Review the private ADM1175 packet and determine whether ADM1175-1ARMZ-R7 or ADM1175-2ARMZ-R7 with the documented shunt/FET assembly can satisfy HPQ4: six independent 6.000\u20136.400 A full-tolerance/temperature loops, <=57 mOhm hot limiter path, 12 V source, reverse/fault/SOA/I2t, thermal installation, connector/harness/copper coordination, and production calibration/test provenance. Bind one architecture only if every term is evidenced; otherwise return the exact residual authority dependency. No CAD edits or product-envelope relaxation.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Qualify ADM1175 six-amp limiter candidate",
+      "updated_at": "2026-09-17T14:04:11.224339Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "b3edd1fb",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Power/Package/DFM authorities either bind a complete ADM1175 shunt/FET path contract against HPQ4 or document the exact irreducible gap and next authority action.",
+      "created_at": "2026-09-17T14:04:28.355398Z",
+      "dependencies": [],
+      "domain": "Power / Package / DFM Authority",
+      "edit_boundaries": [
+        "authority evidence and private Library records",
+        "sanitized receipt only",
+        "no public vendor bytes",
+        "no CAD or architecture change"
+      ],
+      "evidence_refs": [],
+      "id": "P24-ADM1175-COMPONENT-PATH-QUALIFICATION",
+      "notes": "",
+      "owner": "adm1175_component_path_qualification",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION",
+        "INV-THERMAL",
+        "INV-DFM"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Close the bounded component evidence gap for the ADM1175 candidate: identify manufacturer-authoritative shunt and external FET MPN/package options, minimum-gate-drive hot RDS(on), VDS/transient/SOA/I2t, Kelvin layout, complete installed <=57 mOhm path, thermal installation, reverse/fault coordination, and production calibration/test limits. Use private Library and new primary sources only; no CAD edits and no product-envelope relaxation. Return a binding-ready component contract or a precise residual dependency.",
       "session_ids": [
-        "/root/adm1175_limiter_authority"
+        "/root/adm1175_component_path_qualification"
       ],
       "status": "RUNNING",
-      "title": "Qualify ADM1175 six-amp limiter candidate",
-      "updated_at": "2026-09-17T13:59:03.066898Z",
+      "title": "Qualify ADM1175 shunt and external-FET path evidence",
+      "updated_at": "2026-09-17T14:04:42.601486Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2422,5 +2479,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T13:59:03.067071Z"
+  "updated_at": "2026-09-17T14:04:42.601639Z"
 }
