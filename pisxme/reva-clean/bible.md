@@ -1129,3 +1129,7 @@ The signed Issue #4 JSON/Markdown/receipt artifacts reconcile against current HE
 2026-09-17 — HPQ4 calculator recovery changed to replacement authority path
 
 The exact HPQ4 calculator source is irretrievably absent from retained runner artifacts. A new bounded package `P24-POWER-BUDGET-CALCULATOR-REPLACEMENT` is dispatched to recreate and independently review a transparent calculator from the signed JSON. It must receive a new identity and manifest; no artifact will be misrepresented as recovered and no CAD is released.
+
+2026-09-17 — Removed redundant calculator reconciliation queue entry
+
+The independent replacement package supersedes the duplicate dependency-bound reconciliation entry; queue ownership is now single-sourced.

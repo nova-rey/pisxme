@@ -2009,58 +2009,6 @@
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
       "candidate": null,
-      "completion_criterion": "Replacement calculator, calculation receipt, authority reconciliation, and updated manifest are independently validated and explicitly marked as replacement rather than recovered HPQ artifact.",
-      "created_at": "2026-09-17T13:12:03.796326Z",
-      "dependencies": [
-        "package:P24-POWER-BUDGET-CORRECTION"
-      ],
-      "domain": "Product / Power Authority",
-      "edit_boundaries": [
-        "validation-receipts/power-budget-correction-20260914/ only",
-        "no CAD or footprint edits",
-        "no product-envelope change",
-        "no global rule changes"
-      ],
-      "evidence_refs": [],
-      "id": "P24-POWER-BUDGET-CALCULATOR-RECONCILIATION",
-      "notes": "",
-      "owner": null,
-      "priority": 0,
-      "project": "nova-rey/pisxme",
-      "required": true,
-      "requirement_ids": [
-        "INV-PRODUCT-V100-300W",
-        "INV-PRODUCT-V100-330W-PEAK",
-        "INV-INPUT-CAPACITY"
-      ],
-      "resource_requirements": [
-        {
-          "name": "model-agent",
-          "units": 1
-        }
-      ],
-      "scope": "Using the signed HPQ4 POWER_BUDGET_CORRECTION.json and retained event-log evidence, create a new transparent Decimal calculator only as a replacement artifact, reproduce all declared assertions, and obtain Product/Power Authority review plus a new manifest/hash. Do not claim recovery of the missing HPQ file and do not edit CAD.",
-      "session_ids": [],
-      "status": "WAITING",
-      "title": "Recreate and authority-review HPQ4 power budget calculator",
-      "updated_at": "2026-09-17T13:12:03.796326Z",
-      "validation": {
-        "required": [],
-        "results": {}
-      },
-      "waiting_on": [
-        "package:P24-POWER-BUDGET-CORRECTION"
-      ],
-      "workstream": "power-authority"
-    },
-    {
-      "attempt_state": {
-        "material_attempts": [],
-        "tier": 1
-      },
-      "base_sha": null,
-      "campaign": "phase24-phase25-acreage",
-      "candidate": null,
       "completion_criterion": "Replacement calculator and calculation receipt pass independent execution; authority review signs the replacement identity and updated manifest.",
       "created_at": "2026-09-17T13:12:15.528742Z",
       "dependencies": [],
@@ -2116,5 +2064,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T13:12:24.318645Z"
+  "updated_at": "2026-09-17T00:00:00Z"
 }
