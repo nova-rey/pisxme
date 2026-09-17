@@ -1324,3 +1324,7 @@ The exact serialized integration candidate is commit `20c9cb12d8f0cc9c63274a07b8
 ## 2026-09-18 — Protected-bus candidate failed exact integrated validation
 
 The protected/distributed power-bus candidate integrated at `20c9cb12` was validated at its exact source/toolchain state and failed native DRC/ERC, physical connectivity, and power-resistance acceptance. Raw reports and hashes remain in `validation-receipts/protected-bus-integrated-validation-20c9cb12/`. The canonical PCB was restored to its preintegration parent while retaining the candidate and failure evidence. Further power work is frozen pending the bounded six-loop provenance and simplest-defensible-prototype architecture audit.
+
+## 2026-09-18 — Six-loop authority audit opened
+
+The six-loop precision-limiter workstream is frozen pending a bounded provenance and architecture audit. A new queue package `P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT` owns the authority decision; the failed integrated power-bus package waits only on that authority. Existing six-loop and HPQ evidence is retained as historical evidence and is not treated as a product veto.

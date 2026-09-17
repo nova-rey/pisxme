@@ -10,6 +10,14 @@
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
+    "authority:P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT": {
+      "created_at": "2026-09-17T23:28:57.421215Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/power-architecture-provenance-audit-20260918",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:exact-nFET-and-energy-coordination": {
       "created_at": "2026-09-14T00:29:05.092973Z",
       "kind": "authority",
@@ -2979,7 +2987,8 @@
       "completion_criterion": "Integrated candidate and fresh validation receipts prove the selected prototype power bus against its acceptance rows, or return scoped failure to the producer/authority path.",
       "created_at": "2026-09-17T22:05:50.056039Z",
       "dependencies": [
-        "package:P24-PROTOTYPE-POWER-BUS-PRODUCER"
+        "package:P24-PROTOTYPE-POWER-BUS-PRODUCER",
+        "authority:P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT"
       ],
       "domain": "Root / KiCad Validation",
       "edit_boundaries": [
@@ -3014,9 +3023,9 @@
       ],
       "scope": "Serialize the accepted prototype power-bus candidate into canonical HEAD and run fresh KiCad Light validation at the exact integrated SHA with pinned rules/libraries/toolchain. Reconcile topology changes against baseline; do not claim isolated passes as closure.",
       "session_ids": [],
-      "status": "READY",
+      "status": "WAITING",
       "title": "Integrate and fresh-Light validate prototype power bus",
-      "updated_at": "2026-09-17T23:28:25.278802Z",
+      "updated_at": "2026-09-17T23:28:57.421253Z",
       "validation": {
         "required": [
           "native_drc",
@@ -3047,8 +3056,66 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT"
+      ],
       "workstream": "canonical-integration"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "e25af494",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Signed/versioned authority artifacts establish provenance classifications, real interface requirements, selected simplest defensible prototype architecture, and explicit HPQ #5 disposition.",
+      "created_at": "2026-09-17T23:28:53.439303Z",
+      "dependencies": [],
+      "domain": "Product / Power Authority",
+      "edit_boundaries": [
+        "authority artifacts and queue only",
+        "no CAD changes",
+        "no new limiter-family or precision-loop implementation",
+        "preserve historical HPQ evidence"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT",
+      "notes": "",
+      "owner": "prototype_power_architecture",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "power_constraint_provenance",
+        "sxm2_power_authority",
+        "prototype_power_architecture",
+        "constraint_ledger_correction"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Trace six-loop and per-loop current constraints to earliest authority; determine real V100/SXM2 power requirements; compare six-loop, protected distributed 12V, and any justified intermediate architecture; issue binding prototype architecture decision and corrected constraint ledger. Preserve 300W sustained and bounded 330W peak unless higher authority contradicts.",
+      "session_ids": [
+        "root-20260918-power-architecture-audit"
+      ],
+      "status": "RUNNING",
+      "title": "Audit six-loop authority and select simplest defensible prototype power architecture",
+      "updated_at": "2026-09-17T23:29:05.784481Z",
+      "validation": {
+        "required": [
+          "provenance_table",
+          "sxm2_requirements",
+          "architecture_decision",
+          "constraint_ledger"
+        ],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -3063,5 +3130,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T23:28:25.279115Z"
+  "updated_at": "2026-09-17T23:29:05.784681Z"
 }
