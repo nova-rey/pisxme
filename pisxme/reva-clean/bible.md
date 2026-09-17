@@ -1133,3 +1133,7 @@ The exact HPQ4 calculator source is irretrievably absent from retained runner ar
 2026-09-17 — Removed redundant calculator reconciliation queue entry
 
 The independent replacement package supersedes the duplicate dependency-bound reconciliation entry; queue ownership is now single-sourced.
+
+2026-09-17 — JMS581DL manufacturer reference reconciliation dispatched
+
+A dedicated independent `P24-JMS581DL-MANUFACTURER-RECONCILIATION` work package is running under Storage Supervisor `jms581_manufacturer_reconciliation`. The supplied JMicron/SmartCube packet will be preserved and indexed in the private Library; only sanitized provenance and reconciliation evidence may enter this repository. Existing power-budget validation continues independently.

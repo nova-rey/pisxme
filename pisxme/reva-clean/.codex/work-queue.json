@@ -2008,7 +2008,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CALC_REPLACEMENT_MANIFEST.json",
+        "base_sha": "c49f7dea47c4a9794e60ace583d81d705f2090a6",
+        "returned_at": "2026-09-17T13:18:19.631313Z",
+        "returned_by": "power_budget_replacement",
+        "sha": null
+      },
       "completion_criterion": "Replacement calculator and calculation receipt pass independent execution; authority review signs the replacement identity and updated manifest.",
       "created_at": "2026-09-17T13:12:15.528742Z",
       "dependencies": [],
@@ -2041,15 +2047,68 @@
       "session_ids": [
         "/root/power_budget_replacement"
       ],
-      "status": "RUNNING",
+      "status": "VALIDATING",
       "title": "Create authority-reviewed replacement for missing HPQ4 calculator",
-      "updated_at": "2026-09-17T13:12:24.318505Z",
+      "updated_at": "2026-09-17T13:18:28.963574Z",
       "validation": {
         "required": [],
         "results": {}
       },
       "waiting_on": [],
       "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Private Library contains hashed/provenanced packet; Storage Supervisor returns a manufacturer-vs-current matrix classifying each relevant constraint, exact discrepancies, required/optional changes, authority decisions needed, and candidate evidence or explicit unresolved items.",
+      "created_at": "2026-09-17T13:18:44.969913Z",
+      "dependencies": [],
+      "domain": "Storage / Reference Authority",
+      "edit_boundaries": [
+        "private Library ingestion and provenance",
+        "sanitized reconciliation receipts only",
+        "no vendor/reference bytes in public repo",
+        "no unapproved architecture change",
+        "no CAD integration without Root serialization and fresh Light validation"
+      ],
+      "evidence_refs": [],
+      "id": "P24-JMS581DL-MANUFACTURER-RECONCILIATION",
+      "notes": "",
+      "owner": "jms581_manufacturer_reconciliation",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-STORAGE-MODE",
+        "INV-USB3",
+        "INV-PCIE-TOPOLOGY",
+        "INV-THERMAL",
+        "INV-DFM"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Ingest and provenance the supplied JMicron/SmartCube JMS581DL manufacturer packet into the private Library, then compare manufacturer schematic, PCB, layout guide, datasheet, SPI list, BOM, and 1-LUN reference schematic against the current selected Path-A implementation. Produce a bounded discrepancy/constraint report, authority recommendations, and any justified implementation candidates. Preserve original vendor bytes and restriction metadata outside the public repository.",
+      "session_ids": [
+        "/root/jms581_manufacturer_reconciliation"
+      ],
+      "status": "RUNNING",
+      "title": "Reconcile JMS581DL manufacturer reference packet against selected Path-A",
+      "updated_at": "2026-09-17T13:18:58.590092Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "integrated-storage"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -2064,5 +2123,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T00:00:00Z"
+  "updated_at": "2026-09-17T13:18:58.590238Z"
 }
