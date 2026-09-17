@@ -224,7 +224,7 @@
         "multilayer 1 oz PTH annular ring 0.20 mm recommended and 0.15 mm absolute minimum",
         "blind and buried vias not supported on the stated standard process",
         "6-layer-and-above FR-4 maximum dimensions 656 x 586 mm for thickness at least 0.8 mm",
-        "impedance tolerance \u00b110%"
+        "impedance tolerance ±10%"
       ],
       "status": "accessible",
       "local_sha256": null,
@@ -252,7 +252,7 @@
         "typical stackup SIG/GND/PWR/SIG/GND/SIG",
         "maximum dimensions 660 x 475 mm",
         "board thickness options 0.8/1.0/1.2/1.6/2.0 mm",
-        "thickness tolerance \u00b110% for thickness at least 1.0 mm and \u00b10.1 mm below 1.0 mm",
+        "thickness tolerance ±10% for thickness at least 1.0 mm and ±0.1 mm below 1.0 mm",
         "minimum trace width and spacing 0.09 mm (3.5 mil)",
         "minimum via hole/diameter 0.15/0.25 mm",
         "minimum BGA pad dimension 0.25 mm",
@@ -598,7 +598,7 @@
     },
     {
       "id": "researcher-power-envelope-gap-20260913",
-      "title": "Researcher evidence sack \u2014 Branch-B power-envelope gaps",
+      "title": "Researcher evidence sack — Branch-B power-envelope gaps",
       "publisher": "PiSXMe Researcher commission",
       "url": "private:pisxme-library/Library/briefs/researcher-power-envelope-gap-20260913.md",
       "revision": "session d3dd71d7-b412-435d-8dbb-a12cac7174bd; completed 2026-09-13",
@@ -700,14 +700,14 @@
       "local_material_retained": false,
       "observed_facts": [
         "5.5 V to 60 V input range",
-        "0.6 A to 6.0 A programmable current limit; \u00b14% accuracy from 3 A to 6 A across temperature",
+        "0.6 A to 6.0 A programmable current limit; ±4% accuracy from 3 A to 6 A across temperature",
         "external nFET source to SN, drain to IN, gate to GN for reverse-polarity and reverse-current protection",
         "external gate drive 4.45 V minimum, 4.75 V typical, 4.95 V maximum under EN=5 V with no reverse condition",
-        "internal fast-trip IOCP 20 A minimum, 26 A typical, 32 A maximum; 3 \u00b5s typical response; external nFET remains on during output short fast trip",
+        "internal fast-trip IOCP 20 A minimum, 26 A typical, 32 A maximum; 3 µs typical response; external nFET remains on during output short fast trip",
         "FLAG open-drain fault indicator; 4 mA protection; reverse-current-only event does not assert FLAG",
         "22.5 ms to 25.5 ms blanking and 654 ms to 792 ms autoretry ranges",
-        "thermal foldback 150 \u00b0C and thermal shutdown 165 \u00b0C typical; 10 \u00b0C hysteresis",
-        "absolute maximum DC IN current 6.3 A; minimum 1 \u00b5F IN bypass and 4.7 \u00b5F SN bypass"
+        "thermal foldback 150 °C and thermal shutdown 165 °C typical; 10 °C hysteresis",
+        "absolute maximum DC IN current 6.3 A; minimum 1 µF IN bypass and 4.7 µF SN bypass"
       ],
       "status": "accessible-no-local-copy",
       "license_disposition": "citation and extracted facts only; no PDF copied into private Library; transient retrieval digest retained as provenance metadata"
@@ -722,10 +722,10 @@
       "evidence_class": "manufacturer protection component authority",
       "observed_facts": [
         "0297015._ is 15 A, 32 V DC, 1000 A interrupting at 32 V DC",
-        "0297015._ typical cold resistance 4.58 m\u03a9 and typical I\u00b2t 308 A\u00b2s",
-        "manufacturer defines typical I\u00b2t as average melting time before arcing from breaking-capacity tests",
-        "15 A time-current opening ranges: 0.15\u20135 s at 200%, 0.08\u20130.5 s at 350%, 0.03\u20130.1 s at 600%",
-        "recommended environment -40 \u00b0C to +125 \u00b0C; typical derating table shows 13 A at 20 \u00b0C and 9 A at 100 \u00b0C for 15 A item"
+        "0297015._ typical cold resistance 4.58 mΩ and typical I²t 308 A²s",
+        "manufacturer defines typical I²t as average melting time before arcing from breaking-capacity tests",
+        "15 A time-current opening ranges: 0.15–5 s at 200%, 0.08–0.5 s at 350%, 0.03–0.1 s at 600%",
+        "recommended environment -40 °C to +125 °C; typical derating table shows 13 A at 20 °C and 9 A at 100 °C for 15 A item"
       ],
       "status": "accessible",
       "license_disposition": "citation and extracted facts only; no PDF copied into Library"
@@ -741,9 +741,9 @@
       "observed_facts": [
         "SMBJ18A unidirectional 600 W class",
         "18.0 V reverse standoff",
-        "20.0\u201322.1 V breakdown at 1 mA",
+        "20.0–22.1 V breakdown at 1 mA",
         "29.2 V maximum clamp at 20.6 A peak-pulse current",
-        "1 \u00b5A maximum reverse leakage at standoff"
+        "1 µA maximum reverse leakage at standoff"
       ],
       "status": "accessible",
       "license_disposition": "citation and extracted facts only; no PDF copied into Library"
@@ -1167,7 +1167,7 @@
         "3.15 V to 16.5 V control range",
         "external N-channel FET gate drive",
         "adjustable analog current limit",
-        "\u00b13% accurate hot-swap current limit",
+        "±3% accurate hot-swap current limit",
         "automatic retry or latch-off variants",
         "I2C current/voltage monitor",
         "listed models shown as production"
@@ -1192,13 +1192,13 @@
       ],
       "observed_facts": [
         "VCC 3.15 V to 16.5 V",
-        "TA -40 \u00b0C to +85 \u00b0C",
+        "TA -40 °C to +85 °C",
         "VLIM 97 mV minimum, 100 mV typical, 103 mV maximum",
         "I_LIMIT equations use RSENSE min/max",
         "90 mV minimum overcurrent timing threshold and 115 mV maximum fast-trip threshold in equations",
-        "4-10 \u00b5s fast-overcurrent response guaranteed by design",
+        "4-10 µs fast-overcurrent response guaranteed by design",
         "programmable TIMER fault interval",
-        "150 \u00b0C junction absolute maximum"
+        "150 °C junction absolute maximum"
       ],
       "status": "accessible-no-local-copy",
       "license_disposition": "citation and extracted facts only; vendor PDF not retained"
@@ -1318,7 +1318,7 @@
     {
       "id": "sxm2-ai-cooling-dual-8pin-20260917",
       "title": "SXM2 to PCIe adapter card",
-      "publisher": "AI-Cooling / \u91d1\u8f89\u76c8\u8fbe",
+      "publisher": "AI-Cooling / 金辉盈达",
       "url": "https://www.ai-cooling.com/?product=198",
       "revision": "page posted 2025-09-30; retrieved 2026-09-17",
       "retrieved": "2026-09-17",
@@ -1337,6 +1337,97 @@
         "independent test data"
       ],
       "license_disposition": "metadata and extracted product-page facts only; no product files/images copied"
+    },
+    {
+      "id": "samtec-pet-08-02-t-vt-lc-20260917",
+      "title": "PET-08-02-T-VT-LC PowerStrip/40 vertical 8-position terminal",
+      "publisher": "Samtec",
+      "url": "https://www.samtec.com/products/pet-08-02-t-vt-lc",
+      "revision": "Current product page; retrieved 2026-09-17",
+      "tier": 1,
+      "evidence_class": "manufacturer high-current connector authority",
+      "observed_facts": [
+        "8 power positions, 6.35 mm pitch, high-power dual-blade contact",
+        "58.7 A max product-page current claim",
+        "450 VAC / 636 VDC maximum product-page voltage claim",
+        "vertical through-hole terminal with 0.125 inch PCB and locking clip option",
+        "matte-tin PET configuration; gold/tin alternative available"
+      ],
+      "status": "accessible; configuration and mating set require series print confirmation",
+      "license_disposition": "link and extracted facts only; no Samtec CAD, PDF, or proprietary plot copied"
+    },
+    {
+      "id": "samtec-pes-08-02-t-vt-20260917",
+      "title": "PES-08-02-T-VT PowerStrip/40 vertical 8-position socket",
+      "publisher": "Samtec",
+      "url": "https://www.samtec.com/products/pes-08-02-t-vt",
+      "revision": "Current product page; retrieved 2026-09-17",
+      "tier": 1,
+      "evidence_class": "manufacturer mating connector authority",
+      "observed_facts": [
+        "8-position vertical socket mate for PET family",
+        "58.7 A max product-page current claim",
+        "450 VAC / 636 VDC maximum product-page voltage claim",
+        "high-power dual-blade contact and screw-down option",
+        "PES-08-02-T-VT and -L-VT part variants listed"
+      ],
+      "status": "accessible; complete cable-side assembly requires PESS family selection",
+      "license_disposition": "link and extracted facts only; no Samtec CAD or page copy retained"
+    },
+    {
+      "id": "samtec-pess-08-10-cable-20260917",
+      "title": "PESS PowerStrip/40 8-position cable assembly family",
+      "publisher": "Samtec",
+      "url": "https://www.samtec.com/products/pess",
+      "revision": "Current product-family page; retrieved 2026-09-17",
+      "tier": 1,
+      "evidence_class": "manufacturer cable assembly authority",
+      "observed_facts": [
+        "8-position socket/female-to-socket/female latching cable family",
+        "10 and 12 AWG cable options",
+        "2 to 8 power positions",
+        "polarized rugged latch",
+        "example configurable MPN PESS-08-10-L-40.00-SR"
+      ],
+      "status": "accessible; exact length, plating, end configuration, and current derating require configured MPN and authority review",
+      "license_disposition": "link and extracted facts only; no cable CAD or proprietary bytes copied"
+    },
+    {
+      "id": "samtec-pesx-petx-spec-rev-f-20241204",
+      "title": "PES/PET PowerStrip/40 Product Specification",
+      "publisher": "Samtec",
+      "url": "https://suddendocs.samtec.com/productspecs/pesx-petx.pdf",
+      "revision": "Rev F; 2024-12-04; retrieved 2026-09-17",
+      "tier": 1,
+      "evidence_class": "manufacturer connector performance specification",
+      "observed_facts": [
+        "50 A power contact rating with one pin powered per row",
+        "450 VAC voltage rating",
+        "-55 C to +125 C operating range",
+        "power contact LLCR delta 5 mOhm maximum in qualification tests",
+        "100 cycle durability and vibration/shock qualification",
+        "PES/PET vertical and right-angle configurations covered"
+      ],
+      "status": "accessible via browser PDF extraction; exact bytes not locally retained",
+      "license_disposition": "retain metadata, citation, and extracted facts only; no PDF copy"
+    },
+    {
+      "id": "samtec-pes-pet-power-report-tc0919-2456-20260917",
+      "title": "PES/PET Power Rating Test Report TC0919-2456 Rev 2",
+      "publisher": "Samtec",
+      "url": "https://suddendocs.samtec.com/testreports/tc0919--2456_report_rev_2_pwr.pdf",
+      "revision": "Rev 2; 2013-06-04 report; retrieved 2026-09-17",
+      "tier": 1,
+      "evidence_class": "manufacturer performance test report",
+      "observed_facts": [
+        "30 C rise current after 20 percent derating: 58.7 A at one powered contact, 48.5 A/contact at two, 41.1 A/contact at three, 38.0 A/contact at four, 29.4 A/contact with all eight powered",
+        "test uses EIA-364-70 temperature-rise and EIA-364-55 current cycling procedures",
+        "500 cycles at 125 percent of 30 C rated current",
+        "sample contact resistance initial/final 0.17 to 0.27 mOhm in all-contacts test",
+        "test report specifies 10 to 70 C rise measurement range and all-contact loading"
+      ],
+      "status": "accessible via browser PDF extraction; report is manufacturer-owned and not locally retained",
+      "license_disposition": "retain metadata and extracted results only; no report bytes copied"
     }
   ]
 }

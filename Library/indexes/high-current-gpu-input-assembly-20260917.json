@@ -1,0 +1,31 @@
+{
+  "record_id": "high-current-gpu-input-assembly-20260917",
+  "schema_version": 1,
+  "retrieved": "2026-09-17",
+  "requesting_package": "P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
+  "scope": "Manufacturer evidence for a replacement high-current positive/return GPU-style source assembly meeting the PiSXMe 40 A continuous and 45 A 100 ms design envelope.",
+  "source_ids": [
+    "anderson-ds-pp1545-20260917",
+    "anderson-asmpr45-1x2-rk-20260917",
+    "anderson-1327-20260917",
+    "anderson-261g2-20260917",
+    "amphenol-mcrps-10170331-360001-20260917",
+    "amphenol-mcrps-family-20260917",
+    "molex-0039300020-product-20260913",
+    "molex-ps-5556-004-001-rev-b1-20260913",
+    "samtec-pet-08-02-t-vt-lc-20260917",
+    "samtec-pes-08-02-t-vt-20260917",
+    "samtec-pess-08-10-cable-20260917",
+    "samtec-pesx-petx-spec-rev-f-20241204",
+    "samtec-pes-pet-power-report-tc0919-2456-20260917"
+  ],
+  "candidate_summary": {
+    "recommended_bounded_prototype_assumption": "Samtec PowerStrip/40 PET-08-02-T-VT-LC terminal + PES-08-02-T-VT socket with a PESS 10-AWG cable configuration, energizing exactly one positive and one return position for the first source-envelope screen; Package/Power Authority must confirm geometry and configured cable MPN.",
+    "alternative": "Amphenol FCI M-CRPS 10170331-360001, 6-contact, 40 A/contact, 0.6 mOhm max contact record; exact 12-V mating cable and pin parallelization unresolved.",
+    "existing_selection": "Molex 0039300020 / 39-30-0020 Mini-Fit Jr., 13 A/contact; inadequate for corrected 40 A positive/return pair.",
+    "samtec_screen": "Manufacturer power report after 20 percent derating and at 30 C rise: 48.5 A/contact with two powered contacts; 38.0 A/contact with four; do not parallel four contacts without a new calculation."
+  },
+  "retained_material": "metadata, URLs, revision/retrieval data, and extracted facts only; no vendor PDF, drawing, CAD, image, or restricted byte retained",
+  "hash_status": "No local vendor bytes retained; exact source hashes unavailable by design.",
+  "authority_boundary": "Evidence only. Package/Power Authority must select the exact assembly, derating, wire/crimp, geometry, protection, resistance allocation, and thermal acceptance method."
+}

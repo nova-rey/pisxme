@@ -1,0 +1,14 @@
+{
+  "record_id": "high-current-gpu-input-assembly-20260917",
+  "source_class": "first-party manufacturer connector and cable assembly evidence",
+  "retrieved": "2026-09-17",
+  "requesting_package": "P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
+  "retention": "metadata, URLs, revisions, retrieval date, and extracted facts only; no third-party bytes retained",
+  "private_library_artifacts": [
+    "Library/briefs/high-current-gpu-input-assembly-20260917.md",
+    "Library/indexes/high-current-gpu-input-assembly-20260917.json",
+    "Library/provenance/high-current-gpu-input-assembly-20260917.json"
+  ],
+  "confidence": "high for published connector ratings and part identities; medium for prototype applicability until Package/Power Authority binds installation, derating, and exact mating harness",
+  "decision_boundary": "Librarian evidence only; no connector selection, CAD, or system safety approval."
+}
