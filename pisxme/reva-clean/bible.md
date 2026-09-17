@@ -1240,3 +1240,7 @@ The bounded carrier comparison completed in private Library commit `c882dfe3a3df
 ## 2026-09-17 — V100/SXM2 power-authority provenance audit
 
 `P24-POWER-SXM2-AUTHORITY-AUDIT` returned a source matrix at `validation-receipts/power-sxm2-authority-audit-20260917/`. NVIDIA evidence binds 300 W maximum SXM2 power and NVLink, while Amphenol and reverse-engineered sources provide connector/map evidence only. No authoritative six-loop, per-group current, independent-regulation, 6.000--6.400 A, or 57 mOhm limiter requirement was found. Contact multiplicity is not independent regulation; the six-loop limiter lineage remains unproven internal architecture evidence pending Product/Power disposition. No CAD or queue state changed.
+
+## 2026-09-17 — Six-loop provenance and SXM2 authority audit complete
+
+The bounded provenance audit (commit `cb066de9`) traced six-loop, no-passive-sharing, 6.000/6.400 A, independent regulation, 57 mOhm, and prescribed contact-group current claims to internal Phase 24 implementation records, classifying them E/F rather than NVIDIA/SXM2 authority. The SXM2 authority audit (commit `1056ba6c`) found NVIDIA evidence for 300 W maximum SXM2 power and NVLink but no authoritative six-loop, per-group current, independent-regulation, 6.000–6.400 A, or 57 mOhm requirement. Public-carrier sanity evidence is indexed privately. Product/Power Authority package `P24-POWER-ARCHITECTURE-AUTHORITY-DECISION` is now RUNNING to select the simplest defensible prototype architecture and reframe HPQ #5; no CAD changes are authorized.

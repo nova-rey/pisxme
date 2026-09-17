@@ -2602,7 +2602,13 @@
       },
       "base_sha": "668807f0",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "668807f0",
+        "returned_at": "2026-09-17T21:57:58.992083Z",
+        "returned_by": "power_constraint_provenance_audit",
+        "sha": "cb066de9"
+      },
       "completion_criterion": "Concise provenance table with earliest source, authority class, rationale, and hard/soft/unproven disposition for every six-loop constraint.",
       "created_at": "2026-09-17T21:49:40.219995Z",
       "dependencies": [],
@@ -2613,10 +2619,12 @@
         "no HPQ implementation",
         "no product requirement changes"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-constraint-provenance-audit-20260917/RECEIPT.md"
+      ],
       "id": "P24-POWER-CONSTRAINT-PROVENANCE-AUDIT",
       "notes": "",
-      "owner": "power_constraint_provenance_audit",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2631,12 +2639,10 @@
         }
       ],
       "scope": "Trace six-loop, no-passive-sharing, per-loop current window, independent regulation, hot-resistance allocation, and SXM2 group-current requirements to earliest authority and classify A-F. Use retained evidence and bounded Library research only.",
-      "session_ids": [
-        "/root/power_constraint_provenance_audit"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Audit six-loop power constraint provenance",
-      "updated_at": "2026-09-17T21:49:46.302676Z",
+      "updated_at": "2026-09-17T21:57:59.096559Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2707,7 +2713,13 @@
       },
       "base_sha": "668807f0",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "668807f0",
+        "returned_at": "2026-09-17T21:57:52.904984Z",
+        "returned_by": "sxm2_v100_power_authority_audit",
+        "sha": "1056ba6c"
+      },
       "completion_criterion": "Source matrix and authority recommendation identifying real requirements versus inferred implementation choices.",
       "created_at": "2026-09-17T21:49:40.308682Z",
       "dependencies": [],
@@ -2718,10 +2730,12 @@
         "no HPQ implementation",
         "no fabricated measurements"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-sxm2-authority-audit-20260917/RECEIPT.md"
+      ],
       "id": "P24-POWER-SXM2-AUTHORITY-AUDIT",
       "notes": "",
-      "owner": "sxm2_v100_power_authority_audit",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2737,12 +2751,62 @@
         }
       ],
       "scope": "Audit authoritative NVIDIA/SXM2/V100 power requirements: rails, voltage/current/power, contact mapping and limits, sequencing/enables, aux/standby, grounds/returns, and any genuine current sharing or current limiting requirement. Separate contact multiplicity from independent regulation and preserve prototype assurance boundaries.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Establish actual V100/SXM2 power contract",
+      "updated_at": "2026-09-17T21:57:52.991369Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "cb066de9",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Signed Product/Power Authority comparison selects one minimum prototype architecture, updates invariants/constraint ledger, and records HPQ #5 disposition plus replacement queue packages.",
+      "created_at": "2026-09-17T21:58:11.403142Z",
+      "dependencies": [],
+      "domain": "Product / Power Authority",
+      "edit_boundaries": [
+        "signed authority/invariant/queue artifacts",
+        "no CAD edits",
+        "no HPQ implementation",
+        "no product-envelope reduction",
+        "prototype validation may be explicitly deferred"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-ARCHITECTURE-AUTHORITY-DECISION",
+      "notes": "",
+      "owner": "power_architecture_authority_decision",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-GPU-CONTACT",
+        "INV-PROTECTION",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Using the provenance audit, SXM2 authority audit, private carrier sanity evidence, and governing product requirements, compare (A) six-loop precision control, (B) conventional adequately-rated protected/distributed 12-V input/power plane, and any genuinely required intermediate architecture. Select the simplest defensible PiSXMe Rev A prototype architecture, preserving 300 W sustained, reasonable 330 W peak margin if justified, safe ratings, rails/sequencing/grounding, and explicit REQUIRES PROTOTYPE VALIDATION dispositions. Update the constraint ledger/invariants, classify each six-loop constraint HARD/SOFT/SUPERSEDED/UNPROVEN, and disposition HPQ #5 without deleting evidence. No CAD edits until decision is signed.",
       "session_ids": [
-        "/root/sxm2_v100_power_authority_audit"
+        "/root/power_architecture_authority_decision"
       ],
       "status": "RUNNING",
-      "title": "Establish actual V100/SXM2 power contract",
-      "updated_at": "2026-09-17T21:49:46.406121Z",
+      "title": "Select simplest defensible prototype V100 power architecture",
+      "updated_at": "2026-09-17T21:58:20.865602Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2763,5 +2827,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T21:53:27.256427Z"
+  "updated_at": "2026-09-17T21:58:20.865768Z"
 }
