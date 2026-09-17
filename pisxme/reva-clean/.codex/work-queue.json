@@ -2,6 +2,14 @@
   "campaign": "phase24-phase25-acreage",
   "created_at": "2026-09-13T22:41:37.011173Z",
   "dependencies": {
+    "authority:6A-limiter-qualification": {
+      "created_at": "2026-09-17T13:53:30.161025Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/power-current-limiter-qualification-authority-20260917/LIMITER_QUALIFICATION_AUTHORITY.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:exact-nFET-and-energy-coordination": {
       "created_at": "2026-09-14T00:29:05.092973Z",
       "kind": "authority",
@@ -45,10 +53,10 @@
     "authority:power-current-limiter-selection": {
       "created_at": "2026-09-13T23:57:42.658508Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/power-current-limiter-qualification-authority-20260917/LIMITER_QUALIFICATION_AUTHORITY.md",
       "reference": "validation-receipts/power-source-contract-20260914/POWER_SOURCE_CONTRACT_ESCALATION.json",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-17T13:53:21.911317Z",
+      "status": "RESOLVED"
     },
     "authority:power-current-limiter-signature": {
       "created_at": "2026-09-14T00:04:52.752266Z",
@@ -991,7 +999,8 @@
         "package:P24-POWER-CONNECTOR-QUALIFICATION",
         "package:P24-MPA-CORRIDOR-AUTHORITY",
         "authority:power-current-limiter-selection",
-        "knowledge:authoritative-6A-window-limiter"
+        "knowledge:authoritative-6A-window-limiter",
+        "authority:6A-limiter-qualification"
       ],
       "domain": "power/source-contract",
       "edit_boundaries": [
@@ -1024,13 +1033,13 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Bind six-loop source/net/component contract",
-      "updated_at": "2026-09-17T13:38:27.792546Z",
+      "updated_at": "2026-09-17T13:53:30.161066Z",
       "validation": {
         "required": [],
         "results": {}
       },
       "waiting_on": [
-        "authority:power-current-limiter-selection"
+        "authority:6A-limiter-qualification"
       ],
       "workstream": "phase24"
     },
@@ -1676,7 +1685,8 @@
         "knowledge:exact-nfet-energy-dossier",
         "authority:exact-nfet-energy-qualification",
         "package:P24-POWER-BUDGET-CORRECTION",
-        "authority:power-current-limiter-selection"
+        "authority:power-current-limiter-selection",
+        "authority:6A-limiter-qualification"
       ],
       "domain": "Power Integrity Authority",
       "edit_boundaries": [
@@ -1707,13 +1717,13 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Select exact reverse nFET and sign fault-energy coordination",
-      "updated_at": "2026-09-17T13:33:54.969662Z",
+      "updated_at": "2026-09-17T13:53:30.217754Z",
       "validation": {
         "required": [],
         "results": {}
       },
       "waiting_on": [
-        "authority:power-current-limiter-selection"
+        "authority:6A-limiter-qualification"
       ],
       "workstream": "power-authority"
     },
@@ -2244,7 +2254,13 @@
       },
       "base_sha": "d87db2ffcedf655acc32169128638ab7e7d752c3",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "d87db2ffcedf655acc32169128638ab7e7d752c3",
+        "returned_at": "2026-09-17T13:53:15.795674Z",
+        "returned_by": "limiter_qualification_authority",
+        "sha": "22018346"
+      },
       "completion_criterion": "Product/Power Authority signs one binding limiter selection satisfying HPQ4, or records a precise remaining dependency with calculations and evidence.",
       "created_at": "2026-09-17T13:47:18.281904Z",
       "dependencies": [],
@@ -2255,10 +2271,12 @@
         "private vendor evidence remains private",
         "append bible entry with any public sanitized disposition"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-current-limiter-qualification-authority-20260917/LIMITER_QUALIFICATION_AUTHORITY.md"
+      ],
       "id": "P24-6A-LIMITER-QUALIFICATION-AUTHORITY",
       "notes": "",
-      "owner": "limiter_qualification_authority",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2274,12 +2292,60 @@
         }
       ],
       "scope": "Use the Librarian packet to bind one production limiter architecture or return a precise residual evidence gap. Evaluate LTC4281/LTC4282-class calibrated external-limiter assemblies and any bounded manufacturer-supported alternative against six independent 6.000\u20136.400 A full-tolerance/temperature loops, <=57 mOhm hot limiter allocation, 12 V source range, fault/reverse behavior, thermal/SOA, connector/harness/copper coordination, and production testability. Do not edit CAD.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Qualify six-amp limiter architecture against HPQ4",
+      "updated_at": "2026-09-17T13:53:15.884603Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "22018346",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Librarian returns a newly qualified evidence candidate for Product/Power Authority or a precise residual gap after one bounded search, with provenance and explicit stop disposition.",
+      "created_at": "2026-09-17T13:53:47.956222Z",
+      "dependencies": [],
+      "domain": "Librarian / Research",
+      "edit_boundaries": [
+        "private Library evidence and provenance",
+        "sanitized receipt if needed",
+        "no CAD or product-envelope edits",
+        "no vendor bytes in public repo"
+      ],
+      "evidence_refs": [],
+      "id": "P24-6A-LIMITER-RESEARCH-ESCALATION",
+      "notes": "",
+      "owner": "limiter_research_escalation",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Perform one bounded, identifier-driven manufacturer search for an exact production limiter or documented controller-plus-external-limiter assembly satisfying HPQ4. Search only authoritative manufacturer sources and existing private Library gaps, covering 12 V compatibility, guaranteed 6.000\u20136.400 A full-temperature window, <=57 mOhm hot path, fault/reverse/SOA/thermal behavior, and production testability. Return indexed provenance and a precise residual gap; do not select architecture or edit CAD. Stop after this bounded search; do not repeat prior families without new evidence.",
       "session_ids": [
-        "/root/limiter_qualification_authority"
+        "/root/limiter_research_escalation"
       ],
       "status": "RUNNING",
-      "title": "Qualify six-amp limiter architecture against HPQ4",
-      "updated_at": "2026-09-17T13:47:35.326682Z",
+      "title": "Bounded search for exact six-amp production limiter evidence",
+      "updated_at": "2026-09-17T13:54:00.623098Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2300,5 +2366,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T13:47:35.326837Z"
+  "updated_at": "2026-09-17T13:54:00.623392Z"
 }
