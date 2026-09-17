@@ -1213,3 +1213,7 @@ The ADM1175 component-path package returned commit `bb3901a6`. The WSK2512R0160B
 ## 2026-09-17 — Limiter Unblocker routed final system authority decision
 
 Unblocker reviewed the retained limiter evidence and classified the residual as a domain-authority problem. The ADM1175 component package and Unblocker receipt are complete; no external blocker or product-envelope relaxation was authorized. Queue package `P24-6A-LIMITER-SYSTEM-AUTHORITY-DECISION` is RUNNING for one final bounded Product/Power/Package/Thermal decision using retained candidates only. It must bind a complete six-loop HPQ4 limiter system or issue a precise no-go with one minimum evidence dependency. No further family search or CAD release is authorized.
+
+## 2026-09-17 — Retained six-amp limiter system authority no-go
+
+`P24-6A-LIMITER-SYSTEM-AUTHORITY-DECISION` completed at the retained review base with a signed `NO_GO_RETAINED_CANDIDATES` decision. MAX17527A and TPS1663 fail the independent 6.000--6.400 A window; LTC4281/LTC4282 exceed the complete current-error ratio before calibration and leave the installed path, fault, thermal and production-test terms unbound; ADM1175 with the exact WSK2512R0160BEA screen exceeds the 6.400 A ceiling and leaves the same system gates open. The sole scoped resumption dependency is `authority:6A-limiter-qualification`, defined as one exact qualified six-loop limiter-system record. The 300 W sustained / 330 W peak product envelope remains binding; no CAD, product-envelope relaxation, further family search, or hardware claim is authorized.

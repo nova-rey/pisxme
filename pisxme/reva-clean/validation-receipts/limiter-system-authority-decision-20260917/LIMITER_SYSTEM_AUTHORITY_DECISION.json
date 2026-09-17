@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-6A-LIMITER-SYSTEM-AUTHORITY-DECISION",
+  "decision_id": "PISXME-P24-6A-LIMITER-SYSTEM-NO-GO-20260917",
+  "review_base_sha": "ae58ad438f2fb9b7ace00f4eaa07d7858d147a07",
+  "date": "2026-09-17",
+  "authority": "Product / Power / Package / Thermal Authority",
+  "authority_level": "BINDING_WITHIN_DELEGATED_SCOPE",
+  "status": "NO_GO_RETAINED_CANDIDATES",
+  "cad_changed": false,
+  "product_envelope_changed": false,
+  "hpq4_contract": {
+    "decision_id": "PISXME-P24-POWER-BUDGET-HPQ4",
+    "version": "2.0.0",
+    "input_sha256": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae",
+    "independent_loops": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "per_loop_current_a": [
+      6.0,
+      6.4
+    ],
+    "maximum_hot_limiter_resistance_mohm": 57.0,
+    "passive_sharing_allowed": false,
+    "source_sustained_v": [
+      12.05,
+      12.6
+    ],
+    "source_peak_v": [
+      12.1,
+      12.6
+    ],
+    "peak_duration_ms": 100.0,
+    "v100_sustained_w": 300.0,
+    "v100_peak_w": 330.0
+  },
+  "retained_candidates": [
+    {
+      "name": "MAX17527AATP+T plus external FET",
+      "current_window": "FAIL",
+      "hot_path": "UNPROVEN",
+      "calibration": "UNPROVEN",
+      "gate_drive": "PARTIAL_ONLY",
+      "fault_reverse_soai2t": "UNPROVEN",
+      "thermal_package_traceability": "UNPROVEN",
+      "disposition": "REJECTED; retained negative control",
+      "basis": "5.7542457542-6.2462462462 A screen; independent minimum below 6.000 A."
+    },
+    {
+      "name": "TPS1663",
+      "current_window": "FAIL",
+      "hot_path": "UNPROVEN",
+      "calibration": "UNPROVEN",
+      "gate_drive": "INTEGRATED_FET_NOT_HOT_GUARANTEED",
+      "fault_reverse_soai2t": "UNPROVEN",
+      "thermal_package_traceability": "UNPROVEN",
+      "disposition": "REJECTED; retained negative control",
+      "basis": "5.58-6.42 A screen; misses both required bounds and 31 mOhm is typical."
+    },
+    {
+      "name": "LTC4281AUFD#PBF / LTC4281IUFD#PBF plus Kelvin shunt and external FET",
+      "current_window": "FAIL_OR_UNPROVEN",
+      "hot_path": "UNPROVEN",
+      "calibration": "UNPROVEN",
+      "gate_drive": "PARTIAL_ONLY",
+      "fault_reverse_soai2t": "UNPROVEN",
+      "thermal_package_traceability": "UNPROVEN",
+      "disposition": "NOT PROMOTED; closest candidate only",
+      "basis": "32.88-35.87 mV full-temperature threshold ratio 1.0909367 exceeds allowed 1.0666667 before other error terms; trim residual and full system qualification absent."
+    },
+    {
+      "name": "LTC4282AUH#PBF plus Kelvin shunts and external FETs",
+      "current_window": "FAIL_OR_UNPROVEN",
+      "hot_path": "UNPROVEN",
+      "calibration": "UNPROVEN",
+      "gate_drive": "PARTIAL_ONLY",
+      "fault_reverse_soai2t": "UNPROVEN",
+      "thermal_package_traceability": "UNPROVEN",
+      "disposition": "NOT PROMOTED; closest dual-channel variant only",
+      "basis": "Same threshold class and no complete six-loop production qualification."
+    },
+    {
+      "name": "ADM1175-1ARMZ-R7 / ADM1175-2ARMZ-R7 plus WSK2512R0160BEA and documented FET screens",
+      "current_window": "FAIL",
+      "hot_path": "UNPROVEN",
+      "calibration": "UNPROVEN",
+      "gate_drive": "UNPROVEN",
+      "fault_reverse_soai2t": "UNPROVEN",
+      "thermal_package_traceability": "UNPROVEN",
+      "disposition": "REJECTED FOR BINDING; retained candidate evidence only",
+      "basis": "Exact WSK2512 screen is 6.042710-6.458652 A; upper bound exceeds 6.400 A and gate/hot-path/fault/thermal/test contracts remain open."
+    },
+    {
+      "name": "Documented external FET screens (IRLS4030-7P, BSC070N10LS5, BSC096N10LS5, STL125N10LF8AG, CSD18536KCS)",
+      "current_window": "NOT_A_LIMITER",
+      "hot_path": "SCREEN_ONLY",
+      "calibration": "NOT_APPLICABLE",
+      "gate_drive": "UNPROVEN_AT_SYSTEM_MINIMUM",
+      "fault_reverse_soai2t": "UNPROVEN",
+      "thermal_package_traceability": "UNPROVEN",
+      "disposition": "NOT LIMITER OPTIONS",
+      "basis": "A FET cannot establish the active six-amp limiter contract; screens remain unqualified installed components."
+    }
+  ],
+  "qualification_gates": [
+    {
+      "id": "LIM-SYS-001",
+      "requirement": "Six independent loops guarantee 6.000-6.400 A across component, supply, process and temperature tolerance",
+      "state": "FAIL_OR_UNPROVEN",
+      "scope": "all retained candidates",
+      "evidence": "MAX17527A and TPS1663 fail the window; LTC4281/4282 threshold spread exceeds the complete error budget before other terms; ADM1175 with exact WSK2512 exceeds 6.400 A; no calibration residual is authorized."
+    },
+    {
+      "id": "LIM-SYS-002",
+      "requirement": "Complete installed limiter path is <=57 mOhm hot",
+      "state": "UNPROVEN",
+      "scope": "all retained candidates",
+      "evidence": "No retained candidate has a complete hot shunt, pass FET, sense-copper, vias and connector path qualification. Typical/25 C screens do not close this gate."
+    },
+    {
+      "id": "LIM-SYS-003",
+      "requirement": "Source compatibility over 12.05-12.60 V sustained and 12.10-12.60 V peak",
+      "state": "PARTIAL",
+      "scope": "LTC4281/4282, ADM1175, MAX17527A and TPS1663 voltage classes",
+      "evidence": "Voltage classes are compatible where documented, but no exact installed limiter system is qualified for the signed source/transient contract."
+    },
+    {
+      "id": "LIM-SYS-004",
+      "requirement": "Calibration target, residual, fixture accuracy, temperature corners, retention and lot traceability are binding",
+      "state": "UNPROVEN",
+      "scope": "LTC4281/4282 and ADM1175 candidate calibration paths",
+      "evidence": "Manufacturer trim/application text does not establish the PiSXMe production residual, fixture, retention or traceability contract; no such internal artifact exists in retained evidence."
+    },
+    {
+      "id": "LIM-SYS-005",
+      "requirement": "Gate drive and hot pass-FET RDS(on) are guaranteed at the actual minimum drive and temperature",
+      "state": "UNPROVEN",
+      "scope": "all external-FET candidates",
+      "evidence": "Existing FET screens are at 4.5 V/25 C or typical curves; exact controller minimum gate drive and hot installed RDS(on) remain unbound."
+    },
+    {
+      "id": "LIM-SYS-006",
+      "requirement": "Reverse current/polarity, surge, TVS, fuse, harness and nFET SOA/I2t are coordinated by worst-case waveform",
+      "state": "UNPROVEN",
+      "scope": "all retained architectures",
+      "evidence": "Only non-production illustrative screens exist; exact limiter timing, harness waveform, clamp, fuse and SOA/I2t coordination are absent."
+    },
+    {
+      "id": "LIM-SYS-007",
+      "requirement": "Installed package, copper spreading, thermal limits, DFM and procurement provenance are qualified",
+      "state": "UNPROVEN",
+      "scope": "all retained architectures",
+      "evidence": "No architecture has an approved exact coordinated MPN/package/footprint and installed thermal/test contract."
+    },
+    {
+      "id": "LIM-SYS-008",
+      "requirement": "Six-loop fail-safe FLAG/inhibit/reset behavior is explicit and verified",
+      "state": "UNPROVEN",
+      "scope": "all retained architectures",
+      "evidence": "No retained decision binds six independent fault paths, aggregation, brownout, inhibit or controlled restart behavior."
+    }
+  ],
+  "contract_checks": [
+    {
+      "id": "CHK-MAX17527A-floor",
+      "statement": "MAX17527A retained 6 A screen must meet the independent 6.000 A floor",
+      "observed_min_a": 5.754245754245755,
+      "observed_max_a": 6.246246246246247,
+      "required_min_a": 6.0,
+      "result": "FAIL"
+    },
+    {
+      "id": "CHK-TPS1663-window",
+      "statement": "TPS1663 retained 6 A screen must remain within 6.000-6.400 A",
+      "observed_min_a": 5.58,
+      "observed_max_a": 6.42,
+      "required_window_a": [
+        6.0,
+        6.4
+      ],
+      "result": "FAIL"
+    },
+    {
+      "id": "CHK-LTC4281-4282-threshold-ratio",
+      "statement": "LTC4281/4282 full-temperature threshold ratio must fit complete current-window ratio before all other error terms",
+      "observed_ratio": 1.0909367396593672,
+      "allowed_ratio": 1.0666666666666667,
+      "result": "FAIL"
+    },
+    {
+      "id": "CHK-ADM1175-WSK2512-window",
+      "statement": "ADM1175 with exact WSK2512R0160BEA screen must remain within 6.000-6.400 A without an unbound calibration contract",
+      "observed_min_a": 6.0427101243,
+      "observed_max_a": 6.4586520856,
+      "required_window_a": [
+        6.0,
+        6.4
+      ],
+      "result": "FAIL"
+    },
+    {
+      "id": "CHK-no-candidate-promoted",
+      "statement": "No retained candidate may be promoted when any mandatory system gate is FAIL or UNPROVEN",
+      "result": "PASS"
+    }
+  ],
+  "minimum_evidence_dependency": {
+    "id": "authority:6A-limiter-qualification",
+    "kind": "authority",
+    "state": "OPEN_INTERNAL_EVIDENCE_DEPENDENCY",
+    "title": "One exact qualified six-loop limiter-system record",
+    "minimum_record": "A single authority-reviewed record for one exact retained architecture with exact controller/shunt/FET MPNs and packages, full-temperature/tolerance 6.000-6.400 A proof per loop, calibrated residual/fixture/retention/traceability contract, <=57 mOhm hot installed limiter path, gate-drive/hot RDS(on), reverse/fault/TVS/fuse/harness/SOA/I2t waveform, thermal/DFM/procurement proof, and six-loop fail-safe behavior.",
+    "why_minimum": "Without this one system-level record, the signed HPQ4 current and hot-path invariants cannot be released to source or CAD work. No separate candidate family search is authorized by this package.",
+    "owner": "Product / Power Authority",
+    "resume": "Requalify exact nFET/protection assembly against the record, then release P24-POWER-SOURCE-CONTRACT and P24-EXACT-NFET-ENERGY-AUTHORITY through normal serialized authority and fresh-Light validation."
+  },
+  "queue_impact": {
+    "P24-6A-LIMITER-SYSTEM-AUTHORITY-DECISION": "DONE_NO_GO_RECORDED",
+    "P24-POWER-SOURCE-CONTRACT": "WAITING_ON authority:6A-limiter-qualification",
+    "P24-EXACT-NFET-ENERGY-AUTHORITY": "WAITING_ON authority:6A-limiter-qualification",
+    "P24-POWER-INPUT-ARCHITECTURE": "DOWNSTREAM_UNRELEASED",
+    "cad_release": false
+  },
+  "sources": [
+    {
+      "path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.json",
+      "sha256": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae",
+      "role": "signed HPQ4 numerical contract"
+    },
+    {
+      "path": "validation-receipts/power-current-limiter-qualification-authority-20260917/LIMITER_QUALIFICATION_AUTHORITY.json",
+      "sha256": "26658abfee73f1543dfc38600025d1d9e285b0bc5b5a18fef63e6ddd25904f42",
+      "role": "prior retained-candidate authority disposition"
+    },
+    {
+      "path": "validation-receipts/adm1175-component-path-qualification-20260917/ADM1175_COMPONENT_PATH_CALC.json",
+      "sha256": "ee41bcc33fedb67ce4f741f58e5cbd5d398a69255f5a08d66ddb9e45dd17f4f2",
+      "role": "exact ADM1175/WSK2512 component-path arithmetic"
+    },
+    {
+      "path": "validation-receipts/exact-nfet-energy-authority-20260914/REQUALIFICATION_HPQ4_20260917.json",
+      "sha256": "7f7d637e6395d9532782850fc85c1a84771502b33fccdf38d4ea6550b93744ea",
+      "role": "retained nFET gate/fault evidence"
+    },
+    {
+      "path": "/home/nyx/PiSXMe-Library/Library/briefs/authoritative-6a-window-limiter-20260917.md",
+      "sha256": "5cd6c283c32204a69856890889cf18feae1d2408518dfc56b46dd8af669c7eac",
+      "role": "Librarian retained manufacturer evidence brief"
+    },
+    {
+      "path": "/home/nyx/PiSXMe-Library/Library/indexes/authoritative-6a-window-limiter-20260917.json",
+      "sha256": "2447b317458da8e80f7089155520136ce98485818b7eb13673aed1bd5c57cc8e",
+      "role": "Librarian source index"
+    }
+  ],
+  "signature": {
+    "status": "SIGNED_NO_GO",
+    "authority": "Product / Power / Package / Thermal Authority",
+    "signed_at": "2026-09-17",
+    "decision": "No retained candidate binds the complete HPQ4 six-loop limiter system. The product envelope and HPQ4 contract remain binding. The sole scoped resumption dependency is authority:6A-limiter-qualification.",
+    "signature_basis": "Current HEAD, signed HPQ4 JSON, retained Product/Power authority, ADM1175 component-path receipt, exact nFET receipt, and Librarian indexed manufacturer evidence. No measurements, vendor approval, fabricated-hardware proof, or CAD change is claimed."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "status": "PASS_ARITHMETIC_NO_GO",
+  "checks": {
+    "MAX17527A_floor_fails": true,
+    "TPS1663_window_fails": true,
+    "LTC4281_4282_threshold_ratio_exceeds_window": true,
+    "ADM1175_WSK2512_window_fails": true,
+    "no_production_selection": true
+  },
+  "values": {
+    "MAX17527A_A": [
+      5.754245754245755,
+      6.246246246246247
+    ],
+    "TPS1663_A": [
+      5.58,
+      6.42
+    ],
+    "LTC4281_4282_ratio": 1.0909367396593672,
+    "allowed_current_ratio": 1.0666666666666667,
+    "ADM1175_WSK2512_A": [
+      6.0427101243,
+      6.4586520856
+    ]
+  },
+  "interpretation": "No retained candidate closes the complete HPQ4 limiter-system contract; this does not claim hardware qualification."
+}
