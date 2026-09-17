@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-POWER-LIMITER-SELECTION-AUTHORITY",
+  "decision_id": "PISXME-P24-POWER-LIMITER-SELECTION-20260917",
+  "status": "NO_QUALIFIED_PRODUCTION_MPN",
+  "disposition": "WAITING_ON knowledge:authoritative-6A-window-limiter",
+  "review_base_sha": "a5572d6a02e94cf349e4619c5c07bae9bc31ca78",
+  "authority": "Product / Power Authority",
+  "cad_changed": false,
+  "product_envelope_changed": false,
+  "contract": {
+    "loops": 6,
+    "loop_names": ["A", "B", "C", "D", "E", "F"],
+    "minimum_a": 6.0,
+    "maximum_a": 6.4,
+    "hot_limiter_resistance_max_mohm": 57.0,
+    "passive_sharing_allowed": false,
+    "v100_sustained_w": 300.0,
+    "v100_peak_w": 330.0,
+    "hpq_id": "PISXME-P24-POWER-BUDGET-HPQ4",
+    "hpq_version": "2.0.0",
+    "hpq_input_sha256": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae"
+  },
+  "selected_mpn": null,
+  "candidate_dispositions": [
+    {
+      "mpn": "MAX17527AATP+T",
+      "role": "active current limiter",
+      "configuration": "6.25 kOhm, 0.1% SETI",
+      "calculated_full_tolerance_range_a": {
+        "min": 5.7542457542,
+        "max": 6.2462462462
+      },
+      "shortfall_to_floor_a": 0.2457542458,
+      "disposition": "REJECTED",
+      "reason": "Guaranteed minimum is below the independent 6.000 A floor; raising nominal above the documented 6 A selected range is not authorized."
+    },
+    {
+      "mpn": "TPS1663",
+      "role": "active current limiter",
+      "retained_screen": {
+        "adjustable_range_a": [0.6, 6.0],
+        "accuracy_percent": 7.0,
+        "integrated_fet_typical_resistance_mohm": 31.0,
+        "max_setting_full_tolerance_range_a": [5.58, 6.42]
+      },
+      "disposition": "REJECTED",
+      "reason": "Maximum setting misses the 6.000 A floor and exceeds the 6.400 A ceiling; 31 mOhm is typical and not a hot maximum."
+    },
+    {
+      "mpns": ["LM74700-Q1", "CSD19536KCS"],
+      "role": "reverse-block/controller plus external nFET",
+      "disposition": "REJECTED_AS_LIMITER_OPTION",
+      "reason": "Retained evidence does not establish active branch current limiting at the HPQ4 window."
+    },
+    {
+      "mpns": ["STL125N10LF8AG", "BSC096N10LS5", "DMT6007LFG", "CSD18536KCS"],
+      "role": "external nFET candidates",
+      "disposition": "NOT_LIMITER_OPTIONS",
+      "reason": "These parts do not implement the required active current-limit function; they remain unqualified nFET evidence."
+    },
+    {
+      "mpns": ["0297015.U", "SMBJ18A"],
+      "role": "fuse/TVS protection candidates",
+      "disposition": "NOT_LIMITER_OPTIONS",
+      "reason": "Passive protection cannot establish the full-tolerance independent branch current window."
+    }
+  ],
+  "unresolved_dependency": {
+    "id": "knowledge:authoritative-6A-window-limiter",
+    "owner": "librarian -> researcher if corpus gap -> Product/Power Authority",
+    "required_evidence": [
+      "exact production MPN and package/footprint",
+      "12-V compatibility over HPQ4 source range",
+      "guaranteed full-tolerance/temperature 6.000..6.400 A branch window",
+      "guaranteed hot limiter resistance <=57 mOhm",
+      "setpoint tolerance, fault timing, thermal and reverse behavior",
+      "manufacturer provenance for coordinated fuse/nFET/TVS/harness/copper authority"
+    ],
+    "resume": "Return a new binding authority receipt selecting a qualifying MPN or a bounded controller-plus-external-limiter architecture with the same guarantees."
+  },
+  "queue_impact": {
+    "P24-POWER-SOURCE-CONTRACT": "WAITING_ON knowledge:authoritative-6A-window-limiter",
+    "P24-EXACT-NFET-ENERGY-AUTHORITY": "WAITING_ON production limiter selection",
+    "P24-POWER-INPUT-ARCHITECTURE": "DOWNSTREAM_UNRELEASED"
+  },
+  "sources": [
+    {
+      "path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.json",
+      "sha256": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae",
+      "role": "signed HPQ4 contract"
+    },
+    {
+      "path": "validation-receipts/exact-nfet-energy-authority-20260914/REQUALIFICATION_HPQ4_20260917.json",
+      "sha256": "7f7d637e6395d9532782850fc85c1a84771502b33fccdf38d4ea6550b93744ea",
+      "role": "HPQ4-aligned rejection and retained candidate screen"
+    },
+    {
+      "path": "validation-receipts/power-current-limiter-signature-20260914/LIMITER_SELECTION_SIGNED_RECEIPT.json",
+      "sha256": "cc375b4645769eda08b29af6a31903d48d489df7e0d1af0e82ce1039828795e4",
+      "role": "superseded conditional MAX17527A selection"
+    },
+    {
+      "path": "validation-receipts/power-source-contract-20260914/POWER_SOURCE_CONTRACT_ESCALATION.json",
+      "sha256": "af3452a80eb3006853daa756b5fb32beb10177f11d572b18603b46f68c9f33f6",
+      "role": "source contract authority dependency"
+    },
+    {
+      "path": "validation-receipts/exact-nfet-energy-dossier-20260914/EXACT_NFET_ENERGY_DOSSIER.json",
+      "sha256": "c8bc2a07d2e8c751645ee11effb779c8263b952c0b424343f7570189a358ef4f",
+      "role": "private-Library retained candidate evidence"
+    },
+    {
+      "path": "validation-receipts/protection-dossier-20260914/PROTECTION_DOSSIER.json",
+      "sha256": "a0507d1d0bcf7ccd7b02cc721549adecdd25ef73f196c7b6487630fd3d419e9d",
+      "role": "retained protection evidence"
+    },
+    {
+      "path": "validation-receipts/harness-thermal-dossier-20260914/HARNESS_THERMAL_DOSSIER.json",
+      "sha256": "dd018d13959660c11b7bedd5647204ca11554e94050b0b5411f2af5198e58623",
+      "role": "retained harness/thermal evidence"
+    }
+  ],
+  "validation": {
+    "max17527a_min_a": "6.000 * 0.96 / 1.001 = 5.7542457542",
+    "tps1663_max_setting_range_a": "6.000 * (1 +/- 0.07) = 5.58..6.42",
+    "claims": "contract arithmetic only; no bench or fabricated-hardware claim"
+  }
+}
