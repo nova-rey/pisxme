@@ -1,0 +1,110 @@
+{
+  "source_id": "jmicron-jms581dl-design-in-20260914",
+  "title": "JMS581DL manufacturer design-in packet",
+  "publisher": "JMicron Technology Corporation / Smart Cube design-in channel",
+  "source_type": "restricted first-party manufacturer design-in material",
+  "retrieved": "2026-09-17",
+  "received_date": "2026-09-14",
+  "gmail_account": "nova.rey4200@gmail.com",
+  "gmail_thread_id": "1a07744f40afaf44",
+  "messages": [
+    {
+      "id": "1a07744f40afaf44",
+      "role": "customer inquiry",
+      "date": "2026-09-06T09:10:00-06:00",
+      "to": [
+        "sales@jmicron.com"
+      ],
+      "cc": [
+        "sales.service@smartcube.com.tw"
+      ]
+    },
+    {
+      "id": "1a07f95155864736",
+      "role": "JMicron sales response",
+      "date": "2026-09-08T05:54:00Z",
+      "routing": "Smart Cube"
+    },
+    {
+      "id": "1a09fe9fdf65159a",
+      "role": "attachment delivery",
+      "sender": "kevin_c@smartcube.com.tw",
+      "date": "2026-09-14T20:34:38+08:00",
+      "cc": [
+        "mingshyan@smartcube.com.tw",
+        "josh_h@smartcube.com.tw",
+        "jilllee35@jmicron.com",
+        "colinyu@jmicron.com"
+      ]
+    },
+    {
+      "id": "1a0a39a716d94efa",
+      "role": "follow-up",
+      "sender": "kevin_c@smartcube.com.tw",
+      "date": "2026-09-15T13:46:40+08:00",
+      "attachments": false
+    }
+  ],
+  "access_restriction": "Vendor-supplied design-in material. Original bytes retained in the private Library companion only; no public-repository copy or redistribution authorization is asserted.",
+  "local_root": "Library/sources/restricted/jmicron-jms581dl-design-in-20260914",
+  "files": [
+    {
+      "original_filename": "JMS581DL_1 Lun_Reference_Bus-Power_V1.00_SCH.zip",
+      "bytes": 707611,
+      "sha256": "9a1294389c09eac421326c448865e088faa766a3feb156ef00baabecbdac8cdb",
+      "revision": "V1.00",
+      "document_date": null,
+      "source_type": "manufacturer reference schematic archive"
+    },
+    {
+      "original_filename": "PDS-00000028 JMS581DL Datasheet (Rev.1.02).pdf",
+      "bytes": 781853,
+      "sha256": "a8056ad689671611e2ec97c5da4ca4c4c354b9da7cfecabcd33e0e0bbb31d578",
+      "revision": "Rev.1.02 / PDS-00000028",
+      "document_date": "2026-04-28",
+      "source_type": "manufacturer datasheet"
+    },
+    {
+      "original_filename": "JMS581-Series Layout Guide_V1.02.pdf",
+      "bytes": 391071,
+      "sha256": "a6ac1fa8222106865cd684cfcb76511b6e4b304e7f3d64c1743f516bda44144a",
+      "revision": "V1.02 / LOG-00000004",
+      "document_date": "2024-02-21",
+      "source_type": "manufacturer layout guide"
+    },
+    {
+      "original_filename": "JMS581DL-DB-01-02_SCH_V1.00.zip",
+      "bytes": 711397,
+      "sha256": "466e2b504dafd05f21baca3d7440306b0e9590eb8d31d708b88161bdbb3ccbca",
+      "revision": "V1.00",
+      "document_date": "2026-04-15 (embedded reference schematic)",
+      "source_type": "manufacturer demo-board schematic archive"
+    },
+    {
+      "original_filename": "JMS581DL-DB-01-02_PCB_V1.00.zip",
+      "bytes": 691700,
+      "sha256": "ec87c8c8ed635b884d759c5f191d0c7ea072655b1a359b969c1180b102f707ee",
+      "revision": "V1.00",
+      "document_date": null,
+      "source_type": "manufacturer demo-board PCB/layout archive"
+    },
+    {
+      "original_filename": "SPI-00000004 JMS581 SPI List (Rev. 1.05)_20250825.pdf",
+      "bytes": 147031,
+      "sha256": "02442d21f7e3ca42ce7749b7fc793569ce78cf06a88f3442ace9e88c4f99922c",
+      "revision": "Rev.1.05 / SPI-00000004",
+      "document_date": "2025-08-25",
+      "source_type": "manufacturer SPI support list"
+    },
+    {
+      "original_filename": "JMS581DL-DB-01-02_BOM_V1.00.pdf",
+      "bytes": 100492,
+      "sha256": "9284a01c8818f89bd9b6b8eeda4be9690ca41b5e77c4e8df4efde20777dbceed",
+      "revision": "V1.00",
+      "document_date": null,
+      "source_type": "manufacturer demo-board BOM"
+    }
+  ],
+  "integrity": "SHA-256 values are for the seven received original attachment bytes; SHA256SUMS is stored beside the originals.",
+  "use_boundary": "Evidence may inform PiSXMe engineering and authority review. It does not by itself select a PiSXMe architecture, authorize vendor IP/firmware redistribution, or prove fabricated-hardware operation."
+}

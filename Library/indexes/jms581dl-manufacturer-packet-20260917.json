@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "id": "jms581dl-manufacturer-packet-20260917",
+  "source_id": "jmicron-jms581dl-design-in-20260914",
+  "evidence_tier": 1,
+  "title": "JMS581DL manufacturer design-in packet",
+  "retrieved": "2026-09-17",
+  "private_only": true,
+  "source_files": [
+    {
+      "original_filename": "JMS581DL_1 Lun_Reference_Bus-Power_V1.00_SCH.zip",
+      "bytes": 707611,
+      "sha256": "9a1294389c09eac421326c448865e088faa766a3feb156ef00baabecbdac8cdb",
+      "revision": "V1.00",
+      "document_date": null,
+      "source_type": "manufacturer reference schematic archive"
+    },
+    {
+      "original_filename": "PDS-00000028 JMS581DL Datasheet (Rev.1.02).pdf",
+      "bytes": 781853,
+      "sha256": "a8056ad689671611e2ec97c5da4ca4c4c354b9da7cfecabcd33e0e0bbb31d578",
+      "revision": "Rev.1.02 / PDS-00000028",
+      "document_date": "2026-04-28",
+      "source_type": "manufacturer datasheet"
+    },
+    {
+      "original_filename": "JMS581-Series Layout Guide_V1.02.pdf",
+      "bytes": 391071,
+      "sha256": "a6ac1fa8222106865cd684cfcb76511b6e4b304e7f3d64c1743f516bda44144a",
+      "revision": "V1.02 / LOG-00000004",
+      "document_date": "2024-02-21",
+      "source_type": "manufacturer layout guide"
+    },
+    {
+      "original_filename": "JMS581DL-DB-01-02_SCH_V1.00.zip",
+      "bytes": 711397,
+      "sha256": "466e2b504dafd05f21baca3d7440306b0e9590eb8d31d708b88161bdbb3ccbca",
+      "revision": "V1.00",
+      "document_date": "2026-04-15 (embedded reference schematic)",
+      "source_type": "manufacturer demo-board schematic archive"
+    },
+    {
+      "original_filename": "JMS581DL-DB-01-02_PCB_V1.00.zip",
+      "bytes": 691700,
+      "sha256": "ec87c8c8ed635b884d759c5f191d0c7ea072655b1a359b969c1180b102f707ee",
+      "revision": "V1.00",
+      "document_date": null,
+      "source_type": "manufacturer demo-board PCB/layout archive"
+    },
+    {
+      "original_filename": "SPI-00000004 JMS581 SPI List (Rev. 1.05)_20250825.pdf",
+      "bytes": 147031,
+      "sha256": "02442d21f7e3ca42ce7749b7fc793569ce78cf06a88f3442ace9e88c4f99922c",
+      "revision": "Rev.1.05 / SPI-00000004",
+      "document_date": "2025-08-25",
+      "source_type": "manufacturer SPI support list"
+    },
+    {
+      "original_filename": "JMS581DL-DB-01-02_BOM_V1.00.pdf",
+      "bytes": 100492,
+      "sha256": "9284a01c8818f89bd9b6b8eeda4be9690ca41b5e77c4e8df4efde20777dbceed",
+      "revision": "V1.00",
+      "document_date": null,
+      "source_type": "manufacturer demo-board BOM"
+    }
+  ],
+  "manufacturer_facts": [
+    "JMS581DL is a 144TFBGA 9x9 mm USB 3.2 Gen2 to SATA 6 Gb/s and PCIe Gen3 x2 bridge with 3.3-V I/O.",
+    "The packet contains a four-sheet demo schematic, PowerPCB reference PCB/ASCII, layout guide, BOM and SPI support list.",
+    "Reference mode records select SATA or PCIe behavior through GPIO18/PEDET and include USB-C/M-key storage hardware.",
+    "Layout guidance specifies continuous reference planes and 90-ohm USB3, 100-ohm PCIe slot/SATA, and 85-ohm M.2 guidance; exact dimensions belong to the reference stackup.",
+    "Reference power guidance calls for local bypass and wider high-current VCCK/AVDDL distribution; datasheet supplies device rail ranges and typical currents.",
+    "SPI list identifies supported external flash families but does not establish PiSXMe production firmware rights or provisioning."
+  ],
+  "current_path_a": {
+    "status": "selected production implementation",
+    "identity": "TUSB9261 SATA + JMS583-QHFA3A NVMe behind HD3SS6126/HD3SS3412 selectors and one TE 1-2199230-4 M-key socket",
+    "authority": "Library/briefs/pisxme-component-firmware-provenance-20260913.md",
+    "jms581_state": "not promoted; no JMS581 symbol/footprint/PCB change in this package"
+  },
+  "comparison": [
+    {
+      "id": "architecture",
+      "constraint": "JMS581 single-controller USB/SATA/PCIe demo topology",
+      "classification": "PRODUCT_REQUIREMENT_OVERRIDES_REFERENCE",
+      "current": "PiSXMe selected Path A remains TUSB9261 SATA + JMS583 NVMe behind HD3SS6126/HD3SS3412 and one shared TE M-key; the JMS581 demo board uses its own USB-C, mode controls and M.2 topology.",
+      "action": "Do not clone or promote JMS581 without Storage/Product Authority."
+    },
+    {
+      "id": "jms581-package-pin",
+      "constraint": "JMS581DL 144TFBGA 9x9 mm package and ball contract",
+      "classification": "CONFIRMED_BY_MANUFACTURER",
+      "current": "Confirmed for a future JMS581 candidate; current Path-A devices are TUSB9261IPVP and JMS583-QHFA3A, so no current footprint/net change follows.",
+      "action": "Any JMS581 candidate needs package/footprint authority and native symbol/ball mapping."
+    },
+    {
+      "id": "rails",
+      "constraint": "JMS581 VCCO/XAVDDH 3.0-3.6 V, VCCK/AVDDL 1.0-1.1 V, USB VBUS 4.5-5.5 V",
+      "classification": "CONFIRMED_BY_MANUFACTURER",
+      "current": "Applies to JMS581 only; not a new requirement on the selected Path-A bridges.",
+      "action": "Use as candidate evidence, with PiSXMe power authority review if architecture changes."
+    },
+    {
+      "id": "jms581-power",
+      "constraint": "Typical JMS581 USB3+SATA currents: VCCO 1.9 mA, VCCK 378.9 mA, XAVDDH 2 mA, AVDDL 705.5 mA",
+      "classification": "CONFIRMED_BY_MANUFACTURER",
+      "current": "Device reference consumption only; no current Path-A budget update justified.",
+      "action": "Recalculate if JMS581 is ever proposed; include margin and transient assumptions."
+    },
+    {
+      "id": "power-sequence",
+      "constraint": "T5V rise <=20 ms; 3V3/1V0 sequencing windows; reset 120-500 ms; clock <=5 ms",
+      "classification": "CONFIRMED_BY_MANUFACTURER",
+      "current": "No JMS581 device in selected Path A, so no current sequence change.",
+      "action": "Candidate-only requirement; validate against product startup/inactive-state policy before adoption."
+    },
+    {
+      "id": "high-speed-guidance",
+      "constraint": "USB3 90 ohm, PCIe 100 ohm slot/85 ohm M.2, SATA 100 ohm, continuous reference, pair mismatch <5 mil per guide",
+      "classification": "COMPATIBLE",
+      "current": "Useful JMS581 reference guidance but the PiSXMe six-layer stack and existing approved corridors/rules govern current Path A.",
+      "action": "Translate only through SI/stackup authority; do not import 4-layer dimensions blindly."
+    },
+    {
+      "id": "power-layout",
+      "constraint": "Per-power-pin 0.1 uF proximity; guide widths: 5V >=60 mil, VCCO/AVDDH >=40 mil, VCCK/AVDDL >=120 mil",
+      "classification": "COMPATIBLE",
+      "current": "Reference design guidance; does not override the corrected PiSXMe product power envelope or current authority budgets.",
+      "action": "Use as candidate layout evidence and reconcile with six-layer copper/thermal analysis."
+    },
+    {
+      "id": "clock",
+      "constraint": "External 25 MHz clock/crystal, +/-30 ppm; ESR <=55 ohm; startup <=5 ms; REXT 12 kohm +/-1%",
+      "classification": "CONFIRMED_BY_MANUFACTURER",
+      "current": "JMS581-specific. Current Path A has separate bridge clock/package contracts.",
+      "action": "Candidate-only checks."
+    },
+    {
+      "id": "spi-firmware",
+      "constraint": "External SPI flash support list and JMS581 configuration/mode records",
+      "classification": "UNRESOLVED",
+      "current": "Packet identifies supported flash families and demo-board usage, but PiSXMe production firmware image, rights, provisioning route and selected mode are not established.",
+      "action": "Storage/Firmware authority must close before any JMS581 promotion."
+    },
+    {
+      "id": "reference-bom",
+      "constraint": "Reference components/values including MT3123B 4A, FP6375 1V0, FP6381A 3V3, MX25V8035F, AW3410S, 25 MHz source",
+      "classification": "COMPATIBLE",
+      "current": "Reference BOM is design-in evidence, not a PiSXMe substitution list; current selected BOM differs by architecture.",
+      "action": "Use for gap analysis only; no direct substitutions."
+    },
+    {
+      "id": "reference-stackup",
+      "constraint": "Manufacturer PCB is a four-layer PowerPCB reference with its own geometry",
+      "classification": "PRODUCT_REQUIREMENT_OVERRIDES_REFERENCE",
+      "current": "PiSXMe uses a six-layer CM5/V100/SXM2 carrier and fixed mechanical/interface anchors.",
+      "action": "Do not clone; retain only topology/layout evidence applicable after authority review."
+    },
+    {
+      "id": "old-knowledge-gap",
+      "constraint": "Prior statement that no complete JMS581 ball/reference evidence was available",
+      "classification": "SUPERSEDED_BY_MANUFACTURER",
+      "current": "The packet supplies datasheet, schematic, PCB, layout guide, BOM and SPI list.",
+      "action": "Update the knowledge-gap disposition; architecture selection remains unchanged."
+    },
+    {
+      "id": "thermal",
+      "constraint": "JMS581 ambient 0-70 C and max junction 125 C",
+      "classification": "CONFIRMED_BY_MANUFACTURER",
+      "current": "Device limit only; PiSXMe system thermal margin and cooling envelope require separate authority evidence.",
+      "action": "Do not claim system thermal closure from this packet."
+    },
+    {
+      "id": "inactive-mode",
+      "constraint": "Reference uses GPIO18/PEDET mode selection and powers/configures one mode",
+      "classification": "PRODUCT_REQUIREMENT_OVERRIDES_REFERENCE",
+      "current": "PiSXMe Path A uses two bridges/selectors with inactive-state isolation and shared M-key rules already under project authority.",
+      "action": "Preserve current selected isolation contract unless Storage Authority revises it."
+    }
+  ],
+  "limitations": [
+    "No public-repository vendor bytes were added.",
+    "Reference PCB is evidence, not a clone target.",
+    "No PiSXMe JMS581 package/net contract, firmware authorization, procurement qualification, or fabricated-hardware result is established."
+  ]
+}

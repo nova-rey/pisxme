@@ -270,6 +270,49 @@
         "TVS",
         "harness"
       ]
+    },
+    {
+      "id": "brief-jms581dl-manufacturer-packet-20260917",
+      "kind": "restricted-manufacturer-evidence-brief",
+      "path": "Library/briefs/jms581dl-manufacturer-packet-20260917.md",
+      "tags": [
+        "JMicron",
+        "JMS581DL",
+        "manufacturer",
+        "design-in",
+        "storage",
+        "restricted",
+        "Path-A"
+      ]
+    },
+    {
+      "id": "index-jms581dl-manufacturer-packet-20260917",
+      "kind": "restricted-manufacturer-evidence-index",
+      "path": "Library/indexes/jms581dl-manufacturer-packet-20260917.json",
+      "tags": [
+        "JMicron",
+        "JMS581DL",
+        "manufacturer",
+        "schematic",
+        "PCB",
+        "layout",
+        "BOM",
+        "SPI",
+        "provenance"
+      ]
+    },
+    {
+      "id": "source-jmicron-jms581dl-design-in-20260914",
+      "kind": "provenance-source",
+      "path": "Library/provenance/jms581dl-manufacturer-packet-20260917.json",
+      "tags": [
+        "JMicron",
+        "JMS581DL",
+        "SmartCube",
+        "design-in",
+        "restricted",
+        "manufacturer"
+      ]
     }
   ]
 }
