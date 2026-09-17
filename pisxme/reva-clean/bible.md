@@ -1340,3 +1340,7 @@ Power authority reviewed the failed candidate and bound that the existing J5/J6 
 ## 2026-09-18 — High-current input evidence promoted; corrective producer dispatched
 
 Private Librarian evidence identifies Anderson PP15/45 `ASMPR45-1X2-RK` as the bounded default candidate and Amphenol FCI M-CRPS as a secondary candidate. The exact J5/J6 assembly remains rejected for the 300 W/330 W source contract. A new isolated corrective producer package is dispatched to implement the authority-bounded source-entry change and return complete positive/return resistance and thermal evidence before serialized integration.
+
+## 2026-09-18 — Corrective producer stopped at authorized footprint boundary
+
+The isolated corrected-input producer loaded the committed six-layer baseline in KiCad Light 10.0.6 and confirmed J5/J6 are disqualified one-positive/one-return Molex entries. It produced no CAD candidate because the strongest Samtec PowerStrip/40 and Anderson fallback lack an authorized local footprint, complete mating cable identity, and verified board-entry geometry. The blocker packet and untouched-baseline reports are retained under `validation-receipts/power-bus-corrective-blocker-20260918/`; only footprint/package authority work is waiting.

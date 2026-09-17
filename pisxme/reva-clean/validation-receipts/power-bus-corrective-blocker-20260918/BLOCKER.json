@@ -1,0 +1,40 @@
+{
+  "package": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
+  "base_sha": "2388c9b13175c32ee503c519237acac28aec1d57",
+  "worker": "power-bus-corrective-20260918",
+  "toolchain": "KiCad Light 10.0.6",
+  "timestamp": "2026-09-17T23:40:42Z",
+  "state": "BLOCKED_PACKAGE_GEOMETRY_AND_MATING_ASSEMBLY_EVIDENCE",
+  "cad_mutated": false,
+  "selected_candidate_screen": {
+    "family": "Samtec PowerStrip/40",
+    "terminal": "PET-08-02-T-VT-LC",
+    "mating": "PES-08-02-T-VT",
+    "cable_family": "PESS",
+    "screen": "48.5 A/contact after cited 20 percent derating at 30 C rise with two powered contacts",
+    "authority_status": "bounded candidate; not final package authority"
+  },
+  "fallback": {
+    "mpn": "ASMPR45-1X2-RK",
+    "family": "Anderson PP15/45",
+    "status": "no authorized local footprint or exact harness assembly"
+  },
+  "current_input": {
+    "J5": {"footprint": "Molex_0039300020_5569_2P_RA", "position_mm": [12.0, 25.0], "pads": {"1": "12V_IN_A", "2": "POWER_GND"}},
+    "J6": {"footprint": "Molex_0039300020_5569_2P_RA", "position_mm": [12.0, 45.0], "pads": {"1": "12V_IN_B", "2": "POWER_GND"}},
+    "current_credit": "8 A/circuit exact two-circuit application; 13 A generic family maximum",
+    "required_credit": "40 A continuous, 45 A for 100 ms"
+  },
+  "missing": [
+    "authorized KiCad footprint/package",
+    "exact cable-side mating assembly and MPN",
+    "contact assignment and installation derating",
+    "mechanical envelope and board-entry verification"
+  ],
+  "required_resume_input": "Package/Power Authority must supply an authorized, mechanically verified footprint and complete mating/harness contract.",
+  "raw_reports": {
+    "base_drc": {"violations": 300, "unconnected_items": 499, "return_code": 0},
+    "region_inspection": "REGION_INSPECTION.txt"
+  },
+  "restricted_reference_policy": "No proprietary Samtec drawing or vendor bytes copied; no footprint synthesized."
+}
