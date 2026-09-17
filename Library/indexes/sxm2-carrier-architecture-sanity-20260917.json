@@ -1,0 +1,24 @@
+{
+  "record_id": "sxm2-carrier-architecture-sanity-20260917",
+  "schema_version": 1,
+  "retrieved": "2026-09-17",
+  "requesting_package": "P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT",
+  "scope": "High-level public-carrier architecture comparison for prototype V100/SXM2 power sanity check; no CAD reuse.",
+  "source_ids": [
+    "sxm2-benchoff-article-20260912",
+    "sxm2-benchoff-repo-3173b02c",
+    "oshwhub-mtf-tongde-v3-20260917",
+    "sxm2-liuxinyu-repo-27dd1229-20260917",
+    "sxm2-ai-cooling-dual-8pin-20260917",
+    "3890p-sxm2-to-pcie-riser-85b0e24",
+    "nvidia-v100-datasheet-2019"
+  ],
+  "retained_material": "metadata and extracted high-level facts only; no third-party CAD, artwork, STEP, images, or restricted bytes retained",
+  "key_observation": "No examined public carrier source publishes a requirement for six independently precision-regulated 6 A V100/SXM2 power loops; common/high-capacity 12 V entry and distribution is the observed pattern.",
+  "limits": [
+    "OSHWHub page does not expose complete power schematic or ratings in accessible text.",
+    "LiuXinyu power connector count is internally inconsistent (3x8-pin+PCIe versus dual 8-pin+PCIe).",
+    "Public precedent does not establish PiSXMe-specific contact, copper, transient, thermal, sequencing, or safety margins."
+  ],
+  "decision_boundary": "Librarian evidence only; Product/Power Authority selects architecture and sets binding requirements."
+}

@@ -412,6 +412,35 @@
         "Ohmite",
         "primary-source"
       ]
+    },
+    {
+      "id": "brief-sxm2-carrier-architecture-sanity-20260917",
+      "kind": "architecture-sanity-evidence-brief",
+      "path": "Library/briefs/sxm2-carrier-architecture-sanity-20260917.md",
+      "tags": [
+        "SXM2",
+        "V100",
+        "carrier",
+        "power",
+        "architecture",
+        "sanity-check",
+        "prototype",
+        "public-precedent"
+      ]
+    },
+    {
+      "id": "index-sxm2-carrier-architecture-sanity-20260917",
+      "kind": "architecture-sanity-evidence-index",
+      "path": "Library/indexes/sxm2-carrier-architecture-sanity-20260917.json",
+      "tags": [
+        "SXM2",
+        "V100",
+        "carrier",
+        "power",
+        "architecture",
+        "provenance",
+        "public-precedent"
+      ]
     }
   ]
 }

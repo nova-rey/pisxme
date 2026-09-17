@@ -1,0 +1,12 @@
+{
+  "record_id": "sxm2-carrier-architecture-sanity-20260917",
+  "source_class": "public implementation precedent and product claims",
+  "retrieved": "2026-09-17",
+  "requesting_package": "P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT",
+  "retention": "metadata, URLs, revisions, and extracted high-level facts only; no expressive CAD or restricted source bytes retained",
+  "private_library_artifacts": [
+    "Library/briefs/sxm2-carrier-architecture-sanity-20260917.md",
+    "Library/indexes/sxm2-carrier-architecture-sanity-20260917.json"
+  ],
+  "decision_boundary": "Not a binding architecture selection or safety approval; authority review required."
+}
