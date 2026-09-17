@@ -1264,3 +1264,7 @@ HPQ Issue #5 was closed as `not planned` after the signed architecture decision 
 ## 2026-09-17 — Protected common-bus source contract bound
 
 `P24-PROTOTYPE-SOURCE-BUS-CONTRACT` signed `PISXME-P24-PROTOTYPE-SOURCE-BUS-20260917` for the selected conventional protected/distributed 12-V architecture. The contract retains 300 W sustained and 330 W for 100 ms, binds an 11.4–12.6 V source window, 40 A continuous and 45 A/100 ms source capability, 11.05/11.00 V protected-bus minima, and a 10.0 mOhm complete positive-plus-return source-to-J1 path cap with explicit harness, protection, PCB, and J1 allocations. It requires ordinary fault/reverse/TVS/OVP-UVLO/inrush/shutdown protection, ampacity/return/via/copper/thermal evidence, forbids unqualified passive sharing, and leaves undocumented SXM2 behavior as `REQUIRES PROTOTYPE VALIDATION`. No CAD or fabricated-hardware claim was made; the superseded six-loop limiter is not reintroduced.
+
+## 2026-09-17 — Protected-bus producer dispatched
+
+The signed source-bus and first-power contracts are now DONE in the Phase 24 queue. `P24-PROTOTYPE-POWER-BUS-PRODUCER` is claimed by Supervisor `prototype_power_bus_producer_supervisor` against the protected/distributed 12-V authority. The producer is limited to an isolated power-region candidate with ordinary protection and rated bus/return geometry; six-loop precision regulation remains superseded. Canonical integration and fresh Light validation remain serialized after the candidate returns.

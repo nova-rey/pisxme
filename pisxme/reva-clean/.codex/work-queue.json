@@ -2788,7 +2788,13 @@
       },
       "base_sha": "31b30dc0",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "31b30dc0",
+        "returned_at": "2026-09-17T22:11:41.881564Z",
+        "returned_by": "prototype_source_bus_contract",
+        "sha": "91c324a6"
+      },
       "completion_criterion": "Signed protected/distributed source-bus contract with calculations, margins, component/rating evidence, and REQUIRES PROTOTYPE VALIDATION dispositions.",
       "created_at": "2026-09-17T22:05:41.192089Z",
       "dependencies": [],
@@ -2799,10 +2805,12 @@
         "no six-loop limiter requirements",
         "prototype validation may remain explicit"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/prototype-source-bus-contract-20260917/RECEIPT.md"
+      ],
       "id": "P24-PROTOTYPE-SOURCE-BUS-CONTRACT",
       "notes": "",
-      "owner": "prototype_source_bus_contract",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2819,12 +2827,10 @@
         }
       ],
       "scope": "Bind the simplest protected/distributed 12-V source and common-bus contract for a 300 W sustained / 330 W bounded-peak V100 prototype: input connectors/conductors, ordinary protection, source voltage/current budget, common bus and returns, voltage drop, copper/via/thermal margins, and explicit prototype validation steps. Do not reintroduce six-loop precision limits.",
-      "session_ids": [
-        "/root/prototype_source_bus_contract"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Bind protected distributed 12-V prototype source bus",
-      "updated_at": "2026-09-17T22:06:06.017759Z",
+      "updated_at": "2026-09-17T22:11:41.972165Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2839,7 +2845,13 @@
       },
       "base_sha": "31b30dc0",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "31b30dc0",
+        "returned_at": "2026-09-17T22:11:42.016682Z",
+        "returned_by": "v100_prototype_first_power_contract",
+        "sha": "e52c7cfc"
+      },
       "completion_criterion": "Signed first-power contract with safe sequence, instruments/limits, stop criteria, and unresolved empirical items clearly marked.",
       "created_at": "2026-09-17T22:05:41.327944Z",
       "dependencies": [],
@@ -2850,10 +2862,12 @@
         "no fabricated measurements",
         "prototype validation requirements explicit"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/v100-prototype-first-power-contract-20260917/RECEIPT.md"
+      ],
       "id": "P24-V100-PROTOTYPE-FIRST-POWER-CONTRACT",
       "notes": "",
-      "owner": "v100_prototype_first_power_contract",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2869,12 +2883,10 @@
         }
       ],
       "scope": "Define current-limited first-power procedure, rail/enable/reset observations, measurement limits, shutdown criteria, thermal/contact checks, and explicit REQUIRES PROTOTYPE VALIDATION dispositions for undocumented SXM2 behavior. Do not fabricate bench results or require production qualification before prototype exists.",
-      "session_ids": [
-        "/root/v100_prototype_first_power_contract"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Define V100 prototype first-power and bring-up contract",
-      "updated_at": "2026-09-17T22:06:06.057754Z",
+      "updated_at": "2026-09-17T22:11:42.104468Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2905,7 +2917,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-PRODUCER",
       "notes": "",
-      "owner": null,
+      "owner": "prototype_power_bus_producer_supervisor",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2922,17 +2934,17 @@
         }
       ],
       "scope": "Implement the signed protected/distributed prototype power architecture in an isolated KiCad producer workspace, preserving anchors and unrelated validated circuitry. Use ordinary protection and adequately rated bus/return geometry; no six-loop precision limiter insertion.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "root-20260917-producer"
+      ],
+      "status": "RUNNING",
       "title": "Implement protected distributed V100 power bus",
-      "updated_at": "2026-09-17T22:05:50.014479Z",
+      "updated_at": "2026-09-17T22:13:16.148416Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "package:P24-PROTOTYPE-SOURCE-BUS-CONTRACT"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -3006,5 +3018,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T22:06:57.179878Z"
+  "updated_at": "2026-09-17T22:13:16.148604Z"
 }
