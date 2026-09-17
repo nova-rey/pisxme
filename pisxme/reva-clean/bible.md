@@ -1177,3 +1177,7 @@ Product/Power Authority reconciled the signed HPQ4 v2.0.0 contract against the r
 2026-09-17 — Limiter selection evidence dependency dispatched
 
 Product/Power Authority found no retained MPN satisfying the HPQ4 6.000–6.400 A independent-loop window and <=57 mOhm hot limiter allocation. `P24-POWER-SOURCE-CONTRACT` and exact-nFET work remain parked on `knowledge:authoritative-6A-window-limiter`; Librarian now owns a bounded private-corpus search and Researcher escalation package.
+
+## 2026-09-17 — Librarian 6 A limiter evidence and authority qualification dispatch
+
+The bounded Librarian search completed and was validated against private Library commit `4faaf69a58731021ac534f760870031a6758edd4`. It found no production limiter MPN satisfying the HPQ4 six-loop contract. The indexed evidence narrows the next internal decision to Product/Power Authority qualification of a calibrated LTC4281/LTC4282-class external-limiter assembly or a bounded manufacturer-supported alternative. No CAD or product-envelope decision changed. Queue package `P24-AUTHORITATIVE-6A-LIMITER-EVIDENCE` is DONE; `P24-6A-LIMITER-QUALIFICATION-AUTHORITY` is RUNNING. Downstream source and nFET work remains waiting on the limiter authority key.

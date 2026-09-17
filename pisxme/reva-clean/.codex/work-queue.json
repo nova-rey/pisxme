@@ -117,10 +117,10 @@
     "knowledge:authoritative-6A-window-limiter": {
       "created_at": "2026-09-17T13:38:27.792517Z",
       "kind": "knowledge",
-      "receipt": null,
+      "receipt": "validation-receipts/authoritative-6a-limiter-evidence-20260917.md",
       "reference": "validation-receipts/power-current-limiter-authority-20260917/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-17T13:47:23.147639Z",
+      "status": "RESOLVED"
     },
     "knowledge:exact-nfet-energy-dossier": {
       "created_at": "2026-09-14T00:37:15.126508Z",
@@ -1030,8 +1030,7 @@
         "results": {}
       },
       "waiting_on": [
-        "authority:power-current-limiter-selection",
-        "knowledge:authoritative-6A-window-limiter"
+        "authority:power-current-limiter-selection"
       ],
       "workstream": "phase24"
     },
@@ -2189,7 +2188,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": null,
+        "returned_at": "2026-09-17T13:46:22.532314Z",
+        "returned_by": "authoritative_6a_limiter_evidence",
+        "sha": "4faaf69a58731021ac534f760870031a6758edd4"
+      },
       "completion_criterion": "Librarian returns authoritative evidence sufficient for Product/Power Authority to issue a new binding limiter selection, or a precise residual evidence gap after bounded search/research.",
       "created_at": "2026-09-17T13:38:27.740214Z",
       "dependencies": [],
@@ -2200,10 +2205,12 @@
         "no CAD/footprint/rule edits",
         "no product-envelope change"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/authoritative-6a-limiter-evidence-20260917.md"
+      ],
       "id": "P24-AUTHORITATIVE-6A-LIMITER-EVIDENCE",
       "notes": "",
-      "owner": "authoritative_6a_limiter_evidence",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2219,12 +2226,60 @@
         }
       ],
       "scope": "Search the private Library first, then commission bounded Researcher acquisition if needed, for an exact production MPN or controller-plus-external-limiter design compatible with HPQ4: six independent 6.000\u20136.400 A full-tolerance/temperature window, <=57 mOhm hot limiter allocation, 12 V source range, fault timing, thermal/reverse behavior, and manufacturer provenance. Return an indexed evidence packet; do not select architecture or edit CAD.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Acquire authoritative 6 A limiter-window evidence",
+      "updated_at": "2026-09-17T13:46:51.348206Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "d87db2ffcedf655acc32169128638ab7e7d752c3",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Product/Power Authority signs one binding limiter selection satisfying HPQ4, or records a precise remaining dependency with calculations and evidence.",
+      "created_at": "2026-09-17T13:47:18.281904Z",
+      "dependencies": [],
+      "domain": "Product / Power Authority",
+      "edit_boundaries": [
+        "authority artifacts and signed calculations only",
+        "no CAD or product-envelope relaxation",
+        "private vendor evidence remains private",
+        "append bible entry with any public sanitized disposition"
+      ],
+      "evidence_refs": [],
+      "id": "P24-6A-LIMITER-QUALIFICATION-AUTHORITY",
+      "notes": "",
+      "owner": "limiter_qualification_authority",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Use the Librarian packet to bind one production limiter architecture or return a precise residual evidence gap. Evaluate LTC4281/LTC4282-class calibrated external-limiter assemblies and any bounded manufacturer-supported alternative against six independent 6.000\u20136.400 A full-tolerance/temperature loops, <=57 mOhm hot limiter allocation, 12 V source range, fault/reverse behavior, thermal/SOA, connector/harness/copper coordination, and production testability. Do not edit CAD.",
       "session_ids": [
-        "/root/authoritative_6a_limiter_evidence"
+        "/root/limiter_qualification_authority"
       ],
       "status": "RUNNING",
-      "title": "Acquire authoritative 6 A limiter-window evidence",
-      "updated_at": "2026-09-17T13:38:40.217134Z",
+      "title": "Qualify six-amp limiter architecture against HPQ4",
+      "updated_at": "2026-09-17T13:47:35.326682Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2245,5 +2300,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T13:38:40.217410Z"
+  "updated_at": "2026-09-17T13:47:35.326837Z"
 }
