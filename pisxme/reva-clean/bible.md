@@ -1280,3 +1280,7 @@ Two materially different producer attempts failed to return a CAD candidate: the
 ## 2026-09-17 — Protected-bus producer routed to MPA corridor authority
 
 The bounded Unblocker classified the protected-bus producer stall as an internal domain-authority problem. The selected PCB has no routed `12V_IN_B` or `FUSED_12V_B`, no bus-wide `12V_PROTECTED` copper/zone, and only `POWER_GND` zones; fresh Light baseline is 300 DRC violations and 499 unconnected items. The producer is parked on `authority:protected-bus-mpa` while Macro Placement Authority issues one binding source/protection/bus corridor plan with Power Integrity advisory. The six-loop MPA plan is explicitly excluded.
+
+## 2026-09-17 — Power Integrity advisory bound for protected-bus MPA
+
+Power Integrity reviewed the current PCB against the signed protected-bus contract. The 11.4 V corner requires 31.452 A sustained and 34.376 A for 100 ms peak with auxiliary load; the 10 mOhm complete path budget permits only 314.5/343.8 mV drop. The present 222 mm 12V_IN_A segment, open `12V_IN_B`/`FUSED_12V_B`, absent `12V_PROTECTED` bus zone, and open `BRIDGE_3V3`/`BRIDGE_1V1` rails are retained as authority evidence. Existing one-contact J5/J6 footprints cannot receive 40/45 A credit without exact source-assembly qualification. The advisory is indexed for MPA; no CAD or hardware result is claimed.
