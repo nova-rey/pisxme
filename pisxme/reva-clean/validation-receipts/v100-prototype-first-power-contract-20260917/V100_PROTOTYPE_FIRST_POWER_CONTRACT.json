@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "contract_id": "PISXME-P24-V100-FIRST-POWER-20260917",
+  "revision": "1.0",
+  "package_id": "P24-V100-PROTOTYPE-FIRST-POWER-CONTRACT",
+  "assigned_base_sha": "c2e0194c432e712d6f8386b9682f038dd06188e6",
+  "status": "SIGNED_PROTOTYPE_VALIDATION_CONTRACT",
+  "signed_scope": "PiSXMe Board Bring-up / Power Supervisor",
+  "signed_date": "2026-09-17",
+  "cad_changed": false,
+  "hardware_operated": false,
+  "fabricated_hardware_claim": false,
+  "production_qualification_claim": false,
+  "authority": {
+    "architecture_decision": "validation-receipts/power-architecture-authority-decision-20260917/POWER_ARCHITECTURE_AUTHORITY_DECISION.md",
+    "architecture_decision_id": "PISXME-P24-POWER-ARCH-20260917",
+    "product_power_invariants": "PROJECT_INVARIANTS.json",
+    "legacy_bringup_context": "../../bringup/REV_A_BRINGUP_PLAN.md",
+    "power_network": "PHASE5_POWER_NETWORK_SPEC.md",
+    "product_sustained_w": 300,
+    "product_design_peak_w": 330,
+    "initial_source_voltage_v": 12.0,
+    "source_voltage_status": "initial_test_setting_only; exact qualified source range remains Power Authority work",
+    "precision_per_sxm2_contact_group_required": false,
+    "passive_sharing_credit": "forbidden_until_exact_parallel_input_assembly_qualification"
+  },
+  "prototype_validation_required": [
+    "V100/SXM2 enable, reset, inhibit, and power-good sequencing at this carrier",
+    "installed startup current and peak/load-step amplitude and slew",
+    "current distribution through the mapped SXM2 contact field",
+    "installed connector, harness, copper, protection, and cooler temperature rise",
+    "brownout, protection trip, controlled shutdown, and restart behavior",
+    "PCIe enumeration and GPU firmware/driver behavior"
+  ],
+  "preconditions": [
+    "assembly identity and connector/protection/cooler inspection recorded",
+    "integrated Phase 24 source/bus and applicable ERC/DRC/connectivity/DFM gates closed",
+    "Power Authority exact source, connector/harness, protection, drop, thermal, and shutdown record signed before full-envelope test",
+    "cooling and emergency source disconnect ready",
+    "current-limited source, DMMs, transient recorder/scope, current measurement, and thermal instrumentation available with IDs/calibration recorded"
+  ],
+  "instrumentation": [
+    "regulated 12 V source with current limit, readback, and remote disable",
+    "two DMMs or equivalent voltage/current instruments",
+    "differential or isolated voltage measurement",
+    "oscilloscope/transient recorder for source, bus, rails, enable, power-good, reset, inhibit, and current",
+    "calibrated current probe or known Kelvin shunt",
+    "thermocouples or calibrated thermal camera",
+    "host logs for CM5, PCIe, driver, GPU, fan/pump and reset state"
+  ],
+  "staged_current_ceiling_a": [
+    {"stage": "unloaded_board_and_rails", "initial": 1.0, "next": null, "note": "test-energy ceiling; not a load requirement"},
+    {"stage": "cm5_only", "initial": 2.0, "next": 5.0, "note": "raise only after stable review and signed source limit"},
+    {"stage": "v100_installed_inhibit_asserted", "initial": 1.0, "next": 5.0, "note": "standby/installation check only"},
+    {"stage": "first_enabled_low_load", "initial": 10.0, "next": 20.0, "note": "incremental observation; no full-envelope claim"},
+    {"stage": "full_envelope", "initial": null, "next": null, "note": "only the signed source/bus limit after all closure gates"}
+  ],
+  "stages": [
+    {
+      "id": "FP-00",
+      "name": "unpowered_inspection_and_resistance",
+      "modules": "all removable modules absent",
+      "measurements": ["visual/assembly/orientation", "raw and protected 12 V to return resistance/diode behavior", "CM5_5V/BRIDGE_3V3/BRIDGE_1V1 to return", "service VBUS isolation", "J1 mapped power-field continuity"],
+      "pass_condition": "no unexplained stable near-short, polarity/protection/return identity agrees with released design, unknown contacts remain undriven",
+      "failure_action": "no power; preserve resistance and inspection record for authority review"
+    },
+    {
+      "id": "FP-01",
+      "name": "cold_plug_protected_bus_modules_absent",
+      "source_voltage_v": 12.0,
+      "current_ceiling_a": 1.0,
+      "controls": "all enables/resets/V100 inhibit safe inactive",
+      "measurements": ["source current/voltage", "raw and protected bus", "inrush waveform", "protection state", "service/USB back-power"],
+      "pass_condition": "no persistent current limit, uncontrolled rail, unexplained protection heating, or back-power",
+      "failure_action": "disable source and investigate before changing limit"
+    },
+    {
+      "id": "FP-02",
+      "name": "local_regulator_and_control_rails",
+      "source_voltage_v": 12.0,
+      "current_ceiling_reference": "staged_current_ceiling_a.unloaded_board_and_rails",
+      "rails": ["CM5_5V", "BRIDGE_3V3", "BRIDGE_1V1"],
+      "controls": ["EN", "PG", "reset", "PERST#", "V100_inhibit"],
+      "pass_condition": "each rail and control signal stays inside exact released component/net contract with stable power-good and intended polarity/timing",
+      "failure_action": "power off; no probing or rework while energized"
+    },
+    {
+      "id": "FP-03",
+      "name": "cm5_only",
+      "current_ceiling_sequence_a": [2.0, 5.0],
+      "measurements": ["CM5 5 V", "host boot/UART", "service USB role", "USB3/Ethernet/storage control", "reset/recovery", "fan/pump controls", "source current and temperatures"],
+      "pass_condition": "host operation and local rails remain stable without back-power, reset loop, cooling loss, or unexplained temperature rise",
+      "failure_action": "disable source; retain host and rail logs"
+    },
+    {
+      "id": "FP-04",
+      "name": "v100_installed_inhibited",
+      "current_ceiling_sequence_a": [1.0, 5.0],
+      "controls": "cooling active; V100 enable/inhibit safe",
+      "measurements": ["J1 seating/orientation", "mapped 12 V and returns", "auxiliary/standby observations", "PERST#/inhibit/enable state", "source/protected bus"],
+      "pass_condition": "no unexpected current path, rail disturbance, or unsafe control transition",
+      "failure_action": "remove source and do not drive unknown contacts"
+    },
+    {
+      "id": "FP-05",
+      "name": "first_enabled_low_load",
+      "current_ceiling_sequence_a": [10.0, 20.0],
+      "controls": "cooling ready; approved enable truth table; lowest reproducible GPU load",
+      "measurements": ["source/protected bus/J1 voltage", "input current", "all rails", "EN/PG/reset/inhibit", "GPU/CM5 telemetry", "power-field/connector/harness/copper/protection/regulator temperatures", "PCIe/driver logs"],
+      "pass_condition": "each bounded step completes without current-limit event, rail/control fault, cooling loss, or thermal limit violation",
+      "failure_action": "power down before changing ceiling; preserve synchronized raw records"
+    },
+    {
+      "id": "FP-06",
+      "name": "full_product_envelope",
+      "power_w_sustained": 300,
+      "power_w_peak": 330,
+      "prerequisite": "signed source/bus, protection, copper/return, thermal, cooling, and load-step closure",
+      "pass_condition": "defined Power Authority waveform, duration, droop/recovery, thermal, and shutdown limits pass on recorded hardware",
+      "status_before_hardware": "REQUIRES_PROTOTYPE_VALIDATION"
+    }
+  ],
+  "measurements_required": [
+    "source and protected-bus voltage/current",
+    "J1 power-field voltage and return drop",
+    "CM5_5V, BRIDGE_3V3, BRIDGE_1V1 rail values and transients",
+    "EN, PG, reset, PERST#, V100 inhibit and enable timing",
+    "connector, harness, copper, protection, regulator, cooler and board temperatures",
+    "cooling tach/flow and fan/pump response",
+    "CM5, PCIe, GPU and driver logs",
+    "raw waveform and artifact hashes"
+  ],
+  "mandatory_shutdown": [
+    "smoke, odor, arcing, visible damage, connector discoloration, mechanical movement, or loss of cooler contact",
+    "persistent source current limit, unexpected protection trip, or unqualified parallel-path imbalance",
+    "rail or protected-bus voltage outside exact declared range, uncontrolled overshoot/oscillation, or failed recovery",
+    "unsafe EN/PG/reset/PERST#/inhibit transition or restart loop",
+    "published absolute maximum or approved test thermal limit reached",
+    "connector/harness temperature-rise limit exceeded or measurement invalid",
+    "cooling loss, required telemetry unavailable, or abnormal rails/current accompanying PCIe failure",
+    "operator cannot explain current path, return voltage, power-good state, or protection response"
+  ],
+  "fault_shutdown": [
+    "assert V100 inhibit or endpoint disable if responsive",
+    "remove source using emergency disconnect",
+    "allow rails to discharge and verify residual voltage is safe",
+    "preserve synchronized measurements and do not reapply power before authority review"
+  ],
+  "run_record_fields": [
+    "contract revision and board/source SHA",
+    "board revision, serials, component/harness/fuse identities",
+    "instrument IDs, ranges, bandwidth/sample rate, and calibration status",
+    "source setpoints/readbacks and current ceilings",
+    "rail/control measurements and synchronized waveforms",
+    "temperatures, cooling state, host/PCIe/GPU logs",
+    "operator, timestamp, raw artifact hashes, stage disposition"
+  ],
+  "stage_dispositions": ["PASS", "FAIL", "UNPROVEN", "REQUIRES_PROTOTYPE_VALIDATION"],
+  "completion_boundary": "This artifact is complete when committed with its receipt and hashes; prototype operation remains unproven until raw hardware evidence exists."
+}
+
