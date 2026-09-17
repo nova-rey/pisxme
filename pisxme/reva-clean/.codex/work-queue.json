@@ -2594,6 +2594,155 @@
         "hpq:nova-rey/codex-config-backup#5"
       ],
       "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "668807f0",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Concise provenance table with earliest source, authority class, rationale, and hard/soft/unproven disposition for every six-loop constraint.",
+      "created_at": "2026-09-17T21:49:40.219995Z",
+      "dependencies": [],
+      "domain": "Product / Power Authority",
+      "edit_boundaries": [
+        "sanitized provenance artifacts",
+        "no CAD",
+        "no HPQ implementation",
+        "no product requirement changes"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-CONSTRAINT-PROVENANCE-AUDIT",
+      "notes": "",
+      "owner": "power_constraint_provenance_audit",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Trace six-loop, no-passive-sharing, per-loop current window, independent regulation, hot-resistance allocation, and SXM2 group-current requirements to earliest authority and classify A-F. Use retained evidence and bounded Library research only.",
+      "session_ids": [
+        "/root/power_constraint_provenance_audit"
+      ],
+      "status": "RUNNING",
+      "title": "Audit six-loop power constraint provenance",
+      "updated_at": "2026-09-17T21:49:46.302676Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "668807f0",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Provenance-indexed high-level carrier comparison with source limitations and applicability notes.",
+      "created_at": "2026-09-17T21:49:40.261508Z",
+      "dependencies": [],
+      "domain": "Librarian / Research",
+      "edit_boundaries": [
+        "private Library provenance and sanitized comparison",
+        "no copied CAD/reference bytes",
+        "no CAD edits",
+        "no architecture selection"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-CARRIER-SANITY-CHECK",
+      "notes": "",
+      "owner": "carrier_architecture_sanity_check",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-THERMAL",
+        "INV-DFM"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Compare high-level power architecture of public working V100/SXM2 carriers, including Tongde Version 3/OSHWHub references, without copying protected expression. Record connector/input topology, direct distribution vs precision branches, ordinary protection/sensing, copper/planes, and stated capability.",
+      "session_ids": [
+        "/root/carrier_architecture_sanity_check"
+      ],
+      "status": "RUNNING",
+      "title": "Compare prototype V100 carrier power practice",
+      "updated_at": "2026-09-17T21:49:46.355779Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "668807f0",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Source matrix and authority recommendation identifying real requirements versus inferred implementation choices.",
+      "created_at": "2026-09-17T21:49:40.308682Z",
+      "dependencies": [],
+      "domain": "SXM2 / Product Power Authority",
+      "edit_boundaries": [
+        "authority/provenance artifacts only",
+        "no CAD",
+        "no HPQ implementation",
+        "no fabricated measurements"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-SXM2-AUTHORITY-AUDIT",
+      "notes": "",
+      "owner": "sxm2_v100_power_authority_audit",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-POWER-SEQUENCING",
+        "INV-GPU-CONTACT"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Audit authoritative NVIDIA/SXM2/V100 power requirements: rails, voltage/current/power, contact mapping and limits, sequencing/enables, aux/standby, grounds/returns, and any genuine current sharing or current limiting requirement. Separate contact multiplicity from independent regulation and preserve prototype assurance boundaries.",
+      "session_ids": [
+        "/root/sxm2_v100_power_authority_audit"
+      ],
+      "status": "RUNNING",
+      "title": "Establish actual V100/SXM2 power contract",
+      "updated_at": "2026-09-17T21:49:46.406121Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -2608,5 +2757,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T14:23:20.311397Z"
+  "updated_at": "2026-09-17T21:49:46.406327Z"
 }

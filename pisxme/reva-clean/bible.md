@@ -1225,3 +1225,7 @@ The final retained-candidate system authority returned `NO_GO_RETAINED_CANDIDATE
 ## 2026-09-17 — Phase 24 hard-idle census pending HPQ Issue #5
 
 The admitted limiter-system hard problem remains open with no `resolution-ready` label. The retained Main Work Queue census is READY=0, RUNNING=0, VALIDATING=0, DONE=30, WAITING=13; every unfinished package has an explicit authority, package, or HPQ dependency. The approved campaign is paused at the hard-problem boundary pending Issue #5; no CAD, Phase 25, or Phase 26 work is authorized until its result is reconciled and independently validated.
+
+## 2026-09-17 — Bounded V100 power-architecture provenance audit reopened
+
+The prior six-loop limiter rabbit hole is frozen as evidence, not governing architecture, pending a first-principles provenance audit. Three independent packages are running: `P24-POWER-CONSTRAINT-PROVENANCE-AUDIT`, `P24-POWER-CARRIER-SANITY-CHECK`, and `P24-POWER-SXM2-AUTHORITY-AUDIT`. They will distinguish NVIDIA/SXM2, physics/safety, product, derived engineering, implementation, and legacy assumptions; compare high-level public carrier practice without copying protected expression; and establish the prototype-appropriate power contract. HPQ Issue #5 remains historical/admitted evidence and is not being extended during this bounded intervention.
