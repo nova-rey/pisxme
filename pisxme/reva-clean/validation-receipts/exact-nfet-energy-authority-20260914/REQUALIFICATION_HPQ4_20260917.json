@@ -1,0 +1,185 @@
+{
+  "authority_dependencies": [
+    "authority:power-current-limiter-selection",
+    "authority:protection-assembly-qualification",
+    "authority:harness-installation-thermal-qualification"
+  ],
+  "base_sha": "a49ed4d9b381ffe9f68bd22224861cd656bae490",
+  "branch": "reva-clean",
+  "cad_changed": false,
+  "calculations": {
+    "legacy_controller_screen_not_production_contract": {
+      "controller": "MAX17527A",
+      "external_nfet_state_during_fast_trip": "ON",
+      "fast_trip_threshold_a_old_dossier_range": [
+        20.0,
+        32.0
+      ],
+      "fast_trip_threshold_a_typ": 24.0,
+      "gate_drive_v_max": 4.95,
+      "gate_drive_v_min": 4.45,
+      "gate_drive_v_typ": 4.75,
+      "internal_nfet_reenable_delay_typ_us": 200.0,
+      "internal_nfet_turnoff_typ_us": 3.0,
+      "reverse_current_response_typ_ns": 108.0,
+      "reverse_current_slow_response_typ_us": 17.0,
+      "screen_energy_at_32a_3us_and_15p625mohm_j": 4.8e-05,
+      "screen_i2t_at_32a_3us_a2s": 0.003072,
+      "status": "NOT_APPLICABLE_TO_PRODUCTION_UNTIL_REPLACEMENT_LIMITER_IS_SELECTED"
+    },
+    "static_nfets": {
+      "at_6_0_a_power_w": 0.5625,
+      "at_6_4_a_power_w": 0.6400000000000001,
+      "bsc_hot_cap_ratio_required_over_12p5_mohm": 1.25,
+      "csd_hot_cap_ratio_required_over_2p2_mohm": 7.102272727272727,
+      "stl_4p5v_25c_drop_at_6p4_v": 0.03712,
+      "stl_hot_cap_ratio_required_over_5p8_mohm": 2.6939655172413794
+    }
+  },
+  "candidate_mpn": null,
+  "candidates": {
+    "BSC096N10LS5": {
+      "exact_4p45v_guarantee": false,
+      "mpn": "BSC096N10LS5",
+      "rds_hot_cap_multiplier_allowance": 1.25,
+      "rds_on_max_mohm_at_4p5v_25c": 12.5,
+      "source": "Infineon Final Data Sheet Rev 2.1, 2019-09-02, indexed in exact-nFET dossier",
+      "status": "COMPARATOR_UNQUALIFIED",
+      "vds_rating_v": 100.0
+    },
+    "CSD18536KCS": {
+      "exact_4p45v_guarantee": false,
+      "mpn": "CSD18536KCS",
+      "rds_hot_cap_multiplier_allowance": 7.102272727272727,
+      "rds_on_max_mohm_at_4p5v_25c": 2.2,
+      "source": "TI SLPS532C, 2024-03, indexed in exact-nFET dossier",
+      "status": "NOT_DEFAULT_QUALIFIED",
+      "vds_rating_v": 60.0
+    },
+    "STL125N10LF8AG": {
+      "avalanche_tested": true,
+      "eas_mj_at_declared_test": 330.0,
+      "exact_4p45v_guarantee": false,
+      "hot_rds_max_guarantee": false,
+      "mpn": "STL125N10LF8AG",
+      "rds_hot_cap_multiplier_allowance": 2.6939655172413794,
+      "rds_on_max_mohm_at_4p5v_25c": 5.8,
+      "rds_test_current_a": 30.0,
+      "source": "ST DS14632 Rev 3, 2026-05-18, https://www.st.com/resource/en/datasheet/stl125n10lf8ag.pdf",
+      "status": "STRONGEST_UNQUALIFIED_CANDIDATE",
+      "tj_range_c": [
+        -55,
+        175
+      ],
+      "vds_rating_v": 100.0
+    }
+  },
+  "contract": {
+    "fault_ceiling_scope": "6.4 A is the full-tolerance non-fault ceiling; fault transients require separate maximum waveform, clamp, SOA and I2t proof.",
+    "hpq4_decision_id": "PISXME-P24-POWER-BUDGET-HPQ4",
+    "hpq4_input_sha256": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae",
+    "hpq4_version": "2.0.0",
+    "limiter_requirement": "Exact limiter guaranteed at 6.000\u20136.400 A over full tolerance and temperature with hot resistance <=57 mOhm.",
+    "loop_ceiling_a": 6.4,
+    "loop_floor_a": 6.0,
+    "loops": 6,
+    "nfet_hot_rds_cap_mohm": 15.625,
+    "no_passive_sharing": true,
+    "prior_limiter_disposition": "MAX17527AATP+T with 6.25 kOhm is REJECTED as production current-contract basis because its guaranteed minimum is 5.754245754 A.",
+    "source_peak_duration_ms": 100.0,
+    "source_peak_v": [
+      12.1,
+      12.6
+    ],
+    "source_sustained_v": [
+      12.05,
+      12.6
+    ],
+    "v100_peak_w": 330.0,
+    "v100_sustained_w": 300.0
+  },
+  "gates": [
+    {
+      "evidence": "HPQ4 v2.0 rejects MAX17527AATP+T/6.25 kOhm as production current-contract basis.",
+      "id": "NFET-LIM-001",
+      "requirement": "Exact production limiter must be selected before the nFET actual gate-drive and fault timing can be bound.",
+      "resume": "authority:power-current-limiter-selection",
+      "state": "WAITING"
+    },
+    {
+      "evidence": "STL125N10LF8AG has 5.8 mOhm max at 4.5 V, 25 C; actual MAX minimum is 4.45 V; hot curve is typical. No candidate has guaranteed 4.45 V hot max.",
+      "id": "NFET-GATE-002",
+      "requirement": "Guaranteed RDS(on) <=15.625 mOhm hot at the actual minimum gate drive over tolerance and temperature.",
+      "resume": "Replacement limiter gate-drive contract plus manufacturer guarantee or bounded production qualification.",
+      "state": "UNPROVEN"
+    },
+    {
+      "evidence": "STL125N10LF8AG is 100 V; PiSXMe negative-input/harness/TVS transient envelope is not bound by HPQ4. Headline VDS alone is insufficient.",
+      "id": "NFET-VDS-003",
+      "requirement": "VDS margin for source, reverse-polarity and transient envelope.",
+      "resume": "Signed source/reverse/TVS/harness transient envelope.",
+      "state": "UNPROVEN"
+    },
+    {
+      "evidence": "Only a legacy MAX17527A illustrative screen exists: 32 A^2*3 us = 0.003072 A^2s and 15.625 mOhm at that current would dissipate 48 uJ under a constant-current simplification. It omits inductive/clamp/fuse trajectories and is not a closure proof.",
+      "id": "NFET-ENERGY-004",
+      "requirement": "Six-loop fast-fault waveform against nFET SOA/I2t, TVS pulse, fuse clearing and PCB copper.",
+      "resume": "Exact limiter, fuse, TVS, harness L/R and copper values with worst-case waveform calculation.",
+      "state": "UNPROVEN"
+    },
+    {
+      "evidence": "MAX17527A public datasheet describes external FET control and typical 108 ns/17 us reverse-current responses, but that controller is rejected as production basis and its values are not a system guarantee.",
+      "id": "NFET-REVERSE-005",
+      "requirement": "Reverse-current and reverse-polarity behavior for the selected limiter/FET pair.",
+      "resume": "Exact limiter reverse-current thresholds/timing and FET VDS/body-diode/turn-off proof.",
+      "state": "UNPROVEN"
+    },
+    {
+      "evidence": "ST gives RthJC 1 C/W and RthJA 162 C/W on a reference board; PiSXMe installation, copper, ambient and airflow are unqualified.",
+      "id": "NFET-THERMAL-006",
+      "requirement": "Installed package/copper/airflow keeps FET junction and protected path within limits.",
+      "resume": "MPA/Thermal installation authority and protected-copper extraction.",
+      "state": "UNPROVEN"
+    },
+    {
+      "evidence": "HPQ4 requires six independent loops and no passive sharing; current source implementation has not bound six production paths or fail-safe aggregation.",
+      "id": "NFET-FAULT-007",
+      "requirement": "Six independent fault paths, FLAG/inhibit/reset behavior and no masking.",
+      "resume": "System/Power Authority fault truth table and implementation candidate.",
+      "state": "UNPROVEN"
+    }
+  ],
+  "limitations": [
+    "No MPN is promoted.",
+    "No gate-drive or SOA/I2t claim is made for production.",
+    "No vendor approval, measurement, fabricated-hardware validation, or CAD authorization is claimed.",
+    "The legacy MAX17527A timing values are retained only as an explanatory non-production screen."
+  ],
+  "package_id": "P24-EXACT-NFET-ENERGY-AUTHORITY",
+  "product_envelope_changed": false,
+  "recommended_next_action": "Power Authority selects a replacement limiter satisfying HPQ4, then requalifies the exact nFET against that limiter actual gate drive and worst-case fault waveform.",
+  "schema_version": 1,
+  "source_records": [
+    {
+      "path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.json",
+      "role": "signed HPQ4 contract",
+      "sha256": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae"
+    },
+    {
+      "path": "validation-receipts/exact-nfet-energy-dossier-20260914/EXACT_NFET_ENERGY_DOSSIER.json",
+      "role": "Librarian indexed primary evidence",
+      "sha256": "c8bc2a07d2e8c751645ee11effb779c8263b952c0b424343f7570189a358ef4f"
+    },
+    {
+      "revision": "DS14632 Rev 3; 2026-05-18",
+      "role": "ST primary datasheet; inspected through public PDF text",
+      "url": "https://www.st.com/resource/en/datasheet/stl125n10lf8ag.pdf"
+    },
+    {
+      "revision": "Rev 0; 2023-03-20",
+      "role": "ADI controller primary datasheet; legacy controller screen only",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/max17527a.pdf"
+    }
+  ],
+  "status": "WAITING_ON_authority_power_current_limiter_selection"
+}

@@ -1157,3 +1157,7 @@ The accepted replacement calculator closed the missing-artifact knowledge depend
 2026-09-17 — JMS581DL manufacturer reconciliation closed
 
 The private Library now contains the seven hashed JMicron/SmartCube design-in originals with Gmail provenance, evidence index, and sanitized matrix. The packet confirms JMS581 facts for a future candidate and supersedes the prior evidence-discovery gap, but leaves selected Path-A TUSB9261/JMS583 architecture unchanged. JMS581 firmware/provisioning, package/net contract, thermal integration, procurement, and any promotion remain unresolved; no vendor bytes or CAD entered the public repository.
+
+2026-09-17 — Exact nFET requalification parked on replacement limiter authority
+
+`P24-EXACT-NFET-ENERGY-AUTHORITY` reconciled the signed HPQ4 v2.0 contract at the current review base. The prior MAX17527AATP+T/6.25 kOhm basis is rejected by HPQ4, so the production limiter and actual gate-drive/fault waveform remain unbound. STL125N10LF8AG remains the strongest unqualified candidate; no candidate yet has a guaranteed 4.45 V hot RDS(on) bound, and VDS/reverse/SOA/I2t/harness/copper/fault-policy evidence remains open. The bounded result is waiting on `authority:power-current-limiter-selection`; no CAD or product-envelope change was made.
