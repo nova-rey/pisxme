@@ -170,6 +170,14 @@
       "resolved_at": "2026-09-17T23:36:14.844784Z",
       "status": "RESOLVED"
     },
+    "knowledge:P24-POWER-INPUT-GEOMETRY-RESEARCH": {
+      "created_at": "2026-09-17T23:45:44.893100Z",
+      "kind": "knowledge",
+      "receipt": null,
+      "reference": "validation-receipts/power-input-geometry-research-20260918",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "knowledge:authoritative-6A-window-limiter": {
       "created_at": "2026-09-17T13:38:27.792517Z",
       "kind": "knowledge",
@@ -3409,7 +3417,8 @@
       "completion_criterion": "One authorized footprint/mating contract is binding for a producer, or a precise authority-level blocker packet identifies the irreducible missing evidence and next owner.",
       "created_at": "2026-09-17T23:42:24.277260Z",
       "dependencies": [
-        "package:P24-POWER-INPUT-ASSEMBLY-EVIDENCE"
+        "package:P24-POWER-INPUT-ASSEMBLY-EVIDENCE",
+        "knowledge:P24-POWER-INPUT-GEOMETRY-RESEARCH"
       ],
       "domain": "Footprint / Package Authority",
       "edit_boundaries": [
@@ -3421,7 +3430,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-GEOMETRY-AUTHORITY",
       "notes": "",
-      "owner": "power_input_footprint_authority",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3438,18 +3447,71 @@
         }
       ],
       "scope": "Resolve the corrective producer's geometry blocker using existing private Library and authorized public/manufacturer evidence. Bind one manufacturable connector footprint, mating cable/harness identity, contact assignment, board-entry geometry, and mechanical envelope, or document the narrow irreducible evidence gap. Do not copy proprietary drawings or invent a footprint.",
-      "session_ids": [
-        "root-20260918-power-input-geometry"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Bind authorized high-current input footprint and mating geometry",
-      "updated_at": "2026-09-17T23:42:24.368821Z",
+      "updated_at": "2026-09-17T23:45:44.893123Z",
       "validation": {
         "required": [
           "footprint_provenance",
           "mating_contract",
           "mechanical_fit",
           "current_rating"
+        ],
+        "results": {}
+      },
+      "waiting_on": [
+        "knowledge:P24-POWER-INPUT-GEOMETRY-RESEARCH"
+      ],
+      "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "e67a12c1",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Librarian receives one evidence-complete candidate or a precise residual vendor-authorization gap.",
+      "created_at": "2026-09-17T23:45:58.915089Z",
+      "dependencies": [],
+      "domain": "Librarian / Researcher",
+      "edit_boundaries": [
+        "Library/evidence only",
+        "no public vendor bytes",
+        "no CAD edits"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-INPUT-GEOMETRY-RESEARCH",
+      "notes": "",
+      "owner": "power_input_geometry_researcher",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "mechanical_assembly_access",
+        "INV-INPUT-CAPACITY"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Bounded public/manufacturer search for a license-compatible, manufacturable footprint and complete mating harness contract for a 40A continuous / 45A 100ms input assembly. Report exact MPNs, license/use status, land-pattern availability, contact assignment, cable/crimp/length, envelope and derating. No CAD or proprietary bytes.",
+      "session_ids": [
+        "root-20260918-power-input-geometry-research"
+      ],
+      "status": "RUNNING",
+      "title": "Research license-compatible high-current connector geometry",
+      "updated_at": "2026-09-17T23:45:58.957896Z",
+      "validation": {
+        "required": [
+          "candidate_search",
+          "license_status",
+          "mating_contract",
+          "residual_gap"
         ],
         "results": {}
       },
@@ -3469,5 +3531,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T23:42:24.369061Z"
+  "updated_at": "2026-09-17T23:45:58.958085Z"
 }
