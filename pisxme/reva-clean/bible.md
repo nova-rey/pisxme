@@ -1288,3 +1288,7 @@ Power Integrity reviewed the current PCB against the signed protected-bus contra
 ## 2026-09-17 — MPA protected-bus corridor plan resolved
 
 Macro Placement Authority issued the sole binding plan `PISXME-P24-PROTECTED-BUS-MPA-20260917`. J5/J6 and J1 remain fixed; the F1/F2, D1/D2, U1/U2, and Q1/Q2 cohorts are fixed at the authority coordinates, with separate A/B paths merging only after Q1/Q2 at x >= 66 mm. The plan reserves an In3 protected-bus plane and ordinary-via arrays to J1, preserves ground/high-speed corridors, and rejects the existing long input run and incomplete protected stubs. The producer dependency `authority:protected-bus-mpa` resolved; the producer is claimed by `protected_bus_kicad_producer_authority_plan` for isolated implementation. Source-assembly capacity remains an explicit acceptance dependency and is not silently waived.
+
+## 2026-09-17 — Post-MPA producer method failure escalated
+
+The first producer attempt after the binding MPA corridor plan completed only fresh baseline ERC/DRC artifacts and no live KiCad process, candidate, or CAD mutation. The worker was released without promoting a result. A single bounded post-MPA Unblocker review now owns classification of launcher/resource/tool-context versus remaining package or implementation contradiction; the six-loop architecture remains superseded and no same-method retry is authorized.
