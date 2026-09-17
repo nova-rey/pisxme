@@ -114,6 +114,14 @@
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
+    "external:vendor-footprint-authorization": {
+      "created_at": "2026-09-17T23:49:13.591794Z",
+      "kind": "external",
+      "receipt": null,
+      "reference": "validation-receipts/power-input-geometry-authority-20260918/AUTHORITY_REPORT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "hpq:#2": {
       "created_at": "2026-09-13T22:51:52.392594Z",
       "kind": "hpq",
@@ -173,10 +181,10 @@
     "knowledge:P24-POWER-INPUT-GEOMETRY-RESEARCH": {
       "created_at": "2026-09-17T23:45:44.893100Z",
       "kind": "knowledge",
-      "receipt": null,
+      "receipt": "validation-receipts/power-input-geometry-research-20260918/RECEIPT.md",
       "reference": "validation-receipts/power-input-geometry-research-20260918",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-17T23:48:55.743912Z",
+      "status": "RESOLVED"
     },
     "knowledge:authoritative-6A-window-limiter": {
       "created_at": "2026-09-17T13:38:27.792517Z",
@@ -3418,7 +3426,8 @@
       "created_at": "2026-09-17T23:42:24.277260Z",
       "dependencies": [
         "package:P24-POWER-INPUT-ASSEMBLY-EVIDENCE",
-        "knowledge:P24-POWER-INPUT-GEOMETRY-RESEARCH"
+        "knowledge:P24-POWER-INPUT-GEOMETRY-RESEARCH",
+        "external:vendor-footprint-authorization"
       ],
       "domain": "Footprint / Package Authority",
       "edit_boundaries": [
@@ -3450,7 +3459,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Bind authorized high-current input footprint and mating geometry",
-      "updated_at": "2026-09-17T23:45:44.893123Z",
+      "updated_at": "2026-09-17T23:49:13.591819Z",
       "validation": {
         "required": [
           "footprint_provenance",
@@ -3461,7 +3470,7 @@
         "results": {}
       },
       "waiting_on": [
-        "knowledge:P24-POWER-INPUT-GEOMETRY-RESEARCH"
+        "external:vendor-footprint-authorization"
       ],
       "workstream": "power-authority"
     },
@@ -3472,7 +3481,13 @@
       },
       "base_sha": "e67a12c1",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/power-input-geometry-research-20260918/RECEIPT.md",
+        "base_sha": "e67a12c1",
+        "returned_at": "2026-09-17T23:48:55.390477Z",
+        "returned_by": "power_input_geometry_researcher",
+        "sha": "58fd813f"
+      },
       "completion_criterion": "Librarian receives one evidence-complete candidate or a precise residual vendor-authorization gap.",
       "created_at": "2026-09-17T23:45:58.915089Z",
       "dependencies": [],
@@ -3482,10 +3497,12 @@
         "no public vendor bytes",
         "no CAD edits"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-input-geometry-research-20260918/RECEIPT.md"
+      ],
       "id": "P24-POWER-INPUT-GEOMETRY-RESEARCH",
       "notes": "",
-      "owner": "power_input_geometry_researcher",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3500,12 +3517,10 @@
         }
       ],
       "scope": "Bounded public/manufacturer search for a license-compatible, manufacturable footprint and complete mating harness contract for a 40A continuous / 45A 100ms input assembly. Report exact MPNs, license/use status, land-pattern availability, contact assignment, cable/crimp/length, envelope and derating. No CAD or proprietary bytes.",
-      "session_ids": [
-        "root-20260918-power-input-geometry-research"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Research license-compatible high-current connector geometry",
-      "updated_at": "2026-09-17T23:45:58.957896Z",
+      "updated_at": "2026-09-17T23:48:55.697646Z",
       "validation": {
         "required": [
           "candidate_search",
@@ -3513,7 +3528,28 @@
           "mating_contract",
           "residual_gap"
         ],
-        "results": {}
+        "results": {
+          "candidate_search": {
+            "receipt": "validation-receipts/power-input-geometry-research-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:48:55.499562Z",
+            "status": "PASS"
+          },
+          "license_status": {
+            "receipt": "validation-receipts/power-input-geometry-research-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:48:55.544308Z",
+            "status": "PASS"
+          },
+          "mating_contract": {
+            "receipt": "validation-receipts/power-input-geometry-research-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:48:55.598496Z",
+            "status": "PASS"
+          },
+          "residual_gap": {
+            "receipt": "validation-receipts/power-input-geometry-research-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:48:55.645983Z",
+            "status": "PASS"
+          }
+        }
       },
       "waiting_on": [],
       "workstream": "power-authority"
@@ -3531,5 +3567,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T23:45:58.958085Z"
+  "updated_at": "2026-09-17T23:49:13.592009Z"
 }

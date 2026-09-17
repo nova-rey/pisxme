@@ -1352,3 +1352,7 @@ Unblocker classified the corrective power-input stop as missing knowledge, not a
 ## 2026-09-18 — Footprint authority confirms residual vendor-geometry gap
 
 Package/Footprint Authority reviewed the Samtec PowerStrip/40 and Anderson PP15/45 candidates. Both have adequate electrical screening but neither has an authorized project footprint, configured pad/NPTH and polarity convention, 3D/mating envelope, or complete cable/crimp contract. The existing Molex footprint remains legacy-only and electrically disqualified. One bounded Researcher search is now running for license-compatible geometry; no proprietary drawing will be copied and no guessed footprint will enter CAD.
+
+## 2026-09-18 — Geometry authority reached external authorization boundary
+
+The bounded public/manufacturer search found no license-compatible configured footprint plus complete mating/harness contract for the high-current source assembly. Package/Footprint Authority parked the geometry package on `external:vendor-footprint-authorization`; the corrective producer and all downstream power-dependent rows remain waiting. No guessed footprint, proprietary drawing copy, or CAD mutation was made. This is the first precise external-boundary census for this path; the campaign remains active and must resume when the authorized geometry or explicit footprint-authorship authority arrives.
