@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "id": "adm1175-6a-limiter-search-20260917",
+  "requesting_package": "P24-6A-LIMITER-RESEARCH-ESCALATION",
+  "retrieved": "2026-09-17",
+  "question": "Find a new manufacturer-supported 12 V limiter/controller-plus-external-limiter assembly that can satisfy six independent 6.000-6.400 A loops and a <=57 mOhm hot allocation.",
+  "search_boundary": {
+    "library_first": true,
+    "new_family": "Analog Devices ADM1175",
+    "prior_families_not_repeated": [
+      "MAX17527A",
+      "TPS1663",
+      "MAX17526A",
+      "LM5066H",
+      "LTC4218",
+      "LTC4281",
+      "LTC4282",
+      "LTC4286",
+      "MAX5977A"
+    ],
+    "cad_changed": false,
+    "production_architecture_selected": false
+  },
+  "retention": {
+    "vendor_bytes_retained": false,
+    "local_hashes_claimed": false,
+    "disposition": "metadata, links, and extracted facts only; no vendor PDF copied"
+  },
+  "derived_contract": {
+    "current_min_a": 6.0,
+    "current_max_a": 6.4,
+    "hot_limiter_resistance_max_mohm": 57.0,
+    "independent_loops": 6,
+    "source_nominal_v": 12.0,
+    "source_range_v": [
+      12.05,
+      12.6
+    ]
+  },
+  "sources": [
+    {
+      "id": "adi-adm1175-product-20260917",
+      "title": "ADM1175 Hot Swap Controller and Digital Power Monitor product page",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/en/products/adm1175.html",
+      "revision": "Production product record; retrieved 2026-09-17",
+      "tier": 1,
+      "class": "primary manufacturer component authority",
+      "parts": [
+        "ADM1175-1ARMZ-R7",
+        "ADM1175-2ARMZ-R7"
+      ],
+      "facts": [
+        "3.15-16.5 V control range",
+        "external N-channel FET gate drive",
+        "adjustable analog current limit",
+        "\u00b13% accurate hot-swap current limit",
+        "automatic retry or latch-off variants",
+        "I2C current/voltage monitor",
+        "production lifecycle shown for listed models"
+      ],
+      "status": "candidate-only",
+      "gaps": [
+        "complete hot path",
+        "reverse-current/reverse-polarity behavior",
+        "external FET SOA and thermal coordination",
+        "PiSXMe production test plan"
+      ]
+    },
+    {
+      "id": "adi-adm1175-ds-rev-c-20260917",
+      "title": "ADM1175 Hot Swap Controller and Digital Power Monitor with Convert Pin Datasheet",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ADM1175.pdf",
+      "revision": "Rev. C; document page date 2012-11-09; retrieved 2026-09-17",
+      "tier": 1,
+      "class": "primary manufacturer component authority",
+      "parts": [
+        "ADM1175-1",
+        "ADM1175-2",
+        "ADM1175-3",
+        "ADM1175-4"
+      ],
+      "limits": {
+        "operating_voltage_v": [
+          3.15,
+          16.5
+        ],
+        "operating_temperature_c": [
+          -40,
+          85
+        ],
+        "current_limit_threshold_mv": [
+          97,
+          103
+        ],
+        "nominal_threshold_mv": 100,
+        "overcurrent_timing_threshold_mv_min": 90,
+        "fast_trip_threshold_mv_max": 115,
+        "fast_response_us": [
+          4,
+          10
+        ],
+        "junction_absolute_max_c": 150,
+        "fault_timer_formula": "tFAULT ~= 21.7 * C_TIMER ms/uF"
+      },
+      "equations": [
+        "I_LIMIT_NOM=100mV/R_SENSE",
+        "I_LIMIT_MIN=97mV/R_SENSE_MAX",
+        "I_LIMIT_MAX=103mV/R_SENSE_MIN"
+      ],
+      "status": "candidate-only",
+      "gaps": [
+        "no reverse blocking contract",
+        "external FET hot RDS(on)/SOA not specified as a complete assembly",
+        "exact shunt and production trim/test are project decisions"
+      ]
+    }
+  ],
+  "screening_calculation": {
+    "rsense_nominal_mohm": 16.13,
+    "rsense_initial_tolerance_percent": 0.1,
+    "rsense_tempco_ppm_per_c": 10,
+    "temperature_span_c": 65,
+    "combined_screening_variation_percent": 0.165,
+    "rsense_min_mohm": 16.1033855,
+    "rsense_max_mohm": 16.1566145,
+    "ilim_min_a": 6.003733,
+    "ilim_max_a": 6.3961705,
+    "shunt_power_max_w": 0.6588056,
+    "remaining_hot_path_budget_mohm": 40.8433855,
+    "status": "screening-only; exact shunt/FET/copper qualification absent"
+  },
+  "disposition": {
+    "qualified_production_mpn": null,
+    "candidate_architecture": "ADM1175-1ARMZ-R7 or ADM1175-2ARMZ-R7 plus exact Kelvin shunt and external N-channel FET per loop",
+    "status": "CANDIDATE_READY_FOR_POWER_AUTHORITY",
+    "residual_gaps": [
+      "exact shunt manufacturer/package/tolerance/tempco",
+      "external FET minimum-gate hot RDS(on)",
+      "complete <=57mOhm installed path",
+      "reverse protection behavior",
+      "SOA/fuse/TVS/harness coordination",
+      "six-loop calibration and production test limits"
+    ],
+    "stop_disposition": "bounded search complete; no further same-package search without new authority request",
+    "external_blocker": false
+  },
+  "brief": "Library/briefs/adm1175-6a-limiter-search-20260917.md"
+}

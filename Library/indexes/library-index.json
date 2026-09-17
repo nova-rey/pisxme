@@ -343,6 +343,36 @@
         "provenance",
         "authority-reassessment"
       ]
+    },
+    {
+      "id": "brief-adm1175-6a-limiter-search-20260917",
+      "kind": "acceptance-evidence-brief",
+      "path": "Library/briefs/adm1175-6a-limiter-search-20260917.md",
+      "tags": [
+        "PiSXMe",
+        "Phase24",
+        "HPQ4",
+        "ADM1175",
+        "6A",
+        "current-limiter",
+        "power",
+        "candidate"
+      ]
+    },
+    {
+      "id": "index-adm1175-6a-limiter-search-20260917",
+      "kind": "acceptance-evidence-index",
+      "path": "Library/indexes/adm1175-6a-limiter-search-20260917.json",
+      "tags": [
+        "PiSXMe",
+        "Phase24",
+        "HPQ4",
+        "ADM1175",
+        "6A",
+        "current-limiter",
+        "provenance",
+        "authority-reassessment"
+      ]
     }
   ]
 }

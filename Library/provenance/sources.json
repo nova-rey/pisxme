@@ -1149,6 +1149,59 @@
       ],
       "status": "incomplete-not-promoted",
       "license_disposition": "citation and extracted facts only; no page copied"
+    },
+    {
+      "id": "adi-adm1175-product-20260917",
+      "title": "ADM1175 Hot Swap Controller and Digital Power Monitor product page",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/en/products/adm1175.html",
+      "revision": "Production product record; retrieved 2026-09-17",
+      "retrieved": "2026-09-17",
+      "tier": 1,
+      "evidence_class": "primary manufacturer component authority",
+      "parts": [
+        "ADM1175-1ARMZ-R7",
+        "ADM1175-2ARMZ-R7"
+      ],
+      "observed_facts": [
+        "3.15 V to 16.5 V control range",
+        "external N-channel FET gate drive",
+        "adjustable analog current limit",
+        "\u00b13% accurate hot-swap current limit",
+        "automatic retry or latch-off variants",
+        "I2C current/voltage monitor",
+        "listed models shown as production"
+      ],
+      "status": "accessible-no-local-copy",
+      "license_disposition": "citation and extracted facts only; no vendor page copied"
+    },
+    {
+      "id": "adi-adm1175-ds-rev-c-20260917",
+      "title": "ADM1175 Hot Swap Controller and Digital Power Monitor with Convert Pin Datasheet",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ADM1175.pdf",
+      "revision": "Rev. C; document page date 2012-11-09; retrieved 2026-09-17",
+      "retrieved": "2026-09-17",
+      "tier": 1,
+      "evidence_class": "primary manufacturer component authority",
+      "parts": [
+        "ADM1175-1",
+        "ADM1175-2",
+        "ADM1175-3",
+        "ADM1175-4"
+      ],
+      "observed_facts": [
+        "VCC 3.15 V to 16.5 V",
+        "TA -40 \u00b0C to +85 \u00b0C",
+        "VLIM 97 mV minimum, 100 mV typical, 103 mV maximum",
+        "I_LIMIT equations use RSENSE min/max",
+        "90 mV minimum overcurrent timing threshold and 115 mV maximum fast-trip threshold in equations",
+        "4-10 \u00b5s fast-overcurrent response guaranteed by design",
+        "programmable TIMER fault interval",
+        "150 \u00b0C junction absolute maximum"
+      ],
+      "status": "accessible-no-local-copy",
+      "license_disposition": "citation and extracted facts only; vendor PDF not retained"
     }
   ]
 }
