@@ -2063,7 +2063,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "/home/nyx/PiSXMe-Library/Library/briefs/jms581dl-manufacturer-packet-20260917.md",
+        "base_sha": "7b55aeb19dd7d0fa424b17010f2fe7d434f6cc6a",
+        "returned_at": "2026-09-17T13:30:21.021798Z",
+        "returned_by": "jms581_manufacturer_reconciliation",
+        "sha": null
+      },
       "completion_criterion": "Private Library contains hashed/provenanced packet; Storage Supervisor returns a manufacturer-vs-current matrix classifying each relevant constraint, exact discrepancies, required/optional changes, authority decisions needed, and candidate evidence or explicit unresolved items.",
       "created_at": "2026-09-17T13:18:44.969913Z",
       "dependencies": [],
@@ -2075,10 +2081,12 @@
         "no unapproved architecture change",
         "no CAD integration without Root serialization and fresh Light validation"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "/home/nyx/PiSXMe-Library/Library/briefs/jms581dl-manufacturer-packet-20260917.md"
+      ],
       "id": "P24-JMS581DL-MANUFACTURER-RECONCILIATION",
       "notes": "",
-      "owner": "jms581_manufacturer_reconciliation",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2096,12 +2104,10 @@
         }
       ],
       "scope": "Ingest and provenance the supplied JMicron/SmartCube JMS581DL manufacturer packet into the private Library, then compare manufacturer schematic, PCB, layout guide, datasheet, SPI list, BOM, and 1-LUN reference schematic against the current selected Path-A implementation. Produce a bounded discrepancy/constraint report, authority recommendations, and any justified implementation candidates. Preserve original vendor bytes and restriction metadata outside the public repository.",
-      "session_ids": [
-        "/root/jms581_manufacturer_reconciliation"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Reconcile JMS581DL manufacturer reference packet against selected Path-A",
-      "updated_at": "2026-09-17T13:18:58.590092Z",
+      "updated_at": "2026-09-17T13:30:21.131076Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2122,5 +2128,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T13:27:34.602225Z"
+  "updated_at": "2026-09-17T13:30:21.131270Z"
 }

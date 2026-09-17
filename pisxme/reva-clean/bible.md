@@ -1153,3 +1153,7 @@ The accepted replacement calculator closed the missing-artifact knowledge depend
 2026-09-17 — HPQ4 corrected budget current-head validation closed
 
 `P24-POWER-BUDGET-CORRECTION` passed current-head validation at `73a05084`; signed input, accepted replacement calculator, manifest, and optimized/normal outputs reconcile. The package is DONE and `P24-EXACT-NFET-ENERGY-AUTHORITY` is newly READY and dispatched to `exact_nfet_requalification`. Historical HPQ calculator remains missing; physical qualification gates remain open.
+
+2026-09-17 — JMS581DL manufacturer reconciliation closed
+
+The private Library now contains the seven hashed JMicron/SmartCube design-in originals with Gmail provenance, evidence index, and sanitized matrix. The packet confirms JMS581 facts for a future candidate and supersedes the prior evidence-discovery gap, but leaves selected Path-A TUSB9261/JMS583 architecture unchanged. JMS581 firmware/provisioning, package/net contract, thermal integration, procurement, and any promotion remain unresolved; no vendor bytes or CAD entered the public repository.
