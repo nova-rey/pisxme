@@ -2909,7 +2909,13 @@
       },
       "base_sha": "31b30dc0",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "/home/nyx/eda-workspaces/protected-bus-direct-final/project/pisxme/reva-clean/validation-receipts/protected-bus-producer-candidate-20260917/CANDIDATE_CENSUS.json",
+        "base_sha": "31b30dc0",
+        "returned_at": "2026-09-17T23:08:22.443705Z",
+        "returned_by": "protected_bus_direct_implementer",
+        "sha": "8dddf504"
+      },
       "completion_criterion": "Producer candidate with exact changed scope, connectivity/DRC targeted evidence, and serialized integration handoff.",
       "created_at": "2026-09-17T22:05:50.014479Z",
       "dependencies": [
@@ -2923,10 +2929,12 @@
         "no global rule relaxation",
         "return candidate SHA and raw reports"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/protected-bus-producer-candidate-20260917/PRODUCER_HANDOFF_RECEIPT.md"
+      ],
       "id": "P24-PROTOTYPE-POWER-BUS-PRODUCER",
       "notes": "",
-      "owner": "protected_bus_direct_implementer",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2943,12 +2951,10 @@
         }
       ],
       "scope": "Implement the signed protected/distributed prototype power architecture in an isolated KiCad producer workspace, preserving anchors and unrelated validated circuitry. Use ordinary protection and adequately rated bus/return geometry; no six-loop precision limiter insertion.",
-      "session_ids": [
-        "root-20260917-producer-direct-implementer"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Implement protected distributed V100 power bus",
-      "updated_at": "2026-09-17T22:50:52.312382Z",
+      "updated_at": "2026-09-17T23:09:32.750079Z",
       "validation": {
         "required": [],
         "results": {}
@@ -3002,16 +3008,14 @@
       ],
       "scope": "Serialize the accepted prototype power-bus candidate into canonical HEAD and run fresh KiCad Light validation at the exact integrated SHA with pinned rules/libraries/toolchain. Reconcile topology changes against baseline; do not claim isolated passes as closure.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "READY",
       "title": "Integrate and fresh-Light validate prototype power bus",
-      "updated_at": "2026-09-17T22:05:50.056039Z",
+      "updated_at": "2026-09-17T23:09:32.750118Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "package:P24-PROTOTYPE-POWER-BUS-PRODUCER"
-      ],
+      "waiting_on": [],
       "workstream": "canonical-integration"
     }
   ],
@@ -3027,5 +3031,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T22:50:52.312693Z"
+  "updated_at": "2026-09-17T23:09:32.750272Z"
 }
