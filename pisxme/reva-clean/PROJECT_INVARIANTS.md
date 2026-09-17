@@ -6,10 +6,10 @@ Governing contract at `c06876d2bb3c244d29ad04e883a253eefd35c265`; audit pauses n
 |---|---|---|---|---|---|
 | INV-PRODUCT-V100-300W | Rev A supports V100/SXM2 300 W sustained at product input | 300 W sustained | C | FAIL | Product/Power Authority |
 | INV-PRODUCT-V100-330W-PEAK | Retain 330 W design peak allowance | 330 W peak | C | FAIL | Product/Power Authority |
-| INV-INPUT-12V | Nominal regulated/current-limited 12 V source with declared tolerance | 12 V nominal; tolerance and current limit to be bound | B | UNPROVEN | Power Authority |
+| INV-INPUT-12V | Nominal external 12 V source for selected protected-bus architecture | 12 V nominal; exact tolerance/current to be bound | D | UNPROVEN | Power Authority |
 | INV-INPUT-CAPACITY | Input system carries product envelope after efficiency and low-voltage loads | 29.87963 A sustained; 32.65741 A peak at 12 V, 90% screen | D | FAIL | Power Authority |
 | INV-MOLEX-8A | Selected PS-43879-001-001 standard two-circuit assembly is limited to 8 A/circuit before derating | 8 A/circuit; 16 A arithmetic screen | B | PASS | Package/Power Authority |
-| INV-BRANCH-SHARING | No assumed passive branch current sharing; each branch independently limited/fault handled | sharing prohibited absent qualification | B | UNPROVEN | Power Authority |
+| INV-BRANCH-SHARING | No passive sharing credit between parallel external input paths without exact qualification | each path rated/protected; no equal-current credit | D | UNPROVEN | Power Authority |
 | INV-PROTECTION | Reverse block, OVP/UVLO, TVS, fuse I2t, MOSFET SOA and shutdown inhibit are bounded | thresholds/energy/I2t required | A | UNPROVEN | Power Authority |
 | INV-RAIL-5V | CM5 5 V rail supports declared current and effective capacitance | 5.0 V, 3 A; TPSM63606 6 A; >=30 uF effective | B | UNPROVEN | PI Authority |
 | INV-RAIL-3V3 | Bridge 3.3 V rail supports declared current and effective capacitance | 3.3 V, 2 A; >=50 uF effective | B | UNPROVEN | PI Authority |
@@ -31,3 +31,14 @@ Governing contract at `c06876d2bb3c244d29ad04e883a253eefd35c265`; audit pauses n
 | INV-FIRMWARE | Configuration/programming/procurement provenance is sufficient; undocumented V100 behavior remains empirical risk | required firmware/configuration records | C | UNPROVEN | Firmware/Provenance Authority |
 
 Historical implementation choices are subordinate to these invariants. Where the existing two-branch input ceiling conflicts with `INV-PRODUCT-V100-300W`, it is `SUPERSEDED_BY_INVARIANT`.
+
+
+## Power architecture amendment — 2026-09-17
+
+Authority record: `validation-receipts/power-architecture-authority-decision-20260917/POWER_ARCHITECTURE_AUTHORITY_DECISION.md` (`PISXME-P24-POWER-ARCH-20260917`, signed Product / Power Authority). The selected Rev A prototype architecture is an adequately rated external 12-V input assembly feeding an ordinary protected common/distributed V100 12-V bus, with separate input protection where multiple paths are mechanically required. Precision current regulation per SXM2 contact group is not a governing requirement.
+
+The following internal six-loop constraints are superseded as architecture requirements: six independent loops, no passive sharing as a six-loop contract, 6.000 A minimum, 6.400 A maximum, precision regulation/limiting on every loop, and the <=57 mOhm hot limiter allocation. The separate safety rule against taking unqualified passive sharing credit across parallel external input paths remains a derived hard constraint when such paths are actually selected. Per-contact/group current remains **UNPROVEN**; contact multiplicity is not a current-regulation contract.
+
+New contract entries are `INV-PROTOTYPE-POWER-ARCH`, `INV-PROTOTYPE-EMPIRICAL-GATE`, and `INV-PROTECTED-BUS`. They require closure of source, connector/harness, protection, copper, return, voltage drop and thermal evidence while preserving 300 W sustained and 330 W bounded peak. Undocumented SXM2 sequencing/auxiliary behavior and first-power results are explicitly `REQUIRES PROTOTYPE VALIDATION`; this project makes no fabricated-hardware or production-qualification claim.
+
+HPQ #5 and its limiter evidence remain historical records. Its six-loop dependency is superseded/reframed by the signed architecture decision and must not resurrect the old limiter qualification campaign.

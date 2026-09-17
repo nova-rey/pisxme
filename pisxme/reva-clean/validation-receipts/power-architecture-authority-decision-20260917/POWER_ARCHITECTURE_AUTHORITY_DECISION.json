@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "decision_id": "PISXME-P24-POWER-ARCH-20260917",
+  "revision": "1.0",
+  "package_id": "P24-POWER-ARCHITECTURE-AUTHORITY-DECISION",
+  "assigned_base_sha": "cb066de9",
+  "review_head_sha": "0dba84d31e0fa98dc618f580afc1c92670f5f9c6",
+  "evidence": {
+    "constraint_provenance": "cb066de9",
+    "sxm2_authority_audit": "1056ba6c",
+    "carrier_sanity_private_library": "c882dfe3a3dfb26eab66c54f83f611c7800bde59",
+    "foundational_invariants": "c06876d2",
+    "retained_limiter_no_go": "dd2e7eed"
+  },
+  "status": "SIGNED_SELECTED_PROTOTYPE_ARCHITECTURE",
+  "assurance_level": "PROTOTYPE_OPEN_HARDWARE",
+  "product_requirements": {
+    "v100_sustained_w": 300,
+    "design_peak_w": 330,
+    "peak_status": "retained_bounded_allowance",
+    "fabricated_hardware_claim": false,
+    "production_qualification_claim": false
+  },
+  "selected_architecture": {
+    "class": "B_WITH_C_PROTECTION_REFINEMENT",
+    "name": "protected_common_12v_distribution_bus",
+    "source": "adequately_rated_external_12v_input_assembly",
+    "input_paths": "one_or_more_separately_protected_and_exactly_qualified_paths",
+    "distribution": "ordinary_protected_common_12v_bus_to_mapped_sxm2_power_contacts_and_returns",
+    "protection": [
+      "input_fuse_or_equivalent_fault_isolation",
+      "reverse_polarity_or_ideal_diode",
+      "TVS_OVP_UVLO_policy",
+      "bounded_inrush_and_shutdown",
+      "optional_current_sense"
+    ],
+    "precision_per_contact_group_regulation": false,
+    "passive_sharing_credit": "forbidden_until_exact_parallel_input_assembly_qualification",
+    "source_screen_a_continuous": 40,
+    "source_screen_a_peak": 45,
+    "source_screen_status": "class_d_starting_budget_not_frozen_or_qualified",
+    "prototype_validation": "REQUIRES_PROTOTYPE_VALIDATION"
+  },
+  "comparison": [
+    {
+      "id": "A",
+      "name": "six_loop_precision_control",
+      "decision": "SUPERSEDED",
+      "reason": "internal E/F premise; no A-D origin",
+      "complexity": "highest",
+      "evidence": "no public carrier or NVIDIA six-loop requirement"
+    },
+    {
+      "id": "B",
+      "name": "conventional_protected_distributed_12v",
+      "decision": "SELECTED",
+      "reason": "minimum architecture satisfying product goal when source/drop/thermal/protection close",
+      "complexity": "lowest"
+    },
+    {
+      "id": "C",
+      "name": "protected_input_paths_common_bus",
+      "decision": "SELECTED_REFINEMENT_IF_NEEDED",
+      "reason": "supports mechanical multiple-input assembly without precision equalization",
+      "complexity": "low_to_moderate"
+    }
+  ],
+  "constraint_ledger": [
+    {
+      "id": "PWR-LOOP-001",
+      "status": "SUPERSEDED",
+      "reason": "six loops first in internal candidate 937fac20"
+    },
+    {
+      "id": "PWR-LOOP-002",
+      "status": "SUPERSEDED_AS_SIX_LOOP;HARD_AS_PARALLEL_INPUT_SAFETY",
+      "reason": "retain only scoped no-sharing safety for exact parallel inputs"
+    },
+    {
+      "id": "PWR-LOOP-003",
+      "status": "SUPERSEDED",
+      "reason": "6 A floor derived from abandoned loop allocation"
+    },
+    {
+      "id": "PWR-LOOP-004",
+      "status": "SUPERSEDED",
+      "reason": "6.4 A screen derived from internal derating"
+    },
+    {
+      "id": "PWR-LOOP-005",
+      "status": "SUPERSEDED",
+      "reason": "precision per-loop control not externally required"
+    },
+    {
+      "id": "PWR-LOOP-006",
+      "status": "SUPERSEDED",
+      "reason": "57 mOhm is candidate loss allocation"
+    },
+    {
+      "id": "PWR-LOOP-007",
+      "status": "UNPROVEN",
+      "reason": "no contact-group current authority found"
+    },
+    {
+      "id": "PWR-BUS-001",
+      "status": "HARD",
+      "reason": "product/safety source-bus closure"
+    },
+    {
+      "id": "PWR-BUS-002",
+      "status": "HARD",
+      "reason": "no unqualified parallel-input sharing credit"
+    },
+    {
+      "id": "PWR-BUS-003",
+      "status": "UNPROVEN_REQUIRES_PROTOTYPE_VALIDATION",
+      "reason": "standalone SXM2 auxiliary/sequence evidence incomplete"
+    }
+  ],
+  "hpq5": {
+    "issue": "nova-rey/codex-config-backup#5",
+    "status": "SUPERSEDED_REFRAMED",
+    "action": "retain historical evidence; remove as governing dependency; do not delete or resume six-loop searches",
+    "resumption_condition": "new A-D authority source independently requires six-loop precision control"
+  },
+  "replacement_packages": [
+    {
+      "id": "P24-PROTOTYPE-SOURCE-BUS-CONTRACT",
+      "status": "READY_AFTER_DECISION",
+      "depends_on": []
+    },
+    {
+      "id": "P24-PROTOTYPE-POWER-BUS-PRODUCER",
+      "status": "WAITING",
+      "depends_on": [
+        "package:P24-PROTOTYPE-SOURCE-BUS-CONTRACT"
+      ]
+    },
+    {
+      "id": "P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
+      "status": "WAITING",
+      "depends_on": [
+        "package:P24-PROTOTYPE-POWER-BUS-PRODUCER"
+      ]
+    },
+    {
+      "id": "P24-V100-PROTOTYPE-FIRST-POWER-CONTRACT",
+      "status": "READY_AFTER_DECISION",
+      "depends_on": []
+    }
+  ],
+  "signed_by": "Product / Power Authority",
+  "signed_date": "2026-09-17",
+  "cad_changed": false
+}

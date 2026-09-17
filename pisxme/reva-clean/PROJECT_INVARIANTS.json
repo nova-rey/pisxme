@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
   "contract_id": "PISXME-REV-A-FOUNDATIONAL-INVARIANTS",
-  "source_commit": "c06876d2bb3c244d29ad04e883a253eefd35c265",
-  "generated_at": "2026-09-13T22:51:19.401027+00:00",
+  "source_commit": "PISXME-P24-POWER-ARCH-20260917",
+  "generated_at": "2026-09-17T15:00:00+00:00",
   "authority_classes": {
     "A": "Physics / safety",
     "B": "External interface / component contract",
@@ -44,15 +44,15 @@
       "id": "INV-INPUT-12V",
       "statement": "Nominal regulated/current-limited 12 V source with declared tolerance",
       "numeric_value_or_range": "12 V nominal; tolerance and current limit to be bound",
-      "authority_class": "B",
+      "authority_class": "D",
       "contributing_classes": [],
-      "exact_provenance": "PHASE5_POWER_CALCULATIONS.md; power authority v1.1",
-      "rationale": "Defines source basis",
+      "exact_provenance": "PISXME-P24-POWER-ARCH-20260917 signed Product/Power Authority decision; 12 V is selected prototype architecture, not an NVIDIA rail mandate",
+      "rationale": "Selected conventional protected/distributed 12-V prototype bus; exact source tolerance and assembly contract remain closure work",
       "affected_subsystems": "input,harness",
       "verification_method": "source contract and measurement",
       "responsible_authority": "Power Authority",
       "current_satisfaction": "UNPROVEN",
-      "contradiction_evidence": "Source/harness installation and tolerance not closed."
+      "contradiction_evidence": "Exact source, connector/harness and protection contract not yet integrated"
     },
     {
       "id": "INV-INPUT-CAPACITY",
@@ -84,17 +84,17 @@
     },
     {
       "id": "INV-BRANCH-SHARING",
-      "statement": "No assumed passive branch current sharing; each branch independently limited/fault handled",
-      "numeric_value_or_range": "sharing prohibited absent qualification",
-      "authority_class": "B",
+      "statement": "No passive sharing credit between parallel external input paths without exact assembly qualification",
+      "numeric_value_or_range": "each selected input path must be rated/protected; no equal-current credit until qualified",
+      "authority_class": "D",
       "contributing_classes": [],
-      "exact_provenance": "Molex application specification; power authority v1.1",
-      "rationale": "Avoids unqualified imbalance",
+      "exact_provenance": "PISXME-P24-POWER-ARCH-20260917 derived safety rule for any multi-input common bus; six-loop contract superseded",
+      "rationale": "Prevents unqualified input-path imbalance while allowing a simpler protected common bus",
       "affected_subsystems": "input,protection",
       "verification_method": "branch limit/fault test",
       "responsible_authority": "Power Authority",
       "current_satisfaction": "UNPROVEN",
-      "contradiction_evidence": "No qualified sharing/monitoring implementation."
+      "contradiction_evidence": "Replacement input assembly and parallel-path qualification remain open"
     },
     {
       "id": "INV-PROTECTION",
@@ -361,6 +361,59 @@
       "responsible_authority": "Firmware/Provenance Authority",
       "current_satisfaction": "UNPROVEN",
       "contradiction_evidence": "No hardware operation or vendor authorization claimed."
+    },
+    {
+      "id": "INV-PROTOTYPE-POWER-ARCH",
+      "statement": "Rev A uses an adequately rated external 12-V source assembly feeding an ordinary protected common/distributed V100 12-V bus; precision per-contact-group regulation is not required",
+      "numeric_value_or_range": "300 W sustained; 330 W bounded peak; provisional 40 A continuous / 45 A peak source screen pending exact contract",
+      "authority_class": "D",
+      "contributing_classes": [
+        "C",
+        "A",
+        "B"
+      ],
+      "exact_provenance": "PISXME-P24-POWER-ARCH-20260917 signed Product/Power Authority comparison of provenance, SXM2 authority, and carrier sanity evidence",
+      "rationale": "Minimum defensible prototype architecture satisfying product and safety closure without an unsupported six-loop premise",
+      "affected_subsystems": "input,protection,power,thermal,J1",
+      "verification_method": "exact source/connector/harness contract, drop/copper/thermal calculations, integrated ERC/DRC and first-power plan",
+      "responsible_authority": "Product/Power Authority",
+      "current_satisfaction": "UNPROVEN",
+      "contradiction_evidence": "Current PCB still embodies legacy two-circuit input and has no integrated replacement bus"
+    },
+    {
+      "id": "INV-PROTOTYPE-EMPIRICAL-GATE",
+      "statement": "Undocumented standalone SXM2 sequencing/auxiliary behavior and first-power electrical/thermal behavior require explicit prototype validation",
+      "numeric_value_or_range": "current-limited bring-up, voltage/current/temperature/enable/reset observations and stop limits after fabrication",
+      "authority_class": "C",
+      "contributing_classes": [
+        "A",
+        "B"
+      ],
+      "exact_provenance": "PISXME-P24-POWER-ARCH-20260917 prototype assurance disposition",
+      "rationale": "Do not fabricate measurements or require production qualification before a prototype exists",
+      "affected_subsystems": "power,firmware,J1,thermal",
+      "verification_method": "signed first-power/bring-up procedure and retained measurements after fabrication",
+      "responsible_authority": "Power/Firmware/Thermal Authority",
+      "current_satisfaction": "UNPROVEN",
+      "contradiction_evidence": "No fabricated hardware exists in Phase 24"
+    },
+    {
+      "id": "INV-PROTECTED-BUS",
+      "statement": "Common protected 12-V distribution must carry declared product envelope with voltage-drop, fault, return and thermal margin",
+      "numeric_value_or_range": "300 W sustained; 330 W bounded peak; exact voltage/current/drop margins to be signed in source-bus contract",
+      "authority_class": "D",
+      "contributing_classes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "exact_provenance": "PISXME-P24-POWER-ARCH-20260917; derived from product, connector, physics and protection constraints",
+      "rationale": "Replaces unsupported precision-loop contract with a real system-level closure requirement",
+      "affected_subsystems": "input,power,connector,copper,return,thermal",
+      "verification_method": "source-bus authority calculation, exact component ratings, fresh integrated Light validation and prototype test procedure",
+      "responsible_authority": "Power Integrity/Power Authority",
+      "current_satisfaction": "UNPROVEN",
+      "contradiction_evidence": "Legacy input and copper remain incomplete"
     }
   ],
   "superseded_constraints": [
@@ -373,12 +426,49 @@
       "item": "RTL9210B Path B as production integration",
       "by": "INV-STORAGE-PATHB",
       "disposition": "OUT_OF_SCOPE_NOT_APPLICABLE"
+    },
+    {
+      "item": "PWR-LOOP-001 six independent 12-V loops",
+      "by": "PISXME-P24-POWER-ARCH-20260917",
+      "disposition": "SUPERSEDED_BY_AUTHORITY",
+      "reason": "Internal E/F implementation constraint lacks A-D provenance; protected common 12-V prototype bus selected"
+    },
+    {
+      "item": "PWR-LOOP-002 six-loop no-passive-sharing contract",
+      "by": "PISXME-P24-POWER-ARCH-20260917",
+      "disposition": "SUPERSEDED_BY_AUTHORITY",
+      "reason": "Internal E/F implementation constraint lacks A-D provenance; protected common 12-V prototype bus selected"
+    },
+    {
+      "item": "PWR-LOOP-003 6.000 A minimum per loop",
+      "by": "PISXME-P24-POWER-ARCH-20260917",
+      "disposition": "SUPERSEDED_BY_AUTHORITY",
+      "reason": "Internal E/F implementation constraint lacks A-D provenance; protected common 12-V prototype bus selected"
+    },
+    {
+      "item": "PWR-LOOP-004 6.400 A maximum per loop",
+      "by": "PISXME-P24-POWER-ARCH-20260917",
+      "disposition": "SUPERSEDED_BY_AUTHORITY",
+      "reason": "Internal E/F implementation constraint lacks A-D provenance; protected common 12-V prototype bus selected"
+    },
+    {
+      "item": "PWR-LOOP-005 precision regulation/limiting on every loop",
+      "by": "PISXME-P24-POWER-ARCH-20260917",
+      "disposition": "SUPERSEDED_BY_AUTHORITY",
+      "reason": "Internal E/F implementation constraint lacks A-D provenance; protected common 12-V prototype bus selected"
+    },
+    {
+      "item": "PWR-LOOP-006 <=57 mOhm hot limiter allocation",
+      "by": "PISXME-P24-POWER-ARCH-20260917",
+      "disposition": "SUPERSEDED_BY_AUTHORITY",
+      "reason": "Internal E/F implementation constraint lacks A-D provenance; protected common 12-V prototype bus selected"
     }
   ],
   "evidence_packets": [
     "validation-receipts/foundational-invariants/product-power-20260914/PRODUCT_POWER_INVARIANT_PACKET.json",
     "validation-receipts/foundational-invariants/interfaces-20260914/INTERFACE_INVARIANTS_PACKET.json",
-    "validation-receipts/foundational-invariants/fab-mech-20260914/FAB_MECH_INVARIANT_PACKET.json"
+    "validation-receipts/foundational-invariants/fab-mech-20260914/FAB_MECH_INVARIANT_PACKET.json",
+    "validation-receipts/power-architecture-authority-decision-20260917/POWER_ARCHITECTURE_AUTHORITY_DECISION.json"
   ],
-  "process_gate": "Every project must establish this invariant/engineering-budget gate before broad implementation. Downstream packages reference invariant IDs and cannot become READY when required invariants are absent."
+  "process_gate": "Every project must establish this invariant/engineering-budget gate before broad implementation. Downstream packages reference invariant IDs and cannot become READY when required invariants are absent. Prototype-only empirical behavior is explicitly marked REQUIRES PROTOTYPE VALIDATION and is not fabricated as a pre-fabrication PASS."
 }

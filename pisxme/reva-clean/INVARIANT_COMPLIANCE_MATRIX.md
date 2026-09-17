@@ -6,10 +6,10 @@ Baseline `c06876d2bb3c244d29ad04e883a253eefd35c265`; states are exactly PASS, FA
 |---|---|---|---|
 | INV-PRODUCT-V100-300W | FAIL | Current selected input is 16 A pre-derating versus 29.87963 A screen. | Product/Power Authority |
 | INV-PRODUCT-V100-330W-PEAK | FAIL | Current input cannot support 32.65741 A screen. | Product/Power Authority |
-| INV-INPUT-12V | UNPROVEN | Source/harness installation and tolerance not closed. | Power Authority |
+| INV-INPUT-12V | UNPROVEN | Selected protected-bus 12 V architecture; exact source tolerance and input assembly remain open. | Power Authority |
 | INV-INPUT-CAPACITY | FAIL | Molex assembly 8 A/circuit, 16 A pre-derating. | Power Authority |
 | INV-MOLEX-8A | PASS | Component limit passes itself; system envelope does not. | Package/Power Authority |
-| INV-BRANCH-SHARING | UNPROVEN | No qualified sharing/monitoring implementation. | Power Authority |
+| INV-BRANCH-SHARING | UNPROVEN | Replacement rule applies only to parallel external input paths; exact assembly qualification remains open. | Power Authority |
 | INV-PROTECTION | UNPROVEN | No complete transient energy and shutdown evidence. | Power Authority |
 | INV-RAIL-5V | UNPROVEN | Physical copper/effective C/thermal open. | PI Authority |
 | INV-RAIL-3V3 | UNPROVEN | Current integrated serialized copper absent. | PI Authority |
@@ -31,3 +31,8 @@ Baseline `c06876d2bb3c244d29ad04e883a253eefd35c265`; states are exactly PASS, FA
 | INV-FIRMWARE | UNPROVEN | No hardware operation or vendor authorization claimed. | Firmware/Provenance Authority |
 
 No broad CAD repair is READY until the invariant gate and every high-impact contradiction has an owned package. Scoped prior receipts remain reusable evidence.
+
+
+## Power architecture amendment — 2026-09-17
+
+The six-loop precision-limiter constraints are superseded as the governing architecture by `PISXME-P24-POWER-ARCH-20260917`; their evidence remains historical. New protected-bus rows `INV-PROTOTYPE-POWER-ARCH`, `INV-PROTOTYPE-EMPIRICAL-GATE`, and `INV-PROTECTED-BUS` are `UNPROVEN` pending source/bus closure and explicit prototype-validation procedures.

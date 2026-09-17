@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "decision_id": "PISXME-P24-POWER-ARCH-20260917",
+  "package_id": "P24-POWER-ARCHITECTURE-AUTHORITY-DECISION",
+  "root_owned_transitions": [
+    {"action":"complete_authority_package","package":"P24-POWER-ARCHITECTURE-AUTHORITY-DECISION"},
+    {"action":"supersede_dependency_subtree","dependency":"hpq:nova-rey/codex-config-backup#5","replacement":"PISXME-P24-POWER-ARCH-20260917","scope":["P24-6A-LIMITER-SYSTEM-AUTHORITY-DECISION","P24-POWER-SOURCE-CONTRACT","P24-EXACT-NFET-ENERGY-AUTHORITY","six-loop connector/protection/harness packages"]},
+    {"action":"add","id":"P24-PROTOTYPE-SOURCE-BUS-CONTRACT","state":"READY","dependencies":[]},
+    {"action":"add","id":"P24-PROTOTYPE-POWER-BUS-PRODUCER","state":"WAITING","dependencies":["package:P24-PROTOTYPE-SOURCE-BUS-CONTRACT"]},
+    {"action":"add","id":"P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION","state":"WAITING","dependencies":["package:P24-PROTOTYPE-POWER-BUS-PRODUCER"]},
+    {"action":"add","id":"P24-V100-PROTOTYPE-FIRST-POWER-CONTRACT","state":"READY","dependencies":[]}
+  ],
+  "no_cad_or_phase25": true,
+  "hpq5_evidence_retained": true
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "baseline_commit": "c06876d2bb3c244d29ad04e883a253eefd35c265",
+  "baseline_commit": "PISXME-P24-POWER-ARCH-20260917",
   "states": [
     "PASS",
     "FAIL",
@@ -23,7 +23,7 @@
     {
       "id": "INV-INPUT-12V",
       "state": "UNPROVEN",
-      "evidence": "Source/harness installation and tolerance not closed.",
+      "evidence": "Selected protected-bus 12 V architecture; exact source tolerance and input assembly remain open.",
       "owner": "Power Authority"
     },
     {
@@ -41,7 +41,7 @@
     {
       "id": "INV-BRANCH-SHARING",
       "state": "UNPROVEN",
-      "evidence": "No qualified sharing/monitoring implementation.",
+      "evidence": "Replacement rule applies only to parallel external input paths; exact assembly qualification remains open.",
       "owner": "Power Authority"
     },
     {
@@ -157,7 +157,25 @@
       "state": "UNPROVEN",
       "evidence": "No hardware operation or vendor authorization claimed.",
       "owner": "Firmware/Provenance Authority"
+    },
+    {
+      "id": "INV-PROTOTYPE-POWER-ARCH",
+      "state": "UNPROVEN",
+      "evidence": "Selected architecture is authority-bound but current legacy PCB is not converted.",
+      "owner": "Product/Power Authority"
+    },
+    {
+      "id": "INV-PROTOTYPE-EMPIRICAL-GATE",
+      "state": "UNPROVEN",
+      "evidence": "No fabricated hardware exists; first-power procedure remains required.",
+      "owner": "Power/Firmware/Thermal Authority"
+    },
+    {
+      "id": "INV-PROTECTED-BUS",
+      "state": "UNPROVEN",
+      "evidence": "Exact source, protection, drop, copper, return and thermal contract remains open.",
+      "owner": "Power Integrity/Power Authority"
     }
   ],
-  "gate": "Every FAIL/UNPROVEN high-impact row has an explicit owner/package before broad physical implementation."
+  "gate": "No Phase 24 physical closure claim may use the superseded six-loop limiter contract. Protected-bus rows remain open until exact source/bus authority and fresh integrated validation close them; empirical V100 behavior is REQUIRES PROTOTYPE VALIDATION."
 }
