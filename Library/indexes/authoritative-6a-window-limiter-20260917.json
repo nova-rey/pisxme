@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "id": "authoritative-6a-window-limiter-20260917",
+  "requesting_package": "P24-AUTHORITATIVE-6A-LIMITER-EVIDENCE",
+  "retrieved": "2026-09-17",
+  "question": "Find an exact limiter MPN or manufacturer-supported controller-plus-external-limiter design for six independent 12 V loops with guaranteed 6.000-6.400 A full-tolerance/temperature current window and <=57 mOhm hot limiter allocation.",
+  "brief": "Library/briefs/authoritative-6a-window-limiter-20260917.md",
+  "retention": {
+    "vendor_bytes_retained": false,
+    "local_hashes_claimed": false,
+    "disposition": "manufacturer metadata, extracted facts and links only; no vendor PDF copied"
+  },
+  "derived_contract": {
+    "current_min_a": 6.0,
+    "current_max_a": 6.4,
+    "maximum_symmetric_total_error_percent": 3.225806,
+    "hot_limiter_resistance_max_mohm": 57,
+    "independent_loops": 6,
+    "nominal_source_v": 12
+  },
+  "sources": [
+    {
+      "id": "adi-ltc4281-ds-rev-c-20260917",
+      "title": "LTC4281 Hot Swap Controller with I2C Compatible Monitoring",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc4281.pdf",
+      "revision": "Rev. C; 2023-06-07",
+      "tier": 1,
+      "class": "primary manufacturer component authority",
+      "parts": ["LTC4281AUFD#PBF", "LTC4281IUFD#PBF"],
+      "status": "candidate-only",
+      "limits": ["VDD 2.9-33 V", "external N-channel FET", "nominal 12 V gate drive", "full-scale sense threshold 32.88-35.87 mV min/max", "overcurrent-to-gate-low 0.5 us typ/1 us max under stated test"],
+      "gap": "published threshold range plus shunt/temperature terms does not prove the 6.000-6.400 A window or <=57 mOhm hot path"
+    },
+    {
+      "id": "adi-ltc4282-ds-rev-c-20260917",
+      "title": "LTC4282 High Current Hot Swap Controller with I2C Compatible Monitoring",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4282.pdf",
+      "revision": "Rev. C; retrieved 2026-09-17",
+      "tier": 1,
+      "class": "primary manufacturer component authority",
+      "parts": ["LTC4282 family"],
+      "status": "candidate-only",
+      "limits": ["VDD 2.9-33 V", "two external N-channel FET gate circuits", "nominal 12 V gate drive", "programmable current limit and foldback", "100 A/12 V application class"],
+      "gap": "complete threshold, hot resistance, calibration residual, fault and reverse qualification is not established by this packet"
+    },
+    {
+      "id": "ti-lm5066h-ds-20260917",
+      "title": "5.5V to 90V Advanced Hot Swap Controller with I/V/P Monitoring and PMBus Interface",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/lm5066h.pdf",
+      "revision": "SNVSCT1A; retrieved 2026-09-17",
+      "tier": 1,
+      "class": "primary manufacturer component authority",
+      "parts": ["LM5066H family"],
+      "status": "rejected-for-window",
+      "limits": ["5.5-90 V", "external FET", "10 mV setting 9.2-11.4 mV full-temperature", "50 mV setting 46-54 mV full-temperature"],
+      "gap": "current-threshold tolerance is incompatible with the 3.2258% total error budget"
+    },
+    {
+      "id": "adi-ltc4218-ds-20260917",
+      "title": "LTC4218 Hot Swap Controller",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/4218fa.pdf",
+      "revision": "retrieved 2026-09-17",
+      "tier": 1,
+      "class": "primary manufacturer component authority",
+      "parts": ["LTC4218 family"],
+      "status": "rejected-for-window",
+      "limits": ["2.9-26.5 V", "12 V/6 A application example", "5% current-limit accuracy"],
+      "gap": "5% accuracy is wider than the total permitted error"
+    },
+    {
+      "id": "adi-ltc4286-product-20260917",
+      "title": "LTC4286 High Power Hot Swap Controller",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/en/products/ltc4286.html",
+      "revision": "retrieved 2026-09-17",
+      "tier": 1,
+      "class": "primary manufacturer component authority",
+      "parts": ["LTC4286AUK#PBF family"],
+      "status": "rejected-for-window",
+      "limits": ["8.5-80 V", "5% current-limit accuracy"],
+      "gap": "accuracy is wider than the total permitted error"
+    },
+    {
+      "id": "adi-max5977a-product-20260917",
+      "title": "MAX5977A high-side current-sense/gate-drive product record",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/en/products/max5977a.html",
+      "revision": "retrieved 2026-09-17",
+      "tier": 1,
+      "class": "primary manufacturer component authority",
+      "parts": ["MAX5977A"],
+      "status": "building-block-only",
+      "limits": ["1-16 V", "approximately 1% current-sense accuracy advertised", "external N-channel gate-drive building block"],
+      "gap": "no closed active 6 A current-limit, fault, reverse, or hot-resistance contract"
+    },
+    {
+      "id": "ti-tps24750-product-20260917",
+      "title": "TPS24750 eFuse product record",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/product/TPS24750",
+      "revision": "retrieved 2026-09-17",
+      "tier": 1,
+      "class": "primary manufacturer component authority",
+      "parts": ["TPS24750RUVR"],
+      "status": "unresolved-not-promoted",
+      "limits": ["2.5-18 V", "12 A eFuse/external blocking-FET controller class"],
+      "gap": "verified full-temperature 6.000-6.400 A current-limit table and complete hot/fault/reverse evidence not retained"
+    }
+  ],
+  "existing_negative_controls": [
+    {"source_id": "adi-max17527a-ds-20260913", "status": "rejected", "reason": "5.7542457542-6.2462462462 A at recorded 6.25 kOhm setting; below 6.000 A floor"},
+    {"source_id": "ti-tps1663-existing-library-record", "status": "rejected", "reason": "6 A setting with +/-7% gives 5.58-6.42 A"}
+  ],
+  "conclusion": {
+    "qualified_production_mpn": null,
+    "closest_candidate_architecture": "LTC4281 or LTC4282 plus Kelvin shunt, low-hot-resistance external nFET assembly, controlled calibration and production qualification",
+    "authority_dependency": "authority:6A-limiter-qualification",
+    "external_blocker": false,
+    "recommendation": "Product/Power Authority must qualify a calibrated assembly or request one further bounded search for a part with a guaranteed in-window threshold. Do not promote an MPN from this packet."
+  }
+}

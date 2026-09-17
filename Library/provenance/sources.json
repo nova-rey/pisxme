@@ -1022,6 +1022,133 @@
       ],
       "status": "indexed; private bytes retained; no public copy",
       "license_disposition": "vendor-supplied design-in material; private companion only; no public redistribution asserted"
+    },
+    {
+      "id": "adi-ltc4281-ds-rev-c-20260917",
+      "title": "LTC4281 Hot Swap Controller with I2C Compatible Monitoring",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc4281.pdf",
+      "revision": "Rev. C; 2023-06-07; retrieved 2026-09-17",
+      "tier": 1,
+      "evidence_class": "primary manufacturer component authority",
+      "local_material_retained": false,
+      "observed_facts": [
+        "2.9 V to 33 V operating range",
+        "external N-channel pass transistor and nominal 12 V gate drive",
+        "I2C programmable current limit, foldback, timer and fault monitoring",
+        "full-scale current-sense threshold endpoints 32.88 mV minimum and 35.87 mV maximum in the current Rev C table",
+        "overcurrent-to-gate-low 0.5 us typical and 1 us maximum under the stated test condition",
+        "published facts do not guarantee the PiSXMe 6.000-6.400 A full-tolerance window or 57 mOhm hot limiter path"
+      ],
+      "status": "accessible-no-local-copy",
+      "license_disposition": "citation and extracted facts only; no vendor PDF copied"
+    },
+    {
+      "id": "adi-ltc4282-ds-rev-c-20260917",
+      "title": "LTC4282 High Current Hot Swap Controller with I2C Compatible Monitoring",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4282.pdf",
+      "revision": "Rev. C; retrieved 2026-09-17",
+      "tier": 1,
+      "evidence_class": "primary manufacturer component authority",
+      "local_material_retained": false,
+      "observed_facts": [
+        "2.9 V to 33 V operating range",
+        "two external N-channel FET gate circuits and nominal 12 V gate drive",
+        "programmable current limit, foldback and fault timing",
+        "100 A/12 V application class",
+        "complete in-window threshold, hot-resistance, calibration and reverse qualification is not established by this packet"
+      ],
+      "status": "accessible-no-local-copy",
+      "license_disposition": "citation and extracted facts only; no vendor PDF copied"
+    },
+    {
+      "id": "ti-lm5066h-ds-20260917",
+      "title": "5.5V to 90V Advanced Hot Swap Controller with I/V/P Monitoring and PMBus Interface",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/lit/ds/symlink/lm5066h.pdf",
+      "revision": "SNVSCT1A; retrieved 2026-09-17",
+      "tier": 1,
+      "evidence_class": "primary manufacturer component authority",
+      "local_material_retained": false,
+      "observed_facts": [
+        "5.5 V to 90 V external-FET hot-swap controller",
+        "full-temperature current-sense endpoints include 9.2-11.4 mV at the 10 mV setting and 46-54 mV at the 50 mV setting",
+        "PMBus current/power/SOA monitoring and programmable fault timing",
+        "threshold tolerance is incompatible with the 3.2258% total current-setting error budget"
+      ],
+      "status": "accessible-no-local-copy",
+      "license_disposition": "citation and extracted facts only; no vendor PDF copied"
+    },
+    {
+      "id": "adi-ltc4218-ds-20260917",
+      "title": "LTC4218 Hot Swap Controller",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/4218fa.pdf",
+      "revision": "Retrieved 2026-09-17",
+      "tier": 1,
+      "evidence_class": "primary manufacturer component authority",
+      "local_material_retained": false,
+      "observed_facts": [
+        "2.9 V to 26.5 V operating range",
+        "12 V/6 A application example",
+        "external-FET hot-swap controller with timer and foldback",
+        "published 5% current-limit accuracy is wider than the required total error budget"
+      ],
+      "status": "accessible-no-local-copy",
+      "license_disposition": "citation and extracted facts only; no vendor PDF copied"
+    },
+    {
+      "id": "adi-ltc4286-product-20260917",
+      "title": "LTC4286 High Power Hot Swap Controller",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/en/products/ltc4286.html",
+      "revision": "Retrieved 2026-09-17",
+      "tier": 1,
+      "evidence_class": "primary manufacturer component authority",
+      "local_material_retained": false,
+      "observed_facts": [
+        "8.5 V to 80 V external-FET hot-swap controller",
+        "published 5% current-limit accuracy is wider than the required total error budget",
+        "no complete PiSXMe hot limiter qualification"
+      ],
+      "status": "accessible-no-local-copy",
+      "license_disposition": "citation and extracted facts only; no page copied"
+    },
+    {
+      "id": "adi-max5977a-product-20260917",
+      "title": "MAX5977A high-side current-sense/gate-drive product record",
+      "publisher": "Analog Devices",
+      "url": "https://www.analog.com/en/products/max5977a.html",
+      "revision": "Retrieved 2026-09-17",
+      "tier": 1,
+      "evidence_class": "primary manufacturer component authority",
+      "local_material_retained": false,
+      "observed_facts": [
+        "1 V to 16 V current-sense/gate-drive building block",
+        "approximately 1% current-sense accuracy advertised",
+        "external N-channel gate-drive support",
+        "product record does not establish a closed 6 A active current-limit, fault, reverse, or hot-resistance contract"
+      ],
+      "status": "accessible-no-local-copy",
+      "license_disposition": "citation and extracted facts only; no page copied"
+    },
+    {
+      "id": "ti-tps24750-product-20260917",
+      "title": "TPS24750 eFuse product record",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/product/TPS24750",
+      "revision": "Retrieved 2026-09-17",
+      "tier": 1,
+      "evidence_class": "primary manufacturer component authority",
+      "local_material_retained": false,
+      "observed_facts": [
+        "2.5 V to 18 V eFuse/external-blocking-FET controller class",
+        "12 A class is relevant to the nominal 12 V input",
+        "verified full-temperature 6.000-6.400 A current-limit and complete hot/fault/reverse evidence not retained"
+      ],
+      "status": "incomplete-not-promoted",
+      "license_disposition": "citation and extracted facts only; no page copied"
     }
   ]
 }

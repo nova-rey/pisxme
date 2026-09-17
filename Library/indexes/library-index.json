@@ -313,6 +313,36 @@
         "restricted",
         "manufacturer"
       ]
+    },
+    {
+      "id": "brief-authoritative-6a-window-limiter-20260917",
+      "kind": "acceptance-evidence-brief",
+      "path": "Library/briefs/authoritative-6a-window-limiter-20260917.md",
+      "tags": [
+        "PiSXMe",
+        "Phase24",
+        "HPQ4",
+        "6A",
+        "current-limiter",
+        "power",
+        "LTC4281",
+        "LTC4282",
+        "no-qualified-MPN"
+      ]
+    },
+    {
+      "id": "index-authoritative-6a-window-limiter-20260917",
+      "kind": "acceptance-evidence-index",
+      "path": "Library/indexes/authoritative-6a-window-limiter-20260917.json",
+      "tags": [
+        "PiSXMe",
+        "Phase24",
+        "HPQ4",
+        "6A",
+        "current-limiter",
+        "provenance",
+        "authority-reassessment"
+      ]
     }
   ]
 }
