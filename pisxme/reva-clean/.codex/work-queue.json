@@ -2115,6 +2115,56 @@
       },
       "waiting_on": [],
       "workstream": "integrated-storage"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Binding Power Authority receipt selects an exact limiter satisfying HPQ4 or identifies the minimum unresolved authority/evidence dependency; downstream packages are updated accordingly.",
+      "created_at": "2026-09-17T13:34:31.800635Z",
+      "dependencies": [],
+      "domain": "Product / Power Authority",
+      "edit_boundaries": [
+        "authority receipts under validation-receipts/power-current-limiter-authority-20260917/",
+        "no CAD/footprint/rule edits",
+        "no product-envelope reduction"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-LIMITER-SELECTION-AUTHORITY",
+      "notes": "",
+      "owner": "power_current_limiter_authority",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PRODUCT-V100-300W",
+        "INV-PRODUCT-V100-330W-PEAK",
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Select one exact production limiter or record a precise unresolved evidence dependency against signed HPQ4 v2.0.0. Require six independent 6.000\u20136.400 A loops, <=57 mOhm hot limiter allocation, 300 W sustained/330 W peak envelope, gate-drive compatibility, thermal/fault/protection coordination, and provenance. No CAD edits.",
+      "session_ids": [
+        "/root/power_current_limiter_authority"
+      ],
+      "status": "RUNNING",
+      "title": "Bind production current limiter for HPQ4 loops",
+      "updated_at": "2026-09-17T13:34:35.794864Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -2129,5 +2179,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T13:33:54.969824Z"
+  "updated_at": "2026-09-17T13:34:35.795120Z"
 }
