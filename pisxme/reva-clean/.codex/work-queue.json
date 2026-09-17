@@ -2422,7 +2422,13 @@
       },
       "base_sha": "b3edd1fb",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "b3edd1fb",
+        "returned_at": "2026-09-17T14:15:19.163785Z",
+        "returned_by": "adm1175_component_path_qualification",
+        "sha": "bb3901a6"
+      },
       "completion_criterion": "Power/Package/DFM authorities either bind a complete ADM1175 shunt/FET path contract against HPQ4 or document the exact irreducible gap and next authority action.",
       "created_at": "2026-09-17T14:04:28.355398Z",
       "dependencies": [],
@@ -2433,10 +2439,12 @@
         "no public vendor bytes",
         "no CAD or architecture change"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/adm1175-component-path-qualification-20260917/RECEIPT.md"
+      ],
       "id": "P24-ADM1175-COMPONENT-PATH-QUALIFICATION",
       "notes": "",
-      "owner": "adm1175_component_path_qualification",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2453,12 +2461,59 @@
         }
       ],
       "scope": "Close the bounded component evidence gap for the ADM1175 candidate: identify manufacturer-authoritative shunt and external FET MPN/package options, minimum-gate-drive hot RDS(on), VDS/transient/SOA/I2t, Kelvin layout, complete installed <=57 mOhm path, thermal installation, reverse/fault coordination, and production calibration/test limits. Use private Library and new primary sources only; no CAD edits and no product-envelope relaxation. Return a binding-ready component contract or a precise residual dependency.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Qualify ADM1175 shunt and external-FET path evidence",
+      "updated_at": "2026-09-17T14:15:19.245383Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "bb3901a6",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Unblocker returns a capability-level route with owner and next action, or a precise irreducible product/external blocker after reviewing all retained evidence.",
+      "created_at": "2026-09-17T14:15:36.916548Z",
+      "dependencies": [],
+      "domain": "Unblocker / Product-Power Authority",
+      "edit_boundaries": [
+        "sanitized blocker/authority disposition and queue evidence only",
+        "no CAD or product-envelope changes",
+        "private reference material remains private"
+      ],
+      "evidence_refs": [],
+      "id": "P24-6A-LIMITER-UNBLOCKER-REVIEW",
+      "notes": "",
+      "owner": "limiter_unblocker_review",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Review the complete retained limiter evidence and classify the unresolved authority:6A-limiter-qualification gap. Determine whether a bounded internal engineering route remains (calibrated controller, alternate exact limiter, or explicit production test contract), whether Librarian/Researcher evidence is still warranted, or whether a minimum user/product decision is genuinely required. Do not repeat prior family searches, edit CAD, relax the 300 W/330 W six-loop contract, or declare the campaign blocked without the strict evidence packet.",
       "session_ids": [
-        "/root/adm1175_component_path_qualification"
+        "/root/limiter_unblocker_review"
       ],
       "status": "RUNNING",
-      "title": "Qualify ADM1175 shunt and external-FET path evidence",
-      "updated_at": "2026-09-17T14:04:42.601486Z",
+      "title": "Reassess six-amp limiter residual through Unblocker",
+      "updated_at": "2026-09-17T14:15:51.734554Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2479,5 +2534,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T14:04:42.601639Z"
+  "updated_at": "2026-09-17T14:15:51.734709Z"
 }

@@ -1205,3 +1205,7 @@ Product/Power Authority reviewed ADM1175 at current HEAD and returned commit `b3
 ## 2026-09-17 — ADM1175 component-path evidence result
 
 The bounded Power/Package/DFM review indexed primary ADI, Vishay, Ohmite, and Infineon evidence for exact shunt and external-FET candidates. The documented `WSK2512R0160BEA` candidate with ADM1175's untrimmed 97--103 mV threshold recalculates to 6.042710--6.458652 A and fails the 6.400 A ceiling; the earlier 16.13 mOhm / 10 ppm screen was hypothetical. `IRLS4030-7PPbF`, `BSC070N10LS5ATMA1`, and `BSC096N10LS5ATMA1` remain candidate FETs only because hot gate-drive, complete path, reverse/fault, thermal, and production-test contracts are open. Receipt `validation-receipts/adm1175-component-path-qualification-20260917/` is candidate-ready for authority review and remains waiting on `authority:6A-limiter-qualification`; no CAD or product-envelope change is authorized.
+
+## 2026-09-17 — ADM1175 component-path gap and Unblocker escalation
+
+The ADM1175 component-path package returned commit `bb3901a6`. The WSK2512R0160BEA shunt screen fails the HPQ4 current ceiling at 6.042710–6.458652 A; candidate FETs remain unqualified for hot/minimum-gate, reverse, SOA/I2t, and installed path behavior. The package is DONE with `authority:6A-limiter-qualification` retained. A capability-level Unblocker review `P24-6A-LIMITER-UNBLOCKER-REVIEW` is RUNNING to determine the next bounded internal route or a genuine minimum product/external decision. No CAD changes are authorized.
