@@ -1161,3 +1161,7 @@ The private Library now contains the seven hashed JMicron/SmartCube design-in or
 2026-09-17 — Exact nFET requalification parked on replacement limiter authority
 
 `P24-EXACT-NFET-ENERGY-AUTHORITY` reconciled the signed HPQ4 v2.0 contract at the current review base. The prior MAX17527AATP+T/6.25 kOhm basis is rejected by HPQ4, so the production limiter and actual gate-drive/fault waveform remain unbound. STL125N10LF8AG remains the strongest unqualified candidate; no candidate yet has a guaranteed 4.45 V hot RDS(on) bound, and VDS/reverse/SOA/I2t/harness/copper/fault-policy evidence remains open. The bounded result is waiting on `authority:power-current-limiter-selection`; no CAD or product-envelope change was made.
+
+2026-09-17 — Exact nFET requalification parked on limiter authority
+
+The HPQ4-aligned nFET review confirms `MAX17527AATP+T` is rejected and no candidate has a guaranteed hot `RDS(on)` at the actual gate drive. The strongest screen, `STL125N10LF8AG`, remains unqualified for that gate and for system fault energy. `P24-EXACT-NFET-ENERGY-AUTHORITY` is WAITING on `authority:power-current-limiter-selection`; no MPN or CAD release is claimed.

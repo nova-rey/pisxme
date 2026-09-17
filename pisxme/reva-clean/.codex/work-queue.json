@@ -1666,7 +1666,8 @@
         "package:P24-POWER-CURRENT-LIMITER-AUTHORITY",
         "knowledge:exact-nfet-energy-dossier",
         "authority:exact-nfet-energy-qualification",
-        "package:P24-POWER-BUDGET-CORRECTION"
+        "package:P24-POWER-BUDGET-CORRECTION",
+        "authority:power-current-limiter-selection"
       ],
       "domain": "Power Integrity Authority",
       "edit_boundaries": [
@@ -1677,7 +1678,7 @@
       "evidence_refs": [],
       "id": "P24-EXACT-NFET-ENERGY-AUTHORITY",
       "notes": "",
-      "owner": "exact_nfet_requalification",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1694,17 +1695,17 @@
         }
       ],
       "scope": "Select a production reverse-protection nFET guaranteed at MAX17527A gate drive; calculate worst-case fuse/TVS/FET/harness fast-trip SOA/I2t and sign six-loop FLAG/inhibit/reset policy.",
-      "session_ids": [
-        "/root/exact_nfet_requalification"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Select exact reverse nFET and sign fault-energy coordination",
-      "updated_at": "2026-09-17T13:27:34.602087Z",
+      "updated_at": "2026-09-17T13:33:54.969662Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:power-current-limiter-selection"
+      ],
       "workstream": "power-authority"
     },
     {
@@ -2128,5 +2129,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T13:30:21.131270Z"
+  "updated_at": "2026-09-17T13:33:54.969824Z"
 }
