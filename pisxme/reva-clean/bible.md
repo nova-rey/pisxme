@@ -1193,3 +1193,7 @@ Product/Power Authority reviewed the Librarian packet at current HEAD `92902ef1`
 ## 2026-09-17 — ADM1175 limiter evidence escalation
 
 The bounded second search completed in private Library commit `4794c3613f7047bfff058ac33b13d1f3624a05c9` and identified Analog Devices ADM1175 as a candidate family. A 16.13 mOhm, 0.1%, 10 ppm/C shunt screen yields 6.003733–6.396171 A, but FET, complete hot path, reverse, SOA/fault, thermal, and production-test evidence remain open. The research package is DONE; `P24-ADM1175-LIMITER-AUTHORITY-REASSESSMENT` is RUNNING for Product/Power Authority. No CAD or product-envelope changes are authorized.
+
+## 2026-09-17 — ADM1175 six-amp limiter authority reassessment
+
+Product / Power Authority reviewed the Librarian ADM1175 packet against HPQ4 v2.0.0 at current review base `02334352a16321a28f52f4b4c579aa8030f6d6ec`. `ADM1175-1ARMZ-R7` (automatic retry) and `ADM1175-2ARMZ-R7` (latched off) remain candidate controllers only. The 16.13 mOhm screening shunt calculates to 6.0037330222--6.3961705444 A under stated assumptions, but exact shunt provenance, external FET hot RDS(on)/gate-drive/SOA/I2t, complete <=57 mOhm installed path, reverse/fault/harness/TVS coordination, thermal installation, and production calibration/test residuals remain open. The signed disposition is `CANDIDATE_REJECTED_FOR_BINDING`, retaining `authority:6A-limiter-qualification`; no CAD or product-envelope change is authorized.

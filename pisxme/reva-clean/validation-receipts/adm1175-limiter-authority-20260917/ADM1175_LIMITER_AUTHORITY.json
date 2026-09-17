@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-ADM1175-LIMITER-AUTHORITY-REASSESSMENT",
+  "decision_id": "PISXME-P24-ADM1175-LIMITER-QUALIFICATION-20260917",
+  "review_base_sha": "02334352a16321a28f52f4b4c579aa8030f6d6ec",
+  "date": "2026-09-17",
+  "authority": "Product / Power Authority",
+  "authority_level": "BINDING_WITHIN_DELEGATED_SCOPE",
+  "status": "CANDIDATE_REJECTED_FOR_BINDING",
+  "disposition": "WAITING_ON authority:6A-limiter-qualification",
+  "cad_changed": false,
+  "product_envelope_changed": false,
+  "contract": {
+    "hpq_decision_id": "PISXME-P24-POWER-BUDGET-HPQ4",
+    "hpq_version": "2.0.0",
+    "hpq_input_sha256": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae",
+    "independent_loops": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "loop_current_min_a": 6.0,
+    "loop_current_max_a": 6.4,
+    "hot_limiter_resistance_max_mohm": 57.0,
+    "passive_sharing_allowed": false,
+    "source_voltage_sustained_v": [
+      12.05,
+      12.6
+    ],
+    "source_voltage_peak_v": [
+      12.1,
+      12.6
+    ],
+    "v100_sustained_w": 300.0,
+    "v100_peak_w": 330.0
+  },
+  "candidate": {
+    "vendor": "Analog Devices",
+    "mpns": [
+      "ADM1175-1ARMZ-R7",
+      "ADM1175-2ARMZ-R7"
+    ],
+    "assembly": "One ADM1175 controller, one exact Kelvin shunt, and one external N-channel FET per independent loop",
+    "manufacturer_roles": {
+      "ADM1175-1ARMZ-R7": "automatic retry, active-high ON",
+      "ADM1175-2ARMZ-R7": "latched off, active-high ON"
+    },
+    "manufacturer_supported_facts": [
+      "VCC operating range 3.15-16.5 V covers the HPQ4 12 V source range",
+      "VLIM is specified 97-103 mV over the stated operating conditions",
+      "external N-channel FET gate drive and sense resistor are required",
+      "fast overcurrent response is 4-10 us and is guaranteed by design, not production tested",
+      "I2C voltage/current readback and TIMER fault behavior are documented",
+      "Kelvin sense connection is recommended for low-value high-current shunts"
+    ]
+  },
+  "screening_calculation": {
+    "script": "validation-receipts/adm1175-limiter-authority-20260917/ADM1175_SCREEN_CALC.py",
+    "screening_only": true,
+    "rsense_nominal_mohm": 16.13,
+    "rsense_initial_tolerance_percent": 0.1,
+    "rsense_tempco_ppm_per_c": 10,
+    "maximum_temperature_span_c": 65,
+    "combined_variation_percent": 0.165,
+    "rsense_min_mohm": 16.1033855,
+    "rsense_max_mohm": 16.1566145,
+    "ilim_min_a": 6.003733022162533,
+    "ilim_max_a": 6.396170544386458,
+    "shunt_power_at_imax_w": 0.6588055660718052,
+    "remaining_hot_allocation_mohm_after_max_rsense": 40.8433855,
+    "minimum_current_margin_a": 0.0037330221625328746,
+    "maximum_current_margin_a": 0.003829455613541637,
+    "equations": {
+      "ilim_min": "0.097 V / R_SENSE_MAX",
+      "ilim_max": "0.103 V / R_SENSE_MIN",
+      "shunt_power": "I_LIMIT_MAX^2 * R_SENSE_MIN",
+      "remaining_hot_allocation": "57 mOhm - R_SENSE_MAX"
+    }
+  },
+  "gate_review": [
+    {
+      "id": "ADM-LIM-001",
+      "requirement": "Each of six loops guarantees 6.000-6.400 A over component, supply, process and temperature tolerances",
+      "state": "OPEN",
+      "evidence": "The screening calculation yields 6.0037330222-6.3961705444 A only under an assumed 16.13 mOhm, 0.1%, 10 ppm/C shunt; exact shunt and production residual are not established."
+    },
+    {
+      "id": "ADM-LIM-002",
+      "requirement": "Complete limiter path is no greater than 57 mOhm hot",
+      "state": "OPEN",
+      "evidence": "The assumed shunt consumes up to 16.1566145 mOhm, leaving 40.8433855 mOhm for external FET, copper, Kelvin interconnect and other series terms; no exact FET or installed hot bound is qualified."
+    },
+    {
+      "id": "ADM-LIM-003",
+      "requirement": "External FET is safe at actual minimum gate drive and fault waveform",
+      "state": "OPEN",
+      "evidence": "ADM1175 requires an external N-channel FET; no exact production MPN, hot RDS(on) at the actual gate drive, VDS/transient rating, SOA or I2t coordination is bound."
+    },
+    {
+      "id": "ADM-LIM-004",
+      "requirement": "Reverse, surge, fault and shutdown behavior is a complete six-loop contract",
+      "state": "OPEN",
+      "evidence": "The datasheet documents current-limit, fast-trip, TIMER and retry/latch mechanisms but does not provide a PiSXMe reverse-polarity/reverse-current policy, clamp, harness-inductance waveform, fuse/TVS coordination or V100 inhibit/reset truth table."
+    },
+    {
+      "id": "ADM-LIM-005",
+      "requirement": "Thermal installation and production calibration/test are qualified",
+      "state": "OPEN",
+      "evidence": "Controller operating and junction limits are component facts; FET/shunt/copper temperature rise, six-loop fixture limits, calibration residual, retention and lot traceability remain undefined."
+    }
+  ],
+  "residual_dependency": {
+    "id": "authority:6A-limiter-qualification",
+    "classification": "DOMAIN_AUTHORITY",
+    "owner": "Product / Power Authority",
+    "required_to_resume": [
+      "Select exact ADM1175 variant and exact production Kelvin shunt MPN/package with tolerance and tempco evidence.",
+      "Select exact external N-channel FET and prove hot RDS(on) at worst-case ADM1175 gate drive, VDS/transient, SOA and I2t.",
+      "Close the complete installed <=57 mOhm hot path including shunt, FET, copper and Kelvin interconnect.",
+      "Define reverse-current/reverse-polarity, surge, clamp, fuse, harness and six-loop fault coordination.",
+      "Define thermal installation limits and a production calibration/test fixture with residual, retention and traceability limits."
+    ],
+    "resume_action": "Requalify the exact assembled limiter through Power, nFET, protection, thermal, harness and production-test authorities; only then release source-contract and CAD work."
+  },
+  "queue_impact": {
+    "P24-ADM1175-LIMITER-AUTHORITY-REASSESSMENT": "DONE_WITH_RESIDUAL_AUTHORITY_DEPENDENCY",
+    "P24-POWER-SOURCE-CONTRACT": "WAITING_ON authority:6A-limiter-qualification",
+    "P24-EXACT-NFET-ENERGY-AUTHORITY": "WAITING_ON authority:6A-limiter-qualification",
+    "P24-POWER-INPUT-ARCHITECTURE": "DOWNSTREAM_UNRELEASED",
+    "cad_release": false
+  },
+  "sources": [
+    {
+      "path": "/home/nyx/PiSXMe-Library/Library/briefs/adm1175-6a-limiter-search-20260917.md",
+      "sha256": "de01c4f5f0963cc3dbd26e3c31bce606da659eed21937d99466a7bdbf1e93dd0",
+      "role": "Librarian indexed evidence brief"
+    },
+    {
+      "path": "/home/nyx/PiSXMe-Library/Library/indexes/adm1175-6a-limiter-search-20260917.json",
+      "sha256": "388b808efc61b2234e87281b31b79c11c8774d005b2fb4611cf37372dce43858",
+      "role": "Librarian source index"
+    },
+    {
+      "path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.json",
+      "sha256": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae",
+      "role": "signed HPQ4 numerical contract"
+    },
+    {
+      "path": "validation-receipts/power-current-limiter-qualification-authority-20260917/LIMITER_QUALIFICATION_AUTHORITY.json",
+      "sha256": "26658abfee73f1543dfc38600025d1d9e285b0bc5b5a18fef63e6ddd25904f42",
+      "role": "prior binding limiter authority and residual dependency"
+    },
+    {
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ADM1175.pdf",
+      "revision": "Rev. C; retrieved 2026-09-17",
+      "role": "primary manufacturer datasheet",
+      "facts_used": [
+        "3.15-16.5 V",
+        "97-103 mV VLIM",
+        "4-10 us fast response",
+        "external N-channel FET",
+        "Equations 1-6",
+        "Kelvin guidance",
+        "retry/latch variants"
+      ]
+    },
+    {
+      "url": "https://www.analog.com/en/products/adm1175.html",
+      "revision": "production product record; retrieved 2026-09-17",
+      "role": "primary manufacturer product record",
+      "facts_used": [
+        "ADM1175-1ARMZ-R7 and ADM1175-2ARMZ-R7 production listings"
+      ]
+    }
+  ],
+  "validation": {
+    "method": "Decimal re-evaluation of manufacturer Equations 1-3 and resistor screening assumptions; no bench or fabricated-hardware result",
+    "script_sha256_pending_manifest": true,
+    "assertions": [
+      "6.000 <= calculated minimum current",
+      "calculated maximum current <= 6.400",
+      "remaining hot allocation is positive",
+      "all unresolved gates remain explicitly open"
+    ]
+  },
+  "signature": {
+    "authority": "Product / Power Authority",
+    "signed_at": "2026-09-17",
+    "decision": "ADM1175-1ARMZ-R7 and ADM1175-2ARMZ-R7 remain candidate architectures only; no production limiter is promoted.",
+    "signature_basis": "HPQ4 v2.0.0, Librarian ADM1175 primary-source brief/index, Analog Devices ADM1175 Rev. C datasheet, and current prior limiter authority.",
+    "authority_boundary": "Binding limiter qualification disposition only; no CAD insertion, product-envelope reduction, or source-contract release."
+  }
+}
