@@ -1,0 +1,10 @@
+{
+  "package": "P24-PROTOTYPE-POWER-BUS-PRODUCER",
+  "base_sha": "31b30dc0ccb28fe341f9bffb26005b5f50cd7641",
+  "classification": "IMPLEMENTATION",
+  "baseline_only": true,
+  "candidate": null,
+  "mutation": false,
+  "requested_service": "qualified kicad_engineer actual-mutation retry",
+  "dependency_scope": "producer and dependent integration only"
+}

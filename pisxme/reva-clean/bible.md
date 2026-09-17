@@ -1292,3 +1292,7 @@ Macro Placement Authority issued the sole binding plan `PISXME-P24-PROTECTED-BUS
 ## 2026-09-17 — Post-MPA producer method failure escalated
 
 The first producer attempt after the binding MPA corridor plan completed only fresh baseline ERC/DRC artifacts and no live KiCad process, candidate, or CAD mutation. The worker was released without promoting a result. A single bounded post-MPA Unblocker review now owns classification of launcher/resource/tool-context versus remaining package or implementation contradiction; the six-loop architecture remains superseded and no same-method retry is authorized.
+
+## 2026-09-17 — Post-MPA retry narrowed to actual KiCad mutation
+
+The post-MPA Unblocker found no native design contradiction: the producer again stopped at fresh Light ERC/DRC baselines without a live KiCad process, candidate, mutation, or native error. It therefore routed one final implementation-specific retry to a qualified `kicad_engineer`, requiring MPA artifact loading, ten placement/net/layer assertions, an actual authorized copper/zone mutation, and candidate-specific DRC/connectivity plus resistance/thermal evidence. Baseline-only output will not satisfy the package.
