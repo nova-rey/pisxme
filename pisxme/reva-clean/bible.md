@@ -1252,3 +1252,7 @@ Product / Power Authority signed `PISXME-P24-POWER-ARCH-20260917` in `validation
 ## 2026-09-17 — Six-loop constraints superseded by prototype protected-bus authority
 
 Product/Power Authority selected the conventional protected/distributed 12-V common-bus prototype architecture in commit `31b30dc0`. The six-loop precision limiter, 6.000–6.400 A per-loop, and <=57 mOhm allocation are now explicitly `SUPERSEDED_BY PISXME-P24-POWER-ARCH-20260917` for Rev A; HPQ #5 and its receipts remain historical evidence. Old limiter/source/connector/protection/harness packages were removed from the active required graph, while rail/interface/thermal/firmware closures were retargeted to the new prototype power-bus integration package. New source-bus, power-bus producer/integration, and first-power contract packages are active. No CAD edits have begun.
+
+## 2026-09-17 — HPQ #5 reframed and closed as superseded
+
+HPQ Issue #5 was closed as `not planned` after the signed architecture decision established that its six-loop limiter premise lacks NVIDIA/SXM2 or user-product provenance. The issue, task-force history, and all receipts remain preserved; the queue dependency was resolved using `POWER_ARCHITECTURE_AUTHORITY_DECISION` and the active graph now contains only the replacement protected-bus work. This is a constraint correction, not a claim that fabricated hardware or limiter measurements exist.
