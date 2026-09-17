@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-POWER-CONSTRAINT-PROVENANCE-AUDIT",
+  "base_sha": "668807f0167f31ab0a3dd9f0764fbea1a574d980",
+  "status": "CANDIDATE_READY_FOR_PRODUCT_POWER_AUTHORITY_REVIEW",
+  "date": "2026-09-17",
+  "cad_changed": false,
+  "architecture_selected": false,
+  "scope": "Trace current six-loop power constraints to earliest evidence; do not choose replacement architecture.",
+  "classes": {
+    "A": "NVIDIA/SXM2 external requirement",
+    "B": "physics/safety or external component/interface contract",
+    "C": "explicit user product requirement",
+    "D": "derived engineering requirement necessary for A-C",
+    "E": "architecture/implementation choice",
+    "F": "historical or agent-created assumption with insufficient provenance"
+  },
+  "lineage_order": [
+    {
+      "commit": "8387a58794a04bf32b6f4afc16493887702cca40",
+      "date": "2026-08-30T14:00:55-05:00",
+      "role": "Phase 5 two-branch calculation; no single branch may carry complete envelope"
+    },
+    {
+      "commit": "937fac206fb63ad16923f244af15100ee0dfe472",
+      "date": "2026-09-13T18:26:07-05:00",
+      "role": "first located six-loop architecture candidate; 6.4 A screen; no passive sharing"
+    },
+    {
+      "commit": "454de8236a2bbcfbf40f9b4a525a56adafba20da",
+      "date": "2026-09-13T19:04:09-05:00",
+      "role": "first located exact limiter candidate and 57 mOhm candidate datum"
+    },
+    {
+      "commit": "0a97f3e4b31fae26e229a999213d94c1a81d3192",
+      "date": "2026-09-14T09:38:34-05:00",
+      "role": "first located exact 6.000-6.400 A and project-level 57 mOhm contract"
+    },
+    {
+      "commit": "66ea28f4509e6027a479e0b4dd5d823fca22dc99",
+      "date": "2026-09-17T08:23:30-05:00",
+      "role": "replacement calculator authority; repeats HPQ4 contract"
+    },
+    {
+      "commit": "dd2e7eed",
+      "role": "retained limiter-system no-go; repeats contract and preserves evidence"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "PWR-LOOP-001",
+      "statement": "six independent 12 V power loops",
+      "earliest": {
+        "commit": "937fac20",
+        "path": "validation-receipts/power-envelope-authority-redesign-20260914/POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json",
+        "json_paths": [
+          "proposed_input_architecture.circuits",
+          "proposed_input_architecture.dc_power_loops",
+          "proposed_input_architecture.return_loops"
+        ]
+      },
+      "class": "E",
+      "veto": "none until independent Product/Power justification",
+      "current_status": "implementation-derived"
+    },
+    {
+      "id": "PWR-LOOP-002",
+      "statement": "no passive current-sharing credit between six loops",
+      "earliest": {
+        "commit": "937fac20",
+        "path": "validation-receipts/power-envelope-authority-redesign-20260914/POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json",
+        "json_paths": [
+          "branch_policy.passive_sharing_allowed"
+        ]
+      },
+      "class": "E",
+      "precursor_class": "D-scoped two-branch safety",
+      "veto": "only exact selected connector/harness safety conclusion is reusable",
+      "current_status": "split-scope"
+    },
+    {
+      "id": "PWR-LOOP-003",
+      "statement": "each loop guarantees at least 6.000 A",
+      "earliest": {
+        "commit": "0a97f3e4",
+        "path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.json",
+        "json_paths": [
+          "independent_loop_contract.guaranteed_delivery_floor_a_per_loop"
+        ]
+      },
+      "class": "E",
+      "veto": "none",
+      "current_status": "implementation-derived"
+    },
+    {
+      "id": "PWR-LOOP-004",
+      "statement": "each loop stays at or below 6.400 A full operational tolerance",
+      "earliest": {
+        "commit": "937fac20",
+        "path": "validation-receipts/power-envelope-authority-redesign-20260914/POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json",
+        "json_paths": [
+          "proposed_input_architecture.hard_branch_limit_a",
+          "proposed_input_architecture.derating_factor"
+        ]
+      },
+      "class": "E",
+      "veto": "none; connector screen applies only to exact qualified assembly",
+      "current_status": "implementation-derived"
+    },
+    {
+      "id": "PWR-LOOP-005",
+      "statement": "independent precision current regulation/limiting on every loop",
+      "earliest": {
+        "commit": "937fac20",
+        "path": "validation-receipts/power-envelope-authority-redesign-20260914/POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json",
+        "json_paths": [
+          "branch_policy.topology_note"
+        ]
+      },
+      "class": "E",
+      "veto": "none",
+      "current_status": "implementation-derived"
+    },
+    {
+      "id": "PWR-LOOP-006",
+      "statement": "limiter allocation <=57 mOhm hot",
+      "earliest": {
+        "commit": "454de823",
+        "path": "validation-receipts/power-current-limiter-authority-20260914/POWER_CURRENT_LIMITER_AUTHORITY.json",
+        "json_paths": [
+          "selected_candidate.ron_max_specified_mohm"
+        ]
+      },
+      "project_contract": {
+        "commit": "0a97f3e4",
+        "path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.json",
+        "json_paths": [
+          "static_ir_budget.per_branch_caps"
+        ]
+      },
+      "class": "E",
+      "supporting_component_fact_class": "B",
+      "veto": "none",
+      "current_status": "candidate-derived allocation"
+    },
+    {
+      "id": "PWR-LOOP-007",
+      "statement": "each SXM2 power-contact group receives prescribed current independently",
+      "earliest": null,
+      "class": "F",
+      "veto": "none",
+      "current_status": "unproven/unknown",
+      "negative_evidence": [
+        "NVIDIA V100 datasheet records 300 W maximum power but no group current",
+        "J1 contact map and Amphenol record provide contact mapping/rating but no PiSXMe group-current contract"
+      ]
+    }
+  ],
+  "independent_facts": [
+    {
+      "statement": "V100/SXM2 maximum power consumption 300 W",
+      "class": "B",
+      "source": "authority-inventory/primary-docs/NVIDIA-Tesla-V100-datasheet.pdf",
+      "sha256": "ca694a4789eae7feb9ce9090f2207cbe82f5da1448922d4855e346680c59d3"
+    },
+    {
+      "statement": "PiSXMe Rev A 300 W sustained and 330 W bounded peak",
+      "class": "C",
+      "source": "PROJECT_INVARIANTS.json / validation-receipts/foundational-invariants/product-power-20260914/PRODUCT_POWER_INVARIANT_PACKET.md"
+    },
+    {
+      "statement": "Phase 5 selected two-branch safety conclusion",
+      "class": "D-scoped",
+      "source": "PHASE5_POWER_CALCULATIONS.md",
+      "commit": "8387a587"
+    }
+  ],
+  "source_hashes": {
+    "PHASE5_POWER_CALCULATIONS.md": "82c34b6a4b2b4878f7e74c7f7873ad68ba4d10ebfa6a7c33d742fa2a632b60e6",
+    "PHASE5_POWER_NETWORK_SPEC.md": "9e29ef646d4af5199a9e745a0fe8d6a140144acc67540c5956b98d0579e446df",
+    "POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.json": "669a050c61023399866d37e7fea1b8eb926ff570812611eb1c6658d3d1e056a1",
+    "POWER_ENVELOPE_AUTHORITY_V2.2_CANDIDATE.md": "657a54411aaac9ff32d0972f42d4ddcf30709f17dd80212dd141b89f8714a318",
+    "POWER_BUDGET_CORRECTION.json": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae",
+    "POWER_CURRENT_LIMITER_AUTHORITY.json": "9af451e23f46ac5e7f9c28fb5a8d53b3a1e3884833431127bf416cfecf8c7a45",
+    "LIMITER_SYSTEM_AUTHORITY_DECISION.json": "c8118b9747568c107b105b5727e723bc3d5ea96841139bd7d067b763a9c3e337"
+  },
+  "checks": [
+    "git ancestry and commit timestamps inspected for earliest occurrence of each requirement",
+    "private Library power/SXM2 briefs and source index inspected",
+    "no CAD/configuration/HPQ/queue state changed",
+    "no architecture selected"
+  ],
+  "disposition": "Submit to Product/Power Authority for bounded simplest-prototype architecture comparison; preserve HPQ #5 as historical evidence until that authority result."
+}
