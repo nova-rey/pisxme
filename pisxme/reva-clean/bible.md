@@ -1312,3 +1312,7 @@ The producer candidate unlocked the serialized canonical integration package. `p
 ### 2026-09-17 — Protected-bus canonical integration candidate
 
 The accepted Macro Placement Authority protected-bus producer was integrated serially into the selected `PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb` candidate. The integration boundary preserves the canonical schematic, project/rules/libraries, anchors, mapped J1 contract, return zones, and unrelated circuitry; only the eight authorized source/protection placements and named power copper/zone/via objects changed. Fresh KiCad Light validation is required before this candidate can become a completed queue package.
+
+## 2026-09-17 — Direct canonical integration capability change
+
+The first canonical integration worker stopped at baseline-only output without merging or validating the protected-bus candidate. It was released without changing canonical CAD. `protected_bus_direct_canonical_integration` now owns the exclusive integration slot for one direct reconciliation of candidate `8dddf504` against current HEAD, followed by fresh Light ERC/DRC/connectivity and power-specific extraction. No acceptance closure or waiver is implied.

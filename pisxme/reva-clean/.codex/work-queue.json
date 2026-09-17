@@ -2985,7 +2985,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
       "notes": "",
-      "owner": "protected_bus_canonical_integration_validator",
+      "owner": "protected_bus_direct_canonical_integration",
       "priority": 2,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3008,11 +3008,11 @@
       ],
       "scope": "Serialize the accepted prototype power-bus candidate into canonical HEAD and run fresh KiCad Light validation at the exact integrated SHA with pinned rules/libraries/toolchain. Reconcile topology changes against baseline; do not claim isolated passes as closure.",
       "session_ids": [
-        "root-20260917-canonical-integration"
+        "root-20260917-direct-canonical-integration"
       ],
       "status": "RUNNING",
       "title": "Integrate and fresh-Light validate prototype power bus",
-      "updated_at": "2026-09-17T23:10:02.879002Z",
+      "updated_at": "2026-09-17T23:19:13.467295Z",
       "validation": {
         "required": [],
         "results": {}
@@ -3033,5 +3033,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T23:10:02.879316Z"
+  "updated_at": "2026-09-17T23:19:13.467612Z"
 }
