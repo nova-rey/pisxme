@@ -122,6 +122,14 @@
       "resolved_at": "2026-09-14T14:35:29.108151Z",
       "status": "RESOLVED"
     },
+    "hpq:nova-rey/codex-config-backup#5": {
+      "created_at": "2026-09-17T14:25:40Z",
+      "kind": "hpq",
+      "receipt": null,
+      "reference": "https://github.com/nova-rey/codex-config-backup/issues/5",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "knowledge:authoritative-6A-window-limiter": {
       "created_at": "2026-09-17T13:38:27.792517Z",
       "kind": "knowledge",
@@ -2534,10 +2542,18 @@
       },
       "base_sha": "743c5f52",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "743c5f52",
+        "returned_at": "2026-09-17T14:23:20.232096Z",
+        "returned_by": "limiter_system_authority_decision",
+        "sha": "dd2e7eed"
+      },
       "completion_criterion": "Signed authority artifact binds one production limiter system or records a precise no-go and minimum next evidence dependency after the retained-candidate decision.",
       "created_at": "2026-09-17T14:18:28.463641Z",
-      "dependencies": [],
+      "dependencies": [
+        "hpq:nova-rey/codex-config-backup#5"
+      ],
       "domain": "Product / Power / Package / Thermal Authority",
       "edit_boundaries": [
         "signed authority decision and calculations only",
@@ -2545,10 +2561,12 @@
         "no CAD or product-envelope changes",
         "private sources remain private"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/limiter-system-authority-decision-20260917/RECEIPT.md"
+      ],
       "id": "P24-6A-LIMITER-SYSTEM-AUTHORITY-DECISION",
       "notes": "",
-      "owner": "limiter_system_authority_decision",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2564,17 +2582,17 @@
         }
       ],
       "scope": "Make one bounded system-qualification decision using only retained candidates: MAX17527A, TPS1663, LTC4281/LTC4282, ADM1175 with WSK2512 and documented FET screens. Product/Power Authority with Power Integrity, Package/DFM, and Thermal support must bind one exact calibrated controller/shunt/FET assembly against HPQ4 six independent 6.000\u20136.400 A full-temperature loops, <=57 mOhm hot path, source range, fixture/calibration residual, gate drive, reverse/fault, SOA/I2t, thermal installation, traceability, and six-loop fail-safe behavior, or issue a signed precise no-go with one minimum evidence dependency. No further family search, no product-envelope relaxation, and no CAD edits.",
-      "session_ids": [
-        "/root/limiter_system_authority_decision"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Bind or reject retained six-amp limiter system",
-      "updated_at": "2026-09-17T14:18:45.728773Z",
+      "updated_at": "2026-09-17T14:27:00Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "hpq:nova-rey/codex-config-backup#5"
+      ],
       "workstream": "power-authority"
     }
   ],
@@ -2590,5 +2608,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T14:18:45.728978Z"
+  "updated_at": "2026-09-17T14:23:20.311397Z"
 }
