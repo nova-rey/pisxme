@@ -1189,3 +1189,7 @@ Product/Power Authority reconciled the Librarian's authoritative 6 A evidence at
 ## 2026-09-17 — Limiter authority gap and bounded evidence escalation
 
 Product/Power Authority reviewed the Librarian packet at current HEAD `92902ef1` and returned signed authority artifacts in commit `22018346`. No production limiter architecture qualifies the HPQ4 six-loop contract; LTC4281/LTC4282 remain candidates only, with calibration, hot-path, fault, thermal, and production-test gaps. The obsolete limiter-selection dependency was resolved and dependent source/nFET packages were re-parked on `authority:6A-limiter-qualification`. One bounded identifier-driven manufacturer search was dispatched as `P24-6A-LIMITER-RESEARCH-ESCALATION`; no CAD or product-envelope changes are authorized during this escalation.
+
+## 2026-09-17 — ADM1175 limiter evidence escalation
+
+The bounded second search completed in private Library commit `4794c3613f7047bfff058ac33b13d1f3624a05c9` and identified Analog Devices ADM1175 as a candidate family. A 16.13 mOhm, 0.1%, 10 ppm/C shunt screen yields 6.003733–6.396171 A, but FET, complete hot path, reverse, SOA/fault, thermal, and production-test evidence remain open. The research package is DONE; `P24-ADM1175-LIMITER-AUTHORITY-REASSESSMENT` is RUNNING for Product/Power Authority. No CAD or product-envelope changes are authorized.
