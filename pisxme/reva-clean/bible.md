@@ -1201,3 +1201,7 @@ Product / Power Authority reviewed the Librarian ADM1175 packet against HPQ4 v2.
 ## 2026-09-17 — ADM1175 component-path qualification dispatched
 
 Product/Power Authority reviewed ADM1175 at current HEAD and returned commit `b3edd1fb`. The controller remains unqualified because exact shunt/FET identity, hot path, reverse/fault, SOA/I2t, thermal installation, and production calibration/test limits are unresolved. Queue package `P24-ADM1175-LIMITER-AUTHORITY-REASSESSMENT` is DONE. A bounded Power/Package/DFM package `P24-ADM1175-COMPONENT-PATH-QUALIFICATION` is RUNNING to close only those component-level evidence terms; no CAD or product-envelope changes are authorized.
+
+## 2026-09-17 — ADM1175 component-path evidence result
+
+The bounded Power/Package/DFM review indexed primary ADI, Vishay, Ohmite, and Infineon evidence for exact shunt and external-FET candidates. The documented `WSK2512R0160BEA` candidate with ADM1175's untrimmed 97--103 mV threshold recalculates to 6.042710--6.458652 A and fails the 6.400 A ceiling; the earlier 16.13 mOhm / 10 ppm screen was hypothetical. `IRLS4030-7PPbF`, `BSC070N10LS5ATMA1`, and `BSC096N10LS5ATMA1` remain candidate FETs only because hot gate-drive, complete path, reverse/fault, thermal, and production-test contracts are open. Receipt `validation-receipts/adm1175-component-path-qualification-20260917/` is candidate-ready for authority review and remains waiting on `authority:6A-limiter-qualification`; no CAD or product-envelope change is authorized.

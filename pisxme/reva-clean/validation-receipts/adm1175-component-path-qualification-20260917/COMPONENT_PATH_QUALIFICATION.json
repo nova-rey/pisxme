@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "decision_id": "PISXME-P24-ADM1175-COMPONENT-PATH-QUALIFICATION-20260917",
+  "package_id": "P24-ADM1175-COMPONENT-PATH-QUALIFICATION",
+  "review_base_sha": "d3efe794",
+  "private_library_commit": "4794c3613f7047bfff058ac33b13d1f3624a05c9",
+  "authority_dependency": "authority:6A-limiter-qualification",
+  "status": "RESIDUAL_GAP",
+  "cad_changed": false,
+  "product_envelope_changed": false,
+  "hpq4_contract": {
+    "sustained_power_w": 300,
+    "peak_power_w": 330,
+    "independent_loops": 6,
+    "current_window_a": [6.0, 6.4],
+    "hot_limiter_allocation_max_mohm": 57.0,
+    "source_range_v": [12.05, 12.6]
+  },
+  "controller": {
+    "manufacturer": "Analog Devices",
+    "mpns": ["ADM1175-1ARMZ-R7", "ADM1175-2ARMZ-R7"],
+    "package": "10-lead MSOP RM-10",
+    "datasheet": "ADM1175 Rev. C",
+    "vcc_range_v": [3.15, 16.5],
+    "vlim_mv": [97, 100, 103],
+    "gate_drive_table_v_at_vcc": {
+      "3.15": [3, 6, 9],
+      "5": [9, 11, 13],
+      "16.5": [7, 10, 13]
+    },
+    "gate_min_at_hpq4_source_proven": false,
+    "fast_overcurrent_response_us": [4, 10],
+    "fast_trip_threshold_mv_max": 115,
+    "timer_formula": "tFAULT ~= 21.7 * C_TIMER ms/uF"
+  },
+  "shunt_candidates": [
+    {
+      "mpn": "WSK2512R0160BEA",
+      "manufacturer": "Vishay Dale",
+      "package": "2512, 4-terminal Kelvin",
+      "nominal_mohm": 16.0,
+      "power_rating_w_at_70c": 1.0,
+      "tolerance_percent": 0.1,
+      "component_tcr_ppm_c": 35,
+      "operating_temperature_c": [-65, 170],
+      "status": "candidate_screen_rejected_for_untrimmed_window",
+      "evidence": "https://www.vishay.com/docs/30108/wsk2512.pdf"
+    },
+    {
+      "mpn": "WSK1206R0160BEA18",
+      "manufacturer": "Vishay Dale",
+      "package": "1206, 4-terminal Kelvin",
+      "nominal_mohm": 16.0,
+      "power_rating_w_at_70c": 0.5,
+      "tolerance_percent": 0.1,
+      "component_tcr_ppm_c": 35,
+      "status": "rejected_for_continuous_shunt_power_screen",
+      "evidence": "https://www.vishay.com/docs/30325/wsk120618.pdf"
+    },
+    {
+      "family": "Ohmite CS10",
+      "manufacturer": "Ohmite",
+      "package": "4-terminal Kelvin, heatsinkable",
+      "nominal_range_mohm": [1, 500],
+      "power_rating_w": 10,
+      "tolerance_percent": [0.1, 10],
+      "tcr_ppm_c": [5, 100],
+      "status": "custom_value_candidate_no_exact_mpn",
+      "evidence": "https://www.ohmite.com/res-cs10/"
+    }
+  ],
+  "fet_candidates": [
+    {
+      "mpn": "IRLS4030-7PPbF",
+      "manufacturer": "Infineon Technologies",
+      "package": "D2PAK 7 / TO-263 7",
+      "vds_max_v": 100,
+      "rds_on_max_mohm_at_4p5v_25c": 4.1,
+      "rtheta_jc_max_c_per_w": 0.4,
+      "tj_max_c": 175,
+      "soa_and_avalanche_curves_present": true,
+      "hot_rds_qualified": false,
+      "evidence": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-irls4030-7p-datasheet-en.pdf"
+    },
+    {
+      "mpn": "BSC070N10LS5ATMA1",
+      "manufacturer": "Infineon Technologies",
+      "package": "PG-TDSON-8 / SuperSO8 5x6",
+      "vds_max_v": 100,
+      "rds_on_max_mohm_at_4p5v_25c": 8.5,
+      "tj_max_c": 150,
+      "hot_rds_qualified": false,
+      "evidence": "https://www.infineon.com/part/BSC070N10LS5"
+    },
+    {
+      "mpn": "BSC096N10LS5ATMA1",
+      "manufacturer": "Infineon Technologies",
+      "package": "PG-TDSON-8 / SuperSO8 5x6",
+      "vds_max_v": 100,
+      "rds_on_max_mohm_at_4p5v_25c": 12.5,
+      "tj_max_c": 175,
+      "hot_rds_qualified": false,
+      "evidence": "https://www.infineon.com/part/BSC096N10LS5"
+    }
+  ],
+  "matrix": [
+    {"requirement": "exact shunt MPN/package/tolerance/TCR", "state": "UNPROVEN", "finding": "WSK2512R0160BEA is a documented-numbering candidate; procurement and assembly qualification are not retained"},
+    {"requirement": "6.000-6.400 A full-temperature loop", "state": "FAIL", "finding": "WSK2512 candidate screens 6.0427101243-6.4586520856 A with untrimmed 97-103 mV controller threshold"},
+    {"requirement": "minimum-gate-drive hot RDS(on)", "state": "UNPROVEN", "finding": "ADM1175 minimum at 12.05-12.60 V is not guaranteed; candidate FET values are 25 C, 4.5 V screens"},
+    {"requirement": "complete <=57 mOhm hot path", "state": "UNPROVEN", "finding": "25 C component-only residuals are calculated; hot FET, copper, Kelvin interconnect and reverse devices are not bound"},
+    {"requirement": "VDS and transient margin", "state": "UNPROVEN", "finding": "100 V static candidate ratings and avalanche curves do not establish the PiSXMe harness/TVS waveform"},
+    {"requirement": "SOA/I2t/fault coordination", "state": "UNPROVEN", "finding": "FET SOA/avalanche data exist for one candidate, but ADM1175 timing, fuse, TVS, harness and six-loop energy are not coordinated"},
+    {"requirement": "reverse behavior", "state": "FAIL", "finding": "ADM1175 single external N-FET application has no reverse blocking contract; system topology is absent"},
+    {"requirement": "Kelvin layout", "state": "UNPROVEN", "finding": "Controller data sheet gives Kelvin guidance; exact footprint and PiSXMe copper implementation are not qualified"},
+    {"requirement": "thermal installation", "state": "UNPROVEN", "finding": "Component ratings exist, but installed spreading, derating and temperature rise are not proven"},
+    {"requirement": "production calibration/test", "state": "UNPROVEN", "finding": "I2C readback exists; six-loop fixture, residual, retention and lot traceability are not bound"}
+  ],
+  "calculation_artifact": "ADM1175_COMPONENT_PATH_CALC.py",
+  "calculation_output": "ADM1175_COMPONENT_PATH_CALC.json",
+  "next_action": "Product/Power Authority must bind a calibrated in-window assembly or select another controller; no CAD release"
+}

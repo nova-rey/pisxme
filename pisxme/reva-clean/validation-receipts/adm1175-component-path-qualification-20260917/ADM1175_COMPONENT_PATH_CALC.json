@@ -1,0 +1,84 @@
+{
+  "calculation": "ADM1175 Rev. C Equations 1-3",
+  "candidate_shunt": {
+    "combined_resistance_variation": "0.003275",
+    "component_tcr_ppm_c": "35",
+    "derived_mpn": "WSK2512R0160BEA",
+    "family": "Vishay WSK2512",
+    "initial_tolerance": "0.001",
+    "nominal_mohm": "16.0",
+    "power_at_i_max_w": "0.6696128115874857486266720882280776070514",
+    "r_max_mohm": "16.0524000",
+    "r_min_mohm": "15.9476000",
+    "temperature_span_c": "65"
+  },
+  "controller_threshold_v": {
+    "max": "0.103",
+    "min": "0.097",
+    "nominal": "0.100"
+  },
+  "fet_screens": [
+    {
+      "hot_rds_qualified": false,
+      "manufacturer": "Infineon Technologies",
+      "mpn": "IRLS4030-7PPbF",
+      "package": "D2PAK 7-pin / TO-263 7-pin",
+      "rds_on_max_mohm_at_4p5v_25c": "4.1",
+      "residual_57mohm_at_25c_only": "36.8476000",
+      "residual_is_not_hot_qualification": true,
+      "rtheta_jc_max_c_per_w": "0.40",
+      "source_current_test_a": "94",
+      "tj_max_c": 175,
+      "vds_max_v": 100
+    },
+    {
+      "hot_rds_qualified": false,
+      "manufacturer": "Infineon Technologies",
+      "mpn": "BSC070N10LS5ATMA1",
+      "package": "PG-TDSON-8 / SuperSO8 5x6",
+      "rds_on_max_mohm_at_4p5v_25c": "8.5",
+      "residual_57mohm_at_25c_only": "32.4476000",
+      "residual_is_not_hot_qualification": true,
+      "rtheta_jc_max_c_per_w": null,
+      "source_current_test_a": null,
+      "tj_max_c": 150,
+      "vds_max_v": 100
+    },
+    {
+      "hot_rds_qualified": false,
+      "manufacturer": "Infineon Technologies",
+      "mpn": "BSC096N10LS5ATMA1",
+      "package": "PG-TDSON-8 / SuperSO8 5x6",
+      "rds_on_max_mohm_at_4p5v_25c": "12.5",
+      "residual_57mohm_at_25c_only": "28.4476000",
+      "residual_is_not_hot_qualification": true,
+      "rtheta_jc_max_c_per_w": null,
+      "source_current_test_a": null,
+      "tj_max_c": 175,
+      "vds_max_v": 100
+    }
+  ],
+  "hot_path_max_mohm": "57.0",
+  "hpq4_window_a": [
+    "6.000",
+    "6.400"
+  ],
+  "qualification_status": "RESIDUAL_GAP",
+  "residual_gates": [
+    "ADM1175 GATE minimum at signed 12.05-12.60 V source is not guaranteed by a table value",
+    "external FET hot RDS(on) at that minimum gate drive is not manufacturer-guaranteed",
+    "reverse blocking/reverse polarity behavior and back-to-back-FET resistance are unbound",
+    "harness transient and TVS/fuse/nFET SOA-I2t coordination are unbound",
+    "installed copper/Kelvin resistance and thermal installation are unbound",
+    "six-loop calibration residual, fixture accuracy, retention, and lot traceability are unbound"
+  ],
+  "schema_version": 1,
+  "screen_result": {
+    "actual_resistance_ratio": "1.006571521733677794777897614688103539091",
+    "current_window_pass": false,
+    "ilim_max_a": "6.458652085580275401941357947277333266448",
+    "ilim_min_a": "6.042710124342777404001893797812165159104",
+    "ratio_pass": false,
+    "required_resistance_ratio_max": "1.004530744336569579288025889967637540453"
+  }
+}
