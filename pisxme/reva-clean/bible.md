@@ -1336,3 +1336,7 @@ The failed integrated candidate exposed a source-assembly and complete-path cont
 ## 2026-09-18 — J5/J6 input assembly rejected for product envelope
 
 Power authority reviewed the failed candidate and bound that the existing J5/J6 one-12V/one-return contact branches cannot receive 40 A continuous or 45 A bounded-peak credit under the 300 W/330 W prototype contract. A replacement high-current connector/harness assembly must be selected and proven before new CAD routing. Librarian owns the bounded evidence package; the common protected 12 V architecture remains selected and six-loop regulation remains superseded.
+
+## 2026-09-18 — High-current input evidence promoted; corrective producer dispatched
+
+Private Librarian evidence identifies Anderson PP15/45 `ASMPR45-1X2-RK` as the bounded default candidate and Amphenol FCI M-CRPS as a secondary candidate. The exact J5/J6 assembly remains rejected for the 300 W/330 W source contract. A new isolated corrective producer package is dispatched to implement the authority-bounded source-entry change and return complete positive/return resistance and thermal evidence before serialized integration.

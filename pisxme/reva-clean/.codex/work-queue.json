@@ -157,10 +157,10 @@
     "knowledge:P24-POWER-INPUT-ASSEMBLY-EVIDENCE": {
       "created_at": "2026-09-17T23:32:38.732876Z",
       "kind": "knowledge",
-      "receipt": null,
+      "receipt": "pisxme/reva-clean/validation-receipts/power-input-assembly-evidence-20260918/RECEIPT.md",
       "reference": "validation-receipts/power-input-assembly-evidence-20260918",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-17T23:36:14.844784Z",
+      "status": "RESOLVED"
     },
     "knowledge:authoritative-6A-window-limiter": {
       "created_at": "2026-09-17T13:38:27.792517Z",
@@ -3006,7 +3006,8 @@
         "package:P24-PROTOTYPE-POWER-BUS-PRODUCER",
         "authority:P24-POWER-ARCHITECTURE-PROVENANCE-AUDIT",
         "authority:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY",
-        "knowledge:P24-POWER-INPUT-ASSEMBLY-EVIDENCE"
+        "knowledge:P24-POWER-INPUT-ASSEMBLY-EVIDENCE",
+        "package:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER"
       ],
       "domain": "Root / KiCad Validation",
       "edit_boundaries": [
@@ -3043,7 +3044,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Integrate and fresh-Light validate prototype power bus",
-      "updated_at": "2026-09-17T23:32:38.732952Z",
+      "updated_at": "2026-09-17T23:36:45.827928Z",
       "validation": {
         "required": [
           "native_drc",
@@ -3075,7 +3076,7 @@
         }
       },
       "waiting_on": [
-        "knowledge:P24-POWER-INPUT-ASSEMBLY-EVIDENCE"
+        "package:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER"
       ],
       "workstream": "canonical-integration"
     },
@@ -3252,7 +3253,13 @@
       },
       "base_sha": "48161bbc",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "pisxme/reva-clean/validation-receipts/power-input-assembly-evidence-20260918/RECEIPT.md",
+        "base_sha": "48161bbc",
+        "returned_at": "2026-09-17T23:36:14.519503Z",
+        "returned_by": "input_assembly_evidence",
+        "sha": "2388c9b1"
+      },
       "completion_criterion": "Private Library brief names one defensible input assembly or records the narrow evidence gap and required engineering assumption for authority selection.",
       "created_at": "2026-09-17T23:32:38.677218Z",
       "dependencies": [],
@@ -3263,10 +3270,12 @@
         "no CAD edits",
         "no six-loop revival"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "pisxme/reva-clean/validation-receipts/power-input-assembly-evidence-20260918/RECEIPT.md"
+      ],
       "id": "P24-POWER-INPUT-ASSEMBLY-EVIDENCE",
       "notes": "",
-      "owner": "input_assembly_evidence",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3283,12 +3292,10 @@
         }
       ],
       "scope": "Index and cross-check one exact replacement input connector, mating terminals, harness/wire/crimp application and rating evidence sufficient for the 300W/330W source contract and complete 10mOhm path budget. Preserve current J5/J6 failure evidence; do not perform CAD edits.",
-      "session_ids": [
-        "root-20260918-input-assembly-evidence"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Select and provenance a product-capable high-current input assembly",
-      "updated_at": "2026-09-17T23:32:38.773569Z",
+      "updated_at": "2026-09-17T23:36:14.803377Z",
       "validation": {
         "required": [
           "exact_mpn",
@@ -3296,10 +3303,91 @@
           "positive_return_path",
           "provenance"
         ],
-        "results": {}
+        "results": {
+          "current_derating": {
+            "receipt": "pisxme/reva-clean/validation-receipts/power-input-assembly-evidence-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:36:14.666280Z",
+            "status": "PASS"
+          },
+          "exact_mpn": {
+            "receipt": "pisxme/reva-clean/validation-receipts/power-input-assembly-evidence-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:36:14.623553Z",
+            "status": "PASS"
+          },
+          "positive_return_path": {
+            "receipt": "pisxme/reva-clean/validation-receipts/power-input-assembly-evidence-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:36:14.714982Z",
+            "status": "PASS"
+          },
+          "provenance": {
+            "receipt": "pisxme/reva-clean/validation-receipts/power-input-assembly-evidence-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:36:14.762947Z",
+            "status": "PASS"
+          }
+        }
       },
       "waiting_on": [],
       "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "2388c9b1",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
+      "created_at": "2026-09-17T23:36:45.779061Z",
+      "dependencies": [
+        "package:P24-POWER-INPUT-ASSEMBLY-EVIDENCE",
+        "authority:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY"
+      ],
+      "domain": "KiCad Producer",
+      "edit_boundaries": [
+        "isolated producer workspace only",
+        "source/protection/power region only",
+        "no global rule changes",
+        "no unrelated repairs",
+        "return candidate SHA and raw reports"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
+      "notes": "",
+      "owner": "power_bus_corrective_producer",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PROTECTED-BUS",
+        "INV-INPUT-CAPACITY",
+        "INV-COPPER",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
+      "session_ids": [
+        "root-20260918-power-corrective-producer"
+      ],
+      "status": "RUNNING",
+      "title": "Produce corrected protected bus with qualified high-current input assembly",
+      "updated_at": "2026-09-17T23:36:45.875191Z",
+      "validation": {
+        "required": [
+          "source_connectivity",
+          "native_targeted_drc",
+          "complete_path_budget",
+          "thermal_dfm"
+        ],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -3314,5 +3402,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T23:32:38.773741Z"
+  "updated_at": "2026-09-17T23:36:45.875398Z"
 }
