@@ -226,7 +226,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Foundational fabrication, thermal, grounding and mechanical audit",
-      "updated_at": "2026-09-13T22:48:47.238285Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -278,7 +278,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Foundational interface and storage invariant audit",
-      "updated_at": "2026-09-13T22:48:47.359045Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -330,7 +330,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Foundational product and power invariant audit",
-      "updated_at": "2026-09-13T22:47:21.462218Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -386,7 +386,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Synthesize governing invariant contract and compliance matrix",
-      "updated_at": "2026-09-13T22:51:57.479902Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -436,7 +436,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "SXM2 J1 package and net contract authority",
-      "updated_at": "2026-09-13T22:56:13.196549Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -491,7 +491,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "SI, impedance and fabrication evidence",
-      "updated_at": "2026-09-13T22:55:21.023869Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -544,7 +544,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Thermal, cooler, mechanical and DFM closure",
-      "updated_at": "2026-09-13T22:55:21.145411Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -597,7 +597,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Firmware/configuration/procurement evidence",
-      "updated_at": "2026-09-13T22:55:59.772813Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -612,23 +612,21 @@
       "candidate": null,
       "completion_criterion": "Authority-approved evidence and current-head integrated validation for listed invariants.",
       "created_at": "2026-09-13T22:51:52.348707Z",
-      "dependencies": [
-        "package:P24-MPA-CORRIDOR-AUTHORITY",
-        "authority:power-source-contract",
-        "package:P24-POWER-CONNECTOR-QUALIFICATION"
-      ],
+      "dependencies": [],
       "domain": "Power Authority redesign",
       "edit_boundaries": [
         "no work until invariant dependencies resolved",
         "no Phase 26"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-architecture-authority-decision-20260917/RECEIPT.md"
+      ],
       "id": "P24-POWER-INPUT-ARCHITECTURE",
-      "notes": "Original HPQ external-envelope dependency superseded by internal product/Power Authority evidence; wait only on exact assembly qualification and MPA plan.",
+      "notes": "Original HPQ external-envelope dependency superseded by internal product/Power Authority evidence; wait only on exact assembly qualification and MPA plan. SUPERSEDED_BY PISXME-P24-POWER-ARCH-20260917; retain receipts and HPQ history.",
       "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
-      "required": true,
+      "required": false,
       "requirement_ids": [
         "INV-PRODUCT-V100-300W",
         "INV-PRODUCT-V100-330W-PEAK",
@@ -644,16 +642,14 @@
       ],
       "scope": "Power input/protection architecture for product envelope",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Power input/protection architecture for product envelope",
       "updated_at": "2026-09-13T23:57:54.519298Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:power-source-contract"
-      ],
+      "waiting_on": [],
       "workstream": "phase24"
     },
     {
@@ -705,7 +701,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Bind a 300 W / 330 W qualified input and protection architecture",
-      "updated_at": "2026-09-13T23:28:29.669743Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -760,7 +756,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Reproduce selected integrated baseline in a clean Light worker",
-      "updated_at": "2026-09-13T23:05:06.578455Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -815,7 +811,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Qualify exact six-loop connector and harness assembly",
-      "updated_at": "2026-09-13T23:32:49.211491Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -866,7 +862,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Reassess Issue #2 after internal power authority evidence",
-      "updated_at": "2026-09-13T23:36:13.513523Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -926,7 +922,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Binding six-loop placement and corridor plan",
-      "updated_at": "2026-09-13T23:44:40.250102Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -983,7 +979,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Reconcile invariant compliance rows into executable closure packages",
-      "updated_at": "2026-09-13T23:54:40.914549Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1001,28 +997,22 @@
       "candidate": null,
       "completion_criterion": "Power/MPA/Package authorities issue one binding source/net/component contract or a precise irreducible escalation; all affected invariant rows and the waiting producer dependency are updated.",
       "created_at": "2026-09-13T23:51:44.461149Z",
-      "dependencies": [
-        "package:P24-FOUNDATIONAL-SYNTHESIS",
-        "package:P24-POWER-ENVELOPE-AUTHORITY-REDESIGN",
-        "package:P24-POWER-CONNECTOR-QUALIFICATION",
-        "package:P24-MPA-CORRIDOR-AUTHORITY",
-        "authority:power-current-limiter-selection",
-        "knowledge:authoritative-6A-window-limiter",
-        "authority:6A-limiter-qualification"
-      ],
+      "dependencies": [],
       "domain": "power/source-contract",
       "edit_boundaries": [
         "write only authority decision and validation receipt under validation-receipts/power-source-contract-20260914/",
         "no PCB routing or speculative variants",
         "do not silently change product envelope or synthesize PCB-only connectivity"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-architecture-authority-decision-20260917/RECEIPT.md"
+      ],
       "id": "P24-POWER-SOURCE-CONTRACT",
-      "notes": "",
+      "notes": "SUPERSEDED_BY PISXME-P24-POWER-ARCH-20260917; retain receipts and HPQ history.",
       "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
-      "required": true,
+      "required": false,
       "requirement_ids": [
         "INV-PRODUCT-V100-300W",
         "INV-PRODUCT-V100-330W-PEAK",
@@ -1039,16 +1029,14 @@
       ],
       "scope": "Resolve the structural contradiction by defining authoritative C-F branch nets, four additional connector instances, independent protection/current-limit stages, qualified package geometry, and source/schematic ownership for the six-loop contract.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Bind six-loop source/net/component contract",
       "updated_at": "2026-09-17T13:53:30.161066Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:6A-limiter-qualification"
-      ],
+      "waiting_on": [],
       "workstream": "phase24"
     },
     {
@@ -1062,7 +1050,7 @@
       "completion_criterion": "Power Authority and PI Authority sign all three rail rows with exact rail loads, effective capacitance under bias, copper/drop/temperature margins, and fresh integrated Light evidence.",
       "created_at": "2026-09-13T23:51:59.013747Z",
       "dependencies": [
-        "package:P24-POWER-INPUT-ARCHITECTURE"
+        "package:P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION"
       ],
       "domain": "power-integrity",
       "edit_boundaries": [
@@ -1094,7 +1082,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Integrated rail current, capacitance and return closure",
-      "updated_at": "2026-09-13T23:51:59.013747Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [
           "native netlist/pad coverage",
@@ -1104,7 +1092,7 @@
         "results": {}
       },
       "waiting_on": [
-        "package:P24-POWER-INPUT-ARCHITECTURE"
+        "package:P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION"
       ],
       "workstream": "phase24"
     },
@@ -1119,7 +1107,7 @@
       "completion_criterion": "SI/Interface authorities sign CM5, PCIe, impedance and return rows with integrated endpoint/pad coverage, route/return evidence, and exact validation artifacts.",
       "created_at": "2026-09-13T23:51:59.057353Z",
       "dependencies": [
-        "package:P24-POWER-INPUT-ARCHITECTURE"
+        "package:P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION"
       ],
       "domain": "interface/SI",
       "edit_boundaries": [
@@ -1152,7 +1140,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Integrated CM5, PCIe, impedance and return closure",
-      "updated_at": "2026-09-13T23:51:59.057353Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [
           "native source/pad/reference coverage",
@@ -1162,7 +1150,7 @@
         "results": {}
       },
       "waiting_on": [
-        "package:P24-POWER-INPUT-ARCHITECTURE"
+        "package:P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION"
       ],
       "workstream": "phase24"
     },
@@ -1177,7 +1165,7 @@
       "completion_criterion": "Thermal, Mechanical and Fab authorities sign all three rows with current integrated geometry, rule-context proof, assembly/DFM evidence and explicit margins.",
       "created_at": "2026-09-13T23:51:59.104778Z",
       "dependencies": [
-        "package:P24-POWER-INPUT-ARCHITECTURE"
+        "package:P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION"
       ],
       "domain": "thermal/mechanics/fabrication",
       "edit_boundaries": [
@@ -1209,7 +1197,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Integrated thermal, mechanical and fabrication closure",
-      "updated_at": "2026-09-13T23:51:59.104778Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [
           "fresh Light DRC with effective rules",
@@ -1219,7 +1207,7 @@
         "results": {}
       },
       "waiting_on": [
-        "package:P24-POWER-INPUT-ARCHITECTURE"
+        "package:P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION"
       ],
       "workstream": "phase24"
     },
@@ -1234,7 +1222,7 @@
       "completion_criterion": "Power/Firmware and Provenance authorities sign sequencing and firmware rows with exact configuration provenance, timing requirements, and an honest hardware-test boundary.",
       "created_at": "2026-09-13T23:51:59.144361Z",
       "dependencies": [
-        "package:P24-POWER-INPUT-ARCHITECTURE",
+        "package:P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
         "package:P24-POWER-RAIL-CLOSURE"
       ],
       "domain": "power/firmware/provenance",
@@ -1266,7 +1254,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Integrated sequencing and firmware/provenance closure",
-      "updated_at": "2026-09-13T23:51:59.144361Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [
           "native sequencing net audit",
@@ -1276,7 +1264,7 @@
         "results": {}
       },
       "waiting_on": [
-        "package:P24-POWER-INPUT-ARCHITECTURE",
+        "package:P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
         "package:P24-POWER-RAIL-CLOSURE"
       ],
       "workstream": "phase24"
@@ -1333,7 +1321,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Select qualified per-loop current limiter and protection contract",
-      "updated_at": "2026-09-14T00:32:10.599869Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1357,24 +1345,22 @@
       },
       "completion_criterion": "Package and Power authorities close all listed qualification fields or document exact irreducible gaps and resume dependency.",
       "created_at": "2026-09-13T23:58:13.210027Z",
-      "dependencies": [
-        "package:P24-POWER-CONNECTOR-QUALIFICATION",
-        "package:P24-POWER-ENVELOPE-AUTHORITY-REDESIGN",
-        "authority:power-assembly-qualification"
-      ],
+      "dependencies": [],
       "domain": "package/power authority",
       "edit_boundaries": [
         "authority receipt only under validation-receipts/power-connector-qualification-closure-20260914/",
         "no CAD edits",
         "preserve exact Molex provenance and unknowns"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-architecture-authority-decision-20260917/RECEIPT.md"
+      ],
       "id": "P24-POWER-CONNECTOR-QUALIFICATION-CLOSURE",
-      "notes": "",
+      "notes": "SUPERSEDED_BY PISXME-P24-POWER-ARCH-20260917; retain receipts and HPQ history.",
       "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
-      "required": true,
+      "required": false,
       "requirement_ids": [
         "INV-INPUT-CAPACITY",
         "INV-PROTECTION",
@@ -1389,16 +1375,14 @@
       ],
       "scope": "Resolve mating housing/plating, crimp acceptance, harness loop resistance/length/temperature, fuse I2t, ambient/airflow and six-header installation limits for the six-loop contract.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Close six-loop connector and harness assembly qualification",
       "updated_at": "2026-09-14T00:04:59.886442Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:power-assembly-qualification"
-      ],
+      "waiting_on": [],
       "workstream": "phase24"
     },
     {
@@ -1417,22 +1401,22 @@
       },
       "completion_criterion": "Power Authority signs or rejects the candidate with evidence, resolves dependency states, and records exact resume conditions for the source contract and producer.",
       "created_at": "2026-09-14T00:05:13.957708Z",
-      "dependencies": [
-        "authority:protection-assembly-qualification"
-      ],
+      "dependencies": [],
       "domain": "power authority",
       "edit_boundaries": [
         "authority receipt only under validation-receipts/power-authority-signoff-20260914/",
         "no CAD edits",
         "do not lower the 300W/330W envelope or waive open assembly evidence"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-architecture-authority-decision-20260917/RECEIPT.md"
+      ],
       "id": "P24-POWER-AUTHORITY-SIGNOFF",
-      "notes": "",
+      "notes": "SUPERSEDED_BY PISXME-P24-POWER-ARCH-20260917; retain receipts and HPQ history.",
       "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
-      "required": true,
+      "required": false,
       "requirement_ids": [
         "INV-INPUT-CAPACITY",
         "INV-PROTECTION",
@@ -1448,16 +1432,14 @@
       ],
       "scope": "Review the MAX17527A six-loop limiter candidate and connector qualification candidate; issue the binding Power Authority disposition, exact remaining dependencies, and whether the power source contract can return READY.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Review limiter and six-loop qualification candidates",
       "updated_at": "2026-09-14T00:14:46.580762Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:protection-assembly-qualification"
-      ],
+      "waiting_on": [],
       "workstream": "phase24"
     },
     {
@@ -1470,23 +1452,22 @@
       "candidate": null,
       "completion_criterion": "Power Authority signs the protection assembly contract or records exact remaining authority gaps and resume conditions.",
       "created_at": "2026-09-14T00:15:02.596726Z",
-      "dependencies": [
-        "knowledge:protection-assembly-dossier",
-        "authority:exact-nFET-and-energy-coordination"
-      ],
+      "dependencies": [],
       "domain": "power/protection",
       "edit_boundaries": [
         "authority receipt only under validation-receipts/protection-assembly-qualification-20260914/",
         "no CAD edits",
         "preserve 300W/330W envelope"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-architecture-authority-decision-20260917/RECEIPT.md"
+      ],
       "id": "P24-PROTECTION-ASSEMBLY-QUALIFICATION",
-      "notes": "",
+      "notes": "SUPERSEDED_BY PISXME-P24-POWER-ARCH-20260917; retain receipts and HPQ history.",
       "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
-      "required": true,
+      "required": false,
       "requirement_ids": [
         "INV-PROTECTION",
         "INV-INPUT-CAPACITY",
@@ -1501,16 +1482,14 @@
       ],
       "scope": "Select exact reverse-protection nFET, fuse/TVS and I2t/SOA coordination, six-loop FLAG/inhibit/reset aggregation, and binding fast-trip interpretation for the MAX17527A candidate.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Close six-loop limiter, FET, fuse, TVS and inhibit contract",
       "updated_at": "2026-09-14T00:29:05.092996Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:exact-nFET-and-energy-coordination"
-      ],
+      "waiting_on": [],
       "workstream": "phase24"
     },
     {
@@ -1523,23 +1502,22 @@
       "candidate": null,
       "completion_criterion": "Harness/thermal/MPA authorities sign the six-loop installation contract or record exact missing inputs and resume conditions.",
       "created_at": "2026-09-14T00:15:02.646447Z",
-      "dependencies": [
-        "knowledge:harness-thermal-dossier",
-        "authority:harness-installation-thermal-qualification"
-      ],
+      "dependencies": [],
       "domain": "harness/thermal/mechanics",
       "edit_boundaries": [
         "authority receipt only under validation-receipts/harness-installation-thermal-qualification-20260914/",
         "no CAD edits",
         "no fabricated measurements"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-architecture-authority-decision-20260917/RECEIPT.md"
+      ],
       "id": "P24-HARNESS-INSTALLATION-THERMAL-QUALIFICATION",
-      "notes": "",
+      "notes": "SUPERSEDED_BY PISXME-P24-POWER-ARCH-20260917; retain receipts and HPQ history.",
       "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
-      "required": true,
+      "required": false,
       "requirement_ids": [
         "INV-THERMAL",
         "INV-INPUT-CAPACITY",
@@ -1554,16 +1532,14 @@
       ],
       "scope": "Bind six harness part/length and hot loop-resistance values under 20 mOhm, ambient/airflow, six-header installation, and thermal margins.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Close six-loop harness resistance and installation thermal contract",
       "updated_at": "2026-09-14T00:29:05.144851Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:harness-installation-thermal-qualification"
-      ],
+      "waiting_on": [],
       "workstream": "phase24"
     },
     {
@@ -1613,7 +1589,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Acquire authoritative protection assembly evidence",
-      "updated_at": "2026-09-14T00:26:54.063883Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1669,7 +1645,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Acquire harness and installation thermal evidence",
-      "updated_at": "2026-09-14T00:26:54.190762Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1687,28 +1663,22 @@
       "candidate": null,
       "completion_criterion": "Power Authority signs exact MPN, gate-drive/temperature RDS(on), VDS/SOA, energy coordination, and fault-policy contract or records a precise unresolved dependency.",
       "created_at": "2026-09-14T00:29:27.819542Z",
-      "dependencies": [
-        "package:P24-PROTECTION-DOSSIER",
-        "package:P24-POWER-CURRENT-LIMITER-AUTHORITY",
-        "knowledge:exact-nfet-energy-dossier",
-        "authority:exact-nfet-energy-qualification",
-        "package:P24-POWER-BUDGET-CORRECTION",
-        "authority:power-current-limiter-selection",
-        "authority:6A-limiter-qualification"
-      ],
+      "dependencies": [],
       "domain": "Power Integrity Authority",
       "edit_boundaries": [
         "authority receipt only under validation-receipts/exact-nfet-energy-authority-20260914/",
         "no CAD edits",
         "no invented measurements"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-architecture-authority-decision-20260917/RECEIPT.md"
+      ],
       "id": "P24-EXACT-NFET-ENERGY-AUTHORITY",
-      "notes": "",
+      "notes": "SUPERSEDED_BY PISXME-P24-POWER-ARCH-20260917; retain receipts and HPQ history.",
       "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
-      "required": true,
+      "required": false,
       "requirement_ids": [
         "INV-PROTECTION",
         "INV-INPUT-CAPACITY",
@@ -1723,16 +1693,14 @@
       ],
       "scope": "Select a production reverse-protection nFET guaranteed at MAX17527A gate drive; calculate worst-case fuse/TVS/FET/harness fast-trip SOA/I2t and sign six-loop FLAG/inhibit/reset policy.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Select exact reverse nFET and sign fault-energy coordination",
       "updated_at": "2026-09-17T13:53:30.217754Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:6A-limiter-qualification"
-      ],
+      "waiting_on": [],
       "workstream": "power-authority"
     },
     {
@@ -1745,24 +1713,22 @@
       "candidate": null,
       "completion_criterion": "Power, Package, MPA and Thermal authorities sign the six-row harness/installation contract or record a precise unresolved dependency.",
       "created_at": "2026-09-14T00:29:27.867238Z",
-      "dependencies": [
-        "package:P24-HARNESS-THERMAL-DOSSIER",
-        "package:P24-MPA-CORRIDOR-AUTHORITY",
-        "authority:harness-installation-thermal-qualification"
-      ],
+      "dependencies": [],
       "domain": "Power/Package/Thermal Authority",
       "edit_boundaries": [
         "authority receipt only under validation-receipts/harness-installation-authority-20260914/",
         "no CAD edits",
         "no fabricated measurements"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-architecture-authority-decision-20260917/RECEIPT.md"
+      ],
       "id": "P24-HARNESS-INSTALLATION-AUTHORITY",
-      "notes": "",
+      "notes": "SUPERSEDED_BY PISXME-P24-POWER-ARCH-20260917; retain receipts and HPQ history.",
       "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
-      "required": true,
+      "required": false,
       "requirement_ids": [
         "INV-THERMAL",
         "INV-INPUT-CAPACITY",
@@ -1777,16 +1743,14 @@
       ],
       "scope": "Bind six-row cable MPN/length/loop scope, ambient/airflow class, MPA header positions, conservative thermal margins and measurement closure requirements.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Bind six-loop harness and installation thermal authority",
       "updated_at": "2026-09-14T00:32:59.035270Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:harness-installation-thermal-qualification"
-      ],
+      "waiting_on": [],
       "workstream": "harness-thermal-authority"
     },
     {
@@ -1838,7 +1802,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Sign MAX17527A six-loop limiter selection",
-      "updated_at": "2026-09-14T00:32:18.467026Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1896,7 +1860,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Acquire exact low-voltage nFET and fault-energy evidence",
-      "updated_at": "2026-09-14T00:46:05.548451Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -1956,7 +1920,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Close exact low-voltage nFET and six-loop fault-energy qualification",
-      "updated_at": "2026-09-14T00:53:25.764685Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2020,7 +1984,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Establish corrected source and complete-path power budget",
-      "updated_at": "2026-09-17T13:27:25.494219Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2076,7 +2040,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Create authority-reviewed replacement for missing HPQ4 calculator",
-      "updated_at": "2026-09-17T13:23:46.414576Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2135,7 +2099,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Reconcile JMS581DL manufacturer reference packet against selected Path-A",
-      "updated_at": "2026-09-17T13:30:21.131076Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2191,7 +2155,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Bind production current limiter for HPQ4 loops",
-      "updated_at": "2026-09-17T13:38:12.157739Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2247,7 +2211,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Acquire authoritative 6 A limiter-window evidence",
-      "updated_at": "2026-09-17T13:46:51.348206Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2303,7 +2267,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Qualify six-amp limiter architecture against HPQ4",
-      "updated_at": "2026-09-17T13:53:15.884603Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2359,7 +2323,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Bounded search for exact six-amp production limiter evidence",
-      "updated_at": "2026-09-17T13:58:34.404827Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2415,7 +2379,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Qualify ADM1175 six-amp limiter candidate",
-      "updated_at": "2026-09-17T14:04:11.224339Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2472,7 +2436,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Qualify ADM1175 shunt and external-FET path evidence",
-      "updated_at": "2026-09-17T14:15:19.245383Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2527,7 +2491,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Reassess six-amp limiter residual through Unblocker",
-      "updated_at": "2026-09-17T14:18:11.749014Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2551,9 +2515,7 @@
       },
       "completion_criterion": "Signed authority artifact binds one production limiter system or records a precise no-go and minimum next evidence dependency after the retained-candidate decision.",
       "created_at": "2026-09-17T14:18:28.463641Z",
-      "dependencies": [
-        "hpq:nova-rey/codex-config-backup#5"
-      ],
+      "dependencies": [],
       "domain": "Product / Power / Package / Thermal Authority",
       "edit_boundaries": [
         "signed authority decision and calculations only",
@@ -2562,14 +2524,15 @@
         "private sources remain private"
       ],
       "evidence_refs": [
-        "validation-receipts/limiter-system-authority-decision-20260917/RECEIPT.md"
+        "validation-receipts/limiter-system-authority-decision-20260917/RECEIPT.md",
+        "validation-receipts/power-architecture-authority-decision-20260917/RECEIPT.md"
       ],
       "id": "P24-6A-LIMITER-SYSTEM-AUTHORITY-DECISION",
-      "notes": "",
+      "notes": "SUPERSEDED_BY PISXME-P24-POWER-ARCH-20260917; retain receipts and HPQ history.",
       "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
-      "required": true,
+      "required": false,
       "requirement_ids": [
         "INV-INPUT-CAPACITY",
         "INV-PROTECTION",
@@ -2583,16 +2546,14 @@
       ],
       "scope": "Make one bounded system-qualification decision using only retained candidates: MAX17527A, TPS1663, LTC4281/LTC4282, ADM1175 with WSK2512 and documented FET screens. Product/Power Authority with Power Integrity, Package/DFM, and Thermal support must bind one exact calibrated controller/shunt/FET assembly against HPQ4 six independent 6.000\u20136.400 A full-temperature loops, <=57 mOhm hot path, source range, fixture/calibration residual, gate drive, reverse/fault, SOA/I2t, thermal installation, traceability, and six-loop fail-safe behavior, or issue a signed precise no-go with one minimum evidence dependency. No further family search, no product-envelope relaxation, and no CAD edits.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Bind or reject retained six-amp limiter system",
       "updated_at": "2026-09-17T14:27:00Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "hpq:nova-rey/codex-config-backup#5"
-      ],
+      "waiting_on": [],
       "workstream": "power-authority"
     },
     {
@@ -2642,7 +2603,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Audit six-loop power constraint provenance",
-      "updated_at": "2026-09-17T21:57:59.096559Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2698,7 +2659,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Compare prototype V100 carrier power practice",
-      "updated_at": "2026-09-17T21:53:27.256197Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2754,7 +2715,7 @@
       "session_ids": [],
       "status": "DONE",
       "title": "Establish actual V100/SXM2 power contract",
-      "updated_at": "2026-09-17T21:57:52.991369Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2769,7 +2730,13 @@
       },
       "base_sha": "cb066de9",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": null,
+        "base_sha": "cb066de9",
+        "returned_at": "2026-09-17T22:05:01.611553Z",
+        "returned_by": "power_architecture_authority_decision",
+        "sha": "31b30dc0"
+      },
       "completion_criterion": "Signed Product/Power Authority comparison selects one minimum prototype architecture, updates invariants/constraint ledger, and records HPQ #5 disposition plus replacement queue packages.",
       "created_at": "2026-09-17T21:58:11.403142Z",
       "dependencies": [],
@@ -2781,10 +2748,12 @@
         "no product-envelope reduction",
         "prototype validation may be explicitly deferred"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-architecture-authority-decision-20260917/RECEIPT.md"
+      ],
       "id": "P24-POWER-ARCHITECTURE-AUTHORITY-DECISION",
       "notes": "",
-      "owner": "power_architecture_authority_decision",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2801,18 +2770,228 @@
         }
       ],
       "scope": "Using the provenance audit, SXM2 authority audit, private carrier sanity evidence, and governing product requirements, compare (A) six-loop precision control, (B) conventional adequately-rated protected/distributed 12-V input/power plane, and any genuinely required intermediate architecture. Select the simplest defensible PiSXMe Rev A prototype architecture, preserving 300 W sustained, reasonable 330 W peak margin if justified, safe ratings, rails/sequencing/grounding, and explicit REQUIRES PROTOTYPE VALIDATION dispositions. Update the constraint ledger/invariants, classify each six-loop constraint HARD/SOFT/SUPERSEDED/UNPROVEN, and disposition HPQ #5 without deleting evidence. No CAD edits until decision is signed.",
-      "session_ids": [
-        "/root/power_architecture_authority_decision"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Select simplest defensible prototype V100 power architecture",
-      "updated_at": "2026-09-17T21:58:20.865602Z",
+      "updated_at": "2026-09-17T17:10:00Z",
       "validation": {
         "required": [],
         "results": {}
       },
       "waiting_on": [],
       "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "31b30dc0",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Signed protected/distributed source-bus contract with calculations, margins, component/rating evidence, and REQUIRES PROTOTYPE VALIDATION dispositions.",
+      "created_at": "2026-09-17T22:05:41.192089Z",
+      "dependencies": [],
+      "domain": "Product / Power Authority",
+      "edit_boundaries": [
+        "authority/invariant artifacts",
+        "no CAD edits until contract closure",
+        "no six-loop limiter requirements",
+        "prototype validation may remain explicit"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTOTYPE-SOURCE-BUS-CONTRACT",
+      "notes": "",
+      "owner": "prototype_source_bus_contract",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION",
+        "INV-THERMAL",
+        "INV-COPPER"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Bind the simplest protected/distributed 12-V source and common-bus contract for a 300 W sustained / 330 W bounded-peak V100 prototype: input connectors/conductors, ordinary protection, source voltage/current budget, common bus and returns, voltage drop, copper/via/thermal margins, and explicit prototype validation steps. Do not reintroduce six-loop precision limits.",
+      "session_ids": [
+        "/root/prototype_source_bus_contract"
+      ],
+      "status": "RUNNING",
+      "title": "Bind protected distributed 12-V prototype source bus",
+      "updated_at": "2026-09-17T22:06:06.017759Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "31b30dc0",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Signed first-power contract with safe sequence, instruments/limits, stop criteria, and unresolved empirical items clearly marked.",
+      "created_at": "2026-09-17T22:05:41.327944Z",
+      "dependencies": [],
+      "domain": "V100 / Bring-up Authority",
+      "edit_boundaries": [
+        "bring-up/authority artifacts only",
+        "no CAD edits",
+        "no fabricated measurements",
+        "prototype validation requirements explicit"
+      ],
+      "evidence_refs": [],
+      "id": "P24-V100-PROTOTYPE-FIRST-POWER-CONTRACT",
+      "notes": "",
+      "owner": "v100_prototype_first_power_contract",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-POWER-SEQUENCING",
+        "INV-GPU-CONTACT",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Define current-limited first-power procedure, rail/enable/reset observations, measurement limits, shutdown criteria, thermal/contact checks, and explicit REQUIRES PROTOTYPE VALIDATION dispositions for undocumented SXM2 behavior. Do not fabricate bench results or require production qualification before prototype exists.",
+      "session_ids": [
+        "/root/v100_prototype_first_power_contract"
+      ],
+      "status": "RUNNING",
+      "title": "Define V100 prototype first-power and bring-up contract",
+      "updated_at": "2026-09-17T22:06:06.057754Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "validation-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "31b30dc0",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Producer candidate with exact changed scope, connectivity/DRC targeted evidence, and serialized integration handoff.",
+      "created_at": "2026-09-17T22:05:50.014479Z",
+      "dependencies": [
+        "package:P24-PROTOTYPE-SOURCE-BUS-CONTRACT"
+      ],
+      "domain": "Power / KiCad Producer",
+      "edit_boundaries": [
+        "isolated committed CAD workspace only",
+        "power region and source circuitry only",
+        "no global rule relaxation",
+        "return candidate SHA and raw reports"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTOTYPE-POWER-BUS-PRODUCER",
+      "notes": "",
+      "owner": null,
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTION",
+        "INV-COPPER",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Implement the signed protected/distributed prototype power architecture in an isolated KiCad producer workspace, preserving anchors and unrelated validated circuitry. Use ordinary protection and adequately rated bus/return geometry; no six-loop precision limiter insertion.",
+      "session_ids": [],
+      "status": "WAITING",
+      "title": "Implement protected distributed V100 power bus",
+      "updated_at": "2026-09-17T22:05:50.014479Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [
+        "package:P24-PROTOTYPE-SOURCE-BUS-CONTRACT"
+      ],
+      "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "31b30dc0",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Integrated candidate and fresh validation receipts prove the selected prototype power bus against its acceptance rows, or return scoped failure to the producer/authority path.",
+      "created_at": "2026-09-17T22:05:50.056039Z",
+      "dependencies": [
+        "package:P24-PROTOTYPE-POWER-BUS-PRODUCER"
+      ],
+      "domain": "Root / KiCad Validation",
+      "edit_boundaries": [
+        "serialized canonical integration only",
+        "fresh Light validation",
+        "no unrelated CAD edits",
+        "preserve raw reports and hashes"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
+      "notes": "",
+      "owner": null,
+      "priority": 2,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "native_drc",
+        "physical_opens_shorts",
+        "power_current_transient_thermal",
+        "dfm"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        },
+        {
+          "exclusive": true,
+          "name": "canonical-integration",
+          "units": 1
+        }
+      ],
+      "scope": "Serialize the accepted prototype power-bus candidate into canonical HEAD and run fresh KiCad Light validation at the exact integrated SHA with pinned rules/libraries/toolchain. Reconcile topology changes against baseline; do not claim isolated passes as closure.",
+      "session_ids": [],
+      "status": "WAITING",
+      "title": "Integrate and fresh-Light validate prototype power bus",
+      "updated_at": "2026-09-17T22:05:50.056039Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [
+        "package:P24-PROTOTYPE-POWER-BUS-PRODUCER"
+      ],
+      "workstream": "canonical-integration"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -2827,5 +3006,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T21:58:20.865768Z"
+  "updated_at": "2026-09-17T22:06:06.057933Z"
 }
