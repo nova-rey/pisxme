@@ -2926,7 +2926,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-PRODUCER",
       "notes": "",
-      "owner": "protected_bus_kicad_actual_mutation",
+      "owner": "protected_bus_direct_implementer",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2944,11 +2944,11 @@
       ],
       "scope": "Implement the signed protected/distributed prototype power architecture in an isolated KiCad producer workspace, preserving anchors and unrelated validated circuitry. Use ordinary protection and adequately rated bus/return geometry; no six-loop precision limiter insertion.",
       "session_ids": [
-        "root-20260917-producer-actual-mutation"
+        "root-20260917-producer-direct-implementer"
       ],
       "status": "RUNNING",
       "title": "Implement protected distributed V100 power bus",
-      "updated_at": "2026-09-17T22:45:43.771472Z",
+      "updated_at": "2026-09-17T22:50:52.312382Z",
       "validation": {
         "required": [],
         "results": {}
@@ -3027,5 +3027,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T22:45:43.771778Z"
+  "updated_at": "2026-09-17T22:50:52.312693Z"
 }
