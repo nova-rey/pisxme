@@ -1332,3 +1332,7 @@ The six-loop precision-limiter workstream is frozen pending a bounded provenance
 ## 2026-09-18 — Protected-bus correction authority queued
 
 The failed integrated candidate exposed a source-assembly and complete-path contradiction: its exact Light validation retained shorts/unconnected power items and segment-only positive/return resistance far above the 10 mOhm contract. Integration is parked behind `P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY`, which must bind one source/input assembly and implementation-ready path budget without reviving six-loop regulation.
+
+## 2026-09-18 — J5/J6 input assembly rejected for product envelope
+
+Power authority reviewed the failed candidate and bound that the existing J5/J6 one-12V/one-return contact branches cannot receive 40 A continuous or 45 A bounded-peak credit under the 300 W/330 W prototype contract. A replacement high-current connector/harness assembly must be selected and proven before new CAD routing. Librarian owns the bounded evidence package; the common protected 12 V architecture remains selected and six-loop regulation remains superseded.
