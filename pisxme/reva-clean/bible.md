@@ -1221,3 +1221,7 @@ Unblocker reviewed the retained limiter evidence and classified the residual as 
 ## 2026-09-17 — HPQ Issue #5 admitted for limiter-system authority
 
 The final retained-candidate system authority returned `NO_GO_RETAINED_CANDIDATES` in commit `dd2e7eed`. After the complete Librarian/Researcher, Product/Power, Package/DFM/Thermal, and Unblocker paths were exhausted, the durable hard-problem packet was admitted as Issue #5 in `nova-rey/codex-config-backup` with `hard-blocker`. Only `P24-6A-LIMITER-SYSTEM-AUTHORITY-DECISION` and its limiter-dependent subtree are parked on `hpq:nova-rey/codex-config-backup#5`; unrelated acceptance work remains separate. No CAD or product-envelope changes are authorized pending a resolution-ready task-force packet.
+
+## 2026-09-17 — Phase 24 hard-idle census pending HPQ Issue #5
+
+The admitted limiter-system hard problem remains open with no `resolution-ready` label. The retained Main Work Queue census is READY=0, RUNNING=0, VALIDATING=0, DONE=30, WAITING=13; every unfinished package has an explicit authority, package, or HPQ dependency. The approved campaign is paused at the hard-problem boundary pending Issue #5; no CAD, Phase 25, or Phase 26 work is authorized until its result is reconciled and independently validated.

@@ -1,0 +1,69 @@
+{
+  "campaign_complete": false,
+  "can_idle": true,
+  "counts": {
+    "DONE": 30,
+    "READY": 0,
+    "RUNNING": 0,
+    "VALIDATING": 0,
+    "WAITING": 13
+  },
+  "hard_blocked": true,
+  "unfinished_required": [
+    "P24-POWER-INPUT-ARCHITECTURE",
+    "P24-POWER-SOURCE-CONTRACT",
+    "P24-POWER-RAIL-CLOSURE",
+    "P24-INTERFACE-SI-CLOSURE",
+    "P24-THERMAL-FAB-MECH-CLOSURE",
+    "P24-FIRMWARE-SEQUENCING-CLOSURE",
+    "P24-POWER-CONNECTOR-QUALIFICATION-CLOSURE",
+    "P24-POWER-AUTHORITY-SIGNOFF",
+    "P24-PROTECTION-ASSEMBLY-QUALIFICATION",
+    "P24-HARNESS-INSTALLATION-THERMAL-QUALIFICATION",
+    "P24-EXACT-NFET-ENERGY-AUTHORITY",
+    "P24-HARNESS-INSTALLATION-AUTHORITY",
+    "P24-6A-LIMITER-SYSTEM-AUTHORITY-DECISION"
+  ],
+  "waiting_dependencies": {
+    "P24-6A-LIMITER-SYSTEM-AUTHORITY-DECISION": [
+      "hpq:nova-rey/codex-config-backup#5"
+    ],
+    "P24-EXACT-NFET-ENERGY-AUTHORITY": [
+      "authority:6A-limiter-qualification"
+    ],
+    "P24-FIRMWARE-SEQUENCING-CLOSURE": [
+      "package:P24-POWER-INPUT-ARCHITECTURE",
+      "package:P24-POWER-RAIL-CLOSURE"
+    ],
+    "P24-HARNESS-INSTALLATION-AUTHORITY": [
+      "authority:harness-installation-thermal-qualification"
+    ],
+    "P24-HARNESS-INSTALLATION-THERMAL-QUALIFICATION": [
+      "authority:harness-installation-thermal-qualification"
+    ],
+    "P24-INTERFACE-SI-CLOSURE": [
+      "package:P24-POWER-INPUT-ARCHITECTURE"
+    ],
+    "P24-POWER-AUTHORITY-SIGNOFF": [
+      "authority:protection-assembly-qualification"
+    ],
+    "P24-POWER-CONNECTOR-QUALIFICATION-CLOSURE": [
+      "authority:power-assembly-qualification"
+    ],
+    "P24-POWER-INPUT-ARCHITECTURE": [
+      "authority:power-source-contract"
+    ],
+    "P24-POWER-RAIL-CLOSURE": [
+      "package:P24-POWER-INPUT-ARCHITECTURE"
+    ],
+    "P24-POWER-SOURCE-CONTRACT": [
+      "authority:6A-limiter-qualification"
+    ],
+    "P24-PROTECTION-ASSEMBLY-QUALIFICATION": [
+      "authority:exact-nFET-and-energy-coordination"
+    ],
+    "P24-THERMAL-FAB-MECH-CLOSURE": [
+      "package:P24-POWER-INPUT-ARCHITECTURE"
+    ]
+  }
+}
