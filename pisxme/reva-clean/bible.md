@@ -1268,3 +1268,7 @@ HPQ Issue #5 was closed as `not planned` after the signed architecture decision 
 ## 2026-09-17 — Protected-bus producer dispatched
 
 The signed source-bus and first-power contracts are now DONE in the Phase 24 queue. `P24-PROTOTYPE-POWER-BUS-PRODUCER` is claimed by Supervisor `prototype_power_bus_producer_supervisor` against the protected/distributed 12-V authority. The producer is limited to an isolated power-region candidate with ordinary protection and rated bus/return geometry; six-loop precision regulation remains superseded. Canonical integration and fresh Light validation remain serialized after the candidate returns.
+
+## 2026-09-17 — Protected-bus producer capability change
+
+The initial protected-bus producer Supervisor was released after a bounded liveness check found no active CAD process, no candidate SHA, and only a stale baseline report in its isolated workspace. The package was returned to READY and reassigned directly to `protected_bus_kicad_producer_retry` (`kicad_engineer`) for one capability-changed, bounded producer attempt. The retry remains limited to the signed protected/distributed 12-V source/bus contract; no six-loop limiter or global rule relaxation is permitted.
