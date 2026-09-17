@@ -1276,3 +1276,7 @@ The initial protected-bus producer Supervisor was released after a bounded liven
 ## 2026-09-17 — Protected-bus producer escalated to bounded Unblocker review
 
 Two materially different producer attempts failed to return a CAD candidate: the initial Supervisor had no live CAD process and only a stale baseline report, while the direct KiCad retry produced only baseline/render artifacts before its bounded slot was released. The producer package is now owned temporarily by `protected_bus_producer_unblocker` for one read-only Tier-2 classification of implementation, knowledge, authority, or structural blockers. No CAD result was promoted and no six-loop architecture was restored.
+
+## 2026-09-17 — Protected-bus producer routed to MPA corridor authority
+
+The bounded Unblocker classified the protected-bus producer stall as an internal domain-authority problem. The selected PCB has no routed `12V_IN_B` or `FUSED_12V_B`, no bus-wide `12V_PROTECTED` copper/zone, and only `POWER_GND` zones; fresh Light baseline is 300 DRC violations and 499 unconnected items. The producer is parked on `authority:protected-bus-mpa` while Macro Placement Authority issues one binding source/protection/bus corridor plan with Power Integrity advisory. The six-loop MPA plan is explicitly excluded.

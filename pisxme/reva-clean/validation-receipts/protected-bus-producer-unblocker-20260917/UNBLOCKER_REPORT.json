@@ -1,0 +1,12 @@
+{
+  "package": "P24-PROTOTYPE-POWER-BUS-PRODUCER",
+  "base_sha": "31b30dc0ccb28fe341f9bffb26005b5f50cd7641",
+  "classification": "INTERNAL_ROUTE",
+  "class": "DOMAIN_AUTHORITY",
+  "baseline": {"drc_violations": 300, "unconnected_items": 499},
+  "missing_topology": ["12V_IN_B routed segments", "FUSED_12V_B routed segments", "12V_PROTECTED bus copper/zone"],
+  "required_authority": "Macro Placement Authority with Power Integrity advisory",
+  "dependency": "authority:protected-bus-mpa",
+  "cad_candidate": null,
+  "canonical_mutation": false
+}

@@ -74,6 +74,14 @@
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
+    "authority:protected-bus-mpa": {
+      "created_at": "2026-09-17T22:27:00.106570Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/protected-bus-producer-unblocker-20260917.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:protection-assembly-qualification": {
       "created_at": "2026-09-14T00:14:46.580743Z",
       "kind": "authority",
@@ -2905,7 +2913,8 @@
       "completion_criterion": "Producer candidate with exact changed scope, connectivity/DRC targeted evidence, and serialized integration handoff.",
       "created_at": "2026-09-17T22:05:50.014479Z",
       "dependencies": [
-        "package:P24-PROTOTYPE-SOURCE-BUS-CONTRACT"
+        "package:P24-PROTOTYPE-SOURCE-BUS-CONTRACT",
+        "authority:protected-bus-mpa"
       ],
       "domain": "Power / KiCad Producer",
       "edit_boundaries": [
@@ -2917,7 +2926,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-PRODUCER",
       "notes": "",
-      "owner": "protected_bus_producer_unblocker",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -2934,17 +2943,17 @@
         }
       ],
       "scope": "Implement the signed protected/distributed prototype power architecture in an isolated KiCad producer workspace, preserving anchors and unrelated validated circuitry. Use ordinary protection and adequately rated bus/return geometry; no six-loop precision limiter insertion.",
-      "session_ids": [
-        "root-20260917-producer-unblocker"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Implement protected distributed V100 power bus",
-      "updated_at": "2026-09-17T22:24:50.679073Z",
+      "updated_at": "2026-09-17T22:27:00.106608Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:protected-bus-mpa"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -3018,5 +3027,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T22:24:50.679384Z"
+  "updated_at": "2026-09-17T22:27:00.106780Z"
 }
