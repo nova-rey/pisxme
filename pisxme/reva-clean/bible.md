@@ -1308,3 +1308,7 @@ The qualified KiCad actual-mutation retry again produced only the base DRC censu
 ## 2026-09-17 — Canonical protected-bus integration dispatched
 
 The producer candidate unlocked the serialized canonical integration package. `protected_bus_canonical_integration_validator` now owns the exclusive canonical-integration resource to reconcile the isolated protected-bus candidate against current `reva-clean` HEAD and run fresh KiCad Light validation with exact rules, libraries, and toolchain identity. The candidate's 338/250 isolated DRC census remains diagnostic; no integrated closure is claimed.
+
+### 2026-09-17 — Protected-bus canonical integration candidate
+
+The accepted Macro Placement Authority protected-bus producer was integrated serially into the selected `PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb` candidate. The integration boundary preserves the canonical schematic, project/rules/libraries, anchors, mapped J1 contract, return zones, and unrelated circuitry; only the eight authorized source/protection placements and named power copper/zone/via objects changed. Fresh KiCad Light validation is required before this candidate can become a completed queue package.
