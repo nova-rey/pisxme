@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-6A-LIMITER-QUALIFICATION-AUTHORITY",
+  "decision_id": "PISXME-P24-6A-LIMITER-QUALIFICATION-20260917",
+  "review_base_sha": "92902ef1e92bc287eb31aa516ffc117b0b26712c",
+  "date": "2026-09-17",
+  "authority": "Product / Power Authority",
+  "authority_level": "BINDING_WITHIN_DELEGATED_SCOPE",
+  "status": "NO_QUALIFIED_LIMITER_ARCHITECTURE",
+  "disposition": "WAITING_ON authority:6A-limiter-qualification",
+  "cad_changed": false,
+  "product_envelope_changed": false,
+  "contract": {
+    "hpq_decision_id": "PISXME-P24-POWER-BUDGET-HPQ4",
+    "hpq_version": "2.0.0",
+    "hpq4_input_sha256": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae",
+    "independent_loops": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "loop_current_min_a": 6.0,
+    "loop_current_max_a": 6.4,
+    "maximum_hot_limiter_resistance_mohm": 57.0,
+    "passive_sharing_allowed": false,
+    "source_voltage_sustained_v": [
+      12.05,
+      12.6
+    ],
+    "source_voltage_peak_v": [
+      12.1,
+      12.6
+    ],
+    "v100_sustained_w": 300.0,
+    "v100_peak_w": 330.0
+  },
+  "calculations": {
+    "required_current_window_ratio": "6.4/6.0 = 1.0666666666666667",
+    "maximum_symmetric_total_error_fraction": 0.03225806451612903,
+    "maximum_symmetric_total_error_percent": 3.225806451612903,
+    "ltc4281_4282_full_scale_threshold_min_mv": 32.88,
+    "ltc4281_4282_full_scale_threshold_max_mv": 35.87,
+    "ltc4281_4282_full_scale_ratio": 1.0909367396593672,
+    "ltc4281_4282_symmetric_threshold_error_percent": 4.349090909090901,
+    "ltc4281_4282_programmable_adjustment_step_mv": 3.1,
+    "ltc4281_4282_programmable_adjustment_full_scale_max_mv": 34.4,
+    "ltc4281_4282_single_step_fraction_at_full_scale": 0.09011627906976745,
+    "interpretation": "The full-temperature threshold spread already exceeds the complete permitted current-setting error before shunt, layout, temperature, calibration residual, FET, fault and test terms. The 3.1 mV code step is also too coarse to be treated as a guaranteed 6.000-6.400 A trim by itself."
+  },
+  "candidate_evaluations": [
+    {
+      "candidate": "LTC4281AUFD#PBF / LTC4281IUFD#PBF plus Kelvin shunt and external nFET",
+      "role": "closest evidence-backed architecture",
+      "evidence": [
+        "2.9-33 V controller range covers the HPQ4 12 V source plane",
+        "12 V gate-drive class, foldback, I2C configuration, timer and fault telemetry",
+        "manufacturer table specifies 32.88-35.87 mV full-scale current-limit DAC endpoints over full operating temperature range",
+        "manufacturer application text permits trimming sense voltage against measured copper, but does not provide a PiSXMe production residual guarantee"
+      ],
+      "current_window": "FAIL_UNPROVEN",
+      "hot_resistance": "UNPROVEN",
+      "fault_reverse_thermal": "UNPROVEN",
+      "production_test": "UNPROVEN",
+      "disposition": "CANDIDATE_ONLY; not promoted"
+    },
+    {
+      "candidate": "LTC4282AUH#PBF plus Kelvin shunts and external nFETs",
+      "role": "dual-channel variant",
+      "evidence": [
+        "same 2.9-33 V class, 12 V gate-drive class and current-limit DAC endpoint table as LTC4281",
+        "two external gate circuits can support high-current/SOA arrangements"
+      ],
+      "current_window": "FAIL_UNPROVEN",
+      "hot_resistance": "UNPROVEN",
+      "fault_reverse_thermal": "UNPROVEN",
+      "production_test": "UNPROVEN",
+      "disposition": "CANDIDATE_ONLY; does not close six independent loop contracts"
+    },
+    {
+      "candidate": "LM5066H",
+      "role": "bounded manufacturer alternative",
+      "evidence": "Full-temperature current-sense examples in the Librarian packet span 9.2-11.4 mV and 46-54 mV settings.",
+      "current_window": "REJECTED",
+      "reason": "Threshold spread exceeds the 3.225806% total error budget before other terms.",
+      "disposition": "Protection/telemetry precedent only"
+    },
+    {
+      "candidate": "LTC4218 / LTC4286",
+      "role": "bounded manufacturer alternatives",
+      "evidence": "Retained primary records report approximately 5% current-limit accuracy.",
+      "current_window": "REJECTED",
+      "reason": "Published accuracy exceeds the complete 3.225806% symmetric error budget.",
+      "disposition": "Not promoted"
+    },
+    {
+      "candidate": "MAX5977A",
+      "role": "current-sense/gate-drive building block",
+      "evidence": "Approximately 1% current-sense accuracy is advertised, but no closed active 6 A limiter, fault, reverse, or hot-path contract is retained.",
+      "current_window": "UNPROVEN",
+      "disposition": "Not a production limiter selection"
+    },
+    {
+      "candidate": "TPS24750RUVR",
+      "role": "bounded manufacturer alternative",
+      "evidence": "2.5-18 V external-FET eFuse/controller class is compatible in voltage class.",
+      "current_window": "UNPROVEN",
+      "reason": "No retained verified full-temperature 6.000-6.400 A current-limit table or complete hot/fault/reverse contract.",
+      "disposition": "Not promoted"
+    },
+    {
+      "candidate": "MAX17527AATP+T, TPS1663 and passive/nFET options",
+      "role": "existing negative controls",
+      "current_window": "REJECTED_OR_NOT_LIMITER",
+      "reason": "HPQ4 and the prior authority receipt already reject MAX17527A and TPS1663; nFET/fuse/TVS parts do not implement the required active limiter.",
+      "disposition": "Retain scoped evidence only"
+    }
+  ],
+  "qualification_gates": [
+    {
+      "id": "LIM-QUAL-001",
+      "requirement": "Each of six loops guarantees 6.000-6.400 A over all component, supply, process and temperature tolerances.",
+      "state": "OPEN",
+      "evidence_gap": "No candidate supplies a manufacturer-guaranteed window; LTC4281/4282 threshold endpoints alone fail the complete budget."
+    },
+    {
+      "id": "LIM-QUAL-002",
+      "requirement": "Limiter and associated sense path remain within 57 mOhm hot allocation.",
+      "state": "OPEN",
+      "evidence_gap": "Controller data sheets do not qualify the complete installed shunt, copper and pass-FET path; exact nFET hot gate-drive evidence is also open."
+    },
+    {
+      "id": "LIM-QUAL-003",
+      "requirement": "12 V source compatibility over 12.05-12.60 V sustained and 12.10-12.60 V peak.",
+      "state": "PARTIAL",
+      "evidence_gap": "LTC4281/4282 voltage class is compatible, but complete installed architecture and transient qualification remain open."
+    },
+    {
+      "id": "LIM-QUAL-004",
+      "requirement": "Overcurrent, short-circuit, timer, retry/latch, reverse-current/reverse-polarity and surge behavior are bound with exact FET/fuse/TVS/harness values.",
+      "state": "OPEN",
+      "evidence_gap": "Manufacturer controller functions are documented, but no PiSXMe system waveform, reverse policy, clamp, SOA/I2t or six-loop fault truth table is qualified."
+    },
+    {
+      "id": "LIM-QUAL-005",
+      "requirement": "Production trim/test can prove the post-calibration residual across temperature, retention and traceability.",
+      "state": "OPEN",
+      "evidence_gap": "LTC4281 text permits final-test trim, but no approved residual specification, test fixture, temperature corners, EEPROM/configuration retention or lot traceability exists."
+    },
+    {
+      "id": "LIM-QUAL-006",
+      "requirement": "Exact package/footprint, procurement status, assembly and thermal installation are authoritative.",
+      "state": "OPEN",
+      "evidence_gap": "No selected production architecture or exact coordinated component set is approved; no CAD release authorized."
+    }
+  ],
+  "residual_dependency": {
+    "id": "authority:6A-limiter-qualification",
+    "classification": "DOMAIN_AUTHORITY",
+    "owner": "Product / Power Authority",
+    "condition": "Qualify one exact production architecture with an explicit post-calibration and temperature-bound current window, or acquire manufacturer evidence for a part already guaranteed inside the window.",
+    "minimum_required_evidence": [
+      "exact controller and all six-loop component MPNs/package/footprint provenance",
+      "full-tolerance and full-temperature current-limit calculation or manufacturer guarantee proving 6.000-6.400 A on every loop",
+      "calibration target, allowed residual, fixture accuracy, temperature corners, EEPROM/configuration retention and production traceability",
+      "complete hot limiter resistance including shunt, FET, copper and any sense interconnect <=57 mOhm",
+      "exact gate-drive minimum and hot RDS(on) qualification",
+      "fault timing, reverse-current/reverse-polarity, TVS clamp, fuse, harness inductance and nFET SOA/I2t coordination",
+      "six-loop fail-safe FLAG/inhibit/reset behavior and thermal/package installation qualification"
+    ],
+    "resume": "After the authority records this evidence, requalify the exact nFET and protection assembly, then release the source contract and downstream CAD producer only through the normal serialized integration and fresh-Light validation path."
+  },
+  "queue_impact": {
+    "P24-6A-LIMITER-QUALIFICATION-AUTHORITY": "DONE_WITH_RESIDUAL_AUTHORITY_DEPENDENCY",
+    "P24-POWER-SOURCE-CONTRACT": "WAITING_ON authority:6A-limiter-qualification",
+    "P24-EXACT-NFET-ENERGY-AUTHORITY": "WAITING_ON authority:6A-limiter-qualification",
+    "P24-POWER-INPUT-ARCHITECTURE": "DOWNSTREAM_UNRELEASED",
+    "cad_release": "NOT_AUTHORIZED"
+  },
+  "sources": [
+    {
+      "path": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.json",
+      "sha256": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae",
+      "role": "signed HPQ4 numerical contract"
+    },
+    {
+      "path": "validation-receipts/power-current-limiter-authority-20260917/POWER_LIMITER_SELECTION_AUTHORITY.json",
+      "sha256": "d2c3699b8b0b527a4c77d0f605ba95b89cf415b5551ae60096990097ce29f23e",
+      "role": "prior negative selection and knowledge dependency"
+    },
+    {
+      "path": "validation-receipts/exact-nfet-energy-authority-20260914/REQUALIFICATION_HPQ4_20260917.json",
+      "sha256": "7f7d637e6395d9532782850fc85c1a84771502b33fccdf38d4ea6550b93744ea",
+      "role": "exact nFET gate and fault gaps"
+    },
+    {
+      "path": "/home/nyx/PiSXMe-Library/Library/briefs/authoritative-6a-window-limiter-20260917.md",
+      "sha256": "5cd6c283c32204a69856890889cf18feae1d2408518dfc56b46dd8af669c7eac",
+      "role": "Librarian indexed evidence brief"
+    },
+    {
+      "path": "/home/nyx/PiSXMe-Library/Library/indexes/authoritative-6a-window-limiter-20260917.json",
+      "sha256": "2447b317458da8e80f7089155520136ce98485818b7eb13673aed1bd5c57cc8e",
+      "role": "Librarian source index"
+    },
+    {
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc4281.pdf",
+      "revision": "Rev. C",
+      "role": "ADI primary LTC4281 data sheet"
+    },
+    {
+      "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/LTC4282.pdf",
+      "revision": "Rev. C",
+      "role": "ADI primary LTC4282 data sheet"
+    },
+    {
+      "url": "https://www.analog.com/en/products/ltc4281.html",
+      "role": "ADI LTC4281 product record"
+    },
+    {
+      "url": "https://www.analog.com/en/products/ltc4282.html",
+      "role": "ADI LTC4282 product record"
+    }
+  ],
+  "signature": {
+    "authority": "Product / Power Authority",
+    "signed_at": "2026-09-17",
+    "decision": "No limiter architecture is promoted. The HPQ4 contract remains binding; the exact qualification dependency remains open.",
+    "signature_basis": "Current HEAD, signed HPQ4 JSON, Librarian indexed primary evidence, prior limiter rejection, and exact-nFET requalification receipt."
+  }
+}

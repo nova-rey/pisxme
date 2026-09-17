@@ -1181,3 +1181,7 @@ Product/Power Authority found no retained MPN satisfying the HPQ4 6.000–6.400 
 ## 2026-09-17 — Librarian 6 A limiter evidence and authority qualification dispatch
 
 The bounded Librarian search completed and was validated against private Library commit `4faaf69a58731021ac534f760870031a6758edd4`. It found no production limiter MPN satisfying the HPQ4 six-loop contract. The indexed evidence narrows the next internal decision to Product/Power Authority qualification of a calibrated LTC4281/LTC4282-class external-limiter assembly or a bounded manufacturer-supported alternative. No CAD or product-envelope decision changed. Queue package `P24-AUTHORITATIVE-6A-LIMITER-EVIDENCE` is DONE; `P24-6A-LIMITER-QUALIFICATION-AUTHORITY` is RUNNING. Downstream source and nFET work remains waiting on the limiter authority key.
+
+2026-09-17 — HPQ4 six-amp limiter authority qualification remains unresolved
+
+Product/Power Authority reconciled the Librarian's authoritative 6 A evidence at current HEAD `92902ef1`. LTC4281/LTC4282 remain the closest calibrated external-limiter candidates, but their guaranteed 32.88–35.87 mV full-temperature DAC endpoints and 3.1 mV adjustment step do not prove the HPQ4 6.000–6.400 A window before shunt, calibration, FET, fault, thermal and production-test terms. Bounded alternatives are rejected or unproven. The authority packet records `authority:6A-limiter-qualification` with exact resume evidence; no CAD or product-envelope change is authorized.
