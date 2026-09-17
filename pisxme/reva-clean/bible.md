@@ -1209,3 +1209,7 @@ The bounded Power/Package/DFM review indexed primary ADI, Vishay, Ohmite, and In
 ## 2026-09-17 — ADM1175 component-path gap and Unblocker escalation
 
 The ADM1175 component-path package returned commit `bb3901a6`. The WSK2512R0160BEA shunt screen fails the HPQ4 current ceiling at 6.042710–6.458652 A; candidate FETs remain unqualified for hot/minimum-gate, reverse, SOA/I2t, and installed path behavior. The package is DONE with `authority:6A-limiter-qualification` retained. A capability-level Unblocker review `P24-6A-LIMITER-UNBLOCKER-REVIEW` is RUNNING to determine the next bounded internal route or a genuine minimum product/external decision. No CAD changes are authorized.
+
+## 2026-09-17 — Limiter Unblocker routed final system authority decision
+
+Unblocker reviewed the retained limiter evidence and classified the residual as a domain-authority problem. The ADM1175 component package and Unblocker receipt are complete; no external blocker or product-envelope relaxation was authorized. Queue package `P24-6A-LIMITER-SYSTEM-AUTHORITY-DECISION` is RUNNING for one final bounded Product/Power/Package/Thermal decision using retained candidates only. It must bind a complete six-loop HPQ4 limiter system or issue a precise no-go with one minimum evidence dependency. No further family search or CAD release is authorized.
