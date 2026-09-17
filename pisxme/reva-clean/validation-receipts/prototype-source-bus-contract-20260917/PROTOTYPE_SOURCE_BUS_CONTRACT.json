@@ -1,0 +1,121 @@
+{
+  "v100_sustained_w": 300.0,
+  "v100_peak_w": 330.0,
+  "auxiliary_w": 22.7,
+  "efficiency_floor": 0.9,
+  "source_nominal_v": 12.0,
+  "source_min_v": 11.4,
+  "source_max_v": 12.6,
+  "source_continuous_a": 40.0,
+  "source_peak_a": 45.0,
+  "source_peak_duration_ms": 100.0,
+  "bus_min_sustained_v": 11.05,
+  "bus_min_peak_v": 11.0,
+  "bus_max_v": 12.6,
+  "drop_max_sustained_v": 0.35,
+  "drop_max_peak_v": 0.4,
+  "path_resistance_max_mohm": 10.0,
+  "drop_allocations_mohm": {
+    "source_harness_connector_loop": 4.0,
+    "protection_fault_isolation_loop": 2.0,
+    "pcb_input_positive_return": 2.5,
+    "j1_field_spreading": 1.5
+  },
+  "thermal_rise_max_c": 30.0,
+  "semiconductor_junction_margin_c": 20.0,
+  "sustained": {
+    "bus_power_w": 358.55555555555554,
+    "source_current_at_12v_a": 29.87962962962963,
+    "source_current_at_11_4v_a": 31.45224171539961,
+    "source_margin_at_11_4v_a": 8.547758284600391,
+    "drop_at_10mohm_v": 0.3145224171539961,
+    "bus_lower_bound_at_11_4v": 11.085477582846003,
+    "drop_margin_v": 0.035477582846003886
+  },
+  "peak": {
+    "bus_power_w": 391.88888888888886,
+    "source_current_at_12v_a": 32.657407407407405,
+    "source_current_at_11_4v_a": 34.37621832358674,
+    "source_margin_at_11_4v_a": 10.623781676413259,
+    "drop_at_10mohm_v": 0.34376218323586744,
+    "bus_lower_bound_at_11_4v": 11.056237816764133,
+    "drop_margin_v": 0.05623781676413259
+  },
+  "ampacity_sustained_target_a": 39.315302144249515,
+  "ampacity_peak_target_a": 37.81384015594542,
+  "architecture_basis": {
+    "decision_id": "PISXME-P24-POWER-ARCH-20260917",
+    "decision_revision": "1.0",
+    "decision_status": "SIGNED_SELECTED_PROTOTYPE_ARCHITECTURE",
+    "architecture": "B_WITH_C_PROTECTION_REFINEMENT",
+    "six_loop_precision_regulation": false,
+    "passive_sharing_credit": "FORBIDDEN_UNTIL_EXACT_PARALLEL_INPUT_ASSEMBLY_QUALIFICATION"
+  },
+  "contract": {
+    "contract_id": "PISXME-P24-PROTOTYPE-SOURCE-BUS-20260917",
+    "revision": "1.0.0",
+    "default_input_paths": 1,
+    "multiple_paths_allowed_only_if": "each exact path separately protected, ampacity-qualified, and included in end-to-end resistance and thermal evidence",
+    "complete_path_resistance_max_mohm": 10.0,
+    "includes_return": true,
+    "required_protection": [
+      "input_fuse_or_equivalent_fault_isolation",
+      "reverse_polarity_or_ideal_diode",
+      "TVS_or_equivalent_surge_clamp",
+      "OVP_UVLO_policy",
+      "bounded_inrush",
+      "controlled_shutdown"
+    ],
+    "j1_policy": "authority-mapped 12V/GND contacts only; unknown contacts remain unknown/no-connect",
+    "undocumented_sxm2_behavior": "REQUIRES_PROTOTYPE_VALIDATION"
+  },
+  "validation": {
+    "status": "REQUIRES_PROTOTYPE_VALIDATION",
+    "fabricated_measurement_claim": false,
+    "production_qualification_claim": false,
+    "raw_evidence_required": [
+      "four_wire_source_and_J1_voltage",
+      "total_current",
+      "connector_crimp_protection_PCB_J1_temperature",
+      "source_transient_capture",
+      "fault_shutdown_and_restart_log"
+    ],
+    "stop_limits": {
+      "protected_bus_min_v": 11.0,
+      "protected_bus_max_v": 12.6,
+      "source_continuous_max_a": 40.0,
+      "source_peak_max_a": 45.0,
+      "source_peak_duration_ms": 100.0,
+      "temperature_rise_max_c": 30.0
+    }
+  },
+  "authority_status": "SIGNED_PROTOTYPE_SOURCE_BUS_CONTRACT",
+  "signed_by": "Product / Power Authority",
+  "signed_date": "2026-09-17",
+  "cad_changed": false,
+  "source_state": {
+    "base_sha": "c2e0194c432e712d6f8386b9682f038dd06188e6",
+    "repo": "nova-rey/pisxme",
+    "branch": "reva-clean"
+  },
+  "evidence_refs": {
+    "architecture_decision_md": "validation-receipts/power-architecture-authority-decision-20260917/POWER_ARCHITECTURE_AUTHORITY_DECISION.md",
+    "architecture_decision_json": "validation-receipts/power-architecture-authority-decision-20260917/POWER_ARCHITECTURE_AUTHORITY_DECISION.json",
+    "constraint_provenance_md": "validation-receipts/power-constraint-provenance-audit-20260917/POWER_CONSTRAINT_PROVENANCE_AUDIT.md",
+    "constraint_provenance_json": "validation-receipts/power-constraint-provenance-audit-20260917/POWER_CONSTRAINT_PROVENANCE_AUDIT.json",
+    "sxm2_audit_md": "validation-receipts/power-sxm2-authority-audit-20260917/SXM2_V100_POWER_AUTHORITY_AUDIT.md",
+    "carrier_sanity": "validation-receipts/power-carrier-sanity-check-20260917.md",
+    "product_invariants": "PROJECT_INVARIANTS.json",
+    "hpq4_budget_reference": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.json"
+  },
+  "evidence_sha256": {
+    "architecture_decision_md": "f8ca2ebde067e7d58f4596eddf9e77d871b1219cc37badc8ef2169a3a22d430a",
+    "architecture_decision_json": "a57b39a03ff4e99f5ade6eac90772c0e70fa4cb1564d0f7a7d96d8bb4ca379ae",
+    "constraint_provenance_md": "087a66ddfdad2b0faa45393fb261c8a5ecf3fa722a4f7c5789e8324cbc735dcc",
+    "constraint_provenance_json": "228cd3f7661959fb1dcc0804032ca8a0a7f543f3737905b4bcdb395c8877f8ac",
+    "sxm2_audit_md": "8946af1d578c1f88ab0b52be2cb5af44f2d647ce8db2c1a9551062cb27dcd8c9",
+    "carrier_sanity": "036c14400cf5e8dfdee3bd49d58a4795b109418b754546585a0dd32d306fb70e",
+    "product_invariants": "44cd6b934d8b45b25d268cd56a470d162f8241fb2462aed97a842ff4e5ad7aef",
+    "hpq4_budget_reference": "321e4d14c3696d1d24c9ccb54c17526e339786b527e73b54b1ebd0100c501eae"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "package_id": "P24-PROTOTYPE-SOURCE-BUS-CONTRACT",
+  "result": "DONE",
+  "base_sha": "c2e0194c432e712d6f8386b9682f038dd06188e6",
+  "contract": "validation-receipts/prototype-source-bus-contract-20260917/PROTOTYPE_SOURCE_BUS_CONTRACT.json",
+  "released_package": "P24-PROTOTYPE-POWER-BUS-PRODUCER",
+  "release_condition": "contract artifact integrated; Root owns queue transition",
+  "superseded_dependency": "hpq:nova-rey/codex-config-backup#5",
+  "superseded_by": "PISXME-P24-POWER-ARCH-20260917",
+  "cad_changed": false,
+  "phase25_started": false,
+  "phase26_started": false
+}
