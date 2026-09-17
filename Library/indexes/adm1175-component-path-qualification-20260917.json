@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "adm1175-component-path-qualification-20260917",
+  "requesting_package": "P24-ADM1175-COMPONENT-PATH-QUALIFICATION",
+  "retrieved": "2026-09-17",
+  "vendor_bytes_retained": false,
+  "sources": [
+    {"id": "adi-adm1175-rev-c", "url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ADM1175.pdf", "tier": 1, "status": "primary"},
+    {"id": "vishay-wsk2512-rev-2023-12", "url": "https://www.vishay.com/docs/30108/wsk2512.pdf", "tier": 1, "status": "primary"},
+    {"id": "vishay-wsk1206-high-power-rev-2023-12", "url": "https://www.vishay.com/docs/30325/wsk120618.pdf", "tier": 1, "status": "primary"},
+    {"id": "ohmite-cs10", "url": "https://www.ohmite.com/res-cs10/", "tier": 1, "status": "primary"},
+    {"id": "infineon-irls4030-7p", "url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-irls4030-7p-datasheet-en.pdf", "tier": 1, "status": "primary"},
+    {"id": "infineon-bsc070n10ls5", "url": "https://www.infineon.com/part/BSC070N10LS5", "tier": 1, "status": "primary"},
+    {"id": "infineon-bsc096n10ls5", "url": "https://www.infineon.com/part/BSC096N10LS5", "tier": 1, "status": "primary"}
+  ],
+  "derived_candidates": {
+    "shunt": "WSK2512R0160BEA",
+    "fets": ["IRLS4030-7PPbF", "BSC070N10LS5ATMA1", "BSC096N10LS5ATMA1"]
+  },
+  "status": "RESIDUAL_GAP",
+  "dependency": "authority:6A-limiter-qualification",
+  "restricted_boundary": "No vendor bytes copied into public development history"
+}

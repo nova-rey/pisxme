@@ -1,0 +1,9 @@
+{
+  "record_id": "adm1175-component-path-qualification-20260917",
+  "source_class": "public primary manufacturer evidence",
+  "retrieved": "2026-09-17",
+  "requesting_package": "P24-ADM1175-COMPONENT-PATH-QUALIFICATION",
+  "retention": "metadata, URLs, revisions, and extracted facts only; source bytes not retained",
+  "decision_boundary": "candidate evidence; not procurement approval, component qualification, or PiSXMe production authorization",
+  "private_library_commit_expected": true
+}

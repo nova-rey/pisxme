@@ -373,6 +373,45 @@
         "provenance",
         "authority-reassessment"
       ]
+    },
+    {
+      "id": "brief-adm1175-component-path-qualification-20260917",
+      "kind": "component-authority-brief",
+      "path": "Library/briefs/adm1175-component-path-qualification-20260917.md",
+      "tags": [
+        "ADM1175",
+        "shunt",
+        "nFET",
+        "current-limit",
+        "HPQ4",
+        "power"
+      ]
+    },
+    {
+      "id": "index-adm1175-component-path-qualification-20260917",
+      "kind": "structured-component-index",
+      "path": "Library/indexes/adm1175-component-path-qualification-20260917.json",
+      "tags": [
+        "ADM1175",
+        "WSK2512",
+        "IRLS4030",
+        "BSC070",
+        "BSC096",
+        "qualification"
+      ]
+    },
+    {
+      "id": "provenance-adm1175-component-path-qualification-20260917",
+      "kind": "provenance-source",
+      "path": "Library/provenance/adm1175-component-path-qualification-20260917.json",
+      "tags": [
+        "ADM1175",
+        "ADI",
+        "Vishay",
+        "Infineon",
+        "Ohmite",
+        "primary-source"
+      ]
     }
   ]
 }
