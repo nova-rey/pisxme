@@ -2969,7 +2969,13 @@
       },
       "base_sha": "31b30dc0",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/protected-bus-integrated-validation-20c9cb12/RECEIPT.md",
+        "base_sha": "31b30dc0",
+        "returned_at": "2026-09-17T23:28:05.640445Z",
+        "returned_by": "protected_bus_direct_canonical_integration",
+        "sha": "20c9cb12d8f0cc9c63274a07b8b9a887b29585bf"
+      },
       "completion_criterion": "Integrated candidate and fresh validation receipts prove the selected prototype power bus against its acceptance rows, or return scoped failure to the producer/authority path.",
       "created_at": "2026-09-17T22:05:50.056039Z",
       "dependencies": [
@@ -2985,7 +2991,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
       "notes": "",
-      "owner": "protected_bus_direct_canonical_integration",
+      "owner": null,
       "priority": 2,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3007,15 +3013,39 @@
         }
       ],
       "scope": "Serialize the accepted prototype power-bus candidate into canonical HEAD and run fresh KiCad Light validation at the exact integrated SHA with pinned rules/libraries/toolchain. Reconcile topology changes against baseline; do not claim isolated passes as closure.",
-      "session_ids": [
-        "root-20260917-direct-canonical-integration"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "READY",
       "title": "Integrate and fresh-Light validate prototype power bus",
-      "updated_at": "2026-09-17T23:19:13.467295Z",
+      "updated_at": "2026-09-17T23:28:25.278802Z",
       "validation": {
-        "required": [],
-        "results": {}
+        "required": [
+          "native_drc",
+          "physical_opens_shorts",
+          "power_current_transient_thermal",
+          "dfm"
+        ],
+        "results": {
+          "dfm": {
+            "receipt": "validation-receipts/protected-bus-integrated-validation-20c9cb12/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:28:25.225875Z",
+            "status": "FAIL"
+          },
+          "native_drc": {
+            "receipt": "validation-receipts/protected-bus-integrated-validation-20c9cb12/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:28:25.070420Z",
+            "status": "FAIL"
+          },
+          "physical_opens_shorts": {
+            "receipt": "validation-receipts/protected-bus-integrated-validation-20c9cb12/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:28:25.122574Z",
+            "status": "FAIL"
+          },
+          "power_current_transient_thermal": {
+            "receipt": "validation-receipts/protected-bus-integrated-validation-20c9cb12/RECEIPT.md",
+            "recorded_at": "2026-09-17T23:28:25.171001Z",
+            "status": "FAIL"
+          }
+        }
       },
       "waiting_on": [],
       "workstream": "canonical-integration"
@@ -3033,5 +3063,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T23:19:13.467612Z"
+  "updated_at": "2026-09-17T23:28:25.279115Z"
 }
