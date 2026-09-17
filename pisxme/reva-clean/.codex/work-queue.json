@@ -1677,7 +1677,7 @@
       "evidence_refs": [],
       "id": "P24-EXACT-NFET-ENERGY-AUTHORITY",
       "notes": "",
-      "owner": null,
+      "owner": "exact_nfet_requalification",
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1694,17 +1694,17 @@
         }
       ],
       "scope": "Select a production reverse-protection nFET guaranteed at MAX17527A gate drive; calculate worst-case fuse/TVS/FET/harness fast-trip SOA/I2t and sign six-loop FLAG/inhibit/reset policy.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "/root/exact_nfet_requalification"
+      ],
+      "status": "RUNNING",
       "title": "Select exact reverse nFET and sign fault-energy coordination",
-      "updated_at": "2026-09-14T12:58:17.483940Z",
+      "updated_at": "2026-09-17T13:27:34.602087Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "package:P24-POWER-BUDGET-CORRECTION"
-      ],
+      "waiting_on": [],
       "workstream": "power-authority"
     },
     {
@@ -1944,10 +1944,10 @@
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": "validation-receipts/power-budget-correction-20260914/POWER_BUDGET_CORRECTION.json",
-        "base_sha": "cb2cebf525dbb6fbe29f3bed8d7762ead0b2b831",
-        "returned_at": "2026-09-14T14:41:11.508679Z",
-        "returned_by": "power_budget_reconcile",
+        "artifact": "validation-receipts/power-budget-correction-20260914/CURRENT_HEAD_VALIDATION_RECEIPT.md",
+        "base_sha": "66ea28f4509e6027a479e0b4dd5d823fca22dc99",
+        "returned_at": "2026-09-17T13:27:20.900551Z",
+        "returned_by": "power_budget_current_head_reconcile",
         "sha": null
       },
       "completion_criterion": "Product/Power Authority signs a machine-readable corrected budget with source revisions, calculations, assumptions, margins, and explicit downstream gates.",
@@ -1966,10 +1966,12 @@
         "no product-envelope reduction",
         "no synthetic connectivity"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-budget-correction-20260914/CURRENT_HEAD_VALIDATION_RECEIPT.md"
+      ],
       "id": "P24-POWER-BUDGET-CORRECTION",
       "notes": "HPQ resolution-ready requires this correction before exact nFET qualification or CAD.",
-      "owner": "power_budget_current_head_reconcile",
+      "owner": null,
       "priority": 0,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -1987,12 +1989,10 @@
         }
       ],
       "scope": "Using the reconciled HPQ Issue #3 result, establish a signed corrected source-voltage, per-loop branch-current, protected-bus, and complete end-to-end resistance/drop contract preserving 300 W sustained, 330 W peak, six independent no-sharing loops. Include limiter tolerance, fuse/holder, nFET allowance, connector/crimp, harness, PCB, common-bus, efficiency, derating, and margins.",
-      "session_ids": [
-        "/root/power_budget_current_head_reconcile"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Establish corrected source and complete-path power budget",
-      "updated_at": "2026-09-17T13:24:01.932510Z",
+      "updated_at": "2026-09-17T13:27:25.494219Z",
       "validation": {
         "required": [],
         "results": {}
@@ -2122,5 +2122,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T13:24:01.932677Z"
+  "updated_at": "2026-09-17T13:27:34.602225Z"
 }

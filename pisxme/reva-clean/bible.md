@@ -1149,3 +1149,7 @@ The accepted replacement calculator closed the missing-artifact knowledge depend
 2026-09-17 — HPQ4 corrected-budget package current-head validated
 
 `P24-POWER-BUDGET-CORRECTION` was reconciled from assigned base `66ea28f4` to current HEAD `a08371b5`. The signed HPQ4 JSON and accepted replacement artifacts match their manifests; normal and optimized Decimal executions are byte-identical with 26/26 assertions passing. The historical `POWER_BUDGET_CALC.py` remains explicitly missing and unrecovered. Only queue/bible paths changed after the assigned base; no CAD, invariant, or product-envelope changes occurred. Physical qualification and downstream CAD gates remain open.
+
+2026-09-17 — HPQ4 corrected budget current-head validation closed
+
+`P24-POWER-BUDGET-CORRECTION` passed current-head validation at `73a05084`; signed input, accepted replacement calculator, manifest, and optimized/normal outputs reconcile. The package is DONE and `P24-EXACT-NFET-ENERGY-AUTHORITY` is newly READY and dispatched to `exact_nfet_requalification`. Historical HPQ calculator remains missing; physical qualification gates remain open.
