@@ -2000,6 +2000,108 @@
         "knowledge:hpq4-calculator-artifact"
       ],
       "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Replacement calculator, calculation receipt, authority reconciliation, and updated manifest are independently validated and explicitly marked as replacement rather than recovered HPQ artifact.",
+      "created_at": "2026-09-17T13:12:03.796326Z",
+      "dependencies": [
+        "package:P24-POWER-BUDGET-CORRECTION"
+      ],
+      "domain": "Product / Power Authority",
+      "edit_boundaries": [
+        "validation-receipts/power-budget-correction-20260914/ only",
+        "no CAD or footprint edits",
+        "no product-envelope change",
+        "no global rule changes"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-BUDGET-CALCULATOR-RECONCILIATION",
+      "notes": "",
+      "owner": null,
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PRODUCT-V100-300W",
+        "INV-PRODUCT-V100-330W-PEAK",
+        "INV-INPUT-CAPACITY"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Using the signed HPQ4 POWER_BUDGET_CORRECTION.json and retained event-log evidence, create a new transparent Decimal calculator only as a replacement artifact, reproduce all declared assertions, and obtain Product/Power Authority review plus a new manifest/hash. Do not claim recovery of the missing HPQ file and do not edit CAD.",
+      "session_ids": [],
+      "status": "WAITING",
+      "title": "Recreate and authority-review HPQ4 power budget calculator",
+      "updated_at": "2026-09-17T13:12:03.796326Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [
+        "package:P24-POWER-BUDGET-CORRECTION"
+      ],
+      "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Replacement calculator and calculation receipt pass independent execution; authority review signs the replacement identity and updated manifest.",
+      "created_at": "2026-09-17T13:12:15.528742Z",
+      "dependencies": [],
+      "domain": "Product / Power Authority",
+      "edit_boundaries": [
+        "validation-receipts/power-budget-correction-20260914/ only",
+        "no CAD or footprint edits",
+        "no product-envelope change",
+        "no global rule changes"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-BUDGET-CALCULATOR-REPLACEMENT",
+      "notes": "",
+      "owner": "power_budget_replacement",
+      "priority": 0,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-PRODUCT-V100-300W",
+        "INV-PRODUCT-V100-330W-PEAK",
+        "INV-INPUT-CAPACITY"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Create a transparent replacement calculator from the already imported signed HPQ4 JSON, reproduce the recorded numeric assertions, and obtain Product/Power Authority review with a replacement manifest. This is a new artifact, not recovery of the missing HPQ file. No CAD edits.",
+      "session_ids": [
+        "/root/power_budget_replacement"
+      ],
+      "status": "RUNNING",
+      "title": "Create authority-reviewed replacement for missing HPQ4 calculator",
+      "updated_at": "2026-09-17T13:12:24.318505Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-authority"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -2014,5 +2116,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-14T14:41:57.942126Z"
+  "updated_at": "2026-09-17T13:12:24.318645Z"
 }

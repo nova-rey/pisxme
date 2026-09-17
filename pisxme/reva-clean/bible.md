@@ -1125,3 +1125,7 @@ Issue #4 reached `resolution-ready`; its Product/Power Authority packet was reco
 2026-09-14 — HPQ4 packet completeness discrepancy parked
 
 The signed Issue #4 JSON/Markdown/receipt artifacts reconcile against current HEAD, but the declared `POWER_BUDGET_CALC.py` (SHA-256 `82a3f904…`) is absent from the retained candidate patch and working tree while still referenced by `SHA256SUMS`. `P24-POWER-BUDGET-CORRECTION` is WAITING on recovery or authoritative reconciliation of that exact artifact; no signed hash was altered and no CAD was released.
+
+2026-09-17 — HPQ4 calculator recovery changed to replacement authority path
+
+The exact HPQ4 calculator source is irretrievably absent from retained runner artifacts. A new bounded package `P24-POWER-BUDGET-CALCULATOR-REPLACEMENT` is dispatched to recreate and independently review a transparent calculator from the signed JSON. It must receive a new identity and manifest; no artifact will be misrepresented as recovered and no CAD is released.
