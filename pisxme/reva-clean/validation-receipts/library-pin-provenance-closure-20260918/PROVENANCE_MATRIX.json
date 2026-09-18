@@ -1,0 +1,586 @@
+{
+  "authority_rows": [
+    {
+      "evidence": [
+        "PiSXMe_RevA_Clean.pretty/HD3SS6126_RUA0042A.kicad_mod",
+        "PHASE24_U12_TI_PACKAGE_DRAWING_RECEIPT_20260912.md",
+        "PHASE24_U12_PITCH_UNBLOCKER_RECEIPT_20260912.md",
+        "validation-receipts/u12-corrected-footprint-validation-20260912/RECEIPT.md"
+      ],
+      "id": "U12-RUA0042A-PITCH",
+      "required_next": "Package authority must provide authoritative per-pad geometry proving an intentional variant or authorize a corrected 0.50 mm producer with coordinated fanout/zone rework and fresh integrated validation. Existing 0.50 mm pad-only candidate is rejected.",
+      "statement": "Retained local 0.40 mm pad-center pitch conflicts with TI RUA0042A 0.50 mm package authority.",
+      "status": "BLOCKED"
+    },
+    {
+      "evidence": [
+        "PHASE24_JMS583_LAND_PATTERN_RECONCILIATION.md",
+        "authority-inventory/primary-docs/storage-upgrade/jms583/JMS583_QFN_LOCAL_ESCAPE_MANUFACTURING_BASIS.md",
+        "PiSXMe_RevA_Clean.pretty/JMS583_QFN64_8x8.kicad_mod"
+      ],
+      "id": "U11-JMS583-LAND",
+      "required_next": "Manufacturer assembly land/stencil/mask/courtyard data or explicit Package/DFM authority disposition for prototype fabrication.",
+      "statement": "QFN64 8.0 x 8.0 mm, 0.40 mm pitch, 0.15-0.20 mm terminal width, and 4.46 mm exposed pad are established; manufacturer paste/mask/courtyard details remain absent.",
+      "status": "UNPROVEN"
+    },
+    {
+      "evidence": [
+        "fp-lib-table",
+        "validation-receipts/current-head-fresh-light-20260912/current-head-drc.json",
+        "validation-receipts/fresh-context-corrected-73c348ef/RECEIPT.md"
+      ],
+      "id": "U6-U9-PACKAGE-SON",
+      "required_next": "No package-table mutation; exact die/package manufacturer cross-check remains a release/procurement upgrade, not a current library-link blocker.",
+      "statement": "U6/U9 use declared KiCad Package_SON:USON-10_2.5x1.0mm_P0.5mm; current context resolves it without library-warning findings.",
+      "status": "AUTHORIZED_WITH_EXPLICIT_PROTOTYPE_DISPOSITION"
+    },
+    {
+      "evidence": [
+        "validation-receipts/bom-disposition-current-3a811eac-20260913/RECEIPT.md",
+        "validation-receipts/bom-disposition-current-3a811eac-20260913/bom-disposition.json",
+        "current board serialization"
+      ],
+      "id": "TP1-TP13-EMBEDDED",
+      "required_next": "Keep embedded prototype probes; add a project TestPoint source only if release documentation requires library-backed regeneration.",
+      "statement": "TP1-TP13 are one-pad embedded probe footprints, excluded from BOM and position output; no product pin mapping or procurement item is claimed.",
+      "status": "AUTHORIZED_WITH_EXPLICIT_PROTOTYPE_DISPOSITION"
+    },
+    {
+      "evidence": [
+        "validation-receipts/firmware-provenance-independent-20260913/RECEIPT.md",
+        "validation-receipts/provenance-current-075b557b-20260913/RECEIPT.md"
+      ],
+      "id": "CRITICAL-PATHA-PROVENANCE",
+      "required_next": "Release-time exact-MPN/lifecycle/procurement refresh and firmware/programming evidence remain in their owning acceptance package.",
+      "statement": "Path-A identities and technical package authority are indexed; procurement/firmware/hardware-operation claims remain explicitly open and are not fabricated. RTL9210B Path B stays isolated/unpromoted.",
+      "status": "AUTHORIZED_WITH_EXPLICIT_PROTOTYPE_DISPOSITION"
+    }
+  ],
+  "blocker": "U12 proven package-identity contradiction; U11 assembly geometry evidence gap",
+  "campaign": "phase24-phase25-acreage",
+  "census": {
+    "pcb_footprint_instances_total": 131,
+    "testpoint_count": 13,
+    "testpoint_excluded": true,
+    "testpoints": {
+      "TP1": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP1",
+        "value": "REV_A_PROBE"
+      },
+      "TP10": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP10",
+        "value": "REV_A_PROBE"
+      },
+      "TP11": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP11",
+        "value": "REV_A_PROBE"
+      },
+      "TP12": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP12",
+        "value": "REV_A_PROBE"
+      },
+      "TP13": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP13",
+        "value": "REV_A_PROBE"
+      },
+      "TP2": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP2",
+        "value": "REV_A_PROBE"
+      },
+      "TP3": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP3",
+        "value": "REV_A_PROBE"
+      },
+      "TP4": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP4",
+        "value": "REV_A_PROBE"
+      },
+      "TP5": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP5",
+        "value": "REV_A_PROBE"
+      },
+      "TP6": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP6",
+        "value": "REV_A_PROBE"
+      },
+      "TP7": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP7",
+        "value": "REV_A_PROBE"
+      },
+      "TP8": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP8",
+        "value": "REV_A_PROBE"
+      },
+      "TP9": {
+        "attrs": [
+          "exclude_from_pos_files",
+          "exclude_from_bom"
+        ],
+        "footprint": "TestPoint_THTPad_D1.0mm_Drill0.5mm",
+        "pad_count": 1,
+        "pad_ids": [
+          "1"
+        ],
+        "reference": "TP9",
+        "value": "REV_A_PROBE"
+      }
+    },
+    "u11": {
+      "attrs": [
+        "smd"
+      ],
+      "footprint": "JMS583_QFN64_8x8",
+      "pad_count": 65,
+      "pad_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47",
+        "48",
+        "49",
+        "50",
+        "51",
+        "52",
+        "53",
+        "54",
+        "55",
+        "56",
+        "57",
+        "58",
+        "59",
+        "60",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65"
+      ],
+      "reference": "U11",
+      "value": ""
+    },
+    "u12": {
+      "attrs": [
+        "smd"
+      ],
+      "footprint": "HD3SS6126_RUA0042A",
+      "pad_count": 43,
+      "pad_ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43"
+      ],
+      "reference": "U12",
+      "value": ""
+    },
+    "u6_u9": [
+      {
+        "attrs": [
+          "smd"
+        ],
+        "footprint": "Package_SON:USON-10_2.5x1.0mm_P0.5mm",
+        "pad_count": 10,
+        "pad_ids": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "reference": "U6",
+        "value": "TPD4EUSB30"
+      },
+      {
+        "attrs": [
+          "smd"
+        ],
+        "footprint": "Package_SON:USON-10_2.5x1.0mm_P0.5mm",
+        "pad_count": 10,
+        "pad_ids": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "reference": "U9",
+        "value": "TPD4EUSB30"
+      }
+    ]
+  },
+  "context_check": {
+    "command": "kicad-cli pcb drc --output current-head-drc.json --severity-all PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+    "interpretation": "Package_SON resolution loaded without a Package_SON/library/missing-footprint warning in the native report; this is not integrated DRC closure.",
+    "library_or_missing_hits": [],
+    "report_format": "KiCad native text report despite .json output suffix",
+    "returncode": 0,
+    "toolchain": "local KiCad CLI 10.0.5 (qualified campaign validation remains KiCad Light 10.0.6)",
+    "unconnected_items": 499,
+    "violations": 300
+  },
+  "disposition": "WAITING",
+  "footprint_sources": {
+    "HD3SS3412_RUA0042A.kicad_mod": {
+      "first_pads": [
+        {
+          "at": "-1.8 -3.2 0",
+          "id": "1",
+          "size": "0.6 0.25"
+        },
+        {
+          "at": "-1.8 -2.8 0",
+          "id": "2",
+          "size": "0.6 0.25"
+        },
+        {
+          "at": "-1.8 -2.4 0",
+          "id": "3",
+          "size": "0.6 0.25"
+        },
+        {
+          "at": "-1.8 -2 0",
+          "id": "4",
+          "size": "0.6 0.25"
+        }
+      ],
+      "last_pads": [
+        {
+          "at": "-0.2 -4.5 90",
+          "id": "40",
+          "size": "0.6 0.25"
+        },
+        {
+          "at": "0.2 -4.5 90",
+          "id": "41",
+          "size": "0.6 0.25"
+        },
+        {
+          "at": "0.6 -4.5 90",
+          "id": "42",
+          "size": "0.6 0.25"
+        },
+        {
+          "at": "0 0",
+          "id": "43",
+          "size": "2.05 7.55"
+        }
+      ],
+      "pad_count": 43,
+      "sha256": "b08bbf124876cb5e121a83f9290548c234d4b062a315423532f2aac2036433e0"
+    },
+    "HD3SS6126_RUA0042A.kicad_mod": {
+      "first_pads": [
+        {
+          "at": "-1.8 -3.2 0",
+          "id": "1",
+          "size": "0.6 0.25"
+        },
+        {
+          "at": "-1.8 -2.8 0",
+          "id": "2",
+          "size": "0.6 0.25"
+        },
+        {
+          "at": "-1.8 -2.4 0",
+          "id": "3",
+          "size": "0.6 0.25"
+        },
+        {
+          "at": "-1.8 -2 0",
+          "id": "4",
+          "size": "0.6 0.25"
+        }
+      ],
+      "last_pads": [
+        {
+          "at": "-0.2 -4.5 90",
+          "id": "40",
+          "size": "0.6 0.25"
+        },
+        {
+          "at": "0.2 -4.5 90",
+          "id": "41",
+          "size": "0.6 0.25"
+        },
+        {
+          "at": "0.6 -4.5 90",
+          "id": "42",
+          "size": "0.6 0.25"
+        },
+        {
+          "at": "0 0",
+          "id": "43",
+          "size": "2.05 7.55"
+        }
+      ],
+      "pad_count": 43,
+      "sha256": "9490928521cf2d8677da7bf188fc265664095d99978ae7c1f038da07adf33ffd"
+    },
+    "JMS583_QFN64_8x8.kicad_mod": {
+      "first_pads": [
+        {
+          "at": "-3.65 -3 0",
+          "id": "1",
+          "size": "0.7 0.20"
+        },
+        {
+          "at": "-3.65 -2.6 0",
+          "id": "2",
+          "size": "0.7 0.20"
+        },
+        {
+          "at": "-3.65 -2.2 0",
+          "id": "3",
+          "size": "0.7 0.20"
+        },
+        {
+          "at": "-3.65 -1.8 0",
+          "id": "4",
+          "size": "0.7 0.20"
+        }
+      ],
+      "last_pads": [
+        {
+          "at": "2.2 -3.6 90",
+          "id": "62",
+          "size": "0.7 0.20"
+        },
+        {
+          "at": "2.6 -3.6 90",
+          "id": "63",
+          "size": "0.7 0.20"
+        },
+        {
+          "at": "3 -3.6 90",
+          "id": "64",
+          "size": "0.7 0.20"
+        },
+        {
+          "at": "0 0",
+          "id": "65",
+          "size": "4.46 4.46"
+        }
+      ],
+      "pad_count": 65,
+      "sha256": "11918576998884d5885debb500966b20804f7d14394212379fad31d0e5669c05"
+    }
+  },
+  "no_cad_edits": true,
+  "package_id": "P24-LIBRARY-PIN-PROVENANCE-CLOSURE",
+  "private_library": "/home/nyx/PiSXMe-Library (metadata/extracted facts only; no vendor CAD copied)",
+  "schema": "pisxme.phase24.library_pin_provenance_closure.v1",
+  "selected_inputs": {
+    "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+    "PiSXMe_RevA_Clean.kicad_dru": "38e5c7521d964bfa91ee610dc6b7ca39b767b04b8990e94ea91dfe826d21f6a3",
+    "PiSXMe_RevA_Clean.kicad_pro": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "PiSXMe_RevA_Clean.kicad_sch": "6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1",
+    "fp-lib-table": "864698c14e65cd70a5b5a08d23a22477919bf29f167d26fc0eda73dd43b3be61",
+    "sym-lib-table": "3bb180e251be1f62b2be5bbe486b29263c56c6a49b7a26103a27bef29b80c311"
+  },
+  "source": {
+    "base_assigned": "2d6e3ea4cfd08f587d42be66cc37a77838e5641a",
+    "branch": "reva-clean",
+    "head": "13020a6375ba2e62a127c8015c8bbccb276b46ec",
+    "repo": "nova-rey/pisxme"
+  }
+}
