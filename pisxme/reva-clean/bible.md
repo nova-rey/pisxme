@@ -1388,3 +1388,7 @@ The Molex geometry contradiction is now owned by a direct footprint-authority re
 ## 2026-09-18 — Anderson footprint producer owns geometry reconciliation
 
 The footprint-authority retry was reassigned to the existing isolated Anderson footprint producer. Queue ownership now reflects one accountable producer for the released-dimension footprint audit; no competing footprint candidate is promoted.
+
+## 2026-09-18 — Anderson contact-footprint evidence gap routed to Librarian
+
+The Anderson PP15/45 authority audit closed the connector identity and housing spacing but found that the retained released records omit exact contact drill/slot, pad/annulus, mask/plating, and datum details. No footprint was guessed. A Librarian package now searches the manufacturer contact drawings and private corpus before any external classification; the footprint package waits only on that knowledge result.
