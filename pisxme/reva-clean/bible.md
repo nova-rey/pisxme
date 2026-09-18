@@ -1356,3 +1356,7 @@ Package/Footprint Authority reviewed the Samtec PowerStrip/40 and Anderson PP15/
 ## 2026-09-18 — Geometry authority reached external authorization boundary
 
 The bounded public/manufacturer search found no license-compatible configured footprint plus complete mating/harness contract for the high-current source assembly. Package/Footprint Authority parked the geometry package on `external:vendor-footprint-authorization`; the corrective producer and all downstream power-dependent rows remain waiting. No guessed footprint, proprietary drawing copy, or CAD mutation was made. This is the first precise external-boundary census for this path; the campaign remains active and must resume when the authorized geometry or explicit footprint-authorship authority arrives.
+
+## 2026-09-18 — High-current connector dependency reassessed
+
+The vendor-footprint dependency was reclassified from an irreducible external blocker to an internal prototype-footprint authority task. Product/Power comparison selected one Anderson Powerpole PP15/45 `ASMPR45-1X2-RK` positive/return path as the binding baseline, with released `B02021S` and `DS-PP1545` data governing local footprint creation. Conventional Molex GPU-style headers remain a documented fallback comparison. The footprint, harness, protection, complete path budget, and 45 A/100 ms prototype validation remain open acceptance work.

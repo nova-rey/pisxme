@@ -117,10 +117,10 @@
     "external:vendor-footprint-authorization": {
       "created_at": "2026-09-17T23:49:13.591794Z",
       "kind": "external",
-      "receipt": null,
+      "receipt": "validation-receipts/power-input-connector-reassessment-20260918/REASSESSMENT.md",
       "reference": "validation-receipts/power-input-geometry-authority-20260918/AUTHORITY_REPORT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T12:42:11.709414Z",
+      "status": "RESOLVED"
     },
     "hpq:#2": {
       "created_at": "2026-09-13T22:51:52.392594Z",
@@ -3439,7 +3439,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-GEOMETRY-AUTHORITY",
       "notes": "",
-      "owner": null,
+      "owner": "connector_footprint_authority",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3456,10 +3456,12 @@
         }
       ],
       "scope": "Resolve the corrective producer's geometry blocker using existing private Library and authorized public/manufacturer evidence. Bind one manufacturable connector footprint, mating cable/harness identity, contact assignment, board-entry geometry, and mechanical envelope, or document the narrow irreducible evidence gap. Do not copy proprietary drawings or invent a footprint.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "connector-recheck-20260918"
+      ],
+      "status": "RUNNING",
       "title": "Bind authorized high-current input footprint and mating geometry",
-      "updated_at": "2026-09-17T23:49:13.591819Z",
+      "updated_at": "2026-09-18T12:42:11.758426Z",
       "validation": {
         "required": [
           "footprint_provenance",
@@ -3469,9 +3471,7 @@
         ],
         "results": {}
       },
-      "waiting_on": [
-        "external:vendor-footprint-authorization"
-      ],
+      "waiting_on": [],
       "workstream": "power-authority"
     },
     {
@@ -3567,5 +3567,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-17T23:49:13.592009Z"
+  "updated_at": "2026-09-18T12:42:11.758645Z"
 }
