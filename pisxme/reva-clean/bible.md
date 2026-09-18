@@ -1524,3 +1524,7 @@ Unblocker separated the physical candidate failure from the placement authority.
 ## 2026-09-18 — Clean rebuild capability probe ended without candidate
 
 The clean native rebuild worker started a KiCad Light API probe after the previous candidate rejection but returned no candidate or retained producer receipt. Root released the stale RUNNING claim and re-dispatched a bounded native script-author task. The queue remains active; no campaign block or architecture change is declared.
+
+## 2026-09-18 — Native script-author dispatch stalled without candidate
+
+The next clean native script-author attempt ended without a live process, candidate, or receipt after KiCad Light availability had already been proven. Canonical CAD remains untouched. The producer is parked on Unblocker for one capability-level execution route; this is not evidence against the connector or MPA architecture.
