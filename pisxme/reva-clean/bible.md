@@ -1432,3 +1432,7 @@ Product/Power and Footprint Authority reassessed the 40 A continuous / 45 A peak
 ## 2026-09-18 — Anderson exact land-pattern evidence failed; connector authority correction opened
 
 Footprint Authority found that Anderson B02021S Rev. 6 and DS-PP1545 do not fully specify the exact 1x2 contact-tail datum, finished drill/slot tolerances, pad/annulus, solder-mask treatment, accessory-hole coordinates, or complete mating envelope. No secondary footprint was promoted. The prototype path is not externally blocked because released-dimension Molex Mini-Fit Jr. alternatives remain available. A bounded Product/Power authority correction now compares and may supersede Anderson with a conservative multi-connector architecture; the footprint package waits on that decision.
+
+## 2026-09-18 — Prototype high-current connector validation plan returned
+
+`P24-POWER-INPUT-PROTOTYPE-CONNECTOR-VALIDATION` returned candidate `validation-receipts/power-input-prototype-connector-validation-20260918/` at base `415e782e`. The plan binds no fabricated measurements: it covers exact Anderson PP15/45 assembly identity, four-wire hot harness/connector resistance against the 4.0 mOhm allocation, complete source-to-J1 10.0 mOhm closure, 40 A continuous derating and <=30 °C rise, a controlled 45 A/100 ms pulse, contact fit/pull, staged protection checks, and first-power instrumentation. Hardware results remain `REQUIRES PROTOTYPE VALIDATION`; production AVL and lifetime qualification are outside the Rev A prototype gate. No CAD changed.

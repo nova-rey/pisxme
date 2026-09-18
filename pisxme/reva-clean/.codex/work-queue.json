@@ -3998,7 +3998,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/power-input-prototype-connector-validation-20260918/RECEIPT.md",
+        "base_sha": "415e782eaaa39c14c3d55662fc4df3330be17647",
+        "returned_at": "2026-09-18T20:05:57.019809Z",
+        "returned_by": "prototype_connector_validation_supervisor",
+        "sha": null
+      },
       "completion_criterion": "Reviewed prototype validation plan with calculations, acceptance limits, instrumentation/fixture steps, and explicit REQUIRES PROTOTYPE VALIDATION dispositions; no fabricated measurements.",
       "created_at": "2026-09-18T20:01:31.349973Z",
       "dependencies": [
@@ -4035,9 +4041,9 @@
       "session_ids": [
         "prototype-connector-validation-20260918"
       ],
-      "status": "RUNNING",
+      "status": "VALIDATING",
       "title": "Prototype high-current connector and harness validation plan",
-      "updated_at": "2026-09-18T20:01:40.628981Z",
+      "updated_at": "2026-09-18T20:05:57.019839Z",
       "validation": {
         "required": [],
         "results": {}
@@ -4112,5 +4118,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T20:04:59.794837Z"
+  "updated_at": "2026-09-18T20:05:57.020234Z"
 }

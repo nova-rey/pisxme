@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-POWER-INPUT-PROTOTYPE-CONNECTOR-VALIDATION",
+  "base_sha": "415e782eaaa39c14c3d55662fc4df3330be17647",
+  "status": "CANDIDATE_READY_WITH_REQUIRES_PROTOTYPE_VALIDATION",
+  "cad_changed": false,
+  "architecture": {
+    "assembly": "ASMPR45-1X2-RK",
+    "housings": [
+      "1327",
+      "1327G6"
+    ],
+    "pcb_contacts": [
+      "3-5912P1",
+      "3-5913P1"
+    ],
+    "wire_contact": "261G2",
+    "path": "one positive pole and one return pole",
+    "passive_sharing_credit": false
+  },
+  "authority_contract": {
+    "id": "PISXME-P24-PROTOTYPE-SOURCE-BUS-20260917",
+    "source_window_V": [
+      11.4,
+      12.6
+    ],
+    "nominal_V": 12.0,
+    "continuous_A": 40.0,
+    "peak_A": 45.0,
+    "peak_duration_ms": 100,
+    "harness_connector_loop_cap_mOhm_hot": 4.0,
+    "complete_source_to_J1_loop_cap_mOhm_hot": 10.0,
+    "temperature_rise_cap_C": 30.0,
+    "protected_bus_min_V": {
+      "continuous": 11.05,
+      "peak": 11.0
+    },
+    "protected_bus_max_V": 12.6
+  },
+  "manufacturer_sources": [
+    {
+      "document": "B02021S Rev. 6",
+      "sha256": "7a32189a34ff2feea3bf173c788f3dd63229ea98dfefed8009b1bc5738e8cd2c",
+      "path": "validation-receipts/anderson-contact-evidence-20260918/B02021S_rev6.pdf"
+    },
+    {
+      "document": "DS-PP1545",
+      "sha256": "ac39c286d44528efab30061b96df6e64e6eeafb6e154af7a03397d518f45a04f",
+      "path": "validation-receipts/anderson-contact-evidence-20260918/PP1545_datasheet.pdf"
+    }
+  ],
+  "derived_screens": {
+    "published_wire_contact_screen_mOhm": 0.525,
+    "single_contact": {
+      "40A": {
+        "drop_mV": 21.0,
+        "loss_W": 0.84
+      },
+      "45A": {
+        "drop_mV": 23.625,
+        "loss_W": 1.063125
+      }
+    },
+    "two_pole_pair_if_equal_screen": {
+      "loop_mOhm": 1.05,
+      "40A": {
+        "drop_mV": 42.0,
+        "loss_W": 1.68
+      },
+      "45A": {
+        "drop_mV": 47.25,
+        "loss_W": 2.12625
+      }
+    },
+    "allocated_loop": {
+      "4mOhm": {
+        "40A": {
+          "drop_mV": 160.0,
+          "loss_W": 6.4
+        },
+        "45A": {
+          "drop_mV": 180.0,
+          "loss_W": 8.1
+        }
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "PCV-01",
+      "name": "assembly identity, fit, keying, polarity, retention",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "Exact mating assembly recorded; full seating/keying; no terminal back-out or damage; continuity proves intended positive/return. Use manufacturer pull/retention value if available; otherwise bind a declared prototype screening force before testing."
+    },
+    {
+      "id": "PCV-02",
+      "name": "four-wire harness/crimp/contact resistance",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "Complete source harness plus connector hot positive-plus-return loop <=4.0 mOhm; no intermittent or unexplained imbalance; segment records retained."
+    },
+    {
+      "id": "PCV-03",
+      "name": "40 A continuous derating and thermal rise",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "40.0 A continuous under declared installation; every point <= lower of manufacturer limit and 30 C rise; hot drop and protected bus remain within contract; no damage."
+    },
+    {
+      "id": "PCV-04",
+      "name": "45 A / 100 ms bounded transient",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "Controlled measured 45.0 A pulse for 100 ms within instrument/control tolerance, no uncontrolled overshoot, arc, release, damage, or unsafe restart."
+    },
+    {
+      "id": "PCV-05",
+      "name": "source protection and first power",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "Staged current-limited bring-up follows PISXME-P24-V100-FIRST-POWER-20260917; polarity, reverse protection, fuse, OVP/UVLO, inrush, EN/PG/reset/inhibit and shutdown criteria observed."
+    },
+    {
+      "id": "PCV-06",
+      "name": "complete path resistance/drop closure",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "Complete source-to-J1 positive-plus-return extraction including connector/crimp/harness/protection/copper/vias/planes/J1 transition <=10.0 mOhm hot."
+    }
+  ],
+  "instrumentation": [
+    "four-wire Kelvin resistance method or calibrated low-ohm meter",
+    "calibrated current shunt/probe",
+    "differential voltage measurement at source and J1 field",
+    "thermocouples or calibrated thermal camera",
+    "regulated current-limited source",
+    "controlled electronic load/pulse fixture",
+    "scope/transient recorder"
+  ],
+  "evidence_requirements": [
+    "exact assembly BOM/lot and mating housing/contact",
+    "crimp tooling and inspection records",
+    "raw resistance, pull/fit, waveform, thermal and first-power files",
+    "instrument serial/calibration/sample-rate records",
+    "ambient/airflow/timestamps/operator/shutdown events",
+    "SHA-256 manifest and signed disposition"
+  ],
+  "open_items": [
+    "Exact wire-side housing/contact assembly and conductor/length/bundle must be recorded before hardware test.",
+    "Manufacturer-specific pull/retention value is not present in retained records; Mechanical/DFM Authority must bind a screening force if absent.",
+    "No fabricated hardware measurement exists in this receipt."
+  ],
+  "production_qualification": false,
+  "hardware_operated": false
+}
