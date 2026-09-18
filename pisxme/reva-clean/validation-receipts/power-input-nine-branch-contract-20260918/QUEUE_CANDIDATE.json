@@ -1,0 +1,21 @@
+{
+  "package_id": "P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT",
+  "result": "CANDIDATE_READY_WITH_REQUIRES_PROTOTYPE_VALIDATION",
+  "base_sha": "369b28f67dfb371589a73e8eda1e5dc166eedb3b",
+  "artifact": "validation-receipts/power-input-nine-branch-contract-20260918/RECEIPT.md",
+  "contract_json": "validation-receipts/power-input-nine-branch-contract-20260918/NINE_BRANCH_SCHEMATIC_CONTRACT.json",
+  "contract_md": "validation-receipts/power-input-nine-branch-contract-20260918/NINE_BRANCH_SCHEMATIC_CONTRACT.md",
+  "released_dependency": "authority:P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT",
+  "release_action": "return P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER to READY after Root verifies/records this artifact",
+  "producer_gate": "isolated POWER_INPUT.kicad_sch + PCB source correction; fresh native netlist/ERC/DRC; complete source-to-J1 resistance/drop extraction",
+  "canonical_cad_changed": false,
+  "phase25_started": false,
+  "phase26_started": false,
+  "unresolved_validation": [
+    "fuse I2t/clearing",
+    "TVS energy/clamp",
+    "common FET hot RDS/SOA/thermal",
+    "harness/crimp installation",
+    "prototype 40A/45A and sequencing"
+  ]
+}

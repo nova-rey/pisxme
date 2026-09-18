@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "decision_id": "PISXME-P24-NINE-BRANCH-SCHEMATIC-20260918",
+  "revision": "1.0",
+  "package_id": "P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT",
+  "status": "BINDING_SOURCE_TO_PRODUCER_WITH_VALIDATION_GATES",
+  "base_sha": "369b28f67dfb371589a73e8eda1e5dc166eedb3b",
+  "canonical_cad_changed": false,
+  "authority": {
+    "signed_by": "Nine-Branch Power Contract Authority",
+    "basis": "Product/Power Authority and Molex Multi-Connector Authority V2",
+    "signed_date": "2026-09-18",
+    "scope": "source schematic/net contract only; no CAD integration or hardware qualification"
+  },
+  "evidence": {
+    "current_schematic": "075ae680e3754e06bf995739db15cf30774432f8cf9fb487b5df20b3034c286b",
+    "molex_authority_v2": "132bd0c98b1b71379712112f764baef147064edb490893be81d40c5bd4e89770",
+    "molex_footprint_candidate": "014a8f9b4ad6a1583aec43a5c0fb2a603e305970adf463eea26cd6afa54c7051",
+    "source_bus_contract": "8060e16a6b08ce4e571a6d9cd93b9fa8fe39e0cb43ebf96a705f062c61110614",
+    "littelfuse_authority": "d2e617125ae28bef0e977f69211e3c5a08eabce184f172b91e5d4bc20fcab389",
+    "protected_bus_authority": "90d5d49c0a0a7fbf4a738eb32d322d78d5e2b595968420e1ebc4026b905a364b"
+  },
+  "product_contract": {
+    "source_nominal_V": 12.0,
+    "source_window_V": [
+      11.4,
+      12.6
+    ],
+    "continuous_A": 40.0,
+    "peak_A": 45.0,
+    "peak_duration_ms": 100,
+    "protected_bus_min_V": {
+      "continuous": 11.05,
+      "peak": 11.0
+    },
+    "protected_bus_max_V": 12.6,
+    "complete_source_to_J1_hot_max_mOhm": 10.0,
+    "effective_harness_connector_loop_hot_max_mOhm": 4.0,
+    "temperature_rise_max_C": 30.0,
+    "no_N_minus_1_credit": true,
+    "passive_sharing_credit": false
+  },
+  "connector_contract": {
+    "manufacturer": "Molex",
+    "family": "Mini-Fit Jr. 5569",
+    "mpn": "39-30-0060 / 0039300060",
+    "header_count": 3,
+    "references": [
+      "J5",
+      "J6",
+      "J9"
+    ],
+    "j7_j8_reserved_elsewhere": true,
+    "footprint": "PiSXMeRevAClean:Molex_5569-06A2_2x03_P4.20mm_Horizontal",
+    "geometry_source": "Molex 5569 drawing; local candidate audit 014a8f9b4ad6a1583aec43a5c0fb2a603e305970adf463eea26cd6afa54c7051",
+    "contact_assignment": "pads 1-3 positive, pads 4-6 return, per pin-1 orientation; harness continuity must verify this assignment",
+    "contact_screen_A": 7.0,
+    "contact_screen_basis": "Molex 5556 four-to-six-loaded-circuit application screen",
+    "contact_screen_is_not": "a guaranteed PiSXMe installed rating or passive-sharing authorization"
+  },
+  "branches": [
+    {
+      "id": "B1",
+      "header": "J5",
+      "positive_pad": "1",
+      "return_pad": "4",
+      "positive_net": "PWR_SRC_J5_P1",
+      "return_net": "PWR_RET_J5_P4",
+      "fused_positive_net": "PWR_FUSED_J5_P1",
+      "fuse_ref": "F1",
+      "continuous_target_A": 4.444444444444445,
+      "peak_screen_A": 5.0,
+      "contact_screen_A": 7.0,
+      "protection": "positive-series fuse fault isolation; no passive-sharing credit"
+    },
+    {
+      "id": "B2",
+      "header": "J5",
+      "positive_pad": "2",
+      "return_pad": "5",
+      "positive_net": "PWR_SRC_J5_P2",
+      "return_net": "PWR_RET_J5_P5",
+      "fused_positive_net": "PWR_FUSED_J5_P2",
+      "fuse_ref": "F2",
+      "continuous_target_A": 4.444444444444445,
+      "peak_screen_A": 5.0,
+      "contact_screen_A": 7.0,
+      "protection": "positive-series fuse fault isolation; no passive-sharing credit"
+    },
+    {
+      "id": "B3",
+      "header": "J5",
+      "positive_pad": "3",
+      "return_pad": "6",
+      "positive_net": "PWR_SRC_J5_P3",
+      "return_net": "PWR_RET_J5_P6",
+      "fused_positive_net": "PWR_FUSED_J5_P3",
+      "fuse_ref": "F3",
+      "continuous_target_A": 4.444444444444445,
+      "peak_screen_A": 5.0,
+      "contact_screen_A": 7.0,
+      "protection": "positive-series fuse fault isolation; no passive-sharing credit"
+    },
+    {
+      "id": "B4",
+      "header": "J6",
+      "positive_pad": "1",
+      "return_pad": "4",
+      "positive_net": "PWR_SRC_J6_P1",
+      "return_net": "PWR_RET_J6_P4",
+      "fused_positive_net": "PWR_FUSED_J6_P1",
+      "fuse_ref": "F4",
+      "continuous_target_A": 4.444444444444445,
+      "peak_screen_A": 5.0,
+      "contact_screen_A": 7.0,
+      "protection": "positive-series fuse fault isolation; no passive-sharing credit"
+    },
+    {
+      "id": "B5",
+      "header": "J6",
+      "positive_pad": "2",
+      "return_pad": "5",
+      "positive_net": "PWR_SRC_J6_P2",
+      "return_net": "PWR_RET_J6_P5",
+      "fused_positive_net": "PWR_FUSED_J6_P2",
+      "fuse_ref": "F5",
+      "continuous_target_A": 4.444444444444445,
+      "peak_screen_A": 5.0,
+      "contact_screen_A": 7.0,
+      "protection": "positive-series fuse fault isolation; no passive-sharing credit"
+    },
+    {
+      "id": "B6",
+      "header": "J6",
+      "positive_pad": "3",
+      "return_pad": "6",
+      "positive_net": "PWR_SRC_J6_P3",
+      "return_net": "PWR_RET_J6_P6",
+      "fused_positive_net": "PWR_FUSED_J6_P3",
+      "fuse_ref": "F6",
+      "continuous_target_A": 4.444444444444445,
+      "peak_screen_A": 5.0,
+      "contact_screen_A": 7.0,
+      "protection": "positive-series fuse fault isolation; no passive-sharing credit"
+    },
+    {
+      "id": "B7",
+      "header": "J9",
+      "positive_pad": "1",
+      "return_pad": "4",
+      "positive_net": "PWR_SRC_J9_P1",
+      "return_net": "PWR_RET_J9_P4",
+      "fused_positive_net": "PWR_FUSED_J9_P1",
+      "fuse_ref": "F7",
+      "continuous_target_A": 4.444444444444445,
+      "peak_screen_A": 5.0,
+      "contact_screen_A": 7.0,
+      "protection": "positive-series fuse fault isolation; no passive-sharing credit"
+    },
+    {
+      "id": "B8",
+      "header": "J9",
+      "positive_pad": "2",
+      "return_pad": "5",
+      "positive_net": "PWR_SRC_J9_P2",
+      "return_net": "PWR_RET_J9_P5",
+      "fused_positive_net": "PWR_FUSED_J9_P2",
+      "fuse_ref": "F8",
+      "continuous_target_A": 4.444444444444445,
+      "peak_screen_A": 5.0,
+      "contact_screen_A": 7.0,
+      "protection": "positive-series fuse fault isolation; no passive-sharing credit"
+    },
+    {
+      "id": "B9",
+      "header": "J9",
+      "positive_pad": "3",
+      "return_pad": "6",
+      "positive_net": "PWR_SRC_J9_P3",
+      "return_net": "PWR_RET_J9_P6",
+      "fused_positive_net": "PWR_FUSED_J9_P3",
+      "fuse_ref": "F9",
+      "continuous_target_A": 4.444444444444445,
+      "peak_screen_A": 5.0,
+      "contact_screen_A": 7.0,
+      "protection": "positive-series fuse fault isolation; no passive-sharing credit"
+    }
+  ],
+  "protection_contract": {
+    "branch_fault_isolation": {
+      "method": "one positive-series fuse per contact-pair branch",
+      "fuse_mpn": "Littelfuse 0297015.U",
+      "fuse_rating": "15 A, 32 VDC, MINI 297 fast-blow",
+      "fuse_holder_mpn": "Littelfuse 178.6165.0001",
+      "holder_footprint": "PiSXMeRevAClean:ATO_FuseHolder_17861650001",
+      "instances": "F1-F9, one per B1-B9",
+      "typical_I2t_A2s": 308,
+      "qualification": "I2t is a source-record typical value; exact fault waveform, holder/contact rise, clearing and copper/connector withstand remain validation gates",
+      "explicit_limit": "the 15 A fuse is fault isolation, not a 5 A current limiter; normal branch current must be screened <=7 A/contact by balance and thermal evidence"
+    },
+    "common_protected_stage": {
+      "topology": "after all nine positive fuses join at 12V_BRANCH_JOIN, apply one common TVS and one common reverse-current/ideal-diode stage before 12V_PROTECTED",
+      "controller_mpn": "TI LM74700QDBVRQ1",
+      "controller_footprint": "PiSXMeRevAClean:LM74700QDBVRQ1_SOT23_6",
+      "pass_fet_mpn": "TI CSD19536KCS",
+      "pass_fet_footprint": "PiSXMeRevAClean:CSD19536KCS_TO220",
+      "tvs_mpn": "SMBJ18A",
+      "tvs_footprint": "PiSXMeRevAClean:TVS_SMBJ18A_DO214AA",
+      "vcap_mpn": "Murata GRM188R71H104KA93D",
+      "vcap_value": "100 nF",
+      "vcap_footprint": "PiSXMeRevAClean:C_0603_1608Metric",
+      "reuse_authority": "Existing U1/Q1/D1/C3 cohort may be reused as this single common stage subject to fresh hot resistance, VDS/SOA, TVS-energy, thermal and DRC validation.",
+      "duplicate_stage_disposition": "Existing U2/Q2/D2/C4 are not a second parallel common-bus stage under this contract; producer must DNP/remove/reassign them through schematic review. No passive active-stage sharing is credited.",
+      "tvs_screen": "18 V standoff; 29.2 V clamp at the retained 20.6 A test point; no automotive load-dump claim",
+      "stage_gate": "The common stage must meet the 2.0 mOhm protection allocation and 10.0 mOhm complete path after hot extraction; reuse is authorization to evaluate, not a closure claim."
+    },
+    "control_policy": {
+      "common_enable_net": "POWER_PROTECT_EN",
+      "protected_bus_net": "12V_PROTECTED",
+      "return_net": "POWER_RETURN_JOIN -> POWER_GND",
+      "v100_policy": "V100 enable remains inhibited/reset-held whenever protected bus is outside 11.00-12.60 V, source/protection fault is asserted, or controlled shutdown is active.",
+      "fault_reporting": "No new fault IC is invented by this contract. Existing POWER_PG_FAULT sheet interface remains reserved for producer/firmware sequencing authority; fuse opening is passive isolation and must be detected by bus/source observation or an explicitly authorized monitor."
+    }
+  },
+  "common_bus_contract": {
+    "positive_join": "PWR_FUSED_J5_P1..P3, PWR_FUSED_J6_P1..P3, PWR_FUSED_J9_P1..P3 -> 12V_BRANCH_JOIN -> common protection -> 12V_PROTECTED",
+    "return_join": "PWR_RET_J5_P4..P6, PWR_RET_J6_P4..P6, PWR_RET_J9_P4..P6 -> POWER_RETURN_JOIN -> POWER_GND and authority-mapped J1 GND field",
+    "return_rule": "Keep nine return identities separate through their owned branch paths and join only at the controlled common return region; do not use signal/shield returns.",
+    "j1_rule": "Only authority-mapped J1 +12V/GND contacts are connected; unknown contacts remain unknown/no-connect."
+  },
+  "schematic_ownership": {
+    "source_sheet": "POWER_INPUT.kicad_sch",
+    "producer_package": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
+    "producer_scope": "May add/rename the three 2x3 headers, nine branch nets/fuses, common join, and common protection cohort in an isolated candidate only.",
+    "canonical_integration": "Root Foreman serial integration after targeted native ERC/DRC/connectivity and complete-path extraction.",
+    "authority_review": "Product/Power Authority reviews any deviation, especially common protection replacement, branch reference changes, or control/fault policy.",
+    "no_cad_edit_by_this_package": true
+  },
+  "validation_gates": [
+    "fresh native netlist proves all 18 connector contacts, nine branch pair identities and F1-F9 ownership",
+    "no positive branch is directly paralleled before its fuse; no return net is omitted or silently collapsed",
+    "each branch current target is 4.444444 A continuous and 5.000000 A for the 100 ms screen; each contact remains <=7 A including uncertainty",
+    "all nine branches and all three headers are present; no N-1 credit",
+    "fuse I2t/time-current, TVS clamp/energy, common FET SOA/RDS/hot resistance and thermal rise are calculated or measured for the exact installation",
+    "effective source harness/connector loop <=4.0 mOhm hot and complete source-to-J1 positive-plus-return <=10.0 mOhm hot",
+    "native DRC/opens/shorts and fresh KiCad Light validation at integrated candidate SHA",
+    "prototype hardware validation remains required; no production qualification or fabricated measurement is claimed"
+  ],
+  "remaining_gaps": [
+    "mating 5557 housing/5556 terminals, conductor gauge/length/crimp and installation records must be bound before hardware testing",
+    "exact installed fuse I2t/clearing and common-stage FET/TVS SOA/thermal/path resistance are validation gates",
+    "POWER_PG_FAULT/fault aggregation truth table and standalone V100 sequencing remain prototype/firmware authority work"
+  ],
+  "user_owned_decision_required": false
+}

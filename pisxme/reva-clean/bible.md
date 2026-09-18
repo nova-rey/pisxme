@@ -1460,3 +1460,7 @@ Unblocker classified the first Molex protected-bus producer stall as a workspace
 ## 2026-09-18 — Nine-branch source contract required before protected-bus CAD
 
 Fresh KiCad Light commissioning proved the current approved schematic contains only two input pairs and two protection chains. Adding three Molex 2x3 headers to those existing nets would create passive parallel contacts and violate the binding nine independently protected contact-pair contract. The protected-bus producer therefore returned a precise topology gap and is parked on Power Authority for a nine-branch schematic/source contract; no component, net, value or protection stage was invented.
+
+## 2026-09-18 — Nine-branch Molex source/schematic contract bound
+
+Power Authority closed the topology gap exposed by fresh Light commissioning. J5, J6 and J9 are the three Molex 0039300060 headers; B1–B9 are nine explicit positive/return contact pairs. Each positive branch uses Littelfuse 0297015.U in the authorized 178.6165.0001 holder for fault isolation, with 4.444 A continuous and 5 A peak contact-pair screens against the 7 A loaded-contact screen. The common path is `12V_BRANCH_JOIN` to `12V_PROTECTED` through the existing U1/Q1/D1/C3 cohort; U2/Q2/D2/C4 are excluded from parallel credit. Fuse clearing/I²t, common FET/TVS SOA and thermal, harness/crimp, path resistance and prototype 40/45 A behavior remain validation gates.
