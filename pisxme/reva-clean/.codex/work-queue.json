@@ -317,10 +317,10 @@
     "unblocker:molex-native-script-author-stall": {
       "created_at": "2026-09-18T22:01:30.406365Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "validation-receipts/molex-native-script-author-stall-20260918/RECEIPT.md",
       "reference": "validation-receipts/molex-native-script-author-stall-20260918/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T22:03:06.745788Z",
+      "status": "RESOLVED"
     },
     "unblocker:molex-nine-branch-implementation-stall": {
       "created_at": "2026-09-18T20:59:55.957529Z",
@@ -3514,7 +3514,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Root-mediated native pcbnew producer; source fixture is the netlist oracle; fresh Light workspace /home/nyx/eda-workspaces/molex-pcbnew-producer-20260918.",
-      "owner": null,
+      "owner": "molex_native_script_stall_unblocker",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3531,10 +3531,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "molex-native-script-stall-unblocker-20260918"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T22:01:30.406411Z",
+      "updated_at": "2026-09-18T22:03:11.955509Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3565,9 +3567,7 @@
           }
         }
       },
-      "waiting_on": [
-        "unblocker:molex-native-script-author-stall"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -4417,5 +4417,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T22:01:30.406816Z"
+  "updated_at": "2026-09-18T22:03:11.955782Z"
 }

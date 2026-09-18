@@ -1528,3 +1528,7 @@ The clean native rebuild worker started a KiCad Light API probe after the previo
 ## 2026-09-18 — Native script-author dispatch stalled without candidate
 
 The next clean native script-author attempt ended without a live process, candidate, or receipt after KiCad Light availability had already been proven. Canonical CAD remains untouched. The producer is parked on Unblocker for one capability-level execution route; this is not evidence against the connector or MPA architecture.
+
+## 2026-09-18 — Unblocker owns the native-script stall reassessment
+
+The producer dependency is represented as active Unblocker work rather than a false campaign hard block. Once the capability-level route returns, Root will requeue the producer, validate any candidate, and continue serialized integration.
