@@ -1496,3 +1496,15 @@ After Unblocker resolved the Eeschema symbol-context issue, Root requeued and di
 ## 2026-09-18 — Native pcbnew nine-branch candidate rejected by integrated DRC
 
 The first native `pcbnew` producer materialized J5/J6/J9, 18 contacts and F1-F9 from the audited Molex footprint, but its integrated candidate reported 1,135 DRC violations with real shorting and crossing records. The candidate was recorded through the queue, validated, rejected, and released back to READY. No candidate was integrated; the failure is routed to Unblocker for physical corridor/implementation classification.
+
+## 2026-09-18 — High-current connector reassessment supervisor receipt
+
+The bounded high-current connector reassessment is complete. The governing recommendation is three Molex Mini-Fit Jr. 5569 six-circuit right-angle headers with nine independently protected positive/return contact-pair paths, using the existing `39-30-0060 / 0039300060` authority identity and normalizing procurement to the current `39-30-1060` tray MPN before hardware purchase. The audited local footprint is drawing-defined and the external vendor-footprint dependency remains resolved. Exact source bytes are not retained, so Molex source hashes remain unavailable by Library policy; procurement identity, mating harness, 40 A/45 A thermal/current behavior and source-to-J1 resistance remain prototype/integration D fields. No CAD changed.
+
+## 2026-09-18 — Connector footprint blocker reclassified and resolved for prototype CAD
+
+A bounded Product/Power and Footprint reassessment compared a single Anderson PP15/45 pole pair with the multi-connector GPU-style option. Released Molex geometry is sufficient to author the exact project-local Mini-Fit Jr. 5569 footprint for prototype use; vendor ECAD and production AVL are not prerequisites. The selected three-header, nine positive/return-path contract remains binding, while harness identity, thermal derating, 45 A transient, and complete source-to-J1 drop remain prototype validation gates. `external:vendor-footprint-authorization` is resolved.
+
+## 2026-09-18 — Macro Placement Authority bound the nine-branch protected-bus corridor
+
+MPA issued one binding placement/corridor plan after the rejected candidate's shorts and crossings. J1 and high-speed corridors remain fixed; J5/J6/J9 anchors, the 3x3 fuse grid, protection column, ordered In2 positive lanes, distinct In4 returns, and post-protection In3 entry are now authoritative. TP2 moves to the source branch join and legacy two-contact power copper/footprints must be removed or replaced in the isolated producer. No alternate placement or unrestricted routing campaign is authorized.

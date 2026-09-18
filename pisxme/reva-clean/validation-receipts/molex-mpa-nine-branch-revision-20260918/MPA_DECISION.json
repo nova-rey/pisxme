@@ -1,0 +1,56 @@
+{
+  "package": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
+  "decision_id": "PISXME-P24-MOLEX-NINE-BRANCH-MPA-20260918-R1",
+  "state": "BINDING_DECISION",
+  "authority": "Macro Placement Authority",
+  "basis": {
+    "rejected_receipt": "validation-receipts/molex-pcbnew-producer-rejected-20260918/RECEIPT.md",
+    "rejected_candidate_sha256": "1e08ed0e21267c0a81e7ff758bdeaf073cc56734355dcfedc61b57236475474c",
+    "unblocker": "validation-receipts/molex-nine-branch-implementation-stall-20260918/UNBLOCKER_REPORT.md",
+    "source_contract": "validation-receipts/power-input-nine-branch-contract-20260918/NINE_BRANCH_SCHEMATIC_CONTRACT.md",
+    "footprint_audit": "validation-receipts/power-input-molex-5569-footprint-20260918/DIMENSIONAL_AUDIT.md"
+  },
+  "anchors": {
+    "J1": [150.0, 90.0, 0.0],
+    "J5": [12.0, 25.0, 0.0],
+    "J6": [12.0, 50.0, 0.0],
+    "J9": [12.0, 75.0, 0.0]
+  },
+  "placements": {
+    "F1": [36.0,26.25,0.0], "F2": [64.0,26.25,0.0], "F3": [92.0,26.25,0.0],
+    "F4": [36.0,51.25,0.0], "F5": [64.0,51.25,0.0], "F6": [92.0,51.25,0.0],
+    "F7": [36.0,76.25,0.0], "F8": [64.0,76.25,0.0], "F9": [92.0,76.25,0.0],
+    "D1": [108.0,10.0,0.0], "C3": [108.0,29.0,0.0], "U1": [108.0,34.0,0.0], "Q1": [111.0,42.0,0.0],
+    "U2": [108.0,62.0,0.0], "Q2": [111.0,70.0,0.0], "C4": [108.0,77.0,0.0], "D2": [108.0,96.0,0.0],
+    "TP2": [114.0,60.0,0.0]
+  },
+  "legacy_disposition": ["Remove/replace OLD_J5 and OLD_J6 two-pin footprints and obsolete copper", "Exactly one J5/J6/J9 footprint each"],
+  "connector_contract": {"positive_pads": [1,2,3], "return_pads": [4,5,6], "pairs": [[1,4],[2,5],[3,6]], "reject_alternating_pad_assignment": true},
+  "layers": {
+    "F.Cu": "short pad escapes, local protection/control loops, probe access only",
+    "In1.Cu": "continuous POWER_GND return plane",
+    "In2.Cu": "ordered raw/fused positive branch lanes through 12V_BRANCH_JOIN",
+    "In3.Cu": "sole post-protection 12V_PROTECTED plane to mapped J1 power field",
+    "In4.Cu": "nine distinct return lanes to POWER_RETURN_JOIN, local ground clearances only",
+    "B.Cu": "preserve existing signal/high-speed corridors; no new high-current run"
+  },
+  "corridors": {
+    "raw_positive": "J5 B1-B3 -> F1-F3; J6 B4-B6 -> F4-F6; J9 B7-B9 -> F7-F9, ordered In2 lanes",
+    "fused_positive": "F1-F9 east outputs remain distinct on In2 to 12V_BRANCH_JOIN x=104..106",
+    "returns": "J5/J6/J9 pads 4-6 through ordinary vias to distinct In4 lanes and POWER_RETURN_JOIN x>=104",
+    "protected": "Primary Q1 post-protection via array at x>=115, then In3 plane around J1 courtyard to mapped 12V field",
+    "high_speed_preservation": "J1, PCIe/reference/reset, USB3, Ethernet, storage, CM5 and existing return structures remain untouched"
+  },
+  "constraints": [
+    "six-layer roles unchanged",
+    "ordinary through vias only",
+    "40 A continuous / 45 A 100 ms source contract",
+    "complete hot positive-plus-return path <=10 mOhm",
+    "no passive sharing or N-1 credit",
+    "no J1 unknown/no-connect changes",
+    "no global rule/clearance relaxation",
+    "fresh native connectivity/DRC/path/thermal evidence and fresh Light validation required"
+  ],
+  "tp2": "Move to (114,60); bind to 12V_BRANCH_JOIN before copper. If FUSED_12V_A remains, source authority must supply an approved alias.",
+  "reopen": "No alternate placement/routing search. Return only a structural contradiction packet with exact geometry/rules/nets and materially distinct method evidence."
+}

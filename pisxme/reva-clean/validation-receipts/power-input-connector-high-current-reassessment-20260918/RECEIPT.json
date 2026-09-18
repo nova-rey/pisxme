@@ -1,0 +1,10 @@
+{
+  "package": "P24-POWER-INPUT-CONNECTOR-HIGH-CURRENT-REASSESSMENT",
+  "status": "DONE",
+  "source_requirement": {"continuous_A": 40, "peak_A": 45},
+  "single_connector_candidate": {"family": "Anderson PP15/45", "disposition": "alternative", "reason": "released rating evidence exists, but current retained PiSXMe land-pattern/mating installation record is incomplete"},
+  "selected_architecture": {"family": "Molex Mini-Fit Jr 5569", "mpn": "39-30-0060 / 0039300060", "procurement_mpn": "39-30-1060", "instances": ["J5", "J6", "J9"], "positive_return_paths": 9, "passive_current_sharing_credit": false, "continuous_A_per_pair": 4.444, "peak_A_per_pair": 5.0, "loaded_circuit_screen_A": 7.0},
+  "footprint_authority": {"vendor_ecad_required": false, "basis": "released Molex dimensional data and audited project-local footprint", "audit_receipt": "validation-receipts/power-input-molex-5569-footprint-20260918"},
+  "external_dependency": {"id": "external:vendor-footprint-authorization", "status": "RESOLVED"},
+  "remaining_validation": ["mating harness/crimp identity", "fit/retention", "40A continuous thermal derating", "45A bounded transient", "complete source-to-J1 resistance/drop", "protection validation"]
+}

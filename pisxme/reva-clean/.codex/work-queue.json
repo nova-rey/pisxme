@@ -98,6 +98,14 @@
       "resolved_at": null,
       "status": "UNRESOLVED"
     },
+    "authority:molex-nine-branch-mpa-20260918": {
+      "created_at": "2026-09-18T21:37:51.188098Z",
+      "kind": "authority",
+      "receipt": "validation-receipts/molex-mpa-nine-branch-revision-20260918/RECEIPT.md",
+      "reference": "validation-receipts/molex-nine-branch-mpa-20260918/RECEIPT.md",
+      "resolved_at": "2026-09-18T21:43:58.082086Z",
+      "status": "RESOLVED"
+    },
     "authority:power-assembly-qualification": {
       "created_at": "2026-09-14T00:04:59.886421Z",
       "kind": "authority",
@@ -3474,7 +3482,8 @@
         "unblocker:molex-protected-bus-corrective-stall",
         "authority:P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT",
         "unblocker:molex-nine-branch-implementation-stall",
-        "unblocker:molex-nine-branch-tool-context"
+        "unblocker:molex-nine-branch-tool-context",
+        "authority:molex-nine-branch-mpa-20260918"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3487,7 +3496,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Root-mediated native pcbnew producer; source fixture is the netlist oracle; fresh Light workspace /home/nyx/eda-workspaces/molex-pcbnew-producer-20260918.",
-      "owner": null,
+      "owner": "molex_nine_branch_post_mpa_producer",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3504,10 +3513,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "READY",
+      "session_ids": [
+        "molex-nine-branch-post-mpa-20260918"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T21:32:47.331132Z",
+      "updated_at": "2026-09-18T21:44:09.768333Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4294,6 +4305,86 @@
       },
       "waiting_on": [],
       "workstream": "power-input"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": {
+        "artifact": "validation-receipts/power-input-connector-high-current-reassessment-20260918/RECEIPT.json",
+        "base_sha": "bfd855ba",
+        "returned_at": "2026-09-18T21:43:10.791840Z",
+        "returned_by": "connector_reassessment_supervisor",
+        "sha": "9eb9826d0b7024f306b5a7378cafc99f181d33a40967007de8229b75cfe271c0"
+      },
+      "completion_criterion": "Binding Product/Power and Footprint authority packet with source hashes, rating/derating arithmetic, dimensional audit requirements, DFM/mechanical checks, and explicit disposition of external:vendor-footprint-authorization.",
+      "created_at": "2026-09-18T21:38:51.066463Z",
+      "dependencies": [],
+      "domain": "power/connector/footprint",
+      "edit_boundaries": [
+        "validation-receipts/power-input-connector-high-current-reassessment-20260918/",
+        "queue/bible updates only"
+      ],
+      "evidence_refs": [
+        "validation-receipts/power-input-connector-high-current-reassessment-20260918/RECEIPT.md"
+      ],
+      "id": "P24-POWER-INPUT-CONNECTOR-HIGH-CURRENT-REASSESSMENT",
+      "notes": "Bounded reassessment requested by user; does not reopen unrelated work or Phase 25/26.",
+      "owner": null,
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-COPPER",
+        "INV-THERMAL"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Evaluate one suitable high-current connector system and multiple conventional GPU/Tesla-style connectors for 40 A continuous / 45 A peak source capability. Use released manufacturer data to authorize a project-local footprint where dimensions suffice; distinguish prototype validation from production AVL.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Reassess high-current input connector architecture and footprint authority",
+      "updated_at": "2026-09-18T21:43:41.095073Z",
+      "validation": {
+        "required": [
+          "authority_source_hashes",
+          "rating_derating_arithmetic",
+          "footprint_dimensional_audit",
+          "dfm_mechanical_review"
+        ],
+        "results": {
+          "authority_source_hashes": {
+            "receipt": "validation-receipts/power-input-connector-high-current-reassessment-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T21:43:34.633018Z",
+            "status": "PASS"
+          },
+          "dfm_mechanical_review": {
+            "receipt": "validation-receipts/power-input-connector-high-current-reassessment-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T21:43:34.801458Z",
+            "status": "PASS"
+          },
+          "footprint_dimensional_audit": {
+            "receipt": "validation-receipts/power-input-connector-high-current-reassessment-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T21:43:34.733151Z",
+            "status": "PASS"
+          },
+          "rating_derating_arithmetic": {
+            "receipt": "validation-receipts/power-input-connector-high-current-reassessment-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T21:43:34.684355Z",
+            "status": "PASS"
+          }
+        }
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -4308,5 +4399,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T21:32:47.331365Z"
+  "updated_at": "2026-09-18T21:44:09.768606Z"
 }
