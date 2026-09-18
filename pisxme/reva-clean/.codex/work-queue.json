@@ -106,6 +106,14 @@
       "resolved_at": "2026-09-18T21:43:58.082086Z",
       "status": "RESOLVED"
     },
+    "authority:molex-nine-branch-mpa-revision2-20260918": {
+      "created_at": "2026-09-18T21:51:47.091778Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/molex-mpa-nine-branch-revision2-20260918/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:power-assembly-qualification": {
       "created_at": "2026-09-14T00:04:59.886421Z",
       "kind": "authority",
@@ -3465,11 +3473,11 @@
       "base_sha": "a18d6d47",
       "campaign": "phase24-phase25-acreage",
       "candidate": {
-        "artifact": "validation-receipts/molex-pcbnew-producer-rejected-20260918/PHASE24_MOLEX_NINE_BRANCH_PRODUCER.kicad_pcb",
-        "base_sha": "a18d6d47",
-        "returned_at": "2026-09-18T21:32:24.745497Z",
-        "returned_by": "root",
-        "sha": "1e08ed0e21267c0a81e7ff758bdeaf073cc56734355dcfedc61b57236475474c"
+        "artifact": "validation-receipts/molex-nine-branch-mpa-candidate-rejected-20260918/PHASE24_MOLEX_NINE_BRANCH_MPA_CANDIDATE_20260918.kicad_pcb",
+        "base_sha": "39498cc5",
+        "returned_at": "2026-09-18T21:50:39.426234Z",
+        "returned_by": "molex_nine_branch_direct_execution",
+        "sha": "cfb7d8a1851de5b7db4d448c08ac561b2d5a25ef84eed367fc2f086cb10a3ede"
       },
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
       "created_at": "2026-09-17T23:36:45.779061Z",
@@ -3483,7 +3491,8 @@
         "authority:P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT",
         "unblocker:molex-nine-branch-implementation-stall",
         "unblocker:molex-nine-branch-tool-context",
-        "authority:molex-nine-branch-mpa-20260918"
+        "authority:molex-nine-branch-mpa-20260918",
+        "authority:molex-nine-branch-mpa-revision2-20260918"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3496,7 +3505,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Root-mediated native pcbnew producer; source fixture is the netlist oracle; fresh Light workspace /home/nyx/eda-workspaces/molex-pcbnew-producer-20260918.",
-      "owner": "molex_nine_branch_direct_execution",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3513,12 +3522,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "molex-nine-branch-direct-execution-20260918"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T21:46:27.507769Z",
+      "updated_at": "2026-09-18T21:51:47.091812Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3528,28 +3535,30 @@
         ],
         "results": {
           "complete_path_budget": {
-            "receipt": "validation-receipts/molex-pcbnew-producer-rejected-20260918/RECEIPT.md",
-            "recorded_at": "2026-09-18T21:32:41.686356Z",
+            "receipt": "validation-receipts/molex-nine-branch-mpa-candidate-rejected-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T21:50:45.487086Z",
             "status": "FAIL"
           },
           "native_targeted_drc": {
-            "receipt": "validation-receipts/molex-pcbnew-producer-rejected-20260918/RECEIPT.md",
-            "recorded_at": "2026-09-18T21:32:41.666167Z",
+            "receipt": "validation-receipts/molex-nine-branch-mpa-candidate-rejected-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T21:50:45.437211Z",
             "status": "FAIL"
           },
           "source_connectivity": {
-            "receipt": "validation-receipts/molex-pcbnew-producer-rejected-20260918/RECEIPT.md",
-            "recorded_at": "2026-09-18T21:32:32.558819Z",
+            "receipt": "validation-receipts/molex-nine-branch-mpa-candidate-rejected-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T21:50:45.390952Z",
             "status": "FAIL"
           },
           "thermal_dfm": {
-            "receipt": "validation-receipts/molex-pcbnew-producer-rejected-20260918/RECEIPT.md",
-            "recorded_at": "2026-09-18T21:32:41.711408Z",
+            "receipt": "validation-receipts/molex-nine-branch-mpa-candidate-rejected-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T21:50:45.546390Z",
             "status": "FAIL"
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:molex-nine-branch-mpa-revision2-20260918"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -4399,5 +4408,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T21:46:27.507998Z"
+  "updated_at": "2026-09-18T21:51:47.092062Z"
 }

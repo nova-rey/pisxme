@@ -1512,3 +1512,7 @@ MPA issued one binding placement/corridor plan after the rejected candidate's sh
 ## 2026-09-18 — Post-MPA producer re-dispatched with explicit Light execution
 
 The first post-MPA dispatch returned no live worker or candidate, so Root released the package and changed the dispatch method. A fresh direct implementer is now claimed from committed base `39498cc5`; it must start one qualified KiCad Light workspace immediately, apply the binding MPA corridor, and return native evidence before any integration.
+
+## 2026-09-18 — Post-MPA nine-branch candidate rejected by fresh Light validation
+
+The isolated candidate applied the binding MPA coordinates and removed the legacy input footprints, but fresh KiCad Light validation still reported 1,139 DRC violations and 499 unconnected items. The unsupported KiCad 10 PCB netlist-export subcommand was recorded as a tooling limitation; it was not treated as connectivity evidence. The candidate was rejected and no canonical CAD was integrated. The producer now waits on one bounded MPA revision review of the exact source-topology/corridor contradiction.
