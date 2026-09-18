@@ -4430,6 +4430,306 @@
       },
       "waiting_on": [],
       "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "2d6e3ea4cfd08f587d42be66cc37a77838e5641a",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Fresh native ERC and regenerated netlist plus bidirectional coverage receipt close all required source-coverage rows or record explicit authorized dispositions; no concealed aliases or stale XML used.",
+      "created_at": "2026-09-18T22:29:55.876595Z",
+      "dependencies": [],
+      "domain": "schematic/source hygiene",
+      "edit_boundaries": [
+        "selected schematic/source hygiene only",
+        "no POWER_INPUT topology edits",
+        "no canonical PCB edits",
+        "preserve Path-A and native export consistency"
+      ],
+      "evidence_refs": [],
+      "id": "P24-SOURCE-ERC-COVERAGE-CLOSURE",
+      "notes": "Independent of protected-bus topology except POWER_INPUT sheet; fence that sheet until HPQ result.",
+      "owner": "supervisor_source_erc",
+      "priority": 2,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "native_erc",
+        "schematic_pad_reference_coverage",
+        "native_netlist"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Close native ERC/source hygiene and full bidirectional schematic/pad/reference/alias/exclusion coverage on the selected Path-A source. Exclude POWER_INPUT topology edits until HPQ #6 is reconciled.",
+      "session_ids": [
+        "01a0b69b-source-erc"
+      ],
+      "status": "RUNNING",
+      "title": "Close schematic ERC and bidirectional source coverage",
+      "updated_at": "2026-09-18T22:30:09.284886Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24-source"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "2d6e3ea4cfd08f587d42be66cc37a77838e5641a",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Authority-backed mapping and provenance receipt covers every open critical package/pin/model item, with exact source hashes or explicit prototype disposition; no unresolved required library/link finding remains.",
+      "created_at": "2026-09-18T22:29:55.924877Z",
+      "dependencies": [],
+      "domain": "library/package/provenance",
+      "edit_boundaries": [
+        "authority/evidence and project-library records only",
+        "no protected-bus CAD edits",
+        "no global rule relaxation",
+        "restricted reference bytes remain private"
+      ],
+      "evidence_refs": [],
+      "id": "P24-LIBRARY-PIN-PROVENANCE-CLOSURE",
+      "notes": "Independent evidence lane; implementation changes require serialized integration if any.",
+      "owner": "supervisor_library",
+      "priority": 3,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "project_library_isolation",
+        "pin_mapping",
+        "critical_component_provenance",
+        "dfm"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Resolve U12 pitch conflict, U11 paste/mask/courtyard, U6/U9 system-library identity, embedded TP1-TP13 disposition, and critical component/procurement records using Library and authority evidence.",
+      "session_ids": [
+        "01a0b69b-library"
+      ],
+      "status": "RUNNING",
+      "title": "Close library, footprint, pin and procurement provenance gaps",
+      "updated_at": "2026-09-18T22:30:09.329449Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24-library"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "2d6e3ea4cfd08f587d42be66cc37a77838e5641a",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Authority-reviewed SI/fab evidence closes all independently actionable rows with exact board/tool/rule context and explicit integrated-candidate revalidation list.",
+      "created_at": "2026-09-18T22:29:55.973567Z",
+      "dependencies": [],
+      "domain": "SI/fabrication/reference",
+      "edit_boundaries": [
+        "SI/fab evidence and non-protected route analysis",
+        "no protected-bus edits",
+        "no global geometry relaxation",
+        "no fabricated measurements"
+      ],
+      "evidence_refs": [],
+      "id": "P24-SI-FAB-REFERENCE-EVIDENCE",
+      "notes": "Final integrated acceptance remains downstream of protected-bus integration.",
+      "owner": "supervisor_si_fab",
+      "priority": 4,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "layers_routes_impedance_return",
+        "INV-STACKUP",
+        "INV-IMPEDANCE",
+        "INV-FAB"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Close stack/layer roles, impedance/tolerance calculations, return-reference analysis, and non-protected interface metrics. Fence HPQ-owned protected-bus region and defer final integrated closure until its candidate exists.",
+      "session_ids": [
+        "01a0b69b-si-fab"
+      ],
+      "status": "RUNNING",
+      "title": "Close independent SI, stackup and fabrication evidence",
+      "updated_at": "2026-09-18T22:30:09.385114Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24-si-fab"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "2d6e3ea4cfd08f587d42be66cc37a77838e5641a",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Scoped producer/evidence packet resolves all mechanically disjoint required findings with native targeted DRC/3D/assembly receipts; protected-bus findings remain separately tracked.",
+      "created_at": "2026-09-18T22:29:56.019531Z",
+      "dependencies": [],
+      "domain": "mechanics/DFM",
+      "edit_boundaries": [
+        "listed regions only",
+        "no protected-bus corridor edits",
+        "preserve anchors and validated high-speed corridors",
+        "isolated producer workspaces only"
+      ],
+      "evidence_refs": [],
+      "id": "P24-MECHANICS-DFM-INDEPENDENT-SUBSET",
+      "notes": "Material CAD candidates require serialized integration and fresh Light validation.",
+      "owner": "supervisor_mechanics_dfm",
+      "priority": 5,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "mechanical_3d_assembly",
+        "DFM",
+        "service_access",
+        "edge_clearance"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Resolve mechanically disjoint DFM/mechanics issues outside the protected-bus corridor: J3/MECH_M2_2280, J8, C5/C6, C7/C8, J7/C14, L10/U11, board edge, assembly and service access.",
+      "session_ids": [
+        "01a0b69b-mech-dfm"
+      ],
+      "status": "RUNNING",
+      "title": "Close mechanically disjoint DFM and service findings",
+      "updated_at": "2026-09-18T22:30:09.434780Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24-mechanics-dfm"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "2d6e3ea4cfd08f587d42be66cc37a77838e5641a",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Path-A firmware/configuration/provisioning and critical procurement evidence is authority-reviewed, with each unavailable item explicitly scoped as prototype validation or external evidence gap.",
+      "created_at": "2026-09-18T22:29:56.064341Z",
+      "dependencies": [],
+      "domain": "firmware/procurement/provenance",
+      "edit_boundaries": [
+        "evidence and release records only",
+        "no Path-B production integration",
+        "no protected-bus CAD edits",
+        "no fabricated hardware claims"
+      ],
+      "evidence_refs": [],
+      "id": "P24-FIRMWARE-PROCUREMENT-PROVENANCE-CLOSURE",
+      "notes": "Path B remains isolated evidence, not a production gate.",
+      "owner": null,
+      "priority": 6,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "firmware_config",
+        "critical_component_provenance",
+        "storage_mode_behavior",
+        "procurement_authority"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Continue Path-A firmware/provisioning, exact-MPN procurement, lifecycle and authorization evidence. Keep RTL9210B Path B isolated and unpromoted.",
+      "session_ids": [],
+      "status": "READY",
+      "title": "Close Path-A firmware, provisioning and procurement provenance",
+      "updated_at": "2026-09-18T22:29:56.064341Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24-firmware"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": "2d6e3ea4cfd08f587d42be66cc37a77838e5641a",
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Authority-reviewed local-rail overlay and support evidence closes independently actionable rows and identifies exact integrated-candidate checks still required.",
+      "created_at": "2026-09-18T22:29:56.108251Z",
+      "dependencies": [],
+      "domain": "power/local-rails",
+      "edit_boundaries": [
+        "U3/U4/U5 local regions only",
+        "no protected-bus edits",
+        "no source topology changes",
+        "evidence/authority first"
+      ],
+      "evidence_refs": [],
+      "id": "P24-LOCAL-RAIL-OVERLAY-EVIDENCE",
+      "notes": "Final power closure remains downstream of protected-bus integration.",
+      "owner": null,
+      "priority": 7,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "power_rail_closure",
+        "regulator_reference_overlays",
+        "thermal"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Review U3/U4/U5 local support, capacitance, current, thermal and vendor-reference geometry without editing the HPQ-owned protected-bus region.",
+      "session_ids": [],
+      "status": "READY",
+      "title": "Close independent local regulator overlay evidence",
+      "updated_at": "2026-09-18T22:29:56.108251Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "phase24-local-rails"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -4444,5 +4744,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T22:20:00.666024Z"
+  "updated_at": "2026-09-18T22:30:09.435062Z"
 }
