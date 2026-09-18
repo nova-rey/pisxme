@@ -3446,7 +3446,7 @@
         "material_attempts": [],
         "tier": 1
       },
-      "base_sha": "2388c9b1",
+      "base_sha": "ccfaaf51d02d22a652b21bf630120100e84484dd",
       "campaign": "phase24-phase25-acreage",
       "candidate": null,
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
@@ -3471,7 +3471,7 @@
       ],
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
-      "notes": "",
+      "notes": "Root-mediated r3 KiCad Engineer dispatch; fresh Light workspace /home/nyx/eda-workspaces/molex-nine-branch-producer-r3-20260918; sentinel then nine-branch producer.",
       "owner": "root",
       "priority": 1,
       "project": "nova-rey/pisxme",
@@ -3490,11 +3490,11 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [
-        "root-molex-nine-branch-20260918"
+        "root-molex-nine-branch-producer-r3-20260918"
       ],
       "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T21:05:54.600051Z",
+      "updated_at": "2026-09-18T21:30:00Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4274,5 +4274,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T21:05:54.600481Z"
+  "updated_at": "2026-09-18T21:30:00Z"
 }

@@ -1472,3 +1472,7 @@ Unblocker classified the second nine-branch producer failure as workflow dispatc
 ## 2026-09-18 — Direct nine-branch producer dispatched after workflow self-unblock
 
 The corrected protected-bus producer is claimed by Root for one bounded direct KiCad Light run from committed base `dd9a0208`. A sentinel loaded `POWER_INPUT.kicad_sch`, exported a native netlist under KiCad 10.0.6, and passed. The legacy two-branch output remains rejected and is not a candidate.
+
+## 2026-09-18 — Root-mediated r3 nine-branch producer dispatched
+
+Supervisor inspection found no live contractor despite the package being marked RUNNING. Root corrected the package base to `ccfaaf51d02d22a652b21bf630120100e84484dd` and dispatched one fresh KiCad Engineer attempt in `/home/nyx/eda-workspaces/molex-nine-branch-producer-r3-20260918`. The attempt must run a sentinel first, then implement only the bound J5/J6/J9 nine-branch Molex source/protection contract.
