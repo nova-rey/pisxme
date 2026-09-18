@@ -298,6 +298,14 @@
       "resolved_at": "2026-09-18T19:41:13.041759Z",
       "status": "RESOLVED"
     },
+    "unblocker:molex-nine-branch-implementation-stall": {
+      "created_at": "2026-09-18T20:59:55.957529Z",
+      "kind": "other",
+      "receipt": "validation-receipts/molex-nine-branch-implementation-stall-20260918/UNBLOCKER_REPORT.md",
+      "reference": "validation-receipts/molex-nine-branch-implementation-stall-20260918/UNBLOCKER_REPORT.md",
+      "resolved_at": "2026-09-18T21:05:36.628102Z",
+      "status": "RESOLVED"
+    },
     "unblocker:molex-protected-bus-corrective-stall": {
       "created_at": "2026-09-18T20:29:52.482576Z",
       "kind": "other",
@@ -3450,7 +3458,8 @@
         "unblocker:power-producer-workspace",
         "authority:P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
         "unblocker:molex-protected-bus-corrective-stall",
-        "authority:P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT"
+        "authority:P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT",
+        "unblocker:molex-nine-branch-implementation-stall"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3483,7 +3492,7 @@
       "session_ids": [],
       "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T20:45:30.118716Z",
+      "updated_at": "2026-09-18T21:05:36.628163Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4263,5 +4272,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T20:45:30.119115Z"
+  "updated_at": "2026-09-18T21:05:36.628422Z"
 }

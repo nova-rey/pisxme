@@ -1464,3 +1464,7 @@ Fresh KiCad Light commissioning proved the current approved schematic contains o
 ## 2026-09-18 — Nine-branch Molex source/schematic contract bound
 
 Power Authority closed the topology gap exposed by fresh Light commissioning. J5, J6 and J9 are the three Molex 0039300060 headers; B1–B9 are nine explicit positive/return contact pairs. Each positive branch uses Littelfuse 0297015.U in the authorized 178.6165.0001 holder for fault isolation, with 4.444 A continuous and 5 A peak contact-pair screens against the 7 A loaded-contact screen. The common path is `12V_BRANCH_JOIN` to `12V_PROTECTED` through the existing U1/Q1/D1/C3 cohort; U2/Q2/D2/C4 are excluded from parallel credit. Fuse clearing/I²t, common FET/TVS SOA and thermal, harness/crimp, path resistance and prototype 40/45 A behavior remain validation gates.
+
+## 2026-09-18 — Nine-branch producer implementation stall self-unblocked
+
+Unblocker classified the second nine-branch producer failure as workflow dispatch, not a physical infeasibility or external blocker. Three workspaces at `bd24cf12` had no live KiCad process or candidate. The dependency `unblocker:molex-nine-branch-implementation-stall` is resolved with a Root-mediated explicit `pisxme-worker start kicad-light` sentinel-then-producer run required; stale two-contact topology counts remain non-authoritative.
