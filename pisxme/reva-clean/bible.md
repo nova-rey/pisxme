@@ -1508,3 +1508,7 @@ A bounded Product/Power and Footprint reassessment compared a single Anderson PP
 ## 2026-09-18 — Macro Placement Authority bound the nine-branch protected-bus corridor
 
 MPA issued one binding placement/corridor plan after the rejected candidate's shorts and crossings. J1 and high-speed corridors remain fixed; J5/J6/J9 anchors, the 3x3 fuse grid, protection column, ordered In2 positive lanes, distinct In4 returns, and post-protection In3 entry are now authoritative. TP2 moves to the source branch join and legacy two-contact power copper/footprints must be removed or replaced in the isolated producer. No alternate placement or unrestricted routing campaign is authorized.
+
+## 2026-09-18 — Post-MPA producer re-dispatched with explicit Light execution
+
+The first post-MPA dispatch returned no live worker or candidate, so Root released the package and changed the dispatch method. A fresh direct implementer is now claimed from committed base `39498cc5`; it must start one qualified KiCad Light workspace immediately, apply the binding MPA corridor, and return native evidence before any integration.
