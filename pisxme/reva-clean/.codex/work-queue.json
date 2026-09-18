@@ -5070,7 +5070,7 @@
       "evidence_refs": [],
       "id": "P24-U12-FOOTPRINT-PRODUCER",
       "notes": "Created from package authority receipt; current 0.40 mm footprint is rejected for routing.",
-      "owner": "u12_footprint_producer",
+      "owner": "u12_footprint_mutation",
       "priority": 2,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5087,11 +5087,11 @@
       ],
       "scope": "In an isolated disposable CAD workspace, derive the project-local U12 HD3SS6126/RUA0042A footprint from TI released 0.50 mm geometry and the existing symbol/pad contract. Return exact dimensional audit, changed footprint, pad/net mapping, mask/paste/courtyard evidence, and targeted Light checks. No schematic or board edits.",
       "session_ids": [
-        "01a0b69b-u12fp"
+        "01a0b69b-u12mut"
       ],
       "status": "RUNNING",
       "title": "Produce TI-authoritative U12 RUA0042A footprint",
-      "updated_at": "2026-09-18T23:28:28.864763Z",
+      "updated_at": "2026-09-18T23:34:37.486682Z",
       "validation": {
         "required": [],
         "results": {}
@@ -5112,5 +5112,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T23:29:54.055186Z"
+  "updated_at": "2026-09-18T23:34:37.486969Z"
 }

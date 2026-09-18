@@ -1622,3 +1622,7 @@ The Librarian/package authority lane completed its evidence packet. U11 land tre
 # 2026-09-18 — Storage corridor authority closed; protected-bus producer self-unblocked
 
 Macro Placement Authority issued `PISXME-P24-STORAGE-PLACEMENT-CORRIDOR-20260918-R1`: Path A remains selected, U11/Y10 stay fixed, and only L10 moves to `(143.00,127.80)` to clear the measured U11 courtyard collision. The mechanics/DFM dependency is resolved; routing/DRC validation remains open. Tier-2 Unblocker then classified the protected-bus direct stall as a workflow failure and selected a deterministic source-first producer using the retained nine-branch schematic fixture as an oracle. The protected-bus producer is RUNNING again from current HEAD; no CAD candidate exists yet.
+
+# 2026-09-18 — HPQ #6 boundary sync and U12 producer capability correction
+
+At the next scheduling boundary, HPQ Issue #6 was confirmed `resolution-ready` and remains open with no candidate to integrate. Its durable result is already resolved in the queue; it requires the authorized R2 topology implementation and does not justify replaying MPA R1. The prior U12 footprint claim was released because that role was read-only and returned audit evidence only. A mutation-capable isolated U12 producer was dispatched from current HEAD; no footprint or integrated-board closure is claimed.
