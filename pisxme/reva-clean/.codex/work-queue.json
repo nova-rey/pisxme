@@ -3456,7 +3456,13 @@
       },
       "base_sha": "a18d6d47",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/molex-pcbnew-producer-rejected-20260918/PHASE24_MOLEX_NINE_BRANCH_PRODUCER.kicad_pcb",
+        "base_sha": "a18d6d47",
+        "returned_at": "2026-09-18T21:32:24.745497Z",
+        "returned_by": "root",
+        "sha": "1e08ed0e21267c0a81e7ff758bdeaf073cc56734355dcfedc61b57236475474c"
+      },
       "completion_criterion": "One isolated candidate implements the authority-selected input assembly and protected bus with exact changed scope, native targeted checks, complete hot positive/return budget, and serialized integration handoff.",
       "created_at": "2026-09-17T23:36:45.779061Z",
       "dependencies": [
@@ -3481,7 +3487,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Root-mediated native pcbnew producer; source fixture is the netlist oracle; fresh Light workspace /home/nyx/eda-workspaces/molex-pcbnew-producer-20260918.",
-      "owner": "root",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3498,12 +3504,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "root-molex-pcbnew-producer-20260918"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T22:00:00Z",
+      "updated_at": "2026-09-18T21:32:47.331132Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3511,7 +3515,28 @@
           "complete_path_budget",
           "thermal_dfm"
         ],
-        "results": {}
+        "results": {
+          "complete_path_budget": {
+            "receipt": "validation-receipts/molex-pcbnew-producer-rejected-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T21:32:41.686356Z",
+            "status": "FAIL"
+          },
+          "native_targeted_drc": {
+            "receipt": "validation-receipts/molex-pcbnew-producer-rejected-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T21:32:41.666167Z",
+            "status": "FAIL"
+          },
+          "source_connectivity": {
+            "receipt": "validation-receipts/molex-pcbnew-producer-rejected-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T21:32:32.558819Z",
+            "status": "FAIL"
+          },
+          "thermal_dfm": {
+            "receipt": "validation-receipts/molex-pcbnew-producer-rejected-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T21:32:41.711408Z",
+            "status": "FAIL"
+          }
+        }
       },
       "waiting_on": [],
       "workstream": "integrated-power"
@@ -4283,5 +4308,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T22:00:00Z"
+  "updated_at": "2026-09-18T21:32:47.331365Z"
 }

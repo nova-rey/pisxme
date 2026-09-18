@@ -1492,3 +1492,7 @@ Unblocker determined that the missing Eeschema project-symbol context does not c
 ## 2026-09-18 — Native pcbnew protected-bus producer dispatched
 
 After Unblocker resolved the Eeschema symbol-context issue, Root requeued and dispatched the protected-bus producer using native `pcbnew` scripting. The producer uses the validated nine-branch source fixture as its netlist oracle and the audited Molex footprint, with a fresh Light workspace at `/home/nyx/eda-workspaces/molex-pcbnew-producer-20260918`. No architecture or canonical CAD change is implied until candidate validation and serialized integration.
+
+## 2026-09-18 — Native pcbnew nine-branch candidate rejected by integrated DRC
+
+The first native `pcbnew` producer materialized J5/J6/J9, 18 contacts and F1-F9 from the audited Molex footprint, but its integrated candidate reported 1,135 DRC violations with real shorting and crossing records. The candidate was recorded through the queue, validated, rejected, and released back to READY. No candidate was integrated; the failure is routed to Unblocker for physical corridor/implementation classification.
