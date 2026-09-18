@@ -1532,3 +1532,5 @@ The next clean native script-author attempt ended without a live process, candid
 ## 2026-09-18 — Unblocker owns the native-script stall reassessment
 
 The producer dependency is represented as active Unblocker work rather than a false campaign hard block. Once the capability-level route returns, Root will requeue the producer, validate any candidate, and continue serialized integration.
+
+- 2026-09-18 — High-current connector authority reassessed for prototype CAD: released Molex Mini-Fit Jr. 39-30-0060/0039300060 geometry is sufficient for a project-local audited footprint; three headers (J5/J6/J9) and nine explicit positive/return paths satisfy the 40 A continuous / 45 A peak source screen without passive current-sharing credit. `external:vendor-footprint-authorization` is resolved for prototype work; production AVL/vendor qualification remains outside this gate. Protected-bus producer ownership was refreshed to `molex_kicad_engineer_20260918` after releasing the stale script-stall owner.
