@@ -1452,3 +1452,7 @@ Product/Power Authority corrected the multi-connector contract: three Molex 2x3 
 ## 2026-09-18 — Drawing-defined Molex footprint authorized; protected-bus producer resumed
 
 Footprint Authority produced the isolated `Molex_5569-06A2_2x03_P4.20mm_Horizontal.kicad_mod` candidate (SHA-256 `014a8f9b4ad6a1583aec43a5c0fb2a603e305970adf463eea26cd6afa54c7051`) matching the released 5569 drawing: six 1.80 mm PTH contacts on a 4.20 mm grid, 3.00 mm mounting holes, 5.50 mm row spacing and 13.80 x 8.40 mm envelope. Derived pad/mask/stack choices remain scoped DFM checks. The footprint authority package is closed and the corrected protected-bus producer is dispatched with the nine independently protected contact-pair contract.
+
+## 2026-09-18 — Protected-bus producer stall changed to fresh-workspace generation
+
+Unblocker classified the first Molex protected-bus producer stall as a workspace dispatch failure. No live KiCad process or candidate existed for base `841ee773`; the retained 418-DRC/499-open result belongs to the obsolete two-contact 39301082 topology and is not current evidence. The producer is requeued to a fresh KiCad Light workspace using native generation, the three 0039300060 headers, nine independently protected contact-pair branches, and exact current-head validation.

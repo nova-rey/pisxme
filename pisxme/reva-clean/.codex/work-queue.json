@@ -290,6 +290,14 @@
       "resolved_at": "2026-09-18T19:41:13.041759Z",
       "status": "RESOLVED"
     },
+    "unblocker:molex-protected-bus-corrective-stall": {
+      "created_at": "2026-09-18T20:29:52.482576Z",
+      "kind": "other",
+      "receipt": "validation-receipts/molex-protected-bus-unblocker-20260918/UNBLOCKER_REPORT.md",
+      "reference": "validation-receipts/molex-protected-bus-unblocker-20260918/UNBLOCKER_REPORT.md",
+      "resolved_at": "2026-09-18T20:32:57.557596Z",
+      "status": "RESOLVED"
+    },
     "unblocker:power-producer-workspace": {
       "created_at": "2026-09-18T12:56:51.224271Z",
       "kind": "authority",
@@ -3432,7 +3440,8 @@
         "authority:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY",
         "authority:P24-POWER-INPUT-GEOMETRY-AUTHORITY",
         "unblocker:power-producer-workspace",
-        "authority:P24-POWER-INPUT-FOOTPRINT-RECONCILIATION"
+        "authority:P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
+        "unblocker:molex-protected-bus-corrective-stall"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3445,7 +3454,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "",
-      "owner": "molex_protected_bus_corrective_supervisor",
+      "owner": "molex_protected_bus_fresh_producer",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3463,11 +3472,11 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [
-        "molex-protected-bus-corrective-20260918"
+        "molex-protected-bus-fresh-20260918"
       ],
       "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T20:21:54.069726Z",
+      "updated_at": "2026-09-18T20:33:09.646300Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4186,5 +4195,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T20:21:54.069961Z"
+  "updated_at": "2026-09-18T20:33:09.646515Z"
 }
