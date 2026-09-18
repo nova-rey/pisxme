@@ -261,10 +261,10 @@
     "unblocker:molex-mpa-corridor-stall": {
       "created_at": "2026-09-18T19:37:12.045650Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "validation-receipts/molex-mpa-corridor-unblocker-20260918/UNBLOCKER_REPORT.md",
       "reference": "validation-receipts/molex-mpa-corridor-attempt-20260918/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T19:41:13.041759Z",
+      "status": "RESOLVED"
     },
     "unblocker:power-producer-workspace": {
       "created_at": "2026-09-18T12:56:51.224271Z",
@@ -3648,7 +3648,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
       "notes": "",
-      "owner": null,
+      "owner": "molex_mpa_bound_clean_producer",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3664,17 +3664,17 @@
         }
       ],
       "scope": "Use released manufacturer dimensions to reconcile the Molex 39301082 datum/peg/contact geometry or author an Anderson PP15/45 prototype footprint. Produce one internally authorized footprint with dimensional audit, mating/serviceability review, and focused native DRC evidence. Do not alter canonical CAD.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "molex-mpa-bound-clean-producer-20260918"
+      ],
+      "status": "RUNNING",
       "title": "Reconcile high-current input connector footprint geometry",
-      "updated_at": "2026-09-18T19:37:12.045671Z",
+      "updated_at": "2026-09-18T19:41:26.770890Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "unblocker:molex-mpa-corridor-stall"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -3791,7 +3791,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/molex-mpa-corridor-unblocker-20260918/UNBLOCKER_REPORT.md",
+        "base_sha": "e4fcae71",
+        "returned_at": "2026-09-18T19:41:12.889531Z",
+        "returned_by": "molex_mpa_corridor_unblocker",
+        "sha": "276baf904beaf0e8a291dbf69096f27ab1b824e5d46264b13064171a1bd3e55f"
+      },
       "completion_criterion": "Return SELF_UNBLOCK, ROUTE, or BLOCKED with evidence and exact next action.",
       "created_at": "2026-09-18T19:37:22.082764Z",
       "dependencies": [],
@@ -3800,10 +3806,12 @@
         "read-only evidence review",
         "no canonical CAD"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/molex-mpa-corridor-unblocker-20260918/UNBLOCKER_REPORT.md"
+      ],
       "id": "P24-POWER-INPUT-MPA-CORRIDOR-UNBLOCKER",
       "notes": "",
-      "owner": "molex_mpa_corridor_unblocker",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3819,12 +3827,10 @@
         }
       ],
       "scope": "Review the three bounded Molex MPA corridor candidates and choose one materially new authority-level placement/copper hypothesis, or document why the current local constraints conflict. Read-only classification; no canonical edits.",
-      "session_ids": [
-        "molex-mpa-corridor-unblocker-20260918"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Unblock Molex MPA corridor attempt",
-      "updated_at": "2026-09-18T19:37:34.623624Z",
+      "updated_at": "2026-09-18T19:41:12.991883Z",
       "validation": {
         "required": [],
         "results": {}
@@ -3845,5 +3851,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T19:37:34.623823Z"
+  "updated_at": "2026-09-18T19:41:26.771251Z"
 }

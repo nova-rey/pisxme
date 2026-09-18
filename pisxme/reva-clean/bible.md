@@ -1412,3 +1412,7 @@ Unblocker classified the producer failure as an implementation placement/corrido
 ## 2026-09-18 — MPA corridor attempt returned without legal candidate
 
 Three isolated Molex MPA corridor candidates remained at 418–419 native DRC violations and did not provide an accepted placement/routing handoff. The raw reports are retained; no canonical CAD changed. The footprint package is parked on a bounded Unblocker review of whether the attempted geometry changed the actual NPTH/copper collision and what materially new authority-level method is warranted.
+
+## 2026-09-18 — MPA placement assertion corrected the corridor method
+
+Unblocker evidence showed prior Branch-B candidates never materialized the binding MPA placement: Q1 remained at (32.54,78.00) instead of the required (61,22), and Q2 was likewise not asserted. The footprint package is now re-dispatched to one clean producer that asserts all MPA coordinates and fixed anchors before routing; the prior DRC failures are retained as method evidence, not corridor impossibility.
