@@ -1,0 +1,1 @@
+pisxme-worker validate /home/nyx/PiSXMe ee69832b u12-integrated-20260918 sh -lc "kicad-cli sch export netlist --format kicadxml ...; validate_u12_footprint.py"

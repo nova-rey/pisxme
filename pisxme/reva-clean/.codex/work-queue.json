@@ -5,10 +5,10 @@
     "P24-U12-PACKAGE-GEOMETRY": {
       "created_at": "2026-09-18T23:28:09.697064Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/u12-integrated-light-validation-20260918/RECEIPT.md",
       "reference": "validation-receipts/package-authority-u12-u11-20260918/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T23:42:49.325353Z",
+      "status": "RESOLVED"
     },
     "authority:6A-limiter-qualification": {
       "created_at": "2026-09-17T13:53:30.161025Z",
@@ -109,10 +109,10 @@
     "authority:P24-U12-PACKAGE-GEOMETRY": {
       "created_at": "2026-09-18T22:39:20.052085Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/u12-integrated-light-validation-20260918/RECEIPT.md",
       "reference": "validation-receipts/library-pin-provenance-closure-20260918/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T23:42:44.554235Z",
+      "status": "RESOLVED"
     },
     "authority:exact-nFET-and-energy-coordination": {
       "created_at": "2026-09-14T00:29:05.092973Z",
@@ -4554,7 +4554,13 @@
       },
       "base_sha": "2d6e3ea4cfd08f587d42be66cc37a77838e5641a",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/library-pin-provenance-closure-20260918/RECEIPT.md",
+        "base_sha": "2d6e3ea4",
+        "returned_at": "2026-09-18T23:43:29.821593Z",
+        "returned_by": "root",
+        "sha": "c6d32e28"
+      },
       "completion_criterion": "Authority-backed mapping and provenance receipt covers every open critical package/pin/model item, with exact source hashes or explicit prototype disposition; no unresolved required library/link finding remains.",
       "created_at": "2026-09-18T22:29:55.924877Z",
       "dependencies": [
@@ -4568,7 +4574,9 @@
         "no global rule relaxation",
         "restricted reference bytes remain private"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/library-pin-provenance-closure-20260918/RECEIPT.md"
+      ],
       "id": "P24-LIBRARY-PIN-PROVENANCE-CLOSURE",
       "notes": "Independent evidence lane; implementation changes require serialized integration if any.",
       "owner": null,
@@ -4589,16 +4597,14 @@
       ],
       "scope": "Resolve U12 pitch conflict, U11 paste/mask/courtyard, U6/U9 system-library identity, embedded TP1-TP13 disposition, and critical component/procurement records using Library and authority evidence.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Close library, footprint, pin and procurement provenance gaps",
-      "updated_at": "2026-09-18T22:39:20.099610Z",
+      "updated_at": "2026-09-18T23:43:29.918224Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:P24-U12-PACKAGE-GEOMETRY"
-      ],
+      "waiting_on": [],
       "workstream": "phase24-library"
     },
     {
@@ -4948,7 +4954,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/package-authority-u12-u11-20260918/RECEIPT.md",
+        "base_sha": "a2eedee0",
+        "returned_at": "2026-09-18T23:43:29.672188Z",
+        "returned_by": "root",
+        "sha": "79f53da7"
+      },
       "completion_criterion": "Both authority dependencies P24-U12-PACKAGE-GEOMETRY and P24-U11-LAND-TREATMENT are explicitly resolved or narrowly escalated with retained evidence.",
       "created_at": "2026-09-18T23:18:50.118120Z",
       "dependencies": [
@@ -4960,7 +4972,9 @@
         "no CAD edits",
         "restricted reference bytes remain private"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/package-authority-u12-u11-20260918/RECEIPT.md"
+      ],
       "id": "P24-PACKAGE-AUTHORITY-U12-U11",
       "notes": "Created to advance existing library closure dependencies while protected-bus CAD is in progress.",
       "owner": null,
@@ -4981,16 +4995,14 @@
       ],
       "scope": "Use Librarian first and package/DFM authority to resolve U12 TI RUA0042A pitch conflict and U11 paste/mask/courtyard treatment. Produce binding authority artifacts and exact evidence; no CAD edits and no global rule changes.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "DONE",
       "title": "Resolve U12 package pitch and U11 land treatment authority",
-      "updated_at": "2026-09-18T23:28:09.697098Z",
+      "updated_at": "2026-09-18T23:43:29.770769Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "P24-U12-PACKAGE-GEOMETRY"
-      ],
+      "waiting_on": [],
       "workstream": "phase24-library"
     },
     {
@@ -5056,7 +5068,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "/home/nyx/eda-workspaces/u12-footprint-r2/project/pisxme/reva-clean/validation-receipts/u12-rua0042a-footprint-producer-20260918/PRODUCER_RECEIPT.md",
+        "base_sha": "a34130ba",
+        "returned_at": "2026-09-18T23:39:56.271274Z",
+        "returned_by": "u12_footprint_mutation",
+        "sha": "8e7d5a8b9dd4881d4ee1f859b7bd76e9ed4628b8"
+      },
       "completion_criterion": "An authority-backed U12 footprint candidate or precise blocker packet resolves P24-U12-PACKAGE-GEOMETRY with hashes and dimensional audit.",
       "created_at": "2026-09-18T23:28:28.802743Z",
       "dependencies": [],
@@ -5067,10 +5085,12 @@
         "no board routing",
         "no global rule changes"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/u12-integrated-light-validation-20260918/RECEIPT.md"
+      ],
       "id": "P24-U12-FOOTPRINT-PRODUCER",
       "notes": "Created from package authority receipt; current 0.40 mm footprint is rejected for routing.",
-      "owner": "u12_footprint_mutation",
+      "owner": null,
       "priority": 2,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -5086,12 +5106,10 @@
         }
       ],
       "scope": "In an isolated disposable CAD workspace, derive the project-local U12 HD3SS6126/RUA0042A footprint from TI released 0.50 mm geometry and the existing symbol/pad contract. Return exact dimensional audit, changed footprint, pad/net mapping, mask/paste/courtyard evidence, and targeted Light checks. No schematic or board edits.",
-      "session_ids": [
-        "01a0b69b-u12mut"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Produce TI-authoritative U12 RUA0042A footprint",
-      "updated_at": "2026-09-18T23:34:37.486682Z",
+      "updated_at": "2026-09-18T23:42:39.646562Z",
       "validation": {
         "required": [],
         "results": {}
@@ -5112,5 +5130,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T23:34:37.486969Z"
+  "updated_at": "2026-09-18T23:43:29.918516Z"
 }
