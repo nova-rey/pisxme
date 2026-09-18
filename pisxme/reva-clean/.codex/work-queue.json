@@ -253,10 +253,10 @@
     "unblocker:molex-footprint-authority-stall": {
       "created_at": "2026-09-18T19:23:14.660062Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "validation-receipts/molex-footprint-unblocker-20260918/UNBLOCKER_REPORT.md",
       "reference": "validation-receipts/molex-39301082-footprint-validation-20260918/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T19:25:47.171251Z",
+      "status": "RESOLVED"
     },
     "unblocker:power-producer-workspace": {
       "created_at": "2026-09-18T12:56:51.224271Z",
@@ -3639,7 +3639,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
       "notes": "",
-      "owner": null,
+      "owner": "molex_mpa_corridor_producer",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3655,17 +3655,17 @@
         }
       ],
       "scope": "Use released manufacturer dimensions to reconcile the Molex 39301082 datum/peg/contact geometry or author an Anderson PP15/45 prototype footprint. Produce one internally authorized footprint with dimensional audit, mating/serviceability review, and focused native DRC evidence. Do not alter canonical CAD.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "molex-mpa-corridor-20260918"
+      ],
+      "status": "RUNNING",
       "title": "Reconcile high-current input connector footprint geometry",
-      "updated_at": "2026-09-18T19:23:14.660102Z",
+      "updated_at": "2026-09-18T19:25:58.764854Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "unblocker:molex-footprint-authority-stall"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -3729,7 +3729,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/molex-footprint-unblocker-20260918/UNBLOCKER_REPORT.md",
+        "base_sha": "74943c81",
+        "returned_at": "2026-09-18T19:25:47.012273Z",
+        "returned_by": "molex_footprint_authority_unblocker",
+        "sha": "d9599e7b2173edc6851368f632759245bc01a0ef5db221ed10bd8f3013854b23"
+      },
       "completion_criterion": "Return SELF_UNBLOCK, ROUTE, or BLOCKED with evidence and exact resume point.",
       "created_at": "2026-09-18T19:23:46.246535Z",
       "dependencies": [],
@@ -3738,10 +3744,12 @@
         "read-only authority and evidence review",
         "no canonical CAD"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/molex-footprint-unblocker-20260918/UNBLOCKER_REPORT.md"
+      ],
       "id": "P24-POWER-INPUT-FOOTPRINT-UNBLOCKER",
       "notes": "",
-      "owner": "molex_footprint_authority_unblocker",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3756,12 +3764,10 @@
         }
       ],
       "scope": "Classify the stalled Molex footprint authority attempt and select one safe next capability using the retained released-dimension evidence and native DRC contradiction.",
-      "session_ids": [
-        "molex-footprint-authority-unblocker-20260918"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Unblock Molex footprint authority stall",
-      "updated_at": "2026-09-18T19:23:46.303826Z",
+      "updated_at": "2026-09-18T19:25:47.118541Z",
       "validation": {
         "required": [],
         "results": {}
@@ -3782,5 +3788,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T19:23:46.304249Z"
+  "updated_at": "2026-09-18T19:25:58.765142Z"
 }

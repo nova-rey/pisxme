@@ -1404,3 +1404,7 @@ The second footprint-authority attempt returned no candidate or evidence after b
 ## 2026-09-18 — Unblocker made explicit in the Main Work Queue
 
 The Molex footprint stall now has a durable queue package with Unblocker ownership, so the campaign census reflects active blocker classification rather than falsely idling with an untracked service. The dependent footprint package remains WAITING on the same narrow dependency.
+
+## 2026-09-18 — Molex footprint geometry cleared; placement route authorized
+
+Unblocker classified the producer failure as an implementation placement/corridor collision: released Molex 39301082 geometry is internally valid, while existing J5/J6 copper crosses an NPTH keepout. The footprint package is now owned by Macro Placement Authority with one isolated current-HEAD placement/reroute attempt; canonical CAD remains unchanged.
