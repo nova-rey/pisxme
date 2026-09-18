@@ -1488,3 +1488,7 @@ The r3 Light workspace launched and proved native source generation, but returne
 ## 2026-09-18 — Tool-context blocker self-unblocked through native pcbnew representation
 
 Unblocker determined that the missing Eeschema project-symbol context does not constrain PCB generation. The protected-bus producer is requeued with a native `pcbnew` method using the validated generic-symbol source fixture as its netlist oracle and the audited Molex footprint. Connector architecture and nine-branch authority remain unchanged.
+
+## 2026-09-18 — Native pcbnew protected-bus producer dispatched
+
+After Unblocker resolved the Eeschema symbol-context issue, Root requeued and dispatched the protected-bus producer using native `pcbnew` scripting. The producer uses the validated nine-branch source fixture as its netlist oracle and the audited Molex footprint, with a fresh Light workspace at `/home/nyx/eda-workspaces/molex-pcbnew-producer-20260918`. No architecture or canonical CAD change is implied until candidate validation and serialized integration.
