@@ -181,10 +181,10 @@
     "knowledge:P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE": {
       "created_at": "2026-09-18T19:10:47.982044Z",
       "kind": "knowledge",
-      "receipt": null,
+      "receipt": "validation-receipts/anderson-contact-evidence-20260918/EVIDENCE_BRIEF.md",
       "reference": "validation-receipts/anderson-footprint-authority-blocker-20260918/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T19:17:18.159549Z",
+      "status": "RESOLVED"
     },
     "knowledge:P24-POWER-INPUT-ASSEMBLY-EVIDENCE": {
       "created_at": "2026-09-17T23:32:38.732876Z",
@@ -3630,7 +3630,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
       "notes": "",
-      "owner": null,
+      "owner": "molex_footprint_reconciliation_authority",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3646,17 +3646,17 @@
         }
       ],
       "scope": "Use released manufacturer dimensions to reconcile the Molex 39301082 datum/peg/contact geometry or author an Anderson PP15/45 prototype footprint. Produce one internally authorized footprint with dimensional audit, mating/serviceability review, and focused native DRC evidence. Do not alter canonical CAD.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "molex-footprint-authority-20260918"
+      ],
+      "status": "RUNNING",
       "title": "Reconcile high-current input connector footprint geometry",
-      "updated_at": "2026-09-18T19:10:47.982064Z",
+      "updated_at": "2026-09-18T19:17:45.846894Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "knowledge:P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -3666,7 +3666,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/anderson-contact-evidence-20260918/EVIDENCE_BRIEF.md",
+        "base_sha": "e19d5096",
+        "returned_at": "2026-09-18T19:17:36.254591Z",
+        "returned_by": "root_librarian_fallback",
+        "sha": "65085a3525f2b708eeb5b3d9d3bcbd0156217816797afcb97f59b3101cb1b420"
+      },
       "completion_criterion": "Indexed evidence either closes the exact footprint contract or identifies the irreducible missing field with source attempts and hashes.",
       "created_at": "2026-09-18T19:10:48.026660Z",
       "dependencies": [],
@@ -3676,10 +3682,12 @@
         "no canonical CAD",
         "source acquisition and indexing only"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/anderson-contact-evidence-20260918/EVIDENCE_BRIEF.md"
+      ],
       "id": "P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE",
       "notes": "",
-      "owner": "anderson_contact_evidence_librarian",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3694,12 +3702,10 @@
         }
       ],
       "scope": "Search indexed and manufacturer-public sources for released 3-5912P1/3-5913P1 contact drawings and PCB land-pattern dimensions, including 111038S2 and PP45 PCB drawings. Record exact revision, URL, hash, and whether drill/slot, pad, mask, plating and datum are defined. Do not copy restricted material into public CAD history.",
-      "session_ids": [
-        "anderson-contact-evidence-20260918"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Acquire released Anderson contact footprint evidence",
-      "updated_at": "2026-09-18T19:10:57.138727Z",
+      "updated_at": "2026-09-18T19:17:36.362193Z",
       "validation": {
         "required": [],
         "results": {}
@@ -3720,5 +3726,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T19:10:57.138913Z"
+  "updated_at": "2026-09-18T19:17:45.847085Z"
 }

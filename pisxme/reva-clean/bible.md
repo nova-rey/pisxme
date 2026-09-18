@@ -1392,3 +1392,7 @@ The footprint-authority retry was reassigned to the existing isolated Anderson f
 ## 2026-09-18 — Anderson contact-footprint evidence gap routed to Librarian
 
 The Anderson PP15/45 authority audit closed the connector identity and housing spacing but found that the retained released records omit exact contact drill/slot, pad/annulus, mask/plating, and datum details. No footprint was guessed. A Librarian package now searches the manufacturer contact drawings and private corpus before any external classification; the footprint package waits only on that knowledge result.
+
+## 2026-09-18 — Anderson evidence gap bounded; Molex reconciliation resumed
+
+Librarian evidence review recorded the Anderson contact-land-pattern gap after checking the manufacturer product records, B02021S rev.6, and related public drawing references. The gap is specific to the Anderson contact drill/land pattern and does not justify an external campaign block because the released Molex 39301082 route remains available. The footprint package was re-dispatched to reconcile Molex's released datum/peg/contact geometry.
