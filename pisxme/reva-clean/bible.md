@@ -1376,3 +1376,7 @@ Two producer attempts resolved into legacy recovery-tree workspaces instead of a
 ## 2026-09-18 — Protected-bus producer resumed after workspace self-unblock
 
 The Unblocker identified stale-base dispatch as the cause of the producer workspace failure. The corrective producer was released and re-claimed against a disposable checkout at full base `5d78700c70f8476ac749ead50197c3b1e9c07587`; canonical integration remains untouched pending candidate and raw validation receipts.
+
+## 2026-09-18 — Molex input footprint contradiction isolated
+
+The clean-base protected-bus producer rejected the Molex 39301082 candidate after native KiCad Light DRC found the released 3.6 mm NPTH keepout overlapping the outer 2.6 mm contact land at the implemented 2.65 mm spacing, introducing connector-region shorting items. The candidate was not promoted. A dedicated footprint-authority package now owns Molex datum reconciliation or an Anderson PP15/45 released-dimension footprint; the producer alone is waiting on that authority.

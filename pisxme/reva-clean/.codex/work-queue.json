@@ -18,6 +18,14 @@
       "resolved_at": "2026-09-17T23:30:52.135279Z",
       "status": "RESOLVED"
     },
+    "authority:P24-POWER-INPUT-FOOTPRINT-RECONCILIATION": {
+      "created_at": "2026-09-18T13:13:37.326692Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/power-bus-producer-footprint-blocker-20260918/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:P24-POWER-INPUT-GEOMETRY-AUTHORITY": {
       "created_at": "2026-09-17T23:42:24.323277Z",
       "kind": "authority",
@@ -3375,7 +3383,8 @@
         "package:P24-POWER-INPUT-ASSEMBLY-EVIDENCE",
         "authority:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY",
         "authority:P24-POWER-INPUT-GEOMETRY-AUTHORITY",
-        "unblocker:power-producer-workspace"
+        "unblocker:power-producer-workspace",
+        "authority:P24-POWER-INPUT-FOOTPRINT-RECONCILIATION"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3388,7 +3397,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "",
-      "owner": "power_bus_clean_executor_retry",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3405,12 +3414,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "molex-power-bus-clean-20260918-retry"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T13:08:06.650082Z",
+      "updated_at": "2026-09-18T13:13:37.326717Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3420,7 +3427,9 @@
         ],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:P24-POWER-INPUT-FOOTPRINT-RECONCILIATION"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -3589,6 +3598,56 @@
       },
       "waiting_on": [],
       "workstream": "power-authority"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "One footprint route is dimensionally audited against released manufacturer data and passes focused native DRC/DFM checks, or returns an exact unresolved geometry contradiction.",
+      "created_at": "2026-09-18T13:13:37.367633Z",
+      "dependencies": [],
+      "domain": "Footprint / Mechanical Authority",
+      "edit_boundaries": [
+        "private/isolated footprint workspace only",
+        "no canonical CAD",
+        "released manufacturer dimensions only",
+        "return source hash and dimensional audit"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
+      "notes": "",
+      "owner": "power_input_footprint_reconciliation",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-COPPER",
+        "INV-DFM"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Use released manufacturer dimensions to reconcile the Molex 39301082 datum/peg/contact geometry or author an Anderson PP15/45 prototype footprint. Produce one internally authorized footprint with dimensional audit, mating/serviceability review, and focused native DRC evidence. Do not alter canonical CAD.",
+      "session_ids": [
+        "power-input-footprint-reconciliation-20260918"
+      ],
+      "status": "RUNNING",
+      "title": "Reconcile high-current input connector footprint geometry",
+      "updated_at": "2026-09-18T13:13:53.310427Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -3603,5 +3662,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T13:08:06.650310Z"
+  "updated_at": "2026-09-18T13:13:53.310646Z"
 }
