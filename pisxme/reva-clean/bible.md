@@ -1484,3 +1484,7 @@ KiCad Light lacked the project-local `PiSXMeRevAClean` symbol library in the iso
 ## 2026-09-18 — r3 producer stall narrowed to worker tool context
 
 The r3 Light workspace launched and proved native source generation, but returned no PCB candidate. The first failure was the absent project-local symbol library; the generic-symbol correction produced a valid nine-branch source fixture and netlist. The protected-bus producer is parked only on `unblocker:molex-nine-branch-tool-context`; this is an implementation/tool-context dependency, not an external connector blocker. No canonical CAD changed.
+
+## 2026-09-18 — Tool-context blocker self-unblocked through native pcbnew representation
+
+Unblocker determined that the missing Eeschema project-symbol context does not constrain PCB generation. The protected-bus producer is requeued with a native `pcbnew` method using the validated generic-symbol source fixture as its netlist oracle and the audited Molex footprint. Connector architecture and nine-branch authority remain unchanged.

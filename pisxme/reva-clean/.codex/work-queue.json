@@ -309,10 +309,10 @@
     "unblocker:molex-nine-branch-tool-context": {
       "created_at": "2026-09-18T21:22:20.702797Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "validation-receipts/molex-nine-branch-tool-context-unblocker-20260918/UNBLOCKER_REPORT.md",
       "reference": "validation-receipts/molex-nine-branch-producer-r3-stall-20260918/RECEIPT.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T21:25:48.105699Z",
+      "status": "RESOLVED"
     },
     "unblocker:molex-protected-bus-corrective-stall": {
       "created_at": "2026-09-18T20:29:52.482576Z",
@@ -3499,9 +3499,9 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T21:22:20.702833Z",
+      "updated_at": "2026-09-18T21:25:48.105779Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3511,9 +3511,7 @@
         ],
         "results": {}
       },
-      "waiting_on": [
-        "unblocker:molex-nine-branch-tool-context"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -4283,5 +4281,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T21:22:20.703111Z"
+  "updated_at": "2026-09-18T21:25:48.106109Z"
 }
