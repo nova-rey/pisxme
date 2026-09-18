@@ -1,0 +1,14 @@
+{
+  "schema": "pisxme.p24.u12-footprint-producer.v1",
+  "base_sha": "a34130ba",
+  "current_reconcile_sha": "8383aa07",
+  "authority": "P24-PACKAGE-AUTHORITY-U12-U11-20260918-R1",
+  "toolchain": "KiCad 10.0.6",
+  "candidate_scope": "project-local U12 footprint only",
+  "pad_count": 43,
+  "unique_pad_ids": 43,
+  "geometry_checks": true,
+  "footprint_sha256": "9f9e7623d9afcebefac6740171b72c238ccf1ffe5f0b8ba38ba23a9e65899271",
+  "candidate_drc": "NOT_RUN",
+  "integrated_validation": "REQUIRED"
+}
