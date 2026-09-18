@@ -1456,3 +1456,7 @@ Footprint Authority produced the isolated `Molex_5569-06A2_2x03_P4.20mm_Horizont
 ## 2026-09-18 — Protected-bus producer stall changed to fresh-workspace generation
 
 Unblocker classified the first Molex protected-bus producer stall as a workspace dispatch failure. No live KiCad process or candidate existed for base `841ee773`; the retained 418-DRC/499-open result belongs to the obsolete two-contact 39301082 topology and is not current evidence. The producer is requeued to a fresh KiCad Light workspace using native generation, the three 0039300060 headers, nine independently protected contact-pair branches, and exact current-head validation.
+
+## 2026-09-18 — Nine-branch source contract required before protected-bus CAD
+
+Fresh KiCad Light commissioning proved the current approved schematic contains only two input pairs and two protection chains. Adding three Molex 2x3 headers to those existing nets would create passive parallel contacts and violate the binding nine independently protected contact-pair contract. The protected-bus producer therefore returned a precise topology gap and is parked on Power Authority for a nine-branch schematic/source contract; no component, net, value or protection stage was invented.

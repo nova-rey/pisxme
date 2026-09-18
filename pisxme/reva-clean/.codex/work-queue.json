@@ -58,6 +58,14 @@
       "resolved_at": "2026-09-18T20:01:10.114698Z",
       "status": "RESOLVED"
     },
+    "authority:P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT": {
+      "created_at": "2026-09-18T20:37:42.211602Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": "validation-receipts/molex-protected-bus-corrective-gap-20260918/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "authority:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY": {
       "created_at": "2026-09-17T23:31:12.748834Z",
       "kind": "authority",
@@ -3441,7 +3449,8 @@
         "authority:P24-POWER-INPUT-GEOMETRY-AUTHORITY",
         "unblocker:power-producer-workspace",
         "authority:P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
-        "unblocker:molex-protected-bus-corrective-stall"
+        "unblocker:molex-protected-bus-corrective-stall",
+        "authority:P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3454,7 +3463,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "",
-      "owner": "molex_protected_bus_fresh_producer",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3471,12 +3480,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "molex-protected-bus-fresh-20260918"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T20:33:09.646300Z",
+      "updated_at": "2026-09-18T20:37:42.211645Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3486,7 +3493,9 @@
         ],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "authority:P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -4181,6 +4190,61 @@
       },
       "waiting_on": [],
       "workstream": "power-input"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Power Authority receipt binds nine branch-positive and nine branch-return nets, exact protection/fault-isolation contract or explicit existing-component reuse, common return topology, branch current/drop limits, and implementation ownership. It must state whether schematic source edits are authorized and identify any genuine user-owned decision.",
+      "created_at": "2026-09-18T20:37:56.703573Z",
+      "dependencies": [
+        "package:P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-CORRECTION",
+        "package:P24-POWER-INPUT-FOOTPRINT-RECONCILIATION"
+      ],
+      "domain": "power/source-schematic-authority",
+      "edit_boundaries": [
+        "write only validation-receipts/power-input-nine-branch-contract-20260918/ and queue/bible updates",
+        "no canonical schematic/PCB edits until contract is reviewed",
+        "preserve product 40 A continuous / 45 A peak invariants"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-INPUT-NINE-BRANCH-SCHEMATIC-CONTRACT",
+      "notes": "No PCB producer may invent branch nets/components. This contract is a prerequisite for requeueing the protected-bus producer.",
+      "owner": "nine_branch_power_contract_authority",
+      "priority": 99,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "power_source_40A_continuous",
+        "power_source_45A_peak",
+        "nine_branch_protection",
+        "schematic_source_contract",
+        "prototype_power_bus"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Define the minimum source-level contract needed to implement three Molex 2x3 headers with nine independently current-limited or fault-isolated positive/return contact-pair branches: branch net identities, protection stages, component MPN/value/footprint/rating requirements, return joining, common-bus interface, fuse/I2t and thermal assumptions.",
+      "session_ids": [
+        "nine-branch-contract-20260918"
+      ],
+      "status": "RUNNING",
+      "title": "Bind nine-branch Molex source schematic and protection contract",
+      "updated_at": "2026-09-18T20:38:07.206708Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-input"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -4195,5 +4259,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T20:33:09.646515Z"
+  "updated_at": "2026-09-18T20:38:07.206939Z"
 }
