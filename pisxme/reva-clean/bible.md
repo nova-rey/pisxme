@@ -1602,3 +1602,7 @@ The HPQ #6 source-topology result released the protected-bus producer, which is 
 # 2026-09-18 — Root-mediated Light execution route commissioned
 
 The first R2 producer session stalled without a KiCad process. Tier-2 Unblocker classified this as an implementation/runtime route issue and required an explicit qualified Light launch. Root allocated `/home/nyx/eda-workspaces/protected-bus-r2-rootdispatch` from `ac16d1c4`, verified KiCad Light `10.0.6`, released the silent owner, and dispatched `rootdispatch_r2_implementer` with the exact source-topology authority scope. No CAD claim is made until that worker returns a candidate or blocker packet.
+
+# 2026-09-18 — Second bounded R2 execution route
+
+The root-mediated Light producer remained silent after its bounded attempt and was interrupted. Root released that owner and dispatched `kicad_r2_direct` with an explicit requirement to invoke the qualified launcher, run the topology sentinel, and return a candidate or command-level blocker in one bounded turn. No CAD candidate or closure claim exists yet.

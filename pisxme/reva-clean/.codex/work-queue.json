@@ -3584,7 +3584,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Root-mediated native pcbnew producer; source fixture is the netlist oracle; fresh Light workspace /home/nyx/eda-workspaces/molex-pcbnew-producer-20260918.",
-      "owner": "root_mediated_r2_implementer",
+      "owner": "kicad_r2_direct",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3602,11 +3602,11 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [
-        "01a0b69b-rootdispatch"
+        "01a0b69b-r2direct"
       ],
       "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T23:20:05.285495Z",
+      "updated_at": "2026-09-18T23:25:02.816115Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -5039,5 +5039,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T23:20:05.285950Z"
+  "updated_at": "2026-09-18T23:25:02.816610Z"
 }
