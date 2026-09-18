@@ -1520,3 +1520,7 @@ The isolated candidate applied the binding MPA coordinates and removed the legac
 ## 2026-09-18 — Clean native rebuild selected after MPA candidate rejection
 
 Unblocker separated the physical candidate failure from the placement authority. The rejected board reused obsolete/under-routed source topology, so the next bounded method is a clean native `pcbnew` rebuild from current committed base `67562704`, with one complete branch targeted before scaling. A coordinate-level contradiction will return to MPA; no rejected artifact may be reused.
+
+## 2026-09-18 — Clean rebuild capability probe ended without candidate
+
+The clean native rebuild worker started a KiCad Light API probe after the previous candidate rejection but returned no candidate or retained producer receipt. Root released the stale RUNNING claim and re-dispatched a bounded native script-author task. The queue remains active; no campaign block or architecture change is declared.
