@@ -274,6 +274,14 @@
       "resolved_at": "2026-09-18T23:15:25.089423Z",
       "status": "RESOLVED"
     },
+    "hpq:nova-rey/codex-config-backup#7": {
+      "created_at": "2026-09-18T23:50:08.117577Z",
+      "kind": "hpq",
+      "receipt": null,
+      "reference": "https://github.com/nova-rey/codex-config-backup/issues/7",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "knowledge:P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE": {
       "created_at": "2026-09-18T19:10:47.982044Z",
       "kind": "knowledge",
@@ -3588,7 +3596,8 @@
         "package:P24-PROTECTED-BUS-UPSTREAM-AUTHORITY-REVISION",
         "unblocker:protected-bus-r2-producer-stall",
         "authority:P24-PROTECTED-BUS-SOURCE-TOPOLOGY-RECONCILIATION",
-        "protected-bus-direct-producer-stall"
+        "protected-bus-direct-producer-stall",
+        "hpq:nova-rey/codex-config-backup#7"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3601,7 +3610,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Root-mediated native pcbnew producer; source fixture is the netlist oracle; fresh Light workspace /home/nyx/eda-workspaces/molex-pcbnew-producer-20260918.",
-      "owner": "protected_bus_source_author",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3618,12 +3627,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "01a0b69b-sourceauthor"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T23:47:16.224939Z",
+      "updated_at": "2026-09-18T23:50:08.117609Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3654,7 +3661,9 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "hpq:nova-rey/codex-config-backup#7"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -5130,5 +5139,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T23:47:16.225423Z"
+  "updated_at": "2026-09-18T23:50:08.117837Z"
 }
