@@ -226,6 +226,14 @@
       "resolved_at": "2026-09-17T22:06:57.179685Z",
       "status": "RESOLVED"
     },
+    "hpq:nova-rey/codex-config-backup#6": {
+      "created_at": "2026-09-18T22:19:53.580592Z",
+      "kind": "hpq",
+      "receipt": null,
+      "reference": "https://github.com/nova-rey/codex-config-backup/issues/6",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "knowledge:P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE": {
       "created_at": "2026-09-18T19:10:47.982044Z",
       "kind": "knowledge",
@@ -317,10 +325,10 @@
     "unblocker:molex-native-api-adapter-stall": {
       "created_at": "2026-09-18T22:17:15.437954Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "validation-receipts/molex-native-api-adapter-stall-20260918/RECEIPT.md",
       "reference": null,
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T22:20:00.597415Z",
+      "status": "RESOLVED"
     },
     "unblocker:molex-native-direct-author-stall": {
       "created_at": "2026-09-18T22:12:58.785072Z",
@@ -3519,7 +3527,8 @@
         "authority:molex-nine-branch-mpa-revision2-20260918",
         "unblocker:molex-native-script-author-stall",
         "unblocker:molex-native-direct-author-stall",
-        "unblocker:molex-native-api-adapter-stall"
+        "unblocker:molex-native-api-adapter-stall",
+        "hpq:nova-rey/codex-config-backup#6"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3552,7 +3561,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T22:17:15.437988Z",
+      "updated_at": "2026-09-18T22:20:00.665604Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3584,7 +3593,7 @@
         }
       },
       "waiting_on": [
-        "unblocker:molex-native-api-adapter-stall"
+        "hpq:nova-rey/codex-config-backup#6"
       ],
       "workstream": "integrated-power"
     },
@@ -4435,5 +4444,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T22:17:15.438241Z"
+  "updated_at": "2026-09-18T22:20:00.666024Z"
 }
