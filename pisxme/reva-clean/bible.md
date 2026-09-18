@@ -1540,3 +1540,5 @@ The producer dependency is represented as active Unblocker work rather than a fa
 - 2026-09-18 — Native direct author attempt completed only the fresh Light baseline (803 DRC violations / 182 unconnected) and emitted no producer candidate or targeted validation. The protected-bus package is parked at `WAITING_ON unblocker:molex-native-direct-author-stall`; this records an implementation/workflow stall, not a contradiction of the Molex connector or MPA authority.
 
 - 2026-09-18 — Unblocker reassessment closed `unblocker:molex-native-direct-author-stall` as a capability-level implementation stall after fresh baseline execution. The producer is READY/RUNNING again under `molex_native_api_adapter_20260918`, using retained native pcbnew API patterns with a branch-first Molex implementation; old two-branch topology and rejected boards remain excluded.
+
+- 2026-09-18 — Native API adapter attempt returned no candidate or live process after isolated workspace creation. The protected-bus producer is parked on `unblocker:molex-native-api-adapter-stall`; this is an implementation-dispatch stall, not evidence against the binding Molex/MPA architecture.
