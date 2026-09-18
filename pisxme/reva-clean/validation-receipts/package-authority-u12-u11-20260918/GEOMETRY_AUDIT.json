@@ -1,0 +1,146 @@
+{
+  "schema": "pisxme.p24.u11-u12.geometry-audit.v1",
+  "read_only": true,
+  "u11": {
+    "file": "PiSXMe_RevA_Clean.pretty/JMS583_QFN64_8x8.kicad_mod",
+    "sha256": "11918576998884d5885debb500966b20804f7d14394212379fad31d0e5669c05",
+    "pad_count": 65,
+    "signal_pad_count": 64,
+    "thermal_pad": {
+      "id": "65",
+      "kind": "smd",
+      "x": 0.0,
+      "y": 0.0,
+      "rot": 0.0,
+      "sx": 4.46,
+      "sy": 4.46,
+      "layers": [
+        "F.Cu",
+        "F.Paste",
+        "F.Mask"
+      ]
+    },
+    "actual": {
+      "edge_pitches": [
+        0.4,
+        0.4,
+        0.4,
+        0.4
+      ],
+      "courtyard": {
+        "x0": -4.6,
+        "y0": -4.6,
+        "x1": 4.6,
+        "y1": 4.6,
+        "width": 9.2,
+        "height": 9.2
+      },
+      "signal_sizes": [
+        [
+          0.7,
+          0.2
+        ]
+      ],
+      "paste_mask_on_all_pads": true,
+      "thermal_paste_is_full_pad": true
+    },
+    "authoritative_contract": {
+      "source": "JMicron PDS-17001 Rev 2.1 Figure 4",
+      "pitch_mm": 0.4,
+      "terminal_width_range_mm": [
+        0.15,
+        0.25
+      ],
+      "terminal_length_range_mm": [
+        0.3,
+        0.5
+      ],
+      "body_mm": [
+        8.0,
+        8.0
+      ],
+      "exposed_pad_range_mm": [
+        [
+          4.36,
+          4.56
+        ],
+        [
+          4.36,
+          4.56
+        ]
+      ],
+      "exposed_pad_nominal_mm": [
+        4.46,
+        4.46
+      ],
+      "land_treatment_guidance": "TI SLUA271C general QFN guidance: NSMD preferred; 0.2 mm pad width guide at 0.4 mm pitch; window EP paste to approximately 50-70%"
+    },
+    "status": "PROTOTYPE_LAND_AUTHORIZED_EP_STENCIL_WINDOW_REQUIRED"
+  },
+  "u12": {
+    "file": "PiSXMe_RevA_Clean.pretty/HD3SS6126_RUA0042A.kicad_mod",
+    "sha256": "9490928521cf2d8677da7bf188fc265664095d99978ae7c1f038da07adf33ffd",
+    "pad_count": 43,
+    "signal_pad_count": 42,
+    "thermal_pad": {
+      "id": "43",
+      "kind": "smd",
+      "x": 0.0,
+      "y": 0.0,
+      "rot": 0.0,
+      "sx": 2.05,
+      "sy": 7.55,
+      "layers": [
+        "F.Cu",
+        "F.Paste",
+        "F.Mask"
+      ]
+    },
+    "actual": {
+      "side_row_pitch_y": 0.4,
+      "end_row_pitch_x": 0.4,
+      "side_row_center_x": [
+        -1.8,
+        1.8
+      ],
+      "side_row_span_y": [
+        -3.2,
+        3.2
+      ],
+      "end_row_span_x": [
+        -0.6,
+        0.6
+      ],
+      "courtyard": {
+        "x0": -2.1,
+        "y0": -4.6,
+        "x1": 2.1,
+        "y1": 4.6,
+        "width": 4.2,
+        "height": 9.2
+      },
+      "signal_sizes": [
+        [
+          0.6,
+          0.25
+        ]
+      ],
+      "paste_mask_on_all_pads": true
+    },
+    "authoritative_contract": {
+      "source": "TI SLAS975A / RUA0042A drawing 4219139/A 03/2020",
+      "side_row_pitch_mm": 0.5,
+      "end_row_pitch_mm": 0.5,
+      "side_row_center_spacing_mm": 3.3,
+      "signal_size_mm": [
+        0.6,
+        0.25
+      ],
+      "thermal_size_mm": [
+        2.05,
+        7.55
+      ]
+    },
+    "status": "CONFLICT_CURRENT_FOOTPRINT_REJECTED_FOR_ROUTING"
+  }
+}

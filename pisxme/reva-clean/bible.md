@@ -1614,3 +1614,7 @@ The second root-mediated R2 execution route also had no returned command receipt
 # 2026-09-18 — Direct R2 sentinel succeeded; producer remains method-blocked
 
 The explicit qualified Light route ran successfully: KiCad 10.0.6 exported the native source-topology netlist and produced the untouched baseline DRC report (300 violations). No R2 producer result, candidate PCB, connectivity, resistance, or thermal artifact was returned in the bounded attempt. The protected-bus producer is parked on `protected-bus-direct-producer-stall`; raw sentinel/baseline outputs are retained under `validation-receipts/protected-bus-r2-direct-stall-20260918/`. A new Tier-2 Unblocker review is active. This is not a campaign hard block because U12/U11 and storage-corridor authority lanes remain active.
+
+# 2026-09-18 — U12/U11 package authority reconciled
+
+The Librarian/package authority lane completed its evidence packet. U11 land treatment is resolved with an explicit prototype disposition requiring approximately 50–70% exposed-pad paste windowing and DFM/reflow/inspection validation. U12 is confirmed against TI RUA0042A at 0.50 mm pitch; the current 0.40 mm project footprint is rejected for routing and requires an isolated footprint producer. The U12/U11 package is parked only on U12 geometry, and a dedicated U12 footprint producer is now running. Private Library provenance was pushed separately by the Librarian (`nova-rey/pisxme-private` commit `79f53da7`).

@@ -1,0 +1,72 @@
+{
+  "schema": "pisxme.p24.package-authority.u11-u12.v1",
+  "decision_id": "P24-PACKAGE-AUTHORITY-U12-U11-20260918-R1",
+  "queue_package": "P24-PACKAGE-AUTHORITY-U12-U11",
+  "status": "AUTHORITY_READY",
+  "scope": ["U12 HD3SS6126RUAR RUA0042A package geometry", "U11 JMS583-QHFA3A QFN64 land treatment"],
+  "source_state": {
+    "repository": "nova-rey/pisxme",
+    "branch": "reva-clean",
+    "source_commit_at_receipt": "ac16d1c4",
+    "schematic_sha256": "6eef63bd3d2b0b9fafc0150d3c34f636ce24a48b2ecbd3d28a5f0bfec167e9f1",
+    "fp_lib_table_sha256": "864698c14e65cd70a5b5a08d23a22477919bf29f167d26fc0eda73dd43b3be61",
+    "sym_lib_table_sha256": "3bb180e251be1f62b2be5bbe486b29263c56c6a49b7a26103a27bef29b80c311"
+  },
+  "sources": [
+    {
+      "id": "ti-hd3ss6126-ds-slas975a",
+      "tier": 1,
+      "class": "primary manufacturer package authority",
+      "publisher": "Texas Instruments",
+      "revision": "SLAS975A; RUA0042A 4219139/A 03/2020",
+      "url": "https://www.ti.com/lit/ds/symlink/hd3ss6126.pdf",
+      "local_reference": "authority-inventory/primary-docs/storage-upgrade/ti-switches/HD3SS6126-datasheet.pdf",
+      "sha256": "ce9c29d4c051738737e76a24ca40202e926db58a8b4665581bf905a4bd11b2ee",
+      "facts": ["42-pin RUA WQFN", "nominal body 9.00 x 3.50 mm", "0.50 mm pitch", "42 x 0.60 x 0.25 mm example lands", "3.30 mm row-center spacing", "EP43 2.05 x 7.55 mm", "0.125 mm stencil, 69% printed coverage example"]
+    },
+    {
+      "id": "jms583-pds17001-rev2.1",
+      "tier": 1,
+      "class": "primary manufacturer package authority",
+      "publisher": "JMicron Technology Corporation",
+      "revision": "PDS-17001 Rev 2.1; Figure 4",
+      "url": "https://www.jmicron.com/file/download/1046/JMS583.pdf",
+      "local_reference": "authority-inventory/primary-docs/storage-upgrade/jms583/JMS583-datasheet-rev2.1.pdf",
+      "sha256": "27a491efa2361a5b3363d61ebf43b0983ce0c2407a49a5e949a3ff9b83b88529",
+      "facts": ["QFN64 8 x 8 mm", "0.400 mm pitch", "b 0.150-0.250 mm", "L 0.300-0.500 mm", "EP D2/E2 4.360-4.560 mm, nominal 4.460 mm", "warpage max 0.08 mm"]
+    },
+    {
+      "id": "ti-slua271c-qfn-son-pcb-attachment",
+      "tier": 1,
+      "class": "primary manufacturer general QFN assembly guidance",
+      "publisher": "Texas Instruments",
+      "revision": "SLUA271C; revised December 2023",
+      "url": "https://www.ti.com/lit/an/slua271c/slua271c.pdf",
+      "private_local_sha256": "4693fd4df14f57f67088d881b9509a56db4a084a333caac53f81bc5c800b23ce",
+      "facts": ["NSMD preferred, SMD acceptable", "0.20 mm pad-width guide at 0.40 mm pitch", "0.100-0.150 mm stencil range; 0.125 mm guide", "50-70% exposed-pad paste coverage guide", "application-specific process development required"]
+    }
+  ],
+  "footprints": {
+    "u12": {
+      "path": "PiSXMe_RevA_Clean.pretty/HD3SS6126_RUA0042A.kicad_mod",
+      "sha256": "9490928521cf2d8677da7bf188fc265664095d99978ae7c1f038da07adf33ffd",
+      "measured": {"pad_count": 43, "signal_pad_count": 42, "side_row_pitch_mm": 0.4, "end_row_pitch_mm": 0.4, "side_row_center_spacing_mm": 3.6, "side_row_span_mm": 6.4, "end_row_span_mm": 1.2, "signal_land_mm": [0.6, 0.25], "thermal_land_mm": [2.05, 7.55], "courtyard_mm": [4.2, 9.2]},
+      "contract": {"side_row_pitch_mm": 0.5, "end_row_pitch_mm": 0.5, "side_row_center_spacing_mm": 3.3, "signal_land_mm": [0.6, 0.25], "thermal_land_mm": [2.05, 7.55]},
+      "disposition": "CONFLICT_REJECTED_FOR_ROUTING; regenerate isolated footprint from TI contract"
+    },
+    "u11": {
+      "path": "PiSXMe_RevA_Clean.pretty/JMS583_QFN64_8x8.kicad_mod",
+      "sha256": "11918576998884d5885debb500966b20804f7d14394212379fad31d0e5669c05",
+      "measured": {"pad_count": 65, "signal_pad_count": 64, "edge_pitches_mm": [0.4, 0.4, 0.4, 0.4], "signal_land_mm": [0.7, 0.2], "thermal_land_mm": [4.46, 4.46], "courtyard_mm": [9.2, 9.2], "mask_and_paste_layers_present": true, "thermal_paste_is_full_pad": true},
+      "contract": {"pitch_mm": 0.4, "body_mm": [8.0, 8.0], "terminal_width_range_mm": [0.15, 0.25], "terminal_length_range_mm": [0.3, 0.5], "exposed_pad_range_mm": [[4.36, 4.56], [4.36, 4.56]], "prototype_ep_paste_target_percent": [50, 70]},
+      "disposition": "PROTOTYPE_LAND_AUTHORIZED; EP_WINDOWED_STENCIL_AND_DFM_VALIDATION_REQUIRED"
+    }
+  },
+  "dependency_disposition": {
+    "authority:P24-U12-PACKAGE-GEOMETRY": "RESOLVED",
+    "authority:P24-U11-LAND-TREATMENT": "RESOLVED_WITH_PROTOTYPE_DISPOSITION"
+  },
+  "cad_mutation": false,
+  "public_reference_material_copied": false,
+  "remaining_required_work": ["Isolated U12 footprint producer from TI contract", "U11 EP paste window producer/DFM", "Integrated current-head validation after any candidate"]
+}
