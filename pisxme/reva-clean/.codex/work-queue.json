@@ -21,10 +21,10 @@
     "authority:P24-POWER-INPUT-GEOMETRY-AUTHORITY": {
       "created_at": "2026-09-17T23:42:24.323277Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/molex-39301082-footprint-validation-20260918/RECEIPT.md",
       "reference": "validation-receipts/power-input-geometry-authority-20260918",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T12:53:02.853580Z",
+      "status": "RESOLVED"
     },
     "authority:P24-PROTOTYPE-POWER-BUS-CORRECTIVE-AUTHORITY": {
       "created_at": "2026-09-17T23:31:12.748834Z",
@@ -3379,7 +3379,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "",
-      "owner": null,
+      "owner": "power_bus_corrective_implementer",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3396,10 +3396,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "power-bus-molex-producer-20260918"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-17T23:42:24.323314Z",
+      "updated_at": "2026-09-18T12:53:14.164784Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3409,9 +3411,7 @@
         ],
         "results": {}
       },
-      "waiting_on": [
-        "authority:P24-POWER-INPUT-GEOMETRY-AUTHORITY"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -3421,7 +3421,13 @@
       },
       "base_sha": "8d3e4bd7",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "/home/nyx/eda-workspaces/molex-footprint-clean-20260918/receipts/DIMENSIONAL_AUDIT.md",
+        "base_sha": "8242f6c7",
+        "returned_at": "2026-09-18T12:49:50.047756Z",
+        "returned_by": "molex_footprint_producer",
+        "sha": "fbe2cbd62863adad5716faff6fe5cde0821f895f"
+      },
       "completion_criterion": "One authorized footprint/mating contract is binding for a producer, or a precise authority-level blocker packet identifies the irreducible missing evidence and next owner.",
       "created_at": "2026-09-17T23:42:24.277260Z",
       "dependencies": [
@@ -3436,10 +3442,12 @@
         "no proprietary reference copying",
         "no six-loop revival"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/molex-39301082-footprint-validation-20260918/RECEIPT.md"
+      ],
       "id": "P24-POWER-INPUT-GEOMETRY-AUTHORITY",
       "notes": "",
-      "owner": "connector_footprint_authority",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3456,12 +3464,10 @@
         }
       ],
       "scope": "Resolve the corrective producer's geometry blocker using existing private Library and authorized public/manufacturer evidence. Bind one manufacturable connector footprint, mating cable/harness identity, contact assignment, board-entry geometry, and mechanical envelope, or document the narrow irreducible evidence gap. Do not copy proprietary drawings or invent a footprint.",
-      "session_ids": [
-        "connector-recheck-20260918"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Bind authorized high-current input footprint and mating geometry",
-      "updated_at": "2026-09-18T12:42:11.758426Z",
+      "updated_at": "2026-09-18T12:52:57.114669Z",
       "validation": {
         "required": [
           "footprint_provenance",
@@ -3469,7 +3475,28 @@
           "mechanical_fit",
           "current_rating"
         ],
-        "results": {}
+        "results": {
+          "current_rating": {
+            "receipt": "validation-receipts/molex-39301082-footprint-validation-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T12:52:57.006453Z",
+            "status": "PASS"
+          },
+          "footprint_provenance": {
+            "receipt": "validation-receipts/molex-39301082-footprint-validation-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T12:52:56.902035Z",
+            "status": "PASS"
+          },
+          "mating_contract": {
+            "receipt": "validation-receipts/molex-39301082-footprint-validation-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T12:52:57.060578Z",
+            "status": "PASS"
+          },
+          "mechanical_fit": {
+            "receipt": "validation-receipts/molex-39301082-footprint-validation-20260918/RECEIPT.md",
+            "recorded_at": "2026-09-18T12:52:56.952470Z",
+            "status": "PASS"
+          }
+        }
       },
       "waiting_on": [],
       "workstream": "power-authority"
@@ -3567,5 +3594,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T12:42:11.758645Z"
+  "updated_at": "2026-09-18T12:53:14.165162Z"
 }

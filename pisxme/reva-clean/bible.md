@@ -1360,3 +1360,7 @@ The bounded public/manufacturer search found no license-compatible configured fo
 ## 2026-09-18 — High-current connector dependency reassessed
 
 The vendor-footprint dependency was reclassified from an irreducible external blocker to an internal prototype-footprint authority task. Product/Power comparison selected one Anderson Powerpole PP15/45 `ASMPR45-1X2-RK` positive/return path as the binding baseline, with released `B02021S` and `DS-PP1545` data governing local footprint creation. Conventional Molex GPU-style headers remain a documented fallback comparison. The footprint, harness, protection, complete path budget, and 45 A/100 ms prototype validation remain open acceptance work.
+
+## 2026-09-18 — Prototype input geometry dependency unlocked
+
+Released manufacturer dimensions were judged sufficient for prototype footprint engineering. The isolated Molex 39301082 candidate adds the two mounting NPTHs, preserves the released circuit-1 datum, and records explicit prototype annulus/mask/courtyard assumptions. Independent scoped validation accepted the footprint for producer use; production AVL, STEP parity, harness service clearance, and integrated thermal/current closure remain open. The corrected protected-bus producer is running from current HEAD.
