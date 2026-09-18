@@ -250,6 +250,14 @@
       "resolved_at": "2026-09-14T00:26:01.405961Z",
       "status": "RESOLVED"
     },
+    "unblocker:molex-footprint-authority-stall": {
+      "created_at": "2026-09-18T19:23:14.660062Z",
+      "kind": "other",
+      "receipt": null,
+      "reference": "validation-receipts/molex-39301082-footprint-validation-20260918/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "unblocker:power-producer-workspace": {
       "created_at": "2026-09-18T12:56:51.224271Z",
       "kind": "authority",
@@ -3618,7 +3626,8 @@
       "completion_criterion": "One footprint route is dimensionally audited against released manufacturer data and passes focused native DRC/DFM checks, or returns an exact unresolved geometry contradiction.",
       "created_at": "2026-09-18T13:13:37.367633Z",
       "dependencies": [
-        "knowledge:P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE"
+        "knowledge:P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE",
+        "unblocker:molex-footprint-authority-stall"
       ],
       "domain": "Footprint / Mechanical Authority",
       "edit_boundaries": [
@@ -3630,7 +3639,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
       "notes": "",
-      "owner": "molex_footprint_reconciliation_authority",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3646,17 +3655,17 @@
         }
       ],
       "scope": "Use released manufacturer dimensions to reconcile the Molex 39301082 datum/peg/contact geometry or author an Anderson PP15/45 prototype footprint. Produce one internally authorized footprint with dimensional audit, mating/serviceability review, and focused native DRC evidence. Do not alter canonical CAD.",
-      "session_ids": [
-        "molex-footprint-authority-20260918"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Reconcile high-current input connector footprint geometry",
-      "updated_at": "2026-09-18T19:17:45.846894Z",
+      "updated_at": "2026-09-18T19:23:14.660102Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "unblocker:molex-footprint-authority-stall"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -3726,5 +3735,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T19:17:45.847085Z"
+  "updated_at": "2026-09-18T19:23:14.660446Z"
 }

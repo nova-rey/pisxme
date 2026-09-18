@@ -1396,3 +1396,7 @@ The Anderson PP15/45 authority audit closed the connector identity and housing s
 ## 2026-09-18 — Anderson evidence gap bounded; Molex reconciliation resumed
 
 Librarian evidence review recorded the Anderson contact-land-pattern gap after checking the manufacturer product records, B02021S rev.6, and related public drawing references. The gap is specific to the Anderson contact drill/land pattern and does not justify an external campaign block because the released Molex 39301082 route remains available. The footprint package was re-dispatched to reconcile Molex's released datum/peg/contact geometry.
+
+## 2026-09-18 — Molex footprint authority stall routed through Unblocker
+
+The second footprint-authority attempt returned no candidate or evidence after bounded prompts. The package is parked on `unblocker:molex-footprint-authority-stall` while Unblocker classifies the stall and selects the next capability. No geometry is promoted and canonical CAD remains unchanged.
