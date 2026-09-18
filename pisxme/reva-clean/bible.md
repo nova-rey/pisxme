@@ -1476,3 +1476,7 @@ The corrected protected-bus producer is claimed by Root for one bounded direct K
 ## 2026-09-18 — Root-mediated r3 nine-branch producer dispatched
 
 Supervisor inspection found no live contractor despite the package being marked RUNNING. Root corrected the package base to `ccfaaf51d02d22a652b21bf630120100e84484dd` and dispatched one fresh KiCad Engineer attempt in `/home/nyx/eda-workspaces/molex-nine-branch-producer-r3-20260918`. The attempt must run a sentinel first, then implement only the bound J5/J6/J9 nine-branch Molex source/protection contract.
+
+## 2026-09-18 — Nine-branch source fixture survives worker library-context correction
+
+KiCad Light lacked the project-local `PiSXMeRevAClean` symbol library in the isolated worker context. A bounded tool-context correction generated an isolated source fixture using `Connector_Generic:Conn_02x03_Odd_Even` with the authorized `0039300060` value and project footprint name. Native netlist export proves J5/J6/J9, F1-F9 and B1-B9 labels; this is source-contract evidence only, not an integrated CAD candidate. PCB implementation, path budget, DRC and thermal/DFM gates remain open.

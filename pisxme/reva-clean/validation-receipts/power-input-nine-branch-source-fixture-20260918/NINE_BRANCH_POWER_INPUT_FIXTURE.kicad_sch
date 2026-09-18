@@ -1,0 +1,1474 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "3c6afd1b-e3f3-48d4-914c-f601004ce8f7")
+	(paper "A4")
+	(title_block
+		(title "PiSXMe Nine Branch Power Input")
+	)
+	(lib_symbols
+		(symbol "Connector_Generic:Conn_02x03_Odd_Even"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 1.27 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_02x03_Odd_Even"
+				(at 1.27 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_2x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_02x03_Odd_Even_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 3.81 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 2.667)
+					(end 2.54 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 0.127)
+					(end 2.54 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -2.413)
+					(end 2.54 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:Fuse"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "F"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse"
+				(at -1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Fuse_0_1"
+				(rectangle
+					(start -0.762 -2.54)
+					(end 0.762 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x03_Odd_Even")
+		(at 39.37 39.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "85375985-ac7b-4c19-bb20-6dc18d986af8")
+		(property "Reference" "J5"
+			(at 40.64 44.45 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0039300060"
+			(at 40.64 34.29 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:Molex_5569-06A2_2x03_P4.20mm_Horizontal"
+			(at 39.37 39.37 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e4a83507-ac25-4ce4-88c4-84a9f69e384b")
+		)
+		(pin "2"
+			(uuid "7547d064-3f8e-4cf3-8360-7a90260bba5a")
+		)
+		(pin "3"
+			(uuid "fc0e9af7-9dc5-4e3c-9874-39087504370a")
+		)
+		(pin "4"
+			(uuid "9e0e1719-8ada-49a7-86d8-2742a38d2f3b")
+		)
+		(pin "5"
+			(uuid "846b3263-31dc-41f9-aeff-eae6592897d9")
+		)
+		(pin "6"
+			(uuid "6ff6281b-27f2-45e2-a10a-11b31f2d3dee")
+		)
+		(instances
+			(project "PiSXMe Nine Branch Power Input"
+				(path "/3c6afd1b-e3f3-48d4-914c-f601004ce8f7"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x03_Odd_Even")
+		(at 39.37 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "a0170523-5a26-4b23-8276-52a5e4927f17")
+		(property "Reference" "J6"
+			(at 40.64 74.93 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0039300060"
+			(at 40.64 64.77 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:Molex_5569-06A2_2x03_P4.20mm_Horizontal"
+			(at 39.37 69.85 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4fd657bf-d3a5-4aea-a8c3-965f6825937b")
+		)
+		(pin "2"
+			(uuid "b6a01997-3af0-46e8-814b-aeac089fe602")
+		)
+		(pin "3"
+			(uuid "1d60d4ce-4d29-43d1-997b-25e68d358bb6")
+		)
+		(pin "4"
+			(uuid "9b4b2700-1510-4c4c-9512-7da03f89a8ab")
+		)
+		(pin "5"
+			(uuid "d5506adc-c5ab-43ef-a488-17180ecc66cb")
+		)
+		(pin "6"
+			(uuid "baab3dee-e0bb-4099-ab37-ea02cc51a37e")
+		)
+		(instances
+			(project "PiSXMe Nine Branch Power Input"
+				(path "/3c6afd1b-e3f3-48d4-914c-f601004ce8f7"
+					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x03_Odd_Even")
+		(at 39.37 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "d62ac6a7-8121-4340-9508-afcb11d4132b")
+		(property "Reference" "J9"
+			(at 40.64 105.41 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0039300060"
+			(at 40.64 95.25 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:Molex_5569-06A2_2x03_P4.20mm_Horizontal"
+			(at 39.37 100.33 0.0000)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "08918420-d54b-4885-aac9-4f9394364ad0")
+		)
+		(pin "2"
+			(uuid "fb547740-9a52-44d5-9b7f-abcbda1256a9")
+		)
+		(pin "3"
+			(uuid "304887a1-d84d-423a-b7f6-085fcb77aedd")
+		)
+		(pin "4"
+			(uuid "9d06bca8-0ac6-41b1-a465-aa202c84655b")
+		)
+		(pin "5"
+			(uuid "b2c303b6-afa9-496a-af43-82c69a10a534")
+		)
+		(pin "6"
+			(uuid "0a0ae290-e085-4100-a791-4d113f6f267d")
+		)
+		(instances
+			(project "PiSXMe Nine Branch Power Input"
+				(path "/3c6afd1b-e3f3-48d4-914c-f601004ce8f7"
+					(reference "J9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 100.33 41.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "6fdc88e8-db14-4a5f-acbf-e2c43c87d841")
+		(property "Reference" "F1"
+			(at 102.362 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0297015.U / 178.6165.0001"
+			(at 98.425 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:ATO_FuseHolder_17861650001"
+			(at 98.552 41.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "06870053-7b2c-45fb-aa6a-019b11a8b3e4")
+		)
+		(pin "2"
+			(uuid "df3b99cc-8138-4c6f-8565-854fe9427a11")
+		)
+		(instances
+			(project "PiSXMe Nine Branch Power Input"
+				(path "/3c6afd1b-e3f3-48d4-914c-f601004ce8f7"
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 100.33 49.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "0126590d-8ca8-4c03-8d90-ffc8265f6cf1")
+		(property "Reference" "F2"
+			(at 102.362 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0297015.U / 178.6165.0001"
+			(at 98.425 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:ATO_FuseHolder_17861650001"
+			(at 98.552 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "efd4f6a7-0990-4668-9b98-0998e8e2af58")
+		)
+		(pin "2"
+			(uuid "50e80574-4354-4223-8524-6a5c5f0a1f41")
+		)
+		(instances
+			(project "PiSXMe Nine Branch Power Input"
+				(path "/3c6afd1b-e3f3-48d4-914c-f601004ce8f7"
+					(reference "F2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 100.33 55.88 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "6ad123a9-6de5-4bb3-8c47-248cf2e2f464")
+		(property "Reference" "F3"
+			(at 102.362 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0297015.U / 178.6165.0001"
+			(at 98.425 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:ATO_FuseHolder_17861650001"
+			(at 98.552 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4faa63d0-f0a8-4aad-80ae-4acf913d3ddd")
+		)
+		(pin "2"
+			(uuid "c21580ce-817f-4691-823a-63101ed43c6c")
+		)
+		(instances
+			(project "PiSXMe Nine Branch Power Input"
+				(path "/3c6afd1b-e3f3-48d4-914c-f601004ce8f7"
+					(reference "F3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 100.33 63.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "db88db47-f806-4c82-acd2-07ad82ff6219")
+		(property "Reference" "F4"
+			(at 102.362 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0297015.U / 178.6165.0001"
+			(at 98.425 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:ATO_FuseHolder_17861650001"
+			(at 98.552 63.5 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "89402dfa-1532-4c41-b4fb-b5428156e0c7")
+		)
+		(pin "2"
+			(uuid "66d8e588-f045-4f45-b49a-879b1b72a3e2")
+		)
+		(instances
+			(project "PiSXMe Nine Branch Power Input"
+				(path "/3c6afd1b-e3f3-48d4-914c-f601004ce8f7"
+					(reference "F4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 100.33 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "6a92839a-8ca1-4434-9edc-501847dc955c")
+		(property "Reference" "F5"
+			(at 102.362 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0297015.U / 178.6165.0001"
+			(at 98.425 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:ATO_FuseHolder_17861650001"
+			(at 98.552 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aa88daae-10cf-49cf-91ea-f8228a56add6")
+		)
+		(pin "2"
+			(uuid "0930ec63-d103-44be-9f44-36879522dabb")
+		)
+		(instances
+			(project "PiSXMe Nine Branch Power Input"
+				(path "/3c6afd1b-e3f3-48d4-914c-f601004ce8f7"
+					(reference "F5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 100.33 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "0a456719-9f40-4951-89d0-3e0cd484809b")
+		(property "Reference" "F6"
+			(at 102.362 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0297015.U / 178.6165.0001"
+			(at 98.425 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:ATO_FuseHolder_17861650001"
+			(at 98.552 77.47 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "92f99364-e7b4-403a-b5bd-ae7f0393b371")
+		)
+		(pin "2"
+			(uuid "715394d7-eaa4-4f84-9379-d881c3ecef44")
+		)
+		(instances
+			(project "PiSXMe Nine Branch Power Input"
+				(path "/3c6afd1b-e3f3-48d4-914c-f601004ce8f7"
+					(reference "F6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 100.33 83.82 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "5fc9b019-2a31-40a7-a59a-3275e767de30")
+		(property "Reference" "F7"
+			(at 102.362 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0297015.U / 178.6165.0001"
+			(at 98.425 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:ATO_FuseHolder_17861650001"
+			(at 98.552 83.82 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a5290cc3-8029-458d-975f-db492d50ac38")
+		)
+		(pin "2"
+			(uuid "83bbf881-b795-4a47-b2c1-be7fb7aaa3e3")
+		)
+		(instances
+			(project "PiSXMe Nine Branch Power Input"
+				(path "/3c6afd1b-e3f3-48d4-914c-f601004ce8f7"
+					(reference "F7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 100.33 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "9e708016-690d-4f90-9782-98f0fa230ba5")
+		(property "Reference" "F8"
+			(at 102.362 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0297015.U / 178.6165.0001"
+			(at 98.425 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:ATO_FuseHolder_17861650001"
+			(at 98.552 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ffb00d6a-f6db-4f0f-919c-191916ef51f5")
+		)
+		(pin "2"
+			(uuid "2ddf4cbf-327e-4308-b503-46c1f759aa14")
+		)
+		(instances
+			(project "PiSXMe Nine Branch Power Input"
+				(path "/3c6afd1b-e3f3-48d4-914c-f601004ce8f7"
+					(reference "F8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 100.33 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced no)
+		(uuid "777fcf97-3860-43a7-a402-055900960108")
+		(property "Reference" "F9"
+			(at 102.362 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0297015.U / 178.6165.0001"
+			(at 98.425 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "PiSXMeRevAClean:ATO_FuseHolder_17861650001"
+			(at 98.552 97.79 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "86a58edf-ef65-4621-9346-33ab9c86dbed")
+		)
+		(pin "2"
+			(uuid "01b89c83-ba97-4140-93de-c2f0220fa3f4")
+		)
+		(instances
+			(project "PiSXMe Nine Branch Power Input"
+				(path "/3c6afd1b-e3f3-48d4-914c-f601004ce8f7"
+					(reference "F9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(label "B1_P"
+		(at 34.29 36.83 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "88454012-8d05-4526-be4e-064daf80726b")
+	)
+	(label "B2_P"
+		(at 34.29 39.37 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "176e31d3-686b-4731-a633-c1eead570ae2")
+	)
+	(label "B3_P"
+		(at 34.29 41.91 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1088449d-dfe1-414d-947f-c0554cf9f327")
+	)
+	(label "B1_R"
+		(at 46.99 36.83 0.0000)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d8ad1c1e-0ffe-4ad2-8ea1-2030e20b2f74")
+	)
+	(label "B2_R"
+		(at 46.99 39.37 0.0000)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ed56d48a-d3ed-4d23-84b9-285d0a123f2c")
+	)
+	(label "B3_R"
+		(at 46.99 41.91 0.0000)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d2dd52b6-a479-4aa1-a19e-eda669095e26")
+	)
+	(label "B4_P"
+		(at 34.29 67.31 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c93c3d6f-27a0-4692-9231-de7c9f662cf8")
+	)
+	(label "B5_P"
+		(at 34.29 69.85 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "62b021c5-6cbc-4e47-93e0-ddecffb196a6")
+	)
+	(label "B6_P"
+		(at 34.29 72.39 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "644bb7f7-402d-4ec8-b80d-98bbe5b31cb4")
+	)
+	(label "B4_R"
+		(at 46.99 67.31 0.0000)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "bca850d6-8e47-4c95-9f2f-954fc62b867b")
+	)
+	(label "B5_R"
+		(at 46.99 69.85 0.0000)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "663adb1a-f733-453c-bb00-0d34af82b170")
+	)
+	(label "B6_R"
+		(at 46.99 72.39 0.0000)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3616546b-05b5-4e4d-b0b1-3d97352e06be")
+	)
+	(label "B7_P"
+		(at 34.29 97.79 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b225e2c-b04e-4f77-9e01-ad3c82cdb12d")
+	)
+	(label "B8_P"
+		(at 34.29 100.33 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6bad48a5-2df0-4ba7-adff-7c9e15c9158f")
+	)
+	(label "B9_P"
+		(at 34.29 102.87 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5acaf65b-3cff-4fed-848f-d972769db94d")
+	)
+	(label "B7_R"
+		(at 46.99 97.79 0.0000)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "34811d2e-efc2-4b0f-8f31-6138fb790b2d")
+	)
+	(label "B8_R"
+		(at 46.99 100.33 0.0000)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1397e824-a142-4c73-a777-f9b50ec060c0")
+	)
+	(label "B9_R"
+		(at 46.99 102.87 0.0000)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "792d8e42-4870-40ad-90cd-924505ab5d57")
+	)
+	(label "B1_P"
+		(at 100.33 38.1 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5bb960c4-ebee-47be-b5ab-9b21331dc426")
+	)
+	(label "B1_P_PROTECTED"
+		(at 100.33 45.72 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "924eb48e-8b32-499e-bd35-131e6393c1cb")
+	)
+	(label "B2_P"
+		(at 100.33 45.72 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "25600183-96ee-4603-bcf5-87f0da58fcca")
+	)
+	(label "B2_P_PROTECTED"
+		(at 100.33 53.34 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "247191d7-9df7-4999-9688-f8d17b8ab531")
+	)
+	(label "B3_P"
+		(at 100.33 52.07 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7229f0e2-3cee-4257-aa6d-b7af4adf729d")
+	)
+	(label "B3_P_PROTECTED"
+		(at 100.33 59.69 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d420d111-3ac0-4fa3-a339-3ab5de2f09aa")
+	)
+	(label "B4_P"
+		(at 100.33 59.69 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8a2d30b4-3d3e-4bc0-b4f0-5ff3ac3862fc")
+	)
+	(label "B4_P_PROTECTED"
+		(at 100.33 67.31 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c2ed4c55-b027-4ab5-ab74-77f57a35707a")
+	)
+	(label "B5_P"
+		(at 100.33 66.04 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3f04461b-23e8-44f9-813d-fa4eb5156906")
+	)
+	(label "B5_P_PROTECTED"
+		(at 100.33 73.66 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "12054184-6a34-4f3a-9c7a-fb84dcc9da53")
+	)
+	(label "B6_P"
+		(at 100.33 73.66 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "79d21389-c011-489b-a442-d1f2d246738a")
+	)
+	(label "B6_P_PROTECTED"
+		(at 100.33 81.28 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6d1a572c-4abf-4165-a11d-1ac18b2e9a4e")
+	)
+	(label "B7_P"
+		(at 100.33 80.01 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "25d7db1b-e536-49e8-9f3d-f8f180dd0274")
+	)
+	(label "B7_P_PROTECTED"
+		(at 100.33 87.63 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "93723d6c-0744-4a24-be99-260d47fec478")
+	)
+	(label "B8_P"
+		(at 100.33 87.63 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3093e8a2-9a4a-410a-ae87-d675b581bbdb")
+	)
+	(label "B8_P_PROTECTED"
+		(at 100.33 95.25 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "5fc22c2e-4f64-4b25-be4a-fbbb740934de")
+	)
+	(label "B9_P"
+		(at 100.33 93.98 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cf2a2ca4-0086-4c00-8822-0800ea4243b1")
+	)
+	(label "B9_P_PROTECTED"
+		(at 100.33 101.6 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c804fc27-b4c4-4e68-9c8a-474cf9559c79")
+	)
+	(text "NINE-BRANCH POWER INPUT CONTRACT: J5/J6/J9; B1-B9 positive/return pairs; F1-F9 positive fault isolation; no passive-sharing credit."
+		(exclude_from_sim no)
+		(at 25 20 0.0000)
+		(effects
+			(font
+				(size 1.2 1.2)
+			)
+		)
+		(uuid "8b906b3d-438b-4b98-b403-d79d65b1d686")
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
