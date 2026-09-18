@@ -4685,7 +4685,13 @@
       },
       "base_sha": "2d6e3ea4cfd08f587d42be66cc37a77838e5641a",
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/firmware-procurement-closure-45f78de5-20260918/RECEIPT.md",
+        "base_sha": "95429738d7f3476a58fe687755c7a3d6e7c97a98",
+        "returned_at": "2026-09-18T22:42:13.110024Z",
+        "returned_by": "supervisor_firmware",
+        "sha": "5443860b8ad026e1eba0edbc4288c6427b6bcb01"
+      },
       "completion_criterion": "Path-A firmware/configuration/provisioning and critical procurement evidence is authority-reviewed, with each unavailable item explicitly scoped as prototype validation or external evidence gap.",
       "created_at": "2026-09-18T22:29:56.064341Z",
       "dependencies": [],
@@ -4696,10 +4702,12 @@
         "no protected-bus CAD edits",
         "no fabricated hardware claims"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/firmware-procurement-closure-45f78de5-20260918/RECEIPT.md"
+      ],
       "id": "P24-FIRMWARE-PROCUREMENT-PROVENANCE-CLOSURE",
       "notes": "Path B remains isolated evidence, not a production gate.",
-      "owner": "supervisor_firmware",
+      "owner": null,
       "priority": 6,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -4716,12 +4724,10 @@
         }
       ],
       "scope": "Continue Path-A firmware/provisioning, exact-MPN procurement, lifecycle and authorization evidence. Keep RTL9210B Path B isolated and unpromoted.",
-      "session_ids": [
-        "01a0b69b-firmware"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Close Path-A firmware, provisioning and procurement provenance",
-      "updated_at": "2026-09-18T22:36:50.919393Z",
+      "updated_at": "2026-09-18T22:42:13.200626Z",
       "validation": {
         "required": [],
         "results": {}
@@ -4792,5 +4798,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T22:39:20.099837Z"
+  "updated_at": "2026-09-18T22:42:13.200951Z"
 }
