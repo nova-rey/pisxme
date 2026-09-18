@@ -1638,3 +1638,7 @@ The deterministic source-first R2 attempt returned no candidate or command recei
 # 2026-09-18 — Second protected-bus capability stall routed to Unblocker
 
 The fresh mutation-capable KiCad-engineer attempt allocated `/home/nyx/eda-workspaces/protected-bus-r2-kicad-engineer` but emitted only the committed-base clone and no authoring command, candidate, or raw tool failure. The package is retained as an implementation-workflow issue, not a topology rejection. Root released the silent worker and commissioned one bounded Unblocker reassessment; no R1 replay or global rule change occurred.
+
+# 2026-09-18 — Root-mediated protected-bus source-author route
+
+The Unblocker did not return within its bounded review window, so Root closed that stale service claim and dispatched a root-mediated worker with explicit execution requirements. The protected-bus package is now assigned to `protected_bus_source_author` from canonical `bbc00e5e`, using the retained nine-branch source fixture as the exact topology oracle. This is a capability change after repeated pre-authoring stalls; no R1 replay or global rule change is allowed.
