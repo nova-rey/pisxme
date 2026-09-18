@@ -1516,3 +1516,7 @@ The first post-MPA dispatch returned no live worker or candidate, so Root releas
 ## 2026-09-18 — Post-MPA nine-branch candidate rejected by fresh Light validation
 
 The isolated candidate applied the binding MPA coordinates and removed the legacy input footprints, but fresh KiCad Light validation still reported 1,139 DRC violations and 499 unconnected items. The unsupported KiCad 10 PCB netlist-export subcommand was recorded as a tooling limitation; it was not treated as connectivity evidence. The candidate was rejected and no canonical CAD was integrated. The producer now waits on one bounded MPA revision review of the exact source-topology/corridor contradiction.
+
+## 2026-09-18 — Clean native rebuild selected after MPA candidate rejection
+
+Unblocker separated the physical candidate failure from the placement authority. The rejected board reused obsolete/under-routed source topology, so the next bounded method is a clean native `pcbnew` rebuild from current committed base `67562704`, with one complete branch targeted before scaling. A coordinate-level contradiction will return to MPA; no rejected artifact may be reused.

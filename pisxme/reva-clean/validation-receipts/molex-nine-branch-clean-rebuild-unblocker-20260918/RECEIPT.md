@@ -1,0 +1,3 @@
+# Unblocker route — clean native protected-bus rebuild
+
+The post-MPA candidate is rejected by fresh Light validation: 1,139 DRC violations, 499 unconnected items, 42 shorts and 19 crossings. The fixed placement decision is not itself disproven because the candidate reused obsolete/under-routed source topology. The next capability-level method is one clean native `pcbnew` rebuild from current base `67562704`, using the committed MPA plan and validated nine-branch netlist oracle. Implement one complete branch and run targeted DRC before scaling. If a precise coordinate-level contradiction appears, return it to Macro Placement Authority. Do not reuse the rejected PCB artifact.
