@@ -1,0 +1,63 @@
+{
+  "package_id": "P24-SI-FAB-REFERENCE-EVIDENCE",
+  "packet_type": "scoped_si_fabrication_reference_evidence",
+  "base_sha": "2d6e3ea4cfd08f587d42be66cc37a77838e5641a",
+  "audited_head": "8cd2ff8aa75636bdef44ef87285853bcdabe21bc",
+  "candidate_state": "CANDIDATE_READY",
+  "canonical_pcb": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb",
+  "canonical_pcb_sha256": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+  "project": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pro",
+  "rules": "PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_dru",
+  "schematic": "PiSXMe_RevA_Clean.kicad_sch",
+  "toolchain": {
+    "kicad": "10.0.6",
+    "image": "pisxme-kicad-light:v1",
+    "image_digest": "sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9"
+  },
+  "scope": [
+    "six-layer stack and layer roles",
+    "released controlled-impedance starting geometry and route metrics",
+    "return/reference intent and transition evidence boundary",
+    "via/fabrication geometry",
+    "non-protected interface metrics"
+  ],
+  "protected_bus": "FENCED; no edits and no acceptance credit",
+  "artifacts": {
+    "receipt": "validation-receipts/si-fab-reference-evidence-20260918/RECEIPT.md",
+    "metrics": "validation-receipts/si-fab-reference-evidence-20260918/audit-metrics.json",
+    "native_drc": "validation-receipts/si-fab-reference-evidence-20260918/current-head-drc.json",
+    "geometry": "validation-receipts/si-fab-reference-evidence-20260918/current-head-geometry.json",
+    "commands": "validation-receipts/si-fab-reference-evidence-20260918/COMMANDS.txt"
+  },
+  "native_current_head": {
+    "drc_violations": 300,
+    "unconnected_items": 499,
+    "ignored_checker_classes": 5,
+    "schematic_parity_items": 0,
+    "status": "OPEN"
+  },
+  "invariant_results": {
+    "INV-STACKUP": "PASS_DESIGN_BASIS_ONLY",
+    "INV-IMPEDANCE": "UNPROVEN",
+    "INV-FAB": "FAIL",
+    "SI-FAB-REF-001": "UNPROVEN",
+    "SI-FAB-NETCLASS-001": "FAIL",
+    "SI-FAB-VIA-001": "UNPROVEN",
+    "SI-FAB-COUPON-001": "UNPROVEN",
+    "SI-FAB-RETURN-001": "UNPROVEN"
+  },
+  "no_claims": [
+    "no fabricated-board measurement",
+    "no order-specific impedance coupon",
+    "no production/fabrication approval",
+    "no integrated closure"
+  ],
+  "required_revalidation_after_protected_bus": [
+    "fresh native zone refill and DRC/connectivity",
+    "all critical pair netclass and released geometry audit",
+    "layer-transition and local return-via review",
+    "via/package/fabrication-order reconciliation",
+    "order-specific stack tolerance and coupon evidence"
+  ],
+  "return_to_root": "CANDIDATE_READY"
+}

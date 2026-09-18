@@ -1,0 +1,6 @@
+# Exact-head qualified validation
+# Repository: /home/nyx/PiSXMe
+# Candidate ref: 8cd2ff8aa75636bdef44ef87285853bcdabe21bc
+# Image: pisxme-kicad-light:v1; digest sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9
+pisxme-worker validate /home/nyx/PiSXMe 8cd2ff8aa75636bdef44ef87285853bcdabe21bc si-fab-drc-json-8cd2ff8 kicad-cli pcb drc --format json --severity-all --exit-code-violations -o /workspace/output/drc.json /workspace/project/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb
+pisxme-worker validate /home/nyx/PiSXMe 8cd2ff8aa75636bdef44ef87285853bcdabe21bc si-fab-geometry-8cd2ff8 python3 /workspace/project/pisxme/reva-clean/validation-receipts/si-power-reference-current-head-61085fe0/census_geometry.py /workspace/project/pisxme/reva-clean/PHASE24_FCU_POWER_GND_WIDTH_NORMALIZED.kicad_pcb /workspace/output/geometry.json
