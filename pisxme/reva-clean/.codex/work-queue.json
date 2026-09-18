@@ -3620,7 +3620,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
       "notes": "",
-      "owner": "anderson_footprint_authority_retry",
+      "owner": "anderson_prototype_footprint_producer",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3637,11 +3637,11 @@
       ],
       "scope": "Use released manufacturer dimensions to reconcile the Molex 39301082 datum/peg/contact geometry or author an Anderson PP15/45 prototype footprint. Produce one internally authorized footprint with dimensional audit, mating/serviceability review, and focused native DRC evidence. Do not alter canonical CAD.",
       "session_ids": [
-        "anderson-footprint-authority-20260918"
+        "anderson-footprint-authority-legacy-retry-20260918"
       ],
       "status": "RUNNING",
       "title": "Reconcile high-current input connector footprint geometry",
-      "updated_at": "2026-09-18T19:04:40.298351Z",
+      "updated_at": "2026-09-18T19:08:42.435449Z",
       "validation": {
         "required": [],
         "results": {}
@@ -3662,5 +3662,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T19:04:40.298579Z"
+  "updated_at": "2026-09-18T19:08:42.435806Z"
 }

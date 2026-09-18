@@ -1384,3 +1384,7 @@ The clean-base protected-bus producer rejected the Molex 39301082 candidate afte
 ## 2026-09-18 — Anderson footprint authority escalation
 
 The Molex geometry contradiction is now owned by a direct footprint-authority retry using released Anderson PP15/45 manufacturer dimensions. The Molex candidate remains rejected and the protected-bus producer remains waiting only on the footprint authority package; no external vendor authorization is required for this prototype path.
+
+## 2026-09-18 — Anderson footprint producer owns geometry reconciliation
+
+The footprint-authority retry was reassigned to the existing isolated Anderson footprint producer. Queue ownership now reflects one accountable producer for the released-dimension footprint audit; no competing footprint candidate is promoted.
