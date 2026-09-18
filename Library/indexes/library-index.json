@@ -517,6 +517,50 @@
         "manufacturer",
         "provenance"
       ]
+    },
+    {
+      "id": "index-package-authority-u11-u12-20260918",
+      "kind": "structured-package-authority-index",
+      "path": "Library/indexes/package-authority-u11-u12-20260918.json",
+      "tags": [
+        "U11",
+        "U12",
+        "JMS583",
+        "HD3SS6126",
+        "RUA0042A",
+        "package",
+        "land-pattern",
+        "DFM"
+      ]
+    },
+    {
+      "id": "brief-package-authority-u11-u12-20260918",
+      "kind": "authority-working-brief",
+      "path": "Library/briefs/package-authority-u11-u12-20260918.md",
+      "tags": [
+        "U11",
+        "U12",
+        "JMS583",
+        "HD3SS6126",
+        "RUA0042A",
+        "package",
+        "land-pattern",
+        "assembly",
+        "prototype"
+      ]
+    },
+    {
+      "id": "source-ti-slua271c-qfn-son-20260918",
+      "kind": "source-archive",
+      "path": "Library/provenance/ti-qfn/SLUA271C_QFN_SON_PCB_ATTACHMENT.pdf",
+      "tags": [
+        "TI",
+        "QFN",
+        "SON",
+        "stencil",
+        "solder-mask",
+        "assembly"
+      ]
     }
   ]
 }

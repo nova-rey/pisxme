@@ -5599,3 +5599,7 @@ The bounded Power/Package/DFM review indexed primary ADI, Vishay, Ohmite, and In
 ## 2026-09-17 — Indexed high-current GPU-style input assembly evidence
 
 Librarian indexed manufacturer evidence for replacement prototype source assemblies under `high-current-gpu-input-assembly-20260917`: Samtec PowerStrip/40 PET/PES/PESS (48.5 A/contact at two powered contacts after the cited 20% derating and 30 °C-rise test basis; four powered contacts screen at 38.0 A/contact), Anderson Powerpole PP15/45 (10-AWG, 40 A CSA/TUV / 45 A UL pole data), and Amphenol M-CRPS (40 A/contact). Existing Molex Mini-Fit Jr. 0039300020 remains inadequate at 13 A/contact. This evidence does not select an assembly or authorize CAD; Package/Power Authority must bind geometry, cable MPN/length, derating, protection, resistance, and thermal margins.
+
+## 2026-09-18 — P24 U11/U12 package authority reconciliation
+
+Indexed TI SLAS975A/RUA0042A and JMicron PDS-17001 Rev 2.1 package evidence plus TI SLUA271C QFN assembly guidance in `package-authority-u11-u12-20260918`. The PiSXMe U12 footprint's 0.40 mm pitch conflicts with TI's 0.50 mm contract and is rejected for routing pending isolated regeneration. U11 QFN64 geometry is compatible as a derived prototype land; exposed-pad stencil windowing, DFM, reflow, and inspection remain prototype gates. No public repository receives restricted/reference CAD.

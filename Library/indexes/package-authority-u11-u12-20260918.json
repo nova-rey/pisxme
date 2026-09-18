@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "package-authority-u11-u12-20260918",
+  "retrieved": "2026-09-18",
+  "question": "Resolve PiSXMe U12 RUA0042A pitch and U11 QFN64 land-treatment authority for prototype CAD.",
+  "sources": [
+    {
+      "id": "ti-hd3ss6126-ds-slas975a",
+      "tier": 1,
+      "class": "primary manufacturer package authority",
+      "publisher": "Texas Instruments",
+      "revision": "SLAS975A; package outline RUA0042A 4219139/A 03/2020",
+      "url": "https://www.ti.com/lit/ds/symlink/hd3ss6126.pdf",
+      "local_reference": "private:pisxme/reva-clean/authority-inventory/primary-docs/storage-upgrade/ti-switches/HD3SS6126-datasheet.pdf",
+      "sha256": "ce9c29d4c051738737e76a24ca40202e926db58a8b4665581bf905a4bd11b2ee",
+      "facts": ["RUA WQFN 42 pins", "package body 9.0 x 3.5 mm nominal", "0.50 mm land pitch", "42 lands 0.60 x 0.25 mm", "exposed pad 43 2.05 x 7.55 mm", "0.125 mm stencil example with 69% printed coverage"]
+    },
+    {
+      "id": "jms583-pds17001-rev2.1",
+      "tier": 1,
+      "class": "primary manufacturer package authority",
+      "publisher": "JMicron Technology Corporation",
+      "revision": "PDS-17001 Rev 2.1; Figure 4 QFN64 8x8",
+      "url": "https://www.jmicron.com/file/download/1046/JMS583.pdf",
+      "local_reference": "private:pisxme/reva-clean/authority-inventory/primary-docs/storage-upgrade/jms583/JMS583-datasheet-rev2.1.pdf",
+      "sha256": "27a491efa2361a5b3363d61ebf43b0983ce0c2407a49a5e949a3ff9b83b88529",
+      "facts": ["QFN64 8 x 8 mm", "0.400 mm terminal pitch e", "terminal width b 0.150-0.250 mm", "terminal length L 0.300-0.500 mm", "exposed pad D2/E2 4.360-4.560 mm nominal 4.460 mm", "package warpage max 0.08 mm"]
+    },
+    {
+      "id": "ti-slua271c-qfn-son-pcb-attachment",
+      "tier": 1,
+      "class": "primary manufacturer general QFN assembly guidance",
+      "publisher": "Texas Instruments",
+      "revision": "SLUA271C; revised December 2023",
+      "url": "https://www.ti.com/lit/an/slua271c/slua271c.pdf",
+      "local_reference": "private:Library/provenance/ti-qfn/SLUA271C_QFN_SON_PCB_ATTACHMENT.pdf",
+      "sha256": "4693fd4df14f57f67088d881b9509a56db4a084a333caac53f81bc5c800b23ce",
+      "facts": ["TI recommends copper-defined NSMD land pads for QFN/SON, while SMD is acceptable", "0.4 mm pitch components use 0.2 mm pad width as a printing/bridging guide", "typical stencil thickness 0.100-0.150 mm, 0.125 mm guide", "exposed-pad paste coverage typically 50-70% with windowing to reduce voids/floating", "application report is a guide and requires application-specific process development"]
+    },
+    {
+      "id": "pisxme-u11-u12-footprints-current-head",
+      "tier": 3,
+      "class": "project-derived measured evidence",
+      "publisher": "PiSXMe",
+      "revision": "current reva-clean HEAD at retrieval",
+      "local_reference": "private:pisxme/reva-clean/PiSXMe_RevA_Clean.pretty/{JMS583_QFN64_8x8,HD3SS6126_RUA0042A}.kicad_mod",
+      "facts": ["U11 has 64 signal pads plus EP 65, 0.400 mm pitch, 0.70 x 0.20 mm signal pads, 4.46 x 4.46 mm EP, 9.2 x 9.2 mm courtyard", "U12 has 42 signal pads plus EP 43, 0.400 mm current pitch, 0.60 x 0.25 mm signal pads, 2.05 x 7.55 mm EP, 4.2 x 9.2 mm courtyard"]
+    }
+  ],
+  "decisions": {
+    "u12": {
+      "status": "authoritative-contract-established-current-footprint-conflict",
+      "contract": "RUA0042A 42 signal lands at 0.500 mm pitch, 0.600 x 0.250 mm nominal example lands, 3.300 mm row-center spacing, EP 43 2.05 x 7.55 mm",
+      "implementation_disposition": "Retained 0.400 mm footprint is rejected for routing and must be regenerated in an isolated producer against this contract; no CAD edit in the authority package."
+    },
+    "u11": {
+      "status": "prototype-land-treatment-authorized-with-assembly-validation",
+      "contract": "QFN64 8 x 8, e=0.400 mm, b=0.150-0.250 mm, L=0.300-0.500 mm, EP=4.360-4.560 mm",
+      "implementation_disposition": "Retained signal copper geometry is compatible as a derived prototype land; use copper-defined/NSMD intent where fabricator supports it, preserve 0.200 mm signal pad width and 0.400 mm pitch, and replace full EP paste with a windowed stencil target 50-70% coverage before fabrication. Final stencil/reflow/X-ray procedure remains prototype validation, not production qualification."
+    }
+  },
+  "limits": [
+    "JMicron PDS-17001 does not publish a complete PCB land, solder-mask, stencil, or courtyard drawing; U11 land treatment is a derived prototype disposition, not a JMicron-specific manufacturing guarantee.",
+    "TI SLUA271C is general QFN/SON guidance and does not replace an assembly-house DFM review.",
+    "No CAD was copied or changed by this indexing operation."
+  ]
+}

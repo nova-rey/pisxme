@@ -1587,6 +1587,42 @@
       ],
       "status": "secondary precedent only; no manufacturer provenance for land values",
       "license_disposition": "metadata and extracted facts only; no source file copied"
+    },
+    {
+      "id": "ti-slua271c-qfn-son-pcb-attachment",
+      "title": "QFN and SON PCB Attachment",
+      "publisher": "Texas Instruments",
+      "url": "https://www.ti.com/lit/an/slua271c/slua271c.pdf",
+      "revision": "SLUA271C; revised December 2023",
+      "retrieved": "2026-09-18",
+      "tier": 1,
+      "evidence_class": "manufacturer general QFN assembly guidance",
+      "local_sha256": "4693fd4df14f57f67088d881b9509a56db4a084a333caac53f81bc5c800b23ce",
+      "local_reference": "Library/provenance/ti-qfn/SLUA271C_QFN_SON_PCB_ATTACHMENT.pdf",
+      "observed_facts": [
+        "TI recommends copper-defined NSMD pads for QFN/SON while SMD is acceptable",
+        "0.4 mm pitch guide uses 0.2 mm pad width",
+        "typical stencil thickness 0.100-0.150 mm and 0.125 mm guide",
+        "exposed-pad paste coverage typically 50-70% using a windowed stencil",
+        "application report requires application-specific process development"
+      ],
+      "status": "accessible",
+      "license_disposition": "private Library lawful source archive; public project stores metadata and extracted facts only"
+    },
+    {
+      "id": "pisxme-package-authority-u11-u12-20260918",
+      "title": "PiSXMe U11/U12 package authority reconciliation",
+      "publisher": "PiSXMe project",
+      "url": "private:pisxme/reva-clean/validation-receipts/package-authority-u12-u11-20260918/AUTHORITY_DECISION.md",
+      "revision": "P24 package authority R1; retrieved 2026-09-18",
+      "tier": 3,
+      "evidence_class": "project authority synthesis",
+      "observed_facts": [
+        "U12 primary contract is 0.50 mm RUA0042A geometry and retained 0.40 mm footprint is rejected",
+        "U11 QFN64 geometry matches JMicron package dimensions; prototype land/stencil disposition uses TI general QFN guidance"
+      ],
+      "status": "authority packet pending public canonical receipt",
+      "license_disposition": "project-derived metadata only"
     }
   ]
 }
