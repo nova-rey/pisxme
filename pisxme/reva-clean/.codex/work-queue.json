@@ -3472,7 +3472,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "",
-      "owner": null,
+      "owner": "root",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3489,10 +3489,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "READY",
+      "session_ids": [
+        "root-molex-nine-branch-20260918"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T21:05:36.628163Z",
+      "updated_at": "2026-09-18T21:05:54.600051Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -4272,5 +4274,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T21:05:36.628422Z"
+  "updated_at": "2026-09-18T21:05:54.600481Z"
 }

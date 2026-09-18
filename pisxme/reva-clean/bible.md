@@ -1468,3 +1468,7 @@ Power Authority closed the topology gap exposed by fresh Light commissioning. J5
 ## 2026-09-18 — Nine-branch producer implementation stall self-unblocked
 
 Unblocker classified the second nine-branch producer failure as workflow dispatch, not a physical infeasibility or external blocker. Three workspaces at `bd24cf12` had no live KiCad process or candidate. The dependency `unblocker:molex-nine-branch-implementation-stall` is resolved with a Root-mediated explicit `pisxme-worker start kicad-light` sentinel-then-producer run required; stale two-contact topology counts remain non-authoritative.
+
+## 2026-09-18 — Direct nine-branch producer dispatched after workflow self-unblock
+
+The corrected protected-bus producer is claimed by Root for one bounded direct KiCad Light run from committed base `dd9a0208`. A sentinel loaded `POWER_INPUT.kicad_sch`, exported a native netlist under KiCad 10.0.6, and passed. The legacy two-branch output remains rejected and is not a candidate.
