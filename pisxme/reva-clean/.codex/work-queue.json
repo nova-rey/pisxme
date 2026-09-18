@@ -4121,7 +4121,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/power-input-molex-prototype-validation-20260918/RECEIPT.md",
+        "base_sha": "ec980aa2c25a841e18026e1061c86b496d76b9d2",
+        "returned_at": "2026-09-18T20:18:26.255729Z",
+        "returned_by": "prototype_connector_validation_supervisor",
+        "sha": null
+      },
       "completion_criterion": "Reviewed architecture-specific validation plan with calculations, instrumentation, acceptance limits and explicit REQUIRES PROTOTYPE VALIDATION dispositions.",
       "created_at": "2026-09-18T20:12:18.538630Z",
       "dependencies": [
@@ -4158,9 +4164,9 @@
       "session_ids": [
         "molex-prototype-validation-20260918"
       ],
-      "status": "RUNNING",
+      "status": "VALIDATING",
       "title": "Prototype validation plan for three-branch Molex source architecture",
-      "updated_at": "2026-09-18T20:12:25.433141Z",
+      "updated_at": "2026-09-18T20:18:26.255748Z",
       "validation": {
         "required": [],
         "results": {}
@@ -4181,5 +4187,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T20:12:25.433376Z"
+  "updated_at": "2026-09-18T20:18:26.255748Z"
 }

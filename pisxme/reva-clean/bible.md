@@ -1444,3 +1444,7 @@ Anderson PP15/45 remains electrically credible but cannot receive an exact first
 ## 2026-09-18 — Molex source contract corrected to nine protected contact-pair branches
 
 Product/Power Authority corrected the multi-connector contract: three Molex 2x3 headers provide nine positive and nine return paths, and each positive/return pair must be independently current-limited or fault-isolated. A single 15 A fuse per connector is rejected because passive current-sharing credit is prohibited. The governing screen is 4.444 A/contact continuous and 5.000 A/contact at the 45 A peak screen against 7 A per loaded circuit, with a 63 A aggregate screen. All three headers and nine branches are required; no N-1 credit is allowed.
+
+## 2026-09-18 — Three-header Molex prototype validation plan returned
+
+`P24-POWER-INPUT-MOLEX-PROTOTYPE-VALIDATION` returned a design-only candidate under corrected authority V2 at base `ec980aa2`. The plan reconciles the earlier queue shorthand of three 15 A connector branches: V2 rejects a single 15 A fuse per header and requires nine independently current-limited or fault-isolated positive/return contact-pair paths across the three `39-30-0060 / 0039300060` headers. It defines 4.444 A/contact-pair continuous and 5.000 A/contact-pair peak targets, the 7 A loaded-circuit screen, a derived 10% balance screen, effective hot resistance, 40 A thermal, controlled 45 A/100 ms, fault/protection and staged first-power evidence. All hardware results remain `REQUIRES PROTOTYPE VALIDATION`; no CAD or hardware changed.

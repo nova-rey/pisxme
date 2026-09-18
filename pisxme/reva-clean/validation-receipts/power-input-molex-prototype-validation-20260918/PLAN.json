@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "package_id": "P24-POWER-INPUT-MOLEX-PROTOTYPE-VALIDATION",
+  "base_sha": "ec980aa2c25a841e18026e1061c86b496d76b9d2",
+  "status": "CANDIDATE_READY_WITH_REQUIRES_PROTOTYPE_VALIDATION",
+  "cad_changed": false,
+  "hardware_operated": false,
+  "architecture": {
+    "manufacturer": "Molex",
+    "family": "Mini-Fit Jr. 5569",
+    "board_header": "39-30-0060 / 0039300060",
+    "header_count": 3,
+    "branch_count": 9,
+    "contacts_per_header": {
+      "positive": 3,
+      "return": 3
+    },
+    "passive_sharing_credit": false,
+    "superseded_alternative": "Anderson PP15/45 ASMPR45-1X2-RK",
+    "physical_header_groups": 3,
+    "per_contact_pair_protection": "independent current-limited or fault-isolated path",
+    "loaded_contact_screen_A": 7.0,
+    "superseded_coarse_model": "three 15 A connector-level fuses; rejected because it relies on passive sharing"
+  },
+  "authority": {
+    "decision": "MOLEX_MULTI_CONNECTOR_AUTHORITY_V2",
+    "decision_hash": "132bd0c98b1b71379712112f764baef147064edb490893be81d40c5bd4e89770",
+    "source_records": [
+      "Molex 039300040_sd.pdf",
+      "Molex PS-43879-001-001.pdf",
+      "Molex 0039300060 product record"
+    ],
+    "library": "Private Librarian corpus; source bytes are not copied into public repository"
+  },
+  "contract": {
+    "id": "PISXME-P24-PROTOTYPE-SOURCE-BUS-20260917",
+    "source_nominal_V": 12.0,
+    "source_window_V": [
+      11.4,
+      12.6
+    ],
+    "continuous_A": 40.0,
+    "peak_A": 45.0,
+    "peak_duration_ms": 100,
+    "protected_bus_min_V": {
+      "continuous": 11.05,
+      "peak": 11.0
+    },
+    "protected_bus_max_V": 12.6,
+    "effective_harness_connector_loop_cap_mOhm_hot": 4.0,
+    "complete_source_to_J1_loop_cap_mOhm_hot": 10.0,
+    "temperature_rise_cap_C": 30.0
+  },
+  "derived_arithmetic": {
+    "contact_screen_A": 7.0,
+    "aggregate_contact_screen_A_per_polarity": 63.0,
+    "physical_header_groups": 3,
+    "independent_contact_pair_paths": 9,
+    "continuous_contact_pair_target_A": 4.4444444444,
+    "peak_contact_pair_target_A": 5.0,
+    "continuous_margin_to_screen_A": 2.5555555556,
+    "peak_margin_to_screen_A": 2.0,
+    "preferred_balance_screen": "max_pair_minus_min_pair <= 0.10 * mean_pair_current",
+    "effective_parallel_resistance": "1/(1/R1 + ... + 1/R9)",
+    "allocated_loop_loss": {
+      "40A": {
+        "drop_V": 0.16,
+        "loss_W": 6.4
+      },
+      "45A": {
+        "drop_V": 0.18,
+        "loss_W": 8.1
+      }
+    }
+  },
+  "checks": [
+    {
+      "id": "MPCV-01",
+      "name": "assembly identity, polarity, fit and contact seating",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "Exact three header/harness assemblies recorded; all contacts seated and keyed; no back-out, damage, reverse insertion or polarity discontinuity."
+    },
+    {
+      "id": "MPCV-02",
+      "name": "branch isolation and four-wire resistance",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "Each of nine contact-pair paths and the effective parallel source harness/connector loop are measured hot; effective loop <=4.0 mOhm; no path backfeed or unexplained open/imbalance."
+    },
+    {
+      "id": "MPCV-03",
+      "name": "40 A current balance and thermal rise",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "40 A continuous through all nine paths; each contact-pair path <=7 A; preferred max-min balance <=10% of mean; all connector/fuse/protection/copper/via points <= lower of component limit and 30 C rise; drops close."
+    },
+    {
+      "id": "MPCV-04",
+      "name": "45 A / 100 ms bounded transient",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "Controlled 45 A total pulse for 100 ms through all nine paths; each contact-pair path <=7 A; no uncontrolled overshoot, arc, release, damage or unsafe restart."
+    },
+    {
+      "id": "MPCV-05",
+      "name": "independent branch protection and fault behavior",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "Each of nine contact-pair fault paths isolates as designed, other paths remain <=7 A, no backfeed, and V100 enable/reset/inhibit shutdown policy acts safely."
+    },
+    {
+      "id": "MPCV-06",
+      "name": "staged source protection and first power",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "PISXME-P24-V100-FIRST-POWER-20260917 stages pass with polarity, OVP/UVLO, reverse, inrush, EN/PG/reset/inhibit and thermal/current evidence."
+    },
+    {
+      "id": "MPCV-07",
+      "name": "complete source-to-J1 resistance/drop closure",
+      "status": "REQUIRES_PROTOTYPE_VALIDATION",
+      "acceptance": "Complete positive-plus-return extraction including all three harnesses/headers, branch protection, copper/vias/planes and J1 transition <=10.0 mOhm hot."
+    }
+  ],
+  "instrumentation": [
+    "nine independent calibrated contact-pair current channels grouped by header plus total source current",
+    "four-wire Kelvin resistance method or calibrated low-ohm meter",
+    "differential voltage at each connector/branch and worst J1 field",
+    "thermocouples or calibrated thermal camera at all three headers, crimps, fuses, protection, copper, vias and J1 field",
+    "regulated current-limited source",
+    "controlled electronic load and 45 A pulse fixture",
+    "scope/transient recorder"
+  ],
+  "evidence_requirements": [
+    "exact header, mating housing/terminal, conductor, crimp and branch protection BOM/lot records",
+    "per-branch polarity, isolation, resistance and current-balance captures",
+    "40 A thermal and 45 A pulse raw waveforms",
+    "fault/protection and staged first-power logs",
+    "instrument serial/calibration/sample-rate, ambient/airflow, timestamps and operator",
+    "SHA-256 manifest and signed disposition"
+  ],
+  "open_items": [
+    "Exact mating 5557 housing/5556 terminal or released equivalent, conductor, length, bundle and crimp process must be bound before hardware test.",
+    "The 10% nine-path current-balance value is a PiSXMe derived prototype screen, not a Molex rating; Power Authority may tighten or explicitly revise it before hardware execution.",
+    "No fabricated hardware measurement exists in this receipt."
+  ],
+  "production_qualification": false
+}
