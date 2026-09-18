@@ -258,6 +258,14 @@
       "resolved_at": "2026-09-18T19:25:47.171251Z",
       "status": "RESOLVED"
     },
+    "unblocker:molex-mpa-corridor-stall": {
+      "created_at": "2026-09-18T19:37:12.045650Z",
+      "kind": "other",
+      "receipt": null,
+      "reference": "validation-receipts/molex-mpa-corridor-attempt-20260918/RECEIPT.md",
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "unblocker:power-producer-workspace": {
       "created_at": "2026-09-18T12:56:51.224271Z",
       "kind": "authority",
@@ -3627,7 +3635,8 @@
       "created_at": "2026-09-18T13:13:37.367633Z",
       "dependencies": [
         "knowledge:P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE",
-        "unblocker:molex-footprint-authority-stall"
+        "unblocker:molex-footprint-authority-stall",
+        "unblocker:molex-mpa-corridor-stall"
       ],
       "domain": "Footprint / Mechanical Authority",
       "edit_boundaries": [
@@ -3639,7 +3648,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
       "notes": "",
-      "owner": "molex_mpa_corridor_producer",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3655,17 +3664,17 @@
         }
       ],
       "scope": "Use released manufacturer dimensions to reconcile the Molex 39301082 datum/peg/contact geometry or author an Anderson PP15/45 prototype footprint. Produce one internally authorized footprint with dimensional audit, mating/serviceability review, and focused native DRC evidence. Do not alter canonical CAD.",
-      "session_ids": [
-        "molex-mpa-corridor-20260918"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Reconcile high-current input connector footprint geometry",
-      "updated_at": "2026-09-18T19:25:58.764854Z",
+      "updated_at": "2026-09-18T19:37:12.045671Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "unblocker:molex-mpa-corridor-stall"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -3774,6 +3783,54 @@
       },
       "waiting_on": [],
       "workstream": "integrated-power"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Return SELF_UNBLOCK, ROUTE, or BLOCKED with evidence and exact next action.",
+      "created_at": "2026-09-18T19:37:22.082764Z",
+      "dependencies": [],
+      "domain": "Unblocker / Macro Placement",
+      "edit_boundaries": [
+        "read-only evidence review",
+        "no canonical CAD"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-INPUT-MPA-CORRIDOR-UNBLOCKER",
+      "notes": "",
+      "owner": "molex_mpa_corridor_unblocker",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-COPPER",
+        "INV-DFM"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Review the three bounded Molex MPA corridor candidates and choose one materially new authority-level placement/copper hypothesis, or document why the current local constraints conflict. Read-only classification; no canonical edits.",
+      "session_ids": [
+        "molex-mpa-corridor-unblocker-20260918"
+      ],
+      "status": "RUNNING",
+      "title": "Unblock Molex MPA corridor attempt",
+      "updated_at": "2026-09-18T19:37:34.623624Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -3788,5 +3845,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T19:25:58.765142Z"
+  "updated_at": "2026-09-18T19:37:34.623823Z"
 }

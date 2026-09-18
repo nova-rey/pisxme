@@ -1408,3 +1408,7 @@ The Molex footprint stall now has a durable queue package with Unblocker ownersh
 ## 2026-09-18 — Molex footprint geometry cleared; placement route authorized
 
 Unblocker classified the producer failure as an implementation placement/corridor collision: released Molex 39301082 geometry is internally valid, while existing J5/J6 copper crosses an NPTH keepout. The footprint package is now owned by Macro Placement Authority with one isolated current-HEAD placement/reroute attempt; canonical CAD remains unchanged.
+
+## 2026-09-18 — MPA corridor attempt returned without legal candidate
+
+Three isolated Molex MPA corridor candidates remained at 418–419 native DRC violations and did not provide an accepted placement/routing handoff. The raw reports are retained; no canonical CAD changed. The footprint package is parked on a bounded Unblocker review of whether the attempted geometry changed the actual NPTH/copper collision and what materially new authority-level method is warranted.
