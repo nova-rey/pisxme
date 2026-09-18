@@ -21,10 +21,10 @@
     "authority:P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-CORRECTION": {
       "created_at": "2026-09-18T00:00:00Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/power-input-connector-reassessment-20260918/MOLEX_MULTI_CONNECTOR_AUTHORITY.md",
       "reference": "validation-receipts/power-input-connector-reassessment-20260918/ANDERSON_FOOTPRINT_AUTHORITY_FAILURE.md",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T20:11:58.955471Z",
+      "status": "RESOLVED"
     },
     "authority:P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-REASSESSMENT": {
       "created_at": "2026-09-18T19:57:10.447749Z",
@@ -3681,7 +3681,7 @@
       "evidence_refs": [],
       "id": "P24-POWER-INPUT-FOOTPRINT-RECONCILIATION",
       "notes": "",
-      "owner": null,
+      "owner": "connector_footprint_authority_reassessment",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3697,17 +3697,17 @@
         }
       ],
       "scope": "Use released manufacturer dimensions to reconcile the Molex 39301082 datum/peg/contact geometry or author an Anderson PP15/45 prototype footprint. Produce one internally authorized footprint with dimensional audit, mating/serviceability review, and focused native DRC evidence. Do not alter canonical CAD.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "molex-footprint-20260918"
+      ],
+      "status": "RUNNING",
       "title": "Reconcile high-current input connector footprint geometry",
-      "updated_at": "2026-09-18T20:04:25.407904Z",
+      "updated_at": "2026-09-18T20:12:07.476032Z",
       "validation": {
         "required": [],
         "results": {}
       },
-      "waiting_on": [
-        "authority:P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-CORRECTION"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -4016,10 +4016,12 @@
         "no canonical CAD edits",
         "do not claim fabricated-hardware measurements"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-input-prototype-connector-validation-20260918/RECEIPT.md"
+      ],
       "id": "P24-POWER-INPUT-PROTOTYPE-CONNECTOR-VALIDATION",
       "notes": "This is not a production AVL or supplier-qualification gate and does not block footprint authoring or schematic/PCB integration unless authority identifies a safety contradiction.",
-      "owner": "prototype_connector_validation_supervisor",
+      "owner": null,
       "priority": 70,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -4038,12 +4040,10 @@
         }
       ],
       "scope": "Define prototype-only validation evidence for Anderson PP15/45 source path: harness/crimp resistance, contact fit/pull, continuous current derating, thermal rise, 45 A transient, source protection and first-power measurements.",
-      "session_ids": [
-        "prototype-connector-validation-20260918"
-      ],
-      "status": "VALIDATING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Prototype high-current connector and harness validation plan",
-      "updated_at": "2026-09-18T20:05:57.019839Z",
+      "updated_at": "2026-09-18T20:07:14.244758Z",
       "validation": {
         "required": [],
         "results": {}
@@ -4058,7 +4058,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "validation-receipts/power-input-connector-reassessment-20260918/MOLEX_MULTI_CONNECTOR_AUTHORITY.md",
+        "base_sha": "6261b569",
+        "returned_at": "2026-09-18T20:11:54.508512Z",
+        "returned_by": "molex_multi_connector_power_authority",
+        "sha": null
+      },
       "completion_criterion": "One binding Product/Power and Footprint authority decision with source hashes, arithmetic, exact connector identities, and queue disposition. If multi-connector Molex is selected, define connector count, contact allocation, per-branch protection, and released footprint geometry. If Anderson is retained, identify authoritative missing fields resolution; otherwise supersede it explicitly.",
       "created_at": "2026-09-18T20:04:40.035164Z",
       "dependencies": [
@@ -4070,10 +4076,12 @@
         "no canonical CAD edits",
         "preserve Anderson and Molex source hashes"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "validation-receipts/power-input-connector-reassessment-20260918/MOLEX_MULTI_CONNECTOR_AUTHORITY.md"
+      ],
       "id": "P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-CORRECTION",
       "notes": "This is a bounded correction, not an open-ended connector survey. Do not begin CAD until the exact architecture/footprint contract is recorded.",
-      "owner": "connector_architecture_correction_authority",
+      "owner": null,
       "priority": 98,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -4092,12 +4100,64 @@
         }
       ],
       "scope": "Resolve Anderson exact-land-pattern failure by binding either a released-dimension single high-current connector or a drawing-defined multiple conventional connector architecture that satisfies 40 A continuous / 45 A peak with conservative per-branch ratings, independent protection, harness and thermal margins.",
+      "session_ids": [],
+      "status": "DONE",
+      "title": "Resolve connector footprint authority conflict and bind practical source architecture",
+      "updated_at": "2026-09-18T20:11:54.627982Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "power-input"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Reviewed architecture-specific validation plan with calculations, instrumentation, acceptance limits and explicit REQUIRES PROTOTYPE VALIDATION dispositions.",
+      "created_at": "2026-09-18T20:12:18.538630Z",
+      "dependencies": [
+        "package:P24-POWER-INPUT-CONNECTOR-ARCHITECTURE-CORRECTION"
+      ],
+      "domain": "power/connector/prototype-validation",
+      "edit_boundaries": [
+        "write only validation-receipts/power-input-molex-prototype-validation-20260918/ and queue/bible updates",
+        "no CAD or hardware operation",
+        "do not fabricate measurements"
+      ],
+      "evidence_refs": [],
+      "id": "P24-POWER-INPUT-MOLEX-PROTOTYPE-VALIDATION",
+      "notes": "Supersedes the earlier Anderson-only validation plan for the active architecture; preserves that plan as historical evidence.",
+      "owner": "prototype_connector_validation_supervisor",
+      "priority": 75,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "power_source_40A_continuous",
+        "power_source_45A_peak",
+        "prototype_validation",
+        "harness_thermal",
+        "connector_serviceability"
+      ],
+      "resource_requirements": [
+        {
+          "exclusive": false,
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Define prototype validation for three 15 A independently protected Molex 2x3 source branches: current balance, harness/crimp resistance, connector/fuse thermal rise, 40 A continuous, controlled 45 A transient, protection action and first-power procedure.",
       "session_ids": [
-        "connector-architecture-correction-20260918"
+        "molex-prototype-validation-20260918"
       ],
       "status": "RUNNING",
-      "title": "Resolve connector footprint authority conflict and bind practical source architecture",
-      "updated_at": "2026-09-18T20:04:59.794633Z",
+      "title": "Prototype validation plan for three-branch Molex source architecture",
+      "updated_at": "2026-09-18T20:12:25.433141Z",
       "validation": {
         "required": [],
         "results": {}
@@ -4118,5 +4178,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T20:05:57.020234Z"
+  "updated_at": "2026-09-18T20:12:25.433376Z"
 }
