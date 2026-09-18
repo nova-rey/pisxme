@@ -1,0 +1,27 @@
+{
+  "schema": "pisxme.p24.protected-bus-producer-stall.v2",
+  "package": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
+  "canonical_base": "a7d559a0",
+  "attempts": [
+    {
+      "capability": "deterministic_source_first_r2",
+      "result": "no candidate or command receipt",
+      "receipt": "validation-receipts/protected-bus-r2-direct-stall-20260918/RECEIPT.md"
+    },
+    {
+      "capability": "kicad_engineer",
+      "result": "clone only; no authoring command",
+      "receipt": "validation-receipts/protected-bus-r2-kicad-engineer-stall-20260918/RECEIPT.md"
+    },
+    {
+      "capability": "root_mediated_source_author",
+      "result": "clone only; no authoring command",
+      "workspace": "/home/nyx/eda-workspaces/protected-bus-r2-source-author"
+    }
+  ],
+  "authority": "R2 protected-bus source-topology and upstream MPA authority",
+  "topology_status": "binding and internally specified",
+  "candidate": null,
+  "independent_lanes": "U12/library closed; all remaining Phase 24 packages depend on protected-bus integration",
+  "next_route": "Tier-3 hard-problem admission after Tier-2 implementation workflow exhaustion"
+}

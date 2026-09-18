@@ -1645,3 +1645,6 @@ The Unblocker did not return within its bounded review window, so Root closed th
 # 2026-09-18 — HPQ #6 resolution reconciled at current HEAD
 
 HPQ Issue #6 is `resolution-ready` with a durable normalized packet at `validation-receipts/hpq-issue6-resolution-20260918/`. Its Task Force result is a precise structural contradiction of MPA R1, not an integrable PCB candidate: the rejected fuse geometry and narrow join corridor cannot satisfy the retained J7/high-speed, six-layer, DFM, and complete-path limits. The packet base `c74789d72910ebf4e7f1edc8caf0b17548a4609a` is an ancestor of current `HEAD`; no candidate bundle was imported or integrated. The already-completed upstream authority work records the replacement R2 placement/corridor decision. The protected-bus producer remains parked only on HPQ #7; no Phase 25/26 work is authorized.
+# 2026-09-18 — Protected-bus capability exhaustion receipt retained
+
+The aggregate receipt for the three bounded R2 producer routes is now preserved under `validation-receipts/protected-bus-root-mediated-source-author-stall-20260918/`. Deterministic source-first, mutation-capable KiCad, and root-mediated authoring each stopped before a producer command or candidate; no CAD or rule change is claimed. The R2 topology remains binding, and HPQ #7 owns only this implementation capability dependency.
