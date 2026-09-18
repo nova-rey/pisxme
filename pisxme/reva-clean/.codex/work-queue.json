@@ -405,10 +405,10 @@
     "unblocker:protected-bus-r2-producer-stall": {
       "created_at": "2026-09-18T23:02:06.365280Z",
       "kind": "other",
-      "receipt": null,
+      "receipt": "/home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-r2-method-change-20260918/RECEIPT.md",
       "reference": "Implementation-method stall after repeated live attempts with no candidate or bounded failure; review worker/tool path only, preserve R2 authority.",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T23:04:15.072200Z",
+      "status": "RESOLVED"
     }
   },
   "hard_problem_repo": "nova-rey/codex-config-backup",
@@ -3575,7 +3575,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Root-mediated native pcbnew producer; source fixture is the netlist oracle; fresh Light workspace /home/nyx/eda-workspaces/molex-pcbnew-producer-20260918.",
-      "owner": null,
+      "owner": "kicad_engineer",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3592,10 +3592,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "01a0b69b-r2-producer-retry"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T23:02:06.365311Z",
+      "updated_at": "2026-09-18T23:04:15.120090Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3626,9 +3628,7 @@
           }
         }
       },
-      "waiting_on": [
-        "unblocker:protected-bus-r2-producer-stall"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -4873,5 +4873,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T23:02:06.365529Z"
+  "updated_at": "2026-09-18T23:04:15.120373Z"
 }
