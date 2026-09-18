@@ -1380,3 +1380,7 @@ The Unblocker identified stale-base dispatch as the cause of the producer worksp
 ## 2026-09-18 — Molex input footprint contradiction isolated
 
 The clean-base protected-bus producer rejected the Molex 39301082 candidate after native KiCad Light DRC found the released 3.6 mm NPTH keepout overlapping the outer 2.6 mm contact land at the implemented 2.65 mm spacing, introducing connector-region shorting items. The candidate was not promoted. A dedicated footprint-authority package now owns Molex datum reconciliation or an Anderson PP15/45 released-dimension footprint; the producer alone is waiting on that authority.
+
+## 2026-09-18 — Anderson footprint authority escalation
+
+The Molex geometry contradiction is now owned by a direct footprint-authority retry using released Anderson PP15/45 manufacturer dimensions. The Molex candidate remains rejected and the protected-bus producer remains waiting only on the footprint authority package; no external vendor authorization is required for this prototype path.
