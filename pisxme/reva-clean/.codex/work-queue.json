@@ -253,10 +253,10 @@
     "hpq:nova-rey/codex-config-backup#6": {
       "created_at": "2026-09-18T22:19:53.580592Z",
       "kind": "hpq",
-      "receipt": null,
+      "receipt": "https://github.com/nova-rey/codex-config-backup/issues/6",
       "reference": "https://github.com/nova-rey/codex-config-backup/issues/6",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T22:49:48.989215Z",
+      "status": "RESOLVED"
     },
     "knowledge:P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE": {
       "created_at": "2026-09-18T19:10:47.982044Z",
@@ -3552,7 +3552,8 @@
         "unblocker:molex-native-script-author-stall",
         "unblocker:molex-native-direct-author-stall",
         "unblocker:molex-native-api-adapter-stall",
-        "hpq:nova-rey/codex-config-backup#6"
+        "hpq:nova-rey/codex-config-backup#6",
+        "package:P24-PROTECTED-BUS-UPSTREAM-AUTHORITY-REVISION"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3585,7 +3586,7 @@
       "session_ids": [],
       "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T22:20:00.665604Z",
+      "updated_at": "2026-09-18T22:51:25.355611Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3617,7 +3618,7 @@
         }
       },
       "waiting_on": [
-        "hpq:nova-rey/codex-config-backup#6"
+        "package:P24-PROTECTED-BUS-UPSTREAM-AUTHORITY-REVISION"
       ],
       "workstream": "integrated-power"
     },
@@ -4790,6 +4791,59 @@
       },
       "waiting_on": [],
       "workstream": "phase24-local-rails"
+    },
+    {
+      "attempt_state": {
+        "material_attempts": [],
+        "tier": 1
+      },
+      "base_sha": null,
+      "campaign": "phase24-phase25-acreage",
+      "candidate": null,
+      "completion_criterion": "Binding authority packet identifies changed/fixed constraints, dimensioned legal corridors and layer intent, corrected component/package contract, resistance/thermal budget, and explicit producer handoff; if impossible, names the minimum higher-order constraint that must yield.",
+      "created_at": "2026-09-18T22:51:19.530121Z",
+      "dependencies": [],
+      "domain": "Product/Power and Macro Placement Authority",
+      "edit_boundaries": [
+        "authority artifacts and queue/bible only",
+        "no canonical CAD",
+        "no R1 replay",
+        "preserve 300 W/330 W product envelope",
+        "no Phase 25/26"
+      ],
+      "evidence_refs": [],
+      "id": "P24-PROTECTED-BUS-UPSTREAM-AUTHORITY-REVISION",
+      "notes": "HPQ investigation is complete; this is the next authority-level decision and must not duplicate Sol.",
+      "owner": "supervisor_protected_bus_authority",
+      "priority": 1,
+      "project": "nova-rey/pisxme",
+      "required": true,
+      "requirement_ids": [
+        "INV-INPUT-CAPACITY",
+        "INV-PROTECTED-BUS",
+        "INV-COPPER",
+        "INV-THERMAL",
+        "P24-MPA-CORRIDOR"
+      ],
+      "resource_requirements": [
+        {
+          "name": "model-agent",
+          "units": 1
+        }
+      ],
+      "scope": "Reconcile HPQ Issue #6 resolution-ready packet. Product/Power and Macro Placement Authority must change the minimum upstream constraint set needed to make the 40 A continuous / 45 A 100 ms protected-bus architecture physically legal, then issue ONE dimensioned placement/corridor plan. Consider board region, fuse-holder envelope, preserved macro geography, copper/resistance budget, protection package mapping, and six-layer/DFM constraints. Do not retry R1 or emit CAD.",
+      "session_ids": [
+        "01a0b69b-protected-authority"
+      ],
+      "status": "RUNNING",
+      "title": "Rebind protected-bus topology after HPQ R1 contradiction",
+      "updated_at": "2026-09-18T22:51:25.410595Z",
+      "validation": {
+        "required": [],
+        "results": {}
+      },
+      "waiting_on": [],
+      "workstream": "integrated-power"
     }
   ],
   "project": "nova-rey/pisxme",
@@ -4804,5 +4858,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T22:45:14.663768Z"
+  "updated_at": "2026-09-18T22:51:25.410896Z"
 }

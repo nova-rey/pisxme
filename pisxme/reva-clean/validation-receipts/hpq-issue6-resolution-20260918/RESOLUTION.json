@@ -1,0 +1,25 @@
+{
+  "issue": 6,
+  "outcome": "resolution-ready",
+  "source": "nova-rey/codex-config-backup#6",
+  "task_force_commit": "13a9176696176719789572d35f2270e93590de69",
+  "base_sha": "c74789d72910ebf4e7f1edc8caf0b17548a4609a",
+  "bundle_sha256": "528812c4fc73174e36d6744e9cbe4f50f70035f228e730ae4e9fbd233f84efd6",
+  "summary": "MPA R1 is structurally contradictory; no integrable PCB candidate was emitted.",
+  "decision": "Do not retry R1. Upstream topology/package authority must change available board region, fuse-holder envelope, or preserved macro geography, then issue one new dimensioned placement/corridor decision.",
+  "evidence": [
+    "F7 encloses J7 NPTH at (35,82) and overlaps preserved U6/U9/TP1 geometry; F8 encloses J7 NPTH at (68,82).",
+    "No third-row centerline clears both F4-F6 and the J7 holes.",
+    "Actual 24.25 mm fuse courtyards on 25 mm row pitch leave 0.75 mm, not the recorded 3 mm.",
+    "The x=104..106 join corridor on 15.2 um In2 copper screens at 5.879 mOhm per tie; positive plus return ties reach 11.758 mOhm before other losses.",
+    "Native DRC: source 300 violations/499 unconnected; untouched round-trip 307/499; rejected R1 probe 532/499.",
+    "Conditional Q1 replacement NVMTS0D7N06CTXG remains unqualified; no implementation claim is made."
+  ],
+  "toolchain": "host KiCad/pcbnew 10.0.5 Flatpak b4404c6352e71ed22ad9efa7ca095db200e3f4d30d738c1089fb7168f5885e8d; future validator KiCad Light 10.0.6 image sha256:37d60e6797eaa14ea393de005b9793af5d9b5e7464aac1e4d58bec1b7803b4a9",
+  "candidate_disposition": "REJECTED_NONCANDIDATE; no PCB candidate to integrate",
+  "risks": [
+    "No qualified Light 10.0.6 validation was run because no candidate PCB exists.",
+    "PTH plating remains unbound.",
+    "Resistance, thermal, connectivity, and DFM closure remain open."
+  ]
+}
