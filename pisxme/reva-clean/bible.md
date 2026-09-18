@@ -1606,3 +1606,7 @@ The first R2 producer session stalled without a KiCad process. Tier-2 Unblocker 
 # 2026-09-18 — Second bounded R2 execution route
 
 The root-mediated Light producer remained silent after its bounded attempt and was interrupted. Root released that owner and dispatched `kicad_r2_direct` with an explicit requirement to invoke the qualified launcher, run the topology sentinel, and return a candidate or command-level blocker in one bounded turn. No CAD candidate or closure claim exists yet.
+
+# 2026-09-18 — Direct KiCad capability escalation
+
+The second root-mediated R2 execution route also had no returned command receipt within its bounded attempt. Root released that owner and assigned `kicad_r2_direct`, requiring explicit qualified-launcher invocation and an auditable sentinel or command-level failure. This is a capability escalation only; no R1 retry, global rule change, or CAD closure is claimed.
