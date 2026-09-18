@@ -1364,3 +1364,7 @@ The vendor-footprint dependency was reclassified from an irreducible external bl
 ## 2026-09-18 — Prototype input geometry dependency unlocked
 
 Released manufacturer dimensions were judged sufficient for prototype footprint engineering. The isolated Molex 39301082 candidate adds the two mounting NPTHs, preserves the released circuit-1 datum, and records explicit prototype annulus/mask/courtyard assumptions. Independent scoped validation accepted the footprint for producer use; production AVL, STEP parity, harness service clearance, and integrated thermal/current closure remain open. The corrected protected-bus producer is running from current HEAD.
+
+## 2026-09-18 — Corrective protected-bus producer retried from clean base
+
+The first producer workspace was discarded because it contained unrelated recovery-tree material. A fresh isolated producer was dispatched from current HEAD `57821130` using the authorized prototype input-footprint receipt. Canonical CAD remains unchanged until a scoped candidate and exact validation return.
