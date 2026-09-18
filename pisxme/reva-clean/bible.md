@@ -1582,3 +1582,11 @@ Issue #6 is `resolution-ready`. Macro Placement Authority invalidated R1: the F7
 - 2026-09-18 — Root allocated a fresh uniquely named qualified Light workspace from base `34dbf5dc` and reproduced the selected untouched PCB baseline: KiCad 10.0.6 native DRC returned RC 0 with 300 violations and 499 unconnected items. Raw report and SHA-256 are retained under `validation-receipts/protected-bus-r2-baseline-20260918/`; this is baseline evidence only, not a closure claim.
 
 - 2026-09-18 — The R2 producer returned a bounded topology blocker. Native PCB/schematic evidence shows only J5/J6 and F1/F2; J9 and F3–F9 plus their branch contracts are absent. No CAD was changed. The raw DRC/netlist/topology packet is retained under `validation-receipts/protected-bus-r2-producer-blocked-20260918/`. The producer is parked on `authority:P24-PROTECTED-BUS-SOURCE-TOPOLOGY-RECONCILIATION`, and a new authority package must identify the correct source lineage or narrowly authorize topology correction before CAD resumes.
+# 2026-09-18 — Protected-bus source-topology authority R2
+
+Package `P24-PROTECTED-BUS-SOURCE-TOPOLOGY-AUTHORITY` closed `DONE` with binding
+decision `PISXME-P24-PROTECTED-BUS-SOURCE-TOPOLOGY-20260918-R2`. The current
+canonical Rev-A PCB/schematic lineage remains authoritative for J1, six-layer
+roles, and unrelated macro geography, while a narrowly scoped next-producer
+correction is authorized for exactly J5/J6/J9, F1-F9, and the nine named branch
+contracts. No CAD was edited; rejected producer candidates remain non-authoritative.
