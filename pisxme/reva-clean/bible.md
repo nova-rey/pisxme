@@ -1598,3 +1598,7 @@ HPQ Issue #6 `resolution-ready` was synchronized from `nova-rey/codex-config-bac
 # 2026-09-18 — Refilled independent authority lanes during protected-bus production
 
 The HPQ #6 source-topology result released the protected-bus producer, which is running from current HEAD `2691d2c9`. Because the producer is the only CAD lane and later integration packages remain dependent on it, two independent authority packages were added and dispatched: U12/U11 package and land-treatment authority, and storage placement/corridor authority. They advance existing Phase 24 acceptance dependencies without reopening Path A or protected-bus architecture.
+
+# 2026-09-18 — Root-mediated Light execution route commissioned
+
+The first R2 producer session stalled without a KiCad process. Tier-2 Unblocker classified this as an implementation/runtime route issue and required an explicit qualified Light launch. Root allocated `/home/nyx/eda-workspaces/protected-bus-r2-rootdispatch` from `ac16d1c4`, verified KiCad Light `10.0.6`, released the silent owner, and dispatched `rootdispatch_r2_implementer` with the exact source-topology authority scope. No CAD claim is made until that worker returns a candidate or blocker packet.
