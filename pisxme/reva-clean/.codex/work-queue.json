@@ -3584,9 +3584,9 @@
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
       "session_ids": [],
-      "status": "WAITING",
+      "status": "READY",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T22:51:25.355611Z",
+      "updated_at": "2026-09-18T22:59:07.055437Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3617,9 +3617,7 @@
           }
         }
       },
-      "waiting_on": [
-        "package:P24-PROTECTED-BUS-UPSTREAM-AUTHORITY-REVISION"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -4799,7 +4797,13 @@
       },
       "base_sha": null,
       "campaign": "phase24-phase25-acreage",
-      "candidate": null,
+      "candidate": {
+        "artifact": "/home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-upstream-authority-revision-20260918/AUTHORITY_DECISION.json",
+        "base_sha": "c295f5e622bc5fbfdf6c6465f818c8df88df513a",
+        "returned_at": "2026-09-18T22:59:00.808121Z",
+        "returned_by": "supervisor_protected_bus_authority",
+        "sha": "f9439015d97bfbf373df0901e7ce40316ae5914e20ba40476600d2d4719b5b13"
+      },
       "completion_criterion": "Binding authority packet identifies changed/fixed constraints, dimensioned legal corridors and layer intent, corrected component/package contract, resistance/thermal budget, and explicit producer handoff; if impossible, names the minimum higher-order constraint that must yield.",
       "created_at": "2026-09-18T22:51:19.530121Z",
       "dependencies": [],
@@ -4811,10 +4815,12 @@
         "preserve 300 W/330 W product envelope",
         "no Phase 25/26"
       ],
-      "evidence_refs": [],
+      "evidence_refs": [
+        "/home/nyx/PiSXMe/pisxme/reva-clean/validation-receipts/protected-bus-upstream-authority-revision-20260918/RECEIPT.md"
+      ],
       "id": "P24-PROTECTED-BUS-UPSTREAM-AUTHORITY-REVISION",
       "notes": "HPQ investigation is complete; this is the next authority-level decision and must not duplicate Sol.",
-      "owner": "supervisor_protected_bus_authority",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -4832,12 +4838,10 @@
         }
       ],
       "scope": "Reconcile HPQ Issue #6 resolution-ready packet. Product/Power and Macro Placement Authority must change the minimum upstream constraint set needed to make the 40 A continuous / 45 A 100 ms protected-bus architecture physically legal, then issue ONE dimensioned placement/corridor plan. Consider board region, fuse-holder envelope, preserved macro geography, copper/resistance budget, protection package mapping, and six-layer/DFM constraints. Do not retry R1 or emit CAD.",
-      "session_ids": [
-        "01a0b69b-protected-authority"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "DONE",
       "title": "Rebind protected-bus topology after HPQ R1 contradiction",
-      "updated_at": "2026-09-18T22:51:25.410595Z",
+      "updated_at": "2026-09-18T22:59:07.055372Z",
       "validation": {
         "required": [],
         "results": {}
@@ -4858,5 +4862,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T22:51:25.410896Z"
+  "updated_at": "2026-09-18T22:59:07.055700Z"
 }

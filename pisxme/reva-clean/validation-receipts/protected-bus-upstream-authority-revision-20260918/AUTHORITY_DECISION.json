@@ -1,0 +1,228 @@
+{
+  "decision_id": "PISXME-P24-PROTECTED-BUS-UPSTREAM-AUTHORITY-20260918-R2",
+  "package_id": "P24-PROTECTED-BUS-UPSTREAM-AUTHORITY-REVISION",
+  "status": "BINDING_DECISION",
+  "authority": [
+    "Product / Power Authority",
+    "Macro Placement Authority"
+  ],
+  "campaign": "phase24-phase25-acreage",
+  "current_head": "34576737e6d9cc1edd0749830f29c9b530b6797c",
+  "hpq": {
+    "issue": "nova-rey/codex-config-backup#6",
+    "outcome": "resolution-ready",
+    "task_force_commit": "13a9176696176719789572d35f2270e93590de69",
+    "resolution_sha256": "38d5bf089ed8c853d69dfd4e5420f44f172ff3337d9a495260fd4ba42a9c28f4"
+  },
+  "r1_disposition": "SUPERSEDED_BY_THIS_DECISION",
+  "fixed_contract": {
+    "product_sustained_w": 300,
+    "product_peak_w": 330,
+    "peak_duration_ms": 100,
+    "source_continuous_a": 40,
+    "source_peak_a": 45,
+    "source_window_v": [
+      11.4,
+      12.6
+    ],
+    "protected_min_v": {
+      "sustained": 11.05,
+      "peak": 11.0
+    },
+    "complete_hot_path_max_mohm": 10.0,
+    "connector_architecture": "J5/J6/J9 Molex 0039300060, nine positive/return branches",
+    "fuse": "Littelfuse 0297015.U in 178.6165.0001",
+    "layers": [
+      "F.Cu",
+      "In1.Cu GND",
+      "In2.Cu PWR",
+      "In3.Cu PROTECTED_12V",
+      "In4.Cu GND",
+      "B.Cu"
+    ]
+  },
+  "placement_mm": {
+    "J1": [
+      150.0,
+      90.0,
+      0.0
+    ],
+    "J5": [
+      12.0,
+      25.0,
+      0.0
+    ],
+    "J6": [
+      12.0,
+      50.0,
+      0.0
+    ],
+    "J9": [
+      12.0,
+      75.0,
+      0.0
+    ],
+    "F1": [
+      36.0,
+      15.0,
+      0.0
+    ],
+    "F2": [
+      64.0,
+      15.0,
+      0.0
+    ],
+    "F3": [
+      92.0,
+      15.0,
+      0.0
+    ],
+    "F4": [
+      36.0,
+      40.0,
+      0.0
+    ],
+    "F5": [
+      64.0,
+      40.0,
+      0.0
+    ],
+    "F6": [
+      92.0,
+      40.0,
+      0.0
+    ],
+    "F7": [
+      36.0,
+      65.0,
+      0.0
+    ],
+    "F8": [
+      64.0,
+      65.0,
+      0.0
+    ],
+    "F9": [
+      92.0,
+      65.0,
+      0.0
+    ],
+    "D1": [
+      108.0,
+      10.0,
+      0.0
+    ],
+    "C3": [
+      108.0,
+      29.0,
+      0.0
+    ],
+    "U1": [
+      108.0,
+      34.0,
+      0.0
+    ],
+    "Q1": [
+      111.0,
+      42.0,
+      0.0
+    ],
+    "U2": [
+      108.0,
+      62.0,
+      0.0
+    ],
+    "Q2": [
+      111.0,
+      70.0,
+      0.0
+    ],
+    "C4": [
+      108.0,
+      77.0,
+      0.0
+    ],
+    "D2": [
+      108.0,
+      96.0,
+      0.0
+    ],
+    "TP2": [
+      114.0,
+      60.0,
+      0.0
+    ]
+  },
+  "corridors_mm": {
+    "branch_bands": [
+      [
+        3.0,
+        27.0
+      ],
+      [
+        28.0,
+        52.0
+      ],
+      [
+        53.0,
+        77.0
+      ]
+    ],
+    "pre_protection_positive_in2": [
+      103.5,
+      3.0,
+      112.0,
+      77.0
+    ],
+    "return_in4": [
+      103.5,
+      3.0,
+      112.0,
+      77.0
+    ],
+    "protected_in3": [
+      115.0,
+      3.0,
+      124.0,
+      77.0
+    ],
+    "j1_approach": [
+      116.5,
+      83.0,
+      149.0,
+      98.0
+    ],
+    "j7_keepout": [
+      31.5,
+      78.5,
+      70.5,
+      133.5
+    ]
+  },
+  "fixed_allocations_mohm": {
+    "source_harness_connector_loop": 4.0,
+    "fuse_fault_isolation_loop": 2.0,
+    "pcb_input_positive_return": 2.5,
+    "j1_spreading": 1.5,
+    "complete": 10.0
+  },
+  "changed_constraints": [
+    "Move F1-F9 rows from 26.25/51.25/76.25 mm to 15/40/65 mm.",
+    "Supersede the claimed 3 mm row gap; use the actual 24.25 mm envelope and 0.75 mm gap as a DFM gate.",
+    "Replace the x=104..106 narrow join ties with distributed In2/In4 fields x=103.5..112.0, y=3..77 mm."
+  ],
+  "via_requirement": "Distributed ordinary through-via fields sized from the released fabrication stackup and via-current model; no single via may carry the 40 A path; no arbitrary fixed via-count credit.",
+  "producer_state": "RELEASED_TO_ISOLATED_PRODUCER",
+  "cad_changed": false,
+  "phase25_or_26": false,
+  "evidence_hashes": {
+    "selected_pcb": "75d2d37063818093429b44dbe4197005c2f94b23554a34947a68acaaa181bf7c",
+    "hpq_resolution_md": "1e39e71a537254ea9a27794d3daf0b6a304b88ffa05b55714738314ca84872be",
+    "hpq_resolution_json": "38d5bf089ed8c853d69dfd4e5420f44f172ff3337d9a495260fd4ba42a9c28f4",
+    "prior_r1_mpa": "a7e3b117c547dbb7c5af969cdfd55ed08663d2728259dcd5f0f835a12931bec1",
+    "nine_branch_contract": "c1a38d73dd59d6e6d0b8ad307395cdea907982ddc1e238deafd4322de3c0bc3a",
+    "molex_authority_v2": "132bd0c98b1b71379712112f764baef147064edb490893be81d40c5bd4e89770",
+    "molex_footprint": "014a8f9b4ad6a1583aec43a5c0fb2a603e305970adf463eea26cd6afa54c7051"
+  },
+  "geometry_audit": "GEOMETRY_AUDIT.json"
+}

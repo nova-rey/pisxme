@@ -1,0 +1,67 @@
+{
+  "decision": "PISXME-P24-PROTECTED-BUS-UPSTREAM-AUTHORITY-20260918-R2",
+  "checks": [
+    {
+      "name": "row_pitch",
+      "status": "PASS",
+      "detail": {
+        "pitch_mm": 25.0,
+        "gap_mm": [
+          0.75,
+          0.75
+        ]
+      }
+    },
+    {
+      "name": "board_top_clearance",
+      "status": "PASS",
+      "detail": {
+        "minimum_mm": 2.875
+      }
+    },
+    {
+      "name": "fuses_clear_j7_courtyard",
+      "status": "PASS",
+      "detail": {
+        "j7": [
+          31.5,
+          78.5,
+          70.5,
+          133.5
+        ]
+      }
+    },
+    {
+      "name": "fuses_clear_j7_hole_clearance",
+      "status": "PASS",
+      "detail": {
+        "minimum_separation_mm": 1.8250000000000002,
+        "hole_radius_screen_mm": 3.05
+      }
+    },
+    {
+      "name": "connector_fuse_lateral_gap",
+      "status": "PASS",
+      "detail": {
+        "minimum_gap_mm": 0.2749999999999986
+      }
+    },
+    {
+      "name": "join_j1_separation",
+      "status": "PASS",
+      "detail": {
+        "join_right_mm": 112.0,
+        "j1_left_mm": 116.5
+      }
+    },
+    {
+      "name": "branch_bands_end_before_j7",
+      "status": "PASS",
+      "detail": {
+        "band_end_mm": 77.0,
+        "j7_top_mm": 78.5
+      }
+    }
+  ],
+  "status": "PASS"
+}
