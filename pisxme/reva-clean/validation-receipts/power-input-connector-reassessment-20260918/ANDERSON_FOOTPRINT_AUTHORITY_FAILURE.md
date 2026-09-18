@@ -1,0 +1,5 @@
+# Anderson exact-footprint authority failure
+
+The footprint authority review checked Anderson B02021S Rev. 6 (SHA-256 `7a32189a34ff2feea3bf173c788f3dd63229ea98dfefed8009b1bc5738e8cd2c`) and DS-PP1545 (SHA-256 `ac39c286d44528efab30061b96df6e64e6eeafb6e154af7a03397d518f45a04f`). First-party records establish contact identity, 45 A rating, typical pitch, board thickness, housing/mating envelope and a sample layout, but do not unambiguously establish the exact 1x2 contact-tail datum, finished drill/slot and tolerances, plated-hole declaration, pad/annulus, solder-mask treatment, accessory-hole coordinates/plating, or complete 3D mating/service envelope.
+
+Therefore an exact manufacturer-backed Anderson KiCad footprint cannot be promoted from current evidence. No secondary public footprint was substituted and no CAD changed. This is a bounded authority-level failure, not an external campaign blocker, because drawing-defined conventional Molex Mini-Fit Jr. alternatives remain available for Product/Power selection.
