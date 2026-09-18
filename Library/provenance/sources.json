@@ -224,7 +224,7 @@
         "multilayer 1 oz PTH annular ring 0.20 mm recommended and 0.15 mm absolute minimum",
         "blind and buried vias not supported on the stated standard process",
         "6-layer-and-above FR-4 maximum dimensions 656 x 586 mm for thickness at least 0.8 mm",
-        "impedance tolerance ±10%"
+        "impedance tolerance \u00b110%"
       ],
       "status": "accessible",
       "local_sha256": null,
@@ -252,7 +252,7 @@
         "typical stackup SIG/GND/PWR/SIG/GND/SIG",
         "maximum dimensions 660 x 475 mm",
         "board thickness options 0.8/1.0/1.2/1.6/2.0 mm",
-        "thickness tolerance ±10% for thickness at least 1.0 mm and ±0.1 mm below 1.0 mm",
+        "thickness tolerance \u00b110% for thickness at least 1.0 mm and \u00b10.1 mm below 1.0 mm",
         "minimum trace width and spacing 0.09 mm (3.5 mil)",
         "minimum via hole/diameter 0.15/0.25 mm",
         "minimum BGA pad dimension 0.25 mm",
@@ -598,7 +598,7 @@
     },
     {
       "id": "researcher-power-envelope-gap-20260913",
-      "title": "Researcher evidence sack — Branch-B power-envelope gaps",
+      "title": "Researcher evidence sack \u2014 Branch-B power-envelope gaps",
       "publisher": "PiSXMe Researcher commission",
       "url": "private:pisxme-library/Library/briefs/researcher-power-envelope-gap-20260913.md",
       "revision": "session d3dd71d7-b412-435d-8dbb-a12cac7174bd; completed 2026-09-13",
@@ -700,14 +700,14 @@
       "local_material_retained": false,
       "observed_facts": [
         "5.5 V to 60 V input range",
-        "0.6 A to 6.0 A programmable current limit; ±4% accuracy from 3 A to 6 A across temperature",
+        "0.6 A to 6.0 A programmable current limit; \u00b14% accuracy from 3 A to 6 A across temperature",
         "external nFET source to SN, drain to IN, gate to GN for reverse-polarity and reverse-current protection",
         "external gate drive 4.45 V minimum, 4.75 V typical, 4.95 V maximum under EN=5 V with no reverse condition",
-        "internal fast-trip IOCP 20 A minimum, 26 A typical, 32 A maximum; 3 µs typical response; external nFET remains on during output short fast trip",
+        "internal fast-trip IOCP 20 A minimum, 26 A typical, 32 A maximum; 3 \u00b5s typical response; external nFET remains on during output short fast trip",
         "FLAG open-drain fault indicator; 4 mA protection; reverse-current-only event does not assert FLAG",
         "22.5 ms to 25.5 ms blanking and 654 ms to 792 ms autoretry ranges",
-        "thermal foldback 150 °C and thermal shutdown 165 °C typical; 10 °C hysteresis",
-        "absolute maximum DC IN current 6.3 A; minimum 1 µF IN bypass and 4.7 µF SN bypass"
+        "thermal foldback 150 \u00b0C and thermal shutdown 165 \u00b0C typical; 10 \u00b0C hysteresis",
+        "absolute maximum DC IN current 6.3 A; minimum 1 \u00b5F IN bypass and 4.7 \u00b5F SN bypass"
       ],
       "status": "accessible-no-local-copy",
       "license_disposition": "citation and extracted facts only; no PDF copied into private Library; transient retrieval digest retained as provenance metadata"
@@ -722,10 +722,10 @@
       "evidence_class": "manufacturer protection component authority",
       "observed_facts": [
         "0297015._ is 15 A, 32 V DC, 1000 A interrupting at 32 V DC",
-        "0297015._ typical cold resistance 4.58 mΩ and typical I²t 308 A²s",
-        "manufacturer defines typical I²t as average melting time before arcing from breaking-capacity tests",
-        "15 A time-current opening ranges: 0.15–5 s at 200%, 0.08–0.5 s at 350%, 0.03–0.1 s at 600%",
-        "recommended environment -40 °C to +125 °C; typical derating table shows 13 A at 20 °C and 9 A at 100 °C for 15 A item"
+        "0297015._ typical cold resistance 4.58 m\u03a9 and typical I\u00b2t 308 A\u00b2s",
+        "manufacturer defines typical I\u00b2t as average melting time before arcing from breaking-capacity tests",
+        "15 A time-current opening ranges: 0.15\u20135 s at 200%, 0.08\u20130.5 s at 350%, 0.03\u20130.1 s at 600%",
+        "recommended environment -40 \u00b0C to +125 \u00b0C; typical derating table shows 13 A at 20 \u00b0C and 9 A at 100 \u00b0C for 15 A item"
       ],
       "status": "accessible",
       "license_disposition": "citation and extracted facts only; no PDF copied into Library"
@@ -741,9 +741,9 @@
       "observed_facts": [
         "SMBJ18A unidirectional 600 W class",
         "18.0 V reverse standoff",
-        "20.0–22.1 V breakdown at 1 mA",
+        "20.0\u201322.1 V breakdown at 1 mA",
         "29.2 V maximum clamp at 20.6 A peak-pulse current",
-        "1 µA maximum reverse leakage at standoff"
+        "1 \u00b5A maximum reverse leakage at standoff"
       ],
       "status": "accessible",
       "license_disposition": "citation and extracted facts only; no PDF copied into Library"
@@ -1167,7 +1167,7 @@
         "3.15 V to 16.5 V control range",
         "external N-channel FET gate drive",
         "adjustable analog current limit",
-        "±3% accurate hot-swap current limit",
+        "\u00b13% accurate hot-swap current limit",
         "automatic retry or latch-off variants",
         "I2C current/voltage monitor",
         "listed models shown as production"
@@ -1192,13 +1192,13 @@
       ],
       "observed_facts": [
         "VCC 3.15 V to 16.5 V",
-        "TA -40 °C to +85 °C",
+        "TA -40 \u00b0C to +85 \u00b0C",
         "VLIM 97 mV minimum, 100 mV typical, 103 mV maximum",
         "I_LIMIT equations use RSENSE min/max",
         "90 mV minimum overcurrent timing threshold and 115 mV maximum fast-trip threshold in equations",
-        "4-10 µs fast-overcurrent response guaranteed by design",
+        "4-10 \u00b5s fast-overcurrent response guaranteed by design",
         "programmable TIMER fault interval",
-        "150 °C junction absolute maximum"
+        "150 \u00b0C junction absolute maximum"
       ],
       "status": "accessible-no-local-copy",
       "license_disposition": "citation and extracted facts only; vendor PDF not retained"
@@ -1318,7 +1318,7 @@
     {
       "id": "sxm2-ai-cooling-dual-8pin-20260917",
       "title": "SXM2 to PCIe adapter card",
-      "publisher": "AI-Cooling / 金辉盈达",
+      "publisher": "AI-Cooling / \u91d1\u8f89\u76c8\u8fbe",
       "url": "https://www.ai-cooling.com/?product=198",
       "revision": "page posted 2025-09-30; retrieved 2026-09-17",
       "retrieved": "2026-09-17",
@@ -1428,6 +1428,165 @@
       ],
       "status": "accessible via browser PDF extraction; report is manufacturer-owned and not locally retained",
       "license_disposition": "retain metadata and extracted results only; no report bytes copied"
+    },
+    {
+      "id": "anderson-3-5912p1-product-20260918",
+      "title": "Powerpole 15-45 45A Right Angle Bottom PCB Contacts, Tin Plated",
+      "publisher": "Anderson Power / IDEAL Industries",
+      "url": "https://www.andersonpower.com/product/powerpole-15-45-45a-right-angle-bottom-pcb-contacts-tin-plated/",
+      "revision": "Current product page; retrieved 2026-09-18",
+      "tier": 1,
+      "evidence_class": "manufacturer product authority",
+      "observed_facts": [
+        "exact SKU 3-5912P1",
+        "45 A right-angle bottom-row tin PCB contact",
+        "10,000 mating cycles",
+        "-20 C to 105 C",
+        "20 to 10 AWG family",
+        "up to 45/55 A page range"
+      ],
+      "status": "accessible; no land-pattern dimensions beyond shared B02021S resource",
+      "license_disposition": "link and extracted facts only"
+    },
+    {
+      "id": "anderson-3-5913p1-product-20260918",
+      "title": "Powerpole 15-45 45A Right Angle Top PCB Contacts, Tin Plated",
+      "publisher": "Anderson Power / IDEAL Industries",
+      "url": "https://www.andersonpower.com/product/powerpole-15-45-45a-right-angle-top-pcb-contacts-tin-plated/",
+      "revision": "Current product page; retrieved 2026-09-18",
+      "tier": 1,
+      "evidence_class": "manufacturer product authority",
+      "observed_facts": [
+        "exact SKU 3-5913P1",
+        "45 A right-angle top-row tin PCB contact",
+        "10,000 mating cycles",
+        "-20 C to 105 C",
+        "20 to 10 AWG family",
+        "up to 45/55 A page range"
+      ],
+      "status": "accessible; no land-pattern dimensions beyond shared B02021S resource",
+      "license_disposition": "link and extracted facts only"
+    },
+    {
+      "id": "anderson-b02021s-rev6-20260918",
+      "title": "High Power PCB Series 45 Amp PCB Powerpole Sales Outline Drawing",
+      "publisher": "Anderson Power / IDEAL Industries",
+      "url": "https://p1.aprimocdn.net/idealindustries/03480861-2607-4e12-aed3-b3f00073a52e/ap-web_product-assets_default_drawings_b02021s_Original%20file.pdf",
+      "revision": "B02021S Rev 6; Rev 6 dated 2015-01-15; retrieved 2026-09-18",
+      "tier": 1,
+      "evidence_class": "manufacturer mechanical/layout authority",
+      "local_retrieval_sha256": "7a32189a34ff2feea3bf173c788f3dd63229ea98dfefed8009b1bc5738e8cd2c",
+      "observed_facts": [
+        "7.9 mm typical contact spacing",
+        "1.27 mm typical row spacing",
+        "1.20 mm staple-hole diameter",
+        "4.57 mm wing-hole diameter",
+        "sample PCB layout and 1336G1/1337G1 row identities",
+        "accessory openings expand as necessary per application"
+      ],
+      "status": "accessible; contact-tail finished land dimensions absent",
+      "license_disposition": "metadata, URL, hash and extracted facts only; PDF not retained"
+    },
+    {
+      "id": "anderson-ds-pp1545-current-20260918",
+      "title": "DS-PP1545 PP15/45 and Powerpole Pak specifications",
+      "publisher": "Anderson Power / IDEAL Industries",
+      "url": "https://p1.aprimocdn.net/idealindustries/5d665ad6-38c3-4088-98b6-b3f0007370ef/ap-web_product-assets_default_data-sheets_DS-PP1545_Original%20file.pdf",
+      "revision": "Current 13-page web PDF; metadata created 2026-08-05; printed revision not located; retrieved 2026-09-18",
+      "tier": 1,
+      "evidence_class": "manufacturer electrical/mechanical authority",
+      "local_retrieval_sha256": "ac39c286d44528efab30061b96df6e64e6eeafb6e154af7a03397d518f45a04f",
+      "observed_facts": [
+        "45 A PCB-to-wire UL / 40 A CSA-TUV screen",
+        "0.500 mOhm average 45 A PCB contact-to-contact",
+        "plated through-hole mounting",
+        "2.3 to 3.8 mm PCB thickness",
+        "10-AWG-equivalent recommended 45 A PCB traces",
+        "B02021S is PCB footprint reference"
+      ],
+      "status": "accessible; no contact-tail finished land dimensions",
+      "license_disposition": "metadata, URL, hash and extracted facts only; PDF not retained"
+    },
+    {
+      "id": "anderson-1s6479-rev02-20260918",
+      "title": "Powerpole High Power PCB-Mounted Connector Loose-Piece Assembly Instructions",
+      "publisher": "Anderson Power / IDEAL Industries",
+      "url": "https://p1.aprimocdn.net/idealindustries/ca37b04f-0364-452e-83ac-b3f00073ac16/ap-web_product-assets_default_instructions_1S6479_Original%20file.pdf",
+      "revision": "1S6479 Rev 02; retrieved 2026-09-18",
+      "tier": 1,
+      "evidence_class": "manufacturer assembly instruction",
+      "local_retrieval_sha256": "a9a5b77fcb5cb8df9dca700c770cb24cf9c2ef5edfab14dd47dc3151046a64e7",
+      "observed_facts": [
+        "all solder tails go into PCB plated through holes",
+        "B02021S and B02060S1 named as PCB footprint references",
+        "111038G2 insertion/extraction tool"
+      ],
+      "status": "accessible; no contact-tail land dimensions",
+      "license_disposition": "metadata, URL, hash and extracted facts only; PDF not retained"
+    },
+    {
+      "id": "anderson-pp45pcb-dr-20260918",
+      "title": "PP45 PCB Derating Chart",
+      "publisher": "Anderson Power / IDEAL Industries",
+      "url": "https://p1.aprimocdn.net/idealindustries/8d9e9f19-d1b7-4eb1-81af-b3f000736f30/ap-web_product-assets_default_charts_pp45pcb-dr_Original%20file.pdf",
+      "revision": "Current web chart; retrieved 2026-09-18",
+      "tier": 1,
+      "evidence_class": "manufacturer performance chart",
+      "local_retrieval_sha256": "c4e38cf4e3fdd0be7a67604890bd1d112b77f18941075ef52f11c95f55947e9a",
+      "observed_facts": [
+        "PP45 PCB current versus ambient curves for singlepole, 2-pole and multipole"
+      ],
+      "status": "accessible; not a footprint drawing",
+      "license_disposition": "metadata, URL, hash and extracted facts only; PDF not retained"
+    },
+    {
+      "id": "anderson-111038s2-tool-rev0-20260918",
+      "title": "111038G2 Insertion/Extraction Tool for PP15/45 contacts",
+      "publisher": "Anderson Power / IDEAL Industries",
+      "url": "https://p1.aprimocdn.net/idealindustries/6fdb6c7f-1678-4026-8885-b3f000737d86/ap-web_product-assets_default_drawings_111038s2_Original%20file.pdf",
+      "revision": "111038S2 Rev 0; dated 2001-06-18; retrieved 2026-09-18",
+      "tier": 1,
+      "evidence_class": "manufacturer tooling drawing",
+      "local_retrieval_sha256": "d7a7c2aca4b0840fce8a6e6aace23ace287e96002f208b61fe36bdcc32eb3af6",
+      "observed_facts": [
+        "tool overall dimensions and insertion/extraction procedure"
+      ],
+      "status": "accessible; not a contact or land-pattern drawing",
+      "license_disposition": "metadata, URL, hash and extracted facts only; PDF not retained"
+    },
+    {
+      "id": "anderson-contact-drawing-faq-20260918",
+      "title": "Anderson FAQ: 3D drawing availability",
+      "publisher": "Anderson Power / IDEAL Industries",
+      "url": "https://www.andersonpower.com/resources/faq/",
+      "revision": "Current FAQ; retrieved 2026-09-18",
+      "tier": 1,
+      "evidence_class": "manufacturer support policy",
+      "observed_facts": [
+        "manufacturer says contact 3D drawings are not provided",
+        "product 3D downloads require account access"
+      ],
+      "status": "accessible; supports negative search result",
+      "license_disposition": "link and extracted facts only"
+    },
+    {
+      "id": "zeroping-powerpoledist-ccbf9a5-20260918",
+      "title": "PowerPoleDist public KiCad implementation",
+      "publisher": "zeroping / GitHub",
+      "url": "https://github.com/zeroping/PowerPoleDist",
+      "revision": "master @ ccbf9a5e51634844b1ac192991d3c6db3d6d4788; retrieved 2026-09-18",
+      "tier": 3,
+      "evidence_class": "public implementation precedent",
+      "file_sha256": {
+        "footprint": "c745e6931e96cc0b06c9756a2a9c4b6fd3e615c1cdf7901eb5a105c8ceff88c2"
+      },
+      "observed_facts": [
+        "7.9 mm pitch",
+        "5.55 x 2.10 mm pads",
+        "4.55 x 1.10 mm oblong drills for 1336G1 1x2"
+      ],
+      "status": "secondary precedent only; no manufacturer provenance for land values",
+      "license_disposition": "metadata and extracted facts only; no source file copied"
     }
   ]
 }

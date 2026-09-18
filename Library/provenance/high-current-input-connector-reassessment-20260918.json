@@ -1,0 +1,15 @@
+{
+  "record_id": "high-current-input-connector-reassessment-20260918",
+  "source_class": "manufacturer connector records plus public V100 carrier architecture precedent",
+  "retrieved": "2026-09-18",
+  "requesting_package": "P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
+  "private_library_artifacts": [
+    "Library/briefs/high-current-input-connector-reassessment-20260918.md",
+    "Library/indexes/high-current-input-connector-reassessment-20260918.json",
+    "Library/provenance/high-current-input-connector-reassessment-20260918.json"
+  ],
+  "confidence": "high for manufacturer part identity, published geometry/rating values and public precedent; medium for PiSXMe applicability until authority binds branch topology, fusing, harness and thermal margins",
+  "local_hashes": {},
+  "license_disposition": "metadata, citations and extracted facts only; no vendor PDF, drawing, CAD or proprietary report copied",
+  "authority_boundary": "Librarian evidence only; Product/Power/Package Authority selects and authorizes the connector system."
+}

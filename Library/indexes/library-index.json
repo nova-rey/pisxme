@@ -441,6 +441,82 @@
         "provenance",
         "public-precedent"
       ]
+    },
+    {
+      "id": "brief-anderson-pp45-contact-land-pattern-20260918",
+      "kind": "component-authority-brief",
+      "path": "Library/briefs/anderson-pp45-contact-land-pattern-20260918.md",
+      "tags": [
+        "Anderson",
+        "PP15/45",
+        "3-5912P1",
+        "3-5913P1",
+        "footprint",
+        "package-authority"
+      ]
+    },
+    {
+      "id": "index-anderson-pp45-contact-land-pattern-20260918",
+      "kind": "structured-geometry-index",
+      "path": "Library/indexes/anderson-pp45-contact-land-pattern-20260918.json",
+      "tags": [
+        "Anderson",
+        "PP15/45",
+        "PCB",
+        "land-pattern",
+        "footprint"
+      ]
+    },
+    {
+      "id": "provenance-anderson-pp45-contact-land-pattern-20260918",
+      "kind": "provenance-source",
+      "path": "Library/provenance/anderson-pp45-contact-land-pattern-20260918.json",
+      "tags": [
+        "Anderson",
+        "PP15/45",
+        "manufacturer",
+        "B02021S",
+        "land-pattern"
+      ]
+    },
+    {
+      "id": "brief-high-current-input-connector-reassessment-20260918",
+      "kind": "connector-reassessment-evidence-brief",
+      "path": "Library/briefs/high-current-input-connector-reassessment-20260918.md",
+      "tags": [
+        "power",
+        "connector",
+        "Molex",
+        "Samtec",
+        "Anderson",
+        "footprint",
+        "V100",
+        "prototype"
+      ]
+    },
+    {
+      "id": "index-high-current-input-connector-reassessment-20260918",
+      "kind": "connector-reassessment-evidence-index",
+      "path": "Library/indexes/high-current-input-connector-reassessment-20260918.json",
+      "tags": [
+        "power",
+        "connector",
+        "Molex",
+        "Samtec",
+        "Anderson",
+        "footprint"
+      ]
+    },
+    {
+      "id": "provenance-high-current-input-connector-reassessment-20260918",
+      "kind": "provenance-source",
+      "path": "Library/provenance/high-current-input-connector-reassessment-20260918.json",
+      "tags": [
+        "power",
+        "connector",
+        "manufacturer",
+        "provenance"
+      ]
     }
   ]
 }

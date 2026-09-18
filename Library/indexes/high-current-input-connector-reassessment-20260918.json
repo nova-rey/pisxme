@@ -1,0 +1,41 @@
+{
+  "record_id": "high-current-input-connector-reassessment-20260918",
+  "schema_version": 1,
+  "retrieved": "2026-09-18",
+  "requesting_package": "P24-PROTOTYPE-POWER-BUS-INTEGRATION-VALIDATION",
+  "scope": "Released manufacturer evidence for a practical 40 A continuous / 45 A peak source connector and multi-connector alternatives.",
+  "source_ids": [
+    "molex-55690002-sd-20260918",
+    "molex-5556-ps004-v21-20260913",
+    "molex-5569-series-20260914",
+    "molex-5557-series-39012020-20260914",
+    "samtec-pet-08-02-t-vt-lc-20260918",
+    "samtec-tc0919-pes-pet-2456-rev2-20260918",
+    "anderson-pp45-contact-land-pattern-20260918",
+    "sxm2-carrier-architecture-sanity-20260917"
+  ],
+  "candidates": {
+    "single_connector_system": {
+      "candidate": "Samtec PET-08-02-T-VT-LC + PES-08-02-T-VT + configured PESS cable",
+      "screen": "48.5 A/contact at two energized contacts after 20% derating and 30 C rise per TC0919-2456 Rev 2",
+      "state": "authority-review; exact configuration and local footprint bytes not retained"
+    },
+    "multiple_conventional_connectors": {
+      "candidate": "3 x Molex 5569 six-circuit headers, e.g. 39-30-1060/1061, independent branches",
+      "screen": "3 x 3 positive contacts x 7 A/circuit = 63 A positive and equal return screen under PS-5556 Rev B1 4-6 circuit table",
+      "state": "released-interface candidate; no-contact-sharing warning and branch protection required"
+    },
+    "fallback": {
+      "candidate": "6 x Molex 0039300020 two-circuit headers",
+      "screen": "6 x 8 A/circuit = 48 A aggregate under PS-5556 Rev B1 2-3 circuit table",
+      "state": "released-interface fallback; area/harness burden"
+    }
+  },
+  "footprint_authority": {
+    "molex_5569": "Manufacturer sales drawing 55690002-SD provides pitch, recommended hole layout, PCB thickness and circuit-size applicability; exact project-local footprint can be generated and audited from it.",
+    "anderson_pp45": "B02021S Rev 6 does not provide finished contact-tail drill/slot and pad/mask data in retained record; not fully closed as exact manufacturer land pattern.",
+    "samtec_pet": "Manufacturer page publishes print and footprint resources; exact configured bytes must be retrieved before CAD."
+  },
+  "disposition": "external:vendor-footprint-authorization is not irreducible for campaign; authority selection and thermal/branch closure remain open.",
+  "retention": "metadata, URLs, revisions and extracted facts only; no vendor PDFs/CAD copied"
+}

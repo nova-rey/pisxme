@@ -1,0 +1,37 @@
+{
+  "record_id": "anderson-pp45-contact-land-pattern-20260918",
+  "schema_version": 1,
+  "retrieved": "2026-09-18",
+  "requesting_package": "P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE",
+  "scope": "Released Anderson PP15/45 contact and PCB-land evidence for 3-5912P1/1336G1 and 3-5913P1/1337G1 in ASMPR45-1X2-RK.",
+  "source_ids": [
+    "anderson-3-5912p1-product-20260918",
+    "anderson-3-5913p1-product-20260918",
+    "anderson-b02021s-rev6-20260918",
+    "anderson-ds-pp1545-current-20260918",
+    "anderson-1s6479-rev02-20260918",
+    "anderson-pp45pcb-dr-20260918",
+    "anderson-111038s2-tool-rev0-20260918",
+    "anderson-contact-drawing-faq-20260918",
+    "zeroping-powerpoledist-ccbf9a5-20260918"
+  ],
+  "resolved_fields": [
+    "part identity",
+    "top/bottom row identity",
+    "7.9 mm typical pitch",
+    "1.27 mm typical row spacing",
+    "plated-through-hole mounting requirement",
+    "2.3-3.8 mm PCB thickness range",
+    "envelope and current guidance"
+  ],
+  "unresolved_fields": [
+    "unambiguous 1x2 contact-tail datum/coordinates",
+    "finished contact drill/slot dimensions and tolerance",
+    "pad shape/dimensions/annulus",
+    "solder-mask expansion/paste treatment",
+    "complete accessory-hole datum and plating"
+  ],
+  "disposition": "Anderson exact land pattern remains unresolved from released first-party data; this is not an irreducible campaign blocker because the Molex 39301082 architecture has an exact released footprint basis. Anderson may proceed only under explicit internal prototype-footprint authority acceptance, clearly labelled as an engineering assumption.",
+  "confidence": "high for source identity, pitch, row role, PTH requirement, ratings and envelope; high for the negative finding because all first-party resource links and FAQ were checked; low for any guessed contact land geometry",
+  "retention": "metadata, URLs, extracted facts and temporary retrieval hashes only; no vendor PDFs/CAD copied into private Library or public repository"
+}

@@ -1,0 +1,94 @@
+{
+  "record_id": "anderson-pp45-contact-land-pattern-20260918",
+  "requesting_package": "P24-POWER-INPUT-ANDERSON-CONTACT-EVIDENCE",
+  "retrieved": "2026-09-18",
+  "publisher": "Anderson Power / IDEAL Industries",
+  "evidence_class": "primary manufacturer product pages, drawing, datasheet, assembly instruction and chart; secondary public implementation precedent separately marked",
+  "source_records": [
+    {
+      "id": "anderson-3-5912p1-product-20260918",
+      "title": "Powerpole 15-45 45A Right Angle Bottom PCB Contacts, Tin Plated",
+      "url": "https://www.andersonpower.com/product/powerpole-15-45-45a-right-angle-bottom-pcb-contacts-tin-plated/",
+      "revision": "current product page; retrieved 2026-09-18",
+      "tier": 1,
+      "status": "accessible",
+      "hash_status": "HTML not locally retained"
+    },
+    {
+      "id": "anderson-3-5913p1-product-20260918",
+      "title": "Powerpole 15-45 45A Right Angle Top PCB Contacts, Tin Plated",
+      "url": "https://www.andersonpower.com/product/powerpole-15-45-45a-right-angle-top-pcb-contacts-tin-plated/",
+      "revision": "current product page; retrieved 2026-09-18",
+      "tier": 1,
+      "status": "accessible",
+      "hash_status": "HTML not locally retained"
+    },
+    {
+      "id": "anderson-b02021s-rev6-20260918",
+      "title": "High Power PCB Series 45 Amp PCB Powerpole Sales Outline Drawing",
+      "url": "https://p1.aprimocdn.net/idealindustries/03480861-2607-4e12-aed3-b3f00073a52e/ap-web_product-assets_default_drawings_b02021s_Original%20file.pdf",
+      "revision": "B02021S Rev 6; Rev 6 dated 2015-01-15; retrieved 2026-09-18",
+      "tier": 1,
+      "sha256": "7a32189a34ff2feea3bf173c788f3dd63229ea98dfefed8009b1bc5738e8cd2c",
+      "status": "accessible; no bytes retained"
+    },
+    {
+      "id": "anderson-ds-pp1545-current-20260918",
+      "title": "DS-PP1545 PP15/45 & Powerpole Pak specifications",
+      "url": "https://p1.aprimocdn.net/idealindustries/5d665ad6-38c3-4088-98b6-b3f0007370ef/ap-web_product-assets_default_data-sheets_DS-PP1545_Original%20file.pdf",
+      "revision": "current 13-page web PDF; metadata created 2026-08-05; printed revision not located; retrieved 2026-09-18",
+      "tier": 1,
+      "sha256": "ac39c286d44528efab30061b96df6e64e6eeafb6e154af7a03397d518f45a04f",
+      "status": "accessible; no bytes retained"
+    },
+    {
+      "id": "anderson-1s6479-rev02-20260918",
+      "title": "Powerpole High Power PCB-Mounted Connector Loose-Piece Assembly Instructions",
+      "url": "https://p1.aprimocdn.net/idealindustries/ca37b04f-0364-452e-83ac-b3f00073ac16/ap-web_product-assets_default_instructions_1S6479_Original%20file.pdf",
+      "revision": "1S6479 Rev 02; retrieved 2026-09-18",
+      "tier": 1,
+      "sha256": "a9a5b77fcb5cb8df9dca700c770cb24cf9c2ef5edfab14dd47dc3151046a64e7",
+      "status": "accessible; no bytes retained"
+    },
+    {
+      "id": "anderson-pp45pcb-dr-20260918",
+      "title": "PP45 PCB Derating Chart",
+      "url": "https://p1.aprimocdn.net/idealindustries/8d9e9f19-d1b7-4eb1-81af-b3f000736f30/ap-web_product-assets_default_charts_pp45pcb-dr_Original%20file.pdf",
+      "revision": "current web chart; retrieved 2026-09-18",
+      "tier": 1,
+      "sha256": "c4e38cf4e3fdd0be7a67604890bd1d112b77f18941075ef52f11c95f55947e9a",
+      "status": "accessible; chart only, not land data; no bytes retained"
+    },
+    {
+      "id": "anderson-111038s2-tool-rev0-20260918",
+      "title": "111038G2 Insertion/Extraction Tool for PP15/45 contacts",
+      "url": "https://p1.aprimocdn.net/idealindustries/6fdb6c7f-1678-4026-8885-b3f000737d86/ap-web_product-assets_default_drawings_111038s2_Original%20file.pdf",
+      "revision": "111038S2 Rev 0; dated 2001-06-18; retrieved 2026-09-18",
+      "tier": 1,
+      "sha256": "d7a7c2aca4b0840fce8a6e6aace23ace287e96002f208b61fe36bdcc32eb3af6",
+      "status": "accessible; tool drawing only; no bytes retained"
+    },
+    {
+      "id": "anderson-contact-drawing-faq-20260918",
+      "title": "Anderson FAQ: 3D drawing availability",
+      "url": "https://www.andersonpower.com/resources/faq/",
+      "revision": "current FAQ; retrieved 2026-09-18",
+      "tier": 1,
+      "status": "accessible; HTML not locally retained"
+    },
+    {
+      "id": "zeroping-powerpoledist-ccbf9a5-20260918",
+      "title": "PowerPoleDist public KiCad implementation",
+      "url": "https://github.com/zeroping/PowerPoleDist",
+      "revision": "master @ ccbf9a5e51634844b1ac192991d3c6db3d6d4788; retrieved 2026-09-18",
+      "tier": 3,
+      "file_sha256": {
+        "footprint": "c745e6931e96cc0b06c9756a2a9c4b6fd3e615c1cdf7901eb5a105c8ceff88c2"
+      },
+      "status": "secondary precedent only; not manufacturer authority",
+      "license_disposition": "metadata and extracted dimensions only; no source file copied"
+    }
+  ],
+  "negative_search": "Anderson product pages expose B02021S, DS-PP1545, charts, 111038S2 and 1S6479; no separate 3-5912P1/3-5913P1 contact land drawing was exposed. Anderson FAQ states contact 3D drawings are not provided.",
+  "license_disposition": "link, metadata and extracted facts only; do not redistribute manufacturer PDFs/CAD; temporary hashes are retained for retrieval audit but source bytes are not stored"
+}
