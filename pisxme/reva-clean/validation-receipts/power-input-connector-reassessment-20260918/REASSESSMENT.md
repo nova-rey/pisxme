@@ -1,36 +1,22 @@
-# High-current input connector reassessment
+# High-current input connector architecture reassessment
 
-- Package: `P24-POWER-INPUT-GEOMETRY-AUTHORITY`
-- Decision: `INTERNAL_FOOTPRINT_AUTHORITY_ROUTE`
-- Date: 2026-09-18
-- Scope: prototype input connector architecture; no production AVL or supplier qualification claim
+## Binding prototype architecture
 
-## Governing requirement
+Product/Power Authority binds one Anderson Powerpole PP15/45 1x2 positive/return assembly:
+`ASMPR45-1X2-RK`, housings `1327`/`1327G6`, and 45 A right-angle PCB contacts `3-5912P1`/`1336G1` and `3-5913P1`/`1337G1`. The released manufacturer data supports the 40 A continuous source contract at its CSA/TUV condition and a 45 A contact-family rating. The 40 A rating has no installation derating margin and the 45 A value is not a dedicated 100 ms pulse qualification; those remain prototype validation requirements.
 
-PiSXMe Rev A must support the signed 300 W sustained / 330 W bounded-peak V100 envelope. The source screen remains 40 A continuous and 45 A for 100 ms, with complete source-to-J1 positive-plus-return resistance and thermal closure still required.
+The path is one positive pole and one return pole. No passive current-sharing credit is used. At the published 0.525 mOhm wire-contact screen, the connector-only drop is 21 mV / 0.84 W at 40 A and 23.6 mV / 1.06 W at 45 A per contact. These are connector screens, not a complete source-to-J1 budget.
 
-## Architecture comparison
+## Footprint authority
 
-| Candidate | Result |
-|---|---|
-| One Anderson Powerpole PP15/45 `ASMPR45-1X2-RK` | Selected prototype baseline. One dedicated positive/return path avoids passive sharing. Released Anderson data gives 45 A UL / 40 A CSA-TUV PCB-to-wire screening, 10 AWG wire compatibility, and exact contact/housing families. The 45 A/100 ms behavior remains a prototype validation item; it is not claimed as a published pulse rating. |
-| Multiple Molex Mini-Fit Jr GPU-style headers | Accepted comparison only. Official Molex data gives 13 A maximum/contact and 4.20 mm pitch, but application screens and the manufacturer's no-current-sharing note make two headers insufficiently bounded for the full peak without additional branches and fusing. Three or more headers increase area and branch/fault complexity. They remain a fallback architecture, not the selected baseline. |
-| Samtec PowerStrip/40 | Not selected. Electrical evidence is promising, but configured footprint and harness details remain proprietary/unbound. |
+Anderson drawing B02021S Rev. 6 and the PP15/45 datasheet provide contact variants, housing datums, mated envelope, 7.9 mm contact spacing, PCB layout datums, staple-hole locations, mounting features, contact dimensions, PCB thickness range, and the 10 AWG board-copper recommendation. They do not prescribe PiSXMe finished-hole drill, annular ring, solder-mask expansion, or project courtyard. Those values may be authored from the released contact envelope and PiSXMe fabrication rules and must be recorded in the footprint dimensional audit. A vendor KiCad footprint is not required for prototype CAD.
 
-## Authority route
+## Alternative comparison
 
-`external:vendor-footprint-authorization` is removed as an irreducible dependency. The prototype may author a local footprint from released manufacturer dimensions. Footprint Authority must use Anderson `B02021S` revision 6, the `DS-PP1545` data sheet, the official `ASMPR45-1X2-RK` product record, and the official `pp45pcb` layout chart. The exact selected contact variant (`3-5912P1` bottom-row or `3-5913P1` top-row) must be fixed before release.
+Two conventional Molex Mini-Fit Jr. 5569 2x3 headers have released 4.2 mm-grid through-hole geometry, but Molex provides no current-sharing credit and the standard 5556 six-circuit screen is approximately 7 A/circuit: two headers require 6.67 A/contact at 40 A and 7.5 A/contact at 45 A, leaving no acceptable peak margin. TE ELCON Mini 2204535-1 has released hole/pitch data and a 35 A/contact rating, but the two-connector harness, branch impedance and sharing evidence are not yet a complete source contract. These remain alternatives, not the binding architecture.
 
-The footprint audit must record pad/hole coordinates, contact spacing, mounting-staple/accessory holes, polarity and housing orientation, board-edge and mating envelope, tolerances, and service clearance. DFM/mechanical authority must independently verify the result. The footprint is prototype-authorized only after that audit; no production supplier/AVL claim is implied.
+## Dependency disposition
 
-## Remaining engineering closure
+`external:vendor-footprint-authorization` is resolved for prototype CAD. Retain only production AVL/supplier approval and prototype empirical validation as non-blocking requirements. Add a `prototype-validation` dependency covering source/harness resistance and thermal rise, contact fit/pull, 40 A continuous derating, and 45 A transient validation. No canonical CAD was edited.
 
-The selected connector does not by itself close Phase 24. The producer must still bind the exact 10 AWG harness, crimp/tooling, fuse/reverse/TVS/inrush protection, complete hot positive/return resistance, PCB copper/via thermal margins, and 45 A/100 ms prototype test limits. No passive sharing is credited.
-
-## Sources
-
-- Anderson Powerpole product record: `https://www.andersonpower.com/product/powerpole-15-45-single-row-1x2-assemblies-dc-2-wire-standard/`
-- Anderson `DS-PP1545.pdf`, retrieved 2026-09-18, SHA-256 `ac39c286d44528efab30061b96df6e64e6eeafb6e154af7a03397d518f45a04f`
-- Anderson `B02021S` sales outline drawing, revision 6, official product drawing referenced by the product record
-- Anderson `pp45pcb-dr.pdf` / `pp45pcb-tr.pdf` layout charts, official product resources
-- Molex `39301082` product record: `https://www.molex.com/en-us/products/part-detail/39301082`
+Sources: Anderson PP15/45 product record and datasheet; Anderson B02021S Rev. 6 drawing; Molex 5569 drawing and PS-43879; TE ELCON 2204535-1 record and customer drawing. Source URLs and hashes are recorded in the Librarian brief.
