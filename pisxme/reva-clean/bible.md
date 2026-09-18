@@ -1372,3 +1372,7 @@ The first producer workspace was discarded because it contained unrelated recove
 ## 2026-09-18 — Protected-bus producer workspace method blocker
 
 Two producer attempts resolved into legacy recovery-tree workspaces instead of a clean checkout of current `reva-clean`. No canonical CAD changed. The producer package is parked behind a bounded Unblocker review of the installed EDA worker dispatch; this is an implementation-method issue, not a connector-architecture conclusion.
+
+## 2026-09-18 — Protected-bus producer resumed after workspace self-unblock
+
+The Unblocker identified stale-base dispatch as the cause of the producer workspace failure. The corrective producer was released and re-claimed against a disposable checkout at full base `5d78700c70f8476ac749ead50197c3b1e9c07587`; canonical integration remains untouched pending candidate and raw validation receipts.

@@ -237,10 +237,10 @@
     "unblocker:power-producer-workspace": {
       "created_at": "2026-09-18T12:56:51.224271Z",
       "kind": "authority",
-      "receipt": null,
+      "receipt": "validation-receipts/power-bus-producer-workspace-blocker-20260918/BLOCKER.md",
       "reference": "validation-receipts/power-bus-producer-workspace-blocker-20260918",
-      "resolved_at": null,
-      "status": "UNRESOLVED"
+      "resolved_at": "2026-09-18T13:02:07.613114Z",
+      "status": "RESOLVED"
     }
   },
   "hard_problem_repo": "nova-rey/codex-config-backup",
@@ -3388,7 +3388,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "",
-      "owner": null,
+      "owner": "power_bus_clean_executor_retry",
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3405,10 +3405,12 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [],
-      "status": "WAITING",
+      "session_ids": [
+        "molex-power-bus-clean-20260918-retry"
+      ],
+      "status": "RUNNING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T12:56:51.224302Z",
+      "updated_at": "2026-09-18T13:08:06.650082Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3418,9 +3420,7 @@
         ],
         "results": {}
       },
-      "waiting_on": [
-        "unblocker:power-producer-workspace"
-      ],
+      "waiting_on": [],
       "workstream": "integrated-power"
     },
     {
@@ -3603,5 +3603,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T12:56:51.224547Z"
+  "updated_at": "2026-09-18T13:08:06.650310Z"
 }
