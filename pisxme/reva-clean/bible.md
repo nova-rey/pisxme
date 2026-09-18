@@ -1630,3 +1630,7 @@ At the next scheduling boundary, HPQ Issue #6 was confirmed `resolution-ready` a
 # 2026-09-18 — U12 RUA0042A footprint integrated and fresh-Light validated
 
 The isolated U12 producer candidate `8e7d5a8b` was reconciled into canonical commit `ee69832b`. The project-local HD3SS6126/RUA0042A footprint now follows the TI 0.50 mm contract with 43 pads and preserved mapping. Fresh KiCad Light 10.0.6 validation at `ee69832b` passed pad geometry, courtyard, footprint assignment, native U12 netlist, and all 43 U12 node/pad checks. The retained three PROPERTY_ENUM assertions are tool warnings; no integrated board DRC closure is claimed. U12 package and library provenance queue packages are now closed; protected-bus production remains the only active CAD lane.
+
+# 2026-09-18 — Protected-bus producer capability changed after deterministic stall
+
+The deterministic source-first R2 attempt returned no candidate or command receipt and was released. The protected-bus package is now assigned to a fresh mutation-capable KiCad engineer from canonical `06942ee2`, with the same binding R2 authority and a bounded candidate/blocker return requirement. No R1 replay or global rule change is authorized.
