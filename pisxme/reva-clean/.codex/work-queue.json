@@ -314,6 +314,14 @@
       "resolved_at": "2026-09-18T19:41:13.041759Z",
       "status": "RESOLVED"
     },
+    "unblocker:molex-native-direct-author-stall": {
+      "created_at": "2026-09-18T22:12:58.785072Z",
+      "kind": "authority",
+      "receipt": null,
+      "reference": null,
+      "resolved_at": null,
+      "status": "UNRESOLVED"
+    },
     "unblocker:molex-native-script-author-stall": {
       "created_at": "2026-09-18T22:01:30.406365Z",
       "kind": "other",
@@ -3501,7 +3509,8 @@
         "unblocker:molex-nine-branch-tool-context",
         "authority:molex-nine-branch-mpa-20260918",
         "authority:molex-nine-branch-mpa-revision2-20260918",
-        "unblocker:molex-native-script-author-stall"
+        "unblocker:molex-native-script-author-stall",
+        "unblocker:molex-native-direct-author-stall"
       ],
       "domain": "KiCad Producer",
       "edit_boundaries": [
@@ -3514,7 +3523,7 @@
       "evidence_refs": [],
       "id": "P24-PROTOTYPE-POWER-BUS-CORRECTIVE-PRODUCER",
       "notes": "Root-mediated native pcbnew producer; source fixture is the netlist oracle; fresh Light workspace /home/nyx/eda-workspaces/molex-pcbnew-producer-20260918.",
-      "owner": "molex_native_direct_author_20260918",
+      "owner": null,
       "priority": 1,
       "project": "nova-rey/pisxme",
       "required": true,
@@ -3531,12 +3540,10 @@
         }
       ],
       "scope": "In an isolated committed-base CAD workspace, replace/supersede J5/J6 with the authority-selected high-current input assembly, update source/protection nets, route complete positive and return paths to the protected common bus/J1 field, and provide full resistance/thermal extraction. Preserve J1 map, high-speed corridors, unrelated circuitry, and no six-loop regulation.",
-      "session_ids": [
-        "molex-native-direct-author-20260918"
-      ],
-      "status": "RUNNING",
+      "session_ids": [],
+      "status": "WAITING",
       "title": "Produce corrected protected bus with qualified high-current input assembly",
-      "updated_at": "2026-09-18T22:09:10.835380Z",
+      "updated_at": "2026-09-18T22:12:58.785134Z",
       "validation": {
         "required": [
           "source_connectivity",
@@ -3567,7 +3574,9 @@
           }
         }
       },
-      "waiting_on": [],
+      "waiting_on": [
+        "unblocker:molex-native-direct-author-stall"
+      ],
       "workstream": "integrated-power"
     },
     {
@@ -4417,5 +4426,5 @@
     }
   },
   "schema_version": 1,
-  "updated_at": "2026-09-18T22:09:10.835666Z"
+  "updated_at": "2026-09-18T22:12:58.785620Z"
 }
